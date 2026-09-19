@@ -53,16 +53,8 @@
     height: 100vh;
     overflow-y: auto;
   }
-  .brand { display: flex; align-items: center; gap: 9px; }
-  .brand-mark {
-    width: 30px; height: 30px;
-    display: flex; align-items: center; justify-content: center;
-    font-family: "Fraunces", serif; font-weight: 600; font-size: 14px;
-    color: var(--accent-ink);
-    background: linear-gradient(155deg, var(--accent) 0%, #e0932a 100%);
-    border-radius: 8px; box-shadow: var(--shadow-sm); flex-shrink: 0;
-  }
-  .brand-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 17px; letter-spacing: -0.01em; }
+  .brand { display: flex; align-items: center; }
+  .brand-logo { width: 100%; max-width: 190px; height: auto; display: block; }
   .brand-sub { font-size: 11.5px; color: var(--muted); margin-top: 2px; }
 
   .rail-nav-btn {
@@ -366,10 +358,9 @@
   <nav class="rail">
     <div>
       <div class="brand">
-        <span class="brand-mark">AR</span>
-        <span class="brand-name">Arena Support AI</span>
+        <img class="brand-logo" src="assets/inncircles-arena-logo.webp" alt="Inncircles Arena">
       </div>
-      <div class="brand-sub">Inncircles Arena · offline help</div>
+      <div class="brand-sub">Support AI · offline help</div>
     </div>
 
     <button class="rail-nav-btn primary" id="nav-chat">
