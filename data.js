@@ -3158,6 +3158,974 @@ const QA_WORKORDER = [
   }
 ];
 
+const QA_PROPOSALMANAGEMENT = [
+  {
+    action: "create",
+    object: "proposal",
+    scope: "module", section: "Proposals",
+    question: "How do I create a new proposal?",
+    answer: "Go to Proposal Management > Proposals and click \"Create\". In the pop-up, enter the Proposal Name, Description, Proposal Type, Proposal Value Estimated, and Business Development Code, then select the required Opportunity (or create a new one if it does not exist). Click \"Submit for Approval\" to create the proposal. The Proposal ID is auto-generated based on the ID Settings.",
+    tags: ["new proposal","add proposal","start proposal","proposal creation"]
+  },
+  {
+    action: "edit",
+    object: "proposal",
+    scope: "module", section: "Proposals",
+    question: "How do I edit an existing proposal's details?",
+    answer: "In Proposal Management > Proposals, open the Actions menu for the proposal and select \"Edit\". You can modify the Proposal Name, Description, Proposal Type, Opportunity, Estimated Project Value, and Business Development Code.",
+    tags: ["update proposal","modify proposal","change proposal details"]
+  },
+  {
+    action: "delete",
+    object: "proposal",
+    scope: "module", section: "Proposals",
+    question: "How do I delete a proposal?",
+    answer: "In Proposal Management > Proposals, open the Actions menu for the proposal row and click \"Delete\" to permanently remove the proposal.",
+    tags: ["remove proposal","delete bid record"]
+  },
+  {
+    action: "approve",
+    object: "proposal",
+    scope: "module", section: "Proposals",
+    question: "Who can approve or reject a proposal?",
+    answer: "The \"Approve\" and \"Reject\" options on a proposal are visible only to users who are part of that proposal's Approval Workflow, configured in Proposal Management Settings.",
+    tags: ["approve proposal","reject proposal","proposal approval workflow"]
+  },
+  {
+    action: "track",
+    object: "proposal",
+    scope: "module", section: "Proposals",
+    question: "How can I see the history of changes made to a proposal?",
+    answer: "In Proposal Management > Proposals, open the Actions menu and select \"See History\" to view a log of created, edited, updated, and approval workflow status changes.",
+    tags: ["proposal audit trail","change log","proposal history"]
+  },
+  {
+    action: "export",
+    object: "proposal",
+    scope: "module", section: "Proposals",
+    question: "Can I bulk create or update proposals using Excel?",
+    answer: "Yes. In Proposal Management > Proposals, use the \"Export\" option: \"Download Excel\" exports current proposal data (sheet named by Proposal Type), and \"Upload Excel\" lets you create or update proposals in bulk using the provided sample template.",
+    tags: ["excel upload","bulk import proposals","download proposals"]
+  },
+  {
+    action: "filter",
+    object: "proposal",
+    scope: "module", section: "Proposals",
+    question: "How do I filter or search the proposals list?",
+    answer: "Use \"Search\" to find proposals by Proposal Name or Proposal ID, or click \"Filters\" to open a pop-up where you can set criteria to narrow down the proposal list. \"Manage Columns\" lets you choose and arrange which columns are visible.",
+    tags: ["search proposals","filter proposals","manage columns"]
+  },
+  {
+    action: "track",
+    object: "proposal follow up",
+    scope: "module", section: "Proposals",
+    question: "How do I send reminder emails to a customer about a proposal?",
+    answer: "Use the \"Follow Up\" feature on a proposal to send reminder emails to customers. Set a \"Recurrence Type\" (Daily, Weekly, Monthly, or None) to schedule repeated reminders or send a one-time email.",
+    tags: ["follow up reminder","customer reminder","recurring email"]
+  },
+  {
+    action: "create",
+    object: "bid",
+    scope: "module", section: "Bids",
+    question: "How do I create a bid within a proposal?",
+    answer: "Open the proposal's Bid tab and click \"Create Bid\". Fill in the Bid Name, Description, Proposal, and Bid Type in the pop-up window, then submit. Note: the Bid tab must first be enabled via permissions in Bid Management.",
+    tags: ["create bid","new bid","add bid to proposal"]
+  },
+  {
+    action: "export",
+    object: "bid",
+    scope: "module", section: "Bids",
+    question: "Can I export or import bids in bulk?",
+    answer: "Yes. In the Bids list, use \"Exports\" for Download Excel (export existing bid data) and Upload Excel (bulk-create bids via Excel upload).",
+    tags: ["bulk bids","download bids","upload bids"]
+  },
+  {
+    action: "view",
+    object: "bid",
+    scope: "module", section: "Bids",
+    question: "What views are available for the Bids list?",
+    answer: "The Bids list supports Table View, Grid View, and Kanban View. Choose a view and click \"Save Layout\" to keep it as the default.",
+    tags: ["bid views","kanban bids","table view"]
+  },
+  {
+    action: "create",
+    object: "submission package",
+    scope: "module", section: "Submission Packages",
+    question: "How do I create a proposal submission package?",
+    answer: "On the proposal, click \"Create Submission Package\". This opens a page to pull in data from previous tabs (Profile, Documents, Checklists, Submittals, Attachments), then choose how to send it to the client: Email to Client, Physical (mail), or Client Portal.",
+    tags: ["submission package","create submittal package","send proposal to client"]
+  },
+  {
+    action: "configure",
+    object: "submission package workflow",
+    scope: "module", section: "Submission Packages",
+    question: "How do I set up an approval workflow for submission packages?",
+    answer: "Go to Proposal Management Settings > Submission Packages > Setup Approval Workflow, click \"Create Level\" to choose approvers, assign the workflow type (all must approve / any one can approve), and add a level description. Use Edit or Delete in Actions to manage levels.",
+    tags: ["submission approval workflow","configure workflow levels"]
+  },
+  {
+    action: "track",
+    object: "submission package issue",
+    scope: "module", section: "Submission Packages",
+    question: "What happens when a submission package is rejected?",
+    answer: "A rejected submission package log appears in the Workflow Issues tab and cannot move forward until its linked issue is resolved. Use \"Assign To\" to assign the issue to a user with a due date, then click \"Resolve\" once fixed.",
+    tags: ["submission package rejected","workflow issues","resolve issue"]
+  },
+  {
+    action: "view",
+    object: "submission package log",
+    scope: "module", section: "Submission Packages",
+    question: "Where can I see the status and history of a sent submission package?",
+    answer: "In the Submission Packages Logs tab, use the row menu: \"Download\" retrieves the package, \"History\" shows creation and approval status history, \"Status\" shows/sets the configured status, and \"Delete\" removes the package.",
+    tags: ["submission package status","submission package history","download package"]
+  },
+  {
+    action: "create",
+    object: "submittal",
+    scope: "module", section: "Submittals",
+    question: "How do I add a submittal letter to a proposal?",
+    answer: "In the proposal's Submittals tab, click \"Create\". Choose \"Create New Letter\" to draft a new template in Google Docs, or \"Import From Global Data\" to reuse a configured template from Proposal Settings, optionally enabling \"Auto Fill Fields\" to populate submittal keys from the proposal profile.",
+    tags: ["submittal letter","budgetary letter","create submittal"]
+  },
+  {
+    action: "configure",
+    object: "submittal template",
+    scope: "module", section: "Settings",
+    question: "How do I create a reusable submittal template?",
+    answer: "Go to Proposal Management Settings > Submittals and click \"Create Template\", then choose \"Create Submittal Template\" (name only) or \"Upload Submittal Template\" (upload a Word document). Configure merge keys using double curly braces {{ }} format, then use \"Sync\" from the kebab menu to update keys after edits.",
+    tags: ["submittal template","upload template","merge keys","sync template"]
+  },
+  {
+    action: "create",
+    object: "checklist",
+    scope: "module", section: "Checklists",
+    question: "How do I add a checklist to a proposal?",
+    answer: "In the proposal's Checklists tab, click \"Create Form\", which shows the forms configured in Proposal Settings > Checklists. Fill in the fields and click Submit. Created forms are stored automatically in the Documents tab as a folder.",
+    tags: ["proposal checklist","quality checklist","submit checklist"]
+  },
+  {
+    action: "configure",
+    object: "checklist template",
+    scope: "module", section: "Settings",
+    question: "How do I create a new checklist template for proposals?",
+    answer: "Go to Proposal Management Settings > Checklists and click \"Create Checklist\". After naming it, click into the checklist to configure its form fields, use \"Preview Form\" to review, then \"Save Changes\".",
+    tags: ["checklist template","configure checklist form"]
+  },
+  {
+    action: "define",
+    object: "proposal type",
+    scope: "global", section: "Settings",
+    question: "How do I set up a new proposal type?",
+    answer: "Go to Global Data > Company > Proposal Management > Proposal Types and click \"Proposal Type\" (or \"Create\") to open a pop-up for entering the Proposal Type Name and Description. Click into the created type to add and configure form sections and fields, then \"Save Changes\".",
+    tags: ["proposal type setup","configure proposal type","add proposal type"]
+  },
+  {
+    action: "define",
+    object: "bid type",
+    scope: "global", section: "Settings",
+    question: "How do I create a bid type?",
+    answer: "Go to Proposal Management Settings (or Global Data > Company > Proposal Management) > Bid Types and click \"Bid Type\". Enter a Name, Description, and Estimate Type in the pop-up, then submit.",
+    tags: ["bid type","define bid category","estimate type"]
+  },
+  {
+    action: "define",
+    object: "delivery method",
+    scope: "global", section: "Settings",
+    question: "What is the Delivery Method setting for proposals?",
+    answer: "Delivery Method defines how a proposal is submitted or sent to the recipient. In Proposal Management Settings > Delivery Method, click \"Add\" to create a new row, or use \"Delete\" to remove one.",
+    tags: ["proposal delivery method","submission channel"]
+  },
+  {
+    action: "configure",
+    object: "status",
+    scope: "global", section: "Settings",
+    question: "How do I configure custom statuses for proposals and submission packages?",
+    answer: "Go to Proposal Management Settings (or Global Data) > Status Configuration. Click \"Add Status\" to enter a status name and color for either the Proposal or Submission Package tab. Two standard statuses can be set as \"Success\" or \"Failure\" via Edit.",
+    tags: ["proposal status","custom status colors","status configuration"]
+  },
+  {
+    action: "configure",
+    object: "approval workflow",
+    scope: "global", section: "Settings",
+    question: "How do I set up the approval workflow for proposals?",
+    answer: "Go to Global Data > Company > Proposal Management > Approval Workflow and click \"Create Level\" to select approvers and the workflow type (all must approve, or any one can approve). Multiple levels can be created. Use \"Open Workflow Graph View\" to see the workflow as a tree diagram.",
+    tags: ["proposal approval levels","workflow graph","create approval level"]
+  },
+  {
+    action: "configure",
+    object: "id settings",
+    scope: "global", section: "Settings",
+    question: "How do I configure automatic ID generation for proposals?",
+    answer: "Go to Global Data > Company > Proposal Management > ID Settings. Choose \"System Default\" for automatic IDs or \"Custom\" to configure separator, serial number, date, month, and year fields, then click \"Save Changes\". Separate ID settings exist for Proposal and Submission Package.",
+    tags: ["proposal id format","custom id","auto generated id"]
+  },
+  {
+    action: "assign",
+    object: "user permission",
+    scope: "global", section: "Settings",
+    question: "How do I manage user groups and permissions for Proposal Management?",
+    answer: "Go to Proposal Management Settings > Users and Permissions and click \"Add User Group\" to name the group and select permissions, then \"Add Users\" to assign members. Use the kebab menu to Edit or Delete a group.",
+    tags: ["proposal user group","permissions setup","add users"]
+  },
+  {
+    action: "define",
+    object: "project type",
+    scope: "global", section: "Settings",
+    question: "How are project types categorized in Proposal Management settings?",
+    answer: "Project Types are categorized by Field/Shop, Material, and New/Repair. Click \"Add\" to add a row, edit fields directly (dropdowns for Field/Shop and New/Repair), or use \"Upload Excel\" to bulk create or update project types.",
+    tags: ["project type settings","field shop repair","bulk upload project types"]
+  },
+  {
+    action: "view",
+    object: "proposal dashboard",
+    scope: "module", section: "Dashboard",
+    question: "What does the Proposal Management Dashboard show?",
+    answer: "Navigate to Proposal Management > My Dashboard. It shows Total Proposals by status (Created, In Progress, Approved/Rejected), an Estimate Success Rate graph, Calendar Events, Issues/Forms/Approvals/Proposals summaries, a To Do List, and Proposal Deadlines based on due dates. Data shown is scoped to the logged-in user unless they are a system admin.",
+    tags: ["proposal dashboard","my dashboard","proposal overview"]
+  },
+  {
+    action: "view",
+    object: "proposal success rate",
+    scope: "module", section: "Analytics & Reports",
+    question: "How do I see the success rate of proposals?",
+    answer: "Go to the Proposal Success Rate report. It shows two pie charts: \"Success Rate (Qty of Proposals)\" by status count, and \"Success Rate (Currency Value)\" by submitted amount. Use the Proposal Type dropdown to filter and click legend items to toggle statuses.",
+    tags: ["success rate report","win rate","proposal analytics"]
+  },
+  {
+    action: "view",
+    object: "proposal types analytics",
+    scope: "module", section: "Analytics & Reports",
+    question: "Where can I see proposal quantity and value broken down by bid type?",
+    answer: "The \"Types of Proposals\" report shows two bar graphs: Quantity of proposals and Amount submitted, both broken down by bid type within each proposal type. Adjust the date range and download in Excel, PDF, PPT, or JPEG.",
+    tags: ["proposal analytics by bid type","proposal volume report"]
+  },
+  {
+    action: "track",
+    object: "to do item",
+    scope: "module", section: "To Do",
+    question: "How do I create a to-do task for a proposal?",
+    answer: "In Proposal Management > To Do, click \"Create To Do List\" and fill in Title, Description, Date, and Time, then submit. Use \"Assign To\" to assign the task to a user, and click the double-tick icon to mark it complete.",
+    tags: ["proposal task","to-do list","assign task"]
+  },
+  {
+    action: "track",
+    object: "proposal issue",
+    scope: "module", section: "Issues",
+    question: "How are proposal approval rejections tracked?",
+    answer: "When a proposal is rejected by an approver, it appears in the proposal's Issues tab. The proposal cannot proceed until the associated issue is resolved. Use Search (by Issue ID), Filters (Log ID, Raised On, Raised By), and \"Assign To\" to manage it.",
+    tags: ["proposal rejection","issue tracking","workflow rejection"]
+  },
+  {
+    action: "link",
+    object: "proposal customer",
+    scope: "module", section: "Proposals",
+    question: "How do I add a new customer directly from a proposal?",
+    answer: "In the proposal Profile's Project Location section, use \"Create a Customer\" or \"Create a Customer POC\" to add a new customer or point of contact inline; this also creates a record in the global Customer database.",
+    tags: ["add customer","customer poc","create customer from proposal"]
+  },
+  {
+    action: "assign",
+    object: "proposal team",
+    scope: "module", section: "Proposals",
+    question: "How do I add users or crews to a proposal team?",
+    answer: "In the proposal's Teams tab, click \"Add User\" to select individuals from the global roster, or \"Add Crew\" to add a crew from Global Data. Use the kebab menu's Delete to remove members.",
+    tags: ["proposal team","add user to proposal","add crew"]
+  },
+  {
+    action: "track",
+    object: "proposal comment",
+    scope: "module", section: "Proposals",
+    question: "How do I comment on a proposal and pin it to a report?",
+    answer: "In the proposal Profile, click \"Comments\" to add comments and attachments. Use the comment menu to Edit or Delete your own comment, or \"Add to Report\" to pin it for inclusion in the weekly report.",
+    tags: ["proposal comments","pin comment","weekly report"]
+  },
+  {
+    action: "submit",
+    object: "proposal document",
+    scope: "module", section: "Proposals",
+    question: "Where are all files related to a proposal stored?",
+    answer: "The proposal's Documents tab automatically organizes uploads from Comments, Communication, Checklists, Submittals, Submission Package, and Bids into folders. Use \"New Folder\" to add a custom folder and \"Upload Documents\" to add files.",
+    tags: ["proposal documents","document storage","upload files"]
+  },
+  {
+    action: "submit",
+    object: "proposal email",
+    scope: "module", section: "Proposals",
+    question: "Can I send emails to clients directly from a proposal?",
+    answer: "Yes. In the proposal's Communication tab, click \"Compose Mail\" to send an email with To, CC, BCC, Subject, Message, and attachments. Sent submission package emails are also stored here, organized into Inbox, Sent, Drafts, Starred, and Trash.",
+    tags: ["proposal email","compose mail","client communication"]
+  },
+  {
+    action: "configure",
+    object: "proposal calendar event",
+    scope: "module", section: "Proposals",
+    question: "How do I create a calendar event for a proposal deadline?",
+    answer: "In the Proposal Management Calendar, click \"Create Event\" and enter the Title, Date, Time, Category, and Description. Events created here are automatically linked to the Proposal module and can sync with Outlook via Global Data > Marketplace > Microsoft Outlook.",
+    tags: ["proposal calendar","create event","outlook sync"]
+  }
+];
+
+const QA_TENDERMANAGEMENT = [
+  {
+    action: "create",
+    object: "bid",
+    scope: "module", section: "Bids",
+    question: "How do I create a tender/bid for a proposal?",
+    answer: "There is no separate \"Tender\" object in Arena — bids are created within a Proposal. Open the proposal's Bid tab and click \"Create Bid\", then fill in Bid Name, Description, Proposal, and Bid Type. Note: the Bid tab must be enabled via permissions in Bid Management first.",
+    tags: ["create tender","new bid","tender creation","bid management"]
+  },
+  {
+    action: "define",
+    object: "bid type",
+    scope: "global", section: "Bid Types",
+    question: "How do I define categories for tenders/bids?",
+    answer: "Go to Proposal Management Settings > Bid Types (or Global Data > Company > Proposal Management > Bid Types) and click \"Bid Type\" to enter a Name, Description, and Estimate Type defining how the bid is structured and evaluated.",
+    tags: ["tender category","bid type setup","estimate type"]
+  },
+  {
+    action: "search",
+    object: "bid",
+    scope: "module", section: "Bids",
+    question: "How do I find bids linked to a specific proposal?",
+    answer: "In the proposal's Bid tab, use the \"Search\" option to search for bids linked to that particular proposal.",
+    tags: ["search bids","find tender","bid lookup"]
+  },
+  {
+    action: "export",
+    object: "bid",
+    scope: "module", section: "Bids",
+    question: "Can I bulk create bids from a spreadsheet?",
+    answer: "Yes. In the proposal's Bid tab, use \"Exports\" > \"Upload excel\" to create bids via Excel upload, or \"Download Excel\" to export existing bid data.",
+    tags: ["bulk create bids","excel upload","download bids"]
+  },
+  {
+    action: "view",
+    object: "bid",
+    scope: "module", section: "Bids",
+    question: "What layout options are available for viewing bids?",
+    answer: "The Bids list can be displayed as Table View, Grid View, or Kanban View. Choose a layout and click \"Save layout\" to keep it as your default.",
+    tags: ["bid views","kanban view","table view"]
+  },
+  {
+    action: "create",
+    object: "rfq",
+    scope: "project", section: "RFQ",
+    question: "How do I invite vendors to quote (create an RFQ)?",
+    answer: "Go to Procurement > RFQ and click \"Create\" to start a new Request for Quotation. Link it to the relevant requisitions (REQ), update quantities and specifications, then select vendors from the pre-configured list. Vendor ratings are shown next to each name to aid selection.",
+    tags: ["request for quotation","invite vendors","create rfq","tender invitation"]
+  },
+  {
+    action: "configure",
+    object: "vendor instructions",
+    scope: "project", section: "RFQ",
+    question: "How do I set standard instructions for vendors on an RFQ?",
+    answer: "In Procurement > RFQ, click \"Vendor Instructions\" to configure default guidelines, terms, and conditions sent to vendors for consistent communication.",
+    tags: ["vendor instructions","rfq terms","tender conditions"]
+  },
+  {
+    action: "track",
+    object: "rfq status",
+    scope: "project", section: "RFQ",
+    question: "How do I track the status of an RFQ sent to vendors?",
+    answer: "RFQ status is tracked through a card view in Procurement > RFQ showing stages such as \"Created,\" \"Email Sent to Vendors,\" and \"PO Approved.\" Each card shows key information so you can quickly assess pending actions.",
+    tags: ["rfq tracking","tender status","quotation status"]
+  },
+  {
+    action: "submit",
+    object: "vendor response",
+    scope: "project", section: "Bid Comparison",
+    question: "Where do I enter vendor quotes for comparison?",
+    answer: "Go to Procurement > Vendor Responses, select the relevant RFQ from the list on the left, and enter each vendor's response including cost and lead time.",
+    tags: ["enter vendor quotes","vendor responses","tender bids"]
+  },
+  {
+    action: "view",
+    object: "bid comparison",
+    scope: "project", section: "Bid Comparison",
+    question: "How do I compare vendor bids to select a winner?",
+    answer: "After entering vendor responses in Procurement > Vendor Responses, move to the \"Vendor Analysis and Selection\" tab to evaluate and compare vendor responses based on cost, lead time, and other relevant factors.",
+    tags: ["compare bids","vendor analysis","select vendor","tender comparison"]
+  },
+  {
+    action: "link",
+    object: "bid calendar event",
+    scope: "module", section: "Proposals",
+    question: "Can bid-related deadlines appear on a calendar?",
+    answer: "Yes. Events created within the Proposal Management Calendar can be linked to different modules including Opportunity, Proposal, and Bid Management, so tender/bid deadlines can be tracked alongside proposal events.",
+    tags: ["bid deadlines","tender calendar","event linking"]
+  }
+];
+
+const QA_PROCUREMENT = [
+  {
+    action: "create",
+    object: "requisition",
+    scope: "project", section: "Requisitions",
+    question: "How do I create a requisition (REQ)?",
+    answer: "Go to Procurement > REQ and click \"Create\". Choose the requisition type (Equipment, Material, Equipment Part, or Delivery Service), fill in details and specifications, then click Submit.",
+    tags: ["create req","new requisition","request material"]
+  },
+  {
+    action: "assign",
+    object: "requisition",
+    scope: "project", section: "Requisitions",
+    question: "How do I assign a requisition to someone after creating it?",
+    answer: "After creating a REQ in Procurement > REQ, use the \"Assign To\" button to assign the requisition to a specific user.",
+    tags: ["assign req","requisition owner","delegate requisition"]
+  },
+  {
+    action: "track",
+    object: "requisition issue",
+    scope: "project", section: "Requisitions",
+    question: "Where do I see rejected requisitions?",
+    answer: "Raised issues for rejected REQs can be tracked in the REQ module's \"Workflow Issues\" tab.",
+    tags: ["rejected req","requisition issues","workflow issues"]
+  },
+  {
+    action: "create",
+    object: "requisition from lor",
+    scope: "project", section: "Requisitions",
+    question: "Can I create a requisition from a rejected Load Out Request?",
+    answer: "Yes. In Procurement > REQ, you can create REQs from rejected LORs by clicking \"LOR from REQ\".",
+    tags: ["req from lor","load out request requisition"]
+  },
+  {
+    action: "configure",
+    object: "requisition form",
+    scope: "global", section: "Settings",
+    question: "How do I customize the fields on the requisition form?",
+    answer: "Go to Procurement Settings > REQ Form and use Inncircles Arena's form builder to create multiple sections with different field types (paragraph, single select, multi-select, tables, etc.).",
+    tags: ["req form builder","configure requisition fields"]
+  },
+  {
+    action: "create",
+    object: "rfq",
+    scope: "project", section: "RFQ",
+    question: "How do I create an RFQ from a requisition?",
+    answer: "Go to Procurement > RFQ and click \"Create\". Link relevant procurement packages to the corresponding requisitions (REQ), update quantities/specifications, then select vendors from the pre-configured list to request quotes.",
+    tags: ["create rfq","request for quotation","link req to rfq"]
+  },
+  {
+    action: "submit",
+    object: "vendor response",
+    scope: "project", section: "Vendor Responses",
+    question: "How do I record a vendor's quote for an RFQ?",
+    answer: "Go to Procurement > Vendor Responses, select the RFQ from the list on the left, and enter the vendor's cost and lead time. Then move to \"Vendor Analysis and Selection\" to compare responses.",
+    tags: ["vendor quote entry","record vendor response"]
+  },
+  {
+    action: "create",
+    object: "purchase order",
+    scope: "project", section: "Purchase Orders",
+    question: "How do I create a Purchase Order from an RFQ?",
+    answer: "Go to Procurement > Purchase Order, select the procurement type tab (Material, Equipment, Equipment Part, or Delivery Service), click \"Create\", select the relevant RFQ, enter quantities/pricing/tax code, then click Submit.",
+    tags: ["create po","purchase order from rfq","generate po"]
+  },
+  {
+    action: "create",
+    object: "direct purchase order",
+    scope: "project", section: "Purchase Orders",
+    question: "Can I create a Purchase Order without going through an RFQ?",
+    answer: "Yes. Go to Procurement > Direct Purchase Order, select the procurement type tab, click \"Create\", and select the REQ directly (skipping the RFQ step). Enter pricing and lead time, select the tax code in the Preview PO step, then Submit.",
+    tags: ["direct po","skip rfq","purchase order without quote"]
+  },
+  {
+    action: "view",
+    object: "purchase order",
+    scope: "project", section: "Purchase Orders",
+    question: "Where can I see all Purchase Orders and their status?",
+    answer: "Go to Procurement > Purchase Order Master to view all Purchase Orders along with their current status, history, and linked REQs.",
+    tags: ["po master","purchase order list","po status"]
+  },
+  {
+    action: "configure",
+    object: "purchase order form",
+    scope: "global", section: "Settings",
+    question: "How do I configure the Purchase Order form fields?",
+    answer: "Go to Procurement Settings > PO Configuration and use the form builder to configure the Purchase Order form separately for Material, Equipment, Equipment Part, and Delivery Service tabs.",
+    tags: ["po form configuration","purchase order fields"]
+  },
+  {
+    action: "create",
+    object: "delivery receipt",
+    scope: "project", section: "Delivery Receipts",
+    question: "How do I create a Delivery Receipt for a Purchase Order?",
+    answer: "Go to Procurement > Delivery Receipts and click \"Create\". Select the vendor and the associated Purchase Order, fill in receiving quantity and additional info, then click Submit.",
+    tags: ["delivery receipt","dr creation","receive goods"]
+  },
+  {
+    action: "configure",
+    object: "delivery receipt form",
+    scope: "global", section: "Settings",
+    question: "How do I configure the Delivery Receipt form?",
+    answer: "Go to Procurement Settings > Delivery Request and use the form builder to configure the Delivery Receipt form for Material, Equipment, Equipment Part, and Delivery Service.",
+    tags: ["delivery receipt settings","configure delivery form"]
+  },
+  {
+    action: "create",
+    object: "invoice",
+    scope: "project", section: "Invoices",
+    question: "How do I create an invoice for a procured item?",
+    answer: "Go to Procurement > Invoices, click \"Create\", choose the vendor, expand to view associated Purchase Orders, and select the relevant one. Enter invoice number, date, payment terms, select items for billing, then enter the subtotal and tax amount before submitting.",
+    tags: ["create invoice","procurement billing","invoice from po"]
+  },
+  {
+    action: "configure",
+    object: "invoice form",
+    scope: "global", section: "Settings",
+    question: "How do I configure the Invoice form fields?",
+    answer: "Go to Procurement Settings > Invoice and use the form builder to configure the invoice form for Equipment, Material, Equipment Part, and Delivery Service, with multiple sections and field types.",
+    tags: ["invoice settings","configure invoice form"]
+  },
+  {
+    action: "create",
+    object: "pickup request",
+    scope: "project", section: "Pickup Requests",
+    question: "How do I create a Pickup Request for procured items?",
+    answer: "Go to Procurement > Pickup Request and click \"Create\". Select the Vendor and Purchase Order, fill in the Pickup Date and Address, set the Pickup Request status, then click Submit.",
+    tags: ["pickup request","schedule pickup","procurement pickup"]
+  },
+  {
+    action: "configure",
+    object: "pickup request form",
+    scope: "global", section: "Settings",
+    question: "How do I configure the Pickup Request form?",
+    answer: "Go to Procurement Settings > Pickup Request and configure the form fields using the form builder, then click \"Save changes\".",
+    tags: ["pickup request settings","configure pickup form"]
+  },
+  {
+    action: "view",
+    object: "procurement communication",
+    scope: "project", section: "Communications",
+    question: "Where can I find emails related to procured items?",
+    answer: "Go to Procurement > Communications, which is a mail repository where all emails linked to procured items are tracked.",
+    tags: ["procurement mail","communication log","procurement emails"]
+  },
+  {
+    action: "configure",
+    object: "approval workflow",
+    scope: "global", section: "Settings",
+    question: "How do I set up approval workflows for procurement documents?",
+    answer: "Go to Procurement Settings > Approval Workflow and click \"Create Level\" to build a workflow. You can create multiple levels and choose \"All must approve\" or \"Any one can approve\" for each level. This applies to Requisition forms, Purchase Orders, Invoices, and Pickup Requests.",
+    tags: ["procurement approval workflow","create level","po approval"]
+  },
+  {
+    action: "configure",
+    object: "id settings",
+    scope: "global", section: "Settings",
+    question: "How do I configure ID formats for procurement documents?",
+    answer: "Go to Procurement > ID Settings, select System Default for auto-generated IDs, or Custom to choose fields and their order, then click \"Save Changes\".",
+    tags: ["procurement id format","custom id","auto id"]
+  },
+  {
+    action: "configure",
+    object: "issue priority",
+    scope: "global", section: "Settings",
+    question: "How do I set priority levels for procurement issues?",
+    answer: "Go to Procurement Settings > Issues Priority and click \"Add Priority\" to create priority levels along with their Due Hours.",
+    tags: ["issue priority","procurement issue sla","due hours"]
+  }
+];
+
+const QA_TIMEMANAGEMENT = [
+  {
+    action: "submit",
+    object: "timesheet",
+    scope: "project", section: "Timesheet Logs",
+    question: "How do I log my own work hours?",
+    answer: "Go to My Timesheet, select the Company/Project/Work Order/GL Code and the Template (auto-populated from your default setting), pick a Date Range, click \"Add\" to insert a row, fill in phase code/earning code/hours, then click \"Submit for Approval\" (or \"Save as Draft\" to save incomplete data).",
+    tags: ["log hours","my timesheet","submit timesheet","enter hours"]
+  },
+  {
+    action: "submit",
+    object: "crew timesheet",
+    scope: "project", section: "Timesheet Logs",
+    question: "How does a supervisor log hours for an entire crew?",
+    answer: "Go to My Crew Timesheet, select the Company/Project/Work Order/GL Code and Crew, choose a Template and Date Range, click \"Add\" to add employee rows, fill in hours per phase/earning code, then \"Submit for Approval\". Timesheet settings and a workflow must be configured for the crew first.",
+    tags: ["crew timesheet","log crew hours","supervisor timesheet","foreman timesheet"]
+  },
+  {
+    action: "approve",
+    object: "timesheet log",
+    scope: "project", section: "Timesheet Logs",
+    question: "How do I approve or reject a submitted timesheet?",
+    answer: "Go to My Timesheet Logs (or My Crew Timesheet Logs), select a submitted log, then use the \"Approve\" or \"Reject\" buttons shown on the right side, optionally adding comments. These buttons only appear for users designated as approvers in the Approval Workflow.",
+    tags: ["approve timesheet","reject timesheet","timesheet approval"]
+  },
+  {
+    action: "track",
+    object: "timesheet status",
+    scope: "project", section: "Timesheet Logs",
+    question: "What statuses can a timesheet log have?",
+    answer: "A timesheet log can be Draft (incomplete, saved without mandatory fields except Employee), Submitted for Approval, Workflow in Progress (approved at one level, pending another), Completed (approved at all levels, locked), or Rejected (creates an issue for correction).",
+    tags: ["timesheet statuses","draft","workflow in progress","completed","rejected"]
+  },
+  {
+    action: "export",
+    object: "timesheet log",
+    scope: "project", section: "Timesheet Logs",
+    question: "What export formats are available for timesheet logs?",
+    answer: "From the Export menu in Timesheet Logs, you can download VP Excel (.xlsx), VP CSV, QuickBooks (.iif), or SAP (.csv) formats after selecting date range, log level, crews/users, mode, and earning codes. Only Admin users have access to Export.",
+    tags: ["export timesheet","quickbooks export","sap export","csv download"]
+  },
+  {
+    action: "filter",
+    object: "timesheet log",
+    scope: "project", section: "Timesheet Logs",
+    question: "How do I filter timesheet logs by project, crew, or status?",
+    answer: "In My Timesheet Logs / My Crew Timesheet Logs, click \"Filters\" to narrow by Log Level Category, Log Level, Crew, Logged By, Mode (Daily/Weekly by Day/Weekly), Status, and Date Range. Use \"Save filters\" to keep a filter set, \"Reset\" to revert, or \"Clear All\" to reset to defaults.",
+    tags: ["filter timesheets","timesheet search","log level filter"]
+  },
+  {
+    action: "track",
+    object: "timesheet issue",
+    scope: "project", section: "Timesheet Issues",
+    question: "What happens when a timesheet is rejected?",
+    answer: "A rejected timesheet automatically creates an entry in Timesheet Issues with comments and supporting info. The issue stays active until the timesheet is corrected and resubmitted. Use \"Assign To\" to delegate and \"Due Date\" to set a deadline.",
+    tags: ["timesheet issue","rejected timesheet","resubmit timesheet"]
+  },
+  {
+    action: "configure",
+    object: "approval workflow",
+    scope: "global", section: "Settings",
+    question: "How do I create an approval workflow for timesheets?",
+    answer: "Go to Settings > Timesheet Workflow > Create Workflow, click \"Create Approval Workflow\", name it, then click \"Create Level\" to add approvers by User or by Role, choosing \"All must approve\" or \"Anyone can approve\" for each level.",
+    tags: ["timesheet approval workflow","create workflow","approval levels"]
+  },
+  {
+    action: "assign",
+    object: "approval workflow",
+    scope: "global", section: "Settings",
+    question: "How do I assign an approval workflow to a user or crew?",
+    answer: "Go to Settings > Timesheet Workflow > Assign Workflow, select a User or Crew, choose the Approval Workflow to apply, and click \"Save Changes\". Use \"Copy Approval Workflow To\" to apply the same workflow to multiple users/crews at once.",
+    tags: ["assign timesheet workflow","copy workflow","workflow assignment"]
+  },
+  {
+    action: "configure",
+    object: "timesheet mode",
+    scope: "global", section: "Settings",
+    question: "How do I set whether timesheets are logged Daily, Weekly, or Weekly by Day?",
+    answer: "Go to Timesheet Settings > Timesheet Mode. Under \"My Timesheet\" (individual) or \"My Crew Timesheet\" (per crew), select Daily, Weekly by Day, or Weekly, choose a Default Template, and click \"Save Changes\". Use \"Copy To\" to apply the same mode to other users or crews.",
+    tags: ["timesheet mode","daily weekly configuration","default template"]
+  },
+  {
+    action: "configure",
+    object: "earning code",
+    scope: "global", section: "Settings",
+    question: "How do I create earning codes for payroll?",
+    answer: "Go to Timesheet Settings > Earning Codes, click \"Add\" to insert a row, enter Code, Description, and Short Name, set the Data Type (Hours or Amount), and choose Payroll Hours and/or Project Hours. \"Split Headers\" places the code under Phase Codes in weekly templates.",
+    tags: ["earning codes","payroll codes","create earning code"]
+  },
+  {
+    action: "configure",
+    object: "timesheet template",
+    scope: "global", section: "Settings",
+    question: "How do I build a custom timesheet template?",
+    answer: "Go to Timesheet Settings > Timesheet Templates, click \"Create\", then open the new template to configure Standard and Configurable fields via \"Add Field\". Choose whether earning codes display as a \"Column\" or \"Split Time Header\", then \"Save Changes\".",
+    tags: ["timesheet template builder","configurable fields","custom timesheet"]
+  },
+  {
+    action: "configure",
+    object: "payroll locking",
+    scope: "global", section: "Settings",
+    question: "How do I lock payroll periods to prevent further edits?",
+    answer: "Go to Timesheet Settings > Payroll Locking. Choose Daily, Weekly, or Monthly mode. In Weekly mode pick the lock day and time; in Monthly mode choose Start of Month, End of Month, or a Custom date, then set the lock time.",
+    tags: ["payroll locking","lock timesheet period","prevent edits"]
+  },
+  {
+    action: "track",
+    object: "timesheet reconciliation",
+    scope: "project", section: "Reconciliation",
+    question: "How do I manually reconcile timesheet data?",
+    answer: "Go to Timesheet Reconciliation > Timesheet, choose Daily & Weekly by Day or Weekly mode, click \"Create Log\" and select a date range to view submitted logs, then click the \"Phase code\" button for an employee to reconcile that entry manually.",
+    tags: ["manual reconciliation","reconcile timesheet","timesheet accuracy"]
+  },
+  {
+    action: "import",
+    object: "gate log reconciliation",
+    scope: "project", section: "Reconciliation",
+    question: "Can I reconcile timesheets using uploaded gate/access logs?",
+    answer: "Yes. Go to Timesheet Reconciliation > Gate Logs, select Daily & Weekly by Day or Weekly mode, then use \"Upload Logs\" with the provided template to upload employee/crew hour verification data. The system validates Employee IDs and creates batches for organized reconciliation.",
+    tags: ["gate logs","upload reconciliation","batch reconciliation"]
+  },
+  {
+    action: "view",
+    object: "timesheet data summary",
+    scope: "project", section: "Analytics & Reports",
+    question: "How do I see total logged hours broken down by project, crew, or phase code?",
+    answer: "Go to Timesheet Data Summary and switch between the People, Crew, Phase Codes, and Project tabs. Select a date range and log level, then use \"Download Excel\" to export. Toggle \"Submitted\" or \"Approved\" at the top right to filter by log status.",
+    tags: ["timesheet summary","hours by project","hours by crew","phase code report"]
+  },
+  {
+    action: "create",
+    object: "crew",
+    scope: "global", section: "Rosters & Crews",
+    question: "How do I create a new crew?",
+    answer: "Go to Global Data > Crews and click \"Create\". Enter the Crew Name, choose Supervisors and Foremen from their dropdowns, select Rosters (system and non-system users) for the crew, then click \"Submit\".",
+    tags: ["create crew","new crew","global crew setup"]
+  },
+  {
+    action: "create",
+    object: "project crew",
+    scope: "project", section: "Rosters & Crews",
+    question: "How do I add a crew to a specific project?",
+    answer: "Go to Project Setup > Roster > Project Crews and click \"Create Crew\" to build one manually, or \"Copy Crews from Global Data\" to import existing crews. Use \"Map Crews to Projects\" to copy a crew to other projects.",
+    tags: ["project crew","add crew to project","copy crew"]
+  },
+  {
+    action: "create",
+    object: "system user roster",
+    scope: "project", section: "Rosters & Crews",
+    question: "How do I add a system user to a project roster?",
+    answer: "Go to Project Setup > Roster > System User, click \"Add\", and select users from Global Data (Global Data > Users & Permissions > Global Rosters). Selected users appear on the right side of the dialog; click \"Submit\" to add them.",
+    tags: ["add system user","project roster","system user assignment"]
+  },
+  {
+    action: "create",
+    object: "non-system user roster",
+    scope: "project", section: "Rosters & Crews",
+    question: "How do I add a temporary (non-system) worker to a project?",
+    answer: "Go to Project Setup > Roster > Non System User and click \"Add\" to manually create one, or \"Get Users from Global Data\" to select existing non-system users. Fill required fields and Submit.",
+    tags: ["non-system user","temp worker","add temporary user"]
+  },
+  {
+    action: "configure",
+    object: "roster custom column",
+    scope: "global", section: "Settings",
+    question: "How do I add custom fields to the roster tables?",
+    answer: "Go to Global Settings > Roster Settings and use \"Configurable Fields\" to add custom columns, choosing a field type (Attachment, Check box, Date, Label, Multi select, Paragraph, Roster, Scribble, Single select, Table, Text box, Time, Signature). Click \"Save Changes\" to apply.",
+    tags: ["roster custom fields","configure roster columns","field types"]
+  },
+  {
+    action: "export",
+    object: "roster",
+    scope: "project", section: "Rosters & Crews",
+    question: "Can I bulk upload rosters via Excel?",
+    answer: "Yes. On the Roster (System Users or Non-System Users) page, use \"Upload Excel\" to bulk-add roster records, or \"Download Excel\" to export the current roster list.",
+    tags: ["bulk upload roster","download roster excel"]
+  }
+];
+
+const QA_INVENTORYMANAGEMENT = [
+  {
+    action: "create",
+    object: "material",
+    scope: "global", section: "Inventory Master",
+    question: "How do I add a new material to the inventory?",
+    answer: "Go to Inventory Master and click \"Add\". Fill in Material, Quantity, UOM (Unit of Measurement), and Inventory Location, then click \"Submit\" to add it to the master list.",
+    tags: ["add material","new inventory item","create material record"]
+  },
+  {
+    action: "edit",
+    object: "material quantity",
+    scope: "global", section: "Inventory Master",
+    question: "How do I add more stock to an existing material without creating a duplicate?",
+    answer: "In Inventory Master, click \"Add Quantity\", select the material whose quantity you want to update, and enter the additional amount. The old quantity shows what's available and the new quantity is the amount being added.",
+    tags: ["increase stock","add quantity","restock material"]
+  },
+  {
+    action: "import",
+    object: "material",
+    scope: "global", section: "Inventory Master",
+    question: "Can I bulk import materials into the Inventory Master?",
+    answer: "Yes. Click \"Upload Excel\" in Inventory Master and use the provided sample template to bulk-add materials in the correct format.",
+    tags: ["bulk import materials","upload excel inventory"]
+  },
+  {
+    action: "configure",
+    object: "custom column",
+    scope: "global", section: "Inventory Master",
+    question: "Can I add custom fields to inventory records?",
+    answer: "Yes. Click \"Add Custom Column\" in Inventory Master to add a column with a chosen type: Text, Single Select, Multi-select, or Date.",
+    tags: ["custom inventory field","add column","inventory customization"]
+  },
+  {
+    action: "define",
+    object: "inventory location",
+    scope: "global", section: "Inventory Master",
+    question: "How do I set up warehouse/inventory locations?",
+    answer: "In Inventory Master, open \"Inventory Locations\" and click \"Add Location\" to enter a name and physical location for each material inventory owned by the organization.",
+    tags: ["inventory location","warehouse setup","add location"]
+  },
+  {
+    action: "delete",
+    object: "material",
+    scope: "global", section: "Inventory Master",
+    question: "How do I remove a material from the Inventory Master?",
+    answer: "Click the red trash can icon next to the material entry in Inventory Master. Deletion is only allowed if the material is not currently in use elsewhere.",
+    tags: ["delete material","remove inventory record"]
+  },
+  {
+    action: "export",
+    object: "material",
+    scope: "global", section: "Inventory Master",
+    question: "How do I export the full inventory list?",
+    answer: "Click \"Download Excel\" in Inventory Master to extract all material information into an Excel file, useful for records or time-stamped inventory snapshots.",
+    tags: ["export inventory","download excel","inventory snapshot"]
+  },
+  {
+    action: "create",
+    object: "pickup ticket",
+    scope: "project", section: "Pickup Ticket",
+    question: "How do I create a Pick Up Ticket to ship material out of inventory?",
+    answer: "In Pick Up Ticket, click \"Add\" (top left), fill in the shipment details and add the materials to be shipped, then click \"Submit\". This generates a ticket ID with default status \"RAISED\", which is then sent for approval to the warehouse manager.",
+    tags: ["pickup ticket","create shipment order","raise pickup ticket"]
+  },
+  {
+    action: "approve",
+    object: "pickup ticket",
+    scope: "project", section: "Pickup Ticket",
+    question: "How is a Pick Up Ticket approved or rejected?",
+    answer: "A raised Pick Up Ticket is sent to the warehouse manager (or whoever holds the relevant permission) for approval. If rejected, the reject button turns red and the ticket stays \"REJECTED\" until modified and resubmitted; once approved, the status changes to \"APPROVED\".",
+    tags: ["approve pickup ticket","reject pickup ticket","ticket status"]
+  },
+  {
+    action: "export",
+    object: "pickup ticket",
+    scope: "project", section: "Pickup Ticket",
+    question: "Can I export pickup tickets to Excel?",
+    answer: "Yes. Use the \"Download Excel\" button on the Pick Up Ticket screen to export all tickets. \"Filters\" and \"Search\" let you narrow results by ID or status first.",
+    tags: ["export pickup tickets","download excel","filter pickup tickets"]
+  },
+  {
+    action: "create",
+    object: "ship ticket",
+    scope: "project", section: "Ship Ticket",
+    question: "How do I create a Ship Ticket for materials leaving the warehouse?",
+    answer: "In Ship Ticket, click \"Add\", then select the corresponding Pick Up Ticket number. Material details auto-populate from that pick up ticket. Fill in the remaining details and click \"Submit\" to generate a Ship Ticket ID.",
+    tags: ["ship ticket","create shipment","ship materials"]
+  },
+  {
+    action: "view",
+    object: "ship ticket",
+    scope: "project", section: "Ship Ticket",
+    question: "Why can't I add a certain material to a Ship Ticket?",
+    answer: "Only material currently in stock is shown for Ship Tickets. If a material is not available in stock, it cannot be added or shipped until it is restocked. Also, only approved pick up tickets appear in the ship ticket dropdown.",
+    tags: ["material not available","out of stock","ship ticket restrictions"]
+  },
+  {
+    action: "create",
+    object: "return ticket",
+    scope: "project", section: "Return Ticket",
+    question: "How do I create a Return Ticket for unused or problematic material?",
+    answer: "In Return Ticket, click \"Add\", then select the Pick Up Ticket number the return corresponds to. Shipped and already-returned quantities auto-populate. Fill in the remaining fields and click \"Submit\" to generate a Return Ticket ID.",
+    tags: ["return ticket","return material","material return process"]
+  },
+  {
+    action: "view",
+    object: "return ticket",
+    scope: "project", section: "Return Ticket",
+    question: "What pick up tickets are eligible for a return?",
+    answer: "Only approved pick up tickets that have shipped material will appear in the drop-down when creating a return ticket.",
+    tags: ["eligible return","pickup ticket shipped","return eligibility"]
+  },
+  {
+    action: "create",
+    object: "load out request",
+    scope: "project", section: "Load Out Requests",
+    question: "How do I request equipment to be sent to a job site (LOR)?",
+    answer: "In Load Out Request, click \"Add\" to open the Request Form. Enter Equipment/Accessory required, Quantity, UOM, Requested By, Required Date, Planned Return Date, Supervisor, and Job ID/Name, then submit. The LOR status becomes \"REQUESTED\".",
+    tags: ["load out request","request equipment","create lor"]
+  },
+  {
+    action: "approve",
+    object: "load out request",
+    scope: "project", section: "Load Out Requests",
+    question: "Who approves a Load Out Request and what happens next?",
+    answer: "The warehouse manager (or person with equipment management approval permission) sees \"Approve\" and \"Reject\" buttons on a submitted LOR. Approving sets status to \"APPROVED\"; rejecting turns the button red and sets status to \"REJECTED\", allowing the requester to modify and resubmit based on comments.",
+    tags: ["approve lor","reject lor","warehouse manager approval"]
+  },
+  {
+    action: "track",
+    object: "load out request status",
+    scope: "project", section: "Load Out Requests",
+    question: "What are all the possible statuses of a Load Out Request?",
+    answer: "An LOR can move through: Requested, Approved, Rejected, Check Out, Partial Check Out, Check Out With Issue, Ship In, Partial Ship In, Check In, Partial Check-In, Check In With Issue, Shop In, Partial Closed, and Closed.",
+    tags: ["lor lifecycle","lor statuses","load out request stages"]
+  },
+  {
+    action: "track",
+    object: "equipment checkout",
+    scope: "project", section: "Load Out Requests",
+    question: "How does checking out equipment for an LOR work?",
+    answer: "After an LOR request is approved, click \"Check Out\" to verify equipment against stock in the Equipment Master and check it out. Fill in Assign ID, Checkout Date, and Signature, then Submit. If not all equipment is checked out at once, status shows \"PARTIAL CHECK OUT\"; once complete, it shows \"CHECKED OUT\".",
+    tags: ["equipment check out","lor checkout stage","partial checkout"]
+  },
+  {
+    action: "track",
+    object: "equipment check in",
+    scope: "project", section: "Load Out Requests",
+    question: "How do I check equipment back in after use?",
+    answer: "In the LOR's Check In stage, fill in the details for the returning equipment along with a name and signature, then submit. Partial returns show \"PARTIAL CHECK IN\"; once all equipment is checked in, status becomes \"CHECKED IN\". If a Scheduled Equipment Maintenance form is configured, it must be completed and any issues are logged to Equipment Issues.",
+    tags: ["equipment check in","lor check in stage","return equipment"]
+  },
+  {
+    action: "track",
+    object: "shop in",
+    scope: "project", section: "Load Out Requests",
+    question: "What does \"Shop In\" mean for a Load Out Request?",
+    answer: "Shop In is the final stage where equipment/accessories are moved back into their inventory location (usually the same one they were checked out from). Check the confirmation box, add a signature, and submit to close the LOR (status \"CLOSED\", or \"PARTIAL CLOSED\" if only some equipment has shopped in).",
+    tags: ["shop in stage","close lor","return to inventory location"]
+  },
+  {
+    action: "create",
+    object: "3rd party lor",
+    scope: "project", section: "Load Out Requests",
+    question: "How does a 3rd Party Load Out Request differ from an internal one?",
+    answer: "A 3rd Party LOR follows the same Request, Check Out, Ship, Check In, and Shop In stages as an internal LOR, but adds a \"Lease Agreement\" stage after Check Out, since equipment is being sent to an external party's job site rather than an internal one.",
+    tags: ["3rd party lor","external equipment lease","lease agreement stage"]
+  },
+  {
+    action: "approve",
+    object: "lease agreement",
+    scope: "project", section: "Load Out Requests",
+    question: "How is a Lease Agreement approved for a 3rd Party LOR?",
+    answer: "After submitting the Lease Agreement form, click \"Email Agreement for Approval\" to send it to the 3rd party via email. Its status shows \"Waiting for Approval\", then \"Approved (Mail ID)\" once the recipient clicks \"Approve\" in the emailed form (or the equipment must be revised if \"Reject\" is clicked).",
+    tags: ["lease agreement approval","email agreement","3rd party approval"]
+  },
+  {
+    action: "track",
+    object: "equipment issue",
+    scope: "project", section: "Load Out Requests",
+    question: "What happens if there's a problem with equipment during checkout or check-in?",
+    answer: "If an issue is raised while checking out, a popup asks whether to \"Proceed With Issue\" or \"Change Equipment\"; proceeding sets status to \"Check Out Issue\". During check-in, a warning asks whether to \"Hold the Equipment/Accessory or Not\" — choosing not to hold sets status to \"CHECK IN ISSUE\". All raised issues appear in the Equipment Issues tab.",
+    tags: ["equipment issue","check out issue","check in issue","equipment problems"]
+  },
+  {
+    action: "configure",
+    object: "lor approval workflow",
+    scope: "global", section: "Settings",
+    question: "How do I set up approval workflows for LORs?",
+    answer: "Go to LOR Workflows and click \"Create Level\" to define a level type (\"All must approve\" or \"Anyone can approve\") and select approvers. A tree/graph view of the workflow is available at the top right corner.",
+    tags: ["lor workflow setup","load out request approval","create level"]
+  },
+  {
+    action: "view",
+    object: "load out request history",
+    scope: "project", section: "Load Out Requests",
+    question: "How do I see the full history of actions on an LOR?",
+    answer: "Click the kebab menu on an LOR card and select \"See History\" to view Equipment Logs, including requests, check-ins, check-outs, shipments, and Shop In actions, along with who performed them and when.",
+    tags: ["lor history","equipment logs","audit trail"]
+  },
+  {
+    action: "filter",
+    object: "load out request",
+    scope: "project", section: "Load Out Requests",
+    question: "How do I filter or search Load Out Requests?",
+    answer: "Use the \"Filters\" button to filter LORs by status or user, and the \"Search\" box to narrow results by specific criteria. LORs can be displayed in Grid View or Kanban View.",
+    tags: ["filter lor","search lor","lor views"]
+  },
+  {
+    action: "delete",
+    object: "load out request",
+    scope: "project", section: "Load Out Requests",
+    question: "Can I delete a Load Out Request?",
+    answer: "An LOR can be deleted only as long as none of the included equipment has been checked out yet.",
+    tags: ["delete lor","remove load out request"]
+  }
+];
+
+
 // Arena Knowledge Base — structured module content
 // Each module: id, name, tile, tagline, sections[]. Each section: heading, html (body), qa[] (question, answer html, tags[])
 
@@ -5230,6 +6198,84 @@ const MODULES = [
       `Work Order Types and status configuration are maintained separately under <strong>Global Data → Work Order</strong>.`
     ],
     sections: [{ id: "work-order-qa", heading: "Common Questions", html: "<p>Answers sourced from Arena's documentation.</p>", qa: [] }]
+  },
+  {
+    id: "proposal-management",
+    qaItems: QA_PROPOSALMANAGEMENT,
+    name: "Proposal Management",
+    alias: "Bids & Submissions",
+    icon: "description",
+    tagline: "Track proposals from creation through approval, bids, and submission packages.",
+    color: "#c46a2e",
+    overview: `<p><strong>Proposal Management</strong> covers the full lifecycle of a bid/proposal opportunity: creating <strong>proposals</strong>, tracking <strong>submittals</strong> and <strong>submission packages</strong>, running <strong>approval workflows</strong>, managing <strong>bids</strong> linked to a proposal, and monitoring proposal performance through dashboards and analytics.</p>
+    <p>It connects to <strong>Opportunity Management</strong> (source of opportunities), <strong>Global Data</strong> settings (ID formats, statuses, proposal/bid/project types), and produces a <strong>Project</strong> once a proposal is won.</p>`,
+    navigation: [
+      `From <strong>Home</strong>, click the <strong>Proposal Management</strong> tile.`,
+      `Open a proposal to reach its Bid, Submission Package, Submittals, Checklists, Teams, Documents, Communication, and Calendar tabs.`
+    ],
+    sections: [{ id: "proposal-management-qa", heading: "Common Questions", html: "<p>Answers sourced from Arena's documentation.</p>", qa: [] }]
+  },
+  {
+    id: "tender-management",
+    qaItems: QA_TENDERMANAGEMENT,
+    name: "Tender Management",
+    alias: "Bid Comparison",
+    icon: "gavel",
+    tagline: "Route tender and bid-comparison questions to the Bid and RFQ features that power them.",
+    color: "#4b3f8a",
+    overview: `<p>Inncircles Arena does not maintain a distinct <strong>Tender Management</strong> module page in the documentation; tendering-style workflows are split across two existing modules. Creating and comparing bids for a proposal is handled by the <strong>Bid</strong> feature inside <strong>Proposal Management</strong>, while vendor quote solicitation and comparison (<strong>RFQ</strong>, <strong>Vendor Responses</strong>) is handled inside the <strong>Procurement</strong> module.</p>
+    <p>The items in this module map "tender" and "bid comparison" questions to those closest equivalents so users asking from the Home tile are routed correctly.</p>`,
+    navigation: [
+      `From <strong>Home</strong>, click the <strong>Tender Management</strong> tile — this routes to bid creation inside a <strong>Proposal</strong> and quote comparison inside <strong>Procurement</strong>.`,
+      `For bid creation, open a proposal's <strong>Bid</strong> tab. For vendor quote comparison, go to <strong>Procurement → RFQ</strong> and <strong>Vendor Responses</strong>.`
+    ],
+    sections: [{ id: "tender-management-qa", heading: "Common Questions", html: "<p>Answers sourced from Arena's documentation.</p>", qa: [] }]
+  },
+  {
+    id: "procurement",
+    qaItems: QA_PROCUREMENT,
+    name: "Procurement",
+    alias: "Purchasing & Vendors",
+    icon: "shopping_cart",
+    tagline: "Manage the purchasing lifecycle from requisition to purchase order, delivery, and invoicing.",
+    color: "#5c6b1f",
+    overview: `<p><strong>Procurement</strong> manages the purchasing lifecycle from requisition to purchase order and delivery: raising <strong>requisitions (REQs)</strong>, soliciting quotes (<strong>RFQs</strong>) and comparing vendor responses, generating <strong>Purchase Orders</strong> (direct or via RFQ), and tracking <strong>Invoices</strong>, <strong>Delivery Receipts</strong>, and <strong>Pickup Requests</strong>.</p>
+    <p>It integrates with <strong>Global Data</strong> for vendors, tax codes, and approval workflows.</p>`,
+    navigation: [
+      `From <strong>Home</strong>, click the <strong>Procurement</strong> tile.`,
+      `Second-level tabs include REQ, RFQ, Vendor Responses, Purchase Order, Direct Purchase Order, Purchase Order Master, Delivery Receipts, Invoices, Pickup Request, and Communications.`
+    ],
+    sections: [{ id: "procurement-qa", heading: "Common Questions", html: "<p>Answers sourced from Arena's documentation.</p>", qa: [] }]
+  },
+  {
+    id: "time-management",
+    qaItems: QA_TIMEMANAGEMENT,
+    name: "Time Management",
+    alias: "Timesheets & Rosters",
+    icon: "schedule",
+    tagline: "Log, approve, and reconcile employee and crew hours through configurable timesheets.",
+    color: "#1f7d8c",
+    overview: `<p><strong>Time Management</strong> covers logging, reviewing, and approving employee and crew work hours through configurable <strong>timesheets</strong> (Daily, Weekly, or Weekly by Day), plus <strong>roster/crew administration</strong>, <strong>approval workflows</strong>, <strong>reconciliation</strong> against external data, and reporting/data-summary views for payroll and project cost tracking.</p>`,
+    navigation: [
+      `From <strong>Home</strong>, click the <strong>Time Management</strong> tile.`,
+      `Use <strong>My Timesheet</strong> or <strong>My Crew Timesheet</strong> to log hours; approvers work from <strong>My Timesheet Logs</strong>. Rosters, crews, and workflow settings live under their own tabs and Global Data.`
+    ],
+    sections: [{ id: "time-management-qa", heading: "Common Questions", html: "<p>Answers sourced from Arena's documentation.</p>", qa: [] }]
+  },
+  {
+    id: "inventory-management",
+    qaItems: QA_INVENTORYMANAGEMENT,
+    name: "Inventory Management",
+    alias: "Stock & Load Outs",
+    icon: "inventory_2",
+    tagline: "Track material and equipment stock and manage its movement in and out of the warehouse.",
+    color: "#7a2f3f",
+    overview: `<p><strong>Inventory Management</strong> tracks material and equipment stock through the <strong>Inventory Master</strong>, and governs the flow of goods in and out via <strong>Pick Up Tickets</strong>, <strong>Ship Tickets</strong>, and <strong>Return Tickets</strong> for materials, plus <strong>Load Out Requests (LORs)</strong> — including <strong>3rd Party LORs</strong> — for equipment/accessories moving through Request, Check Out, Ship, Check In, and Shop In stages.</p>`,
+    navigation: [
+      `From <strong>Home</strong>, click the <strong>Inventory Management</strong> tile.`,
+      `Materials flow through Inventory Master, Pick Up Ticket, Ship Ticket, and Return Ticket. Equipment/accessories flow through Load Out Requests (LOR).`
+    ],
+    sections: [{ id: "inventory-management-qa", heading: "Common Questions", html: "<p>Answers sourced from Arena's documentation.</p>", qa: [] }]
   }
 ];
 
