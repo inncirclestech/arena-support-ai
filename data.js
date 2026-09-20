@@ -1613,6 +1613,39 @@ const QA_GLOBALDATA = [
 const QA_ACCOUNTBASICS = [
   {
     action: "create",
+    object: "new project",
+    scope: "global", section: "Home Page",
+    question: "How do I create a new project?",
+    answer: "Go to **Home → Projects** and click the orange **+ Create Project** button, top-left of the project grid (next to \"Upload Excel\"). In the dialog, fill in the three required fields — **Project Name**, **Project Number / ID**, and **Construction Type** — then click Submit. Everything else in the form (location, subsidiary, owner representative, currency, customer, project type, funding/implementing agency, and a project logo/display image) is optional and can be filled in later. The dialog closes, the new project appears immediately in the grid with status \"Created,\" and it's fully navigable right away — but it starts completely empty, so plan to follow up in **Project Setup** to build out the work breakdown, team, schedule, and forms before it's operationally useful.",
+    tags: ["create project","new project","start a project","add project","create a new job","set up a project"]
+  },
+  {
+    action: "understand",
+    object: "create project required fields",
+    scope: "global", section: "Home Page",
+    question: "What information do I need to have ready before creating a new project?",
+    answer: "Only three fields are required to create a project: **Project Name**, **Project Number / ID** (the short code shown on the project card, e.g. \"ST-01\"), and **Construction Type** (picked from the same list Global Data maintains). Everything else — location, subsidiary/business unit, owner representative, project manager, currency, customer, owner, construction cost estimate, project type, and funding/implementing agency — is optional at creation and can be added or edited afterward. There's no start date, end date, or duration field at creation time; scheduling is set up separately once the project exists.",
+    tags: ["required fields","what do i need to create a project","project number","project id","construction type"]
+  },
+  {
+    action: "understand",
+    object: "what happens after creating a project",
+    scope: "global", section: "Home Page",
+    question: "What happens right after I create a new project — where does it take me?",
+    answer: "Submitting the Create Project form returns you to the Projects grid, not into the new project — the new card just appears at the top with status \"Created.\" When you click into it, you land on **My Desk**, and since nothing has been configured yet, every section there (Actions, Work Logs, Punch List Items, Quality Logs, Safety) shows zero. The project is technically usable immediately — every module is reachable with no forced setup wizard — but it's functionally empty until someone works through **Project Setup** to define the work breakdown/plants, add the team, build a schedule, and configure phase codes and forms.",
+    tags: ["after creating a project","new project empty","project setup next steps","what to do after create project"]
+  },
+  {
+    action: "understand",
+    object: "clone or template a project",
+    scope: "global", section: "Home Page",
+    question: "Can I create a new project by cloning or copying an existing one?",
+    answer: "No — there's currently no clone-project or create-from-template option anywhere in Arena. The Create Project dialog is always a blank form, and the three-dot menu on an existing project's card only offers Edit and Delete, not Duplicate. Every project has to be created from scratch and then configured (work breakdown, phase codes, forms, templates) individually in Project Setup, even if it's similar to a project you've already built out.",
+    tags: ["clone project","copy project","duplicate project","project template","create from template"]
+  },
+
+  {
+    action: "create",
     object: "support ticket",
     scope: "global", section: "Support",
     section: "Support",
@@ -9761,6 +9794,16 @@ const MODULES = [
           }
         ],
         "procedures": [
+          {
+            "title": "Create a new project",
+            "steps": [
+              "Go to <strong>Home → Projects</strong> and click the orange <strong>+ Create Project</strong> button, top-left of the project grid.",
+              "Fill in the three required fields: <strong>Project Name</strong>, <strong>Project Number / ID</strong>, and <strong>Construction Type</strong>.",
+              "Optionally fill in Project Location, Subsidiary/Business Unit, Owner Representative, Project Manager, Currency, Customer, Owner, Construction Cost Estimate, Project Type, and Funding/Implementing Agency — all of these can also be added or changed later.",
+              "Click Submit. The dialog closes and the new project appears immediately in the Projects grid with status \"Created.\""
+            ],
+            "note": "There's no clone-project or create-from-template option — every project starts as a blank form. There's also no start/end date field here; scheduling is configured later, once the project exists. After creation the project is immediately navigable but functionally empty — plan to go into Project Setup next to build out the work breakdown, team, schedule, and forms."
+          },
           {
             "title": "Navigate to a project's detail view from Home",
             "steps": [
