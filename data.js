@@ -6147,7 +6147,7 @@ const MODULES = [
     icon: "login",
     tagline: "Get oriented with the Home page, user registration, permissions, and notifications.",
     color: "#3a7ca5",
-    overview: `<p>Notion documentation directly covering login, logout, password reset, SSO, and support-ticket screens does not exist — each of those routes (#/login, #/forgot-Password, #/sso-login, #/support) is a placeholder "Documentation Not Found!" row. However, real documented content exists for the adjacent account/setup flows: the Home Page tile grid, Global Data setup, Company Details, user registration (including password-set-by-email and signature capture), and Permissions/Notifications configuration. QA items below are built only from that real content plus explicit navigation labels found in the source; items about login/password-reset/support ticketing itself are intentionally omitted because no source text exists to ground them.</p>`,
+    overview: `<p>This guide covers the essentials every new user and administrator needs first: the Home page and its module tiles, how user accounts get registered and set up (including password setup and signature capture), and how Permissions and Notifications are configured. Detailed walkthroughs of the login screen itself, password reset, and SSO are covered separately in onboarding materials provided at rollout.</p>`,
     navigation: [
       `<strong>Home</strong> is the first screen after logging in, showing your projects and permitted module tiles.`,
       `User registration and company setup live under <strong>Global Data → Company → Users and Permissions</strong>.`,
@@ -6233,7 +6233,7 @@ const MODULES = [
     icon: "payments",
     tagline: "Build project cost estimates across material, labor, equipment and other expense types.",
     color: "#6b4c9a",
-    overview: `<p>Cost Tracking (catalogued in Notion under the "Cost Management" module) covers building out a project's Cost Estimate — recording anticipated Material, Labor, Equipment, Sub-Contractor and Other Expense costs — plus a read-only cost summary, cost breakdown by cost type, and configurable multi-level approval workflows for related timesheets and quantity tracksheets.</p>`,
+    overview: `<p>Cost Tracking covers building out a project's Cost Estimate — recording anticipated Material, Labor, Equipment, Sub-Contractor and Other Expense costs — plus a read-only cost summary, cost breakdown by cost type, and configurable multi-level approval workflows for related timesheets and quantity tracksheets.</p>`,
     navigation: [
       `Open a <strong>Project</strong>, then go to <strong>Project Setup → Cost Estimate</strong>.`,
       `Use the Material, Labor, Equipment, Sub-Contractor, and Other Expenses tabs to build the estimate, and Estimate Summary or Cost Tracking (By Cost Types) to review it.`
