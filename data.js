@@ -1,6 +1,14 @@
 // ---- Flat intent-tagged QA items (for the offline chat engine) ----
 const QA_OPPORTUNITY = [
   {
+    action: "view",
+    object: "opportunities list",
+    scope: "module", section: "Opportunities",
+    question: "Where do I see my list of opportunities?",
+    answer: "Go to **Opportunity Management** from Home, then click the **Opportunities** tab (one of the module's second-level tabs, alongside My Dashboard, Customers Interactions, Analytics, Reports, and Account Assignment). That's the full list/grid of every opportunity you have access to, with filters, view-mode switching, and row-level actions (History, Clone, Delete).",
+    tags: ["opportunities list","see my opportunities","where are my opportunities","opportunities grid","view opportunities"]
+  },
+  {
     action: "configure",
     object: "parent mode",
     scope: "module", section: "Setup & Configuration",
@@ -1651,7 +1659,7 @@ const QA_ACCOUNTBASICS = [
     section: "Support",
     question: "How do I raise a support ticket?",
     answer: "Click the **Support** icon (headset icon, top-right of the navigation bar next to Notifications and Downloads) to open the Support panel, then describe what you were trying to do and submit it. If you don't see the Support icon, or need a faster response, email **support@inncircles.com** directly with your company name and a description of the issue.",
-    tags: ["support ticket","raise a ticket","contact support","help desk","report an issue","get help"]
+    tags: ["support ticket","raise a ticket","contact support","help desk","report an issue","get help","support contact","find support","who do i contact for help","support email","customer support"]
   },
   {
     action: "view",
@@ -1937,7 +1945,7 @@ const QA_COMMUNICATION = [
     scope: "module", section: "Inbox & Mail",
     question: "What are the mail folders available in Arena Communications?",
     answer: "Arena Communications has Inbox (received mail), Sent (mail you sent), Drafts (saved drafts), Saved (starred mail), and Trash (deleted mail).",
-    tags: ["inbox","sent","drafts","saved","trash","mail folders"]
+    tags: ["inbox","sent","drafts","saved","trash","mail folders","sent emails","see sent emails","where are my sent emails","sent mail"]
   },
   {
     action: "import",
@@ -3244,7 +3252,7 @@ const QA_FIELDWORKS = [
 const QA_DATAANALYTICS = [
   {
     "action": "view",
-    "object": "data analytics tab structure",
+    "object": "project dashboards",
     "scope": "project",
     "section": "Overview",
     "question": "Where do I find dashboards and reports for a project?",
@@ -3254,7 +3262,10 @@ const QA_DATAANALYTICS = [
       "insights",
       "dashboards",
       "reporting hub",
-      "analytics tabs"
+      "analytics tabs",
+      "find dashboards",
+      "project dashboards",
+      "where are the dashboards"
     ]
   },
   {
@@ -3522,7 +3533,12 @@ const QA_DOCUMENTREPOSITORY = [
     "tags": [
       "document repository",
       "records archive",
-      "category filter"
+      "category filter",
+      "find all project documents",
+      "where are my documents",
+      "all documents",
+      "project documents",
+      "find documents"
     ]
   },
   {
@@ -5238,6 +5254,14 @@ const QA_TIMEMANAGEMENT = [
 ];
 
 const QA_INVENTORYMANAGEMENT = [
+  {
+    action: "view",
+    object: "inventory levels",
+    scope: "global", section: "Inventory Master",
+    question: "Where do I see current inventory levels or stock on hand?",
+    answer: "Go to **Inventory Management → Inventory Master**. It lists every material with its current Quantity, UOM (Unit of Measurement), and Inventory Location, and reflects the net effect of Pick Up Tickets, Ship Tickets, and Return Tickets as they're processed — so it's the single place to check current stock rather than a separate reporting screen.",
+    tags: ["inventory levels","stock on hand","current stock","stock balance","how much inventory do we have","material quantity"]
+  },
   {
     action: "create",
     object: "material",
