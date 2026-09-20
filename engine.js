@@ -126,6 +126,23 @@ function matchQuery(KB, query, context) {
   };
 }
 
+// Broader retrieval for RAG-style LLM synthesis: returns the top-N candidates
+// regardless of the strict CONFIDENCE_FLOOR/AMBIGUITY_GAP rules matchQuery uses.
+// Used only to hand the LLM a small set of grounded passages to paraphrase —
+// never shown to the user directly, so it can afford to be more permissive.
+function retrieveTopEntries(KB, query, context, n) {
+  const queryTokens = tokenize(query);
+  const queryStems = stemSet(queryTokens);
+  if (!queryTokens.length) return [];
+
+  const scored = KB
+    .map(entry => ({ entry, score: scoreWithContext(entry, queryTokens, queryStems, context) }))
+    .filter(x => x.score >= CLARIFY_FLOOR)
+    .sort((a, b) => b.score - a.score);
+
+  return scored.slice(0, n || 5).map(x => x.entry);
+}
+
 function buildKB(MODULES) {
   const kb = [];
   MODULES.forEach(mod => {

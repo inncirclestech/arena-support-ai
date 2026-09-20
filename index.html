@@ -246,6 +246,37 @@
     display: flex; align-items: center; justify-content: center; gap: 6px; min-height: 14px;
   }
 
+  /* ---------- AI mode toggle ---------- */
+  .ai-mode-row {
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    margin: 0 0 16px; font-size: 12px; color: var(--muted);
+  }
+  .ai-mode-toggle {
+    display: inline-flex; align-items: center; gap: 7px; cursor: pointer;
+    padding: 6px 12px; border-radius: 999px; border: 1px solid var(--border);
+    background: var(--surface); transition: border-color 0.15s ease, background 0.15s ease;
+    font-family: "IBM Plex Mono", monospace; font-size: 11px; font-weight: 600;
+    letter-spacing: 0.02em; user-select: none;
+  }
+  .ai-mode-toggle:hover { border-color: var(--accent); }
+  .ai-mode-toggle.on { background: var(--accent-tint-soft); border-color: var(--accent); color: var(--accent-ink); }
+  .ai-mode-toggle .switch {
+    width: 26px; height: 15px; border-radius: 999px; background: var(--border);
+    position: relative; transition: background 0.15s ease; flex-shrink: 0;
+  }
+  .ai-mode-toggle.on .switch { background: var(--accent); }
+  .ai-mode-toggle .switch::after {
+    content: ""; position: absolute; top: 2px; left: 2px; width: 11px; height: 11px;
+    border-radius: 50%; background: #fff; transition: transform 0.15s ease;
+  }
+  .ai-mode-toggle.on .switch::after { transform: translateX(11px); }
+  .ai-mode-toggle .dot {
+    width: 6px; height: 6px; border-radius: 50%; background: var(--muted); flex-shrink: 0;
+  }
+  .ai-mode-toggle.loading .dot { background: var(--accent); animation: pulse-dot 1.2s infinite ease-in-out; }
+  .ai-mode-toggle.ready .dot { background: var(--ok); }
+  .chat-source-tag.ai-tag { background: var(--accent-tint); color: var(--accent-ink); }
+
   /* ---------- Browse view (secondary) ---------- */
   .browse-shell { width: 100%; margin: 0 auto; padding: 32px 48px 80px; }
   .doc-header { margin-bottom: 18px; }
@@ -415,6 +446,82 @@
 <script src="data.js"></script>
 <script src="engine.js"></script>
 <script>
+  // ---------- Optional in-browser LLM (WebLLM) ----------
+  // Loaded lazily and only if the user opts in — this is a large (~600MB-1GB) model
+  // download on first use, cached by the browser afterward via Cache Storage.
+  // Requires WebGPU (Chrome/Edge 113+, not available in Safari/Firefox stable yet, and
+  // not available at all inside a sandboxed iframe like a claude.ai artifact preview).
+  // All synthesis is strictly grounded in KB entries retrieved by the existing offline
+  // engine (retrieveTopEntries) — the model is never given an open-ended prompt, so it
+  // cannot answer from outside the documentation.
+  window.ArenaLLM = (function () {
+    const MODEL_ID = "Llama-3.2-1B-Instruct-q4f16_1-MLC";
+    let engine = null;
+    let loading = false;
+    let ready = false;
+    let failReason = null;
+
+    function isSupported() {
+      return !!navigator.gpu && window.self === window.top;
+    }
+
+    async function load(onProgress) {
+      if (ready) return true;
+      if (loading) return false;
+      if (!isSupported()) {
+        failReason = (window.self !== window.top)
+          ? "WebGPU is blocked inside this embedded preview — open the page directly to enable AI mode."
+          : "This browser doesn't support WebGPU yet — try a recent Chrome or Edge.";
+        return false;
+      }
+      loading = true;
+      try {
+        const webllm = await import("https://esm.run/@mlc-ai/web-llm");
+        engine = await webllm.CreateMLCEngine(MODEL_ID, {
+          initProgressCallback: (p) => { if (onProgress) onProgress(p); }
+        });
+        ready = true;
+        return true;
+      } catch (e) {
+        failReason = "Couldn't load the AI model (" + (e && e.message ? e.message : "unknown error") + ").";
+        return false;
+      } finally {
+        loading = false;
+      }
+    }
+
+    // contextEntries: array of {question, answer} pulled from the offline engine's KB.
+    // Returns synthesized answer text, or null if generation fails for any reason
+    // (caller should fall back to the plain offline-engine answer).
+    async function answer(userQuestion, contextEntries) {
+      if (!ready || !engine) return null;
+      const passages = contextEntries.map((e, i) =>
+        `[${i + 1}] Q: ${e.question}\nA: ${e.answer}`
+      ).join("\n\n");
+      const system = `You are Arena Support AI, a documentation assistant for the Inncircles Arena construction management product. Answer the user's question using ONLY the documentation passages provided below — never invent steps, screen names, or fields that aren't in them. Keep the same facts, button names, and steps as the source passages, just phrase the answer more naturally and concisely for the user's specific question. If the passages don't actually answer the question, say you don't have documented steps for that and suggest contacting support@inncircles.com — do not guess.
+
+Documentation passages:
+${passages}`;
+      try {
+        const res = await engine.chat.completions.create({
+          messages: [
+            { role: "system", content: system },
+            { role: "user", content: userQuestion }
+          ],
+          temperature: 0.2,
+          max_tokens: 400
+        });
+        const text = res && res.choices && res.choices[0] && res.choices[0].message && res.choices[0].message.content;
+        return text ? text.trim() : null;
+      } catch (e) {
+        return null;
+      }
+    }
+
+    return { load, answer, isSupported, isReady: () => ready, isLoading: () => loading, failReason: () => failReason };
+  })();
+</script>
+<script>
   const KB = buildKB(MODULES);
   const railNav = document.getElementById("module-nav");
   const main = document.getElementById("main");
@@ -427,6 +534,7 @@
   let recognizer = null;
   let listening = false;
   let lastMatchedContext = null; // {moduleId, object} from the last confidently-answered turn
+  let aiModeOn = false; // user opt-in for WebLLM-synthesized answers (off by default: large download)
 
   // ---------- Local per-browser chat history (no login, no server) ----------
   const HISTORY_KEY = "arena-support-ai-history-v1";
@@ -495,7 +603,19 @@
     "global-data": 1,
     "admin-setup-guide": 2,
     "notifications": 3,
-    "permissions": 4
+    "permissions": 4,
+    // Project modules mirror the product's own left sidebar order.
+    "my-desk": 0,
+    "my-calendar": 1,
+    "project-setup": 2,
+    "field-works": 3,
+    "data-analytics": 4,
+    "document-repository": 5,
+    "follow-up-actions": 6,
+    "project-notifications": 7,
+    "users-and-permissions": 8,
+    "owners": 9,
+    "project-settings": 10
   };
   function moduleSortKey(m) {
     return MODULE_SORT_ORDER.hasOwnProperty(m.id) ? MODULE_SORT_ORDER[m.id] : 999;
@@ -786,6 +906,9 @@
     let body = renderAnswerHtml(msg.content);
     if (msg.sourceModule) {
       body += `<span class="chat-source-tag" style="background:${tint(msg.sourceModule)};color:${fg(msg.sourceModule)}">${msg.sourceModuleName}</span>`;
+      if (msg.aiSynthesized) {
+        body += `<span class="chat-source-tag ai-tag">AI-phrased</span>`;
+      }
     }
     if (msg.clarifyOptions && msg.clarifyOptions.length) {
       body += `<div class="chat-clarify">` + msg.clarifyOptions.map((o, i) =>
@@ -813,6 +936,11 @@
           <h1>How can I help?</h1>
           <p>Ask how to do something in Arena — creating records, assigning users, running approvals — and I'll point you to the exact screen and steps. Type, or tap the mic to speak.</p>
         </div>` : `<div class="chat-history-bar"><button id="clear-history-btn" class="clear-history-btn">Clear conversation</button></div>`}
+        <div class="ai-mode-row">
+          <span id="ai-mode-toggle" class="ai-mode-toggle" role="button" tabindex="0">
+            <span class="switch"></span><span class="dot"></span><span id="ai-mode-label">Smarter answers (AI mode)</span>
+          </span>
+        </div>
         <div class="chat-log" id="chat-log"></div>
         <div id="chat-suggest-wrap"></div>
         <div class="chat-input-bar">
@@ -833,6 +961,46 @@
     const micBtn = document.getElementById("mic-btn");
     const statusNote = document.getElementById("chat-status-note");
     const clearBtn = document.getElementById("clear-history-btn");
+    const aiToggle = document.getElementById("ai-mode-toggle");
+    const aiLabel = document.getElementById("ai-mode-label");
+
+    function paintAiToggle() {
+      aiToggle.classList.toggle("on", aiModeOn);
+      aiToggle.classList.toggle("loading", ArenaLLM.isLoading());
+      aiToggle.classList.toggle("ready", ArenaLLM.isReady());
+      if (ArenaLLM.isLoading()) {
+        aiLabel.textContent = "Loading AI model…";
+      } else if (aiModeOn && ArenaLLM.isReady()) {
+        aiLabel.textContent = "Smarter answers: ON";
+      } else if (aiModeOn) {
+        aiLabel.textContent = "Smarter answers (AI mode)";
+      } else {
+        aiLabel.textContent = "Smarter answers (AI mode)";
+      }
+    }
+    paintAiToggle();
+
+    async function toggleAiMode() {
+      if (!ArenaLLM.isSupported()) {
+        statusNote.textContent = ArenaLLM.failReason() || "AI mode isn't supported in this browser.";
+        return;
+      }
+      aiModeOn = !aiModeOn;
+      paintAiToggle();
+      if (aiModeOn && !ArenaLLM.isReady() && !ArenaLLM.isLoading()) {
+        statusNote.textContent = "Downloading AI model (first time only, ~600MB–1GB)…";
+        const ok = await ArenaLLM.load((p) => {
+          if (p && p.text) statusNote.textContent = p.text;
+        });
+        paintAiToggle();
+        statusNote.textContent = ok ? "AI model ready." : (ArenaLLM.failReason() || "Couldn't load the AI model — using offline mode.");
+        if (!ok) aiModeOn = false;
+        paintAiToggle();
+        setTimeout(() => { if (statusNote.textContent === "AI model ready.") statusNote.textContent = ""; }, 2500);
+      }
+    }
+    aiToggle.addEventListener("click", toggleAiMode);
+    aiToggle.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggleAiMode(); } });
 
     function paintLog() {
       log.innerHTML = chatHistory.map((m, i) => chatMsgHtml(m, i)).join("");
@@ -878,20 +1046,50 @@
 
     const CLARIFY_INTRO = "I found a few things that could match — which one did you mean?";
 
-    function sendQuestion() {
+    // Renders a lightweight "thinking" bubble while WebLLM synthesizes an answer,
+    // so a ~1-3s generation doesn't look like a frozen UI.
+    function showThinking() {
+      const el = document.createElement("div");
+      el.className = "chat-msg assistant";
+      el.id = "thinking-msg";
+      el.innerHTML = `<div class="chat-avatar assistant">AR</div><div class="chat-bubble"><em style="color:var(--muted)">Thinking…</em></div>`;
+      log.appendChild(el);
+      log.scrollTop = log.scrollHeight;
+    }
+    function hideThinking() {
+      const el = document.getElementById("thinking-msg");
+      if (el) el.remove();
+    }
+
+    async function sendQuestion() {
       const q = input.value.trim();
       if (!q) return;
       input.value = "";
       chatHistory.push({ role: "user", content: q });
+      paintLog();
 
+      // The offline engine always decides answer/clarify/none — WebLLM (when on and
+      // ready) only rephrases an already-confident "answer" using the same retrieved
+      // documentation. It never overrides a clarify/none decision, so it can't paper
+      // over genuine gaps or ambiguity with a confident-sounding guess.
       const result = matchQuery(KB, q, lastMatchedContext);
 
       if (result.type === "answer") {
+        let content = result.best.answer;
+        let usedAi = false;
+        if (aiModeOn && ArenaLLM.isReady()) {
+          showThinking();
+          const context = retrieveTopEntries(KB, q, lastMatchedContext, 5);
+          const synthesized = await ArenaLLM.answer(q, context.length ? context : [result.best]);
+          hideThinking();
+          if (synthesized) { content = synthesized; usedAi = true; }
+        }
         const msg = {
           role: "assistant",
-          content: result.best.answer,
+          content,
           sourceModule: result.best.moduleId,
-          sourceModuleName: result.best.moduleName
+          sourceModuleName: result.best.moduleName,
+          aiSynthesized: usedAi
         };
         if (result.alternatives && result.alternatives.length) {
           msg.followups = result.alternatives.map(a => a.question);
