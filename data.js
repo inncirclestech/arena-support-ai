@@ -1464,6 +1464,22 @@ const QA_GLOBALDATA = [
     tags: ["phase code","add phase code","cost type","cost type classification"]
   },
   {
+    action: "understand",
+    object: "what is a phase code",
+    scope: "global", section: "UOM & Phase Codes",
+    question: "What is a Phase Code in Arena?",
+    answer: "A Phase Code is Arena's name for what many construction businesses call a cost code or activity code — a short identifier that classifies a piece of work or spend for budgeting and cost tracking (e.g. \"Direct\" labor on formwork versus \"Indirect\" site overhead). Global Data holds the full company-wide master list; individual projects can work from that full list or a mapped subset, and Time Management's timesheet phase-code dropdown pulls from whichever source the project is configured to use.",
+    tags: ["what is a phase code","phase code definition","glossary","cost code vs phase code"]
+  },
+  {
+    action: "understand",
+    object: "what is a wbs",
+    scope: "project", section: "UOM & Phase Codes",
+    question: "What is a WBS (Work Breakdown Structure)?",
+    answer: "WBS (Work Breakdown Structure) is the standard construction-industry term for dividing a project into a hierarchy of smaller, trackable pieces of work — the backbone that schedule, cost, and progress reporting all attach to. Arena doesn't use the term \"WBS\" on screen; the equivalent is built in <strong>Project Setup → Works</strong>, where a project is broken into work packages or plants (for example \"Blast Furnace\" or \"Piperack\"), each of which can be divided further into levels, floors, and units. Everything downstream — schedules, phase codes, work logs, cost — is ultimately tracked against this same structure, which Field Works calls the \"Tree Version.\"",
+    tags: ["what is a wbs","work breakdown structure","glossary","tree version","works"]
+  },
+  {
     action: "configure",
     object: "currency",
     scope: "global", section: "Settings",
@@ -2398,6 +2414,21 @@ const QA_PROJECTSETUP = [
   },
   {
     "action": "view",
+    "object": "gantt view breakdown",
+    "scope": "project",
+    "section": "Schedule",
+    "question": "Can I see a monthly breakdown of the schedule instead of just quarterly or yearly?",
+    "answer": "Yes. The Gantt schedule view supports a monthly breakdown underneath the existing quarterly and yearly views, for a PM or scheduler who needs finer granularity than a full quarter or year at a glance. You can also type a date directly instead of only picking one from the calendar widget, which is faster when jumping to a specific point far from today.",
+    "tags": [
+      "gantt monthly view",
+      "gantt breakdown",
+      "schedule granularity",
+      "type a date",
+      "date entry gantt"
+    ]
+  },
+  {
+    "action": "view",
     "object": "project milestones",
     "scope": "project",
     "section": "Schedule",
@@ -2406,6 +2437,34 @@ const QA_PROJECTSETUP = [
     "tags": [
       "project milestones",
       "schedule overview"
+    ]
+  },
+  {
+    "action": "understand",
+    "object": "what is a milestone",
+    "scope": "project",
+    "section": "Schedule",
+    "question": "What is a Milestone?",
+    "answer": "A Milestone is the standard construction-industry term for a significant, dateable checkpoint in a project's timeline — such as \"Foundation Complete\" or \"Substantial Completion\" — used to track overall progress at a glance without reading the full schedule. Arena uses the same term: Milestones are listed alongside each plant's \"[Plant] - Schedule\" Gantt view in Project Setup → Schedule, giving a PM a project-wide checkpoint view distinct from the detailed per-plant timelines.",
+    "tags": [
+      "what is a milestone",
+      "milestone definition",
+      "glossary",
+      "schedule"
+    ]
+  },
+  {
+    "action": "understand",
+    "object": "what is a look-ahead schedule",
+    "scope": "project",
+    "section": "Schedule",
+    "question": "What is a Look-Ahead Schedule?",
+    "answer": "A Look-Ahead Schedule is the standard construction-industry term for a short-horizon (commonly two- to six-week) rolling view of upcoming activities, built off the master schedule so site teams can plan the next stretch of work in detail rather than working from the full-project Gantt chart. Arena does not name a single dedicated \"Look-Ahead Schedule\" screen; the equivalent is built by combining a nearer-term slice of the plant Gantt schedules in <strong>Project Setup → Schedule</strong> (now viewable with a monthly breakdown for finer granularity) with the day-by-day due items surfaced on <strong>My Calendar</strong> inside the project, and the day-to-day logging that actually happens against that plan in Field Works → Progress.",
+    "tags": [
+      "what is a look-ahead schedule",
+      "look-ahead schedule definition",
+      "glossary",
+      "rolling schedule"
     ]
   },
   {
@@ -3024,9 +3083,12 @@ const QA_FIELDWORKS = [
     "scope": "project",
     "section": "Quality",
     "question": "What is a Punch List and how does one get closed out?",
-    "answer": "A Punch List item is created when an issue is raised from within a quality form — a defect needing physical rectification and re-verification. Open the <strong>Punch Lists</strong> card on the plant's Quality tab; each item moves <strong>Open → Rectify → QC_Verify</strong> (click <strong>Rectify</strong> once the defect is fixed, then <strong>QC_Verify</strong> to progress it to closure). Punch lists support due dates, assignees, Chat, filters, and Download Excel.",
+    "answer": "A Punch List is the standard construction-industry term for the list of defects or incomplete items identified during inspection that must be corrected before work is accepted or a project is closed out. Arena uses the same name: a Punch List item is created when a QA/QC inspector raises an issue from within a Quality Level 1 or Level 2 form — a defect needing physical rectification and re-verification. Open the <strong>Punch Lists</strong> card on the plant's Quality tab; each item moves <strong>Open → Rectify → QC_Verify</strong> (click <strong>Rectify</strong> once the defect is fixed, then <strong>QC_Verify</strong> to progress it to closure). Punch lists support due dates, assignees, Chat, filters, and Download Excel.",
     "tags": [
       "punch list",
+      "what is a punch list",
+      "punch list definition",
+      "glossary",
       "rectify",
       "qc verify",
       "quality defect",
@@ -3245,6 +3307,104 @@ const QA_FIELDWORKS = [
       "field works troubleshooting",
       "project setup dependency",
       "form not assigned"
+    ]
+  },
+  {
+    "action": "attach",
+    "object": "work log attachment",
+    "scope": "project",
+    "section": "Progress",
+    "question": "Can I attach a file or a drawing to a Work Log?",
+    "answer": "Yes. A Work Log can carry an attachment of any file type, or a drawing linked directly from Drawing Management, and both are viewable from a side panel on the log without leaving the screen — useful evidence when a foreman needs to show exactly which sheet or photo the logged work matches.",
+    "tags": [
+      "work log attachment",
+      "link drawing to work log",
+      "side panel",
+      "attach file"
+    ]
+  },
+  {
+    "action": "view",
+    "object": "cost forecast under transaction logs",
+    "scope": "project",
+    "section": "Cost",
+    "question": "Where do I see a forecasted cost-to-complete, not just actual transactions?",
+    "answer": "Where the project has IFS integration enabled, a <strong>Cost Forecast</strong> table becomes available under <strong>Transaction Logs</strong> on the plant's Cost tab, with an editable <strong>Completion Allowance %</strong> per line that a PM or cost controller uses to project remaining cost-to-complete on top of the transactions actually recorded.",
+    "tags": [
+      "cost forecast",
+      "completion allowance",
+      "transaction logs",
+      "ifs integration"
+    ]
+  },
+  {
+    "action": "understand",
+    "object": "what is an rfi",
+    "scope": "project",
+    "section": "Progress",
+    "question": "What is an RFI?",
+    "answer": "RFI stands for Request for Information — the standard construction-industry term for a formal question raised when a drawing, specification, or scope item is unclear, sent to a designer, engineer, or owner for a binding answer before work can proceed. Arena uses the same name and the same purpose: a field engineer or foreman creates the RFI on the <strong>RFI</strong> card under Field Works → Progress, it routes to whichever approvers the project's RFI workflow names, and its aging shows up project-wide on the <strong>RFI Approval Delays</strong> dashboard in Data Analytics & Insights.",
+    "tags": [
+      "what is an rfi",
+      "rfi definition",
+      "request for information",
+      "glossary"
+    ]
+  },
+  {
+    "action": "understand",
+    "object": "what is a submittal",
+    "scope": "project",
+    "section": "Progress",
+    "question": "What is a Submittal?",
+    "answer": "A Submittal is the standard construction-industry term for a document — a shop drawing, product data sheet, sample, or similar — that a contractor sends to a designer or owner's representative for review and approval before the related material or method is used on site. In Arena, Submittal is one of the Level 3 form types under <strong>Construction Forms</strong> in <strong>Project Setup → Forms</strong>, where a Module Admin configures who can create it, its approval workflow, and its template; issues raised against a submitted or rejected Submittal are then tracked on the <strong>Issues</strong> card under Field Works → Progress, alongside RFIs, Change Orders, and Custom Forms.",
+    "tags": [
+      "what is a submittal",
+      "submittal definition",
+      "glossary",
+      "construction forms"
+    ]
+  },
+  {
+    "action": "understand",
+    "object": "what is a change order",
+    "scope": "project",
+    "section": "Cost",
+    "question": "What is a Change Order?",
+    "answer": "A Change Order is the standard construction-industry term for a formal, agreed modification to a contract's original scope, cost, or schedule after signature — for example an owner-requested design change or an unforeseen site condition that adds cost. Arena uses the same name: the <strong>Change order</strong> card on the plant's Cost tab (Field Works → Tree Version → [Plant] → Cost) is where a PM records the adjustment, using Assign To and Due Date to keep it from stalling without an accountable owner, and Change Orders are also one of the form types tracked on the Issues card and referenced in Standard Analytics' Collaboration Items dashboard.",
+    "tags": [
+      "what is a change order",
+      "change order definition",
+      "glossary",
+      "contract adjustment"
+    ]
+  },
+  {
+    "action": "understand",
+    "object": "what is an ncr",
+    "scope": "project",
+    "section": "Quality",
+    "question": "What is an NCR (Non-Conformance Report)?",
+    "answer": "An NCR, or Non-Conformance Report, is the standard construction-industry term for a formal record documenting work or material that fails to meet a specified requirement, raised so it can be tracked to correction rather than quietly reworked off the books. In Arena, this concept is covered by two related but distinct mechanisms: <strong>Non Conformance</strong> / <strong>Non Conformance Report</strong> exist as configurable Level 3 form types under Project Setup → Forms (organization-dependent, so the exact category will vary by company), while day-to-day on site, a quality failure most often surfaces as a <strong>Punch List</strong> item raised directly from a Quality Level 1 or Level 2 form under Field Works → Quality, moving through Open → Rectify → QC_Verify.",
+    "tags": [
+      "what is an ncr",
+      "non-conformance report",
+      "ncr definition",
+      "glossary"
+    ]
+  },
+  {
+    "action": "understand",
+    "object": "what is a daily log",
+    "scope": "project",
+    "section": "Progress",
+    "question": "What is a Daily Log (Daily Report) in Arena?",
+    "answer": "A Daily Log, or Daily Report, is the standard construction-industry term for a field record of a single day's activity — work completed, resources used, weather, and any issues. Arena spreads this across several purpose-built cards rather than one combined form: <strong>Work Logs</strong> (Field Works → Progress) records completion of work at each step, <strong>Equipment Logs</strong>, <strong>Material Logs</strong>, <strong>Manpower Logs</strong>, <strong>Labor Logs</strong>, and <strong>Machinery Logs</strong> record each resource stream separately, and the <strong>DPR report</strong> in Data Analytics & Insights → Standard Analytics (or <strong>Daily Progress Report</strong> under Standard Reports) rolls all of it up into the single daily-report document most projects are contractually expected to produce.",
+    "tags": [
+      "what is a daily log",
+      "daily report definition",
+      "glossary",
+      "dpr"
     ]
   }
 ];
@@ -4985,6 +5145,14 @@ const QA_PROCUREMENT = [
     tags: ["po master","purchase order list","po status"]
   },
   {
+    action: "export",
+    object: "purchase order viewpoint export",
+    scope: "project", section: "Purchase Orders",
+    question: "Can I export Purchase Orders in a format Viewpoint can import?",
+    answer: "Yes. Purchase Orders can be exported to a Viewpoint-compatible Excel format, for construction businesses that sync procurement data into Viewpoint accounting software. This sits alongside the standard PO export and is useful when a cost controller or accountant needs Arena's purchase-order records to line up with what Viewpoint expects on import.",
+    tags: ["viewpoint export","purchase order export","viewpoint integration","accounting export"]
+  },
+  {
     action: "configure",
     object: "purchase order form",
     scope: "global", section: "Settings",
@@ -5063,6 +5231,14 @@ const QA_PROCUREMENT = [
     question: "How do I configure ID formats for procurement documents?",
     answer: "Go to Procurement > ID Settings, select System Default for auto-generated IDs, or Custom to choose fields and their order, then click \"Save Changes\".",
     tags: ["procurement id format","custom id","auto id"]
+  },
+  {
+    action: "configure",
+    object: "purchase order numbering per project",
+    scope: "project", section: "Purchase Orders",
+    question: "Can Purchase Order numbers restart per project instead of running as one company-wide sequence?",
+    answer: "Yes. Purchase Order ID formats can be configured to include the project number and restart their own sequence (e.g. starting again from 001) within each project, rather than continuing one long sequence across the whole company. This is set up the same place as other procurement ID formats — Procurement → ID Settings — by a Module Admin choosing Custom and including the project number as one of the ID fields.",
+    tags: ["purchase order numbering","po number per project","project-scoped po id","restart po sequence"]
   },
   {
     action: "configure",
@@ -10816,7 +10992,7 @@ const MODULES = [
       },
       {
         "heading": "Schedule",
-        "intro": "<p>A cost estimate answers what the project will cost; the schedule answers when each piece of it will happen — and on a multi-plant industrial project, that usually means a distinct timeline per plant as well as an overall project view. Project Setup → Schedule is where a <strong>PM / Module Admin</strong> builds this out: click \"Create New Schedule\" to add one, and the screen lists project Milestones alongside a per-plant \"[Plant] - Schedule\" entry for every work package defined in Works, each opening a Gantt-style schedule. A grid/list view toggle controls how the overall list is displayed.</p><p>Structuring schedules per plant, rather than as one undifferentiated project timeline, mirrors the same work-package-first logic used in Estimate and Works — it lets a PM track schedule performance at the level actually meaningful to site management (is the Sinter Plant behind, even if the Coke Oven is ahead?) while still keeping an overall Milestones view for project-wide checkpoints.</p>",
+        "intro": "<p>A cost estimate answers what the project will cost; the schedule answers when each piece of it will happen — and on a multi-plant industrial project, that usually means a distinct timeline per plant as well as an overall project view. Project Setup → Schedule is where a <strong>PM / Module Admin</strong> builds this out: click \"Create New Schedule\" to add one, and the screen lists project Milestones alongside a per-plant \"[Plant] - Schedule\" entry for every work package defined in Works, each opening a Gantt-style schedule. A grid/list view toggle controls how the overall list is displayed.</p><p>Structuring schedules per plant, rather than as one undifferentiated project timeline, mirrors the same work-package-first logic used in Estimate and Works — it lets a PM track schedule performance at the level actually meaningful to site management (is the Sinter Plant behind, even if the Coke Oven is ahead?) while still keeping an overall Milestones view for project-wide checkpoints. On the Gantt view itself, alongside the existing quarterly and yearly breakdown options, a PM can now also switch to a <strong>monthly breakdown</strong> for a finer-grained timeline, and enter a schedule date directly as <strong>free text</strong> rather than only picking one from the date-picker control — useful when transcribing dates quickly from a baseline schedule built outside Arena.</p><p>Once a schedule is built here, it feeds two things downstream: the plant-level dates it sets are what a foreman or PM checks against day to day when deciding what to prioritize during <strong>Look-Ahead Planning</strong> — the short-horizon (commonly two- to six-week) rolling view of upcoming activities that construction teams build off the master schedule to plan the next stretch of work — and the same schedule dates surface project-wide on the <strong>Schedule</strong> dashboard in Data Analytics & Insights, which is where a PM or client checks time performance without opening the Gantt view itself. Arena does not document a single named \"Look-Ahead Schedule\" screen distinct from the plant Gantt views built here; a look-ahead in Arena is a shorter, nearer-term slice of the same Project Setup → Schedule and Field Works → Progress data, cross-checked against <strong>My Calendar</strong> for what is actually due day to day, rather than a separate module.</p>",
         "definitions": [
           {
             "term": "Milestones",
@@ -10825,6 +11001,14 @@ const MODULES = [
           {
             "term": "[Plant] - Schedule",
             "definition": "A per-work-package Gantt-style schedule, automatically corresponding to each plant defined under Works."
+          },
+          {
+            "term": "Monthly breakdown (Gantt view)",
+            "definition": "A view option on the plant Gantt schedule, alongside the existing quarterly and yearly breakdowns, for a finer-grained monthly timeline."
+          },
+          {
+            "term": "Free-text date entry",
+            "definition": "The ability to type a schedule date directly rather than only selecting one from the date-picker control, on the Gantt schedule view."
           }
         ],
         "procedures": [
@@ -10834,6 +11018,14 @@ const MODULES = [
               "Go to <strong>Project Setup → Schedule</strong>.",
               "Click <strong>Create New Schedule</strong>.",
               "Select whether it's a project milestone or a specific plant's schedule, and build out the Gantt-style timeline."
+            ]
+          },
+          {
+            "title": "Switch a Gantt schedule to a monthly view",
+            "steps": [
+              "Open a <strong>[Plant] - Schedule</strong> Gantt view under Project Setup → Schedule.",
+              "Use the breakdown selector to switch between quarterly, yearly, and the <strong>monthly</strong> option.",
+              "Enter or adjust a date directly as free text where a faster alternative to the date-picker is needed."
             ]
           }
         ]
@@ -11248,11 +11440,11 @@ const MODULES = [
       },
       {
         "heading": "Progress",
-        "intro": "<p><strong>Progress</strong> is the default second-level tab on a plant and the busiest screen in the whole product for field staff. Its 18 cards cover nearly everything a site team records in a day: what work was completed, how many hours and quantities went into it, what questions are outstanding, what resources were consumed, what is blocking progress, and what was photographed as evidence. Grouping all of this at the plant level is what allows a <strong>PM</strong> to ask \"how is the Blast Furnace actually going\" and get an answer built from real field data rather than an estimate.</p><p>Three cards form the work-log spine. <strong>Work Logs</strong> is where a foreman or field engineer logs completion of the work at each step during construction, following whichever Work Log Template the project has configured. <strong>Submitted Work Logs</strong> retains every submission regardless of status, filterable by date range and user and exportable to Excel, so the audit trail survives even when a log is later rejected. <strong>Approve Work Logs</strong> is the supervisor's review queue. <strong>Detailed Work Logs</strong> sits alongside them as a comprehensive table view of all WBS worklogs, for when someone needs the whole picture in one grid.</p><p><strong>Productivity Logs</strong> is the card that ties labor to cost. Every hour worked and every unit of output is logged against a Phase Code, so that productivity tracking and downstream cost reporting reflect real labor spend rather than assumptions. Because rejections are routine in practice — a wrong phase code, a missing quantity, a typo in hours — Arena treats rejection as a first-class event: a rejected log automatically becomes a tracked issue with the approver's comments attached, so the person who logged it knows exactly what to fix.</p><p>The remaining cards cover the rest of daily site reality. <strong>RFI</strong> handles the formal questions that must be answered before work can proceed. <strong>Issues</strong> tracks problems raised for RFIs, Submittals, Change Orders, and Custom Forms. <strong>Meeting Minutes</strong> turns decisions into assigned, dated action items. <strong>Site Photographs</strong> and <strong>Ready Works</strong> cover visual evidence and what is genuinely available to progress. <strong>Equipment Logs</strong>, <strong>Material Logs</strong>, <strong>Manpower Logs</strong>, <strong>Labor Logs</strong>, and <strong>Machinery Logs</strong> capture each resource stream separately so cost and productivity questions can be answered per resource type. <strong>Restraints</strong> records physical, legal, or contractual blockers. <strong>Inventory Management</strong> holds the collection of pickup tickets, and <strong>Procurement</strong> the collection of requisitions raised from site.</p>",
+        "intro": "<p><strong>Progress</strong> is the default second-level tab on a plant and the busiest screen in the whole product for field staff. Its 18 cards cover nearly everything a site team records in a day: what work was completed, how many hours and quantities went into it, what questions are outstanding, what resources were consumed, what is blocking progress, and what was photographed as evidence. Grouping all of this at the plant level is what allows a <strong>PM</strong> to ask \"how is the Blast Furnace actually going\" and get an answer built from real field data rather than an estimate.</p><p>Three cards form the work-log spine. <strong>Work Logs</strong> is where a foreman or field engineer logs completion of the work at each step during construction, following whichever Work Log Template the project has configured. Where more than a written entry is needed, a Work Log can carry supporting evidence directly: an attachment of any file type, or a drawing linked straight from Drawing Management, both viewable from a side panel on the log without leaving the screen — useful for a foreman pointing to exactly which sheet or photo the completed work matches. <strong>Submitted Work Logs</strong> retains every submission regardless of status, filterable by date range and user and exportable to Excel, so the audit trail survives even when a log is later rejected. <strong>Approve Work Logs</strong> is the supervisor's review queue. <strong>Detailed Work Logs</strong> sits alongside them as a comprehensive table view of all WBS worklogs, for when someone needs the whole picture in one grid.</p><p><strong>Productivity Logs</strong> is the card that ties labor to cost. Every hour worked and every unit of output is logged against a Phase Code, so that productivity tracking and downstream cost reporting reflect real labor spend rather than assumptions. Because rejections are routine in practice — a wrong phase code, a missing quantity, a typo in hours — Arena treats rejection as a first-class event: a rejected log automatically becomes a tracked issue with the approver's comments attached, so the person who logged it knows exactly what to fix.</p><p>The remaining cards cover the rest of daily site reality. <strong>RFI</strong> handles the formal questions that must be answered before work can proceed — a field engineer or foreman creates the RFI when a drawing, spec, or scope item is unclear, it routes to whichever approvers the project's RFI approval workflow names (typically a PM, engineer, or the owner's representative), and once it is live its aging shows up project-wide on the <strong>RFI Approval Delays</strong> dashboard in Data Analytics &amp; Insights, which is the view a PM checks to see which open questions are actually putting the schedule at risk. <strong>Issues</strong> tracks problems raised for RFIs, Submittals, Change Orders, and Custom Forms. <strong>Meeting Minutes</strong> turns decisions into assigned, dated action items. <strong>Site Photographs</strong> and <strong>Ready Works</strong> cover visual evidence and what is genuinely available to progress. <strong>Equipment Logs</strong>, <strong>Material Logs</strong>, <strong>Manpower Logs</strong>, <strong>Labor Logs</strong>, and <strong>Machinery Logs</strong> capture each resource stream separately so cost and productivity questions can be answered per resource type. <strong>Restraints</strong> records physical, legal, or contractual blockers. <strong>Inventory Management</strong> holds the collection of pickup tickets, and <strong>Procurement</strong> the collection of requisitions raised from site.</p>",
         "definitions": [
           {
             "term": "Work Logs",
-            "definition": "The card for logging completion of the work at each step during construction, recorded against the project's configured Work Log Template (Work Package to Tag, Tag to Work Package, System to Tag, or a Scheduled view)."
+            "definition": "The card for logging completion of the work at each step during construction, recorded against the project's configured Work Log Template (Work Package to Tag, Tag to Work Package, System to Tag, or a Scheduled view). A Work Log can carry an attachment of any file type, or a drawing linked directly from Drawing Management, viewable from a side panel on the log."
           },
           {
             "term": "Submitted Work Logs",
@@ -11280,7 +11472,7 @@ const MODULES = [
           },
           {
             "term": "RFI",
-            "definition": "The card to create, update, approve and reject RFI forms — the formal mechanism for asking a designer, engineer, or owner a question when drawings, specs, or scope are unclear."
+            "definition": "The card to create, update, approve and reject RFI forms — the formal mechanism for asking a designer, engineer, or owner a question when drawings, specs, or scope are unclear. A field engineer or foreman typically creates it; it routes to whichever approvers the project's RFI workflow names; and its open/aging status rolls up project-wide into the RFI Approval Delays dashboard in Data Analytics & Insights."
           },
           {
             "term": "Issues",
@@ -11395,7 +11587,7 @@ const MODULES = [
       },
       {
         "heading": "Quality",
-        "intro": "<p>The plant-scoped <strong>Quality</strong> tab is where inspections actually get performed and signed off on site by a <strong>QA/QC inspector</strong>. It is built on a two-level structure: Level 1 inspections must generally clear before Level 2 becomes available, reflecting the familiar construction pattern of a first-pass check followed by a more thorough verification. A <strong>PM</strong> can configure Level 1 to be skippable in Project Settings → Quality Logs where a single-level inspection regime is enough.</p><p>How an inspector finds what is ready to inspect depends on the project's configured Work Log Template — either <strong>Work Package to Location/Tags Logging</strong> (select an Entity/CWA, then a Work Package, then a Ready item) or <strong>System to Tag Mapping</strong> (select a tag, then a quality package). Either way the form is filled in and then saved as a draft or submitted for approval, with <strong>Approve Quality Logs</strong> serving as the reviewer's queue and <strong>Submitted Quality Logs</strong> holding the full filterable, exportable history.</p><p>The card worth understanding carefully is <strong>Punch Lists</strong>, described as issues raised due to quality failure. A punch list item is created when an issue is raised from within a quality form, and represents a defect that needs physical rectification and re-verification before the work can be accepted: it moves through <strong>Open → Rectify → QC_Verify</strong>. For a construction business, this is the mechanism that keeps defects from being quietly absorbed into \"complete\" work and resurfacing at handover, when fixing them costs far more.</p>",
+        "intro": "<p>The plant-scoped <strong>Quality</strong> tab is where inspections actually get performed and signed off on site by a <strong>QA/QC inspector</strong>. It is built on a two-level structure: Level 1 inspections must generally clear before Level 2 becomes available, reflecting the familiar construction pattern of a first-pass check followed by a more thorough verification. A <strong>PM</strong> can configure Level 1 to be skippable in Project Settings → Quality Logs where a single-level inspection regime is enough.</p><p>How an inspector finds what is ready to inspect depends on the project's configured Work Log Template — either <strong>Work Package to Location/Tags Logging</strong> (select an Entity/CWA, then a Work Package, then a Ready item) or <strong>System to Tag Mapping</strong> (select a tag, then a quality package). Either way the form is filled in and then saved as a draft or submitted for approval, with <strong>Approve Quality Logs</strong> serving as the reviewer's queue — typically a QA/QC lead or PM, and only visible to users with approval permissions — and <strong>Submitted Quality Logs</strong> holding the full filterable, exportable history. That approved-versus-open picture is also what feeds the <strong>Quality Progress</strong> dashboard in Data Analytics & Insights, so a folder that is stuck at Level 1 shows up there as a project-wide quality risk, not just a local backlog.</p><p>The card worth understanding carefully is <strong>Punch Lists</strong>, described as issues raised due to quality failure. A punch list item is created automatically when a QA/QC inspector raises an issue from within a quality form during Level 1 or Level 2 review, and represents a defect that needs physical rectification and re-verification before the work can be accepted: it moves through <strong>Open → Rectify → QC_Verify</strong>, with the field crew or subcontractor responsible for the defect rectifying it and the same QA/QC inspector (or another approver) closing it out at QC_Verify. For a construction business, this is the mechanism that keeps defects from being quietly absorbed into \"complete\" work and resurfacing at handover, when fixing them costs far more — and an open punch list count is one of the inputs the Quality Progress dashboard rolls up for a PM reviewing where a plant genuinely stands.</p>",
         "definitions": [
           {
             "term": "Quality Level 1 / Level 2",
@@ -11487,11 +11679,15 @@ const MODULES = [
       },
       {
         "heading": "Cost",
-        "intro": "<p>The plant-scoped <strong>Cost</strong> tab is where financial movements get recorded against the same work package that physical progress is logged against. That pairing matters: when cost and progress are captured against different structures, a construction business ends up with two sets of numbers that never reconcile, and earned-value or cost-to-complete analysis becomes guesswork.</p><p>Four cards make up the tab. <strong>Transaction</strong> covers purchase orders and other expenses — the money actually committed or spent on this plant. <strong>Change order</strong> covers budget and contract adjustments, recording formal modifications to scope, cost, or schedule after the contract was signed; a <strong>PM</strong> should use its Assign To and Due Date fields so a change order does not stall without an accountable owner. <strong>Transfer</strong> covers reallocation of budget or cost between Cost Codes and Phase Codes, which is the controlled way to shift money between buckets when the original breakdown no longer matches how the work is being executed. <strong>Field Logs</strong> rounds out the tab with the field-side cost records.</p>",
+        "intro": "<p>The plant-scoped <strong>Cost</strong> tab is where financial movements get recorded against the same work package that physical progress is logged against. That pairing matters: when cost and progress are captured against different structures, a construction business ends up with two sets of numbers that never reconcile, and earned-value or cost-to-complete analysis becomes guesswork.</p><p>Four cards make up the tab. <strong>Transaction</strong> covers purchase orders and other expenses — the money actually committed or spent on this plant, recorded here by a PM, commercial user, or Module Admin as Transaction Logs. Where the project has IFS integration enabled, a <strong>Cost Forecast</strong> table becomes available under Transaction Logs, carrying an editable <strong>Completion Allowance %</strong> per line — a way for a PM or cost controller to project the remaining cost-to-complete on top of what has actually been transacted, rather than relying on the raw actuals alone. <strong>Change order</strong> covers budget and contract adjustments, recording formal modifications to scope, cost, or schedule after the contract was signed; a <strong>PM</strong> should use its Assign To and Due Date fields so a change order does not stall without an accountable owner. <strong>Transfer</strong> covers reallocation of budget or cost between Cost Codes and Phase Codes, which is the controlled way to shift money between buckets when the original breakdown no longer matches how the work is being executed. <strong>Field Logs</strong> rounds out the tab with the field-side cost records. Everything recorded across these four cards is what the <strong>Cost</strong> and <strong>Cost Dashboards and Reports</strong> dashboards in Data Analytics & Insights roll up at project level.</p>",
         "definitions": [
           {
             "term": "Transaction",
-            "definition": "The Cost tab card covering purchase orders and other expenses recorded against the plant."
+            "definition": "The Cost tab card covering purchase orders and other expenses recorded against the plant, as Transaction Logs."
+          },
+          {
+            "term": "Cost Forecast",
+            "definition": "A table available under Transaction Logs when the project has IFS integration enabled, carrying an editable Completion Allowance % per line to project remaining cost-to-complete on top of actual transactions."
           },
           {
             "term": "Change order (Cost tab)",
@@ -11520,7 +11716,7 @@ const MODULES = [
       },
       {
         "heading": "Safety",
-        "intro": "<p><strong>Safety</strong> is a project-wide top tab in Field Works, not a plant-scoped one, reflecting how safety is actually managed on a construction site: obligations, calendars, and issues run across the whole job rather than per work package. It covers both proactive and reactive safety activity, carried out day to day by a <strong>safety officer</strong> or any field worker who spots something.</p><p>Five cards make up the tab. <strong>Safety Forms</strong> holds the event-based project safety forms — the ad-hoc checks filled out on demand, organized by category. <strong>Safety Calendar</strong> holds the scheduled safety forms, with color coding that is worth knowing on sight: <strong>blue</strong> means Ready and due per its schedule, <strong>grey</strong> means the form is not yet enabled, and <strong>yellow</strong> means In Progress — either awaiting approval or carrying an open issue. <strong>Daily Safety Issues</strong> is the reactive side: a DSI is created automatically when a safety form or calendar form surfaces a failed checkpoint, so a flagged hazard is escalated rather than left sitting inside a completed form where a PM or safety lead might never see it. <strong>Approve Safety</strong> is the review queue for submitted safety forms, and <strong>Completed Safety</strong> is the retrospective repository across both scheduled and unscheduled forms.</p><p>Everything on this tab depends on setup done in <strong>Project Setup → Safety</strong>, where a PM or Module Admin creates the safety form categories, builds and assigns the approval workflows, and configures the safety calendar. A frequent point of confusion is worth naming: creating a safety form category is not enough on its own — each form must also be explicitly assigned to the users who should see it, or it will simply not appear here for them.</p>",
+        "intro": "<p><strong>Safety</strong> is a project-wide top tab in Field Works, not a plant-scoped one, reflecting how safety is actually managed on a construction site: obligations, calendars, and issues run across the whole job rather than per work package. It covers both proactive and reactive safety activity, carried out day to day by a <strong>safety officer</strong> or any field worker who spots something.</p><p>Five cards make up the tab. <strong>Safety Forms</strong> holds the event-based project safety forms — the ad-hoc checks filled out on demand, organized by category, by whichever field worker or safety officer is performing the check. <strong>Safety Calendar</strong> holds the scheduled safety forms, with color coding that is worth knowing on sight: <strong>blue</strong> means Ready and due per its schedule, <strong>grey</strong> means the form is not yet enabled, and <strong>yellow</strong> means In Progress — either awaiting approval or carrying an open issue. <strong>Daily Safety Issues</strong> is the reactive side: a DSI is created automatically when a safety form or calendar form surfaces a failed checkpoint, so a flagged hazard is escalated rather than left sitting inside a completed form where a PM or safety lead might never see it — a safety officer or assigned owner then rectifies the hazard and closes the DSI, moving it from Open to Rectified. <strong>Approve Safety</strong> is the review queue where a safety lead or PM signs off on submitted safety forms, and <strong>Completed Safety</strong> is the retrospective repository across both scheduled and unscheduled forms. From there, every DSI and completed or overdue safety form rolls up project-wide into the <strong>Safety Analytics</strong> dashboard in Data Analytics & Insights, which is the incident-and-compliance picture a safety lead or PM reviews rather than counting open DSIs form by form.</p><p>Everything on this tab depends on setup done in <strong>Project Setup → Safety</strong>, where a PM or Module Admin creates the safety form categories, builds and assigns the approval workflows, and configures the safety calendar. A frequent point of confusion is worth naming: creating a safety form category is not enough on its own — each form must also be explicitly assigned to the users who should see it, or it will simply not appear here for them.</p>",
         "definitions": [
           {
             "term": "Safety Forms",
