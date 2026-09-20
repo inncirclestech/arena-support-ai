@@ -7960,12 +7960,12 @@ const MODULES = [
         ]
       }
     ],
-    "name": "Equipment Management",
-    "alias": "Asset Management",
+    "name": "Asset Management",
+    "alias": "Equipment Management",
     "icon": "handyman",
     "tagline": "Identify, monitor and maintain different types of asset",
     "color": "#3c7a5f",
-    "overview": "<p><strong>Equipment Management</strong> (Home tile: <strong>Asset Management</strong>; module breadcrumb: <strong>Equipment Master</strong>) is Arena's system for tracking construction equipment: what the company or a 3rd party owns, where it sits, its maintenance/inspection history, and its movement between inventory and job sites via a formal <strong>Load Out Request (LOR)</strong> process.</p>\n    <p>Covers the full lifecycle: master registry → maintenance setup → request/approve/checkout/ship/checkin/shop-in → field inspections → issue tracking &amp; NCRs → supporting Global Data configuration (form builder, Adobe e-sign).</p>",
+    "overview": "<p><strong>Asset Management</strong> (the Home tile's current on-screen name; formerly labeled Equipment Management, and its module breadcrumb still reads <strong>Equipment Master</strong>) is Arena's system for tracking construction equipment: what the company or a 3rd party owns, where it sits, its maintenance/inspection history, and its movement between inventory and job sites via a formal <strong>Load Out Request (LOR)</strong> process.</p>\n    <p>Covers the full lifecycle: master registry → maintenance setup → request/approve/checkout/ship/checkin/shop-in → field inspections → issue tracking &amp; NCRs → supporting Global Data configuration (form builder, Adobe e-sign).</p>",
     "navigation": [
       "From <strong>Home</strong>, click the <strong>Asset Management</strong> tile (wrench icon).",
       "Opens on the <strong>Asset Master</strong> tab; breadcrumb reads <strong>Equipment Master › Equipment</strong>.",
