@@ -80,6 +80,12 @@
     font-family: "IBM Plex Mono", monospace; font-size: 10px; letter-spacing: 0.09em;
     text-transform: uppercase; color: var(--muted); margin: 6px 4px 2px;
   }
+  .rail-category-label {
+    font-family: "IBM Plex Mono", monospace; font-size: 10px; letter-spacing: 0.09em;
+    text-transform: uppercase; color: var(--accent); font-weight: 600;
+    margin: 14px 4px 4px; padding-top: 10px; border-top: 1px solid var(--border-soft);
+  }
+  .rail-category-label:first-child { margin-top: 0; padding-top: 0; border-top: none; }
   .global-search-box { position: relative; margin: 2px 0 4px; }
   .global-search-box svg { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: var(--muted); pointer-events: none; }
   .global-search-box input {
@@ -234,7 +240,7 @@
   }
 
   /* ---------- Browse view (secondary) ---------- */
-  .browse-shell { max-width: 960px; width: 100%; margin: 0 auto; padding: 32px 40px 80px; }
+  .browse-shell { width: 100%; margin: 0 auto; padding: 32px 48px 80px; }
   .doc-header { margin-bottom: 18px; }
   .doc-module-overview {
     font-size: 15px; color: var(--ink-soft); line-height: 1.65; max-width: 74ch;
@@ -244,18 +250,22 @@
   .doc-module-overview strong { color: var(--ink); }
 
   .doc-toc-and-search {
-    display: flex; flex-wrap: wrap; gap: 14px; align-items: flex-start;
+    display: flex; flex-direction: column; gap: 14px;
     margin: 22px 0 8px; padding: 16px 18px; background: var(--surface-raised);
     border: 1px solid var(--border); border-radius: var(--radius-md);
   }
-  .doc-search-box { position: relative; flex: 1 1 220px; min-width: 200px; }
+  .doc-search-box { position: relative; width: 100%; max-width: 480px; }
   .doc-search-box svg { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: var(--muted); pointer-events: none; }
   .doc-search-box input {
     width: 100%; background: var(--surface); border: 1.5px solid var(--border); border-radius: var(--radius-sm);
-    padding: 9px 12px 9px 30px; font-family: inherit; font-size: 13.5px; color: var(--ink); outline: none;
+    padding: 10px 12px 10px 32px; font-family: inherit; font-size: 13.5px; color: var(--ink); outline: none;
   }
   .doc-search-box input:focus { border-color: var(--accent); }
-  .doc-toc { display: flex; flex-wrap: wrap; gap: 6px 10px; flex: 2 1 320px; align-items: center; }
+  .doc-toc-label {
+    font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 600;
+    letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 0;
+  }
+  .doc-toc { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; }
   .doc-toc-link {
     font-size: 12px; color: var(--ink-soft); text-decoration: none; background: var(--surface);
     border: 1px solid var(--border); border-radius: 999px; padding: 4px 10px; white-space: nowrap;
@@ -333,6 +343,12 @@
     width: 18px; height: 18px; border-radius: 50%; background: var(--accent-tint); color: var(--accent);
     display: flex; align-items: center; justify-content: center; flex-shrink: 0;
   }
+  .browse-qa-item summary::after {
+    content: ""; width: 8px; height: 8px; margin-left: auto; flex-shrink: 0;
+    border-right: 2px solid var(--muted); border-bottom: 2px solid var(--muted);
+    transform: rotate(45deg); transition: transform 0.15s ease; margin-top: -2px;
+  }
+  .browse-qa-item[open] summary::after { transform: rotate(-135deg); margin-top: 2px; }
   .browse-qa-item[open] summary { border-bottom: 1px solid var(--border-soft); }
   .browse-qa-body { padding: 4px 16px 16px 44px; font-size: 14px; color: var(--ink-soft); }
   .browse-qa-body ol, .browse-qa-body ul { padding-left: 20px; margin: 6px 0; }
@@ -341,6 +357,7 @@
     font-family: "IBM Plex Mono", monospace; font-size: 9.5px; text-transform: uppercase;
     letter-spacing: 0.05em; color: var(--muted); background: var(--base);
     border: 1px solid var(--border); padding: 2px 7px; border-radius: 5px; margin-left: auto; flex-shrink: 0;
+    margin-right: 4px;
   }
   .browse-group-heading {
     font-family: "Fraunces", serif; font-size: 18px; font-weight: 600; margin: 26px 0 10px;
@@ -360,7 +377,6 @@
       <div class="brand">
         <img class="brand-logo" src="assets/inncircles-arena-logo.webp" alt="Inncircles Arena">
       </div>
-      <div class="brand-sub">Support AI · offline help</div>
     </div>
 
     <button class="rail-nav-btn primary" id="nav-chat">
@@ -373,16 +389,12 @@
       <input id="global-search" type="text" placeholder="Search all documentation…" autocomplete="off">
     </div>
 
-    <div class="rail-section-label">Browse by module</div>
+    <div class="rail-section-label">Browse documentation</div>
     <div class="module-search-box">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
       <input id="module-search" type="text" placeholder="Filter modules…" autocomplete="off">
     </div>
     <div class="module-nav" id="module-nav"></div>
-
-    <div class="rail-footer">
-      Answers come from Arena's own documentation — no external AI model is used.
-    </div>
   </nav>
 
   <main class="main" id="main"></main>
@@ -462,16 +474,30 @@
 **Contact Arena support:** email **support@inncircles.com**, or in the product click the **Support** icon (headset icon, top-right of the navigation bar) to raise a ticket directly — describe what you were trying to do and a team member will follow up.`;
 
   // ---------- Rail ----------
+  const CATEGORY_ORDER = ["home", "projects", "admin"];
+  const CATEGORY_LABELS = { home: "Home", projects: "Projects", admin: "Admin Setup" };
+
   function renderRail() {
     const q = moduleFilter.trim().toLowerCase();
     const visible = q ? MODULES.filter(m => m.name.toLowerCase().includes(q) || (m.alias||"").toLowerCase().includes(q)) : MODULES;
 
-    railNav.innerHTML = visible.length ? visible.map(m => `
-      <button class="rail-nav-btn ${state.view==='browse' && state.moduleId===m.id ? 'active' : ''}" data-module="${m.id}">
-        <span class="module-dot" style="background:${m.color}"></span>
-        <span>${m.name}</span>
-      </button>
-    `).join("") : `<div class="module-nav-empty">No modules match "${escapeHtml(moduleFilter)}"</div>`;
+    if (!visible.length) {
+      railNav.innerHTML = `<div class="module-nav-empty">No modules match "${escapeHtml(moduleFilter)}"</div>`;
+    } else {
+      railNav.innerHTML = CATEGORY_ORDER.map(cat => {
+        const mods = visible.filter(m => m.category === cat);
+        if (!mods.length) return "";
+        return `
+          <div class="rail-category-label">${CATEGORY_LABELS[cat]}</div>
+          ${mods.map(m => `
+            <button class="rail-nav-btn ${state.view==='browse' && state.moduleId===m.id ? 'active' : ''}" data-module="${m.id}">
+              <span class="module-dot" style="background:${m.color}"></span>
+              <span>${m.name}</span>
+            </button>
+          `).join("")}
+        `;
+      }).join("");
+    }
     navChatBtn.classList.toggle("active", state.view === "chat");
 
     railNav.querySelectorAll(".rail-nav-btn").forEach(btn => {
@@ -603,7 +629,11 @@
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
             <input id="doc-search-input" type="text" placeholder="Search within ${escapeHtml(mod.name)}…" value="${escapeHtml(filter)}" autocomplete="off">
           </div>
-          ${sectionHeadings.length > 1 ? `<nav class="doc-toc">${sectionHeadings.map(h => `<a href="#sec-${slugify(h)}" class="doc-toc-link ${visibleHeadings.includes(h) ? '' : 'doc-toc-link-dim'}">${escapeHtml(h)}</a>`).join("")}</nav>` : ""}
+          ${sectionHeadings.length > 1 ? `
+          <div>
+            <p class="doc-toc-label">On this page</p>
+            <nav class="doc-toc">${sectionHeadings.map(h => `<a href="#sec-${slugify(h)}" class="doc-toc-link ${visibleHeadings.includes(h) ? '' : 'doc-toc-link-dim'}">${escapeHtml(h)}</a>`).join("")}</nav>
+          </div>` : ""}
         </div>
 
         ${visibleHeadings.length ? visibleHeadings.map(heading => {
