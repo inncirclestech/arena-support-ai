@@ -39,7 +39,7 @@
   }
   ::selection { background: var(--accent-tint); }
 
-  .app { display: grid; grid-template-columns: 260px 1fr; min-height: 100vh; }
+  .app { display: grid; grid-template-columns: 260px 1fr; height: 100vh; }
 
   /* ---------- Rail (secondary) ---------- */
   .rail {
@@ -118,14 +118,16 @@
   }
 
   /* ---------- Main ---------- */
-  .main { display: flex; flex-direction: column; min-height: 100vh; }
+  .main { display: flex; flex-direction: column; height: 100vh; overflow-y: auto; }
 
   /* ---------- Chat (primary) ---------- */
   .chat-shell {
     flex: 1; display: flex; flex-direction: column;
     max-width: 760px; width: 100%; margin: 0 auto;
     padding: 36px 32px 24px;
-    min-height: 100vh;
+    height: 100%;
+    min-height: 0;
+    overflow: hidden;
   }
   .chat-hero { text-align: center; margin-bottom: 22px; }
   .chat-hero-badge {
@@ -144,7 +146,7 @@
   }
   .chat-hero p { color: var(--muted); font-size: 14px; margin: 0; max-width: 480px; margin: 0 auto; }
 
-  .chat-log { flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 14px; padding: 4px 2px 16px; }
+  .chat-log { flex: 1; min-height: 0; overflow-y: auto; display: flex; flex-direction: column; gap: 14px; padding: 4px 2px 16px; }
   .chat-msg { display: flex; gap: 10px; max-width: 100%; animation: msg-in 0.22s ease both; }
   @keyframes msg-in { from{opacity:0;transform:translateY(4px)} to{opacity:1;transform:none} }
   @media (prefers-reduced-motion: reduce) { .chat-msg { animation: none; } }
@@ -594,6 +596,34 @@ ${passages}`;
 
 **Contact Arena support:** email **support@inncircles.com**, or in the product click the **Support** icon (headset icon, top-right of the navigation bar) to raise a ticket directly — describe what you were trying to do and a team member will follow up.`;
 
+  // ---------- Conversational framing for offline-engine answers ----------
+  // The stored KB `answer` text is accurate but terse/instructional by design
+  // (it's shared with the browse/search views too). For chat, wrap it with a
+  // natural lead-in and a brief closing offer so it reads like a person
+  // answering rather than a raw excerpt — without adding or changing any of
+  // the underlying facts, steps, or names. Purely presentational; the answer
+  // text itself is untouched, so this never risks introducing inaccuracies.
+  const ANSWER_OPENERS = [
+    "Good question — here's how that works.",
+    "Sure, here's how to do that.",
+    "Here's how that's handled in Arena.",
+    "That one comes up a lot — here's the rundown.",
+    "Happy to walk you through that."
+  ];
+  const ANSWER_CLOSERS = [
+    "Let me know if any of those steps don't match what you're seeing, and I can dig further.",
+    "If something looks different on your screen, tell me what you're seeing and I'll help narrow it down.",
+    "Ask if you'd like more detail on any part of that.",
+    "Let me know if you'd like the related screens or a deeper walkthrough of any step."
+  ];
+  let answerVariantCounter = 0;
+  function conversationalize(answerText) {
+    const i = answerVariantCounter++;
+    const opener = ANSWER_OPENERS[i % ANSWER_OPENERS.length];
+    const closer = ANSWER_CLOSERS[i % ANSWER_CLOSERS.length];
+    return `${opener}\n\n${answerText}\n\n${closer}`;
+  }
+
   // ---------- Rail ----------
   const CATEGORY_ORDER = ["home", "projects", "admin"];
   const CATEGORY_LABELS = { home: "Home", projects: "Projects", admin: "Admin Setup" };
@@ -1036,7 +1066,7 @@ ${passages}`;
     function answerDirectly(entry) {
       chatHistory.push({
         role: "assistant",
-        content: entry.answer,
+        content: conversationalize(entry.answer),
         sourceModule: entry.moduleId,
         sourceModuleName: entry.moduleName
       });
@@ -1076,7 +1106,7 @@ ${passages}`;
       const result = matchQuery(KB, q, lastMatchedContext);
 
       if (result.type === "answer") {
-        let content = result.best.answer;
+        let content = conversationalize(result.best.answer);
         let usedAi = false;
         if (aiModeOn && ArenaLLM.isReady()) {
           showThinking();
