@@ -1,6 +1,55 @@
 // ---- Flat intent-tagged QA items (for the offline chat engine) ----
 const QA_OPPORTUNITY = [
   {
+    action: "configure",
+    object: "parent mode",
+    scope: "module", section: "Setup & Configuration",
+    question: "How do I create a parent opportunity?",
+    answer: "Parent/child opportunities are an optional feature that's off by default and must be turned on first:\n1. Go to **Opportunity Management → Settings** (gear icon) → **Opportunities Form** (left sidebar) → **Settings** tab.\n2. Turn on the **Parent Mode** toggle at the top and click **Save Changes**.\n3. Once Parent Mode is on, open any opportunity's edit/profile form — you'll now see **Create Parent** and **Link Parent** buttons in the Status & Value area.\n4. Click **Create Parent** to convert the currently open opportunity into a Parent (this opens a pre-filled Create Parent Lead form using that opportunity's Name, Description, Stage, Status, and other core fields).\n\nIf you don't see these buttons, ask your admin to confirm Parent Mode is enabled for your organization — without it, the feature is fully hidden from the interface.",
+    tags: ["create parent opportunity","parent mode","enable parent opportunity","parent child opportunity","opportunity hierarchy"]
+  },
+  {
+    action: "link",
+    object: "child opportunity",
+    scope: "module", section: "Opportunities",
+    question: "How do I link an opportunity as a child to an existing parent?",
+    answer: "With **Parent Mode** enabled (see Settings → Opportunities Form → Settings), open the opportunity you want to make a child and click **Link Parent**. Arena looks up existing Parent opportunities tied to the same **Customer/Company** as the one you're editing:\n- If one or more parents exist for that customer, pick the one to link this opportunity to as a child, then submit.\n- If none exist yet, you'll see \"No Parent Linked to this Customer\" — use **Create Parent** on that customer's first opportunity before you can link any siblings to it.\n\nSave any pending changes on the opportunity first — both Create Parent and Link Parent require the record to have no unsaved edits. Linking a child to a Parent that's already in the Closed stage shows a confirmation warning before proceeding.",
+    tags: ["link parent","link child opportunity","attach to parent","child opportunity","associate opportunity"]
+  },
+  {
+    action: "view",
+    object: "parent child rollup",
+    scope: "module", section: "Reports",
+    question: "Where can I see how many child opportunities a parent has?",
+    answer: "The Parent/Child/Standalone relationship, **Child Count**, and **Active Child Count** are only visible in **Opportunity Management → Reports → Pipeline Report** — they are not columns on the main Opportunities list itself. Run the Pipeline Report and look for these three columns to see each opportunity's relationship status and how many children a Parent currently has.",
+    tags: ["child count","parent child report","opportunity hierarchy report","pipeline report parent"]
+  },
+  {
+    action: "define",
+    object: "ai probability",
+    scope: "module", section: "Opportunities",
+    question: "What is AI Probability, and how is it different from Win Probability?",
+    answer: "**Win Probability (%)** is a manually entered estimate of how likely an opportunity is to close. **AI Probability (%)** is a separate, system-calculated field shown alongside it on the Opportunity's Status & Value panel, with its own refresh icon to recalculate it — it's an independent, automated estimate rather than something a user types in.",
+    tags: ["ai probability","win probability","chance of success","success probability","ai forecast"]
+  },
+  {
+    action: "create",
+    object: "cloned opportunity",
+    scope: "module", section: "Opportunities",
+    question: "How do I clone an opportunity, and can I choose which fields get copied?",
+    answer: "Click the **Clone** (duplicate/file_copy) icon on an opportunity's row in the Opportunities list. This opens a **Clone Opportunity** dialog with a checkbox picker organized by section (Details, Status & Value, Timeline & Activity, Contact, etc.) — you choose exactly which fields carry over into the new record instead of copying everything automatically.",
+    tags: ["clone opportunity","duplicate opportunity","copy opportunity","clone lead"]
+  },
+  {
+    action: "configure",
+    object: "customer deduplication",
+    scope: "module", section: "Sidebar Shortcuts",
+    question: "How do I merge duplicate customer records?",
+    answer: "Go to **Opportunity Management → Customers** (people icon) and use the **Merge Duplicates** button on the toolbar. The same screen also has **Convert Customers to Owners**, for turning a Customer record into an Owner record when the same organization plays both roles.",
+    tags: ["merge duplicate customers","deduplicate customers","merge customers","convert customer to owner"]
+  },
+
+  {
     action: "view",
     object: "weighted opportunity value",
     scope: "module", section: "Dashboard",
