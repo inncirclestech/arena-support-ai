@@ -449,14 +449,18 @@
 <script src="data.js"></script>
 <script src="engine.js"></script>
 <script>
-  // ---------- Optional in-browser LLM (WebLLM) ----------
-  // Loaded lazily and only if the user opts in — this is a large (~600MB-1GB) model
-  // download on first use, cached by the browser afterward via Cache Storage.
-  // Requires WebGPU (Chrome/Edge 113+, not available in Safari/Firefox stable yet, and
-  // not available at all inside a sandboxed iframe like a claude.ai artifact preview).
-  // All synthesis is strictly grounded in KB entries retrieved by the existing offline
-  // engine (retrieveTopEntries) — the model is never given an open-ended prompt, so it
-  // cannot answer from outside the documentation.
+  // ---------- In-browser LLM (WebLLM) — the primary way questions get answered ----------
+  // Auto-loads on page load (see aiLoadPromise below), not behind a toggle: this is what
+  // lets the chatbot actually read and understand a question instead of falling back to
+  // showing a "which did you mean?" button menu whenever offline keyword-matching is
+  // unsure. First visit downloads a large (~600MB-1GB) model, cached by the browser
+  // afterward via Cache Storage, so later visits start instantly. Requires WebGPU
+  // (Chrome/Edge 113+, not available in Safari/Firefox stable yet, and not available at
+  // all inside a sandboxed iframe like a claude.ai artifact preview) — unsupported
+  // browsers transparently fall back to the offline engine's own answer/clarify/none
+  // behavior. All synthesis is strictly grounded in KB entries retrieved by the existing
+  // offline engine (retrieveTopEntries) — the model is never given an open-ended prompt,
+  // so it cannot answer from outside the documentation.
   window.ArenaLLM = (function () {
     const MODEL_ID = "Llama-3.2-1B-Instruct-q4f16_1-MLC";
     let engine = null;
@@ -496,15 +500,27 @@
     // contextEntries: array of {question, answer} pulled from the offline engine's KB.
     // Returns synthesized answer text, or null if generation fails for any reason
     // (caller should fall back to the plain offline-engine answer).
+    //
+    // The retrieved notes are deliberately NOT shown to the model as labeled
+    // "Q: ... A: ..." pairs — a small model tends to mimic whatever structure
+    // it's shown, and a numbered question/answer format primes it to echo
+    // that same numbered list back verbatim instead of writing prose. Plain
+    // unlabeled reference notes plus an explicit instruction and a short
+    // worked example steer it toward an actual conversational answer.
     async function answer(userQuestion, contextEntries) {
       if (!ready || !engine) return null;
-      const passages = contextEntries.map((e, i) =>
-        `[${i + 1}] Q: ${e.question}\nA: ${e.answer}`
-      ).join("\n\n");
-      const system = `You are Arena Support AI, a documentation assistant for the Inncircles Arena construction management product. Answer the user's question using ONLY the documentation passages provided below — never invent steps, screen names, or fields that aren't in them. Keep the same facts, button names, and steps as the source passages, just phrase the answer more naturally and concisely for the user's specific question. If the passages don't actually answer the question, say you don't have documented steps for that and suggest contacting support@inncircles.com — do not guess.
+      const notes = contextEntries.map(e => `- ${e.answer.replace(/<\/?strong>/g, "**")}`).join("\n");
+      const system = `You are Arena Support AI, a documentation assistant for the Inncircles Arena construction management product. A user asks a question in plain English; you answer it directly and conversationally, like a knowledgeable colleague, using ONLY the facts in the reference notes below — never invent steps, screen names, or fields that aren't in them.
 
-Documentation passages:
-${passages}`;
+Reference notes (internal — do not quote, number, or label these; use them only as source material for your own sentences):
+${notes}
+
+Rules:
+- Answer using ONLY the single note that best matches the user's specific question. The other notes are decoys included for context — most of them are NOT what the user asked about, so ignore them completely. Do not combine or summarize multiple notes together.
+- Write 2-4 short sentences of plain prose, in your own words. Never output a list, never output "Q:"/"A:" labels, never repeat a note word-for-word.
+- If NONE of the notes actually answer the question, respond with exactly: "I don't have documented steps for that yet — try emailing support@inncircles.com." Do not guess, and do not describe an unrelated note just because it's the closest thing available.
+
+Example of the style to use — if a note says "Go to Settings, click Add User, fill the form, click Save" and the user asks "how do I add someone", a good answer is: "You can add a new user from Settings — click Add User, fill in their details, and hit Save." Write like that: natural, direct, one topic, no labels.`;
       try {
         const res = await engine.chat.completions.create({
           messages: [
@@ -512,10 +528,17 @@ ${passages}`;
             { role: "user", content: userQuestion }
           ],
           temperature: 0.2,
-          max_tokens: 400
+          max_tokens: 200
         });
-        const text = res && res.choices && res.choices[0] && res.choices[0].message && res.choices[0].message.content;
-        return text ? text.trim() : null;
+        let text = res && res.choices && res.choices[0] && res.choices[0].message && res.choices[0].message.content;
+        if (!text) return null;
+        text = text.trim();
+        // Defensive cleanup: if the model still slipped into the Q:/A: or
+        // numbered-list pattern despite the instructions, treat it as a
+        // failed generation rather than show the user a garbled echo — the
+        // caller falls back to the plain offline-engine answer instead.
+        if (/^\s*\[?\d+\]?\s*Q:/im.test(text) || /^\s*Q:\s/im.test(text)) return null;
+        return text;
       } catch (e) {
         return null;
       }
@@ -537,7 +560,23 @@ ${passages}`;
   let recognizer = null;
   let listening = false;
   let lastMatchedContext = null; // {moduleId, object} from the last confidently-answered turn
-  let aiModeOn = false; // user opt-in for WebLLM-synthesized answers (off by default: large download)
+
+  // ---------- Auto-load the in-browser AI model on page load ----------
+  // AI answering is the primary experience now, not an opt-in toggle: the
+  // offline engine (matchQuery/retrieveTopEntries) still does all retrieval,
+  // but WebLLM is what actually reads the question and answers it, so a
+  // question phrased in a way the keyword matcher wouldn't recognize (a typo,
+  // an unusual word choice, a compound term) still gets a real, direct
+  // answer instead of a "which did you mean?" button menu. If the browser
+  // can't run WebGPU (or this page is embedded in a sandboxed iframe that
+  // blocks it), aiLoadPromise resolves to false and every question quietly
+  // falls back to the offline engine's own answer/clarify/none behavior —
+  // so the app is always fully usable, just less fluent, without WebLLM.
+  let aiStatusListeners = [];
+  function notifyAiStatus() { aiStatusListeners.forEach(fn => fn()); }
+  const aiLoadPromise = ArenaLLM.isSupported()
+    ? ArenaLLM.load(() => notifyAiStatus()).finally(notifyAiStatus)
+    : Promise.resolve(false);
 
   // ---------- Local per-browser chat history (no login, no server) ----------
   const HISTORY_KEY = "arena-support-ai-history-v1";
@@ -959,6 +998,9 @@ ${passages}`;
   }
 
   function renderChat() {
+    // Each render creates fresh DOM, so drop any status listener bound to the
+    // previous render's (now-detached) badge element before adding a new one.
+    aiStatusListeners = [];
     main.innerHTML = `
       <div class="chat-shell">
         ${chatHistory.length === 0 ? `
@@ -968,8 +1010,8 @@ ${passages}`;
           <p>Ask how to do something in Arena — creating records, assigning users, running approvals — and I'll point you to the exact screen and steps. Type, or tap the mic to speak.</p>
         </div>` : `<div class="chat-history-bar"><button id="clear-history-btn" class="clear-history-btn">Clear conversation</button></div>`}
         <div class="ai-mode-row">
-          <span id="ai-mode-toggle" class="ai-mode-toggle" role="button" tabindex="0">
-            <span class="switch"></span><span class="dot"></span><span id="ai-mode-label">Smarter answers (AI mode)</span>
+          <span id="ai-status-badge" class="ai-mode-toggle" aria-live="polite">
+            <span class="dot"></span><span id="ai-status-label">Starting up…</span>
           </span>
         </div>
         <div class="chat-log" id="chat-log"></div>
@@ -992,46 +1034,27 @@ ${passages}`;
     const micBtn = document.getElementById("mic-btn");
     const statusNote = document.getElementById("chat-status-note");
     const clearBtn = document.getElementById("clear-history-btn");
-    const aiToggle = document.getElementById("ai-mode-toggle");
-    const aiLabel = document.getElementById("ai-mode-label");
+    const aiStatusBadge = document.getElementById("ai-status-badge");
+    const aiStatusLabel = document.getElementById("ai-status-label");
 
-    function paintAiToggle() {
-      aiToggle.classList.toggle("on", aiModeOn);
-      aiToggle.classList.toggle("loading", ArenaLLM.isLoading());
-      aiToggle.classList.toggle("ready", ArenaLLM.isReady());
-      if (ArenaLLM.isLoading()) {
-        aiLabel.textContent = "Loading AI model…";
-      } else if (aiModeOn && ArenaLLM.isReady()) {
-        aiLabel.textContent = "Smarter answers: ON";
-      } else if (aiModeOn) {
-        aiLabel.textContent = "Smarter answers (AI mode)";
+    function paintAiStatus() {
+      if (!aiStatusBadge) return; // view was swapped away before this fired
+      const loading = ArenaLLM.isLoading();
+      const ready = ArenaLLM.isReady();
+      aiStatusBadge.classList.toggle("loading", loading);
+      aiStatusBadge.classList.toggle("ready", ready);
+      if (ready) {
+        aiStatusLabel.textContent = "Smart answers ready";
+      } else if (loading) {
+        aiStatusLabel.textContent = "Loading AI model (first visit only)…";
+      } else if (!ArenaLLM.isSupported()) {
+        aiStatusLabel.textContent = "Offline mode (AI unavailable in this browser)";
       } else {
-        aiLabel.textContent = "Smarter answers (AI mode)";
+        aiStatusLabel.textContent = "Starting up…";
       }
     }
-    paintAiToggle();
-
-    async function toggleAiMode() {
-      if (!ArenaLLM.isSupported()) {
-        statusNote.textContent = ArenaLLM.failReason() || "AI mode isn't supported in this browser.";
-        return;
-      }
-      aiModeOn = !aiModeOn;
-      paintAiToggle();
-      if (aiModeOn && !ArenaLLM.isReady() && !ArenaLLM.isLoading()) {
-        statusNote.textContent = "Downloading AI model (first time only, ~600MB–1GB)…";
-        const ok = await ArenaLLM.load((p) => {
-          if (p && p.text) statusNote.textContent = p.text;
-        });
-        paintAiToggle();
-        statusNote.textContent = ok ? "AI model ready." : (ArenaLLM.failReason() || "Couldn't load the AI model — using offline mode.");
-        if (!ok) aiModeOn = false;
-        paintAiToggle();
-        setTimeout(() => { if (statusNote.textContent === "AI model ready.") statusNote.textContent = ""; }, 2500);
-      }
-    }
-    aiToggle.addEventListener("click", toggleAiMode);
-    aiToggle.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggleAiMode(); } });
+    paintAiStatus();
+    aiStatusListeners.push(paintAiStatus);
 
     function paintLog() {
       log.innerHTML = chatHistory.map((m, i) => chatMsgHtml(m, i)).join("");
@@ -1092,6 +1115,18 @@ ${passages}`;
       if (el) el.remove();
     }
 
+    // The offline engine (matchQuery/retrieveTopEntries) is always the source
+    // of truth for WHAT documentation is relevant — it never gets bypassed.
+    // What changes is who turns that into a reply:
+    //  - WebLLM ready: read the actual question, and directly answer it from
+    //    the retrieved passages — no clarify-button menu, ever, on this path.
+    //    A genuinely unanswerable question still gets an honest "I don't have
+    //    documented steps for that" from the model, per its system prompt,
+    //    rather than a guess — grounding, not the button UI, is what keeps
+    //    this honest.
+    //  - WebLLM not ready/unsupported: fall back to the offline engine's own
+    //    answer/clarify/none behavior, including the clarify menu, since
+    //    without real language understanding a menu is safer than guessing.
     async function sendQuestion() {
       const q = input.value.trim();
       if (!q) return;
@@ -1099,28 +1134,55 @@ ${passages}`;
       chatHistory.push({ role: "user", content: q });
       paintLog();
 
-      // The offline engine always decides answer/clarify/none — WebLLM (when on and
-      // ready) only rephrases an already-confident "answer" using the same retrieved
-      // documentation. It never overrides a clarify/none decision, so it can't paper
-      // over genuine gaps or ambiguity with a confident-sounding guess.
+      if (ArenaLLM.isReady()) {
+        showThinking();
+        // Keep the candidate set small (top 3, not a wide net): the offline
+        // engine's own relevance scoring already does the hard work of
+        // ranking, and a small model is much more reliable at picking the
+        // right ONE fact out of 2-3 well-ranked candidates and rephrasing it
+        // than at correctly ignoring several loosely-related ones out of a
+        // wider set — with more candidates it tends to just summarize all of
+        // them into a run-on list instead of answering the specific question.
+        const context = retrieveTopEntries(KB, q, lastMatchedContext, 3);
+        const synthesized = context.length ? await ArenaLLM.answer(q, context) : null;
+        hideThinking();
+
+        if (synthesized) {
+          // The model's own honest "I don't have documented steps" decline
+          // (see ArenaLLM.answer's system prompt) shouldn't be tagged with a
+          // source module — none of the retrieved candidates actually
+          // answered the question, so attributing the decline to whichever
+          // one happened to rank first would be misleading.
+          const isDecline = /don't have documented steps/i.test(synthesized);
+          const primary = context[0];
+          chatHistory.push({
+            role: "assistant",
+            content: synthesized,
+            sourceModule: isDecline ? null : primary.moduleId,
+            sourceModuleName: isDecline ? null : primary.moduleName,
+            aiSynthesized: !isDecline
+          });
+          lastMatchedContext = isDecline ? null : { moduleId: primary.moduleId, object: primary.object };
+          saveHistory();
+          paintSuggestions();
+          paintLog();
+          input.focus();
+          return;
+        }
+        // Retrieval found nothing at all, or generation failed — fall through
+        // to the offline engine below rather than leaving the user with
+        // nothing (e.g. a truly out-of-scope question the model correctly
+        // declined, or a transient WebLLM error).
+      }
+
       const result = matchQuery(KB, q, lastMatchedContext);
 
       if (result.type === "answer") {
-        let content = conversationalize(result.best.answer);
-        let usedAi = false;
-        if (aiModeOn && ArenaLLM.isReady()) {
-          showThinking();
-          const context = retrieveTopEntries(KB, q, lastMatchedContext, 5);
-          const synthesized = await ArenaLLM.answer(q, context.length ? context : [result.best]);
-          hideThinking();
-          if (synthesized) { content = synthesized; usedAi = true; }
-        }
         const msg = {
           role: "assistant",
-          content,
+          content: conversationalize(result.best.answer),
           sourceModule: result.best.moduleId,
-          sourceModuleName: result.best.moduleName,
-          aiSynthesized: usedAi
+          sourceModuleName: result.best.moduleName
         };
         if (result.alternatives && result.alternatives.length) {
           msg.followups = result.alternatives.map(a => a.question);

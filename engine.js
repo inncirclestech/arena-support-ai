@@ -25,11 +25,28 @@ function isComparisonObject(object) {
   return /\bvs\.?\b|\bversus\b|\bdifferen(t|ce)\b|\bsame as\b|\bcompared? to\b/i.test(object || "");
 }
 
+// Known closed-compound spellings that appear in real user queries but never
+// in the KB's own text (which always spells them as two words) — normalized
+// before tokenizing so "worklog" reaches the same tokens as "work log".
+const COMPOUND_WORD_SPLITS = {
+  "worklog": "work log",
+  "worklogs": "work log",
+  "workorder": "work order",
+  "workorders": "work order",
+  "loadout": "load out",
+  "punchlist": "punch list",
+  "punchlists": "punch list",
+  "timesheet": "time sheet",
+  "timesheets": "time sheet"
+};
+
 function tokenize(text) {
   return (text || "")
     .toLowerCase()
     .replace(/[^a-z0-9\s]/g, " ")
     .split(/\s+/)
+    .filter(Boolean)
+    .flatMap(t => (COMPOUND_WORD_SPLITS[t] || t).split(" "))
     .filter(t => t && !STOPWORDS.has(t));
 }
 
