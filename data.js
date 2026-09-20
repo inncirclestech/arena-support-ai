@@ -1929,7 +1929,7 @@ const QA_MYDESK = [
     "action": "view",
     "object": "my desk dashboard",
     "scope": "project",
-    "section": "My Desk",
+    "section": "My Desk Dashboard",
     "question": "What shows up on My Desk when I open a project?",
     "answer": "My Desk is the personalized landing screen for a project, reachable at <strong>Desk → Actions</strong>. It greets you by name with the current date, then shows a horizontally scrollable <strong>Project Progress</strong> row of cards (one per top-level work package or plant), followed by collapsible sections for <strong>My Actions</strong>, <strong>Pending Actions</strong>, <strong>Recent Work Logs</strong>, <strong>Recent Punch List Items</strong>, <strong>Recent Quality Logs</strong>, <strong>Recent Daily Safety Issues</strong>, and <strong>Recent Safety Logs</strong> — all scoped to items relevant to you.",
     "tags": [
@@ -1943,7 +1943,7 @@ const QA_MYDESK = [
     "action": "view",
     "object": "project progress cards",
     "scope": "project",
-    "section": "Project Progress",
+    "section": "My Desk Dashboard",
     "question": "How do I check overall progress for a specific plant or work package?",
     "answer": "In the <strong>Project Progress</strong> row on My Desk, each card represents a top-level work package or plant (for example Piperack, Mainline Track Works, or Compressor House) with its own progress bar and percentage. Use the \"ALL\"/plant-filter dropdown to narrow the row to one plant, and check the refresh control and last-updated indicator to confirm you're looking at current numbers.",
     "tags": [
@@ -1957,7 +1957,7 @@ const QA_MYDESK = [
     "action": "view",
     "object": "my actions",
     "scope": "project",
-    "section": "My Actions",
+    "section": "My Desk Dashboard",
     "question": "Where do I see action items assigned specifically to me?",
     "answer": "The <strong>My Actions</strong> accordion on My Desk (marked with a calendar icon) lists action items assigned to your user account across the project. Click the section header to expand or collapse it; the count shown next to the heading tells you how many are currently open.",
     "tags": [
@@ -1970,7 +1970,7 @@ const QA_MYDESK = [
     "action": "view",
     "object": "pending actions",
     "scope": "project",
-    "section": "Pending Actions",
+    "section": "My Desk Dashboard",
     "question": "What's the difference between My Actions and Pending Actions on My Desk?",
     "answer": "<strong>My Actions</strong> is scoped to items assigned to you personally, while <strong>Pending Actions</strong> is a broader collapsible accordion of outstanding actions relevant to your role on the project that haven't been closed out yet. Both show a count in their header and expand independently.",
     "tags": [
@@ -1983,7 +1983,7 @@ const QA_MYDESK = [
     "action": "view",
     "object": "recent work logs",
     "scope": "project",
-    "section": "Recent Work Logs",
+    "section": "My Desk Dashboard",
     "question": "Can I see the latest work logs without leaving My Desk?",
     "answer": "Yes. The <strong>Recent Work Logs</strong> accordion on My Desk surfaces the latest progress entries recorded on the project so you don't have to navigate into Field Works → Progress → Work Logs just to get a quick pulse of recent activity.",
     "tags": [
@@ -1996,7 +1996,7 @@ const QA_MYDESK = [
     "action": "view",
     "object": "recent punch list and quality items",
     "scope": "project",
-    "section": "My Desk",
+    "section": "My Desk Dashboard",
     "question": "Does My Desk show recent punch list and quality activity too?",
     "answer": "Yes. Below the work log summary, My Desk includes collapsible accordions for <strong>Recent Punch List Items</strong> and <strong>Recent Quality Logs</strong>, giving a PM or field user a fast read on open punch items and recent quality inspection activity without opening those modules directly.",
     "tags": [
@@ -2009,7 +2009,7 @@ const QA_MYDESK = [
     "action": "view",
     "object": "safety activity summaries",
     "scope": "project",
-    "section": "My Desk",
+    "section": "My Desk Dashboard",
     "question": "Where does My Desk show recent safety activity?",
     "answer": "Two dedicated accordions cover safety: <strong>Recent Daily Safety Issues</strong> and <strong>Recent Safety Logs</strong>, both at the bottom of My Desk. They give a quick view of recently logged safety issues and safety log entries so safety trends are visible from the same screen a user lands on every day, not buried behind a separate module.",
     "tags": [
@@ -2023,7 +2023,7 @@ const QA_MYDESK = [
     "action": "view",
     "object": "last-updated indicator",
     "scope": "project",
-    "section": "Project Progress",
+    "section": "My Desk Dashboard",
     "question": "How do I know if the progress numbers on My Desk are current?",
     "answer": "The Project Progress row includes a refresh control alongside a last-updated indicator. If numbers look stale, use refresh to pull the latest figures rather than assuming the percentages update automatically in real time.",
     "tags": [
@@ -2036,7 +2036,7 @@ const QA_MYDESK = [
     "action": "configure",
     "object": "my desk dashboards",
     "scope": "project",
-    "section": "My Desk",
+    "section": "My Desk Dashboard",
     "question": "Can what appears on My Desk be configured for a project?",
     "answer": "Yes, on the settings side rather than on the screen itself. <strong>Project Settings</strong> carries a <strong>My Desk</strong> category for configuring the personalized landing view, and a separate <strong>My Desk Dashboards</strong> category for configuring which dashboard widgets or views appear there. Beyond that, what an individual sees is shaped by their permissions and plant/work-package assignments, so two users on the same project can see legitimately different desks.",
     "tags": [
@@ -2636,7 +2636,7 @@ const QA_FIELDWORKS = [
     "action": "view",
     "object": "field works tab structure",
     "scope": "project",
-    "section": "Field Works Overview",
+    "section": "Overview",
     "question": "How is Field Works organized, and where do I start?",
     "answer": "Field Works is the day-to-day execution side of a project, opened from the left sidebar. Its top tab bar has five tabs in order: <strong>Tree Version</strong>, <strong>Safety</strong>, <strong>Drawing Management</strong>, <strong>Invoices</strong>, and <strong>Workorder</strong>. Most field logging starts in <strong>Tree Version</strong>, which shows a card per work package/plant; clicking a plant card opens a second-level tab bar scoped to that plant with <strong>Progress</strong>, <strong>Quick Apps</strong>, <strong>Quality</strong>, <strong>Project Forms</strong>, and <strong>Cost</strong>.",
     "tags": [
@@ -3196,7 +3196,7 @@ const QA_FIELDWORKS = [
     "action": "understand",
     "object": "field works depends on project setup",
     "scope": "project",
-    "section": "Field Works Overview",
+    "section": "Overview",
     "question": "A form or work package is missing in Field Works — where do I look?",
     "answer": "Almost always on the setup side. Field Works reads everything from configuration built elsewhere: work packages and the plant tree come from <strong>Project Setup → Works</strong>, custom form types and their per-plant user assignments from <strong>Project Setup → Forms</strong>, safety categories, workflows, and the safety calendar from <strong>Project Setup → Safety</strong>, quality folders and mapped work packages from <strong>Project Setup → Quality</strong>, and drawing approval workflows from <strong>Project Setup → Drawings</strong>. A form that exists but was never assigned to a user will simply not appear for that user in the field.",
     "tags": [
@@ -3213,7 +3213,7 @@ const QA_DATAANALYTICS = [
     "action": "view",
     "object": "data analytics tab structure",
     "scope": "project",
-    "section": "Data Analytics Overview",
+    "section": "Overview",
     "question": "Where do I find dashboards and reports for a project?",
     "answer": "Open the project and go to <strong>Data Analytics &amp; Insights</strong> in the left sidebar. It has three tabs in order: <strong>Standard Analytics</strong> (pre-built dashboards, the default tab), <strong>Configurable Analytics</strong> (self-serve chart, table, and report building plus Excel and Power BI routes), and <strong>Standard Reports</strong> (canned printable reports). This is the project's BI and reporting hub.",
     "tags": [
@@ -3228,7 +3228,7 @@ const QA_DATAANALYTICS = [
     "action": "understand",
     "object": "standard vs configurable analytics",
     "scope": "project",
-    "section": "Data Analytics Overview",
+    "section": "Overview",
     "question": "Should I use Standard Analytics or Configurable Analytics?",
     "answer": "Start with <strong>Standard Analytics</strong> — it holds 18 pre-built dashboards covering the questions most construction projects ask routinely (progress, schedule, cost, resources, quality, safety, contractor performance). Move to <strong>Configurable Analytics</strong> only when the pre-built set does not answer your question: that tab is where a PM or analyst builds their own charts, reports, and data tables, or exports the data to Excel or Power BI instead.",
     "tags": [
@@ -3466,7 +3466,7 @@ const QA_DATAANALYTICS = [
     "action": "understand",
     "object": "analytics depends on field data quality",
     "scope": "project",
-    "section": "Data Analytics Overview",
+    "section": "Overview",
     "question": "A dashboard looks empty or wrong — what is the usual cause?",
     "answer": "Analytics is a downstream view: every dashboard here reflects what has actually been logged upstream. Progress and productivity dashboards depend on work logs and productivity logs captured in <strong>Field Works</strong>, quality and safety dashboards on inspections and safety forms submitted there, and cost dashboards on the cost structure configured in <strong>Project Setup</strong> and <strong>Project Settings</strong>. A thin dashboard is usually a logging-discipline problem rather than a reporting problem, which is worth checking before assuming the dashboard is at fault.",
     "tags": [
@@ -3994,7 +3994,7 @@ const QA_PROJECTSETTINGS = [
     "action": "configure",
     "object": "light/dark appearance",
     "scope": "project",
-    "section": "Look & Feel",
+    "section": "Look, Forms & Field Templates",
     "question": "How do I switch the project's display theme between light and dark mode?",
     "answer": "Go to Project Settings — Look & Feel is the default landing panel. Choose Light or Dark, then click \"Save Changes\".",
     "tags": [
@@ -4008,7 +4008,7 @@ const QA_PROJECTSETTINGS = [
     "action": "find",
     "object": "a specific settings category",
     "scope": "project",
-    "section": "Project Settings",
+    "section": "Overview: The Project Configuration Hub",
     "question": "There are dozens of settings categories — how do I quickly find the one I need?",
     "answer": "Use the search box above the left-hand category list in Project Settings to filter the 39 categories by name instead of scrolling through all of them, then select the one you need to open its panel on the right.",
     "tags": [
@@ -4021,7 +4021,7 @@ const QA_PROJECTSETTINGS = [
     "action": "configure",
     "object": "work log and quality log templates",
     "scope": "project",
-    "section": "Work Logs Templates",
+    "section": "Look, Forms & Field Templates",
     "question": "Where do I set up the templates used for Work Logs and Quality Work Logs on this project?",
     "answer": "Go to Project Settings → Work Logs Templates for general work log templates, and Project Settings → Quality Work Logs Templates for the quality-specific equivalent. Each controls the layout and fields used when field teams create those logs on this project.",
     "tags": [
@@ -4034,7 +4034,7 @@ const QA_PROJECTSETTINGS = [
     "action": "configure",
     "object": "punch lists and restraints settings",
     "scope": "project",
-    "section": "Punch Lists & Restraints",
+    "section": "Look, Forms & Field Templates",
     "question": "How do I configure how Punch Lists and Restraints behave for this specific project?",
     "answer": "Go to Project Settings → Punch Lists & Restraints. This panel controls project-specific configuration for how punch items and restraints are structured and tracked, overriding organization-wide defaults where needed.",
     "tags": [
@@ -4047,7 +4047,7 @@ const QA_PROJECTSETTINGS = [
     "action": "configure",
     "object": "google maps integration",
     "scope": "project",
-    "section": "googlemaps",
+    "section": "Scheduling, Views & Workflow Settings",
     "question": "Where do I configure the map/location integration for a project?",
     "answer": "Go to Project Settings → googlemaps. This is where the mapping integration used for project location display and geolocation-linked features is configured.",
     "tags": [
@@ -4060,7 +4060,7 @@ const QA_PROJECTSETTINGS = [
     "action": "configure",
     "object": "date format",
     "scope": "project",
-    "section": "Project Date Format",
+    "section": "Cost, Procurement & Resource Settings",
     "question": "How do I change the date format displayed throughout a project?",
     "answer": "Go to Project Settings → Project Date Format and choose the display format that should be used across the project's forms, logs, and dashboards.",
     "tags": [
@@ -4073,7 +4073,7 @@ const QA_PROJECTSETTINGS = [
     "action": "configure",
     "object": "cost breakdown structure",
     "scope": "project",
-    "section": "Cost Breakdown Structure",
+    "section": "Cost, Procurement & Resource Settings",
     "question": "Where is the project's cost breakdown structure defined?",
     "answer": "Go to Project Settings → Cost Breakdown Structure. This defines the cost coding hierarchy that Cost Management and related budget/change-order workflows use for this project.",
     "tags": [
@@ -4086,7 +4086,7 @@ const QA_PROJECTSETTINGS = [
     "action": "configure",
     "object": "drawing register form",
     "scope": "project",
-    "section": "Configure Drawing Register Form",
+    "section": "Drawings, Compliance & Identifiers",
     "question": "How do I change what fields appear on the drawing register for a project?",
     "answer": "Go to Project Settings → Configure Drawing Register Form to adjust the fields captured when drawings are logged into the project's Drawing Register.",
     "tags": [
@@ -4099,7 +4099,7 @@ const QA_PROJECTSETTINGS = [
     "action": "configure",
     "object": "procurement workflow",
     "scope": "project",
-    "section": "Procurement Workflow Settings",
+    "section": "Cost, Procurement & Resource Settings",
     "question": "Where do I set the approval workflow used for procurement on a project?",
     "answer": "Go to Project Settings → Procurement Workflow Settings to configure the stages and routing that procurement requests follow for this project.",
     "tags": [
@@ -4112,7 +4112,7 @@ const QA_PROJECTSETTINGS = [
     "action": "understand",
     "object": "project settings vs global data settings",
     "scope": "project",
-    "section": "Project Settings",
+    "section": "Overview: The Project Configuration Hub",
     "question": "How is Project Settings different from the settings under Global Data?",
     "answer": "Global Data holds the organization-wide defaults that apply across every project. Project Settings is the project-scoped layer on top of that — it lets a Module Admin or PM override or fine-tune how a given module behaves and is labeled for this specific project, without changing the defaults everyone else inherits.",
     "tags": [
@@ -4126,7 +4126,7 @@ const QA_PROJECTSETTINGS = [
     "action": "configure",
     "object": "custom resources and resource data source",
     "scope": "project",
-    "section": "Custom Resources",
+    "section": "Cost, Procurement & Resource Settings",
     "question": "Where do I manage custom resources and where they're sourced from for a project?",
     "answer": "Go to Project Settings → Custom Resources to define project-specific resource entries, and Project Settings → Resource Data Source to configure where resource data is pulled from.",
     "tags": [
@@ -4139,7 +4139,7 @@ const QA_PROJECTSETTINGS = [
     "action": "configure",
     "object": "terms and conditions text",
     "scope": "project",
-    "section": "Terms and Conditions",
+    "section": "Drawings, Compliance & Identifiers",
     "question": "How do I set the terms and conditions text that appears on project documents?",
     "answer": "Go to Project Settings → Terms and Conditions to define or edit the standard terms and conditions language applied to relevant project documents.",
     "tags": [
@@ -4152,7 +4152,7 @@ const QA_PROJECTSETTINGS = [
     "action": "understand",
     "object": "which settings shape field-facing screens",
     "scope": "project",
-    "section": "Project Settings",
+    "section": "Overview: The Project Configuration Hub",
     "question": "Which Project Settings categories most affect what field teams see day to day?",
     "answer": "A handful have outsized reach into Field Works. <strong>Work Logs Templates</strong> and <strong>Quality Work Logs Templates</strong> shape how field logging and quality inspection screens are laid out. <strong>Quality Logs</strong> controls whether Level 1 must be approved before Level 2 becomes available. <strong>Productivity Log Settings</strong> sets whether productivity logs are created by Phase Code or by Level 3s, plus the Timesheets and Quantity tab fields. <strong>Punch Lists &amp; Restraints</strong> and <strong>Daily Safety Issues &amp; Observations</strong> shape how defects and safety issues are structured. <strong>My Desk</strong> and <strong>My Desk Dashboards</strong> shape the landing screen everyone opens first.",
     "tags": [
