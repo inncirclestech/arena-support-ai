@@ -4145,7 +4145,175 @@ const QA_INVENTORYMANAGEMENT = [
 // Arena Knowledge Base — structured module content
 // Each module: id, name, tile, tagline, sections[]. Each section: heading, html (body), qa[] (question, answer html, tags[])
 
+const QA_ADMINSETUPGUIDE = [
+  {
+    action: "configure",
+    object: "new organization",
+    scope: "global", section: "First-Time Setup",
+    question: "How does a brand-new organization set up Arena for the first time?",
+    answer: "A Global Admin account is provisioned for your organization first (this is the login you receive at onboarding). From there:\n1. Log in and go to **Global Data → Company → Company Details** — fill in the legal/business profile (Company Name, ID, Address, Contact Person, Company Email/Phone) and upload the company logo. This is the foundation every other record rolls up under.\n2. Set **Global Data → Settings → Currency** and **Global Date Format** before entering any financial or dated records, since these affect how numbers and dates render everywhere.\n3. Work through the rest of the Day 1 checklist (see the next question) before inviting end users in.",
+    tags: ["first time setup","new organization","onboarding","initial setup","getting started admin"]
+  },
+  {
+    action: "configure",
+    object: "day 1 setup checklist",
+    scope: "global", section: "First-Time Setup",
+    question: "What is the recommended order for a Global Admin to set up Global Data?",
+    answer: "1. **Company Details** (+ Subsidiary if applicable) — the org's core identity record.\n2. **Business Units** — a Code/Description list used by some ID-numbering schemes.\n3. **Settings → Currency** and **Global Date Format** — set before any financial/dated data exists.\n4. **Locations** — needed before Projects and Vendors reference them.\n5. **Construction Types** — needed before creating Projects.\n6. **Tax Configuration** (Tax Groups → Tax Codes) — needed before Vendors and Procurement.\n7. **Vendors** — decide the hierarchy depth in Vendors → Settings (Level 1/2/3) *before* bulk-registering vendors, since changing it later disrupts existing categorization.\n8. **Owners, Crews, UOM/Phasecode & GL Codes** — reference data used by Projects, Work Orders, and Cost Tracking.\n9. **Users & Permissions** — register users, create module-scoped Permission Groups, and assign people to them.\n10. **Per-module Settings** (Opportunity Management, Procurement, Work Order, Equipment Management, etc.) — configure each module's pipeline/approval/ID rules before end users start using it day to day.\n11. Everything else (Notifications, Forms, Document Management, Marketplace, Bid Templates, Compliance Hub, etc.) — secondary configuration that can be done as-needed rather than on Day 1.",
+    tags: ["setup checklist","day one setup","global data order","admin onboarding steps","initial configuration order"]
+  },
+  {
+    action: "define",
+    object: "global admin vs module admin",
+    scope: "global", section: "Admin Roles & Scoping",
+    question: "Can a company have a separate admin for each module instead of one global admin?",
+    answer: "Yes. Permissions in Arena are entirely group-based, and nothing forces a group to cover more than one module — a company can create a **Procurement Admin** group, a completely separate **Equipment Management Admin** group, a **Work Order Admin** group, and so on, each scoped to only that module's branch of the permission tree, and assign different people to each. A true Global Admin is simply a group (often called **Global Data Admin** or **All Home Modules Admin**) whose permissions are checked across every module instead of just one.",
+    tags: ["module admin","department admin","scoped admin","per-module admin","global admin vs module admin"]
+  },
+  {
+    action: "configure",
+    object: "permission group",
+    scope: "global", section: "Admin Roles & Scoping",
+    question: "How do I create a module-specific admin (e.g. an admin who only manages Procurement)?",
+    answer: "1. Go to **Global Data → Users & Permissions → Global Permission**.\n2. Click **+ Add User Group** and name it (e.g. \"Procurement Admin\").\n3. Click the group's **Permissions** button. In the permission tree, expand only the module(s) this admin should control (e.g. Procurement) and check the actions they need — typically **View, Create, Edit, Delete, Admin View, Admin** — leaving every other module's rows unchecked.\n4. Click **Save Changes**.\n5. Click the group's **Users** button → **+ Add Users** and add the person(s) who should have this scoped admin access.\n\nThis exact pattern (a module-scoped admin group) already exists in most Arena tenants — groups like \"Procurement Admin,\" \"Cost Tracking Admin,\" and \"Work Order Admin\" are common defaults.",
+    tags: ["create module admin","scoped permission group","department admin setup","procurement admin","equipment admin"]
+  },
+  {
+    action: "define",
+    object: "permission action columns",
+    scope: "global", section: "Admin Roles & Scoping",
+    question: "What actions can be granted per permission row (View, Create, Edit...)?",
+    answer: "Every row in a permission group's tree can expose up to 10 action checkboxes, though only the ones relevant to that specific feature are shown: **View, Create, Edit, Delete, Admin View, Admin, Download, Print, Assign To, Roll Back**. A row can be a **Master Permission** (a parent toggle for a whole feature area) or a leaf-level feature — checking a parent's action automatically cascades and checks the same action on its visible child rows.",
+    tags: ["permission actions","view create edit delete","master permission","permission matrix columns"]
+  },
+  {
+    action: "define",
+    object: "cross-module permission dependency",
+    scope: "global", section: "Admin Roles & Scoping",
+    question: "Why can't my users see the Timesheet/Equipment/Inventory/Procurement tab inside a Work Order?",
+    answer: "A Work Order Contract's Timesheet, Equipment, Inventory, and Procurement tabs are gated by permissions in those *standalone* modules, not just by Work Order permissions. Granting someone Work Order access alone is not enough — you must also grant them the corresponding permissions in the Timesheet, Equipment Management, Inventory Management, and/or Procurement branches of their permission group for those tabs to appear and function inside a Work Order Contract. The permission tree calls this out explicitly next to each affected row (e.g. \"To enable the Procurement tab in the Work Order Contracts, activate the permissions in Procurement\").",
+    tags: ["work order tabs missing","cross module permissions","hidden tab work order","procurement tab not showing","equipment tab missing"]
+  },
+  {
+    action: "view",
+    object: "module admin setup summary",
+    scope: "global", section: "Per-Module Admin Setup",
+    question: "Where does each module's admin configure its Settings?",
+    answer: "Every Home-hub module has its own **Settings** gear icon (top-right of the module, next to its tab bar) that only an admin typically touches. A few examples:\n- **Opportunity Management** — Settings → Stages & Statuses Configuration (defines the pipeline), ID Settings, Opportunities Form, Users and Permissions.\n- **Equipment Management** (Asset Management tile) — Settings → Assets Management Forms (Request, Check Out, Shipment, Lease Agreement, Maintenance Forms, etc.), Users and Permissions.\n- **Procurement** — Settings → Approval Workflow (per document type: REQ, PO, Invoice, Pickup Request), ID Settings, Users and Permissions.\n- **Work Order** — Settings (under Global Data → Work Order Management) → Work Order Types (Service/Equipment/Material), Users and Permissions.\n\nIn every case, the pattern is: an admin does this setup once, and end users then just work with the records that setup produces (moving opportunities through stages, raising requisitions, checking out equipment) without ever opening Settings themselves.",
+    tags: ["module settings location","admin settings gear","per module configuration","where is settings"]
+  }
+];
+
 const MODULES = [
+  {
+  "id": "admin-setup-guide",
+  "category": "admin",
+  "qaItems": QA_ADMINSETUPGUIDE,
+  "narrative": [
+    {
+      "heading": "First-Time Setup",
+      "intro": "<p>When a new organization gets access to Arena, a Global Admin account is provisioned first — this is the login used to configure everything else before any end user touches the product. Unlike a day-to-day user, the Global Admin's job in the first days is entirely inside <strong>Global Data</strong>: establishing the company's identity, its financial and regional conventions, and the reference data (locations, tax rules, vendors, users) that every project and module will later depend on.</p><p>The setup isn't arbitrary — there's a real dependency order underneath it. You can't meaningfully assign a Tax Code to a Vendor before Tax Groups exist, and you can't sensibly onboard end users into modules whose pipelines, approval chains, and ID formats haven't been configured yet. Working through Global Data roughly top-to-bottom, in the order its own tile grid presents (Company → Locations → Tax Configuration → Vendors → Users & Permissions → per-module Settings), avoids most of the rework that comes from setting things up out of order.</p><p>This page exists to give a new admin a single starting checklist instead of having to explore all 24+ Global Data tiles cold. Treat it as a recommended sequence, not a rigid rulebook — some steps (Owners, Crews, UOM/Phasecode & GL Codes) can happen in parallel once the core foundation (Company, Currency/Date Format, Tax) is in place.</p>",
+      "definitions": [
+        {
+          "term": "Global Admin",
+          "definition": "The first account provisioned for a new organization, with full rights across Global Data and every module — responsible for the one-time company-wide setup before end users are onboarded."
+        },
+        {
+          "term": "Global Data",
+          "definition": "The company-wide administration layer where everything — company profile, vendors, tax rules, naming conventions, users, and permissions — is defined once and inherited by every project and module afterward."
+        }
+      ],
+      "procedures": [
+        {
+          "title": "Set up a new organization from scratch",
+          "steps": [
+            "Log in with the Global Admin account provisioned at onboarding.",
+            "Go to <strong>Global Data → Company → Company Details</strong> and fill in the company's legal/business profile, then upload the logo.",
+            "Go to <strong>Global Data → Settings → Currency</strong> and <strong>Global Date Format</strong> and set both before entering any financial or dated records.",
+            "Work through Locations, Construction Types, Tax Configuration, and Vendors, roughly in that order.",
+            "Set up <strong>Users & Permissions</strong> — register users, create permission groups scoped to the right modules, and assign people to them.",
+            "Configure each module's own <strong>Settings</strong> (pipelines, approval workflows, ID formats) before inviting end users into that module."
+          ],
+          "note": "Company Details, Currency, and Global Date Format should be the very first three screens touched — nearly everything downstream (numbers, dates, generated documents) depends on them."
+        }
+      ]
+    },
+    {
+      "heading": "Admin Roles & Scoping",
+      "intro": "<p>Arena's permission system is entirely group-based — there is no concept of granting a single person a one-off right independent of a group. This turns out to be a strength for a multi-department construction company: because a permission group can be scoped to as narrow or as wide a set of modules as you like, an organization can run a true single Global Admin, several independent module-level admins (a Procurement Admin who has no visibility into Equipment Management, for instance), or any mixture of the two, simply by how groups are defined and who's added to them.</p><p>Every permission group is built from the same underlying tree: every module and sub-feature in the product, each row exposing up to ten possible actions (View, Create, Edit, Delete, Admin View, Admin, Download, Print, Assign To, Roll Back) wherever that action is meaningful for the row. A \"Master Permission\" row acts as a parent toggle — checking it cascades the same action down to its child rows automatically, which makes standing up a new admin group fast even though the underlying tree is large.</p><p>One subtlety worth understanding before you scope an admin narrowly: several features that live inside one module actually depend on permissions granted in a completely different module. A Work Order Contract's Timesheet, Equipment, Inventory, and Procurement tabs, for example, only work for a user whose permission group ALSO grants them rights in those standalone modules — Work Order permissions alone aren't sufficient. The permission tree calls these dependencies out explicitly next to the affected rows, so read those inline notes carefully when scoping a new group.</p>",
+      "definitions": [
+        {
+          "term": "Permission Group",
+          "definition": "A named, independent object with its own permission tree and its own list of assigned users. Nothing requires a group to cover more than one module, which is what makes module-scoped admin roles possible."
+        },
+        {
+          "term": "Master Permission",
+          "definition": "A parent row in a permission group's tree representing a whole feature area; checking an action on it cascades the same action to its visible child rows automatically."
+        },
+        {
+          "term": "Cross-module permission dependency",
+          "definition": "A case where a tab or feature inside one module (e.g. the Procurement tab inside a Work Order Contract) only functions for a user if their permission group also grants rights in the other, separate module it depends on."
+        }
+      ],
+      "procedures": [
+        {
+          "title": "Scope an admin to a single module",
+          "steps": [
+            "Go to <strong>Global Data → Users & Permissions → Global Permission</strong>.",
+            "Click <strong>+ Add User Group</strong> and name it after the intended scope (e.g. \"Procurement Admin\").",
+            "Open its <strong>Permissions</strong> button and expand only the module(s) this admin should control, checking the actions they need.",
+            "Click <strong>Save Changes</strong>.",
+            "Open the group's <strong>Users</strong> button and add the person(s) who should hold this scoped admin role."
+          ],
+          "note": "The exact same group registry is shared between Global Data → Users & Permissions and each individual module's own Settings → Users and Permissions screen — creating or editing a group from either entry point changes the same underlying data."
+        }
+      ]
+    },
+    {
+      "heading": "Per-Module Admin Setup",
+      "intro": "<p>Once the Global Data foundation is in place, each Home-hub and Global Data module has its own admin-facing Settings area — typically reached via a gear icon next to that module's own tab bar — where an admin makes the one-time decisions end users will then work within every day. These aren't optional: an Opportunity Management pipeline with no Stages configured, or a Procurement module with no Approval Workflow defined, will actively block end users from completing basic tasks.</p><p>The shared pattern across modules is consistent even though the specific screens differ: an admin defines the taxonomy (stages, types, categories), the process gates (approval chains, required fields), and the ID/numbering scheme once, and end users then simply move records through whatever structure that setup created. Because this pattern repeats, once you've configured one module's Settings, the next one is largely a matter of recognizing the same shapes — a status/stage list here, an approval workflow there, an ID format dialog everywhere.</p>",
+      "definitions": [
+        {
+          "term": "Module Settings (gear icon)",
+          "definition": "The admin-configuration entry point inside a Home-hub module, usually a gear icon beside the module's own tab bar, distinct from the day-to-day screens end users work in."
+        },
+        {
+          "term": "Approval Workflow",
+          "definition": "A per-document-type configuration (seen in Procurement, Proposal Management, and others) defining one or more approval levels, each with named Approvers and a Workflow Type (e.g. \"Any one can approve\"), that a record must pass through before it's finalized."
+        }
+      ],
+      "procedures": [
+        {
+          "title": "Locate and understand a module's admin Settings",
+          "steps": [
+            "Open the module from Home (or Global Data, for company-wide modules like Work Order Management).",
+            "Look for a gear icon near the module's own tab bar — this is Settings.",
+            "Inside Settings, look for the taxonomy/pipeline screen first (Stages & Statuses, Work Order Types, Bid Types, etc.) — this usually needs to exist before anything else in the module works.",
+            "Configure any Approval Workflow and ID Settings next.",
+            "Configure or confirm the module's own Users and Permissions group(s) last, once you know who should have access."
+          ]
+        }
+      ]
+    }
+  ],
+  "name": "Admin Setup Guide",
+  "alias": "Start Here for Admins",
+  "icon": "shield",
+  "tagline": "How a Global Admin sets up Arena from scratch, and how to scope admin roles per module.",
+  "color": "#8a3c3c",
+  "overview": "<p>This is the starting point for whoever administers Arena for your organization. It covers the <strong>first-time setup sequence</strong> a new Global Admin should follow, how <strong>admin roles can be scoped</strong> to a single module instead of the whole product, and where each module's own admin-facing <strong>Settings</strong> live.</p>",
+  "navigation": [
+    "This is a reference guide, not a product screen — the setup steps it describes happen across <strong>Global Data</strong> and each module's own <strong>Settings</strong> gear icon."
+  ],
+  "sections": [
+    {
+      "id": "admin-setup-guide-qa",
+      "heading": "Common Questions",
+      "html": "<p>Answers sourced from Arena's own documentation.</p>",
+      "qa": []
+    }
+  ]
+},
   {
     id: "opportunity",
     category: "home",
