@@ -5700,65 +5700,6 @@ const QA_INVENTORYMANAGEMENT = [
 // Arena Knowledge Base — structured module content
 // Each module: id, name, tile, tagline, sections[]. Each section: heading, html (body), qa[] (question, answer html, tags[])
 
-const QA_ADMINSETUPGUIDE = [
-  {
-    action: "configure",
-    object: "new organization",
-    scope: "global", section: "First-Time Setup",
-    question: "How does a brand-new organization set up Arena for the first time?",
-    answer: "A Global Admin account is provisioned for your organization first (this is the login you receive at onboarding). From there:\n1. Log in and go to **Global Data → Company → Company Details** — fill in the legal/business profile (Company Name, ID, Address, Contact Person, Company Email/Phone) and upload the company logo. This is the foundation every other record rolls up under.\n2. Set **Global Data → Settings → Currency** and **Global Date Format** before entering any financial or dated records, since these affect how numbers and dates render everywhere.\n3. Work through the rest of the Day 1 checklist (see the next question) before inviting end users in.",
-    tags: ["first time setup","new organization","onboarding","initial setup","getting started admin"]
-  },
-  {
-    action: "configure",
-    object: "day 1 setup checklist",
-    scope: "global", section: "First-Time Setup",
-    question: "What is the recommended order for a Global Admin to set up Global Data?",
-    answer: "1. **Company Details** (+ Subsidiary if applicable) — the org's core identity record.\n2. **Business Units** — a Code/Description list used by some ID-numbering schemes.\n3. **Settings → Currency** and **Global Date Format** — set before any financial/dated data exists.\n4. **Locations** — needed before Projects and Vendors reference them.\n5. **Construction Types** — needed before creating Projects.\n6. **Tax Configuration** (Tax Groups → Tax Codes) — needed before Vendors and Procurement.\n7. **Vendors** — decide the hierarchy depth in Vendors → Settings (Level 1/2/3) *before* bulk-registering vendors, since changing it later disrupts existing categorization.\n8. **Owners, Crews, UOM/Phasecode & GL Codes** — reference data used by Projects, Work Orders, and Cost Tracking.\n9. **Users & Permissions** — register users, create module-scoped Permission Groups, and assign people to them.\n10. **Per-module Settings** (Opportunity Management, Procurement, Work Order, Equipment Management, etc.) — configure each module's pipeline/approval/ID rules before end users start using it day to day.\n11. Everything else (Notifications, Forms, Document Management, Marketplace, Bid Templates, Compliance Hub, etc.) — secondary configuration that can be done as-needed rather than on Day 1.",
-    tags: ["setup checklist","day one setup","global data order","admin onboarding steps","initial configuration order"]
-  },
-  {
-    action: "define",
-    object: "global admin vs module admin",
-    scope: "global", section: "Admin Roles & Scoping",
-    question: "Can a company have a separate admin for each module instead of one global admin?",
-    answer: "Yes. Permissions in Arena are entirely group-based, and nothing forces a group to cover more than one module — a company can create a **Procurement Admin** group, a completely separate **Equipment Management Admin** group, a **Work Order Admin** group, and so on, each scoped to only that module's branch of the permission tree, and assign different people to each. A true Global Admin is simply a group (often called **Global Data Admin** or **All Home Modules Admin**) whose permissions are checked across every module instead of just one.",
-    tags: ["module admin","department admin","scoped admin","per-module admin","global admin vs module admin"]
-  },
-  {
-    action: "configure",
-    object: "permission group",
-    scope: "global", section: "Admin Roles & Scoping",
-    question: "How do I create a module-specific admin (e.g. an admin who only manages Procurement)?",
-    answer: "1. Go to **Global Data → Users & Permissions → Global Permission**.\n2. Click **+ Add User Group** and name it (e.g. \"Procurement Admin\").\n3. Click the group's **Permissions** button. In the permission tree, expand only the module(s) this admin should control (e.g. Procurement) and check the actions they need — typically **View, Create, Edit, Delete, Admin View, Admin** — leaving every other module's rows unchecked.\n4. Click **Save Changes**.\n5. Click the group's **Users** button → **+ Add Users** and add the person(s) who should have this scoped admin access.\n\nThis exact pattern (a module-scoped admin group) already exists in most Arena tenants — groups like \"Procurement Admin,\" \"Cost Tracking Admin,\" and \"Work Order Admin\" are common defaults.",
-    tags: ["create module admin","scoped permission group","department admin setup","procurement admin","equipment admin"]
-  },
-  {
-    action: "define",
-    object: "permission action columns",
-    scope: "global", section: "Admin Roles & Scoping",
-    question: "What actions can be granted per permission row (View, Create, Edit...)?",
-    answer: "Every row in a permission group's tree can expose up to 10 action checkboxes, though only the ones relevant to that specific feature are shown: **View, Create, Edit, Delete, Admin View, Admin, Download, Print, Assign To, Roll Back**. A row can be a **Master Permission** (a parent toggle for a whole feature area) or a leaf-level feature — checking a parent's action automatically cascades and checks the same action on its visible child rows.",
-    tags: ["permission actions","view create edit delete","master permission","permission matrix columns"]
-  },
-  {
-    action: "define",
-    object: "cross-module permission dependency",
-    scope: "global", section: "Admin Roles & Scoping",
-    question: "Why can't my users see the Timesheet/Equipment/Inventory/Procurement tab inside a Work Order?",
-    answer: "A Work Order Contract's Timesheet, Equipment, Inventory, and Procurement tabs are gated by permissions in those *standalone* modules, not just by Work Order permissions. Granting someone Work Order access alone is not enough — you must also grant them the corresponding permissions in the Timesheet, Equipment Management, Inventory Management, and/or Procurement branches of their permission group for those tabs to appear and function inside a Work Order Contract. The permission tree calls this out explicitly next to each affected row (e.g. \"To enable the Procurement tab in the Work Order Contracts, activate the permissions in Procurement\").",
-    tags: ["work order tabs missing","cross module permissions","hidden tab work order","procurement tab not showing","equipment tab missing"]
-  },
-  {
-    action: "view",
-    object: "module admin setup summary",
-    scope: "global", section: "Per-Module Admin Setup",
-    question: "Where does each module's admin configure its Settings?",
-    answer: "Every Home-hub module has its own **Settings** gear icon (top-right of the module, next to its tab bar) that only an admin typically touches. A few examples:\n- **Opportunity Management** — Settings → Stages & Statuses Configuration (defines the pipeline), ID Settings, Opportunities Form, Users and Permissions.\n- **Equipment Management** (Asset Management tile) — Settings → Assets Management Forms (Request, Check Out, Shipment, Lease Agreement, Maintenance Forms, etc.), Users and Permissions.\n- **Procurement** — Settings → Approval Workflow (per document type: REQ, PO, Invoice, Pickup Request), ID Settings, Users and Permissions.\n- **Work Order** — Settings (under Global Data → Work Order Management) → Work Order Types (Service/Equipment/Material), Users and Permissions.\n\nIn every case, the pattern is: an admin does this setup once, and end users then just work with the records that setup produces (moving opportunities through stages, raising requisitions, checking out equipment) without ever opening Settings themselves.",
-    tags: ["module settings location","admin settings gear","per module configuration","where is settings"]
-  }
-];
-
 const QA_EXPENSETRACKER = [
   {
     "action": "create",
@@ -6179,6 +6120,334 @@ const QA_CAPITALMANAGEMENT = [
   }
 ];
 
+const QA_ADMINSETUPGUIDE = [
+  {
+    "action": "understand",
+    "object": "first setup step",
+    "scope": "global",
+    "section": "Step 1 · Set up your company and business units",
+    "question": "What do I set up first in Arena?",
+    "answer": "Start with your company profile. Go to **Global Data → Company → Company Details** and fill in your legal/business information, then upload your logo. Do this before anything else — the company profile, plus **Business Units**, is the foundation every project, user, and document rolls up under.",
+    "tags": [
+      "what to set up first",
+      "first step setup",
+      "where to start admin",
+      "initial arena setup"
+    ]
+  },
+  {
+    "action": "understand",
+    "object": "company setup order",
+    "scope": "global",
+    "section": "Step 1 · Set up your company and business units",
+    "question": "What's the order to set up a new company in Arena?",
+    "answer": "Follow six steps in order:\n1. **Company profile & Business Units** — your legal identity and internal divisions.\n2. **Users & Permission Groups** — get people into Arena with the right access.\n3. **Master data** — Phase Codes, GL Codes, UOM, Construction Types, Vendors, Crews, Locations & Tax.\n4. **Integrations** — connect Microsoft 365, your accounting/ERP system, and Adobe Sign if you use them.\n5. **Create your first project** and add its team.\n6. **Module settings** — configure each module you use (Time Management, Procurement, Opportunity, Expense Tracker, and so on) before end users start relying on it.\nEach step depends on the ones before it, so working through them in order avoids rework — you can't assign a Tax Code to a Vendor before Tax Groups exist, and there's little point configuring a module's approval workflow before the people who'll approve things are registered as users.",
+    "tags": [
+      "setup order",
+      "setup checklist",
+      "onboarding steps",
+      "new company setup",
+      "day one setup"
+    ]
+  },
+  {
+    "action": "configure",
+    "object": "company profile",
+    "scope": "global",
+    "section": "Step 1 · Set up your company and business units",
+    "question": "How do I set up my company profile and logo?",
+    "answer": "Go to **Global Data → Company → Company Details**. Fill in Company Name, Company ID, Address, Contact Person and Company Email/Phone, then click **Upload Company Logo** to set the brand logo used on generated documents. Click **Submit**. If you have subsidiary companies, use the **Subsidiary** tab and **Create Subsidiary**. A **Super Admin** normally does this.",
+    "tags": [
+      "company profile",
+      "company logo",
+      "company details",
+      "set up company"
+    ]
+  },
+  {
+    "action": "configure",
+    "object": "business unit",
+    "scope": "global",
+    "section": "Step 1 · Set up your company and business units",
+    "question": "How do I add a business unit?",
+    "answer": "Go to **Global Data → Company → Business Units** and click **Add**. Enter a Code and Description, then submit. Business Units are a simple Code/Description list used to categorize operations and reporting, and some ID-numbering schemes reference them, so set them up early.",
+    "tags": [
+      "business unit",
+      "add business unit",
+      "company divisions"
+    ]
+  },
+  {
+    "action": "configure",
+    "object": "register user",
+    "scope": "global",
+    "section": "Step 2 · Add users and permission groups",
+    "question": "How do I add a new user or employee?",
+    "answer": "Go to **Global Data → Users & Permissions → User Accounts → Active Users** and click **Register User**. Fill in their name, contact details, email, and set up their signature (Initials, Sign, or Upload). Click **Submit**, then use **Notify User** to email them their login instructions. To add many users at once, use **Download Sample Excel**, fill in one row per person, then **Upload Excel** — Arena creates each account and emails them automatically. A **Super Admin** typically does this.",
+    "tags": [
+      "register user",
+      "add employee",
+      "new user account",
+      "bulk import users",
+      "onboard users"
+    ]
+  },
+  {
+    "action": "configure",
+    "object": "permission group",
+    "scope": "global",
+    "section": "Step 2 · Add users and permission groups",
+    "question": "How do I create a permission group for a module admin?",
+    "answer": "Go to **Global Data → Users & Permissions → Global Permission** and click **+ Add User Group**. Name it after its scope (for example \"Procurement Admin\"), then open its **Permissions** button and check only the modules and actions that admin needs — View, Create, Edit, Delete, Admin View, Admin, and so on. Click **Save Changes**, then open the group's **Users** button and add the people who should have this access. Nothing forces a group to cover more than one module, so you can run one Global Admin, several module-scoped admins, or a mix of both.",
+    "tags": [
+      "create permission group",
+      "module admin",
+      "scoped admin",
+      "user group setup",
+      "procurement admin"
+    ]
+  },
+  {
+    "action": "understand",
+    "object": "cross-module permission",
+    "scope": "global",
+    "section": "Step 2 · Add users and permission groups",
+    "question": "Why can't my users see a tab (like Procurement or Timesheets) inside another module?",
+    "answer": "Some tabs depend on permissions in a different module than the one you're looking at. For example, a Work Order Contract's Timesheet, Equipment, Inventory, and Procurement tabs only appear for a user whose permission group also grants rights in those standalone modules — Work Order access alone isn't enough. The permission tree calls this out next to the affected rows, so check those notes when a tab seems to be missing.",
+    "tags": [
+      "missing tab",
+      "cross module permissions",
+      "hidden tab",
+      "permission dependency"
+    ]
+  },
+  {
+    "action": "configure",
+    "object": "phase codes and gl codes",
+    "scope": "global",
+    "section": "Step 3 · Build your master data",
+    "question": "How do I set up Phase Codes and GL Codes?",
+    "answer": "Go to **Global Data → UOM, Phasecode & GL Codes → Phase Codes** and click **Add**. Enter the Phase Code and Description, choose its Phase Code Type (Direct, Indirect, Non-Productive, or Change Order), and select which Cost Types apply (Material, Labor, Equipment, Subcontractors, Other Expenses). For **GL Codes**, use the **GL Codes** tab on the same screen and click **Add**. Both are reference data used across Estimating, Work Orders, Procurement, and Cost modules, so set them up before those modules go live.",
+    "tags": [
+      "phase codes",
+      "gl codes",
+      "add phase code",
+      "cost type setup"
+    ]
+  },
+  {
+    "action": "configure",
+    "object": "uom",
+    "scope": "global",
+    "section": "Step 3 · Build your master data",
+    "question": "How do I set up Units of Measure (UOM)?",
+    "answer": "Go to **Global Data → UOM, Phasecode & GL Codes → UOMs** and click **Add UOM** to add a unit (for example \"Tonne\"). To make it convertible with other units, go to **UOM Groups**, add it to a group, and enter the conversion factor. The resulting conversions appear read-only under **UOM Conversions**.",
+    "tags": [
+      "unit of measure",
+      "uom setup",
+      "uom conversion",
+      "uom groups"
+    ]
+  },
+  {
+    "action": "configure",
+    "object": "construction type",
+    "scope": "global",
+    "section": "Step 3 · Build your master data",
+    "question": "How do I set up Construction Types before creating projects?",
+    "answer": "Go to **Global Data → Construction Types** and click **Create** to add a new category (for example Infrastructure, Residential, Roads), or **Copy** an existing type to clone its full configuration into a new one. Every project must be tagged with a Construction Type at creation, so have at least one ready before your team starts creating projects. The separate **Construction Type** tab (next to Company on the Global Data home page) is where you build out the deeper work-breakdown-structure library for a type — that is a more advanced, ongoing configuration, not a Day 1 requirement.",
+    "tags": [
+      "construction type",
+      "construction category",
+      "set up construction types"
+    ]
+  },
+  {
+    "action": "configure",
+    "object": "vendor",
+    "scope": "global",
+    "section": "Step 3 · Build your master data",
+    "question": "How do I register vendors?",
+    "answer": "Go to **Global Data → Vendors** and click **Register Vendor**. Fill in Vendor ID, Company Name, First/Last Name, add contact persons, and enter Username, Phone Number and Email. Before bulk-registering vendors, decide the vendor hierarchy depth in **Vendors → Settings** (Level 1/2/3) — changing it later disrupts existing categorization. Vendors are needed before Procurement and Work Orders can reference them.",
+    "tags": [
+      "register vendor",
+      "add vendor",
+      "vendor setup",
+      "vendor hierarchy"
+    ]
+  },
+  {
+    "action": "configure",
+    "object": "crew",
+    "scope": "global",
+    "section": "Step 3 · Build your master data",
+    "question": "How do I set up Crews?",
+    "answer": "Go to **Global Data → Crews** and click **Create**. Enter a Crew Name, choose a Supervisor and a Foreman from the dropdown (they must already exist in Global Rosters), then check the roster members who belong to the crew and submit. Crews are used company-wide for labor tracking, timesheets, and work assignment; projects can later copy a crew in from Global Data.",
+    "tags": [
+      "create crew",
+      "crew setup",
+      "supervisor foreman"
+    ]
+  },
+  {
+    "action": "configure",
+    "object": "locations and tax",
+    "scope": "global",
+    "section": "Step 3 · Build your master data",
+    "question": "How do I set up Locations and Tax Configuration?",
+    "answer": "Go to **Global Data → Locations** and click **Create** to add a delivery/company location (Location Name, Address, Zip Code, City, State) plus its Tax Codes. Set up the tax structure first at **Global Data → Tax Configuration**: click **Add Tax Group**, then select the group and **Add Tax Code** for each code and percentage it contains (for example CGST, SGST). Locations and Tax Codes are needed before Owners, Vendors, and Work Orders can reference them.",
+    "tags": [
+      "locations setup",
+      "tax configuration",
+      "tax group",
+      "tax code",
+      "delivery location"
+    ]
+  },
+  {
+    "action": "configure",
+    "object": "marketplace integration",
+    "scope": "global",
+    "section": "Step 4 · Connect your integrations",
+    "question": "How do I connect Arena to Microsoft 365 (Outlook, OneDrive, SharePoint)?",
+    "answer": "Go to **Global Data → Marketplace** and open the Microsoft integration you need (Outlook, OneDrive, SharePoint, Users, or Calendar). Click **Sign in with Microsoft** and grant organization-wide consent — this must use a company-domain email, not a personal Microsoft account. Once connected, all users benefit without individually consenting, though a user can also connect their own mailbox later via **My Profile → Settings**. For mail routing specifically, go to **Global Data → Settings → Mail Settings** and switch the relevant module (for example Work Order) to Outlook.",
+    "tags": [
+      "connect microsoft",
+      "microsoft 365",
+      "outlook integration",
+      "onedrive",
+      "sharepoint",
+      "marketplace"
+    ]
+  },
+  {
+    "action": "configure",
+    "object": "trimble viewpoint integration",
+    "scope": "global",
+    "section": "Step 4 · Connect your integrations",
+    "question": "How do I connect Arena to Trimble Viewpoint (Vista)?",
+    "answer": "Go to **Global Data → Marketplace → Trimble Viewpoint**, enter your connection credentials, and click **Test Connection and Save**. Then map each module's Table Name/Schema Name and click **Save Configuration**. Each module gets a **Link** button to tie it to a Stage feeding **Global Data → Staged Tables**, where data synced from Vista is mapped (**Map Attributes**) and promoted into native Arena records (**Bulk Create Arena Records**), optionally on a recurring schedule (**Auto Sync Criteria**).",
+    "tags": [
+      "trimble viewpoint",
+      "vista integration",
+      "staged tables",
+      "erp sync",
+      "accounting integration"
+    ]
+  },
+  {
+    "action": "configure",
+    "object": "adobe sign integration",
+    "scope": "global",
+    "section": "Step 4 · Connect your integrations",
+    "question": "How do I set up Adobe Sign for electronic signatures?",
+    "answer": "Go to **Global Data → Marketplace → Adobe Sign**, log in with your Adobe Sign credentials, and configure the Adobe API settings. Once connected, documents in Arena can be routed for electronic signature through Adobe Sign.",
+    "tags": [
+      "adobe sign",
+      "electronic signature",
+      "esign setup"
+    ]
+  },
+  {
+    "action": "create",
+    "object": "first project",
+    "scope": "global",
+    "section": "Step 5 · Create your first project and add its team",
+    "question": "How do I create my first project?",
+    "answer": "Go to **Home → Projects** and click **+ Create Project**, top-left of the project grid. Fill in the three required fields — **Project Name**, **Project Number / ID**, and **Construction Type** — and optionally Project Location, Business Unit, Owner Representative, Project Manager, Currency, Customer, Owner and more (these can all be added or changed later). Click **Submit**; the project appears immediately with status \"Created,\" but it is functionally empty until you go into **Project Setup** to build out its work breakdown, team, schedule and forms.",
+    "tags": [
+      "create project",
+      "first project",
+      "new project setup",
+      "create project button"
+    ]
+  },
+  {
+    "action": "configure",
+    "object": "project team",
+    "scope": "global",
+    "section": "Step 5 · Create your first project and add its team",
+    "question": "How do I add my new project's team?",
+    "answer": "Open the project and go to **Project Setup → People**. To bring in an existing company crew, use the **Project Crews** sub-tab and click **Copy Crews from Global Data** — this is a one-time copy, not a live link, so re-copy later if the source crew changes. To build a project-only crew, click **Create Crew** instead. Use **Project Indirect Staff** for supervisory/support roles, and the **System User** / **Non System User** sub-tabs to track people with or without their own Arena login. This is typically **PM / Module Admin** work.",
+    "tags": [
+      "add project team",
+      "project crew setup",
+      "assign staff to project",
+      "project people"
+    ]
+  },
+  {
+    "action": "understand",
+    "object": "module settings location",
+    "scope": "global",
+    "section": "Step 6 · Configure each module's own settings",
+    "question": "Where does each module store its own settings?",
+    "answer": "Every Home-hub module has its own **Settings** area — usually a gear icon next to the module's tab bar — separate from Global Data. A **Module Admin** configures it once; end users then just work with the records that setup produces. See the module's own documentation for the exact screens: **Time Management** (Approval Workflows, Timesheet Mode, Earning Codes, Timesheet Templates, Payroll Locking), **Procurement** (Requisition/PO/Invoice/Pickup Request form builders, Approval Workflow, ID Settings, Issues Priority), **Opportunity Management** (Stages & Statuses Configuration, Opportunities Form, ID Settings, Users and Permissions), **Expense Tracker** (Expense Type, Expense Form templates, Approval Workflow, ID Settings), and similarly for other modules you use.",
+    "tags": [
+      "module settings",
+      "where is settings",
+      "per module configuration",
+      "admin settings gear"
+    ]
+  },
+  {
+    "action": "configure",
+    "object": "time management settings",
+    "scope": "global",
+    "section": "Step 6 · Configure each module's own settings",
+    "question": "What do I configure in Time Management before crews can log time?",
+    "answer": "Open **Time Management → Settings**. Set up an **Approval Workflow** (who signs off on a crew's or project's timesheets), a **Timesheet Mode** (Daily, Weekly, or Weekly by Day, per user or crew), **Earning Codes** (payroll categories hours get logged against), and a **Timesheet Template** (the fields on the form). Optionally configure **Payroll Locking** so closed pay periods can't be edited. None of the day-to-day logging works until an approval workflow and timesheet mode exist.",
+    "tags": [
+      "time management settings",
+      "timesheet setup",
+      "earning codes",
+      "payroll locking",
+      "approval workflow timesheet"
+    ]
+  },
+  {
+    "action": "configure",
+    "object": "procurement settings",
+    "scope": "global",
+    "section": "Step 6 · Configure each module's own settings",
+    "question": "What do I configure in Procurement before requisitions can be raised?",
+    "answer": "Open **Procurement → Settings**. Build the **REQ**, **PO**, **Delivery Receipt**, and **Invoice** forms (split by procurement type: Material, Equipment, Equipment Part, Delivery Service), set an **Approval Workflow** for each document type, choose **ID Settings** for how document numbers generate, and set **Issues Priority** levels. This is **Module Admin** work, and it shapes how disciplined the whole purchasing process is in practice.",
+    "tags": [
+      "procurement settings",
+      "requisition setup",
+      "purchase order setup",
+      "procurement approval workflow"
+    ]
+  },
+  {
+    "action": "configure",
+    "object": "opportunity settings",
+    "scope": "global",
+    "section": "Step 6 · Configure each module's own settings",
+    "question": "What do I configure in Opportunity Management before the BD team starts logging pursuits?",
+    "answer": "Open **Opportunity Management → Settings**. Set up **Stages & Statuses Configuration** first (the pipeline: Lead → Proposal → Closed, and the statuses allowed at each stage) — most \"why can't I do X\" issues in this module trace back to this screen. Then configure the **Opportunities Form** (fields and Stale Threshold), **ID Settings**, and **Users and Permissions**. This is **Module Admin** work; End Users (BD reps) should never need to open Settings themselves.",
+    "tags": [
+      "opportunity settings",
+      "stages and statuses",
+      "pipeline setup",
+      "opportunity form setup"
+    ]
+  },
+  {
+    "action": "configure",
+    "object": "expense tracker settings",
+    "scope": "global",
+    "section": "Step 6 · Configure each module's own settings",
+    "question": "What do I configure in Expense Tracker before employees can submit claims?",
+    "answer": "Open **Expense Tracker → Settings**. Set up **Expense Type** categories, an **Expense Form** template, an **Approval WorkFlow** (levels and approvers), and **ID Settings** for form and invoice numbering. This is **Module Admin** work, usually done once by finance.",
+    "tags": [
+      "expense tracker settings",
+      "expense type setup",
+      "expense approval workflow setup"
+    ]
+  }
+];
+
 const MODULES = [
   {
     "id": "admin-setup-guide",
@@ -6186,87 +6455,176 @@ const MODULES = [
     "qaItems": QA_ADMINSETUPGUIDE,
     "narrative": [
       {
-        "heading": "First-Time Setup",
-        "intro": "<p>When a new organization gets access to Arena, a Global Admin account is provisioned first — this is the login used to configure everything else before any end user touches the product. Unlike a day-to-day user, the Global Admin's job in the first days is entirely inside <strong>Global Data</strong>: establishing the company's identity, its financial and regional conventions, and the reference data (locations, tax rules, vendors, users) that every project and module will later depend on.</p><p>The setup isn't arbitrary — there's a real dependency order underneath it. You can't meaningfully assign a Tax Code to a Vendor before Tax Groups exist, and you can't sensibly onboard end users into modules whose pipelines, approval chains, and ID formats haven't been configured yet. Working through Global Data roughly top-to-bottom, in the order its own tile grid presents (Company → Locations → Tax Configuration → Vendors → Users & Permissions → per-module Settings), avoids most of the rework that comes from setting things up out of order.</p><p>This page exists to give a new admin a single starting checklist instead of having to explore all 24+ Global Data tiles cold. Treat it as a recommended sequence, not a rigid rulebook — some steps (Owners, Crews, UOM/Phasecode & GL Codes) can happen in parallel once the core foundation (Company, Currency/Date Format, Tax) is in place.</p>",
+        "heading": "Step 1 · Set up your company and business units",
+        "intro": "<p>This is where every Arena setup starts: establishing the company's legal identity and its internal divisions, done once by a <strong>Super Admin</strong> before anyone else logs in. Nearly everything else — projects, vendors, generated documents — rolls up under the company profile created here.</p>",
         "definitions": [
           {
-            "term": "Global Admin",
-            "definition": "The first account provisioned for a new organization, with full rights across Global Data and every module — responsible for the one-time company-wide setup before end users are onboarded."
+            "term": "Company Details",
+            "definition": "Your organization's legal/business profile (name, ID, address, contacts) shown on generated documents. Set at Global Data → Company → Company Details."
           },
           {
-            "term": "Global Data",
-            "definition": "The company-wide administration layer where everything — company profile, vendors, tax rules, naming conventions, users, and permissions — is defined once and inherited by every project and module afterward."
+            "term": "Business Units",
+            "definition": "A Code/Description registry of your internal divisions, used for categorization and reporting, and referenced by some ID-numbering schemes."
           }
         ],
         "procedures": [
           {
-            "title": "Set up a new organization from scratch",
+            "title": "Set up your company and business units",
             "steps": [
-              "Log in with the Global Admin account provisioned at onboarding.",
-              "Go to <strong>Global Data → Company → Company Details</strong> and fill in the company's legal/business profile, then upload the logo.",
-              "Go to <strong>Global Data → Settings → Currency</strong> and <strong>Global Date Format</strong> and set both before entering any financial or dated records.",
-              "Work through Locations, Construction Types, Tax Configuration, and Vendors, roughly in that order.",
-              "Set up <strong>Users & Permissions</strong> — register users, create permission groups scoped to the right modules, and assign people to them.",
-              "Configure each module's own <strong>Settings</strong> (pipelines, approval workflows, ID formats) before inviting end users into that module."
+              "Go to <strong>Global Data → Company → Company Details</strong>.",
+              "Fill in Company Name, Company ID, Address, Contact Person, and Company Email/Phone.",
+              "Click <strong>Upload Company Logo</strong>, then <strong>Submit</strong>.",
+              "Go to <strong>Global Data → Company → Business Units</strong> and click <strong>Add</strong> for each division."
             ],
-            "note": "Company Details, Currency, and Global Date Format should be the very first three screens touched — nearly everything downstream (numbers, dates, generated documents) depends on them."
+            "note": "Who does this: Super Admin. Details: see Global Data → Company & Business Units."
           }
         ]
       },
       {
-        "heading": "Admin Roles & Scoping",
-        "intro": "<p>Arena's permission system is entirely group-based — there is no concept of granting a single person a one-off right independent of a group. This turns out to be a strength for a multi-department construction company: because a permission group can be scoped to as narrow or as wide a set of modules as you like, an organization can run a true single Global Admin, several independent module-level admins (a Procurement Admin who has no visibility into Equipment Management, for instance), or any mixture of the two, simply by how groups are defined and who's added to them.</p><p>Every permission group is built from the same underlying tree: every module and sub-feature in the product, each row exposing up to ten possible actions (View, Create, Edit, Delete, Admin View, Admin, Download, Print, Assign To, Roll Back) wherever that action is meaningful for the row. A \"Master Permission\" row acts as a parent toggle — checking it cascades the same action down to its child rows automatically, which makes standing up a new admin group fast even though the underlying tree is large.</p><p>One subtlety worth understanding before you scope an admin narrowly: several features that live inside one module actually depend on permissions granted in a completely different module. A Work Order Contract's Timesheet, Equipment, Inventory, and Procurement tabs, for example, only work for a user whose permission group ALSO grants them rights in those standalone modules — Work Order permissions alone aren't sufficient. The permission tree calls these dependencies out explicitly next to the affected rows, so read those inline notes carefully when scoping a new group.</p>",
+        "heading": "Step 2 · Add users and permission groups",
+        "intro": "<p>With the company profile in place, bring in the people who will use Arena and decide what each of them can do. Arena's permissions are entirely group-based, so you can run one Global Admin, several module-scoped admins (a Procurement Admin with no visibility into other modules, for example), or a mix of both.</p>",
         "definitions": [
+          {
+            "term": "User Account",
+            "definition": "An individual Arena login, registered under Global Data → Users & Permissions → User Accounts."
+          },
           {
             "term": "Permission Group",
-            "definition": "A named, independent object with its own permission tree and its own list of assigned users. Nothing requires a group to cover more than one module, which is what makes module-scoped admin roles possible."
-          },
-          {
-            "term": "Master Permission",
-            "definition": "A parent row in a permission group's tree representing a whole feature area; checking an action on it cascades the same action to its visible child rows automatically."
-          },
-          {
-            "term": "Cross-module permission dependency",
-            "definition": "A case where a tab or feature inside one module (e.g. the Procurement tab inside a Work Order Contract) only functions for a user if their permission group also grants rights in the other, separate module it depends on."
+            "definition": "A named set of permissions and assigned users, scoped to as narrow or wide a set of modules as you choose."
           }
         ],
         "procedures": [
           {
-            "title": "Scope an admin to a single module",
+            "title": "Register users and set up permission groups",
             "steps": [
-              "Go to <strong>Global Data → Users & Permissions → Global Permission</strong>.",
-              "Click <strong>+ Add User Group</strong> and name it after the intended scope (e.g. \"Procurement Admin\").",
-              "Open its <strong>Permissions</strong> button and expand only the module(s) this admin should control, checking the actions they need.",
-              "Click <strong>Save Changes</strong>.",
-              "Open the group's <strong>Users</strong> button and add the person(s) who should hold this scoped admin role."
+              "Go to <strong>Global Data → Users & Permissions → User Accounts → Active Users</strong> and click <strong>Register User</strong> (or bulk-import via <strong>Download Sample Excel</strong> / <strong>Upload Excel</strong>).",
+              "Go to <strong>Global Data → Users & Permissions → Global Permission</strong> and click <strong>+ Add User Group</strong> for each admin or role scope you need.",
+              "Open the group's <strong>Permissions</strong> button, check the modules and actions it should have, and click <strong>Save Changes</strong>.",
+              "Open the group's <strong>Users</strong> button and add the people who should hold that access."
             ],
-            "note": "The exact same group registry is shared between Global Data → Users & Permissions and each individual module's own Settings → Users and Permissions screen — creating or editing a group from either entry point changes the same underlying data."
+            "note": "Who does this: Super Admin (for company-wide groups) or a Module Admin (for a group scoped to their own module). Details: see Global Data → Users & Permissions."
           }
         ]
       },
       {
-        "heading": "Per-Module Admin Setup",
-        "intro": "<p>Once the Global Data foundation is in place, each Home-hub and Global Data module has its own admin-facing Settings area — typically reached via a gear icon next to that module's own tab bar — where an admin makes the one-time decisions end users will then work within every day. These aren't optional: an Opportunity Management pipeline with no Stages configured, or a Procurement module with no Approval Workflow defined, will actively block end users from completing basic tasks.</p><p>The shared pattern across modules is consistent even though the specific screens differ: an admin defines the taxonomy (stages, types, categories), the process gates (approval chains, required fields), and the ID/numbering scheme once, and end users then simply move records through whatever structure that setup created. Because this pattern repeats, once you've configured one module's Settings, the next one is largely a matter of recognizing the same shapes — a status/stage list here, an approval workflow there, an ID format dialog everywhere.</p>",
+        "heading": "Step 3 · Build your master data",
+        "intro": "<p>Master data is the shared reference data every project and module draws on: how work is coded and costed, what units are used, what kind of construction is being built, who supplies materials and labor, and where tax applies. Set this up before creating projects, since projects and vendors reference it immediately.</p>",
+        "definitions": [
+          {
+            "term": "Phase Codes & GL Codes",
+            "definition": "Cost and accounting classification codes used across Estimating, Work Orders, Procurement and Cost modules. Set at Global Data → UOM, Phasecode & GL Codes."
+          },
+          {
+            "term": "UOM (Units of Measure)",
+            "definition": "The unit library (and conversion factors) used for quantities throughout Arena."
+          },
+          {
+            "term": "Construction Types",
+            "definition": "The master list of project categories every project is tagged with at creation."
+          },
+          {
+            "term": "Vendors",
+            "definition": "The directory of external material/equipment suppliers, with categorization, rate cards and a configurable rating form."
+          },
+          {
+            "term": "Crews",
+            "definition": "Company-wide labor groups (a Supervisor, a Foreman, and roster members) that projects can copy in."
+          },
+          {
+            "term": "Locations & Tax",
+            "definition": "The physical-location registry and the Tax Groups/Tax Codes structure Owners, Vendors and Work Orders reference."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Build your master data",
+            "steps": [
+              "Set up <strong>Global Data → UOM, Phasecode & GL Codes</strong> (Phase Codes, GL Codes, UOMs).",
+              "Set up <strong>Global Data → Construction Types</strong> — you need at least one before creating a project.",
+              "Set up <strong>Global Data → Tax Configuration</strong> (Tax Groups and Tax Codes) before registering Vendors or Owners.",
+              "Register <strong>Global Data → Vendors</strong>, deciding the vendor hierarchy depth in Vendors → Settings first.",
+              "Set up <strong>Global Data → Crews</strong> and <strong>Global Data → Locations</strong>."
+            ],
+            "note": "Who does this: Super Admin, often with input from finance (tax) and procurement (vendors). Details: see Global Data → UOM & Phase Codes, Construction Types, Vendors & Subcontractors, and Locations & Tax."
+          }
+        ]
+      },
+      {
+        "heading": "Step 4 · Connect your integrations",
+        "intro": "<p>Once your core company data exists, connect the outside systems your team already uses, so email, files, accounting and signatures flow through Arena instead of being duplicated by hand. Every integration lives under one screen.</p>",
+        "definitions": [
+          {
+            "term": "Marketplace",
+            "definition": "Global Data's integrations hub — Microsoft 365 (Outlook, OneDrive, SharePoint, Calendar), Trimble Viewpoint/Vista, Adobe Sign, and others."
+          },
+          {
+            "term": "Staged Tables",
+            "definition": "The landing zone for data synced from an external ERP/accounting system (e.g. Vista) before it's mapped and promoted into native Arena records."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Connect your integrations",
+            "steps": [
+              "Go to <strong>Global Data → Marketplace</strong>.",
+              "For Microsoft 365, open the Outlook/OneDrive/SharePoint/Calendar card and click <strong>Sign in with Microsoft</strong> using a company-domain email.",
+              "For Trimble Viewpoint (Vista), enter connection credentials, click <strong>Test Connection and Save</strong>, map each module's table/schema, then use <strong>Global Data → Staged Tables</strong> to map attributes and promote records.",
+              "For Adobe Sign, log in with your Adobe Sign credentials and configure the Adobe API settings."
+            ],
+            "note": "Who does this: Super Admin (org-wide consent is required for Microsoft 365). Details: see Global Data → Marketplace & Staged Tables."
+          }
+        ]
+      },
+      {
+        "heading": "Step 5 · Create your first project and add its team",
+        "intro": "<p>With the company set up, create the first real project and staff it. A project starts as a blank record — the work you do here is what turns it into something a field team can actually use.</p>",
+        "definitions": [
+          {
+            "term": "Create Project",
+            "definition": "The dialog at Home → Projects → + Create Project. Requires Project Name, Project Number/ID and Construction Type; everything else can be filled in later."
+          },
+          {
+            "term": "Project Setup → People",
+            "definition": "Where a project's roster and crews are built — either copied in from Global Data (a one-time copy) or created fresh for the project."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Create your first project and add its team",
+            "steps": [
+              "Go to <strong>Home → Projects</strong> and click <strong>+ Create Project</strong>.",
+              "Fill in Project Name, Project Number / ID and Construction Type, then <strong>Submit</strong>.",
+              "Open the project and go to <strong>Project Setup → People → Project Crews</strong>.",
+              "Click <strong>Copy Crews from Global Data</strong> to bring in an existing company crew, or <strong>Create Crew</strong> to build one from scratch.",
+              "Use <strong>Project Indirect Staff</strong> and the <strong>System User</strong> / <strong>Non System User</strong> sub-tabs to round out the roster."
+            ],
+            "note": "Who does this: PM / Module Admin. Details: see Getting Started → Home Page (Create a new project) and Project Setup → People."
+          }
+        ]
+      },
+      {
+        "heading": "Step 6 · Configure each module's own settings",
+        "intro": "<p>Finally, before end users rely on a module day to day, configure that module's own <strong>Settings</strong> — usually a gear icon next to its tab bar, separate from Global Data. Each module has its own admin, its own approval rules, and its own form builders; the pattern repeats even though the exact screens differ.</p>",
         "definitions": [
           {
             "term": "Module Settings (gear icon)",
-            "definition": "The admin-configuration entry point inside a Home-hub module, usually a gear icon beside the module's own tab bar, distinct from the day-to-day screens end users work in."
+            "definition": "The admin-configuration entry point inside a Home-hub module, distinct from Global Data and from the day-to-day screens end users work in."
           },
           {
             "term": "Approval Workflow",
-            "definition": "A per-document-type configuration (seen in Procurement, Proposal Management, and others) defining one or more approval levels, each with named Approvers and a Workflow Type (e.g. \"Any one can approve\"), that a record must pass through before it's finalized."
+            "definition": "A per-document or per-record configuration (seen in Time Management, Procurement, Opportunity Management, Expense Tracker and others) defining ordered approval levels, each with named approvers and a type (e.g. \"Any one can approve\" or \"All must approve\")."
           }
         ],
         "procedures": [
           {
-            "title": "Locate and understand a module's admin Settings",
+            "title": "Configure a module before your team relies on it",
             "steps": [
-              "Open the module from Home (or Global Data, for company-wide modules like Work Order Management).",
-              "Look for a gear icon near the module's own tab bar — this is Settings.",
-              "Inside Settings, look for the taxonomy/pipeline screen first (Stages & Statuses, Work Order Types, Bid Types, etc.) — this usually needs to exist before anything else in the module works.",
-              "Configure any Approval Workflow and ID Settings next.",
-              "Configure or confirm the module's own Users and Permissions group(s) last, once you know who should have access."
-            ]
+              "Open the module from Home and look for its <strong>Settings</strong> gear icon.",
+              "Configure the taxonomy/pipeline screen first (Stages & Statuses, Timesheet Mode, Expense Type, etc.) — most modules won't work for end users until this exists.",
+              "Set up the module's Approval Workflow and ID Settings.",
+              "Confirm the module's own Users and Permissions group(s) last."
+            ],
+            "note": "Examples: Time Management (Approval Workflows, Timesheet Mode, Earning Codes, Timesheet Templates, Payroll Locking); Procurement (REQ/PO/Invoice/Pickup Request forms, Approval Workflow, ID Settings, Issues Priority); Opportunity (Stages & Statuses Configuration, Opportunities Form, ID Settings); Expense Tracker (Expense Type, Expense Form, Approval WorkFlow, ID Settings). See each module's own documentation for full detail."
           }
         ]
       }
@@ -6274,19 +6632,19 @@ const MODULES = [
     "name": "Admin Setup Guide",
     "alias": "Start Here for Admins",
     "icon": "shield",
-    "tagline": "How a Global Admin sets up Arena from scratch, and how to scope admin roles per module.",
+    "tagline": "Set up Arena for your company in six steps: company, users, master data, integrations, first project, module settings.",
     "color": "#8a3c3c",
-    "overview": "<p>This is the starting point for whoever administers Arena for your organization. It covers the <strong>first-time setup sequence</strong> a new Global Admin should follow, how <strong>admin roles can be scoped</strong> to a single module instead of the whole product, and where each module's own admin-facing <strong>Settings</strong> live.</p>",
+    "overview": "<p>This is the starting point for whoever sets up Arena for your organization. It walks a <strong>Super Admin</strong> through six steps in order: company profile & business units, users & permission groups, master data, integrations, creating the first project, and each module's own settings. Every step names the exact screen and points to the module page that covers the full detail.</p>",
     "navigation": [
-      "This is a reference guide, not a product screen — the setup steps it describes happen across <strong>Global Data</strong> and each module's own <strong>Settings</strong> gear icon."
+      "This is a reference guide, not a product screen — the steps happen across <strong>Global Data</strong>, <strong>Home → Projects</strong>, and each module's own <strong>Settings</strong> gear icon."
     ],
     "sections": [
-      {
-        "id": "admin-setup-guide-qa",
-        "heading": "Common Questions",
-        "html": "<p>Answers sourced from Arena's own documentation.</p>",
-        "qa": []
-      }
+      "Step 1 · Set up your company and business units",
+      "Step 2 · Add users and permission groups",
+      "Step 3 · Build your master data",
+      "Step 4 · Connect your integrations",
+      "Step 5 · Create your first project and add its team",
+      "Step 6 · Configure each module's own settings"
     ]
   },
   {
