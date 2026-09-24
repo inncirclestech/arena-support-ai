@@ -3221,9 +3221,9 @@ const QA_FIELDWORKS = [
     "scope": "project",
     "section": "Quick Apps",
     "question": "What is the Quick Apps tab in Field Works?",
-    "answer": "<strong>Field Works → Tree Version → [Plant] → Quick Apps</strong> has two cards. <strong>Quick Apps</strong> is a no-code app builder for connecting screens and auto-populating data — a way for a project team to stand up a lightweight, project-specific workflow without waiting on development. <strong>Issues</strong> holds the issues raised from those no-code app approval workflows, so anything that stalls in a Quick App is still tracked rather than lost.",
+    "answer": "<strong>Field Works → Tree Version → [Plant] → Quick Apps</strong> has two cards. <strong>Quick Apps</strong> is a no-code app builder for connecting screens and auto-populating data — a way for a project team to stand up a lightweight, project-specific workflow without waiting on development. It must be configured at the global level first (a project that hasn't had this done shows \"Please configure Quick Apps in global\"). <strong>Issues</strong> holds the issues raised from those no-code app approval workflows, so anything that stalls in a Quick App is still tracked rather than lost.",
     "tags": [
-      "quick apps",
+      "quick apps tab cards",
       "no-code app builder",
       "quick apps issues",
       "auto-populate"
@@ -3235,7 +3235,7 @@ const QA_FIELDWORKS = [
     "scope": "project",
     "section": "Quality",
     "question": "How do I complete a quality inspection on site?",
-    "answer": "Go to <strong>Field Works → Tree Version → [Plant] → Quality</strong>. Depending on the project's configured Work Log Template, either use <strong>Work Package to Location/Tags Logging</strong> (select an Entity/CWA, then a Work Package, then a Ready item) or <strong>System to Tag Mapping</strong> (select a tag, then a quality package). Fill in the form, then click <strong>Save As Draft</strong> or <strong>Submit for Approval</strong>. Level 1 must be approved before Level 2 becomes available, unless Project Settings → Quality Logs is configured to allow skipping Level 1.",
+    "answer": "Go to <strong>Field Works → Tree Version → [Plant] → Quality</strong> and open <strong>Quality Level 1</strong> (or Level 2 once Level 1 clears). Pick an Entity, use the status filters (Not yet started / Ready to work / Started / In Progress / Completed / Issue Raised) to find what's ready, and open a Work Package. How you navigate there follows whichever option the project has set in <strong>Project Settings → Quality Work Logs Templates</strong> — Work Package to Location Logging (pick a Work Package, then its Locations) or Super Location to Location Logging (pick a Location, then its Work Packages). Fill in the form, then click <strong>Save As Draft</strong> or <strong>Submit for Approval</strong>. Level 1 must be approved before Level 2 becomes available, unless Project Settings → Quality Logs is configured to allow skipping Level 1.",
     "tags": [
       "quality level 1",
       "quality level 2",
@@ -3255,6 +3255,42 @@ const QA_FIELDWORKS = [
       "punch lists",
       "submitted quality logs",
       "approve quality logs"
+    ]
+  },
+  {
+    "action": "view",
+    "object": "quality level 1 card",
+    "scope": "project",
+    "section": "Quality",
+    "question": "What is the Quality Level 1 card for?",
+    "answer": "<strong>Quality Level 1</strong> is the first-pass inspection screen. Pick an Entity, use the status filters (Not yet started / Ready to work / Started / In Progress / Completed / Issue Raised) to find what's due, and open a Work Package from the Ready or All list to log the check. An item's Level 2 check generally can't start until its Level 1 is approved, unless Project Settings → Quality Logs is set to allow skipping Level 1.",
+    "tags": [
+      "quality level 1",
+      "first pass inspection"
+    ]
+  },
+  {
+    "action": "view",
+    "object": "quality level 2 card",
+    "scope": "project",
+    "section": "Quality",
+    "question": "What is the Quality Level 2 card for?",
+    "answer": "<strong>Quality Level 2</strong> is the second, more thorough verification pass, using the same screen and filters as Quality Level 1. An item only appears here once its Level 1 check has been approved (unless Level 1 is configured to be skippable in Project Settings → Quality Logs).",
+    "tags": [
+      "quality level 2",
+      "second pass inspection"
+    ]
+  },
+  {
+    "action": "view",
+    "object": "approve quality logs card",
+    "scope": "project",
+    "section": "Quality",
+    "question": "What is the Approve Quality Logs card for?",
+    "answer": "<strong>Approve Quality Logs</strong> is the QA/QC reviewer's approval queue, visible only to users with approval permissions. It has status tabs Not Ready, Ready to Approve, Approved, Reject, To be approved, and All, plus filters for Super Locations, Folders, and Locations Types. Approving here is what lets a quality log count toward the plant's Quality Progress dashboard.",
+    "tags": [
+      "approve quality logs",
+      "quality approval queue"
     ]
   },
   {
@@ -3571,6 +3607,33 @@ const QA_FIELDWORKS = [
       "change order definition",
       "glossary",
       "contract adjustment"
+    ]
+  },
+  {
+    "action": "troubleshoot",
+    "object": "cost tab card blocked by no estimate",
+    "scope": "project",
+    "section": "Cost",
+    "question": "Why do my Cost tab cards say there is no active and approved estimate?",
+    "answer": "Three of the four Cost tab cards — <strong>Transaction</strong>, <strong>Change order</strong>, and <strong>Field Logs</strong> — need the project to have an active, approved <strong>Estimate</strong> set up in Project Setup before they will accept any entries; until then they show \"No active and approved Estimate found.\" <strong>Transfer</strong> is gated on a different setting: it needs a project \"Level of Detail\" configured, and shows \"Level of detail is not set for this project\" instead. Ask a PM or Module Admin to complete the Estimate (and Level of Detail, for Transfer) in Project Setup first.",
+    "tags": [
+      "cost tab blocked",
+      "no active estimate",
+      "level of detail",
+      "estimate required"
+    ]
+  },
+  {
+    "action": "view",
+    "object": "field logs card",
+    "scope": "project",
+    "section": "Cost",
+    "question": "What is the Field Logs card under Cost for?",
+    "answer": "<strong>Field Logs</strong> is the cost-side rollup of field resource usage, split into 4 categories: <strong>Material, Machinery, Manpower, and Sub Contractor</strong>, each with its own Create button and a Settings icon. It needs an active, approved Estimate to accept entries. It is not the same as the Progress tab's Equipment Logs, Material Logs, and Manpower Logs cards, which record physical quantity used against a Work Order rather than cost against the plant's Estimate.",
+    "tags": [
+      "field logs",
+      "cost tab",
+      "material machinery manpower subcontractor"
     ]
   },
   {
@@ -12115,11 +12178,11 @@ const MODULES = [
       },
       {
         "heading": "Quick Apps",
-        "intro": "<p>Not every workflow a construction project needs is worth a formal form type and an approval chain configured in Project Setup — sometimes a team just needs a simple screen that captures a handful of fields and hands them to the right person. <strong>Quick Apps</strong>, the plant-scoped second-level tab in Field Works, exists for exactly that: it is described as a no-code app builder for connecting screens and auto-populating data, letting a project team stand up a lightweight, project-specific workflow without waiting on a development cycle.</p><p>The tab holds two cards. <strong>Quick Apps</strong> is the builder and runtime itself. <strong>Issues</strong> holds the issues raised from no-code app approval workflows — the same principle applied elsewhere in Field Works, where anything that stalls in an approval becomes a tracked item rather than quietly disappearing. For a <strong>PM or Module Admin</strong>, Quick Apps is a useful pressure valve: it absorbs the one-off data-capture requests that would otherwise accumulate as unmet demands on the formal forms configuration.</p>",
+        "intro": "<p>Not every workflow a construction project needs is worth a formal form type and an approval chain configured in Project Setup — sometimes a team just needs a simple screen that captures a handful of fields and hands them to the right person. <strong>Quick Apps</strong>, the plant-scoped second-level tab in Field Works, exists for exactly that: it is described as a no-code app builder for connecting screens and auto-populating data, letting a project team stand up a lightweight, project-specific workflow without waiting on a development cycle.</p><p>The tab holds two cards. <strong>Quick Apps</strong> is the builder and runtime itself, though it must first be configured at the global level — a project that has not had this done shows \"Please configure Quick Apps in global\" instead of a builder. <strong>Issues</strong> holds the issues raised from no-code app approval workflows — the same principle applied elsewhere in Field Works, where anything that stalls in an approval becomes a tracked item rather than quietly disappearing. For a <strong>PM or Module Admin</strong>, Quick Apps is a useful pressure valve: it absorbs the one-off data-capture requests that would otherwise accumulate as unmet demands on the formal forms configuration.</p>",
         "definitions": [
           {
             "term": "Quick Apps",
-            "definition": "A no-code app builder for connecting screens and auto-populating data, used to create lightweight project-specific workflows without formal form configuration."
+            "definition": "A no-code app builder for connecting screens and auto-populating data, used to create lightweight project-specific workflows without formal form configuration. Needs a Super Admin or Module Admin to configure Quick Apps globally before this per-project screen shows a builder — until then it displays \"Please configure Quick Apps in global.\""
           },
           {
             "term": "Quick Apps Issues",
@@ -12139,31 +12202,35 @@ const MODULES = [
       },
       {
         "heading": "Quality",
-        "intro": "<p>The plant-scoped <strong>Quality</strong> tab is where inspections actually get performed and signed off on site by a <strong>QA/QC inspector</strong>. It is built on a two-level structure: Level 1 inspections must generally clear before Level 2 becomes available, reflecting the familiar construction pattern of a first-pass check followed by a more thorough verification. A <strong>PM</strong> can configure Level 1 to be skippable in Project Settings → Quality Logs where a single-level inspection regime is enough.</p><p>How an inspector finds what is ready to inspect depends on the project's configured Work Log Template — either <strong>Work Package to Location/Tags Logging</strong> (select an Entity/CWA, then a Work Package, then a Ready item) or <strong>System to Tag Mapping</strong> (select a tag, then a quality package). Either way the form is filled in and then saved as a draft or submitted for approval, with <strong>Approve Quality Logs</strong> serving as the reviewer's queue — typically a QA/QC lead or PM, and only visible to users with approval permissions — and <strong>Submitted Quality Logs</strong> holding the full filterable, exportable history. That approved-versus-open picture is also what feeds the <strong>Quality Progress</strong> dashboard in Data Analytics & Insights, so a folder that is stuck at Level 1 shows up there as a project-wide quality risk, not just a local backlog.</p><p>The card worth understanding carefully is <strong>Punch Lists</strong>, described as issues raised due to quality failure. A punch list item is created automatically when a QA/QC inspector raises an issue from within a quality form during Level 1 or Level 2 review, and represents a defect that needs physical rectification and re-verification before the work can be accepted: it moves through <strong>Open → Rectify → QC_Verify</strong>, with the field crew or subcontractor responsible for the defect rectifying it and the same QA/QC inspector (or another approver) closing it out at QC_Verify. For a construction business, this is the mechanism that keeps defects from being quietly absorbed into \"complete\" work and resurfacing at handover, when fixing them costs far more — and an open punch list count is one of the inputs the Quality Progress dashboard rolls up for a PM reviewing where a plant genuinely stands.</p>",
+        "intro": "<p>The plant-scoped <strong>Quality</strong> tab is where a <strong>QA/QC inspector</strong> performs and signs off inspections on site, across 5 cards. It runs on a two-level structure — Level 1 must generally clear before Level 2 becomes available, unless Project Settings → Quality Logs is configured to allow skipping Level 1 — and how an inspector finds what is ready to inspect follows whichever option is set in <strong>Project Settings → Quality Work Logs Templates</strong> (Work Package to Location Logging or Super Location to Location Logging).</p><p>A submitted quality log goes to <strong>Approve Quality Logs</strong> for review, and the full history sits in <strong>Submitted Quality Logs</strong>. <strong>Punch Lists</strong> is the defect-tracking card: an inspector raises a punch list item from within a Level 1 or Level 2 form, and it needs physical rectification and re-verification before the work is accepted. That approved-versus-open picture feeds the <strong>Quality Progress</strong> dashboard in Data Analytics &amp; Insights, so a folder stuck at Level 1 shows up project-wide as a quality risk, not just a local backlog.</p>",
         "definitions": [
           {
-            "term": "Quality Level 1 / Level 2",
-            "definition": "The two-stage inspection structure. Level 2 forms generally only become available once Level 1 for that item is approved, unless Project Settings → Quality Logs is configured to allow skipping Level 1."
+            "term": "Quality Level 1",
+            "definition": "The first-pass quality inspection card. Shows an Entity picker and status filters — Not yet started, Ready to work, Started, In Progress, Completed, Issue Raised — then a Work Packages list (Ready / All) of items due for a Level 1 check. Level 2 for an item generally only opens once its Level 1 is approved, unless Project Settings → Quality Logs allows skipping Level 1."
+          },
+          {
+            "term": "Quality Level 2",
+            "definition": "The same screen and filters as Quality Level 1, for the second, more thorough verification pass. An item only reaches Level 2 once its Level 1 check has cleared (unless Level 1 is configured to be skippable)."
           },
           {
             "term": "Punch Lists",
-            "definition": "Issues raised due to quality failure — created when an issue is raised from within a quality form. Each moves Open → Rectify → QC_Verify, with due dates, assignees, Chat, filters, and Excel export."
+            "definition": "The defect-tracking card: an inspector raises a punch list item from within a Level 1 or Level 2 form when work fails inspection. Two sub-tabs — Punch List (with Open / Rectified / Verified counters, Download Excel, Filters) and Quality Workflow Issues (problems raised against the approval workflow itself, same pattern as Progress → Issues → Form Workflow Issues). A punch list item needs physical rectification and re-verification before the work is accepted."
           },
           {
             "term": "Submitted Quality Logs",
-            "definition": "The full history of quality logs for the plant, filterable by Level 1/Level 2, by user, and by date range, exportable via Download Excel."
+            "definition": "The full history of quality logs for the plant, scoped to the Tree Version, filterable by Level (Quality Level 1 / Level 2), by user, and by a full calendar date-range picker, exportable via Download Excel."
           },
           {
             "term": "Approve Quality Logs",
-            "definition": "The review screen, visible only to users with approval permissions. Its default \"To Be Approved\" tab shows only items awaiting the current user; \"All\" shows every work package's status across all CWAs and Systems."
+            "definition": "The QA/QC reviewer's approval queue, with status tabs Not Ready / Ready to Approve / Approved / Reject / To be approved / All, and filters for Super Locations, Folders, and Locations Types. Only visible to users with approval permissions."
           },
           {
-            "term": "Work Package to Location/Tags Logging",
-            "definition": "One of two navigation patterns for finding what is ready to inspect: select an Entity/CWA, then a Work Package, then a Ready item."
+            "term": "Work Package to Location Logging (Quality)",
+            "definition": "One of the two options available in Project Settings → Quality Work Logs Templates: an inspector picks a Work Package and sees the Locations that are ready to check under it."
           },
           {
-            "term": "System to Tag Mapping",
-            "definition": "The alternative navigation pattern: select a tag, then a quality package."
+            "term": "Super Location to Location Logging (Quality)",
+            "definition": "The other option in Project Settings → Quality Work Logs Templates: an inspector picks a Super Location, then a Location within it, to see what is ready to check."
           }
         ],
         "procedures": [
@@ -12171,8 +12238,9 @@ const MODULES = [
             "title": "Complete a quality inspection on site",
             "steps": [
               "Go to <strong>Field Works → Tree Version</strong>, open the plant's card, and select the <strong>Quality</strong> tab.",
-              "Depending on the project's Work Log Template, use <strong>Work Package to Location/Tags Logging</strong> (Entity/CWA → Work Package → Ready item) or <strong>System to Tag Mapping</strong> (tag → quality package).",
-              "Open <strong>Quality Level 1</strong> (or <strong>Quality Level 2</strong> once Level 1 is approved), fill in the form, then click <strong>Save As Draft</strong> or <strong>Submit for Approval</strong>."
+              "Open <strong>Quality Level 1</strong>, pick an Entity, and use the status filters to find a Work Package that is Ready to work.",
+              "How you drill down to it follows the project's <strong>Quality Work Logs Templates</strong> setting — Work Package to Location Logging (Work Package first) or Super Location to Location Logging (Location first).",
+              "Fill in the form, then click <strong>Save As Draft</strong> or <strong>Submit for Approval</strong>. Repeat on <strong>Quality Level 2</strong> once Level 1 is approved."
             ],
             "note": "Level 2 only becomes available once Level 1 is approved, unless Level 1 has been configured as skippable in Project Settings → Quality Logs."
           },
@@ -12180,8 +12248,8 @@ const MODULES = [
             "title": "Approve submitted quality logs",
             "steps": [
               "Open the <strong>Approve Quality Logs</strong> card on the plant's Quality tab.",
-              "In the default <strong>To Be Approved</strong> tab, click a location or tag to open its pending work packages, then approve or reject them.",
-              "Click <strong>All</strong> to see every work package and its status across all CWAs and Systems."
+              "Use the status tabs — <strong>Not Ready, Ready to Approve, Approved, Reject, To be approved, All</strong> — to find what needs a decision, filtering by Super Location, Folder, or Locations Type if needed.",
+              "Open an item to approve or reject it."
             ],
             "note": "This screen and its Approve/Reject actions are only visible to users with approval permissions."
           },
@@ -12231,11 +12299,11 @@ const MODULES = [
       },
       {
         "heading": "Cost",
-        "intro": "<p>The plant-scoped <strong>Cost</strong> tab is where financial movements get recorded against the same work package that physical progress is logged against. That pairing matters: when cost and progress are captured against different structures, a construction business ends up with two sets of numbers that never reconcile, and earned-value or cost-to-complete analysis becomes guesswork.</p><p>Four cards make up the tab. <strong>Transaction</strong> covers purchase orders and other expenses — the money actually committed or spent on this plant, recorded here by a PM, commercial user, or Module Admin as Transaction Logs. Where the project has IFS integration enabled, a <strong>Cost Forecast</strong> table becomes available under Transaction Logs, carrying an editable <strong>Completion Allowance %</strong> per line — a way for a PM or cost controller to project the remaining cost-to-complete on top of what has actually been transacted, rather than relying on the raw actuals alone. <strong>Change order</strong> covers budget and contract adjustments, recording formal modifications to scope, cost, or schedule after the contract was signed; a <strong>PM</strong> should use its Assign To and Due Date fields so a change order does not stall without an accountable owner. <strong>Transfer</strong> covers reallocation of budget or cost between Cost Codes and Phase Codes, which is the controlled way to shift money between buckets when the original breakdown no longer matches how the work is being executed. <strong>Field Logs</strong> rounds out the tab with the field-side cost records. Everything recorded across these four cards is what the <strong>Cost</strong> and <strong>Cost Dashboards and Reports</strong> dashboards in Data Analytics & Insights roll up at project level.</p>",
+        "intro": "<p>The plant-scoped <strong>Cost</strong> tab is where financial movements get recorded against the same work package that physical progress is logged against, across 4 cards: Transaction, Change order, Transfer, and Field Logs. That pairing matters: when cost and progress are captured against different structures, a construction business ends up with two sets of numbers that never reconcile, and earned-value or cost-to-complete analysis becomes guesswork.</p><p>All four cards depend on setup done elsewhere first: Transaction, Change order, and Field Logs each need the project to have an active, approved <strong>Estimate</strong> (Project Setup) before they will accept entries — a card shows \"No active and approved Estimate found\" until then — and Transfer additionally needs a <strong>Level of Detail</strong> set for the project. A <strong>PM</strong> seeing a Cost card refuse to open should check Project Setup's Estimate and Level of Detail settings before assuming something is broken. Everything recorded across these four cards is what the <strong>Cost</strong> and <strong>Cost Dashboards and Reports</strong> dashboards in Data Analytics & Insights roll up at project level.</p>",
         "definitions": [
           {
             "term": "Transaction",
-            "definition": "The Cost tab card covering purchase orders and other expenses recorded against the plant, as Transaction Logs."
+            "definition": "The Cost tab card covering purchase orders and other expenses recorded against the plant, as Transaction Logs, with Open Logs and Rejected Logs views. Needs an active, approved Estimate on the project before it will accept entries — otherwise it shows \"No active and approved Estimate found.\""
           },
           {
             "term": "Cost Forecast",
@@ -12243,15 +12311,15 @@ const MODULES = [
           },
           {
             "term": "Change order (Cost tab)",
-            "definition": "The card for budget and contract adjustments — formal modifications to scope, cost, or schedule after contract signature, routed via Assign To and Due Date."
+            "definition": "The card for budget and contract adjustments — formal modifications to scope, cost, or schedule after contract signature, routed via Assign To and Due Date, with Open Logs, Rejected Logs, Create, Filters, and Download Excel. Also needs an active, approved Estimate to accept entries."
           },
           {
             "term": "Transfer",
-            "definition": "The card for reallocation of budget or cost between Cost Codes and Phase Codes."
+            "definition": "The card for reallocation of budget or cost between Cost Codes and Phase Codes, with Open Logs and Rejected Logs views. This one is gated on a different setting than the other three Cost cards: it needs a project's \"Level of Detail\" to be set (Project Setup), not the Estimate — it shows \"Level of detail is not set for this project\" until that is done."
           },
           {
             "term": "Field Logs",
-            "definition": "The fourth Cost tab card, holding the field-side cost log records for the plant."
+            "definition": "The fourth Cost tab card, holding the field-side cost log records for the plant, split into 4 categories: Material, Machinery, Manpower, and Sub Contractor, each with its own Create and a Settings icon. Also needs an active, approved Estimate. Distinct from the Progress tab's Equipment Logs/Material Logs/Manpower Logs, which record physical quantity against a Work Order rather than cost against an Estimate."
           }
         ],
         "procedures": [
