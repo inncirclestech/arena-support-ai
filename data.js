@@ -1580,8 +1580,40 @@ const QA_GLOBALDATA = [
     object: "staged tables sync",
     scope: "global", section: "Marketplace & Staged Tables",
     question: "How do I sync external users into Arena via Staged Tables?",
-    answer: "1. Connect the source system first (Global Data → **Marketplace** → e.g. Trimble Viewpoint → enter credentials → **Test Connection and Save** → map Table/Schema per module → **Save Configuration**).\n2. Global Data → **Staged Tables** → select the system tab (e.g. View Point) → select **Users** in the left nav.\n3. Click **Map Attributes** and map each external column to the matching Arena field.\n4. Optionally set **Auto Sync Criteria** for a recurring schedule, or click **Bulk Create Arena Records** to promote all currently staged rows immediately.",
+    answer: "1. Connect the source system first: Global Data → **Marketplace** → **Trimble Viewpoint** → enter Hostname, Port Number, Username, Password and Database → **Test Connection and Save**.\n2. Global Data → **Staged Tables** → **View Point** tab → select **Users** in the left nav.\n3. Click **Map Attributes**, choose the Viewpoint column for each Arena field (Employee ID, First Name, Last Name, Phone Number, Email, Craft, Class, Vendor Number), tick **Update after sync?** where Viewpoint should keep overwriting, and Save.\n4. Either set **Auto Sync Criteria** (every 1 to 24 hours, optionally with **Auto create arena records after sync?**), or click **Bulk Create Arena Records** to create records now from the rows your Filters currently show.",
     tags: ["staged tables","sync external data","map attributes","map attributes external data"]
+  },
+  {
+    action: "configure",
+    object: "vista integration",
+    scope: "global", section: "Marketplace & Staged Tables",
+    question: "How do I connect Arena to Vista?",
+    answer: "Vista is Trimble Viewpoint's construction ERP, and in Arena it's the **Trimble Viewpoint** integration. There's no card called \"Vista\".\n1. Go to Global Data → **Marketplace** → **Trimble Viewpoint**.\n2. Enter your Viewpoint database details: **Hostname**, **Port Number**, **Username**, **Password** and **Database**.\n3. Click **Test Connection and Save**.\nOnce connected, Viewpoint data lands in Global Data → **Staged Tables** → **View Point**, where you map it and turn it into Arena records. Usually your IT team or a Global Admin handles this, since it needs Viewpoint database credentials.",
+    tags: ["vista","viewpoint vista","connect vista","vista integration","trimble viewpoint","viewpoint connection","erp integration"]
+  },
+  {
+    action: "understand",
+    object: "vista data sync",
+    scope: "global", section: "Marketplace & Staged Tables",
+    question: "What data does Arena pull from Vista (Trimble Viewpoint)?",
+    answer: "Arena can stage 13 kinds of records from Vista, all under Global Data → **Staged Tables** → **View Point**: Users, Projects, Crews, Phase Codes, Customers, Vendors, Owners, Project User Mapping, Project Crew Mapping, Work Order Crew Mapping, GL Codes, Work Orders, and Logs.\n\nData first lands in the staged table, not straight into Arena. You then map each Viewpoint column to an Arena field (**Map Attributes**) and create the records, either automatically on a 1 to 24 hour schedule (**Auto Sync Criteria**) or on demand (**Bulk Create Arena Records**). This keeps Vista as the source of truth for employees, crews, phase codes and GL codes, so field timesheets and cost tracking use the same codes as payroll and accounting.",
+    tags: ["vista data","what does vista sync","viewpoint entities","staged tables entities","vista sync","what comes from viewpoint"]
+  },
+  {
+    action: "understand",
+    object: "staged tables update after sync",
+    scope: "global", section: "Marketplace & Staged Tables",
+    question: "What does 'Update after sync?' mean in Map Attributes?",
+    answer: "It's a checkbox on each mapped field. When ticked, every later sync from Viewpoint overwrites that field in Arena, so Vista stays the master for it. When unticked, the value is filled on first creation and then Arena keeps its own copy, so edits made in Arena aren't wiped by the next sync.",
+    tags: ["update after sync","map attributes checkbox","overwrite on sync","staged tables mapping"]
+  },
+  {
+    action: "understand",
+    object: "soft tech staging",
+    scope: "global", section: "Marketplace & Staged Tables",
+    question: "What is the Soft Tech tab in Staged Tables?",
+    answer: "Soft Tech is a second, separate staging source, unrelated to Vista/Viewpoint, and it has no Marketplace card. It covers only two things: **Work Orders**, pulled with **Get Data From SoftTech** and **Sync** (fields such as Work No, Agreement No, Agreement Amount, Contract Start/Completion Date, Estimated Cost and Tender Type), and **BOQ**, handled by Excel upload and download. It doesn't have Map Attributes, Auto Sync or Bulk Create.",
+    tags: ["soft tech","softtech","staged tables soft tech","get data from softtech","boq staging"]
   },
   {
     action: "create",
@@ -9272,7 +9304,7 @@ const MODULES = [
       },
       {
         "heading": "Marketplace & Staged Tables",
-        "intro": "<p>Most construction companies already run some of their business on other systems — email in Outlook, documents in SharePoint, accounting in an ERP like Trimble Viewpoint — and re-keying that data into Arena by hand is both wasted effort and a source of errors. Marketplace and Staged Tables are <strong>Global Admin</strong> territory almost by definition: connecting a third-party system, granting organization-wide consent, and reviewing incoming synced data before it becomes a permanent Arena record are all company-wide, one-time (or admin-scheduled) responsibilities, not something a Project Manager or End User would ever configure themselves.</p><p>Marketplace is the company-wide integrations hub connecting Arena to third-party services — Microsoft OneDrive, Sharepoint, Outlook, Calendar, and Users, Adobe Sign, Trimble Viewpoint, Google Maps, Zoom Info, and IFS. Most integrations follow the same pattern: an admin grants organization-wide OAuth consent once (using a company-domain email — personal accounts cannot connect), and every user benefits without individually authorizing anything themselves. Individual users can still optionally connect their own mailbox later via My Profile → Settings for finer-grained routing; until they do, mail/calendar/document actions on their behalf simply fall back to routing through the Admin Account.</p><p><strong>Trimble Viewpoint</strong> is more involved than the Microsoft integrations, since it's a full ERP connection rather than a simple OAuth login: it requires connection credentials, per-module Table Name/Schema Name mapping, and — once configured — each module gets linked to a Stage and Primary Key column, feeding directly into <strong>Staged Tables</strong>. Staged Tables is the operational counterpart to Marketplace's setup screens: it's the landing zone where data synced in from an external ERP or accounting system (Trimble Viewpoint, Soft Tech) sits before being mapped and promoted into native Arena records. This staging step exists so that incoming external data can be reviewed, column-mapped, and validated before it becomes a permanent Arena record — either on a recurring schedule via Auto Sync Criteria, or promoted immediately in bulk.</p>",
+        "intro": "<p>Most construction companies already run some of their business on other systems — email in Outlook, documents in SharePoint, accounting in an ERP like Trimble Viewpoint — and re-keying that data into Arena by hand is both wasted effort and a source of errors. Marketplace and Staged Tables are <strong>Global Admin</strong> territory almost by definition: connecting a third-party system, granting organization-wide consent, and reviewing incoming synced data before it becomes a permanent Arena record are all company-wide, one-time (or admin-scheduled) responsibilities, not something a Project Manager or End User would ever configure themselves.</p><p>Marketplace is the company-wide integrations hub connecting Arena to third-party services — Microsoft OneDrive, Sharepoint, Outlook, Calendar, and Users, Adobe Sign, Trimble Viewpoint, Google Maps, Zoom Info, and IFS. Most integrations follow the same pattern: an admin grants organization-wide OAuth consent once (using a company-domain email — personal accounts cannot connect), and every user benefits without individually authorizing anything themselves. Individual users can still optionally connect their own mailbox later via My Profile → Settings for finer-grained routing; until they do, mail/calendar/document actions on their behalf simply fall back to routing through the Admin Account.</p><p><strong>Trimble Viewpoint</strong> is more involved than the Microsoft integrations, since it's a full ERP connection rather than a simple OAuth login: it requires connection credentials, per-module Table Name/Schema Name mapping, and — once configured — each module gets linked to a Stage and Primary Key column, feeding directly into <strong>Staged Tables</strong>. Staged Tables is the operational counterpart to Marketplace's setup screens: it's the holding area where data pulled in from Trimble Viewpoint (which many teams call <strong>Vista</strong>) or from Soft Tech sits before it becomes real Arena records. This step lets an admin check and map incoming data before it becomes a permanent Arena record, either on a schedule via Auto Sync Criteria, or on demand with Bulk Create.</p><p>In practice, Vista stays the system of record for employees, crews, phase codes, GL codes, projects, customers, vendors and work orders, and Arena pulls those masters in so timesheets, crews and cost tracking in the field line up with what payroll and accounting already use.</p>",
         "definitions": [
           {
             "term": "Marketplace",
@@ -9287,20 +9319,28 @@ const MODULES = [
             "definition": "An ERP integration requiring connection credentials (Test Connection and Save), then per-module Table Name/Schema Name mapping (Save Configuration), after which each module gets a Link button tying it to a Stage and Primary Key column."
           },
           {
+            "term": "Vista (Trimble Viewpoint)",
+            "definition": "Many teams call this integration \"Vista\" after Viewpoint Vista, Trimble's construction ERP. In Arena it appears as the <strong>Trimble Viewpoint</strong> card in Marketplace (settings page \"Trimble Viewpoint Settings\") and as the <strong>View Point</strong> tab in Staged Tables. There is no separate card or tab named \"Vista\"."
+          },
+          {
             "term": "Staged Tables",
-            "definition": "The landing zone for data synced from an external system (e.g. Trimble Viewpoint, Soft Tech) before it is mapped and promoted into native Arena records, organized per system with a left nav of stageable entities (Users, Projects, Crews, Phase Codes, Customers, Vendors, Owners, and more)."
+            "definition": "The holding area for data pulled in from an outside system before it becomes real Arena records. It has two source tabs: <strong>View Point</strong> (Vista) and <strong>Soft Tech</strong>. The View Point tab stages 13 entities: Users, Projects, Crews, Phase Codes, Customers, Vendors, Owners, Project User Mapping, Project Crew Mapping, Work Order Crew Mapping, GL Codes, Work Orders, and Logs."
           },
           {
             "term": "Map Attributes",
-            "definition": "The action mapping each staged/external column to its native Arena field, with an option to update the mapping after future syncs."
+            "definition": "The screen where you pick which Viewpoint column feeds each Arena field (for example Employee ID, First Name, Last Name, Craft and Class for Users). Each field has an <strong>Update after sync?</strong> checkbox: when ticked, later syncs overwrite that field in Arena; when unticked, Arena keeps its own value. Projects and Phase Codes also have a <strong>Map Values</strong> column for translating Viewpoint values (such as project statuses or cost types) into Arena's own values."
           },
           {
             "term": "Auto Sync Criteria",
-            "definition": "An hours-based recurring sync interval configured per staged entity."
+            "definition": "A per-entity schedule that pulls data from Viewpoint every 1 to 24 hours. A second option, <strong>Auto create arena records after sync?</strong>, turns the staged rows into Arena records automatically after each pull, so nobody has to click Bulk Create."
           },
           {
             "term": "Bulk Create Arena Records",
-            "definition": "Promotes all currently staged rows for an entity into real Arena records at once, with a confirmation prompt."
+            "definition": "Creates Arena records from the staged rows currently showing after your Filters are applied (not every staged row), using the Map Attributes mapping. The button stays disabled until there are staged rows and a saved mapping."
+          },
+          {
+            "term": "Soft Tech",
+            "definition": "A second, separate staging source with no Marketplace card. It covers only <strong>Work Orders</strong> (pulled with <strong>Get Data From SoftTech</strong> and <strong>Sync</strong>) and <strong>BOQ</strong> (Excel upload and download). It has no Map Attributes, Auto Sync or Bulk Create options."
           }
         ],
         "procedures": [
@@ -9313,13 +9353,15 @@ const MODULES = [
             ]
           },
           {
-            "title": "Sync external users into Arena via Staged Tables",
+            "title": "Bring data from Vista (Trimble Viewpoint) into Arena",
             "steps": [
-              "Connect the source system first: <strong>Global Data → Marketplace</strong> → e.g. Trimble Viewpoint → enter credentials → <strong>Test Connection and Save</strong> → map Table/Schema per module → <strong>Save Configuration</strong>.",
-              "Go to <strong>Global Data → Staged Tables</strong> → select the system tab (e.g. View Point) → select <strong>Users</strong> in the left nav.",
-              "Click <strong>Map Attributes</strong> and map each external column to the matching Arena field.",
-              "Optionally set <strong>Auto Sync Criteria</strong> for a recurring schedule, or click <strong>Bulk Create Arena Records</strong> to promote all currently staged rows immediately."
-            ]
+              "Go to <strong>Global Data → Marketplace → Trimble Viewpoint</strong>. Enter the Viewpoint database details: <strong>Hostname</strong>, <strong>Port Number</strong>, <strong>Username</strong>, <strong>Password</strong> and <strong>Database</strong>. Click <strong>Test Connection and Save</strong>.",
+              "Go to <strong>Global Data → Staged Tables → View Point</strong> and pick an entity in the left nav, for example <strong>Users</strong>. If you see \"Viewpoint columns are not yet configured\", the connection in step 1 hasn't been saved yet.",
+              "Click <strong>Map Attributes</strong>. For each Arena field, choose the matching Viewpoint column, and tick <strong>Update after sync?</strong> for fields Viewpoint should keep overwriting. Click <strong>Save</strong>.",
+              "To keep data flowing automatically, open <strong>Auto Sync Criteria</strong>, set the interval (1 to 24 hours), and optionally tick <strong>Auto create arena records after sync?</strong>.",
+              "To create records now instead, use <strong>Filters</strong> to narrow the staged rows if needed, then click <strong>Bulk Create Arena Records</strong>. Only the filtered rows are created."
+            ],
+            "note": "Repeat steps 2 to 5 for each entity you want from Viewpoint (Crews, Phase Codes, GL Codes, Projects, Work Orders and so on). Mapping Users and Projects first makes the mapping entities (Project User Mapping, Project Crew Mapping) easier to line up."
           }
         ]
       },
