@@ -2952,6 +2952,20 @@ const QA_FIELDWORKS = [
     ]
   },
   {
+    "action": "compare",
+    "object": "Work Logs vs Productivity Logs",
+    "scope": "project",
+    "section": "Progress",
+    "question": "What is the difference between Work Logs and Productivity Logs?",
+    "answer": "They record two different things and are separate cards. <strong>Work Logs</strong> is where a foreman or field engineer logs completion of physical work at each step of construction — what got built, following the project's Work Log Template — and it can carry an attachment or a linked drawing as evidence; approval runs through Submitted Work Logs and Approve Work Logs. <strong>Productivity Logs</strong> instead ties labor to cost: every hour worked and every unit of output is logged against a Phase Code, feeding productivity and cost reporting rather than tracking work completion itself. A field user typically enters both; a supervisor or PM approves both, but through separate queues (Approve Work Logs for Work Logs, the Productivity Logs card's own Logs view for Productivity Logs).",
+    "tags": [
+      "work logs vs productivity logs",
+      "difference between work logs and productivity logs",
+      "what is a productivity log",
+      "work log vs productivity log"
+    ]
+  },
+  {
     "action": "create",
     "object": "RFI",
     "scope": "project",
