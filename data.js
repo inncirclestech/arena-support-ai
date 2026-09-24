@@ -5967,6 +5967,218 @@ const QA_EXPENSETRACKER = [
   }
 ];
 
+const QA_CAPITALMANAGEMENT = [
+  {
+    "action": "create",
+    "object": "budget",
+    "scope": "module",
+    "section": "Budget Planning",
+    "question": "How do I plan a department budget?",
+    "answer": "Go to **Capital Management → Budget Planning** (click the tab; it opens on **Budgets**) and click **+ Add Budget**.\n1. Pick the **Budget Functions*** (the department, e.g. Technology).\n2. Pick the **Department*** — the Organization Structure unit the budget belongs to.\n3. Pick one or more **Budget Items*** (the capital programs this budget will fund).\n4. Set **From year*** and **To year***, then click **Submit**.\nThe budget appears as a card. Click the card body to open the **Budget Planning Form**, where you add a row per Budget Item and enter an amount for each year in range, plus any extra fields your company has configured (e.g. Fund Name, FTEs). Click **Submit For Approval** when the numbers are ready.",
+    "tags": [
+      "plan budget",
+      "create budget",
+      "add budget",
+      "department budget",
+      "budget function",
+      "new budget"
+    ]
+  },
+  {
+    "action": "understand",
+    "object": "budget approval",
+    "scope": "module",
+    "section": "Budget Planning",
+    "question": "How does a budget get approved?",
+    "answer": "After you enter amounts on the **Budget Planning Form** and click **Submit For Approval**, the budget goes through the approval levels set up in **Settings → Approval Workflow**. Each level is either **Any one can approve** or **All must approve**. The budget's status chip moves from **Ready** toward **Completed** as levels sign off. If a reviewer has a problem with it, it shows up under **Budget Planning → Workflow Issues** with a level, a comment and who it is assigned to.",
+    "tags": [
+      "budget approval",
+      "approve budget",
+      "budget workflow",
+      "budget status",
+      "submit for approval"
+    ]
+  },
+  {
+    "action": "view",
+    "object": "budget totals",
+    "scope": "module",
+    "section": "Budget Planning",
+    "question": "Where do I see how much of a budget is used?",
+    "answer": "The **Budget Planning Form** for a budget shows a grid of Budget Item by year, with a **Total** row and column. For a company-wide view, the **Dashboard** tab has a **Budget Allocated** card (total across all budgets), plus **Budget Distribution** (by department, as percentage or amount) and **Budget Analysis** (pick a budget by name) charts.",
+    "tags": [
+      "budget total",
+      "budget used",
+      "budget distribution",
+      "budget analysis",
+      "how much budget"
+    ]
+  },
+  {
+    "action": "create",
+    "object": "new cip",
+    "scope": "module",
+    "section": "CIP",
+    "question": "How do I create a CIP?",
+    "answer": "Go to **Capital Management → CIP** (opens on the **CIPs** list) and click **+ Create CIP**.\n1. Pick the **Department*** (drills down through your Organization Structure).\n2. Enter a **CIP ID*** and **CIP Name***, and write a **CIP Description***.\n3. Fill in whichever profile fields your company has configured (e.g. Location, Category, Start Year — set up in **Settings → CIP Profile**).\n4. Set **From Year*** and **To Year*** and click **Create**.\nThe new CIP appears as a card. Open it to add its Cost Estimate, Teams, Documents, Checklists and CIP Score.",
+    "tags": [
+      "create cip",
+      "new cip",
+      "add cip",
+      "capital improvement plan",
+      "cip id"
+    ]
+  },
+  {
+    "action": "understand",
+    "object": "cip vs project",
+    "scope": "module",
+    "section": "CIP",
+    "question": "Is a CIP the same as a project?",
+    "answer": "No. A **CIP** (Capital Improvement Plan) is a standalone budgeting record inside Capital Management — it is not linked to a Project in the **Projects** module. Creating a CIP does not create a project, and there is no field on a CIP that points to one. A CIP does reuse some of the same building blocks as a project (Teams, Documents, Communications, Checklists), which can make it look project-like, but its budget, scoring, funding and actuals all live only in Capital Management.",
+    "tags": [
+      "cip vs project",
+      "is cip a project",
+      "capital improvement plan project",
+      "cip linked to project",
+      "standalone cip"
+    ]
+  },
+  {
+    "action": "understand",
+    "object": "cip scoring and ranking",
+    "scope": "module",
+    "section": "CIP",
+    "question": "How are CIPs scored and ranked?",
+    "answer": "Open a CIP and go to its **CIP Score** tab. It shows a set of **CIP Objectives** (configured in **Settings → CIP Objectives**, e.g. Infrastructure Improvement, Economic Development, Public Safety), each worth a weightage (typically 20 points, for 100 total). Under each objective are a handful of assessment questions; answering them produces a score out of that objective's weightage. To compare CIPs against each other, go to **CIP → CIP Assesments**, which tables every CIP's score per objective side by side with an **Approve/Reject** column — this is the step where competing CIPs get prioritized. The Dashboard's **CIP Criteria Weightage** and **CIP vs Overall CIP Score** charts chart the same scores.",
+    "tags": [
+      "cip score",
+      "cip ranking",
+      "cip objectives",
+      "score cip",
+      "cip assessments",
+      "rank cip",
+      "prioritize cip",
+      "scored and ranked",
+      "weightage"
+    ]
+  },
+  {
+    "action": "view",
+    "object": "cip cost estimate",
+    "scope": "module",
+    "section": "CIP",
+    "question": "How do I budget and track costs for a single CIP?",
+    "answer": "Open the CIP and go to its **Cost Estimate** tab. Click **+ Add Item** to add a row for each Estimate Category / Estimation Item (e.g. Aviation Facilities / Design), and enter an amount for each year in the CIP's date range. Click **Save**. As money is actually spent, someone enters the same categories on the **Actual** tab. The **CIP Actuals & Forecast** screen under CIP rolls this up (Estimated vs Actual, per year) across every CIP, and the Dashboard's **CIP Budgeted, Allocated & Actual** card totals it company-wide.",
+    "tags": [
+      "cip cost estimate",
+      "cip budget",
+      "cip actual",
+      "cip actuals and forecast",
+      "track cip cost"
+    ]
+  },
+  {
+    "action": "update",
+    "object": "cip funding split",
+    "scope": "module",
+    "section": "CIP",
+    "question": "How do I split a CIP's cost across funding sources?",
+    "answer": "Go to **CIP → Fund Allocations** and open the CIP (this is meant for CIPs that are already approved). Each **Cost Estimate** line shows an **Allocate** link. Pick one or more **Source of Fund** entries (set up in **Settings → Budget Funds**, e.g. HAS-Grants, REV BONDS/CP), then click **Allocate** to open the year-by-year split. Enter how much of that line's estimate comes from each fund, per year, and click **Submit**. The Dashboard and **CIP Actuals & Forecast** then reflect Estimated vs Allocated vs Actual for that CIP.",
+    "tags": [
+      "fund allocation",
+      "split cip cost",
+      "source of fund",
+      "allocate budget funds",
+      "cip funding"
+    ]
+  },
+  {
+    "action": "view",
+    "object": "budget vs actual",
+    "scope": "module",
+    "section": "Dashboard",
+    "question": "Where do I compare budgeted vs actual spend?",
+    "answer": "The **Dashboard** tab has the company-wide view: the **CIP Budgeted, Allocated & Actual** card shows the three totals side by side, and the **Budget vs CIP** chart plots Estimated / Allocated / Consumed for a CIP you pick. For a per-CIP breakdown by year and cost category, use **CIP → CIP Actuals & Forecast**, which pairs Estimated and Actual columns for every year in range.",
+    "tags": [
+      "budget vs actual",
+      "compare spend",
+      "cip budgeted allocated actual",
+      "budget vs cip chart"
+    ]
+  },
+  {
+    "action": "understand",
+    "object": "cip status",
+    "scope": "module",
+    "section": "CIP",
+    "question": "What do the CIP and budget status labels mean?",
+    "answer": "Across Capital Management you'll see: **Ready** (created, not yet in progress), **Not Ready**, **In Progress** (approvals under way), **Completed** (fully approved), and **Rejected**. The Dashboard's **CIP Status** card groups these into **Approved** and **In Progress** for a quick count.",
+    "tags": [
+      "cip status",
+      "budget status meaning",
+      "ready not ready completed rejected"
+    ]
+  },
+  {
+    "action": "navigate",
+    "object": "capital management tabs",
+    "scope": "module",
+    "section": "Dashboard",
+    "question": "Why does refreshing a Budget Planning or CIP page send me back to Dashboard?",
+    "answer": "This is a known quirk of the module: reloading the page, or opening a Budget Planning or CIP link directly (a deep link), always lands on the **Dashboard** tab. It is not an error — Arena resets to Dashboard on every fresh load of Capital Management. To get back to where you were, just click the **Budget Planning** or **CIP** tab again at the top of the page.",
+    "tags": [
+      "capital management refresh",
+      "lands on dashboard",
+      "budget planning reload",
+      "cip deep link",
+      "navigation quirk"
+    ]
+  },
+  {
+    "action": "configure",
+    "object": "capital management setup",
+    "scope": "module",
+    "section": "Settings",
+    "question": "What do I set up before anyone can create a budget or CIP?",
+    "answer": "A **Module Admin** opens **Settings** (the gear icon, visible on the Budget Planning and CIP tabs) and sets up, on the Budget Planning side: **Budget Functions** (departments), **Budget Items** (capital programs), **Budget Funds** (funding sources), **Organization Structure** (the Department hierarchy), the **Budget Forms** layout, and the budget **Approval Workflow**. On the CIP side: **CIP Profile** fields, **CIP Category** (Estimate Categories and Items used for costing), **CIP Objectives** and their weightings (used for scoring), **Checklists**, and the CIP **Approval Workflow**. Until these exist, the Add Budget and Create CIP dialogs have nothing to pick from.",
+    "tags": [
+      "capital management setup",
+      "budget planning settings",
+      "cip settings",
+      "initial setup",
+      "what to configure first"
+    ]
+  },
+  {
+    "action": "configure",
+    "object": "capital management approval workflow",
+    "scope": "module",
+    "section": "Settings",
+    "question": "How do I set up who approves budgets and CIPs?",
+    "answer": "Go to **Settings → Approval Workflow** (Budget Planning side) or **Settings → CIP Approval Workflow** (CIP side) and click **+ Create Level** for each approval step. For each level, pick the **Workflow Type** — **Any one can approve** or **All must approve** — add a description, and choose the approvers. Levels run in order; a budget or CIP is only Completed once every level has signed off.",
+    "tags": [
+      "approval workflow setup",
+      "who approves budget",
+      "cip approval workflow",
+      "approval levels"
+    ]
+  },
+  {
+    "action": "configure",
+    "object": "capital management permissions",
+    "scope": "module",
+    "section": "Settings",
+    "question": "Who can see Capital Management and its settings?",
+    "answer": "The **Capital Management** Home tile only shows for users with the **canViewCapitalManagement** permission, and the **Settings** gear only shows with **canViewCapitalManagementSettings**. A **Super Admin** grants these through the user's permission group, the same way as any other module permission.",
+    "tags": [
+      "capital management permissions",
+      "who can see capital management",
+      "module access"
+    ]
+  }
+];
+
 const MODULES = [
   {
     "id": "admin-setup-guide",
@@ -16068,6 +16280,184 @@ const MODULES = [
         "html": "<p>Answers sourced from Arena's documentation.</p>",
         "qa": []
       }
+    ]
+  },
+  {
+    "id": "capital-management",
+    "category": "home",
+    "qaItems": QA_CAPITALMANAGEMENT,
+    "narrative": [
+      {
+        "heading": "Dashboard",
+        "intro": "<p>The Dashboard gives a finance lead or executive a company-wide read on capital spending: how much budget is allocated, how many CIPs (Capital Improvement Plans) are moving through the pipeline, and how budgeted amounts compare with what has actually been allocated and spent. It opens with three KPI cards — <strong>Budget Allocated</strong>, <strong>CIP Status</strong>, and <strong>CIP Budgeted, Allocated &amp; Actual</strong> — followed by a <strong>Budget</strong> section and a <strong>CIP</strong> section of charts.</p><p>The Budget charts (<strong>Budget Distribution</strong>, <strong>Budget Analysis</strong>) break spend down by department. The CIP charts (<strong>CIP Criteria Weightage</strong>, <strong>CIP vs Overall CIP Score</strong>, <strong>Budget vs CIP</strong>, and a <strong>CIP Status</strong> table with From/To Year filters) show how individual capital projects are scored and are progressing against budget.</p>",
+        "definitions": [
+          {
+            "term": "Budget Allocated",
+            "definition": "The total amount across all budgets created in Budget Planning, shown with the number of budgets."
+          },
+          {
+            "term": "CIP Status (KPI)",
+            "definition": "A count of all CIPs grouped into Approved and In Progress."
+          },
+          {
+            "term": "CIP Budgeted, Allocated & Actual",
+            "definition": "The company-wide totals of CIP Cost Estimates (Budgeted), Fund Allocations (Allocated), and the Actual tab (Actual)."
+          }
+        ],
+        "procedures": []
+      },
+      {
+        "heading": "Budget Planning",
+        "intro": "<p>Budget Planning is where a department or finance user plans how much a department can spend over a set of years, before any individual capital project is created. It opens on <strong>Budgets</strong>, a card grid (not a table); a second sub-tab, <strong>Workflow Issues</strong>, tracks anything raised against a budget during approval.</p><p>Because Capital Management always reopens on the Dashboard when the page is reloaded or a link is opened directly, use the <strong>Budget Planning</strong> tab at the top of the screen to get here rather than a bookmarked link.</p>",
+        "definitions": [
+          {
+            "term": "Budget Function",
+            "definition": "The department or business unit a budget belongs to (e.g. Technology, Finance & Administration). Set up in Settings."
+          },
+          {
+            "term": "Department (Organization Structure)",
+            "definition": "The organizational unit a budget is planned under, picked from a cascading hierarchy (e.g. Aviation > HAS > Technology)."
+          },
+          {
+            "term": "Budget Item",
+            "definition": "A capital program a budget funds; a budget can list several. Set up in Settings."
+          },
+          {
+            "term": "Budget Planning Form",
+            "definition": "The page opened by clicking a budget card, where amounts are entered per Budget Item per year and the budget is submitted for approval."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Plan a department budget",
+            "steps": [
+              "Go to <strong>Capital Management → Budget Planning</strong> and click <strong>+ Add Budget</strong>.",
+              "Pick <strong>Budget Functions*</strong>, <strong>Department*</strong>, and one or more <strong>Budget Items*</strong>.",
+              "Set <strong>From year*</strong> and <strong>To year*</strong>, then click <strong>Submit</strong>.",
+              "Open the new budget card and enter an amount for each Budget Item and year in the <strong>Budget Planning Form</strong>.",
+              "Click <strong>Submit For Approval</strong> when the numbers are ready."
+            ],
+            "note": "The Budget Planning Form also has extra fields your company can configure, such as Fund Name and an FTEs table."
+          }
+        ]
+      },
+      {
+        "heading": "CIP",
+        "intro": "<p>CIP is where individual capital projects — Capital Improvement Plans — are created, costed, scored and funded. A CIP is a standalone budgeting record: it is not linked to a Project in the <strong>Projects</strong> module, even though it reuses familiar building blocks like Teams, Documents and Checklists. It opens on <strong>CIPs</strong> (a card grid) with four more sub-tabs: <strong>Fund Allocations</strong>, <strong>CIP Actuals &amp; Forecast</strong>, <strong>CIP Assesments</strong>, and <strong>Workflow Issues</strong>.</p><p>A Module Manager or department user creates the CIP and works through its record tabs (Profile, Teams, Documents, Communications, Checklists, Cost Estimate, Actual, CIP Score) to build it out; a reviewer then scores and approves it before funds are allocated against it.</p>",
+        "definitions": [
+          {
+            "term": "CIP",
+            "definition": "Capital Improvement Plan — a single capital project record with its own ID, description, cost estimate, scoring and funding. Not linked to a Projects-module project."
+          },
+          {
+            "term": "CIP Score",
+            "definition": "A record tab where a reviewer answers assessment questions under each CIP Objective, producing a weighted score used to compare and prioritize CIPs."
+          },
+          {
+            "term": "CIP Assesments",
+            "definition": "A table comparing every CIP's objective scores side by side, with an Approve/Reject column — the step where competing CIPs are ranked."
+          },
+          {
+            "term": "Fund Allocations",
+            "definition": "Splits an approved CIP's Cost Estimate lines across one or more Budget Funds (funding sources), by year."
+          },
+          {
+            "term": "CIP Actuals & Forecast",
+            "definition": "A read-only, company-wide roll-up of Estimated vs Actual amounts per CIP, per cost category, per year."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Create and score a CIP",
+            "steps": [
+              "Go to <strong>Capital Management → CIP</strong> and click <strong>+ Create CIP</strong>.",
+              "Pick the <strong>Department*</strong>, enter <strong>CIP ID*</strong>, <strong>CIP Name*</strong> and <strong>CIP Description*</strong>, fill in any configured profile fields, set <strong>From Year*</strong>/<strong>To Year*</strong>, and click <strong>Create</strong>.",
+              "Open the CIP and add its <strong>Cost Estimate</strong> lines, <strong>Teams</strong>, <strong>Documents</strong> and <strong>Checklists</strong>.",
+              "Answer the questions on the <strong>CIP Score</strong> tab, grouped by CIP Objective.",
+              "Compare and approve or reject CIPs on <strong>CIP → CIP Assesments</strong>."
+            ]
+          },
+          {
+            "title": "Split a CIP's cost across funding sources",
+            "steps": [
+              "Go to <strong>CIP → Fund Allocations</strong> and open an approved CIP.",
+              "Click <strong>Allocate</strong> next to a Cost Estimate line.",
+              "Pick one or more <strong>Source of Fund</strong> entries and enter the split by year.",
+              "Click <strong>Submit</strong>."
+            ]
+          },
+          {
+            "title": "Record actual spend",
+            "steps": [
+              "Open the CIP and go to its <strong>Actual</strong> tab.",
+              "Enter the amount spent against each Cost Estimate line, per year.",
+              "Click <strong>Save</strong>."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Settings",
+        "intro": "<p>Settings (the gear icon, shown on the Budget Planning and CIP tabs, not on Dashboard) is where a <strong>Module Admin</strong> configures everything a budget or CIP is built from. It is context-sensitive: opening it from Budget Planning goes to Budget Planning Settings; opening it from CIP goes to CIP Settings.</p>",
+        "definitions": [
+          {
+            "term": "Budget Functions / Budget Items / Budget Funds",
+            "definition": "Master lists (each its own screen under Budget Planning Settings) for departments, capital programs, and funding sources."
+          },
+          {
+            "term": "Organization Structure",
+            "definition": "The Department hierarchy used by both budgets and CIPs, built as levels with codes and names."
+          },
+          {
+            "term": "Budget Forms",
+            "definition": "A form builder that adds extra fields (text boxes, tables) to the Budget Planning Form."
+          },
+          {
+            "term": "CIP Profile / CIP Category / CIP Objectives",
+            "definition": "CIP Settings screens: the extra fields on a CIP, the Estimate Categories/Items used for costing, and the weighted Objectives used for CIP Score."
+          },
+          {
+            "term": "Approval Workflow",
+            "definition": "Ordered approval levels (Any one can approve / All must approve) — one workflow for budgets, a separate one for CIPs."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Set up approval for budgets or CIPs",
+            "steps": [
+              "Go to <strong>Settings → Approval Workflow</strong> (from Budget Planning) or <strong>Settings → CIP Approval Workflow</strong> (from CIP).",
+              "Click <strong>+ Create Level</strong>.",
+              "Choose <strong>Any one can approve</strong> or <strong>All must approve</strong>, add a description, and pick the approvers.",
+              "Repeat for each level; levels run in order."
+            ]
+          },
+          {
+            "title": "Set up the master data before planning",
+            "steps": [
+              "Go to <strong>Settings → Budget Functions</strong>, <strong>Budget Items</strong> and <strong>Budget Funds</strong> and add entries for each.",
+              "Go to <strong>Settings → Organization Structure</strong> and build the Department hierarchy.",
+              "From the CIP side, go to <strong>Settings → CIP Category</strong> and add Estimate Categories and Items, and <strong>Settings → CIP Objectives</strong> to set scoring objectives and weightings."
+            ]
+          }
+        ]
+      }
+    ],
+    "name": "Capital Management",
+    "alias": "Capital Budgeting & CIP Planning",
+    "icon": "local_atm",
+    "tagline": "Plan department budgets and manage Capital Improvement Plans (CIPs) from scoring to funding.",
+    "color": "#0F9769",
+    "overview": "<p><strong>Capital Management</strong> plans and tracks capital spending in two connected pieces: <strong>Budget Planning</strong>, where departments plan how much they can spend over a set of years, and <strong>CIP</strong> (Capital Improvement Plan), where individual capital projects are created, costed, scored, approved and funded. A CIP is a standalone budgeting record — it is not linked to a Project in the Projects module.</p><p>It is a Home module with three tabs: <strong>Dashboard</strong>, <strong>Budget Planning</strong> and <strong>CIP</strong>. A module-level <strong>Settings</strong> area (opened from the Budget Planning or CIP tab) holds the master data, form layouts and approval workflows both sides run on.</p>",
+    "navigation": [
+      "From <strong>Home</strong>, click the <strong>Capital Management</strong> tile (it is the last tile on the Home page).",
+      "It opens on <strong>Dashboard</strong>. Use the <strong>Dashboard</strong>, <strong>Budget Planning</strong> and <strong>CIP</strong> tabs at the top to switch screens.",
+      "Reloading the page, or opening a Budget Planning or CIP link directly, lands back on Dashboard — click the tab again to return."
+    ],
+    "sections": [
+      "Dashboard",
+      "Budget Planning",
+      "CIP",
+      "Settings"
     ]
   }
 ];
