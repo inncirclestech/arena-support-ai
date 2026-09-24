@@ -1308,8 +1308,16 @@ const QA_GLOBALDATA = [
     object: "vendor",
     scope: "global", section: "Vendors & Subcontractors",
     question: "How do I add a new vendor?",
-    answer: "1. Global Data → **Vendors** tile → **Register Vendor**.\n2. Upload a profile picture (optional), fill Vendor ID*, Company Name*, First Name*, Last Name*.\n3. Click **Add** in the contact table to add one or more contact persons with their details.\n4. Fill Username*, Phone Number* (with country code + extension), Email*.\n5. Choose a **Select Sign Label** (e.g. Initials) and fill Initials* — used as the digital signature label on approved documents; optionally toggle **Enable Security Key Authentication**.\n6. Optionally fill Vendor Title, Address, Licence Number.\n7. Click **Submit**.",
+    answer: "1. Global Data → **Vendors** tile → **Register Vendor**.\n2. Upload a profile picture (optional), fill Vendor ID*, Company Name*, First Name*, Last Name*.\n3. Click **Add** in the contact table to add one or more contact persons with their details.\n4. Fill Username*, Phone Number* (with country code + extension), Email*.\n5. Choose a **Select Sign Label** (e.g. Initials) and fill Initials* — used as the digital signature label on approved documents; optionally toggle **Enable Security Key Authentication**.\n6. Optionally fill Vendor Title, Address, Licence Number, Fax, Scope, and Website.\n7. Under **Additional Information**, optionally set Vendor Type, Vendor Business Size, Vendor Minority, Freight Terms, GST IN, and Linked Vendor Groups, and check **Domestic**, **Preferred**, and/or **Blocked**.\n8. Click **Submit**.",
     tags: ["register vendor","add vendor","new vendor"]
+  },
+  {
+    action: "configure",
+    object: "vendor status",
+    scope: "global", section: "Vendors & Subcontractors",
+    question: "How do I mark a vendor as preferred or block it from being used?",
+    answer: "1. Open the vendor's card from the **Vendors** tile (its status also shows directly on the vendor card in the list).\n2. On the **Profile** tab, scroll to **Additional Information**.\n3. Check **Preferred** to flag it as a preferred supplier, or **Blocked** to stop it from being selected in Procurement and Work Orders.\n4. Click **Submit**.",
+    tags: ["preferred vendor","blocked vendor","vendor status"]
   },
   {
     action: "configure",
@@ -1388,15 +1396,15 @@ const QA_GLOBALDATA = [
     object: "user account",
     scope: "global", section: "Users & Permissions",
     question: "How do I register a new user or employee?",
-    answer: "1. Global Data → **Users & Permissions** → **User Accounts** → **Active Users** tab.\n2. Click **Register User** and fill in the required details (name, contact, email, password/signature).\n3. Click **Submit**. Use **Notify User** to email them their login/setup instructions.",
-    tags: ["register user","add employee","new user account","register user employee"]
+    answer: "1. Global Data → **Users & Permissions** → **User Accounts** → **Active Users** tab.\n2. Click **Register User**. Fill Employee ID, First Name, Last Name, Username, Phone Number, Email, and optionally Vendor Number (to link the login to a Vendor record).\n3. Enter a temporary Password and Confirm Password, choose a **Select Sign Label** and fill Initials, and optionally toggle **Enable Security Key Authentication**.\n4. Click **Submit**. Use **Notify User** to email them their login/setup instructions.",
+    tags: ["register user","add employee","new user account","register user employee","register user dialog fields","user registration form fields","employee id username vendor number"]
   },
   {
     action: "create",
     object: "user account",
     scope: "global", section: "Users & Permissions",
     question: "How do I bulk-import users instead of adding them one by one?",
-    answer: "1. Users & Permissions → **Active Users** tab.\n2. Click **Download Sample Excel**, fill in one row per user (use correct country codes for phone numbers).\n3. Click **Upload Excel** and select the completed file — Arena creates the accounts and emails each new user automatically.",
+    answer: "1. Users & Permissions → **Active Users** tab.\n2. Click the **Export** button to open its menu and choose **Download Sample**; fill in one row per user (use correct country codes for phone numbers).\n3. Reopen **Export** and choose **Upload Excel**, then select the completed file — Arena creates the accounts and emails each new user automatically.",
     tags: ["bulk import users","upload excel users","onboard users","bulk import users upload excel"]
   },
   {
@@ -1421,7 +1429,7 @@ const QA_GLOBALDATA = [
     scope: "global", section: "Users & Permissions",
     question: "What does the User Permission tab do, and how is it different from Global Permission?",
     answer: "**User Permission** (Global Data → Users & Permissions → User Permission) is a read-only lookup, not an editor: pick a person from the list and it shows their **Basic Details**, which **Groups** they belong to (click a group card to preview its permission set), and a full **Permissions** tree of everything they can currently do — with each row already checked or unchecked based on their group memberships. The checkboxes here are disabled; there's no Save button, and you can't add or remove a group from this screen.\n\n**Global Permission** is the actual editor — that's where you create/edit permission groups, toggle their View/Create/Edit/Delete/etc. rights per module, and add or remove the users who belong to each group. Use **Global Permission** to change what people can do; use **User Permission** to verify what one specific person can already do and trace it back to the group that granted it.",
-    tags: ["user permission tab","effective permissions","what can this user do","check user access","permission lookup"]
+    tags: ["user permission tab","effective permissions","what can this user do","check user access","permission lookup","difference between user permission and global permission","user permission vs global permission"]
   },
   {
     action: "define",
@@ -8872,7 +8880,7 @@ const MODULES = [
           },
           {
             "term": "Business Unit",
-            "definition": "A simple record — Code and Description — representing an internal division or department, used to categorize company operations and reporting."
+            "definition": "A simple record — a numeric Code, a Description, and an optional color tag — representing an internal division or department, used to categorize company operations and reporting. Added inline in the Business Units table rather than through a popup dialog."
           }
         ],
         "procedures": [
@@ -8889,9 +8897,10 @@ const MODULES = [
           {
             "title": "Add a business unit",
             "steps": [
-              "Go to <strong>Global Data → Business Units</strong> and click <strong>Add</strong>.",
-              "Enter a Code and Description.",
-              "Click Submit."
+              "Go to <strong>Global Data → Business Units</strong> and click <strong>Add</strong> — this opens a new row directly in the table (not a popup dialog).",
+              "Enter a numeric Code and a Description in the new row.",
+              "Optionally pick a color from the swatch next to the row, used to tag/color-code the business unit.",
+              "Click the row's save/check action to confirm (or the delete icon to discard it before saving)."
             ]
           }
         ]
@@ -8902,7 +8911,7 @@ const MODULES = [
         "definitions": [
           {
             "term": "User Accounts (Active / Inactive)",
-            "definition": "The login-level user directory, split into Active Users (can log in) and Inactive Users (retained but cannot log in; can be reactivated)."
+            "definition": "The login-level user directory, split into Active Users (can log in) and Inactive Users (retained but cannot log in; can be reactivated). Its table includes a Vendor Number column, since a user account can be linked to a Vendor record."
           },
           {
             "term": "Signature field (user registration)",
@@ -8938,7 +8947,10 @@ const MODULES = [
             "title": "Register a new user or employee",
             "steps": [
               "Go to <strong>Global Data → Users & Permissions</strong> → <strong>User Accounts</strong> → <strong>Active Users</strong> tab.",
-              "Click <strong>Register User</strong> and fill in the required details (name, contact, email, password/signature).",
+              "Click <strong>Register User</strong>. Optionally upload a profile picture, then fill Employee ID, First Name, Last Name, Username, Phone Number (with country code and optional extension), and Email.",
+              "Optionally fill Vendor Number if this login should be linked to a Vendor record.",
+              "Enter a temporary Password and Confirm Password — the user sets their own final password afterward.",
+              "Choose a <strong>Select Sign Label</strong> and fill Initials (used as their digital signature label on approved documents); optionally toggle <strong>Enable Security Key Authentication</strong> for fingerprint/face ID/hardware-key login.",
               "Click <strong>Submit</strong>. Use <strong>Notify User</strong> to email them their login/setup instructions."
             ]
           },
@@ -8946,10 +8958,10 @@ const MODULES = [
             "title": "Bulk-import users via Excel",
             "steps": [
               "Go to <strong>Users & Permissions → Active Users</strong> tab.",
-              "Click <strong>Download Sample Excel</strong> and fill in one row per user (use correct country codes for phone numbers).",
-              "Click <strong>Upload Excel</strong> and select the completed file."
+              "Click the <strong>Export</strong> button (top right) to open its menu, choose <strong>Download Sample</strong>, and fill in one row per user (use correct country codes for phone numbers).",
+              "Reopen <strong>Export</strong> and choose <strong>Upload Excel</strong>, then select the completed file."
             ],
-            "note": "Arena creates the accounts and emails each new user automatically."
+            "note": "Arena creates the accounts and emails each new user automatically. The Active Users table also shows a Vendor Number column, since a user account can be linked to a Vendor record."
           },
           {
             "title": "Set up permissions for a group of users",
@@ -9050,6 +9062,14 @@ const MODULES = [
           {
             "term": "Owner-style Settings hierarchy",
             "definition": "Vendors uses the same Level 1/2/3 category hierarchy pattern as Owners, configured via the Settings gear on the Vendors screen."
+          },
+          {
+            "term": "Preferred / Blocked (vendor status)",
+            "definition": "Two checkbox-style flags shown on every vendor card and inside the vendor's Profile tab (under Additional Information), used to mark a vendor as a preferred supplier or to block it from being selected in Procurement and Work Orders."
+          },
+          {
+            "term": "Additional Information (vendor profile)",
+            "definition": "A block of extra classification fields on a vendor's Profile tab: Vendor Type, Vendor Business Size, Vendor Minority, Notes, Warning, Extra Copy, Sent By, Freight Terms, GST IN, Linked Vendor Groups, Domestic, Preferred, and Blocked."
           }
         ],
         "procedures": [
@@ -9061,8 +9081,9 @@ const MODULES = [
               "Click <strong>Add</strong> in the contact table to add one or more contact persons with their details.",
               "Fill Username*, Phone Number* (with country code + extension), and Email*.",
               "Choose a <strong>Select Sign Label</strong> (e.g. Initials) and fill Initials* — used as the digital signature label on approved documents; optionally toggle <strong>Enable Security Key Authentication</strong>.",
-              "Optionally fill Vendor Title, Address, and Licence Number.",
-              "Click <strong>Submit</strong>."
+              "Optionally fill Vendor Title, Address, Licence Number, Fax, Scope, and Website.",
+              "Under <strong>Additional Information</strong>, optionally set Vendor Type, Vendor Business Size, Vendor Minority, Notes, Warning, Extra Copy, Sent By, Freight Terms, GST IN, and Linked Vendor Groups, and check <strong>Domestic</strong>, <strong>Preferred</strong>, and/or <strong>Blocked</strong> as they apply.",
+              "Click <strong>Submit</strong>. Use <strong>Upload Vendors</strong> (next to Download Excel) on the main Vendors screen to bulk-register vendors from an Excel template instead."
             ]
           },
           {
