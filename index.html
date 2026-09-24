@@ -441,6 +441,17 @@
   .doc-intro p { margin: 0 0 12px; }
   .doc-intro p:last-child { margin-bottom: 0; }
   .doc-intro strong { color: var(--ink); }
+  .doc-intro-more { margin-top: 10px; }
+  .doc-intro-more > summary {
+    display: inline-flex; align-items: center; gap: 6px; cursor: pointer; list-style: none;
+    font-size: 13px; font-weight: 600; color: var(--ink); padding: 4px 10px;
+    border: 1px solid var(--border); border-radius: 999px; background: var(--surface);
+  }
+  .doc-intro-more > summary::-webkit-details-marker { display: none; }
+  .doc-intro-more > summary::before { content: "+"; font-weight: 700; color: var(--accent-hover); }
+  .doc-intro-more[open] > summary::before { content: "–"; }
+  .doc-intro-more[open] > summary { margin-bottom: 12px; }
+  .doc-intro-more > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
   .doc-subblock { margin-top: 26px; }
   .doc-subblock:first-of-type { margin-top: 6px; }
@@ -1082,7 +1093,7 @@ Example of the style to use — if a note says "Go to Settings, click Add User, 
                     ${metaParts.length ? `<p class="doc-section-meta">${metaParts.join(" · ")}</p>` : ""}
                   </div>
                 </div>
-                ${narr && narr.intro ? `<div class="doc-intro">${narr.intro}</div>` : ""}
+                ${narr && narr.intro ? renderIntroHtml(narr.intro) : ""}
 
                 ${stepCount ? `
                 <div class="doc-subblock">
@@ -1180,6 +1191,14 @@ Example of the style to use — if a note says "Go to Settings, click Add User, 
         if (target) { e.preventDefault(); target.scrollIntoView({ behavior: "smooth", block: "start" }); }
       });
     });
+  }
+
+  // Show only the first paragraph of a section intro so the Steps come into
+  // view quickly; the rest sits behind a native "Read more" disclosure.
+  function renderIntroHtml(intro) {
+    const paras = String(intro).match(/<p>[\s\S]*?<\/p>/g);
+    if (!paras || paras.length < 2) return `<div class="doc-intro">${intro}</div>`;
+    return `<div class="doc-intro">${paras[0]}<details class="doc-intro-more"><summary>Read more</summary>${paras.slice(1).join("")}</details></div>`;
   }
 
   function slugify(s) {
