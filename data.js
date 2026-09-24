@@ -2560,7 +2560,9 @@ const QA_PROJECTSETUP = [
       "phase code columns",
       "cost types",
       "direct indirect",
-      "phase code table"
+      "phase code table",
+      "phase codes screen",
+      "what columns show on phase codes"
     ]
   },
   {
@@ -2603,7 +2605,10 @@ const QA_PROJECTSETUP = [
       "safety workflow",
       "safety calendar",
       "safety form category",
-      "assign workflow"
+      "assign workflow",
+      "safety approval workflow",
+      "set up safety approval workflow",
+      "project setup safety"
     ]
   },
   {
@@ -10369,7 +10374,7 @@ const MODULES = [
             "steps": [
               "Go to <strong>Home → Projects</strong> and click the orange <strong>+ Create Project</strong> button, top-left of the project grid.",
               "Fill in the three required fields: <strong>Project Name</strong>, <strong>Project Number / ID</strong>, and <strong>Construction Type</strong>.",
-              "Optionally fill in Project Location, Subsidiary/Business Unit, Owner Representative, Project Manager, Currency, Customer, Owner, Construction Cost Estimate, Project Type, and Funding/Implementing Agency — all of these can also be added or changed later.",
+              "Optionally fill in Project Location, Subsidiary, Owner Representative, Project Manager / Consultant, Currency, Opportunity, Customer, Business Unit, Customer Locations, Owner, Construction Cost Estimate, Project Type, Funding Agency, and Implementing Agency — all of these can also be added or changed later.",
               "Click Submit. The dialog closes and the new project appears immediately in the Projects grid with status \"Created.\""
             ],
             "note": "There's no clone-project or create-from-template option — every project starts as a blank form. There's also no start/end date field here; scheduling is configured later, once the project exists. After creation the project is immediately navigable but functionally empty — plan to go into Project Setup next to build out the work breakdown, team, schedule, and forms."
