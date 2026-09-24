@@ -2844,7 +2844,7 @@ const QA_FIELDWORKS = [
     "scope": "project",
     "section": "Progress",
     "question": "How do I record completion of work at each step during construction?",
-    "answer": "Go to <strong>Field Works → Tree Version → [Plant] → Progress → Work Logs</strong>. This card is described as logging completion of the work at each step during construction, recorded against the project's configured Work Log Template (Work Package to Tag, Tag to Work Package, System to Tag, or a Scheduled view). Once submitted, every log is retained in <strong>Submitted Work Logs</strong> regardless of status, so a PM always has the full audit trail.",
+    "answer": "Go to <strong>Field Works → Tree Version → [Plant] → Progress → Work Logs</strong>. This card is described as logging completion of the work at each step during construction, recorded against whichever option the project has set in <strong>Project Settings → Work Logs Templates</strong> — for example Work Package to Location Logging, Location to Work Package Logging, Super Location to Location Logging, or a Scheduled/WBS view. Once submitted, every log is retained in <strong>Submitted Work Logs</strong> regardless of status, so a PM always has the full audit trail.",
     "tags": [
       "work logs",
       "record progress",
@@ -3056,14 +3056,16 @@ const QA_FIELDWORKS = [
     "object": "restraints",
     "scope": "project",
     "section": "Progress",
-    "question": "How do I record something that is blocking work from proceeding?",
-    "answer": "Use the <strong>Restraints</strong> card under Progress. A restraint is a physical, legal, or contractual blocker logged independently of any single form, and it moves through <strong>Open → Rectify → QC_Verify</strong>. Restraints support due dates, assignment, Chat, filters, and Download Excel, and rectification guidance for each restraint type is configured separately at the Restraint Rectification screen.",
+    "question": "How do I raise a restraint and get it verified?",
+    "answer": "Use the <strong>Restraints</strong> card under Progress, and click <strong>Add Restraint</strong>. A restraint is a physical, legal, or contractual blocker logged independently of any single form — the form takes Tree Version, Entity, Super Location, Location, Work Package, Restraint Category, Detailed Description, Priority, an optional file, Start/End Date, and an assignee. Each restraint moves through a three-stage loop tracked as <strong>Open / Rectified / Verified</strong> counters, with its own <strong>Restraints Rectification</strong> tab for working through fixes. Restraints support filters and Download Excel.",
     "tags": [
       "restraints",
       "blocker",
       "rectify",
-      "qc verify",
-      "restraint rectification"
+      "verify",
+      "restraint rectification",
+      "add restraint",
+      "blocking work"
     ]
   },
   {
@@ -3078,6 +3080,139 @@ const QA_FIELDWORKS = [
       "pickup tickets",
       "procurement",
       "requisitions"
+    ]
+  },
+  {
+    "action": "view",
+    "object": "equipment logs card",
+    "scope": "project",
+    "section": "Progress",
+    "question": "What is the Equipment Logs card for?",
+    "answer": "<strong>Equipment Logs</strong> under Progress records equipment usage against a specific <strong>Work Order</strong> — not the WBS location tree that Work Logs uses. Pick a Work Order and a date, then log Equipment, UOM, and Quantity from the items available on that order. It feeds work-order cost and progress reporting rather than the plant's overall Progress %.",
+    "tags": [
+      "equipment logs",
+      "work order",
+      "equipment quantity"
+    ]
+  },
+  {
+    "action": "view",
+    "object": "material logs card",
+    "scope": "project",
+    "section": "Progress",
+    "question": "What is the Material Logs card for?",
+    "answer": "<strong>Material Logs</strong> under Progress records material consumed against a specific <strong>Work Order</strong>, in the same pattern as Equipment Logs: pick a Work Order and date, then log Material, UOM, and Quantity from the items on that order.",
+    "tags": [
+      "material logs",
+      "work order",
+      "material consumption"
+    ]
+  },
+  {
+    "action": "view",
+    "object": "manpower logs card",
+    "scope": "project",
+    "section": "Progress",
+    "question": "What is the Manpower Logs card for?",
+    "answer": "<strong>Manpower Logs</strong> under Progress records labor headcount against a specific <strong>Work Order</strong>: pick a Work Order and date, then log Manpower and Quantity. It is not the same as <strong>Labor Logs</strong>, which ties people to a schedule Activity instead of a Work Order, or <strong>Productivity Logs</strong>, which tracks hours against a Phase Code for productivity reporting.",
+    "tags": [
+      "manpower logs",
+      "work order",
+      "headcount"
+    ]
+  },
+  {
+    "action": "view",
+    "object": "labor logs card",
+    "scope": "project",
+    "section": "Progress",
+    "question": "What is the Labor Logs card for?",
+    "answer": "<strong>Labor Logs</strong> under Progress records which labor resources worked on a specific schedule <strong>Activity</strong> on a given date: Tree Version, Entity, Super Location, Activity, Actual Date, then Linked Resources and Additional Resources. It is a lighter, activity-linked record — distinct from the Work-Order-linked Manpower Logs and the Phase-Code-linked Productivity Logs.",
+    "tags": [
+      "labor logs",
+      "resource logs",
+      "activity"
+    ]
+  },
+  {
+    "action": "view",
+    "object": "machinery logs card",
+    "scope": "project",
+    "section": "Progress",
+    "question": "What is the Machinery Logs card for, and how is it different from Equipment Logs?",
+    "answer": "<strong>Machinery Logs</strong> uses the same Activity-linked \"Resource Log\" form as Labor Logs (Tree Version, Entity, Super Location, Activity, Actual Date, Linked Resources), just scoped to machinery instead of labor. It is easy to confuse with <strong>Equipment Logs</strong>, which is a different screen: Equipment Logs ties equipment to a <strong>Work Order</strong> with a Quantity and UOM, while Machinery Logs ties it to a schedule <strong>Activity</strong> as a linked resource.",
+    "tags": [
+      "machinery logs",
+      "equipment logs",
+      "resource logs",
+      "activity vs work order"
+    ]
+  },
+  {
+    "action": "view",
+    "object": "inventory management card",
+    "scope": "project",
+    "section": "Progress",
+    "question": "What is the Inventory Management card for?",
+    "answer": "<strong>Inventory Management</strong> under Progress is described in the product as a collection of pickup tickets. A field team raises a <strong>Site Material Request</strong> to pull material from stock: Requested By, Required Date, the usual location/activity context, Logistics and Handling Instructions, and a line-item table of Materials, Quantity, and UOM. Submitted requests go to approval; rejected ones move to the <strong>Rejected Site Material Requests</strong> tab.",
+    "tags": [
+      "inventory management",
+      "pickup tickets",
+      "site material request"
+    ]
+  },
+  {
+    "action": "view",
+    "object": "procurement card",
+    "scope": "project",
+    "section": "Progress",
+    "question": "What is the Procurement card for?",
+    "answer": "<strong>Procurement</strong> under Progress is described in the product as a collection of requisitions. The list shows Total Items, On-Site Contact, Requested by, RFQs Linked, and inline <strong>Approve</strong>, <strong>Reject</strong>, and <strong>Assign</strong> actions, plus a Workflow Issues sub-tab for problems raised against the requisition's own approval chain. An approved requisition can have Requests for Quotation (RFQs) linked to it, connecting field-level procurement into the wider purchasing process.",
+    "tags": [
+      "procurement",
+      "requisitions",
+      "rfq",
+      "approve reject assign"
+    ]
+  },
+  {
+    "action": "view",
+    "object": "site photographs card",
+    "scope": "project",
+    "section": "Progress",
+    "question": "What is the Site Photographs card for?",
+    "answer": "<strong>Site Photographs</strong> has two tabs: <strong>Work Logs Site Photograph</strong>, for photos attached to a specific Work Log, and <strong>Site Photograph</strong>, a standalone dated photo/video feed for the plant with Create a post, a people search, and date-range filters (ALL / THIS WEEK / LAST WEEK / LAST MONTH). Use it for a general visual record that does not need a formal Work Log entry.",
+    "tags": [
+      "site photographs",
+      "photo feed",
+      "create a post"
+    ]
+  },
+  {
+    "action": "view",
+    "object": "ready works card",
+    "scope": "project",
+    "section": "Progress",
+    "question": "What is the Ready Works card for?",
+    "answer": "<strong>Ready Works</strong> is a planning view, not a log-entry screen. It uses the same Entity and status filters as Work Logs (Not yet started / Ready to work / In Progress / Completed), then shows Location Types with location counts, drilling into individual Locations. It reflects status already recorded through Work Logs, so a supervisor can plan the next day or week without reading through log history.",
+    "tags": [
+      "ready works",
+      "planning view",
+      "location status"
+    ]
+  },
+  {
+    "action": "troubleshoot",
+    "object": "work logs screen layout differs by project",
+    "scope": "project",
+    "section": "Progress",
+    "question": "Why does the Work Logs screen look different on this plant compared to another project?",
+    "answer": "The drill-down shape of the <strong>Work Logs</strong> card follows a per-project setting, not a fixed layout: <strong>Project Settings → Work Logs Templates</strong> offers 7 options — Work Package to Location Logging, Location to Work Package Logging, Location to Work Package bulk logging, Super Location to Location Logging, Worklogs in Scheduled View, Quantity Work Logging, and Worklogs enable by Certified RFIs — and only one is active per project. The same applies to the Quality tab's logging screen, controlled separately by Project Settings → Quality Work Logs Templates (which offers 2 of those 7 options). Ask a Module Admin or PM which template the project uses if the layout looks unfamiliar.",
+    "tags": [
+      "work logs templates",
+      "different screen",
+      "project settings",
+      "work log layout"
     ]
   },
   {
@@ -3374,7 +3509,7 @@ const QA_FIELDWORKS = [
     "scope": "project",
     "section": "Progress",
     "question": "Can I attach a file or a drawing to a Work Log?",
-    "answer": "Yes. A Work Log can carry an attachment of any file type, or a drawing linked directly from Drawing Management, and both are viewable from a side panel on the log without leaving the screen — useful evidence when a foreman needs to show exactly which sheet or photo the logged work matches.",
+    "answer": "Work Logs support the same \"Connected Drawings\" pattern used elsewhere in Field Works — RFI and Meeting Minutes forms both have a Connect button that links a drawing straight from Drawing Management, alongside the ability to attach media (the Work Logs screen itself has a Media button). This lets a foreman point to exactly which sheet or photo the logged work matches without leaving the screen.",
     "tags": [
       "work log attachment",
       "link drawing to work log",
@@ -4291,11 +4426,26 @@ const QA_PROJECTSETTINGS = [
     "scope": "project",
     "section": "Look, Forms & Field Templates",
     "question": "Where do I set up the templates used for Work Logs and Quality Work Logs on this project?",
-    "answer": "Go to Project Settings → Work Logs Templates for general work log templates, and Project Settings → Quality Work Logs Templates for the quality-specific equivalent. Each controls the layout and fields used when field teams create those logs on this project.",
+    "answer": "Go to <strong>Project Settings → Work Logs Templates</strong> for the Field Works → Progress → Work Logs screen, and <strong>Project Settings → Quality Work Logs Templates</strong> for the Field Works → Quality screen. Work Logs Templates offers 7 logging structures (Work Package to Location Logging, Location to Work Package Logging, Location to Work Package bulk logging, Super Location to Location Logging, Worklogs in Scheduled View, Quantity Work Logging, and Worklogs enable by Certified RFIs); Quality Work Logs Templates offers 2 of those same options (Work Package to Location Logging and Super Location to Location Logging). Each shows a live preview before you Save Changes.",
     "tags": [
       "work logs templates",
       "quality work logs templates",
       "field templates"
+    ]
+  },
+  {
+    "action": "configure",
+    "object": "work log screen difference between projects",
+    "scope": "project",
+    "section": "Look, Forms & Field Templates",
+    "question": "Why does my Work Logs screen look different from another project's?",
+    "answer": "Because Work Logs Templates is a per-project setting, not a fixed layout. Go to <strong>Project Settings → Work Logs Templates</strong> and check which of the 7 options is selected — if one project uses <strong>Work Package to Location Logging</strong> (pick a Work Package, see its Locations) and another uses <strong>Location to Work Package Logging</strong> (pick a Location, see its Work Packages) or a <strong>Scheduled/WBS view</strong>, their Work Logs screens will look and drill down differently even though both are the same feature. The same applies to Quality: check <strong>Project Settings → Quality Work Logs Templates</strong> if the Quality tab's logging screen looks different across projects.",
+    "tags": [
+      "work logs templates",
+      "different layout",
+      "project settings",
+      "work package to location",
+      "location to work package"
     ]
   },
   {
@@ -11829,75 +11979,87 @@ const MODULES = [
       },
       {
         "heading": "Progress",
-        "intro": "<p><strong>Progress</strong> is the default second-level tab on a plant and the busiest screen in the whole product for field staff. Its 18 cards cover nearly everything a site team records in a day: what work was completed, how many hours and quantities went into it, what questions are outstanding, what resources were consumed, what is blocking progress, and what was photographed as evidence. Grouping all of this at the plant level is what allows a <strong>PM</strong> to ask \"how is the Blast Furnace actually going\" and get an answer built from real field data rather than an estimate.</p><p>Three cards form the work-log spine. <strong>Work Logs</strong> is where a foreman or field engineer logs completion of the work at each step during construction, following whichever Work Log Template the project has configured. Where more than a written entry is needed, a Work Log can carry supporting evidence directly: an attachment of any file type, or a drawing linked straight from Drawing Management, both viewable from a side panel on the log without leaving the screen — useful for a foreman pointing to exactly which sheet or photo the completed work matches. <strong>Submitted Work Logs</strong> retains every submission regardless of status, filterable by date range and user and exportable to Excel, so the audit trail survives even when a log is later rejected. <strong>Approve Work Logs</strong> is the supervisor's review queue. <strong>Detailed Work Logs</strong> sits alongside them as a comprehensive table view of all WBS worklogs, for when someone needs the whole picture in one grid.</p><p><strong>Productivity Logs</strong> is the card that ties labor to cost. Every hour worked and every unit of output is logged against a Phase Code, so that productivity tracking and downstream cost reporting reflect real labor spend rather than assumptions. Because rejections are routine in practice — a wrong phase code, a missing quantity, a typo in hours — Arena treats rejection as a first-class event: a rejected log automatically becomes a tracked issue with the approver's comments attached, so the person who logged it knows exactly what to fix.</p><p>The remaining cards cover the rest of daily site reality. <strong>RFI</strong> handles the formal questions that must be answered before work can proceed — a field engineer or foreman creates the RFI when a drawing, spec, or scope item is unclear, it routes to whichever approvers the project's RFI approval workflow names (typically a PM, engineer, or the owner's representative), and once it is live its aging shows up project-wide on the <strong>RFI Approval Delays</strong> dashboard in Data Analytics &amp; Insights, which is the view a PM checks to see which open questions are actually putting the schedule at risk. <strong>Issues</strong> tracks problems raised for RFIs, Submittals, Change Orders, and Custom Forms. <strong>Meeting Minutes</strong> turns decisions into assigned, dated action items. <strong>Site Photographs</strong> and <strong>Ready Works</strong> cover visual evidence and what is genuinely available to progress. <strong>Equipment Logs</strong>, <strong>Material Logs</strong>, <strong>Manpower Logs</strong>, <strong>Labor Logs</strong>, and <strong>Machinery Logs</strong> capture each resource stream separately so cost and productivity questions can be answered per resource type. <strong>Restraints</strong> records physical, legal, or contractual blockers. <strong>Inventory Management</strong> holds the collection of pickup tickets, and <strong>Procurement</strong> the collection of requisitions raised from site.</p>",
+        "intro": "<p><strong>Progress</strong> is the default second-level tab on a plant and the busiest screen in the product for field staff: its 18 cards cover what work was completed, what hours and quantities went into it, what questions are outstanding, what resources were consumed, what is blocking progress, and what was photographed as evidence. A <strong>PM</strong> uses this tab to answer \"how is this plant actually going\" from real field data rather than an estimate.</p><p><strong>Work Logs</strong> and <strong>Productivity Logs</strong> are the two cards people most often mix up, so keep them separate: Work Logs records that a piece of physical work got done (its drill-down structure — Work Package to Location, Location to Work Package, Scheduled/WBS view, and so on — is set once per project in <strong>Project Settings → Work Logs Templates</strong>), while Productivity Logs records the hours and quantities an employee spent against a Phase Code, for productivity and cost reporting. A Work Log moves through <strong>Submitted Work Logs</strong> then <strong>Approve Work Logs</strong>; a Productivity Log moves through its own configurable <strong>Approval Workflow</strong>. Both ultimately roll into the plant's Progress % and into <strong>Detailed Work Logs</strong>, the full exportable table of every WBS log.</p>",
         "definitions": [
           {
             "term": "Work Logs",
-            "definition": "The card for logging completion of the work at each step during construction, recorded against the project's configured Work Log Template (Work Package to Tag, Tag to Work Package, System to Tag, or a Scheduled view). A Work Log can carry an attachment of any file type, or a drawing linked directly from Drawing Management, viewable from a side panel on the log."
+            "definition": "The card where a foreman or field engineer logs completion of physical work at each step of construction. The screen shows an Entity picker, status filters (Not yet started / Ready to work / In Progress / Completed), a logging-mode choice — Single Log, Bulk Log - Work log, Bulk Log - Quantity, Bulk Log - Work Hours — and a location tree that drills down to the individual work package (for example \"EXC-1 | Excavation for footing\"). The exact drill-down shape (Work Package first vs. Location first vs. a scheduled WBS view) follows whichever option is chosen in <strong>Project Settings → Work Logs Templates</strong> for that project. Every log records who logged it, when, and (from the field app) GPS coordinates."
           },
           {
             "term": "Submitted Work Logs",
-            "definition": "The full repository of every work log regardless of status, filterable by date range and by user, with a Download Excel export."
+            "definition": "A day-by-day feed of every Work Log submitted from the field, before approval. Each entry shows the submitting user, the full location path, the work package and activity, the log value, the time and GPS location it was captured, the worked-on date, and whether it came from a Single or Bulk log. Buttons: Reconciliation, Download Excel, Bulk Delete, and Filters (date range, user, entity, location, activity, work package, and status — Not Ready / Ready / In Progress / Completed / Rejected)."
           },
           {
             "term": "Approve Work Logs",
-            "definition": "The review queue where a supervisor or PM approves or rejects work logs submitted by the field."
-          },
-          {
-            "term": "Detailed Work Logs",
-            "definition": "A comprehensive table view of all WBS worklogs — the card to use when scanning or exporting everything logged against the work breakdown at once."
+            "definition": "The supervisor's review queue for Work Logs, with Summary and Bulk Approval views, a To Be Approved / All filter, filters by user/entity/super location/date, and Download Excel. Approving here is what lets a submitted log count toward the plant's Progress % and appear in Detailed Work Logs; a rejected log goes back to the submitter."
           },
           {
             "term": "Productivity Logs",
-            "definition": "The card for logging hours and quantities against Phase Codes, with Create, Logs (review/approve), Approval Workflow, Data Summary, and Issues views."
+            "definition": "A separate card from Work Logs: it records the <strong>hours and quantities</strong> an employee spent against a <strong>Phase Code</strong>, for productivity and cost analysis, rather than the physical completion of a work package. It has its own six views — Create, Logs, Data Summary, Issues, Approval Workflow, and Reconciliation — and its own configurable multi-level approval chain (Approval Workflow → Create Level, each with a Level, Level Description, Approvers, and Workflow Type), separate from the single-step Approve Work Logs screen."
           },
           {
             "term": "Set Phase Codes",
-            "definition": "The first step of creating a productivity log — choosing which phase codes will be available to log against for the selected date range."
+            "definition": "The first step of creating a productivity log — choosing which phase codes will be available to log against for the selected date range, from the Create tab of Productivity Logs."
           },
           {
             "term": "Data Summary",
-            "definition": "The productivity reporting view with three tabs: Timesheets (hours by employee or crew), Quantities (quantity achieved by Phase Code or Location), and Labor Units (the ratio of submitted hours to submitted quantities). Each is exportable to Excel."
+            "definition": "Productivity Logs' reporting view: a weekly grid toggled between Timesheets (hours), Quantities, and Labor Units, grouped by People, Crew, Phase Codes, or Locations Type, with day-by-day and person-level totals."
           },
           {
             "term": "RFI",
-            "definition": "The card to create, update, approve and reject RFI forms — the formal mechanism for asking a designer, engineer, or owner a question when drawings, specs, or scope are unclear. A field engineer or foreman typically creates it; it routes to whichever approvers the project's RFI workflow names; and its open/aging status rolls up project-wide into the RFI Approval Delays dashboard in Data Analytics & Insights."
+            "definition": "Short for Request for Inspection: the card for raising a Work Inspection Request (WIR) before covering up completed work or starting the next activity. The list shows Create, search, To Be Approved / Rejected / ALL counters, Upload Excel, Download Excel, Filters, and Delete All; each WIR shows who raised it and when, its description and quantity, who it is assigned to, and a Start button. The Create RFI form can attach Connected Drawings (linked straight from Drawing Management) and Connected Quality Folders alongside the location, activity, quantity, UOM, and inspection date/time."
           },
           {
             "term": "Issues",
-            "definition": "The card holding issues raised for RFIs, Submittals, Change Orders and Custom Forms. Form Issues come from a form's own fields (Open → Rectified); Form Workflow Issues come from an approval rejection (Open → Closed)."
+            "definition": "Two sub-tabs: Form Issues (problems raised on a form's own content — RFI, Submittals, Change Orders, Custom Forms — tracked Open → Rectified, with an Open/Rectified counter) and Form Workflow Issues (problems raised at a specific approval Level, listed with WFL Number, Level, raised date/time, raised by, image, chat, Assign To, and Due Date)."
           },
           {
             "term": "Site Photographs",
-            "definition": "The card collecting photographic evidence of site conditions and completed work against the plant."
+            "definition": "Two tabs: Work Logs Site Photograph (photos attached to a specific Work Log) and Site Photograph, a standalone dated photo/video feed for the plant with Create a post, a people search, and date-range filters (ALL / THIS WEEK / LAST WEEK / LAST MONTH). Used for a general visual record that does not need a formal Work Log entry."
           },
           {
             "term": "Ready Works",
-            "definition": "The card surfacing work that is ready to be actioned or inspected at the plant."
+            "definition": "A planning view, not a log-entry screen: the same Entity and status filters as Work Logs (Not yet started / Ready to work / In Progress / Completed), then Location Types with location counts, drilling into individual Locations. Shows a supervisor what is genuinely available to start next, based on status already recorded in Work Logs."
           },
           {
             "term": "Meeting Minutes",
-            "definition": "The card for recording what was discussed and decided in a project meeting, with an Actions tab tracking the resulting action items by status, assignee, and due date."
+            "definition": "Two tabs, Meetings and Actions. The Create form pre-fills project details (Customer, Project Title, Manager, Project No.) then takes Meeting Title, Location, Date, the usual location/activity context, Connected Drawings, a Discussion field, and an Actions sub-table (Responsible, Due Date, Action) so decisions turn into assigned, dated follow-ups that stay visible in the card's own Actions tab across meetings."
           },
           {
-            "term": "Equipment / Material / Manpower Logs",
-            "definition": "Three separate cards recording the equipment on site, the material consumed, and the people working — kept distinct so cost and productivity can be analysed per resource stream."
+            "term": "Equipment Logs",
+            "definition": "Logs equipment usage against a specific Work Order (not the WBS tree that Work Logs uses): pick a Work Order and date, then record Equipment / UOM / Quantity from the items available on that order. Feeds work-order cost and progress reporting rather than the plant's Progress %."
           },
           {
-            "term": "Labor Logs / Machinery Logs",
-            "definition": "Two further resource cards covering labor and machinery activity logged at the plant."
+            "term": "Material Logs",
+            "definition": "Logs material consumption against a specific Work Order, in the same pattern as Equipment Logs: Work Order, date, then Material / UOM / Quantity."
+          },
+          {
+            "term": "Manpower Logs",
+            "definition": "Logs labor headcount against a specific Work Order, in the same pattern as Equipment and Material Logs: Work Order, date, then Manpower / Quantity. Distinct from Labor Logs (below), which is tied to a schedule Activity rather than a Work Order, and from Productivity Logs, which tracks hours against a Phase Code."
           },
           {
             "term": "Restraints",
-            "definition": "The card for physical, legal, or contractual blockers preventing work from proceeding, moving through Open → Rectify → QC_Verify with due dates, assignment, Chat, filters, and Excel export."
+            "definition": "Records anything blocking progress on a work package — material shortage, access, a pending design — so it stays visible until closed. The Add Restraint form takes Tree Version, Entity, Super Location, Location, Work Package, Restraint Category, Detailed Description, Priority, an optional file, a Start/End Date, and an assignee. Restraints move through a three-stage loop tracked as Open / Rectified / Verified counters — one stage stricter than the Issues card's Open → Rectified."
           },
           {
             "term": "Inventory Management",
-            "definition": "The card described as a collection of pickup tickets — the record of material actually drawn from stock for work at that plant."
+            "definition": "The card described in-product as a collection of pickup tickets: field teams raise a Site Material Request to pull material from stock, with a Requested By, Required Date, the usual location context, Logistics and Handling Instructions, and a line-item table of Materials/Quantity/UOM. Submitted requests go to approval; rejected ones move to the Rejected Site Material Requests tab."
           },
           {
             "term": "Procurement",
-            "definition": "The card described as a collection of requisitions — the requests raised from the field for material or services."
+            "definition": "The card described in-product as a collection of requisitions: a Requisition list with Total Items, On-Site Contact, Requested by, RFQs Linked, and inline Approve / Reject / Assign actions, plus a Workflow Issues sub-tab for problems raised against the requisition's own approval workflow. This is the field-level entry point into wider purchasing — an approved requisition can have Requests for Quotation (RFQs) linked to it."
+          },
+          {
+            "term": "Labor Logs",
+            "definition": "Records which labor resources worked on a specific schedule Activity on a given date: Tree Version, Entity, Super Location, Activity, Actual Date, then Linked Resources and Additional Resources. Lighter-weight and activity-linked, unlike the Work-Order-linked Manpower Logs and the Phase-Code-linked Productivity Logs."
+          },
+          {
+            "term": "Machinery Logs",
+            "definition": "The same Activity-linked resource log as Labor Logs, scoped to machinery instead of labor. Distinct from Equipment Logs, which logs equipment against a Work Order with quantity and UOM rather than against a schedule Activity — the product has two separate ways to track equipment, and it is easy to confuse the two by name."
+          },
+          {
+            "term": "Detailed Work Logs",
+            "definition": "A single, exportable table of every WBS work-log row for the plant (hundreds of rows is typical), with columns for entity, location, work package, UOM, phase code, revised budgeted vs. actual quantity and hours, planned/forecast/actual dates, schedule ID, and the users with access to that row. Read-only: it is the place to check or export the whole picture, not to log new work."
           }
         ],
         "procedures": [
@@ -11942,9 +12104,10 @@ const MODULES = [
           {
             "title": "Raise and close out a restraint",
             "steps": [
-              "Open the <strong>Restraints</strong> card under Progress and add the restraint, recording whether it is physical, legal, or contractual.",
-              "Assign a due date and owner, and use Chat to coordinate on resolving it.",
-              "Click <strong>Rectify</strong> once the blocker has been addressed, then <strong>QC_Verify</strong> to progress it to closure.",
+              "Open the <strong>Restraints</strong> card under Progress and click <strong>Add Restraint</strong>.",
+              "Fill in Tree Version, Entity, Super Location, Location, Work Package, Restraint Category, Detailed Description, and Priority, and optionally attach a file.",
+              "Set a Start Date/End Date and Assign to the person who will clear it, then Submit.",
+              "Work the item through its <strong>Open / Rectified / Verified</strong> stages, using the <strong>Restraints Rectification</strong> tab to record how each was fixed.",
               "Use filters and <strong>Download Excel</strong> to report on open restraints."
             ]
           }
@@ -13032,11 +13195,11 @@ const MODULES = [
           },
           {
             "term": "Work Logs Templates",
-            "definition": "Defines the layout and fields used when field teams create general Work Logs on this project."
+            "definition": "Sets which of 7 logging structures the <strong>Field Works → Progress → Work Logs</strong> screen uses for this project, under \"Work Log Reference — At what level do you want to log works?\": <strong>Work Package to Location Logging</strong> (status of Locations under each Work Package — the default on most projects), <strong>Location to Work Package Logging</strong> (the reverse: pick a Location, see its Work Packages, grouped by Super Location), <strong>Location to Work Package bulk logging</strong> (the same but with multiple filters, for logging or raising Restraints against several Locations at once), <strong>Super Location to Location Logging</strong>, <strong>Worklogs in Scheduled View</strong> and <strong>Quantity Work Logging</strong> (both present the Tree Version as a WBS/schedule instead of a location tree), and <strong>Worklogs enable by Certified RFIs</strong> (a location only becomes loggable once its RFI is certified). Each option shows a live preview before Save Changes. This is why the Work Logs screen can look structurally different from one project to the next — it is a per-project setting, not a different product version."
           },
           {
             "term": "Quality Work Logs Templates",
-            "definition": "Defines the layout and fields used specifically for Quality Work Logs, separate from general work log templates."
+            "definition": "The same idea as Work Logs Templates, applied to <strong>Field Works → Quality</strong> instead — but with only 2 of the 7 options available: <strong>Work Package to Location Logging</strong> and <strong>Super Location to Location Logging</strong>. Whichever is selected controls how an inspector finds what is ready to inspect on the Quality tab."
           },
           {
             "term": "Project Work Measurement",
