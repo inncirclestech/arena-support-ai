@@ -280,6 +280,52 @@
   .ai-mode-toggle.ready .dot { background: var(--ok); }
   .chat-source-tag.ai-tag { background: var(--accent-tint); color: var(--accent-ink); }
 
+  /* ---------- Welcome / instructions panel (first-time, no history yet) ---------- */
+  .chat-welcome {
+    background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md);
+    padding: 16px 20px; margin: 0 0 16px; box-shadow: var(--shadow-sm);
+  }
+  .chat-welcome-lead { margin: 0 0 10px; font-size: 13.5px; color: var(--ink); font-weight: 600; }
+  .chat-welcome-list { margin: 0 0 10px; padding-left: 20px; font-size: 13px; color: var(--ink-soft); line-height: 1.6; }
+  .chat-welcome-list li { margin-bottom: 4px; }
+  .chat-welcome-list em { font-style: italic; color: var(--ink); }
+  .chat-welcome-note { margin: 0 0 8px; font-size: 12.5px; color: var(--muted); }
+  .chat-welcome-note a { color: var(--accent-hover); }
+  .chat-welcome-first-visit {
+    margin: 0; font-size: 12px; color: var(--muted); padding-top: 8px;
+    border-top: 1px dashed var(--border-soft);
+  }
+
+  /* ---------- AI readiness gate: blocks chatting until ready/opted-in ---------- */
+  .ai-gate {
+    background: var(--accent-tint-soft); border: 1px solid var(--accent-tint);
+    border-radius: var(--radius-md); padding: 14px 18px; margin: 0 0 16px;
+  }
+  .ai-gate[hidden] { display: none; }
+  .ai-gate-progress-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .ai-gate-progress-track {
+    flex: 1; height: 8px; border-radius: 999px; background: var(--border-soft);
+    overflow: hidden;
+  }
+  .ai-gate-progress-fill {
+    height: 100%; width: 0%; background: var(--accent); border-radius: 999px;
+    transition: width 0.2s ease;
+  }
+  .ai-gate-progress-pct {
+    font-family: "IBM Plex Mono", monospace; font-size: 11.5px; font-weight: 600;
+    color: var(--ink-soft); min-width: 34px; text-align: right; flex-shrink: 0;
+  }
+  .ai-gate-text { margin: 0; font-size: 12.5px; color: var(--ink-soft); }
+  .ai-gate-fallback { margin: 0 0 10px; font-size: 13px; color: var(--ink-soft); line-height: 1.55; }
+  .ai-gate-continue-btn {
+    background: var(--surface); color: var(--ink); border: 1.5px solid var(--accent);
+    border-radius: var(--radius-sm); padding: 9px 16px; font-family: inherit;
+    font-weight: 600; font-size: 13px; cursor: pointer; transition: background 0.12s ease;
+  }
+  .ai-gate-continue-btn:hover { background: var(--accent-tint); }
+
+  .chat-suggest-hidden { display: none !important; }
+
   /* ---------- Browse view (secondary) ---------- */
   .browse-shell { width: 100%; margin: 0 auto; padding: 32px 48px 80px; }
   .doc-header { margin-bottom: 18px; }
@@ -574,9 +620,29 @@ Example of the style to use — if a note says "Go to Settings, click Add User, 
   // so the app is always fully usable, just less fluent, without WebLLM.
   let aiStatusListeners = [];
   function notifyAiStatus() { aiStatusListeners.forEach(fn => fn()); }
+  // Latest WebLLM progress report ({progress: 0-1, text}) — kept so any newly
+  // rendered gate/status UI can paint the current percentage immediately
+  // instead of waiting for the next progress tick.
+  let aiLoadProgress = { progress: 0, text: "" };
   const aiLoadPromise = ArenaLLM.isSupported()
-    ? ArenaLLM.load(() => notifyAiStatus()).finally(notifyAiStatus)
+    ? ArenaLLM.load((p) => {
+        if (p) aiLoadProgress = { progress: typeof p.progress === "number" ? p.progress : aiLoadProgress.progress, text: p.text || aiLoadProgress.text };
+        notifyAiStatus();
+      }).finally(notifyAiStatus)
     : Promise.resolve(false);
+
+  // ---------- Chat gate: no chatting until the AI is ready (or the visitor ----------
+  // explicitly opts into the basic keyword-matching fallback). Once unlocked for
+  // a given browser (basic mode chosen, or the model becomes ready), it stays
+  // unlocked for the rest of the session/browser via localStorage.
+  const BASIC_MODE_KEY = "arena-support-ai-basic-mode-v1";
+  function getBasicModeChosen() {
+    try { return localStorage.getItem(BASIC_MODE_KEY) === "1"; } catch (e) { return false; }
+  }
+  function setBasicModeChosen() {
+    try { localStorage.setItem(BASIC_MODE_KEY, "1"); } catch (e) { /* storage unavailable */ }
+  }
+  let chatUnlocked = false;
 
   // ---------- Local per-browser chat history (no login, no server) ----------
   const HISTORY_KEY = "arena-support-ai-history-v1";
@@ -1008,11 +1074,31 @@ Example of the style to use — if a note says "Go to Settings, click Add User, 
           <span class="chat-hero-badge"><span class="status-dot" style="width:6px;height:6px;border-radius:50%;background:var(--ok);display:inline-block"></span>Arena Support AI</span>
           <h1>How can I help?</h1>
           <p>Ask how to do something in Arena — creating records, assigning users, running approvals — and I'll point you to the exact screen and steps. Type, or tap the mic to speak.</p>
+        </div>
+        <div class="chat-welcome" id="chat-welcome">
+          <p class="chat-welcome-lead">This assistant answers "how do I…" questions about Inncircles Arena, using Arena's own documentation — nothing else.</p>
+          <ul class="chat-welcome-list">
+            <li>Ask in plain language, e.g. <em>"How do I create a project?"</em></li>
+            <li>Name the module if you know it — Time Management, Procurement, and so on.</li>
+            <li>Ask one thing at a time, then follow up with the next question.</li>
+            <li>Type your question, or tap the mic to speak it.</li>
+          </ul>
+          <p class="chat-welcome-note">It only knows what's documented — if it can't answer, it'll point you to <a href="mailto:support@inncircles.com">support@inncircles.com</a>.</p>
+          <p class="chat-welcome-first-visit" id="chat-welcome-first-visit">On first visit the AI model downloads once (a few hundred MB) and is cached after that. It works best in the latest Chrome or Edge on a desktop or laptop.</p>
         </div>` : `<div class="chat-history-bar"><button id="clear-history-btn" class="clear-history-btn">Clear conversation</button></div>`}
         <div class="ai-mode-row">
           <span id="ai-status-badge" class="ai-mode-toggle" aria-live="polite">
             <span class="dot"></span><span id="ai-status-label">Starting up…</span>
           </span>
+        </div>
+        <div class="ai-gate" id="ai-gate">
+          <div class="ai-gate-progress-row">
+            <div class="ai-gate-progress-track"><div class="ai-gate-progress-fill" id="ai-gate-progress-fill"></div></div>
+            <span class="ai-gate-progress-pct" id="ai-gate-progress-pct">0%</span>
+          </div>
+          <p class="ai-gate-text" id="ai-gate-text">Loading AI model…</p>
+          <p class="ai-gate-fallback" id="ai-gate-fallback" hidden></p>
+          <button class="ai-gate-continue-btn" id="ai-gate-continue-btn" hidden>Continue with basic answers</button>
         </div>
         <div class="chat-log" id="chat-log"></div>
         <div id="chat-suggest-wrap"></div>
@@ -1036,7 +1122,85 @@ Example of the style to use — if a note says "Go to Settings, click Add User, 
     const clearBtn = document.getElementById("clear-history-btn");
     const aiStatusBadge = document.getElementById("ai-status-badge");
     const aiStatusLabel = document.getElementById("ai-status-label");
+    const gate = document.getElementById("ai-gate");
+    const gateProgressFill = document.getElementById("ai-gate-progress-fill");
+    const gateProgressPct = document.getElementById("ai-gate-progress-pct");
+    const gateText = document.getElementById("ai-gate-text");
+    const gateFallback = document.getElementById("ai-gate-fallback");
+    const gateContinueBtn = document.getElementById("ai-gate-continue-btn");
+    const chatWelcome = document.getElementById("chat-welcome");
 
+    // Returning visitors (existing chat history) or a browser that has already
+    // opted into basic mode shouldn't be re-gated — but they still unlock
+    // automatically, with no extra click, the moment the model becomes ready.
+    if (chatHistory.length > 0 || getBasicModeChosen()) {
+      chatUnlocked = true;
+    }
+
+    function setLocked(locked) {
+      input.disabled = locked;
+      sendBtn.disabled = locked;
+      micBtn.disabled = locked || !(window.SpeechRecognition || window.webkitSpeechRecognition);
+      input.placeholder = locked ? "Getting the AI ready…" : "e.g. How do I assign a user to a project?";
+      suggestWrap.classList.toggle("chat-suggest-hidden", locked);
+    }
+
+    // Paints the gate panel (progress bar / fallback message / continue button)
+    // and flips the locked state of the input row + suggestion chips. This is
+    // the single source of truth for "can the visitor chat yet?".
+    function paintGate() {
+      if (!gate) return; // view was swapped away before this fired
+      const ready = ArenaLLM.isReady();
+      const loading = ArenaLLM.isLoading();
+      const supported = ArenaLLM.isSupported();
+
+      if (ready || chatUnlocked) {
+        // Ready unlocks everyone immediately; chatUnlocked (basic mode chosen,
+        // or returning visitor with history) never re-locks even pre-ready.
+        gate.hidden = true;
+        setLocked(false);
+        if (ready) {
+          gateText.textContent = "";
+        }
+        return;
+      }
+
+      gate.hidden = false;
+
+      if (loading || (supported && !ArenaLLM.failReason())) {
+        // Actively downloading/initializing.
+        setLocked(true);
+        gateFallback.hidden = true;
+        gateContinueBtn.hidden = true;
+        const pct = Math.max(0, Math.min(1, aiLoadProgress.progress || 0));
+        const pctInt = Math.round(pct * 100);
+        gateProgressFill.style.width = pctInt + "%";
+        gateProgressPct.textContent = pctInt + "%";
+        gateText.textContent = "Loading AI model… " + pctInt + "%" + (aiLoadProgress.text ? " — " + aiLoadProgress.text : "");
+      } else {
+        // Not supported, or load failed outright — never leave the visitor
+        // stuck: explain why in plain language and offer the basic fallback.
+        setLocked(true);
+        gateProgressFill.style.width = "0%";
+        gateProgressPct.textContent = "";
+        gateText.textContent = "";
+        gateFallback.hidden = false;
+        gateFallback.textContent = ArenaLLM.failReason() ||
+          "The AI needs WebGPU in a recent Chrome or Edge on desktop, and this page must be opened directly (not embedded inside another site).";
+        gateContinueBtn.hidden = false;
+      }
+    }
+
+    if (gateContinueBtn) {
+      gateContinueBtn.addEventListener("click", () => {
+        setBasicModeChosen();
+        chatUnlocked = true;
+        paintGate();
+        input.focus();
+      });
+    }
+
+    let wasReadyPainted = ArenaLLM.isReady();
     function paintAiStatus() {
       if (!aiStatusBadge) return; // view was swapped away before this fired
       const loading = ArenaLLM.isLoading();
@@ -1044,7 +1208,7 @@ Example of the style to use — if a note says "Go to Settings, click Add User, 
       aiStatusBadge.classList.toggle("loading", loading);
       aiStatusBadge.classList.toggle("ready", ready);
       if (ready) {
-        aiStatusLabel.textContent = "Smart answers ready";
+        aiStatusLabel.textContent = "AI ready — ask your first question";
       } else if (loading) {
         aiStatusLabel.textContent = "Loading AI model (first visit only)…";
       } else if (!ArenaLLM.isSupported()) {
@@ -1052,9 +1216,18 @@ Example of the style to use — if a note says "Go to Settings, click Add User, 
       } else {
         aiStatusLabel.textContent = "Starting up…";
       }
+      paintGate();
+      // Focus the input the moment the model transitions into "ready" — but
+      // only that once, so we don't keep yanking focus back on later status
+      // pings while the visitor is already typing or reading.
+      if (ready && !wasReadyPainted) {
+        input.focus();
+      }
+      wasReadyPainted = ready;
     }
     paintAiStatus();
     aiStatusListeners.push(paintAiStatus);
+    paintGate();
 
     function paintLog() {
       log.innerHTML = chatHistory.map((m, i) => chatMsgHtml(m, i)).join("");
@@ -1276,7 +1449,7 @@ Example of the style to use — if a note says "Go to Settings, click Add User, 
 
     paintLog();
     paintSuggestions();
-    input.focus();
+    if (!input.disabled) input.focus();
   }
 
   // initial render
