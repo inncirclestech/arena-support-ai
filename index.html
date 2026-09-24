@@ -1130,10 +1130,10 @@ Example of the style to use — if a note says "Go to Settings, click Add User, 
     const gateContinueBtn = document.getElementById("ai-gate-continue-btn");
     const chatWelcome = document.getElementById("chat-welcome");
 
-    // Returning visitors (existing chat history) or a browser that has already
-    // opted into basic mode shouldn't be re-gated — but they still unlock
-    // automatically, with no extra click, the moment the model becomes ready.
-    if (chatHistory.length > 0 || getBasicModeChosen()) {
+    // Only an explicit "Continue with basic answers" choice unlocks the chat
+    // before the AI is ready. Returning visitors wait for the model too; it's
+    // cached after the first visit, so that wait is short.
+    if (getBasicModeChosen()) {
       chatUnlocked = true;
     }
 
@@ -1155,8 +1155,8 @@ Example of the style to use — if a note says "Go to Settings, click Add User, 
       const supported = ArenaLLM.isSupported();
 
       if (ready || chatUnlocked) {
-        // Ready unlocks everyone immediately; chatUnlocked (basic mode chosen,
-        // or returning visitor with history) never re-locks even pre-ready.
+        // Ready unlocks everyone immediately; chatUnlocked (basic mode chosen)
+        // never re-locks even pre-ready.
         gate.hidden = true;
         setLocked(false);
         if (ready) {
