@@ -1274,7 +1274,7 @@ const QA_GLOBALDATA = [
   {
     action: "create",
     object: "owner",
-    scope: "global", section: "Owners",
+    scope: "global", section: "Owners: Client & Project-Owner Directory",
     question: "How do I create a new Owner record?",
     answer: "1. Global Data → **Owners** tile → **Create Owner** (split button) → **Create Owner**.\n2. **Step 1 – Basic Details:** enter Owner Name* (required), Short Name, Alias Name, Phone Number*, Email*, Fax Number, Url; expand and fill Primary Address, optionally check **Same as Primary address** for Mailing/Billing Address.\n3. **Step 2 – Locations & Tax Codes:** click **Link Locations** to associate company Locations (with a Default flag), and **Add** under Tax Codes to attach Tax Group/Tax Class/Tax Code combinations.\n4. **Step 3 – Preview:** review all entered data.\n5. Click **Submit** to create the Owner.\n\nTo bulk-create Owners, use **Export**, which also exposes Download/Upload Excel options with a template.",
     tags: ["create owner","register owner","new owner"]
@@ -1282,7 +1282,7 @@ const QA_GLOBALDATA = [
   {
     action: "configure",
     object: "owner hierarchy levels",
-    scope: "global", section: "Owners",
+    scope: "global", section: "Owners: Client & Project-Owner Directory",
     question: "How do I configure Owner hierarchy levels?",
     answer: "1. Owners tile → **Settings** (gear icon, top right).\n2. In \"Owner Settings,\" choose Level 1, Level 2, or Level 3 depending on how granular owner categorization should be company-wide.",
     tags: ["owner settings","owner hierarchy","owner levels"]
@@ -1490,7 +1490,7 @@ const QA_GLOBALDATA = [
   {
     action: "configure",
     object: "currency",
-    scope: "global", section: "Settings",
+    scope: "global", section: "Company-Wide Settings",
     question: "How do I change the company's currency?",
     answer: "1. Global Data → **Settings** → **Currency** (left nav).\n2. Choose the desired currency from the dropdown.\n3. Click **Save Changes**.",
     tags: ["currency","change currency","settings"]
@@ -1498,7 +1498,7 @@ const QA_GLOBALDATA = [
   {
     action: "configure",
     object: "date format",
-    scope: "global", section: "Settings",
+    scope: "global", section: "Company-Wide Settings",
     question: "How do I change the global date format?",
     answer: "1. Settings → **Global Date Format**.\n2. Select **MM-DD-YYYY** or **DD-MM-YYYY**.\n3. Click **Save Changes**.",
     tags: ["date format","global date format"]
@@ -1506,7 +1506,7 @@ const QA_GLOBALDATA = [
   {
     action: "configure",
     object: "mail routing",
-    scope: "global", section: "Settings",
+    scope: "global", section: "Company-Wide Settings",
     question: "How do I route a module's emails through Outlook instead of Gmail?",
     answer: "1. Settings → **Mail Settings**.\n2. Find the module row (e.g. Work Order) and click the **Outlook** radio button in that row.\n3. The change saves immediately per row (ensure Outlook has been connected first via Marketplace).",
     tags: ["mail settings","outlook","gmail routing","outlook gmail settings"]
@@ -1514,7 +1514,7 @@ const QA_GLOBALDATA = [
   {
     action: "define",
     object: "awp toggle",
-    scope: "global", section: "Settings",
+    scope: "global", section: "Company-Wide Settings",
     question: "What is AWP and how do I enable it?",
     answer: "AWP stands for **Advanced Work Packaging**. Per Arena's reference documentation it is controlled by a single toggle under **Global Data → Settings → Enable AWP** — turning it on/off shows or hides the AWP menu for all users. This toggle was not visible in the Settings navigation during review, so it may be feature-gated for your plan; contact your Arena account admin if you don't see it.",
     tags: ["awp","advanced work packaging"]
@@ -1522,7 +1522,7 @@ const QA_GLOBALDATA = [
   {
     action: "configure",
     object: "naming framework",
-    scope: "global", section: "Settings",
+    scope: "global", section: "Company-Wide Settings",
     question: "How do I rename terminology used throughout the app (e.g. call \"Work Package\" something else)?",
     answer: "There are two Naming Framework screens:\n\n1. **Global Data → Construction Type tab → Step 5 (Naming Framework)** — renames Activity/Work-Package/Location-hierarchy terms, scoped per Construction Type.\n2. **Global Data → Settings → Naming Framework** — renames Procurement/Inventory/Roster/Cost terms company-wide.\n\nIn either, edit the **Custom Name** (and optionally **Short Name**) column next to the term you want to relabel, then save.",
     tags: ["naming framework","rename terminology","custom labels","rename terminology custom labels"]
@@ -1578,7 +1578,7 @@ const QA_GLOBALDATA = [
   {
     action: "configure",
     object: "outlook integration",
-    scope: "global", section: "Marketplace & Staged Tables",
+    scope: "global", section: "Integrations: Marketplace & Staged Tables",
     question: "How do I connect Arena to Microsoft Outlook for email?",
     answer: "1. Global Data → **Marketplace** → **Microsoft Outlook**.\n2. Click **Sign in with Microsoft** and grant organization-wide consent (must use a company-domain email, not personal).\n3. Then go to **Settings → Mail Settings** and switch the relevant modules (e.g. Work Order) to **Outlook**.",
     tags: ["connect outlook","marketplace","microsoft integration","connect marketplace"]
@@ -1586,7 +1586,7 @@ const QA_GLOBALDATA = [
   {
     action: "configure",
     object: "staged tables sync",
-    scope: "global", section: "Marketplace & Staged Tables",
+    scope: "global", section: "Integrations: Marketplace & Staged Tables",
     question: "How do I sync external users into Arena via Staged Tables?",
     answer: "1. Connect the source system first: Global Data → **Marketplace** → **Trimble Viewpoint** → enter Hostname, Port Number, Username, Password and Database → **Test Connection and Save**.\n2. Global Data → **Staged Tables** → **View Point** tab → select **Users** in the left nav.\n3. Click **Map Attributes**, choose the Viewpoint column for each Arena field (Employee ID, First Name, Last Name, Phone Number, Email, Craft, Class, Vendor Number), tick **Update after sync?** where Viewpoint should keep overwriting, and Save.\n4. Either set **Auto Sync Criteria** (every 1 to 24 hours, optionally with **Auto create arena records after sync?**), or click **Bulk Create Arena Records** to create records now from the rows your Filters currently show.",
     tags: ["staged tables","sync external data","map attributes","map attributes external data"]
@@ -1594,7 +1594,7 @@ const QA_GLOBALDATA = [
   {
     action: "configure",
     object: "vista integration",
-    scope: "global", section: "Marketplace & Staged Tables",
+    scope: "global", section: "Integrations: Marketplace & Staged Tables",
     question: "How do I connect Arena to Vista?",
     answer: "Vista is Trimble Viewpoint's construction ERP, and in Arena it's the **Trimble Viewpoint** integration. There's no card called \"Vista\".\n1. Go to Global Data → **Marketplace** → **Trimble Viewpoint**.\n2. Enter your Viewpoint database details: **Hostname**, **Port Number**, **Username**, **Password** and **Database**.\n3. Click **Test Connection and Save**.\nOnce connected, Viewpoint data lands in Global Data → **Staged Tables** → **View Point**, where you map it and turn it into Arena records. Usually your IT team or a Global Admin handles this, since it needs Viewpoint database credentials.",
     tags: ["vista","viewpoint vista","connect vista","vista integration","trimble viewpoint","viewpoint connection","erp integration"]
@@ -1602,7 +1602,7 @@ const QA_GLOBALDATA = [
   {
     action: "understand",
     object: "vista data sync",
-    scope: "global", section: "Marketplace & Staged Tables",
+    scope: "global", section: "Integrations: Marketplace & Staged Tables",
     question: "What data does Arena pull from Vista (Trimble Viewpoint)?",
     answer: "Arena can stage 13 kinds of records from Vista, all under Global Data → **Staged Tables** → **View Point**: Users, Projects, Crews, Phase Codes, Customers, Vendors, Owners, Project User Mapping, Project Crew Mapping, Work Order Crew Mapping, GL Codes, Work Orders, and Logs.\n\nData first lands in the staged table, not straight into Arena. You then map each Viewpoint column to an Arena field (**Map Attributes**) and create the records, either automatically on a 1 to 24 hour schedule (**Auto Sync Criteria**) or on demand (**Bulk Create Arena Records**). This keeps Vista as the source of truth for employees, crews, phase codes and GL codes, so field timesheets and cost tracking use the same codes as payroll and accounting.",
     tags: ["vista data","what does vista sync","viewpoint entities","staged tables entities","vista sync","what comes from viewpoint"]
@@ -1610,7 +1610,7 @@ const QA_GLOBALDATA = [
   {
     action: "understand",
     object: "staged tables update after sync",
-    scope: "global", section: "Marketplace & Staged Tables",
+    scope: "global", section: "Integrations: Marketplace & Staged Tables",
     question: "What does 'Update after sync?' mean in Map Attributes?",
     answer: "It's a checkbox on each mapped field. When ticked, every later sync from Viewpoint overwrites that field in Arena, so Vista stays the master for it. When unticked, the value is filled on first creation and then Arena keeps its own copy, so edits made in Arena aren't wiped by the next sync.",
     tags: ["update after sync","map attributes checkbox","overwrite on sync","staged tables mapping"]
@@ -1618,7 +1618,7 @@ const QA_GLOBALDATA = [
   {
     action: "understand",
     object: "soft tech staging",
-    scope: "global", section: "Marketplace & Staged Tables",
+    scope: "global", section: "Integrations: Marketplace & Staged Tables",
     question: "What is the Soft Tech tab in Staged Tables?",
     answer: "Soft Tech is a second, separate staging source, unrelated to Vista/Viewpoint, and it has no Marketplace card. It covers only two things: **Work Orders**, pulled with **Get Data From SoftTech** and **Sync** (fields such as Work No, Agreement No, Agreement Amount, Contract Start/Completion Date, Estimated Cost and Tender Type), and **BOQ**, handled by Excel upload and download. It doesn't have Map Attributes, Auto Sync or Bulk Create.",
     tags: ["soft tech","softtech","staged tables soft tech","get data from softtech","boq staging"]
@@ -9422,8 +9422,8 @@ const MODULES = [
     "qaItems": QA_GLOBALDATA,
     "narrative": [
       {
-        "heading": "How to Use This Guide",
-        "intro": "<p>Global Data is the company-wide administration layer that every project, module, and user in Arena ultimately inherits from. The company profile, currency and date formats, locations, tax settings, vendor roster, user accounts and permission groups, and per-module defaults configured here are not scoped to a single project — they become the shared foundation that every new project draws on when it's created, and that every existing project continues to reference. Because of this, changes made in Global Data tend to have wide, cross-project effects, and gaps left unconfigured here (a missing tax rate, an unregistered vendor, an unset default) tend to surface later as blockers inside individual projects rather than as errors in Global Data itself.</p><p>For a first-time admin setting up a new company account, the sections below are easiest to work through roughly in setup order: Company Details and Business Units first (to establish the org's identity), then Users & Permissions (so the right people can be granted access to configure everything else), then the core reference data — Locations, Tax, Vendors & Subcontractors, UOM & Phase Codes, and Construction Types — and finally the module-specific and supporting configuration (Work Order Management, Cost & Bid Templates, Customer Settings, Settings, Forms & Quickapps, Notifications, Marketplace, Compliance Hub, Measurement Templates, and Owners). See the dedicated Admin Setup Guide module in the sidebar for the full first-time setup checklist and recommended sequencing.</p><p><strong>Who this module is for:</strong> Global Data is, first and foremost, the home of the <strong>Super Admin / Global Admin</strong> — typically one person or a very small group at a construction company (an IT lead, an ERP owner, or a senior operations executive) who is responsible for the company's shared source of truth: its vendor list, its phase codes and cost structure, its tax and location data, and its company-wide user and permission model. This is different from the <strong>PM or Module Manager</strong> personas referenced throughout the rest of this guide, who mostly live inside individual modules or individual projects — a Time Management Lead configuring phase-code mappings for their own project, or an Opportunity Management Admin running that one module's Settings. A PM or Module Manager consumes and, in some cases, locally maps or copies what Global Data provides; the Super Admin is the one who defines and maintains it in the first place. If you are looking for where to configure something that affects only your own project or department, you likely want a module- or project-level Settings screen rather than Global Data itself — but if a piece of reference data seems to be shared identically across every project (a vendor, a phase code, a unit of measure), Global Data is almost always where it actually lives.</p>",
+        "heading": "About Global Data",
+        "intro": "<p>Global Data is Arena’s company-wide administration hub, used by the Super Admin / Global Admin to set up and maintain the shared company data every project and module inherits from. Global Data is the company-wide administration layer that every project, module, and user in Arena ultimately inherits from. The company profile, currency and date formats, locations, tax settings, vendor roster, user accounts and permission groups, and per-module defaults configured here are not scoped to a single project — they become the shared foundation that every new project draws on when it's created, and that every existing project continues to reference. Because of this, changes made in Global Data tend to have wide, cross-project effects, and gaps left unconfigured here (a missing tax rate, an unregistered vendor, an unset default) tend to surface later as blockers inside individual projects rather than as errors in Global Data itself.</p><p>For a first-time admin setting up a new company account, the sections below are easiest to work through roughly in setup order: Company Details and Business Units first (to establish the org's identity), then Users & Permissions (so the right people can be granted access to configure everything else), then the core reference data — Locations, Tax, Vendors & Subcontractors, UOM & Phase Codes, and Construction Types — and finally the module-specific and supporting configuration (Work Order Management, Cost & Bid Templates, Customer Settings, Settings, Forms & Quickapps, Notifications, Marketplace, Compliance Hub, Measurement Templates, and Owners). See the dedicated Admin Setup Guide module in the sidebar for the full first-time setup checklist and recommended sequencing.</p><p><strong>Who this module is for:</strong> Global Data is, first and foremost, the home of the <strong>Super Admin / Global Admin</strong> — typically one person or a very small group at a construction company (an IT lead, an ERP owner, or a senior operations executive) who is responsible for the company's shared source of truth: its vendor list, its phase codes and cost structure, its tax and location data, and its company-wide user and permission model. This is different from the <strong>PM or Module Manager</strong> personas referenced throughout the rest of this guide, who mostly live inside individual modules or individual projects — a Time Management Lead configuring phase-code mappings for their own project, or an Opportunity Management Admin running that one module's Settings. A PM or Module Manager consumes and, in some cases, locally maps or copies what Global Data provides; the Super Admin is the one who defines and maintains it in the first place. If you are looking for where to configure something that affects only your own project or department, you likely want a module- or project-level Settings screen rather than Global Data itself — but if a piece of reference data seems to be shared identically across every project (a vendor, a phase code, a unit of measure), Global Data is almost always where it actually lives.</p>",
         "definitions": [
           {
             "term": "Global Data",
@@ -9434,7 +9434,7 @@ const MODULES = [
       },
       {
         "heading": "Company & Business Units",
-        "intro": "<p>Every generated document a construction company sends out — a purchase order, an RFQ, an invoice, a compliance certificate — needs to carry the company's correct legal name, address, and tax details, and it needs to carry them consistently no matter which project or module produced the document. Getting this right once, centrally, is squarely the job of the <strong>Super Admin / Global Admin</strong>; it is not something a Project Manager or module-level admin should ever need to touch.</p><p>Global Data is Arena's company-wide administration layer: everything defined here — vendors, tax rules, naming conventions, permissions, and so on — is inherited by every project a company creates afterward, so nothing has to be re-entered project by project. The <strong>Company</strong> screen sits at the very top of that hierarchy. It stores the company's own legal and business profile, the information that appears on generated documents, forms, and outgoing communications: legal name, registered address, contact details, tax identifiers, and the company logo.</p><p>Beyond the primary company profile, this area also handles two closely related but distinct concerns. <strong>Subsidiaries</strong> lets a parent company register additional related company profiles, useful for holding companies or multi-entity organizations that run several legally distinct businesses through one Arena account. <strong>Business Units</strong> is a much simpler registry — a flat list of internal divisions or departments (identified by a short code and description) used purely for categorizing operations and reporting, without any of the legal/tax detail that the Company profile carries.</p>",
+        "intro": "<p>This section covers the company’s legal profile and internal business-unit list, set up once by a Super Admin at the very start of onboarding. Every generated document a construction company sends out — a purchase order, an RFQ, an invoice, a compliance certificate — needs to carry the company's correct legal name, address, and tax details, and it needs to carry them consistently no matter which project or module produced the document. Getting this right once, centrally, is squarely the job of the <strong>Super Admin / Global Admin</strong>; it is not something a Project Manager or module-level admin should ever need to touch.</p><p>Global Data is Arena's company-wide administration layer: everything defined here — vendors, tax rules, naming conventions, permissions, and so on — is inherited by every project a company creates afterward, so nothing has to be re-entered project by project. The <strong>Company</strong> screen sits at the very top of that hierarchy. It stores the company's own legal and business profile, the information that appears on generated documents, forms, and outgoing communications: legal name, registered address, contact details, tax identifiers, and the company logo.</p><p>Beyond the primary company profile, this area also handles two closely related but distinct concerns. <strong>Subsidiaries</strong> lets a parent company register additional related company profiles, useful for holding companies or multi-entity organizations that run several legally distinct businesses through one Arena account. <strong>Business Units</strong> is a much simpler registry — a flat list of internal divisions or departments (identified by a short code and description) used purely for categorizing operations and reporting, without any of the legal/tax detail that the Company profile carries.</p>",
         "definitions": [
           {
             "term": "Company Details",
@@ -9477,7 +9477,7 @@ const MODULES = [
       },
       {
         "heading": "Users & Permissions",
-        "intro": "<p>A construction company's workforce is rarely just its own salaried staff — a single job site might mix full-time employees, day laborers hired for a few weeks, and subcontractor crews who need to log time but never need to log into Arena itself. Users & Permissions is where a <strong>Super Admin / Global Admin</strong> (with day-to-day group and roster maintenance often delegated to a Global Data Admin or HR-focused Module Manager) builds and maintains the single company-wide picture of who everyone is and what they're allowed to do — a picture that every project and module then inherits rather than rebuilding its own.</p><p>Users & Permissions is the company's full identity and access-control system: who can log in, what roster-style data is tracked about each person, and what each user or group is allowed to do inside Arena. It's organized around four related but distinct views. <strong>User Accounts</strong> is the login-level directory — actual Arena user accounts, split between Active and Inactive. <strong>Global Rosters</strong> is a much richer, HR-style table that includes both system users and <strong>non-system users</strong> — a distinction worth understanding: non-system users represent temporary or outside workers (e.g. day laborers, subcontractor staff) who need to be tracked for timesheets and crew assignment but who don't get a full Arena login of their own.</p><p><strong>Global Permission</strong> and <strong>User Permission</strong> then handle access control at two different levels of granularity. Global Permission works at the group level — creating named groups like Super Admin, Foreman, or Project Manager, each with its own set of module/action rights, so that adding a person to a group is enough to grant them everything that group allows. User Permission, by contrast, is a read-only lookup — pick any one person and see the full union of everything their group memberships grant them, with each row already checked or unchecked and no way to edit it from that screen. It answers 'what can this specific person do, and which group is responsible for it,' which is invaluable when someone belongs to multiple groups or when access needs auditing, but it is not a way to grant a person rights independent of a group — that still has to happen by editing or adding them to a group in Global Permission.</p><p>Deleting a user is deliberately non-destructive: removing someone from Active Users doesn't erase their record, it moves them to Inactive Users, from which they can later be reactivated (which resends them a registration/password-reset email). This protects historical data — timesheets, approvals, and audit trails tied to that person — from disappearing just because their access was revoked. <strong>Crews</strong>, finally, groups roster members (both system and non-system) into named work teams with a designated Supervisor and Foreman, which is what Field Works and Productivity Logs use for crew-based logging and assignment.</p><p>Crews deserve a specific operational callout for anyone managing labor across multiple job sites: a crew defined here is a company-wide pool that a <strong>Project Manager or Time Management Lead</strong> then copies into their own project via Project Setup → People → Copy Crews from Global Data — it is not a live link. That copy becomes the project's own record from that point forward, so if the Global Data original is later updated (say, a new welder added to the company-wide \"Welding Crew\"), that change will <strong>not</strong> automatically flow through to a project that copied the crew earlier. Companies running crews across many active projects should treat this as an operational habit to manage deliberately — periodically re-copying or manually reconciling a project's crew roster against the Global Data source — rather than assuming the two will ever silently stay in sync.</p>",
+        "intro": "<p>This section covers registering users, building permission groups, and tracking non-system workers on the company-wide roster — Super Admin work that determines who can log in and what they can do. A construction company's workforce is rarely just its own salaried staff — a single job site might mix full-time employees, day laborers hired for a few weeks, and subcontractor crews who need to log time but never need to log into Arena itself. Users & Permissions is where a <strong>Super Admin / Global Admin</strong> (with day-to-day group and roster maintenance often delegated to a Global Data Admin or HR-focused Module Manager) builds and maintains the single company-wide picture of who everyone is and what they're allowed to do — a picture that every project and module then inherits rather than rebuilding its own.</p><p>Users & Permissions is the company's full identity and access-control system: who can log in, what roster-style data is tracked about each person, and what each user or group is allowed to do inside Arena. It's organized around four related but distinct views. <strong>User Accounts</strong> is the login-level directory — actual Arena user accounts, split between Active and Inactive. <strong>Global Rosters</strong> is a much richer, HR-style table that includes both system users and <strong>non-system users</strong> — a distinction worth understanding: non-system users represent temporary or outside workers (e.g. day laborers, subcontractor staff) who need to be tracked for timesheets and crew assignment but who don't get a full Arena login of their own.</p><p><strong>Global Permission</strong> and <strong>User Permission</strong> then handle access control at two different levels of granularity. Global Permission works at the group level — creating named groups like Super Admin, Foreman, or Project Manager, each with its own set of module/action rights, so that adding a person to a group is enough to grant them everything that group allows. User Permission, by contrast, is a read-only lookup — pick any one person and see the full union of everything their group memberships grant them, with each row already checked or unchecked and no way to edit it from that screen. It answers 'what can this specific person do, and which group is responsible for it,' which is invaluable when someone belongs to multiple groups or when access needs auditing, but it is not a way to grant a person rights independent of a group — that still has to happen by editing or adding them to a group in Global Permission.</p><p>Deleting a user is deliberately non-destructive: removing someone from Active Users doesn't erase their record, it moves them to Inactive Users, from which they can later be reactivated (which resends them a registration/password-reset email). This protects historical data — timesheets, approvals, and audit trails tied to that person — from disappearing just because their access was revoked. <strong>Crews</strong>, finally, groups roster members (both system and non-system) into named work teams with a designated Supervisor and Foreman, which is what Field Works and Productivity Logs use for crew-based logging and assignment.</p><p>Crews deserve a specific operational callout for anyone managing labor across multiple job sites: a crew defined here is a company-wide pool that a <strong>Project Manager or Time Management Lead</strong> then copies into their own project via Project Setup → People → Copy Crews from Global Data — it is not a live link. That copy becomes the project's own record from that point forward, so if the Global Data original is later updated (say, a new welder added to the company-wide \"Welding Crew\"), that change will <strong>not</strong> automatically flow through to a project that copied the crew earlier. Companies running crews across many active projects should treat this as an operational habit to manage deliberately — periodically re-copying or manually reconciling a project's crew roster against the Global Data source — rather than assuming the two will ever silently stay in sync.</p>",
         "definitions": [
           {
             "term": "User Accounts (Active / Inactive)",
@@ -9564,7 +9564,7 @@ const MODULES = [
       },
       {
         "heading": "Locations & Tax",
-        "intro": "<p>A construction company operating across multiple states, counties, or countries deals with genuinely different tax jurisdictions on every job — the same \"GST 18\" or \"CGST/SGST\" structure cannot be typed in fresh every time a new project, owner, or vendor needs it. Locations and Tax Configuration are exactly the kind of shared backbone data that belongs with the <strong>Super Admin / Global Admin</strong>: get the jurisdictional structure right once here, and every project, owner, and vendor record that references it inherits a correct, consistent calculation automatically.</p><p>Locations is the central registry of physical addresses used throughout Arena — anywhere the system needs a real-world place, whether that's a material delivery destination, an address linked to an Owner, or a site for jurisdictional tax assignment. Storing locations once, centrally, avoids the same address being retyped (and potentially mistyped) across multiple owners, vendors, and work orders.</p><p><strong>Tax Configuration</strong> lives alongside Locations because tax jurisdiction is so often tied to where work happens. It defines the company's tax structure as a two-level hierarchy: <strong>Tax Groups</strong> (like &quot;GST 18&quot;) each contain one or more individual <strong>Tax Codes</strong> with their own percentages (such as CGST, SGST, ITC, or Freight). This structure is then referenced — not duplicated — by Owners, Locations, Vendors, and Work Orders wherever a tax calculation applies, so a change to a tax percentage in one place propagates everywhere that code is used.</p>",
+        "intro": "<p>This section covers the company’s physical location registry and its tax structure (Tax Groups and Tax Codes), set up by a Super Admin before Owners, Vendors, or Work Orders can reference them. A construction company operating across multiple states, counties, or countries deals with genuinely different tax jurisdictions on every job — the same \"GST 18\" or \"CGST/SGST\" structure cannot be typed in fresh every time a new project, owner, or vendor needs it. Locations and Tax Configuration are exactly the kind of shared backbone data that belongs with the <strong>Super Admin / Global Admin</strong>: get the jurisdictional structure right once here, and every project, owner, and vendor record that references it inherits a correct, consistent calculation automatically.</p><p>Locations is the central registry of physical addresses used throughout Arena — anywhere the system needs a real-world place, whether that's a material delivery destination, an address linked to an Owner, or a site for jurisdictional tax assignment. Storing locations once, centrally, avoids the same address being retyped (and potentially mistyped) across multiple owners, vendors, and work orders.</p><p><strong>Tax Configuration</strong> lives alongside Locations because tax jurisdiction is so often tied to where work happens. It defines the company's tax structure as a two-level hierarchy: <strong>Tax Groups</strong> (like &quot;GST 18&quot;) each contain one or more individual <strong>Tax Codes</strong> with their own percentages (such as CGST, SGST, ITC, or Freight). This structure is then referenced — not duplicated — by Owners, Locations, Vendors, and Work Orders wherever a tax calculation applies, so a change to a tax percentage in one place propagates everywhere that code is used.</p>",
         "definitions": [
           {
             "term": "Location",
@@ -9603,7 +9603,7 @@ const MODULES = [
       },
       {
         "heading": "Vendors & Subcontractors",
-        "intro": "<p>A general contractor or EPC firm running several jobs at once is, in practice, negotiating with the same steel suppliers, equipment rental houses, and specialty subcontractors again and again across different projects — so there is real financial value in the whole company seeing one consistent vendor record, one preferred/blocked status, and one rate card, rather than each project team relying on its own private list of who to call. This is confirmed directly in how Arena is built: <strong>Procurement is a Home-level module that spans every project</strong> (its Requisition Form and RFQ lists show a Project ID/Project Name column that varies row by row across many different projects), and it draws on this exact same Global Data vendor list — there is no separate, project-local vendor directory anywhere in the product. Registering a vendor once here (or via the <strong>\"+ Register Vendors\"</strong> button inside an RFQ, which writes to this same shared pool rather than creating a project-siloed entry) makes that vendor immediately available to every project's procurement activity, with no risk of a Purchasing Coordinator accidentally picking \"the wrong vendor list\" the way they might with Phase Codes.</p><p>Vendors is the company-wide directory of the external material and equipment suppliers a company works with, and it's used far beyond Global Data itself — Procurement and Work Orders both draw on this same list. Maintaining it is normally the job of a <strong>Global Admin or a Procurement Module Admin</strong> with vendor-management rights, while day-to-day, a <strong>Field User or Purchasing Coordinator</strong> simply selects from (or, when needed, registers a new entry into) the vendor list the admin already maintains. Because different companies work with dozens or hundreds of vendors across very different trades, Vendors supports categorization (with the same optional multi-level hierarchy pattern used by Owners), plus preferred/blocked status and a per-vendor rate card so procurement decisions can be made with pricing already on hand rather than requested fresh each time.</p><p>Every vendor record carries two important sub-areas. The <strong>Rate Card</strong> stores the vendor's costs for materials and equipment (with Daily/Weekly/Monthly rate options), which is what lets estimates and work orders pull real pricing instead of guesswork — and it can be bulk-updated via an Excel template rather than edited row by row. The <strong>Ratings Form</strong> is a company-wide, form-builder-style questionnaire used to formally evaluate vendor performance (on criteria like Safety or Quality) — this template is shared across all vendors, so scores are comparable vendor to vendor.</p><p><strong>Sub Contractors</strong> is a parallel, separate registry for subcontracted labor and trade-partner companies, distinguished from Vendors in that it tracks trade partners rather than material/equipment suppliers. Because subcontractors often need to prove compliance credentials (ISO certifications, safety licenses, CIDB registration, and similar), that tracking is handled either through configurable attachment-type fields on the subcontractor's own record (via Settings → Sub Contractor Settings) or, for broader company-wide compliance tracking, through the separate Compliance Hub.</p>",
+        "intro": "<p>This section covers the company-wide directory of material/equipment vendors and subcontractors, maintained by a Super Admin or procurement admin and shared by every project. A general contractor or EPC firm running several jobs at once is, in practice, negotiating with the same steel suppliers, equipment rental houses, and specialty subcontractors again and again across different projects — so there is real financial value in the whole company seeing one consistent vendor record, one preferred/blocked status, and one rate card, rather than each project team relying on its own private list of who to call. This is confirmed directly in how Arena is built: <strong>Procurement is a Home-level module that spans every project</strong> (its Requisition Form and RFQ lists show a Project ID/Project Name column that varies row by row across many different projects), and it draws on this exact same Global Data vendor list — there is no separate, project-local vendor directory anywhere in the product. Registering a vendor once here (or via the <strong>\"+ Register Vendors\"</strong> button inside an RFQ, which writes to this same shared pool rather than creating a project-siloed entry) makes that vendor immediately available to every project's procurement activity, with no risk of a Purchasing Coordinator accidentally picking \"the wrong vendor list\" the way they might with Phase Codes.</p><p>Vendors is the company-wide directory of the external material and equipment suppliers a company works with, and it's used far beyond Global Data itself — Procurement and Work Orders both draw on this same list. Maintaining it is normally the job of a <strong>Global Admin or a Procurement Module Admin</strong> with vendor-management rights, while day-to-day, a <strong>Field User or Purchasing Coordinator</strong> simply selects from (or, when needed, registers a new entry into) the vendor list the admin already maintains. Because different companies work with dozens or hundreds of vendors across very different trades, Vendors supports categorization (with the same optional multi-level hierarchy pattern used by Owners), plus preferred/blocked status and a per-vendor rate card so procurement decisions can be made with pricing already on hand rather than requested fresh each time.</p><p>Every vendor record carries two important sub-areas. The <strong>Rate Card</strong> stores the vendor's costs for materials and equipment (with Daily/Weekly/Monthly rate options), which is what lets estimates and work orders pull real pricing instead of guesswork — and it can be bulk-updated via an Excel template rather than edited row by row. The <strong>Ratings Form</strong> is a company-wide, form-builder-style questionnaire used to formally evaluate vendor performance (on criteria like Safety or Quality) — this template is shared across all vendors, so scores are comparable vendor to vendor.</p><p><strong>Sub Contractors</strong> is a parallel, separate registry for subcontracted labor and trade-partner companies, distinguished from Vendors in that it tracks trade partners rather than material/equipment suppliers. Because subcontractors often need to prove compliance credentials (ISO certifications, safety licenses, CIDB registration, and similar), that tracking is handled either through configurable attachment-type fields on the subcontractor's own record (via Settings → Sub Contractor Settings) or, for broader company-wide compliance tracking, through the separate Compliance Hub.</p>",
         "definitions": [
           {
             "term": "Vendor",
@@ -9692,7 +9692,7 @@ const MODULES = [
       },
       {
         "heading": "UOM & Phase Codes",
-        "intro": "<p>Two of the most common sources of costly confusion on a multi-project construction company are (1) different teams measuring the same material in different units, and (2) different projects using inconsistent cost/activity codes that don't roll up cleanly into company-wide reporting. Global Data solves both at once, and it is squarely the responsibility of the <strong>Super Admin / Global Admin</strong> (a Cost/Estimating Module Manager may be delegated day-to-day upkeep of the Phase Code list itself) to keep this reference data clean, because a huge amount of downstream reporting depends on it.</p><p>UOM, Phasecode & GL Codes is Arena's shared reference-data library for quantity, cost, and accounting classification, consumed by Estimating, Work Orders, Procurement, and Cost modules alike. It brings together four related but separate concepts. <strong>Units of Measure (UOMs)</strong> are the actual units things are counted in — Kg, Litres, Sqm, and so on — and grouping them into <strong>UOM Groups</strong> (Area, Length, Mass, Volume, Weight) is what enables automatic <strong>UOM Conversions</strong> between compatible units, a read-only table generated from the conversion factors you define at the group level.</p><p><strong>Phase Codes</strong> classify cost and activity type across the company — tagged as Direct, Indirect, Non-Productive, or Change Order, and further associated with one or more Cost Types (Material, Labor, Equipment, Subcontractors, Other Expenses). This is the same Phase Code table that Productivity Logs, Cost Breakdown Structures, and Bid Templates all reference, which is why getting phase codes set up correctly here has ripple effects across the rest of the system. <strong>Repair Types</strong> and <strong>GL Codes</strong> round out this area with simpler, single-purpose lists: Repair Types classify equipment/work-order repairs, and GL Codes support general-ledger/accounting integration.</p><p>Two operational details are worth calling out for anyone setting up a new project's time-tracking or estimating. First, the <strong>Measurement Templates</strong> tile (covered in its own section below) is closely related to UOM even though it lives as a separate top-level tile: a template like \"LBD\" (Length × Breadth × Depth × Nos) is a reusable formula that a project uses at the Estimate/BOQ stage to auto-calculate a quantity, and the resulting figure is expressed in one of this same master UOM list's units. Second, a Project's own <strong>Project Setup → Phase Codes</strong> screen is not a second, independent phase-code list — it is a mapping/subset-selector over this exact 963-row company-wide list (the same list is also reachable a second way, via Global Data → Cost → Cost Breakdown Structure → Phase Codes, which is not a duplicate, just another doorway into identical data). A <strong>Time Management Lead or Project Manager</strong> uses that project screen to check \"Timesheet Management\" per phase code, which decides which of the company-wide codes that specific project's field staff will be able to pick from when logging time — filtered further by which Cost Type(s) (Material, Equipment, Labor, and so on) that project's own Settings has enabled for mapping. Skipping this step is a common and easy-to-miss operational gap: if no phase codes have been mapped for a project, its field staff will find an empty Phase Code list when they try to log time against that specific project, even though the full company-wide list of 963 codes exists and is populated in Global Data.</p>",
+        "intro": "<p>This section covers the shared reference data for quantities and cost classification — Units of Measure, Phase Codes, Repair Types, and GL Codes — set up by a Super Admin and used across Estimating, Work Orders, Procurement, and Cost modules. Two of the most common sources of costly confusion on a multi-project construction company are (1) different teams measuring the same material in different units, and (2) different projects using inconsistent cost/activity codes that don't roll up cleanly into company-wide reporting. Global Data solves both at once, and it is squarely the responsibility of the <strong>Super Admin / Global Admin</strong> (a Cost/Estimating Module Manager may be delegated day-to-day upkeep of the Phase Code list itself) to keep this reference data clean, because a huge amount of downstream reporting depends on it.</p><p>UOM, Phasecode & GL Codes is Arena's shared reference-data library for quantity, cost, and accounting classification, consumed by Estimating, Work Orders, Procurement, and Cost modules alike. It brings together four related but separate concepts. <strong>Units of Measure (UOMs)</strong> are the actual units things are counted in — Kg, Litres, Sqm, and so on — and grouping them into <strong>UOM Groups</strong> (Area, Length, Mass, Volume, Weight) is what enables automatic <strong>UOM Conversions</strong> between compatible units, a read-only table generated from the conversion factors you define at the group level.</p><p><strong>Phase Codes</strong> classify cost and activity type across the company — tagged as Direct, Indirect, Non-Productive, or Change Order, and further associated with one or more Cost Types (Material, Labor, Equipment, Subcontractors, Other Expenses). This is the same Phase Code table that Productivity Logs, Cost Breakdown Structures, and Bid Templates all reference, which is why getting phase codes set up correctly here has ripple effects across the rest of the system. <strong>Repair Types</strong> and <strong>GL Codes</strong> round out this area with simpler, single-purpose lists: Repair Types classify equipment/work-order repairs, and GL Codes support general-ledger/accounting integration.</p><p>Two operational details are worth calling out for anyone setting up a new project's time-tracking or estimating. First, the <strong>Measurement Templates</strong> tile (covered in its own section below) is closely related to UOM even though it lives as a separate top-level tile: a template like \"LBD\" (Length × Breadth × Depth × Nos) is a reusable formula that a project uses at the Estimate/BOQ stage to auto-calculate a quantity, and the resulting figure is expressed in one of this same master UOM list's units. Second, a Project's own <strong>Project Setup → Phase Codes</strong> screen is not a second, independent phase-code list — it is a mapping/subset-selector over this exact 963-row company-wide list (the same list is also reachable a second way, via Global Data → Cost → Cost Breakdown Structure → Phase Codes, which is not a duplicate, just another doorway into identical data). A <strong>Time Management Lead or Project Manager</strong> uses that project screen to check \"Timesheet Management\" per phase code, which decides which of the company-wide codes that specific project's field staff will be able to pick from when logging time — filtered further by which Cost Type(s) (Material, Equipment, Labor, and so on) that project's own Settings has enabled for mapping. Skipping this step is a common and easy-to-miss operational gap: if no phase codes have been mapped for a project, its field staff will find an empty Phase Code list when they try to log time against that specific project, even though the full company-wide list of 963 codes exists and is populated in Global Data.</p>",
         "definitions": [
           {
             "term": "UOM (Unit of Measure)",
@@ -9742,7 +9742,7 @@ const MODULES = [
       },
       {
         "heading": "Construction Types",
-        "intro": "<p>Whether a job is a highway widening, a residential tower, or a metro line changes almost everything about how that job should be planned and tracked — the location hierarchy, the catalog of work activities, and the sequence work happens in are all fundamentally different between a \"Roads\" job and a \"Residential\" job. Construction Types is where a <strong>Super Admin / Global Admin</strong> (often working with a senior estimating or operations lead, since this configuration is deep and technical) builds that vocabulary once per category, so every future project of that type inherits a ready-made structure instead of starting from a blank page.</p><p>Every project in Arena is tagged with a <strong>Construction Type</strong> — a category like Infrastructure, Residential, or Roads that describes the kind of work being built — and this classification does more than label the project: it scopes the entire work-breakdown-structure library the project will use. The <strong>Construction Types</strong> tile is the simple master list of these category names, but the real configuration work happens in the separate <strong>Construction Type</strong> tab, a ten-step pipeline for building out everything from location hierarchies down to how quantities get measured, all scoped to whichever Construction Type is selected from its dropdown.</p><p>This ten-step pipeline is arguably the deepest and most structurally important configuration in all of Global Data, because it defines the vocabulary and logic every project of that type inherits: the physical location hierarchy (Global Work Areas), the actual catalog of work (Global Work Packages, organized under Activities), the order work must happen in (Activity Sequence Templates), how materials and labor map onto that work for estimation, what everything is called (Naming Framework), interoperability with Primavera P6, bulk data loading, extensible metadata, and finally linking the right forms and measurement templates to each work package. Because a Construction Type's configuration is expensive to build from scratch, the <strong>Copy</strong> action on the Construction Types tile lets a company clone an existing type's entire setup into a new named type rather than starting over — and once any project actually uses a Construction Type, that type can no longer be edited or deleted, since doing so would retroactively change the meaning of live project data.</p><p>Worth noting for anyone creating a new project: unlike Phase Codes or Crews, Construction Type is a simple, one-way reference with no mapping or copying step involved. A Project Manager creating a new project in the <strong>Create Project</strong> dialog simply picks one value from this Global Data list at creation time — there is no independent, project-specific Construction Type, and no dropdown anywhere else in the product offering a Global-vs-Project choice for this field the way Phase Codes has. The only real risk is picking the wrong entry from what can become a long, mixed list over time (generic categories like \"Residential\" sitting alongside highly specific, possibly one-off entries created for a single past project), which is a good reason for the Global Admin to periodically clean up this list.</p>",
+        "intro": "<p>This section covers the master list of project categories and the deeper work-breakdown-structure pipeline built for each one, configured by a Super Admin before projects of that type can be created. Whether a job is a highway widening, a residential tower, or a metro line changes almost everything about how that job should be planned and tracked — the location hierarchy, the catalog of work activities, and the sequence work happens in are all fundamentally different between a \"Roads\" job and a \"Residential\" job. Construction Types is where a <strong>Super Admin / Global Admin</strong> (often working with a senior estimating or operations lead, since this configuration is deep and technical) builds that vocabulary once per category, so every future project of that type inherits a ready-made structure instead of starting from a blank page.</p><p>Every project in Arena is tagged with a <strong>Construction Type</strong> — a category like Infrastructure, Residential, or Roads that describes the kind of work being built — and this classification does more than label the project: it scopes the entire work-breakdown-structure library the project will use. The <strong>Construction Types</strong> tile is the simple master list of these category names, but the real configuration work happens in the separate <strong>Construction Type</strong> tab, a ten-step pipeline for building out everything from location hierarchies down to how quantities get measured, all scoped to whichever Construction Type is selected from its dropdown.</p><p>This ten-step pipeline is arguably the deepest and most structurally important configuration in all of Global Data, because it defines the vocabulary and logic every project of that type inherits: the physical location hierarchy (Global Work Areas), the actual catalog of work (Global Work Packages, organized under Activities), the order work must happen in (Activity Sequence Templates), how materials and labor map onto that work for estimation, what everything is called (Naming Framework), interoperability with Primavera P6, bulk data loading, extensible metadata, and finally linking the right forms and measurement templates to each work package. Because a Construction Type's configuration is expensive to build from scratch, the <strong>Copy</strong> action on the Construction Types tile lets a company clone an existing type's entire setup into a new named type rather than starting over — and once any project actually uses a Construction Type, that type can no longer be edited or deleted, since doing so would retroactively change the meaning of live project data.</p><p>Worth noting for anyone creating a new project: unlike Phase Codes or Crews, Construction Type is a simple, one-way reference with no mapping or copying step involved. A Project Manager creating a new project in the <strong>Create Project</strong> dialog simply picks one value from this Global Data list at creation time — there is no independent, project-specific Construction Type, and no dropdown anywhere else in the product offering a Global-vs-Project choice for this field the way Phase Codes has. The only real risk is picking the wrong entry from what can become a long, mixed list over time (generic categories like \"Residential\" sitting alongside highly specific, possibly one-off entries created for a single past project), which is a good reason for the Global Admin to periodically clean up this list.</p>",
         "definitions": [
           {
             "term": "Construction Types (tile)",
@@ -9815,7 +9815,7 @@ const MODULES = [
       },
       {
         "heading": "Work Order Management",
-        "intro": "<p>A work order — whether it's a rental contract for a crane, a materials delivery, or a dispatched repair crew — carries its own team, its own timesheets, its own cost, and its own paperwork, which is why Arena treats each one almost like a mini-project once it's opened. A <strong>Work Order Management Admin</strong> (an admin scoped to just this module, distinct from a Procurement or Equipment Management admin) sets up the templates and categorization every project will use to raise these; day-to-day, a <strong>PM or field End User</strong> simply opens a Work Order Contract of the type the admin already defined and works through its Team, Timesheets, Equipment, Inventory, Procurement, and Expense tabs.</p><p>Work Order Management configures the templates and categorization used to raise Work Orders across every project — covering Equipment, Material, and Service work — and hosts the reusable library of Work Order Contracts that projects draw from. A work order is, in effect, a mini-project of its own once opened: an individual record carries tabs for Team, Timesheets, Equipment, Inventory, Procurement, Expense, Schedule, Communication, Documents, and Drawings, so all the activity and cost tied to a specific piece of contracted or dispatched work stays organized under one roof.</p><p>Before any work order contract can be created, the company needs at least one <strong>Work Order Type</strong> defined — this simple classification (Service, Equipment, or Material) determines what kind of work the contract represents and shapes which fields and tabs are relevant. Access to Work Orders is controlled separately through this module's own Users and Permissions screen, letting a company restrict who can create, view, or act on work orders independent of broader company-wide permission groups.</p>",
+        "intro": "<p>This section covers the company-wide setup for Work Orders — Work Order Types and the Work Order Contract library — configured by a Super Admin or Work Order Admin. A work order — whether it's a rental contract for a crane, a materials delivery, or a dispatched repair crew — carries its own team, its own timesheets, its own cost, and its own paperwork, which is why Arena treats each one almost like a mini-project once it's opened. A <strong>Work Order Management Admin</strong> (an admin scoped to just this module, distinct from a Procurement or Equipment Management admin) sets up the templates and categorization every project will use to raise these; day-to-day, a <strong>PM or field End User</strong> simply opens a Work Order Contract of the type the admin already defined and works through its Team, Timesheets, Equipment, Inventory, Procurement, and Expense tabs.</p><p>Work Order Management configures the templates and categorization used to raise Work Orders across every project — covering Equipment, Material, and Service work — and hosts the reusable library of Work Order Contracts that projects draw from. A work order is, in effect, a mini-project of its own once opened: an individual record carries tabs for Team, Timesheets, Equipment, Inventory, Procurement, Expense, Schedule, Communication, Documents, and Drawings, so all the activity and cost tied to a specific piece of contracted or dispatched work stays organized under one roof.</p><p>Before any work order contract can be created, the company needs at least one <strong>Work Order Type</strong> defined — this simple classification (Service, Equipment, or Material) determines what kind of work the contract represents and shapes which fields and tabs are relevant. Access to Work Orders is controlled separately through this module's own Users and Permissions screen, letting a company restrict who can create, view, or act on work orders independent of broader company-wide permission groups.</p>",
         "definitions": [
           {
             "term": "Work Order Type",
@@ -9858,7 +9858,7 @@ const MODULES = [
       },
       {
         "heading": "Cost & Bid Templates",
-        "intro": "<p>When every estimator on a bid team is free to type their own description for the same line item — \"Ready Mix Concrete, M25 grade\" one way, \"M25 RMC\" another — bids stop being comparable across projects, and cost roll-ups start hiding real discrepancies inside inconsistent naming. A <strong>Cost/Estimating Admin or Global Admin</strong> solves this by building the company's cost taxonomy and reusable line-item catalog once, centrally; day-to-day, an <strong>estimator (End User)</strong> just selects from the standardized catalog the admin has already built, rather than typing a description from scratch.</p><p>This area defines the company's cost classification taxonomy and reusable cost structures used across estimating, budgeting, and cost tracking. <strong>Cost Type</strong> starts with a fixed set of system categories (Material, Equipment, Labor, Unit Rate, Sub Contractor) but lets a company extend it with custom types — BOQ's, Freight Charges, Fuel & Gas — for costs that don't map cleanly onto the built-in categories. <strong>Cost Breakdown Structure (CBS)</strong> builds on top of Phase Codes (the same table shared with UOM/Phasecode & GL Codes) to assemble named, reusable templates that represent how a project's costs should be organized, with one template markable as the company Default so new projects have a sensible starting point.</p><p><strong>Bid Templates</strong> serves a related but separate purpose: it's a master catalog of estimate/bid line items — an Item Description paired with its Unit of Measure — that bid and estimate forms can pull from directly. The goal is consistency: rather than every estimator typing their own description for &quot;Ready Mix Concrete, M25 grade,&quot; everyone selects from the same standardized catalog, keeping bids comparable across projects and estimators.</p><p>Cost Breakdown Structure deserves a specific mention here because it is not a separate cost dataset — as covered in the UOM & Phase Codes section above, its Phase Codes sub-tab is the identical 963-row company-wide Phase Code list, just reached through the Cost menu instead of UOM/Phasecode & GL Codes. A change a Global Admin makes to a phase code's Cost Type tag is visible everywhere that phase code is referenced, including in every project's Cost Tracking rollups — which is exactly why this reference data has a wide blast radius and is worth an admin's care rather than ad hoc edits.</p>",
+        "intro": "<p>This section covers the company’s cost classification taxonomy and reusable bid/estimate line items, maintained by a Super Admin or estimating lead so bids and cost roll-ups stay consistent across projects. When every estimator on a bid team is free to type their own description for the same line item — \"Ready Mix Concrete, M25 grade\" one way, \"M25 RMC\" another — bids stop being comparable across projects, and cost roll-ups start hiding real discrepancies inside inconsistent naming. A <strong>Cost/Estimating Admin or Global Admin</strong> solves this by building the company's cost taxonomy and reusable line-item catalog once, centrally; day-to-day, an <strong>estimator (End User)</strong> just selects from the standardized catalog the admin has already built, rather than typing a description from scratch.</p><p>This area defines the company's cost classification taxonomy and reusable cost structures used across estimating, budgeting, and cost tracking. <strong>Cost Type</strong> starts with a fixed set of system categories (Material, Equipment, Labor, Unit Rate, Sub Contractor) but lets a company extend it with custom types — BOQ's, Freight Charges, Fuel & Gas — for costs that don't map cleanly onto the built-in categories. <strong>Cost Breakdown Structure (CBS)</strong> builds on top of Phase Codes (the same table shared with UOM/Phasecode & GL Codes) to assemble named, reusable templates that represent how a project's costs should be organized, with one template markable as the company Default so new projects have a sensible starting point.</p><p><strong>Bid Templates</strong> serves a related but separate purpose: it's a master catalog of estimate/bid line items — an Item Description paired with its Unit of Measure — that bid and estimate forms can pull from directly. The goal is consistency: rather than every estimator typing their own description for &quot;Ready Mix Concrete, M25 grade,&quot; everyone selects from the same standardized catalog, keeping bids comparable across projects and estimators.</p><p>Cost Breakdown Structure deserves a specific mention here because it is not a separate cost dataset — as covered in the UOM & Phase Codes section above, its Phase Codes sub-tab is the identical 963-row company-wide Phase Code list, just reached through the Cost menu instead of UOM/Phasecode & GL Codes. A change a Global Admin makes to a phase code's Cost Type tag is visible everywhere that phase code is referenced, including in every project's Cost Tracking rollups — which is exactly why this reference data has a wide blast radius and is worth an admin's care rather than ad hoc edits.</p>",
         "definitions": [
           {
             "term": "Cost Type",
@@ -9902,7 +9902,7 @@ const MODULES = [
       },
       {
         "heading": "Customer Settings",
-        "intro": "<p>Sales and business-development data deserves the same structured discipline construction companies already apply to safety and quality sign-offs — a customer or opportunity record shouldn't become official until the right people have reviewed it. Customer Settings is where a <strong>Global Admin or Opportunity Management Admin</strong> defines both what data is captured about a customer and the approval chain that record must pass through, which then governs the behavior every BD End User experiences inside Opportunity Management itself (see the Opportunity Management module for how that pipeline is used day to day).</p><p>Customer (Opportunity Customer Settings) configures the data model behind the customer/lead-management side of the Opportunities and Proposal pipeline. It defines what information is captured about a Customer and their individual Contacts — using the same Standard Fields + Configurable Fields builder pattern found elsewhere in Global Data — and, importantly, sets up a formal multi-level <strong>Approval Workflow</strong> that customer and opportunity records can be routed through before they're finalized. This gives sales and business-development processes the same kind of structured sign-off that Arena applies to safety, quality, and forms elsewhere in the product.</p>",
+        "intro": "<p>This section covers the data model and approval workflow for customer and opportunity records, configured by a Global Admin or Opportunity Management Admin and consumed by the Opportunity Management module. Sales and business-development data deserves the same structured discipline construction companies already apply to safety and quality sign-offs — a customer or opportunity record shouldn't become official until the right people have reviewed it. Customer Settings is where a <strong>Global Admin or Opportunity Management Admin</strong> defines both what data is captured about a customer and the approval chain that record must pass through, which then governs the behavior every BD End User experiences inside Opportunity Management itself (see the Opportunity Management module for how that pipeline is used day to day).</p><p>Customer (Opportunity Customer Settings) configures the data model behind the customer/lead-management side of the Opportunities and Proposal pipeline. It defines what information is captured about a Customer and their individual Contacts — using the same Standard Fields + Configurable Fields builder pattern found elsewhere in Global Data — and, importantly, sets up a formal multi-level <strong>Approval Workflow</strong> that customer and opportunity records can be routed through before they're finalized. This gives sales and business-development processes the same kind of structured sign-off that Arena applies to safety, quality, and forms elsewhere in the product.</p>",
         "definitions": [
           {
             "term": "Customer (Standard/Configurable Fields)",
@@ -9929,8 +9929,8 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Settings",
-        "intro": "<p>Not every company-wide preference belongs neatly inside one functional tile — a currency format, a mail-routing rule, or a company holiday calendar affects everything at once rather than one specific area, and that is exactly what this catch-all Settings hub is for. It is, almost without exception, <strong>Super Admin / Global Admin</strong> territory: a Project Manager or module-level admin will rarely if ever need to open these screens, since the choices made here ripple across every project and every module company-wide rather than affecting their own scope of work.</p><p>Settings is Global Data's catch-all configuration hub — a large left-hand navigation of company-wide preferences that don't belong to any one functional tile, from currency and date formats to mail routing, holidays, and keyboard shortcuts. Rather than scattering these choices across the modules they affect, Arena centralizes them here so an admin has one place to check when something needs to change company-wide.</p><p>A handful of these screens are worth calling out specifically because they follow a recurring builder pattern also seen elsewhere in Global Data (Owner, Customer, Roster): a fixed set of Standard Fields plus an extensible list of Configurable Fields, each addable via Add Field with a chosen data type, a Required toggle, and a Show on cards toggle. This pattern shows up for Roster Settings, the Owner registration form, and Sub Contractor Settings (notably used there for certification attachments like ISO 9001 or CIDB). Two Naming Framework screens exist and are easy to confuse: the Global Settings version here renames Procurement/Inventory/Roster/Cost terminology company-wide, while a separate, per-Construction-Type Naming Framework (Step 5 of the Construction Type pipeline) renames Activity/Work-Package/Location terms scoped to one construction type. Finally, note that a couple of documented items — Test Emails and Enable AWP (Advanced Work Packaging) — were not observed in the live navigation during review, suggesting they may be feature-flagged per company or plan.</p>",
+        "heading": "Company-Wide Settings",
+        "intro": "<p>This section covers company-wide preferences that don’t belong to one specific tile — currency, date format, mail routing, naming, and more — configured by a Super Admin. Not every company-wide preference belongs neatly inside one functional tile — a currency format, a mail-routing rule, or a company holiday calendar affects everything at once rather than one specific area, and that is exactly what this catch-all Settings hub is for. It is, almost without exception, <strong>Super Admin / Global Admin</strong> territory: a Project Manager or module-level admin will rarely if ever need to open these screens, since the choices made here ripple across every project and every module company-wide rather than affecting their own scope of work.</p><p>Settings is Global Data's catch-all configuration hub — a large left-hand navigation of company-wide preferences that don't belong to any one functional tile, from currency and date formats to mail routing, holidays, and keyboard shortcuts. Rather than scattering these choices across the modules they affect, Arena centralizes them here so an admin has one place to check when something needs to change company-wide.</p><p>A handful of these screens are worth calling out specifically because they follow a recurring builder pattern also seen elsewhere in Global Data (Owner, Customer, Roster): a fixed set of Standard Fields plus an extensible list of Configurable Fields, each addable via Add Field with a chosen data type, a Required toggle, and a Show on cards toggle. This pattern shows up for Roster Settings, the Owner registration form, and Sub Contractor Settings (notably used there for certification attachments like ISO 9001 or CIDB). Two Naming Framework screens exist and are easy to confuse: the Global Settings version here renames Procurement/Inventory/Roster/Cost terminology company-wide, while a separate, per-Construction-Type Naming Framework (Step 5 of the Construction Type pipeline) renames Activity/Work-Package/Location terms scoped to one construction type. Finally, note that a couple of documented items — Test Emails and Enable AWP (Advanced Work Packaging) — were not observed in the live navigation during review, suggesting they may be feature-flagged per company or plan.</p>",
         "definitions": [
           {
             "term": "Roster Settings",
@@ -10002,7 +10002,7 @@ const MODULES = [
       },
       {
         "heading": "Forms & Quickapps",
-        "intro": "<p>An RFI, a Change Order, or a Transmittal should look and behave the same way whether it's raised on a highway job in one state or a commercial build in another — otherwise every project team ends up reinventing its own paperwork, and nothing rolls up cleanly for the company. A <strong>Global Admin or a Documents/Forms Module Manager</strong> builds these templates and folder structures once here; a <strong>Project Manager or End User</strong> then simply selects from what's already available whenever a form needs to be raised on their own project.</p><p>This area houses Arena's template library for standard construction documents and workflow forms, organized by functional domain across tabs like Construction Forms, Work Order Forms, Procurement, Inventory Forms, Project Forms, Drawing Management Forms, Cost, and Invoice Forms. Rather than every project designing its own RFI or Change Order layout from scratch, a form type's field-by-field structure is built once here as a <strong>Template</strong>, and every project then simply selects from the available templates when a form of that type is raised.</p><p><strong>Document Management</strong>, despite sitting in the same general area, solves a different problem: it defines the standard <strong>folder structure</strong> a new project's document/drawing space starts with (for example, an FEL-1 template might pre-create Civil, Mechanical, Structural, Architectural, Instrumentation, and Process Controls folders). This gives every project the same predictable taxonomy on day one instead of each project team inventing their own filing scheme. <strong>Quickapps</strong>, meanwhile, addresses a more ad-hoc need: it lets a company build lightweight custom mini-apps (&quot;Quick Apps&quot;) for field data capture that doesn't fit neatly into Arena's standard form types, and separately hosts <strong>Standard Tables</strong> — simple reusable reference tables shared across projects.</p>",
+        "intro": "<p>This section covers the template library for standard construction documents, project document-folder structures, and custom mini-apps, maintained by a Super Admin so every project starts from the same paperwork. An RFI, a Change Order, or a Transmittal should look and behave the same way whether it's raised on a highway job in one state or a commercial build in another — otherwise every project team ends up reinventing its own paperwork, and nothing rolls up cleanly for the company. A <strong>Global Admin or a Documents/Forms Module Manager</strong> builds these templates and folder structures once here; a <strong>Project Manager or End User</strong> then simply selects from what's already available whenever a form needs to be raised on their own project.</p><p>This area houses Arena's template library for standard construction documents and workflow forms, organized by functional domain across tabs like Construction Forms, Work Order Forms, Procurement, Inventory Forms, Project Forms, Drawing Management Forms, Cost, and Invoice Forms. Rather than every project designing its own RFI or Change Order layout from scratch, a form type's field-by-field structure is built once here as a <strong>Template</strong>, and every project then simply selects from the available templates when a form of that type is raised.</p><p><strong>Document Management</strong>, despite sitting in the same general area, solves a different problem: it defines the standard <strong>folder structure</strong> a new project's document/drawing space starts with (for example, an FEL-1 template might pre-create Civil, Mechanical, Structural, Architectural, Instrumentation, and Process Controls folders). This gives every project the same predictable taxonomy on day one instead of each project team inventing their own filing scheme. <strong>Quickapps</strong>, meanwhile, addresses a more ad-hoc need: it lets a company build lightweight custom mini-apps (&quot;Quick Apps&quot;) for field data capture that doesn't fit neatly into Arena's standard form types, and separately hosts <strong>Standard Tables</strong> — simple reusable reference tables shared across projects.</p>",
         "definitions": [
           {
             "term": "Construction Forms (tab)",
@@ -10063,7 +10063,7 @@ const MODULES = [
       },
       {
         "heading": "Notifications",
-        "intro": "<p>Not every event needs to reach every person — a low-inventory alert matters to a warehouse team, not to Business Development, and flooding the wrong group with noise just trains people to ignore notifications altogether. Global Notifications lets a <strong>Global Admin</strong> configure company-wide notification behavior by functional area, deciding both what triggers an alert and who actually needs to see it, as distinct from any notification settings scoped to a single project.</p><p>Global Notifications configures which system events trigger notifications, on which channels — Mail, Web, or Mobile — and for which groups of users, at the company level (as opposed to notification settings scoped to a single project). Rather than a flat list of every notifiable event, Arena organizes them into <strong>Event Groups</strong> by functional area (Inventory Management, Equipment Management, Opportunity Management, Timesheet Management, Procurement, Work Order, and more), which makes it manageable to configure notification behavior for a whole functional area at once instead of event by event.</p><p>Each group can be assigned its own set of recipient Users, decoupling &quot;who gets notified&quot; from &quot;what triggers it.&quot; If a company's notification needs change, <strong>Get Standard Event Groups</strong> can reseed Arena's default groups, and the standalone <strong>Events</strong> tab gives a flat, module-agnostic view of every configurable event with a company-wide <strong>Reset to Standard</strong> option.</p>",
+        "intro": "<p>This section covers which system events trigger notifications, on which channels, for which groups of users, configured company-wide by a Super Admin. Not every event needs to reach every person — a low-inventory alert matters to a warehouse team, not to Business Development, and flooding the wrong group with noise just trains people to ignore notifications altogether. Global Notifications lets a <strong>Global Admin</strong> configure company-wide notification behavior by functional area, deciding both what triggers an alert and who actually needs to see it, as distinct from any notification settings scoped to a single project.</p><p>Global Notifications configures which system events trigger notifications, on which channels — Mail, Web, or Mobile — and for which groups of users, at the company level (as opposed to notification settings scoped to a single project). Rather than a flat list of every notifiable event, Arena organizes them into <strong>Event Groups</strong> by functional area (Inventory Management, Equipment Management, Opportunity Management, Timesheet Management, Procurement, Work Order, and more), which makes it manageable to configure notification behavior for a whole functional area at once instead of event by event.</p><p>Each group can be assigned its own set of recipient Users, decoupling &quot;who gets notified&quot; from &quot;what triggers it.&quot; If a company's notification needs change, <strong>Get Standard Event Groups</strong> can reseed Arena's default groups, and the standalone <strong>Events</strong> tab gives a flat, module-agnostic view of every configurable event with a company-wide <strong>Reset to Standard</strong> option.</p>",
         "definitions": [
           {
             "term": "Event Group",
@@ -10102,8 +10102,8 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Marketplace & Staged Tables",
-        "intro": "<p>Most construction companies already run some of their business on other systems — email in Outlook, documents in SharePoint, accounting in an ERP like Trimble Viewpoint — and re-keying that data into Arena by hand is both wasted effort and a source of errors. Marketplace and Staged Tables are <strong>Global Admin</strong> territory almost by definition: connecting a third-party system, granting organization-wide consent, and reviewing incoming synced data before it becomes a permanent Arena record are all company-wide, one-time (or admin-scheduled) responsibilities, not something a Project Manager or End User would ever configure themselves.</p><p>Marketplace is the company-wide integrations hub connecting Arena to third-party services — Microsoft OneDrive, Sharepoint, Outlook, Calendar, and Users, Adobe Sign, Trimble Viewpoint, Google Maps, Zoom Info, and IFS. Most integrations follow the same pattern: an admin grants organization-wide OAuth consent once (using a company-domain email — personal accounts cannot connect), and every user benefits without individually authorizing anything themselves. Individual users can still optionally connect their own mailbox later via My Profile → Settings for finer-grained routing; until they do, mail/calendar/document actions on their behalf simply fall back to routing through the Admin Account.</p><p><strong>Trimble Viewpoint</strong> is more involved than the Microsoft integrations, since it's a full ERP connection rather than a simple OAuth login: it requires connection credentials, per-module Table Name/Schema Name mapping, and — once configured — each module gets linked to a Stage and Primary Key column, feeding directly into <strong>Staged Tables</strong>. Staged Tables is the operational counterpart to Marketplace's setup screens: it's the holding area where data pulled in from Trimble Viewpoint (which many teams call <strong>Vista</strong>) or from Soft Tech sits before it becomes real Arena records. This step lets an admin check and map incoming data before it becomes a permanent Arena record, either on a schedule via Auto Sync Criteria, or on demand with Bulk Create.</p><p>In practice, Vista stays the system of record for employees, crews, phase codes, GL codes, projects, customers, vendors and work orders, and Arena pulls those masters in so timesheets, crews and cost tracking in the field line up with what payroll and accounting already use.</p>",
+        "heading": "Integrations: Marketplace & Staged Tables",
+        "intro": "<p>This section covers connecting Arena to outside systems (Microsoft 365, Trimble Viewpoint/Vista, Adobe Sign, and more) and mapping the data that flows in from them, set up by a Super Admin. Most construction companies already run some of their business on other systems — email in Outlook, documents in SharePoint, accounting in an ERP like Trimble Viewpoint — and re-keying that data into Arena by hand is both wasted effort and a source of errors. Marketplace and Staged Tables are <strong>Global Admin</strong> territory almost by definition: connecting a third-party system, granting organization-wide consent, and reviewing incoming synced data before it becomes a permanent Arena record are all company-wide, one-time (or admin-scheduled) responsibilities, not something a Project Manager or End User would ever configure themselves.</p><p>Marketplace is the company-wide integrations hub connecting Arena to third-party services — Microsoft OneDrive, Sharepoint, Outlook, Calendar, and Users, Adobe Sign, Trimble Viewpoint, Google Maps, Zoom Info, and IFS. Most integrations follow the same pattern: an admin grants organization-wide OAuth consent once (using a company-domain email — personal accounts cannot connect), and every user benefits without individually authorizing anything themselves. Individual users can still optionally connect their own mailbox later via My Profile → Settings for finer-grained routing; until they do, mail/calendar/document actions on their behalf simply fall back to routing through the Admin Account.</p><p><strong>Trimble Viewpoint</strong> is more involved than the Microsoft integrations, since it's a full ERP connection rather than a simple OAuth login: it requires connection credentials, per-module Table Name/Schema Name mapping, and — once configured — each module gets linked to a Stage and Primary Key column, feeding directly into <strong>Staged Tables</strong>. Staged Tables is the operational counterpart to Marketplace's setup screens: it's the holding area where data pulled in from Trimble Viewpoint (which many teams call <strong>Vista</strong>) or from Soft Tech sits before it becomes real Arena records. This step lets an admin check and map incoming data before it becomes a permanent Arena record, either on a schedule via Auto Sync Criteria, or on demand with Bulk Create.</p><p>In practice, Vista stays the system of record for employees, crews, phase codes, GL codes, projects, customers, vendors and work orders, and Arena pulls those masters in so timesheets, crews and cost tracking in the field line up with what payroll and accounting already use.</p>",
         "definitions": [
           {
             "term": "Marketplace",
@@ -10166,7 +10166,7 @@ const MODULES = [
       },
       {
         "heading": "Compliance Hub",
-        "intro": "<p>An expired insurance certificate or a lapsed safety license discovered mid-project is a real liability for a construction company — the kind of gap that should be caught proactively, not the day an auditor or an owner's rep asks for proof. Compliance Hub gives a <strong>Global Admin or a compliance-focused Module Manager</strong> a company-wide way to define what's required and track real status against it, so the answer to \"are we covered\" is a quick glance at a status chip rather than a scramble through paper files.</p><p>Compliance Hub tracks the company's required compliance documentation — licenses, certifications, insurance, and similar items — through a simple two-step model: first define what's required, then track actual status against that requirement. The <strong>Compliance Directory</strong> is where a requirement is defined (its name, category, how often it needs renewal, and what evidence must be provided), while <strong>My Company Compliance</strong> shows the company's real submitted records measured against those defined requirements. Splitting definition from tracked status this way means the same requirement can be checked against multiple time periods or renewal cycles without redefining it each time, and status chips (Met, Expired, Expiring Soon, Missing) give an at-a-glance read on where the company stands.</p>",
+        "intro": "<p>This section covers defining required compliance documents and tracking the company’s actual status against them, maintained by a Super Admin or compliance lead. An expired insurance certificate or a lapsed safety license discovered mid-project is a real liability for a construction company — the kind of gap that should be caught proactively, not the day an auditor or an owner's rep asks for proof. Compliance Hub gives a <strong>Global Admin or a compliance-focused Module Manager</strong> a company-wide way to define what's required and track real status against it, so the answer to \"are we covered\" is a quick glance at a status chip rather than a scramble through paper files.</p><p>Compliance Hub tracks the company's required compliance documentation — licenses, certifications, insurance, and similar items — through a simple two-step model: first define what's required, then track actual status against that requirement. The <strong>Compliance Directory</strong> is where a requirement is defined (its name, category, how often it needs renewal, and what evidence must be provided), while <strong>My Company Compliance</strong> shows the company's real submitted records measured against those defined requirements. Splitting definition from tracked status this way means the same requirement can be checked against multiple time periods or renewal cycles without redefining it each time, and status chips (Met, Expired, Expiring Soon, Missing) give an at-a-glance read on where the company stands.</p>",
         "definitions": [
           {
             "term": "Compliance Directory",
@@ -10194,7 +10194,7 @@ const MODULES = [
       },
       {
         "heading": "Measurement Templates",
-        "intro": "<p>Manual quantity take-off math done by hand in the field — multiplying a length by a breadth by a depth to get a volume — is slow and is exactly the kind of place a transposed digit turns into a real reporting error. Measurement Templates lets a <strong>Global Admin or Estimating Module Manager</strong> build the formula once, centrally, so that a <strong>field End User</strong> logging progress later just enters the raw dimensions and lets Arena compute the quantity automatically.</p><p>Measurement Templates defines reusable quantity take-off formulas — for example, Length × Breadth × Depth × Count — that eliminate manual arithmetic when a field team logs progress. Rather than someone in the field calculating a volume or area by hand and typing in the result, a Measurement Template lets them enter the raw dimensions and have Arena compute the quantity automatically, reducing both effort and the chance of calculation errors. Once built, a template becomes genuinely useful only after it's linked to a Work Package (via Step 10 of the Construction Type pipeline), which is what makes the calculator actually appear when someone logs progress against that work package in the field.</p>",
+        "intro": "<p>This section covers building reusable quantity take-off formulas that field teams use when logging progress, set up by a Super Admin and linked to Work Packages. Manual quantity take-off math done by hand in the field — multiplying a length by a breadth by a depth to get a volume — is slow and is exactly the kind of place a transposed digit turns into a real reporting error. Measurement Templates lets a <strong>Global Admin or Estimating Module Manager</strong> build the formula once, centrally, so that a <strong>field End User</strong> logging progress later just enters the raw dimensions and lets Arena compute the quantity automatically.</p><p>Measurement Templates defines reusable quantity take-off formulas — for example, Length × Breadth × Depth × Count — that eliminate manual arithmetic when a field team logs progress. Rather than someone in the field calculating a volume or area by hand and typing in the result, a Measurement Template lets them enter the raw dimensions and have Arena compute the quantity automatically, reducing both effort and the chance of calculation errors. Once built, a template becomes genuinely useful only after it's linked to a Work Package (via Step 10 of the Construction Type pipeline), which is what makes the calculator actually appear when someone logs progress against that work package in the field.</p>",
         "definitions": [
           {
             "term": "Measurement Template",
@@ -10224,8 +10224,8 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Owners",
-        "intro": "<p>Every construction project has a client who commissioned it — a developer, a government agency, an industrial operator — and that owner's contact details, tax codes, and linked locations should exist exactly once, not be re-typed by whichever Project Manager happens to set up a new job for a repeat client. Maintaining that master list is a <strong>Global Admin</strong> responsibility (or an admin scoped to Owners specifically, in a larger organization); a <strong>Project Manager</strong> then simply selects the correct existing Owner when setting up a new project rather than creating a fresh record each time.</p><p>The <strong>Owners</strong> screen is the master directory of every client or owner entity that commissions work — the same list you draw from whenever you create a new Project and need to assign it an Owner. Keeping this as a single, centrally maintained registry (rather than letting each project define its own client records) means an owner's contact details, tax codes, and linked locations only need to be entered once and stay consistent everywhere that owner is referenced.</p><p>Because different companies organize their client relationships with different levels of granularity — some work directly with a flat list of owners, others need to group owners under categories or sub-categories (for example, government vs. private clients, or by region) — Owners supports a configurable hierarchy depth. This is set once via the Owner Settings gear and applies company-wide, so it's worth deciding early, since Level 1 is the default and simplest option and moving to a deeper hierarchy later means recategorizing existing records.</p>",
+        "heading": "Owners: Client & Project-Owner Directory",
+        "intro": "<p>This section covers the master directory of project owners — the clients who commission projects — maintained by a Super Admin so owner details exist once and are reused across every project. Every construction project has a client who commissioned it — a developer, a government agency, an industrial operator — and that owner's contact details, tax codes, and linked locations should exist exactly once, not be re-typed by whichever Project Manager happens to set up a new job for a repeat client. Maintaining that master list is a <strong>Global Admin</strong> responsibility (or an admin scoped to Owners specifically, in a larger organization); a <strong>Project Manager</strong> then simply selects the correct existing Owner when setting up a new project rather than creating a fresh record each time.</p><p>The <strong>Owners</strong> screen is the master directory of every client or owner entity that commissions work — the same list you draw from whenever you create a new Project and need to assign it an Owner. Keeping this as a single, centrally maintained registry (rather than letting each project define its own client records) means an owner's contact details, tax codes, and linked locations only need to be entered once and stay consistent everywhere that owner is referenced.</p><p>Because different companies organize their client relationships with different levels of granularity — some work directly with a flat list of owners, others need to group owners under categories or sub-categories (for example, government vs. private clients, or by region) — Owners supports a configurable hierarchy depth. This is set once via the Owner Settings gear and applies company-wide, so it's worth deciding early, since Level 1 is the default and simplest option and moving to a deeper hierarchy later means recategorizing existing records.</p>",
         "definitions": [
           {
             "term": "Owner",
@@ -10279,494 +10279,23 @@ const MODULES = [
       "Clicking a tile drills into that module; a breadcrumb trail top-left (e.g. <code>Global Data &gt; Owners</code>) navigates back. Most modules also have their own internal tabs once opened."
     ],
     "sections": [
-      {
-        "id": "company",
-        "heading": "Company & Business Units",
-        "html": "<p>Stores the company's own profile — the legal/business entity information that appears on documents, forms, and communications generated by Arena — plus any subsidiary company profiles.</p>\n        <p><strong>Company Details</strong> tab: a single profile form with <strong>Upload Company Logo</strong> and a <strong>Submit</strong> button. Fields: Company Name*, Company ID*, Street Address*, City*, State*, State Zip Code*, Contact Person*, Contact Person Phone Number* (country-code dropdown + extension), Contact Person Email*, Company Email*, Company Phone Number*, PAN Number, GST IN, plus an <strong>SSO Clients</strong> section with <strong>Add SSO Provider</strong> for enterprise single sign-on.</p>\n        <p><strong>Subsidiary</strong> tab: <strong>Create Subsidiary</strong> button, search box, list/grid view toggle.</p>\n        <h4>Business Units</h4>\n        <p>A simple registry of the company's internal business units/divisions, used to categorize operations and reporting across the company.</p>\n        <p><strong>Table:</strong> Serial Number, Code, Description, Actions. <strong>Add</strong> button.</p>",
-        "qa": [
-          {
-            "q": "How do I update the company profile?",
-            "tags": [
-              "company profile",
-              "company logo",
-              "company details"
-            ],
-            "a": "<ol>\n              <li>Global Data → <strong>Company</strong> tile → <strong>Company Details</strong> tab.</li>\n              <li>Click <strong>Upload Company Logo</strong> to set the brand logo used across generated documents.</li>\n              <li>Fill in/update the required fields (Company Name, ID, Address, City, State, Zip, Contact Person details, Company Email/Phone, optionally PAN/GST).</li>\n              <li>To configure SSO, click <strong>Add SSO Provider</strong> under SSO Clients and complete the provider's setup.</li>\n              <li>Click <strong>Submit</strong> to save.</li>\n            </ol>"
-          },
-          {
-            "q": "How do I add a business unit?",
-            "tags": [
-              "business unit",
-              "add business unit"
-            ],
-            "a": "<ol>\n              <li>Global Data → <strong>Business Units</strong> → <strong>Add</strong>.</li>\n              <li>Enter a Code and Description.</li>\n              <li>Submit.</li>\n            </ol>"
-          }
-        ]
-      },
-      {
-        "id": "owners",
-        "heading": "Owners",
-        "html": "<p>Maintains the master directory of project <strong>Owners</strong> (the client/owner entity that commissions a project) — the same list used when creating a Project and choosing its Owner. \"Owners Creation\" is the same screen, not a separate one.</p>\n        <p><strong>Create Owner</strong> is a split button → dropdown offers <strong>Create Owner</strong> (opens the wizard) or <strong>POC OCR</strong> (OCR-assisted document intake for owner data). Grid of Owner cards (Owner ID, Owner Name, Owner Email) with a <strong>⋮</strong> menu per card. Toolbar: Search, Filters, Export, list/grid/table toggles, and a <strong>Settings</strong> gear.</p>\n        <p><strong>Settings</strong> gear opens \"Owner Settings\" — choose how many hierarchy levels Owners are divided into: Level 1 (Owner only, default/locked), Level 2 (Category &gt; Owner), or Level 3 (Category &gt; SubCategory &gt; Owner).</p>",
-        "qa": [
-          {
-            "q": "How do I create a new Owner record?",
-            "tags": [
-              "create owner",
-              "register owner",
-              "new owner"
-            ],
-            "a": "<ol>\n              <li>Global Data → <strong>Owners</strong> tile → <strong>Create Owner</strong> (split button) → <strong>Create Owner</strong>.</li>\n              <li><strong>Step 1 – Basic Details:</strong> enter Owner Name* (required), Short Name, Alias Name, Phone Number*, Email*, Fax Number, Url; expand and fill Primary Address, optionally check <strong>Same as Primary address</strong> for Mailing/Billing Address.</li>\n              <li><strong>Step 2 – Locations &amp; Tax Codes:</strong> click <strong>Link Locations</strong> to associate company Locations (with a Default flag), and <strong>Add</strong> under Tax Codes to attach Tax Group/Tax Class/Tax Code combinations.</li>\n              <li><strong>Step 3 – Preview:</strong> review all entered data.</li>\n              <li>Click <strong>Submit</strong> to create the Owner.</li>\n            </ol>\n            <p>To bulk-create Owners, use <strong>Export</strong>, which also exposes Download/Upload Excel options with a template.</p>"
-          },
-          {
-            "q": "How do I configure Owner hierarchy levels?",
-            "tags": [
-              "owner settings",
-              "owner hierarchy",
-              "owner levels"
-            ],
-            "a": "<ol>\n              <li>Owners tile → <strong>Settings</strong> (gear icon, top right).</li>\n              <li>In \"Owner Settings,\" choose Level 1, Level 2, or Level 3 depending on how granular owner categorization should be company-wide.</li>\n            </ol>"
-          }
-        ]
-      },
-      {
-        "id": "locations",
-        "heading": "Locations & Tax Configuration",
-        "html": "<p>Central registry of physical addresses/locations used throughout Arena — for material delivery, owner linking, tax jurisdiction assignment, etc. (Same table also referenced as \"Delivery Locations\" in older documentation.)</p>\n        <p><strong>Toolbar:</strong> Create, Search, Export, Filters, Manage Columns.</p>\n        <p><strong>Table columns:</strong> Location ID, Location Name, Address, Zip Code, City, State, Actions.</p>\n        <h4>Tax Configuration</h4>\n        <p>Defines the company's tax structure — Tax Groups (e.g. \"GST 18\", \"GST 111\") each containing individual Tax Codes with percentages — used by Owners, Locations, Vendors, and Work Orders wherever tax applies.</p>\n        <p><strong>Left panel:</strong> list of Tax Groups with an <strong>Add Tax Group</strong> button (⋮ menu per group); expanding a group reveals its Tax Codes.</p>\n        <p><strong>Right panel:</strong> table of Tax Codes for the selected group (Tax Code, Tax Percentage, Actions) with <strong>Add Tax Code</strong>, <strong>Upload Excel</strong>, <strong>Download Excel</strong>.</p>",
-        "qa": [
-          {
-            "q": "How do I add a new company delivery location?",
-            "tags": [
-              "add location",
-              "delivery location",
-              "create location"
-            ],
-            "a": "<ol>\n              <li>Global Data → <strong>Locations</strong> tile → <strong>Create</strong>.</li>\n              <li>In the \"Add Location\" dialog, fill Location Name*, Address*, Zip Code, City, State.</li>\n              <li>Under <strong>Tax Codes*</strong>, click <strong>Add</strong> to attach one or more Tax Group/Tax Class/Tax Code entries.</li>\n              <li>Click <strong>Submit</strong>.</li>\n            </ol>\n            <p>Bulk location setup is also possible via Excel import from this screen's Export/Upload options.</p>"
-          },
-          {
-            "q": "How do I set up tax groups and tax codes?",
-            "tags": [
-              "tax configuration",
-              "tax group",
-              "tax code",
-              "gst"
-            ],
-            "a": "<ol>\n              <li>Global Data → <strong>Tax Configuration</strong> → <strong>Add Tax Group</strong> → enter the Group name → <strong>Submit</strong>.</li>\n              <li>Select the new group in the left panel, then click <strong>Add Tax Code</strong> → enter Tax Code* and Tax Percentage* → <strong>Submit</strong>.</li>\n              <li>Repeat for each code belonging to that group (e.g. CGST, SGST, ITC, Freight).</li>\n              <li>Use <strong>Upload Excel</strong> / <strong>Download Excel</strong> to bulk manage tax codes.</li>\n            </ol>"
-          }
-        ]
-      },
-      {
-        "id": "vendors",
-        "heading": "Vendors & Sub Contractors",
-        "html": "<p>Central directory of external material/equipment suppliers, with categorization, preferred/blocked status, rate cards, and a configurable vendor rating form — used by Procurement, Work Orders, and other modules company-wide.</p>\n        <p><strong>Left panel:</strong> vendor Categories (e.g. Equipment Vendors, Material Vendors, Cement Vendors, General, Eco category), expandable to sub-categories, with a <strong>Create Category</strong> button.</p>\n        <p><strong>Top toolbar:</strong> Vendors / Ratings Form tabs; <strong>Restore Vendors</strong>, <strong>Register Vendor</strong>, search, <strong>Add Groups</strong>, <strong>Download Excel</strong>, <strong>Upload Vendors</strong>, and a <strong>Settings</strong> gear (same Level 1/2/3 hierarchy pattern as Owners).</p>\n        <p>Clicking a vendor card opens its <strong>Vendor Edit</strong> page with <strong>Profile</strong> and <strong>Rate Card</strong> tabs:</p>\n        <ul>\n          <li><strong>Profile</strong> — Vendor ID, Company Name*, First Name*, Last Name*, a contact-persons table with <strong>Add</strong>, Username*, Phone Number*, Email*, Select Sign Label, Initials*, Vendor Title, Address, Licence Number, Fax, Scope, Website.</li>\n          <li><strong>Rate Card</strong> — Materials and Equipment sub-tabs, each a table (Cost Code, Name, UOM Group, UOM, Type, editable Rate columns) with an <strong>Upload Logs</strong> button to bulk-update rates via an Excel template (Daily/Weekly/Monthly rate columns).</li>\n        </ul>\n        <p><strong>Ratings Form</strong> tab: a form-builder for vendor evaluation — a Standard field (\"Vendor Rating\") plus Custom fields (e.g. \"Safety,\" \"Quality\") each with a weight/value, Required toggle, Show on card toggle, Choose Type dropdown, duplicate/delete icons, an <strong>Add field</strong> button, and <strong>Save Changes</strong>.</p>\n        <h4>Sub Contractors</h4>\n        <p>A parallel registry to Vendors, specifically for subcontracted labor/trade-partner companies (as distinct from material/equipment suppliers).</p>\n        <p><strong>Register Sub Contractor</strong> button, <strong>Add Groups</strong>, search, grid/list view toggle. Cards show Sub Contractor name and an ID/registration number, with a <strong>⋮</strong> menu per card.</p>",
-        "qa": [
-          {
-            "q": "How do I add a new vendor?",
-            "tags": [
-              "register vendor",
-              "add vendor",
-              "new vendor"
-            ],
-            "a": "<ol>\n              <li>Global Data → <strong>Vendors</strong> tile → <strong>Register Vendor</strong>.</li>\n              <li>Upload a profile picture (optional), fill Vendor ID*, Company Name*, First Name*, Last Name*.</li>\n              <li>Click <strong>Add</strong> in the contact table to add one or more contact persons with their details.</li>\n              <li>Fill Username*, Phone Number* (with country code + extension), Email*.</li>\n              <li>Choose a <strong>Select Sign Label</strong> (e.g. Initials) and fill Initials* — used as the digital signature label on approved documents; optionally toggle <strong>Enable Security Key Authentication</strong>.</li>\n              <li>Optionally fill Vendor Title, Address, Licence Number.</li>\n              <li>Click <strong>Submit</strong>.</li>\n            </ol>"
-          },
-          {
-            "q": "How do I set up a vendor's rate card?",
-            "tags": [
-              "rate card",
-              "vendor rates",
-              "upload logs"
-            ],
-            "a": "<ol>\n              <li>Open the vendor's card from the <strong>Vendors</strong> tile.</li>\n              <li>Go to the <strong>Rate Card</strong> tab, choose <strong>Materials</strong> or <strong>Equipment</strong>.</li>\n              <li>Click <strong>Upload Logs</strong>, download the Excel template, fill in Daily/Weekly/Monthly rates per item, then upload the completed file — or edit the <strong>Rate</strong> field inline per row.</li>\n            </ol>"
-          },
-          {
-            "q": "How do I configure the vendor rating form?",
-            "tags": [
-              "vendor rating",
-              "ratings form",
-              "vendor evaluation"
-            ],
-            "a": "<ol>\n              <li>Vendors tile → <strong>Ratings Form</strong> tab.</li>\n              <li>Click <strong>Add field</strong> to add a new custom rating criterion (e.g. \"Safety\").</li>\n              <li>Set its weight/value, toggle <strong>Required</strong> and/or <strong>Show on card</strong> as needed, choose its type via <strong>Choose Type</strong> (e.g. Rating).</li>\n              <li>Click <strong>Save Changes</strong>.</li>\n            </ol>"
-          },
-          {
-            "q": "How do I register a subcontractor?",
-            "tags": [
-              "subcontractor",
-              "register sub contractor"
-            ],
-            "a": "<ol>\n              <li>Global Data → <strong>Sub Contractors</strong> tile → <strong>Register Sub Contractor</strong>.</li>\n              <li>Complete the registration form (name, contact, ID) and submit.</li>\n              <li>Use <strong>Add Groups</strong> to organize subcontractors into categories, similar to Vendor categories.</li>\n            </ol>"
-          },
-          {
-            "q": "How do I track vendor/subcontractor certifications like ISO or safety licenses?",
-            "tags": [
-              "subcontractor compliance",
-              "iso certification",
-              "safety license"
-            ],
-            "a": "<ol>\n              <li>Go to <strong>Global Data → Settings → Sub Contractor Settings</strong> to define which certification fields (e.g. ISO 9001, CIDB) subcontractors must upload.</li>\n              <li>Or, for company-wide compliance items, use <strong>Global Data → Compliance Hub → Compliance Directory → Create</strong> to define the requirement (Name, Category, Renewal Frequency, Evidence Type), then track status under <strong>My Company Compliance</strong>.</li>\n            </ol>"
-          }
-        ]
-      },
-      {
-        "id": "work-order-management",
-        "heading": "Work Order Management",
-        "html": "<p>Configures the templates and types used to raise Work Orders (Equipment, Material, or Service work) across projects, and hosts a library of Work Order Contracts.</p>\n        <p><strong>Main list</strong> (\"Work Order Contract\"): Create, Search, Export, Manage Columns, Settings gear, list/grid/table toggle. Columns include Name, Description, Status, Location, Address, Contact, Company, WO Description, Mechanic, Inventory Location, Shop, Equipment, Created/Scheduled dates.</p>\n        <p><strong>Create</strong> opens \"Create Work Order Contract\": Name*, Description, <strong>Work Order Type*</strong> (Service / Equipment / Material).</p>\n        <p><strong>Settings</strong> gear opens a dedicated admin area:</p>\n        <ul>\n          <li><strong>Work Order Types</strong> — cards for each type (Service, Equipment, Material) with a create button; each card's ⋮ menu offers Edit/Delete. Creating a type only needs Name* and Description.</li>\n          <li><strong>Users and Permissions</strong> — a \"Users Groups\" screen with <strong>Add User Group</strong>, scoping which user groups can access/act on Work Orders.</li>\n        </ul>\n        <p>Opening an individual Work Order Contract record shows tabs: Profile, Team, Timesheets, Equipment, Inventory, Procurement, Expense, Schedule, Communication, Documents, Drawings — plus a <strong>Work Order Status</strong> dropdown and, in Profile, an <strong>Item Details</strong> panel with <strong>Create Items</strong>. The <strong>Expense</strong> tab lists Expense records tagged by Work Order Type, with a Create button and Filters/grid-list toggle.</p>",
-        "qa": [
-          {
-            "q": "How do I create a Work Order Type?",
-            "tags": [
-              "work order type",
-              "create work order type"
-            ],
-            "a": "<ol>\n              <li>Global Data → <strong>Work Order Management</strong> → <strong>Settings</strong> gear → <strong>Work Order Types</strong>.</li>\n              <li>Click <strong>Work Order Type</strong>, enter a Name* and Description, click <strong>Submit</strong>.</li>\n            </ol>"
-          },
-          {
-            "q": "How do I create a Work Order Contract template?",
-            "tags": [
-              "work order contract",
-              "create work order"
-            ],
-            "a": "<ol>\n              <li>Work Order Management → <strong>Create</strong>.</li>\n              <li>Enter Name*, Description, and select a <strong>Work Order Type*</strong> (Service/Equipment/Material).</li>\n              <li>Submit, then open the new record to configure its Profile fields, add Items via <strong>Create Items</strong>, and configure Expense forms under the <strong>Expense</strong> tab.</li>\n            </ol>"
-          }
-        ]
-      },
-      {
-        "id": "construction-types",
-        "heading": "Construction Types & the Construction Type Pipeline",
-        "html": "<h4>Construction Types (tile)</h4>\n        <p>Defines the master list of construction project categories (e.g. Infrastructure, Flyover, Residential, Electrical and Instrumentation, Roads, Commercial Project, Tunnel) that every project must be tagged with at creation. All of the Construction Type pipeline's work-breakdown configuration (below) is scoped per Construction Type.</p>\n        <p><strong>Table:</strong> S.No, Types of Construction, <strong>Set as Default</strong> radio, Actions (drag-handle reorder, Edit, Delete). <strong>Copy</strong> duplicates an existing type's full configuration into a new named type. <strong>Create</strong> adds a new blank type. A type cannot be edited/deleted once projects exist using it.</p>\n        <h4>Construction Type (configuration pipeline)</h4>\n        <p>A separate top-level tab next to \"Company\" on the Global Data home page, distinct from the \"Construction Types\" tile. It presents a <strong>10-step visual pipeline</strong> for building out the full work-breakdown-structure (WBS) library for a selected Construction Type, chosen via a dropdown at the top.</p>\n        <ol>\n          <li><strong>Global Work Areas</strong> — the physical/organizational location hierarchy of a project site as a three-tier nested structure (Tier 1 → Tier 2 → Tier 3, e.g. Tower → Floor → Room). Sub-tabs: Entity Types, Super Location Types, Location Types — each with Create + Upload Excel. A parent entry cannot be deleted while children exist. Names are customizable via the Naming Framework.</li>\n          <li><strong>Global Work Packages</strong> — the first-level library of construction work content: <strong>Activities</strong> (major work divisions, e.g. Excavation, Backfilling, Shuttering, Concreting) each containing many <strong>Work Packages</strong> (the actual unit of work). The Work Packages screen has three top tabs — Progress, Quality, Safety — since a work package can be scoped per product line. Also on the pipeline: Progress/Quality/Safety Forms boxes to configure standard data-capture forms tied to a work package.</li>\n          <li><strong>Activity Sequence Templates</strong> — captures the logical work sequence/dependencies between Work Packages, driving schedule and progress logic. <strong>Map Work Packages to Work Locations</strong> is a prerequisite for Progress tracking. <strong>Create Activity Sequence Templates</strong> builds a dependency graph (WBS template); templates support Create, Edit, Pause/Play, Delete (blocked if in active use).</li>\n          <li><strong>Material and Labor Estimation Templates</strong> — four cards: Map Materials to Activity, Map Labor to Activity, Map Materials to Work Package, Map Labor to Work Package, for cost/productivity estimation.</li>\n          <li><strong>Naming Framework</strong> (construction-type scoped) — a table of Activity Sequence Level rows (Tree Version, Entity, Super Location, Location, Activity, Work Package, Sub Activity, and more) with Default Name, editable Custom Name, and Short Name columns. Changes relabel that concept everywhere in the app for this construction type.</li>\n          <li><strong>P6 Activity Codes</strong> — uses Primavera P6 activity codes to categorize/classify project activities for schedule interoperability with P6.</li>\n          <li><strong>Data Migration</strong> — bulk-loads historical/master data from Excel into this construction type's structures. Each section (Master Data, Global Work Packages, Locations Type Work Packages, Global Sequence Model, etc.) has a Template download link and a drag-and-drop upload zone. Newly uploaded data is appended to existing data.</li>\n          <li><strong>Metadata</strong> — add custom Metadata fields globally, extending the standard data model.</li>\n          <li><strong>Work Package Linked Forms</strong> — associates specific forms (Progress/Quality/Safety/etc.) with individual Work Packages so the correct form appears when work is logged in the field.</li>\n          <li><strong>Work Package Measurement Template Linking</strong> — links a Measurement Template to a Work Package, so quantity take-off math is automatically available when recording progress against that work package.</li>\n        </ol>",
-        "qa": [
-          {
-            "q": "How do I configure which construction categories are available when creating a project?",
-            "tags": [
-              "construction types",
-              "project category",
-              "construction category"
-            ],
-            "a": "<ol>\n              <li>Global Data → <strong>Construction Types</strong> tile.</li>\n              <li>Click <strong>Create</strong> to add a new type, or <strong>Copy</strong> an existing type to clone its full setup into a new one.</li>\n              <li>Optionally mark one type as <strong>Set as Default</strong>.</li>\n            </ol>"
-          },
-          {
-            "q": "What's the difference between \"Construction Types\" and the \"Construction Type\" tab?",
-            "tags": [
-              "construction types vs construction type",
-              "wbs pipeline"
-            ],
-            "a": "<p><strong>Construction Types</strong> (a tile) is the simple master list of category names (Infrastructure, Residential, etc.) used when creating a project. The <strong>Construction Type</strong> tab (next to \"Company\" on the Global Data home page) is a 10-step configuration pipeline where you build out the full work-breakdown library — Global Work Areas, Activities/Work Packages, Sequence Templates, Naming Framework, Data Migration, and more — for whichever Construction Type is selected in its dropdown.</p>"
-          },
-          {
-            "q": "How do I bulk-load historical data instead of entering it manually?",
-            "tags": [
-              "data migration",
-              "bulk upload",
-              "excel import"
-            ],
-            "a": "<ol>\n              <li>Global Data → <strong>Construction Type</strong> tab → <strong>Step 7 (Data Migration)</strong>.</li>\n              <li>For each section (Master Data, Global Work Packages, Locations Type Work Packages, Global Sequence Model, etc.), click the <strong>Template</strong> link to download the correctly-formatted Excel file.</li>\n              <li>Fill it in and drag it into the upload zone. Existing data is preserved — new rows are appended.</li>\n            </ol>"
-          }
-        ]
-      },
-      {
-        "id": "users-permissions",
-        "heading": "Users, Permissions & Crews",
-        "html": "<p>The full identity, roster, and access-control system for the company — who can log in, what roster/HR-style data is tracked about them, and what each user/group is allowed to do inside Arena.</p>\n        <p><strong>Top tabs:</strong> User Accounts, Global Rosters, Global Permission, User Permission.</p>\n        <ul>\n          <li><strong>User Accounts</strong> → Active Users / Inactive Users sub-tabs. <strong>Register User</strong> opens the user-creation form (name, contact, email, password); a Signature field supports Initials, Sign (scribble pad), or Upload modes. Table: Profile, Created From, Employee ID, First/Last Name, Last Login, User Name, Contact No., Email ID, Actions. Deleting an Active User moves them to Inactive Users (not a hard delete); Inactive Users can be Activated again. Bulk operations: Download Sample Excel, Download Excel, Upload Excel.</li>\n          <li><strong>Global Rosters</strong> → System User / Non System User / Non System Inactive User sub-tabs. Rich HR-style table (Roster ID, First/Last Name, Group No., Last Login, Email ID, Default Indirect Phase Code, Address, Designation, Skills, and more). Non-system users represent temporary/outside workers who are not full Arena logins but still need to be tracked (timesheets, crew assignment).</li>\n          <li><strong>Global Permission</strong> — Grid of Group cards (Super Admin, Global Data Admin, All Home Modules Admin, Cost Tracking Admin, Work Order Admin, Foreman, Supervisor, Project Manager, etc.), each with Permissions and Users buttons. <strong>Add User Group</strong> creates a new group; <strong>Fetch Templates</strong> imports Arena's standard prebuilt permission groups. Each group's ⋮ menu offers Edit, Delete, and Copy.</li>\n          <li><strong>User Permission</strong> — individual-level permission override. Selecting a user shows Basic Details, Groups (memberships), and Permissions (individually assignable, independent of group-level grants).</li>\n        </ul>\n        <h4>Crews</h4>\n        <p>Groups Roster members (system + non-system users) into named work <strong>Crews</strong> with a designated Supervisor and Foreman, for labor tracking, timesheets, and work assignment.</p>\n        <p><strong>Create</strong> button; grid of Crew cards showing Total Supervisors, Total Foremen, Total Crew Rosters counts, with a ⋮ (Edit/Delete) menu per card.</p>",
-        "qa": [
-          {
-            "q": "How do I register a new user or employee?",
-            "tags": [
-              "register user",
-              "add employee",
-              "new user account"
-            ],
-            "a": "<ol>\n              <li>Global Data → <strong>Users &amp; Permissions</strong> → <strong>User Accounts</strong> → <strong>Active Users</strong> tab.</li>\n              <li>Click <strong>Register User</strong> and fill in the required details (name, contact, email, password/signature).</li>\n              <li>Click <strong>Submit</strong>. Use <strong>Notify User</strong> to email them their login/setup instructions.</li>\n            </ol>"
-          },
-          {
-            "q": "How do I bulk-import users instead of adding them one by one?",
-            "tags": [
-              "bulk import users",
-              "upload excel users",
-              "onboard users"
-            ],
-            "a": "<ol>\n              <li>Users &amp; Permissions → <strong>Active Users</strong> tab.</li>\n              <li>Click <strong>Download Sample Excel</strong>, fill in one row per user (use correct country codes for phone numbers).</li>\n              <li>Click <strong>Upload Excel</strong> and select the completed file — Arena creates the accounts and emails each new user automatically.</li>\n            </ol>"
-          },
-          {
-            "q": "How do I set up permissions for a group of users?",
-            "tags": [
-              "permission group",
-              "user group",
-              "global permission"
-            ],
-            "a": "<ol>\n              <li>Global Data → <strong>Users &amp; Permissions</strong> → <strong>Global Permission</strong> tab.</li>\n              <li>Click <strong>Add User Group</strong>, name it, then click its <strong>Permissions</strong> button and select the allowed modules/actions.</li>\n              <li>Click its <strong>Users</strong> button to add members — they inherit the group's permissions.</li>\n              <li>Optionally use <strong>Fetch Templates</strong> to start from one of Arena's standard permission templates (e.g. Super Admin).</li>\n            </ol>"
-          },
-          {
-            "q": "What's the difference between Active Users and Inactive Users?",
-            "tags": [
-              "active users",
-              "inactive users",
-              "deactivate user"
-            ],
-            "a": "<p><strong>Active Users</strong> can currently log in. Deleting a user from Active Users doesn't erase them — it moves them to <strong>Inactive Users</strong>, where they're retained and can later be re-Activated (which resends a registration/password-reset email).</p>"
-          },
-          {
-            "q": "How do I add a non-system (temporary) worker to the global roster?",
-            "tags": [
-              "non system user",
-              "temporary worker",
-              "global roster"
-            ],
-            "a": "<ol>\n              <li>Users &amp; Permissions → <strong>Global Rosters</strong> → <strong>Non System User</strong> → <strong>Add Non System Roster</strong>.</li>\n              <li>Fill in worker details (name, designation, skills, experience, group number, etc.) → Submit.</li>\n              <li>Use <strong>Export All Users</strong> to download the full roster, or <strong>Add Role</strong> to assign a role to selected rosters.</li>\n            </ol>"
-          },
-          {
-            "q": "How do I create a crew?",
-            "tags": [
-              "create crew",
-              "crew setup",
-              "supervisor foreman"
-            ],
-            "a": "<ol>\n              <li>Global Data → <strong>Crews</strong> tile → <strong>Create</strong>.</li>\n              <li>Enter the Crew Name.</li>\n              <li>Select a <strong>Supervisor</strong> and a <strong>Foreman</strong> from the dropdown (these people must already exist in Global Rosters).</li>\n              <li>Select <strong>Rosters</strong> — check the individual roster members (system and non-system) who belong to this crew.</li>\n              <li>Click <strong>Submit</strong>.</li>\n            </ol>"
-          }
-        ]
-      },
-      {
-        "id": "uom-phasecode-gl",
-        "heading": "UOM, Phasecode & GL Codes",
-        "html": "<p>The shared reference-data library for quantity, cost, and accounting classification used across Estimating, Work Orders, Procurement, and Cost modules: Units of Measure, Phase Codes, Repair Types, and GL Codes.</p>\n        <p><strong>Top tabs:</strong> UOMs, Phase Codes, Repair Types, GL Codes.</p>\n        <ul>\n          <li><strong>UOMs</strong> sub-tabs: <strong>UOMs</strong> (flat list of unit names — Kg, Lbs, Cum, Litres, Sqm, Rm, etc. — with Add UOM, Edit/Delete per row), <strong>UOM Groups</strong> (groups multiple UOMs under a category like Area, Length, Mass, Volume, Weight, with Add UOM Group), <strong>UOM Conversions</strong> (a read-only table of every conversion factor defined across all UOM Groups, e.g. \"Kg → 2.2 → Lbs\").</li>\n          <li><strong>Phase Codes</strong> — a large table (Phase Code, Description, Phase Code Type: Direct / Indirect / Non-Productive / Change Order, and multi-select Cost Types: Material, Labor, Equipment, Subcontractors, Other Expenses). Add + Export buttons.</li>\n          <li><strong>Repair Types</strong> — simple table (Repair Type, Description) with Add and Save Changes, used to classify equipment/work-order repairs.</li>\n          <li><strong>GL Codes</strong> — simple table (Code, Description) with Add, for general-ledger/accounting integration.</li>\n        </ul>",
-        "qa": [
-          {
-            "q": "How do I add a new unit of measure (UOM) and group it?",
-            "tags": [
-              "uom",
-              "unit of measure",
-              "uom conversion"
-            ],
-            "a": "<ol>\n              <li>Global Data → <strong>UOM, Phasecode &amp; GL Codes</strong> tile → <strong>UOMs</strong> tab.</li>\n              <li>Click <strong>Add UOM</strong>, type the unit name (e.g. \"Tonne\"), and save.</li>\n              <li>To make it convertible with other units, go to <strong>UOM Groups</strong>, add it to (or create) a group, and enter the conversion factor(s).</li>\n              <li>The new factors then appear read-only under <strong>UOM Conversions</strong>.</li>\n            </ol>"
-          },
-          {
-            "q": "How do I add a Phase Code?",
-            "tags": [
-              "phase code",
-              "add phase code",
-              "cost type"
-            ],
-            "a": "<ol>\n              <li>Phase Codes tab → <strong>Add</strong>.</li>\n              <li>Enter the Phase Code, its Description, choose its Phase Code Type (Direct/Indirect/Non-Productive/Change Order), and select which Cost Types apply (Material/Labor/Equipment/Subcontractors/Other Expenses).</li>\n              <li>Save. Bulk create/update is also available via Excel Upload, which supports a <strong>Create Mode</strong> and an <strong>Update Mode</strong>.</li>\n            </ol>"
-          }
-        ]
-      },
-      {
-        "id": "settings",
-        "heading": "Settings (Global Settings)",
-        "html": "<p>A large catch-all hub of company-wide configuration screens, reached as its own tile, organized as a left-hand navigation list with a detail panel on the right.</p>\n        <p><strong>Left navigation includes:</strong> Roster Settings, Procurement Settings, Holidays, Naming Framework, Currency, Attachment Settings, Project Status, Project Form, Mail Settings, Keyboard Shortcuts, Adobe Sign Settings, Global Date Format, Sub Contractor Settings, Owner, Earnings Codes, Enterprise Dashboard, Hindrance Category, Location settings, Request for Information, Transmittals Submitted Type, Market Type, Configure Safety Observation.</p>\n        <h4>Selected screens</h4>\n        <ul>\n          <li><strong>Roster Settings</strong> — fixed Table Standard Fields always shown; admins add Configurable Fields via Add Field, each with a label, a Choose Type dropdown (Text Box, Attachment, Check Box, Date, Label, Multi Select, Paragraph, Roster-lookup, Scribble, Single Select, Table, Time, Signature), a Required toggle, and a Show on cards toggle. Save Changes applies.</li>\n          <li><strong>Owner</strong> (Settings) — the same Standard Fields + Add Field builder, for the Owner registration form — drives the fields seen in the Owners \"Create Owner\" wizard.</li>\n          <li><strong>Currency</strong> — a single dropdown (Indian Rupee, USD, EUR, GBP, JPY, CHF) + Save Changes, setting the currency symbol/format used company-wide.</li>\n          <li><strong>Global Date Format</strong> — two radio options, MM-DD-YYYY or DD-MM-YYYY, + Save Changes.</li>\n          <li><strong>Mail Settings</strong> — a table of modules (LOR, Procurement, Opportunities, Work Order, Proposal Management, Arena Communications, Expense Tracker, RFI, Transmittal, Tender Management, Capital Management, Submittal, Change Order, Delay Form, Other Forms) each with a Gmail vs Outlook radio choice.</li>\n          <li><strong>Naming Framework</strong> (Global Settings version) — a large table of Activity Sequence Level rows covering Procurement/Inventory/Roster/Cost terminology (Project, Inventory Master, Pickup Ticket, Load Out Request, Vendor, Purchase Order, Opportunity, Customer, Phase Code, Estimate, and more), each with editable Custom Name and Short Name — distinct from the per-Construction-Type Naming Framework.</li>\n          <li><strong>Sub Contractor Settings</strong> — Standard Fields + a Configurable Fields builder supporting certification/compliance attachments (CIDB, ISO 9001, ISO 45001, ISO 14001, Safety and Health Assessment, Electrical Contractor License), each toggle-able Required, typed as Attachment.</li>\n          <li>Other entries (Procurement Settings, Holidays, Attachment Settings, Project Status, Project Form, Keyboard Shortcuts, Adobe Sign Settings, Earnings Codes, Enterprise Dashboard, Hindrance Category, Location settings, Request for Information, Transmittals Submitted Type, Market Type, Configure Safety Observation) follow the same left-nav pattern.</li>\n        </ul>\n        <p class=\"callout\">\"Test Emails\" and \"Enable AWP (Advanced Work Packaging)\" are documented as Global Settings items (a test-email allowlist, and a single toggle that shows/hides the AWP menu) but were not visible in this navigation list during review — they may be feature-flagged per company/plan.</p>",
-        "qa": [
-          {
-            "q": "How do I change the company's currency?",
-            "tags": [
-              "currency",
-              "change currency",
-              "settings"
-            ],
-            "a": "<ol>\n              <li>Global Data → <strong>Settings</strong> → <strong>Currency</strong> (left nav).</li>\n              <li>Choose the desired currency from the dropdown.</li>\n              <li>Click <strong>Save Changes</strong>.</li>\n            </ol>"
-          },
-          {
-            "q": "How do I change the global date format?",
-            "tags": [
-              "date format",
-              "global date format"
-            ],
-            "a": "<ol>\n              <li>Settings → <strong>Global Date Format</strong>.</li>\n              <li>Select <strong>MM-DD-YYYY</strong> or <strong>DD-MM-YYYY</strong>.</li>\n              <li>Click <strong>Save Changes</strong>.</li>\n            </ol>"
-          },
-          {
-            "q": "How do I route a module's emails through Outlook instead of Gmail?",
-            "tags": [
-              "mail settings",
-              "outlook",
-              "gmail routing"
-            ],
-            "a": "<ol>\n              <li>Settings → <strong>Mail Settings</strong>.</li>\n              <li>Find the module row (e.g. Work Order) and click the <strong>Outlook</strong> radio button in that row.</li>\n              <li>The change saves immediately per row (ensure Outlook has been connected first via Marketplace).</li>\n            </ol>"
-          },
-          {
-            "q": "What is AWP and how do I enable it?",
-            "tags": [
-              "awp",
-              "advanced work packaging"
-            ],
-            "a": "<p>AWP stands for <strong>Advanced Work Packaging</strong>. Per Arena's reference documentation it is controlled by a single toggle under <strong>Global Data → Settings → Enable AWP</strong> — turning it on/off shows or hides the AWP menu for all users. This toggle was not visible in the Settings navigation during review, so it may be feature-gated for your plan; contact your Arena account admin if you don't see it.</p>"
-          },
-          {
-            "q": "How do I rename terminology used throughout the app (e.g. call \"Work Package\" something else)?",
-            "tags": [
-              "naming framework",
-              "rename terminology",
-              "custom labels"
-            ],
-            "a": "<p>There are two Naming Framework screens:</p>\n            <ol>\n              <li><strong>Global Data → Construction Type tab → Step 5 (Naming Framework)</strong> — renames Activity/Work-Package/Location-hierarchy terms, scoped per Construction Type.</li>\n              <li><strong>Global Data → Settings → Naming Framework</strong> — renames Procurement/Inventory/Roster/Cost terms company-wide.</li>\n            </ol>\n            <p>In either, edit the <strong>Custom Name</strong> (and optionally <strong>Short Name</strong>) column next to the term you want to relabel, then save.</p>"
-          }
-        ]
-      },
-      {
-        "id": "forms",
-        "heading": "Forms, Document Management & Quickapps",
-        "html": "<p>A large template library and form-builder for all the standard construction documents and workflow forms Arena supports, organized by functional area.</p>\n        <p><strong>Top tabs:</strong> Construction Forms, Work Order Forms, Procurement, Inventory Forms, Project Forms, Drawing Management Forms, Cost, Invoice Forms.</p>\n        <p><strong>Construction Forms</strong> tab shows cards: RFI, Submittals, Change Orders, Meeting Minutes, Delay Form, Request For Information, Transmittals — each described as \"Configure [X] according to the templates set by your organization.\" Clicking into a form type (e.g. RFI) opens its <strong>Templates</strong> screen: a grid of named templates with a <strong>Create Template</strong> button, where the field-by-field form layout is built.</p>\n        <h4>Document Management</h4>\n        <p>Defines standard document-folder-structure <strong>templates</strong> that get applied to new projects, so every project starts with a consistent folder taxonomy for drawings/documents.</p>\n        <p><strong>Left list</strong> of templates (e.g. FEL-1, FEL-2, FEL-3, Detailed Engineering) with Create Template, and inline Edit/Delete icons. <strong>Right panel</strong>: the selected template's folder tree (e.g. under FEL-1: Civil, Mechanical, Structural, Architectural, Instrumentation, Process Controls) with columns Last Modified, Added On, Actions; a <strong>New Folder</strong> button adds more folders/subfolders.</p>\n        <h4>Quickapps</h4>\n        <p>Lets the company build lightweight custom mini-apps/forms (\"Quick Apps\") for ad-hoc field data capture, and also hosts the <strong>Standard Tables</strong> feature for reusable reference tables.</p>\n        <p><strong>Two tabs:</strong> Standard Tables, Quick Apps.</p>\n        <ul>\n          <li><strong>Standard Tables</strong> — a grid of named tables (e.g. Arena, Drawing Status, Sample) with an <strong>Add</strong> button, for standardized tables reused across projects.</li>\n          <li><strong>Quick Apps</strong> — a grid of custom app cards (e.g. Bid or Estimate Log, Subcontractor Bid Proposal, Observation Report, Non-Conformance Report, Completion Notice, Storage Inspections, Variance Request) with a <strong>Create</strong> button.</li>\n        </ul>",
-        "qa": [
-          {
-            "q": "How do I create a new RFI template?",
-            "tags": [
-              "rfi template",
-              "create template",
-              "construction forms"
-            ],
-            "a": "<ol>\n              <li>Global Data → <strong>Forms</strong> → <strong>Construction Forms</strong> tab → click <strong>RFI</strong>.</li>\n              <li>Click <strong>Create Template</strong>.</li>\n              <li>Build the form layout (sections/fields) as needed and save.</li>\n              <li>The new template becomes available for selection whenever an RFI is raised on a project.</li>\n            </ol>"
-          },
-          {
-            "q": "How do I create a reusable folder structure for project documents?",
-            "tags": [
-              "document template",
-              "folder structure",
-              "document management"
-            ],
-            "a": "<ol>\n              <li>Global Data → <strong>Document Management</strong> → <strong>Create Template</strong>, name it (e.g. \"FEL-1\").</li>\n              <li>Select the template, then click <strong>New Folder</strong> repeatedly to build out the folder hierarchy (e.g. Civil, Mechanical, Structural).</li>\n              <li>Apply this template when setting up a new project's document space.</li>\n            </ol>"
-          },
-          {
-            "q": "How do I create a Quick App?",
-            "tags": [
-              "quick app",
-              "create quickapp",
-              "custom form"
-            ],
-            "a": "<ol>\n              <li>Global Data → <strong>Quickapps</strong> → <strong>Quick Apps</strong> tab → <strong>Create</strong>.</li>\n              <li>Name the app and design its data-capture fields.</li>\n              <li>Save — the Quick App becomes available from the mobile/field app or relevant project screen.</li>\n            </ol>"
-          },
-          {
-            "q": "How do I create a Standard Table?",
-            "tags": [
-              "standard table",
-              "reference table"
-            ],
-            "a": "<ol>\n              <li>Quickapps → <strong>Standard Tables</strong> tab → <strong>Add</strong>.</li>\n              <li>Define the table's name and columns.</li>\n              <li>Save — the table can then be reused/referenced across projects.</li>\n            </ol>"
-          }
-        ]
-      },
-      {
-        "id": "notifications",
-        "heading": "Notifications (Global Notifications)",
-        "html": "<p>Configures which system events trigger notifications, on which channels (Mail / Web / Mobile), for which groups of users — at the company level (as opposed to per-project notification settings).</p>\n        <p><strong>Two tabs:</strong> Event Groups, Events.</p>\n        <ul>\n          <li><strong>Event Groups</strong> — cards for each functional group (Inventory Management, Equipment Management, Opportunity Management, Timesheet Management, Global, Procurement, Fabrication, Work Order, Sub Contractor Management, Expense Tracker, Document Management, Proposal Management, Bid Management, plus custom groups). Each card has Notifications and Users buttons. <strong>Add Event Groups</strong> creates a new custom group; <strong>Get Standard Event Groups</strong> reseeds Arena's default groups (with confirmation). Clicking Notifications on a group opens a dialog listing every event grouped by module, each expandable to show individual events with Mail/Web/Mobile checkbox toggles.</li>\n          <li><strong>Events</strong> tab — the master list of every configurable event with Mail/Web/Mobile column toggles, plus a <strong>Reset to Standard</strong> button.</li>\n        </ul>",
-        "qa": [
-          {
-            "q": "How do I set up notification rules (e.g. email alerts for low inventory)?",
-            "tags": [
-              "notification rules",
-              "event groups",
-              "alerts"
-            ],
-            "a": "<ol>\n              <li>Global Data → <strong>Notifications</strong> → <strong>Event Groups</strong>.</li>\n              <li>Click <strong>Notifications</strong> on the relevant group (e.g. Inventory Management).</li>\n              <li>Expand the module section, find the specific event (e.g. \"Minimum Stock Reached\"), and toggle <strong>Mail</strong>, <strong>Web</strong>, and/or <strong>Mobile</strong> on.</li>\n            </ol>"
-          },
-          {
-            "q": "How do I create a custom notification group?",
-            "tags": [
-              "custom notification group",
-              "add event group"
-            ],
-            "a": "<ol>\n              <li>Notifications → <strong>Event Groups</strong> → <strong>Add Event Groups</strong>.</li>\n              <li>Name the group, then use its <strong>Notifications</strong> button to select which events feed into it and on which channels.</li>\n              <li>Use its <strong>Users</strong> button to add the people who should receive these notifications.</li>\n            </ol>"
-          }
-        ]
-      },
-      {
-        "id": "marketplace",
-        "heading": "Marketplace & Staged Tables",
-        "html": "<p>The integrations hub for connecting Arena to third-party services company-wide — most require an admin to grant org-wide OAuth consent once, after which all users benefit without individually consenting.</p>\n        <p><strong>Grid of integration cards:</strong> Microsoft OneDrive, Microsoft Sharepoint, Microsoft Outlook, Microsoft Users, Microsoft Calendar, Adobe Sign, Trimble Viewpoint, Google Maps, Inn Clock Consent, Zoom Info, IFS.</p>\n        <ul>\n          <li>Each Microsoft integration's connect screen shows a diagram and a note that consent is granted on behalf of the whole organization, with a <strong>Sign in with Microsoft</strong> button. The sign-in must use a company-domain email — personal Microsoft accounts cannot connect.</li>\n          <li>After org-wide consent, individual users can still optionally connect their own mailbox via <strong>My Profile → Settings</strong> (Outlook Management Consent / Document Management Consent / Calendar consent); if a user never does, mail/calendar/document actions fall back to routing through the Admin Account.</li>\n          <li><strong>Trimble Viewpoint</strong> connects via connection credentials + <strong>Test Connection and Save</strong>, then per-module Table Name/Schema Name mapping + <strong>Save Configuration</strong>; each module then gets a <strong>Link</strong> button to tie it to a Stage (feeding the Staged Tables screen) and a Primary Key column.</li>\n          <li><strong>Adobe Sign</strong> requires logging in with Adobe Sign credentials and configuring Adobe API settings, used for electronic signatures on documents.</li>\n        </ul>\n        <h4>Staged Tables</h4>\n        <p>The landing zone for data synced in from external ERP/accounting systems (e.g. Trimble Viewpoint, Soft Tech) before it is mapped and promoted into native Arena records — the operational counterpart to the Marketplace integration setup.</p>\n        <p><strong>Top tabs</strong> per connected external system (e.g. View Point, Soft Tech). <strong>Left nav</strong> of stageable entities: Users, Projects, Crews, Phase Codes, Customers, Vendors, Owners, Project User Mapping, Project Crew Mapping, Work Order Crew Mapping, GL Codes, Work Orders, Logs.</p>\n        <p><strong>Toolbar per entity:</strong> <strong>Map Attributes</strong> (maps each staged/external column to its native Arena field, with an \"update after sync\" checkbox), Filters, <strong>Auto Sync Criteria</strong> (set an hours-based recurring sync interval), and <strong>Bulk Create Arena Records</strong> (promotes all staged rows into real Arena records, with confirmation).</p>",
-        "qa": [
-          {
-            "q": "How do I connect Arena to Microsoft Outlook for email?",
-            "tags": [
-              "connect outlook",
-              "marketplace",
-              "microsoft integration"
-            ],
-            "a": "<ol>\n              <li>Global Data → <strong>Marketplace</strong> → <strong>Microsoft Outlook</strong>.</li>\n              <li>Click <strong>Sign in with Microsoft</strong> and grant organization-wide consent (must use a company-domain email, not personal).</li>\n              <li>Then go to <strong>Settings → Mail Settings</strong> and switch the relevant modules (e.g. Work Order) to <strong>Outlook</strong>.</li>\n            </ol>"
-          },
-          {
-            "q": "How do I sync external users into Arena via Staged Tables?",
-            "tags": [
-              "staged tables",
-              "sync external data",
-              "map attributes"
-            ],
-            "a": "<ol>\n              <li>Connect the source system first (Global Data → <strong>Marketplace</strong> → e.g. Trimble Viewpoint → enter credentials → <strong>Test Connection and Save</strong> → map Table/Schema per module → <strong>Save Configuration</strong>).</li>\n              <li>Global Data → <strong>Staged Tables</strong> → select the system tab (e.g. View Point) → select <strong>Users</strong> in the left nav.</li>\n              <li>Click <strong>Map Attributes</strong> and map each external column to the matching Arena field.</li>\n              <li>Optionally set <strong>Auto Sync Criteria</strong> for a recurring schedule, or click <strong>Bulk Create Arena Records</strong> to promote all currently staged rows immediately.</li>\n            </ol>"
-          }
-        ]
-      },
-      {
-        "id": "customer",
-        "heading": "Customer (Opportunity Customer Settings)",
-        "html": "<p>Configures the customer/lead-management data model used by the Opportunities/Proposal pipeline, including a multi-level customer approval workflow.</p>\n        <p><strong>Three tabs:</strong> Customer, Contact, Approval Workflow.</p>\n        <ul>\n          <li><strong>Customer</strong> — Standard Fields (Customer ID, Customer Name, Short Name, Alias Name, Primary/Mailing/Billing Address, Email Address, Phone Number, Fax Number, URL, Tax Codes, Locations) plus a Configurable Fields builder (Add Field, Choose Type, Required, Show on cards toggles) — the same builder pattern as Owner/Roster Settings.</li>\n          <li><strong>Contact</strong> — the same style of settings for individual customer contacts (mirrors the Vendor contact-table pattern).</li>\n          <li><strong>Approval Workflow</strong> — a table of approval Levels (Level, Level Description, Approvers, Workflow Type) with a <strong>Create Level</strong> button, defining a multi-step sign-off chain for customer/opportunity records.</li>\n        </ul>",
-        "qa": [
-          {
-            "q": "How do I add an approval level for customer records?",
-            "tags": [
-              "customer approval workflow",
-              "create level"
-            ],
-            "a": "<ol>\n              <li>Global Data → <strong>Customer</strong> tile → <strong>Approval Workflow</strong> tab → <strong>Create Level</strong>.</li>\n              <li>Name/describe the level, assign Approvers, and choose the Workflow Type.</li>\n              <li>Save — subsequent opportunity/customer approvals will route through this chain in order.</li>\n            </ol>"
-          }
-        ]
-      },
-      {
-        "id": "cost",
-        "heading": "Cost & Bid Templates",
-        "html": "<p>Defines the company's cost classification taxonomy (Cost Types) and reusable Cost Breakdown Structure (CBS) templates built from Phase Codes, used across estimating, budgeting, and cost tracking.</p>\n        <p><strong>Two tabs:</strong> Cost Type, Cost Breakdown Structure.</p>\n        <ul>\n          <li><strong>Cost Type</strong> — fixed system types (Material, Equipment, Labor, Unit Rate, Sub Contractor) plus custom types created via <strong>Add Type</strong> (e.g. BOQ's, Freight Charges, Fuel &amp; Gas), each showing Description and Created By.</li>\n          <li><strong>Cost Breakdown Structure</strong> — left nav Phase Codes (the same Phase Code table seen under UOM/Phasecode &amp; GL Codes, reused here) and Templates (named CBS templates, one markable as Default, with an Add Template button).</li>\n        </ul>\n        <h4>Bid Templates</h4>\n        <p>A master catalog of estimate/bid line items (Item Description + Unit of Measure) that bid/estimate forms can pull from, so bids use consistent item descriptions and units across the company.</p>\n        <p><strong>Table:</strong> S.No, Item Description, UOM Group, UOM, Actions. Buttons: <strong>Add Item</strong>, Download Excel, Download Sample Excel, Upload Excel.</p>",
-        "qa": [
-          {
-            "q": "How do I add a custom cost category (like \"Freight Charges\")?",
-            "tags": [
-              "cost type",
-              "add cost category",
-              "freight charges"
-            ],
-            "a": "<ol>\n              <li>Global Data → <strong>Cost</strong> → <strong>Cost Type</strong> tab → <strong>Add Type</strong>.</li>\n              <li>Enter the name (e.g. \"Freight Charges\") and a description, then submit.</li>\n            </ol>"
-          },
-          {
-            "q": "How do I set up a Cost Breakdown Structure (CBS) template?",
-            "tags": [
-              "cost breakdown structure",
-              "cbs template"
-            ],
-            "a": "<ol>\n              <li>Global Data → <strong>Cost</strong> → <strong>Cost Breakdown Structure</strong> tab → <strong>Templates</strong> → <strong>Add Template</strong>.</li>\n              <li>Name it and build its structure using the available Phase Codes (managed under the Phase Codes side-list on the same screen, or under UOM/Phasecode &amp; GL Codes).</li>\n              <li>Optionally mark it as the company's Default CBS template.</li>\n            </ol>"
-          },
-          {
-            "q": "How do I add a bid line item?",
-            "tags": [
-              "bid template",
-              "add item",
-              "estimate line item"
-            ],
-            "a": "<ol>\n              <li>Global Data → <strong>Bid Templates</strong> → <strong>Add Item</strong>.</li>\n              <li>Enter the Item Description and choose its UOM Group and UOM.</li>\n              <li>Submit. For bulk loading, use <strong>Download Sample Excel</strong>, fill it in, then <strong>Upload Excel</strong>.</li>\n            </ol>"
-          }
-        ]
-      },
-      {
-        "id": "compliance-hub",
-        "heading": "Compliance Hub",
-        "html": "<p>Tracks required company/vendor/subcontractor compliance documents (licenses, certifications, insurance, etc.) — first defining what's required (the Directory), then tracking the company's actual status against it.</p>\n        <p><strong>Two tabs:</strong> Compliance Directory, My Company Compliance.</p>\n        <ul>\n          <li><strong>Compliance Directory</strong> — defines the types of compliance required. <strong>Create</strong> opens \"Create Compliance Directory\": Compliance Name*, Compliance Description, Category/Type*, Renewal Frequency, Renewal Period, Evidence Type*, Required Evidence* (file upload). Status counter chips: Met / Expired / Expiring Soon / Missing.</li>\n          <li><strong>My Company Compliance</strong> — the company's actual submitted/tracked compliance records against the Directory's defined requirements, same table shape plus a Source column, and status chips Met / Expired / Expiring Soon.</li>\n        </ul>",
-        "qa": [
-          {
-            "q": "How do I define a new compliance requirement?",
-            "tags": [
-              "compliance directory",
-              "compliance requirement"
-            ],
-            "a": "<ol>\n              <li>Global Data → <strong>Compliance Hub</strong> → <strong>Compliance Directory</strong> → <strong>Create</strong>.</li>\n              <li>Fill Compliance Name*, Description, Category/Type*, Renewal Frequency and Period (if periodic renewal applies), Evidence Type*, and upload the Required Evidence template/sample.</li>\n              <li>Submit — this requirement is now tracked (and can show as Missing/Expiring/Expired) under <strong>My Company Compliance</strong>.</li>\n            </ol>"
-          }
-        ]
-      },
-      {
-        "id": "measurement-templates",
-        "heading": "Measurement Templates",
-        "html": "<p>Defines reusable quantity take-off formulas (e.g. Length × Breadth × Depth × Count) that can be linked to Work Packages (Construction Type Step 10) so field teams get an automatic quantity calculator when logging progress.</p>\n        <p><strong>Table:</strong> Template ID, Template Name, Fields, Formula, Actions. Buttons: <strong>Add Template</strong>, Download Excel.</p>\n        <p><strong>Create Measurement Template</strong> dialog: Template ID*, Template Name*, <strong>Parameters*</strong> (add named parameters like L, B, D, Nos via a + button), <strong>Formula*</strong> (free-text expression referencing the parameters by position, e.g. <code>[1]*[2]*[3]*[4]</code>, with the helper example <code>e.g. [1] * [3] or [1] * [2] / [3]</code>).</p>",
-        "qa": [
-          {
-            "q": "How do I build a quantity take-off formula for progress tracking?",
-            "tags": [
-              "measurement template",
-              "quantity takeoff",
-              "formula"
-            ],
-            "a": "<ol>\n              <li>Global Data → <strong>Measurement Templates</strong> → <strong>Add Template</strong>.</li>\n              <li>Enter a Template ID* and Template Name* (e.g. \"LBD\").</li>\n              <li>Under <strong>Parameters</strong>, add each variable the formula needs (e.g. L, B, D, Nos), clicking + after each.</li>\n              <li>Enter the <strong>Formula</strong> referencing the parameters (e.g. <code>(L)*(B)*(D)*(Nos)</code>).</li>\n              <li>Click <strong>Submit</strong>.</li>\n              <li>Later, link this template to a Work Package via the Construction Type pipeline's Step 10 (Work Package Measurement Template Linking).</li>\n            </ol>"
-          }
-        ]
-      }
+      "About Global Data",
+      "Company & Business Units",
+      "Users & Permissions",
+      "Locations & Tax",
+      "Vendors & Subcontractors",
+      "UOM & Phase Codes",
+      "Construction Types",
+      "Work Order Management",
+      "Cost & Bid Templates",
+      "Customer Settings",
+      "Company-Wide Settings",
+      "Forms & Quickapps",
+      "Notifications",
+      "Integrations: Marketplace & Staged Tables",
+      "Compliance Hub",
+      "Measurement Templates",
+      "Owners: Client & Project-Owner Directory"
     ]
   },
   {
