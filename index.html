@@ -1,4 +1,5 @@
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Arena Support AI</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap">
 <style>
@@ -327,15 +328,38 @@
   .chat-suggest-hidden { display: none !important; }
 
   /* ---------- Browse view (secondary) ---------- */
-  .browse-shell { width: 100%; margin: 0 auto; padding: 32px 48px 80px; }
+  .browse-shell { width: 100%; margin: 0; padding: 32px 40px 80px; max-width: none; }
   .doc-header { margin-bottom: 18px; }
   .doc-module-overview {
-    font-size: 15px; color: var(--ink-soft); line-height: 1.65; max-width: 74ch;
+    font-size: 15px; color: var(--ink-soft); line-height: 1.65; max-width: 80ch;
     padding-bottom: 22px; border-bottom: 1px solid var(--border-soft); margin-bottom: 4px;
   }
   .doc-module-overview p { margin: 0 0 10px; }
   .doc-module-overview strong { color: var(--ink); }
 
+  /* Common tasks card */
+  .doc-tasks-card {
+    margin: 18px 0 28px; padding: 16px 20px; background: var(--surface-raised);
+    border: 1px solid var(--border); border-radius: var(--radius-md);
+  }
+  .doc-tasks-label {
+    display: flex; align-items: center; gap: 7px;
+    font-family: "IBM Plex Mono", monospace; font-size: 10.5px; font-weight: 600;
+    letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 0 0 12px;
+  }
+  .doc-tasks-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 8px; }
+  .doc-task-link {
+    display: flex; align-items: center; gap: 9px; text-align: left; width: 100%;
+    background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm);
+    padding: 10px 12px; font-family: inherit; font-size: 13px; color: var(--ink); font-weight: 500;
+    cursor: pointer; transition: border-color 0.12s ease, box-shadow 0.12s ease;
+  }
+  .doc-task-link:hover { border-color: var(--accent); box-shadow: var(--shadow-sm); }
+  .doc-task-link:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+  .doc-task-link svg { flex-shrink: 0; color: var(--accent); }
+
+  /* Two-column layout: main content + sticky TOC rail at wide widths */
+  .doc-layout { display: block; }
   .doc-toc-and-search {
     display: flex; flex-direction: column; gap: 14px;
     margin: 22px 0 28px; padding: 16px 18px; background: var(--surface-raised);
@@ -358,45 +382,127 @@
     border: 1px solid var(--border); border-radius: 999px; padding: 4px 10px; white-space: nowrap;
   }
   .doc-toc-link:hover { border-color: var(--accent); color: var(--accent); }
+  .doc-toc-link:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
   .doc-toc-link-dim { opacity: 0.35; }
+
+  /* Sticky rail TOC shown only at wide viewports (built alongside the flex fallback above) */
+  .doc-toc-rail { display: none; }
+
+  @media (min-width: 1100px) {
+    .doc-layout { display: grid; grid-template-columns: 1fr 240px; align-items: start; gap: 40px; }
+    .doc-toc-and-search { display: block; }
+    .doc-toc-and-search .doc-toc-label, .doc-toc-and-search .doc-toc { display: none; }
+    .doc-toc-rail {
+      display: block; position: sticky; top: 24px; max-height: calc(100vh - 48px);
+      overflow-y: auto; padding-left: 2px;
+    }
+    .doc-toc-rail .doc-toc-label {
+      font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 600;
+      letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px;
+    }
+    .doc-toc-rail-list { display: flex; flex-direction: column; gap: 2px; list-style: none; margin: 0; padding: 0; }
+    .doc-toc-rail-link {
+      display: flex; align-items: baseline; gap: 8px; text-decoration: none;
+      font-size: 12.5px; color: var(--muted); padding: 6px 10px; border-radius: var(--radius-sm);
+      border-left: 2px solid transparent; line-height: 1.4;
+    }
+    .doc-toc-rail-num { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; flex-shrink: 0; }
+    .doc-toc-rail-link:hover { color: var(--ink); background: var(--surface-raised); }
+    .doc-toc-rail-link.active { color: var(--accent-ink); font-weight: 600; border-left-color: var(--accent); background: var(--accent-tint-soft); }
+    .doc-toc-rail-link.doc-toc-link-dim { opacity: 0.35; }
+  }
 
   .doc-section {
     scroll-margin-top: 16px;
-    padding-bottom: 28px;
-    border-bottom: 1px solid var(--border-soft);
+    margin-bottom: 36px;
+    padding: 24px 26px 26px;
+    background: var(--surface-raised);
+    border: 1px solid var(--border-soft);
+    border-top: 3px solid var(--accent);
+    border-radius: var(--radius-md);
   }
-  .doc-section:last-of-type { border-bottom: none; }
-  .doc-intro { font-size: 14.5px; color: var(--ink-soft); line-height: 1.7; max-width: 74ch; }
+  .doc-section:last-of-type { margin-bottom: 0; }
+  .doc-section-head { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 4px; }
+  .doc-section-badge {
+    flex-shrink: 0; width: 34px; height: 34px; border-radius: 50%;
+    background: var(--accent-tint); color: var(--accent-ink); font-weight: 700;
+    font-family: "IBM Plex Mono", monospace; font-size: 14px;
+    display: flex; align-items: center; justify-content: center; margin-top: 2px;
+  }
+  .doc-section-heading-wrap { flex: 1; min-width: 0; }
+  .browse-group-heading {
+    font-family: "Fraunces", serif; font-size: 22px; font-weight: 600; margin: 0 0 4px;
+    letter-spacing: -0.01em; color: var(--ink); text-wrap: balance;
+  }
+  .doc-section-meta {
+    font-size: 12.5px; color: var(--muted); margin: 0;
+  }
+  .doc-intro { font-size: 14.5px; color: var(--ink-soft); line-height: 1.7; max-width: 80ch; margin: 16px 0 22px; }
   .doc-intro p { margin: 0 0 12px; }
+  .doc-intro p:last-child { margin-bottom: 0; }
   .doc-intro strong { color: var(--ink); }
-  .doc-subheading {
-    font-family: "IBM Plex Mono", monospace; font-size: 11px; font-weight: 600;
-    letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent);
-    margin: 22px 0 10px;
-  }
 
-  .doc-definitions { display: grid; gap: 12px; margin: 0 0 8px; }
-  .doc-def-row {
-    display: grid; grid-template-columns: minmax(140px, 220px) 1fr; gap: 16px;
-    padding: 12px 0; border-bottom: 1px solid var(--border-soft);
+  .doc-subblock { margin-top: 26px; }
+  .doc-subblock:first-of-type { margin-top: 6px; }
+  .doc-subheading {
+    display: flex; align-items: center; gap: 7px;
+    font-size: 12.5px; font-weight: 700;
+    letter-spacing: 0.03em; text-transform: uppercase; color: var(--ink-soft);
+    margin: 0 0 14px;
   }
-  .doc-def-row dt { font-weight: 600; font-size: 13.5px; color: var(--ink); }
-  .doc-def-row dd { margin: 0; font-size: 13.5px; color: var(--ink-soft); line-height: 1.6; }
+  .doc-subheading svg { color: var(--accent); flex-shrink: 0; }
+
+  .doc-definitions { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 10px 20px; margin: 0; max-width: 80ch; }
+  .doc-def-row {
+    padding: 10px 0; border-bottom: 1px solid var(--border-soft);
+  }
+  .doc-def-row dt { font-weight: 600; font-size: 13.5px; color: var(--ink); margin-bottom: 3px; }
+  .doc-def-row dd { margin: 0; font-size: 13px; color: var(--ink-soft); line-height: 1.55; }
   .doc-def-row dd p { margin: 0 0 6px; }
   .doc-def-row dd p:last-child { margin-bottom: 0; }
-  @media (max-width: 640px) { .doc-def-row { grid-template-columns: 1fr; gap: 4px; } }
 
-  .doc-procedure { margin-bottom: 18px; }
-  .doc-procedure-title { font-size: 14.5px; font-weight: 600; color: var(--ink); margin: 0 0 8px; }
-  .doc-procedure-steps { margin: 0; padding-left: 22px; font-size: 14px; color: var(--ink-soft); line-height: 1.65; }
-  .doc-procedure-steps li { margin-bottom: 7px; }
+  .doc-terms-toggle {
+    display: inline-flex; align-items: center; gap: 6px; margin-bottom: 12px;
+    background: none; border: 1px solid var(--border); border-radius: 999px;
+    padding: 6px 13px; font-family: inherit; font-size: 12.5px; font-weight: 600;
+    color: var(--ink-soft); cursor: pointer;
+  }
+  .doc-terms-toggle:hover { border-color: var(--accent); color: var(--accent); }
+  .doc-terms-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+  .doc-terms-toggle svg { transition: transform 0.15s ease; }
+  .doc-terms-toggle[aria-expanded="true"] svg { transform: rotate(180deg); }
+  .doc-definitions[hidden] { display: none; }
+
+  .doc-procedure {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius-md); padding: 16px 18px; margin-bottom: 14px;
+    max-width: 80ch;
+  }
+  .doc-procedure:last-child { margin-bottom: 0; }
+  .doc-procedure-title { font-size: 14.5px; font-weight: 700; color: var(--ink); margin: 0 0 12px; }
+  .doc-procedure-steps { list-style: none; margin: 0; padding: 0; font-size: 14px; color: var(--ink-soft); line-height: 1.6; }
+  .doc-procedure-steps li {
+    display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;
+  }
+  .doc-procedure-steps li:last-child { margin-bottom: 0; }
+  .doc-procedure-steps li::before {
+    counter-increment: step; content: counter(step);
+    flex-shrink: 0; width: 20px; height: 20px; border-radius: 50%;
+    background: var(--accent-tint); color: var(--accent-ink); font-weight: 700;
+    font-family: "IBM Plex Mono", monospace; font-size: 11px;
+    display: flex; align-items: center; justify-content: center; margin-top: 1px;
+  }
+  .doc-procedure-steps li > .doc-step-text { flex: 1; min-width: 0; overflow-wrap: break-word; }
+  .doc-procedure-steps { counter-reset: step; }
   .doc-procedure-steps strong { color: var(--ink); }
   .doc-callout {
     background: var(--accent-tint-soft); border-left: 3px solid var(--accent);
     border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 9px 13px;
-    font-size: 13px; color: var(--ink-soft); margin-top: 8px;
+    font-size: 13px; color: var(--ink-soft); margin-top: 12px;
   }
   .doc-callout p { margin: 0; }
+
+  .doc-qa-list { display: flex; flex-direction: column; gap: 8px; max-width: 80ch; }
 
   .search-results-list { display: flex; flex-direction: column; gap: 8px; }
   .search-result-item {
@@ -419,30 +525,34 @@
   }
   .doc-title { font-family: "Fraunces", serif; font-size: 30px; font-weight: 600; margin: 4px 0 6px; letter-spacing: -0.015em; }
   .doc-tagline { color: var(--muted); font-size: 14.5px; margin: 0; font-style: italic; }
+
   .browse-qa-list { display: flex; flex-direction: column; gap: 8px; }
   .browse-qa-item {
     border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--surface);
     transition: box-shadow 0.15s ease, border-color 0.15s ease;
+    overflow: hidden;
   }
   .browse-qa-item:hover { border-color: var(--accent); box-shadow: var(--shadow-sm); }
-  .browse-qa-item summary {
-    cursor: pointer; padding: 13px 16px; font-weight: 600; font-size: 13.5px;
-    list-style: none; display: flex; align-items: center; gap: 11px;
+  .browse-qa-trigger {
+    all: unset; box-sizing: border-box;
+    cursor: pointer; padding: 13px 16px; font-weight: 600; font-size: 13.5px; color: var(--ink);
+    display: flex; align-items: center; gap: 11px; width: 100%; font-family: inherit;
   }
-  .browse-qa-item summary::-webkit-details-marker { display: none; }
-  .browse-qa-item summary::before {
+  .browse-qa-trigger:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+  .browse-qa-trigger::before {
     content: "?"; font-family: "IBM Plex Mono", monospace; font-size: 11px;
     width: 18px; height: 18px; border-radius: 50%; background: var(--accent-tint); color: var(--accent);
     display: flex; align-items: center; justify-content: center; flex-shrink: 0;
   }
-  .browse-qa-item summary::after {
+  .browse-qa-trigger::after {
     content: ""; width: 8px; height: 8px; margin-left: auto; flex-shrink: 0;
     border-right: 2px solid var(--muted); border-bottom: 2px solid var(--muted);
     transform: rotate(45deg); transition: transform 0.15s ease; margin-top: -2px;
   }
-  .browse-qa-item[open] summary::after { transform: rotate(-135deg); margin-top: 2px; }
-  .browse-qa-item[open] summary { border-bottom: 1px solid var(--border-soft); }
+  .browse-qa-trigger[aria-expanded="true"]::after { transform: rotate(-135deg); margin-top: 2px; }
+  .browse-qa-item.open .browse-qa-trigger { border-bottom: 1px solid var(--border-soft); }
   .browse-qa-body { padding: 4px 16px 16px 44px; font-size: 14px; color: var(--ink-soft); }
+  .browse-qa-body[hidden] { display: none; }
   .browse-qa-body ol, .browse-qa-body ul { padding-left: 20px; margin: 6px 0; }
   .browse-qa-body li { margin-bottom: 5px; }
   .browse-scope-pill {
@@ -451,15 +561,16 @@
     border: 1px solid var(--border); padding: 2px 7px; border-radius: 5px; margin-left: auto; flex-shrink: 0;
     margin-right: 4px;
   }
-  .browse-group-heading {
-    font-family: "Fraunces", serif; font-size: 18px; font-weight: 600; margin: 32px 0 12px;
-  }
-  .browse-group-heading:first-of-type { margin-top: 0; }
 
   @media (max-width: 860px) {
     .app { grid-template-columns: 1fr; }
     .rail { display: none; }
     .chat-shell, .browse-shell { padding: 20px 16px; }
+  }
+  @media (max-width: 480px) {
+    .browse-shell { padding: 20px 14px 60px; }
+    .doc-section { padding: 18px 16px 20px; }
+    .doc-title { font-size: 24px; }
   }
 </style>
 
@@ -831,14 +942,23 @@ Example of the style to use — if a note says "Go to Settings, click Add User, 
     return { groups, order };
   }
 
-  function renderDefinitionsHtml(defs) {
+  const ICON_STEPS = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>`;
+  const ICON_TERMS = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>`;
+  const ICON_QA = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>`;
+  const ICON_TASK = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>`;
+  const ICON_CHEVRON = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 9l6 6 6-6"/></svg>`;
+
+  function renderDefinitionsHtml(defs, collapseId) {
     if (!defs || !defs.length) return "";
-    return `<dl class="doc-definitions">${defs.map(d => `
+    const shouldCollapse = defs.length > 3;
+    const rows = `<dl class="doc-definitions"${shouldCollapse ? ` id="${collapseId}" hidden` : ""}>${defs.map(d => `
       <div class="doc-def-row">
         <dt>${escapeHtml(d.term)}</dt>
         <dd>${renderAnswerHtml(d.definition)}</dd>
       </div>
     `).join("")}</dl>`;
+    if (!shouldCollapse) return rows;
+    return `<button type="button" class="doc-terms-toggle" aria-expanded="false" aria-controls="${collapseId}">${ICON_CHEVRON} Show ${defs.length} terms</button>${rows}`;
   }
 
   function renderProceduresHtml(procs) {
@@ -846,26 +966,31 @@ Example of the style to use — if a note says "Go to Settings, click Add User, 
     return procs.map(p => `
       <div class="doc-procedure">
         <h4 class="doc-procedure-title">${escapeHtml(p.title)}</h4>
-        <ol class="doc-procedure-steps">${(p.steps || []).map(s => `<li>${s}</li>`).join("")}</ol>
+        <ol class="doc-procedure-steps">${(p.steps || []).map(s => `<li><span class="doc-step-text">${s}</span></li>`).join("")}</ol>
         ${p.note ? `<div class="doc-callout">${renderAnswerHtml(p.note)}</div>` : ""}
       </div>
     `).join("");
   }
 
-  function renderQaListHtml(items) {
+  function renderQaListHtml(items, idPrefix) {
     if (!items || !items.length) return "";
-    return `<div class="browse-qa-list">${items.map(it => `
-      <details class="browse-qa-item">
-        <summary>${escapeHtml(it.question)}<span class="browse-scope-pill">${it.scope}</span></summary>
-        <div class="browse-qa-body">${renderAnswerHtml(it.answer)}</div>
-      </details>
-    `).join("")}</div>`;
+    return `<div class="browse-qa-list">${items.map((it, i) => {
+      const bodyId = `${idPrefix}-qa-${i}`;
+      return `
+      <div class="browse-qa-item">
+        <button type="button" class="browse-qa-trigger" aria-expanded="false" aria-controls="${bodyId}">${escapeHtml(it.question)}<span class="browse-scope-pill">${it.scope}</span></button>
+        <div class="browse-qa-body" id="${bodyId}" hidden>${renderAnswerHtml(it.answer)}</div>
+      </div>
+    `;
+    }).join("")}</div>`;
   }
 
   function matchesModuleFilter(text, filter) {
     if (!filter) return true;
     return (text || "").toLowerCase().includes(filter.toLowerCase());
   }
+
+  let tocScrollObserver = null;
 
   function renderBrowse(moduleId, opts) {
     const mod = MODULES.find(m => m.id === moduleId);
@@ -894,6 +1019,17 @@ Example of the style to use — if a note says "Go to Settings, click Add User, 
 
     const visibleHeadings = sectionHeadings.filter(sectionMatchesFilter);
 
+    // "Common tasks" card: aggregate up to 6 procedure titles from every section, jump to their section anchor.
+    const allTasks = [];
+    if (hasNarrative) {
+      mod.narrative.forEach(sec => {
+        (sec.procedures || []).forEach(p => {
+          allTasks.push({ title: p.title, heading: sec.heading });
+        });
+      });
+    }
+    const commonTasks = allTasks.slice(0, 6);
+
     main.innerHTML = `
       <div class="browse-shell">
         <div class="doc-header">
@@ -903,6 +1039,14 @@ Example of the style to use — if a note says "Go to Settings, click Add User, 
         </div>
 
         ${mod.overview ? `<div class="doc-module-overview">${mod.overview}</div>` : ""}
+
+        ${commonTasks.length ? `
+        <div class="doc-tasks-card">
+          <p class="doc-tasks-label">Common tasks</p>
+          <div class="doc-tasks-grid">${commonTasks.map(t => `
+            <button type="button" class="doc-task-link" data-jump="sec-${slugify(t.heading)}">${ICON_TASK}<span>${escapeHtml(t.title)}</span></button>
+          `).join("")}</div>
+        </div>` : ""}
 
         <div class="doc-toc-and-search">
           <div class="doc-search-box">
@@ -916,19 +1060,60 @@ Example of the style to use — if a note says "Go to Settings, click Add User, 
           </div>` : ""}
         </div>
 
-        ${visibleHeadings.length ? visibleHeadings.map(heading => {
-          const narr = hasNarrative ? mod.narrative.find(s => s.heading === heading) : null;
-          const qaItems = groups[heading] || [];
-          return `
-          <section class="doc-section" id="sec-${slugify(heading)}">
-            <h2 class="browse-group-heading">${escapeHtml(heading)}</h2>
-            ${narr && narr.intro ? `<div class="doc-intro">${narr.intro}</div>` : ""}
-            ${narr && narr.definitions && narr.definitions.length ? `<h3 class="doc-subheading">Key terms</h3>${renderDefinitionsHtml(narr.definitions)}` : ""}
-            ${narr && narr.procedures && narr.procedures.length ? `<h3 class="doc-subheading">How to</h3>${renderProceduresHtml(narr.procedures)}` : ""}
-            ${qaItems.length ? `<h3 class="doc-subheading">Common questions</h3>${renderQaListHtml(qaItems)}` : ""}
-          </section>
-        `;
-        }).join("") : `<p style="color:var(--muted)">No sections match "${escapeHtml(filter)}".</p>`}
+        <div class="doc-layout">
+          <div class="doc-main-col">
+            ${visibleHeadings.length ? visibleHeadings.map((heading, idx) => {
+              const narr = hasNarrative ? mod.narrative.find(s => s.heading === heading) : null;
+              const qaItems = groups[heading] || [];
+              const stepCount = narr && narr.procedures ? narr.procedures.length : 0;
+              const termCount = narr && narr.definitions ? narr.definitions.length : 0;
+              const qaCount = qaItems.length;
+              const metaParts = [];
+              if (stepCount) metaParts.push(`${stepCount} step${stepCount===1?'':'s'}`);
+              if (termCount) metaParts.push(`${termCount} term${termCount===1?'':'s'}`);
+              if (qaCount) metaParts.push(`${qaCount} question${qaCount===1?'':'s'}`);
+              const slug = slugify(heading);
+              return `
+              <section class="doc-section" id="sec-${slug}" data-toc-heading="${escapeHtml(heading)}">
+                <div class="doc-section-head">
+                  <span class="doc-section-badge">${idx + 1}</span>
+                  <div class="doc-section-heading-wrap">
+                    <h2 class="browse-group-heading">${escapeHtml(heading)}</h2>
+                    ${metaParts.length ? `<p class="doc-section-meta">${metaParts.join(" · ")}</p>` : ""}
+                  </div>
+                </div>
+                ${narr && narr.intro ? `<div class="doc-intro">${narr.intro}</div>` : ""}
+
+                ${stepCount ? `
+                <div class="doc-subblock">
+                  <h3 class="doc-subheading">${ICON_STEPS} Steps</h3>
+                  ${renderProceduresHtml(narr.procedures)}
+                </div>` : ""}
+
+                ${termCount ? `
+                <div class="doc-subblock">
+                  <h3 class="doc-subheading">${ICON_TERMS} Terms to know</h3>
+                  ${renderDefinitionsHtml(narr.definitions, `terms-${slug}`)}
+                </div>` : ""}
+
+                ${qaCount ? `
+                <div class="doc-subblock">
+                  <h3 class="doc-subheading">${ICON_QA} Questions</h3>
+                  ${renderQaListHtml(qaItems, slug)}
+                </div>` : ""}
+              </section>
+            `;
+            }).join("") : `<p style="color:var(--muted)">No sections match "${escapeHtml(filter)}".</p>`}
+          </div>
+
+          ${visibleHeadings.length > 1 ? `
+          <aside class="doc-toc-rail" aria-label="On this page">
+            <p class="doc-toc-label">On this page</p>
+            <ul class="doc-toc-rail-list">${visibleHeadings.map((h, i) => `
+              <li><a href="#sec-${slugify(h)}" class="doc-toc-rail-link" data-rail-target="sec-${slugify(h)}"><span class="doc-toc-rail-num">${i + 1}</span><span>${escapeHtml(h)}</span></a></li>
+            `).join("")}</ul>
+          </aside>` : ""}
+        </div>
       </div>
     `;
 
@@ -939,6 +1124,62 @@ Example of the style to use — if a note says "Go to Settings, click Add User, 
       });
       if (filter) { docSearchInput.focus(); docSearchInput.setSelectionRange(filter.length, filter.length); }
     }
+
+    // Common-task jump links
+    main.querySelectorAll(".doc-task-link").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const target = document.getElementById(btn.dataset.jump);
+        if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    });
+
+    // Terms-to-know collapse toggles
+    main.querySelectorAll(".doc-terms-toggle").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const list = document.getElementById(btn.getAttribute("aria-controls"));
+        const expanded = btn.getAttribute("aria-expanded") === "true";
+        btn.setAttribute("aria-expanded", String(!expanded));
+        if (list) list.hidden = expanded;
+        const count = list ? list.querySelectorAll(".doc-def-row").length : 0;
+        btn.lastChild.textContent = ` ${expanded ? "Show" : "Hide"} ${count} terms`;
+      });
+    });
+
+    // Q&A accordion toggles
+    main.querySelectorAll(".browse-qa-trigger").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const body = document.getElementById(btn.getAttribute("aria-controls"));
+        const expanded = btn.getAttribute("aria-expanded") === "true";
+        btn.setAttribute("aria-expanded", String(!expanded));
+        btn.closest(".browse-qa-item").classList.toggle("open", !expanded);
+        if (body) body.hidden = expanded;
+      });
+    });
+
+    // Sticky TOC rail: highlight current section on scroll (IntersectionObserver)
+    if (tocScrollObserver) { tocScrollObserver.disconnect(); tocScrollObserver = null; }
+    const railLinks = main.querySelectorAll(".doc-toc-rail-link");
+    const sections = main.querySelectorAll(".doc-section[id]");
+    if (railLinks.length && sections.length) {
+      const setActive = id => {
+        railLinks.forEach(l => l.classList.toggle("active", l.dataset.railTarget === id));
+      };
+      tocScrollObserver = new IntersectionObserver(entries => {
+        const visible = entries.filter(e => e.isIntersecting).sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+        if (visible.length) setActive(visible[0].target.id);
+      }, { root: main, rootMargin: "-10% 0px -70% 0px", threshold: [0, 1] });
+      sections.forEach(sec => tocScrollObserver.observe(sec));
+      setActive(sections[0].id);
+    }
+
+    // Smooth-scroll for TOC rail + inline TOC links (native anchor jump still works without JS)
+    main.querySelectorAll(".doc-toc-rail-link, .doc-toc-link").forEach(link => {
+      link.addEventListener("click", e => {
+        const id = link.getAttribute("href").slice(1);
+        const target = document.getElementById(id);
+        if (target) { e.preventDefault(); target.scrollIntoView({ behavior: "smooth", block: "start" }); }
+      });
+    });
   }
 
   function slugify(s) {
