@@ -102,7 +102,7 @@ const QA_OPPORTUNITY = [
     object: "opportunity",
     scope: "module", section: "Opportunities",
     question: "How do I create a new opportunity?",
-    answer: "1. Go to **Opportunities Management → Opportunities**.\n2. Click **+ Create** in the toolbar.\n3. **Details:** enter **Opportunity Name*** (required) and pick a **Market Type** (Highway, Residential, Infrastructure, Interiors, …).\n4. **Status & Value:** **Stage*** defaults to \"Lead\" and is locked. **Status*** is required — its options come from whatever Statuses are configured for that Stage.\n5. **Contact:** optionally set **Customer Groups**, **Site Representative**, **Corporate Lead**, **Executive Lead** (searchable people-pickers, auto-suggested from Account Assignment).\n6. Click **Submit**.\n\n⚠ In this environment, Submit can fail with \"Status is required\" because the **Lead** stage has zero Statuses configured under Settings → Stages & Statuses Configuration. An admin must add at least one Status to Lead before new opportunities can be created.",
+    answer: "1. Go to **Opportunities Management → Opportunities**.\n2. Click **+ Create** in the toolbar.\n3. **Details:** enter **Opportunity Name*** (required) and pick a **Market Type** (Highway, Residential, Infrastructure, Interiors, …).\n4. **Status & Value:** **Stage*** defaults to \"Lead\" and is locked. **Status*** is required — its options come from whatever Statuses are configured for that Stage.\n5. **Contact:** optionally set **Customer Groups**, **Site Representative**, **Corporate Lead**, **Executive Lead** (searchable people-pickers, auto-suggested from Account Assignment).\n6. Click **Submit**.\n\n⚠ If Submit fails with \"Status is required\", the **Lead** stage has no Statuses configured under Settings → Stages & Statuses Configuration. An admin must add at least one Status to Lead before new opportunities can be created.",
     tags: ["create opportunity","add lead","new pursuit","new lead form"]
   },
   {
@@ -238,7 +238,7 @@ const QA_OPPORTUNITY = [
     object: "opportunities list",
     scope: "module", section: "Opportunities",
     question: "Why is the Opportunities list showing \"No Data Available\", with no row actions?",
-    answer: "There are no Opportunity records created yet in this environment — which currently requires the Lead-stage Status configuration fix to resolve (see **Why can't I select a Status when creating an opportunity?**). Once records exist, an **Actions** column exposes per-row actions, following the same pattern seen on Customers, Owners, and Competitors (History, Edit, Delete, Notes).",
+    answer: "This means no opportunities exist yet, or none match your filters. If nobody can create one, check that the **Lead** stage has at least one Status configured (see **Why can't I select a Status when creating an opportunity?**). Once records exist, an **Actions** column exposes per-row actions, following the same pattern seen on Customers, Owners, and Competitors (History, Edit, Delete, Notes).",
     tags: ["no data available","no opportunities","empty list"]
   },
   {
@@ -5491,7 +5491,7 @@ const QA_PROCUREMENT = [
     object: "purchase order viewpoint export",
     scope: "project", section: "Purchase Orders",
     question: "Can I export Purchase Orders in a format Viewpoint can import?",
-    answer: "Unconfirmed in the current environment. The Purchase Orders tab and Purchase Order Master both offer a single \"Download Excel\" export with no separate Viewpoint-specific option visible. If your account has a Viewpoint-compatible export enabled, check with your Procurement Admin — it wasn't visible in this environment's Export or Download Excel buttons.",
+    answer: "There's no separate Viewpoint-format export for Purchase Orders. Use **Download Excel** on the **Purchase Orders** tab or in **Purchase Order Master** to get a spreadsheet of your POs. Arena's Viewpoint (Vista) connection works the other way: it pulls Viewpoint data such as users, crews, phase codes and GL codes into Arena through **Global Data → Staged Tables**. The Viewpoint-style AP export you may have seen is for expense claims, under **Expense Tracker → Processed Forms → Batch Items**.",
     tags: ["viewpoint export","purchase order export","viewpoint integration","accounting export"]
   },
   {
