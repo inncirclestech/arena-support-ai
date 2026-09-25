@@ -857,7 +857,7 @@ const QA_EQUIPMENT = [
     object: "scheduled maintenance activity",
     scope: "module", section: "Field Inspections",
     question: "How do I log a scheduled maintenance activity?",
-    answer: "1. Go to **Field Inspections → Maintenance**, switch to **Calendar**.\n2. Pick the due date — forms show color-coded (Blue = ready).\n3. Open the form, fill required fields, Submit — turns Green once complete.\n4. If a check fails, raise an **issue** directly from that field — it's logged to **Asset Issues** automatically.",
+    answer: "1. Go to **Field Inspections → Maintenance → Asset Maintenance Calendar**.\n2. Pick the due date — forms are grouped by project and color-coded (Blue = Ready).\n3. Open the form, fill required fields, Submit — turns Green (Completed) once complete.\n4. If a check fails, raise an **issue** directly from that field — it's logged to **Asset Issues** automatically.",
     tags: ["scheduled maintenance","field inspection","field inspection log"]
   },
   {
@@ -865,8 +865,8 @@ const QA_EQUIPMENT = [
     object: "equipment photo",
     scope: "module", section: "Field Inspections",
     question: "How do I upload equipment photos?",
-    answer: "1. Go to **Field Inspections → Equipment Photos**.\n2. Select the equipment/accessory from the left list.\n3. Click **Add**, then Upload File to select one or more images.\n4. Optionally annotate using the markup tools, then **Save**.",
-    tags: ["equipment photos","upload image","upload equipment photo"]
+    answer: "1. Go to **Field Inspections → Asset Photos** (also called Equipment Photos).\n2. Select the equipment/accessory from the left list.\n3. Click **Add**, then Upload File to select one or more images.\n4. Optionally annotate using the markup tools, add a Label and Description, then **Save**.",
+    tags: ["equipment photos","upload image","upload equipment photo","asset photos"]
   },
   {
     action: "define",
@@ -910,10 +910,18 @@ const QA_EQUIPMENT = [
   },
   {
     action: "define",
+    object: "asset maintenance calendar colors",
+    scope: "module", section: "Field Inspections",
+    question: "What do the colors on the Asset Maintenance Calendar mean?",
+    answer: "**Grey = Not Ready**, **Blue = Ready**, **Amber = In Progress**, **Green = Completed**. Each day's due forms are grouped by project in a collapsible section, showing the form name, the equipment, and its current status.",
+    tags: ["asset maintenance calendar colors","equipment maintenance calendar legend","not ready ready in progress completed"]
+  },
+  {
+    action: "define",
     object: "scheduled vs ad-hoc inspection",
     scope: "module", section: "Field Inspections",
     question: "What's the difference between a scheduled maintenance form and an ad-hoc inspection?",
-    answer: "A scheduled form is generated automatically by a maintenance package's Prepare Schedule settings (Daily/Weekly/Check Out/Check In) and shows up on the Equipment Maintenance Calendar at the right time. An ad-hoc inspection is created manually at any time via Create Form on the list tab, without being tied to a pre-set schedule.",
+    answer: "A scheduled form is generated automatically by a maintenance package's Prepare Schedule settings (Daily/Weekly/Check Out/Check In) and shows up on the Asset Maintenance Calendar at the right time. An ad-hoc inspection is created manually at any time via Create Form on the Asset Maintenance list tab, without being tied to a pre-set schedule.",
     tags: ["scheduled vs ad-hoc inspection","inspection type comparison"]
   },
   {
@@ -937,7 +945,7 @@ const QA_EQUIPMENT = [
     object: "work order",
     scope: "module", section: "Asset Issues",
     question: "How do I create a Work Order from an equipment issue?",
-    answer: "Click **Create Work Order** on the issue (or NCR) — this spins up a Work Order directly from it to track remediation labor/cost.",
+    answer: "Click **Create Work Order** on the Asset Issues (or NCR) toolbar — this spins up a Work Order to track remediation labor/cost.",
     tags: ["create work order from issue"]
   },
   {
@@ -945,7 +953,7 @@ const QA_EQUIPMENT = [
     object: "asset issue",
     scope: "module", section: "Asset Issues",
     question: "How do I delete, export, or change the view for issues and NCRs?",
-    answer: "Use the kebab (⋮) menu on a card for Delete; click Export to download all records to Excel; and use the table view toggle (top-right) to switch away from the default card view.",
+    answer: "Click the delete icon on an issue's row to remove it; click **Export** to download all records to Excel; and use the view toggle (top-right) to switch between the default table view and a card/grid view.",
     tags: ["delete issue","export issues","table view toggle","export issues table view toggle"]
   },
   {
@@ -953,7 +961,7 @@ const QA_EQUIPMENT = [
     object: "issue header counters",
     scope: "module", section: "Asset Issues",
     question: "What do the header counters mean on Asset Issues / NCR?",
-    answer: "They show totals for the tab: total issues (or NCRs), how many have been raised, and how many have been rectified.",
+    answer: "They show totals for the tab, e.g. \"42 Total Issues | 28 Open Issues | 14 Issues Rectified\" — total records, how many are still open, and how many have been rectified.",
     tags: ["header counters","issue totals"]
   },
   {
@@ -8113,23 +8121,23 @@ const MODULES = [
         "definitions": [
           {
             "term": "Field Inspections",
-            "definition": "The screen where field crews perform and record maintenance activity and manage equipment photos, organized into three tabs: Maintenance, Utilization, and Equipment Photos."
+            "definition": "The screen where field crews perform and record maintenance activity and manage equipment photos, organized into three tabs: Maintenance, Utilization, and Asset Photos."
           },
           {
             "term": "Maintenance tab",
-            "definition": "Logs maintenance and inspection activity, either on a Calendar (scheduled, generated by a maintenance package) or via a list/ad-hoc tab (Create Form, for unplanned inspections)."
+            "definition": "Logs maintenance and inspection activity, on two sub-tabs: Asset Maintenance Calendar (scheduled, generated by a maintenance package, grouped by project in collapsible sections) or Asset Maintenance (a list/ad-hoc tab with Create Form, for unplanned inspections)."
           },
           {
             "term": "Utilization tab",
             "definition": "Structurally identical to the Maintenance tab — calendar-driven scheduled entries plus ad-hoc list entries — but scoped to logging ad-hoc utilization entries rather than maintenance/inspection activity."
           },
           {
-            "term": "Equipment Maintenance Calendar color legend",
-            "definition": "The color coding used on the Maintenance calendar view: Grey means not due, Blue means ready to fill, Amber means in progress or an issue has been raised, and Green means submitted/complete."
+            "term": "Asset Maintenance Calendar color legend",
+            "definition": "The color coding used on the calendar view, with these exact on-screen labels: Grey = Not Ready, Blue = Ready, Amber = In Progress, Green = Completed. Each day's due forms are grouped by project in a collapsible section, listing form name, equipment, and its current status/stage."
           },
           {
-            "term": "Equipment Photos tab",
-            "definition": "A dedicated tab for managing photographic documentation of equipment. Select an item from the left-hand list, click Add, then Upload File to attach one or more images, optionally annotate them with the built-in markup tools, and Save."
+            "term": "Asset Photos tab",
+            "definition": "A dedicated tab (on-screen name \"Asset Photos\"; the underlying route and older docs call it Equipment Photos) for managing photographic documentation of equipment. Select an item from the left-hand list of Assets/Accessories, click Add, then Upload File to attach one or more images, optionally annotate them with the built-in markup tools, and Save. Each photo carries a Label, Description, and \"Raised on [date] by [user]\" attribution, plus a kebab menu."
           },
           {
             "term": "Trigger point",
@@ -8385,11 +8393,11 @@ const MODULES = [
       },
       {
         "heading": "Asset Issues",
-        "intro": "<p>A failed safety check on a crane or a hydraulic leak on an excavator cannot be allowed to fade into an informal conversation between a foreman and a mechanic — it needs an owner, a due date, and a paper trail that a Fleet Manager or Safety lead can audit later. Asset Issues gives that structure to the whole company: <strong>End Users</strong> (field crews, mechanics) raise or resolve issues day to day, while a <strong>Fleet/Equipment Module Manager</strong> monitors the header counters to spot problem equipment before it becomes a bigger failure.</p><p>Asset Issues is the central log for problems raised against equipment — most commonly generated automatically when a trigger-point check fails during a maintenance form, a field inspection, or a Load Out Request check-out/check-in stage. Rather than a problem getting noted informally and potentially forgotten, Arena routes it into a single, trackable record with an owner, a due date, and a defined resolution path.</p>\n    <p>The screen defaults to a card view (with a table view available as an alternative) and is built around a simple lifecycle: an issue is raised, optionally discussed via Chat, and eventually marked Rectified once the underlying problem is fixed. For issues that require more formal remediation — labor, cost, parts — a Work Order can be spun up directly from the issue, connecting equipment problem-tracking to the broader work-order/cost-tracking machinery elsewhere in Arena.</p>\n    <p>Asset Issues is closely related to, but distinct from, Non Conformance Reports, covered in the next section. Both share the same UI patterns (cards, Rectify, Chat, Assign To/Due Date, Create Work Order), but they differ in how they originate: Asset Issues are almost always system-raised from a failed check, while NCRs are manually created to formally document a non-conformance event.</p>",
+        "intro": "<p>A failed safety check on a crane or a hydraulic leak on an excavator cannot be allowed to fade into an informal conversation between a foreman and a mechanic — it needs an owner, a due date, and a paper trail that a Fleet Manager or Safety lead can audit later. Asset Issues gives that structure to the whole company: <strong>End Users</strong> (field crews, mechanics) raise or resolve issues day to day, while a <strong>Fleet/Equipment Module Manager</strong> monitors the header counters to spot problem equipment before it becomes a bigger failure.</p><p>Asset Issues is the central log for problems raised against equipment — most commonly generated automatically when a trigger-point check fails during a maintenance form, a field inspection, or a Load Out Request check-out/check-in stage. Rather than a problem getting noted informally and potentially forgotten, Arena routes it into a single, trackable record with an owner, a due date, and a defined resolution path.</p>\n    <p>The screen defaults to a table view (a card/grid view toggle is also available) and is built around a simple lifecycle: an issue is raised, optionally discussed via Chat, and eventually marked Rectified once the underlying problem is fixed. For issues that require more formal remediation — labor, cost, parts — a Work Order can be spun up directly from the toolbar's Create Work Order button, connecting equipment problem-tracking to the broader work-order/cost-tracking machinery elsewhere in Arena.</p>\n    <p>Asset Issues is closely related to, but distinct from, Non Conformance Reports, covered in the next section. Both share the same UI patterns (table/card views, Rectify, Chat, Assign To/Due Date, Create Work Order, header counters), but they differ in how they originate: Asset Issues are almost always system-raised from a failed check, while NCRs are manually created to formally document a non-conformance event.</p>",
         "definitions": [
           {
             "term": "Asset Issues (Equipment Issues)",
-            "definition": "The central log of issues raised during maintenance forms, field inspections, or Load Out Request check-out/check-in stages. Presented as cards by default, with a table view toggle available."
+            "definition": "The central log of issues raised during maintenance forms, field inspections, or Load Out Request check-out/check-in stages. Presented as a table by default (IDs prefixed \"DEI No.\"), with a card/grid view toggle available. Columns: Issue Number, Form, Stage, Observation, Raised on Date/Time, Raised by, Image, Status, Chat, Assign To, Due Date, Actions."
           },
           {
             "term": "Rectify",
@@ -8397,15 +8405,15 @@ const MODULES = [
           },
           {
             "term": "Create Work Order (from an issue)",
-            "definition": "A button on an issue (or NCR) card that spins up a formal Work Order directly from that record, used when the remediation requires tracked labor or cost rather than a quick fix."
+            "definition": "A toolbar button (not a per-row action) on Asset Issues and NCR that spins up a formal Work Order, used when the remediation requires tracked labor or cost rather than a quick fix."
           },
           {
             "term": "Asset Issue vs. Non-Conformance Report",
-            "definition": "Asset Issues are typically raised automatically from a failed trigger-point check during a maintenance form, inspection, or an LOR check-out/check-in stage. NCRs, by contrast, are created manually (via + Add on the Non Conformance Report tab) to formally document a non-conformance event. Both use the same card/table view, Rectify workflow, Chat, Assign To/Due Date fields, and Create Work Order pattern, but they remain separate, independently tracked record types."
+            "definition": "Asset Issues are typically raised automatically from a failed trigger-point check during a maintenance form, inspection, or an LOR check-out/check-in stage. NCRs, by contrast, are created manually (via + Add on the Non Conformance Report tab) to formally document a non-conformance event. Both default to a table view with header counters, Rectify workflow, Chat, Assign To/Due Date fields, and a Create Work Order toolbar button, but they remain separate, independently tracked record types with different columns (Asset Issues: Form/Stage/Observation; NCR: Asset/Location/Description)."
           },
           {
             "term": "Header counters",
-            "definition": "Summary totals shown at the top of the Asset Issues (and NCR) tab: total issues (or NCRs), how many have been raised, and how many have been rectified — a quick health check on outstanding equipment problems without opening individual records."
+            "definition": "Summary totals shown at the top of the Asset Issues (and NCR) tab, e.g. \"42 Total Issues | 28 Open Issues | 14 Issues Rectified\" — a quick health check on outstanding equipment problems without opening individual records."
           }
         ],
         "procedures": [
@@ -8415,15 +8423,15 @@ const MODULES = [
               "Go to <strong>Asset Issues</strong> and locate the issue using Search or Filters.",
               "Review the issue's details, and add notes in <strong>Chat</strong> if collaborating with others on the fix.",
               "Once the underlying problem is fixed, click <strong>Rectify</strong> — the status becomes Rectified and the linked form re-opens for completion.",
-              "If formal remediation tracking is needed (labor, cost, parts), click <strong>Create Work Order</strong> from the issue."
+              "If formal remediation tracking is needed (labor, cost, parts), click <strong>Create Work Order</strong> on the toolbar."
             ]
           },
           {
             "title": "Deleting, exporting, or changing the view for issues",
             "steps": [
-              "Use the kebab (⋮) menu on an issue card to <strong>Delete</strong> it.",
+              "Click the <strong>delete_outline</strong> icon on an issue's row to delete it.",
               "Click <strong>Export</strong> to download all issue records to Excel.",
-              "Use the table view toggle in the top-right to switch away from the default card view."
+              "Use the view toggle in the top-right to switch between table and card/grid view."
             ]
           },
           {
@@ -8437,11 +8445,11 @@ const MODULES = [
       },
       {
         "heading": "Non Conformance Report",
-        "intro": "<p>Not every problem worth documenting is caught automatically by a failed checklist item — sometimes a <strong>field End User</strong> (a foreman, safety officer, or QC inspector) simply notices something wrong with a piece of equipment and needs a formal way to flag it, independent of any scheduled inspection. NCR gives that person the same trusted workflow used for system-raised issues, so the two problem types end up in one auditable place a <strong>Module Manager</strong> can review together.</p><p>Non Conformance Report (NCR) is the tab for formally documenting a non-conformance event — a deviation from expected standards or process that someone needs to intentionally flag, rather than one the system caught automatically through a failed trigger-point check. Where Asset Issues are almost always system-generated, an NCR is a deliberate, manually initiated record: someone observed something wrong and chose to formally document it.</p>\n    <p>Structurally, NCRs mirror Asset Issues closely — the same card layout, the same Assign To/Due Date pattern, the same Chat panel for documenting remediation steps, and the same Rectify action to close things out. This consistency is intentional: whether a problem was caught by an automated check or flagged manually by a person, the resolution workflow should feel the same to whoever is responsible for fixing it.</p>\n    <p>The one meaningful difference between the two record types shows up in what Rectify actually does. On an Asset Issue, Rectify re-opens the linked maintenance form for completion, because the issue interrupted an in-progress form. An NCR isn't tied to an in-progress form in the same way, so Rectify on an NCR simply closes the report out as resolved, with no equivalent form-reopening behavior.</p>",
+        "intro": "<p>Not every problem worth documenting is caught automatically by a failed checklist item — sometimes a <strong>field End User</strong> (a foreman, safety officer, or QC inspector) simply notices something wrong with a piece of equipment and needs a formal way to flag it, independent of any scheduled inspection. NCR gives that person the same trusted workflow used for system-raised issues, so the two problem types end up in one auditable place a <strong>Module Manager</strong> can review together.</p><p>Non Conformance Report (NCR) is the tab for formally documenting a non-conformance event — a deviation from expected standards or process that someone needs to intentionally flag, rather than one the system caught automatically through a failed trigger-point check. Where Asset Issues are almost always system-generated, an NCR is a deliberate, manually initiated record: someone observed something wrong and chose to formally document it.</p>\n    <p>Structurally, NCRs mirror Asset Issues closely — the same table-by-default layout, the same Assign To/Due Date pattern, the same Chat panel for documenting remediation steps, and the same Rectify action to close things out, though the columns differ (Asset, Location, and Description here, versus Form, Stage, and Observation on Asset Issues; NCR IDs are prefixed \"NCR No.\"). This consistency is intentional: whether a problem was caught by an automated check or flagged manually by a person, the resolution workflow should feel the same to whoever is responsible for fixing it.</p>\n    <p>The one meaningful difference between the two record types shows up in what Rectify actually does. On an Asset Issue, Rectify re-opens the linked maintenance form for completion, because the issue interrupted an in-progress form. An NCR isn't tied to an in-progress form in the same way, so Rectify on an NCR simply closes the report out as resolved, with no equivalent form-reopening behavior.</p>",
         "definitions": [
           {
             "term": "Non Conformance Report (NCR)",
-            "definition": "A manually created record documenting a non-conformance event, raised via + Add on the Non Conformance Report tab — distinct from Asset Issues, which are almost always system-raised from a failed trigger-point check."
+            "definition": "A manually created record (ID prefix \"NCR No.\") documenting a non-conformance event, raised via + Add on the Non Conformance Report tab — distinct from Asset Issues, which are almost always system-raised from a failed trigger-point check. Table view by default, with columns Issue Number, Asset, Location, Description, Raised on Date/Time, Raised by, Image, Status, Chat, Assign To, Due Date, Actions."
           },
           {
             "term": "Rectify (on an NCR)",
