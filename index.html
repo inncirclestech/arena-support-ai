@@ -147,7 +147,9 @@
   }
   .chat-hero p { color: var(--muted); font-size: 14px; margin: 0; max-width: 480px; margin: 0 auto; }
 
-  .chat-log { flex: 1; min-height: 0; overflow-y: auto; display: flex; flex-direction: column; gap: 14px; padding: 4px 2px 16px; }
+  /* Hero, instructions, status and messages scroll together; only the input bar stays pinned. */
+  .chat-scroll { flex: 1; min-height: 0; overflow-y: auto; display: flex; flex-direction: column; padding-right: 4px; }
+  .chat-log { flex: none; display: flex; flex-direction: column; gap: 14px; padding: 4px 2px 16px; }
   .chat-msg { display: flex; gap: 10px; max-width: 100%; animation: msg-in 0.22s ease both; }
   @keyframes msg-in { from{opacity:0;transform:translateY(4px)} to{opacity:1;transform:none} }
   @media (prefers-reduced-motion: reduce) { .chat-msg { animation: none; } }
@@ -1377,6 +1379,7 @@ Example of the style to use — if a note says "Go to Settings, click Add User, 
     aiStatusListeners = [];
     main.innerHTML = `
       <div class="chat-shell">
+        <div class="chat-scroll" id="chat-scroll">
         ${chatHistory.length === 0 ? `
         <div class="chat-hero">
           <span class="chat-hero-badge"><span class="status-dot" style="width:6px;height:6px;border-radius:50%;background:var(--ok);display:inline-block"></span>Arena Support AI</span>
@@ -1410,6 +1413,7 @@ Example of the style to use — if a note says "Go to Settings, click Add User, 
         </div>
         <div class="chat-log" id="chat-log"></div>
         <div id="chat-suggest-wrap"></div>
+        </div>
         <div class="chat-input-bar">
           <input id="chat-input" type="text" placeholder="e.g. How do I assign a user to a project?" autocomplete="off">
           <button class="mic-btn" id="mic-btn" title="Ask by voice" aria-label="Ask by voice">
@@ -1422,6 +1426,7 @@ Example of the style to use — if a note says "Go to Settings, click Add User, 
     `;
 
     const log = document.getElementById("chat-log");
+    const scroller = document.getElementById("chat-scroll");
     const suggestWrap = document.getElementById("chat-suggest-wrap");
     const input = document.getElementById("chat-input");
     const sendBtn = document.getElementById("chat-send");
@@ -1540,7 +1545,7 @@ Example of the style to use — if a note says "Go to Settings, click Add User, 
     function paintLog() {
       log.innerHTML = chatHistory.map((m, i) => chatMsgHtml(m, i)).join("");
       wireInteractiveBubbles();
-      log.scrollTop = log.scrollHeight;
+      scroller.scrollTop = scroller.scrollHeight;
     }
 
     function wireInteractiveBubbles() {
@@ -1589,7 +1594,7 @@ Example of the style to use — if a note says "Go to Settings, click Add User, 
       el.id = "thinking-msg";
       el.innerHTML = `<div class="chat-avatar assistant">AR</div><div class="chat-bubble"><em style="color:var(--muted)">Thinking…</em></div>`;
       log.appendChild(el);
-      log.scrollTop = log.scrollHeight;
+      scroller.scrollTop = scroller.scrollHeight;
     }
     function hideThinking() {
       const el = document.getElementById("thinking-msg");
