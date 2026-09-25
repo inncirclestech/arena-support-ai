@@ -1257,7 +1257,7 @@ const QA_EQUIPMENT = [
     object: "maintenance form template",
     scope: "module", section: "Configure Asset Management Forms & Global Setup",
     question: "How do I build or edit maintenance/inspection form templates, and how do I create a new one?",
-    answer: "1. In **Global Data → Maintenance Builder** (also called Equipment Maintenance Forms), click **Create Form**.\n2. Click **Add Section** to structure the form (use the trash icon to delete a section).\n3. Click **Add Field** and choose a field type: Attachment, Check box, Date, Label, Multi select, Paragraph, Roster, Scribble, Single select, Table, Text box, Time, Signature.\n4. Use **Setup Trigger Points** to tick which fields should let end-users raise an issue if that checkpoint fails.\n5. Click **Preview** to see the form as end-users will see it, including company branding.\n6. Click **Save Changes**.",
+    answer: "1. Go to **Asset Management → Settings → Assets Management Forms → Maintenance Forms** (this lives in the module's own Settings, not Global Data), click **Create Form**.\n2. Step 1, **Build Form**: click **Add section**, then add fields from the field-type library (Attachment, Check box, Date, Label, Multi select, Paragraph, Roster, Scribble, Single select, Table, Text box, Time, Signature).\n3. Step 2, **Setup Trigger Points**: tick which fields should let end-users raise an issue if that checkpoint fails.\n4. Step 3, **Preview Form**: check the form as end-users will see it, including company branding.\n5. Click **Save Changes**.",
     tags: ["maintenance builder","create form template","maintenance form builder"]
   },
   {
@@ -1273,7 +1273,7 @@ const QA_EQUIPMENT = [
     object: "adobe sign integration",
     scope: "module", section: "Configure Asset Management Forms & Global Setup",
     question: "What is the Adobe Acrobat Sign integration used for?",
-    answer: "It lets a 3rd-party signer affix a legal e-signature to a 3rd-Party LOR Lease Agreement as part of approving it, instead of just clicking Approve/Reject.",
+    answer: "It lets a 3rd-party signer affix a legal e-signature to a Rentals (3rd-Party) Lease Agreement as part of approving it, instead of just clicking Approve/Reject. It's configured once, company-wide, at Global Data → Global Settings → Adobe Sign Settings (Client Id, Client Secret, Consent).",
     tags: ["adobe sign purpose","e-signature purpose"]
   },
   {
@@ -1281,7 +1281,7 @@ const QA_EQUIPMENT = [
     object: "adobe sign lor usage",
     scope: "module", section: "Configure Asset Management Forms & Global Setup",
     question: "Once Adobe Sign is set up, how does it get used in the LOR flow?",
-    answer: "In the 3rd Party LOR flow, once equipment is checked out, the Lease Agreement emailed to the 3rd party can be digitally signed via the Adobe Sign integration as part of their approval.",
+    answer: "In the Rentals (3rd Party) flow, once equipment is checked out, the Lease Agreement emailed to the 3rd party can be digitally signed via the Adobe Sign integration as part of their approval.",
     tags: ["adobe sign lor usage","lease agreement e-sign"]
   },
   {
@@ -7869,11 +7869,11 @@ const MODULES = [
       },
       {
         "heading": "Configure Asset Management Forms & Global Setup",
-        "intro": "<p>Field crews filling out a maintenance or inspection form in the middle of a job site never see — or need to see — where that form's structure actually came from. That structure is built once by an <strong>Equipment Management Admin or a Maintenance/Fleet Module Manager</strong>, using the Maintenance Builder described below, and every field inspection or 3rd-party lease closeout downstream depends on that upfront work being done correctly.</p><p>Global Data & Setup covers the shared configuration that Equipment Management depends on but that lives conceptually one level above the module's own tabs — most importantly, the Maintenance Builder used to design every maintenance and inspection form referenced throughout Asset Setup, Field Inspections, and the Load Out Request flow, and the Adobe Acrobat Sign integration used to legally execute 3rd Party Lease Agreements.</p>\n    <p>The Maintenance Builder (also referred to as Equipment Maintenance Forms) is the source of every form that gets attached to a maintenance package. Rather than being fixed or predefined, forms are built section by section with a flexible library of field types, and any field can be marked as a trigger point so that a failed check during actual use raises an issue automatically. This is worth understanding even if you never touch the builder yourself, because it explains where the structure of every maintenance form you fill out in the field actually comes from.</p>\n    <p>The Adobe Acrobat Sign integration, meanwhile, exists specifically to give the 3rd Party LOR flow a legally binding way to close out a Lease Agreement — letting an external signer affix a real e-signature rather than simply clicking an in-app Approve button. It's a narrow but important piece of infrastructure that turns an internal approval click into something with legal weight when equipment is actually leaving your control to an outside party.</p>\n    <p>Finally, it's worth clarifying a naming quirk you'll encounter across the product: \"Equipment Management,\" \"Asset Management,\" and \"Equipment Master\" all refer to the exact same module — they're simply different labels used in different places (the Home hub tile, the module breadcrumb, and general documentation, respectively).</p>",
+        "intro": "<p>Field crews filling out a maintenance or inspection form in the middle of a job site never see — or need to see — where that form's structure actually came from. That structure is built once by an <strong>Equipment Management Admin or a Maintenance/Fleet Module Manager</strong>, using the Maintenance Builder described below, and every field inspection or 3rd-party lease closeout downstream depends on that upfront work being done correctly.</p><p>This section covers the module's own <strong>Settings</strong> (gear icon, breadcrumb \"Equipment Forms\") — most importantly <strong>Assets Management Forms</strong>, a form builder per lifecycle stage (Request, Check Out, Shipment, Ship, Load, In Transit, Delivered, Received, Lease Agreement, Maintenance Forms, Equipment Utilization Forms & Logs) — plus one integration that lives at the company-wide Global Data level: Adobe Acrobat Sign, used to legally execute Rentals Lease Agreements.</p>\n    <p>The Maintenance Builder (opened via Settings → Assets Management Forms → Maintenance Forms) is the source of every form that gets attached to a maintenance package. Rather than being fixed or predefined, forms are built section by section with a flexible library of field types across a 3-step wizard — Build Form, Setup Trigger Points, Preview Form — and any field can be marked as a trigger point so that a failed check during actual use raises an issue automatically. This is worth understanding even if you never touch the builder yourself, because it explains where the structure of every maintenance form you fill out in the field actually comes from.</p>\n    <p>The Adobe Acrobat Sign integration, meanwhile, exists specifically to give the Rentals (3rd-party) flow a legally binding way to close out a Lease Agreement — letting an external signer affix a real e-signature rather than simply clicking an in-app Approve button. It's configured once, company-wide, at <strong>Global Data → Global Settings → Adobe Sign Settings</strong> (Client Id, Client Secret, Consent) — a narrow but important piece of infrastructure that turns an internal approval click into something with legal weight when equipment is actually leaving your control to an outside party.</p>\n    <p>Finally, it's worth clarifying a naming quirk you'll encounter across the product: \"Equipment Management,\" \"Asset Management,\" and \"Equipment Master\" all refer to the exact same module — they're simply different labels used in different places (the Home hub tile, the module breadcrumb, and general documentation, respectively).</p>",
         "definitions": [
           {
             "term": "Maintenance Builder (Equipment Maintenance Forms)",
-            "definition": "The Global Data screen for building and editing the maintenance/inspection form templates used throughout the module. Forms are structured with Add Section (with a trash icon to delete a section) and populated with Add Field, choosing from a library of field types."
+            "definition": "The module's own screen (not Global Data) for building and editing maintenance/inspection form templates — reached via Asset Management → Settings → Assets Management Forms → Maintenance Forms. A 3-step wizard: Build Form, Setup Trigger Points, Preview Form. Forms are structured with Add Section and populated with fields from a library of field types."
           },
           {
             "term": "Form field types",
@@ -7881,15 +7881,19 @@ const MODULES = [
           },
           {
             "term": "Setup Trigger Points",
-            "definition": "A configuration step in the Maintenance Builder where you tick which fields should let end-users raise an issue directly from that field if the checkpoint fails during an inspection. This is what connects the form builder to the automatic issue-routing behavior seen throughout Field Inspections and Load Out Request."
+            "definition": "The 2nd step of the Maintenance Builder wizard, where you tick which fields should let end-users raise an issue directly from that field if the checkpoint fails during an inspection. This is what connects the form builder to the automatic issue-routing behavior seen throughout Field Inspections and Load Out Request."
           },
           {
-            "term": "Preview (form builder)",
-            "definition": "A button in the Maintenance Builder that shows the form exactly as end-users will see it, including company branding — useful for verifying a form's layout and content before publishing it for use."
+            "term": "Preview Form (form builder)",
+            "definition": "The 3rd and final step of the Maintenance Builder wizard, showing the form exactly as end-users will see it, including company branding — useful for verifying a form's layout and content before publishing it for use."
+          },
+          {
+            "term": "Assets Management Forms (module Settings)",
+            "definition": "The card in the module's own Settings (breadcrumb \"Equipment Forms\") listing one form builder per lifecycle stage: Request, Check Out, Shipment, Ship, Load, In Transit, Delivered, Received, Lease Agreement, Maintenance Forms, and Equipment Utilization Forms & Logs — confirming Shipment/Load/In Transit/Delivered/Received (LOR Internal Jobs) and Ship (Rentals) are separately configurable stages."
           },
           {
             "term": "Adobe Acrobat Sign integration",
-            "definition": "An integration letting a 3rd-party signer affix a legally binding e-signature to a 3rd-Party LOR Lease Agreement, as part of approving it, rather than simply clicking Approve/Reject in-app. Once configured, the Lease Agreement emailed to the 3rd party in the LOR flow can be digitally signed through this integration as part of their approval."
+            "definition": "An integration letting a 3rd-party signer affix a legally binding e-signature to a Rentals (3rd-Party) Lease Agreement, as part of approving it, rather than simply clicking Approve/Reject in-app. Configured once, company-wide, at Global Data → Global Settings → Adobe Sign Settings (Client Id, Client Secret, Consent). Once configured, the Lease Agreement emailed to the 3rd party in the Rentals flow can be digitally signed through this integration as part of their approval."
           },
           {
             "term": "Equipment Management vs. Asset Management vs. Equipment Master",
@@ -7900,19 +7904,18 @@ const MODULES = [
           {
             "title": "Building or editing a maintenance/inspection form template",
             "steps": [
-              "Go to <strong>Global Data → Maintenance Builder</strong> (also called Equipment Maintenance Forms) and click <strong>Create Form</strong>.",
-              "Click <strong>Add Section</strong> to structure the form into logical groupings (use the trash icon to delete a section if needed).",
-              "Click <strong>Add Field</strong> and choose a field type: Attachment, Check box, Date, Label, Multi select, Paragraph, Roster, Scribble, Single select, Table, Text box, Time, or Signature.",
-              "Use <strong>Setup Trigger Points</strong> to tick which fields should let end-users raise an issue if that checkpoint fails.",
-              "Click <strong>Preview</strong> to see the form exactly as end-users will, including company branding.",
+              "Go to <strong>Asset Management → Settings → Assets Management Forms → Maintenance Forms</strong> and click <strong>Create Form</strong>.",
+              "On step 1, <strong>Build Form</strong>: click <strong>Add section</strong> to structure the form into logical groupings, and add fields from the field-type library (Attachment, Check box, Date, Label, Multi select, Paragraph, Roster, Scribble, Single select, Table, Text box, Time, or Signature).",
+              "On step 2, <strong>Setup Trigger Points</strong>: tick which fields should let end-users raise an issue if that checkpoint fails.",
+              "On step 3, <strong>Preview Form</strong>: check the form exactly as end-users will see it, including company branding.",
               "Click <strong>Save Changes</strong>."
             ]
           },
           {
-            "title": "Using Adobe Sign in the 3rd Party LOR flow",
+            "title": "Using Adobe Sign in the Rentals (3rd Party) flow",
             "steps": [
-              "Ensure the Adobe Acrobat Sign integration is set up for your organization.",
-              "In the 3rd Party LOR flow, once equipment has been checked out, complete the Lease Agreement and send it via Email Agreement for Approval.",
+              "Ensure the Adobe Acrobat Sign integration is set up for your organization at Global Data → Global Settings → Adobe Sign Settings.",
+              "In the Rentals flow, once equipment has been checked out, complete the Lease Agreement and send it via Email Agreement for Approval.",
               "The 3rd party can then digitally sign the agreement through the Adobe Sign integration as part of their approval, rather than only clicking Approve."
             ]
           }
@@ -8067,7 +8070,7 @@ const MODULES = [
           },
           {
             "term": "Identify Forms (wizard step 2)",
-            "definition": "The second wizard step: use Add Form to choose from centrally-configured maintenance forms (built in the Maintenance Builder under Global Data & Setup) that should be attached to this package."
+            "definition": "The second wizard step: use Add Form to choose from centrally-configured maintenance forms (built in the Maintenance Builder under the module's own Settings → Assets Management Forms) that should be attached to this package."
           },
           {
             "term": "Prepare Schedule (wizard step 3)",
@@ -8117,7 +8120,7 @@ const MODULES = [
       },
       {
         "heading": "Field Inspections",
-        "intro": "<p>This is where the admin's upfront maintenance-package configuration meets the reality of the job site. Field Inspections is the <strong>End User</strong> screen — the one a foreman, mechanic, or field engineer actually opens day to day to complete a scheduled maintenance check, log something unplanned, or document equipment condition with photos before or after a job.</p><p>Field Inspections is where the maintenance packages configured in Asset Setup actually get executed — the screen field crews use day to day to complete scheduled forms, log unplanned inspections, and manage photographic documentation of equipment condition. It's organized into three tabs — Maintenance, Utilization, and Equipment Photos — each covering a different flavor of on-the-ground equipment tracking.</p>\n    <p>Both Maintenance and Utilization share the same underlying interaction model: a calendar view for scheduled entries generated automatically by a maintenance package, and a list view for ad-hoc entries created manually whenever something needs recording outside of any pre-set schedule. This dual structure reflects a real operational need — most inspections happen on a predictable cadence, but crews also need the ability to log something unplanned, like a mid-shift equipment failure, without waiting for the next scheduled slot.</p>\n    <p>A key mechanism woven throughout this screen is the trigger point: certain fields on a maintenance form are configured (in the Maintenance Builder) to let the person filling out the form raise an issue directly from that field if a checkpoint fails. This is what connects Field Inspections to Asset Issues — a failed check during a routine inspection doesn't just sit in the completed form, it automatically becomes a tracked issue that someone can be assigned to resolve.</p>",
+        "intro": "<p>This is where the admin's upfront maintenance-package configuration meets the reality of the job site. Field Inspections is the <strong>End User</strong> screen — the one a foreman, mechanic, or field engineer actually opens day to day to complete a scheduled maintenance check, log something unplanned, or document equipment condition with photos before or after a job.</p><p>Field Inspections is where the maintenance packages configured in Asset Setup actually get executed — the screen field crews use day to day to complete scheduled forms, log unplanned inspections, and manage photographic documentation of equipment condition. It's organized into three tabs — Maintenance, Utilization, and Asset Photos — each covering a different flavor of on-the-ground equipment tracking.</p>\n    <p>Both Maintenance and Utilization share the same underlying interaction model: a calendar view for scheduled entries generated automatically by a maintenance package, and a list view for ad-hoc entries created manually whenever something needs recording outside of any pre-set schedule. This dual structure reflects a real operational need — most inspections happen on a predictable cadence, but crews also need the ability to log something unplanned, like a mid-shift equipment failure, without waiting for the next scheduled slot.</p>\n    <p>A key mechanism woven throughout this screen is the trigger point: certain fields on a maintenance form are configured (in the Maintenance Builder) to let the person filling out the form raise an issue directly from that field if a checkpoint fails. This is what connects Field Inspections to Asset Issues — a failed check during a routine inspection doesn't just sit in the completed form, it automatically becomes a tracked issue that someone can be assigned to resolve.</p>",
         "definitions": [
           {
             "term": "Field Inspections",
