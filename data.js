@@ -3512,6 +3512,36 @@ const QA_FIELDWORKS = [
     ]
   },
   {
+    "action": "create",
+    "object": "workorder invoice",
+    "scope": "project",
+    "section": "Invoices",
+    "question": "How do I raise an invoice against a work order?",
+    "answer": "Go to <strong>Field Works → Invoices → Invoices</strong> and click <strong>Create</strong>. Fill in the Invoice Number and Date of Submission, choose a <strong>Type</strong> — <strong>Advance Amount</strong> or <strong>Work Completion</strong> — then pick the <strong>Workorder</strong> it bills against (the Workorder list only populates once Type is set). Fill in any project-configured fields, attach supporting documents, and click <strong>Submit</strong>.",
+    "tags": [
+      "create invoice",
+      "advance amount",
+      "work completion",
+      "raise invoice",
+      "workorder"
+    ]
+  },
+  {
+    "action": "view",
+    "object": "invoice financial columns and summary",
+    "scope": "project",
+    "section": "Invoices",
+    "question": "What financial details does each work order invoice track, and where do I see the totals?",
+    "answer": "The <strong>Invoices</strong> list breaks each invoice down into Invoice Base Amount, Number of Payments, Amount Paid, Advance Amount Recovery, Retention Amount, Taxes Amount, Discount Amount, Contractor Fee, Contingency Fee, Fixed Fee, Award Fee, Incentives, Total Labor cost, Total Material cost, Invoice Total Amount, and Pending Amount, alongside Contractor and Submitted by. For the project-wide total instead of a row-by-row list, switch to the card's <strong>Summary</strong> tab, which rolls the same figures up under Contract, Invoice, Payments, and the rest.",
+    "tags": [
+      "invoice amounts",
+      "invoice summary",
+      "pending amount",
+      "retention",
+      "contractor fee"
+    ]
+  },
+  {
     "action": "view",
     "object": "workorder execution tab",
     "scope": "project",
@@ -12426,11 +12456,19 @@ const MODULES = [
         "definitions": [
           {
             "term": "Invoices (Workorder Invoices)",
-            "definition": "The card holding the work order invoices raised on the project."
+            "definition": "The card holding the work order invoices raised against work orders on the project, as two views: an <strong>Invoices</strong> list and a <strong>Summary</strong>. The list's columns show the full financial breakdown per invoice — Invoice Number, Date of Submission, Submitted by, Contractor, Invoice Base Amount, Number of Payments, Amount Paid, Advance Amount Recovery, Retention Amount, Taxes Amount, Discount Amount, Contractor Fee, Contingency Fee, Fixed Fee, Award Fee, Incentives, Total Labor cost, Total Material cost, Invoice Total Amount, and Pending Amount — with per-column filters, Manage Columns, Save Layout, and a table/grid view toggle."
+          },
+          {
+            "term": "Create Invoice",
+            "definition": "The dialog opened from the Invoices card's Create button: Invoice Number, Date of Submission, a required Type (Advance Amount or Work Completion), Workorder (the work order this invoice bills against), an expandable configurable-fields section (e.g. Section 1 → Configurable Field 1, set up per project), and a file upload for supporting documents, then Submit."
+          },
+          {
+            "term": "Invoices Summary",
+            "definition": "The Invoices card's second view — a rolled-up financial summary across all invoices on the project, with columns Contract, Invoice, Payments, Invoiced Amounts, Discounts, Advance Recovery, Retentions, Taxes, Contractor Fee, Contingency Fee, Labor Cost, Material Cost, Additional Cost, Fixed Fee, Award Fee, and Incentives — the same fields as the invoice list, aggregated for a one-screen financial position."
           },
           {
             "term": "Workflow Issues (Invoices)",
-            "definition": "The card holding work-order-invoice workflow issues — anything stuck or rejected in the invoice approval chain."
+            "definition": "The card holding work-order-invoice workflow issues — anything stuck or rejected in the invoice approval chain — as a table of WFL Number, Level, Raised on Date, Raised on Time, Raised by, Image, Chat, Assign To, and Due Date, with Download Excel, Filters, and a table/grid view toggle."
           }
         ],
         "procedures": [
@@ -12438,9 +12476,19 @@ const MODULES = [
             "title": "Check invoice status and blockers",
             "steps": [
               "Go to <strong>Field Works → Invoices</strong>.",
-              "Open the <strong>Invoices</strong> card for the project's work order invoices.",
-              "Open the <strong>Workflow Issues</strong> card to see which invoices are held up in their approval workflow."
+              "Open the <strong>Invoices</strong> card for the project's work order invoices, and switch to its <strong>Summary</strong> tab for the rolled-up financial position instead of a row-by-row list.",
+              "Open the <strong>Workflow Issues</strong> card to see which invoices are held up in their approval workflow, and who they are Assigned To with what Due Date."
             ]
+          },
+          {
+            "title": "Raise an invoice against a work order",
+            "steps": [
+              "Go to <strong>Field Works → Invoices → Invoices</strong> and click <strong>Create</strong>.",
+              "Enter the Invoice Number and Date of Submission.",
+              "Choose the <strong>Type</strong> — <strong>Advance Amount</strong> or <strong>Work Completion</strong> — then pick the <strong>Workorder</strong> it bills against.",
+              "Fill in any project-configured fields (e.g. Section 1), attach supporting documents, and click <strong>Submit</strong>."
+            ],
+            "note": "Type must be set before the Workorder list populates with that work order's own invoicing options."
           }
         ]
       },
