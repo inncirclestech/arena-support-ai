@@ -630,7 +630,17 @@
   // offline engine (retrieveTopEntries) — the model is never given an open-ended prompt,
   // so it cannot answer from outside the documentation.
   window.ArenaLLM = (function () {
-    const MODEL_ID = "Llama-3.2-1B-Instruct-q4f16_1-MLC";
+    // Best model first. needMB is roughly the storage the download takes; the
+    // browser caches it, so a returning visitor loads from disk.
+    const MODEL_CHOICES = [
+      { id: "Llama-3.2-1B-Instruct-q4f16_1-MLC", needMB: 1100 },
+      { id: "Qwen2.5-0.5B-Instruct-q4f16_1-MLC", needMB: 550 },
+      { id: "SmolLM2-360M-Instruct-q4f16_1-MLC", needMB: 400 }
+    ];
+    const STORAGE_MSG = "Your browser doesn't have enough storage space for the AI model (it downloads once and is saved). This usually happens in a Private/Incognito window or when the computer's disk is nearly full. Open the link in a normal Chrome or Edge window, free up some disk space, and reload — or continue with basic answers.";
+    function isQuotaError(e) {
+      return /quota/i.test(String(e && ((e.name || "") + " " + (e.message || e))));
+    }
     let engine = null;
     let loading = false;
     let ready = false;
@@ -652,13 +662,51 @@
       loading = true;
       try {
         const webllm = await import("https://esm.run/@mlc-ai/web-llm");
-        engine = await webllm.CreateMLCEngine(MODEL_ID, {
-          initProgressCallback: (p) => { if (onProgress) onProgress(p); }
-        });
-        ready = true;
-        return true;
+
+        // Ask the browser not to evict the model later, then see how much room this site has.
+        try { if (navigator.storage && navigator.storage.persist) await navigator.storage.persist(); } catch (e) {}
+        let freeMB = Infinity;
+        try {
+          if (navigator.storage && navigator.storage.estimate) {
+            const est = await navigator.storage.estimate();
+            if (est && est.quota) freeMB = (est.quota - (est.usage || 0)) / 1048576;
+          }
+        } catch (e) {}
+
+        const known = webllm.prebuiltAppConfig && webllm.prebuiltAppConfig.model_list
+          ? new Set(webllm.prebuiltAppConfig.model_list.map(m => m.model_id)) : null;
+        const candidates = [];
+        for (const m of MODEL_CHOICES) {
+          if (known && !known.has(m.id)) continue;
+          let cached = false;
+          try { cached = typeof webllm.hasModelInCache === "function" && await webllm.hasModelInCache(m.id); } catch (e) {}
+          if (cached || freeMB >= m.needMB) candidates.push(m.id);
+        }
+        if (!candidates.length) { failReason = STORAGE_MSG; return false; }
+
+        let lastErr = null;
+        for (const id of candidates) {
+          try {
+            engine = await webllm.CreateMLCEngine(id, {
+              initProgressCallback: (p) => { if (onProgress) onProgress(p); }
+            });
+            ready = true;
+            return true;
+          } catch (e) {
+            lastErr = e;
+            if (!isQuotaError(e)) break;
+            // Out of space mid-download: drop the partial files, then try the smaller model.
+            try { if (typeof webllm.deleteModelAllInfoInCache === "function") await webllm.deleteModelAllInfoInCache(id); } catch (e2) {}
+          }
+        }
+        failReason = isQuotaError(lastErr)
+          ? STORAGE_MSG
+          : "Couldn't load the AI model (" + (lastErr && lastErr.message ? lastErr.message : "unknown error") + "). Reload to try again, or continue with basic answers.";
+        return false;
       } catch (e) {
-        failReason = "Couldn't load the AI model (" + (e && e.message ? e.message : "unknown error") + ").";
+        failReason = isQuotaError(e)
+          ? STORAGE_MSG
+          : "Couldn't load the AI model (" + (e && e.message ? e.message : "unknown error") + "). Reload to try again, or continue with basic answers.";
         return false;
       } finally {
         loading = false;
