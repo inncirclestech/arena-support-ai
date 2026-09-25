@@ -5467,7 +5467,7 @@ const QA_PROCUREMENT = [
     object: "purchase order viewpoint export",
     scope: "project", section: "Purchase Orders",
     question: "Can I export Purchase Orders in a format Viewpoint can import?",
-    answer: "Yes. Purchase Orders can be exported to a Viewpoint-compatible Excel format, for construction businesses that sync procurement data into Viewpoint accounting software. This sits alongside the standard PO export and is useful when a cost controller or accountant needs Arena's purchase-order records to line up with what Viewpoint expects on import.",
+    answer: "Unconfirmed in the current environment. The Purchase Orders tab and Purchase Order Master both offer a single \"Download Excel\" export with no separate Viewpoint-specific option visible. If your account has a Viewpoint-compatible export enabled, check with your Procurement Admin — it wasn't visible in this environment's Export or Download Excel buttons.",
     tags: ["viewpoint export","purchase order export","viewpoint integration","accounting export"]
   },
   {
@@ -5555,7 +5555,7 @@ const QA_PROCUREMENT = [
     object: "purchase order numbering per project",
     scope: "project", section: "Purchase Orders",
     question: "Can Purchase Order numbers restart per project instead of running as one company-wide sequence?",
-    answer: "Yes. Purchase Order ID formats can be configured to include the project number and restart their own sequence (e.g. starting again from 001) within each project, rather than continuing one long sequence across the whole company. This is set up the same place as other procurement ID formats — Procurement → ID Settings — by a Module Admin choosing Custom and including the project number as one of the ID fields.",
+    answer: "Partly. In Procurement → ID Settings → Purchase Order → Custom, you can check \"Project Number\" as one of the ID's fields (alongside Date, Month, Year, Serial No./ID, and Requester Initials), which appends the project number as an extra segment of the ID (e.g. the example format changes from \"PO ID\" to \"PO ID/PN\"). However, there's no separate control to make the Serial No./ID counter itself restart at 1 for each project — that counter keeps counting company-wide regardless of which fields are included in the format.",
     tags: ["purchase order numbering","po number per project","project-scoped po id","restart po sequence"]
   },
   {
@@ -5563,8 +5563,112 @@ const QA_PROCUREMENT = [
     object: "issue priority",
     scope: "global", section: "Configure Procurement Forms & Settings",
     question: "How do I set priority levels for procurement issues?",
-    answer: "Go to Procurement Settings > Issues Priority and click \"Add Priority\" to create priority levels along with their Due Hours.",
-    tags: ["issue priority","procurement issue sla","due hours"]
+    answer: "Go to Procurement Settings > Procurement Issues and click \"Add Priority\" to create priority levels along with their Due Hours. This priority list is specifically for issues raised while inspecting a Delivery Receipt (Delivery Receipts > Inspection Issues) — a verified environment had High (4 hours), Medium (24 hours), and Low (48 hours).",
+    tags: ["issue priority","procurement issue sla","due hours","delivery receipt inspection issue priority"]
+  },
+  {
+    action: "view",
+    object: "procurement analytics dashboard",
+    scope: "project", section: "Procurement Analytics Dashboard",
+    question: "Where can I see overall procurement spend and vendor performance?",
+    answer: "Go to Home > Procurement — it opens on the Dashboard tab. KPI tiles show Total Spend, Budget Variance, Avg Lead Time, and Quality Issue Rate; the Vendor Performance Summary table below ranks each vendor by Total Spend, Avg Lead Time, Quality Issue Rate, On-Time Delivery, Total Orders, and a Performance Score. Filter by project (\"By Projects\") or by date range.",
+    tags: ["procurement dashboard","vendor performance","total spend","quality issue rate"]
+  },
+  {
+    action: "view",
+    object: "approval workflow viewer",
+    scope: "project", section: "Requisitions",
+    question: "How do I check who needs to approve a specific requisition?",
+    answer: "On the Requisition Form list, click the tree/hierarchy icon in that REQ's Actions column. It opens \"Approval work flow data\" showing Level, Level Description, Approvers, and Workflow Type (e.g. \"Any one can approve\") for that REQ's approval chain.",
+    tags: ["requisition approval chain","approval workflow viewer","who approves req","device_hub icon"]
+  },
+  {
+    action: "track",
+    object: "requisition workflow issue",
+    scope: "project", section: "Requisitions",
+    question: "What is the Workflow Issues tab on the Requisition Form for?",
+    answer: "It logs problems raised against a requisition's own approval chain, separate from its Approve/Reject buttons: WFL Number, REQ ID, Level, who raised it and when, a comment, Assign To, Due Date, and Chat. Header counters show Total, Approved, and Rejected issue counts.",
+    tags: ["requisition workflow issues","req approval problem","wfl number"]
+  },
+  {
+    action: "track",
+    object: "requisition status",
+    scope: "project", section: "Requisitions",
+    question: "What are the possible statuses of a requisition?",
+    answer: "Created, Approved, RFQ Created, Vendor Responded, Email Sent to Vendor, and Direct PO Approved (or PO Approved via the RFQ path) are the statuses shown on the Requisition Form list as a REQ moves through the procurement loop.",
+    tags: ["requisition status list","req status","procurement loop status"]
+  },
+  {
+    action: "track",
+    object: "rfq status",
+    scope: "project", section: "RFQ",
+    question: "What are the possible statuses of an RFQ?",
+    answer: "Created, Email Sent to Vendors, Vendors Responded (or Partial Vendors Responded, if only some vendors have replied yet), Vendors Selected, PO Created, PO Approved, and PO Rejected.",
+    tags: ["rfq status list","rfq lifecycle","partial vendors responded"]
+  },
+  {
+    action: "configure",
+    object: "vendor instructions",
+    scope: "global", section: "RFQ",
+    question: "How do I set up standard instructions to send vendors with an RFQ?",
+    answer: "Go to Procurement > RFQ and click the Vendor Instructions gear icon, then \"+ Add Instruction\". Name it, write its description, and choose which vendors it applies to, then Submit. These reusable instructions can then be attached to any RFQ instead of retyping standard terms each time.",
+    tags: ["vendor instructions","rfq boilerplate","standard rfq terms"]
+  },
+  {
+    action: "compare",
+    object: "vendor price chart",
+    scope: "project", section: "Vendor Responses",
+    question: "Can I see a chart comparing vendor prices for an RFQ?",
+    answer: "Yes. On Vendor Responses (\"Quotation\") step 2, Vendor Analysis & Selection, use the Chart View toggle to see a Vendor Price Chart: pick an equipment item and compare Daily/Weekly/Monthly rates across vendors as a bar chart, with a download option.",
+    tags: ["vendor price chart","chart view","compare vendor rates"]
+  },
+  {
+    action: "track",
+    object: "purchase order status",
+    scope: "project", section: "Purchase Orders",
+    question: "What are the possible statuses of a Purchase Order?",
+    answer: "Created, Approved, Delivery Receipt Created, Partial Delivery Receipt Created (if only some items have been received so far), and Delivery Receipt Issue Raised (if a delivery inspection found a problem).",
+    tags: ["purchase order status list","po lifecycle status"]
+  },
+  {
+    action: "configure",
+    object: "purchase order terms and conditions",
+    scope: "global", section: "Purchase Orders",
+    question: "How do I set the standard Terms & Conditions text that appears on Purchase Orders?",
+    answer: "Go to Procurement > Purchase Orders and click \"Terms & Conditions\". Write the boilerplate text in the rich-text editor (bold/italic/underline/strikethrough, links, headings, lists) — it can include placeholders like [Amount] and [30/60] for payment terms — then Submit. This one company-wide block is stamped onto every generated PO.",
+    tags: ["purchase order terms and conditions","po boilerplate","payment terms"]
+  },
+  {
+    action: "view",
+    object: "purchase order master columns",
+    scope: "project", section: "Purchase Orders",
+    question: "How do I see how much of a Purchase Order has been invoiced?",
+    answer: "Go to Procurement > Purchase Order Master. Total Cost, Total Invoice Cost, and Balance Cost columns show how much of the PO has been billed and what remains, alongside an Invoice status column (e.g. APPROVED, CREATED, N/A).",
+    tags: ["purchase order balance","total invoice cost","po invoice status"]
+  },
+  {
+    action: "raise",
+    object: "delivery inspection issue",
+    scope: "project", section: "Delivery Receipts",
+    question: "What is the Inspection Issues tab under Delivery Receipts for?",
+    answer: "It logs quality-check failures found while inspecting a delivered item: Issue Number, DR ID, Field Name (the checkpoint that failed), Observation, who raised it and when, an optional photo, and a Rectify button. Once corrected, click Rectify. Header counters show Total, Open, and Rectified issue counts, and an open issue shows on the linked Purchase Order as status \"Delivery Receipt Issue Raised\".",
+    tags: ["delivery receipt inspection issue","rectify delivery issue","field name checkpoint"]
+  },
+  {
+    action: "track",
+    object: "pickup request status",
+    scope: "project", section: "Pickup Requests",
+    question: "What are the possible statuses of a Pickup Request?",
+    answer: "Created, Vendor Pickup Request Created, Picked up from Site, and Closed as it's actioned, or Rejected if turned down. This mirrors the Load Out Request flow in Asset Management, but for procurement-sourced rented equipment.",
+    tags: ["pickup request status list","pickup request lifecycle"]
+  },
+  {
+    action: "find",
+    object: "procurement document repository",
+    scope: "project", section: "Communications",
+    question: "Is there a shared folder for procurement documents that aren't tied to one REQ or PO?",
+    answer: "Yes. Click the Document icon next to Communications on the Procurement toolbar. It's a module-wide folder/file repository (folders seen include RFQ and DIRECT REQ) with New Folder and Add File actions.",
+    tags: ["procurement document repository","procurement files","document folder"]
   }
 ];
 
@@ -14075,17 +14179,45 @@ const MODULES = [
           {
             "title": "Configure ID formats for procurement documents",
             "steps": [
-              "Go to <strong>Procurement &gt; ID Settings</strong>.",
-              "Choose <strong>System Default</strong> for auto-generated IDs, or <strong>Custom</strong> to pick the fields and their order.",
+              "Go to <strong>Procurement &gt; ID Settings</strong>, then pick a tab: REQ, RFQ, Vendor Response, Purchase Order, Direct Purchase Order, Delivery Receipt, Invoice, or Pickup Request.",
+              "Choose <strong>System Default</strong> for an auto-generated ID, or <strong>Custom</strong>.",
+              "For Custom, check the fields to include — Date, Month, Year, Serial No./ID, Requester Initials First/Last Name, Project Number — drag them into the order you want, and pick an ID Separator (<strong>/</strong>, <strong>-</strong>, or none). The Example Format at the top updates live as you check fields.",
               "Click <strong>Save Changes</strong>."
-            ]
+            ],
+            "note": "Checking Project Number adds the project's number as an extra segment of the ID (e.g. an example format changes from \"PO ID\" to \"PO ID/PN\"). It does not restart the Serial No./ID counter per project — that counter keeps counting company-wide regardless of which fields are included."
           },
           {
-            "title": "Set priority levels for procurement issues",
+            "title": "Set priority levels for Delivery Receipt inspection issues",
             "steps": [
-              "Go to <strong>Procurement Settings &gt; Issues Priority</strong>.",
+              "Go to <strong>Procurement Settings &gt; Procurement Issues</strong>.",
               "Click <strong>Add Priority</strong>.",
-              "Name the priority level and set its Due Hours."
+              "Name the priority level and set its <strong>Due Hours</strong> — the SLA for rectifying an issue raised at that priority."
+            ],
+            "note": "This priority list is specifically for issues raised while inspecting a Delivery Receipt (see Delivery Receipts → Inspection Issues), not a general-purpose priority list for every procurement document. A verified environment had High (4 hours), Medium (24 hours), and Low (48 hours)."
+          }
+        ]
+      },
+      {
+        "heading": "Procurement Analytics Dashboard",
+        "intro": "<p>The <strong>Dashboard</strong> tab is the landing page when anyone opens Procurement, and it exists to answer one question at a glance: is the company's purchasing running efficiently and are vendors performing well. A Procurement Admin, PM, or executive uses it to spot slow vendors, cost overruns, and quality problems without digging through individual REQs, RFQs, and POs one at a time.</p><p>It shows company-wide (or project-scoped, via the <strong>By Projects</strong> filter) KPI tiles and a per-vendor scorecard, filterable by a Start date/End date range.</p>",
+        "definitions": [
+          {
+            "term": "Procurement Analytics Dashboard",
+            "definition": "The Dashboard tab (first tab under Procurement) showing KPI tiles — Total Spend, Budget Variance, Avg Lead Time, Quality Issue Rate — plus a Vendor Performance Summary table, filterable by project and by date range."
+          },
+          {
+            "term": "Vendor Performance Summary",
+            "definition": "A table on the Procurement Analytics Dashboard scoring each vendor the company has bought from: Total Spend, Avg Lead Time, Quality Issue Rate, On-Time Delivery, Total Orders, and a Performance Score. A color legend marks issue-rate bands: Excellent (under 2%), Good (2–4%), Needs Attention (over 4%). The Performance Score can go negative for a vendor with a poor track record."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Check overall procurement performance and vendor scores",
+            "steps": [
+              "Go to <strong>Home → Procurement</strong> — it opens on the <strong>Dashboard</strong> tab.",
+              "Optionally narrow the view with the <strong>By Projects</strong> filter, or set a Start date/End date range.",
+              "Read the KPI tiles (Total Spend, Budget Variance, Avg Lead Time, Quality Issue Rate) for the overall picture.",
+              "Scroll to <strong>Vendor Performance Summary</strong> to compare vendors side by side; a vendor's issue-rate color and Performance Score flag whether it's worth continuing to use."
             ]
           }
         ]
@@ -14096,15 +14228,23 @@ const MODULES = [
         "definitions": [
           {
             "term": "Requisition (REQ)",
-            "definition": "A formal internal request for equipment, material, an equipment part, or a delivery service, raised before any vendor is contacted. It is the first document in the procurement lifecycle and the source record that RFQs and Purchase Orders are built from."
+            "definition": "A formal internal request for equipment, material, an equipment part, or a delivery service, raised before any vendor is contacted. It is the first document in the procurement lifecycle and the source record that RFQs and Purchase Orders are built from. The on-screen tab is labeled <strong>Requisition Form</strong>."
           },
           {
             "term": "Requisition type",
             "definition": "The category selected when creating a REQ — Equipment, Material, Equipment Part, or Delivery Service — which determines what fields and specifications appear on the form."
           },
           {
+            "term": "Requisition status",
+            "definition": "A REQ moves through Created → Approved → RFQ Created → Vendor Responded → (Direct PO Approved, or PO created via RFQ) as it's actioned. \"Email Sent to Vendor\" appears once an RFQ built from it has gone out. The Status column on the Requisition Form list always shows the REQ's current step in this chain."
+          },
+          {
+            "term": "Approval work flow data viewer",
+            "definition": "A row action (tree/hierarchy icon) on the Requisition Form list that opens a read-only \"Approval work flow data\" popup for that REQ: Level, Level Description, Approvers, and Workflow Type (e.g. \"Any one can approve\") — the same approval chain configured in Settings → Approval Workflow, showing exactly who needs to sign off (or already has)."
+          },
+          {
             "term": "Workflow Issues (REQ)",
-            "definition": "A tab within the REQ module that tracks requisitions that were rejected somewhere in their approval or sourcing process, along with the reason for rejection, so the requester can correct and resubmit."
+            "definition": "A sub-tab next to Create Requisition that logs problems raised against a REQ's own approval chain — separate from the REQ's Approve/Reject buttons. Columns: WFL Number, REQ ID, Level, Raised on Date/Time, Raised by, a free-text comment, Assign To, Due Date, and Chat. Header counters show Total/Approved/Rejected issue counts."
           },
           {
             "term": "LOR from REQ",
@@ -14115,11 +14255,21 @@ const MODULES = [
           {
             "title": "Create a requisition",
             "steps": [
-              "Go to <strong>Procurement &gt; REQ</strong>.",
-              "Click <strong>Create</strong>.",
+              "Go to <strong>Procurement &gt; Requisition Form</strong>.",
+              "Click <strong>+ Requisition</strong>.",
               "Choose the requisition type: <strong>Equipment</strong>, <strong>Material</strong>, <strong>Equipment Part</strong>, or <strong>Delivery Service</strong>.",
-              "Fill in the item details and specifications.",
-              "Click <strong>Submit</strong>."
+              "Fill in <strong>Requested By</strong>, <strong>Requesting Date</strong>, <strong>Project Number/Project Name</strong>, and search for the items needed (Item Name, Specification, Quantity, UOM).",
+              "Fill <strong>Job Location</strong> and <strong>Delivery Location</strong> (with Zip Code/City/State for each), <strong>Project Manager</strong>, <strong>On-Site Contact</strong>, <strong>Assignee</strong>, and <strong>Phone Number</strong>.",
+              "Click <strong>Submit</strong> — the REQ appears with status <strong>Created</strong>."
+            ],
+            "note": "Which extra fields and sections appear (beyond the required ones) depends on how the Module Admin built that requisition type's form in Settings → Requisition Form (REQ)."
+          },
+          {
+            "title": "Check a requisition's approval chain",
+            "steps": [
+              "Go to <strong>Procurement &gt; Requisition Form</strong>.",
+              "On the REQ's row, click the tree/hierarchy icon in Actions.",
+              "Review the Level, Level Description, Approvers, and Workflow Type shown in the popup."
             ]
           },
           {
@@ -14161,18 +14311,35 @@ const MODULES = [
           },
           {
             "term": "Procurement package",
-            "definition": "A grouping of requisition line items linked together within an RFQ, used to bundle related needs (e.g. quantities and specifications for a single sourcing effort) before sending the RFQ to vendors."
+            "definition": "A grouping of requisition line items linked together within an RFQ (shown as \"Procurement Package\" = the REQ number in the RFQ item grid), used to bundle related needs before sending the RFQ to vendors."
+          },
+          {
+            "term": "RFQ status",
+            "definition": "An RFQ moves through Created → Email Sent to Vendors → Vendors Responded (or Partial Vendors Responded, if only some vendors have replied) → Vendors Selected → PO Created → PO Approved, or PO Rejected if the resulting PO is turned down. The status chip on each RFQ card always shows its current step."
+          },
+          {
+            "term": "Vendor Instructions",
+            "definition": "A reusable library of RFQ boilerplate terms (Instruction Name + Description), each scoped to specific vendors, configured once via the gear icon next to + Create RFQ. Lets a Purchasing Manager attach standard instructions (e.g. rate-quoting rules) to an RFQ instead of retyping them each time."
           }
         ],
         "procedures": [
           {
             "title": "Create an RFQ from a requisition",
             "steps": [
-              "Go to <strong>Procurement &gt; RFQ</strong>.",
-              "Click <strong>Create</strong>.",
-              "Link the relevant procurement packages to their corresponding requisitions (REQs).",
-              "Update quantities and specifications as needed.",
-              "Select vendors from the pre-configured vendor list to request quotes from."
+              "Go to <strong>Procurement &gt; RFQ</strong> and click <strong>+ Create RFQ</strong>.",
+              "<strong>Step 1 – Select Requisition Form:</strong> tick one or more Approved requisitions (a REQ still in Created status can't be picked yet).",
+              "<strong>Step 2 – Update Quantities:</strong> for each selected REQ's line items, review Requested Quantity and Remaining Quantity, and set the Procuring Quantity.",
+              "<strong>Step 3 – Identify Vendors:</strong> pick a Vendor Category, Vendor Sub Category, and Category Groups, then <strong>+ Add Vendors</strong> (or <strong>+ Register Vendors</strong> if the vendor isn't in the list yet). Fill Company Point of Contact (Contact Person Name and Email).",
+              "Click <strong>Save</strong>, or <strong>Save</strong> and send the email to vendors right away."
+            ]
+          },
+          {
+            "title": "Set up reusable RFQ instructions for vendors",
+            "steps": [
+              "Go to <strong>Procurement &gt; RFQ</strong> and click the <strong>Vendor Instructions</strong> gear icon.",
+              "Click <strong>+ Add Instruction</strong>.",
+              "Name the instruction, write its description, and choose which vendors it applies to.",
+              "Click <strong>Submit</strong>."
             ]
           }
         ]
@@ -14183,21 +14350,27 @@ const MODULES = [
         "definitions": [
           {
             "term": "Vendor Responses",
-            "definition": "The screen where quotes from vendors invited on an RFQ are recorded, listing each vendor's submitted cost and lead time against that RFQ."
+            "definition": "The screen where quotes from vendors invited on an RFQ are recorded, listing each vendor's submitted cost and lead time against that RFQ. On screen this tab is titled \"Quotation\" and works as a 2-step flow: Assign Cost, then Vendor Analysis & Selection."
+          },
+          {
+            "term": "Assign Cost (step 1)",
+            "definition": "The first Vendor Responses step: pick an RFQ, then for each item/vendor pair fill in Daily/Weekly/Monthly rate, Lead Time, Replacement Value, and Notes in the cost grid (columns also show REQ, Equipment, Specification, UOM, Quantity, Required Date, and Planned Return Date/Time for rental items)."
           },
           {
             "term": "Vendor Analysis and Selection",
-            "definition": "The comparison step that follows response entry, where recorded vendor quotes are evaluated side by side so a winning vendor can be selected for the Purchase Order."
+            "definition": "The comparison step (labeled \"Select Vendor\" on screen) that follows Assign Cost, where recorded vendor quotes are evaluated side by side so a winning vendor can be selected and Submitted for the Purchase Order. A Chart View toggle switches to a Vendor Price Chart — pick an equipment item and see a bar chart comparing Daily/Weekly/Monthly rates across vendors, with a download option."
           }
         ],
         "procedures": [
           {
             "title": "Record and compare vendor quotes",
             "steps": [
-              "Go to <strong>Procurement &gt; Vendor Responses</strong>.",
-              "Select the relevant RFQ from the list on the left.",
-              "Enter each vendor's cost and lead time as their quotes come in.",
-              "Move to <strong>Vendor Analysis and Selection</strong> to compare all recorded responses and choose a vendor."
+              "Go to <strong>Procurement &gt; Vendor Responses</strong> (\"Quotation\").",
+              "On the <strong>1 Assign Cost</strong> step, select the relevant RFQ from the list on the left.",
+              "Enter each vendor's Daily/Weekly/Monthly rate, Lead Time, Replacement Value, and any Notes as their quotes come in.",
+              "Move to <strong>2 Vendor Analysis & Selection</strong> to compare all recorded responses.",
+              "Optionally switch to <strong>Chart View</strong> to see a price bar chart per equipment item across vendors.",
+              "Pick the winning vendor and click <strong>Submit</strong>."
             ]
           }
         ]
@@ -14216,34 +14389,42 @@ const MODULES = [
           },
           {
             "term": "Purchase Order Master",
-            "definition": "The consolidated view of all Purchase Orders across procurement types, showing each one's current status, history, and the requisition it originated from."
+            "definition": "The consolidated view of all Purchase Orders across procurement types: PO No, Status, Item Details/History/REQ Details (each a drill-down link), Total Cost, Total Invoice Cost, Balance Cost, Vendor ID, Vendor, PO Approved Date, Invoice status, and Comments."
           },
           {
             "term": "Preview PO step",
-            "definition": "The stage in Direct Purchase Order creation where the tax code is selected before final submission."
+            "definition": "The stage in Purchase Order creation where you pick the Vendor and preview the company's Address/Phone/Zip Code before final submission."
+          },
+          {
+            "term": "Purchase Order status",
+            "definition": "A PO moves through Created → Approved → Delivery Receipt Created (or Partial Delivery Receipt Created, if only some items have been received) as deliveries come in. A Delivery Receipt inspection issue can flip it to Delivery Receipt Issue Raised."
+          },
+          {
+            "term": "Terms & Conditions (Purchase Orders)",
+            "definition": "A company-wide, rich-text boilerplate block (gear icon on the Purchase Orders tab) stamped onto every generated PO, with placeholders like [Amount] and [30/60] for payment terms."
           }
         ],
         "procedures": [
           {
             "title": "Create a Purchase Order from an RFQ",
             "steps": [
-              "Go to <strong>Procurement &gt; Purchase Order</strong>.",
-              "Select the procurement type tab: <strong>Material</strong>, <strong>Equipment</strong>, <strong>Equipment Part</strong>, or <strong>Delivery Service</strong>.",
-              "Click <strong>Create</strong>.",
-              "Select the relevant RFQ.",
-              "Enter quantities, pricing, and the tax code.",
+              "Go to <strong>Procurement &gt; Purchase Orders &gt; Purchase Order</strong>.",
+              "Select the procurement type tab: <strong>Material</strong>, <strong>Equipment</strong>, <strong>Equipment Part</strong>, <strong>Delivery Service Equipment</strong>, or <strong>Delivery Service Material</strong>.",
+              "Click <strong>+ Purchase Orders</strong>.",
+              "Select the RFQ marked <strong>PO Approved</strong>.",
+              "On the Create Purchase Order Form, search for and select the <strong>Vendor</strong>, review the previewed company Address/Phone/Zip Code, and enter pricing and the tax code.",
               "Click <strong>Submit</strong>."
             ]
           },
           {
             "title": "Create a Purchase Order without an RFQ (Direct PO)",
             "steps": [
-              "Go to <strong>Procurement &gt; Direct Purchase Order</strong>.",
+              "Go to <strong>Procurement &gt; Purchase Orders &gt; Direct Purchase Order</strong>.",
               "Select the procurement type tab.",
               "Click <strong>Create</strong>.",
               "Select the requisition (REQ) directly — no RFQ step is involved.",
               "Enter pricing and lead time.",
-              "In the Preview PO step, select the tax code.",
+              "In the Preview PO step, select the vendor and tax code.",
               "Click <strong>Submit</strong>."
             ],
             "note": "Use this path when a competitive quote isn't necessary and you already know the vendor and price."
@@ -14252,7 +14433,15 @@ const MODULES = [
             "title": "View all Purchase Orders and their status",
             "steps": [
               "Go to <strong>Procurement &gt; Purchase Order Master</strong>.",
-              "Browse the full list of Purchase Orders, along with current status, history, and the linked REQ for each."
+              "Browse the full list of Purchase Orders. Click <strong>Click here to view</strong> under Item Details, History, or REQ Details for the drill-down you need, or check Total Cost / Total Invoice Cost / Balance Cost and Invoice status to see how much of a PO has been billed."
+            ]
+          },
+          {
+            "title": "Set the standard Terms & Conditions on generated Purchase Orders",
+            "steps": [
+              "Go to <strong>Procurement &gt; Purchase Orders</strong>, click <strong>Terms & Conditions</strong>.",
+              "Write or edit the boilerplate text using the rich-text toolbar (bold/italic/underline/strikethrough, link, headings, lists).",
+              "Click <strong>Submit</strong>."
             ]
           }
         ]
@@ -14263,18 +14452,31 @@ const MODULES = [
         "definitions": [
           {
             "term": "Delivery Receipt",
-            "definition": "A record confirming that goods or services from a specific Purchase Order have been received, capturing the receiving quantity and any additional receiving information."
+            "definition": "A record confirming that goods or services from a specific Purchase Order have been received, capturing the receiving quantity and any additional receiving information. Each PO shown when creating one is tagged Direct Purchase Order or Process Purchase Order, showing which path it came from."
+          },
+          {
+            "term": "Inspection Issues (Delivery Receipts)",
+            "definition": "A sub-tab next to Create Delivery Receipt logging quality-check failures found while inspecting a delivery: Issue Number, DR ID, Field Name (the checkpoint, e.g. \"Check Per MTR\"), Observation, Raised on Date/Time, Raised by, an optional photo, a Rectify button, Chat, Assign To, and Due Date. Header counters show Total/Open/Rectified issue counts. A Delivery Receipt with an open inspection issue shows status Delivery Receipt Issue Raised on the Purchase Order Master."
           }
         ],
         "procedures": [
           {
             "title": "Create a Delivery Receipt for a Purchase Order",
             "steps": [
-              "Go to <strong>Procurement &gt; Delivery Receipts</strong>.",
-              "Click <strong>Create</strong>.",
-              "Select the vendor and the associated Purchase Order.",
+              "Go to <strong>Procurement &gt; Delivery Receipts</strong>, click <strong>+ Delivery Receipt</strong>.",
+              "Select the Vendor, then the associated Purchase Order (tagged Direct Purchase Order or Process Purchase Order).",
+              "Expand the PO to see its REQ line items and assign each as needed.",
               "Fill in the receiving quantity and any additional information.",
               "Click <strong>Submit</strong>."
+            ]
+          },
+          {
+            "title": "Raise and rectify a delivery inspection issue",
+            "steps": [
+              "Go to <strong>Procurement &gt; Delivery Receipts &gt; Inspection Issues</strong> to see all open and rectified issues.",
+              "An issue is normally raised while inspecting a delivered item against a checkpoint (Field Name) that fails.",
+              "Add notes via <strong>Chat</strong>, set <strong>Assign To</strong> and <strong>Due Date</strong> so it's tracked against the SLA set in Settings → Procurement Issues.",
+              "Once corrected, click <strong>Rectify</strong>."
             ]
           }
         ]
@@ -14309,7 +14511,11 @@ const MODULES = [
         "definitions": [
           {
             "term": "Pickup Request",
-            "definition": "A scheduling document tied to a vendor and Purchase Order that records the pickup date, address, and status for collecting a procured item."
+            "definition": "A scheduling document tied to a vendor, and usually a rented/leased piece of equipment sourced through an REQ/RFQ, that records the pickup date, address, and status for collecting a procured item back from a job site."
+          },
+          {
+            "term": "Pickup Request status",
+            "definition": "A Pickup Request moves through Created → Vendor Pickup Request Created → Picked up from Site → Closed as it's actioned, or Rejected if turned down. This is the return/pickup counterpart to the Load Out Request flow in Asset Management, but for procurement-sourced rented items specifically."
           }
         ],
         "procedures": [
@@ -14317,22 +14523,25 @@ const MODULES = [
             "title": "Create a Pickup Request for procured items",
             "steps": [
               "Go to <strong>Procurement &gt; Pickup Request</strong>.",
-              "Click <strong>Create</strong>.",
-              "Select the Vendor and the Purchase Order.",
-              "Fill in the Pickup Date and Address.",
-              "Set the Pickup Request status.",
-              "Click <strong>Submit</strong>."
+              "Click <strong>+ Pickup Request</strong>.",
+              "Select the Vendor and the REQ/RFQ the item was procured through.",
+              "Fill in the Pickup Date/Time, Job ID/Job Name, and Address.",
+              "Click <strong>Submit</strong> — the request starts at status <strong>Created</strong>, then moves through Approve, Vendor Pickup Request Created, Picked up from Site, to Closed."
             ]
           }
         ]
       },
       {
         "heading": "Communications",
-        "intro": "<p>Procurement Communications is a dedicated mail repository scoped to the module — every email tied to a procured item is tracked here rather than scattered across a Purchasing Manager's or PM's personal inbox. This means anyone reviewing a purchase's history, or picking up a procurement thread from a colleague who's out or has moved on, has the relevant correspondence attached directly to the procurement record rather than needing to search email separately.</p>",
+        "intro": "<p>Procurement Communications is a dedicated mail repository scoped to the module — every email tied to a procured item is tracked here rather than scattered across a Purchasing Manager's or PM's personal inbox. This means anyone reviewing a purchase's history, or picking up a procurement thread from a colleague who's out or has moved on, has the relevant correspondence attached directly to the procurement record rather than needing to search email separately.</p><p>A separate <strong>Document</strong> icon next to Communications opens a module-wide file/folder repository (folders seen include RFQ and DIRECT REQ), for procurement paperwork that isn't tied to any one record's own attachments.</p>",
         "definitions": [
           {
             "term": "Procurement Communications",
-            "definition": "A mail repository within the Procurement module that tracks all emails linked to procured items, keeping vendor correspondence attached to the relevant purchasing activity."
+            "definition": "A full email client (All Emails, Inbox, Sent, Drafts, Starred, Trash, Compose Mail) within the Procurement module that tracks emails linked to procured items, keeping vendor correspondence attached to the relevant purchasing activity."
+          },
+          {
+            "term": "Document (Procurement)",
+            "definition": "A module-level document repository (separate icon next to Communications) for storing procurement-related files in folders — New Folder and Add File are the main actions — independent of any single REQ/RFQ/PO's own attachments."
           }
         ],
         "procedures": [
@@ -14340,7 +14549,15 @@ const MODULES = [
             "title": "Find emails related to procured items",
             "steps": [
               "Go to <strong>Procurement &gt; Communications</strong>.",
-              "Browse the tracked emails linked to procured items."
+              "Browse the tracked emails linked to procured items, or click <strong>Compose Mail</strong> to send a new one."
+            ]
+          },
+          {
+            "title": "Store or find a procurement document that isn't tied to one REQ/RFQ/PO",
+            "steps": [
+              "Go to <strong>Procurement</strong> and click the <strong>Document</strong> icon in the top toolbar.",
+              "Browse existing folders (e.g. RFQ, DIRECT REQ) or click <strong>New Folder</strong> to create one.",
+              "Click <strong>Add File</strong> to upload into the current folder."
             ]
           }
         ]
@@ -14356,7 +14573,7 @@ const MODULES = [
       "From <strong>Home</strong>, click the <strong>Procurement</strong> tile.",
       "Second-level tabs include REQ, RFQ, Vendor Responses, Purchase Order, Direct Purchase Order, Purchase Order Master, Delivery Receipts, Invoices, Pickup Request, and Communications."
     ],
-    "sections": ["Who Sets Up Procurement","Configure Procurement Forms & Settings","Requisitions","RFQ","Vendor Responses","Purchase Orders","Delivery Receipts","Invoices","Pickup Requests","Communications"]
+    "sections": ["Who Sets Up Procurement","Configure Procurement Forms & Settings","Procurement Analytics Dashboard","Requisitions","RFQ","Vendor Responses","Purchase Orders","Delivery Receipts","Invoices","Pickup Requests","Communications"]
   },
   {
     "id": "time-management",
