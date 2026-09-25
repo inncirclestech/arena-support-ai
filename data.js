@@ -713,8 +713,16 @@ const QA_EQUIPMENT = [
     object: "company owned vs 3rd party asset",
     scope: "module", section: "Asset Master",
     question: "What's the difference between Company Owned Asset and 3rd Party Asset?",
-    answer: "Company Owned Asset tracks equipment the company itself owns. 3rd Party Asset tracks equipment/accessories that belong to (or are leased from) an outside party, and is used together with the 3rd Party LOR / Lease Agreement workflow.",
+    answer: "Company Owned Asset tracks equipment the company itself owns, with the same status chips/columns as Company Owned Accessory. 3rd Party Asset is a different kind of view: it tracks equipment currently rented in from (or company equipment currently out with) a 3rd party, and every row is sourced automatically from a Procurement requisition (REQ) and Purchase Order (PO) rather than added manually — its columns include REQ ID, PO ID, Delivery Location, and Planned Pickup Date, and its status chips are Active, Displayed, and Off Rent Picked Up.",
     tags: ["company owned asset","3rd party asset","asset ownership type"]
+  },
+  {
+    action: "view",
+    object: "3rd party asset procurement link",
+    scope: "module", section: "Asset Master",
+    question: "Where do the items on the 3rd Party Asset tab come from?",
+    answer: "They come from Procurement: once a Purchase Order for rented/leased equipment (Procurement → Purchase Orders → Equipment type) is created and received, it shows up here automatically with its REQ ID, Requesting Date, Requested By, Required Date, PO ID, and Planned Pickup Date, all traceable back to Procurement. There's no manual + Add button on this tab.",
+    tags: ["3rd party asset procurement","req po asset link","asset from purchase order"]
   },
   {
     action: "define",
@@ -840,8 +848,8 @@ const QA_EQUIPMENT = [
     action: "define",
     object: "maintenance logs vs asset setup",
     scope: "module", section: "Asset Setup",
-    question: "What is \"Equipment Setup - Maintenance Logs\" and how is it different from Asset Setup?",
-    answer: "It's a closely related admin screen that follows the identical 4-step pattern (List Items / Identify Forms / Prepare Schedule / Assign Crew) but additionally has a parallel **Utilization** tab, letting you schedule utilization logs the same way maintenance logs are scheduled.",
+    question: "What is \"Maintenance Logs\" and how is it different from Asset Setup?",
+    answer: "It isn't a different screen — **Maintenance Logs** is one of Asset Setup's own two sub-tabs (the other is **Utilization**). Maintenance Logs is where Create Maintenance Package lives; Utilization follows the identical 4-step pattern (List Items / Identify Forms / Prepare Schedule / Assign Crew) but for scheduling utilization logs instead, via its own Create Utilization Package.",
     tags: ["maintenance logs","utilization setup"]
   },
   {
@@ -977,39 +985,47 @@ const QA_EQUIPMENT = [
     object: "load out request",
     scope: "module", section: "Load Out Request",
     question: "How do I raise an internal Load Out Request?",
-    answer: "1. Go to **Load Out Request** (Internal Job view), click **Add**.\n2. Fill Equipment/Accessory, Quantity, UOM, Requested By, Required Date, Planned Return Date, Supervisor, Job ID/Name.\n3. Submit → status **REQUESTED**. Wait for **Approve**.\n4. Warehouse staff perform **Check Out** (Assign ID, Checkout Date, Signature) per item.\n5. Perform **Ship** to send to the job site.\n6. On return, perform **Check In** per item.\n7. Perform **Shop In** to return to inventory — LOR reaches **CLOSED**.",
+    answer: "1. Go to **Load Out Request → LOR Internal Jobs → Load Out Requests**, click **+ Add**.\n2. Fill the item (Equipment/Accessory), Quantity, UOM, Requested By, Required Date, Planned Return Date, Supervisor, Job ID/Name.\n3. Submit → status **REQUESTED**. Wait for **Approve**.\n4. Warehouse staff perform **Check Out** (Assign ID, Check Out Date, Requested Tool details) per item.\n5. Perform **Shipment** (choose Self Pick Up or Internal Delivery Request), then **Load**, **In Transit**, **Delivered**, and **Received** as the equipment moves and arrives.\n6. The request reaches **CLOSED** once every item is Received. To bring the equipment back afterward, raise a separate **Return Request**.",
     tags: ["load out request","lor","checkout equipment","internal job lor"]
+  },
+  {
+    action: "create",
+    object: "return request",
+    scope: "module", section: "Load Out Request",
+    question: "How do I return equipment from a job site?",
+    answer: "1. Go to **Load Out Request → LOR Internal Jobs → Return Requests**, click **+ Add**.\n2. Fill the item, Requested By, Received Date, Return Date, Pickup Time, Supervisor, and Job ID/Name.\n3. Get it **Approved**.\n4. Perform **Shipment**, **Load**, **In Transit**, **Delivered**, and **Received** the same way as an outbound request — there's no Check Out step, since the equipment is already checked out.\n5. The Return Request reaches **CLOSED** once every item is Received back into inventory.",
+    tags: ["return request","rr","return equipment","bring back equipment"]
   },
   {
     action: "create",
     object: "3rd party load out request",
     scope: "module", section: "Load Out Request",
     question: "How do I raise a 3rd-party lease Load Out Request?",
-    answer: "1. Go to **Load Out Request**, 3rd Party view, click **Add**.\n2. Fill the Request form (no Job Name/Location needed) and get it **Approved**.\n3. **Check Out** the equipment.\n4. Complete the **Lease Agreement**, click **Email Agreement for Approval**.\n5. Once the 3rd party approves (optionally e-signs via Adobe Sign), proceed to **Ship**.\n6. On return, **Check In**, then **Shop In** to close the LOR.",
-    tags: ["3rd party lor","lease agreement","lease equipment"]
+    answer: "1. Go to **Load Out Request → Rentals**, click **+ Add**.\n2. Fill the Request form (no Job Name/Location needed) and get it **Approved**.\n3. **Check Out** the equipment.\n4. Complete the **Lease Agreement**, click **Email Agreement for Approval**.\n5. Once the 3rd party approves (optionally e-signs via Adobe Sign), proceed to **Ship**.\n6. On return, **Check In**, then **Shop In** to close the record.",
+    tags: ["3rd party lor","lease agreement","lease equipment","rentals"]
   },
   {
     action: "define",
     object: "lor status",
     scope: "module", section: "Load Out Request",
     question: "What does 'PARTIAL CHECK OUT' status mean?",
-    answer: "It means only *some* of the requested items on that Load Out Request have been checked out so far — a single LOR can be fulfilled across multiple check-out submissions. The status becomes **CHECKED OUT** once every item on the request has been checked out.",
+    answer: "It means only *some* of the requested items on that request have been checked out so far — a single Load Out Request (or Rentals record) can be fulfilled across multiple check-out submissions. The status becomes the full (non-partial) version once every item on the request has been checked out.",
     tags: ["lor status","partial check out"]
   },
   {
     action: "define",
     object: "lor internal vs 3rd party",
     scope: "module", section: "Load Out Request",
-    question: "What's different between LOR Internal Job and 3rd Party LOR?",
-    answer: "The 3rd Party LOR's Request form omits **Job Name/Job Location** (there's no internal job involved), and it inserts an extra **Lease Agreement** stage after Check Out and before Ship, where both parties sign a legal document before proceeding to Ship. All other stages (Ship, Check In, Shop In, Preview) are identical between the two flows.",
-    tags: ["lor internal vs 3rd party","lor flow comparison"]
+    question: "What's different between LOR Internal Jobs and Rentals?",
+    answer: "LOR Internal Jobs splits into two separate documents — Load Out Requests (outbound: Request → Check Out → Shipment → Load → In Transit → Delivered → Received → Preview) and Return Requests (inbound, same stages minus Check Out). Rentals (3rd-party) is a single record covering the whole cycle with different stage names: Request → Check Out → Lease Agreement → Ship → Check In → Shop In → Preview, and its Request form omits Job Name/Job Location since there's no internal job involved.",
+    tags: ["lor internal vs 3rd party","lor flow comparison","rentals vs internal jobs"]
   },
   {
     action: "define",
     object: "lor request form fields",
     scope: "module", section: "Load Out Request",
     question: "What fields are on the LOR Request form?",
-    answer: "**Equipment or Accessory required, Quantity, UOM, Requested By, Required Date, Planned Return Date, Supervisor, Job ID/Job Name** (the Job ID/Job Name field is omitted on 3rd Party LOR requests).",
+    answer: "**Item (Equipment or Accessory), Quantity, UOM, Requested By, Required Date, Planned Return Date, Supervisor, Job ID/Job Name** (the Job ID/Job Name field is omitted on Rentals/3rd-party requests).",
     tags: ["lor request fields","load out request fields"]
   },
   {
@@ -1033,7 +1049,7 @@ const QA_EQUIPMENT = [
     object: "delivery request",
     scope: "module", section: "Load Out Request",
     question: "Can I request transport/delivery for shipping equipment?",
-    answer: "Yes — a **Delivery Request** can be created directly from the Ship page (or the Check-in page) if transport is needed. This automatically creates a Requisition (REQ) and kicks off the RFQ process.",
+    answer: "Yes — on the **Shipment** stage of a Load Out Request or Return Request, choose **Internal Delivery Request** instead of Self Pick Up. This automatically creates a Requisition (REQ) and kicks off the RFQ process; a **View Delivery Request** link on that stage opens the resulting requisition.",
     tags: ["delivery request","requisition","rfq","requisition rfq"]
   },
   {
@@ -1049,7 +1065,7 @@ const QA_EQUIPMENT = [
     object: "lor status",
     scope: "module", section: "Load Out Request",
     question: "What's the difference between PARTIAL CLOSED and CLOSED?",
-    answer: "**CLOSED** means every item on the LOR has completed Shop In. **PARTIAL CLOSED** means only some items have been shopped in so far.",
+    answer: "**CLOSED** means every item on the request has completed its final stage (Shop In on Rentals; Received on Load Out Requests/Return Requests). **PARTIAL CLOSED** means only some items have completed it so far.",
     tags: ["partial closed vs closed"]
   },
   {
@@ -1057,7 +1073,7 @@ const QA_EQUIPMENT = [
     object: "lor status list",
     scope: "module", section: "Load Out Request",
     question: "What is the full list of possible LOR statuses, and where can I see all of an LOR's forms in one place?",
-    answer: "**Requested, Approved, Rejected, Check Out, Partial Check Out, Check Out With Issue, Ship In, Partial Ship In, Check In, Partial Check-In, Check In With Issue, Shop In, Partial Closed, Closed.** The **Preview** tab on an LOR shows the full collected set of forms (Request, Check Out, Ship, Check In, Shop In) in one place.",
+    answer: "All flows start with **Requested, Approved, Rejected**. **Load Out Requests/Return Requests** then move through Check Out (Load Out Requests only) → Shipment → Load → In Transit (or Partial In Transit) → Delivered (or Partial Delivered) → Received → Closed (or Partial Closed). **Rentals** instead moves through Check Out (or Partial Check Out) → Lease Agreement → Ship In (or Partial Ship In) → Check In (or Partial Check-In / Check In With Issue) → Shop In → Closed (or Partial Closed). The **Preview** tab on any record shows its full collected set of forms in one place.",
     tags: ["lor status list","lor preview"]
   },
   {
@@ -1105,7 +1121,7 @@ const QA_EQUIPMENT = [
     object: "lor card",
     scope: "module", section: "Load Out Request",
     question: "What information shows on an LOR card, and can I view LORs as a Kanban board?",
-    answer: "Each card shows the selected Equipment/Accessory, Required-by Date, Created By, Workflow Level, and current Status/ID. A view toggle in the top-right of the Load Out Request tab switches between Grid View and Kanban View for both LOR Internal Job and 3rd Party LOR.",
+    answer: "Each card shows the selected Equipment/Accessory, Required-by Date, Created By, Workflow Level, and current Status/ID. A view toggle switches between Grid View and Kanban View across LOR Internal Jobs (Load Out Requests and Return Requests) and Rentals.",
     tags: ["lor card info","lor kanban view"]
   },
   {
@@ -1113,7 +1129,7 @@ const QA_EQUIPMENT = [
     object: "lor approval workflow",
     scope: "module", section: "Load Out Request",
     question: "Where do I configure the approval chain for Load Out Requests?",
-    answer: "Go to **LOR - Workflows**, a separate configuration screen for defining the approval chain(s) used by LOR / 3rd Party LOR requests.",
+    answer: "Go to **Load Out Request → Workflows**, then pick the sub-tab for the flow you're configuring — **Load Out Request**, **Return Request**, or **Rentals** — each has its own separate approval chain.",
     tags: ["lor workflows","approval chain"]
   },
   {
@@ -1121,7 +1137,7 @@ const QA_EQUIPMENT = [
     object: "lor approval level",
     scope: "module", section: "Load Out Request",
     question: "How do I add a new approval level to an LOR workflow?",
-    answer: "1. Go to **LOR - Workflows**.\n2. Click **Create Level**.\n3. In the pop-up, choose the level type: \"All must approve\" or \"Anyone can approve\".\n4. Pick the approvers for that level.",
+    answer: "1. Go to **Load Out Request → Workflows**, pick the Load Out Request, Return Request, or Rentals sub-tab.\n2. Click **Create Level**.\n3. In the pop-up, choose the level type: \"All must approve\" or \"Anyone can approve\".\n4. Pick the approvers for that level.",
     tags: ["lor approval level","create level"]
   },
   {
@@ -1129,7 +1145,7 @@ const QA_EQUIPMENT = [
     object: "approval level type",
     scope: "module", section: "Load Out Request",
     question: "What's the difference between \"All must approve\" and \"Anyone can approve\"?",
-    answer: "**\"All must approve\"** requires every approver assigned to that level to approve before the LOR advances. **\"Anyone can approve\"** lets a single approver at that level clear it for everyone.",
+    answer: "**\"All must approve\"** requires every approver assigned to that level to approve before the request advances. **\"Anyone can approve\"** lets a single approver at that level clear it for everyone.",
     tags: ["all must approve","anyone can approve","all must approve anyone can approve"]
   },
   {
@@ -1145,7 +1161,7 @@ const QA_EQUIPMENT = [
     object: "lor workflow diagram",
     scope: "module", section: "Load Out Request",
     question: "How can I visualize the structure of an LOR approval workflow?",
-    answer: "Click the tree/graph view icon in the top right of the LOR - Workflows screen to see a visual diagram of the workflow structure.",
+    answer: "Go to **Load Out Request → Workflows**, pick the relevant sub-tab, and click the tree/graph view icon (device_hub) in the top right to see a visual diagram of the workflow structure.",
     tags: ["lor workflow diagram","tree graph view"]
   },
   {
@@ -1153,7 +1169,7 @@ const QA_EQUIPMENT = [
     object: "check in vs shop in",
     scope: "module", section: "Load Out Request",
     question: "What's the difference between Check In and Shop In?",
-    answer: "**Check In** records that equipment/accessories have returned from the field (tick returning items, add name/signature). **Shop In** is the subsequent, final step confirming the equipment has been physically placed back into its inventory location — only after Shop In does the LOR reach CLOSED.",
+    answer: "These are Rentals-flow stage names. **Check In** records that equipment/accessories have returned from the field (tick returning items, add name/signature). **Shop In** is the subsequent, final step confirming the equipment has been physically placed back into its inventory location — only after Shop In does the record reach CLOSED. (LOR Internal Jobs uses different stage names for the same idea: Delivered and Received.)",
     tags: ["check in vs shop in","lor stage comparison"]
   },
   {
@@ -1192,8 +1208,8 @@ const QA_EQUIPMENT = [
     action: "define",
     object: "partial status",
     scope: "module", section: "Load Out Request",
-    question: "Why does my LOR still say PARTIAL CHECK OUT / PARTIAL SHIP IN / PARTIAL CHECK IN?",
-    answer: "Because not all items on that LOR have completed that stage yet. These \"Partial\" statuses apply whenever some but not all of the requested items have been checked out, shipped, or checked in — the status upgrades to the full (non-partial) version once every item completes that stage.",
+    question: "Why does my LOR still say PARTIAL CHECK OUT / PARTIAL IN TRANSIT / PARTIAL DELIVERED / PARTIAL SHIP IN / PARTIAL CHECK IN?",
+    answer: "Because not all items on that request have completed that stage yet. These \"Partial\" statuses apply whenever some but not all of the requested items have completed a given stage (Check Out, In Transit, Delivered on Load Out Requests/Return Requests; Check Out, Ship, Check In on Rentals) — the status upgrades to the full (non-partial) version once every item completes it.",
     tags: ["partial status troubleshoot","partial check out ship check in troubleshoot"]
   },
   {
@@ -1209,7 +1225,7 @@ const QA_EQUIPMENT = [
     object: "3rd party lor job name field",
     scope: "module", section: "Load Out Request",
     question: "Why doesn't my 3rd Party LOR request form have a Job Name field?",
-    answer: "Because 3rd Party LOR is for leasing equipment out to (or in from) an external party, not for an internal job — the Request form omits Job Name/Job Location for this flow, unlike LOR Internal Job.",
+    answer: "Because Rentals is for leasing equipment out to (or in from) an external party, not for an internal job — its Request form omits Job Name/Job Location for this flow, unlike LOR Internal Jobs.",
     tags: ["3rd party lor no job name","missing job name troubleshoot"]
   },
   {
@@ -7904,7 +7920,7 @@ const MODULES = [
           },
           {
             "term": "Company Owned Asset vs. 3rd Party Asset",
-            "definition": "Company Owned Asset tracks equipment the company itself owns outright. 3rd Party Asset tracks equipment or accessories that belong to, or are leased from, an outside party, and is used together with the 3rd Party LOR / Lease Agreement workflow when that equipment moves in or out under a formal lease."
+            "definition": "Company Owned Asset tracks equipment the company itself owns outright, using the same status chips and columns as Company Owned Accessory. 3rd Party Asset is structured differently: it tracks equipment currently rented in from (or company equipment currently out with) a 3rd party, sourced through Procurement's REQ → PO pipeline. Its status chips are Active, Displayed, and Off Rent Picked Up, and its columns are Asset ID, Asset Description, Asset Name, Status, Delivery Location, REQ ID, Requesting Date, Requested By, Required Date, Received By, PO ID, Planned Pickup Date, and Overdue Days — every row traces back to a specific Procurement requisition and Purchase Order rather than being added manually. There is no + Add button on this sub-tab."
           },
           {
             "term": "Asset vs. Accessory",
@@ -8058,8 +8074,8 @@ const MODULES = [
             "definition": "The setting, chosen in the Prepare Schedule step, that determines how a maintenance form gets triggered. Daily and Weekly recurrence trigger the form on a fixed calendar cadence at a specific date and time. Check Out and Check In recurrence instead trigger the form automatically as part of the equipment's checkout or check-in step within the Load Out Request flow, rather than on any fixed schedule — meaning the form appears exactly when that equipment is being moved, not on a calendar date."
           },
           {
-            "term": "Equipment Setup – Maintenance Logs",
-            "definition": "A closely related admin screen that follows the identical four-step pattern (List Items / Identify Forms / Prepare Schedule / Assign Crew) as Asset Setup, but adds a parallel Utilization tab — letting you schedule utilization logs on the same cadence-driven basis that maintenance logs use."
+            "term": "Maintenance Logs vs. Utilization (Asset Setup tabs)",
+            "definition": "Asset Setup itself has two sub-tabs, not two separate screens. Maintenance Logs is where Create Maintenance Package lives (the 4-step wizard described above). Utilization is the parallel tab for scheduling utilization logs the same way — Create Utilization Package follows the identical 4-step pattern (List Items / Identify Forms / Prepare Schedule / Assign Crew), with its own + Add Equipments/Accessories button."
           }
         ],
         "procedures": [
@@ -8170,67 +8186,67 @@ const MODULES = [
       },
       {
         "heading": "Load Out Request",
-        "intro": "<p>Every time a piece of equipment leaves the yard, real money and real risk move with it — a crane sent to the wrong job, a generator that leaves without a required safety check, or a leased asset that goes out without a signed agreement are all expensive mistakes that a formal process exists to prevent. Load Out Request is used across several roles in the same request: a <strong>site or project End User</strong> raises the request, a <strong>warehouse or yard End User</strong> physically checks the equipment out and back in, and a <strong>Fleet/Equipment Module Manager or designated approver</strong> signs off on the request itself — with the approval chain who needs to sign off on a request configurable by an <strong>Equipment Management Admin</strong> via LOR - Workflows, rather than fixed in the product.</p><p>Load Out Request (LOR) is the formal, staged workflow that governs every movement of equipment out of inventory — whether to an internal job site or on lease to a 3rd party — and its eventual return. It exists because equipment is a shared, finite, valuable resource: without a controlled process, there would be no reliable way to know what's currently deployed, who has it, when it's due back, or whether it passed a required safety check before leaving the warehouse.</p>\n    <p>Arena implements two parallel flows that share almost all of their structure: <strong>LOR Internal Job</strong>, for equipment going to one of your own job sites, and <strong>3rd Party LOR</strong>, for equipment leased out to (or in from) an external party. Both flows move through the same core stages — Request, Approval, Check Out, Ship, Check In, and Shop In — and both can be viewed as a Grid or a Kanban board. The 3rd Party flow differs in exactly two ways: its Request form omits Job Name/Job Location (there's no internal job involved), and it inserts an extra Lease Agreement stage between Check Out and Ship, where both parties sign a legal document — optionally with a digital signature via Adobe Acrobat Sign — before the equipment can proceed further.</p>\n    <p>A defining characteristic of the LOR lifecycle is that nearly every stage supports partial fulfillment: a single request can cover multiple line items, and those items can be checked out, shipped, or checked in across multiple separate actions rather than all at once. This is why you'll frequently see \"Partial\" statuses (Partial Check Out, Partial Ship In, Partial Check In, Partial Closed) — they're not errors, they're the expected in-between state whenever some but not all items on a request have completed a given stage. The status only becomes the \"full\" version once every item on the LOR has cleared that stage.</p>\n    <p>The LOR flow also integrates tightly with the maintenance system covered earlier: if a piece of equipment's maintenance package has a Check Out or Check In recurrence type, a maintenance form is automatically inserted into that exact stage of the LOR flow, and a failed check surfaces a decision point (Proceed With Issue vs. Change Equipment on checkout; Hold the Equipment or Not on check-in) rather than silently letting the equipment move. Finally, approval of an LOR is governed by a separately configurable approval chain (LOR - Workflows) that an <strong>Equipment Management Admin</strong> sets up, so who needs to sign off on a request is itself a piece of admin configuration rather than a fixed rule.</p>",
+        "intro": "<p>Every time a piece of equipment leaves the yard, real money and real risk move with it — a crane sent to the wrong job, a generator that leaves without a required safety check, or a leased asset that goes out without a signed agreement are all expensive mistakes that a formal process exists to prevent. Load Out Request is used across several roles in the same request: a <strong>site or project End User</strong> raises the request, a <strong>warehouse or yard End User</strong> physically checks the equipment out and processes its shipment/return, and a <strong>Fleet/Equipment Module Manager or designated approver</strong> signs off on the request — with the approval chain configurable by an <strong>Equipment Management Admin</strong> via Workflows, rather than fixed in the product.</p><p>Load Out Request (LOR) is the formal, staged workflow that governs every movement of equipment out of inventory — whether to an internal job site or on lease to a 3rd party — and its eventual return. It exists because equipment is a shared, finite, valuable resource: without a controlled process, there would be no reliable way to know what's currently deployed, who has it, when it's due back, or whether it passed a required safety check before leaving the warehouse.</p>\n    <p>Arena implements this as three distinct top-level tabs: <strong>LOR Internal Jobs</strong> (equipment going to and returning from one of your own job sites), <strong>Rentals</strong> (equipment leased out to, or in from, an external 3rd party), and <strong>Workflows</strong> (approval-chain configuration). LOR Internal Jobs itself splits into two document types with their own ID sequences: <strong>Load Out Requests</strong> (LOR-#, equipment going out) and <strong>Return Requests</strong> (RR-#, equipment coming back) — these are separate records, not two ends of the same one. The outbound and return flows use the same underlying shipping mechanics (Shipment, Load, In Transit, Delivered, Received) but the outbound flow adds a Check Out step first, since a Return Request starts from equipment that's already checked out.</p>\n    <p>The <strong>Rentals</strong> flow (3rd-party) is structured differently again, using the stage names Request, Check Out, Lease Agreement, Ship, Check In, and Shop In — a single record covers the whole out-and-back cycle rather than splitting into two document types. This is also where a 3rd party's legal sign-off (Lease Agreement) fits in.</p>\n    <p>A defining characteristic of both flows is that nearly every stage supports partial fulfillment: a single request can cover multiple line items, and those items can be checked out, shipped, or received across multiple separate actions rather than all at once. This is why you'll frequently see \"Partial\" statuses — they're not errors, they're the expected in-between state whenever some but not all items on a request have completed a given stage.</p>\n    <p>The LOR flow also integrates tightly with the maintenance system covered earlier: if a piece of equipment's maintenance package has a Check Out or Check In recurrence type, a maintenance form is automatically inserted into that exact stage of the flow, and a failed check surfaces a decision point (Proceed With Issue vs. Change Equipment on checkout; Hold the Equipment or Not on check-in) rather than silently letting the equipment move. Approval of every flow is governed by a separately configurable approval chain (Workflows) that an <strong>Equipment Management Admin</strong> sets up — with its own chain for Load Out Request, Return Request, and Rentals — so who needs to sign off is itself a piece of admin configuration rather than a fixed rule.</p>",
         "definitions": [
           {
             "term": "Load Out Request (LOR)",
-            "definition": "The formal staged workflow for moving equipment out of inventory to a job site, or on lease to a 3rd party, and back again. It exists in two parallel forms — LOR Internal Job and 3rd Party LOR — each viewable in Grid or Kanban layout."
+            "definition": "The formal staged workflow for moving equipment out of inventory to a job site, or on lease to a 3rd party, and back again. It has three top-level tabs — LOR Internal Jobs, Rentals, and Workflows — each viewable in Grid or Kanban layout where applicable."
           },
           {
-            "term": "LOR Internal Job vs. 3rd Party LOR",
-            "definition": "Both flows share the same core stages (Request, Approval, Check Out, Ship, Check In, Shop In, Preview). The 3rd Party LOR's Request form omits Job Name/Job Location, since there's no internal job involved, and it inserts an extra Lease Agreement stage after Check Out and before Ship, where both parties sign a legal document before the equipment can proceed to shipment."
+            "term": "LOR Internal Jobs vs. Rentals",
+            "definition": "LOR Internal Jobs covers equipment moving to and from your own job sites, and splits into two document types: Load Out Requests (outbound) and Return Requests (inbound). Rentals covers equipment leased to or from an external 3rd party as a single record spanning Request through Shop In, and adds a Lease Agreement stage that Internal Jobs doesn't have. (On-screen, Rentals is the current name for what was previously called \"3rd Party LOR.\")"
+          },
+          {
+            "term": "Load Out Requests vs. Return Requests",
+            "definition": "Under LOR Internal Jobs, Load Out Requests (ID prefix LOR-) are the outbound request: Request → Check Out → Shipment → Load → In Transit → Delivered → Received → Preview. Return Requests (ID prefix RR-) are a separate record for bringing equipment back from the same job: Request → Shipment → Load → In Transit → Delivered → Received → Preview — the same shipping mechanics minus Check Out, since the equipment is already checked out."
           },
           {
             "term": "LOR Request form fields",
-            "definition": "Equipment or Accessory required, Quantity, UOM, Requested By, Required Date, Planned Return Date, Supervisor, and Job ID/Job Name — with Job ID/Job Name omitted specifically on 3rd Party LOR requests."
+            "definition": "Item (Equipment or Accessory), Quantity, UOM, Requested By, Required Date, Planned Return Date, Supervisor, and Job ID/Job Name — with Job ID/Job Name omitted specifically on Rentals (3rd-party) requests."
           },
           {
             "term": "REQUESTED / APPROVED / Rejected",
-            "definition": "The initial approval states of an LOR. Submitting the Request form sets status to REQUESTED. The approver then sees Approve and Reject buttons — Approve sets status to APPROVED and removes the buttons; Reject turns the button red, sets status to Rejected, and lets the requester revise using the approver's comments before resubmitting. Once approved, the Approve/Reject buttons disappear entirely — they only appear while a request is awaiting a decision."
+            "definition": "The initial approval states of an LOR or RR. Submitting the Request form sets status to REQUESTED. The approver then sees Approve and Reject buttons — Approve sets status to APPROVED and removes the buttons; Reject turns the button red, sets status to Rejected, and lets the requester revise using the approver's comments before resubmitting. Once approved, the Approve/Reject buttons disappear entirely — they only appear while a request is awaiting a decision."
           },
           {
             "term": "Check Out",
-            "definition": "The LOR stage where warehouse staff verify equipment against Equipment Master stock and record Assign ID, Checkout Date, and Signature per item. This stage supports partial fulfillment: PARTIAL CHECK OUT applies when only some requested items have been checked out, and the status upgrades to CHECKED OUT once every item is done."
+            "definition": "The stage (Load Out Requests and Rentals only — Return Requests skip it) where warehouse staff verify equipment against Asset Master stock and record an Assign ID, Equipment Name/UOM/Requested By/Check Out Date, and a Requested Tool block (Assign Category, Assign Picker, Quantity, Date Needed, Duration Needed). Supports partial fulfillment: PARTIAL CHECK OUT applies when only some requested items have been checked out."
           },
           {
             "term": "Check Out Issue",
             "definition": "A status that occurs when a Scheduled Equipment Maintenance form tied to the Check Out stage fails a check. A confirmation dialog then offers two options: Proceed With Issue (continue the checkout anyway, setting status to Check Out Issue and marking the item \"ID – Has Issue\") or Change Equipment (swap in a different item instead)."
           },
           {
+            "term": "Shipment (Load Out Requests / Return Requests stage)",
+            "definition": "The stage after Check Out (or after Request, on a Return Request) where you choose Self Pick Up or Internal Delivery Request. Choosing Internal Delivery Request auto-creates a Requisition and starts the RFQ process for transport, with a View Delivery Request link back to it. Also captures Invoice Number, Name of the Shipper, Sign, Shipment Date/Time, and an Add Tools grid where items are scanned in/out by barcode (or entered manually if a barcode is damaged)."
+          },
+          {
+            "term": "Load, In Transit, Delivered, Received (LOR Internal Jobs stages)",
+            "definition": "The remaining stages after Shipment on both Load Out Requests and Return Requests. Load captures a Name/Signature and the barcode-scanned tool list, plus a Barcode Attachment upload for damaged barcodes. In Transit is a minimal confirmation stage with no extra fields. Delivered repeats the Add Tools/barcode grid plus a Submitted by + Signature. Received is a minimal confirmation stage. Preview then shows the full collected form set."
+          },
+          {
             "term": "Lease Agreement",
-            "definition": "A stage unique to the 3rd Party LOR flow, inserted between Check Out and Ship. It captures equipment details and replacement value, requires both parties to sign, and is sent for approval via Email Agreement for Approval. Status moves from Waiting for Approval to Approved (Mail ID); the recipient gets a View Form link with Approve/Reject options, optionally e-signed through the Adobe Acrobat Sign integration."
+            "definition": "A stage unique to the Rentals (3rd-party) flow, inserted between Check Out and Ship. It captures equipment details and replacement value, requires both parties to sign, and is sent for approval via Email Agreement for Approval. Status moves from Waiting for Approval to Approved (Mail ID); the recipient gets a View Form link with Approve/Reject options, optionally e-signed through the Adobe Acrobat Sign integration."
           },
           {
-            "term": "Ship",
-            "definition": "The stage recording shipment details and signature as equipment heads to the job site. Supports partial fulfillment (PARTIAL SHIP IN for some items shipped, SHIPPED once all are). A Delivery Request can be created directly from this stage (or from Check-in) if transport is needed — this automatically creates a Requisition (REQ) and kicks off the RFQ process."
-          },
-          {
-            "term": "Check In",
-            "definition": "The stage where returning items are ticked off and a name and signature are recorded, as equipment comes back from the field. Supports partial fulfillment (PARTIAL CHECK IN, upgrading to CHECKED IN once complete). If a tied maintenance form finds an issue, a \"Hold the Equipment/Accessory or Not\" prompt appears: answering No proceeds with the check-in anyway, setting status to CHECK IN ISSUE (logged to Asset Issues); answering Yes blocks the check-in entirely until the issue is fixed."
-          },
-          {
-            "term": "Shop In",
-            "definition": "The final LOR stage, confirming the equipment has been physically placed back into its inventory location, capturing a signature and Submit. Only after Shop In does the LOR reach CLOSED (or PARTIAL CLOSED if some items are still pending)."
-          },
-          {
-            "term": "Check In vs. Shop In",
-            "definition": "Check In records that equipment has returned from the field (ticking off returning items, capturing name and signature). Shop In is the subsequent, final confirmation that the equipment has been physically placed back in its inventory location — only Shop In actually closes the LOR."
+            "term": "Ship, Check In, Shop In (Rentals stages)",
+            "definition": "The Rentals-only stage names (used instead of Shipment/Load/In Transit/Delivered/Received) — Ship records shipment details and signature; Check In ticks off returning items with a name and signature (a tied maintenance-form issue triggers a \"Hold the Equipment/Accessory or Not\" prompt); Shop In is the final confirmation that equipment is physically back in its inventory location. Only Shop In closes a Rentals record (CLOSED, or PARTIAL CLOSED if some items are still pending)."
           },
           {
             "term": "PARTIAL CLOSED vs. CLOSED",
-            "definition": "CLOSED means every item on the LOR has completed Shop In. PARTIAL CLOSED means only some items have been shopped in so far — the remaining items still need to complete that final stage before the LOR fully closes."
+            "definition": "CLOSED means every item on the record has completed its final stage (Shop In on Rentals; Received on Load Out Requests/Return Requests). PARTIAL CLOSED means only some items have completed it so far."
           },
           {
             "term": "Preview",
-            "definition": "A tab on an LOR record showing the full collected set of forms generated across its lifecycle — Request, Check Out, Ship, Check In, and Shop In — in one place, useful for a complete review of everything filed against that request."
+            "definition": "The final tab on an LOR, RR, or Rentals record showing the full collected set of forms generated across its lifecycle in one place, useful for a complete review of everything filed against that request."
           },
           {
-            "term": "Full LOR status list",
-            "definition": "Requested, Approved, Rejected, Check Out, Partial Check Out, Check Out With Issue, Ship In, Partial Ship In, Check In, Partial Check-In, Check In With Issue, Shop In, Partial Closed, Closed."
+            "term": "LOR/RR status list",
+            "definition": "Common to all three flows: Requested, Approved, Rejected. Load Out Requests / Return Requests then move through Check Out (Load Out Requests only) → Shipment → Load → In Transit (or Partial In Transit) → Delivered (or Partial Delivered) → Received → Closed (or Partial Closed). Rentals instead moves through Check Out (or Partial Check Out) → Lease Agreement → Ship (Ship In / Partial Ship In) → Check In (or Partial Check-In; Check In With Issue) → Shop In → Closed (or Partial Closed)."
           },
           {
             "term": "Delivery Request",
-            "definition": "A transport/delivery request that can be created directly from the Ship page or the Check-in page when equipment needs to be physically moved by a third party. Creating one automatically generates a Requisition (REQ) and starts the RFQ (request-for-quote) process."
+            "definition": "A transport/delivery request created from the Shipment stage by choosing Internal Delivery Request instead of Self Pick Up. Creating one automatically generates a Requisition (REQ) and starts the RFQ (request-for-quote) process; a View Delivery Request link on the Shipment stage opens it."
           },
           {
             "term": "Roster field",
@@ -8238,47 +8254,58 @@ const MODULES = [
           },
           {
             "term": "LOR card",
-            "definition": "The summary tile representing an LOR in Grid view, showing the selected Equipment/Accessory, Required-by Date, Created By, Workflow Level, and current Status/ID. A view toggle in the top-right of the tab switches between Grid View and Kanban View for both LOR Internal Job and 3rd Party LOR."
+            "definition": "The summary tile representing an LOR, RR, or Rentals record in Grid view, showing the selected Equipment/Accessory, Required-by Date, Created By, Workflow Level, and current Status/ID. A view toggle switches between Grid View and Kanban View."
           },
           {
             "term": "LOR per-record actions",
-            "definition": "Each LOR provides Download (a PDF of the current stage's form) and Print; Share (send to other system users via System Default, Outlook, or Gmail); Documents (store/download all related files, and bundle all equipment's documents into a single file); and Mail (compose an email via Gmail or Outlook, depending on Global Settings → Mail Settings)."
+            "definition": "Each record provides Download (a PDF of the current stage's form) and Print; Share (send to other system users via System Default, Outlook, or Gmail); Documents (store/download all related files, and bundle all equipment's documents into a single file); and Mail (compose an email via Gmail or Outlook, depending on Global Settings → Mail Settings)."
           },
           {
-            "term": "LOR - Workflows",
-            "definition": "A separate configuration screen for defining the approval chain(s) used by LOR and 3rd Party LOR requests. Create Level lets you add a new approval level, choosing between \"All must approve\" and \"Anyone can approve,\" and selecting which users act as approvers at that level. A tree/graph view icon visualizes the resulting workflow structure."
+            "term": "Workflows (LOR)",
+            "definition": "A configuration tab (next to LOR Internal Jobs and Rentals) for defining approval chains, split into its own 3 sub-tabs — Load Out Request, Return Request, and Rentals — each with its own independent chain. Create Level adds an approval level, choosing between \"All must approve\" and \"Anyone can approve,\" and selecting approvers. A tree/graph view icon (device_hub) visualizes the resulting structure."
           },
           {
             "term": "All must approve vs. Anyone can approve",
-            "definition": "Two approval-level types configurable in LOR - Workflows. \"All must approve\" requires every approver assigned to that level to sign off before the LOR advances. \"Anyone can approve\" lets a single approver at that level clear it on behalf of everyone."
+            "definition": "Two approval-level types configurable in Workflows. \"All must approve\" requires every approver assigned to that level to sign off before the request advances. \"Anyone can approve\" lets a single approver at that level clear it on behalf of everyone."
           },
           {
             "term": "Maintenance form gating",
-            "definition": "The behavior where a piece of equipment cannot be checked out or checked in without first completing a maintenance form, because that equipment's maintenance package has a Recurrence Type of Check Out or Check In — meaning the form is triggered automatically at that exact step of the LOR flow, rather than on a calendar date, and must be completed before the step can proceed."
+            "definition": "The behavior where a piece of equipment cannot be checked out or checked in without first completing a maintenance form, because that equipment's maintenance package has a Recurrence Type of Check Out or Check In — meaning the form is triggered automatically at that exact step of the flow, rather than on a calendar date, and must be completed before the step can proceed."
           }
         ],
         "procedures": [
           {
             "title": "Raising an internal Load Out Request",
             "steps": [
-              "Go to <strong>Load Out Request</strong> (Internal Job view) and click <strong>Add</strong>.",
-              "Fill in Equipment/Accessory, Quantity, UOM, Requested By, Required Date, Planned Return Date, Supervisor, and Job ID/Name.",
+              "Go to <strong>Load Out Request → LOR Internal Jobs → Load Out Requests</strong> and click <strong>+ Add</strong>.",
+              "Fill in the item (Equipment/Accessory), Quantity, UOM, Requested By, Required Date, Planned Return Date, Supervisor, and Job ID/Name.",
               "Submit — status becomes <strong>REQUESTED</strong>. Wait for it to be <strong>Approved</strong>.",
-              "Warehouse staff perform <strong>Check Out</strong> (Assign ID, Checkout Date, Signature) per item.",
-              "Perform <strong>Ship</strong> to send the equipment to the job site.",
-              "On return, perform <strong>Check In</strong> per item.",
-              "Perform <strong>Shop In</strong> to return the equipment to inventory — the LOR reaches <strong>CLOSED</strong>."
+              "Warehouse staff perform <strong>Check Out</strong> (Assign ID, Check Out Date, Requested Tool details) per item.",
+              "Perform <strong>Shipment</strong> — choose Self Pick Up or Internal Delivery Request, and record shipper details.",
+              "Perform <strong>Load</strong>, then <strong>In Transit</strong>, then <strong>Delivered</strong>, then <strong>Received</strong> as the equipment moves and arrives.",
+              "The Load Out Request reaches <strong>CLOSED</strong> (or PARTIAL CLOSED) once every item is Received."
             ]
           },
           {
-            "title": "Raising a 3rd-party lease Load Out Request",
+            "title": "Returning equipment from a job (Return Request)",
             "steps": [
-              "Go to <strong>Load Out Request</strong>, switch to the 3rd Party view, and click <strong>Add</strong>.",
+              "Go to <strong>Load Out Request → LOR Internal Jobs → Return Requests</strong> and click <strong>+ Add</strong>.",
+              "Fill in the item, Requested By, Received Date, Return Date, Pickup Time, Supervisor, and Job ID/Name.",
+              "Get it <strong>Approved</strong>.",
+              "Perform <strong>Shipment</strong>, <strong>Load</strong>, <strong>In Transit</strong>, <strong>Delivered</strong>, and <strong>Received</strong> the same way as an outbound request (no Check Out step, since the equipment is already checked out).",
+              "The Return Request reaches <strong>CLOSED</strong> once every item is Received back into inventory."
+            ],
+            "note": "A Return Request is a separate record (ID prefix RR-) from the Load Out Request it's returning — it isn't extra stages tacked onto the original LOR."
+          },
+          {
+            "title": "Raising a 3rd-party lease (Rentals) Load Out Request",
+            "steps": [
+              "Go to <strong>Load Out Request → Rentals</strong> and click <strong>+ Add</strong>.",
               "Fill in the Request form (no Job Name/Location needed) and get it <strong>Approved</strong>.",
               "<strong>Check Out</strong> the equipment.",
               "Complete the <strong>Lease Agreement</strong> and click <strong>Email Agreement for Approval</strong>.",
               "Once the 3rd party approves — optionally e-signing via Adobe Sign — proceed to <strong>Ship</strong>.",
-              "On return, perform <strong>Check In</strong>, then <strong>Shop In</strong> to close the LOR."
+              "On return, perform <strong>Check In</strong>, then <strong>Shop In</strong> to close the record."
             ]
           },
           {
@@ -8301,12 +8328,13 @@ const MODULES = [
           {
             "title": "Requesting delivery/transport for equipment",
             "steps": [
-              "From the <strong>Ship</strong> page (or the <strong>Check-in</strong> page), look for the option to create a <strong>Delivery Request</strong>.",
-              "Submit it — this automatically creates a Requisition (REQ) and starts the RFQ process for sourcing transport."
+              "On the <strong>Shipment</strong> stage of a Load Out Request or Return Request, choose <strong>Internal Delivery Request</strong> instead of Self Pick Up.",
+              "Submit it — this automatically creates a Requisition (REQ) and starts the RFQ process for sourcing transport.",
+              "Use the <strong>View Delivery Request</strong> link on the Shipment stage to open the resulting requisition."
             ]
           },
           {
-            "title": "Responding to a blocked check-in",
+            "title": "Responding to a blocked check-in (Rentals)",
             "steps": [
               "If a maintenance form tied to the Check In stage finds an issue, you'll see a \"Hold the Equipment/Accessory or Not\" prompt.",
               "Answer <strong>No</strong> to proceed with the check-in anyway — status becomes CHECK IN ISSUE and it's logged to Asset Issues.",
@@ -8338,7 +8366,8 @@ const MODULES = [
           {
             "title": "Configuring an LOR approval workflow",
             "steps": [
-              "Go to <strong>LOR - Workflows</strong>.",
+              "Go to <strong>Load Out Request → Workflows</strong>.",
+              "Pick the sub-tab for the flow you're configuring: <strong>Load Out Request</strong>, <strong>Return Request</strong>, or <strong>Rentals</strong> — each has its own separate approval chain.",
               "Click <strong>Create Level</strong>.",
               "In the pop-up, choose the level type — \"All must approve\" or \"Anyone can approve\".",
               "Pick the approvers for that level."
@@ -8348,8 +8377,8 @@ const MODULES = [
           {
             "title": "Visualizing an LOR approval workflow",
             "steps": [
-              "Go to <strong>LOR - Workflows</strong>.",
-              "Click the tree/graph view icon in the top right to see a visual diagram of the workflow structure."
+              "Go to <strong>Load Out Request → Workflows</strong>, pick the relevant sub-tab.",
+              "Click the tree/graph view icon (top right) to see a visual diagram of the workflow structure."
             ]
           }
         ]
