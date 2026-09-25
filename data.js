@@ -378,6 +378,14 @@ const QA_OPPORTUNITY = [
     tags: ["aging report vs pipeline report","report comparison"]
   },
   {
+    action: "view",
+    object: "pipeline report contents",
+    scope: "module", section: "Reports",
+    question: "What does the Pipeline Report cover?",
+    answer: "Go to **Opportunities Management → Reports → Pipeline Report**. It's the single most complete report in the module, covering nearly every field on the Opportunity record: identifiers, financials, dates, contacts, and parent/child hierarchy. Use it when you need the fullest possible export of opportunity data rather than a narrower cut like the Forecast or Aging reports.",
+    tags: ["pipeline report","full opportunity export","complete report"]
+  },
+  {
     action: "export",
     object: "huddle report",
     scope: "module", section: "Reports",
@@ -7504,7 +7512,7 @@ const MODULES = [
           },
           {
             "term": "Executive Summary",
-            "definition": "The leadership-facing Analytics dashboard, built around five headline KPI cards — Total Opportunity Value, Weighted Forecasted Value, Weighted Forecast This Quarter, Overall Win Rate (%), and Average Deal Size — plus a Scenario Forecast Comparison chart, an Opportunity by Stage Value breakdown, a Top Customers Performance table, and a Team Performance Leadership table."
+            "definition": "The leadership-facing Analytics dashboard, built around five headline KPI cards — Total Opportunity Value, Weighted Forecasted Value, Weighted Forecast This Quarter, Overall Win Rate (%), and Average Deal Size — plus a Scenario Forecast Comparison chart, an Opportunity by Stage Value breakdown, a Top Customers Performance table (Opportunity Value, Win Rate %, Average Cycle Days per customer), a Team Performance Leadership table (per BD rep: Total Opportunities Created, Opportunity Value, Win Rate %, Average Deal Size, TIC), an Opportunity by Project Type chart, an Opportunity by Business Development chart, and its own copy of the Permit & Insurance Expiry Tracker."
           },
           {
             "term": "Pipeline by BU",
@@ -7512,7 +7520,7 @@ const MODULES = [
           },
           {
             "term": "Pipeline Intelligence",
-            "definition": "An Analytics sub-tab built around AI-driven views: an AI heatmap, a Scenario Forecast Comparison, Opportunity Dynamics by Month, and BD Opportunity Load."
+            "definition": "An Analytics sub-tab built around AI-driven views: the Opportunity Distribution Heatmap, a Scenario Forecast Comparison (Month/Quarter toggle), Opportunity Dynamics by Month, and BD Opportunity Load."
           },
           {
             "term": "Permit & Insurance Expiry Tracker",
