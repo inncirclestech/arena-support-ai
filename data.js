@@ -1231,7 +1231,7 @@ const QA_EQUIPMENT = [
   {
     action: "create",
     object: "maintenance form template",
-    scope: "module", section: "Global Data & Setup",
+    scope: "module", section: "Configure Asset Management Forms & Global Setup",
     question: "How do I build or edit maintenance/inspection form templates, and how do I create a new one?",
     answer: "1. In **Global Data → Maintenance Builder** (also called Equipment Maintenance Forms), click **Create Form**.\n2. Click **Add Section** to structure the form (use the trash icon to delete a section).\n3. Click **Add Field** and choose a field type: Attachment, Check box, Date, Label, Multi select, Paragraph, Roster, Scribble, Single select, Table, Text box, Time, Signature.\n4. Use **Setup Trigger Points** to tick which fields should let end-users raise an issue if that checkpoint fails.\n5. Click **Preview** to see the form as end-users will see it, including company branding.\n6. Click **Save Changes**.",
     tags: ["maintenance builder","create form template","maintenance form builder"]
@@ -1239,7 +1239,7 @@ const QA_EQUIPMENT = [
   {
     action: "define",
     object: "form field types",
-    scope: "module", section: "Global Data & Setup",
+    scope: "module", section: "Configure Asset Management Forms & Global Setup",
     question: "What field types are available in the maintenance form builder?",
     answer: "**Attachment, Check box, Date, Label, Multi select, Paragraph, Roster, Scribble** (signature/print name), **Single select, Table** (configurable rows/columns), **Text box** (default), **Time, Signature**.",
     tags: ["form field types","maintenance builder field types"]
@@ -1247,7 +1247,7 @@ const QA_EQUIPMENT = [
   {
     action: "define",
     object: "adobe sign integration",
-    scope: "module", section: "Global Data & Setup",
+    scope: "module", section: "Configure Asset Management Forms & Global Setup",
     question: "What is the Adobe Acrobat Sign integration used for?",
     answer: "It lets a 3rd-party signer affix a legal e-signature to a 3rd-Party LOR Lease Agreement as part of approving it, instead of just clicking Approve/Reject.",
     tags: ["adobe sign purpose","e-signature purpose"]
@@ -1255,7 +1255,7 @@ const QA_EQUIPMENT = [
   {
     action: "define",
     object: "adobe sign lor usage",
-    scope: "module", section: "Global Data & Setup",
+    scope: "module", section: "Configure Asset Management Forms & Global Setup",
     question: "Once Adobe Sign is set up, how does it get used in the LOR flow?",
     answer: "In the 3rd Party LOR flow, once equipment is checked out, the Lease Agreement emailed to the 3rd party can be digitally signed via the Adobe Sign integration as part of their approval.",
     tags: ["adobe sign lor usage","lease agreement e-sign"]
@@ -1263,7 +1263,7 @@ const QA_EQUIPMENT = [
   {
     action: "define",
     object: "equipment management vs asset management",
-    scope: "module", section: "Global Data & Setup",
+    scope: "module", section: "Configure Asset Management Forms & Global Setup",
     question: "Is \"Equipment Management\" a different module from \"Asset Management\"?",
     answer: "No — they're the same module. \"Asset Management\" is the name on the Home hub tile, \"Equipment Master\" appears in the module's own breadcrumb, and \"Equipment Management\" is the name used in the underlying documentation. The UI itself mostly uses \"Asset\" in labels (Asset Master, Asset Setup, Asset Issues, + Asset).",
     tags: ["equipment management vs asset management","module naming"]
@@ -5417,7 +5417,7 @@ const QA_PROCUREMENT = [
   {
     action: "configure",
     object: "requisition form",
-    scope: "global", section: "Settings",
+    scope: "global", section: "Configure Procurement Forms & Settings",
     question: "How do I customize the fields on the requisition form?",
     answer: "Go to Procurement Settings > REQ Form and use Inncircles Arena's form builder to create multiple sections with different field types (paragraph, single select, multi-select, tables, etc.).",
     tags: ["req form builder","configure requisition fields"]
@@ -5473,7 +5473,7 @@ const QA_PROCUREMENT = [
   {
     action: "configure",
     object: "purchase order form",
-    scope: "global", section: "Settings",
+    scope: "global", section: "Configure Procurement Forms & Settings",
     question: "How do I configure the Purchase Order form fields?",
     answer: "Go to Procurement Settings > PO Configuration and use the form builder to configure the Purchase Order form separately for Material, Equipment, Equipment Part, and Delivery Service tabs.",
     tags: ["po form configuration","purchase order fields"]
@@ -5489,7 +5489,7 @@ const QA_PROCUREMENT = [
   {
     action: "configure",
     object: "delivery receipt form",
-    scope: "global", section: "Settings",
+    scope: "global", section: "Configure Procurement Forms & Settings",
     question: "How do I configure the Delivery Receipt form?",
     answer: "Go to Procurement Settings > Delivery Request and use the form builder to configure the Delivery Receipt form for Material, Equipment, Equipment Part, and Delivery Service.",
     tags: ["delivery receipt settings","configure delivery form"]
@@ -5505,7 +5505,7 @@ const QA_PROCUREMENT = [
   {
     action: "configure",
     object: "invoice form",
-    scope: "global", section: "Settings",
+    scope: "global", section: "Configure Procurement Forms & Settings",
     question: "How do I configure the Invoice form fields?",
     answer: "Go to Procurement Settings > Invoice and use the form builder to configure the invoice form for Equipment, Material, Equipment Part, and Delivery Service, with multiple sections and field types.",
     tags: ["invoice settings","configure invoice form"]
@@ -5521,7 +5521,7 @@ const QA_PROCUREMENT = [
   {
     action: "configure",
     object: "pickup request form",
-    scope: "global", section: "Settings",
+    scope: "global", section: "Configure Procurement Forms & Settings",
     question: "How do I configure the Pickup Request form?",
     answer: "Go to Procurement Settings > Pickup Request and configure the form fields using the form builder, then click \"Save changes\".",
     tags: ["pickup request settings","configure pickup form"]
@@ -5537,7 +5537,7 @@ const QA_PROCUREMENT = [
   {
     action: "configure",
     object: "approval workflow",
-    scope: "global", section: "Settings",
+    scope: "global", section: "Configure Procurement Forms & Settings",
     question: "How do I set up approval workflows for procurement documents?",
     answer: "Go to Procurement Settings > Approval Workflow and click \"Create Level\" to build a workflow. You can create multiple levels and choose \"All must approve\" or \"Any one can approve\" for each level. This applies to Requisition forms, Purchase Orders, Invoices, and Pickup Requests.",
     tags: ["procurement approval workflow","create level","po approval"]
@@ -5545,7 +5545,7 @@ const QA_PROCUREMENT = [
   {
     action: "configure",
     object: "id settings",
-    scope: "global", section: "Settings",
+    scope: "global", section: "Configure Procurement Forms & Settings",
     question: "How do I configure ID formats for procurement documents?",
     answer: "Go to Procurement > ID Settings, select System Default for auto-generated IDs, or Custom to choose fields and their order, then click \"Save Changes\".",
     tags: ["procurement id format","custom id","auto id"]
@@ -5561,7 +5561,7 @@ const QA_PROCUREMENT = [
   {
     action: "configure",
     object: "issue priority",
-    scope: "global", section: "Settings",
+    scope: "global", section: "Configure Procurement Forms & Settings",
     question: "How do I set priority levels for procurement issues?",
     answer: "Go to Procurement Settings > Issues Priority and click \"Add Priority\" to create priority levels along with their Due Hours.",
     tags: ["issue priority","procurement issue sla","due hours"]
@@ -7695,7 +7695,7 @@ const MODULES = [
     "qaItems": QA_EQUIPMENT,
     "narrative": [
       {
-        "heading": "Admin Role",
+        "heading": "Who Sets Up Asset Management",
         "intro": "<p>Heavy equipment and site machinery are among the most expensive and most contested resources on a construction company's books — a crane, a compressor, or a fleet of generators sitting idle on one job while another site is waiting on it is a direct hit to the bottom line. Equipment Management exists to give a company one shared, trustworthy record of what equipment exists, where it is, and what condition it's in, so that decision is never made on guesswork. Before field crews and warehouse staff can rely on that record, however, an <strong>Equipment Management Module Admin</strong> (an admin with rights scoped specifically to this module, not necessarily the company's overall Super Admin) has to configure the lifecycle forms equipment will move through.</p><p>Equipment Management's admin configuration lives behind Home → <strong>Asset Management</strong> (the entry point the permission system internally calls \"Equipment Management,\" with the breadcrumb reading \"Equipment Master\") → the gear-icon <strong>Settings</strong> in the top right, next to the Asset Master / Asset Setup / Load Out Request / Field Inspections / Asset Issues / Non Conformance Report tabs. The core one-time task here is <strong>Assets Management Forms</strong> — a set of configurable form templates, one per stage of an asset's lifecycle: Request, Check Out, Shipment, Ship, Load, In Transit, Delivered, Received, Lease Agreement, Maintenance Forms, and Equipment Utilization Forms & Logs. Each is opened via its own card and defines what fields and steps appear at that stage before end users start moving equipment through the workflow.</p><p>Getting these lifecycle forms right matters because equipment moves through many hand-offs — requested, checked out, shipped, in transit, delivered or received, on lease, maintained, and logged for utilization — and each hand-off is governed by whatever fields the admin has defined on its corresponding form. Skipping this setup, or leaving a stage's form incomplete, is the most likely cause of an asset getting \"stuck\" at a stage that end users can't properly complete.</p><p>As with other modules, <strong>Users and Permissions</strong> inside this same Settings area is where the Equipment Management Admin creates or edits module-scoped permission groups (the environment this was verified in already had one named \"Equipment Management\") and assigns users to them, using the same shared group-registry mechanism used across Arena.</p>",
         "definitions": [
           {
@@ -7740,7 +7740,7 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Setup & Configuration",
+        "heading": "Configure Asset Management Forms & Global Setup",
         "intro": "<p>Field crews filling out a maintenance or inspection form in the middle of a job site never see — or need to see — where that form's structure actually came from. That structure is built once by an <strong>Equipment Management Admin or a Maintenance/Fleet Module Manager</strong>, using the Maintenance Builder described below, and every field inspection or 3rd-party lease closeout downstream depends on that upfront work being done correctly.</p><p>Global Data & Setup covers the shared configuration that Equipment Management depends on but that lives conceptually one level above the module's own tabs — most importantly, the Maintenance Builder used to design every maintenance and inspection form referenced throughout Asset Setup, Field Inspections, and the Load Out Request flow, and the Adobe Acrobat Sign integration used to legally execute 3rd Party Lease Agreements.</p>\n    <p>The Maintenance Builder (also referred to as Equipment Maintenance Forms) is the source of every form that gets attached to a maintenance package. Rather than being fixed or predefined, forms are built section by section with a flexible library of field types, and any field can be marked as a trigger point so that a failed check during actual use raises an issue automatically. This is worth understanding even if you never touch the builder yourself, because it explains where the structure of every maintenance form you fill out in the field actually comes from.</p>\n    <p>The Adobe Acrobat Sign integration, meanwhile, exists specifically to give the 3rd Party LOR flow a legally binding way to close out a Lease Agreement — letting an external signer affix a real e-signature rather than simply clicking an in-app Approve button. It's a narrow but important piece of infrastructure that turns an internal approval click into something with legal weight when equipment is actually leaving your control to an outside party.</p>\n    <p>Finally, it's worth clarifying a naming quirk you'll encounter across the product: \"Equipment Management,\" \"Asset Management,\" and \"Equipment Master\" all refer to the exact same module — they're simply different labels used in different places (the Home hub tile, the module breadcrumb, and general documentation, respectively).</p>",
         "definitions": [
           {
@@ -8345,631 +8345,7 @@ const MODULES = [
       "Six tabs: Asset Master, Asset Setup, Load Out Request, Field Inspections, Asset Issues, Non Conformance Report — plus a Settings gear at far right.",
       "Not nested inside individual projects — it's a company-wide, Home-level module."
     ],
-    "sections": [
-      {
-        "id": "asset-master",
-        "heading": "Asset Master (Equipment Master)",
-        "html": "<p>Master registry of all owned/leased equipment and accessories: availability, current location, check-in/out history, planned vs. actual return, maintenance records.</p>\n        <p><strong>Sub-tabs:</strong> Company Owned Asset, Company Owned Accessory, 3rd Party Asset.</p>\n        <p><strong>Toolbar:</strong> <span class=\"kbd\">+ Asset</span> (becomes <span class=\"kbd\">+ Accessory</span> on that sub-tab) · Search · pagination · <span class=\"kbd\">Export</span> · <span class=\"kbd\">Filters</span> (Status, Location, Loadout Request, Checkout/Check/Received By) · <span class=\"kbd\">Manage Columns</span> · Grid/Table toggle · <strong>Add Custom Column</strong> (Text, Single Select, Multi-select, Date) · <strong>Inventory Locations</strong> panel (+ Add Location).</p>\n        <p><strong>Status chips</strong> above the grid (clickable quick filters): Ready to Rent, On Rent – Project, Pending Shipment, On Rent – Customer, Checked In.</p>\n        <p><strong>Table columns:</strong> Attachment, Asset, Asset Description, Asset ID, Status, Replacement Value, Current Location, Manufacturer, Model, Model Year, VIN No., Load Out Requests, Checkout Date/By, Checkin Date/By, Planned/Actual Return Date, Overdue Days, Received By, Maintenance Records, Actions.</p>\n        <p><strong>Row actions:</strong> <em>history</em> (See History / Equipment Log), <em>qr_code</em> (print QR), <em>stacked_bar_chart</em> (Maintenance Records, if scheduled), <em>edit</em>, <em>delete</em> (only if not currently checked out).</p>",
-        "qa": [
-          {
-            "q": "How do I add a new piece of equipment?",
-            "tags": [
-              "add asset",
-              "create equipment",
-              "new equipment"
-            ],
-            "a": "<ol>\n              <li>Go to <strong>Home → Asset Management</strong>, ensure <strong>Asset Master → Company Owned Asset</strong> is selected.</li>\n              <li>Click <span class=\"kbd\">+ Asset</span>.</li>\n              <li>In the <strong>Add Asset</strong> modal, fill <strong>Asset Name*</strong>, <strong>Asset ID*</strong>, <strong>Asset Description*</strong>, <strong>Replacement Value*</strong>, <strong>Current Location*</strong> (all required).</li>\n              <li>Optionally fill Manufacturer, Model, Model Year, and attach an image/files.</li>\n              <li>Click <span class=\"kbd\">Submit</span> — the asset appears with status <strong>Ready to Rent</strong>.</li>\n            </ol>"
-          },
-          {
-            "q": "How do I check an equipment item's full history?",
-            "tags": [
-              "equipment history",
-              "audit log",
-              "see history"
-            ],
-            "a": "<p>Click the <strong>history</strong> icon on the item's row in Asset Master. This opens the <strong>Equipment Log</strong>: every request, check-in, check-out, shipment, and shop-in event, with who performed it and when.</p>"
-          },
-          {
-            "q": "How do I delete or retire an equipment item?",
-            "tags": [
-              "delete equipment",
-              "retire asset"
-            ],
-            "a": "<p>Click the red <strong>delete</strong> icon on the item's row. This is only enabled if the equipment is <strong>not currently checked out</strong> or in use elsewhere — check it in via the Load Out Request flow first if needed.</p>"
-          },
-          {
-            "q": "What's the difference between Company Owned Asset and 3rd Party Asset?",
-            "tags": [
-              "company owned asset",
-              "3rd party asset"
-            ],
-            "a": "<p>Company Owned Asset tracks equipment the company itself owns. 3rd Party Asset tracks equipment/accessories that belong to (or are leased from) an outside party, and is used together with the 3rd Party LOR / Lease Agreement workflow.</p>"
-          },
-          {
-            "q": "What's the difference between an Asset and an Accessory in Asset Master?",
-            "tags": [
-              "asset vs accessory"
-            ],
-            "a": "<p>Assets are the equipment items themselves (tracked on <strong>Company Owned Asset</strong>); Accessories are attachments/consumables linked to equipment, tracked on <strong>Company Owned Accessory</strong>. The Accessory sub-tab shows a <strong>Related Assets</strong> column linking accessories back to the equipment they belong to.</p>"
-          },
-          {
-            "q": "How do I add a new accessory?",
-            "tags": [
-              "add accessory",
-              "company owned accessory"
-            ],
-            "a": "<p>On the <strong>Company Owned Accessory</strong> sub-tab, click <span class=\"kbd\">+ Accessory</span> (the same button becomes + Accessory here instead of + Asset) and fill in the equivalent accessory details, then Submit.</p>"
-          },
-          {
-            "q": "How do I edit an equipment record?",
-            "tags": [
-              "edit equipment",
-              "update asset"
-            ],
-            "a": "<ol>\n        <li>Locate the row in Asset Master (use Search or Filters if needed).</li>\n        <li>Click the <strong>edit</strong> (pencil) icon on that row.</li>\n        <li>Update the fields in the pre-filled form and click <strong>Submit</strong>.</li>\n      </ol>"
-          },
-          {
-            "q": "Why can't I delete a piece of equipment?",
-            "tags": [
-              "cannot delete equipment",
-              "delete disabled"
-            ],
-            "a": "<p>The delete icon is disabled while the equipment is currently checked out or in use elsewhere. You must wait until it's checked in / shopped in before it can be deleted.</p>"
-          },
-          {
-            "q": "How do I see maintenance records for a specific asset?",
-            "tags": [
-              "maintenance records icon",
-              "asset maintenance history"
-            ],
-            "a": "<p>Click the <strong>Maintenance Records</strong> icon on that equipment's row — it's only shown for assets that have scheduled maintenance. You can also check the <strong>Maintenance Records</strong> column in the grid.</p>"
-          },
-          {
-            "q": "How do I change an equipment's current location?",
-            "tags": [
-              "change equipment location",
-              "current location"
-            ],
-            "a": "<p>Click the <strong>edit</strong> (pencil) icon on the equipment's row to open the Add/Edit Asset form, then update the <strong>Current Location</strong> field (a dropdown of Inventory Locations) and Submit.</p>"
-          },
-          {
-            "q": "How do I add a new inventory location?",
-            "tags": [
-              "inventory location",
-              "add location"
-            ],
-            "a": "<ol>\n        <li>Click <strong>Inventory Locations</strong> in Asset Master.</li>\n        <li>Click <strong>Add Location</strong>.</li>\n        <li>Fill in the location name and physical address/location.</li>\n      </ol>"
-          },
-          {
-            "q": "What do the different equipment status chips mean (Ready to Rent, On Rent - Project, Pending Shipment, etc.)?",
-            "tags": [
-              "status chips",
-              "ready to rent",
-              "on rent"
-            ],
-            "a": "<p>These are live counts shown as colored chips above the Asset Master grid, each representing how many items are currently in that state: <strong>Ready to Rent</strong> (available, the default status for new equipment), <strong>On Rent – Project</strong> (checked out to an internal job), <strong>Pending Shipment</strong> (checked out, awaiting shipment), <strong>On Rent – Customer</strong> (leased to a 3rd party), and <strong>Checked In</strong> (returned). Clicking a chip filters the grid to that status.</p>"
-          },
-          {
-            "q": "How do I export or filter the equipment list?",
-            "tags": [
-              "export equipment list",
-              "filter equipment"
-            ],
-            "a": "<p>Click <strong>Export</strong> to extract the inventory list to Excel. Click <strong>Filters</strong> to open the filter panel — filter by Status, Location, Loadout Request, Checkout By, Check By, or Received By; click Submit to apply, click the Save icon to persist the filter for reuse, or Clear to remove an active filter.</p>"
-          },
-          {
-            "q": "How do I switch between grid and table view, or add a custom column, in Asset Master?",
-            "tags": [
-              "custom column",
-              "grid view table view"
-            ],
-            "a": "<p>Use the view-mode toggle (grid/card icon and table icon) near the top of the screen to switch between Grid View and Table View. To add a custom column, click <strong>Add Custom Column</strong> and choose a type: Text, Single Select, Multi-select, or Date.</p>"
-          },
-          {
-            "q": "What's the difference between Planned Return Date, Actual Return Date, and Overdue Days?",
-            "tags": [
-              "planned return date",
-              "actual return date",
-              "overdue days"
-            ],
-            "a": "<p><strong>Planned Return Date</strong> is the date the equipment was expected back (set at request/checkout time); <strong>Actual Return Date</strong> is the date it was actually checked in. <strong>Overdue Days</strong> shows how many days an item is overdue against its Planned Return Date when no Actual Return Date has been logged yet.</p>"
-          }
-        ]
-      },
-      {
-        "id": "asset-setup",
-        "heading": "Asset Setup (Equipment Setup)",
-        "html": "<p>Defines recurring <strong>maintenance packages</strong> grouping equipment together with scheduled forms — a 4-step wizard via <strong>Create Maintenance Package</strong>:</p>\n        <ol>\n          <li><strong>List Equipment</strong> — name the package, then Add Equipment to pick items.</li>\n          <li><strong>Identify Forms</strong> — Add Form to choose from centrally-configured maintenance forms.</li>\n          <li><strong>Prepare Schedule</strong> — Recurrence Type (Daily/Weekly/<strong>Check Out</strong>/<strong>Check In</strong>), Start/End Date, Time. Check Out/In types trigger the form automatically during that LOR step instead of a calendar cadence.</li>\n          <li><strong>Assign Crew</strong> — select users/crews; the schedule appears on their personal calendar.</li>\n        </ol>\n        <p>A package/equipment/form can only be deleted if none of its scheduled maintenances have started.</p>",
-        "qa": [
-          {
-            "q": "How do I set up a recurring maintenance schedule?",
-            "tags": [
-              "maintenance package",
-              "schedule maintenance",
-              "recurring"
-            ],
-            "a": "<ol>\n              <li>Go to <strong>Asset Setup</strong>, click <span class=\"kbd\">Create Maintenance Package</span>.</li>\n              <li>Enter Package Name and Description; Submit.</li>\n              <li><strong>List Equipment</strong>: Add Equipment to select items.</li>\n              <li><strong>Identify Forms</strong>: Add Form, tick required forms, Submit.</li>\n              <li><strong>Prepare Schedule</strong>: choose Recurrence Type, Start/End dates, Time.</li>\n              <li><strong>Assign Crew</strong>: select responsible individuals/crew, Save.</li>\n            </ol>"
-          },
-          {
-            "q": "What are the four steps of the Create Maintenance Package wizard?",
-            "tags": [
-              "maintenance package steps",
-              "wizard steps"
-            ],
-            "a": "<p><strong>List Equipment</strong> (pick equipment/accessories), <strong>Identify Forms</strong> (attach maintenance forms), <strong>Prepare Schedule</strong> (set recurrence, dates, time), and <strong>Assign Crew</strong> (assign users/crews responsible).</p>"
-          },
-          {
-            "q": "What's the difference between a Daily/Weekly recurrence and a Check Out/Check In recurrence?",
-            "tags": [
-              "recurrence type",
-              "check out recurrence",
-              "check in recurrence"
-            ],
-            "a": "<p>Daily and Weekly recurrence trigger the maintenance form on a calendar cadence (a specific date/time). Check Out and Check In recurrence instead trigger the form automatically as part of the equipment's checkout or check-in step in the Load Out Request flow, rather than on a fixed schedule.</p>"
-          },
-          {
-            "q": "How do I assign a maintenance schedule to specific people?",
-            "tags": [
-              "assign crew",
-              "maintenance schedule assignment"
-            ],
-            "a": "<p>In the <strong>Assign Crew</strong> step of the Create Maintenance Package wizard, select individual users or whole Crews responsible for that maintenance — the schedule then appears on each assignee's personal calendar and becomes fillable at the scheduled time.</p>"
-          },
-          {
-            "q": "What is \"Equipment Setup - Maintenance Logs\" and how is it different from Asset Setup?",
-            "tags": [
-              "maintenance logs",
-              "utilization setup"
-            ],
-            "a": "<p>It's a closely related admin screen that follows the identical 4-step pattern (List Items / Identify Forms / Prepare Schedule / Assign Crew) but additionally has a parallel <strong>Utilization</strong> tab, letting you schedule utilization logs the same way maintenance logs are scheduled.</p>"
-          }
-        ]
-      },
-      {
-        "id": "field-inspections",
-        "heading": "Field Inspections",
-        "html": "<p>Where field crews perform/record maintenance and manage equipment photos. Three tabs: <strong>Maintenance</strong>, <strong>Utilization</strong>, <strong>Equipment Photos</strong>.</p>\n        <p><strong>Scheduled:</strong> use the calendar view, pick a date, complete forms due that day. <strong>Ad-hoc:</strong> switch to the list tab, pick a form category, click <strong>Create Form</strong>.</p>\n        <p><strong>Equipment Maintenance Calendar</strong> color legend: <span style=\"color:#8a8f98\">Grey</span> = not due, <span style=\"color:#3f7fd1\">Blue</span> = ready to fill, <span style=\"color:#c98a1e\">Amber</span> = in progress/issue raised, <span style=\"color:#3c7a5f\">Green</span> = submitted.</p>\n        <p><strong>Equipment Photos:</strong> select an item, click Add → Upload File (multi-select), annotate with built-in markup tools, Save. A kebab menu offers Delete.</p>",
-        "qa": [
-          {
-            "q": "How do I log a scheduled maintenance activity?",
-            "tags": [
-              "scheduled maintenance",
-              "field inspection"
-            ],
-            "a": "<ol>\n              <li>Go to <strong>Field Inspections → Maintenance</strong>, switch to <strong>Calendar</strong>.</li>\n              <li>Pick the due date — forms show color-coded (Blue = ready).</li>\n              <li>Open the form, fill required fields, Submit — turns Green once complete.</li>\n              <li>If a check fails, raise an <strong>issue</strong> directly from that field — it's logged to <strong>Asset Issues</strong> automatically.</li>\n            </ol>"
-          },
-          {
-            "q": "How do I upload equipment photos?",
-            "tags": [
-              "equipment photos",
-              "upload image"
-            ],
-            "a": "<ol>\n              <li>Go to <strong>Field Inspections → Equipment Photos</strong>.</li>\n              <li>Select the equipment/accessory from the left list.</li>\n              <li>Click <span class=\"kbd\">Add</span>, then Upload File to select one or more images.</li>\n              <li>Optionally annotate using the markup tools, then <span class=\"kbd\">Save</span>.</li>\n            </ol>"
-          },
-          {
-            "q": "What's the difference between the Maintenance and Utilization tabs in Field Inspections?",
-            "tags": [
-              "maintenance vs utilization tab"
-            ],
-            "a": "<p>Both work the same way (calendar-driven scheduled entries plus ad-hoc list entries), but <strong>Maintenance</strong> logs maintenance/inspection activity while <strong>Utilization</strong> logs ad-hoc utilization entries — they mirror each other in structure.</p>"
-          },
-          {
-            "q": "How do I log an ad-hoc (unplanned) inspection?",
-            "tags": [
-              "ad-hoc inspection",
-              "create form"
-            ],
-            "a": "<ol>\n        <li>Go to <strong>Field Inspections → Maintenance</strong> (or Utilization) and switch to the list/ad-hoc tab.</li>\n        <li>Select the relevant form category on the left.</li>\n        <li>Click <strong>Create Form</strong>, complete the fields, and Submit — it appears as a new card with Download, Share, Print, and Chat available.</li>\n      </ol>"
-          },
-          {
-            "q": "How do I edit a maintenance form after it's been submitted?",
-            "tags": [
-              "edit submitted form",
-              "reopen maintenance form"
-            ],
-            "a": "<p>Click the card for that submitted form to re-open it for review/editing — each card also offers Download, Share, Print, and a Chat panel for collaborative notes.</p>"
-          },
-          {
-            "q": "How do I view, annotate, or delete an equipment photo?",
-            "tags": [
-              "view photo",
-              "annotate photo",
-              "delete photo"
-            ],
-            "a": "<p>Click \"Click to View\" on a photo to open a viewer with next/previous arrows. Use the built-in annotation tools below the image to mark it up, then click <strong>Save</strong> to persist the markup. Use the kebab (⋮) menu in the viewer to <strong>Delete</strong> the photo.</p>"
-          },
-          {
-            "q": "What is a trigger point on a maintenance form?",
-            "tags": [
-              "trigger point",
-              "setup trigger points"
-            ],
-            "a": "<p>A trigger point is a checkbox configured per field in the form builder (<strong>Setup Trigger Points</strong>) that lets end-users raise an issue or note directly from that field if the checkpoint fails during an inspection. A triggered issue is logged automatically under <strong>Asset Issues</strong>.</p>"
-          },
-          {
-            "q": "What's the difference between a scheduled maintenance form and an ad-hoc inspection?",
-            "tags": [
-              "scheduled vs ad-hoc inspection"
-            ],
-            "a": "<p>A scheduled form is generated automatically by a maintenance package's Prepare Schedule settings (Daily/Weekly/Check Out/Check In) and shows up on the Equipment Maintenance Calendar at the right time. An ad-hoc inspection is created manually at any time via Create Form on the list tab, without being tied to a pre-set schedule.</p>"
-          }
-        ]
-      },
-      {
-        "id": "asset-issues",
-        "heading": "Asset Issues (Equipment Issues)",
-        "html": "<p>Central log of issues raised during maintenance forms, inspections, or LOR check-out/in. Card view (table toggle available).</p>\n        <p><strong>Actions:</strong> <span class=\"kbd\">Rectify</span> (marks Rectified, re-enables the form), Chat (resolution notes), Assign To + Due Date, Filters (+Save), Export, Search, kebab menu (Delete), <span class=\"kbd\">Create Work Order</span> (spin up a Work Order from the issue).</p>",
-        "qa": [
-          {
-            "q": "How do I resolve an equipment issue?",
-            "tags": [
-              "resolve issue",
-              "rectify",
-              "equipment issue"
-            ],
-            "a": "<ol>\n              <li>Go to <strong>Asset Issues</strong>, locate the issue via Search/Filters.</li>\n              <li>Review details, add notes in <strong>Chat</strong> if collaborating.</li>\n              <li>Once fixed, click <span class=\"kbd\">Rectify</span> — status becomes Rectified and the linked form re-opens for completion.</li>\n              <li>Optionally click <span class=\"kbd\">Create Work Order</span> if formal remediation tracking is needed.</li>\n            </ol>"
-          },
-          {
-            "q": "What's the difference between an Asset Issue and a Non-Conformance Report?",
-            "tags": [
-              "asset issue vs ncr"
-            ],
-            "a": "<p>Asset Issues are typically raised automatically from a failed trigger-point check during a maintenance form, inspection, or an LOR check-out/check-in stage. NCRs are created manually (via + Add on the Non Conformance Report tab) to formally track a non-conformance event. Both use the same card/table view, Rectify workflow, Chat, Assign To/Due Date, and Create Work Order pattern, but they are separate, independently tracked records.</p>"
-          },
-          {
-            "q": "How do I create a Work Order from an equipment issue?",
-            "tags": [
-              "create work order from issue"
-            ],
-            "a": "<p>Click <span class=\"kbd\">Create Work Order</span> on the issue (or NCR) — this spins up a Work Order directly from it to track remediation labor/cost.</p>"
-          },
-          {
-            "q": "How do I delete, export, or change the view for issues and NCRs?",
-            "tags": [
-              "delete issue",
-              "export issues",
-              "table view toggle"
-            ],
-            "a": "<p>Use the kebab (⋮) menu on a card for Delete; click Export to download all records to Excel; and use the table view toggle (top-right) to switch away from the default card view.</p>"
-          },
-          {
-            "q": "What do the header counters mean on Asset Issues / NCR?",
-            "tags": [
-              "header counters",
-              "issue totals"
-            ],
-            "a": "<p>They show totals for the tab: total issues (or NCRs), how many have been raised, and how many have been rectified.</p>"
-          }
-        ]
-      },
-      {
-        "id": "ncr",
-        "heading": "Non Conformance Report (NCR)",
-        "html": "<p>Tracks Non-Conformance events flagged during maintenance — distinct from routine Issues. Card view (table toggle). <span class=\"kbd\">+ Add</span> to create; same Rectify/Chat/Assign To/Due Date/Filters/Export pattern as Asset Issues; also has <span class=\"kbd\">Create Work Order</span>.</p>",
-        "qa": [
-          {
-            "q": "How do I raise and close a Non-Conformance Report?",
-            "tags": [
-              "ncr",
-              "non conformance report"
-            ],
-            "a": "<ol>\n              <li>Go to <strong>Non Conformance Report</strong>, click <span class=\"kbd\">+ Add</span>.</li>\n              <li>Fill in NCR details and submit.</li>\n              <li>Assign an owner (<strong>Assign To</strong>) and <strong>Due Date</strong>.</li>\n              <li>Use Chat to document remediation steps.</li>\n              <li>Once corrected, click <span class=\"kbd\">Rectify</span> to close it out.</li>\n            </ol>"
-          },
-          {
-            "q": "What does \"Rectify\" do on an Issue vs. on an NCR?",
-            "tags": [
-              "rectify behavior",
-              "issue vs ncr rectify"
-            ],
-            "a": "<p>In both cases, <strong>Rectify</strong> marks the record as Rectified. On an Asset Issue, it additionally re-enables the associated maintenance form for completion/re-submission. On an NCR it simply closes the report out as resolved.</p>"
-          },
-          {
-            "q": "What's the difference between Asset Issues' Rectify and an NCR's Rectify?",
-            "tags": [
-              "asset issue rectify vs ncr rectify"
-            ],
-            "a": "<p>Functionally similar — both set status to Rectified. On an Asset Issue, Rectify additionally re-enables the linked maintenance form so it can be completed/resubmitted; an NCR's Rectify simply closes the report, with no equivalent form-reopening behavior described.</p>"
-          }
-        ]
-      },
-      {
-        "id": "lor",
-        "heading": "Load Out Request (LOR)",
-        "html": "<p>The formal staged workflow moving equipment out of inventory to a job site (or on lease to a 3rd party) and back. Two parallel flows: <strong>LOR Internal Job</strong> and <strong>3rd Party LOR</strong>, each in Grid or Kanban view.</p>\n        <h4>LOR Internal Job lifecycle</h4>\n        <ol>\n          <li><strong>Request</strong> — Add → fill Equipment/Accessory, Quantity, UOM, Requested By, Required Date, Planned Return Date, Supervisor, Job ID/Name. Submit → status <strong>REQUESTED</strong>.</li>\n          <li><strong>Approval</strong> — Approve/Reject. Reject → Rejected (revise + resubmit). Approve → <strong>APPROVED</strong>.</li>\n          <li><strong>Check Out</strong> — verify vs. Equipment Master stock; fill Assign ID, Checkout Date, Signature. Partial fulfillment supported (<strong>PARTIAL CHECK OUT</strong> → <strong>CHECKED OUT</strong>). A tied maintenance form must be filled; a failed check offers <strong>Proceed With Issue</strong> or <strong>Change Equipment</strong>.</li>\n          <li><strong>Ship</strong> — shipment details + signature. Partial → <strong>PARTIAL SHIP IN</strong>; full → <strong>SHIPPED</strong>. A <strong>Delivery Request</strong> can be raised here (auto-creates a Requisition + RFQ).</li>\n          <li><strong>Check In</strong> — tick returning items, name + signature. Partial → <strong>PARTIAL CHECK IN</strong>; full → <strong>CHECKED IN</strong>. Issues prompt \"Hold the Equipment or Not\" — No proceeds as <strong>CHECK IN ISSUE</strong> (logged to Asset Issues); Yes blocks check-in.</li>\n          <li><strong>Shop In</strong> — confirm return to inventory location, signature, Submit → <strong>CLOSED</strong> (or <strong>PARTIAL CLOSED</strong>).</li>\n          <li><strong>Preview</strong> — full collected form set for the LOR.</li>\n        </ol>\n        <p><strong>Full status list:</strong> Requested, Approved, Rejected, Check Out, Partial Check Out, Check Out With Issue, Ship In, Partial Ship In, Check In, Partial Check-In, Check In With Issue, Shop In, Partial Closed, Closed.</p>\n        <h4>3rd Party LOR — differences</h4>\n        <p>Same flow, plus a <strong>Lease Agreement</strong> stage after Check Out (no Job Name/Location on the Request form): capture equipment details + replacement value, both parties sign, then <strong>Email Agreement for Approval</strong>. Status: <strong>Waiting for Approval</strong> → <strong>Approved (Mail ID)</strong>. The recipient gets a <strong>View Form</strong> link with Approve/Reject (optionally e-signed via Adobe Acrobat Sign). Then Ship/Check In/Shop In as normal.</p>\n        <p><strong>Common features:</strong> kebab menu (See History, Delete if nothing checked out yet), Assign To (View/Edit permission), Filters, Search, Download/Print, Share, Chat, Documents bundle, Mail (Gmail/Outlook per Global Settings), Roster field per stage.</p>\n        <p><strong>LOR - Workflows</strong> (approval config): Create Level → choose \"All must approve\" or \"Anyone can approve\" → pick approvers. Tree/graph view visualizes the structure.</p>",
-        "qa": [
-          {
-            "q": "How do I raise an internal Load Out Request?",
-            "tags": [
-              "load out request",
-              "lor",
-              "checkout equipment"
-            ],
-            "a": "<ol>\n              <li>Go to <strong>Load Out Request</strong> (Internal Job view), click <span class=\"kbd\">Add</span>.</li>\n              <li>Fill Equipment/Accessory, Quantity, UOM, Requested By, Required Date, Planned Return Date, Supervisor, Job ID/Name.</li>\n              <li>Submit → status <strong>REQUESTED</strong>. Wait for <strong>Approve</strong>.</li>\n              <li>Warehouse staff perform <strong>Check Out</strong> (Assign ID, Checkout Date, Signature) per item.</li>\n              <li>Perform <strong>Ship</strong> to send to the job site.</li>\n              <li>On return, perform <strong>Check In</strong> per item.</li>\n              <li>Perform <strong>Shop In</strong> to return to inventory — LOR reaches <strong>CLOSED</strong>.</li>\n            </ol>"
-          },
-          {
-            "q": "How do I raise a 3rd-party lease Load Out Request?",
-            "tags": [
-              "3rd party lor",
-              "lease agreement",
-              "lease equipment"
-            ],
-            "a": "<ol>\n              <li>Go to <strong>Load Out Request</strong>, 3rd Party view, click <span class=\"kbd\">Add</span>.</li>\n              <li>Fill the Request form (no Job Name/Location needed) and get it <strong>Approved</strong>.</li>\n              <li><strong>Check Out</strong> the equipment.</li>\n              <li>Complete the <strong>Lease Agreement</strong>, click <span class=\"kbd\">Email Agreement for Approval</span>.</li>\n              <li>Once the 3rd party approves (optionally e-signs via Adobe Sign), proceed to <strong>Ship</strong>.</li>\n              <li>On return, <strong>Check In</strong>, then <strong>Shop In</strong> to close the LOR.</li>\n            </ol>"
-          },
-          {
-            "q": "What does 'PARTIAL CHECK OUT' status mean?",
-            "tags": [
-              "lor status",
-              "partial check out"
-            ],
-            "a": "<p>It means only <em>some</em> of the requested items on that Load Out Request have been checked out so far — a single LOR can be fulfilled across multiple check-out submissions. The status becomes <strong>CHECKED OUT</strong> once every item on the request has been checked out.</p>"
-          },
-          {
-            "q": "What's different between LOR Internal Job and 3rd Party LOR?",
-            "tags": [
-              "lor internal vs 3rd party"
-            ],
-            "a": "<p>The 3rd Party LOR's Request form omits <strong>Job Name/Job Location</strong> (there's no internal job involved), and it inserts an extra <strong>Lease Agreement</strong> stage after Check Out and before Ship, where both parties sign a legal document before proceeding to Ship. All other stages (Ship, Check In, Shop In, Preview) are identical between the two flows.</p>"
-          },
-          {
-            "q": "What fields are on the LOR Request form?",
-            "tags": [
-              "lor request fields"
-            ],
-            "a": "<p><strong>Equipment or Accessory required, Quantity, UOM, Requested By, Required Date, Planned Return Date, Supervisor, Job ID/Job Name</strong> (the Job ID/Job Name field is omitted on 3rd Party LOR requests).</p>"
-          },
-          {
-            "q": "How do I approve or reject a Load Out Request?",
-            "tags": [
-              "approve lor",
-              "reject lor"
-            ],
-            "a": "<p>Once a request is submitted (status REQUESTED), the warehouse manager/approver sees <strong>Approve</strong> and <strong>Reject</strong> buttons on it. Clicking Approve sets the status to APPROVED and removes the buttons. Clicking Reject turns the button red and sets status to Rejected; the requester can then revise using the approver's comments and resubmit.</p>"
-          },
-          {
-            "q": "What is \"Check Out Issue\" status, and what are my options if a maintenance check fails during checkout?",
-            "tags": [
-              "check out issue",
-              "proceed with issue",
-              "change equipment"
-            ],
-            "a": "<p>It occurs when a Scheduled Equipment Maintenance form tied to the Check Out stage fails a check. A confirmation dialog offers <strong>Proceed With Issue</strong> (continues the checkout, setting status to Check Out Issue, with the item marked \"ID – Has Issue\") or <strong>Change Equipment</strong> (swap in a different item instead).</p>"
-          },
-          {
-            "q": "Can I request transport/delivery for shipping equipment?",
-            "tags": [
-              "delivery request",
-              "requisition",
-              "rfq"
-            ],
-            "a": "<p>Yes — a <strong>Delivery Request</strong> can be created directly from the Ship page (or the Check-in page) if transport is needed. This automatically creates a Requisition (REQ) and kicks off the RFQ process.</p>"
-          },
-          {
-            "q": "What does \"Hold the Equipment/Accessory or Not\" mean during Check In?",
-            "tags": [
-              "hold equipment",
-              "check in issue"
-            ],
-            "a": "<p>It's a prompt shown when a maintenance form tied to the Check In stage finds an issue. Answering <strong>No</strong> proceeds with the check-in anyway, setting status to CHECK IN ISSUE (logged to Asset Issues). Answering <strong>Yes</strong> blocks the check-in until the issue is fixed.</p>"
-          },
-          {
-            "q": "What's the difference between PARTIAL CLOSED and CLOSED?",
-            "tags": [
-              "partial closed vs closed"
-            ],
-            "a": "<p><strong>CLOSED</strong> means every item on the LOR has completed Shop In. <strong>PARTIAL CLOSED</strong> means only some items have been shopped in so far.</p>"
-          },
-          {
-            "q": "What is the full list of possible LOR statuses, and where can I see all of an LOR's forms in one place?",
-            "tags": [
-              "lor status list",
-              "lor preview"
-            ],
-            "a": "<p><strong>Requested, Approved, Rejected, Check Out, Partial Check Out, Check Out With Issue, Ship In, Partial Ship In, Check In, Partial Check-In, Check In With Issue, Shop In, Partial Closed, Closed.</strong> The <strong>Preview</strong> tab on an LOR shows the full collected set of forms (Request, Check Out, Ship, Check In, Shop In) in one place.</p>"
-          },
-          {
-            "q": "How do I view the full history of a Load Out Request?",
-            "tags": [
-              "lor history",
-              "see history"
-            ],
-            "a": "<p>Click the kebab (⋮) menu on the LOR card and select <strong>See History</strong> — this opens the full Equipment Log of requests, check-ins, check-outs, shipments, and shop-ins, including who performed each and when.</p>"
-          },
-          {
-            "q": "How do I delete a Load Out Request?",
-            "tags": [
-              "delete lor"
-            ],
-            "a": "<p>Click the kebab (⋮) menu on the LOR card and select <strong>Delete</strong>. This is only available while no equipment included in the LOR has yet been checked out — once any item has been checked out, the option disappears.</p>"
-          },
-          {
-            "q": "How do I assign an LOR to another user?",
-            "tags": [
-              "assign lor",
-              "view edit permission"
-            ],
-            "a": "<p>Use the <strong>Assign to</strong> field on the LOR to assign it to one or more users, granting them either View or Edit permission.</p>"
-          },
-          {
-            "q": "What per-LOR actions are available (download, share, mail, documents)?",
-            "tags": [
-              "lor download",
-              "lor share",
-              "lor mail"
-            ],
-            "a": "<p>Each LOR has action icons for: <strong>Download</strong> (PDF of the current stage's form) and <strong>Print</strong>; <strong>Share</strong> (send to other system users via System Default, Outlook, or Gmail); <strong>Documents</strong> (store/download all related files, and bundle all equipment's docs into one document); and <strong>Mail</strong> (compose email via Gmail or Outlook depending on Global Settings → Mail Settings).</p>"
-          },
-          {
-            "q": "What is the Roster field on an LOR stage for?",
-            "tags": [
-              "roster field lor"
-            ],
-            "a": "<p><strong>Roster</strong> lets you select the acting user's name/designation at that stage. It becomes active only once an Assign ID has been chosen.</p>"
-          },
-          {
-            "q": "What information shows on an LOR card, and can I view LORs as a Kanban board?",
-            "tags": [
-              "lor card info",
-              "lor kanban view"
-            ],
-            "a": "<p>Each card shows the selected Equipment/Accessory, Required-by Date, Created By, Workflow Level, and current Status/ID. A view toggle in the top-right of the Load Out Request tab switches between Grid View and Kanban View for both LOR Internal Job and 3rd Party LOR.</p>"
-          },
-          {
-            "q": "Where do I configure the approval chain for Load Out Requests?",
-            "tags": [
-              "lor workflows",
-              "approval chain"
-            ],
-            "a": "<p>Go to <strong>LOR - Workflows</strong>, a separate configuration screen for defining the approval chain(s) used by LOR / 3rd Party LOR requests.</p>"
-          },
-          {
-            "q": "How do I add a new approval level to an LOR workflow?",
-            "tags": [
-              "lor approval level",
-              "create level"
-            ],
-            "a": "<ol>\n        <li>Go to <strong>LOR - Workflows</strong>.</li>\n        <li>Click <strong>Create Level</strong>.</li>\n        <li>In the pop-up, choose the level type: \"All must approve\" or \"Anyone can approve\".</li>\n        <li>Pick the approvers for that level.</li>\n      </ol>"
-          },
-          {
-            "q": "What's the difference between \"All must approve\" and \"Anyone can approve\"?",
-            "tags": [
-              "all must approve",
-              "anyone can approve"
-            ],
-            "a": "<p><strong>\"All must approve\"</strong> requires every approver assigned to that level to approve before the LOR advances. <strong>\"Anyone can approve\"</strong> lets a single approver at that level clear it for everyone.</p>"
-          },
-          {
-            "q": "What happens if I edit an existing LOR approval workflow?",
-            "tags": [
-              "edit lor workflow warning"
-            ],
-            "a": "<p>You'll see a warning that changes affect all forms/documents already linked to that workflow — editing a live workflow is not isolated to future requests only.</p>"
-          },
-          {
-            "q": "How can I visualize the structure of an LOR approval workflow?",
-            "tags": [
-              "lor workflow diagram",
-              "tree graph view"
-            ],
-            "a": "<p>Click the tree/graph view icon in the top right of the LOR - Workflows screen to see a visual diagram of the workflow structure.</p>"
-          },
-          {
-            "q": "What's the difference between Check In and Shop In?",
-            "tags": [
-              "check in vs shop in"
-            ],
-            "a": "<p><strong>Check In</strong> records that equipment/accessories have returned from the field (tick returning items, add name/signature). <strong>Shop In</strong> is the subsequent, final step confirming the equipment has been physically placed back into its inventory location — only after Shop In does the LOR reach CLOSED.</p>"
-          },
-          {
-            "q": "Why is my Load Out Request showing \"Rejected\"?",
-            "tags": [
-              "lor rejected",
-              "troubleshoot rejected lor"
-            ],
-            "a": "<p>The approver clicked <strong>Reject</strong> on your request (instead of Approve). Check the approver's comments, revise the request accordingly, and resubmit.</p>"
-          },
-          {
-            "q": "Why do I see \"Check Out Issue\" instead of a normal checked-out status?",
-            "tags": [
-              "check out issue troubleshoot"
-            ],
-            "a": "<p>A Scheduled Equipment Maintenance form tied to the Check Out stage found a failed check, and the checkout user chose <strong>Proceed With Issue</strong> in the resulting confirmation dialog rather than Change Equipment.</p>"
-          },
-          {
-            "q": "Why is my Check In blocked?",
-            "tags": [
-              "check in blocked troubleshoot"
-            ],
-            "a": "<p>A maintenance form tied to the Check In stage found an issue, and when prompted \"Hold the Equipment/Accessory or Not\", the answer given was <strong>Yes</strong> — this blocks check-in until the issue is fixed. Answering No would instead let check-in proceed with status CHECK IN ISSUE.</p>"
-          },
-          {
-            "q": "Why do I need to fill in a maintenance form before I can check out or check in equipment?",
-            "tags": [
-              "maintenance form required",
-              "check out check in gating"
-            ],
-            "a": "<p>Because the equipment's maintenance package has a Recurrence Type of Check Out or Check In, meaning its scheduled form is triggered automatically at that step of the LOR flow rather than on a calendar date, and must be completed as part of that step.</p>"
-          },
-          {
-            "q": "Why does my LOR still say PARTIAL CHECK OUT / PARTIAL SHIP IN / PARTIAL CHECK IN?",
-            "tags": [
-              "partial status troubleshoot"
-            ],
-            "a": "<p>Because not all items on that LOR have completed that stage yet. These \"Partial\" statuses apply whenever some but not all of the requested items have been checked out, shipped, or checked in — the status upgrades to the full (non-partial) version once every item completes that stage.</p>"
-          },
-          {
-            "q": "Why is the Reject/Approve buttons missing from my Load Out Request?",
-            "tags": [
-              "approve reject missing"
-            ],
-            "a": "<p>Once an LOR has been Approved, the Approve/Reject buttons disappear — they are only shown while the request is in REQUESTED status awaiting a decision.</p>"
-          },
-          {
-            "q": "Why doesn't my 3rd Party LOR request form have a Job Name field?",
-            "tags": [
-              "3rd party lor no job name"
-            ],
-            "a": "<p>Because 3rd Party LOR is for leasing equipment out to (or in from) an external party, not for an internal job — the Request form omits Job Name/Job Location for this flow, unlike LOR Internal Job.</p>"
-          },
-          {
-            "q": "I raised an issue from a maintenance form — where did it go?",
-            "tags": [
-              "issue routed to asset issues"
-            ],
-            "a": "<p>It's automatically logged under the <strong>Asset Issues</strong> tab, where it can be reviewed, assigned, and eventually marked Rectified.</p>"
-          },
-          {
-            "q": "Why can't I edit an approved Lease Agreement's workflow without a warning?",
-            "tags": [
-              "lease agreement workflow warning"
-            ],
-            "a": "<p>Editing an existing LOR approval workflow level shows a warning because changes affect all forms/documents already linked to that workflow — not just future ones.</p>"
-          }
-        ]
-      },
-      {
-        "id": "global-setup",
-        "heading": "Global Data & Setup",
-        "html": "<p>Lives under Global Data, configures the module:</p>\n        <ul>\n          <li><strong>Global Data - Equipment Management</strong> — admin entry point for equipment-related global settings.</li>\n          <li><strong>Maintenance Form Builder</strong> (Global Data → Maintenance Builder) — Create Form, Add Section, Add Field (types: Attachment, Check box, Date, Label, Multi select, Paragraph, Roster, Scribble, Single select, Table, Text box, Time, Signature), Setup Trigger Points (flags that let end-users raise an issue if a check fails), Preview, Save Changes.</li>\n          <li><strong>Adobe Acrobat Sign integration</strong> — one-time setup for e-signing 3rd-Party LOR Lease Agreements: register an API app in Adobe's console → configure OAuth (redirect URL + scopes) → in Arena go to Global Settings → Adobe Sign Settings, enter Client ID/Secret, Save, Consent, authorize → enable Adobe Sign on the Lease Agreement form under Global Data → Forms → Equipment Forms.</li>\n        </ul>",
-        "qa": [
-          {
-            "q": "How do I build or edit maintenance/inspection form templates, and how do I create a new one?",
-            "tags": [
-              "maintenance builder",
-              "create form template"
-            ],
-            "a": "<ol>\n        <li>In <strong>Global Data → Maintenance Builder</strong> (also called Equipment Maintenance Forms), click <strong>Create Form</strong>.</li>\n        <li>Click <strong>Add Section</strong> to structure the form (use the trash icon to delete a section).</li>\n        <li>Click <strong>Add Field</strong> and choose a field type: Attachment, Check box, Date, Label, Multi select, Paragraph, Roster, Scribble, Single select, Table, Text box, Time, Signature.</li>\n        <li>Use <strong>Setup Trigger Points</strong> to tick which fields should let end-users raise an issue if that checkpoint fails.</li>\n        <li>Click <strong>Preview</strong> to see the form as end-users will see it, including company branding.</li>\n        <li>Click <strong>Save Changes</strong>.</li>\n      </ol>"
-          },
-          {
-            "q": "What field types are available in the maintenance form builder?",
-            "tags": [
-              "form field types"
-            ],
-            "a": "<p><strong>Attachment, Check box, Date, Label, Multi select, Paragraph, Roster, Scribble</strong> (signature/print name), <strong>Single select, Table</strong> (configurable rows/columns), <strong>Text box</strong> (default), <strong>Time, Signature</strong>.</p>"
-          },
-          {
-            "q": "What is the Adobe Acrobat Sign integration used for?",
-            "tags": [
-              "adobe sign purpose"
-            ],
-            "a": "<p>It lets a 3rd-party signer affix a legal e-signature to a 3rd-Party LOR Lease Agreement as part of approving it, instead of just clicking Approve/Reject.</p>"
-          },
-          {
-            "q": "Once Adobe Sign is set up, how does it get used in the LOR flow?",
-            "tags": [
-              "adobe sign lor usage"
-            ],
-            "a": "<p>In the 3rd Party LOR flow, once equipment is checked out, the Lease Agreement emailed to the 3rd party can be digitally signed via the Adobe Sign integration as part of their approval.</p>"
-          },
-          {
-            "q": "Is \"Equipment Management\" a different module from \"Asset Management\"?",
-            "tags": [
-              "equipment management vs asset management"
-            ],
-            "a": "<p>No — they're the same module. \"Asset Management\" is the name on the Home hub tile, \"Equipment Master\" appears in the module's own breadcrumb, and \"Equipment Management\" is the name used in the underlying documentation. The UI itself mostly uses \"Asset\" in labels (Asset Master, Asset Setup, Asset Issues, + Asset).</p>"
-          }
-        ]
-      }
-    ]
+    "sections": ["Who Sets Up Asset Management","Configure Asset Management Forms & Global Setup","Asset Master","Asset Setup","Field Inspections","Load Out Request","Asset Issues","Non Conformance Report"]
   },
   {
     "id": "global-data",
@@ -14574,7 +13950,7 @@ const MODULES = [
     "qaItems": QA_PROCUREMENT,
     "narrative": [
       {
-        "heading": "Admin Role",
+        "heading": "Who Sets Up Procurement",
         "intro": "<p>Procurement is where a construction company turns an internal need into a paid, delivered purchase, and getting that pipeline right depends on decisions a Procurement Admin makes once, up front, that every project team then works within. This admin configuration lives behind Home → <strong>Procurement</strong> → the gear-icon <strong>Settings</strong>, next to the Dashboard / Requisition Form / RFQ / Vendor Responses / Purchase Orders / Delivery Receipts / Invoice / Pickup Request / Purchase Order Master tabs. The single most important one-time admin task in this module is <strong>Approval Workflow</strong>: for each document type — Requisition Form (REQ), Purchase Order (PO), Invoices, and Pickup Request — and, for Requisition Form specifically, per category (Equipment, Material, Equipment Part, Delivery Service), the Procurement Admin builds a multi-level approval chain using <strong>+ Create Level</strong>, defining each level's Level Description, Approvers (typically a Purchasing Manager or PM), and Workflow Type (for example, \"Any one can approve\"). Every PO, Requisition, Invoice, and Pickup Request an End User submits is gated behind whichever approval chain the admin has defined here, which is exactly the control a business wants before company money is committed.</p><p>Beyond approvals, the admin also configures per-document-type form templates (Requisition Form, Purchase Order Form, Delivery Receipt Form, Invoices Form, Pickup Request Form), <strong>ID Settings</strong> (choosing System Default or Custom ID formats separately for REQ, RFQ, Vendor Response, Purchase Order, Direct Purchase Order, Delivery Receipt, Invoice, and Pickup Request), Procurement Issues configuration, RFQ Settings, and a Default Assign To for new procurement records. <strong>Users and Permissions</strong> inside Settings manages the module's permission groups — in the verified environment these included \"System Admin Role 1,\" \"Procurement Team,\" and \"Admin Permissions,\" the last of which is the same group referenced from Arena's central Global Permission registry.</p><p>One related setting lives outside the module entirely and is a Super Admin / Global Admin decision: <strong>Global Data → Settings → Procurement Settings</strong> has two checkboxes, <strong>Global Level</strong> and <strong>Project Level</strong>, controlling whether Procurement operates company-wide, per-Project, or both. It's worth deciding this scope before building out Approval Workflows and ID Settings, since those are likely configured per scope.</p>",
         "definitions": [
           {
@@ -14627,7 +14003,7 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Setup & Configuration",
+        "heading": "Configure Procurement Forms & Settings",
         "intro": "<p>Procurement Settings is the administrative control center for the entire module, and getting it right matters to the business because it defines how disciplined the company's purchasing process actually is in practice. Rather than hard-coding what a requisition, purchase order, invoice, or pickup request looks like, Arena exposes each of these as a configurable form, plus company-wide rules for how approvals, IDs, and issue priorities behave. This is where a Procurement Admin shapes procurement to match the company's actual paperwork and sign-off process, instead of forcing every project to use one rigid template.</p><p>Because procurement documents differ meaningfully by type — a Material purchase order looks different from a Delivery Service one — most of the form builders here are split by procurement type (Material, Equipment, Equipment Part, Delivery Service), letting the admin tailor fields precisely to what each category of purchase actually needs to capture. Settings also governs cross-cutting behavior that applies no matter which document type is in play: how approval chains are built, how document IDs are generated, and how urgently an issue needs to be resolved.</p><p>Getting these settings right up front avoids a lot of friction later for the people who actually run purchasing day to day. A well-configured REQ form, for instance, captures the specifications a vendor will need at RFQ time; a properly leveled approval workflow makes sure spend actually gets the right eyes — a Purchasing Manager, a PM, a finance approver — before it becomes a commitment. Most of Procurement Settings should be revisited by the admin whenever the company's purchasing policy changes, not just at initial setup.</p>",
         "definitions": [
           {
@@ -14980,14 +14356,7 @@ const MODULES = [
       "From <strong>Home</strong>, click the <strong>Procurement</strong> tile.",
       "Second-level tabs include REQ, RFQ, Vendor Responses, Purchase Order, Direct Purchase Order, Purchase Order Master, Delivery Receipts, Invoices, Pickup Request, and Communications."
     ],
-    "sections": [
-      {
-        "id": "procurement-qa",
-        "heading": "Common Questions",
-        "html": "<p>Answers sourced from Arena's documentation.</p>",
-        "qa": []
-      }
-    ]
+    "sections": ["Who Sets Up Procurement","Configure Procurement Forms & Settings","Requisitions","RFQ","Vendor Responses","Purchase Orders","Delivery Receipts","Invoices","Pickup Requests","Communications"]
   },
   {
     "id": "time-management",
