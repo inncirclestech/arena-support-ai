@@ -266,6 +266,14 @@ const QA_OPPORTUNITY = [
     tags: ["customer notes","customer form chat"]
   },
   {
+    action: "scope",
+    object: "opportunity dropdown on contact interactions",
+    scope: "module", section: "Customer Interactions",
+    question: "How do I keep interaction logs for one specific deal separate from a contact's general history?",
+    answer: "Open the contact's interaction workspace and use the **Opportunity** dropdown at the top, defaulted to **General**. Switching it to a specific Opportunity scopes every sub-tab — Call Logs, Mails, Events, Meetings, Task, Comments, Notes — to that deal, so conversation history tied to one active pursuit stays separate from the contact's overall relationship history.",
+    tags: ["opportunity scope","general vs opportunity","interaction scope"]
+  },
+  {
     action: "track",
     object: "call log",
     scope: "module", section: "Customer Interactions",
@@ -7059,6 +7067,10 @@ const MODULES = [
             "definition": "Two related but distinct controls that are easy to confuse. Filters determines which records/rows are shown, based on field criteria (for example, only opportunities above a certain value). Manage Columns determines which fields/columns are visible and in what order, without changing which records appear at all."
           },
           {
+            "term": "Export",
+            "definition": "The toolbar button next to Filters that downloads the current Opportunities list (respecting whatever Filters and Manage Columns are currently applied) for use outside Arena — for a leadership report or a CRM import elsewhere."
+          },
+          {
             "term": "Opportunity Value",
             "definition": "The raw dollar (or configured currency) value of the pursuit — the base figure that feeds Total Opportunity Value on the dashboard and the various weighted-value calculations."
           },
@@ -7205,6 +7217,10 @@ const MODULES = [
           {
             "term": "Contact card",
             "definition": "The view you land on after clicking a specific contact under a customer. It surfaces the Contact ID, Primary Phone, and Primary Email for that individual, in addition to exposing the interaction sub-tabs."
+          },
+          {
+            "term": "Opportunity scope (General / a specific Opportunity)",
+            "definition": "A dropdown at the top of a contact's interaction workspace, defaulted to General. Switching it to a specific Opportunity scopes every sub-tab — Call Logs, Mails, Events, Meetings, Task, Comments, Notes — to interactions logged against that deal specifically, letting a rep keep a contact's overall relationship history (General) separate from the conversation trail tied to one active pursuit."
           }
         ],
         "procedures": [
