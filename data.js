@@ -5251,7 +5251,8 @@ const QA_WORKORDER = [
   {
     action: "create",
     object: "work order",
-    scope: "module", section: "Work Orders",
+    scope: "module",
+    section: "Work Orders",
     question: "How do I create a new work order?",
     answer: "Go to Home → Work Order → click the \"Create\" button. Fill in the relevant details, select the Work Order Type (configured in Global Data) from the dropdown, then click Submit. The new work order appears as a card you can click to open.",
     tags: ["new work order","add work order","work order contract","create contract","work order creation"]
@@ -5259,7 +5260,8 @@ const QA_WORKORDER = [
   {
     action: "view",
     object: "work order",
-    scope: "module", section: "Work Orders",
+    scope: "module",
+    section: "Work Orders",
     question: "How do I open a work order I already created?",
     answer: "On the Work Order Creation page, click the card of the work order you want to open. You can also switch between grid/card view using the view toggle in the top right of the page.",
     tags: ["open work order","view work order","work order card","switch view"]
@@ -5267,7 +5269,8 @@ const QA_WORKORDER = [
   {
     action: "define",
     object: "work order profile",
-    scope: "module", section: "Profile & Items",
+    scope: "module",
+    section: "Profile & Items",
     question: "What is the Work Order Profile tab?",
     answer: "Work Order - Profile is the space to set up a work order's profile details and create items along with forms. It uses the form configured in Global Data for that Work Order Type.",
     tags: ["work order profile","profile tab","work order details","item setup"]
@@ -5275,7 +5278,8 @@ const QA_WORKORDER = [
   {
     action: "create",
     object: "work order item",
-    scope: "module", section: "Profile & Items",
+    scope: "module",
+    section: "Profile & Items",
     question: "How do I add an item inside a work order?",
     answer: "Open the work order's Profile tab and click \"Create Item\". You can create multiple items inside one work order, and each item can be connected to a Project tree or to Issues.",
     tags: ["add item","work order item","create item","link item"]
@@ -5283,7 +5287,8 @@ const QA_WORKORDER = [
   {
     action: "link",
     object: "work order item",
-    scope: "module", section: "Profile & Items",
+    scope: "module",
+    section: "Profile & Items",
     question: "How do I link a work order item to a project tree?",
     answer: "In Work Order - Profile, when linking an item to a tree, select the Project, then select its tree version, and continue through the remaining tree selections.",
     tags: ["link project tree","item to tree","project version","tree linking"]
@@ -5291,7 +5296,8 @@ const QA_WORKORDER = [
   {
     action: "link",
     object: "work order item",
-    scope: "module", section: "Profile & Items",
+    scope: "module",
+    section: "Profile & Items",
     question: "How do I link issues to a work order item?",
     answer: "In Work Order - Profile, when linking with Issues, select the Issue type from the dropdown to see the detailed list of issues, then select one or multiple issues to link to the item.",
     tags: ["link issues","item issues","issue linking","work order issues"]
@@ -5299,7 +5305,8 @@ const QA_WORKORDER = [
   {
     action: "assign",
     object: "work order team",
-    scope: "module", section: "Team",
+    scope: "module",
+    section: "Team",
     question: "How do I add users to a work order's team?",
     answer: "Go to Work Order - Team, select the \"Users\" tab at the top, multi-select the users you want to add, then click Submit.",
     tags: ["add users","work order team","assign users","team setup"]
@@ -5307,7 +5314,8 @@ const QA_WORKORDER = [
   {
     action: "assign",
     object: "work order crew",
-    scope: "module", section: "Team",
+    scope: "module",
+    section: "Team",
     question: "How do I add a crew to a work order?",
     answer: "Go to Work Order - Team, select the \"Crews\" tab at the top, multi-select from the crews already created in Global Data, then click Submit.",
     tags: ["add crew","assign crew","work order crew","crews tab"]
@@ -5315,7 +5323,8 @@ const QA_WORKORDER = [
   {
     action: "view",
     object: "work order drawing",
-    scope: "module", section: "Drawings",
+    scope: "module",
+    section: "Drawings",
     question: "How do I upload a drawing to a work order?",
     answer: "Go to Work Order - Drawings and click \"Upload Drawing\". Once uploaded, the drawing appears on the same page; you can switch between table view and card view.",
     tags: ["upload drawing","work order drawing","add drawing","drawing tab"]
@@ -5323,7 +5332,8 @@ const QA_WORKORDER = [
   {
     action: "edit",
     object: "work order drawing",
-    scope: "module", section: "Drawings",
+    scope: "module",
+    section: "Drawings",
     question: "How do I annotate or delete a work order drawing?",
     answer: "On Work Order - Drawings, open the ellipsis (...) menu on the drawing and choose Edit, Annotate, or Delete. Choose \"Annotate\" to mark changes directly on the drawing file.",
     tags: ["annotate drawing","edit drawing","delete drawing","drawing menu"]
@@ -5331,7 +5341,8 @@ const QA_WORKORDER = [
   {
     action: "view",
     object: "work order document",
-    scope: "module", section: "Documents",
+    scope: "module",
+    section: "Documents",
     question: "Where do I find documents related to a work order's procurement?",
     answer: "Go to Work Order - Documents. This space shows all Procurement documents fetched directly from every Procurement stage; click a folder to open the documents linked to that stage.",
     tags: ["work order documents","procurement documents","document folders","view documents"]
@@ -5339,7 +5350,8 @@ const QA_WORKORDER = [
   {
     action: "submit",
     object: "work order email",
-    scope: "module", section: "Communication",
+    scope: "module",
+    section: "Communication",
     question: "How do I send an email from a work order?",
     answer: "Go to Work Order - Communication and click \"Compose Mail\" to send a new mail. This tab is a mail repository for the work order with Sent, Starred, Drafts, and Trash sections, similar to a standard inbox.",
     tags: ["compose mail","work order email","send mail","communication tab"]
@@ -5347,7 +5359,8 @@ const QA_WORKORDER = [
   {
     action: "configure",
     object: "work order status",
-    scope: "global", section: "Setup & Configuration",
+    scope: "global",
+    section: "Setup & Configuration",
     question: "How do I configure statuses for work orders and items?",
     answer: "Go to Global Data → Work Order → Work Order Status Configuration. Select the appropriate section on the left, then click \"Add status\" to create a status type (e.g. \"Yet to begin\", \"Completed\"). You can set each status's color using the pencil icon in the Actions column.",
     tags: ["work order status","configure status","add status","status colors","global data work order"]
@@ -5355,7 +5368,8 @@ const QA_WORKORDER = [
   {
     action: "create",
     object: "work order type",
-    scope: "global", section: "Setup & Configuration",
+    scope: "global",
+    section: "Setup & Configuration",
     question: "How do I create a new Work Order Type?",
     answer: "In Global Data → Work Order → Work Order Types, click \"Create\". In the dialog, enter the name and description for the Work Order type and press Submit. Created types are listed on the Work Order page in Global Data and can be edited via the \"Edit\" option on each card.",
     tags: ["work order type","create type","global data work order types","configure work order type"]
@@ -5363,7 +5377,8 @@ const QA_WORKORDER = [
   {
     action: "edit",
     object: "work order type",
-    scope: "global", section: "Setup & Configuration",
+    scope: "global",
+    section: "Setup & Configuration",
     question: "How do I edit an existing Work Order Type?",
     answer: "In Global Data → Work Order → Work Order Types, click the name of the Work Order type to open its details, or click \"Edit\" on the Work Order card to modify it.",
     tags: ["edit work order type","modify work order type","global data"]
@@ -5371,7 +5386,8 @@ const QA_WORKORDER = [
   {
     action: "define",
     object: "work order timesheet",
-    scope: "module", section: "Timesheet",
+    scope: "module",
+    section: "Timesheet",
     question: "What is the Work Order Timesheet tab for?",
     answer: "Work Order - Timesheet is the tab within a work order used to manage crew/vendor timesheet entries for that work order (accessed via the work order's Timesheet tab).",
     tags: ["work order timesheet","timesheet tab","crew timesheet","vendee timesheet"]
@@ -5379,7 +5395,8 @@ const QA_WORKORDER = [
   {
     action: "view",
     object: "work order inventory",
-    scope: "module", section: "Inventory",
+    scope: "module",
+    section: "Inventory",
     question: "What is the Work Order Inventory Management tab?",
     answer: "Work Order - Inventory Management is the tab within a work order for tracking inventory associated with that work order.",
     tags: ["work order inventory","inventory management","inventory tab"]
@@ -5387,7 +5404,8 @@ const QA_WORKORDER = [
   {
     action: "view",
     object: "work order LOR",
-    scope: "module", section: "LORs",
+    scope: "module",
+    section: "LORs",
     question: "How do I access Load Out Requests (LORs) from a work order?",
     answer: "Open the work order and go to its \"LORs\" tab (Work Order - LORs) to view Load Out Requests / equipment associated with that work order.",
     tags: ["work order LOR","load out request","equipment tab","LORs"]
@@ -5425,7 +5443,7 @@ const QA_WORKORDER = [
     scope: "module",
     section: "Setup & Configuration",
     question: "What is Operational Status and how does it change the equipment status?",
-    answer: "Operational Status is a dropdown on the work order (for example **Operational**, **Down - Major Repairs**, **Running - Minor Repairs**, **Running - Due for PM**, **Dispose Initiated**). Each one is linked to an equipment status under **Settings → Work Order Types → Equipment → Operational Status**. When the work order is submitted, the equipment record takes the linked status, and the same status shows in the **Equipment Breakdown Report**. Use **Add Status** to add your own.",
+    answer: "Operational Status is a dropdown on the work order (for example **Operational**, **Down - Major Repairs**, **Running - Minor Repairs**, **Running - Due for PM**, **Dispose Initiated**). Each one is linked to an equipment status under **Settings → Work Order Types → Equipment → Operational Status**. When the work order is submitted, the equipment record takes the linked status, and the same status shows in the **Equipment Breakdown Report**. By default, Operational, Down - Major Repairs, Running - Minor Repairs and Dispose Initiated set the equipment to **In Maintenance**, and Running - Due for PM sets it to **Out of Service**. Use **Add Status** to add your own.",
     tags: ["operational status","linked equipment status","down major repairs","equipment status change","work order equipment status"]
   },
   {
@@ -5695,7 +5713,7 @@ const QA_WORKORDER = [
     scope: "module",
     section: "Approval, Cancel and Reopen",
     question: "How do I reopen a work order?",
-    answer: "Open the cancelled work order, click the kebab menu on the **Profile** tab and choose **Reopen Work Order**, enter the reason and click **reopen**. This works only within the **Reopen Window (days)** set under **Settings → Configuration**. After that the work order is locked.",
+    answer: "Open the Completed or Cancelled work order, click the kebab menu on the **Profile** tab and choose **Reopen Work Order**, enter the reason and click **reopen**. This works only within the **Reopen Window (days)** set under **Settings → Configuration**. After that the work order is locked.",
     tags: ["reopen work order","reopen cancelled","reopen reason","work order locked"]
   },
   {
@@ -5742,6 +5760,285 @@ const QA_WORKORDER = [
     question: "Why is the technician missing, or the equipment status not changing?",
     answer: "For a missing technician, add the user under **Settings → Users and Permissions** with the right permission, and check **Service Location** is **Internal (Shop / In-House)**. For a status that did not change, check the **Linked Equipment Status** under **Settings → Work Order Types → Operational Status**, and make sure the work order was submitted.",
     tags: ["technician not listed","equipment status not changing","linked equipment status","technician dropdown"]
+  },
+  {
+    action: "overview",
+    object: "work order flow",
+    scope: "module",
+    section: "Who Sets This Up",
+    question: "What is the full work order process from setup to reporting?",
+    answer: "First the **Work Order Administrator** configures the type, **Maintenance Types**, **Status**, **Priority**, **Approval Workflow**, **Invoices** approval, **Configuration** and **Users and Permissions** under **Settings**. Then the **Requester** clicks **Create** on the **Work Orders** tab and raises the work order against the equipment. The **Technician**, **Supervisor**, **Store Keeper** and **Purchase Executive** record items, crew, hours, materials, parts and expenses. The **Accounts user** raises vendor invoices and the **Approver** processes them. The Approver and Requester approve, complete, cancel or reopen the work order. Finally the Administrator and Approver review the **Equipment Breakdown Report**.",
+    tags: ["work order process","work order flow","end to end","setup to reporting","work order steps","how does work order work","work order lifecycle"]
+  },
+  {
+    action: "define",
+    object: "requester",
+    scope: "module",
+    section: "Who Sets This Up",
+    question: "As a requester, how do I raise a work order?",
+    answer: "Open **Home → Work Order**, click **Create** on the **Work Orders** tab and choose the **Work Order Type**. Enter the **WO Description** and **Work Order Status**, then choose **Create By**: **Inspection Issue** (pick the **Equipment Issue Linked**) or **Equipment** (pick the equipment). Fill in the maintenance type, business unit, project, phase code, created date and notes, set the priority, operational status and due date, and choose the **Service Location** with a technician or vendor. Click **Submit**. Then open the work order, write the **Complaint**, add items, choose **Assign To** and click **Submit** or **Submit for Approval**.",
+    tags: ["requester","site engineer","equipment coordinator","raise work order","as a requester","what does the requester do"]
+  },
+  {
+    action: "define",
+    object: "technician",
+    scope: "module",
+    section: "Who Sets This Up",
+    question: "As a technician, what do I do on a work order?",
+    answer: "Open the work order from the **Work Orders** tab. On the **Profile**, record the **Cause** after examining the equipment and the **Correction** as you do the work. Keep each item's status up to date on the **Items** tab. Book your hours under **Timesheets → My Timesheet** (or **My Crew Timesheet** for a crew, if you are on the Team tab). Request equipment on the **Equipment** tab, order materials on **Inventory**, import parts on **Parts**, record extra spend on **Expense** and upload drawings on **Drawings**. You appear in the Technician dropdown only if your user group has the right permission.",
+    tags: ["technician","mechanic","shop supervisor","as a technician","record diagnosis","what does the technician do","technician work order"]
+  },
+  {
+    action: "define",
+    object: "approver",
+    scope: "module",
+    section: "Who Sets This Up",
+    question: "As an approver, how do I approve a work order?",
+    answer: "When the Requester clicks **Submit for Approval**, open the work order and review its tabs, items, cost and attachments. Click **Approve** or **Reject** and enter your comments. If you approve, the work proceeds; if you reject, the work order goes back to the Requester with your remarks and a workflow issue appears under **Workflow Issues**. With several approval levels, the work order stays pending until every level approves. You also approve vendor invoices on the **Invoices** tab and timesheets in **Timesheet Logs**.",
+    tags: ["approver","maintenance manager","business unit head","as an approver","who approves work order","approve reject work order"]
+  },
+  {
+    action: "define",
+    object: "store keeper",
+    scope: "module",
+    section: "Who Sets This Up",
+    question: "As a store keeper or purchase executive, what do I do on a work order?",
+    answer: "The Store Keeper opens the **Inventory** tab, checks the orders raised against the work order (**Orders**, **Rejected Orders**, **EX Orders**) and issues the materials from stock. If the work order is cancelled, return issued materials to the store through the Inventory module. The Purchase Executive opens the **Procurement** tab, clicks **Requisition**, picks **Equipment**, **Material**, **Equipment Part** or **Delivery Service**, enters the items and submits. Approved purchase orders count under **Parts** on the **Cost** tab.",
+    tags: ["store keeper","purchase executive","store and procurement user","issue materials","as a store keeper","as a purchase executive"]
+  },
+  {
+    action: "define",
+    object: "accounts user",
+    scope: "module",
+    section: "Who Sets This Up",
+    question: "As an accounts user, how do I record a vendor invoice on a work order?",
+    answer: "Open the work order, go to the **Invoices** tab and click **Create** on the **Invoice** sub-tab. Enter the invoice details: the **Vendor**, the invoice **Date** and the **Amount**, then submit it for approval. Follow it through the approval levels; stuck invoices appear under the **Workflow Issues** sub-tab. Its value is added to the **External / Vendor** line of the **Cost** tab only after every level approves.",
+    tags: ["accounts user","accounts executive","as an accounts user","vendor invoice","invoice work order","raise invoice"]
+  },
+  {
+    action: "configure",
+    object: "administrator setup",
+    scope: "module",
+    section: "Who Sets This Up",
+    question: "As an administrator, what do I set up before people raise work orders?",
+    answer: "Under **Home → Work Order → Settings**: configure the work order type (**Tab Visibility**, **Profile**, **Item Form**, **Expense Form**, **ID Settings** and, for Equipment, **Operational Status**); add **Maintenance Types**, **Status** and **Priority**; create the **Approval Workflow** and **Invoices** approval and mark the workflow **Set as Default**; set the **Reopen Window (days)** under **Configuration**; and add user groups under **Users and Permissions**. Also check that the equipment exists in Asset Management with a Business Unit and Location.",
+    tags: ["administrator setup","work order administrator","first time setup","before first work order","as an administrator","set up work orders","who configures work orders"]
+  },
+  {
+    action: "define",
+    object: "work order settings",
+    scope: "module",
+    section: "Who Sets This Up",
+    question: "Where do I find the work order settings?",
+    answer: "Open **Home → Work Order** and click **Settings** (the gear icon). The left panel lists **Work Order Types**, **Maintenance Types**, **Invoices**, **Approval Workflow**, **Status**, **Priority**, **Configuration** and **Users and Permissions**, with a search box to find a page. Each page saves on its own. Global Data → Work Order also has the type list and status colours.",
+    tags: ["work order settings","settings gear","where is settings","work order configuration pages"]
+  },
+  {
+    action: "configure",
+    object: "work order type",
+    scope: "module",
+    section: "Setup & Configuration",
+    question: "How do I add a new work order type in Work Order Settings?",
+    answer: "Go to **Home → Work Order → Settings → Work Order Types**, click **+ Work Order Type**, enter the details and save. Then click the type to configure its **Tab Visibility**, **Profile**, **Item Form**, **Expense Form** and **ID Settings**. **Equipment** is the default type; only Equipment has the **Operational Status** sub-tab.",
+    tags: ["add work order type settings","new work order type","+ work order type","equipment default type","create work order type"]
+  },
+  {
+    action: "configure",
+    object: "operational status",
+    scope: "module",
+    section: "Setup & Configuration",
+    question: "Which equipment status does each operational status set by default?",
+    answer: "By default, **Operational**, **Down - Major Repairs**, **Running - Minor Repairs** and **Dispose Initiated** set the equipment to **In Maintenance**, and **Running - Due for PM** sets it to **Out of Service**. You can change the **Linked Equipment Status** for each under **Settings → Work Order Types → Equipment → Operational Status**, and add your own with **Add Status**.",
+    tags: ["default operational status mapping","linked equipment status default","in maintenance out of service","operational status list","add operational status"]
+  },
+  {
+    action: "configure",
+    object: "user permissions",
+    scope: "module",
+    section: "Setup & Configuration",
+    question: "Which permissions can I give a work order user group?",
+    answer: "Under **Settings → Users and Permissions**, click **Add User Group**, enter the **Group Name** and add the users. Then switch on the permissions they need: viewing, creating, editing, assigning, **Admin**, **Download** and **Assign to**. Users appear in the Technician, Assign To and Approver dropdowns only with the matching permission.",
+    tags: ["work order permissions list","assign to permission","admin permission","download permission","group permissions work order"]
+  },
+  {
+    action: "configure",
+    object: "priority",
+    scope: "module",
+    section: "Setup & Configuration",
+    question: "How do I add a priority level with due hours?",
+    answer: "Go to **Settings → Priority**, click **Add Priority**, enter the priority name and the **Due Hours**, and save. Use the edit icon in the **Actions** column to change a level, the delete icon to remove it, and drag the handle to set the order in the Priority dropdown. Due Hours is the time within which a work order at that priority should be attended to.",
+    tags: ["add priority level","due hours","priority order","edit priority","delete priority"]
+  },
+  {
+    action: "configure",
+    object: "invoice approval",
+    scope: "module",
+    section: "Setup & Configuration",
+    question: "How do I set up invoice approval for work orders?",
+    answer: "Go to **Settings → Invoices**, click **Create level**, assign the approvers for each level and choose the **Approval workflow Type**, routing by invoice value if needed. Click **Submit**. Use **Edit** or **Delete** to change or remove a workflow. Invoices raised on the **Invoices** tab follow this routing.",
+    tags: ["invoice approval setup","invoice levels","invoice routing by value","create level invoices"]
+  },
+  {
+    action: "define",
+    object: "work order tabs",
+    scope: "module",
+    section: "Work Orders",
+    question: "Which tab do I use on a work order for hours, parts, materials, expenses or invoices?",
+    answer: "Hours go on **Timesheets**. Parts go on **Parts** (**Import**). Materials from stock go on **Inventory**. Items to buy go on **Procurement** (**Requisition**). Extra spend goes on **Expense**. Vendor bills go on **Invoices**. Equipment and accessories needed for the job go on **Equipment**. The crew goes on **Team**, plans on **Schedule**, files on **Documents** and **Drawings**, and mail on **Communication**. **Cost** collects it all automatically.",
+    tags: ["which tab","tabs of a work order","where do I record","work order tabs who uses","tab for hours","tab for parts"]
+  },
+  {
+    action: "define",
+    object: "create work order fields",
+    scope: "module",
+    section: "Work Orders",
+    question: "What fields are on the Create Work Order window?",
+    answer: "Work Order Type, WO Description, Location, Work Order Status, Create By, Equipment Issue Linked (Inspection Issue path only), Equipment, Maintenance Type, Business Unit, Project, Phase Code, Created Date, Notes, Priority, Equipment Status (read-only), Operational Status, Due Date and Service Location. Then Technician for **Internal (Shop / In-House)**, or Vendor, Vendor Contact and Vendor PO Number for **External Vendor**. Work Order Type, Equipment, Created Date, Notes and Service Location are required, plus the Equipment Issue Linked, Technician or Vendor on their paths.",
+    tags: ["create work order fields","work order form fields","mandatory fields work order","required fields","field reference"]
+  },
+  {
+    action: "define",
+    object: "create by",
+    scope: "module",
+    section: "Work Orders",
+    question: "What is the difference between Create By Inspection Issue and Equipment?",
+    answer: "**Inspection Issue** is for work that comes from an issue reported in an equipment inspection: you pick the **Equipment Issue Linked** and the equipment is taken from it. **Equipment** is for work raised directly against a piece of equipment: you pick the equipment from the dropdown and no linked issue is shown.",
+    tags: ["create by inspection issue","create by equipment","equipment issue linked","inspection issue work order"]
+  },
+  {
+    action: "book",
+    object: "timesheet",
+    scope: "module",
+    section: "Timesheet",
+    question: "How do I import hours from Innclock AI into a work order timesheet?",
+    answer: "Open **Timesheets → My Timesheet** or **My Crew Timesheet**, choose the **Log Level Category** and **Template**, then click **Import From Innclock AI** to pull the recorded clock data instead of typing hours. Check the hours, then click **Save as Draft** or **Submit for Approval**.",
+    tags: ["innclock","import clock data","import hours","innclock ai timesheet"]
+  },
+  {
+    action: "configure",
+    object: "timesheet",
+    scope: "module",
+    section: "Timesheet",
+    question: "How do I duplicate or copy a timesheet log on a work order?",
+    answer: "Open the log in **My Timesheet** or **My Crew Timesheet** and use the **Actions** menu on the row. You can duplicate the log, copy it with the same Phase Codes, add a description, or delete it. **Manage Columns** controls the columns and **Notes** records remarks.",
+    tags: ["duplicate timesheet","copy timesheet log","timesheet actions menu","same phase codes"]
+  },
+  {
+    action: "define",
+    object: "timesheet template",
+    scope: "module",
+    section: "Timesheet",
+    question: "What are the Log Level Category and Template on a work order timesheet?",
+    answer: "The **Log Level Category** (Company, Work Orders, GL Codes or Projects) says what the hours are booked against. The **Template** (for example Company, Equipment Team or Salary Timecard) sets the layout. You choose both on **My Timesheet** or **My Crew Timesheet**. The header then shows the **Created By** user and the **Timesheet Mode**. Phase Codes come from **Projects → Project Setup → Phase Codes**.",
+    tags: ["log level category","timesheet template","salary timecard","timesheet mode"]
+  },
+  {
+    action: "define",
+    object: "work order lifecycle",
+    scope: "module",
+    section: "Approval, Cancel and Reopen",
+    question: "What statuses and steps does a work order go through?",
+    answer: "It starts with the **Work Order Status** picked at creation. The Requester submits it (**Submit** or **Submit for Approval**). The Approver approves it, or rejects it and it returns to the Requester with remarks to edit and resubmit. Finished work becomes Completed and read-only. It can be cancelled from the kebab menu, and a Completed or Cancelled work order can be reopened with a reason inside the **Reopen Window (days)**. The list of statuses is set under **Settings → Status**.",
+    tags: ["work order status flow","work order life cycle","statuses and transitions","completed read-only","work order steps approval"]
+  },
+  {
+    action: "define",
+    object: "approval",
+    scope: "module",
+    section: "Approval, Cancel and Reopen",
+    question: "Who approves work orders, invoices and timesheets?",
+    answer: "Work orders go to the approvers on the **Approval Workflow** for the work order type (**Settings → Approval Workflow**). Vendor invoices go to the approvers set under **Settings → Invoices**. Timesheets are approved from **Timesheet Logs** using the timesheet approval workflow. Each has its own levels, and the item moves on only when every level has approved.",
+    tags: ["who approves","approvers","invoice approver","timesheet approver","approval levels who"]
+  },
+  {
+    action: "reopen",
+    object: "work order",
+    scope: "module",
+    section: "Approval, Cancel and Reopen",
+    question: "Can I reopen a completed work order?",
+    answer: "Yes, a Completed or Cancelled work order can be reopened while it is still inside the **Reopen Window (days)** set under **Settings → Configuration**. Open it, click the kebab menu on the **Profile** tab, choose **Reopen Work Order**, enter the reason and click **reopen**. After the window passes the work order is locked.",
+    tags: ["reopen completed work order","reopen window passed","reopen option missing","locked work order"]
+  },
+  {
+    action: "troubleshoot",
+    object: "work order tab",
+    scope: "module",
+    section: "Troubleshooting: Work Order Problems",
+    question: "Why is a tab missing on my work order?",
+    answer: "The tab is switched off for that work order type. Go to **Settings → Work Order Types**, click the type, open **Tab Visibility**, turn the tab on and click **Save Changes**. Visibility is set per type, so check the type the work order was raised under. **Profile** is always on.",
+    tags: ["tab missing","missing tab work order","tab not showing","tab visibility fix"]
+  },
+  {
+    action: "troubleshoot",
+    object: "work order type",
+    scope: "module",
+    section: "Troubleshooting: Work Order Problems",
+    question: "Why is the work order type I need not available when I create a work order?",
+    answer: "The type has not been created. Go to **Settings → Work Order Types**, click **+ Work Order Type**, enter the details and save. **Equipment** is the only type available by default.",
+    tags: ["work order type missing","type not available","no work order type","create type"]
+  },
+  {
+    action: "troubleshoot",
+    object: "reopen",
+    scope: "module",
+    section: "Troubleshooting: Work Order Problems",
+    question: "Why is the Reopen option missing on a work order?",
+    answer: "The **Reopen Window (days)** under **Settings → Configuration** has passed, so the work order is locked. The window counts from the first time the work order became Completed or Cancelled. Ask an administrator if the window needs to be longer for future work orders.",
+    tags: ["reopen missing","cannot reopen","reopen option not available","work order locked"]
+  },
+  {
+    action: "troubleshoot",
+    object: "technician",
+    scope: "module",
+    section: "Troubleshooting: Work Order Problems",
+    question: "Why is the technician missing from the Technician dropdown?",
+    answer: "Add the user under **Settings → Users and Permissions** with the matching permission. Also check that **Service Location** is **Internal (Shop / In-House)**, because **External Vendor** shows the vendor fields instead.",
+    tags: ["technician missing","technician not in dropdown","assign to missing user","user not listed work order"]
+  },
+  {
+    action: "troubleshoot",
+    object: "equipment status",
+    scope: "module",
+    section: "Troubleshooting: Work Order Problems",
+    question: "Why did the equipment status not change after I updated the work order?",
+    answer: "Check the **Linked Equipment Status** for the operational status you chose under **Settings → Work Order Types → Operational Status**. Also make sure the work order was submitted: the equipment status changes only after you submit.",
+    tags: ["equipment status not changing","status not updated","operational status linked","equipment master status work order"]
+  },
+  {
+    action: "troubleshoot",
+    object: "work order id",
+    scope: "module",
+    section: "Troubleshooting: Work Order Problems",
+    question: "Why is the work order ID not in the format I expected?",
+    answer: "Open **Settings → Work Order Types**, click the type and open **ID Settings**. Check which components are switched on, their order and the **ID Separator**; the **Example Format** line shows how the ID will look. IDs are fixed once a work order exists, so a change only affects settings you make before work orders are created.",
+    tags: ["work order id wrong","id format wrong","wo id not expected","example format"]
+  },
+  {
+    action: "troubleshoot",
+    object: "timesheet",
+    scope: "module",
+    section: "Troubleshooting: Work Order Problems",
+    question: "Why can I not book time against my work order?",
+    answer: "The person must be on the work order's **Team** tab before you can book their time under **My Crew Timesheet**, and every timesheet row needs a **Phase Code** (set up under **Projects → Project Setup → Phase Codes**). Import or add the rows again after adding the person.",
+    tags: ["cannot book time","time not booking","phase code required","add to team first"]
+  },
+  {
+    action: "view",
+    object: "equipment breakdown",
+    scope: "module",
+    section: "Reports",
+    question: "Who uses the Equipment Breakdown Report and what does Status mean?",
+    answer: "Administrators and Approvers use it to track the condition of the fleet. **Status** shows the operational status set on the work order (Operational, Down - Major Repairs, Running - Minor Repairs, Running - Due for PM). **Vendor** shows Internal for in-house work, and **Cost/Estimate**, **Down Date** and **Estimated Back in Service** show the cost and timing.",
+    tags: ["breakdown report status","who uses breakdown report","fleet condition","down major repairs report"]
+  },
+  {
+    action: "define",
+    object: "documents",
+    scope: "module",
+    section: "Invoices and Cost",
+    question: "Who approves vendor invoices on a work order?",
+    answer: "The approvers you set under **Settings → Invoices**. The Accounts user submits the invoice from the **Invoices** tab, and the approver clicks **Approve** or **Reject** on the row. When several levels are set, the invoice moves on only after every level approves, and only then is its value added to the **External / Vendor** line of the **Cost** tab. Stuck invoices appear under **Workflow Issues**.",
+    tags: ["invoice approver","who approves invoices","invoice approval levels","workflow issues invoice"]
   }
 ];
 
@@ -14275,7 +14572,7 @@ const MODULES = [
         "definitions": [
           {
             "term": "Work Order Types",
-            "definition": "The foundational Settings screen listing the categories every Work Order Contract must be classified under (verified: Service, Equipment, Material). Existing types are editable, and + Work Order Type adds new ones."
+            "definition": "The list of work order types under Settings. <strong>Equipment</strong> is the default type and opens as the first tab. Click <strong>+ Work Order Type</strong> to add more. Every work order is raised under one type, and each type has its own tabs, forms and ID format. Some setups also carry Service and Material types."
           },
           {
             "term": "Users and Permissions (Work Order)",
@@ -14292,6 +14589,34 @@ const MODULES = [
           {
             "term": "Before the first work order",
             "definition": "Check that the work order types, maintenance types, statuses and priorities are set up, that an approval workflow is marked <strong>Set as Default</strong>, that invoice approval routing is configured, that the equipment has a Business Unit and Location, that the Projects and Phase Codes exist for booking cost, that Inventory holds the items you will issue, and that the users are added under <strong>Users and Permissions</strong>."
+          },
+          {
+            "term": "Setup and execution flow",
+            "definition": "One-time setup comes first, then the same loop repeats for every work order. (1) The Administrator configures the work order type in <strong>Settings → Work Order Types</strong>: tabs, forms, ID format and operational statuses. (2) The Administrator sets <strong>Maintenance Types</strong>, <strong>Status</strong> and <strong>Priority</strong>. (3) The Administrator sets the <strong>Approval Workflow</strong> and <strong>Invoices</strong> approval. (4) The Administrator sets the <strong>Reopen Window</strong> under <strong>Configuration</strong> and gives users access under <strong>Users and Permissions</strong>. (5) The Requester clicks <strong>Create</strong> on the <strong>Work Orders</strong> tab and raises the work order against the equipment. (6) The Technician, Supervisor, Store and Procurement user record items, crew, hours, materials, parts and expenses on the tabs. (7) The Accounts user raises vendor invoices on the <strong>Invoices</strong> tab and the Approver processes them. (8) The Approver and Requester approve, complete, cancel or reopen the work order. (9) The Administrator and Approver review the <strong>Equipment Breakdown Report</strong>."
+          },
+          {
+            "term": "Requester: what you do",
+            "definition": "Site Engineer or Equipment Coordinator. You click <strong>Create</strong> on the <strong>Work Orders</strong> tab, choose the work order type, pick <strong>Create By</strong> (<strong>Inspection Issue</strong> or <strong>Equipment</strong>), fill in the priority, operational status, due date and service assignment, and click <strong>Submit</strong>. You write the <strong>Complaint</strong> in the Diagnosis section, add the items of work, pick a user in <strong>Assign To</strong> and click <strong>Submit</strong> or <strong>Submit for Approval</strong>. If the Approver rejects it, it comes back to you with remarks to edit and resubmit. You can cancel it from the kebab menu."
+          },
+          {
+            "term": "Approver: what you do",
+            "definition": "Maintenance Manager or Business Unit Head. Work orders routed to you appear once the Requester clicks <strong>Submit for Approval</strong>. You review the tabs, items, cost and attachments, then click <strong>Approve</strong> or <strong>Reject</strong> and enter comments. You also approve or reject vendor invoices from the <strong>Invoices</strong> tab and timesheets from <strong>Timesheet Logs</strong> when you are set as an approver. With several approval levels, the work order stays pending until every level has approved. Rejections show under <strong>Workflow Issues</strong>."
+          },
+          {
+            "term": "Technician and Supervisor: what you do",
+            "definition": "Mechanic or Shop Supervisor. You open the work order and record the <strong>Cause</strong> and <strong>Correction</strong> in the Diagnosis section, keep the item statuses up to date, and book hours through <strong>My Timesheet</strong> or <strong>My Crew Timesheet</strong>. You request equipment, order materials, import parts, record expenses and upload drawings. The Supervisor manages the <strong>Team</strong> tab and updates the <strong>Schedule</strong>. You appear in the Technician dropdown only if your user group has the right permission."
+          },
+          {
+            "term": "Store Keeper and Procurement user: what you do",
+            "definition": "Store Keeper or Purchase Executive. The Store Keeper works the <strong>Inventory</strong> tab: orders raised against the work order, issuing materials from stock, and returning materials if a work order is cancelled. The Purchase Executive works the <strong>Procurement</strong> tab: click <strong>Requisition</strong>, pick <strong>Equipment</strong>, <strong>Material</strong>, <strong>Equipment Part</strong> or <strong>Delivery Service</strong>, and submit it into the normal Procurement process. Both need the matching permission in Inventory Management and Procurement."
+          },
+          {
+            "term": "Accounts user: what you do",
+            "definition": "Accounts Executive. You open the <strong>Invoices</strong> tab of the work order, click <strong>Create</strong> on the <strong>Invoice</strong> sub-tab, enter the invoice details (vendor, date and amount), submit it for approval and follow it through the approval levels. Stuck invoices appear under the <strong>Workflow Issues</strong> sub-tab. The invoice counts in the <strong>External / Vendor</strong> line of the <strong>Cost</strong> tab only after every level has approved."
+          },
+          {
+            "term": "Where work order settings live",
+            "definition": "Everyday setup is in the module: open <strong>Home → Work Order → Settings</strong> (gear icon). The left panel lists <strong>Work Order Types</strong>, <strong>Maintenance Types</strong>, <strong>Invoices</strong>, <strong>Approval Workflow</strong>, <strong>Status</strong>, <strong>Priority</strong>, <strong>Configuration</strong> and <strong>Users and Permissions</strong>, with a search box. Global Data → Work Order also holds the type list and status colours. Use the module Settings for tab visibility, forms, ID format, operational status, approvals and access."
           }
         ],
         "procedures": [
@@ -14312,6 +14637,18 @@ const MODULES = [
               "Separately, grant the matching permissions in <strong>Timesheet</strong>, <strong>Equipment Management</strong>, <strong>Inventory Management</strong>, and/or <strong>Procurement</strong>'s own permission branches for any of those Work Order Contract tabs the user needs to see."
             ],
             "note": "If a group was created from the module's own Settings screen and doesn't appear where you expect, check the central Global Data → Users & Permissions → Global Permission screen as well — the two entry points haven't been confirmed to always show the same group list."
+          },
+          {
+            "title": "Set up work orders for the first time (Administrator)",
+            "steps": [
+              "Confirm the equipment exists in <strong>Asset Management</strong> with a valid status, a Business Unit and a Location.",
+              "Open <strong>Home → Work Order → Settings → Work Order Types</strong> and configure the type: <strong>Tab Visibility</strong>, <strong>Profile</strong>, <strong>Item Form</strong>, <strong>Expense Form</strong>, <strong>ID Settings</strong> and, for Equipment, <strong>Operational Status</strong>. Click <strong>Save Changes</strong> on each sub-tab.",
+              "Set <strong>Maintenance Types</strong>, <strong>Status</strong> and <strong>Priority</strong>.",
+              "Create the <strong>Approval Workflow</strong> and the <strong>Invoices</strong> approval, and mark the workflow <strong>Set as Default</strong>.",
+              "Set the <strong>Reopen Window (days)</strong> under <strong>Configuration</strong>.",
+              "Add user groups under <strong>Users and Permissions</strong> with the permissions each role needs."
+            ],
+            "note": "Do this before requesters start raising work orders. The ID format cannot be changed once a work order exists."
           }
         ]
       },
@@ -14345,7 +14682,7 @@ const MODULES = [
           },
           {
             "term": "Operational Status",
-            "definition": "For the Equipment type, this page lists the values in the <strong>Operational Status</strong> dropdown on the work order: Operational, Down - Major Repairs, Running - Minor Repairs, Running - Due for PM and Dispose Initiated. Each one has a <strong>Linked Equipment Status</strong>. When a requester submits a work order with that operational status, the equipment record takes the linked status, and the same status shows in the Equipment Breakdown Report. Use <strong>Add Status</strong> to add your own; changes save automatically."
+            "definition": "For the Equipment type, this page lists the values in the <strong>Operational Status</strong> dropdown on the work order, with the <strong>Linked Equipment Status</strong> beside each. Default mapping: <strong>Operational</strong> → In Maintenance, <strong>Down - Major Repairs</strong> → In Maintenance, <strong>Running - Minor Repairs</strong> → In Maintenance, <strong>Running - Due for PM</strong> → Out of Service, <strong>Dispose Initiated</strong> → In Maintenance. When the work order is submitted, the equipment record takes the linked status in <strong>Asset Management → Equipment Master</strong>, and the same value shows in the <strong>Status</strong> column of the Equipment Breakdown Report. Use <strong>Add Status</strong> to add your own, choose its linked equipment status, and use the delete icon in the <strong>Actions</strong> column to remove one you added. Changes save automatically."
           },
           {
             "term": "Maintenance Types",
@@ -14362,6 +14699,10 @@ const MODULES = [
           {
             "term": "Approval Workflow and invoice approval",
             "definition": "<strong>Approval Workflow</strong> sets the approval levels for work order requests: pick the work order type, click <strong>Create Level</strong>, choose the approvers and the workflow type, and <strong>Submit</strong>. Mark one workflow <strong>Set as Default</strong> or work orders will not move forward. <strong>Invoices</strong> does the same for vendor invoices raised on a work order, and lets you route by invoice value."
+          },
+          {
+            "term": "Users and Permissions (permissions you can switch on)",
+            "definition": "The page lists users with access to the module and their role. Click <strong>Add User Group</strong>, enter the <strong>Group Name</strong>, add users under the <strong>Users</strong> tab, then switch on the permissions: viewing, creating, editing, assigning, <strong>Admin</strong>, <strong>Download</strong> and <strong>Assign to</strong>. Click save changes. Users show up in the Technician, Assign To and Approver dropdowns only with the matching permission. Actions a role may not perform are hidden or disabled on the work order."
           }
         ],
         "procedures": [
@@ -14436,6 +14777,72 @@ const MODULES = [
               "For approvals, open <strong>Settings → Approval Workflow</strong>, choose the work order type, click <strong>Create Level</strong>, add approvers and click <strong>Submit</strong>. Mark one workflow <strong>Set as Default</strong>.",
               "For invoice approvals, open <strong>Settings → Invoices</strong> and create levels the same way."
             ]
+          },
+          {
+            "title": "Add a work order type in Settings",
+            "steps": [
+              "Open <strong>Home → Work Order → Settings → Work Order Types</strong>.",
+              "Click <strong>+ Work Order Type</strong>.",
+              "Enter the details of the new type and save it.",
+              "Click the type to configure its <strong>Tab Visibility</strong>, <strong>Profile</strong>, <strong>Item Form</strong>, <strong>Expense Form</strong> and <strong>ID Settings</strong>."
+            ],
+            "note": "Only the Equipment type has the Operational Status sub-tab. Requesters can raise work orders under the new type as soon as it is saved."
+          },
+          {
+            "title": "Customise the profile, item and expense forms",
+            "steps": [
+              "Open <strong>Settings → Work Order Types</strong> and click the type.",
+              "For the profile, open the <strong>Profile</strong> sub-tab, switch <strong>Standard Fields</strong> on or off under <strong>Work Order Profile</strong>, and click <strong>Add Field</strong> under <strong>Configurable Fields</strong> for extra fields. Click <strong>Save Changes</strong>.",
+              "For items, open <strong>Item Form</strong>, click <strong>Add section</strong>, add the fields to the section, repeat for each section and click <strong>Save Changes</strong>.",
+              "For expenses, open <strong>Expense Form</strong>, click <strong>Add Field</strong>, configure each field and click <strong>Save Changes</strong>."
+            ]
+          },
+          {
+            "title": "Add a maintenance type",
+            "steps": [
+              "Open <strong>Settings → Maintenance Types</strong>.",
+              "Click <strong>Add</strong> and type the name. It saves automatically.",
+              "To change one, retype the name. To remove one, click the delete icon."
+            ],
+            "note": "Maintenance types (for example Preventive, Breakdown, Predictive, Statutory or Warranty) appear in the Create window, as a filter on the list and in maintenance reports."
+          },
+          {
+            "title": "Add a priority level",
+            "steps": [
+              "Open <strong>Settings → Priority</strong>.",
+              "Click <strong>Add Priority</strong>.",
+              "Enter the priority name and the <strong>Due Hours</strong>, and save.",
+              "Use the edit icon in the <strong>Actions</strong> column to change a level, the delete icon to remove it, and drag the handle to set the order in the Priority dropdown."
+            ]
+          },
+          {
+            "title": "Set up the approval workflow for work orders",
+            "steps": [
+              "Open <strong>Settings → Approval Workflow</strong>.",
+              "Choose the <strong>Work order type</strong> and click <strong>Create Level</strong>.",
+              "Add one or more approval levels, and pick the approvers and the <strong>Approval workflow Type</strong> for each.",
+              "Click <strong>Submit</strong>.",
+              "Mark the workflow <strong>Set as Default</strong>."
+            ],
+            "note": "Without a default workflow, work orders do not move forward for approval."
+          },
+          {
+            "title": "Set up invoice approval for work orders",
+            "steps": [
+              "Open <strong>Settings → Invoices</strong>.",
+              "Click <strong>Create level</strong> and assign the approvers for each level.",
+              "Choose the <strong>Approval workflow Type</strong> for each level. Route by invoice value if needed.",
+              "Click <strong>Submit</strong>. Use <strong>Edit</strong> or <strong>Delete</strong> to change or remove a workflow."
+            ]
+          },
+          {
+            "title": "Give a user group access to work orders",
+            "steps": [
+              "Open <strong>Settings → Users and Permissions</strong>.",
+              "Click <strong>Add User Group</strong> and enter the <strong>Group Name</strong>.",
+              "Add the users under the <strong>Users</strong> tab.",
+              "Switch on the permissions (viewing, creating, editing, assigning, Admin, Download, Assign to) and click save changes."
+            ]
           }
         ]
       },
@@ -14458,6 +14865,18 @@ const MODULES = [
           {
             "term": "Workflow Issues (work orders)",
             "definition": "Work orders that failed to move through the approval workflow are listed here with the remarks the approver recorded. A rejected work order goes back to the requester from here."
+          },
+          {
+            "term": "Tabs of a work order and who uses them",
+            "definition": "The tabs you see depend on the Tab Visibility set for the type. (1) <strong>Items</strong>: Requester or Technician, the jobs to do. (2) <strong>Team</strong>: Supervisor, the users and crews. (3) <strong>Timesheets</strong>: Technician or Supervisor, labour hours. (4) <strong>Equipment</strong>: Technician, equipment and accessories requested for the work. (5) <strong>Inventory</strong>: Store Keeper, material orders. (6) <strong>Procurement</strong>: Purchase Executive, requisitions. (7) <strong>Expense</strong>: Technician or Accounts, extra spend with the bill. (8) <strong>Schedule</strong>: Supervisor, planned activities and progress. (9) <strong>Communication</strong>: everyone, mail. (10) <strong>Documents</strong>: everyone, files by folder. (11) <strong>Drawings</strong>: Technician, drawings used. (12) <strong>Parts</strong>: Technician, parts required. (13) <strong>Invoices</strong>: Accounts or Approver, vendor invoices. (14) <strong>Cost</strong>: Approver or Administrator, category-wise cost. <strong>Profile</strong> is always first."
+          },
+          {
+            "term": "Create Work Order Contract fields",
+            "definition": "Work Order Type (required), WO Description, Location (where the work is done), Work Order Status (the status it starts with), Create By (Inspection Issue or Equipment), Equipment Issue Linked (only for Inspection Issue, required there), Equipment (required; from the linked issue or the dropdown), Maintenance Type, Business Unit, Project and Phase Code (where cost is booked), Created Date (required), Notes (required), Priority (its Due Hours apply), Equipment Status (read-only, from the equipment record), Operational Status, Due Date, Service Location (required: Internal (Shop / In-House) or External Vendor), Technician (internal path), and Vendor, Vendor Contact and Vendor PO Number (external path). Fields shown follow the type's configuration."
+          },
+          {
+            "term": "Work order roles at a glance",
+            "definition": "The Requester creates and assigns; the Approver approves; the Technician and Supervisor execute; the Store Keeper and Purchase Executive supply materials and parts; the Accounts user handles invoices; the Administrator configures. Each role sees only the actions its permissions allow."
           }
         ],
         "procedures": [
@@ -14500,6 +14919,14 @@ const MODULES = [
               "Click <strong>Manage Columns</strong>, choose and arrange the columns, then click <strong>Apply</strong>.",
               "Use the view icons on the right to switch between list, grid and column views.",
               "Click <strong>Export</strong> to download the list."
+            ]
+          },
+          {
+            "title": "Find a work order",
+            "steps": [
+              "Open <strong>Home → Work Order</strong> and stay on the <strong>Work Orders</strong> tab.",
+              "Type in <strong>Search by ID</strong>, or click <strong>Filters</strong> and choose values such as Work Order Status, Equipment Number, Maintenance Type, Priority or Business Unit.",
+              "Click the work order to open it on the <strong>Profile</strong> tab."
             ]
           }
         ]
@@ -14635,6 +15062,14 @@ const MODULES = [
           {
             "term": "Timesheet Logs",
             "definition": "Two sub-tabs, <strong>My Crew Timesheet Logs</strong> and <strong>My Timesheet Logs</strong>. The left panel lists logs for the selected date with a <strong>Total Logs</strong> count, each showing status, work order ID and the action recorded. Click a log to open it. Use <strong>View By</strong> (All or Summary), <strong>Approve</strong> or <strong>Reject</strong> on the log card, <strong>Download Excel</strong>, <strong>Export</strong> and filters. <strong>Ball in Court</strong> shows who has the timesheet now, and the <strong>Approval Workflow Level</strong> shows how many levels are done."
+          },
+          {
+            "term": "Timesheet template, category and mode",
+            "definition": "The layout of a timesheet follows the <strong>Timesheet Template</strong>, for example Company, Equipment Team or Salary Timecard. Choose the <strong>Log Level Category</strong> first (Company, Work Orders, GL Codes or Projects). The timesheet header shows the <strong>Created By</strong> user and the <strong>Timesheet Mode</strong>. Phase Codes come from <strong>Projects → Project Setup → Phase Codes</strong>. Approved hours feed the Labor line on the Cost tab."
+          },
+          {
+            "term": "Timesheet row actions",
+            "definition": "On each row, the <strong>Actions</strong> menu lets you duplicate the log, copy it with the same Phase Codes, add a description, or delete it. <strong>Manage Columns</strong> controls the columns, and <strong>Notes</strong> records remarks against the timesheet. On <strong>Timesheet Logs</strong>, the edit and delete icons on a log card correct or remove a log, and <strong>Download Excel</strong> downloads the day's logs."
           }
         ],
         "procedures": [
@@ -14658,6 +15093,33 @@ const MODULES = [
               "Review the grid and notes, then click <strong>Approve</strong> or <strong>Reject</strong> on the log card or at the bottom."
             ],
             "note": "The timesheet moves on only after every configured approval level has approved."
+          },
+          {
+            "title": "Set default phase codes and add a timesheet row",
+            "steps": [
+              "Open <strong>Timesheets → My Timesheet</strong> (or <strong>My Crew Timesheet</strong>) and choose the <strong>Log Level Category</strong> and <strong>Template</strong>.",
+              "Pick the <strong>Date</strong> and click <strong>Add</strong>.",
+              "Set the <strong>Default Phase Codes</strong>, select the phase codes you need and click <strong>Submit</strong>.",
+              "On the row, choose the Company, Project or Work Order, the Phase Code, the Craft and the Class, then enter hours by pay type.",
+              "Click <strong>Save as Draft</strong> or <strong>Submit for Approval</strong>."
+            ],
+            "note": "Every row needs a Phase Code."
+          },
+          {
+            "title": "Copy, duplicate or delete a timesheet log",
+            "steps": [
+              "Open the log in <strong>My Timesheet</strong> or <strong>My Crew Timesheet</strong>.",
+              "Open the <strong>Actions</strong> menu on the row.",
+              "Choose duplicate, copy with the same Phase Codes, add a description, or delete."
+            ]
+          },
+          {
+            "title": "Import hours from Innclock AI",
+            "steps": [
+              "Open <strong>Timesheets → My Timesheet</strong> or <strong>My Crew Timesheet</strong> and choose the category and template.",
+              "Click <strong>Import From Innclock AI</strong> to pull the recorded clock data instead of typing hours.",
+              "Check the hours, then click <strong>Save as Draft</strong> or <strong>Submit for Approval</strong>."
+            ]
           }
         ]
       },
@@ -14736,10 +15198,11 @@ const MODULES = [
           {
             "title": "Upload a drawing to a work order",
             "steps": [
-              "Go to <strong>Work Order &gt; Drawings</strong>.",
-              "Click <strong>Upload Drawing</strong>."
+              "Go to <strong>Work Order → Drawings</strong>.",
+              "Click <strong>Upload Drawings</strong>.",
+              "Enter the <strong>Drawing Name</strong> and upload the file."
             ],
-            "note": "Once uploaded, the drawing appears on the same page. You can switch between table view and card view."
+            "note": "The drawing appears as a card with its thumbnail and title, the uploader and the date. Switch between grid and list views."
           },
           {
             "title": "Annotate or delete a work order drawing",
@@ -14883,6 +15346,14 @@ const MODULES = [
           {
             "term": "Reopen Window",
             "definition": "The number of days after a work order first becomes Completed or Cancelled during which it can be reopened. It is counted from the first time it reached that state, and set under <strong>Settings → Configuration</strong>."
+          },
+          {
+            "term": "Work order life cycle",
+            "definition": "A work order starts with the status chosen in <strong>Work Order Status</strong> when it is created. The Requester then clicks <strong>Submit</strong> or <strong>Submit for Approval</strong>. If the Approver approves, the work proceeds. If the Approver rejects, the work order returns to the Requester with the remarks and a workflow issue is listed, and the Requester edits and resubmits. When the work is done it becomes Completed and read-only. Anyone with permission can cancel it from the kebab menu. A Completed or Cancelled work order can be reopened, with a reason, until the Reopen Window (days) runs out, after which it locks. The statuses you can pick are set under <strong>Settings → Status</strong>."
+          },
+          {
+            "term": "Who approves what",
+            "definition": "Work orders go to the approvers set on the <strong>Approval Workflow</strong> for the work order type. Vendor invoices go to the approvers set under <strong>Settings → Invoices</strong>. Timesheets go to the approvers on the timesheet approval workflow. Each has its own levels, and the item moves on only when every level has approved."
           }
         ],
         "procedures": [
@@ -14906,11 +15377,11 @@ const MODULES = [
           {
             "title": "Reopen a cancelled work order",
             "steps": [
-              "Open the cancelled work order and click the kebab menu on the <strong>Profile</strong> tab.",
+              "Open the Completed or Cancelled work order and click the kebab menu on the <strong>Profile</strong> tab.",
               "Choose <strong>Reopen Work Order</strong>.",
               "Enter the reason and click <strong>reopen</strong>."
             ],
-            "note": "This works only within the Reopen Window. After that the work order is locked."
+            "note": "This works only within the Reopen Window (days) set under Settings → Configuration. The window counts from the first time the work order became Completed or Cancelled."
           }
         ]
       },
@@ -14921,6 +15392,10 @@ const MODULES = [
           {
             "term": "Equipment Breakdown Report",
             "definition": "Lists equipment breakdowns recorded through work orders. Columns: <strong>Asset ID</strong>, <strong>Status</strong>, <strong>Make</strong>, <strong>Model</strong>, <strong>Category</strong>, <strong>Project</strong>, <strong>Down Date</strong>, <strong>Estimated Back in Service</strong>, <strong>Vendor</strong> (Internal when done in-house), <strong>Notes</strong>, <strong>Cost/Estimate</strong>, <strong>Warranty</strong> and <strong>Responsible party</strong>. Search by work order or asset ID, use <strong>Filters</strong> or column filters, <strong>Manage Columns</strong> (you can save several layouts) and <strong>Export</strong> to download with the filters applied."
+          },
+          {
+            "term": "Who uses the Equipment Breakdown Report",
+            "definition": "Administrators and Approvers use it to track the condition of the fleet: which assets are down, since when, when they should be back, who is repairing them and what it costs. Status shows the operational status chosen on the work order (Operational, Down - Major Repairs, Running - Minor Repairs or Running - Due for PM). Vendor shows Internal when the work is done in-house."
           }
         ],
         "procedures": [
@@ -14982,6 +15457,14 @@ const MODULES = [
               "Mark an approval workflow <strong>Set as Default</strong> under <strong>Settings → Approval Workflow</strong>, and check <strong>Workflow Issues</strong> for the approver's remarks.",
               "If Reopen is missing, the <strong>Reopen Window (days)</strong> under <strong>Settings → Configuration</strong> has passed."
             ]
+          },
+          {
+            "title": "The work order ID is not in the expected format",
+            "steps": [
+              "Open <strong>Settings → Work Order Types</strong>, click the type and open <strong>ID Settings</strong>.",
+              "Check which components are switched on, their order and the <strong>ID Separator</strong>. The <strong>Example Format</strong> line shows how the ID will be built."
+            ],
+            "note": "IDs already created do not change. ID settings cannot be edited after a work order exists."
           }
         ]
       }
@@ -14991,11 +15474,13 @@ const MODULES = [
     "icon": "assignment",
     "tagline": "Create and manage operational work order contracts from profile to close-out.",
     "color": "#2d7d7d",
-    "overview": "<p>The Work Order module (Home) is where operational work orders / work order contracts are created and managed day to day — covering profile setup, items, team assignment, drawings, documents, communication, inventory, LORs, and timesheets for each work order. It is distinct from Global Data's Work Order Management, which defines the underlying Work Order Types and default status configurations that this module's records draw from.</p>",
+    "overview": "<p>The Work Order module (Home) is where operational work orders / work order contracts are created and managed day to day — covering profile setup, items, team assignment, drawings, documents, communication, inventory, LORs, and timesheets for each work order. Work orders are raised against equipment held in Asset Management. The module has its own Settings (gear icon) for work order types, tabs, forms, ID format, statuses, priorities, approvals, the reopen window and user access. Global Data also has Work Order pages for types and status colours.</p>",
     "navigation": [
       "From <strong>Home</strong>, click the <strong>Work Order</strong> tile.",
       "Open a work order card to reach its Profile, Team, Drawings, Documents, Communication, Inventory, LORs, and Timesheet tabs.",
-      "Work Order Types and status configuration are maintained separately under <strong>Global Data → Work Order</strong>."
+      "Work Order Types and status configuration are maintained separately under <strong>Global Data → Work Order</strong>.",
+      "Configuration lives under <strong>Home → Work Order → Settings</strong>. Raise and work on a work order from the <strong>Work Orders</strong> tab, and see breakdowns under the <strong>Reports</strong> tab.",
+      "Configuration lives under <strong>Home → Work Order → Settings</strong>. Raise and work on a work order from the <strong>Work Orders</strong> tab, and see breakdowns under the <strong>Reports</strong> tab."
     ],
     "sections": [
       "Who Sets This Up",
