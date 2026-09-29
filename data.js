@@ -3,7 +3,8 @@ const QA_OPPORTUNITY = [
   {
     action: "view",
     object: "opportunities list",
-    scope: "module", section: "Opportunities",
+    scope: "module",
+    section: "Opportunities",
     question: "Where do I see my list of opportunities?",
     answer: "Go to **Opportunity Management** from Home, then click the **Opportunities** tab (one of the module's second-level tabs, alongside My Dashboard, Customers Interactions, Analytics, Reports, and Account Assignment). That's the full list/grid of every opportunity you have access to, with filters, view-mode switching, and row-level actions (History, Clone, Delete).",
     tags: ["opportunities list","see my opportunities","where are my opportunities","opportunities grid","view opportunities"]
@@ -11,7 +12,8 @@ const QA_OPPORTUNITY = [
   {
     action: "configure",
     object: "parent mode",
-    scope: "module", section: "Settings",
+    scope: "module",
+    section: "Settings",
     question: "How do I create a parent opportunity?",
     answer: "Parent/child opportunities are an optional feature that's off by default and must be turned on first:\n1. Go to **Opportunity Management → Settings** (gear icon) → **Opportunities Form** (left sidebar) → **Settings** tab.\n2. Turn on the **Parent Mode** toggle at the top and click **Save Changes**.\n3. Once Parent Mode is on, open any opportunity's edit/profile form — you'll now see **Create Parent** and **Link Parent** buttons in the Status & Value area.\n4. Click **Create Parent** to convert the currently open opportunity into a Parent (this opens a pre-filled Create Parent Lead form using that opportunity's Name, Description, Stage, Status, and other core fields).\n\nIf you don't see these buttons, ask your admin to confirm Parent Mode is enabled for your organization — without it, the feature is fully hidden from the interface.",
     tags: ["create parent opportunity","parent mode","enable parent opportunity","parent child opportunity","opportunity hierarchy"]
@@ -19,7 +21,8 @@ const QA_OPPORTUNITY = [
   {
     action: "link",
     object: "child opportunity",
-    scope: "module", section: "Opportunities",
+    scope: "module",
+    section: "Opportunities",
     question: "How do I link an opportunity as a child to an existing parent?",
     answer: "With **Parent Mode** enabled (see Settings → Opportunities Form → Settings), open the opportunity you want to make a child and click **Link Parent**. Arena looks up existing Parent opportunities tied to the same **Customer/Company** as the one you're editing:\n- If one or more parents exist for that customer, pick the one to link this opportunity to as a child, then submit.\n- If none exist yet, you'll see \"No Parent Linked to this Customer\" — use **Create Parent** on that customer's first opportunity before you can link any siblings to it.\n\nSave any pending changes on the opportunity first — both Create Parent and Link Parent require the record to have no unsaved edits. Linking a child to a Parent that's already in the Closed stage shows a confirmation warning before proceeding.",
     tags: ["link parent","link child opportunity","attach to parent","child opportunity","associate opportunity"]
@@ -27,7 +30,8 @@ const QA_OPPORTUNITY = [
   {
     action: "view",
     object: "parent child rollup",
-    scope: "module", section: "Reports",
+    scope: "module",
+    section: "Reports",
     question: "Where can I see how many child opportunities a parent has?",
     answer: "The Parent/Child/Standalone relationship, **Child Count**, and **Active Child Count** are only visible in **Opportunity Management → Reports → Pipeline Report** — they are not columns on the main Opportunities list itself. Run the Pipeline Report and look for these three columns to see each opportunity's relationship status and how many children a Parent currently has.",
     tags: ["child count","parent child report","opportunity hierarchy report","pipeline report parent"]
@@ -35,7 +39,8 @@ const QA_OPPORTUNITY = [
   {
     action: "define",
     object: "ai probability",
-    scope: "module", section: "Opportunities",
+    scope: "module",
+    section: "Opportunities",
     question: "What is AI Probability, and how is it different from Win Probability?",
     answer: "**Win Probability (%)** is a manually entered estimate of how likely an opportunity is to close. **AI Probability (%)** is a separate, system-calculated field shown alongside it on the Opportunity's Status & Value panel, with its own refresh icon to recalculate it — it's an independent, automated estimate rather than something a user types in.",
     tags: ["ai probability","win probability","chance of success","success probability","ai forecast"]
@@ -43,7 +48,8 @@ const QA_OPPORTUNITY = [
   {
     action: "create",
     object: "cloned opportunity",
-    scope: "module", section: "Opportunities",
+    scope: "module",
+    section: "Opportunities",
     question: "How do I clone an opportunity, and can I choose which fields get copied?",
     answer: "Click the **Clone** (duplicate/file_copy) icon on an opportunity's row in the Opportunities list. This opens a **Clone Opportunity** dialog with a checkbox picker organized by section (Details, Status & Value, Timeline & Activity, Contact, etc.) — you choose exactly which fields carry over into the new record instead of copying everything automatically.",
     tags: ["clone opportunity","duplicate opportunity","copy opportunity","clone lead"]
@@ -51,16 +57,17 @@ const QA_OPPORTUNITY = [
   {
     action: "configure",
     object: "customer deduplication",
-    scope: "module", section: "Sidebar Shortcuts",
+    scope: "module",
+    section: "Sidebar Shortcuts",
     question: "How do I merge duplicate customer records?",
     answer: "Go to **Opportunity Management → Customers** (people icon) and use the **Merge Duplicates** button on the toolbar. The same screen also has **Convert Customers to Owners**, for turning a Customer record into an Owner record when the same organization plays both roles.",
     tags: ["merge duplicate customers","deduplicate customers","merge customers","convert customer to owner"]
   },
-
   {
     action: "view",
     object: "weighted opportunity value",
-    scope: "module", section: "Dashboard",
+    scope: "module",
+    section: "Dashboard",
     question: "What is Weighted Opportunity Value?",
     answer: "It's the sum of opportunity values weighted by win-probability, shown as a KPI on **My Dashboard**. It gives a probability-adjusted view of pipeline value rather than a raw total.",
     tags: ["weighted value","dashboard kpi","win probability","kpi definition"]
@@ -68,7 +75,8 @@ const QA_OPPORTUNITY = [
   {
     action: "define",
     object: "stale opportunity",
-    scope: "module", section: "Dashboard",
+    scope: "module",
+    section: "Dashboard",
     question: "What is a Stale Opportunity?",
     answer: "An opportunity that has crossed the configurable **Stale Threshold** — a number of days of inactivity set in **Settings → Opportunities Form → Stale Threshold**. The count of stale opportunities is shown as a KPI on **My Dashboard**.",
     tags: ["stale opportunity","stale threshold","inactivity","what is stale"]
@@ -76,7 +84,8 @@ const QA_OPPORTUNITY = [
   {
     action: "view",
     object: "pipeline dashboard",
-    scope: "module", section: "Dashboard",
+    scope: "module",
+    section: "Dashboard",
     question: "Where can I see a quick summary of pipeline health?",
     answer: "**My Dashboard** is the personal, KPI-driven landing page showing totals, value, staleness, funnel shape, tasks, and upcoming due dates.",
     tags: ["pipeline summary","dashboard overview","my dashboard"]
@@ -84,7 +93,8 @@ const QA_OPPORTUNITY = [
   {
     action: "view",
     object: "overdue opportunity",
-    scope: "module", section: "Dashboard",
+    scope: "module",
+    section: "Dashboard",
     question: "Where do I see opportunities that are overdue or coming due soon?",
     answer: "Check **My Dashboard's Due This Week** KPI card and **Upcoming Opportunity Due Date** list, or filter the Opportunities list by **Due Date**.",
     tags: ["due date","overdue opportunities","upcoming due date","due this week"]
@@ -92,7 +102,8 @@ const QA_OPPORTUNITY = [
   {
     action: "view",
     object: "top opportunities",
-    scope: "module", section: "Dashboard",
+    scope: "module",
+    section: "Dashboard",
     question: "Where do I see the top opportunities by value?",
     answer: "**My Dashboard's Top 10 Opportunities** widget, ranked by value, with its own **+ Create Opportunity** shortcut.",
     tags: ["top opportunities","highest value","highest value list"]
@@ -100,7 +111,8 @@ const QA_OPPORTUNITY = [
   {
     action: "create",
     object: "opportunity",
-    scope: "module", section: "Opportunities",
+    scope: "module",
+    section: "Opportunities",
     question: "How do I create a new opportunity?",
     answer: "1. Go to **Opportunities Management → Opportunities**.\n2. Click **+ Create** in the toolbar.\n3. **Details:** enter **Opportunity Name*** (required) and pick a **Market Type** (Highway, Residential, Infrastructure, Interiors, …).\n4. **Status & Value:** **Stage*** defaults to \"Lead\" and is locked. **Status*** is required — its options come from whatever Statuses are configured for that Stage.\n5. **Contact:** optionally set **Customer Groups**, **Site Representative**, **Corporate Lead**, **Executive Lead** (searchable people-pickers, auto-suggested from Account Assignment).\n6. Click **Submit**.\n\n⚠ If Submit fails with \"Status is required\", the **Lead** stage has no Statuses configured under Settings → Stages & Statuses Configuration. An admin must add at least one Status to Lead before new opportunities can be created.",
     tags: ["create opportunity","add lead","new pursuit","new lead form"]
@@ -108,7 +120,8 @@ const QA_OPPORTUNITY = [
   {
     action: "configure",
     object: "opportunity table columns",
-    scope: "module", section: "Opportunities",
+    scope: "module",
+    section: "Opportunities",
     question: "What columns can I add to the Opportunities table?",
     answer: "Via **Manage Columns**: Opportunity ID/Name, Description, Created By, Project Types, Business Development, Business Unit, Opportunity Type, Milestone Template, Market/Sub Market Type, Stage, Status, TIC, Opportunity Value, Go %, Get %, Win Probability (%), AI Probability, Weighted Value (+AI), Probability (Manual/AI), Proposals, Tenders, Required Compliances, Created/Due/Follow Up Date, Opportunity Age, Stage Threshold Notification, Last Interaction, Inactivity (Days), Inactive Threshold Notification, Customer (+POC, Tier), Owner (+POC), EPC/Engineer (+POC), Contracting Entity (+POC), Project Locations, Competitors, Site Representative, Corporate Lead, Executive Lead, Assign To, Actions.",
     tags: ["manage columns","fields","data model","manage columns fields"]
@@ -116,7 +129,8 @@ const QA_OPPORTUNITY = [
   {
     action: "view",
     object: "opportunities list view mode",
-    scope: "module", section: "Opportunities",
+    scope: "module",
+    section: "Opportunities",
     question: "What view modes does the Opportunities list support?",
     answer: "Three: **Table View** (default, spreadsheet-style grid), **Grid View** (card-based layout), and **Kanban View** (a board with one column per Stage: Lead, Proposal, Closed). Each Kanban column header shows the opportunity count for that stage plus its Opportunity Value and Forecasted Value totals.",
     tags: ["table view","grid view","kanban view","table grid kanban"]
@@ -124,7 +138,8 @@ const QA_OPPORTUNITY = [
   {
     action: "define",
     object: "opportunity required fields",
-    scope: "module", section: "Opportunities",
+    scope: "module",
+    section: "Opportunities",
     question: "What is required to create an Opportunity, and can I choose the starting Stage?",
     answer: "Only **Opportunity Name*** and **Status*** are marked required on the Create Opportunity dialog. **Stage*** is also required but is pre-set to **Lead** and locked — every new Opportunity starts in Lead and you cannot choose a different starting stage.",
     tags: ["required fields","starting stage","lead stage","starting stage lead"]
@@ -132,7 +147,8 @@ const QA_OPPORTUNITY = [
   {
     action: "edit",
     object: "opportunity",
-    scope: "module", section: "Opportunities",
+    scope: "module",
+    section: "Opportunities",
     question: "How do I edit or delete an existing Opportunity?",
     answer: "Open the row's **Actions** menu on the Opportunities list and choose **Edit** (opens the record in an editable form) or **Delete** — the same row-action pattern (History / Edit / Delete / Notes) used on Customers, Owners, and Competitors.",
     tags: ["edit opportunity","delete opportunity"]
@@ -140,7 +156,8 @@ const QA_OPPORTUNITY = [
   {
     action: "edit",
     object: "opportunity field",
-    scope: "module", section: "Opportunities",
+    scope: "module",
+    section: "Opportunities",
     question: "Where do I set the Opportunity's Description, Owner, or Opportunity Value if they aren't on the Create dialog?",
     answer: "Fields like **Description, Project Types, Business Development, Business Unit, Opportunity Type, Milestone Template, Sub Market Type, TIC, Opportunity Value, Owner, Owner POC, Customer, Tier, EPC/Engineer, Contracting Entity, Project Locations, Competitors, Assign To**, and others exist on the full Opportunity record (visible in **Manage Columns** and the Pipeline Report) but aren't present on the initial Create dialog — they're editable from the Opportunity's detail/edit view once the record exists.",
     tags: ["opportunity fields","edit opportunity value","owner field","opportunity value owner description"]
@@ -148,7 +165,8 @@ const QA_OPPORTUNITY = [
   {
     action: "define",
     object: "sub-opportunity",
-    scope: "module", section: "Opportunities",
+    scope: "module",
+    section: "Opportunities",
     question: "Can an Opportunity have sub-opportunities?",
     answer: "Yes. The full Opportunity record includes a **Parent / Child / Standalone** relationship flag with Child Count and Active Child Count, so Opportunities can be organized hierarchically — e.g. a master pursuit with several sub-opportunities. The ID format for child opportunities is configured separately under **Settings → ID Settings → Child ID Settings**.",
     tags: ["parent opportunity","child opportunity","sub-opportunity","parent child opportunity"]
@@ -156,7 +174,8 @@ const QA_OPPORTUNITY = [
   {
     action: "configure",
     object: "opportunity table columns",
-    scope: "module", section: "Opportunities",
+    scope: "module",
+    section: "Opportunities",
     question: "How do I change the column order, or remove a single column, in the Opportunities table?",
     answer: "Open **Manage Columns → Column Arrangement**: drag a column using its handle to reorder it, or click the close (×) icon next to a column to remove it. Click **Apply** when done, or **Reset to Default** to restore the default set entirely.",
     tags: ["reorder columns","remove column","column arrangement"]
@@ -164,7 +183,8 @@ const QA_OPPORTUNITY = [
   {
     action: "configure",
     object: "saved view",
-    scope: "module", section: "Opportunities",
+    scope: "module",
+    section: "Opportunities",
     question: "How do I save my current view (filters, columns, and layout) for next time?",
     answer: "Click the **save** icon in the Opportunities toolbar — it saves the current filter, column, and layout configuration together.",
     tags: ["save view","save filters and columns","save filters and layout"]
@@ -172,7 +192,8 @@ const QA_OPPORTUNITY = [
   {
     action: "define",
     object: "go percent get percent",
-    scope: "module", section: "Opportunities",
+    scope: "module",
+    section: "Opportunities",
     question: "What's the difference between Go % and Get %?",
     answer: "Both appear as separate percentage fields/columns on Opportunities and in the Forecast Report (e.g. Go% Weighted Value vs. Get% Weighted Value), used alongside Win Probability and AI Probability as distinct probability/likelihood measures feeding weighted-value calculations. The exact business meaning of each beyond that isn't further defined in the product.",
     tags: ["go percent","get percent","probability metrics"]
@@ -180,7 +201,8 @@ const QA_OPPORTUNITY = [
   {
     action: "define",
     object: "win probability field",
-    scope: "module", section: "Opportunities",
+    scope: "module",
+    section: "Opportunities",
     question: "What is the difference between Win Probability (%), AI Probability, and Probability (Manual/AI)?",
     answer: "**Win Probability (%)** and **AI Probability** are tracked as separate columns on an Opportunity, and **Probability (Manual/AI)** is a toggle/flag indicating which probability source is in effect. Correspondingly, **Weighted Value** and **AI Weighted Value** are separate weighted-value calculations — one based on manual probability entry, one AI-derived.",
     tags: ["win probability","ai probability","weighted value"]
@@ -188,7 +210,8 @@ const QA_OPPORTUNITY = [
   {
     action: "define",
     object: "opportunity age",
-    scope: "module", section: "Opportunities",
+    scope: "module",
+    section: "Opportunities",
     question: "What does \"Opportunity Age\" mean?",
     answer: "A tracked field (in days) representing how long the Opportunity has existed, shown in **Manage Columns** and the Pipeline Report as \"Opportunity Age (In Days)\".",
     tags: ["opportunity age","days open","days open field"]
@@ -196,7 +219,8 @@ const QA_OPPORTUNITY = [
   {
     action: "define",
     object: "inactivity field",
-    scope: "module", section: "Opportunities",
+    scope: "module",
+    section: "Opportunities",
     question: "What is \"Inactivity (In Days)\" vs. \"Last Interaction\"?",
     answer: "**Last Interaction** records the date of the most recent activity on the Opportunity; **Inactivity (In Days)** is the number of days elapsed since that last interaction. Both are available as columns, and Inactivity feeds the Stale Threshold logic. A related field, **Days in Current Stage** (seen in the Opportunity Aging Report and Pipeline Report), tracks how long the Opportunity has sat in its current Stage, used to gauge pipeline velocity.",
     tags: ["inactivity","last interaction","days in stage","last interaction field"]
@@ -204,7 +228,8 @@ const QA_OPPORTUNITY = [
   {
     action: "define",
     object: "stage threshold",
-    scope: "module", section: "Opportunities",
+    scope: "module",
+    section: "Opportunities",
     question: "What is a \"Stage Threshold\" and how is it different from \"Stale Threshold\"?",
     answer: "**Stage Threshold (In Days)** is configured per Stage in **Settings → Stages & Statuses Configuration** and drives the \"Stage Threshold Notification\" column (flagging opportunities that have lingered too long in a specific stage). **Stale Threshold** is a single, module-wide setting in **Settings → Opportunities Form** based on overall inactivity, feeding the dashboard's Stale Opportunities KPI. They apply at different scopes — per-stage vs. whole-opportunity.",
     tags: ["stage threshold","stale threshold difference","stale threshold comparison"]
@@ -212,7 +237,8 @@ const QA_OPPORTUNITY = [
   {
     action: "define",
     object: "responsibility chain role",
-    scope: "module", section: "Opportunities",
+    scope: "module",
+    section: "Opportunities",
     question: "What's the difference between Site Representative, Corporate Lead, and Executive Lead?",
     answer: "All three are searchable people-picker roles assignable to any system user/contact, used both on **Create Opportunity** and in **Account Assignment**. They represent three levels of the responsibility chain for a customer account — an on-the-ground Site Representative, a Corporate Lead, and an Executive Lead — pre-populated from the Account Assignment registry when a matching Customer/Market Type combination exists.",
     tags: ["site representative","corporate lead","executive lead","site representative corporate lead executive lead"]
@@ -220,7 +246,8 @@ const QA_OPPORTUNITY = [
   {
     action: "define",
     object: "market type field",
-    scope: "module", section: "Opportunities",
+    scope: "module",
+    section: "Opportunities",
     question: "What is Market Type vs. Sub Market Type?",
     answer: "**Market Type** is the top-level segment an Opportunity or Account Assignment belongs to (e.g. Highway, Residential, Infrastructure, Interiors). **Sub Market Type** is a more granular classification nested under it, tracked as a separate field/column throughout the module.",
     tags: ["market type","sub market type"]
@@ -228,7 +255,8 @@ const QA_OPPORTUNITY = [
   {
     action: "view",
     object: "manage columns button",
-    scope: "module", section: "Opportunities",
+    scope: "module",
+    section: "Opportunities",
     question: "Why don't I see a Manage Columns button on the Opportunities list?",
     answer: "You're likely in **Grid View** or **Kanban View** — **Manage Columns** only appears in **Table View**.",
     tags: ["manage columns missing","grid view","kanban view","missing manage columns"]
@@ -236,7 +264,8 @@ const QA_OPPORTUNITY = [
   {
     action: "view",
     object: "opportunities list",
-    scope: "module", section: "Opportunities",
+    scope: "module",
+    section: "Opportunities",
     question: "Why is the Opportunities list showing \"No Data Available\", with no row actions?",
     answer: "This means no opportunities exist yet, or none match your filters. If nobody can create one, check that the **Lead** stage has at least one Status configured (see **Why can't I select a Status when creating an opportunity?**). Once records exist, an **Actions** column exposes per-row actions, following the same pattern seen on Customers, Owners, and Competitors (History, Edit, Delete, Notes).",
     tags: ["no data available","no opportunities","empty list"]
@@ -244,7 +273,8 @@ const QA_OPPORTUNITY = [
   {
     action: "define",
     object: "filters vs manage columns",
-    scope: "module", section: "Opportunities",
+    scope: "module",
+    section: "Opportunities",
     question: "What's the difference between Filters and Manage Columns?",
     answer: "**Filters** controls which rows/records are shown, based on field criteria (e.g. only opportunities above a certain value). **Manage Columns** controls which fields/columns are visible and in what order, without changing which records show.",
     tags: ["filters vs columns","row filtering","column visibility","row filtering vs column visibility"]
@@ -252,7 +282,8 @@ const QA_OPPORTUNITY = [
   {
     action: "view",
     object: "customer interaction history",
-    scope: "module", section: "Customer Interactions",
+    scope: "module",
+    section: "Customer Interactions",
     question: "How do I see a customer's interaction history?",
     answer: "1. Go to **Opportunities Management → Customers Interactions**.\n2. Click a row's **Customer Name** to open its contact list.\n3. Click a specific **Contact** card to open the interaction workspace.\n4. Use the sub-tabs (Call Logs, Mails, Events, Meetings, Task, Comments, Notes, See History) to view or log that interaction type.",
     tags: ["customer history","contact log","crm","crm contact log"]
@@ -260,7 +291,8 @@ const QA_OPPORTUNITY = [
   {
     action: "define",
     object: "customer notes button",
-    scope: "module", section: "Customer Interactions",
+    scope: "module",
+    section: "Customer Interactions",
     question: "What is the \"Notes\" button on the Customer Interactions list for?",
     answer: "Each customer row on the top-level list has its own **Notes** cell/button that opens a \"Customer Form Chat\" side panel — a running notes/chat log tied to that customer as a whole, not to an individual contact.",
     tags: ["customer notes","customer form chat"]
@@ -268,7 +300,8 @@ const QA_OPPORTUNITY = [
   {
     action: "scope",
     object: "opportunity dropdown on contact interactions",
-    scope: "module", section: "Customer Interactions",
+    scope: "module",
+    section: "Customer Interactions",
     question: "How do I keep interaction logs for one specific deal separate from a contact's general history?",
     answer: "Open the contact's interaction workspace and use the **Opportunity** dropdown at the top, defaulted to **General**. Switching it to a specific Opportunity scopes every sub-tab — Call Logs, Mails, Events, Meetings, Task, Comments, Notes — to that deal, so conversation history tied to one active pursuit stays separate from the contact's overall relationship history.",
     tags: ["opportunity scope","general vs opportunity","interaction scope"]
@@ -276,7 +309,8 @@ const QA_OPPORTUNITY = [
   {
     action: "track",
     object: "call log",
-    scope: "module", section: "Customer Interactions",
+    scope: "module",
+    section: "Customer Interactions",
     question: "How do I log a call with a customer contact?",
     answer: "Open the contact's interaction workspace, go to the **Call Logs** sub-tab, and click its **+ Create** button to add a new entry (Call Type, Date, Time, Summary, Tag, Attachments).",
     tags: ["call log","log a call","log customer call"]
@@ -284,7 +318,8 @@ const QA_OPPORTUNITY = [
   {
     action: "create",
     object: "customer contact note",
-    scope: "module", section: "Customer Interactions",
+    scope: "module",
+    section: "Customer Interactions",
     question: "How do I write a note on a customer contact?",
     answer: "Open the contact's interaction workspace, go to the **Notes** sub-tab, type in the rich note editor (you can also attach a file), and save.",
     tags: ["write note","note editor"]
@@ -292,7 +327,8 @@ const QA_OPPORTUNITY = [
   {
     action: "define",
     object: "calendar consent error",
-    scope: "module", section: "Customer Interactions",
+    scope: "module",
+    section: "Customer Interactions",
     question: "Why am I seeing a \"Consent Not Granted\" message on the Events, Meetings, Task, or Comments tabs?",
     answer: "These tabs integrate with your connected calendar (Google/Outlook) and require **Calendar consent** before they'll function. Go to **My Profile → Settings → Calendar consent** and grant consent, then return to the tab.",
     tags: ["consent not granted","calendar consent"]
@@ -300,7 +336,8 @@ const QA_OPPORTUNITY = [
   {
     action: "view",
     object: "contact audit trail",
-    scope: "module", section: "Customer Interactions",
+    scope: "module",
+    section: "Customer Interactions",
     question: "Where can I see a full audit trail for a customer contact?",
     answer: "Open the contact's interaction workspace and go to the **See History** sub-tab — it shows an audit/activity history for that contact (\"No history available\" when empty).",
     tags: ["audit trail","see history","contact history"]
@@ -308,7 +345,8 @@ const QA_OPPORTUNITY = [
   {
     action: "view",
     object: "customer contact info",
-    scope: "module", section: "Customer Interactions",
+    scope: "module",
+    section: "Customer Interactions",
     question: "Where do I find a customer's phone number and email?",
     answer: "Drill into **Customers Interactions → [Customer Name] → [Contact]** — the Contact card view shows Contact ID, Primary Phone, and Primary Email. The **Contacts Directory** also stores Primary/Secondary Email and Phone Number fields.",
     tags: ["customer phone","customer email","contact info","phone email"]
@@ -316,7 +354,8 @@ const QA_OPPORTUNITY = [
   {
     action: "view",
     object: "executive summary kpis",
-    scope: "module", section: "Analytics",
+    scope: "module",
+    section: "Analytics",
     question: "What KPIs are on the Executive Summary dashboard?",
     answer: "**Total Opportunity Value, Weighted Forecasted Value, Weighted Forecast This Quarter, Overall Win Rate (%),** and **Average Deal Size**, along with a Scenario Forecast Comparison chart, Opportunity by Stage Value, a Top Customers Performance table, and a Team Performance Leadership table.",
     tags: ["executive summary","analytics kpis","analytics dashboard"]
@@ -324,7 +363,8 @@ const QA_OPPORTUNITY = [
   {
     action: "view",
     object: "pipeline by business unit",
-    scope: "module", section: "Analytics",
+    scope: "module",
+    section: "Analytics",
     question: "What is the Pipeline by BU tab for?",
     answer: "It breaks the pipeline down by Business Unit: summary stats (Total Opportunities, Top BU by Volume, Highest Win Rate), several charts (Opportunity Count by BU, Opportunity Value by BU, Pipeline Forecast by BU, Opportunities by BU and Region, Opportunity Stage Mix), and a **BU Performance Matrix** table (Business Unit, Lead, Proposal, Closed, Total, Win Rate).",
     tags: ["pipeline by bu","business unit analytics","bu analytics tab"]
@@ -332,7 +372,8 @@ const QA_OPPORTUNITY = [
   {
     action: "filter",
     object: "analytics dashboard",
-    scope: "module", section: "Analytics",
+    scope: "module",
+    section: "Analytics",
     question: "How do I share or filter an analytics dashboard?",
     answer: "Every Analytics sub-tab has a **Filters** button to narrow the data and a **share** icon to share the dashboard.",
     tags: ["share dashboard","filter analytics"]
@@ -340,7 +381,8 @@ const QA_OPPORTUNITY = [
   {
     action: "track",
     object: "permit and insurance expiry",
-    scope: "module", section: "Analytics",
+    scope: "module",
+    section: "Analytics",
     question: "Where do I track permit and insurance expirations?",
     answer: "The **Permit & Insurance Expiry Tracker** table, found on both the **Market & Operations** and **Executive Summary** analytics tabs.",
     tags: ["permit expiry","insurance expiry","compliance tracker"]
@@ -348,7 +390,8 @@ const QA_OPPORTUNITY = [
   {
     action: "view",
     object: "proposal cycle time",
-    scope: "module", section: "Analytics",
+    scope: "module",
+    section: "Analytics",
     question: "Where do I see which stage an opportunity's proposal cycle time falls into?",
     answer: "The **Proposal Cycle Time Distribution** chart on the **Market & Operations** analytics tab.",
     tags: ["proposal cycle time","cycle time distribution"]
@@ -356,7 +399,8 @@ const QA_OPPORTUNITY = [
   {
     action: "export",
     object: "report",
-    scope: "module", section: "Reports",
+    scope: "module",
+    section: "Reports",
     question: "How do I run a report?",
     answer: "1. Go to **Opportunities Management → Reports**.\n2. Click the report name (e.g. Forecast Report).\n3. Use Filters / Sort By to narrow data, then Export — or for Huddle Report / Pipeline Gantt View, set parameters and click Generate.\n4. Use the back arrow next to the report title to return to the list.",
     tags: ["reports","export","forecast","run a report"]
@@ -364,7 +408,8 @@ const QA_OPPORTUNITY = [
   {
     action: "configure",
     object: "report columns",
-    scope: "module", section: "Reports",
+    scope: "module",
+    section: "Reports",
     question: "How do I customize which columns show in a report?",
     answer: "Reports share the same toolbar pattern as the main Opportunities list: use **Manage Columns** to add/remove/reorder columns, the same way you would on the Opportunities table.",
     tags: ["report columns","manage columns reports"]
@@ -372,7 +417,8 @@ const QA_OPPORTUNITY = [
   {
     action: "define",
     object: "aging report vs pipeline report",
-    scope: "module", section: "Reports",
+    scope: "module",
+    section: "Reports",
     question: "What's the difference between the Opportunity Aging Report and the Pipeline Report?",
     answer: "The **Opportunity Aging Report** is narrowly focused on staleness/velocity metrics — Days In Current Stage, Days Since Last Activity, Stale Flag, Aging Status. The **Pipeline Report** is the most complete field set in the whole module, covering nearly every field on an Opportunity record (identifiers, financials, dates, contacts, hierarchy) rather than just aging-related metrics.",
     tags: ["aging report vs pipeline report","report comparison"]
@@ -380,7 +426,8 @@ const QA_OPPORTUNITY = [
   {
     action: "view",
     object: "pipeline report contents",
-    scope: "module", section: "Reports",
+    scope: "module",
+    section: "Reports",
     question: "What does the Pipeline Report cover?",
     answer: "Go to **Opportunities Management → Reports → Pipeline Report**. It's the single most complete report in the module, covering nearly every field on the Opportunity record: identifiers, financials, dates, contacts, and parent/child hierarchy. Use it when you need the fullest possible export of opportunity data rather than a narrower cut like the Forecast or Aging reports.",
     tags: ["pipeline report","full opportunity export","complete report"]
@@ -388,7 +435,8 @@ const QA_OPPORTUNITY = [
   {
     action: "export",
     object: "huddle report",
-    scope: "module", section: "Reports",
+    scope: "module",
+    section: "Reports",
     question: "How do I generate the Huddle Report?",
     answer: "1. Go to **Reports → Huddle Report**.\n2. Select a **BD Representative** and a **Date Range**.\n3. Optionally use **Save Filters** / **Clear Filters**.\n4. Click **Generate** to produce a downloadable report.",
     tags: ["huddle report","bd representative","generate huddle report"]
@@ -396,7 +444,8 @@ const QA_OPPORTUNITY = [
   {
     action: "view",
     object: "pipeline gantt view",
-    scope: "module", section: "Reports",
+    scope: "module",
+    section: "Reports",
     question: "What is the Pipeline Gantt View for?",
     answer: "A Gantt-chart timeline of opportunities, with a granularity toggle (**Daily / Weekly / Monthly / Quarterly / Yearly**), a date-range picker, Filters, and download/save icons.",
     tags: ["pipeline gantt view","gantt timeline","gantt timeline report"]
@@ -404,7 +453,8 @@ const QA_OPPORTUNITY = [
   {
     action: "view",
     object: "customer win rate",
-    scope: "module", section: "Reports",
+    scope: "module",
+    section: "Reports",
     question: "Where do I find win rate by customer?",
     answer: "**Reports → Customer Win Rate Report**, or the **Top Customers Performance** table on the **Executive Summary** analytics tab.",
     tags: ["customer win rate","win rate report"]
@@ -412,7 +462,8 @@ const QA_OPPORTUNITY = [
   {
     action: "assign",
     object: "account assignment",
-    scope: "module", section: "Account Assignment",
+    scope: "module",
+    section: "Account Assignment",
     question: "How do I assign a customer account to a responsibility chain?",
     answer: "1. Go to **Opportunities Management → Account Assignment**.\n2. Click **+ Add**.\n3. Search and select the **Customer Name**.\n4. Choose **Market Type**, **Sub Market Type**, **Tier**.\n5. Pick **Site Representative**, **Corporate Lead**, **Executive Lead**.\n6. Click **Submit**.",
     tags: ["account assignment","site representative","corporate lead","responsibility chain"]
@@ -420,7 +471,8 @@ const QA_OPPORTUNITY = [
   {
     action: "define",
     object: "site representative auto-fill",
-    scope: "module", section: "Account Assignment",
+    scope: "module",
+    section: "Account Assignment",
     question: "Why does Create Opportunity automatically fill in the Site Representative field?",
     answer: "Because a matching **Account Assignment** record exists for that Customer/Market Type combination — the assignment registry pre-populates the Site Representative, Corporate Lead, and Executive Lead pickers when it finds a match.",
     tags: ["auto-fill site representative","account assignment match"]
@@ -428,7 +480,8 @@ const QA_OPPORTUNITY = [
   {
     action: "define",
     object: "account assignment vs contacts directory",
-    scope: "module", section: "Account Assignment",
+    scope: "module",
+    section: "Account Assignment",
     question: "What's the difference between Account Assignment and the Contacts Directory?",
     answer: "**Account Assignment** maps a Customer account to internal responsible personnel (Site Representative, Corporate Lead, Executive Lead) by market segment/location — it's about internal ownership of the relationship. The **Contacts Directory** is the external people directory — the actual contacts at Customer and Owner organizations.",
     tags: ["account assignment vs contacts directory","module comparison"]
@@ -436,7 +489,8 @@ const QA_OPPORTUNITY = [
   {
     action: "create",
     object: "task",
-    scope: "module", section: "Sidebar Shortcuts",
+    scope: "module",
+    section: "Sidebar Shortcuts",
     question: "How do I create a task linked to an Opportunity?",
     answer: "1. Open the **Task** shortcut icon in the module's tab bar.\n2. Click **+ Add Task**.\n3. Fill in **Name*** and **Date*** (required), and optionally Description and Time.\n4. Search for and link the required **Opportunity***.\n5. Click **Create** (or Cancel to discard).",
     tags: ["create task","link task to opportunity"]
@@ -444,7 +498,8 @@ const QA_OPPORTUNITY = [
   {
     action: "view",
     object: "module calendar",
-    scope: "module", section: "Sidebar Shortcuts",
+    scope: "module",
+    section: "Sidebar Shortcuts",
     question: "How do I see all module-related events on a calendar?",
     answer: "Open the **Calendar** shortcut icon — it shows a full month-view calendar of module-related events (opportunity due dates, meetings, follow-ups), with a mini date-picker, a My Calendars panel, and a daily Events list for the selected day.",
     tags: ["calendar shortcut","module events"]
@@ -452,7 +507,8 @@ const QA_OPPORTUNITY = [
   {
     action: "define",
     object: "contacts directory vs customer interactions",
-    scope: "module", section: "Sidebar Shortcuts",
+    scope: "module",
+    section: "Sidebar Shortcuts",
     question: "What's the difference between the Contacts Directory and Customers Interactions?",
     answer: "**Contacts Directory** is the master people directory — every Customer contact and Owner contact in one place, organized into Contacts (all), Customer Contacts, and Owner Contacts sub-tabs. **Customers Interactions** is where you drill into a specific customer and log/view interactions (calls, mail, meetings, notes) with their contacts. The Directory is the contact list; Customers Interactions is the activity log built on top of it.",
     tags: ["contacts directory vs customers interactions","module comparison"]
@@ -460,7 +516,8 @@ const QA_OPPORTUNITY = [
   {
     action: "view",
     object: "contact fields",
-    scope: "module", section: "Sidebar Shortcuts",
+    scope: "module",
+    section: "Sidebar Shortcuts",
     question: "What information is stored per contact in the Contacts Directory?",
     answer: "Customer/Owner (type), Customer/Owner Name, Contact ID, Salutation, First/Middle/Last Name, Suffix, Job Title, Primary Email, Secondary Email, Primary Phone Number, Work Phone Number, Primary Address (Line 1/2, Country, State, City, Zip), Secondary Address (same fields), Services Provided, and Personal Website. Use the Contacts (all), Customer Contacts, or Owner Contacts sub-tabs to narrow the list.",
     tags: ["contact fields","contacts directory fields"]
@@ -468,7 +525,8 @@ const QA_OPPORTUNITY = [
   {
     action: "create",
     object: "customer",
-    scope: "module", section: "Sidebar Shortcuts",
+    scope: "module",
+    section: "Sidebar Shortcuts",
     question: "How do I create a new customer?",
     answer: "1. Open the **Customers** shortcut and click **Create Customer**.\n2. Step 1 — **Basic Details**: enter Customer Name* (required), plus Short Name, Alias Name, Phone Number, Email, Fax Number, Url, Group, and Primary/Mailing/Billing Address (use \"Same as Primary address\" as a shortcut).\n3. Step 2 — **Locations & Tax Codes**.\n4. Step 3 — **Preview**, then submit.",
     tags: ["create customer","new customer wizard"]
@@ -476,7 +534,8 @@ const QA_OPPORTUNITY = [
   {
     action: "define",
     object: "poc ocr",
-    scope: "module", section: "Sidebar Shortcuts",
+    scope: "module",
+    section: "Sidebar Shortcuts",
     question: "What is POC OCR?",
     answer: "An option on the **Create Customer** split button that lets you scan a business card or document to auto-populate a contact's details, rather than typing them manually.",
     tags: ["poc ocr","scan business card"]
@@ -484,7 +543,8 @@ const QA_OPPORTUNITY = [
   {
     action: "edit",
     object: "customer record",
-    scope: "module", section: "Sidebar Shortcuts",
+    scope: "module",
+    section: "Sidebar Shortcuts",
     question: "How do I edit, delete, or view the history of a customer record?",
     answer: "Open the customer card's three-dot menu — it offers **Edit** (opens the record in an editable form), **Delete**, and **History** (audit/change history).",
     tags: ["edit customer","delete customer","customer history","delete customer history"]
@@ -492,7 +552,8 @@ const QA_OPPORTUNITY = [
   {
     action: "edit",
     object: "duplicate customer",
-    scope: "module", section: "Sidebar Shortcuts",
+    scope: "module",
+    section: "Sidebar Shortcuts",
     question: "How do I merge two duplicate customer records?",
     answer: "Click **Merge Duplicates** in the Customers toolbar.",
     tags: ["merge duplicates","duplicate customer"]
@@ -500,7 +561,8 @@ const QA_OPPORTUNITY = [
   {
     action: "edit",
     object: "customer",
-    scope: "module", section: "Sidebar Shortcuts",
+    scope: "module",
+    section: "Sidebar Shortcuts",
     question: "How do I turn a Customer into an Owner, or group customers together?",
     answer: "Use **Convert Customers to Owners** to migrate a customer record, or **Add Groups** to group customers — both are buttons in the Customers toolbar.",
     tags: ["convert customer to owner","add groups","convert to owner add groups"]
@@ -508,7 +570,8 @@ const QA_OPPORTUNITY = [
   {
     action: "define",
     object: "customer vs owner",
-    scope: "module", section: "Sidebar Shortcuts",
+    scope: "module",
+    section: "Sidebar Shortcuts",
     question: "What's the difference between a Customer and an Owner?",
     answer: "A **Customer** is a customer account/company that can be linked to Opportunities. An **Owner** is the project Owner organization — the client entity that owns/commissions a project. The two lists can overlap (a Customer can become an Owner via Convert Customers to Owners), but they're tracked as separate master lists.",
     tags: ["customer vs owner","terminology"]
@@ -516,7 +579,8 @@ const QA_OPPORTUNITY = [
   {
     action: "create",
     object: "owner",
-    scope: "module", section: "Sidebar Shortcuts",
+    scope: "module",
+    section: "Sidebar Shortcuts",
     question: "How do I create a new Owner from Opportunity Management?",
     answer: "Open the **Owners** shortcut and click **Create Owner**. Editing/deleting an Owner uses the same three-dot menu pattern as Customers and Competitors; the Owners screen also has its own Settings shortcut alongside Create Owner, Search, Export, and Filters.",
     tags: ["create owner shortcut","owners sidebar"]
@@ -524,7 +588,8 @@ const QA_OPPORTUNITY = [
   {
     action: "create",
     object: "competitor",
-    scope: "module", section: "Sidebar Shortcuts",
+    scope: "module",
+    section: "Sidebar Shortcuts",
     question: "How do I add a competitor?",
     answer: "1. Open the **Competitors** shortcut and click **Create Competitor**.\n2. Enter **Competitor Name*** (required).\n3. Select **Competitor Type*** (required — Direct, Indirect, or Replacement Competitor).\n4. Optionally add a Description.\n5. Click **Submit** (or Cancel to discard).",
     tags: ["add competitor","create competitor"]
@@ -532,7 +597,8 @@ const QA_OPPORTUNITY = [
   {
     action: "view",
     object: "competitor field",
-    scope: "module", section: "Sidebar Shortcuts",
+    scope: "module",
+    section: "Sidebar Shortcuts",
     question: "Where do competitors show up once created?",
     answer: "They populate the searchable **Competitors** field/column on Opportunities, letting you track which competing firms are pursuing the same job.",
     tags: ["competitors field","track competing firms"]
@@ -540,7 +606,8 @@ const QA_OPPORTUNITY = [
   {
     action: "define",
     object: "status dropdown error",
-    scope: "module", section: "Settings",
+    scope: "module",
+    section: "Settings",
     question: "Why can't I select a Status when creating an opportunity?",
     answer: "The **Status** dropdown is populated from whatever Statuses are configured for the current Stage under **Settings → Stages & Statuses Configuration**. If the **Lead** stage has no Statuses added, the dropdown is empty and the Create Opportunity dialog cannot be submitted.\n\n**Fix:** An admin should go to Settings → Stages & Statuses Configuration → Lead stage, and add at least one Status (e.g. \"New\", \"Contacted\", \"Qualified\").",
     tags: ["status missing","lead stage","stages and statuses","status missing troubleshoot"]
@@ -548,7 +615,8 @@ const QA_OPPORTUNITY = [
   {
     action: "create",
     object: "status",
-    scope: "module", section: "Settings",
+    scope: "module",
+    section: "Settings",
     question: "How do I add a new Status to a Stage?",
     answer: "1. Go to **Settings → Stages & Statuses Configuration**.\n2. Select the Stage you want to edit.\n3. Add the new status name under that Stage's Allowed Statuses.\n4. For the **Closed** stage specifically, also classify the status as **Success** or **Failure** (e.g. Won = Success; Lost, Cancelled, No Bid = Failure).",
     tags: ["add status","stage status configuration","add status to stage"]
@@ -556,7 +624,8 @@ const QA_OPPORTUNITY = [
   {
     action: "configure",
     object: "pipeline stage",
-    scope: "module", section: "Settings",
+    scope: "module",
+    section: "Settings",
     question: "How do I add a whole new Stage, or reorder existing stages, in the pipeline?",
     answer: "Go to **Settings → Stages & Statuses Configuration** and use **Add Stages** to add one, or **Reorder Stages** to change the pipeline order.",
     tags: ["add stage","reorder stages","add stage reorder stages"]
@@ -564,7 +633,8 @@ const QA_OPPORTUNITY = [
   {
     action: "configure",
     object: "stale threshold",
-    scope: "module", section: "Settings",
+    scope: "module",
+    section: "Settings",
     question: "Where do I set the Stale Threshold?",
     answer: "**Settings → Opportunities Form → Stale Threshold** — set the number of Days of inactivity after which an opportunity is flagged \"stale.\" This feeds the dashboard's Stale Opportunities KPI.",
     tags: ["stale threshold setting","opportunities form","opportunities form setting"]
@@ -572,7 +642,8 @@ const QA_OPPORTUNITY = [
   {
     action: "create",
     object: "custom field",
-    scope: "module", section: "Settings",
+    scope: "module",
+    section: "Settings",
     question: "How do I add a custom field to the Create Opportunity form?",
     answer: "Go to **Settings → Opportunities Form → Configurable Fields** and add the custom field there. **Standard Fields** in the same section covers the built-in fields.",
     tags: ["configurable fields","custom field opportunity form","configurable fields opportunity form"]
@@ -580,7 +651,8 @@ const QA_OPPORTUNITY = [
   {
     action: "configure",
     object: "opportunity id format",
-    scope: "module", section: "Settings",
+    scope: "module",
+    section: "Settings",
     question: "Where do I configure the Opportunity ID format?",
     answer: "**Settings → ID Settings.** Choose an ID Separator (`/`, `-`, or None) and compose the ID from Business Unit, Year, and Serial No./ID components. **Child ID Settings** configures the format for child opportunities separately.",
     tags: ["id settings","opportunity id format"]
@@ -588,7 +660,8 @@ const QA_OPPORTUNITY = [
   {
     action: "configure",
     object: "expense tracking",
-    scope: "module", section: "Settings",
+    scope: "module",
+    section: "Settings",
     question: "Where do I manage expense tracking for a pursuit?",
     answer: "**Settings → Expense**, which has two sub-tabs: **Form** (Table Standard Fields — S.No, Expense Type, Item Name, Quantity, Unit Price, Amount, Comments — plus Configurable Fields) and **Approval Workflow**.",
     tags: ["expense settings","expense form"]
@@ -596,7 +669,8 @@ const QA_OPPORTUNITY = [
   {
     action: "configure",
     object: "business development catalog",
-    scope: "module", section: "Settings",
+    scope: "module",
+    section: "Settings",
     question: "Where are the Business Development and Project Types catalogs maintained?",
     answer: "**Settings → Business Development** maintains a list of BD codes/representatives (Serial Number, VP Business Unit, Description, Actions). **Settings → Project Types** maintains the project/work-type catalog (category such as FIELD or SHOP, material, and status flags).",
     tags: ["business development catalog","project types catalog"]
@@ -604,7 +678,8 @@ const QA_OPPORTUNITY = [
   {
     action: "define",
     object: "customer relation settings",
-    scope: "module", section: "Settings",
+    scope: "module",
+    section: "Settings",
     question: "What does Customer Relation configure?",
     answer: "**Settings → Customer Relation** sets a **Look Back Window (In Days)** and an **SLA (In Hours)** used for customer-relationship/response tracking.",
     tags: ["customer relation settings","sla","look back window sla"]
@@ -612,7 +687,8 @@ const QA_OPPORTUNITY = [
   {
     action: "configure",
     object: "opportunity type list",
-    scope: "module", section: "Settings",
+    scope: "module",
+    section: "Settings",
     question: "Where do I manage the Opportunity Type list or create Milestone Templates?",
     answer: "**Settings → Opportunity Type** is a simple maintained list (Serial Number, Opportunity Type, Actions). **Settings → Milestone Templates** has Milestone Templates and Master Milestones sub-tabs with a Create button.",
     tags: ["opportunity type list","milestone templates"]
@@ -620,7 +696,8 @@ const QA_OPPORTUNITY = [
   {
     action: "configure",
     object: "competitor form",
-    scope: "module", section: "Settings",
+    scope: "module",
+    section: "Settings",
     question: "How do I customize the Competitor creation form?",
     answer: "**Settings → Competitor Form** lets you customize the Competitor create form's standard and configurable fields.",
     tags: ["competitor form settings","customize competitor fields"]
@@ -628,7 +705,8 @@ const QA_OPPORTUNITY = [
   {
     action: "configure",
     object: "user group permissions",
-    scope: "module", section: "Settings",
+    scope: "module",
+    section: "Settings",
     question: "How do I manage who can access Opportunity Management and what they can do?",
     answer: "Go to **Settings → Users and Permissions**. Manage existing User Groups (e.g. Opportunity Manager, Opportunity Estimator) via a three-dot menu offering Permissions and Users management, or click **Add User Group** to create a new group and configure its Permissions and Users.",
     tags: ["opportunity permissions","user groups"]
@@ -636,7 +714,8 @@ const QA_OPPORTUNITY = [
   {
     action: "define",
     object: "module naming",
-    scope: "module", section: "Troubleshooting & Naming Differences",
+    scope: "module",
+    section: "Troubleshooting & Naming Differences",
     question: "Why is the module sometimes called \"Leads Management\" and sometimes \"Opportunities Management\"?",
     answer: "This is a per-context terminology setting. When the module is opened from **Home** with no project selected, it's labeled **Opportunities Management** with an **Opportunities** tab. When opened while a construction Project is in context, it's labeled **Leads Management** with a **Leads** tab and a project badge next to the Arena logo. The screens, fields, and functionality are identical either way.",
     tags: ["leads vs opportunities","module naming"]
@@ -644,7 +723,8 @@ const QA_OPPORTUNITY = [
   {
     action: "define",
     object: "module scope",
-    scope: "module", section: "Troubleshooting & Naming Differences",
+    scope: "module",
+    section: "Troubleshooting & Naming Differences",
     question: "Is Opportunity Management tied to a specific construction project?",
     answer: "No. The module is company-wide, not tied to a single project. It covers a personal dashboard, the Opportunity list/board, a customer-interaction CRM log, analytics, reports, and account assignment across the whole business.",
     tags: ["company-wide module","project scope"]
@@ -652,7 +732,8 @@ const QA_OPPORTUNITY = [
   {
     action: "define",
     object: "opportunities vs leads terminology",
-    scope: "module", section: "Troubleshooting & Naming Differences",
+    scope: "module",
+    section: "Troubleshooting & Naming Differences",
     question: "Opportunities vs. Leads — is there a difference?",
     answer: "No functional difference. \"Opportunity\" and \"Lead\" are two labels for the same module and the same records, chosen based on context: **Opportunities** when the module is reached from Home with no project selected, **Leads** when reached with a construction Project in context. Screens, fields, and functionality are identical.",
     tags: ["opportunities vs leads","terminology"]
@@ -660,7 +741,8 @@ const QA_OPPORTUNITY = [
   {
     action: "define",
     object: "customer vs contact",
-    scope: "module", section: "Troubleshooting & Naming Differences",
+    scope: "module",
+    section: "Troubleshooting & Naming Differences",
     question: "What's the difference between a Customer and a Contact?",
     answer: "A **Customer** is the company/account record. A **Contact** is an individual person associated with that Customer (or an Owner), tracked in the Contacts Directory and drilled into from Customers Interactions. A single Customer can have multiple Contacts.",
     tags: ["customer vs contact","terminology"]
@@ -668,7 +750,8 @@ const QA_OPPORTUNITY = [
   {
     action: "define",
     object: "create opportunity blocked",
-    scope: "module", section: "Troubleshooting & Naming Differences",
+    scope: "module",
+    section: "Troubleshooting & Naming Differences",
     question: "Why can't I submit the Create Opportunity form even after filling in the Contact section fields?",
     answer: "The Contact section fields (Customer Groups, Site Representative, Corporate Lead, Executive Lead) are optional. The blocker is almost always the required **Status** field being empty because of the Lead-stage configuration gap — check that first (see **Why can't I select a Status when creating an opportunity?**).",
     tags: ["create opportunity blocked","contact fields optional"]
@@ -676,7 +759,8 @@ const QA_OPPORTUNITY = [
   {
     action: "view",
     object: "empty catalog list",
-    scope: "module", section: "Troubleshooting & Naming Differences",
+    scope: "module",
+    section: "Troubleshooting & Naming Differences",
     question: "Why are the Opportunity Type list and Milestone Templates empty?",
     answer: "No entries have been added yet — **Settings → Opportunity Type** and **Settings → Milestone Templates** (Milestone Templates and Master Milestones sub-tabs) are empty by default until an administrator adds entries, using **Create** for Milestone Templates.",
     tags: ["empty opportunity type list","empty milestone templates","opportunity type milestone templates empty"]
@@ -806,6 +890,168 @@ const QA_OPPORTUNITY = [
     question: "How do I log a call or note from the field?",
     answer: "In **Arena Onsite**, open **Client Interactions** and tap **Notes** on the contact, or tap the client and open the contact card. Use the **Opportunities** dropdown to pick the deal, then log the call, meeting, task or note. **See History** shows everything logged for that contact.",
     tags: ["log call mobile","client interactions mobile","notes button mobile","see history mobile"]
+  },
+  {
+    action: "overview",
+    object: "opportunity flow",
+    scope: "module",
+    section: "Who Does What in Opportunity Management",
+    question: "What is the opportunity process and who does what?",
+    answer: "A **BD user** logs a lead with **+ Create**, completes the profile (**Details**, **Status & Value**, **Timeline & Activity**, **Contact**), sets **Milestones** and changes the **Stage**, filling every field marked with a red asterisk. The opportunity then advances through its stages and statuses until it closes. **Sales Ops** keeps customers, locations, **Account Assignment** and templates ready. **Leadership** follows the pipeline on **My Dashboard**, **Reports** and **Analytics**.",
+    tags: ["opportunity process","who does what opportunity","opportunity roles","pipeline process","opportunity workflow overview"]
+  },
+  {
+    action: "define",
+    object: "bd user",
+    scope: "module",
+    section: "Who Does What in Opportunity Management",
+    question: "As a BD user, how do I take a lead through to a qualified opportunity?",
+    answer: "Click **+ Create** on the **Opportunities** tab, enter the required fields and click **Submit**. Open the lead and complete the profile. Choose the **Milestone Template** and enter target dates on the **Milestones** tab. Change **Stage**, fill in every field with a red asterisk and click **Save Changes**. Then keep Stage, Status and interactions up to date. If a customer, location or contact is missing, ask Sales Ops in the opportunity's **Comments** tab.",
+    tags: ["bd user","business development rep","as a bd user","lead to opportunity","qualify lead steps","what does bd do"]
+  },
+  {
+    action: "define",
+    object: "sales ops",
+    scope: "module",
+    section: "Who Does What in Opportunity Management",
+    question: "As Sales Ops, what do I set up for Opportunity Management?",
+    answer: "Under **Settings**: **Stages & Statuses Configuration**, the **Opportunities Form** (Required by stage, Hide, Show At Creation), **ID Settings**, Opportunity Types and **Milestone Templates**, the Business Development pool, expense categories with approval routing, and **Users and Permissions**. Keep **Account Assignment** up to date, create **Locations** (named Client - City) in Global Data and map them, approve new customers, and answer requests in an opportunity's **Comments**.",
+    tags: ["sales ops","module manager","as sales ops","administrator opportunity","who configures opportunity","opportunity admin setup"]
+  },
+  {
+    action: "define",
+    object: "team member",
+    scope: "module",
+    section: "Who Does What in Opportunity Management",
+    question: "What can a team member do on an opportunity?",
+    answer: "Once added on the **Teams** tab, a team member can edit the opportunity's fields and add information. The **Comments** tab is the internal chat for that deal, so the team can talk without leaving the record.",
+    tags: ["team member opportunity","teams tab","add team opportunity","edit opportunity team","comments team chat"]
+  },
+  {
+    action: "define",
+    object: "leadership",
+    scope: "module",
+    section: "Who Does What in Opportunity Management",
+    question: "As a leader or executive, where do I follow the pipeline?",
+    answer: "Use **Analytics** (Market & Operations, Executive Summary, Pipeline by BU, Pipeline Intelligence) and **Reports** (Forecast, Opportunity Aging, Outcome Analysis, Customer Win Rate, Pipeline Report, Huddle Report, Pipeline Gantt View). To see every opportunity on **My Dashboard**, you need the **Admin View** permission under Global Data.",
+    tags: ["leadership opportunity","executive pipeline","as an executive","sales director","where to follow pipeline","admin view leadership"]
+  },
+  {
+    action: "approve",
+    object: "customer",
+    scope: "module",
+    section: "Sidebar Shortcuts",
+    question: "Who approves a new customer in Opportunity Management?",
+    answer: "A customer created by a BD user goes to Sales Ops for approval before anyone can use it on an opportunity. Once approved, the BD user can use it and add its POCs. For a new location or a new account assignment, Sales Ops adds it against the opportunity and you get a notification.",
+    tags: ["who approves customer","new customer approval","sales ops approves customer","customer approval workflow","client approval"]
+  },
+  {
+    action: "define",
+    object: "locations",
+    scope: "module",
+    section: "Account Assignment",
+    question: "Who maintains customer locations and account assignments?",
+    answer: "Sales Ops. Create locations under **Global Data → Locations → + Create**, named **Client - City** (for example Northstar Energy - Baton Rouge), then map them in **Account Assignment** so BD users can pick them. Each Account Assignment row ties Client, Location, Market Type and Sub Market Type to the BD Rep, Corporate Lead, Executive Lead and Tier.",
+    tags: ["who maintains locations","account assignment owner","location naming","sales ops account assignment","map location"]
+  },
+  {
+    action: "define",
+    object: "opportunity details",
+    scope: "module",
+    section: "Opportunities",
+    question: "What is in the Details section of an opportunity?",
+    answer: "Opportunity ID (automatic, read only, for example 26-23-12), Opportunity Name, Created By (automatic), Project Type, Business Unit (read only after creation), **Opportunity Type** (New Build or Existing Facility), **Milestone Template** (only templates mapped to the chosen type appear) and Market Type / Sub Market Type. Opportunity Type is set on the profile, not the Create window.",
+    tags: ["details section opportunity","opportunity id format","opportunity type new build","milestone template choose","profile details fields"]
+  },
+  {
+    action: "define",
+    object: "opportunity status and value",
+    scope: "module",
+    section: "Opportunities",
+    question: "What is in the Status & Value section of an opportunity?",
+    answer: "Stage and Status, **TIC** (Total Installed Cost), **Opportunity Value**, **Go %**, **Get %**, **AI Probability** (calculated once the system has enough data), **Weighted Value** (calculated automatically) and the **Manual % / AI %** toggle that picks which probability the weighted value uses.",
+    tags: ["status and value section","tic total installed cost","weighted value","manual ai toggle","profile value fields"]
+  },
+  {
+    action: "define",
+    object: "opportunity timeline",
+    scope: "module",
+    section: "Opportunities",
+    question: "What is in the Timeline & Activity section of an opportunity?",
+    answer: "Created Date (read only), **Due Date** (expected close), **Follow Up Date / Time** (set for automatic reminders), **Opportunity Age** in days, **Last Interaction**, and the **Stage / Inactive Threshold Notification** that alerts you when an opportunity sits too long without updates.",
+    tags: ["timeline and activity section","follow up date reminder","due date opportunity","profile timeline fields"]
+  },
+  {
+    action: "define",
+    object: "opportunity contact section",
+    scope: "module",
+    section: "Opportunities",
+    question: "What is in the Contact section of an opportunity?",
+    answer: "Customer and Customer POC, Owner and Owner POC, EPC / Engineer and POC, Contracting Entity and POC, Location (only locations mapped to the customer), Competitors, and the BD Rep, Corporate Lead and Executive Lead. Use the **+ Create** links beside a field to add a new customer, POC, owner, EPC or contracting entity.",
+    tags: ["contact section opportunity","epc engineer poc","contracting entity","owner poc","competitors field","profile contact fields"]
+  },
+  {
+    action: "edit",
+    object: "opportunity profile",
+    scope: "module",
+    section: "Opportunities",
+    question: "How do I complete the opportunity profile after creating a lead?",
+    answer: "Click the lead to open its profile. Fill in **Details** (Project Type, Opportunity Type, Milestone Template, Market Type), **Status & Value** (TIC, Opportunity Value, Go %, Get %), **Timeline & Activity** (Due Date, Follow Up) and **Contact** (customer, owner, EPC, contracting entity, location, competitors, team). Click **Save Changes**. If a customer, location or contact is not listed, ask Sales Ops in the **Comments** tab.",
+    tags: ["complete opportunity profile","fill in profile","profile after create","edit lead profile"]
+  },
+  {
+    action: "view",
+    object: "parent kanban",
+    scope: "module",
+    section: "Opportunities",
+    question: "What is the Parent Kanban view?",
+    answer: "It is a Kanban board grouped by main stage that shows the total value of each stage and cards only for top-level (parent) opportunities, so child opportunities do not crowd the board.",
+    tags: ["parent kanban","kanban parent view","top level opportunities board"]
+  },
+  {
+    action: "filter",
+    object: "stage chips",
+    scope: "module",
+    section: "Opportunities",
+    question: "How do I filter opportunities by stage?",
+    answer: "Click a coloured **stage chip** at the top left of the **Opportunities** screen. Each chip shows the count for that stage, and clicking it filters the screen to that stage. You can also use **Filters**, **Search** and **Manage Columns**.",
+    tags: ["stage chips","filter by stage","stage counts","opportunities by stage"]
+  },
+  {
+    action: "view",
+    object: "account assignment report",
+    scope: "module",
+    section: "Reports",
+    question: "What is the Account Assignment Report?",
+    answer: "A tile on the **Reports** tab that shows who is assigned to each customer account. To change the assignments, use the **Account Assignment** tab.",
+    tags: ["account assignment report","reports account assignment","who is assigned report"]
+  },
+  {
+    action: "link",
+    object: "parent mobile",
+    scope: "module",
+    section: "Mobile App (Arena Onsite)",
+    question: "How do I link or create a parent opportunity on the mobile app?",
+    answer: "In **Arena Onsite**, tap **Opportunities**, open the opportunity, then tap **Link Parent** to add it under an existing parent or **Create Parent** to make a new one. The **Child** and **Parent** tabs on the list show the result.",
+    tags: ["mobile parent","link parent mobile","create parent mobile","arena onsite parent"]
+  },
+  {
+    action: "define",
+    object: "tic",
+    scope: "module",
+    section: "Opportunities",
+    question: "What does TIC mean on an opportunity?",
+    answer: "**TIC** is Total Installed Cost for the opportunity, including engineering, procurement and construction. It sits in the **Status & Value** section of the profile next to **Opportunity Value**, which is the amount your organisation could be awarded.",
+    tags: ["tic","total installed cost","tic meaning","tic field opportunity"]
+  },
+  {
+    action: "define",
+    object: "admin view",
+    scope: "module",
+    section: "Who Does What in Opportunity Management",
+    question: "Who can see all opportunities in the organisation?",
+    answer: "By default **My Dashboard** and the list show your own pipeline. A user needs the **Admin View** permission enabled under **Global Data** to see every opportunity. Ask your administrator to turn it on; leadership and Sales Ops usually have it.",
+    tags: ["who can see all opportunities","admin view permission","see everyone pipeline","organisation wide opportunities"]
   }
 ];
 
@@ -8554,6 +8800,59 @@ const MODULES = [
     "qaItems": QA_OPPORTUNITY,
     "narrative": [
       {
+        "heading": "Who Does What in Opportunity Management",
+        "intro": "<p>This section is for anyone who wants to know who does what in Opportunity Management: BD users log and work the pursuits, team members help on them, leads oversee them, and Sales Ops keeps the master data and setup in order. Each role works on the same opportunity record.</p><p>Access comes from user groups under <strong>Settings → Users and Permissions</strong> (the BD group and the Admin group). To see every opportunity in the organisation, a user needs the <strong>Admin View</strong> permission under Global Data.</p>",
+        "definitions": [
+          {
+            "term": "Opportunity flow at a glance",
+            "definition": "A BD user logs a lead with the short Create form, then opens the lead and completes its profile: classification, value, dates and contacts. The BD user sets milestone dates and changes the Stage, at which point the system marks every field the setup requires with a red asterisk. The opportunity then advances through its stages and statuses until it closes, and each outcome stays on the record. Leadership follows the pipeline on <strong>My Dashboard</strong>, <strong>Reports</strong> and <strong>Analytics</strong>. Sales Ops keeps customers, locations, account assignments and templates ready so BD users are not blocked."
+          },
+          {
+            "term": "BD user: what you do",
+            "definition": "Business Development rep, estimator or account manager. You click <strong>+ Create</strong> to log a lead, open it to complete the profile (<strong>Details</strong>, <strong>Status & Value</strong>, <strong>Timeline & Activity</strong>, <strong>Contact</strong>), set the Milestone Template and target dates, log calls, mails, meetings, tasks and notes on <strong>Customers Interactions</strong>, add proposals and pursuit expenses, and move the Stage and Status as the pursuit advances. If a customer, location or contact is missing, you ask Sales Ops in the opportunity's <strong>Comments</strong> tab. Your <strong>My Dashboard</strong> shows your own pipeline."
+          },
+          {
+            "term": "Team member: what you do",
+            "definition": "Anyone added on the opportunity's <strong>Teams</strong> tab. Team members can edit the opportunity's fields and add information, and use the <strong>Comments</strong> tab as the internal chat for that deal."
+          },
+          {
+            "term": "BD Rep, Corporate Lead and Executive Lead: what you do",
+            "definition": "These are the people named on an opportunity's <strong>Contact</strong> section: the BD Rep drives the pursuit (some screens call this role Site Representative), the Corporate Lead gives business oversight, and the Executive Lead holds final approval authority. They can be picked by hand, or fill in automatically when the customer, location and market match a row in <strong>Account Assignment</strong>."
+          },
+          {
+            "term": "Sales Ops (Module Manager): what you do",
+            "definition": "You keep the module ready for BD users. Under <strong>Settings</strong> you manage <strong>Stages & Statuses Configuration</strong>, the <strong>Opportunities Form</strong> (Required by stage, Hide, Show At Creation), <strong>ID Settings</strong>, Opportunity Types and <strong>Milestone Templates</strong>, the Business Development name pool, expense categories with their approval routing, proposal statuses and <strong>Users and Permissions</strong>. On the module you keep <strong>Account Assignment</strong> up to date. In Global Data you create <strong>Locations</strong> (named Client - City), approve new customers and maintain the <strong>Compliance Hub</strong>. You also answer BD requests posted in an opportunity's <strong>Comments</strong>."
+          },
+          {
+            "term": "Leadership: what you do",
+            "definition": "Sales Directors and executives read the pipeline rather than enter it: <strong>Analytics</strong> (Market & Operations, Executive Summary, Pipeline by BU, Pipeline Intelligence) and <strong>Reports</strong> (Forecast, Opportunity Aging, Outcome Analysis, Customer Win Rate, Pipeline Report, Huddle Report, Pipeline Gantt View). With the <strong>Admin View</strong> permission they also see every opportunity on the dashboard."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Take a lead from first log to qualified opportunity (BD user)",
+            "steps": [
+              "Click <strong>+ Create</strong> on the <strong>Opportunities</strong> tab, enter the Opportunity Name and the other required fields, and click <strong>Submit</strong>.",
+              "Open the lead and complete the profile in the four sections.",
+              "Choose the <strong>Milestone Template</strong>, open the <strong>Milestones</strong> tab and enter target dates.",
+              "Change <strong>Stage</strong>. Fill in every field marked with a red asterisk, then click <strong>Save Changes</strong>.",
+              "Keep Status, Stage and interactions up to date as the pursuit advances."
+            ],
+            "note": "The fields the system requires at each stage are set by Sales Ops in Settings → Opportunities Form."
+          },
+          {
+            "title": "Get Opportunity Management ready for BD users (Sales Ops)",
+            "steps": [
+              "Open <strong>Settings</strong> and set up <strong>Stages & Statuses Configuration</strong> and the <strong>Opportunities Form</strong>.",
+              "Set <strong>ID Settings</strong>, Opportunity Types and <strong>Milestone Templates</strong>.",
+              "Add users to the BD group and the Admin group under <strong>Users and Permissions</strong>.",
+              "In Global Data, create <strong>Locations</strong>, then map each one in <strong>Account Assignment</strong> with its BD Rep, Corporate Lead, Executive Lead and Tier.",
+              "Approve new customer requests, and check the opportunity <strong>Comments</strong> for BD requests."
+            ]
+          }
+        ]
+      },
+      {
         "heading": "Settings",
         "intro": "<p><strong>Settings</strong> (the gear icon next to the module's tab bar) is where an <strong>Opportunity Management Module Admin</strong> configures the pipeline, form fields, ID format, and permissions that shape how the whole Business Development team uses the module — End Users (BD reps, estimators) never need to open these screens day to day, but they feel it first if the setup here is left half-done. A misconfiguration is not a one-deal problem: it can quietly stop the entire team from logging new pursuits.</p><p>Nearly every \"why can't I do X\" question in Opportunity Management (most often, \"why can't I select a Status when creating an opportunity\") traces back to a gap here rather than a bug or a permission issue, which makes this the first place to check when something in the module looks blocked.</p>\n    <p>Settings is organized into ten areas: Competitor Form, Stages & Statuses Configuration, Opportunities Form, Expense, ID Settings, Business Development, Project Types, Opportunity Type, Milestone Templates, Customer Relation, and Users and Permissions. Several are simple maintained catalogs an admin populates once and leaves static; Stages & Statuses Configuration and Opportunities Form directly gate what end users can do on the Create Opportunity dialog.</p>",
         "definitions": [
@@ -8764,6 +9063,30 @@ const MODULES = [
           {
             "term": "Parent opportunity totals",
             "definition": "A parent shows <strong>Total Value</strong>, <strong>Total TIC</strong>, <strong>Weighted Value</strong>, <strong>Average Win Probability %</strong>, <strong>Child Count</strong> and <strong>Active Child Count</strong>, with its own <strong>Child</strong> and <strong>Milestones</strong> tabs. Customer and contacts roll up from the children, and milestones can be tracked at parent and child level. Parent IDs use the format YY/parent BU code/ID, and child IDs use YY-BU-ID."
+          },
+          {
+            "term": "Opportunity profile: Details",
+            "definition": "Click a lead to open its full profile, laid out in the same four sections as the Create window. <strong>Details</strong> holds identity and classification: Opportunity ID (generated, read only, for example 26-23-12 as year-business unit-serial), Opportunity Name, Created By (automatic), Project Type, Business Unit (chosen at creation, then read only), Opportunity Type (New Build or Existing Facility), Milestone Template (only the templates mapped to the chosen type are shown) and Market Type / Sub Market Type. Opportunity Type is set on the profile, not on the Create window."
+          },
+          {
+            "term": "Opportunity profile: Status & Value",
+            "definition": "<strong>Status & Value</strong> holds where the opportunity is and the numbers behind it: Stage and Status, TIC (Total Installed Cost: engineering, procurement and construction), Opportunity Value (the amount you could be awarded), Go % and Get %, AI Probability (calculated once the system has enough data), Weighted Value (calculated automatically) and the Manual % / AI % toggle that picks which probability the weighted value uses."
+          },
+          {
+            "term": "Opportunity profile: Timeline & Activity",
+            "definition": "<strong>Timeline & Activity</strong> holds Created Date (read only), Due Date (your expected close date), Follow Up Date / Time (set these for automatic reminders), Opportunity Age in days, Last Interaction, and the Stage / Inactive Threshold Notification that alerts you when an opportunity sits too long without new information."
+          },
+          {
+            "term": "Opportunity profile: Contact",
+            "definition": "<strong>Contact</strong> holds the customer and its POC (use + Create a Client or + Create a Client POC if new), Owner and Owner POC (who owns and funds the asset), EPC / Engineer and POC (who controls design and technical approvals), Contracting Entity and POC (who signs the contract), Location (only locations mapped to the chosen customer are shown), Competitors (used later in win and loss analytics), and the BD Rep, Corporate Lead and Executive Lead, which can fill in from Account Assignment."
+          },
+          {
+            "term": "Parent Kanban view",
+            "definition": "A board layout of Kanban columns grouped by main stage. Each column shows the total stage value and cards only for top-level (parent) opportunities, so related child opportunities do not clutter the board."
+          },
+          {
+            "term": "Stage chips",
+            "definition": "The coloured stage chips at the top left of the Opportunities screen show a count for each stage. Click a chip to filter the screen to that stage. Search, Filters, Manage Columns, Export and the sort arrow on a column header work with every view."
           }
         ],
         "procedures": [
@@ -8838,6 +9161,18 @@ const MODULES = [
               "When the scope breaks into packages, reduce the placeholder value to $1, click <strong>Create Parent</strong>, and then log a child for each business unit (for example Civil, Mechanical)."
             ],
             "note": "The real dollars then sit on the business unit children, and the parent adds them up. This needs Parent Mode to be turned on in Settings."
+          },
+          {
+            "title": "Complete the opportunity profile",
+            "steps": [
+              "Click the lead on the <strong>Opportunities</strong> tab to open its profile.",
+              "In <strong>Details</strong>, set the Project Type, Opportunity Type, Milestone Template and Market Type / Sub Market Type.",
+              "In <strong>Status & Value</strong>, enter TIC, Opportunity Value, Go % and Get %. Weighted Value calculates automatically.",
+              "In <strong>Timeline & Activity</strong>, set the Due Date and any Follow Up Date / Time.",
+              "In <strong>Contact</strong>, choose the customer and its POC, the Owner and POC, EPC / Engineer, Contracting Entity, Location, Competitors and the team (BD Rep, Corporate Lead, Executive Lead).",
+              "Click <strong>Save Changes</strong>."
+            ],
+            "note": "If a customer, location or contact is not listed, post the request in the Comments tab. Creating a new customer sends an approval request to Sales Ops."
           }
         ]
       },
@@ -9264,6 +9599,10 @@ const MODULES = [
           {
             "term": "Pipeline Gantt View",
             "definition": "A Gantt-chart timeline visualization of opportunities, with a granularity toggle (Daily / Weekly / Monthly / Quarterly / Yearly) and a date-range picker, alongside Filters and download/save icons — the report to use when you need to see pursuits laid out against a timeline rather than as tabular data."
+          },
+          {
+            "term": "Account Assignment Report",
+            "definition": "The company guide lists an <strong>Account Assignment Report</strong> among the tiles on the <strong>Reports</strong> tab, next to Forecast, Opportunity Aging, Outcome Analysis, Client Win Rate, Pipeline Report, Huddle Report and Pipeline Gantt View. It shows who is assigned to each customer account. The maintenance screen itself is the <strong>Account Assignment</strong> tab."
           }
         ],
         "procedures": [
@@ -9445,6 +9784,22 @@ const MODULES = [
               "Use the <strong>Opportunities</strong> dropdown to choose the deal.",
               "Log the call, meeting or note. <strong>See History</strong> shows it later."
             ]
+          },
+          {
+            "title": "Link or create a parent opportunity on mobile",
+            "steps": [
+              "Tap <strong>Opportunities</strong> and tap the opportunity to open it.",
+              "Tap <strong>Link Parent</strong> to add it under an existing parent, or <strong>Create Parent</strong> to make a new parent.",
+              "Use the <strong>Child</strong> and <strong>Parent</strong> tabs on the list to see the result."
+            ]
+          },
+          {
+            "title": "Create a client or owner on mobile",
+            "steps": [
+              "Tap <strong>Clients</strong> (or <strong>Owners</strong>) and tap <strong>+ Create</strong>.",
+              "Fill in the collapsible form. To make the same record an owner, choose <strong>Create Owner From Client</strong>.",
+              "Tap <strong>Submit</strong>. A new client goes through approval. When approved, open it to create Client POCs, and check <strong>Rejected</strong> for clients that were turned down."
+            ]
           }
         ]
       }
@@ -9462,6 +9817,7 @@ const MODULES = [
       "Icon shortcuts to the right of the tabs: Task, Calendar, Contacts Directory, Customers, Owners, Competitors, Settings."
     ],
     "sections": [
+      "Who Does What in Opportunity Management",
       "Settings",
       "Opportunities",
       "Customer Interactions",
