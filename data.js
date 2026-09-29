@@ -6422,7 +6422,7 @@ const QA_INVENTORYMANAGEMENT = [
   {
     action: "configure",
     object: "lor approval workflow",
-    scope: "global", section: "Settings",
+    scope: "global", section: "Settings: Fields, IDs, Permissions and LOR Approvals",
     question: "How do I set up approval workflows for LORs?",
     answer: "Go to LOR Workflows and click \"Create Level\" to define a level type (\"All must approve\" or \"Anyone can approve\") and select approvers. A tree/graph view of the workflow is available at the top right corner.",
     tags: ["lor workflow setup","load out request approval","create level"]
@@ -6450,6 +6450,240 @@ const QA_INVENTORYMANAGEMENT = [
     question: "Can I delete a Load Out Request?",
     answer: "An LOR can be deleted only as long as none of the included equipment has been checked out yet.",
     tags: ["delete lor","remove load out request"]
+  },
+  {
+    action: "define",
+    object: "inventory roles",
+    scope: "module",
+    section: "Who Sets This Up",
+    question: "Who does what in Inventory Management?",
+    answer: "The **Global Data Administrator** sets up UOMs and materials. The **Inventory Administrator** sets up settings, ID formats, user groups, Inventory Locations and Hauling Trucks. The **Inventory Manager** (store or yard in-charge) keeps materials, quantities and stock limits at each location. The **Order Creator** raises External Orders. The **Ticket Creator** (dispatcher or weighbridge operator) records each load as an External Ticket. The **Report User** reviews the reports and records Material Reconciliation. Each role gets access through user groups and permissions.",
+    tags: ["inventory roles","who creates external orders","ticket creator","order creator","inventory manager","report user"]
+  },
+  {
+    action: "define",
+    object: "setup order",
+    scope: "module",
+    section: "Who Sets This Up",
+    question: "In what order should I set up Inventory Management?",
+    answer: "First set up **UOMs and UOM groups**, then **materials**, in Global Data. Then complete **Inventory Management → Settings** (fields, ID settings, users and permissions, General). Next create **Inventory Locations** with geofences, add **Hauling Trucks**, and add materials and quantities at each location. After that, create **External Orders** and **External Tickets**.",
+    tags: ["setup order","inventory setup","first time setup inventory","prerequisites inventory"]
+  },
+  {
+    action: "configure",
+    object: "uom group",
+    scope: "module",
+    section: "Global Data Prerequisites: UOMs and Materials",
+    question: "How do I add a UOM and set up conversions between units?",
+    answer: "Go to **Global Data → Company → UOM, Phasecodes and GL codes**. On the **UOMs** tab click **Add UOM**, enter the name and **Submit**. Open **UOM Groups**, click **Add UOM Group**, name it, choose the UOMs and enter the **Conversion Factor**, then **Submit**. The **UOM Conversions** tab shows the conversions. They apply only when UOMs are picked while creating materials.",
+    tags: ["add uom","uom group","uom conversion","conversion factor","unit of measure setup"]
+  },
+  {
+    action: "create",
+    object: "material",
+    scope: "module",
+    section: "Global Data Prerequisites: UOMs and Materials",
+    question: "How do I add a material to Global Data for inventory?",
+    answer: "Go to **Global Data → Company → Cost**, click **Material** under Cost Type, select or create a rate card under Material Code, and click **Add Material**. Enter **Material Code** (unique), **Material Name**, **UOM**, **Size and Specifications** and **Unit Price**, then **Submit**. Inventory Management picks up the material from here.",
+    tags: ["add material global data","material code","rate card material","unit price","cost material"]
+  },
+  {
+    action: "configure",
+    object: "orders tickets fields",
+    scope: "module",
+    section: "Settings: Fields, IDs, Permissions and LOR Approvals",
+    question: "How do I add or change fields on External Orders and Tickets?",
+    answer: "Go to **Inventory Management → Settings** and open the **External Orders** or **Tickets** tab. Click **Add field**, pick a type in **Choose type** and enter the name. Switch **Required**, **Show on Card** and **Unique** on or off, drag the field into place and click **Save Changes**. Actions let you add, duplicate or delete a field.",
+    tags: ["add field orders","configurable field","ticket fields","required show on card unique","order fields settings"]
+  },
+  {
+    action: "configure",
+    object: "inventory id settings",
+    scope: "module",
+    section: "Settings: Fields, IDs, Permissions and LOR Approvals",
+    question: "How do I set the ID format for orders and tickets?",
+    answer: "Go to **Settings → ID Settings** and choose **External Orders** or **External Tickets**. Pick **System Default** or **Custom**, choose the **ID Separator** (/, - or None), select the components (Serial No./ID, Year, Customer Reference Number, Customer/Project ID, custom text) and drag them into order. **Example Format** shows the result. Click **Save Changes**. Once a ticket is created, the ID settings lock, so do this first.",
+    tags: ["ticket id format","order id format","id settings inventory","numbering tickets","id separator"]
+  },
+  {
+    action: "configure",
+    object: "inventory permissions",
+    scope: "module",
+    section: "Settings: Fields, IDs, Permissions and LOR Approvals",
+    question: "How do I give users access to Inventory Management?",
+    answer: "Go to **Settings → Users and Permissions** and click **Add User Group**. On the **Users** tab click **Add Users**, search and pick the users, and **Submit**. Click **Permissions** on the group card and choose the rights under **Inventory Management**: View, Create, Edit, Delete, Admin, Download, Print, Assign To and Roll Back. Click **Save Changes**.",
+    tags: ["inventory user group","inventory permissions","add users inventory","roll back permission","access inventory management"]
+  },
+  {
+    action: "configure",
+    object: "uom conversions required",
+    scope: "module",
+    section: "Settings: Fields, IDs, Permissions and LOR Approvals",
+    question: "What do UOM Conversions Required and Print Settings do?",
+    answer: "They are on **Settings → General**. Turn on **UOM Conversions Required** if quantities must convert between units, then use **Material UOM Conversions → Create** to pick a material, at least two UOMs and the conversion factor. Once it is on and in use you cannot turn it off. **Print Settings** lets you add a row for each print copy (for example office copy, operator copy, customer copy) and choose **Include Header**. The **External Tickets** toggle here turns tickets on.",
+    tags: ["uom conversions required","print settings","print copies","general settings inventory","external tickets toggle"]
+  },
+  {
+    action: "create",
+    object: "inventory location",
+    scope: "module",
+    section: "Inventory Locations and Overview Map",
+    question: "How do I create an Inventory Location with a geofence?",
+    answer: "Open the **Inventory** tab and click **Add Location**. Enter **Location Name**, **Location ID**, **Location Type**, **Inventory manager**, **Business Unit** and **Project**, and turn on **Active**. Click **Add Geofences**, place at least three points (search an address and click the point, or click on the map), and click **Add Geofence**. Then click **Create**. The geofence saves only when the location is created, and only active locations can be used on ship tickets.",
+    tags: ["create inventory location","add location","geofence","location id","active location","yard location"]
+  },
+  {
+    action: "view",
+    object: "overview map",
+    scope: "module",
+    section: "Inventory Locations and Overview Map",
+    question: "What does the Overview map in Inventory Management show?",
+    answer: "The **Overview** tab is the default. It shows all Inventory Locations on a map with geofences in yellow. Click a geofence to see the location name and its materials with quantities, and click the link at the top to open the location. Switch **Map** or **Satellite**, use the filter icon to search by name or code or filter by city, state or country, go full screen, or open Street View with the Pegman icon.",
+    tags: ["overview map","inventory map","geofence yellow","map satellite","street view","find location map"]
+  },
+  {
+    action: "view",
+    object: "inventory locations list",
+    scope: "module",
+    section: "Inventory Locations and Overview Map",
+    question: "How do I find, filter or deactivate an Inventory Location?",
+    answer: "On the **Inventory** tab, search by name, check the geofence icon, flip the **Active** toggle to activate or deactivate, or use the edit icon under Actions. **Filters** narrow by Business Units, Project, Material and Active or Inactive; **Save filters** keeps them.",
+    tags: ["deactivate location","filter locations","active toggle","edit location","location list"]
+  },
+  {
+    action: "create",
+    object: "location material",
+    scope: "module",
+    section: "Materials at a Location",
+    question: "How do I add a material to an Inventory Location and set stock limits?",
+    answer: "Click the Inventory Location and click **+ Add**. Choose the **Material** (from Global Data), then enter **Quantity**, **Minimum Required Quantity**, **Maximum Quantity** and **UOM**, and optionally an **Icon**. Click **Submit**. Minimum and maximum must be greater than 0. When stock falls below the minimum, the material shows a red flag.",
+    tags: ["add material to location","minimum quantity","maximum quantity","stock limits","reorder level","location stock"]
+  },
+  {
+    action: "view",
+    object: "low stock",
+    scope: "module",
+    section: "Materials at a Location",
+    question: "How do I see which materials are low on stock?",
+    answer: "Open the Inventory Location and look for a **red flag** beside a material. Click **Low Stock Items** to list all materials below their minimum. **See History** shows the history of a material at that location.",
+    tags: ["low stock","red flag","low stock items","material history","below minimum"]
+  },
+  {
+    action: "update",
+    object: "location quantity",
+    scope: "module",
+    section: "Materials at a Location",
+    question: "How do I add quantity to a material at a location?",
+    answer: "Open the location and click **Add Quantity**. Choose the material (its current details show), enter the extra quantity and click **Submit**. To create or update many materials at once, use **Export → Upload Excel**, choose **Create** or **Update**, fill in the sample file and upload it.",
+    tags: ["add quantity","top up stock","bulk update materials","upload excel materials"]
+  },
+  {
+    action: "create",
+    object: "external order",
+    scope: "module",
+    section: "External Orders",
+    question: "How do I create an External Order for a customer?",
+    answer: "Open **Orders → External Orders** and click **+ Add**. Set **Type** to **Customer** and fill in **Order Date**, **Customer**, **Location**, **Customer Reference Number**, **Requested By** and the rest. To mark the delivery point, click **Add Geofence**, place at least three points and click **Done**. Click **Add Material** for each material with its **UOM**, **Price**, **Tax (%)** and **Quantity**, then **Submit**. The order shows as **RAISED**. If customer creation has an approval workflow in Global Data, **Add Customer** is unavailable.",
+    tags: ["create external order","customer order","add customer order","external order customer","delivery geofence","raised"]
+  },
+  {
+    action: "create",
+    object: "project order",
+    scope: "module",
+    section: "External Orders",
+    question: "How do I create an External Order for a project?",
+    answer: "Open **Orders → External Orders**, click **+ Add** and set **Type** to **Project**. Choose the **Project**, enter the order details, click **Add Material** for each material and click **Submit**. The order appears with status **RAISED** and can be picked on External Tickets.",
+    tags: ["project external order","order for project","external order project type"]
+  },
+  {
+    action: "view",
+    object: "external orders list",
+    scope: "module",
+    section: "External Orders",
+    question: "How do I find and filter External Orders?",
+    answer: "On **Orders → External Orders**, use **Search by Ticket Number**, or **Filters** by Customer, Status, Ticket Number, Locations, Projects and Ordered Date Range. Columns include **Status**, **Order Date**, **Customers**, **Project** and **Materials**. Click an order to view it and update material details, or use the delete icon in Actions.",
+    tags: ["find external order","filter orders","order status raised","external orders list"]
+  },
+  {
+    action: "create",
+    object: "hauling truck",
+    scope: "module",
+    section: "Hauling Trucks",
+    question: "How do I add a hauling truck?",
+    answer: "Open **Inventory Management → Hauling Trucks**, click **+ Add** and fill in the form, then click **Add**. Required fields are **Trucking Company**, **License Plate**, **Truck**, **Five-S test Number** and **Tare Weight** with its UOM. Optional fields include VIN, year, make, driver, **Max Weight**, **Adj Max Weight**, bed measurements, **Freight Rate**, **Insurance**, **Overweight Permit** and **Bedliner**.",
+    tags: ["add hauling truck","truck fields","tare weight","five-s test number","trucking company","license plate"]
+  },
+  {
+    action: "block",
+    object: "hauling truck",
+    scope: "module",
+    section: "Hauling Trucks",
+    question: "How do I stop a truck being used on tickets?",
+    answer: "On **Hauling Trucks**, find the truck and click **Mark as Blacklist** under **Actions**. You can also edit or delete a truck from the same column.",
+    tags: ["blacklist truck","block truck","remove truck","mark as blacklist"]
+  },
+  {
+    action: "create",
+    object: "external ticket",
+    scope: "module",
+    section: "External Tickets",
+    question: "How do I create an External Ticket for a load?",
+    answer: "Open **Tickets → External Tickets** and click **+ Add**. Choose the **Hauling Vehicle** and **Order Number**, then the **Site Name**, **Product** and **UOM**, and enter the **Gross** or **Net** value (the other is calculated). Check the read-only details on the right, then click **Create** and confirm. The Gross value cannot be changed afterward.",
+    tags: ["create external ticket","ship ticket","external ship ticket form","gross net weight","record load","weighbridge ticket"]
+  },
+  {
+    action: "troubleshoot",
+    object: "external ticket",
+    scope: "module",
+    section: "External Tickets",
+    question: "Why can I not create an External Ticket?",
+    answer: "A ticket is created only if the truck's **Tare Weight UOM** is one of the product's UOMs, and the **Net** weight cannot be more than the ordered or remaining weight. The location must also be **Active**, and the order must exist as an External Order. For project orders the form shows an **Overweight Check** of Passed or Failed.",
+    tags: ["cannot create ticket","tare weight uom","net weight exceeds","overweight check","ticket error"]
+  },
+  {
+    action: "update",
+    object: "ticket status",
+    scope: "module",
+    section: "External Tickets",
+    question: "How do I void an External Ticket?",
+    answer: "Find the ticket in **External Tickets** and set the **Status** dropdown to **Voided** (the other value is **Valid**). You can also open the ticket and update **Status** and **Status Notes**.",
+    tags: ["void ticket","voided status","valid status","cancel ticket"]
+  },
+  {
+    action: "view",
+    object: "hauling report",
+    scope: "module",
+    section: "Reports: Hauling, Client Portal and Reconciliation",
+    question: "What is the Hauling Report?",
+    answer: "It lists every ticket in date and time order with the trucker, Five-S test Number, tag, site, material, customer or project, order and net quantity. Column headers show the ticket count, trucker count and net total. Use **Search by Tickets**, **Filters** and **Export**. The export also includes **Gross**, **Time In**, **Time Out** and **Delivery Time (Hours)**.",
+    tags: ["hauling report","tickets hauled","trucker count","net total","delivery time hours"]
+  },
+  {
+    action: "view",
+    object: "client portal report",
+    scope: "module",
+    section: "Reports: Hauling, Client Portal and Reconciliation",
+    question: "How do I see how much of an order has been delivered?",
+    answer: "Open **Reports → Client Portal**. Each order shows **Units**, **Delivered**, UOM and a progress bar. Open an order to see the **Ship Tickets** page with **Ordered Qty**, **Delivered**, **Remaining**, **Total Loads**, **Avg Load Size** and **Fulfillment Progress**, plus the tickets delivered. Click **Export** for the ticket list.",
+    tags: ["client portal","order progress","delivered quantity","fulfillment progress","ship tickets page","remaining quantity"]
+  },
+  {
+    action: "create",
+    object: "material reconciliation",
+    scope: "module",
+    section: "Reports: Hauling, Client Portal and Reconciliation",
+    question: "How do I reconcile surveyed stock with Arena stock?",
+    answer: "Open **Reports → Material Reconciliation** and click **Create**. Choose the **Inventory** location, **Date** and **Material**, and enter the **Surveyed Stockpile (Propeller)**. **Current Available** fills in from the location. Check the **Delta** (surveyed minus current) and click **Save**. The list shows **Delta** and **Delta %**, green for a gain and red for a loss.",
+    tags: ["material reconciliation","stockpile survey","propeller","delta","reconcile stock"]
+  },
+  {
+    action: "view",
+    object: "list controls",
+    scope: "module",
+    section: "Lists: Columns, Filters and Excel Export",
+    question: "How do I customise columns, filters and Excel upload on inventory lists?",
+    answer: "Every list has **Manage Columns** (show, hide, reorder; **Save layout**; **Multiple layouts** for a personal layout), a list or grid toggle, and **Filters** (**Apply**, **Save filters**, **Clear all**). **Export → Upload Excel** gives a sample file to fill in and upload for bulk records, and **Export → Download** saves current records to Excel.",
+    tags: ["manage columns","save layout","save filters","export excel","upload excel","bulk upload inventory","list view grid view"]
   }
 ];
 
@@ -15811,8 +16045,8 @@ const MODULES = [
     "qaItems": QA_INVENTORYMANAGEMENT,
     "narrative": [
       {
-        "heading": "Admin Role",
-        "intro": "<p>Inventory Management exists so a construction company always knows what material and equipment it owns, where it physically sits, and who is accountable for moving it — and none of that visibility works until an Inventory Admin (most likely a warehouse manager or someone with equivalent permission) has done the initial setup. Before day-to-day inventory movement can happen, this admin probably needs to set up Inventory Locations so materials can be tied to a physical warehouse or yard, and populate the Inventory Master itself — either material by material or via bulk Excel import — since Pick Up Tickets, Ship Tickets, and Return Tickets all draw from and update this master list rather than tracking material independently.</p><p>An admin also needs to configure the LOR Workflow before any Load Out Request for equipment can be approved and checked out — this is built the same way as other Arena approval workflows, as one or more levels each set to \"All must approve\" or \"Anyone can approve.\" And because both Pick Up Tickets and Load Out Requests rely on a warehouse-manager-style approval gate before material or equipment can move, this admin should expect to be the (or designate) the approver on these day-to-day requests, not just the initial configuration — a real, ongoing operational responsibility, not a one-time setup task.</p>",
+        "heading": "Who Sets This Up",
+        "intro": "<p>The <strong>Inventory Administrator</strong> (a System Administrator or inventory admin) sets up Inventory Locations, hauling trucks, ID formats, user groups and LOR approval workflows before anyone moves stock. A <strong>Global Data Administrator</strong> sets up the units and materials first.</p><p>Four more roles work from that setup: the <strong>Inventory Manager</strong> (store or yard in-charge) keeps stock and limits, the <strong>Order Creator</strong> raises External Orders, the <strong>Ticket Creator</strong> (dispatcher or weighbridge operator) records each load shipped, and the <strong>Report User</strong> (operations manager or PM) reviews the reports.</p>",
         "definitions": [
           {
             "term": "Inventory Location",
@@ -15821,6 +16055,14 @@ const MODULES = [
           {
             "term": "LOR Workflow",
             "definition": "A configurable approval chain for Load Out Requests, built from one or more levels, each set to either \"All must approve\" or \"Anyone can approve\"."
+          },
+          {
+            "term": "Roles in Inventory Management",
+            "definition": "Global Data Administrator: UOMs, UOM groups and materials. Inventory Administrator: settings, ID settings, user groups, Inventory Locations and Hauling Trucks. Inventory Manager: monitors locations and keeps materials, quantities and stock limits. Order Creator: creates and manages External Orders. Ticket Creator: creates an External Ticket for each load shipped. Report User: reviews the Hauling Report and Client Portal report and records Material Reconciliation. Access for each role comes from user groups and their permissions."
+          },
+          {
+            "term": "Setup order",
+            "definition": "Set up in this order: UOMs and UOM groups, materials, Inventory Management Settings (fields, ID settings, groups and permissions, General), Inventory Locations with geofences, Hauling Trucks, materials and quantities at each location. Only then create External Orders and External Tickets."
           }
         ],
         "procedures": [
@@ -15844,12 +16086,28 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Settings",
-        "intro": "<p>LOR Workflows is where an Inventory Admin defines the approval chain that governs every Load Out Request across the company. Just as materials tickets rely on warehouse manager sign-off, LORs rely on a configurable, potentially multi-level approval workflow before equipment can move — and this is the screen where that workflow is built. Configuring it well protects the business two ways at once: it ensures equipment doesn't leave the warehouse without the right people signing off, while still allowing flexibility (a single approver versus a full committee) depending on how much oversight a given class of equipment needs.</p>",
+        "heading": "Settings: Fields, IDs, Permissions and LOR Approvals",
+        "intro": "<p>The Inventory Administrator uses <strong>Inventory Management → Settings</strong> to decide which fields orders and tickets carry, how their IDs are numbered, who can do what, and how LOR approvals run. Do this before creating any records.</p><p>The left side of Settings lists <strong>External Orders</strong>, <strong>Tickets</strong>, <strong>ID Settings</strong>, <strong>Users and Permissions</strong> and <strong>General</strong>, plus the LOR workflow setup described below. Complete <strong>ID Settings</strong> before the first ticket, because they lock once a ticket exists.</p>",
         "definitions": [
           {
             "term": "LOR Workflow",
             "definition": "A configurable approval chain for Load Out Requests, built from one or more levels, each set to either \"All must approve\" or \"Anyone can approve\"."
+          },
+          {
+            "term": "External Orders and Tickets fields",
+            "definition": "On the <strong>External Orders</strong> and <strong>Tickets</strong> tabs, review the standard fields and click <strong>Add field</strong> for configurable ones. Pick a type in <strong>Choose type</strong>, name the field, and switch <strong>Required</strong>, <strong>Show on Card</strong> and <strong>Unique</strong> on or off. Actions add, duplicate or delete a field, and the drag icon reorders them. Click <strong>Save Changes</strong>."
+          },
+          {
+            "term": "ID Settings (orders and tickets)",
+            "definition": "Choose the <strong>External Orders</strong> or <strong>External Tickets</strong> sub-tab, pick <strong>System Default</strong> or <strong>Custom</strong>, choose the <strong>ID Separator</strong> (<strong>/</strong>, <strong>-</strong> or <strong>None</strong>), pick components (Serial No./ID, Year, Customer Reference Number, Customer/Project ID, custom text) and drag them into order. <strong>Example Format</strong> shows the result. Once a ticket is created, the ID settings lock."
+          },
+          {
+            "term": "Users and Permissions (Inventory Management)",
+            "definition": "User groups show as cards. <strong>Add User Group</strong>, then on the <strong>Users</strong> tab click <strong>Add Users</strong> (search by name, Roster ID, email or username) and <strong>Submit</strong>. Click <strong>Permissions</strong> on the card and, under <strong>Inventory Management</strong>, choose View, Create, Edit, Delete, Admin, Download, Print, Assign To and Roll Back for each item, then <strong>Save Changes</strong>. The edit icon renames the group."
+          },
+          {
+            "term": "General settings",
+            "definition": "Keep <strong>External Tickets</strong> on to use tickets. Turn on <strong>UOM Conversions Required</strong> if quantities must convert between units; once it is on and in use it cannot be turned off. <strong>Print Settings</strong> lets you add a row for each print copy (for example office copy, operator copy, customer copy) and choose <strong>Include Header</strong>. <strong>Material UOM Conversions → Create</strong> sets a factor between at least two UOMs for one material."
           }
         ],
         "procedures": [
@@ -15861,6 +16119,44 @@ const MODULES = [
               "Define the level type — <strong>All must approve</strong> or <strong>Anyone can approve</strong> — and select approvers."
             ],
             "note": "A tree/graph view of the full workflow is available at the top right corner, useful for reviewing multi-level chains at a glance."
+          },
+          {
+            "title": "Add a field to External Orders or Tickets",
+            "steps": [
+              "Open <strong>Inventory Management → Settings</strong> and choose the <strong>External Orders</strong> or <strong>Tickets</strong> tab.",
+              "Click <strong>Add field</strong>, pick the type in <strong>Choose type</strong> and enter the field name.",
+              "Set the <strong>Required</strong>, <strong>Show on Card</strong> and <strong>Unique</strong> toggles.",
+              "Drag the field into position and click <strong>Save Changes</strong>."
+            ]
+          },
+          {
+            "title": "Set the ID format for orders and tickets",
+            "steps": [
+              "Open <strong>Settings → ID Settings</strong> and choose <strong>External Orders</strong> or <strong>External Tickets</strong>.",
+              "Choose <strong>System Default</strong> or <strong>Custom</strong>, then the <strong>ID Separator</strong>.",
+              "Select the components and drag them into order. Check the <strong>Example Format</strong>.",
+              "Click <strong>Save Changes</strong>."
+            ],
+            "note": "Do this before the first ticket is created, because the settings lock after that."
+          },
+          {
+            "title": "Give a group access to Inventory Management",
+            "steps": [
+              "Open <strong>Settings → Users and Permissions</strong> and click <strong>Add User Group</strong>.",
+              "Enter the group name, open the <strong>Users</strong> tab, click <strong>Add Users</strong>, pick users and click <strong>Submit</strong>.",
+              "Click <strong>Permissions</strong> on the group card and choose the rights under <strong>Inventory Management</strong>.",
+              "Click <strong>Save Changes</strong>."
+            ]
+          },
+          {
+            "title": "Turn on unit conversions for a material",
+            "steps": [
+              "Open <strong>Settings → General</strong> and switch on <strong>UOM Conversions Required</strong>.",
+              "Under <strong>Material UOM Conversions</strong>, click <strong>Create</strong>.",
+              "Select the material, select at least two UOMs and enter the conversion factor between the source and target unit.",
+              "Click <strong>Submit</strong>."
+            ],
+            "note": "You cannot switch UOM Conversions Required off once it is in use."
           }
         ]
       },
@@ -16152,6 +16448,308 @@ const MODULES = [
             "note": "An LOR can only be deleted as long as none of its included equipment has been checked out yet."
           }
         ]
+      },
+      {
+        "heading": "Global Data Prerequisites: UOMs and Materials",
+        "intro": "<p>A Global Data Administrator sets up the units of measurement and the materials once, and Inventory Management then uses them. Do this before anything else, because locations, orders and tickets all pick materials and UOMs from here.</p>",
+        "definitions": [
+          {
+            "term": "UOMs and UOM Groups",
+            "definition": "In <strong>Global Data → Company → UOM, Phasecodes and GL codes</strong>, the <strong>UOMs</strong> tab holds the units (<strong>Add UOM</strong>, enter the name, <strong>Submit</strong>). <strong>UOM Groups</strong> holds conversions: <strong>Add UOM Group</strong>, name the group, choose the UOMs and enter the <strong>Conversion Factor</strong>. The <strong>UOM Conversions</strong> tab only shows the resulting conversions. Conversions apply only when UOMs are chosen while creating materials."
+          },
+          {
+            "term": "Materials (Global Data)",
+            "definition": "In <strong>Global Data → Company → Cost</strong>, choose <strong>Material</strong> under Cost Type, select or create a rate card under Material Code, and click <strong>Add Material</strong>. Enter <strong>Material Code</strong> (unique), <strong>Material Name</strong>, <strong>UOM</strong>, <strong>Size and Specifications</strong> and <strong>Unit Price</strong>, then <strong>Submit</strong>."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Add a UOM group with conversions",
+            "steps": [
+              "Go to <strong>Global Data → Company → UOM, Phasecodes and GL codes</strong>.",
+              "On the <strong>UOMs</strong> tab, click <strong>Add UOM</strong> for any missing unit and <strong>Submit</strong>.",
+              "Open <strong>UOM Groups</strong> and click <strong>Add UOM Group</strong>.",
+              "Enter the group name, choose the UOMs and the <strong>Conversion Factor</strong>, and click <strong>Submit</strong>."
+            ]
+          },
+          {
+            "title": "Add a material to Global Data",
+            "steps": [
+              "Go to <strong>Global Data → Company → Cost</strong> and click <strong>Material</strong> under Cost Type.",
+              "Select a rate card, or create a rate card template, under Material Code.",
+              "Click <strong>Add Material</strong> and enter the code, name, UOM, size and specifications and unit price.",
+              "Click <strong>Submit</strong>."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Inventory Locations and Overview Map",
+        "intro": "<p>An <strong>Inventory Location</strong> is a store, yard or stockpile that holds materials, and it is marked on a map with a geofence. The Inventory Administrator creates locations, and Inventory Managers watch them on the <strong>Overview</strong> map. Only active locations can be used on ship tickets.</p>",
+        "definitions": [
+          {
+            "term": "Create Inventory Location fields",
+            "definition": "<strong>Location Name</strong>, <strong>Location ID</strong> (unique), <strong>Location Type</strong>, <strong>Inventory manager</strong> (one or more users), <strong>Business Unit</strong>, <strong>Project</strong> (if it applies), the <strong>Active</strong> toggle and the <strong>Geofence</strong>."
+          },
+          {
+            "term": "Geofence",
+            "definition": "The boundary of the location on the map, made of at least three points. In <strong>Add Geofences</strong>, check the <strong>Geofence Name</strong> and <strong>Geofence Code</strong> (city, state and country fill in from the points), then either search an address and click the exact point, or click points straight on the map. <strong>Undo Last Point</strong> removes one point and <strong>Clear All</strong> removes them all. The geofence saves only when the location is created."
+          },
+          {
+            "term": "Overview map",
+            "definition": "The default tab of Inventory Management. It shows every location on a map with its geofence in yellow. Click a geofence to see the location name and the materials with quantities, and click the link at the top to open the location. Switch between <strong>Map</strong> and <strong>Satellite</strong>, use the filter icon to search by name or code or filter by city, state or country, go full screen, or use Street View with the Pegman icon."
+          },
+          {
+            "term": "Inventory Locations list",
+            "definition": "Search by name, check the geofence icon, flip the <strong>Active</strong> toggle, or use the edit icon in Actions. <strong>Filters</strong> narrow by Business Units, Project, Material and Active or Inactive. See the Lists section for columns, layouts and Excel."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Create an Inventory Location",
+            "steps": [
+              "Open the <strong>Inventory</strong> tab and click <strong>Add Location</strong>.",
+              "Enter the <strong>Location Name</strong>, <strong>Location ID</strong>, <strong>Location Type</strong>, <strong>Inventory manager</strong>, <strong>Business Unit</strong> and <strong>Project</strong>.",
+              "Turn on <strong>Active</strong>.",
+              "Click <strong>Add Geofences</strong>, place at least three points and click <strong>Add Geofence</strong>.",
+              "Click <strong>Create</strong>."
+            ]
+          },
+          {
+            "title": "Find a location on the Overview map",
+            "steps": [
+              "Open <strong>Inventory Management</strong>. The <strong>Overview</strong> tab shows the map.",
+              "Use the filter icon to search by name or code, or filter by city, state or country, then click <strong>Apply</strong>.",
+              "Click the yellow geofence to see its materials, and click the link at the top to open the location."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Materials at a Location",
+        "intro": "<p>Each Inventory Location has its own list of materials with quantities and stock limits. The Inventory Manager adds materials, sets minimum and maximum quantities, and tops up stock. A red flag marks any material that has fallen below its minimum.</p>",
+        "definitions": [
+          {
+            "term": "Add material fields",
+            "definition": "<strong>Material</strong> (from the materials in Global Data), <strong>Quantity</strong> (held now), <strong>Minimum Required Quantity</strong> (below this the material shows as low stock), <strong>Maximum Quantity</strong>, <strong>UOM</strong> and an optional <strong>Icon</strong>. Minimum and maximum must be greater than 0."
+          },
+          {
+            "term": "Low stock flag and history",
+            "definition": "A red flag beside a material means it is low at this location, and <strong>Low Stock Items</strong> lists all of them. <strong>See History</strong> shows the history of a material at the location. <strong>Add Custom Column</strong> adds your own column to the table."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Add a material to a location",
+            "steps": [
+              "Click the Inventory Location to open it and click <strong>+ Add</strong>.",
+              "Choose the <strong>Material</strong> and enter the <strong>Quantity</strong>, <strong>Minimum Required Quantity</strong>, <strong>Maximum Quantity</strong> and <strong>UOM</strong>.",
+              "Click <strong>Submit</strong>. Repeat for other materials."
+            ]
+          },
+          {
+            "title": "Add quantity to a material",
+            "steps": [
+              "Open the location and click <strong>Add Quantity</strong>.",
+              "Choose the material. Its current details show.",
+              "Enter the extra quantity and click <strong>Submit</strong>."
+            ]
+          },
+          {
+            "title": "Bulk create or update materials at a location",
+            "steps": [
+              "Open the location and click <strong>Export → Upload Excel</strong>.",
+              "Choose <strong>Create</strong> or <strong>Update</strong>, then download the sample file.",
+              "Fill it in, save it and upload it."
+            ],
+            "note": "Use <strong>Export → Download</strong> to save the current records to Excel."
+          }
+        ]
+      },
+      {
+        "heading": "External Orders",
+        "intro": "<p>An <strong>External Order</strong> lists the materials to be supplied to a customer or a project. The Order Creator raises it from <strong>Orders → External Orders</strong>, and it then becomes available for External Tickets. New orders show the status <strong>RAISED</strong>.</p>",
+        "definitions": [
+          {
+            "term": "External Orders list",
+            "definition": "Search by Ticket Number. Columns include <strong>Status</strong>, <strong>Order Date</strong>, <strong>Customers</strong>, <strong>Project</strong>, <strong>Materials</strong> and <strong>Actions</strong> (view or delete). Click an order to view it and update material details. <strong>Filters</strong> narrow by Customer, Status, Ticket Number, Locations, Projects and Ordered Date Range."
+          },
+          {
+            "term": "External Order fields",
+            "definition": "<strong>Order Date</strong>, <strong>Order Description</strong>, <strong>Type</strong> (Customer or Project), <strong>Customer</strong> (with <strong>Add Customer</strong>), phone number (automatic), <strong>Location</strong> (with <strong>Add Location</strong>), <strong>Project</strong>, <strong>Customer Reference Number</strong>, address, city, state and zip (automatic for a customer), <strong>Requested By</strong>, then for each material the <strong>Material</strong>, <strong>UOM</strong>, <strong>Price</strong>, <strong>Tax (%)</strong> and <strong>Quantity</strong>."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Create an External Order for a customer",
+            "steps": [
+              "Open <strong>Orders → External Orders</strong> and click <strong>+ Add</strong>.",
+              "Set <strong>Type</strong> to <strong>Customer</strong> and fill in the order details.",
+              "If you need a delivery point on the map, click <strong>Add Geofence</strong>, choose to update the existing geofence or create a new one, place at least three points and click <strong>Done</strong>.",
+              "Click <strong>Add Material</strong> for each material (the delete icon removes a line).",
+              "Click <strong>Submit</strong>."
+            ],
+            "note": "If customer creation has an approval workflow in Global Data, <strong>Add Customer</strong> is not available. The geofence saves only when the order is submitted, and then appears on the Overview map."
+          },
+          {
+            "title": "Create an External Order for a project",
+            "steps": [
+              "Click <strong>+ Add</strong> and set <strong>Type</strong> to <strong>Project</strong>.",
+              "Choose the <strong>Project</strong> and fill in the other details.",
+              "Click <strong>Add Material</strong> for each material and click <strong>Submit</strong>."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Hauling Trucks",
+        "intro": "<p>The <strong>Hauling Trucks</strong> page lists the trucks used on External Tickets, with their weights, measurements and permits. The Inventory Administrator adds trucks, and the Ticket Creator picks them when recording a load.</p>",
+        "definitions": [
+          {
+            "term": "Hauling Trucks list",
+            "definition": "Search by Trucking Company. Columns include <strong>Trucking Company</strong>, <strong>License Plate</strong>, <strong>VIN</strong>, <strong>Manufactured Year</strong>, <strong>Make</strong>, <strong>Driver</strong>, <strong>Truck</strong>, <strong>Five-S test Number</strong>, <strong>Tare Weight</strong>, <strong>Tare Weight UOM</strong>, <strong>Tag</strong>, <strong>Max Weight</strong> and <strong>Adj Max Weight</strong>. In Actions, <strong>Mark as Blacklist</strong> stops a truck being used, and the edit and delete icons change or remove it."
+          },
+          {
+            "term": "Add Hauling Truck fields",
+            "definition": "Required: <strong>Trucking Company</strong>, <strong>License Plate</strong>, <strong>Truck</strong>, <strong>Five-S test Number</strong>, and <strong>Tare Weight</strong> with its UOM. Optional: <strong>VIN</strong>, year, make, driver, <strong>Tag</strong>, <strong>Max Weight</strong>, <strong>Adj Max Weight</strong>, bed and dog house measurements, <strong>Aprx CY</strong>, <strong>Measured CY</strong>, <strong>Freight Rate</strong>, <strong>Insurance</strong> with its date, <strong>Overweight Permit</strong> and <strong>Bedliner</strong>."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Add a hauling truck",
+            "steps": [
+              "Open <strong>Inventory Management → Hauling Trucks</strong> and click <strong>+ Add</strong>.",
+              "Fill in the required fields and any optional ones.",
+              "Click <strong>Add</strong>."
+            ],
+            "note": "The truck is then available when creating External Tickets."
+          },
+          {
+            "title": "Stop a truck being used",
+            "steps": [
+              "Find the truck in the <strong>Hauling Trucks</strong> list.",
+              "Under <strong>Actions</strong>, click <strong>Mark as Blacklist</strong>."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "External Tickets",
+        "intro": "<p>An <strong>External Ticket</strong> records one load shipped against an External Order: the truck, the site, the product and the weight. The Ticket Creator, usually a dispatcher or weighbridge operator, creates one for every load. Once created, the Gross value cannot be changed.</p>",
+        "definitions": [
+          {
+            "term": "External Tickets list",
+            "definition": "Search by Ship Ticket Number. Columns include <strong>Inventory Location</strong>, <strong>Customer</strong>, <strong>Project</strong>, <strong>Trucking Company</strong>, <strong>Vehicle Plate</strong>, <strong>Product</strong> and <strong>Gross Units</strong>. The <strong>Status</strong> dropdown sets a ticket to <strong>Valid</strong> or <strong>Voided</strong>. <strong>Filters</strong> narrow by Inventory Locations, Hauling Trucks, Projects, Customer, Order Number and Delivered Date Range."
+          },
+          {
+            "term": "External Ship Ticket Form fields",
+            "definition": "<strong>Hauling Vehicle</strong>, <strong>Order Number</strong> (the External Order), <strong>Site Name</strong> (shown from the materials in the order), <strong>Product</strong> (shown from the site), <strong>UOM</strong>, <strong>Gross / Net</strong> (enter one and the other is calculated), <strong>Date and Time</strong> (automatic, editable), <strong>Notes</strong>, and <strong>Status</strong> with <strong>Status Notes</strong>."
+          },
+          {
+            "term": "Ticket rules",
+            "definition": "A ticket is created only if the truck's Tare Weight UOM is one of the product's UOMs. The Net weight cannot be more than the ordered weight or the remaining weight. For a project order, the form also shows an <strong>Overweight Check</strong> of Passed or Failed."
+          },
+          {
+            "term": "Ticket details panel",
+            "definition": "The right side of the form is read-only. For a customer order it shows Customer Name, Site Address, Trucking Company, Max Weight, Adjusted Max Weight, Tare, Net Ordered Weight, Stock Available, Order Total Weight (in stock UOM and as ordered), Shipped Quantity and Order Description. A project order shows Project and Location in place of the customer details."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Create an External Ticket for a load",
+            "steps": [
+              "Open <strong>Tickets → External Tickets</strong> and click <strong>+ Add</strong>.",
+              "Choose the <strong>Hauling Vehicle</strong> and the <strong>Order Number</strong>.",
+              "Choose the <strong>Site Name</strong>, <strong>Product</strong> and <strong>UOM</strong>, then enter the <strong>Gross</strong> or <strong>Net</strong> value.",
+              "Check the details on the right side of the form.",
+              "Click <strong>Create</strong> and confirm."
+            ],
+            "note": "The Gross value cannot be changed after the ticket is created, so check it first."
+          },
+          {
+            "title": "Void an External Ticket",
+            "steps": [
+              "Find the ticket in the <strong>External Tickets</strong> list.",
+              "Set <strong>Status</strong> to <strong>Voided</strong>, or open the ticket and update <strong>Status</strong> and <strong>Status Notes</strong>."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Reports: Hauling, Client Portal and Reconciliation",
+        "intro": "<p>The <strong>Reports</strong> tab has three reports for the Report User (an operations manager or PM): the <strong>Hauling Report</strong> for every load moved, the <strong>Client Portal</strong> for order delivery progress, and <strong>Material Reconciliation</strong> for matching surveyed stock to Arena.</p>",
+        "definitions": [
+          {
+            "term": "Hauling Report",
+            "definition": "Every ticket in date and time order, showing the trucker, Five-S test Number, tag, site, material, customer or project, order and net quantity. The column headers show the ticket count, trucker count and net total. Use <strong>Search by Tickets</strong>, <strong>Filters</strong> and <strong>Export</strong>. The export also has <strong>Gross</strong>, <strong>Time In</strong>, <strong>Time Out</strong> and <strong>Delivery Time (Hours)</strong>."
+          },
+          {
+            "term": "Client Portal report",
+            "definition": "Each order with its customer or project, product, ordered units, delivered quantity, UOM and a progress bar. Search by Pickup Ticket, open an order to see its <strong>Ship Tickets</strong> page, and use <strong>Export</strong> for the ticket list."
+          },
+          {
+            "term": "Ship Tickets page",
+            "definition": "One order and one material, with KPIs: <strong>Ordered Qty</strong>, <strong>Delivered</strong>, <strong>Remaining</strong> (ordered minus delivered), <strong>Total Loads</strong> (one per ticket), <strong>Avg Load Size</strong> (delivered divided by loads) and <strong>Fulfillment Progress</strong> (delivered divided by ordered). The ticket list shows Tickets, Site, Gross (Net Weight), Date, Time and Hauling Truck."
+          },
+          {
+            "term": "Material Reconciliation",
+            "definition": "Compares the surveyed stockpile (<strong>Propeller</strong>) with the <strong>Current Available</strong> quantity in Arena for a material at a location. Each entry shows <strong>Delta</strong> (surveyed minus current) and <strong>Delta %</strong>, plus the date, time and creator. A gain shows green and a loss shows red."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Run the Hauling Report",
+            "steps": [
+              "Open <strong>Inventory Management → Reports</strong> and click <strong>Hauling Report</strong>.",
+              "Search by ticket or use <strong>Filters</strong>.",
+              "Check the ticket count, trucker count and net total, then click <strong>Export</strong>."
+            ]
+          },
+          {
+            "title": "Check order delivery progress",
+            "steps": [
+              "Open <strong>Reports → Client Portal</strong>.",
+              "Read <strong>Units</strong>, <strong>Delivered</strong> and <strong>Progress</strong> for each order.",
+              "Open an order to see the <strong>Ship Tickets</strong> page, and click <strong>Export</strong> for the ticket list."
+            ]
+          },
+          {
+            "title": "Reconcile a stockpile survey",
+            "steps": [
+              "Open <strong>Reports → Material Reconciliation</strong> and click <strong>Create</strong>.",
+              "Choose the <strong>Inventory</strong> location, <strong>Date</strong> and <strong>Material</strong>, and enter the <strong>Surveyed Stockpile (Propeller)</strong>.",
+              "Check the <strong>Delta</strong> shown below the form and click <strong>Save</strong>."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Lists: Columns, Filters and Excel Export",
+        "intro": "<p>Every list in Inventory Management (locations, materials, External Orders, Hauling Trucks and External Tickets) shares the same controls for columns, filters, views and Excel. Use them to see only what you need and to load or download records in bulk.</p>",
+        "definitions": [
+          {
+            "term": "Manage Columns and views",
+            "definition": "Click <strong>Manage Columns</strong> to show, hide or reorder columns, the <strong>Save layout</strong> icon to keep the layout, and the <strong>Multiple layouts</strong> icon for a user-specific layout. The list or grid icon switches the view."
+          },
+          {
+            "term": "Filters",
+            "definition": "Click <strong>Filters</strong>, pick values and click <strong>Apply</strong>. <strong>Save filters</strong> keeps the selection and <strong>Clear all</strong> resets it."
+          },
+          {
+            "term": "Export: Upload and Download Excel",
+            "definition": "<strong>Export → Upload Excel</strong> gives a sample file to fill in and upload for bulk records. <strong>Export → Download</strong> saves the current records to Excel."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Bulk upload records from Excel",
+            "steps": [
+              "Click <strong>Export → Upload Excel</strong> on the list.",
+              "Download the sample file from the link and fill it in following its instructions.",
+              "Save the file and upload it."
+            ]
+          }
+        ]
       }
     ],
     "name": "Inventory Management",
@@ -16159,18 +16757,27 @@ const MODULES = [
     "icon": "inventory_2",
     "tagline": "Track material and equipment stock and manage its movement in and out of the warehouse.",
     "color": "#7a2f3f",
-    "overview": "<p><strong>Inventory Management</strong> tracks material and equipment stock through the <strong>Inventory Master</strong>, and governs the flow of goods in and out via <strong>Pick Up Tickets</strong>, <strong>Ship Tickets</strong>, and <strong>Return Tickets</strong> for materials, plus <strong>Load Out Requests (LORs)</strong> — including <strong>3rd Party LORs</strong> — for equipment/accessories moving through Request, Check Out, Ship, Check In, and Shop In stages.</p>",
+    "overview": "<p><strong>Inventory Management</strong> tracks material and equipment stock through the <strong>Inventory Master</strong>, and governs the flow of goods in and out via <strong>Pick Up Tickets</strong>, <strong>Ship Tickets</strong>, and <strong>Return Tickets</strong> for materials, plus <strong>Load Out Requests (LORs)</strong> — including <strong>3rd Party LORs</strong> — for equipment/accessories moving through Request, Check Out, Ship, Check In, and Shop In stages. It also covers <strong>Inventory Locations</strong> with geofences and an Overview map, stock limits per location, <strong>External Orders</strong> for customers and projects, <strong>Hauling Trucks</strong>, <strong>External Tickets</strong> for each load shipped, and the Hauling, Client Portal and Material Reconciliation reports.</p>",
     "navigation": [
       "From <strong>Home</strong>, click the <strong>Inventory Management</strong> tile.",
       "Materials flow through Inventory Master, Pick Up Ticket, Ship Ticket, and Return Ticket. Equipment/accessories flow through Load Out Requests (LOR)."
     ],
     "sections": [
-      {
-        "id": "inventory-management-qa",
-        "heading": "Common Questions",
-        "html": "<p>Answers sourced from Arena's documentation.</p>",
-        "qa": []
-      }
+      "Who Sets This Up",
+      "Settings: Fields, IDs, Permissions and LOR Approvals",
+      "Inventory Master",
+      "Pickup Ticket",
+      "Ship Ticket",
+      "Return Ticket",
+      "Load Out Requests",
+      "Global Data Prerequisites: UOMs and Materials",
+      "Inventory Locations and Overview Map",
+      "Materials at a Location",
+      "External Orders",
+      "Hauling Trucks",
+      "External Tickets",
+      "Reports: Hauling, Client Portal and Reconciliation",
+      "Lists: Columns, Filters and Excel Export"
     ]
   },
   {
