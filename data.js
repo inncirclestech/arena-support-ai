@@ -1059,7 +1059,8 @@ const QA_EQUIPMENT = [
   {
     action: "create",
     object: "equipment",
-    scope: "module", section: "Asset Master",
+    scope: "module",
+    section: "Asset Master",
     question: "How do I add a new piece of equipment?",
     answer: "1. Go to **Home → Asset Management**, ensure **Asset Master → Company Owned Asset** is selected.\n2. Click **+ Asset**.\n3. In the **Add Asset** modal, fill **Asset Name***, **Asset ID***, **Asset Description***, **Replacement Value***, **Current Location*** (all required).\n4. Optionally fill Manufacturer, Model, Model Year, and attach an image/files.\n5. Click **Submit** — the asset appears with status **Ready to Rent**.",
     tags: ["add asset","create equipment","new equipment","add asset form"]
@@ -1067,7 +1068,8 @@ const QA_EQUIPMENT = [
   {
     action: "view",
     object: "equipment history",
-    scope: "module", section: "Asset Master",
+    scope: "module",
+    section: "Asset Master",
     question: "How do I check an equipment item's full history?",
     answer: "Click the **history** icon on the item's row in Asset Master. This opens the **Equipment Log**: every request, check-in, check-out, shipment, and shop-in event, with who performed it and when.",
     tags: ["equipment history","audit log","see history","equipment log"]
@@ -1075,7 +1077,8 @@ const QA_EQUIPMENT = [
   {
     action: "delete",
     object: "equipment",
-    scope: "module", section: "Asset Master",
+    scope: "module",
+    section: "Asset Master",
     question: "How do I delete or retire an equipment item?",
     answer: "Click the red **delete** icon on the item's row. This is only enabled if the equipment is **not currently checked out** or in use elsewhere — check it in via the Load Out Request flow first if needed.",
     tags: ["delete equipment","retire asset","retire equipment"]
@@ -1083,7 +1086,8 @@ const QA_EQUIPMENT = [
   {
     action: "define",
     object: "company owned vs 3rd party asset",
-    scope: "module", section: "Asset Master",
+    scope: "module",
+    section: "Asset Master",
     question: "What's the difference between Company Owned Asset and 3rd Party Asset?",
     answer: "Company Owned Asset tracks equipment the company itself owns, with the same status chips/columns as Company Owned Accessory. 3rd Party Asset is a different kind of view: it tracks equipment currently rented in from (or company equipment currently out with) a 3rd party, and every row is sourced automatically from a Procurement requisition (REQ) and Purchase Order (PO) rather than added manually — its columns include REQ ID, PO ID, Delivery Location, and Planned Pickup Date, and its status chips are Active, Displayed, and Off Rent Picked Up.",
     tags: ["company owned asset","3rd party asset","asset ownership type"]
@@ -1091,7 +1095,8 @@ const QA_EQUIPMENT = [
   {
     action: "view",
     object: "3rd party asset procurement link",
-    scope: "module", section: "Asset Master",
+    scope: "module",
+    section: "Asset Master",
     question: "Where do the items on the 3rd Party Asset tab come from?",
     answer: "They come from Procurement: once a Purchase Order for rented/leased equipment (Procurement → Purchase Orders → Equipment type) is created and received, it shows up here automatically with its REQ ID, Requesting Date, Requested By, Required Date, PO ID, and Planned Pickup Date, all traceable back to Procurement. There's no manual + Add button on this tab.",
     tags: ["3rd party asset procurement","req po asset link","asset from purchase order"]
@@ -1099,7 +1104,8 @@ const QA_EQUIPMENT = [
   {
     action: "define",
     object: "asset vs accessory",
-    scope: "module", section: "Asset Master",
+    scope: "module",
+    section: "Asset Master",
     question: "What's the difference between an Asset and an Accessory in Asset Master?",
     answer: "Assets are the equipment items themselves (tracked on **Company Owned Asset**); Accessories are attachments/consumables linked to equipment, tracked on **Company Owned Accessory**. The Accessory sub-tab shows a **Related Assets** column linking accessories back to the equipment they belong to.",
     tags: ["asset vs accessory","equipment terminology"]
@@ -1107,7 +1113,8 @@ const QA_EQUIPMENT = [
   {
     action: "create",
     object: "accessory",
-    scope: "module", section: "Asset Master",
+    scope: "module",
+    section: "Asset Master",
     question: "How do I add a new accessory?",
     answer: "On the **Company Owned Accessory** sub-tab, click **+ Accessory** (the same button becomes + Accessory here instead of + Asset) and fill in the equivalent accessory details, then Submit.",
     tags: ["add accessory","company owned accessory"]
@@ -1115,7 +1122,8 @@ const QA_EQUIPMENT = [
   {
     action: "edit",
     object: "equipment record",
-    scope: "module", section: "Asset Master",
+    scope: "module",
+    section: "Asset Master",
     question: "How do I edit an equipment record?",
     answer: "1. Locate the row in Asset Master (use Search or Filters if needed).\n2. Click the **edit** (pencil) icon on that row.\n3. Update the fields in the pre-filled form and click **Submit**.",
     tags: ["edit equipment","update asset"]
@@ -1123,7 +1131,8 @@ const QA_EQUIPMENT = [
   {
     action: "delete",
     object: "equipment",
-    scope: "module", section: "Asset Master",
+    scope: "module",
+    section: "Asset Master",
     question: "Why can't I delete a piece of equipment?",
     answer: "The delete icon is disabled while the equipment is currently checked out or in use elsewhere. You must wait until it's checked in / shopped in before it can be deleted.",
     tags: ["cannot delete equipment","delete disabled","delete disabled troubleshoot"]
@@ -1131,7 +1140,8 @@ const QA_EQUIPMENT = [
   {
     action: "view",
     object: "maintenance records",
-    scope: "module", section: "Asset Master",
+    scope: "module",
+    section: "Asset Master",
     question: "How do I see maintenance records for a specific asset?",
     answer: "Click the **Maintenance Records** icon on that equipment's row — it's only shown for assets that have scheduled maintenance. You can also check the **Maintenance Records** column in the grid.",
     tags: ["maintenance records icon","asset maintenance history"]
@@ -1139,7 +1149,8 @@ const QA_EQUIPMENT = [
   {
     action: "edit",
     object: "equipment location",
-    scope: "module", section: "Asset Master",
+    scope: "module",
+    section: "Asset Master",
     question: "How do I change an equipment's current location?",
     answer: "Click the **edit** (pencil) icon on the equipment's row to open the Add/Edit Asset form, then update the **Current Location** field (a dropdown of Inventory Locations) and Submit.",
     tags: ["change equipment location","current location","current location field"]
@@ -1147,7 +1158,8 @@ const QA_EQUIPMENT = [
   {
     action: "create",
     object: "inventory location",
-    scope: "module", section: "Asset Master",
+    scope: "module",
+    section: "Asset Master",
     question: "How do I add a new inventory location?",
     answer: "1. Click **Inventory Locations** in Asset Master.\n2. Click **Add Location**.\n3. Fill in the location name and physical address/location.",
     tags: ["inventory location","add location"]
@@ -1155,7 +1167,8 @@ const QA_EQUIPMENT = [
   {
     action: "define",
     object: "equipment status chip",
-    scope: "module", section: "Asset Master",
+    scope: "module",
+    section: "Asset Master",
     question: "What do the different equipment status chips mean (Ready to Rent, On Rent - Project, Pending Shipment, etc.)?",
     answer: "These are live counts shown as colored chips above the Asset Master grid, each representing how many items are currently in that state: **Ready to Rent** (available, the default status for new equipment), **On Rent – Project** (checked out to an internal job), **Pending Shipment** (checked out, awaiting shipment), **On Rent – Customer** (leased to a 3rd party), and **Checked In** (returned). Clicking a chip filters the grid to that status.",
     tags: ["status chips","ready to rent","on rent","ready to rent on rent"]
@@ -1163,7 +1176,8 @@ const QA_EQUIPMENT = [
   {
     action: "filter",
     object: "equipment list",
-    scope: "module", section: "Asset Master",
+    scope: "module",
+    section: "Asset Master",
     question: "How do I export or filter the equipment list?",
     answer: "Click **Export** to extract the inventory list to Excel. Click **Filters** to open the filter panel — filter by Status, Location, Loadout Request, Checkout By, Check By, or Received By; click Submit to apply, click the Save icon to persist the filter for reuse, or Clear to remove an active filter.",
     tags: ["export equipment list","filter equipment"]
@@ -1171,7 +1185,8 @@ const QA_EQUIPMENT = [
   {
     action: "configure",
     object: "asset master view",
-    scope: "module", section: "Asset Master",
+    scope: "module",
+    section: "Asset Master",
     question: "How do I switch between grid and table view, or add a custom column, in Asset Master?",
     answer: "Use the view-mode toggle (grid/card icon and table icon) near the top of the screen to switch between Grid View and Table View. To add a custom column, click **Add Custom Column** and choose a type: Text, Single Select, Multi-select, or Date.",
     tags: ["custom column","grid view table view","custom column grid table view"]
@@ -1179,7 +1194,8 @@ const QA_EQUIPMENT = [
   {
     action: "define",
     object: "return date fields",
-    scope: "module", section: "Asset Master",
+    scope: "module",
+    section: "Asset Master",
     question: "What's the difference between Planned Return Date, Actual Return Date, and Overdue Days?",
     answer: "**Planned Return Date** is the date the equipment was expected back (set at request/checkout time); **Actual Return Date** is the date it was actually checked in. **Overdue Days** shows how many days an item is overdue against its Planned Return Date when no Actual Return Date has been logged yet.",
     tags: ["planned return date","actual return date","overdue days","planned actual return overdue days"]
@@ -1187,7 +1203,8 @@ const QA_EQUIPMENT = [
   {
     action: "create",
     object: "maintenance package",
-    scope: "module", section: "Asset Setup",
+    scope: "module",
+    section: "Asset Setup",
     question: "How do I set up a recurring maintenance schedule?",
     answer: "1. Go to **Asset Setup**, click **Create Maintenance Package**.\n2. Enter Package Name and Description; Submit.\n3. **List Equipment**: Add Equipment to select items.\n4. **Identify Forms**: Add Form, tick required forms, Submit.\n5. **Prepare Schedule**: choose Recurrence Type, Start/End dates, Time.\n6. **Assign Crew**: select responsible individuals/crew, Save.",
     tags: ["maintenance package","schedule maintenance","recurring","recurring maintenance schedule"]
@@ -1195,7 +1212,8 @@ const QA_EQUIPMENT = [
   {
     action: "define",
     object: "maintenance package wizard steps",
-    scope: "module", section: "Asset Setup",
+    scope: "module",
+    section: "Asset Setup",
     question: "What are the four steps of the Create Maintenance Package wizard?",
     answer: "**List Equipment** (pick equipment/accessories), **Identify Forms** (attach maintenance forms), **Prepare Schedule** (set recurrence, dates, time), and **Assign Crew** (assign users/crews responsible).",
     tags: ["maintenance package steps","wizard steps","create maintenance package"]
@@ -1203,7 +1221,8 @@ const QA_EQUIPMENT = [
   {
     action: "define",
     object: "maintenance recurrence type",
-    scope: "module", section: "Asset Setup",
+    scope: "module",
+    section: "Asset Setup",
     question: "What's the difference between a Daily/Weekly recurrence and a Check Out/Check In recurrence?",
     answer: "Daily and Weekly recurrence trigger the maintenance form on a calendar cadence (a specific date/time). Check Out and Check In recurrence instead trigger the form automatically as part of the equipment's checkout or check-in step in the Load Out Request flow, rather than on a fixed schedule.",
     tags: ["recurrence type","check out recurrence","check in recurrence","check out check in recurrence"]
@@ -1211,7 +1230,8 @@ const QA_EQUIPMENT = [
   {
     action: "assign",
     object: "maintenance schedule crew",
-    scope: "module", section: "Asset Setup",
+    scope: "module",
+    section: "Asset Setup",
     question: "How do I assign a maintenance schedule to specific people?",
     answer: "In the **Assign Crew** step of the Create Maintenance Package wizard, select individual users or whole Crews responsible for that maintenance — the schedule then appears on each assignee's personal calendar and becomes fillable at the scheduled time.",
     tags: ["assign crew","maintenance schedule assignment"]
@@ -1219,7 +1239,8 @@ const QA_EQUIPMENT = [
   {
     action: "define",
     object: "maintenance logs vs asset setup",
-    scope: "module", section: "Asset Setup",
+    scope: "module",
+    section: "Asset Setup",
     question: "What is \"Maintenance Logs\" and how is it different from Asset Setup?",
     answer: "It isn't a different screen — **Maintenance Logs** is one of Asset Setup's own two sub-tabs (the other is **Utilization**). Maintenance Logs is where Create Maintenance Package lives; Utilization follows the identical 4-step pattern (List Items / Identify Forms / Prepare Schedule / Assign Crew) but for scheduling utilization logs instead, via its own Create Utilization Package.",
     tags: ["maintenance logs","utilization setup"]
@@ -1227,7 +1248,8 @@ const QA_EQUIPMENT = [
   {
     action: "track",
     object: "scheduled maintenance activity",
-    scope: "module", section: "Field Inspections",
+    scope: "module",
+    section: "Field Inspections",
     question: "How do I log a scheduled maintenance activity?",
     answer: "1. Go to **Field Inspections → Maintenance → Asset Maintenance Calendar**.\n2. Pick the due date — forms are grouped by project and color-coded (Blue = Ready).\n3. Open the form, fill required fields, Submit — turns Green (Completed) once complete.\n4. If a check fails, raise an **issue** directly from that field — it's logged to **Asset Issues** automatically.",
     tags: ["scheduled maintenance","field inspection","field inspection log"]
@@ -1235,7 +1257,8 @@ const QA_EQUIPMENT = [
   {
     action: "create",
     object: "equipment photo",
-    scope: "module", section: "Field Inspections",
+    scope: "module",
+    section: "Field Inspections",
     question: "How do I upload equipment photos?",
     answer: "1. Go to **Field Inspections → Asset Photos** (also called Equipment Photos).\n2. Select the equipment/accessory from the left list.\n3. Click **Add**, then Upload File to select one or more images.\n4. Optionally annotate using the markup tools, add a Label and Description, then **Save**.",
     tags: ["equipment photos","upload image","upload equipment photo","asset photos"]
@@ -1243,7 +1266,8 @@ const QA_EQUIPMENT = [
   {
     action: "define",
     object: "maintenance vs utilization tab",
-    scope: "module", section: "Field Inspections",
+    scope: "module",
+    section: "Field Inspections",
     question: "What's the difference between the Maintenance and Utilization tabs in Field Inspections?",
     answer: "Both work the same way (calendar-driven scheduled entries plus ad-hoc list entries), but **Maintenance** logs maintenance/inspection activity while **Utilization** logs ad-hoc utilization entries — they mirror each other in structure.",
     tags: ["maintenance vs utilization tab","field inspections tabs"]
@@ -1251,7 +1275,8 @@ const QA_EQUIPMENT = [
   {
     action: "create",
     object: "ad-hoc inspection",
-    scope: "module", section: "Field Inspections",
+    scope: "module",
+    section: "Field Inspections",
     question: "How do I log an ad-hoc (unplanned) inspection?",
     answer: "1. Go to **Field Inspections → Maintenance** (or Utilization) and switch to the list/ad-hoc tab.\n2. Select the relevant form category on the left.\n3. Click **Create Form**, complete the fields, and Submit — it appears as a new card with Download, Share, Print, and Chat available.",
     tags: ["ad-hoc inspection","create form"]
@@ -1259,7 +1284,8 @@ const QA_EQUIPMENT = [
   {
     action: "edit",
     object: "maintenance form",
-    scope: "module", section: "Field Inspections",
+    scope: "module",
+    section: "Field Inspections",
     question: "How do I edit a maintenance form after it's been submitted?",
     answer: "Click the card for that submitted form to re-open it for review/editing — each card also offers Download, Share, Print, and a Chat panel for collaborative notes.",
     tags: ["edit submitted form","reopen maintenance form","reopen submitted form"]
@@ -1267,7 +1293,8 @@ const QA_EQUIPMENT = [
   {
     action: "edit",
     object: "equipment photo",
-    scope: "module", section: "Field Inspections",
+    scope: "module",
+    section: "Field Inspections",
     question: "How do I view, annotate, or delete an equipment photo?",
     answer: "Click \"Click to View\" on a photo to open a viewer with next/previous arrows. Use the built-in annotation tools below the image to mark it up, then click **Save** to persist the markup. Use the kebab (⋮) menu in the viewer to **Delete** the photo.",
     tags: ["view photo","annotate photo","delete photo","annotate delete photo"]
@@ -1275,7 +1302,8 @@ const QA_EQUIPMENT = [
   {
     action: "define",
     object: "trigger point",
-    scope: "module", section: "Field Inspections",
+    scope: "module",
+    section: "Field Inspections",
     question: "What is a trigger point on a maintenance form?",
     answer: "A trigger point is a checkbox configured per field in the form builder (**Setup Trigger Points**) that lets end-users raise an issue or note directly from that field if the checkpoint fails during an inspection. A triggered issue is logged automatically under **Asset Issues**.",
     tags: ["trigger point","setup trigger points"]
@@ -1283,7 +1311,8 @@ const QA_EQUIPMENT = [
   {
     action: "define",
     object: "asset maintenance calendar colors",
-    scope: "module", section: "Field Inspections",
+    scope: "module",
+    section: "Field Inspections",
     question: "What do the colors on the Asset Maintenance Calendar mean?",
     answer: "**Grey = Not Ready**, **Blue = Ready**, **Amber = In Progress**, **Green = Completed**. Each day's due forms are grouped by project in a collapsible section, showing the form name, the equipment, and its current status.",
     tags: ["asset maintenance calendar colors","equipment maintenance calendar legend","not ready ready in progress completed"]
@@ -1291,7 +1320,8 @@ const QA_EQUIPMENT = [
   {
     action: "define",
     object: "scheduled vs ad-hoc inspection",
-    scope: "module", section: "Field Inspections",
+    scope: "module",
+    section: "Field Inspections",
     question: "What's the difference between a scheduled maintenance form and an ad-hoc inspection?",
     answer: "A scheduled form is generated automatically by a maintenance package's Prepare Schedule settings (Daily/Weekly/Check Out/Check In) and shows up on the Asset Maintenance Calendar at the right time. An ad-hoc inspection is created manually at any time via Create Form on the Asset Maintenance list tab, without being tied to a pre-set schedule.",
     tags: ["scheduled vs ad-hoc inspection","inspection type comparison"]
@@ -1299,7 +1329,8 @@ const QA_EQUIPMENT = [
   {
     action: "edit",
     object: "equipment issue",
-    scope: "module", section: "Asset Issues",
+    scope: "module",
+    section: "Asset Issues",
     question: "How do I resolve an equipment issue?",
     answer: "1. Go to **Asset Issues**, locate the issue via Search/Filters.\n2. Review details, add notes in **Chat** if collaborating.\n3. Once fixed, click **Rectify** — status becomes Rectified and the linked form re-opens for completion.\n4. Optionally click **Create Work Order** if formal remediation tracking is needed.",
     tags: ["resolve issue","rectify","equipment issue","resolve rectify issue"]
@@ -1307,7 +1338,8 @@ const QA_EQUIPMENT = [
   {
     action: "define",
     object: "asset issue vs ncr",
-    scope: "module", section: "Asset Issues",
+    scope: "module",
+    section: "Asset Issues",
     question: "What's the difference between an Asset Issue and a Non-Conformance Report?",
     answer: "Asset Issues are typically raised automatically from a failed trigger-point check during a maintenance form, inspection, or an LOR check-out/check-in stage. NCRs are created manually (via + Add on the Non Conformance Report tab) to formally track a non-conformance event. Both use the same card/table view, Rectify workflow, Chat, Assign To/Due Date, and Create Work Order pattern, but they are separate, independently tracked records.",
     tags: ["asset issue vs ncr","issue comparison"]
@@ -1315,7 +1347,8 @@ const QA_EQUIPMENT = [
   {
     action: "create",
     object: "work order",
-    scope: "module", section: "Asset Issues",
+    scope: "module",
+    section: "Asset Issues",
     question: "How do I create a Work Order from an equipment issue?",
     answer: "Click **Create Work Order** on the Asset Issues (or NCR) toolbar — this spins up a Work Order to track remediation labor/cost.",
     tags: ["create work order from issue"]
@@ -1323,7 +1356,8 @@ const QA_EQUIPMENT = [
   {
     action: "delete",
     object: "asset issue",
-    scope: "module", section: "Asset Issues",
+    scope: "module",
+    section: "Asset Issues",
     question: "How do I delete, export, or change the view for issues and NCRs?",
     answer: "Click the delete icon on an issue's row to remove it; click **Export** to download all records to Excel; and use the view toggle (top-right) to switch between the default table view and a card/grid view.",
     tags: ["delete issue","export issues","table view toggle","export issues table view toggle"]
@@ -1331,7 +1365,8 @@ const QA_EQUIPMENT = [
   {
     action: "view",
     object: "issue header counters",
-    scope: "module", section: "Asset Issues",
+    scope: "module",
+    section: "Asset Issues",
     question: "What do the header counters mean on Asset Issues / NCR?",
     answer: "They show totals for the tab, e.g. \"42 Total Issues | 28 Open Issues | 14 Issues Rectified\" — total records, how many are still open, and how many have been rectified.",
     tags: ["header counters","issue totals"]
@@ -1339,7 +1374,8 @@ const QA_EQUIPMENT = [
   {
     action: "create",
     object: "non conformance report",
-    scope: "module", section: "Non Conformance Report",
+    scope: "module",
+    section: "Non Conformance Report",
     question: "How do I raise and close a Non-Conformance Report?",
     answer: "1. Go to **Non Conformance Report**, click **+ Add**.\n2. Fill in NCR details and submit.\n3. Assign an owner (**Assign To**) and **Due Date**.\n4. Use Chat to document remediation steps.\n5. Once corrected, click **Rectify** to close it out.",
     tags: ["ncr","non conformance report","raise and close ncr"]
@@ -1347,7 +1383,8 @@ const QA_EQUIPMENT = [
   {
     action: "define",
     object: "rectify action",
-    scope: "module", section: "Non Conformance Report",
+    scope: "module",
+    section: "Non Conformance Report",
     question: "What does \"Rectify\" do on an Issue vs. on an NCR?",
     answer: "In both cases, **Rectify** marks the record as Rectified. On an Asset Issue, it additionally re-enables the associated maintenance form for completion/re-submission. On an NCR it simply closes the report out as resolved.",
     tags: ["rectify behavior","issue vs ncr rectify"]
@@ -1355,7 +1392,8 @@ const QA_EQUIPMENT = [
   {
     action: "define",
     object: "rectify behavior",
-    scope: "module", section: "Non Conformance Report",
+    scope: "module",
+    section: "Non Conformance Report",
     question: "What's the difference between Asset Issues' Rectify and an NCR's Rectify?",
     answer: "Functionally similar — both set status to Rectified. On an Asset Issue, Rectify additionally re-enables the linked maintenance form so it can be completed/resubmitted; an NCR's Rectify simply closes the report, with no equivalent form-reopening behavior described.",
     tags: ["asset issue rectify vs ncr rectify"]
@@ -1363,7 +1401,8 @@ const QA_EQUIPMENT = [
   {
     action: "create",
     object: "load out request",
-    scope: "module", section: "Load Out Request",
+    scope: "module",
+    section: "Load Out Request",
     question: "How do I raise an internal Load Out Request?",
     answer: "1. Go to **Load Out Request → LOR Internal Jobs → Load Out Requests**, click **+ Add**.\n2. Fill the item (Equipment/Accessory), Quantity, UOM, Requested By, Required Date, Planned Return Date, Supervisor, Job ID/Name.\n3. Submit → status **REQUESTED**. Wait for **Approve**.\n4. Warehouse staff perform **Check Out** (Assign ID, Check Out Date, Requested Tool details) per item.\n5. Perform **Shipment** (choose Self Pick Up or Internal Delivery Request), then **Load**, **In Transit**, **Delivered**, and **Received** as the equipment moves and arrives.\n6. The request reaches **CLOSED** once every item is Received. To bring the equipment back afterward, raise a separate **Return Request**.",
     tags: ["load out request","lor","checkout equipment","internal job lor"]
@@ -1371,7 +1410,8 @@ const QA_EQUIPMENT = [
   {
     action: "create",
     object: "return request",
-    scope: "module", section: "Load Out Request",
+    scope: "module",
+    section: "Load Out Request",
     question: "How do I return equipment from a job site?",
     answer: "1. Go to **Load Out Request → LOR Internal Jobs → Return Requests**, click **+ Add**.\n2. Fill the item, Requested By, Received Date, Return Date, Pickup Time, Supervisor, and Job ID/Name.\n3. Get it **Approved**.\n4. Perform **Shipment**, **Load**, **In Transit**, **Delivered**, and **Received** the same way as an outbound request — there's no Check Out step, since the equipment is already checked out.\n5. The Return Request reaches **CLOSED** once every item is Received back into inventory.",
     tags: ["return request","rr","return equipment","bring back equipment"]
@@ -1379,7 +1419,8 @@ const QA_EQUIPMENT = [
   {
     action: "create",
     object: "3rd party load out request",
-    scope: "module", section: "Load Out Request",
+    scope: "module",
+    section: "Load Out Request",
     question: "How do I raise a 3rd-party lease Load Out Request?",
     answer: "1. Go to **Load Out Request → Rentals**, click **+ Add**.\n2. Fill the Request form (no Job Name/Location needed) and get it **Approved**.\n3. **Check Out** the equipment.\n4. Complete the **Lease Agreement**, click **Email Agreement for Approval**.\n5. Once the 3rd party approves (optionally e-signs via Adobe Sign), proceed to **Ship**.\n6. On return, **Check In**, then **Shop In** to close the record.",
     tags: ["3rd party lor","lease agreement","lease equipment","rentals"]
@@ -1387,7 +1428,8 @@ const QA_EQUIPMENT = [
   {
     action: "define",
     object: "lor status",
-    scope: "module", section: "Load Out Request",
+    scope: "module",
+    section: "Load Out Request",
     question: "What does 'PARTIAL CHECK OUT' status mean?",
     answer: "It means only *some* of the requested items on that request have been checked out so far — a single Load Out Request (or Rentals record) can be fulfilled across multiple check-out submissions. The status becomes the full (non-partial) version once every item on the request has been checked out.",
     tags: ["lor status","partial check out"]
@@ -1395,7 +1437,8 @@ const QA_EQUIPMENT = [
   {
     action: "define",
     object: "lor internal vs 3rd party",
-    scope: "module", section: "Load Out Request",
+    scope: "module",
+    section: "Load Out Request",
     question: "What's different between LOR Internal Jobs and Rentals?",
     answer: "LOR Internal Jobs splits into two separate documents — Load Out Requests (outbound: Request → Check Out → Shipment → Load → In Transit → Delivered → Received → Preview) and Return Requests (inbound, same stages minus Check Out). Rentals (3rd-party) is a single record covering the whole cycle with different stage names: Request → Check Out → Lease Agreement → Ship → Check In → Shop In → Preview, and its Request form omits Job Name/Job Location since there's no internal job involved.",
     tags: ["lor internal vs 3rd party","lor flow comparison","rentals vs internal jobs"]
@@ -1403,7 +1446,8 @@ const QA_EQUIPMENT = [
   {
     action: "define",
     object: "lor request form fields",
-    scope: "module", section: "Load Out Request",
+    scope: "module",
+    section: "Load Out Request",
     question: "What fields are on the LOR Request form?",
     answer: "**Item (Equipment or Accessory), Quantity, UOM, Requested By, Required Date, Planned Return Date, Supervisor, Job ID/Job Name** (the Job ID/Job Name field is omitted on Rentals/3rd-party requests).",
     tags: ["lor request fields","load out request fields"]
@@ -1411,7 +1455,8 @@ const QA_EQUIPMENT = [
   {
     action: "approve",
     object: "load out request",
-    scope: "module", section: "Load Out Request",
+    scope: "module",
+    section: "Load Out Request",
     question: "How do I approve or reject a Load Out Request?",
     answer: "Once a request is submitted (status REQUESTED), the warehouse manager/approver sees **Approve** and **Reject** buttons on it. Clicking Approve sets the status to APPROVED and removes the buttons. Clicking Reject turns the button red and sets status to Rejected; the requester can then revise using the approver's comments and resubmit.",
     tags: ["approve lor","reject lor"]
@@ -1419,7 +1464,8 @@ const QA_EQUIPMENT = [
   {
     action: "define",
     object: "check out issue status",
-    scope: "module", section: "Load Out Request",
+    scope: "module",
+    section: "Load Out Request",
     question: "What is \"Check Out Issue\" status, and what are my options if a maintenance check fails during checkout?",
     answer: "It occurs when a Scheduled Equipment Maintenance form tied to the Check Out stage fails a check. A confirmation dialog offers **Proceed With Issue** (continues the checkout, setting status to Check Out Issue, with the item marked \"ID – Has Issue\") or **Change Equipment** (swap in a different item instead).",
     tags: ["check out issue","proceed with issue","change equipment","proceed with issue change equipment"]
@@ -1427,7 +1473,8 @@ const QA_EQUIPMENT = [
   {
     action: "create",
     object: "delivery request",
-    scope: "module", section: "Load Out Request",
+    scope: "module",
+    section: "Load Out Request",
     question: "Can I request transport/delivery for shipping equipment?",
     answer: "Yes — on the **Shipment** stage of a Load Out Request or Return Request, choose **Internal Delivery Request** instead of Self Pick Up. This automatically creates a Requisition (REQ) and kicks off the RFQ process; a **View Delivery Request** link on that stage opens the resulting requisition.",
     tags: ["delivery request","requisition","rfq","requisition rfq"]
@@ -1435,7 +1482,8 @@ const QA_EQUIPMENT = [
   {
     action: "define",
     object: "hold equipment prompt",
-    scope: "module", section: "Load Out Request",
+    scope: "module",
+    section: "Load Out Request",
     question: "What does \"Hold the Equipment/Accessory or Not\" mean during Check In?",
     answer: "It's a prompt shown when a maintenance form tied to the Check In stage finds an issue. Answering **No** proceeds with the check-in anyway, setting status to CHECK IN ISSUE (logged to Asset Issues). Answering **Yes** blocks the check-in until the issue is fixed.",
     tags: ["hold equipment","check in issue"]
@@ -1443,7 +1491,8 @@ const QA_EQUIPMENT = [
   {
     action: "define",
     object: "lor status",
-    scope: "module", section: "Load Out Request",
+    scope: "module",
+    section: "Load Out Request",
     question: "What's the difference between PARTIAL CLOSED and CLOSED?",
     answer: "**CLOSED** means every item on the request has completed its final stage (Shop In on Rentals; Received on Load Out Requests/Return Requests). **PARTIAL CLOSED** means only some items have completed it so far.",
     tags: ["partial closed vs closed"]
@@ -1451,7 +1500,8 @@ const QA_EQUIPMENT = [
   {
     action: "view",
     object: "lor status list",
-    scope: "module", section: "Load Out Request",
+    scope: "module",
+    section: "Load Out Request",
     question: "What is the full list of possible LOR statuses, and where can I see all of an LOR's forms in one place?",
     answer: "All flows start with **Requested, Approved, Rejected**. **Load Out Requests/Return Requests** then move through Check Out (Load Out Requests only) → Shipment → Load → In Transit (or Partial In Transit) → Delivered (or Partial Delivered) → Received → Closed (or Partial Closed). **Rentals** instead moves through Check Out (or Partial Check Out) → Lease Agreement → Ship In (or Partial Ship In) → Check In (or Partial Check-In / Check In With Issue) → Shop In → Closed (or Partial Closed). The **Preview** tab on any record shows its full collected set of forms in one place.",
     tags: ["lor status list","lor preview"]
@@ -1459,7 +1509,8 @@ const QA_EQUIPMENT = [
   {
     action: "view",
     object: "load out request history",
-    scope: "module", section: "Load Out Request",
+    scope: "module",
+    section: "Load Out Request",
     question: "How do I view the full history of a Load Out Request?",
     answer: "Click the kebab (⋮) menu on the LOR card and select **See History** — this opens the full Equipment Log of requests, check-ins, check-outs, shipments, and shop-ins, including who performed each and when.",
     tags: ["lor history","see history"]
@@ -1467,7 +1518,8 @@ const QA_EQUIPMENT = [
   {
     action: "delete",
     object: "load out request",
-    scope: "module", section: "Load Out Request",
+    scope: "module",
+    section: "Load Out Request",
     question: "How do I delete a Load Out Request?",
     answer: "Click the kebab (⋮) menu on the LOR card and select **Delete**. This is only available while no equipment included in the LOR has yet been checked out — once any item has been checked out, the option disappears.",
     tags: ["delete lor"]
@@ -1475,7 +1527,8 @@ const QA_EQUIPMENT = [
   {
     action: "assign",
     object: "load out request",
-    scope: "module", section: "Load Out Request",
+    scope: "module",
+    section: "Load Out Request",
     question: "How do I assign an LOR to another user?",
     answer: "Use the **Assign to** field on the LOR to assign it to one or more users, granting them either View or Edit permission.",
     tags: ["assign lor","view edit permission"]
@@ -1483,7 +1536,8 @@ const QA_EQUIPMENT = [
   {
     action: "view",
     object: "lor actions",
-    scope: "module", section: "Load Out Request",
+    scope: "module",
+    section: "Load Out Request",
     question: "What per-LOR actions are available (download, share, mail, documents)?",
     answer: "Each LOR has action icons for: **Download** (PDF of the current stage's form) and **Print**; **Share** (send to other system users via System Default, Outlook, or Gmail); **Documents** (store/download all related files, and bundle all equipment's docs into one document); and **Mail** (compose email via Gmail or Outlook depending on Global Settings → Mail Settings).",
     tags: ["lor download","lor share","lor mail","download share mail documents"]
@@ -1491,7 +1545,8 @@ const QA_EQUIPMENT = [
   {
     action: "define",
     object: "roster field",
-    scope: "module", section: "Load Out Request",
+    scope: "module",
+    section: "Load Out Request",
     question: "What is the Roster field on an LOR stage for?",
     answer: "**Roster** lets you select the acting user's name/designation at that stage. It becomes active only once an Assign ID has been chosen.",
     tags: ["roster field lor","lor stage roster"]
@@ -1499,7 +1554,8 @@ const QA_EQUIPMENT = [
   {
     action: "view",
     object: "lor card",
-    scope: "module", section: "Load Out Request",
+    scope: "module",
+    section: "Load Out Request",
     question: "What information shows on an LOR card, and can I view LORs as a Kanban board?",
     answer: "Each card shows the selected Equipment/Accessory, Required-by Date, Created By, Workflow Level, and current Status/ID. A view toggle switches between Grid View and Kanban View across LOR Internal Jobs (Load Out Requests and Return Requests) and Rentals.",
     tags: ["lor card info","lor kanban view"]
@@ -1507,7 +1563,8 @@ const QA_EQUIPMENT = [
   {
     action: "configure",
     object: "lor approval workflow",
-    scope: "module", section: "Load Out Request",
+    scope: "module",
+    section: "Load Out Request",
     question: "Where do I configure the approval chain for Load Out Requests?",
     answer: "Go to **Load Out Request → Workflows**, then pick the sub-tab for the flow you're configuring — **Load Out Request**, **Return Request**, or **Rentals** — each has its own separate approval chain.",
     tags: ["lor workflows","approval chain"]
@@ -1515,7 +1572,8 @@ const QA_EQUIPMENT = [
   {
     action: "create",
     object: "lor approval level",
-    scope: "module", section: "Load Out Request",
+    scope: "module",
+    section: "Load Out Request",
     question: "How do I add a new approval level to an LOR workflow?",
     answer: "1. Go to **Load Out Request → Workflows**, pick the Load Out Request, Return Request, or Rentals sub-tab.\n2. Click **Create Level**.\n3. In the pop-up, choose the level type: \"All must approve\" or \"Anyone can approve\".\n4. Pick the approvers for that level.",
     tags: ["lor approval level","create level"]
@@ -1523,7 +1581,8 @@ const QA_EQUIPMENT = [
   {
     action: "define",
     object: "approval level type",
-    scope: "module", section: "Load Out Request",
+    scope: "module",
+    section: "Load Out Request",
     question: "What's the difference between \"All must approve\" and \"Anyone can approve\"?",
     answer: "**\"All must approve\"** requires every approver assigned to that level to approve before the request advances. **\"Anyone can approve\"** lets a single approver at that level clear it for everyone.",
     tags: ["all must approve","anyone can approve","all must approve anyone can approve"]
@@ -1531,7 +1590,8 @@ const QA_EQUIPMENT = [
   {
     action: "edit",
     object: "lor approval workflow",
-    scope: "module", section: "Load Out Request",
+    scope: "module",
+    section: "Load Out Request",
     question: "What happens if I edit an existing LOR approval workflow?",
     answer: "You'll see a warning that changes affect all forms/documents already linked to that workflow — editing a live workflow is not isolated to future requests only.",
     tags: ["edit lor workflow warning","edit workflow warning"]
@@ -1539,7 +1599,8 @@ const QA_EQUIPMENT = [
   {
     action: "view",
     object: "lor workflow diagram",
-    scope: "module", section: "Load Out Request",
+    scope: "module",
+    section: "Load Out Request",
     question: "How can I visualize the structure of an LOR approval workflow?",
     answer: "Go to **Load Out Request → Workflows**, pick the relevant sub-tab, and click the tree/graph view icon (device_hub) in the top right to see a visual diagram of the workflow structure.",
     tags: ["lor workflow diagram","tree graph view"]
@@ -1547,7 +1608,8 @@ const QA_EQUIPMENT = [
   {
     action: "define",
     object: "check in vs shop in",
-    scope: "module", section: "Load Out Request",
+    scope: "module",
+    section: "Load Out Request",
     question: "What's the difference between Check In and Shop In?",
     answer: "These are Rentals-flow stage names. **Check In** records that equipment/accessories have returned from the field (tick returning items, add name/signature). **Shop In** is the subsequent, final step confirming the equipment has been physically placed back into its inventory location — only after Shop In does the record reach CLOSED. (LOR Internal Jobs uses different stage names for the same idea: Delivered and Received.)",
     tags: ["check in vs shop in","lor stage comparison"]
@@ -1555,7 +1617,8 @@ const QA_EQUIPMENT = [
   {
     action: "define",
     object: "lor rejected status",
-    scope: "module", section: "Load Out Request",
+    scope: "module",
+    section: "Load Out Request",
     question: "Why is my Load Out Request showing \"Rejected\"?",
     answer: "The approver clicked **Reject** on your request (instead of Approve). Check the approver's comments, revise the request accordingly, and resubmit.",
     tags: ["lor rejected","troubleshoot rejected lor"]
@@ -1563,7 +1626,8 @@ const QA_EQUIPMENT = [
   {
     action: "define",
     object: "check out issue status",
-    scope: "module", section: "Load Out Request",
+    scope: "module",
+    section: "Load Out Request",
     question: "Why do I see \"Check Out Issue\" instead of a normal checked-out status?",
     answer: "A Scheduled Equipment Maintenance form tied to the Check Out stage found a failed check, and the checkout user chose **Proceed With Issue** in the resulting confirmation dialog rather than Change Equipment.",
     tags: ["check out issue troubleshoot","troubleshoot check out issue"]
@@ -1571,7 +1635,8 @@ const QA_EQUIPMENT = [
   {
     action: "define",
     object: "check in blocked",
-    scope: "module", section: "Load Out Request",
+    scope: "module",
+    section: "Load Out Request",
     question: "Why is my Check In blocked?",
     answer: "A maintenance form tied to the Check In stage found an issue, and when prompted \"Hold the Equipment/Accessory or Not\", the answer given was **Yes** — this blocks check-in until the issue is fixed. Answering No would instead let check-in proceed with status CHECK IN ISSUE.",
     tags: ["check in blocked troubleshoot","troubleshoot check in blocked"]
@@ -1579,7 +1644,8 @@ const QA_EQUIPMENT = [
   {
     action: "define",
     object: "maintenance form gating",
-    scope: "module", section: "Load Out Request",
+    scope: "module",
+    section: "Load Out Request",
     question: "Why do I need to fill in a maintenance form before I can check out or check in equipment?",
     answer: "Because the equipment's maintenance package has a Recurrence Type of Check Out or Check In, meaning its scheduled form is triggered automatically at that step of the LOR flow rather than on a calendar date, and must be completed as part of that step.",
     tags: ["maintenance form required","check out check in gating"]
@@ -1587,7 +1653,8 @@ const QA_EQUIPMENT = [
   {
     action: "define",
     object: "partial status",
-    scope: "module", section: "Load Out Request",
+    scope: "module",
+    section: "Load Out Request",
     question: "Why does my LOR still say PARTIAL CHECK OUT / PARTIAL IN TRANSIT / PARTIAL DELIVERED / PARTIAL SHIP IN / PARTIAL CHECK IN?",
     answer: "Because not all items on that request have completed that stage yet. These \"Partial\" statuses apply whenever some but not all of the requested items have completed a given stage (Check Out, In Transit, Delivered on Load Out Requests/Return Requests; Check Out, Ship, Check In on Rentals) — the status upgrades to the full (non-partial) version once every item completes it.",
     tags: ["partial status troubleshoot","partial check out ship check in troubleshoot"]
@@ -1595,7 +1662,8 @@ const QA_EQUIPMENT = [
   {
     action: "define",
     object: "approve reject buttons missing",
-    scope: "module", section: "Load Out Request",
+    scope: "module",
+    section: "Load Out Request",
     question: "Why is the Reject/Approve buttons missing from my Load Out Request?",
     answer: "Once an LOR has been Approved, the Approve/Reject buttons disappear — they are only shown while the request is in REQUESTED status awaiting a decision.",
     tags: ["approve reject missing","lor approved troubleshoot"]
@@ -1603,7 +1671,8 @@ const QA_EQUIPMENT = [
   {
     action: "define",
     object: "3rd party lor job name field",
-    scope: "module", section: "Load Out Request",
+    scope: "module",
+    section: "Load Out Request",
     question: "Why doesn't my 3rd Party LOR request form have a Job Name field?",
     answer: "Because Rentals is for leasing equipment out to (or in from) an external party, not for an internal job — its Request form omits Job Name/Job Location for this flow, unlike LOR Internal Jobs.",
     tags: ["3rd party lor no job name","missing job name troubleshoot"]
@@ -1611,7 +1680,8 @@ const QA_EQUIPMENT = [
   {
     action: "track",
     object: "maintenance form issue routing",
-    scope: "module", section: "Asset Issues",
+    scope: "module",
+    section: "Asset Issues",
     question: "I raised an issue from a maintenance form — where did it go?",
     answer: "It's automatically logged under the **Asset Issues** tab, where it can be reviewed, assigned, and eventually marked Rectified.",
     tags: ["issue routed to asset issues"]
@@ -1619,7 +1689,8 @@ const QA_EQUIPMENT = [
   {
     action: "edit",
     object: "lease agreement workflow",
-    scope: "module", section: "Load Out Request",
+    scope: "module",
+    section: "Load Out Request",
     question: "Why can't I edit an approved Lease Agreement's workflow without a warning?",
     answer: "Editing an existing LOR approval workflow level shows a warning because changes affect all forms/documents already linked to that workflow — not just future ones.",
     tags: ["lease agreement workflow warning","edit workflow warning"]
@@ -1627,7 +1698,8 @@ const QA_EQUIPMENT = [
   {
     action: "create",
     object: "maintenance form template",
-    scope: "module", section: "Configure Asset Management Forms & Global Setup",
+    scope: "module",
+    section: "Configure Asset Management Forms & Global Setup",
     question: "How do I build or edit maintenance/inspection form templates, and how do I create a new one?",
     answer: "1. Go to **Asset Management → Settings → Assets Management Forms → Maintenance Forms** (this lives in the module's own Settings, not Global Data), click **Create Form**.\n2. Step 1, **Build Form**: click **Add section**, then add fields from the field-type library (Attachment, Check box, Date, Label, Multi select, Paragraph, Roster, Scribble, Single select, Table, Text box, Time, Signature).\n3. Step 2, **Setup Trigger Points**: tick which fields should let end-users raise an issue if that checkpoint fails.\n4. Step 3, **Preview Form**: check the form as end-users will see it, including company branding.\n5. Click **Save Changes**.",
     tags: ["maintenance builder","create form template","maintenance form builder"]
@@ -1635,7 +1707,8 @@ const QA_EQUIPMENT = [
   {
     action: "define",
     object: "form field types",
-    scope: "module", section: "Configure Asset Management Forms & Global Setup",
+    scope: "module",
+    section: "Configure Asset Management Forms & Global Setup",
     question: "What field types are available in the maintenance form builder?",
     answer: "**Attachment, Check box, Date, Label, Multi select, Paragraph, Roster, Scribble** (signature/print name), **Single select, Table** (configurable rows/columns), **Text box** (default), **Time, Signature**.",
     tags: ["form field types","maintenance builder field types"]
@@ -1643,7 +1716,8 @@ const QA_EQUIPMENT = [
   {
     action: "define",
     object: "adobe sign integration",
-    scope: "module", section: "Configure Asset Management Forms & Global Setup",
+    scope: "module",
+    section: "Configure Asset Management Forms & Global Setup",
     question: "What is the Adobe Acrobat Sign integration used for?",
     answer: "It lets a 3rd-party signer affix a legal e-signature to a Rentals (3rd-Party) Lease Agreement as part of approving it, instead of just clicking Approve/Reject. It's configured once, company-wide, at Global Data → Global Settings → Adobe Sign Settings (Client Id, Client Secret, Consent).",
     tags: ["adobe sign purpose","e-signature purpose"]
@@ -1651,7 +1725,8 @@ const QA_EQUIPMENT = [
   {
     action: "define",
     object: "adobe sign lor usage",
-    scope: "module", section: "Configure Asset Management Forms & Global Setup",
+    scope: "module",
+    section: "Configure Asset Management Forms & Global Setup",
     question: "Once Adobe Sign is set up, how does it get used in the LOR flow?",
     answer: "In the Rentals (3rd Party) flow, once equipment is checked out, the Lease Agreement emailed to the 3rd party can be digitally signed via the Adobe Sign integration as part of their approval.",
     tags: ["adobe sign lor usage","lease agreement e-sign"]
@@ -1659,7 +1734,8 @@ const QA_EQUIPMENT = [
   {
     action: "define",
     object: "equipment management vs asset management",
-    scope: "module", section: "Configure Asset Management Forms & Global Setup",
+    scope: "module",
+    section: "Configure Asset Management Forms & Global Setup",
     question: "Is \"Equipment Management\" a different module from \"Asset Management\"?",
     answer: "No — they're the same module. \"Asset Management\" is the name on the Home hub tile, \"Equipment Master\" appears in the module's own breadcrumb, and \"Equipment Management\" is the name used in the underlying documentation. The UI itself mostly uses \"Asset\" in labels (Asset Master, Asset Setup, Asset Issues, + Asset).",
     tags: ["equipment management vs asset management","module naming"]
@@ -1801,12 +1877,12 @@ const QA_EQUIPMENT = [
   },
   {
     action: "create",
-    object: "allocation request",
+    object: "equipment request",
     scope: "module",
     section: "Operations: Allocation Requests and Lifecycle",
     question: "How do I request equipment or accessories for a project?",
     answer: "Open **Equipment Management → Operations** and click **New Request**. Pick equipment or accessories in the left panel, then enter **Quantity**, **Requested By**, **Required Date**, **Planned Return Date**, **Estimated Hours**, **Business Unit**, **Work Location** and **Pickup Preference** (Self Pickup or Company Logistics), plus notes and attachments. Click **Submit for Approval**. The **Request Priority** is set automatically from the Required Date, and work locations show only for projects where you are on the project team.",
-    tags: ["new request","allocation request","request equipment for project","required date","pickup preference","request priority"]
+    tags: ["new request","allocation request","request equipment for project","required date","pickup preference","request priority","request equipment for a project","raise equipment request","requester"]
   },
   {
     action: "define",
@@ -1833,7 +1909,7 @@ const QA_EQUIPMENT = [
     section: "Operations: Allocation Requests and Lifecycle",
     question: "How do I approve or reject an equipment request?",
     answer: "Open the card in the **Request** stage and review the request form. To approve, enter comments and click **Submit**; the card moves to **Assign**. To reject, enter comments, upload files and submit; the card goes to **Workflow Issues**. Only the workflow marked **Set as Default** is applied.",
-    tags: ["approve equipment request","reject request","request stage","workflow issues request"]
+    tags: ["approve equipment request","reject request","request stage","workflow issues request","reject equipment request"]
   },
   {
     action: "assign",
@@ -1924,6 +2000,429 @@ const QA_EQUIPMENT = [
     question: "Why is my allocation request stuck with a Haul Initiated tag?",
     answer: "An open hauling request is holding it. Open **Hauling → Requests** and progress the haul through to **Completed**. If it is an outbound haul that will not pick up, complete the pre-dispatch inspection and rectify any open issue in **Inspection Checklist Issues**. If no vehicle or driver appears, add them under **Hauling → Fleet and Schedule** with status Available.",
     tags: ["haul initiated stuck","allocation stuck","hauling blocked","no vehicle driver dropdown","cannot pick up inspection issue"]
+  },
+  {
+    action: "define",
+    object: "asset management roles",
+    scope: "module",
+    section: "Who Sets Up Asset Management",
+    question: "Who does what in Asset Management?",
+    answer: "The **Global Data Administrator** sets up cost codes, categories, rate cards and the telematics provider. The **Equipment Management Administrator** sets up Equipment Setup, Accessory Setup, checklists, approval workflows and thresholds. The **Equipment Master User** keeps records current and the **Asset Accountant** keeps purchase, warranty and depreciation. For a request, the **Requester** raises it, the **Approver** approves, the **Equipment Coordinator** assigns and processes off-rent, inspectors complete checklists, the **Dispatch Assignee** dispatches, the **Site Custodian** confirms On-Rent and asks for off-rent, the **Off-Rent Approver** decides, and the **Pickup Assignee** records the return date. Hauling adds the **Fleet Administrator**, **Hauling Coordinator** and **Hauling Approver**.",
+    tags: ["asset management roles","who does what asset management","equipment management roles","roles and responsibilities equipment","equipment roles"]
+  },
+  {
+    action: "configure",
+    object: "asset management setup order",
+    scope: "module",
+    section: "Who Sets Up Asset Management",
+    question: "In what order should I set up Asset Management for allocation requests?",
+    answer: "Create cost codes, categories and rate card templates in Global Data. Then in **Settings** set up **Equipment Setup** and **Accessory Setup** with fuel types, build and link an **Inspection Checklist**, create and default the **Approval Workflow** for Equipment Request, Hauling Request and Off-Rent / Extension Request, set the **Utility Threshold** and **Request Priority Threshold**, add vehicles and drivers under **Hauling → Fleet and Schedule**, connect the telematics provider, create geofences and register the assets.",
+    tags: ["setup order equipment","set up allocation lifecycle","first time setup asset management","prerequisite settings allocation","system administrator equipment setup"]
+  },
+  {
+    action: "define",
+    object: "master data flow",
+    scope: "module",
+    section: "Master Data: Cost Codes, Categories and Equipment Setup",
+    question: "What is the flow for setting up and registering equipment?",
+    answer: "The Global Data Administrator creates the equipment cost code (with type, category, UOM and rates), the categories and subcategories, and the rate card templates. The Equipment Management Administrator then adds the category in **Settings → Equipment Setup** (or **Accessory Setup**) with the cost code, rate card, checklist, depreciation method and useful life. Only then can the Equipment Master User register records and manage them with custom columns, views, filters and actions.",
+    tags: ["equipment setup flow","register equipment steps","equipment master setup order","cost code category rate card flow"]
+  },
+  {
+    action: "create",
+    object: "equipment category",
+    scope: "module",
+    section: "Master Data: Cost Codes, Categories and Equipment Setup",
+    question: "How do I add an equipment category and subcategories?",
+    answer: "In Global Data → Cost, open **Equipment Category**, click **Add Row**, enter the **Category Name** and **Submit**. Use the (+) icon to add subcategories: click **Add Row**, type the name and **Submit**. Use Actions to delete a subcategory.",
+    tags: ["add equipment category","subcategory equipment","equipment category global data","add row category"]
+  },
+  {
+    action: "create",
+    object: "rate card template",
+    scope: "module",
+    section: "Master Data: Cost Codes, Categories and Equipment Setup",
+    question: "How do I create a rate card template for equipment?",
+    answer: "In Global Data → Cost, open **Rate Card Template** and click **New Rate Card Template**. The template can then be chosen as the **Default Rate Card Template** in Equipment Setup and when an asset is assigned to a request.",
+    tags: ["rate card template","new rate card template","default rate card","equipment rates template"]
+  },
+  {
+    action: "create",
+    object: "equipment cost code",
+    scope: "module",
+    section: "Master Data: Cost Codes, Categories and Equipment Setup",
+    question: "How do I add an equipment cost code?",
+    answer: "Open **Global Data → Cost → Equipment** and click **Add Equipment**. Enter the **Equipment Code**, **Equipment Name**, **Type** (Equipment or Accessory), **Category**, **Subcategory** and **UOM**, and the hourly, daily, weekly and monthly rates, then **Submit**. Create it before adding the category in Equipment Setup.",
+    tags: ["add equipment cost code","equipment code global data","cost code equipment rates","no cost code available"]
+  },
+  {
+    action: "configure",
+    object: "equipment setup category",
+    scope: "module",
+    section: "Master Data: Cost Codes, Categories and Equipment Setup",
+    question: "What fields are on the Add Category dialog in Equipment Setup?",
+    answer: "**Equipment Cost Code**, **Category** (fills in automatically), **Default Rate Card Template**, **Inspection Checklist**, **Depreciation Method** and **Default Useful Life**. Accessory Setup uses the same fields, and both have **Sample Excel** and **Upload Excel** for bulk create or update.",
+    tags: ["add category fields","equipment setup fields","depreciation method useful life","inspection checklist equipment setup","accessory setup fields"]
+  },
+  {
+    action: "add",
+    object: "custom column equipment",
+    scope: "module",
+    section: "Master Data: Cost Codes, Categories and Equipment Setup",
+    question: "What types of custom column can I add on the equipment lists?",
+    answer: "Click **Add Custom Column**, enter the **Column Name** and choose the **Type**: Text, Single Select, Multi-select, Date or Formulae. Then use **Manage Columns** to show or arrange it.",
+    tags: ["custom column types","formulae column","add custom column type","multi select column"]
+  },
+  {
+    action: "upload",
+    object: "equipment excel",
+    scope: "module",
+    section: "Master Data: Cost Codes, Categories and Equipment Setup",
+    question: "How do I bulk upload equipment or setup entries from Excel?",
+    answer: "Click **Export → Upload Excel**, then **Sample Excel** to download the template. Fill it in, save it and upload it to create or update records. Always use the current template, and make sure the referenced equipment, categories, business units and locations already exist. **Download Excel** exports the current records.",
+    tags: ["bulk upload equipment","sample excel equipment","upload excel accessories","bulk create equipment"]
+  },
+  {
+    action: "define",
+    object: "profile roles",
+    scope: "module",
+    section: "Equipment and Accessory Profile",
+    question: "Who maintains each panel of an equipment profile?",
+    answer: "The **Equipment Master User** maintains **Basic Details** and **Specifications**, the status, current location and image. The **Asset Accountant** maintains **Purchase & Ownership**, **Warranty & Insurance** and **Depreciation**. The Equipment Administrator sets the Fuel Type options in Settings, and the Equipment Manager reviews profiles, including telematics readings and geofence information.",
+    tags: ["profile panel roles","asset accountant","who edits profile","equipment master user profile"]
+  },
+  {
+    action: "define",
+    object: "equipment vs accessory profile",
+    scope: "module",
+    section: "Equipment and Accessory Profile",
+    question: "How is an accessory profile different from an equipment profile?",
+    answer: "Only **Basic Details** and one specification field differ. An accessory shows **Accessory ID**, has a **Linked Asset** field to select the Equipment IDs it belongs to, and has no **Fuel Type**. An equipment shows **Equipment ID** and **Fuel Type**. The other four panels are identical.",
+    tags: ["accessory vs equipment","accessory profile differences","linked asset accessory","fuel type equipment only"]
+  },
+  {
+    action: "edit",
+    object: "equipment image",
+    scope: "module",
+    section: "Equipment and Accessory Profile",
+    question: "How do I change or remove an equipment image?",
+    answer: "Open the profile and click the edit icon on the image in the left panel. Upload the image and click **Submit**, or click the edit icon again to change or remove it.",
+    tags: ["equipment image","change equipment photo","remove equipment image","profile picture asset"]
+  },
+  {
+    action: "define",
+    object: "telematics roles",
+    scope: "module",
+    section: "Telematics: Device Mapping and Live Data",
+    question: "Who sets up and uses telematics?",
+    answer: "The **Global Data Administrator** sets up the provider once under **Global Data → Marketplace → Telematics**. The **Equipment Administrator** maps, views and unmaps devices. The **Fleet Monitor** watches **Live Data**, **Trip History**, **Device History** and **Location History**. The **Maintenance Planner** reviews **Readings History** and transfers readings between assets.",
+    tags: ["telematics roles","who maps telematics","fleet monitor","maintenance planner","meter administrator"]
+  },
+  {
+    action: "define",
+    object: "telematics tabs",
+    scope: "module",
+    section: "Telematics: Device Mapping and Live Data",
+    question: "What are the telematics tabs on an asset and what does Info Mapping show?",
+    answer: "The tabs are **Device Mapping**, **Live Data**, **Trip History**, **Device History**, **Location History** and **Readings History**. The **Info Mapping** panel on Device Mapping shows where each telemetry category is sourced from, which helps when a reading comes from an unexpected place.",
+    tags: ["telematics tabs","info mapping","device history","location history","telematics screens"]
+  },
+  {
+    action: "replace",
+    object: "telematics device",
+    scope: "module",
+    section: "Telematics: Device Mapping and Live Data",
+    question: "How do I replace a telematics device on an asset?",
+    answer: "First transfer the readings you want to keep from **Readings History** to the asset you choose. Then click **Unmap Device** on **Device Mapping**, click **Map Device**, choose the provider and the replacement device from **Available Devices**, and click **Map Device**.",
+    tags: ["replace telematics device","unmap device","swap device","change telematics device"]
+  },
+  {
+    action: "troubleshoot",
+    object: "telematics live data",
+    scope: "module",
+    section: "Telematics: Device Mapping and Live Data",
+    question: "Why is Live Data blank or out of date?",
+    answer: "Check the last-updated time on each reading. Readings are fetched at the interval set for the provider in **Global Data → Marketplace → Telematics**, so they can lag by that interval. Also confirm a device is still mapped on **Device Mapping**.",
+    tags: ["live data blank","live data out of date","telematics not updating","fetch interval"]
+  },
+  {
+    action: "define",
+    object: "geofence roles",
+    scope: "module",
+    section: "Geofencing and Fleet Map",
+    question: "Who creates geofences and who uses the Fleet Map?",
+    answer: "The **Geofence Administrator** creates the geofence, sets its coordinates, saves it and switches **Active** on. The **Inventory In-charge** confirms that inventory geofences match the right inventory location. The **Fleet Monitor** uses the Fleet Map. The **Equipment Administrator** maps telematics devices so assets show on the map.",
+    tags: ["geofence administrator","who creates geofence","fleet monitor map","geofence roles"]
+  },
+  {
+    action: "define",
+    object: "geofence fields",
+    scope: "module",
+    section: "Geofencing and Fleet Map",
+    question: "What fields are on the Add Location form for a geofence?",
+    answer: "Required: **Location Type**, **Name**, **Description**, **Code** and the **Inventory / Project** toggle. Optional: Street Address, City, State, Postal Code, Country (city, state and country fill in from the map), Start Date, End Date, POC Name, POC Phone and POC Email. For inventory locations the geofence links to the inventory location automatically.",
+    tags: ["geofence fields","add location geofence fields","geofence code name description","geofence poc"]
+  },
+  {
+    action: "configure",
+    object: "geofence coordinates",
+    scope: "module",
+    section: "Geofencing and Fleet Map",
+    question: "How do I set the coordinates of a geofence?",
+    answer: "Use any of three methods, and combine them: **Search Location** (enter the address and click the exact point), **Add Coordinates** (type latitude and longitude), or drag and select on the map. You need at least three points. Remove one with the minus icon or use **Clear All Coordinates**. **Upload KML** imports an existing boundary.",
+    tags: ["geofence coordinates","three points geofence","upload kml","search location geofence","clear all coordinates"]
+  },
+  {
+    action: "filter",
+    object: "fleet map",
+    scope: "module",
+    section: "Geofencing and Fleet Map",
+    question: "How do I filter the Fleet Map?",
+    answer: "Click **Filters**. Search by Asset ID, Description or telematics device serial number, and switch the map options **Geofences**, **Clusters**, **Only Running Equipment** and **Not Reported in Last 72 Hours**. Filter equipment by Status, Category, Business Unit, Make and Model. Click **Apply**, **Clear**, or **Save Filter** to keep your choice.",
+    tags: ["fleet map filters","save filter fleet map","only running equipment","not reported 72 hours","search device serial"]
+  },
+  {
+    action: "troubleshoot",
+    object: "fleet map markers",
+    scope: "module",
+    section: "Geofencing and Fleet Map",
+    question: "Why are no asset markers showing on the Fleet Map?",
+    answer: "Assets appear only if a telematics device is mapped to them. Zoom in, because at wide zoom they are grouped into clusters. Click **Clear** and reapply filters one at a time, and check whether **Only Running Equipment** or **Not Reported in Last 72 Hours** is on.",
+    tags: ["no markers fleet map","assets missing fleet map","fleet map empty","clusters zoom"]
+  },
+  {
+    action: "define",
+    object: "allocation roles",
+    scope: "module",
+    section: "Operations: Allocation Requests and Lifecycle",
+    question: "Who does what in the Allocation Lifecycle?",
+    answer: "The **Requester** raises the request and the **Approver** approves it. The **Equipment Coordinator** assigns the asset. The **Pre-Dispatch Inspector** completes the pre-dispatch checklist, the **Dispatch Assignee** enters the dispatch and on-rent dates, and the **Site Custodian** confirms On-Rent and raises extension or off-rent. The **Off-Rent Approver** decides, the Equipment Coordinator processes the approved off-rent, the **Pickup Assignee** records the Return Date and the **Post-Rent Inspector** completes the last checklist.",
+    tags: ["allocation lifecycle roles","who does what allocation","equipment coordinator","site custodian","dispatch assignee","pickup assignee"]
+  },
+  {
+    action: "overview",
+    object: "self pickup sequence",
+    scope: "module",
+    section: "Operations: Allocation Requests and Lifecycle",
+    question: "What are the steps of a Self Pickup allocation?",
+    answer: "Assign (Equipment Coordinator selects **Internal → Self Pickup** and confirms), **Inspection (Pre-Dispatch)** if switched on, **Ready for Dispatch** (Dispatch Assignee enters dates), **On Rent** (Site Custodian confirms), **Off-Rent / Extension** (request and approval), processing the return, **Pickup** (Pickup Assignee schedules), **Inspection (Post-Rent)**, then **Closed**, when the asset becomes Available. No haul is created on this route.",
+    tags: ["self pickup steps","self pickup flow","internal self pickup","no company transport","collect asset from yard"]
+  },
+  {
+    action: "overview",
+    object: "company logistics sequence",
+    scope: "module",
+    section: "Operations: Allocation Requests and Lifecycle",
+    question: "What are the steps of a Company Logistics allocation?",
+    answer: "The Equipment Coordinator assigns the asset, vehicle and driver, which creates an outbound haul. The haul is approved, scheduled, picked up, marked In Transit and Delivered (the request moves to **On Rent**), then closed. After the rental, off-rent is approved and processed to **Inventory → Company Logistics**, which creates a return haul that runs the same steps and, on Delivered, moves the request to **Pickup**. Then the Pickup Assignee schedules the pickup, the Post-Rent Inspector inspects and the request closes.",
+    tags: ["company logistics steps","company logistics flow","outbound haul return haul","hauling lifecycle","internal company logistics"]
+  },
+  {
+    action: "define",
+    object: "assignment fields",
+    scope: "module",
+    section: "Operations: Allocation Requests and Lifecycle",
+    question: "What fields do I fill in when assigning an asset to a request?",
+    answer: "**Available Asset**, **Operator**, **Rate Card Template** (rates fill in and can be changed), the **Pre-Dispatch Inspection** toggle, and users for the Pre-Dispatch and Ready for Dispatch stages with View or Edit access. For Company Logistics also choose the **Vehicle** and **Driver**. Then click **Submit**, add files if needed and click **Confirm Assignment**.",
+    tags: ["assignment fields","available asset operator rate card","confirm assignment","vehicle driver assign"]
+  },
+  {
+    action: "create",
+    object: "inspection checklist",
+    scope: "module",
+    section: "Operations: Allocation Requests and Lifecycle",
+    question: "How do I build an inspection checklist and link it to equipment?",
+    answer: "In **Settings → Equipment Forms → Inspection Checklist**, click **Create Form**, add inspection items under **Create inspection Items**, use **Build Form** for the title and fields, set Trigger Points if needed, then **Save Changes** and **Preview Form**. Then in **Equipment Setup** or **Accessory Setup**, click the edit icon on the category, choose the checklist in **Inspection Checklist** and **Submit**. Without it the inspection stage cannot be used.",
+    tags: ["build inspection checklist","link checklist equipment","inspection items responses","create form inspection checklist"]
+  },
+  {
+    action: "configure",
+    object: "approval workflow equipment",
+    scope: "module",
+    section: "Operations: Allocation Requests and Lifecycle",
+    question: "How do I set up approval workflows for equipment, hauling and off-rent requests?",
+    answer: "Open **Settings → Approval Workflow**. Choose Equipment Request, Hauling Request or Off-Rent / Extension Request, click **Create Approval Workflow**, enter the name, tick **Set as Default** and **Submit**. Then click **Create levels**, pick the workflow type and approvers and **Submit**. Only the workflow marked Default applies automatically.",
+    tags: ["allocation approval workflow","hauling request workflow","off rent workflow","set as default equipment","equipment request approval setup"]
+  },
+  {
+    action: "configure",
+    object: "thresholds",
+    scope: "module",
+    section: "Operations: Allocation Requests and Lifecycle",
+    question: "How do I set the request priority threshold and off-rent utility threshold?",
+    answer: "For priority, open **Settings → Request Priority Threshold**, enter the number of days from today and click **Save changes**; the system then sets each request's priority from its Required Date. For the off-rent threshold, open **Settings → Equipment/Accessory Status** and set the **Utility Threshold** for the Off Rent status.",
+    tags: ["request priority threshold","utility threshold","off rent threshold","equipment status settings"]
+  },
+  {
+    action: "define",
+    object: "asset status lifecycle",
+    scope: "module",
+    section: "Operations: Allocation Requests and Lifecycle",
+    question: "What happens to the asset status during an allocation?",
+    answer: "In the Allocation Lifecycle guides, **Confirm Assignment** sets Allocated, **Confirm On-Rent** changes it to On Rent, an approved off-rent to a project sets Off Rent, and closing sets Available. For Inventory Self Pickup it stays On Rent until the post-rent inspection is submitted. With Company Logistics it goes to Allocated when a haul is created, then In Transit while moving, and follows the On-Rent Date or Pickup Date when delivered.",
+    tags: ["asset status allocation","status after confirm assignment","on rent status change","available after closed","status transitions equipment"]
+  },
+  {
+    action: "approve",
+    object: "off rent request",
+    scope: "module",
+    section: "Operations: Allocation Requests and Lifecycle",
+    question: "As an off-rent approver, how do I approve or reject an off-rent or extension request?",
+    answer: "Open the card under **Off-Rent / Extension** and review the Requested Type, operator, details and attachments. Click **Approve** with comments, or **Reject** with comments and files. An approved extension returns the request to On-Rent; a rejected extension stays under Off-Rent / Extension and can be processed as an off-rent. An approved off-rent sets Off-Rent for return or re-allocation; a rejected off-rent returns it to On-Rent.",
+    tags: ["off rent approver","approve off rent request","approve off rent","reject extension","extension approval outcome","as an off rent approver"]
+  },
+  {
+    action: "confirm",
+    object: "on rent",
+    scope: "module",
+    section: "Operations: Allocation Requests and Lifecycle",
+    question: "As a site custodian, how do I confirm an asset as On-Rent?",
+    answer: "Open the card in the **On-Rent** stage, review the details, choose the On-Rent option and click **Submit**. The asset status changes to On Rent, and rental charges apply from the On-Rent Date. When the asset is no longer needed, use **Request Off-Rent** or **Request Extension** on the same card.",
+    tags: ["site custodian","confirm on rent","on rent confirmation","as a site custodian","confirm asset arrived"]
+  },
+  {
+    action: "dispatch",
+    object: "asset",
+    scope: "module",
+    section: "Operations: Allocation Requests and Lifecycle",
+    question: "As a dispatch assignee, how do I dispatch an asset?",
+    answer: "Open the card in **Ready for Dispatch**, enter the **Dispatch Date** (when the asset is handed over) and the **On-Rent Date** (when rental charges start), add attachments if needed and click **Dispatch**. The card moves to On-Rent. On Company Logistics it moves on only as the outbound haul progresses.",
+    tags: ["dispatch assignee","dispatch date on rent date","as a dispatch assignee","ready for dispatch steps"]
+  },
+  {
+    action: "schedule",
+    object: "pickup",
+    scope: "module",
+    section: "Operations: Allocation Requests and Lifecycle",
+    question: "As a pickup assignee, how do I schedule the return pickup?",
+    answer: "Open the card in the **Pickup** stage, select the **Return Date**, add attachments if needed and click **Schedule Pickup**. The card moves to **Inspection (Post-Rent)**.",
+    tags: ["pickup assignee","schedule pickup","return date","as a pickup assignee"]
+  },
+  {
+    action: "keep",
+    object: "asset at project",
+    scope: "module",
+    section: "Operations: Allocation Requests and Lifecycle",
+    question: "How do I keep an asset at the project or re-allocate it after off-rent?",
+    answer: "After the off-rent is approved, open the card and choose **Project**, pick the project and **Submit**, then reopen it. **Keep at Project** closes the request and sets the asset to Available. **Re-allocate to Request** lets you pick another matching request and click the **Open Allocation** icon; the asset restarts at that request's Assign stage.",
+    tags: ["keep at project","re-allocate to request","reallocate asset","open allocation icon","off rent project option"]
+  },
+  {
+    action: "define",
+    object: "hauling roles",
+    scope: "module",
+    section: "Hauling: Fleet, Requests and Returns",
+    question: "Who does what in Hauling?",
+    answer: "The **Fleet Administrator** keeps vehicles and drivers under **Fleet and Schedule**. The **Hauling Coordinator** reviews and submits the haul, schedules it, records pickup, transit and delivery and closes it with final costs. The **Hauling Approver** approves or rejects outbound and return hauls. The Driver moves the asset and the **Receiving Representative** confirms receipt and the Condition on Arrival.",
+    tags: ["hauling roles","hauling coordinator","hauling approver","fleet administrator","receiving representative"]
+  },
+  {
+    action: "define",
+    object: "haul fields",
+    scope: "module",
+    section: "Hauling: Fleet, Requests and Returns",
+    question: "What fields are on a haul request and when are they filled in?",
+    answer: "At **Request**: Equipment / Accessory, Original Location, Destination Location, Request Date, Estimated Cost, Phase Codes, Escort Cost and Permit Cost. At **Approved**: Vehicle and Driver. At **Schedule Pending**: Pickup Date. At **In Transit**: Condition on Arrival. At **Delivered**: Phase Codes, Escort Cost, Permit Cost and Final Cost, before **Close Haul**.",
+    tags: ["haul request fields","escort cost permit cost","condition on arrival","final cost haul","haul stage fields"]
+  },
+  {
+    action: "approve",
+    object: "haul request",
+    scope: "module",
+    section: "Hauling: Fleet, Requests and Returns",
+    question: "As a hauling approver, how do I approve or reject a haul request?",
+    answer: "Open the haul on the **Requests** tab and review the asset, route, estimated cost and other costs. Approve it to move it to the **Approved** stage. If you reject an outbound haul, it does not proceed and the allocation stays on hold; if you reject a return haul, the allocation request goes back to Off-Rent Approval.",
+    tags: ["hauling approver","approve haul","reject haul","haul approval outcome","as a hauling approver"]
+  },
+  {
+    action: "close",
+    object: "haul",
+    scope: "module",
+    section: "Hauling: Fleet, Requests and Returns",
+    question: "As a hauling coordinator, how do I deliver and close a haul?",
+    answer: "Click **Mark as In Transit** on the Picked Up card. On the In Transit card, select the **Condition on Arrival** and click **Mark as Delivered**. On the Delivered card, enter Phase Codes, Escort Cost, Permit Cost and **Final Cost** and click **Close Haul**. The haul moves to **Completed** for later review.",
+    tags: ["hauling coordinator","mark as delivered","close haul","final cost","as a hauling coordinator"]
+  },
+  {
+    action: "fix",
+    object: "return haul rejected",
+    scope: "module",
+    section: "Hauling: Fleet, Requests and Returns",
+    question: "What do I do if a return haul is rejected?",
+    answer: "The linked allocation request returns to **Off-Rent Approval**. Reprocess the off-rent: correct the return details, or choose a different return method, and submit again.",
+    tags: ["return haul rejected","rejected return haul","off rent approval back","reprocess off rent"]
+  },
+  {
+    action: "define",
+    object: "outbound vs return haul",
+    scope: "module",
+    section: "Operations: Allocation Requests and Lifecycle",
+    question: "How do the outbound and return hauls differ in the Allocation Lifecycle?",
+    answer: "The outbound haul starts when **Company Logistics** is confirmed on Assign, runs inventory to project, holds the request at Assign or Pre-Dispatch with a Haul Initiated tag, and on Delivered moves it to On Rent. The return haul starts when **Inventory → Company Logistics** is chosen while processing an off-rent, runs project to inventory, holds the request at Off-Rent, and on Delivered moves it to Pickup.",
+    tags: ["outbound haul vs return haul lifecycle","haul initiated twice","return haul trigger","outbound haul trigger"]
+  },
+  {
+    action: "troubleshoot",
+    object: "allocation request",
+    scope: "module",
+    section: "Troubleshooting: Asset Management Problems",
+    question: "Why does an allocation request not move past Ready for Dispatch, Off-Rent or Closed?",
+    answer: "For Ready for Dispatch, enter both the **Dispatch Date** and the **On-Rent Date**. Check **Inspection Checklist Issues** for an open issue against the asset and rectify it; this also blocks Closed and a haul pickup. A card held at Off-Rent with a **Haul Initiated** tag needs its return haul taken through to Completed in Hauling.",
+    tags: ["request stuck","not moving ready for dispatch","stuck off rent","will not close","open inspection issue"]
+  },
+  {
+    action: "troubleshoot",
+    object: "available asset",
+    scope: "module",
+    section: "Troubleshooting: Asset Management Problems",
+    question: "Why does no asset appear under Available Asset, or why are the rates blank?",
+    answer: "Only assets with **Available** status are offered; Allocated, On Rent, In Transit and Off Rent assets are not. Check that a matching unit exists in the master. For blank rates, check that the **Rate Card Template** covers the asset's category and select it again.",
+    tags: ["no available asset","asset not listed assign","rates blank rate card","available asset dropdown empty"]
+  },
+  {
+    action: "troubleshoot",
+    object: "inspection stage",
+    scope: "module",
+    section: "Troubleshooting: Asset Management Problems",
+    question: "Why was the pre-dispatch inspection skipped, or why is the inspection form empty?",
+    answer: "The stage appears only if **Pre-Dispatch Inspection** was switched on when confirming assignment; move the request back and confirm again with it on. An empty form means no **Inspection Checklist** is linked to the asset under **Settings → Equipment Setup / Accessory Setup**.",
+    tags: ["inspection skipped","inspection form empty","pre dispatch inspection missing","checklist not linked"]
+  },
+  {
+    action: "troubleshoot",
+    object: "off rent submit request",
+    scope: "module",
+    section: "Troubleshooting: Asset Management Problems",
+    question: "Why can I not submit an off-rent request?",
+    answer: "Check that the request is in the **On-Rent** stage and that an **Off-Rent / Extension Request** approval workflow is marked **Set as Default** under **Settings → Approval Workflow**.",
+    tags: ["cannot submit off rent","off rent request blocked","off rent workflow default","request extension not working"]
+  },
+  {
+    action: "troubleshoot",
+    object: "vehicle driver",
+    scope: "module",
+    section: "Troubleshooting: Asset Management Problems",
+    question: "Why does no vehicle or driver appear when I assign or haul an asset?",
+    answer: "Add them under **Hauling → Fleet and Schedule**, check their status is **Available**, and check that the driver is mapped to a vehicle. Only vehicles and drivers set up there can be chosen.",
+    tags: ["no vehicle driver","driver not listed","vehicle dropdown empty","fleet and schedule missing"]
+  },
+  {
+    action: "troubleshoot",
+    object: "asset status after haul",
+    scope: "module",
+    section: "Troubleshooting: Asset Management Problems",
+    question: "Why has the asset status not changed after delivery or return processing?",
+    answer: "After a haul, the status follows the **On-Rent Date** (outbound) or the **Pickup Date** (return), so update that date in the allocation request. On Inventory Self Pickup the status stays On Rent until the post-rent inspection is submitted. If no destination location appears, add the Inventory Location first.",
+    tags: ["status not changed after delivery","status still on rent","no destination location","return processing status"]
+  },
+  {
+    action: "approve",
+    object: "equipment request",
+    scope: "module",
+    section: "Operations: Allocation Requests and Lifecycle",
+    question: "Who approves an equipment or accessory request?",
+    answer: "The **Approver** (Equipment Manager or Operations Manager, per configured level) approves it. The request card sits in the **Request** stage with its auto-set priority. The approver opens it, then clicks **Submit** with comments to approve (the card moves to **Assign**), or rejects with comments and files (the card goes to **Workflow Issues**). The levels come from the **Equipment Request** workflow marked **Set as Default** under Settings → Approval Workflow.",
+    tags: ["who approves equipment request","approver equipment request","approve accessory request","equipment request workflow approver","request approval levels"]
   }
 ];
 
@@ -9859,6 +10358,22 @@ const MODULES = [
           {
             "term": "Users and Permissions (Equipment Management)",
             "definition": "The module-scoped permission group registry for Equipment Management, reached from Settings — the same shared group mechanism used across Arena's modules, letting an admin scope a group's access to only this module if desired."
+          },
+          {
+            "term": "Roles: master data and profile",
+            "definition": "Global Data Administrator (System Administrator or Cost Controller): equipment cost codes, categories and subcategories, rate card templates, and the telematics provider. Equipment Management Administrator (Equipment Admin or IT Administrator): Equipment Setup and Accessory Setup, fuel types, inspection checklists, approval workflows, statuses and thresholds. Equipment Master User (Asset Coordinator or Equipment Executive): creates and maintains records, status, location and image. Inventory In-charge (Yard In-charge or Store Keeper): inventory locations. Asset Accountant (Finance Executive): purchase, warranty, insurance and depreciation panels. Equipment Manager or Fleet Manager: reviews profiles, telematics readings and geofences."
+          },
+          {
+            "term": "Roles: allocation requests",
+            "definition": "Requester (Site Engineer, Project Coordinator or Foreman): raises the request. Approver (Equipment Manager or Operations Manager): approves or rejects at each configured level. Equipment Coordinator (Yard In-charge, Allocator or Dispatcher): assigns the asset and later processes the approved off-rent. Pre-Dispatch Inspector and Post-Rent Inspector (Mechanic, Workshop Supervisor or QA Inspector): complete the checklists. Dispatch Assignee (Yard Supervisor): enters dispatch and on-rent dates. Site Custodian (Site Engineer or Foreman): confirms On-Rent and raises off-rent or extension. Off-Rent Approver (Equipment Manager or Operations Manager): decides those requests. Pickup Assignee (Yard Supervisor or Logistics staff): records the return date. The Collecting Representative on Self Pickup only collects the asset and needs no system action."
+          },
+          {
+            "term": "Roles: hauling, telematics and geofences",
+            "definition": "Fleet Administrator (Transport Admin): vehicles and drivers. Hauling Coordinator (Logistics or Transport Coordinator): moves each haul through its stages and closes it. Hauling Approver (Operations Manager or Cost Controller): approves hauls. Driver: physically moves the asset, with status recorded by the Hauling Coordinator. Receiving Representative: confirms receipt and Condition on Arrival. Equipment Administrator: maps telematics devices. Fleet Monitor (Equipment Manager or Site Supervisor): watches live data, history and the Fleet Map. Maintenance Planner: reviews and transfers readings. Geofence Administrator (Equipment Admin or Site Administrator): creates and activates geofences."
+          },
+          {
+            "term": "Setup order for allocation, hauling and telematics",
+            "definition": "Do this before the first request. (1) In Global Data, create cost codes, categories and rate card templates. (2) In Settings, set up Equipment Setup and Accessory Setup, including fuel types. (3) Build an Inspection Checklist and link it to each category. (4) Create approval workflows for Equipment Request, Hauling Request and Off-Rent / Extension Request, and mark one of each Set as Default. (5) Check Equipment/Accessory Status and set the Utility Threshold, then set the Request Priority Threshold. (6) Add vehicles and drivers under Hauling → Fleet and Schedule. (7) Connect the telematics provider in Global Data, then map devices. (8) Create and activate geofences. (9) Register the assets."
           }
         ],
         "procedures": [
@@ -9878,6 +10393,18 @@ const MODULES = [
               "Add a new group (or edit an existing one, such as an \"Equipment Management\" group) and configure its Permissions.",
               "Use the group's Users control to assign the people who should have this module's access."
             ]
+          },
+          {
+            "title": "Prepare Asset Management for allocation requests (System Administrator)",
+            "steps": [
+              "In Global Data → Cost, create the equipment cost codes, categories and rate card templates.",
+              "In the module <strong>Settings</strong>, open <strong>Equipment Setup</strong> and <strong>Accessory Setup</strong> and add each category with its cost code, rate card, checklist, depreciation method and useful life.",
+              "Open <strong>Equipment Forms → Inspection Checklist</strong>, build the form, and link it in Equipment Setup.",
+              "Open <strong>Approval Workflow</strong> and create workflows for Equipment Request, Hauling Request and Off-Rent / Extension Request. Mark one of each <strong>Set as Default</strong>.",
+              "Open <strong>Equipment/Accessory Status</strong> to set the Utility Threshold for Off Rent, and <strong>Request Priority Threshold</strong> to set the number of days.",
+              "Under <strong>Hauling → Fleet and Schedule</strong>, add vehicles and drivers."
+            ],
+            "note": "Only the workflow marked as Default is applied automatically, so each of the three workflow types needs one."
           }
         ]
       },
@@ -10211,7 +10738,7 @@ const MODULES = [
       },
       {
         "heading": "Load Out Request",
-        "intro": "<p>Every time a piece of equipment leaves the yard, real money and real risk move with it — a crane sent to the wrong job, a generator that leaves without a required safety check, or a leased asset that goes out without a signed agreement are all expensive mistakes that a formal process exists to prevent. Load Out Request is used across several roles in the same request: a <strong>site or project End User</strong> raises the request, a <strong>warehouse or yard End User</strong> physically checks the equipment out and processes its shipment/return, and a <strong>Fleet/Equipment Module Manager or designated approver</strong> signs off on the request — with the approval chain configurable by an <strong>Equipment Management Admin</strong> via Workflows, rather than fixed in the product.</p><p>Load Out Request (LOR) is the formal, staged workflow that governs every movement of equipment out of inventory — whether to an internal job site or on lease to a 3rd party — and its eventual return. It exists because equipment is a shared, finite, valuable resource: without a controlled process, there would be no reliable way to know what's currently deployed, who has it, when it's due back, or whether it passed a required safety check before leaving the warehouse.</p>\n    <p>Arena implements this as three distinct top-level tabs: <strong>LOR Internal Jobs</strong> (equipment going to and returning from one of your own job sites), <strong>Rentals</strong> (equipment leased out to, or in from, an external 3rd party), and <strong>Workflows</strong> (approval-chain configuration). LOR Internal Jobs itself splits into two document types with their own ID sequences: <strong>Load Out Requests</strong> (LOR-#, equipment going out) and <strong>Return Requests</strong> (RR-#, equipment coming back) — these are separate records, not two ends of the same one. The outbound and return flows use the same underlying shipping mechanics (Shipment, Load, In Transit, Delivered, Received) but the outbound flow adds a Check Out step first, since a Return Request starts from equipment that's already checked out.</p>\n    <p>The <strong>Rentals</strong> flow (3rd-party) is structured differently again, using the stage names Request, Check Out, Lease Agreement, Ship, Check In, and Shop In — a single record covers the whole out-and-back cycle rather than splitting into two document types. This is also where a 3rd party's legal sign-off (Lease Agreement) fits in.</p>\n    <p>A defining characteristic of both flows is that nearly every stage supports partial fulfillment: a single request can cover multiple line items, and those items can be checked out, shipped, or received across multiple separate actions rather than all at once. This is why you'll frequently see \"Partial\" statuses — they're not errors, they're the expected in-between state whenever some but not all items on a request have completed a given stage.</p>\n    <p>The LOR flow also integrates tightly with the maintenance system covered earlier: if a piece of equipment's maintenance package has a Check Out or Check In recurrence type, a maintenance form is automatically inserted into that exact stage of the flow, and a failed check surfaces a decision point (Proceed With Issue vs. Change Equipment on checkout; Hold the Equipment or Not on check-in) rather than silently letting the equipment move. Approval of every flow is governed by a separately configurable approval chain (Workflows) that an <strong>Equipment Management Admin</strong> sets up — with its own chain for Load Out Request, Return Request, and Rentals — so who needs to sign off is itself a piece of admin configuration rather than a fixed rule.</p>",
+        "intro": "<p>Every time a piece of equipment leaves the yard, real money and real risk move with it — a crane sent to the wrong job, a generator that leaves without a required safety check, or a leased asset that goes out without a signed agreement are all expensive mistakes that a formal process exists to prevent. Load Out Request is used across several roles in the same request: a <strong>site or project End User</strong> raises the request, a <strong>warehouse or yard End User</strong> physically checks the equipment out and processes its shipment/return, and a <strong>Fleet/Equipment Module Manager or designated approver</strong> signs off on the request — with the approval chain configurable by an <strong>Equipment Management Admin</strong> via Workflows, rather than fixed in the product. This is the flow checked in the live product on 2026-09-25. The company's Allocation Lifecycle guides, with the Operations board and Hauling, are in <strong>Operations: Allocation Requests and Lifecycle</strong>.</p><p>Load Out Request (LOR) is the formal, staged workflow that governs every movement of equipment out of inventory — whether to an internal job site or on lease to a 3rd party — and its eventual return. It exists because equipment is a shared, finite, valuable resource: without a controlled process, there would be no reliable way to know what's currently deployed, who has it, when it's due back, or whether it passed a required safety check before leaving the warehouse.</p>\n    <p>Arena implements this as three distinct top-level tabs: <strong>LOR Internal Jobs</strong> (equipment going to and returning from one of your own job sites), <strong>Rentals</strong> (equipment leased out to, or in from, an external 3rd party), and <strong>Workflows</strong> (approval-chain configuration). LOR Internal Jobs itself splits into two document types with their own ID sequences: <strong>Load Out Requests</strong> (LOR-#, equipment going out) and <strong>Return Requests</strong> (RR-#, equipment coming back) — these are separate records, not two ends of the same one. The outbound and return flows use the same underlying shipping mechanics (Shipment, Load, In Transit, Delivered, Received) but the outbound flow adds a Check Out step first, since a Return Request starts from equipment that's already checked out.</p>\n    <p>The <strong>Rentals</strong> flow (3rd-party) is structured differently again, using the stage names Request, Check Out, Lease Agreement, Ship, Check In, and Shop In — a single record covers the whole out-and-back cycle rather than splitting into two document types. This is also where a 3rd party's legal sign-off (Lease Agreement) fits in.</p>\n    <p>A defining characteristic of both flows is that nearly every stage supports partial fulfillment: a single request can cover multiple line items, and those items can be checked out, shipped, or received across multiple separate actions rather than all at once. This is why you'll frequently see \"Partial\" statuses — they're not errors, they're the expected in-between state whenever some but not all items on a request have completed a given stage.</p>\n    <p>The LOR flow also integrates tightly with the maintenance system covered earlier: if a piece of equipment's maintenance package has a Check Out or Check In recurrence type, a maintenance form is automatically inserted into that exact stage of the flow, and a failed check surfaces a decision point (Proceed With Issue vs. Change Equipment on checkout; Hold the Equipment or Not on check-in) rather than silently letting the equipment move. Approval of every flow is governed by a separately configurable approval chain (Workflows) that an <strong>Equipment Management Admin</strong> sets up — with its own chain for Load Out Request, Return Request, and Rentals — so who needs to sign off is itself a piece of admin configuration rather than a fixed rule.</p>",
         "definitions": [
           {
             "term": "Load Out Request (LOR)",
@@ -10505,6 +11032,22 @@ const MODULES = [
           {
             "term": "Equipment Setup and Accessory Setup",
             "definition": "In the module <strong>Settings</strong>, <strong>Equipment Setup</strong> lists the equipment that can be registered, and <strong>Accessory Setup</strong> does the same for accessories. Click <strong>Add Category</strong> and choose the <strong>Equipment Cost Code</strong> (the category fills in), a <strong>Default Rate Card Template</strong>, an <strong>Inspection Checklist</strong>, a <strong>Depreciation Method</strong> and a <strong>Default Useful Life</strong>. Only items configured here show in the Equipment or Accessory dropdown when records are created. <strong>Sample Excel</strong> and <strong>Upload Excel</strong> create or update them in bulk. <strong>Fuel Type</strong> options are also set here."
+          },
+          {
+            "term": "Master data creation flow",
+            "definition": "Steps 1 to 5 are one-time setup and steps 6 to 7 repeat. (1) The Global Data Administrator creates the equipment cost code with type, category, UOM and rates under Global Data → Cost → Equipment Code. (2) The same person creates categories and subcategories. (3) And creates the rate card templates. (4) The Equipment Management Administrator adds the category in <strong>Settings → Equipment Setup</strong>, linking cost code, rate card, checklist, depreciation and useful life. (5) The same administrator does <strong>Accessory Setup</strong> in the same way. (6) The Equipment Master User adds and updates records in the Equipment Master. (7) The Equipment Master User manages them with custom columns, views, filters and actions."
+          },
+          {
+            "term": "Before you register equipment",
+            "definition": "Check that equipment cost codes, categories and subcategories exist, that the rate card templates you need are created, that the equipment is configured in Equipment Setup (or the accessory in Accessory Setup), that Fuel Types are set up, that the Business Units exist and are mapped to an Inventory Location in Inventory Management, and that the Inventory and Project Locations are configured."
+          },
+          {
+            "term": "Add Category fields (Equipment Setup)",
+            "definition": "Equipment Cost Code (choose the item from Global Data → Cost → Equipment Code), Category (fills in automatically), Default Rate Card Template, Inspection Checklist, Depreciation Method and Default Useful Life. The same fields apply in Accessory Setup. Sample Excel and Upload Excel create or update entries in bulk in both."
+          },
+          {
+            "term": "Custom column types",
+            "definition": "On Global Data → Cost → Equipment Code and on the Equipment Master lists, <strong>Add Custom Column</strong> lets you add a column of type Text, Single Select, Multi-select, Date or Formulae. Enter the Column Name, choose the Type and click Add Custom Column. Manage Columns then shows or hides it."
           }
         ],
         "procedures": [
@@ -10517,6 +11060,51 @@ const MODULES = [
               "Click <strong>Submit</strong>. The equipment can now be picked when a record is created."
             ],
             "note": "The Equipment Management Administrator also sets the Fuel Type options in Equipment Setup, which populate the Fuel Type field on equipment profiles."
+          },
+          {
+            "title": "Add an equipment category and subcategories",
+            "steps": [
+              "In Global Data → Cost, open <strong>Equipment Category</strong> and click <strong>Add Row</strong>.",
+              "Enter the Category Name and click <strong>Submit</strong>.",
+              "Use the (+) icon to add subcategories: click <strong>Add Row</strong>, type the name, and click <strong>Submit</strong>. Use Actions to delete a subcategory."
+            ]
+          },
+          {
+            "title": "Create a rate card template",
+            "steps": [
+              "In Global Data → Cost, open <strong>Rate Card Template</strong>.",
+              "Click <strong>New Rate Card Template</strong> and fill it in.",
+              "The template can then be chosen as the Default Rate Card Template in Equipment Setup and when an asset is assigned to a request."
+            ]
+          },
+          {
+            "title": "Add an equipment cost code",
+            "steps": [
+              "Open <strong>Global Data → Cost → Equipment</strong> and click <strong>Add Equipment</strong>.",
+              "Enter the Equipment Code, Equipment Name, Type (Equipment or Accessory), Category, Subcategory and UOM.",
+              "Enter the Hourly, Daily, Weekly and Monthly rates.",
+              "Click <strong>Submit</strong>."
+            ],
+            "note": "Create the cost code before you add a category in Equipment Setup, or no cost code will be available."
+          },
+          {
+            "title": "Add a category in Equipment Setup or Accessory Setup",
+            "steps": [
+              "Open the module <strong>Settings</strong> and choose <strong>Equipment Setup</strong> (or <strong>Accessory Setup</strong>).",
+              "Click <strong>Add Category</strong>.",
+              "Choose the Equipment Cost Code, Default Rate Card Template, Inspection Checklist, Depreciation Method and Default Useful Life.",
+              "Click <strong>Submit</strong>."
+            ],
+            "note": "Only equipment configured here appears in the Equipment dropdown when a record is created."
+          },
+          {
+            "title": "Bulk upload equipment or setup entries from Excel",
+            "steps": [
+              "Click <strong>Export → Upload Excel</strong> and then <strong>Sample Excel</strong> to download the template.",
+              "Enter the equipment information in the template and save it.",
+              "Upload the file to create or update records."
+            ],
+            "note": "Always start from the current Sample Excel. The referenced equipment, categories, business units and locations must already exist."
           }
         ]
       },
@@ -10551,6 +11139,14 @@ const MODULES = [
           {
             "term": "Fields driven by telematics",
             "definition": "The <strong>Equipment Geofence</strong>, <strong>Geofence Address</strong>, the profile map, <strong>Engine Hours</strong>, <strong>GPS Fix Time</strong> and <strong>Message Time</strong> appear only after a telematics device is mapped on the <strong>Telematics</strong> tab."
+          },
+          {
+            "term": "Who maintains each profile panel",
+            "definition": "The Equipment Master User maintains <strong>Basic Details</strong> and <strong>Specifications</strong>, keeps status and current location up to date, and manages the image. The Asset Accountant maintains <strong>Purchase & Ownership</strong>, <strong>Warranty & Insurance</strong> and <strong>Depreciation</strong>. The Equipment Administrator sets the Fuel Type options in Settings. The Equipment Manager reviews profiles, including the telematics readings and geofence information."
+          },
+          {
+            "term": "Equipment and accessory differences",
+            "definition": "Only Basic Details and one specification field differ. An equipment shows Equipment ID and its Fuel Type; an accessory shows Accessory ID, has a Linked Asset field to pick the Equipment IDs it belongs to, and has no Fuel Type. Category and sub-category fill in from the equipment or accessory in both. The Specifications, Purchase & Ownership, Warranty & Insurance and Depreciation panels are identical."
           }
         ],
         "procedures": [
@@ -10570,6 +11166,23 @@ const MODULES = [
               "Select the Equipment IDs under <strong>Linked Asset</strong>.",
               "Click <strong>Save</strong>."
             ]
+          },
+          {
+            "title": "Change the equipment image",
+            "steps": [
+              "Open the profile and click the edit icon on the image in the left panel.",
+              "Upload the image and click <strong>Submit</strong>.",
+              "Click the edit icon again to change or remove the image."
+            ]
+          },
+          {
+            "title": "Record purchase, warranty and depreciation details (Asset Accountant)",
+            "steps": [
+              "Open the profile from Equipment Master or Accessory Master.",
+              "On the <strong>Overview</strong> tab, click the edit icon on <strong>Purchase & Ownership</strong>, enter Ownership Type, dates, price, vendor, tax, source of funds, department and revenue flag, then click <strong>Save</strong>.",
+              "Repeat for <strong>Warranty & Insurance</strong> and for <strong>Depreciation</strong>."
+            ],
+            "note": "Each panel saves on its own, so save one before moving to the next."
           }
         ]
       },
@@ -10596,6 +11209,18 @@ const MODULES = [
           {
             "term": "Readings History",
             "definition": "Recorded readings filtered by <strong>Date Range</strong>, <strong>Device</strong> and <strong>Category</strong>. A Maintenance Planner can select rows with the Action box, click <strong>Transfer</strong>, pick the destination asset and <strong>Submit</strong> to move readings to another asset."
+          },
+          {
+            "term": "Roles for telematics",
+            "definition": "Global Data Administrator: sets up the provider once, including the fetch interval. Equipment Administrator: maps, views and unmaps devices. Fleet Monitor (Equipment Manager or Site Supervisor): watches Live Data and the history tabs. Maintenance Planner (Meter Administrator or Maintenance Engineer): reviews Readings History and transfers readings between assets."
+          },
+          {
+            "term": "Telematics flow",
+            "definition": "(1) The Global Data Administrator configures the provider credentials and fetch interval under <strong>Global Data → Marketplace → Telematics</strong> and clicks Submit. (2) The Equipment Administrator opens the asset and clicks <strong>Telematics</strong>. (3) The Equipment Administrator maps the device. (4) The Fleet Monitor reviews <strong>Live Data</strong>. (5) Then <strong>Trip History</strong> with precision and date range. (6) <strong>Device History</strong>. (7) <strong>Location History</strong>. (8) The Maintenance Planner reviews <strong>Readings History</strong> and transfers readings."
+          },
+          {
+            "term": "Info Mapping and the telematics tabs",
+            "definition": "The <strong>Info Mapping</strong> panel on Device Mapping shows where each telemetry category is sourced from. The telematics tabs are Device Mapping, Live Data, Trip History, Device History, Location History and Readings History. Each is available from the same row of tabs on the asset."
           }
         ],
         "procedures": [
@@ -10624,6 +11249,23 @@ const MODULES = [
               "Select the rows with the Action box and click <strong>Transfer</strong>.",
               "Choose the destination asset and click <strong>Submit</strong>."
             ]
+          },
+          {
+            "title": "Replace a telematics device on an asset",
+            "steps": [
+              "Open the asset's <strong>Telematics → Readings History</strong> and transfer the readings you want to keep to the asset you choose.",
+              "On <strong>Device Mapping</strong>, click <strong>Unmap Device</strong> to remove the current device.",
+              "Click <strong>Map Device</strong>, choose the provider and the replacement device from Available Devices, and click <strong>Map Device</strong>."
+            ]
+          },
+          {
+            "title": "Check trip history for a machine",
+            "steps": [
+              "Open the asset and click <strong>Telematics → Trip History</strong>.",
+              "Set the coordinate precision and the date range.",
+              "Click <strong>Apply</strong> to see routes and locations for that period."
+            ],
+            "note": "If no routes appear, widen the date range and adjust the precision."
           }
         ]
       },
@@ -10646,6 +11288,26 @@ const MODULES = [
           {
             "term": "Fleet Map filters",
             "definition": "Map options: <strong>Geofences</strong>, <strong>Clusters</strong>, <strong>Only Running Equipment</strong> and <strong>Not Reported in Last 72 Hours</strong>. Equipment filters: <strong>Status</strong>, <strong>Category</strong>, <strong>Business Unit</strong>, <strong>Make</strong> and <strong>Model</strong>. Use <strong>Apply</strong>, <strong>Clear</strong> and <strong>Save Filter</strong>."
+          },
+          {
+            "term": "Roles for geofences and the Fleet Map",
+            "definition": "Geofence Administrator (Equipment Admin or Site Administrator): creates geofences, sets coordinates, activates them and maintains the list. Inventory In-charge: confirms that inventory geofences match the right inventory location. Fleet Monitor (Equipment Manager or Operations Manager): uses the Fleet Map. Equipment Administrator: maps telematics devices so assets appear on the map."
+          },
+          {
+            "term": "Geofence flow",
+            "definition": "(1) The Geofence Administrator opens <strong>Overview → Geofencing</strong> and clicks <strong>Add Location</strong>. (2) Switches the Inventory or Project toggle and selects the work location. (3) Sets at least three coordinates. (4) Clicks <strong>Save Geofence</strong>. (5) Switches <strong>Active</strong> on. (6) The Fleet Monitor finds the geofence and the assets inside it on <strong>Overview → Fleet Map</strong>."
+          },
+          {
+            "term": "Geofence location fields",
+            "definition": "Required: Location Type, Name, Description, Code and the Inventory / Project toggle. Optional: Street Address, City, State, Postal Code, Country (city, state and country fill in from map points), Start Date, End Date, POC Name, POC Phone and POC Email. For inventory locations the geofence links to the inventory location automatically."
+          },
+          {
+            "term": "Ways to set geofence coordinates",
+            "definition": "Three methods that can be combined. Method 1, Search Location: enter address, city, state and postal code, click Search, then click the exact point. Method 2, Add Coordinates: type latitude and longitude. Method 3: drag and select on the map. Fewer than three points cannot be saved. Three make a triangle and four or more make larger shapes. Delete one point with the minus icon and confirm, or use Clear All Coordinates. Upload KML imports an existing boundary."
+          },
+          {
+            "term": "Fleet Map status filter",
+            "definition": "In the equipment detail filters, Status lists Available, Allocated, In Transit, On-Rent, In Maintenance, Out of Service, Off-Rent, Inactive, Yard Only, Unavailable and Dispose Initiated. Category, Business Unit, Make and Model can also be filtered. Apply shows the result, Clear removes the filters and Save Filter keeps them for next time."
           }
         ],
         "procedures": [
@@ -10667,12 +11329,29 @@ const MODULES = [
               "Zoom in past the clusters and click the blue marker."
             ],
             "note": "An asset shows only if a telematics device is mapped to it."
+          },
+          {
+            "title": "Import a geofence boundary from a KML file",
+            "steps": [
+              "Open <strong>Overview → Geofencing</strong> and click <strong>Add Location</strong>.",
+              "Enter the location details and choose the Inventory or Project location.",
+              "Click <strong>Upload KML</strong> and select the file.",
+              "Click <strong>Save Geofence</strong> and switch <strong>Active</strong> on."
+            ]
+          },
+          {
+            "title": "Bulk upload or filter geofences",
+            "steps": [
+              "On the Geofencing tab, click <strong>Export → Upload Excel</strong>, then <strong>Sample Excel</strong>, fill in the template and upload it. <strong>Download Excel</strong> exports the current geofences.",
+              "Click <strong>Filters</strong> and choose Name, Code, City, State, Country, Pincode or Active / Inactive, then click <strong>Submit</strong> (or <strong>Clear</strong>).",
+              "Use <strong>Manage Columns</strong> to choose and arrange columns."
+            ]
           }
         ]
       },
       {
         "heading": "Operations: Allocation Requests and Lifecycle",
-        "intro": "<p><strong>Operations</strong> is where a request for equipment or accessories is approved, assigned, dispatched, put on rent, extended or returned, and closed. The <strong>Allocation Lifecycle</strong> board shows every request as a card in its stage. Requesters raise it, Approvers approve it, and the Equipment Coordinator, inspectors, dispatchers and Site Custodian move it forward.</p>",
+        "intro": "<p><strong>Operations</strong> is where a request for equipment or accessories is approved, assigned, dispatched, put on rent, extended or returned, and closed. The <strong>Allocation Lifecycle</strong> board shows every request as a card in its stage. Requesters raise it, Approvers approve it, and the Equipment Coordinator, inspectors, dispatchers and Site Custodian move it forward. This section follows the company's Allocation Lifecycle guides (Flows 1 to 3). The <strong>Load Out Request</strong> tab documents the flow checked in the live product on 2026-09-25, and your administrator can confirm which one your setup uses.</p>",
         "definitions": [
           {
             "term": "Allocation Lifecycle stages",
@@ -10709,6 +11388,34 @@ const MODULES = [
           {
             "term": "Pickup and closing",
             "definition": "The Pickup Assignee selects the <strong>Return Date</strong> and clicks <strong>Schedule Pickup</strong>, moving the card to <strong>Inspection (Post-Rent)</strong>. When that inspection is submitted with no open issue, the request becomes <strong>Closed</strong> and the asset status returns to <strong>Available</strong>."
+          },
+          {
+            "term": "Roles in the Allocation Lifecycle",
+            "definition": "Requester raises the request. Approver approves it. The Equipment Coordinator assigns the asset. Pre-Dispatch Inspector completes the pre-dispatch checklist. Dispatch Assignee enters the dispatch and on-rent dates. Collecting Representative collects the asset on Self Pickup (no system action). Site Custodian confirms On-Rent and raises extension or off-rent. Off-Rent Approver decides those requests. The Equipment Coordinator processes the approved off-rent. Pickup Assignee records the Return Date. Post-Rent Inspector completes the post-rent checklist. On Company Logistics, the Fleet Administrator, Hauling Coordinator, Hauling Approver, Driver and Receiving Representative also take part."
+          },
+          {
+            "term": "Self Pickup sequence",
+            "definition": "Use it when the project team collects the asset and no company transport is arranged. (1) Assign: Equipment Coordinator selects Self Pickup, assigns the asset and confirms. (2) Inspection (Pre-Dispatch): Pre-Dispatch Inspector submits the form (only if switched on). (3) Ready for Dispatch: Dispatch Assignee enters the dates and dispatches. (4) On Rent: Site Custodian confirms On-Rent. (5) and (6) Off-Rent / Extension: Site Custodian requests, Off-Rent Approver decides. (7) Off-Rent: Equipment Coordinator processes the return. (8) Pickup: Pickup Assignee selects the Return Date and clicks Schedule Pickup. (9) Inspection (Post-Rent): Post-Rent Inspector submits. (10) Closed: the system closes it and the asset becomes Available. No haul is created, so there is no In Transit (Outbound) stage."
+          },
+          {
+            "term": "Company Logistics sequence",
+            "definition": "Use it when the company arranges transport with its own vehicle and driver. Outbound: the Equipment Coordinator assigns the asset, vehicle and driver; the Pre-Dispatch Inspector inspects if enabled; the Hauling Coordinator submits the outbound haul, the Hauling Approver approves it, then it is scheduled and picked up; the Dispatch Assignee handles Ready for Dispatch; the haul is marked In Transit, then Delivered (the request moves to On Rent) and closed with final costs. Rental: the Site Custodian confirms On-Rent and requests off-rent or extension; the Off-Rent Approver decides; the Equipment Coordinator processes the return. Return: the same haul steps run in reverse to the inventory location; Delivered moves the request to Pickup. Then the Pickup Assignee schedules the pickup, the Post-Rent Inspector inspects and the request closes."
+          },
+          {
+            "term": "Assignment fields",
+            "definition": "Available Asset (the unit from the master being allocated; only assets with Available status are offered), Vehicle and Driver (Company Logistics only; drawn from Fleet and Schedule, and the driver must be mapped to the vehicle), Operator (runs the equipment at site, not the driver), Rate Card Template (fills in hourly, daily and monthly rates, which you may change), the Pre-Dispatch Inspection toggle, and the users for the Pre-Dispatch and Ready for Dispatch stages with View or Edit access."
+          },
+          {
+            "term": "Off-Rent and extension outcomes",
+            "definition": "For an <strong>extension</strong>: approval returns the request to On-Rent, and the asset stays On Rent; rejection leaves it under Off-Rent / Extension, where it can be processed as an off-rent and sent for approval. For an <strong>off-rent</strong>: approval sets the request to Off-Rent so it can be returned or re-allocated; rejection returns it to On-Rent. Approve with comments; reject with comments and files."
+          },
+          {
+            "term": "Asset status after each step (guide flow)",
+            "definition": "In this guide's flow the asset moves through Available, Allocated, In Transit, On Rent, Off Rent and back to Available. Confirm Assignment sets Allocated. Dispatch leaves it Allocated. Confirm On-Rent changes Allocated (or In Transit) to On Rent. An extension request or approved extension leaves it On Rent. An approved off-rent processed to a Project sets Off Rent, and Keep at Project closes the request and sets Available. With Inventory Self Pickup it stays On Rent until the post-rent inspection is submitted, then becomes Available. With Company Logistics it goes On Rent to Allocated when the return haul starts, then In Transit, and Available at closing. An open inspection issue holds the request and leaves the status unchanged."
+          },
+          {
+            "term": "Company Logistics: outbound vs return haul",
+            "definition": "Outbound is triggered by choosing Company Logistics on Assign and runs inventory to project; the request is on Assign or Pre-Dispatch Inspection with a Haul Initiated tag, the asset goes Available to Allocated, Picked Up lets the request reach Ready for Dispatch (if the inspection is done), and Delivered moves it to On Rent (governed by the On-Rent Date). Return is triggered by choosing Inventory then Company Logistics while processing an approved off-rent and runs project to inventory; the request stays at Off-Rent with a Haul Initiated tag, the asset goes On Rent to Allocated, Picked Up changes no stage, and Delivered moves it to Pickup (governed by the Pickup Date). A rejected outbound haul holds the allocation to be corrected; a rejected return haul sends the request back to Off-Rent approval."
           }
         ],
         "procedures": [
@@ -10756,12 +11463,90 @@ const MODULES = [
               "Click <strong>Submit</strong>.",
               "The Pickup Assignee then selects the <strong>Return Date</strong> and clicks <strong>Schedule Pickup</strong>, and the Post-Rent Inspector completes the inspection."
             ]
+          },
+          {
+            "title": "Build the inspection checklist and link it to equipment",
+            "steps": [
+              "In <strong>Settings → Equipment Forms → Inspection Checklist</strong>, click <strong>Create Form</strong>.",
+              "Under <strong>Create inspection Items</strong>, click <strong>Create</strong>, enter each item and click <strong>Submit</strong>. A default Yes response exists, and you can click <strong>Create</strong> under Inspection Item Responses for more.",
+              "Use <strong>Build Form</strong> to enter the Form Title and add configurable fields, then click <strong>Save Changes</strong>. Set Trigger Points if needed, and use <strong>Preview Form</strong> to check it.",
+              "Open <strong>Settings → Equipment Setup</strong> or <strong>Accessory Setup</strong>, click the edit icon against the category, pick the checklist in <strong>Inspection Checklist</strong> and click <strong>Submit</strong>."
+            ],
+            "note": "Without a linked checklist the inspection stage cannot be used for that asset."
+          },
+          {
+            "title": "Create an approval workflow for equipment, hauling or off-rent requests",
+            "steps": [
+              "Open <strong>Settings → Approval Workflow</strong> and pick the type: Equipment Request, Hauling Request or Off-Rent / Extension Request.",
+              "Click <strong>Create Approval Workflow</strong>, enter the Workflow Name, tick <strong>Set as Default</strong> if it should apply, and click <strong>Submit</strong>.",
+              "Click <strong>Create levels</strong>, choose the workflow Type and assign the approvers, then click <strong>Submit</strong>.",
+              "To activate an existing workflow, click its edit icon, switch on <strong>Set as Default</strong> and click <strong>Submit</strong>. Use Edit or Delete to change or remove one."
+            ]
+          },
+          {
+            "title": "Set the request priority and off-rent thresholds",
+            "steps": [
+              "Open <strong>Settings → Request Priority Threshold</strong>, enter the number of days from today used to calculate priority, and click <strong>Save changes</strong>.",
+              "Open <strong>Settings → Equipment/Accessory Status</strong> to see the default operational statuses and their colours, and set the <strong>Utility Threshold</strong> for the Off Rent status."
+            ]
+          },
+          {
+            "title": "Complete a pre-dispatch or post-rent inspection",
+            "steps": [
+              "Open the card in <strong>Inspection (Pre-Dispatch)</strong> or <strong>Inspection (Post-Rent)</strong> and click <strong>Form Ready</strong> to open the assigned form.",
+              "Complete every inspection item and record the responses.",
+              "If nothing is wrong, click <strong>Submit</strong>. The request moves on (to Ready for Dispatch, or to Closed after post-rent).",
+              "If issues are found, choose a priority, add observations and images, and submit.",
+              "The request proceeds only after the issue is rectified in <strong>Inspection Checklist Issues</strong>, or you pick the earlier stage from the dropdown and submit to move it back."
+            ]
+          },
+          {
+            "title": "Dispatch an asset (Dispatch Assignee)",
+            "steps": [
+              "Open the card in <strong>Ready for Dispatch</strong>.",
+              "Enter the <strong>Dispatch Date</strong> (when the asset is handed over) and the <strong>On-Rent Date</strong> (when rental charges start).",
+              "Add attachments if needed and click <strong>Dispatch</strong>."
+            ],
+            "note": "The card moves to On-Rent. On Company Logistics, it moves on only as the outbound haul progresses."
+          },
+          {
+            "title": "Confirm an asset as On-Rent (Site Custodian)",
+            "steps": [
+              "Open the card in the <strong>On-Rent</strong> stage and review the details.",
+              "Choose the On-Rent option.",
+              "Click <strong>Submit</strong>."
+            ],
+            "note": "The asset status changes to On Rent, and rental charges apply from the On-Rent Date."
+          },
+          {
+            "title": "Approve or reject an off-rent or extension request (Off-Rent Approver)",
+            "steps": [
+              "Open the card under <strong>Off-Rent / Extension</strong> and check the Requested Type, operator, details and attachments.",
+              "Click <strong>Approve</strong> and enter comments, or click <strong>Reject</strong>, enter comments and upload files.",
+              "Submit. The outcome depends on whether it was an extension or an off-rent."
+            ]
+          },
+          {
+            "title": "Keep an asset at the project or re-allocate it",
+            "steps": [
+              "After the off-rent is approved, open the card and choose <strong>Project</strong>. Enable the toggle to select the project, add attachments and click <strong>Submit</strong>, then reopen the card.",
+              "To leave the asset there, choose <strong>Keep at Project</strong> and click <strong>Submit</strong>. The request closes and the asset becomes Available.",
+              "To use it on another request, choose <strong>Re-allocate to Request</strong>, pick the matching request and click the <strong>Open Allocation</strong> icon. The asset restarts at the Assign stage of that request."
+            ]
+          },
+          {
+            "title": "Schedule the return pickup (Pickup Assignee)",
+            "steps": [
+              "Open the card in the <strong>Pickup</strong> stage and review the details.",
+              "Select the <strong>Return Date</strong> and add attachments if needed.",
+              "Click <strong>Schedule Pickup</strong>. The card moves to Inspection (Post-Rent)."
+            ]
           }
         ]
       },
       {
         "heading": "Hauling: Fleet, Requests and Returns",
-        "intro": "<p><strong>Hauling</strong> moves equipment between inventory and projects when the company arranges transport. A <strong>Fleet Administrator</strong> keeps vehicles and drivers current, the <strong>Hauling Coordinator</strong> moves each haul through its stages and closes it with final costs, and the <strong>Hauling Approver</strong> approves the request. Hauls are created automatically from Operations, or by hand.</p>",
+        "intro": "<p><strong>Hauling</strong> moves equipment between inventory and projects when the company arranges transport. A <strong>Fleet Administrator</strong> keeps vehicles and drivers current, the <strong>Hauling Coordinator</strong> moves each haul through its stages and closes it with final costs, and the <strong>Hauling Approver</strong> approves the request. Hauls are created automatically from Operations, or by hand. This section follows the company's Allocation Lifecycle guides (Flow 3). The <strong>Load Out Request</strong> tab has the flow checked in the live product on 2026-09-25.</p>",
         "definitions": [
           {
             "term": "Fleet and Schedule",
@@ -10782,6 +11567,18 @@ const MODULES = [
           {
             "term": "Request Haul",
             "definition": "In the Equipment Master grid view, <strong>Request Haul</strong> on an asset opens a dialog to create a haul between inventory and project locations, or between projects."
+          },
+          {
+            "term": "Roles in Hauling",
+            "definition": "Fleet Administrator (Transport Admin) keeps vehicles and drivers. Hauling Coordinator (Logistics or Transport Coordinator) reviews the request, submits it, schedules it, records pickup, transit and delivery on the driver's behalf, and closes it with final costs. Hauling Approver (Operations Manager or Cost Controller) approves outbound and return hauls. The Driver moves the asset. The Receiving Representative confirms receipt and the Condition on Arrival at the destination."
+          },
+          {
+            "term": "Haul request fields by stage",
+            "definition": "At Request: Equipment / Accessory, Original Location, Destination Location, Request Date, Estimated Cost, and Phase Codes, Escort Cost and Permit Cost. At Approved: Vehicle and Driver (carried over from Operations, or chosen here for a manual request). At Schedule Pending: Pickup Date. At In Transit: Condition on Arrival. At Delivered: Phase Codes, Escort Cost, Permit Cost and Final Cost."
+          },
+          {
+            "term": "Haul approval outcomes",
+            "definition": "Approved: the request moves to the Approved stage and can be scheduled. Rejected outbound haul: it does not proceed and the allocation stays on hold, so reassign the asset in Operations; a manual request is marked Rejected and cannot proceed. Rejected return haul: the linked allocation request goes back to Off-Rent Approval, where the return is corrected and resubmitted or a different return method is chosen."
           }
         ],
         "procedures": [
@@ -10811,6 +11608,158 @@ const MODULES = [
               "Choose Equipment or Accessory and the asset, then the <strong>Original Location</strong> and <strong>Destination Location</strong>.",
               "Enter the <strong>Request Date</strong>, <strong>Estimated Cost</strong> and any phase codes, escort cost and permit cost.",
               "Click <strong>Save</strong>. Choose the vehicle and driver at the Approved stage."
+            ]
+          },
+          {
+            "title": "Review and submit an auto-generated haul request",
+            "steps": [
+              "Open <strong>Equipment Management → Hauling → Internal Hauling → Requests</strong>.",
+              "Open the haul created from Operations and check the asset, original and destination locations, vehicle and driver.",
+              "Enter the Estimated Cost and any Phase Codes, Escort Cost and Permit Cost.",
+              "Click <strong>Submit for Approval</strong>."
+            ]
+          },
+          {
+            "title": "Approve or reject a haul request (Hauling Approver)",
+            "steps": [
+              "Open the haul on the <strong>Requests</strong> tab and review the asset, route, estimated cost and other costs.",
+              "Approve it to move it to the Approved stage, or reject it."
+            ]
+          },
+          {
+            "title": "Schedule a haul and record pickup",
+            "steps": [
+              "Open the card under <strong>Approved</strong>. For a manual request, select the Vehicle and Driver. Click <strong>Schedule Haul</strong>.",
+              "Open the card under <strong>Schedule Pickup</strong>, select the <strong>Pickup Date</strong> and click <strong>Submit Date</strong>.",
+              "Open the card under <strong>Scheduled</strong> and click <strong>Picked Up</strong> once the asset has been collected."
+            ],
+            "note": "On the outbound haul, Picked Up lets the request reach Ready for Dispatch once the pre-dispatch inspection is complete."
+          },
+          {
+            "title": "Deliver and close a haul",
+            "steps": [
+              "Open the card under <strong>Picked Up</strong> and click <strong>Mark as In Transit</strong>. The allocation moves to In Transit (Outbound or Return).",
+              "Open the card under <strong>In Transit</strong>, select the <strong>Condition on Arrival</strong>, and click <strong>Mark as Delivered</strong>.",
+              "Open the card under <strong>Delivered</strong>, enter the Phase Codes, Escort Cost, Permit Cost and Final Cost, and click <strong>Close Haul</strong>.",
+              "The haul moves to <strong>Completed</strong>, where you can review it at any time."
+            ]
+          },
+          {
+            "title": "Fix a rejected return haul",
+            "steps": [
+              "Find the allocation request. It is back at the Off-Rent Approval stage.",
+              "Reprocess the off-rent: correct the return details, or choose a different return method.",
+              "Submit again. A new return haul is created if Company Logistics is chosen."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Troubleshooting: Asset Management Problems",
+        "intro": "<p>Use this page when an Asset Management step does not work as expected. Most problems trace back to master data, a setting, or an open inspection issue. Steps follow the company's guides for master data, profiles, telematics, geofences and the Allocation Lifecycle.</p>",
+        "definitions": [],
+        "procedures": [
+          {
+            "title": "The equipment or accessory I need is not in the dropdown",
+            "steps": [
+              "Open <strong>Settings → Equipment Setup</strong> (or <strong>Accessory Setup</strong>) and add it with <strong>Add Category</strong>.",
+              "If no cost code is offered, create it first under <strong>Global Data → Cost → Equipment Code</strong>."
+            ]
+          },
+          {
+            "title": "The Fuel Type or default rate card is missing",
+            "steps": [
+              "Add the Fuel Type under <strong>Settings → Equipment Setup</strong>. Fuel Type shows only for equipment, not for accessories.",
+              "Set the <strong>Default Rate Card Template</strong> against the category in Equipment Setup, and make sure the template exists under Global Data → Cost → Rate Card Template."
+            ]
+          },
+          {
+            "title": "A bulk upload did not create the records I expected",
+            "steps": [
+              "Start again from the current <strong>Sample Excel</strong>; the column layout must match.",
+              "Check that the equipment, categories, business units and locations in the file already exist."
+            ]
+          },
+          {
+            "title": "The map, geofence, Engine Hours, GPS Fix Time or Message Time are blank",
+            "steps": [
+              "Open the asset's <strong>Telematics</strong> tab and check that a device is mapped. These fields fill in from the device and cannot be typed.",
+              "Use <strong>Engine Hours (Acquisition)</strong> on the Specifications panel to record hours at acquisition.",
+              "Check the last-updated time on each Live Data reading. Readings can lag by the fetch interval set for the provider."
+            ]
+          },
+          {
+            "title": "A panel change on the profile was not saved",
+            "steps": [
+              "Each panel saves on its own. Click <strong>Save</strong> on the panel you edited before moving to another one."
+            ]
+          },
+          {
+            "title": "No telematics provider or device appears when mapping",
+            "steps": [
+              "Check that the provider is configured under <strong>Global Data → Marketplace → Telematics</strong>, and that you clicked <strong>Attach</strong> and then <strong>Submit</strong>.",
+              "Pick the right Telematics Provider, because devices are listed per provider, and check the device is registered with it.",
+              "The asset must already exist in the Equipment Master."
+            ]
+          },
+          {
+            "title": "A geofence did not save or does not appear on the Fleet Map",
+            "steps": [
+              "Add at least three coordinates before <strong>Save Geofence</strong>.",
+              "Switch the <strong>Active</strong> toggle on in the Geofencing table, and make sure the <strong>Geofences</strong> map filter is on.",
+              "City, state and country fill in only when points are picked by search or by dragging on the map."
+            ]
+          },
+          {
+            "title": "No asset markers show on the Fleet Map",
+            "steps": [
+              "Only assets with a mapped telematics device appear. Zoom in, because wide zoom groups them into clusters.",
+              "Click <strong>Clear</strong> and reapply the filters one at a time. Check <strong>Only Running Equipment</strong> and <strong>Not Reported in Last 72 Hours</strong>.",
+              "Click <strong>Save Filter</strong> to keep your choices between visits."
+            ]
+          },
+          {
+            "title": "No asset appears under Available Asset, or rates are blank",
+            "steps": [
+              "Check that a matching unit exists in the master with status <strong>Available</strong>. Allocated, On Rent, In Transit and Off Rent assets are not offered.",
+              "Check that the Rate Card Template covers the asset's category, then select it again."
+            ]
+          },
+          {
+            "title": "The inspection stage was skipped, or the inspection form is empty",
+            "steps": [
+              "The stage appears only if <strong>Pre-Dispatch Inspection</strong> was switched on when confirming assignment. Move the request back and confirm the assignment again with it switched on.",
+              "Link an <strong>Inspection Checklist</strong> to the asset under <strong>Settings → Equipment Setup / Accessory Setup</strong>."
+            ]
+          },
+          {
+            "title": "A request does not move past Ready for Dispatch, Off-Rent or Closed",
+            "steps": [
+              "For Ready for Dispatch, enter both the <strong>Dispatch Date</strong> and the <strong>On-Rent Date</strong>.",
+              "Check <strong>Inspection Checklist Issues</strong> for an open issue against the asset and rectify it. This also blocks Closed and a haul pickup.",
+              "For a card held at Off-Rent with a <strong>Haul Initiated</strong> tag, take the return haul through to Completed in Hauling."
+            ]
+          },
+          {
+            "title": "The off-rent request cannot be submitted",
+            "steps": [
+              "Check that the request is in the <strong>On-Rent</strong> stage.",
+              "Check that an <strong>Off-Rent / Extension Request</strong> approval workflow is marked <strong>Set as Default</strong> under Settings → Approval Workflow."
+            ]
+          },
+          {
+            "title": "The asset status did not change, or no destination location appears",
+            "steps": [
+              "After a haul, the status follows the On-Rent Date (outbound) or the Pickup Date (return). Update the date in the allocation request.",
+              "On Inventory Self Pickup the status stays On Rent until the post-rent inspection is submitted.",
+              "The destination dropdown lists configured Inventory Locations, so add the location first."
+            ]
+          },
+          {
+            "title": "No vehicle or driver appears, or a haul request is not visible",
+            "steps": [
+              "Check that the vehicle and driver exist under <strong>Hauling → Fleet and Schedule</strong>, are Available, and that the driver is mapped to a vehicle.",
+              "A haul exists only if <strong>Company Logistics</strong> was chosen on Assign (outbound) or when processing the off-rent (return). Check the filters on the Hauling board."
             ]
           }
         ]
@@ -10842,7 +11791,8 @@ const MODULES = [
       "Telematics: Device Mapping and Live Data",
       "Geofencing and Fleet Map",
       "Operations: Allocation Requests and Lifecycle",
-      "Hauling: Fleet, Requests and Returns"
+      "Hauling: Fleet, Requests and Returns",
+      "Troubleshooting: Asset Management Problems"
     ]
   },
   {
