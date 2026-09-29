@@ -680,6 +680,132 @@ const QA_OPPORTUNITY = [
     question: "Why are the Opportunity Type list and Milestone Templates empty?",
     answer: "No entries have been added yet — **Settings → Opportunity Type** and **Settings → Milestone Templates** (Milestone Templates and Master Milestones sub-tabs) are empty by default until an administrator adds entries, using **Create** for Milestone Templates.",
     tags: ["empty opportunity type list","empty milestone templates","opportunity type milestone templates empty"]
+  },
+  {
+    action: "update",
+    object: "opportunity stage",
+    scope: "module",
+    section: "Opportunities",
+    question: "How do I qualify a lead and move it into the pipeline?",
+    answer: "Open the lead, choose the **Milestone Template** and set the target dates on the **Milestones** tab, then change **Stage** from **Lead** to the next stage. Red asterisks show every field that must be completed first. Fill them in and click **Save Changes**. **Weighted Value** calculates automatically. Which fields are required at each stage is set by your administrator under **Settings → Opportunities Form**.",
+    tags: ["qualify lead","move lead to opportunity","required fields to qualify","red asterisk","qualify gate","change stage lead"]
+  },
+  {
+    action: "create",
+    object: "parent opportunity",
+    scope: "module",
+    section: "Opportunities",
+    question: "How do I group several business unit opportunities under one parent?",
+    answer: "For an **existing facility**, log the first opportunity as a normal child. When a second related one appears, open either and click **Create Parent**, enter the **Name**, **Stage**, **Status** and **Due Date**, then add more children from the parent's **Child** tab with **Link Parent**. For a **new build** with unknown scope, log it under your placeholder business unit; when the scope breaks into packages, reduce the placeholder value to $1, click **Create Parent**, and log a child for each business unit. The parent adds up the children's values. Parent Mode must be turned on in Settings.",
+    tags: ["parent child opportunity","placeholder business unit","new build parent","existing facility parent","multi BU opportunity","group opportunities"]
+  },
+  {
+    action: "view",
+    object: "parent totals",
+    scope: "module",
+    section: "Opportunities",
+    question: "What does a parent opportunity show, and how are parent and child IDs formatted?",
+    answer: "A parent shows **Total Value**, **Total TIC**, **Weighted Value**, **Average Win Probability %**, **Child Count** and **Active Child Count**, with its own **Child** and **Milestones** tabs. Customer and contacts roll up from the children. Parent IDs use the format YY/parent BU code/ID and child IDs use YY-BU-ID.",
+    tags: ["parent totals","parent id format","child id format","total tic","average win probability","child count"]
+  },
+  {
+    action: "view",
+    object: "dashboard scope",
+    scope: "module",
+    section: "Dashboard",
+    question: "Why does My Dashboard only show some of the opportunities?",
+    answer: "My Dashboard shows your own pipeline. To view every opportunity in the organisation, a user needs the **Admin View** permission enabled under **Global Data**. Ask your administrator to turn it on.",
+    tags: ["dashboard only my opportunities","admin view permission","see all opportunities","dashboard scope"]
+  },
+  {
+    action: "request",
+    object: "missing customer",
+    scope: "module",
+    section: "Sidebar Shortcuts",
+    question: "What do I do when a customer, location or contact is not in the system?",
+    answer: "Open the opportunity, click the **Comments** tab and message Sales Ops with what you need. A new customer goes to Sales Ops for approval before it can be used. Sales Ops adds a new location (named Customer - City, and mapped in **Account Assignment**) or a new assignment, and you get a notification, so you can carry on in the same record.",
+    tags: ["customer not found","missing location","new customer approval","ask sales ops","add location customer","customer approval workflow"]
+  },
+  {
+    action: "define",
+    object: "milestones tab",
+    scope: "module",
+    section: "Opportunity Record: Milestones, Team, Proposals, Compliance and Expenses",
+    question: "What is the Milestones tab on an opportunity?",
+    answer: "After you choose a **Milestone Template** on the profile, the **Milestones** tab shows a row per milestone with **Milestone**, **Target Date**, **Actual** dates and **Notes**. Remove ones that do not apply or add from the master list, and enter a target date for each. The dates feed the **Pipeline Gantt View** for resource planning, and the standard setup needs at least approximate target dates before a lead is qualified. Each opportunity type shows only its own templates.",
+    tags: ["milestones tab","milestone template","target date","gantt view milestones","opportunity milestones"]
+  },
+  {
+    action: "define",
+    object: "opportunity tabs",
+    scope: "module",
+    section: "Opportunity Record: Milestones, Team, Proposals, Compliance and Expenses",
+    question: "What tabs does an opportunity have besides the profile?",
+    answer: "The record has tabs for **Milestones**, **Teams** (members who can edit it), **Clients Interactions** (unlocks once a customer and contact are added; includes a **Comments** team chat), **Documents**, **Proposals**, **Compliance Tracker** and **Expenses**. Together they keep the profile, people, proposals, bid readiness and pursuit cost on one record.",
+    tags: ["opportunity tabs","teams tab","documents tab","proposals tab","comments tab","opportunity record tabs"]
+  },
+  {
+    action: "view",
+    object: "compliance tracker",
+    scope: "module",
+    section: "Opportunity Record: Milestones, Team, Proposals, Compliance and Expenses",
+    question: "What is the Compliance Tracker on an opportunity?",
+    answer: "It lists the compliance requirements selected for the opportunity and checks them against what your company holds. The cards show **Compliant**, **Missing / Incomplete / Expired**, **Expiring Soon** and **Readiness Score**. The table lists each requirement with its ID, category, renewal frequency and required evidence. Records are kept under **Global Data → Compliance Hub**, so fix a missing or expired item there.",
+    tags: ["compliance tracker","readiness score","bid readiness","expired compliance","compliance hub"]
+  },
+  {
+    action: "create",
+    object: "opportunity expense",
+    scope: "module",
+    section: "Opportunity Record: Milestones, Team, Proposals, Compliance and Expenses",
+    question: "How do I record a pursuit expense on an opportunity?",
+    answer: "Open the opportunity, click the **Expenses** tab and **+ Create**. Select the expense category, enter the date, amount and description, attach the receipt and click **Submit**. It goes to the configured approver, and approved lines add up to a total on the opportunity so you can compare cost of pursuit with the outcome.",
+    tags: ["pursuit expense","opportunity expenses tab","bid bond expense","proposal cost","travel expense opportunity"]
+  },
+  {
+    action: "create",
+    object: "opportunity proposal",
+    scope: "module",
+    section: "Opportunity Record: Milestones, Team, Proposals, Compliance and Expenses",
+    question: "How do I add a proposal to an opportunity?",
+    answer: "Open the opportunity, click the **Proposals** tab and **+ Create**. Enter the proposal details and update its status as it moves from draft to submitted. Each proposal is one row on the tab.",
+    tags: ["add proposal opportunity","proposals tab","proposal status draft submitted"]
+  },
+  {
+    action: "view",
+    object: "arena onsite",
+    scope: "module",
+    section: "Mobile App (Arena Onsite)",
+    question: "Is there a mobile app for Opportunity Management?",
+    answer: "Yes, **Arena Onsite**. Sign in with your Arena credentials. The Home screen has an **Opportunity Management** card with Opportunities, Client Interactions, Clients, Owners and Contact Directory, and the bottom bar has Home, Alerts and My Account. You can search and filter opportunities, create them, link or create a parent, log interactions and scan business cards.",
+    tags: ["mobile app","arena onsite","opportunity mobile","field app","mobile opportunities"]
+  },
+  {
+    action: "create",
+    object: "mobile opportunity",
+    scope: "module",
+    section: "Mobile App (Arena Onsite)",
+    question: "How do I create an opportunity on the mobile app?",
+    answer: "In **Arena Onsite**, open **Opportunities**, tap **+ Create**, fill the collapsible sections (**Details**, **Status & Value**, **Timeline & Activity**, **Contact**) and tap **Submit**. Open the created opportunity to see its tabs, and tap **Link Parent** or **Create Parent** to group it.",
+    tags: ["create opportunity mobile","mobile create","onsite create opportunity","link parent mobile"]
+  },
+  {
+    action: "create",
+    object: "mobile client",
+    scope: "module",
+    section: "Mobile App (Arena Onsite)",
+    question: "How do I add a client, owner or contact from my phone?",
+    answer: "In **Arena Onsite**, open **Clients** or **Owners** and tap **+ Create** (use **Create Owner From Client** to make the same record an owner), then **Submit**. A new client goes through approval, and once approved you can add its contacts; turned-down clients appear under **Rejected**. In **Contact Directory**, tap **+ Create** under **Client Contacts** or **Owner Contacts**. You can also scan a business card to create the client, owner and contact automatically.",
+    tags: ["create client mobile","business card scan","contact directory mobile","rejected clients","add contact mobile","ocr business card"]
+  },
+  {
+    action: "create",
+    object: "mobile interaction",
+    scope: "module",
+    section: "Mobile App (Arena Onsite)",
+    question: "How do I log a call or note from the field?",
+    answer: "In **Arena Onsite**, open **Client Interactions** and tap **Notes** on the contact, or tap the client and open the contact card. Use the **Opportunities** dropdown to pick the deal, then log the call, meeting, task or note. **See History** shows everything logged for that contact.",
+    tags: ["log call mobile","client interactions mobile","notes button mobile","see history mobile"]
   }
 ];
 
@@ -7846,6 +7972,14 @@ const MODULES = [
           {
             "term": "Parent / Child / Standalone",
             "definition": "A relationship flag on the full Opportunity record that lets opportunities be organized hierarchically — for example, a master pursuit with several sub-opportunities beneath it. The record also tracks Child Count and Active Child Count. Child opportunities get their own ID format, configured separately under Settings → ID Settings → Child ID Settings."
+          },
+          {
+            "term": "Qualifying a lead",
+            "definition": "A new record starts in <strong>Lead</strong>. To move it into the live pipeline, change <strong>Stage</strong> on the profile. Red asterisks appear beside every field the setup requires at the new stage, and the record will not save until they are filled. In the standard setup this includes Description, Opportunity Type, Market Type, TIC, Opportunity Value, Go %, Get %, the Customer and its contact, Owner and its contact, Location, Competitors, the BD Rep or Site Representative, and at least approximate milestone target dates. Your administrator can change the set under <strong>Settings → Opportunities Form</strong>."
+          },
+          {
+            "term": "Parent opportunity totals",
+            "definition": "A parent shows <strong>Total Value</strong>, <strong>Total TIC</strong>, <strong>Weighted Value</strong>, <strong>Average Win Probability %</strong>, <strong>Child Count</strong> and <strong>Active Child Count</strong>, with its own <strong>Child</strong> and <strong>Milestones</strong> tabs. Customer and contacts roll up from the children, and milestones can be tracked at parent and child level. Parent IDs use the format YY/parent BU code/ID, and child IDs use YY-BU-ID."
           }
         ],
         "procedures": [
@@ -7900,6 +8034,26 @@ const MODULES = [
               "Configure your desired filters, visible columns, and layout (Table/Grid/Kanban).",
               "Click the <strong>save</strong> icon in the Opportunities toolbar — this persists the filter, column, and layout configuration together as a single saved view."
             ]
+          },
+          {
+            "title": "Qualify a lead into the pipeline",
+            "steps": [
+              "Open the lead and set the <strong>Milestone Template</strong>, then the target dates on the <strong>Milestones</strong> tab.",
+              "Change <strong>Stage</strong> from <strong>Lead</strong> to the next stage.",
+              "Fill in every field marked with a red asterisk.",
+              "Click <strong>Save Changes</strong>. <strong>Weighted Value</strong> calculates automatically."
+            ],
+            "note": "Which fields are required at each stage is set by the administrator under Settings → Opportunities Form."
+          },
+          {
+            "title": "Group related opportunities under a parent",
+            "steps": [
+              "For an existing facility, log the first opportunity as a normal child. When a second related one appears, open either and click <strong>Create Parent</strong>, then give the parent a <strong>Name</strong>, <strong>Stage</strong>, <strong>Status</strong> and <strong>Due Date</strong>.",
+              "Open the <strong>Child</strong> tab on the parent and click <strong>Link Parent</strong> from other opportunities to add more children. A child in a new business unit is logged like any new opportunity.",
+              "For a new build with unknown scope, log it under the placeholder business unit your administrator set up, and keep updating its value as one opportunity.",
+              "When the scope breaks into packages, reduce the placeholder value to $1, click <strong>Create Parent</strong>, and then log a child for each business unit (for example Civil, Mechanical)."
+            ],
+            "note": "The real dollars then sit on the business unit children, and the parent adds them up. This needs Parent Mode to be turned on in Settings."
           }
         ]
       },
@@ -8058,6 +8212,10 @@ const MODULES = [
           {
             "term": "Upcoming Opportunity Due Date",
             "definition": "A dashboard list surfacing opportunities that are nearing their due date, distinct from the Due This Week KPI card in that it shows the actual list of upcoming records rather than just a count, and also carries its own + Create shortcut."
+          },
+          {
+            "term": "Whose pipeline you see",
+            "definition": "My Dashboard shows your own pipeline. To see every opportunity in the organisation, a user needs the <strong>Admin View</strong> permission enabled under Global Data."
           }
         ],
         "procedures": [
@@ -8143,6 +8301,14 @@ const MODULES = [
           {
             "term": "Add Groups",
             "definition": "A button in the Customers toolbar for organizing multiple customer records together into a group, useful for managing related accounts (such as different divisions of the same parent company) collectively."
+          },
+          {
+            "term": "New customer approval",
+            "definition": "A customer created by a BD user goes to Sales Ops (the Module Manager) for approval before anyone can use it on an opportunity. On mobile, turned-down customers are listed under <strong>Rejected</strong>. If a customer, location or contact you need is not in the system yet, post the request in the opportunity's <strong>Comments</strong> tab and Sales Ops adds it."
+          },
+          {
+            "term": "Locations for customers",
+            "definition": "A location is named <strong>Customer - City</strong> (for example Northstar Energy - Baton Rouge), created under <strong>Global Data → Locations → + Create</strong>, then mapped in <strong>Account Assignment</strong> so BD users can pick it on an opportunity. You see only the locations mapped to the selected customer."
           }
         ],
         "procedures": [
@@ -8386,6 +8552,117 @@ const MODULES = [
             ]
           }
         ]
+      },
+      {
+        "heading": "Opportunity Record: Milestones, Team, Proposals, Compliance and Expenses",
+        "intro": "<p>Each opportunity opens as a full record with tabs beyond the profile. The BD user or team member working the pursuit uses them to plan dates, share the work, track proposals, check bid readiness and record what the pursuit costs. They sit on the same record so the whole history stays together.</p>",
+        "definitions": [
+          {
+            "term": "Milestones tab",
+            "definition": "Dates across the life of the opportunity. Once you choose a <strong>Milestone Template</strong> on the profile, the tab shows one row per milestone with <strong>Icon</strong>, <strong>Milestone</strong>, <strong>Target Date</strong>, <strong>Actual</strong> dates and <strong>Notes</strong>. Remove a milestone that does not apply, or add one from the master list. Each opportunity type shows only the templates mapped to it. The dates feed the <strong>Pipeline Gantt View</strong>, and the standard setup needs at least approximate target dates before a lead is qualified."
+          },
+          {
+            "term": "Teams tab",
+            "definition": "Add team members to the opportunity so they can edit its fields and add information."
+          },
+          {
+            "term": "Clients Interactions tab",
+            "definition": "Turns on once a customer and a customer contact are added on the opportunity. Log calls, mails, meetings, tasks, comments and notes here. The <strong>Comments</strong> tab works as an internal team chat for that one opportunity."
+          },
+          {
+            "term": "Documents tab",
+            "definition": "Files attached here go to the shared document storage chosen for your organisation in Opportunities Form → Settings (AWS S3 or SharePoint)."
+          },
+          {
+            "term": "Proposals tab",
+            "definition": "Lists the proposals raised against the opportunity, one row each. Click <strong>+ Create</strong>, enter the details and move the status on as the proposal goes from draft to submitted."
+          },
+          {
+            "term": "Compliance Tracker tab",
+            "definition": "Lists the compliance requirements selected for the opportunity and checks them against what your company holds. Four cards head the screen: <strong>Compliant</strong>, <strong>Missing / Incomplete / Expired</strong>, <strong>Expiring Soon</strong> and <strong>Readiness Score</strong> (what is available against the total selected). The table shows each requirement with its ID, name, description, category, renewal frequency, required evidence and source. The records themselves live under <strong>Global Data → Compliance Hub</strong>, so a missing or expired item is fixed there, not on the opportunity."
+          },
+          {
+            "term": "Expenses tab",
+            "definition": "What the pursuit costs: travel, proposal production, third-party studies, bid bonds. Approved lines add up to a total on the opportunity, so the cost of pursuit can be read against the outcome. The expense categories and approval routing are set up in Settings."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Set milestone dates on an opportunity",
+            "steps": [
+              "Open the opportunity and choose the <strong>Milestone Template</strong> on the profile.",
+              "Open the <strong>Milestones</strong> tab.",
+              "Remove any milestone that does not apply, or add one from the master list.",
+              "Enter a <strong>Target Date</strong> for each milestone and add <strong>Notes</strong>."
+            ],
+            "note": "Opportunity Type and Milestone Templates are maintained by Sales Ops in Settings."
+          },
+          {
+            "title": "Record a pursuit expense",
+            "steps": [
+              "Open the opportunity and click the <strong>Expenses</strong> tab, then <strong>+ Create</strong>.",
+              "Select the expense category, enter the date, amount and description, and attach the receipt.",
+              "Click <strong>Submit</strong>. The expense goes to the configured approver."
+            ]
+          },
+          {
+            "title": "Check bid readiness on an opportunity",
+            "steps": [
+              "Open the opportunity and click the <strong>Compliance Tracker</strong> tab.",
+              "Read the four cards, especially <strong>Readiness Score</strong>.",
+              "For any missing or expired item, fix the record under <strong>Global Data → Compliance Hub</strong>."
+            ]
+          },
+          {
+            "title": "Ask Sales Ops to add a missing customer, location or contact",
+            "steps": [
+              "Open the opportunity and click the <strong>Comments</strong> tab.",
+              "Post a message to Sales Ops saying what you need.",
+              "Continue on the same record once Sales Ops adds it and you get a notification."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Mobile App (Arena Onsite)",
+        "intro": "<p><strong>Arena Onsite</strong> is the mobile app that mirrors the main Opportunity Management flows for people in the field. BD users sign in with their Arena credentials to look up opportunities, log customer interactions and create records on the go.</p>",
+        "definitions": [
+          {
+            "term": "Mobile Home and Opportunities",
+            "definition": "The Home screen has an <strong>Opportunity Management</strong> card with Opportunities, Client Interactions, Clients, Owners and Contact Directory. The bottom bar has <strong>Home</strong>, <strong>Alerts</strong> and <strong>My Account</strong>. <strong>Opportunities</strong> has <strong>Child</strong> and <strong>Parent</strong> tabs, search by name, stage chips and a filter icon. Each card shows the ID, Status, Days In Stage, Value, POC, Parent and an <strong>Assign To</strong> picker."
+          },
+          {
+            "term": "Mobile filters",
+            "definition": "The filter sheet offers Name, ID, Stage, Status, Created By, Created Date, Due Date, Groups, Clients and POC, Owners and POC, CE and POC, Project Locations, Assign To, PTT, Opportunity Type, EPC and POC, Market and Sub-market Type, Business Development, Business Unit, Parent and Opportunity Value, with <strong>Save & Apply</strong>, <strong>Apply</strong>, <strong>Clear All</strong> and Sort."
+          },
+          {
+            "term": "Mobile Client Interactions, Clients, Contacts and Owners",
+            "definition": "<strong>Client Interactions</strong> lists contacts with a <strong>Notes</strong> button on each. Open a client, pick a contact card and use the <strong>Opportunities</strong> dropdown to manage its Call Logs, Events, Meetings, Tasks and Notes; <strong>See History</strong> shows what was logged. <strong>Clients</strong> and <strong>Owners</strong> list records with <strong>+ Create</strong> (use <strong>Create Owner From Client</strong> to make the same record an owner). A new client goes through approval, and you can then add its contacts. <strong>Contact Directory</strong> shows contacts with name, designation, client, email and phone, and <strong>+ Create</strong> adds one under <strong>Client Contacts</strong> or <strong>Owner Contacts</strong>."
+          },
+          {
+            "term": "Business card scan",
+            "definition": "The app can scan a business card to create the client, owner and contact automatically, and push notifications remind you of follow-ups."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Create an opportunity on the mobile app",
+            "steps": [
+              "Open <strong>Opportunities</strong> and tap <strong>+ Create</strong>.",
+              "Fill the collapsible sections: <strong>Details</strong>, <strong>Status & Value</strong>, <strong>Timeline & Activity</strong> and <strong>Contact</strong>.",
+              "Tap <strong>Submit</strong>."
+            ],
+            "note": "From the opportunity details, tap <strong>Link Parent</strong> or <strong>Create Parent</strong> to group it under a parent."
+          },
+          {
+            "title": "Log a note or call for a contact from the field",
+            "steps": [
+              "Open <strong>Client Interactions</strong> and tap <strong>Notes</strong> on the contact, or tap the client and pick the contact card.",
+              "Use the <strong>Opportunities</strong> dropdown to choose the deal.",
+              "Log the call, meeting or note. <strong>See History</strong> shows it later."
+            ]
+          }
+        ]
       }
     ],
     "name": "Opportunity Management",
@@ -8400,7 +8677,19 @@ const MODULES = [
       "Second-level tabs: My Dashboard, Opportunities, Customers Interactions, Analytics, Reports, Account Assignment.",
       "Icon shortcuts to the right of the tabs: Task, Calendar, Contacts Directory, Customers, Owners, Competitors, Settings."
     ],
-    "sections": ["Settings","Opportunities","Customer Interactions","Account Assignment","Dashboard","Sidebar Shortcuts","Analytics","Reports","Troubleshooting & Naming Differences"],
+    "sections": [
+      "Settings",
+      "Opportunities",
+      "Customer Interactions",
+      "Account Assignment",
+      "Dashboard",
+      "Sidebar Shortcuts",
+      "Analytics",
+      "Reports",
+      "Troubleshooting & Naming Differences",
+      "Opportunity Record: Milestones, Team, Proposals, Compliance and Expenses",
+      "Mobile App (Arena Onsite)"
+    ]
   },
   {
     "id": "equipment",
