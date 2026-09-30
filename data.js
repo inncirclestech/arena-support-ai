@@ -2379,7 +2379,7 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "Work Order Management",
     question: "How do I create a Work Order Type?",
-    answer: "1. Global Data → **Work Order Management** → **Settings** gear → **Work Order Types**.\n2. Click **Work Order Type**, enter a Name* and Description, click **Submit**.",
+    answer: "1. Global Data → **Work Order Management** → **Settings** (gear icon) → **Work Order Types**.\n2. Click **+ Work Order Type**, fill in the details and save.\n\nThe same page is reachable from **Home → Work Order → Settings**. See the Work Order module for tabs, forms and ID format.",
     tags: ["work order type","create work order type","work order type setup"]
   },
   {
@@ -2388,7 +2388,7 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "Work Order Management",
     question: "How do I create a Work Order Contract template?",
-    answer: "1. Work Order Management → **Create**.\n2. Enter Name*, Description, and select a **Work Order Type*** (Service/Equipment/Material).\n3. Submit, then open the new record to configure its Profile fields, add Items via **Create Items**, and configure Expense forms under the **Expense** tab.",
+    answer: "1. Global Data → **Work Order Management** → **Work Orders** tab → **Create**.\n2. Enter the name and description, and choose the **Work Order Type**.\n3. Open the new record to add items and other details (see the Work Order module section for the full form).",
     tags: ["work order contract","create work order"]
   },
   {
@@ -2469,7 +2469,7 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "Users & Permissions",
     question: "What's the difference between Active Users and Inactive Users?",
-    answer: "**Active Users** can currently log in. Deleting a user from Active Users doesn't erase them — it moves them to **Inactive Users**, where they're retained and can later be re-Activated (which resends a registration/password-reset email).",
+    answer: "**Active Users** (1273 on the test site) can currently log in. Deleting a user from Active Users does not erase them: they move to **Inactive Users** (35), which adds a **Deactivated on** column, and can be re-activated later (which resends a registration/password-reset email).",
     tags: ["active users","inactive users","deactivate user"]
   },
   {
@@ -2487,7 +2487,7 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "Users & Permissions",
     question: "How do I create a crew?",
-    answer: "1. Global Data → **Crews** tile → **Create**.\n2. Enter the Crew Name.\n3. Select a **Supervisor** and a **Foreman** from the dropdown (these people must already exist in Global Rosters).\n4. Select **Rosters** — check the individual roster members (system and non-system) who belong to this crew.\n5. Click **Submit**.",
+    answer: "1. Global Data → **Crews** tile → **Create**.\n2. Enter the **Crew Name**.\n3. Pick supervisors in the **SUPERVISOR** dropdown and foremen in the **FOREMAN** dropdown (they list rosters that hold those roles in Global Rosters).\n4. Tick the people who belong to the crew in the list (system and non-system rosters). The **Supervisor**, **Foreman** and **Rosters** tabs show your picks.\n5. Click **Submit**.\n\nThen copy it into a project with **Project Setup → People → Project Crews → Copy Crews from Global Data**.",
     tags: ["create crew","crew setup","supervisor foreman","crew setup supervisor foreman"]
   },
   {
@@ -2496,7 +2496,7 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "UOM & Phase Codes",
     question: "How do I add a new unit of measure (UOM) and group it?",
-    answer: "1. Global Data → **UOM, Phasecode & GL Codes** tile → **UOMs** tab.\n2. Click **Add UOM**, type the unit name (e.g. \"Tonne\"), and save.\n3. To make it convertible with other units, go to **UOM Groups**, add it to (or create) a group, and enter the conversion factor(s).\n4. The new factors then appear read-only under **UOM Conversions**.",
+    answer: "1. Global Data → **UOM, Phasecode & GL Codes** tile → **UOMs** tab.\n2. Click **Add UOM**, type the unit name (for example \"Tonne\"), and save.\n3. To group it, open **UOM Groups** and add it to (or create) a group with **Add UOM Group**.\n\nConversions between units of a group are listed under **UOM Conversions** (Source, Conversion Factor, Target).",
     tags: ["uom","unit of measure","uom conversion","uom group conversion"]
   },
   {
@@ -2505,7 +2505,7 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "UOM & Phase Codes",
     question: "How do I add a Phase Code?",
-    answer: "1. Phase Codes tab → **Add**.\n2. Enter the Phase Code, its Description, choose its Phase Code Type (Direct/Indirect/Non-Productive/Change Order), and select which Cost Types apply (Material/Labor/Equipment/Subcontractors/Other Expenses).\n3. Save. Bulk create/update is also available via Excel Upload, which supports a **Create Mode** and an **Update Mode**.",
+    answer: "1. Global Data → **UOM, Phasecode & GL Codes** → **Phase Codes** tab → **Add**. A blank row opens at the top of the table.\n2. Type the Phase Code and Phase Code Description, and tick the **Cost Types** that apply (Material, Equipment, Labor, Unit Rate, Sub Contractor, BOQ's, Freight Charges, Fuel & Gas).\n3. Save the row.\n\nBulk create/update is also available via Excel Upload, which supports a **Create Mode** and an **Update Mode**. The new code appears in every project's Project Setup → Phase Codes list.",
     tags: ["phase code","add phase code","cost type","cost type classification"]
   },
   {
@@ -2514,7 +2514,7 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "UOM & Phase Codes",
     question: "What is a Phase Code in Arena?",
-    answer: "A Phase Code is Arena's name for what many construction businesses call a cost code or activity code — a short identifier that classifies a piece of work or spend for budgeting and cost tracking (e.g. \"Direct\" labor on formwork versus \"Indirect\" site overhead). Global Data holds the full company-wide master list; individual projects can work from that full list or a mapped subset, and Time Management's timesheet phase-code dropdown pulls from whichever source the project is configured to use.",
+    answer: "A Phase Code is Arena's name for what many construction businesses call a cost code or activity code: a short identifier that classifies a piece of work or spend for budgeting and cost tracking. Global Data holds the company-wide list (963 on the test site), each tagged Direct, Indirect, Non Productive or Change Order and with one or more Cost Types. **Project Setup → Phase Codes** shows the same list for a project, and timesheets offer the Direct and Indirect codes that have the Labor cost type.",
     tags: ["what is a phase code","phase code definition","glossary","cost code vs phase code"]
   },
   {
@@ -2885,6 +2885,159 @@ const QA_GLOBALDATA = [
     question: "How do I restore a deleted vendor?",
     answer: "1. Go to **Global Data → Vendors**.\n2. Click **Restore Vendors**.\n3. Tick the vendors you want back (the list shows **Vendor** and **First Name**).\n4. Click **Submit**.",
     tags: ["restore vendor","deleted vendor","undelete vendor","bring back vendor"]
+  },
+  {
+    action: "explain",
+    object: "users permissions tile",
+    scope: "module",
+    section: "Users & Permissions",
+    question: "What is the Users & Permissions tile for and who uses it?",
+    answer: "The **Users & Permissions** tile is where the Super Admin registers users (**User Accounts**), keeps the company people list (**Global Rosters**), builds permission groups (**Global Permission**) and checks what a person can do (**User Permission**). Projects and other modules then pick from these people and groups, for example **Project Setup → People → Add**.",
+    tags: ["users permissions tile","what is users and permissions","user accounts","who can register users"]
+  },
+  {
+    action: "explain",
+    object: "global rosters tab",
+    scope: "module",
+    section: "Users & Permissions",
+    question: "What is the Global Rosters tab and how is it different from User Accounts?",
+    answer: "**User Accounts** lists people who can log in (Active and Inactive). **Global Rosters** is the wider people list used for timesheets, crews and project teams: **System User** (people who log in), **Non System User** (people with no login, such as day labour) and **Non System Inactive User**. Rosters carry extra fields such as Designation, Skills, Craft, Class, Default Indirect Phase Code and **Role**.",
+    tags: ["global rosters","roster vs user accounts","system user non system user","roster columns"]
+  },
+  {
+    action: "explain",
+    object: "project people source",
+    scope: "module",
+    section: "Users & Permissions",
+    question: "Where does the list of people in Project Setup → People come from?",
+    answer: "From **Global Data → Users & Permissions → Global Rosters**. In the project, **People → Roster → Add** opens \"Select Users for <project>\", which lists the Global Roster people (the test project listed Engineering Contractor - 1, System Admin, American Builders Inc. and so on, in the same order as Global Rosters → System User). Non-system people are added on the **Non System User** sub-tab.",
+    tags: ["project people list","add people project","project roster source","where do project users come from"]
+  },
+  {
+    action: "troubleshoot",
+    object: "person missing project",
+    scope: "module",
+    section: "Users & Permissions",
+    question: "Why can't I find a person when I add people to my project?",
+    answer: "The project list is built from **Global Data → Users & Permissions → Global Rosters**. Check that the person is registered (User Accounts → Register User) or added as a non-system roster, that they are **Active**, and that you are on the right sub-tab (**System User** or **Non System User**). Register them in Global Data, then reopen the project's **People → Add** dialog.",
+    tags: ["person missing project","user not showing project","cannot find user roster","add people project missing"]
+  },
+  {
+    action: "explain",
+    object: "roster role supervisor foreman",
+    scope: "module",
+    section: "Users & Permissions",
+    question: "Where do the supervisors and foremen in a crew come from?",
+    answer: "From the **Role** column on **Global Rosters**. In **Create Crew**, the **SUPERVISOR** and **FOREMAN** dropdowns list people who hold those roles. Use **Add Role** on Global Rosters to give someone the role first.",
+    tags: ["crew supervisor","crew foreman","add role roster","supervisor dropdown empty"]
+  },
+  {
+    action: "explain",
+    object: "crews tile",
+    scope: "module",
+    section: "Users & Permissions",
+    question: "What is the Crews tile for and who uses it?",
+    answer: "The **Crews** tile (**Global Data → Crews**) holds reusable work groups: each card shows **Total SUPERVISORS**, **Total FOREMEN** and **Total Crew Rosters**. The Super Admin creates them; a project then pulls them in with **Project Setup → People → Project Crews → Copy Crews from Global Data**, so crew timesheets and assignments can use them. Eighteen crews exist on the test site.",
+    tags: ["crews tile","what is crews","global crews","crew list"]
+  },
+  {
+    action: "create",
+    object: "copy crews project",
+    scope: "module",
+    section: "Users & Permissions",
+    question: "How do I bring global crews into a project?",
+    answer: "1. Open the project → **Project Setup → People → Project Crews**.\n2. Click **Copy Crews from Global Data**.\n3. In \"Select Crew for <project>\" tick the crews (or **Select All**); the list is exactly the crews on **Global Data → Crews**.\n4. Click **Submit**.\n\nThe tab also has **+ Create Crew** for a project-only crew and **Copy Crews to Projects**.",
+    tags: ["copy crews","copy crews from global data","project crews","bring crews into project"]
+  },
+  {
+    action: "explain",
+    object: "phase code project source",
+    scope: "module",
+    section: "UOM & Phase Codes",
+    question: "Where does the Phase Code list in Project Setup come from?",
+    answer: "From **Global Data → UOM, Phasecode & GL Codes → Phase Codes**. On the test project **Project Setup → Phase Codes** showed 963 codes, the same count as Global Data, with **Timesheet Management** and **Equipment Management** tick boxes and a **Settings** button that chooses which cost types show for each category. Add or edit a code in Global Data and it is the same list everywhere. The list is also reachable under **Cost → Cost Breakdown Structure → Phase Codes**.",
+    tags: ["phase code project","project phase codes","where do phase codes come from","project setup phase codes","phase code mapping"]
+  },
+  {
+    action: "explain",
+    object: "timesheet phase code source",
+    scope: "module",
+    section: "UOM & Phase Codes",
+    question: "Where does the Phase Code list in timesheets come from?",
+    answer: "From the company Phase Codes in **Global Data → UOM, Phasecode & GL Codes**. In **Time Management → My Timesheet → Default Phase Codes** the list shows Direct (D) and Indirect (I) codes whose **Cost Types** include **Labor**, written as \"D - code - description\". Non Productive and Change Order codes did not appear, and only 270 of the 944 Labor codes on the test site were offered. **Project Setup → Phase Codes → Settings** has a **Timesheet Management** category where you choose the cost types shown (Labor on the test project). If a code is missing, check that it has the Labor cost type in Global Data and that it is a Direct or Indirect code.",
+    tags: ["timesheet phase code","phase code dropdown timesheet","default phase codes","where does timesheet phase code come from","phase code missing timesheet","time management phase codes"]
+  },
+  {
+    action: "explain",
+    object: "cost types phase code",
+    scope: "module",
+    section: "UOM & Phase Codes",
+    question: "What are the Cost Types on a phase code?",
+    answer: "Each phase code is tagged with one or more **Cost Types**: Material, Equipment, Labor, Unit Rate, Sub Contractor, BOQ's, Freight Charges and Fuel & Gas. They are the eight cost types under **Global Data → Cost**. Screens such as timesheets use the tag to decide which codes to offer (for example Labor).",
+    tags: ["cost types phase code","phase code cost type","labor cost type phase code"]
+  },
+  {
+    action: "explain",
+    object: "repair types gl codes",
+    scope: "module",
+    section: "UOM & Phase Codes",
+    question: "What are Repair Types and GL Codes?",
+    answer: "**Repair Types** (Repair Type and Description) and **GL Codes** (Code and Description) are two short lists on the same screen as UOMs and Phase Codes. Repair Types was empty on the test site, and GL Codes had one entry. Use **Add** to create entries. Where other screens pick them was not verified.",
+    tags: ["repair types","gl codes","general ledger codes","repair type list"]
+  },
+  {
+    action: "explain",
+    object: "construction types tile",
+    scope: "module",
+    section: "Construction Types",
+    question: "What is the Construction Types tile for and who uses it?",
+    answer: "The **Construction Types** tile is the master list of project categories (Infrastructure, Residential, Roads, Metro and so on; 56 on the test site). The Super Admin maintains it. Project creators pick one in **Projects → Create Project**, and the detailed work breakdown for each type is built on the separate **Construction Type** tab (ten steps).",
+    tags: ["construction types tile","what is construction types","project categories","construction type list"]
+  },
+  {
+    action: "explain",
+    object: "construction type create project",
+    scope: "module",
+    section: "Construction Types",
+    question: "Where does the Construction Type dropdown in Create Project come from?",
+    answer: "From **Global Data → Construction Types**. The dropdown on **Projects → Create Project** lists the same types in the same order (56 on the test site), and the type marked **Set as Default** (Metro on the test site) is pre-selected. If a type is missing, add it with **Create** on the Construction Types screen.",
+    tags: ["construction type dropdown","create project construction type","construction type missing","default construction type"]
+  },
+  {
+    action: "create",
+    object: "copy construction type",
+    scope: "module",
+    section: "Construction Types",
+    question: "How do I copy a construction type?",
+    answer: "1. Go to **Global Data → Construction Types** and click **Copy**.\n2. Choose the **Source ConstructionType** and the **Destination ConstructionType**.\n3. Under **Features**, switch on what to copy: Entity Types (Super Location Types, Location Types), Activity (Work Package, Quality Forms, Safety Forms), Map WP to Location type, Activity Sequence template.\n4. Click **Submit**.",
+    tags: ["copy construction type","clone construction type","duplicate construction type"]
+  },
+  {
+    action: "configure",
+    object: "set as default construction type",
+    scope: "module",
+    section: "Construction Types",
+    question: "What does Set as Default do on the Construction Types screen?",
+    answer: "The **Set as Default** radio button marks one construction type as the default. On the test site **Metro** is the default, and **Projects → Create Project** opens with Metro already selected in the **Construction Type** field.",
+    tags: ["set as default","default construction type","default type create project"]
+  },
+  {
+    action: "explain",
+    object: "work order management tile",
+    scope: "module",
+    section: "Work Order Management",
+    question: "What is the Work Order Management tile for, and is it the same as the Work Order module?",
+    answer: "Yes. **Global Data → Work Order Management** opens the same Work Order module as **Home → Work Order**: tabs **Work Orders**, **Workflow Issues**, **Reports** and **Settings**, and the same seven work orders on the test site. The Global Data view just shows fewer columns. Use it for set-up (Settings → Work Order Types, Maintenance Types, Invoices, Approval Workflow, Status, Priority, Configuration, Users and Permissions).",
+    tags: ["work order management tile","what is work order management","work order global data","work order settings","same as work order module"]
+  },
+  {
+    action: "explain",
+    object: "uom tabs",
+    scope: "module",
+    section: "UOM & Phase Codes",
+    question: "What are UOM Groups and UOM Conversions in Global Data?",
+    answer: "**UOMs** is the list of units (51 on the test site). **UOM Groups** puts compatible units together (Area, Job, Length, Mass, Quantity, Specimen, Time, Volume, Weight). **UOM Conversions** lists how one unit converts to another (Source, Conversion Factor, Target). Vendor rate cards and Bid Templates show the UOM Group and UOM from these lists.",
+    tags: ["uom groups","what are uom groups","uom conversions","global data uom","what is uom","unit of measure list","uom group list"]
   }
 ];
 
@@ -15426,11 +15579,11 @@ const MODULES = [
       },
       {
         "heading": "Users & Permissions",
-        "intro": "<p>This section covers registering users, building permission groups, and tracking non-system workers on the company-wide roster — Super Admin work that determines who can log in and what they can do. A construction company's workforce is rarely just its own salaried staff — a single job site might mix full-time employees, day laborers hired for a few weeks, and subcontractor crews who need to log time but never need to log into Arena itself. Users & Permissions is where a <strong>Super Admin / Global Admin</strong> (with day-to-day group and roster maintenance often delegated to a Global Data Admin or HR-focused Module Manager) builds and maintains the single company-wide picture of who everyone is and what they're allowed to do — a picture that every project and module then inherits rather than rebuilding its own.</p><p>Users & Permissions is the company's full identity and access-control system: who can log in, what roster-style data is tracked about each person, and what each user or group is allowed to do inside Arena. It's organized around four related but distinct views. <strong>User Accounts</strong> is the login-level directory — actual Arena user accounts, split between Active and Inactive. <strong>Global Rosters</strong> is a much richer, HR-style table that includes both system users and <strong>non-system users</strong> — a distinction worth understanding: non-system users represent temporary or outside workers (e.g. day laborers, subcontractor staff) who need to be tracked for timesheets and crew assignment but who don't get a full Arena login of their own.</p><p><strong>Global Permission</strong> and <strong>User Permission</strong> then handle access control at two different levels of granularity. Global Permission works at the group level — creating named groups like Super Admin, Foreman, or Project Manager, each with its own set of module/action rights, so that adding a person to a group is enough to grant them everything that group allows. User Permission, by contrast, is a read-only lookup — pick any one person and see the full union of everything their group memberships grant them, with each row already checked or unchecked and no way to edit it from that screen. It answers 'what can this specific person do, and which group is responsible for it,' which is invaluable when someone belongs to multiple groups or when access needs auditing, but it is not a way to grant a person rights independent of a group — that still has to happen by editing or adding them to a group in Global Permission.</p><p>Deleting a user is deliberately non-destructive: removing someone from Active Users doesn't erase their record, it moves them to Inactive Users, from which they can later be reactivated (which resends them a registration/password-reset email). This protects historical data — timesheets, approvals, and audit trails tied to that person — from disappearing just because their access was revoked. <strong>Crews</strong>, finally, groups roster members (both system and non-system) into named work teams with a designated Supervisor and Foreman, which is what Field Works and Productivity Logs use for crew-based logging and assignment.</p><p>Crews deserve a specific operational callout for anyone managing labor across multiple job sites: a crew defined here is a company-wide pool that a <strong>Project Manager or Time Management Lead</strong> then copies into their own project via Project Setup → People → Copy Crews from Global Data — it is not a live link. That copy becomes the project's own record from that point forward, so if the Global Data original is later updated (say, a new welder added to the company-wide \"Welding Crew\"), that change will <strong>not</strong> automatically flow through to a project that copied the crew earlier. Companies running crews across many active projects should treat this as an operational habit to manage deliberately — periodically re-copying or manually reconciling a project's crew roster against the Global Data source — rather than assuming the two will ever silently stay in sync.</p>",
+        "intro": "<p>Use this section to register people, sort them into permission groups, keep the company roster and build crews. The Super Admin does this work, often with help from a Global Data Admin.</p><p><strong>Where this data goes:</strong> <strong>Projects → Project Setup → People → Add</strong> offers the people on the Global Rosters, <strong>Project Crews → Copy Crews from Global Data</strong> offers the crews built here, and roster roles (Supervisor, Foreman) feed the Crew dropdowns. Approver and user lists in other modules draw on the same people.</p>",
         "definitions": [
           {
             "term": "User Accounts (Active / Inactive)",
-            "definition": "The login-level user directory, split into Active Users (can log in) and Inactive Users (retained but cannot log in; can be reactivated). Its table includes a Vendor Number column, since a user account can be linked to a Vendor record."
+            "definition": "The login-level user list under **Global Data → Users & Permissions → User Accounts**, with sub-tabs **Active Users** (1273 on the test site) and **Inactive Users** (35). Columns: **Profile**, **Created From** (ARENA for people added in Arena), **Employee ID**, **First Name**, **Last Name**, **Last Login**, **User Name**, **Contact No.**, **Email ID**, **Vendor Number** and **Actions** (edit, delete, star). Inactive Users adds **Deactivated on**. Toolbar: **Register User**, search, pager, **Export**, **Manage Columns**, list/grid icons, save layout. Deleting moves a user to Inactive Users; nothing is erased."
           },
           {
             "term": "Signature field (user registration)",
@@ -15438,7 +15591,7 @@ const MODULES = [
           },
           {
             "term": "Global Rosters",
-            "definition": "An HR-style directory (Roster ID, Name, Group No., Last Login, Email, Default Indirect Phase Code, Address, Designation, Skills, etc.), split into System User, Non System User, and Non System Inactive User sub-tabs."
+            "definition": "The people list used for timesheets, crews and project teams. Sub-tabs: **System User** (1270 on the test site; people who can log in), **Non System User** (56; no login) and **Non System Inactive User**. Columns: **Profile**, **Roster ID**, **First Name**, **Last Name**, **Group No.**, **Last Login**, **Email ID**, **Default Indirect Phase Code**, **Address**, **Designation**, **Skills**, **Experience**, **Craft**, **Class**, **Contact No.**, **Vendor Number**, **Labor**, **Role** and **Actions**. System rows have notes, edit and remove-person icons; Non System rows have notes, a login icon, edit and delete. Buttons: **Add Role** (both), **Add Non System Roster** and **Export All Users** (Non System), search, **More** and **Manage Columns**."
           },
           {
             "term": "Non-system user",
@@ -15458,7 +15611,15 @@ const MODULES = [
           },
           {
             "term": "Crew",
-            "definition": "A named work group of Roster members (system and non-system) with a designated Supervisor and Foreman, used for labor tracking, timesheets, and work assignment."
+            "definition": "A named work group built from roster people, with its Supervisors and Foremen. The **Crews** screen (**Global Data → Crews**) shows one card per crew (18 on the test site, for example **Welding Crew**, **Piping Team**, **Daily crew**) with **Total SUPERVISORS**, **Total FOREMEN** and **Total Crew Rosters**, a search box and **Create**. The **Create Crew** dialog has **Crew Name**, a **SUPERVISOR** dropdown, a **FOREMAN** dropdown, a search box, **Select All** and a people list on the left; on the right the **Supervisor**, **Foreman** and **Rosters** tabs count and list your picks. Who uses it: the Super Admin builds crews; a Project Manager or Time Management Lead copies them into a project."
+          },
+          {
+            "term": "Roster Role (Supervisor / Foreman)",
+            "definition": "The **Role** column on Global Rosters (for example **FOREMAN**, **SUPERVISOR**, Estimator). **Add Role** assigns a role to ticked rows. The **SUPERVISOR** and **FOREMAN** dropdowns in the Create Crew dialog list people who hold those roles, so give a person the role here before choosing them for a crew."
+          },
+          {
+            "term": "Where user, roster and crew data comes from and goes",
+            "definition": "**Comes from:** **Register User** (one at a time), **Export → Upload Excel** on Active Users, **Add Non System Roster** for people without a login, or a sync from Viewpoint through Staged Tables. **Goes to:** **Project Setup → People → Roster → Add** (the dialog \"Select Users for <project>\" lists the same people, in the same order as Global Rosters System User), **Project Crews → Copy Crews from Global Data** (lists all 18 global crews), the crew Supervisor/Foreman dropdowns (from roster roles), and project settings such as **Forms → Assign Users**, which list the project team. If a person is missing in a project, check that they are active on Global Rosters first."
           }
         ],
         "procedures": [
@@ -15562,8 +15723,8 @@ const MODULES = [
             "steps": [
               "Go to <strong>Global Data → Crews</strong> tile → <strong>Create</strong>.",
               "Enter the Crew Name.",
-              "Select a <strong>Supervisor</strong> and a <strong>Foreman</strong> from the dropdown (these people must already exist in Global Rosters).",
-              "Select <strong>Rosters</strong> — check the individual roster members (system and non-system) who belong to this crew.",
+              "Open the <strong>SUPERVISOR</strong> dropdown and pick the supervisors, then the <strong>FOREMAN</strong> dropdown for the foremen. These list rosters that hold those roles in Global Rosters.",
+              "Tick the people who belong to the crew in the list on the left (system and non-system rosters). Use <strong>Select All</strong> or the search box if needed. The <strong>Supervisor</strong>, <strong>Foreman</strong> and <strong>Rosters</strong> tabs on the right show your picks.",
               "Click <strong>Submit</strong>."
             ],
             "images": [
@@ -15582,7 +15743,8 @@ const MODULES = [
                 "caption": "Selecting the users for the crew and clicking Submit",
                 "step": 4
               }
-            ]
+            ],
+            "note": "To use the crew on a project, open Project Setup → People → Project Crews and click Copy Crews from Global Data."
           }
         ],
         "images": [
@@ -15868,31 +16030,35 @@ const MODULES = [
       },
       {
         "heading": "UOM & Phase Codes",
-        "intro": "<p>This section covers the shared reference data for quantities and cost classification — Units of Measure, Phase Codes, Repair Types, and GL Codes — set up by a Super Admin and used across Estimating, Work Orders, Procurement, and Cost modules. Two of the most common sources of costly confusion on a multi-project construction company are (1) different teams measuring the same material in different units, and (2) different projects using inconsistent cost/activity codes that don't roll up cleanly into company-wide reporting. Global Data solves both at once, and it is squarely the responsibility of the <strong>Super Admin / Global Admin</strong> (a Cost/Estimating Module Manager may be delegated day-to-day upkeep of the Phase Code list itself) to keep this reference data clean, because a huge amount of downstream reporting depends on it.</p><p>UOM, Phasecode & GL Codes is Arena's shared reference-data library for quantity, cost, and accounting classification, consumed by Estimating, Work Orders, Procurement, and Cost modules alike. It brings together four related but separate concepts. <strong>Units of Measure (UOMs)</strong> are the actual units things are counted in — Kg, Litres, Sqm, and so on — and grouping them into <strong>UOM Groups</strong> (Area, Length, Mass, Volume, Weight) is what enables automatic <strong>UOM Conversions</strong> between compatible units, a read-only table generated from the conversion factors you define at the group level.</p><p><strong>Phase Codes</strong> classify cost and activity type across the company — tagged as Direct, Indirect, Non-Productive, or Change Order, and further associated with one or more Cost Types (Material, Labor, Equipment, Subcontractors, Other Expenses). This is the same Phase Code table that Productivity Logs, Cost Breakdown Structures, and Bid Templates all reference, which is why getting phase codes set up correctly here has ripple effects across the rest of the system. <strong>Repair Types</strong> and <strong>GL Codes</strong> round out this area with simpler, single-purpose lists: Repair Types classify equipment/work-order repairs, and GL Codes support general-ledger/accounting integration.</p><p>Two operational details are worth calling out for anyone setting up a new project's time-tracking or estimating. First, the <strong>Measurement Templates</strong> tile (covered in its own section below) is closely related to UOM even though it lives as a separate top-level tile: a template like \"LBD\" (Length × Breadth × Depth × Nos) is a reusable formula that a project uses at the Estimate/BOQ stage to auto-calculate a quantity, and the resulting figure is expressed in one of this same master UOM list's units. Second, a Project's own <strong>Project Setup → Phase Codes</strong> screen is not a second, independent phase-code list — it is a mapping/subset-selector over this exact 963-row company-wide list (the same list is also reachable a second way, via Global Data → Cost → Cost Breakdown Structure → Phase Codes, which is not a duplicate, just another doorway into identical data). A <strong>Time Management Lead or Project Manager</strong> uses that project screen to check \"Timesheet Management\" per phase code, which decides which of the company-wide codes that specific project's field staff will be able to pick from when logging time — filtered further by which Cost Type(s) (Material, Equipment, Labor, and so on) that project's own Settings has enabled for mapping. Skipping this step is a common and easy-to-miss operational gap: if no phase codes have been mapped for a project, its field staff will find an empty Phase Code list when they try to log time against that specific project, even though the full company-wide list of 963 codes exists and is populated in Global Data.</p>",
+        "intro": "<p>Use this section to keep the shared lists for units of measure, phase codes, repair types and GL codes. The Super Admin maintains them, and projects and cost screens read from them.</p><p><strong>Where this data goes:</strong> the <strong>Phase Codes</strong> list (963 on the test site) is the same list that <strong>Project Setup → Phase Codes</strong> and <strong>Cost → Cost Breakdown Structure → Phase Codes</strong> show. Timesheets offer Direct and Indirect phase codes that carry the Labor cost type. UOM and UOM Group values appear on vendor rate cards, bid templates and cost lists.</p>",
         "definitions": [
           {
             "term": "UOM (Unit of Measure)",
-            "definition": "A single unit name (e.g. Kg, Lbs, Cum, Litres, Sqm, Rm) available for use throughout Arena."
+            "definition": "One unit name, for example **Kg**, **Cum**, **Sqm**, **each**, **Nos.**. The **UOMs** sub-tab has **Add UOM** and a table with **S.No**, **Unit of Measurement** and **Actions** (edit, delete); the test site has 51 units. The screen title is **Productivity** and its four tabs are **UOMs**, **Phase Codes**, **Repair Types** and **GL Codes**."
           },
           {
             "term": "UOM Group",
-            "definition": "A category (e.g. Area, Length, Mass, Volume, Weight) grouping multiple compatible UOMs together."
+            "definition": "A category that holds compatible units. **UOM Groups** has **Add UOM Group** and a table with **Group**, **Uoms** and **Actions**. The test site has nine groups: **Area** (Sqm, Square Feet, Hectare), **Job** (Job, Pair of Jobs, SUM), **Length** (Rm, LF, km, metre, Ls), **Mass** (Kg, Lbs), **Quantity** (each, Pair, Lot, Nos.), **Specimen**, **Time** (Month, Day), **Volume** (Cum, Litres, gallon, CuCm, Cubic Meter) and **Weight** (Kg, Quintals, Tonne). The UOM Group and UOM columns on vendor rate cards and Bid Templates use these values."
           },
           {
             "term": "UOM Conversions",
-            "definition": "A read-only table of every conversion factor defined across all UOM Groups (e.g. \"Kg → 2.2 → Lbs\")."
+            "definition": "A table with **Source**, **Conversion Factor** and **Target**, for example Kg × 2.2 = Lbs, Cum × 1000 = Litres, Month × 30 = Day, each × 1 = Nos.. It lists the conversions between units of the same group."
           },
           {
             "term": "Phase Code",
-            "definition": "A cost/activity classification with a Phase Code Type (Direct / Indirect / Non-Productive / Change Order) and one or more associated Cost Types (Material, Labor, Equipment, Subcontractors, Other Expenses)."
+            "definition": "A cost and activity code. The **Phase Codes** tab has **Add**, a search box, the pager, **Export** (Download and Upload) and a table with **S.No.**, **Phase Code**, **Phase Code Description**, **Phase Code Type**, **Cost Types** and **Actions**. The test site has 963 codes: 694 Direct, 221 Indirect, 45 Non Productive and 3 Change Order. **Cost Types** is a multi-select with **Material**, **Equipment**, **Labor**, **Unit Rate**, **Sub Contractor**, **BOQ's**, **Freight Charges** and **Fuel & Gas** (the same eight as **Global Data → Cost**). **Add** inserts a blank row at the top of the table rather than opening a pop-up."
           },
           {
             "term": "Repair Type",
-            "definition": "A simple classification (Repair Type, Description) used to categorize equipment/work-order repairs."
+            "definition": "A simple list of **Repair Type** and **Description**. The tab has **Add**, **Save Changes** and a table with **S.No.**, **Repair Type**, **Description** and **Actions**. It was empty on the test site."
           },
           {
             "term": "GL Code",
-            "definition": "A simple record (Code, Description) supporting general-ledger/accounting integration."
+            "definition": "A simple list of accounting codes. The tab has **Add**, a search box and a table with **S.No.**, **Code**, **Description** and **Actions**. The test site has one entry. Where GL Codes are picked in other screens was not verified."
+          },
+          {
+            "term": "Where phase code data comes from and goes",
+            "definition": "**Comes from:** **Add** on the Phase Codes tab, Excel through **Export → Upload**, or a sync from Viewpoint through Staged Tables (**Phase Codes**). **Goes to:** (1) **Project Setup → Phase Codes** for every project: the test project showed all 963 codes, with **Timesheet Management** and **Equipment Management** tick boxes and a **Settings** button (\"Select the Cost Type for each category to display Phase Codes\": Material, Equipment, Labor, Unit Rate, Sub Contractor, BOQ's, Freight Charges, Fuel & Gas). (2) **Global Data → Cost → Cost Breakdown Structure → Phase Codes**, which is the same table. (3) **Time Management → My Timesheet → Default Phase Codes**, which lists Direct (D) and Indirect (I) phase codes with Labor in their Cost Types, shown as \"D - 01.001.0001 - Excavation\"; Non Productive and Change Order codes did not appear, and only 270 of the 944 Labor codes were offered (the rule for the subset was not identified). Global Rosters also carry a **Default Indirect Phase Code** per person."
           }
         ],
         "procedures": [
@@ -15900,10 +16066,10 @@ const MODULES = [
             "title": "Add a new unit of measure and group it",
             "steps": [
               "Go to <strong>Global Data → UOM, Phasecode & GL Codes</strong> tile → <strong>UOMs</strong> tab.",
-              "Click <strong>Add UOM</strong>, type the unit name (e.g. \"Tonne\"), and save.",
-              "To make it convertible with other units, go to <strong>UOM Groups</strong>, add it to (or create) a group, and enter the conversion factor(s)."
+              "Click <strong>Add UOM</strong>, type the unit name (for example \"Tonne\"), and save.",
+              "To group it, open the <strong>UOM Groups</strong> sub-tab and add it to (or create) a group with <strong>Add UOM Group</strong>."
             ],
-            "note": "The new factors then appear read-only under UOM Conversions.",
+            "note": "Conversions between units of a group are listed on the UOM Conversions sub-tab (Source, Conversion Factor, Target).",
             "images": [
               {
                 "src": "assets/notion/units-of-measurement-uoms/001.jpg",
@@ -15930,11 +16096,11 @@ const MODULES = [
           {
             "title": "Add a Phase Code",
             "steps": [
-              "Go to the <strong>Phase Codes</strong> tab and click <strong>Add</strong>.",
-              "Enter the Phase Code and its Description, choose its Phase Code Type (Direct/Indirect/Non-Productive/Change Order), and select which Cost Types apply (Material/Labor/Equipment/Subcontractors/Other Expenses).",
-              "Save."
+              "Go to <strong>Global Data → UOM, Phasecode &amp; GL Codes</strong> → <strong>Phase Codes</strong> tab and click <strong>Add</strong>. A blank row opens at the top of the table.",
+              "Type the <strong>Phase Code</strong> and its <strong>Phase Code Description</strong>, and tick the <strong>Cost Types</strong> that apply (Material, Equipment, Labor, Unit Rate, Sub Contractor, BOQ's, Freight Charges, Fuel &amp; Gas).",
+              "Save the row. The code then shows in every project's <strong>Project Setup → Phase Codes</strong> list."
             ],
-            "note": "Bulk create/update is also available via Excel Upload, which supports a Create Mode and an Update Mode."
+            "note": "Bulk create/update is also available via Excel Upload, which supports a Create Mode and an Update Mode. The Phase Code Type column (Direct, Indirect, Non Productive, Change Order) showed no dropdown in the blank row on the test site."
           }
         ],
         "images": [
@@ -15946,11 +16112,11 @@ const MODULES = [
       },
       {
         "heading": "Construction Types",
-        "intro": "<p>This section covers the master list of project categories and the deeper work-breakdown-structure pipeline built for each one, configured by a Super Admin before projects of that type can be created. Whether a job is a highway widening, a residential tower, or a metro line changes almost everything about how that job should be planned and tracked — the location hierarchy, the catalog of work activities, and the sequence work happens in are all fundamentally different between a \"Roads\" job and a \"Residential\" job. Construction Types is where a <strong>Super Admin / Global Admin</strong> (often working with a senior estimating or operations lead, since this configuration is deep and technical) builds that vocabulary once per category, so every future project of that type inherits a ready-made structure instead of starting from a blank page.</p><p>Every project in Arena is tagged with a <strong>Construction Type</strong> — a category like Infrastructure, Residential, or Roads that describes the kind of work being built — and this classification does more than label the project: it scopes the entire work-breakdown-structure library the project will use. The <strong>Construction Types</strong> tile is the simple master list of these category names, but the real configuration work happens in the separate <strong>Construction Type</strong> tab, a ten-step pipeline for building out everything from location hierarchies down to how quantities get measured, all scoped to whichever Construction Type is selected from its dropdown.</p><p>This ten-step pipeline is arguably the deepest and most structurally important configuration in all of Global Data, because it defines the vocabulary and logic every project of that type inherits: the physical location hierarchy (Global Work Areas), the actual catalog of work (Global Work Packages, organized under Activities), the order work must happen in (Activity Sequence Templates), how materials and labor map onto that work for estimation, what everything is called (Naming Framework), interoperability with Primavera P6, bulk data loading, extensible metadata, and finally linking the right forms and measurement templates to each work package. Because a Construction Type's configuration is expensive to build from scratch, the <strong>Copy</strong> action on the Construction Types tile lets a company clone an existing type's entire setup into a new named type rather than starting over — and once any project actually uses a Construction Type, that type can no longer be edited or deleted, since doing so would retroactively change the meaning of live project data.</p><p>Worth noting for anyone creating a new project: unlike Phase Codes or Crews, Construction Type is a simple, one-way reference with no mapping or copying step involved. A Project Manager creating a new project in the <strong>Create Project</strong> dialog simply picks one value from this Global Data list at creation time — there is no independent, project-specific Construction Type, and no dropdown anywhere else in the product offering a Global-vs-Project choice for this field the way Phase Codes has. The only real risk is picking the wrong entry from what can become a long, mixed list over time (generic categories like \"Residential\" sitting alongside highly specific, possibly one-off entries created for a single past project), which is a good reason for the Global Admin to periodically clean up this list.</p>",
+        "intro": "<p>Use this section to keep the list of project categories and to build the work breakdown for each one. The Super Admin sets it up, often with a senior estimating or operations lead.</p><p><strong>Where this data goes:</strong> the <strong>Construction Type</strong> dropdown on <strong>Projects → Create Project</strong> lists exactly the types on this screen (56 on the test site), in the same order, with the <strong>Set as Default</strong> type pre-selected. Each project then shows its Construction Type in the Project Setup header.</p>",
         "definitions": [
           {
             "term": "Construction Types (tile)",
-            "definition": "The master list of construction project categories (e.g. Infrastructure, Flyover, Residential, Electrical and Instrumentation, Roads, Commercial Project, Tunnel) that every project is tagged with at creation. A type cannot be edited or deleted once projects exist using it."
+            "definition": "The master list of project categories. The screen (**Global Data → Construction Types**) has **Create** and **Copy** buttons and a table with a drag handle, **S.No**, **Types of Construction**, **Set as Default** (a radio button) and **Actions** (edit, delete). The test site has 56 types, with **Metro** set as default. A type cannot be edited or deleted once projects use it."
           },
           {
             "term": "Construction Type (pipeline tab)",
@@ -15962,11 +16128,11 @@ const MODULES = [
           },
           {
             "term": "Global Work Packages",
-            "definition": "Step 2 of the pipeline: the first-level library of construction work content — Activities (major work divisions like Excavation, Backfilling, Shuttering, Concreting) each containing many Work Packages, scoped across Progress, Quality, and Safety product lines."
+            "definition": "Step 2 of the pipeline: the library of work content. Its sub-cards are **Activities** (major areas of work), **Work Packages** (the library of construction works), **Progress Forms**, **Quality Forms** (level-1 and level-2 inspections) and **Safety Forms**, all scoped to the selected Construction Type."
           },
           {
             "term": "Activity Sequence Templates",
-            "definition": "Step 3 of the pipeline: dependency graphs (WBS templates) capturing the logical order of Work Packages, driving schedule and progress logic. Mapping Work Packages to Work Locations is a prerequisite for Progress tracking."
+            "definition": "Step 3 of the pipeline. Two sub-cards: **Map Work Packages to Work Location Types** (which work happens at each type of location) and **Create Activity Sequence Templates** (the order and dependencies of Work Packages). The pipeline page has a dropdown for the Construction Type it configures."
           },
           {
             "term": "Material and Labor Estimation Templates",
@@ -15995,6 +16161,14 @@ const MODULES = [
           {
             "term": "Work Package Measurement Template Linking",
             "definition": "Step 10 of the pipeline: links a Measurement Template to a Work Package so quantity take-off math is automatically available when recording progress against it."
+          },
+          {
+            "term": "Copy Construction Type",
+            "definition": "The **Copy** button opens **Copy Construction Type** with **Source ConstructionType**, **Destination ConstructionType** and a **Features** list of switches: **Entity Types** (with **Super Location Types** and **Location Types**), **Activity** (with **Work Package**, **Quality Forms**, **Safety Forms**), **Map WP to Location type** and **Activity Sequence template**. Switch on what you want to clone, then **Submit**. This saves rebuilding a similar type from scratch."
+          },
+          {
+            "term": "Where construction type data comes from and goes",
+            "definition": "**Comes from:** **Create** (new type), **Copy** (clone an existing type's setup) and the ten-step pipeline on the **Construction Type** tab. **Goes to:** the **Construction Type** dropdown on **Create Project** (same 56 names, default pre-selected) and the Construction Type shown in the **Project Setup** header (for example \"Arena Steel Plant - Phase 1\" shows \"Arena Integrated Steel Plant\"). The work areas, work packages, forms and templates you configure for a type are what projects of that type start from."
           }
         ],
         "procedures": [
@@ -16002,8 +16176,8 @@ const MODULES = [
             "title": "Configure which construction categories are available when creating a project",
             "steps": [
               "Go to <strong>Global Data → Construction Types</strong> tile.",
-              "Click <strong>Create</strong> to add a new type, or <strong>Copy</strong> an existing type to clone its full setup into a new one.",
-              "Optionally mark one type as <strong>Set as Default</strong>."
+              "Click <strong>Create</strong> to add a new type, or <strong>Copy</strong> to clone an existing type's setup (choose Source, Destination and the features to copy).",
+              "Tick the <strong>Set as Default</strong> radio button on the type you want pre-selected on Create Project."
             ],
             "images": [
               {
@@ -16011,7 +16185,8 @@ const MODULES = [
                 "caption": "Create a construction type; created types appear in a table",
                 "step": 2
               }
-            ]
+            ],
+            "note": "Changes show in the Create Project dropdown the next time the form is opened."
           },
           {
             "title": "Bulk-load historical data into a Construction Type",
@@ -16127,44 +16302,49 @@ const MODULES = [
       },
       {
         "heading": "Work Order Management",
-        "intro": "<p>This section covers the company-wide setup for Work Orders — Work Order Types and the Work Order Contract library — configured by a Super Admin or Work Order Admin. A work order — whether it's a rental contract for a crane, a materials delivery, or a dispatched repair crew — carries its own team, its own timesheets, its own cost, and its own paperwork, which is why Arena treats each one almost like a mini-project once it's opened. A <strong>Work Order Management Admin</strong> (an admin scoped to just this module, distinct from a Procurement or Equipment Management admin) sets up the templates and categorization every project will use to raise these; day-to-day, a <strong>PM or field End User</strong> simply opens a Work Order Contract of the type the admin already defined and works through its Team, Timesheets, Equipment, Inventory, Procurement, and Expense tabs.</p><p>Work Order Management configures the templates and categorization used to raise Work Orders across every project — covering Equipment, Material, and Service work — and hosts the reusable library of Work Order Contracts that projects draw from. A work order is, in effect, a mini-project of its own once opened: an individual record carries tabs for Team, Timesheets, Equipment, Inventory, Procurement, Expense, Schedule, Communication, Documents, and Drawings, so all the activity and cost tied to a specific piece of contracted or dispatched work stays organized under one roof.</p><p>Before any work order contract can be created, the company needs at least one <strong>Work Order Type</strong> defined — this simple classification (Service, Equipment, or Material) determines what kind of work the contract represents and shapes which fields and tabs are relevant. Access to Work Orders is controlled separately through this module's own Users and Permissions screen, letting a company restrict who can create, view, or act on work orders independent of broader company-wide permission groups.</p>",
+        "intro": "<p>This tile is the Global Data entrance to the same Work Order module you see under <strong>Home → Work Order</strong>. The Super Admin or Work Order Admin uses it to set up work order types, approvals and access.</p><p><strong>Where this data goes:</strong> the work orders listed here are the same records as in Home → Work Order (seven on the test site); this view shows fewer columns. The full field, tab and settings detail is in the Work Order module section.</p>",
         "definitions": [
           {
             "term": "Work Order Type",
-            "definition": "A classification (Service, Equipment, or Material) that every Work Order Contract must specify, defined with just a Name and Description."
+            "definition": "The kind of work order: the **Work Order Type** column on the test site shows **Service**, **Equipment** and **Material**. Types are managed in **Settings → Work Order Types** (the page was empty on the test site, with a **+ Work Order Type** button)."
           },
           {
             "term": "Work Order Contract",
-            "definition": "A reusable template/record for a piece of work-order-driven work, with a Name, Description, and Work Order Type, expandable with Item Details, Team, Timesheets, Equipment, Inventory, Procurement, Expense, Schedule, Communication, Documents, and Drawings tabs."
+            "definition": "A work order record. The Global Data screen (**Global Data → Work Order Management**) has the tabs **Work Orders**, **Workflow Issues**, **Reports** and **Settings**; the list has **Create**, search, pager, **Export**, **Filters**, **Manage Columns** and table/grid/board icons, with columns **ID**, **Description**, **Work Order Status**, **Work Order Type**, **Created Date**, **Created By**, **Notes**, **Due Date**, **Assign To** and **Actions** (history, delete)."
           },
           {
             "term": "Work Order Status",
-            "definition": "A dropdown on an individual Work Order Contract record tracking its current lifecycle state."
+            "definition": "The **Work Order Status** column in the list and the **Status** page under Settings."
           },
           {
             "term": "Item Details / Create Items",
-            "definition": "A panel on a Work Order Contract's Profile tab for defining the specific items covered by the contract."
+            "definition": "The items of work inside a work order. Open a work order from the list to add them; see the Work Order module section for the item form."
           },
           {
             "term": "Users and Permissions (Work Order Management)",
-            "definition": "A dedicated \"Users Groups\" screen scoping which user groups can access or act on Work Orders."
+            "definition": "The last page in the Work Order **Settings** menu. The full menu is **Work Order Types**, **Maintenance Types**, **Invoices**, **Approval Workflow**, **Status**, **Priority**, **Configuration** and **Users and Permissions**, with a search box. It is the same Settings screen as in Home → Work Order."
+          },
+          {
+            "term": "Where work order data comes from and goes",
+            "definition": "Global Data → Work Order Management and **Home → Work Order** are two doors to the same module and the same records. Home → Work Order shows extra columns (for example Assigned Project/Location, Equipment, Maintenance Type, Project, Phase Code, Priority, Technician, Vendor). Settings made here apply in both places."
           }
         ],
         "procedures": [
           {
             "title": "Create a Work Order Type",
             "steps": [
-              "Go to <strong>Global Data → Work Order Management</strong> → <strong>Settings</strong> gear → <strong>Work Order Types</strong>.",
-              "Click <strong>Work Order Type</strong>, enter a Name* and Description, and click <strong>Submit</strong>."
+              "Go to <strong>Global Data → Work Order Management</strong> → <strong>Settings</strong> (gear icon) → <strong>Work Order Types</strong>.",
+              "Click <strong>+ Work Order Type</strong> and fill in the details, then save. See the Work Order module section for tabs, forms and ID format."
             ]
           },
           {
             "title": "Create a Work Order Contract template",
             "steps": [
-              "Go to <strong>Work Order Management</strong> → <strong>Create</strong>.",
-              "Enter Name*, Description, and select a <strong>Work Order Type*</strong> (Service/Equipment/Material).",
+              "Go to <strong>Global Data → Work Order Management</strong> and click <strong>Create</strong> on the <strong>Work Orders</strong> tab.",
+              "Enter the name and description, and choose the <strong>Work Order Type</strong>.",
               "Submit, then open the new record to configure its Profile fields, add Items via <strong>Create Items</strong>, and configure Expense forms under the <strong>Expense</strong> tab."
-            ]
+            ],
+            "note": "The full create form is described in the Work Order module section."
           }
         ]
       },
