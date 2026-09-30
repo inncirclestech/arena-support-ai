@@ -4820,208 +4820,142 @@ const QA_PROJECTNOTIFICATIONS = [
 
 const QA_USERSANDPERMISSIONS = [
   {
-    "action": "create",
-    "object": "permission group",
-    "scope": "project",
-    "section": "Groups Permission",
-    "question": "How do I create a new permission group for this project?",
-    "answer": "Go to the project's Permission Schema → Groups Permission tab and click \"Add User Group\". Alternatively, click \"Fetch Templates\" to pull in a pre-built group template (such as a group similar to \"PROJECT POC ADMIN\" or \"Field Users\") instead of configuring permissions from scratch.",
-    "tags": [
-      "add user group",
-      "fetch templates",
-      "permission group"
-    ]
+    action: "create",
+    object: "permission group",
+    scope: "project",
+    section: "Groups Permission",
+    question: "How do I create a new permission group for this project?",
+    answer: "Go to the project's Permission Schema → Groups Permission tab and click \"Add User Group\". Alternatively, click \"Fetch Templates\" to pull in a pre-built group template (such as a group similar to \"PROJECT POC ADMIN\" or \"Field Users\") instead of configuring permissions from scratch.",
+    tags: ["add user group","fetch templates","permission group"]
   },
   {
-    "action": "view",
-    "object": "group type and membership",
-    "scope": "project",
-    "section": "Groups Permission",
-    "question": "How do I see who belongs to a permission group and what it can access?",
-    "answer": "On the Groups Permission tab, each group is shown as a card with its group type tag (for example, a \"Restricted\" tag indicating limited eligibility). Click the Permissions button on the card to review what the group can access, or the Users button to see and manage who's assigned to it.",
-    "tags": [
-      "group card",
-      "permissions button",
-      "users button",
-      "restricted group"
-    ]
+    action: "view",
+    object: "group type and membership",
+    scope: "project",
+    section: "Groups Permission",
+    question: "How do I see who belongs to a permission group and what it can access?",
+    answer: "On the Groups Permission tab, each group is shown as a card with its group type tag (for example, a \"Restricted\" tag indicating limited eligibility). Click the Permissions button on the card to review what the group can access, or the Users button to see and manage who's assigned to it.",
+    tags: ["group card","permissions button","users button","restricted group"]
   },
   {
-    "action": "search",
-    "object": "permission group by name",
-    "scope": "project",
-    "section": "Groups Permission",
-    "question": "How do I find a specific permission group in a project with many groups?",
-    "answer": "Use the search bar on the Groups Permission tab to filter the group cards by name rather than scrolling through the full list.",
-    "tags": [
-      "search groups",
-      "groups permission",
-      "filter by name"
-    ]
+    action: "search",
+    object: "permission group by name",
+    scope: "project",
+    section: "Groups Permission",
+    question: "How do I find a specific permission group in a project with many groups?",
+    answer: "Use the search bar on the Groups Permission tab to filter the group cards by name rather than scrolling through the full list.",
+    tags: ["search groups","groups permission","filter by name"]
   },
   {
-    "action": "view",
-    "object": "individual user's permissions",
-    "scope": "project",
-    "section": "User Permission",
-    "question": "How do I check exactly what one specific person can do on this project?",
-    "answer": "Go to the User Permission tab (breadcrumb: User Permissions), select the user from the list on the left (shown by name and email), and review their Basic Details, Groups, and Permissions in the detail panel on the right.",
-    "tags": [
-      "user permission",
-      "basic details",
-      "groups",
-      "individual access lookup"
-    ]
+    action: "view",
+    object: "individual user's permissions",
+    scope: "project",
+    section: "User Permission",
+    question: "How do I check exactly what one specific person can do on this project?",
+    answer: "Go to the User Permission tab (breadcrumb: User Permissions), select the user from the list on the left (shown by name and email), and review their Basic Details, Groups, and Permissions in the detail panel on the right.",
+    tags: ["user permission","basic details","groups","individual access lookup"]
   },
   {
-    "action": "understand",
-    "object": "project-level vs global user administration",
-    "scope": "project",
-    "section": "Groups Permission",
-    "question": "Is Users and Permissions the same as the org-wide user directory or Global Permission screen?",
-    "answer": "No. Users and Permissions here is scoped to a single project — the groups and access you configure only apply within that project. The organization-wide equivalents (the full user directory and the global permission structure) live under Global Data and are managed there by a Super Admin. A PM or Module Admin uses this project-level screen to control access within their own project without needing to touch global settings.",
-    "tags": [
-      "project scope",
-      "global data",
-      "super admin",
-      "distinction"
-    ]
+    action: "understand",
+    object: "project-level vs global user administration",
+    scope: "project",
+    section: "Groups Permission",
+    question: "Is Users and Permissions the same as the org-wide user directory or Global Permission screen?",
+    answer: "No. Users and Permissions here is scoped to a single project — the groups and access you configure only apply within that project. The organization-wide equivalents (the full user directory and the global permission structure) live under Global Data and are managed there by a Super Admin. A PM or Module Admin uses this project-level screen to control access within their own project without needing to touch global settings.",
+    tags: ["project scope","global data","super admin","distinction"]
   },
   {
-    "action": "assign",
-    "object": "user to a permission group",
-    "scope": "project",
-    "section": "Groups Permission",
-    "question": "How do I add a user to an existing permission group on this project?",
-    "answer": "Open the group's card on the Groups Permission tab and click Users to manage its membership, or go to the User Permission tab, select the user, and review/update their Groups from their individual detail panel.",
-    "tags": [
-      "assign user",
-      "group membership",
-      "groups permission"
-    ]
+    action: "assign",
+    object: "user to a permission group",
+    scope: "project",
+    section: "Groups Permission",
+    question: "How do I add a user to an existing permission group on this project?",
+    answer: "Open the group's card on the Groups Permission tab and click Users to manage its membership, or go to the User Permission tab, select the user, and review/update their Groups from their individual detail panel.",
+    tags: ["assign user","group membership","groups permission"]
   },
   {
-    "action": "view",
-    "object": "all project users",
-    "scope": "project",
-    "section": "User Permission",
-    "question": "Where can I see a list of everyone who has access to this project?",
-    "answer": "The User Permission tab shows a left-hand list of every user in the project, by name and email. Selecting any one of them opens their Basic Details, Groups, and Permissions on the right.",
-    "tags": [
-      "project user list",
-      "user permission tab",
-      "access roster"
-    ]
+    action: "view",
+    object: "all project users",
+    scope: "project",
+    section: "User Permission",
+    question: "Where can I see a list of everyone who has access to this project?",
+    answer: "The User Permission tab shows a left-hand list of every user in the project, by name and email. Selecting any one of them opens their Basic Details, Groups, and Permissions on the right.",
+    tags: ["project user list","user permission tab","access roster"]
   },
   {
-    "action": "understand",
-    "object": "permissions vs roster membership",
-    "scope": "project",
-    "section": "Groups Permission",
-    "question": "I added someone to the project roster but they still can't open a screen — why?",
-    "answer": "Being on the roster and having permissions are different things. <strong>Project Setup → People → Roster</strong> records who is on the job; <strong>Users and Permissions</strong> controls what they can actually do inside the project. Check the <strong>User Permission</strong> tab for that person's Basic Details, Groups, and Permissions — if they belong to no group, or to a group without rights to that area, they will see the project but not the screen. Form-level access is narrower still: <strong>Project Setup → Forms → Assign Users</strong> sets View/Create/Edit/Delete per form type per work package.",
-    "tags": [
-      "can't access screen",
-      "roster vs permissions",
-      "user permission tab",
-      "assign users forms"
-    ]
+    action: "understand",
+    object: "permissions vs roster membership",
+    scope: "project",
+    section: "Groups Permission",
+    question: "I added someone to the project roster but they still can't open a screen — why?",
+    answer: "Being on the roster and having permissions are different things. <strong>Project Setup → People → Roster</strong> records who is on the job; <strong>Users and Permissions</strong> controls what they can actually do inside the project. Check the <strong>User Permission</strong> tab for that person's Basic Details, Groups, and Permissions — if they belong to no group, or to a group without rights to that area, they will see the project but not the screen. Form-level access is narrower still: <strong>Project Setup → Forms → Assign Users</strong> sets View/Create/Edit/Delete per form type per work package.",
+    tags: ["can't access screen","roster vs permissions","user permission tab","assign users forms"]
   }
 ];
 
 const QA_OWNERS = [
   {
-    "action": "view",
-    "object": "owners screen",
-    "scope": "project",
-    "section": "Owners",
-    "question": "What is the Owners screen used for?",
-    "answer": "Go to <strong>Owners</strong>. It's where a PM or admin registers the client or developer-side stakeholders on a project — the party paying for and ultimately accountable for the work, as distinct from the internal contractor team already using Arena day to day.",
-    "tags": [
-      "owners",
-      "register owner",
-      "client stakeholders"
-    ]
+    action: "view",
+    object: "owners screen",
+    scope: "project",
+    section: "Owners",
+    question: "What is the Owners screen used for?",
+    answer: "Go to <strong>Owners</strong>. It's where a PM or admin registers the client or developer-side stakeholders on a project — the party paying for and ultimately accountable for the work, as distinct from the internal contractor team already using Arena day to day.",
+    tags: ["owners","register owner","client stakeholders"]
   },
   {
-    "action": "create",
-    "object": "owner",
-    "scope": "project",
-    "section": "Owners",
-    "question": "How do I register a new owner on a project?",
-    "answer": "On the Owners screen, click <strong>Register Owner</strong> and provide the stakeholder's details. Once registered, the owner appears in the list/grid below, where you can use the search box to locate them again later.",
-    "tags": [
-      "register owner",
-      "add owner",
-      "create owner"
-    ]
+    action: "create",
+    object: "owner",
+    scope: "project",
+    section: "Owners",
+    question: "How do I register a new owner on a project?",
+    answer: "On the Owners screen, click <strong>Register Owner</strong> and provide the stakeholder's details. Once registered, the owner appears in the list/grid below, where you can use the search box to locate them again later.",
+    tags: ["register owner","add owner","create owner"]
   },
   {
-    "action": "view",
-    "object": "empty owners list",
-    "scope": "project",
-    "section": "Owners",
-    "question": "The Owners list is empty on my project — is that expected?",
-    "answer": "Yes, an empty Owners list simply means no client or owner-side stakeholders have been registered yet. Register one via <strong>Register Owner</strong> whenever you're ready to give an owner-side contact visibility into the project.",
-    "tags": [
-      "empty state",
-      "no owners registered"
-    ]
+    action: "view",
+    object: "empty owners list",
+    scope: "project",
+    section: "Owners",
+    question: "The Owners list is empty on my project — is that expected?",
+    answer: "Yes, an empty Owners list simply means no client or owner-side stakeholders have been registered yet. Register one via <strong>Register Owner</strong> whenever you're ready to give an owner-side contact visibility into the project.",
+    tags: ["empty state","no owners registered"]
   },
   {
-    "action": "view",
-    "object": "owners and owner dashboard relationship",
-    "scope": "project",
-    "section": "Owners",
-    "question": "How does registering an Owner relate to the Owner Dashboard I've seen under Project Settings?",
-    "answer": "Registering a stakeholder here on the Owners screen is what feeds the <strong>Owner Dashboard</strong> category found under Project Settings — the two are connected: Owners is where you add the external client/developer contact, and Owner Dashboard is the owner-facing view that contact would use to check status without needing full internal access to the project.",
-    "tags": [
-      "owner dashboard",
-      "project settings",
-      "owner visibility"
-    ]
+    action: "view",
+    object: "owners and owner dashboard relationship",
+    scope: "project",
+    section: "Owners",
+    question: "How does registering an Owner relate to the Owner Dashboard I've seen under Project Settings?",
+    answer: "Registering a stakeholder here on the Owners screen is what feeds the <strong>Owner Dashboard</strong> category found under Project Settings — the two are connected: Owners is where you add the external client/developer contact, and Owner Dashboard is the owner-facing view that contact would use to check status without needing full internal access to the project.",
+    tags: ["owner dashboard","project settings","owner visibility"]
   },
   {
-    "action": "view",
-    "object": "who should register owners",
-    "scope": "project",
-    "section": "Owners",
-    "question": "Who is responsible for registering owners on a project?",
-    "answer": "Registering owners is typically a <strong>PM</strong> or <strong>Module Admin</strong> task, since it involves granting an external, client-side stakeholder visibility into the project. It isn't a self-service action for the owner — someone on the internal project team adds them via <strong>Register Owner</strong> first.",
-    "tags": [
-      "pm responsibility",
-      "module admin",
-      "register owner"
-    ]
+    action: "view",
+    object: "who should register owners",
+    scope: "project",
+    section: "Owners",
+    question: "Who is responsible for registering owners on a project?",
+    answer: "Registering owners is typically a <strong>PM</strong> or <strong>Module Admin</strong> task, since it involves granting an external, client-side stakeholder visibility into the project. It isn't a self-service action for the owner — someone on the internal project team adds them via <strong>Register Owner</strong> first.",
+    tags: ["pm responsibility","module admin","register owner"]
   },
   {
-    "action": "understand",
-    "object": "owners vs project roster and users",
-    "scope": "project",
-    "section": "Owners",
-    "question": "Should I add a client contact under Owners or under Project Setup → People?",
-    "answer": "Use <strong>Owners</strong> for client- or developer-side stakeholders — the party paying for and accountable for the work, who need limited, status-oriented visibility via the Owner Dashboard. Use <strong>Project Setup → People → Roster</strong> for the internal project team actually delivering the work, and <strong>Users and Permissions</strong> to control what those internal users can do inside the project. Mixing the two blurs the line between the delivery team and the client.",
-    "tags": [
-      "owners vs roster",
-      "client contact",
-      "project people",
-      "stakeholder type"
-    ]
+    action: "understand",
+    object: "owners vs project roster and users",
+    scope: "project",
+    section: "Owners",
+    question: "Should I add a client contact under Owners or under Project Setup → People?",
+    answer: "Use <strong>Owners</strong> for client- or developer-side stakeholders — the party paying for and accountable for the work, who need limited, status-oriented visibility via the Owner Dashboard. Use <strong>Project Setup → People → Roster</strong> for the internal project team actually delivering the work, and <strong>Users and Permissions</strong> to control what those internal users can do inside the project. Mixing the two blurs the line between the delivery team and the client.",
+    tags: ["owners vs roster","client contact","project people","stakeholder type"]
   },
   {
-    "action": "understand",
-    "object": "owner-side project identity fields",
-    "scope": "project",
-    "section": "Owners",
-    "question": "Where else does owner-side information appear on a project?",
-    "answer": "Beyond the Owners screen, a project's own identity data on <strong>Project Setup → Works</strong> carries owner-side fields in its left panel — Owner Rep, CSE-PMC, Project Type, and Funding &amp; Implementing Agency — alongside Project Name/ID, Construction Type, Status, and Location. Owners is where stakeholders are registered for visibility; Project Setup → Works is where the project's contractual owner context is recorded.",
-    "tags": [
-      "owner rep",
-      "cse-pmc",
-      "funding agency",
-      "project identity",
-      "project setup works"
-    ]
+    action: "understand",
+    object: "owner-side project identity fields",
+    scope: "project",
+    section: "Owners",
+    question: "Where else does owner-side information appear on a project?",
+    answer: "Beyond the Owners screen, a project's own identity data on <strong>Project Setup → Works</strong> carries owner-side fields in its left panel — Owner Rep, CSE-PMC, Project Type, and Funding &amp; Implementing Agency — alongside Project Name/ID, Construction Type, Status, and Location. Owners is where stakeholders are registered for visibility; Project Setup → Works is where the project's contractual owner context is recorded.",
+    tags: ["owner rep","cse-pmc","funding agency","project identity","project setup works"]
   }
 ];
 
@@ -8100,329 +8034,211 @@ const QA_CAPITALMANAGEMENT = [
 
 const QA_ADMINSETUPGUIDE = [
   {
-    "action": "understand",
-    "object": "first setup step",
-    "scope": "global",
-    "section": "Step 1 · Set up your company and business units",
-    "question": "What do I set up first in Arena?",
-    "answer": "Start with your company profile. Go to **Global Data → Company → Company Details** and fill in your legal/business information, then upload your logo. Do this before anything else — the company profile, plus **Business Units**, is the foundation every project, user, and document rolls up under.",
-    "tags": [
-      "what to set up first",
-      "first step setup",
-      "where to start admin",
-      "initial arena setup"
-    ]
+    action: "understand",
+    object: "first setup step",
+    scope: "global",
+    section: "Step 1 · Set up your company and business units",
+    question: "What do I set up first in Arena?",
+    answer: "Start with your company profile. Go to **Global Data → Company → Company Details** and fill in your legal/business information, then upload your logo. Do this before anything else — the company profile, plus **Business Units**, is the foundation every project, user, and document rolls up under.",
+    tags: ["what to set up first","first step setup","where to start admin","initial arena setup"]
   },
   {
-    "action": "understand",
-    "object": "company setup order",
-    "scope": "global",
-    "section": "Step 1 · Set up your company and business units",
-    "question": "What's the order to set up a new company in Arena?",
-    "answer": "Follow six steps in order:\n1. **Company profile & Business Units** — your legal identity and internal divisions.\n2. **Users & Permission Groups** — get people into Arena with the right access.\n3. **Master data** — Phase Codes, GL Codes, UOM, Construction Types, Vendors, Crews, Locations & Tax.\n4. **Integrations** — connect Microsoft 365, your accounting/ERP system, and Adobe Sign if you use them.\n5. **Create your first project** and add its team.\n6. **Module settings** — configure each module you use (Time Management, Procurement, Opportunity, Expense Tracker, and so on) before end users start relying on it.\nEach step depends on the ones before it, so working through them in order avoids rework — you can't assign a Tax Code to a Vendor before Tax Groups exist, and there's little point configuring a module's approval workflow before the people who'll approve things are registered as users.",
-    "tags": [
-      "setup order",
-      "setup checklist",
-      "onboarding steps",
-      "new company setup",
-      "day one setup"
-    ]
+    action: "understand",
+    object: "company setup order",
+    scope: "global",
+    section: "Step 1 · Set up your company and business units",
+    question: "What's the order to set up a new company in Arena?",
+    answer: "Follow six steps in order:\n1. **Company profile & Business Units** — your legal identity and internal divisions.\n2. **Users & Permission Groups** — get people into Arena with the right access.\n3. **Master data** — Phase Codes, GL Codes, UOM, Construction Types, Vendors, Crews, Locations & Tax.\n4. **Integrations** — connect Microsoft 365, your accounting/ERP system, and Adobe Sign if you use them.\n5. **Create your first project** and add its team.\n6. **Module settings** — configure each module you use (Time Management, Procurement, Opportunity, Expense Tracker, and so on) before end users start relying on it.\nEach step depends on the ones before it, so working through them in order avoids rework — you can't assign a Tax Code to a Vendor before Tax Groups exist, and there's little point configuring a module's approval workflow before the people who'll approve things are registered as users.",
+    tags: ["setup order","setup checklist","onboarding steps","new company setup","day one setup"]
   },
   {
-    "action": "configure",
-    "object": "company profile",
-    "scope": "global",
-    "section": "Step 1 · Set up your company and business units",
-    "question": "How do I set up my company profile and logo?",
-    "answer": "Go to **Global Data → Company → Company Details**. Fill in Company Name, Company ID, Address, Contact Person and Company Email/Phone, then click **Upload Company Logo** to set the brand logo used on generated documents. Click **Submit**. If you have subsidiary companies, use the **Subsidiary** tab and **Create Subsidiary**. A **Super Admin** normally does this.",
-    "tags": [
-      "company profile",
-      "company logo",
-      "company details",
-      "set up company"
-    ]
+    action: "configure",
+    object: "company profile",
+    scope: "global",
+    section: "Step 1 · Set up your company and business units",
+    question: "How do I set up my company profile and logo?",
+    answer: "Go to **Global Data → Company → Company Details**. Fill in Company Name, Company ID, Address, Contact Person and Company Email/Phone, then click **Upload Company Logo** to set the brand logo used on generated documents. Click **Submit**. If you have subsidiary companies, use the **Subsidiary** tab and **Create Subsidiary**. A **Super Admin** normally does this.",
+    tags: ["company profile","company logo","company details","set up company"]
   },
   {
-    "action": "configure",
-    "object": "business unit",
-    "scope": "global",
-    "section": "Step 1 · Set up your company and business units",
-    "question": "How do I add a business unit?",
-    "answer": "Go to **Global Data → Company → Business Units** and click **Add**. Enter a Code and Description, then submit. Business Units are a simple Code/Description list used to categorize operations and reporting, and some ID-numbering schemes reference them, so set them up early.",
-    "tags": [
-      "business unit",
-      "add business unit",
-      "company divisions"
-    ]
+    action: "configure",
+    object: "business unit",
+    scope: "global",
+    section: "Step 1 · Set up your company and business units",
+    question: "How do I add a business unit?",
+    answer: "Go to **Global Data → Company → Business Units** and click **Add**. Enter a Code and Description, then submit. Business Units are a simple Code/Description list used to categorize operations and reporting, and some ID-numbering schemes reference them, so set them up early.",
+    tags: ["business unit","add business unit","company divisions"]
   },
   {
-    "action": "configure",
-    "object": "register user",
-    "scope": "global",
-    "section": "Step 2 · Add users and permission groups",
-    "question": "How do I add a new user or employee?",
-    "answer": "Go to **Global Data → Users & Permissions → User Accounts → Active Users** and click **Register User**. Fill in their name, contact details, email, and set up their signature (Initials, Sign, or Upload). Click **Submit**, then use **Notify User** to email them their login instructions. To add many users at once, use **Download Sample Excel**, fill in one row per person, then **Upload Excel** — Arena creates each account and emails them automatically. A **Super Admin** typically does this.",
-    "tags": [
-      "register user",
-      "add employee",
-      "new user account",
-      "bulk import users",
-      "onboard users"
-    ]
+    action: "configure",
+    object: "register user",
+    scope: "global",
+    section: "Step 2 · Add users and permission groups",
+    question: "How do I add a new user or employee?",
+    answer: "Go to **Global Data → Users & Permissions → User Accounts → Active Users** and click **Register User**. Fill in their name, contact details, email, and set up their signature (Initials, Sign, or Upload). Click **Submit**, then use **Notify User** to email them their login instructions. To add many users at once, use **Download Sample Excel**, fill in one row per person, then **Upload Excel** — Arena creates each account and emails them automatically. A **Super Admin** typically does this.",
+    tags: ["register user","add employee","new user account","bulk import users","onboard users"]
   },
   {
-    "action": "configure",
-    "object": "permission group",
-    "scope": "global",
-    "section": "Step 2 · Add users and permission groups",
-    "question": "How do I create a permission group for a module admin?",
-    "answer": "Go to **Global Data → Users & Permissions → Global Permission** and click **+ Add User Group**. Name it after its scope (for example \"Procurement Admin\"), then open its **Permissions** button and check only the modules and actions that admin needs — View, Create, Edit, Delete, Admin View, Admin, and so on. Click **Save Changes**, then open the group's **Users** button and add the people who should have this access. Nothing forces a group to cover more than one module, so you can run one Global Admin, several module-scoped admins, or a mix of both.",
-    "tags": [
-      "create permission group",
-      "module admin",
-      "scoped admin",
-      "user group setup",
-      "procurement admin"
-    ]
+    action: "configure",
+    object: "permission group",
+    scope: "global",
+    section: "Step 2 · Add users and permission groups",
+    question: "How do I create a permission group for a module admin?",
+    answer: "Go to **Global Data → Users & Permissions → Global Permission** and click **+ Add User Group**. Name it after its scope (for example \"Procurement Admin\"), then open its **Permissions** button and check only the modules and actions that admin needs — View, Create, Edit, Delete, Admin View, Admin, and so on. Click **Save Changes**, then open the group's **Users** button and add the people who should have this access. Nothing forces a group to cover more than one module, so you can run one Global Admin, several module-scoped admins, or a mix of both.",
+    tags: ["create permission group","module admin","scoped admin","user group setup","procurement admin"]
   },
   {
-    "action": "understand",
-    "object": "cross-module permission",
-    "scope": "global",
-    "section": "Step 2 · Add users and permission groups",
-    "question": "Why can't my users see a tab (like Procurement or Timesheets) inside another module?",
-    "answer": "Some tabs depend on permissions in a different module than the one you're looking at. For example, a Work Order Contract's Timesheet, Equipment, Inventory, and Procurement tabs only appear for a user whose permission group also grants rights in those standalone modules — Work Order access alone isn't enough. The permission tree calls this out next to the affected rows, so check those notes when a tab seems to be missing.",
-    "tags": [
-      "missing tab",
-      "cross module permissions",
-      "hidden tab",
-      "permission dependency"
-    ]
+    action: "understand",
+    object: "cross-module permission",
+    scope: "global",
+    section: "Step 2 · Add users and permission groups",
+    question: "Why can't my users see a tab (like Procurement or Timesheets) inside another module?",
+    answer: "Some tabs depend on permissions in a different module than the one you're looking at. For example, a Work Order Contract's Timesheet, Equipment, Inventory, and Procurement tabs only appear for a user whose permission group also grants rights in those standalone modules — Work Order access alone isn't enough. The permission tree calls this out next to the affected rows, so check those notes when a tab seems to be missing.",
+    tags: ["missing tab","cross module permissions","hidden tab","permission dependency"]
   },
   {
-    "action": "configure",
-    "object": "phase codes and gl codes",
-    "scope": "global",
-    "section": "Step 3 · Build your master data",
-    "question": "How do I set up Phase Codes and GL Codes?",
-    "answer": "Go to **Global Data → UOM, Phasecode & GL Codes → Phase Codes** and click **Add**. Enter the Phase Code and Description, choose its Phase Code Type (Direct, Indirect, Non-Productive, or Change Order), and select which Cost Types apply (Material, Labor, Equipment, Subcontractors, Other Expenses). For **GL Codes**, use the **GL Codes** tab on the same screen and click **Add**. Both are reference data used across Estimating, Work Orders, Procurement, and Cost modules, so set them up before those modules go live.",
-    "tags": [
-      "phase codes",
-      "gl codes",
-      "add phase code",
-      "cost type setup"
-    ]
+    action: "configure",
+    object: "phase codes and gl codes",
+    scope: "global",
+    section: "Step 3 · Build your master data",
+    question: "How do I set up Phase Codes and GL Codes?",
+    answer: "Go to **Global Data → UOM, Phasecode & GL Codes → Phase Codes** and click **Add**. Enter the Phase Code and Description, choose its Phase Code Type (Direct, Indirect, Non-Productive, or Change Order), and select which Cost Types apply (Material, Labor, Equipment, Subcontractors, Other Expenses). For **GL Codes**, use the **GL Codes** tab on the same screen and click **Add**. Both are reference data used across Estimating, Work Orders, Procurement, and Cost modules, so set them up before those modules go live.",
+    tags: ["phase codes","gl codes","add phase code","cost type setup"]
   },
   {
-    "action": "configure",
-    "object": "uom",
-    "scope": "global",
-    "section": "Step 3 · Build your master data",
-    "question": "How do I set up Units of Measure (UOM)?",
-    "answer": "Go to **Global Data → UOM, Phasecode & GL Codes → UOMs** and click **Add UOM** to add a unit (for example \"Tonne\"). To make it convertible with other units, go to **UOM Groups**, add it to a group, and enter the conversion factor. The resulting conversions appear read-only under **UOM Conversions**.",
-    "tags": [
-      "unit of measure",
-      "uom setup",
-      "uom conversion",
-      "uom groups"
-    ]
+    action: "configure",
+    object: "uom",
+    scope: "global",
+    section: "Step 3 · Build your master data",
+    question: "How do I set up Units of Measure (UOM)?",
+    answer: "Go to **Global Data → UOM, Phasecode & GL Codes → UOMs** and click **Add UOM** to add a unit (for example \"Tonne\"). To make it convertible with other units, go to **UOM Groups**, add it to a group, and enter the conversion factor. The resulting conversions appear read-only under **UOM Conversions**.",
+    tags: ["unit of measure","uom setup","uom conversion","uom groups"]
   },
   {
-    "action": "configure",
-    "object": "construction type",
-    "scope": "global",
-    "section": "Step 3 · Build your master data",
-    "question": "How do I set up Construction Types before creating projects?",
-    "answer": "Go to **Global Data → Construction Types** and click **Create** to add a new category (for example Infrastructure, Residential, Roads), or **Copy** an existing type to clone its full configuration into a new one. Every project must be tagged with a Construction Type at creation, so have at least one ready before your team starts creating projects. The separate **Construction Type** tab (next to Company on the Global Data home page) is where you build out the deeper work-breakdown-structure library for a type — that is a more advanced, ongoing configuration, not a Day 1 requirement.",
-    "tags": [
-      "construction type",
-      "construction category",
-      "set up construction types"
-    ]
+    action: "configure",
+    object: "construction type",
+    scope: "global",
+    section: "Step 3 · Build your master data",
+    question: "How do I set up Construction Types before creating projects?",
+    answer: "Go to **Global Data → Construction Types** and click **Create** to add a new category (for example Infrastructure, Residential, Roads), or **Copy** an existing type to clone its full configuration into a new one. Every project must be tagged with a Construction Type at creation, so have at least one ready before your team starts creating projects. The separate **Construction Type** tab (next to Company on the Global Data home page) is where you build out the deeper work-breakdown-structure library for a type — that is a more advanced, ongoing configuration, not a Day 1 requirement.",
+    tags: ["construction type","construction category","set up construction types"]
   },
   {
-    "action": "configure",
-    "object": "vendor",
-    "scope": "global",
-    "section": "Step 3 · Build your master data",
-    "question": "How do I register vendors?",
-    "answer": "Go to **Global Data → Vendors** and click **Register Vendor**. Fill in Vendor ID, Company Name, First/Last Name, add contact persons, and enter Username, Phone Number and Email. Before bulk-registering vendors, decide the vendor hierarchy depth in **Vendors → Settings** (Level 1/2/3) — changing it later disrupts existing categorization. Vendors are needed before Procurement and Work Orders can reference them.",
-    "tags": [
-      "register vendor",
-      "add vendor",
-      "vendor setup",
-      "vendor hierarchy"
-    ]
+    action: "configure",
+    object: "vendor",
+    scope: "global",
+    section: "Step 3 · Build your master data",
+    question: "How do I register vendors?",
+    answer: "Go to **Global Data → Vendors** and click **Register Vendor**. Fill in Vendor ID, Company Name, First/Last Name, add contact persons, and enter Username, Phone Number and Email. Before bulk-registering vendors, decide the vendor hierarchy depth in **Vendors → Settings** (Level 1/2/3) — changing it later disrupts existing categorization. Vendors are needed before Procurement and Work Orders can reference them.",
+    tags: ["register vendor","add vendor","vendor setup","vendor hierarchy"]
   },
   {
-    "action": "configure",
-    "object": "crew",
-    "scope": "global",
-    "section": "Step 3 · Build your master data",
-    "question": "How do I set up Crews?",
-    "answer": "Go to **Global Data → Crews** and click **Create**. Enter a Crew Name, choose a Supervisor and a Foreman from the dropdown (they must already exist in Global Rosters), then check the roster members who belong to the crew and submit. Crews are used company-wide for labor tracking, timesheets, and work assignment; projects can later copy a crew in from Global Data.",
-    "tags": [
-      "create crew",
-      "crew setup",
-      "supervisor foreman"
-    ]
+    action: "configure",
+    object: "crew",
+    scope: "global",
+    section: "Step 3 · Build your master data",
+    question: "How do I set up Crews?",
+    answer: "Go to **Global Data → Crews** and click **Create**. Enter a Crew Name, choose a Supervisor and a Foreman from the dropdown (they must already exist in Global Rosters), then check the roster members who belong to the crew and submit. Crews are used company-wide for labor tracking, timesheets, and work assignment; projects can later copy a crew in from Global Data.",
+    tags: ["create crew","crew setup","supervisor foreman"]
   },
   {
-    "action": "configure",
-    "object": "locations and tax",
-    "scope": "global",
-    "section": "Step 3 · Build your master data",
-    "question": "How do I set up Locations and Tax Configuration?",
-    "answer": "Go to **Global Data → Locations** and click **Create** to add a delivery/company location (Location Name, Address, Zip Code, City, State) plus its Tax Codes. Set up the tax structure first at **Global Data → Tax Configuration**: click **Add Tax Group**, then select the group and **Add Tax Code** for each code and percentage it contains (for example CGST, SGST). Locations and Tax Codes are needed before Owners, Vendors, and Work Orders can reference them.",
-    "tags": [
-      "locations setup",
-      "tax configuration",
-      "tax group",
-      "tax code",
-      "delivery location"
-    ]
+    action: "configure",
+    object: "locations and tax",
+    scope: "global",
+    section: "Step 3 · Build your master data",
+    question: "How do I set up Locations and Tax Configuration?",
+    answer: "Go to **Global Data → Locations** and click **Create** to add a delivery/company location (Location Name, Address, Zip Code, City, State) plus its Tax Codes. Set up the tax structure first at **Global Data → Tax Configuration**: click **Add Tax Group**, then select the group and **Add Tax Code** for each code and percentage it contains (for example CGST, SGST). Locations and Tax Codes are needed before Owners, Vendors, and Work Orders can reference them.",
+    tags: ["locations setup","tax configuration","tax group","tax code","delivery location"]
   },
   {
-    "action": "configure",
-    "object": "marketplace integration",
-    "scope": "global",
-    "section": "Step 4 · Connect your integrations",
-    "question": "How do I connect Arena to Microsoft 365 (Outlook, OneDrive, SharePoint)?",
-    "answer": "Go to **Global Data → Marketplace** and open the Microsoft integration you need (Outlook, OneDrive, SharePoint, Users, or Calendar). Click **Sign in with Microsoft** and grant organization-wide consent — this must use a company-domain email, not a personal Microsoft account. Once connected, all users benefit without individually consenting, though a user can also connect their own mailbox later via **My Profile → Settings**. For mail routing specifically, go to **Global Data → Settings → Mail Settings** and switch the relevant module (for example Work Order) to Outlook.",
-    "tags": [
-      "connect microsoft",
-      "microsoft 365",
-      "outlook integration",
-      "onedrive",
-      "sharepoint",
-      "marketplace"
-    ]
+    action: "configure",
+    object: "marketplace integration",
+    scope: "global",
+    section: "Step 4 · Connect your integrations",
+    question: "How do I connect Arena to Microsoft 365 (Outlook, OneDrive, SharePoint)?",
+    answer: "Go to **Global Data → Marketplace** and open the Microsoft integration you need (Outlook, OneDrive, SharePoint, Users, or Calendar). Click **Sign in with Microsoft** and grant organization-wide consent — this must use a company-domain email, not a personal Microsoft account. Once connected, all users benefit without individually consenting, though a user can also connect their own mailbox later via **My Profile → Settings**. For mail routing specifically, go to **Global Data → Settings → Mail Settings** and switch the relevant module (for example Work Order) to Outlook.",
+    tags: ["connect microsoft","microsoft 365","outlook integration","onedrive","sharepoint","marketplace"]
   },
   {
-    "action": "configure",
-    "object": "trimble viewpoint integration",
-    "scope": "global",
-    "section": "Step 4 · Connect your integrations",
-    "question": "How do I connect Arena to Trimble Viewpoint (Vista)?",
-    "answer": "Go to **Global Data → Marketplace → Trimble Viewpoint**, enter your connection credentials, and click **Test Connection and Save**. Then map each module's Table Name/Schema Name and click **Save Configuration**. Each module gets a **Link** button to tie it to a Stage feeding **Global Data → Staged Tables**, where data synced from Vista is mapped (**Map Attributes**) and promoted into native Arena records (**Bulk Create Arena Records**), optionally on a recurring schedule (**Auto Sync Criteria**).",
-    "tags": [
-      "trimble viewpoint",
-      "vista integration",
-      "staged tables",
-      "erp sync",
-      "accounting integration"
-    ]
+    action: "configure",
+    object: "trimble viewpoint integration",
+    scope: "global",
+    section: "Step 4 · Connect your integrations",
+    question: "How do I connect Arena to Trimble Viewpoint (Vista)?",
+    answer: "Go to **Global Data → Marketplace → Trimble Viewpoint**, enter your connection credentials, and click **Test Connection and Save**. Then map each module's Table Name/Schema Name and click **Save Configuration**. Each module gets a **Link** button to tie it to a Stage feeding **Global Data → Staged Tables**, where data synced from Vista is mapped (**Map Attributes**) and promoted into native Arena records (**Bulk Create Arena Records**), optionally on a recurring schedule (**Auto Sync Criteria**).",
+    tags: ["trimble viewpoint","vista integration","staged tables","erp sync","accounting integration"]
   },
   {
-    "action": "configure",
-    "object": "adobe sign integration",
-    "scope": "global",
-    "section": "Step 4 · Connect your integrations",
-    "question": "How do I set up Adobe Sign for electronic signatures?",
-    "answer": "Go to **Global Data → Marketplace → Adobe Sign**, log in with your Adobe Sign credentials, and configure the Adobe API settings. Once connected, documents in Arena can be routed for electronic signature through Adobe Sign.",
-    "tags": [
-      "adobe sign",
-      "electronic signature",
-      "esign setup"
-    ]
+    action: "configure",
+    object: "adobe sign integration",
+    scope: "global",
+    section: "Step 4 · Connect your integrations",
+    question: "How do I set up Adobe Sign for electronic signatures?",
+    answer: "Go to **Global Data → Marketplace → Adobe Sign**, log in with your Adobe Sign credentials, and configure the Adobe API settings. Once connected, documents in Arena can be routed for electronic signature through Adobe Sign.",
+    tags: ["adobe sign","electronic signature","esign setup"]
   },
   {
-    "action": "create",
-    "object": "first project",
-    "scope": "global",
-    "section": "Step 5 · Create your first project and add its team",
-    "question": "How do I create my first project?",
-    "answer": "Go to **Home → Projects** and click **+ Create Project**, top-left of the project grid. Fill in the three required fields — **Project Name**, **Project Number / ID**, and **Construction Type** — and optionally Project Location, Business Unit, Owner Representative, Project Manager, Currency, Customer, Owner and more (these can all be added or changed later). Click **Submit**; the project appears immediately with status \"Created,\" but it is functionally empty until you go into **Project Setup** to build out its work breakdown, team, schedule and forms.",
-    "tags": [
-      "create project",
-      "first project",
-      "new project setup",
-      "create project button"
-    ]
+    action: "create",
+    object: "first project",
+    scope: "global",
+    section: "Step 5 · Create your first project and add its team",
+    question: "How do I create my first project?",
+    answer: "Go to **Home → Projects** and click **+ Create Project**, top-left of the project grid. Fill in the three required fields — **Project Name**, **Project Number / ID**, and **Construction Type** — and optionally Project Location, Business Unit, Owner Representative, Project Manager, Currency, Customer, Owner and more (these can all be added or changed later). Click **Submit**; the project appears immediately with status \"Created,\" but it is functionally empty until you go into **Project Setup** to build out its work breakdown, team, schedule and forms.",
+    tags: ["create project","first project","new project setup","create project button"]
   },
   {
-    "action": "configure",
-    "object": "project team",
-    "scope": "global",
-    "section": "Step 5 · Create your first project and add its team",
-    "question": "How do I add my new project's team?",
-    "answer": "Open the project and go to **Project Setup → People**. To bring in an existing company crew, use the **Project Crews** sub-tab and click **Copy Crews from Global Data** — this is a one-time copy, not a live link, so re-copy later if the source crew changes. To build a project-only crew, click **Create Crew** instead. Use **Project Indirect Staff** for supervisory/support roles, and the **System User** / **Non System User** sub-tabs to track people with or without their own Arena login. This is typically **PM / Module Admin** work.",
-    "tags": [
-      "add project team",
-      "project crew setup",
-      "assign staff to project",
-      "project people"
-    ]
+    action: "configure",
+    object: "project team",
+    scope: "global",
+    section: "Step 5 · Create your first project and add its team",
+    question: "How do I add my new project's team?",
+    answer: "Open the project and go to **Project Setup → People**. To bring in an existing company crew, use the **Project Crews** sub-tab and click **Copy Crews from Global Data** — this is a one-time copy, not a live link, so re-copy later if the source crew changes. To build a project-only crew, click **Create Crew** instead. Use **Project Indirect Staff** for supervisory/support roles, and the **System User** / **Non System User** sub-tabs to track people with or without their own Arena login. This is typically **PM / Module Admin** work.",
+    tags: ["add project team","project crew setup","assign staff to project","project people"]
   },
   {
-    "action": "understand",
-    "object": "module settings location",
-    "scope": "global",
-    "section": "Step 6 · Configure each module's own settings",
-    "question": "Where does each module store its own settings?",
-    "answer": "Every Home-hub module has its own **Settings** area — usually a gear icon next to the module's tab bar — separate from Global Data. A **Module Admin** configures it once; end users then just work with the records that setup produces. See the module's own documentation for the exact screens: **Time Management** (Approval Workflows, Timesheet Mode, Earning Codes, Timesheet Templates, Payroll Locking), **Procurement** (Requisition/PO/Invoice/Pickup Request form builders, Approval Workflow, ID Settings, Issues Priority), **Opportunity Management** (Stages & Statuses Configuration, Opportunities Form, ID Settings, Users and Permissions), **Expense Tracker** (Expense Type, Expense Form templates, Approval Workflow, ID Settings), and similarly for other modules you use.",
-    "tags": [
-      "module settings",
-      "where is settings",
-      "per module configuration",
-      "admin settings gear"
-    ]
+    action: "understand",
+    object: "module settings location",
+    scope: "global",
+    section: "Step 6 · Configure each module's own settings",
+    question: "Where does each module store its own settings?",
+    answer: "Every Home-hub module has its own **Settings** area — usually a gear icon next to the module's tab bar — separate from Global Data. A **Module Admin** configures it once; end users then just work with the records that setup produces. See the module's own documentation for the exact screens: **Time Management** (Approval Workflows, Timesheet Mode, Earning Codes, Timesheet Templates, Payroll Locking), **Procurement** (Requisition/PO/Invoice/Pickup Request form builders, Approval Workflow, ID Settings, Issues Priority), **Opportunity Management** (Stages & Statuses Configuration, Opportunities Form, ID Settings, Users and Permissions), **Expense Tracker** (Expense Type, Expense Form templates, Approval Workflow, ID Settings), and similarly for other modules you use.",
+    tags: ["module settings","where is settings","per module configuration","admin settings gear"]
   },
   {
-    "action": "configure",
-    "object": "time management settings",
-    "scope": "global",
-    "section": "Step 6 · Configure each module's own settings",
-    "question": "What do I configure in Time Management before crews can log time?",
-    "answer": "Open **Time Management → Settings**. Set up an **Approval Workflow** (who signs off on a crew's or project's timesheets), a **Timesheet Mode** (Daily, Weekly, or Weekly by Day, per user or crew), **Earning Codes** (payroll categories hours get logged against), and a **Timesheet Template** (the fields on the form). Optionally configure **Payroll Locking** so closed pay periods can't be edited. None of the day-to-day logging works until an approval workflow and timesheet mode exist.",
-    "tags": [
-      "time management settings",
-      "timesheet setup",
-      "earning codes",
-      "payroll locking",
-      "approval workflow timesheet"
-    ]
+    action: "configure",
+    object: "time management settings",
+    scope: "global",
+    section: "Step 6 · Configure each module's own settings",
+    question: "What do I configure in Time Management before crews can log time?",
+    answer: "Open **Time Management → Settings**. Set up an **Approval Workflow** (who signs off on a crew's or project's timesheets), a **Timesheet Mode** (Daily, Weekly, or Weekly by Day, per user or crew), **Earning Codes** (payroll categories hours get logged against), and a **Timesheet Template** (the fields on the form). Optionally configure **Payroll Locking** so closed pay periods can't be edited. None of the day-to-day logging works until an approval workflow and timesheet mode exist.",
+    tags: ["time management settings","timesheet setup","earning codes","payroll locking","approval workflow timesheet"]
   },
   {
-    "action": "configure",
-    "object": "procurement settings",
-    "scope": "global",
-    "section": "Step 6 · Configure each module's own settings",
-    "question": "What do I configure in Procurement before requisitions can be raised?",
-    "answer": "Open **Procurement → Settings**. Build the **REQ**, **PO**, **Delivery Receipt**, and **Invoice** forms (split by procurement type: Material, Equipment, Equipment Part, Delivery Service), set an **Approval Workflow** for each document type, choose **ID Settings** for how document numbers generate, and set **Issues Priority** levels. This is **Module Admin** work, and it shapes how disciplined the whole purchasing process is in practice.",
-    "tags": [
-      "procurement settings",
-      "requisition setup",
-      "purchase order setup",
-      "procurement approval workflow"
-    ]
+    action: "configure",
+    object: "procurement settings",
+    scope: "global",
+    section: "Step 6 · Configure each module's own settings",
+    question: "What do I configure in Procurement before requisitions can be raised?",
+    answer: "Open **Procurement → Settings**. Build the **REQ**, **PO**, **Delivery Receipt**, and **Invoice** forms (split by procurement type: Material, Equipment, Equipment Part, Delivery Service), set an **Approval Workflow** for each document type, choose **ID Settings** for how document numbers generate, and set **Issues Priority** levels. This is **Module Admin** work, and it shapes how disciplined the whole purchasing process is in practice.",
+    tags: ["procurement settings","requisition setup","purchase order setup","procurement approval workflow"]
   },
   {
-    "action": "configure",
-    "object": "opportunity settings",
-    "scope": "global",
-    "section": "Step 6 · Configure each module's own settings",
-    "question": "What do I configure in Opportunity Management before the BD team starts logging pursuits?",
-    "answer": "Open **Opportunity Management → Settings**. Set up **Stages & Statuses Configuration** first (the pipeline: Lead → Proposal → Closed, and the statuses allowed at each stage) — most \"why can't I do X\" issues in this module trace back to this screen. Then configure the **Opportunities Form** (fields and Stale Threshold), **ID Settings**, and **Users and Permissions**. This is **Module Admin** work; End Users (BD reps) should never need to open Settings themselves.",
-    "tags": [
-      "opportunity settings",
-      "stages and statuses",
-      "pipeline setup",
-      "opportunity form setup"
-    ]
+    action: "configure",
+    object: "opportunity settings",
+    scope: "global",
+    section: "Step 6 · Configure each module's own settings",
+    question: "What do I configure in Opportunity Management before the BD team starts logging pursuits?",
+    answer: "Open **Opportunity Management → Settings**. Set up **Stages & Statuses Configuration** first (the pipeline: Lead → Proposal → Closed, and the statuses allowed at each stage) — most \"why can't I do X\" issues in this module trace back to this screen. Then configure the **Opportunities Form** (fields and Stale Threshold), **ID Settings**, and **Users and Permissions**. This is **Module Admin** work; End Users (BD reps) should never need to open Settings themselves.",
+    tags: ["opportunity settings","stages and statuses","pipeline setup","opportunity form setup"]
   },
   {
-    "action": "configure",
-    "object": "expense tracker settings",
-    "scope": "global",
-    "section": "Step 6 · Configure each module's own settings",
-    "question": "What do I configure in Expense Tracker before employees can submit claims?",
-    "answer": "Open **Expense Tracker → Settings**. Set up **Expense Type** categories, an **Expense Form** template, an **Approval WorkFlow** (levels and approvers), and **ID Settings** for form and invoice numbering. This is **Module Admin** work, usually done once by finance.",
-    "tags": [
-      "expense tracker settings",
-      "expense type setup",
-      "expense approval workflow setup"
-    ]
+    action: "configure",
+    object: "expense tracker settings",
+    scope: "global",
+    section: "Step 6 · Configure each module's own settings",
+    question: "What do I configure in Expense Tracker before employees can submit claims?",
+    answer: "Open **Expense Tracker → Settings**. Set up **Expense Type** categories, an **Expense Form** template, an **Approval WorkFlow** (levels and approvers), and **ID Settings** for form and invoice numbering. This is **Module Admin** work, usually done once by finance.",
+    tags: ["expense tracker settings","expense type setup","expense approval workflow setup"]
   }
 ];
 
@@ -8454,7 +8270,14 @@ const MODULES = [
               "Click <strong>Upload Company Logo</strong>, then <strong>Submit</strong>.",
               "Go to <strong>Global Data → Company → Business Units</strong> and click <strong>Add</strong> for each division."
             ],
-            "note": "Who does this: Super Admin. Details: see Global Data → Company & Business Units."
+            "note": "Who does this: Super Admin. Details: see Global Data → Company & Business Units.",
+            "images": [
+              {
+                "src": "assets/notion/company-details/001.jpg",
+                "caption": "Company Details with the company name, logo, address and contacts",
+                "step": 2
+              }
+            ]
           }
         ]
       },
@@ -8480,7 +8303,39 @@ const MODULES = [
               "Open the group's <strong>Permissions</strong> button, check the modules and actions it should have, and click <strong>Save Changes</strong>.",
               "Open the group's <strong>Users</strong> button and add the people who should hold that access."
             ],
-            "note": "Who does this: Super Admin (for company-wide groups) or a Module Admin (for a group scoped to their own module). Details: see Global Data → Users & Permissions."
+            "note": "Who does this: Super Admin (for company-wide groups) or a Module Admin (for a group scoped to their own module). Details: see Global Data → Users & Permissions.",
+            "images": [
+              {
+                "src": "assets/notion/global-users-permissions-users/002.jpg",
+                "caption": "The Register User form",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/global-users-permissions-users/004.jpg",
+                "caption": "The downloaded Excel template for bulk registration",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/permissions/002.jpg",
+                "caption": "Add User Group, to name a new group",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/permissions/005.jpg",
+                "caption": "The Permissions button on a group",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/permissions/006.jpg",
+                "caption": "Choosing the modules and rights for the group",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/permissions/007.jpg",
+                "caption": "The Users button, to add the people who should hold the access",
+                "step": 4
+              }
+            ]
           }
         ]
       },
@@ -8523,7 +8378,39 @@ const MODULES = [
               "Register <strong>Global Data → Vendors</strong>, deciding the vendor hierarchy depth in Vendors → Settings first.",
               "Set up <strong>Global Data → Crews</strong> and <strong>Global Data → Locations</strong>."
             ],
-            "note": "Who does this: Super Admin, often with input from finance (tax) and procurement (vendors). Details: see Global Data → UOM & Phase Codes, Construction Types, Vendors & Subcontractors, and Locations & Tax."
+            "note": "Who does this: Super Admin, often with input from finance (tax) and procurement (vendors). Details: see Global Data → UOM & Phase Codes, Construction Types, Vendors & Subcontractors, and Locations & Tax.",
+            "images": [
+              {
+                "src": "assets/notion/units-of-measurement-uoms/001.jpg",
+                "caption": "The UOMs tab under UOM, Phasecode & GL Codes",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/construction-types/001.jpg",
+                "caption": "Construction Types: Create, then the table of created types",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/tax-configuration/001.jpg",
+                "caption": "Tax Configuration: tax groups and tax codes",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/global-data-vendor-creation/003.jpg",
+                "caption": "Register Vendor",
+                "step": 4
+              },
+              {
+                "src": "assets/notion/timesheet-crew/002.jpg",
+                "caption": "Create Crew, with a crew name",
+                "step": 5
+              },
+              {
+                "src": "assets/notion/global-data-delivery-locations/002.jpg",
+                "caption": "Add Location, for setting up delivery locations",
+                "step": 5
+              }
+            ]
           }
         ]
       },
@@ -8549,7 +8436,24 @@ const MODULES = [
               "For Trimble Viewpoint (Vista), enter connection credentials, click <strong>Test Connection and Save</strong>, map each module's table/schema, then use <strong>Global Data → Staged Tables</strong> to map attributes and promote records.",
               "For Adobe Sign, log in with your Adobe Sign credentials and configure the Adobe API settings."
             ],
-            "note": "Who does this: Super Admin (org-wide consent is required for Microsoft 365). Details: see Global Data → Marketplace & Staged Tables."
+            "note": "Who does this: Super Admin (org-wide consent is required for Microsoft 365). Details: see Global Data → Marketplace & Staged Tables.",
+            "images": [
+              {
+                "src": "assets/notion/arena-market-place/001.jpg",
+                "caption": "The Marketplace, for linking SharePoint, Outlook and Adobe Sign",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/microsoft-outlook-integration-2/004.jpg",
+                "caption": "Microsoft sign-in, then the Permissions Requested page",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/trimble-viewpoint-market-place/003.jpg",
+                "caption": "Connection details, then Test Connection and Save",
+                "step": 3
+              }
+            ]
           }
         ]
       },
@@ -8576,7 +8480,14 @@ const MODULES = [
               "Click <strong>Copy Crews from Global Data</strong> to bring in an existing company crew, or <strong>Create Crew</strong> to build one from scratch.",
               "Use <strong>Project Indirect Staff</strong> and the <strong>System User</strong> / <strong>Non System User</strong> sub-tabs to round out the roster."
             ],
-            "note": "Who does this: PM / Module Admin. Details: see Getting Started → Home Page (Create a new project) and Project Setup → People."
+            "note": "Who does this: PM / Module Admin. Details: see Getting Started → Home Page (Create a new project) and Project Setup → People.",
+            "images": [
+              {
+                "src": "assets/notion/how-to-create-projects/001.jpg",
+                "caption": "The Projects list: click a project name to open it",
+                "step": 1
+              }
+            ]
           }
         ]
       },
@@ -20818,6 +20729,28 @@ const MODULES = [
               "Click <strong>\"Fetch Templates\"</strong> to start from a pre-built template, or <strong>\"Add User Group\"</strong> to build one from scratch.",
               "Configure the group's permissions.",
               "Use the <strong>Users</strong> button on the resulting card to assign members to the group."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/permissions/002.jpg",
+                "caption": "User Group, to add a named group",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/permissions/005.jpg",
+                "caption": "The Permissions button on a group",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/permissions/006.jpg",
+                "caption": "Roll Back on, then the rights for each module",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/permissions/007.jpg",
+                "caption": "The Users button, to add members to the group",
+                "step": 4
+              }
             ]
           }
         ]
@@ -20898,6 +20831,18 @@ const MODULES = [
               "Go to <strong>Owners</strong>.",
               "Click <strong>Register Owner</strong>.",
               "Enter the stakeholder's details and save — they now appear in the Owners list and become eligible for owner-facing visibility such as the Owner Dashboard."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/lead-management-owners/001.jpg",
+                "caption": "Register Owner, which opens the owner dialog",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/lead-management-owners/007.jpg",
+                "caption": "Preview, then Submit to create the owner",
+                "step": 3
+              }
             ]
           },
           {
@@ -20905,6 +20850,13 @@ const MODULES = [
             "steps": [
               "Go to <strong>Owners</strong>.",
               "Use the search box above the list/grid to locate the stakeholder by name."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/lead-management-owners/009.jpg",
+                "caption": "Search, by owner ID or name",
+                "step": 2
+              }
             ]
           }
         ]
