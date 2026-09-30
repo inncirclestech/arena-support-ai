@@ -2532,7 +2532,7 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "Company-Wide Settings",
     question: "How do I change the company's currency?",
-    answer: "1. Global Data → **Settings** → **Currency** (left nav).\n2. Choose the desired currency from the dropdown.\n3. Click **Save Changes**.",
+    answer: "1. Global Data → **Settings** → **Currency** (left nav).\n2. Choose the desired currency from the dropdown.\n3. Click **Save Changes**.\n\nThe **Create Project** form has its own **Currency** field, which opened on United States Dollar on the test site.\n\nThe **Create Project** form has its own **Currency** field, which opened on United States Dollar on the test site.",
     tags: ["currency","change currency","settings"]
   },
   {
@@ -2551,7 +2551,7 @@ const QA_GLOBALDATA = [
     section: "Company-Wide Settings",
     question: "How do I route a module's emails through Outlook instead of Gmail?",
     answer: "1. Settings → **Mail Settings**.\n2. Find the module row (e.g. Work Order) and click the **Outlook** radio button in that row.\n3. The change saves immediately per row (ensure Outlook has been connected first via Marketplace).",
-    tags: ["mail settings","outlook","gmail routing","outlook gmail settings"]
+    tags: ["mail settings","outlook","gmail routing","outlook gmail settings","outlook routing","outlook routing"]
   },
   {
     action: "define",
@@ -2683,7 +2683,7 @@ const QA_GLOBALDATA = [
     action: "create",
     object: "customer approval level",
     scope: "global",
-    section: "Customer Settings",
+    section: "Customers, Contacts & Approval",
     question: "How do I add an approval level for customer records?",
     answer: "1. Global Data → **Customer** tile → **Approval Workflow** tab → **Create Level**.\n2. Name/describe the level, assign Approvers, and choose the Workflow Type.\n3. Save — subsequent opportunity/customer approvals will route through this chain in order.",
     tags: ["customer approval workflow","create level","approval workflow"]
@@ -3038,6 +3038,186 @@ const QA_GLOBALDATA = [
     question: "What are UOM Groups and UOM Conversions in Global Data?",
     answer: "**UOMs** is the list of units (51 on the test site). **UOM Groups** puts compatible units together (Area, Job, Length, Mass, Quantity, Specimen, Time, Volume, Weight). **UOM Conversions** lists how one unit converts to another (Source, Conversion Factor, Target). Vendor rate cards and Bid Templates show the UOM Group and UOM from these lists.",
     tags: ["uom groups","what are uom groups","uom conversions","global data uom","what is uom","unit of measure list","uom group list"]
+  },
+  {
+    action: "explain",
+    object: "cost tile",
+    scope: "module",
+    section: "Cost & Bid Templates",
+    question: "What is the Cost tile for and who uses it?",
+    answer: "The **Cost** tile has two tabs. **Cost Type** holds the company's eight cost types (Material, Equipment, Labor, Unit Rate, Sub Contractor, BOQ's, Freight Charges, Fuel & Gas) and, behind each card, the list of materials, equipment, labor or templates. **Cost Breakdown Structure** holds CBS templates and the same phase code table. The Super Admin or estimating lead maintains it; vendor rate cards, phase codes and estimates use it.",
+    tags: ["cost tile","what is cost tile","cost types list","global data cost"]
+  },
+  {
+    action: "explain",
+    object: "cost catalogs",
+    scope: "module",
+    section: "Cost & Bid Templates",
+    question: "What do the Material, Equipment and Labor cards under Cost open?",
+    answer: "**Material** opens the **Material Code** list (code, name, UOM, size and specifications, unit price, type) plus a **Material Estimate Template** tab. **Equipment** opens **Equipment Code** (code, name, type, category, subcategory, UOM, hourly/daily/weekly/monthly rates) plus estimate template, category and part tabs. **Labor** opens **Labor Code** (code, name, type, conversion factors by earnings code). Each has **Add**, **Add Custom Column** and **Export**.",
+    tags: ["material card cost","equipment card cost","labor card cost","material code list","equipment code","cost catalog"]
+  },
+  {
+    action: "explain",
+    object: "labor rate columns",
+    scope: "module",
+    section: "Cost & Bid Templates",
+    question: "Where do the rate columns in the Labor list (ST, OT and so on) come from?",
+    answer: "From **Global Data → Settings → Earnings Codes**. The **Labor Code** list under **Cost → Labor** shows one column per earnings code short name or VP code (for example PD, NS, ST, 17, 18, OT), matching the rows in Earnings Codes. Add or rename an earnings code there to change the columns.",
+    tags: ["labor rate columns","earnings codes labor","labor st ot columns","labor conversion factor"]
+  },
+  {
+    action: "explain",
+    object: "bid templates tile",
+    scope: "module",
+    section: "Cost & Bid Templates",
+    question: "What is the Bid Templates tile for, and where do its UOMs come from?",
+    answer: "**Bid Templates** is the company catalog of bid line items: **Item Description**, **UOM Group** and **UOM**. Add items one at a time (**Add Item**) or in bulk (**Download Sample Excel**, then **Upload Excel**). The UOM Group and UOM values come from **Global Data → UOM, Phasecode & GL Codes**. The test site has 63 items.",
+    tags: ["bid templates tile","what is bid templates","bid items catalog","bid template uom"]
+  },
+  {
+    action: "explain",
+    object: "customer tile",
+    scope: "module",
+    section: "Customers, Contacts & Approval",
+    question: "What is the Customer tile for and who uses it?",
+    answer: "The **Customer** tile holds the company's customers (**Customers** tab with **Active Customers** and **Rejected**), their **Contacts**, and **Settings** (customer fields, contact fields and the **Approval Workflow**). A Global Admin or Opportunity Management admin maintains it. The **Customer** dropdown on **Projects → Create Project** lists these customers.",
+    tags: ["customer tile","what is customer tile","customer list global data","lead customers"]
+  },
+  {
+    action: "explain",
+    object: "create project customer",
+    scope: "module",
+    section: "Customers, Contacts & Approval",
+    question: "Where does the Customer dropdown in Create Project come from?",
+    answer: "From **Global Data → Customer → Customers**. The dropdown on **Projects → Create Project** listed the same eight customers as the Customers screen on the test site (NATIONAL HIGHWAYS AUTHORITY OF_INDIA, chandu, Exxon - Test, Vikram, Gopichand, Manoj, Krishna, Anish Nagubothu). A customer that is still waiting for approval, or is under **Rejected**, is not an Approved customer, so check its status first.",
+    tags: ["customer dropdown","create project customer","customer missing create project","where do customers come from"]
+  },
+  {
+    action: "explain",
+    object: "customer contacts",
+    scope: "module",
+    section: "Customers, Contacts & Approval",
+    question: "What does the Contacts tab under Customer show?",
+    answer: "The **Contacts** tab lists the people at each customer and owner: **Customer / Owner**, **Contact ID**, name parts, **Job Title**, emails, phone numbers, two addresses, **Services Provided** and **Personal Website**. Twelve contacts exist on the test site, some for customers and some for owners.",
+    tags: ["customer contacts","contacts tab","owner contacts","contact list"]
+  },
+  {
+    action: "explain",
+    object: "merge duplicates customers",
+    scope: "module",
+    section: "Customers, Contacts & Approval",
+    question: "What are Merge Duplicates and Add Groups on the Customers screen?",
+    answer: "Both are buttons next to **Create Customer**. **Merge Duplicates** is for duplicate customer records and **Add Groups** is for grouping customers, going by their names. They were not opened during this check.",
+    tags: ["merge duplicates","customer groups","add groups customer","duplicate customers"]
+  },
+  {
+    action: "explain",
+    object: "settings tile",
+    scope: "module",
+    section: "Company-Wide Settings",
+    question: "What is the Settings tile for and what pages does it have?",
+    answer: "The **Settings** tile is the company-wide settings hub with 22 pages: Roster Settings, Procurement Settings, Holidays, Naming Framework, Currency, Attachment Settings, Project Status, Project Form, Mail Settings, Keyboard Shortcuts, Adobe Sign Settings, Global Date Format, Sub Contractor Settings, Owner, Earnings Codes, Enterprise Dashboard, Hindrance Category, Location settings, Request for Information, Transmittals Submitted Type, Market Type and Configure Safety Observation. Only the Super Admin normally changes them.",
+    tags: ["settings tile","what is settings","global settings pages","settings menu list"]
+  },
+  {
+    action: "explain",
+    object: "project form dropdowns",
+    scope: "module",
+    section: "Company-Wide Settings",
+    question: "Where do Project Type, Funding Agency and Implementing Agency in Create Project come from?",
+    answer: "From **Global Data → Settings → Project Form**. Under **Configurable Fields → Groups** the test site has three Single Select fields: Project Type (Roads, Health, Railways, Metro, Others, Pipeline, Industrial, Solar Panels, Residentials), Funding Agency (ADB, Indian Gov, Others) and Implementing Agency (AUDA, APWD, MMRDA, Others). The Create Project dropdowns showed the same options. Edit the options there to change them.",
+    tags: ["project type dropdown","funding agency dropdown","implementing agency","create project dropdowns","project form settings","project type funding agency","funding agency implementing agency","project type funding agency create project"]
+  },
+  {
+    action: "explain",
+    object: "hindrance category",
+    scope: "module",
+    section: "Company-Wide Settings",
+    question: "Where does the Restraint Category dropdown come from?",
+    answer: "From **Global Data → Settings → Hindrance Category**. In **Field Works → Progress → Restraints → Add Restraint**, the **Restraint Category** options (Site & Technical Constraints, Seasonal/Weather Constraints, Safey constarints, Resource Constraints, Others) are exactly the Hindrance Categories. Use **Create** there to add your own.",
+    tags: ["restraint category","hindrance category","restraint dropdown","add restraint category","restraint category dropdown","restraint category where from","restraint categories"]
+  },
+  {
+    action: "explain",
+    object: "project status settings",
+    scope: "module",
+    section: "Company-Wide Settings",
+    question: "Where do the project status options (Created, Work in progress...) come from?",
+    answer: "From **Global Data → Settings → Project Status**: Created, Approved, Work in progress, On hold and Completed, with **Add Status** for more. Project cards on the **Projects** page show the chip.",
+    tags: ["project status","project status options","add project status"]
+  },
+  {
+    action: "explain",
+    object: "earnings codes",
+    scope: "module",
+    section: "Company-Wide Settings",
+    question: "What are Earnings Codes and where are they used?",
+    answer: "**Global Data → Settings → Earnings Codes** is the list of pay codes: Code, Description, Shortname, VP Code, Data Type (HOURS or AMOUNT), Payroll, Project and Split Header. The short names appear as the rate columns of the **Labor** list under **Cost**, and **Time Management → Settings → Timesheet Settings** has its own Earnings Codes page.",
+    tags: ["earnings codes","pay codes","vp code","earnings code settings"]
+  },
+  {
+    action: "explain",
+    object: "naming framework global",
+    scope: "module",
+    section: "Company-Wide Settings",
+    question: "Why do some screens use different names than the product guide (for example Site Material Request)?",
+    answer: "Your company can rename terms in **Global Data → Settings → Naming Framework** (46 rows: Default Name, Custom Name, Short Name). On the test site, for example, Pickup Ticket shows as **Site Material Request**, Ship Ticket as **Material Issue Ticket**, Lead as **Opportunity**, Equipment as **Asset** and Equipment Issues as **Asset Issues**. If a label differs from a guide, check that page.",
+    tags: ["naming framework","renamed terms","different names screens","custom name","site material request pickup ticket"]
+  },
+  {
+    action: "explain",
+    object: "mail settings",
+    scope: "module",
+    section: "Company-Wide Settings",
+    question: "Which modules can I route through Gmail or Outlook?",
+    answer: "In **Global Data → Settings → Mail Settings**: LOR, Procurement, Leads, Work Order, Proposal Management, Arena Communications, Expense Tracker, Request for Information, Transmittal, Tender Management, Capital Management, RFI, Submittal, Change Order, Delay Form and Other Forms. Each row has a Gmail or Outlook choice.",
+    tags: ["mail settings modules","gmail outlook modules","email routing modules"]
+  },
+  {
+    action: "explain",
+    object: "forms tile",
+    scope: "module",
+    section: "Forms & Quickapps",
+    question: "What is the Forms tile for and who uses it?",
+    answer: "The **Forms** tile holds the templates for every form type, in nine tabs: Construction Forms, Workorder Forms, Procurement, Inventory Forms, Project Forms, Drawing Management Forms, Cost, Invoice Forms and Requisition Form. The Super Admin or forms manager builds them once; each project then picks templates in **Project Setup → Forms → Assign Templates**.",
+    tags: ["forms tile","what is forms","form templates global data","form types list"]
+  },
+  {
+    action: "explain",
+    object: "rfi template project source",
+    scope: "module",
+    section: "Forms & Quickapps",
+    question: "Where do the RFI templates in a project come from?",
+    answer: "From **Global Data → Forms → Construction Forms → RFI**. In a project, **Project Setup → Forms → Assign Templates → RFI** offered exactly those templates on the test site (Standard, General, Consultants Advisory Form, Valigonda to Thorrur, RFI, rttest, Neelamangala - Tumukur RFI, 0123). Create a template in Global Data first, then assign it in the project.",
+    tags: ["rfi templates project","assign templates","project forms templates","template missing project forms"]
+  },
+  {
+    action: "explain",
+    object: "project form types source",
+    scope: "module",
+    section: "Forms & Quickapps",
+    question: "Where do the form types in Project Setup → Forms come from?",
+    answer: "From **Global Data → Forms**. The project list under **Project Forms** showed the same names as the **Project Forms** group in Global Data (Laboratory Test Results, Field Test Results, Checklists, Permit to work, Near Miss and so on). Safety form types sit in the separate **Safety Form** group. Add a form type with **Create** in Global Data.",
+    tags: ["project forms list","form types project","where do project forms come from","project setup forms"]
+  },
+  {
+    action: "explain",
+    object: "quick apps tile",
+    scope: "module",
+    section: "Forms & Quickapps",
+    question: "What is the Quick Apps tile for?",
+    answer: "The **Quick Apps** tile has two tabs: **Standard Tables** (reusable reference tables such as Drawing Status) and **Quick Apps** (custom mini-apps such as Observation Report, Non-Conformance Report, Variance Request and Equipment Productivity Planner; twelve on the test site). Projects use the apps you configure here in **Field Works → Quick Apps**.",
+    tags: ["quick apps tile","what is quick apps","quick apps list","standard tables tab"]
+  },
+  {
+    action: "explain",
+    object: "document management tile",
+    scope: "module",
+    section: "Forms & Quickapps",
+    question: "What are Structure Template and Document Template in Document Management?",
+    answer: "**Document Management** has two tabs. **Structure Template** holds folder structures (FEL - 1, FEL - 2, FEL - 3, Detailed Engineering) with **New Folder**; FEL - 1 has Civil, Mechanical, Structural, Architectural, Instrumentation and Process Controls. **Document Template** holds starter files by type (**Word**, **Excel**, **PPT**, **Text**) with **AddFile**. Projects see their documents under **Project Setup → Documents** (the test project had a FEL - 1 folder).",
+    tags: ["document management tile","structure template","document template","fel folder structure","what is document management"]
   }
 ];
 
@@ -16350,19 +16530,27 @@ const MODULES = [
       },
       {
         "heading": "Cost & Bid Templates",
-        "intro": "<p>This section covers the company’s cost classification taxonomy and reusable bid/estimate line items, maintained by a Super Admin or estimating lead so bids and cost roll-ups stay consistent across projects. When every estimator on a bid team is free to type their own description for the same line item — \"Ready Mix Concrete, M25 grade\" one way, \"M25 RMC\" another — bids stop being comparable across projects, and cost roll-ups start hiding real discrepancies inside inconsistent naming. A <strong>Cost/Estimating Admin or Global Admin</strong> solves this by building the company's cost taxonomy and reusable line-item catalog once, centrally; day-to-day, an <strong>estimator (End User)</strong> just selects from the standardized catalog the admin has already built, rather than typing a description from scratch.</p><p>This area defines the company's cost classification taxonomy and reusable cost structures used across estimating, budgeting, and cost tracking. <strong>Cost Type</strong> starts with a fixed set of system categories (Material, Equipment, Labor, Unit Rate, Sub Contractor) but lets a company extend it with custom types — BOQ's, Freight Charges, Fuel & Gas — for costs that don't map cleanly onto the built-in categories. <strong>Cost Breakdown Structure (CBS)</strong> builds on top of Phase Codes (the same table shared with UOM/Phasecode & GL Codes) to assemble named, reusable templates that represent how a project's costs should be organized, with one template markable as the company Default so new projects have a sensible starting point.</p><p><strong>Bid Templates</strong> serves a related but separate purpose: it's a master catalog of estimate/bid line items — an Item Description paired with its Unit of Measure — that bid and estimate forms can pull from directly. The goal is consistency: rather than every estimator typing their own description for &quot;Ready Mix Concrete, M25 grade,&quot; everyone selects from the same standardized catalog, keeping bids comparable across projects and estimators.</p><p>Cost Breakdown Structure deserves a specific mention here because it is not a separate cost dataset — as covered in the UOM & Phase Codes section above, its Phase Codes sub-tab is the identical 963-row company-wide Phase Code list, just reached through the Cost menu instead of UOM/Phasecode & GL Codes. A change a Global Admin makes to a phase code's Cost Type tag is visible everywhere that phase code is referenced, including in every project's Cost Tracking rollups — which is exactly why this reference data has a wide blast radius and is worth an admin's care rather than ad hoc edits.</p>",
+        "intro": "<p>Use this section to keep the company's cost types, the material, equipment and labor lists under them, cost breakdown structures and the bid item catalog. The Super Admin or an estimating lead maintains it.</p><p><strong>Where this data goes:</strong> the eight cost types are the <strong>Cost Types</strong> you tick on every phase code. The Material and Equipment lists are the rows on each vendor's <strong>Rate Card</strong>, and the Labor list takes its rate columns from <strong>Settings → Earnings Codes</strong>.</p>",
         "definitions": [
           {
             "term": "Cost Type",
-            "definition": "A cost classification — fixed system types (Material, Equipment, Labor, Unit Rate, Sub Contractor) plus custom types added via Add Type."
+            "definition": "The **Cost Type** tab (**Global Data → Cost**) shows one card per type with **Add Type**, a search box and a refresh icon. The test site has eight: **Material**, **Equipment**, **Labor**, **Unit Rate**, **Sub Contractor**, **BOQ's**, **Freight Charges** and **Fuel & Gas**. These are the same names offered as **Cost Types** on each phase code and in **Project Setup → Phase Codes → Settings**."
           },
           {
             "term": "Cost Breakdown Structure (CBS)",
-            "definition": "A named, reusable structure for organizing project costs, built from Phase Codes, with one template markable as Default."
+            "definition": "The **Cost Breakdown Structure** tab has a left menu with **Phase Codes** and **Templates**. **Phase Codes** shows the same table as **UOM, Phasecode & GL Codes → Phase Codes** (963 rows on the test site; **Add**, search, **Export**). **Templates** holds the named CBS templates, one of which can be marked Default."
           },
           {
             "term": "Bid Templates",
-            "definition": "A master catalog of estimate/bid line items (Item Description + UOM Group + UOM) that bid/estimate forms can pull from for consistency across the company."
+            "definition": "A catalog of bid line items. **Global Data → Bid Templates** has **Add Item**, **Download Excel**, **Download Sample Excel** and **Upload Excel**, and a table with **S.No**, **Item Description**, **UOM Group**, **UOM** and **Actions** (edit, delete). The test site has 63 items (for example \"10m from the bottom of top layer\", Volume, Cum). UOM Group and UOM come from the UOM lists."
+          },
+          {
+            "term": "Cost type catalogs (what each card opens)",
+            "definition": "Click a card to open its list. **Material** opens **Material Code** (columns S.No., **Material Cost Code**, **Material Name**, **UOM**, **Size & Specifications**, **Unit Price**, **Type**, Actions; buttons **Add Material**, **Add Custom Column**, **Add Category**, **Export**; a template dropdown) and a **Material Estimate Template** tab. **Equipment** opens **Equipment Code** (**Equipment Cost Code**, **Equipment Name**, **Type**, **Category**, **Subcategory**, **UOM** and **Hourly**, **Daily**, **Weekly**, **Monthly** rates) with **Equipment Estimate Template**, **Equipment Category** and **Equipment Part** tabs. **Labor** opens **Labor Code** (**Labor Cost Code**, **Labor Name**, **Type**, conversion factors per earnings code such as ST, OT, PD) with a **Labor Estimate Template** tab and a weekly-rate dropdown. **Unit Rate** and **Sub Contractor** open template lists (**Add Template**). **BOQ's** (a custom type) opens **BOQ's Code** with **Add BOQ's**."
+          },
+          {
+            "term": "Where cost data comes from and goes",
+            "definition": "**Comes from:** Add Type and the **Add Material / Add Equipment / Add Labor** buttons. **Goes to:** (1) the Cost Types options on phase codes; (2) each vendor's **Rate Card** (the Materials rows are the Material list, the Equipment rows are the Equipment list; the test site showed the same items in both); (3) the Labor list's rate columns, which are the **Earnings Codes** from Settings (PD, NS, ST, 17, 18, OT and so on); (4) bid forms that pull from Bid Templates. To price a new material or equipment item for a vendor, add it here first."
           }
         ],
         "procedures": [
@@ -16400,7 +16588,7 @@ const MODULES = [
           {
             "title": "Set up Materials and Labor cost types",
             "steps": [
-              "Go to **Global Data → Cost**, choose **Cost Types** in the drop-down, then open the **Materials** or **Labor** tab.",
+              "Go to <strong>Global Data → Cost → Cost Type</strong> and click the <strong>Material</strong> or <strong>Labor</strong> card, then open its code tab (<strong>Material Code</strong> or <strong>Labor Code</strong>).",
               "Click **Settings** and choose how entries are grouped: Level 1 (Materials), Level 2 (Categories > Materials) or Level 3 (Categories > Sub Categories > Materials). Pick one type and keep to it. You can move one level at a time, but you cannot skip a level.",
               "Click **Add**, enter the details and click **Submit**. Labor entries also take a **Standard Unit Price** when that setting is on. You can also bulk-load entries with **Upload Excel**.",
               "When you move up a level, use the restore option to keep the entries you already have. They stay available under **Restore Materials** or **Restore Labors**.",
@@ -16487,7 +16675,8 @@ const MODULES = [
                 "caption": "Uncheck Level 2 in Settings and confirm the delete warning",
                 "step": 5
               }
-            ]
+            ],
+            "note": "On the test site the Material and Labor screens showed Add Material / Add Labor, Add Category, Add Custom Column and Export; the level Settings option described in step 2 was not visible there."
           }
         ],
         "images": [
@@ -16526,20 +16715,24 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Customer Settings",
-        "intro": "<p>This section covers the data model and approval workflow for customer and opportunity records, configured by a Global Admin or Opportunity Management Admin and consumed by the Opportunity Management module. Sales and business-development data deserves the same structured discipline construction companies already apply to safety and quality sign-offs — a customer or opportunity record shouldn't become official until the right people have reviewed it. Customer Settings is where a <strong>Global Admin or Opportunity Management Admin</strong> defines both what data is captured about a customer and the approval chain that record must pass through, which then governs the behavior every BD End User experiences inside Opportunity Management itself (see the Opportunity Management module for how that pipeline is used day to day).</p><p>Customer (Opportunity Customer Settings) configures the data model behind the customer/lead-management side of the Opportunities and Proposal pipeline. It defines what information is captured about a Customer and their individual Contacts — using the same Standard Fields + Configurable Fields builder pattern found elsewhere in Global Data — and, importantly, sets up a formal multi-level <strong>Approval Workflow</strong> that customer and opportunity records can be routed through before they're finalized. This gives sales and business-development processes the same kind of structured sign-off that Arena applies to safety, quality, and forms elsewhere in the product.</p>",
+        "heading": "Customers, Contacts & Approval",
+        "intro": "<p>Use this section to keep the customer list, its contacts and the approval steps customer records go through. A Global Admin or the Opportunity Management admin maintains it.</p><p><strong>Where this data goes:</strong> the <strong>Customer</strong> dropdown on <strong>Projects → Create Project</strong> lists exactly the customers on this screen (eight on the test site), and opportunities use the same customers.</p>",
         "definitions": [
           {
             "term": "Customer (Standard/Configurable Fields)",
-            "definition": "The customer data model — Standard Fields (Customer ID, Customer Name, Short Name, Alias Name, addresses, Email, Phone, Fax, URL, Tax Codes, Locations) plus admin-added Configurable Fields."
+            "definition": "The **Customers** tab (**Global Data → Customer**; the page heading says \"Lead Customers\") has sub-tabs **Active Customers** and **Rejected**, and the buttons **Create Customer**, **Merge Duplicates**, **Add Groups**, search, **Export**, **Filters**, list/grid icons and a save-layout icon. Each customer is a card with an **Approved** chip, **Customer ID**, **Customer Name** and **Customer Email**. The fields on a customer are set under **Settings → Customer**: standard fields **Customer ID**, **Customer Name**, **Short Name**, **Alias Name**, **Primary**, **Mailing** and **Billing Address**, **Email Address**, **Phone Number**, **Fax Number**, **URL**, **Tax Codes** and **Locations**, plus your own via **Add Field**."
           },
           {
             "term": "Contact",
-            "definition": "The settings for individual customer contacts, mirroring the Vendor contact-table pattern."
+            "definition": "The **Contacts** tab lists people at customers and owners (12 on the test site). Columns include **Customer / Owner**, **Customer / Owner Name**, **Contact ID**, **Salutation**, **First Name**, **Middle Name**, **Last Name**, **Suffix**, **Job Title**, **Primary Email**, **Secondary Email**, **Primary Phone Number**, **Work Phone Number**, primary and secondary address lines, country, state, city and zip, **Services Provided** and **Personal Website**. The **Settings** menu also has a **Contact** page for contact fields."
           },
           {
             "term": "Approval Workflow (Customer)",
-            "definition": "A table of approval Levels (Level, Level Description, Approvers, Workflow Type) defining a multi-step sign-off chain for customer/opportunity records."
+            "definition": "The third page of **Customer → Settings** (left menu: **Customer**, **Contact**, **Approval Workflow**). A table of approval levels (**Level**, **Level Description**, **Approvers**, **Workflow Type**) defines the sign-off chain a new customer goes through."
+          },
+          {
+            "term": "Where customer data comes from and goes",
+            "definition": "**Comes from:** **Create Customer**, or a sync from Viewpoint through Staged Tables (**Customers**). **Goes to:** the **Customer** dropdown on **Create Project** (the same eight customers on the test site) and, per the Opportunity Management section, to opportunities. The status chip on each card (**Approved**) and the **Rejected** sub-tab show where a customer stands in the approval workflow."
           }
         ],
         "procedures": [
@@ -16577,19 +16770,19 @@ const MODULES = [
       },
       {
         "heading": "Company-Wide Settings",
-        "intro": "<p>This section covers company-wide preferences that don’t belong to one specific tile — currency, date format, mail routing, naming, and more — configured by a Super Admin. Not every company-wide preference belongs neatly inside one functional tile — a currency format, a mail-routing rule, or a company holiday calendar affects everything at once rather than one specific area, and that is exactly what this catch-all Settings hub is for. It is, almost without exception, <strong>Super Admin / Global Admin</strong> territory: a Project Manager or module-level admin will rarely if ever need to open these screens, since the choices made here ripple across every project and every module company-wide rather than affecting their own scope of work.</p><p>Settings is Global Data's catch-all configuration hub — a large left-hand navigation of company-wide preferences that don't belong to any one functional tile, from currency and date formats to mail routing, holidays, and keyboard shortcuts. Rather than scattering these choices across the modules they affect, Arena centralizes them here so an admin has one place to check when something needs to change company-wide.</p><p>A handful of these screens are worth calling out specifically because they follow a recurring builder pattern also seen elsewhere in Global Data (Owner, Customer, Roster): a fixed set of Standard Fields plus an extensible list of Configurable Fields, each addable via Add Field with a chosen data type, a Required toggle, and a Show on cards toggle. This pattern shows up for Roster Settings, the Owner registration form, and Sub Contractor Settings (notably used there for certification attachments like ISO 9001 or CIDB). Two Naming Framework screens exist and are easy to confuse: the Global Settings version here renames Procurement/Inventory/Roster/Cost terminology company-wide, while a separate, per-Construction-Type Naming Framework (Step 5 of the Construction Type pipeline) renames Activity/Work-Package/Location terms scoped to one construction type. Finally, note that a couple of documented items — Test Emails and Enable AWP (Advanced Work Packaging) — were not observed in the live navigation during review, suggesting they may be feature-flagged per company or plan.</p>",
+        "intro": "<p>Use this hub for preferences that apply to the whole company: currency, date format, mail routing, naming, statuses and form options. The Super Admin sets them. The left menu has 22 pages.</p><p><strong>Where this data goes:</strong> for example <strong>Project Form</strong> fills the Project Type, Funding Agency and Implementing Agency dropdowns on Create Project; <strong>Hindrance Category</strong> fills the Restraint Category dropdown; <strong>Sub Contractor Settings</strong> fills the CERTIFICATIONS section when registering a subcontractor; <strong>Earnings Codes</strong> become the rate columns on Cost → Labor.</p>",
         "definitions": [
           {
             "term": "Roster Settings",
-            "definition": "Configuration for the fields shown on roster records: fixed Standard Fields plus admin-added Configurable Fields (types include Text Box, Attachment, Check Box, Date, Label, Multi Select, Paragraph, Roster-lookup, Scribble, Single Select, Table, Time, Signature)."
+            "definition": "Fields on roster records. **Table Standard Fields** are Employee ID, First Name, Last Name, Group No., Email ID, Address, Designation, Skills, Experience, Contact NO., Supervisors, Craft and Class. **Add Field** adds configurable fields (each with **Required**, **Show on cards** and **Choose type**; types include Text Box, Attachment, Check Box, Date, Label, Multi Select, Paragraph, Roster-lookup, Scribble, Single Select, Table, Time and Signature). They show up on the Global Rosters forms."
           },
           {
             "term": "Owner (Settings)",
-            "definition": "The same Standard Fields + Add Field builder pattern, applied to the Owner registration form — this drives the fields seen in the Owners \"Create Owner\" wizard."
+            "definition": "The field builder for the Owner form, with sub-tabs **Form** and **Owner POC**. Standard fields: Owner ID, Owner Name, Short Name, Alias Name, Primary, Mailing and Billing Address, Email Address, Phone Number, Fax Number, URL, Tax Codes and Locations, plus **Add Field**. This decides what the Create Owner wizard asks."
           },
           {
             "term": "Currency",
-            "definition": "A single company-wide dropdown (Indian Rupee, USD, EUR, GBP, JPY, CHF) setting the currency symbol/format used throughout Arena."
+            "definition": "The **Currency** page has one dropdown (Indian Rupee on the test site) and **Save Changes**. The Create Project form has its own **Currency** field (it opened on United States Dollar on the test site)."
           },
           {
             "term": "Global Date Format",
@@ -16597,19 +16790,79 @@ const MODULES = [
           },
           {
             "term": "Mail Settings",
-            "definition": "A per-module table (LOR, Procurement, Opportunities, Work Order, Proposal Management, Arena Communications, Expense Tracker, RFI, Transmittal, Tender Management, Capital Management, Submittal, Change Order, Delay Form, Other Forms) choosing Gmail or Outlook routing for that module's emails."
+            "definition": "A table of modules with a **Gmail** or **Outlook** choice for each: **LOR**, **PROCUREMENT**, **LEADS**, **WORK ORDER**, **PROPOSAL MANAGEMENT**, **ARENA COMMUNICATIONS**, **EXPENSE TRACKER**, **REQUEST FOR INFORMATION**, **TRANSMITTAL**, **TENDER MANAGEMENT**, **CAPITAL MANAGEMENT**, **RFI**, **SUBMITTAL**, **CHANGE ORDER**, **DELAY FORM** and **OTHER FORMS**. Connect Outlook in Marketplace first."
           },
           {
             "term": "Naming Framework (Global Settings)",
-            "definition": "A large table renaming Procurement/Inventory/Roster/Cost terminology (Project, Inventory Master, Pickup Ticket, Load Out Request, Vendor, Purchase Order, Opportunity, Customer, Phase Code, Estimate, and more) company-wide, distinct from the per-Construction-Type Naming Framework."
+            "definition": "A table with **Activity Sequence Level**, **Default Name**, **Custom Name** and **Short Name**: 46 rows covering the terms used across modules, such as Project, Inventory Master, Pickup Ticket, Ship Ticket, Return Ticket, Load Out Request, Request, Check Out, Ship, Check In, Delivered, Received, Equipment Issues, Non Conformance Report, Procurement Package, RFQ, Vendor, Purchase Order, Material Receipt, Lead, Customer, Roster, Phase Code, Earnings Code, Estimate, Cost Code, Class, Craft, Equipment, Inquiry Number, Estimator, Tender, Project Type, Win Probability and more. Your company's renames show elsewhere: on the test site **Pickup Ticket** is called **Site Material Request**, **Ship Ticket** is **Material Issue Ticket**, **Lead** is **Opportunity**, **Equipment** is **Asset** and **Equipment Issues** is **Asset Issues**."
           },
           {
             "term": "Sub Contractor Settings",
-            "definition": "Standard Fields plus a Configurable Fields builder supporting certification/compliance attachments (CIDB, ISO 9001, ISO 45001, ISO 14001, Safety and Health Assessment, Electrical Contractor License), each toggleable as Required and typed as Attachment."
+            "definition": "Field builder for the subcontractor form. Standard fields run from Sub Contractor ID to Linked SubContractor Groups; under **Configurable Fields** a **CERTIFICATIONS** label is followed by **Attachment** fields (CIDB, Malaysian GBI, MOF licence, SPKK, ISO 9001, ISO 45001, ISO 14001, SHASSIC, Electrical Contractor License), each with a **Required** switch. They appear in **Sub Contractors → Register Sub Contractor**."
           },
           {
             "term": "Enable AWP (Advanced Work Packaging)",
             "definition": "A documented toggle intended to show/hide the AWP menu for all users; not observed in the live Settings navigation during review, and may be feature-gated per plan."
+          },
+          {
+            "term": "Settings menu (all pages)",
+            "definition": "The 22 pages on **Global Data → Settings**: **Roster Settings**, **Procurement Settings**, **Holidays**, **Naming Framework**, **Currency**, **Attachment Settings**, **Project Status**, **Project Form**, **Mail Settings**, **Keyboard Shortcuts**, **Adobe Sign Settings**, **Global Date Format**, **Sub Contractor Settings**, **Owner**, **Earnings Codes**, **Enterprise Dashboard**, **Hindrance Category**, **Location settings**, **Request for Information**, **Transmittals Submitted Type**, **Market Type** and **Configure Safety Observation**. Test Emails and Enable AWP were not in the menu on the test site."
+          },
+          {
+            "term": "Procurement Settings",
+            "definition": "Has **Global Level** and **Project Level** options (both ticked on the test site) and **Save Changes**."
+          },
+          {
+            "term": "Holidays",
+            "definition": "**Add Holiday** and **Add Vacation** with a calendar (month and day selector) for marking company days off."
+          },
+          {
+            "term": "Attachment Settings",
+            "definition": "**Global Attachment Settings** lists the screens where a file can be attached (**Screen with Attachment**) and lets you tick **Make attachment mandatory** for each: Global Users & Permissions → Users → User Registration; People, Time & Settings → Roster → Non System → User Creation; Company → Company Logo; Forms → Project Forms → Form Creation; Quick Apps → App Creation; Vendors → Vendor Registration. **Home Page Attachment Settings** and **Project Attachment Settings** cover the other levels."
+          },
+          {
+            "term": "Project Status",
+            "definition": "**Project Status Configuration** lists the statuses a project can have: **Created**, **Approved**, **Work in progress**, **On hold**, **Completed** (each with an edit icon), and **Add Status** for your own. Project cards on **Projects** show the chip (for example Created, Work in progress)."
+          },
+          {
+            "term": "Project Form",
+            "definition": "**Project Settings** page for the Create Project form. **Table Standard Fields** are Project Name, Project Number, Construction Type, Project Location, Owner Representative, Project Manager, Currency, Lead and Customer. Under **Configurable Fields → Groups**, the test site has three Single Select fields: **Project Type** (Roads, Health, Railways, Metro, Others, Pipeline, Industrial, Solar Panels, Residentials), **Funding Agency** (ADB, Indian Gov, Others) and **Implementing Agency** (AUDA, APWD, MMRDA, Others), each with a **Required** switch. **Add Field** adds more. These options are exactly what the Create Project dropdowns show."
+          },
+          {
+            "term": "Keyboard Shortcuts",
+            "definition": "A table with **Shortcut** (Alt + Shift + A to Z), **Navigation** (the screen each shortcut opens, chosen from a dropdown; Alt + Shift + P is set to **PROJECTS** on the test site) and **Is Enabled?**."
+          },
+          {
+            "term": "Adobe Sign Settings",
+            "definition": "**Client Id**, **Client Secret** (masked), **Consent** and **Save Changes**, for connecting Adobe Sign (see Integrations)."
+          },
+          {
+            "term": "Earnings Codes",
+            "definition": "A table of pay codes with **Add**, columns **Code**, **Description**, **Shortname**, **VP Code**, **Data Type** (HOURS or AMOUNT), **Payroll**, **Project**, **Split Header** and **Actions**. The test site has Regular pay (ST), Over Time pay (OT), Double pay, Sick, Vacation, Holiday, Other, Non Tax, Bonus, Bill (Reg), Bill(OT), Bill (Double), ST and PerDIEM (AMOUNT). The short names and VP codes appear as the rate columns on **Cost → Labor**. **Time Management → Settings → Timesheet Settings** also has an Earnings Codes page."
+          },
+          {
+            "term": "Enterprise Dashboard",
+            "definition": "Chooses the dashboard view type: **Arena Dashboard**, **Power BI Dashboard**, **Enterprise Dashboard** or **Superset Dashboard**, then **Save Changes**."
+          },
+          {
+            "term": "Hindrance Category",
+            "definition": "**Create** and a table of **Categories** with edit and delete. The test site has **Site & Technical Constraints**, **Seasonal/Weather Constraints**, **Safey constarints** (spelled that way on screen), **Resource Constraints** and **Others**. These are the options in the **Restraint Category** field when you click **Add Restraint** in **Field Works → Progress → Restraints**."
+          },
+          {
+            "term": "Location settings",
+            "definition": "Location options for five screens: **Work Logs - Creation**, **Work Logs - Approval**, **RFI - Creation**, **RFI - Approval** and **Site Photographs**, then **Save Changes**."
+          },
+          {
+            "term": "Request for Information, Transmittals Submitted Type and Market Type",
+            "definition": "**Request for Information** has **Categories** and **Priorities** tabs, each with **Create**. **Transmittals Submitted Type** has **Create** and a list of types. **Market Type** has **Create Market Type** and **Create Sub-Market Type**. All three lists were empty on the test site."
+          },
+          {
+            "term": "Configure Safety Observation",
+            "definition": "The safety observation form: **Standard Fields** are Created By, Created At, Project Location, Supervisor, Observation, Priority and Feature Attachments; **Configurable Fields** (for example Address, Zip Code, City, State, PhoneNo) are added with **Add field**; **Save Changes**."
+          },
+          {
+            "term": "Where settings data comes from and goes",
+            "definition": "**Comes from:** the Super Admin, page by page (each page has **Save Changes**, or saves on each change). **Goes to:** Create Project (Project Form options, Currency), Field Works (Hindrance Category in Restraints), Sub Contractors (CERTIFICATIONS), Cost → Labor (Earnings Codes), every module's label text (Naming Framework), email routing (Mail Settings) and the notification lists."
           }
         ],
         "procedures": [
@@ -16723,27 +16976,39 @@ const MODULES = [
       },
       {
         "heading": "Forms & Quickapps",
-        "intro": "<p>This section covers the template library for standard construction documents, project document-folder structures, and custom mini-apps, maintained by a Super Admin so every project starts from the same paperwork. An RFI, a Change Order, or a Transmittal should look and behave the same way whether it's raised on a highway job in one state or a commercial build in another — otherwise every project team ends up reinventing its own paperwork, and nothing rolls up cleanly for the company. A <strong>Global Admin or a Documents/Forms Module Manager</strong> builds these templates and folder structures once here; a <strong>Project Manager or End User</strong> then simply selects from what's already available whenever a form needs to be raised on their own project.</p><p>This area houses Arena's template library for standard construction documents and workflow forms, organized by functional domain across tabs like Construction Forms, Work Order Forms, Procurement, Inventory Forms, Project Forms, Drawing Management Forms, Cost, and Invoice Forms. Rather than every project designing its own RFI or Change Order layout from scratch, a form type's field-by-field structure is built once here as a <strong>Template</strong>, and every project then simply selects from the available templates when a form of that type is raised.</p><p><strong>Document Management</strong>, despite sitting in the same general area, solves a different problem: it defines the standard <strong>folder structure</strong> a new project's document/drawing space starts with (for example, an FEL-1 template might pre-create Civil, Mechanical, Structural, Architectural, Instrumentation, and Process Controls folders). This gives every project the same predictable taxonomy on day one instead of each project team inventing their own filing scheme. <strong>Quickapps</strong>, meanwhile, addresses a more ad-hoc need: it lets a company build lightweight custom mini-apps (&quot;Quick Apps&quot;) for field data capture that doesn't fit neatly into Arena's standard form types, and separately hosts <strong>Standard Tables</strong> — simple reusable reference tables shared across projects.</p>",
+        "intro": "<p>Use this section to set up the form templates, document folder structures, Quick Apps and Standard Tables that projects start from. The Super Admin or a forms manager builds them once.</p><p><strong>Where this data goes:</strong> a project's <strong>Project Setup → Forms → Assign Templates</strong> picks from the templates built here (the RFI template list matched exactly), and its form list shows the same Project Forms names. Quick Apps show in Field Works, and notification events exist for forms.</p>",
         "definitions": [
           {
             "term": "Construction Forms (tab)",
-            "definition": "Cards for RFI, Submittals, Change Orders, Meeting Minutes, Delay Form, Request For Information, and Transmittals, each configurable via its own Templates screen."
+            "definition": "Seven cards: **RFI** (Requests For Inspection), **Submittals**, **Change Orders**, **Meeting Minutes**, **Delay Form**, **Request For Information** and **Transmittals**. Other tabs: **Workorder Forms** (Workorders, Service Entry Sheet, Indent), **Procurement** (Procurement Packages, Purchase Orders, Material Receipts), **Inventory Forms** (Site Material Requests, Material Issue Tickets, Return Tickets, External Site Material Requests), **Drawing Management Forms** (Drawing Package Submittal, Drawing Register) and **Cost** (Transaction Logs, Change Orders, Transfer)."
           },
           {
             "term": "Template (form)",
-            "definition": "A named, field-by-field layout for a specific form type, built via Create Template; selectable whenever that form type is raised on a project."
+            "definition": "A named, field-by-field layout for one form type, made with **Create Template**. For RFI the list has **Standard**, **General** (Default), **Consultants Advisory Form**, **Valigonda to Thorrur**, **RFI**, **rttest**, **Neelamangala - Tumukur RFI** and **0123**. A template opens the **RFI Form Configuration** builder with **Form Settings**, **Save Changes** and three steps: **RFI Form**, **Trigger Points**, **Preview Form**. Fields can be **Required**, **Show on card** or **Unique**; types include Text Box, Date, Label, Time, Check Box, Scribble, Map and Table. **Invoice Forms** and **Requisition Form** also have **Create Template**."
           },
           {
             "term": "Document Management (templates)",
-            "definition": "Predefined folder-structure templates (e.g. FEL-1, FEL-2, FEL-3, Detailed Engineering) applied to new projects so every project starts with a consistent folder taxonomy."
+            "definition": "Two tabs. **Structure Template** has **Create Template** and a list of folder templates (**FEL - 1**, **FEL - 2**, **FEL - 3**, **Detailed Engineering**); opening FEL - 1 shows **New Folder** and its folders (Civil, Mechanical, Structural, Architectural, Instrumentation, Process Controls) with Last Modified and Added On. **Document Template** has sub-tabs **Word**, **Excel**, **PPT** and **Text** with an **AddFile** button (no documents yet on the test site). A project's **Project Setup → Documents** had a FEL - 1 folder; how a structure template is applied to a project was not verified."
           },
           {
             "term": "Standard Tables",
-            "definition": "A grid of named, reusable reference tables (e.g. Arena, Drawing Status, Sample) shared across projects."
+            "definition": "The **Standard Tables** tab of **Quick Apps** has **Add** and cards for reusable reference tables: **Arena** (Arena mobile app), **Drawing Status** and **Sample** on the test site."
           },
           {
             "term": "Quick Apps",
-            "definition": "Custom, lightweight mini-apps for ad-hoc field data capture (e.g. Bid or Estimate Log, Subcontractor Bid Proposal, Observation Report, Non-Conformance Report, Completion Notice, Storage Inspections, Variance Request)."
+            "definition": "The **Quick Apps** tab has **Create** and cards for custom mini-apps: Bid or Estimate Log, Subcontractor Bid Proposal, Observation Report, Non-Conformance Report, Completion Notice, Initial Material Receiving, Storage Inspections, Stored Equipment Maintenance, Variance Request, Initial Electrical Equipment Receiving, Cable Receiving Insulation Resistance and Equipment Productivity Planner. The **Quick Apps** tile and **Document Management** are separate tiles on the Global Data home page."
+          },
+          {
+            "term": "Forms tabs",
+            "definition": "The **Forms** tile has nine tabs: **Construction Forms**, **Workorder Forms**, **Procurement**, **Inventory Forms**, **Project Forms**, **Drawing Management Forms**, **Cost**, **Invoice Forms** and **Requisition Form**. Each card or list opens the templates for one form type."
+          },
+          {
+            "term": "Project Forms tab",
+            "definition": "Two groups, each with its own **Create** button. **Project Forms** lists form types such as Laboratory Test Results, Field Test Results, Correspondence Details, Contractor Onboarding, Test Reports, Procurement Forms, Checklists, Estimate Quantity, Equipment Productivity Planner, Site Inspection, Quality, Permit to work, Near Miss, Observations, Non Conformance, Inspections, Material Inspection Request, NON CONFORMANCE REPORT and MATERIAL APPROVAL SHEET. **Safety Form** lists types such as Productivity Tracking, Claim Management, Safety Training tracking, Compliance Regulatory Form, Document Transmittal Form, Observation Form, Quality Incident Report, Variance Request Form, Completion Notice, Non-Conformance Report and Observation Report. Each has a ⋮ menu. **Project Setup → Forms** shows the same Project Forms names."
+          },
+          {
+            "term": "Where form and template data comes from and goes",
+            "definition": "**Comes from:** **Create Template** on each form type, **Create** for Project Forms and Quick Apps, **Add** for Standard Tables. **Goes to:** **Project Setup → Forms**: the left list shows the Global Data Project Forms names; **Assign Templates** offers one template per form type (RFI, Request For Information, Transmittal, Submittals, Change Order, Meeting Minutes, Delay Forms, Invoices) for each area, from these lists; **Assign Users** and **Approval Workflow** then set who can view, create, edit and delete. Notification events for forms (Form Issues, Form Sharing, Custom Forms, RFIS and more) are under **Notifications**."
           }
         ],
         "procedures": [
@@ -16754,7 +17019,7 @@ const MODULES = [
               "Click <strong>Create Template</strong>.",
               "Build the form layout (sections/fields) as needed and save."
             ],
-            "note": "The new template becomes available for selection whenever an RFI is raised on a project.",
+            "note": "The new template is then offered in Project Setup → Forms → Assign Templates for RFI.",
             "images": [
               {
                 "src": "assets/notion/construction-forms/001.jpg",
@@ -17308,7 +17573,7 @@ const MODULES = [
       "Construction Types",
       "Work Order Management",
       "Cost & Bid Templates",
-      "Customer Settings",
+      "Customers, Contacts & Approval",
       "Company-Wide Settings",
       "Forms & Quickapps",
       "Notifications",
