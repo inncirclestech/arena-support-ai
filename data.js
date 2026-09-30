@@ -2280,7 +2280,7 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "Company & Business Units",
     question: "How do I add a business unit?",
-    answer: "1. Global Data → **Business Units** → **Add**.\n2. Enter a Code and Description.\n3. Submit.",
+    answer: "1. Global Data → **Business Units** → **Add**. A new row opens in the table (not a pop-up).\n2. Enter a numeric **Code** and a **Description**, and optionally pick a colour.\n3. Click the row's save/check action to confirm, or the delete icon to discard it.",
     tags: ["business unit","add business unit"]
   },
   {
@@ -2289,7 +2289,7 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "Owners: Client & Project-Owner Directory",
     question: "How do I create a new Owner record?",
-    answer: "1. Global Data → **Owners** tile → **Create Owner** (split button) → **Create Owner**.\n2. **Step 1 – Basic Details:** enter Owner Name* (required), Short Name, Alias Name, Phone Number*, Email*, Fax Number, Url; expand and fill Primary Address, optionally check **Same as Primary address** for Mailing/Billing Address.\n3. **Step 2 – Locations & Tax Codes:** click **Link Locations** to associate company Locations (with a Default flag), and **Add** under Tax Codes to attach Tax Group/Tax Class/Tax Code combinations.\n4. **Step 3 – Preview:** review all entered data.\n5. Click **Submit** to create the Owner.\n\nTo bulk-create Owners, use **Export**, which also exposes Download/Upload Excel options with a template.",
+    answer: "1. Global Data → **Owners** tile → **Create Owner** (split button) → **Create Owner**.\n2. **Step 1 – Basic Details:** enter **Owner Name** (the only required field), then Short Name, Alias Name, Phone Number (country code, number, extension), Email, Fax Number and Url. Fill the Primary, Mailing and Billing Address (tick **Same as Primary address** to copy).\n3. **Step 2 – Locations & Tax Codes:** click **Link Locations** and choose from the company locations, mark one as **Default**, and use **Add Tax Codes** to attach Tax Group, Tax Class and Tax Code.\n4. **Step 3 – Preview:** review the data.\n5. Click **Submit**.\n\nTo bulk-create Owners use **Export** (it offers Download and Upload).",
     tags: ["create owner","register owner","new owner"]
   },
   {
@@ -2307,7 +2307,7 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "Locations & Tax",
     question: "How do I add a new company delivery location?",
-    answer: "1. Global Data → **Locations** tile → **Create**.\n2. In the \"Add Location\" dialog, fill Location Name*, Address*, Zip Code, City, State.\n3. Under **Tax Codes***, click **Add** to attach one or more Tax Group/Tax Class/Tax Code entries.\n4. Click **Submit**.\n\nBulk location setup is also possible via Excel import from this screen's Export/Upload options.",
+    answer: "1. Global Data → **Locations** tile → **Create**.\n2. In the **Add Location** dialog, fill Location Name, Address, Zip Code, City and State.\n3. Under **Tax Codes**, click **Add** to attach a Tax Group, Tax Class and Tax Code from Tax Configuration.\n4. Click **Submit**.\n\nFor bulk setup use **Export → Upload Excel** on this screen. New locations show up in the **Link Locations** picker of Create Owner.",
     tags: ["add location","delivery location","create location"]
   },
   {
@@ -2316,8 +2316,8 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "Locations & Tax",
     question: "How do I set up tax groups and tax codes?",
-    answer: "1. Global Data → **Tax Configuration** → **Add Tax Group** → enter the Group name → **Submit**.\n2. Select the new group in the left panel, then click **Add Tax Code** → enter Tax Code* and Tax Percentage* → **Submit**.\n3. Repeat for each code belonging to that group (e.g. CGST, SGST, ITC, Freight).\n4. Use **Upload Excel** / **Download Excel** to bulk manage tax codes.",
-    tags: ["tax configuration","tax group","tax code","gst","gst setup"]
+    answer: "1. Global Data → **Tax Configuration** → **Add Tax Group** → enter the Group name → **Submit**.\n2. Open the group in the left panel and select its class (for example Tax → CGST). The table on the right lists that class's Tax Codes.\n3. Click **Add Tax Code**, enter **Tax Code** and **Tax Percentage**, then **Submit**. Repeat for each code (for example CGST, SGST, ITC, Freight).\n4. Use **Upload Excel** / **Download Excel** to bulk manage tax codes.\n\nThe tax tree has three levels: Tax Group > Tax Class > Tax Code.",
+    tags: ["tax configuration","tax group","tax code","gst","gst setup","tax class"]
   },
   {
     action: "create",
@@ -2325,7 +2325,7 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "Vendors & Subcontractors",
     question: "How do I add a new vendor?",
-    answer: "1. Global Data → **Vendors** tile → **Register Vendor**.\n2. Upload a profile picture (optional), fill Vendor ID*, Company Name*, First Name*, Last Name*.\n3. Click **Add** in the contact table to add one or more contact persons with their details.\n4. Fill Username*, Phone Number* (with country code + extension), Email*.\n5. Choose a **Select Sign Label** (e.g. Initials) and fill Initials* — used as the digital signature label on approved documents; optionally toggle **Enable Security Key Authentication**.\n6. Optionally fill Vendor Title, Address, Licence Number, Fax, Scope, and Website.\n7. Under **Additional Information**, optionally set Vendor Type, Vendor Business Size, Vendor Minority, Freight Terms, GST IN, and Linked Vendor Groups, and check **Domestic**, **Preferred**, and/or **Blocked**.\n8. Click **Submit**.",
+    answer: "1. Global Data → **Vendors** tile → **Register Vendor**.\n2. Upload a profile picture (optional), then fill Vendor ID, Company Name, First Name and Last Name (Company Name, First Name and Last Name are required).\n3. Click **Add** in the contact table to add one or more contact persons.\n4. Fill Username, Phone Number (with country code) and Email (required).\n5. Choose a **Select Sign Label** (for example Initials) and fill Initials — used as the digital signature label on approved documents.\n6. Optionally fill Vendor Title, Address, Licence Number, Fax, Scope and Website.\n7. Under **Additional Information**, set Vendor Type, Vendor Business Size, Vendor Minority, Notes, Warning, Extra Copy, Sent By, Freight Terms, GST IN and **Linked Vendor Groups**, and tick **Domestic**, **Preferred** and/or **Blocked** as they apply.\n8. Click **Submit**.\n\nTo be found in a Procurement RFQ, put the vendor in a category and link it to a group. For bulk loading use **Upload Vendors**.",
     tags: ["register vendor","add vendor","new vendor"]
   },
   {
@@ -2334,7 +2334,7 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "Vendors & Subcontractors",
     question: "How do I mark a vendor as preferred or block it from being used?",
-    answer: "1. Open the vendor's card from the **Vendors** tile (its status also shows directly on the vendor card in the list).\n2. On the **Profile** tab, scroll to **Additional Information**.\n3. Check **Preferred** to flag it as a preferred supplier, or **Blocked** to stop it from being selected in Procurement and Work Orders.\n4. Click **Submit**.",
+    answer: "1. Go to **Global Data → Vendors**. Each vendor card has **Preferred** and **Blocked** switches you can use directly.\n2. Or open the vendor with ⋮ → **Edit**, go to the **Profile** tab and scroll to **Additional Information**.\n3. Tick **Preferred** for a favoured supplier, or **Blocked** to stop the vendor being used.\n4. Click **Submit**.\n\nThe test site had no blocked vendors, so how **Blocked** affects the Procurement vendor picker was not observed.",
     tags: ["preferred vendor","blocked vendor","vendor status"]
   },
   {
@@ -2343,7 +2343,7 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "Vendors & Subcontractors",
     question: "How do I set up a vendor's rate card?",
-    answer: "1. Open the vendor's card from the **Vendors** tile.\n2. Go to the **Rate Card** tab, choose **Materials** or **Equipment**.\n3. Click **Upload Logs**, download the Excel template, fill in Daily/Weekly/Monthly rates per item, then upload the completed file — or edit the **Rate** field inline per row.",
+    answer: "1. Go to **Global Data → Vendors** and open the vendor (⋮ → **Edit**).\n2. Open the **Rate Card** tab and choose **Materials** or **Equipment**. The rows are the company's items from **Global Data → Cost** (Material and Equipment).\n3. Click **Upload Logs**, download the Excel template, fill in the rates (Daily, Weekly, Monthly for equipment), then upload the file — or type the rate in each row.",
     tags: ["rate card","vendor rates","upload logs","vendor rates upload logs"]
   },
   {
@@ -2361,7 +2361,7 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "Vendors & Subcontractors",
     question: "How do I register a subcontractor?",
-    answer: "1. Global Data → **Sub Contractors** tile → **Register Sub Contractor**.\n2. Complete the registration form (name, contact, ID) and submit.\n3. Use **Add Groups** to organize subcontractors into categories, similar to Vendor categories.",
+    answer: "1. Global Data → **Sub Contractors** tile → **Register Sub Contractor**.\n2. Fill the **Create Sub Contractor** dialog: Sub Contractor ID, First Name, Last Name, User Name, Phone Number, Company Name, Email Address, Subcontractor Specialists, Website, Location, Experience, License Number, and the License Document, Insurance Document and Resume uploads.\n3. Choose **Linked SubContractor Groups**, upload any files under **CERTIFICATIONS**, then click **Submit**.\n4. Use **Add Groups** on the list to organise subcontractors into groups.",
     tags: ["subcontractor","register sub contractor"]
   },
   {
@@ -2370,7 +2370,7 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "Vendors & Subcontractors",
     question: "How do I track vendor/subcontractor certifications like ISO or safety licenses?",
-    answer: "1. Go to **Global Data → Settings → Sub Contractor Settings** to define which certification fields (e.g. ISO 9001, CIDB) subcontractors must upload.\n2. Or, for company-wide compliance items, use **Global Data → Compliance Hub → Compliance Directory → Create** to define the requirement (Name, Category, Renewal Frequency, Evidence Type), then track status under **My Company Compliance**.",
+    answer: "1. Go to **Global Data → Settings → Sub Contractor Settings** and use **Add Field** to add each certificate (for example ISO 9001) as an **Attachment** field; tick **Required** if it is compulsory.\n2. Those fields appear under **CERTIFICATIONS** in **Sub Contractors → Register Sub Contractor**, ready for uploads.\n3. For company-wide compliance items, use **Global Data → Compliance Hub → Compliance Directory → Create**, then track status under **My Company Compliance**.",
     tags: ["subcontractor compliance","iso certification","safety license","iso certification safety license"]
   },
   {
@@ -2732,6 +2732,159 @@ const QA_GLOBALDATA = [
     question: "How do I build a quantity take-off formula for progress tracking?",
     answer: "1. Global Data → **Measurement Templates** → **Add Template**.\n2. Enter a Template ID* and Template Name* (e.g. \"LBD\").\n3. Under **Parameters**, add each variable the formula needs (e.g. L, B, D, Nos), clicking + after each.\n4. Enter the **Formula** referencing the parameters (e.g. `(L)*(B)*(D)*(Nos)`).\n5. Click **Submit**.\n6. Later, link this template to a Work Package via the Construction Type pipeline's Step 10 (Work Package Measurement Template Linking).",
     tags: ["measurement template","quantity takeoff","formula","quantity takeoff formula"]
+  },
+  {
+    action: "explain",
+    object: "company tile",
+    scope: "module",
+    section: "Company & Business Units",
+    question: "What is the Company tile for and who uses it?",
+    answer: "The **Company** tile under **Global Data** holds the company's own profile (**Company Details** tab) and its **Subsidiary** list. The Super Admin fills it in once when the account is set up. Required fields are Company Name, Company ID, address, contact person, company email and company phone; PAN Number and GST IN are optional. The Business Unit list is a separate tile (**Global Data → Business Units**).",
+    tags: ["company tile","company details","company profile","what is company","company setup"]
+  },
+  {
+    action: "create",
+    object: "subsidiary",
+    scope: "module",
+    section: "Company & Business Units",
+    question: "How do I create a subsidiary?",
+    answer: "1. Go to **Global Data → Company** tile → **Subsidiary** tab.\n2. Click **Create Subsidiary**.\n3. Fill in Subsidiary Name, Subsidiary ID, Street Address, City, State and State Zip Code (required). Contact person, email, phone, PAN Number and GST IN are optional; you can also upload a logo.\n4. Click **Submit**.",
+    tags: ["subsidiary","create subsidiary","add subsidiary","subsidiary company"]
+  },
+  {
+    action: "explain",
+    object: "business unit dropdown",
+    scope: "module",
+    section: "Company & Business Units",
+    question: "Why is the Business Unit dropdown empty in Create Project?",
+    answer: "The **Business Unit** dropdown on **Projects → Create Project** had no options on the test site, and **Global Data → Business Units** was empty too (\"No Data Available\"). If your dropdown is empty, add business units under **Global Data → Business Units** first, then reopen Create Project to check that they appear.",
+    tags: ["business unit dropdown","create project business unit","business unit empty","where does business unit come from"]
+  },
+  {
+    action: "explain",
+    object: "owners tile",
+    scope: "module",
+    section: "Owners: Client & Project-Owner Directory",
+    question: "What is the Owners tile for and who uses it?",
+    answer: "The **Owners** tile is the master list of clients who commission your projects. The Super Admin (or an admin with owner rights) creates them once; project creators then pick one in the **Owner** dropdown on **Projects → Create Project**. Each owner has basic details, three addresses, linked company **Locations** and **Tax Codes**. Use **Settings** to choose one, two or three levels (Owner; Category > Owner; Category > SubCategory > Owner).",
+    tags: ["owners tile","what is owners","owner directory","client list","owner master"]
+  },
+  {
+    action: "explain",
+    object: "owner dropdown create project",
+    scope: "module",
+    section: "Owners: Client & Project-Owner Directory",
+    question: "Where does the Owner dropdown in Create Project come from?",
+    answer: "From **Global Data → Owners**. On the test site the **Owner** dropdown on **Projects → Create Project** listed exactly the three owners on the Owners screen (Krishna and the two NATIONAL HIGHWAYS AUTHORITY entries). If an owner is missing, add it in **Global Data → Owners** first, then reopen Create Project.",
+    tags: ["owner dropdown","create project owner","owner not showing","where does owner come from","why is owner missing"]
+  },
+  {
+    action: "explain",
+    object: "owner locations link",
+    scope: "module",
+    section: "Owners: Client & Project-Owner Directory",
+    question: "Where do the locations I can link to an owner come from?",
+    answer: "From **Global Data → Locations**. In the Create Owner wizard, step 2, **Link Locations** opens a picker that lists every company location (eight on the test site, the same eight as the Locations screen). The **Tax Group**, **Tax Class** and **Tax Code** dropdowns below it are filled from **Tax Configuration**. Add the location or tax code there first if you do not see it.",
+    tags: ["link locations owner","owner locations","owner tax codes","locations missing for owner"]
+  },
+  {
+    action: "explain",
+    object: "owner required fields",
+    scope: "module",
+    section: "Owners: Client & Project-Owner Directory",
+    question: "Which fields are required when I create an owner?",
+    answer: "Only **Owner Name**. Short Name, Alias Name, Phone Number (with extension), Email, Fax Number, Url and the Primary, Mailing and Billing addresses are optional. Step 2 (**Link Locations** and **Add Tax Codes**) and step 3 (Preview) follow.",
+    tags: ["owner required fields","owner name required","create owner fields"]
+  },
+  {
+    action: "explain",
+    object: "locations tile",
+    scope: "module",
+    section: "Locations & Tax",
+    question: "What is the Locations tile for and who uses it?",
+    answer: "The **Locations** tile (**Global Data → Locations**) is the company's list of places, kept by the Super Admin. Each location has a name, address, zip code, city, state and optional **Tax Codes**. Other screens use it, for example the **Link Locations** picker in the Create Owner wizard. The table has **Export** (Download Excel, Upload Excel), **Filters** and **Manage Columns**.",
+    tags: ["locations tile","what is locations","company locations","delivery locations","location list"]
+  },
+  {
+    action: "explain",
+    object: "locations owner picker",
+    scope: "module",
+    section: "Locations & Tax",
+    question: "Why is a location missing when I link locations to an owner?",
+    answer: "The picker in **Owners → Create Owner → step 2 → Link Locations** lists what is on **Global Data → Locations** (eight locations on the test site, matching one for one). Add the place under **Locations → Create** first, then reopen the owner. Note that the **Project Location** box on Create Project is free text and does not use this list.",
+    tags: ["location missing owner","link locations empty","project location dropdown","where do locations come from"]
+  },
+  {
+    action: "explain",
+    object: "tax configuration tile",
+    scope: "module",
+    section: "Locations & Tax",
+    question: "What is the Tax Configuration tile for, and what are Tax Group, Tax Class and Tax Code?",
+    answer: "**Tax Configuration** (**Global Data → Tax Configuration**) stores the company's tax set-up in three levels: a **Tax Group** (for example GST 18), its **Tax Class** (for example CGST), and the **Tax Code** with a **Tax Percentage** (for example CGST -1 at 5). You pick all three in the **Tax Codes** tables on Locations and Owners. Buttons: **Add Tax Group**, **Add Tax Code**, **Upload Excel**, **Download Excel**.",
+    tags: ["tax configuration tile","tax group tax class tax code","what is tax configuration","gst group","tax levels"]
+  },
+  {
+    action: "explain",
+    object: "vendors tile",
+    scope: "module",
+    section: "Vendors & Subcontractors",
+    question: "What is the Vendors tile for and who uses it?",
+    answer: "The **Vendors** tile is the company-wide vendor list. The Super Admin or procurement admin registers vendors, sorts them into categories and groups, sets **Preferred** / **Blocked**, and keeps each vendor's **Rate Card**. Procurement users then pick from this list in the **RFQ** wizard and Direct Purchase Orders. A separate tile, **Sub Contractors**, holds trade subcontractors.",
+    tags: ["vendors tile","what is vendors","vendor master","vendor list","supplier list"]
+  },
+  {
+    action: "troubleshoot",
+    object: "vendor missing in rfq po",
+    scope: "module",
+    section: "Vendors & Subcontractors",
+    question: "Why doesn't a new vendor show in my RFQ or PO?",
+    answer: "Procurement takes its vendors from **Global Data → Vendors**. In **Procurement → RFQ → Create RFQ → step 3 (Identify Vendors)** you must choose **Vendor Category**, **Vendor Sub Category** and **Category Groups** before **Add Vendors** works (otherwise you get \"Please select all filters\"). So check that (1) the vendor is registered and submitted, (2) it sits in the category you selected, and (3) it is linked to a vendor group such as **Domestic** (set in **Additional Information → Linked Vendor Groups**). You can also use **Register Vendors** inside the RFQ, which adds to the same list. Purchase orders then use the vendors from the RFQ, or the **Select Vendor** step of a Direct Purchase Order.",
+    tags: ["new vendor not showing","vendor missing rfq","vendor missing po","vendor not in purchase order","vendor not appearing","why doesnt vendor show","add vendors rfq"]
+  },
+  {
+    action: "explain",
+    object: "rfq vendor categories",
+    scope: "module",
+    section: "Vendors & Subcontractors",
+    question: "Where do the vendor categories and groups in an RFQ come from?",
+    answer: "From **Global Data → Vendors**. The **Vendor Category** dropdown in the RFQ wizard lists exactly the categories in the left panel of the Vendors screen (Equipment Vendors, Material Vendors, Cement Vendors, General, Eco category on the test site), and **Category Groups** lists the groups under **Add Groups** (**Domestic** on the test site). Create categories with **Create Category** and groups with **Add Groups**, then link each vendor to them.",
+    tags: ["rfq vendor category","rfq category groups","vendor sub category","where do vendor categories come from"]
+  },
+  {
+    action: "explain",
+    object: "rate card rows",
+    scope: "module",
+    section: "Vendors & Subcontractors",
+    question: "Where do the rows in a vendor's rate card come from?",
+    answer: "From **Global Data → Cost**. The **Materials** rows on a vendor's Rate Card are the items under **Cost → Material** (Material Cost Code, Material Name, UOM, Type) and the **Equipment** rows are the items under **Cost → Equipment**. The vendor only adds the **Rate** (or Daily, Weekly, Monthly for equipment). To price a new item, add it under Cost first, then it appears on each vendor's Rate Card.",
+    tags: ["rate card rows","rate card items","vendor rate card materials","rate card missing item"]
+  },
+  {
+    action: "explain",
+    object: "sub contractors tile",
+    scope: "module",
+    section: "Vendors & Subcontractors",
+    question: "What is the Sub Contractors tile for?",
+    answer: "The **Sub Contractors** tile (**Global Data → Sub Contractors**) is the company's list of trade subcontractors, separate from Vendors. Use **Register Sub Contractor** to add one (ID, name, contact, licence, insurance and resume uploads, **Linked SubContractor Groups**), **Add Groups** to group them, and the **CERTIFICATIONS** section for certificates. The certificate fields are defined in **Global Data → Settings → Sub Contractor Settings**.",
+    tags: ["sub contractors tile","what is sub contractors","subcontractor list","subcontractor register"]
+  },
+  {
+    action: "explain",
+    object: "vendor groups",
+    scope: "module",
+    section: "Vendors & Subcontractors",
+    question: "What are Vendor Groups and where do I use them?",
+    answer: "**Vendor Groups** are created with **Add Groups** on the Vendors screen (**Group Name**, **Group Description**, **Add Row**). A vendor is linked to groups in **Additional Information → Linked Vendor Groups**, and Procurement's RFQ wizard filters vendors by **Category Groups**. The test site has one group, **Domestic**.",
+    tags: ["vendor groups","add groups vendors","linked vendor groups","domestic group"]
+  },
+  {
+    action: "create",
+    object: "restore vendor",
+    scope: "module",
+    section: "Vendors & Subcontractors",
+    question: "How do I restore a deleted vendor?",
+    answer: "1. Go to **Global Data → Vendors**.\n2. Click **Restore Vendors**.\n3. Tick the vendors you want back (the list shows **Vendor** and **First Name**).\n4. Click **Submit**.",
+    tags: ["restore vendor","deleted vendor","undelete vendor","bring back vendor"]
   }
 ];
 
@@ -15213,11 +15366,11 @@ const MODULES = [
       },
       {
         "heading": "Company & Business Units",
-        "intro": "<p>This section covers the company’s legal profile and internal business-unit list, set up once by a Super Admin at the very start of onboarding. Every generated document a construction company sends out — a purchase order, an RFQ, an invoice, a compliance certificate — needs to carry the company's correct legal name, address, and tax details, and it needs to carry them consistently no matter which project or module produced the document. Getting this right once, centrally, is squarely the job of the <strong>Super Admin / Global Admin</strong>; it is not something a Project Manager or module-level admin should ever need to touch.</p><p>Global Data is Arena's company-wide administration layer: everything defined here — vendors, tax rules, naming conventions, permissions, and so on — is inherited by every project a company creates afterward, so nothing has to be re-entered project by project. The <strong>Company</strong> screen sits at the very top of that hierarchy. It stores the company's own legal and business profile, the information that appears on generated documents, forms, and outgoing communications: legal name, registered address, contact details, tax identifiers, and the company logo.</p><p>Beyond the primary company profile, this area also handles two closely related but distinct concerns. <strong>Subsidiaries</strong> lets a parent company register additional related company profiles, useful for holding companies or multi-entity organizations that run several legally distinct businesses through one Arena account. <strong>Business Units</strong> is a much simpler registry — a flat list of internal divisions or departments (identified by a short code and description) used purely for categorizing operations and reporting, without any of the legal/tax detail that the Company profile carries.</p>",
+        "intro": "<p>Use this section to record the company's own profile, its subsidiaries and its business units. The Super Admin sets it up once when the account is created.</p><p><strong>Where this data goes:</strong> the profile is the company's own record and the lists sit under Global Data → Company and Global Data → Business Units. The Create Project form has a <strong>Business Unit</strong> dropdown; on the test site that dropdown and the Business Units list were both empty, so add business units here first.</p>",
         "definitions": [
           {
             "term": "Company Details",
-            "definition": "The tab holding the company's core legal/business profile: name, ID, address, contact person, phone, email, and optional tax identifiers (PAN Number, GST IN), plus the company logo used on generated documents."
+            "definition": "The tab holding the company's core profile. Required fields are **Company Name**, **Company ID**, **Street Address**, **City**, **State**, **State Zip Code**, **Contact Person**, **Contact Person Phone Number** (country code, number and extension), **Contact Person Email**, **Company Email** and **Company Phone Number**. **PAN Number** and **GST IN** are optional. **Upload Company Logo** sets the logo, **Add SSO Provider** under **SSO Clients** connects a single sign-on provider, and **Submit** saves the tab. The Company tile opens on this tab; **Subsidiary** is the second tab."
           },
           {
             "term": "SSO Clients",
@@ -15225,20 +15378,20 @@ const MODULES = [
           },
           {
             "term": "Subsidiary",
-            "definition": "A secondary company profile registered under the parent company, managed from its own tab with search and list/grid view options."
+            "definition": "A separate company profile kept under the parent company. The **Subsidiary** tab has **Create Subsidiary**, a search box and list/grid icons. The test site had no subsidiaries (\"No Data\"). The **Create Subsidiary** dialog asks for **Upload Subsidiary Logo**, **Subsidiary Name**, **Subsidiary ID**, **Street Address**, **City**, **State** and **State Zip Code** (all required), then **Contact Person**, **Contact Person Phone Number**, **Contact Person Email**, **Subsidiary Email**, **Subsidiary Phone Number**, **PAN Number** and **GST IN** (optional), and **Submit**. Unlike the company profile, the contact fields are optional here."
           },
           {
             "term": "Business Unit",
-            "definition": "A simple record — a numeric Code, a Description, and an optional color tag — representing an internal division or department, used to categorize company operations and reporting. Added inline in the Business Units table rather than through a popup dialog."
+            "definition": "A simple record made of a numeric **Code**, a **Description** and an optional colour tag. The **Business Unit** screen (its own tile, **Global Data → Business Units**) is a table with **Serial Number**, **Code**, **Description** and **Actions**, and an **Add** button that opens an inline row instead of a pop-up. Who uses it: the Super Admin maintains the list. The Create Project form has a **Business Unit** dropdown; on the test site it was empty, and so was this list."
           }
         ],
         "procedures": [
           {
             "title": "Update the company profile",
             "steps": [
-              "Go to <strong>Global Data → Company</strong> tile → <strong>Company Details</strong> tab.",
+              "Go to <strong>Global Data → Company</strong> tile. It opens on the <strong>Company Details</strong> tab.",
               "Click <strong>Upload Company Logo</strong> to set the brand logo used across generated documents.",
-              "Fill in or update the required fields: Company Name, ID, Address, City, State, Zip, Contact Person details, Company Email/Phone, and optionally PAN/GST.",
+              "Fill in or update the required fields: <strong>Company Name</strong>, <strong>Company ID</strong>, <strong>Street Address</strong>, <strong>City</strong>, <strong>State</strong>, <strong>State Zip Code</strong>, <strong>Contact Person</strong> with phone and email, <strong>Company Email</strong> and <strong>Company Phone Number</strong>. <strong>PAN Number</strong> and <strong>GST IN</strong> are optional.",
               "To configure SSO, click <strong>Add SSO Provider</strong> under SSO Clients and complete the provider's setup.",
               "Click <strong>Submit</strong> to save."
             ],
@@ -15248,15 +15401,25 @@ const MODULES = [
                 "caption": "Company Details with the company name, logo, address and contacts",
                 "step": 3
               }
-            ]
+            ],
+            "note": "Nothing is saved until you click Submit."
           },
           {
             "title": "Add a business unit",
             "steps": [
-              "Go to <strong>Global Data → Business Units</strong> and click <strong>Add</strong> — this opens a new row directly in the table (not a popup dialog).",
+              "Go to <strong>Global Data → Business Units</strong> and click <strong>Add</strong>. A new row opens directly in the table (not a pop-up).",
               "Enter a numeric Code and a Description in the new row.",
               "Optionally pick a color from the swatch next to the row, used to tag/color-code the business unit.",
               "Click the row's save/check action to confirm (or the delete icon to discard it before saving)."
+            ]
+          },
+          {
+            "title": "Create a subsidiary",
+            "steps": [
+              "Go to <strong>Global Data → Company</strong> tile and open the <strong>Subsidiary</strong> tab.",
+              "Click <strong>Create Subsidiary</strong>.",
+              "Fill in <strong>Subsidiary Name</strong>, <strong>Subsidiary ID</strong>, <strong>Street Address</strong>, <strong>City</strong>, <strong>State</strong> and <strong>State Zip Code</strong>. Add the contact, email, phone, <strong>PAN Number</strong> and <strong>GST IN</strong> if you have them, and upload a logo if you want one.",
+              "Click <strong>Submit</strong>."
             ]
           }
         ]
@@ -15495,19 +15658,27 @@ const MODULES = [
       },
       {
         "heading": "Locations & Tax",
-        "intro": "<p>This section covers the company’s physical location registry and its tax structure (Tax Groups and Tax Codes), set up by a Super Admin before Owners, Vendors, or Work Orders can reference them. A construction company operating across multiple states, counties, or countries deals with genuinely different tax jurisdictions on every job — the same \"GST 18\" or \"CGST/SGST\" structure cannot be typed in fresh every time a new project, owner, or vendor needs it. Locations and Tax Configuration are exactly the kind of shared backbone data that belongs with the <strong>Super Admin / Global Admin</strong>: get the jurisdictional structure right once here, and every project, owner, and vendor record that references it inherits a correct, consistent calculation automatically.</p><p>Locations is the central registry of physical addresses used throughout Arena — anywhere the system needs a real-world place, whether that's a material delivery destination, an address linked to an Owner, or a site for jurisdictional tax assignment. Storing locations once, centrally, avoids the same address being retyped (and potentially mistyped) across multiple owners, vendors, and work orders.</p><p><strong>Tax Configuration</strong> lives alongside Locations because tax jurisdiction is so often tied to where work happens. It defines the company's tax structure as a two-level hierarchy: <strong>Tax Groups</strong> (like &quot;GST 18&quot;) each contain one or more individual <strong>Tax Codes</strong> with their own percentages (such as CGST, SGST, ITC, or Freight). This structure is then referenced — not duplicated — by Owners, Locations, Vendors, and Work Orders wherever a tax calculation applies, so a change to a tax percentage in one place propagates everywhere that code is used.</p>",
+        "intro": "<p>Use this section to keep the company's list of places and its tax set-up. The Super Admin maintains both, and other screens pick from them.</p><p><strong>Where this data goes:</strong> company locations are offered in <strong>Owners → Link Locations</strong>, and tax codes (Tax Group, Tax Class, Tax Code) are attached to locations and owners. The <strong>Project Location</strong> box on Create Project is plain text, not a dropdown of these locations.</p>",
         "definitions": [
           {
             "term": "Location",
-            "definition": "A registered physical address (also referred to as a Delivery Location in older documentation) with fields for name, address, zip, city, and state, plus required Tax Codes."
+            "definition": "A registered company place (older guides call it a Delivery Location). The **Locations** screen (**Global Data → Locations**) has **Create**, a search box, the pager, **Export** (**Download Excel**, **Upload Excel**), **Filters**, **Manage Columns** and a save-layout icon. Columns: **Location ID**, **Location Name**, **Address**, **Zip Code**, **City**, **State** and **Actions** (edit, delete). The **Add Location** dialog asks for **Location Name**, **Address**, **Zip Code**, **City** and **State**, plus a **Tax Codes** table (**Add** → **Tax Group**, **Tax Class**, **Tax Code**)."
           },
           {
             "term": "Tax Group",
-            "definition": "A named container for related Tax Codes (e.g. \"GST 18\", \"GST 111\")."
+            "definition": "The top level of the tax tree on **Tax Configuration**. Groups appear as accordions in the left panel (for example **Tax**, **GST 111**, **GST 18**). **Add Tax Group** asks for one field, **Group**. The ⋮ menu on a group has **Add**, **Edit** and **Delete**."
           },
           {
             "term": "Tax Code",
-            "definition": "An individual tax rate entry (e.g. CGST, SGST, ITC, Freight) belonging to a Tax Group, with its own Tax Percentage."
+            "definition": "The bottom level: a **Tax Code** name with a **Tax Percentage** (for example CGST -1 at 5, ITC at 1, Freight at 5). **Add Tax Code** asks for those two fields; each row has edit and delete icons; **Upload Excel** and **Download Excel** load or export codes in bulk. Locations and owners show the full path as three dropdowns: **Tax Group**, **Tax Class**, **Tax Code**."
+          },
+          {
+            "term": "Tax Class",
+            "definition": "The middle level. A group opens into its classes (for example **Tax → CGST**). Selecting a class shows its tax codes in the table on the right."
+          },
+          {
+            "term": "Where location and tax data comes from and goes",
+            "definition": "**Comes from:** manual entry on each screen, or Excel upload (Locations: **Export → Upload Excel**; Tax Configuration: **Upload Excel**). **Goes to:** **Owners → Link Locations** (the picker lists the same eight locations as the Locations screen on the test site) and the **Tax Codes** tables on Locations and Owners, which are filled from Tax Configuration. To make a new tax code usable, add it under its group and class in Tax Configuration first."
           }
         ],
         "procedures": [
@@ -15515,11 +15686,11 @@ const MODULES = [
             "title": "Add a new company delivery location",
             "steps": [
               "Go to <strong>Global Data → Locations</strong> tile → <strong>Create</strong>.",
-              "In the \"Add Location\" dialog, fill in Location Name*, Address*, Zip Code, City, and State.",
-              "Under <strong>Tax Codes*</strong>, click <strong>Add</strong> to attach one or more Tax Group/Tax Class/Tax Code entries.",
+              "In the <strong>Add Location</strong> dialog, fill in <strong>Location Name</strong>, <strong>Address</strong>, <strong>Zip Code</strong>, <strong>City</strong> and <strong>State</strong>.",
+              "Under <strong>Tax Codes</strong>, click <strong>Add</strong> to attach a <strong>Tax Group</strong>, <strong>Tax Class</strong> and <strong>Tax Code</strong> from Tax Configuration.",
               "Click <strong>Submit</strong>."
             ],
-            "note": "Bulk location setup is also possible via Excel import from this screen's Export/Upload options.",
+            "note": "New locations appear in the Link Locations picker of the Create Owner wizard. For bulk setup use Export → Upload Excel on this screen.",
             "images": [
               {
                 "src": "assets/notion/global-data-delivery-locations/001.jpg",
@@ -15536,9 +15707,9 @@ const MODULES = [
           {
             "title": "Set up tax groups and tax codes",
             "steps": [
-              "Go to <strong>Global Data → Tax Configuration</strong> → <strong>Add Tax Group</strong>, enter the Group name, and click <strong>Submit</strong>.",
-              "Select the new group in the left panel, then click <strong>Add Tax Code</strong> → enter Tax Code* and Tax Percentage* → <strong>Submit</strong>.",
-              "Repeat for each code belonging to that group (e.g. CGST, SGST, ITC, Freight).",
+              "Go to <strong>Global Data → Tax Configuration</strong> → <strong>Add Tax Group</strong>, enter the <strong>Group</strong> name and click <strong>Submit</strong>.",
+              "Open the group in the left panel and select its class (for example <strong>Tax → CGST</strong>). The table on the right lists that class's Tax Codes.",
+              "Click <strong>Add Tax Code</strong>, enter the <strong>Tax Code</strong> and <strong>Tax Percentage</strong>, and click <strong>Submit</strong>. Repeat for each code (for example CGST, SGST, ITC, Freight).",
               "Use <strong>Upload Excel</strong> / <strong>Download Excel</strong> to bulk manage tax codes."
             ],
             "images": [
@@ -15558,11 +15729,11 @@ const MODULES = [
       },
       {
         "heading": "Vendors & Subcontractors",
-        "intro": "<p>This section covers the company-wide directory of material/equipment vendors and subcontractors, maintained by a Super Admin or procurement admin and shared by every project. A general contractor or EPC firm running several jobs at once is, in practice, negotiating with the same steel suppliers, equipment rental houses, and specialty subcontractors again and again across different projects — so there is real financial value in the whole company seeing one consistent vendor record, one preferred/blocked status, and one rate card, rather than each project team relying on its own private list of who to call. This is confirmed directly in how Arena is built: <strong>Procurement is a Home-level module that spans every project</strong> (its Requisition Form and RFQ lists show a Project ID/Project Name column that varies row by row across many different projects), and it draws on this exact same Global Data vendor list — there is no separate, project-local vendor directory anywhere in the product. Registering a vendor once here (or via the <strong>\"+ Register Vendors\"</strong> button inside an RFQ, which writes to this same shared pool rather than creating a project-siloed entry) makes that vendor immediately available to every project's procurement activity, with no risk of a Purchasing Coordinator accidentally picking \"the wrong vendor list\" the way they might with Phase Codes.</p><p>Vendors is the company-wide directory of the external material and equipment suppliers a company works with, and it's used far beyond Global Data itself — Procurement and Work Orders both draw on this same list. Maintaining it is normally the job of a <strong>Global Admin or a Procurement Module Admin</strong> with vendor-management rights, while day-to-day, a <strong>Field User or Purchasing Coordinator</strong> simply selects from (or, when needed, registers a new entry into) the vendor list the admin already maintains. Because different companies work with dozens or hundreds of vendors across very different trades, Vendors supports categorization (with the same optional multi-level hierarchy pattern used by Owners), plus preferred/blocked status and a per-vendor rate card so procurement decisions can be made with pricing already on hand rather than requested fresh each time.</p><p>Every vendor record carries two important sub-areas. The <strong>Rate Card</strong> stores the vendor's costs for materials and equipment (with Daily/Weekly/Monthly rate options), which is what lets estimates and work orders pull real pricing instead of guesswork — and it can be bulk-updated via an Excel template rather than edited row by row. The <strong>Ratings Form</strong> is a company-wide, form-builder-style questionnaire used to formally evaluate vendor performance (on criteria like Safety or Quality) — this template is shared across all vendors, so scores are comparable vendor to vendor.</p><p><strong>Sub Contractors</strong> is a parallel, separate registry for subcontracted labor and trade-partner companies, distinguished from Vendors in that it tracks trade partners rather than material/equipment suppliers. Because subcontractors often need to prove compliance credentials (ISO certifications, safety licenses, CIDB registration, and similar), that tracking is handled either through configurable attachment-type fields on the subcontractor's own record (via Settings → Sub Contractor Settings) or, for broader company-wide compliance tracking, through the separate Compliance Hub.</p>",
+        "intro": "<p>Use this section to keep one company-wide list of vendors and subcontractors. The Super Admin or procurement admin maintains it, and every project shares it.</p><p><strong>Where this data goes:</strong> Procurement's <strong>RFQ</strong> wizard picks vendors from the vendor categories and groups defined here, and the Procurement dashboard's <strong>Vendor Performance Summary</strong> lists the same vendors. A vendor's <strong>Rate Card</strong> rows come from the Material and Equipment lists under <strong>Cost</strong>.</p>",
         "definitions": [
           {
             "term": "Vendor",
-            "definition": "An external material or equipment supplier, registered with profile details, contact persons, and a Rate Card, used by Procurement, Work Orders, and other modules company-wide."
+            "definition": "An external supplier. The **Vendors** screen (tabs **Vendors** and **Ratings Form**) has a left panel with **Create Category** and the category tree (on the test site: **Equipment Vendors** with a sub-category, **Material Vendors**, **Cement Vendors**, **General**, **Eco category**), and a toolbar with **Restore Vendors**, **Register Vendor**, a search box, **Add Groups**, **Download Excel**, **Upload Vendors** and **Settings**. Each vendor is a card with photo, name, vendor ID and two switches, **Preferred** and **Blocked**. The ⋮ menu gives **Edit** and **Delete**."
           },
           {
             "term": "Vendor categories",
@@ -15570,7 +15741,7 @@ const MODULES = [
           },
           {
             "term": "Rate Card",
-            "definition": "A vendor's Materials and Equipment cost tables (Cost Code, Name, UOM Group, UOM, Type, and editable Rate columns), bulk-updatable via Upload Logs using an Excel template with Daily/Weekly/Monthly rate columns."
+            "definition": "A vendor's prices, on the vendor's **Rate Card** tab. **Materials** columns: **Material Cost Code**, **Material Name**, **UOM Group**, **UOM**, **Type**, **Rate**. **Equipment** columns: **Equipment Cost Code**, **Equipment Name**, **Type**, **Group**, **UOM Group**, **UOM**, and **Daily**, **Weekly**, **Monthly** rates. **Upload Logs** bulk-loads rates from an Excel template. **Where the rows come from:** the same material and equipment items (for example Cement Bag, Sand, HandSaw, Hammer) that are listed under **Global Data → Cost → Material** and **Equipment**, with UOM Group and UOM from the UOM lists. Add an item there first to price it here."
           },
           {
             "term": "Ratings Form",
@@ -15578,23 +15749,35 @@ const MODULES = [
           },
           {
             "term": "Sub Contractor",
-            "definition": "A registered subcontracted labor/trade-partner company, tracked in a registry parallel to Vendors, organized via Add Groups."
+            "definition": "A subcontracted trade company, kept in its own list (**Global Data → Sub Contractors**) separate from Vendors. The screen has **Register Sub Contractor**, a search box, **Add Groups**, grid/list icons, and one card per subcontractor (five on the test site). The **Create Sub Contractor** dialog asks for **Upload Photo**, **Sub Contractor ID**, **First Name**, **Last Name**, **User Name**, **Phone Number**, **Company Name**, **Email Address**, **Subcontractor Specialists**, **Website**, **Location**, **Experience**, **License Number**, **License Document**, **Insurance Document** and **Resume** (three uploads), **Linked SubContractor Groups**, then a **CERTIFICATIONS** section of upload fields."
           },
           {
             "term": "Sub Contractor Settings (compliance fields)",
-            "definition": "Configurable attachment-type fields (e.g. ISO 9001, CIDB) that subcontractors must upload as part of their profile, defined at Global Data → Settings → Sub Contractor Settings."
+            "definition": "Set in **Global Data → Settings → Sub Contractor Settings** (standard fields plus **Add Field**). The fields you add there become the upload fields in the **CERTIFICATIONS** section of **Create Sub Contractor**. The test site has CIDB, Malaysian Green Building Index (GBI), MOF licence, SPKK, ISO 9001, ISO 45001, ISO 14001, SHASSIC and the Suruhanjaya Tenaga electrical contractor licence. Add a field in Settings and it appears in the dialog."
           },
           {
             "term": "Owner-style Settings hierarchy",
-            "definition": "Vendors uses the same Level 1/2/3 category hierarchy pattern as Owners, configured via the Settings gear on the Vendors screen."
+            "definition": "The **Settings** button on the Vendors screen opens **Vendor Settings**: \"Divide Vendor into how many levels\" with **Level 1 (Vendor)**, **Level 2 (Category > Vendor)** and **Level 3 (Category > SubCategory > Vendor)**. It works the same way as Owner Settings. The Procurement RFQ wizard asks for **Vendor Category**, **Vendor Sub Category** and **Category Groups**, so vendors need a category to be found there."
           },
           {
             "term": "Preferred / Blocked (vendor status)",
-            "definition": "Two checkbox-style flags shown on every vendor card and inside the vendor's Profile tab (under Additional Information), used to mark a vendor as a preferred supplier or to block it from being selected in Procurement and Work Orders."
+            "definition": "Two switches on every vendor card, and two check boxes under **Additional Information** on the vendor's **Profile** tab. **Preferred** marks a favoured supplier. **Blocked** is meant to stop a vendor being used. The test site had no blocked vendors, so the effect of **Blocked** on the Procurement vendor picker was not observed."
           },
           {
             "term": "Additional Information (vendor profile)",
-            "definition": "A block of extra classification fields on a vendor's Profile tab: Vendor Type, Vendor Business Size, Vendor Minority, Notes, Warning, Extra Copy, Sent By, Freight Terms, GST IN, Linked Vendor Groups, Domestic, Preferred, and Blocked."
+            "definition": "Extra fields under **Additional Information** on a vendor's **Profile** tab: **Vendor Type**, **Vendor Business Size**, **Vendor Minority**, **Notes**, **Warning**, **Extra Copy**, **Sent By**, **Freight Terms**, **GST IN**, **Linked Vendor Groups**, **Domestic**, **Preferred** and **Blocked**. The contact table above it has **Contact Name**, **Contact Number**, **Address**, **Vendor**, **Vendor Title**, **fax**, **Cell**, **Vendor Parish**, **email1**, **email2**, **Req Type**, **PhaseCode**, **Default** and **Actions**. **Add** opens a contact dialog (**Username**, **Phone Number**, **Email**, **Select Sign Label**, **Initials**)."
+          },
+          {
+            "term": "Vendor Groups",
+            "definition": "Opened with **Add Groups**: the **Vendors Groups** dialog has **Group Name**, **Group Description** and **Actions**, with **Add Row**, **Cancel** and **Submit**. The test site has one group, **Domestic**. Groups are what you pick in a vendor's **Linked Vendor Groups** field and in the **Category Groups** dropdown of the Procurement RFQ wizard."
+          },
+          {
+            "term": "Restore Vendors",
+            "definition": "Deleting a vendor is reversible. **Restore Vendors** opens a list of deleted vendors (**Vendor**, **First Name**, **Actions**) with check boxes and a **Submit** button that brings the ticked vendors back. It was empty on the test site."
+          },
+          {
+            "term": "Where vendor data comes from and goes",
+            "definition": "**Comes from:** **Register Vendor** (one at a time), **Upload Vendors** (Excel), or a sync from Viewpoint through Staged Tables. **Goes to:** the Procurement **RFQ** wizard (step 3, Identify Vendors: Vendor Category, Vendor Sub Category, Category Groups, **Add Vendors**), the Procurement dashboard's **Vendor Performance Summary**, and the vendor picker in Direct Purchase Orders (step **Select Vendor**). A new vendor only appears in an RFQ when it has a category and a group that you select there; RFQ's **Register Vendors** button adds to this same list."
           }
         ],
         "procedures": [
@@ -15602,11 +15785,11 @@ const MODULES = [
             "title": "Add a new vendor",
             "steps": [
               "Go to <strong>Global Data → Vendors</strong> tile → <strong>Register Vendor</strong>.",
-              "Upload a profile picture (optional), then fill Vendor ID*, Company Name*, First Name*, Last Name*.",
+              "Upload a profile picture (optional), then fill <strong>Vendor ID</strong>, <strong>Company Name</strong>, <strong>First Name</strong> and <strong>Last Name</strong>. Company Name, First Name and Last Name are marked as required.",
               "Click <strong>Add</strong> in the contact table to add one or more contact persons with their details.",
-              "Fill Username*, Phone Number* (with country code + extension), and Email*.",
+              "Fill <strong>Username</strong>, <strong>Phone Number</strong> (with country code) and <strong>Email</strong>; these three are required.",
               "Choose a <strong>Select Sign Label</strong> (e.g. Initials) and fill Initials* — used as the digital signature label on approved documents; optionally toggle <strong>Enable Security Key Authentication</strong>.",
-              "Optionally fill Vendor Title, Address, Licence Number, Fax, Scope, and Website.",
+              "Optionally fill <strong>Vendor Title</strong>, <strong>Address</strong>, <strong>Licence Number</strong>, <strong>Fax</strong>, <strong>Scope</strong> and <strong>Website</strong>.",
               "Under <strong>Additional Information</strong>, optionally set Vendor Type, Vendor Business Size, Vendor Minority, Notes, Warning, Extra Copy, Sent By, Freight Terms, GST IN, and Linked Vendor Groups, and check <strong>Domestic</strong>, <strong>Preferred</strong>, and/or <strong>Blocked</strong> as they apply.",
               "Click <strong>Submit</strong>. Use <strong>Upload Vendors</strong> (next to Download Excel) on the main Vendors screen to bulk-register vendors from an Excel template instead."
             ],
@@ -15621,13 +15804,14 @@ const MODULES = [
                 "caption": "A vendor profile where contact details are added",
                 "step": 3
               }
-            ]
+            ],
+            "note": "Put the vendor in a category (left panel) and link it to a vendor group so it can be found in the Procurement RFQ wizard."
           },
           {
             "title": "Set up a vendor's rate card",
             "steps": [
               "Open the vendor's card from the <strong>Vendors</strong> tile.",
-              "Go to the <strong>Rate Card</strong> tab and choose <strong>Materials</strong> or <strong>Equipment</strong>.",
+              "Go to the <strong>Rate Card</strong> tab and choose <strong>Materials</strong> or <strong>Equipment</strong>. The rows listed are the company's material or equipment items from <strong>Global Data → Cost</strong>.",
               "Click <strong>Upload Logs</strong>, download the Excel template, fill in Daily/Weekly/Monthly rates per item, and upload the completed file — or edit the <strong>Rate</strong> field inline per row."
             ],
             "images": [
@@ -15647,24 +15831,27 @@ const MODULES = [
             "title": "Configure the vendor rating form",
             "steps": [
               "Go to the <strong>Vendors</strong> tile → <strong>Ratings Form</strong> tab.",
-              "Click <strong>Add field</strong> to add a new custom rating criterion (e.g. \"Safety\").",
-              "Set its weight/value, toggle <strong>Required</strong> and/or <strong>Show on card</strong> as needed, and choose its type via <strong>Choose Type</strong> (e.g. Rating).",
+              "Click <strong>Add field</strong> to add a new custom rating criterion (for example \"Safety\").",
+              "Switch <strong>Required</strong> and/or <strong>Show on card</strong> on as needed, and choose the type with <strong>CHOOSE TYPE</strong> (for example Rating).",
               "Click <strong>Save Changes</strong>."
-            ]
+            ],
+            "note": "The form has a Standard section (with Reset) and a Custom section. The same form applies to every vendor."
           },
           {
             "title": "Register a subcontractor",
             "steps": [
               "Go to <strong>Global Data → Sub Contractors</strong> tile → <strong>Register Sub Contractor</strong>.",
-              "Complete the registration form (name, contact, ID) and submit.",
-              "Use <strong>Add Groups</strong> to organize subcontractors into categories, similar to Vendor categories."
+              "Fill in the <strong>Create Sub Contractor</strong> dialog: ID, name, user name, phone, company name, email, specialists, website, location, experience, licence number, the licence, insurance and resume uploads, and <strong>Linked SubContractor Groups</strong>.",
+              "Upload any files in the <strong>CERTIFICATIONS</strong> section, then click <strong>Submit</strong>.",
+              "Use <strong>Add Groups</strong> on the list screen to organise subcontractors into groups."
             ]
           },
           {
             "title": "Track vendor/subcontractor certifications (ISO, safety licenses)",
             "steps": [
-              "Go to <strong>Global Data → Settings → Sub Contractor Settings</strong> to define which certification fields (e.g. ISO 9001, CIDB) subcontractors must upload.",
-              "Alternatively, for company-wide compliance items, go to <strong>Global Data → Compliance Hub → Compliance Directory → Create</strong> to define the requirement (Name, Category, Renewal Frequency, Evidence Type), then track status under <strong>My Company Compliance</strong>."
+              "Go to <strong>Global Data → Settings → Sub Contractor Settings</strong> and use <strong>Add Field</strong> to define each certification (for example ISO 9001) as an <strong>Attachment</strong> field. Tick <strong>Required</strong> if it must be uploaded.",
+              "Open <strong>Global Data → Sub Contractors → Register Sub Contractor</strong>: the fields you added show under <strong>CERTIFICATIONS</strong>, ready for uploads.",
+              "For company-wide compliance items, use <strong>Global Data → Compliance Hub → Compliance Directory → Create</strong>, then track status under <strong>My Company Compliance</strong>."
             ]
           }
         ],
@@ -16830,23 +17017,27 @@ const MODULES = [
       },
       {
         "heading": "Owners: Client & Project-Owner Directory",
-        "intro": "<p>This section covers the master directory of project owners — the clients who commission projects — maintained by a Super Admin so owner details exist once and are reused across every project. Every construction project has a client who commissioned it — a developer, a government agency, an industrial operator — and that owner's contact details, tax codes, and linked locations should exist exactly once, not be re-typed by whichever Project Manager happens to set up a new job for a repeat client. Maintaining that master list is a <strong>Global Admin</strong> responsibility (or an admin scoped to Owners specifically, in a larger organization); a <strong>Project Manager</strong> then simply selects the correct existing Owner when setting up a new project rather than creating a fresh record each time.</p><p>The <strong>Owners</strong> screen is the master directory of every client or owner entity that commissions work — the same list you draw from whenever you create a new Project and need to assign it an Owner. Keeping this as a single, centrally maintained registry (rather than letting each project define its own client records) means an owner's contact details, tax codes, and linked locations only need to be entered once and stay consistent everywhere that owner is referenced.</p><p>Because different companies organize their client relationships with different levels of granularity — some work directly with a flat list of owners, others need to group owners under categories or sub-categories (for example, government vs. private clients, or by region) — Owners supports a configurable hierarchy depth. This is set once via the Owner Settings gear and applies company-wide, so it's worth deciding early, since Level 1 is the default and simplest option and moving to a deeper hierarchy later means recategorizing existing records.</p>",
+        "intro": "<p>Use Owners to keep one master record for each client who commissions your projects. The Super Admin maintains the list, and project creators pick from it.</p><p><strong>Where this data goes:</strong> the <strong>Owner</strong> dropdown on <strong>Projects → Create Project</strong> shows exactly the owners on this screen (three on the test site). Each owner can be linked to company <strong>Locations</strong> and <strong>Tax Codes</strong>, and owner contacts show up under <strong>Customer → Contacts</strong>.</p>",
         "definitions": [
           {
             "term": "Owner",
-            "definition": "The client/owner entity that commissions a project; a master record containing the owner's basic details, addresses, linked locations, and tax codes."
+            "definition": "The client entity that commissions a project. The **Owners** screen shows one card per owner with **Owner ID**, **Owner Name** and **Owner Email**. The toolbar has **Create Owner**, **Settings**, a search box (by ID and name), the pager, **Export**, **Filters**, list and grid icons and a save-layout icon. The ⋮ menu on a card gives **Edit** and **Delete**. Edit opens the same wizard titled **Update Owner**, with an extra editable **Owner Id** field."
           },
           {
             "term": "Create Owner (split button)",
-            "definition": "The action button on the Owners screen offering two paths: Create Owner (the standard multi-step wizard) or POC OCR (OCR-assisted document intake for owner data)."
+            "definition": "The top-left button. Its menu offers **Create Owner** (the three-step wizard) and **POC OCR** (OCR-assisted intake of owner details from a document; not opened during this check)."
           },
           {
             "term": "Owner Settings / hierarchy levels",
-            "definition": "A company-wide configuration choosing how many levels Owners are divided into: Level 1 (Owner only, the default), Level 2 (Category > Owner), or Level 3 (Category > SubCategory > Owner)."
+            "definition": "The **Settings** button on the Owners screen opens **Owner Settings**: \"Divide Owner into how many levels\". Choose **Level 1 (Owner)**, **Level 2 (Category > Owner)** or **Level 3 (Category > SubCategory > Owner)**. Decide early, because moving to a deeper level later means recategorising the owners you already have. The form fields themselves are set in **Global Data → Settings → Owner** (sub-tabs **Form** and **Owner POC**; standard fields Owner ID, Owner Name, Short Name, Alias Name, Primary, Mailing and Billing Address, Email Address, Phone Number, Fax Number, URL, Tax Codes and Locations, plus **Add Field** for your own)."
           },
           {
             "term": "Link Locations",
-            "definition": "A step in the Create Owner wizard for associating one or more company Locations with the owner, including marking one as the Default."
+            "definition": "Step 2 of the wizard. The **Location** section has a **Link Locations** button and a table with **Location Name**, **State**, **Default** (radio button) and **Actions** (delete). **Link Locations** opens a picker with a search box, **SELECT ALL**, and the company locations from **Global Data → Locations** (eight on the test site, the same eight as the Locations screen). The **Tax Codes** section below has **Add Tax Codes** and a table with **Tax Group**, **Tax Class** and **Tax Code** dropdowns filled from **Tax Configuration**."
+          },
+          {
+            "term": "Where owner data comes from and goes",
+            "definition": "**Comes from:** manual entry in the wizard, or an Excel file through **Export → Upload**. Locations and Tax Codes inside the wizard come from **Locations** and **Tax Configuration**. **Goes to:** the **Owner** dropdown on **Create Project**, and owner contacts in **Customer → Contacts**. If a new owner does not show in Create Project, check that it was submitted and reopen the form."
           }
         ],
         "procedures": [
@@ -16854,12 +17045,12 @@ const MODULES = [
             "title": "Create a new Owner record",
             "steps": [
               "Go to <strong>Global Data → Owners</strong> tile → <strong>Create Owner</strong> (split button) → <strong>Create Owner</strong>.",
-              "<strong>Step 1 – Basic Details:</strong> enter Owner Name* (required), Short Name, Alias Name, Phone Number*, Email*, Fax Number, and Url; expand and fill Primary Address, optionally checking <strong>Same as Primary address</strong> for Mailing/Billing Address.",
-              "<strong>Step 2 – Locations & Tax Codes:</strong> click <strong>Link Locations</strong> to associate company Locations (with a Default flag), and click <strong>Add</strong> under Tax Codes to attach Tax Group/Tax Class/Tax Code combinations.",
+              "<strong>Step 1 – Basic Details:</strong> enter <strong>Owner Name</strong> (the only required field), then <strong>Short Name</strong>, <strong>Alias Name</strong>, <strong>Phone Number</strong> (country code, number, extension), <strong>Email</strong>, <strong>Fax Number</strong> and <strong>Url</strong>. Fill <strong>Primary Address</strong>, <strong>Mailing Address</strong> and <strong>Billing Address</strong> (Address Line 1 and 2, Country, City, State, Zip Code); tick <strong>Same as Primary address</strong> to copy it.",
+              "<strong>Step 2 – Locations &amp; Tax Codes:</strong> click <strong>Link Locations</strong> and tick the company locations that apply, then mark one as <strong>Default</strong>. Click <strong>Add Tax Codes</strong> to attach a <strong>Tax Group</strong>, <strong>Tax Class</strong> and <strong>Tax Code</strong>.",
               "<strong>Step 3 – Preview:</strong> review all entered data.",
               "Click <strong>Submit</strong> to create the Owner."
             ],
-            "note": "To bulk-create Owners, use Export, which also exposes Download/Upload Excel options with a template.",
+            "note": "To bulk-create Owners, use Export, which offers Download and Upload. Owners you create appear in the Owner dropdown on Create Project.",
             "images": [
               {
                 "src": "assets/notion/global-data-owners-creation/001.jpg",
