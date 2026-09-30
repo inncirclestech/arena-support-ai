@@ -6,7 +6,7 @@ const QA_OPPORTUNITY = [
     scope: "module",
     section: "Opportunities",
     question: "Where do I see my list of opportunities?",
-    answer: "Go to **Opportunity Management** from Home, then click the **Opportunities** tab (one of the module's second-level tabs, alongside My Dashboard, Customers Interactions, Analytics, Reports, and Account Assignment). That's the full list/grid of every opportunity you have access to, with filters, view-mode switching, and row-level actions (History, Clone, Delete).",
+    answer: "Go to **Opportunity Management** from Home, then click the **Opportunities** tab (one of the module's second-level tabs, alongside My Dashboard, Clients Interactions, Analytics, Reports, and Account Assignment). That's the full list/grid of every opportunity you have access to, with filters, view-mode switching, and row-level actions (History, Clone, Delete).",
     tags: ["opportunities list","see my opportunities","where are my opportunities","opportunities grid","view opportunities"]
   },
   {
@@ -42,8 +42,8 @@ const QA_OPPORTUNITY = [
     scope: "module",
     section: "Opportunities",
     question: "What is AI Probability, and how is it different from Win Probability?",
-    answer: "**Win Probability (%)** is a manually entered estimate of how likely an opportunity is to close. **AI Probability (%)** is a separate, system-calculated field shown alongside it on the Opportunity's Status & Value panel, with its own refresh icon to recalculate it — it's an independent, automated estimate rather than something a user types in.",
-    tags: ["ai probability","win probability","chance of success","success probability","ai forecast"]
+    answer: "**AI Probability (%)** is calculated by the system once there is enough data. The **Manual % / AI %** toggle on the profile chooses whether **Weighted Value** uses your own **Go %** and **Get %** or the AI figure.",
+    tags: ["ai probability","win probability","chance of success","success probability","ai forecast","manual ai toggle"]
   },
   {
     action: "create",
@@ -69,7 +69,7 @@ const QA_OPPORTUNITY = [
     scope: "module",
     section: "Dashboard",
     question: "What is Weighted Opportunity Value?",
-    answer: "It's the sum of opportunity values weighted by win-probability, shown as a KPI on **My Dashboard**. It gives a probability-adjusted view of pipeline value rather than a raw total.",
+    answer: "It is the pipeline value adjusted for likelihood: each opportunity's value × Go % × Get %, added up, shown as a card on **My Dashboard**. It gives a probability-adjusted view of the pipeline, next to **Total Opportunity Value**.",
     tags: ["weighted value","dashboard kpi","win probability","kpi definition"]
   },
   {
@@ -114,7 +114,7 @@ const QA_OPPORTUNITY = [
     scope: "module",
     section: "Opportunities",
     question: "How do I create a new opportunity?",
-    answer: "1. Go to **Opportunities Management → Opportunities**.\n2. Click **+ Create** in the toolbar.\n3. **Details:** enter **Opportunity Name*** (required) and pick a **Market Type** (Highway, Residential, Infrastructure, Interiors, …).\n4. **Status & Value:** **Stage*** defaults to \"Lead\" and is locked. **Status*** is required — its options come from whatever Statuses are configured for that Stage.\n5. **Contact:** optionally set **Customer Groups**, **Site Representative**, **Corporate Lead**, **Executive Lead** (searchable people-pickers, auto-suggested from Account Assignment).\n6. Click **Submit**.\n\n⚠ If Submit fails with \"Status is required\", the **Lead** stage has no Statuses configured under Settings → Stages & Statuses Configuration. An admin must add at least one Status to Lead before new opportunities can be created.",
+    answer: "1. Go to **Opportunity Management → Opportunities** and click **+ Create**.\n2. In **Details**, type the **Opportunity Name** and select the **Business Unit**.\n3. Leave **Stage** as **Lead**, **Status** as **New Lead** and **Created Date** as today.\n4. Select the **Client Group** and the **Client**, or add a new client.\n5. Click **Submit**. The lead lands on the board under **Lead**.\n\nThe **Create Opportunity** window has four sections (**Details**, **Status & Value**, **Timeline & Activity**, **Contact**), but only four fields are mandatory.",
     tags: ["create opportunity","add lead","new pursuit","new lead form"]
   },
   {
@@ -123,7 +123,7 @@ const QA_OPPORTUNITY = [
     scope: "module",
     section: "Opportunities",
     question: "What columns can I add to the Opportunities table?",
-    answer: "Via **Manage Columns**: Opportunity ID/Name, Description, Created By, Project Types, Business Development, Business Unit, Opportunity Type, Milestone Template, Market/Sub Market Type, Stage, Status, TIC, Opportunity Value, Go %, Get %, Win Probability (%), AI Probability, Weighted Value (+AI), Probability (Manual/AI), Proposals, Tenders, Required Compliances, Created/Due/Follow Up Date, Opportunity Age, Stage Threshold Notification, Last Interaction, Inactivity (Days), Inactive Threshold Notification, Customer (+POC, Tier), Owner (+POC), EPC/Engineer (+POC), Contracting Entity (+POC), Project Locations, Competitors, Site Representative, Corporate Lead, Executive Lead, Assign To, Actions.",
+    answer: "Via **Manage Columns**: Opportunity ID/Name, Description, Created By, Project Types, Business Development, Business Unit, Opportunity Type, Milestone Template, Market/Sub Market Type, Stage, Status, TIC, Opportunity Value, Go %, Get %, Win Probability (%), AI Probability, Weighted Value (+AI), Probability (Manual/AI), Proposals, Tenders, Required Compliances, Created/Due/Follow Up Date, Opportunity Age, Stage Threshold Notification, Last Interaction, Inactivity (Days), Inactive Threshold Notification, Customer (+POC, Tier), Owner (+POC), EPC/Engineer (+POC), Contracting Entity (+POC), Project Locations, Competitors, BD Rep, Corporate Lead, Executive Lead, Assign To, Actions.",
     tags: ["manage columns","fields","data model","manage columns fields"]
   },
   {
@@ -132,17 +132,17 @@ const QA_OPPORTUNITY = [
     scope: "module",
     section: "Opportunities",
     question: "What view modes does the Opportunities list support?",
-    answer: "Three: **Table View** (default, spreadsheet-style grid), **Grid View** (card-based layout), and **Kanban View** (a board with one column per Stage: Lead, Proposal, Closed). Each Kanban column header shows the opportunity count for that stage plus its Opportunity Value and Forecasted Value totals.",
-    tags: ["table view","grid view","kanban view","table grid kanban"]
+    answer: "Four layouts, switched with the view icons: **Table View** (the default **Pipeline Report**, one row per opportunity), **Grid View** (a card grid), **Kanban View** (columns by stage showing Opportunity Value and Forecasted Value) and **Parent Kanban** (columns grouped by main stage, showing only parent opportunities). The coloured stage chips at the top left filter the screen to one stage.",
+    tags: ["table view","grid view","kanban view","table grid kanban","view modes","kanban","parent kanban"]
   },
   {
     action: "define",
-    object: "opportunity required fields",
+    object: "required fields create opportunity",
     scope: "module",
     section: "Opportunities",
     question: "What is required to create an Opportunity, and can I choose the starting Stage?",
-    answer: "Only **Opportunity Name*** and **Status*** are marked required on the Create Opportunity dialog. **Stage*** is also required but is pre-set to **Lead** and locked — every new Opportunity starts in Lead and you cannot choose a different starting stage.",
-    tags: ["required fields","starting stage","lead stage","starting stage lead"]
+    answer: "Only four things are required to save a lead: **Opportunity Name**, **Business Unit**, **Status** and **Created Date**. **Stage** is pre-set to **Lead**, **Status** to **New Lead** and **Created Date** to today. Everything else, including the **Contact** section, can be filled in later from the lead's profile.",
+    tags: ["required fields","starting stage","lead stage","starting stage lead","mandatory fields","four mandatory fields","business unit required","created date"]
   },
   {
     action: "edit",
@@ -195,8 +195,8 @@ const QA_OPPORTUNITY = [
     scope: "module",
     section: "Opportunities",
     question: "What's the difference between Go % and Get %?",
-    answer: "Both appear as separate percentage fields/columns on Opportunities and in the Forecast Report (e.g. Go% Weighted Value vs. Get% Weighted Value), used alongside Win Probability and AI Probability as distinct probability/likelihood measures feeding weighted-value calculations. The exact business meaning of each beyond that isn't further defined in the product.",
-    tags: ["go percent","get percent","probability metrics"]
+    answer: "**Go %** is the likelihood that the project will reach FID (the likelihood to pursue). **Get %** is the likelihood of winning it against competition. Both are fields in **Status & Value**, and **Weighted Value = Opportunity Value × Go % × Get %**.",
+    tags: ["go percent","get percent","probability metrics","fid","weighted value formula"]
   },
   {
     action: "define",
@@ -204,8 +204,8 @@ const QA_OPPORTUNITY = [
     scope: "module",
     section: "Opportunities",
     question: "What is the difference between Win Probability (%), AI Probability, and Probability (Manual/AI)?",
-    answer: "**Win Probability (%)** and **AI Probability** are tracked as separate columns on an Opportunity, and **Probability (Manual/AI)** is a toggle/flag indicating which probability source is in effect. Correspondingly, **Weighted Value** and **AI Weighted Value** are separate weighted-value calculations — one based on manual probability entry, one AI-derived.",
-    tags: ["win probability","ai probability","weighted value"]
+    answer: "**Go %** and **Get %** are the figures you enter. **AI Probability** is calculated by the system. The **Manual % / AI %** toggle picks which one **Weighted Value** uses. Stage settings also carry a **Default Win Probability (%)** per stage, and a parent shows the average win probability of its children.",
+    tags: ["win probability","ai probability","weighted value","manual ai toggle","weighted value source"]
   },
   {
     action: "define",
@@ -239,9 +239,9 @@ const QA_OPPORTUNITY = [
     object: "responsibility chain role",
     scope: "module",
     section: "Opportunities",
-    question: "What's the difference between Site Representative, Corporate Lead, and Executive Lead?",
-    answer: "All three are searchable people-picker roles assignable to any system user/contact, used both on **Create Opportunity** and in **Account Assignment**. They represent three levels of the responsibility chain for a customer account — an on-the-ground Site Representative, a Corporate Lead, and an Executive Lead — pre-populated from the Account Assignment registry when a matching Customer/Market Type combination exists.",
-    tags: ["site representative","corporate lead","executive lead","site representative corporate lead executive lead"]
+    question: "What's the difference between BD Rep, Corporate Lead, and Executive Lead?",
+    answer: "All three are searchable people-picker roles assignable to any system user/contact, used both on **Create Opportunity** and in **Account Assignment**. They represent three levels of the responsibility chain for a customer account — an on-the-ground BD Rep, a Corporate Lead, and an Executive Lead — pre-populated from the Account Assignment registry when a matching Customer/Market Type combination exists.",
+    tags: ["bd rep","corporate lead","executive lead","bd rep corporate lead executive lead"]
   },
   {
     action: "define",
@@ -258,7 +258,7 @@ const QA_OPPORTUNITY = [
     scope: "module",
     section: "Opportunities",
     question: "Why don't I see a Manage Columns button on the Opportunities list?",
-    answer: "You're likely in **Grid View** or **Kanban View** — **Manage Columns** only appears in **Table View**.",
+    answer: "Manage Columns sits next to the view icons on the **Opportunities** screen. Some environments show it only in **Table View**, so switch back to Table View. If it is missing altogether, ask your administrator whether your group has permission to change columns.",
     tags: ["manage columns missing","grid view","kanban view","missing manage columns"]
   },
   {
@@ -283,17 +283,17 @@ const QA_OPPORTUNITY = [
     action: "view",
     object: "customer interaction history",
     scope: "module",
-    section: "Customer Interactions",
+    section: "Clients Interactions",
     question: "How do I see a customer's interaction history?",
-    answer: "1. Go to **Opportunities Management → Customers Interactions**.\n2. Click a row's **Customer Name** to open its contact list.\n3. Click a specific **Contact** card to open the interaction workspace.\n4. Use the sub-tabs (Call Logs, Mails, Events, Meetings, Task, Comments, Notes, See History) to view or log that interaction type.",
+    answer: "1. Go to **Opportunities Management → Clients Interactions**.\n2. Click a row's **Customer Name** to open its contact list.\n3. Click a specific **Contact** card to open the interaction workspace.\n4. Use the sub-tabs (Call Logs, Mails, Events, Meetings, Task, Comments, Notes, See History) to view or log that interaction type.",
     tags: ["customer history","contact log","crm","crm contact log"]
   },
   {
     action: "define",
     object: "customer notes button",
     scope: "module",
-    section: "Customer Interactions",
-    question: "What is the \"Notes\" button on the Customer Interactions list for?",
+    section: "Clients Interactions",
+    question: "What is the \"Notes\" button on the Clients Interactions list for?",
     answer: "Each customer row on the top-level list has its own **Notes** cell/button that opens a \"Customer Form Chat\" side panel — a running notes/chat log tied to that customer as a whole, not to an individual contact.",
     tags: ["customer notes","customer form chat"]
   },
@@ -301,7 +301,7 @@ const QA_OPPORTUNITY = [
     action: "scope",
     object: "opportunity dropdown on contact interactions",
     scope: "module",
-    section: "Customer Interactions",
+    section: "Clients Interactions",
     question: "How do I keep interaction logs for one specific deal separate from a contact's general history?",
     answer: "Open the contact's interaction workspace and use the **Opportunity** dropdown at the top, defaulted to **General**. Switching it to a specific Opportunity scopes every sub-tab — Call Logs, Mails, Events, Meetings, Task, Comments, Notes — to that deal, so conversation history tied to one active pursuit stays separate from the contact's overall relationship history.",
     tags: ["opportunity scope","general vs opportunity","interaction scope"]
@@ -310,7 +310,7 @@ const QA_OPPORTUNITY = [
     action: "track",
     object: "call log",
     scope: "module",
-    section: "Customer Interactions",
+    section: "Clients Interactions",
     question: "How do I log a call with a customer contact?",
     answer: "Open the contact's interaction workspace, go to the **Call Logs** sub-tab, and click its **+ Create** button to add a new entry (Call Type, Date, Time, Summary, Tag, Attachments).",
     tags: ["call log","log a call","log customer call"]
@@ -319,7 +319,7 @@ const QA_OPPORTUNITY = [
     action: "create",
     object: "customer contact note",
     scope: "module",
-    section: "Customer Interactions",
+    section: "Clients Interactions",
     question: "How do I write a note on a customer contact?",
     answer: "Open the contact's interaction workspace, go to the **Notes** sub-tab, type in the rich note editor (you can also attach a file), and save.",
     tags: ["write note","note editor"]
@@ -328,16 +328,16 @@ const QA_OPPORTUNITY = [
     action: "define",
     object: "calendar consent error",
     scope: "module",
-    section: "Customer Interactions",
+    section: "Clients Interactions",
     question: "Why am I seeing a \"Consent Not Granted\" message on the Events, Meetings, Task, or Comments tabs?",
-    answer: "These tabs integrate with your connected calendar (Google/Outlook) and require **Calendar consent** before they'll function. Go to **My Profile → Settings → Calendar consent** and grant consent, then return to the tab.",
-    tags: ["consent not granted","calendar consent"]
+    answer: "These tabs connect to your Microsoft calendar and need **Calendar consent** before they work. Go to **My Profile → Settings → Calendar consent** and grant it once, then reopen the tab.",
+    tags: ["consent not granted","calendar consent","microsoft calendar"]
   },
   {
     action: "view",
     object: "contact audit trail",
     scope: "module",
-    section: "Customer Interactions",
+    section: "Clients Interactions",
     question: "Where can I see a full audit trail for a customer contact?",
     answer: "Open the contact's interaction workspace and go to the **See History** sub-tab — it shows an audit/activity history for that contact (\"No history available\" when empty).",
     tags: ["audit trail","see history","contact history"]
@@ -346,9 +346,9 @@ const QA_OPPORTUNITY = [
     action: "view",
     object: "customer contact info",
     scope: "module",
-    section: "Customer Interactions",
+    section: "Clients Interactions",
     question: "Where do I find a customer's phone number and email?",
-    answer: "Drill into **Customers Interactions → [Customer Name] → [Contact]** — the Contact card view shows Contact ID, Primary Phone, and Primary Email. The **Contacts Directory** also stores Primary/Secondary Email and Phone Number fields.",
+    answer: "Drill into **Clients Interactions → [Customer Name] → [Contact]** — the Contact card view shows Contact ID, Primary Phone, and Primary Email. The **Contacts Directory** also stores Primary/Secondary Email and Phone Number fields.",
     tags: ["customer phone","customer email","contact info","phone email"]
   },
   {
@@ -465,17 +465,17 @@ const QA_OPPORTUNITY = [
     scope: "module",
     section: "Account Assignment",
     question: "How do I assign a customer account to a responsibility chain?",
-    answer: "1. Go to **Opportunities Management → Account Assignment**.\n2. Click **+ Add**.\n3. Search and select the **Customer Name**.\n4. Choose **Market Type**, **Sub Market Type**, **Tier**.\n5. Pick **Site Representative**, **Corporate Lead**, **Executive Lead**.\n6. Click **Submit**.",
-    tags: ["account assignment","site representative","corporate lead","responsibility chain"]
+    answer: "1. Go to **Opportunities Management → Account Assignment**.\n2. Click **+ Add**.\n3. Search and select the **Customer Name**.\n4. Choose **Market Type**, **Sub Market Type**, **Tier**.\n5. Pick **BD Rep**, **Corporate Lead**, **Executive Lead**.\n6. Click **Submit**.",
+    tags: ["account assignment","bd rep","corporate lead","responsibility chain"]
   },
   {
     action: "define",
-    object: "site representative auto-fill",
+    object: "bd rep auto-fill",
     scope: "module",
     section: "Account Assignment",
-    question: "Why does Create Opportunity automatically fill in the Site Representative field?",
-    answer: "Because a matching **Account Assignment** record exists for that Customer/Market Type combination — the assignment registry pre-populates the Site Representative, Corporate Lead, and Executive Lead pickers when it finds a match.",
-    tags: ["auto-fill site representative","account assignment match"]
+    question: "Why does Create Opportunity automatically fill in the BD Rep field?",
+    answer: "Because a matching **Account Assignment** record exists for that Customer/Market Type combination — the assignment registry pre-populates the BD Rep, Corporate Lead, and Executive Lead pickers when it finds a match.",
+    tags: ["auto-fill bd rep","account assignment match"]
   },
   {
     action: "define",
@@ -483,7 +483,7 @@ const QA_OPPORTUNITY = [
     scope: "module",
     section: "Account Assignment",
     question: "What's the difference between Account Assignment and the Contacts Directory?",
-    answer: "**Account Assignment** maps a Customer account to internal responsible personnel (Site Representative, Corporate Lead, Executive Lead) by market segment/location — it's about internal ownership of the relationship. The **Contacts Directory** is the external people directory — the actual contacts at Customer and Owner organizations.",
+    answer: "**Account Assignment** maps a Customer account to internal responsible personnel (BD Rep, Corporate Lead, Executive Lead) by market segment/location — it's about internal ownership of the relationship. The **Contacts Directory** is the external people directory — the actual contacts at Customer and Owner organizations.",
     tags: ["account assignment vs contacts directory","module comparison"]
   },
   {
@@ -509,8 +509,8 @@ const QA_OPPORTUNITY = [
     object: "contacts directory vs customer interactions",
     scope: "module",
     section: "Sidebar Shortcuts",
-    question: "What's the difference between the Contacts Directory and Customers Interactions?",
-    answer: "**Contacts Directory** is the master people directory — every Customer contact and Owner contact in one place, organized into Contacts (all), Customer Contacts, and Owner Contacts sub-tabs. **Customers Interactions** is where you drill into a specific customer and log/view interactions (calls, mail, meetings, notes) with their contacts. The Directory is the contact list; Customers Interactions is the activity log built on top of it.",
+    question: "What's the difference between the Contacts Directory and Clients Interactions?",
+    answer: "**Contacts Directory** is the master people directory — every Customer contact and Owner contact in one place, organized into Contacts (all), Customer Contacts, and Owner Contacts sub-tabs. **Clients Interactions** is where you drill into a specific customer and log/view interactions (calls, mail, meetings, notes) with their contacts. The Directory is the contact list; Clients Interactions is the activity log built on top of it.",
     tags: ["contacts directory vs customers interactions","module comparison"]
   },
   {
@@ -744,7 +744,7 @@ const QA_OPPORTUNITY = [
     scope: "module",
     section: "Troubleshooting & Naming Differences",
     question: "What's the difference between a Customer and a Contact?",
-    answer: "A **Customer** is the company/account record. A **Contact** is an individual person associated with that Customer (or an Owner), tracked in the Contacts Directory and drilled into from Customers Interactions. A single Customer can have multiple Contacts.",
+    answer: "A **Customer** is the company/account record. A **Contact** is an individual person associated with that Customer (or an Owner), tracked in the Contacts Directory and drilled into from Clients Interactions. A single Customer can have multiple Contacts.",
     tags: ["customer vs contact","terminology"]
   },
   {
@@ -753,8 +753,8 @@ const QA_OPPORTUNITY = [
     scope: "module",
     section: "Troubleshooting & Naming Differences",
     question: "Why can't I submit the Create Opportunity form even after filling in the Contact section fields?",
-    answer: "The Contact section fields (Customer Groups, Site Representative, Corporate Lead, Executive Lead) are optional. The blocker is almost always the required **Status** field being empty because of the Lead-stage configuration gap — check that first (see **Why can't I select a Status when creating an opportunity?**).",
-    tags: ["create opportunity blocked","contact fields optional"]
+    answer: "The **Contact** section is optional. Check the four mandatory fields: **Opportunity Name**, **Business Unit**, **Status** and **Created Date**. If **Status** is empty or says \"Status is required\", the Lead stage has no statuses: a Sales Ops user must add one (for example **New Lead**) under **Settings → Stages & Statuses Configuration**.",
+    tags: ["create opportunity blocked","contact fields optional","cannot submit create opportunity","status is required","business unit required"]
   },
   {
     action: "view",
@@ -817,7 +817,7 @@ const QA_OPPORTUNITY = [
     section: "Opportunity Record: Milestones, Team, Proposals, Compliance and Expenses",
     question: "What is the Milestones tab on an opportunity?",
     answer: "After you choose a **Milestone Template** on the profile, the **Milestones** tab shows a row per milestone with **Milestone**, **Target Date**, **Actual** dates and **Notes**. Remove ones that do not apply or add from the master list, and enter a target date for each. The dates feed the **Pipeline Gantt View** for resource planning, and the standard setup needs at least approximate target dates before a lead is qualified. Each opportunity type shows only its own templates.",
-    tags: ["milestones tab","milestone template","target date","gantt view milestones","opportunity milestones"]
+    tags: ["milestones tab","milestone template","target date","gantt view milestones","opportunity milestones","add a milestone","add milestones","milestone target date","how do I add a milestone"]
   },
   {
     action: "define",
@@ -1052,6 +1052,78 @@ const QA_OPPORTUNITY = [
     question: "Who can see all opportunities in the organisation?",
     answer: "By default **My Dashboard** and the list show your own pipeline. A user needs the **Admin View** permission enabled under **Global Data** to see every opportunity. Ask your administrator to turn it on; leadership and Sales Ops usually have it.",
     tags: ["who can see all opportunities","admin view permission","see everyone pipeline","organisation wide opportunities"]
+  },
+  {
+    action: "view",
+    object: "opportunity stages",
+    scope: "module",
+    section: "Settings",
+    question: "What stages and statuses does an opportunity go through?",
+    answer: "By default: **Lead** (New Lead), **Opportunity** (Active, On Hold), **Proposal** (Active, In Progress, Under Review, In Review), **Inquiry** (Received Inquiry, Submitted, Awaiting Client Response), **Bidding** (RFP Receipt, RFP Submitted, Clarification, Best & Final, Awaiting Decision) and **Closed** (Won, Lost, No Bid, Cancelled). Advance stages in order by dragging the card on the Kanban board or changing **Stage** on the profile. Sales Ops can change the lists under **Settings → Stages & Statuses Configuration**.",
+    tags: ["stages","statuses","pipeline stages","closed statuses","won lost no bid cancelled","lead to closed","opportunity stages","what are the stages","stage list","opportunity stage"]
+  },
+  {
+    action: "define",
+    object: "weighted value",
+    scope: "module",
+    section: "Opportunities",
+    question: "How is Weighted Value calculated?",
+    answer: "**Weighted Value = Opportunity Value × Go % × Get %**, calculated automatically. The **Manual % / AI %** toggle lets you use the **AI Probability** instead. The result feeds the weighted pipeline on **My Dashboard**, the Kanban columns and the reports.",
+    tags: ["weighted value","weighted opportunity value","forecasted value","formula"]
+  },
+  {
+    action: "view",
+    object: "recent activity",
+    scope: "module",
+    section: "Dashboard",
+    question: "What is the Recent Activity feed?",
+    answer: "A feed on **My Dashboard** of the latest calls, mails, meetings and events across your opportunities. It shows whether a pursuit is being worked or going cold.",
+    tags: ["recent activity","activity feed","dashboard activity"]
+  },
+  {
+    action: "view",
+    object: "dashboard cards",
+    scope: "module",
+    section: "Dashboard",
+    question: "What cards are at the top of My Dashboard?",
+    answer: "**Total Opportunity Value**, **Weighted Opportunity Value**, **Due This Week** and **Stale Opportunities**. Use the **Daily / Weekly / Monthly** toggle to change the period. The **Opportunity Funnel** and the **Task** panel sit below them.",
+    tags: ["dashboard cards","top cards","kpi cards","period toggle"]
+  },
+  {
+    action: "define",
+    object: "zoominfo",
+    scope: "module",
+    section: "Sidebar Shortcuts",
+    question: "Can I import clients and contacts from ZoomInfo or scan a business card?",
+    answer: "Yes. Clients and contacts can be imported from **ZoomInfo**, and a point of contact can be created from a photo of a business card (**OCR**), also from the **Arena Onsite** app. New clients still go to Sales Ops for approval before they can be used.",
+    tags: ["zoominfo","ocr","business card","import contacts"]
+  },
+  {
+    action: "define",
+    object: "stale alerts",
+    scope: "module",
+    section: "Opportunity Record: Milestones, Team, Proposals, Compliance and Expenses",
+    question: "How do stale and inactive alerts work?",
+    answer: "The **Stage / Inactive Threshold Notification** in **Timeline & Activity** warns you when an opportunity sits too long with no updated information. The thresholds are set by Sales Ops, and stale opportunities count on **My Dashboard**.",
+    tags: ["stale","inactive threshold","notification","inactivity alert"]
+  },
+  {
+    action: "define",
+    object: "client naming",
+    scope: "module",
+    section: "Troubleshooting & Naming Differences",
+    question: "Why do some screens say Client and others Customer?",
+    answer: "This documentation uses **Client**, **Clients Interactions** and **BD Rep**. Some screens or environments say **Customer**, **Customers Interactions** and **Site Representative** for the same things. The **Customers** shortcut in the toolbar and **Global Data → Customers** keep their own names.",
+    tags: ["client vs customer","site representative","bd rep","naming"]
+  },
+  {
+    action: "add",
+    object: "milestone",
+    scope: "module",
+    section: "Opportunity Record: Milestones, Team, Proposals, Compliance and Expenses",
+    question: "How do I add milestones to an opportunity?",
+    answer: "Choose a **Milestone Template** on the profile, then open the **Milestones** tab. Each row shows an **Icon**, **Milestone**, **Target Date**, **Actual dates** and **Notes**. Remove a milestone that does not apply, add one from the master list, enter a **Target Date** for each and add notes. The system needs at least an approximate target date on the milestones before it lets you move the opportunity to Qualified.",
+    tags: ["add a milestone","milestone target date","milestones tab","milestone template"]
   }
 ];
 
@@ -6062,7 +6134,7 @@ const QA_WORKORDER = [
     scope: "module",
     section: "The Work Orders Page",
     question: "How do I create a new work order?",
-    answer: "Go to <strong>Home → Work Order</strong>, open the <strong>Work Orders</strong> tab and click <strong>Create</strong>. In the <strong>Create Work Order Contract</strong> window, choose the <strong>Work Order Type</strong> (for example Equipment), enter the <strong>WO Description</strong>, pick <strong>Create By</strong> (Inspection Issue or Equipment), choose the equipment, add the maintenance, cost and service details and click <strong>Submit</strong>. The work order appears on the list with its new ID. Some environments running an earlier version show only Name, Description and Type in this window.",
+    answer: "Go to **Home → Work Order**, open the **Work Orders** tab and click **Create**. In the **Create Work Order Contract** window, choose the **Work Order Type** (for example Equipment), enter the **WO Description**, pick **Create By** (Inspection Issue or Equipment), choose the equipment, add the maintenance, cost and service details and click **Submit**. The work order appears on the list with its new ID. Some environments running an earlier version show only Name, Description and Type in this window.",
     tags: ["new work order","add work order","work order contract","create contract","work order creation"]
   },
   {
@@ -6071,7 +6143,7 @@ const QA_WORKORDER = [
     scope: "module",
     section: "The Work Orders Page",
     question: "How do I open a work order I already created?",
-    answer: "On the <strong>Work Orders</strong> tab, click the work order. It opens on the <strong>Profile</strong> tab. Use the list, grid and column view icons on the right to change how the list looks.",
+    answer: "On the **Work Orders** tab, click the work order. It opens on the **Profile** tab. Use the list, grid and column view icons on the right to change how the list looks.",
     tags: ["open work order","view work order","work order card","switch view"]
   },
   {
@@ -6080,7 +6152,7 @@ const QA_WORKORDER = [
     scope: "module",
     section: "Profile and Items",
     question: "What is the Work Order Profile tab?",
-    answer: "The <strong>Profile</strong> tab is the front page of a work order. It has four sections: <strong>Basic Information</strong>, <strong>Priority</strong>, <strong>Service Assignment</strong> and <strong>Diagnosis</strong>. The fields follow the form the administrator set up under <strong>Settings → Work Order Types → Profile</strong>. It is always on and cannot be switched off.",
+    answer: "The **Profile** tab is the front page of a work order. It has four sections: **Basic Information**, **Priority**, **Service Assignment** and **Diagnosis**. The fields follow the form the administrator set up under **Settings → Work Order Types → Profile**. It is always on and cannot be switched off.",
     tags: ["work order profile","profile tab","work order details","item setup"]
   },
   {
@@ -6125,7 +6197,7 @@ const QA_WORKORDER = [
     scope: "module",
     section: "Team",
     question: "How do I add a crew to a work order?",
-    answer: "Open the work order's <strong>Team</strong> tab, select the <strong>Crews</strong> tab at the top, multi-select from the crews already created, then click <strong>Submit</strong>.",
+    answer: "Open the work order's **Team** tab, select the **Crews** tab at the top, multi-select from the crews already created, then click **Submit**.",
     tags: ["add crew","assign crew","work order crew","crews tab"]
   },
   {
@@ -6152,7 +6224,7 @@ const QA_WORKORDER = [
     scope: "module",
     section: "Documents",
     question: "Where do I find documents related to a work order's procurement?",
-    answer: "Open the work order's <strong>Documents</strong> tab. Files are filed in folders named after the tab they came from (Profile, Items, Timesheet, Equipment, Inventory, Procurement, Expense and Communication). Click the <strong>Procurement</strong> folder for the procurement documents, and use the breadcrumb to go back up.",
+    answer: "Open the work order's **Documents** tab. Files are filed in folders named after the tab they came from (Profile, Items, Timesheet, Equipment, Inventory, Procurement, Expense and Communication). Click the **Procurement** folder for the procurement documents, and use the breadcrumb to go back up.",
     tags: ["work order documents","procurement documents","document folders","view documents"]
   },
   {
@@ -6170,7 +6242,7 @@ const QA_WORKORDER = [
     scope: "global",
     section: "Settings",
     question: "How do I configure statuses for work orders and items?",
-    answer: "Go to <strong>Home → Work Order → Settings → Status</strong>. The page shows the default statuses. Add or update the statuses you need and click <strong>Submit</strong>. They appear in the <strong>Work Order Status</strong> dropdown on the work order Profile.",
+    answer: "Go to **Home → Work Order → Settings → Status**. The page shows the default statuses. Add or update the statuses you need and click **Submit**. They appear in the **Work Order Status** dropdown on the work order Profile.",
     tags: ["work order status","configure status","add status","status colors","global data work order"]
   },
   {
@@ -6179,7 +6251,7 @@ const QA_WORKORDER = [
     scope: "global",
     section: "Settings",
     question: "How do I create a new Work Order Type?",
-    answer: "Go to <strong>Home → Work Order → Settings → Work Order Types</strong>, click <strong>+ Work Order Type</strong>, enter the details and save. Then click the type to set its <strong>Tab Visibility</strong>, <strong>Profile</strong>, <strong>Item Form</strong>, <strong>Expense Form</strong> and <strong>ID Settings</strong>. Only the Equipment type has <strong>Operational Status</strong>.",
+    answer: "Go to **Home → Work Order → Settings → Work Order Types**, click **+ Work Order Type**, enter the details and save. Then click the type to set its **Tab Visibility**, **Profile**, **Item Form**, **Expense Form** and **ID Settings**. Only the Equipment type has **Operational Status**.",
     tags: ["work order type","create type","global data work order types","configure work order type"]
   },
   {
@@ -6188,7 +6260,7 @@ const QA_WORKORDER = [
     scope: "global",
     section: "Settings",
     question: "How do I edit an existing Work Order Type?",
-    answer: "Go to <strong>Settings → Work Order Types</strong> and click the type to open its configuration (<strong>Tab Visibility</strong>, <strong>Profile</strong>, <strong>Item Form</strong>, <strong>Expense Form</strong>, <strong>ID Settings</strong>). Change what you need and click <strong>Save Changes</strong> on that sub-tab.",
+    answer: "Go to **Settings → Work Order Types** and click the type to open its configuration (**Tab Visibility**, **Profile**, **Item Form**, **Expense Form**, **ID Settings**). Change what you need and click **Save Changes** on that sub-tab.",
     tags: ["edit work order type","modify work order type","global data"]
   },
   {
@@ -6215,7 +6287,7 @@ const QA_WORKORDER = [
     scope: "module",
     section: "Equipment",
     question: "How do I access Load Out Requests (LORs) from a work order?",
-    answer: "Open the work order and go to its <strong>Equipment</strong> tab to view Load Out Requests / equipment associated with that work order.",
+    answer: "Open the work order and go to its **Equipment** tab to view Load Out Requests / equipment associated with that work order.",
     tags: ["work order LOR","load out request","equipment tab","LORs"]
   },
   {
@@ -6854,7 +6926,7 @@ const QA_WORKORDER = [
     scope: "module",
     section: "Who Does What",
     question: "Which work order types are available?",
-    answer: "<strong>Equipment</strong> is the default type. Add others under <strong>Settings → Work Order Types</strong> with <strong>+ Work Order Type</strong>. Each type has its own tabs, forms and ID format. Some environments running an earlier version also show <strong>Service</strong> and <strong>Material</strong> types.",
+    answer: "**Equipment** is the default type. Add others under **Settings → Work Order Types** with **+ Work Order Type**. Each type has its own tabs, forms and ID format. Some environments running an earlier version also show **Service** and **Material** types.",
     tags: ["work order types","default type","equipment type","service type","material type"]
   },
   {
@@ -6863,7 +6935,7 @@ const QA_WORKORDER = [
     scope: "module",
     section: "Settings",
     question: "How do I set up work order statuses?",
-    answer: "Go to <strong>Settings → Status</strong>, review the default statuses, add or update the ones you need and click <strong>Submit</strong>. They fill the <strong>Work Order Status</strong> dropdown on the Profile.",
+    answer: "Go to **Settings → Status**, review the default statuses, add or update the ones you need and click **Submit**. They fill the **Work Order Status** dropdown on the Profile.",
     tags: ["work order status","status settings","add status"]
   },
   {
@@ -6872,7 +6944,7 @@ const QA_WORKORDER = [
     scope: "module",
     section: "Settings",
     question: "Why does my Work Order Settings look simpler than this guide?",
-    answer: "Some environments still run an earlier version of Work Order. There, Settings may show only <strong>Work Order Types</strong> and <strong>Users and Permissions</strong>, the Create window may show only <strong>Name</strong>, <strong>Description</strong> and <strong>Type</strong>, and some tabs (Invoices, Cost, Parts, Reports) may be missing. This documentation describes Arena 2.0; ask your administrator to upgrade the environment to get the full set.",
+    answer: "Some environments still run an earlier version of Work Order. There, Settings may show only **Work Order Types** and **Users and Permissions**, the Create window may show only **Name**, **Description** and **Type**, and some tabs (Invoices, Cost, Parts, Reports) may be missing. This documentation describes Arena 2.0; ask your administrator to upgrade the environment to get the full set.",
     tags: ["earlier version","older version","settings missing","arena 2.0","fewer tabs"]
   },
   {
@@ -6881,7 +6953,7 @@ const QA_WORKORDER = [
     scope: "module",
     section: "The Work Orders Page",
     question: "What are the tabs on the Work Order page?",
-    answer: "The page has three tabs: <strong>Work Orders</strong> (every work order), <strong>Workflow Issues</strong> (work orders that failed approval, with the approver's remarks) and <strong>Reports</strong> (the Equipment Breakdown Report). <strong>Settings</strong> is on the right.",
+    answer: "The page has three tabs: **Work Orders** (every work order), **Workflow Issues** (work orders that failed approval, with the approver's remarks) and **Reports** (the Equipment Breakdown Report). **Settings** is on the right.",
     tags: ["work order page tabs","workflow issues","reports tab","settings"]
   },
   {
@@ -6890,7 +6962,7 @@ const QA_WORKORDER = [
     scope: "module",
     section: "Equipment",
     question: "Where do equipment requests appear on a work order?",
-    answer: "On the work order's <strong>Equipment</strong> tab. Click <strong>Add</strong> for the Request Form; the requests and Load Out Requests raised for this work order are listed there.",
+    answer: "On the work order's **Equipment** tab. Click **Add** for the Request Form; the requests and Load Out Requests raised for this work order are listed there.",
     tags: ["equipment tab work order","load out request from work order","lor tab"]
   },
   {
@@ -6899,7 +6971,7 @@ const QA_WORKORDER = [
     scope: "module",
     section: "Approval, Cancel and Reopen",
     question: "Where do I see rejected work orders?",
-    answer: "Open <strong>Work Order → Workflow Issues</strong>. It lists work orders that failed to move through approval with the approver's remarks. The work order goes back to the Requester, who edits and resubmits it.",
+    answer: "Open **Work Order → Workflow Issues**. It lists work orders that failed to move through approval with the approver's remarks. The work order goes back to the Requester, who edits and resubmits it.",
     tags: ["rejected work order","workflow issues","approver remarks"]
   },
   {
@@ -6908,7 +6980,7 @@ const QA_WORKORDER = [
     scope: "module",
     section: "The Work Orders Page",
     question: "What tabs does a work order have?",
-    answer: "A work order can show <strong>Profile</strong>, <strong>Items</strong>, <strong>Team</strong>, <strong>Timesheets</strong>, <strong>Equipment</strong>, <strong>Inventory</strong>, <strong>Procurement</strong>, <strong>Expense</strong>, <strong>Schedule</strong>, <strong>Communication</strong>, <strong>Documents</strong>, <strong>Drawings</strong>, <strong>Parts</strong>, <strong>Invoices</strong> and <strong>Cost</strong>. The administrator switches tabs on or off per work order type under <strong>Settings → Work Order Types → Tab Visibility</strong>. <strong>Profile</strong> is always on.",
+    answer: "A work order can show **Profile**, **Items**, **Team**, **Timesheets**, **Equipment**, **Inventory**, **Procurement**, **Expense**, **Schedule**, **Communication**, **Documents**, **Drawings**, **Parts**, **Invoices** and **Cost**. The administrator switches tabs on or off per work order type under **Settings → Work Order Types → Tab Visibility**. **Profile** is always on.",
     tags: ["work order tabs","tabs of a work order","which tabs","tab list","what tabs does a work order have"]
   },
   {
@@ -6917,7 +6989,7 @@ const QA_WORKORDER = [
     scope: "module",
     section: "Invoices and Cost",
     question: "What does the Cost tab show on a work order?",
-    answer: "The <strong>Cost</strong> tab shows the work order cost by category with its source: <strong>Parts</strong> (approved purchase orders plus Inventory pulls), <strong>Labor</strong> (timesheet hours times rate), <strong>External / Vendor</strong> (approved vendor invoices), <strong>Other</strong> (Expense tab entries) and <strong>Net Cost</strong> (the total). Nothing is typed into it. It fills itself as the other tabs are used.",
+    answer: "The **Cost** tab shows the work order cost by category with its source: **Parts** (approved purchase orders plus Inventory pulls), **Labor** (timesheet hours times rate), **External / Vendor** (approved vendor invoices), **Other** (Expense tab entries) and **Net Cost** (the total). Nothing is typed into it. It fills itself as the other tabs are used.",
     tags: ["cost tab","work order cost tab","what does the cost tab show","net cost","parts labor external other"]
   },
   {
@@ -6926,7 +6998,7 @@ const QA_WORKORDER = [
     scope: "module",
     section: "The Work Orders Page",
     question: "Who can create a work order?",
-    answer: "A user whose group has the create permission under <strong>Settings → Users and Permissions</strong>, usually a <strong>Requester</strong> such as a site engineer or equipment coordinator. They click <strong>Create</strong> on the <strong>Work Orders</strong> tab and raise the work order against equipment.",
+    answer: "A user whose group has the create permission under **Settings → Users and Permissions**, usually a **Requester** such as a site engineer or equipment coordinator. They click **Create** on the **Work Orders** tab and raise the work order against equipment.",
     tags: ["who can create work order","create permission","requester","raise work order permission"]
   },
   {
@@ -6935,7 +7007,7 @@ const QA_WORKORDER = [
     scope: "module",
     section: "Profile and Items",
     question: "What is the WO ID and where do I see it?",
-    answer: "The <strong>WO ID</strong> is generated automatically when the work order is created, in the format set under <strong>Settings → Work Order Types → ID Settings</strong>. It shows at the top of the <strong>Profile</strong> tab and in the first column of the <strong>Work Orders</strong> list.",
+    answer: "The **WO ID** is generated automatically when the work order is created, in the format set under **Settings → Work Order Types → ID Settings**. It shows at the top of the **Profile** tab and in the first column of the **Work Orders** list.",
     tags: ["wo id","work order id","work order number","id shown"]
   },
   {
@@ -6944,7 +7016,7 @@ const QA_WORKORDER = [
     scope: "module",
     section: "Who Does What",
     question: "Who is the Work Order Administrator?",
-    answer: "Usually a System Administrator or Equipment Admin. They set up work order types, tabs, forms, ID format, operational statuses, maintenance types, statuses, priorities, approval workflows, the reopen window and user access under <strong>Home → Work Order → Settings</strong>.",
+    answer: "Usually a System Administrator or Equipment Admin. They set up work order types, tabs, forms, ID format, operational statuses, maintenance types, statuses, priorities, approval workflows, the reopen window and user access under **Home → Work Order → Settings**.",
     tags: ["work order administrator","admin role","who sets up work orders","system administrator"]
   },
   {
@@ -6953,7 +7025,7 @@ const QA_WORKORDER = [
     scope: "module",
     section: "Who Does What",
     question: "What must be in place before the first work order is raised?",
-    answer: "Set up the work order types, maintenance types, statuses and priorities, mark an approval workflow <strong>Set as Default</strong>, configure invoice approvals, make sure the equipment exists in Asset Management with a Business Unit and Location, create the Projects and Phase Codes for cost, stock the items in Inventory and add users under <strong>Users and Permissions</strong>.",
+    answer: "Set up the work order types, maintenance types, statuses and priorities, mark an approval workflow **Set as Default**, configure invoice approvals, make sure the equipment exists in Asset Management with a Business Unit and Location, create the Projects and Phase Codes for cost, stock the items in Inventory and add users under **Users and Permissions**.",
     tags: ["before first work order","prerequisites","checklist","setup order work order"]
   }
 ];
@@ -8265,7 +8337,7 @@ const QA_INVENTORYMANAGEMENT = [
     scope: "module",
     section: "Who Does What",
     question: "What are Pick Up Tickets, Ship Tickets and Return Tickets?",
-    answer: "They are the names used on earlier versions of Inventory Management. There the tabs are <strong>Inventory Master</strong>, <strong>Site Material Request</strong> (earlier <strong>Pick Up Ticket</strong>), <strong>Material Issue Ticket</strong> (earlier <strong>Ship Ticket</strong>) and <strong>Return Ticket</strong>. Arena 2.0 documentation covers <strong>Overview</strong>, <strong>Inventory</strong>, <strong>Orders</strong>, <strong>Hauling Trucks</strong>, <strong>Tickets</strong> and <strong>Reports</strong>; ask your administrator to upgrade the environment to get them.",
+    answer: "They are the names used on earlier versions of Inventory Management. There the tabs are **Inventory Master**, **Site Material Request** (earlier **Pick Up Ticket**), **Material Issue Ticket** (earlier **Ship Ticket**) and **Return Ticket**. Arena 2.0 documentation covers **Overview**, **Inventory**, **Orders**, **Hauling Trucks**, **Tickets** and **Reports**; ask your administrator to upgrade the environment to get them.",
     tags: ["pick up ticket","ship ticket","return ticket","site material request","material issue ticket","inventory master","earlier version"]
   },
   {
@@ -8274,7 +8346,7 @@ const QA_INVENTORYMANAGEMENT = [
     scope: "module",
     section: "Who Does What",
     question: "Where are Load Out Requests for equipment?",
-    answer: "Load Out Requests are not part of Inventory Management. Request and move equipment under <strong>Asset Management → Load Out Request</strong>. Inventory Management keeps material stock, External Orders and External Tickets.",
+    answer: "Load Out Requests are not part of Inventory Management. Request and move equipment under **Asset Management → Load Out Request**. Inventory Management keeps material stock, External Orders and External Tickets.",
     tags: ["load out request","lor","equipment request","where is lor"]
   },
   {
@@ -8283,7 +8355,7 @@ const QA_INVENTORYMANAGEMENT = [
     scope: "module",
     section: "Who Does What",
     question: "What tabs does Inventory Management have?",
-    answer: "<strong>Overview</strong> (map of locations), <strong>Inventory</strong> (locations and their materials), <strong>Orders</strong> (External Orders), <strong>Hauling Trucks</strong>, <strong>Tickets</strong> (External Tickets), <strong>Reports</strong> and <strong>Settings</strong>.",
+    answer: "**Overview** (map of locations), **Inventory** (locations and their materials), **Orders** (External Orders), **Hauling Trucks**, **Tickets** (External Tickets), **Reports** and **Settings**.",
     tags: ["inventory tabs","inventory management tabs","what tabs","module tabs"]
   },
   {
@@ -8292,7 +8364,7 @@ const QA_INVENTORYMANAGEMENT = [
     scope: "module",
     section: "Materials at a Location",
     question: "How do I add a custom column to the materials list at a location?",
-    answer: "Open the Inventory Location, click <strong>Add Custom Column</strong>, choose the field type and enter the column name. Use <strong>Manage Columns</strong> to show, hide or reorder columns.",
+    answer: "Open the Inventory Location, click **Add Custom Column**, choose the field type and enter the column name. Use **Manage Columns** to show, hide or reorder columns.",
     tags: ["custom column","add column","extra field materials"]
   },
   {
@@ -8301,7 +8373,7 @@ const QA_INVENTORYMANAGEMENT = [
     scope: "module",
     section: "Inventory Locations and Overview Map",
     question: "How do I see which materials are in an Inventory Location?",
-    answer: "Open the <strong>Inventory</strong> tab and click the location, or click its geofence on the <strong>Overview</strong> map and use the link at the top of the details. The page lists each material with its quantity, minimum and maximum.",
+    answer: "Open the **Inventory** tab and click the location, or click its geofence on the **Overview** map and use the link at the top of the details. The page lists each material with its quantity, minimum and maximum.",
     tags: ["materials in location","stock at location","location materials"]
   }
 ];
@@ -9268,27 +9340,27 @@ const MODULES = [
         "definitions": [
           {
             "term": "Opportunity flow at a glance",
-            "definition": "A BD user logs a lead with the short Create form, then opens the lead and completes its profile: classification, value, dates and contacts. The BD user sets milestone dates and changes the Stage, at which point the system marks every field the setup requires with a red asterisk. The opportunity then advances through its stages and statuses until it closes, and each outcome stays on the record. Leadership follows the pipeline on <strong>My Dashboard</strong>, <strong>Reports</strong> and <strong>Analytics</strong>. Sales Ops keeps customers, locations, account assignments and templates ready so BD users are not blocked."
+            "definition": "A BD user logs a lead with the short Create form, then opens the lead and completes its profile: classification, value, dates and contacts. The BD user sets milestone dates and changes the Stage, at which point the system marks every field the setup requires with a red asterisk. The opportunity then advances through its stages and statuses until it closes, and each outcome stays on the record. Leadership follows the pipeline on **My Dashboard**, **Reports** and **Analytics**. Sales Ops keeps customers, locations, account assignments and templates ready so BD users are not blocked."
           },
           {
             "term": "BD user: what you do",
-            "definition": "Business Development rep, estimator or account manager. You click <strong>+ Create</strong> to log a lead, open it to complete the profile (<strong>Details</strong>, <strong>Status & Value</strong>, <strong>Timeline & Activity</strong>, <strong>Contact</strong>), set the Milestone Template and target dates, log calls, mails, meetings, tasks and notes on <strong>Customers Interactions</strong>, add proposals and pursuit expenses, and move the Stage and Status as the pursuit advances. If a customer, location or contact is missing, you ask Sales Ops in the opportunity's <strong>Comments</strong> tab. Your <strong>My Dashboard</strong> shows your own pipeline."
+            "definition": "Business Development rep, estimator or account manager. You click **+ Create** to log a lead, open it to complete the profile (**Details**, **Status & Value**, **Timeline & Activity**, **Contact**), set the Milestone Template and target dates, log calls, mails, meetings, tasks and notes on **Clients Interactions**, add proposals and pursuit expenses, and move the Stage and Status as the pursuit advances. If a customer, location or contact is missing, you ask Sales Ops in the opportunity's **Comments** tab. Your **My Dashboard** shows your own pipeline."
           },
           {
             "term": "Team member: what you do",
-            "definition": "Anyone added on the opportunity's <strong>Teams</strong> tab. Team members can edit the opportunity's fields and add information, and use the <strong>Comments</strong> tab as the internal chat for that deal."
+            "definition": "Anyone added on the opportunity's **Teams** tab. Team members can edit the opportunity's fields and add information, and use the **Comments** tab as the internal chat for that deal."
           },
           {
             "term": "BD Rep, Corporate Lead and Executive Lead: what you do",
-            "definition": "These are the people named on an opportunity's <strong>Contact</strong> section: the BD Rep drives the pursuit (some screens call this role Site Representative), the Corporate Lead gives business oversight, and the Executive Lead holds final approval authority. They can be picked by hand, or fill in automatically when the customer, location and market match a row in <strong>Account Assignment</strong>."
+            "definition": "These are the people named on an opportunity's **Contact** section: the BD Rep drives the pursuit (some environments call this role Site Representative), the Corporate Lead gives business oversight, and the Executive Lead holds final approval authority. They can be picked by hand, or fill in automatically when the customer, location and market match a row in **Account Assignment**."
           },
           {
             "term": "Sales Ops (Module Manager): what you do",
-            "definition": "You keep the module ready for BD users. Under <strong>Settings</strong> you manage <strong>Stages & Statuses Configuration</strong>, the <strong>Opportunities Form</strong> (Required by stage, Hide, Show At Creation), <strong>ID Settings</strong>, Opportunity Types and <strong>Milestone Templates</strong>, the Business Development name pool, expense categories with their approval routing, proposal statuses and <strong>Users and Permissions</strong>. On the module you keep <strong>Account Assignment</strong> up to date. In Global Data you create <strong>Locations</strong> (named Client - City), approve new customers and maintain the <strong>Compliance Hub</strong>. You also answer BD requests posted in an opportunity's <strong>Comments</strong>."
+            "definition": "You keep the module ready for BD users. Under **Settings** you manage **Stages & Statuses Configuration**, the **Opportunities Form** (Required by stage, Hide, Show At Creation), **ID Settings**, Opportunity Types and **Milestone Templates**, the Business Development name pool, expense categories with their approval routing, proposal statuses and **Users and Permissions**. On the module you keep **Account Assignment** up to date. In Global Data you create **Locations** (named Client - City), approve new customers and maintain the **Compliance Hub**. You also answer BD requests posted in an opportunity's **Comments**."
           },
           {
             "term": "Leadership: what you do",
-            "definition": "Sales Directors and executives read the pipeline rather than enter it: <strong>Analytics</strong> (Market & Operations, Executive Summary, Pipeline by BU, Pipeline Intelligence) and <strong>Reports</strong> (Forecast, Opportunity Aging, Outcome Analysis, Customer Win Rate, Pipeline Report, Huddle Report, Pipeline Gantt View). With the <strong>Admin View</strong> permission they also see every opportunity on the dashboard."
+            "definition": "Sales Directors and executives read the pipeline rather than enter it: **Analytics** (Market & Operations, Executive Summary, Pipeline by BU, Pipeline Intelligence) and **Reports** (Forecast, Opportunity Aging, Outcome Analysis, Customer Win Rate, Pipeline Report, Huddle Report, Pipeline Gantt View). With the **Admin View** permission they also see every opportunity on the dashboard."
           }
         ],
         "procedures": [
@@ -9317,19 +9389,19 @@ const MODULES = [
       },
       {
         "heading": "Settings",
-        "intro": "<p><strong>Settings</strong> (the gear icon next to the module's tab bar) is where an <strong>Opportunity Management Module Admin</strong> configures the pipeline, form fields, ID format, and permissions that shape how the whole Business Development team uses the module — End Users (BD reps, estimators) never need to open these screens day to day, but they feel it first if the setup here is left half-done. A misconfiguration is not a one-deal problem: it can quietly stop the entire team from logging new pursuits.</p><p>Nearly every \"why can't I do X\" question in Opportunity Management (most often, \"why can't I select a Status when creating an opportunity\") traces back to a gap here rather than a bug or a permission issue, which makes this the first place to check when something in the module looks blocked.</p>\n    <p>Settings is organized into ten areas: Competitor Form, Stages & Statuses Configuration, Opportunities Form, Expense, ID Settings, Business Development, Project Types, Opportunity Type, Milestone Templates, Customer Relation, and Users and Permissions. Several are simple maintained catalogs an admin populates once and leaves static; Stages & Statuses Configuration and Opportunities Form directly gate what end users can do on the Create Opportunity dialog.</p>",
+        "intro": "<p><strong>Settings</strong> (the gear icon on the module toolbar) is where Sales Ops or an administrator configures the pipeline, the form fields, the ID format and who can use the module. End users rarely open it, but a gap here can stop the whole team logging leads.</p><p>Settings has these areas: <strong>Competitor Form</strong>, <strong>Stages & Statuses Configuration</strong>, <strong>Opportunities Form</strong>, <strong>Expense</strong>, <strong>ID Settings</strong>, <strong>Business Development</strong>, <strong>Project Types</strong>, <strong>Opportunity Type</strong>, <strong>Milestone Templates</strong>, <strong>Customer Relation</strong> and <strong>Users and Permissions</strong>. Most \"why can't I do X\" questions trace back to a gap in <strong>Stages & Statuses Configuration</strong> or <strong>Opportunities Form</strong>.</p>",
         "definitions": [
           {
             "term": "Stages & Statuses Configuration",
-            "definition": "The screen that defines the entire pipeline structure — the sequence of Stages (Lead → Proposal → Closed by default) and, within each Stage, the list of allowed Statuses. Per stage, you configure a Stage Name, a display color, Default Win Probability (%), Stage Threshold (Days), and the Allowed Statuses list (each status also gets its own color). For the Closed stage specifically, each status carries its own outcome label rather than a simple Success/Failure flag — the defaults are Won (Success), Lost (Failure), Cancelled (Cancelled), and No Bid (No Bid) — which is what the Outcome Analysis Report and Customer Win Rate Report read to tell wins from other closures. This screen also supports Reorder Stages and Add Stages for restructuring the pipeline itself."
+            "definition": "The screen that defines the pipeline: the stages (Lead → Opportunity → Proposal → Inquiry → Bidding → Closed by default) and, within each stage, the allowed statuses. By default Opportunity has Active and On Hold; Proposal has Active, In Progress, Under Review and In Review; Inquiry has Received Inquiry, Submitted and Awaiting Client Response; Bidding has RFP Receipt, RFP Submitted, Clarification, Best & Final and Awaiting Decision; Closed has Won, Lost, No Bid and Cancelled. Per stage you set a name, a color, a Default Win Probability (%), a Stage Threshold (Days) and the allowed statuses. Each Closed status carries its own outcome label, which the Outcome Analysis and Client Win Rate reports read to tell wins from other closures. **Reorder Stages** and **Add Stages** restructure the pipeline. Closed stays one stage, so win and loss analytics stay clean."
           },
           {
             "term": "Opportunities Form",
-            "definition": "The screen controlling the Create Opportunity form's field set and behavior, in four sub-tabs: Standard Fields (the built-in fields), Configurable Fields (where custom fields are added), Stale Threshold (the number of days of inactivity after which an opportunity is flagged \"stale\" for the dashboard's Stale Opportunities KPI), and a further <strong>Settings</strong> sub-tab (see below)."
+            "definition": "Controls the Create Opportunity form and what each stage requires, in four sub-tabs: **Standard Fields**, **Configurable Fields**, **Stale Threshold** (days without activity before an opportunity counts as stale) and **Settings**. For each field you set **Required** (and the stage it applies to), **Hide** and **Show At Creation**. This is what produces the red asterisks when a lead is qualified, and what keeps the create form short."
           },
           {
             "term": "Opportunities Form → Settings",
-            "definition": "A sub-tab inside Opportunities Form holding four separate toggles/settings: <strong>Parent Mode</strong> (turns on parent/child opportunity hierarchies — needed before the Parent/Child/Standalone fields on an opportunity mean anything); <strong>AutoFill Customer Details</strong> (auto-populates customer fields on Create Opportunity once a Customer is picked); <strong>Document Management</strong> (choose AWS S3 or SharePoint as the storage backend for opportunity attachments — locked and can no longer be changed once any Opportunity or Proposal already exists); and the <strong>Weighted Value Formula</strong> (defines Weighted Opportunity Value as Lead Value × Win Probability (%), the same figure shown as a My Dashboard KPI)."
+            "definition": "A sub-tab of **Opportunities Form** with four settings. **Parent Mode** turns on parent and child opportunities. **AutoFill Customer Details** fills the client fields once a client is picked. **Document Management** chooses AWS S3 or SharePoint as the storage for opportunity attachments (the guide describes documents held on the organisation's SharePoint site); it locks once any opportunity or proposal exists. The **Weighted Value Formula** shows how weighted value is worked out: Opportunity Value × Go % × Get %."
           },
           {
             "term": "Expense",
@@ -9362,6 +9434,10 @@ const MODULES = [
           {
             "term": "Users and Permissions",
             "definition": "The access-control screen for the module. Existing User Groups (for example, Opportunity Manager or Opportunity Estimator) are managed via a three-dot menu offering Permissions and Users management, and Add User Group creates a new group along with its Permissions and Users."
+          },
+          {
+            "term": "Sales Ops shared settings",
+            "definition": "Sales Ops also maintains **Opportunity Type** (New Build, Existing Facility), **Milestone Templates**, **Business Development** (the BD name pool), **Manage Columns** (Sales Ops can save the default layout for everyone) and **Users and Permissions** (the BD group and the Admin group). Proposal statuses, the compliance requirement directory (under Global Data) and the expense categories with their approval routing are maintained here too."
           }
         ],
         "procedures": [
@@ -9370,7 +9446,7 @@ const MODULES = [
             "steps": [
               "Go to <strong>Settings → Stages & Statuses Configuration</strong>.",
               "Select the <strong>Lead</strong> stage (or whichever stage is affected).",
-              "Add at least one Status under that stage's Allowed Statuses (for example, \"New\", \"Contacted\", \"Qualified\").",
+              "Add at least one Status under that stage's Allowed Statuses (for the Lead stage, New Lead).",
               "Return to Create Opportunity — the Status dropdown should now be populated."
             ],
             "note": "This is the single most common blocker preventing new opportunities from being created: the Status dropdown is driven entirely by whatever Statuses are configured for the opportunity's current Stage, and if a Stage has none configured, the dropdown is empty and the Create Opportunity dialog cannot be submitted."
@@ -9405,6 +9481,13 @@ const MODULES = [
               "Choose an ID Separator (<code>/</code>, <code>-</code>, or None).",
               "Compose the ID from Business Unit, Year, and Serial No./ID components.",
               "Configure <strong>Child ID Settings</strong> separately if your organization uses parent/child opportunity hierarchies."
+            ],
+            "images": [
+              {
+                "src": "assets/guides/opportunity/050.jpg",
+                "caption": "ID Settings for child and parent IDs",
+                "step": 3
+              }
             ]
           },
           {
@@ -9421,27 +9504,33 @@ const MODULES = [
               "Go to <strong>Settings → Opportunities Form → Settings</strong>.",
               "Toggle <strong>Parent Mode</strong> on to let opportunities be created as Parent, Child, or Standalone.",
               "Toggle <strong>AutoFill Customer Details</strong> on so picking a Customer on Create Opportunity fills in its related fields automatically.",
-              "Review the <strong>Weighted Value Formula</strong> (Lead Value × Win Probability %) if you need to confirm how the dashboard's Weighted Opportunity Value KPI is calculated."
+              "Check the Weighted Value Formula (Opportunity Value × Go % × Get %) to see how the dashboard's Weighted Opportunity Value is calculated."
             ],
             "note": "Document Management (AWS S3 or SharePoint) is also set on this sub-tab, but it locks permanently as soon as any Opportunity or Proposal exists — decide it before the module goes live."
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/guides/opportunity/049.jpg",
+            "caption": "Opportunities Form settings for Required, Hide and Show At Creation"
           }
         ]
       },
       {
         "heading": "Opportunities",
-        "intro": "<p>A construction pursuit rarely closes quickly — a GC or EPC firm might chase a single infrastructure job for a year or more before it's won or lost, through multiple rounds of budgeting, relationship-building, and competitive positioning. The Opportunities list is built for exactly that reality: it is the day-to-day workspace for <strong>Business Development End Users</strong> (BD reps, estimators, and account managers) who are personally responsible for a slice of the pipeline, while a <strong>BD Manager or Sales Director</strong> uses the same list, filtered and sorted differently, to see the whole team's book of work at once.</p><p>The Opportunities list (labeled Leads when a construction Project is in context) is the system-of-record table for every pursuit your organization is tracking — from the earliest speculative Lead through to a Closed deal, won or lost. Where My Dashboard gives you a curated summary, Opportunities gives you the full, unfiltered dataset: every record, every field, with complete create/read/update/delete capability and enough configurability (three view modes, 45+ optional columns, saved filters) to let each user or team tailor the view to how they work.</p>\n    <p>This is the operational heart of the module. Business-development staff live here day to day: creating new pursuits as soon as they're identified, updating stage and status as a deal progresses, and tracking the dozens of financial, contact, and timing fields that make up a complete opportunity record. Because a pursuit can take months or years to close, the list is built around long-lived tracking rather than one-off data entry — hence the heavy emphasis on aging fields (Opportunity Age, Inactivity, Days in Current Stage) and probability-weighted value fields that evolve as a deal matures.</p>\n    <p>An opportunity's lifecycle is governed by two linked but distinct concepts: <strong>Stage</strong> (the current phase in the sales pipeline — Lead, Proposal, Closed by default, though stages themselves are configurable) and <strong>Status</strong> (a more granular value scoped to whichever Stage the opportunity is currently in). Every new opportunity starts in the Lead stage and is required to have a Status before it can be saved — a rule that has real operational consequences if Statuses haven't been configured yet for a Stage (see the callout on creating an opportunity below).</p>\n    <p>Because the underlying data model is large, Arena separates \"what you see\" from \"which records show up\": <strong>Filters</strong> controls which rows appear (based on field criteria such as value range or customer), while <strong>Manage Columns</strong> controls which fields are visible and in what order, without changing which records are shown. Keeping this distinction in mind will save you time — if a value looks wrong or missing, first check Manage Columns rather than assuming the data isn't being tracked.</p>",
+        "intro": "<p>The <strong>Opportunities</strong> screen is where Business Development users log, filter and work every pursuit, and where managers see the whole team's book of work. Click <strong>+ Create</strong> to log a lead, open a lead to complete its profile, and move it through the stages (Lead → Opportunity → Proposal → Inquiry → Bidding → Closed).</p><p>Switch between Table, Grid, Kanban and Parent Kanban with the view icons, click a coloured stage chip to filter to one stage, and use <strong>Search</strong>, <strong>Filters</strong>, <strong>Manage Columns</strong> and <strong>Export</strong> to build your own views. <strong>Filters</strong> decides which rows appear; <strong>Manage Columns</strong> decides which fields show.</p>",
         "definitions": [
           {
             "term": "Stage",
-            "definition": "The current phase of an opportunity in the sales pipeline. By default: Lead → Proposal → Closed, though stages are configurable under Settings → Stages & Statuses Configuration. Every new opportunity starts in Lead, and Stage is a required, locked field on the Create Opportunity dialog — you cannot pick a different starting stage."
+            "definition": "The current phase of an opportunity in the pipeline: Lead → Opportunity → Proposal → Inquiry → Bidding → Closed by default, configurable under **Settings → Stages & Statuses Configuration**. Every new lead starts in **Lead**, and you advance it in order by dragging the card on the Kanban board or changing **Stage** on the profile."
           },
           {
             "term": "Status",
-            "definition": "A required field on every opportunity whose available options depend on which Statuses have been configured for the opportunity's current Stage. If a Stage has zero Statuses configured, the Status dropdown will be empty and you will not be able to save an opportunity in that stage."
+            "definition": "The status within the current stage, for example **New Lead** for a lead, **Active** or **On Hold** for an Opportunity, or **Won**, **Lost**, **No Bid** and **Cancelled** inside the Closed stage. Options come from the statuses configured for the stage; if a stage has none, the dropdown is empty and the record cannot be saved."
           },
           {
             "term": "Table View",
-            "definition": "The default Opportunities layout: a spreadsheet-style grid supporting the full Manage Columns feature set. Manage Columns is only available in Table View — it does not appear in Grid or Kanban view."
+            "definition": "The default Opportunities layout, also called the **Pipeline Report**: one row per opportunity in a spreadsheet format. Click a column header arrow to sort. Use **Search**, **Filters**, **Manage Columns** and **Export** to build your own views and download tailored reports."
           },
           {
             "term": "Grid View",
@@ -9449,11 +9538,11 @@ const MODULES = [
           },
           {
             "term": "Kanban View",
-            "definition": "A board layout with one column per pipeline Stage (Lead, Proposal, Closed by default). Each column header displays the opportunity count for that stage along with its combined Opportunity Value and Forecasted Value totals, making it easy to see where your pipeline is concentrated without opening a chart."
+            "definition": "A board with one column per stage. Each column shows the stage's **Opportunity Value** and **Forecasted (weighted) Value** and a card for each opportunity. **Parent Kanban** groups the columns by main stage and shows only top-level (parent) opportunities."
           },
           {
             "term": "Manage Columns",
-            "definition": "The Table View toolbar control that exposes the module's full data model — 45+ fields — split across two panes: Column Options (a searchable checkbox list for turning fields on or off) and Column Arrangement (drag-to-reorder, plus an × to remove a column). Reset to Default restores the original column set; Apply commits your changes."
+            "definition": "The toolbar control (next to the view icons) that exposes the module's full data model, 45+ fields, in two panes: **Column Options** (a searchable checkbox list) and **Column Arrangement** (drag to reorder, × to remove). **Reset to Default** restores the original set; **Apply** commits your changes. Sales Ops can save the default layout for everyone. Some environments show it only in Table View."
           },
           {
             "term": "Filters vs. Manage Columns",
@@ -9469,23 +9558,23 @@ const MODULES = [
           },
           {
             "term": "Go % / Get %",
-            "definition": "Two separate percentage fields/columns tracked on Opportunities and in the Forecast Report (e.g., Go% Weighted Value vs. Get% Weighted Value). They function alongside Win Probability and AI Probability as distinct probability/likelihood measures feeding weighted-value calculations. The product does not define a more specific business meaning for each beyond their role in these calculations, so your organization may assign its own convention to what \"Go\" and \"Get\" represent."
+            "definition": "Two separate percentages on the profile. **Go %** is the likelihood that the project will reach FID (the likelihood to pursue). **Get %** is the likelihood of winning it against competition. Together with Opportunity Value they give **Weighted Value = Opportunity Value × Go % × Get %**. The Forecast Report shows Go % and Get % weighted values."
           },
           {
             "term": "Win Probability (%)",
-            "definition": "A manually-tracked column on an Opportunity representing the likelihood of winning the deal, distinct from AI Probability, which is a system-generated estimate of the same thing."
+            "definition": "The likelihood of winning the deal. Stage configuration sets a **Default Win Probability (%)** per stage, and a parent opportunity shows the **Average Win Probability %** of its children. The profile itself uses Go % and Get %, plus the AI probability below."
           },
           {
             "term": "AI Probability",
-            "definition": "A system-generated (rather than manually entered) probability estimate for winning an opportunity, tracked as its own column alongside the manually entered Win Probability (%)."
+            "definition": "A system-calculated probability, filled in automatically once there is enough data in the system. It sits beside your own Go % and Get % figures."
           },
           {
-            "term": "Probability (Manual/AI)",
-            "definition": "A toggle/flag on an opportunity indicating which of the two probability sources — the manually entered Win Probability or the system-generated AI Probability — is currently in effect for that record's weighted-value calculations."
+            "term": "Manual % / AI % toggle",
+            "definition": "A toggle on the profile that chooses whether the weighted value uses your **Go % and Get %** figures (Manual %) or the **AI Probability** (AI %). **AI Weighted Value** is the weighted value worked out from the AI figure."
           },
           {
-            "term": "Weighted Value / AI Weighted Value",
-            "definition": "Two separate weighted-value calculations correspond to the two probability sources: Weighted Value is based on the manual probability entry, while AI Weighted Value is derived from the AI-generated probability."
+            "term": "Weighted Value",
+            "definition": "Calculated automatically as **Opportunity Value × Go % × Get %**. It feeds the overall weighted pipeline: the Weighted Opportunity Value on **My Dashboard**, the Forecasted Value on each Kanban column and the forecast reports."
           },
           {
             "term": "Opportunity Age",
@@ -9508,8 +9597,8 @@ const MODULES = [
             "definition": "A per-Stage setting (Stage Threshold (In Days), configured in Settings → Stages & Statuses Configuration) that drives the \"Stage Threshold Notification\" column, flagging opportunities that have lingered in a specific stage longer than expected. This is distinct from Stale Threshold, which applies module-wide based on overall inactivity rather than per-stage dwell time — Stage Threshold operates at the stage scope, Stale Threshold at the whole-opportunity scope."
           },
           {
-            "term": "Site Representative / Corporate Lead / Executive Lead",
-            "definition": "Three searchable people-picker roles assignable on both Create Opportunity and in Account Assignment, representing three levels of the responsibility chain for a customer account: an on-the-ground Site Representative, a Corporate Lead, and an Executive Lead. When a matching Customer/Market Type combination already exists in Account Assignment, these fields auto-populate rather than requiring manual entry."
+            "term": "BD Rep / Corporate Lead / Executive Lead",
+            "definition": "Three searchable people-picker roles assignable on both Create Opportunity and in Account Assignment, representing three levels of the responsibility chain for a customer account: an on-the-ground BD Rep, a Corporate Lead, and an Executive Lead. When a matching Customer/Market Type combination already exists in Account Assignment, these fields auto-populate rather than requiring manual entry."
           },
           {
             "term": "Market Type / Sub Market Type",
@@ -9521,27 +9610,27 @@ const MODULES = [
           },
           {
             "term": "Qualifying a lead",
-            "definition": "A new record starts in <strong>Lead</strong>. To move it into the live pipeline, change <strong>Stage</strong> on the profile. Red asterisks appear beside every field the setup requires at the new stage, and the record will not save until they are filled. In the standard setup this includes Description, Opportunity Type, Market Type, TIC, Opportunity Value, Go %, Get %, the Customer and its contact, Owner and its contact, Location, Competitors, the BD Rep or Site Representative, and at least approximate milestone target dates. Your administrator can change the set under <strong>Settings → Opportunities Form</strong>."
+            "definition": "A new record starts in **Lead**. To move it into the live pipeline, change **Stage** from Lead to **Opportunity** on the profile. Red asterisks appear beside every field the setup requires, and the record will not save until they are filled. In the standard configuration this means Description, Opportunity Type, Market Type, TIC, Opportunity Value, Go %, Get %, Client, Client POC, Owner, Owner POC, Location, Competitors, BD Rep and milestone Target Dates. Sales Ops can tune the set under **Settings → Opportunities Form**."
           },
           {
             "term": "Parent opportunity totals",
-            "definition": "A parent shows <strong>Total Value</strong>, <strong>Total TIC</strong>, <strong>Weighted Value</strong>, <strong>Average Win Probability %</strong>, <strong>Child Count</strong> and <strong>Active Child Count</strong>, with its own <strong>Child</strong> and <strong>Milestones</strong> tabs. Customer and contacts roll up from the children, and milestones can be tracked at parent and child level. Parent IDs use the format YY/parent BU code/ID, and child IDs use YY-BU-ID."
+            "definition": "A parent shows **Total Value**, **Total TIC**, **Weighted Value**, **Average Win Probability %**, **Child Count** and **Active Child Count**, with its own **Child** and **Milestones** tabs. Customer and contacts roll up from the children, and milestones can be tracked at parent and child level. Parent IDs use the format YY/parent BU code/ID, and child IDs use YY-BU-ID."
           },
           {
             "term": "Opportunity profile: Details",
-            "definition": "Click a lead to open its full profile, laid out in the same four sections as the Create window. <strong>Details</strong> holds identity and classification: Opportunity ID (generated, read only, for example 26-23-12 as year-business unit-serial), Opportunity Name, Created By (automatic), Project Type, Business Unit (chosen at creation, then read only), Opportunity Type (New Build or Existing Facility), Milestone Template (only the templates mapped to the chosen type are shown) and Market Type / Sub Market Type. Opportunity Type is set on the profile, not on the Create window."
+            "definition": "Click a lead to open its full profile, laid out in the same four sections as the Create window. **Details** holds identity and classification: Opportunity ID (generated, read only, for example 26-23-12 as year-business unit-serial), Opportunity Name, Created By (automatic), Project Type, Business Unit (chosen at creation, then read only), Opportunity Type (New Build or Existing Facility), Milestone Template (only the templates mapped to the chosen type are shown) and Market Type / Sub Market Type. Opportunity Type is set on the profile, not on the Create window."
           },
           {
             "term": "Opportunity profile: Status & Value",
-            "definition": "<strong>Status & Value</strong> holds where the opportunity is and the numbers behind it: Stage and Status, TIC (Total Installed Cost: engineering, procurement and construction), Opportunity Value (the amount you could be awarded), Go % and Get %, AI Probability (calculated once the system has enough data), Weighted Value (calculated automatically) and the Manual % / AI % toggle that picks which probability the weighted value uses."
+            "definition": "**Status & Value** holds where the opportunity is and the numbers behind it: Stage and Status, TIC (Total Installed Cost: engineering, procurement and construction), Opportunity Value (the amount you could be awarded), Go % and Get %, AI Probability (calculated once the system has enough data), Weighted Value (calculated automatically) and the Manual % / AI % toggle that picks which probability the weighted value uses."
           },
           {
             "term": "Opportunity profile: Timeline & Activity",
-            "definition": "<strong>Timeline & Activity</strong> holds Created Date (read only), Due Date (your expected close date), Follow Up Date / Time (set these for automatic reminders), Opportunity Age in days, Last Interaction, and the Stage / Inactive Threshold Notification that alerts you when an opportunity sits too long without new information."
+            "definition": "**Timeline & Activity** holds Created Date (read only), Due Date (your expected close date), Follow Up Date / Time (set these for automatic reminders), Opportunity Age in days, Last Interaction, and the Stage / Inactive Threshold Notification that alerts you when an opportunity sits too long without new information."
           },
           {
             "term": "Opportunity profile: Contact",
-            "definition": "<strong>Contact</strong> holds the customer and its POC (use + Create a Client or + Create a Client POC if new), Owner and Owner POC (who owns and funds the asset), EPC / Engineer and POC (who controls design and technical approvals), Contracting Entity and POC (who signs the contract), Location (only locations mapped to the chosen customer are shown), Competitors (used later in win and loss analytics), and the BD Rep, Corporate Lead and Executive Lead, which can fill in from Account Assignment."
+            "definition": "**Contact** holds the customer and its POC (use + Create a Client or + Create a Client POC if new), Owner and Owner POC (who owns and funds the asset), EPC / Engineer and POC (who controls design and technical approvals), Contracting Entity and POC (who signs the contract), Location (only locations mapped to the chosen customer are shown), Competitors (used later in win and loss analytics), and the BD Rep, Corporate Lead and Executive Lead, which can fill in from Account Assignment."
           },
           {
             "term": "Parent Kanban view",
@@ -9556,19 +9645,26 @@ const MODULES = [
           {
             "title": "Creating a new opportunity",
             "steps": [
-              "Go to <strong>Opportunities Management → Opportunities</strong> (or <strong>Leads Management → Leads</strong> inside a Project).",
-              "Click <strong>+ Create</strong> in the toolbar.",
-              "Under <strong>Details</strong>, enter <strong>Opportunity Name</strong> (required) and optionally pick a <strong>Market Type</strong> (Highway, Residential, Infrastructure, Interiors, etc.).",
-              "Under <strong>Status & Value</strong>, note that <strong>Stage</strong> defaults to \"Lead\" and is locked — you cannot change it. <strong>Status</strong> is required, and its available options come entirely from whatever Statuses are configured for the Lead stage.",
-              "Under <strong>Contact</strong>, optionally set <strong>Customer Groups</strong>, <strong>Site Representative</strong>, <strong>Corporate Lead</strong>, and <strong>Executive Lead</strong> — these are searchable people-pickers that auto-suggest from existing Account Assignment records.",
-              "Click <strong>Submit</strong>."
+              "Go to <strong>Opportunity Management → Opportunities</strong> (or <strong>Leads Management → Leads</strong> inside a Project).",
+              "Click <strong>+ Create</strong>. The <strong>Create Opportunity</strong> window opens with four sections: <strong>Details</strong>, <strong>Status & Value</strong>, <strong>Timeline & Activity</strong> and <strong>Contact</strong>.",
+              "In <strong>Details</strong>, type the <strong>Opportunity Name</strong> following your organisation's naming convention and select the <strong>Business Unit</strong>.",
+              "Leave <strong>Stage</strong> as <strong>Lead</strong>, <strong>Status</strong> as <strong>New Lead</strong> and <strong>Created Date</strong> as today. They are pre-filled.",
+              "Select the <strong>Client Group</strong> and the <strong>Client</strong>, or add a new client if needed.",
+              "Click <strong>Submit</strong>. The lead lands on the board under <strong>Lead</strong>."
             ],
-            "note": "Only Opportunity Name and Status are actually required on this dialog — the Contact section fields are all optional, so if Submit is failing, the Contact fields are almost never the cause. The more common blocker: Submit can fail with \"Status is required\" if the Lead stage currently has zero Statuses configured under Settings → Stages & Statuses Configuration. If this happens, an administrator needs to add at least one Status (e.g. \"New\", \"Contacted\", \"Qualified\") to the Lead stage before any new opportunity can be created."
+            "note": "Only four things are required to save a lead: **Opportunity Name**, **Business Unit**, **Status** and **Created Date**. Everything else can wait: open the lead later to fill in the rest. If Submit fails with \"Status is required\", the Lead stage has no statuses configured under Settings → Stages & Statuses Configuration.",
+            "images": [
+              {
+                "src": "assets/guides/opportunity/007.jpg",
+                "caption": "Create Opportunity window with its four sections",
+                "step": 2
+              }
+            ]
           },
           {
             "title": "Editing fields not present on the Create dialog",
             "steps": [
-              "Create the opportunity first using the Create Opportunity dialog (only Opportunity Name and Status are required to get a record saved).",
+              "Create the opportunity first with the Create Opportunity window (only Opportunity Name, Business Unit, Status and Created Date are required).",
               "Open the saved record's detail/edit view.",
               "Fill in the remaining fields there — Description, Project Types, Business Development, Business Unit, Opportunity Type, Milestone Template, Sub Market Type, TIC, Opportunity Value, Owner, Owner POC, Customer, Tier, EPC/Engineer, Contracting Entity, Project Locations, Competitors, Assign To, and others — all of which exist on the full record and are visible via Manage Columns and the Pipeline Report, but are simply not exposed on the initial Create dialog."
             ]
@@ -9587,7 +9683,24 @@ const MODULES = [
               "Use the view-mode toggle in the Opportunities toolbar to switch between <strong>Table</strong>, <strong>Grid</strong>, and <strong>Kanban</strong>.",
               "In <strong>Kanban View</strong>, review each Stage's column header for the opportunity count and its combined Opportunity Value / Forecasted Value totals."
             ],
-            "note": "Manage Columns only appears in Table View. If you don't see the button, you're most likely in Grid or Kanban view — switch back to Table View to customize columns."
+            "note": "Some environments show Manage Columns only in Table View. If you do not see the button, switch back to Table View.",
+            "images": [
+              {
+                "src": "assets/guides/opportunity/003.jpg",
+                "caption": "Table view, the Pipeline Report",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/opportunity/004.jpg",
+                "caption": "Grid view of opportunities",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/opportunity/005.jpg",
+                "caption": "Kanban view with value by stage",
+                "step": 2
+              }
+            ]
           },
           {
             "title": "Customizing and rearranging table columns",
@@ -9623,7 +9736,19 @@ const MODULES = [
               "For a new build with unknown scope, log it under the placeholder business unit your administrator set up, and keep updating its value as one opportunity.",
               "When the scope breaks into packages, reduce the placeholder value to $1, click <strong>Create Parent</strong>, and then log a child for each business unit (for example Civil, Mechanical)."
             ],
-            "note": "The real dollars then sit on the business unit children, and the parent adds them up. This needs Parent Mode to be turned on in Settings."
+            "note": "The real dollars then sit on the business unit children, and the parent adds them up. This needs Parent Mode to be turned on in Settings.",
+            "images": [
+              {
+                "src": "assets/guides/opportunity/018.jpg",
+                "caption": "Parent opportunity with its Child tab",
+                "step": 4
+              },
+              {
+                "src": "assets/guides/opportunity/019.jpg",
+                "caption": "Business unit children under a parent",
+                "step": 4
+              }
+            ]
           },
           {
             "title": "Complete the opportunity profile",
@@ -9632,20 +9757,33 @@ const MODULES = [
               "In <strong>Details</strong>, set the Project Type, Opportunity Type, Milestone Template and Market Type / Sub Market Type.",
               "In <strong>Status & Value</strong>, enter TIC, Opportunity Value, Go % and Get %. Weighted Value calculates automatically.",
               "In <strong>Timeline & Activity</strong>, set the Due Date and any Follow Up Date / Time.",
-              "In <strong>Contact</strong>, choose the customer and its POC, the Owner and POC, EPC / Engineer, Contracting Entity, Location, Competitors and the team (BD Rep, Corporate Lead, Executive Lead).",
+              "In <strong>Contact</strong>, choose the Client and Client POC, the Owner and POC, EPC / Engineer, Contracting Entity, Location, Competitors and the team (BD Rep, Corporate Lead, Executive Lead).",
               "Click <strong>Save Changes</strong>."
             ],
-            "note": "If a customer, location or contact is not listed, post the request in the Comments tab. Creating a new customer sends an approval request to Sales Ops."
+            "note": "If a customer, location or contact is not listed, post the request in the Comments tab. Creating a new customer sends an approval request to Sales Ops.",
+            "images": [
+              {
+                "src": "assets/guides/opportunity/008.jpg",
+                "caption": "Opportunity profile with Details, Status & Value, Timeline & Activity and Contact",
+                "step": 1
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/guides/opportunity/006.jpg",
+            "caption": "Stage chips with counts"
           }
         ]
       },
       {
-        "heading": "Customer Interactions",
-        "intro": "<p>Winning construction work is a relationship business as much as a bidding one — a GC or subcontractor rarely wins a job cold, they win it because someone on the BD team has been building trust with the owner's or GC's decision-makers over months or years of calls, site visits, and proposals. Customers Interactions is where a <strong>BD rep or Account Manager (End User)</strong> keeps that relationship history somewhere other than their own memory or inbox, so the relationship survives even if that individual changes roles or leaves the account.</p><p>Customers Interactions is Arena's lightweight CRM layer inside Opportunity Management — the place where you log and review every touchpoint your team has with a customer's contacts, from phone calls to meetings to freeform notes. Where the Opportunities list tracks the deal itself, Customers Interactions tracks the relationship: the ongoing conversation history that supports and informs the pursuit.</p>\n    <p>The screen is organized as a drill-down: you start at a company-level list, click into a specific customer to see its contacts, and click into a specific contact to open a full interaction workspace with dedicated sub-tabs for each interaction type (calls, mail, events, meetings, tasks, comments, notes, and history). This structure mirrors how relationship-building actually works in construction business development — you're rarely interacting with \"a customer\" in the abstract, you're building a relationship with named individuals at that customer.</p>\n    <p>A few of the sub-tabs (Events, Meetings, Task, Comments) integrate directly with your connected calendar (Google or Outlook), which means they require an explicit consent grant before they'll function — a one-time setup step covered below. If you hit a \"Consent Not Granted\" message, that's the fix.</p>",
+        "heading": "Clients Interactions",
+        "intro": "<p>Winning construction work is a relationship business as much as a bidding one — a GC or subcontractor rarely wins a job cold, they win it because someone on the BD team has been building trust with the owner's or GC's decision-makers over months or years of calls, site visits, and proposals. Clients Interactions is where a <strong>BD rep or Account Manager (End User)</strong> keeps that relationship history somewhere other than their own memory or inbox, so the relationship survives even if that individual changes roles or leaves the account.</p><p>Clients Interactions is Arena's lightweight CRM layer inside Opportunity Management — the place where you log and review every touchpoint your team has with a customer's contacts, from phone calls to meetings to freeform notes. Where the Opportunities list tracks the deal itself, Clients Interactions tracks the relationship: the ongoing conversation history that supports and informs the pursuit.</p> <p>The screen is organized as a drill-down: you start at a company-level list, click into a specific customer to see its contacts, and click into a specific contact to open a full interaction workspace with dedicated sub-tabs for each interaction type (calls, mail, events, meetings, tasks, comments, notes, and history). This structure mirrors how relationship-building actually works in construction business development — you're rarely interacting with \"a customer\" in the abstract, you're building a relationship with named individuals at that customer.</p> <p>A few of the sub-tabs (Events, Meetings, Task, Comments) integrate directly with your connected calendar (Microsoft), which means they require an explicit consent grant before they'll function — a one-time setup step covered below. If you hit a \"Consent Not Granted\" message, that's the fix.</p>",
         "definitions": [
           {
-            "term": "Customers Interactions",
-            "definition": "The CRM-style module tab where you browse customer companies, drill into their individual contacts, and log or review every interaction with those contacts. It sits at Opportunities Management → Customers Interactions."
+            "term": "Clients Interactions",
+            "definition": "The CRM-style module tab where you browse customer companies, drill into their individual contacts, and log or review every interaction with those contacts. It sits at Opportunities Management → Clients Interactions."
           },
           {
             "term": "Notes button (customer row)",
@@ -9661,7 +9799,7 @@ const MODULES = [
           },
           {
             "term": "Calendar consent",
-            "definition": "A required authorization linking your connected calendar (Google or Outlook) to Arena, granted at My Profile → Settings → Calendar consent. Without it, the Events, Meetings, Task, and Comments sub-tabs on a contact's interaction workspace will show a \"Consent Not Granted\" message instead of functioning."
+            "definition": "A required authorization linking your connected calendar (Microsoft) to Arena, granted at My Profile → Settings → Calendar consent. Without it, the Events, Meetings, Task, and Comments sub-tabs on a contact's interaction workspace will show a \"Consent Not Granted\" message instead of functioning."
           },
           {
             "term": "Notes (contact sub-tab)",
@@ -9684,7 +9822,7 @@ const MODULES = [
           {
             "title": "Viewing a customer's interaction history",
             "steps": [
-              "Go to <strong>Opportunities Management → Customers Interactions</strong>.",
+              "Go to <strong>Opportunities Management → Clients Interactions</strong>.",
               "Click a row's <strong>Customer Name</strong> to open its list of contacts.",
               "Click a specific <strong>Contact</strong> card to open that person's interaction workspace.",
               "Use the sub-tabs — <strong>Call Logs, Mails, Events, Meetings, Task, Comments, Notes, See History</strong> — to view or log that particular type of interaction."
@@ -9710,7 +9848,7 @@ const MODULES = [
             "title": "Granting calendar consent to unlock Events, Meetings, Task, and Comments",
             "steps": [
               "Go to <strong>My Profile → Settings → Calendar consent</strong>.",
-              "Grant consent for your connected calendar (Google or Outlook).",
+              "Grant consent for your connected calendar (Microsoft).",
               "Return to the contact's interaction workspace — the Events, Meetings, Task, and Comments sub-tabs should now function normally."
             ],
             "note": "If you see a \"Consent Not Granted\" message on any of these four sub-tabs, this is always the fix — there is no per-tab consent, it's a single grant that unlocks all four."
@@ -9718,19 +9856,25 @@ const MODULES = [
           {
             "title": "Finding a customer's phone number and email",
             "steps": [
-              "Drill into <strong>Customers Interactions → [Customer Name] → [Contact]</strong> — the Contact card shows Contact ID, Primary Phone, and Primary Email.",
+              "Drill into <strong>Clients Interactions → [Customer Name] → [Contact]</strong> — the Contact card shows Contact ID, Primary Phone, and Primary Email.",
               "Alternatively, check the <strong>Contacts Directory</strong> (a Sidebar Shortcut), which also stores Primary/Secondary Email and Phone Number fields for the same contact."
             ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/guides/opportunity/010.jpg",
+            "caption": "Clients Interactions tab on an opportunity"
           }
         ]
       },
       {
         "heading": "Account Assignment",
-        "intro": "<p>On any account of size, more than one person at your company touches the relationship — a site-level contact, a corporate-level relationship owner, and an executive sponsor who steps in for the highest-stakes conversations. Account Assignment exists so a <strong>BD Manager (Module Manager)</strong> can define that ownership structure once per account rather than leaving it to individual BD reps to remember or re-explain on every new pursuit.</p><p>Account Assignment is the registry that connects a customer account to the internal people responsible for it. Rather than manually re-entering who the Site Representative, Corporate Lead, and Executive Lead are every time you create an opportunity for a given customer, Account Assignment lets you define that responsibility chain once, per Customer and Market Type combination, and have it auto-populate everywhere else in the module that needs it.</p>\n    <p>This distinction matters because it's easy to confuse Account Assignment with the Contacts Directory, but the two serve opposite purposes: Account Assignment is about internal ownership — who on your team owns this relationship — while the Contacts Directory is the external people directory of actual contacts at the customer's or owner's organization. One tracks \"who at our company is responsible,\" the other tracks \"who at their company do we talk to.\"</p>\n    <p>Because the assignment is keyed on Customer plus Market Type (and further refined by Sub Market Type and Tier), a single customer can have different responsibility chains for different market segments — reflecting how larger accounts are often split across multiple business lines internally.</p>",
+        "intro": "<p>On any account of size, more than one person at your company touches the relationship — a site-level contact, a corporate-level relationship owner, and an executive sponsor who steps in for the highest-stakes conversations. Account Assignment exists so a <strong>BD Manager (Module Manager)</strong> can define that ownership structure once per account rather than leaving it to individual BD reps to remember or re-explain on every new pursuit.</p><p>Account Assignment is the registry that connects a customer account to the internal people responsible for it. Rather than manually re-entering who the BD Rep, Corporate Lead, and Executive Lead are every time you create an opportunity for a given customer, Account Assignment lets you define that responsibility chain once, per Customer and Market Type combination, and have it auto-populate everywhere else in the module that needs it.</p>\n    <p>This distinction matters because it's easy to confuse Account Assignment with the Contacts Directory, but the two serve opposite purposes: Account Assignment is about internal ownership — who on your team owns this relationship — while the Contacts Directory is the external people directory of actual contacts at the customer's or owner's organization. One tracks \"who at our company is responsible,\" the other tracks \"who at their company do we talk to.\"</p>\n    <p>Because the assignment is keyed on Customer plus Market Type (and further refined by Sub Market Type and Tier), a single customer can have different responsibility chains for different market segments — reflecting how larger accounts are often split across multiple business lines internally.</p>",
         "definitions": [
           {
             "term": "Account Assignment",
-            "definition": "The registry mapping a Customer account to internally responsible personnel — Site Representative, Corporate Lead, and Executive Lead — by market segment and location. It represents internal ownership of the customer relationship, and its columns include Customer Name, Location, State, City, Market/Sub Market Type, Site Representative, Corporate Lead, Executive Lead, Tier, and Actions."
+            "definition": "The registry mapping a Customer account to internally responsible personnel — BD Rep, Corporate Lead, and Executive Lead — by market segment and location. It represents internal ownership of the customer relationship, and its columns include Customer Name, Location, State, City, Market/Sub Market Type, BD Rep, Corporate Lead, Executive Lead, Tier, and Actions."
           },
           {
             "term": "Account Assignment vs. Contacts Directory",
@@ -9738,7 +9882,7 @@ const MODULES = [
           },
           {
             "term": "Auto-fill on Create Opportunity",
-            "definition": "When a matching Account Assignment record already exists for a given Customer/Market Type combination, the Site Representative, Corporate Lead, and Executive Lead fields on the Create Opportunity dialog are pre-populated automatically from that record, saving you from re-entering the same assignment on every new opportunity for that customer."
+            "definition": "When a matching Account Assignment record already exists for a given Customer/Market Type combination, the BD Rep, Corporate Lead, and Executive Lead fields on the Create Opportunity dialog are pre-populated automatically from that record, saving you from re-entering the same assignment on every new opportunity for that customer."
           }
         ],
         "procedures": [
@@ -9749,8 +9893,15 @@ const MODULES = [
               "Click <strong>+ Add</strong>.",
               "Search for and select the <strong>Customer Name</strong>.",
               "Choose <strong>Market Type</strong>, <strong>Sub Market Type</strong>, and <strong>Tier</strong>.",
-              "Pick the <strong>Site Representative</strong>, <strong>Corporate Lead</strong>, and <strong>Executive Lead</strong>.",
+              "Pick the <strong>BD Rep</strong>, <strong>Corporate Lead</strong>, and <strong>Executive Lead</strong>.",
               "Click <strong>Submit</strong>."
+            ],
+            "images": [
+              {
+                "src": "assets/guides/opportunity/051.jpg",
+                "caption": "Account Assignment mapping",
+                "step": 4
+              }
             ]
           }
         ]
@@ -9797,7 +9948,15 @@ const MODULES = [
           },
           {
             "term": "Whose pipeline you see",
-            "definition": "My Dashboard shows your own pipeline. To see every opportunity in the organisation, a user needs the <strong>Admin View</strong> permission enabled under Global Data."
+            "definition": "My Dashboard shows your own pipeline. To see every opportunity in the organisation, a user needs the **Admin View** permission enabled under Global Data."
+          },
+          {
+            "term": "Top cards and the period toggle",
+            "definition": "The top of **My Dashboard** shows four cards: **Total Opportunity Value**, **Weighted Opportunity Value**, **Due This Week** and **Stale Opportunities**. Use the **Daily / Weekly / Monthly** toggle to change the period. Below them are the **Opportunity Funnel** (value by stage, so you see where the money sits) and the **Task** panel with **+ Create Task**."
+          },
+          {
+            "term": "Recent Activity",
+            "definition": "A feed of the latest calls, mails, meetings and events across your opportunities. It shows whether a pursuit is being worked or going cold."
           }
         ],
         "procedures": [
@@ -9826,11 +9985,21 @@ const MODULES = [
               "Use the widget's own <strong>+ Create Opportunity</strong> shortcut if you want to add a new high-value pursuit directly from this view."
             ]
           }
+        ],
+        "images": [
+          {
+            "src": "assets/guides/opportunity/001.jpg",
+            "caption": "My Dashboard cards and Opportunity Funnel"
+          },
+          {
+            "src": "assets/guides/opportunity/002.jpg",
+            "caption": "Task panel with + Create Task"
+          }
         ]
       },
       {
         "heading": "Sidebar Shortcuts",
-        "intro": "<p>A pursuit never exists in isolation from the people and companies around it — every opportunity needs a named customer, every customer has real contacts, and every competitive deal has known competitors to track. These shortcuts keep that supporting master data one click away for the <strong>BD End User</strong> building or updating an opportunity, while giving a <strong>BD Manager or Opportunity Management Admin</strong> a central place to keep the underlying Customers, Owners, and Competitors lists clean as the company's book of business grows.</p><p>Alongside the module's main tabs, Arena surfaces a row of icon shortcuts — Task, Calendar, Contacts Directory, Customers, Owners, Competitors, and Settings — that give you quick access to supporting master data and personal productivity tools without navigating away from wherever you are in the module. These shortcuts exist because opportunities don't live in isolation: a pursuit needs a customer, a customer needs contacts, deals have competitors, and work needs to be tracked as tasks and scheduled on a calendar. Rather than burying this supporting data several clicks deep, Arena keeps it one click away at all times.</p>\n    <p>Several of these shortcuts maintain master lists that are shared and reused across the module — Customers, Owners, and Competitors, in particular, are foundational reference data that opportunities, Account Assignment, and Customer Interactions all draw from. Understanding the distinctions between related concepts here (Customer vs. Owner, Customer vs. Contact, Contacts Directory vs. Customers Interactions) will help you avoid duplicate or misplaced records as your data grows.</p>\n    <p>The Customers shortcut in particular carries the richest functionality of the group: a full multi-step creation wizard, OCR-based contact scanning, duplicate merging, and the ability to convert a customer into an Owner record — reflecting how central customer data is to the rest of the module.</p>",
+        "intro": "<p>A pursuit never exists in isolation from the people and companies around it — every opportunity needs a named customer, every customer has real contacts, and every competitive deal has known competitors to track. These shortcuts keep that supporting master data one click away for the <strong>BD End User</strong> building or updating an opportunity, while giving a <strong>BD Manager or Opportunity Management Admin</strong> a central place to keep the underlying Customers, Owners, and Competitors lists clean as the company's book of business grows.</p><p>Alongside the module's main tabs, Arena surfaces a row of icon shortcuts — Task, Calendar, Contacts Directory, Customers, Owners, Competitors, and Settings — that give you quick access to supporting master data and personal productivity tools without navigating away from wherever you are in the module. These shortcuts exist because opportunities don't live in isolation: a pursuit needs a customer, a customer needs contacts, deals have competitors, and work needs to be tracked as tasks and scheduled on a calendar. Rather than burying this supporting data several clicks deep, Arena keeps it one click away at all times.</p>\n    <p>Several of these shortcuts maintain master lists that are shared and reused across the module — Customers, Owners, and Competitors, in particular, are foundational reference data that opportunities, Account Assignment, and Clients Interactions all draw from. Understanding the distinctions between related concepts here (Customer vs. Owner, Customer vs. Contact, Contacts Directory vs. Clients Interactions) will help you avoid duplicate or misplaced records as your data grows.</p>\n    <p>The Customers shortcut in particular carries the richest functionality of the group: a full multi-step creation wizard, OCR-based contact scanning, duplicate merging, and the ability to convert a customer into an Owner record — reflecting how central customer data is to the rest of the module.</p>",
         "definitions": [
           {
             "term": "Task shortcut",
@@ -9838,15 +10007,15 @@ const MODULES = [
           },
           {
             "term": "Calendar shortcut",
-            "definition": "Opens a full month-view calendar of module-related events — opportunity due dates, meetings, and follow-ups — with a mini date-picker, a My Calendars panel, and a daily Events list for the selected day. Like the Events/Meetings/Task/Comments sub-tabs in Customer Interactions, this requires Calendar consent to function."
+            "definition": "Opens a full month-view calendar of module-related events — opportunity due dates, meetings, and follow-ups — with a mini date-picker, a My Calendars panel, and a daily Events list for the selected day. Like the Events/Meetings/Task/Comments sub-tabs in Clients Interactions, this requires Calendar consent to function."
           },
           {
             "term": "Contacts Directory",
             "definition": "The master people directory for the entire module — every Customer contact and Owner contact in one place, organized into Contacts (all), Customer Contacts, and Owner Contacts sub-tabs. Each contact record tracks Customer/Owner type and name, Contact ID, Salutation, First/Middle/Last Name, Suffix, Job Title, Primary and Secondary Email, Primary and Work Phone Number, Primary and Secondary Address (Line 1/2, Country, State, City, Zip), Services Provided, and Personal Website."
           },
           {
-            "term": "Contacts Directory vs. Customers Interactions",
-            "definition": "The Contacts Directory is the master contact list — every person tied to a Customer or Owner, in one searchable place. Customers Interactions is where you drill into a specific customer and log or review interactions (calls, mail, meetings, notes) with those contacts. Think of the Directory as the list of people, and Customers Interactions as the activity log built on top of that list."
+            "term": "Contacts Directory vs. Clients Interactions",
+            "definition": "The Contacts Directory is the master contact list — every person tied to a Customer or Owner, in one searchable place. Clients Interactions is where you drill into a specific customer and log or review interactions (calls, mail, meetings, notes) with those contacts. Think of the Directory as the list of people, and Clients Interactions as the activity log built on top of that list."
           },
           {
             "term": "Customers shortcut",
@@ -9866,7 +10035,7 @@ const MODULES = [
           },
           {
             "term": "Customer vs. Contact",
-            "definition": "A Customer is the company or account-level record. A Contact is an individual person associated with that Customer (or an Owner), tracked in the Contacts Directory and accessible through Customers Interactions. A single Customer can — and typically does — have multiple Contacts."
+            "definition": "A Customer is the company or account-level record. A Contact is an individual person associated with that Customer (or an Owner), tracked in the Contacts Directory and accessible through Clients Interactions. A single Customer can — and typically does — have multiple Contacts."
           },
           {
             "term": "Competitors shortcut",
@@ -9886,11 +10055,19 @@ const MODULES = [
           },
           {
             "term": "New customer approval",
-            "definition": "A customer created by a BD user goes to Sales Ops (the Module Manager) for approval before anyone can use it on an opportunity. On mobile, turned-down customers are listed under <strong>Rejected</strong>. If a customer, location or contact you need is not in the system yet, post the request in the opportunity's <strong>Comments</strong> tab and Sales Ops adds it."
+            "definition": "A customer created by a BD user goes to Sales Ops (the Module Manager) for approval before anyone can use it on an opportunity. On mobile, turned-down customers are listed under **Rejected**. If a customer, location or contact you need is not in the system yet, post the request in the opportunity's **Comments** tab and Sales Ops adds it."
           },
           {
             "term": "Locations for customers",
-            "definition": "A location is named <strong>Customer - City</strong> (for example Northstar Energy - Baton Rouge), created under <strong>Global Data → Locations → + Create</strong>, then mapped in <strong>Account Assignment</strong> so BD users can pick it on an opportunity. You see only the locations mapped to the selected customer."
+            "definition": "A location is named **Customer - City** (for example Northstar Energy - Baton Rouge), created under **Global Data → Locations → + Create**, then mapped in **Account Assignment** so BD users can pick it on an opportunity. You see only the locations mapped to the selected customer."
+          },
+          {
+            "term": "ZoomInfo import and business card scan (OCR)",
+            "definition": "Clients and contacts can be imported from **ZoomInfo** instead of typed in, and a point of contact can be created from a photograph of a business card (**OCR**, also available in the **Arena Onsite** app). New clients still go through the approval workflow before anyone can use them."
+          },
+          {
+            "term": "Customer Relation score",
+            "definition": "Relationship strength is scored from the calls, mails, meetings and notes logged against each point of contact, and shown in the **Summary** of **Clients Interactions**. The look-back window and response time behind it are set under **Settings → Customer Relation**."
           }
         ],
         "procedures": [
@@ -9961,6 +10138,12 @@ const MODULES = [
               "Click <strong>Submit</strong> (or Cancel to discard)."
             ]
           }
+        ],
+        "images": [
+          {
+            "src": "assets/guides/opportunity/017.jpg",
+            "caption": "Toolbar with Tasks, Calendar, Contacts, Customers, Owners, Competitors and Settings"
+          }
         ]
       },
       {
@@ -10029,6 +10212,12 @@ const MODULES = [
               "Locate the <strong>Proposal Cycle Time Distribution</strong> chart to see which stage an opportunity's proposal cycle time falls into."
             ]
           }
+        ],
+        "images": [
+          {
+            "src": "assets/guides/opportunity/016.jpg",
+            "caption": "Analytics sub-tabs"
+          }
         ]
       },
       {
@@ -10065,7 +10254,7 @@ const MODULES = [
           },
           {
             "term": "Account Assignment Report",
-            "definition": "The company guide lists an <strong>Account Assignment Report</strong> among the tiles on the <strong>Reports</strong> tab, next to Forecast, Opportunity Aging, Outcome Analysis, Client Win Rate, Pipeline Report, Huddle Report and Pipeline Gantt View. It shows who is assigned to each customer account. The maintenance screen itself is the <strong>Account Assignment</strong> tab."
+            "definition": "The company guide lists an **Account Assignment Report** among the tiles on the **Reports** tab, next to Forecast, Opportunity Aging, Outcome Analysis, Client Win Rate, Pipeline Report, Huddle Report and Pipeline Gantt View. It shows who is assigned to each customer account. The maintenance screen itself is the **Account Assignment** tab."
           }
         ],
         "procedures": [
@@ -10102,6 +10291,12 @@ const MODULES = [
               "Alternatively, check the <strong>Top Customers Performance</strong> table on the <strong>Executive Summary</strong> Analytics tab for the same information presented alongside other executive KPIs."
             ]
           }
+        ],
+        "images": [
+          {
+            "src": "assets/guides/opportunity/015.jpg",
+            "caption": "Report tiles on the Reports tab"
+          }
         ]
       },
       {
@@ -10119,6 +10314,10 @@ const MODULES = [
           {
             "term": "Opportunities vs. Leads (terminology)",
             "definition": "There is no functional difference. \"Opportunity\" and \"Lead\" are two labels for the same underlying module and the same records, chosen based on where you opened it from: Opportunities from Home with no project selected, Leads with a construction Project in context."
+          },
+          {
+            "term": "Client, Customer and BD Rep wording",
+            "definition": "This guide uses **Client**, **Clients Interactions** and **BD Rep**. Some screens or environments say **Customer**, **Customers Interactions** and **Site Representative** for the same things. The **Customers** shortcut in the toolbar and **Global Data → Customers** keep their own names."
           }
         ],
         "procedures": [
@@ -10127,7 +10326,7 @@ const MODULES = [
             "steps": [
               "Check whether the required <strong>Status</strong> field is empty — this is almost always the actual blocker.",
               "If Status is empty, go to <strong>Settings → Stages & Statuses Configuration</strong> and confirm the current Stage (usually Lead) has at least one Status configured.",
-              "Remember that the Contact section fields (Customer Groups, Site Representative, Corporate Lead, Executive Lead) are all optional — they are not what's preventing submission, even if they appear unfilled."
+              "Remember that the Contact section fields (Client Group, BD Rep, Corporate Lead, Executive Lead) are all optional — they are not what's preventing submission, even if they appear unfilled."
             ]
           },
           {
@@ -10145,7 +10344,7 @@ const MODULES = [
         "definitions": [
           {
             "term": "Milestones tab",
-            "definition": "Dates across the life of the opportunity. Once you choose a <strong>Milestone Template</strong> on the profile, the tab shows one row per milestone with <strong>Icon</strong>, <strong>Milestone</strong>, <strong>Target Date</strong>, <strong>Actual</strong> dates and <strong>Notes</strong>. Remove a milestone that does not apply, or add one from the master list. Each opportunity type shows only the templates mapped to it. The dates feed the <strong>Pipeline Gantt View</strong>, and the standard setup needs at least approximate target dates before a lead is qualified."
+            "definition": "Dates across the life of the opportunity. Once you choose a **Milestone Template** on the profile, the tab shows one row per milestone with **Icon**, **Milestone**, **Target Date**, **Actual** dates and **Notes**. Remove a milestone that does not apply, or add one from the master list. Each opportunity type shows only the templates mapped to it. The dates feed the **Pipeline Gantt View**, and the standard setup needs at least approximate target dates before a lead is qualified."
           },
           {
             "term": "Teams tab",
@@ -10153,23 +10352,27 @@ const MODULES = [
           },
           {
             "term": "Clients Interactions tab",
-            "definition": "Turns on once a customer and a customer contact are added on the opportunity. Log calls, mails, meetings, tasks, comments and notes here. The <strong>Comments</strong> tab works as an internal team chat for that one opportunity."
+            "definition": "Turns on once a customer and a customer contact are added on the opportunity. Log calls, mails, meetings, tasks, comments and notes here. The **Comments** tab works as an internal team chat for that one opportunity."
           },
           {
             "term": "Documents tab",
-            "definition": "Files attached here go to the shared document storage chosen for your organisation in Opportunities Form → Settings (AWS S3 or SharePoint)."
+            "definition": "Files attached here go to the shared document storage chosen for your organisation in Opportunities Form → Settings (AWS S3 or SharePoint). The guide describes these documents being held on the organisation's SharePoint site rather than local drives."
           },
           {
             "term": "Proposals tab",
-            "definition": "Lists the proposals raised against the opportunity, one row each. Click <strong>+ Create</strong>, enter the details and move the status on as the proposal goes from draft to submitted."
+            "definition": "Lists the proposals raised against the opportunity, one row each. Click **+ Create**, enter the details and move the status on as the proposal goes from draft to submitted."
           },
           {
             "term": "Compliance Tracker tab",
-            "definition": "Lists the compliance requirements selected for the opportunity and checks them against what your company holds. Four cards head the screen: <strong>Compliant</strong>, <strong>Missing / Incomplete / Expired</strong>, <strong>Expiring Soon</strong> and <strong>Readiness Score</strong> (what is available against the total selected). The table shows each requirement with its ID, name, description, category, renewal frequency, required evidence and source. The records themselves live under <strong>Global Data → Compliance Hub</strong>, so a missing or expired item is fixed there, not on the opportunity."
+            "definition": "Lists the compliance requirements selected for the opportunity and checks them against what your company holds. Four cards head the screen: **Compliant**, **Missing / Incomplete / Expired**, **Expiring Soon** and **Readiness Score** (what is available against the total selected). The table shows each requirement with its ID, name, description, category, renewal frequency, required evidence and source. The records themselves live under **Global Data → Compliance Hub**, so a missing or expired item is fixed there, not on the opportunity."
           },
           {
             "term": "Expenses tab",
             "definition": "What the pursuit costs: travel, proposal production, third-party studies, bid bonds. Approved lines add up to a total on the opportunity, so the cost of pursuit can be read against the outcome. The expense categories and approval routing are set up in Settings."
+          },
+          {
+            "term": "Stale and inactive alerts",
+            "definition": "On the **Timeline & Activity** section, the **Stage / Inactive Threshold Notification** warns you when an opportunity sits too long with no updated information. The thresholds come from **Settings**, and stale opportunities count on **My Dashboard**."
           }
         ],
         "procedures": [
@@ -10181,7 +10384,14 @@ const MODULES = [
               "Remove any milestone that does not apply, or add one from the master list.",
               "Enter a <strong>Target Date</strong> for each milestone and add <strong>Notes</strong>."
             ],
-            "note": "Opportunity Type and Milestone Templates are maintained by Sales Ops in Settings."
+            "note": "Opportunity Type and Milestone Templates are maintained by Sales Ops in Settings.",
+            "images": [
+              {
+                "src": "assets/guides/opportunity/009.jpg",
+                "caption": "Milestones tab with Target Date and Notes",
+                "step": 4
+              }
+            ]
           },
           {
             "title": "Record a pursuit expense",
@@ -10189,6 +10399,13 @@ const MODULES = [
               "Open the opportunity and click the <strong>Expenses</strong> tab, then <strong>+ Create</strong>.",
               "Select the expense category, enter the date, amount and description, and attach the receipt.",
               "Click <strong>Submit</strong>. The expense goes to the configured approver."
+            ],
+            "images": [
+              {
+                "src": "assets/guides/opportunity/014.jpg",
+                "caption": "Expenses tab",
+                "step": 2
+              }
             ]
           },
           {
@@ -10197,6 +10414,13 @@ const MODULES = [
               "Open the opportunity and click the <strong>Compliance Tracker</strong> tab.",
               "Read the four cards, especially <strong>Readiness Score</strong>.",
               "For any missing or expired item, fix the record under <strong>Global Data → Compliance Hub</strong>."
+            ],
+            "images": [
+              {
+                "src": "assets/guides/opportunity/013.jpg",
+                "caption": "Compliance Tracker with Readiness Score",
+                "step": 3
+              }
             ]
           },
           {
@@ -10207,6 +10431,16 @@ const MODULES = [
               "Continue on the same record once Sales Ops adds it and you get a notification."
             ]
           }
+        ],
+        "images": [
+          {
+            "src": "assets/guides/opportunity/011.jpg",
+            "caption": "Documents tab"
+          },
+          {
+            "src": "assets/guides/opportunity/012.jpg",
+            "caption": "Proposals tab"
+          }
         ]
       },
       {
@@ -10215,15 +10449,15 @@ const MODULES = [
         "definitions": [
           {
             "term": "Mobile Home and Opportunities",
-            "definition": "The Home screen has an <strong>Opportunity Management</strong> card with Opportunities, Client Interactions, Clients, Owners and Contact Directory. The bottom bar has <strong>Home</strong>, <strong>Alerts</strong> and <strong>My Account</strong>. <strong>Opportunities</strong> has <strong>Child</strong> and <strong>Parent</strong> tabs, search by name, stage chips and a filter icon. Each card shows the ID, Status, Days In Stage, Value, POC, Parent and an <strong>Assign To</strong> picker."
+            "definition": "The Home screen has an **Opportunity Management** card with Opportunities, Client Interactions, Clients, Owners and Contact Directory. The bottom bar has **Home**, **Alerts** and **My Account**. **Opportunities** has **Child** and **Parent** tabs, search by name, stage chips and a filter icon. Each card shows the ID, Status, Days In Stage, Value, POC, Parent and an **Assign To** picker."
           },
           {
             "term": "Mobile filters",
-            "definition": "The filter sheet offers Name, ID, Stage, Status, Created By, Created Date, Due Date, Groups, Clients and POC, Owners and POC, CE and POC, Project Locations, Assign To, PTT, Opportunity Type, EPC and POC, Market and Sub-market Type, Business Development, Business Unit, Parent and Opportunity Value, with <strong>Save & Apply</strong>, <strong>Apply</strong>, <strong>Clear All</strong> and Sort."
+            "definition": "The filter sheet offers Name, ID, Stage, Status, Created By, Created Date, Due Date, Groups, Clients and POC, Owners and POC, CE and POC, Project Locations, Assign To, PTT, Opportunity Type, EPC and POC, Market and Sub-market Type, Business Development, Business Unit, Parent and Opportunity Value, with **Save & Apply**, **Apply**, **Clear All** and Sort."
           },
           {
             "term": "Mobile Client Interactions, Clients, Contacts and Owners",
-            "definition": "<strong>Client Interactions</strong> lists contacts with a <strong>Notes</strong> button on each. Open a client, pick a contact card and use the <strong>Opportunities</strong> dropdown to manage its Call Logs, Events, Meetings, Tasks and Notes; <strong>See History</strong> shows what was logged. <strong>Clients</strong> and <strong>Owners</strong> list records with <strong>+ Create</strong> (use <strong>Create Owner From Client</strong> to make the same record an owner). A new client goes through approval, and you can then add its contacts. <strong>Contact Directory</strong> shows contacts with name, designation, client, email and phone, and <strong>+ Create</strong> adds one under <strong>Client Contacts</strong> or <strong>Owner Contacts</strong>."
+            "definition": "**Client Interactions** lists contacts with a **Notes** button on each. Open a client, pick a contact card and use the **Opportunities** dropdown to manage its Call Logs, Events, Meetings, Tasks and Notes; **See History** shows what was logged. **Clients** and **Owners** list records with **+ Create** (use **Create Owner From Client** to make the same record an owner). A new client goes through approval, and you can then add its contacts. **Contact Directory** shows contacts with name, designation, client, email and phone, and **+ Create** adds one under **Client Contacts** or **Owner Contacts**."
           },
           {
             "term": "Business card scan",
@@ -10238,7 +10472,19 @@ const MODULES = [
               "Fill the collapsible sections: <strong>Details</strong>, <strong>Status & Value</strong>, <strong>Timeline & Activity</strong> and <strong>Contact</strong>.",
               "Tap <strong>Submit</strong>."
             ],
-            "note": "From the opportunity details, tap <strong>Link Parent</strong> or <strong>Create Parent</strong> to group it under a parent."
+            "note": "From the opportunity details, tap **Link Parent** or **Create Parent** to group it under a parent.",
+            "images": [
+              {
+                "src": "assets/guides/opportunity/023.jpg",
+                "caption": "Create Opportunity form on mobile",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/opportunity/024.jpg",
+                "caption": "Collapsible sections of the mobile form",
+                "step": 2
+              }
+            ]
           },
           {
             "title": "Log a note or call for a contact from the field",
@@ -10246,6 +10492,38 @@ const MODULES = [
               "Open <strong>Client Interactions</strong> and tap <strong>Notes</strong> on the contact, or tap the client and pick the contact card.",
               "Use the <strong>Opportunities</strong> dropdown to choose the deal.",
               "Log the call, meeting or note. <strong>See History</strong> shows it later."
+            ],
+            "images": [
+              {
+                "src": "assets/guides/opportunity/027.jpg",
+                "caption": "Client Interactions list on mobile",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/opportunity/028.jpg",
+                "caption": "Notes button on a contact",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/opportunity/029.jpg",
+                "caption": "Client POC card on mobile",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/opportunity/030.jpg",
+                "caption": "Opportunities linked to a POC",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/opportunity/031.jpg",
+                "caption": "Comments on an opportunity",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/opportunity/032.jpg",
+                "caption": "See History of logged interactions",
+                "step": 3
+              }
             ]
           },
           {
@@ -10254,6 +10532,13 @@ const MODULES = [
               "Tap <strong>Opportunities</strong> and tap the opportunity to open it.",
               "Tap <strong>Link Parent</strong> to add it under an existing parent, or <strong>Create Parent</strong> to make a new parent.",
               "Use the <strong>Child</strong> and <strong>Parent</strong> tabs on the list to see the result."
+            ],
+            "images": [
+              {
+                "src": "assets/guides/opportunity/026.jpg",
+                "caption": "Link Parent and Create Parent on mobile",
+                "step": 1
+              }
             ]
           },
           {
@@ -10262,7 +10547,103 @@ const MODULES = [
               "Tap <strong>Clients</strong> (or <strong>Owners</strong>) and tap <strong>+ Create</strong>.",
               "Fill in the collapsible form. To make the same record an owner, choose <strong>Create Owner From Client</strong>.",
               "Tap <strong>Submit</strong>. A new client goes through approval. When approved, open it to create Client POCs, and check <strong>Rejected</strong> for clients that were turned down."
+            ],
+            "images": [
+              {
+                "src": "assets/guides/opportunity/033.jpg",
+                "caption": "Clients list on mobile",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/opportunity/034.jpg",
+                "caption": "Client details on mobile",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/opportunity/035.jpg",
+                "caption": "Search and filter for clients",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/opportunity/036.jpg",
+                "caption": "Create Client form on mobile",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/opportunity/037.jpg",
+                "caption": "Client submitted for approval",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/opportunity/038.jpg",
+                "caption": "Creating Client POCs",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/opportunity/039.jpg",
+                "caption": "Rejected clients",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/opportunity/044.jpg",
+                "caption": "Owners list on mobile",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/opportunity/045.jpg",
+                "caption": "Owner ID and Name",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/opportunity/046.jpg",
+                "caption": "Search and filter for owners",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/opportunity/047.jpg",
+                "caption": "Creating an owner on mobile",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/opportunity/048.jpg",
+                "caption": "Creating Owner POCs",
+                "step": 3
+              }
             ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/guides/opportunity/020.jpg",
+            "caption": "Arena Onsite Home with the Opportunity Management card"
+          },
+          {
+            "src": "assets/guides/opportunity/021.jpg",
+            "caption": "Opportunities list on mobile"
+          },
+          {
+            "src": "assets/guides/opportunity/022.jpg",
+            "caption": "Opportunity card with ID, Status and Value"
+          },
+          {
+            "src": "assets/guides/opportunity/025.jpg",
+            "caption": "Mobile Filters sheet"
+          },
+          {
+            "src": "assets/guides/opportunity/040.jpg",
+            "caption": "Contact Directory on mobile"
+          },
+          {
+            "src": "assets/guides/opportunity/041.jpg",
+            "caption": "Contact card with designation and client"
+          },
+          {
+            "src": "assets/guides/opportunity/042.jpg",
+            "caption": "Search and filter in the Contact Directory"
+          },
+          {
+            "src": "assets/guides/opportunity/043.jpg",
+            "caption": "Creating a contact manually"
           }
         ]
       }
@@ -10270,20 +10651,20 @@ const MODULES = [
     "name": "Opportunity Management",
     "alias": "Leads Management",
     "icon": "groups",
-    "tagline": "Identify opportunities and build relationships with customers",
+    "tagline": "Log leads, qualify them into opportunities, move them through the pipeline to a Closed outcome and report on the results.",
     "color": "#c15f3c",
-    "overview": "<p><strong>Opportunity Management</strong> is Arena's pre-construction CRM module — the front end of the business-development pipeline. Staff capture potential jobs as early as the <strong>Lead</strong> stage, track them through a configurable pipeline (<strong>Lead → Proposal → Closed</strong>), assign owners/competitors/stakeholders, log every customer interaction, and hand qualified pursuits to <strong>Proposal Management</strong> and <strong>Tender Management</strong>.</p>\n    <p>In the URL and inside an open Project, this module is labeled <strong>Leads Management</strong> (route <code>#/leads-management</code>, main tab \"Leads\"). From the company-wide Home screen it's labeled <strong>Opportunities Management</strong> (\"Opportunities\"). Same screens, same functionality — just a per-context label.</p>",
+    "overview": "<p><strong>Opportunity Management</strong> is Arena's pre-construction system of record for every pursuit. Business Development staff log a lead, complete its profile, qualify it, and move it through the stages Lead → Opportunity → Proposal → Inquiry → Bidding → Closed, while leadership follows the value and forecast on <strong>My Dashboard</strong>, <strong>Reports</strong> and <strong>Analytics</strong>.</p><p>Each opportunity holds its profile (<strong>Details</strong>, <strong>Status & Value</strong>, <strong>Timeline & Activity</strong> and <strong>Contact</strong>) plus tabs for milestones, teams, clients interactions, documents, proposals, the compliance tracker and expenses. Related opportunities can be grouped under a parent. <strong>Arena Onsite</strong> is the mobile app for the field. In the URL and inside an open Project, this module is labeled Leads Management; the screens are the same.</p>",
     "navigation": [
-      "From <strong>Home</strong>, click the <strong>Opportunity Management</strong> tile.",
-      "Opens at <code>#/leads-management</code> on the <strong>My Dashboard</strong> tab.",
-      "Second-level tabs: My Dashboard, Opportunities, Customers Interactions, Analytics, Reports, Account Assignment.",
-      "Icon shortcuts to the right of the tabs: Task, Calendar, Contacts Directory, Customers, Owners, Competitors, Settings."
+      "From <strong>Home</strong>, click the <strong>Opportunity Management</strong> tile. It opens on <strong>My Dashboard</strong>.",
+      "The module tabs are <strong>My Dashboard</strong>, <strong>Opportunities</strong>, <strong>Clients Interactions</strong>, <strong>Analytics</strong>, <strong>Reports</strong> and <strong>Account Assignment</strong>.",
+      "The icon toolbar at the top right has <strong>Tasks</strong>, <strong>Calendar</strong>, <strong>Contacts</strong>, <strong>Customers</strong>, <strong>Owners</strong>, <strong>Competitors</strong> and <strong>Settings</strong> (the gear).",
+      "The <strong>Arena Onsite</strong> mobile app mirrors the core flows for the field."
     ],
     "sections": [
       "Who Does What in Opportunity Management",
       "Settings",
       "Opportunities",
-      "Customer Interactions",
+      "Clients Interactions",
       "Account Assignment",
       "Dashboard",
       "Sidebar Shortcuts",
@@ -16094,11 +16475,11 @@ const MODULES = [
         "definitions": [
           {
             "term": "Work Order Types",
-            "definition": "The list of work order types under <strong>Settings → Work Order Types</strong>. <strong>Equipment</strong> is the default type and opens as the first tab. Click <strong>+ Work Order Type</strong> to add more. Every work order is raised under one type, and each type has its own tabs, forms and ID format. Some environments running an earlier version also show <strong>Service</strong> and <strong>Material</strong> types."
+            "definition": "The list of work order types under **Settings → Work Order Types**. **Equipment** is the default type and opens as the first tab. Click **+ Work Order Type** to add more. Every work order is raised under one type, and each type has its own tabs, forms and ID format. Some environments running an earlier version also show **Service** and **Material** types."
           },
           {
             "term": "Users and Permissions (Work Order)",
-            "definition": "Under <strong>Settings → Users and Permissions</strong>, the administrator creates user groups for the module with <strong>Add User Group</strong>, adds users and switches on the permissions each role needs (see <strong>Settings</strong> below). A person appears in the Technician, Assign To and Approver lists only if their group has the matching permission. Permission groups can also be managed centrally under Global Data → Users & Permissions; if a group made in one place does not show in the other, check both."
+            "definition": "Under **Settings → Users and Permissions**, the administrator creates user groups for the module with **Add User Group**, adds users and switches on the permissions each role needs (see **Settings** below). A person appears in the Technician, Assign To and Approver lists only if their group has the matching permission. Permission groups can also be managed centrally under Global Data → Users & Permissions; if a group made in one place does not show in the other, check both."
           },
           {
             "term": "Cross-module tab dependency",
@@ -16110,35 +16491,35 @@ const MODULES = [
           },
           {
             "term": "Before the first work order",
-            "definition": "Check that the work order types, maintenance types, statuses and priorities are set up, that an approval workflow is marked <strong>Set as Default</strong>, that invoice approval routing is configured, that the equipment has a Business Unit and Location, that the Projects and Phase Codes exist for booking cost, that Inventory holds the items you will issue, and that the users are added under <strong>Users and Permissions</strong>."
+            "definition": "Check that the work order types, maintenance types, statuses and priorities are set up, that an approval workflow is marked **Set as Default**, that invoice approval routing is configured, that the equipment has a Business Unit and Location, that the Projects and Phase Codes exist for booking cost, that Inventory holds the items you will issue, and that the users are added under **Users and Permissions**."
           },
           {
             "term": "Setup and execution flow",
-            "definition": "One-time setup comes first, then the same loop repeats for every work order. (1) The Administrator configures the work order type in <strong>Settings → Work Order Types</strong>: tabs, forms, ID format and operational statuses. (2) The Administrator sets <strong>Maintenance Types</strong>, <strong>Status</strong> and <strong>Priority</strong>. (3) The Administrator sets the <strong>Approval Workflow</strong> and <strong>Invoices</strong> approval. (4) The Administrator sets the <strong>Reopen Window</strong> under <strong>Configuration</strong> and gives users access under <strong>Users and Permissions</strong>. (5) The Requester clicks <strong>Create</strong> on the <strong>Work Orders</strong> tab and raises the work order against the equipment. (6) The Technician, Supervisor, Store and Procurement user record items, crew, hours, materials, parts and expenses on the tabs. (7) The Accounts user raises vendor invoices on the <strong>Invoices</strong> tab and the Approver processes them. (8) The Approver and Requester approve, complete, cancel or reopen the work order. (9) The Administrator and Approver review the <strong>Equipment Breakdown Report</strong>."
+            "definition": "One-time setup comes first, then the same loop repeats for every work order. (1) The Administrator configures the work order type in **Settings → Work Order Types**: tabs, forms, ID format and operational statuses. (2) The Administrator sets **Maintenance Types**, **Status** and **Priority**. (3) The Administrator sets the **Approval Workflow** and **Invoices** approval. (4) The Administrator sets the **Reopen Window** under **Configuration** and gives users access under **Users and Permissions**. (5) The Requester clicks **Create** on the **Work Orders** tab and raises the work order against the equipment. (6) The Technician, Supervisor, Store and Procurement user record items, crew, hours, materials, parts and expenses on the tabs. (7) The Accounts user raises vendor invoices on the **Invoices** tab and the Approver processes them. (8) The Approver and Requester approve, complete, cancel or reopen the work order. (9) The Administrator and Approver review the **Equipment Breakdown Report**."
           },
           {
             "term": "Requester: what you do",
-            "definition": "Site Engineer or Equipment Coordinator. You click <strong>Create</strong> on the <strong>Work Orders</strong> tab, choose the work order type, pick <strong>Create By</strong> (<strong>Inspection Issue</strong> or <strong>Equipment</strong>), fill in the priority, operational status, due date and service assignment, and click <strong>Submit</strong>. You write the <strong>Complaint</strong> in the Diagnosis section, add the items of work, pick a user in <strong>Assign To</strong> and click <strong>Submit</strong> or <strong>Submit for Approval</strong>. If the Approver rejects it, it comes back to you with remarks to edit and resubmit. You can cancel it from the kebab menu."
+            "definition": "Site Engineer or Equipment Coordinator. You click **Create** on the **Work Orders** tab, choose the work order type, pick **Create By** (**Inspection Issue** or **Equipment**), fill in the priority, operational status, due date and service assignment, and click **Submit**. You write the **Complaint** in the Diagnosis section, add the items of work, pick a user in **Assign To** and click **Submit** or **Submit for Approval**. If the Approver rejects it, it comes back to you with remarks to edit and resubmit. You can cancel it from the kebab menu."
           },
           {
             "term": "Approver: what you do",
-            "definition": "Maintenance Manager or Business Unit Head. Work orders routed to you appear once the Requester clicks <strong>Submit for Approval</strong>. You review the tabs, items, cost and attachments, then click <strong>Approve</strong> or <strong>Reject</strong> and enter comments. You also approve or reject vendor invoices from the <strong>Invoices</strong> tab and timesheets from <strong>Timesheet Logs</strong> when you are set as an approver. With several approval levels, the work order stays pending until every level has approved. Rejections show under <strong>Workflow Issues</strong>."
+            "definition": "Maintenance Manager or Business Unit Head. Work orders routed to you appear once the Requester clicks **Submit for Approval**. You review the tabs, items, cost and attachments, then click **Approve** or **Reject** and enter comments. You also approve or reject vendor invoices from the **Invoices** tab and timesheets from **Timesheet Logs** when you are set as an approver. With several approval levels, the work order stays pending until every level has approved. Rejections show under **Workflow Issues**."
           },
           {
             "term": "Technician and Supervisor: what you do",
-            "definition": "Mechanic or Shop Supervisor. You open the work order and record the <strong>Cause</strong> and <strong>Correction</strong> in the Diagnosis section, keep the item statuses up to date, and book hours through <strong>My Timesheet</strong> or <strong>My Crew Timesheet</strong>. You request equipment, order materials, import parts, record expenses and upload drawings. The Supervisor manages the <strong>Team</strong> tab and updates the <strong>Schedule</strong>. You appear in the Technician dropdown only if your user group has the right permission."
+            "definition": "Mechanic or Shop Supervisor. You open the work order and record the **Cause** and **Correction** in the Diagnosis section, keep the item statuses up to date, and book hours through **My Timesheet** or **My Crew Timesheet**. You request equipment, order materials, import parts, record expenses and upload drawings. The Supervisor manages the **Team** tab and updates the **Schedule**. You appear in the Technician dropdown only if your user group has the right permission."
           },
           {
             "term": "Store Keeper and Procurement user: what you do",
-            "definition": "Store Keeper or Purchase Executive. The Store Keeper works the <strong>Inventory</strong> tab: orders raised against the work order, issuing materials from stock, and returning materials if a work order is cancelled. The Purchase Executive works the <strong>Procurement</strong> tab: click <strong>Requisition</strong>, pick <strong>Equipment</strong>, <strong>Material</strong>, <strong>Equipment Part</strong> or <strong>Delivery Service</strong>, and submit it into the normal Procurement process. Both need the matching permission in Inventory Management and Procurement."
+            "definition": "Store Keeper or Purchase Executive. The Store Keeper works the **Inventory** tab: orders raised against the work order, issuing materials from stock, and returning materials if a work order is cancelled. The Purchase Executive works the **Procurement** tab: click **Requisition**, pick **Equipment**, **Material**, **Equipment Part** or **Delivery Service**, and submit it into the normal Procurement process. Both need the matching permission in Inventory Management and Procurement."
           },
           {
             "term": "Accounts user: what you do",
-            "definition": "Accounts Executive. You open the <strong>Invoices</strong> tab of the work order, click <strong>Create</strong> on the <strong>Invoice</strong> sub-tab, enter the invoice details (vendor, date and amount), submit it for approval and follow it through the approval levels. Stuck invoices appear under the <strong>Workflow Issues</strong> sub-tab. The invoice counts in the <strong>External / Vendor</strong> line of the <strong>Cost</strong> tab only after every level has approved."
+            "definition": "Accounts Executive. You open the **Invoices** tab of the work order, click **Create** on the **Invoice** sub-tab, enter the invoice details (vendor, date and amount), submit it for approval and follow it through the approval levels. Stuck invoices appear under the **Workflow Issues** sub-tab. The invoice counts in the **External / Vendor** line of the **Cost** tab only after every level has approved."
           },
           {
             "term": "Where work order settings live",
-            "definition": "Everyday setup is in the module: open <strong>Home → Work Order → Settings</strong> (gear icon). The left panel lists Work Order Types, Maintenance Types, Invoices, Approval Workflow, Status, Priority, Configuration and Users and Permissions, with a search box. Use it for tab visibility, forms, ID format, operational status, approvals and access."
+            "definition": "Everyday setup is in the module: open **Home → Work Order → Settings** (gear icon). The left panel lists Work Order Types, Maintenance Types, Invoices, Approval Workflow, Status, Priority, Configuration and Users and Permissions, with a search box. Use it for tab visibility, forms, ID format, operational status, approvals and access."
           }
         ],
         "procedures": [
@@ -16171,47 +16552,47 @@ const MODULES = [
         "definitions": [
           {
             "term": "Work order type setup",
-            "definition": "Click a type in <strong>Settings → Work Order Types</strong> to configure it. Each type has its own sub-tabs, <strong>Tab Visibility</strong>, <strong>Profile</strong>, <strong>Item Form</strong>, <strong>Expense Form</strong>, <strong>ID Settings</strong> and (for the Equipment type only) <strong>Operational Status</strong>. Each sub-tab has its own <strong>Save Changes</strong> button, so save one before you move to the next."
+            "definition": "Click a type in **Settings → Work Order Types** to configure it. Each type has its own sub-tabs, **Tab Visibility**, **Profile**, **Item Form**, **Expense Form**, **ID Settings** and (for the Equipment type only) **Operational Status**. Each sub-tab has its own **Save Changes** button, so save one before you move to the next."
           },
           {
             "term": "Tab Visibility",
-            "definition": "The list of every tab a work order can show: Profile, Items, Team, Timesheets, Equipment, Inventory, Procurement, Expense, Schedule, Communication and the rest. Use the toggle to show or hide a tab, and drag the handle at the start of a row to set the tab order. <strong>Profile</strong> is always on. Visibility is set per work order type."
+            "definition": "The list of every tab a work order can show: Profile, Items, Team, Timesheets, Equipment, Inventory, Procurement, Expense, Schedule, Communication and the rest. Use the toggle to show or hide a tab, and drag the handle at the start of a row to set the tab order. **Profile** is always on. Visibility is set per work order type."
           },
           {
             "term": "Profile, Item Form and Expense Form",
-            "definition": "<strong>Profile</strong> controls the fields on the work order Profile tab: switch <strong>Standard Fields</strong> on or off, and use <strong>Add Field</strong> under <strong>Configurable Fields</strong> for extra fields. <strong>Item Form</strong> is the form filled in when someone creates an item (use <strong>Add section</strong>, then add fields to each section). <strong>Expense Form</strong> holds the fields captured when someone creates an expense (use <strong>Add Field</strong>)."
+            "definition": "**Profile** controls the fields on the work order Profile tab: switch **Standard Fields** on or off, and use **Add Field** under **Configurable Fields** for extra fields. **Item Form** is the form filled in when someone creates an item (use **Add section**, then add fields to each section). **Expense Form** holds the fields captured when someone creates an expense (use **Add Field**)."
           },
           {
             "term": "ID Settings",
-            "definition": "Controls how the work order ID (WO ID) is built. Pick an <strong>ID Separator</strong> (<strong>/</strong>, <strong>-</strong> or <strong>None</strong>), then switch on the components you want and set their order: <strong>Serial No./ID</strong>, <strong>Year</strong>, <strong>WO Type ID</strong>, <strong>Custom Text</strong> and <strong>Equipment ID</strong>. The <strong>Example Format</strong> line shows the result, for example 1/1/Equipment-12121. ID settings cannot be changed after a work order has been created."
+            "definition": "Controls how the work order ID (WO ID) is built. Pick an **ID Separator** (**/**, **-** or **None**), then switch on the components you want and set their order: **Serial No./ID**, **Year**, **WO Type ID**, **Custom Text** and **Equipment ID**. The **Example Format** line shows the result, for example 1/1/Equipment-12121. ID settings cannot be changed after a work order has been created."
           },
           {
             "term": "Operational Status",
-            "definition": "For the Equipment type, this page lists the values in the <strong>Operational Status</strong> dropdown on the work order, with the <strong>Linked Equipment Status</strong> beside each. Default mapping: <strong>Operational</strong> → In Maintenance, <strong>Down - Major Repairs</strong> → In Maintenance, <strong>Running - Minor Repairs</strong> → In Maintenance, <strong>Running - Due for PM</strong> → Out of Service, <strong>Dispose Initiated</strong> → In Maintenance. When the work order is submitted, the equipment record takes the linked status in <strong>Asset Management → Equipment Master</strong>, and the same value shows in the <strong>Status</strong> column of the Equipment Breakdown Report. Use <strong>Add Status</strong> to add your own, choose its linked equipment status, and use the delete icon in the <strong>Actions</strong> column to remove one you added. Changes save automatically."
+            "definition": "For the Equipment type, this page lists the values in the **Operational Status** dropdown on the work order, with the **Linked Equipment Status** beside each. Default mapping: **Operational** → In Maintenance, **Down - Major Repairs** → In Maintenance, **Running - Minor Repairs** → In Maintenance, **Running - Due for PM** → Out of Service, **Dispose Initiated** → In Maintenance. When the work order is submitted, the equipment record takes the linked status in **Asset Management → Equipment Master**, and the same value shows in the **Status** column of the Equipment Breakdown Report. Use **Add Status** to add your own, choose its linked equipment status, and use the delete icon in the **Actions** column to remove one you added. Changes save automatically."
           },
           {
             "term": "Maintenance Types",
-            "definition": "The list of reasons for maintenance, such as Preventive, Breakdown, Predictive, Statutory or Warranty. Click <strong>Add</strong>, type the name and it saves automatically. Maintenance type is a filter on the work order list and in maintenance reports, and it is what separates planned from unplanned work."
+            "definition": "The list of reasons for maintenance, such as Preventive, Breakdown, Predictive, Statutory or Warranty. Click **Add**, type the name and it saves automatically. Maintenance type is a filter on the work order list and in maintenance reports, and it is what separates planned from unplanned work."
           },
           {
             "term": "Status and Priority",
-            "definition": "<strong>Status</strong> lists the statuses in the <strong>Work Order Status</strong> dropdown (add or update them, then <strong>Submit</strong>). <strong>Priority</strong> lists the priority levels with their <strong>Due Hours</strong>, the time within which a work order at that priority should be attended to. Use <strong>Add Priority</strong>, the edit and delete icons, and drag the handle to set the order priorities appear in the dropdown."
+            "definition": "**Status** lists the statuses in the **Work Order Status** dropdown (add or update them, then **Submit**). **Priority** lists the priority levels with their **Due Hours**, the time within which a work order at that priority should be attended to. Use **Add Priority**, the edit and delete icons, and drag the handle to set the order priorities appear in the dropdown."
           },
           {
             "term": "Configuration: Reopen Window",
-            "definition": "One setting, <strong>Reopen Window (days)</strong>: the number of days after a work order first becomes Completed or Cancelled during which it can still be reopened. Click <strong>Save</strong> to apply it. After that many days the work order locks."
+            "definition": "One setting, **Reopen Window (days)**: the number of days after a work order first becomes Completed or Cancelled during which it can still be reopened. Click **Save** to apply it. After that many days the work order locks."
           },
           {
             "term": "Approval Workflow and invoice approval",
-            "definition": "<strong>Approval Workflow</strong> sets the approval levels for work order requests: pick the work order type, click <strong>Create Level</strong>, choose the approvers and the workflow type, and <strong>Submit</strong>. Mark one workflow <strong>Set as Default</strong> or work orders will not move forward. <strong>Invoices</strong> does the same for vendor invoices raised on a work order, and lets you route by invoice value."
+            "definition": "**Approval Workflow** sets the approval levels for work order requests: pick the work order type, click **Create Level**, choose the approvers and the workflow type, and **Submit**. Mark one workflow **Set as Default** or work orders will not move forward. **Invoices** does the same for vendor invoices raised on a work order, and lets you route by invoice value."
           },
           {
             "term": "Users and Permissions (permissions you can switch on)",
-            "definition": "The page lists users with access to the module and their role. Click <strong>Add User Group</strong>, enter the <strong>Group Name</strong>, add users under the <strong>Users</strong> tab, then switch on the permissions: viewing, creating, editing, assigning, <strong>Admin</strong>, <strong>Download</strong> and <strong>Assign to</strong>. Click save changes. Users show up in the Technician, Assign To and Approver dropdowns only with the matching permission. Actions a role may not perform are hidden or disabled on the work order."
+            "definition": "The page lists users with access to the module and their role. Click **Add User Group**, enter the **Group Name**, add users under the **Users** tab, then switch on the permissions: viewing, creating, editing, assigning, **Admin**, **Download** and **Assign to**. Click save changes. Users show up in the Technician, Assign To and Approver dropdowns only with the matching permission. Actions a role may not perform are hidden or disabled on the work order."
           },
           {
             "term": "Earlier-version note",
-            "definition": "Some environments running an earlier version show a simpler screen here, so a field or page described in this guide may be missing. For example, an earlier version may show only the <strong>Work Order Types</strong> and <strong>Users and Permissions</strong> pages in Settings, and a Create window with just <strong>Name</strong>, <strong>Description</strong> and <strong>Type</strong>."
+            "definition": "Some environments running an earlier version show a simpler screen here, so a field or page described in this guide may be missing. For example, an earlier version may show only the **Work Order Types** and **Users and Permissions** pages in Settings, and a Create window with just **Name**, **Description** and **Type**."
           }
         ],
         "procedures": [
@@ -16636,7 +17017,7 @@ const MODULES = [
               "Add or update the statuses you need.",
               "Click <strong>Submit</strong>."
             ],
-            "note": "These statuses appear in the <strong>Work Order Status</strong> dropdown on the work order Profile and show where the work order stands.",
+            "note": "These statuses appear in the **Work Order Status** dropdown on the work order Profile and show where the work order stands.",
             "images": [
               {
                 "src": "assets/guides/work-order/049.jpg",
@@ -16698,7 +17079,7 @@ const MODULES = [
           },
           {
             "term": "Work Orders list",
-            "definition": "Lists every work order with its <strong>ID</strong>, <strong>Description</strong>, <strong>Status</strong>, <strong>Type</strong>, <strong>Project</strong>, <strong>Created Date</strong>, <strong>Created By</strong> and <strong>Equipment</strong>. Use <strong>Search by ID</strong>, <strong>Filters</strong> (Work Order Status, Created By, Equipment Number, Equipment Status, Maintenance Type, Operational Status, Location, Service Type, Priority, Business Unit), <strong>Manage Columns</strong>, the list, grid and column view icons, and <strong>Export</strong>."
+            "definition": "Lists every work order with its **ID**, **Description**, **Status**, **Type**, **Project**, **Created Date**, **Created By** and **Equipment**. Use **Search by ID**, **Filters** (Work Order Status, Created By, Equipment Number, Equipment Status, Maintenance Type, Operational Status, Location, Service Type, Priority, Business Unit), **Manage Columns**, the list, grid and column view icons, and **Export**."
           },
           {
             "term": "Workflow Issues (work orders)",
@@ -16706,7 +17087,7 @@ const MODULES = [
           },
           {
             "term": "Tabs of a work order and who uses them",
-            "definition": "The tabs you see depend on the Tab Visibility set for the type. (1) <strong>Items</strong>: Requester or Technician, the jobs to do. (2) <strong>Team</strong>: Supervisor, the users and crews. (3) <strong>Timesheets</strong>: Technician or Supervisor, labour hours. (4) <strong>Equipment</strong>: Technician, equipment and accessories requested for the work. (5) <strong>Inventory</strong>: Store Keeper, material orders. (6) <strong>Procurement</strong>: Purchase Executive, requisitions. (7) <strong>Expense</strong>: Technician or Accounts, extra spend with the bill. (8) <strong>Schedule</strong>: Supervisor, planned activities and progress. (9) <strong>Communication</strong>: everyone, mail. (10) <strong>Documents</strong>: everyone, files by folder. (11) <strong>Drawings</strong>: Technician, drawings used. (12) <strong>Parts</strong>: Technician, parts required. (13) <strong>Invoices</strong>: Accounts or Approver, vendor invoices. (14) <strong>Cost</strong>: Approver or Administrator, category-wise cost. <strong>Profile</strong> is always first."
+            "definition": "The tabs you see depend on the Tab Visibility set for the type. (1) **Items**: Requester or Technician, the jobs to do. (2) **Team**: Supervisor, the users and crews. (3) **Timesheets**: Technician or Supervisor, labour hours. (4) **Equipment**: Technician, equipment and accessories requested for the work. (5) **Inventory**: Store Keeper, material orders. (6) **Procurement**: Purchase Executive, requisitions. (7) **Expense**: Technician or Accounts, extra spend with the bill. (8) **Schedule**: Supervisor, planned activities and progress. (9) **Communication**: everyone, mail. (10) **Documents**: everyone, files by folder. (11) **Drawings**: Technician, drawings used. (12) **Parts**: Technician, parts required. (13) **Invoices**: Accounts or Approver, vendor invoices. (14) **Cost**: Approver or Administrator, category-wise cost. **Profile** is always first."
           },
           {
             "term": "Create Work Order Contract fields",
@@ -16898,7 +17279,7 @@ const MODULES = [
         "definitions": [
           {
             "term": "Work Order Profile",
-            "definition": "The tab where a work order's profile details are recorded, using the form set up under <strong>Settings → Work Order Types → Profile</strong> for the work order's type. The Items tab holds its items of work."
+            "definition": "The tab where a work order's profile details are recorded, using the form set up under **Settings → Work Order Types → Profile** for the work order's type. The Items tab holds its items of work."
           },
           {
             "term": "Work Order Item",
@@ -16906,23 +17287,23 @@ const MODULES = [
           },
           {
             "term": "Basic Information",
-            "definition": "The core of the work order: <strong>WO ID</strong> (automatic), <strong>WO Description</strong>, <strong>Work Order Type</strong>, <strong>Work Order Status</strong>, <strong>Equipment</strong> (with its warranty expiration, hours reading, location and current status shown below it), <strong>Assigned location</strong> (filled from the equipment), <strong>Maintenance Type</strong>, <strong>Business Unit</strong>, <strong>Project</strong>, <strong>Phase Code</strong>, <strong>Created Date</strong>, <strong>Created By</strong> (automatic) and <strong>Notes</strong>. Click the equipment link to open its profile in Asset Management."
+            "definition": "The core of the work order: **WO ID** (automatic), **WO Description**, **Work Order Type**, **Work Order Status**, **Equipment** (with its warranty expiration, hours reading, location and current status shown below it), **Assigned location** (filled from the equipment), **Maintenance Type**, **Business Unit**, **Project**, **Phase Code**, **Created Date**, **Created By** (automatic) and **Notes**. Click the equipment link to open its profile in Asset Management."
           },
           {
             "term": "Priority section",
-            "definition": "Holds <strong>Priority</strong> (the Due Hours of the chosen level apply), <strong>Equipment Status</strong> (fetched from the equipment, not editable), <strong>Operational Status</strong> and <strong>Due Date</strong>. The operational status updates the equipment record when you submit and shows in the Equipment Breakdown Report."
+            "definition": "Holds **Priority** (the Due Hours of the chosen level apply), **Equipment Status** (fetched from the equipment, not editable), **Operational Status** and **Due Date**. The operational status updates the equipment record when you submit and shows in the Equipment Breakdown Report."
           },
           {
             "term": "Service Assignment",
-            "definition": "Records who does the work. <strong>Service Location</strong> is required. <strong>Internal (Shop / In-House)</strong> shows <strong>Technician</strong>, and only users added under Users and Permissions with the right permission are listed. <strong>External Vendor</strong> shows <strong>Vendor</strong>, <strong>Vendor Contact</strong> and <strong>Vendor PO Number</strong>. These four fields become part of the equipment's maintenance record."
+            "definition": "Records who does the work. **Service Location** is required. **Internal (Shop / In-House)** shows **Technician**, and only users added under Users and Permissions with the right permission are listed. **External Vendor** shows **Vendor**, **Vendor Contact** and **Vendor PO Number**. These four fields become part of the equipment's maintenance record."
           },
           {
             "term": "Diagnosis: Complaint, Cause and Correction",
-            "definition": "Three rich-text boxes. <strong>Complaint</strong> is the problem as reported, entered by the Requester when the work order is raised. <strong>Cause</strong> is the reason, entered by the Technician after examining the equipment. <strong>Correction</strong> is the work done, including parts replaced and adjustments, entered by the Technician before the work order is closed. The toolbar gives bold, italics, underline, strikethrough, headings, lists and links."
+            "definition": "Three rich-text boxes. **Complaint** is the problem as reported, entered by the Requester when the work order is raised. **Cause** is the reason, entered by the Technician after examining the equipment. **Correction** is the work done, including parts replaced and adjustments, entered by the Technician before the work order is closed. The toolbar gives bold, italics, underline, strikethrough, headings, lists and links."
           },
           {
             "term": "Assign To and Submit",
-            "definition": "At the bottom of the Profile, pick a user in <strong>Assign To</strong>, then click <strong>Submit</strong> to save and assign, or <strong>Submit for Approval</strong> to send it through the approval workflow. The Equipment Status changes only after you submit."
+            "definition": "At the bottom of the Profile, pick a user in **Assign To**, then click **Submit** to save and assign, or **Submit for Approval** to send it through the approval workflow. The Equipment Status changes only after you submit."
           }
         ],
         "procedures": [
@@ -17119,19 +17500,19 @@ const MODULES = [
           },
           {
             "term": "Timesheet Summary",
-            "definition": "Shows <strong>Total Hours</strong> and <strong>Total Labor Cost</strong> for the work order, with a row per entry: <strong>Date</strong>, <strong>Roster</strong>, <strong>Projects / Work Order / GL Code</strong>, <strong>Phase Code</strong>, <strong>Earnings Code</strong>, <strong>Hours</strong>, <strong>Rate</strong> and <strong>Total</strong>. The total labor cost is the value on the <strong>Labor</strong> line of the Cost tab. Some environments running an earlier version label this sub-tab <strong>Dashboard</strong>."
+            "definition": "Shows **Total Hours** and **Total Labor Cost** for the work order, with a row per entry: **Date**, **Roster**, **Projects / Work Order / GL Code**, **Phase Code**, **Earnings Code**, **Hours**, **Rate** and **Total**. The total labor cost is the value on the **Labor** line of the Cost tab. Some environments running an earlier version label this sub-tab **Dashboard**."
           },
           {
             "term": "Timesheet Logs",
-            "definition": "Two sub-tabs, <strong>My Crew Timesheet Logs</strong> and <strong>My Timesheet Logs</strong>. The left panel lists logs for the selected date with a <strong>Total Logs</strong> count, each showing status, work order ID and the action recorded. Click a log to open it. Use <strong>View By</strong> (All or Summary), <strong>Approve</strong> or <strong>Reject</strong> on the log card, <strong>Download Excel</strong>, <strong>Export</strong> and filters. <strong>Ball in Court</strong> shows who has the timesheet now, and the <strong>Approval Workflow Level</strong> shows how many levels are done."
+            "definition": "Two sub-tabs, **My Crew Timesheet Logs** and **My Timesheet Logs**. The left panel lists logs for the selected date with a **Total Logs** count, each showing status, work order ID and the action recorded. Click a log to open it. Use **View By** (All or Summary), **Approve** or **Reject** on the log card, **Download Excel**, **Export** and filters. **Ball in Court** shows who has the timesheet now, and the **Approval Workflow Level** shows how many levels are done."
           },
           {
             "term": "Timesheet template, category and mode",
-            "definition": "The layout of a timesheet follows the <strong>Timesheet Template</strong>, for example Company, Equipment Team or Salary Timecard. Choose the <strong>Log Level Category</strong> first (Company, Work Orders, GL Codes or Projects). The timesheet header shows the <strong>Created By</strong> user and the <strong>Timesheet Mode</strong>. Phase Codes come from <strong>Projects → Project Setup → Phase Codes</strong>. Approved hours feed the Labor line on the Cost tab."
+            "definition": "The layout of a timesheet follows the **Timesheet Template**, for example Company, Equipment Team or Salary Timecard. Choose the **Log Level Category** first (Company, Work Orders, GL Codes or Projects). The timesheet header shows the **Created By** user and the **Timesheet Mode**. Phase Codes come from **Projects → Project Setup → Phase Codes**. Approved hours feed the Labor line on the Cost tab."
           },
           {
             "term": "Timesheet row actions",
-            "definition": "On each row, the <strong>Actions</strong> menu lets you duplicate the log, copy it with the same Phase Codes, add a description, or delete it. <strong>Manage Columns</strong> controls the columns, and <strong>Notes</strong> records remarks against the timesheet. On <strong>Timesheet Logs</strong>, the edit and delete icons on a log card correct or remove a log, and <strong>Download Excel</strong> downloads the day's logs."
+            "definition": "On each row, the **Actions** menu lets you duplicate the log, copy it with the same Phase Codes, add a description, or delete it. **Manage Columns** controls the columns, and **Notes** records remarks against the timesheet. On **Timesheet Logs**, the edit and delete icons on a log card correct or remove a log, and **Download Excel** downloads the day's logs."
           }
         ],
         "procedures": [
@@ -17324,7 +17705,7 @@ const MODULES = [
           },
           {
             "term": "Inventory orders",
-            "definition": "Each order lists its <strong>Ticket Number</strong>, <strong>Description</strong>, <strong>Status</strong>, <strong>Order Date</strong>, <strong>Customers</strong>, <strong>Project</strong> and <strong>Materials</strong>. Click <strong>Add</strong> on <strong>Orders</strong> to raise a new order for materials. Orders that are not approved move to <strong>Rejected Orders</strong>. Use <strong>Search by Ticket Number</strong>, <strong>Export</strong>, <strong>Filters</strong> and <strong>Manage Columns</strong>, and the Actions column to view or delete an order."
+            "definition": "Each order lists its **Ticket Number**, **Description**, **Status**, **Order Date**, **Customers**, **Project** and **Materials**. Click **Add** on **Orders** to raise a new order for materials. Orders that are not approved move to **Rejected Orders**. Use **Search by Ticket Number**, **Export**, **Filters** and **Manage Columns**, and the Actions column to view or delete an order."
           }
         ],
         "procedures": [
@@ -17367,11 +17748,11 @@ const MODULES = [
         "definitions": [
           {
             "term": "Work Order LORs",
-            "definition": "The list of Load Out Requests (equipment records) tied to this work order. On the work order the <strong>Equipment</strong> tab opens the <strong>Request Form</strong>; submitting it creates a Load Out Request or a requisition through the Transfer dialog."
+            "definition": "The list of Load Out Requests (equipment records) tied to this work order. On the work order the **Equipment** tab opens the **Request Form**; submitting it creates a Load Out Request or a requisition through the Transfer dialog."
           },
           {
             "term": "Equipment request from a work order",
-            "definition": "The equipment needed to carry out the work is requested here, and is separate from the equipment being serviced (which you choose on the Profile). Click <strong>Add</strong> to open the <strong>Request Form</strong>, pick equipment or accessories from the <strong>Available Equipment / Accessory</strong> panel, and check the grid (<strong>Item</strong>, <strong>Type</strong>, <strong>Quantity</strong>, <strong>UOM</strong>, <strong>Requested By</strong>, <strong>Required Date</strong>, <strong>Planned Return Date</strong>). Enter the <strong>Requested Date</strong>, <strong>Supervisor</strong>, <strong>Job ID / Job Name</strong> (required), <strong>Job Location</strong> and <strong>Notes</strong>, then click <strong>Submit</strong>."
+            "definition": "The equipment needed to carry out the work is requested here, and is separate from the equipment being serviced (which you choose on the Profile). Click **Add** to open the **Request Form**, pick equipment or accessories from the **Available Equipment / Accessory** panel, and check the grid (**Item**, **Type**, **Quantity**, **UOM**, **Requested By**, **Required Date**, **Planned Return Date**). Enter the **Requested Date**, **Supervisor**, **Job ID / Job Name** (required), **Job Location** and **Notes**, then click **Submit**."
           }
         ],
         "procedures": [
@@ -17381,7 +17762,7 @@ const MODULES = [
               "Open the work order.",
               "Go to its <strong>Equipment</strong> tab to see the equipment requests and Load Out Requests linked to it."
             ],
-            "note": "Some environments running an earlier version show this tab with the Request Form only, and end it with <strong>Submit For Approval</strong>."
+            "note": "Some environments running an earlier version show this tab with the Request Form only, and end it with **Submit For Approval**."
           },
           {
             "title": "Request equipment for a work order",
@@ -17432,7 +17813,7 @@ const MODULES = [
           },
           {
             "term": "Work order drawing cards",
-            "definition": "Each drawing shows as a card with a thumbnail, title, the uploader and the upload date. Click the thumbnail to open it. Use the options icon for <strong>Edit</strong>, <strong>Annotate</strong> or <strong>Delete</strong>, <strong>Filters</strong> to narrow the list, and the view icons for grid or list."
+            "definition": "Each drawing shows as a card with a thumbnail, title, the uploader and the upload date. Click the thumbnail to open it. Use the options icon for **Edit**, **Annotate** or **Delete**, **Filters** to narrow the list, and the view icons for grid or list."
           }
         ],
         "procedures": [
@@ -17539,7 +17920,7 @@ const MODULES = [
           },
           {
             "term": "Work order mailbox",
-            "definition": "Compose mail, and use the left panel to move between <strong>All Emails</strong>, <strong>Inbox</strong>, <strong>Sent</strong>, <strong>Drafts</strong>, <strong>Starred</strong> and <strong>Trash</strong>. Use <strong>Search mail</strong> to find a message by subject or content. The <strong>Settings</strong> icon sets the signature for the work order."
+            "definition": "Compose mail, and use the left panel to move between **All Emails**, **Inbox**, **Sent**, **Drafts**, **Starred** and **Trash**. Use **Search mail** to find a message by subject or content. The **Settings** icon sets the signature for the work order."
           }
         ],
         "procedures": [
@@ -17580,15 +17961,15 @@ const MODULES = [
         "definitions": [
           {
             "term": "Procurement tab",
-            "definition": "A Purchase Executive or Technician clicks <strong>Requisition</strong> and picks <strong>Equipment</strong>, <strong>Material</strong>, <strong>Equipment Part</strong> or <strong>Delivery Service</strong>, enters the items and submits. The requisition goes into the normal Procurement process. Approved purchase orders count under <strong>Parts</strong> on the Cost tab."
+            "definition": "A Purchase Executive or Technician clicks **Requisition** and picks **Equipment**, **Material**, **Equipment Part** or **Delivery Service**, enters the items and submits. The requisition goes into the normal Procurement process. Approved purchase orders count under **Parts** on the Cost tab."
           },
           {
             "term": "Parts tab",
-            "definition": "The <strong>Parts Required</strong> list. Click <strong>Import</strong>, choose the parts and quantities, and click <strong>Submit</strong>. Unit cost comes from the maintenance parts purchase orders in Asset Management. Parts recorded here are added to the maintenance history of the equipment being serviced. Use the delete icon in the Actions column to remove one."
+            "definition": "The **Parts Required** list. Click **Import**, choose the parts and quantities, and click **Submit**. Unit cost comes from the maintenance parts purchase orders in Asset Management. Parts recorded here are added to the maintenance history of the equipment being serviced. Use the delete icon in the Actions column to remove one."
           },
           {
             "term": "Expense tab",
-            "definition": "Click <strong>Create</strong>, then enter rows with <strong>Item Name</strong>, <strong>Quantity</strong> and <strong>Unit Price</strong>; the <strong>Amount</strong> is calculated. Click <strong>Upload</strong> under Upload Invoice to attach the bill and <strong>Submit</strong>. Each expense shows as a card with the <strong>Expense ID</strong>, <strong>Total Items</strong>, <strong>Amount</strong> and <strong>Created By</strong>. Expenses count under <strong>Other</strong> on the Cost tab."
+            "definition": "Click **Create**, then enter rows with **Item Name**, **Quantity** and **Unit Price**; the **Amount** is calculated. Click **Upload** under Upload Invoice to attach the bill and **Submit**. Each expense shows as a card with the **Expense ID**, **Total Items**, **Amount** and **Created By**. Expenses count under **Other** on the Cost tab."
           },
           {
             "term": "Schedule tab",
@@ -17702,11 +18083,11 @@ const MODULES = [
         "definitions": [
           {
             "term": "Invoices tab",
-            "definition": "Two sub-tabs: <strong>Invoice</strong> and <strong>Workflow Issues</strong>. Each invoice lists <strong>Invoice</strong>, <strong>Vendor</strong>, <strong>Date</strong>, <strong>Amount</strong>, <strong>Status</strong> and <strong>Created By</strong>. Approvers use <strong>Approve</strong> and <strong>Reject</strong> on each row. Invoices stuck in approval appear under <strong>Workflow Issues</strong>. The routing is set under <strong>Settings → Invoices</strong>."
+            "definition": "Two sub-tabs: **Invoice** and **Workflow Issues**. Each invoice lists **Invoice**, **Vendor**, **Date**, **Amount**, **Status** and **Created By**. Approvers use **Approve** and **Reject** on each row. Invoices stuck in approval appear under **Workflow Issues**. The routing is set under **Settings → Invoices**."
           },
           {
             "term": "Cost tab",
-            "definition": "Shows cost by category with its source. <strong>Parts</strong> = approved purchase orders from the Procurement tab plus Inventory pulls. <strong>Labor</strong> = timesheet hours times rate. <strong>External / Vendor</strong> = approved vendor invoices matched to the work order. <strong>Other</strong> = Expense tab entries. <strong>Net Cost</strong> = the total."
+            "definition": "Shows cost by category with its source. **Parts** = approved purchase orders from the Procurement tab plus Inventory pulls. **Labor** = timesheet hours times rate. **External / Vendor** = approved vendor invoices matched to the work order. **Other** = Expense tab entries. **Net Cost** = the total."
           }
         ],
         "procedures": [
@@ -17769,15 +18150,15 @@ const MODULES = [
           },
           {
             "term": "Reopen Window",
-            "definition": "The number of days after a work order first becomes Completed or Cancelled during which it can be reopened. It is counted from the first time it reached that state, and set under <strong>Settings → Configuration</strong>."
+            "definition": "The number of days after a work order first becomes Completed or Cancelled during which it can be reopened. It is counted from the first time it reached that state, and set under **Settings → Configuration**."
           },
           {
             "term": "Work order life cycle",
-            "definition": "A work order starts with the status chosen in <strong>Work Order Status</strong> when it is created. The Requester then clicks <strong>Submit</strong> or <strong>Submit for Approval</strong>. If the Approver approves, the work proceeds. If the Approver rejects, the work order returns to the Requester with the remarks and a workflow issue is listed, and the Requester edits and resubmits. When the work is done it becomes Completed and read-only. Anyone with permission can cancel it from the kebab menu. A Completed or Cancelled work order can be reopened, with a reason, until the Reopen Window (days) runs out, after which it locks. The statuses you can pick are set under <strong>Settings → Status</strong>."
+            "definition": "A work order starts with the status chosen in **Work Order Status** when it is created. The Requester then clicks **Submit** or **Submit for Approval**. If the Approver approves, the work proceeds. If the Approver rejects, the work order returns to the Requester with the remarks and a workflow issue is listed, and the Requester edits and resubmits. When the work is done it becomes Completed and read-only. Anyone with permission can cancel it from the kebab menu. A Completed or Cancelled work order can be reopened, with a reason, until the Reopen Window (days) runs out, after which it locks. The statuses you can pick are set under **Settings → Status**."
           },
           {
             "term": "Who approves what",
-            "definition": "Work orders go to the approvers set on the <strong>Approval Workflow</strong> for the work order type. Vendor invoices go to the approvers set under <strong>Settings → Invoices</strong>. Timesheets go to the approvers on the timesheet approval workflow. Each has its own levels, and the item moves on only when every level has approved."
+            "definition": "Work orders go to the approvers set on the **Approval Workflow** for the work order type. Vendor invoices go to the approvers set under **Settings → Invoices**. Timesheets go to the approvers on the timesheet approval workflow. Each has its own levels, and the item moves on only when every level has approved."
           }
         ],
         "procedures": [
@@ -17788,7 +18169,7 @@ const MODULES = [
               "The Requester clicks <strong>Submit for Approval</strong>.",
               "The Approver clicks <strong>Approve</strong> or <strong>Reject</strong> and enters comments."
             ],
-            "note": "On approval, the work proceeds. On rejection, the work order returns to the Requester with the remarks, and a workflow issue appears under <strong>Workflow Issues</strong>. The Requester edits it and resubmits. With several levels, it stays pending until every level approves.",
+            "note": "On approval, the work proceeds. On rejection, the work order returns to the Requester with the remarks, and a workflow issue appears under **Workflow Issues**. The Requester edits it and resubmits. With several levels, it stays pending until every level approves.",
             "images": [
               {
                 "src": "assets/guides/work-order/175.jpg",
@@ -17871,7 +18252,7 @@ const MODULES = [
         "definitions": [
           {
             "term": "Equipment Breakdown Report",
-            "definition": "Lists equipment breakdowns recorded through work orders. Columns: <strong>Asset ID</strong>, <strong>Status</strong>, <strong>Make</strong>, <strong>Model</strong>, <strong>Category</strong>, <strong>Project</strong>, <strong>Down Date</strong>, <strong>Estimated Back in Service</strong>, <strong>Vendor</strong> (Internal when done in-house), <strong>Notes</strong>, <strong>Cost/Estimate</strong>, <strong>Warranty</strong> and <strong>Responsible party</strong>. Search by work order or asset ID, use <strong>Filters</strong> or column filters, <strong>Manage Columns</strong> (you can save several layouts) and <strong>Export</strong> to download with the filters applied."
+            "definition": "Lists equipment breakdowns recorded through work orders. Columns: **Asset ID**, **Status**, **Make**, **Model**, **Category**, **Project**, **Down Date**, **Estimated Back in Service**, **Vendor** (Internal when done in-house), **Notes**, **Cost/Estimate**, **Warranty** and **Responsible party**. Search by work order or asset ID, use **Filters** or column filters, **Manage Columns** (you can save several layouts) and **Export** to download with the filters applied."
           },
           {
             "term": "Who uses the Equipment Breakdown Report",
@@ -19953,7 +20334,7 @@ const MODULES = [
           },
           {
             "term": "Setup and creation flow",
-            "definition": "Steps 1 to 6 are one-time setup, then steps 7 to 9 repeat. (1) The Global Data Administrator adds UOMs and UOM groups under <strong>Global Data → Company → UOM, Phasecodes and GL codes</strong>. (2) The Global Data Administrator adds materials under <strong>Global Data → Company → Cost → Material</strong>. (3) The Inventory Administrator completes <strong>Settings</strong>: fields, ID settings, user groups and permissions, General. (4) The Inventory Administrator creates Inventory Locations with geofences on the <strong>Inventory</strong> tab. (5) The Inventory Administrator adds trucks under <strong>Hauling Trucks</strong>. (6) The Inventory Manager adds materials and quantities at each location. (7) The Order Creator creates External Orders under <strong>Orders → External Orders</strong>. (8) The Ticket Creator creates an External Ticket for each load under <strong>Tickets → External Tickets</strong>. (9) The Report User reviews the Hauling Report and Client Portal report and records Material Reconciliation under <strong>Reports</strong>."
+            "definition": "Steps 1 to 6 are one-time setup, then steps 7 to 9 repeat. (1) The Global Data Administrator adds UOMs and UOM groups under **Global Data → Company → UOM, Phasecodes and GL codes**. (2) The Global Data Administrator adds materials under **Global Data → Company → Cost → Material**. (3) The Inventory Administrator completes **Settings**: fields, ID settings, user groups and permissions, General. (4) The Inventory Administrator creates Inventory Locations with geofences on the **Inventory** tab. (5) The Inventory Administrator adds trucks under **Hauling Trucks**. (6) The Inventory Manager adds materials and quantities at each location. (7) The Order Creator creates External Orders under **Orders → External Orders**. (8) The Ticket Creator creates an External Ticket for each load under **Tickets → External Tickets**. (9) The Report User reviews the Hauling Report and Client Portal report and records Material Reconciliation under **Reports**."
           },
           {
             "term": "Global Data Administrator: what you do",
@@ -19961,27 +20342,27 @@ const MODULES = [
           },
           {
             "term": "Inventory Administrator: what you do",
-            "definition": "System Administrator or Inventory Admin. You complete <strong>Settings</strong> (order and ticket fields, ID Settings, Users and Permissions, General including UOM conversions and print copies), create Inventory Locations with geofences, add Hauling Trucks and mark trucks as blacklisted when needed. Do the ID Settings before the first ticket, because they lock afterwards."
+            "definition": "System Administrator or Inventory Admin. You complete **Settings** (order and ticket fields, ID Settings, Users and Permissions, General including UOM conversions and print copies), create Inventory Locations with geofences, add Hauling Trucks and mark trucks as blacklisted when needed. Do the ID Settings before the first ticket, because they lock afterwards."
           },
           {
             "term": "Inventory Manager: what you do",
-            "definition": "Store or Yard In-charge. You watch the locations on the <strong>Overview</strong> map, add materials to each location with <strong>Quantity</strong>, <strong>Minimum Required Quantity</strong> and <strong>Maximum Quantity</strong>, top up stock with <strong>Add Quantity</strong>, and check the red flag and <strong>Low Stock Items</strong> for materials that need restocking."
+            "definition": "Store or Yard In-charge. You watch the locations on the **Overview** map, add materials to each location with **Quantity**, **Minimum Required Quantity** and **Maximum Quantity**, top up stock with **Add Quantity**, and check the red flag and **Low Stock Items** for materials that need restocking."
           },
           {
             "term": "Order Creator: what you do",
-            "definition": "Order Coordinator. You raise External Orders under <strong>Orders → External Orders</strong> for a Customer or a Project, add the materials with price, tax and quantity, and submit. The order shows as RAISED and becomes available on External Tickets. You can view or delete orders and update material details."
+            "definition": "Order Coordinator. You raise External Orders under **Orders → External Orders** for a Customer or a Project, add the materials with price, tax and quantity, and submit. The order shows as RAISED and becomes available on External Tickets. You can view or delete orders and update material details."
           },
           {
             "term": "Ticket Creator: what you do",
-            "definition": "Dispatcher or Weighbridge Operator. For each load shipped, you open <strong>Tickets → External Tickets</strong>, click <strong>+ Add</strong>, choose the Hauling Vehicle, Order Number, Site Name, Product and UOM, enter the Gross or Net value, check the details on the right and click <strong>Create</strong>. You can set a ticket to Valid or Voided."
+            "definition": "Dispatcher or Weighbridge Operator. For each load shipped, you open **Tickets → External Tickets**, click **+ Add**, choose the Hauling Vehicle, Order Number, Site Name, Product and UOM, enter the Gross or Net value, check the details on the right and click **Create**. You can set a ticket to Valid or Voided."
           },
           {
             "term": "Report User: what you do",
-            "definition": "Operations Manager or Project Manager. You review the <strong>Hauling Report</strong> (every load moved), the <strong>Client Portal</strong> report (how much of each order is delivered) and record <strong>Material Reconciliation</strong> when a surveyed stockpile differs from the stock in Arena."
+            "definition": "Operations Manager or Project Manager. You review the **Hauling Report** (every load moved), the **Client Portal** report (how much of each order is delivered) and record **Material Reconciliation** when a surveyed stockpile differs from the stock in Arena."
           },
           {
             "term": "Earlier-version screens",
-            "definition": "Some environments running an earlier version show different screens: an <strong>Inventory Master</strong> list, <strong>Site Material Request</strong> (earlier called Pick Up Ticket), <strong>Material Issue Ticket</strong> (earlier called Ship Ticket) and <strong>Return Ticket</strong> tabs, and no Overview map, Orders, Hauling Trucks, External Tickets or Reports tabs. Load Out Requests for equipment are under Asset Management → Load Out Request, not here."
+            "definition": "Some environments running an earlier version show different screens: an **Inventory Master** list, **Site Material Request** (earlier called Pick Up Ticket), **Material Issue Ticket** (earlier called Ship Ticket) and **Return Ticket** tabs, and no Overview map, Orders, Hauling Trucks, External Tickets or Reports tabs. Load Out Requests for equipment are under Asset Management → Load Out Request, not here."
           }
         ],
         "procedures": [
@@ -20005,19 +20386,19 @@ const MODULES = [
         "definitions": [
           {
             "term": "External Orders and Tickets fields",
-            "definition": "On the <strong>External Orders</strong> and <strong>Tickets</strong> tabs, review the standard fields and click <strong>Add field</strong> for configurable ones. Pick a type in <strong>Choose type</strong>, name the field, and switch <strong>Required</strong>, <strong>Show on Card</strong> and <strong>Unique</strong> on or off. Actions add, duplicate or delete a field, and the drag icon reorders them. Click <strong>Save Changes</strong>."
+            "definition": "On the **External Orders** and **Tickets** tabs, review the standard fields and click **Add field** for configurable ones. Pick a type in **Choose type**, name the field, and switch **Required**, **Show on Card** and **Unique** on or off. Actions add, duplicate or delete a field, and the drag icon reorders them. Click **Save Changes**."
           },
           {
             "term": "ID Settings (orders and tickets)",
-            "definition": "Choose the <strong>External Orders</strong> or <strong>External Tickets</strong> sub-tab, pick <strong>System Default</strong> or <strong>Custom</strong>, choose the <strong>ID Separator</strong> (<strong>/</strong>, <strong>-</strong> or <strong>None</strong>), pick components (Serial No./ID, Year, Customer Reference Number, Customer/Project ID, custom text) and drag them into order. <strong>Example Format</strong> shows the result. Once a ticket is created, the ID settings lock."
+            "definition": "Choose the **External Orders** or **External Tickets** sub-tab, pick **System Default** or **Custom**, choose the **ID Separator** (**/**, **-** or **None**), pick components (Serial No./ID, Year, Customer Reference Number, Customer/Project ID, custom text) and drag them into order. **Example Format** shows the result. Once a ticket is created, the ID settings lock."
           },
           {
             "term": "Users and Permissions (Inventory Management)",
-            "definition": "User groups show as cards. <strong>Add User Group</strong>, then on the <strong>Users</strong> tab click <strong>Add Users</strong> (search by name, Roster ID, email or username) and <strong>Submit</strong>. Click <strong>Permissions</strong> on the card and, under <strong>Inventory Management</strong>, choose View, Create, Edit, Delete, Admin, Download, Print, Assign To and Roll Back for each item, then <strong>Save Changes</strong>. The edit icon renames the group."
+            "definition": "User groups show as cards. **Add User Group**, then on the **Users** tab click **Add Users** (search by name, Roster ID, email or username) and **Submit**. Click **Permissions** on the card and, under **Inventory Management**, choose View, Create, Edit, Delete, Admin, Download, Print, Assign To and Roll Back for each item, then **Save Changes**. The edit icon renames the group."
           },
           {
             "term": "General settings",
-            "definition": "Keep <strong>External Tickets</strong> on to use tickets. Turn on <strong>UOM Conversions Required</strong> if quantities must convert between units; once it is on and in use it cannot be turned off. <strong>Print Settings</strong> lets you add a row for each print copy (for example office copy, operator copy, customer copy) and choose <strong>Include Header</strong>. <strong>Material UOM Conversions → Create</strong> sets a factor between at least two UOMs for one material."
+            "definition": "Keep **External Tickets** on to use tickets. Turn on **UOM Conversions Required** if quantities must convert between units; once it is on and in use it cannot be turned off. **Print Settings** lets you add a row for each print copy (for example office copy, operator copy, customer copy) and choose **Include Header**. **Material UOM Conversions → Create** sets a factor between at least two UOMs for one material."
           }
         ],
         "procedures": [
@@ -20308,11 +20689,11 @@ const MODULES = [
         "definitions": [
           {
             "term": "UOMs and UOM Groups",
-            "definition": "In <strong>Global Data → Company → UOM, Phasecodes and GL codes</strong>, the <strong>UOMs</strong> tab holds the units (<strong>Add UOM</strong>, enter the name, <strong>Submit</strong>). <strong>UOM Groups</strong> holds conversions: <strong>Add UOM Group</strong>, name the group, choose the UOMs and enter the <strong>Conversion Factor</strong>. The <strong>UOM Conversions</strong> tab only shows the resulting conversions. Conversions apply only when UOMs are chosen while creating materials."
+            "definition": "In **Global Data → Company → UOM, Phasecodes and GL codes**, the **UOMs** tab holds the units (**Add UOM**, enter the name, **Submit**). **UOM Groups** holds conversions: **Add UOM Group**, name the group, choose the UOMs and enter the **Conversion Factor**. The **UOM Conversions** tab only shows the resulting conversions. Conversions apply only when UOMs are chosen while creating materials."
           },
           {
             "term": "Materials (Global Data)",
-            "definition": "In <strong>Global Data → Company → Cost</strong>, choose <strong>Material</strong> under Cost Type, select or create a rate card under Material Code, and click <strong>Add Material</strong>. Enter <strong>Material Code</strong> (unique), <strong>Material Name</strong>, <strong>UOM</strong>, <strong>Size and Specifications</strong> and <strong>Unit Price</strong>, then <strong>Submit</strong>."
+            "definition": "In **Global Data → Company → Cost**, choose **Material** under Cost Type, select or create a rate card under Material Code, and click **Add Material**. Enter **Material Code** (unique), **Material Name**, **UOM**, **Size and Specifications** and **Unit Price**, then **Submit**."
           }
         ],
         "procedures": [
@@ -20401,19 +20782,19 @@ const MODULES = [
         "definitions": [
           {
             "term": "Create Inventory Location fields",
-            "definition": "<strong>Location Name</strong>, <strong>Location ID</strong> (unique), <strong>Location Type</strong>, <strong>Inventory manager</strong> (one or more users), <strong>Business Unit</strong>, <strong>Project</strong> (if it applies), the <strong>Active</strong> toggle and the <strong>Geofence</strong>."
+            "definition": "**Location Name**, **Location ID** (unique), **Location Type**, **Inventory manager** (one or more users), **Business Unit**, **Project** (if it applies), the **Active** toggle and the **Geofence**."
           },
           {
             "term": "Geofence",
-            "definition": "The boundary of the location on the map, made of at least three points. In <strong>Add Geofences</strong>, check the <strong>Geofence Name</strong> and <strong>Geofence Code</strong> (city, state and country fill in from the points), then either search an address and click the exact point, or click points straight on the map. <strong>Undo Last Point</strong> removes one point and <strong>Clear All</strong> removes them all. The geofence saves only when the location is created."
+            "definition": "The boundary of the location on the map, made of at least three points. In **Add Geofences**, check the **Geofence Name** and **Geofence Code** (city, state and country fill in from the points), then either search an address and click the exact point, or click points straight on the map. **Undo Last Point** removes one point and **Clear All** removes them all. The geofence saves only when the location is created."
           },
           {
             "term": "Overview map",
-            "definition": "The default tab of Inventory Management. It shows every location on a map with its geofence in yellow. Click a geofence to see the location name and the materials with quantities, and click the link at the top to open the location. Switch between <strong>Map</strong> and <strong>Satellite</strong>, use the filter icon to search by name or code or filter by city, state or country, go full screen, or use Street View with the Pegman icon."
+            "definition": "The default tab of Inventory Management. It shows every location on a map with its geofence in yellow. Click a geofence to see the location name and the materials with quantities, and click the link at the top to open the location. Switch between **Map** and **Satellite**, use the filter icon to search by name or code or filter by city, state or country, go full screen, or use Street View with the Pegman icon."
           },
           {
             "term": "Inventory Locations list",
-            "definition": "Search by name, check the geofence icon, flip the <strong>Active</strong> toggle, or use the edit icon in Actions. <strong>Filters</strong> narrow by Business Units, Project, Material and Active or Inactive. See the Lists section for columns, layouts and Excel."
+            "definition": "Search by name, check the geofence icon, flip the **Active** toggle, or use the edit icon in Actions. **Filters** narrow by Business Units, Project, Material and Active or Inactive. See the Lists section for columns, layouts and Excel."
           }
         ],
         "procedures": [
@@ -20689,11 +21070,11 @@ const MODULES = [
         "definitions": [
           {
             "term": "Add material fields",
-            "definition": "<strong>Material</strong> (from the materials in Global Data), <strong>Quantity</strong> (held now), <strong>Minimum Required Quantity</strong> (below this the material shows as low stock), <strong>Maximum Quantity</strong>, <strong>UOM</strong> and an optional <strong>Icon</strong>. Minimum and maximum must be greater than 0."
+            "definition": "**Material** (from the materials in Global Data), **Quantity** (held now), **Minimum Required Quantity** (below this the material shows as low stock), **Maximum Quantity**, **UOM** and an optional **Icon**. Minimum and maximum must be greater than 0."
           },
           {
             "term": "Low stock flag and history",
-            "definition": "A red flag beside a material means it is low at this location, and <strong>Low Stock Items</strong> lists all of them. <strong>See History</strong> shows the history of a material at the location. <strong>Add Custom Column</strong> adds your own column to the table."
+            "definition": "A red flag beside a material means it is low at this location, and **Low Stock Items** lists all of them. **See History** shows the history of a material at the location. **Add Custom Column** adds your own column to the table."
           }
         ],
         "procedures": [
@@ -20759,7 +21140,7 @@ const MODULES = [
               "Choose <strong>Create</strong> or <strong>Update</strong>, then download the sample file.",
               "Fill it in, save it and upload it."
             ],
-            "note": "Use <strong>Export → Download</strong> to save the current records to Excel.",
+            "note": "Use **Export → Download** to save the current records to Excel.",
             "images": [
               {
                 "src": "assets/guides/inventory-management/115.jpg",
@@ -20867,15 +21248,15 @@ const MODULES = [
         "definitions": [
           {
             "term": "External Orders list",
-            "definition": "Search by Ticket Number. Columns include <strong>Status</strong>, <strong>Order Date</strong>, <strong>Customers</strong>, <strong>Project</strong>, <strong>Materials</strong> and <strong>Actions</strong> (view or delete). Click an order to view it and update material details. <strong>Filters</strong> narrow by Customer, Status, Ticket Number, Locations, Projects and Ordered Date Range."
+            "definition": "Search by Ticket Number. Columns include **Status**, **Order Date**, **Customers**, **Project**, **Materials** and **Actions** (view or delete). Click an order to view it and update material details. **Filters** narrow by Customer, Status, Ticket Number, Locations, Projects and Ordered Date Range."
           },
           {
             "term": "External Order fields",
-            "definition": "<strong>Order Date</strong>, <strong>Order Description</strong>, <strong>Type</strong> (Customer or Project), <strong>Customer</strong> (with <strong>Add Customer</strong>), phone number (automatic), <strong>Location</strong> (with <strong>Add Location</strong>), <strong>Project</strong>, <strong>Customer Reference Number</strong>, address, city, state and zip (automatic for a customer), <strong>Requested By</strong>, then for each material the <strong>Material</strong>, <strong>UOM</strong>, <strong>Price</strong>, <strong>Tax (%)</strong> and <strong>Quantity</strong>."
+            "definition": "**Order Date**, **Order Description**, **Type** (Customer or Project), **Customer** (with **Add Customer**), phone number (automatic), **Location** (with **Add Location**), **Project**, **Customer Reference Number**, address, city, state and zip (automatic for a customer), **Requested By**, then for each material the **Material**, **UOM**, **Price**, **Tax (%)** and **Quantity**."
           },
           {
             "term": "External Order status",
-            "definition": "A new External Order shows the status <strong>RAISED</strong> and is available for selection while creating External Tickets. Delivery progress against the order is then tracked in <strong>Reports → Client Portal</strong>."
+            "definition": "A new External Order shows the status **RAISED** and is available for selection while creating External Tickets. Delivery progress against the order is then tracked in **Reports → Client Portal**."
           }
         ],
         "procedures": [
@@ -20888,7 +21269,7 @@ const MODULES = [
               "Click <strong>Add Material</strong> for each material (the delete icon removes a line).",
               "Click <strong>Submit</strong>."
             ],
-            "note": "If customer creation has an approval workflow in Global Data, <strong>Add Customer</strong> is not available. The geofence saves only when the order is submitted, and then appears on the Overview map.",
+            "note": "If customer creation has an approval workflow in Global Data, **Add Customer** is not available. The geofence saves only when the order is submitted, and then appears on the Overview map.",
             "images": [
               {
                 "src": "assets/guides/inventory-management/139.jpg",
@@ -21013,11 +21394,11 @@ const MODULES = [
         "definitions": [
           {
             "term": "Hauling Trucks list",
-            "definition": "Search by Trucking Company. Columns include <strong>Trucking Company</strong>, <strong>License Plate</strong>, <strong>VIN</strong>, <strong>Manufactured Year</strong>, <strong>Make</strong>, <strong>Driver</strong>, <strong>Truck</strong>, <strong>Five-S test Number</strong>, <strong>Tare Weight</strong>, <strong>Tare Weight UOM</strong>, <strong>Tag</strong>, <strong>Max Weight</strong> and <strong>Adj Max Weight</strong>. In Actions, <strong>Mark as Blacklist</strong> stops a truck being used, and the edit and delete icons change or remove it."
+            "definition": "Search by Trucking Company. Columns include **Trucking Company**, **License Plate**, **VIN**, **Manufactured Year**, **Make**, **Driver**, **Truck**, **Five-S test Number**, **Tare Weight**, **Tare Weight UOM**, **Tag**, **Max Weight** and **Adj Max Weight**. In Actions, **Mark as Blacklist** stops a truck being used, and the edit and delete icons change or remove it."
           },
           {
             "term": "Add Hauling Truck fields",
-            "definition": "Required: <strong>Trucking Company</strong>, <strong>License Plate</strong>, <strong>Truck</strong>, <strong>Five-S test Number</strong>, and <strong>Tare Weight</strong> with its UOM. Optional: <strong>VIN</strong>, year, make, driver, <strong>Tag</strong>, <strong>Max Weight</strong>, <strong>Adj Max Weight</strong>, bed and dog house measurements, <strong>Aprx CY</strong>, <strong>Measured CY</strong>, <strong>Freight Rate</strong>, <strong>Insurance</strong> with its date, <strong>Overweight Permit</strong> and <strong>Bedliner</strong>."
+            "definition": "Required: **Trucking Company**, **License Plate**, **Truck**, **Five-S test Number**, and **Tare Weight** with its UOM. Optional: **VIN**, year, make, driver, **Tag**, **Max Weight**, **Adj Max Weight**, bed and dog house measurements, **Aprx CY**, **Measured CY**, **Freight Rate**, **Insurance** with its date, **Overweight Permit** and **Bedliner**."
           }
         ],
         "procedures": [
@@ -21045,15 +21426,15 @@ const MODULES = [
         "definitions": [
           {
             "term": "External Tickets list",
-            "definition": "Search by Ship Ticket Number. Columns include <strong>Inventory Location</strong>, <strong>Customer</strong>, <strong>Project</strong>, <strong>Trucking Company</strong>, <strong>Vehicle Plate</strong>, <strong>Product</strong> and <strong>Gross Units</strong>. The <strong>Status</strong> dropdown sets a ticket to <strong>Valid</strong> or <strong>Voided</strong>. <strong>Filters</strong> narrow by Inventory Locations, Hauling Trucks, Projects, Customer, Order Number and Delivered Date Range."
+            "definition": "Search by Ship Ticket Number. Columns include **Inventory Location**, **Customer**, **Project**, **Trucking Company**, **Vehicle Plate**, **Product** and **Gross Units**. The **Status** dropdown sets a ticket to **Valid** or **Voided**. **Filters** narrow by Inventory Locations, Hauling Trucks, Projects, Customer, Order Number and Delivered Date Range."
           },
           {
             "term": "External Ship Ticket Form fields",
-            "definition": "<strong>Hauling Vehicle</strong>, <strong>Order Number</strong> (the External Order), <strong>Site Name</strong> (shown from the materials in the order), <strong>Product</strong> (shown from the site), <strong>UOM</strong>, <strong>Gross / Net</strong> (enter one and the other is calculated), <strong>Date and Time</strong> (automatic, editable), <strong>Notes</strong>, and <strong>Status</strong> with <strong>Status Notes</strong>."
+            "definition": "**Hauling Vehicle**, **Order Number** (the External Order), **Site Name** (shown from the materials in the order), **Product** (shown from the site), **UOM**, **Gross / Net** (enter one and the other is calculated), **Date and Time** (automatic, editable), **Notes**, and **Status** with **Status Notes**."
           },
           {
             "term": "Ticket rules",
-            "definition": "A ticket is created only if the truck's Tare Weight UOM is one of the product's UOMs. The Net weight cannot be more than the ordered weight or the remaining weight. For a project order, the form also shows an <strong>Overweight Check</strong> of Passed or Failed."
+            "definition": "A ticket is created only if the truck's Tare Weight UOM is one of the product's UOMs. The Net weight cannot be more than the ordered weight or the remaining weight. For a project order, the form also shows an **Overweight Check** of Passed or Failed."
           },
           {
             "term": "Ticket details panel",
@@ -21061,7 +21442,7 @@ const MODULES = [
           },
           {
             "term": "External Ticket loop",
-            "definition": "The Order Creator raises the External Order. The Ticket Creator records each load against it as a ticket. The tickets feed the <strong>Hauling Report</strong> (what moved, which truck) and the <strong>Client Portal</strong> report (Delivered against Units, Remaining and Fulfillment Progress). The Inventory Manager sees stock at the site change in the location."
+            "definition": "The Order Creator raises the External Order. The Ticket Creator records each load against it as a ticket. The tickets feed the **Hauling Report** (what moved, which truck) and the **Client Portal** report (Delivered against Units, Remaining and Fulfillment Progress). The Inventory Manager sees stock at the site change in the location."
           }
         ],
         "procedures": [
@@ -21091,19 +21472,19 @@ const MODULES = [
         "definitions": [
           {
             "term": "Hauling Report",
-            "definition": "Every ticket in date and time order, showing the trucker, Five-S test Number, tag, site, material, customer or project, order and net quantity. The column headers show the ticket count, trucker count and net total. Use <strong>Search by Tickets</strong>, <strong>Filters</strong> and <strong>Export</strong>. The export also has <strong>Gross</strong>, <strong>Time In</strong>, <strong>Time Out</strong> and <strong>Delivery Time (Hours)</strong>."
+            "definition": "Every ticket in date and time order, showing the trucker, Five-S test Number, tag, site, material, customer or project, order and net quantity. The column headers show the ticket count, trucker count and net total. Use **Search by Tickets**, **Filters** and **Export**. The export also has **Gross**, **Time In**, **Time Out** and **Delivery Time (Hours)**."
           },
           {
             "term": "Client Portal report",
-            "definition": "Each order with its customer or project, product, ordered units, delivered quantity, UOM and a progress bar. Search by Pickup Ticket, open an order to see its <strong>Ship Tickets</strong> page, and use <strong>Export</strong> for the ticket list."
+            "definition": "Each order with its customer or project, product, ordered units, delivered quantity, UOM and a progress bar. Search by Pickup Ticket, open an order to see its **Ship Tickets** page, and use **Export** for the ticket list."
           },
           {
             "term": "Ship Tickets page",
-            "definition": "One order and one material, with KPIs: <strong>Ordered Qty</strong>, <strong>Delivered</strong>, <strong>Remaining</strong> (ordered minus delivered), <strong>Total Loads</strong> (one per ticket), <strong>Avg Load Size</strong> (delivered divided by loads) and <strong>Fulfillment Progress</strong> (delivered divided by ordered). The ticket list shows Tickets, Site, Gross (Net Weight), Date, Time and Hauling Truck."
+            "definition": "One order and one material, with KPIs: **Ordered Qty**, **Delivered**, **Remaining** (ordered minus delivered), **Total Loads** (one per ticket), **Avg Load Size** (delivered divided by loads) and **Fulfillment Progress** (delivered divided by ordered). The ticket list shows Tickets, Site, Gross (Net Weight), Date, Time and Hauling Truck."
           },
           {
             "term": "Material Reconciliation",
-            "definition": "Compares the surveyed stockpile (<strong>Propeller</strong>) with the <strong>Current Available</strong> quantity in Arena for a material at a location. Each entry shows <strong>Delta</strong> (surveyed minus current) and <strong>Delta %</strong>, plus the date, time and creator. A gain shows green and a loss shows red."
+            "definition": "Compares the surveyed stockpile (**Propeller**) with the **Current Available** quantity in Arena for a material at a location. Each entry shows **Delta** (surveyed minus current) and **Delta %**, plus the date, time and creator. A gain shows green and a loss shows red."
           },
           {
             "term": "Who uses which report",
@@ -21143,15 +21524,15 @@ const MODULES = [
         "definitions": [
           {
             "term": "Manage Columns and views",
-            "definition": "Click <strong>Manage Columns</strong> to show, hide or reorder columns, the <strong>Save layout</strong> icon to keep the layout, and the <strong>Multiple layouts</strong> icon for a user-specific layout. The list or grid icon switches the view."
+            "definition": "Click **Manage Columns** to show, hide or reorder columns, the **Save layout** icon to keep the layout, and the **Multiple layouts** icon for a user-specific layout. The list or grid icon switches the view."
           },
           {
             "term": "Filters",
-            "definition": "Click <strong>Filters</strong>, pick values and click <strong>Apply</strong>. <strong>Save filters</strong> keeps the selection and <strong>Clear all</strong> resets it."
+            "definition": "Click **Filters**, pick values and click **Apply**. **Save filters** keeps the selection and **Clear all** resets it."
           },
           {
             "term": "Export: Upload and Download Excel",
-            "definition": "<strong>Export → Upload Excel</strong> gives a sample file to fill in and upload for bulk records. <strong>Export → Download</strong> saves the current records to Excel."
+            "definition": "**Export → Upload Excel** gives a sample file to fill in and upload for bulk records. **Export → Download** saves the current records to Excel."
           }
         ],
         "procedures": [
