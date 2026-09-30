@@ -3253,1456 +3253,934 @@ const QA_MYCALENDAR = [
 
 const QA_PROJECTSETUP = [
   {
-    "action": "configure",
-    "object": "project work packages / plants",
-    "scope": "project",
-    "section": "Works",
-    "question": "Where do I define the plants or work packages that make up a project?",
-    "answer": "Go to Project Setup → Works. The left panel shows the project's core identity data (Project Name/ID, Construction Type, Status, Location, Owner Rep, CSE-PMC, Project Type, Funding & Implementing Agency), and the right panel lists a card for every work package or plant on the project (for example Pellet Plant, Basic Oxygen Furnace, Blast Furnace, Coke Oven, Cold Rolling Mill, External Works, Hot Strip Mill, IBMD, Lime Dolomite Plant, Oxygen Plant, RMHS, Sinter Plant, Slab Caster), each showing Description, Created By, Physical Progress, and Financial Details, plus a \"Know More\" link for details. Use Create to add a new one, or Upload Excel/Download Excel to manage the list in bulk.",
-    "tags": [
-      "works",
-      "work packages",
-      "plants",
-      "project WBS",
-      "create work package"
-    ]
+    action: "configure",
+    object: "project work packages / plants",
+    scope: "project",
+    section: "Works",
+    question: "Where do I define the plants or work packages that make up a project?",
+    answer: "Go to Project Setup → Works. The left panel shows the project's core identity data (Project Name/ID, Construction Type, Status, Location, Owner Rep, CSE-PMC, Project Type, Funding & Implementing Agency), and the right panel lists a card for every work package or plant on the project (for example Pellet Plant, Basic Oxygen Furnace, Blast Furnace, Coke Oven, Cold Rolling Mill, External Works, Hot Strip Mill, IBMD, Lime Dolomite Plant, Oxygen Plant, RMHS, Sinter Plant, Slab Caster), each showing Description, Created By, Physical Progress, and Financial Details, plus a \"Know More\" link for details. Use Create to add a new one, or Upload Excel/Download Excel to manage the list in bulk.",
+    tags: ["works","work packages","plants","project WBS","create work package"]
   },
   {
-    "action": "view",
-    "object": "work package progress",
-    "scope": "project",
-    "section": "Works",
-    "question": "How do I check the physical and financial progress of a specific plant?",
-    "answer": "In Project Setup → Works, each plant/work-package card displays its Physical Progress and Financial Details directly, and the \"Know More\" link opens further detail. This is the project's core work-breakdown setup — every other module (Estimate, Schedule, Phase Codes, Field Works) organizes its data against these same work packages, so defining them accurately here is what keeps progress and cost reporting consistent everywhere else.",
-    "tags": [
-      "work package progress",
-      "physical progress",
-      "financial details",
-      "plant status"
-    ]
+    action: "view",
+    object: "work package progress",
+    scope: "project",
+    section: "Works",
+    question: "How do I check the physical and financial progress of a specific plant?",
+    answer: "In Project Setup → Works, each plant/work-package card displays its Physical Progress and Financial Details directly, and the \"Know More\" link opens further detail. This is the project's core work-breakdown setup — every other module (Estimate, Schedule, Phase Codes, Field Works) organizes its data against these same work packages, so defining them accurately here is what keeps progress and cost reporting consistent everywhere else.",
+    tags: ["work package progress","physical progress","financial details","plant status"]
   },
   {
-    "action": "configure",
-    "object": "assign percentage (work package)",
-    "scope": "project",
-    "section": "Works",
-    "question": "How do I assign a weighting percentage across a project's work packages?",
-    "answer": "In Project Setup → Works, use the \"Assign Percentage\" option on the toolbar to allocate a weighting to each plant/work package. This is what lets Arena roll individual work-package progress up into a single, meaningful overall project progress figure, rather than treating every plant as contributing equally regardless of its actual size or cost.",
-    "tags": [
-      "assign percentage",
-      "work package weighting",
-      "progress rollup"
-    ]
+    action: "configure",
+    object: "assign percentage (work package)",
+    scope: "project",
+    section: "Works",
+    question: "How do I assign a weighting percentage across a project's work packages?",
+    answer: "In Project Setup → Works, use the \"Assign Percentage\" option on the toolbar to allocate a weighting to each plant/work package. This is what lets Arena roll individual work-package progress up into a single, meaningful overall project progress figure, rather than treating every plant as contributing equally regardless of its actual size or cost.",
+    tags: ["assign percentage","work package weighting","progress rollup"]
   },
   {
-    "action": "manage",
-    "object": "project tasks",
-    "scope": "project",
-    "section": "Tasks",
-    "question": "Where do I create and track general project tasks, separate from field productivity logs?",
-    "answer": "Go to Project Setup → Tasks → Tasks. Use Create to add a task, Manage Columns to control which fields show in the grid, Filters to narrow the list, and Upload/Download Excel for bulk management; a grid/list view toggle lets you switch how tasks are displayed. This is a general-purpose task tracker for the project team (a PM/Module Manager typically owns it), distinct from the phase-code-driven productivity and quantity logging done in Field Works.",
-    "tags": [
-      "project tasks",
-      "task management",
-      "create task",
-      "manage columns"
-    ]
+    action: "manage",
+    object: "project tasks",
+    scope: "project",
+    section: "Tasks",
+    question: "Where do I create and track general project tasks, separate from field productivity logs?",
+    answer: "Go to Project Setup → Tasks → Tasks. Use Create to add a task, Manage Columns to control which fields show in the grid, Filters to narrow the list, and Upload/Download Excel for bulk management; a grid/list view toggle lets you switch how tasks are displayed. This is a general-purpose task tracker for the project team (a PM/Module Manager typically owns it), distinct from the phase-code-driven productivity and quantity logging done in Field Works.",
+    tags: ["project tasks","task management","create task","manage columns"]
   },
   {
-    "action": "view",
-    "object": "task communication",
-    "scope": "project",
-    "section": "Tasks",
-    "question": "Where can I see discussion or updates tied to a specific project task?",
-    "answer": "Go to Project Setup → Tasks → Communication, the second sub-tab alongside Tasks. It keeps task-related discussion attached to the task record itself, so a PM/Module Manager and the assigned team don't have to reconstruct context from email or chat threads outside Arena.",
-    "tags": [
-      "task communication",
-      "task discussion",
-      "task updates"
-    ]
+    action: "view",
+    object: "task communication",
+    scope: "project",
+    section: "Tasks",
+    question: "Where can I see discussion or updates tied to a specific project task?",
+    answer: "Go to Project Setup → Tasks → Communication, the second sub-tab alongside Tasks. It keeps task-related discussion attached to the task record itself, so a PM/Module Manager and the assigned team don't have to reconstruct context from email or chat threads outside Arena.",
+    tags: ["task communication","task discussion","task updates"]
   },
   {
-    "action": "view",
-    "object": "project roster",
-    "scope": "project",
-    "section": "People",
-    "question": "Where do I see everyone assigned to a project and their active/inactive status?",
-    "answer": "Go to Project Setup → People → Roster. It shows a card/list of everyone on the project with Name, Employee ID, and Active/Inactive status. Use Add to bring in a new person, Download Excel to export the list, Filters to narrow it, and the view toggle to switch between grid and list layouts. This is the PM/Module Admin's single source of truth for who is currently active on the job.",
-    "tags": [
-      "project roster",
-      "people",
-      "active inactive status",
-      "employee ID"
-    ]
+    action: "view",
+    object: "project roster",
+    scope: "project",
+    section: "People",
+    question: "Where do I see everyone assigned to a project and their active/inactive status?",
+    answer: "Go to Project Setup → People → Roster. It shows a card/list of everyone on the project with Name, Employee ID, and Active/Inactive status. Use Add to bring in a new person, Download Excel to export the list, Filters to narrow it, and the view toggle to switch between grid and list layouts. This is the PM/Module Admin's single source of truth for who is currently active on the job.",
+    tags: ["project roster","people","active inactive status","employee ID"]
   },
   {
-    "action": "create",
-    "object": "project crew",
-    "scope": "project",
-    "section": "People",
-    "question": "How do I create a crew for this project, and how is it different from copying one in from Global Data?",
-    "answer": "Go to Project Setup → People → Project Crews, which starts out empty for a new project. \"Create Crew\" builds a brand-new crew from scratch, local to this project only. \"Copy Crews from Global Data\" opens a \"Select Crew for [Project Name]\" picker listing every company-wide Global Data crew with checkboxes, letting you copy specific crews into the project. \"Copy Crews to Projects\" does the reverse, pushing one of this project's own crews out to other projects.",
-    "tags": [
-      "project crew",
-      "create crew",
-      "copy crews from global data",
-      "copy crews to projects"
-    ]
+    action: "create",
+    object: "project crew",
+    scope: "project",
+    section: "People",
+    question: "How do I create a crew for this project, and how is it different from copying one in from Global Data?",
+    answer: "Go to Project Setup → People → Project Crews, which starts out empty for a new project. \"Create Crew\" builds a brand-new crew from scratch, local to this project only. \"Copy Crews from Global Data\" opens a \"Select Crew for [Project Name]\" picker listing every company-wide Global Data crew with checkboxes, letting you copy specific crews into the project. \"Copy Crews to Projects\" does the reverse, pushing one of this project's own crews out to other projects.",
+    tags: ["project crew","create crew","copy crews from global data","copy crews to projects"]
   },
   {
-    "action": "understand",
-    "object": "crew copy behavior (drift risk)",
-    "scope": "project",
-    "section": "People",
-    "question": "If I copy a crew from Global Data into my project, will it stay in sync if the Global Data crew changes later?",
-    "answer": "No. Copying a crew from Global Data into a project via Project Crews is a one-time copy, not a live reference. If the source Global Data crew's roster changes afterward (workers added or removed), that change does not automatically propagate into any project that already copied it. A PM who wants a project's crew to reflect the latest company roster needs to manually re-copy it — crew rosters can silently drift out of sync between Global Data and individual projects otherwise.",
-    "tags": [
-      "crew sync",
-      "crew drift",
-      "one-time copy",
-      "global data crew",
-      "roster mismatch"
-    ]
+    action: "understand",
+    object: "crew copy behavior (drift risk)",
+    scope: "project",
+    section: "People",
+    question: "If I copy a crew from Global Data into my project, will it stay in sync if the Global Data crew changes later?",
+    answer: "No. Copying a crew from Global Data into a project via Project Crews is a one-time copy, not a live reference. If the source Global Data crew's roster changes afterward (workers added or removed), that change does not automatically propagate into any project that already copied it. A PM who wants a project's crew to reflect the latest company roster needs to manually re-copy it — crew rosters can silently drift out of sync between Global Data and individual projects otherwise.",
+    tags: ["crew sync","crew drift","one-time copy","global data crew","roster mismatch"]
   },
   {
-    "action": "assign",
-    "object": "project indirect staff",
-    "scope": "project",
-    "section": "People",
-    "question": "How do I add indirect staff (non-field-execution roles) to a project?",
-    "answer": "Go to Project Setup → People → Project Indirect Staff, select the system users you want to add, and submit. Indirect staff are people who work for the project but aren't directly involved in field execution — this classification feeds into how their time is treated downstream in timesheets and productivity reporting, separately from direct labor crews.",
-    "tags": [
-      "indirect staff",
-      "project indirect staff",
-      "non-field staff"
-    ]
+    action: "assign",
+    object: "project indirect staff",
+    scope: "project",
+    section: "People",
+    question: "How do I add indirect staff (non-field-execution roles) to a project?",
+    answer: "Go to Project Setup → People → Project Indirect Staff, select the system users you want to add, and submit. Indirect staff are people who work for the project but aren't directly involved in field execution — this classification feeds into how their time is treated downstream in timesheets and productivity reporting, separately from direct labor crews.",
+    tags: ["indirect staff","project indirect staff","non-field staff"]
   },
   {
-    "action": "view",
-    "object": "system users vs non-system users",
-    "scope": "project",
-    "section": "People",
-    "question": "What's the difference between System User and Non System User under People?",
-    "answer": "Project Setup → People includes separate sub-tabs for System User (people with an actual Arena login/account) and Non System User (people tracked on the project roster — for headcount, crew membership, or reporting purposes — who don't have Arena credentials of their own). Keeping these distinct lets a PM track an entire field workforce on the roster without needing to issue an Arena login to every laborer.",
-    "tags": [
-      "system user",
-      "non system user",
-      "roster distinction",
-      "no login access"
-    ]
+    action: "view",
+    object: "system users vs non-system users",
+    scope: "project",
+    section: "People",
+    question: "What's the difference between System User and Non System User under People?",
+    answer: "Project Setup → People includes separate sub-tabs for System User (people with an actual Arena login/account) and Non System User (people tracked on the project roster — for headcount, crew membership, or reporting purposes — who don't have Arena credentials of their own). Keeping these distinct lets a PM track an entire field workforce on the roster without needing to issue an Arena login to every laborer.",
+    tags: ["system user","non system user","roster distinction","no login access"]
   },
   {
-    "action": "create",
-    "object": "cost estimate",
-    "scope": "project",
-    "section": "Estimate",
-    "question": "How do I build a cost estimate for a project?",
-    "answer": "Go to Project Setup → Estimate → Estimate. It lists a cost-estimate card per work package/plant, each showing Description and Created By. Estimates are built out per work package so that projected costs line up directly with the same plants/work packages defined in the Works tab, keeping budget and physical scope consistent.",
-    "tags": [
-      "cost estimate",
-      "create estimate",
-      "estimate by work package"
-    ]
+    action: "create",
+    object: "cost estimate",
+    scope: "project",
+    section: "Estimate",
+    question: "How do I build a cost estimate for a project?",
+    answer: "Go to Project Setup → Estimate → Estimate. It lists a cost-estimate card per work package/plant, each showing Description and Created By. Estimates are built out per work package so that projected costs line up directly with the same plants/work packages defined in the Works tab, keeping budget and physical scope consistent.",
+    tags: ["cost estimate","create estimate","estimate by work package"]
   },
   {
-    "action": "configure",
-    "object": "resource planning",
-    "scope": "project",
-    "section": "Estimate",
-    "question": "Where do I plan resources (labor, equipment, materials) needed for the project?",
-    "answer": "Go to Project Setup → Estimate → Resource Planning, a sub-tab alongside Estimate and Rate Card Template. This is where a PM/Module Admin plans out the resources a project's estimate will draw on before or alongside building line-item costs.",
-    "tags": [
-      "resource planning",
-      "estimate resources",
-      "labor equipment planning"
-    ]
+    action: "configure",
+    object: "resource planning",
+    scope: "project",
+    section: "Estimate",
+    question: "Where do I plan resources (labor, equipment, materials) needed for the project?",
+    answer: "Go to Project Setup → Estimate → Resource Planning, a sub-tab alongside Estimate and Rate Card Template. This is where a PM/Module Admin plans out the resources a project's estimate will draw on before or alongside building line-item costs.",
+    tags: ["resource planning","estimate resources","labor equipment planning"]
   },
   {
-    "action": "configure",
-    "object": "rate card template",
-    "scope": "project",
-    "section": "Estimate",
-    "question": "How do rate card templates work, and do they inherit anything from Global Data?",
-    "answer": "Under Project Setup → Estimate → Rate Card Template, a project builds its own Material/Equipment/Labor rate card templates, which are what get used to price out estimate line items. It's not fully confirmed whether a new template automatically inherits the Cost Types and rates already defined in Global Data → Cost, or whether it needs to be built entirely from scratch on the project side — treat this as an open point to verify with your Arena administrator rather than assuming either behavior.",
-    "tags": [
-      "rate card template",
-      "material rate card",
-      "labor rate card",
-      "equipment rate card",
-      "global data inheritance"
-    ]
+    action: "configure",
+    object: "rate card template",
+    scope: "project",
+    section: "Estimate",
+    question: "How do rate card templates work, and do they inherit anything from Global Data?",
+    answer: "Under Project Setup → Estimate → Rate Card Template, a project builds its own Material/Equipment/Labor rate card templates, which are what get used to price out estimate line items. It's not fully confirmed whether a new template automatically inherits the Cost Types and rates already defined in Global Data → Cost, or whether it needs to be built entirely from scratch on the project side — treat this as an open point to verify with your Arena administrator rather than assuming either behavior.",
+    tags: ["rate card template","material rate card","labor rate card","equipment rate card","global data inheritance"]
   },
   {
-    "action": "understand",
-    "object": "unit of measure (UOM) scope in estimates",
-    "scope": "project",
-    "section": "Estimate",
-    "question": "Can a project define its own unit of measure, or must Estimate/BOQ line items use the Global Data UOM list?",
-    "answer": "This isn't fully confirmed either way. What's established is that Global Data maintains the master UOM catalog (Kg, Lbs, Cum, Litres, Sqm, Rm, Square Feet, LF, Quintals, Tonne, each, Pair, Lot, CuCm, Hectare, Job, km, and more), plus UOM Groups and UOM Conversions, and a \"Measurement Templates\" feature — reusable calculation formulas, such as a template named \"LBD\" with fields L, B, D, Nos and the formula (L)×(B)×(D)×(Nos) — that Estimate/BOQ line items draw on for quantity calculations. Whether a project-level line item is restricted to only the Global Data UOM master list, or can define a private project-specific unit, was not confirmed during verification.",
-    "tags": [
-      "UOM",
-      "unit of measure",
-      "measurement templates",
-      "BOQ",
-      "global data UOM"
-    ]
+    action: "understand",
+    object: "unit of measure (UOM) scope in estimates",
+    scope: "project",
+    section: "Estimate",
+    question: "Can a project define its own unit of measure, or must Estimate/BOQ line items use the Global Data UOM list?",
+    answer: "This isn't fully confirmed either way. What's established is that Global Data maintains the master UOM catalog (Kg, Lbs, Cum, Litres, Sqm, Rm, Square Feet, LF, Quintals, Tonne, each, Pair, Lot, CuCm, Hectare, Job, km, and more), plus UOM Groups and UOM Conversions, and a \"Measurement Templates\" feature — reusable calculation formulas, such as a template named \"LBD\" with fields L, B, D, Nos and the formula (L)×(B)×(D)×(Nos) — that Estimate/BOQ line items draw on for quantity calculations. Whether a project-level line item is restricted to only the Global Data UOM master list, or can define a private project-specific unit, was not confirmed during verification.",
+    tags: ["UOM","unit of measure","measurement templates","BOQ","global data UOM"]
   },
   {
-    "action": "create",
-    "object": "project schedule",
-    "scope": "project",
-    "section": "Schedule",
-    "question": "How do I create a schedule for a project or a specific plant?",
-    "answer": "Go to Project Setup → Schedule and click \"Create New Schedule\". The screen lists project Milestones plus a per-plant \"[Plant] - Schedule\" entry for every work package (for example, \"Blast Furnace - Schedule\"), each opening a Gantt-style schedule. A grid/list view toggle controls how the schedule list is displayed.",
-    "tags": [
-      "project schedule",
-      "create schedule",
-      "gantt schedule",
-      "milestones",
-      "plant schedule"
-    ]
+    action: "create",
+    object: "project schedule",
+    scope: "project",
+    section: "Schedule",
+    question: "How do I create a schedule for a project or a specific plant?",
+    answer: "Go to Project Setup → Schedule and click \"Create New Schedule\". The screen lists project Milestones plus a per-plant \"[Plant] - Schedule\" entry for every work package (for example, \"Blast Furnace - Schedule\"), each opening a Gantt-style schedule. A grid/list view toggle controls how the schedule list is displayed.",
+    tags: ["project schedule","create schedule","gantt schedule","milestones","plant schedule"]
   },
   {
-    "action": "view",
-    "object": "gantt view breakdown",
-    "scope": "project",
-    "section": "Schedule",
-    "question": "Can I see a monthly breakdown of the schedule instead of just quarterly or yearly?",
-    "answer": "Yes. The Gantt schedule view supports a monthly breakdown underneath the existing quarterly and yearly views, for a PM or scheduler who needs finer granularity than a full quarter or year at a glance. You can also type a date directly instead of only picking one from the calendar widget, which is faster when jumping to a specific point far from today.",
-    "tags": [
-      "gantt monthly view",
-      "gantt breakdown",
-      "schedule granularity",
-      "type a date",
-      "date entry gantt"
-    ]
+    action: "view",
+    object: "gantt view breakdown",
+    scope: "project",
+    section: "Schedule",
+    question: "Can I see a monthly breakdown of the schedule instead of just quarterly or yearly?",
+    answer: "Yes. The Gantt schedule view supports a monthly breakdown underneath the existing quarterly and yearly views, for a PM or scheduler who needs finer granularity than a full quarter or year at a glance. You can also type a date directly instead of only picking one from the calendar widget, which is faster when jumping to a specific point far from today.",
+    tags: ["gantt monthly view","gantt breakdown","schedule granularity","type a date","date entry gantt"]
   },
   {
-    "action": "view",
-    "object": "project milestones",
-    "scope": "project",
-    "section": "Schedule",
-    "question": "Where do I see the project's overall milestones separate from individual plant schedules?",
-    "answer": "Milestones are listed alongside the per-plant schedules in Project Setup → Schedule, giving a PM a combined view of overall project checkpoints and the detailed Gantt-style schedule for each plant/work package.",
-    "tags": [
-      "project milestones",
-      "schedule overview"
-    ]
+    action: "view",
+    object: "project milestones",
+    scope: "project",
+    section: "Schedule",
+    question: "Where do I see the project's overall milestones separate from individual plant schedules?",
+    answer: "Milestones are listed alongside the per-plant schedules in Project Setup → Schedule, giving a PM a combined view of overall project checkpoints and the detailed Gantt-style schedule for each plant/work package.",
+    tags: ["project milestones","schedule overview"]
   },
   {
-    "action": "understand",
-    "object": "what is a milestone",
-    "scope": "project",
-    "section": "Schedule",
-    "question": "What is a Milestone?",
-    "answer": "A Milestone is the standard construction-industry term for a significant, dateable checkpoint in a project's timeline — such as \"Foundation Complete\" or \"Substantial Completion\" — used to track overall progress at a glance without reading the full schedule. Arena uses the same term: Milestones are listed alongside each plant's \"[Plant] - Schedule\" Gantt view in Project Setup → Schedule, giving a PM a project-wide checkpoint view distinct from the detailed per-plant timelines.",
-    "tags": [
-      "what is a milestone",
-      "milestone definition",
-      "glossary",
-      "schedule"
-    ]
+    action: "understand",
+    object: "what is a milestone",
+    scope: "project",
+    section: "Schedule",
+    question: "What is a Milestone?",
+    answer: "A Milestone is the standard construction-industry term for a significant, dateable checkpoint in a project's timeline — such as \"Foundation Complete\" or \"Substantial Completion\" — used to track overall progress at a glance without reading the full schedule. Arena uses the same term: Milestones are listed alongside each plant's \"[Plant] - Schedule\" Gantt view in Project Setup → Schedule, giving a PM a project-wide checkpoint view distinct from the detailed per-plant timelines.",
+    tags: ["what is a milestone","milestone definition","glossary","schedule"]
   },
   {
-    "action": "understand",
-    "object": "what is a look-ahead schedule",
-    "scope": "project",
-    "section": "Schedule",
-    "question": "What is a Look-Ahead Schedule?",
-    "answer": "A Look-Ahead Schedule is the standard construction-industry term for a short-horizon (commonly two- to six-week) rolling view of upcoming activities, built off the master schedule so site teams can plan the next stretch of work in detail rather than working from the full-project Gantt chart. Arena does not name a single dedicated \"Look-Ahead Schedule\" screen; the equivalent is built by combining a nearer-term slice of the plant Gantt schedules in <strong>Project Setup → Schedule</strong> (now viewable with a monthly breakdown for finer granularity) with the day-by-day due items surfaced on <strong>My Calendar</strong> inside the project, and the day-to-day logging that actually happens against that plan in Field Works → Progress.",
-    "tags": [
-      "what is a look-ahead schedule",
-      "look-ahead schedule definition",
-      "glossary",
-      "rolling schedule"
-    ]
+    action: "understand",
+    object: "what is a look-ahead schedule",
+    scope: "project",
+    section: "Schedule",
+    question: "What is a Look-Ahead Schedule?",
+    answer: "A Look-Ahead Schedule is the standard construction-industry term for a short-horizon (commonly two- to six-week) rolling view of upcoming activities, built off the master schedule so site teams can plan the next stretch of work in detail rather than working from the full-project Gantt chart. Arena does not name a single dedicated \"Look-Ahead Schedule\" screen; the equivalent is built by combining a nearer-term slice of the plant Gantt schedules in <strong>Project Setup → Schedule</strong> (now viewable with a monthly breakdown for finer granularity) with the day-by-day due items surfaced on <strong>My Calendar</strong> inside the project, and the day-to-day logging that actually happens against that plan in Field Works → Progress.",
+    tags: ["what is a look-ahead schedule","look-ahead schedule definition","glossary","rolling schedule"]
   },
   {
-    "action": "configure",
-    "object": "phase code timesheet mapping",
-    "scope": "project",
-    "section": "Phase Codes",
-    "question": "What does the Phase Codes screen under Project Setup actually do — is it a separate list of codes for this project?",
-    "answer": "No — it does not hold a separate, project-specific list of phase codes. It displays the entire company-wide Global Data phase code list (the same master list also reachable via Global Data → Cost → Cost Breakdown Structure → Phase Codes — same data, two doorways) and adds one extra column, \"Timesheet Management\", a checkbox per phase code. Checking that box is what the product calls \"Phase Code mapping\" (confirmed by the toast message \"Phase Code mapping updated successfully\"). So this screen is a subset-selector/mapping tool, not an independent data source: a PM uses it to mark which of the company's phase codes should be available for logging time on this specific project.",
-    "tags": [
-      "phase codes",
-      "timesheet management",
-      "phase code mapping",
-      "global data phase codes",
-      "cost breakdown structure"
-    ]
+    action: "configure",
+    object: "phase code timesheet mapping",
+    scope: "project",
+    section: "Phase Codes",
+    question: "What does the Phase Codes screen under Project Setup actually do — is it a separate list of codes for this project?",
+    answer: "No — it does not hold a separate, project-specific list of phase codes. It displays the entire company-wide Global Data phase code list (the same master list also reachable via Global Data → Cost → Cost Breakdown Structure → Phase Codes — same data, two doorways) and adds one extra column, \"Timesheet Management\", a checkbox per phase code. Checking that box is what the product calls \"Phase Code mapping\" (confirmed by the toast message \"Phase Code mapping updated successfully\"). So this screen is a subset-selector/mapping tool, not an independent data source: a PM uses it to mark which of the company's phase codes should be available for logging time on this specific project.",
+    tags: ["phase codes","timesheet management","phase code mapping","global data phase codes","cost breakdown structure"]
   },
   {
-    "action": "configure",
-    "object": "phase code cost type settings",
-    "scope": "project",
-    "section": "Phase Codes",
-    "question": "Why can't I enable Timesheet Management for a phase code with a certain Cost Type?",
-    "answer": "Click the Settings icon on Project Setup → Phase Codes (\"Select the Cost Type for each category to display Phase Codes\") to control which Cost Types (Material, Equipment, Labor, Unit Rate, Sub Contractor, BOQ's, Freight Charges, Fuel & Gas) are even eligible to be mapped for Timesheet Management on this project. If, for example, only \"Labor\" is enabled in Settings, a pure-Material phase code can't have Timesheet Management turned on for it until Settings allows that Cost Type.",
-    "tags": [
-      "phase code settings",
-      "cost type filter",
-      "timesheet eligibility"
-    ]
+    action: "configure",
+    object: "phase code cost type settings",
+    scope: "project",
+    section: "Phase Codes",
+    question: "Why can't I enable Timesheet Management for a phase code with a certain Cost Type?",
+    answer: "Click the Settings icon on Project Setup → Phase Codes (\"Select the Cost Type for each category to display Phase Codes\") to control which Cost Types (Material, Equipment, Labor, Unit Rate, Sub Contractor, BOQ's, Freight Charges, Fuel & Gas) are even eligible to be mapped for Timesheet Management on this project. If, for example, only \"Labor\" is enabled in Settings, a pure-Material phase code can't have Timesheet Management turned on for it until Settings allows that Cost Type.",
+    tags: ["phase code settings","cost type filter","timesheet eligibility"]
   },
   {
-    "action": "understand",
-    "object": "phase code list scope in Time Management",
-    "scope": "project",
-    "section": "Phase Codes",
-    "question": "Why do my field staff see hundreds of irrelevant phase codes when logging time?",
-    "answer": "In Home → Time Management → My Timesheet, each row has a \"Company/Projects/Work Orders/GL Codes\" dropdown immediately followed by a Phase Code dropdown. Selecting \"Company\" pulls that dropdown from the full, unfiltered global phase code list (963 codes in a verified sample) meant for every job company-wide. Selecting a specific Project instead pulls only the phase codes that project has explicitly mapped/enabled via Phase Codes → Timesheet Management — if nothing has been mapped yet, that list is empty. To give field staff a clean, relevant list: (1) go to Project Setup → Phase Codes and check Timesheet Management for the codes relevant to this project, and (2) make sure people select the Project (not \"Company\") in Time Management. Leaving it on \"Company\" shows everyone the entire unfiltered company-wide list — an easy and common mistake.",
-    "tags": [
-      "timesheet phase code list",
-      "my timesheet",
-      "phase code scope",
-      "company vs project dropdown"
-    ]
+    action: "understand",
+    object: "phase code list scope in Time Management",
+    scope: "project",
+    section: "Phase Codes",
+    question: "Why do my field staff see hundreds of irrelevant phase codes when logging time?",
+    answer: "In Home → Time Management → My Timesheet, each row has a \"Company/Projects/Work Orders/GL Codes\" dropdown immediately followed by a Phase Code dropdown. Selecting \"Company\" pulls that dropdown from the full, unfiltered global phase code list (963 codes in a verified sample) meant for every job company-wide. Selecting a specific Project instead pulls only the phase codes that project has explicitly mapped/enabled via Phase Codes → Timesheet Management — if nothing has been mapped yet, that list is empty. To give field staff a clean, relevant list: (1) go to Project Setup → Phase Codes and check Timesheet Management for the codes relevant to this project, and (2) make sure people select the Project (not \"Company\") in Time Management. Leaving it on \"Company\" shows everyone the entire unfiltered company-wide list — an easy and common mistake.",
+    tags: ["timesheet phase code list","my timesheet","phase code scope","company vs project dropdown"]
   },
   {
-    "action": "view",
-    "object": "phase code table columns",
-    "scope": "project",
-    "section": "Phase Codes",
-    "question": "What columns appear on the project Phase Codes screen?",
-    "answer": "The table shows Phase Code, Cost Types (Material/Labor/Equipment), Phase Code Type (Direct/Indirect), and Timesheet Management, with pagination across the full company-wide list (963 records in a verified sample) and a Settings icon for controlling which Cost Types are eligible for mapping.",
-    "tags": [
-      "phase code columns",
-      "cost types",
-      "direct indirect",
-      "phase code table",
-      "phase codes screen",
-      "what columns show on phase codes"
-    ]
+    action: "view",
+    object: "phase code table columns",
+    scope: "project",
+    section: "Phase Codes",
+    question: "What columns appear on the project Phase Codes screen?",
+    answer: "The table shows Phase Code, Cost Types (Material/Labor/Equipment), Phase Code Type (Direct/Indirect), and Timesheet Management, with pagination across the full company-wide list (963 records in a verified sample) and a Settings icon for controlling which Cost Types are eligible for mapping.",
+    tags: ["phase code columns","cost types","direct indirect","phase code table","phase codes screen","what columns show on phase codes"]
   },
   {
-    "action": "organize",
-    "object": "quality folders and forms",
-    "scope": "project",
-    "section": "Quality",
-    "question": "How do I organize quality checklist forms and documents for a project?",
-    "answer": "Go to Project Setup → Quality → Quality And Documents and click \"Create Folder\". Each folder shows form counts by status (Not Ready/Ready/In Progress/Completed) and holds related Documents, Photos, Linked Forms, and Map Work Packages (to tie the folder to specific CWA/System/Tag combinations). The Uploaded Files sub-tab holds files independent of the folder structure.",
-    "tags": [
-      "quality folders",
-      "create folder",
-      "quality documents",
-      "map work packages",
-      "linked forms"
-    ]
+    action: "organize",
+    object: "quality folders and forms",
+    scope: "project",
+    section: "Quality",
+    question: "How do I organize quality checklist forms and documents for a project?",
+    answer: "Go to Project Setup → Quality → Quality And Documents and click \"Create Folder\". Each folder shows form counts by status (Not Ready/Ready/In Progress/Completed) and holds related Documents, Photos, Linked Forms, and Map Work Packages (to tie the folder to specific CWA/System/Tag combinations). The Uploaded Files sub-tab holds files independent of the folder structure.",
+    tags: ["quality folders","create folder","quality documents","map work packages","linked forms"]
   },
   {
-    "action": "view",
-    "object": "quality form status counts",
-    "scope": "project",
-    "section": "Quality",
-    "question": "How do I see how many quality forms in a folder are complete vs still pending?",
-    "answer": "Each folder under Project Setup → Quality → Quality And Documents shows form counts broken out by status: Not Ready, Ready, In Progress, and Completed — giving a PM or QA/QC lead a quick read on where a given scope of quality inspection work stands without opening every form individually.",
-    "tags": [
-      "quality status",
-      "form completion counts",
-      "not ready ready in progress completed"
-    ]
+    action: "view",
+    object: "quality form status counts",
+    scope: "project",
+    section: "Quality",
+    question: "How do I see how many quality forms in a folder are complete vs still pending?",
+    answer: "Each folder under Project Setup → Quality → Quality And Documents shows form counts broken out by status: Not Ready, Ready, In Progress, and Completed — giving a PM or QA/QC lead a quick read on where a given scope of quality inspection work stands without opening every form individually.",
+    tags: ["quality status","form completion counts","not ready ready in progress completed"]
   },
   {
-    "action": "configure",
-    "object": "safety form setup (categories, workflow, calendar)",
-    "scope": "project",
-    "section": "Safety",
-    "question": "How do I set up safety forms, approval workflows, and a safety calendar for a project?",
-    "answer": "Project Setup → Safety has five sub-tabs: Setup Project Safety Forms (create ad-hoc/unscheduled Safety Form Categories via \"Create Safety Form Category\"), Create Workflow (build the approval chain safety forms route through), Assign Workflow (attach a workflow to a specific safety division/package), Setup Safety Calendar (schedule recurring safety forms, like a daily toolbox talk, with start/end dates and recurrence), and Safety And Documents (folder-based storage for supporting safety files). This is the setup side of safety, done by a PM/Module Admin before crews ever see a form in Field Works; day-to-day safety inspections and checklists are executed in Field Works → Safety, documented separately.",
-    "tags": [
-      "safety setup",
-      "safety workflow",
-      "safety calendar",
-      "safety form category",
-      "assign workflow",
-      "safety approval workflow",
-      "set up safety approval workflow",
-      "project setup safety"
-    ]
+    action: "configure",
+    object: "safety form setup (categories, workflow, calendar)",
+    scope: "project",
+    section: "Safety",
+    question: "How do I set up safety forms, approval workflows, and a safety calendar for a project?",
+    answer: "Project Setup → Safety has five sub-tabs: Setup Project Safety Forms (create ad-hoc/unscheduled Safety Form Categories via \"Create Safety Form Category\"), Create Workflow (build the approval chain safety forms route through), Assign Workflow (attach a workflow to a specific safety division/package), Setup Safety Calendar (schedule recurring safety forms, like a daily toolbox talk, with start/end dates and recurrence), and Safety And Documents (folder-based storage for supporting safety files). This is the setup side of safety, done by a PM/Module Admin before crews ever see a form in Field Works; day-to-day safety inspections and checklists are executed in Field Works → Safety, documented separately.",
+    tags: ["safety setup","safety workflow","safety calendar","safety form category","assign workflow","safety approval workflow","set up safety approval workflow","project setup safety"]
   },
   {
-    "action": "understand",
-    "object": "safety form visibility",
-    "scope": "project",
-    "section": "Safety",
-    "question": "Why isn't a safety form I created showing up for field users?",
-    "answer": "Creating a safety form category (scheduled via Setup Safety Calendar or unscheduled via Setup Project Safety Forms) is not enough on its own — each form must also be explicitly assigned to the users who should see it. An unassigned form will not appear to end users in Field Works, which is a common point of confusion when a safety officer reports a missing form.",
-    "tags": [
-      "safety form visibility",
-      "unassigned form",
-      "field works safety"
-    ]
+    action: "understand",
+    object: "safety form visibility",
+    scope: "project",
+    section: "Safety",
+    question: "Why isn't a safety form I created showing up for field users?",
+    answer: "Creating a safety form category (scheduled via Setup Safety Calendar or unscheduled via Setup Project Safety Forms) is not enough on its own — each form must also be explicitly assigned to the users who should see it. An unassigned form will not appear to end users in Field Works, which is a common point of confusion when a safety officer reports a missing form.",
+    tags: ["safety form visibility","unassigned form","field works safety"]
   },
   {
-    "action": "configure",
-    "object": "drawing approval workflow",
-    "scope": "project",
-    "section": "Drawings",
-    "question": "How do I set up a multi-level approval workflow for drawings?",
-    "answer": "Go to Project Setup → Drawings → Create Approval Workflow. Named workflows (for example \"Drawing Approval Workflow-1\" or \"-2\") are built from multiple levels (Level 1, Level 2, ...), each with its own approvers and an approval type such as \"Any one can approve\".",
-    "tags": [
-      "drawing approval workflow",
-      "create approval workflow",
-      "drawing levels"
-    ]
+    action: "configure",
+    object: "drawing approval workflow",
+    scope: "project",
+    section: "Drawings",
+    question: "How do I set up a multi-level approval workflow for drawings?",
+    answer: "Go to Project Setup → Drawings → Create Approval Workflow. Named workflows (for example \"Drawing Approval Workflow-1\" or \"-2\") are built from multiple levels (Level 1, Level 2, ...), each with its own approvers and an approval type such as \"Any one can approve\".",
+    tags: ["drawing approval workflow","create approval workflow","drawing levels"]
   },
   {
-    "action": "configure",
-    "object": "drawing OCR training",
-    "scope": "project",
-    "section": "Drawings",
-    "question": "What is Drawing Training used for?",
-    "answer": "Drawing Training, a sub-tab under Project Setup → Drawings (alongside Create Approval Workflow, Drawing Packages, Drawing Register, and Drawing Master), is where a PM/Module Admin configures OCR templates so future drawing uploads can have their labels auto-extracted instead of entered by hand for every sheet.",
-    "tags": [
-      "drawing training",
-      "OCR",
-      "drawing labels"
-    ]
+    action: "configure",
+    object: "drawing OCR training",
+    scope: "project",
+    section: "Drawings",
+    question: "What is Drawing Training used for?",
+    answer: "Drawing Training, a sub-tab under Project Setup → Drawings (alongside Create Approval Workflow, Drawing Packages, Drawing Register, and Drawing Master), is where a PM/Module Admin configures OCR templates so future drawing uploads can have their labels auto-extracted instead of entered by hand for every sheet.",
+    tags: ["drawing training","OCR","drawing labels"]
   },
   {
-    "action": "organize",
-    "object": "drawing packages and registers",
-    "scope": "project",
-    "section": "Drawings",
-    "question": "What's the difference between Drawing Packages, Drawing Register, and Drawing Master?",
-    "answer": "All three are sub-tabs under Project Setup → Drawings. Drawing Packages groups related drawing sheets into named containers for upload and management. Drawing Register and Drawing Master provide broader listing/reference views of the project's drawings. Together with Create Approval Workflow and Drawing Training, these five sub-tabs form the full setup layer a PM/Module Admin works through before drawings are trusted as current in the field.",
-    "tags": [
-      "drawing packages",
-      "drawing register",
-      "drawing master",
-      "drawings setup"
-    ]
+    action: "organize",
+    object: "drawing packages and registers",
+    scope: "project",
+    section: "Drawings",
+    question: "What's the difference between Drawing Packages, Drawing Register, and Drawing Master?",
+    answer: "All three are sub-tabs under Project Setup → Drawings. Drawing Packages groups related drawing sheets into named containers for upload and management. Drawing Register and Drawing Master provide broader listing/reference views of the project's drawings. Together with Create Approval Workflow and Drawing Training, these five sub-tabs form the full setup layer a PM/Module Admin works through before drawings are trusted as current in the field.",
+    tags: ["drawing packages","drawing register","drawing master","drawings setup"]
   },
   {
-    "action": "manage",
-    "object": "project documents and teams",
-    "scope": "project",
-    "section": "Documents",
-    "question": "How do I set up a folder/team structure for general project documents?",
-    "answer": "Go to Project Setup → Documents. Click \"Create Team\" to set up a document team, then build a folder/team-based library (for example, a folder named after a plant like \"Basic Oxygen Furnace\" containing sub-folders such as \"FEL - 1\"), with Last Modified and Added On columns tracked per file. My Files and Shared With Me are the two sub-tabs. This is the setup-side file/folder manager, distinct from the separate, read-only cross-category Document Repository module elsewhere in Arena.",
-    "tags": [
-      "project documents",
-      "create team",
-      "document folders",
-      "my files",
-      "shared with me"
-    ]
+    action: "manage",
+    object: "project documents and teams",
+    scope: "project",
+    section: "Documents",
+    question: "How do I set up a folder/team structure for general project documents?",
+    answer: "Go to Project Setup → Documents. Click \"Create Team\" to set up a document team, then build a folder/team-based library (for example, a folder named after a plant like \"Basic Oxygen Furnace\" containing sub-folders such as \"FEL - 1\"), with Last Modified and Added On columns tracked per file. My Files and Shared With Me are the two sub-tabs. This is the setup-side file/folder manager, distinct from the separate, read-only cross-category Document Repository module elsewhere in Arena.",
+    tags: ["project documents","create team","document folders","my files","shared with me"]
   },
   {
-    "action": "understand",
-    "object": "documents vs document repository",
-    "scope": "project",
-    "section": "Documents",
-    "question": "How is Project Setup → Documents different from the Document Repository module?",
-    "answer": "Project Setup → Documents is the setup-side file/folder manager where a PM/Module Admin actively organizes project files into teams and folders. Document Repository (a separate module) is a read-only, cross-category archive for browsing documents that have already been generated or filed across the project — think of Documents as where files are organized, and Document Repository as where they're later found and reviewed.",
-    "tags": [
-      "document repository comparison",
-      "documents vs repository"
-    ]
+    action: "understand",
+    object: "documents vs document repository",
+    scope: "project",
+    section: "Documents",
+    question: "How is Project Setup → Documents different from the Document Repository module?",
+    answer: "Project Setup → Documents is the setup-side file/folder manager where a PM/Module Admin actively organizes project files into teams and folders. Document Repository (a separate module) is a read-only, cross-category archive for browsing documents that have already been generated or filed across the project — think of Documents as where files are organized, and Document Repository as where they're later found and reviewed.",
+    tags: ["document repository comparison","documents vs repository"]
   },
   {
-    "action": "create",
-    "object": "work order (setup)",
-    "scope": "project",
-    "section": "Workorder",
-    "question": "Where do I set up work orders issued to contractors or vendors?",
-    "answer": "Go to Project Setup → Workorder and click Create. Use Filters to narrow the table view. This is the setup area for work orders issued to contractors/vendors, and is distinct from the execution-side Workorder tab inside Field Works, where day-to-day work order activity is tracked — that is documented separately.",
-    "tags": [
-      "work order setup",
-      "create work order",
-      "contractor work orders"
-    ]
+    action: "create",
+    object: "work order (setup)",
+    scope: "project",
+    section: "Workorder",
+    question: "Where do I set up work orders issued to contractors or vendors?",
+    answer: "Go to Project Setup → Workorder and click Create. Use Filters to narrow the table view. This is the setup area for work orders issued to contractors/vendors, and is distinct from the execution-side Workorder tab inside Field Works, where day-to-day work order activity is tracked — that is documented separately.",
+    tags: ["work order setup","create work order","contractor work orders"]
   },
   {
-    "action": "configure",
-    "object": "forms categories and structure",
-    "scope": "project",
-    "section": "Forms",
-    "question": "How is the Forms setup area structured — what are the levels of navigation?",
-    "answer": "Project Setup → Forms uses a three-level nested navigation. Level 1 is a horizontally scrollable row of form categories (examples include Construction Forms, Workorder, Project Forms, Laboratory Test Results, Field Test Results, Correspondence Details, Contractor Onboarding, Test Reports, Procurement Forms, Checklists, Quality, Permit to work, Near Miss, Observations, Non Conformance, and Inspections, among others — organization-defined, so the exact list varies by company). Level 2, within a chosen category, offers Assign Users, Approval Workflow, Schedule Project Forms, and Assign Templates. Level 3 is a left-rail list of the individual form types inside that category (for example, under Construction Forms: RFI, Submittal, Change Order, Delay Form, Request for Information, Transmittal).",
-    "tags": [
-      "forms structure",
-      "form categories",
-      "three level navigation",
-      "construction forms"
-    ]
+    action: "configure",
+    object: "forms categories and structure",
+    scope: "project",
+    section: "Forms",
+    question: "How is the Forms setup area structured — what are the levels of navigation?",
+    answer: "Project Setup → Forms uses a three-level nested navigation. Level 1 is a horizontally scrollable row of form categories (examples include Construction Forms, Workorder, Project Forms, Laboratory Test Results, Field Test Results, Correspondence Details, Contractor Onboarding, Test Reports, Procurement Forms, Checklists, Quality, Permit to work, Near Miss, Observations, Non Conformance, and Inspections, among others — organization-defined, so the exact list varies by company). Level 2, within a chosen category, offers Assign Users, Approval Workflow, Schedule Project Forms, and Assign Templates. Level 3 is a left-rail list of the individual form types inside that category (for example, under Construction Forms: RFI, Submittal, Change Order, Delay Form, Request for Information, Transmittal).",
+    tags: ["forms structure","form categories","three level navigation","construction forms"]
   },
   {
-    "action": "configure",
-    "object": "assign users to a form type per plant",
-    "scope": "project",
-    "section": "Forms",
-    "question": "How do I control who can view, create, edit, or delete a specific form type on each plant?",
-    "answer": "Within a form category in Project Setup → Forms, open Assign Users (Level 2), then select the specific form type from the Level 3 left rail (for example RFI under Construction Forms). Assign Users shows a per-work-package (plant) permission grid, letting a Module Admin set View/Create/Edit/Delete rights per user for that form type, separately for each plant. This lets the same form type carry different permission rules across different parts of a large project.",
-    "tags": [
-      "assign users forms",
-      "form permissions",
-      "view create edit delete",
-      "per plant permissions"
-    ]
+    action: "configure",
+    object: "assign users to a form type per plant",
+    scope: "project",
+    section: "Forms",
+    question: "How do I control who can view, create, edit, or delete a specific form type on each plant?",
+    answer: "Within a form category in Project Setup → Forms, open Assign Users (Level 2), then select the specific form type from the Level 3 left rail (for example RFI under Construction Forms). Assign Users shows a per-work-package (plant) permission grid, letting a Module Admin set View/Create/Edit/Delete rights per user for that form type, separately for each plant. This lets the same form type carry different permission rules across different parts of a large project.",
+    tags: ["assign users forms","form permissions","view create edit delete","per plant permissions"]
   },
   {
-    "action": "configure",
-    "object": "forms approval workflow and scheduling",
-    "scope": "project",
-    "section": "Forms",
-    "question": "How do I set an approval chain or a recurring schedule for a form type?",
-    "answer": "Within a form category in Project Setup → Forms, use Approval Workflow (Level 2) to define the sign-off chain a submitted form of the selected type must pass through, and Schedule Project Forms to set up recurring/scheduled triggers for that form. Assign Templates lets you attach the specific template variant(s) the form type should use. All of this configuration happens before end users ever see the form in Field Works — it's what a Module Admin sets up to make sure forms behave correctly the moment they go live for the field team.",
-    "tags": [
-      "forms approval workflow",
-      "schedule project forms",
-      "assign templates",
-      "form setup"
-    ]
+    action: "configure",
+    object: "forms approval workflow and scheduling",
+    scope: "project",
+    section: "Forms",
+    question: "How do I set an approval chain or a recurring schedule for a form type?",
+    answer: "Within a form category in Project Setup → Forms, use Approval Workflow (Level 2) to define the sign-off chain a submitted form of the selected type must pass through, and Schedule Project Forms to set up recurring/scheduled triggers for that form. Assign Templates lets you attach the specific template variant(s) the form type should use. All of this configuration happens before end users ever see the form in Field Works — it's what a Module Admin sets up to make sure forms behave correctly the moment they go live for the field team.",
+    tags: ["forms approval workflow","schedule project forms","assign templates","form setup"]
   },
   {
-    "action": "manage",
-    "object": "BIM models",
-    "scope": "project",
-    "section": "BIM",
-    "question": "Where do I upload and manage 3D BIM models for a project?",
-    "answer": "Go to Project Setup → BIM and click \"Create BIM\" to add a new model. The screen lists existing BIM models on the project (for example \"Warehouse\") for upload and viewing. This is the setup area for 3D model management, giving a PM/Module Admin a place to centralize BIM assets alongside the project's 2D drawings.",
-    "tags": [
-      "BIM",
-      "create BIM",
-      "3D model",
-      "BIM viewer"
-    ]
+    action: "manage",
+    object: "BIM models",
+    scope: "project",
+    section: "BIM",
+    question: "Where do I upload and manage 3D BIM models for a project?",
+    answer: "Go to Project Setup → BIM and click \"Create BIM\" to add a new model. The screen lists existing BIM models on the project (for example \"Warehouse\") for upload and viewing. This is the setup area for 3D model management, giving a PM/Module Admin a place to centralize BIM assets alongside the project's 2D drawings.",
+    tags: ["BIM","create BIM","3D model","BIM viewer"]
   },
   {
-    "action": "manage",
-    "object": "GIS documents",
-    "scope": "project",
-    "section": "GIS",
-    "question": "Where do I upload geospatial/map documents for a project?",
-    "answer": "Go to Project Setup → GIS and click \"Upload GIS Document\". The screen lists uploaded GIS/map documents for the project. This is the setup area a PM/Module Admin uses to centralize geospatial reference material, useful on projects spanning large or multiple physical sites.",
-    "tags": [
-      "GIS",
-      "upload GIS document",
-      "geospatial documents",
-      "map documents"
-    ]
+    action: "manage",
+    object: "GIS documents",
+    scope: "project",
+    section: "GIS",
+    question: "Where do I upload geospatial/map documents for a project?",
+    answer: "Go to Project Setup → GIS and click \"Upload GIS Document\". The screen lists uploaded GIS/map documents for the project. This is the setup area a PM/Module Admin uses to centralize geospatial reference material, useful on projects spanning large or multiple physical sites.",
+    tags: ["GIS","upload GIS document","geospatial documents","map documents"]
   }
 ];
 
 const QA_FIELDWORKS = [
   {
-    "action": "view",
-    "object": "field works tab structure",
-    "scope": "project",
-    "section": "Overview",
-    "question": "How is Field Works organized, and where do I start?",
-    "answer": "Field Works is the day-to-day execution side of a project, opened from the left sidebar. Its top tab bar has five tabs in order: <strong>Tree Version</strong>, <strong>Safety</strong>, <strong>Drawing Management</strong>, <strong>Invoices</strong>, and <strong>Workorder</strong>. Most field logging starts in <strong>Tree Version</strong>, which shows a card per work package/plant; clicking a plant card opens a second-level tab bar scoped to that plant with <strong>Progress</strong>, <strong>Quick Apps</strong>, <strong>Quality</strong>, <strong>Project Forms</strong>, and <strong>Cost</strong>.",
-    "tags": [
-      "field works",
-      "deliver work",
-      "tree version",
-      "field works tabs",
-      "execution module"
-    ]
-  },
-  {
-    "action": "view",
-    "object": "tree version plant cards",
-    "scope": "project",
-    "section": "Tree Version",
-    "question": "Why does Field Works show the same plants as Project Setup → Works?",
-    "answer": "Because Field Works mirrors the project's work-breakdown structure deliberately. <strong>Field Works → Tree Version</strong> lists a card per work package/plant — the same set defined in <strong>Project Setup → Works</strong> — each listing its child Entities. Project Setup is where a PM or Module Admin configures that structure; Field Works is where field teams log real work against it, so the two always line up and progress rolls up against the same breakdown everyone agreed on at kickoff.",
-    "tags": [
-      "tree version",
-      "plant cards",
-      "work packages",
-      "entities",
-      "wbs mirror"
-    ]
-  },
-  {
-    "action": "view",
-    "object": "second-level tab bar per plant",
-    "scope": "project",
-    "section": "Tree Version",
-    "question": "What tabs appear after I click into a plant in Tree Version?",
-    "answer": "Opening a plant card in <strong>Field Works → Tree Version</strong> reveals a second-level tab bar scoped to that plant: <strong>Progress</strong> (the default, with 18 execution cards), <strong>Quick Apps</strong>, <strong>Quality</strong>, <strong>Project Forms</strong> (breadcrumb label \"Custom Forms\"), and <strong>Cost</strong>. Everything you do from there is scoped to that one plant, which is what keeps logs from one work package from bleeding into another's reporting.",
-    "tags": [
-      "progress tab",
-      "quick apps",
-      "quality tab",
-      "project forms",
-      "cost tab",
-      "plant scope"
-    ]
-  },
-  {
-    "action": "view",
-    "object": "progress tab cards",
-    "scope": "project",
-    "section": "Progress",
-    "question": "What is available under the Progress tab for a plant?",
-    "answer": "<strong>Field Works → Tree Version → [Plant] → Progress</strong> holds 18 cards covering the bulk of daily site logging: Work Logs, Submitted Work Logs, Approve Work Logs, Productivity Logs, RFI, Site Photographs, Ready Works, Meeting Minutes, Issues, Equipment Logs, Material Logs, Manpower Logs, Restraints, Inventory Management, Procurement, Labor Logs, Machinery Logs, and Detailed Work Logs. This is the tab a foreman or field engineer opens most often during a working day.",
-    "tags": [
-      "progress cards",
-      "work logs",
-      "productivity logs",
-      "rfi",
-      "field logging"
-    ]
-  },
-  {
-    "action": "create",
-    "object": "work log",
-    "scope": "project",
-    "section": "Progress",
-    "question": "How do I record completion of work at each step during construction?",
-    "answer": "Go to <strong>Field Works → Tree Version → [Plant] → Progress → Work Logs</strong>. This card is described as logging completion of the work at each step during construction, recorded against whichever option the project has set in <strong>Project Settings → Work Logs Templates</strong> — for example Work Package to Location Logging, Location to Work Package Logging, Super Location to Location Logging, or a Scheduled/WBS view. Once submitted, every log is retained in <strong>Submitted Work Logs</strong> regardless of status, so a PM always has the full audit trail.",
-    "tags": [
-      "work logs",
-      "record progress",
-      "work log template",
-      "log completion"
-    ]
-  },
-  {
-    "action": "view",
-    "object": "submitted and approve work logs",
-    "scope": "project",
-    "section": "Progress",
-    "question": "What is the difference between Work Logs, Submitted Work Logs, and Approve Work Logs?",
-    "answer": "All three are separate cards under <strong>Progress</strong>. <strong>Work Logs</strong> is where a field user records progress. <strong>Submitted Work Logs</strong> is the full repository of every log regardless of status, filterable by date range and by user with a Download Excel export. <strong>Approve Work Logs</strong> is the review queue where a supervisor or PM signs off on what the field submitted. Keeping capture, archive, and approval on separate cards is what lets a field user log freely while a manager still controls what counts as approved progress.",
-    "tags": [
-      "submitted work logs",
-      "approve work logs",
-      "work log approval",
-      "log repository"
-    ]
-  },
-  {
-    "action": "view",
-    "object": "detailed work logs",
-    "scope": "project",
-    "section": "Progress",
-    "question": "Is there a single table view of all work logs across the WBS?",
-    "answer": "Yes — the <strong>Detailed Work Logs</strong> card under <strong>Progress</strong> is described as a comprehensive table view of all WBS worklogs. It is the card to use when a PM needs to scan or export everything logged against the work breakdown rather than drilling card by card.",
-    "tags": [
-      "detailed work logs",
-      "wbs worklogs",
-      "table view",
-      "comprehensive log view"
-    ]
-  },
-  {
-    "action": "create",
-    "object": "productivity log",
-    "scope": "project",
-    "section": "Progress",
-    "question": "How do I create a productivity log (hours and quantities)?",
-    "answer": "Go to <strong>Field Works → Tree Version → [Plant] → Progress → Productivity Logs → Create</strong>. Click <strong>Set Phase Codes</strong> to pick which phase codes are in scope and choose the date range, then click <strong>Create Log</strong> and use <strong>Add Employee</strong> (a row of hours/quantities per Phase Code/CWA/System/Commodity), <strong>Add Crew</strong> (log per member of a selected crew), or <strong>Clone Log</strong> (duplicate an existing log). Complete the <strong>Log Time</strong> tab, click <strong>Next</strong> to move to <strong>Log Quantity</strong>, then submit.",
-    "tags": [
-      "productivity log",
-      "create log",
-      "log time",
-      "log quantity",
-      "set phase codes"
-    ]
-  },
-  {
-    "action": "approve",
-    "object": "productivity logs",
-    "scope": "project",
-    "section": "Progress",
-    "question": "How do I review, approve, or reject productivity logs?",
-    "answer": "Open the <strong>Productivity Logs</strong> card under Progress and go to its <strong>Logs</strong> view. Regular field users see only their own logs; Admins and Approvers see all logs with Approve/Reject buttons — act from the <strong>Quantities</strong> tab for Direct and Change Order phase codes, and from the <strong>Timesheets</strong> tab for Indirect and Non-Productive phase codes. Use <strong>Download Excel</strong> to export, or the kebab menu to delete a log.",
-    "tags": [
-      "approve productivity log",
-      "reject productivity log",
-      "timesheets tab",
-      "quantities tab"
-    ]
-  },
-  {
-    "action": "configure",
-    "object": "productivity logs approval workflow",
-    "scope": "project",
-    "section": "Progress",
-    "question": "How do I set up an approval chain for productivity logs?",
-    "answer": "In the <strong>Productivity Logs</strong> card under Progress, open <strong>Approval Workflow</strong> and click <strong>Create Level</strong>. Enter a description, choose <strong>All Must Approve</strong> or <strong>Anyone Can Approve</strong>, and select approvers from the search list. Each level has Edit and Delete actions, and clicking the workflow tree diagram shows the full approval chart. The logging type itself (by Phase Code or by Level 3s) is configured separately in <strong>Project Settings → Productivity Log Settings</strong>.",
-    "tags": [
-      "productivity approval workflow",
-      "create level",
-      "all must approve",
-      "anyone can approve"
-    ]
-  },
-  {
-    "action": "view",
-    "object": "productivity data summary",
-    "scope": "project",
-    "section": "Progress",
-    "question": "Where can I see a rolled-up summary of hours, quantities, and labor units?",
-    "answer": "The <strong>Productivity Logs</strong> card's <strong>Data Summary</strong> view has three tabs: <strong>Timesheets</strong> (hours by employee or crew), <strong>Quantities</strong> (quantity achieved by Phase Code or Location), and <strong>Labor Units</strong> (the ratio of submitted hours to submitted quantities). Each tab offers a Download Excel export for the selected date range — the fastest way for a supervisor to see where labor is actually going without opening individual logs.",
-    "tags": [
-      "data summary",
-      "labor units",
-      "timesheet summary",
-      "quantity summary"
-    ]
-  },
-  {
-    "action": "track",
-    "object": "rejected productivity logs",
-    "scope": "project",
-    "section": "Progress",
-    "question": "What happens to a productivity log that gets rejected?",
-    "answer": "It becomes a tracked issue rather than silently disappearing. Open the <strong>Productivity Logs</strong> card's <strong>Issues</strong> view to see items auto-generated on rejection, including the approver's comments explaining why. An admin or approver can assign the issue to a user with a due date, and the list supports search, status filters, and Download Excel with an option to include images.",
-    "tags": [
-      "productivity log issues",
-      "rejected log",
-      "log rejection",
-      "assign issue"
-    ]
-  },
-  {
-    "action": "compare",
-    "object": "Work Logs vs Productivity Logs",
-    "scope": "project",
-    "section": "Progress",
-    "question": "What is the difference between Work Logs and Productivity Logs?",
-    "answer": "They record two different things and are separate cards. <strong>Work Logs</strong> is where a foreman or field engineer logs completion of physical work at each step of construction — what got built, following the project's Work Log Template — and it can carry an attachment or a linked drawing as evidence; approval runs through Submitted Work Logs and Approve Work Logs. <strong>Productivity Logs</strong> instead ties labor to cost: every hour worked and every unit of output is logged against a Phase Code, feeding productivity and cost reporting rather than tracking work completion itself. A field user typically enters both; a supervisor or PM approves both, but through separate queues (Approve Work Logs for Work Logs, the Productivity Logs card's own Logs view for Productivity Logs).",
-    "tags": [
-      "work logs vs productivity logs",
-      "difference between work logs and productivity logs",
-      "what is a productivity log",
-      "work log vs productivity log"
-    ]
-  },
-  {
-    "action": "create",
-    "object": "RFI",
-    "scope": "project",
-    "section": "Progress",
-    "question": "How do I raise an RFI from the field?",
-    "answer": "Go to <strong>Field Works → Tree Version → [Plant] → Progress → RFI</strong>, described as create, update, approve and reject RFI forms. Click <strong>Create</strong>, fill in the form, then click <strong>Save As Draft</strong> to hold it or <strong>Submit For Approval</strong> if an approval workflow is configured. Drafts are visibly tagged \"Draft\"; a submitted RFI gets a permanent auto-generated ID and shows Approve/Reject buttons to assigned approvers.",
-    "tags": [
-      "create rfi",
-      "request for information",
-      "submit rfi",
-      "save as draft"
-    ]
-  },
-  {
-    "action": "view",
-    "object": "RFI collaboration actions",
-    "scope": "project",
-    "section": "Progress",
-    "question": "What can I do with an RFI once it has been raised?",
-    "answer": "An RFI card supports <strong>Follow Up Actions</strong> (view connected forms, drawings, issues, or tree elements), <strong>See History</strong> for the full audit trail, plus Download as PDF, Share by email, Print, Compose Mail, and See All Email Threads. A <strong>Chat</strong> button on each card supports notes, images, and video, recognizing that resolving an RFI is usually a conversation rather than one submission. <strong>Download Excel</strong> exports all RFI logs at once.",
-    "tags": [
-      "rfi actions",
-      "follow up actions",
-      "rfi history",
-      "rfi chat",
-      "share rfi"
-    ]
-  },
-  {
-    "action": "track",
-    "object": "form issues",
-    "scope": "project",
-    "section": "Progress",
-    "question": "Where are issues raised against forms tracked?",
-    "answer": "The <strong>Issues</strong> card under Progress covers issues raised for RFIs, Submittals, Change Orders, and Custom Forms. Arena distinguishes two kinds: a <strong>Form Issue</strong> is raised directly from a form's own fields and moves Open → Rectified, while a <strong>Form Workflow Issue</strong> is created when a form's approval workflow rejects it and moves Open → Closed once the form is re-submitted and approved. Telling them apart tells you whether you have a content problem or a process problem.",
-    "tags": [
-      "form issues",
-      "form workflow issues",
-      "issues card",
-      "rejected form"
-    ]
-  },
-  {
-    "action": "record",
-    "object": "meeting minutes",
-    "scope": "project",
-    "section": "Progress",
-    "question": "How do I record meeting minutes and track the actions that come out of them?",
-    "answer": "Use the <strong>Meeting Minutes</strong> card under Progress. On its <strong>Forms</strong> tab click <strong>Create</strong>, fill in the meeting details, then <strong>Save As Draft</strong> or <strong>Submit</strong>. The <strong>Actions</strong> tab — available within a single meeting or across all meetings — tracks the action items raised, each with a status, assignee(s), and due date. Download, Share, Print, and built-in chat are available for collaborating on the minutes.",
-    "tags": [
-      "meeting minutes",
-      "action items",
-      "meeting actions",
-      "create meeting"
-    ]
-  },
-  {
-    "action": "view",
-    "object": "site photographs and ready works",
-    "scope": "project",
-    "section": "Progress",
-    "question": "What are the Site Photographs and Ready Works cards for?",
-    "answer": "Both sit under <strong>Progress</strong>. <strong>Site Photographs</strong> is where photographic evidence of site conditions and completed work is collected against the plant — valuable later for progress claims, disputes, or client reporting. <strong>Ready Works</strong> surfaces the work that is ready to be actioned or inspected at that plant, so a foreman can see what is genuinely available to progress rather than scanning the whole work breakdown.",
-    "tags": [
-      "site photographs",
-      "ready works",
-      "site photos",
-      "ready for inspection"
-    ]
-  },
-  {
-    "action": "view",
-    "object": "resource logs (equipment, material, manpower, labor, machinery)",
-    "scope": "project",
-    "section": "Progress",
-    "question": "Where do I log equipment, material, manpower, labor, and machinery used on site?",
-    "answer": "Progress carries a dedicated card for each: <strong>Equipment Logs</strong>, <strong>Material Logs</strong>, <strong>Manpower Logs</strong>, <strong>Labor Logs</strong>, and <strong>Machinery Logs</strong>. Splitting resource capture by type is what lets a construction business answer cost and productivity questions separately — how much plant was on site, how much material was consumed, and how many people were working — rather than lumping everything into one undifferentiated daily entry.",
-    "tags": [
-      "equipment logs",
-      "material logs",
-      "manpower logs",
-      "labor logs",
-      "machinery logs"
-    ]
-  },
-  {
-    "action": "track",
-    "object": "restraints",
-    "scope": "project",
-    "section": "Progress",
-    "question": "How do I raise a restraint and get it verified?",
-    "answer": "Use the <strong>Restraints</strong> card under Progress, and click <strong>Add Restraint</strong>. A restraint is a physical, legal, or contractual blocker logged independently of any single form — the form takes Tree Version, Entity, Super Location, Location, Work Package, Restraint Category, Detailed Description, Priority, an optional file, Start/End Date, and an assignee. Each restraint moves through a three-stage loop tracked as <strong>Open / Rectified / Verified</strong> counters, with its own <strong>Restraints Rectification</strong> tab for working through fixes. Restraints support filters and Download Excel.",
-    "tags": [
-      "restraints",
-      "blocker",
-      "rectify",
-      "verify",
-      "restraint rectification",
-      "add restraint",
-      "blocking work"
-    ]
-  },
-  {
-    "action": "view",
-    "object": "inventory management and procurement cards",
-    "scope": "project",
-    "section": "Progress",
-    "question": "What do the Inventory Management and Procurement cards under Progress hold?",
-    "answer": "<strong>Inventory Management</strong> is described as a collection of pickup tickets — the record of material actually drawn from stock for work at that plant. <strong>Procurement</strong> is described as a collection of requisitions — the requests raised from the field for material or services. Having both visible at the plant level lets a site team see what was asked for and what was actually picked up without leaving the execution screen.",
-    "tags": [
-      "inventory management",
-      "pickup tickets",
-      "procurement",
-      "requisitions"
-    ]
-  },
-  {
-    "action": "view",
-    "object": "equipment logs card",
-    "scope": "project",
-    "section": "Progress",
-    "question": "What is the Equipment Logs card for?",
-    "answer": "<strong>Equipment Logs</strong> under Progress records equipment usage against a specific <strong>Work Order</strong> — not the WBS location tree that Work Logs uses. Pick a Work Order and a date, then log Equipment, UOM, and Quantity from the items available on that order. It feeds work-order cost and progress reporting rather than the plant's overall Progress %.",
-    "tags": [
-      "equipment logs",
-      "work order",
-      "equipment quantity"
-    ]
-  },
-  {
-    "action": "view",
-    "object": "material logs card",
-    "scope": "project",
-    "section": "Progress",
-    "question": "What is the Material Logs card for?",
-    "answer": "<strong>Material Logs</strong> under Progress records material consumed against a specific <strong>Work Order</strong>, in the same pattern as Equipment Logs: pick a Work Order and date, then log Material, UOM, and Quantity from the items on that order.",
-    "tags": [
-      "material logs",
-      "work order",
-      "material consumption"
-    ]
-  },
-  {
-    "action": "view",
-    "object": "manpower logs card",
-    "scope": "project",
-    "section": "Progress",
-    "question": "What is the Manpower Logs card for?",
-    "answer": "<strong>Manpower Logs</strong> under Progress records labor headcount against a specific <strong>Work Order</strong>: pick a Work Order and date, then log Manpower and Quantity. It is not the same as <strong>Labor Logs</strong>, which ties people to a schedule Activity instead of a Work Order, or <strong>Productivity Logs</strong>, which tracks hours against a Phase Code for productivity reporting.",
-    "tags": [
-      "manpower logs",
-      "work order",
-      "headcount"
-    ]
-  },
-  {
-    "action": "view",
-    "object": "labor logs card",
-    "scope": "project",
-    "section": "Progress",
-    "question": "What is the Labor Logs card for?",
-    "answer": "<strong>Labor Logs</strong> under Progress records which labor resources worked on a specific schedule <strong>Activity</strong> on a given date: Tree Version, Entity, Super Location, Activity, Actual Date, then Linked Resources and Additional Resources. It is a lighter, activity-linked record — distinct from the Work-Order-linked Manpower Logs and the Phase-Code-linked Productivity Logs.",
-    "tags": [
-      "labor logs",
-      "resource logs",
-      "activity"
-    ]
-  },
-  {
-    "action": "view",
-    "object": "machinery logs card",
-    "scope": "project",
-    "section": "Progress",
-    "question": "What is the Machinery Logs card for, and how is it different from Equipment Logs?",
-    "answer": "<strong>Machinery Logs</strong> uses the same Activity-linked \"Resource Log\" form as Labor Logs (Tree Version, Entity, Super Location, Activity, Actual Date, Linked Resources), just scoped to machinery instead of labor. It is easy to confuse with <strong>Equipment Logs</strong>, which is a different screen: Equipment Logs ties equipment to a <strong>Work Order</strong> with a Quantity and UOM, while Machinery Logs ties it to a schedule <strong>Activity</strong> as a linked resource.",
-    "tags": [
-      "machinery logs",
-      "equipment logs",
-      "resource logs",
-      "activity vs work order"
-    ]
-  },
-  {
-    "action": "view",
-    "object": "inventory management card",
-    "scope": "project",
-    "section": "Progress",
-    "question": "What is the Inventory Management card for?",
-    "answer": "<strong>Inventory Management</strong> under Progress is described in the product as a collection of pickup tickets. A field team raises a <strong>Site Material Request</strong> to pull material from stock: Requested By, Required Date, the usual location/activity context, Logistics and Handling Instructions, and a line-item table of Materials, Quantity, and UOM. Submitted requests go to approval; rejected ones move to the <strong>Rejected Site Material Requests</strong> tab.",
-    "tags": [
-      "inventory management",
-      "pickup tickets",
-      "site material request"
-    ]
-  },
-  {
-    "action": "view",
-    "object": "procurement card",
-    "scope": "project",
-    "section": "Progress",
-    "question": "What is the Procurement card for?",
-    "answer": "<strong>Procurement</strong> under Progress is described in the product as a collection of requisitions. The list shows Total Items, On-Site Contact, Requested by, RFQs Linked, and inline <strong>Approve</strong>, <strong>Reject</strong>, and <strong>Assign</strong> actions, plus a Workflow Issues sub-tab for problems raised against the requisition's own approval chain. An approved requisition can have Requests for Quotation (RFQs) linked to it, connecting field-level procurement into the wider purchasing process.",
-    "tags": [
-      "procurement",
-      "requisitions",
-      "rfq",
-      "approve reject assign"
-    ]
-  },
-  {
-    "action": "view",
-    "object": "site photographs card",
-    "scope": "project",
-    "section": "Progress",
-    "question": "What is the Site Photographs card for?",
-    "answer": "<strong>Site Photographs</strong> has two tabs: <strong>Work Logs Site Photograph</strong>, for photos attached to a specific Work Log, and <strong>Site Photograph</strong>, a standalone dated photo/video feed for the plant with Create a post, a people search, and date-range filters (ALL / THIS WEEK / LAST WEEK / LAST MONTH). Use it for a general visual record that does not need a formal Work Log entry.",
-    "tags": [
-      "site photographs",
-      "photo feed",
-      "create a post"
-    ]
-  },
-  {
-    "action": "view",
-    "object": "ready works card",
-    "scope": "project",
-    "section": "Progress",
-    "question": "What is the Ready Works card for?",
-    "answer": "<strong>Ready Works</strong> is a planning view, not a log-entry screen. It uses the same Entity and status filters as Work Logs (Not yet started / Ready to work / In Progress / Completed), then shows Location Types with location counts, drilling into individual Locations. It reflects status already recorded through Work Logs, so a supervisor can plan the next day or week without reading through log history.",
-    "tags": [
-      "ready works",
-      "planning view",
-      "location status"
-    ]
-  },
-  {
-    "action": "troubleshoot",
-    "object": "work logs screen layout differs by project",
-    "scope": "project",
-    "section": "Progress",
-    "question": "Why does the Work Logs screen look different on this plant compared to another project?",
-    "answer": "The drill-down shape of the <strong>Work Logs</strong> card follows a per-project setting, not a fixed layout: <strong>Project Settings → Work Logs Templates</strong> offers 7 options — Work Package to Location Logging, Location to Work Package Logging, Location to Work Package bulk logging, Super Location to Location Logging, Worklogs in Scheduled View, Quantity Work Logging, and Worklogs enable by Certified RFIs — and only one is active per project. The same applies to the Quality tab's logging screen, controlled separately by Project Settings → Quality Work Logs Templates (which offers 2 of those 7 options). Ask a Module Admin or PM which template the project uses if the layout looks unfamiliar.",
-    "tags": [
-      "work logs templates",
-      "different screen",
-      "project settings",
-      "work log layout"
-    ]
-  },
-  {
-    "action": "view",
-    "object": "quick apps",
-    "scope": "project",
-    "section": "Quick Apps",
-    "question": "What is the Quick Apps tab in Field Works?",
-    "answer": "<strong>Field Works → Tree Version → [Plant] → Quick Apps</strong> has two cards. <strong>Quick Apps</strong> is a no-code app builder for connecting screens and auto-populating data — a way for a project team to stand up a lightweight, project-specific workflow without waiting on development. It must be configured at the global level first (a project that hasn't had this done shows \"Please configure Quick Apps in global\"). <strong>Issues</strong> holds the issues raised from those no-code app approval workflows, so anything that stalls in a Quick App is still tracked rather than lost.",
-    "tags": [
-      "quick apps tab cards",
-      "no-code app builder",
-      "quick apps issues",
-      "auto-populate"
-    ]
-  },
-  {
-    "action": "submit",
-    "object": "quality inspection form",
-    "scope": "project",
-    "section": "Quality",
-    "question": "How do I complete a quality inspection on site?",
-    "answer": "Go to <strong>Field Works → Tree Version → [Plant] → Quality</strong> and open <strong>Quality Level 1</strong> (or Level 2 once Level 1 clears). Pick an Entity, use the status filters (Not yet started / Ready to work / Started / In Progress / Completed / Issue Raised) to find what's ready, and open a Work Package. How you navigate there follows whichever option the project has set in <strong>Project Settings → Quality Work Logs Templates</strong> — Work Package to Location Logging (pick a Work Package, then its Locations) or Super Location to Location Logging (pick a Location, then its Work Packages). Fill in the form, then click <strong>Save As Draft</strong> or <strong>Submit for Approval</strong>. Level 1 must be approved before Level 2 becomes available, unless Project Settings → Quality Logs is configured to allow skipping Level 1.",
-    "tags": [
-      "quality level 1",
-      "quality level 2",
-      "quality inspection",
-      "submit quality form"
-    ]
-  },
-  {
-    "action": "view",
-    "object": "quality tab cards",
-    "scope": "project",
-    "section": "Quality",
-    "question": "What cards are on the Quality tab in Field Works?",
-    "answer": "The plant-scoped <strong>Quality</strong> tab has five cards: <strong>Quality Level 1</strong>, <strong>Quality Level 2</strong>, <strong>Punch Lists</strong> (described as issues raised due to quality failure), <strong>Submitted Quality Logs</strong>, and <strong>Approve Quality Logs</strong>. The two-level structure reflects the common construction pattern of a first-pass check followed by a more thorough verification before work is accepted.",
-    "tags": [
-      "quality cards",
-      "punch lists",
-      "submitted quality logs",
-      "approve quality logs"
-    ]
-  },
-  {
-    "action": "view",
-    "object": "quality level 1 card",
-    "scope": "project",
-    "section": "Quality",
-    "question": "What is the Quality Level 1 card for?",
-    "answer": "<strong>Quality Level 1</strong> is the first-pass inspection screen. Pick an Entity, use the status filters (Not yet started / Ready to work / Started / In Progress / Completed / Issue Raised) to find what's due, and open a Work Package from the Ready or All list to log the check. An item's Level 2 check generally can't start until its Level 1 is approved, unless Project Settings → Quality Logs is set to allow skipping Level 1.",
-    "tags": [
-      "quality level 1",
-      "first pass inspection"
-    ]
-  },
-  {
-    "action": "view",
-    "object": "quality level 2 card",
-    "scope": "project",
-    "section": "Quality",
-    "question": "What is the Quality Level 2 card for?",
-    "answer": "<strong>Quality Level 2</strong> is the second, more thorough verification pass, using the same screen and filters as Quality Level 1. An item only appears here once its Level 1 check has been approved (unless Level 1 is configured to be skippable in Project Settings → Quality Logs).",
-    "tags": [
-      "quality level 2",
-      "second pass inspection"
-    ]
-  },
-  {
-    "action": "view",
-    "object": "approve quality logs card",
-    "scope": "project",
-    "section": "Quality",
-    "question": "What is the Approve Quality Logs card for?",
-    "answer": "<strong>Approve Quality Logs</strong> is the QA/QC reviewer's approval queue, visible only to users with approval permissions. It has status tabs Not Ready, Ready to Approve, Approved, Reject, To be approved, and All, plus filters for Super Locations, Folders, and Locations Types. Approving here is what lets a quality log count toward the plant's Quality Progress dashboard.",
-    "tags": [
-      "approve quality logs",
-      "quality approval queue"
-    ]
-  },
-  {
-    "action": "approve",
-    "object": "quality logs",
-    "scope": "project",
-    "section": "Quality",
-    "question": "How do I approve submitted quality logs?",
-    "answer": "Open the <strong>Approve Quality Logs</strong> card on the plant's Quality tab. The default <strong>To Be Approved</strong> tab shows only the items awaiting your approval, and is visible only to users with approval permissions; click a location or tag to open its pending work packages and approve or reject them. Click <strong>All</strong> to see every work package and its status across all CWAs and Systems.",
-    "tags": [
-      "approve quality logs",
-      "to be approved",
-      "quality approval",
-      "reject quality log"
-    ]
-  },
-  {
-    "action": "track",
-    "object": "punch list",
-    "scope": "project",
-    "section": "Quality",
-    "question": "What is a Punch List and how does one get closed out?",
-    "answer": "A Punch List is the standard construction-industry term for the list of defects or incomplete items identified during inspection that must be corrected before work is accepted or a project is closed out. Arena uses the same name: a Punch List item is created when a QA/QC inspector raises an issue from within a Quality Level 1 or Level 2 form — a defect needing physical rectification and re-verification. Open the <strong>Punch Lists</strong> card on the plant's Quality tab; each item moves <strong>Open → Rectify → QC_Verify</strong> (click <strong>Rectify</strong> once the defect is fixed, then <strong>QC_Verify</strong> to progress it to closure). Punch lists support due dates, assignees, Chat, filters, and Download Excel.",
-    "tags": [
-      "punch list",
-      "what is a punch list",
-      "punch list definition",
-      "glossary",
-      "rectify",
-      "qc verify",
-      "quality defect",
-      "close out"
-    ]
-  },
-  {
-    "action": "view",
-    "object": "submitted quality logs history",
-    "scope": "project",
-    "section": "Quality",
-    "question": "Where is the full history of quality logs for a plant?",
-    "answer": "Open the <strong>Submitted Quality Logs</strong> card on the plant's Quality tab. Filter by Quality Level 1 or Level 2 and by user via the dropdowns, and by date range via Filters or the calendar, then use <strong>Download Excel</strong> to export the filtered or full set — the usual route when assembling a quality record for a client or auditor.",
-    "tags": [
-      "submitted quality logs",
-      "quality history",
-      "quality export",
-      "filter quality logs"
-    ]
-  },
-  {
-    "action": "view",
-    "object": "project forms (custom forms)",
-    "scope": "project",
-    "section": "Project Forms",
-    "question": "Where do I fill in the custom forms configured for this project?",
-    "answer": "Go to <strong>Field Works → Tree Version → [Plant] → Project Forms</strong> (its breadcrumb label reads \"Custom Forms\"). This tab holds the project-specific custom form types configured in <strong>Project Setup → Forms</strong> — a sample project shows just one, \"Internal LORS\". If a form you expect is missing here, it is almost always because it has not been configured or assigned to you on the setup side.",
-    "tags": [
-      "project forms",
-      "custom forms",
-      "internal lors",
-      "form not showing"
-    ]
-  },
-  {
-    "action": "view",
-    "object": "cost tab cards",
-    "scope": "project",
-    "section": "Cost",
-    "question": "What cost activity can I record against a plant in Field Works?",
-    "answer": "The plant-scoped <strong>Cost</strong> tab has four cards: <strong>Transaction</strong> (purchase orders and other expenses), <strong>Change order</strong> (budget and contract adjustments), <strong>Transfer</strong> (reallocation of budget or cost between Cost Codes and Phase Codes), and <strong>Field Logs</strong>. Keeping these at the plant level means cost movements stay attached to the same work package the physical progress is logged against, which is what makes cost-vs-progress reporting meaningful.",
-    "tags": [
-      "cost tab",
-      "transaction",
-      "change order",
-      "cost transfer",
-      "field logs"
-    ]
-  },
-  {
-    "action": "create",
-    "object": "change order (cost)",
-    "scope": "project",
-    "section": "Cost",
-    "question": "How do I record a budget or contract adjustment on a plant?",
-    "answer": "Use the <strong>Change order</strong> card on the plant's <strong>Cost</strong> tab, described as budget and contract adjustments. A change order records a formal modification to the original scope, cost, or schedule after contract signature; use <strong>Assign To</strong> and <strong>Due Date</strong> to route responsibility so it does not stall without an accountable owner, and Chat, Follow Up Actions, History, Download, Share, Print, and Compose Mail work the same way as they do on RFIs.",
-    "tags": [
-      "change order",
-      "budget adjustment",
-      "contract adjustment",
-      "assign to",
-      "due date"
-    ]
-  },
-  {
-    "action": "transfer",
-    "object": "budget between phase codes",
-    "scope": "project",
-    "section": "Cost",
-    "question": "How do I move budget between cost codes or phase codes?",
-    "answer": "Use the <strong>Transfer</strong> card on the plant's <strong>Cost</strong> tab, described as reallocation of budget or cost between Cost Codes and Phase Codes. This is the controlled way to shift money between buckets when the original cost breakdown no longer reflects how work is actually being executed, rather than editing historical transactions.",
-    "tags": [
-      "cost transfer",
-      "reallocate budget",
-      "cost codes",
-      "phase codes"
-    ]
-  },
-  {
-    "action": "view",
-    "object": "safety tab cards",
-    "scope": "project",
-    "section": "Safety",
-    "question": "What is available on the Field Works Safety tab?",
-    "answer": "<strong>Field Works → Safety</strong> is a top-level tab (not plant-scoped) with five cards: <strong>Safety Forms</strong> (event-based project safety forms), <strong>Daily Safety Issues</strong>, <strong>Completed Safety</strong>, <strong>Safety Calendar</strong> (scheduled safety forms), and <strong>Approve Safety</strong>. Together they cover both proactive safety work — scheduled and ad-hoc checks — and reactive follow-up when something is flagged.",
-    "tags": [
-      "field works safety",
-      "safety forms",
-      "daily safety issues",
-      "safety calendar",
-      "approve safety"
-    ]
-  },
-  {
-    "action": "submit",
-    "object": "unscheduled safety form",
-    "scope": "project",
-    "section": "Safety",
-    "question": "How do I fill out an ad-hoc safety form?",
-    "answer": "Go to <strong>Field Works → Safety → Safety Forms</strong>, which holds the event-based project safety forms. Expand a category in the left menu, click <strong>Create Form</strong>, fill it in, then click <strong>Save As Draft</strong> or <strong>Submit</strong>/<strong>Submit for Approval</strong>. Each submitted card supports Chat (images, text, and video up to 5MB) plus Follow Up Actions, History, Download, Share, Print, Compose Mail, and Email Threads. A checkpoint answered \"No\" can automatically raise a Daily Safety Issue.",
-    "tags": [
-      "safety form",
-      "unscheduled safety",
-      "create form",
-      "safety checklist"
-    ]
-  },
-  {
-    "action": "view",
-    "object": "safety calendar",
-    "scope": "project",
-    "section": "Safety",
-    "question": "How do I find scheduled safety forms that are due, and what do the colors mean?",
-    "answer": "Go to <strong>Field Works → Safety → Safety Calendar</strong>, which holds the scheduled safety forms. The color coding tells you the state on sight: <strong>blue</strong> means Ready and due per its schedule, <strong>grey</strong> means the form is not yet enabled, and <strong>yellow</strong> means In Progress — either awaiting approval or carrying an open issue. Open a blue form, fill it in, then Save As Draft or Submit/Submit for Approval.",
-    "tags": [
-      "safety calendar",
-      "scheduled safety form",
-      "ready forms",
-      "calendar colors"
-    ]
-  },
-  {
-    "action": "track",
-    "object": "daily safety issues",
-    "scope": "project",
-    "section": "Safety",
-    "question": "Where do safety issues raised from forms end up?",
-    "answer": "Go to <strong>Field Works → Safety → Daily Safety Issues</strong>. A Daily Safety Issue (DSI) is created automatically from a project safety form or a calendar form — typically from a failed or \"No\" checkpoint — so a flagged hazard does not sit unnoticed inside a completed form. Each DSI moves <strong>Open → Rectified</strong> (click <strong>Rectify</strong> to close it) and supports due dates, assignees, Chat, filters, and Download Excel.",
-    "tags": [
-      "daily safety issues",
-      "dsi",
-      "safety issue",
-      "rectify",
-      "failed checkpoint"
-    ]
-  },
-  {
-    "action": "view",
-    "object": "completed safety and approve safety",
-    "scope": "project",
-    "section": "Safety",
-    "question": "Where do I review or sign off on safety forms that have been submitted?",
-    "answer": "<strong>Completed Safety</strong> is the retrospective repository of submitted logs from both Safety Forms and Safety Calendar Forms, most recent first, filterable by user or date range and exportable via Download Excel — the view a safety lead or PM uses for an audit or compliance spot-check. <strong>Approve Safety</strong> is the separate review queue where submitted safety forms awaiting sign-off are approved or rejected.",
-    "tags": [
-      "completed safety",
-      "approve safety",
-      "safety repository",
-      "safety audit"
-    ]
-  },
-  {
-    "action": "track",
-    "object": "drawing workflow issues",
-    "scope": "project",
-    "section": "Drawing Management",
-    "question": "How do I see which drawings failed approval and are not cleared for site use?",
-    "answer": "Go to <strong>Field Works → Drawing Management</strong>, a top-level tab holding a single card: <strong>Workflow Issues</strong>, described as drawing workflow issues in the project. A card is created automatically whenever a drawing is rejected at any approval level, so a field engineer or superintendent can see at a glance which sheets are not yet cleared. The list is searchable by ID or status and supports due dates, assignment, Chat, filters, Download Excel, and a table/card view toggle.",
-    "tags": [
-      "drawing workflow issues",
-      "rejected drawing",
-      "drawing management field",
-      "not cleared for use"
-    ]
-  },
-  {
-    "action": "understand",
-    "object": "field drawing management vs project setup drawings",
-    "scope": "project",
-    "section": "Drawing Management",
-    "question": "Why does Field Works → Drawing Management only show issues and not the whole drawing library?",
-    "answer": "That is deliberate. The full drawing library, approval workflows, registers, packages, and OCR training live in <strong>Project Setup → Drawings</strong>, where a PM or Module Admin manages them. The Field Works tab is intentionally narrow — a focused issue queue that keeps rejected-drawing follow-up visible to the people working on site, without duplicating the setup-side tooling they do not need.",
-    "tags": [
-      "drawing management scope",
-      "project setup drawings",
-      "drawing library",
-      "issue queue"
-    ]
-  },
-  {
-    "action": "view",
-    "object": "invoices tab",
-    "scope": "project",
-    "section": "Invoices",
-    "question": "Where do I find work order invoices and their workflow problems?",
-    "answer": "Go to <strong>Field Works → Invoices</strong>, a top-level tab with two cards: <strong>Invoices</strong> (labelled \"Workorder Invoices\") and <strong>Workflow Issues</strong> for work-order-invoice workflow issues. Putting the invoices and the things blocking them on the same tab means a commercial or PM user can see both what has been billed and what is stuck in approval without switching screens.",
-    "tags": [
-      "invoices",
-      "workorder invoices",
-      "invoice workflow issues",
-      "billing"
-    ]
-  },
-  {
-    "action": "create",
-    "object": "workorder invoice",
-    "scope": "project",
-    "section": "Invoices",
-    "question": "How do I raise an invoice against a work order?",
-    "answer": "Go to <strong>Field Works → Invoices → Invoices</strong> and click <strong>Create</strong>. Fill in the Invoice Number and Date of Submission, choose a <strong>Type</strong> — <strong>Advance Amount</strong> or <strong>Work Completion</strong> — then pick the <strong>Workorder</strong> it bills against (the Workorder list only populates once Type is set). Fill in any project-configured fields, attach supporting documents, and click <strong>Submit</strong>.",
-    "tags": [
-      "create invoice",
-      "advance amount",
-      "work completion",
-      "raise invoice",
-      "workorder"
-    ]
-  },
-  {
-    "action": "view",
-    "object": "invoice financial columns and summary",
-    "scope": "project",
-    "section": "Invoices",
-    "question": "What financial details does each work order invoice track, and where do I see the totals?",
-    "answer": "The <strong>Invoices</strong> list breaks each invoice down into Invoice Base Amount, Number of Payments, Amount Paid, Advance Amount Recovery, Retention Amount, Taxes Amount, Discount Amount, Contractor Fee, Contingency Fee, Fixed Fee, Award Fee, Incentives, Total Labor cost, Total Material cost, Invoice Total Amount, and Pending Amount, alongside Contractor and Submitted by. For the project-wide total instead of a row-by-row list, switch to the card's <strong>Summary</strong> tab, which rolls the same figures up under Contract, Invoice, Payments, and the rest.",
-    "tags": [
-      "invoice amounts",
-      "invoice summary",
-      "pending amount",
-      "retention",
-      "contractor fee"
-    ]
-  },
-  {
-    "action": "view",
-    "object": "workorder execution tab",
-    "scope": "project",
-    "section": "Workorder",
-    "question": "What is the Workorder tab in Field Works, and how is it different from the one in Project Setup?",
-    "answer": "<strong>Field Works → Workorder</strong> is the execution-side tracking of work orders — a table/list view with search and a grid/list toggle. It is distinct from <strong>Project Setup → Workorder</strong>, which is the setup-side area where work orders issued to contractors and vendors are created. In short: Project Setup is where a work order is defined, Field Works is where its day-to-day progress is tracked.",
-    "tags": [
-      "workorder",
-      "work order tracking",
-      "field works workorder",
-      "setup vs execution"
-    ]
-  },
-  {
-    "action": "understand",
-    "object": "field works depends on project setup",
-    "scope": "project",
-    "section": "Overview",
-    "question": "A form or work package is missing in Field Works — where do I look?",
-    "answer": "Almost always on the setup side. Field Works reads everything from configuration built elsewhere: work packages and the plant tree come from <strong>Project Setup → Works</strong>, custom form types and their per-plant user assignments from <strong>Project Setup → Forms</strong>, safety categories, workflows, and the safety calendar from <strong>Project Setup → Safety</strong>, quality folders and mapped work packages from <strong>Project Setup → Quality</strong>, and drawing approval workflows from <strong>Project Setup → Drawings</strong>. A form that exists but was never assigned to a user will simply not appear for that user in the field.",
-    "tags": [
-      "missing form",
-      "field works troubleshooting",
-      "project setup dependency",
-      "form not assigned"
-    ]
-  },
-  {
-    "action": "attach",
-    "object": "work log attachment",
-    "scope": "project",
-    "section": "Progress",
-    "question": "Can I attach a file or a drawing to a Work Log?",
-    "answer": "Work Logs support the same \"Connected Drawings\" pattern used elsewhere in Field Works — RFI and Meeting Minutes forms both have a Connect button that links a drawing straight from Drawing Management, alongside the ability to attach media (the Work Logs screen itself has a Media button). This lets a foreman point to exactly which sheet or photo the logged work matches without leaving the screen.",
-    "tags": [
-      "work log attachment",
-      "link drawing to work log",
-      "side panel",
-      "attach file"
-    ]
-  },
-  {
-    "action": "view",
-    "object": "cost forecast under transaction logs",
-    "scope": "project",
-    "section": "Cost",
-    "question": "Where do I see a forecasted cost-to-complete, not just actual transactions?",
-    "answer": "Where the project has IFS integration enabled, a <strong>Cost Forecast</strong> table becomes available under <strong>Transaction Logs</strong> on the plant's Cost tab, with an editable <strong>Completion Allowance %</strong> per line that a PM or cost controller uses to project remaining cost-to-complete on top of the transactions actually recorded.",
-    "tags": [
-      "cost forecast",
-      "completion allowance",
-      "transaction logs",
-      "ifs integration"
-    ]
-  },
-  {
-    "action": "understand",
-    "object": "what is an rfi",
-    "scope": "project",
-    "section": "Progress",
-    "question": "What is an RFI?",
-    "answer": "RFI stands for Request for Information — the standard construction-industry term for a formal question raised when a drawing, specification, or scope item is unclear, sent to a designer, engineer, or owner for a binding answer before work can proceed. Arena uses the same name and the same purpose: a field engineer or foreman creates the RFI on the <strong>RFI</strong> card under Field Works → Progress, it routes to whichever approvers the project's RFI workflow names, and its aging shows up project-wide on the <strong>RFI Approval Delays</strong> dashboard in Data Analytics & Insights.",
-    "tags": [
-      "what is an rfi",
-      "rfi definition",
-      "request for information",
-      "glossary"
-    ]
-  },
-  {
-    "action": "understand",
-    "object": "what is a submittal",
-    "scope": "project",
-    "section": "Progress",
-    "question": "What is a Submittal?",
-    "answer": "A Submittal is the standard construction-industry term for a document — a shop drawing, product data sheet, sample, or similar — that a contractor sends to a designer or owner's representative for review and approval before the related material or method is used on site. In Arena, Submittal is one of the Level 3 form types under <strong>Construction Forms</strong> in <strong>Project Setup → Forms</strong>, where a Module Admin configures who can create it, its approval workflow, and its template; issues raised against a submitted or rejected Submittal are then tracked on the <strong>Issues</strong> card under Field Works → Progress, alongside RFIs, Change Orders, and Custom Forms.",
-    "tags": [
-      "what is a submittal",
-      "submittal definition",
-      "glossary",
-      "construction forms"
-    ]
-  },
-  {
-    "action": "understand",
-    "object": "what is a change order",
-    "scope": "project",
-    "section": "Cost",
-    "question": "What is a Change Order?",
-    "answer": "A Change Order is the standard construction-industry term for a formal, agreed modification to a contract's original scope, cost, or schedule after signature — for example an owner-requested design change or an unforeseen site condition that adds cost. Arena uses the same name: the <strong>Change order</strong> card on the plant's Cost tab (Field Works → Tree Version → [Plant] → Cost) is where a PM records the adjustment, using Assign To and Due Date to keep it from stalling without an accountable owner, and Change Orders are also one of the form types tracked on the Issues card and referenced in Standard Analytics' Collaboration Items dashboard.",
-    "tags": [
-      "what is a change order",
-      "change order definition",
-      "glossary",
-      "contract adjustment"
-    ]
-  },
-  {
-    "action": "troubleshoot",
-    "object": "cost tab card blocked by no estimate",
-    "scope": "project",
-    "section": "Cost",
-    "question": "Why do my Cost tab cards say there is no active and approved estimate?",
-    "answer": "Three of the four Cost tab cards — <strong>Transaction</strong>, <strong>Change order</strong>, and <strong>Field Logs</strong> — need the project to have an active, approved <strong>Estimate</strong> set up in Project Setup before they will accept any entries; until then they show \"No active and approved Estimate found.\" <strong>Transfer</strong> is gated on a different setting: it needs a project \"Level of Detail\" configured, and shows \"Level of detail is not set for this project\" instead. Ask a PM or Module Admin to complete the Estimate (and Level of Detail, for Transfer) in Project Setup first.",
-    "tags": [
-      "cost tab blocked",
-      "no active estimate",
-      "level of detail",
-      "estimate required"
-    ]
-  },
-  {
-    "action": "view",
-    "object": "field logs card",
-    "scope": "project",
-    "section": "Cost",
-    "question": "What is the Field Logs card under Cost for?",
-    "answer": "<strong>Field Logs</strong> is the cost-side rollup of field resource usage, split into 4 categories: <strong>Material, Machinery, Manpower, and Sub Contractor</strong>, each with its own Create button and a Settings icon. It needs an active, approved Estimate to accept entries. It is not the same as the Progress tab's Equipment Logs, Material Logs, and Manpower Logs cards, which record physical quantity used against a Work Order rather than cost against the plant's Estimate.",
-    "tags": [
-      "field logs",
-      "cost tab",
-      "material machinery manpower subcontractor"
-    ]
-  },
-  {
-    "action": "understand",
-    "object": "what is an ncr",
-    "scope": "project",
-    "section": "Quality",
-    "question": "What is an NCR (Non-Conformance Report)?",
-    "answer": "An NCR, or Non-Conformance Report, is the standard construction-industry term for a formal record documenting work or material that fails to meet a specified requirement, raised so it can be tracked to correction rather than quietly reworked off the books. In Arena, this concept is covered by two related but distinct mechanisms: <strong>Non Conformance</strong> / <strong>Non Conformance Report</strong> exist as configurable Level 3 form types under Project Setup → Forms (organization-dependent, so the exact category will vary by company), while day-to-day on site, a quality failure most often surfaces as a <strong>Punch List</strong> item raised directly from a Quality Level 1 or Level 2 form under Field Works → Quality, moving through Open → Rectify → QC_Verify.",
-    "tags": [
-      "what is an ncr",
-      "non-conformance report",
-      "ncr definition",
-      "glossary"
-    ]
-  },
-  {
-    "action": "understand",
-    "object": "what is a daily log",
-    "scope": "project",
-    "section": "Progress",
-    "question": "What is a Daily Log (Daily Report) in Arena?",
-    "answer": "A Daily Log, or Daily Report, is the standard construction-industry term for a field record of a single day's activity — work completed, resources used, weather, and any issues. Arena spreads this across several purpose-built cards rather than one combined form: <strong>Work Logs</strong> (Field Works → Progress) records completion of work at each step, <strong>Equipment Logs</strong>, <strong>Material Logs</strong>, <strong>Manpower Logs</strong>, <strong>Labor Logs</strong>, and <strong>Machinery Logs</strong> record each resource stream separately, and the <strong>DPR report</strong> in Data Analytics & Insights → Standard Analytics (or <strong>Daily Progress Report</strong> under Standard Reports) rolls all of it up into the single daily-report document most projects are contractually expected to produce.",
-    "tags": [
-      "what is a daily log",
-      "daily report definition",
-      "glossary",
-      "dpr"
-    ]
+    action: "view",
+    object: "field works tab structure",
+    scope: "project",
+    section: "Overview",
+    question: "How is Field Works organized, and where do I start?",
+    answer: "Field Works is the day-to-day execution side of a project, opened from the left sidebar. Its top tab bar has five tabs in order: <strong>Tree Version</strong>, <strong>Safety</strong>, <strong>Drawing Management</strong>, <strong>Invoices</strong>, and <strong>Workorder</strong>. Most field logging starts in <strong>Tree Version</strong>, which shows a card per work package/plant; clicking a plant card opens a second-level tab bar scoped to that plant with <strong>Progress</strong>, <strong>Quick Apps</strong>, <strong>Quality</strong>, <strong>Project Forms</strong>, and <strong>Cost</strong>.",
+    tags: ["field works","deliver work","tree version","field works tabs","execution module"]
+  },
+  {
+    action: "view",
+    object: "tree version plant cards",
+    scope: "project",
+    section: "Tree Version",
+    question: "Why does Field Works show the same plants as Project Setup → Works?",
+    answer: "Because Field Works mirrors the project's work-breakdown structure deliberately. <strong>Field Works → Tree Version</strong> lists a card per work package/plant — the same set defined in <strong>Project Setup → Works</strong> — each listing its child Entities. Project Setup is where a PM or Module Admin configures that structure; Field Works is where field teams log real work against it, so the two always line up and progress rolls up against the same breakdown everyone agreed on at kickoff.",
+    tags: ["tree version","plant cards","work packages","entities","wbs mirror"]
+  },
+  {
+    action: "view",
+    object: "second-level tab bar per plant",
+    scope: "project",
+    section: "Tree Version",
+    question: "What tabs appear after I click into a plant in Tree Version?",
+    answer: "Opening a plant card in <strong>Field Works → Tree Version</strong> reveals a second-level tab bar scoped to that plant: <strong>Progress</strong> (the default, with 18 execution cards), <strong>Quick Apps</strong>, <strong>Quality</strong>, <strong>Project Forms</strong> (breadcrumb label \"Custom Forms\"), and <strong>Cost</strong>. Everything you do from there is scoped to that one plant, which is what keeps logs from one work package from bleeding into another's reporting.",
+    tags: ["progress tab","quick apps","quality tab","project forms","cost tab","plant scope"]
+  },
+  {
+    action: "view",
+    object: "progress tab cards",
+    scope: "project",
+    section: "Progress",
+    question: "What is available under the Progress tab for a plant?",
+    answer: "<strong>Field Works → Tree Version → [Plant] → Progress</strong> holds 18 cards covering the bulk of daily site logging: Work Logs, Submitted Work Logs, Approve Work Logs, Productivity Logs, RFI, Site Photographs, Ready Works, Meeting Minutes, Issues, Equipment Logs, Material Logs, Manpower Logs, Restraints, Inventory Management, Procurement, Labor Logs, Machinery Logs, and Detailed Work Logs. This is the tab a foreman or field engineer opens most often during a working day.",
+    tags: ["progress cards","work logs","productivity logs","rfi","field logging"]
+  },
+  {
+    action: "create",
+    object: "work log",
+    scope: "project",
+    section: "Progress",
+    question: "How do I record completion of work at each step during construction?",
+    answer: "Go to <strong>Field Works → Tree Version → [Plant] → Progress → Work Logs</strong>. This card is described as logging completion of the work at each step during construction, recorded against whichever option the project has set in <strong>Project Settings → Work Logs Templates</strong> — for example Work Package to Location Logging, Location to Work Package Logging, Super Location to Location Logging, or a Scheduled/WBS view. Once submitted, every log is retained in <strong>Submitted Work Logs</strong> regardless of status, so a PM always has the full audit trail.",
+    tags: ["work logs","record progress","work log template","log completion"]
+  },
+  {
+    action: "view",
+    object: "submitted and approve work logs",
+    scope: "project",
+    section: "Progress",
+    question: "What is the difference between Work Logs, Submitted Work Logs, and Approve Work Logs?",
+    answer: "All three are separate cards under <strong>Progress</strong>. <strong>Work Logs</strong> is where a field user records progress. <strong>Submitted Work Logs</strong> is the full repository of every log regardless of status, filterable by date range and by user with a Download Excel export. <strong>Approve Work Logs</strong> is the review queue where a supervisor or PM signs off on what the field submitted. Keeping capture, archive, and approval on separate cards is what lets a field user log freely while a manager still controls what counts as approved progress.",
+    tags: ["submitted work logs","approve work logs","work log approval","log repository"]
+  },
+  {
+    action: "view",
+    object: "detailed work logs",
+    scope: "project",
+    section: "Progress",
+    question: "Is there a single table view of all work logs across the WBS?",
+    answer: "Yes — the <strong>Detailed Work Logs</strong> card under <strong>Progress</strong> is described as a comprehensive table view of all WBS worklogs. It is the card to use when a PM needs to scan or export everything logged against the work breakdown rather than drilling card by card.",
+    tags: ["detailed work logs","wbs worklogs","table view","comprehensive log view"]
+  },
+  {
+    action: "create",
+    object: "productivity log",
+    scope: "project",
+    section: "Progress",
+    question: "How do I create a productivity log (hours and quantities)?",
+    answer: "Go to <strong>Field Works → Tree Version → [Plant] → Progress → Productivity Logs → Create</strong>. Click <strong>Set Phase Codes</strong> to pick which phase codes are in scope and choose the date range, then click <strong>Create Log</strong> and use <strong>Add Employee</strong> (a row of hours/quantities per Phase Code/CWA/System/Commodity), <strong>Add Crew</strong> (log per member of a selected crew), or <strong>Clone Log</strong> (duplicate an existing log). Complete the <strong>Log Time</strong> tab, click <strong>Next</strong> to move to <strong>Log Quantity</strong>, then submit.",
+    tags: ["productivity log","create log","log time","log quantity","set phase codes"]
+  },
+  {
+    action: "approve",
+    object: "productivity logs",
+    scope: "project",
+    section: "Progress",
+    question: "How do I review, approve, or reject productivity logs?",
+    answer: "Open the <strong>Productivity Logs</strong> card under Progress and go to its <strong>Logs</strong> view. Regular field users see only their own logs; Admins and Approvers see all logs with Approve/Reject buttons — act from the <strong>Quantities</strong> tab for Direct and Change Order phase codes, and from the <strong>Timesheets</strong> tab for Indirect and Non-Productive phase codes. Use <strong>Download Excel</strong> to export, or the kebab menu to delete a log.",
+    tags: ["approve productivity log","reject productivity log","timesheets tab","quantities tab"]
+  },
+  {
+    action: "configure",
+    object: "productivity logs approval workflow",
+    scope: "project",
+    section: "Progress",
+    question: "How do I set up an approval chain for productivity logs?",
+    answer: "In the <strong>Productivity Logs</strong> card under Progress, open <strong>Approval Workflow</strong> and click <strong>Create Level</strong>. Enter a description, choose <strong>All Must Approve</strong> or <strong>Anyone Can Approve</strong>, and select approvers from the search list. Each level has Edit and Delete actions, and clicking the workflow tree diagram shows the full approval chart. The logging type itself (by Phase Code or by Level 3s) is configured separately in <strong>Project Settings → Productivity Log Settings</strong>.",
+    tags: ["productivity approval workflow","create level","all must approve","anyone can approve"]
+  },
+  {
+    action: "view",
+    object: "productivity data summary",
+    scope: "project",
+    section: "Progress",
+    question: "Where can I see a rolled-up summary of hours, quantities, and labor units?",
+    answer: "The <strong>Productivity Logs</strong> card's <strong>Data Summary</strong> view has three tabs: <strong>Timesheets</strong> (hours by employee or crew), <strong>Quantities</strong> (quantity achieved by Phase Code or Location), and <strong>Labor Units</strong> (the ratio of submitted hours to submitted quantities). Each tab offers a Download Excel export for the selected date range — the fastest way for a supervisor to see where labor is actually going without opening individual logs.",
+    tags: ["data summary","labor units","timesheet summary","quantity summary"]
+  },
+  {
+    action: "track",
+    object: "rejected productivity logs",
+    scope: "project",
+    section: "Progress",
+    question: "What happens to a productivity log that gets rejected?",
+    answer: "It becomes a tracked issue rather than silently disappearing. Open the <strong>Productivity Logs</strong> card's <strong>Issues</strong> view to see items auto-generated on rejection, including the approver's comments explaining why. An admin or approver can assign the issue to a user with a due date, and the list supports search, status filters, and Download Excel with an option to include images.",
+    tags: ["productivity log issues","rejected log","log rejection","assign issue"]
+  },
+  {
+    action: "compare",
+    object: "Work Logs vs Productivity Logs",
+    scope: "project",
+    section: "Progress",
+    question: "What is the difference between Work Logs and Productivity Logs?",
+    answer: "They record two different things and are separate cards. <strong>Work Logs</strong> is where a foreman or field engineer logs completion of physical work at each step of construction — what got built, following the project's Work Log Template — and it can carry an attachment or a linked drawing as evidence; approval runs through Submitted Work Logs and Approve Work Logs. <strong>Productivity Logs</strong> instead ties labor to cost: every hour worked and every unit of output is logged against a Phase Code, feeding productivity and cost reporting rather than tracking work completion itself. A field user typically enters both; a supervisor or PM approves both, but through separate queues (Approve Work Logs for Work Logs, the Productivity Logs card's own Logs view for Productivity Logs).",
+    tags: ["work logs vs productivity logs","difference between work logs and productivity logs","what is a productivity log","work log vs productivity log"]
+  },
+  {
+    action: "create",
+    object: "RFI",
+    scope: "project",
+    section: "Progress",
+    question: "How do I raise an RFI from the field?",
+    answer: "Go to <strong>Field Works → Tree Version → [Plant] → Progress → RFI</strong>, described as create, update, approve and reject RFI forms. Click <strong>Create</strong>, fill in the form, then click <strong>Save As Draft</strong> to hold it or <strong>Submit For Approval</strong> if an approval workflow is configured. Drafts are visibly tagged \"Draft\"; a submitted RFI gets a permanent auto-generated ID and shows Approve/Reject buttons to assigned approvers.",
+    tags: ["create rfi","request for information","submit rfi","save as draft"]
+  },
+  {
+    action: "view",
+    object: "RFI collaboration actions",
+    scope: "project",
+    section: "Progress",
+    question: "What can I do with an RFI once it has been raised?",
+    answer: "An RFI card supports <strong>Follow Up Actions</strong> (view connected forms, drawings, issues, or tree elements), <strong>See History</strong> for the full audit trail, plus Download as PDF, Share by email, Print, Compose Mail, and See All Email Threads. A <strong>Chat</strong> button on each card supports notes, images, and video, recognizing that resolving an RFI is usually a conversation rather than one submission. <strong>Download Excel</strong> exports all RFI logs at once.",
+    tags: ["rfi actions","follow up actions","rfi history","rfi chat","share rfi"]
+  },
+  {
+    action: "track",
+    object: "form issues",
+    scope: "project",
+    section: "Progress",
+    question: "Where are issues raised against forms tracked?",
+    answer: "The <strong>Issues</strong> card under Progress covers issues raised for RFIs, Submittals, Change Orders, and Custom Forms. Arena distinguishes two kinds: a <strong>Form Issue</strong> is raised directly from a form's own fields and moves Open → Rectified, while a <strong>Form Workflow Issue</strong> is created when a form's approval workflow rejects it and moves Open → Closed once the form is re-submitted and approved. Telling them apart tells you whether you have a content problem or a process problem.",
+    tags: ["form issues","form workflow issues","issues card","rejected form"]
+  },
+  {
+    action: "record",
+    object: "meeting minutes",
+    scope: "project",
+    section: "Progress",
+    question: "How do I record meeting minutes and track the actions that come out of them?",
+    answer: "Use the <strong>Meeting Minutes</strong> card under Progress. On its <strong>Forms</strong> tab click <strong>Create</strong>, fill in the meeting details, then <strong>Save As Draft</strong> or <strong>Submit</strong>. The <strong>Actions</strong> tab — available within a single meeting or across all meetings — tracks the action items raised, each with a status, assignee(s), and due date. Download, Share, Print, and built-in chat are available for collaborating on the minutes.",
+    tags: ["meeting minutes","action items","meeting actions","create meeting"]
+  },
+  {
+    action: "view",
+    object: "site photographs and ready works",
+    scope: "project",
+    section: "Progress",
+    question: "What are the Site Photographs and Ready Works cards for?",
+    answer: "Both sit under <strong>Progress</strong>. <strong>Site Photographs</strong> is where photographic evidence of site conditions and completed work is collected against the plant — valuable later for progress claims, disputes, or client reporting. <strong>Ready Works</strong> surfaces the work that is ready to be actioned or inspected at that plant, so a foreman can see what is genuinely available to progress rather than scanning the whole work breakdown.",
+    tags: ["site photographs","ready works","site photos","ready for inspection"]
+  },
+  {
+    action: "view",
+    object: "resource logs (equipment, material, manpower, labor, machinery)",
+    scope: "project",
+    section: "Progress",
+    question: "Where do I log equipment, material, manpower, labor, and machinery used on site?",
+    answer: "Progress carries a dedicated card for each: <strong>Equipment Logs</strong>, <strong>Material Logs</strong>, <strong>Manpower Logs</strong>, <strong>Labor Logs</strong>, and <strong>Machinery Logs</strong>. Splitting resource capture by type is what lets a construction business answer cost and productivity questions separately — how much plant was on site, how much material was consumed, and how many people were working — rather than lumping everything into one undifferentiated daily entry.",
+    tags: ["equipment logs","material logs","manpower logs","labor logs","machinery logs"]
+  },
+  {
+    action: "track",
+    object: "restraints",
+    scope: "project",
+    section: "Progress",
+    question: "How do I raise a restraint and get it verified?",
+    answer: "Use the <strong>Restraints</strong> card under Progress, and click <strong>Add Restraint</strong>. A restraint is a physical, legal, or contractual blocker logged independently of any single form — the form takes Tree Version, Entity, Super Location, Location, Work Package, Restraint Category, Detailed Description, Priority, an optional file, Start/End Date, and an assignee. Each restraint moves through a three-stage loop tracked as <strong>Open / Rectified / Verified</strong> counters, with its own <strong>Restraints Rectification</strong> tab for working through fixes. Restraints support filters and Download Excel.",
+    tags: ["restraints","blocker","rectify","verify","restraint rectification","add restraint","blocking work"]
+  },
+  {
+    action: "view",
+    object: "inventory management and procurement cards",
+    scope: "project",
+    section: "Progress",
+    question: "What do the Inventory Management and Procurement cards under Progress hold?",
+    answer: "<strong>Inventory Management</strong> is described as a collection of pickup tickets — the record of material actually drawn from stock for work at that plant. <strong>Procurement</strong> is described as a collection of requisitions — the requests raised from the field for material or services. Having both visible at the plant level lets a site team see what was asked for and what was actually picked up without leaving the execution screen.",
+    tags: ["inventory management","pickup tickets","procurement","requisitions"]
+  },
+  {
+    action: "view",
+    object: "equipment logs card",
+    scope: "project",
+    section: "Progress",
+    question: "What is the Equipment Logs card for?",
+    answer: "<strong>Equipment Logs</strong> under Progress records equipment usage against a specific <strong>Work Order</strong> — not the WBS location tree that Work Logs uses. Pick a Work Order and a date, then log Equipment, UOM, and Quantity from the items available on that order. It feeds work-order cost and progress reporting rather than the plant's overall Progress %.",
+    tags: ["equipment logs","work order","equipment quantity"]
+  },
+  {
+    action: "view",
+    object: "material logs card",
+    scope: "project",
+    section: "Progress",
+    question: "What is the Material Logs card for?",
+    answer: "<strong>Material Logs</strong> under Progress records material consumed against a specific <strong>Work Order</strong>, in the same pattern as Equipment Logs: pick a Work Order and date, then log Material, UOM, and Quantity from the items on that order.",
+    tags: ["material logs","work order","material consumption"]
+  },
+  {
+    action: "view",
+    object: "manpower logs card",
+    scope: "project",
+    section: "Progress",
+    question: "What is the Manpower Logs card for?",
+    answer: "<strong>Manpower Logs</strong> under Progress records labor headcount against a specific <strong>Work Order</strong>: pick a Work Order and date, then log Manpower and Quantity. It is not the same as <strong>Labor Logs</strong>, which ties people to a schedule Activity instead of a Work Order, or <strong>Productivity Logs</strong>, which tracks hours against a Phase Code for productivity reporting.",
+    tags: ["manpower logs","work order","headcount"]
+  },
+  {
+    action: "view",
+    object: "labor logs card",
+    scope: "project",
+    section: "Progress",
+    question: "What is the Labor Logs card for?",
+    answer: "<strong>Labor Logs</strong> under Progress records which labor resources worked on a specific schedule <strong>Activity</strong> on a given date: Tree Version, Entity, Super Location, Activity, Actual Date, then Linked Resources and Additional Resources. It is a lighter, activity-linked record — distinct from the Work-Order-linked Manpower Logs and the Phase-Code-linked Productivity Logs.",
+    tags: ["labor logs","resource logs","activity"]
+  },
+  {
+    action: "view",
+    object: "machinery logs card",
+    scope: "project",
+    section: "Progress",
+    question: "What is the Machinery Logs card for, and how is it different from Equipment Logs?",
+    answer: "<strong>Machinery Logs</strong> uses the same Activity-linked \"Resource Log\" form as Labor Logs (Tree Version, Entity, Super Location, Activity, Actual Date, Linked Resources), just scoped to machinery instead of labor. It is easy to confuse with <strong>Equipment Logs</strong>, which is a different screen: Equipment Logs ties equipment to a <strong>Work Order</strong> with a Quantity and UOM, while Machinery Logs ties it to a schedule <strong>Activity</strong> as a linked resource.",
+    tags: ["machinery logs","equipment logs","resource logs","activity vs work order"]
+  },
+  {
+    action: "view",
+    object: "inventory management card",
+    scope: "project",
+    section: "Progress",
+    question: "What is the Inventory Management card for?",
+    answer: "<strong>Inventory Management</strong> under Progress is described in the product as a collection of pickup tickets. A field team raises a <strong>Site Material Request</strong> to pull material from stock: Requested By, Required Date, the usual location/activity context, Logistics and Handling Instructions, and a line-item table of Materials, Quantity, and UOM. Submitted requests go to approval; rejected ones move to the <strong>Rejected Site Material Requests</strong> tab.",
+    tags: ["inventory management","pickup tickets","site material request"]
+  },
+  {
+    action: "view",
+    object: "procurement card",
+    scope: "project",
+    section: "Progress",
+    question: "What is the Procurement card for?",
+    answer: "<strong>Procurement</strong> under Progress is described in the product as a collection of requisitions. The list shows Total Items, On-Site Contact, Requested by, RFQs Linked, and inline <strong>Approve</strong>, <strong>Reject</strong>, and <strong>Assign</strong> actions, plus a Workflow Issues sub-tab for problems raised against the requisition's own approval chain. An approved requisition can have Requests for Quotation (RFQs) linked to it, connecting field-level procurement into the wider purchasing process.",
+    tags: ["procurement","requisitions","rfq","approve reject assign"]
+  },
+  {
+    action: "view",
+    object: "site photographs card",
+    scope: "project",
+    section: "Progress",
+    question: "What is the Site Photographs card for?",
+    answer: "<strong>Site Photographs</strong> has two tabs: <strong>Work Logs Site Photograph</strong>, for photos attached to a specific Work Log, and <strong>Site Photograph</strong>, a standalone dated photo/video feed for the plant with Create a post, a people search, and date-range filters (ALL / THIS WEEK / LAST WEEK / LAST MONTH). Use it for a general visual record that does not need a formal Work Log entry.",
+    tags: ["site photographs","photo feed","create a post"]
+  },
+  {
+    action: "view",
+    object: "ready works card",
+    scope: "project",
+    section: "Progress",
+    question: "What is the Ready Works card for?",
+    answer: "<strong>Ready Works</strong> is a planning view, not a log-entry screen. It uses the same Entity and status filters as Work Logs (Not yet started / Ready to work / In Progress / Completed), then shows Location Types with location counts, drilling into individual Locations. It reflects status already recorded through Work Logs, so a supervisor can plan the next day or week without reading through log history.",
+    tags: ["ready works","planning view","location status"]
+  },
+  {
+    action: "troubleshoot",
+    object: "work logs screen layout differs by project",
+    scope: "project",
+    section: "Progress",
+    question: "Why does the Work Logs screen look different on this plant compared to another project?",
+    answer: "The drill-down shape of the <strong>Work Logs</strong> card follows a per-project setting, not a fixed layout: <strong>Project Settings → Work Logs Templates</strong> offers 7 options — Work Package to Location Logging, Location to Work Package Logging, Location to Work Package bulk logging, Super Location to Location Logging, Worklogs in Scheduled View, Quantity Work Logging, and Worklogs enable by Certified RFIs — and only one is active per project. The same applies to the Quality tab's logging screen, controlled separately by Project Settings → Quality Work Logs Templates (which offers 2 of those 7 options). Ask a Module Admin or PM which template the project uses if the layout looks unfamiliar.",
+    tags: ["work logs templates","different screen","project settings","work log layout"]
+  },
+  {
+    action: "view",
+    object: "quick apps",
+    scope: "project",
+    section: "Quick Apps",
+    question: "What is the Quick Apps tab in Field Works?",
+    answer: "<strong>Field Works → Tree Version → [Plant] → Quick Apps</strong> has two cards. <strong>Quick Apps</strong> is a no-code app builder for connecting screens and auto-populating data — a way for a project team to stand up a lightweight, project-specific workflow without waiting on development. It must be configured at the global level first (a project that hasn't had this done shows \"Please configure Quick Apps in global\"). <strong>Issues</strong> holds the issues raised from those no-code app approval workflows, so anything that stalls in a Quick App is still tracked rather than lost.",
+    tags: ["quick apps tab cards","no-code app builder","quick apps issues","auto-populate"]
+  },
+  {
+    action: "submit",
+    object: "quality inspection form",
+    scope: "project",
+    section: "Quality",
+    question: "How do I complete a quality inspection on site?",
+    answer: "Go to <strong>Field Works → Tree Version → [Plant] → Quality</strong> and open <strong>Quality Level 1</strong> (or Level 2 once Level 1 clears). Pick an Entity, use the status filters (Not yet started / Ready to work / Started / In Progress / Completed / Issue Raised) to find what's ready, and open a Work Package. How you navigate there follows whichever option the project has set in <strong>Project Settings → Quality Work Logs Templates</strong> — Work Package to Location Logging (pick a Work Package, then its Locations) or Super Location to Location Logging (pick a Location, then its Work Packages). Fill in the form, then click <strong>Save As Draft</strong> or <strong>Submit for Approval</strong>. Level 1 must be approved before Level 2 becomes available, unless Project Settings → Quality Logs is configured to allow skipping Level 1.",
+    tags: ["quality level 1","quality level 2","quality inspection","submit quality form"]
+  },
+  {
+    action: "view",
+    object: "quality tab cards",
+    scope: "project",
+    section: "Quality",
+    question: "What cards are on the Quality tab in Field Works?",
+    answer: "The plant-scoped <strong>Quality</strong> tab has five cards: <strong>Quality Level 1</strong>, <strong>Quality Level 2</strong>, <strong>Punch Lists</strong> (described as issues raised due to quality failure), <strong>Submitted Quality Logs</strong>, and <strong>Approve Quality Logs</strong>. The two-level structure reflects the common construction pattern of a first-pass check followed by a more thorough verification before work is accepted.",
+    tags: ["quality cards","punch lists","submitted quality logs","approve quality logs"]
+  },
+  {
+    action: "view",
+    object: "quality level 1 card",
+    scope: "project",
+    section: "Quality",
+    question: "What is the Quality Level 1 card for?",
+    answer: "<strong>Quality Level 1</strong> is the first-pass inspection screen. Pick an Entity, use the status filters (Not yet started / Ready to work / Started / In Progress / Completed / Issue Raised) to find what's due, and open a Work Package from the Ready or All list to log the check. An item's Level 2 check generally can't start until its Level 1 is approved, unless Project Settings → Quality Logs is set to allow skipping Level 1.",
+    tags: ["quality level 1","first pass inspection"]
+  },
+  {
+    action: "view",
+    object: "quality level 2 card",
+    scope: "project",
+    section: "Quality",
+    question: "What is the Quality Level 2 card for?",
+    answer: "<strong>Quality Level 2</strong> is the second, more thorough verification pass, using the same screen and filters as Quality Level 1. An item only appears here once its Level 1 check has been approved (unless Level 1 is configured to be skippable in Project Settings → Quality Logs).",
+    tags: ["quality level 2","second pass inspection"]
+  },
+  {
+    action: "view",
+    object: "approve quality logs card",
+    scope: "project",
+    section: "Quality",
+    question: "What is the Approve Quality Logs card for?",
+    answer: "<strong>Approve Quality Logs</strong> is the QA/QC reviewer's approval queue, visible only to users with approval permissions. It has status tabs Not Ready, Ready to Approve, Approved, Reject, To be approved, and All, plus filters for Super Locations, Folders, and Locations Types. Approving here is what lets a quality log count toward the plant's Quality Progress dashboard.",
+    tags: ["approve quality logs","quality approval queue"]
+  },
+  {
+    action: "approve",
+    object: "quality logs",
+    scope: "project",
+    section: "Quality",
+    question: "How do I approve submitted quality logs?",
+    answer: "Open the <strong>Approve Quality Logs</strong> card on the plant's Quality tab. The default <strong>To Be Approved</strong> tab shows only the items awaiting your approval, and is visible only to users with approval permissions; click a location or tag to open its pending work packages and approve or reject them. Click <strong>All</strong> to see every work package and its status across all CWAs and Systems.",
+    tags: ["approve quality logs","to be approved","quality approval","reject quality log"]
+  },
+  {
+    action: "track",
+    object: "punch list",
+    scope: "project",
+    section: "Quality",
+    question: "What is a Punch List and how does one get closed out?",
+    answer: "A Punch List is the standard construction-industry term for the list of defects or incomplete items identified during inspection that must be corrected before work is accepted or a project is closed out. Arena uses the same name: a Punch List item is created when a QA/QC inspector raises an issue from within a Quality Level 1 or Level 2 form — a defect needing physical rectification and re-verification. Open the <strong>Punch Lists</strong> card on the plant's Quality tab; each item moves <strong>Open → Rectify → QC_Verify</strong> (click <strong>Rectify</strong> once the defect is fixed, then <strong>QC_Verify</strong> to progress it to closure). Punch lists support due dates, assignees, Chat, filters, and Download Excel.",
+    tags: ["punch list","what is a punch list","punch list definition","glossary","rectify","qc verify","quality defect","close out"]
+  },
+  {
+    action: "view",
+    object: "submitted quality logs history",
+    scope: "project",
+    section: "Quality",
+    question: "Where is the full history of quality logs for a plant?",
+    answer: "Open the <strong>Submitted Quality Logs</strong> card on the plant's Quality tab. Filter by Quality Level 1 or Level 2 and by user via the dropdowns, and by date range via Filters or the calendar, then use <strong>Download Excel</strong> to export the filtered or full set — the usual route when assembling a quality record for a client or auditor.",
+    tags: ["submitted quality logs","quality history","quality export","filter quality logs"]
+  },
+  {
+    action: "view",
+    object: "project forms (custom forms)",
+    scope: "project",
+    section: "Project Forms",
+    question: "Where do I fill in the custom forms configured for this project?",
+    answer: "Go to <strong>Field Works → Tree Version → [Plant] → Project Forms</strong> (its breadcrumb label reads \"Custom Forms\"). This tab holds the project-specific custom form types configured in <strong>Project Setup → Forms</strong> — a sample project shows just one, \"Internal LORS\". If a form you expect is missing here, it is almost always because it has not been configured or assigned to you on the setup side.",
+    tags: ["project forms","custom forms","internal lors","form not showing"]
+  },
+  {
+    action: "view",
+    object: "cost tab cards",
+    scope: "project",
+    section: "Cost",
+    question: "What cost activity can I record against a plant in Field Works?",
+    answer: "The plant-scoped <strong>Cost</strong> tab has four cards: <strong>Transaction</strong> (purchase orders and other expenses), <strong>Change order</strong> (budget and contract adjustments), <strong>Transfer</strong> (reallocation of budget or cost between Cost Codes and Phase Codes), and <strong>Field Logs</strong>. Keeping these at the plant level means cost movements stay attached to the same work package the physical progress is logged against, which is what makes cost-vs-progress reporting meaningful.",
+    tags: ["cost tab","transaction","change order","cost transfer","field logs"]
+  },
+  {
+    action: "create",
+    object: "change order (cost)",
+    scope: "project",
+    section: "Cost",
+    question: "How do I record a budget or contract adjustment on a plant?",
+    answer: "Use the <strong>Change order</strong> card on the plant's <strong>Cost</strong> tab, described as budget and contract adjustments. A change order records a formal modification to the original scope, cost, or schedule after contract signature; use <strong>Assign To</strong> and <strong>Due Date</strong> to route responsibility so it does not stall without an accountable owner, and Chat, Follow Up Actions, History, Download, Share, Print, and Compose Mail work the same way as they do on RFIs.",
+    tags: ["change order","budget adjustment","contract adjustment","assign to","due date"]
+  },
+  {
+    action: "transfer",
+    object: "budget between phase codes",
+    scope: "project",
+    section: "Cost",
+    question: "How do I move budget between cost codes or phase codes?",
+    answer: "Use the <strong>Transfer</strong> card on the plant's <strong>Cost</strong> tab, described as reallocation of budget or cost between Cost Codes and Phase Codes. This is the controlled way to shift money between buckets when the original cost breakdown no longer reflects how work is actually being executed, rather than editing historical transactions.",
+    tags: ["cost transfer","reallocate budget","cost codes","phase codes"]
+  },
+  {
+    action: "view",
+    object: "safety tab cards",
+    scope: "project",
+    section: "Safety",
+    question: "What is available on the Field Works Safety tab?",
+    answer: "<strong>Field Works → Safety</strong> is a top-level tab (not plant-scoped) with five cards: <strong>Safety Forms</strong> (event-based project safety forms), <strong>Daily Safety Issues</strong>, <strong>Completed Safety</strong>, <strong>Safety Calendar</strong> (scheduled safety forms), and <strong>Approve Safety</strong>. Together they cover both proactive safety work — scheduled and ad-hoc checks — and reactive follow-up when something is flagged.",
+    tags: ["field works safety","safety forms","daily safety issues","safety calendar","approve safety"]
+  },
+  {
+    action: "submit",
+    object: "unscheduled safety form",
+    scope: "project",
+    section: "Safety",
+    question: "How do I fill out an ad-hoc safety form?",
+    answer: "Go to <strong>Field Works → Safety → Safety Forms</strong>, which holds the event-based project safety forms. Expand a category in the left menu, click <strong>Create Form</strong>, fill it in, then click <strong>Save As Draft</strong> or <strong>Submit</strong>/<strong>Submit for Approval</strong>. Each submitted card supports Chat (images, text, and video up to 5MB) plus Follow Up Actions, History, Download, Share, Print, Compose Mail, and Email Threads. A checkpoint answered \"No\" can automatically raise a Daily Safety Issue.",
+    tags: ["safety form","unscheduled safety","create form","safety checklist"]
+  },
+  {
+    action: "view",
+    object: "safety calendar",
+    scope: "project",
+    section: "Safety",
+    question: "How do I find scheduled safety forms that are due, and what do the colors mean?",
+    answer: "Go to <strong>Field Works → Safety → Safety Calendar</strong>, which holds the scheduled safety forms. The color coding tells you the state on sight: <strong>blue</strong> means Ready and due per its schedule, <strong>grey</strong> means the form is not yet enabled, and <strong>yellow</strong> means In Progress — either awaiting approval or carrying an open issue. Open a blue form, fill it in, then Save As Draft or Submit/Submit for Approval.",
+    tags: ["safety calendar","scheduled safety form","ready forms","calendar colors"]
+  },
+  {
+    action: "track",
+    object: "daily safety issues",
+    scope: "project",
+    section: "Safety",
+    question: "Where do safety issues raised from forms end up?",
+    answer: "Go to <strong>Field Works → Safety → Daily Safety Issues</strong>. A Daily Safety Issue (DSI) is created automatically from a project safety form or a calendar form — typically from a failed or \"No\" checkpoint — so a flagged hazard does not sit unnoticed inside a completed form. Each DSI moves <strong>Open → Rectified</strong> (click <strong>Rectify</strong> to close it) and supports due dates, assignees, Chat, filters, and Download Excel.",
+    tags: ["daily safety issues","dsi","safety issue","rectify","failed checkpoint"]
+  },
+  {
+    action: "view",
+    object: "completed safety and approve safety",
+    scope: "project",
+    section: "Safety",
+    question: "Where do I review or sign off on safety forms that have been submitted?",
+    answer: "<strong>Completed Safety</strong> is the retrospective repository of submitted logs from both Safety Forms and Safety Calendar Forms, most recent first, filterable by user or date range and exportable via Download Excel — the view a safety lead or PM uses for an audit or compliance spot-check. <strong>Approve Safety</strong> is the separate review queue where submitted safety forms awaiting sign-off are approved or rejected.",
+    tags: ["completed safety","approve safety","safety repository","safety audit"]
+  },
+  {
+    action: "track",
+    object: "drawing workflow issues",
+    scope: "project",
+    section: "Drawing Management",
+    question: "How do I see which drawings failed approval and are not cleared for site use?",
+    answer: "Go to <strong>Field Works → Drawing Management</strong>, a top-level tab holding a single card: <strong>Workflow Issues</strong>, described as drawing workflow issues in the project. A card is created automatically whenever a drawing is rejected at any approval level, so a field engineer or superintendent can see at a glance which sheets are not yet cleared. The list is searchable by ID or status and supports due dates, assignment, Chat, filters, Download Excel, and a table/card view toggle.",
+    tags: ["drawing workflow issues","rejected drawing","drawing management field","not cleared for use"]
+  },
+  {
+    action: "understand",
+    object: "field drawing management vs project setup drawings",
+    scope: "project",
+    section: "Drawing Management",
+    question: "Why does Field Works → Drawing Management only show issues and not the whole drawing library?",
+    answer: "That is deliberate. The full drawing library, approval workflows, registers, packages, and OCR training live in <strong>Project Setup → Drawings</strong>, where a PM or Module Admin manages them. The Field Works tab is intentionally narrow — a focused issue queue that keeps rejected-drawing follow-up visible to the people working on site, without duplicating the setup-side tooling they do not need.",
+    tags: ["drawing management scope","project setup drawings","drawing library","issue queue"]
+  },
+  {
+    action: "view",
+    object: "invoices tab",
+    scope: "project",
+    section: "Invoices",
+    question: "Where do I find work order invoices and their workflow problems?",
+    answer: "Go to <strong>Field Works → Invoices</strong>, a top-level tab with two cards: <strong>Invoices</strong> (labelled \"Workorder Invoices\") and <strong>Workflow Issues</strong> for work-order-invoice workflow issues. Putting the invoices and the things blocking them on the same tab means a commercial or PM user can see both what has been billed and what is stuck in approval without switching screens.",
+    tags: ["invoices","workorder invoices","invoice workflow issues","billing"]
+  },
+  {
+    action: "create",
+    object: "workorder invoice",
+    scope: "project",
+    section: "Invoices",
+    question: "How do I raise an invoice against a work order?",
+    answer: "Go to <strong>Field Works → Invoices → Invoices</strong> and click <strong>Create</strong>. Fill in the Invoice Number and Date of Submission, choose a <strong>Type</strong> — <strong>Advance Amount</strong> or <strong>Work Completion</strong> — then pick the <strong>Workorder</strong> it bills against (the Workorder list only populates once Type is set). Fill in any project-configured fields, attach supporting documents, and click <strong>Submit</strong>.",
+    tags: ["create invoice","advance amount","work completion","raise invoice","workorder"]
+  },
+  {
+    action: "view",
+    object: "invoice financial columns and summary",
+    scope: "project",
+    section: "Invoices",
+    question: "What financial details does each work order invoice track, and where do I see the totals?",
+    answer: "The <strong>Invoices</strong> list breaks each invoice down into Invoice Base Amount, Number of Payments, Amount Paid, Advance Amount Recovery, Retention Amount, Taxes Amount, Discount Amount, Contractor Fee, Contingency Fee, Fixed Fee, Award Fee, Incentives, Total Labor cost, Total Material cost, Invoice Total Amount, and Pending Amount, alongside Contractor and Submitted by. For the project-wide total instead of a row-by-row list, switch to the card's <strong>Summary</strong> tab, which rolls the same figures up under Contract, Invoice, Payments, and the rest.",
+    tags: ["invoice amounts","invoice summary","pending amount","retention","contractor fee"]
+  },
+  {
+    action: "view",
+    object: "workorder execution tab",
+    scope: "project",
+    section: "Workorder",
+    question: "What is the Workorder tab in Field Works, and how is it different from the one in Project Setup?",
+    answer: "<strong>Field Works → Workorder</strong> is the execution-side tracking of work orders — a table/list view with search and a grid/list toggle. It is distinct from <strong>Project Setup → Workorder</strong>, which is the setup-side area where work orders issued to contractors and vendors are created. In short: Project Setup is where a work order is defined, Field Works is where its day-to-day progress is tracked.",
+    tags: ["workorder","work order tracking","field works workorder","setup vs execution"]
+  },
+  {
+    action: "understand",
+    object: "field works depends on project setup",
+    scope: "project",
+    section: "Overview",
+    question: "A form or work package is missing in Field Works — where do I look?",
+    answer: "Almost always on the setup side. Field Works reads everything from configuration built elsewhere: work packages and the plant tree come from <strong>Project Setup → Works</strong>, custom form types and their per-plant user assignments from <strong>Project Setup → Forms</strong>, safety categories, workflows, and the safety calendar from <strong>Project Setup → Safety</strong>, quality folders and mapped work packages from <strong>Project Setup → Quality</strong>, and drawing approval workflows from <strong>Project Setup → Drawings</strong>. A form that exists but was never assigned to a user will simply not appear for that user in the field.",
+    tags: ["missing form","field works troubleshooting","project setup dependency","form not assigned"]
+  },
+  {
+    action: "attach",
+    object: "work log attachment",
+    scope: "project",
+    section: "Progress",
+    question: "Can I attach a file or a drawing to a Work Log?",
+    answer: "Work Logs support the same \"Connected Drawings\" pattern used elsewhere in Field Works — RFI and Meeting Minutes forms both have a Connect button that links a drawing straight from Drawing Management, alongside the ability to attach media (the Work Logs screen itself has a Media button). This lets a foreman point to exactly which sheet or photo the logged work matches without leaving the screen.",
+    tags: ["work log attachment","link drawing to work log","side panel","attach file"]
+  },
+  {
+    action: "view",
+    object: "cost forecast under transaction logs",
+    scope: "project",
+    section: "Cost",
+    question: "Where do I see a forecasted cost-to-complete, not just actual transactions?",
+    answer: "Where the project has IFS integration enabled, a <strong>Cost Forecast</strong> table becomes available under <strong>Transaction Logs</strong> on the plant's Cost tab, with an editable <strong>Completion Allowance %</strong> per line that a PM or cost controller uses to project remaining cost-to-complete on top of the transactions actually recorded.",
+    tags: ["cost forecast","completion allowance","transaction logs","ifs integration"]
+  },
+  {
+    action: "understand",
+    object: "what is an rfi",
+    scope: "project",
+    section: "Progress",
+    question: "What is an RFI?",
+    answer: "RFI stands for Request for Information — the standard construction-industry term for a formal question raised when a drawing, specification, or scope item is unclear, sent to a designer, engineer, or owner for a binding answer before work can proceed. Arena uses the same name and the same purpose: a field engineer or foreman creates the RFI on the <strong>RFI</strong> card under Field Works → Progress, it routes to whichever approvers the project's RFI workflow names, and its aging shows up project-wide on the <strong>RFI Approval Delays</strong> dashboard in Data Analytics & Insights.",
+    tags: ["what is an rfi","rfi definition","request for information","glossary"]
+  },
+  {
+    action: "understand",
+    object: "what is a submittal",
+    scope: "project",
+    section: "Progress",
+    question: "What is a Submittal?",
+    answer: "A Submittal is the standard construction-industry term for a document — a shop drawing, product data sheet, sample, or similar — that a contractor sends to a designer or owner's representative for review and approval before the related material or method is used on site. In Arena, Submittal is one of the Level 3 form types under <strong>Construction Forms</strong> in <strong>Project Setup → Forms</strong>, where a Module Admin configures who can create it, its approval workflow, and its template; issues raised against a submitted or rejected Submittal are then tracked on the <strong>Issues</strong> card under Field Works → Progress, alongside RFIs, Change Orders, and Custom Forms.",
+    tags: ["what is a submittal","submittal definition","glossary","construction forms"]
+  },
+  {
+    action: "understand",
+    object: "what is a change order",
+    scope: "project",
+    section: "Cost",
+    question: "What is a Change Order?",
+    answer: "A Change Order is the standard construction-industry term for a formal, agreed modification to a contract's original scope, cost, or schedule after signature — for example an owner-requested design change or an unforeseen site condition that adds cost. Arena uses the same name: the <strong>Change order</strong> card on the plant's Cost tab (Field Works → Tree Version → [Plant] → Cost) is where a PM records the adjustment, using Assign To and Due Date to keep it from stalling without an accountable owner, and Change Orders are also one of the form types tracked on the Issues card and referenced in Standard Analytics' Collaboration Items dashboard.",
+    tags: ["what is a change order","change order definition","glossary","contract adjustment"]
+  },
+  {
+    action: "troubleshoot",
+    object: "cost tab card blocked by no estimate",
+    scope: "project",
+    section: "Cost",
+    question: "Why do my Cost tab cards say there is no active and approved estimate?",
+    answer: "Three of the four Cost tab cards — <strong>Transaction</strong>, <strong>Change order</strong>, and <strong>Field Logs</strong> — need the project to have an active, approved <strong>Estimate</strong> set up in Project Setup before they will accept any entries; until then they show \"No active and approved Estimate found.\" <strong>Transfer</strong> is gated on a different setting: it needs a project \"Level of Detail\" configured, and shows \"Level of detail is not set for this project\" instead. Ask a PM or Module Admin to complete the Estimate (and Level of Detail, for Transfer) in Project Setup first.",
+    tags: ["cost tab blocked","no active estimate","level of detail","estimate required"]
+  },
+  {
+    action: "view",
+    object: "field logs card",
+    scope: "project",
+    section: "Cost",
+    question: "What is the Field Logs card under Cost for?",
+    answer: "<strong>Field Logs</strong> is the cost-side rollup of field resource usage, split into 4 categories: <strong>Material, Machinery, Manpower, and Sub Contractor</strong>, each with its own Create button and a Settings icon. It needs an active, approved Estimate to accept entries. It is not the same as the Progress tab's Equipment Logs, Material Logs, and Manpower Logs cards, which record physical quantity used against a Work Order rather than cost against the plant's Estimate.",
+    tags: ["field logs","cost tab","material machinery manpower subcontractor"]
+  },
+  {
+    action: "understand",
+    object: "what is an ncr",
+    scope: "project",
+    section: "Quality",
+    question: "What is an NCR (Non-Conformance Report)?",
+    answer: "An NCR, or Non-Conformance Report, is the standard construction-industry term for a formal record documenting work or material that fails to meet a specified requirement, raised so it can be tracked to correction rather than quietly reworked off the books. In Arena, this concept is covered by two related but distinct mechanisms: <strong>Non Conformance</strong> / <strong>Non Conformance Report</strong> exist as configurable Level 3 form types under Project Setup → Forms (organization-dependent, so the exact category will vary by company), while day-to-day on site, a quality failure most often surfaces as a <strong>Punch List</strong> item raised directly from a Quality Level 1 or Level 2 form under Field Works → Quality, moving through Open → Rectify → QC_Verify.",
+    tags: ["what is an ncr","non-conformance report","ncr definition","glossary"]
+  },
+  {
+    action: "understand",
+    object: "what is a daily log",
+    scope: "project",
+    section: "Progress",
+    question: "What is a Daily Log (Daily Report) in Arena?",
+    answer: "A Daily Log, or Daily Report, is the standard construction-industry term for a field record of a single day's activity — work completed, resources used, weather, and any issues. Arena spreads this across several purpose-built cards rather than one combined form: <strong>Work Logs</strong> (Field Works → Progress) records completion of work at each step, <strong>Equipment Logs</strong>, <strong>Material Logs</strong>, <strong>Manpower Logs</strong>, <strong>Labor Logs</strong>, and <strong>Machinery Logs</strong> record each resource stream separately, and the <strong>DPR report</strong> in Data Analytics & Insights → Standard Analytics (or <strong>Daily Progress Report</strong> under Standard Reports) rolls all of it up into the single daily-report document most projects are contractually expected to produce.",
+    tags: ["what is a daily log","daily report definition","glossary","dpr"]
   }
 ];
 
@@ -16050,7 +15528,13 @@ const MODULES = [
             "definition": "Global Data holds the company-wide master data and skeletons (phase codes, crews, construction types, form templates); Project Setup is where a project maps to, copies from, or builds on that shared layer."
           }
         ],
-        "procedures": []
+        "procedures": [],
+        "images": [
+          {
+            "src": "assets/notion/how-to-create-projects/001.jpg",
+            "caption": "The Projects list: click a project name to open it"
+          }
+        ]
       },
       {
         "heading": "Works",
@@ -16090,6 +15574,92 @@ const MODULES = [
               "Click <strong>Assign Percentage</strong> on the toolbar.",
               "Allocate a weighting to each plant/work package so overall project progress reflects each one's relative size or cost."
             ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/work-structure/001.jpg",
+            "caption": "Work Structure with each CWA as a tab, and its systems, tags and work packages below"
+          },
+          {
+            "src": "assets/notion/work-structure/002.jpg",
+            "caption": "Editing a CWA from its menu"
+          },
+          {
+            "src": "assets/notion/work-structure/003.jpg",
+            "caption": "Adding systems to a CWA"
+          },
+          {
+            "src": "assets/notion/work-structure/004.jpg",
+            "caption": "Adding tags to a system and editing a tag"
+          },
+          {
+            "src": "assets/notion/cwa-construction-work-area/001.jpg",
+            "caption": "The CWAS step, listing each CWA with edit and delete icons"
+          },
+          {
+            "src": "assets/notion/system/001.jpg",
+            "caption": "Systems, the second tier of the work structure"
+          },
+          {
+            "src": "assets/notion/tag/001.jpg",
+            "caption": "Tags, the third tier of the work structure"
+          },
+          {
+            "src": "assets/notion/table-view/001.jpg",
+            "caption": "Complete Structure: every CWA, system and tag on one page"
+          },
+          {
+            "src": "assets/notion/tree-view/001.jpg",
+            "caption": "Tree view: selecting a node shows the levels beneath it"
+          },
+          {
+            "src": "assets/notion/how-to-create-wbs-tree/001.jpg",
+            "caption": "Tree Versions: a project can hold several trees"
+          },
+          {
+            "src": "assets/notion/custom-columns/001.jpg",
+            "caption": "Custom Columns: adding a column with a name and type"
+          },
+          {
+            "src": "assets/notion/custom-columns/002.jpg",
+            "caption": "A new custom column with Edit and Delete options in its header"
+          },
+          {
+            "src": "assets/notion/activity-sequence/001.jpg",
+            "caption": "Assign Activity Sequence, listing the tags in the project"
+          },
+          {
+            "src": "assets/notion/activity-sequence/002.jpg",
+            "caption": "Add New Mappings, showing the sequences defined in Global Data"
+          },
+          {
+            "src": "assets/notion/activity-sequence/003.jpg",
+            "caption": "Choosing a sequence for a tag and submitting it"
+          },
+          {
+            "src": "assets/notion/other-attributes-qty-hrs/001.jpg",
+            "caption": "Other Attributes (Qty | Hrs): budget hours and quantity for each work package"
+          },
+          {
+            "src": "assets/notion/other-attributes-qty-hrs/002.jpg",
+            "caption": "Budget hours and quantity entered at system level"
+          },
+          {
+            "src": "assets/notion/other-attributes-qty-hrs/003.jpg",
+            "caption": "Project dates such as the client end date"
+          },
+          {
+            "src": "assets/notion/measurement-methods/001.jpg",
+            "caption": "Measurement Methods: Percentage Based or Effort Based completion"
+          },
+          {
+            "src": "assets/notion/measurement-methods/002.jpg",
+            "caption": "The Progress and Quality tabs of Measurement Methods"
+          },
+          {
+            "src": "assets/notion/measurement-methods/004.jpg",
+            "caption": "View & Edit Work Packages link for each activity"
           }
         ]
       },
@@ -16245,6 +15815,16 @@ const MODULES = [
               "Enter or adjust a date directly as free text where a faster alternative to the date-picker is needed."
             ]
           }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/work-schedule/001.jpg",
+            "caption": "Work Schedule with filters and selectable columns"
+          },
+          {
+            "src": "assets/notion/work-schedule/002.jpg",
+            "caption": "Download P6 XML and the Gantt View toggle"
+          }
         ]
       },
       {
@@ -16307,6 +15887,27 @@ const MODULES = [
               "Open the folder and use <strong>Map Work Packages</strong> to tie it to the relevant CWA/System/Tag combinations.",
               "Attach supporting <strong>Documents</strong>, <strong>Photos</strong>, and <strong>Linked Forms</strong> as needed."
             ]
+          },
+          {
+            "title": "Create a quality approval workflow",
+            "steps": [
+              "Go to **Project Setup → Quality → Create Workflow**.",
+              "Click **Create Workflow**, then **Create Level** to add a level to the selected workflow.",
+              "In the pop-up, choose the level type, **All must approve** or **Anyone can approve**, and select the approvers for that level.",
+              "Changing the levels of an existing workflow shows a warning, because it affects all linked forms and documents."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/create-quality-approval-workflow/001.jpg",
+                "caption": "Create Workflow and Create Level, with the level type and approvers",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/create-quality-approval-workflow/002.jpg",
+                "caption": "Warning shown when a workflow's levels are changed",
+                "step": 4
+              }
+            ]
           }
         ]
       },
@@ -16341,6 +15942,18 @@ const MODULES = [
             "steps": [
               "Go to <strong>Project Setup → Safety → Create Workflow</strong> and build the approval levels and approvers.",
               "Go to <strong>Project Setup → Safety → Assign Workflow</strong>, select the relevant safety division/package, and attach the workflow."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/create-safety-approval-workflow/001.jpg",
+                "caption": "Create Workflow and Create Level for a safety approval workflow",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/assign-safety-approval-workflow/001.jpg",
+                "caption": "Assign Workflow: choosing a safety division and package, then Submit",
+                "step": 2
+              }
             ]
           },
           {
@@ -16349,7 +15962,35 @@ const MODULES = [
               "Create the form category under <strong>Setup Project Safety Forms</strong> (ad-hoc) or <strong>Setup Safety Calendar</strong> (recurring).",
               "Explicitly assign the form to the users who should complete it."
             ],
-            "note": "An unassigned form will not appear to end users in Field Works, even after the category is created."
+            "note": "An unassigned form will not appear to end users in Field Works, even after the category is created.",
+            "images": [
+              {
+                "src": "assets/notion/setup-project-safety-forms/001.jpg",
+                "caption": "Create Safety Form Category under Setup Project Safety Forms",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/setup-safety-calendar-forms/001.jpg",
+                "caption": "Create Safety Calendar Category with start date, end date and recurrence",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/setup-project-safety-forms/002.jpg",
+                "caption": "Assigning users to a safety form, and copying the assignments to other forms",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/setup-safety-calendar-forms/002.jpg",
+                "caption": "Click to make assignments on a scheduled safety form",
+                "step": 2
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/safety-documents/001.jpg",
+            "caption": "Safety And Documents: creating folders and adding files"
           }
         ]
       },
@@ -16385,6 +16026,264 @@ const MODULES = [
               "Go to <strong>Project Setup → Drawings → Create Approval Workflow</strong>.",
               "Name the workflow (e.g. \"Drawing Approval Workflow-1\").",
               "Add levels (Level 1, Level 2, ...), each with its own approvers and approval type such as \"Any one can approve\"."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/create-drawing-approval-workflow/001.jpg",
+                "caption": "Create Approval Workflow for drawings",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/create-drawing-approval-workflow/002.jpg",
+                "caption": "Create Level: choosing the level type and approvers",
+                "step": 3
+              }
+            ]
+          },
+          {
+            "title": "Create a drawing package and upload drawings",
+            "steps": [
+              "Go to **Project Setup → Drawings → Drawing Packages** to see the existing drawing packages.",
+              "Click **Create Drawing Package**, enter the package details and the training template, then click **Submit**. Use the three-dot menu on a package card to edit or delete it.",
+              "Open the package and click **Upload Drawing** to add one or more PDF or image files.",
+              "Choose **Auto Label Upload** to read the labels from the drawings, or **Write Label Manually** to type them in. Both lead to **Review & Edit**.",
+              "Use **Review & Submit** for each drawing, or **Submit All** to upload them in one go. The uploaded drawings appear in a table.",
+              "Click the link in the **Drawing Page** column to open a drawing."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/drawing-packages/001.jpg",
+                "caption": "The Drawing Packages screen",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/drawing-packages/002.jpg",
+                "caption": "Create Drawing Package form",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/drawing-packages/003.jpg",
+                "caption": "Editing or deleting a package from its three-dot menu",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/drawing-packages/004.jpg",
+                "caption": "Upload Drawing for a package",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/drawing-packages/005.jpg",
+                "caption": "Auto Label Upload and Write Label Manually",
+                "step": 4
+              },
+              {
+                "src": "assets/notion/drawing-packages/006.jpg",
+                "caption": "Uploaded drawings table with the Drawing Page link",
+                "step": 5
+              },
+              {
+                "src": "assets/notion/drawing-packages/007.jpg",
+                "caption": "A drawing opened on the drawing page",
+                "step": 6
+              }
+            ]
+          },
+          {
+            "title": "Annotate, link and share a drawing",
+            "steps": [
+              "Open a drawing and click **Edit Drawing** to use the annotation tools, then click **Save Changes**. The **Select Users** drop-down shows the mark-ups made by the users you choose.",
+              "To raise a form against the drawing, pick the **Drop** tool, place it on the drawing and select the form. Fill in the form and **Submit** the form and drawing.",
+              "Use **Edit Bulk Drawings** to change labels and approval workflows for many drawings at once.",
+              "Check the **Drawing Workflow** and **Level** columns for a drawing's approval status, and click **See History** to view its history.",
+              "Click the **Revisions** icon to compare revisions of a drawing; minor and major changes show in different colours.",
+              "Click **Share**, select the users, choose the email service and send the file.",
+              "Click **Edit** to change the drawing's information.",
+              "Click **Link** to map the drawing to CWA, System and Tag elements, so it shows in the related work logs and quality forms.",
+              "Switch to the grid view to **Approve** or **Reject** drawings on the cards."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/drawing-packages/008.jpg",
+                "caption": "Edit Drawing with the annotation tools",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/drawing-packages/009.jpg",
+                "caption": "The Drop tool placing a form on the drawing",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/drawing-packages/010.jpg",
+                "caption": "A form opened in place on the drawing",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/drawing-packages/011.jpg",
+                "caption": "Edit Bulk Drawings",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/drawing-packages/012.jpg",
+                "caption": "Changing labels and approval workflows for many drawings at once",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/drawing-packages/013.jpg",
+                "caption": "Drawing Workflow, Level and See History columns",
+                "step": 4
+              },
+              {
+                "src": "assets/notion/drawing-packages/014.jpg",
+                "caption": "Revision compare screen with colour-coded changes",
+                "step": 5
+              },
+              {
+                "src": "assets/notion/drawing-packages/015.jpg",
+                "caption": "Sharing a drawing with selected users",
+                "step": 6
+              },
+              {
+                "src": "assets/notion/drawing-packages/016.jpg",
+                "caption": "Editing a drawing's information",
+                "step": 7
+              },
+              {
+                "src": "assets/notion/drawing-packages/017.jpg",
+                "caption": "Link: mapping a drawing to CWA, System and Tag",
+                "step": 8
+              },
+              {
+                "src": "assets/notion/drawing-packages/018.jpg",
+                "caption": "Grid view with Approve and Reject on each card",
+                "step": 9
+              }
+            ]
+          },
+          {
+            "title": "Submit drawings as a package submittal",
+            "steps": [
+              "Open a drawing package and click **New Submittal**.",
+              "In the dialog, complete **Drawing Package Submittal Form**: enter the details, attach the files and click **Submit**.",
+              "Click **Upload Drawings** and add your PDF drawings.",
+              "Choose **Auto Label Upload** or **Write Label Manually** to move on to **Review & Edit**.",
+              "Use **Review & Submit** for each drawing, or **Submit All**.",
+              "Open a drawing from the **Drawing Page** column. Click **Comments** for the annotation tools, use **Comment** to add a note at a point on the drawing, and turn **Threads** on to show where comments sit.",
+              "Use **Create Revision** to upload a revised drawing, **Review Comments** to read the comments, and **Compare** to see the old and revised drawings side by side."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/drawing-logs/004.jpg",
+                "caption": "New Submittal in a drawing package",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/drawing-logs/005.jpg",
+                "caption": "The submittal dialog: Drawing Package Submittal Form, Upload Drawings and Review & Edit",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/drawing-logs/006.jpg",
+                "caption": "Drawing Package Submittal Form",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/drawing-logs/007.jpg",
+                "caption": "Upload Drawings for the submittal",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/drawing-logs/008.jpg",
+                "caption": "Auto Label Upload and Write Label Manually",
+                "step": 4
+              },
+              {
+                "src": "assets/notion/drawing-logs/009.jpg",
+                "caption": "Uploaded drawings table with the Drawing Page link",
+                "step": 5
+              },
+              {
+                "src": "assets/notion/drawing-logs/011.jpg",
+                "caption": "Comments mode with the annotation tools",
+                "step": 6
+              },
+              {
+                "src": "assets/notion/drawing-logs/013.jpg",
+                "caption": "Adding a comment at a point on the drawing",
+                "step": 6
+              },
+              {
+                "src": "assets/notion/drawing-logs/014.jpg",
+                "caption": "The Threads toggle showing where comments sit",
+                "step": 6
+              },
+              {
+                "src": "assets/notion/drawing-logs/016.jpg",
+                "caption": "Create Revision to upload a revised drawing",
+                "step": 7
+              },
+              {
+                "src": "assets/notion/drawing-logs/018.jpg",
+                "caption": "Review Comments",
+                "step": 7
+              },
+              {
+                "src": "assets/notion/drawing-logs/024.jpg",
+                "caption": "Compare: the existing and revised drawings",
+                "step": 7
+              }
+            ]
+          },
+          {
+            "title": "Train a drawing template for automatic labels",
+            "steps": [
+              "Go to **Project Setup → Drawings → Drawing Training**, which lists the existing training templates.",
+              "Click **Create Training Template**, enter a name and description, and click **Submit**. Use the three-dot menu on a template card to edit or delete it.",
+              "Open a template. In step 1, **Upload Sample Drawing**, upload a PDF or image with **Upload**.",
+              "In step 2, **Create Labels**, click **Create Label** to add a drawing-specific label, then enter its name and **Field Type**. Click **Save Changes**.",
+              "In step 3, **OCR Training**, select each label, mark its position on the drawing (horizontal or vertical) and click **Save Changes**. Drawings uploaded with this template then have those labels read automatically.",
+              "In step 4, **Preview Table**, check the table of labels for the drawing."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/drawing-training/001.jpg",
+                "caption": "The Drawing Training screen",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/drawing-training/002.jpg",
+                "caption": "Create Training Template",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/drawing-training/003.jpg",
+                "caption": "Editing or deleting a template from its three-dot menu",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/drawing-training/004.jpg",
+                "caption": "Step 1: Upload Sample Drawing",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/drawing-training/005.jpg",
+                "caption": "Step 2: Create Labels",
+                "step": 4
+              },
+              {
+                "src": "assets/notion/drawing-training/006.jpg",
+                "caption": "A new label with its name and Field Type",
+                "step": 4
+              },
+              {
+                "src": "assets/notion/drawing-training/007.jpg",
+                "caption": "Step 3: OCR Training, marking each label's position",
+                "step": 5
+              },
+              {
+                "src": "assets/notion/drawing-training/008.jpg",
+                "caption": "Step 4: Preview Table",
+                "step": 6
+              }
             ]
           }
         ]
@@ -16414,7 +16313,51 @@ const MODULES = [
               "Click <strong>Create Team</strong>.",
               "Build out folders (e.g. per plant) and sub-folders as needed, uploading files into each."
             ],
-            "note": "This is distinct from the read-only, cross-category Document Repository module, and from the specialized Quality & Documents area inside the Quality tab."
+            "note": "This is distinct from the read-only, cross-category Document Repository module, and from the specialized Quality & Documents area inside the Quality tab.",
+            "images": [
+              {
+                "src": "assets/notion/documents/001.jpg",
+                "caption": "Create Team for project documents",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/documents/002.jpg",
+                "caption": "New folder inside a team, with import template and sync team",
+                "step": 3
+              }
+            ]
+          },
+          {
+            "title": "Tag, route and approve a project document",
+            "steps": [
+              "Open a folder inside your team. Use **Tag** on a document to link it to the project tree.",
+              "Use **Workflow** to set permissions such as view, edit and approval levels. **COPY SAME WORKFLOW FOR** and **COPY WORKFLOW FOR** reuse a workflow across documents.",
+              "Use **History** to view the history of the document.",
+              "Use **Send to approval** to send the document to its approvers.",
+              "Approvers open **Documents to approve** to approve or reject the documents waiting for them."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/documents/003.jpg",
+                "caption": "Tag: linking a document to the project tree",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/documents/004.jpg",
+                "caption": "Workflow: permissions and approval levels for a document",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/documents/005.jpg",
+                "caption": "History of a document",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/documents/006.jpg",
+                "caption": "Send to approval",
+                "step": 4
+              }
+            ]
           }
         ]
       },
@@ -16489,7 +16432,14 @@ const MODULES = [
               "Open <strong>Schedule Project Forms</strong> if this form type should trigger on a recurring basis.",
               "Open <strong>Assign Templates</strong> to attach the template variant(s) the form type should use."
             ],
-            "note": "All of this is setup configuration done before end users see the form — it doesn't itself create a form submission."
+            "note": "All of this is setup configuration done before end users see the form — it doesn't itself create a form submission.",
+            "images": [
+              {
+                "src": "assets/notion/create-approval-workflow-for-project-forms/001.jpg",
+                "caption": "Forms approval workflow: Create Level with the level type and approvers",
+                "step": 1
+              }
+            ]
           }
         ]
       },
@@ -16768,7 +16718,39 @@ const MODULES = [
               "Click <strong>Save As Draft</strong> to hold it, or <strong>Submit For Approval</strong> if an approval workflow is configured.",
               "Once live, use <strong>Follow Up Actions</strong> for connected forms, drawings, issues, or tree elements, <strong>See History</strong> for the audit trail, and <strong>Chat</strong> for notes, images, and video."
             ],
-            "note": "Drafts are visibly tagged \"Draft\"; a submitted RFI gets a permanent auto-generated ID and exposes Approve/Reject buttons to its assigned approvers."
+            "note": "Drafts are visibly tagged \"Draft\"; a submitted RFI gets a permanent auto-generated ID and exposes Approve/Reject buttons to its assigned approvers.",
+            "images": [
+              {
+                "src": "assets/notion/request-for-information/001.jpg",
+                "caption": "Create button and the RFI form",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/request-for-information/002.jpg",
+                "caption": "A draft RFI carrying the Draft label",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/rfis-request-for-information/001.jpg",
+                "caption": "An RFI log with Approve and Reject buttons for an approver",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/rfis-request-for-information/002.jpg",
+                "caption": "An RFI log after it has been approved or rejected",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/request-for-information/003.jpg",
+                "caption": "Filters and the Chat option on an RFI card",
+                "step": 4
+              },
+              {
+                "src": "assets/notion/rfis-request-for-information/003.jpg",
+                "caption": "Assign To, Due Date and Chat on an RFI log",
+                "step": 4
+              }
+            ]
           },
           {
             "title": "Record meeting minutes and track the resulting actions",
@@ -16777,6 +16759,23 @@ const MODULES = [
               "Click <strong>Create</strong>, fill in the meeting details, then click <strong>Save As Draft</strong> or <strong>Submit</strong>.",
               "Use the <strong>Actions</strong> tab — within one meeting or across all meetings — to track each action item's status, assignee(s), and due date.",
               "Use Download, Share, Print, and the built-in chat to collaborate on the minutes."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/meeting-minutes/001.jpg",
+                "caption": "The Create button opening a new meeting form; drafts carry a DRAFT tag",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/meeting-minutes/003.jpg",
+                "caption": "The Actions tab listing every action item",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/meeting-minutes/002.jpg",
+                "caption": "The Form and Actions options inside a meeting",
+                "step": 4
+              }
             ]
           },
           {
@@ -16787,7 +16786,132 @@ const MODULES = [
               "Set a Start Date/End Date and Assign to the person who will clear it, then Submit.",
               "Work the item through its <strong>Open / Rectified / Verified</strong> stages, using the <strong>Restraints Rectification</strong> tab to record how each was fixed.",
               "Use filters and <strong>Download Excel</strong> to report on open restraints."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/restraints/001.jpg",
+                "caption": "The Restraints card with the Add Restraint button",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/restraints/002.jpg",
+                "caption": "The restraint form with its fields",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/restraint-rectification/001.jpg",
+                "caption": "Restraint Rectification, listing how restraints are to be fixed",
+                "step": 4
+              },
+              {
+                "src": "assets/notion/restraint-rectification/002.jpg",
+                "caption": "Guidance text shown on a restraint for users to follow",
+                "step": 4
+              },
+              {
+                "src": "assets/notion/restraints/003.jpg",
+                "caption": "Filters and the table and card views for restraints",
+                "step": 5
+              }
             ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/site-posts/001.jpg",
+            "caption": "Create a Post, which shows to every user on the project"
+          },
+          {
+            "src": "assets/notion/site-posts/002.jpg",
+            "caption": "Likes and comments on a site post"
+          },
+          {
+            "src": "assets/notion/issues-form-issues/001.jpg",
+            "caption": "Issues raised from forms: search by ID or status"
+          },
+          {
+            "src": "assets/notion/issues-form-issues/002.jpg",
+            "caption": "Download Excel and Filters for form issues"
+          },
+          {
+            "src": "assets/notion/issues-form-issues/003.jpg",
+            "caption": "Form issues in table and card views"
+          },
+          {
+            "src": "assets/notion/issues-form-workflow-issues/001.jpg",
+            "caption": "Form Workflow Issues: open and closed approval issues"
+          },
+          {
+            "src": "assets/notion/issues-form-workflow-issues/002.jpg",
+            "caption": "Download Excel and Filters for workflow issues"
+          },
+          {
+            "src": "assets/notion/issues-form-workflow-issues/003.jpg",
+            "caption": "Form workflow issues in table and card views"
+          },
+          {
+            "src": "assets/notion/submitted-work-logs/001.jpg",
+            "caption": "Submitted Work Logs: every work log recorded on the plant"
+          },
+          {
+            "src": "assets/notion/submitted-work-logs/002.jpg",
+            "caption": "Choosing a time range for submitted work logs"
+          },
+          {
+            "src": "assets/notion/submitted-work-logs/003.jpg",
+            "caption": "The Users filter on submitted work logs"
+          },
+          {
+            "src": "assets/notion/work-package-to-tag-view/001.jpg",
+            "caption": "Work Package to Tag view with work packages listed on the left"
+          },
+          {
+            "src": "assets/notion/work-package-to-tag-view/002.jpg",
+            "caption": "Logging work completion, quantity, hours and dates for a tag"
+          },
+          {
+            "src": "assets/notion/work-package-to-tag-view/003.jpg",
+            "caption": "The Work Completed checkbox and percentage field"
+          },
+          {
+            "src": "assets/notion/work-package-to-tag-view/004.jpg",
+            "caption": "Selecting several items for bulk logging"
+          },
+          {
+            "src": "assets/notion/work-package-to-tag-view/005.jpg",
+            "caption": "Entering a quantity for bulk logging"
+          },
+          {
+            "src": "assets/notion/work-package-to-tag-view/006.jpg",
+            "caption": "Logging hours in bulk"
+          },
+          {
+            "src": "assets/notion/system-to-tag-view/001.jpg",
+            "caption": "System to Tag view with CWAs along the top and Ready and All buttons"
+          },
+          {
+            "src": "assets/notion/system-to-tag-view/002.jpg",
+            "caption": "Selecting a tag to see its work packages and statuses"
+          },
+          {
+            "src": "assets/notion/worklogs-in-scheduled-view/001.jpg",
+            "caption": "Scheduled view listing the project tree in order"
+          },
+          {
+            "src": "assets/notion/worklogs-in-scheduled-view/002.jpg",
+            "caption": "Filters and column options in the scheduled view"
+          },
+          {
+            "src": "assets/notion/worklogs-in-scheduled-view/003.jpg",
+            "caption": "Logging work on Ready and In Progress entries"
+          },
+          {
+            "src": "assets/notion/worklogs-in-scheduled-view/004.jpg",
+            "caption": "Logging progress as a percentage with a radio button or slider"
+          },
+          {
+            "src": "assets/notion/worklogs-in-scheduled-view/005.jpg",
+            "caption": "Selecting entries and using Log Work for bulk logging"
           }
         ]
       },
@@ -16866,7 +16990,24 @@ const MODULES = [
               "Use the status tabs — <strong>Not Ready, Ready to Approve, Approved, Reject, To be approved, All</strong> — to find what needs a decision, filtering by Super Location, Folder, or Locations Type if needed.",
               "Open an item to approve or reject it."
             ],
-            "note": "This screen and its Approve/Reject actions are only visible to users with approval permissions."
+            "note": "This screen and its Approve/Reject actions are only visible to users with approval permissions.",
+            "images": [
+              {
+                "src": "assets/notion/approve-quality-logs/001.jpg",
+                "caption": "Approve Quality Logs, opening on the To Be Approved tab",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/approve-quality-logs/002.jpg",
+                "caption": "The All view, with search and filters on the top bar",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/approve-quality-logs/003.jpg",
+                "caption": "Opening a location or tag to see the work packages awaiting approval",
+                "step": 3
+              }
+            ]
           },
           {
             "title": "Track a punch list item to closure",
@@ -16875,6 +17016,13 @@ const MODULES = [
               "Assign a due date and owner, and use Chat to coordinate the fix.",
               "Click <strong>Rectify</strong> once the defect has been physically corrected, then <strong>QC_Verify</strong> to verify and close it.",
               "Use filters and <strong>Download Excel</strong> to report on open punch items."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/punch-lists/001.jpg",
+                "caption": "Punch list items moving from Open to Rectify to QC_Verify",
+                "step": 1
+              }
             ]
           },
           {
@@ -16883,7 +17031,33 @@ const MODULES = [
               "Open the <strong>Submitted Quality Logs</strong> card on the plant's Quality tab.",
               "Filter by Quality Level 1 or Level 2 and by user via the dropdowns, and by date range via Filters or the calendar.",
               "Use <strong>Download Excel</strong> to export the filtered or full set of logs."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/submitted-quality-logs/001.jpg",
+                "caption": "Submitted Quality Logs, newest first",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/submitted-quality-logs/002.jpg",
+                "caption": "Switching between Quality Level 1 and Level 2 logs",
+                "step": 2
+              }
             ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/quality-workflow-issues/001.jpg",
+            "caption": "Quality Workflow Issues: search by ID, open and closed status"
+          },
+          {
+            "src": "assets/notion/quality-workflow-issues/002.jpg",
+            "caption": "Download Excel and Filters for quality workflow issues"
+          },
+          {
+            "src": "assets/notion/quality-workflow-issues/003.jpg",
+            "caption": "Quality workflow issues in table and card views"
           }
         ]
       },
@@ -16908,7 +17082,50 @@ const MODULES = [
               "Select the <strong>Project Forms</strong> tab on the second-level tab bar.",
               "Choose the custom form type you need and complete it."
             ],
-            "note": "If the form you expect is missing, check Project Setup → Forms: the form type must exist in a category, and Assign Users must grant you rights on it for this work package."
+            "note": "If the form you expect is missing, check Project Setup → Forms: the form type must exist in a category, and Assign Users must grant you rights on it for this work package.",
+            "images": [
+              {
+                "src": "assets/notion/project-forms/001.jpg",
+                "caption": "The Project Forms tab listing every configured project form",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/project-forms/002.jpg",
+                "caption": "The form list with its Create Form action",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/project-forms/003.jpg",
+                "caption": "A form with Save As Draft and Submit options",
+                "step": 3
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/project-forms/004.jpg",
+            "caption": "Submitted forms are locked; the Filters button narrows the list"
+          },
+          {
+            "src": "assets/notion/project-forms/005.jpg",
+            "caption": "Filters on the project forms list"
+          },
+          {
+            "src": "assets/notion/project-forms/006.jpg",
+            "caption": "Form cards showing status, with a Chat button on each log"
+          },
+          {
+            "src": "assets/notion/project-forms/007.jpg",
+            "caption": "Compose Mail and See All Email Threads on a form"
+          },
+          {
+            "src": "assets/notion/project-forms/008.jpg",
+            "caption": "A log with an issue mark after an issue is raised on the form"
+          },
+          {
+            "src": "assets/notion/project-forms-2/003.jpg",
+            "caption": "A draft log tagged DRAFT, and Approve and Reject buttons on a submitted log"
           }
         ]
       },
@@ -16982,7 +17199,19 @@ const MODULES = [
               "Open a form shown in <strong>blue</strong> — Ready and due per its scheduled date and time, grouped by category.",
               "Fill in the form, then click <strong>Save As Draft</strong> or <strong>Submit</strong>/<strong>Submit for Approval</strong>."
             ],
-            "note": "Grey forms are not yet enabled; yellow forms are In Progress, either awaiting approval or carrying an open issue."
+            "note": "Grey forms are not yet enabled; yellow forms are In Progress, either awaiting approval or carrying an open issue.",
+            "images": [
+              {
+                "src": "assets/notion/safety-calendar/001.jpg",
+                "caption": "The Safety Calendar showing Ready forms in blue, grouped by category",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/safety-calendar/002.jpg",
+                "caption": "A safety form with Save As Draft and Submit options",
+                "step": 3
+              }
+            ]
           },
           {
             "title": "Fill out an ad-hoc safety form",
@@ -16991,7 +17220,29 @@ const MODULES = [
               "Expand a category in the left menu and click <strong>Create Form</strong>.",
               "Fill it in, then click <strong>Save As Draft</strong> or <strong>Submit</strong>/<strong>Submit for Approval</strong>."
             ],
-            "note": "Each submitted card supports Chat (images, text, and video up to 5MB) plus Follow Up Actions, History, Download, Share, Print, Compose Mail, and Email Threads. A checkpoint answered \"No\" can automatically raise a Daily Safety Issue."
+            "note": "Each submitted card supports Chat (images, text, and video up to 5MB) plus Follow Up Actions, History, Download, Share, Print, Compose Mail, and Email Threads. A checkpoint answered \"No\" can automatically raise a Daily Safety Issue.",
+            "images": [
+              {
+                "src": "assets/notion/safety-forms/001.jpg",
+                "caption": "Safety form categories in the left menu",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/safety-forms/002.jpg",
+                "caption": "Create Form opening the selected safety form",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/safety-forms/003.jpg",
+                "caption": "Save As Draft marks the card as Draft",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/safety-forms/004.jpg",
+                "caption": "Submit locks the form against edits",
+                "step": 3
+              }
+            ]
           },
           {
             "title": "Work through daily safety issues",
@@ -17000,6 +17251,18 @@ const MODULES = [
               "Assign a due date and owner, and use Chat to coordinate the response.",
               "Click <strong>Rectify</strong> to close a DSI once it has been resolved.",
               "Use filters and <strong>Download Excel</strong> to report on outstanding issues."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/daily-safety-issues/001.jpg",
+                "caption": "Daily Safety Issues: search by ID or status",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/daily-safety-issues/002.jpg",
+                "caption": "Filters and the table and card views for daily safety issues",
+                "step": 4
+              }
             ]
           },
           {
@@ -17009,7 +17272,45 @@ const MODULES = [
               "Filter by user or by date range across both scheduled and unscheduled forms.",
               "Use <strong>Download Excel</strong> to export for an audit or client compliance pack.",
               "Use <strong>Approve Safety</strong> separately to clear anything still awaiting sign-off."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/completed-safety-forms/001.jpg",
+                "caption": "Completed Safety: every submitted safety log, newest first",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/completed-safety-forms/002.jpg",
+                "caption": "The Users drop-down for one person's safety logs",
+                "step": 2
+              }
             ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/safety-calendar/003.jpg",
+            "caption": "Compose Mail and See All Email Threads on a safety form"
+          },
+          {
+            "src": "assets/notion/safety-calendar/004.jpg",
+            "caption": "Raising an issue from a safety form, and the form chat"
+          },
+          {
+            "src": "assets/notion/safety-forms/005.jpg",
+            "caption": "Searching safety logs by ID or form creator"
+          },
+          {
+            "src": "assets/notion/safety-observations/001.jpg",
+            "caption": "Safety Observations: search by ID or status"
+          },
+          {
+            "src": "assets/notion/safety-observations/002.jpg",
+            "caption": "Assigning a due date and owner, and the Follow Up Actions button"
+          },
+          {
+            "src": "assets/notion/safety-observations/003.jpg",
+            "caption": "Filters and the table and card views for safety observations"
           }
         ]
       },
@@ -17031,7 +17332,24 @@ const MODULES = [
               "Assign a due date and owner, and use Chat to coordinate the resolution with the design team.",
               "Toggle between table and card view as preferred, and use <strong>Download Excel</strong> to export the list."
             ],
-            "note": "The underlying drawings, registers, packages, and approval workflows are managed in Project Setup → Drawings, not here."
+            "note": "The underlying drawings, registers, packages, and approval workflows are managed in Project Setup → Drawings, not here.",
+            "images": [
+              {
+                "src": "assets/notion/drawing-workflow-issues/001.jpg",
+                "caption": "Drawing workflow issues shown as cards",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/drawing-workflow-issues/002.jpg",
+                "caption": "Download Excel and Filters for drawing workflow issues",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/drawing-workflow-issues/003.jpg",
+                "caption": "Drawing workflow issues in table and card views",
+                "step": 4
+              }
+            ]
           }
         ]
       },
