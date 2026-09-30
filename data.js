@@ -3701,125 +3701,337 @@ const QA_COMMUNICATION = [
 
 const QA_MYDESK = [
   {
-    "action": "view",
-    "object": "my desk dashboard",
-    "scope": "project",
-    "section": "My Desk Dashboard",
-    "question": "What shows up on My Desk when I open a project?",
-    "answer": "My Desk is the personalized landing screen for a project, reachable at <strong>Desk → Actions</strong>. It greets you by name with the current date, then shows a horizontally scrollable <strong>Project Progress</strong> row of cards (one per top-level work package or plant), followed by collapsible sections for <strong>My Actions</strong>, <strong>Pending Actions</strong>, <strong>Recent Work Logs</strong>, <strong>Recent Punch List Items</strong>, <strong>Recent Quality Logs</strong>, <strong>Recent Daily Safety Issues</strong>, and <strong>Recent Safety Logs</strong> — all scoped to items relevant to you.",
-    "tags": [
-      "my desk",
-      "dashboard",
-      "project home",
-      "landing page"
-    ]
+    action: "explain",
+    object: "my desk",
+    scope: "module",
+    section: "My Desk",
+    question: "What is My Desk and what does it show?",
+    answer: "My Desk is the project landing page at **Desk → Actions**. It greets you by name and shows **Project Progress** cards, a plant selector, then **My Actions**, **Pending Actions**, **Recent Work Logs**, **Recent Punch List Items**, **Recent Quality Logs**, **Recent Daily Safety Issues** and **Recent Safety Logs**. All of it is read-only and pulled from Field Works.",
+    tags: ["my desk","desk","dashboard","project home","landing page","what does my desk show"]
   },
   {
-    "action": "view",
-    "object": "project progress cards",
-    "scope": "project",
-    "section": "My Desk Dashboard",
-    "question": "How do I check overall progress for a specific plant or work package?",
-    "answer": "In the <strong>Project Progress</strong> row on My Desk, each card represents a top-level work package or plant (for example Piperack, Mainline Track Works, or Compressor House) with its own progress bar and percentage. Use the \"ALL\"/plant-filter dropdown to narrow the row to one plant, and check the refresh control and last-updated indicator to confirm you're looking at current numbers.",
-    "tags": [
-      "project progress",
-      "plant filter",
-      "progress bar",
-      "work package progress"
-    ]
+    action: "get",
+    object: "my desk data source",
+    scope: "module",
+    section: "My Desk",
+    question: "Where does the data on My Desk come from?",
+    answer: "From **Field Works**. Plants come from **Field Works → Tree Version** (built in **Project Setup → Works**); Recent Work Logs from **Progress → Submitted Work Logs**; Recent Punch List Items from **Quality → Punch Lists**; Recent Quality Logs from **Quality → Submitted Quality Logs**; Recent Daily Safety Issues from **Safety → Daily Safety Issues**; Recent Safety Logs from **Safety → Completed Safety**. My Actions and Pending Actions collect open issues, approvals and forms from the same cards.",
+    tags: ["my desk data source","where does my desk data come from","my desk lineage","desk data comes from","source of my desk"]
   },
   {
-    "action": "view",
-    "object": "my actions",
-    "scope": "project",
-    "section": "My Desk Dashboard",
-    "question": "Where do I see action items assigned specifically to me?",
-    "answer": "The <strong>My Actions</strong> accordion on My Desk (marked with a calendar icon) lists action items assigned to your user account across the project. Click the section header to expand or collapse it; the count shown next to the heading tells you how many are currently open.",
-    "tags": [
-      "my actions",
-      "assigned actions",
-      "action items"
-    ]
+    action: "explain",
+    object: "plant selector",
+    scope: "module",
+    section: "My Desk",
+    question: "What does the plant dropdown on My Desk do?",
+    answer: "It scopes everything under it: **My Actions**, **Pending Actions** and the five Recent panels show only the selected plant. The options are the project's **Tree Versions** from **Field Works** (13 on Arena Steel Plant - Phase 1). The plant you pick also carries into Field Works screens.",
+    tags: ["plant selector","plant dropdown my desk","select plant desk","desk plant filter","tree version dropdown"]
   },
   {
-    "action": "view",
-    "object": "pending actions",
-    "scope": "project",
-    "section": "My Desk Dashboard",
-    "question": "What's the difference between My Actions and Pending Actions on My Desk?",
-    "answer": "<strong>My Actions</strong> is scoped to items assigned to you personally, while <strong>Pending Actions</strong> is a broader collapsible accordion of outstanding actions relevant to your role on the project that haven't been closed out yet. Both show a count in their header and expand independently.",
-    "tags": [
-      "pending actions",
-      "my actions",
-      "open items"
-    ]
+    action: "troubleshoot",
+    object: "my desk empty",
+    scope: "module",
+    section: "My Desk",
+    question: "Why is My Desk empty or showing No Data?",
+    answer: "Usually the selected plant has nothing submitted. Pellet Plant showed work logs while **Coke Oven** showed **No Data** in every panel. Choose another plant in the plant selector. If the plant has activity but you see nothing, the work logs may not be submitted yet, or you may not have permission (check **Users and Permissions**).",
+    tags: ["my desk empty","no data my desk","desk shows nothing","my desk blank","my desk not showing data"]
   },
   {
-    "action": "view",
-    "object": "recent work logs",
-    "scope": "project",
-    "section": "My Desk Dashboard",
-    "question": "Can I see the latest work logs without leaving My Desk?",
-    "answer": "Yes. The <strong>Recent Work Logs</strong> accordion on My Desk surfaces the latest progress entries recorded on the project so you don't have to navigate into Field Works → Progress → Work Logs just to get a quick pulse of recent activity.",
-    "tags": [
-      "recent work logs",
-      "work logs",
-      "progress snapshot"
-    ]
+    action: "explain",
+    object: "my desk read only",
+    scope: "module",
+    section: "My Desk",
+    question: "Can I create or edit things on My Desk?",
+    answer: "No. My Desk only summarizes records. Open the item (or **See All >**) to go to the Field Works screen where you can act on it.",
+    tags: ["edit my desk","create on my desk","my desk read only","act on my desk items"]
   },
   {
-    "action": "view",
-    "object": "recent punch list and quality items",
-    "scope": "project",
-    "section": "My Desk Dashboard",
-    "question": "Does My Desk show recent punch list and quality activity too?",
-    "answer": "Yes. Below the work log summary, My Desk includes collapsible accordions for <strong>Recent Punch List Items</strong> and <strong>Recent Quality Logs</strong>, giving a PM or field user a fast read on open punch items and recent quality inspection activity without opening those modules directly.",
-    "tags": [
-      "punch list",
-      "quality logs",
-      "recent activity"
-    ]
+    action: "guide",
+    object: "open my desk",
+    scope: "module",
+    section: "My Desk",
+    question: "How do I open My Desk and pick a plant?",
+    answer: "Click **My Desk** in the project menu (it opens **Desk → Actions**), then choose the plant in the selector under the Project Progress cards. The accordions below reload for that plant.",
+    tags: ["open my desk","how to use my desk","pick plant my desk","my desk steps"]
   },
   {
-    "action": "view",
-    "object": "safety activity summaries",
-    "scope": "project",
-    "section": "My Desk Dashboard",
-    "question": "Where does My Desk show recent safety activity?",
-    "answer": "Two dedicated accordions cover safety: <strong>Recent Daily Safety Issues</strong> and <strong>Recent Safety Logs</strong>, both at the bottom of My Desk. They give a quick view of recently logged safety issues and safety log entries so safety trends are visible from the same screen a user lands on every day, not buried behind a separate module.",
-    "tags": [
-      "safety",
-      "daily safety issues",
-      "safety logs",
-      "recent activity"
-    ]
+    action: "explain",
+    object: "project progress cards",
+    scope: "module",
+    section: "Project Progress",
+    question: "What are the Project Progress cards?",
+    answer: "One card per Entity (Piperack, Mixing Building, Main Shop and so on) with the plant name underneath, a **Progress** bar and a percentage. Above them are **Total Work Completed**, **Last Updated At**, a **refresh** button and an **ALL** plant filter. On Arena Steel Plant - Phase 1 there are 45 cards, all at 0%.",
+    tags: ["project progress","progress cards","desk progress","total work completed","entity progress cards"]
   },
   {
-    "action": "view",
-    "object": "last-updated indicator",
-    "scope": "project",
-    "section": "My Desk Dashboard",
-    "question": "How do I know if the progress numbers on My Desk are current?",
-    "answer": "The Project Progress row includes a refresh control alongside a last-updated indicator. If numbers look stale, use refresh to pull the latest figures rather than assuming the percentages update automatically in real time.",
-    "tags": [
-      "refresh",
-      "last updated",
-      "progress accuracy"
-    ]
+    action: "get",
+    object: "project progress source",
+    scope: "module",
+    section: "Project Progress",
+    question: "Where do the Project Progress cards come from?",
+    answer: "Each card is an Entity of a plant (Tree Version): the same Entities listed on **Field Works → Tree Version**, built in **Project Setup → Works**. A plant with no Entities (IBMD and RMHS on the test project) has no card. Weights for the overall percentage are set in **Project Setup → Works → Assign Percentage**.",
+    tags: ["progress cards source","where do progress cards come from","entities on my desk","progress plant list","project progress lineage"]
   },
   {
-    "action": "configure",
-    "object": "my desk dashboards",
-    "scope": "project",
-    "section": "My Desk Dashboard",
-    "question": "Can what appears on My Desk be configured for a project?",
-    "answer": "Yes, on the settings side rather than on the screen itself. <strong>Project Settings</strong> carries a <strong>My Desk</strong> category for configuring the personalized landing view, and a separate <strong>My Desk Dashboards</strong> category for configuring which dashboard widgets or views appear there. Beyond that, what an individual sees is shaped by their permissions and plant/work-package assignments, so two users on the same project can see legitimately different desks.",
-    "tags": [
-      "configure my desk",
-      "my desk dashboards",
-      "project settings",
-      "landing view"
-    ]
+    action: "get",
+    object: "progress filter",
+    scope: "module",
+    section: "Project Progress",
+    question: "How do I check progress for a specific plant?",
+    answer: "Open the **ALL** dropdown above the cards and choose the plant; only that plant's Entities stay. Use **refresh** if **Last Updated At** looks old.",
+    tags: ["progress by plant","filter progress plant","plant progress my desk","check progress one plant","all plants dropdown"]
+  },
+  {
+    action: "troubleshoot",
+    object: "progress 0 percent",
+    scope: "module",
+    section: "Project Progress",
+    question: "Why does every Project Progress card show 0%?",
+    answer: "Progress only moves when work is logged against Entities and weighted in **Project Setup → Works**. On the test project every card reads 0% (the submitted work logs there cover percentages of single activities, not yet rolled into the Entity figure, and this was not investigated further). Check **Assign Percentage** in Project Setup → Works and the work logs in Field Works.",
+    tags: ["progress 0","progress zero percent","progress not updating","why 0 percent","project progress stuck at zero"]
+  },
+  {
+    action: "troubleshoot",
+    object: "plant missing card",
+    scope: "module",
+    section: "Project Progress",
+    question: "Why is a plant or Entity missing from the Project Progress row?",
+    answer: "Cards are built from the Entities of each Tree Version. A plant with no Entities (IBMD and RMHS on the test project) has no card. Add Entities in **Project Setup → Works**. If the plant itself is missing, check that the Tree Version exists in **Field Works → Tree Version**.",
+    tags: ["missing plant card","plant not showing my desk","entity not on my desk","why is my plant missing"]
+  },
+  {
+    action: "explain",
+    object: "refresh progress",
+    scope: "module",
+    section: "Project Progress",
+    question: "How do I know the progress numbers on My Desk are current?",
+    answer: "Check **Last Updated At** next to the headline percentage and click the **refresh** button (tooltip **Refresh**) to reload the figures.",
+    tags: ["refresh progress","last updated","progress current","update progress my desk"]
+  },
+  {
+    action: "explain",
+    object: "my actions",
+    scope: "module",
+    section: "My Actions",
+    question: "What is My Actions on My Desk?",
+    answer: "**My Actions** lists what is waiting on you in the selected plant, in three groups: **Issues** (11 rows, for example Punch List, Restraints, Form Issues, Safety Issue), **Approvals** (Quality Logs, Safety Logs, RFIs, Productivity logs, Quick Apps) and **Forms** (RFI, Meeting minutes, Quick Apps). Each row has a count and an arrow to the source list.",
+    tags: ["my actions","actions on desk","assigned to me","my actions issues approvals forms","what is my actions"]
+  },
+  {
+    action: "list",
+    object: "my actions issues",
+    scope: "module",
+    section: "My Actions",
+    question: "What issues appear under My Actions?",
+    answer: "Eleven rows: **Punch List**, **Restraints**, **Form Issues**, **Customer Issues**, **Drawing Workflow Issues**, **Form Workflow Issues**, **Safety Issue**, **Safety Observations**, **Safety Workflow Issues**, **Quick Apps Form Issues** and **Quick Apps Workflow Issues**. Each opens its list in Field Works.",
+    tags: ["my actions issues","issues on my desk","punch list restraints issues my actions","issue types my actions"]
+  },
+  {
+    action: "list",
+    object: "my actions approvals",
+    scope: "module",
+    section: "My Actions",
+    question: "What approvals appear under My Actions?",
+    answer: "Five rows: **Quality Logs**, **Safety Logs**, **RFIs**, **Productivity logs** and **Quick Apps**. They count records sent for approval and waiting on you, and link to the matching approval screen in Field Works (for example **Approve Quality Logs**, **Approve Safety**).",
+    tags: ["my actions approvals","approvals on my desk","pending approval my desk","quality logs approval desk","approve from my desk"]
+  },
+  {
+    action: "list",
+    object: "my actions forms",
+    scope: "module",
+    section: "My Actions",
+    question: "What forms appear under My Actions?",
+    answer: "Three rows: **RFI**, **Meeting minutes** and **Quick Apps**: forms assigned to you in the selected plant.",
+    tags: ["my actions forms","forms on my desk","rfi meeting minutes desk","forms assigned to me"]
+  },
+  {
+    action: "get",
+    object: "my actions source",
+    scope: "module",
+    section: "My Actions",
+    question: "Where do My Actions items come from?",
+    answer: "They come from Field Works: Punch List from **Quality → Punch Lists**, Restraints from **Progress → Restraints**, Form Issues from **Progress → Issues**, the three safety rows from **Safety → Daily Safety Issues**, approvals from the approval screens, forms from RFI and Meeting Minutes. Who is assigned comes from **Project Setup → Forms → Assign Users** and the approval workflows built in **Project Setup**.",
+    tags: ["my actions source","where do actions come from","my actions lineage","who gets an action","action assignment source"]
+  },
+  {
+    action: "troubleshoot",
+    object: "my actions empty",
+    scope: "module",
+    section: "My Actions",
+    question: "Why is nothing showing in My Actions (count 0)?",
+    answer: "Nothing is assigned to you in the selected plant. Change the plant selector, and check that you are assigned in the approval workflow or form permissions in **Project Setup** (**Forms → Assign Users / Approval Workflow**). On the test project every count was 0 for System Admin.",
+    tags: ["my actions zero","my actions empty","no actions assigned","count 0 my actions","why no actions on desk"]
+  },
+  {
+    action: "explain",
+    object: "schedule actions",
+    scope: "module",
+    section: "My Actions",
+    question: "What does the calendar icon on My Actions do?",
+    answer: "The calendar icon (tooltip **Schedule Actions**) opens the **Schedule Actions** screen (**Desk → schedule-actions**) with **Issues** and **Forms** and a **Submit** button. On the test project the screen stayed on \"Loading data...\" after an error pop-up, so its behavior is not confirmed.",
+    tags: ["schedule actions","calendar icon my actions","schedule action desk","schedule actions screen"]
+  },
+  {
+    action: "get",
+    object: "respond to actions",
+    scope: "module",
+    section: "My Actions",
+    question: "How do I work through my actions?",
+    answer: "Pick the plant, expand **My Actions**, open the group and click a row with a non-zero count. You land in the source list in Field Works, where you fix the issue, approve or reject the record, or complete the form.",
+    tags: ["work through actions","respond to actions","clear my actions","handle issues desk"]
+  },
+  {
+    action: "explain",
+    object: "pending actions",
+    scope: "module",
+    section: "Pending Actions",
+    question: "What is Pending Actions on My Desk?",
+    answer: "**Pending Actions** shows what is still open for a chosen user or role, not only for you. It has a **Roles / Users** switch with a dropdown of people, then the same **Issues**, **Approvals** and **Forms** groups as My Actions, plus **Submittals** and **Change Orders**.",
+    tags: ["pending actions","pending on desk","pending actions users roles","what is pending actions"]
+  },
+  {
+    action: "explain",
+    object: "my vs pending actions",
+    scope: "module",
+    section: "Pending Actions",
+    question: "What is the difference between My Actions and Pending Actions?",
+    answer: "**My Actions** is for the signed-in user. **Pending Actions** lets you pick another user (or role) and also includes **Submittals** and **Change Orders** under Approvals and Forms. Both follow the plant selector.",
+    tags: ["my actions vs pending actions","difference my actions pending actions","pending vs my actions"]
+  },
+  {
+    action: "get",
+    object: "pending actions users list",
+    scope: "module",
+    section: "Pending Actions",
+    question: "Where does the Pending Actions user list come from?",
+    answer: "The dropdown lists the project's active system users: the same people as **Project Setup → People → Roster → System User** (inactive users and repeated names left out). On Arena Steel Plant - Phase 1 that is 32 names against 35 roster cards. Roster people come from **Global Data → Users & Permissions → Global Rosters**.",
+    tags: ["pending actions users list","who is in pending actions dropdown","desk user dropdown source","pending actions users source"]
+  },
+  {
+    action: "troubleshoot",
+    object: "pending actions user missing",
+    scope: "module",
+    section: "Pending Actions",
+    question: "Why is a person missing from the Pending Actions dropdown?",
+    answer: "They are not an active system user on this project. Check **Project Setup → People → Roster → System User** (add them with **Add**, and make sure they are **Active**), and that they exist in **Global Data → Users & Permissions**.",
+    tags: ["user missing pending actions","person not in pending dropdown","add user to desk","desk user not listed"]
+  },
+  {
+    action: "get",
+    object: "see teammate pending",
+    scope: "module",
+    section: "Pending Actions",
+    question: "How do I see what is pending for a teammate?",
+    answer: "Open **Pending Actions**, pick the person in the dropdown (or switch to **Roles**), then expand **Issues**, **Approvals** and **Forms** to see what is open for them in the selected plant.",
+    tags: ["teammate pending actions","see someone elses actions","chase pending approvals","pending for user"]
+  },
+  {
+    action: "explain",
+    object: "recent work logs",
+    scope: "module",
+    section: "Recent Activity Panels",
+    question: "What does Recent Work Logs show on My Desk?",
+    answer: "The latest submitted work logs for the selected plant, grouped by date, each line reading \"<user> has logged the work for <Entity | Super Location | Location | Work Package | Activity> | Percentage (from -> to) at <time> | Latitude | Longitude | Source\". **See All >** opens **Field Works → Progress → Submitted Work Logs**.",
+    tags: ["recent work logs","latest work logs desk","work logs on my desk","see all work logs","submitted work logs desk"]
+  },
+  {
+    action: "get",
+    object: "recent work logs source",
+    scope: "module",
+    section: "Recent Activity Panels",
+    question: "Where do Recent Work Logs come from?",
+    answer: "From **Field Works → Progress → Submitted Work Logs** for the same plant. Verified on the test project: the four items on Pellet Plant were the top rows of that list; Coke Oven showed No Data in both places. How logs look depends on **Project Settings → Work Logs Templates**.",
+    tags: ["recent work logs source","where recent work logs come from","recent work logs lineage","work logs desk source"]
+  },
+  {
+    action: "explain",
+    object: "recent punch list items",
+    scope: "module",
+    section: "Recent Activity Panels",
+    question: "What are Recent Punch List Items?",
+    answer: "The latest punch list items (issues raised because of quality failures) for the selected plant, from **Field Works → Quality → Punch Lists**. It shows No Data when that list has no items.",
+    tags: ["recent punch list items","punch list on desk","punch list my desk","recent punch list"]
+  },
+  {
+    action: "explain",
+    object: "recent quality logs",
+    scope: "module",
+    section: "Recent Activity Panels",
+    question: "What are Recent Quality Logs?",
+    answer: "The latest submitted quality inspections for the selected plant, from **Field Works → Quality → Submitted Quality Logs**.",
+    tags: ["recent quality logs","quality logs desk","quality on my desk","latest quality logs"]
+  },
+  {
+    action: "explain",
+    object: "recent daily safety issues",
+    scope: "module",
+    section: "Recent Activity Panels",
+    question: "What are Recent Daily Safety Issues?",
+    answer: "The latest safety issues raised in the selected plant, from **Field Works → Safety → Daily Safety Issues** (issues raised due to safety breaches or failures).",
+    tags: ["recent daily safety issues","daily safety issues desk","safety issues my desk","safety breaches desk"]
+  },
+  {
+    action: "explain",
+    object: "recent safety logs",
+    scope: "module",
+    section: "Recent Activity Panels",
+    question: "What are Recent Safety Logs?",
+    answer: "The latest completed safety forms for the selected plant, from **Field Works → Safety → Completed Safety**.",
+    tags: ["recent safety logs","safety logs desk","completed safety desk","safety on my desk"]
+  },
+  {
+    action: "troubleshoot",
+    object: "recent panel empty",
+    scope: "module",
+    section: "Recent Activity Panels",
+    question: "Why is a Recent panel empty on My Desk?",
+    answer: "Nothing has been submitted for the selected plant, or you are on a different plant than the one with activity. Pick another plant in the plant selector. Only submitted items show, so drafts and unsubmitted logs do not appear.",
+    tags: ["recent panel empty","recent work logs empty","no recent logs","recent punch list empty","recent quality logs no data"]
+  },
+  {
+    action: "configure",
+    object: "my desk project settings",
+    scope: "module",
+    section: "Project Settings That Control My Desk",
+    question: "Can what appears on My Desk be configured?",
+    answer: "Yes, two Project Settings pages. **My Desk** sets the order of the five Recent panels (**Recent Logs List**) and the dashboard graph order (**Dashboard List**). **My Desk Dashboards** enables or disables extra dashboards (**My Dashboard**, **Google Maps**, **Quality Dashboard**, **Delay Analysis Dashboard**, **Defect Analysis Dashboard**, **Strip Charts**). Actions and Pending Actions have no setting.",
+    tags: ["configure my desk","my desk settings","project settings my desk","my desk dashboards","change my desk order"]
+  },
+  {
+    action: "configure",
+    object: "recent logs order",
+    scope: "module",
+    section: "Project Settings That Control My Desk",
+    question: "How do I change the order of the Recent panels on My Desk?",
+    answer: "Open **Project Settings → My Desk**, drag rows in **Recent Logs List** (Recent Work Logs, Recent Punch Lists Items, Recent Quality Logs, Recent Daily Safety Issues, Recent Safety Logs) and click **Save Changes**.",
+    tags: ["recent logs list","order recent panels","reorder my desk","my desk order setting"]
+  },
+  {
+    action: "configure",
+    object: "my desk dashboards toggle",
+    scope: "module",
+    section: "Project Settings That Control My Desk",
+    question: "How do I turn on more dashboards on My Desk?",
+    answer: "In **Project Settings → My Desk Dashboards** tick the dashboards to enable: **My Dashboard**, **Google Maps**, **Quality Dashboard**, **Delay Analysis Dashboard**, **Defect Analysis Dashboard** or **Strip Charts**. On Arena Steel Plant - Phase 1 all six are off, so the desk shows only the Actions tab. The exact result of ticking one was not tested.",
+    tags: ["enable dashboards my desk","my desk dashboards settings","google maps dashboard desk","strip charts dashboard","enable disable dashboards"]
+  },
+  {
+    action: "explain",
+    object: "my desk dashboard list",
+    scope: "module",
+    section: "Project Settings That Control My Desk",
+    question: "What is the Dashboard List in My Desk settings?",
+    answer: "A drag-to-reorder list of graphs: **Monitor Daily Progress**, **Monitor Forms Status**, **Monitor Forms Raised Daily**, **Monitor Issues Status** and **Monitor Issues Raised Daily**. The page says the order will be seen on the dashboard; these graphs do not appear on the Actions desk on the test project.",
+    tags: ["dashboard list my desk","monitor daily progress","monitor issues status","monitor forms status","desk graphs order"]
+  },
+  {
+    action: "explain",
+    object: "who sees my desk",
+    scope: "module",
+    section: "Project Settings That Control My Desk",
+    question: "Who can see My Desk and what do they see?",
+    answer: "Anyone with access to the project. They see the selected plant's data and only what **Users and Permissions** lets them open. Two people on the same project can see different actions because assignments differ.",
+    tags: ["who sees my desk","my desk permissions","my desk visibility","my desk access"]
   }
 ];
 
@@ -18738,77 +18950,228 @@ const MODULES = [
     "qaItems": QA_MYDESK,
     "narrative": [
       {
-        "heading": "Admin Role",
-        "intro": "<p>My Desk doesn't carry its own separate admin configuration screen — what a given user sees here is a reflection of the same permission model that governs the rest of Arena, set by a <strong>Super Admin</strong> or <strong>Module Admin</strong> through user groups and permission rights. There's no dedicated \"My Desk settings\" panel to configure; instead, the accordions and actions that appear are naturally scoped to what that user is already allowed to see and act on elsewhere in the project (their assigned actions, the plants they have visibility into, and so on).</p><p>Practically, an admin's job with respect to My Desk is upstream of the screen itself: making sure a user's permissions, role, and plant/work-package assignments are set up correctly so that when they land here, the dashboard actually reflects meaningful, relevant information rather than an empty or overly broad view.</p>",
+        "heading": "My Desk",
+        "intro": "<p>My Desk is the first screen a user sees when opening a project. It shows how each plant is progressing, what is waiting on you, and the latest work, quality and safety activity. Everyone on the project uses it, from <strong>End Users</strong> to <strong>PMs</strong>.</p><p>Open it from the project menu: <strong>My Desk</strong> (route <code>#/desk</code>). The breadcrumb reads <strong>Desk &gt; Actions</strong> and the one tab is <strong>My Actions</strong>. The page greets you by name and date (for example \"Hello System Admin!\"), then shows <strong>Project Progress</strong>, a plant selector, and the accordions <strong>My Actions</strong>, <strong>Pending Actions</strong>, <strong>Recent Work Logs</strong>, <strong>Recent Punch List Items</strong>, <strong>Recent Quality Logs</strong>, <strong>Recent Daily Safety Issues</strong> and <strong>Recent Safety Logs</strong>.</p>",
         "definitions": [
           {
-            "term": "Permission-driven visibility",
-            "definition": "My Desk has no settings panel of its own — what appears is governed by the user's groups and permissions set in Users and Permissions, plus their plant/work-package assignments."
+            "term": "My Desk does not store data",
+            "definition": "Every panel is a read-only summary of records that live in **Field Works** (and the setup in **Project Setup**). You cannot add or edit anything on My Desk itself; click through to the source screen to act."
           },
           {
-            "term": "Project Settings → My Desk",
-            "definition": "The Project Settings category used to configure the personalized My Desk landing view for the project."
+            "term": "Plant selector",
+            "definition": "The dropdown under the Project Progress cards (it opens on the first plant, for example **Pellet Plant (1MTPA)**). It scopes everything below it: My Actions, Pending Actions and all five Recent panels show only that plant. Its options are the **Tree Versions** you see in **Field Works**: on Arena Steel Plant - Phase 1 they are 13 plants in the same order (Pellet Plant (1MTPA), Basic Oxygen Furnace (0.8 MTPA), Blast Furnace (0.6 MTPA), Coke Oven, Cold Rolling Mill, External Works, Hot Strip Mill, IBMD, Lime Dolomite Plant, Oxygen Plant, RMHS, Sinter Plant, Slab Caster)."
           },
           {
-            "term": "Project Settings → My Desk Dashboards",
-            "definition": "The separate Project Settings category controlling which dashboard widgets or views appear on the My Desk screen."
-          }
-        ],
-        "procedures": []
-      },
-      {
-        "heading": "My Desk Dashboard",
-        "intro": "<p>Every construction project generates a flood of activity across dozens of modules — actions, work logs, punch items, quality inspections, safety issues — and a user who has to open each module separately just to get their bearings for the day loses time before they've even started working. My Desk solves that by being the first screen a user lands on when opening a project: a personalized home page, reachable at <strong>Desk → Actions</strong>, that greets them by name with the current date and then surfaces the handful of things most likely to need their attention right now.</p><p>The screen is built as a stack of purpose-built sections, most of them collapsible accordions so a user can collapse what they don't need today and expand what they do. Read top to bottom, they move from a high-level view of how the project's major work areas are progressing down to specific, actionable items and recent activity across progress, quality, and safety — giving an <strong>End User</strong>, <strong>PM</strong>, or <strong>Module Admin</strong> alike a single-screen pulse check before diving into any one module in depth.</p>",
-        "definitions": [
-          {
-            "term": "Project Progress",
-            "definition": "A horizontally scrollable row of cards, one per top-level work package or plant (e.g. Piperack, Mainline Track Works, Compressor House), each showing a progress bar and percentage, with an ALL/plant filter dropdown and a refresh plus last-updated indicator."
+            "term": "Where this data comes from",
+            "definition": "Plants come from **Field Works → Tree Version** (built in **Project Setup → Works**). Progress cards are that plant's Entities. **Recent Work Logs** come from **Field Works → Progress → Submitted Work Logs**, **Recent Punch List Items** from **Quality → Punch Lists**, **Recent Quality Logs** from **Quality → Submitted Quality Logs**, **Recent Daily Safety Issues** from **Safety → Daily Safety Issues**, and **Recent Safety Logs** from **Safety → Completed Safety**. **My Actions** and **Pending Actions** collect open issues, approvals and forms from those same Field Works cards."
           },
           {
-            "term": "My Actions",
-            "definition": "A collapsible accordion, marked with a calendar icon, listing action items specifically assigned to the current user."
+            "term": "Where this data goes",
+            "definition": "Nowhere else. My Desk is an entry point: its links take you into Field Works. The figures you see on **Data Analytics** dashboards come from the same Field Works records, not from My Desk."
           },
           {
-            "term": "Pending Actions",
-            "definition": "A collapsible accordion of outstanding action items relevant to the user that remain open."
+            "term": "Plant context is shared",
+            "definition": "The plant you pick on My Desk carries into Field Works: after choosing **Coke Oven** on My Desk, **Field Works → Progress → Submitted Work Logs** opened showing **Coke Oven**. If a Field Works screen looks empty, check which plant is selected."
           },
           {
-            "term": "Recent Work Logs",
-            "definition": "A collapsible accordion summarizing the latest progress entries recorded on the project."
-          },
-          {
-            "term": "Recent Punch List Items",
-            "definition": "A collapsible accordion showing recently raised or updated punch list items."
-          },
-          {
-            "term": "Recent Quality Logs",
-            "definition": "A collapsible accordion showing recent quality inspection log activity."
-          },
-          {
-            "term": "Recent Daily Safety Issues",
-            "definition": "A collapsible accordion showing recently logged daily safety issues."
-          },
-          {
-            "term": "Recent Safety Logs",
-            "definition": "A collapsible accordion showing recent safety log entries across the project."
+            "term": "What the viewer sees",
+            "definition": "Only what the signed-in user has permission to see, in the plants of the project. Project Settings change the order of the Recent panels and whether extra dashboards appear (see **Project Settings That Control My Desk**)."
           }
         ],
         "procedures": [
           {
-            "title": "Check overall progress by plant or work package",
+            "title": "Open My Desk and choose a plant",
             "steps": [
-              "Open a project — <strong>My Desk</strong> loads automatically as the landing screen at <strong>Desk → Actions</strong>.",
-              "Scroll the <strong>Project Progress</strong> row, or use the ALL/plant-filter dropdown to focus on one plant or work package.",
-              "Check the last-updated indicator next to the refresh control, and refresh if the numbers look stale."
+              "Open the project and click **My Desk** in the project menu. The page opens at **Desk → Actions**.",
+              "Read the greeting and the **Project Progress** row to see every plant at a glance.",
+              "Choose a plant in the selector below the cards. My Actions, Pending Actions and the Recent panels reload for that plant.",
+              "Expand a panel to read it. Click an item, or **See All >** on Recent Work Logs, to open the full Field Works screen."
             ]
+          }
+        ]
+      },
+      {
+        "heading": "Project Progress",
+        "intro": "<p>The Project Progress row shows one card for each Entity in the project, so a manager can see which plant areas are moving. The <strong>PM</strong>, <strong>Super Admin</strong> and executives use it most.</p><p>It opens with <strong>Total Work Completed</strong> (for example 0%), <strong>Last Updated At</strong>, a <strong>refresh</strong> button and an <strong>ALL</strong> dropdown that filters the cards by plant.</p>",
+        "definitions": [
+          {
+            "term": "Progress card",
+            "definition": "One card per Entity of a plant. The bold title is the Entity (for example **Piperack**, **Mixing Building**, **ECR (Electrical Control Room)**, **Main Shop**, **Road & Drainage**); the line under it is the plant (for example **Pellet Plant (1MTPA)**). Each card has a **Progress** bar and a percentage. Click a card to open that area in Field Works. On Arena Steel Plant - Phase 1 there are 45 cards and every one reads 0%."
           },
           {
-            "title": "Review your assigned and pending actions",
+            "term": "ALL plant filter",
+            "definition": "Shows every plant's cards by default. Choose one plant to see only its Entities. The options are the 13 Tree Versions of the project."
+          },
+          {
+            "term": "Total Work Completed and Last Updated At",
+            "definition": "The headline percentage and the time the figures were last calculated (\"a few seconds ago\" right after opening). The **refresh** button (tooltip **Refresh**) reloads the numbers."
+          },
+          {
+            "term": "Where the cards come from",
+            "definition": "Plants and Entities are the **Tree Versions** and Entities defined in **Project Setup → Works** and shown on **Field Works → Tree Version** (for example **Pellet Plant (1MTPA)** lists Piperack, Indurating Building, Mixing Building, ECR (Electrical Control Room), Balling Building, Kiln). A plant with no Entities (on the test project **IBMD** and **RMHS**) has no card. Progress weights come from **Project Setup → Works → Assign Percentage**. The Tree Versions themselves are built from the **Construction Type** set in **Global Data** when the project was created."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Check progress for one plant",
             "steps": [
-              "On My Desk, expand the <strong>My Actions</strong> accordion to see items assigned directly to you.",
-              "Expand <strong>Pending Actions</strong> for the broader set of outstanding items relevant to your role.",
-              "Use the count shown in each accordion's header to gauge how much is outstanding before opening either list."
+              "Open **My Desk**.",
+              "Open the **ALL** dropdown above the cards and choose the plant.",
+              "Read each Entity card: name, plant, progress bar and percentage.",
+              "Click **refresh** if **Last Updated At** looks old."
             ]
+          }
+        ]
+      },
+      {
+        "heading": "My Actions",
+        "intro": "<p>My Actions is the list of things waiting for the signed-in user in the selected plant. Field users, reviewers and approvers open it each morning to see what needs a response.</p><p>The accordion header shows a total, for example <strong>My Actions (0)</strong>, and a <strong>calendar</strong> icon (tooltip <strong>Schedule Actions</strong>). Inside are three groups, each with its own count: <strong>Issues</strong>, <strong>Approvals</strong> and <strong>Forms</strong>.</p>",
+        "definitions": [
+          {
+            "term": "Issues (My Actions)",
+            "definition": "Eleven rows, each with a count and an arrow that opens the source list: **Punch List**, **Restraints**, **Form Issues**, **Customer Issues**, **Drawing Workflow Issues**, **Form Workflow Issues**, **Safety Issue**, **Safety Observations**, **Safety Workflow Issues**, **Quick Apps Form Issues** and **Quick Apps Workflow Issues**."
+          },
+          {
+            "term": "Approvals (My Actions)",
+            "definition": "Five rows: **Quality Logs**, **Safety Logs**, **RFIs**, **Productivity logs** and **Quick Apps**. These are records sent for approval that are waiting on you."
+          },
+          {
+            "term": "Forms (My Actions)",
+            "definition": "Three rows: **RFI**, **Meeting minutes** and **Quick Apps**. These are forms assigned to you to fill in or complete."
+          },
+          {
+            "term": "Where each row comes from",
+            "definition": "Punch List = **Field Works → Quality → Punch Lists** (tabs Punch List and Quality Workflow Issues). Restraints = **Progress → Restraints**. Form Issues = **Progress → Issues** (\"Issue raised for RFI, Submittals, Change Orders and Custom Forms\"). Safety Issue, Safety Observations and Safety Workflow Issues = the three tabs of **Safety → Daily Safety Issues**. Approvals rows = the matching approval screens (**Approve Quality Logs**, **Approve Safety**, **RFI**, **Productivity Logs**). Forms rows = the RFI and Meeting Minutes cards. Customer Issues and the Quick Apps rows come from the matching Field Works forms and **Quick Apps**."
+          },
+          {
+            "term": "What controls who gets an action",
+            "definition": "Approval steps come from the workflows you build in **Project Setup** (Quality, Safety, Drawings and **Forms → Approval Workflow**). Who may see a form or issue comes from **Project Setup → Forms → Assign Users** and from **Users and Permissions**. If nobody is assigned a step, nothing lands here."
+          },
+          {
+            "term": "Schedule Actions",
+            "definition": "The calendar icon opens the **Schedule Actions** screen (route <code>#/desk/schedule-actions</code>) with **Issues** and **Forms** and a **Submit** button. On the test project it showed \"Loading data...\" and an error pop-up (**Ok** closes it), so its behavior is not confirmed here."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Work through your actions",
+            "steps": [
+              "Open **My Desk** and pick the plant in the plant selector.",
+              "Expand **My Actions**. Look at the counts on **Issues**, **Approvals** and **Forms**.",
+              "Expand a group, then click the row with a non-zero count (the arrow opens the source list in Field Works).",
+              "Respond there: fix the issue, approve or reject the record, or complete the form. The count drops when it is closed."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Pending Actions",
+        "intro": "<p>Pending Actions shows what is still open for a chosen person or role, so a <strong>PM</strong> can chase late items. It sits under My Actions and has the same Issues, Approvals and Forms groups.</p><p>At the top is a <strong>Roles / Users</strong> switch and a dropdown. On the test project the switch was on <strong>Users</strong> and the dropdown listed 32 people, starting with <strong>Aadarsh G</strong>.</p>",
+        "definitions": [
+          {
+            "term": "Roles / Users switch and dropdown",
+            "definition": "Choose whose pending work to view. In **Users** mode the dropdown lists the project's active system users (same people as **Project Setup → People → Roster → System User**). The **Roles** mode was not opened, because switching is blocked for this review."
+          },
+          {
+            "term": "Users list source",
+            "definition": "The 32 names match the active **System User** cards of **Project Setup → People → Roster**: the roster has 35 cards, and the dropdown leaves out the inactive one (for example \"Mohd Zubairdfgewhr Uddindssgrf\") and repeats of the same name (the three **System Admin** cards appear once). People come into the roster from **Global Data → Users & Permissions → Global Rosters**."
+          },
+          {
+            "term": "Extra groups in Pending Actions",
+            "definition": "Compared with My Actions it adds **Submittals** and **Change Orders** under Approvals, and **Submittal** and **Change Order** under Forms. Issues has the same eleven rows."
+          },
+          {
+            "term": "My Actions versus Pending Actions",
+            "definition": "**My Actions** is for the signed-in user. **Pending Actions** lets you look at another user or role and shows more form types (Submittals and Change Orders). Both follow the plant selector."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "See what is pending for a teammate",
+            "steps": [
+              "Open **My Desk** and choose the plant.",
+              "Expand **Pending Actions**.",
+              "Pick the person in the dropdown (or switch to **Roles**).",
+              "Expand **Issues**, **Approvals** and **Forms** and open the rows with counts to see what is stuck."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Recent Activity Panels",
+        "intro": "<p>The five Recent panels give a quick read on the latest progress, quality and safety activity in the selected plant. They are for <strong>PMs</strong>, site engineers and safety officers.</p><p>Each panel reads \"No Data\" when the plant has nothing to show. They always follow the plant selector, and each mirrors a Field Works list.</p>",
+        "definitions": [
+          {
+            "term": "Recent Work Logs",
+            "definition": "The latest submitted work logs, grouped by date (\"Work Logs of 2nd April 2026\") in the form \"Ravi Ravi has logged the work for Mixing Building | Civil Substructure | Footing | EXC-1 | Excavation | Percentage - (0.000 -> 100.000) at 2:59 PM | Latitude | Longitude | Source : Bulk Log\". **See All >** opens **Field Works → Progress → Submitted Work Logs**. Verified: the four items on Pellet Plant were the top four rows of that list. Only **submitted** logs show; drafts do not."
+          },
+          {
+            "term": "Recent Punch List Items",
+            "definition": "Latest punch list items raised for the plant, from **Field Works → Quality → Punch Lists** (\"Issues raised due to quality failure\"; it shows 0 Issues Open, Rectified and Verified on the test project, matching No Data here)."
+          },
+          {
+            "term": "Recent Quality Logs",
+            "definition": "Latest submitted quality inspections from **Field Works → Quality → Submitted Quality Logs** (shown calendar-wise there; \"No Logs Present\" on Pellet Plant, matching No Data)."
+          },
+          {
+            "term": "Recent Daily Safety Issues",
+            "definition": "Latest items from **Field Works → Safety → Daily Safety Issues** (\"Issues raised due to Safeties breaches/failures\"; 0 Total Issues on Pellet Plant, matching No Data)."
+          },
+          {
+            "term": "Recent Safety Logs",
+            "definition": "Latest completed safety forms from **Field Works → Safety → Completed Safety** (\"Collection of all completed Safeties in the project displayed calendar wise\")."
+          },
+          {
+            "term": "Why a Recent panel is empty",
+            "definition": "Nothing has been submitted for the selected plant, or you are looking at a different plant from the one with activity. Choose another plant in the selector; for example Pellet Plant showed work logs while **Coke Oven** showed No Data in every panel."
+          },
+          {
+            "term": "How work logs get here",
+            "definition": "Field users submit work logs in **Field Works → Progress → Work Logs**; how those screens look depends on **Project Settings → Work Logs Templates**. Once submitted (and approved, where an approval workflow is on), they appear on Submitted Work Logs and in Recent Work Logs."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Find the latest work for a plant",
+            "steps": [
+              "Open **My Desk** and choose the plant.",
+              "Expand **Recent Work Logs**.",
+              "Click **See All >** to open the full **Submitted Work Logs** list with filters."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Project Settings That Control My Desk",
+        "intro": "<p>Two Project Settings pages decide how My Desk is arranged. The <strong>Module Admin</strong> or <strong>Project Manager</strong> changes them; end users cannot.</p><p>Open <strong>Project Settings</strong> and choose <strong>My Desk</strong> or <strong>My Desk Dashboards</strong> in the left menu.</p>",
+        "definitions": [
+          {
+            "term": "Project Settings → My Desk",
+            "definition": "Has a **Save Changes** button and two drag-and-drop lists. **Recent Logs List** (drag the handle to change order) holds **1 Recent Work Logs, 2 Recent Punch Lists Items, 3 Recent Quality Logs, 4 Recent Daily Safety Issues, 5 Recent Safety Logs**: the five Recent panels on My Desk, in the same order. **Dashboard List** holds **Monitor Daily Progress, Monitor Forms Status, Monitor Forms Raised Daily, Monitor Issues Status, Monitor Issues Raised Daily**, the order of the dashboard graphs. These graphs do not appear on the Actions desk on the test project."
+          },
+          {
+            "term": "Project Settings → My Desk Dashboards",
+            "definition": "Titled **Enable/ Disable dashboards**, with one checkbox each for **My Dashboard**, **Google Maps**, **Quality Dashboard**, **Delay Analysis Dashboard**, **Defect Analysis Dashboard** and **Strip Charts**. On Arena Steel Plant - Phase 1 all six are unticked, and the desk shows only the **Actions** tab. Ticking one is meant to add that dashboard to the desk; not tried, because settings must not be changed in this review."
+          },
+          {
+            "term": "No settings for Actions and Pending Actions",
+            "definition": "Neither accordion has a Project Setting of its own. What appears there follows the plant selector, the user's permissions and the workflows and assignments built in **Project Setup**."
+          },
+          {
+            "term": "Who sees My Desk",
+            "definition": "Anyone with access to the project. **Users and Permissions** decides what each person may open from it."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Change the order of the Recent panels",
+            "steps": [
+              "Open **Project Settings → My Desk**.",
+              "In **Recent Logs List**, drag a row by its handle to a new position.",
+              "Click **Save Changes**.",
+              "Open **My Desk** and check the new order."
+            ],
+            "note": "The order shown on My Desk was confirmed to match the list; the effect of dragging was not tested."
           }
         ]
       }
@@ -18816,16 +19179,21 @@ const MODULES = [
     "name": "My Desk",
     "alias": "Project Home Dashboard",
     "icon": "space_dashboard",
-    "tagline": "The personalized landing screen that greets a user with progress, actions, and recent activity across the project.",
+    "tagline": "The project landing page: plant progress, what is waiting on you, and the latest work, quality and safety activity.",
     "color": "#d4823f",
-    "overview": "<p>My Desk is the personalized home dashboard a user sees first when opening a project, combining a plant-level Project Progress overview with collapsible summaries of assigned actions, pending actions, and recent work log, punch list, quality, and safety activity.</p>",
+    "overview": "<p>My Desk (<strong>Desk → Actions</strong>) opens with Project Progress cards, a plant selector, My Actions, Pending Actions and five Recent panels. Everything is read from Field Works and scoped to the selected plant; Project Settings control the order of the Recent panels and which extra dashboards appear.</p>",
     "navigation": [
-      "Open a <strong>Project</strong> — My Desk loads by default at <strong>Desk → Actions</strong>.",
-      "Use the accordions to expand or collapse each activity section as needed."
+      "Open a <strong>Project</strong> and click <strong>My Desk</strong> (Desk → Actions).",
+      "Pick a plant in the selector, then expand <strong>My Actions</strong>, <strong>Pending Actions</strong> and the Recent panels.",
+      "Change panel order in <strong>Project Settings → My Desk</strong>."
     ],
     "sections": [
-      "Admin Role",
-      "My Desk Dashboard"
+      "My Desk",
+      "Project Progress",
+      "My Actions",
+      "Pending Actions",
+      "Recent Activity Panels",
+      "Project Settings That Control My Desk"
     ]
   },
   {
