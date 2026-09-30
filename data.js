@@ -6599,6 +6599,24 @@ const QA_PROJECTSETTINGS = [
     question: "Which Project Settings categories most affect what field teams see day to day?",
     answer: "A handful have outsized reach into Field Works. <strong>Work Logs Templates</strong> and <strong>Quality Work Logs Templates</strong> shape how field logging and quality inspection screens are laid out. <strong>Quality Logs</strong> controls whether Level 1 must be approved before Level 2 becomes available. <strong>Productivity Log Settings</strong> sets whether productivity logs are created by Phase Code or by Level 3s, plus the Timesheets and Quantity tab fields. <strong>Punch Lists &amp; Restraints</strong> and <strong>Daily Safety Issues &amp; Observations</strong> shape how defects and safety issues are structured. <strong>My Desk</strong> and <strong>My Desk Dashboards</strong> shape the landing screen everyone opens first.",
     tags: ["settings that affect field works","work logs templates","quality logs","productivity log settings"]
+  },
+  {
+    action: "get",
+    object: "project settings my desk",
+    scope: "module",
+    section: "Scheduling, Views & Workflow Settings",
+    question: "Which Project Settings control My Desk?",
+    answer: "**My Desk** (order of the five Recent panels and the dashboard graph list) and **My Desk Dashboards** (enable or disable My Dashboard, Google Maps, Quality Dashboard, Delay Analysis Dashboard, Defect Analysis Dashboard and Strip Charts). Actions and Pending Actions have no setting of their own.",
+    tags: ["project settings my desk","my desk settings","my desk dashboards settings","recent logs list order"]
+  },
+  {
+    action: "get",
+    object: "project settings affect setup tabs",
+    scope: "module",
+    section: "Cost, Procurement & Resource Settings",
+    question: "Which Project Settings change Project Setup tabs?",
+    answer: "**Phase Code Settings** (unique or multiple-use phase codes), **Configure Task Form** (Tasks), **Cost Breakdown Structure** (Estimate), **Drawing Status** (Drawing Register), plus **Work Logs Templates** and **Quality Work Logs Templates** for the Field Works screens built from the Works structure.",
+    tags: ["project settings project setup","settings affect project setup","which settings change setup tabs"]
   }
 ];
 
@@ -23142,7 +23160,7 @@ const MODULES = [
           },
           {
             "term": "My Desk",
-            "definition": "Configures the personalized \"My Desk\" landing view users see for this project."
+            "definition": "Sets the order of the five Recent panels on **My Desk**: **Recent Logs List** (1 Recent Work Logs, 2 Recent Punch Lists Items, 3 Recent Quality Logs, 4 Recent Daily Safety Issues, 5 Recent Safety Logs; drag to reorder) and **Dashboard List** (Monitor Daily Progress, Monitor Forms Status, Monitor Forms Raised Daily, Monitor Issues Status, Monitor Issues Raised Daily), then **Save Changes**. **Where it goes:** the **My Desk** screen in the project menu."
           },
           {
             "term": "Progress Forms",
@@ -23170,7 +23188,7 @@ const MODULES = [
           },
           {
             "term": "Drawing Status",
-            "definition": "Configures the set of status values available for tracking drawings through their review and approval lifecycle."
+            "definition": "**Drawing Status Configuration**: the list of drawing status values (**Created**, **Completed**, plus **Add Status**). **Where it goes:** the **Drawing Status** field in **Project Setup → Drawings → Drawing Register**."
           },
           {
             "term": "Productivity Log Settings",
@@ -23182,7 +23200,7 @@ const MODULES = [
           },
           {
             "term": "My Desk Dashboards",
-            "definition": "Configures which dashboard widgets or views appear on the My Desk landing screen."
+            "definition": "Titled **Enable/ Disable dashboards**, with checkboxes for **My Dashboard**, **Google Maps**, **Quality Dashboard**, **Delay Analysis Dashboard**, **Defect Analysis Dashboard** and **Strip Charts**. All six are unticked on Arena Steel Plant - Phase 1, where My Desk shows only the **Actions** tab. **Where it goes:** the **My Desk** screen."
           }
         ],
         "procedures": []
@@ -23193,7 +23211,7 @@ const MODULES = [
         "definitions": [
           {
             "term": "Phase Code Settings",
-            "definition": "Configures the phase code structure used to categorize work and cost on this project."
+            "definition": "Two options: **Unique phase code** (a code can be used on only 1 Work Package and Location) or **Multiple-Use Phase Code** (a code can be used across multiple Locations). Arena Steel Plant - Phase 1 uses Unique. **Where it goes:** how phase codes are assigned to work packages in **Project Setup → Works → Other Attributes (Qty | Hrs)**. (The cost-type and timesheet mapping of phase codes is on **Project Setup → Phase Codes**.)"
           },
           {
             "term": "Tree Versions Custom Work Packages Name",
@@ -23205,7 +23223,7 @@ const MODULES = [
           },
           {
             "term": "Configure Task Form",
-            "definition": "Configures the fields and layout of the form used to create and manage tasks on this project."
+            "definition": "Defines the fields of the task form: tabs **Project Configuration** and **Global Configuration**, a **Status** switch (Inactive / Active), **Configurable Fields** (Required, Show on card, field type such as Text Box, **Add field**) and **Save Changes**. Until it is configured, **Project Setup → Tasks → Create** shows \"Task Form is not configured in project settings\"."
           },
           {
             "term": "Configure Form Id Type",
@@ -23217,7 +23235,7 @@ const MODULES = [
           },
           {
             "term": "Cost Breakdown Structure",
-            "definition": "Defines the cost coding hierarchy used by Cost Management and related budget and change order workflows on this project."
+            "definition": "Four tabs: **CBS** (choose a Tree Version and the phase-code level for estimates, such as Entity > Super Location > Location > Activity > Work Package > Phase Code, or **Customize CBS Level**), **Approval WorkFlow** (create the approval chain for cost estimates), **Level of Detail** (**Phase Code** or **Phase Code - Cost Code**) and **Estimate Type** (**Lump Sump** or **Time & Material**). **Where it goes:** **Project Setup → Estimate → Create Estimate** (CBS and Approval Workflow fields)."
           },
           {
             "term": "Custom Resources",
