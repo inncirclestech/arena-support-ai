@@ -6267,7 +6267,8 @@ const QA_PROPOSALMANAGEMENT = [
   {
     action: "create",
     object: "proposal",
-    scope: "module", section: "Proposals",
+    scope: "module",
+    section: "Proposals",
     question: "How do I create a new proposal?",
     answer: "Go to Proposal Management > Proposals and click \"Create\". In the pop-up, enter the Proposal Name, Description, Proposal Type, Proposal Value Estimated, and Business Development Code, then select the required Opportunity (or create a new one if it does not exist). Click \"Submit for Approval\" to create the proposal. The Proposal ID is auto-generated based on the ID Settings.",
     tags: ["new proposal","add proposal","start proposal","proposal creation"]
@@ -6275,7 +6276,8 @@ const QA_PROPOSALMANAGEMENT = [
   {
     action: "edit",
     object: "proposal",
-    scope: "module", section: "Proposals",
+    scope: "module",
+    section: "Proposals",
     question: "How do I edit an existing proposal's details?",
     answer: "In Proposal Management > Proposals, open the Actions menu for the proposal and select \"Edit\". You can modify the Proposal Name, Description, Proposal Type, Opportunity, Estimated Project Value, and Business Development Code.",
     tags: ["update proposal","modify proposal","change proposal details"]
@@ -6283,7 +6285,8 @@ const QA_PROPOSALMANAGEMENT = [
   {
     action: "delete",
     object: "proposal",
-    scope: "module", section: "Proposals",
+    scope: "module",
+    section: "Proposals",
     question: "How do I delete a proposal?",
     answer: "In Proposal Management > Proposals, open the Actions menu for the proposal row and click \"Delete\" to permanently remove the proposal.",
     tags: ["remove proposal","delete bid record"]
@@ -6291,7 +6294,8 @@ const QA_PROPOSALMANAGEMENT = [
   {
     action: "approve",
     object: "proposal",
-    scope: "module", section: "Proposals",
+    scope: "module",
+    section: "Proposals",
     question: "Who can approve or reject a proposal?",
     answer: "The \"Approve\" and \"Reject\" options on a proposal are visible only to users who are part of that proposal's Approval Workflow, configured in Proposal Management Settings.",
     tags: ["approve proposal","reject proposal","proposal approval workflow"]
@@ -6299,7 +6303,8 @@ const QA_PROPOSALMANAGEMENT = [
   {
     action: "track",
     object: "proposal",
-    scope: "module", section: "Proposals",
+    scope: "module",
+    section: "Proposals",
     question: "How can I see the history of changes made to a proposal?",
     answer: "In Proposal Management > Proposals, open the Actions menu and select \"See History\" to view a log of created, edited, updated, and approval workflow status changes.",
     tags: ["proposal audit trail","change log","proposal history"]
@@ -6307,7 +6312,8 @@ const QA_PROPOSALMANAGEMENT = [
   {
     action: "export",
     object: "proposal",
-    scope: "module", section: "Proposals",
+    scope: "module",
+    section: "Proposals",
     question: "Can I bulk create or update proposals using Excel?",
     answer: "Yes. In Proposal Management > Proposals, use the \"Export\" option: \"Download Excel\" exports current proposal data (sheet named by Proposal Type), and \"Upload Excel\" lets you create or update proposals in bulk using the provided sample template.",
     tags: ["excel upload","bulk import proposals","download proposals"]
@@ -6315,7 +6321,8 @@ const QA_PROPOSALMANAGEMENT = [
   {
     action: "filter",
     object: "proposal",
-    scope: "module", section: "Proposals",
+    scope: "module",
+    section: "Proposals",
     question: "How do I filter or search the proposals list?",
     answer: "Use \"Search\" to find proposals by Proposal Name or Proposal ID, or click \"Filters\" to open a pop-up where you can set criteria to narrow down the proposal list. \"Manage Columns\" lets you choose and arrange which columns are visible.",
     tags: ["search proposals","filter proposals","manage columns"]
@@ -6323,7 +6330,8 @@ const QA_PROPOSALMANAGEMENT = [
   {
     action: "track",
     object: "proposal follow up",
-    scope: "module", section: "Proposals",
+    scope: "module",
+    section: "Proposals",
     question: "How do I send reminder emails to a customer about a proposal?",
     answer: "Use the \"Follow Up\" feature on a proposal to send reminder emails to customers. Set a \"Recurrence Type\" (Daily, Weekly, Monthly, or None) to schedule repeated reminders or send a one-time email.",
     tags: ["follow up reminder","customer reminder","recurring email"]
@@ -6331,7 +6339,8 @@ const QA_PROPOSALMANAGEMENT = [
   {
     action: "create",
     object: "bid",
-    scope: "module", section: "Bids",
+    scope: "module",
+    section: "Bids",
     question: "How do I create a bid within a proposal?",
     answer: "Open the proposal's Bid tab and click \"Create Bid\". Fill in the Bid Name, Description, Proposal, and Bid Type in the pop-up window, then submit. Note: the Bid tab must first be enabled via permissions in Bid Management.",
     tags: ["create bid","new bid","add bid to proposal"]
@@ -6339,7 +6348,8 @@ const QA_PROPOSALMANAGEMENT = [
   {
     action: "export",
     object: "bid",
-    scope: "module", section: "Bids",
+    scope: "module",
+    section: "Bids",
     question: "Can I export or import bids in bulk?",
     answer: "Yes. In the Bids list, use \"Exports\" for Download Excel (export existing bid data) and Upload Excel (bulk-create bids via Excel upload).",
     tags: ["bulk bids","download bids","upload bids"]
@@ -6347,7 +6357,8 @@ const QA_PROPOSALMANAGEMENT = [
   {
     action: "view",
     object: "bid",
-    scope: "module", section: "Bids",
+    scope: "module",
+    section: "Bids",
     question: "What views are available for the Bids list?",
     answer: "The Bids list supports Table View, Grid View, and Kanban View. Choose a view and click \"Save Layout\" to keep it as the default.",
     tags: ["bid views","kanban bids","table view"]
@@ -6355,7 +6366,8 @@ const QA_PROPOSALMANAGEMENT = [
   {
     action: "create",
     object: "submission package",
-    scope: "module", section: "Submission Packages",
+    scope: "module",
+    section: "Submission Packages",
     question: "How do I create a proposal submission package?",
     answer: "On the proposal, click \"Create Submission Package\". This opens a page to pull in data from previous tabs (Profile, Documents, Checklists, Submittals, Attachments), then choose how to send it to the client: Email to Client, Physical (mail), or Client Portal.",
     tags: ["submission package","create submittal package","send proposal to client"]
@@ -6363,7 +6375,8 @@ const QA_PROPOSALMANAGEMENT = [
   {
     action: "configure",
     object: "submission package workflow",
-    scope: "module", section: "Submission Packages",
+    scope: "module",
+    section: "Submission Packages",
     question: "How do I set up an approval workflow for submission packages?",
     answer: "Go to Proposal Management Settings > Submission Packages > Setup Approval Workflow, click \"Create Level\" to choose approvers, assign the workflow type (all must approve / any one can approve), and add a level description. Use Edit or Delete in Actions to manage levels.",
     tags: ["submission approval workflow","configure workflow levels"]
@@ -6371,7 +6384,8 @@ const QA_PROPOSALMANAGEMENT = [
   {
     action: "track",
     object: "submission package issue",
-    scope: "module", section: "Submission Packages",
+    scope: "module",
+    section: "Submission Packages",
     question: "What happens when a submission package is rejected?",
     answer: "A rejected submission package log appears in the Workflow Issues tab and cannot move forward until its linked issue is resolved. Use \"Assign To\" to assign the issue to a user with a due date, then click \"Resolve\" once fixed.",
     tags: ["submission package rejected","workflow issues","resolve issue"]
@@ -6379,7 +6393,8 @@ const QA_PROPOSALMANAGEMENT = [
   {
     action: "view",
     object: "submission package log",
-    scope: "module", section: "Submission Packages",
+    scope: "module",
+    section: "Submission Packages",
     question: "Where can I see the status and history of a sent submission package?",
     answer: "In the Submission Packages Logs tab, use the row menu: \"Download\" retrieves the package, \"History\" shows creation and approval status history, \"Status\" shows/sets the configured status, and \"Delete\" removes the package.",
     tags: ["submission package status","submission package history","download package"]
@@ -6387,7 +6402,8 @@ const QA_PROPOSALMANAGEMENT = [
   {
     action: "create",
     object: "submittal",
-    scope: "module", section: "Submittals",
+    scope: "module",
+    section: "Submittals",
     question: "How do I add a submittal letter to a proposal?",
     answer: "In the proposal's Submittals tab, click \"Create\". Choose \"Create New Letter\" to draft a new template in Google Docs, or \"Import From Global Data\" to reuse a configured template from Proposal Settings, optionally enabling \"Auto Fill Fields\" to populate submittal keys from the proposal profile.",
     tags: ["submittal letter","budgetary letter","create submittal"]
@@ -6395,7 +6411,8 @@ const QA_PROPOSALMANAGEMENT = [
   {
     action: "configure",
     object: "submittal template",
-    scope: "module", section: "Settings",
+    scope: "module",
+    section: "Settings",
     question: "How do I create a reusable submittal template?",
     answer: "Go to Proposal Management Settings > Submittals and click \"Create Template\", then choose \"Create Submittal Template\" (name only) or \"Upload Submittal Template\" (upload a Word document). Configure merge keys using double curly braces {{ }} format, then use \"Sync\" from the kebab menu to update keys after edits.",
     tags: ["submittal template","upload template","merge keys","sync template"]
@@ -6403,7 +6420,8 @@ const QA_PROPOSALMANAGEMENT = [
   {
     action: "create",
     object: "checklist",
-    scope: "module", section: "Checklists",
+    scope: "module",
+    section: "Checklists",
     question: "How do I add a checklist to a proposal?",
     answer: "In the proposal's Checklists tab, click \"Create Form\", which shows the forms configured in Proposal Settings > Checklists. Fill in the fields and click Submit. Created forms are stored automatically in the Documents tab as a folder.",
     tags: ["proposal checklist","quality checklist","submit checklist"]
@@ -6411,7 +6429,8 @@ const QA_PROPOSALMANAGEMENT = [
   {
     action: "configure",
     object: "checklist template",
-    scope: "module", section: "Settings",
+    scope: "module",
+    section: "Settings",
     question: "How do I create a new checklist template for proposals?",
     answer: "Go to Proposal Management Settings > Checklists and click \"Create Checklist\". After naming it, click into the checklist to configure its form fields, use \"Preview Form\" to review, then \"Save Changes\".",
     tags: ["checklist template","configure checklist form"]
@@ -6419,7 +6438,8 @@ const QA_PROPOSALMANAGEMENT = [
   {
     action: "define",
     object: "proposal type",
-    scope: "global", section: "Settings",
+    scope: "global",
+    section: "Settings",
     question: "How do I set up a new proposal type?",
     answer: "Go to Global Data > Company > Proposal Management > Proposal Types and click \"Proposal Type\" (or \"Create\") to open a pop-up for entering the Proposal Type Name and Description. Click into the created type to add and configure form sections and fields, then \"Save Changes\".",
     tags: ["proposal type setup","configure proposal type","add proposal type"]
@@ -6427,7 +6447,8 @@ const QA_PROPOSALMANAGEMENT = [
   {
     action: "define",
     object: "bid type",
-    scope: "global", section: "Settings",
+    scope: "global",
+    section: "Settings",
     question: "How do I create a bid type?",
     answer: "Go to Proposal Management Settings (or Global Data > Company > Proposal Management) > Bid Types and click \"Bid Type\". Enter a Name, Description, and Estimate Type in the pop-up, then submit.",
     tags: ["bid type","define bid category","estimate type"]
@@ -6435,7 +6456,8 @@ const QA_PROPOSALMANAGEMENT = [
   {
     action: "define",
     object: "delivery method",
-    scope: "global", section: "Settings",
+    scope: "global",
+    section: "Settings",
     question: "What is the Delivery Method setting for proposals?",
     answer: "Delivery Method defines how a proposal is submitted or sent to the recipient. In Proposal Management Settings > Delivery Method, click \"Add\" to create a new row, or use \"Delete\" to remove one.",
     tags: ["proposal delivery method","submission channel"]
@@ -6443,7 +6465,8 @@ const QA_PROPOSALMANAGEMENT = [
   {
     action: "configure",
     object: "status",
-    scope: "global", section: "Settings",
+    scope: "global",
+    section: "Settings",
     question: "How do I configure custom statuses for proposals and submission packages?",
     answer: "Go to Proposal Management Settings (or Global Data) > Status Configuration. Click \"Add Status\" to enter a status name and color for either the Proposal or Submission Package tab. Two standard statuses can be set as \"Success\" or \"Failure\" via Edit.",
     tags: ["proposal status","custom status colors","status configuration"]
@@ -6451,7 +6474,8 @@ const QA_PROPOSALMANAGEMENT = [
   {
     action: "configure",
     object: "approval workflow",
-    scope: "global", section: "Settings",
+    scope: "global",
+    section: "Settings",
     question: "How do I set up the approval workflow for proposals?",
     answer: "Go to Global Data > Company > Proposal Management > Approval Workflow and click \"Create Level\" to select approvers and the workflow type (all must approve, or any one can approve). Multiple levels can be created. Use \"Open Workflow Graph View\" to see the workflow as a tree diagram.",
     tags: ["proposal approval levels","workflow graph","create approval level"]
@@ -6459,7 +6483,8 @@ const QA_PROPOSALMANAGEMENT = [
   {
     action: "configure",
     object: "id settings",
-    scope: "global", section: "Settings",
+    scope: "global",
+    section: "Settings",
     question: "How do I configure automatic ID generation for proposals?",
     answer: "Go to Global Data > Company > Proposal Management > ID Settings. Choose \"System Default\" for automatic IDs or \"Custom\" to configure separator, serial number, date, month, and year fields, then click \"Save Changes\". Separate ID settings exist for Proposal and Submission Package.",
     tags: ["proposal id format","custom id","auto generated id"]
@@ -6467,7 +6492,8 @@ const QA_PROPOSALMANAGEMENT = [
   {
     action: "assign",
     object: "user permission",
-    scope: "global", section: "Settings",
+    scope: "global",
+    section: "Settings",
     question: "How do I manage user groups and permissions for Proposal Management?",
     answer: "Go to Proposal Management Settings > Users and Permissions and click \"Add User Group\" to name the group and select permissions, then \"Add Users\" to assign members. Use the kebab menu to Edit or Delete a group.",
     tags: ["proposal user group","permissions setup","add users"]
@@ -6475,7 +6501,8 @@ const QA_PROPOSALMANAGEMENT = [
   {
     action: "define",
     object: "project type",
-    scope: "global", section: "Settings",
+    scope: "global",
+    section: "Settings",
     question: "How are project types categorized in Proposal Management settings?",
     answer: "Project Types are categorized by Field/Shop, Material, and New/Repair. Click \"Add\" to add a row, edit fields directly (dropdowns for Field/Shop and New/Repair), or use \"Upload Excel\" to bulk create or update project types.",
     tags: ["project type settings","field shop repair","bulk upload project types"]
@@ -6483,7 +6510,8 @@ const QA_PROPOSALMANAGEMENT = [
   {
     action: "view",
     object: "proposal dashboard",
-    scope: "module", section: "Dashboard",
+    scope: "module",
+    section: "Dashboard",
     question: "What does the Proposal Management Dashboard show?",
     answer: "Navigate to Proposal Management > My Dashboard. It shows Total Proposals by status (Created, In Progress, Approved/Rejected), an Estimate Success Rate graph, Calendar Events, Issues/Forms/Approvals/Proposals summaries, a To Do List, and Proposal Deadlines based on due dates. Data shown is scoped to the logged-in user unless they are a system admin.",
     tags: ["proposal dashboard","my dashboard","proposal overview"]
@@ -6491,7 +6519,8 @@ const QA_PROPOSALMANAGEMENT = [
   {
     action: "view",
     object: "proposal success rate",
-    scope: "module", section: "Analytics & Reports",
+    scope: "module",
+    section: "Analytics & Reports",
     question: "How do I see the success rate of proposals?",
     answer: "Go to the Proposal Success Rate report. It shows two pie charts: \"Success Rate (Qty of Proposals)\" by status count, and \"Success Rate (Currency Value)\" by submitted amount. Use the Proposal Type dropdown to filter and click legend items to toggle statuses.",
     tags: ["success rate report","win rate","proposal analytics"]
@@ -6499,7 +6528,8 @@ const QA_PROPOSALMANAGEMENT = [
   {
     action: "view",
     object: "proposal types analytics",
-    scope: "module", section: "Analytics & Reports",
+    scope: "module",
+    section: "Analytics & Reports",
     question: "Where can I see proposal quantity and value broken down by bid type?",
     answer: "The \"Types of Proposals\" report shows two bar graphs: Quantity of proposals and Amount submitted, both broken down by bid type within each proposal type. Adjust the date range and download in Excel, PDF, PPT, or JPEG.",
     tags: ["proposal analytics by bid type","proposal volume report"]
@@ -6507,7 +6537,8 @@ const QA_PROPOSALMANAGEMENT = [
   {
     action: "track",
     object: "to do item",
-    scope: "module", section: "To Do",
+    scope: "module",
+    section: "To Do",
     question: "How do I create a to-do task for a proposal?",
     answer: "In Proposal Management > To Do, click \"Create To Do List\" and fill in Title, Description, Date, and Time, then submit. Use \"Assign To\" to assign the task to a user, and click the double-tick icon to mark it complete.",
     tags: ["proposal task","to-do list","assign task"]
@@ -6515,7 +6546,8 @@ const QA_PROPOSALMANAGEMENT = [
   {
     action: "track",
     object: "proposal issue",
-    scope: "module", section: "Issues",
+    scope: "module",
+    section: "Issues",
     question: "How are proposal approval rejections tracked?",
     answer: "When a proposal is rejected by an approver, it appears in the proposal's Issues tab. The proposal cannot proceed until the associated issue is resolved. Use Search (by Issue ID), Filters (Log ID, Raised On, Raised By), and \"Assign To\" to manage it.",
     tags: ["proposal rejection","issue tracking","workflow rejection"]
@@ -6523,7 +6555,8 @@ const QA_PROPOSALMANAGEMENT = [
   {
     action: "link",
     object: "proposal customer",
-    scope: "module", section: "Proposals",
+    scope: "module",
+    section: "Proposals",
     question: "How do I add a new customer directly from a proposal?",
     answer: "In the proposal Profile's Project Location section, use \"Create a Customer\" or \"Create a Customer POC\" to add a new customer or point of contact inline; this also creates a record in the global Customer database.",
     tags: ["add customer","customer poc","create customer from proposal"]
@@ -6531,7 +6564,8 @@ const QA_PROPOSALMANAGEMENT = [
   {
     action: "assign",
     object: "proposal team",
-    scope: "module", section: "Proposals",
+    scope: "module",
+    section: "Proposals",
     question: "How do I add users or crews to a proposal team?",
     answer: "In the proposal's Teams tab, click \"Add User\" to select individuals from the global roster, or \"Add Crew\" to add a crew from Global Data. Use the kebab menu's Delete to remove members.",
     tags: ["proposal team","add user to proposal","add crew"]
@@ -6539,7 +6573,8 @@ const QA_PROPOSALMANAGEMENT = [
   {
     action: "track",
     object: "proposal comment",
-    scope: "module", section: "Proposals",
+    scope: "module",
+    section: "Proposals",
     question: "How do I comment on a proposal and pin it to a report?",
     answer: "In the proposal Profile, click \"Comments\" to add comments and attachments. Use the comment menu to Edit or Delete your own comment, or \"Add to Report\" to pin it for inclusion in the weekly report.",
     tags: ["proposal comments","pin comment","weekly report"]
@@ -6547,7 +6582,8 @@ const QA_PROPOSALMANAGEMENT = [
   {
     action: "submit",
     object: "proposal document",
-    scope: "module", section: "Proposals",
+    scope: "module",
+    section: "Proposals",
     question: "Where are all files related to a proposal stored?",
     answer: "The proposal's Documents tab automatically organizes uploads from Comments, Communication, Checklists, Submittals, Submission Package, and Bids into folders. Use \"New Folder\" to add a custom folder and \"Upload Documents\" to add files.",
     tags: ["proposal documents","document storage","upload files"]
@@ -6555,7 +6591,8 @@ const QA_PROPOSALMANAGEMENT = [
   {
     action: "submit",
     object: "proposal email",
-    scope: "module", section: "Proposals",
+    scope: "module",
+    section: "Proposals",
     question: "Can I send emails to clients directly from a proposal?",
     answer: "Yes. In the proposal's Communication tab, click \"Compose Mail\" to send an email with To, CC, BCC, Subject, Message, and attachments. Sent submission package emails are also stored here, organized into Inbox, Sent, Drafts, Starred, and Trash.",
     tags: ["proposal email","compose mail","client communication"]
@@ -6563,7 +6600,8 @@ const QA_PROPOSALMANAGEMENT = [
   {
     action: "configure",
     object: "proposal calendar event",
-    scope: "module", section: "Proposals",
+    scope: "module",
+    section: "Proposals",
     question: "How do I create a calendar event for a proposal deadline?",
     answer: "In the Proposal Management Calendar, click \"Create Event\" and enter the Title, Date, Time, Category, and Description. Events created here are automatically linked to the Proposal module and can sync with Outlook via Global Data > Marketplace > Microsoft Outlook.",
     tags: ["proposal calendar","create event","outlook sync"]
@@ -6574,7 +6612,8 @@ const QA_TENDERMANAGEMENT = [
   {
     action: "create",
     object: "bid",
-    scope: "module", section: "Bids",
+    scope: "module",
+    section: "Bids",
     question: "How do I create a tender/bid for a proposal?",
     answer: "There is no separate \"Tender\" object in Arena — bids are created within a Proposal. Open the proposal's Bid tab and click \"Create Bid\", then fill in Bid Name, Description, Proposal, and Bid Type. Note: the Bid tab must be enabled via permissions in Bid Management first.",
     tags: ["create tender","new bid","tender creation","bid management"]
@@ -6582,7 +6621,8 @@ const QA_TENDERMANAGEMENT = [
   {
     action: "define",
     object: "bid type",
-    scope: "global", section: "Bid Types",
+    scope: "global",
+    section: "Bid Types",
     question: "How do I define categories for tenders/bids?",
     answer: "Go to Proposal Management Settings > Bid Types (or Global Data > Company > Proposal Management > Bid Types) and click \"Bid Type\" to enter a Name, Description, and Estimate Type defining how the bid is structured and evaluated.",
     tags: ["tender category","bid type setup","estimate type"]
@@ -6590,7 +6630,8 @@ const QA_TENDERMANAGEMENT = [
   {
     action: "search",
     object: "bid",
-    scope: "module", section: "Bids",
+    scope: "module",
+    section: "Bids",
     question: "How do I find bids linked to a specific proposal?",
     answer: "In the proposal's Bid tab, use the \"Search\" option to search for bids linked to that particular proposal.",
     tags: ["search bids","find tender","bid lookup"]
@@ -6598,7 +6639,8 @@ const QA_TENDERMANAGEMENT = [
   {
     action: "export",
     object: "bid",
-    scope: "module", section: "Bids",
+    scope: "module",
+    section: "Bids",
     question: "Can I bulk create bids from a spreadsheet?",
     answer: "Yes. In the proposal's Bid tab, use \"Exports\" > \"Upload excel\" to create bids via Excel upload, or \"Download Excel\" to export existing bid data.",
     tags: ["bulk create bids","excel upload","download bids"]
@@ -6606,7 +6648,8 @@ const QA_TENDERMANAGEMENT = [
   {
     action: "view",
     object: "bid",
-    scope: "module", section: "Bids",
+    scope: "module",
+    section: "Bids",
     question: "What layout options are available for viewing bids?",
     answer: "The Bids list can be displayed as Table View, Grid View, or Kanban View. Choose a layout and click \"Save layout\" to keep it as your default.",
     tags: ["bid views","kanban view","table view"]
@@ -6614,7 +6657,8 @@ const QA_TENDERMANAGEMENT = [
   {
     action: "create",
     object: "rfq",
-    scope: "project", section: "RFQ",
+    scope: "project",
+    section: "RFQ",
     question: "How do I invite vendors to quote (create an RFQ)?",
     answer: "Go to Procurement > RFQ and click \"Create\" to start a new Request for Quotation. Link it to the relevant requisitions (REQ), update quantities and specifications, then select vendors from the pre-configured list. Vendor ratings are shown next to each name to aid selection.",
     tags: ["request for quotation","invite vendors","create rfq","tender invitation"]
@@ -6622,7 +6666,8 @@ const QA_TENDERMANAGEMENT = [
   {
     action: "configure",
     object: "vendor instructions",
-    scope: "project", section: "RFQ",
+    scope: "project",
+    section: "RFQ",
     question: "How do I set standard instructions for vendors on an RFQ?",
     answer: "In Procurement > RFQ, click \"Vendor Instructions\" to configure default guidelines, terms, and conditions sent to vendors for consistent communication.",
     tags: ["vendor instructions","rfq terms","tender conditions"]
@@ -6630,7 +6675,8 @@ const QA_TENDERMANAGEMENT = [
   {
     action: "track",
     object: "rfq status",
-    scope: "project", section: "RFQ",
+    scope: "project",
+    section: "RFQ",
     question: "How do I track the status of an RFQ sent to vendors?",
     answer: "RFQ status is tracked through a card view in Procurement > RFQ showing stages such as \"Created,\" \"Email Sent to Vendors,\" and \"PO Approved.\" Each card shows key information so you can quickly assess pending actions.",
     tags: ["rfq tracking","tender status","quotation status"]
@@ -6638,7 +6684,8 @@ const QA_TENDERMANAGEMENT = [
   {
     action: "submit",
     object: "vendor response",
-    scope: "project", section: "Bid Comparison",
+    scope: "project",
+    section: "Bid Comparison",
     question: "Where do I enter vendor quotes for comparison?",
     answer: "Go to Procurement > Vendor Responses, select the relevant RFQ from the list on the left, and enter each vendor's response including cost and lead time.",
     tags: ["enter vendor quotes","vendor responses","tender bids"]
@@ -6646,7 +6693,8 @@ const QA_TENDERMANAGEMENT = [
   {
     action: "view",
     object: "bid comparison",
-    scope: "project", section: "Bid Comparison",
+    scope: "project",
+    section: "Bid Comparison",
     question: "How do I compare vendor bids to select a winner?",
     answer: "After entering vendor responses in Procurement > Vendor Responses, move to the \"Vendor Analysis and Selection\" tab to evaluate and compare vendor responses based on cost, lead time, and other relevant factors.",
     tags: ["compare bids","vendor analysis","select vendor","tender comparison"]
@@ -6654,7 +6702,8 @@ const QA_TENDERMANAGEMENT = [
   {
     action: "link",
     object: "bid calendar event",
-    scope: "module", section: "Proposals",
+    scope: "module",
+    section: "Proposals",
     question: "Can bid-related deadlines appear on a calendar?",
     answer: "Yes. Events created within the Proposal Management Calendar can be linked to different modules including Opportunity, Proposal, and Bid Management, so tender/bid deadlines can be tracked alongside proposal events.",
     tags: ["bid deadlines","tender calendar","event linking"]
@@ -6665,7 +6714,8 @@ const QA_PROCUREMENT = [
   {
     action: "create",
     object: "requisition",
-    scope: "project", section: "Requisitions",
+    scope: "project",
+    section: "Requisitions",
     question: "How do I create a requisition (REQ)?",
     answer: "Go to Procurement > REQ and click \"Create\". Choose the requisition type (Equipment, Material, Equipment Part, or Delivery Service), fill in details and specifications, then click Submit.",
     tags: ["create req","new requisition","request material"]
@@ -6673,7 +6723,8 @@ const QA_PROCUREMENT = [
   {
     action: "assign",
     object: "requisition",
-    scope: "project", section: "Requisitions",
+    scope: "project",
+    section: "Requisitions",
     question: "How do I assign a requisition to someone after creating it?",
     answer: "After creating a REQ in Procurement > REQ, use the \"Assign To\" button to assign the requisition to a specific user.",
     tags: ["assign req","requisition owner","delegate requisition"]
@@ -6681,7 +6732,8 @@ const QA_PROCUREMENT = [
   {
     action: "track",
     object: "requisition issue",
-    scope: "project", section: "Requisitions",
+    scope: "project",
+    section: "Requisitions",
     question: "Where do I see rejected requisitions?",
     answer: "Raised issues for rejected REQs can be tracked in the REQ module's \"Workflow Issues\" tab.",
     tags: ["rejected req","requisition issues","workflow issues"]
@@ -6689,7 +6741,8 @@ const QA_PROCUREMENT = [
   {
     action: "create",
     object: "requisition from lor",
-    scope: "project", section: "Requisitions",
+    scope: "project",
+    section: "Requisitions",
     question: "Can I create a requisition from a rejected Load Out Request?",
     answer: "Yes. In Procurement > REQ, you can create REQs from rejected LORs by clicking \"LOR from REQ\".",
     tags: ["req from lor","load out request requisition"]
@@ -6697,7 +6750,8 @@ const QA_PROCUREMENT = [
   {
     action: "configure",
     object: "requisition form",
-    scope: "global", section: "Configure Procurement Forms & Settings",
+    scope: "global",
+    section: "Configure Procurement Forms & Settings",
     question: "How do I customize the fields on the requisition form?",
     answer: "Go to Procurement Settings > REQ Form and use Inncircles Arena's form builder to create multiple sections with different field types (paragraph, single select, multi-select, tables, etc.).",
     tags: ["req form builder","configure requisition fields"]
@@ -6705,7 +6759,8 @@ const QA_PROCUREMENT = [
   {
     action: "create",
     object: "rfq",
-    scope: "project", section: "RFQ",
+    scope: "project",
+    section: "RFQ",
     question: "How do I create an RFQ from a requisition?",
     answer: "Go to Procurement > RFQ and click \"Create\". Link relevant procurement packages to the corresponding requisitions (REQ), update quantities/specifications, then select vendors from the pre-configured list to request quotes.",
     tags: ["create rfq","request for quotation","link req to rfq"]
@@ -6713,7 +6768,8 @@ const QA_PROCUREMENT = [
   {
     action: "submit",
     object: "vendor response",
-    scope: "project", section: "Vendor Responses",
+    scope: "project",
+    section: "Vendor Responses",
     question: "How do I record a vendor's quote for an RFQ?",
     answer: "Go to Procurement > Vendor Responses, select the RFQ from the list on the left, and enter the vendor's cost and lead time. Then move to \"Vendor Analysis and Selection\" to compare responses.",
     tags: ["vendor quote entry","record vendor response"]
@@ -6721,7 +6777,8 @@ const QA_PROCUREMENT = [
   {
     action: "create",
     object: "purchase order",
-    scope: "project", section: "Purchase Orders",
+    scope: "project",
+    section: "Purchase Orders",
     question: "How do I create a Purchase Order from an RFQ?",
     answer: "Go to Procurement > Purchase Order, select the procurement type tab (Material, Equipment, Equipment Part, or Delivery Service), click \"Create\", select the relevant RFQ, enter quantities/pricing/tax code, then click Submit.",
     tags: ["create po","purchase order from rfq","generate po"]
@@ -6729,7 +6786,8 @@ const QA_PROCUREMENT = [
   {
     action: "create",
     object: "direct purchase order",
-    scope: "project", section: "Purchase Orders",
+    scope: "project",
+    section: "Purchase Orders",
     question: "Can I create a Purchase Order without going through an RFQ?",
     answer: "Yes. Go to Procurement > Direct Purchase Order, select the procurement type tab, click \"Create\", and select the REQ directly (skipping the RFQ step). Enter pricing and lead time, select the tax code in the Preview PO step, then Submit.",
     tags: ["direct po","skip rfq","purchase order without quote"]
@@ -6737,7 +6795,8 @@ const QA_PROCUREMENT = [
   {
     action: "view",
     object: "purchase order",
-    scope: "project", section: "Purchase Orders",
+    scope: "project",
+    section: "Purchase Orders",
     question: "Where can I see all Purchase Orders and their status?",
     answer: "Go to Procurement > Purchase Order Master to view all Purchase Orders along with their current status, history, and linked REQs.",
     tags: ["po master","purchase order list","po status"]
@@ -6745,7 +6804,8 @@ const QA_PROCUREMENT = [
   {
     action: "export",
     object: "purchase order viewpoint export",
-    scope: "project", section: "Purchase Orders",
+    scope: "project",
+    section: "Purchase Orders",
     question: "Can I export Purchase Orders in a format Viewpoint can import?",
     answer: "There's no separate Viewpoint-format export for Purchase Orders. Use **Download Excel** on the **Purchase Orders** tab or in **Purchase Order Master** to get a spreadsheet of your POs. Arena's Viewpoint (Vista) connection works the other way: it pulls Viewpoint data such as users, crews, phase codes and GL codes into Arena through **Global Data → Staged Tables**. The Viewpoint-style AP export you may have seen is for expense claims, under **Expense Tracker → Processed Forms → Batch Items**.",
     tags: ["viewpoint export","purchase order export","viewpoint integration","accounting export"]
@@ -6753,7 +6813,8 @@ const QA_PROCUREMENT = [
   {
     action: "configure",
     object: "purchase order form",
-    scope: "global", section: "Configure Procurement Forms & Settings",
+    scope: "global",
+    section: "Configure Procurement Forms & Settings",
     question: "How do I configure the Purchase Order form fields?",
     answer: "Go to Procurement Settings > PO Configuration and use the form builder to configure the Purchase Order form separately for Material, Equipment, Equipment Part, and Delivery Service tabs.",
     tags: ["po form configuration","purchase order fields"]
@@ -6761,7 +6822,8 @@ const QA_PROCUREMENT = [
   {
     action: "create",
     object: "delivery receipt",
-    scope: "project", section: "Delivery Receipts",
+    scope: "project",
+    section: "Delivery Receipts",
     question: "How do I create a Delivery Receipt for a Purchase Order?",
     answer: "Go to Procurement > Delivery Receipts and click \"Create\". Select the vendor and the associated Purchase Order, fill in receiving quantity and additional info, then click Submit.",
     tags: ["delivery receipt","dr creation","receive goods"]
@@ -6769,7 +6831,8 @@ const QA_PROCUREMENT = [
   {
     action: "configure",
     object: "delivery receipt form",
-    scope: "global", section: "Configure Procurement Forms & Settings",
+    scope: "global",
+    section: "Configure Procurement Forms & Settings",
     question: "How do I configure the Delivery Receipt form?",
     answer: "Go to Procurement Settings > Delivery Request and use the form builder to configure the Delivery Receipt form for Material, Equipment, Equipment Part, and Delivery Service.",
     tags: ["delivery receipt settings","configure delivery form"]
@@ -6777,7 +6840,8 @@ const QA_PROCUREMENT = [
   {
     action: "create",
     object: "invoice",
-    scope: "project", section: "Invoices",
+    scope: "project",
+    section: "Invoices",
     question: "How do I create an invoice for a procured item?",
     answer: "Go to Procurement > Invoices, click \"Create\", choose the vendor, expand to view associated Purchase Orders, and select the relevant one. Enter invoice number, date, payment terms, select items for billing, then enter the subtotal and tax amount before submitting.",
     tags: ["create invoice","procurement billing","invoice from po"]
@@ -6785,7 +6849,8 @@ const QA_PROCUREMENT = [
   {
     action: "configure",
     object: "invoice form",
-    scope: "global", section: "Configure Procurement Forms & Settings",
+    scope: "global",
+    section: "Configure Procurement Forms & Settings",
     question: "How do I configure the Invoice form fields?",
     answer: "Go to Procurement Settings > Invoice and use the form builder to configure the invoice form for Equipment, Material, Equipment Part, and Delivery Service, with multiple sections and field types.",
     tags: ["invoice settings","configure invoice form"]
@@ -6793,7 +6858,8 @@ const QA_PROCUREMENT = [
   {
     action: "create",
     object: "pickup request",
-    scope: "project", section: "Pickup Requests",
+    scope: "project",
+    section: "Pickup Requests",
     question: "How do I create a Pickup Request for procured items?",
     answer: "Go to Procurement > Pickup Request and click \"Create\". Select the Vendor and Purchase Order, fill in the Pickup Date and Address, set the Pickup Request status, then click Submit.",
     tags: ["pickup request","schedule pickup","procurement pickup"]
@@ -6801,7 +6867,8 @@ const QA_PROCUREMENT = [
   {
     action: "configure",
     object: "pickup request form",
-    scope: "global", section: "Configure Procurement Forms & Settings",
+    scope: "global",
+    section: "Configure Procurement Forms & Settings",
     question: "How do I configure the Pickup Request form?",
     answer: "Go to Procurement Settings > Pickup Request and configure the form fields using the form builder, then click \"Save changes\".",
     tags: ["pickup request settings","configure pickup form"]
@@ -6809,7 +6876,8 @@ const QA_PROCUREMENT = [
   {
     action: "view",
     object: "procurement communication",
-    scope: "project", section: "Communications",
+    scope: "project",
+    section: "Communications",
     question: "Where can I find emails related to procured items?",
     answer: "Go to Procurement > Communications, which is a mail repository where all emails linked to procured items are tracked.",
     tags: ["procurement mail","communication log","procurement emails"]
@@ -6817,7 +6885,8 @@ const QA_PROCUREMENT = [
   {
     action: "configure",
     object: "approval workflow",
-    scope: "global", section: "Configure Procurement Forms & Settings",
+    scope: "global",
+    section: "Configure Procurement Forms & Settings",
     question: "How do I set up approval workflows for procurement documents?",
     answer: "Go to Procurement Settings > Approval Workflow and click \"Create Level\" to build a workflow. You can create multiple levels and choose \"All must approve\" or \"Any one can approve\" for each level. This applies to Requisition forms, Purchase Orders, Invoices, and Pickup Requests.",
     tags: ["procurement approval workflow","create level","po approval"]
@@ -6825,7 +6894,8 @@ const QA_PROCUREMENT = [
   {
     action: "configure",
     object: "id settings",
-    scope: "global", section: "Configure Procurement Forms & Settings",
+    scope: "global",
+    section: "Configure Procurement Forms & Settings",
     question: "How do I configure ID formats for procurement documents?",
     answer: "Go to Procurement > ID Settings, select System Default for auto-generated IDs, or Custom to choose fields and their order, then click \"Save Changes\".",
     tags: ["procurement id format","custom id","auto id"]
@@ -6833,7 +6903,8 @@ const QA_PROCUREMENT = [
   {
     action: "configure",
     object: "purchase order numbering per project",
-    scope: "project", section: "Purchase Orders",
+    scope: "project",
+    section: "Purchase Orders",
     question: "Can Purchase Order numbers restart per project instead of running as one company-wide sequence?",
     answer: "Partly. In Procurement → ID Settings → Purchase Order → Custom, you can check \"Project Number\" as one of the ID's fields (alongside Date, Month, Year, Serial No./ID, and Requester Initials), which appends the project number as an extra segment of the ID (e.g. the example format changes from \"PO ID\" to \"PO ID/PN\"). However, there's no separate control to make the Serial No./ID counter itself restart at 1 for each project — that counter keeps counting company-wide regardless of which fields are included in the format.",
     tags: ["purchase order numbering","po number per project","project-scoped po id","restart po sequence"]
@@ -6841,7 +6912,8 @@ const QA_PROCUREMENT = [
   {
     action: "configure",
     object: "issue priority",
-    scope: "global", section: "Configure Procurement Forms & Settings",
+    scope: "global",
+    section: "Configure Procurement Forms & Settings",
     question: "How do I set priority levels for procurement issues?",
     answer: "Go to Procurement Settings > Procurement Issues and click \"Add Priority\" to create priority levels along with their Due Hours. This priority list is specifically for issues raised while inspecting a Delivery Receipt (Delivery Receipts > Inspection Issues) — a verified environment had High (4 hours), Medium (24 hours), and Low (48 hours).",
     tags: ["issue priority","procurement issue sla","due hours","delivery receipt inspection issue priority"]
@@ -6849,7 +6921,8 @@ const QA_PROCUREMENT = [
   {
     action: "view",
     object: "procurement analytics dashboard",
-    scope: "project", section: "Procurement Analytics Dashboard",
+    scope: "project",
+    section: "Procurement Analytics Dashboard",
     question: "Where can I see overall procurement spend and vendor performance?",
     answer: "Go to Home > Procurement — it opens on the Dashboard tab. KPI tiles show Total Spend, Budget Variance, Avg Lead Time, and Quality Issue Rate; the Vendor Performance Summary table below ranks each vendor by Total Spend, Avg Lead Time, Quality Issue Rate, On-Time Delivery, Total Orders, and a Performance Score. Filter by project (\"By Projects\") or by date range.",
     tags: ["procurement dashboard","vendor performance","total spend","quality issue rate"]
@@ -6857,7 +6930,8 @@ const QA_PROCUREMENT = [
   {
     action: "view",
     object: "approval workflow viewer",
-    scope: "project", section: "Requisitions",
+    scope: "project",
+    section: "Requisitions",
     question: "How do I check who needs to approve a specific requisition?",
     answer: "On the Requisition Form list, click the tree/hierarchy icon in that REQ's Actions column. It opens \"Approval work flow data\" showing Level, Level Description, Approvers, and Workflow Type (e.g. \"Any one can approve\") for that REQ's approval chain.",
     tags: ["requisition approval chain","approval workflow viewer","who approves req","device_hub icon"]
@@ -6865,7 +6939,8 @@ const QA_PROCUREMENT = [
   {
     action: "track",
     object: "requisition workflow issue",
-    scope: "project", section: "Requisitions",
+    scope: "project",
+    section: "Requisitions",
     question: "What is the Workflow Issues tab on the Requisition Form for?",
     answer: "It logs problems raised against a requisition's own approval chain, separate from its Approve/Reject buttons: WFL Number, REQ ID, Level, who raised it and when, a comment, Assign To, Due Date, and Chat. Header counters show Total, Approved, and Rejected issue counts.",
     tags: ["requisition workflow issues","req approval problem","wfl number"]
@@ -6873,7 +6948,8 @@ const QA_PROCUREMENT = [
   {
     action: "track",
     object: "requisition status",
-    scope: "project", section: "Requisitions",
+    scope: "project",
+    section: "Requisitions",
     question: "What are the possible statuses of a requisition?",
     answer: "Created, Approved, RFQ Created, Vendor Responded, Email Sent to Vendor, and Direct PO Approved (or PO Approved via the RFQ path) are the statuses shown on the Requisition Form list as a REQ moves through the procurement loop.",
     tags: ["requisition status list","req status","procurement loop status"]
@@ -6881,7 +6957,8 @@ const QA_PROCUREMENT = [
   {
     action: "track",
     object: "rfq status",
-    scope: "project", section: "RFQ",
+    scope: "project",
+    section: "RFQ",
     question: "What are the possible statuses of an RFQ?",
     answer: "Created, Email Sent to Vendors, Vendors Responded (or Partial Vendors Responded, if only some vendors have replied yet), Vendors Selected, PO Created, PO Approved, and PO Rejected.",
     tags: ["rfq status list","rfq lifecycle","partial vendors responded"]
@@ -6889,7 +6966,8 @@ const QA_PROCUREMENT = [
   {
     action: "configure",
     object: "vendor instructions",
-    scope: "global", section: "RFQ",
+    scope: "global",
+    section: "RFQ",
     question: "How do I set up standard instructions to send vendors with an RFQ?",
     answer: "Go to Procurement > RFQ and click the Vendor Instructions gear icon, then \"+ Add Instruction\". Name it, write its description, and choose which vendors it applies to, then Submit. These reusable instructions can then be attached to any RFQ instead of retyping standard terms each time.",
     tags: ["vendor instructions","rfq boilerplate","standard rfq terms"]
@@ -6897,7 +6975,8 @@ const QA_PROCUREMENT = [
   {
     action: "compare",
     object: "vendor price chart",
-    scope: "project", section: "Vendor Responses",
+    scope: "project",
+    section: "Vendor Responses",
     question: "Can I see a chart comparing vendor prices for an RFQ?",
     answer: "Yes. On Vendor Responses (\"Quotation\") step 2, Vendor Analysis & Selection, use the Chart View toggle to see a Vendor Price Chart: pick an equipment item and compare Daily/Weekly/Monthly rates across vendors as a bar chart, with a download option.",
     tags: ["vendor price chart","chart view","compare vendor rates"]
@@ -6905,7 +6984,8 @@ const QA_PROCUREMENT = [
   {
     action: "track",
     object: "purchase order status",
-    scope: "project", section: "Purchase Orders",
+    scope: "project",
+    section: "Purchase Orders",
     question: "What are the possible statuses of a Purchase Order?",
     answer: "Created, Approved, Delivery Receipt Created, Partial Delivery Receipt Created (if only some items have been received so far), and Delivery Receipt Issue Raised (if a delivery inspection found a problem).",
     tags: ["purchase order status list","po lifecycle status"]
@@ -6913,7 +6993,8 @@ const QA_PROCUREMENT = [
   {
     action: "configure",
     object: "purchase order terms and conditions",
-    scope: "global", section: "Purchase Orders",
+    scope: "global",
+    section: "Purchase Orders",
     question: "How do I set the standard Terms & Conditions text that appears on Purchase Orders?",
     answer: "Go to Procurement > Purchase Orders and click \"Terms & Conditions\". Write the boilerplate text in the rich-text editor (bold/italic/underline/strikethrough, links, headings, lists) — it can include placeholders like [Amount] and [30/60] for payment terms — then Submit. This one company-wide block is stamped onto every generated PO.",
     tags: ["purchase order terms and conditions","po boilerplate","payment terms"]
@@ -6921,7 +7002,8 @@ const QA_PROCUREMENT = [
   {
     action: "view",
     object: "purchase order master columns",
-    scope: "project", section: "Purchase Orders",
+    scope: "project",
+    section: "Purchase Orders",
     question: "How do I see how much of a Purchase Order has been invoiced?",
     answer: "Go to Procurement > Purchase Order Master. Total Cost, Total Invoice Cost, and Balance Cost columns show how much of the PO has been billed and what remains, alongside an Invoice status column (e.g. APPROVED, CREATED, N/A).",
     tags: ["purchase order balance","total invoice cost","po invoice status"]
@@ -6929,7 +7011,8 @@ const QA_PROCUREMENT = [
   {
     action: "raise",
     object: "delivery inspection issue",
-    scope: "project", section: "Delivery Receipts",
+    scope: "project",
+    section: "Delivery Receipts",
     question: "What is the Inspection Issues tab under Delivery Receipts for?",
     answer: "It logs quality-check failures found while inspecting a delivered item: Issue Number, DR ID, Field Name (the checkpoint that failed), Observation, who raised it and when, an optional photo, and a Rectify button. Once corrected, click Rectify. Header counters show Total, Open, and Rectified issue counts, and an open issue shows on the linked Purchase Order as status \"Delivery Receipt Issue Raised\".",
     tags: ["delivery receipt inspection issue","rectify delivery issue","field name checkpoint"]
@@ -6937,7 +7020,8 @@ const QA_PROCUREMENT = [
   {
     action: "track",
     object: "pickup request status",
-    scope: "project", section: "Pickup Requests",
+    scope: "project",
+    section: "Pickup Requests",
     question: "What are the possible statuses of a Pickup Request?",
     answer: "Created, Vendor Pickup Request Created, Picked up from Site, and Closed as it's actioned, or Rejected if turned down. This mirrors the Load Out Request flow in Asset Management, but for procurement-sourced rented equipment.",
     tags: ["pickup request status list","pickup request lifecycle"]
@@ -6945,7 +7029,8 @@ const QA_PROCUREMENT = [
   {
     action: "find",
     object: "procurement document repository",
-    scope: "project", section: "Communications",
+    scope: "project",
+    section: "Communications",
     question: "Is there a shared folder for procurement documents that aren't tied to one REQ or PO?",
     answer: "Yes. Click the Document icon next to Communications on the Procurement toolbar. It's a module-wide folder/file repository (folders seen include RFQ and DIRECT REQ) with New Folder and Add File actions.",
     tags: ["procurement document repository","procurement files","document folder"]
@@ -21986,6 +22071,33 @@ const MODULES = [
               "Choose <strong>Create Submittal Template</strong> (name only) or <strong>Upload Submittal Template</strong> (upload a Word document).",
               "Configure merge keys using double curly braces, e.g. <code>{{ }}</code> format.",
               "Use <strong>Sync</strong> from the kebab menu to update keys after making edits."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/proposal-management-global-submittals/001.jpg",
+                "caption": "Create Template: a new template or an uploaded one",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/proposal-management-global-submittals/002.jpg",
+                "caption": "Create Submittal Template, entering the template name",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/proposal-management-global-submittals/003.jpg",
+                "caption": "Upload Submittal Template, with a name and a file",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/proposal-management-global-submittals/004.jpg",
+                "caption": "Sync, in the three-dot menu, to update the keys",
+                "step": 4
+              },
+              {
+                "src": "assets/notion/submittals-proposal-management-settings/007.jpg",
+                "caption": "Synced keys, each matched to an item from Arena, then Save",
+                "step": 4
+              }
             ]
           },
           {
@@ -21994,6 +22106,18 @@ const MODULES = [
               "Go to <strong>Proposal Management Settings → Checklists</strong> and click <strong>Create Checklist</strong>.",
               "Name it, then click into the checklist to configure its form fields.",
               "Use <strong>Preview Form</strong> to review, then click <strong>Save Changes</strong>."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/proposal-management-global-checklists/001.jpg",
+                "caption": "Create Checklist: a form name and description",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/checklists-proposal-management-settings/002.jpg",
+                "caption": "The checklist form being configured, with Preview Form",
+                "step": 2
+              }
             ]
           },
           {
@@ -22002,6 +22126,28 @@ const MODULES = [
               "Go to <strong>Global Data → Company → Proposal Management → Proposal Types</strong>.",
               "Click <strong>Proposal Type</strong> (or <strong>Create</strong>) and enter the Proposal Type Name and Description.",
               "Click into the created type to add and configure its form sections and fields, then click <strong>Save Changes</strong>."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/proposal-management-global-proposal-types/001.jpg",
+                "caption": "Proposal Type: a name and description for the new type",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/proposal-types-proposal-management-settings/003.jpg",
+                "caption": "The form for a proposal type, where sections and fields are configured",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/proposal-types-proposal-management-settings/004.jpg",
+                "caption": "Choose Type, for the kind of field",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/proposal-types-proposal-management-settings/005.jpg",
+                "caption": "Save Changes, to save the completed form",
+                "step": 3
+              }
             ]
           },
           {
@@ -22016,6 +22162,13 @@ const MODULES = [
             "steps": [
               "Go to <strong>Proposal Management Settings → Delivery Method</strong>.",
               "Click <strong>Add</strong> to create a new delivery-method row, or <strong>Delete</strong> to remove one."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/delivery-method-proposal-management-settings/001.jpg",
+                "caption": "Delivery Method: adding and deleting methods",
+                "step": 2
+              }
             ]
           },
           {
@@ -22024,6 +22177,28 @@ const MODULES = [
               "Go to <strong>Proposal Management Settings</strong> (or <strong>Global Data</strong>) → <strong>Status Configuration</strong>.",
               "Click <strong>Add Status</strong> to enter a status name and color, choosing whether it applies to the Proposal tab or Submission Package tab.",
               "Use <strong>Edit</strong> to mark up to two standard statuses as \"Success\" or \"Failure\"."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/proposal-management-global-status-configuration/001.jpg",
+                "caption": "Status Configuration for the Proposal tab, each status with its own colour",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/proposal-management-global-status-configuration/002.jpg",
+                "caption": "Add Status for a proposal: a name and colour",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/proposal-management-global-status-configuration/006.jpg",
+                "caption": "Add Status for a submission package",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/status-configuration-proposal-management-settings/003.jpg",
+                "caption": "Edit on a standard status, to mark it Success or Failure",
+                "step": 3
+              }
             ]
           },
           {
@@ -22032,6 +22207,18 @@ const MODULES = [
               "Go to <strong>Global Data → Company → Proposal Management → Approval Workflow</strong>.",
               "Click <strong>Create Level</strong> to select approvers and the workflow type (all must approve, or any one can approve).",
               "Create multiple levels as needed, and use <strong>Open Workflow Graph View</strong> to see the workflow as a tree diagram."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/proposal-management-global-approval-workflow/001.jpg",
+                "caption": "Create Level: choosing approvers from the global rosters and the workflow type",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/proposal-management-global-approval-workflow/002.jpg",
+                "caption": "Open Workflow Graph View: the workflow as a tree",
+                "step": 3
+              }
             ]
           },
           {
@@ -22041,7 +22228,24 @@ const MODULES = [
               "Choose <strong>System Default</strong> for automatic IDs, or <strong>Custom</strong> to configure separator, serial number, date, month, and year fields.",
               "Click <strong>Save Changes</strong>."
             ],
-            "note": "Separate ID settings exist for Proposal and Submission Package records."
+            "note": "Separate ID settings exist for Proposal and Submission Package records.",
+            "images": [
+              {
+                "src": "assets/notion/proposal-management-global-id-settings/001.jpg",
+                "caption": "ID Settings: the ID shown on the proposal card",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/proposal-management-global-id-settings/002.jpg",
+                "caption": "Custom ID: separator, serial number, date, month and year",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/id-settings-proposal-management-settings/001.jpg",
+                "caption": "Save Changes to apply the ID settings",
+                "step": 3
+              }
+            ]
           },
           {
             "title": "Manage user groups and permissions for Proposal Management",
@@ -22050,6 +22254,33 @@ const MODULES = [
               "Click <strong>Add User Group</strong> to name the group and select its permissions.",
               "Click <strong>Add Users</strong> to assign members to the group.",
               "Use the kebab menu to Edit or Delete a group."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/users-and-permissions-proposal-management-settings/001.jpg",
+                "caption": "Users and Permissions in Proposal Management settings",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/users-and-permissions-proposal-management-settings/002.jpg",
+                "caption": "Add User Group: a group name and its permissions",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/users-and-permissions-proposal-management-settings/003.jpg",
+                "caption": "Add Users to the group",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/users-and-permissions-proposal-management-settings/004.jpg",
+                "caption": "The users added to the group",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/proposal-types-proposal-management-settings/041.jpg",
+                "caption": "Deleting a user group",
+                "step": 4
+              }
             ]
           },
           {
@@ -22058,7 +22289,107 @@ const MODULES = [
               "Open the Project Types settings screen and click <strong>Add</strong> to add a row.",
               "Edit fields directly, using the dropdowns for Field/Shop and New/Repair, and entering the Material classification.",
               "Use <strong>Upload Excel</strong> to bulk create or update project types."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/proposal-management-global-project-types/001.jpg",
+                "caption": "Add, which adds a new row to the list",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/proposal-management-global-project-types/002.jpg",
+                "caption": "Editing a project type directly, with drop-downs for Field/Shop and New/Repair",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/project-types-proposal-management-settings/006.jpg",
+                "caption": "Upload Excel, with a template to download",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/project-types-proposal-management-settings/007.jpg",
+                "caption": "Uploading the filled project types file",
+                "step": 3
+              }
             ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/submittals-proposal-management-settings/004.jpg",
+            "caption": "The three-dot menu: preview, download, sync, edit and delete"
+          },
+          {
+            "src": "assets/notion/proposal-management-global-checklists/002.jpg",
+            "caption": "Editing a checklist's name and description"
+          },
+          {
+            "src": "assets/notion/proposal-management-global-checklists/004.jpg",
+            "caption": "Deleting a checklist, with a warning"
+          },
+          {
+            "src": "assets/notion/proposal-management-global-proposal-types/003.jpg",
+            "caption": "Editing a proposal type from its three-dot menu"
+          },
+          {
+            "src": "assets/notion/proposal-management-global-proposal-types/005.jpg",
+            "caption": "Deleting a proposal type, with a warning"
+          },
+          {
+            "src": "assets/notion/proposal-management-global-status-configuration/003.jpg",
+            "caption": "Editing a status's name and colour"
+          },
+          {
+            "src": "assets/notion/proposal-management-global-status-configuration/004.jpg",
+            "caption": "Deleting a status"
+          },
+          {
+            "src": "assets/notion/proposal-management-global-status-configuration/005.jpg",
+            "caption": "Status Configuration for the Submission tab"
+          },
+          {
+            "src": "assets/notion/proposal-management-global-approval-workflow/003.jpg",
+            "caption": "Editing a level's description, approvers and workflow type"
+          },
+          {
+            "src": "assets/notion/proposal-management-global-approval-workflow/004.jpg",
+            "caption": "Deleting a level, with a warning"
+          },
+          {
+            "src": "assets/notion/id-settings-proposal-management-settings/002.jpg",
+            "caption": "ID settings for submission packages: System Default or Custom"
+          },
+          {
+            "src": "assets/notion/proposal-management-global-project-types/005.jpg",
+            "caption": "Deleting a project type from the Actions menu"
+          },
+          {
+            "src": "assets/notion/proposal-management-global-business-development-codes/001.jpg",
+            "caption": "Business Development Codes: Add creates a new row"
+          },
+          {
+            "src": "assets/notion/proposal-management-global-business-development-codes/002.jpg",
+            "caption": "Editing a business development code in the list"
+          },
+          {
+            "src": "assets/notion/proposal-management-global-business-development-codes/004.jpg",
+            "caption": "Deleting a code from the Actions menu"
+          },
+          {
+            "src": "assets/notion/department-codes-proposal-management-settings/001.jpg",
+            "caption": "Department Codes: Add creates a new row"
+          },
+          {
+            "src": "assets/notion/department-codes-proposal-management-settings/002.jpg",
+            "caption": "Editing a department code in the list"
+          },
+          {
+            "src": "assets/notion/department-codes-proposal-management-settings/003.jpg",
+            "caption": "Deleting a code from the Actions menu"
+          },
+          {
+            "src": "assets/notion/proposal-navigation-proposal-management-settings/001.jpg",
+            "caption": "Proposal navigation: open Proposal Management on the Dashboard or on Proposals"
           }
         ]
       },
@@ -22116,7 +22447,14 @@ const MODULES = [
               "Select the required Opportunity, or create a new one inline if it doesn't already exist.",
               "Click <strong>Submit for Approval</strong> to create the proposal."
             ],
-            "note": "The Proposal ID is auto-generated based on the company's ID Settings."
+            "note": "The Proposal ID is auto-generated based on the company's ID Settings.",
+            "images": [
+              {
+                "src": "assets/notion/proposal-management-proposals/001.jpg",
+                "caption": "Create: the pop-up for a new proposal",
+                "step": 2
+              }
+            ]
           },
           {
             "title": "Edit or delete a proposal",
@@ -22139,6 +22477,18 @@ const MODULES = [
               "In <strong>Proposal Management → Proposals</strong>, click <strong>Export</strong>.",
               "Use <strong>Download Excel</strong> to export current proposal data (the sheet is named by Proposal Type).",
               "Use <strong>Upload Excel</strong> with the provided sample template to create or update proposals in bulk."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/proposal-management-proposals/003.jpg",
+                "caption": "Export, for downloading, uploading and updating proposals",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/proposal-management-proposals/004.jpg",
+                "caption": "Upload Excel, with a sample template for creating or updating proposals",
+                "step": 3
+              }
             ]
           },
           {
@@ -22147,6 +22497,18 @@ const MODULES = [
               "Use <strong>Search</strong> to find proposals by Proposal Name or Proposal ID.",
               "Click <strong>Filters</strong> to open criteria for narrowing the list.",
               "Use <strong>Manage Columns</strong> to choose and arrange visible columns."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/proposal-management-proposals/005.jpg",
+                "caption": "Filters: choosing the data to show",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/proposal-management-proposals/006.jpg",
+                "caption": "Manage Columns: choosing and arranging columns",
+                "step": 3
+              }
             ]
           },
           {
@@ -22154,6 +22516,13 @@ const MODULES = [
             "steps": [
               "Open the proposal and use the <strong>Follow Up</strong> feature.",
               "Set a <strong>Recurrence Type</strong> — Daily, Weekly, Monthly, or None — to schedule repeated reminders, or send a one-time email."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/proposal-management-proposals/013.jpg",
+                "caption": "Follow Up: reminder emails to customers, with a recurrence type",
+                "step": 1
+              }
             ]
           },
           {
@@ -22169,6 +22538,23 @@ const MODULES = [
             "steps": [
               "In the proposal's <strong>Teams</strong> tab, click <strong>Add User</strong> to select individuals from the global roster, or <strong>Add Crew</strong> to add a crew from Global Data.",
               "Use the kebab menu's <strong>Delete</strong> to remove a member."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/proposal-management-proposals-teams/001.jpg",
+                "caption": "Add User: choosing from the global roster",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/proposal-management-proposals-teams/002.jpg",
+                "caption": "Add Crew: choosing from the crews in Global Data",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/proposal-management-proposals-teams/003.jpg",
+                "caption": "Delete, in the three-dot menu, to remove a member",
+                "step": 2
+              }
             ]
           },
           {
@@ -22177,6 +22563,13 @@ const MODULES = [
               "In the proposal Profile, click <strong>Comments</strong> to add comments and attachments.",
               "Use the comment menu to <strong>Edit</strong> or <strong>Delete</strong> your own comment.",
               "Use <strong>Add to Report</strong> to pin a comment for inclusion in the weekly report."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/proposal-management-proposals-profile/007.jpg",
+                "caption": "Comments on a proposal, with like and search",
+                "step": 1
+              }
             ]
           },
           {
@@ -22194,6 +22587,132 @@ const MODULES = [
               "Enter the Title, Date, Time, Category, and Description."
             ],
             "note": "Events created here are automatically linked to the Proposal module and can sync with Outlook via Global Data → Marketplace → Microsoft Outlook."
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/proposal-management-proposals/002.jpg",
+            "caption": "Status Legend: the number of proposals in each status"
+          },
+          {
+            "src": "assets/notion/proposal-management-proposals/007.jpg",
+            "caption": "Grid, Table and Kanban views, with Save Layout"
+          },
+          {
+            "src": "assets/notion/proposal-management-proposals/008.jpg",
+            "caption": "Duplicate, to copy an existing proposal"
+          },
+          {
+            "src": "assets/notion/proposal-management-proposals/009.jpg",
+            "caption": "Choosing what to include in the duplicated proposal"
+          },
+          {
+            "src": "assets/notion/proposal-management-proposals/010.jpg",
+            "caption": "Approve and Reject, shown only to people in the approval workflow"
+          },
+          {
+            "src": "assets/notion/proposal-management-proposals/011.jpg",
+            "caption": "Recent Comments: the latest three comments on a proposal"
+          },
+          {
+            "src": "assets/notion/proposal-management-proposals/012.jpg",
+            "caption": "Chance of Success, based on the selected customers"
+          },
+          {
+            "src": "assets/notion/proposal-management-proposals-profile/001.jpg",
+            "caption": "Project Name and Project Number, created when a proposal is won"
+          },
+          {
+            "src": "assets/notion/proposal-management-proposals-profile/002.jpg",
+            "caption": "Estimators, chosen from the global roster"
+          },
+          {
+            "src": "assets/notion/proposal-management-proposals-profile/003.jpg",
+            "caption": "Projected Amount"
+          },
+          {
+            "src": "assets/notion/proposal-management-proposals-profile/004.jpg",
+            "caption": "Status, which is configured in settings"
+          },
+          {
+            "src": "assets/notion/proposal-management-proposals-profile/005.jpg",
+            "caption": "A configurable section, with fields set in Proposal Types"
+          },
+          {
+            "src": "assets/notion/proposal-management-proposals-profile/006.jpg",
+            "caption": "Assign To, to give people from the global roster access"
+          },
+          {
+            "src": "assets/notion/proposal-management-proposals-profile/008.jpg",
+            "caption": "History: changes, approvals and edits to the proposal"
+          },
+          {
+            "src": "assets/notion/proposal-management-proposals-teams/004.jpg",
+            "caption": "Searching for people or teams"
+          },
+          {
+            "src": "assets/notion/proposal-management-proposals-communication/001.jpg",
+            "caption": "Communication: mail sent from the proposal, including submission package emails"
+          },
+          {
+            "src": "assets/notion/proposal-management-proposals-communication/002.jpg",
+            "caption": "Map, to link one proposal to another"
+          },
+          {
+            "src": "assets/notion/proposal-management-proposals-communication/003.jpg",
+            "caption": "Import Groups, to bring in Outlook groups"
+          },
+          {
+            "src": "assets/notion/proposal-management-proposals-communication/004.jpg",
+            "caption": "Adding an automatic signature to outgoing mail"
+          },
+          {
+            "src": "assets/notion/proposal-management-proposals-documents/001.jpg",
+            "caption": "Documents: folders for the proposal's files"
+          },
+          {
+            "src": "assets/notion/proposal-management-proposals-documents/002.jpg",
+            "caption": "New Folder, for additional documents"
+          },
+          {
+            "src": "assets/notion/proposal-management-proposals-documents/003.jpg",
+            "caption": "Upload Documents into a folder"
+          },
+          {
+            "src": "assets/notion/proposal-management-proposals-documents/004.jpg",
+            "caption": "Download, to get the files in a folder"
+          },
+          {
+            "src": "assets/notion/proposal-management-proposals-status-comments/001.jpg",
+            "caption": "Status and Comments: update the status and see linked documents and assigned users"
+          },
+          {
+            "src": "assets/notion/proposal-management-proposals-status-comments/002.jpg",
+            "caption": "Changing the status on the Proposal Status tab"
+          },
+          {
+            "src": "assets/notion/proposal-management-proposals-status-comments/003.jpg",
+            "caption": "Search People, to find comments by a person"
+          },
+          {
+            "src": "assets/notion/proposal-management-calendar/001.jpg",
+            "caption": "The Proposal Calendar, which can sync with Outlook Calendar"
+          },
+          {
+            "src": "assets/notion/proposal-management-calendar/009.jpg",
+            "caption": "Filters, to show events from one category"
+          },
+          {
+            "src": "assets/notion/proposal-management-calendar/010.jpg",
+            "caption": "Linking an event to Opportunity, Proposal or Bid Management"
+          },
+          {
+            "src": "assets/notion/proposal-management-calendar/011.jpg",
+            "caption": "Editing an event's title, date, time and description"
+          },
+          {
+            "src": "assets/notion/proposal-management-calendar/012.jpg",
+            "caption": "Deleting an event from the calendar"
           }
         ]
       },
@@ -22260,7 +22779,24 @@ const MODULES = [
               "In the proposal's <strong>Submittals</strong> tab, click <strong>Create</strong>.",
               "Choose <strong>Create New Letter</strong> to draft a new template in Google Docs, or <strong>Import From Global Data</strong> to reuse a configured template from Proposal Settings.",
               "If importing, optionally enable <strong>Auto Fill Fields</strong> to populate submittal keys from the proposal profile."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/proposal-management-proposals-submittals-letter/001.jpg",
+                "caption": "Import from Global Data, with Auto Fill Fields",
+                "step": 3
+              }
             ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/proposal-management-proposals-submittals-letter/002.jpg",
+            "caption": "Search, to find submittals"
+          },
+          {
+            "src": "assets/notion/proposal-management-proposals-submittals-letter/003.jpg",
+            "caption": "Deleting a submittal, with a confirmation pop-up"
           }
         ]
       },
@@ -22281,7 +22817,25 @@ const MODULES = [
               "Choose from the forms configured in Proposal Settings → Checklists.",
               "Fill in the fields and click <strong>Submit</strong>."
             ],
-            "note": "Created forms are stored automatically in the Documents tab as a folder."
+            "note": "Created forms are stored automatically in the Documents tab as a folder.",
+            "images": [
+              {
+                "src": "assets/notion/proposal-management-proposals-checklists/001.jpg",
+                "caption": "Checklists: forms for quality, safety and legal checks",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/proposal-management-proposals-checklists/002.jpg",
+                "caption": "Create Form, choosing from the forms set up in settings",
+                "step": 2
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/proposal-management-proposals-checklists/003.jpg",
+            "caption": "Deleting a checklist on a proposal"
           }
         ]
       },
@@ -22313,6 +22867,23 @@ const MODULES = [
               "On the proposal, click <strong>Create Submission Package</strong>.",
               "On the page that opens, pull in data from the proposal's previous tabs: Profile, Documents, Checklists, Submittals, and Attachments.",
               "Choose how to send it: <strong>Email to Client</strong>, <strong>Physical</strong> (mail), or <strong>Client Portal</strong>."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/proposal-management-proposals-submission-packages-logs/001.jpg",
+                "caption": "Create Submission Package, pulling in data from the earlier tabs",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/proposal-management-proposals-submission-packages-logs/002.jpg",
+                "caption": "Choosing what to add and how to send the package",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/proposal-management-proposals-submission-packages-logs/003.jpg",
+                "caption": "Client Portal, to send the package through the client's website",
+                "step": 3
+              }
             ]
           },
           {
@@ -22321,6 +22892,18 @@ const MODULES = [
               "Go to <strong>Proposal Management Settings → Submission Packages → Setup Approval Workflow</strong>.",
               "Click <strong>Create Level</strong> to choose approvers and assign the workflow type (all must approve / any one can approve), plus a level description.",
               "Use Edit or Delete in Actions to manage existing levels."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/proposal-management-proposals-submission-packages-setup/001.jpg",
+                "caption": "Create Level: approvers, workflow type and a level description",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/proposal-management-proposals-submission-packages-setup/002.jpg",
+                "caption": "Delete, to remove a level",
+                "step": 3
+              }
             ]
           },
           {
@@ -22330,7 +22913,19 @@ const MODULES = [
               "Use <strong>Assign To</strong> to assign the issue to a user with a due date.",
               "Click <strong>Resolve</strong> once the underlying problem is fixed."
             ],
-            "note": "A rejected submission package cannot move forward until its linked issue is resolved."
+            "note": "A rejected submission package cannot move forward until its linked issue is resolved.",
+            "images": [
+              {
+                "src": "assets/notion/proposal-management-proposals-submission-packages-workf/001.jpg",
+                "caption": "Search, to find a workflow issue",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/proposal-management-proposals-submission-packages-workf/003.jpg",
+                "caption": "Assign To, with a due date, and Resolve once fixed",
+                "step": 2
+              }
+            ]
           },
           {
             "title": "Check the status and history of a sent submission package",
@@ -22338,6 +22933,16 @@ const MODULES = [
               "Go to the <strong>Submission Packages Logs</strong> tab.",
               "Use the row menu: <strong>Download</strong> to retrieve the package, <strong>History</strong> to see creation and approval status history, <strong>Status</strong> to view/set the configured status, and <strong>Delete</strong> to remove the package."
             ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/proposal-management-proposals-submission-packages-logs/004.jpg",
+            "caption": "Search, to find a submission package in the logs"
+          },
+          {
+            "src": "assets/notion/proposal-management-proposals-submission-packages-workf/002.jpg",
+            "caption": "Grid and Table views for workflow issues, with Save Layout"
           }
         ]
       },
@@ -22357,7 +22962,35 @@ const MODULES = [
               "Open the proposal's <strong>Issues</strong> tab to see any rejection-generated issues.",
               "Use <strong>Search</strong> (by Issue ID) or <strong>Filters</strong> (Log ID, Raised On, Raised By) to find a specific issue.",
               "Use <strong>Assign To</strong> to route the issue to a user for resolution."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/proposal-management-issues/002.jpg",
+                "caption": "The status bar: issues raised, approved and rejected",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/proposal-management-issues/001.jpg",
+                "caption": "Search by Issue ID",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/proposal-management-issues/003.jpg",
+                "caption": "Filters: Log ID, Raised On and more",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/proposal-management-issues/005.jpg",
+                "caption": "Assign To, with a date",
+                "step": 3
+              }
             ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/proposal-management-issues/004.jpg",
+            "caption": "Grid and Table views for issues"
           }
         ]
       },
@@ -22378,7 +23011,50 @@ const MODULES = [
               "Fill in Title, Description, Date, and Time, then submit.",
               "Use <strong>Assign To</strong> to assign the task to a user.",
               "Click the double-tick icon to mark a task complete."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/proposal-management-to-do/001.jpg",
+                "caption": "The To Do list, with Create To Do List",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/proposal-management-to-do/009.jpg",
+                "caption": "Assign To, listing the system users from Global Data",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/proposal-management-to-do/011.jpg",
+                "caption": "The double tick, which changes a to-do item's status",
+                "step": 4
+              }
             ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/proposal-management-to-do/002.jpg",
+            "caption": "Search, to find a to-do item"
+          },
+          {
+            "src": "assets/notion/proposal-management-to-do/003.jpg",
+            "caption": "Manage Columns for the table view"
+          },
+          {
+            "src": "assets/notion/proposal-management-to-do/004.jpg",
+            "caption": "Grid and Table views, with Save Layout"
+          },
+          {
+            "src": "assets/notion/proposal-management-to-do/005.jpg",
+            "caption": "Editing or deleting a to-do item from its three-dot menu in Grid view"
+          },
+          {
+            "src": "assets/notion/proposal-management-to-do/008.jpg",
+            "caption": "Filters and hide options for columns"
+          },
+          {
+            "src": "assets/notion/proposal-management-to-do/010.jpg",
+            "caption": "Edit and delete in the Actions column"
           }
         ]
       },
@@ -22402,7 +23078,39 @@ const MODULES = [
               "Go to <strong>Proposal Management → My Dashboard</strong>.",
               "Review Total Proposals by status (Created, In Progress, Approved/Rejected), the Estimate Success Rate graph, Calendar Events, summaries of Issues/Forms/Approvals/Proposals, the To Do List, and Proposal Deadlines based on due dates."
             ],
-            "note": "Data shown is scoped to the logged-in user unless they are a system admin, in which case it covers the whole module."
+            "note": "Data shown is scoped to the logged-in user unless they are a system admin, in which case it covers the whole module.",
+            "images": [
+              {
+                "src": "assets/notion/proposal-management-dashboard/001.jpg",
+                "caption": "My Dashboard in Proposal Management",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/proposal-management-dashboard/002.jpg",
+                "caption": "Total Proposals by status",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/proposal-management-dashboard/003.jpg",
+                "caption": "The Estimate Success Rate graph",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/proposal-management-dashboard/004.jpg",
+                "caption": "Calendar Events, with Create Event",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/proposal-management-dashboard/005.jpg",
+                "caption": "Recent proposals with the total count",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/proposal-management-dashboard/006.jpg",
+                "caption": "Proposal Deadlines, based on proposal due dates",
+                "step": 2
+              }
+            ]
           }
         ]
       },
@@ -22426,6 +23134,23 @@ const MODULES = [
               "Open the <strong>Proposal Success Rate</strong> report.",
               "Use the Proposal Type dropdown to filter.",
               "Click legend items on either pie chart to toggle specific statuses on or off."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/proposal-success-rate/001.jpg",
+                "caption": "Success Rate by quantity of proposals, as a pie chart",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/proposal-success-rate/002.jpg",
+                "caption": "Success Rate by currency value, as a pie chart",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/proposal-success-rate/003.jpg",
+                "caption": "The Proposal Type drop-down",
+                "step": 2
+              }
             ]
           },
           {
@@ -22434,7 +23159,107 @@ const MODULES = [
               "Open the <strong>Types of Proposals</strong> report.",
               "Adjust the date range as needed.",
               "Download the report in Excel, PDF, PPT, or JPEG."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/types-of-proposals/001.jpg",
+                "caption": "Types of Proposals versus quantity",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/types-of-proposals/002.jpg",
+                "caption": "Types of Proposals versus amount",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/types-of-proposals/003.jpg",
+                "caption": "Adjusting the date range; legend items turn bars on and off",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/types-of-proposals/004.jpg",
+                "caption": "Download and Full Screen for the bar graph",
+                "step": 3
+              }
             ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/proposal-success-rate/004.jpg",
+            "caption": "Download and Full Screen for each pie chart"
+          },
+          {
+            "src": "assets/notion/estimate-success-rate/001.jpg",
+            "caption": "Estimate Success Rate: the number of proposals in each status"
+          },
+          {
+            "src": "assets/notion/estimate-success-rate/002.jpg",
+            "caption": "Choosing proposal types and a date range"
+          },
+          {
+            "src": "assets/notion/estimate-success-rate/003.jpg",
+            "caption": "Download and Full Screen for the bar graph"
+          },
+          {
+            "src": "assets/notion/success-estimate-over-time/001.jpg",
+            "caption": "Success Over Time: submitted project amount by date for each year"
+          },
+          {
+            "src": "assets/notion/success-estimate-over-time/002.jpg",
+            "caption": "Estimate Over Time: estimated project amount by date for each year"
+          },
+          {
+            "src": "assets/notion/success-estimate-over-time/003.jpg",
+            "caption": "Filtering by proposal type and status"
+          },
+          {
+            "src": "assets/notion/success-estimate-over-time/005.jpg",
+            "caption": "Legend items turn data on and off"
+          },
+          {
+            "src": "assets/notion/profit-over-time/001.jpg",
+            "caption": "Profit Over Time: contract amount minus projected cost, by year"
+          },
+          {
+            "src": "assets/notion/profit-over-time/002.jpg",
+            "caption": "Estimating Cost and Profit Over Time"
+          },
+          {
+            "src": "assets/notion/best-and-worst-clients/001.jpg",
+            "caption": "Best and Worst Clients, by customer or customer location, with a threshold value"
+          },
+          {
+            "src": "assets/notion/weekly-report/001.jpg",
+            "caption": "Weekly Report: proposal progress for the week by proposal type"
+          },
+          {
+            "src": "assets/notion/weekly-report/002.jpg",
+            "caption": "Date range, comments, download, share and print"
+          },
+          {
+            "src": "assets/notion/weekly-report/003.jpg",
+            "caption": "Layout Settings: page size and page header"
+          },
+          {
+            "src": "assets/notion/estimator-work-schedule-report/001.jpg",
+            "caption": "Estimator Work Schedule: proposal IDs, people, sites and months"
+          },
+          {
+            "src": "assets/notion/follow-up-report/001.jpg",
+            "caption": "Follow-Up Report: actions taken after an event or meeting"
+          },
+          {
+            "src": "assets/notion/follow-up-report/002.jpg",
+            "caption": "Export, to download the report as Excel or PDF"
+          },
+          {
+            "src": "assets/notion/report/001.jpg",
+            "caption": "The Report: a summary of all the analytics"
+          },
+          {
+            "src": "assets/notion/report/002.jpg",
+            "caption": "Choosing the date range and downloading the PDF"
           }
         ]
       }
@@ -22450,12 +23275,17 @@ const MODULES = [
       "Open a proposal to reach its Bid, Submission Package, Submittals, Checklists, Teams, Documents, Communication, and Calendar tabs."
     ],
     "sections": [
-      {
-        "id": "proposal-management-qa",
-        "heading": "Common Questions",
-        "html": "<p>Answers sourced from Arena's documentation.</p>",
-        "qa": []
-      }
+      "Admin Role",
+      "Settings",
+      "Proposals",
+      "Bids",
+      "Submittals",
+      "Checklists",
+      "Submission Packages",
+      "Issues",
+      "To Do",
+      "Dashboard",
+      "Analytics & Reports"
     ]
   },
   {
@@ -22520,7 +23350,25 @@ const MODULES = [
               "Go to <strong>Proposal Management Settings → Bid Types</strong> (equivalently, <strong>Global Data → Company → Proposal Management → Bid Types</strong>).",
               "Click <strong>Bid Type</strong> to open the creation form.",
               "Enter a <strong>Name</strong> and <strong>Description</strong>, and choose the <strong>Estimate Type</strong> that defines how bids of this type will be structured and evaluated."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/proposal-management-global-bid-types/001.jpg",
+                "caption": "Bid Type: the pop-up with Name, Description and Estimate Type",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/proposal-management-global-bid-types/002.jpg",
+                "caption": "Editing a bid type's name, description and estimate type",
+                "step": 3
+              }
             ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/proposal-management-global-bid-types/004.jpg",
+            "caption": "Deleting a bid type, with a warning"
           }
         ]
       },
@@ -22545,6 +23393,13 @@ const MODULES = [
               "Open the relevant proposal and go to its <strong>Bid</strong> tab.",
               "Click <strong>Create Bid</strong>.",
               "Fill in <strong>Bid Name</strong>, <strong>Description</strong>, the parent <strong>Proposal</strong>, and <strong>Bid Type</strong>."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/proposal-management-bid/001.jpg",
+                "caption": "Create Bid: the pop-up with Bid Name, Description, Proposal and Bid Type",
+                "step": 3
+              }
             ]
           },
           {
@@ -22552,6 +23407,13 @@ const MODULES = [
             "steps": [
               "Open the proposal and go to its <strong>Bid</strong> tab.",
               "Use the <strong>Search</strong> option to look up bids linked to that particular proposal."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/proposal-management-bid/002.jpg",
+                "caption": "Search, to find the bids linked to a proposal",
+                "step": 2
+              }
             ]
           },
           {
@@ -22560,6 +23422,18 @@ const MODULES = [
               "Open the proposal's <strong>Bid</strong> tab.",
               "Click <strong>Exports</strong>, then <strong>Upload excel</strong> to bulk-create bids from a spreadsheet.",
               "Alternatively, click <strong>Download Excel</strong> to export existing bid data."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/proposal-management-bid/003.jpg",
+                "caption": "Exports, with Download Excel and Upload Excel",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/proposal-management-bid/004.jpg",
+                "caption": "Upload Excel, to create bids from a spreadsheet",
+                "step": 2
+              }
             ]
           },
           {
@@ -22567,7 +23441,24 @@ const MODULES = [
             "steps": [
               "From the Bids list, choose <strong>Table View</strong>, <strong>Grid View</strong>, or <strong>Kanban View</strong> depending on how you want to review bids.",
               "Click <strong>Save layout</strong> to keep your chosen view as the default the next time you open the screen."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/proposal-management-bid/007.jpg",
+                "caption": "Table, Grid and Kanban views, with Save Layout",
+                "step": 1
+              }
             ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/proposal-management-bid/005.jpg",
+            "caption": "Filters on the Bids list"
+          },
+          {
+            "src": "assets/notion/proposal-management-bid/006.jpg",
+            "caption": "Manage Columns: hiding or rearranging columns"
           }
         ]
       },
@@ -22604,6 +23495,28 @@ const MODULES = [
               "Link the new RFQ to the relevant <strong>requisitions (REQ)</strong>.",
               "Update quantities and specifications as needed for the scope being quoted.",
               "Select vendors from the pre-configured vendor list — vendor ratings shown next to each name can help guide your selection."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/procurement-rfq/002.jpg",
+                "caption": "Create, to start a new RFQ",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/procurement-rfq/003.jpg",
+                "caption": "Linking procurement packages to their requisitions",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/procurement-rfq/004.jpg",
+                "caption": "Updating quantities and specifications",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/procurement-rfq/005.jpg",
+                "caption": "Vendor ratings shown next to each vendor's name",
+                "step": 4
+              }
             ]
           },
           {
@@ -22611,6 +23524,13 @@ const MODULES = [
             "steps": [
               "In <strong>Procurement → RFQ</strong>, click <strong>Vendor Instructions</strong>.",
               "Configure the default guidelines, terms, and conditions that should be sent to vendors for consistent communication across all RFQs."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/procurement-rfq/006.jpg",
+                "caption": "Vendor instructions with guidelines, terms and conditions",
+                "step": 2
+              }
             ]
           },
           {
@@ -22618,6 +23538,13 @@ const MODULES = [
             "steps": [
               "Go to <strong>Procurement → RFQ</strong> and review the card view.",
               "Each card shows the RFQ's current stage — such as <strong>Created</strong>, <strong>Email Sent to Vendors</strong>, or <strong>PO Approved</strong> — along with key information for assessing what action is pending."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/procurement-rfq/007.jpg",
+                "caption": "The RFQ list, to check progress and pending actions",
+                "step": 1
+              }
             ]
           }
         ]
@@ -22642,6 +23569,18 @@ const MODULES = [
               "Go to <strong>Procurement → Vendor Responses</strong>.",
               "Select the relevant <strong>RFQ</strong> from the list on the left.",
               "Enter each vendor's response, including <strong>cost</strong> and <strong>lead time</strong>."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/procurement-vendor-responses/002.jpg",
+                "caption": "Choosing the RFQ to record vendor responses for",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/procurement-vendor-responses/003.jpg",
+                "caption": "Entering a vendor's costs and lead time",
+                "step": 3
+              }
             ]
           },
           {
@@ -22649,6 +23588,13 @@ const MODULES = [
             "steps": [
               "After entering vendor responses in <strong>Procurement → Vendor Responses</strong>, open the <strong>Vendor Analysis and Selection</strong> tab.",
               "Evaluate and compare the vendor responses based on cost, lead time, and any other relevant factors to decide on a winning vendor."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/procurement-vendor-responses/004.jpg",
+                "caption": "Comparing vendor responses by cost, lead time and other factors",
+                "step": 2
+              }
             ]
           }
         ]
@@ -22668,6 +23614,13 @@ const MODULES = [
             "steps": [
               "Create an event within the <strong>Proposal Management Calendar</strong>.",
               "Link the event to the appropriate module — <strong>Opportunity</strong>, <strong>Proposal</strong>, or <strong>Bid Management</strong> — so the deadline is visible in the context of the related record."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/proposal-management-calendar/010.jpg",
+                "caption": "Linking an event to Opportunity, Proposal or Bid Management",
+                "step": 2
+              }
             ]
           }
         ]
@@ -22684,12 +23637,12 @@ const MODULES = [
       "For bid creation, open a proposal's <strong>Bid</strong> tab. For vendor quote comparison, go to <strong>Procurement → RFQ</strong> and <strong>Vendor Responses</strong>."
     ],
     "sections": [
-      {
-        "id": "tender-management-qa",
-        "heading": "Common Questions",
-        "html": "<p>Answers sourced from Arena's documentation.</p>",
-        "qa": []
-      }
+      "Admin Role",
+      "Bid Types",
+      "Bids",
+      "RFQ",
+      "Bid Comparison",
+      "Proposals"
     ]
   },
   {
@@ -22778,6 +23731,18 @@ const MODULES = [
               "Go to <strong>Procurement Settings &gt; REQ Form</strong>.",
               "Use the form builder to add sections and choose field types (paragraph, single select, multi-select, tables, etc.) for each.",
               "Save your changes."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/procurement-settings-req-form/001.jpg",
+                "caption": "REQ Form settings",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/procurement-settings-req-form/002.jpg",
+                "caption": "The form builder for the requisition form",
+                "step": 2
+              }
             ]
           },
           {
@@ -22786,6 +23751,18 @@ const MODULES = [
               "Go to <strong>Procurement Settings &gt; PO Configuration</strong>.",
               "Select the tab for the procurement type you want to configure: <strong>Material</strong>, <strong>Equipment</strong>, <strong>Equipment Part</strong>, or <strong>Delivery Service</strong>.",
               "Use the form builder to configure that type's fields separately from the others."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/procurement-settings-po-configuration/001.jpg",
+                "caption": "PO Configuration settings",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/procurement-settings-po-configuration/002.jpg",
+                "caption": "The form builder for each procurement type",
+                "step": 3
+              }
             ]
           },
           {
@@ -22793,6 +23770,18 @@ const MODULES = [
             "steps": [
               "Go to <strong>Procurement Settings &gt; Delivery Request</strong>.",
               "Use the form builder to configure the Delivery Receipt form for <strong>Material</strong>, <strong>Equipment</strong>, <strong>Equipment Part</strong>, and <strong>Delivery Service</strong>."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/procurement-settings-delivery-request/001.jpg",
+                "caption": "Delivery Request settings",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/procurement-settings-delivery-request/002.jpg",
+                "caption": "The form builder for Delivery Receipts",
+                "step": 2
+              }
             ]
           },
           {
@@ -22800,6 +23789,18 @@ const MODULES = [
             "steps": [
               "Go to <strong>Procurement Settings &gt; Invoice</strong>.",
               "Use the form builder to configure the invoice form for <strong>Equipment</strong>, <strong>Material</strong>, <strong>Equipment Part</strong>, and <strong>Delivery Service</strong>, adding multiple sections and field types as needed."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/procurement-settings-invoice/001.jpg",
+                "caption": "Invoice settings",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/procurement-settings-invoice/002.jpg",
+                "caption": "The form builder for invoices, with a tab for each procurement type",
+                "step": 2
+              }
             ]
           },
           {
@@ -22808,6 +23809,18 @@ const MODULES = [
               "Go to <strong>Procurement Settings &gt; Pickup Request</strong>.",
               "Configure the form fields using the form builder.",
               "Click <strong>Save changes</strong>."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/procurement-settings-pickup-request/001.jpg",
+                "caption": "Pickup Request settings",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/procurement-settings-pickup-request/002.jpg",
+                "caption": "The form builder for the pickup request, then Save changes",
+                "step": 3
+              }
             ]
           },
           {
@@ -22818,7 +23831,24 @@ const MODULES = [
               "For each level, choose <strong>All must approve</strong> or <strong>Any one can approve</strong>.",
               "Repeat to add as many levels as your sign-off process requires."
             ],
-            "note": "This single workflow configuration applies across Requisition forms, Purchase Orders, Invoices, and Pickup Requests — you are not configuring approvals separately for each document type."
+            "note": "This single workflow configuration applies across Requisition forms, Purchase Orders, Invoices, and Pickup Requests — you are not configuring approvals separately for each document type.",
+            "images": [
+              {
+                "src": "assets/notion/procurement-settings-approval-workflow/001.jpg",
+                "caption": "Approval Workflow settings for requisitions, purchase orders, invoices and pickup requests",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/procurement-settings-approval-workflow/002.jpg",
+                "caption": "Create Level, with All must approve or Any one can approve",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/procurement-settings-approval-workflow/003.jpg",
+                "caption": "A workflow with several levels",
+                "step": 4
+              }
+            ]
           },
           {
             "title": "Configure ID formats for procurement documents",
@@ -22828,7 +23858,14 @@ const MODULES = [
               "For Custom, check the fields to include — Date, Month, Year, Serial No./ID, Requester Initials First/Last Name, Project Number — drag them into the order you want, and pick an ID Separator (<strong>/</strong>, <strong>-</strong>, or none). The Example Format at the top updates live as you check fields.",
               "Click <strong>Save Changes</strong>."
             ],
-            "note": "Checking Project Number adds the project's number as an extra segment of the ID (e.g. an example format changes from \"PO ID\" to \"PO ID/PN\"). It does not restart the Serial No./ID counter per project — that counter keeps counting company-wide regardless of which fields are included."
+            "note": "Checking Project Number adds the project's number as an extra segment of the ID (e.g. an example format changes from \"PO ID\" to \"PO ID/PN\"). It does not restart the Serial No./ID counter per project — that counter keeps counting company-wide regardless of which fields are included.",
+            "images": [
+              {
+                "src": "assets/notion/procurement-id-settings/002.jpg",
+                "caption": "ID format options for a document type",
+                "step": 3
+              }
+            ]
           },
           {
             "title": "Set priority levels for Delivery Receipt inspection issues",
@@ -22837,7 +23874,14 @@ const MODULES = [
               "Click <strong>Add Priority</strong>.",
               "Name the priority level and set its <strong>Due Hours</strong> — the SLA for rectifying an issue raised at that priority."
             ],
-            "note": "This priority list is specifically for issues raised while inspecting a Delivery Receipt (see Delivery Receipts → Inspection Issues), not a general-purpose priority list for every procurement document. A verified environment had High (4 hours), Medium (24 hours), and Low (48 hours)."
+            "note": "This priority list is specifically for issues raised while inspecting a Delivery Receipt (see Delivery Receipts → Inspection Issues), not a general-purpose priority list for every procurement document. A verified environment had High (4 hours), Medium (24 hours), and Low (48 hours).",
+            "images": [
+              {
+                "src": "assets/notion/procurement-settings-issues-priority/002.jpg",
+                "caption": "Adding a priority level with its due hours",
+                "step": 2
+              }
+            ]
           }
         ]
       },
@@ -22906,7 +23950,24 @@ const MODULES = [
               "Fill <strong>Job Location</strong> and <strong>Delivery Location</strong> (with Zip Code/City/State for each), <strong>Project Manager</strong>, <strong>On-Site Contact</strong>, <strong>Assignee</strong>, and <strong>Phone Number</strong>.",
               "Click <strong>Submit</strong> — the REQ appears with status <strong>Created</strong>."
             ],
-            "note": "Which extra fields and sections appear (beyond the required ones) depends on how the Module Admin built that requisition type's form in Settings → Requisition Form (REQ)."
+            "note": "Which extra fields and sections appear (beyond the required ones) depends on how the Module Admin built that requisition type's form in Settings → Requisition Form (REQ).",
+            "images": [
+              {
+                "src": "assets/notion/procurement-req/001.jpg",
+                "caption": "The Requisition Form screen",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/procurement-req/002.jpg",
+                "caption": "Choosing the requisition type: Equipment, Material, Equipment Part or Delivery Service",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/procurement-req/003.jpg",
+                "caption": "The requisition form with item details, ready to Submit",
+                "step": 4
+              }
+            ]
           },
           {
             "title": "Check a requisition's approval chain",
@@ -22923,7 +23984,14 @@ const MODULES = [
               "Click <strong>Assign To</strong>.",
               "Select the user who should own sourcing this requisition."
             ],
-            "note": "Assigning a REQ does not change who created it — it designates who is responsible for moving it forward, which is useful when a purchasing team splits work by category or vendor relationship."
+            "note": "Assigning a REQ does not change who created it — it designates who is responsible for moving it forward, which is useful when a purchasing team splits work by category or vendor relationship.",
+            "images": [
+              {
+                "src": "assets/notion/procurement-req/004.jpg",
+                "caption": "Assign To, to give the requisition to a user",
+                "step": 2
+              }
+            ]
           },
           {
             "title": "Create a requisition from a rejected Load Out Request",
@@ -22933,7 +24001,14 @@ const MODULES = [
               "Select the rejected Load Out Request you want to convert.",
               "Complete and submit the resulting requisition."
             ],
-            "note": "This is the standard path when an equipment need can't be met from current inventory — instead of the LOR staying stuck, it becomes a purchasing request."
+            "note": "This is the standard path when an equipment need can't be met from current inventory — instead of the LOR staying stuck, it becomes a purchasing request.",
+            "images": [
+              {
+                "src": "assets/notion/procurement-req/005.jpg",
+                "caption": "LOR from REQ, to start a requisition from a rejected Load Out Request",
+                "step": 2
+              }
+            ]
           },
           {
             "title": "Review rejected requisitions",
@@ -22975,6 +24050,33 @@ const MODULES = [
               "<strong>Step 2 – Update Quantities:</strong> for each selected REQ's line items, review Requested Quantity and Remaining Quantity, and set the Procuring Quantity.",
               "<strong>Step 3 – Identify Vendors:</strong> pick a Vendor Category, Vendor Sub Category, and Category Groups, then <strong>+ Add Vendors</strong> (or <strong>+ Register Vendors</strong> if the vendor isn't in the list yet). Fill Company Point of Contact (Contact Person Name and Email).",
               "Click <strong>Save</strong>, or <strong>Save</strong> and send the email to vendors right away."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/procurement-rfq/001.jpg",
+                "caption": "The RFQ screen",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/procurement-rfq/002.jpg",
+                "caption": "Create, to start a new RFQ",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/procurement-rfq/003.jpg",
+                "caption": "Linking procurement packages to their requisitions",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/procurement-rfq/004.jpg",
+                "caption": "Updating quantities and specifications",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/procurement-rfq/005.jpg",
+                "caption": "Vendor ratings shown next to each vendor's name",
+                "step": 4
+              }
             ]
           },
           {
@@ -22984,7 +24086,20 @@ const MODULES = [
               "Click <strong>+ Add Instruction</strong>.",
               "Name the instruction, write its description, and choose which vendors it applies to.",
               "Click <strong>Submit</strong>."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/procurement-rfq/006.jpg",
+                "caption": "Vendor instructions with guidelines, terms and conditions",
+                "step": 3
+              }
             ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/procurement-rfq/007.jpg",
+            "caption": "The RFQ list, to check progress and pending actions"
           }
         ]
       },
@@ -23015,6 +24130,28 @@ const MODULES = [
               "Move to <strong>2 Vendor Analysis & Selection</strong> to compare all recorded responses.",
               "Optionally switch to <strong>Chart View</strong> to see a price bar chart per equipment item across vendors.",
               "Pick the winning vendor and click <strong>Submit</strong>."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/procurement-vendor-responses/001.jpg",
+                "caption": "Vendor Responses, for recording vendor quotes",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/procurement-vendor-responses/002.jpg",
+                "caption": "Choosing the RFQ to record responses for",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/procurement-vendor-responses/003.jpg",
+                "caption": "Entering a vendor's costs and lead time",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/procurement-vendor-responses/004.jpg",
+                "caption": "Comparing vendor responses by cost and lead time",
+                "step": 4
+              }
             ]
           }
         ]
@@ -23058,6 +24195,28 @@ const MODULES = [
               "Select the RFQ marked <strong>PO Approved</strong>.",
               "On the Create Purchase Order Form, search for and select the <strong>Vendor</strong>, review the previewed company Address/Phone/Zip Code, and enter pricing and the tax code.",
               "Click <strong>Submit</strong>."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/procurement-purchase-order/001.jpg",
+                "caption": "The Purchase Order screen",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/procurement-purchase-order/002.jpg",
+                "caption": "Create, to start a new Purchase Order",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/procurement-purchase-order/003.jpg",
+                "caption": "Choosing the RFQ to link the Purchase Order to",
+                "step": 4
+              },
+              {
+                "src": "assets/notion/procurement-purchase-order/004.jpg",
+                "caption": "Submit, to finish the Purchase Order",
+                "step": 6
+              }
             ]
           },
           {
@@ -23071,13 +24230,42 @@ const MODULES = [
               "In the Preview PO step, select the vendor and tax code.",
               "Click <strong>Submit</strong>."
             ],
-            "note": "Use this path when a competitive quote isn't necessary and you already know the vendor and price."
+            "note": "Use this path when a competitive quote isn't necessary and you already know the vendor and price.",
+            "images": [
+              {
+                "src": "assets/notion/procurement-direct-purchase-order/001.jpg",
+                "caption": "Direct Purchase Order: created from a requisition without an RFQ",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/procurement-direct-purchase-order/002.jpg",
+                "caption": "Choosing the requisition to link the Purchase Order to",
+                "step": 4
+              },
+              {
+                "src": "assets/notion/procurement-direct-purchase-order/003.jpg",
+                "caption": "Entering pricing and lead time",
+                "step": 5
+              },
+              {
+                "src": "assets/notion/procurement-direct-purchase-order/004.jpg",
+                "caption": "Preview PO, with the tax code chosen",
+                "step": 6
+              }
+            ]
           },
           {
             "title": "View all Purchase Orders and their status",
             "steps": [
               "Go to <strong>Procurement &gt; Purchase Order Master</strong>.",
               "Browse the full list of Purchase Orders. Click <strong>Click here to view</strong> under Item Details, History, or REQ Details for the drill-down you need, or check Total Cost / Total Invoice Cost / Balance Cost and Invoice status to see how much of a PO has been billed."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/procurement-purchase-order-master/001.jpg",
+                "caption": "Purchase Order Master: every Purchase Order with its status, history and linked requisitions",
+                "step": 2
+              }
             ]
           },
           {
@@ -23112,6 +24300,28 @@ const MODULES = [
               "Expand the PO to see its REQ line items and assign each as needed.",
               "Fill in the receiving quantity and any additional information.",
               "Click <strong>Submit</strong>."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/procurement-delivery-receipts/001.jpg",
+                "caption": "The Delivery Receipts screen",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/procurement-delivery-receipts/002.jpg",
+                "caption": "Creating a new Delivery Receipt",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/procurement-delivery-receipts/003.jpg",
+                "caption": "Choosing the Purchase Order to link the receipt to",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/procurement-delivery-receipts/004.jpg",
+                "caption": "Submit, to confirm the Delivery Receipt",
+                "step": 5
+              }
             ]
           },
           {
@@ -23145,6 +24355,18 @@ const MODULES = [
               "Select the items being billed.",
               "Enter the subtotal and tax amount.",
               "Submit the invoice."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/procurement-invoices/001.jpg",
+                "caption": "Choosing the Purchase Order the invoice is for",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/procurement-invoices/002.jpg",
+                "caption": "Choosing the items from the Purchase Order to bill",
+                "step": 5
+              }
             ]
           }
         ]
@@ -23171,6 +24393,33 @@ const MODULES = [
               "Select the Vendor and the REQ/RFQ the item was procured through.",
               "Fill in the Pickup Date/Time, Job ID/Job Name, and Address.",
               "Click <strong>Submit</strong> — the request starts at status <strong>Created</strong>, then moves through Approve, Vendor Pickup Request Created, Picked up from Site, to Closed."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/procurement-pickup-request/001.jpg",
+                "caption": "The Pickup Request screen",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/procurement-pickup-request/002.jpg",
+                "caption": "Create, to start a pickup request",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/procurement-pickup-request/003.jpg",
+                "caption": "Choosing the vendor and Purchase Order",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/procurement-pickup-request/004.jpg",
+                "caption": "Pickup date, address and status",
+                "step": 4
+              },
+              {
+                "src": "assets/notion/procurement-pickup-request/005.jpg",
+                "caption": "Submit, to create the pickup request",
+                "step": 5
+              }
             ]
           }
         ]
@@ -23194,6 +24443,13 @@ const MODULES = [
             "steps": [
               "Go to <strong>Procurement &gt; Communications</strong>.",
               "Browse the tracked emails linked to procured items, or click <strong>Compose Mail</strong> to send a new one."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/procurement-communications/001.jpg",
+                "caption": "Communications: mail linked to procured items",
+                "step": 2
+              }
             ]
           },
           {
@@ -23217,7 +24473,19 @@ const MODULES = [
       "From <strong>Home</strong>, click the <strong>Procurement</strong> tile.",
       "Second-level tabs include REQ, RFQ, Vendor Responses, Purchase Order, Direct Purchase Order, Purchase Order Master, Delivery Receipts, Invoices, Pickup Request, and Communications."
     ],
-    "sections": ["Who Sets Up Procurement","Configure Procurement Forms & Settings","Procurement Analytics Dashboard","Requisitions","RFQ","Vendor Responses","Purchase Orders","Delivery Receipts","Invoices","Pickup Requests","Communications"]
+    "sections": [
+      "Who Sets Up Procurement",
+      "Configure Procurement Forms & Settings",
+      "Procurement Analytics Dashboard",
+      "Requisitions",
+      "RFQ",
+      "Vendor Responses",
+      "Purchase Orders",
+      "Delivery Receipts",
+      "Invoices",
+      "Pickup Requests",
+      "Communications"
+    ]
   },
   {
     "id": "time-management",
