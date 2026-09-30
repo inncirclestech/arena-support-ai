@@ -4171,8 +4171,8 @@ const QA_PROJECTSETUP = [
     scope: "project",
     section: "Works",
     question: "Where do I define the plants or work packages that make up a project?",
-    answer: "Go to Project Setup → Works. The left panel shows the project's core identity data (Project Name/ID, Construction Type, Status, Location, Owner Rep, CSE-PMC, Project Type, Funding & Implementing Agency), and the right panel lists a card for every work package or plant on the project (for example Pellet Plant, Basic Oxygen Furnace, Blast Furnace, Coke Oven, Cold Rolling Mill, External Works, Hot Strip Mill, IBMD, Lime Dolomite Plant, Oxygen Plant, RMHS, Sinter Plant, Slab Caster), each showing Description, Created By, Physical Progress, and Financial Details, plus a \"Know More\" link for details. Use Create to add a new one, or Upload Excel/Download Excel to manage the list in bulk.",
-    tags: ["works","work packages","plants","project WBS","create work package"]
+    answer: "Go to **Project Setup → Works**. The left panel shows the project identity (name, number, Construction Type, Status, Location, Owner Representative, CSE / PMC, Project Type, Funding and Implementing Agency) and the right side has a card for each plant (13 on Arena Steel Plant - Phase 1). Use **Create** to add one, then open its arrow to add **Entities**, **Super Locations**, **Locations** and **Work Packages**.",
+    tags: ["works","define plants","work packages","tree version","project structure","create plant"]
   },
   {
     action: "view",
@@ -4198,8 +4198,8 @@ const QA_PROJECTSETUP = [
     scope: "project",
     section: "Tasks",
     question: "Where do I create and track general project tasks, separate from field productivity logs?",
-    answer: "Go to Project Setup → Tasks → Tasks. Use Create to add a task, Manage Columns to control which fields show in the grid, Filters to narrow the list, and Upload/Download Excel for bulk management; a grid/list view toggle lets you switch how tasks are displayed. This is a general-purpose task tracker for the project team (a PM/Module Manager typically owns it), distinct from the phase-code-driven productivity and quantity logging done in Field Works.",
-    tags: ["project tasks","task management","create task","manage columns"]
+    answer: "Go to **Project Setup → Tasks → Tasks**. Toolbar: **Create**, **Manage Columns**, **Filters**, **Upload Excel**, **Download Excel**, and **Grid**, **Table** or **Kanban** views. If you see \"Task Form is not configured in project settings\", first set the fields under **Project Settings → Configure Task Form**.",
+    tags: ["project tasks","create task","task tracker","kanban tasks","tasks project setup"]
   },
   {
     action: "view",
@@ -4207,8 +4207,8 @@ const QA_PROJECTSETUP = [
     scope: "project",
     section: "Tasks",
     question: "Where can I see discussion or updates tied to a specific project task?",
-    answer: "Go to Project Setup → Tasks → Communication, the second sub-tab alongside Tasks. It keeps task-related discussion attached to the task record itself, so a PM/Module Manager and the assigned team don't have to reconstruct context from email or chat threads outside Arena.",
-    tags: ["task communication","task discussion","task updates"]
+    answer: "Project Setup → Tasks has a **Communication** sub-tab, a project mailbox with **Compose Mail** and folders **All Emails**, **Inbox**, **Sent**, **Drafts**, **Starred** and **Trash**. Its mail service follows **Global Data → Settings → Mail Settings** (ARENA COMMUNICATIONS).",
+    tags: ["task communication","task mail","project mailbox","communication tab"]
   },
   {
     action: "view",
@@ -4234,8 +4234,8 @@ const QA_PROJECTSETUP = [
     scope: "project",
     section: "People",
     question: "If I copy a crew from Global Data into my project, will it stay in sync if the Global Data crew changes later?",
-    answer: "No. Copying a crew from Global Data into a project via Project Crews is a one-time copy, not a live reference. If the source Global Data crew's roster changes afterward (workers added or removed), that change does not automatically propagate into any project that already copied it. A PM who wants a project's crew to reflect the latest company roster needs to manually re-copy it — crew rosters can silently drift out of sync between Global Data and individual projects otherwise.",
-    tags: ["crew sync","crew drift","one-time copy","global data crew","roster mismatch"]
+    answer: "Treat it as a copy. **Copy Crews from Global Data** brings the selected crews into **Project Crews**. Whether later changes to the company crew reach the project copy was not tested, so after editing a company crew, re-check the project crew (or copy it again).",
+    tags: ["crew sync","copied crew","global data crew change","crew drift"]
   },
   {
     action: "assign",
@@ -4252,8 +4252,8 @@ const QA_PROJECTSETUP = [
     scope: "project",
     section: "People",
     question: "What's the difference between System User and Non System User under People?",
-    answer: "Project Setup → People includes separate sub-tabs for System User (people with an actual Arena login/account) and Non System User (people tracked on the project roster — for headcount, crew membership, or reporting purposes — who don't have Arena credentials of their own). Keeping these distinct lets a PM track an entire field workforce on the roster without needing to issue an Arena login to every laborer.",
-    tags: ["system user","non system user","roster distinction","no login access"]
+    answer: "Under **Project Setup → People → Roster**, **System User** people have an Arena login (35 here, from **Global Data → Global Rosters → System User**); **Non System User** people are field workers tracked without a login (use **Get Users from Global Data**, **Add** or **Upload Excel**). None are on this project yet.",
+    tags: ["system user","non system user","roster types","people roster"]
   },
   {
     action: "create",
@@ -4261,8 +4261,8 @@ const QA_PROJECTSETUP = [
     scope: "project",
     section: "Estimate",
     question: "How do I build a cost estimate for a project?",
-    answer: "Go to Project Setup → Estimate → Estimate. It lists a cost-estimate card per work package/plant, each showing Description and Created By. Estimates are built out per work package so that projected costs line up directly with the same plants/work packages defined in the Works tab, keeping budget and physical scope consistent.",
-    tags: ["cost estimate","create estimate","estimate by work package"]
+    answer: "Open **Project Setup → Estimate → Estimate**, open the plant card, click **Create Estimate** and fill **Name**, **Description**, **Approval Workflow**, **Cost Breakdown Structure** and a template for each cost type (Material, Equipment, Labor, Unit Rate, Sub Contractor, BOQ's, Freight Charges, Fuel & Gas), then **Submit**. Set the CBS level, Level of Detail, Estimate Type and approval workflow first in **Project Settings → Cost Breakdown Structure**.",
+    tags: ["build estimate","create estimate","cost estimate","estimate form","estimate project"]
   },
   {
     action: "configure",
@@ -4270,8 +4270,8 @@ const QA_PROJECTSETUP = [
     scope: "project",
     section: "Estimate",
     question: "Where do I plan resources (labor, equipment, materials) needed for the project?",
-    answer: "Go to Project Setup → Estimate → Resource Planning, a sub-tab alongside Estimate and Rate Card Template. This is where a PM/Module Admin plans out the resources a project's estimate will draw on before or alongside building line-item costs.",
-    tags: ["resource planning","estimate resources","labor equipment planning"]
+    answer: "Go to **Project Setup → Estimate → Resource Planning**. It is a weekly grid (pick a **Date Range**) with a **Planned** cell per week for each person in the project **Roster** and each company vendor or sub contractor.",
+    tags: ["resource planning","plan resources","weekly planning","roster planning"]
   },
   {
     action: "configure",
@@ -4279,8 +4279,8 @@ const QA_PROJECTSETUP = [
     scope: "project",
     section: "Estimate",
     question: "How do rate card templates work, and do they inherit anything from Global Data?",
-    answer: "Under Project Setup → Estimate → Rate Card Template, a project builds its own Material/Equipment/Labor rate card templates, which are what get used to price out estimate line items. It's not fully confirmed whether a new template automatically inherits the Cost Types and rates already defined in Global Data → Cost, or whether it needs to be built entirely from scratch on the project side — treat this as an open point to verify with your Arena administrator rather than assuming either behavior.",
-    tags: ["rate card template","material rate card","labor rate card","equipment rate card","global data inheritance"]
+    answer: "In **Project Setup → Estimate → Rate Card Template** (tabs **Material**, **Equipment**, **Labor**), **Add Rate Card Template** lets you pick a template from **Global Data → Cost** (for example Template 1) and **Add Template**. So yes, the project chooses from company templates; it does not start from blank rates. Unit Rate, Sub Contractor, BOQ's, Freight Charges and Fuel & Gas have no rate card tab.",
+    tags: ["rate card template","rate card","rate card inherit global data","cost templates"]
   },
   {
     action: "understand",
@@ -4288,8 +4288,8 @@ const QA_PROJECTSETUP = [
     scope: "project",
     section: "Estimate",
     question: "Can a project define its own unit of measure, or must Estimate/BOQ line items use the Global Data UOM list?",
-    answer: "This isn't fully confirmed either way. What's established is that Global Data maintains the master UOM catalog (Kg, Lbs, Cum, Litres, Sqm, Rm, Square Feet, LF, Quintals, Tonne, each, Pair, Lot, CuCm, Hectare, Job, km, and more), plus UOM Groups and UOM Conversions, and a \"Measurement Templates\" feature — reusable calculation formulas, such as a template named \"LBD\" with fields L, B, D, Nos and the formula (L)×(B)×(D)×(Nos) — that Estimate/BOQ line items draw on for quantity calculations. Whether a project-level line item is restricted to only the Global Data UOM master list, or can define a private project-specific unit, was not confirmed during verification.",
-    tags: ["UOM","unit of measure","measurement templates","BOQ","global data UOM"]
+    answer: "Units come from **Global Data → UOM, Phasecode & GL Codes → UOMs** (51 units in 9 groups, with conversions). The work package shows **UOM** from that list (for example Cum). No project-only unit option was found in Works or Estimate. Quantity formulas (for example L x B x D x Nos) come from **Global Data → Measurement Templates**.",
+    tags: ["uom","unit of measure","project uom","estimate units"]
   },
   {
     action: "create",
@@ -4297,8 +4297,8 @@ const QA_PROJECTSETUP = [
     scope: "project",
     section: "Schedule",
     question: "How do I create a schedule for a project or a specific plant?",
-    answer: "Go to Project Setup → Schedule and click \"Create New Schedule\". The screen lists project Milestones plus a per-plant \"[Plant] - Schedule\" entry for every work package (for example, \"Blast Furnace - Schedule\"), each opening a Gantt-style schedule. A grid/list view toggle controls how the schedule list is displayed.",
-    tags: ["project schedule","create schedule","gantt schedule","milestones","plant schedule"]
+    answer: "Go to **Project Setup → Schedule** and click **Create New Schedule**, then choose a source: **Oracle P6 XML**, **Blank Template**, **Scope**, **Oracle P6 Cloud**, **Microsoft Project XML** or **Level Schedule**. The list also shows **Milestones** and a \"<Plant> - Schedule\" card per plant that opens a Gantt.",
+    tags: ["create schedule","create new schedule","schedule sources","p6 import","plant schedule"]
   },
   {
     action: "view",
@@ -4306,8 +4306,8 @@ const QA_PROJECTSETUP = [
     scope: "project",
     section: "Schedule",
     question: "Can I see a monthly breakdown of the schedule instead of just quarterly or yearly?",
-    answer: "Yes. The Gantt schedule view supports a monthly breakdown underneath the existing quarterly and yearly views, for a PM or scheduler who needs finer granularity than a full quarter or year at a glance. You can also type a date directly instead of only picking one from the calendar widget, which is faster when jumping to a specific point far from today.",
-    tags: ["gantt monthly view","gantt breakdown","schedule granularity","type a date","date entry gantt"]
+    answer: "Yes. On a plant's Gantt screen choose **Month** under **Time Period** (the other options are **Day**, **Week** and **Year**). **Planned Date** narrows the range and **Gantt View** (**Full**, **Half**, **None**) changes the bars.",
+    tags: ["monthly schedule","time period schedule","gantt month","schedule zoom"]
   },
   {
     action: "view",
@@ -4333,8 +4333,8 @@ const QA_PROJECTSETUP = [
     scope: "project",
     section: "Schedule",
     question: "What is a Look-Ahead Schedule?",
-    answer: "A Look-Ahead Schedule is the standard construction-industry term for a short-horizon (commonly two- to six-week) rolling view of upcoming activities, built off the master schedule so site teams can plan the next stretch of work in detail rather than working from the full-project Gantt chart. Arena does not name a single dedicated \"Look-Ahead Schedule\" screen; the equivalent is built by combining a nearer-term slice of the plant Gantt schedules in <strong>Project Setup → Schedule</strong> (now viewable with a monthly breakdown for finer granularity) with the day-by-day due items surfaced on <strong>My Calendar</strong> inside the project, and the day-to-day logging that actually happens against that plan in Field Works → Progress.",
-    tags: ["what is a look-ahead schedule","look-ahead schedule definition","glossary","rolling schedule"]
+    answer: "A Look-Ahead is a short rolling view of upcoming work. No screen named Look-Ahead was found in Project Setup → Schedule; use **Time Period** (Day/Week) and the **Planned Date** range on a plant schedule to see the next few weeks.",
+    tags: ["look ahead","lookahead schedule","short term schedule"]
   },
   {
     action: "configure",
@@ -4342,8 +4342,8 @@ const QA_PROJECTSETUP = [
     scope: "project",
     section: "Phase Codes",
     question: "What does the Phase Codes screen under Project Setup actually do — is it a separate list of codes for this project?",
-    answer: "No — it does not hold a separate, project-specific list of phase codes. It displays the entire company-wide Global Data phase code list (the same master list also reachable via Global Data → Cost → Cost Breakdown Structure → Phase Codes — same data, two doorways) and adds one extra column, \"Timesheet Management\", a checkbox per phase code. Checking that box is what the product calls \"Phase Code mapping\" (confirmed by the toast message \"Phase Code mapping updated successfully\"). So this screen is a subset-selector/mapping tool, not an independent data source: a PM uses it to mark which of the company's phase codes should be available for logging time on this specific project.",
-    tags: ["phase codes","timesheet management","phase code mapping","global data phase codes","cost breakdown structure"]
+    answer: "No. It shows the same 963 Global Data phase codes (also under **Global Data → UOM, Phasecode & GL Codes → Phase Codes**) plus two tick columns, **Timesheet Management** and **Equipment Management**. Ticking a box maps that code to this project for that purpose; **Settings** limits which Cost Types can be mapped. You cannot add codes here; add them in Global Data.",
+    tags: ["phase codes","phase code mapping","project phase codes","timesheet management phase code"]
   },
   {
     action: "configure",
@@ -4369,8 +4369,8 @@ const QA_PROJECTSETUP = [
     scope: "project",
     section: "Phase Codes",
     question: "What columns appear on the project Phase Codes screen?",
-    answer: "The table shows Phase Code, Cost Types (Material/Labor/Equipment), Phase Code Type (Direct/Indirect), and Timesheet Management, with pagination across the full company-wide list (963 records in a verified sample) and a Settings icon for controlling which Cost Types are eligible for mapping.",
-    tags: ["phase code columns","cost types","direct indirect","phase code table","phase codes screen","what columns show on phase codes"]
+    answer: "**Phase Code**, **Cost Types**, **Phase Code Type** (Direct, Indirect, Non Productive, Change Order), **Timesheet Management** and **Equipment Management** (tick boxes), with search, paging across 963 codes and a **Settings** gear.",
+    tags: ["phase code columns","phase code table","equipment management column"]
   },
   {
     action: "organize",
@@ -4506,6 +4506,330 @@ const QA_PROJECTSETUP = [
     question: "Where do I upload geospatial/map documents for a project?",
     answer: "Go to Project Setup → GIS and click \"Upload GIS Document\". The screen lists uploaded GIS/map documents for the project. This is the setup area a PM/Module Admin uses to centralize geospatial reference material, useful on projects spanning large or multiple physical sites.",
     tags: ["GIS","upload GIS document","geospatial documents","map documents"]
+  },
+  {
+    action: "explain",
+    object: "plant build screen",
+    scope: "module",
+    section: "Works",
+    question: "What are the tabs on a plant's build screen in Project Setup → Works?",
+    answer: "Open a plant's arrow. Tabs: **Entities**, **Super Locations**, **Locations**, **Custom Columns**, **Activities Sequence**, **People**, **Other Attributes (Qty | Hrs)**, **Measurement Methods** and **Comprehensive Layout**, with **Grid View**, **Tree View** and **Detailed View** icons. The structure is Entity → Super Location → Location → Work Package.",
+    tags: ["plant tabs","tree version tabs","works tabs","build project screen","entities super locations locations"]
+  },
+  {
+    action: "explain",
+    object: "assign percentage",
+    scope: "module",
+    section: "Works",
+    question: "What does Assign Percentage do and why must it total 100%?",
+    answer: "**Assign Percentage** opens **Tree Version Percentage** with a **Percentage %** box per plant. Each plant's share must add up to 100% before **Submit** saves. It sets how much each plant counts toward overall progress (**Total Work Completed** on **My Desk**).",
+    tags: ["assign percentage","percentage 100","plant weighting","progress weights","tree version percentage"]
+  },
+  {
+    action: "explain",
+    object: "know more",
+    scope: "module",
+    section: "Works",
+    question: "What does Know More on a plant card show?",
+    answer: "It opens a dialog named after the plant listing its custom fields. It shows \"No custom fields configured.\" until a custom column is added (**Add Custom Column** in the Create form or on the **Custom Columns** tab).",
+    tags: ["know more","plant custom fields","custom fields plant card"]
+  },
+  {
+    action: "explain",
+    object: "plant card menu",
+    scope: "module",
+    section: "Works",
+    question: "What is in the three-dot menu on a plant card?",
+    answer: "**Edit**, **Delete**, **Naming Framework**, **Excel Upload** and **Upload Full Map**. Naming Framework renames structure levels for that plant; the company defaults are in **Global Data → Settings → Naming Framework**.",
+    tags: ["plant card menu","naming framework plant","upload full map","excel upload plant"]
+  },
+  {
+    action: "get",
+    object: "create plant",
+    scope: "module",
+    section: "Works",
+    question: "How do I create a new plant (Tree Version)?",
+    answer: "Click **Create** on **Project Setup → Works**, choose **Create Tree Version** (or **Upload Tree Version Data** for Excel), enter **Name**, **Description** and **People** (from the project roster), add any custom column and click **Add**. Then open it to add Entities, Super Locations and Locations.",
+    tags: ["create tree version","new plant","add plant","upload tree version data"]
+  },
+  {
+    action: "get",
+    object: "where plants come from",
+    scope: "module",
+    section: "Works",
+    question: "Where do the plants and work packages in my project come from?",
+    answer: "Plants are Tree Versions created in **Project Setup → Works** (from scratch or Excel). The Entity, Super Location and Location types come from **Global Data → Construction Types → Global Work Areas**; work packages from **Global Work Packages** and Activity Sequence templates from the same Construction Types pipeline. The same plants then appear on **My Desk**, **Field Works**, **Estimate** and **Schedule**.",
+    tags: ["where do plants come from","plant source","work package source","works lineage","construction type works"]
+  },
+  {
+    action: "troubleshoot",
+    object: "super location type missing",
+    scope: "module",
+    section: "Works",
+    question: "Why is a Super Location or Location type missing when I add structure?",
+    answer: "The pick list in **Add Super Locations** / **Create** offers the types defined for your construction type. Add or upload missing types in **Global Data → Construction Types → Global Work Areas** (**Entity Types**, **Super Location Types**, **Location Types**), then reopen the dialog.",
+    tags: ["super location type missing","location type missing","add super location","global work areas missing","entity type missing"]
+  },
+  {
+    action: "explain",
+    object: "activities sequence",
+    scope: "module",
+    section: "Works",
+    question: "What is the Activities Sequence tab?",
+    answer: "For each location, choose an **Activity Sequences Template** (for example Piperack Footing WBS) that lists **Start Activities**, **Finish Activities** and maps each **Activity** to its **Work Package**. Locations with a template show **Mapped**; **Measurement Methods** shows how many of the locations are mapped (113 / 137 on Pellet Plant). Templates come from **Global Data → Construction Types → Activity Sequence Templates**.",
+    tags: ["activities sequence","activity sequence template","mapped locations","start finish activities"]
+  },
+  {
+    action: "explain",
+    object: "works people tab",
+    scope: "module",
+    section: "Works",
+    question: "What is the People tab on a plant for?",
+    answer: "It assigns people to each work package under **Progress Package Responsible**, **Progress Package Approval**, **Quality Package Responsible** and **Quality Package Approval** (with **Teams**, **Users** and **Upload Excel**). Those choices decide who logs and who approves work logs and quality logs for the package.",
+    tags: ["works people","progress package responsible","package approval","assign people work package"]
+  },
+  {
+    action: "explain",
+    object: "other attributes",
+    scope: "module",
+    section: "Works",
+    question: "What are Other Attributes (Qty | Hrs)?",
+    answer: "A table of budget and dates per work package in tabs **Direct**, **Indirect**, **Non Productive** and **Change Order**: **Budgeted Hours**, **Budgeted Quantity**, **Estimated Quantity**, **Changed** and **Revised** quantities and hours, **UOM**, **Phase Codes**, **Specifications**, and **Planned Start/End**, **Forecasted End**, **Client End**, **Skyline End** dates and **Schedule ID**.",
+    tags: ["other attributes","budgeted hours","budgeted quantity","qty hrs","skyline end date"]
+  },
+  {
+    action: "explain",
+    object: "measurement methods",
+    scope: "module",
+    section: "Works",
+    question: "What are Measurement Methods?",
+    answer: "The **Measurement Methods** tab sets the percentage weight of each activity in a location (**Assign**, total 100%), separately for **Progress** and **Quality**, and shows **Total Locations Mapped** (113 / 137). **Reassign Local Percentage** and **View & Edit Work Packages Percentages** adjust individual locations. These weights drive the progress figures in Field Works and My Desk.",
+    tags: ["measurement methods","activity percentage","progress weights activities","total locations mapped"]
+  },
+  {
+    action: "explain",
+    object: "work package details",
+    scope: "module",
+    section: "Works",
+    question: "What does the Work Package details panel show?",
+    answer: "For a selected package (for example **EXC-1**): **Assigned to**, **Status** (WORKLOG READY 0.00%), **Type** (PROGRESS), **Estimated Quantity**, **Actual Quantity**, **UOM**, then everything logged against it: Work Logs, Quality logs, Punch Lists, Restraints, SafetyForms, RFI, Change Order, Submittal, Meeting Minutes, Other Forms, Quick Apps, Drawing Items and Documents.",
+    tags: ["work package details","work package status","wp panel","actual quantity estimated quantity"]
+  },
+  {
+    action: "explain",
+    object: "project identity source",
+    scope: "module",
+    section: "Works",
+    question: "Where does the project information on the Works screen come from?",
+    answer: "From the project record: **Projects → Create Project**. Construction Type comes from **Global Data → Construction Types**, Status from **Settings → Project Status**, and Project Type, Funding Agency and Implementing Agency from **Settings → Project Form**. Owner and Customer come from Global Data **Owners** and **Customers**.",
+    tags: ["project information works","construction type source","project identity","project status source"]
+  },
+  {
+    action: "troubleshoot",
+    object: "task form not configured",
+    scope: "module",
+    section: "Tasks",
+    question: "Why do I see \"Task Form is not configured in project settings\"?",
+    answer: "The Tasks screen needs a task form. Open **Project Settings → Configure Task Form**, add the fields (Required, Show on card, field type) and **Save Changes**. Until then **Create**, **Manage Columns** and **Filters** show the warning.",
+    tags: ["task form not configured","cannot create task","configure task form","tasks warning"]
+  },
+  {
+    action: "explain",
+    object: "workflow issues tasks",
+    scope: "module",
+    section: "Tasks",
+    question: "What is the Workflow Issues sub-tab under Tasks?",
+    answer: "It lists problems raised by approval workflows on tasks (**Download Excel**, **Grid View**, **Table View**). It reads \"There are no workflow issues\" on the test project.",
+    tags: ["workflow issues tasks","task workflow issues"]
+  },
+  {
+    action: "explain",
+    object: "tasks views",
+    scope: "module",
+    section: "Tasks",
+    question: "What views and buttons does the Tasks list have?",
+    answer: "**Create**, **Manage Columns**, **Filters**, **Upload Excel**, **Download Excel**, and views **Grid View**, **Table View** and **Kanban View**.",
+    tags: ["tasks buttons","kanban view tasks","task toolbar"]
+  },
+  {
+    action: "explain",
+    object: "communication tab",
+    scope: "module",
+    section: "Tasks",
+    question: "What is the Communication sub-tab?",
+    answer: "A project mailbox with **Compose Mail**, search, **Settings** and folders **All Emails**, **Inbox**, **Sent**, **Drafts**, **Starred**, **Trash**. The mail provider follows **Global Data → Settings → Mail Settings** (ARENA COMMUNICATIONS row).",
+    tags: ["communication mail","compose mail project","project email"]
+  },
+  {
+    action: "get",
+    object: "project people source",
+    scope: "module",
+    section: "People",
+    question: "Where does the People list come from?",
+    answer: "**Project Setup → People → Roster → System User** shows people chosen from **Global Data → Users & Permissions → Global Rosters → System User** (use **Add**). **Non System User** comes from the Global Roster non-system list (**Get Users from Global Data**) or is created here. Crews come from **Global Data → Crews** (copy) or are built on the project.",
+    tags: ["where does the people list come from","people source","roster source","project roster global data","people lineage"]
+  },
+  {
+    action: "troubleshoot",
+    object: "person missing from project",
+    scope: "module",
+    section: "People",
+    question: "Why can't I find a person when I click Add on the roster?",
+    answer: "Add lists only people who exist in **Global Data → Users & Permissions → Global Rosters**. Register the person there (or as a user) first, make sure they are active, then reopen Add. People already on the project do not show as new choices.",
+    tags: ["person missing roster","user not in add list","cannot add user project","roster add empty"]
+  },
+  {
+    action: "get",
+    object: "where roster is used",
+    scope: "module",
+    section: "People",
+    question: "Where is the project roster used in other screens?",
+    answer: "The same 35 active and inactive people feed **Forms → Assign Users**, the **People** choice when creating a plant, work package **Assigned to**, **Estimate → Resource Planning** roster rows, **Create Crew**, and (active system users only) the **My Desk → Pending Actions** user list.",
+    tags: ["where roster is used","roster downstream","people feeds","roster lineage"]
+  },
+  {
+    action: "get",
+    object: "create crew dialog",
+    scope: "module",
+    section: "People",
+    question: "What do I fill in to create a project crew?",
+    answer: "Click **Create Crew**: **Crew Name***, pick **SUPERVISOR** and **FOREMAN** from the dropdowns, tick crew members from the project roster list, check the **Supervisor**, **Foreman** and **Rosters** counters and the **Selected Supervisors** table, then **Submit**.",
+    tags: ["create crew fields","crew name supervisor foreman","new crew"]
+  },
+  {
+    action: "explain",
+    object: "copy crews to projects",
+    scope: "module",
+    section: "People",
+    question: "What does Copy Crews to Projects do?",
+    answer: "It opens \"Map Crews to Projects\" with **Groups** and a list of all company projects. Choose the destination projects and **Submit** to push the selected crews out to them.",
+    tags: ["copy crews to projects","map crews to projects","share crews"]
+  },
+  {
+    action: "explain",
+    object: "non system user create",
+    scope: "module",
+    section: "People",
+    question: "What fields does Create User have for a non-system person?",
+    answer: "**Employee ID***, **First Name***, **Last Name***, **Group No.**, **Email**, **Default Indirect PhaseCode**, **Address**, **Designation**, **Skills**, **Experience**, **Contact Number**, **Craft**, **Class**, **Labor**, **Role** and any configurable field, matching **Global Data → Settings → Roster Settings**. Other options: **Get Users from Global Data**, **Download Sample Excel**, **Upload Excel**.",
+    tags: ["create non system user","roster fields","non system fields","add field worker"]
+  },
+  {
+    action: "explain",
+    object: "indirect staff",
+    scope: "module",
+    section: "People",
+    question: "What do I do on Project Indirect Staff?",
+    answer: "The tab lists the project's system users with tick boxes and a **Submit** button. Tick the people whose time is overhead (management, admin, support), then **Submit**. Nobody is ticked on the test project.",
+    tags: ["project indirect staff","tick indirect staff","overhead staff"]
+  },
+  {
+    action: "explain",
+    object: "create estimate fields",
+    scope: "module",
+    section: "Estimate",
+    question: "What fields are on the Create Estimate form and where do the options come from?",
+    answer: "**Name***, **Description***, **Approval Workflow*** (list is empty until one is made in **Project Settings → Cost Breakdown Structure → Approval WorkFlow**), **Cost Breakdown Structure*** (CUSTOM or a phase-code level), and a template dropdown for each of the eight cost types. The cost types and templates come from **Global Data → Cost**.",
+    tags: ["create estimate fields","estimate form fields","cbs estimate","estimate templates dropdown"]
+  },
+  {
+    action: "troubleshoot",
+    object: "estimate approval workflow empty",
+    scope: "module",
+    section: "Estimate",
+    question: "Why is the Approval Workflow dropdown empty on Create Estimate?",
+    answer: "No estimate approval workflow exists yet. Go to **Project Settings → Cost Breakdown Structure → Approval WorkFlow**, click **Create Approval Workflow**, create levels and add users, then reopen Create Estimate.",
+    tags: ["estimate approval workflow empty","estimate workflow missing","cost estimate approval"]
+  },
+  {
+    action: "explain",
+    object: "cbs settings",
+    scope: "module",
+    section: "Estimate",
+    question: "What do the Project Settings → Cost Breakdown Structure tabs control?",
+    answer: "**CBS** (the phase-code level the estimate is organized by, per plant), **Approval WorkFlow** (the approval chain for cost estimates), **Level of Detail** (Phase Code or Phase Code - Cost Code) and **Estimate Type** (Lump Sump or Time & Material).",
+    tags: ["cbs settings","cost breakdown structure settings","level of detail","estimate type lump sum"]
+  },
+  {
+    action: "explain",
+    object: "resource planning roster",
+    scope: "module",
+    section: "Estimate",
+    question: "Where do the names in Resource Planning come from?",
+    answer: "The **Roster** rows are the project's roster people (**People → Roster**); the **Sub** rows are company vendors and sub contractors from **Global Data → Vendors / Sub Contractors**. Weeks come from the **Date Range** you pick.",
+    tags: ["resource planning names","resource planning source","planned hours roster"]
+  },
+  {
+    action: "troubleshoot",
+    object: "template missing rate card",
+    scope: "module",
+    section: "Estimate",
+    question: "Why is a template missing from Add Rate Card Template or Create Estimate?",
+    answer: "Those lists show the templates built in **Global Data → Cost** (Material, Equipment, Labor and other cost types). Create the template there, then reopen the dialog. Only Material, Equipment and Labor have a Rate Card tab.",
+    tags: ["template missing","rate card template missing","estimate template missing","cost template dropdown"]
+  },
+  {
+    action: "explain",
+    object: "schedule sources",
+    scope: "module",
+    section: "Schedule",
+    question: "What sources can I create a schedule from?",
+    answer: "**Oracle P6 XML**, **Blank Template**, **Scope** (get WBS from scope items), **Oracle P6 Cloud**, **Microsoft Project XML** and **Level Schedule**, from **Create New Schedule**.",
+    tags: ["schedule sources","primavera import","microsoft project import","create schedule from"]
+  },
+  {
+    action: "explain",
+    object: "milestones fields",
+    scope: "module",
+    section: "Schedule",
+    question: "What is on the Milestones screen?",
+    answer: "Two tabs, **Fastrack** and **Contractual**, each with **Add** and **Save** and a table **Name | Weightage | Planned Start Date | Planned End Date | Cumulative Planned | Cumulative Achieved | Actions**.",
+    tags: ["milestones fields","fastrack contractual","milestone weightage"]
+  },
+  {
+    action: "explain",
+    object: "plant schedule screen",
+    scope: "module",
+    section: "Schedule",
+    question: "What is on a plant schedule screen?",
+    answer: "A Gantt with **Planned Date** range, **Time Period** (Day/Week/Month/Year), **Gantt View** (Full/Half/None), a table **Id | Activity Name** listing the plant's Entities, and planned and actual bars per entity.",
+    tags: ["plant schedule","gantt view","schedule screen","planned actual bars"]
+  },
+  {
+    action: "get",
+    object: "schedule source",
+    scope: "module",
+    section: "Schedule",
+    question: "Where do the rows on a plant schedule come from?",
+    answer: "From the plant's Entities built in **Project Setup → Works** (for example Piperack, Indurating Building, Mixing Building). Planned dates come from the imported or entered schedule; actual bars follow progress.",
+    tags: ["schedule rows source","schedule lineage","where schedule comes from"]
+  },
+  {
+    action: "explain",
+    object: "phase code settings project",
+    scope: "module",
+    section: "Phase Codes",
+    question: "What is Project Settings → Phase Code Settings?",
+    answer: "A choice between **Unique phase code** (a code can be used on only 1 Work Package and Location) and **Multiple-Use Phase Code** (a code can be used across multiple Locations). Arena Steel Plant - Phase 1 uses Unique.",
+    tags: ["phase code settings","unique phase code","multiple use phase code"]
+  },
+  {
+    action: "troubleshoot",
+    object: "phase code not showing",
+    scope: "module",
+    section: "Phase Codes",
+    question: "Why isn't a phase code showing in my project?",
+    answer: "The project list shows all 963 Global Data codes, so a code you added recently should appear. If it is missing, check it exists in **Global Data → UOM, Phasecode & GL Codes → Phase Codes** with a Cost Type, and that **Settings** (gear) includes that Cost Type. If it shows but not in timesheets, tick **Timesheet Management** for it and choose the project (not Company) in **My Timesheet**.",
+    tags: ["phase code not showing","phase code missing project","phase code not in timesheet","phase code dropdown missing"]
+  },
+  {
+    action: "get",
+    object: "phase code source",
+    scope: "module",
+    section: "Phase Codes",
+    question: "Where do phase codes come from and where do they go?",
+    answer: "They come from **Global Data → UOM, Phasecode & GL Codes → Phase Codes** (963 codes; types Direct, Indirect, Non Productive, Change Order). They go to Time Management timesheets and equipment logs (via the tick columns), **Works → Other Attributes** (Phase Codes), Estimate (CBS by phase code) and cost reports.",
+    tags: ["phase code source","phase code lineage","where do phase codes come from","phase codes feed"]
   }
 ];
 
@@ -19357,41 +19681,102 @@ const MODULES = [
       },
       {
         "heading": "Works",
-        "intro": "<p>Every construction project needs a shared definition of what the job physically consists of before anyone can meaningfully estimate, schedule, or track it — and for a large industrial project, that usually means a set of distinct plants or work packages (a Blast Furnace is not the same scope of work as a Cold Rolling Mill, even on the same site). Project Setup → Works is where a <strong>PM / Module Admin</strong> establishes exactly that: the project's core work-breakdown definition, listing every plant or work package the project comprises (for example Pellet Plant, Basic Oxygen Furnace, Blast Furnace, Coke Oven, Cold Rolling Mill, External Works, Hot Strip Mill, IBMD, Lime Dolomite Plant, Oxygen Plant, RMHS, Sinter Plant, and Slab Caster on a steel-plant-style project), alongside the project's own core identity data — Project Name/ID, Construction Type, Status, Location, Owner Rep, CSE-PMC, Project Type, and Funding & Implementing Agency.</p><p>This isn't just a descriptive list. Every other tab in Project Setup organizes its own data against these same work packages: Estimate builds a cost-estimate card per plant, Schedule generates a \"[Plant] - Schedule\" Gantt view per plant, and Quality's Map Work Packages feature ties inspection folders back to this same structure. Getting the Works breakdown right at kickoff is what keeps cost, schedule, and quality data all speaking the same language about the same physical scope later — an inconsistency introduced here (a plant named differently, or split up differently, than how the site actually organizes it) will surface as confusing mismatches across several other modules downstream, not just this one.</p><p>Each work-package card shows its Description, Created By, Physical Progress, and Financial Details at a glance, with a \"Know More\" link for further detail, and the toolbar's Assign Percentage option lets a PM weight each plant's contribution to overall project progress rather than treating every plant as equally sized.</p>",
+        "intro": "<p>Works is where a <strong>PM</strong> or <strong>Module Admin</strong> builds the project's work structure: the plants (Tree Versions), their Entities, Super Locations, Locations and Work Packages. Everything else in Project Setup and Field Works is organized against this structure.</p><p>Open <strong>Project Setup → Works</strong>. The left panel shows the project identity; the right side shows one card per plant, with <strong>Upload Excel</strong>, <strong>Download Excel</strong>, <strong>View</strong>, <strong>Assign Percentage</strong> and <strong>Create</strong> on the toolbar. Click a plant's arrow to open its build screen.</p>",
         "definitions": [
           {
-            "term": "Work package / plant card",
-            "definition": "One card per work package or plant on the right panel, showing Description, Created By, Physical Progress, and Financial Details, with a \"Know More\" link for detail."
+            "term": "Project identity panel",
+            "definition": "The left panel: **Project Name**, **Projects Number/ID** (for example ST-01), **Construction Type**, **Status**, **Projects Location**, **Owner Representative**, **CSE / PMC**, **Project Type**, **Funding Agency** and **Implementing Agency**. **Where it comes from:** the values were entered on **Projects → Create Project**. Construction Type is chosen from **Global Data → Construction Types**, Status from **Global Data → Settings → Project Status**, and Project Type, Funding Agency and Implementing Agency from **Global Data → Settings → Project Form**. The panel is read-only here."
           },
           {
-            "term": "Project identity panel",
-            "definition": "The left panel carrying Project Name/ID, Construction Type, Status, Location, Owner Rep, CSE-PMC, Project Type, and Funding & Implementing Agency."
+            "term": "Plant (Tree Version) card",
+            "definition": "One card per plant: name, **Description**, **Created By**, **Physical Progress**, **Financial Details** (shown in company currency, for example ₹0.00), **Know More**, a three-dot menu and an arrow. Arena Steel Plant - Phase 1 has 13: Pellet Plant (1MTPA), Basic Oxygen Furnace (0.8 MTPA), Blast Furnace (0.6 MTPA), Coke Oven, Cold Rolling Mill, External Works, Hot Strip Mill, IBMD, Lime Dolomite Plant, Oxygen Plant, RMHS, Sinter Plant and Slab Caster. **Where this goes:** the same plants are the plant lists on **My Desk**, **Field Works → Tree Version**, **Estimate**, **Schedule**, **Quality**, and every plant selector in the project."
+          },
+          {
+            "term": "View",
+            "definition": "Switches the plant cards between **Large Cards**, **Medium Cards**, **Small Cards**, **Table** and **Tiles**."
+          },
+          {
+            "term": "Three-dot menu on a plant card",
+            "definition": "**Edit**, **Delete**, **Naming Framework**, **Excel Upload** and **Upload Full Map**. Naming Framework lets the plant use its own names for the structure levels (the company-wide defaults are in **Global Data → Settings → Naming Framework**). Delete removes the plant, so check with the PM first."
+          },
+          {
+            "term": "Know More",
+            "definition": "Opens a dialog titled with the plant name that lists its custom fields; it reads \"No custom fields configured.\" until custom columns are added."
           },
           {
             "term": "Assign Percentage",
-            "definition": "The toolbar action that allocates a weighting to each work package, so individual progress rolls up into a meaningful overall project figure instead of treating every plant as equal."
+            "definition": "Opens **Tree Version Percentage** with one **Percentage %** box per plant. The total must be 100% before **Submit** saves. These weights decide how much each plant counts toward overall project progress, which shows as **Total Work Completed** and the plant figures on **My Desk**."
           },
           {
-            "term": "Upload Excel / Download Excel",
-            "definition": "Toolbar actions for managing the work package list in bulk rather than creating each one by hand."
+            "term": "Create (plant)",
+            "definition": "Offers two choices: **Create Tree Version** (\"Create Tree Version & all data from scratch\") and **Upload Tree Version Data** (\"through Excel\"). The Create form has **Name***, **Description**, **People** (**Choose People**; its list is the project roster: the same 35 people as **People → Roster**) and **Add Custom Column**, then **Add**."
+          },
+          {
+            "term": "Plant build screen",
+            "definition": "Click a plant's arrow to open it (title is the plant name, with a back chevron). Tabs: **Entities**, **Super Locations**, **Locations**, **Custom Columns**, **Activities Sequence**, **People**, **Other Attributes (Qty | Hrs)**, **Measurement Methods** and **Comprehensive Layout**; icons switch **Grid View**, **Tree View** and **Detailed View**. The structure reads Entity → Super Location → Location → Work Package → Activity; Field Works work logs quote it (for example \"Mixing Building | Civil Substructure | Footing | EXC-1 | Excavation\")."
+          },
+          {
+            "term": "Entities, Super Locations and Locations",
+            "definition": "On the plant screen, a numbered list of **Entities** (Pellet Plant: Piperack, Indurating Building, Mixing Building, ECR (Electrical Control Room), Balling Building, Kiln). **Add Entities** adds more; **Add Super Locations** opens \"Select Super Locations Type for <entity>\" with a counter (- 0 +) per type (AS Civil, AS Trestle Erection, AS Pipe Bridge erection, AS Piping for Piperack); **Create** under Locations opens \"Select Locations for <super location>\" with a counter per type (Footing) and a **Name Format** box using {{idx}} for the number. **Where the types come from:** the three tiers are defined in **Global Data → Construction Types → Global Work Areas** (**Entity Types**, **Super Location Types**, **Location Types**); Footing and Civil Substructure appear in both places."
+          },
+          {
+            "term": "Work Package",
+            "definition": "The smallest buildable unit under a Location, shown as a code and description (for example **EXC-1 Excavation for footing**, ARN-PC-01 PCC Laying). Selecting one opens **Work Package details**: **Assigned to** (people), **Status** (for example WORKLOG READY 0.00%), **Type** (PROGRESS), **Estimated Quantity**, **Actual Quantity**, **UOM** (Cum) and sections for everything logged against it: **Work Logs**, **Quality logs**, **Punch Lists**, **Restraints**, **SafetyForms**, **RFI**, **Change Order**, **Submittal**, **Meeting Minutes**, **Other Forms**, **Quick Apps**, **Drawing Items** and **Documents**. Work packages are created from **Global Data → Construction Types → Global Work Packages**, and the UOM comes from **Global Data → UOM**."
+          },
+          {
+            "term": "Custom Columns",
+            "definition": "A table of every location in the plant (133 on Pellet Plant) with **Entities**, **Super Locations**, **Super Locations Description**, **Locations Type**, **Locations**, **Locations Description** and **Entities Description**. **Add Custom Column** adds your own field (it then shows in **Know More** and Field Works), with **Filters**, search, **Export**, **Manage Columns** and **Save Layout**."
+          },
+          {
+            "term": "Activities Sequence",
+            "definition": "Per location, you choose an **Activity Sequences Template** (for example \"Piperack Footing WBS\" for Footing 1) which lists **Start Activities**, **Finish Activities** and a table **Activities | Work Packages | Work Packages Description** (Excavation → EXC-1, PCC → ARN-PC-01, Marking, Barbending...). Locations with a template show **Mapped**. Templates come from **Global Data → Construction Types → Activity Sequence Templates** (defined per Location Type, for example Footing)."
+          },
+          {
+            "term": "People (work structure)",
+            "definition": "Assign people to each work package under four headings: **Progress Package Responsible**, **Progress Package Approval**, **Quality Package Responsible** and **Quality Package Approval**, with **Teams** and **Users** lists and **Upload Excel**. The people are the project roster. **Where this goes:** these assignments decide who logs, who approves work logs, and who appears under **Assigned to** on the work package."
+          },
+          {
+            "term": "Other Attributes (Qty | Hrs)",
+            "definition": "Budget and dates per work package, in four tabs named after the phase code types: **Direct**, **Indirect**, **Non Productive** and **Change Order**. Columns: **Budgeted Hours**, **Budgeted Quantity**, **Estimated Quantity**, **Changed Hours**, **Changed Quantity**, **Revised Budgeted Quantity**, **Revised Budgeted Hours**, **UOM**, **Phase Codes**, **Specifications**, **Planned Start Date**, **Planned End Date**, **Forecasted End Date**, **Client End Date**, **Skyline End Date**, **Schedule ID** and **Schedule ID Description**. Phase Codes come from the 963 Global Data codes, and how they can be reused is set in **Project Settings → Phase Code Settings**."
+          },
+          {
+            "term": "Measurement Methods",
+            "definition": "Decides how much each activity counts toward a location's percentage. The page shows **Total Locations Mapped : 113 / 137**, separate **Progress** and **Quality** tabs, **Export**, **Assign** (\"Activity Percentage\" dialog: Activities | Percentage %, total must reach 100%), **Reassign Local Percentage** and **View & Edit Work Packages Percentages**. The resulting percentages drive the progress shown in Field Works and on **My Desk**. Global Data → Measurement Templates holds the quantity formulas (for example L x B x D x Nos)."
+          },
+          {
+            "term": "Comprehensive Layout",
+            "definition": "The same Entity / Super Location / Location / Work Package view as the first tab, for working through the whole structure in one place."
+          },
+          {
+            "term": "Upload Excel and Download Excel",
+            "definition": "Bulk-load or export the plant structure. The Excel upload on a plant card and the **Upload Tree Version Data** option use the same idea: prepare the structure offline and load it."
           }
         ],
         "procedures": [
           {
             "title": "Add a new work package / plant",
             "steps": [
-              "Go to <strong>Project Setup → Works</strong>.",
-              "Click <strong>Create</strong> on the toolbar.",
-              "Enter the plant/work package's details.",
-              "Alternatively, use <strong>Upload Excel</strong> to add multiple work packages in bulk, or <strong>Download Excel</strong> to export the current list."
+              "Go to **Project Setup → Works** and click **Create**.",
+              "Choose **Create Tree Version** to build from scratch, or **Upload Tree Version Data** to load an Excel file.",
+              "Enter **Name** and **Description**, pick **People**, and add any **Custom Column**, then click **Add**.",
+              "Open the new plant's arrow. Add **Entities**, then **Super Locations** and **Locations**, and map an Activity Sequence template to each location."
             ]
           },
           {
             "title": "Weight work packages for overall progress rollup",
             "steps": [
-              "Go to <strong>Project Setup → Works</strong>.",
-              "Click <strong>Assign Percentage</strong> on the toolbar.",
-              "Allocate a weighting to each plant/work package so overall project progress reflects each one's relative size or cost."
+              "Go to **Project Setup → Works** and click **Assign Percentage**.",
+              "Enter a percentage for each plant. The heading shows the running total.",
+              "Adjust until the total is 100%, then click **Submit**."
+            ],
+            "note": "The dialog states the total must be 100% to save. Submit was not pressed in testing."
+          },
+          {
+            "title": "Assign people to a work package",
+            "steps": [
+              "Open the plant and go to its **People** tab.",
+              "Select the entity, super location, location and work package in the tree.",
+              "Choose the users or teams under **Progress Package Responsible**, **Progress Package Approval**, **Quality Package Responsible** or **Quality Package Approval**."
             ]
           }
         ],
@@ -19484,81 +19869,103 @@ const MODULES = [
       },
       {
         "heading": "Tasks",
-        "intro": "<p>Not every piece of project work fits neatly into a phase-code-driven productivity log or a formal form — a project team also needs a general-purpose place to track action items, follow-ups, and coordination tasks that don't belong to any single field discipline. Project Setup → Tasks provides exactly that: a lightweight task tracker scoped to the project, typically owned by a <strong>PM / Module Manager</strong>, with two sub-tabs — Tasks, the table of project tasks itself, and Communication, where discussion tied to those tasks stays attached to the record rather than scattering across email or chat.</p><p>The Tasks table supports the same bulk-management conveniences found elsewhere in Arena: Create to add a task, Manage Columns to control which fields are visible, Filters to narrow a long list down, Upload/Download Excel for bulk import and export, and a grid/list view toggle. Because this tracker sits inside Project Setup rather than Field Works, it's best understood as a coordination tool for the people running the project, not a replacement for the phase-code-based productivity and quantity logging that field crews use to report actual work performed.</p>",
+        "intro": "<p>Tasks is a general-purpose to-do tracker for the project team, separate from work logs and forms. A <strong>PM</strong> or <strong>Module Manager</strong> uses it to assign and follow up coordination work.</p><p>Open <strong>Project Setup → Tasks</strong>. It has three sub-tabs: <strong>Tasks</strong>, <strong>Communication</strong> and <strong>Workflow Issues</strong>. On this project <strong>Create</strong> and <strong>Filters</strong> show the warning \"Task Form is not configured in project settings\", so set up the form first.</p>",
         "definitions": [
           {
-            "term": "Tasks",
-            "definition": "The table of general project tasks, with the usual create/filter/column/export controls."
+            "term": "Tasks (sub-tab)",
+            "definition": "Toolbar: **Create**, **Manage Columns**, **Filters**, **Upload Excel**, **Download Excel**, and three views: **Grid View**, **Table View** and **Kanban View**. Empty here (\"No Data Available\")."
+          },
+          {
+            "term": "Task Form is not configured",
+            "definition": "Clicking **Create**, **Manage Columns** or **Filters** on an unconfigured project shows a Warning \"Task Form is not configured in project settings\" (**Ok**). The fields of a task come from **Project Settings → Configure Task Form** (tabs **Project Configuration** and **Global Configuration**, a **Status** switch, **Configurable Fields** with Required, Show on card and field type such as Text Box, **Add field**, **Save Changes**). No fields are configured on Arena Steel Plant - Phase 1 yet."
           },
           {
             "term": "Communication",
-            "definition": "A sub-tab that keeps task-related discussion and updates attached directly to the task record."
+            "definition": "A project mailbox: **Compose Mail**, search, a **Settings** icon and folders **All Emails**, **Inbox**, **Sent**, **Drafts**, **Starred** and **Trash**. The test project shows \"Oops! You don't have any mails at the moment\". Which mail service it uses (Gmail or Outlook) follows **Global Data → Settings → Mail Settings**, which has an **ARENA COMMUNICATIONS** row."
+          },
+          {
+            "term": "Workflow Issues (Tasks)",
+            "definition": "Shows problems raised by approval workflows on tasks. Empty on the test project (\"There are no workflow issues\"), with **Download Excel** and **Grid View** / **Table View**."
+          },
+          {
+            "term": "Where this data goes",
+            "definition": "Task items belong to the project. Whether they appear on **My Calendar** or **Follow Up Actions** was not verified on the test project because it has no tasks."
           }
         ],
         "procedures": [
           {
             "title": "Create and manage a project task",
             "steps": [
-              "Go to <strong>Project Setup → Tasks → Tasks</strong>.",
-              "Click <strong>Create</strong> and fill in the task details.",
-              "Use <strong>Manage Columns</strong> to choose which fields appear in the grid.",
-              "Use <strong>Filters</strong> to narrow the task list, or <strong>Upload/Download Excel</strong> for bulk changes.",
-              "Switch to <strong>Project Setup → Tasks → Communication</strong> to follow or add discussion tied to a task."
-            ]
+              "Open **Project Settings → Configure Task Form** and add the fields you need, then **Save Changes**. Do this once per project.",
+              "Go to **Project Setup → Tasks → Tasks** and click **Create**; fill in the task.",
+              "Use **Manage Columns** and **Filters** to shape the list, and **Grid View**, **Table View** or **Kanban View** to change the layout.",
+              "Use **Upload Excel** / **Download Excel** for bulk changes. Use **Communication** for mail and **Workflow Issues** for approval problems."
+            ],
+            "note": "Create could not be opened on the test project because the task form is not configured, so the field list is unverified."
           }
         ]
       },
       {
         "heading": "People",
-        "intro": "<p>Knowing exactly who is on a project — and being able to organize them into crews, distinguish direct field labor from indirect support staff, and separate system users from people who are only tracked for roster purposes — is the backbone of accountability on a construction site. Project Setup → People is where a <strong>PM / Module Admin</strong> does this project-level people work, pulling from the company's broader Global Data directory rather than rebuilding it from scratch. Its five sub-tabs are Roster, Project Crews, Project Indirect Staff, System User, and Non System User.</p><p>Roster is the master list: everyone on the project, shown as cards or a list with Name, Employee ID, and Active/Inactive status, supported by Add, Download Excel, Filters, and a view toggle. Project Indirect Staff separates out system users who work for the project but aren't directly involved in field execution — supervisory, administrative, or support roles whose cost still needs to be tracked, just differently from direct labor. System User and Non System User split the roster along a different axis: whether a person has an actual Arena login (System User) or is tracked purely for headcount/crew/reporting purposes without credentials of their own (Non System User) — letting a PM track an entire field workforce on the roster without issuing logins to every laborer.</p><p><strong>Project Crews is the sub-tab that deserves the closest attention, because of how its copy mechanism actually works.</strong> A brand-new project's Project Crews list starts out completely empty, and offers exactly three actions: <strong>Create Crew</strong> (build a new crew from scratch, local to this project only), <strong>Copy Crews from Global Data</strong> (opens a \"Select Crew for [Project Name]\" picker listing every company-wide Global Data crew with checkboxes, so a PM can copy specific crews into the project), and <strong>Copy Crews to Projects</strong> (the reverse — pushing one of this project's own crews out to other projects). The critical operational detail: <strong>this is a one-time copy, not a live reference.</strong> If a Global Data crew's roster changes later — a worker added or removed company-wide — that change does not automatically appear in any project that already copied the crew earlier. In other words, crew rosters can silently drift out of sync between Global Data and individual projects unless someone proactively re-copies. A PM who wants to use an existing company crew must actively copy it in; it will not appear automatically, and changes made to the source crew afterward will not propagate to the project's copy. On a long-running project, this is worth periodically checking rather than assuming crews stay current on their own.</p>",
+        "intro": "<p>People is where a <strong>PM</strong> or <strong>Module Admin</strong> decides who works on this project, groups them into crews and marks indirect staff. It draws on the company directory in Global Data.</p><p>Open <strong>Project Setup → People</strong>. Sub-tabs: <strong>Roster</strong> (with <strong>System User</strong> and <strong>Non System User</strong>), <strong>Project Crews</strong> and <strong>Project Indirect Staff</strong>.</p>",
         "definitions": [
           {
-            "term": "Roster",
-            "definition": "The master list of everyone assigned to the project, with Name, Employee ID, and Active/Inactive status."
+            "term": "Roster → System User",
+            "definition": "People with an Arena login. 35 cards on this project (name, **Employee ID**, **Active/Inactive** chip, three-dot menu **Edit** / **Delete**) with **Add**, **Download Excel**, **Filters** and views **Grid View**, **Table View**, **Tree View**. **Add** opens \"Select Users for <project>\" listing users from **Global Data → Users & Permissions → Global Rosters → System User** (for example Engineering Contractor - 1, System Admin, American Builders Inc.). **Where this goes:** this roster is the source of every people picker in the project: **My Desk → Pending Actions** (active users), **Forms → Assign Users**, the **People** field when you create a plant, work package assignments, Resource Planning rows and Create Crew."
+          },
+          {
+            "term": "Roster → Non System User",
+            "definition": "Field workers without a login. Buttons: **Add**, **Get Users from Global Data**, **Download Sample Excel**, **Upload Excel**, **Download Excel**, **Filters**. **Get Users from Global Data** lists the company's non-system roster people (labourers with IDs). **Add** opens **Create User**: **Employee ID***, **First Name***, **Last Name***, **Group No.**, **Email**, **Default Indirect PhaseCode**, **Address**, **Designation**, **Skills**, **Experience**, **Contact Number**, **Craft**, **Class**, **Labor**, **Role** and any configurable field, which mirror **Global Data → Settings → Roster Settings**. None on this project yet."
           },
           {
             "term": "Project Crews",
-            "definition": "Project-scoped labor crews, built manually via Create Crew or copied in (one-time only, not a live link) from Global Data's company-wide crew list via Copy Crews from Global Data; Copy Crews to Projects pushes a project's crew out to other projects."
+            "definition": "Empty on this project. Buttons: **Create Crew**, **Copy Crews from Global Data**, **Copy Crews to Projects**, search by crew name and **Filters**. **Create Crew** opens \"Select Crew Members\": **Crew Name***, **SUPERVISOR** and **FOREMAN** dropdowns, a searchable list of the project roster (with Select All), counters for Supervisor, Foreman and Rosters, and a **Selected Supervisors** table. **Copy Crews from Global Data** lists the company's 18 crews (**Global Data → Crews**). **Copy Crews to Projects** opens \"Map Crews to Projects\" with **Groups** and every company project."
           },
           {
             "term": "Project Indirect Staff",
-            "definition": "System users who work for the project but aren't directly involved in field execution, tracked separately from direct field labor."
+            "definition": "A list of the project's system users (name, email, ID) with tick boxes and **Submit**. Tick the people whose work is overhead (management, admin, support) rather than field execution. Nobody is ticked on this project. Their time is treated as indirect in timesheets (see **Default Indirect PhaseCode** on the roster)."
           },
           {
-            "term": "System User",
-            "definition": "A person on the project roster who has an actual Arena login/account."
+            "term": "Where the People data comes from",
+            "definition": "Everyone on this screen exists first in **Global Data → Users & Permissions**: system users under **User Accounts** and **Global Rosters → System User**, field workers under **Non System User**. Project People only chooses who joins this project. If a person is missing, add them in Global Data first."
           },
           {
-            "term": "Non System User",
-            "definition": "A person tracked on the project roster for headcount, crew membership, or reporting purposes, without Arena login credentials of their own."
+            "term": "Where the People data goes",
+            "definition": "Active project roster people appear in **My Desk → Pending Actions**, **Forms → Assign Users** (35 rows, same as the roster), work package **Assigned to**, **Estimate → Resource Planning** roster rows, crews used in **Time Management** and Field Works manpower logs."
           }
         ],
         "procedures": [
           {
             "title": "Copy an existing company crew into this project",
             "steps": [
-              "Go to <strong>Project Setup → People → Project Crews</strong>.",
-              "Click <strong>Copy Crews from Global Data</strong>.",
-              "In the \"Select Crew for [Project Name]\" picker, check the boxes for the crew(s) you want to copy in.",
-              "Confirm the copy."
+              "Go to **Project Setup → People → Project Crews** and click **Copy Crews from Global Data**.",
+              "In \"Select Crew for <project>\", tick the crews you want (or **Select All**).",
+              "Click **Submit**."
             ],
-            "note": "This copies the crew's current roster as a one-time snapshot. Later changes to the crew in Global Data will not automatically update this project's copy — re-copy manually if you need the latest roster."
+            "note": "Submit was not pressed. Whether later changes to the Global Data crew reach the project copy was not tested; treat the copy as a snapshot and re-check after changing the company crew."
           },
           {
             "title": "Build a new project-only crew",
             "steps": [
-              "Go to <strong>Project Setup → People → Project Crews</strong>.",
-              "Click <strong>Create Crew</strong>.",
-              "Enter the crew details and members.",
-              "Save the crew."
+              "Go to **Project Setup → People → Project Crews** and click **Create Crew**.",
+              "Enter **Crew Name**, choose **SUPERVISOR** and **FOREMAN**, and tick crew members from the roster list.",
+              "Review the counters and the **Selected Supervisors** table, then click **Submit**."
             ]
           },
           {
             "title": "Assign indirect staff to the project",
             "steps": [
-              "Go to <strong>Project Setup → People → Project Indirect Staff</strong>.",
-              "Select the system users to add.",
-              "Submit to assign them as indirect staff."
+              "Go to **Project Setup → People → Project Indirect Staff**.",
+              "Tick the system users who are indirect (overhead) staff.",
+              "Click **Submit**."
+            ]
+          },
+          {
+            "title": "Add a person to the project roster",
+            "steps": [
+              "Go to **Project Setup → People → Roster → System User** and click **Add** (or open **Non System User** and click **Get Users from Global Data** or **Add**).",
+              "Tick the people in \"Select Users for <project>\" and submit.",
+              "If the person is not listed, add them in **Global Data → Users & Permissions** first."
             ]
           }
         ],
@@ -19575,74 +19982,113 @@ const MODULES = [
       },
       {
         "heading": "Estimate",
-        "intro": "<p>Before a construction company commits real money to a project, it needs a defensible, itemized answer to what the job will cost — broken down by the same plants/work packages defined in Works, so budget and physical scope stay aligned. Project Setup → Estimate is where a <strong>PM / Module Admin</strong> builds that budget, across three sub-tabs: Estimate (a cost-estimate card per work package/plant, each showing Description and Created By), Resource Planning (planning out the labor, equipment, and materials a project's estimate will draw on), and Rate Card Template (building the Material/Equipment/Labor pricing templates that price out estimate line items).</p><p>Two points here are genuinely unconfirmed, and worth stating plainly rather than guessing at an answer: it's unclear whether a new Rate Card Template automatically inherits the Cost Types and rates already defined company-wide in Global Data → Cost, or whether each project's templates are built entirely from scratch — a PM should verify this directly rather than assume either way. Similarly, it isn't confirmed whether Estimate/BOQ line items are restricted to units from the Global Data UOM master list only, or whether a project can define a private unit of its own. What is established is that Global Data maintains a substantial master UOM catalog (Kg, Lbs, Cum, Litres, Sqm, Rm, Square Feet, LF, Quintals, Tonne, each, Pair, Lot, CuCm, Hectare, Job, km, and more), organized further into UOM Groups and UOM Conversions, plus a \"Measurement Templates\" feature — reusable calculation formulas, such as a template named \"LBD\" with fields L, B, D, Nos and the formula (L)×(B)×(D)×(Nos) — that Estimate/BOQ line items would draw on for quantity calculations. A PM building out estimate line items should expect these Global Data structures to be the backbone of quantity and pricing logic, even where the exact inheritance and scoping rules need to be confirmed locally.</p>",
+        "intro": "<p>Estimate is where a <strong>PM</strong> or <strong>Estimator</strong> builds the project budget plant by plant, plans weekly resources and picks the rate card templates used for pricing.</p><p>Open <strong>Project Setup → Estimate</strong>. Three sub-tabs: <strong>Estimate</strong>, <strong>Resource Planning</strong> and <strong>Rate Card Template</strong>. Cost types, templates, units and phase codes all come from Global Data.</p>",
         "definitions": [
           {
-            "term": "Estimate",
-            "definition": "The sub-tab listing a cost-estimate card per work package/plant, showing Description and Created By."
+            "term": "Estimate (sub-tab)",
+            "definition": "One card per plant (13, same as Works; Description and Created By). Open a plant to see its estimates: a **Create Estimate** button, search, **Settings** (opens **Project Settings → Cost Breakdown Structure**) and **Grid View** / **Table View**. None exist on Pellet Plant."
+          },
+          {
+            "term": "Create Estimate Form",
+            "definition": "Fields: **Name***, **Description***, **Approval Workflow*** (the list is empty until a workflow is created under **Project Settings → Cost Breakdown Structure → Approval WorkFlow**), **Cost Breakdown Structure*** (default **CUSTOM**), then one template picker per cost type: **Material Template**, **Equipment Template**, **Labor Template**, **Unit Rate Template**, **Sub Contractor Template**, **BOQ's Template**, **Freight Charges Template** and **Fuel & Gas Template**, then **Submit**. **Where these come from:** the eight cost types are **Global Data → Cost → Cost Type**; each picker lists the templates created for that type in Global Data (for example Material: test 1, Material Template, jn, TestTemplate, MT, Material Estimate Template; Equipment: test, Tree; Labor: s, Labor Template; choose **None** to skip)."
+          },
+          {
+            "term": "Cost Breakdown Structure (CBS) levels",
+            "definition": "Decides how the estimate is organized by phase code: Entity > Phase Code; Entity > Super Location > Phase Code; ... Entity > Super Location > Location > Activity > Work Package > Phase Code; Activity > Phase Code; Activity > Work Package > Phase Code; Work Package > Phase Code; or **CUSTOM**. The default per plant is set in **Project Settings → Cost Breakdown Structure → CBS** (choose the **Tree Version**, tick the level, **Customize CBS Level**, **Save Changes**). The phase codes are the 963 Global Data codes."
+          },
+          {
+            "term": "Project Settings → Cost Breakdown Structure",
+            "definition": "Four tabs: **CBS** (levels above), **Approval WorkFlow** (Create Approval Workflow, then create levels and add users; none yet), **Level of Detail** (**Phase Code** or **Phase Code - Cost Code**) and **Estimate Type** (**Lump Sump** or **Time & Material**). They set how every estimate in the project behaves."
           },
           {
             "term": "Resource Planning",
-            "definition": "The sub-tab for planning the labor, equipment, and material resources a project's estimate will need."
+            "definition": "A weekly planning grid: a **Date Range** picker, week columns (for example Week 40 (1/10/2026 - 3/10/2026) to Week 44), and rows under **Roster/Sub Contractors** with a **Planned** cell per week. The **Roster** rows are the 35 project people (**People → Roster**); the **Sub** rows are company vendors and sub contractors from **Global Data → Vendors / Sub Contractors** (for example United Rentals, JJ Enterprise)."
           },
           {
             "term": "Rate Card Template",
-            "definition": "Project-built Material/Equipment/Labor pricing templates used to price estimate line items; whether these inherit Cost Types/rates from Global Data → Cost automatically, or are built from scratch, is unconfirmed."
+            "definition": "Three tabs: **Material**, **Equipment**, **Labor**, each empty on this project (\"No rate card templates found...\"). **Add Rate Card Template** opens \"Select a template\" listing the Global Data templates (Material: Template 1, nam, na; Equipment: Template 1, test rate card; Labor: Template 1), then **Add Template**. So the project picks from the company templates built under **Global Data → Cost** rather than typing rates from scratch. Unit Rate, Sub Contractor, BOQ's, Freight Charges and Fuel & Gas have no rate card tab."
           },
           {
-            "term": "Measurement Templates",
-            "definition": "Reusable calculation formulas (e.g. a template with fields L, B, D, Nos computing (L)×(B)×(D)×(Nos)) that Estimate/BOQ line items can draw on for quantity calculations."
+            "term": "Units of measure",
+            "definition": "Quantities use the **Global Data → UOM, Phasecode & GL Codes** lists (51 UOMs in 9 groups with conversions). The work package shows **UOM** (for example Cum) from that list. A project-only unit was not found on these screens."
+          },
+          {
+            "term": "Where this data goes",
+            "definition": "Estimates feed **Cost Tracking** and the cost views in **Field Works → Cost** and **Data Analytics**; budgeted hours and quantities per work package sit in **Works → Other Attributes (Qty | Hrs)**."
           }
         ],
         "procedures": [
           {
             "title": "Build a cost estimate for a work package",
             "steps": [
-              "Go to <strong>Project Setup → Estimate → Estimate</strong>.",
-              "Locate or create the cost-estimate card for the relevant work package/plant.",
-              "Add line items, pricing them using the project's Rate Card Templates."
+              "Open **Project Settings → Cost Breakdown Structure** and confirm the **CBS** level, **Level of Detail**, **Estimate Type** and an **Approval WorkFlow**.",
+              "Go to **Project Setup → Estimate → Estimate**, open the plant and click **Create Estimate**.",
+              "Enter **Name**, **Description**, choose the **Approval Workflow** and **Cost Breakdown Structure**, and pick a template per cost type (or **None**).",
+              "Click **Submit**, then open the estimate to add line items."
             ],
-            "note": "Confirm with your Arena administrator whether your Rate Card Templates inherit Cost Types from Global Data → Cost or need to be built from scratch — this isn't consistently documented."
+            "note": "Submit was not pressed; the estimate line-item screen was not reachable because no estimate exists on the test project."
+          },
+          {
+            "title": "Add a rate card template to the project",
+            "steps": [
+              "Go to **Project Setup → Estimate → Rate Card Template** and pick **Material**, **Equipment** or **Labor**.",
+              "Click **Add Rate Card Template** and choose a template under **Select a template**.",
+              "Click **Add Template**."
+            ]
           }
         ]
       },
       {
         "heading": "Schedule",
-        "intro": "<p>A cost estimate answers what the project will cost; the schedule answers when each piece of it will happen — and on a multi-plant industrial project, that usually means a distinct timeline per plant as well as an overall project view. Project Setup → Schedule is where a <strong>PM / Module Admin</strong> builds this out: click \"Create New Schedule\" to add one, and the screen lists project Milestones alongside a per-plant \"[Plant] - Schedule\" entry for every work package defined in Works, each opening a Gantt-style schedule. A grid/list view toggle controls how the overall list is displayed.</p><p>Structuring schedules per plant, rather than as one undifferentiated project timeline, mirrors the same work-package-first logic used in Estimate and Works — it lets a PM track schedule performance at the level actually meaningful to site management (is the Sinter Plant behind, even if the Coke Oven is ahead?) while still keeping an overall Milestones view for project-wide checkpoints. On the Gantt view itself, alongside the existing quarterly and yearly breakdown options, a PM can now also switch to a <strong>monthly breakdown</strong> for a finer-grained timeline, and enter a schedule date directly as <strong>free text</strong> rather than only picking one from the date-picker control — useful when transcribing dates quickly from a baseline schedule built outside Arena.</p><p>Once a schedule is built here, it feeds two things downstream: the plant-level dates it sets are what a foreman or PM checks against day to day when deciding what to prioritize during <strong>Look-Ahead Planning</strong> — the short-horizon (commonly two- to six-week) rolling view of upcoming activities that construction teams build off the master schedule to plan the next stretch of work — and the same schedule dates surface project-wide on the <strong>Schedule</strong> dashboard in Data Analytics & Insights, which is where a PM or client checks time performance without opening the Gantt view itself. Arena does not document a single named \"Look-Ahead Schedule\" screen distinct from the plant Gantt views built here; a look-ahead in Arena is a shorter, nearer-term slice of the same Project Setup → Schedule and Field Works → Progress data, cross-checked against <strong>My Calendar</strong> for what is actually due day to day, rather than a separate module.</p>",
+        "intro": "<p>Schedule is where a <strong>PM</strong> or planner builds the project timeline: project milestones plus one Gantt schedule per plant. It answers when each part of the work should happen.</p><p>Open <strong>Project Setup → Schedule</strong>. <strong>Create New Schedule</strong> starts a schedule; the list shows <strong>Milestones</strong> and one \"<strong>&lt;Plant&gt; - Schedule</strong>\" card per plant, with <strong>Grid View</strong> and <strong>Table View</strong>.</p>",
         "definitions": [
           {
+            "term": "Create New Schedule",
+            "definition": "Opens \"Create Schedule From\" with six sources: **Oracle P6 XML** (upload a Primavera P6 XML file), **Blank Template** (create a WBS from a blank template), **Scope** (get the WBS from scope items), **Oracle P6 Cloud** (sync data from P6 cloud), **Microsoft Project XML** (upload a Microsoft Project file) and **Level Schedule** (schedule the project level by level)."
+          },
+          {
             "term": "Milestones",
-            "definition": "Project-wide checkpoint entries listed alongside per-plant schedules."
+            "definition": "Opens two tabs, **Fastrack** and **Contractual**, each with **Add** and **Save** and a table **Name | Weightage | Planned Start Date | Planned End Date | Cumulative Planned | Cumulative Achieved | Actions**. Empty on this project."
           },
           {
             "term": "[Plant] - Schedule",
-            "definition": "A per-work-package Gantt-style schedule, automatically corresponding to each plant defined under Works."
+            "definition": "One card per plant (13 here, same as Works). Opening one shows a Gantt screen (type DEFAULT_TREE_SCHEDULE) with a **Planned Date** range, **Clear**, **Search**, **Time Period** (**Day**, **Week**, **Month**, **Year**), **Gantt View** (**Full**, **Half**, **None**), a left table **Id | Activity Name** listing the plant's Entities (Pellet Plant: Piperack, Indurating Building, Mixing Building, ECR (Electrical Control Room), Balling Building, Kiln) and monthly bars for each: \"<Entity> (Planned)\" and \"<Entity> (Actual)\"."
           },
           {
-            "term": "Monthly breakdown (Gantt view)",
-            "definition": "A view option on the plant Gantt schedule, alongside the existing quarterly and yearly breakdowns, for a finer-grained monthly timeline."
+            "term": "Where the schedule comes from",
+            "definition": "The rows come from the plant's Entities built in **Works**; planned dates can be loaded from P6 or Microsoft Project or entered, and each work package can carry **Planned Start/End Date**, **Forecasted End Date**, **Client End Date**, **Skyline End Date** and **Schedule ID** in **Works → Other Attributes (Qty | Hrs)**. The \"(Actual)\" bars show actual progress; all are empty while progress is 0%."
           },
           {
-            "term": "Free-text date entry",
-            "definition": "The ability to type a schedule date directly rather than only selecting one from the date-picker control, on the Gantt schedule view."
+            "term": "Where the schedule goes",
+            "definition": "Schedule data feeds the planned-versus-actual views in **Data Analytics** and delay analysis. Milestones carry a **Weightage** toward overall completion."
           }
         ],
         "procedures": [
           {
             "title": "Create a new schedule",
             "steps": [
-              "Go to <strong>Project Setup → Schedule</strong>.",
-              "Click <strong>Create New Schedule</strong>.",
-              "Select whether it's a project milestone or a specific plant's schedule, and build out the Gantt-style timeline."
-            ]
+              "Go to **Project Setup → Schedule** and click **Create New Schedule**.",
+              "In \"Create Schedule From\", choose the source: **Oracle P6 XML**, **Blank Template**, **Scope**, **Oracle P6 Cloud**, **Microsoft Project XML** or **Level Schedule**.",
+              "Follow the prompts (upload the file or pick the scope items) to build the schedule."
+            ],
+            "note": "The source dialog was opened and closed; the steps after choosing a source were not tested."
           },
           {
             "title": "Switch a Gantt schedule to a monthly view",
             "steps": [
-              "Open a <strong>[Plant] - Schedule</strong> Gantt view under Project Setup → Schedule.",
-              "Use the breakdown selector to switch between quarterly, yearly, and the <strong>monthly</strong> option.",
-              "Enter or adjust a date directly as free text where a faster alternative to the date-picker is needed."
+              "Open a **<Plant> - Schedule** card.",
+              "Under **Time Period**, choose **Month** (or **Day**, **Week**, **Year**).",
+              "Use **Planned Date** to narrow the date range and **Search** to find an activity."
             ]
+          },
+          {
+            "title": "Add a milestone",
+            "steps": [
+              "Go to **Project Setup → Schedule → Milestones** and pick **Fastrack** or **Contractual**.",
+              "Click **Add** and fill **Name**, **Weightage**, **Planned Start Date** and **Planned End Date**.",
+              "Click **Save**."
+            ],
+            "note": "Not submitted in testing."
           }
         ],
         "images": [
@@ -19658,35 +20104,43 @@ const MODULES = [
       },
       {
         "heading": "Phase Codes",
-        "intro": "<p>This is the tab most worth understanding carefully, because its behavior is easy to misread from the screen alone. The table shows every phase code with columns for Phase Code, Cost Types (Material/Labor/Equipment), Phase Code Type (Direct/Indirect), and Timesheet Management, paginated across a large list (963 records in a verified sample) — and it is tempting to assume this is the project's own, independently curated list of phase codes. <strong>It is not.</strong> This screen displays the entire company-wide Global Data phase code list — the same master list also reachable via Global Data → Cost → Cost Breakdown Structure → Phase Codes, just through a second doorway — with one extra column added: Timesheet Management, a per-phase-code checkbox. Checking that box is literally what the product calls \"Phase Code mapping\" (confirmed by the toast \"Phase Code mapping updated successfully\"). So this screen functions as a subset-selector and mapping tool, not a separate data source: a <strong>PM / Module Admin</strong> uses it to mark which of the company's phase codes should be available for logging time specifically on this project.</p><p>A Settings button (\"Select the Cost Type for each category to display Phase Codes\") adds a further layer of control, filtering which Cost Type — Material, Equipment, Labor, Unit Rate, Sub Contractor, BOQ's, Freight Charges, Fuel & Gas — is even eligible to be mapped for Timesheet Management on this project. If only \"Labor\" is enabled there, for example, a pure-Material phase code simply can't be turned on for Timesheet Management until Settings allows that Cost Type.</p><p><strong>The business payoff shows up downstream, in Home → Time Management → My Timesheet.</strong> Each timesheet row has a \"Company/Projects/Work Orders/GL Codes\" dropdown immediately followed by a Phase Code dropdown. Selecting \"Company\" pulls that Phase Code dropdown from the full, unfiltered global list of 963 codes — meant for every job company-wide. Selecting a specific Project instead pulls only the phase codes that project has explicitly mapped/enabled here — and if nothing has been mapped yet, that dropdown is simply empty. So if a PM wants field staff logging time against this project to see a short, relevant list of phase codes instead of hunting through hundreds of company-wide codes meant for entirely different jobs, they must (1) come into this Phase Codes screen and check Timesheet Management for the relevant codes, and (2) make sure people actually select this Project — not \"Company\" — in Time Management. Leaving the selector on \"Company\" silently shows everyone the entire unfiltered company-wide list, which is a genuinely easy and common mistake to make, and one worth checking first whenever a field user complains the timesheet phase code list is overwhelming or wrong.</p>",
+        "intro": "<p>Phase Codes shows the company's phase code list and lets a <strong>PM</strong> or <strong>Module Admin</strong> mark which codes this project uses for timesheets and equipment logs. It is not a separate project-only list.</p><p>Open <strong>Project Setup → Phase Codes</strong>. The table has <strong>Phase Code</strong>, <strong>Cost Types</strong>, <strong>Phase Code Type</strong>, <strong>Timesheet Management</strong> and <strong>Equipment Management</strong>, with search, paging (963 codes here) and a <strong>Settings</strong> gear.</p>",
         "definitions": [
           {
-            "term": "Phase Code mapping",
-            "definition": "The act of checking the Timesheet Management box for a phase code on this screen — the product's own term for enabling that phase code for this specific project's time logging, confirmed by the toast \"Phase Code mapping updated successfully\"."
+            "term": "Phase code list",
+            "definition": "963 codes, the same list as **Global Data → UOM, Phasecode & GL Codes → Phase Codes** and **Global Data → Cost → Cost Breakdown Structure → Phase Codes**. Examples: \"AA2 - Hardware\" (Material, Direct) and \"4A4 - UAT of base map Data and Data Publish\" (Material, Equipment, Labor, Direct). Types on the master list are Direct, Indirect, Non Productive and Change Order; Cost Types are the eight from **Global Data → Cost**."
           },
           {
-            "term": "Timesheet Management (column)",
-            "definition": "A per-phase-code checkbox that determines whether that phase code is available for logging time against this project specifically."
+            "term": "Timesheet Management and Equipment Management (columns)",
+            "definition": "Two tick boxes per code. Ticking one is \"Phase Code mapping\": the code becomes available for that purpose on this project. **Timesheet Management** controls the Phase Code dropdown in **Time Management** timesheets when the log level is this project; **Equipment Management** does the same for equipment logs. Neither is ticked for any code on Arena Steel Plant - Phase 1."
           },
           {
-            "term": "Phase Code Settings",
-            "definition": "A configuration panel (\"Select the Cost Type for each category to display Phase Codes\") controlling which Cost Types are eligible to be mapped for Timesheet Management on this project."
+            "term": "Settings (gear)",
+            "definition": "Opens \"Select the Cost Type for each category to display Phase Codes\" with two categories, **Timesheet Management** and **Equipment Management**; expand one to tick **Cost Types** (**Select All**, Material, Equipment, Labor, Unit Rate, Sub Contractor, BOQ's, Freight Charges, Fuel & Gas) and **Save**. Only codes with a ticked cost type can be mapped for that category."
           },
           {
-            "term": "Company vs. Project selector (Time Management)",
-            "definition": "The dropdown in My Timesheet that determines whether the subsequent Phase Code dropdown shows the full unfiltered global list (\"Company\") or only this project's mapped phase codes (a specific Project)."
+            "term": "Project Settings → Phase Code Settings",
+            "definition": "A separate page with two options: **Unique phase code** (a code can be used on only 1 Work Package and Location) and **Multiple-Use Phase Code** (a code can be used across multiple Locations). Arena Steel Plant - Phase 1 uses **Unique phase code**. It controls how codes are assigned to work packages in **Works → Other Attributes (Qty | Hrs)**."
+          },
+          {
+            "term": "Company versus Project in timesheets",
+            "definition": "In **Time Management → My Timesheet**, choosing **Company** shows phase codes from the company list (the Default Phase Codes list there had 270 entries), while choosing this project shows only the codes you mapped here. So an empty mapping means no project phase codes to pick."
+          },
+          {
+            "term": "Where this data comes from and goes",
+            "definition": "**Comes from:** Global Data phase codes (you cannot add codes here). **Goes to:** Time Management timesheets, equipment logs, Works → Other Attributes (Phase Codes), Estimate (cost breakdown by phase code) and cost reports."
           }
         ],
         "procedures": [
           {
             "title": "Give field staff a clean, project-relevant phase code list in Time Management",
             "steps": [
-              "Go to <strong>Project Setup → Phase Codes</strong>.",
-              "Optionally, click the <strong>Settings</strong> icon to restrict which Cost Types are eligible for mapping on this project.",
-              "For each phase code that should be usable for logging time on this project, check the <strong>Timesheet Management</strong> box (this triggers \"Phase Code mapping updated successfully\").",
-              "Instruct field staff to select this <strong>Project</strong> (not \"Company\") in the first dropdown on <strong>Home → Time Management → My Timesheet</strong>, so the Phase Code dropdown only shows the codes just mapped."
+              "Go to **Project Setup → Phase Codes** and click the **Settings** gear.",
+              "Expand **Timesheet Management**, tick the **Cost Types** to allow (for example Labor) and click **Save**.",
+              "Tick **Timesheet Management** for each phase code this project should use. A message confirms \"Phase Code mapping updated successfully\".",
+              "Ask field staff to choose this project (not **Company**) in **Time Management → My Timesheet** so the Phase Code dropdown shows only the mapped codes."
             ],
-            "note": "If nothing has been mapped yet, selecting the Project in Time Management will show an empty Phase Code dropdown. Leaving the selector on \"Company\" always shows the full, unfiltered company-wide list of phase codes."
+            "note": "The message text comes from earlier verification; ticking boxes was not repeated because settings must not be changed in this review."
           }
         ]
       },
