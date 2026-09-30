@@ -2268,7 +2268,8 @@ const QA_GLOBALDATA = [
   {
     action: "edit",
     object: "company profile",
-    scope: "global", section: "Company & Business Units",
+    scope: "global",
+    section: "Company & Business Units",
     question: "How do I update the company profile?",
     answer: "1. Global Data → **Company** tile → **Company Details** tab.\n2. Click **Upload Company Logo** to set the brand logo used across generated documents.\n3. Fill in/update the required fields (Company Name, ID, Address, City, State, Zip, Contact Person details, Company Email/Phone, optionally PAN/GST).\n4. To configure SSO, click **Add SSO Provider** under SSO Clients and complete the provider's setup.\n5. Click **Submit** to save.",
     tags: ["company profile","company logo","company details","company logo details"]
@@ -2276,7 +2277,8 @@ const QA_GLOBALDATA = [
   {
     action: "create",
     object: "business unit",
-    scope: "global", section: "Company & Business Units",
+    scope: "global",
+    section: "Company & Business Units",
     question: "How do I add a business unit?",
     answer: "1. Global Data → **Business Units** → **Add**.\n2. Enter a Code and Description.\n3. Submit.",
     tags: ["business unit","add business unit"]
@@ -2284,7 +2286,8 @@ const QA_GLOBALDATA = [
   {
     action: "create",
     object: "owner",
-    scope: "global", section: "Owners: Client & Project-Owner Directory",
+    scope: "global",
+    section: "Owners: Client & Project-Owner Directory",
     question: "How do I create a new Owner record?",
     answer: "1. Global Data → **Owners** tile → **Create Owner** (split button) → **Create Owner**.\n2. **Step 1 – Basic Details:** enter Owner Name* (required), Short Name, Alias Name, Phone Number*, Email*, Fax Number, Url; expand and fill Primary Address, optionally check **Same as Primary address** for Mailing/Billing Address.\n3. **Step 2 – Locations & Tax Codes:** click **Link Locations** to associate company Locations (with a Default flag), and **Add** under Tax Codes to attach Tax Group/Tax Class/Tax Code combinations.\n4. **Step 3 – Preview:** review all entered data.\n5. Click **Submit** to create the Owner.\n\nTo bulk-create Owners, use **Export**, which also exposes Download/Upload Excel options with a template.",
     tags: ["create owner","register owner","new owner"]
@@ -2292,7 +2295,8 @@ const QA_GLOBALDATA = [
   {
     action: "configure",
     object: "owner hierarchy levels",
-    scope: "global", section: "Owners: Client & Project-Owner Directory",
+    scope: "global",
+    section: "Owners: Client & Project-Owner Directory",
     question: "How do I configure Owner hierarchy levels?",
     answer: "1. Owners tile → **Settings** (gear icon, top right).\n2. In \"Owner Settings,\" choose Level 1, Level 2, or Level 3 depending on how granular owner categorization should be company-wide.",
     tags: ["owner settings","owner hierarchy","owner levels"]
@@ -2300,7 +2304,8 @@ const QA_GLOBALDATA = [
   {
     action: "create",
     object: "delivery location",
-    scope: "global", section: "Locations & Tax",
+    scope: "global",
+    section: "Locations & Tax",
     question: "How do I add a new company delivery location?",
     answer: "1. Global Data → **Locations** tile → **Create**.\n2. In the \"Add Location\" dialog, fill Location Name*, Address*, Zip Code, City, State.\n3. Under **Tax Codes***, click **Add** to attach one or more Tax Group/Tax Class/Tax Code entries.\n4. Click **Submit**.\n\nBulk location setup is also possible via Excel import from this screen's Export/Upload options.",
     tags: ["add location","delivery location","create location"]
@@ -2308,7 +2313,8 @@ const QA_GLOBALDATA = [
   {
     action: "configure",
     object: "tax group and tax code",
-    scope: "global", section: "Locations & Tax",
+    scope: "global",
+    section: "Locations & Tax",
     question: "How do I set up tax groups and tax codes?",
     answer: "1. Global Data → **Tax Configuration** → **Add Tax Group** → enter the Group name → **Submit**.\n2. Select the new group in the left panel, then click **Add Tax Code** → enter Tax Code* and Tax Percentage* → **Submit**.\n3. Repeat for each code belonging to that group (e.g. CGST, SGST, ITC, Freight).\n4. Use **Upload Excel** / **Download Excel** to bulk manage tax codes.",
     tags: ["tax configuration","tax group","tax code","gst","gst setup"]
@@ -2316,7 +2322,8 @@ const QA_GLOBALDATA = [
   {
     action: "create",
     object: "vendor",
-    scope: "global", section: "Vendors & Subcontractors",
+    scope: "global",
+    section: "Vendors & Subcontractors",
     question: "How do I add a new vendor?",
     answer: "1. Global Data → **Vendors** tile → **Register Vendor**.\n2. Upload a profile picture (optional), fill Vendor ID*, Company Name*, First Name*, Last Name*.\n3. Click **Add** in the contact table to add one or more contact persons with their details.\n4. Fill Username*, Phone Number* (with country code + extension), Email*.\n5. Choose a **Select Sign Label** (e.g. Initials) and fill Initials* — used as the digital signature label on approved documents; optionally toggle **Enable Security Key Authentication**.\n6. Optionally fill Vendor Title, Address, Licence Number, Fax, Scope, and Website.\n7. Under **Additional Information**, optionally set Vendor Type, Vendor Business Size, Vendor Minority, Freight Terms, GST IN, and Linked Vendor Groups, and check **Domestic**, **Preferred**, and/or **Blocked**.\n8. Click **Submit**.",
     tags: ["register vendor","add vendor","new vendor"]
@@ -2324,7 +2331,8 @@ const QA_GLOBALDATA = [
   {
     action: "configure",
     object: "vendor status",
-    scope: "global", section: "Vendors & Subcontractors",
+    scope: "global",
+    section: "Vendors & Subcontractors",
     question: "How do I mark a vendor as preferred or block it from being used?",
     answer: "1. Open the vendor's card from the **Vendors** tile (its status also shows directly on the vendor card in the list).\n2. On the **Profile** tab, scroll to **Additional Information**.\n3. Check **Preferred** to flag it as a preferred supplier, or **Blocked** to stop it from being selected in Procurement and Work Orders.\n4. Click **Submit**.",
     tags: ["preferred vendor","blocked vendor","vendor status"]
@@ -2332,7 +2340,8 @@ const QA_GLOBALDATA = [
   {
     action: "configure",
     object: "vendor rate card",
-    scope: "global", section: "Vendors & Subcontractors",
+    scope: "global",
+    section: "Vendors & Subcontractors",
     question: "How do I set up a vendor's rate card?",
     answer: "1. Open the vendor's card from the **Vendors** tile.\n2. Go to the **Rate Card** tab, choose **Materials** or **Equipment**.\n3. Click **Upload Logs**, download the Excel template, fill in Daily/Weekly/Monthly rates per item, then upload the completed file — or edit the **Rate** field inline per row.",
     tags: ["rate card","vendor rates","upload logs","vendor rates upload logs"]
@@ -2340,7 +2349,8 @@ const QA_GLOBALDATA = [
   {
     action: "configure",
     object: "vendor rating form",
-    scope: "global", section: "Vendors & Subcontractors",
+    scope: "global",
+    section: "Vendors & Subcontractors",
     question: "How do I configure the vendor rating form?",
     answer: "1. Vendors tile → **Ratings Form** tab.\n2. Click **Add field** to add a new custom rating criterion (e.g. \"Safety\").\n3. Set its weight/value, toggle **Required** and/or **Show on card** as needed, choose its type via **Choose Type** (e.g. Rating).\n4. Click **Save Changes**.",
     tags: ["vendor rating","ratings form","vendor evaluation"]
@@ -2348,7 +2358,8 @@ const QA_GLOBALDATA = [
   {
     action: "create",
     object: "subcontractor",
-    scope: "global", section: "Vendors & Subcontractors",
+    scope: "global",
+    section: "Vendors & Subcontractors",
     question: "How do I register a subcontractor?",
     answer: "1. Global Data → **Sub Contractors** tile → **Register Sub Contractor**.\n2. Complete the registration form (name, contact, ID) and submit.\n3. Use **Add Groups** to organize subcontractors into categories, similar to Vendor categories.",
     tags: ["subcontractor","register sub contractor"]
@@ -2356,7 +2367,8 @@ const QA_GLOBALDATA = [
   {
     action: "track",
     object: "vendor certification",
-    scope: "global", section: "Vendors & Subcontractors",
+    scope: "global",
+    section: "Vendors & Subcontractors",
     question: "How do I track vendor/subcontractor certifications like ISO or safety licenses?",
     answer: "1. Go to **Global Data → Settings → Sub Contractor Settings** to define which certification fields (e.g. ISO 9001, CIDB) subcontractors must upload.\n2. Or, for company-wide compliance items, use **Global Data → Compliance Hub → Compliance Directory → Create** to define the requirement (Name, Category, Renewal Frequency, Evidence Type), then track status under **My Company Compliance**.",
     tags: ["subcontractor compliance","iso certification","safety license","iso certification safety license"]
@@ -2364,7 +2376,8 @@ const QA_GLOBALDATA = [
   {
     action: "create",
     object: "work order type",
-    scope: "global", section: "Work Order Management",
+    scope: "global",
+    section: "Work Order Management",
     question: "How do I create a Work Order Type?",
     answer: "1. Global Data → **Work Order Management** → **Settings** gear → **Work Order Types**.\n2. Click **Work Order Type**, enter a Name* and Description, click **Submit**.",
     tags: ["work order type","create work order type","work order type setup"]
@@ -2372,7 +2385,8 @@ const QA_GLOBALDATA = [
   {
     action: "create",
     object: "work order contract template",
-    scope: "global", section: "Work Order Management",
+    scope: "global",
+    section: "Work Order Management",
     question: "How do I create a Work Order Contract template?",
     answer: "1. Work Order Management → **Create**.\n2. Enter Name*, Description, and select a **Work Order Type*** (Service/Equipment/Material).\n3. Submit, then open the new record to configure its Profile fields, add Items via **Create Items**, and configure Expense forms under the **Expense** tab.",
     tags: ["work order contract","create work order"]
@@ -2380,7 +2394,8 @@ const QA_GLOBALDATA = [
   {
     action: "configure",
     object: "construction type",
-    scope: "global", section: "Construction Types",
+    scope: "global",
+    section: "Construction Types",
     question: "How do I configure which construction categories are available when creating a project?",
     answer: "1. Global Data → **Construction Types** tile.\n2. Click **Create** to add a new type, or **Copy** an existing type to clone its full setup into a new one.\n3. Optionally mark one type as **Set as Default**.",
     tags: ["construction types","project category","construction category"]
@@ -2388,7 +2403,8 @@ const QA_GLOBALDATA = [
   {
     action: "define",
     object: "construction types vs construction type tab",
-    scope: "global", section: "Construction Types",
+    scope: "global",
+    section: "Construction Types",
     question: "What's the difference between \"Construction Types\" and the \"Construction Type\" tab?",
     answer: "**Construction Types** (a tile) is the simple master list of category names (Infrastructure, Residential, etc.) used when creating a project. The **Construction Type** tab (next to \"Company\" on the Global Data home page) is a 10-step configuration pipeline where you build out the full work-breakdown library — Global Work Areas, Activities/Work Packages, Sequence Templates, Naming Framework, Data Migration, and more — for whichever Construction Type is selected in its dropdown.",
     tags: ["construction types vs construction type","wbs pipeline","wbs pipeline comparison"]
@@ -2396,7 +2412,8 @@ const QA_GLOBALDATA = [
   {
     action: "export",
     object: "data migration",
-    scope: "global", section: "Construction Types",
+    scope: "global",
+    section: "Construction Types",
     question: "How do I bulk-load historical data instead of entering it manually?",
     answer: "1. Global Data → **Construction Type** tab → **Step 7 (Data Migration)**.\n2. For each section (Master Data, Global Work Packages, Locations Type Work Packages, Global Sequence Model, etc.), click the **Template** link to download the correctly-formatted Excel file.\n3. Fill it in and drag it into the upload zone. Existing data is preserved — new rows are appended.",
     tags: ["data migration","bulk upload","excel import","bulk upload excel import"]
@@ -2404,7 +2421,8 @@ const QA_GLOBALDATA = [
   {
     action: "create",
     object: "user account",
-    scope: "global", section: "Users & Permissions",
+    scope: "global",
+    section: "Users & Permissions",
     question: "How do I register a new user or employee?",
     answer: "1. Global Data → **Users & Permissions** → **User Accounts** → **Active Users** tab.\n2. Click **Register User**. Fill Employee ID, First Name, Last Name, Username, Phone Number, Email, and optionally Vendor Number (to link the login to a Vendor record).\n3. Enter a temporary Password and Confirm Password, choose a **Select Sign Label** and fill Initials, and optionally toggle **Enable Security Key Authentication**.\n4. Click **Submit**. Use **Notify User** to email them their login/setup instructions.",
     tags: ["register user","add employee","new user account","register user employee","register user dialog fields","user registration form fields","employee id username vendor number"]
@@ -2412,7 +2430,8 @@ const QA_GLOBALDATA = [
   {
     action: "create",
     object: "user account",
-    scope: "global", section: "Users & Permissions",
+    scope: "global",
+    section: "Users & Permissions",
     question: "How do I bulk-import users instead of adding them one by one?",
     answer: "1. Users & Permissions → **Active Users** tab.\n2. Click the **Export** button to open its menu and choose **Download Sample**; fill in one row per user (use correct country codes for phone numbers).\n3. Reopen **Export** and choose **Upload Excel**, then select the completed file — Arena creates the accounts and emails each new user automatically.",
     tags: ["bulk import users","upload excel users","onboard users","bulk import users upload excel"]
@@ -2420,7 +2439,8 @@ const QA_GLOBALDATA = [
   {
     action: "configure",
     object: "user group permissions",
-    scope: "global", section: "Users & Permissions",
+    scope: "global",
+    section: "Users & Permissions",
     question: "How do I set up permissions for a group of users?",
     answer: "1. Global Data → **Users & Permissions** → **Global Permission** tab.\n2. Click **Add User Group**, name it, then click its **Permissions** button and select the allowed modules/actions.\n3. Click its **Users** button to add members — they inherit the group's permissions.\n4. Optionally use **Fetch Templates** to start from one of Arena's standard permission templates (e.g. Super Admin).",
     tags: ["permission group","user group","global permission"]
@@ -2428,7 +2448,8 @@ const QA_GLOBALDATA = [
   {
     action: "configure",
     object: "individual user permissions",
-    scope: "global", section: "Users & Permissions",
+    scope: "global",
+    section: "Users & Permissions",
     question: "How do I set up permissions for an individual user?",
     answer: "Arena's permissioning is group-based, not per-person — there's no screen that grants a one-off permission to a single user independent of a group. To give one person a specific set of rights:\n1. Go to Global Data → **Users & Permissions** → **Global Permission**.\n2. Either create a new group scoped to just that person (or find an existing group with the right access) via **+ Add User Group**, then use its **Permissions** button to set the exact View/Create/Edit/Delete/Admin/Download/Print/Assign To/Roll Back rights per module.\n3. Open that group's **Users** button and add the person to it.\n\nTo check what a specific person can already do (and which group is granting it), use **User Permission** — see the next question.",
     tags: ["individual permission","one user permission","per-user access","single user rights","user-specific permission"]
@@ -2436,7 +2457,8 @@ const QA_GLOBALDATA = [
   {
     action: "view",
     object: "user permission tab",
-    scope: "global", section: "Users & Permissions",
+    scope: "global",
+    section: "Users & Permissions",
     question: "What does the User Permission tab do, and how is it different from Global Permission?",
     answer: "**User Permission** (Global Data → Users & Permissions → User Permission) is a read-only lookup, not an editor: pick a person from the list and it shows their **Basic Details**, which **Groups** they belong to (click a group card to preview its permission set), and a full **Permissions** tree of everything they can currently do — with each row already checked or unchecked based on their group memberships. The checkboxes here are disabled; there's no Save button, and you can't add or remove a group from this screen.\n\n**Global Permission** is the actual editor — that's where you create/edit permission groups, toggle their View/Create/Edit/Delete/etc. rights per module, and add or remove the users who belong to each group. Use **Global Permission** to change what people can do; use **User Permission** to verify what one specific person can already do and trace it back to the group that granted it.",
     tags: ["user permission tab","effective permissions","what can this user do","check user access","permission lookup","difference between user permission and global permission","user permission vs global permission"]
@@ -2444,7 +2466,8 @@ const QA_GLOBALDATA = [
   {
     action: "define",
     object: "active vs inactive users",
-    scope: "global", section: "Users & Permissions",
+    scope: "global",
+    section: "Users & Permissions",
     question: "What's the difference between Active Users and Inactive Users?",
     answer: "**Active Users** can currently log in. Deleting a user from Active Users doesn't erase them — it moves them to **Inactive Users**, where they're retained and can later be re-Activated (which resends a registration/password-reset email).",
     tags: ["active users","inactive users","deactivate user"]
@@ -2452,7 +2475,8 @@ const QA_GLOBALDATA = [
   {
     action: "create",
     object: "non-system roster worker",
-    scope: "global", section: "Users & Permissions",
+    scope: "global",
+    section: "Users & Permissions",
     question: "How do I add a non-system (temporary) worker to the global roster?",
     answer: "1. Users & Permissions → **Global Rosters** → **Non System User** → **Add Non System Roster**.\n2. Fill in worker details (name, designation, skills, experience, group number, etc.) → Submit.\n3. Use **Export All Users** to download the full roster, or **Add Role** to assign a role to selected rosters.",
     tags: ["non system user","temporary worker","global roster","temporary worker global roster"]
@@ -2460,7 +2484,8 @@ const QA_GLOBALDATA = [
   {
     action: "create",
     object: "crew",
-    scope: "global", section: "Users & Permissions",
+    scope: "global",
+    section: "Users & Permissions",
     question: "How do I create a crew?",
     answer: "1. Global Data → **Crews** tile → **Create**.\n2. Enter the Crew Name.\n3. Select a **Supervisor** and a **Foreman** from the dropdown (these people must already exist in Global Rosters).\n4. Select **Rosters** — check the individual roster members (system and non-system) who belong to this crew.\n5. Click **Submit**.",
     tags: ["create crew","crew setup","supervisor foreman","crew setup supervisor foreman"]
@@ -2468,7 +2493,8 @@ const QA_GLOBALDATA = [
   {
     action: "create",
     object: "unit of measure",
-    scope: "global", section: "UOM & Phase Codes",
+    scope: "global",
+    section: "UOM & Phase Codes",
     question: "How do I add a new unit of measure (UOM) and group it?",
     answer: "1. Global Data → **UOM, Phasecode & GL Codes** tile → **UOMs** tab.\n2. Click **Add UOM**, type the unit name (e.g. \"Tonne\"), and save.\n3. To make it convertible with other units, go to **UOM Groups**, add it to (or create) a group, and enter the conversion factor(s).\n4. The new factors then appear read-only under **UOM Conversions**.",
     tags: ["uom","unit of measure","uom conversion","uom group conversion"]
@@ -2476,7 +2502,8 @@ const QA_GLOBALDATA = [
   {
     action: "create",
     object: "phase code",
-    scope: "global", section: "UOM & Phase Codes",
+    scope: "global",
+    section: "UOM & Phase Codes",
     question: "How do I add a Phase Code?",
     answer: "1. Phase Codes tab → **Add**.\n2. Enter the Phase Code, its Description, choose its Phase Code Type (Direct/Indirect/Non-Productive/Change Order), and select which Cost Types apply (Material/Labor/Equipment/Subcontractors/Other Expenses).\n3. Save. Bulk create/update is also available via Excel Upload, which supports a **Create Mode** and an **Update Mode**.",
     tags: ["phase code","add phase code","cost type","cost type classification"]
@@ -2484,7 +2511,8 @@ const QA_GLOBALDATA = [
   {
     action: "understand",
     object: "what is a phase code",
-    scope: "global", section: "UOM & Phase Codes",
+    scope: "global",
+    section: "UOM & Phase Codes",
     question: "What is a Phase Code in Arena?",
     answer: "A Phase Code is Arena's name for what many construction businesses call a cost code or activity code — a short identifier that classifies a piece of work or spend for budgeting and cost tracking (e.g. \"Direct\" labor on formwork versus \"Indirect\" site overhead). Global Data holds the full company-wide master list; individual projects can work from that full list or a mapped subset, and Time Management's timesheet phase-code dropdown pulls from whichever source the project is configured to use.",
     tags: ["what is a phase code","phase code definition","glossary","cost code vs phase code"]
@@ -2492,7 +2520,8 @@ const QA_GLOBALDATA = [
   {
     action: "understand",
     object: "what is a wbs",
-    scope: "project", section: "UOM & Phase Codes",
+    scope: "project",
+    section: "UOM & Phase Codes",
     question: "What is a WBS (Work Breakdown Structure)?",
     answer: "WBS (Work Breakdown Structure) is the standard construction-industry term for dividing a project into a hierarchy of smaller, trackable pieces of work — the backbone that schedule, cost, and progress reporting all attach to. Arena doesn't use the term \"WBS\" on screen; the equivalent is built in <strong>Project Setup → Works</strong>, where a project is broken into work packages or plants (for example \"Blast Furnace\" or \"Piperack\"), each of which can be divided further into levels, floors, and units. Everything downstream — schedules, phase codes, work logs, cost — is ultimately tracked against this same structure, which Field Works calls the \"Tree Version.\"",
     tags: ["what is a wbs","work breakdown structure","glossary","tree version","works"]
@@ -2500,7 +2529,8 @@ const QA_GLOBALDATA = [
   {
     action: "configure",
     object: "currency",
-    scope: "global", section: "Company-Wide Settings",
+    scope: "global",
+    section: "Company-Wide Settings",
     question: "How do I change the company's currency?",
     answer: "1. Global Data → **Settings** → **Currency** (left nav).\n2. Choose the desired currency from the dropdown.\n3. Click **Save Changes**.",
     tags: ["currency","change currency","settings"]
@@ -2508,7 +2538,8 @@ const QA_GLOBALDATA = [
   {
     action: "configure",
     object: "date format",
-    scope: "global", section: "Company-Wide Settings",
+    scope: "global",
+    section: "Company-Wide Settings",
     question: "How do I change the global date format?",
     answer: "1. Settings → **Global Date Format**.\n2. Select **MM-DD-YYYY** or **DD-MM-YYYY**.\n3. Click **Save Changes**.",
     tags: ["date format","global date format"]
@@ -2516,7 +2547,8 @@ const QA_GLOBALDATA = [
   {
     action: "configure",
     object: "mail routing",
-    scope: "global", section: "Company-Wide Settings",
+    scope: "global",
+    section: "Company-Wide Settings",
     question: "How do I route a module's emails through Outlook instead of Gmail?",
     answer: "1. Settings → **Mail Settings**.\n2. Find the module row (e.g. Work Order) and click the **Outlook** radio button in that row.\n3. The change saves immediately per row (ensure Outlook has been connected first via Marketplace).",
     tags: ["mail settings","outlook","gmail routing","outlook gmail settings"]
@@ -2524,7 +2556,8 @@ const QA_GLOBALDATA = [
   {
     action: "define",
     object: "awp toggle",
-    scope: "global", section: "Company-Wide Settings",
+    scope: "global",
+    section: "Company-Wide Settings",
     question: "What is AWP and how do I enable it?",
     answer: "AWP stands for **Advanced Work Packaging**. Per Arena's reference documentation it is controlled by a single toggle under **Global Data → Settings → Enable AWP** — turning it on/off shows or hides the AWP menu for all users. This toggle was not visible in the Settings navigation during review, so it may be feature-gated for your plan; contact your Arena account admin if you don't see it.",
     tags: ["awp","advanced work packaging"]
@@ -2532,7 +2565,8 @@ const QA_GLOBALDATA = [
   {
     action: "configure",
     object: "naming framework",
-    scope: "global", section: "Company-Wide Settings",
+    scope: "global",
+    section: "Company-Wide Settings",
     question: "How do I rename terminology used throughout the app (e.g. call \"Work Package\" something else)?",
     answer: "There are two Naming Framework screens:\n\n1. **Global Data → Construction Type tab → Step 5 (Naming Framework)** — renames Activity/Work-Package/Location-hierarchy terms, scoped per Construction Type.\n2. **Global Data → Settings → Naming Framework** — renames Procurement/Inventory/Roster/Cost terms company-wide.\n\nIn either, edit the **Custom Name** (and optionally **Short Name**) column next to the term you want to relabel, then save.",
     tags: ["naming framework","rename terminology","custom labels","rename terminology custom labels"]
@@ -2540,7 +2574,8 @@ const QA_GLOBALDATA = [
   {
     action: "create",
     object: "rfi template",
-    scope: "global", section: "Forms & Quickapps",
+    scope: "global",
+    section: "Forms & Quickapps",
     question: "How do I create a new RFI template?",
     answer: "1. Global Data → **Forms** → **Construction Forms** tab → click **RFI**.\n2. Click **Create Template**.\n3. Build the form layout (sections/fields) as needed and save.\n4. The new template becomes available for selection whenever an RFI is raised on a project.",
     tags: ["rfi template","create template","construction forms"]
@@ -2548,7 +2583,8 @@ const QA_GLOBALDATA = [
   {
     action: "create",
     object: "document folder template",
-    scope: "global", section: "Forms & Quickapps",
+    scope: "global",
+    section: "Forms & Quickapps",
     question: "How do I create a reusable folder structure for project documents?",
     answer: "1. Global Data → **Document Management** → **Create Template**, name it (e.g. \"FEL-1\").\n2. Select the template, then click **New Folder** repeatedly to build out the folder hierarchy (e.g. Civil, Mechanical, Structural).\n3. Apply this template when setting up a new project's document space.",
     tags: ["document template","folder structure","document management","document management structure"]
@@ -2556,7 +2592,8 @@ const QA_GLOBALDATA = [
   {
     action: "create",
     object: "quick app",
-    scope: "global", section: "Forms & Quickapps",
+    scope: "global",
+    section: "Forms & Quickapps",
     question: "How do I create a Quick App?",
     answer: "1. Global Data → **Quickapps** → **Quick Apps** tab → **Create**.\n2. Name the app and design its data-capture fields.\n3. Save — the Quick App becomes available from the mobile/field app or relevant project screen.",
     tags: ["quick app","create quickapp","custom form"]
@@ -2564,7 +2601,8 @@ const QA_GLOBALDATA = [
   {
     action: "create",
     object: "standard table",
-    scope: "global", section: "Forms & Quickapps",
+    scope: "global",
+    section: "Forms & Quickapps",
     question: "How do I create a Standard Table?",
     answer: "1. Quickapps → **Standard Tables** tab → **Add**.\n2. Define the table's name and columns.\n3. Save — the table can then be reused/referenced across projects.",
     tags: ["standard table","reference table"]
@@ -2572,7 +2610,8 @@ const QA_GLOBALDATA = [
   {
     action: "configure",
     object: "notification rule",
-    scope: "global", section: "Notifications",
+    scope: "global",
+    section: "Notifications",
     question: "How do I set up notification rules (e.g. email alerts for low inventory)?",
     answer: "1. Global Data → **Notifications** → **Event Groups**.\n2. Click **Notifications** on the relevant group (e.g. Inventory Management).\n3. Expand the module section, find the specific event (e.g. \"Minimum Stock Reached\"), and toggle **Mail**, **Web**, and/or **Mobile** on.",
     tags: ["notification rules","event groups","alerts","event groups alerts"]
@@ -2580,7 +2619,8 @@ const QA_GLOBALDATA = [
   {
     action: "create",
     object: "notification group",
-    scope: "global", section: "Notifications",
+    scope: "global",
+    section: "Notifications",
     question: "How do I create a custom notification group?",
     answer: "1. Notifications → **Event Groups** → **Add Event Groups**.\n2. Name the group, then use its **Notifications** button to select which events feed into it and on which channels.\n3. Use its **Users** button to add the people who should receive these notifications.",
     tags: ["custom notification group","add event group","custom event group"]
@@ -2588,7 +2628,8 @@ const QA_GLOBALDATA = [
   {
     action: "configure",
     object: "outlook integration",
-    scope: "global", section: "Integrations: Marketplace & Staged Tables",
+    scope: "global",
+    section: "Integrations: Marketplace & Staged Tables",
     question: "How do I connect Arena to Microsoft Outlook for email?",
     answer: "1. Global Data → **Marketplace** → **Microsoft Outlook**.\n2. Click **Sign in with Microsoft** and grant organization-wide consent (must use a company-domain email, not personal).\n3. Then go to **Settings → Mail Settings** and switch the relevant modules (e.g. Work Order) to **Outlook**.",
     tags: ["connect outlook","marketplace","microsoft integration","connect marketplace"]
@@ -2596,7 +2637,8 @@ const QA_GLOBALDATA = [
   {
     action: "configure",
     object: "staged tables sync",
-    scope: "global", section: "Integrations: Marketplace & Staged Tables",
+    scope: "global",
+    section: "Integrations: Marketplace & Staged Tables",
     question: "How do I sync external users into Arena via Staged Tables?",
     answer: "1. Connect the source system first: Global Data → **Marketplace** → **Trimble Viewpoint** → enter Hostname, Port Number, Username, Password and Database → **Test Connection and Save**.\n2. Global Data → **Staged Tables** → **View Point** tab → select **Users** in the left nav.\n3. Click **Map Attributes**, choose the Viewpoint column for each Arena field (Employee ID, First Name, Last Name, Phone Number, Email, Craft, Class, Vendor Number), tick **Update after sync?** where Viewpoint should keep overwriting, and Save.\n4. Either set **Auto Sync Criteria** (every 1 to 24 hours, optionally with **Auto create arena records after sync?**), or click **Bulk Create Arena Records** to create records now from the rows your Filters currently show.",
     tags: ["staged tables","sync external data","map attributes","map attributes external data"]
@@ -2604,7 +2646,8 @@ const QA_GLOBALDATA = [
   {
     action: "configure",
     object: "vista integration",
-    scope: "global", section: "Integrations: Marketplace & Staged Tables",
+    scope: "global",
+    section: "Integrations: Marketplace & Staged Tables",
     question: "How do I connect Arena to Vista?",
     answer: "Vista is Trimble Viewpoint's construction ERP, and in Arena it's the **Trimble Viewpoint** integration. There's no card called \"Vista\".\n1. Go to Global Data → **Marketplace** → **Trimble Viewpoint**.\n2. Enter your Viewpoint database details: **Hostname**, **Port Number**, **Username**, **Password** and **Database**.\n3. Click **Test Connection and Save**.\nOnce connected, Viewpoint data lands in Global Data → **Staged Tables** → **View Point**, where you map it and turn it into Arena records. Usually your IT team or a Global Admin handles this, since it needs Viewpoint database credentials.",
     tags: ["vista","viewpoint vista","connect vista","vista integration","trimble viewpoint","viewpoint connection","erp integration"]
@@ -2612,7 +2655,8 @@ const QA_GLOBALDATA = [
   {
     action: "understand",
     object: "vista data sync",
-    scope: "global", section: "Integrations: Marketplace & Staged Tables",
+    scope: "global",
+    section: "Integrations: Marketplace & Staged Tables",
     question: "What data does Arena pull from Vista (Trimble Viewpoint)?",
     answer: "Arena can stage 13 kinds of records from Vista, all under Global Data → **Staged Tables** → **View Point**: Users, Projects, Crews, Phase Codes, Customers, Vendors, Owners, Project User Mapping, Project Crew Mapping, Work Order Crew Mapping, GL Codes, Work Orders, and Logs.\n\nData first lands in the staged table, not straight into Arena. You then map each Viewpoint column to an Arena field (**Map Attributes**) and create the records, either automatically on a 1 to 24 hour schedule (**Auto Sync Criteria**) or on demand (**Bulk Create Arena Records**). This keeps Vista as the source of truth for employees, crews, phase codes and GL codes, so field timesheets and cost tracking use the same codes as payroll and accounting.",
     tags: ["vista data","what does vista sync","viewpoint entities","staged tables entities","vista sync","what comes from viewpoint"]
@@ -2620,7 +2664,8 @@ const QA_GLOBALDATA = [
   {
     action: "understand",
     object: "staged tables update after sync",
-    scope: "global", section: "Integrations: Marketplace & Staged Tables",
+    scope: "global",
+    section: "Integrations: Marketplace & Staged Tables",
     question: "What does 'Update after sync?' mean in Map Attributes?",
     answer: "It's a checkbox on each mapped field. When ticked, every later sync from Viewpoint overwrites that field in Arena, so Vista stays the master for it. When unticked, the value is filled on first creation and then Arena keeps its own copy, so edits made in Arena aren't wiped by the next sync.",
     tags: ["update after sync","map attributes checkbox","overwrite on sync","staged tables mapping"]
@@ -2628,7 +2673,8 @@ const QA_GLOBALDATA = [
   {
     action: "understand",
     object: "soft tech staging",
-    scope: "global", section: "Integrations: Marketplace & Staged Tables",
+    scope: "global",
+    section: "Integrations: Marketplace & Staged Tables",
     question: "What is the Soft Tech tab in Staged Tables?",
     answer: "Soft Tech is a second, separate staging source, unrelated to Vista/Viewpoint, and it has no Marketplace card. It covers only two things: **Work Orders**, pulled with **Get Data From SoftTech** and **Sync** (fields such as Work No, Agreement No, Agreement Amount, Contract Start/Completion Date, Estimated Cost and Tender Type), and **BOQ**, handled by Excel upload and download. It doesn't have Map Attributes, Auto Sync or Bulk Create.",
     tags: ["soft tech","softtech","staged tables soft tech","get data from softtech","boq staging"]
@@ -2636,7 +2682,8 @@ const QA_GLOBALDATA = [
   {
     action: "create",
     object: "customer approval level",
-    scope: "global", section: "Customer Settings",
+    scope: "global",
+    section: "Customer Settings",
     question: "How do I add an approval level for customer records?",
     answer: "1. Global Data → **Customer** tile → **Approval Workflow** tab → **Create Level**.\n2. Name/describe the level, assign Approvers, and choose the Workflow Type.\n3. Save — subsequent opportunity/customer approvals will route through this chain in order.",
     tags: ["customer approval workflow","create level","approval workflow"]
@@ -2644,7 +2691,8 @@ const QA_GLOBALDATA = [
   {
     action: "create",
     object: "cost type",
-    scope: "global", section: "Cost & Bid Templates",
+    scope: "global",
+    section: "Cost & Bid Templates",
     question: "How do I add a custom cost category (like \"Freight Charges\")?",
     answer: "1. Global Data → **Cost** → **Cost Type** tab → **Add Type**.\n2. Enter the name (e.g. \"Freight Charges\") and a description, then submit.",
     tags: ["cost type","add cost category","freight charges"]
@@ -2652,7 +2700,8 @@ const QA_GLOBALDATA = [
   {
     action: "create",
     object: "cost breakdown structure template",
-    scope: "global", section: "Cost & Bid Templates",
+    scope: "global",
+    section: "Cost & Bid Templates",
     question: "How do I set up a Cost Breakdown Structure (CBS) template?",
     answer: "1. Global Data → **Cost** → **Cost Breakdown Structure** tab → **Templates** → **Add Template**.\n2. Name it and build its structure using the available Phase Codes (managed under the Phase Codes side-list on the same screen, or under UOM/Phasecode & GL Codes).\n3. Optionally mark it as the company's Default CBS template.",
     tags: ["cost breakdown structure","cbs template"]
@@ -2660,7 +2709,8 @@ const QA_GLOBALDATA = [
   {
     action: "create",
     object: "bid line item",
-    scope: "global", section: "Cost & Bid Templates",
+    scope: "global",
+    section: "Cost & Bid Templates",
     question: "How do I add a bid line item?",
     answer: "1. Global Data → **Bid Templates** → **Add Item**.\n2. Enter the Item Description and choose its UOM Group and UOM.\n3. Submit. For bulk loading, use **Download Sample Excel**, fill it in, then **Upload Excel**.",
     tags: ["bid template","add item","estimate line item"]
@@ -2668,7 +2718,8 @@ const QA_GLOBALDATA = [
   {
     action: "define",
     object: "compliance requirement",
-    scope: "global", section: "Compliance Hub",
+    scope: "global",
+    section: "Compliance Hub",
     question: "How do I define a new compliance requirement?",
     answer: "1. Global Data → **Compliance Hub** → **Compliance Directory** → **Create**.\n2. Fill Compliance Name*, Description, Category/Type*, Renewal Frequency and Period (if periodic renewal applies), Evidence Type*, and upload the Required Evidence template/sample.\n3. Submit — this requirement is now tracked (and can show as Missing/Expiring/Expired) under **My Company Compliance**.",
     tags: ["compliance directory","compliance requirement"]
@@ -2676,7 +2727,8 @@ const QA_GLOBALDATA = [
   {
     action: "create",
     object: "measurement template",
-    scope: "global", section: "Measurement Templates",
+    scope: "global",
+    section: "Measurement Templates",
     question: "How do I build a quantity take-off formula for progress tracking?",
     answer: "1. Global Data → **Measurement Templates** → **Add Template**.\n2. Enter a Template ID* and Template Name* (e.g. \"LBD\").\n3. Under **Parameters**, add each variable the formula needs (e.g. L, B, D, Nos), clicking + after each.\n4. Enter the **Formula** referencing the parameters (e.g. `(L)*(B)*(D)*(Nos)`).\n5. Click **Submit**.\n6. Later, link this template to a Work Package via the Construction Type pipeline's Step 10 (Work Package Measurement Template Linking).",
     tags: ["measurement template","quantity takeoff","formula","quantity takeoff formula"]
@@ -6904,7 +6956,8 @@ const QA_TIMEMANAGEMENT = [
   {
     action: "submit",
     object: "timesheet",
-    scope: "project", section: "Timesheet Logs",
+    scope: "project",
+    section: "Timesheet Logs",
     question: "How do I log my own work hours?",
     answer: "Go to My Timesheet, select the Company/Project/Work Order/GL Code and the Template (auto-populated from your default setting), pick a Date Range, click \"Add\" to insert a row, fill in phase code/earning code/hours, then click \"Submit for Approval\" (or \"Save as Draft\" to save incomplete data).",
     tags: ["log hours","my timesheet","submit timesheet","enter hours"]
@@ -6912,7 +6965,8 @@ const QA_TIMEMANAGEMENT = [
   {
     action: "submit",
     object: "crew timesheet",
-    scope: "project", section: "Timesheet Logs",
+    scope: "project",
+    section: "Timesheet Logs",
     question: "How does a supervisor log hours for an entire crew?",
     answer: "Go to My Crew Timesheet, select the Company/Project/Work Order/GL Code and Crew, choose a Template and Date Range, click \"Add\" to add employee rows, fill in hours per phase/earning code, then \"Submit for Approval\". Timesheet settings and a workflow must be configured for the crew first.",
     tags: ["crew timesheet","log crew hours","supervisor timesheet","foreman timesheet"]
@@ -6920,7 +6974,8 @@ const QA_TIMEMANAGEMENT = [
   {
     action: "approve",
     object: "timesheet log",
-    scope: "project", section: "Timesheet Logs",
+    scope: "project",
+    section: "Timesheet Logs",
     question: "How do I approve or reject a submitted timesheet?",
     answer: "Go to My Timesheet Logs (or My Crew Timesheet Logs), select a submitted log, then use the \"Approve\" or \"Reject\" buttons shown on the right side, optionally adding comments. These buttons only appear for users designated as approvers in the Approval Workflow.",
     tags: ["approve timesheet","reject timesheet","timesheet approval"]
@@ -6928,7 +6983,8 @@ const QA_TIMEMANAGEMENT = [
   {
     action: "track",
     object: "timesheet status",
-    scope: "project", section: "Timesheet Logs",
+    scope: "project",
+    section: "Timesheet Logs",
     question: "What statuses can a timesheet log have?",
     answer: "A timesheet log can be Draft (incomplete, saved without mandatory fields except Employee), Submitted for Approval, Workflow in Progress (approved at one level, pending another), Completed (approved at all levels, locked), or Rejected (creates an issue for correction).",
     tags: ["timesheet statuses","draft","workflow in progress","completed","rejected"]
@@ -6936,7 +6992,8 @@ const QA_TIMEMANAGEMENT = [
   {
     action: "export",
     object: "timesheet log",
-    scope: "project", section: "Timesheet Logs",
+    scope: "project",
+    section: "Timesheet Logs",
     question: "What export formats are available for timesheet logs?",
     answer: "From the Export menu in Timesheet Logs, you can download VP Excel (.xlsx), VP CSV, QuickBooks (.iif), or SAP (.csv) formats after selecting date range, log level, crews/users, mode, and earning codes. Only Admin users have access to Export.",
     tags: ["export timesheet","quickbooks export","sap export","csv download"]
@@ -6944,7 +7001,8 @@ const QA_TIMEMANAGEMENT = [
   {
     action: "filter",
     object: "timesheet log",
-    scope: "project", section: "Timesheet Logs",
+    scope: "project",
+    section: "Timesheet Logs",
     question: "How do I filter timesheet logs by project, crew, or status?",
     answer: "In My Timesheet Logs / My Crew Timesheet Logs, click \"Filters\" to narrow by Log Level Category, Log Level, Crew, Logged By, Mode (Daily/Weekly by Day/Weekly), Status, and Date Range. Use \"Save filters\" to keep a filter set, \"Reset\" to revert, or \"Clear All\" to reset to defaults.",
     tags: ["filter timesheets","timesheet search","log level filter"]
@@ -6952,7 +7010,8 @@ const QA_TIMEMANAGEMENT = [
   {
     action: "track",
     object: "timesheet issue",
-    scope: "project", section: "Timesheet Issues",
+    scope: "project",
+    section: "Timesheet Issues",
     question: "What happens when a timesheet is rejected?",
     answer: "A rejected timesheet automatically creates an entry in Timesheet Issues with comments and supporting info. The issue stays active until the timesheet is corrected and resubmitted. Use \"Assign To\" to delegate and \"Due Date\" to set a deadline.",
     tags: ["timesheet issue","rejected timesheet","resubmit timesheet"]
@@ -6960,7 +7019,8 @@ const QA_TIMEMANAGEMENT = [
   {
     action: "configure",
     object: "approval workflow",
-    scope: "global", section: "Settings",
+    scope: "global",
+    section: "Settings",
     question: "How do I create an approval workflow for timesheets?",
     answer: "Go to Settings > Timesheet Workflow > Create Workflow, click \"Create Approval Workflow\", name it, then click \"Create Level\" to add approvers by User or by Role, choosing \"All must approve\" or \"Anyone can approve\" for each level.",
     tags: ["timesheet approval workflow","create workflow","approval levels"]
@@ -6968,7 +7028,8 @@ const QA_TIMEMANAGEMENT = [
   {
     action: "assign",
     object: "approval workflow",
-    scope: "global", section: "Settings",
+    scope: "global",
+    section: "Settings",
     question: "How do I assign an approval workflow to a user or crew?",
     answer: "Go to Settings > Timesheet Workflow > Assign Workflow, select a User or Crew, choose the Approval Workflow to apply, and click \"Save Changes\". Use \"Copy Approval Workflow To\" to apply the same workflow to multiple users/crews at once.",
     tags: ["assign timesheet workflow","copy workflow","workflow assignment"]
@@ -6976,7 +7037,8 @@ const QA_TIMEMANAGEMENT = [
   {
     action: "configure",
     object: "timesheet mode",
-    scope: "global", section: "Settings",
+    scope: "global",
+    section: "Settings",
     question: "How do I set whether timesheets are logged Daily, Weekly, or Weekly by Day?",
     answer: "Go to Timesheet Settings > Timesheet Mode. Under \"My Timesheet\" (individual) or \"My Crew Timesheet\" (per crew), select Daily, Weekly by Day, or Weekly, choose a Default Template, and click \"Save Changes\". Use \"Copy To\" to apply the same mode to other users or crews.",
     tags: ["timesheet mode","daily weekly configuration","default template"]
@@ -6984,7 +7046,8 @@ const QA_TIMEMANAGEMENT = [
   {
     action: "configure",
     object: "earning code",
-    scope: "global", section: "Settings",
+    scope: "global",
+    section: "Settings",
     question: "How do I create earning codes for payroll?",
     answer: "Go to Timesheet Settings > Earning Codes, click \"Add\" to insert a row, enter Code, Description, and Short Name, set the Data Type (Hours or Amount), and choose Payroll Hours and/or Project Hours. \"Split Headers\" places the code under Phase Codes in weekly templates.",
     tags: ["earning codes","payroll codes","create earning code"]
@@ -6992,7 +7055,8 @@ const QA_TIMEMANAGEMENT = [
   {
     action: "configure",
     object: "timesheet template",
-    scope: "global", section: "Settings",
+    scope: "global",
+    section: "Settings",
     question: "How do I build a custom timesheet template?",
     answer: "Go to Timesheet Settings > Timesheet Templates, click \"Create\", then open the new template to configure Standard and Configurable fields via \"Add Field\". Choose whether earning codes display as a \"Column\" or \"Split Time Header\", then \"Save Changes\".",
     tags: ["timesheet template builder","configurable fields","custom timesheet"]
@@ -7000,7 +7064,8 @@ const QA_TIMEMANAGEMENT = [
   {
     action: "configure",
     object: "payroll locking",
-    scope: "global", section: "Settings",
+    scope: "global",
+    section: "Settings",
     question: "How do I lock payroll periods to prevent further edits?",
     answer: "Go to Timesheet Settings > Payroll Locking. Choose Daily, Weekly, or Monthly mode. In Weekly mode pick the lock day and time; in Monthly mode choose Start of Month, End of Month, or a Custom date, then set the lock time.",
     tags: ["payroll locking","lock timesheet period","prevent edits"]
@@ -7008,7 +7073,8 @@ const QA_TIMEMANAGEMENT = [
   {
     action: "track",
     object: "timesheet reconciliation",
-    scope: "project", section: "Reconciliation",
+    scope: "project",
+    section: "Reconciliation",
     question: "How do I manually reconcile timesheet data?",
     answer: "Go to Timesheet Reconciliation > Timesheet, choose Daily & Weekly by Day or Weekly mode, click \"Create Log\" and select a date range to view submitted logs, then click the \"Phase code\" button for an employee to reconcile that entry manually.",
     tags: ["manual reconciliation","reconcile timesheet","timesheet accuracy"]
@@ -7016,7 +7082,8 @@ const QA_TIMEMANAGEMENT = [
   {
     action: "import",
     object: "gate log reconciliation",
-    scope: "project", section: "Reconciliation",
+    scope: "project",
+    section: "Reconciliation",
     question: "Can I reconcile timesheets using uploaded gate/access logs?",
     answer: "Yes. Go to Timesheet Reconciliation > Gate Logs, select Daily & Weekly by Day or Weekly mode, then use \"Upload Logs\" with the provided template to upload employee/crew hour verification data. The system validates Employee IDs and creates batches for organized reconciliation.",
     tags: ["gate logs","upload reconciliation","batch reconciliation"]
@@ -7024,7 +7091,8 @@ const QA_TIMEMANAGEMENT = [
   {
     action: "view",
     object: "timesheet data summary",
-    scope: "project", section: "Analytics & Reports",
+    scope: "project",
+    section: "Analytics & Reports",
     question: "How do I see total logged hours broken down by project, crew, or phase code?",
     answer: "Go to Timesheet Data Summary and switch between the People, Crew, Phase Codes, and Project tabs. Select a date range and log level, then use \"Download Excel\" to export. Toggle \"Submitted\" or \"Approved\" at the top right to filter by log status.",
     tags: ["timesheet summary","hours by project","hours by crew","phase code report"]
@@ -7032,7 +7100,8 @@ const QA_TIMEMANAGEMENT = [
   {
     action: "create",
     object: "crew",
-    scope: "global", section: "Rosters & Crews",
+    scope: "global",
+    section: "Rosters & Crews",
     question: "How do I create a new crew?",
     answer: "Go to Global Data > Crews and click \"Create\". Enter the Crew Name, choose Supervisors and Foremen from their dropdowns, select Rosters (system and non-system users) for the crew, then click \"Submit\".",
     tags: ["create crew","new crew","global crew setup"]
@@ -7040,7 +7109,8 @@ const QA_TIMEMANAGEMENT = [
   {
     action: "create",
     object: "project crew",
-    scope: "project", section: "Rosters & Crews",
+    scope: "project",
+    section: "Rosters & Crews",
     question: "How do I add a crew to a specific project?",
     answer: "Go to Project Setup > Roster > Project Crews and click \"Create Crew\" to build one manually, or \"Copy Crews from Global Data\" to import existing crews. Use \"Map Crews to Projects\" to copy a crew to other projects.",
     tags: ["project crew","add crew to project","copy crew"]
@@ -7048,7 +7118,8 @@ const QA_TIMEMANAGEMENT = [
   {
     action: "create",
     object: "system user roster",
-    scope: "project", section: "Rosters & Crews",
+    scope: "project",
+    section: "Rosters & Crews",
     question: "How do I add a system user to a project roster?",
     answer: "Go to Project Setup > Roster > System User, click \"Add\", and select users from Global Data (Global Data > Users & Permissions > Global Rosters). Selected users appear on the right side of the dialog; click \"Submit\" to add them.",
     tags: ["add system user","project roster","system user assignment"]
@@ -7056,7 +7127,8 @@ const QA_TIMEMANAGEMENT = [
   {
     action: "create",
     object: "non-system user roster",
-    scope: "project", section: "Rosters & Crews",
+    scope: "project",
+    section: "Rosters & Crews",
     question: "How do I add a temporary (non-system) worker to a project?",
     answer: "Go to Project Setup > Roster > Non System User and click \"Add\" to manually create one, or \"Get Users from Global Data\" to select existing non-system users. Fill required fields and Submit.",
     tags: ["non-system user","temp worker","add temporary user"]
@@ -7064,7 +7136,8 @@ const QA_TIMEMANAGEMENT = [
   {
     action: "configure",
     object: "roster custom column",
-    scope: "global", section: "Settings",
+    scope: "global",
+    section: "Settings",
     question: "How do I add custom fields to the roster tables?",
     answer: "Go to Global Settings > Roster Settings and use \"Configurable Fields\" to add custom columns, choosing a field type (Attachment, Check box, Date, Label, Multi select, Paragraph, Roster, Scribble, Single select, Table, Text box, Time, Signature). Click \"Save Changes\" to apply.",
     tags: ["roster custom fields","configure roster columns","field types"]
@@ -7072,7 +7145,8 @@ const QA_TIMEMANAGEMENT = [
   {
     action: "export",
     object: "roster",
-    scope: "project", section: "Rosters & Crews",
+    scope: "project",
+    section: "Rosters & Crews",
     question: "Can I bulk upload rosters via Excel?",
     answer: "Yes. On the Roster (System Users or Non-System Users) page, use \"Upload Excel\" to bulk-add roster records, or \"Download Excel\" to export the current roster list.",
     tags: ["bulk upload roster","download roster excel"]
@@ -13787,6 +13861,13 @@ const MODULES = [
               "Fill in or update the required fields: Company Name, ID, Address, City, State, Zip, Contact Person details, Company Email/Phone, and optionally PAN/GST.",
               "To configure SSO, click <strong>Add SSO Provider</strong> under SSO Clients and complete the provider's setup.",
               "Click <strong>Submit</strong> to save."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/company-details/001.jpg",
+                "caption": "Company Details with the company name, logo, address and contacts",
+                "step": 3
+              }
             ]
           },
           {
@@ -13847,6 +13928,23 @@ const MODULES = [
               "Enter a temporary Password and Confirm Password — the user sets their own final password afterward.",
               "Choose a <strong>Select Sign Label</strong> and fill Initials (used as their digital signature label on approved documents); optionally toggle <strong>Enable Security Key Authentication</strong> for fingerprint/face ID/hardware-key login.",
               "Click <strong>Submit</strong>. Use <strong>Notify User</strong> to email them their login/setup instructions."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/global-users-permissions-users/001.jpg",
+                "caption": "The Users and Permissions tab under Company",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/global-users-permissions-users/002.jpg",
+                "caption": "The user registration form",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/global-users-permissions-users/003.jpg",
+                "caption": "Notify User, to email the new user",
+                "step": 6
+              }
             ]
           },
           {
@@ -13856,7 +13954,14 @@ const MODULES = [
               "Click the <strong>Export</strong> button (top right) to open its menu, choose <strong>Download Sample</strong>, and fill in one row per user (use correct country codes for phone numbers).",
               "Reopen <strong>Export</strong> and choose <strong>Upload Excel</strong>, then select the completed file."
             ],
-            "note": "Arena creates the accounts and emails each new user automatically. The Active Users table also shows a Vendor Number column, since a user account can be linked to a Vendor record."
+            "note": "Arena creates the accounts and emails each new user automatically. The Active Users table also shows a Vendor Number column, since a user account can be linked to a Vendor record.",
+            "images": [
+              {
+                "src": "assets/notion/global-users-permissions-users/004.jpg",
+                "caption": "Downloaded Excel template for bulk registration",
+                "step": 2
+              }
+            ]
           },
           {
             "title": "Set up permissions for a group of users",
@@ -13865,6 +13970,28 @@ const MODULES = [
               "Click <strong>Add User Group</strong>, name it, then click its <strong>Permissions</strong> button and select the allowed modules/actions.",
               "Click its <strong>Users</strong> button to add members — they inherit the group's permissions.",
               "Optionally use <strong>Fetch Templates</strong> to start from one of Arena's standard permission templates (e.g. Super Admin)."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/permissions/002.jpg",
+                "caption": "User Group, to add a named group",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/permissions/005.jpg",
+                "caption": "Permissions button on a group, showing the available permissions",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/permissions/006.jpg",
+                "caption": "Permission rights by module for a user group",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/permissions/007.jpg",
+                "caption": "Users button, to add members to the group",
+                "step": 3
+              }
             ]
           },
           {
@@ -13873,6 +14000,18 @@ const MODULES = [
               "Go to <strong>Users & Permissions</strong> → <strong>Global Rosters</strong> → <strong>Non System User</strong> → <strong>Add Non System Roster</strong>.",
               "Fill in worker details (name, designation, skills, experience, group number, etc.) and click Submit.",
               "Use <strong>Export All Users</strong> to download the full roster, or <strong>Add Role</strong> to assign a role to selected rosters."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/rosters-non-system-users/001.jpg",
+                "caption": "Add, to register a non-system user",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/rosters-non-system-users/002.jpg",
+                "caption": "Non-system roster cards with Edit and Delete",
+                "step": 3
+              }
             ]
           },
           {
@@ -13883,7 +14022,94 @@ const MODULES = [
               "Select a <strong>Supervisor</strong> and a <strong>Foreman</strong> from the dropdown (these people must already exist in Global Rosters).",
               "Select <strong>Rosters</strong> — check the individual roster members (system and non-system) who belong to this crew.",
               "Click <strong>Submit</strong>."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/timesheet-crew/001.jpg",
+                "caption": "Company-level crews",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/timesheet-crew/002.jpg",
+                "caption": "Create, with a crew name",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/timesheet-crew/003.jpg",
+                "caption": "Selecting the users for the crew and clicking Submit",
+                "step": 4
+              }
             ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/rosters-non-system-users/003.jpg",
+            "caption": "Non-system roster in card and table views"
+          },
+          {
+            "src": "assets/notion/roster-system-users/001.jpg",
+            "caption": "Rosters for system users"
+          },
+          {
+            "src": "assets/notion/roster-system-users/002.jpg",
+            "caption": "Roster cards with Edit and Delete"
+          },
+          {
+            "src": "assets/notion/roster-system-users/003.jpg",
+            "caption": "Upload Excel to add many rosters at once"
+          },
+          {
+            "src": "assets/notion/roster-system-users/005.jpg",
+            "caption": "Switching the roster between card and table view"
+          },
+          {
+            "src": "assets/notion/timesheet-crew/004.jpg",
+            "caption": "Searching for people when building a crew"
+          },
+          {
+            "src": "assets/notion/timesheet-crew/005.jpg",
+            "caption": "Searching the list of crews"
+          },
+          {
+            "src": "assets/notion/global-users-permissions-users/006.jpg",
+            "caption": "Registered users as cards, with a three-dot menu on each"
+          },
+          {
+            "src": "assets/notion/global-users-permissions-users/007.jpg",
+            "caption": "Grid view and table view for users"
+          },
+          {
+            "src": "assets/notion/users-permissions-inactive-users/001.jpg",
+            "caption": "Inactive Users: accounts removed from the active list but kept here"
+          },
+          {
+            "src": "assets/notion/users-permissions-inactive-users/002.jpg",
+            "caption": "Manage Columns on the inactive users list"
+          },
+          {
+            "src": "assets/notion/users-permissions-inactive-users/003.jpg",
+            "caption": "Save Layout keeps your chosen view"
+          },
+          {
+            "src": "assets/notion/users-permissions-inactive-users/004.jpg",
+            "caption": "Activate, to make an inactive user active again"
+          },
+          {
+            "src": "assets/notion/global-users-permissions-groups/001.jpg",
+            "caption": "Groups"
+          },
+          {
+            "src": "assets/notion/global-users-permissions-role-groups/001.jpg",
+            "caption": "Role-Groups"
+          },
+          {
+            "src": "assets/notion/global-users-permissions-permissions/001.jpg",
+            "caption": "The read-only dictionary of every permission in the system"
+          },
+          {
+            "src": "assets/notion/permissions/001.jpg",
+            "caption": "User groups shown as cards"
           }
         ]
       },
@@ -13913,7 +14139,19 @@ const MODULES = [
               "Under <strong>Tax Codes*</strong>, click <strong>Add</strong> to attach one or more Tax Group/Tax Class/Tax Code entries.",
               "Click <strong>Submit</strong>."
             ],
-            "note": "Bulk location setup is also possible via Excel import from this screen's Export/Upload options."
+            "note": "Bulk location setup is also possible via Excel import from this screen's Export/Upload options.",
+            "images": [
+              {
+                "src": "assets/notion/global-data-delivery-locations/001.jpg",
+                "caption": "The Locations screen",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/global-data-delivery-locations/002.jpg",
+                "caption": "Add Location, for setting up delivery locations",
+                "step": 2
+              }
+            ]
           },
           {
             "title": "Set up tax groups and tax codes",
@@ -13922,6 +14160,18 @@ const MODULES = [
               "Select the new group in the left panel, then click <strong>Add Tax Code</strong> → enter Tax Code* and Tax Percentage* → <strong>Submit</strong>.",
               "Repeat for each code belonging to that group (e.g. CGST, SGST, ITC, Freight).",
               "Use <strong>Upload Excel</strong> / <strong>Download Excel</strong> to bulk manage tax codes."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/tax-configuration/001.jpg",
+                "caption": "Tax Configuration screen",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/tax-configuration/002.jpg",
+                "caption": "A tax group with its tax codes",
+                "step": 2
+              }
             ]
           }
         ]
@@ -13979,6 +14229,18 @@ const MODULES = [
               "Optionally fill Vendor Title, Address, Licence Number, Fax, Scope, and Website.",
               "Under <strong>Additional Information</strong>, optionally set Vendor Type, Vendor Business Size, Vendor Minority, Notes, Warning, Extra Copy, Sent By, Freight Terms, GST IN, and Linked Vendor Groups, and check <strong>Domestic</strong>, <strong>Preferred</strong>, and/or <strong>Blocked</strong> as they apply.",
               "Click <strong>Submit</strong>. Use <strong>Upload Vendors</strong> (next to Download Excel) on the main Vendors screen to bulk-register vendors from an Excel template instead."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/global-data-vendor-creation/003.jpg",
+                "caption": "Register Vendor",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/global-data-vendor-creation/004.jpg",
+                "caption": "A vendor profile where contact details are added",
+                "step": 3
+              }
             ]
           },
           {
@@ -13987,6 +14249,18 @@ const MODULES = [
               "Open the vendor's card from the <strong>Vendors</strong> tile.",
               "Go to the <strong>Rate Card</strong> tab and choose <strong>Materials</strong> or <strong>Equipment</strong>.",
               "Click <strong>Upload Logs</strong>, download the Excel template, fill in Daily/Weekly/Monthly rates per item, and upload the completed file — or edit the <strong>Rate</strong> field inline per row."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/global-data-vendors-rate-card/002.jpg",
+                "caption": "Downloading the Excel template from the dialog",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/global-data-vendors-rate-card/003.jpg",
+                "caption": "Uploading the filled template to update Daily, Weekly and Monthly rates",
+                "step": 3
+              }
             ]
           },
           {
@@ -14012,6 +14286,16 @@ const MODULES = [
               "Go to <strong>Global Data → Settings → Sub Contractor Settings</strong> to define which certification fields (e.g. ISO 9001, CIDB) subcontractors must upload.",
               "Alternatively, for company-wide compliance items, go to <strong>Global Data → Compliance Hub → Compliance Directory → Create</strong> to define the requirement (Name, Category, Renewal Frequency, Evidence Type), then track status under <strong>My Company Compliance</strong>."
             ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/global-data-vendor-creation/001.jpg",
+            "caption": "Vendors: categories on the left and vendor profiles"
+          },
+          {
+            "src": "assets/notion/global-data-vendor-creation/002.jpg",
+            "caption": "Vendor settings for up to three levels of categories"
           }
         ]
       },
@@ -14052,7 +14336,29 @@ const MODULES = [
               "Click <strong>Add UOM</strong>, type the unit name (e.g. \"Tonne\"), and save.",
               "To make it convertible with other units, go to <strong>UOM Groups</strong>, add it to (or create) a group, and enter the conversion factor(s)."
             ],
-            "note": "The new factors then appear read-only under UOM Conversions."
+            "note": "The new factors then appear read-only under UOM Conversions.",
+            "images": [
+              {
+                "src": "assets/notion/units-of-measurement-uoms/001.jpg",
+                "caption": "The UOMs tab",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/units-of-measurement-uoms/002.jpg",
+                "caption": "Add UOM",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/units-of-measurement-uoms/003.jpg",
+                "caption": "Added UOMs in a table with edit and delete options",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/uom-groups/002.jpg",
+                "caption": "Add UOM Group: a name and the units to group together",
+                "step": 3
+              }
+            ]
           },
           {
             "title": "Add a Phase Code",
@@ -14062,6 +14368,12 @@ const MODULES = [
               "Save."
             ],
             "note": "Bulk create/update is also available via Excel Upload, which supports a Create Mode and an Update Mode."
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/uom-conversions/002.jpg",
+            "caption": "Conversions come from the UOM Groups you set up"
           }
         ]
       },
@@ -14125,6 +14437,13 @@ const MODULES = [
               "Go to <strong>Global Data → Construction Types</strong> tile.",
               "Click <strong>Create</strong> to add a new type, or <strong>Copy</strong> an existing type to clone its full setup into a new one.",
               "Optionally mark one type as <strong>Set as Default</strong>."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/construction-types/001.jpg",
+                "caption": "Create a construction type; created types appear in a table",
+                "step": 2
+              }
             ]
           },
           {
@@ -14134,7 +14453,108 @@ const MODULES = [
               "For each section (Master Data, Global Work Packages, Locations Type Work Packages, Global Sequence Model, etc.), click the <strong>Template</strong> link to download the correctly-formatted Excel file.",
               "Fill it in and drag it into the upload zone."
             ],
-            "note": "Existing data is preserved — new rows are appended, not overwritten."
+            "note": "Existing data is preserved — new rows are appended, not overwritten.",
+            "images": [
+              {
+                "src": "assets/notion/data-migration/001.jpg",
+                "caption": "Data Migration: the upload spaces for each kind of data",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/data-migration/002.jpg",
+                "caption": "Master Data and Global Work Areas upload",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/data-migration/003.jpg",
+                "caption": "Global Work Packages upload",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/data-migration/004.jpg",
+                "caption": "Location Type Work Package mapping upload",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/data-migration/005.jpg",
+                "caption": "Global Sequence Model upload, and P6 project upload",
+                "step": 2
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/global-data/001.jpg",
+            "caption": "Global Data construction-type setup: choose the construction type from the drop-down"
+          },
+          {
+            "src": "assets/notion/global-work-areas/001.jpg",
+            "caption": "Global Work Areas: the three level types for a construction type"
+          },
+          {
+            "src": "assets/notion/global-work-areas/002.jpg",
+            "caption": "Editing or deleting a work area type"
+          },
+          {
+            "src": "assets/notion/global-work-packages/001.jpg",
+            "caption": "Global Work Packages: editing or deleting a work package from its three-dot menu"
+          },
+          {
+            "src": "assets/notion/global-activities/001.jpg",
+            "caption": "Global Activities: editing or deleting an activity from its three-dot menu"
+          },
+          {
+            "src": "assets/notion/activity-sequence-templates/001.jpg",
+            "caption": "Map Work Packages to Location Types: choosing a location type and adding work packages"
+          },
+          {
+            "src": "assets/notion/activity-sequence-templates/002.jpg",
+            "caption": "Deleting a mapped work package"
+          },
+          {
+            "src": "assets/notion/activity-sequence-templates/003.jpg",
+            "caption": "The work package count for the selected location type"
+          },
+          {
+            "src": "assets/notion/activity-sequence-templates/004.jpg",
+            "caption": "Create Activity Sequence Template for a location type"
+          },
+          {
+            "src": "assets/notion/activity-sequence-templates/006.jpg",
+            "caption": "Pause and Play switch for an activity sequence template"
+          },
+          {
+            "src": "assets/notion/mappings-map-labor-to-activities/001.jpg",
+            "caption": "Map Labor to Activities tab"
+          },
+          {
+            "src": "assets/notion/mappings-map-labor-to-activities/003.jpg",
+            "caption": "Selecting roles to map to an activity"
+          },
+          {
+            "src": "assets/notion/mappings-map-materials-to-activities/001.jpg",
+            "caption": "Map Materials to Activities tab"
+          },
+          {
+            "src": "assets/notion/mappings-map-materials-to-activities/002.jpg",
+            "caption": "Work divisions on the left and the materials mapped to a selected activity on the right"
+          },
+          {
+            "src": "assets/notion/mappings-map-materials-to-activities/003.jpg",
+            "caption": "Map Material with a multi-select list of materials"
+          },
+          {
+            "src": "assets/notion/mappings-map-materials-to-activities/004.jpg",
+            "caption": "Selecting materials to map to an activity"
+          },
+          {
+            "src": "assets/notion/naming-framework/001.jpg",
+            "caption": "Naming Framework table with a default name and a custom name for each level"
+          },
+          {
+            "src": "assets/notion/activity-codes/001.jpg",
+            "caption": "Activity Codes imported from P6 projects, with Activity Code Type to add a new one"
           }
         ]
       },
@@ -14204,6 +14624,13 @@ const MODULES = [
             "steps": [
               "Go to <strong>Global Data → Cost</strong> → <strong>Cost Type</strong> tab → <strong>Add Type</strong>.",
               "Enter the name (e.g. \"Freight Charges\") and a description, then submit."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/cost-types-material/002.jpg",
+                "caption": "Add Type, to create a custom cost type",
+                "step": 1
+              }
             ]
           },
           {
@@ -14222,6 +14649,132 @@ const MODULES = [
               "Submit."
             ],
             "note": "For bulk loading, use Download Sample Excel, fill it in, then Upload Excel."
+          },
+          {
+            "title": "Set up Materials and Labor cost types",
+            "steps": [
+              "Go to **Global Data → Cost**, choose **Cost Types** in the drop-down, then open the **Materials** or **Labor** tab.",
+              "Click **Settings** and choose how entries are grouped: Level 1 (Materials), Level 2 (Categories > Materials) or Level 3 (Categories > Sub Categories > Materials). Pick one type and keep to it. You can move one level at a time, but you cannot skip a level.",
+              "Click **Add**, enter the details and click **Submit**. Labor entries also take a **Standard Unit Price** when that setting is on. You can also bulk-load entries with **Upload Excel**.",
+              "When you move up a level, use the restore option to keep the entries you already have. They stay available under **Restore Materials** or **Restore Labors**.",
+              "To go back from Level 2 to Level 1, open **Settings**, uncheck Level 2, and confirm the delete warning by entering the level name."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/cost-types-material/001.jpg",
+                "caption": "Cost Types with the Materials tab selected",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/cost-types-labor/002.jpg",
+                "caption": "Cost Types with the Labor tab selected",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/cost-types-material/006.jpg",
+                "caption": "The Settings button for grouping materials",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/cost-types-material/007.jpg",
+                "caption": "The Settings dialog with the three grouping levels",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/cost-types-material/009.jpg",
+                "caption": "Level 1: materials listed with cost codes",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/cost-types-material/010.jpg",
+                "caption": "Level 2: categories on the left with their materials",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/cost-types-material/011.jpg",
+                "caption": "Level 3: categories and sub categories on the left",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/cost-types-labor/004.jpg",
+                "caption": "The Settings dialog for labor levels",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/cost-types-labor/006.jpg",
+                "caption": "Level 1: labor entries with cost codes",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/cost-types-labor/007.jpg",
+                "caption": "Level 2: labor categories on the left",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/cost-types-material/005.jpg",
+                "caption": "Add, with a code number and code description",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/cost-types-material/008.jpg",
+                "caption": "Upload Excel, in Create or Update mode",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/cost-types-labor/005.jpg",
+                "caption": "Add, for a labor role or designation",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/cost-types-material/012.jpg",
+                "caption": "Restore option when moving from Level 1 to Level 2",
+                "step": 4
+              },
+              {
+                "src": "assets/notion/cost-types-material/013.jpg",
+                "caption": "Restore Materials button",
+                "step": 4
+              },
+              {
+                "src": "assets/notion/cost-types-material/014.jpg",
+                "caption": "Uncheck Level 2 in Settings and confirm the delete warning",
+                "step": 5
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/cost-types-material/003.jpg",
+            "caption": "Renaming or deleting a custom cost type by right-clicking its tab"
+          },
+          {
+            "src": "assets/notion/cost-types-material/004.jpg",
+            "caption": "Add Custom Columns for a new cost type"
+          },
+          {
+            "src": "assets/notion/cost-types-equipment/003.jpg",
+            "caption": "Equipment cost types: the equipment table"
+          },
+          {
+            "src": "assets/notion/cost-types-equipment/004.jpg",
+            "caption": "Equipment Groups, for grouping equipment into types"
+          },
+          {
+            "src": "assets/notion/cost-types-equipment/006.jpg",
+            "caption": "Add, for a new piece of equipment"
+          },
+          {
+            "src": "assets/notion/cost-types-sub-contractor/002.jpg",
+            "caption": "Sub Contractor cost types: the sub contractor table"
+          },
+          {
+            "src": "assets/notion/cost-types-other-expenses/002.jpg",
+            "caption": "Other Expenses: cost types for travel, lodging and similar costs"
+          },
+          {
+            "src": "assets/notion/cost-types-other-expenses/003.jpg",
+            "caption": "Add, to enter a new expense"
           }
         ]
       },
@@ -14250,6 +14803,28 @@ const MODULES = [
               "Name/describe the level, assign Approvers, and choose the Workflow Type.",
               "Save — subsequent opportunity/customer approvals will route through this chain in order."
             ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/customers/001.jpg",
+            "caption": "Add Field, for a new customer field"
+          },
+          {
+            "src": "assets/notion/customers/003.jpg",
+            "caption": "Choose Type, for the kind of input"
+          },
+          {
+            "src": "assets/notion/customers/004.jpg",
+            "caption": "Required toggle on a customer field"
+          },
+          {
+            "src": "assets/notion/customers/005.jpg",
+            "caption": "Show on cards toggle on a customer field"
+          },
+          {
+            "src": "assets/notion/customers/006.jpg",
+            "caption": "Save Changes, to keep the new customer fields"
           }
         ]
       },
@@ -14297,6 +14872,13 @@ const MODULES = [
               "Go to <strong>Global Data → Settings → Currency</strong> (left nav).",
               "Choose the desired currency from the dropdown.",
               "Click <strong>Save Changes</strong>."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/global-settings-currency/001.jpg",
+                "caption": "Currency drop-down with Save Changes",
+                "step": 2
+              }
             ]
           },
           {
@@ -14305,6 +14887,13 @@ const MODULES = [
               "Go to <strong>Settings → Global Date Format</strong>.",
               "Select <strong>MM-DD-YYYY</strong> or <strong>DD-MM-YYYY</strong>.",
               "Click <strong>Save Changes</strong>."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/global-settings-global-date-format/001.jpg",
+                "caption": "Global Date Format: day-month-year or month-day-year",
+                "step": 2
+              }
             ]
           },
           {
@@ -14313,7 +14902,14 @@ const MODULES = [
               "Go to <strong>Settings → Mail Settings</strong>.",
               "Find the module row (e.g. Work Order) and click the <strong>Outlook</strong> radio button in that row."
             ],
-            "note": "The change saves immediately per row. Make sure Outlook has been connected first via Marketplace."
+            "note": "The change saves immediately per row. Make sure Outlook has been connected first via Marketplace.",
+            "images": [
+              {
+                "src": "assets/notion/global-settings-mail-settings/001.jpg",
+                "caption": "Mail Settings, to choose Gmail or Outlook for each module",
+                "step": 2
+              }
+            ]
           },
           {
             "title": "Rename terminology used throughout the app",
@@ -14321,7 +14917,60 @@ const MODULES = [
               "For Activity/Work-Package/Location-hierarchy terms scoped to one construction type, go to <strong>Global Data → Construction Type</strong> tab → <strong>Step 5 (Naming Framework)</strong>.",
               "For Procurement/Inventory/Roster/Cost terms company-wide, go to <strong>Global Data → Settings → Naming Framework</strong>.",
               "In either screen, edit the <strong>Custom Name</strong> (and optionally <strong>Short Name</strong>) column next to the term you want to relabel, then save."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/global-settings-naming-framework/001.jpg",
+                "caption": "Naming Framework: default names that can be renamed",
+                "step": 2
+              }
             ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/global-settings-owner/001.jpg",
+            "caption": "Owners settings under Global Data"
+          },
+          {
+            "src": "assets/notion/global-settings-owner/002.jpg",
+            "caption": "Standard fields on the owner form, with Add Field for new ones"
+          },
+          {
+            "src": "assets/notion/global-settings-owner/005.jpg",
+            "caption": "Required toggle on an owner field"
+          },
+          {
+            "src": "assets/notion/global-settings-owner/006.jpg",
+            "caption": "Show on cards toggle on an owner field"
+          },
+          {
+            "src": "assets/notion/global-settings-owner/007.jpg",
+            "caption": "Save Changes, to keep the new fields on the owner form"
+          },
+          {
+            "src": "assets/notion/global-settings-test-emails/001.jpg",
+            "caption": "Test Emails: in a test environment, email goes only to the people listed here"
+          },
+          {
+            "src": "assets/notion/global-settings-test-emails/002.jpg",
+            "caption": "Add Email, to enter an address"
+          },
+          {
+            "src": "assets/notion/global-settings-test-emails/004.jpg",
+            "caption": "Editing an email address"
+          },
+          {
+            "src": "assets/notion/global-settings-test-emails/005.jpg",
+            "caption": "Confirmation before an address is deleted"
+          },
+          {
+            "src": "assets/notion/global-settings-roster-settings/001.jpg",
+            "caption": "Roster Settings: standard fields and added configurable fields"
+          },
+          {
+            "src": "assets/notion/global-settings-enable-awp/001.jpg",
+            "caption": "The Enable AWP setting"
           }
         ]
       },
@@ -14358,7 +15007,24 @@ const MODULES = [
               "Click <strong>Create Template</strong>.",
               "Build the form layout (sections/fields) as needed and save."
             ],
-            "note": "The new template becomes available for selection whenever an RFI is raised on a project."
+            "note": "The new template becomes available for selection whenever an RFI is raised on a project.",
+            "images": [
+              {
+                "src": "assets/notion/construction-forms/001.jpg",
+                "caption": "Choosing a form to set up its template",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/construction-forms/002.jpg",
+                "caption": "Standard Fields and Configurable Fields",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/construction-forms/003.jpg",
+                "caption": "Field types for a configurable field",
+                "step": 3
+              }
+            ]
           },
           {
             "title": "Create a reusable folder structure for project documents",
@@ -14366,6 +15032,23 @@ const MODULES = [
               "Go to <strong>Global Data → Document Management</strong> → <strong>Create Template</strong>, and name it (e.g. \"FEL-1\").",
               "Select the template, then click <strong>New Folder</strong> repeatedly to build out the folder hierarchy (e.g. Civil, Mechanical, Structural).",
               "Apply this template when setting up a new project's document space."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/document-management/001.jpg",
+                "caption": "Create Template for a document folder structure",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/document-management/002.jpg",
+                "caption": "Building the folder structure for a template",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/document-management/003.jpg",
+                "caption": "Adding documents to a folder",
+                "step": 2
+              }
             ]
           },
           {
@@ -14383,6 +15066,48 @@ const MODULES = [
               "Define the table's name and columns.",
               "Save — the table can then be reused/referenced across projects."
             ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/construction-forms/004.jpg",
+            "caption": "The approval workflow toggle on RFI, Submittal and Change Order forms"
+          },
+          {
+            "src": "assets/notion/construction-forms/005.jpg",
+            "caption": "The connected services toggle on a form"
+          },
+          {
+            "src": "assets/notion/document-management/004.jpg",
+            "caption": "Editing a template by right-clicking it"
+          },
+          {
+            "src": "assets/notion/document-management/005.jpg",
+            "caption": "Deleting a template, with a confirmation dialog"
+          },
+          {
+            "src": "assets/notion/form-builder/001.jpg",
+            "caption": "Form Builder: custom forms for use in projects"
+          },
+          {
+            "src": "assets/notion/form-builder/002.jpg",
+            "caption": "Create, to name a form and choose its icon"
+          },
+          {
+            "src": "assets/notion/form-builder/003.jpg",
+            "caption": "The Form Builder interface for a form"
+          },
+          {
+            "src": "assets/notion/form-builder/004.jpg",
+            "caption": "The connected services toggle on a custom form"
+          },
+          {
+            "src": "assets/notion/setup-safety-forms/002.jpg",
+            "caption": "Response types for inspection items"
+          },
+          {
+            "src": "assets/notion/setup-safety-forms/003.jpg",
+            "caption": "Trigger points that let end users raise an issue or add notes"
           }
         ]
       },
@@ -14485,7 +15210,128 @@ const MODULES = [
               "To keep data flowing automatically, open <strong>Auto Sync Criteria</strong>, set the interval (1 to 24 hours), and optionally tick <strong>Auto create arena records after sync?</strong>.",
               "To create records now instead, use <strong>Filters</strong> to narrow the staged rows if needed, then click <strong>Bulk Create Arena Records</strong>. Only the filtered rows are created."
             ],
-            "note": "Repeat steps 2 to 5 for each entity you want from Viewpoint (Crews, Phase Codes, GL Codes, Projects, Work Orders and so on). Mapping Users and Projects first makes the mapping entities (Project User Mapping, Project Crew Mapping) easier to line up."
+            "note": "Repeat steps 2 to 5 for each entity you want from Viewpoint (Crews, Phase Codes, GL Codes, Projects, Work Orders and so on). Mapping Users and Projects first makes the mapping entities (Project User Mapping, Project Crew Mapping) easier to line up.",
+            "images": [
+              {
+                "src": "assets/notion/trimble-viewpoint-market-place/001.jpg",
+                "caption": "The Trimble Viewpoint card in the Marketplace",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/trimble-viewpoint-market-place/002.jpg",
+                "caption": "The Open Database Connectivity setup",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/trimble-viewpoint-market-place/003.jpg",
+                "caption": "Connection details, then Test Connection and Save",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/stage-tables/001.jpg",
+                "caption": "Staged Tables: the staged attributes for each module",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/stage-tables/002.jpg",
+                "caption": "Map Attributes for the selected module",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/stage-tables/003.jpg",
+                "caption": "Choosing the stage attribute for each Arena attribute",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/stage-tables/009.jpg",
+                "caption": "Auto Sync Criteria, with an interval in hours",
+                "step": 4
+              },
+              {
+                "src": "assets/notion/stage-tables/005.jpg",
+                "caption": "Bulk Create Arena Records",
+                "step": 5
+              },
+              {
+                "src": "assets/notion/stage-tables/007.jpg",
+                "caption": "Filters for viewing and syncing data",
+                "step": 5
+              }
+            ]
+          },
+          {
+            "title": "Connect Arena to Microsoft SharePoint",
+            "steps": [
+              "Go to **Global Data → Market Place → Microsoft SharePoint**.",
+              "Select **Microsoft SharePoint** to open a window where you give consent on behalf of your organization.",
+              "Click **Sign in with Microsoft**, sign in and review the permissions requested. Use an email on your organization's domain; personal email addresses cannot be linked.",
+              "Use **Revoke Consent** to remove the connection. You can grant consent again later.",
+              "Users can also manage documents through their organization mail IDs, which are set in **My Profile**.",
+              "Click **Settings** to see the **Document Management Consent**."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/microsoft-sharepoint-integration/001.jpg",
+                "caption": "Microsoft SharePoint in the Marketplace",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/microsoft-sharepoint-integration/002.jpg",
+                "caption": "The consent window for your organization",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/microsoft-sharepoint-integration/003.jpg",
+                "caption": "Sign in with Microsoft",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/microsoft-sharepoint-integration/004.jpg",
+                "caption": "Reviewing the permissions requested and accepting",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/microsoft-sharepoint-integration/005.jpg",
+                "caption": "Revoke Consent",
+                "step": 4
+              },
+              {
+                "src": "assets/notion/microsoft-sharepoint-integration/006.jpg",
+                "caption": "Managing documents through organization mail IDs set in My Profile",
+                "step": 5
+              },
+              {
+                "src": "assets/notion/microsoft-sharepoint-integration/007.jpg",
+                "caption": "The Document Management Consent in Settings",
+                "step": 6
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/trimble-viewpoint-market-place/004.jpg",
+            "caption": "Table Name and Schema Name for each module, then Save Configuration"
+          },
+          {
+            "src": "assets/notion/trimble-viewpoint-market-place/005.jpg",
+            "caption": "The Link button, enabled once the configuration is saved"
+          },
+          {
+            "src": "assets/notion/trimble-viewpoint-market-place/006.jpg",
+            "caption": "Choosing the Primary Key column"
+          },
+          {
+            "src": "assets/notion/stage-tables/004.jpg",
+            "caption": "Sync Viewpoint, to sync the staged data"
+          },
+          {
+            "src": "assets/notion/arena-market-place/001.jpg",
+            "caption": "The Marketplace, for linking SharePoint, Outlook and Adobe Sign"
+          },
+          {
+            "src": "assets/notion/adobe-integration/011.jpg",
+            "caption": "The Adobe Sign switch on the Lease Agreement form"
           }
         ]
       },
@@ -14579,14 +15425,58 @@ const MODULES = [
               "<strong>Step 3 – Preview:</strong> review all entered data.",
               "Click <strong>Submit</strong> to create the Owner."
             ],
-            "note": "To bulk-create Owners, use Export, which also exposes Download/Upload Excel options with a template."
+            "note": "To bulk-create Owners, use Export, which also exposes Download/Upload Excel options with a template.",
+            "images": [
+              {
+                "src": "assets/notion/global-data-owners-creation/001.jpg",
+                "caption": "The Owners screen",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/global-data-owners-creation/003.jpg",
+                "caption": "Register Owner",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/global-data-owners-creation/004.jpg",
+                "caption": "Step 1: basic details and addresses",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/global-data-owners-creation/005.jpg",
+                "caption": "Step 2: Link Locations and Add Tax Codes",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/global-data-owners-creation/006.jpg",
+                "caption": "Step 3: preview of the owner",
+                "step": 4
+              }
+            ]
           },
           {
             "title": "Configure Owner hierarchy levels",
             "steps": [
               "On the Owners tile, click the <strong>Settings</strong> gear icon (top right).",
               "In \"Owner Settings,\" choose Level 1, Level 2, or Level 3 depending on how granular owner categorization should be company-wide."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/global-data-owners-creation/002.jpg",
+                "caption": "Owner Settings, for dividing owners into levels",
+                "step": 2
+              }
             ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/global-data-owners-creation/007.jpg",
+            "caption": "Export, to download or upload owners in Excel"
+          },
+          {
+            "src": "assets/notion/global-data-owners-creation/008.jpg",
+            "caption": "Filters and Save Layout on the owners list"
           }
         ]
       }
@@ -15741,6 +16631,16 @@ const MODULES = [
               "Select the system users to add.",
               "Submit to assign them as indirect staff."
             ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/people/001.jpg",
+            "caption": "COPY USERS TO and COPY TEAMS TO, to repeat a user assignment across work packages"
+          },
+          {
+            "src": "assets/notion/people/002.jpg",
+            "caption": "Approval: creating an approval workflow and assigning it"
           }
         ]
       },
@@ -22404,6 +23304,53 @@ const MODULES = [
               "Click <strong>Create Approval Workflow</strong> and name it.",
               "Click <strong>Create Level</strong> to add approvers by User or by Role.",
               "For each level, choose <strong>All must approve</strong> or <strong>Anyone can approve</strong>."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/timesheet-workflow/001.jpg",
+                "caption": "Timesheet Workflow under Settings",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/timesheet-create-workflow/001.jpg",
+                "caption": "Create Approval Workflow, to create a workflow",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/timesheet-workflow/003.jpg",
+                "caption": "Several workflows for different approval processes",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/timesheet-create-workflow/002.jpg",
+                "caption": "The Description tab for a level",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/timesheet-create-workflow/003.jpg",
+                "caption": "Edit and Delete icons beside each level",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/timesheet-workflow/004.jpg",
+                "caption": "A workflow with more than one approval level",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/timesheet-workflow/006.jpg",
+                "caption": "Add Role, for choosing a role such as Foreman or Supervisor",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/timesheet-create-workflow/006.jpg",
+                "caption": "Tree view of the workflow as a flow chart",
+                "step": 4
+              },
+              {
+                "src": "assets/notion/timesheet-workflow/005.jpg",
+                "caption": "Choosing All must approve or Anyone can approve for a level",
+                "step": 4
+              }
             ]
           },
           {
@@ -22414,7 +23361,24 @@ const MODULES = [
               "Choose the Approval Workflow to apply.",
               "Click <strong>Save Changes</strong>."
             ],
-            "note": "Use <strong>Copy Approval Workflow To</strong> to apply the same workflow to multiple users or crews at once instead of repeating this for each one."
+            "note": "Use <strong>Copy Approval Workflow To</strong> to apply the same workflow to multiple users or crews at once instead of repeating this for each one.",
+            "images": [
+              {
+                "src": "assets/notion/timesheet-assign-workflow/001.jpg",
+                "caption": "Assign Workflow: choosing a user or crew and a workflow",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/timesheet-workflow/007.jpg",
+                "caption": "Save Changes, to assign the workflow to the selected user or crew",
+                "step": 4
+              },
+              {
+                "src": "assets/notion/timesheet-assign-workflow/002.jpg",
+                "caption": "Clear, to reset the selection and detach the workflow",
+                "step": 4
+              }
+            ]
           },
           {
             "title": "Set the timesheet logging mode",
@@ -22424,7 +23388,14 @@ const MODULES = [
               "Choose a Default Template.",
               "Click <strong>Save Changes</strong>."
             ],
-            "note": "Use <strong>Copy To</strong> to apply the same mode to other users or crews."
+            "note": "Use <strong>Copy To</strong> to apply the same mode to other users or crews.",
+            "images": [
+              {
+                "src": "assets/notion/timesheet-settings/002.jpg",
+                "caption": "Timesheet Mode: Daily, Weekly by Day or Weekly, with a default template",
+                "step": 2
+              }
+            ]
           },
           {
             "title": "Create earning codes for payroll",
@@ -22435,7 +23406,14 @@ const MODULES = [
               "Set the Data Type to Hours or Amount.",
               "Choose whether the code counts toward Payroll Hours and/or Project Hours."
             ],
-            "note": "Enable <strong>Split Headers</strong> to have the code appear under Phase Codes in weekly templates instead of as its own column."
+            "note": "Enable <strong>Split Headers</strong> to have the code appear under Phase Codes in weekly templates instead of as its own column.",
+            "images": [
+              {
+                "src": "assets/notion/timesheet-settings/003.jpg",
+                "caption": "Earning Codes: several codes, then Save Changes",
+                "step": 1
+              }
+            ]
           },
           {
             "title": "Build a custom timesheet template",
@@ -22445,6 +23423,43 @@ const MODULES = [
               "Open the new template and use <strong>Add Field</strong> to configure Standard and Configurable fields.",
               "Choose whether earning codes display as a Column or a Split Time Header.",
               "Click <strong>Save Changes</strong>."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/timesheet-settings/004.jpg",
+                "caption": "Create, for a new timesheet template",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/timesheet-settings/005.jpg",
+                "caption": "Add Field, for a configurable field with its type",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/timesheet-settings/006.jpg",
+                "caption": "Adding more configurable fields",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/timesheet-settings/007.jpg",
+                "caption": "Copy Field, to create a similar field",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/timesheet-settings/008.jpg",
+                "caption": "Delete Field",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/timesheet-settings/009.jpg",
+                "caption": "A time header type for each time header",
+                "step": 4
+              },
+              {
+                "src": "assets/notion/timesheet-settings/010.jpg",
+                "caption": "Save Changes for the template",
+                "step": 5
+              }
             ]
           },
           {
@@ -22454,7 +23469,32 @@ const MODULES = [
               "Choose Daily, Weekly, or Monthly mode.",
               "In Weekly mode, pick the lock day and time. In Monthly mode, choose Start of Month, End of Month, or a Custom date, then set the lock time."
             ],
-            "note": "Once a period locks, timesheet data within it can no longer be edited — make sure corrections are made before the lock takes effect."
+            "note": "Once a period locks, timesheet data within it can no longer be edited — make sure corrections are made before the lock takes effect.",
+            "images": [
+              {
+                "src": "assets/notion/timesheet-settings/013.jpg",
+                "caption": "Payroll Locking: Daily, Weekly or Monthly",
+                "step": 2
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/timesheet-workflow/002.jpg",
+            "caption": "Approval workflows can be set up to suit your organization"
+          },
+          {
+            "src": "assets/notion/timesheet-settings/001.jpg",
+            "caption": "Timesheet Settings"
+          },
+          {
+            "src": "assets/notion/timesheet-settings/011.jpg",
+            "caption": "Searching the timesheet templates"
+          },
+          {
+            "src": "assets/notion/timesheet-settings/012.jpg",
+            "caption": "Deleting a template from its menu"
           }
         ]
       },
@@ -22493,6 +23533,23 @@ const MODULES = [
               "Choose Supervisors and Foremen from their dropdowns.",
               "Select Rosters (system and non-system users) for the crew.",
               "Click <strong>Submit</strong>."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/timesheet-crew/001.jpg",
+                "caption": "Company-level crews",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/timesheet-crew/002.jpg",
+                "caption": "Create, with a crew name",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/timesheet-crew/003.jpg",
+                "caption": "Selecting the users for the crew and clicking Submit",
+                "step": 5
+              }
             ]
           },
           {
@@ -22533,6 +23590,44 @@ const MODULES = [
               "Use <strong>Configurable Fields</strong> to add a custom column, choosing its field type (Attachment, Check box, Date, Label, Multi select, Paragraph, Roster, Scribble, Single select, Table, Text box, Time, Signature).",
               "Click <strong>Save Changes</strong>."
             ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/timesheet-crew/004.jpg",
+            "caption": "Searching for people when building a crew"
+          },
+          {
+            "src": "assets/notion/timesheet-crew/005.jpg",
+            "caption": "Searching the list of crews"
+          },
+          {
+            "src": "assets/notion/roster-system-users/001.jpg",
+            "caption": "Rosters for system users"
+          },
+          {
+            "src": "assets/notion/roster-system-users/002.jpg",
+            "caption": "Roster cards with Edit and Delete"
+          },
+          {
+            "src": "assets/notion/roster-system-users/003.jpg",
+            "caption": "Upload Excel to add many rosters at once"
+          },
+          {
+            "src": "assets/notion/roster-system-users/005.jpg",
+            "caption": "Switching the roster between card and table view"
+          },
+          {
+            "src": "assets/notion/rosters-non-system-users/001.jpg",
+            "caption": "Add, to register a non-system user"
+          },
+          {
+            "src": "assets/notion/rosters-non-system-users/002.jpg",
+            "caption": "Non-system roster cards with Edit and Delete"
+          },
+          {
+            "src": "assets/notion/rosters-non-system-users/003.jpg",
+            "caption": "Non-system roster in card and table views"
           }
         ]
       },
@@ -22583,6 +23678,148 @@ const MODULES = [
               "Click <strong>Add</strong> to insert a row.",
               "Fill in the phase code, earning code, and hours.",
               "Click <strong>Submit for Approval</strong>, or click <strong>Save as Draft</strong> if the entry is incomplete."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/my-timesheet/001.jpg",
+                "caption": "Timesheet Mode under Timesheet Settings, which must be set before logging",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/my-timesheet/002.jpg",
+                "caption": "Timesheet Workflow, where a workflow is created and assigned before logging",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/my-timesheet/003.jpg",
+                "caption": "The Company, Projects, Work Orders and GL Codes drop-downs for the hours to log",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/my-timesheet/004.jpg",
+                "caption": "Log Level Category set to Company, with a template to choose",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/my-timesheet/005.jpg",
+                "caption": "Log Level Category set to Project, with a project drop-down",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/my-timesheet/006.jpg",
+                "caption": "Log Level Category set to Work Order, with a work order drop-down",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/my-timesheet/007.jpg",
+                "caption": "Log Level Category set to GL Codes, with a template to choose",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/my-timesheet/008.jpg",
+                "caption": "My Timesheet showing the logging mode you are subscribed to",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/my-timesheet/009.jpg",
+                "caption": "The template filled in from the default set in Settings",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/my-timesheet/010.jpg",
+                "caption": "Date Range, which depends on the logging mode",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/my-timesheet/015.jpg",
+                "caption": "Add, which inserts a new row in the table",
+                "step": 4
+              },
+              {
+                "src": "assets/notion/my-timesheet/011.jpg",
+                "caption": "Default Phase Code",
+                "step": 5
+              },
+              {
+                "src": "assets/notion/my-timesheet/012.jpg",
+                "caption": "The default list of phase codes",
+                "step": 5
+              },
+              {
+                "src": "assets/notion/my-timesheet/013.jpg",
+                "caption": "Company level: every phase code created in Global Data",
+                "step": 5
+              },
+              {
+                "src": "assets/notion/my-timesheet/014.jpg",
+                "caption": "Project level: only the phase codes mapped in Project Setup",
+                "step": 5
+              },
+              {
+                "src": "assets/notion/my-timesheet/016.jpg",
+                "caption": "Company level: choosing projects, work orders or GL codes in a row",
+                "step": 5
+              },
+              {
+                "src": "assets/notion/my-timesheet/017.jpg",
+                "caption": "Project level: the column becomes Projects and fills in automatically",
+                "step": 5
+              },
+              {
+                "src": "assets/notion/my-timesheet/018.jpg",
+                "caption": "Work Order level: the column becomes Work Order Items",
+                "step": 5
+              },
+              {
+                "src": "assets/notion/my-timesheet/019.jpg",
+                "caption": "GL Code level: the phase code column becomes GL Codes",
+                "step": 5
+              },
+              {
+                "src": "assets/notion/my-timesheet/020.jpg",
+                "caption": "Daily and Weekly by Day: a separate column for the phase code",
+                "step": 5
+              },
+              {
+                "src": "assets/notion/my-timesheet/021.jpg",
+                "caption": "Weekly: phase codes sit in the header",
+                "step": 5
+              },
+              {
+                "src": "assets/notion/my-timesheet/022.jpg",
+                "caption": "Earning codes in a separate column when the template is set to Column",
+                "step": 5
+              },
+              {
+                "src": "assets/notion/my-timesheet/023.jpg",
+                "caption": "Earning codes under split time headers",
+                "step": 5
+              },
+              {
+                "src": "assets/notion/my-timesheet/025.jpg",
+                "caption": "Logging hours or amounts for the employee",
+                "step": 5
+              },
+              {
+                "src": "assets/notion/my-timesheet/038.jpg",
+                "caption": "Save as Draft",
+                "step": 6
+              },
+              {
+                "src": "assets/notion/my-timesheet/039.jpg",
+                "caption": "The summary by earning code when saving as a draft",
+                "step": 6
+              },
+              {
+                "src": "assets/notion/my-timesheet/040.jpg",
+                "caption": "Submit for Approval",
+                "step": 6
+              },
+              {
+                "src": "assets/notion/my-timesheet/041.jpg",
+                "caption": "The summary by earning code when submitting for approval",
+                "step": 6
+              }
             ]
           },
           {
@@ -22595,7 +23832,99 @@ const MODULES = [
               "Fill in hours per phase code and earning code for each employee.",
               "Click <strong>Submit for Approval</strong>."
             ],
-            "note": "Timesheet settings and an approval workflow must already be configured for the crew before crew timesheets can be submitted — see Settings."
+            "note": "Timesheet settings and an approval workflow must already be configured for the crew before crew timesheets can be submitted — see Settings.",
+            "images": [
+              {
+                "src": "assets/notion/my-crew-timesheet/001.jpg",
+                "caption": "The Company, Project, Work Order, GL Codes and Crew drop-downs",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet/002.jpg",
+                "caption": "Log Level Category set to Company: choose a crew and template",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet/006.jpg",
+                "caption": "My Crew Timesheet showing the logging mode of the crew",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet/007.jpg",
+                "caption": "Company level: crews come from Global Data Crews",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet/008.jpg",
+                "caption": "Project level: crews created in or added to the selected project",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet/009.jpg",
+                "caption": "Work Order level: only crews assigned to the selected work order",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet/010.jpg",
+                "caption": "GL Codes level: crews come from Global Data Crews",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet/011.jpg",
+                "caption": "The template filled in from the default set in Settings",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet/015.jpg",
+                "caption": "Date Range for the crew timesheet",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet/020.jpg",
+                "caption": "Add, which inserts a new row in the table",
+                "step": 4
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet/016.jpg",
+                "caption": "Default Phase Code",
+                "step": 5
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet/021.jpg",
+                "caption": "Roster or Employee drop-down, with Crew and Global labels",
+                "step": 5
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet/022.jpg",
+                "caption": "Craft and Class, filled in from the employee",
+                "step": 5
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet/032.jpg",
+                "caption": "Logging hours or amounts for each employee",
+                "step": 5
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet/047.jpg",
+                "caption": "Save as Draft",
+                "step": 6
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet/048.jpg",
+                "caption": "The summary for each employee when saving as a draft",
+                "step": 6
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet/049.jpg",
+                "caption": "Submit for Approval",
+                "step": 6
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet/050.jpg",
+                "caption": "The summary for each employee when submitting for approval",
+                "step": 6
+              }
+            ]
           },
           {
             "title": "Approve or reject a submitted timesheet",
@@ -22604,7 +23933,24 @@ const MODULES = [
               "Select the submitted log you want to review.",
               "Click <strong>Approve</strong> or <strong>Reject</strong>, optionally adding comments."
             ],
-            "note": "The Approve and Reject buttons only appear for users designated as approvers in the Approval Workflow — they are not visible to everyone."
+            "note": "The Approve and Reject buttons only appear for users designated as approvers in the Approval Workflow — they are not visible to everyone.",
+            "images": [
+              {
+                "src": "assets/notion/my-crew-timesheet-logs/001.jpg",
+                "caption": "My Crew Timesheet Logs: submitted timesheets, most recent first",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet-logs/002.jpg",
+                "caption": "Logs grouped by date range",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet-logs/026.jpg",
+                "caption": "An approver selecting a timesheet to approve or reject, with comments",
+                "step": 3
+              }
+            ]
           },
           {
             "title": "Filter timesheet logs",
@@ -22612,6 +23958,48 @@ const MODULES = [
               "In <strong>My Timesheet Logs</strong> or <strong>My Crew Timesheet Logs</strong>, click <strong>Filters</strong>.",
               "Narrow results by Log Level Category, Log Level, Crew, Logged By, Mode (Daily/Weekly by Day/Weekly), Status, and Date Range.",
               "Click <strong>Save filters</strong> to keep the current filter set for future use, <strong>Reset</strong> to revert your changes, or <strong>Clear All</strong> to return to defaults."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/my-crew-timesheet-logs/003.jpg",
+                "caption": "Filters on the logs list",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet-logs/005.jpg",
+                "caption": "The Log Level filter changes name with the Log Level Category",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet-logs/009.jpg",
+                "caption": "Crew filter",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet-logs/010.jpg",
+                "caption": "Logged By filter",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet-logs/011.jpg",
+                "caption": "Mode filter: Daily, Weekly by Day or Weekly",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet-logs/012.jpg",
+                "caption": "Status filter",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet-logs/013.jpg",
+                "caption": "Date range filter",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet-logs/017.jpg",
+                "caption": "Save filters",
+                "step": 3
+              }
             ]
           },
           {
@@ -22621,7 +24009,303 @@ const MODULES = [
               "Select date range, log level, crews/users, mode, and earning codes.",
               "Choose a format: VP Excel (.xlsx), VP CSV, QuickBooks (.iif), or SAP (.csv)."
             ],
-            "note": "Only Admin users have access to Export."
+            "note": "Only Admin users have access to Export.",
+            "images": [
+              {
+                "src": "assets/notion/my-crew-timesheet-logs/037.jpg",
+                "caption": "The Export option",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet-logs/038.jpg",
+                "caption": "Download VP Excel: choosing date range, log level, crews, users, mode and earning codes",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet-logs/039.jpg",
+                "caption": "Download VP CSV file",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet-logs/040.jpg",
+                "caption": "Download QuickBooks",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet-logs/041.jpg",
+                "caption": "Download SAP",
+                "step": 3
+              }
+            ]
+          },
+          {
+            "title": "Use the timesheet row tools",
+            "steps": [
+              "Click **Copy by Phase Codes**, choose one or more phase codes and copy the log to them.",
+              "Click **Duplicate** to create a new log that replicates the previous one, then change what you need.",
+              "Click **Comments** to open **Add Comments**, type your comment and click **Submit**.",
+              "Click **Notes** to add extra details about the logged hours.",
+              "Click **Delete** to remove the whole row.",
+              "Click **Clone Log** to copy an earlier log, or append it to the current log. When you submit, choose **Yes** to append the data to the existing data.",
+              "Click **Show Data Summary** to see data from previous logs for the selected date range and timesheet mode."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/my-timesheet/026.jpg",
+                "caption": "Copy by Phase Codes",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/my-timesheet/027.jpg",
+                "caption": "Choosing the phase codes to copy the log to",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/my-timesheet/028.jpg",
+                "caption": "Duplicate",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/my-timesheet/029.jpg",
+                "caption": "A duplicated log, ready to edit",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/my-timesheet/030.jpg",
+                "caption": "Comments",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/my-timesheet/031.jpg",
+                "caption": "The Add Comments dialog",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/my-timesheet/033.jpg",
+                "caption": "Notes",
+                "step": 4
+              },
+              {
+                "src": "assets/notion/my-timesheet/034.jpg",
+                "caption": "The Notes dialog",
+                "step": 4
+              },
+              {
+                "src": "assets/notion/my-timesheet/032.jpg",
+                "caption": "Delete, which removes the whole row",
+                "step": 5
+              },
+              {
+                "src": "assets/notion/my-timesheet/035.jpg",
+                "caption": "Clone Log",
+                "step": 6
+              },
+              {
+                "src": "assets/notion/my-timesheet/036.jpg",
+                "caption": "Previous logs listed in the Clone Log dialog",
+                "step": 6
+              },
+              {
+                "src": "assets/notion/my-timesheet/037.jpg",
+                "caption": "The prompt asking whether to append the data to existing data",
+                "step": 6
+              },
+              {
+                "src": "assets/notion/my-timesheet/042.jpg",
+                "caption": "Show Data Summary: data from previous logs for the date range",
+                "step": 7
+              }
+            ]
+          },
+          {
+            "title": "Use the crew timesheet row tools",
+            "steps": [
+              "In Weekly mode, click **Per Diem Amount** at the top right to enter amounts for direct and indirect time.",
+              "Click **Copy by Employee**, choose the employees and copy the log to them.",
+              "Click **Copy by Phase Codes**, choose one or more phase codes and copy the log to them.",
+              "Click **Duplicate** to create a new log that replicates the previous one, then change what you need.",
+              "Click **Comments** to open **Add Comments**, type your comment and click **Submit**.",
+              "Click **Notes** to add extra details about the logged hours.",
+              "Click **Delete** to remove the whole row.",
+              "Click **Clone Log** to copy an earlier log, or append it to the current log. When you submit, choose **Yes** to append the data to the existing data.",
+              "Click **Show Data Summary** to see data from previous logs for the selected date range and timesheet mode."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/my-crew-timesheet/013.jpg",
+                "caption": "Per Diem Amount button for Weekly templates",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet/014.jpg",
+                "caption": "Entering per diem amounts",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet/033.jpg",
+                "caption": "Copy by Employee",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet/034.jpg",
+                "caption": "Choosing the employees to copy the log to",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet/035.jpg",
+                "caption": "Copy by Phase Codes",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet/036.jpg",
+                "caption": "Choosing the phase codes to copy the log to",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet/037.jpg",
+                "caption": "Duplicate",
+                "step": 4
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet/038.jpg",
+                "caption": "A duplicated log, ready to edit",
+                "step": 4
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet/039.jpg",
+                "caption": "Comments",
+                "step": 5
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet/040.jpg",
+                "caption": "The Add Comments dialog",
+                "step": 5
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet/042.jpg",
+                "caption": "Notes",
+                "step": 6
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet/043.jpg",
+                "caption": "The Notes dialog",
+                "step": 6
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet/041.jpg",
+                "caption": "Delete, which removes the whole row",
+                "step": 7
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet/044.jpg",
+                "caption": "Clone Log",
+                "step": 8
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet/045.jpg",
+                "caption": "Previous logs listed in the Clone Log dialog",
+                "step": 8
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet/046.jpg",
+                "caption": "The prompt asking whether to append the data to existing data",
+                "step": 8
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet/051.jpg",
+                "caption": "Show Data Summary: data from previous logs for the date range",
+                "step": 9
+              }
+            ]
+          },
+          {
+            "title": "See history, print or share a timesheet log",
+            "steps": [
+              "Open the menu at the top right corner of the log.",
+              "Choose **See History** to see the log being created, updated and approved, each action recorded.",
+              "Choose **Download PDF** to download the log as a PDF.",
+              "Choose **Print PDF** to print the log directly.",
+              "Choose **Share PDF** to send the log as a PDF to other registered users.",
+              "Choose **Download Excel** to download the data as an Excel file."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/my-crew-timesheet-logs/027.jpg",
+                "caption": "The menu at the top right of a log",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet-logs/028.jpg",
+                "caption": "See History",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet-logs/029.jpg",
+                "caption": "Download PDF",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet-logs/030.jpg",
+                "caption": "Print PDF",
+                "step": 4
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet-logs/031.jpg",
+                "caption": "Share PDF",
+                "step": 5
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet-logs/032.jpg",
+                "caption": "Download Excel",
+                "step": 6
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/my-crew-timesheet-logs/018.jpg",
+            "caption": "Download Excel for the logs, with each timesheet on its own sheet"
+          },
+          {
+            "src": "assets/notion/my-crew-timesheet-logs/020.jpg",
+            "caption": "Edit and Delete for the supervisor, foreman or admin who logged the timesheet"
+          },
+          {
+            "src": "assets/notion/my-crew-timesheet-logs/021.jpg",
+            "caption": "Draft: a log saved with incomplete data"
+          },
+          {
+            "src": "assets/notion/my-crew-timesheet-logs/022.jpg",
+            "caption": "Submitted for Approval"
+          },
+          {
+            "src": "assets/notion/my-crew-timesheet-logs/023.jpg",
+            "caption": "Workflow in Progress: approved at one level, waiting at the next"
+          },
+          {
+            "src": "assets/notion/my-crew-timesheet-logs/024.jpg",
+            "caption": "Completed: approved at every level"
+          },
+          {
+            "src": "assets/notion/my-crew-timesheet-logs/025.jpg",
+            "caption": "Rejected: turned down by an approver"
+          },
+          {
+            "src": "assets/notion/my-crew-timesheet-logs/033.jpg",
+            "caption": "View By inside a log"
+          },
+          {
+            "src": "assets/notion/my-crew-timesheet-logs/034.jpg",
+            "caption": "Summary view: total hours and amounts for each employee"
+          },
+          {
+            "src": "assets/notion/my-crew-timesheet-logs/035.jpg",
+            "caption": "Phase codes view: hours for each phase code"
+          },
+          {
+            "src": "assets/notion/my-crew-timesheet-logs/036.jpg",
+            "caption": "All view: the entire log"
           }
         ]
       },
@@ -22646,6 +24330,23 @@ const MODULES = [
               "Choose Daily & Weekly by Day or Weekly mode.",
               "Click <strong>Create Log</strong> and select a date range to view submitted logs.",
               "Click the <strong>Phase code</strong> button for an employee to reconcile that entry manually."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/timesheet-reconciliation-timesheet/001.jpg",
+                "caption": "Reconciliation, Timesheet tab",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/timesheet-reconciliation-timesheet/002.jpg",
+                "caption": "Create Log with a date range to see submitted logs",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/timesheet-reconciliation-timesheet/003.jpg",
+                "caption": "Phase code button on an employee, for manual reconciliation",
+                "step": 4
+              }
             ]
           },
           {
@@ -22655,7 +24356,25 @@ const MODULES = [
               "Select Daily & Weekly by Day or Weekly mode.",
               "Use <strong>Upload Logs</strong> with the provided template to upload employee/crew hour verification data."
             ],
-            "note": "The system validates Employee IDs on upload and organizes the data into batches for structured reconciliation."
+            "note": "The system validates Employee IDs on upload and organizes the data into batches for structured reconciliation.",
+            "images": [
+              {
+                "src": "assets/notion/timesheet-reconciliation-gate-logs/002.jpg",
+                "caption": "Choosing Daily & Weekly by Day or Weekly mode",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/timesheet-reconciliation-gate-logs/003.jpg",
+                "caption": "Upload Logs, with a template to download",
+                "step": 3
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/timesheet-reconciliation-gate-logs/004.jpg",
+            "caption": "Batches created for organized reconciliation"
           }
         ]
       },
@@ -22698,6 +24417,23 @@ const MODULES = [
               "Select a date range and log level.",
               "Toggle <strong>Submitted</strong> or <strong>Approved</strong> at the top right to filter by log status.",
               "Click <strong>Download Excel</strong> to export the results."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/timesheet-data-summary/002.jpg",
+                "caption": "Expanding an employee row to see their phase codes",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/timesheet-data-summary/003.jpg",
+                "caption": "Phase codes for the selected employee",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/timesheet-data-summary/001.jpg",
+                "caption": "Timesheet Data Summary with a date range filter",
+                "step": 3
+              }
             ]
           }
         ]
@@ -22714,12 +24450,13 @@ const MODULES = [
       "Use <strong>My Timesheet</strong> or <strong>My Crew Timesheet</strong> to log hours; approvers work from <strong>My Timesheet Logs</strong>. Rosters, crews, and workflow settings live under their own tabs and Global Data."
     ],
     "sections": [
-      {
-        "id": "time-management-qa",
-        "heading": "Common Questions",
-        "html": "<p>Answers sourced from Arena's documentation.</p>",
-        "qa": []
-      }
+      "Admin Role",
+      "Settings",
+      "Rosters & Crews",
+      "Timesheet Logs",
+      "Reconciliation",
+      "Timesheet Issues",
+      "Analytics & Reports"
     ]
   },
   {
