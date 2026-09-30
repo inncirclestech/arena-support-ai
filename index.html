@@ -454,6 +454,19 @@
   .doc-intro-more[open] > summary::before { content: "–"; }
   .doc-intro-more[open] > summary { margin-bottom: 12px; }
   .doc-intro-more > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .doc-shots { display: flex; flex-wrap: wrap; gap: 12px; margin: 10px 0 6px; }
+  .doc-shot { margin: 0; max-width: 560px; flex: 1 1 280px; }
+  .doc-shot-btn { display: block; width: 100%; padding: 0; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--surface); cursor: zoom-in; overflow: hidden; box-shadow: var(--shadow-sm); }
+  .doc-shot-btn:hover { border-color: var(--accent); }
+  .doc-shot-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .doc-shot-btn img { display: block; width: 100%; height: auto; max-height: 340px; object-fit: contain; background: #fff; }
+  .doc-shot figcaption { font-size: 12px; color: var(--muted); margin-top: 5px; line-height: 1.4; }
+  .shot-viewer { position: fixed; inset: 0; z-index: 1000; background: rgba(12, 22, 38, 0.86); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 24px; }
+  .shot-viewer[hidden] { display: none; }
+  .shot-viewer img { max-width: 96vw; max-height: 84vh; border-radius: 6px; background: #fff; box-shadow: 0 10px 40px rgba(0,0,0,.4); }
+  .shot-viewer-caption { color: #fff; font-size: 13px; margin: 12px 0 0; text-align: center; max-width: 900px; }
+  .shot-viewer-close { position: absolute; top: 14px; right: 18px; width: 40px; height: 40px; border-radius: 50%; border: none; background: rgba(255,255,255,.14); color: #fff; font-size: 26px; line-height: 1; cursor: pointer; }
+  .shot-viewer-close:focus-visible { outline: 2px solid var(--accent); }
 
   .doc-subblock { margin-top: 26px; }
   .doc-subblock:first-of-type { margin-top: 6px; }
@@ -1022,16 +1035,59 @@ Example of the style to use — if a note says "Go to Settings, click Add User, 
     return `<button type="button" class="doc-terms-toggle" aria-expanded="false" aria-controls="${collapseId}">${ICON_CHEVRON} Show ${defs.length} terms</button>${rows}`;
   }
 
+  // Screenshots: [{src, caption, step?}]. Thumbnails load lazily and open full size on click.
+  function renderShotsHtml(images) {
+    if (!images || !images.length) return "";
+    return `<div class="doc-shots">${images.map(im => `
+      <figure class="doc-shot">
+        <button type="button" class="doc-shot-btn" data-full="${escapeHtml(im.src)}" data-caption="${escapeHtml(im.caption || "")}" aria-label="Open screenshot full size${im.caption ? ": " + escapeHtml(im.caption) : ""}">
+          <img src="${escapeHtml(im.src)}" alt="${escapeHtml(im.caption || "Screenshot")}" loading="lazy">
+        </button>
+        ${im.caption ? `<figcaption>${escapeHtml(im.caption)}</figcaption>` : ""}
+      </figure>`).join("")}</div>`;
+  }
+
   function renderProceduresHtml(procs) {
     if (!procs || !procs.length) return "";
-    return procs.map(p => `
+    return procs.map(p => {
+      const imgs = p.images || [];
+      const atStep = i => imgs.filter(im => im.step === i + 1);
+      const loose = imgs.filter(im => !im.step || im.step > (p.steps || []).length);
+      return `
       <div class="doc-procedure">
         <h4 class="doc-procedure-title">${escapeHtml(p.title)}</h4>
-        <ol class="doc-procedure-steps">${(p.steps || []).map(s => `<li><span class="doc-step-text">${s}</span></li>`).join("")}</ol>
+        <ol class="doc-procedure-steps">${(p.steps || []).map((s, i) => `<li><span class="doc-step-text">${s}${renderShotsHtml(atStep(i))}</span></li>`).join("")}</ol>
+        ${renderShotsHtml(loose)}
         ${p.note ? `<div class="doc-callout">${renderAnswerHtml(p.note)}</div>` : ""}
       </div>
-    `).join("");
+    `;
+    }).join("");
   }
+
+  // One shared full-size viewer for screenshots.
+  function openShot(src, caption) {
+    let box = document.getElementById("shot-viewer");
+    if (!box) {
+      box = document.createElement("div");
+      box.id = "shot-viewer";
+      box.className = "shot-viewer";
+      box.setAttribute("role", "dialog");
+      box.setAttribute("aria-modal", "true");
+      box.innerHTML = `<button type="button" class="shot-viewer-close" aria-label="Close">×</button><img alt=""><p class="shot-viewer-caption"></p>`;
+      box.addEventListener("click", e => { if (e.target === box || e.target.classList.contains("shot-viewer-close")) box.hidden = true; });
+      document.addEventListener("keydown", e => { if (e.key === "Escape") box.hidden = true; });
+      document.body.appendChild(box);
+    }
+    box.querySelector("img").src = src;
+    box.querySelector("img").alt = caption || "Screenshot";
+    box.querySelector(".shot-viewer-caption").textContent = caption || "";
+    box.hidden = false;
+    box.querySelector(".shot-viewer-close").focus();
+  }
+  document.addEventListener("click", e => {
+    const b = e.target.closest && e.target.closest(".doc-shot-btn");
+    if (b) openShot(b.dataset.full, b.dataset.caption);
+  });
 
   function renderQaListHtml(items, idPrefix) {
     if (!items || !items.length) return "";
@@ -1144,6 +1200,7 @@ Example of the style to use — if a note says "Go to Settings, click Add User, 
                   </div>
                 </div>
                 ${narr && narr.intro ? renderIntroHtml(narr.intro) : ""}
+                ${narr && narr.images ? renderShotsHtml(narr.images) : ""}
 
                 ${stepCount ? `
                 <div class="doc-subblock">
