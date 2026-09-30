@@ -10351,16 +10351,6 @@ const MODULES = [
                 "step": 1
               },
               {
-                "src": "assets/guides/equipment/032.jpg",
-                "caption": "Submit on the Add Equipment dialog",
-                "step": 5
-              },
-              {
-                "src": "assets/guides/equipment/033.jpg",
-                "caption": "New equipment in the Equipment Master",
-                "step": 5
-              },
-              {
                 "src": "assets/guides/equipment/034.jpg",
                 "caption": "Location type and location dropdowns",
                 "step": 4
@@ -10369,6 +10359,16 @@ const MODULES = [
                 "src": "assets/guides/equipment/035.jpg",
                 "caption": "Fuel Type and Location fields",
                 "step": 4
+              },
+              {
+                "src": "assets/guides/equipment/032.jpg",
+                "caption": "Submit on the Add Equipment dialog",
+                "step": 5
+              },
+              {
+                "src": "assets/guides/equipment/033.jpg",
+                "caption": "New equipment in the Equipment Master",
+                "step": 5
               }
             ]
           },
@@ -10450,16 +10450,6 @@ const MODULES = [
             ],
             "images": [
               {
-                "src": "assets/guides/equipment/036.jpg",
-                "caption": "Add Custom Column on the Equipment Master",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/equipment/037.jpg",
-                "caption": "Custom column name and type",
-                "step": 3
-              },
-              {
                 "src": "assets/guides/equipment/038.jpg",
                 "caption": "Manage Columns",
                 "step": 2
@@ -10473,6 +10463,16 @@ const MODULES = [
                 "src": "assets/guides/equipment/040.jpg",
                 "caption": "Column Arrangement",
                 "step": 2
+              },
+              {
+                "src": "assets/guides/equipment/036.jpg",
+                "caption": "Add Custom Column on the Equipment Master",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/equipment/037.jpg",
+                "caption": "Custom column name and type",
+                "step": 3
               }
             ]
           },
@@ -10648,6 +10648,21 @@ const MODULES = [
                 "step": 2
               },
               {
+                "src": "assets/guides/equipment/082.jpg",
+                "caption": "Edit icon on Specifications",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/equipment/083.jpg",
+                "caption": "Specifications fields",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/equipment/084.jpg",
+                "caption": "Save on Specifications",
+                "step": 2
+              },
+              {
                 "src": "assets/guides/equipment/065.jpg",
                 "caption": "Equipment selected on Basic Details",
                 "step": 3
@@ -10681,21 +10696,6 @@ const MODULES = [
                 "src": "assets/guides/equipment/071.jpg",
                 "caption": "Save on Basic Details",
                 "step": 3
-              },
-              {
-                "src": "assets/guides/equipment/082.jpg",
-                "caption": "Edit icon on Specifications",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/083.jpg",
-                "caption": "Specifications fields",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/084.jpg",
-                "caption": "Save on Specifications",
-                "step": 2
               }
             ]
           },
@@ -11009,36 +11009,6 @@ const MODULES = [
                 "step": 1
               },
               {
-                "src": "assets/guides/equipment/110.jpg",
-                "caption": "Create Approval Workflow under Equipment Request",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/111.jpg",
-                "caption": "Workflow Name and Set as Default",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/112.jpg",
-                "caption": "Create levels inside the workflow",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/equipment/113.jpg",
-                "caption": "Workflow type and approvers for a level",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/equipment/114.jpg",
-                "caption": "Edit and Delete options on a workflow",
-                "step": 4
-              },
-              {
-                "src": "assets/guides/equipment/115.jpg",
-                "caption": "Set as Default on an existing workflow",
-                "step": 4
-              },
-              {
                 "src": "assets/guides/equipment/228.jpg",
                 "caption": "Equipment Management Settings",
                 "step": 1
@@ -11054,6 +11024,16 @@ const MODULES = [
                 "step": 1
               },
               {
+                "src": "assets/guides/equipment/110.jpg",
+                "caption": "Create Approval Workflow under Equipment Request",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/equipment/111.jpg",
+                "caption": "Workflow Name and Set as Default",
+                "step": 2
+              },
+              {
                 "src": "assets/guides/equipment/231.jpg",
                 "caption": "Create Approval Workflow under Hauling Request",
                 "step": 2
@@ -11064,6 +11044,16 @@ const MODULES = [
                 "step": 2
               },
               {
+                "src": "assets/guides/equipment/112.jpg",
+                "caption": "Create levels inside the workflow",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/equipment/113.jpg",
+                "caption": "Workflow type and approvers for a level",
+                "step": 3
+              },
+              {
                 "src": "assets/guides/equipment/233.jpg",
                 "caption": "Create levels",
                 "step": 3
@@ -11072,6 +11062,16 @@ const MODULES = [
                 "src": "assets/guides/equipment/234.jpg",
                 "caption": "Workflow type and approvers for a level",
                 "step": 3
+              },
+              {
+                "src": "assets/guides/equipment/114.jpg",
+                "caption": "Edit and Delete options on a workflow",
+                "step": 4
+              },
+              {
+                "src": "assets/guides/equipment/115.jpg",
+                "caption": "Set as Default on an existing workflow",
+                "step": 4
               },
               {
                 "src": "assets/guides/equipment/235.jpg",
@@ -11379,12 +11379,32 @@ const MODULES = [
                 "step": 1
               },
               {
+                "src": "assets/guides/equipment/264.jpg",
+                "caption": "Operations menu",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/equipment/265.jpg",
+                "caption": "Card in the Inspection (Pre-Dispatch) stage",
+                "step": 1
+              },
+              {
                 "src": "assets/guides/equipment/155.jpg",
                 "caption": "Form Ready button",
                 "step": 2
               },
               {
+                "src": "assets/guides/equipment/266.jpg",
+                "caption": "Form Ready button",
+                "step": 2
+              },
+              {
                 "src": "assets/guides/equipment/156.jpg",
+                "caption": "Inspection items and responses",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/equipment/267.jpg",
                 "caption": "Inspection items and responses",
                 "step": 3
               },
@@ -11402,26 +11422,6 @@ const MODULES = [
                 "src": "assets/guides/equipment/159.jpg",
                 "caption": "Issues found with priority, observations and images",
                 "step": 5
-              },
-              {
-                "src": "assets/guides/equipment/264.jpg",
-                "caption": "Operations menu",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/265.jpg",
-                "caption": "Card in the Inspection (Pre-Dispatch) stage",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/266.jpg",
-                "caption": "Form Ready button",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/267.jpg",
-                "caption": "Inspection items and responses",
-                "step": 3
               },
               {
                 "src": "assets/guides/equipment/268.jpg",
@@ -11459,16 +11459,6 @@ const MODULES = [
                 "step": 1
               },
               {
-                "src": "assets/guides/equipment/162.jpg",
-                "caption": "Previous stage dropdown",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/163.jpg",
-                "caption": "Request back in the Assign stage",
-                "step": 2
-              },
-              {
                 "src": "assets/guides/equipment/222.jpg",
                 "caption": "Inspection Checklist Issues link",
                 "step": 1
@@ -11477,16 +11467,6 @@ const MODULES = [
                 "src": "assets/guides/equipment/223.jpg",
                 "caption": "Issue in Inspection Checklist Issues",
                 "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/224.jpg",
-                "caption": "Previous stage dropdown",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/225.jpg",
-                "caption": "Request back in the Pickup stage",
-                "step": 2
               },
               {
                 "src": "assets/guides/equipment/271.jpg",
@@ -11499,11 +11479,6 @@ const MODULES = [
                 "step": 1
               },
               {
-                "src": "assets/guides/equipment/273.jpg",
-                "caption": "Rectifying the issue",
-                "step": 3
-              },
-              {
                 "src": "assets/guides/equipment/399.jpg",
                 "caption": "Inspection Checklist Issues link",
                 "step": 1
@@ -11514,9 +11489,34 @@ const MODULES = [
                 "step": 1
               },
               {
+                "src": "assets/guides/equipment/162.jpg",
+                "caption": "Previous stage dropdown",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/equipment/163.jpg",
+                "caption": "Request back in the Assign stage",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/equipment/224.jpg",
+                "caption": "Previous stage dropdown",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/equipment/225.jpg",
+                "caption": "Request back in the Pickup stage",
+                "step": 2
+              },
+              {
                 "src": "assets/guides/equipment/401.jpg",
                 "caption": "Previous stage dropdown",
                 "step": 2
+              },
+              {
+                "src": "assets/guides/equipment/273.jpg",
+                "caption": "Rectifying the issue",
+                "step": 3
               }
             ]
           },
@@ -11532,6 +11532,16 @@ const MODULES = [
               {
                 "src": "assets/guides/equipment/164.jpg",
                 "caption": "Card in the Ready for Dispatch stage",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/equipment/298.jpg",
+                "caption": "Card in the Ready for Dispatch stage",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/equipment/299.jpg",
+                "caption": "Allocation details",
                 "step": 1
               },
               {
@@ -11553,16 +11563,6 @@ const MODULES = [
                 "src": "assets/guides/equipment/168.jpg",
                 "caption": "Request in the On-Rent stage",
                 "step": 3
-              },
-              {
-                "src": "assets/guides/equipment/298.jpg",
-                "caption": "Card in the Ready for Dispatch stage",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/299.jpg",
-                "caption": "Allocation details",
-                "step": 1
               },
               {
                 "src": "assets/guides/equipment/300.jpg",
@@ -11591,21 +11591,6 @@ const MODULES = [
                 "step": 1
               },
               {
-                "src": "assets/guides/equipment/171.jpg",
-                "caption": "On-Rent option",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/172.jpg",
-                "caption": "Submit on On-Rent confirmation",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/equipment/173.jpg",
-                "caption": "Asset status On Rent",
-                "step": 3
-              },
-              {
                 "src": "assets/guides/equipment/315.jpg",
                 "caption": "Operations menu",
                 "step": 1
@@ -11621,9 +11606,24 @@ const MODULES = [
                 "step": 1
               },
               {
+                "src": "assets/guides/equipment/171.jpg",
+                "caption": "On-Rent option",
+                "step": 2
+              },
+              {
                 "src": "assets/guides/equipment/318.jpg",
                 "caption": "On-Rent option",
                 "step": 2
+              },
+              {
+                "src": "assets/guides/equipment/172.jpg",
+                "caption": "Submit on On-Rent confirmation",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/equipment/173.jpg",
+                "caption": "Asset status On Rent",
+                "step": 3
               },
               {
                 "src": "assets/guides/equipment/319.jpg",
@@ -11659,12 +11659,27 @@ const MODULES = [
                 "step": 1
               },
               {
+                "src": "assets/guides/equipment/321.jpg",
+                "caption": "Request Extension option",
+                "step": 1
+              },
+              {
                 "src": "assets/guides/equipment/176.jpg",
                 "caption": "Requested Extension Date",
                 "step": 2
               },
               {
+                "src": "assets/guides/equipment/322.jpg",
+                "caption": "Requested Extension Date",
+                "step": 2
+              },
+              {
                 "src": "assets/guides/equipment/177.jpg",
+                "caption": "Operator for the extended period",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/equipment/323.jpg",
                 "caption": "Operator for the extended period",
                 "step": 3
               },
@@ -11679,31 +11694,6 @@ const MODULES = [
                 "step": 4
               },
               {
-                "src": "assets/guides/equipment/180.jpg",
-                "caption": "Extension waiting for approval",
-                "step": 5
-              },
-              {
-                "src": "assets/guides/equipment/181.jpg",
-                "caption": "Extension in the Off-Rent / Extension stage",
-                "step": 5
-              },
-              {
-                "src": "assets/guides/equipment/321.jpg",
-                "caption": "Request Extension option",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/322.jpg",
-                "caption": "Requested Extension Date",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/323.jpg",
-                "caption": "Operator for the extended period",
-                "step": 3
-              },
-              {
                 "src": "assets/guides/equipment/324.jpg",
                 "caption": "Attachments on an extension request",
                 "step": 4
@@ -11712,6 +11702,16 @@ const MODULES = [
                 "src": "assets/guides/equipment/325.jpg",
                 "caption": "Submit Request for an extension",
                 "step": 4
+              },
+              {
+                "src": "assets/guides/equipment/180.jpg",
+                "caption": "Extension waiting for approval",
+                "step": 5
+              },
+              {
+                "src": "assets/guides/equipment/181.jpg",
+                "caption": "Extension in the Off-Rent / Extension stage",
+                "step": 5
               },
               {
                 "src": "assets/guides/equipment/326.jpg",
@@ -11742,12 +11742,27 @@ const MODULES = [
                 "step": 1
               },
               {
+                "src": "assets/guides/equipment/328.jpg",
+                "caption": "Request Off-Rent option",
+                "step": 1
+              },
+              {
                 "src": "assets/guides/equipment/183.jpg",
                 "caption": "Requested Off-Rent Date",
                 "step": 2
               },
               {
+                "src": "assets/guides/equipment/329.jpg",
+                "caption": "Requested Off-Rent Date",
+                "step": 2
+              },
+              {
                 "src": "assets/guides/equipment/184.jpg",
+                "caption": "Operator on an off-rent request",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/equipment/330.jpg",
                 "caption": "Operator on an off-rent request",
                 "step": 3
               },
@@ -11760,21 +11775,6 @@ const MODULES = [
                 "src": "assets/guides/equipment/186.jpg",
                 "caption": "Submit Request for off-rent",
                 "step": 4
-              },
-              {
-                "src": "assets/guides/equipment/328.jpg",
-                "caption": "Request Off-Rent option",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/329.jpg",
-                "caption": "Requested Off-Rent Date",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/330.jpg",
-                "caption": "Operator on an off-rent request",
-                "step": 3
               },
               {
                 "src": "assets/guides/equipment/331.jpg",
@@ -11807,16 +11807,6 @@ const MODULES = [
                 "step": 1
               },
               {
-                "src": "assets/guides/equipment/189.jpg",
-                "caption": "Approval comments",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/190.jpg",
-                "caption": "Rejection comments and files",
-                "step": 2
-              },
-              {
                 "src": "assets/guides/equipment/333.jpg",
                 "caption": "Requested Type and operator on the approval card",
                 "step": 1
@@ -11825,6 +11815,16 @@ const MODULES = [
                 "src": "assets/guides/equipment/334.jpg",
                 "caption": "Approve and Reject buttons",
                 "step": 1
+              },
+              {
+                "src": "assets/guides/equipment/189.jpg",
+                "caption": "Approval comments",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/equipment/190.jpg",
+                "caption": "Rejection comments and files",
+                "step": 2
               },
               {
                 "src": "assets/guides/equipment/335.jpg",
@@ -11867,6 +11867,26 @@ const MODULES = [
                 "step": 1
               },
               {
+                "src": "assets/guides/equipment/337.jpg",
+                "caption": "Request card under Off-Rent / Extension",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/equipment/338.jpg",
+                "caption": "Project toggle and Submit",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/equipment/339.jpg",
+                "caption": "Off-Rent status after approval",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/equipment/340.jpg",
+                "caption": "Keep at Project or Re-allocate to Request",
+                "step": 1
+              },
+              {
                 "src": "assets/guides/equipment/195.jpg",
                 "caption": "Keep at Project selected",
                 "step": 2
@@ -11874,6 +11894,11 @@ const MODULES = [
               {
                 "src": "assets/guides/equipment/196.jpg",
                 "caption": "Request in the Closed stage",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/equipment/341.jpg",
+                "caption": "Keep at Project selected",
                 "step": 2
               },
               {
@@ -11895,31 +11920,6 @@ const MODULES = [
                 "src": "assets/guides/equipment/200.jpg",
                 "caption": "Re-allocated request opened at Assign",
                 "step": 3
-              },
-              {
-                "src": "assets/guides/equipment/337.jpg",
-                "caption": "Request card under Off-Rent / Extension",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/338.jpg",
-                "caption": "Project toggle and Submit",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/339.jpg",
-                "caption": "Off-Rent status after approval",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/340.jpg",
-                "caption": "Keep at Project or Re-allocate to Request",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/341.jpg",
-                "caption": "Keep at Project selected",
-                "step": 2
               },
               {
                 "src": "assets/guides/equipment/342.jpg",
@@ -11960,12 +11960,27 @@ const MODULES = [
                 "step": 1
               },
               {
+                "src": "assets/guides/equipment/346.jpg",
+                "caption": "Self Pickup method for the return",
+                "step": 1
+              },
+              {
                 "src": "assets/guides/equipment/202.jpg",
                 "caption": "Destination Location",
                 "step": 2
               },
               {
                 "src": "assets/guides/equipment/203.jpg",
+                "caption": "Operator for the return",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/equipment/347.jpg",
+                "caption": "Destination Location",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/equipment/348.jpg",
                 "caption": "Operator for the return",
                 "step": 2
               },
@@ -11985,31 +12000,6 @@ const MODULES = [
                 "step": 4
               },
               {
-                "src": "assets/guides/equipment/207.jpg",
-                "caption": "Attachments on the return",
-                "step": 5
-              },
-              {
-                "src": "assets/guides/equipment/208.jpg",
-                "caption": "Submit on the return",
-                "step": 5
-              },
-              {
-                "src": "assets/guides/equipment/346.jpg",
-                "caption": "Self Pickup method for the return",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/347.jpg",
-                "caption": "Destination Location",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/348.jpg",
-                "caption": "Operator for the return",
-                "step": 2
-              },
-              {
                 "src": "assets/guides/equipment/349.jpg",
                 "caption": "Pickup and Post-Inspection Assignees",
                 "step": 4
@@ -12018,6 +12008,16 @@ const MODULES = [
                 "src": "assets/guides/equipment/350.jpg",
                 "caption": "Assignees selected",
                 "step": 4
+              },
+              {
+                "src": "assets/guides/equipment/207.jpg",
+                "caption": "Attachments on the return",
+                "step": 5
+              },
+              {
+                "src": "assets/guides/equipment/208.jpg",
+                "caption": "Submit on the return",
+                "step": 5
               },
               {
                 "src": "assets/guides/equipment/351.jpg",
@@ -12040,16 +12040,6 @@ const MODULES = [
                 "step": 1
               },
               {
-                "src": "assets/guides/equipment/214.jpg",
-                "caption": "Return Date",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/215.jpg",
-                "caption": "Schedule Pickup",
-                "step": 2
-              },
-              {
                 "src": "assets/guides/equipment/390.jpg",
                 "caption": "Card in the Pickup stage",
                 "step": 1
@@ -12058,6 +12048,16 @@ const MODULES = [
                 "src": "assets/guides/equipment/391.jpg",
                 "caption": "Return Date",
                 "step": 1
+              },
+              {
+                "src": "assets/guides/equipment/214.jpg",
+                "caption": "Return Date",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/equipment/215.jpg",
+                "caption": "Schedule Pickup",
+                "step": 2
               },
               {
                 "src": "assets/guides/equipment/392.jpg",
@@ -12086,7 +12086,22 @@ const MODULES = [
                 "step": 1
               },
               {
+                "src": "assets/guides/equipment/393.jpg",
+                "caption": "Request in the Inspection (Post-Rent) stage",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/equipment/394.jpg",
+                "caption": "Post-rent inspection form",
+                "step": 1
+              },
+              {
                 "src": "assets/guides/equipment/218.jpg",
+                "caption": "Post-rent inspection items",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/equipment/395.jpg",
                 "caption": "Post-rent inspection items",
                 "step": 2
               },
@@ -12104,21 +12119,6 @@ const MODULES = [
                 "src": "assets/guides/equipment/221.jpg",
                 "caption": "Issues found on post-rent inspection",
                 "step": 4
-              },
-              {
-                "src": "assets/guides/equipment/393.jpg",
-                "caption": "Request in the Inspection (Post-Rent) stage",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/394.jpg",
-                "caption": "Post-rent inspection form",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/395.jpg",
-                "caption": "Post-rent inspection items",
-                "step": 2
               },
               {
                 "src": "assets/guides/equipment/396.jpg",
@@ -12150,14 +12150,14 @@ const MODULES = [
                 "step": 1
               },
               {
-                "src": "assets/guides/equipment/227.jpg",
-                "caption": "Equipment status Available",
-                "step": 2
-              },
-              {
                 "src": "assets/guides/equipment/402.jpg",
                 "caption": "Request in the Closed stage",
                 "step": 1
+              },
+              {
+                "src": "assets/guides/equipment/227.jpg",
+                "caption": "Equipment status Available",
+                "step": 2
               },
               {
                 "src": "assets/guides/equipment/403.jpg",
@@ -12633,24 +12633,14 @@ const MODULES = [
                 "step": 1
               },
               {
-                "src": "assets/guides/equipment/210.jpg",
-                "caption": "Destination Location, Vehicle and Driver",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/211.jpg",
-                "caption": "Pickup and Post-Inspection Assignees",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/equipment/212.jpg",
-                "caption": "Submit on the return",
-                "step": 3
-              },
-              {
                 "src": "assets/guides/equipment/352.jpg",
                 "caption": "Inventory and Company Logistics selected",
                 "step": 1
+              },
+              {
+                "src": "assets/guides/equipment/210.jpg",
+                "caption": "Destination Location, Vehicle and Driver",
+                "step": 2
               },
               {
                 "src": "assets/guides/equipment/353.jpg",
@@ -12666,6 +12656,16 @@ const MODULES = [
                 "src": "assets/guides/equipment/355.jpg",
                 "caption": "Vehicle and Driver selected",
                 "step": 2
+              },
+              {
+                "src": "assets/guides/equipment/211.jpg",
+                "caption": "Pickup and Post-Inspection Assignees",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/equipment/212.jpg",
+                "caption": "Submit on the return",
+                "step": 3
               },
               {
                 "src": "assets/guides/equipment/356.jpg",
@@ -13298,21 +13298,6 @@ const MODULES = [
                 "step": 1
               },
               {
-                "src": "assets/guides/equipment/429.jpg",
-                "caption": "Active geofences highlighted in yellow",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/equipment/430.jpg",
-                "caption": "Clusters of telematics devices",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/equipment/431.jpg",
-                "caption": "Individual equipment markers",
-                "step": 3
-              },
-              {
                 "src": "assets/guides/equipment/433.jpg",
                 "caption": "Filters on the Fleet Map",
                 "step": 2
@@ -13336,6 +13321,21 @@ const MODULES = [
                 "src": "assets/guides/equipment/437.jpg",
                 "caption": "Save Filters",
                 "step": 2
+              },
+              {
+                "src": "assets/guides/equipment/429.jpg",
+                "caption": "Active geofences highlighted in yellow",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/equipment/430.jpg",
+                "caption": "Clusters of telematics devices",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/equipment/431.jpg",
+                "caption": "Individual equipment markers",
+                "step": 3
               }
             ]
           },
@@ -13431,6 +13431,48 @@ const MODULES = [
               "In <strong>Identify Forms</strong>, use Add Form, tick the required forms, and Submit.",
               "In <strong>Prepare Schedule</strong>, choose the Recurrence Type and set Start/End dates and Time.",
               "In <strong>Assign Crew</strong>, select the responsible individuals or crews and Save."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/equipment-setup-maintenance-logs/001.jpg",
+                "caption": "Asset Setup: a space to schedule maintenance logs and utilization logs",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/equipment-setup-maintenance-logs/002.jpg",
+                "caption": "The Maintenance Log and Utilization tabs",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/equipment-setup-maintenance-logs/003.jpg",
+                "caption": "Create Maintenance Package, to group equipment or accessories and set a schedule",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/equipment-setup-maintenance-logs/004.jpg",
+                "caption": "Step 1, List Items: adding equipment or accessories to the package",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/equipment-setup-maintenance-logs/005.jpg",
+                "caption": "Step 2, Identify Forms: the maintenance forms set up by the admin",
+                "step": 4
+              },
+              {
+                "src": "assets/notion/equipment-setup-maintenance-logs/006.jpg",
+                "caption": "Add Form: the forms needed for the package, ticked and then submitted",
+                "step": 4
+              },
+              {
+                "src": "assets/notion/equipment-setup-maintenance-logs/007.jpg",
+                "caption": "Step 3, Prepare Schedule: a recurrence type, dates and time",
+                "step": 5
+              },
+              {
+                "src": "assets/notion/equipment-setup-maintenance-logs/008.jpg",
+                "caption": "Step 4, Assign Crew: choosing the users or crews responsible",
+                "step": 6
+              }
             ]
           },
           {
@@ -13446,6 +13488,13 @@ const MODULES = [
             "steps": [
               "In the <strong>Assign Crew</strong> step of the Create Maintenance Package wizard, select individual users or entire Crews responsible for the maintenance.",
               "Once saved, the schedule appears automatically on each assignee's personal calendar and becomes fillable at the scheduled time."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/equipment-setup-maintenance-logs/009.jpg",
+                "caption": "Individual and crew selections shown on the package",
+                "step": 2
+              }
             ]
           }
         ]
@@ -13491,6 +13540,23 @@ const MODULES = [
               "Pick the due date — forms are shown color-coded (Blue means ready to fill).",
               "Open the form, fill in the required fields, and Submit — the form turns Green once complete.",
               "If a check fails, raise an <strong>issue</strong> directly from that field — it's logged to Asset Issues automatically, with no separate step needed."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/equipment-management-field-inspections/002.jpg",
+                "caption": "The Maintenance, Utilization and Equipment Photos tabs",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/equipment-management-field-inspections/003.jpg",
+                "caption": "Picking a date to see the maintenance scheduled for that day",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/equipment-maintenance-calendar/001.jpg",
+                "caption": "The equipment maintenance calendar: tasks due for the day",
+                "step": 2
+              }
             ]
           },
           {
@@ -13499,6 +13565,18 @@ const MODULES = [
               "Go to <strong>Field Inspections → Maintenance</strong> (or Utilization) and switch to the list/ad-hoc tab.",
               "Select the relevant form category from the left-hand list.",
               "Click <strong>Create Form</strong>, complete the fields, and Submit — it appears as a new card with Download, Share, Print, and Chat available."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/equipment-management-field-inspections/004.jpg",
+                "caption": "Create Form, to open a new inspection form",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/equipment-maintenance/001.jpg",
+                "caption": "A submitted form appearing as a card",
+                "step": 3
+              }
             ]
           },
           {
@@ -13506,6 +13584,23 @@ const MODULES = [
             "steps": [
               "Click the card for the submitted form to re-open it for review or editing.",
               "Use the card's Download, Share, Print, and Chat options for collaborative notes alongside the edit."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/equipment-maintenance/002.jpg",
+                "caption": "Opening a submitted form to review or change it",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/equipment-maintenance/003.jpg",
+                "caption": "Download, Share and Print on a submitted form",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/equipment-maintenance/004.jpg",
+                "caption": "Chat, for notes on how the inspection was done",
+                "step": 2
+              }
             ]
           },
           {
@@ -13515,6 +13610,23 @@ const MODULES = [
               "Select the equipment or accessory from the left-hand list.",
               "Click <strong>Add</strong>, then Upload File to select one or more images.",
               "Optionally annotate using the built-in markup tools, then click <strong>Save</strong>."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/equipment-management-field-inspections/005.jpg",
+                "caption": "Choosing equipment and clicking Add to upload photos",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/equipment-photos/001.jpg",
+                "caption": "Choosing the equipment and clicking Add",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/equipment-photos/002.jpg",
+                "caption": "Upload File, for several images under one label",
+                "step": 3
+              }
             ]
           },
           {
@@ -13523,7 +13635,25 @@ const MODULES = [
               "Click \"Click to View\" on a photo to open the viewer, which supports next/previous navigation.",
               "Use the annotation tools below the image to mark it up, then click <strong>Save</strong> to persist the markup.",
               "Use the kebab (⋮) menu in the viewer to <strong>Delete</strong> the photo."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/equipment-photos/003.jpg",
+                "caption": "Click to View, with arrows to move between images",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/equipment-photos/004.jpg",
+                "caption": "Annotation tools below an image, and Save",
+                "step": 2
+              }
             ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/equipment-management-field-inspections/001.jpg",
+            "caption": "Field Inspections: scheduled or ad-hoc maintenance inspections, and equipment photos"
           }
         ]
       },
@@ -13560,6 +13690,23 @@ const MODULES = [
               "Review the issue's details, and add notes in <strong>Chat</strong> if collaborating with others on the fix.",
               "Once the underlying problem is fixed, click <strong>Rectify</strong> — the status becomes Rectified and the linked form re-opens for completion.",
               "If formal remediation tracking is needed (labor, cost, parts), click <strong>Create Work Order</strong> on the toolbar."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/equipment-issues/004.jpg",
+                "caption": "Filters and Save, to narrow the issue list",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/equipment-issues/003.jpg",
+                "caption": "An issue with its date, details, creator and status",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/equipment-issues/007.jpg",
+                "caption": "Create Work Order on the toolbar",
+                "step": 4
+              }
             ]
           },
           {
@@ -13568,6 +13715,18 @@ const MODULES = [
               "Click the <strong>delete_outline</strong> icon on an issue's row to delete it.",
               "Click <strong>Export</strong> to download all issue records to Excel.",
               "Use the view toggle in the top-right to switch between table and card/grid view."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/equipment-issues/005.jpg",
+                "caption": "Export to Excel, and Search by ID or status",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/equipment-issues/002.jpg",
+                "caption": "Issues as cards, with a table view at the top right",
+                "step": 3
+              }
             ]
           },
           {
@@ -13576,6 +13735,12 @@ const MODULES = [
               "If you raised an issue from a failing field on a maintenance form during an inspection, no additional step is needed to log it.",
               "The issue is automatically routed to the <strong>Asset Issues</strong> tab, where it can be reviewed, assigned, and eventually marked Rectified."
             ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/equipment-issues/001.jpg",
+            "caption": "Asset Issues: every issue raised from equipment maintenance"
           }
         ]
       },
@@ -13605,7 +13770,40 @@ const MODULES = [
               "Assign an owner via <strong>Assign To</strong> and set a <strong>Due Date</strong>.",
               "Use <strong>Chat</strong> to document remediation steps as they happen.",
               "Once the issue is corrected, click <strong>Rectify</strong> to close the report out."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/non-conformance-report/005.jpg",
+                "caption": "Add, to create a Non-Conformance Report",
+                "step": 1
+              }
             ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/non-conformance-report/002.jpg",
+            "caption": "Reports as cards, with a table view at the top right"
+          },
+          {
+            "src": "assets/notion/non-conformance-report/004.jpg",
+            "caption": "A report with its date, details, creator and status"
+          },
+          {
+            "src": "assets/notion/non-conformance-report/006.jpg",
+            "caption": "Filters and Save, to narrow the report list"
+          },
+          {
+            "src": "assets/notion/non-conformance-report/007.jpg",
+            "caption": "Export to Excel, and Search by ID or status"
+          },
+          {
+            "src": "assets/notion/non-conformance-report/008.jpg",
+            "caption": "The three-dot menu, with Delete, and the counts"
+          },
+          {
+            "src": "assets/notion/non-conformance-report/009.jpg",
+            "caption": "Create Work Order on the toolbar"
           }
         ]
       },
@@ -13663,6 +13861,23 @@ const MODULES = [
               "On step 2, <strong>Setup Trigger Points</strong>: tick which fields should let end-users raise an issue if that checkpoint fails.",
               "On step 3, <strong>Preview Form</strong>: check the form exactly as end-users will see it, including company branding.",
               "Click <strong>Save Changes</strong>."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/equipment-management-maintenance-forms/001.jpg",
+                "caption": "Maintenance Forms settings",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/equipment-management-maintenance-forms/002.jpg",
+                "caption": "Create Form, to start a maintenance form",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/equipment-management-maintenance-forms/003.jpg",
+                "caption": "The form builder, with trigger points, then Save",
+                "step": 2
+              }
             ]
           },
           {
@@ -13680,7 +13895,24 @@ const MODULES = [
               "Open each lifecycle card in turn — <strong>Request, Check Out, Shipment, Ship, Load, In Transit, Delivered, Received, Lease Agreement, Maintenance Forms, Equipment Utilization Forms & Logs</strong> — and configure the fields/steps your organization needs at that stage.",
               "Confirm the Lease Agreement form is set up if your organization sends equipment to 3rd parties, since that stage only applies to Rentals (3rd Party) Load Out Requests on earlier-version environments."
             ],
-            "note": "The order shown here follows the equipment lifecycle itself (requested, then checked out, shipped, delivered, and so on). This ordering is a reasonable default based on how the stages depend on each other, though it hasn't been confirmed as the only valid sequence to configure them in."
+            "note": "The order shown here follows the equipment lifecycle itself (requested, then checked out, shipped, delivered, and so on). This ordering is a reasonable default based on how the stages depend on each other, though it hasn't been confirmed as the only valid sequence to configure them in.",
+            "images": [
+              {
+                "src": "assets/notion/global-data-equipment-management/001.jpg",
+                "caption": "Equipment Management in Global Data: Load Out Request, Ship In, Lease Agreement, Maintenance Forms and more",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/global-data-equipment-management/002.jpg",
+                "caption": "Choosing the form category to configure",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/global-data-equipment-management/003.jpg",
+                "caption": "The form builder for a category, then Save Changes",
+                "step": 2
+              }
+            ]
           }
         ]
       },
@@ -13701,7 +13933,77 @@ const MODULES = [
             "definition": "In Arena 2.0, requests are raised with **New Request** under Operations, **Self Pickup** and **Company Logistics** are chosen at the Assign stage, hauls are managed under Hauling, and the asset statuses are Available, Allocated, In Transit, On Rent, Off Rent and In Maintenance."
           }
         ],
-        "procedures": []
+        "procedures": [],
+        "images": [
+          {
+            "src": "assets/notion/lor-internal-job/001.jpg",
+            "caption": "Earlier version: the internal job Load Out Request flowchart"
+          },
+          {
+            "src": "assets/notion/lor-internal-job/002.jpg",
+            "caption": "Earlier version: Add opens the Request Form"
+          },
+          {
+            "src": "assets/notion/lor-internal-job/003.jpg",
+            "caption": "Earlier version: a Load Out Request card with its equipment, required date and workflow level"
+          },
+          {
+            "src": "assets/notion/lor-internal-job/006.jpg",
+            "caption": "Earlier version: Assign to, with View or Edit permission"
+          },
+          {
+            "src": "assets/notion/lor-internal-job/016.jpg",
+            "caption": "Earlier version: the request form fields"
+          },
+          {
+            "src": "assets/notion/lor-internal-job/018.jpg",
+            "caption": "Earlier version: Approve and Reject buttons for the warehouse manager"
+          },
+          {
+            "src": "assets/notion/lor-internal-job/021.jpg",
+            "caption": "Earlier version: the Check Out stage, with the selected equipment on the left"
+          },
+          {
+            "src": "assets/notion/lor-internal-job/023.jpg",
+            "caption": "Earlier version: the maintenance form at check out, with issues raised from trigger points"
+          },
+          {
+            "src": "assets/notion/lor-internal-job/026.jpg",
+            "caption": "Earlier version: the Ship stage"
+          },
+          {
+            "src": "assets/notion/lor-internal-job/030.jpg",
+            "caption": "Earlier version: the Check In stage"
+          },
+          {
+            "src": "assets/notion/lor-internal-job/035.jpg",
+            "caption": "Earlier version: Shop In, moving equipment into an inventory location"
+          },
+          {
+            "src": "assets/notion/3rd-party-lor/011.jpg",
+            "caption": "Earlier version, Rentals: the Lease Agreement stage"
+          },
+          {
+            "src": "assets/notion/3rd-party-lor/013.jpg",
+            "caption": "Earlier version, Rentals: Email Agreement for Approval, with the email to the third party"
+          },
+          {
+            "src": "assets/notion/3rd-party-lor/014.jpg",
+            "caption": "Earlier version, Rentals: the lease agreement waiting for approval"
+          },
+          {
+            "src": "assets/notion/3rd-party-lor/024.jpg",
+            "caption": "Earlier version, Rentals: Preview, with every form for the equipment"
+          },
+          {
+            "src": "assets/notion/lor-workflows/001.jpg",
+            "caption": "Earlier version, Workflows: Create Level with All must approve or Anyone can approve"
+          },
+          {
+            "src": "assets/notion/lor-workflows/003.jpg",
+            "caption": "Earlier version, Workflows: the workflow graph view"
+          }
+        ]
       },
       {
         "heading": "Troubleshooting: Asset Management Problems",
@@ -20543,6 +20845,12 @@ const MODULES = [
             ],
             "note": "Do this before requesters start raising work orders. The ID format cannot be changed once a work order exists."
           }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/work-order-lors/001.jpg",
+            "caption": "The Work Order flow, from creating a contract to managing documents and drawings"
+          }
         ]
       },
       {
@@ -21046,6 +21354,13 @@ const MODULES = [
               "Open <strong>Settings → Work Order Types</strong>.",
               "Click the type to open its configuration, or use its menu to edit or delete it.",
               "Change the sub-tab you need and click <strong>Save Changes</strong>."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/work-order-types/004.jpg",
+                "caption": "Edit on a work order type card",
+                "step": 2
+              }
             ]
           }
         ],
@@ -21103,7 +21418,14 @@ const MODULES = [
             "steps": [
               "On the <strong>Work Orders</strong> tab, click the work order you want to open. It opens on the <strong>Profile</strong> tab."
             ],
-            "note": "Use the list, grid and column view icons on the right to change how the list looks."
+            "note": "Use the list, grid and column view icons on the right to change how the list looks.",
+            "images": [
+              {
+                "src": "assets/notion/work-order-creation/005.jpg",
+                "caption": "Opening a work order from its card, with the view options at the top right",
+                "step": 1
+              }
+            ]
           },
           {
             "title": "Raise a work order against equipment",
@@ -21312,7 +21634,14 @@ const MODULES = [
               "Open the work order's <strong>Profile</strong> tab.",
               "Click <strong>Create Item</strong>."
             ],
-            "note": "You can create multiple items inside one work order, and each can be connected to a Project tree or to Issues."
+            "note": "You can create multiple items inside one work order, and each can be connected to a Project tree or to Issues.",
+            "images": [
+              {
+                "src": "assets/notion/work-order-profile/004.jpg",
+                "caption": "Create Item, for adding an item inside a work order",
+                "step": 2
+              }
+            ]
           },
           {
             "title": "Link a work order item to a project tree",
@@ -21320,6 +21649,18 @@ const MODULES = [
               "In Work Order - Profile, when linking an item to a tree, select the Project.",
               "Select its tree version.",
               "Continue through the remaining tree selections."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/work-order-profile/005.jpg",
+                "caption": "Connecting an item to a project tree or to issues",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/work-order-profile/006.jpg",
+                "caption": "Linking an item to a tree: choose the project, its tree version and so on",
+                "step": 2
+              }
             ]
           },
           {
@@ -21327,6 +21668,13 @@ const MODULES = [
             "steps": [
               "In Work Order - Profile, when linking with Issues, select the Issue type from the dropdown to see the detailed list of issues.",
               "Select one or multiple issues to link to the item."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/work-order-profile/007.jpg",
+                "caption": "Linking an item to issues: choose an issue type, then one or more issues",
+                "step": 1
+              }
             ]
           },
           {
@@ -21468,6 +21816,11 @@ const MODULES = [
             ],
             "images": [
               {
+                "src": "assets/notion/work-order-team/003.jpg",
+                "caption": "The Crews tab, with crews created in Global Data",
+                "step": 2
+              },
+              {
                 "src": "assets/guides/work-order/107.jpg",
                 "caption": "Selecting users to add to the team",
                 "step": 4
@@ -21486,6 +21839,12 @@ const MODULES = [
               "Open <strong>Timesheets → My Crew Timesheet</strong> and book the time there."
             ],
             "note": "A person who is not on the Team tab cannot have time booked to the work order through My Crew Timesheet."
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/work-order-team/001.jpg",
+            "caption": "The Team tab for setting up users and crews on a work order"
           }
         ]
       },
@@ -26397,6 +26756,44 @@ const MODULES = [
             ],
             "note": "Do not create tickets until ID Settings are final."
           }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/inventory-master/001.jpg",
+            "caption": "Earlier version, Inventory Master: Add, to create a new material"
+          },
+          {
+            "src": "assets/notion/inventory-master/004.jpg",
+            "caption": "Earlier version, Inventory Master: Add Quantity, to top up an existing material"
+          },
+          {
+            "src": "assets/notion/pick-up-ticket/001.jpg",
+            "caption": "Earlier version, Pick Up Ticket (Site Material Request): the Add button"
+          },
+          {
+            "src": "assets/notion/pick-up-ticket/002.jpg",
+            "caption": "Earlier version: the pick up ticket form"
+          },
+          {
+            "src": "assets/notion/pick-up-ticket/003.jpg",
+            "caption": "Earlier version: a raised ticket goes for approval to the warehouse manager"
+          },
+          {
+            "src": "assets/notion/pick-up-ticket/005.jpg",
+            "caption": "Earlier version: a rejected ticket shows the REJECTED status"
+          },
+          {
+            "src": "assets/notion/pick-up-ticket/006.jpg",
+            "caption": "Earlier version: an approved ticket shows the APPROVED status"
+          },
+          {
+            "src": "assets/notion/ship-ticket/002.jpg",
+            "caption": "Earlier version, Ship Ticket (Material Issue Ticket): the form, linked to a pick up ticket"
+          },
+          {
+            "src": "assets/notion/return-ticket/002.jpg",
+            "caption": "Earlier version, Return Ticket: the form, linked to a pick up ticket"
+          }
         ]
       },
       {
@@ -26441,8 +26838,23 @@ const MODULES = [
                 "step": 1
               },
               {
+                "src": "assets/guides/inventory-management/021.jpg",
+                "caption": "Tickets Standard Fields",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/inventory-management/022.jpg",
+                "caption": "Add field on Tickets",
+                "step": 1
+              },
+              {
                 "src": "assets/guides/inventory-management/016.jpg",
                 "caption": "Choose type and field name",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/inventory-management/023.jpg",
+                "caption": "Choose type and field name for a ticket field",
                 "step": 2
               },
               {
@@ -26456,31 +26868,6 @@ const MODULES = [
                 "step": 3
               },
               {
-                "src": "assets/guides/inventory-management/019.jpg",
-                "caption": "Field Name and drag icon",
-                "step": 4
-              },
-              {
-                "src": "assets/guides/inventory-management/020.jpg",
-                "caption": "Save Changes on External Orders fields",
-                "step": 4
-              },
-              {
-                "src": "assets/guides/inventory-management/021.jpg",
-                "caption": "Tickets Standard Fields",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/inventory-management/022.jpg",
-                "caption": "Add field on Tickets",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/inventory-management/023.jpg",
-                "caption": "Choose type and field name for a ticket field",
-                "step": 2
-              },
-              {
                 "src": "assets/guides/inventory-management/024.jpg",
                 "caption": "Required, Show on Card and Unique toggles for a ticket field",
                 "step": 3
@@ -26489,6 +26876,16 @@ const MODULES = [
                 "src": "assets/guides/inventory-management/025.jpg",
                 "caption": "Field Actions menu on Tickets",
                 "step": 3
+              },
+              {
+                "src": "assets/guides/inventory-management/019.jpg",
+                "caption": "Field Name and drag icon",
+                "step": 4
+              },
+              {
+                "src": "assets/guides/inventory-management/020.jpg",
+                "caption": "Save Changes on External Orders fields",
+                "step": 4
               },
               {
                 "src": "assets/guides/inventory-management/026.jpg",
