@@ -972,6 +972,9 @@ Example of the style to use — if a note says "Go to Settings, click Add User, 
   // ---------- Answer text -> HTML (plain markdown-lite, matches the extraction format) ----------
   function renderAnswerHtml(text) {
     let html = escapeHtml(text);
+    // Our own content sometimes uses a few plain HTML tags instead of markdown.
+    // Allow only these, with no attributes, so they render instead of showing as text.
+    html = html.replace(/&lt;(\/?)(strong|b|em|i|code|br)\s*\/?&gt;/gi, "<$1$2>");
     html = html.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
     html = html.replace(/`([^`]+)`/g, "<code>$1</code>");
     html = html.replace(/(?:^|\n)((?:\d+\.\s+.+(?:\n|$))+)/g, block => {
