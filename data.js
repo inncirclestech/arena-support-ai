@@ -2740,7 +2740,8 @@ const QA_ACCOUNTBASICS = [
   {
     action: "create",
     object: "new project",
-    scope: "global", section: "Home Page",
+    scope: "global",
+    section: "Home Page",
     question: "How do I create a new project?",
     answer: "Go to **Home → Projects** and click the orange **+ Create Project** button, top-left of the project grid (next to \"Upload Excel\"). In the dialog, fill in the three required fields — **Project Name**, **Project Number / ID**, and **Construction Type** — then click Submit. Everything else in the form (location, subsidiary, owner representative, currency, customer, project type, funding/implementing agency, and a project logo/display image) is optional and can be filled in later. The dialog closes, the new project appears immediately in the grid with status \"Created,\" and it's fully navigable right away — but it starts completely empty, so plan to follow up in **Project Setup** to build out the work breakdown, team, schedule, and forms before it's operationally useful.",
     tags: ["create project","new project","start a project","add project","create a new job","set up a project"]
@@ -2748,7 +2749,8 @@ const QA_ACCOUNTBASICS = [
   {
     action: "understand",
     object: "create project required fields",
-    scope: "global", section: "Home Page",
+    scope: "global",
+    section: "Home Page",
     question: "What information do I need to have ready before creating a new project?",
     answer: "Only three fields are required to create a project: **Project Name**, **Project Number / ID** (the short code shown on the project card, e.g. \"ST-01\"), and **Construction Type** (picked from the same list Global Data maintains). Everything else — location, subsidiary/business unit, owner representative, project manager, currency, customer, owner, construction cost estimate, project type, and funding/implementing agency — is optional at creation and can be added or edited afterward. There's no start date, end date, or duration field at creation time; scheduling is set up separately once the project exists.",
     tags: ["required fields","what do i need to create a project","project number","project id","construction type"]
@@ -2756,7 +2758,8 @@ const QA_ACCOUNTBASICS = [
   {
     action: "understand",
     object: "what happens after creating a project",
-    scope: "global", section: "Home Page",
+    scope: "global",
+    section: "Home Page",
     question: "What happens right after I create a new project — where does it take me?",
     answer: "Submitting the Create Project form returns you to the Projects grid, not into the new project — the new card just appears at the top with status \"Created.\" When you click into it, you land on **My Desk**, and since nothing has been configured yet, every section there (Actions, Work Logs, Punch List Items, Quality Logs, Safety) shows zero. The project is technically usable immediately — every module is reachable with no forced setup wizard — but it's functionally empty until someone works through **Project Setup** to define the work breakdown/plants, add the team, build a schedule, and configure phase codes and forms.",
     tags: ["after creating a project","new project empty","project setup next steps","what to do after create project"]
@@ -2764,16 +2767,16 @@ const QA_ACCOUNTBASICS = [
   {
     action: "understand",
     object: "clone or template a project",
-    scope: "global", section: "Home Page",
+    scope: "global",
+    section: "Home Page",
     question: "Can I create a new project by cloning or copying an existing one?",
     answer: "No — there's currently no clone-project or create-from-template option anywhere in Arena. The Create Project dialog is always a blank form, and the three-dot menu on an existing project's card only offers Edit and Delete, not Duplicate. Every project has to be created from scratch and then configured (work breakdown, phase codes, forms, templates) individually in Project Setup, even if it's similar to a project you've already built out.",
     tags: ["clone project","copy project","duplicate project","project template","create from template"]
   },
-
   {
     action: "create",
     object: "support ticket",
-    scope: "global", section: "Support",
+    scope: "global",
     section: "Support",
     question: "How do I raise a support ticket?",
     answer: "Click the **Support** icon (headset icon, top-right of the navigation bar next to Notifications and Downloads) to open the Support panel, then describe what you were trying to do and submit it. If you don't see the Support icon, or need a faster response, email **support@inncircles.com** directly with your company name and a description of the issue.",
@@ -2782,7 +2785,8 @@ const QA_ACCOUNTBASICS = [
   {
     action: "view",
     object: "home page",
-    scope: "global", section: "Home Page",
+    scope: "global",
+    section: "Home Page",
     question: "What shows up on the Arena Home page after I log in?",
     answer: "Arena's Home page is the first page a user sees after logging in (users with only \"Projects\" permission are taken to the Projects page instead). It shows a weather report in the top-left (once location access is allowed), a horizontal tab of all projects with progress percentages, and tiles for Time Management, Equipment Management, and Inventory Management based on your permissions.",
     tags: ["home page","landing page","first screen","dashboard","what is home","post-login screen"]
@@ -2790,7 +2794,8 @@ const QA_ACCOUNTBASICS = [
   {
     action: "navigate",
     object: "project desk",
-    scope: "project", section: "Home Page",
+    scope: "project",
+    section: "Home Page",
     question: "How do I get to a specific project's detail view from Home?",
     answer: "On the Home page, click on any project's progress card in the horizontal project tab. This navigates you to that project's Project Desk page for a more refined view of project insights.",
     tags: ["project desk","project navigation","progress card","project insights","click through"]
@@ -2798,7 +2803,8 @@ const QA_ACCOUNTBASICS = [
   {
     action: "view",
     object: "module access",
-    scope: "global", section: "Home Page",
+    scope: "global",
+    section: "Home Page",
     question: "Why can't I see Time Management or Equipment Management on my Home page?",
     answer: "Access to each Home page module (Time Management, Equipment Management, Inventory Management, Projects) depends on your assigned permissions. Contact your project or system administrator if a module you need is missing.",
     tags: ["missing module","permissions","access denied","module visibility","administrator contact"]
@@ -2806,7 +2812,8 @@ const QA_ACCOUNTBASICS = [
   {
     action: "create",
     object: "user account",
-    scope: "system", section: "User Registration",
+    scope: "system",
+    section: "User Registration",
     question: "How do I register a new user in Arena?",
     answer: "Go to the Company section of Global Data, open the Users and Permissions tab, and click \"Register User.\" Fill in the required fields (name, email, contact number with country code, etc.), set a signature method, and click \"Submit\" to create the user card.",
     tags: ["register user","add user","create account","new user","user registration form"]
@@ -2814,7 +2821,8 @@ const QA_ACCOUNTBASICS = [
   {
     action: "define",
     object: "signature",
-    scope: "system", section: "User Registration",
+    scope: "system",
+    section: "User Registration",
     question: "How is a user's signature set up during registration?",
     answer: "The registration form includes a Signature field with three input methods: \"Initials,\" \"Sign\" (opens a scribble/drawing pad), or \"Upload\" (upload a signature image file from another source).",
     tags: ["signature setup","e-signature","scribble pad","upload signature","initials","registration form"]
@@ -2822,7 +2830,8 @@ const QA_ACCOUNTBASICS = [
   {
     action: "reset",
     object: "password",
-    scope: "system", section: "User Registration",
+    scope: "system",
+    section: "User Registration",
     question: "How does a new user set their password for the first time?",
     answer: "After a user is registered, click \"Notify User\" (or the system auto-sends on submit) to email the user a welcome registration link. The user follows that email link to set their own password.",
     tags: ["set password","first login","welcome email","registration email","notify user","password setup"]
@@ -2830,7 +2839,8 @@ const QA_ACCOUNTBASICS = [
   {
     action: "reset",
     object: "password",
-    scope: "system", section: "User Registration",
+    scope: "system",
+    section: "User Registration",
     question: "How do I resend a password-reset email to an existing user?",
     answer: "In Users & Permissions - Active Users, use the \"Notify User\" option on that user's row/card. This sends the user a registration email they can use to reset their password.",
     tags: ["resend password email","notify user","password reset","forgot password workaround","admin reset"]
@@ -2838,7 +2848,8 @@ const QA_ACCOUNTBASICS = [
   {
     action: "create",
     object: "user account",
-    scope: "system", section: "User Registration",
+    scope: "system",
+    section: "User Registration",
     question: "Can I register many users at once instead of one at a time?",
     answer: "Yes. In Users & Permissions - Active Users, click \"Download Sample\" to get the Excel template, fill it in, then use \"Upload Excel\" to bulk-create users. All users created this way receive welcome registration emails automatically.",
     tags: ["bulk register","upload excel","import users","sample excel","mass user creation"]
@@ -2846,7 +2857,8 @@ const QA_ACCOUNTBASICS = [
   {
     action: "edit",
     object: "user account",
-    scope: "system", section: "User Registration",
+    scope: "system",
+    section: "User Registration",
     question: "How do I edit or delete a registered user?",
     answer: "On the user's card or table row in Users & Permissions - Active Users, use the kebab (3-dot) menu or the Action column's edit/delete icons. Deleting a user moves their account to Inactive Users rather than permanently removing it.",
     tags: ["edit user","delete user","deactivate user","kebab menu","inactive users"]
@@ -2854,7 +2866,8 @@ const QA_ACCOUNTBASICS = [
   {
     action: "search",
     object: "user account",
-    scope: "system", section: "User Registration",
+    scope: "system",
+    section: "User Registration",
     question: "How do I find a specific user in the registered users list?",
     answer: "Use the Search bar next to the \"Register User\" button in Users & Permissions - Active Users. You can search by first name, last name, employee ID, contact number, or email.",
     tags: ["search user","find user","user lookup","search profiles"]
@@ -2862,7 +2875,8 @@ const QA_ACCOUNTBASICS = [
   {
     action: "export",
     object: "user list",
-    scope: "system", section: "User Registration",
+    scope: "system",
+    section: "User Registration",
     question: "How do I download a list of all registered users?",
     answer: "In Users & Permissions - Active Users, click \"Export\" or \"Download Excel\" to download the details of all registered users.",
     tags: ["export users","download users","user list export","download excel"]
@@ -2870,7 +2884,8 @@ const QA_ACCOUNTBASICS = [
   {
     action: "view",
     object: "user status",
-    scope: "system", section: "User Registration",
+    scope: "system",
+    section: "User Registration",
     question: "What's the difference between Active Users and Inactive Users?",
     answer: "Active Users are accounts that are created and currently able to log in to Arena. Inactive Users are accounts that have been deleted/deactivated from the Active list; they no longer have log-in access.",
     tags: ["active users","inactive users","user status","deactivated account","disabled login"]
@@ -2878,7 +2893,8 @@ const QA_ACCOUNTBASICS = [
   {
     action: "create",
     object: "user group",
-    scope: "project", section: "Permissions & Groups",
+    scope: "project",
+    section: "Permissions & Groups",
     question: "How do I create a permission/user group for a project?",
     answer: "Go to the project's Permissions screen and click the \"User Group\" button. Enter a name for the group in the pop-up and confirm to create it as a new role card.",
     tags: ["user group","permission group","role creation","add role","project permissions"]
@@ -2886,7 +2902,8 @@ const QA_ACCOUNTBASICS = [
   {
     action: "link",
     object: "user group",
-    scope: "project", section: "Permissions & Groups",
+    scope: "project",
+    section: "Permissions & Groups",
     question: "How do I copy a user group's permissions to other projects?",
     answer: "On the Permissions screen, click \"Copy User Groups to Projects.\" A pop-up lets you select which projects should receive a copy of that user group's setup.",
     tags: ["copy permissions","duplicate user group","copy to projects","clone role"]
@@ -2894,7 +2911,8 @@ const QA_ACCOUNTBASICS = [
   {
     action: "configure",
     object: "permission",
-    scope: "project", section: "Permissions & Groups",
+    scope: "project",
+    section: "Permissions & Groups",
     question: "What permission levels can I assign to a role in Arena?",
     answer: "For each module, a role can be granted: Assign To (only the assigned user can view/create/edit/delete), View, Create, Edit, Delete, Download, Print, and Admin (master permission covering all of the above). Toggle \"Roll Back\" on the role card first, then set these per-module rights.",
     tags: ["permission levels","view create edit delete","admin rights","roll back toggle","access rights"]
@@ -2902,7 +2920,8 @@ const QA_ACCOUNTBASICS = [
   {
     action: "assign",
     object: "user",
-    scope: "project", section: "Permissions & Groups",
+    scope: "project",
+    section: "Permissions & Groups",
     question: "How do I assign users to a permission/role group?",
     answer: "On the role's card in the Permissions screen, click the \"Users\" button, which opens a list where you select which users belong to that role/permission group.",
     tags: ["assign users","add users to role","users button","role membership"]
@@ -2910,7 +2929,8 @@ const QA_ACCOUNTBASICS = [
   {
     action: "configure",
     object: "notification",
-    scope: "project", section: "Notifications",
+    scope: "project",
+    section: "Notifications",
     question: "How do I set up which notifications users receive for a project?",
     answer: "Go to the project's Notifications screen, select the \"Events\" tab, and toggle the Email, Web, and/or Mobile icon on each event to control how that notification is delivered. Click the message icon to customize the notification's wording.",
     tags: ["configure notifications","event notifications","email web mobile alerts","notification settings"]
@@ -2918,7 +2938,8 @@ const QA_ACCOUNTBASICS = [
   {
     action: "create",
     object: "notification event group",
-    scope: "project", section: "Notifications",
+    scope: "project",
+    section: "Notifications",
     question: "How do I create a new notification event group?",
     answer: "In Notifications > Event Groups, click \"Add Event Group\" and enter a name in the pop-up. Alternatively, click \"Get Standard Event Groups\" to auto-create Arena's default event groups.",
     tags: ["event group","add event group","standard event groups","notification grouping"]
@@ -2926,7 +2947,8 @@ const QA_ACCOUNTBASICS = [
   {
     action: "configure",
     object: "notification",
-    scope: "global", section: "Notifications",
+    scope: "global",
+    section: "Notifications",
     question: "What's the difference between project Notifications and Global Notifications?",
     answer: "Project-level Notifications (under a project's settings) configure alerts specific to that project. Global Notifications (under Global Data) configure notifications at the company-wide level; project-level notifications do not appear in the Global Notifications screen.",
     tags: ["global notifications","project notifications","notification scope","company-wide alerts"]
@@ -2934,7 +2956,8 @@ const QA_ACCOUNTBASICS = [
   {
     action: "configure",
     object: "company details",
-    scope: "system", section: "Company & Global Data Setup",
+    scope: "system",
+    section: "Company & Global Data Setup",
     question: "Where do I set up my company's name, logo, and address in Arena?",
     answer: "Go to Global Data > Company (Company Details). Enter the company's name, logo, address, and contact information, then click \"Submit.\" This information auto-populates forms and other places across the application. Edit it later by returning to the same Company tab.",
     tags: ["company details","company setup","company logo","company address","company profile"]
@@ -2942,7 +2965,8 @@ const QA_ACCOUNTBASICS = [
   {
     action: "configure",
     object: "global data",
-    scope: "system", section: "Company & Global Data Setup",
+    scope: "system",
+    section: "Company & Global Data Setup",
     question: "What is the Global Data section used for?",
     answer: "Global Data is the setup space for construction-specific data — work areas, work packages, activity sequences, and BYO (Build Your Own) project forms — organized per Construction Type. Select a Construction Type from the dropdown first; all projects using that construction type will see the data entered here.",
     tags: ["global data","construction type","setup space","work areas","work packages","activity sequences"]
@@ -2950,7 +2974,8 @@ const QA_ACCOUNTBASICS = [
   {
     action: "configure",
     object: "construction type data",
-    scope: "system", section: "Company & Global Data Setup",
+    scope: "system",
+    section: "Company & Global Data Setup",
     question: "What order should I set up data in Global Data?",
     answer: "After selecting a Construction Type, follow: Step 1 Global Work Areas, Step 2 Global Work Packages, Step 3 Activity Sequence Templates.",
     tags: ["global data setup order","work areas","work packages","activity sequence templates","setup steps"]
@@ -2961,7 +2986,8 @@ const QA_CALENDAR = [
   {
     action: "configure",
     object: "microsoft calendar integration",
-    scope: "global", section: "Outlook Integration",
+    scope: "global",
+    section: "Outlook Integration",
     question: "How do I connect Arena to Outlook Calendar as an admin?",
     answer: "Go to Global Data → Marketplace, click \"Sign in with Microsoft\" to grant Outlook consent. After signing in with Microsoft credentials, on the Permissions Requested page check the box to consent on behalf of the organization — this lets all users access the integration without individually consenting.",
     tags: ["microsoft calendar integration","connect outlook","admin consent","marketplace","sign in with microsoft"]
@@ -2969,7 +2995,8 @@ const QA_CALENDAR = [
   {
     action: "configure",
     object: "calendar consent",
-    scope: "module", section: "Outlook Integration",
+    scope: "module",
+    section: "Outlook Integration",
     question: "How do I revoke or change the Microsoft account connected to Arena Calendar?",
     answer: "In Global Data → Marketplace (Microsoft integration), click \"Revoke Consent\", then sign in again with a different Microsoft account to grant new consent.",
     tags: ["revoke consent","change microsoft account","disconnect calendar","reconnect outlook"]
@@ -2977,7 +3004,8 @@ const QA_CALENDAR = [
   {
     action: "configure",
     object: "user calendar consent",
-    scope: "module", section: "Outlook Integration",
+    scope: "module",
+    section: "Outlook Integration",
     question: "How do I personally connect my Outlook calendar to Arena?",
     answer: "Go to My Profile → Settings → Calendar Consent, then click \"Sign in with Microsoft\" and add your Microsoft account.",
     tags: ["user calendar consent","my profile settings","personal outlook connect","calendar consent"]
@@ -2985,7 +3013,8 @@ const QA_CALENDAR = [
   {
     action: "create",
     object: "calendar event",
-    scope: "module", section: "Events",
+    scope: "module",
+    section: "Events",
     question: "How do I create an event in Arena Calendar?",
     answer: "In Arena Calendar, click \"Create Event\" and choose a Category (multi-select, Group, or Primary Calendar). Only categories selected in \"Configure Categories\" are available in the Category options.",
     tags: ["create event","calendar event","add event","configure categories"]
@@ -2993,7 +3022,8 @@ const QA_CALENDAR = [
   {
     action: "edit",
     object: "calendar event",
-    scope: "module", section: "Events",
+    scope: "module",
+    section: "Events",
     question: "How do I edit or delete a calendar event?",
     answer: "Open the event in Arena Calendar; events can be edited or deleted directly from there.",
     tags: ["edit event","delete event","calendar event","remove event"]
@@ -3001,7 +3031,8 @@ const QA_CALENDAR = [
   {
     action: "link",
     object: "calendar event",
-    scope: "module", section: "Events",
+    scope: "module",
+    section: "Events",
     question: "Can I link a calendar event to a specific module?",
     answer: "Yes. Events created in Arena Calendar can be mapped to Modules, and once mapped, events can be further selected/filtered based on the module.",
     tags: ["link event to module","map event","module event filter","event mapping"]
@@ -3009,7 +3040,8 @@ const QA_CALENDAR = [
   {
     action: "view",
     object: "synced outlook event",
-    scope: "module", section: "Sync & Groups",
+    scope: "module",
+    section: "Sync & Groups",
     question: "Do Outlook calendar events show up in Arena?",
     answer: "Yes. Events created in your Outlook calendar are also synced to the Arena calendar automatically.",
     tags: ["outlook sync","synced events","calendar sync","outlook events in arena"]
@@ -3017,7 +3049,8 @@ const QA_CALENDAR = [
   {
     action: "import",
     object: "outlook group",
-    scope: "module", section: "Sync & Groups",
+    scope: "module",
+    section: "Sync & Groups",
     question: "How are imported Outlook groups shown in the Calendar?",
     answer: "Groups imported and mapped via Arena Communications → Import Groups are also displayed in Arena Calendar.",
     tags: ["import groups calendar","outlook groups calendar","group mapping","communications import"]
@@ -3025,7 +3058,8 @@ const QA_CALENDAR = [
   {
     action: "configure",
     object: "calendar management permission",
-    scope: "global", section: "Permissions",
+    scope: "global",
+    section: "Permissions",
     question: "What permission is needed for a user to access Admin Calendar Consent?",
     answer: "If a user hasn't granted consent individually, they can still use the admin consent granted in Global Data → Marketplace, but only if Admin Permission is enabled at Global Data → Users & Permissions → User Group → Permissions → General → Calendar Management.",
     tags: ["calendar management permission","admin permission","user group permissions","calendar access control"]
@@ -3036,7 +3070,8 @@ const QA_COMMUNICATION = [
   {
     action: "configure",
     object: "outlook consent",
-    scope: "global", section: "Outlook Setup",
+    scope: "global",
+    section: "Outlook Setup",
     question: "How do I enable Outlook integration for Arena Communications?",
     answer: "An admin must grant Outlook consent in Global Data → Marketplace, and admin permissions for the communication module must be given to the user. Alternatively, an individual user can grant their own consent without admin consent via My Profile → Settings → Outlook Management Consent.",
     tags: ["outlook consent","enable communications","marketplace integration","admin consent","user consent"]
@@ -3044,7 +3079,8 @@ const QA_COMMUNICATION = [
   {
     action: "submit",
     object: "email",
-    scope: "module", section: "Inbox & Mail",
+    scope: "module",
+    section: "Inbox & Mail",
     question: "How do I send an email in Arena Communications?",
     answer: "Go to Home → Communications and click \"Compose mail\" at the top to send a new message.",
     tags: ["compose mail","send email","arena communications","new mail"]
@@ -3052,7 +3088,8 @@ const QA_COMMUNICATION = [
   {
     action: "filter",
     object: "email",
-    scope: "module", section: "Module Mapping",
+    scope: "module",
+    section: "Module Mapping",
     question: "How do I filter emails by module in Arena Communications?",
     answer: "Use the ribbon at the top of Communications, which lists all modules, to filter mail by which module it's mapped to.",
     tags: ["filter mail by module","communications ribbon","module filter","mail filter"]
@@ -3060,7 +3097,8 @@ const QA_COMMUNICATION = [
   {
     action: "view",
     object: "inbox",
-    scope: "module", section: "Inbox & Mail",
+    scope: "module",
+    section: "Inbox & Mail",
     question: "What are the mail folders available in Arena Communications?",
     answer: "Arena Communications has Inbox (received mail), Sent (mail you sent), Drafts (saved drafts), Saved (starred mail), and Trash (deleted mail).",
     tags: ["inbox","sent","drafts","saved","trash","mail folders","sent emails","see sent emails","where are my sent emails","sent mail"]
@@ -3068,7 +3106,8 @@ const QA_COMMUNICATION = [
   {
     action: "import",
     object: "outlook group",
-    scope: "module", section: "Module Mapping",
+    scope: "module",
+    section: "Module Mapping",
     question: "How do I import Outlook groups into Arena Communications?",
     answer: "Use the \"Import Groups\" feature in Communications. It opens a pop-up showing your Outlook groups alongside a Module dropdown, so you can map each imported group to a module.",
     tags: ["import groups","outlook groups","import groups feature","map group to module"]
@@ -3076,7 +3115,8 @@ const QA_COMMUNICATION = [
   {
     action: "link",
     object: "email",
-    scope: "module", section: "Module Mapping",
+    scope: "module",
+    section: "Module Mapping",
     question: "Can I link an email to a specific module record?",
     answer: "Yes. Mails composed in Arena Communications can be mapped directly to different modules such as Opportunity, Proposal, and Bid Management.",
     tags: ["map email to module","link email","email mapping","module mail linking"]
@@ -4696,125 +4736,85 @@ const QA_FOLLOWUPACTIONS = [
 
 const QA_PROJECTNOTIFICATIONS = [
   {
-    "action": "configure",
-    "object": "event groups",
-    "scope": "project",
-    "section": "Event Groups",
-    "question": "How do I organize which events trigger notifications for a project?",
-    "answer": "Go to the project's Notification Schema and open the Event Groups tab. Click \"Add Event Groups\" to build a custom grouping of system events, or click \"Get Standard Event Groups\" to pull in Arena's pre-built groupings as a starting point rather than assembling every group by hand.",
-    "tags": [
-      "event groups",
-      "notification schema",
-      "standard event groups"
-    ]
+    action: "configure",
+    object: "event groups",
+    scope: "project",
+    section: "Event Groups",
+    question: "How do I organize which events trigger notifications for a project?",
+    answer: "Go to the project's Notification Schema and open the Event Groups tab. Click \"Add Event Groups\" to build a custom grouping of system events, or click \"Get Standard Event Groups\" to pull in Arena's pre-built groupings as a starting point rather than assembling every group by hand.",
+    tags: ["event groups","notification schema","standard event groups"]
   },
   {
-    "action": "configure",
-    "object": "notification channel per event",
-    "scope": "project",
-    "section": "Events",
-    "question": "How do I control whether an event notifies by email, in-app, or mobile push?",
-    "answer": "Go to Notification Schema → Events. Each system event (RFIs, Safety Issues, Drawing Management, Submittals, and the rest) is listed against the Mail, Web, and Mobile channels — toggle the channels that should fire for that event. Use \"Reset to Standard\" to discard custom changes and return to Arena's default channel mapping.",
-    "tags": [
-      "notification channels",
-      "mail",
-      "web",
-      "mobile",
-      "reset to standard"
-    ]
+    action: "configure",
+    object: "notification channel per event",
+    scope: "project",
+    section: "Events",
+    question: "How do I control whether an event notifies by email, in-app, or mobile push?",
+    answer: "Go to Notification Schema → Events. Each system event (RFIs, Safety Issues, Drawing Management, Submittals, and the rest) is listed against the Mail, Web, and Mobile channels — toggle the channels that should fire for that event. Use \"Reset to Standard\" to discard custom changes and return to Arena's default channel mapping.",
+    tags: ["notification channels","mail","web","mobile","reset to standard"]
   },
   {
-    "action": "create",
-    "object": "reminder",
-    "scope": "project",
-    "section": "Reminders",
-    "question": "How do I set up a recurring reminder for something like an upcoming inspection or expiring submittal?",
-    "answer": "Go to Notification Schema → Reminders and click \"Create Reminder\". Reminders are separate from event-triggered notifications — they fire on a schedule or condition you define rather than in direct response to someone taking an action in the system. Use the search bar to find an existing reminder before creating a duplicate.",
-    "tags": [
-      "reminders",
-      "create reminder",
-      "scheduled notification"
-    ]
+    action: "create",
+    object: "reminder",
+    scope: "project",
+    section: "Reminders",
+    question: "How do I set up a recurring reminder for something like an upcoming inspection or expiring submittal?",
+    answer: "Go to Notification Schema → Reminders and click \"Create Reminder\". Reminders are separate from event-triggered notifications — they fire on a schedule or condition you define rather than in direct response to someone taking an action in the system. Use the search bar to find an existing reminder before creating a duplicate.",
+    tags: ["reminders","create reminder","scheduled notification"]
   },
   {
-    "action": "create",
-    "object": "alert",
-    "scope": "project",
-    "section": "Alerts",
-    "question": "What's the difference between an Alert and a Reminder in the notification schema?",
-    "answer": "Alerts (Notification Schema → Alerts) are typically threshold- or condition-based notices — flagging when something needs urgent attention — while Reminders are time-based nudges about upcoming or overdue items. Click \"Create Alert\" to configure a new one, and use the search bar to locate an existing alert.",
-    "tags": [
-      "alerts",
-      "create alert",
-      "notification schema"
-    ]
+    action: "create",
+    object: "alert",
+    scope: "project",
+    section: "Alerts",
+    question: "What's the difference between an Alert and a Reminder in the notification schema?",
+    answer: "Alerts (Notification Schema → Alerts) are typically threshold- or condition-based notices — flagging when something needs urgent attention — while Reminders are time-based nudges about upcoming or overdue items. Click \"Create Alert\" to configure a new one, and use the search bar to locate an existing alert.",
+    tags: ["alerts","create alert","notification schema"]
   },
   {
-    "action": "view",
-    "object": "list of system events",
-    "scope": "project",
-    "section": "Events",
-    "question": "Where can I see every type of event in the system that can trigger a notification?",
-    "answer": "Notification Schema → Events lists every system event type — covering AWP, Change Orders, Cost Transfers, Custom Forms, Document Management, Drawing Management, RFIs, Safety Issues, Submittals, Task, Timesheet, Transmittals, and more — each shown with its Mail/Web/Mobile channel toggles.",
-    "tags": [
-      "system events",
-      "event list",
-      "notification matrix"
-    ]
+    action: "view",
+    object: "list of system events",
+    scope: "project",
+    section: "Events",
+    question: "Where can I see every type of event in the system that can trigger a notification?",
+    answer: "Notification Schema → Events lists every system event type — covering AWP, Change Orders, Cost Transfers, Custom Forms, Document Management, Drawing Management, RFIs, Safety Issues, Submittals, Task, Timesheet, Transmittals, and more — each shown with its Mail/Web/Mobile channel toggles.",
+    tags: ["system events","event list","notification matrix"]
   },
   {
-    "action": "understand",
-    "object": "notification schema vs personal notification inbox",
-    "scope": "project",
-    "section": "Event Groups",
-    "question": "Is this the same as the notifications bell icon in the top navigation?",
-    "answer": "No. The bell icon inbox shows an individual user their own received notifications. The project-level Notification Schema (Event Groups, Events, Reminders, Alerts) is the configuration layer behind it — it's where a PM or Module Admin decides which events generate notifications at all, and through which channels, for everyone on the project.",
-    "tags": [
-      "notification schema",
-      "bell icon",
-      "personal inbox",
-      "distinction"
-    ]
+    action: "understand",
+    object: "notification schema vs personal notification inbox",
+    scope: "project",
+    section: "Event Groups",
+    question: "Is this the same as the notifications bell icon in the top navigation?",
+    answer: "No. The bell icon inbox shows an individual user their own received notifications. The project-level Notification Schema (Event Groups, Events, Reminders, Alerts) is the configuration layer behind it — it's where a PM or Module Admin decides which events generate notifications at all, and through which channels, for everyone on the project.",
+    tags: ["notification schema","bell icon","personal inbox","distinction"]
   },
   {
-    "action": "reset",
-    "object": "event notification defaults",
-    "scope": "project",
-    "section": "Events",
-    "question": "I've made a mess of the channel toggles on the Events tab — can I undo it?",
-    "answer": "Yes. On Notification Schema → Events, click \"Reset to Standard\" to revert every event's Mail/Web/Mobile channel configuration back to Arena's out-of-the-box defaults, discarding project-specific customizations.",
-    "tags": [
-      "reset to standard",
-      "events tab",
-      "undo notification changes"
-    ]
+    action: "reset",
+    object: "event notification defaults",
+    scope: "project",
+    section: "Events",
+    question: "I've made a mess of the channel toggles on the Events tab — can I undo it?",
+    answer: "Yes. On Notification Schema → Events, click \"Reset to Standard\" to revert every event's Mail/Web/Mobile channel configuration back to Arena's out-of-the-box defaults, discarding project-specific customizations.",
+    tags: ["reset to standard","events tab","undo notification changes"]
   },
   {
-    "action": "search",
-    "object": "existing reminder or alert",
-    "scope": "project",
-    "section": "Reminders",
-    "question": "How do I check if a reminder already exists before creating a new one?",
-    "answer": "Use the search bar at the top of the Reminders tab (or the Alerts tab, for alerts) to look through the list of already-configured reminders/alerts by name before clicking Create, to avoid duplicating one that already covers the same event.",
-    "tags": [
-      "search reminders",
-      "search alerts",
-      "duplicate prevention"
-    ]
+    action: "search",
+    object: "existing reminder or alert",
+    scope: "project",
+    section: "Reminders",
+    question: "How do I check if a reminder already exists before creating a new one?",
+    answer: "Use the search bar at the top of the Reminders tab (or the Alerts tab, for alerts) to look through the list of already-configured reminders/alerts by name before clicking Create, to avoid duplicating one that already covers the same event.",
+    tags: ["search reminders","search alerts","duplicate prevention"]
   },
   {
-    "action": "understand",
-    "object": "why a user is not receiving notifications",
-    "scope": "project",
-    "section": "Events",
-    "question": "Someone on the project says they aren't getting notified about RFIs — where do I check?",
-    "answer": "Start at <strong>Notification Schema → Events</strong> and confirm the relevant event (for example RFIS or Request For Informations) has the right <strong>Mail</strong>, <strong>Web</strong>, or <strong>Mobile</strong> channel toggled on for the project. If the channels look right, check that the person actually holds the role or group membership that makes them a recipient for that event, via <strong>Users and Permissions</strong>. Channel configuration and access are two separate gates, and either one can silence a notification.",
-    "tags": [
-      "not receiving notifications",
-      "notification troubleshooting",
-      "channel toggle",
-      "permissions"
-    ]
+    action: "understand",
+    object: "why a user is not receiving notifications",
+    scope: "project",
+    section: "Events",
+    question: "Someone on the project says they aren't getting notified about RFIs — where do I check?",
+    answer: "Start at <strong>Notification Schema → Events</strong> and confirm the relevant event (for example RFIS or Request For Informations) has the right <strong>Mail</strong>, <strong>Web</strong>, or <strong>Mobile</strong> channel toggled on for the project. If the channels look right, check that the person actually holds the role or group membership that makes them a recipient for that event, via <strong>Users and Permissions</strong>. Channel configuration and access are two separate gates, and either one can silence a notification.",
+    tags: ["not receiving notifications","notification troubleshooting","channel toggle","permissions"]
   }
 ];
 
@@ -5027,191 +5027,130 @@ const QA_OWNERS = [
 
 const QA_PROJECTSETTINGS = [
   {
-    "action": "configure",
-    "object": "light/dark appearance",
-    "scope": "project",
-    "section": "Look, Forms & Field Templates",
-    "question": "How do I switch the project's display theme between light and dark mode?",
-    "answer": "Go to Project Settings — Look & Feel is the default landing panel. Choose Light or Dark, then click \"Save Changes\".",
-    "tags": [
-      "look and feel",
-      "dark mode",
-      "light mode",
-      "appearance"
-    ]
+    action: "configure",
+    object: "light/dark appearance",
+    scope: "project",
+    section: "Look, Forms & Field Templates",
+    question: "How do I switch the project's display theme between light and dark mode?",
+    answer: "Go to Project Settings — Look & Feel is the default landing panel. Choose Light or Dark, then click \"Save Changes\".",
+    tags: ["look and feel","dark mode","light mode","appearance"]
   },
   {
-    "action": "find",
-    "object": "a specific settings category",
-    "scope": "project",
-    "section": "Overview: The Project Configuration Hub",
-    "question": "There are dozens of settings categories — how do I quickly find the one I need?",
-    "answer": "Use the search box above the left-hand category list in Project Settings to filter the 39 categories by name instead of scrolling through all of them, then select the one you need to open its panel on the right.",
-    "tags": [
-      "search settings",
-      "category list",
-      "project settings navigation"
-    ]
+    action: "find",
+    object: "a specific settings category",
+    scope: "project",
+    section: "Overview: The Project Configuration Hub",
+    question: "There are dozens of settings categories — how do I quickly find the one I need?",
+    answer: "Use the search box above the left-hand category list in Project Settings to filter the 39 categories by name instead of scrolling through all of them, then select the one you need to open its panel on the right.",
+    tags: ["search settings","category list","project settings navigation"]
   },
   {
-    "action": "configure",
-    "object": "work log and quality log templates",
-    "scope": "project",
-    "section": "Look, Forms & Field Templates",
-    "question": "Where do I set up the templates used for Work Logs and Quality Work Logs on this project?",
-    "answer": "Go to <strong>Project Settings → Work Logs Templates</strong> for the Field Works → Progress → Work Logs screen, and <strong>Project Settings → Quality Work Logs Templates</strong> for the Field Works → Quality screen. Work Logs Templates offers 7 logging structures (Work Package to Location Logging, Location to Work Package Logging, Location to Work Package bulk logging, Super Location to Location Logging, Worklogs in Scheduled View, Quantity Work Logging, and Worklogs enable by Certified RFIs); Quality Work Logs Templates offers 2 of those same options (Work Package to Location Logging and Super Location to Location Logging). Each shows a live preview before you Save Changes.",
-    "tags": [
-      "work logs templates",
-      "quality work logs templates",
-      "field templates"
-    ]
+    action: "configure",
+    object: "work log and quality log templates",
+    scope: "project",
+    section: "Look, Forms & Field Templates",
+    question: "Where do I set up the templates used for Work Logs and Quality Work Logs on this project?",
+    answer: "Go to <strong>Project Settings → Work Logs Templates</strong> for the Field Works → Progress → Work Logs screen, and <strong>Project Settings → Quality Work Logs Templates</strong> for the Field Works → Quality screen. Work Logs Templates offers 7 logging structures (Work Package to Location Logging, Location to Work Package Logging, Location to Work Package bulk logging, Super Location to Location Logging, Worklogs in Scheduled View, Quantity Work Logging, and Worklogs enable by Certified RFIs); Quality Work Logs Templates offers 2 of those same options (Work Package to Location Logging and Super Location to Location Logging). Each shows a live preview before you Save Changes.",
+    tags: ["work logs templates","quality work logs templates","field templates"]
   },
   {
-    "action": "configure",
-    "object": "work log screen difference between projects",
-    "scope": "project",
-    "section": "Look, Forms & Field Templates",
-    "question": "Why does my Work Logs screen look different from another project's?",
-    "answer": "Because Work Logs Templates is a per-project setting, not a fixed layout. Go to <strong>Project Settings → Work Logs Templates</strong> and check which of the 7 options is selected — if one project uses <strong>Work Package to Location Logging</strong> (pick a Work Package, see its Locations) and another uses <strong>Location to Work Package Logging</strong> (pick a Location, see its Work Packages) or a <strong>Scheduled/WBS view</strong>, their Work Logs screens will look and drill down differently even though both are the same feature. The same applies to Quality: check <strong>Project Settings → Quality Work Logs Templates</strong> if the Quality tab's logging screen looks different across projects.",
-    "tags": [
-      "work logs templates",
-      "different layout",
-      "project settings",
-      "work package to location",
-      "location to work package"
-    ]
+    action: "configure",
+    object: "work log screen difference between projects",
+    scope: "project",
+    section: "Look, Forms & Field Templates",
+    question: "Why does my Work Logs screen look different from another project's?",
+    answer: "Because Work Logs Templates is a per-project setting, not a fixed layout. Go to <strong>Project Settings → Work Logs Templates</strong> and check which of the 7 options is selected — if one project uses <strong>Work Package to Location Logging</strong> (pick a Work Package, see its Locations) and another uses <strong>Location to Work Package Logging</strong> (pick a Location, see its Work Packages) or a <strong>Scheduled/WBS view</strong>, their Work Logs screens will look and drill down differently even though both are the same feature. The same applies to Quality: check <strong>Project Settings → Quality Work Logs Templates</strong> if the Quality tab's logging screen looks different across projects.",
+    tags: ["work logs templates","different layout","project settings","work package to location","location to work package"]
   },
   {
-    "action": "configure",
-    "object": "punch lists and restraints settings",
-    "scope": "project",
-    "section": "Look, Forms & Field Templates",
-    "question": "How do I configure how Punch Lists and Restraints behave for this specific project?",
-    "answer": "Go to Project Settings → Punch Lists & Restraints. This panel controls project-specific configuration for how punch items and restraints are structured and tracked, overriding organization-wide defaults where needed.",
-    "tags": [
-      "punch lists",
-      "restraints",
-      "project settings"
-    ]
+    action: "configure",
+    object: "punch lists and restraints settings",
+    scope: "project",
+    section: "Look, Forms & Field Templates",
+    question: "How do I configure how Punch Lists and Restraints behave for this specific project?",
+    answer: "Go to Project Settings → Punch Lists & Restraints. This panel controls project-specific configuration for how punch items and restraints are structured and tracked, overriding organization-wide defaults where needed.",
+    tags: ["punch lists","restraints","project settings"]
   },
   {
-    "action": "configure",
-    "object": "google maps integration",
-    "scope": "project",
-    "section": "Scheduling, Views & Workflow Settings",
-    "question": "Where do I configure the map/location integration for a project?",
-    "answer": "Go to Project Settings → googlemaps. This is where the mapping integration used for project location display and geolocation-linked features is configured.",
-    "tags": [
-      "google maps",
-      "location settings",
-      "map integration"
-    ]
+    action: "configure",
+    object: "google maps integration",
+    scope: "project",
+    section: "Scheduling, Views & Workflow Settings",
+    question: "Where do I configure the map/location integration for a project?",
+    answer: "Go to Project Settings → googlemaps. This is where the mapping integration used for project location display and geolocation-linked features is configured.",
+    tags: ["google maps","location settings","map integration"]
   },
   {
-    "action": "configure",
-    "object": "date format",
-    "scope": "project",
-    "section": "Cost, Procurement & Resource Settings",
-    "question": "How do I change the date format displayed throughout a project?",
-    "answer": "Go to Project Settings → Project Date Format and choose the display format that should be used across the project's forms, logs, and dashboards.",
-    "tags": [
-      "date format",
-      "project settings",
-      "display preferences"
-    ]
+    action: "configure",
+    object: "date format",
+    scope: "project",
+    section: "Cost, Procurement & Resource Settings",
+    question: "How do I change the date format displayed throughout a project?",
+    answer: "Go to Project Settings → Project Date Format and choose the display format that should be used across the project's forms, logs, and dashboards.",
+    tags: ["date format","project settings","display preferences"]
   },
   {
-    "action": "configure",
-    "object": "cost breakdown structure",
-    "scope": "project",
-    "section": "Cost, Procurement & Resource Settings",
-    "question": "Where is the project's cost breakdown structure defined?",
-    "answer": "Go to Project Settings → Cost Breakdown Structure. This defines the cost coding hierarchy that Cost Management and related budget/change-order workflows use for this project.",
-    "tags": [
-      "cost breakdown structure",
-      "cost coding",
-      "project settings"
-    ]
+    action: "configure",
+    object: "cost breakdown structure",
+    scope: "project",
+    section: "Cost, Procurement & Resource Settings",
+    question: "Where is the project's cost breakdown structure defined?",
+    answer: "Go to Project Settings → Cost Breakdown Structure. This defines the cost coding hierarchy that Cost Management and related budget/change-order workflows use for this project.",
+    tags: ["cost breakdown structure","cost coding","project settings"]
   },
   {
-    "action": "configure",
-    "object": "drawing register form",
-    "scope": "project",
-    "section": "Drawings, Compliance & Identifiers",
-    "question": "How do I change what fields appear on the drawing register for a project?",
-    "answer": "Go to Project Settings → Configure Drawing Register Form to adjust the fields captured when drawings are logged into the project's Drawing Register.",
-    "tags": [
-      "drawing register",
-      "configure form",
-      "drawing management"
-    ]
+    action: "configure",
+    object: "drawing register form",
+    scope: "project",
+    section: "Drawings, Compliance & Identifiers",
+    question: "How do I change what fields appear on the drawing register for a project?",
+    answer: "Go to Project Settings → Configure Drawing Register Form to adjust the fields captured when drawings are logged into the project's Drawing Register.",
+    tags: ["drawing register","configure form","drawing management"]
   },
   {
-    "action": "configure",
-    "object": "procurement workflow",
-    "scope": "project",
-    "section": "Cost, Procurement & Resource Settings",
-    "question": "Where do I set the approval workflow used for procurement on a project?",
-    "answer": "Go to Project Settings → Procurement Workflow Settings to configure the stages and routing that procurement requests follow for this project.",
-    "tags": [
-      "procurement workflow",
-      "project settings",
-      "approval routing"
-    ]
+    action: "configure",
+    object: "procurement workflow",
+    scope: "project",
+    section: "Cost, Procurement & Resource Settings",
+    question: "Where do I set the approval workflow used for procurement on a project?",
+    answer: "Go to Project Settings → Procurement Workflow Settings to configure the stages and routing that procurement requests follow for this project.",
+    tags: ["procurement workflow","project settings","approval routing"]
   },
   {
-    "action": "understand",
-    "object": "project settings vs global data settings",
-    "scope": "project",
-    "section": "Overview: The Project Configuration Hub",
-    "question": "How is Project Settings different from the settings under Global Data?",
-    "answer": "Global Data holds the organization-wide defaults that apply across every project. Project Settings is the project-scoped layer on top of that — it lets a Module Admin or PM override or fine-tune how a given module behaves and is labeled for this specific project, without changing the defaults everyone else inherits.",
-    "tags": [
-      "project settings",
-      "global data",
-      "override",
-      "distinction"
-    ]
+    action: "understand",
+    object: "project settings vs global data settings",
+    scope: "project",
+    section: "Overview: The Project Configuration Hub",
+    question: "How is Project Settings different from the settings under Global Data?",
+    answer: "Global Data holds the organization-wide defaults that apply across every project. Project Settings is the project-scoped layer on top of that — it lets a Module Admin or PM override or fine-tune how a given module behaves and is labeled for this specific project, without changing the defaults everyone else inherits.",
+    tags: ["project settings","global data","override","distinction"]
   },
   {
-    "action": "configure",
-    "object": "custom resources and resource data source",
-    "scope": "project",
-    "section": "Cost, Procurement & Resource Settings",
-    "question": "Where do I manage custom resources and where they're sourced from for a project?",
-    "answer": "Go to Project Settings → Custom Resources to define project-specific resource entries, and Project Settings → Resource Data Source to configure where resource data is pulled from.",
-    "tags": [
-      "custom resources",
-      "resource data source",
-      "project settings"
-    ]
+    action: "configure",
+    object: "custom resources and resource data source",
+    scope: "project",
+    section: "Cost, Procurement & Resource Settings",
+    question: "Where do I manage custom resources and where they're sourced from for a project?",
+    answer: "Go to Project Settings → Custom Resources to define project-specific resource entries, and Project Settings → Resource Data Source to configure where resource data is pulled from.",
+    tags: ["custom resources","resource data source","project settings"]
   },
   {
-    "action": "configure",
-    "object": "terms and conditions text",
-    "scope": "project",
-    "section": "Drawings, Compliance & Identifiers",
-    "question": "How do I set the terms and conditions text that appears on project documents?",
-    "answer": "Go to Project Settings → Terms and Conditions to define or edit the standard terms and conditions language applied to relevant project documents.",
-    "tags": [
-      "terms and conditions",
-      "document text",
-      "project settings"
-    ]
+    action: "configure",
+    object: "terms and conditions text",
+    scope: "project",
+    section: "Drawings, Compliance & Identifiers",
+    question: "How do I set the terms and conditions text that appears on project documents?",
+    answer: "Go to Project Settings → Terms and Conditions to define or edit the standard terms and conditions language applied to relevant project documents.",
+    tags: ["terms and conditions","document text","project settings"]
   },
   {
-    "action": "understand",
-    "object": "which settings shape field-facing screens",
-    "scope": "project",
-    "section": "Overview: The Project Configuration Hub",
-    "question": "Which Project Settings categories most affect what field teams see day to day?",
-    "answer": "A handful have outsized reach into Field Works. <strong>Work Logs Templates</strong> and <strong>Quality Work Logs Templates</strong> shape how field logging and quality inspection screens are laid out. <strong>Quality Logs</strong> controls whether Level 1 must be approved before Level 2 becomes available. <strong>Productivity Log Settings</strong> sets whether productivity logs are created by Phase Code or by Level 3s, plus the Timesheets and Quantity tab fields. <strong>Punch Lists &amp; Restraints</strong> and <strong>Daily Safety Issues &amp; Observations</strong> shape how defects and safety issues are structured. <strong>My Desk</strong> and <strong>My Desk Dashboards</strong> shape the landing screen everyone opens first.",
-    "tags": [
-      "settings that affect field works",
-      "work logs templates",
-      "quality logs",
-      "productivity log settings"
-    ]
+    action: "understand",
+    object: "which settings shape field-facing screens",
+    scope: "project",
+    section: "Overview: The Project Configuration Hub",
+    question: "Which Project Settings categories most affect what field teams see day to day?",
+    answer: "A handful have outsized reach into Field Works. <strong>Work Logs Templates</strong> and <strong>Quality Work Logs Templates</strong> shape how field logging and quality inspection screens are laid out. <strong>Quality Logs</strong> controls whether Level 1 must be approved before Level 2 becomes available. <strong>Productivity Log Settings</strong> sets whether productivity logs are created by Phase Code or by Level 3s, plus the Timesheets and Quantity tab fields. <strong>Punch Lists &amp; Restraints</strong> and <strong>Daily Safety Issues &amp; Observations</strong> shape how defects and safety issues are structured. <strong>My Desk</strong> and <strong>My Desk Dashboards</strong> shape the landing screen everyone opens first.",
+    tags: ["settings that affect field works","work logs templates","quality logs","productivity log settings"]
   }
 ];
 
@@ -5219,7 +5158,8 @@ const QA_COSTTRACKING = [
   {
     action: "create",
     object: "cost estimate",
-    scope: "project", section: "Cost Estimate",
+    scope: "project",
+    section: "Cost Estimate",
     question: "How do I create a new cost estimate?",
     answer: "Go to Project Setup → Cost Estimate, select the Estimate Category, and click \"Create Estimate\".",
     tags: ["new cost estimate","add estimate","create estimate","cost-estimate"]
@@ -5227,7 +5167,8 @@ const QA_COSTTRACKING = [
   {
     action: "track",
     object: "material cost",
-    scope: "project", section: "Cost Estimate",
+    scope: "project",
+    section: "Cost Estimate",
     question: "How do I record estimated material costs?",
     answer: "In Cost Estimate, select the Material tab, then use the table's actions: \"Add Material\" to add a new material line from scratch, \"Get Materials from Global Data\" to pull materials from Global Data, or \"Add Custom Columns\" to add a new column. The total material cost is calculated automatically and shown top right.",
     tags: ["material cost","add material","cost estimate material","get materials from global data"]
@@ -5235,7 +5176,8 @@ const QA_COSTTRACKING = [
   {
     action: "define",
     object: "get materials from global data",
-    scope: "project", section: "Cost Estimate",
+    scope: "project",
+    section: "Cost Estimate",
     question: "What does \"Get Materials from Global Data\" do in Cost Estimate?",
     answer: "Clicking \"Get Materials from Global Data\" on the Material tab offers two options: \"Keep existing and update with new materials\" (merges) or \"Replace all with Global Data\" (erases existing rows and replaces them with Global Data's materials).",
     tags: ["get materials","replace materials","global data materials","merge materials"]
@@ -5243,7 +5185,8 @@ const QA_COSTTRACKING = [
   {
     action: "configure",
     object: "productivity settings",
-    scope: "project", section: "Cost Estimate",
+    scope: "project",
+    section: "Cost Estimate",
     question: "How do I change how cost estimates are calculated?",
     answer: "Click the \"Settings\" button in the top right corner of the Cost Estimate screen to open Productivity Settings, where you choose how estimates are calculated. This setting applies across Material, Labor, Equipment, and other estimate tabs. Note: the Settings button is only visible if your user permissions allow viewing/editing productivity settings.",
     tags: ["productivity settings","cost estimate settings","calculation settings","estimate configuration"]
@@ -5251,7 +5194,8 @@ const QA_COSTTRACKING = [
   {
     action: "track",
     object: "labor cost",
-    scope: "project", section: "Cost Estimate",
+    scope: "project",
+    section: "Cost Estimate",
     question: "How do I record labor, equipment, sub-contractor, or other expense costs?",
     answer: "In Cost Estimate, select the Labor, Equipment, Sub-Contractor, or Other Expenses tab — each follows the same process as the Material tab (Add Custom Columns, pull from Global Data, or add a new entry manually).",
     tags: ["labor cost","equipment cost","sub-contractor cost","other expenses","cost estimate tabs"]
@@ -5259,7 +5203,8 @@ const QA_COSTTRACKING = [
   {
     action: "view",
     object: "cost estimate summary",
-    scope: "project", section: "Estimate Summary",
+    scope: "project",
+    section: "Estimate Summary",
     question: "Where can I see a summary of all project costs?",
     answer: "Go to Cost Estimate - Summary, a view-only page showing all costs documented via the Estimate tab for materials, labor, equipment, sub-contractor, and other expenses.",
     tags: ["cost summary","estimate summary","view all costs","cost estimate summary"]
@@ -5267,7 +5212,8 @@ const QA_COSTTRACKING = [
   {
     action: "view",
     object: "cost by cost type",
-    scope: "project", section: "Cost Tracking by Type",
+    scope: "project",
+    section: "Cost Tracking by Type",
     question: "How do I see costs broken down by cost type?",
     answer: "Go to Cost Estimate - Cost Tracking (By Cost Types). This page lists the estimated and actual costs for each cost type.",
     tags: ["cost by type","cost tracking by cost types","cost type breakdown","actual vs estimated cost"]
@@ -5275,7 +5221,8 @@ const QA_COSTTRACKING = [
   {
     action: "configure",
     object: "cost estimate workflow",
-    scope: "project", section: "Approval Workflow",
+    scope: "project",
+    section: "Approval Workflow",
     question: "How do I set up an approval workflow for cost estimates?",
     answer: "Navigate to Project Setup → Cost Estimate → Workflow. Select the feature the workflow applies to (Timesheets or Quantity Tracksheets), then click \"Create Level\" to add an approval level. Choose the level type (\"All must approve\" or \"Anyone can approve\") and select the approvers for that level.",
     tags: ["cost estimate workflow","approval workflow","create level","timesheet approval","quantity tracksheet approval"]
@@ -5283,7 +5230,8 @@ const QA_COSTTRACKING = [
   {
     action: "define",
     object: "approval level type",
-    scope: "project", section: "Approval Workflow",
+    scope: "project",
+    section: "Approval Workflow",
     question: "What is the difference between \"All must approve\" and \"Anyone can approve\" in Cost Estimate workflows?",
     answer: "\"All must approve\" requires every approver assigned to that workflow level to approve before it advances; \"Anyone can approve\" only needs one of the assigned approvers to approve.",
     tags: ["all must approve","anyone can approve","approval level","workflow level type"]
@@ -5291,7 +5239,8 @@ const QA_COSTTRACKING = [
   {
     action: "edit",
     object: "cost estimate workflow",
-    scope: "project", section: "Approval Workflow",
+    scope: "project",
+    section: "Approval Workflow",
     question: "What happens if I change an existing cost estimate approval workflow?",
     answer: "Modifying the levels of an existing workflow triggers a warning, because changes affect all forms or documents already linked to that workflow.",
     tags: ["edit workflow","workflow warning","modify approval levels","linked documents"]
@@ -5302,7 +5251,8 @@ const QA_NOTIFICATIONS = [
   {
     action: "configure",
     object: "notification events",
-    scope: "project", section: "Events",
+    scope: "project",
+    section: "Events",
     question: "How do I customize the message or channel for a notification event?",
     answer: "Go to Notifications → Events tab. Each event (a pre-defined trigger from Arena) has Email/Web/Mobile icons — click one to open and edit its message template. Click \"Reset to Standard\" to revert all templates to Arena's defaults (with a confirmation warning).",
     tags: ["notification events","notification template","reset to standard"]
@@ -5310,7 +5260,8 @@ const QA_NOTIFICATIONS = [
   {
     action: "create",
     object: "event group",
-    scope: "project", section: "Event Groups",
+    scope: "project",
+    section: "Event Groups",
     question: "How do I group notification events and assign them to specific users?",
     answer: "Go to Notifications → Event Groups tab. Click \"Get Standard Event Groups\" to create Arena's default groups (only if none exist yet — running it again overwrites same-named groups with a warning), or click \"Add Event Group\" to create a custom one. Each group has \"Notifications\" and \"Users\" buttons to map which events and which users belong to it — only those users receive notifications for that group's events.",
     tags: ["event group","notification group","get standard event groups","assign notification users"]
@@ -5321,7 +5272,8 @@ const QA_PERMISSIONS = [
   {
     action: "create",
     object: "permission role/user group (project)",
-    scope: "project", section: "User Groups",
+    scope: "project",
+    section: "User Groups",
     question: "How do I create a new role or permission group in a project?",
     answer: "Open the project's Permissions screen, click the \"User Group\" button, and enter the name of the new user group in the pop-up.",
     tags: ["create permission group","project role","user group project"]
@@ -5329,7 +5281,8 @@ const QA_PERMISSIONS = [
   {
     action: "configure",
     object: "module permissions (rights)",
-    scope: "project", section: "Permission Rights",
+    scope: "project",
+    section: "Permission Rights",
     question: "What permission rights can I grant to a role for a module?",
     answer: "On a role's card, click \"Permissions\", turn on \"Roll Back\" for the module, then choose from: Assign To (only the assigned user can view/create/edit/delete), View (view only), Create (add new data), Edit (update but not delete), Delete, Download (export excel), Print, and Admin (grants all of the above for that module).",
     tags: ["permission rights","assign to view create edit delete","admin permission","roll back toggle"]
@@ -5337,7 +5290,8 @@ const QA_PERMISSIONS = [
   {
     action: "copy",
     object: "user group to projects",
-    scope: "project", section: "Copy to Projects",
+    scope: "project",
+    section: "Copy to Projects",
     question: "How do I copy a user group's permissions to other projects?",
     answer: "On the Permissions screen, click \"Copy User Groups to Projects\", which opens a pop-up to select the target projects to copy the user group(s) to.",
     tags: ["copy user group","copy permissions to projects"]
@@ -5345,7 +5299,8 @@ const QA_PERMISSIONS = [
   {
     action: "edit",
     object: "role/user group (rename, copy, delete)",
-    scope: "project", section: "User Groups",
+    scope: "project",
+    section: "User Groups",
     question: "How do I rename, duplicate, or delete a permission role?",
     answer: "On the role's kebab menu (3 vertical dots): \"Edit\" opens a pop-up to rename the group; \"Copy\" duplicates the group's users and permissions into a new named group; \"Delete\" removes the group with a confirmation warning.",
     tags: ["edit role","copy role","delete permission group"]
@@ -5353,7 +5308,8 @@ const QA_PERMISSIONS = [
   {
     action: "assign",
     object: "users to a permission group",
-    scope: "project", section: "User Groups",
+    scope: "project",
+    section: "User Groups",
     question: "How do I add users to a permission/role group?",
     answer: "On the role's card, click \"Users\" to open the list of users, and select which users should have that role's configured permissions and rights.",
     tags: ["assign users to role","add users to permission group"]
@@ -15224,6 +15180,18 @@ const MODULES = [
               "Go to <strong>Global Data → Notifications</strong> → <strong>Event Groups</strong>.",
               "Click <strong>Notifications</strong> on the relevant group (e.g. Inventory Management).",
               "Expand the module section, find the specific event (e.g. \"Minimum Stock Reached\"), and toggle <strong>Mail</strong>, <strong>Web</strong>, and/or <strong>Mobile</strong> on."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/global-notifications/001.jpg",
+                "caption": "Event Groups shown as cards",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/global-notifications/004.jpg",
+                "caption": "The Notifications button, listing the events enabled for the group",
+                "step": 2
+              }
             ]
           },
           {
@@ -15232,6 +15200,18 @@ const MODULES = [
               "Go to <strong>Notifications</strong> → <strong>Event Groups</strong> → <strong>Add Event Groups</strong>.",
               "Name the group, then use its <strong>Notifications</strong> button to select which events feed into it and on which channels.",
               "Use its <strong>Users</strong> button to add the people who should receive these notifications."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/global-notifications/002.jpg",
+                "caption": "Add Event Group, with a name for the group",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/global-notifications/005.jpg",
+                "caption": "The Users button, listing the people in the group",
+                "step": 3
+              }
             ]
           }
         ]
@@ -15284,6 +15264,28 @@ const MODULES = [
               "Go to <strong>Global Data → Marketplace</strong> → <strong>Microsoft Outlook</strong>.",
               "Click <strong>Sign in with Microsoft</strong> and grant organization-wide consent (must use a company-domain email, not personal).",
               "Go to <strong>Settings → Mail Settings</strong> and switch the relevant modules (e.g. Work Order) to <strong>Outlook</strong>."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/microsoft-outlook-integration-2/001.jpg",
+                "caption": "Microsoft Outlook in the Marketplace",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/microsoft-outlook-integration-2/003.jpg",
+                "caption": "The window for connecting a Microsoft account",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/microsoft-outlook-integration-2/004.jpg",
+                "caption": "Microsoft sign-in, then the Permissions Requested page",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/microsoft-outlook-integration-2/006.jpg",
+                "caption": "Consent granted, shown on the screen",
+                "step": 2
+              }
             ]
           },
           {
@@ -15413,6 +15415,14 @@ const MODULES = [
           {
             "src": "assets/notion/arena-market-place/001.jpg",
             "caption": "The Marketplace, for linking SharePoint, Outlook and Adobe Sign"
+          },
+          {
+            "src": "assets/notion/microsoft-outlook-integration-2/008.jpg",
+            "caption": "My Profile Settings, where users can send email through their own organization mail"
+          },
+          {
+            "src": "assets/notion/microsoft-outlook-integration-2/009.jpg",
+            "caption": "The Outlook Management Consent in Settings"
           },
           {
             "src": "assets/notion/adobe-integration/011.jpg",
@@ -15690,6 +15700,12 @@ const MODULES = [
             ],
             "note": "Module visibility on Home is entirely permission-driven — there is no user-side setting to reveal a hidden module tile."
           }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/home-page/001.jpg",
+            "caption": "The Home page, with a weather report based on your location"
+          }
         ]
       },
       {
@@ -15730,6 +15746,18 @@ const MODULES = [
               "Fill in the required fields: name, email, contact number with country code, etc.",
               "Set a signature method: <strong>Initials</strong>, <strong>Sign</strong> (scribble pad), or <strong>Upload</strong> (signature image).",
               "Click <strong>Submit</strong> to create the user card."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/global-users-permissions-users/001.jpg",
+                "caption": "The Users and Permissions tab under Company",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/global-users-permissions-users/002.jpg",
+                "caption": "The user registration form",
+                "step": 3
+              }
             ]
           },
           {
@@ -15738,6 +15766,13 @@ const MODULES = [
               "After registering the user, click <strong>Notify User</strong> (or rely on the system's auto-send on submit).",
               "The user receives a welcome registration email.",
               "The user follows the link in that email to set their own password."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/global-users-permissions-users/003.jpg",
+                "caption": "Notify User, to email the new user",
+                "step": 1
+              }
             ]
           },
           {
@@ -15756,7 +15791,14 @@ const MODULES = [
               "Fill in the template with each user's details.",
               "Click <strong>Upload Excel</strong> to bulk-create the users."
             ],
-            "note": "All users created this way automatically receive welcome registration emails."
+            "note": "All users created this way automatically receive welcome registration emails.",
+            "images": [
+              {
+                "src": "assets/notion/global-users-permissions-users/004.jpg",
+                "caption": "The downloaded Excel template, filled in with each user's details",
+                "step": 3
+              }
+            ]
           },
           {
             "title": "Edit or delete a registered user",
@@ -15764,7 +15806,14 @@ const MODULES = [
               "In <strong>Users &amp; Permissions &gt; Active Users</strong>, locate the user's card or table row.",
               "Use the kebab (3-dot) menu, or the Action column's edit/delete icons."
             ],
-            "note": "Deleting a user moves their account to Inactive Users rather than permanently removing it."
+            "note": "Deleting a user moves their account to Inactive Users rather than permanently removing it.",
+            "images": [
+              {
+                "src": "assets/notion/global-users-permissions-users/006.jpg",
+                "caption": "Registered users as cards, with a three-dot menu on each",
+                "step": 1
+              }
+            ]
           },
           {
             "title": "Find a specific user",
@@ -15778,6 +15827,28 @@ const MODULES = [
             "steps": [
               "In <strong>Users &amp; Permissions &gt; Active Users</strong>, click <strong>Export</strong> or <strong>Download Excel</strong>."
             ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/global-users-permissions-users/007.jpg",
+            "caption": "Grid view and table view for users"
+          },
+          {
+            "src": "assets/notion/users-permissions-inactive-users/001.jpg",
+            "caption": "Inactive Users: accounts removed from the active list but kept here"
+          },
+          {
+            "src": "assets/notion/users-permissions-inactive-users/002.jpg",
+            "caption": "Manage Columns on the inactive users list"
+          },
+          {
+            "src": "assets/notion/users-permissions-inactive-users/003.jpg",
+            "caption": "Save Layout keeps your chosen view"
+          },
+          {
+            "src": "assets/notion/users-permissions-inactive-users/004.jpg",
+            "caption": "Activate, to make an inactive user active again"
           }
         ]
       },
@@ -15814,6 +15885,13 @@ const MODULES = [
               "Click the <strong>User Group</strong> button.",
               "Enter a name for the group in the pop-up.",
               "Confirm to create it as a new role card."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/permissions/002.jpg",
+                "caption": "User Group, to name a new group",
+                "step": 3
+              }
             ]
           },
           {
@@ -15822,13 +15900,32 @@ const MODULES = [
               "On the role's card, toggle <strong>Roll Back</strong> first.",
               "For each module, set the desired rights: Assign To, View, Create, Edit, Delete, Download, Print, or Admin."
             ],
-            "note": "Admin is a master permission covering all of the other rights for that module."
+            "note": "Admin is a master permission covering all of the other rights for that module.",
+            "images": [
+              {
+                "src": "assets/notion/permissions/005.jpg",
+                "caption": "The Permissions button on a role",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/permissions/006.jpg",
+                "caption": "Roll Back on, then the rights for each module",
+                "step": 2
+              }
+            ]
           },
           {
             "title": "Assign users to a permission/role group",
             "steps": [
               "On the role's card in the Permissions screen, click the <strong>Users</strong> button.",
               "Select which users belong to that role/permission group."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/permissions/007.jpg",
+                "caption": "The Users button, to choose who is in the role",
+                "step": 2
+              }
             ]
           },
           {
@@ -15836,7 +15933,20 @@ const MODULES = [
             "steps": [
               "On the Permissions screen, click <strong>Copy User Groups to Projects</strong>.",
               "In the pop-up, select which projects should receive a copy of that user group's setup."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/permissions/003.jpg",
+                "caption": "Copy User Groups to Projects, with a pop-up to choose the projects",
+                "step": 2
+              }
             ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/permissions/001.jpg",
+            "caption": "The Permissions screen, with every role as a card"
           }
         ]
       },
@@ -15869,6 +15979,18 @@ const MODULES = [
               "Select the <strong>Events</strong> tab.",
               "Toggle the Email, Web, and/or Mobile icon on each event to control how that notification is delivered.",
               "Click the message icon on an event to customize its wording."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/notifications/001.jpg",
+                "caption": "The Events tab",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/notifications/002.jpg",
+                "caption": "Email, Web and Mobile icons on each event",
+                "step": 3
+              }
             ]
           },
           {
@@ -15877,6 +15999,23 @@ const MODULES = [
               "Go to <strong>Notifications &gt; Event Groups</strong>.",
               "Click <strong>Add Event Group</strong> and enter a name in the pop-up.",
               "Alternatively, click <strong>Get Standard Event Groups</strong> to auto-create Arena's default event groups."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/notifications/005.jpg",
+                "caption": "The Event Groups tab",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/notifications/009.jpg",
+                "caption": "Add Event Group, with a name for the new group",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/notifications/006.jpg",
+                "caption": "Get Standard Event Groups, to create the default groups",
+                "step": 3
+              }
             ]
           }
         ]
@@ -15910,7 +16049,14 @@ const MODULES = [
               "Enter the company's name, logo, address, and contact information.",
               "Click <strong>Submit</strong>."
             ],
-            "note": "This information auto-populates forms and other places across Arena. Return to the same Company tab any time to edit it later."
+            "note": "This information auto-populates forms and other places across Arena. Return to the same Company tab any time to edit it later.",
+            "images": [
+              {
+                "src": "assets/notion/company-details/001.jpg",
+                "caption": "Company Details with the company name, logo, address and contacts",
+                "step": 2
+              }
+            ]
           },
           {
             "title": "Set up Global Data for a Construction Type",
@@ -15921,7 +16067,29 @@ const MODULES = [
               "Complete <strong>Step 2: Global Work Packages</strong>.",
               "Complete <strong>Step 3: Activity Sequence Templates</strong>."
             ],
-            "note": "All projects using that Construction Type will see the data entered here — configure it once per Construction Type, not once per project."
+            "note": "All projects using that Construction Type will see the data entered here — configure it once per Construction Type, not once per project.",
+            "images": [
+              {
+                "src": "assets/notion/global-data/001.jpg",
+                "caption": "Global Data construction-type setup, with the Construction Type drop-down",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/global-work-areas/001.jpg",
+                "caption": "Global Work Areas: the level types for a construction type",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/global-work-packages/001.jpg",
+                "caption": "Global Work Packages: editing or deleting a work package",
+                "step": 4
+              },
+              {
+                "src": "assets/notion/activity-sequence-templates/004.jpg",
+                "caption": "Create Activity Sequence Template for a location type",
+                "step": 5
+              }
+            ]
           }
         ]
       },
@@ -15959,12 +16127,13 @@ const MODULES = [
       "Notifications and permission groups are configured per-project or globally, depending on scope."
     ],
     "sections": [
-      {
-        "id": "account-basics-qa",
-        "heading": "Common Questions",
-        "html": "<p>Answers sourced from Arena's documentation.</p>",
-        "qa": []
-      }
+      "Admin Role",
+      "Home Page",
+      "User Registration",
+      "Permissions & Groups",
+      "Notifications",
+      "Company & Global Data Setup",
+      "Support"
     ]
   },
   {
@@ -16039,7 +16208,34 @@ const MODULES = [
               "On the <strong>Permissions Requested</strong> page, check the box to consent on behalf of the organization.",
               "Confirm — this step is what allows every user in the organization to access the integration without individually consenting."
             ],
-            "note": "Skipping the organization-wide consent checkbox means only the signed-in admin's account is connected; every other user would need to grant their own personal consent instead."
+            "note": "Skipping the organization-wide consent checkbox means only the signed-in admin's account is connected; every other user would need to grant their own personal consent instead.",
+            "images": [
+              {
+                "src": "assets/notion/microsoft-calendar-integration/001.jpg",
+                "caption": "The Marketplace, where Outlook consent is given",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/microsoft-calendar-integration/002.jpg",
+                "caption": "Sign in with Microsoft, to give Outlook consent",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/microsoft-calendar-integration/003.jpg",
+                "caption": "The Microsoft sign-in page",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/microsoft-calendar-integration/004.jpg",
+                "caption": "The Permissions Requested page, with consent on behalf of the organization",
+                "step": 4
+              },
+              {
+                "src": "assets/notion/microsoft-calendar-integration/005.jpg",
+                "caption": "The Stay signed in choice",
+                "step": 5
+              }
+            ]
           },
           {
             "title": "Revoke or change the connected Microsoft account",
@@ -16047,6 +16243,13 @@ const MODULES = [
               "Go to <strong>Global Data → Marketplace</strong> and locate the Microsoft integration.",
               "Click <strong>Revoke Consent</strong> to disconnect the currently linked account.",
               "Click <strong>Sign in with Microsoft</strong> again and authenticate with the new account to grant fresh consent."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/microsoft-calendar-integration/006.jpg",
+                "caption": "Revoke Consent, before giving consent with a different Microsoft account",
+                "step": 2
+              }
             ]
           },
           {
@@ -16056,7 +16259,19 @@ const MODULES = [
               "Click <strong>Sign in with Microsoft</strong>.",
               "Add your Microsoft account credentials to complete the connection."
             ],
-            "note": "Use this path if your organization hasn't set up admin-wide consent, or if you need to connect a Microsoft account different from the one used for admin consent."
+            "note": "Use this path if your organization hasn't set up admin-wide consent, or if you need to connect a Microsoft account different from the one used for admin consent.",
+            "images": [
+              {
+                "src": "assets/notion/microsoft-calendar-integration/007.jpg",
+                "caption": "My Profile Settings, where personal calendar consent is given",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/microsoft-calendar-integration/008.jpg",
+                "caption": "Calendar Consent: Sign in with Microsoft and add your account",
+                "step": 2
+              }
+            ]
           }
         ]
       },
@@ -16077,6 +16292,13 @@ const MODULES = [
               "Open the relevant user group and go to <strong>Permissions → General</strong>.",
               "Enable <strong>Calendar Management</strong>.",
               "Save the change — users in this group can now use the admin-wide Marketplace consent even without granting personal consent."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/arena-calendar/004.jpg",
+                "caption": "Calendar Management under Permissions, General",
+                "step": 3
+              }
             ]
           }
         ]
@@ -16106,13 +16328,27 @@ const MODULES = [
               "Choose a <strong>Category</strong> — multi-select, Group, or Primary Calendar.",
               "Fill in the remaining event details and save."
             ],
-            "note": "Only categories that have been enabled in Configure Categories will appear as selectable options here."
+            "note": "Only categories that have been enabled in Configure Categories will appear as selectable options here.",
+            "images": [
+              {
+                "src": "assets/notion/arena-calendar/006.jpg",
+                "caption": "The Category options, limited to the categories chosen in Configure Categories",
+                "step": 2
+              }
+            ]
           },
           {
             "title": "Edit or delete a calendar event",
             "steps": [
               "Open the event you want to change directly from the Arena Calendar view.",
               "Make your edits, or choose to delete the event, from within the open event."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/arena-calendar/009.jpg",
+                "caption": "Editing or deleting an event",
+                "step": 1
+              }
             ]
           },
           {
@@ -16121,7 +16357,20 @@ const MODULES = [
               "While creating or editing an event, map it to the relevant Arena <strong>Module</strong>.",
               "Save the event.",
               "Afterward, use module-based filtering in the calendar to view only events tied to that module."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/arena-calendar/008.jpg",
+                "caption": "Mapping an event to a module, then filtering events by module",
+                "step": 1
+              }
             ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/arena-calendar/001.jpg",
+            "caption": "The Arena Calendar, which syncs with your Outlook calendar"
           }
         ]
       },
@@ -16138,7 +16387,13 @@ const MODULES = [
             "definition": "An Outlook distribution or team group that has been imported and mapped to an Arena module via Communications → Import Groups, after which it also appears within Arena Calendar."
           }
         ],
-        "procedures": []
+        "procedures": [],
+        "images": [
+          {
+            "src": "assets/notion/arena-calendar/007.jpg",
+            "caption": "Import Groups: Outlook groups shown in the Arena Calendar as well"
+          }
+        ]
       }
     ],
     "name": "Calendar",
@@ -16152,12 +16407,11 @@ const MODULES = [
       "Connect your account under <strong>My Profile → Settings → Calendar Consent</strong>, or use the admin-wide connection at <strong>Global Data → Marketplace</strong>."
     ],
     "sections": [
-      {
-        "id": "calendar-qa",
-        "heading": "Common Questions",
-        "html": "<p>Answers sourced from Arena's documentation.</p>",
-        "qa": []
-      }
+      "Admin Role",
+      "Outlook Integration",
+      "Permissions",
+      "Events",
+      "Sync & Groups"
     ]
   },
   {
@@ -16211,7 +16465,39 @@ const MODULES = [
               "Ensure the target user has the admin permission for the communication module assigned to their user group.",
               "Alternatively, skip admin involvement entirely: have the individual user go to <strong>My Profile → Settings → Outlook Management Consent</strong> and grant their own consent directly."
             ],
-            "note": "The individual consent path is useful for piloting Communications with a single user or team before committing to an organization-wide rollout."
+            "note": "The individual consent path is useful for piloting Communications with a single user or team before committing to an organization-wide rollout.",
+            "images": [
+              {
+                "src": "assets/notion/arena-communications/001.jpg",
+                "caption": "Outlook consent in the Marketplace, with admin permission for the communication module",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/microsoft-outlook-integration-2/001.jpg",
+                "caption": "Microsoft Outlook in the Marketplace",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/microsoft-outlook-integration-2/004.jpg",
+                "caption": "Microsoft sign-in, then the Permissions Requested page",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/microsoft-outlook-integration-2/006.jpg",
+                "caption": "Consent granted, shown on the screen",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/arena-communications/002.jpg",
+                "caption": "Outlook Management Consent, for a user giving their own consent",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/arena-communications/003.jpg",
+                "caption": "The user consent sign-in",
+                "step": 3
+              }
+            ]
           }
         ]
       },
@@ -16249,6 +16535,12 @@ const MODULES = [
               "Fill in the recipient, subject, and body, then send."
             ]
           }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/arena-communications/004.jpg",
+            "caption": "Trash: all deleted mail"
+          }
         ]
       },
       {
@@ -16285,7 +16577,14 @@ const MODULES = [
               "For each group you want to bring in, choose the target Arena module from the <strong>Module</strong> dropdown.",
               "Confirm the import."
             ],
-            "note": "Groups mapped here also become visible inside Arena Calendar."
+            "note": "Groups mapped here also become visible inside Arena Calendar.",
+            "images": [
+              {
+                "src": "assets/notion/arena-communications/005.jpg",
+                "caption": "Import Groups: a pop-up of Outlook groups with a module drop-down",
+                "step": 2
+              }
+            ]
           },
           {
             "title": "Link an email to a module record",
@@ -16293,6 +16592,13 @@ const MODULES = [
               "Compose or open the relevant email in Arena Communications.",
               "Map the email to the module it concerns — for example Opportunity, Proposal, or Bid Management.",
               "Save or send — the email now appears as part of that record's associated correspondence."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/arena-communications/006.jpg",
+                "caption": "Mapping a composed email to a module such as Opportunity, Proposal or Bid Management",
+                "step": 2
+              }
             ]
           }
         ]
@@ -16309,12 +16615,10 @@ const MODULES = [
       "Grant Outlook consent (admin via Global Data → Marketplace, or individually via My Profile → Settings) before mail will sync."
     ],
     "sections": [
-      {
-        "id": "communication-qa",
-        "heading": "Common Questions",
-        "html": "<p>Answers sourced from Arena's documentation.</p>",
-        "qa": []
-      }
+      "Admin Role",
+      "Outlook Setup",
+      "Inbox & Mail",
+      "Module Mapping"
     ]
   },
   {
@@ -18808,7 +19112,34 @@ const MODULES = [
               "Click <strong>\"Get Standard Event Groups\"</strong> to import Arena's default groupings, or click <strong>\"Add Event Groups\"</strong> to build a custom group.",
               "Review the resulting list of event groupings for the project."
             ],
-            "note": "Standard groups can typically be adjusted afterward, so importing them first and refining from there is usually faster than starting from an empty list."
+            "note": "Standard groups can typically be adjusted afterward, so importing them first and refining from there is usually faster than starting from an empty list.",
+            "images": [
+              {
+                "src": "assets/notion/notifications/005.jpg",
+                "caption": "The Event Groups tab",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/notifications/006.jpg",
+                "caption": "Event groups in the project; Get Standard Event Groups creates the defaults",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/notifications/008.jpg",
+                "caption": "The warning shown when standard event groups already exist",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/notifications/009.jpg",
+                "caption": "Add Event Group, with a name for the new group",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/notifications/010.jpg",
+                "caption": "The three-dot menu for editing an event group",
+                "step": 3
+              }
+            ]
           }
         ]
       },
@@ -18954,7 +19285,24 @@ const MODULES = [
               "Toggle the <strong>Mail</strong>, <strong>Web</strong>, and/or <strong>Mobile</strong> channels for that event as needed.",
               "Repeat for other events, or click <strong>\"Reset to Standard\"</strong> to discard all customizations and return to Arena's default channel mapping."
             ],
-            "note": "Reserve heavier channels like Mobile push for genuinely time-sensitive events (Safety Issues, RFIs, Restraints) to avoid notification fatigue on lower-priority events."
+            "note": "Reserve heavier channels like Mobile push for genuinely time-sensitive events (Safety Issues, RFIs, Restraints) to avoid notification fatigue on lower-priority events.",
+            "images": [
+              {
+                "src": "assets/notion/notifications/001.jpg",
+                "caption": "The Events tab",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/notifications/002.jpg",
+                "caption": "Email, Web and Mobile icons on each event, each opening a message template",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/notifications/004.jpg",
+                "caption": "The warning shown before messages are reset",
+                "step": 4
+              }
+            ]
           }
         ]
       },
@@ -19181,7 +19529,14 @@ const MODULES = [
               "Make the needed change — for Look & Feel, choose <strong>Light</strong> or <strong>Dark</strong>.",
               "Click <strong>Save Changes</strong> to apply it."
             ],
-            "note": "The same search-select-edit-save pattern applies across all 39 categories, even though each panel's actual fields differ by category."
+            "note": "The same search-select-edit-save pattern applies across all 39 categories, even though each panel's actual fields differ by category.",
+            "images": [
+              {
+                "src": "assets/notion/project-settings-look-feel/001.jpg",
+                "caption": "Look & Feel: Light or Dark mode, applied across the application on this device",
+                "step": 4
+              }
+            ]
           }
         ]
       },
@@ -19222,7 +19577,33 @@ const MODULES = [
             "definition": "Configures how daily safety issues and observations are structured and captured for this project."
           }
         ],
-        "procedures": []
+        "procedures": [],
+        "images": [
+          {
+            "src": "assets/notion/project-settings-forms/001.jpg",
+            "caption": "Forms: choosing the brand colour applied across all forms"
+          },
+          {
+            "src": "assets/notion/project-settings-quality-logs/001.jpg",
+            "caption": "Quality Logs: using one level of quality inspection or two"
+          },
+          {
+            "src": "assets/notion/project-settings-quality-work-logs/001.jpg",
+            "caption": "Quality Work Logs Templates: the Settings icon on a template shows its detailed settings"
+          },
+          {
+            "src": "assets/notion/project-settings-punch-lists-restraints/001.jpg",
+            "caption": "Punch Lists & Restraints: where priority levels are defined"
+          },
+          {
+            "src": "assets/notion/project-settings-punch-lists-restraints/002.jpg",
+            "caption": "Add Priority: a name and the due hours for resolving the issue"
+          },
+          {
+            "src": "assets/notion/project-settings-safety-issues/001.jpg",
+            "caption": "Safety Issues: where priority levels for safety issues and concerns are defined"
+          }
+        ]
       },
       {
         "heading": "Scheduling, Views & Workflow Settings",
@@ -19464,6 +19845,13 @@ const MODULES = [
               "Go to <strong>Project Setup → Cost Estimate</strong>.",
               "Select the <strong>Estimate Category</strong>.",
               "Click <strong>Create Estimate</strong>."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/cost-estimate/001.jpg",
+                "caption": "Create Estimate, to start a new cost estimate",
+                "step": 3
+              }
             ]
           },
           {
@@ -19475,13 +19863,52 @@ const MODULES = [
               "Use <strong>Add Custom Columns</strong> to capture any project-specific fields the default table doesn't cover.",
               "The total material cost recalculates automatically and displays in the top right of the table."
             ],
-            "note": "\"Replace all with Global Data\" is destructive to whatever material rows already exist in the estimate — use \"Keep existing and update with new materials\" if you want to preserve manual entries."
+            "note": "\"Replace all with Global Data\" is destructive to whatever material rows already exist in the estimate — use \"Keep existing and update with new materials\" if you want to preserve manual entries.",
+            "images": [
+              {
+                "src": "assets/notion/cost-estimates/001.jpg",
+                "caption": "Cost Estimate with the Material tab selected",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/cost-estimates/004.jpg",
+                "caption": "Add Material, to add a new material from scratch",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/cost-estimates/003.jpg",
+                "caption": "Get Materials from Global Data: keep existing and update, or replace all",
+                "step": 3
+              }
+            ]
           },
           {
             "title": "Record labor, equipment, sub-contractor, or other expense costs",
             "steps": [
               "In <strong>Cost Estimate</strong>, select the <strong>Labor</strong>, <strong>Equipment</strong>, <strong>Sub-Contractor</strong>, or <strong>Other Expenses</strong> tab as needed.",
               "Each tab follows the same process as Material: use <strong>Add Custom Columns</strong>, pull entries from <strong>Global Data</strong>, or add a new line manually."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/cost-estimate-estimate/002.jpg",
+                "caption": "The Labor tab: choose a template, then add labor or get it from Global Data",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/cost-estimate-estimate/003.jpg",
+                "caption": "The Equipment tab: choose a template, then add equipment or get it from Global Data",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/cost-estimate-estimate/004.jpg",
+                "caption": "The Sub Contractor tab: add a subcontractor or get them from Global Data",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/cost-estimate-estimate/005.jpg",
+                "caption": "The Other Expenses tab: add expenses or get them from Global Data",
+                "step": 2
+              }
             ]
           },
           {
@@ -19490,7 +19917,24 @@ const MODULES = [
               "Click the <strong>Settings</strong> button in the top right corner of the Cost Estimate screen to open <strong>Productivity Settings</strong>.",
               "Choose how estimates should be calculated. This setting applies across the Material, Labor, Equipment, and other estimate tabs at once."
             ],
-            "note": "The Settings button is only visible if your user permissions allow viewing or editing productivity settings."
+            "note": "The Settings button is only visible if your user permissions allow viewing or editing productivity settings.",
+            "images": [
+              {
+                "src": "assets/notion/cost-estimates/002.jpg",
+                "caption": "The Settings button, which opens Productivity Settings",
+                "step": 1
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/cost-estimate-resource-planning/001.jpg",
+            "caption": "Resource Planning: marking roster members and subcontractors for the dates they are needed"
+          },
+          {
+            "src": "assets/notion/cost-estimate-map-scope-items/001.jpg",
+            "caption": "Map Scope Items: choosing the version, levels and commodities, then Submit"
           }
         ]
       },
@@ -19521,7 +19965,14 @@ const MODULES = [
               "Choose the level type — <strong>All must approve</strong> or <strong>Anyone can approve</strong> — and select the approvers for that level.",
               "Repeat to add additional levels as needed."
             ],
-            "note": "Modifying the levels of an existing workflow triggers a warning, because the change affects all forms or documents already linked to that workflow — review carefully before confirming an edit to a live workflow."
+            "note": "Modifying the levels of an existing workflow triggers a warning, because the change affects all forms or documents already linked to that workflow — review carefully before confirming an edit to a live workflow.",
+            "images": [
+              {
+                "src": "assets/notion/cost-estimate-workflows/001.jpg",
+                "caption": "Workflow: choosing the feature, then Create Level with its type and approvers",
+                "step": 4
+              }
+            ]
           }
         ]
       },
@@ -19540,7 +19991,20 @@ const MODULES = [
             "steps": [
               "Go to <strong>Cost Estimate → Cost Tracking (By Cost Types)</strong>.",
               "Review the estimated and actual costs listed for each cost type to identify where spending is tracking to plan or diverging from it."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/cost-estimate-cost-tracking-by-cost-types/001.jpg",
+                "caption": "Cost by Cost Types: estimated and actual costs for each cost type",
+                "step": 1
+              }
             ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/cost-estimate-cost-tracking-by-phase-codes/001.jpg",
+            "caption": "Cost by Phase Codes: estimated and actual costs for each phase code"
           }
         ]
       },
@@ -19560,7 +20024,32 @@ const MODULES = [
               "Go to <strong>Cost Estimate → Summary</strong>.",
               "Review the consolidated view of all costs recorded across the Material, Labor, Equipment, Sub-Contractor, and Other Expenses tabs."
             ],
-            "note": "This page is view-only — to change a total, edit the underlying line items on the relevant cost-type tab."
+            "note": "This page is view-only — to change a total, edit the underlying line items on the relevant cost-type tab.",
+            "images": [
+              {
+                "src": "assets/notion/cost-estimate-summary/001.jpg",
+                "caption": "Summary: a view-only page of the costs entered on the Estimate tab",
+                "step": 2
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/cost-estimate-cost-by-category/001.jpg",
+            "caption": "Cost by Category: choosing the estimate categories to summarize"
+          },
+          {
+            "src": "assets/notion/cost-estimate-cost-summary/001.jpg",
+            "caption": "Cost Summary by activity: hours and costs for job to date, to go, current forecast and earned"
+          },
+          {
+            "src": "assets/notion/cost-estimate-cost-summary/002.jpg",
+            "caption": "Project Watch Triggers, shown as Pass or Fail and Yes or No"
+          },
+          {
+            "src": "assets/notion/cost-estimate-proposal-form/001.jpg",
+            "caption": "Proposal Form: a summary estimate of all cost types for each activity"
           }
         ]
       }
@@ -19576,12 +20065,11 @@ const MODULES = [
       "Use the Material, Labor, Equipment, Sub-Contractor, and Other Expenses tabs to build the estimate, and Estimate Summary or Cost Tracking (By Cost Types) to review it."
     ],
     "sections": [
-      {
-        "id": "cost-tracking-qa",
-        "heading": "Common Questions",
-        "html": "<p>Answers sourced from Arena's documentation.</p>",
-        "qa": []
-      }
+      "Admin Role",
+      "Cost Estimate",
+      "Approval Workflow",
+      "Cost Tracking by Type",
+      "Estimate Summary"
     ]
   },
   {
@@ -19654,7 +20142,25 @@ const MODULES = [
               "Find the event you want to customize and click its <strong>Email</strong>, <strong>Web</strong>, or <strong>Mobile</strong> icon.",
               "Edit the message template as needed and save."
             ],
-            "note": "Use Reset to Standard to revert all templates back to Arena's defaults — this affects every event's templates at once and shows a confirmation warning before proceeding."
+            "note": "Use Reset to Standard to revert all templates back to Arena's defaults — this affects every event's templates at once and shows a confirmation warning before proceeding.",
+            "images": [
+              {
+                "src": "assets/notion/global-notifications/007.jpg",
+                "caption": "The Events tab, listing every event available to configure",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/global-notifications/008.jpg",
+                "caption": "The message template behind an Email, Web or Mobile icon",
+                "step": 2
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/global-notifications/009.jpg",
+            "caption": "Reset to Standard, with a warning before messages are reset"
           }
         ]
       },
@@ -19685,7 +20191,40 @@ const MODULES = [
               "On the group, click <strong>Notifications</strong> to choose which events belong to this group.",
               "Click <strong>Users</strong> to choose which users should receive notifications for this group's events."
             ],
-            "note": "Only the users mapped to a group receive notifications for the events in that group — mapping an event without mapping users to the group means no one is notified."
+            "note": "Only the users mapped to a group receive notifications for the events in that group — mapping an event without mapping users to the group means no one is notified.",
+            "images": [
+              {
+                "src": "assets/notion/global-notifications/001.jpg",
+                "caption": "Event Groups shown as cards",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/global-notifications/003.jpg",
+                "caption": "Get Standard Event Groups, with a confirmation before creating or overriding",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/global-notifications/002.jpg",
+                "caption": "Add Event Group, with a name for the group",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/global-notifications/004.jpg",
+                "caption": "The Notifications button, listing the events enabled for the group",
+                "step": 4
+              },
+              {
+                "src": "assets/notion/global-notifications/005.jpg",
+                "caption": "The Users button, listing the people in the group",
+                "step": 5
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/global-notifications/006.jpg",
+            "caption": "The three-dot menu for editing or deleting a group"
           }
         ]
       }
@@ -19701,12 +20240,9 @@ const MODULES = [
       "Use the Events tab to customize templates and the Event Groups tab to map events to recipients."
     ],
     "sections": [
-      {
-        "id": "notifications-qa",
-        "heading": "Common Questions",
-        "html": "<p>Answers sourced from Arena's documentation.</p>",
-        "qa": []
-      }
+      "Admin Role",
+      "Events",
+      "Event Groups"
     ]
   },
   {
@@ -19775,6 +20311,13 @@ const MODULES = [
               "Open the project's <strong>Permissions</strong> screen.",
               "Click the <strong>User Group</strong> button.",
               "Enter a name for the new user group in the pop-up and confirm."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/permissions/002.jpg",
+                "caption": "User Group, to name a new group",
+                "step": 2
+              }
             ]
           },
           {
@@ -19784,6 +20327,28 @@ const MODULES = [
               "Choose <strong>Edit</strong> to rename the group.",
               "Choose <strong>Copy</strong> to duplicate the group's users and permissions into a new named group.",
               "Choose <strong>Delete</strong> to remove the group — a confirmation warning appears before it's removed."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/permissions/008.jpg",
+                "caption": "The three-dot menu on a role",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/permissions/009.jpg",
+                "caption": "Edit, to rename a group",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/permissions/010.jpg",
+                "caption": "Copy, to duplicate a group's users and permissions under a new name",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/permissions/011.jpg",
+                "caption": "Delete, with a confirmation warning",
+                "step": 4
+              }
             ]
           },
           {
@@ -19791,7 +20356,24 @@ const MODULES = [
             "steps": [
               "On the role's card, click <strong>Users</strong>.",
               "From the list, select which users should have this role's configured permissions and rights."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/permissions/007.jpg",
+                "caption": "The Users button, to choose who gets the role's permissions",
+                "step": 2
+              }
             ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/permissions/001.jpg",
+            "caption": "The Permissions screen, with every role or permission group as a card"
+          },
+          {
+            "src": "assets/notion/permissions/004.jpg",
+            "caption": "Search, to find a user group"
           }
         ]
       },
@@ -19820,6 +20402,18 @@ const MODULES = [
               "Turn on <strong>Roll Back</strong> for the module you want to configure.",
               "Choose from the available rights: <strong>Assign To</strong>, <strong>View</strong>, <strong>Create</strong>, <strong>Edit</strong>, <strong>Delete</strong>, <strong>Download</strong>, <strong>Print</strong>.",
               "Alternatively, toggle <strong>Admin</strong> to grant all of the above rights for that module at once."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/permissions/005.jpg",
+                "caption": "The Permissions button on a role, listing the available permissions",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/permissions/006.jpg",
+                "caption": "Roll Back on, then the rights for each module, or Admin for all of them",
+                "step": 3
+              }
             ]
           }
         ]
@@ -19840,6 +20434,13 @@ const MODULES = [
               "On the Permissions screen, click <strong>Copy User Groups to Projects</strong>.",
               "In the pop-up, select the target projects to copy the user group(s) to.",
               "Confirm to complete the copy."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/permissions/003.jpg",
+                "caption": "Copy User Groups to Projects, with a pop-up to choose the projects",
+                "step": 2
+              }
             ]
           }
         ]
@@ -19856,12 +20457,10 @@ const MODULES = [
       "Use User Group to create a role, then Permissions and Users buttons on each role's card to configure it."
     ],
     "sections": [
-      {
-        "id": "permissions-qa",
-        "heading": "Common Questions",
-        "html": "<p>Answers sourced from Arena's documentation.</p>",
-        "qa": []
-      }
+      "Admin Role",
+      "User Groups",
+      "Permission Rights",
+      "Copy to Projects"
     ]
   },
   {
