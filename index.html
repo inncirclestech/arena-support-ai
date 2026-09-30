@@ -588,6 +588,108 @@
     margin-right: 4px;
   }
 
+  /* ---------- Contents view ---------- */
+  .back-link {
+    display: inline-flex; align-items: center; gap: 4px; margin-bottom: 14px;
+    font-size: 13px; font-weight: 600; color: var(--ink-soft); text-decoration: none;
+    padding: 4px 10px 4px 8px; border: 1px solid var(--border); border-radius: 999px; background: var(--surface);
+  }
+  .back-link:hover { border-color: var(--accent); color: var(--ink); }
+  .back-link:focus-visible, .toc-link:focus-visible, .toc-open:focus-visible, .toc-module-toggle:focus-visible,
+  .toc-tool-btn:focus-visible, .chat-hero-link:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .chat-hero-link {
+    display: inline-block; margin-top: 10px; font-size: 13.5px; font-weight: 600;
+    color: var(--ink); text-decoration: underline; text-decoration-color: var(--accent);
+    text-decoration-thickness: 2px; text-underline-offset: 3px;
+  }
+  .chat-hero-link:hover { color: var(--accent-hover); }
+
+  .toc-shell { max-width: 1040px; }
+  .toc-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 20px 0 8px; }
+  .toc-toolbar .doc-search-box { flex: 1 1 260px; max-width: 480px; }
+  .toc-tool-btn {
+    background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm);
+    padding: 9px 14px; font-family: inherit; font-size: 13px; font-weight: 600; color: var(--ink-soft); cursor: pointer;
+  }
+  .toc-tool-btn:hover { border-color: var(--accent); color: var(--ink); }
+  .toc-count { font-size: 12.5px; color: var(--muted); margin: 0 0 4px; min-height: 18px; }
+  .toc-category { margin-top: 26px; }
+  .toc-category-label {
+    font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase;
+    color: var(--accent-hover); font-weight: 600; margin: 0 0 10px; padding-bottom: 8px; border-bottom: 1px solid var(--border-soft);
+  }
+  .toc-module {
+    background: var(--surface-raised); border: 1px solid var(--border); border-radius: var(--radius-md);
+    margin-bottom: 8px; overflow: hidden;
+  }
+  .toc-module.open { border-color: color-mix(in srgb, var(--accent) 55%, var(--border)); box-shadow: var(--shadow-sm); }
+  .toc-module-head { display: flex; align-items: stretch; gap: 4px; }
+  .toc-module-toggle {
+    all: unset; box-sizing: border-box; flex: 1; min-width: 0; cursor: pointer;
+    display: flex; align-items: center; gap: 12px; padding: 13px 8px 13px 16px; font-family: inherit;
+  }
+  .toc-module-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+  .toc-chevron { flex-shrink: 0; color: var(--muted); transition: transform 0.15s ease; }
+  .toc-module.open .toc-chevron { transform: rotate(180deg); }
+  .toc-module-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+  .toc-module-text { min-width: 0; flex: 1; }
+  .toc-module-name { display: block; font-weight: 700; font-size: 15px; color: var(--ink); }
+  .toc-module-tag { display: block; font-size: 12.5px; color: var(--muted); font-style: italic; overflow-wrap: anywhere; }
+  .toc-module-meta { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; color: var(--muted); flex-shrink: 0; white-space: nowrap; }
+  .toc-open {
+    align-self: center; flex-shrink: 0; margin-right: 12px; font-size: 12.5px; font-weight: 600; color: var(--ink);
+    text-decoration: none; padding: 6px 12px; border: 1px solid var(--border); border-radius: 999px; background: var(--surface); white-space: nowrap;
+  }
+  .toc-open:hover { border-color: var(--accent); background: var(--accent-tint-soft); }
+  .toc-module-body { padding: 4px 16px 16px; border-top: 1px solid var(--border-soft); }
+  .toc-module-body[hidden] { display: none; }
+  .toc-sections { list-style: none; margin: 0; padding: 0; }
+  .toc-section { padding: 12px 0; border-bottom: 1px solid var(--border-soft); }
+  .toc-section:last-child { border-bottom: none; padding-bottom: 0; }
+  .toc-section-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .toc-section-num {
+    flex-shrink: 0; width: 24px; height: 24px; border-radius: 50%; background: var(--accent-tint); color: var(--accent-ink);
+    font-family: "IBM Plex Mono", monospace; font-size: 11.5px; font-weight: 700; display: flex; align-items: center; justify-content: center;
+  }
+  .toc-section-link { font-family: "Fraunces", serif; font-size: 16.5px; font-weight: 600; color: var(--ink); text-decoration: none; overflow-wrap: anywhere; min-width: 0; }
+  .toc-section-link:hover { color: var(--accent-hover); text-decoration: underline; }
+  .toc-section-meta { font-size: 12px; color: var(--muted); }
+  .toc-group { display: grid; grid-template-columns: 74px 1fr; gap: 8px; margin: 9px 0 0 34px; align-items: start; }
+  .toc-group-label {
+    display: inline-flex; align-items: center; gap: 5px; font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 600;
+    letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); padding-top: 6px;
+  }
+  .toc-group-label svg { color: var(--accent); flex-shrink: 0; }
+  .toc-chips { display: flex; flex-wrap: wrap; gap: 6px; min-width: 0; margin: 0; padding: 0; list-style: none; }
+  .toc-chips li { min-width: 0; max-width: 100%; }
+  .toc-link {
+    display: inline-block; max-width: 100%; font-size: 12.5px; line-height: 1.35; color: var(--ink-soft); text-decoration: none;
+    background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 5px 10px; overflow-wrap: anywhere;
+  }
+  .toc-link:hover { border-color: var(--accent); color: var(--ink); background: var(--accent-tint-soft); }
+  .toc-group.steps .toc-link { border-style: dashed; }
+  .toc-empty { color: var(--muted); padding: 24px 0; }
+
+  [id^="def-"], [id^="proc-"] { scroll-margin-top: 24px; }
+  [id^="def-"]:focus, [id^="proc-"]:focus { outline: none; }
+  .flash-target { animation: flash-target 2.2s ease-out 1; border-radius: var(--radius-sm); }
+  @keyframes flash-target {
+    0%, 35% { background: var(--accent-tint); box-shadow: 0 0 0 4px var(--accent-tint); }
+    100% { background: transparent; box-shadow: 0 0 0 4px transparent; }
+  }
+  .doc-procedure.flash-target { border-radius: var(--radius-md); }
+  @media (prefers-reduced-motion: reduce) { .flash-target { animation: none; background: var(--accent-tint); } }
+
+  @media (max-width: 860px) { .toc-open { margin-right: 10px; } }
+  @media (max-width: 560px) {
+    .toc-module-meta { display: none; }
+    .toc-module-head { flex-wrap: wrap; }
+    .toc-module-toggle { flex-basis: 100%; padding-bottom: 6px; }
+    .toc-open { margin: 0 0 12px 38px; }
+    .toc-group { grid-template-columns: 1fr; gap: 2px; margin-left: 0; }
+    .toc-group-label { padding-top: 0; }
+  }
+
   @media (max-width: 860px) {
     .app { grid-template-columns: 1fr; }
     .rail { display: none; }
@@ -619,6 +721,10 @@
     </div>
 
     <div class="rail-section-label">Browse documentation</div>
+    <button class="rail-nav-btn" id="nav-contents" type="button">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>
+      <span>Contents</span>
+    </button>
     <div class="module-search-box">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
       <input id="module-search" type="text" placeholder="Filter modules…" autocomplete="off">
@@ -783,6 +889,7 @@ Example of the style to use — if a note says "Go to Settings, click Add User, 
   const railNav = document.getElementById("module-nav");
   const main = document.getElementById("main");
   const navChatBtn = document.getElementById("nav-chat");
+  const navContentsBtn = document.getElementById("nav-contents");
   const moduleSearchInput = document.getElementById("module-search");
   const globalSearchInput = document.getElementById("global-search");
 
@@ -964,20 +1071,15 @@ Example of the style to use — if a note says "Go to Settings, click Add User, 
       }).join("");
     }
     navChatBtn.classList.toggle("active", state.view === "chat");
+    navContentsBtn.classList.toggle("active", state.view === "contents");
+    if (state.view === "contents") navContentsBtn.setAttribute("aria-current", "page"); else navContentsBtn.removeAttribute("aria-current");
 
     railNav.querySelectorAll(".rail-nav-btn").forEach(btn => {
-      btn.addEventListener("click", () => {
-        state = { view: "browse", moduleId: btn.dataset.module };
-        renderRail();
-        renderBrowse(state.moduleId);
-      });
+      btn.addEventListener("click", () => navigate(`#/doc/${btn.dataset.module}`));
     });
   }
-  navChatBtn.addEventListener("click", () => {
-    state = { view: "chat", moduleId: null };
-    renderRail();
-    renderChat();
-  });
+  navChatBtn.addEventListener("click", () => navigate("#/chat"));
+  navContentsBtn.addEventListener("click", () => { contentsScroll = 0; navigate("#/contents"); });
   moduleSearchInput.addEventListener("input", e => {
     moduleFilter = e.target.value;
     renderRail();
@@ -1022,11 +1124,23 @@ Example of the style to use — if a note says "Go to Settings, click Add User, 
   const ICON_TASK = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>`;
   const ICON_CHEVRON = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 9l6 6 6-6"/></svg>`;
 
-  function renderDefinitionsHtml(defs, collapseId) {
+  // Stable, unique anchor ids for cards/terms and procedures, shared by the
+  // module page and the Contents view so links always land on the right item.
+  function anchorIds(prefix, sectionSlug, labels) {
+    const seen = {};
+    return labels.map(l => {
+      const base = slugify(l) || "item";
+      seen[base] = (seen[base] || 0) + 1;
+      return `${prefix}-${sectionSlug}-${base}${seen[base] > 1 ? "-" + seen[base] : ""}`;
+    });
+  }
+
+  function renderDefinitionsHtml(defs, collapseId, sectionSlug) {
     if (!defs || !defs.length) return "";
     const shouldCollapse = defs.length > 3;
-    const rows = `<dl class="doc-definitions"${shouldCollapse ? ` id="${collapseId}" hidden` : ""}>${defs.map(d => `
-      <div class="doc-def-row">
+    const ids = anchorIds("def", sectionSlug, defs.map(d => d.term));
+    const rows = `<dl class="doc-definitions"${shouldCollapse ? ` id="${collapseId}" hidden` : ""}>${defs.map((d, i) => `
+      <div class="doc-def-row" id="${ids[i]}" tabindex="-1">
         <dt>${escapeHtml(d.term)}</dt>
         <dd>${renderAnswerHtml(d.definition)}</dd>
       </div>
@@ -1047,14 +1161,15 @@ Example of the style to use — if a note says "Go to Settings, click Add User, 
       </figure>`).join("")}</div>`;
   }
 
-  function renderProceduresHtml(procs) {
+  function renderProceduresHtml(procs, sectionSlug) {
     if (!procs || !procs.length) return "";
-    return procs.map(p => {
+    const ids = anchorIds("proc", sectionSlug, procs.map(p => p.title));
+    return procs.map((p, pi) => {
       const imgs = p.images || [];
       const atStep = i => imgs.filter(im => im.step === i + 1);
       const loose = imgs.filter(im => !im.step || im.step > (p.steps || []).length);
       return `
-      <div class="doc-procedure">
+      <div class="doc-procedure" id="${ids[pi]}" tabindex="-1">
         <h4 class="doc-procedure-title">${escapeHtml(p.title)}</h4>
         <ol class="doc-procedure-steps">${(p.steps || []).map((s, i) => `<li><span class="doc-step-text">${s}${renderShotsHtml(atStep(i))}</span></li>`).join("")}</ol>
         ${renderShotsHtml(loose)}
@@ -1149,6 +1264,7 @@ Example of the style to use — if a note says "Go to Settings, click Add User, 
 
     main.innerHTML = `
       <div class="browse-shell">
+        <a class="back-link" href="#/contents" data-nav>← Contents</a>
         <div class="doc-header">
           <span class="doc-eyebrow" style="background:${tint(mod.id)};color:${fg(mod.id)}">${mod.alias || mod.name}</span>
           <h1 class="doc-title">${mod.name}</h1>
@@ -1205,13 +1321,13 @@ Example of the style to use — if a note says "Go to Settings, click Add User, 
                 ${stepCount ? `
                 <div class="doc-subblock">
                   <h3 class="doc-subheading">${ICON_STEPS} Steps</h3>
-                  ${renderProceduresHtml(narr.procedures)}
+                  ${renderProceduresHtml(narr.procedures, slug)}
                 </div>` : ""}
 
                 ${termCount ? `
                 <div class="doc-subblock">
                   <h3 class="doc-subheading">${ICON_TERMS} Terms to know</h3>
-                  ${renderDefinitionsHtml(narr.definitions, `terms-${slug}`)}
+                  ${renderDefinitionsHtml(narr.definitions, `terms-${slug}`, slug)}
                 </div>` : ""}
 
                 ${qaCount ? `
@@ -1380,17 +1496,237 @@ Example of the style to use — if a note says "Go to Settings, click Add User, 
       </div>
     `;
     main.querySelectorAll(".search-result-item").forEach(btn => {
-      btn.addEventListener("click", () => {
-        state = { view: "browse", moduleId: btn.dataset.module };
-        renderRail();
-        renderBrowse(state.moduleId);
-        requestAnimationFrame(() => {
-          const target = document.getElementById(`sec-${slugify(btn.dataset.heading)}`);
-          if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
-        });
-      });
+      btn.addEventListener("click", () => navigate(`#/doc/${btn.dataset.module}/sec-${slugify(btn.dataset.heading)}`));
     });
   }
+
+  // ---------- Contents view: every module > section > cards / how-tos, with deep links ----------
+  let contentsOpen = new Set();      // module ids expanded (no filter active)
+  let contentsFilterClosed = new Set(); // modules the visitor collapsed while a filter is active
+  let contentsFilter = "";
+  let contentsScroll = 0;            // remembered so "← Contents" / Back return to the same spot
+  let CONTENTS_MODEL = null;
+
+  // Mirrors renderBrowse's section list and numbering so the Contents page and
+  // the module page always agree.
+  function buildContentsModel() {
+    if (CONTENTS_MODEL) return CONTENTS_MODEL;
+    CONTENTS_MODEL = MODULES.map(mod => {
+      const hasNarrative = Array.isArray(mod.narrative) && mod.narrative.length > 0;
+      const { groups, order } = groupQaBySection(mod.qaItems || []);
+      const headings = hasNarrative ? mod.narrative.map(s => s.heading) : order.slice();
+      order.forEach(h => { if (!headings.includes(h)) headings.push(h); });
+      const sections = headings.map((heading, i) => {
+        const narr = hasNarrative ? mod.narrative.find(s => s.heading === heading) : null;
+        const slug = slugify(heading);
+        const defs = (narr && narr.definitions) || [];
+        const procs = (narr && narr.procedures) || [];
+        const dIds = anchorIds("def", slug, defs.map(d => d.term));
+        const pIds = anchorIds("proc", slug, procs.map(p => p.title));
+        return {
+          heading, slug, num: i + 1, qa: (groups[heading] || []).length,
+          cards: defs.map((d, j) => ({ label: d.term, id: dIds[j] })),
+          steps: procs.map((p, j) => ({ label: p.title, id: pIds[j] }))
+        };
+      });
+      return { mod, sections };
+    });
+    return CONTENTS_MODEL;
+  }
+
+  function contentsIsOpen(id) {
+    return contentsFilter.trim() ? !contentsFilterClosed.has(id) : contentsOpen.has(id);
+  }
+
+  function renderContentsTree() {
+    const q = contentsFilter.trim().toLowerCase();
+    const has = t => String(t || "").toLowerCase().includes(q);
+    const model = buildContentsModel();
+    let shownModules = 0;
+    const chipList = (mod, items) => `<ul class="toc-chips">${items.map(it =>
+      `<li><a class="toc-link" href="#/doc/${mod.id}/${it.id}" data-nav>${escapeHtml(it.label)}</a></li>`).join("")}</ul>`;
+
+    const html = CATEGORY_ORDER.map(cat => {
+      const blocks = model.filter(x => x.mod.category === cat)
+        .sort((a, b) => moduleSortKey(a.mod) - moduleSortKey(b.mod))
+        .map(({ mod, sections }) => {
+          const modMatch = !q || has(mod.name) || has(mod.alias) || has(mod.tagline);
+          const shown = sections.map(sec => {
+            if (modMatch || has(sec.heading)) return { sec, cards: sec.cards, steps: sec.steps };
+            const cards = sec.cards.filter(c => has(c.label));
+            const steps = sec.steps.filter(c => has(c.label));
+            return cards.length || steps.length ? { sec, cards, steps } : null;
+          }).filter(Boolean);
+          if (q && !modMatch && !shown.length) return "";
+          shownModules++;
+          const open = contentsIsOpen(mod.id);
+          const bodyId = `toc-body-${mod.id}`;
+          return `
+          <div class="toc-module ${open ? "open" : ""}" data-module="${mod.id}">
+            <div class="toc-module-head">
+              <button type="button" class="toc-module-toggle" aria-expanded="${open}" aria-controls="${bodyId}">
+                <span class="toc-chevron" aria-hidden="true">${ICON_CHEVRON}</span>
+                <span class="toc-module-dot" style="background:${mod.color}" aria-hidden="true"></span>
+                <span class="toc-module-text"><span class="toc-module-name">${escapeHtml(mod.name)}</span><span class="toc-module-tag">${escapeHtml(mod.tagline || "")}</span></span>
+                <span class="toc-module-meta">${sections.length} section${sections.length === 1 ? "" : "s"}</span>
+              </button>
+              <a class="toc-open" href="#/doc/${mod.id}" data-nav aria-label="Open ${escapeHtml(mod.name)} module">Open module →</a>
+            </div>
+            <div class="toc-module-body" id="${bodyId}" ${open ? "" : "hidden"}>
+              <ol class="toc-sections">${shown.map(({ sec, cards, steps }) => {
+                const meta = [];
+                if (sec.cards.length) meta.push(`${sec.cards.length} card${sec.cards.length === 1 ? "" : "s"}`);
+                if (sec.steps.length) meta.push(`${sec.steps.length} how-to${sec.steps.length === 1 ? "" : "s"}`);
+                if (sec.qa) meta.push(`${sec.qa} question${sec.qa === 1 ? "" : "s"}`);
+                return `
+                <li class="toc-section">
+                  <div class="toc-section-row">
+                    <span class="toc-section-num" aria-hidden="true">${sec.num}</span>
+                    <a class="toc-section-link" href="#/doc/${mod.id}/sec-${sec.slug}" data-nav>${escapeHtml(sec.heading)}</a>
+                    ${meta.length ? `<span class="toc-section-meta">${meta.join(" · ")}</span>` : ""}
+                  </div>
+                  ${cards.length ? `<div class="toc-group cards"><span class="toc-group-label">${ICON_TERMS} Cards</span>${chipList(mod, cards)}</div>` : ""}
+                  ${steps.length ? `<div class="toc-group steps"><span class="toc-group-label">${ICON_STEPS} How to</span>${chipList(mod, steps)}</div>` : ""}
+                </li>`;
+              }).join("")}</ol>
+            </div>
+          </div>`;
+        }).join("");
+      if (!blocks) return "";
+      return `<section class="toc-category" aria-label="${CATEGORY_LABELS[cat]}"><h2 class="toc-category-label">${CATEGORY_LABELS[cat]}</h2>${blocks}</section>`;
+    }).join("");
+
+    document.getElementById("toc-tree").innerHTML = html || `<p class="toc-empty">No modules, sections, cards or how-tos match "${escapeHtml(contentsFilter)}".</p>`;
+    document.getElementById("toc-count").textContent = q ? `${shownModules} module${shownModules === 1 ? "" : "s"} match "${contentsFilter.trim()}"` : "";
+  }
+
+  function renderContents() {
+    main.innerHTML = `
+      <div class="browse-shell toc-shell">
+        <div class="doc-header">
+          <span class="doc-eyebrow" style="background:var(--accent-tint);color:var(--accent-ink)">Documentation</span>
+          <h1 class="doc-title">Contents</h1>
+          <p class="doc-tagline">Every module, section, card and how-to in one place. Expand a module to jump straight to the item you need.</p>
+        </div>
+        <div class="toc-toolbar">
+          <div class="doc-search-box">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+            <input id="toc-filter" type="search" placeholder="Filter modules, sections, cards…" aria-label="Filter contents" value="${escapeHtml(contentsFilter)}" autocomplete="off">
+          </div>
+          <button type="button" class="toc-tool-btn" id="toc-expand-all">Expand all</button>
+          <button type="button" class="toc-tool-btn" id="toc-collapse-all">Collapse all</button>
+        </div>
+        <p class="toc-count" id="toc-count" aria-live="polite"></p>
+        <div id="toc-tree"></div>
+      </div>`;
+    renderContentsTree();
+
+    const tree = document.getElementById("toc-tree");
+    const visibleIds = () => Array.from(tree.querySelectorAll(".toc-module")).map(el => el.dataset.module);
+    document.getElementById("toc-filter").addEventListener("input", e => {
+      contentsFilter = e.target.value;
+      contentsFilterClosed = new Set();
+      renderContentsTree();
+    });
+    document.getElementById("toc-expand-all").addEventListener("click", () => {
+      if (contentsFilter.trim()) contentsFilterClosed = new Set(); else visibleIds().forEach(id => contentsOpen.add(id));
+      renderContentsTree();
+    });
+    document.getElementById("toc-collapse-all").addEventListener("click", () => {
+      if (contentsFilter.trim()) visibleIds().forEach(id => contentsFilterClosed.add(id)); else contentsOpen = new Set();
+      renderContentsTree();
+    });
+    // Toggle a single module in place (keeps focus on the button).
+    tree.addEventListener("click", e => {
+      const btn = e.target.closest(".toc-module-toggle");
+      if (!btn) return;
+      const box = btn.closest(".toc-module");
+      const id = box.dataset.module;
+      const open = btn.getAttribute("aria-expanded") !== "true";
+      btn.setAttribute("aria-expanded", String(open));
+      box.classList.toggle("open", open);
+      box.querySelector(".toc-module-body").hidden = !open;
+      const set = contentsFilter.trim() ? contentsFilterClosed : contentsOpen;
+      if (contentsFilter.trim()) { if (open) set.delete(id); else set.add(id); }
+      else { if (open) set.add(id); else set.delete(id); }
+    });
+  }
+
+  // ---------- Routing: location.hash <-> view, so links are shareable and Back works ----------
+  //   #/chat (or empty)            chat
+  //   #/contents                   Contents page
+  //   #/doc/<moduleId>             module page, at the top
+  //   #/doc/<moduleId>/<anchor>    module page, scrolled to an element id (sec-…, def-…, proc-…)
+  function parseRoute(hash) {
+    const parts = String(hash || "").replace(/^#\/?/, "").split("/").map(decodeURIComponent);
+    if (!parts[0] || parts[0] === "chat") return { view: "chat" };
+    if (parts[0] === "contents") return { view: "contents" };
+    if (parts[0] === "doc" && MODULES.some(m => m.id === parts[1])) return { view: "browse", moduleId: parts[1], anchor: parts[2] || "" };
+    return null; // not one of ours (e.g. a plain in-page anchor): leave the view alone
+  }
+
+  function navigate(hash) {
+    if (location.hash === hash) applyRoute(); // same link clicked again: still re-run it (re-scroll/flash)
+    else location.hash = hash;               // hashchange -> applyRoute
+  }
+
+  function applyRoute(initial) {
+    const route = parseRoute(location.hash) || (initial === true ? { view: "chat" } : null);
+    if (!route) return;
+    if (state.view === "contents") contentsScroll = main.scrollTop;
+    state = { view: route.view, moduleId: route.moduleId || null };
+    renderRail();
+    if (route.view === "contents") {
+      renderContents();
+      main.scrollTop = contentsScroll;
+    } else if (route.view === "browse") {
+      renderBrowse(route.moduleId);
+      main.scrollTop = 0;
+      if (route.anchor) jumpToAnchor(route.anchor);
+    } else {
+      renderChat();
+    }
+  }
+
+  // Scroll to an element on the module page. Collapsed term lists are opened
+  // first, the target gets a brief highlight, and because lazy screenshots above
+  // it can load after the jump and push it out of place, we re-align while they settle.
+  function jumpToAnchor(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const closedList = el.closest(".doc-definitions[hidden]");
+    if (closedList) {
+      const toggle = main.querySelector(`.doc-terms-toggle[aria-controls="${closedList.id}"]`);
+      if (toggle) toggle.click(); else closedList.hidden = false;
+    }
+    const align = () => el.scrollIntoView({ block: "start", behavior: "instant" });
+    align();
+    if (/^(def|proc)-/.test(id)) {
+      el.classList.remove("flash-target");
+      void el.offsetWidth;
+      el.classList.add("flash-target");
+      el.addEventListener("animationend", () => el.classList.remove("flash-target"), { once: true });
+      try { el.focus({ preventScroll: true }); } catch (e) {}
+    }
+    const onImgLoad = e => { if (e.target && e.target.tagName === "IMG") align(); };
+    const stop = () => {
+      main.removeEventListener("load", onImgLoad, true);
+      ["wheel", "touchstart", "keydown", "mousedown"].forEach(t => main.removeEventListener(t, stop, true));
+    };
+    main.addEventListener("load", onImgLoad, true);
+    ["wheel", "touchstart", "keydown", "mousedown"].forEach(t => main.addEventListener(t, stop, true));
+    setTimeout(stop, 1500);
+  }
+
+  document.addEventListener("click", e => {
+    const a = e.target.closest && e.target.closest("a[data-nav]");
+    if (!a || e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    e.preventDefault();
+    const href = a.getAttribute("href");
+    if (href === "#/contents" && state.view !== "browse") contentsScroll = 0;
+    navigate(href);
+  });
+  window.addEventListener("hashchange", () => applyRoute());
 
   // ---------- Speech recognition ----------
   function initRecognizer() {
@@ -1442,6 +1778,7 @@ Example of the style to use — if a note says "Go to Settings, click Add User, 
           <span class="chat-hero-badge"><span class="status-dot" style="width:6px;height:6px;border-radius:50%;background:var(--ok);display:inline-block"></span>Arena Support AI</span>
           <h1>How can I help?</h1>
           <p>Ask how to do something in Arena — creating records, assigning users, running approvals — and I'll point you to the exact screen and steps. Type, or tap the mic to speak.</p>
+          <a class="chat-hero-link" href="#/contents" data-nav>Browse all documentation →</a>
         </div>
         <div class="chat-welcome" id="chat-welcome">
           <p class="chat-welcome-lead">This assistant answers "how do I…" questions about Inncircles Arena, using Arena's own documentation — nothing else.</p>
@@ -1822,7 +2159,6 @@ Example of the style to use — if a note says "Go to Settings, click Add User, 
     if (!input.disabled) input.focus();
   }
 
-  // initial render
-  renderRail();
-  renderChat();
+  // initial render (honours a shared #/contents or #/doc/... link; defaults to chat)
+  applyRoute(true);
 </script>
