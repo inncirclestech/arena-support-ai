@@ -4378,8 +4378,8 @@ const QA_PROJECTSETUP = [
     scope: "project",
     section: "Quality",
     question: "How do I organize quality checklist forms and documents for a project?",
-    answer: "Go to Project Setup → Quality → Quality And Documents and click \"Create Folder\". Each folder shows form counts by status (Not Ready/Ready/In Progress/Completed) and holds related Documents, Photos, Linked Forms, and Map Work Packages (to tie the folder to specific CWA/System/Tag combinations). The Uploaded Files sub-tab holds files independent of the folder structure.",
-    tags: ["quality folders","create folder","quality documents","map work packages","linked forms"]
+    answer: "Go to **Project Setup → Quality → Quality And Documents** and click **Create Folder** (enter a name). Select the folder, click **Map Work Packages** and pick the Tree Version, Entity, Super Location, Location Types, Location and Work Packages. The folder shows counts of **Total**, **Not Ready**, **Ready**, **In Progress** and **Completed** forms and has **Documents**, **Photos** and **Linked Forms** tabs.",
+    tags: ["quality folder","quality and documents","map work packages","quality checklist folder","create quality folder"]
   },
   {
     action: "view",
@@ -4387,8 +4387,8 @@ const QA_PROJECTSETUP = [
     scope: "project",
     section: "Quality",
     question: "How do I see how many quality forms in a folder are complete vs still pending?",
-    answer: "Each folder under Project Setup → Quality → Quality And Documents shows form counts broken out by status: Not Ready, Ready, In Progress, and Completed — giving a PM or QA/QC lead a quick read on where a given scope of quality inspection work stands without opening every form individually.",
-    tags: ["quality status","form completion counts","not ready ready in progress completed"]
+    answer: "Each folder under **Project Setup → Quality → Quality And Documents** shows **Total Forms**, **Not Ready Forms**, **Ready Forms**, **In Progress Forms** and **Completed Forms**. The numbers follow the quality forms raised in Field Works for the work packages mapped to the folder.",
+    tags: ["quality form counts","completed quality forms","folder counts","quality status counts"]
   },
   {
     action: "configure",
@@ -4396,8 +4396,8 @@ const QA_PROJECTSETUP = [
     scope: "project",
     section: "Safety",
     question: "How do I set up safety forms, approval workflows, and a safety calendar for a project?",
-    answer: "Project Setup → Safety has five sub-tabs: Setup Project Safety Forms (create ad-hoc/unscheduled Safety Form Categories via \"Create Safety Form Category\"), Create Workflow (build the approval chain safety forms route through), Assign Workflow (attach a workflow to a specific safety division/package), Setup Safety Calendar (schedule recurring safety forms, like a daily toolbox talk, with start/end dates and recurrence), and Safety And Documents (folder-based storage for supporting safety files). This is the setup side of safety, done by a PM/Module Admin before crews ever see a form in Field Works; day-to-day safety inspections and checklists are executed in Field Works → Safety, documented separately.",
-    tags: ["safety setup","safety workflow","safety calendar","safety form category","assign workflow","safety approval workflow","set up safety approval workflow","project setup safety"]
+    answer: "Project Setup → Safety has five sub-tabs: **Setup Project Safety Forms** (**Create Safety Form Category**, for event-based forms), **Create Workflow** (**Create Approval Workflow**, then levels and approvers), **Assign Workflow** (attach a workflow to a safety activity and work package), **Setup Safety Calendar** (**Create Safety Calendar Category** with recurrence, dates, time and reminder) and **Safety And Documents** (folders for safety files).",
+    tags: ["safety setup","safety forms setup","safety workflow","safety calendar setup","safety tab"]
   },
   {
     action: "understand",
@@ -4405,8 +4405,8 @@ const QA_PROJECTSETUP = [
     scope: "project",
     section: "Safety",
     question: "Why isn't a safety form I created showing up for field users?",
-    answer: "Creating a safety form category (scheduled via Setup Safety Calendar or unscheduled via Setup Project Safety Forms) is not enough on its own — each form must also be explicitly assigned to the users who should see it. An unassigned form will not appear to end users in Field Works, which is a common point of confusion when a safety officer reports a missing form.",
-    tags: ["safety form visibility","unassigned form","field works safety"]
+    answer: "Check three things: the form category was created with forms added (the **Add Forms** list is empty when no safety forms are mapped to activities for the construction type), users were assigned to each form, and an approval workflow is assigned under **Assign Workflow**. Scheduled forms also need a **Start Date** and **End Date** that cover today. Field users find them in **Field Works → Safety → Safety Forms** or **Safety Calendar**.",
+    tags: ["safety form not showing","safety form missing field users","assign users safety form","safety form visible"]
   },
   {
     action: "configure",
@@ -4414,8 +4414,8 @@ const QA_PROJECTSETUP = [
     scope: "project",
     section: "Drawings",
     question: "How do I set up a multi-level approval workflow for drawings?",
-    answer: "Go to Project Setup → Drawings → Create Approval Workflow. Named workflows (for example \"Drawing Approval Workflow-1\" or \"-2\") are built from multiple levels (Level 1, Level 2, ...), each with its own approvers and an approval type such as \"Any one can approve\".",
-    tags: ["drawing approval workflow","create approval workflow","drawing levels"]
+    answer: "Go to **Project Setup → Drawings → Create Approval Workflow**, choose or create a workflow, then **Create Level** for each step. For each level set **Workflow Type** (**All must approve** or **Any one can approve**), optionally **Security Key Requirement**, a **Description** and the approvers (from the project roster). Then pick the workflow in **Approval Workflow** when creating a drawing package.",
+    tags: ["drawing approval workflow","multi level approval drawings","create level","drawing workflow levels"]
   },
   {
     action: "configure",
@@ -4423,8 +4423,8 @@ const QA_PROJECTSETUP = [
     scope: "project",
     section: "Drawings",
     question: "What is Drawing Training used for?",
-    answer: "Drawing Training, a sub-tab under Project Setup → Drawings (alongside Create Approval Workflow, Drawing Packages, Drawing Register, and Drawing Master), is where a PM/Module Admin configures OCR templates so future drawing uploads can have their labels auto-extracted instead of entered by hand for every sheet.",
-    tags: ["drawing training","OCR","drawing labels"]
+    answer: "Drawing Training holds templates (Wall, Elevation, Sections on the test project) that teach Arena to read labels from uploaded drawings by OCR. A template is required when you create a drawing package, and its labels (for example Lead Consultant, Drawing Title) become columns on the drawings.",
+    tags: ["drawing training","ocr template","training template","auto label drawings"]
   },
   {
     action: "organize",
@@ -4432,8 +4432,8 @@ const QA_PROJECTSETUP = [
     scope: "project",
     section: "Drawings",
     question: "What's the difference between Drawing Packages, Drawing Register, and Drawing Master?",
-    answer: "All three are sub-tabs under Project Setup → Drawings. Drawing Packages groups related drawing sheets into named containers for upload and management. Drawing Register and Drawing Master provide broader listing/reference views of the project's drawings. Together with Create Approval Workflow and Drawing Training, these five sub-tabs form the full setup layer a PM/Module Admin works through before drawings are trusted as current in the field.",
-    tags: ["drawing packages","drawing register","drawing master","drawings setup"]
+    answer: "**Drawing Packages**: per-plant containers where drawings are uploaded, submitted and approved. **Drawing Register**: a per-plant log of drawings with due dates, received dates, locations and status (created with **Create** or linked to a P6 schedule with **Map P6 Schedule**). **Drawing Master**: one list of every drawing across all plants with **Approve** / **Reject** buttons.",
+    tags: ["drawing packages vs register","drawing master","drawing register","drawing packages"]
   },
   {
     action: "manage",
@@ -4441,8 +4441,8 @@ const QA_PROJECTSETUP = [
     scope: "project",
     section: "Documents",
     question: "How do I set up a folder/team structure for general project documents?",
-    answer: "Go to Project Setup → Documents. Click \"Create Team\" to set up a document team, then build a folder/team-based library (for example, a folder named after a plant like \"Basic Oxygen Furnace\" containing sub-folders such as \"FEL - 1\"), with Last Modified and Added On columns tracked per file. My Files and Shared With Me are the two sub-tabs. This is the setup-side file/folder manager, distinct from the separate, read-only cross-category Document Repository module elsewhere in Arena.",
-    tags: ["project documents","create team","document folders","my files","shared with me"]
+    answer: "Go to **Project Setup → Documents** and click **Create Team**: enter **Name your documents folder**, pick the team members and the admins, then **Submit**. Inside a team you get folders (for example the **FEL - 1** structure with Civil, Mechanical, Structural, Architectural, Instrumentation and Process Controls) and can **Upload Document** or **Create Document**. **My Files** and **Shared With Me** are the two sub-tabs.",
+    tags: ["create team documents","document folders project","documents team structure","fel 1 folders"]
   },
   {
     action: "understand",
@@ -4554,12 +4554,12 @@ const QA_PROJECTSETUP = [
   },
   {
     action: "get",
-    object: "where plants come from",
+    object: "plant structure source",
     scope: "module",
     section: "Works",
     question: "Where do the plants and work packages in my project come from?",
     answer: "Plants are Tree Versions created in **Project Setup → Works** (from scratch or Excel). The Entity, Super Location and Location types come from **Global Data → Construction Types → Global Work Areas**; work packages from **Global Work Packages** and Activity Sequence templates from the same Construction Types pipeline. The same plants then appear on **My Desk**, **Field Works**, **Estimate** and **Schedule**.",
-    tags: ["where do plants come from","plant source","work package source","works lineage","construction type works"]
+    tags: ["plant source","plant lineage","work package lineage","works lineage","construction type works"]
   },
   {
     action: "troubleshoot",
@@ -4680,7 +4680,7 @@ const QA_PROJECTSETUP = [
   },
   {
     action: "get",
-    object: "where roster is used",
+    object: "roster downstream use",
     scope: "module",
     section: "People",
     question: "Where is the project roster used in other screens?",
@@ -4830,6 +4830,213 @@ const QA_PROJECTSETUP = [
     question: "Where do phase codes come from and where do they go?",
     answer: "They come from **Global Data → UOM, Phasecode & GL Codes → Phase Codes** (963 codes; types Direct, Indirect, Non Productive, Change Order). They go to Time Management timesheets and equipment logs (via the tick columns), **Works → Other Attributes** (Phase Codes), Estimate (CBS by phase code) and cost reports.",
     tags: ["phase code source","phase code lineage","where do phase codes come from","phase codes feed"]
+  },
+  {
+    action: "explain",
+    object: "quality folder items",
+    scope: "module",
+    section: "Quality",
+    question: "What are the Documents, Photos and Linked Forms tabs in a quality folder?",
+    answer: "**Documents**: create sub folders and add files. **Photos**: **Add File** and a table of **Image**, **Added By**, **Added On**, **Action**. **Linked Forms**: quality forms linked to the folder, grouped by type (for example RFI); empty until **Map Work Packages** ties the folder to work packages.",
+    tags: ["quality folder tabs","linked forms quality","quality photos","quality documents tab"]
+  },
+  {
+    action: "explain",
+    object: "map work packages dialog",
+    scope: "module",
+    section: "Quality",
+    question: "What does Map Work Packages do in a quality folder?",
+    answer: "It opens \"Map Folder Items\" with pickers **Tree Version**, **Entity**, **Super Location**, **Location Types**, **Location** and **Work Packages**. Choose the parts of the work structure and **Submit**; forms for those work packages then count in the folder.",
+    tags: ["map work packages","map folder items","quality folder mapping","link folder to work packages"]
+  },
+  {
+    action: "explain",
+    object: "quality folder menu",
+    scope: "module",
+    section: "Quality",
+    question: "What is in the three-dot menu of a quality folder?",
+    answer: "**Edit**, **Print**, **Share** and **Delete**.",
+    tags: ["quality folder menu","share quality folder","print quality folder"]
+  },
+  {
+    action: "get",
+    object: "quality lineage",
+    scope: "module",
+    section: "Quality",
+    question: "Where do the quality forms in a folder come from?",
+    answer: "From **Field Works → Quality** (Quality Level 1 and 2, Punch Lists, Submitted and Approve Quality Logs) raised against the work packages mapped to the folder. The form templates come from **Global Data → Construction Types → Quality Forms**; work log layout follows **Project Settings → Quality Work Logs Templates**.",
+    tags: ["quality forms source","quality lineage","where quality forms come from","quality forms global data"]
+  },
+  {
+    action: "get",
+    object: "quality feeds",
+    scope: "module",
+    section: "Quality",
+    question: "Where does the quality data end up?",
+    answer: "Folder counts roll up Field Works quality forms. Submitted quality logs also appear as **Recent Quality Logs** on **My Desk**, and punch list items as **Recent Punch List Items**.",
+    tags: ["quality data goes","recent quality logs source","quality feeds my desk"]
+  },
+  {
+    action: "explain",
+    object: "uploaded files quality",
+    scope: "module",
+    section: "Quality",
+    question: "What is the Uploaded Files sub-tab in Quality?",
+    answer: "A separate file store outside the folder structure. It shows \"No folders or documents\" on the test project.",
+    tags: ["uploaded files","quality uploaded files"]
+  },
+  {
+    action: "explain",
+    object: "create safety form category",
+    scope: "module",
+    section: "Safety",
+    question: "What is in the Create Safety Form Category dialog?",
+    answer: "**Form Category Name***, then **Add Forms**: **Filter by Activities**, **Select All** and a **Safety Packages** table (**S.No**, **Activities**, **Form Name**). After creating the category, add users to each form (use copy to apply the same users to several forms).",
+    tags: ["create safety form category","safety packages","safety form category fields"]
+  },
+  {
+    action: "troubleshoot",
+    object: "safety forms list empty",
+    scope: "module",
+    section: "Safety",
+    question: "Why is the Add Forms list empty when I create a safety category?",
+    answer: "No safety forms are mapped to activities for the project's construction type. Safety forms are defined under **Global Data → Construction Types → Global Work Packages → Safety Forms**; map them there, then reopen the dialog.",
+    tags: ["safety form list empty","filter by activities empty","no safety forms available","safety packages no data"]
+  },
+  {
+    action: "configure",
+    object: "create safety workflow",
+    scope: "module",
+    section: "Safety",
+    question: "How do I create a safety approval workflow?",
+    answer: "Go to **Project Setup → Safety → Create Workflow**, click **Create Approval Workflow**, enter **Workflow Name**, **Submit**, then create levels and add approvers. Attach the workflow under **Assign Workflow**.",
+    tags: ["create safety workflow","safety approval workflow","create approval workflow safety","assign workflow safety"]
+  },
+  {
+    action: "explain",
+    object: "assign workflow safety",
+    scope: "module",
+    section: "Safety",
+    question: "What does Assign Workflow do in Safety?",
+    answer: "It attaches an approval workflow to a safety activity and work package: **Safety Activities** on the left, **Work Package** list, **Assign Approval Workflow** and **Clear**. It stays empty until safety activities exist.",
+    tags: ["assign workflow","assign approval workflow safety","safety activities"]
+  },
+  {
+    action: "explain",
+    object: "safety and documents",
+    scope: "module",
+    section: "Safety",
+    question: "What is Safety And Documents?",
+    answer: "A folder store for safety files: enter a folder name and click the plus to create a folder. No folders exist yet on the test project.",
+    tags: ["safety and documents","safety documents folder","safety files"]
+  },
+  {
+    action: "get",
+    object: "safety lineage",
+    scope: "module",
+    section: "Safety",
+    question: "Where do safety forms and their approvals show up for field users?",
+    answer: "In **Field Works → Safety**: **Safety Forms** (event based), **Safety Calendar** (scheduled, statuses Not Ready, Ready, In Progress, Completed), **Approve Safety**, **Completed Safety** and **Daily Safety Issues**. The latest items also show on **My Desk**.",
+    tags: ["safety lineage","where safety forms appear","safety field works","safety data goes"]
+  },
+  {
+    action: "get",
+    object: "drawing package dropdown options",
+    scope: "module",
+    section: "Drawings",
+    question: "Where do the options in Create Drawing Package come from?",
+    answer: "**Work Division** lists the Global Data activities (Excavation, Marking, Concreting...), **Team Users** the active project roster users (32), **Drawing Training Template** the templates in **Drawing Training** (Wall, Elevation, Sections) and **Approval Workflow** the workflows in **Create Approval Workflow**. Create the template or workflow first if the list is empty.",
+    tags: ["create drawing package options","work division drawing","drawing package dropdown source","drawing package lineage","drawing package fields","where do drawing package options come from"]
+  },
+  {
+    action: "explain",
+    object: "create level dialog",
+    scope: "module",
+    section: "Drawings",
+    question: "What do I set when I create a workflow level?",
+    answer: "**Workflow Type** (**All must approve** or **Any one can approve**), **Security Key Requirement** (require security key authentication), **Description** and **Select Approver** (search the project roster). Levels run in order.",
+    tags: ["create level","workflow level approvers","all must approve any one","security key approval"]
+  },
+  {
+    action: "explain",
+    object: "drawing submittal table",
+    scope: "module",
+    section: "Drawings",
+    question: "What columns and buttons does a drawing submittal have?",
+    answer: "Buttons **Create Revision**, **Publish Comments**, **Edit Bulk Drawings**; columns **Drawing Name**, **Drawing Page**, **Status**, template labels (for example Lead Consultant, Drawing Title, MEPF Engineer), **Uploaded Date**, **Uploaded By**, **Approval Workflow Level**, **Approve/Reject**, **See History**, **See Revisions**, **Actions** (compare, download, print, share, edit, link, delete).",
+    tags: ["drawing submittal columns","drawing table","drawing actions","create revision"]
+  },
+  {
+    action: "explain",
+    object: "drawing register fields",
+    scope: "module",
+    section: "Drawings",
+    question: "What fields does the Drawing Register have?",
+    answer: "Columns **Drawing Register Id**, **Drawing Id**, **Drawing Name**, **Status**, **Due Date**, **Received Date**, **Locations**, **Network**, **Drawing Types**, **Sheets**, **Drawing Status**, **Remarks**. **Create** also has **Connected Drawings** and **Connected Documents**. **Map P6 Schedule** links register items to the schedule.",
+    tags: ["drawing register fields","create drawing register","map p6 schedule","drawing register columns"]
+  },
+  {
+    action: "get",
+    object: "drawing status source",
+    scope: "module",
+    section: "Drawings",
+    question: "Where do Drawing Status values come from?",
+    answer: "From **Project Settings → Drawing Status** (Drawing Status Configuration): **Created** and **Completed** exist, and **Add Status** adds more.",
+    tags: ["drawing status","drawing status settings","add drawing status"]
+  },
+  {
+    action: "explain",
+    object: "drawing master",
+    scope: "module",
+    section: "Drawings",
+    question: "What is Drawing Master for?",
+    answer: "One list of every drawing across all plants (Tree, Category, Linked Form, Drawing Name, status, approval level) with **Approve** and **Reject** buttons, **See History**, **See Revisions** and **Actions**.",
+    tags: ["drawing master list","approve drawings master","all drawings list"]
+  },
+  {
+    action: "get",
+    object: "drawing lineage",
+    scope: "module",
+    section: "Drawings",
+    question: "Where do drawings end up after setup?",
+    answer: "Field users work with them in **Field Works → Drawing Management**; forms raised on drawings follow **Forms** setup; work package details in **Works** list **Drawing Items**. Templates for the package submittal and register come from **Global Data → Forms → Drawing Management Forms**.",
+    tags: ["drawing lineage","where drawings go","drawing field works","drawing management forms"]
+  },
+  {
+    action: "get",
+    object: "documents folders structure template",
+    scope: "module",
+    section: "Documents",
+    question: "Where do the folders in Project Setup → Documents come from?",
+    answer: "From the team you create and the **Structure Template** in **Global Data → Document Management** (for example **FEL - 1** with Civil, Mechanical, Structural, Architectural, Instrumentation and Process Controls; the project's Basic Oxygen Furnace team shows exactly these). Document types and templates come from **Document Template** in Global Data.",
+    tags: ["documents folders source","structure template documents","fel 1 folders","documents lineage","where do the folders in documents come from","document folders come from"]
+  },
+  {
+    action: "explain",
+    object: "create team fields",
+    scope: "module",
+    section: "Documents",
+    question: "What do I fill in to create a document team?",
+    answer: "**Name your documents folder***, **Select the team who will be working on these documents*** and **Select the Admins for document folder***, then **Submit**. The people come from the project roster.",
+    tags: ["create team fields","document team fields","team admins documents"]
+  },
+  {
+    action: "explain",
+    object: "create document types",
+    scope: "module",
+    section: "Documents",
+    question: "What types of document can I create?",
+    answer: "**Text file (txt)**, **Power point (ppt)**, **Spreadsheet (xlsx)** and **Word document (docx)**, from **Blank Document** or a template defined in **Global Data → Document Management → Document Template**.",
+    tags: ["create document types","word excel ppt document","document templates"]
+  },
+  {
+    action: "explain",
+    object: "documents to approve",
+    scope: "module",
+    section: "Documents",
+    question: "What are Working Documents and Documents to Approve?",
+    answer: "Inside a folder, **Working Documents** lists files in progress and **Documents to Approve** lists documents sent to you for approval. Both are empty on the test project.",
+    tags: ["working documents","documents to approve","approve project documents"]
   }
 ];
 
@@ -20146,30 +20353,47 @@ const MODULES = [
       },
       {
         "heading": "Quality",
-        "intro": "<p>Quality inspection records need to be organized around the physical scope of work they document, not scattered loosely across a project — otherwise a QA/QC lead has no reliable way to see what percentage of a given area's quality checks are actually done. Project Setup → Quality provides that organization ahead of time, with two sub-tabs: Quality And Documents, a folder-based structure for organizing quality checklist forms and documents (click \"Create Folder\" to add one), and Uploaded Files, a separate store for files outside the folder structure.</p><p>Each folder tracks its own form counts by status — Not Ready, Ready, In Progress, and Completed — giving a <strong>PM / Module Admin</strong> or QA/QC lead a quick read on where a scope of quality work stands. Inside a folder, Documents, Photos, and Linked Forms hold the supporting evidence and form records, while Map Work Packages ties the folder back to specific CWA/System/Tag combinations from the project's work structure — connecting quality tracking directly to the physical scope it documents, the same way Estimate and Schedule tie back to the plants defined in Works.</p>",
+        "intro": "<p>Quality is where a <strong>PM</strong>, <strong>Module Admin</strong> or QA/QC lead sets up folders that group quality forms, documents and photos against the work structure. It gives one place to see how many quality forms are still open.</p><p>Open <strong>Project Setup → Quality</strong>. Two sub-tabs: <strong>Quality And Documents</strong> and <strong>Uploaded Files</strong>. Click <strong>Create Folder</strong> to add a folder; each folder shows form counts by status.</p>",
         "definitions": [
           {
             "term": "Quality And Documents",
-            "definition": "A folder-based structure for organizing quality checklist forms and their supporting documents."
+            "definition": "A list of folders (**Folders (1)** on this project: \"Folder 1\"), each with a drag handle, a three-dot menu (**Edit**, **Print**, **Share**, **Delete**) and five counters: **Total Forms**, **Not Ready Forms**, **Ready Forms**, **In Progress Forms** and **Completed Forms**. Search and a **Filter Folders** icon narrow the list. **Create Folder** asks only for a **Name** (then **Submit**)."
           },
           {
-            "term": "Uploaded Files",
-            "definition": "A separate file store for quality-related files outside the folder structure."
+            "term": "Folder Items",
+            "definition": "The right side of a selected folder has three tabs: **Documents** (create sub folders and add files), **Photos** (**Add File**; table **Image | Added By | Added On | Action**) and **Linked Forms** (forms linked to the folder, grouped by form type such as **RFI**; \"No forms are linked to this folder\" until work packages are mapped). **Upload Excel** loads items in bulk."
           },
           {
             "term": "Map Work Packages",
-            "definition": "A folder-level action that ties a quality folder to specific CWA/System/Tag combinations from the project's work structure."
+            "definition": "Opens \"Map Folder Items\" with pickers **Tree Version**, **Entity**, **Super Location**, **Location Types**, **Location** and **Work Packages**, and a **Selected Folder Items** list. Mapping ties the folder to parts of the work structure built in **Project Setup → Works**, so quality forms raised for those work packages appear in the folder's counts. Work packages already mapped disappear from the list (\"No data or all Work Packages are mapped\")."
+          },
+          {
+            "term": "Uploaded Files",
+            "definition": "A separate file store outside the folder structure. It shows \"No folders or documents\" on this project."
+          },
+          {
+            "term": "Where the quality forms come from",
+            "definition": "The forms counted here are the quality forms raised in **Field Works → Quality** (**Quality Level 1**, **Quality Level 2**, **Punch Lists**, **Submitted Quality Logs**, **Approve Quality Logs**). Their templates come from **Global Data → Construction Types → Quality Forms**, and how quality work logs look depends on **Project Settings → Quality Work Logs Templates**."
+          },
+          {
+            "term": "Where this goes",
+            "definition": "Folder counts roll up what Field Works users submit. Submitted quality logs also show as **Recent Quality Logs** on **My Desk**, and punch list items as **Recent Punch List Items**."
+          },
+          {
+            "term": "Quality approval workflow",
+            "definition": "The Quality tab on the test environment shows only **Quality And Documents** and **Uploaded Files**; a **Create Workflow** sub-tab was not visible. Quality approval levels are built with the same **Create Level** dialog used for other workflows (see **Drawings → Create Approval Workflow**). Check with your admin where approval levels are managed in your environment."
           }
         ],
         "procedures": [
           {
             "title": "Create a quality folder and map it to work packages",
             "steps": [
-              "Go to <strong>Project Setup → Quality → Quality And Documents</strong>.",
-              "Click <strong>Create Folder</strong> and name it.",
-              "Open the folder and use <strong>Map Work Packages</strong> to tie it to the relevant CWA/System/Tag combinations.",
-              "Attach supporting <strong>Documents</strong>, <strong>Photos</strong>, and <strong>Linked Forms</strong> as needed."
-            ]
+              "Go to **Project Setup → Quality → Quality And Documents** and click **Create Folder**. Enter a **Name** and click **Submit**.",
+              "Select the folder and click **Map Work Packages**.",
+              "Pick the **Tree Version**, **Entity**, **Super Location**, **Location Types**, **Location** and the **Work Packages** to map, then click **Submit**.",
+              "Use the **Documents**, **Photos** and **Linked Forms** tabs to add supporting files and check the linked forms."
+            ],
+            "note": "Create Folder and Map Work Packages dialogs were opened and cancelled, not submitted."
           },
           {
             "title": "Create a quality approval workflow",
@@ -20190,33 +20414,42 @@ const MODULES = [
                 "caption": "Warning shown when a workflow's levels are changed",
                 "step": 4
               }
-            ]
+            ],
+            "note": "Screens from the Arena guide. The test environment shows no Create Workflow sub-tab under Quality, so confirm the location in your environment."
           }
         ]
       },
       {
         "heading": "Safety",
-        "intro": "<p>A safety program only works reliably in the field if its approval chain, document library, and schedule are configured correctly beforehand — no safety officer should be figuring out an approval process on the fly during an incident review. Project Setup → Safety is where a <strong>PM / Module Admin</strong> does that configuration, across five sub-tabs: Setup Project Safety Forms (create ad-hoc, unscheduled Safety Form Categories via \"Create Safety Form Category\"), Create Workflow (build the approval chain a safety inspection routes through), Assign Workflow (attach a built workflow to a specific safety division/package), Setup Safety Calendar (schedule recurring safety forms — a daily toolbox talk, for instance — with start/end dates and a recurrence frequency), and Safety And Documents (folder-based storage for supporting safety files).</p><p>This is explicitly the setup side of safety — defining categories, workflows, and schedules before anyone in the field opens a form. The corresponding execution side, where safety officers and field workers actually fill out inspections and checklists day to day, lives in Field Works → Safety and is documented separately. One practical point worth remembering from this setup side: creating a safety form category, scheduled or unscheduled, is not enough by itself to make it visible — each form still needs to be explicitly assigned to specific users, or it simply won't appear to them in Field Works. This is one of the more common sources of confusion when a field worker reports a missing safety form.</p>",
+        "intro": "<p>Safety is where a <strong>PM</strong> or <strong>Safety Officer</strong> sets up the safety forms, approval workflows and recurring safety schedule that field users then fill in. It is the setup side of <strong>Field Works → Safety</strong>.</p><p>Open <strong>Project Setup → Safety</strong>. Five sub-tabs: <strong>Setup Project Safety Forms</strong>, <strong>Create Workflow</strong>, <strong>Assign Workflow</strong>, <strong>Setup Safety Calendar</strong> and <strong>Safety And Documents</strong>. All five are empty on Arena Steel Plant - Phase 1.</p>",
         "definitions": [
           {
             "term": "Setup Project Safety Forms",
-            "definition": "The sub-tab for creating unscheduled/ad-hoc Safety Form Categories."
+            "definition": "For unscheduled, event-based safety forms. **Create Safety Form Category** opens a dialog: **Form Category Name***, then **Add Forms** with **Filter by Activities**, **Select All** and a **Safety Packages** table (**S.No | Activities | Form Name**). On this project the list is empty (\"No Data Available\") and the Activities filter has no options, because no safety forms are mapped to activities. The page instructions say: create the category, fill details and add forms, then add users to each form (use copy to apply the same users to several forms)."
           },
           {
-            "term": "Create Workflow",
-            "definition": "The sub-tab for building a multi-level safety approval chain."
+            "term": "Create Workflow (Safety)",
+            "definition": "**Create Approval Workflow** opens \"Create Safety Approval Workflow\" with **Workflow Name***. Then create levels and add users to each level: levels offer **All must approve** or **Any one can approve**, with approvers chosen from the project roster (**People → Roster**)."
           },
           {
             "term": "Assign Workflow",
-            "definition": "The sub-tab for attaching a built safety workflow to a specific safety work division and package."
+            "definition": "Attaches an approval workflow to a safety activity and work package. The screen has **Safety Activities** on the left, the **Work Package** list (\"There are no Work Package under respective Activity.\") and **Assign Approval Workflow** / **Clear**. Empty until safety activities exist."
           },
           {
             "term": "Setup Safety Calendar",
-            "definition": "The sub-tab for scheduling recurring safety forms with start/end dates and a recurrence frequency."
+            "definition": "For recurring safety forms. **Create Safety Calendar Category** has **Form Category Name***, **Recurrence Type** (**Daily**, **Weekly**, **Custom**), **Start Date**, **End Date**, **Time**, **Remind Before** (minutes, hours, days or weeks) and **Add Forms**. Scheduled forms show on **My Calendar** and in **Field Works → Safety → Safety Calendar**."
           },
           {
             "term": "Safety And Documents",
-            "definition": "A folder-based store for safety-related supporting files."
+            "definition": "A folder store for safety files: \"Create new folder to add documents\"; none exist yet. Enter a name and click the plus to create a folder."
+          },
+          {
+            "term": "Where the safety forms come from",
+            "definition": "Safety forms and their activities come from **Global Data → Construction Types → Global Work Packages → Safety Forms**, mapped to activities for the project's construction type. If the **Filter by Activities** list is empty, no safety forms are mapped for this construction type."
+          },
+          {
+            "term": "Where this goes",
+            "definition": "Field users fill forms in **Field Works → Safety**: **Safety Forms** (event based), **Safety Calendar** (scheduled), then approvals in **Approve Safety** and results in **Completed Safety**. Safety issues raised go to **Daily Safety Issues**. The latest items show on **My Desk** as **Recent Daily Safety Issues** and **Recent Safety Logs**, and tasks waiting on you under **My Actions**."
           }
         ],
         "procedures": [
@@ -20279,27 +20512,39 @@ const MODULES = [
       },
       {
         "heading": "Drawings",
-        "intro": "<p>Construction teams depend on having the right drawing sheet, at the right revision, readily at hand — an outdated or hard-to-find sheet leads directly to rework, delay, or safety risk on site. Project Setup → Drawings, typically configured by a <strong>PM / Module Admin</strong>, manages that setup across five sub-tabs: Create Approval Workflow, Drawing Training, Drawing Packages, Drawing Register, and Drawing Master.</p><p>Create Approval Workflow is where named, multi-level approval chains are built — for example \"Drawing Approval Workflow-1\" or \"-2\" — each level (Level 1, Level 2, and so on) carrying its own list of approvers and an approval type such as \"Any one can approve\". Drawing Training configures OCR-based auto-labeling so future drawing uploads don't need every field typed in by hand. Drawing Packages groups related sheets into named containers for upload and management, while Drawing Register and Drawing Master give broader listing and reference views across the project's full drawing set. Together, these five sub-tabs ensure a drawing doesn't become the project's trusted reference version until it clears whatever approval levels the PM/Module Admin has configured — the same discipline applied to Forms and Safety elsewhere in this module.</p>",
+        "intro": "<p>Drawings is where a <strong>PM</strong> or <strong>Module Admin</strong> sets up drawing approval chains, training templates for automatic labels, packages, the register and the master list. Field users then view and raise forms on drawings in <strong>Field Works → Drawing Management</strong>.</p><p>Open <strong>Project Setup → Drawings</strong>. Five sub-tabs: <strong>Create Approval Workflow</strong>, <strong>Drawing Training</strong>, <strong>Drawing Packages</strong>, <strong>Drawing Register</strong> and <strong>Drawing Master</strong>.</p>",
         "definitions": [
           {
             "term": "Create Approval Workflow (Drawings)",
-            "definition": "Named, multi-level drawing approval workflows, each level carrying its own approvers and approval type (e.g. \"Any one can approve\")."
+            "definition": "Named workflows (\"Drawing Approval Workflow-1\", \"Drawing Approval Workflow 2\") with edit, delete and **Open Workflow Graph View**. A selected workflow lists levels in a table **Level | Level Description | Approvers | Workflow Type | Actions** (for example Level 1: Siddharth Deore, Ravi Ravi, Muhammadhu Muhaidheen and others, \"Any one can approve\"). **Create Level** opens **Workflow Type** (**All must approve** or **Any one can approve**), **Security Key Requirement** (\"Require security key authentication for approval\"), **Description** and **Select Approver** (search over the project roster people, with email). **Where it goes:** the workflow is chosen when you create a drawing package; approvers then act on drawings under **Approve/Reject**."
           },
           {
             "term": "Drawing Training",
-            "definition": "OCR configuration for auto-labeling drawing uploads."
+            "definition": "Templates that teach Arena to read drawing labels by OCR. **Create Training Template** adds one; the test project has **Wall**, **Elevation** and **Sections** (each with a three-dot menu). A template has four steps: **Upload Sample Drawing**, **Create Labels**, **OCR Training** and **Preview Table**. Labels become columns on drawings (for example **Lead Consultant**, **Drawing Title**, **MEPF Engineer** on drawings made with Wall). **Where it goes:** the template is required when creating a drawing package."
           },
           {
             "term": "Drawing Packages",
-            "definition": "Named containers grouping related drawing sheets for upload and management."
+            "definition": "One card per plant (13 here, the same Tree Versions as Works; **Download Excel** at the top). Open a plant to see its packages (for example **Walls**), **Create Drawing Package** and **New Submittal**; a submittal card shows **Description**, **Approved Drawing Items** (0/1) and **Resolved Comments** (0/1)."
+          },
+          {
+            "term": "Create Drawing Package",
+            "definition": "Dialog \"Create drawing management category by selecting a drawing training template\": **Package Name***, **Work Division*** (activities such as Excavation, Marking, Concreting, Shuttering, Barbending... from **Global Data** activities), **Team Users*** (the 32 active roster users, same list as My Desk Pending Actions), **Drawing Training Template*** (Wall, Elevation, Sections) and **Approval Workflow** (the workflows above)."
+          },
+          {
+            "term": "Submittal and drawing table",
+            "definition": "Inside a package, a submittal shows the path (\"Walls/\"), buttons **Create Revision**, **Publish Comments** and **Edit Bulk Drawings**, views **Table**, **Grid** and **Kanban**, **Manage Columns** and **Save Layout**. Columns: **Drawing Name**, **Drawing Page**, **Status**, the template labels, **Uploaded Date**, **Uploaded By**, **Approval Workflow Level**, **Approve/Reject**, **See History**, **See Revisions** and **Actions** (compare, download, print, share, edit, link, delete)."
           },
           {
             "term": "Drawing Register",
-            "definition": "A listing view across the project's drawings."
+            "definition": "Plant cards open a per-plant register: **Create**, **Map P6 Schedule**, **Export**, **Filters**, **Manage Columns**, **Table / Grid / Kanban**. Columns: **Drawing Register Id**, **Drawing Id**, **Drawing Name**, **Status**, **Due Date**, **Received Date**, **Locations**, **Network**, **Drawing Types**, **Sheets**, **Drawing Status**, **Remarks**, **Actions**. **Create** opens the form with **Connected Drawings** and **Connected Documents** (**Connect**), **Drawing Id***, **Drawing Name***, **Received Date**, **Locations**, **Network**, **Drawing Types**, **Sheets**, **Drawing Status**, **Remarks**, **Status**, **Start**, **Due Date**. **Drawing Status** values come from **Project Settings → Drawing Status** (**Created**, **Completed**, **Add Status**)."
           },
           {
             "term": "Drawing Master",
-            "definition": "A master reference view across the project's drawings."
+            "definition": "One list of every drawing in the project across all plants: **Tree**, **Category**, **Linked Form**, **Drawing Name**, **Drawing Page**, **Status**, **Uploaded Date**, **Uploaded By**, **Approval Workflow Level**, **Approve** / **Reject** buttons, **See History**, **See Revisions** and **Actions**. Approvers can act here without opening each package."
+          },
+          {
+            "term": "Where this data comes from and goes",
+            "definition": "**Comes from:** plants from Works; activities from Global Data; people from **People → Roster**; register form fields and templates from **Global Data → Forms → Drawing Management Forms** (**Drawing Package Submittal**, **Drawing Register**). **Goes to:** **Field Works → Drawing Management**, forms raised on drawings (visible on the Field Works cards and in **My Actions → Workflow Issues**), and the work package **Drawing Items** section in Works."
           }
         ],
         "procedures": [
@@ -20573,19 +20818,35 @@ const MODULES = [
       },
       {
         "heading": "Documents",
-        "intro": "<p>Contracts, specifications, permits, and correspondence scattered across email threads and personal drives are how a construction company loses the paper trail it needs when a dispute or audit arises — a shared, organized document structure matters even for material that doesn't tie to a single workflow record. Project Setup → Documents provides that structure, with two sub-tabs, My Files and Shared With Me, and a \"Create Team\" button for building out a folder/team-based library — for example, a folder named after a plant such as \"Basic Oxygen Furnace\" containing sub-folders like \"FEL - 1\", each file tracked with Last Modified and Added On columns.</p><p>It's worth being clear about what this is not: it isn't the same as the specialized Quality & Documents area inside the Quality tab of this same module, which is purpose-built for quality-specific documentation tied to inspections and forms. It's also distinct from the separate Document Repository module, which is a read-only, cross-category archive for browsing documents that have already been generated or filed across the project. Project Setup → Documents is the active setup-side file/folder manager — where a <strong>PM / Module Admin</strong> organizes the project's general file library — while Document Repository is where that material is later found and reviewed.</p>",
+        "intro": "<p>Documents is the project's shared file area where a <strong>PM</strong> or <strong>Module Admin</strong> creates teams and folders and sends documents for approval. It is separate from the <strong>Document Repository</strong> module and from the Quality and Safety document stores.</p><p>Open <strong>Project Setup → Documents</strong>. Sub-tabs: <strong>My Files</strong> and <strong>Shared With Me</strong>; <strong>Create Team</strong> starts a new team folder.</p>",
         "definitions": [
           {
-            "term": "Create Team",
-            "definition": "The action that sets up a document team/folder structure under Project Setup → Documents."
+            "term": "My Files",
+            "definition": "A list of teams on the left (for example **Basic Oxygen Furnace**, \"Created by: Ravi Ravi\") and a folder browser on the right with breadcrumbs, search and a table **Folders & Documents | Last Modified | Added On | Actions**. Inside a folder, **Upload Document** and **Create Document** appear, with tabs **Working Documents** and **Documents to Approve**."
           },
           {
-            "term": "My Files",
-            "definition": "A sub-tab showing documents owned or organized by the current user."
+            "term": "Create Team",
+            "definition": "Dialog \"Create a team like quality, progress, safety etc\": **Name your documents folder?***, **Select the team who will be working on these documents*** and **Select the Admins for document folder***, then **Submit**. The people lists come from the project roster."
+          },
+          {
+            "term": "Folder structure from Global Data",
+            "definition": "The team folder **FEL - 1** contains **Instrumentation**, **Structural**, **Mechanical**, **Civil**, **Architectural** and **Process Controls**, the same six folders as the **FEL - 1** structure template in **Global Data → Document Management → Structure Template**. So structure templates are the source of a team's starting folders. (The Create Team dialog itself has no template picker, so how a template is applied was not verified.)"
+          },
+          {
+            "term": "Create Document",
+            "definition": "Dialog with **Name**, **Type** (**Text file (txt)**, **Power point (ppt)**, **Spreadsheet (xlsx)**, **Word document (docx)**) and **Template** (**Blank Document** or a template), then **Create file**. Types and templates come from **Global Data → Document Management → Document Template** (Word, Excel, PPT, Text)."
           },
           {
             "term": "Shared With Me",
-            "definition": "A sub-tab showing documents shared with the current user by others."
+            "definition": "Documents and folders other people shared with you. Empty on this project (\"No folders or documents in this Page\")."
+          },
+          {
+            "term": "Documents to Approve",
+            "definition": "Approvers see documents sent to them here. Empty on this project."
+          },
+          {
+            "term": "How this differs from other document areas",
+            "definition": "**Project Setup → Documents** is the live working area. **Quality → Quality And Documents** and **Safety → Safety And Documents** hold discipline-specific files. **Document Repository** is the read-only archive across the project."
           }
         ],
         "procedures": [
