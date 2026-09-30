@@ -854,7 +854,8 @@ ${notes}
 
 Rules:
 - Answer using ONLY the single note that best matches the user's specific question. The other notes are decoys included for context — most of them are NOT what the user asked about, so ignore them completely. Do not combine or summarize multiple notes together.
-- Write 2-4 short sentences of plain prose, in your own words. Never output a list, never output "Q:"/"A:" labels, never repeat a note word-for-word.
+- Write 2-5 short sentences of plain prose, in your own words. Never output a list, never output "Q:"/"A:" labels, never repeat a note word-for-word.
+- Only restate the steps and facts in the note. Never invent examples, scenarios or "let's say…" situations.
 - If NONE of the notes actually answer the question, respond with exactly: "I don't have documented steps for that yet — try emailing support@inncircles.com." Do not guess, and do not describe an unrelated note just because it's the closest thing available.
 
 Example of the style to use — if a note says "Go to Settings, click Add User, fill the form, click Save" and the user asks "how do I add someone", a good answer is: "You can add a new user from Settings — click Add User, fill in their details, and hit Save." Write like that: natural, direct, one topic, no labels.`;
@@ -865,11 +866,19 @@ Example of the style to use — if a note says "Go to Settings, click Add User, 
             { role: "user", content: userQuestion }
           ],
           temperature: 0.2,
-          max_tokens: 200
+          max_tokens: 400
         });
         let text = res && res.choices && res.choices[0] && res.choices[0].message && res.choices[0].message.content;
         if (!text) return null;
         text = text.trim();
+        // If the model hit the length cap, drop the unfinished last sentence
+        // rather than show a reply that stops mid-sentence. If too little is
+        // left, return null so the caller shows the documented answer instead.
+        if (res.choices[0].finish_reason === "length") {
+          const cut = Math.max(text.lastIndexOf(". "), text.lastIndexOf(".\n"), text.lastIndexOf("! "), text.lastIndexOf("? "), text.endsWith(".") ? text.length - 1 : -1);
+          text = cut > 0 ? text.slice(0, cut + 1).trim() : "";
+          if (text.length < 60) return null;
+        }
         // Defensive cleanup: if the model still slipped into the Q:/A: or
         // numbered-list pattern despite the instructions, treat it as a
         // failed generation rather than show the user a garbled echo — the
