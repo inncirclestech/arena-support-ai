@@ -4037,97 +4037,130 @@ const QA_MYDESK = [
 
 const QA_MYCALENDAR = [
   {
-    "action": "view",
-    "object": "my calendar",
-    "scope": "project",
-    "section": "My Calendar",
-    "question": "How do I see everything scheduled on a project by date?",
-    "answer": "Go to <strong>Calendar Logs</strong>. My Calendar shows a left-side mini date-picker (month/year selector with previous/next arrows and today highlighted) alongside a main calendar panel that displays scheduled events, logs, and forms due across the project, organized by date.",
-    "tags": [
-      "my calendar",
-      "calendar logs",
-      "schedule view"
-    ]
+    action: "explain",
+    object: "my calendar",
+    scope: "module",
+    section: "My Calendar",
+    question: "What is My Calendar?",
+    answer: "**My Calendar** (breadcrumb **Calendar Logs**) is the project's date view of scheduled safety forms and scheduled project forms. It has a **Select date** mini calendar on the left and a **Month | Day** calendar on the right. It is read-only.",
+    tags: ["my calendar","calendar logs","project calendar","schedule view","what is my calendar"]
   },
   {
-    "action": "configure",
-    "object": "calendar view",
-    "scope": "project",
-    "section": "My Calendar",
-    "question": "Can I switch between a monthly overview and a single day's agenda?",
-    "answer": "Yes. Use the Month/Day toggle in the top-right of My Calendar. <strong>Month view</strong> presents a traditional 7-column grid for a bird's-eye view of the whole month, while <strong>Day view</strong> switches to an hour-by-hour agenda for drilling into a single day's scheduled items.",
-    "tags": [
-      "month view",
-      "day view",
-      "calendar toggle"
-    ]
+    action: "get",
+    object: "month and day view",
+    scope: "module",
+    section: "My Calendar",
+    question: "How do I switch between Month and Day view?",
+    answer: "Use the **Month | Day** toggle on the main calendar. **Month** shows a 7-column grid (SUN to SAT); **Day** shows one day's items, or **No Work Scheduled For Today** when empty.",
+    tags: ["month view","day view","calendar toggle","switch month day calendar"]
   },
   {
-    "action": "view",
-    "object": "specific date",
-    "scope": "project",
-    "section": "My Calendar",
-    "question": "How do I jump to a particular date on My Calendar?",
-    "answer": "Use the mini date-picker in the left panel to change month or year, then click the date you want. The main panel updates to show that date's context, and \"today\" stays visibly highlighted in the mini picker so you can always find your way back.",
-    "tags": [
-      "date picker",
-      "navigation",
-      "jump to date"
-    ]
+    action: "get",
+    object: "jump to date",
+    scope: "module",
+    section: "My Calendar",
+    question: "How do I jump to a particular date on My Calendar?",
+    answer: "In **Select date**, use **Choose month and year** (year grid 2016 to 2039) or **Previous month** / **Next month**, then click the day. The main calendar follows.",
+    tags: ["jump to date","date picker calendar","change month calendar","select date calendar"]
   },
   {
-    "action": "view",
-    "object": "scheduled forms and logs",
-    "scope": "project",
-    "section": "My Calendar",
-    "question": "What kind of items actually appear on My Calendar?",
-    "answer": "My Calendar is built to surface scheduled events, logs, and forms that are due across the project, giving a PM or field user a date-based view of obligations rather than a module-by-module one. This complements module-specific screens (like Work Logs or Quality) by collecting their time-bound items into a single calendar.",
-    "tags": [
-      "scheduled items",
-      "forms due",
-      "calendar logs"
-    ]
+    action: "explain",
+    object: "calendar read only",
+    scope: "module",
+    section: "My Calendar",
+    question: "Can I add an event directly on My Calendar?",
+    answer: "No. It only displays schedules created elsewhere: **Project Setup → Safety → Setup Safety Calendar** and **Project Setup → Forms → Schedule Project Forms**.",
+    tags: ["add event calendar","create event my calendar","calendar read only","add to calendar"]
   },
   {
-    "action": "view",
-    "object": "who can see My Calendar",
-    "scope": "project",
-    "section": "My Calendar",
-    "question": "Is My Calendar personal to me or shared across the project team?",
-    "answer": "My Calendar reflects scheduled activity for the project you're currently in, so any user with access to that project can open Calendar Logs to see what's due. It is a project-scoped calendar rather than a private personal one, which is what makes it useful for coordinating across End Users, PMs, and Module Admins looking at the same date-driven picture.",
-    "tags": [
-      "project scope",
-      "shared calendar",
-      "visibility"
-    ]
+    action: "explain",
+    object: "project vs home calendar",
+    scope: "module",
+    section: "My Calendar",
+    question: "How is My Calendar different from the Calendar module on the Home page?",
+    answer: "**My Calendar** is inside one project and shows that project's scheduled forms. The Home-level **Calendar** module is a separate, company-level screen. For a project's due safety forms use My Calendar.",
+    tags: ["my calendar vs calendar","home calendar","project calendar vs home","calendar module difference"]
   },
   {
-    "action": "understand",
-    "object": "my calendar vs the Home-level Calendar module",
-    "scope": "project",
-    "section": "My Calendar",
-    "question": "How is My Calendar different from the Calendar module on the Home hub?",
-    "answer": "<strong>My Calendar</strong> lives inside a project (breadcrumb <strong>Calendar Logs</strong>) and surfaces the scheduled events, logs, and forms due across that one project. The Home-level <strong>Calendar</strong> module is a separate, company-level screen documented on its own. If you are chasing a project's due inspections or scheduled safety forms, you want My Calendar inside the project, not the Home hub calendar.",
-    "tags": [
-      "my calendar vs calendar",
-      "project calendar",
-      "calendar logs",
-      "home calendar"
-    ]
+    action: "explain",
+    object: "calendar shared",
+    scope: "module",
+    section: "My Calendar",
+    question: "Is My Calendar personal or shared across the project?",
+    answer: "It is project-scoped: anyone with access to the project opens the same calendar. It shows the project's schedules, not a private agenda.",
+    tags: ["personal calendar","shared calendar","who sees calendar","calendar visibility"]
   },
   {
-    "action": "understand",
-    "object": "why an expected item is missing from the calendar",
-    "scope": "project",
-    "section": "My Calendar",
-    "question": "A scheduled safety form or inspection isn't showing on My Calendar — why?",
-    "answer": "My Calendar reflects what other modules have actually scheduled. A recurring safety form only appears once it has been set up under <strong>Project Setup → Safety → Setup Safety Calendar</strong> and assigned to the users who should complete it, and scheduled project forms only appear once configured under <strong>Project Setup → Forms → Schedule Project Forms</strong>. If something is missing here, the scheduling is usually incomplete on the setup side rather than the calendar being wrong.",
-    "tags": [
-      "missing calendar item",
-      "scheduled safety form",
-      "schedule project forms",
-      "calendar troubleshooting"
-    ]
+    action: "get",
+    object: "calendar items source",
+    scope: "module",
+    section: "What Appears on My Calendar",
+    question: "What appears on My Calendar and where does it come from?",
+    answer: "Scheduled safety forms set up in **Project Setup → Safety → Setup Safety Calendar** and scheduled project forms set up in **Project Setup → Forms → Schedule Project Forms**. Users fill the safety ones in **Field Works → Safety → Safety Calendar**. Tasks and other items were not verified on the test project because nothing is scheduled there.",
+    tags: ["what appears on my calendar","calendar items source","where does calendar data come from","calendar lineage","scheduled items calendar"]
+  },
+  {
+    action: "troubleshoot",
+    object: "calendar empty",
+    scope: "module",
+    section: "What Appears on My Calendar",
+    question: "Why is My Calendar empty?",
+    answer: "Nothing has been scheduled for the project. Create a category in **Project Setup → Safety → Setup Safety Calendar** (**Create Safety Calendar Category**) or set a schedule in **Project Setup → Forms → Schedule Project Forms**. On Arena Steel Plant - Phase 1 both are empty, so every month shows no items and Day view says **No Work Scheduled For Today**.",
+    tags: ["calendar empty","my calendar empty","no work scheduled","nothing on calendar","calendar blank"]
+  },
+  {
+    action: "troubleshoot",
+    object: "scheduled form missing",
+    scope: "module",
+    section: "What Appears on My Calendar",
+    question: "A scheduled safety form or inspection is not showing on My Calendar. Why?",
+    answer: "Check the category exists under **Setup Safety Calendar** with the right **Start Date**, **End Date** and **Recurrence Type**, that forms were added under **Add Forms**, and that users are assigned. For project forms, check **Schedule Project Forms** was submitted and the users appear in **Forms → Assign Users**.",
+    tags: ["scheduled form missing","safety form not on calendar","scheduled project form not showing","calendar troubleshooting"]
+  },
+  {
+    action: "configure",
+    object: "safety calendar category",
+    scope: "module",
+    section: "What Appears on My Calendar",
+    question: "How do I create a recurring safety form schedule?",
+    answer: "Open **Project Setup → Safety → Setup Safety Calendar**, click **Create Safety Calendar Category**, enter **Form Category Name**, **Recurrence Type** (Daily, Weekly or Custom), **Start Date**, **End Date**, **Time** and **Remind Before**, add forms under **Add Forms**, then **Submit**.",
+    tags: ["create safety calendar","recurring safety form","safety calendar category","setup safety calendar","schedule safety forms"]
+  },
+  {
+    action: "explain",
+    object: "create safety calendar fields",
+    scope: "module",
+    section: "What Appears on My Calendar",
+    question: "What fields are in Create Safety Calendar Category?",
+    answer: "**Form Category Name***, **Recurrence Type** (Daily, Weekly, Custom), **Start Date**, **End Date**, **Time** (hours, minutes, AM/PM), **Remind Before** (minutes, hours, days or weeks), and **Add Forms** with **Filter by Activities**, **Select All** and a table of **Activities** and **Form Name**.",
+    tags: ["safety calendar fields","create safety calendar category fields","remind before","recurrence type daily weekly custom"]
+  },
+  {
+    action: "configure",
+    object: "schedule project forms",
+    scope: "module",
+    section: "What Appears on My Calendar",
+    question: "How do I schedule a recurring project form like an RFI?",
+    answer: "Open **Project Setup → Forms → Schedule Project Forms**, pick the form type and plant, then complete **1 Prepare Schedule** (**Recurrence Type**, **Every**, weekdays, **Start Date**, **End Date**, **Time**) and **2 Assign User**, then **Submit**.",
+    tags: ["schedule project forms","schedule rfi","recurring form schedule","schedule form type"]
+  },
+  {
+    action: "get",
+    object: "where to fill scheduled safety form",
+    scope: "module",
+    section: "What Appears on My Calendar",
+    question: "Where do users fill in a scheduled safety form?",
+    answer: "In **Field Works → Safety → Safety Calendar**, which lists \"Safety forms for <date>\" with status chips **Not Ready**, **Ready**, **In Progress** and **Completed**. Finished ones go to **Approve Safety** and **Completed Safety**.",
+    tags: ["fill scheduled safety form","safety calendar field works","complete scheduled safety","safety calendar statuses"]
+  },
+  {
+    action: "get",
+    object: "calendar data goes",
+    scope: "module",
+    section: "What Appears on My Calendar",
+    question: "Where do calendar items go after they are completed?",
+    answer: "Scheduled safety forms move through **Approve Safety** (**Not Ready**, **Ready to Approve**, **In Progress**, **Approved**) into **Completed Safety**, and show as **Recent Safety Logs** on **My Desk**.",
+    tags: ["after calendar item completed","completed safety forms","approve safety","calendar data goes where"]
   }
 ];
 
@@ -19202,49 +19235,76 @@ const MODULES = [
     "qaItems": QA_MYCALENDAR,
     "narrative": [
       {
-        "heading": "Admin Role",
-        "intro": "<p>Like My Desk, My Calendar has no dedicated admin configuration panel of its own — what a user sees on their calendar is governed by the same project and permission structure set by a <strong>Super Admin</strong> or <strong>Module Admin</strong> elsewhere in Arena. There's nothing to separately provision here beyond making sure users have access to the project whose scheduled activity they need visibility into.</p><p>An admin's practical concern with My Calendar is indirect: since it surfaces scheduled events, logs, and forms due from across the project's modules, the calendar is only as useful as the scheduling discipline in those source modules. Making sure teams are actually recording due dates and scheduled items where they belong is what keeps this calendar meaningful.</p>",
-        "definitions": [
-          {
-            "term": "Upstream scheduling",
-            "definition": "My Calendar has no configuration of its own; it reflects due dates and schedules created in other modules, so its usefulness depends on those modules being scheduled properly."
-          },
-          {
-            "term": "Setup Safety Calendar",
-            "definition": "The Project Setup → Safety sub-tab where recurring safety forms are scheduled — one of the main sources of items that appear on My Calendar."
-          },
-          {
-            "term": "Schedule Project Forms",
-            "definition": "The Project Setup → Forms sub-area where recurring or scheduled triggers are set for a form type, feeding date-driven items into the calendar."
-          }
-        ],
-        "procedures": []
-      },
-      {
         "heading": "My Calendar",
-        "intro": "<p>Construction projects run on dates — inspection windows, form due dates, scheduled logs, recurring safety checks — and when that information is scattered across a dozen modules, it's easy for a PM or field lead to miss something simply because they didn't think to check the right screen that day. My Calendar, found at <strong>Calendar Logs</strong>, exists to collect that time-bound activity into one date-driven view rather than a module-by-module one, so anyone on the project team can answer \"what's due, and when\" from a single screen.</p><p>The layout keeps navigation simple: a left-hand mini date-picker lets you move between months and years with previous/next arrows, with today always highlighted so you never lose your place, while the main panel does the heavy lifting of displaying what's scheduled. A Month/Day toggle in the top-right switches between a traditional 7-column month grid for a wide view of the calendar and an hour-by-hour day agenda for drilling into a single day's line-up of scheduled items.</p>",
+        "intro": "<p>My Calendar is the project's date view of scheduled safety forms and scheduled project forms. PMs, safety officers and field leads use it to see what is due on a given day.</p><p>Open <strong>My Calendar</strong> in the project menu (route <code>#/calendar-logs</code>, breadcrumb <strong>Calendar Logs</strong>). A <strong>Select date</strong> mini calendar sits on the left; the main calendar sits on the right with a <strong>Month | Day</strong> toggle. It is read-only: you cannot add events here.</p>",
         "definitions": [
+          {
+            "term": "Select date (mini date-picker)",
+            "definition": "The small calendar on the left. **Choose month and year** opens a year grid (2016 to 2039); **Previous month** and **Next month** move one month; click a day to select it. The main calendar follows the month you choose."
+          },
           {
             "term": "Month view",
-            "definition": "The default calendar layout — a traditional 7-column monthly grid showing scheduled items across the whole month at a glance."
+            "definition": "A 7-column grid (**SUN, MON, TUES, WED, THURS, FRI, SAT**) with the day numbers of the month. Scheduled items appear against their date."
           },
           {
             "term": "Day view",
-            "definition": "An hour-by-hour agenda for a single selected day, for when the month grid is too coarse to plan around."
+            "definition": "Switch with the **Day** toggle. Shows the items for one day, or the message **No Work Scheduled For Today** with a calendar icon when there are none."
           },
           {
-            "term": "Mini date-picker",
-            "definition": "The left-panel month/year selector with previous/next navigation arrows and the current day highlighted, used to jump the main panel to a different date."
+            "term": "Project scope",
+            "definition": "The calendar shows only the project you are in (here **Arena Steel Plant - Phase 1**). It is separate from the company-level **Calendar** module on the Home page."
+          },
+          {
+            "term": "Test project status",
+            "definition": "On Arena Steel Plant - Phase 1 every month from February to October 2026 was empty and Day view said **No Work Scheduled For Today**, because no safety calendar or scheduled form has been set up there yet (see **What Appears on My Calendar**)."
           }
         ],
         "procedures": [
           {
-            "title": "Find what's scheduled on a given day",
+            "title": "Find what is scheduled on a given day",
             "steps": [
-              "Go to <strong>Calendar Logs</strong>.",
-              "Use the left-panel mini date-picker to navigate to the month and date you need.",
-              "Toggle to <strong>Day view</strong> in the top-right for an hour-by-hour breakdown of that date, or stay in <strong>Month view</strong> for the broader picture."
+              "Open **My Calendar** from the project menu.",
+              "Use **Select date** (**Choose month and year**, **Previous month**, **Next month**) to reach the month, then click the day.",
+              "Stay in **Month** view for the whole month, or click **Day** to see that day's items."
             ]
+          }
+        ]
+      },
+      {
+        "heading": "What Appears on My Calendar",
+        "intro": "<p>My Calendar only displays schedules that someone has set up in Project Setup, so a <strong>PM</strong> or <strong>Module Admin</strong> decides what shows. If it is empty, the setup has not been done.</p><p>The two sources verified are <strong>Project Setup → Safety → Setup Safety Calendar</strong> and <strong>Project Setup → Forms → Schedule Project Forms</strong>. Field users then fill the forms in <strong>Field Works</strong>.</p>",
+        "definitions": [
+          {
+            "term": "Setup Safety Calendar",
+            "definition": "Project Setup → Safety → **Setup Safety Calendar**. Click **Create Safety Calendar Category** to open **Create Safety Calendar Category** with **Form Category Name***, **Recurrence Type** (**Daily**, **Weekly** or **Custom**), **Start Date**, **End Date**, **Time** (with AM/PM), **Remind Before** (a number of minutes, hours, days or weeks) and **Add Forms** (filter by Activities, then pick the activity forms). This project has no categories yet, which is why nothing is scheduled."
+          },
+          {
+            "term": "Schedule Project Forms",
+            "definition": "Project Setup → Forms → **Schedule Project Forms**, for a form type (for example **RFI**, **Submittal**, **Change Order**) on a plant. Two steps: **1 Prepare Schedule** (**Recurrence Type**, **Every**, weekdays, **Start Date**, **End Date**, **Time**) and **2 Assign User**."
+          },
+          {
+            "term": "Where users fill scheduled safety forms",
+            "definition": "**Field Works → Safety → Safety Calendar** (\"To log scheduled Safeties forms\") has status chips **Not Ready**, **Ready**, **In Progress**, **Completed**, a date picker and a list headed \"Safety forms for <date>\". Completed forms then show under **Completed Safety**. Event-based forms (not scheduled) are under **Safety Forms** instead and do not come from this calendar."
+          },
+          {
+            "term": "Where this data goes",
+            "definition": "Scheduled safety forms move from the calendar to **Approve Safety** (statuses **Not Ready**, **Ready to Approve**, **In Progress**, **Approved**) and **Completed Safety**, and feed **Recent Safety Logs** on **My Desk**. Schedules from **Schedule Project Forms** need users in **Forms → Assign Users**: that list has the same 35 people as **Project Setup → People → Roster → System User**."
+          },
+          {
+            "term": "Not verified",
+            "definition": "Whether tasks, work logs or meeting minutes also appear on My Calendar, and how a populated calendar looks, could not be checked because the test project has no scheduled items."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Make a recurring safety form show on the calendar",
+            "steps": [
+              "Open **Project Setup → Safety → Setup Safety Calendar** and click **Create Safety Calendar Category**.",
+              "Enter the **Form Category Name**, choose **Recurrence Type**, the dates, time and **Remind Before**.",
+              "Under **Add Forms**, filter by activities and select the forms; then add the users who must complete them.",
+              "Click **Submit**. The forms appear on **My Calendar** and in **Field Works → Safety → Safety Calendar** on their dates."
+            ],
+            "note": "Steps follow the on-screen instructions and the Create dialog; the dialog was opened and cancelled, not submitted."
           }
         ]
       }
@@ -19252,16 +19312,17 @@ const MODULES = [
     "name": "My Calendar",
     "alias": "Project Schedule View",
     "icon": "event_note",
-    "tagline": "A date-driven view of scheduled events, logs, and forms due across the project.",
+    "tagline": "A project date view of scheduled safety forms and scheduled project forms.",
     "color": "#4b6fae",
-    "overview": "<p>My Calendar is a project-scope screen at Calendar Logs that presents scheduled events, logs, and forms due across the project in a Month or Day calendar view, navigated via a mini date-picker.</p>",
+    "overview": "<p>My Calendar (<strong>Calendar Logs</strong>) shows the project's scheduled safety forms and scheduled project forms in a Month or Day view with a Select date mini calendar. It only displays schedules created in Project Setup (Setup Safety Calendar and Schedule Project Forms); users complete them in Field Works.</p>",
     "navigation": [
-      "Open a <strong>Project</strong>, then go to <strong>Calendar Logs</strong>.",
-      "Toggle between <strong>Month</strong> and <strong>Day</strong> view in the top-right of the main panel."
+      "Open a <strong>Project</strong>, then click <strong>My Calendar</strong> (Calendar Logs).",
+      "Use <strong>Select date</strong> on the left, and the <strong>Month | Day</strong> toggle on the right.",
+      "Create schedules in <strong>Project Setup → Safety → Setup Safety Calendar</strong> and <strong>Project Setup → Forms → Schedule Project Forms</strong>."
     ],
     "sections": [
-      "Admin Role",
-      "My Calendar"
+      "My Calendar",
+      "What Appears on My Calendar"
     ]
   },
   {
