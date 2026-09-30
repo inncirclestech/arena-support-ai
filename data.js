@@ -3218,6 +3218,96 @@ const QA_GLOBALDATA = [
     question: "What are Structure Template and Document Template in Document Management?",
     answer: "**Document Management** has two tabs. **Structure Template** holds folder structures (FEL - 1, FEL - 2, FEL - 3, Detailed Engineering) with **New Folder**; FEL - 1 has Civil, Mechanical, Structural, Architectural, Instrumentation and Process Controls. **Document Template** holds starter files by type (**Word**, **Excel**, **PPT**, **Text**) with **AddFile**. Projects see their documents under **Project Setup → Documents** (the test project had a FEL - 1 folder).",
     tags: ["document management tile","structure template","document template","fel folder structure","what is document management"]
+  },
+  {
+    action: "explain",
+    object: "notifications tile",
+    scope: "module",
+    section: "Notifications",
+    question: "What is the Notifications tile for and who uses it?",
+    answer: "The **Notifications** tile sets which events send notifications and on which channels (**Mail**, **Web**, **Mobile**). The **Events** tab lists 32 event groups (Timesheet, Progress, Restraints, Submittals, Work Order Invoice Payment and more); **Event Groups** holds groups of recipients (**Add Event Groups**, **Get Standard Event Groups**). The Super Admin sets it; each project has its own **Notifications** screen with the same event groups.",
+    tags: ["notifications tile","what is notifications","notification events list","event groups list"]
+  },
+  {
+    action: "explain",
+    object: "project notifications source",
+    scope: "module",
+    section: "Notifications",
+    question: "Do project notifications use the same events as Global Data?",
+    answer: "Yes, the list matches. **Project → Notifications** (Event Groups, Events, Reminders, Alerts) showed the same 32 event groups as **Global Data → Notifications → Events** on the test site. Each screen has **Reset to Standard**. Whether a change in Global Data carries into an existing project was not verified, so check the project screen after you change the global one.",
+    tags: ["project notifications","notification events project","notification not in project","global vs project notifications"]
+  },
+  {
+    action: "explain",
+    object: "marketplace tile",
+    scope: "module",
+    section: "Integrations: Marketplace & Staged Tables",
+    question: "What apps are in the Marketplace?",
+    answer: "The **Marketplace** tile has 14 cards: Microsoft OneDrive, Microsoft Sharepoint, Microsoft Outlook, Microsoft Users, Microsoft Calendar, Adobe Sign, Trimble Viewpoint, Google Maps, Inn Clock Consent, Zoom Info, Telematics, Weather Station, Trimble Viewpoint (App Xchange) and IFS. Most Microsoft cards need an administrator to grant consent once with a company-domain email.",
+    tags: ["marketplace apps","marketplace list","integrations list","what integrations are available","telematics weather station ifs"]
+  },
+  {
+    action: "explain",
+    object: "staged tables destination",
+    scope: "module",
+    section: "Integrations: Marketplace & Staged Tables",
+    question: "Where does staged data end up after I create Arena records?",
+    answer: "In the Global Data list with the same name. **Staged Tables → View Point** stages Users, Projects, Crews, Phase Codes, Customers, Vendors, Owners, Project User Mapping, Project Crew Mapping, Work Order Crew Mapping, GL Codes, Work Orders and Logs. After **Map Attributes** and **Bulk Create Arena Records** (or **Auto Sync Criteria**) the rows become records, for example Vendors in **Global Data → Vendors** and Phase Codes in **UOM, Phasecode & GL Codes**. The test site had no staged rows.",
+    tags: ["staged tables destination","where does staged data go","bulk create arena records result","staged vendors phase codes"]
+  },
+  {
+    action: "explain",
+    object: "compliance hub tile",
+    scope: "module",
+    section: "Compliance Hub",
+    question: "What is the Compliance Hub tile for and who uses it?",
+    answer: "The **Compliance Hub** tile tracks the company's required compliance items. The **Compliance Directory** defines each requirement (name, category, evidence type, required evidence, renewal frequency and period); **My Company Compliance** holds the actual records (issue date, expiry date, responsible person, evidence upload); **Settings** sets the **Expiry Alert (In Days)** and the Category / Type and Evidence Type lists. The Super Admin or a compliance lead maintains it.",
+    tags: ["compliance hub tile","what is compliance hub","compliance directory columns","compliance settings","expiry alert days"]
+  },
+  {
+    action: "explain",
+    object: "measurement templates tile",
+    scope: "module",
+    section: "Measurement Templates",
+    question: "What is the Measurement Templates tile for and where do I link a template to a work package?",
+    answer: "The **Measurement Templates** tile stores quantity formulas such as **LBD** (L, B, D, Nos; (L)*(B)*(D)*(Nos)). To use one, open **Global Data → Construction Type**, choose the construction type, and go to **Step 10 – Work Package Measurement Template Linking**, where each Activity and Work Package has a **Template** column (you can also use **Upload Excel** / **Download Excel**).",
+    tags: ["measurement templates tile","what is measurement templates","link measurement template work package","step 10 measurement","lbd template"]
+  },
+  {
+    action: "explain",
+    object: "create project dropdown sources",
+    scope: "module",
+    section: "About Global Data",
+    question: "Where do the dropdowns in Create Project come from?",
+    answer: "- **Construction Type**: Global Data → Construction Types (default = the one marked Set as Default).\n- **Owner**: Global Data → Owners.\n- **Customer**: Global Data → Customer → Customers.\n- **Project Type**, **Funding Agency**, **Implementing Agency**: Global Data → Settings → Project Form.\n- **Opportunity**: Opportunity Management (one parent opportunity on the test site).\n- **Business Unit**: expected from Global Data → Business Units (both empty on the test site).\n- **Project Location** is free text, and **Currency** is chosen on the form.",
+    tags: ["create project dropdowns","create project fields source","where do project form options come from","create project owner customer construction type"]
+  },
+  {
+    action: "get",
+    object: "data into global data",
+    scope: "module",
+    section: "About Global Data",
+    question: "How does data get into Global Data?",
+    answer: "Three ways: **manual** entry with Add / Create / Register buttons; **Excel** with **Export → Upload** (or **Download Excel / Upload Excel**, **Upload Vendors**, **Download Sample Excel** on Bid Templates, and Construction Type Step 7 Data Migration); and **sync** from Viewpoint through **Staged Tables** (Users, Projects, Crews, Phase Codes, Customers, Vendors, Owners, GL Codes, Work Orders) or from Soft Tech (Work Orders, BOQ).",
+    tags: ["how data gets into global data","how does data get into global data","get data into global data","manual excel sync global data","excel upload global data","import global data","data entry methods","bulk upload global data","data into global data","get data global data"]
+  },
+  {
+    action: "explain",
+    object: "global data lineage map",
+    scope: "module",
+    section: "About Global Data",
+    question: "Which project and Home screens use Global Data?",
+    answer: "See **Where Global Data shows up**: Owners, Customer and Construction Types feed Create Project; Users and Crews feed Project Setup → People; Phase Codes feed Project Setup → Phase Codes and timesheets; Vendors, Cost lists and Earnings Codes feed Procurement and vendor rate cards; Forms feed Project Setup → Forms; Hindrance Category feeds Field Works Restraints; Notifications feed Project Notifications. Work Order Management is the same module as Home → Work Order.",
+    tags: ["what uses global data","global data dependencies","global data lineage","where is global data used"]
+  },
+  {
+    action: "troubleshoot",
+    object: "global data entry missing",
+    scope: "module",
+    section: "About Global Data",
+    question: "Why doesn't my new Global Data entry show up in my project or dropdown?",
+    answer: "Check that it was saved, that the person or item is active, and that you are looking in the right place. Some screens link to Global Data (for example Owners, Customers, Phase Codes); others copy from it (crews come in with **Copy Crews from Global Data**); and some filter by category or group (RFQ vendors). Open the source tile, confirm the entry, then reopen the dropdown.",
+    tags: ["new entry not showing","new entry not showing in project","global data entry missing","global data missing project","dropdown missing entry","not appearing in dropdown","new global data entry project"]
   }
 ];
 
@@ -15688,14 +15778,39 @@ const MODULES = [
     "narrative": [
       {
         "heading": "About Global Data",
-        "intro": "<p>Global Data is Arena’s company-wide administration hub, used by the Super Admin / Global Admin to set up and maintain the shared company data every project and module inherits from. Global Data is the company-wide administration layer that every project, module, and user in Arena ultimately inherits from. The company profile, currency and date formats, locations, tax settings, vendor roster, user accounts and permission groups, and per-module defaults configured here are not scoped to a single project — they become the shared foundation that every new project draws on when it's created, and that every existing project continues to reference. Because of this, changes made in Global Data tend to have wide, cross-project effects, and gaps left unconfigured here (a missing tax rate, an unregistered vendor, an unset default) tend to surface later as blockers inside individual projects rather than as errors in Global Data itself.</p><p>For a first-time admin setting up a new company account, the sections below are easiest to work through roughly in setup order: Company Details and Business Units first (to establish the org's identity), then Users & Permissions (so the right people can be granted access to configure everything else), then the core reference data — Locations, Tax, Vendors & Subcontractors, UOM & Phase Codes, and Construction Types — and finally the module-specific and supporting configuration (Work Order Management, Cost & Bid Templates, Customer Settings, Settings, Forms & Quickapps, Notifications, Marketplace, Compliance Hub, Measurement Templates, and Owners). See the dedicated Admin Setup Guide module in the sidebar for the full first-time setup checklist and recommended sequencing.</p><p><strong>Who this module is for:</strong> Global Data is, first and foremost, the home of the <strong>Super Admin / Global Admin</strong> — typically one person or a very small group at a construction company (an IT lead, an ERP owner, or a senior operations executive) who is responsible for the company's shared source of truth: its vendor list, its phase codes and cost structure, its tax and location data, and its company-wide user and permission model. This is different from the <strong>PM or Module Manager</strong> personas referenced throughout the rest of this guide, who mostly live inside individual modules or individual projects — a Time Management Lead configuring phase-code mappings for their own project, or an Opportunity Management Admin running that one module's Settings. A PM or Module Manager consumes and, in some cases, locally maps or copies what Global Data provides; the Super Admin is the one who defines and maintains it in the first place. If you are looking for where to configure something that affects only your own project or department, you likely want a module- or project-level Settings screen rather than Global Data itself — but if a piece of reference data seems to be shared identically across every project (a vendor, a phase code, a unit of measure), Global Data is almost always where it actually lives.</p>",
+        "intro": "<p>Global Data is the company-wide master data of Arena. The Super Admin (Global Admin) sets it up once; Projects and the Home modules then read from it instead of keeping their own lists.</p><p>Every tile follows the same path: data comes in by hand (Add, Create, Register), by Excel (Export → Upload), or by sync from Viewpoint (Staged Tables), and then shows up in project dropdowns and module pickers. The definitions below map each tile to the screens that use it.</p>",
         "definitions": [
           {
             "term": "Global Data",
             "definition": "Arena's company-wide administration hub, covering company identity, users and permissions, reference data (locations, tax, vendors, UOM, construction types), and per-module admin configuration that every project inherits from."
+          },
+          {
+            "term": "Suggested setup order",
+            "definition": "Company Details and Business Units first, then Users & Permissions (so the right people can configure the rest), then Locations, Tax Configuration, Vendors & Sub Contractors, UOM, Phase Codes & GL Codes and Construction Types. After that set up Work Order Management, Cost and Bid Templates, Customer, Settings, Forms, Notifications, Marketplace, Compliance Hub, Measurement Templates and Owners. See the Admin Setup Guide module for the full checklist."
+          },
+          {
+            "term": "How data gets into Global Data",
+            "definition": "Three ways. **Manual:** **Add**, **Create**, **Register** buttons (Owners, Locations, Vendors, Users, Crews, Phase Codes and so on). **Excel:** the **Export** split button or **Download Excel / Upload Excel** on Owners, Locations, Users, Phase Codes, Tax Configuration, Bid Templates (**Download Sample Excel**) and **Upload Vendors**; Construction Type Step 7 (Data Migration) loads work breakdown data by Excel. **Sync:** **Staged Tables → View Point** pulls Users, Projects, Crews, Phase Codes, Customers, Vendors, Owners, GL Codes and Work Orders from Viewpoint; **Soft Tech** pulls Work Orders and BOQ."
+          },
+          {
+            "term": "Where Global Data shows up (verified links)",
+            "definition": "Checked on the test site against \"Arena Steel Plant - Phase 1\" and the Home modules:\n- **Owners** → Create Project **Owner** dropdown; **Locations** → Owners → Link Locations; **Tax Configuration** → Tax Codes on Locations and Owners.\n- **Construction Types** → Create Project **Construction Type** dropdown (default pre-selected).\n- **Customer** → Create Project **Customer** dropdown.\n- **Settings → Project Form** → Create Project **Project Type**, **Funding Agency**, **Implementing Agency**.\n- **Users / Global Rosters** → Project Setup → People → Add; **Crews** → People → Project Crews → Copy Crews from Global Data.\n- **Phase Codes** → Project Setup → Phase Codes (same 963) and timesheet Default Phase Codes (Direct and Indirect Labor codes).\n- **Vendors** → Procurement RFQ (Vendor Category, Sub Category, Category Groups) and dashboard vendor list; **Cost Material/Equipment** → vendor Rate Card rows; **Earnings Codes** → Cost Labor rate columns.\n- **Forms** → Project Setup → Forms (Assign Templates, form types); **Hindrance Category** → Field Works Restraint Category; **Sub Contractor Settings** → Sub Contractor CERTIFICATIONS.\n- **Notifications** → Project Notifications (same 32 event groups); **Work Order Management** → same module as Home → Work Order."
+          },
+          {
+            "term": "Why a new Global Data entry may not show up",
+            "definition": "Usual reasons: it was not submitted or saved; it sits in a different category, group or level than the screen filters by (for example RFQ vendors need a category and a group); the screen copies data into the project instead of linking (crews are copied with **Copy Crews from Global Data**); the person or item is inactive; or the page needs reopening. Check the source list in Global Data first, then the consuming screen."
           }
         ],
-        "procedures": []
+        "procedures": [
+          {
+            "title": "Find where a dropdown gets its values",
+            "steps": [
+              "Open the dropdown (for example <strong>Owner</strong> on <strong>Projects → Create Project</strong>) and note its values.",
+              "Open the matching tile in <strong>Global Data</strong> (Owners, Customer, Construction Types, Settings → Project Form and so on) using the map in this section.",
+              "Compare the two lists. If an entry is missing, add it in Global Data, then reopen the dropdown."
+            ]
+          }
+        ]
       },
       {
         "heading": "Company & Business Units",
@@ -17125,11 +17240,11 @@ const MODULES = [
       },
       {
         "heading": "Notifications",
-        "intro": "<p>This section covers which system events trigger notifications, on which channels, for which groups of users, configured company-wide by a Super Admin. Not every event needs to reach every person — a low-inventory alert matters to a warehouse team, not to Business Development, and flooding the wrong group with noise just trains people to ignore notifications altogether. Global Notifications lets a <strong>Global Admin</strong> configure company-wide notification behavior by functional area, deciding both what triggers an alert and who actually needs to see it, as distinct from any notification settings scoped to a single project.</p><p>Global Notifications configures which system events trigger notifications, on which channels — Mail, Web, or Mobile — and for which groups of users, at the company level (as opposed to notification settings scoped to a single project). Rather than a flat list of every notifiable event, Arena organizes them into <strong>Event Groups</strong> by functional area (Inventory Management, Equipment Management, Opportunity Management, Timesheet Management, Procurement, Work Order, and more), which makes it manageable to configure notification behavior for a whole functional area at once instead of event by event.</p><p>Each group can be assigned its own set of recipient Users, decoupling &quot;who gets notified&quot; from &quot;what triggers it.&quot; If a company's notification needs change, <strong>Get Standard Event Groups</strong> can reseed Arena's default groups, and the standalone <strong>Events</strong> tab gives a flat, module-agnostic view of every configurable event with a company-wide <strong>Reset to Standard</strong> option.</p>",
+        "intro": "<p>Use this section to decide which system events send notifications, on which channels (Mail, Web, Mobile) and to which groups of people. The Super Admin sets it company-wide.</p><p><strong>Where this data goes:</strong> each project has its own <strong>Notifications</strong> screen (Event Groups, Events, Reminders, Alerts) with the same 32 event groups as the Events tab here, so what you configure here is the starting point for projects.</p>",
         "definitions": [
           {
             "term": "Event Group",
-            "definition": "A named collection of related notification events (e.g. Inventory Management, Work Order, Bid Management), each with its own Notifications and Users configuration."
+            "definition": "A named collection of events and the users who receive them. The **Event Groups** tab has **Add Event Groups** and **Get Standard Event Groups**; it was empty on the test site, so standard groups are loaded with **Get Standard Event Groups**."
           },
           {
             "term": "Add Event Groups",
@@ -17141,7 +17256,11 @@ const MODULES = [
           },
           {
             "term": "Events tab",
-            "definition": "The master, module-agnostic list of every configurable event, with Mail/Web/Mobile toggle columns and a Reset to Standard button."
+            "definition": "The master list under **Global Data → Notifications → Events**, with columns **Events**, **Mail**, **Web** and **Mobile** and a **Reset to Standard** button. The test site has 32 event groups: AWP, Change Orders, Cost Change order, Cost Transfers, Custom Forms, Data Analytics, Document Management, Drawing Management, Estimate, Form Issues, Form Sharing, Meeting Minutes, Progress, Project Safety Forms, Punch Lists, Quality Forms, Quantity Tracksheet, Quick Apps, RFIS, Request For Informations, Restraints, Safety Issues, Safety Observations, Scheduled Safety Forms, Site Posts, Submittals, Task, Timesheet, Transmittals, Tree Version, Work Order Invoice Payment and Workflow Issues. Open a group to see its events with mail, desktop and mobile icons (for example Timesheet: Timesheet Updated, Sent For Approval, Approved, Rejected)."
+          },
+          {
+            "term": "Where notification settings come from and goes",
+            "definition": "**Comes from:** the Events tab toggles, and Event Groups you add or load here. **Goes to:** **Project → Notifications** (tabs **Event Groups**, **Events**, **Reminders**, **Alerts**), which showed the identical 32 event groups on the test project, with the same **Reset to Standard**, **Add Event Groups** and **Get Standard Event Groups** buttons. Whether a change here carries into existing projects was not verified."
           }
         ],
         "procedures": [
@@ -17163,7 +17282,8 @@ const MODULES = [
                 "caption": "The Notifications button, listing the events enabled for the group",
                 "step": 2
               }
-            ]
+            ],
+            "note": "On the test site the Event Groups tab was empty and the Events tab listed 32 groups (no Inventory Management group). Use Get Standard Event Groups first if the groups you expect are missing."
           },
           {
             "title": "Create a custom notification group",
@@ -17189,11 +17309,11 @@ const MODULES = [
       },
       {
         "heading": "Integrations: Marketplace & Staged Tables",
-        "intro": "<p>This section covers connecting Arena to outside systems (Microsoft 365, Trimble Viewpoint/Vista, Adobe Sign, and more) and mapping the data that flows in from them, set up by a Super Admin. Most construction companies already run some of their business on other systems — email in Outlook, documents in SharePoint, accounting in an ERP like Trimble Viewpoint — and re-keying that data into Arena by hand is both wasted effort and a source of errors. Marketplace and Staged Tables are <strong>Global Admin</strong> territory almost by definition: connecting a third-party system, granting organization-wide consent, and reviewing incoming synced data before it becomes a permanent Arena record are all company-wide, one-time (or admin-scheduled) responsibilities, not something a Project Manager or End User would ever configure themselves.</p><p>Marketplace is the company-wide integrations hub connecting Arena to third-party services — Microsoft OneDrive, Sharepoint, Outlook, Calendar, and Users, Adobe Sign, Trimble Viewpoint, Google Maps, Zoom Info, and IFS. Most integrations follow the same pattern: an admin grants organization-wide OAuth consent once (using a company-domain email — personal accounts cannot connect), and every user benefits without individually authorizing anything themselves. Individual users can still optionally connect their own mailbox later via My Profile → Settings for finer-grained routing; until they do, mail/calendar/document actions on their behalf simply fall back to routing through the Admin Account.</p><p><strong>Trimble Viewpoint</strong> is more involved than the Microsoft integrations, since it's a full ERP connection rather than a simple OAuth login: it requires connection credentials, per-module Table Name/Schema Name mapping, and — once configured — each module gets linked to a Stage and Primary Key column, feeding directly into <strong>Staged Tables</strong>. Staged Tables is the operational counterpart to Marketplace's setup screens: it's the holding area where data pulled in from Trimble Viewpoint (which many teams call <strong>Vista</strong>) or from Soft Tech sits before it becomes real Arena records. This step lets an admin check and map incoming data before it becomes a permanent Arena record, either on a schedule via Auto Sync Criteria, or on demand with Bulk Create.</p><p>In practice, Vista stays the system of record for employees, crews, phase codes, GL codes, projects, customers, vendors and work orders, and Arena pulls those masters in so timesheets, crews and cost tracking in the field line up with what payroll and accounting already use.</p>",
+        "intro": "<p>Use this section to connect Arena to outside systems (Microsoft 365, Adobe Sign, Trimble Viewpoint, Soft Tech and more) and to review data pulled in from them. The Super Admin sets it up.</p><p><strong>Where this data goes:</strong> Staged Tables hold the rows first; once mapped and created, they become records in the matching Global Data lists (Users, Crews, Phase Codes, GL Codes, Customers, Vendors, Owners) and in Projects and Work Orders. Outlook choices here feed <strong>Settings → Mail Settings</strong>.</p>",
         "definitions": [
           {
             "term": "Marketplace",
-            "definition": "The grid of third-party integration cards (Microsoft OneDrive, Sharepoint, Outlook, Users, Calendar, Adobe Sign, Trimble Viewpoint, Google Maps, Inn Clock Consent, Zoom Info, IFS)."
+            "definition": "The grid of integration cards at **Global Data → Marketplace**, with a search box. The test site has 14: **Microsoft OneDrive**, **Microsoft Sharepoint**, **Microsoft Outlook**, **Microsoft Users**, **Microsoft Calendar**, **Adobe Sign**, **Trimble Viewpoint**, **Google Maps**, **Inn Clock Consent**, **Zoom Info**, **Telematics**, **Weather Station**, **Trimble Viewpoint (App Xchange)** and **IFS**."
           },
           {
             "term": "Org-wide consent",
@@ -17226,6 +17346,10 @@ const MODULES = [
           {
             "term": "Soft Tech",
             "definition": "A second, separate staging source with no Marketplace card. It covers only <strong>Work Orders</strong> (pulled with <strong>Get Data From SoftTech</strong> and <strong>Sync</strong>) and <strong>BOQ</strong> (Excel upload and download). It has no Map Attributes, Auto Sync or Bulk Create options."
+          },
+          {
+            "term": "Where integration data comes from and goes",
+            "definition": "**Comes from:** the connection you set up on a Marketplace card (consent or credentials) and, for Viewpoint, the table and schema names you map. **Goes to:** (1) **Staged Tables → View Point** (13 entities: Users, Projects, Crews, Phase Codes, Customers, Vendors, Owners, Project User Mapping, Project Crew Mapping, Work Order Crew Mapping, GL Codes, Work Orders, Logs) and **Soft Tech** (Projects, Work Orders, BOQ), then through **Map Attributes** and **Bulk Create Arena Records** or **Auto Sync Criteria** into the Global Data lists of the same names. (2) **Settings → Mail Settings**, where Outlook becomes available per module. (3) **Adobe Sign Settings** and the Inn Clock import on timesheets use their cards. The test site's Staged Tables were empty (\"No Data Available\")."
           }
         ],
         "procedures": [
@@ -17403,19 +17527,27 @@ const MODULES = [
       },
       {
         "heading": "Compliance Hub",
-        "intro": "<p>This section covers defining required compliance documents and tracking the company’s actual status against them, maintained by a Super Admin or compliance lead. An expired insurance certificate or a lapsed safety license discovered mid-project is a real liability for a construction company — the kind of gap that should be caught proactively, not the day an auditor or an owner's rep asks for proof. Compliance Hub gives a <strong>Global Admin or a compliance-focused Module Manager</strong> a company-wide way to define what's required and track real status against it, so the answer to \"are we covered\" is a quick glance at a status chip rather than a scramble through paper files.</p><p>Compliance Hub tracks the company's required compliance documentation — licenses, certifications, insurance, and similar items — through a simple two-step model: first define what's required, then track actual status against that requirement. The <strong>Compliance Directory</strong> is where a requirement is defined (its name, category, how often it needs renewal, and what evidence must be provided), while <strong>My Company Compliance</strong> shows the company's real submitted records measured against those defined requirements. Splitting definition from tracked status this way means the same requirement can be checked against multiple time periods or renewal cycles without redefining it each time, and status chips (Met, Expired, Expiring Soon, Missing) give an at-a-glance read on where the company stands.</p>",
+        "intro": "<p>Use the Compliance Hub to define the compliance items the company must hold (licences, certificates, insurance) and track the company's actual status against them. A Super Admin or compliance lead maintains it.</p><p><strong>Where this data goes:</strong> requirements defined in the <strong>Compliance Directory</strong> are tracked under <strong>My Company Compliance</strong>, and the expiry warning period is set under <strong>Settings</strong>. The test site had no compliance items yet.</p>",
         "definitions": [
           {
             "term": "Compliance Directory",
-            "definition": "Defines the types of compliance required — Compliance Name, Description, Category/Type, Renewal Frequency, Renewal Period, Evidence Type, and Required Evidence (a file upload)."
+            "definition": "Defines what is required. Buttons **Create**, **Export**, **Manage Columns** and save layout; counters **Met**, **Expired**, **Expiring Soon** and **Missing**; columns **Compliance ID**, **Compliance Name**, **Compliance Description**, **Category / Type**, **Evidence Type**, **Required Evidence**, **Renewal Frequency**, **Renewal Period**, **Sources**, **Status**, **Created By**, **Created Date**, **Inactive/Active** and **Actions**."
           },
           {
             "term": "My Company Compliance",
-            "definition": "The company's actual submitted/tracked compliance records against the Directory's defined requirements, including a Source column."
+            "definition": "Tracks the company's actual records. Counters **Met**, **Expired**, **Expiring Soon**; columns **Compliance ID**, **Compliance Name**, **Compliance Description**, **Category / Type**, **Evidence Type**, **Sources**, **Status**, **Renewal Frequency**, **Renewal Period**, **Required Evidence**, **Issue Date**, **Expiry Date**, **Last Verified Date**, **Responsible Person**, **Evidence Upload**, **Remarks/Notes**, **Created By**, **Created Date** and **Actions**; **Create**, **Export**, **Manage Columns**."
           },
           {
             "term": "Status chips (Met / Expired / Expiring Soon / Missing)",
             "definition": "Counter chips summarizing how many compliance items fall into each status."
+          },
+          {
+            "term": "Compliance Settings",
+            "definition": "The **Settings** tab has a left menu with **Compliance Expiry**, **Category / Type** and **Evidence Type**. **Compliance Expiry** has **Expiry Alert (In Days)** (\"Set customizable expiry threshold for upcoming compliances\") and **Save Changes**. Category / Type and Evidence Type are the lists used in the Directory."
+          },
+          {
+            "term": "Where compliance data comes from and goes",
+            "definition": "**Comes from:** **Create** on the Directory (the requirement) and **Create** on My Company Compliance (the record with issue date, expiry date, responsible person and evidence). **Goes to:** the status counters (Met, Expired, Expiring Soon, Missing) on both tabs, driven by the expiry threshold in Settings."
           }
         ],
         "procedures": [
@@ -17431,11 +17563,11 @@ const MODULES = [
       },
       {
         "heading": "Measurement Templates",
-        "intro": "<p>This section covers building reusable quantity take-off formulas that field teams use when logging progress, set up by a Super Admin and linked to Work Packages. Manual quantity take-off math done by hand in the field — multiplying a length by a breadth by a depth to get a volume — is slow and is exactly the kind of place a transposed digit turns into a real reporting error. Measurement Templates lets a <strong>Global Admin or Estimating Module Manager</strong> build the formula once, centrally, so that a <strong>field End User</strong> logging progress later just enters the raw dimensions and lets Arena compute the quantity automatically.</p><p>Measurement Templates defines reusable quantity take-off formulas — for example, Length × Breadth × Depth × Count — that eliminate manual arithmetic when a field team logs progress. Rather than someone in the field calculating a volume or area by hand and typing in the result, a Measurement Template lets them enter the raw dimensions and have Arena compute the quantity automatically, reducing both effort and the chance of calculation errors. Once built, a template becomes genuinely useful only after it's linked to a Work Package (via Step 10 of the Construction Type pipeline), which is what makes the calculator actually appear when someone logs progress against that work package in the field.</p>",
+        "intro": "<p>Use Measurement Templates to build reusable quantity formulas (for example length × breadth × depth × number) so field teams do not calculate quantities by hand. A Super Admin sets them up.</p><p><strong>Where this data goes:</strong> a template is attached to a work package on <strong>Construction Type → Step 10 (Work Package Measurement Template Linking)</strong>, which lists each <strong>Activity</strong> and <strong>Work Package</strong> with a <strong>Template</strong> column.</p>",
         "definitions": [
           {
             "term": "Measurement Template",
-            "definition": "A reusable quantity take-off formula (e.g. Length × Breadth × Depth × Count) with named Parameters and a Formula expression referencing them, downloadable/manageable via Download Excel."
+            "definition": "A saved formula with its fields. **Global Data → Measurement Templates** has **Add Template** and **Download Excel**, and a table with **Template ID**, **Template Name**, **Fields**, **Formula** and **Actions** (edit, delete). The test site has one template, **LBD** (fields L, B, D, Nos; formula (L)*(B)*(D)*(Nos))."
           },
           {
             "term": "Parameters",
@@ -17444,6 +17576,10 @@ const MODULES = [
           {
             "term": "Formula",
             "definition": "A free-text expression referencing a template's parameters by position (e.g. [1]*[2]*[3]*[4], or the helper example [1] * [3] or [1] * [2] / [3])."
+          },
+          {
+            "term": "Where measurement template data comes from and goes",
+            "definition": "**Comes from:** **Add Template**. **Goes to:** Step 10 of the Construction Type pipeline (**Global Data → Construction Type → Work Package Measurement Template Linking**: **Upload Excel**, **Download Excel**, search, and the columns Activity, Work Package, Description, Template), which ties a template to each work package. It was empty for the Metro type on the test site."
           }
         ],
         "procedures": [
