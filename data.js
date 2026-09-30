@@ -5163,6 +5163,42 @@ const QA_PROJECTSETUP = [
     question: "Where does GIS data come from and where does it go?",
     answer: "GIS files are uploaded by the project team with **Upload GIS Document** (Name, then Submit); nothing is fed from Global Data. The tab lists uploaded documents (\"There are no GIS Documents\" until one is added).",
     tags: ["gis source","gis lineage","gis data source"]
+  },
+  {
+    action: "get",
+    object: "project setup lineage map",
+    scope: "module",
+    section: "Overview",
+    question: "Which Global Data lists feed which Project Setup tabs?",
+    answer: "Works: Construction Types (structure types, work packages, activity sequence templates) and Settings (project status and form options). People: Global Rosters and Crews. Estimate: Cost types and templates, UOM, Phase Codes, Vendors. Phase Codes: UOM, Phasecode & GL Codes. Quality and Safety: Construction Types forms. Drawings: Activities and Drawing Management Forms. Documents: Structure and Document Templates. Workorder: Vendors and Workorder Forms. Forms: Forms templates.",
+    tags: ["project setup lineage","global data feeds project setup","which global data feeds project setup","project setup data sources","project setup dependencies"]
+  },
+  {
+    action: "get",
+    object: "project setup order",
+    scope: "module",
+    section: "Overview",
+    question: "In what order should I set up a new project?",
+    answer: "Works first, then People, then Phase Codes mapping and Project Settings, then Forms, Quality and Safety, then Drawings and Documents, then Estimate and Schedule, and finally Workorder, BIM and GIS as needed.",
+    tags: ["project setup order","set up new project steps","project setup sequence","new project setup checklist"]
+  },
+  {
+    action: "get",
+    object: "project setup feeds",
+    scope: "module",
+    section: "Overview",
+    question: "Where does Project Setup data show up in the rest of the project?",
+    answer: "Works plants appear on **My Desk**, Field Works and every plant selector; People feed all user pickers; Phase Codes feed Time Management; Forms, Quality and Safety drive what field users see; Safety Calendar and Schedule Project Forms feed **My Calendar**; Estimate and Schedule feed Data Analytics.",
+    tags: ["project setup feeds","where project setup data shows","project setup downstream","project setup lineage goes"]
+  },
+  {
+    action: "troubleshoot",
+    object: "project setup item missing",
+    scope: "module",
+    section: "Overview",
+    question: "Why is something I expect missing from a dropdown in Project Setup?",
+    answer: "Most dropdowns read from Global Data (vendors, crews, phase codes, templates, cost types, activities) or from the project roster. Check the source list exists and is active, then reopen the screen. The **Lineage map** in this module lists each source.",
+    tags: ["dropdown missing project setup","item missing project setup","why not showing project setup","missing option project setup"]
   }
 ];
 
@@ -19989,22 +20025,48 @@ const MODULES = [
     "narrative": [
       {
         "heading": "Overview",
-        "intro": "<p>Project Setup is the most extensive configuration space in Arena, and it exists because a construction project cannot run safely, on schedule, or on budget if its foundational structure is improvised as work goes along. Before a foreman can log productivity, a QA/QC inspector can submit a checklist, or a safety officer can complete an inspection, someone — almost always a <strong>PM / Module Manager</strong> or a <strong>Module Admin</strong> with setup rights — has to establish what the project's work actually consists of, who is on it, what it's expected to cost, when it's supposed to happen, and exactly which forms, approvals, and documents govern it. Project Setup is where all of that happens, spread across fourteen tabs: Works, Tasks, People, Estimate, Schedule, Phase Codes, Quality, Safety, Drawings, Documents, Workorder, Forms, BIM, and GIS.</p><p>The tabs aren't arbitrary — they roughly follow the order a new project actually gets built out in. Works comes first because it defines the plants/work packages everything else (Estimate, Schedule, Phase Codes) is organized against. People establishes who's on the job. Estimate and Schedule turn that structure into a budget and a timeline. Phase Codes controls what field staff see when logging time. Quality, Safety, Drawings, Documents, Workorder, and Forms are where the templates, workflows, and permissions that will govern day-to-day Field Works activity get configured in advance, so that by the time end users open the app in the field, the forms, approval chains, and document structures they need are already waiting for them rather than being built reactively. BIM and GIS round out the module as the setup areas for 3D models and geospatial/map documents respectively.</p><p>A recurring theme worth flagging up front: several tabs in this module are setup mirrors of a corresponding execution screen inside Field Works — Safety Setup vs. Field Works → Safety, the setup-side Workorder vs. the execution-side Workorder tab, and Project Forms setup vs. the individual form logs end users fill out. Project Setup is consistently the \"before\" side — defining categories, permissions, and workflows — while Field Works is the \"during\" side where the actual day-to-day work happens against that configuration.</p>",
+        "intro": "<p>Project Setup is where a <strong>PM</strong> or <strong>Module Admin</strong> builds a project's structure, people, budget, schedule, forms and document areas before field teams start work. Field Works, My Desk, My Calendar and Data Analytics all read what you set up here.</p><p>It has fourteen tabs: <strong>Works</strong>, <strong>Tasks</strong>, <strong>People</strong>, <strong>Estimate</strong>, <strong>Schedule</strong>, <strong>Phase Codes</strong>, <strong>Quality</strong>, <strong>Safety</strong>, <strong>Drawings</strong>, <strong>Documents</strong>, <strong>Workorder</strong>, <strong>Forms</strong>, <strong>BIM</strong> and <strong>GIS</strong>. Most lists and dropdowns are filled from Global Data, so if something is missing, check Global Data first.</p>",
         "definitions": [
           {
             "term": "Project Setup tab bar",
-            "definition": "The 14-tab, horizontally scrollable bar covering Works, Tasks, People, Estimate, Schedule, Phase Codes, Quality, Safety, Drawings, Documents, Workorder, Forms, BIM, and GIS — the full configuration surface for a project."
+            "definition": "The 14 tabs in order: Works, Tasks, People, Estimate, Schedule, Phase Codes, Quality, Safety, Drawings, Documents, Workorder, Forms, BIM, GIS. Routes start with #/project-setup/."
           },
           {
             "term": "Setup versus execution",
-            "definition": "Project Setup defines structure, people, budget, schedule, templates, and workflows; Field Works is where teams log real work against them. Almost anything missing in the field is missing here first."
+            "definition": "Project Setup defines structure, people, budget, schedule, templates and workflows; **Field Works** is where teams log real work against them. Almost anything missing in the field is missing here first."
           },
           {
             "term": "Global Data relationship",
-            "definition": "Global Data holds the company-wide master data and skeletons (phase codes, crews, construction types, form templates); Project Setup is where a project maps to, copies from, or builds on that shared layer."
+            "definition": "Global Data holds the company master data; Project Setup chooses from it or copies it. It does not keep a separate copy of most lists. The map below shows which Global Data list feeds which tab."
+          },
+          {
+            "term": "Lineage map: what comes from Global Data",
+            "definition": "**Works**: Construction Type, Status, Project/Funding/Implementing Agency (Settings) on the identity panel; Entity, Super Location and Location types, Work Packages, Activity Sequence templates (Construction Types). **People**: Global Rosters (system and non system) and Crews. **Estimate**: Cost types and their templates (Cost), UOM, Phase Codes, Vendors and Sub Contractors (Resource Planning). **Phase Codes**: the 963 UOM, Phasecode & GL Codes list. **Quality, Safety**: Quality Forms and Safety Forms (Construction Types). **Drawings**: Activities, Drawing Management Forms. **Documents**: Structure Template and Document Template (Document Management). **Workorder**: Vendors and Sub Contractors, Workorder Forms. **Forms**: Forms templates and categories."
+          },
+          {
+            "term": "Lineage map: what each tab feeds",
+            "definition": "**Works** feeds the plants on My Desk, every Field Works plant list, Estimate, Schedule, Drawings and the plant selectors. **People** feeds every user picker (Forms Assign Users, workflow approvers, Drawing package team, Pending Actions, Create Crew). **Phase Codes** feeds Time Management and equipment logs. **Forms**, **Safety** and **Quality** feed what field users see in Field Works and My Desk Actions. **Safety Calendar** and **Schedule Project Forms** feed My Calendar. **Estimate** and **Schedule** feed cost and planned-versus-actual views in Data Analytics."
+          },
+          {
+            "term": "Project Settings that change these tabs",
+            "definition": "**Phase Code Settings** (Unique or Multiple-Use codes), **Configure Task Form** (Tasks), **Cost Breakdown Structure** (Estimate: CBS level, Level of Detail, Estimate Type, approval workflow), **Drawing Status** (Drawing Register), **Work Logs Templates** and **Quality Work Logs Templates** (how work logs look in Field Works), **My Desk** and **My Desk Dashboards** (My Desk). See the **Project Settings** module."
+          },
+          {
+            "term": "Suggested setup order",
+            "definition": "1) Works (plants, entities, locations, work packages, Assign Percentage). 2) People (roster, crews). 3) Phase Codes mapping and Project Settings. 4) Forms (users, approval, templates) and Quality/Safety folders, workflows and calendar. 5) Drawings and Documents. 6) Estimate and Schedule. 7) Workorder, BIM, GIS as needed."
           }
         ],
-        "procedures": [],
+        "procedures": [
+          {
+            "title": "Trace why something is missing from a Project Setup list",
+            "steps": [
+              "Note which dropdown or list is missing the item (for example Vendors in Create Workorder, Phase Codes, Forms templates).",
+              "Use the **Lineage map** to find the Global Data list that feeds it, open that list and confirm the item exists and is active.",
+              "If the list copies from Global Data (for example Crews), use the copy button again; if it links (Phase Codes), reopen the screen.",
+              "If it exists but still does not show, check the Project Settings page for that tab and the user's permissions."
+            ]
+          }
+        ],
         "images": [
           {
             "src": "assets/notion/how-to-create-projects/001.jpg",
