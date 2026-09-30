@@ -4459,8 +4459,8 @@ const QA_PROJECTSETUP = [
     scope: "project",
     section: "Workorder",
     question: "Where do I set up work orders issued to contractors or vendors?",
-    answer: "Go to Project Setup → Workorder and click Create. Use Filters to narrow the table view. This is the setup area for work orders issued to contractors/vendors, and is distinct from the execution-side Workorder tab inside Field Works, where day-to-day work order activity is tracked — that is documented separately.",
-    tags: ["work order setup","create work order","contractor work orders"]
+    answer: "Go to **Project Setup → Workorder** and click **Create**. Fill **Workorder Name**, **Select Contractor** (from Global Data vendors and sub contractors), **Actuals Derived From** (Work Logs, RFIs or Service Entry Sheets), **Tree Version** and the dates, then **Submit**. Use **Filters** on the list. Progress and invoices are tracked under **Field Works → Workorder** and the **Work Order** module.",
+    tags: ["create work order project","project setup workorder","contractor work order","workorder setup"]
   },
   {
     action: "configure",
@@ -4468,8 +4468,8 @@ const QA_PROJECTSETUP = [
     scope: "project",
     section: "Forms",
     question: "How is the Forms setup area structured — what are the levels of navigation?",
-    answer: "Project Setup → Forms uses a three-level nested navigation. Level 1 is a horizontally scrollable row of form categories (examples include Construction Forms, Workorder, Project Forms, Laboratory Test Results, Field Test Results, Correspondence Details, Contractor Onboarding, Test Reports, Procurement Forms, Checklists, Quality, Permit to work, Near Miss, Observations, Non Conformance, and Inspections, among others — organization-defined, so the exact list varies by company). Level 2, within a chosen category, offers Assign Users, Approval Workflow, Schedule Project Forms, and Assign Templates. Level 3 is a left-rail list of the individual form types inside that category (for example, under Construction Forms: RFI, Submittal, Change Order, Delay Form, Request for Information, Transmittal).",
-    tags: ["forms structure","form categories","three level navigation","construction forms"]
+    answer: "Across the top are form categories (**Construction Forms**, **Workorder**, **Project Forms** and the Project Form categories from Global Data). On the left are the form types of that category (for example RFI, Submittal, Change Order). The main area has tabs: **Assign Users** (View/Create/Edit/Delete per user per plant), **Approval Workflow**, **Schedule Project Forms** (not for Workorder) and **Assign Templates**.",
+    tags: ["forms setup levels","forms structure","form categories","project setup forms navigation"]
   },
   {
     action: "configure",
@@ -4477,8 +4477,8 @@ const QA_PROJECTSETUP = [
     scope: "project",
     section: "Forms",
     question: "How do I control who can view, create, edit, or delete a specific form type on each plant?",
-    answer: "Within a form category in Project Setup → Forms, open Assign Users (Level 2), then select the specific form type from the Level 3 left rail (for example RFI under Construction Forms). Assign Users shows a per-work-package (plant) permission grid, letting a Module Admin set View/Create/Edit/Delete rights per user for that form type, separately for each plant. This lets the same form type carry different permission rules across different parts of a large project.",
-    tags: ["assign users forms","form permissions","view create edit delete","per plant permissions"]
+    answer: "Open **Project Setup → Forms**, pick the category and form type, choose the plant in the selector on **Assign Users**, tick **View**, **Create**, **Edit** and **Delete** for each user and click **Submit**. Repeat per plant; **Copy Users** (Project Forms) reuses a user set.",
+    tags: ["form permissions plant","assign users forms","view create edit delete form","form type permissions"]
   },
   {
     action: "configure",
@@ -4486,8 +4486,8 @@ const QA_PROJECTSETUP = [
     scope: "project",
     section: "Forms",
     question: "How do I set an approval chain or a recurring schedule for a form type?",
-    answer: "Within a form category in Project Setup → Forms, use Approval Workflow (Level 2) to define the sign-off chain a submitted form of the selected type must pass through, and Schedule Project Forms to set up recurring/scheduled triggers for that form. Assign Templates lets you attach the specific template variant(s) the form type should use. All of this configuration happens before end users ever see the form in Field Works — it's what a Module Admin sets up to make sure forms behave correctly the moment they go live for the field team.",
-    tags: ["forms approval workflow","schedule project forms","assign templates","form setup"]
+    answer: "In **Project Setup → Forms**, open **Approval Workflow**, choose the form type and plant and **Create Level** (approvers come from the project roster). Open **Schedule Project Forms** for recurrence (**Recurrence Type**, weekdays, **Start Date**, **End Date**, **Time**, then **Assign User**). **Assign Templates** picks the template variant.",
+    tags: ["form approval chain","schedule project form","form workflow","recurring form"]
   },
   {
     action: "manage",
@@ -4495,8 +4495,8 @@ const QA_PROJECTSETUP = [
     scope: "project",
     section: "BIM",
     question: "Where do I upload and manage 3D BIM models for a project?",
-    answer: "Go to Project Setup → BIM and click \"Create BIM\" to add a new model. The screen lists existing BIM models on the project (for example \"Warehouse\") for upload and viewing. This is the setup area for 3D model management, giving a PM/Module Admin a place to centralize BIM assets alongside the project's 2D drawings.",
-    tags: ["BIM","create BIM","3D model","BIM viewer"]
+    answer: "Go to **Project Setup → BIM**, click **Create BIM** (enter a **Name**) and open the model card to use the viewer (**Forge View**, **BIM Connector**) with measure, section and work status tools. The test project has one model, **Warehouse**.",
+    tags: ["bim models","create bim","upload 3d model","bim viewer"]
   },
   {
     action: "manage",
@@ -4504,8 +4504,8 @@ const QA_PROJECTSETUP = [
     scope: "project",
     section: "GIS",
     question: "Where do I upload geospatial/map documents for a project?",
-    answer: "Go to Project Setup → GIS and click \"Upload GIS Document\". The screen lists uploaded GIS/map documents for the project. This is the setup area a PM/Module Admin uses to centralize geospatial reference material, useful on projects spanning large or multiple physical sites.",
-    tags: ["GIS","upload GIS document","geospatial documents","map documents"]
+    answer: "Go to **Project Setup → GIS** and click **Upload GIS Document** (dialog with **Name** and **Submit**). The test project has none yet (\"There are no GIS Documents\").",
+    tags: ["gis documents","upload gis","map documents project","geospatial"]
   },
   {
     action: "explain",
@@ -5037,6 +5037,132 @@ const QA_PROJECTSETUP = [
     question: "What are Working Documents and Documents to Approve?",
     answer: "Inside a folder, **Working Documents** lists files in progress and **Documents to Approve** lists documents sent to you for approval. Both are empty on the test project.",
     tags: ["working documents","documents to approve","approve project documents"]
+  },
+  {
+    action: "explain",
+    object: "create workorder fields",
+    scope: "module",
+    section: "Workorder",
+    question: "What fields are on the Create Workorder form and where do the options come from?",
+    answer: "**Workorder Number**, **Workorder Name***, **Workorder Description**, **Select Contractor*** (Global Data vendors and sub contractors), **Actuals Derived From*** (Work Logs, RFIs, Service Entry Sheets), **Tree Version*** (the project plants), **Start Date**, **End Date**, **Retention Percentage**, **Performance Bank Guarantee**, **Select Contact Person** (project roster), uploads and configurable fields; **Workorder Type*** (Lump Sum, Unit Rate, Guaranteed Maximum Price, Cost-Plus, Time & Material) when started from the Workorder Type card.",
+    tags: ["create workorder fields","workorder form fields","actuals derived from","select contractor workorder","workorder type options"]
+  },
+  {
+    action: "troubleshoot",
+    object: "contractor missing workorder",
+    scope: "module",
+    section: "Workorder",
+    question: "Why can't I find a contractor in Select Contractor on a work order?",
+    answer: "The list comes from **Global Data → Vendors** and **Sub Contractors**. Register the company there (and make sure it is not removed or blocked), then reopen Create Workorder.",
+    tags: ["contractor missing work order","vendor not in workorder","select contractor empty","workorder vendor list"]
+  },
+  {
+    action: "explain",
+    object: "actuals derived from",
+    scope: "module",
+    section: "Workorder",
+    question: "What does Actuals Derived From mean on a work order?",
+    answer: "It chooses what the work order's actual progress is measured from: **Work Logs**, **RFIs** or **Service Entry Sheets**.",
+    tags: ["actuals derived from","work order actuals","workorder progress source"]
+  },
+  {
+    action: "explain",
+    object: "forms approval workflow tab",
+    scope: "module",
+    section: "Forms",
+    question: "What is on the Approval Workflow tab in Project Setup → Forms?",
+    answer: "Pick the form type and plant, then **Create Level**. The table shows **Level**, **Level Description**, **Approvers**, **Workflow Type**, **SLS configured**, **Timeline Mandatory** and **Actions**. The form list includes RFI, Submittal, Change Order, Delay Form, LOR Internal, Equipment Logs, Material Logs, Manpower Logs, Invoices, Workorder, Cost Transaction Logs, Variation Order, Cost Change Orders, Cost Transfers, Field Cost Logs and Schedule.",
+    tags: ["forms approval workflow","form workflow levels","sls configured","timeline mandatory","approval workflow tab"]
+  },
+  {
+    action: "explain",
+    object: "assign templates tab",
+    scope: "module",
+    section: "Forms",
+    question: "What does Assign Templates do?",
+    answer: "It sets which template each form type uses on each plant (RFI, REQUEST FOR INFORMATION, TRANSMITTAL, SUBMITTALS, CHANGE ORDER, MEETING MINUTES, DELAY FORMS, INVOICES). Pick a template (for RFI: Standard, General, Consultants Advisory Form and so on) and **Submit**, or **Clear**.",
+    tags: ["assign templates","form templates project","rfi template project","assign template forms"]
+  },
+  {
+    action: "get",
+    object: "forms templates source",
+    scope: "module",
+    section: "Forms",
+    question: "Where do the templates and form types in Project Setup → Forms come from?",
+    answer: "From **Global Data → Forms**: the RFI choices in Assign Templates are exactly the RFI templates listed under **Global Data → Forms → Construction Forms → RFI**; the category row matches **Global Data → Forms → Project Forms**; Workorder forms match **Global Data → Forms → Workorder Forms**. Create or edit templates in Global Data, then assign them here.",
+    tags: ["form templates source","forms lineage","where do form templates come from","form types global data","rfi templates global data"]
+  },
+  {
+    action: "get",
+    object: "assign users list forms",
+    scope: "module",
+    section: "Forms",
+    question: "Where does the user list in Assign Users come from?",
+    answer: "From **Project Setup → People → Roster**: the grid shows the same 35 people (including each System Admin entry). Add people to the roster first, then set their View/Create/Edit/Delete rights here.",
+    tags: ["assign users source","assign users list","forms user list","who appears in assign users","assign users user list come from","forms permissions list source"]
+  },
+  {
+    action: "troubleshoot",
+    object: "form not visible field works",
+    scope: "module",
+    section: "Forms",
+    question: "Why can't a user see or create a form in Field Works?",
+    answer: "Check **Project Setup → Forms → Assign Users** for that form type and plant: the user needs **View** (to see) and **Create** (to raise). Also check an approval workflow and a template are assigned, and that the user is on the project roster.",
+    tags: ["form not visible","user cannot create form","no access form field works","form permission missing"]
+  },
+  {
+    action: "explain",
+    object: "copy users forms",
+    scope: "module",
+    section: "Forms",
+    question: "What does Copy Users do on a Project Forms category?",
+    answer: "It reuses the user permission set of one form on other forms in the category, so you do not tick the grid for every form one by one.",
+    tags: ["copy users","copy form permissions","copy users project forms"]
+  },
+  {
+    action: "explain",
+    object: "workorder forms category",
+    scope: "module",
+    section: "Forms",
+    question: "What forms are in the Workorder category?",
+    answer: "SERVICE ENTRY SHEET, INDENT, INDENT PLANNING APPROVAL, INDENT STORE APPROVAL, EQUIPMENT LOGS, MATERIAL LOGS and MANPOWER LOGS, with tabs **Assign Users**, **Approval Workflow** and **Assign Templates** (no scheduling).",
+    tags: ["workorder forms category","service entry sheet indent","workorder form types"]
+  },
+  {
+    action: "explain",
+    object: "bim viewer tools",
+    scope: "module",
+    section: "BIM",
+    question: "What can I do in the BIM viewer?",
+    answer: "Orbit, Pan, Zoom, First Person and **Fit to View**; **Measure** (distance, angle, spot coordinate, calibrate); **Section Analysis** (X, Y, Z planes, box); **Explode Model**; **Model Browser**; **Properties**; **Settings**; **Full Screen**; **Simulation**; and **Work Status** / **Planned Vs Actual** with date filters.",
+    tags: ["bim viewer","bim tools","measure bim","section analysis","explode model"]
+  },
+  {
+    action: "explain",
+    object: "bim work status",
+    scope: "module",
+    section: "BIM",
+    question: "What are the Work Status chips in the BIM viewer?",
+    answer: "Filters such as **WORK YET TO START (2)**, **WORK IN PROGRESS (0)** and **WORK COMPLETED (2)** (with **Apply** and **Clear**) that colour model elements by work progress. How elements are linked to work packages was not verified.",
+    tags: ["bim work status","work in progress bim","planned vs actual bim"]
+  },
+  {
+    action: "explain",
+    object: "create bim",
+    scope: "module",
+    section: "BIM",
+    question: "What do I enter to create a BIM model?",
+    answer: "Click **Create BIM**, enter the **Name** and **Submit**; then open the card to load the model in the viewer (**Forge View**, **BIM Connector**).",
+    tags: ["create bim model","bim name","add bim"]
+  },
+  {
+    action: "get",
+    object: "gis lineage",
+    scope: "module",
+    section: "GIS",
+    question: "Where does GIS data come from and where does it go?",
+    answer: "GIS files are uploaded by the project team with **Upload GIS Document** (Name, then Submit); nothing is fed from Global Data. The tab lists uploaded documents (\"There are no GIS Documents\" until one is added).",
+    tags: ["gis source","gis lineage","gis data source"]
   }
 ];
 
@@ -20907,67 +21033,85 @@ const MODULES = [
       },
       {
         "heading": "Workorder",
-        "intro": "<p>Work issued out to contractors and vendors needs to be tracked with the same discipline as internal work, starting with how the work order itself is set up. Project Setup → Workorder is the setup area for this: a Create button and Filters on the toolbar, opening onto a table view of work orders issued to contractors/vendors. A <strong>PM / Module Admin</strong> uses this tab to establish work orders before they move into active execution.</p><p>This setup-side Workorder tab is distinct from the execution-side Workorder tab inside Field Works, where day-to-day work order activity — status updates, field-level tracking — actually happens; that execution side is documented separately. As with several other tabs in this module, the pattern holds: Project Setup defines and configures, Field Works executes.</p>",
+        "intro": "<p>Workorder is where a <strong>PM</strong> or <strong>Module Admin</strong> creates work orders for contractors and vendors on this project. Progress and invoices are then tracked in <strong>Field Works → Workorder</strong>.</p><p>Open <strong>Project Setup → Workorder</strong>. The toolbar has <strong>Create</strong> and <strong>Filters</strong>. No work orders exist on Arena Steel Plant - Phase 1, so the list is empty.</p>",
         "definitions": [
           {
-            "term": "Workorder (setup side)",
-            "definition": "The Project Setup tab where work orders issued to contractors and vendors are created, with Create and Filters on its toolbar."
+            "term": "Create (Workorder)",
+            "definition": "Shows two starting cards, **Tree Version** and **Workorder Type**, then opens **Create Workorder**. Fields: **Workorder Number**, **Workorder Name***, **Workorder Description**, **Select Contractor***, **Actuals Derived From***, **Tree Version***, **Start Date**, **End Date**, **Retention Percentage**, **Performance Bank Guarantee**, **Select Contact Person**, **Upload Workorder Images**, **Upload Workorder Files** and any configurable fields (this project shows two extra fields), then **Submit**. Starting from **Workorder Type** adds **Workorder Type***."
           },
           {
-            "term": "Setup versus execution workorder",
-            "definition": "Project Setup → Workorder is where a work order is defined; Field Works → Workorder is where its day-to-day progress is tracked, and Field Works → Invoices covers the billing that follows."
+            "term": "Where the Create Workorder options come from",
+            "definition": "**Select Contractor** lists the company vendors and sub contractors from **Global Data → Vendors / Sub Contractors** (37 entries, for example United_Rentals, JJ, NRK_Industries). **Actuals Derived From** offers **Work Logs**, **RFIs** and **Service Entry Sheets**: what the work order measures progress against. **Tree Version** lists the 13 plants from **Works**. **Select Contact Person** lists the project roster (**People**). **Workorder Type** offers **Lump Sum**, **Unit Rate**, **Guaranteed Maximum Price**, **Cost-Plus** and **Time & Material**."
+          },
+          {
+            "term": "Setup versus execution",
+            "definition": "This tab defines the work order. Day-to-day status, timesheets and invoices live in the **Work Order** module (Home) and **Field Works → Workorder** and **Invoices**. **Global Data → Work Order Management** is the same module and data as Home → Work Order, and **Global Data → Forms → Workorder Forms** (Workorders, Service Entry Sheet, Indent) holds the form templates."
+          },
+          {
+            "term": "Where this data goes",
+            "definition": "Work orders appear in the **Work Order** module and **Field Works → Workorder**. The **Forms → Workorder** category here controls who can view, create or approve **SERVICE ENTRY SHEET**, **INDENT**, **EQUIPMENT LOGS**, **MATERIAL LOGS** and **MANPOWER LOGS** for the project."
           }
         ],
         "procedures": [
           {
             "title": "Create a work order",
             "steps": [
-              "Go to <strong>Project Setup → Workorder</strong>.",
-              "Click <strong>Create</strong>.",
-              "Fill in the work order details for the contractor/vendor."
+              "Go to **Project Setup → Workorder** and click **Create**.",
+              "Choose the starting card (**Tree Version** or **Workorder Type**).",
+              "Fill in **Workorder Name**, **Select Contractor**, **Actuals Derived From** and **Tree Version**, plus the dates, retention, guarantee and contact person.",
+              "Upload images or files if needed and click **Submit**."
             ],
-            "note": "Day-to-day execution and tracking of work orders happens in the separate Workorder tab inside Field Works."
+            "note": "The Create Workorder dialog was opened, not submitted."
           }
         ]
       },
       {
         "heading": "Forms",
-        "intro": "<p>Forms is the most structurally complex tab in Project Setup, and understanding its three levels of navigation is essential to using it correctly. This is where a <strong>Module Admin</strong> defines exactly which forms exist for a project, who can do what with each form type per plant, what approval chain a submitted form follows, and any scheduled/recurring form triggers — all before end users ever encounter those forms in Field Works.</p><p><strong>Level 1</strong> is a horizontally scrollable row of form categories. A verified sample environment showed roughly 25 categories, including Construction Forms, Workorder, Project Forms, Laboratory Test Results, Field Test Results, Correspondence Details, Contractor Onboarding, Test Reports, Procurement Forms, Checklists, Estimate Quantity, Equipment Productivity Planner, Site Inspection, Quality, Permit to work, Near Miss, Observations, Non Conformance, Inspections, Material Inspection Request, Non Conformance Report, and Material Approval Sheet. These categories are organization-defined, so the exact list will differ by company — a few names in the verified sample, such as \"Cypark\", \"test\", and \"Process 1\", plainly reflect ad hoc testing in that environment rather than universal categories, and shouldn't be read as standard Arena categories every project will have.</p><p><strong>Level 2</strong>, reached inside a chosen category, offers four sub-areas: Assign Users, Approval Workflow, Schedule Project Forms, and Assign Templates. <strong>Level 3</strong> is a left-rail list of the individual form types that exist inside that category — for example, under Construction Forms: RFI, Submittal, Change Order, Delay Form, Request for Information, and Transmittal. A Module Admin picks a Level 3 form type, then configures it using the Level 2 tools: Assign Users shows a per-work-package (plant) permission grid — View/Create/Edit/Delete per user — for that specific form type, meaning the same form type can carry different permission rules on different plants of the same project. Approval Workflow sets the sign-off chain a submission must pass through. Schedule Project Forms configures recurring/scheduled triggers. Assign Templates attaches the specific template variant(s) that form type should use.</p>",
+        "intro": "<p>Forms is where a <strong>Module Admin</strong> decides, for every form type and every plant, who may use it, how it is approved, when it repeats and which template it uses. Field users then see those forms in <strong>Field Works</strong>.</p><p>Open <strong>Project Setup → Forms</strong>. A row of categories runs across the top (<strong>Construction Forms</strong>, <strong>Workorder</strong>, <strong>Project Forms</strong> and your project form categories); each category lists its form types on the left and has tabs such as <strong>Assign Users</strong>, <strong>Approval Workflow</strong>, <strong>Schedule Project Forms</strong> and <strong>Assign Templates</strong>.</p>",
         "definitions": [
           {
-            "term": "Level 1 — Form Category",
-            "definition": "A horizontally scrollable row of organization-defined form categories (e.g. Construction Forms, Project Forms, Quality, Checklists) — the top level of Forms setup."
+            "term": "Level 1: Form Category",
+            "definition": "The top row: **Construction Forms**, **Workorder**, **Project Forms**, then the Project Form categories defined in **Global Data → Forms → Project Forms**: Laboratory Test Results, Field Test Results, Correspondence Details, Contractor Onboarding, Test Reports, Procurement Forms, Checklists, Estimate Quantity, Equipment Productivity Planner, Cypark, test, Site Inspection, Quality, Permit to work, Near Miss, Observations, Non Conformance, Inspections, Process 1, Material Inspection Request, NON CONFORMANCE REPORT and MATERIAL APPROVAL SHEET. The names match the Global Data list exactly."
           },
           {
-            "term": "Level 2 — Assign Users",
-            "definition": "A per-plant permission grid (View/Create/Edit/Delete per user) for the selected form type."
+            "term": "Level 3: Form Type (left list)",
+            "definition": "**Construction Forms** (6): RFI, Submittal, Change Order, Delay Form, Request for Information, Transmittal. **Workorder** (7): SERVICE ENTRY SHEET, INDENT, INDENT PLANNING APPROVAL, INDENT STORE APPROVAL, EQUIPMENT LOGS, MATERIAL LOGS, MANPOWER LOGS. A Project Form category lists its own forms (for example Laboratory Test Results has Inspection of Wet Mix Macadam (WMM), BORROW AREA / Cutting Soil, Inspection of OGL, Stripping value of Aggregate and Gradation)."
           },
           {
-            "term": "Level 2 — Approval Workflow",
-            "definition": "The sign-off chain a submitted form of the selected type must pass through."
+            "term": "Level 2: Assign Users",
+            "definition": "Pick the form type and plant (selector at top, for example **Pellet Plant (1MTPA)**); a grid lists the 35 project roster people with tick boxes **View**, **Create**, **Edit** and **Delete**. Click **Submit** to save. Project Form categories also have **Copy Users** to reuse one form's users on others. In the test project, System Admin has all four rights and Siddharth Deore has View, Create and Edit on RFI."
           },
           {
-            "term": "Level 2 — Schedule Project Forms",
-            "definition": "Recurring/scheduled trigger configuration for the selected form type."
+            "term": "Level 2: Approval Workflow",
+            "definition": "Choose the form type (RFI, Submittal, Change Order, Delay Form, LOR Internal, Equipment Logs, Material Logs, Manpower Logs, Invoices, Workorder, Cost Transaction Logs, Variation Order, Cost Change Orders, Cost Transfers, Field Cost Logs, Schedule) and plant, then **Create Level**. The table shows **Level**, **Level Description**, **Approvers**, **Workflow Type**, **SLS configured**, **Timeline Mandatory** and **Actions**. RFI on Pellet Plant has no levels yet (\"No Data Available\"). Approvers come from the project roster."
           },
           {
-            "term": "Level 2 — Assign Templates",
-            "definition": "Attaches the specific template variant(s) the selected form type should use."
+            "term": "Level 2: Schedule Project Forms",
+            "definition": "For repeating forms: **1 Prepare Schedule** (**Recurrence Type** such as Weekly, **Every**, weekdays, **Start Date**, **End Date**, **Time**) and **2 Assign User**, then **Submit**. Available for Construction Forms and Project Form categories (not Workorder). Scheduled forms show on **My Calendar**."
           },
           {
-            "term": "Level 3 — Form Type",
-            "definition": "The left-rail list of individual form types within a category (e.g. RFI, Submittal, Change Order, Delay Form, Request for Information, Transmittal under Construction Forms)."
+            "term": "Level 2: Assign Templates",
+            "definition": "Choose which template a form type uses on each plant, then **Submit** (or **Clear**). Forms (8): RFI, REQUEST FOR INFORMATION, TRANSMITTAL, SUBMITTALS, CHANGE ORDER, MEETING MINUTES, DELAY FORMS, INVOICES. For RFI the choices are Standard, General, Consultants Advisory Form, Valigonda to Thorrur, RFI, rttest (Configuration not present), Neelamangala - Tumukur RFI and 0123, exactly the RFI templates in **Global Data → Forms → Construction Forms → RFI**."
+          },
+          {
+            "term": "Where this data comes from",
+            "definition": "Form categories, form types and templates come from **Global Data → Forms** (Construction Forms, Workorder Forms, Project Forms). People come from **People → Roster**; plants from **Works**. Workflow approvers come from the same roster."
+          },
+          {
+            "term": "Where this data goes",
+            "definition": "Field Works shows a form only to users with **View** (and lets them raise it with **Create**): **Progress** cards (RFI, Meeting Minutes, Issues), **Quality**, **Safety** and **Project Forms**. Approval levels create items in **My Desk → My Actions → Approvals**; scheduled forms show on **My Calendar**; issues raised show under **Issues**."
           }
         ],
         "procedures": [
           {
             "title": "Set per-plant permissions for a form type",
             "steps": [
-              "Go to <strong>Project Setup → Forms</strong> and pick a category from the <strong>Level 1</strong> row (e.g. Construction Forms).",
-              "In the <strong>Level 3</strong> left rail, select the specific form type (e.g. RFI).",
-              "Open <strong>Assign Users</strong> (Level 2).",
-              "For each user, set View/Create/Edit/Delete rights, per plant, in the permission grid."
-            ]
+              "Go to **Project Setup → Forms** and pick a category in the top row (for example **Construction Forms**).",
+              "In the left list choose the form type (for example **RFI**) and open **Assign Users**.",
+              "Choose the plant in the selector, then tick **View**, **Create**, **Edit** and **Delete** for each user.",
+              "Click **Submit**. Repeat for other plants; use **Copy Users** (Project Forms) to reuse users."
+            ],
+            "note": "Submit was not pressed in testing."
           },
           {
             "title": "Configure a form type's approval chain, schedule, and template",
@@ -20989,49 +21133,58 @@ const MODULES = [
       },
       {
         "heading": "BIM",
-        "intro": "<p>Large industrial and infrastructure projects increasingly rely on 3D models alongside traditional 2D drawings, and those models need a managed home within the project rather than living in scattered external files. Project Setup → BIM is that home: click \"Create BIM\" to add a new model, and the screen lists existing BIM models on the project (for example \"Warehouse\" in a verified sample) for upload and viewing. A <strong>PM / Module Admin</strong> uses this tab to centralize 3D model assets alongside the project's Drawings setup, giving the wider team one place to reference both 2D and 3D representations of the same physical scope.</p>",
+        "intro": "<p>BIM is the project's home for 3D models. A <strong>PM</strong> or <strong>Module Admin</strong> creates a model entry and team members open it in a built-in 3D viewer.</p><p>Open <strong>Project Setup → BIM</strong>. <strong>Create BIM</strong> asks for a <strong>Name</strong>; existing models show as cards (for example <strong>Warehouse</strong>) with an arrow to open and an <strong>x</strong> to remove.</p>",
         "definitions": [
           {
             "term": "Create BIM",
-            "definition": "The action used to add a new 3D BIM model to the project; existing models are listed on the tab for upload and viewing."
+            "definition": "Dialog with **Name*** and **Submit**. Upload of the model file happens from the model entry."
           },
           {
-            "term": "BIM alongside 2D drawings",
-            "definition": "Centralizing BIM assets here puts the project's 3D models next to the 2D drawing library managed under the Drawings tab, so a team works from one place rather than two."
+            "term": "3D viewer",
+            "definition": "Opening a model loads a viewer with two tabs, **Forge View** and **BIM Connector**, and shows \"Downloading / Loading / Rendering / Optimising\" while it prepares. Tools include Orbit, Pan, Zoom, First Person, **Fit to View**, **Measure** (distance, angle, spot coordinate, calibrate, unit and precision), **Section Analysis** (X, Y, Z planes and box), **Explode Model**, **Model Browser**, **Properties**, **Settings** and **Full Screen**."
+          },
+          {
+            "term": "Work Status and Planned Vs Actual",
+            "definition": "The viewer has **Work Status**, **Planned Vs Actual**, **Actual Dates**, **Planned Dates**, a **Planned and Actual Dates Filter**, **Simulation** and **Go to Detailed View**. The Work Status filter shows chips such as **WORK YET TO START (2)**, **WORK IN PROGRESS (0)** and **WORK COMPLETED (2)** with **Apply** and **Clear**, so model elements are coloured by work progress. How elements are linked to work packages was not verified."
+          },
+          {
+            "term": "Where this data goes",
+            "definition": "The model status follows the progress recorded in **Field Works**. BIM sits beside **Drawings** as the 3D reference for the same work structure."
           }
         ],
         "procedures": [
           {
             "title": "Add a BIM model to the project",
             "steps": [
-              "Go to <strong>Project Setup → BIM</strong>.",
-              "Click <strong>Create BIM</strong>.",
-              "Upload the model and name it."
-            ]
+              "Go to **Project Setup → BIM** and click **Create BIM**.",
+              "Enter the **Name** and click **Submit**.",
+              "Open the new model card to load it in the viewer."
+            ],
+            "note": "The Create BIM dialog was opened, not submitted; the file upload step was not reached."
           }
         ]
       },
       {
         "heading": "GIS",
-        "intro": "<p>Projects that span large or multiple physical sites benefit from centralized geospatial reference material — maps, survey data, and similar documents that help teams orient work relative to the actual terrain rather than relying on drawings alone. Project Setup → GIS provides this: click \"Upload GIS Document\" to add one, and the screen lists uploaded GIS/map documents for the project (empty until documents are added). A <strong>PM / Module Admin</strong> maintains this tab as the project's geospatial document setup area, rounding out Project Setup's coverage of 2D drawings (Drawings), 3D models (BIM), and now map-based reference material.</p>",
+        "intro": "<p>GIS stores map and survey documents for the project. A <strong>PM</strong> or <strong>Module Admin</strong> uploads them so the team has one place for geospatial reference.</p><p>Open <strong>Project Setup → GIS</strong> and click <strong>Upload GIS Document</strong> (a dialog asks for a <strong>Name</strong>, then <strong>Submit</strong>). The test project shows \"There are no GIS Documents\".</p>",
         "definitions": [
           {
             "term": "Upload GIS Document",
-            "definition": "The action used to add geospatial or map documents to the project; uploaded documents are listed on the tab."
+            "definition": "Dialog with **Name*** and **Submit**. Documents then list on the tab."
           },
           {
-            "term": "When GIS matters",
-            "definition": "Centralized geospatial reference material is most useful on projects spanning large or multiple physical sites, where a single site plan is not enough to orient the team."
+            "term": "Where this data comes from and goes",
+            "definition": "GIS files are uploaded here by the project team; nothing is fed from Global Data. Other setup tabs (Drawings for 2D, BIM for 3D) cover the rest of the project's reference material. The Google Maps integration in **Global Data → Marketplace** and the location options in **Project Settings** are separate from this tab."
           }
         ],
         "procedures": [
           {
             "title": "Upload a GIS/map document",
             "steps": [
-              "Go to <strong>Project Setup → GIS</strong>.",
-              "Click <strong>Upload GIS Document</strong>.",
-              "Select and upload the file."
-            ]
+              "Go to **Project Setup → GIS** and click **Upload GIS Document**.",
+              "Enter the **Name** and upload the file, then click **Submit**."
+            ],
+            "note": "The dialog was opened, not submitted."
           }
         ]
       }
