@@ -6515,102 +6515,157 @@ const QA_DATAANALYTICS = [
 
 const QA_DOCUMENTREPOSITORY = [
   {
-    "action": "view",
-    "object": "document repository",
-    "scope": "project",
-    "section": "Document Repository",
-    "question": "Where do I find every generated form or record on a project in one place?",
-    "answer": "Go to <strong>Document Repository</strong>. It's a two-pane, single-page screen: the left pane lists categories (RFI, Meeting Minutes, Other Forms, Qualities Level 1, Qualities Level 2, Safety Scheduled Forms, Safety Forms, Drawings, Workorders, Invoices, Daily Progress Reports, Weekly Progress Reports), and clicking a category filters the table on the right to just that category's records.",
-    "tags": [
-      "document repository",
-      "records archive",
-      "category filter",
-      "find all project documents",
-      "where are my documents",
-      "all documents",
-      "project documents",
-      "find documents"
-    ]
+    action: "view",
+    object: "document repository",
+    scope: "project",
+    section: "Document Repository",
+    question: "Where do I find every generated form or record on a project in one place?",
+    answer: "Go to <strong>Document Repository</strong>. It's a two-pane, single-page screen: the left pane lists categories (RFI, Meeting Minutes, Other Forms, Qualities Level 1, Qualities Level 2, Safety Scheduled Forms, Safety Forms, Drawings, Workorders, Invoices, Daily Progress Reports, Weekly Progress Reports), and clicking a category filters the table on the right to just that category's records.",
+    tags: ["document repository","records archive","category filter","find all project documents","where are my documents","all documents","project documents","find documents"]
   },
   {
-    "action": "view",
-    "object": "document repository table",
-    "scope": "project",
-    "section": "Document Repository",
-    "question": "What information does the Document Repository table show for each record?",
-    "answer": "The right-pane table shows <strong>Tree Version</strong> (the plant a record belongs to), <strong>Name</strong>, <strong>Description</strong>, <strong>Added On</strong>, and an <strong>Actions</strong> column with icons to download, print, view history, or email the record.",
-    "tags": [
-      "document table",
-      "record columns",
-      "download",
-      "history"
-    ]
+    action: "view",
+    object: "document repository table",
+    scope: "project",
+    section: "Document Repository",
+    question: "What information does the Document Repository table show for each record?",
+    answer: "The table shows **Tree Version** (the plant), **Name** (the record's own number, for example WIR - 1), **Description**, **Added On** and an **Actions** column with four icons: **Download File**, **Print File**, **Access Logs** and **Email Threads**.",
+    tags: ["document table","record columns","download","history"]
   },
   {
-    "action": "view",
-    "object": "expandable categories",
-    "scope": "project",
-    "section": "Document Repository",
-    "question": "Some categories in Document Repository have an arrow next to them — what does that mean?",
-    "answer": "Categories like Other Forms, Safety Scheduled Forms, Safety Forms, Drawings, Workorders, and Invoices are expandable in the left pane, meaning they break down into sub-categories. Expand one to filter the right-pane table down to a more specific record type within that category.",
-    "tags": [
-      "expandable categories",
-      "sub-categories",
-      "category tree"
-    ]
+    action: "view",
+    object: "expandable categories",
+    scope: "project",
+    section: "Document Repository",
+    question: "Some categories in Document Repository have an arrow next to them — what does that mean?",
+    answer: "Other Forms, Safety Scheduled Forms, Safety Forms, Drawings, Workorders and Invoices are expandable and open into sub-categories built from the project's data. On Arena Steel Plant - Phase 1 only **Drawings** has one (**Walls**, the drawing package category from Project Setup → Drawings); the others expand to nothing because they have no records.",
+    tags: ["expandable categories","sub-categories","category tree"]
   },
   {
-    "action": "view",
-    "object": "search and date filter",
-    "scope": "project",
-    "section": "Document Repository",
-    "question": "How do I narrow down records in a large category like Drawings or Invoices?",
-    "answer": "The Document Repository's right pane has its own search box and a date-range filter, independent of the left-pane category list. Select a category first, then use search and the date range together to zero in on a specific record without scrolling through the entire list.",
-    "tags": [
-      "search",
-      "date range filter",
-      "find record"
-    ]
+    action: "view",
+    object: "search and date filter",
+    scope: "project",
+    section: "Document Repository",
+    question: "How do I narrow down records in a large category like Drawings or Invoices?",
+    answer: "The right pane has its own search box and a **Start date** to **End date** range, separate from the search box above the category list on the left. Select a category first, then combine search and the date range.",
+    tags: ["search","date range filter","find record"]
   },
   {
-    "action": "view",
-    "object": "difference from Project Setup documents",
-    "scope": "project",
-    "section": "Document Repository",
-    "question": "Is Document Repository the same thing as Project Setup > Documents?",
-    "answer": "No. Document Repository is a centralized, read-only-style registry of every generated form or record across the project's modules (RFIs, meeting minutes, quality forms, safety forms, drawings, workorders, invoices, and progress reports), organized as the project's single source of truth archive. <strong>Project Setup → Documents</strong> is a separate general-purpose file/folder manager, and <strong>Project Setup → Drawings</strong> covers drawing-specific workflows — both are documented in their own modules.",
-    "tags": [
-      "document repository vs documents",
-      "project setup",
-      "drawings workflow"
-    ]
+    action: "view",
+    object: "difference from Project Setup documents",
+    scope: "project",
+    section: "Document Repository",
+    question: "Is Document Repository the same thing as Project Setup > Documents?",
+    answer: "No. Document Repository is a centralized, read-only-style registry of every generated form or record across the project's modules (RFIs, meeting minutes, quality forms, safety forms, drawings, workorders, invoices, and progress reports), organized as the project's single source of truth archive. <strong>Project Setup → Documents</strong> is a separate general-purpose file/folder manager, and <strong>Project Setup → Drawings</strong> covers drawing-specific workflows — both are documented in their own modules.",
+    tags: ["document repository vs documents","project setup","drawings workflow"]
   },
   {
-    "action": "view",
-    "object": "record history and email",
-    "scope": "project",
-    "section": "Document Repository",
-    "question": "Can I email a record straight from the Document Repository, or check when it changed?",
-    "answer": "Yes. Each row's Actions column includes icons for download, print, history, and email — click the email icon to send that record out directly, or the history icon to review its revision trail, without leaving the Document Repository screen.",
-    "tags": [
-      "email record",
-      "record history",
-      "actions column"
-    ]
+    action: "view",
+    object: "record history and email",
+    scope: "project",
+    section: "Document Repository",
+    question: "Can I email a record from the Document Repository, or check who opened it?",
+    answer: "The email icon (**Email Threads**) opens the email conversations tied to the record; on the test project it says \"No Conversation has been started\" and has no send box, so it is a view of conversations, not a send form. The history icon (**Access Logs**) lists who opened the record, with IP address, operating system and browser; it is an access log, not a revision trail.",
+    tags: ["email record","email threads","record history","actions column","access logs","can i email a record"]
   },
   {
-    "action": "view",
-    "object": "document repository category list",
-    "scope": "project",
-    "section": "Document Repository",
-    "question": "Which record categories can I filter by in the Document Repository?",
-    "answer": "The left pane lists <strong>RFI</strong>, <strong>Meeting Minutes</strong>, <strong>Other Forms</strong>, <strong>Qualities Level 1</strong>, <strong>Qualities Level 2</strong>, <strong>Safety Scheduled Forms</strong>, <strong>Safety Forms</strong>, <strong>Drawings</strong>, <strong>Workorders</strong>, <strong>Invoices</strong>, <strong>Daily Progress Reports</strong>, and <strong>Weekly Progress Reports</strong>. Other Forms, Safety Scheduled Forms, Safety Forms, Drawings, Workorders, and Invoices are expandable into sub-categories for narrower filtering.",
-    "tags": [
-      "repository categories",
-      "category list",
-      "filter categories",
-      "expandable"
-    ]
+    action: "view",
+    object: "document repository category list",
+    scope: "project",
+    section: "Document Repository",
+    question: "Which record categories can I filter by in the Document Repository?",
+    answer: "The left pane lists <strong>RFI</strong>, <strong>Meeting Minutes</strong>, <strong>Other Forms</strong>, <strong>Qualities Level 1</strong>, <strong>Qualities Level 2</strong>, <strong>Safety Scheduled Forms</strong>, <strong>Safety Forms</strong>, <strong>Drawings</strong>, <strong>Workorders</strong>, <strong>Invoices</strong>, <strong>Daily Progress Reports</strong>, and <strong>Weekly Progress Reports</strong>. Other Forms, Safety Scheduled Forms, Safety Forms, Drawings, Workorders, and Invoices are expandable into sub-categories for narrower filtering.",
+    tags: ["repository categories","category list","filter categories","expandable"]
+  },
+  {
+    action: "view",
+    object: "document repository row actions",
+    scope: "project",
+    section: "Document Repository",
+    question: "What do the four icons in the Document Repository Actions column do?",
+    answer: "**Download File** and **Print File** export or print the record. The history icon opens **Access Logs** (S.No., Name, Accessed On, User IP, Operating System, Browser). The email icon opens **Email Threads**, which lists email conversations about the record (\"No Conversation has been started\" when there are none).",
+    tags: ["actions column icons","access logs","email threads","download file","print file","what does the history icon do","document repository actions","who opened a record"]
+  },
+  {
+    action: "view",
+    object: "document repository row actions",
+    scope: "project",
+    section: "Document Repository",
+    question: "How do I see who opened a document in the Document Repository?",
+    answer: "Click the history icon on its row. The **Access Logs** dialog lists each access with Name, Accessed On, User IP, Operating System and Browser. It shows \"No Data Available\" if nobody has opened the record.",
+    tags: ["access logs","who opened document","document history","audit trail","who viewed record","user ip"]
+  },
+  {
+    action: "view",
+    object: "document repository records source",
+    scope: "project",
+    section: "Document Repository",
+    question: "Can I upload a file to the Document Repository or edit a record there?",
+    answer: "No. It has no upload, create or edit button. Records come from the module that produced them (RFIs from Field Works → RFI, drawings from Project Setup → Drawings, and so on); fix or add them there.",
+    tags: ["upload to document repository","upload a file","upload file document repository","edit record","add document","document repository read only","cannot upload"]
+  },
+  {
+    action: "view",
+    object: "document repository records source",
+    scope: "project",
+    section: "Where Records Come From",
+    question: "Where do the records in the Document Repository come from?",
+    answer: "Each category is fed by one module: RFI by Field Works → Progress → RFI, Meeting Minutes by Progress → Meeting Minutes, Other Forms by Field Works → Project Forms, Qualities Level 1 and 2 by Field Works → Quality, Safety Scheduled Forms and Safety Forms by Field Works → Safety, Drawings by Project Setup → Drawings, Workorders by Project Setup/Field Works Workorder, Invoices by Field Works → Invoices, and the two Progress Reports folders by Data Analytics → Standard Reports. Verified live for RFI: the three WIRs here are the three RFIs in Field Works.",
+    tags: ["where do documents come from","document repository source","what feeds the document repository","category source","where do records come from","how do records get into the document repository","document repository lineage"]
+  },
+  {
+    action: "view",
+    object: "document repository records source",
+    scope: "project",
+    section: "Where Records Come From",
+    question: "Why is a Document Repository category empty?",
+    answer: "Because the source module has no record of that kind yet. On Arena Steel Plant - Phase 1 only RFI has records (3). Meeting Minutes, quality logs, safety forms, work orders and invoices do not exist in Field Works either, and the report folders have no saved copies. Open the source module and check the record exists and is submitted.",
+    tags: ["document repository empty","there is no data in this folder","category empty","why is my category empty","folder empty","no data in this folder"]
+  },
+  {
+    action: "view",
+    object: "document repository records source",
+    scope: "project",
+    section: "Where Records Come From",
+    question: "Why is my drawing not showing under Drawings in the Document Repository?",
+    answer: "The Drawings category lists the drawing package categories from Project Setup → Drawings (here **Walls**), but a drawing uploaded to **Drawing Master** with status Created does not appear by itself: on the test project Walls is empty although W8-Working-details-Sheet-01.pdf exists. Check the drawing's approval workflow level in Drawing Master. What exactly moves a drawing into the archive was not confirmed.",
+    tags: ["drawing not in document repository","drawings category empty","walls drawings repository","drawing missing from archive","drawing package archive"]
+  },
+  {
+    action: "view",
+    object: "document repository records source",
+    scope: "project",
+    section: "Where Records Come From",
+    question: "Do records show up in the Document Repository when submitted or only when approved?",
+    answer: "It depends on the module and was confirmed only for RFI: the three WIRs appear in the Document Repository although Field Works shows 0 To Be Approved and 0 Rejected, so they are archived without waiting in an approval queue. Drawings are different: an uploaded drawing in Created status is not archived. For other categories the trigger could not be tested because they have no records.",
+    tags: ["when does a record appear","submit or approve","record appears after approval","rfi in repository","document repository timing"]
+  },
+  {
+    action: "view",
+    object: "document repository records source",
+    scope: "project",
+    section: "Where Records Come From",
+    question: "What are the sub-categories under Drawings, Invoices and Workorders?",
+    answer: "They are created from the project's own data. Under Drawings the sub-category is the drawing package category (**Walls** on the test project) from Project Setup → Drawings → Drawing Packages. Under Other Forms, Safety Forms, Safety Scheduled Forms, Workorders and Invoices the sub-categories appear only when records of that type exist; on the test project they are empty.",
+    tags: ["sub categories","drawing sub category","walls category","expandable category contents","what are the subcategories"]
+  },
+  {
+    action: "view",
+    object: "document repository records source",
+    scope: "project",
+    section: "Where Records Come From",
+    question: "Are the Daily and Weekly Progress Reports saved in the Document Repository?",
+    answer: "The folders exist but are empty on the test project. The Daily Progress Report screen is a live snapshot and the Weekly Progress Report offers Download Pdf; neither was seen to save a copy to the archive. Download the PDF yourself and keep it.",
+    tags: ["progress reports in repository","daily progress report archive","weekly progress report archive","saved reports","report copies"]
+  },
+  {
+    action: "view",
+    object: "document repository records source",
+    scope: "project",
+    section: "Where Records Come From",
+    question: "Who has access to the Document Repository?",
+    answer: "Anyone whose project permissions include it; the project's Users and Permissions setup controls this. The repository itself has no settings, so there is nothing to configure on the screen.",
+    tags: ["who can see document repository","document repository permission","access to document repository","document repository access","who has access"]
   }
 ];
 
@@ -22979,47 +23034,104 @@ const MODULES = [
     "qaItems": QA_DOCUMENTREPOSITORY,
     "narrative": [
       {
-        "heading": "Admin Role",
-        "intro": "<p>Document Repository doesn't have a dedicated admin configuration screen of its own — access to it, and to the categories within it, follows the standard permission model set up by a <strong>Super Admin</strong> or <strong>Module Admin</strong> across Arena. Because the categories listed here (RFI, Meeting Minutes, Qualities, Safety Forms, Drawings, Workorders, Invoices, Progress Reports, and so on) are generated by their respective source modules, the repository itself is a downstream view: an admin's real point of control is making sure the right users have permission to view or export records from the modules that feed this archive.</p><p>Where an admin's attention does matter here is data hygiene — since this becomes the project's single source of truth archive, keeping the underlying modules disciplined about naming, descriptions, and timely generation of records is what keeps Document Repository trustworthy for anyone who needs to pull a record months or years later.</p>",
+        "heading": "Where Records Come From",
+        "intro": "<p>Document Repository has no settings or upload button, so what appears here depends only on the module that produces each record. This section maps each category to its source and says what was seen on Arena Steel Plant - Phase 1.</p><p>The project's access setup in **Users and Permissions** decides who can open this screen. Record quality, such as clear names and descriptions, is decided in the source modules.</p>",
         "definitions": [
+          {
+            "term": "RFI",
+            "definition": "**Where it comes from:** **Field Works → Progress → RFI**. Verified: the three records here (**WIR - 1** on Mar 25, 2026 and **WIR - 2** and **WIR - 3** on Mar 31, 2026) are the same three RFIs listed as ALL (3) in Field Works, with 0 To Be Approved and 0 Rejected. Whether an RFI appears when it is submitted or only when it is approved was not distinguishable with this data. The same RFIs feed the **RFI Log** in **Data Analytics → Standard Reports → Weekly Progress Report**."
+          },
+          {
+            "term": "Meeting Minutes",
+            "definition": "**Where it comes from:** **Field Works → Progress → Meeting Minutes**. Empty here and empty in Field Works (its list says to click Create)."
+          },
+          {
+            "term": "Other Forms",
+            "definition": "**Where it comes from:** the project forms in **Field Works → Project Forms** (on the test project the form type is **Internal LORs**), whose form types are set up in **Global Data → Forms** and **Project Setup → Forms**. Its sub-categories are form categories. Empty here, and no Internal LOR has been created."
+          },
+          {
+            "term": "Qualities Level 1 and Qualities Level 2",
+            "definition": "**Where it comes from:** the quality logs submitted in **Field Works → Quality** (Level 1 and Level 2 follow the quality folder levels from **Project Setup → Quality**). Both are empty here; **Submitted Quality Logs** says \"No Logs Present\"."
+          },
+          {
+            "term": "Safety Scheduled Forms and Safety Forms",
+            "definition": "**Where it comes from:** the safety records in **Field Works → Safety** (scheduled forms follow the **Safety Calendar** schedules from **Project Setup → Safety**; the other forms are the Daily Safety Issues and Observations). Both are empty here, and the safety setup on the test project has no forms mapped."
+          },
+          {
+            "term": "Drawings",
+            "definition": "**Where it comes from:** **Project Setup → Drawings**. Its sub-category is the drawing package category: **Walls** is the category created in **Drawing Packages** for Pellet Plant (1MTPA). **Walls** is empty here even though **Drawing Master** lists one drawing there, **W8-Working-details-Sheet-01.pdf** with status Created. So a drawing does not reach the archive just by being uploaded; what does (approval or publishing) was not confirmed."
+          },
+          {
+            "term": "Workorders and Invoices",
+            "definition": "**Where it comes from:** work orders from **Project Setup → Workorder** and **Field Works → Workorder**, and invoices from **Field Works → Invoices**. Both are empty, because the test project has no work orders and so no invoices."
+          },
+          {
+            "term": "Daily Progress Reports and Weekly Progress Reports",
+            "definition": "**Where it comes from:** **Data Analytics → Standard Reports**. Both folders are empty; the report screens show live data and the **Weekly Progress Report** has **Download Pdf**, but nothing on them was seen to save a copy into the archive."
+          },
           {
             "term": "Downstream archive",
-            "definition": "Document Repository has no configuration screen of its own — it is a read-only-style view of records generated by other modules, so access follows the standard permission model set in Users and Permissions."
-          },
-          {
-            "term": "Record hygiene",
-            "definition": "Because this is the project's single source of truth archive, the naming, descriptions, and timely generation of records in the source modules are what determine whether the repository is trustworthy years later."
-          }
-        ],
-        "procedures": []
-      },
-      {
-        "heading": "Document Repository",
-        "intro": "<p>Every module in Arena that produces a form or record — an RFI response, a set of meeting minutes, a quality checklist, a safety form, a drawing, a workorder, an invoice, a daily or weekly progress report — generates paperwork that someone, eventually, needs to find again: for a client audit, a dispute, a compliance check, or just to confirm what was submitted and when. Document Repository, reached at <strong>Document Repository</strong>, is Arena's answer to that need: a centralized, read-only-style registry that pulls every generated record on the project into one place, organized by category rather than by which module created it.</p><p>The screen is a two-pane layout built for exactly this kind of lookup. The left pane lists every category Arena tracks — RFI, Meeting Minutes, Other Forms, Qualities Level 1, Qualities Level 2, Safety Scheduled Forms, Safety Forms, Drawings, Workorders, Invoices, Daily Progress Reports, and Weekly Progress Reports — several of which (Other Forms, Safety Scheduled Forms, Safety Forms, Drawings, Workorders, Invoices) expand further into sub-categories. Clicking any category or sub-category filters the right-pane table down to just those records, each row showing its Tree Version (the plant it belongs to), Name, Description, and Added On date, with an Actions column offering download, print, history, and email icons — everything a <strong>PM</strong>, <strong>Module Manager</strong>, or auditor typically needs without having to touch the record's originating module.</p><p>It's worth distinguishing Document Repository from two similarly-named but functionally different screens: <strong>Project Setup → Documents</strong> is a general-purpose file/folder manager for storing arbitrary project files, and <strong>Project Setup → Drawings</strong> handles drawing-specific workflows in more depth. Document Repository is neither of those — it's the consolidated, category-filtered archive of what other modules have already generated, not a place to upload or manage files directly.</p>",
-        "definitions": [
-          {
-            "term": "Tree Version",
-            "definition": "The column in the Document Repository table identifying which plant a given record belongs to."
-          },
-          {
-            "term": "Expandable category",
-            "definition": "A left-pane category (Other Forms, Safety Scheduled Forms, Safety Forms, Drawings, Workorders, Invoices) that breaks down into more specific sub-categories when expanded."
+            "definition": "The repository only reads. To correct or add a record, go to the module that produced it; the change then shows in the archive."
           }
         ],
         "procedures": [
           {
-            "title": "Find a specific category of record",
+            "title": "Trace a missing record",
             "steps": [
-              "Go to <strong>Document Repository</strong>.",
-              "Click a category in the left pane (expand it first if it has sub-categories, such as Drawings or Invoices).",
-              "The right-pane table filters to that category's records automatically."
+              "Open **Document Repository** and select the category; confirm the table is empty and the date range is not narrowing it.",
+              "Open the source module from Where Records Come From (for example **Field Works → Progress → RFI** for RFIs).",
+              "Check that the record exists there and has moved past draft (submitted or approved, as the module requires).",
+              "Return to the archive and reopen the category."
             ]
+          }
+        ]
+      },
+      {
+        "heading": "Document Repository",
+        "intro": "<p>Document Repository is where a PM, Module Manager or auditor finds a record again without opening the module that produced it. Pick a category on the left and the table on the right lists its records.</p><p>The table has **Tree Version** (the plant), **Name**, **Description** and **Added On**, then an **Actions** column with four icons: **Download File**, **Print File**, **Access Logs** and **Email Threads**. The right pane has its own search box and a **Start date** to **End date** range; the left pane has a separate search box for the category list. Until you choose a category it says \"There is no data in this folder\". On Arena Steel Plant - Phase 1 only **RFI** has records (three); every other category is empty.</p>",
+        "definitions": [
+          {
+            "term": "Categories (left pane)",
+            "definition": "Twelve, in this order: **RFI**, **Meeting Minutes**, **Other Forms**, **Qualities Level 1**, **Qualities Level 2**, **Safety Scheduled Forms**, **Safety Forms**, **Drawings**, **Workorders**, **Invoices**, **Daily Progress Reports** and **Weekly Progress Reports**. **Other Forms**, **Safety Scheduled Forms**, **Safety Forms**, **Drawings**, **Workorders** and **Invoices** are expandable and open into sub-categories when the project has any; on Arena Steel Plant - Phase 1 only **Drawings** has one (**Walls**). The chevron at the top collapses the left pane."
           },
           {
-            "title": "Search within a category and export or review a record",
+            "term": "Table columns",
+            "definition": "**Tree Version** (the plant the record belongs to, for example Pellet Plant (1MTPA)), **Name** (the record's own number, for example WIR - 1), **Description** (blank for the RFIs) and **Added On** (date and time). Newest first on the RFI list."
+          },
+          {
+            "term": "Download File and Print File",
+            "definition": "Icons on each row that download the record as a file or print it. They were not clicked during testing, so the file format is not documented."
+          },
+          {
+            "term": "Access Logs",
+            "definition": "The history icon. It opens an **Access Logs** dialog listing who opened the record: **S.No.**, **Name**, **Accessed On**, **User IP**, **Operating System** and **Browser**. For the RFIs on the test project it says \"No Data Available\" because nobody has opened them from here."
+          },
+          {
+            "term": "Email Threads",
+            "definition": "The email icon. It opens an **Email Threads** dialog that lists email conversations tied to the record. For the RFIs on the test project it says \"No Conversation has been started\". The dialog is a view of conversations, not a send form."
+          },
+          {
+            "term": "Tree Version",
+            "definition": "The column naming the plant the record belongs to. It is the same plant list as **Project Setup → Works** and the plant selector in **Field Works**."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Find a record",
             "steps": [
-              "With a category selected, use the right pane's search box and date-range filter to narrow the table.",
-              "Use the row's Actions icons to download, print, view history, or email that record."
+              "Go to **Document Repository**.",
+              "Click a category in the left pane; expand it first if it has an arrow (for example **Drawings**).",
+              "Optionally set **Start date** and **End date** or type in the right-hand search box.",
+              "Read the row, or use the icons in **Actions**."
+            ],
+            "note": "If the table says \"There is no data in this folder\", nothing from the source module has reached the archive yet. See Where Records Come From."
+          },
+          {
+            "title": "See who opened a record or follow its email thread",
+            "steps": [
+              "Select the category and find the record.",
+              "Click the history icon (**Access Logs**) to see who accessed it, from which IP address, operating system and browser.",
+              "Click the email icon (**Email Threads**) to see conversations about the record."
             ]
           }
         ]
@@ -23028,15 +23140,15 @@ const MODULES = [
     "name": "Document Repository",
     "alias": "Records Archive",
     "icon": "folder_copy",
-    "tagline": "A centralized, category-filtered archive of every generated form and record across the project.",
+    "tagline": "A read-only, category-by-category archive of the records the project's other modules have produced.",
     "color": "#5c6b1f",
-    "overview": "<p>Document Repository is a two-pane, project-scope registry of every generated document or record on the project — RFIs, meeting minutes, quality and safety forms, drawings, workorders, invoices, and progress reports — filterable by category, search, and date range.</p>",
+    "overview": "<p>Document Repository is the project's read-only archive: one screen with twelve categories on the left and a table of records on the right. It collects records that Field Works, Project Setup and Data Analytics already produced; nothing is created or uploaded here.</p>",
     "navigation": [
       "Open a <strong>Project</strong>, then go to <strong>Document Repository</strong>.",
       "Select a category (or sub-category) in the left pane to filter the record table on the right."
     ],
     "sections": [
-      "Admin Role",
+      "Where Records Come From",
       "Document Repository"
     ]
   },
