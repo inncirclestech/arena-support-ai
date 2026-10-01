@@ -6657,15 +6657,6 @@ const QA_DOCUMENTREPOSITORY = [
     question: "Are the Daily and Weekly Progress Reports saved in the Document Repository?",
     answer: "The folders exist but are empty on the test project. The Daily Progress Report screen is a live snapshot and the Weekly Progress Report offers Download Pdf; neither was seen to save a copy to the archive. Download the PDF yourself and keep it.",
     tags: ["progress reports in repository","daily progress report archive","weekly progress report archive","saved reports","report copies"]
-  },
-  {
-    action: "view",
-    object: "document repository records source",
-    scope: "project",
-    section: "Where Records Come From",
-    question: "Who has access to the Document Repository?",
-    answer: "Anyone whose project permissions include it; the project's Users and Permissions setup controls this. The repository itself has no settings, so there is nothing to configure on the screen.",
-    tags: ["who can see document repository","document repository permission","access to document repository","document repository access","who has access"]
   }
 ];
 
@@ -6762,12 +6753,12 @@ const QA_FOLLOWUPACTIONS = [
   },
   {
     action: "view",
-    object: "follow up actions source",
+    object: "follow up actions permission",
     scope: "project",
     section: "Where Follow Up Actions Come From",
-    question: "Who sees the Follow Up Actions page?",
-    answer: "Anyone whose project permissions include it; it has no settings of its own. See Users and Permissions for how access is given.",
-    tags: ["who can see follow up actions","follow up actions permission","follow up actions access"]
+    question: "Is there a permission for Follow Up Actions?",
+    answer: "No. The permission tree in Users and Permissions has no row for Follow Up Actions (its ten top rows are My Desk, Project Setup, Notifications, Owners, Project Settings, Field Works, Permissions, My Calendar, Data Analytics & Insights and Document Management Repository), so no separate permission controls this page.",
+    tags: ["is there a permission for follow up actions","follow up actions permission","permission for follow up actions","who can see follow up actions","follow up actions access","follow up actions permission row"]
   }
 ];
 
@@ -6979,7 +6970,7 @@ const QA_USERSANDPERMISSIONS = [
     scope: "project",
     section: "Groups Permission",
     question: "How do I create a new permission group for this project?",
-    answer: "Go to the project's Permission Schema → Groups Permission tab and click \"Add User Group\". Alternatively, click \"Fetch Templates\" to pull in a pre-built group template (such as a group similar to \"PROJECT POC ADMIN\" or \"Field Users\") instead of configuring permissions from scratch.",
+    answer: "Go to <strong>Groups Permission</strong> and click <strong>Add User Group</strong> (name, description, permissions, users, <strong>Save Changes</strong>), or click <strong>Fetch Templates</strong> to create groups from seven standard templates (Field Users, Operations Team, Quality Admins, IT Admin, Project Safety Coordinator, Project Quality Coordinator, PROJECT POC ADMIN). Then use <strong>Users</strong> on the card to add members.",
     tags: ["add user group","fetch templates","permission group"]
   },
   {
@@ -6988,7 +6979,7 @@ const QA_USERSANDPERMISSIONS = [
     scope: "project",
     section: "Groups Permission",
     question: "How do I see who belongs to a permission group and what it can access?",
-    answer: "On the Groups Permission tab, each group is shown as a card with its group type tag (for example, a \"Restricted\" tag indicating limited eligibility). Click the Permissions button on the card to review what the group can access, or the Users button to see and manage who's assigned to it.",
+    answer: "On <strong>Groups Permission</strong> each group is a card with a type chip (<strong>Restricted Users</strong> on the test project). Click <strong>Users</strong> to see its members (S.No., Name, Roster ID, Email ID, Username) or <strong>Permissions</strong> to see the View / Create / Edit / Delete / Admin / Download / Print / Assign To / Roll Back boxes by module.",
     tags: ["group card","permissions button","users button","restricted group"]
   },
   {
@@ -7015,7 +7006,7 @@ const QA_USERSANDPERMISSIONS = [
     scope: "project",
     section: "Groups Permission",
     question: "Is Users and Permissions the same as the org-wide user directory or Global Permission screen?",
-    answer: "No. Users and Permissions here is scoped to a single project — the groups and access you configure only apply within that project. The organization-wide equivalents (the full user directory and the global permission structure) live under Global Data and are managed there by a Super Admin. A PM or Module Admin uses this project-level screen to control access within their own project without needing to touch global settings.",
+    answer: "No. <strong>Users and Permissions</strong> here is scoped to this project: its groups apply only here. The company-wide equivalents are in <strong>Global Data → Users & Permissions</strong> (<strong>User Accounts</strong>, <strong>Global Rosters</strong>, <strong>Global Permission</strong> with 31 global groups). Project people come from the roster, which comes from Global Rosters.",
     tags: ["project scope","global data","super admin","distinction"]
   },
   {
@@ -7042,8 +7033,116 @@ const QA_USERSANDPERMISSIONS = [
     scope: "project",
     section: "Groups Permission",
     question: "I added someone to the project roster but they still can't open a screen — why?",
-    answer: "Being on the roster and having permissions are different things. <strong>Project Setup → People → Roster</strong> records who is on the job; <strong>Users and Permissions</strong> controls what they can actually do inside the project. Check the <strong>User Permission</strong> tab for that person's Basic Details, Groups, and Permissions — if they belong to no group, or to a group without rights to that area, they will see the project but not the screen. Form-level access is narrower still: <strong>Project Setup → Forms → Assign Users</strong> sets View/Create/Edit/Delete per form type per work package.",
+    answer: "Being on the roster and having permissions are separate. <strong>Project Setup → People → Roster</strong> records who is on the job; <strong>Users and Permissions</strong> decides what they can open. Check <strong>User Permission</strong>: if the person shows \"No Groups were assigned\", add them to a group (<strong>Groups Permission → Users → Add Users</strong>), then check the <strong>View</strong> box for the screen's row in their <strong>Permissions</strong>.",
     tags: ["can't access screen","roster vs permissions","user permission tab","assign users forms"]
+  },
+  {
+    action: "view",
+    object: "project permission lineage",
+    scope: "project",
+    section: "Groups Permission",
+    question: "Where does the Add Users list in a permission group come from?",
+    answer: "It lists the project's roster system users who are not yet in that group (Project Setup → People → Roster, which comes from Global Data → Global Rosters). For PROJECT POC ADMIN it offered only Chandra Shekar and System Admin, because the other 31 are already members. A person who is not on the project roster does not appear.",
+    tags: ["add users list","where do users come from","why cant i add a user to group","user not in add users","add users dialog source","permission group users source","why dont i see a user in add users","where does the add users list come from","add users list in permission group","permission group add users"]
+  },
+  {
+    action: "view",
+    object: "project permission lineage",
+    scope: "project",
+    section: "Groups Permission",
+    question: "What are the Fetch Templates and where do they come from?",
+    answer: "Fetch Templates opens \"Fetch Standard Templates\" with seven Arena standard templates: Field Users, Operations Team, Quality Admins, IT Admin, Project Safety Coordinator, Project Quality Coordinator and PROJECT POC ADMIN. Tick them (or Select All) and Submit to create them as project groups. Only PROJECT POC ADMIN also exists as a global group in Global Data → Users & Permissions → Global Permission; the other six do not.",
+    tags: ["fetch templates","standard templates","permission templates","group templates source","global permission templates","fetch standard templates list","what are the fetch templates","fetch templates permission groups","fetch templates users and permissions"]
+  },
+  {
+    action: "view",
+    object: "project permission lineage",
+    scope: "project",
+    section: "Groups Permission",
+    question: "What does the permission table with View, Create, Edit, Delete, Admin and Download mean?",
+    answer: "Each row is a screen or area and each column a kind of right: View, Create, Edit, Delete, Admin, Download, Print, Assign To and Roll Back. A box appears only where that right applies to the row. Expand a module with the plus sign to see its sub-rows; the ten top rows match the project menu (except Follow Up Actions, which has none).",
+    tags: ["permission table","view create edit delete admin","permission columns","roll back permission","assign to permission","permission tree","permission matrix"]
+  },
+  {
+    action: "view",
+    object: "project permission lineage",
+    scope: "project",
+    section: "Groups Permission",
+    question: "Which permission controls the Document Repository?",
+    answer: "The top-level row Document Management Repository, with three boxes: View, Download and Print. These match the Download File and Print File icons on the repository table.",
+    tags: ["document repository permission","permission for document repository","document management repository permission","who can download from repository","which permission controls the document repository","document management repository permission row","who has access to document repository","document repository access","who can use the document repository"]
+  },
+  {
+    action: "view",
+    object: "project permission lineage",
+    scope: "project",
+    section: "Groups Permission",
+    question: "How does a permission map to what a user sees in Field Works and Project Setup?",
+    answer: "Permission rows follow the screens: under Field Works there is a row per card (Work Logs, Construction Forms, Cost, Quality Level 1 and 2, Punch Lists, Restraints, Daily Safety Issues, Meeting Minutes, Workorder Invoices and more); under Project Setup a row per area (Project Works, Roster, PhaseCode, Estimate, Tasks, Drawing Register, Forms, Workorder, Document Management and more). Turn View off for a row to hide that screen from the group; this was not tested with a restricted account.",
+    tags: ["permission maps to screens","field works permissions","project setup permissions","what permissions do users see","permission to screen mapping","hide a screen from a user"]
+  },
+  {
+    action: "view",
+    object: "project permission lineage",
+    scope: "project",
+    section: "Groups Permission",
+    question: "What groups exist on this project and what do they allow?",
+    answer: "PROJECT POC ADMIN has 31 users and 827 permission boxes ticked (everything in the tree). Field Users has no users and no boxes ticked. Both are tagged Restricted Users and show a link icon with their own name.",
+    tags: ["project poc admin","field users group","groups on the project","default groups","what groups exist","what groups exist on this project","which groups exist","list of permission groups on the project"]
+  },
+  {
+    action: "view",
+    object: "project permission lineage",
+    scope: "project",
+    section: "Groups Permission",
+    question: "How do project groups relate to Global Data → Users & Permissions groups?",
+    answer: "Global Data → Users & Permissions → Global Permission holds 31 company-wide groups (for example Super Admin, Project Manager, Foreman, Supervisior). Project groups are separate: you create them here, from Fetch Standard Templates or Add User Group. PROJECT POC ADMIN is the one name found in both places, and project cards show a link icon with the linked name.",
+    tags: ["global permission vs project permission","global groups vs project groups","link icon group card","project groups from global data","global data permission groups"]
+  },
+  {
+    action: "view",
+    object: "project permission lineage",
+    scope: "project",
+    section: "User Permission",
+    question: "Why does a user have permissions I did not set for them?",
+    answer: "They come from the user's groups. On User Permission, boxes granted through a group are ticked and locked; Dipanjan Kundu is in PROJECT POC ADMIN and shows all 827 of that group's boxes. Remove the person from the group, or change the group's permissions, to change them.",
+    tags: ["inherited permissions","why does user have permission","locked permission boxes","permission from group","unexpected access","why does a user have permissions i did not set","permissions i did not set"]
+  },
+  {
+    action: "view",
+    object: "project permission lineage",
+    scope: "project",
+    section: "User Permission",
+    question: "Can I give one person extra permissions without a group?",
+    answer: "Yes. On User Permission the boxes not granted by a group are unticked and editable, and the panel has Save Changes. Group-granted boxes stay locked. This was seen but not saved during testing.",
+    tags: ["extra permission for one user","user level permission","grant permission to one person","individual permission"]
+  },
+  {
+    action: "view",
+    object: "project permission lineage",
+    scope: "project",
+    section: "User Permission",
+    question: "Why is a person not in the User Permission list?",
+    answer: "The list shows the project's active system users (32 on the test project). A person must be on the project roster (Project Setup → People → Roster, from Global Data → Global Rosters) and active; an inactive user is not listed even if still a member of a group.",
+    tags: ["user not in list","why is user missing","user permission list source","missing user","inactive user permission"]
+  },
+  {
+    action: "view",
+    object: "project permission lineage",
+    scope: "project",
+    section: "User Permission",
+    question: "Where do the Basic Details of a user come from?",
+    answer: "Profile Photo, Name, Employee ID, Email Address, Username and No. of Groups come from the person's Global Data user and roster record (Global Data → Users & Permissions). They are read-only here. Dipanjan Kundu: Employee ID 2900, username Dipanjan_Kundu, 1 group.",
+    tags: ["basic details source","user details","employee id","username permission","where do user details come from"]
+  },
+  {
+    action: "view",
+    object: "project permission lineage",
+    scope: "project",
+    section: "User Permission",
+    question: "Why does the System Admin have no groups but can see everything?",
+    answer: "On the test project the System Admin and Chandra Shekar show \"No Groups were assigned\" in User Permission, yet the signed-in System Admin opens every screen, so company-level administrators are not limited by project groups. Treat groups as the way to give everyone else access.",
+    tags: ["system admin no groups","admin without group","super admin permissions","no groups were assigned","why no groups assigned"]
   }
 ];
 
@@ -23170,11 +23269,11 @@ const MODULES = [
     "narrative": [
       {
         "heading": "Where Records Come From",
-        "intro": "<p>Document Repository has no settings or upload button, so what appears here depends only on the module that produces each record. This section maps each category to its source and says what was seen on Arena Steel Plant - Phase 1.</p><p>The project's access setup in **Users and Permissions** decides who can open this screen. Record quality, such as clear names and descriptions, is decided in the source modules.</p>",
+        "intro": "<p>Document Repository has no settings or upload button, so what appears here depends only on the module that produces each record. This section maps each category to its source and says what was seen on Arena Steel Plant - Phase 1.</p><p>Access is controlled by the **Document Management Repository** row in **Users and Permissions** (boxes **View**, **Download** and **Print**). Record quality, such as clear names and descriptions, is decided in the source modules.</p>",
         "definitions": [
           {
             "term": "RFI",
-            "definition": "**Where it comes from:** **Field Works → Progress → RFI**. Verified: the three records here (**WIR - 1** on Mar 25, 2026 and **WIR - 2** and **WIR - 3** on Mar 31, 2026) are the same three RFIs listed as ALL (3) in Field Works, with 0 To Be Approved and 0 Rejected. Whether an RFI appears when it is submitted or only when it is approved was not distinguishable with this data. The same RFIs feed the **RFI Log** in **Data Analytics → Standard Reports → Weekly Progress Report**."
+            "definition": "**Where it comes from:** **Field Works → Progress → RFI**. Verified: the three records here (**WIR - 1** on Mar 25, 2026 and **WIR - 2** and **WIR - 3** on Mar 31, 2026) are the same three RFIs listed as ALL (3) in Field Works, with 0 To Be Approved and 0 Rejected; their cards still show the workflow control (**Start**, **Assign To**), so they are archived without waiting for approval. The same RFIs feed the **RFI Log** in **Data Analytics → Standard Reports → Weekly Progress Report**."
           },
           {
             "term": "Meeting Minutes",
@@ -23207,6 +23306,10 @@ const MODULES = [
           {
             "term": "Downstream archive",
             "definition": "The repository only reads. To correct or add a record, go to the module that produced it; the change then shows in the archive."
+          },
+          {
+            "term": "Document Management Repository permission",
+            "definition": "The permission row that controls this screen, in **Users and Permissions → Groups Permission**. It has three boxes: **View**, **Download** and **Print**, matching the **Download File** and **Print File** icons. Records are only archived by the source modules; this permission does not let anyone change them."
           }
         ],
         "procedures": [
@@ -23294,7 +23397,7 @@ const MODULES = [
     "narrative": [
       {
         "heading": "Where Follow Up Actions Come From",
-        "intro": "<p>The page has no setup of its own, so its content depends on the modules that feed it. This section says what was verified about where items could come from, and what was not.</p><p>The project's **Users and Permissions** setup decides who sees the page. Because it is empty here, ask your Arena administrator or support which modules raise items on your account before relying on it as a tracker.</p>",
+        "intro": "<p>The page has no setup of its own, so its content depends on the modules that feed it. This section says what was verified about where items could come from, and what was not.</p><p>Unlike the other project screens, **Follow Up Actions** has no row in the permission tree of **Users and Permissions**, so no separate permission controls it. Because it is empty here, ask your Arena administrator which modules raise items on your account before relying on it as a tracker.</p>",
         "definitions": [
           {
             "term": "Where the buttons are",
@@ -23706,26 +23809,56 @@ const MODULES = [
     "narrative": [
       {
         "heading": "Groups Permission",
-        "intro": "<p>On any given project, different people need meaningfully different levels of access — a Field User capturing daily logs has no business editing cost structures, while a project owner's representative may need visibility without edit rights at all. Groups Permission, the default tab of a project's Permission Schema, is where a <strong>PM / Module Admin</strong> defines these access tiers as reusable groups, rather than configuring permissions individually for every single person added to the project.</p><p>Groups appear as cards — the sample data shows groups like \"PROJECT POC ADMIN\" and \"Field Users\" — each tagged with a group type such as \"Restricted\" to indicate limited eligibility for membership. From a card, a Module Admin can drill into Permissions to review or adjust exactly what the group can access, or into Users to manage who currently holds that role on the project. Rather than building every group from a blank slate, \"Fetch Templates\" pulls in a pre-configured template to start from, and \"Add User Group\" creates a new one when none of the templates fit. A search bar keeps this manageable once a project accumulates a meaningful number of groups.</p>",
+        "intro": "<p>Groups Permission is where a PM or Module Admin creates access groups for the project, sets what each group can do, and chooses who is in it. Each group is a card with a **Permissions** button and a **Users** button.</p><p>The tab has **Add User Group**, **Fetch Templates** and a search box. On Arena Steel Plant - Phase 1 there are two groups: **PROJECT POC ADMIN** (31 users, 827 permission boxes granted) and **Field Users** (no users, nothing granted).</p>",
         "definitions": [
           {
-            "term": "Permission Group",
-            "definition": "A named, reusable access tier defined on a project (for example, \"Field Users\" or \"PROJECT POC ADMIN\") that bundles a set of permissions, assignable to multiple users at once rather than configuring access person by person."
+            "term": "Group card",
+            "definition": "Shows the group name, a link icon with the name of the template or global group it was linked to, a type chip (**Restricted Users** on both groups here), a three-dot menu (**Edit**, **Delete**, **Copy**) and the buttons **Permissions** and **Users**. **Edit** opens the group page with its name and description, the **Permissions** and **Users** tabs and **Save Changes**."
           },
           {
-            "term": "Group Type Tag",
-            "definition": "A label shown on a permission group's card (such as \"Restricted\") indicating a constraint on the group, for example limited eligibility for who can be added to it."
+            "term": "Permissions (the permission tree)",
+            "definition": "A table with **View**, **Create**, **Edit**, **Delete**, **Admin**, **Download**, **Print**, **Assign To** and **Roll Back** columns and a tree of rows you expand with the plus sign (419 rows). A box appears only where that kind of permission applies. The ten top rows are **My Desk**, **Project Setup**, **Notifications**, **Owners**, **Project Settings**, **Field Works**, **Permissions**, **My Calendar**, **Data Analytics & Insights** and **Document Management Repository**, which match the project menu. There is no row for **Follow Up Actions**."
+          },
+          {
+            "term": "How a permission row maps to a screen",
+            "definition": "Rows follow the screens. Under **Field Works** there is a row for each card (for example **Work Logs** with **Project Worklogs**, **Submitted Work Logs**, **Approve Work Logs** and **Detailed Work Logs**; **Construction Forms** with **Project Construction Forms**, **RFI Quantity** and **RFI Upload Excel**; **Cost** with **Transactions**, **Change Order** and **Transfers**; **Quality Level 1**, **Quality Level 2**, **Punch Lists**, **Restraints**, **Daily Safety Issues**, **Meeting Minutes**, **Workorder Invoices** and more). Under **Project Setup** there is a row for each setup area (**Project Works**, **Roster**, **PhaseCode**, **Estimate**, **Tasks**, **Drawing Register**, **Drawing Master**, **Forms**, **Workorder**, **Document Management** and others). **Notifications** has **Project Notification Schema**, **Owners** has **Project Owners**, **My Calendar** has **Calendar**, **Data Analytics & Insights** has **Configurable Analytics**, **Standard Analytics** and **Standard Reports**, and **Permissions** has **Group Permission** and **User Permissions**. What a person loses when a box is off was not tested with a restricted account."
+          },
+          {
+            "term": "Document Management Repository permission",
+            "definition": "The row for **Document Repository** has only three boxes, **View**, **Download** and **Print**, which match the Download File and Print File icons on the repository table."
+          },
+          {
+            "term": "Users tab of a group",
+            "definition": "Lists the group's members with **S.No.**, **Profile Photo**, **Name**, **Roster ID**, **Email ID**, **Username**, **Groups** and **Actions** (delete), with **Add Users**, search, paging and **Manage Columns**. **PROJECT POC ADMIN** lists 31 users (one marked Inactive); **Field Users** says \"No Data Available\"."
+          },
+          {
+            "term": "Where the Add Users list comes from",
+            "definition": "The **Add Users** dialog lists the project's people who are not yet in the group. For **PROJECT POC ADMIN** it offered only two: Chandra Shekar (DIR001) and System Admin (001). Together with the 31 members that is 33, the system users on **Project Setup → People → Roster**, whose source is **Global Data → Users & Permissions → Global Rosters**. So a person must be a project roster system user before they can be put in a group."
+          },
+          {
+            "term": "Fetch Templates",
+            "definition": "Opens **Fetch Standard Templates** with a **Select All** option and seven standard templates: **Field Users**, **Operations Team**, **Quality Admins**, **IT Admin**, **Project Safety Coordinator**, **Project Quality Coordinator** and **PROJECT POC ADMIN**, with **Cancel** and **Submit**. Only **PROJECT POC ADMIN** also exists in **Global Data → Users & Permissions → Global Permission** (31 global groups such as Super Admin, Project Manager, Foreman and Supervisior); the other six are Arena standard templates, so the template list is not simply the Global Data group list. **Submit** was not clicked."
+          },
+          {
+            "term": "Add User Group",
+            "definition": "Opens a new group page with a name, a description, the **Permissions** and **Users** tabs and **Save Changes**, so a group can be built from scratch instead of from a template."
+          },
+          {
+            "term": "Group type chip",
+            "definition": "The chip on each card (**Restricted Users** on both groups here). Other types were not seen on the test project, so what each type changes was not confirmed."
           }
         ],
         "procedures": [
           {
             "title": "Create a new permission group for a project",
             "steps": [
-              "Go to the project's <strong>Permission Schema → Groups Permission</strong> tab.",
-              "Click <strong>\"Fetch Templates\"</strong> to start from a pre-built template, or <strong>\"Add User Group\"</strong> to build one from scratch.",
-              "Configure the group's permissions.",
-              "Use the <strong>Users</strong> button on the resulting card to assign members to the group."
+              "Go to **Users and Permissions → Groups Permission**.",
+              "Click **Fetch Templates**, tick the standard templates you want and click **Submit**, or click **Add User Group** and enter a name and description.",
+              "Click **Permissions** on the group and tick the boxes it needs (use the plus sign to open each module); use the **Roll Back** column only where that right is needed.",
+              "Click **Save Changes**.",
+              "Click **Users**, then **Add Users**, tick the people and click **Submit**."
             ],
+            "note": "Submit and Save Changes were not used during testing. Only people already on the project roster appear in Add Users.",
             "images": [
               {
                 "src": "assets/notion/permissions/002.jpg",
@@ -23753,20 +23886,42 @@ const MODULES = [
       },
       {
         "heading": "User Permission",
-        "intro": "<p>Where Groups Permission organizes access by role, the User Permission tab flips the view around to focus on a single person — useful when a <strong>PM / Module Admin</strong> needs to answer a very specific question, like \"what exactly can this one person do on this project,\" rather than reviewing an entire group's configuration. Selecting a user from the left-hand list (shown by name and email) opens a detail panel on the right broken into Basic Details, Groups, and Permissions, giving a complete picture of that individual's standing on the project in one place.</p><p>This view is particularly useful during onboarding or offboarding, or when troubleshooting an access complaint — rather than guessing which group might be misconfigured, a Module Admin can go straight to the person in question and see their group memberships and resulting permissions directly.</p>",
+        "intro": "<p>User Permission is where a PM or Module Admin checks one person's access. Pick a user in the list on the left and the panel on the right shows **Basic Details**, **Groups** and **Permissions**.</p><p>The list has 32 people, each with name and email, and a search box. They are the project's active system users; the inactive user who still sits in **PROJECT POC ADMIN** is not listed.</p>",
         "definitions": [
           {
-            "term": "User Permission Detail Panel",
-            "definition": "The right-hand panel shown when a user is selected on the User Permission tab, broken into Basic Details, Groups, and Permissions sections describing that individual's access on the project."
+            "term": "Basic Details",
+            "definition": "**Profile Photo**, **Name**, **Employee ID**, **Email Address**, **Username** and **No. of Groups**. For example Dipanjan Kundu: Employee ID 2900, username Dipanjan_Kundu, 1 group. The values come from the person's Global Data user and roster record."
+          },
+          {
+            "term": "Groups",
+            "definition": "One card per group the person is in (Dipanjan Kundu: **PROJECT POC ADMIN**). A person in no group shows \"No Groups were assigned\" (Chandra Shekar and System Admin on the test project)."
+          },
+          {
+            "term": "Permissions",
+            "definition": "The same permission tree as a group, for this person. Boxes granted through their groups are ticked and locked (Dipanjan Kundu shows 827, exactly what **PROJECT POC ADMIN** grants); the other boxes are unticked and can be changed here, with **Save Changes**. So a person's access is the sum of their groups plus anything added for them personally."
+          },
+          {
+            "term": "Where users come from",
+            "definition": "Accounts and roster entries are created in **Global Data → Users & Permissions** (**User Accounts** and **Global Rosters**). A person reaches this project through **Project Setup → People → Roster**; only roster system users can then be added to groups here. Adding someone to the roster does not give them any access until they are in a group."
           }
         ],
         "procedures": [
           {
             "title": "Look up what a specific user can access on a project",
             "steps": [
-              "Go to the project's <strong>Permission Schema</strong> and open the <strong>User Permission</strong> tab.",
-              "Find and select the user from the list on the left (searchable by name/email).",
-              "Review their <strong>Basic Details</strong>, <strong>Groups</strong>, and <strong>Permissions</strong> in the detail panel on the right."
+              "Go to **Users and Permissions** and open **User Permission**.",
+              "Search or pick the person in the list on the left.",
+              "Read **Basic Details**, then **Groups** to see which groups give them access.",
+              "Open **Permissions**, expand a module with the plus sign and read which boxes are ticked (ticked and locked = from a group)."
+            ]
+          },
+          {
+            "title": "Find out why someone cannot open a screen",
+            "steps": [
+              "Open **User Permission** and select the person.",
+              "In **Groups**, check they are in a group; if it says \"No Groups were assigned\", add them in **Groups Permission → Users → Add Users**.",
+              "In **Permissions**, find the row for the screen (for example **Field Works → Work Logs**) and check **View**.",
+              "If the person is not in the list, add them to the project roster first in **Project Setup → People**."
             ]
           }
         ]
@@ -23775,9 +23930,9 @@ const MODULES = [
     "name": "Users and Permissions",
     "alias": "Project Access Control",
     "icon": "person_search",
-    "tagline": "Manage the permission groups and per-user access that apply inside a single project.",
+    "tagline": "Project access groups, their members and each person's resulting permissions.",
     "color": "#2d7d7d",
-    "overview": "<p>Users and Permissions is the project-scoped access control screen where a PM or Module Admin manages which permission groups exist for a single project and which users and permissions are assigned to each — distinct from Global Data's org-wide user directory and Global Permission screen, which a Super Admin manages separately at the organization level.</p>",
+    "overview": "<p>Users and Permissions is the project's **Permission Schema**: **Groups Permission** defines access groups and who is in them, and **User Permission** shows one person's groups and resulting permissions. It controls what each person can do inside this project; the company-wide equivalents are in **Global Data → Users & Permissions**.</p>",
     "navigation": [
       "Open a <strong>Project</strong>, then go to its <strong>Permission Schema</strong> section.",
       "Use the tab bar to switch between <strong>Groups Permission</strong> and <strong>User Permission</strong>."
