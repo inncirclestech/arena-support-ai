@@ -9293,103 +9293,589 @@ const QA_PROPOSALMANAGEMENT = [
 
 const QA_TENDERMANAGEMENT = [
   {
-    action: "create",
-    object: "bid",
+    action: "view",
+    object: "tender management",
     scope: "module",
-    section: "Bids",
-    question: "How do I create a tender/bid for a proposal?",
-    answer: "There is no separate \"Tender\" object in Arena — bids are created within a Proposal. Open the proposal's Bid tab and click \"Create Bid\", then fill in Bid Name, Description, Proposal, and Bid Type. Note: the Bid tab must be enabled via permissions in Bid Management first.",
-    tags: ["create tender","new bid","tender creation","bid management"]
-  },
-  {
-    action: "define",
-    object: "bid type",
-    scope: "global",
-    section: "Bid Types",
-    question: "How do I define categories for tenders/bids?",
-    answer: "Go to Proposal Management > Settings > Bid Types and click \"Bid Type\" to enter a Name, Description, and Estimate Type defining how the bid is structured and evaluated.",
-    tags: ["tender category","bid type setup","estimate type"]
-  },
-  {
-    action: "search",
-    object: "bid",
-    scope: "module",
-    section: "Bids",
-    question: "How do I find bids linked to a specific proposal?",
-    answer: "In the proposal's Bid tab, use the \"Search\" option to search for bids linked to that particular proposal.",
-    tags: ["search bids","find tender","bid lookup"]
-  },
-  {
-    action: "export",
-    object: "bid",
-    scope: "module",
-    section: "Bids",
-    question: "Can I bulk create bids from a spreadsheet?",
-    answer: "Yes. In the proposal's Bid tab, use \"Exports\" > \"Upload excel\" to create bids via Excel upload, or \"Download Excel\" to export existing bid data.",
-    tags: ["bulk create bids","excel upload","download bids"]
+    section: "Who sets this up",
+    question: "What is Tender Management?",
+    answer: "The module where you run formal tenders: create a tender, set its event schedule, pre-qualify vendors, collect technical and financial responses, compare and negotiate prices and award a work order. Open it from the Home tile; it starts on the Tenders list.",
+    tags: ["tender management","what is tender management","tender module","tendering","how does tender management work"]
   },
   {
     action: "view",
-    object: "bid",
+    object: "tender setup order",
     scope: "module",
-    section: "Bids",
-    question: "What layout options are available for viewing bids?",
-    answer: "The Bids list can be displayed as Table View, Grid View, or Kanban View. Choose a layout and click \"Save layout\" to keep it as your default.",
-    tags: ["bid views","kanban view","table view"]
+    section: "Who sets this up",
+    question: "In what order should I set up Tender Management?",
+    answer: "First make sure the vendors exist in Global Data > Vendors. Then in Tender Management > Settings review Bid Type, Status Configuration and Bid Templates, create BOQ & Estimate, Pre Qualification and Technical Package templates, add approval levels for Bid, Pre Qualification and Technical Package, and add user groups. Then create a tender.",
+    tags: ["set up tender management","tender admin setup","tender setup order","tender settings first"]
+  },
+  {
+    action: "view",
+    object: "tender roles",
+    scope: "module",
+    section: "Who sets this up",
+    question: "Who does what in Tender Management?",
+    answer: "The Module Admin sets up Settings and Global Data vendors; the PM or tender manager creates tenders and runs the cards; approvers named in the approval workflow approve tenders and packages; vendors answer pre-qualification and submit responses from their own Bid tab.",
+    tags: ["who creates a tender","who approves a tender","tender roles","tender approver"]
+  },
+  {
+    action: "view",
+    object: "tender bid name",
+    scope: "module",
+    section: "Who sets this up",
+    question: "Is a Tender the same as a Bid?",
+    answer: "Yes. The product calls the object a Tender in the list and breadcrumbs, but some fields and tabs still say Bid (Bid Name, Bid Type, Bid Status, the Bid tab).",
+    tags: ["tender vs bid","tender and bid same","difference between tender and bid"]
+  },
+  {
+    action: "view",
+    object: "tender settings location",
+    scope: "module",
+    section: "Who sets this up",
+    question: "Where are the Tender Management settings?",
+    answer: "Click the Settings gear inside Tender Management. The menu is Bid Type, Scope of Work, Agreement, Status Configuration, Approval Workflow, Bid Templates, BOQ & Estimate Template, Pre Qualification Template, Technical Package Template and Users and Permissions. Only the vendors and the Bid Templates list are shared with Global Data.",
+    tags: ["tender management settings","where are tender settings","tender settings menu"]
   },
   {
     action: "create",
-    object: "rfq",
-    scope: "project",
-    section: "RFQ",
-    question: "How do I invite vendors to quote (create an RFQ)?",
-    answer: "Go to Procurement > RFQ and click \"Create\" to start a new Request for Quotation. Link it to the relevant requisitions (REQ), update quantities and specifications, then select vendors from the pre-configured list. Vendor ratings are shown next to each name to aid selection.",
-    tags: ["request for quotation","invite vendors","create rfq","tender invitation"]
+    object: "tender",
+    scope: "module",
+    section: "Tender List and Creating a Tender",
+    question: "How do I create a tender?",
+    answer: "Open Tender Management > Tenders and click Add Tender. Enter the Tender Name and Description, optionally Select Proposal, choose a Select Bid Type and Open Bidding, Selective Bidding or Selective Bidding - No Prequalification, then click Submit for Approval. The tender shows Ready for Approval until it is approved.",
+    tags: ["create tender","add tender","new tender","create a tender/bid for a proposal","how do I create a tender/bid for a proposal","create bid","new bid"]
   },
   {
-    action: "configure",
-    object: "vendor instructions",
-    scope: "project",
-    section: "RFQ",
-    question: "How do I set standard instructions for vendors on an RFQ?",
-    answer: "In Procurement > RFQ, click \"Vendor Instructions\" to configure default guidelines, terms, and conditions sent to vendors for consistent communication.",
-    tags: ["vendor instructions","rfq terms","tender conditions"]
+    action: "view",
+    object: "tender list",
+    scope: "module",
+    section: "Tender List and Creating a Tender",
+    question: "What does the Tenders list show?",
+    answer: "Tender Name, Tender ID, Description, Proposal Linked, Bid Type, Status, Approve, Reject, Approval Status and Actions (edit, notes, delete), with status chips such as Under Review, Reopened, Shortlisted, Awarded and Completed. Use Filters, Manage Columns, Table or Grid View, Save Layout and Show as Graph.",
+    tags: ["tender list columns","tenders tab","tender list","tender status chips","what is on the tenders screen"]
   },
   {
-    action: "track",
-    object: "rfq status",
-    scope: "project",
-    section: "RFQ",
-    question: "How do I track the status of an RFQ sent to vendors?",
-    answer: "RFQ status is tracked through a card view in Procurement > RFQ showing stages such as \"Created,\" \"Email Sent to Vendors,\" and \"PO Approved.\" Each card shows key information so you can quickly assess pending actions.",
-    tags: ["rfq tracking","tender status","quotation status"]
+    action: "view",
+    object: "tender approval",
+    scope: "module",
+    section: "Tender List and Creating a Tender",
+    question: "Why can't I open a tender?",
+    answer: "A new tender goes through Submit for Approval and the Bid approval workflow. While its Approval Status is Ready for Approval, clicking its name did not open it on the test site. Ask the approver in Settings > Approval Workflow > Bid to approve it.",
+    tags: ["tender will not open","cannot open tender","tender ready for approval","tender approval status","why tender does not open"]
   },
   {
-    action: "submit",
-    object: "vendor response",
-    scope: "project",
-    section: "Bid Comparison",
-    question: "Where do I enter vendor quotes for comparison?",
-    answer: "Go to Procurement > Vendor Responses, select the relevant RFQ from the list on the left, and enter each vendor's response including cost and lead time.",
-    tags: ["enter vendor quotes","vendor responses","tender bids"]
+    action: "view",
+    object: "tender create fields",
+    scope: "module",
+    section: "Tender List and Creating a Tender",
+    question: "Where do the Select Proposal and Select Bid Type lists come from?",
+    answer: "Select Proposal lists the proposals of Proposal Management (15 on the test site). Select Bid Type lists the bid types from Tender Management Settings (Build-Own-Transfer, Speciality Items, General), which are the same as in Proposal Management. Open / Selective Bidding is a fixed choice.",
+    tags: ["select proposal list","select bid type list","tender bid type source","where does bid type come from","proposal dropdown tender"]
+  },
+  {
+    action: "view",
+    object: "open bidding selective",
+    scope: "module",
+    section: "Tender List and Creating a Tender",
+    question: "What is the difference between Open Bidding and Selective Bidding?",
+    answer: "Create Tender offers Open Bidding, Selective Bidding and Selective Bidding - No Prequalification. The names show that the third option skips pre-qualification; Selective Bidding uses the Pre-Qualification card to choose which vendors may bid.",
+    tags: ["open bidding","selective bidding","no prequalification","bidding type tender"]
+  },
+  {
+    action: "view",
+    object: "tender filters",
+    scope: "module",
+    section: "Tender List and Creating a Tender",
+    question: "How do I filter or find tenders?",
+    answer: "Use the search box, or Filters (Tender Name, Tender ID, Status, Bid Type) then Submit; Clear & Apply resets. Table View and Grid View change the layout and Save Layout keeps it. Show as Graph opens Tenders By Status.",
+    tags: ["filter tenders","search tender","tender grid view","tender graph","show as graph tenders","what layout options are available for viewing bids"]
+  },
+  {
+    action: "view",
+    object: "tender notes",
+    scope: "module",
+    section: "Tender List and Creating a Tender",
+    question: "What do the notes and delete icons on a tender do?",
+    answer: "The notes icon opens a Note dialog (Cancel, Submit) for the tender; edit opens Edit Tender; delete removes the tender (the same three actions are in the Grid View card menu).",
+    tags: ["tender notes","edit tender","delete tender","sticky note tender"]
+  },
+  {
+    action: "view",
+    object: "tender from proposal",
+    scope: "module",
+    section: "Tender List and Creating a Tender",
+    question: "How do I find tenders linked to a proposal?",
+    answer: "Open the proposal's Bid tab, which lists the tenders linked to that proposal, or look at the Proposal Linked column of the Tenders list. On the test site no tender is linked yet, so the column is empty.",
+    tags: ["tenders linked to proposal","proposal linked column","find bids linked to a specific proposal","link tender to proposal"]
+  },
+  {
+    action: "view",
+    object: "bulk tender excel",
+    scope: "module",
+    section: "Tender List and Creating a Tender",
+    question: "Can I bulk create tenders from a spreadsheet?",
+    answer: "The Tenders list has no Excel import or export buttons. The Download Excel / Upload Excel buttons in Tender Management are on Settings > Bid Templates (BOQ items).",
+    tags: ["bulk create tenders","upload excel tenders","import tenders","can i bulk create bids from a spreadsheet"]
+  },
+  {
+    action: "view",
+    object: "tender card",
+    scope: "module",
+    section: "Tender Setup: Profile, Team, Scope of Work and Submission",
+    question: "What cards are inside a tender?",
+    answer: "Tender Event Schedule, Pre-Qualification, Tender Details (tender documents, responses, comparison and awarding) and Addendum. Tender Details has Tender Setup, and once the tender progresses Tender Response, Negotiated Responses and Awarded Work Order.",
+    tags: ["tender cards","what is inside a tender","tender details","open a tender"]
+  },
+  {
+    action: "view",
+    object: "tender tabs",
+    scope: "module",
+    section: "Tender Setup: Profile, Team, Scope of Work and Submission",
+    question: "Why do I see only Tender Setup on some tenders?",
+    answer: "The tender page shows tabs according to how far the tender has progressed. On the test site Tender 1 shows only Tender Setup, while Tender 9 (Completed) also shows Tender Response, Negotiated Responses and Awarded Work Order.",
+    tags: ["tender response tab missing","only tender setup","negotiated responses tab missing","awarded work order tab missing"]
+  },
+  {
+    action: "view",
+    object: "tender profile",
+    scope: "module",
+    section: "Tender Setup: Profile, Team, Scope of Work and Submission",
+    question: "What fields does a tender Profile have?",
+    answer: "Bid Name, Bid Type, Description, Start, End and Due Date, Bid Status, Owner Name, Location, Bid Estimated Value and Bid Submitted Value, Connected Items (Proposals, Opportunity, Project), Attachments, configurable fields of the bid type and Assign To; click Save Changes.",
+    tags: ["tender profile fields","bid profile","tender details fields","bid estimated value"]
+  },
+  {
+    action: "view",
+    object: "tender profile source",
+    scope: "module",
+    section: "Tender Setup: Profile, Team, Scope of Work and Submission",
+    question: "Where do the Profile drop-down values come from?",
+    answer: "Bid Type and Bid Status come from Tender Management Settings (3 bid types, 9 statuses). Owner Name lists Global Data > Owners; Proposals, Opportunity and Project list the proposals, opportunities and all company projects; Assign To lists the system users of Global Rosters. Location showed the same names as Owner Name.",
+    tags: ["tender profile dropdown","owner name tender","assign to tender","where do tender fields come from","connected items tender"]
+  },
+  {
+    action: "view",
+    object: "bid type fields",
+    scope: "module",
+    section: "Tender Setup: Profile, Team, Scope of Work and Submission",
+    question: "Why does my tender have extra fields like Speciality Item 1?",
+    answer: "Configurable fields come from the tender's Bid Type. A Speciality Items Bid Type tender shows Speciality Item 1 to 6; a General Bid Type tender shows none.",
+    tags: ["speciality item fields","configurable fields tender","extra fields bid type"]
+  },
+  {
+    action: "create",
+    object: "tender team",
+    scope: "module",
+    section: "Tender Setup: Profile, Team, Scope of Work and Submission",
+    question: "How do I add people or crews to a tender?",
+    answer: "Open Tender Setup > Teams. On Users click Add User and tick people from the company users; on Crews click Add Crew to pick from the Global Data crews.",
+    tags: ["tender team","add user to tender","add crew to tender","tender teams tab"]
+  },
+  {
+    action: "view",
+    object: "tender comments",
+    scope: "module",
+    section: "Tender Setup: Profile, Team, Scope of Work and Submission",
+    question: "What are Status & Comments on a tender?",
+    answer: "A comment box with a map type (General, Negotiation or Clarification), the current Bid Status and a Search by People filter, so discussions stay tagged to the tender stage.",
+    tags: ["tender comments","bid status comments","clarification comment tender","negotiation comment"]
+  },
+  {
+    action: "view",
+    object: "tender documents",
+    scope: "module",
+    section: "Tender Setup: Profile, Team, Scope of Work and Submission",
+    question: "Where are tender documents and e-mails kept?",
+    answer: "Tender Setup > Documents has New Folder, Upload Documents and automatic folders Profile, Status & Comments, Mail Attachments and Submission. Communication is a mail client for the tender, using the account chosen for Tender Management in Global Data > Settings > Mail Settings.",
+    tags: ["tender documents","tender mail","tender communication","upload tender documents"]
+  },
+  {
+    action: "create",
+    object: "scope of work",
+    scope: "module",
+    section: "Tender Setup: Profile, Team, Scope of Work and Submission",
+    question: "How do I create a scope of work for a tender?",
+    answer: "Open Tender Setup > Scope of Work and click Create. Choose Import from settings, Scope of items or BOQ and submit. Each bill then opens a three-step flow: Choose Estimate Template and Package, BOQ Update and Preview.",
+    tags: ["scope of work tender","create scope of work","bill of quantities tender","boq tender","boq update"]
+  },
+  {
+    action: "view",
+    object: "estimate template tender",
+    scope: "module",
+    section: "Tender Setup: Profile, Team, Scope of Work and Submission",
+    question: "Where do the estimate templates and packages come from?",
+    answer: "The 10 templates in Choose Estimate Template and Package are the cards in Settings > BOQ & Estimate Template (Item Rate, Lump Sum, Unit Rate, Cost-Plus, Time & Material and others). The packages (S, M, ABC) are part of the tender's BOQ, and each package has its own quantity column.",
+    tags: ["estimate template list","boq estimate template","packages s m abc","where do templates come from tender"]
+  },
+  {
+    action: "view",
+    object: "technical package",
+    scope: "module",
+    section: "Tender Setup: Profile, Team, Scope of Work and Submission",
+    question: "What is the Technical Package?",
+    answer: "A questionnaire the tender sends to bidders (for example System Architecture, Integration, Customization). On Tender Setup > Technical Package you pick one of the templates from Settings > Technical Package Template; evaluators score each answer against its weightage in Tender Response.",
+    tags: ["technical package","technical package tender","technical questions tender","critical technical aspects"]
+  },
+  {
+    action: "view",
+    object: "submission package",
+    scope: "module",
+    section: "Tender Setup: Profile, Team, Scope of Work and Submission",
+    question: "What is the Submission Package?",
+    answer: "Tender Setup > Submission Package lists the revisions of the package sent to qualified vendors (Revision 1, Revision 2 with Created By and Created On), with Approval Workflow and Issues sub-tabs. Contractors must be qualified in Pre-Qualification before a package can be created.",
+    tags: ["submission package tender","submission revision","tender submission package","qualify contractors for submission"]
+  },
+  {
+    action: "view",
+    object: "submission approval",
+    scope: "module",
+    section: "Tender Setup: Profile, Team, Scope of Work and Submission",
+    question: "How do I set approvers for a submission package?",
+    answer: "Open Tender Setup > Submission Package > Approval Workflow, click Create Level, choose All must approve or Any one can approve, add a description and pick approvers from the system users.",
+    tags: ["submission approval workflow","submission package approvers","create level tender"]
+  },
+  {
+    action: "view",
+    object: "tender events",
+    scope: "module",
+    section: "Tender Event Schedule",
+    question: "What is the Tender Event Schedule?",
+    answer: "A card with 14 dated events: Pre-Q Form Issuance, Pre-Q Query Deadline, Pre-Q Submission Deadline, Pre-Q Evaluation starts, Result List Date, Issue of Tender Documents, Pre-Bid Meeting, Query/Addendum Deadline, Bid Submission Last date, Bid Opening Date, Negotiations details issued, Negotiation deadline, Award Notification and Contract Award. Each has a Due Date and Time; click Save.",
+    tags: ["tender event schedule","tender dates","tender deadlines","bid submission last date","pre bid meeting date"]
+  },
+  {
+    action: "create",
+    object: "tender event",
+    scope: "module",
+    section: "Tender Event Schedule",
+    question: "How do I set tender dates and times?",
+    answer: "Open the tender, click Tender Event Schedule, enter a Due Date and click the clock icon to set the Time for each event, then click Save (Reset clears the changes).",
+    tags: ["set tender dates","tender close date","tender call date","event schedule save"]
+  },
+  {
+    action: "view",
+    object: "tender calendar",
+    scope: "module",
+    section: "Tender Event Schedule",
+    question: "Can bid-related deadlines appear on a calendar?",
+    answer: "The Tender Management schedule is a table on the tender. The Proposal Management Calendar can hold events linked to Opportunity, Proposal or Bid Management once calendar consent is given.",
+    tags: ["bid deadlines calendar","tender calendar","can bid-related deadlines appear on a calendar"]
+  },
+  {
+    action: "view",
+    object: "pre q date",
+    scope: "module",
+    section: "Tender Event Schedule",
+    question: "Why can't vendors fill the pre-qualification form yet?",
+    answer: "The product text says the form becomes available on the Pre-Q Form Issuance date in the Tender Event Schedule. Template choice is also only allowed before that date. Set or correct the date on the schedule.",
+    tags: ["pre q form issuance","pre qualification date","vendor cannot fill pre qualification form"]
+  },
+  {
+    action: "view",
+    object: "pre qualification",
+    scope: "module",
+    section: "Pre-Qualification: Choose Which Vendors May Bid",
+    question: "What is Pre-Qualification in a tender?",
+    answer: "A four-step card that shortlists vendors before they receive the tender: 1 Choose Template, 2 Send to Tenderer, 3 Response & Qualification, 4 List of Qualified. The qualified vendors are the ones that appear in the technical and financial packages.",
+    tags: ["pre qualification","pre-qualification tender","prequalification","shortlist vendors tender"]
+  },
+  {
+    action: "create",
+    object: "pre qualification send",
+    scope: "module",
+    section: "Pre-Qualification: Choose Which Vendors May Bid",
+    question: "How do I send the pre-qualification form to vendors?",
+    answer: "Open Pre-Qualification, choose and submit a template in step 1, then in Send to Tenderer tick the vendors and click Email. The e-mail asks them to submit the form and refer to the Tender Event Schedule.",
+    tags: ["send pre qualification","email vendors pre qualification","send to tenderer","invite vendors to tender","how do I invite vendors to quote"]
+  },
+  {
+    action: "view",
+    object: "pre q vendors",
+    scope: "module",
+    section: "Pre-Qualification: Choose Which Vendors May Bid",
+    question: "Where does the vendor list in Send to Tenderer come from?",
+    answer: "From Global Data > Vendors (37 vendors on the test site, including the \"(eco)\" vendors). A vendor that is not in Global Data cannot be invited.",
+    tags: ["send to tenderer list","vendor list pre qualification","why vendor missing pre qualification","tenderer list source"]
+  },
+  {
+    action: "view",
+    object: "pre q templates",
+    scope: "module",
+    section: "Pre-Qualification: Choose Which Vendors May Bid",
+    question: "Where do the pre-qualification forms come from?",
+    answer: "The two templates (Application Form and Application Form for Pre-Qualification) are in Settings > Pre Qualification Template. Choosing one needs an approval workflow for Pre Qualification in Settings > Approval Workflow.",
+    tags: ["pre qualification template","application form pre qualification","financial working experience personnel machinery"]
+  },
+  {
+    action: "view",
+    object: "pre q response",
+    scope: "module",
+    section: "Pre-Qualification: Choose Which Vendors May Bid",
+    question: "Where can I see the vendor responses to pre-qualification?",
+    answer: "In step 3, Response & Qualification, the left list shows each vendor that answered; click one to read its filled form (for example Paid-up Capital, Net Worth, track record). Step 4, List of Qualified, shows who was accepted.",
+    tags: ["pre qualification responses","list of qualified","qualified contractors","qualify vendor"]
+  },
+  {
+    action: "view",
+    object: "tender response",
+    scope: "module",
+    section: "Tender Response: Technical and Financial Packages",
+    question: "What is in Tender Response?",
+    answer: "Two tabs: Technical Package (vendor answers with a Weightage and a Score per question, then List of Qualified) and Financial Package (bills with Responses, Comparison, Analytics and Shortlist for Negotiation).",
+    tags: ["tender response","technical response","financial package","vendor response tender"]
+  },
+  {
+    action: "view",
+    object: "technical scoring",
+    scope: "module",
+    section: "Tender Response: Technical and Financial Packages",
+    question: "How do I score a vendor's technical response?",
+    answer: "Open Tender Response > Technical Package, pick the vendor in the left list and enter a Score for each question against its Weightage. List of Qualified shows the vendors that passed.",
+    tags: ["score technical package","weightage score","evaluate technical response","technical evaluation"]
+  },
+  {
+    action: "view",
+    object: "financial responses",
+    scope: "module",
+    section: "Tender Response: Technical and Financial Packages",
+    question: "Where do I see a vendor's prices?",
+    answer: "Open Tender Response > Financial Package, click a bill, and on Responses choose the vendor and its response. For each package you see Previous Quantity, Current Quantity, Amount (rate) and Cumulative Pay. A vendor can have several responses (Response 1, Response 2).",
+    tags: ["vendor prices tender","financial responses","enter vendor quotes for comparison","where do i enter vendor quotes"]
+  },
+  {
+    action: "view",
+    object: "financial package error",
+    scope: "module",
+    section: "Tender Response: Technical and Financial Packages",
+    question: "Why does the Financial Package show an error?",
+    answer: "It needs a Scope of Work. A tender with no scope of work shows an error about scope of work items; create the scope (bills) first under Tender Setup > Scope of Work.",
+    tags: ["financial package error","scopeofworkitems error","boq templates empty"]
+  },
+  {
+    action: "view",
+    object: "tender bidders source",
+    scope: "module",
+    section: "Tender Response: Technical and Financial Packages",
+    question: "Where do the bidders in the technical and financial packages come from?",
+    answer: "They are the vendors qualified in Pre-Qualification, which are Global Data > Vendors records (the test tender uses vendors in the Eco category).",
+    tags: ["bidders source","tenderer list source","who can bid on tender"]
+  },
+  {
+    action: "view",
+    object: "bid tab",
+    scope: "module",
+    section: "Tender Response: Technical and Financial Packages",
+    question: "What is the Bid tab for?",
+    answer: "The Bid tab is the vendor's own list of tenders to answer, with Bid Submission Status. It is empty for the admin (\"No Data Available\"); the admin works through the Tenders tab.",
+    tags: ["bid tab","bid submission status","vendor bid tab","bid response tab empty"]
   },
   {
     action: "view",
     object: "bid comparison",
-    scope: "project",
-    section: "Bid Comparison",
+    scope: "module",
+    section: "Comparing Bids, Negotiating and Awarding a Work Order",
     question: "How do I compare vendor bids to select a winner?",
-    answer: "After entering vendor responses in Procurement > Vendor Responses, move to the \"Vendor Analysis and Selection\" tab to evaluate and compare vendor responses based on cost, lead time, and other relevant factors.",
-    tags: ["compare bids","vendor analysis","select vendor","tender comparison"]
+    answer: "Open Tender Response > Financial Package, click a bill and choose Comparison. Pick the BOQ items, tenderers and packages; each vendor's amounts show side by side and Download Excel exports them. Then shortlist vendors in Shortlist for Negotiation.",
+    tags: ["compare vendor bids","bid comparison","compare quotes tender","select winner tender","tender comparison","how do I compare vendor bids to select a winner"]
   },
   {
-    action: "link",
-    object: "bid calendar event",
+    action: "view",
+    object: "shortlist negotiation",
     scope: "module",
-    section: "Proposals",
-    question: "Can bid-related deadlines appear on a calendar?",
-    answer: "Yes. Events created within the Proposal Management Calendar can be linked to different modules including Opportunity, Proposal, and Bid Management, so tender/bid deadlines can be tracked alongside proposal events.",
-    tags: ["bid deadlines","tender calendar","event linking"]
+    section: "Comparing Bids, Negotiating and Awarding a Work Order",
+    question: "How do I shortlist vendors for negotiation?",
+    answer: "In the Financial Package bill, open Shortlist for Negotiation (Name, Email, License, Phone no). Shortlisted vendors then appear in Negotiated Responses.",
+    tags: ["shortlist for negotiation","negotiation tender","negotiated responses"]
+  },
+  {
+    action: "create",
+    object: "create work order tender",
+    scope: "module",
+    section: "Comparing Bids, Negotiating and Awarding a Work Order",
+    question: "How do I create a work order from a tender?",
+    answer: "Open Negotiated Responses, click the bill and use Select Items to Create WO to choose which BOQ items go in. The awarded work order then shows under Awarded Work Order with Awarded To, Project Linked, Description and Created On.",
+    tags: ["create work order from tender","award tender","select items to create wo","awarded work order","tender winner work order"]
+  },
+  {
+    action: "view",
+    object: "awarded work order",
+    scope: "module",
+    section: "Comparing Bids, Negotiating and Awarding a Work Order",
+    question: "Where does the winner of a tender go?",
+    answer: "To Tender Management > Tender Details > Awarded Work Order, where the work order shows who it is awarded to and its BOQ. It is not added to the Home Work Order list and its Project Linked field was empty on the test site.",
+    tags: ["where does winner go","tender winner","awarded work order location","tender to work order","tender to purchase order"]
+  },
+  {
+    action: "view",
+    object: "tender analytics comparison",
+    scope: "module",
+    section: "Comparing Bids, Negotiating and Awarding a Work Order",
+    question: "What do the Comparison and Analytics tabs show?",
+    answer: "Comparison is a table of each vendor's Amount per item and package with Download Excel. Analytics shows charts of the same prices by package and item, each with a download icon.",
+    tags: ["comparison tab","analytics tab tender","price comparison charts"]
+  },
+  {
+    action: "view",
+    object: "addendum",
+    scope: "module",
+    section: "Addendum",
+    question: "What is an Addendum on a tender?",
+    answer: "The Addendum card lists named changes to a tender after it is issued (for example Pre-Qualification Responses and Technical Addendum). Opening one shows Addendum Data with the template pickers, such as the Technical Package. Bidders are e-mailed an \"Addendum Update on Tender Submission\".",
+    tags: ["addendum","tender addendum","change tender after issue","technical addendum"]
+  },
+  {
+    action: "create",
+    object: "bid type",
+    scope: "module",
+    section: "Bid Types and Tender Settings",
+    question: "How do I define categories for tenders/bids?",
+    answer: "Open Tender Management > Settings > Bid Type and click Bid Type. The three bid types (Build-Own-Transfer, Speciality Items, General) are shared with Proposal Management and feed Select Bid Type and the analytics filters.",
+    tags: ["bid types","define bid type","create bid type","tender categories","how do i define categories for tenders/bids"]
+  },
+  {
+    action: "view",
+    object: "tender status",
+    scope: "module",
+    section: "Bid Types and Tender Settings",
+    question: "What statuses can a tender have?",
+    answer: "Nine: In-Progress, Draft, Under Review, Reopened, Shortlisted, Awarded, Rejected, Pre Qualification and Completed (Settings > Status Configuration). Add Status adds one; In-Progress and Completed cannot be deleted.",
+    tags: ["tender statuses","bid status list","status configuration tender","add tender status"]
+  },
+  {
+    action: "view",
+    object: "tender approval workflow",
+    scope: "module",
+    section: "Bid Types and Tender Settings",
+    question: "How do I set up tender approvals?",
+    answer: "In Settings > Approval Workflow choose Bid, Pre Qualification or Technical Package, click Create Level and pick approvers and All must approve or Any one can approve. On the test site each has one level approved by System Admin.",
+    tags: ["tender approval workflow","approval levels tender","pre qualification approval","technical package approval","all must approve any one can approve"]
+  },
+  {
+    action: "view",
+    object: "bid templates",
+    scope: "module",
+    section: "Bid Types and Tender Settings",
+    question: "What are Bid Templates in Settings?",
+    answer: "The list of BOQ items (Item Description, UOM Group, UOM; 63 on the test site) with Add Item, Download Excel, Download Sample Excel and Upload Excel. It is the same list as Global Data > Bid Templates.",
+    tags: ["bid templates","boq items list","bid templates global data","upload excel boq items"]
+  },
+  {
+    action: "view",
+    object: "tender permissions",
+    scope: "module",
+    section: "Bid Types and Tender Settings",
+    question: "How do I give people access to Tender Management?",
+    answer: "Settings > Users and Permissions > Add User Group opens a Permissions grid (View, Create, Edit, Delete, Admin, Download, Print, Assign To, Roll Back) for Bid Management, its Settings, Bid Response, Analytics and Issues, plus a Users tab. No groups exist on the test site.",
+    tags: ["tender permissions","tender user group","bid management permissions","who can see tender management"]
+  },
+  {
+    action: "view",
+    object: "scope agreement templates",
+    scope: "module",
+    section: "Bid Types and Tender Settings",
+    question: "What are the Scope of Work and Agreement settings?",
+    answer: "Template lists with Create Template, which offers Create or Upload for a Scope of Work or Agreement template. Scope of Work templates feed Import from settings when you build a tender's scope.",
+    tags: ["scope of work template","agreement template","import from settings"]
+  },
+  {
+    action: "view",
+    object: "tender analytics",
+    scope: "module",
+    section: "Analytics, Issues and the Bid Tab",
+    question: "What reports does Tender Management have?",
+    answer: "Analytics & Reports has 5 cards: Bid Awarded Rate, Estimate Awarded Rate, Types of Bids, Success & Estimate Over Time and Weekly Report. Charts can be downloaded and filtered by Bid Types.",
+    tags: ["tender analytics","tender reports","bid awarded rate","weekly report tender","success rate tenders"]
+  },
+  {
+    action: "view",
+    object: "weekly report tender",
+    scope: "module",
+    section: "Analytics, Issues and the Bid Tab",
+    question: "Why is a tender missing from the Weekly Report?",
+    answer: "On the test site the Weekly Report lists 6 of the 8 tenders; the two with status Unassigned are not shown. Check the tender status and use the Date Range filter.",
+    tags: ["tender missing weekly report","weekly report tender columns","tender weekly report"]
+  },
+  {
+    action: "view",
+    object: "tender issues",
+    scope: "module",
+    section: "Analytics, Issues and the Bid Tab",
+    question: "What are Issues in Tender Management?",
+    answer: "The Issues tab lists workflow issues raised on tender approvals: WFL Number, Level, who raised it, Comments, Assign To, Due Date, Chat and See History, with counters for Total, Approved and Rejected.",
+    tags: ["tender issues","workflow issues tender","approval issues tender"]
+  },
+  {
+    action: "view",
+    object: "tender lineage",
+    scope: "module",
+    section: "Where Tender Data Comes From and Goes",
+    question: "Where does Tender Management get its data?",
+    answer: "Vendors and bidders from Global Data > Vendors; owners from Global Data > Owners; users from Global Rosters; crews from Global Data > Crews; BOQ items from Bid Templates (shared with Global Data); bid types and statuses shared with Proposal Management; proposals, opportunities and projects from their modules.",
+    tags: ["tender data source","tender lineage","where does tender data come from","tender management data"]
+  },
+  {
+    action: "view",
+    object: "tender proposal link",
+    scope: "module",
+    section: "Where Tender Data Comes From and Goes",
+    question: "How is Tender Management linked to Proposal Management?",
+    answer: "A proposal's Bid tab creates and lists tenders. The Select Proposal field fills Proposal Linked on the tender, and bid types and statuses are shared. On the test site no tender is linked to a proposal yet.",
+    tags: ["tender proposal link","proposal management tender","proposals tab tender","link tender and proposal"]
+  },
+  {
+    action: "view",
+    object: "tender vendors global data",
+    scope: "module",
+    section: "Where Tender Data Comes From and Goes",
+    question: "Why is a vendor missing when I invite bidders?",
+    answer: "The Send to Tenderer list is Global Data > Vendors. Register the vendor there (and check its category) and it will appear.",
+    tags: ["vendor missing tender","add vendor for tender","register vendor tender"]
+  },
+  {
+    action: "view",
+    object: "tender winner lineage",
+    scope: "module",
+    section: "Where Tender Data Comes From and Goes",
+    question: "Does an awarded tender create a Work Order or Purchase Order?",
+    answer: "It creates an awarded work order inside the tender (Tender Details > Awarded Work Order). On the test site it did not appear in the Home Work Order list and no project was linked, and no purchase order was created.",
+    tags: ["tender creates work order","tender purchase order","award creates po","tender to project"]
+  },
+  {
+    action: "create",
+    object: "rfq",
+    scope: "module",
+    section: "RFQs and Vendor Quotes in Procurement",
+    question: "How do I invite vendors to quote (create an RFQ)?",
+    answer: "RFQs are in the Procurement module, not in the tender cards. In Procurement > RFQ create an RFQ: select the requisition form, update quantities, then identify vendors by category, sub category and group from Global Data > Vendors.",
+    tags: ["create rfq","invite vendors to quote","rfq","request for quotation","procurement rfq"]
+  },
+  {
+    action: "view",
+    object: "rfq instructions",
+    scope: "module",
+    section: "RFQs and Vendor Quotes in Procurement",
+    question: "How do I set standard instructions for vendors on an RFQ?",
+    answer: "Use Vendor Instructions on the RFQ in Procurement to add guidelines and terms and conditions that go to the vendors.",
+    tags: ["rfq vendor instructions","standard instructions rfq","rfq terms"]
+  },
+  {
+    action: "view",
+    object: "rfq status",
+    scope: "module",
+    section: "RFQs and Vendor Quotes in Procurement",
+    question: "How do I track the status of an RFQ sent to vendors?",
+    answer: "Open Procurement > RFQ: the RFQ list shows progress and pending actions per RFQ and the vendor names.",
+    tags: ["track rfq","rfq status","rfq list"]
+  },
+  {
+    action: "view",
+    object: "rfq vs tender",
+    scope: "module",
+    section: "RFQs and Vendor Quotes in Procurement",
+    question: "Is an RFQ the same as a tender?",
+    answer: "No. An RFQ in Procurement asks vendors to quote against a requisition. A tender in Tender Management is a staged process (pre-qualification, technical and financial packages, negotiation, award). They share Global Data vendors.",
+    tags: ["rfq vs tender","difference rfq tender","tender or rfq"]
   }
 ];
 
@@ -29593,53 +30079,402 @@ const MODULES = [
     "qaItems": QA_TENDERMANAGEMENT,
     "narrative": [
       {
-        "heading": "Admin Role",
-        "intro": "<p>Because Tender Management is really two existing modules (Proposal Management's Bid feature and Procurement's RFQ/Vendor Response feature) mapped onto one Home tile, an admin's setup work here is most likely a subset of admin tasks already required in those other modules, rather than something configured in a distinct Tender screen of its own.</p><p>Before any bid can be created at all, an admin likely needs to enable the Bid tab via permissions in Bid Management, and before bids can be meaningfully compared to one another later, an admin probably wants to define a clear set of Bid Types up front — each carrying an Estimate Type that determines how bids under it are structured and evaluated. Well-thought-out bid types are what make later bid comparison work well, since bids of the same type line up against each other far more easily than bids each structured ad hoc.</p>",
+        "heading": "Who sets this up",
+        "intro": "<p>Tender Management is run by a <strong>Module Admin</strong> who sets up the lists and approval workflows once, and by <strong>Tender Managers / PMs</strong> who create and run each tender. Approvers sign tenders off, and vendors respond through their own view of the module.</p><p>From <strong>Home</strong>, click the <strong>Tender Management</strong> tile (\"Create Tenders, compare bids, and manage all tendering operations in one place\"). The module opens on the <strong>Tenders</strong> list.</p>",
         "definitions": [
           {
-            "term": "Bid Management permissions",
-            "definition": "The permission gate that must be enabled before the Bid tab becomes usable on a proposal."
+            "term": "Who does what",
+            "definition": "**Module Admin / Super Admin** builds everything in **Settings** (bid types, scope of work and agreement templates, statuses, approval workflows, bid templates, BOQ and estimate templates, pre-qualification and technical package templates, user groups) and keeps vendors in **Global Data**. **PM / Tender Manager** creates tenders and runs the cards. **Approver** (named in the workflow) approves a tender or a package. **Vendor / Bidder** answers pre-qualification and submits responses. Results show in **Analytics & Reports**."
           },
           {
-            "term": "Bid Type",
-            "definition": "A company-wide category defining how a class of bids is structured, carrying a Name, Description, and an Estimate Type that governs how bids of that type are built and evaluated."
+            "term": "Tender and Bid",
+            "definition": "The product uses **Tender** as the name of the object; some screens still say **Bid** (Bid Name, Bid Type, Bid Status, the **Bid** tab)."
           },
           {
-            "term": "Estimate Type",
-            "definition": "The specific structuring/evaluation logic attached to a Bid Type, determining how a bid created under it is priced and assessed."
+            "term": "Where Tender Management settings live",
+            "definition": "All settings are in the module itself (the **Settings** gear). They are not in Global Data, except the vendor list and the **Bid Templates** items, which are shared with **Global Data > Bid Templates**."
           }
         ],
         "procedures": [
           {
-            "title": "Define a new bid type",
+            "title": "Set up Tender Management for the first time",
             "steps": [
-              "Go to <strong>Proposal Management → Settings → Bid Types</strong>.",
-              "Click <strong>Bid Type</strong> to open the creation form.",
-              "Enter a <strong>Name</strong> and <strong>Description</strong>, and choose the <strong>Estimate Type</strong> that defines how bids of this type will be structured and evaluated."
+              "In **Global Data > Vendors**, make sure the vendors who may bid exist (a vendor only appears in Pre-Qualification if it is in Global Data).",
+              "Open **Tender Management > Settings** and review **Bid Type**, **Status Configuration** and **Bid Templates**.",
+              "Create the **BOQ & Estimate Template**, **Pre Qualification Template** and **Technical Package Template** you want to offer, and a **Scope of Work** and **Agreement** template if you use them.",
+              "Under **Approval Workflow** add at least one level for **Bid**, **Pre Qualification** and **Technical Package**.",
+              "Under **Users and Permissions** add user groups for the people who will work in the module.",
+              "Open the **Tenders** tab and click **Add Tender**."
+            ],
+            "note": "The Pre-Qualification and Technical Package template pickers need an approval workflow for that form type first."
+          }
+        ]
+      },
+      {
+        "heading": "Tender List and Creating a Tender",
+        "intro": "<p>The <strong>Tenders</strong> tab is the list of every tender, used by tender managers to create tenders and by approvers to review them. A new tender is sent for approval, and only an approved tender can be opened.</p><p>The list has <strong>Add Tender</strong>, search, <strong>Filters</strong>, <strong>Manage Columns</strong>, <strong>Table View</strong> and <strong>Grid View</strong>, <strong>Save Layout</strong> and <strong>Show as Graph</strong>. Status chips along the top count tenders by status.</p>",
+        "definitions": [
+          {
+            "term": "Tender list columns",
+            "definition": "**Tender Name**, **Tender ID**, **Description**, **Proposal Linked**, **Bid Type**, **Status**, **Approve**, **Reject**, **Approval Status** and **Actions** (edit, notes, delete). On the test site there are 8 tenders; the **Tender ID** is the number shown as \"Tender 9\" inside the tender."
+          },
+          {
+            "term": "Status chips",
+            "definition": "Counts by status (on the test site 2 Under Review, 1 Reopened, 1 Shortlisted, 1 Awarded, 1 Completed). **View All** shows every tender. Statuses come from **Settings > Status Configuration**."
+          },
+          {
+            "term": "Approval Status",
+            "definition": "**Approved** or **Ready for Approval**. A new tender goes through **Submit for Approval** and the **Bid** approval workflow in Settings. On the test site a tender that was still **Ready for Approval** did not open when its name was clicked."
+          },
+          {
+            "term": "Create Tender dialog",
+            "definition": "Fields: **Tender Name***, **Description**, **Select Proposal**, **Select Bid Type*** (a drop-down) and three choices **Open Bidding**, **Selective Bidding**, **Selective Bidding - No Prequalification**. Buttons **Cancel** and **Submit for Approval**. **Edit Tender** shows the same fields with **Submit**."
+          },
+          {
+            "term": "Where this data comes from",
+            "definition": "**Select Proposal** lists the proposals of **Proposal Management** (15 on the test site, such as \"11 - Roofing proposal - 004\"). **Select Bid Type** lists the three bid types (Build-Own-Transfer, Speciality Items, General), shared with Proposal Management. The Open / Selective choice is fixed."
+          },
+          {
+            "term": "Notes, Grid View, Show as Graph",
+            "definition": "The notes icon opens a **Note** dialog (**Cancel**, **Submit**). **Grid View** shows each tender as a card with Edit, Notes and Delete in its menu. **Show as Graph** opens **Tenders By Status** with a download icon."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Create a tender",
+            "steps": [
+              "Open **Tender Management** and stay on the **Tenders** tab.",
+              "Click **Add Tender**.",
+              "Enter the **Tender Name** and a **Description**.",
+              "Optionally choose **Select Proposal** to link the tender to a proposal.",
+              "Choose a **Select Bid Type** and one of **Open Bidding**, **Selective Bidding** or **Selective Bidding - No Prequalification**.",
+              "Click **Submit for Approval**. The tender shows **Ready for Approval** until the approver approves it."
+            ],
+            "note": "You can also start a tender from a proposal: its **Bid** tab opens the same Create Tender dialog with the proposal already selected."
+          },
+          {
+            "title": "Find a tender or change the view",
+            "steps": [
+              "Use the search box, or click **Filters** and enter **Tender Name**, **Tender ID**, **Status** or **Bid Type**, then **Submit** (**Clear & Apply** resets).",
+              "Click **Table View** or **Grid View** to change the layout, and **Save Layout** to keep it.",
+              "Click **Show as Graph** to see **Tenders By Status**."
             ]
           },
           {
-            "title": "Create a bid for a proposal",
+            "title": "Open a tender",
             "steps": [
-              "Confirm the <strong>Bid tab</strong> is enabled for your account via permissions in <strong>Bid Management</strong> — without this, the tab will not be available.",
-              "Open the relevant proposal and go to its <strong>Bid</strong> tab.",
-              "Click <strong>Create Bid</strong>.",
-              "Fill in <strong>Bid Name</strong>, <strong>Description</strong>, the parent <strong>Proposal</strong>, and <strong>Bid Type</strong>."
+              "Click the tender name in the list.",
+              "The tender page shows its four cards: **Tender Event Schedule**, **Pre-Qualification**, **Tender Details** and **Addendum**."
+            ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/proposal-management-bid/005.jpg",
+            "caption": "Filters on the Bids list"
+          },
+          {
+            "src": "assets/notion/proposal-management-bid/006.jpg",
+            "caption": "Manage Columns: hiding or rearranging columns"
+          }
+        ]
+      },
+      {
+        "heading": "Tender Setup: Profile, Team, Scope of Work and Submission",
+        "intro": "<p><strong>Tender Details > Tender Setup</strong> holds everything about the tender itself, and is used by the tender manager before bidders are invited. Its tabs are <strong>Profile</strong>, <strong>Teams</strong>, <strong>Status & Comments</strong>, <strong>Documents</strong>, <strong>Communication</strong>, <strong>Scope of Work</strong>, <strong>Technical Package</strong> and <strong>Submission Package</strong>.</p><p>Which tabs you see depends on how far the tender has progressed: on the test site Tender 1 (Awarded, nothing set up) shows only Tender Setup, while Tender 9 (Completed) also shows Tender Response, Negotiated Responses and Awarded Work Order.</p>",
+        "definitions": [
+          {
+            "term": "Profile",
+            "definition": "Fields: **Bid Name***, **Bid Type***, **Description**, **Start Date**, **End Date**, **Due Date**, **Bid Status**, **Owner Name**, **Location**, **Bid Estimated Value** and **Bid Submitted Value** (INR), **Connected Items** (**Proposals**, **Opportunity**, **Project**), **Attachments**, configurable fields of the bid type, **Assign To**, **Save Changes**."
+          },
+          {
+            "term": "Where the Profile lists come from",
+            "definition": "**Bid Type** and **Bid Status** come from this module's **Settings** (3 bid types; 9 statuses). **Owner Name** lists the **Global Data > Owners** (3). **Location** showed the same three owner names, not the Global Data Locations. **Proposals** lists the 15 Proposal Management proposals, **Opportunity** the Opportunity Management list, **Project** all 115 company projects, and **Assign To** the roughly 1,270 system users from Global Rosters."
+          },
+          {
+            "term": "Configurable fields",
+            "definition": "Each bid type can add its own fields. A **Speciality Items Bid Type** tender shows **Speciality Item 1** to **Speciality Item 6**; a **General Bid Type** tender shows none."
+          },
+          {
+            "term": "Teams",
+            "definition": "Two tabs, **Users** and **Crews**. **Add User** opens **Add Users** (every system user, with search and **Select All**); **Add Crew** opens **Add Crews** (the 18 crews of **Global Data > Crews**, with member counts)."
+          },
+          {
+            "term": "Status & Comments",
+            "definition": "A **Comments** box with **Select Map Type** (**General**, **Negotiation**, **Clarification**), the current **Bid Status**, and **Search by People**."
+          },
+          {
+            "term": "Documents and Communication",
+            "definition": "**Documents** has **New Folder**, **Upload Documents** and four automatic folders (**Profile**, **Status & Comments**, **Mail Attachments**, **Submission**). **Communication** is a mail client (**Compose Mail**, All Emails, Inbox, Sent, Drafts, Starred, Trash). Mail goes through the account chosen for **TENDER MANAGEMENT** in **Global Data > Settings > Mail Settings**."
+          },
+          {
+            "term": "Scope of Work",
+            "definition": "**Create** opens **Create Scope of Work** with three choices: **Import from settings** (the templates from **Settings > Scope of Work**), **Scope of items** and **BOQ**. A scope is a set of **Bills** (on Tender 9: Bill 2.1, 2.2, 4, 6, 7, 8, 8.1, 9, 9.1)."
+          },
+          {
+            "term": "Choose Estimate Template and Package",
+            "definition": "Clicking a bill opens a three-step flow: **1 Choose Estimate Template and Package**, **2 BOQ Update**, **3 Preview**. Step 1 lists the 10 estimate templates of **Settings > BOQ & Estimate Template** and the packages (**S**, **M**, **ABC**). Steps 2 and 3 show the bill of quantities: **S.No**, **Item**, **Description**, a quantity column per package and the total **Quantity**."
+          },
+          {
+            "term": "Technical Package",
+            "definition": "A template picker (**Templates (2)**: **Critical Technical Aspects**, **General Technical Capabilities**) with **Expand All** / **Collapse All**. The questions (for example System Architecture, Integration, Customization) are what bidders answer and what the evaluator scores. Templates come from **Settings > Technical Package Template**."
+          },
+          {
+            "term": "Submission Package",
+            "definition": "Sub-tabs **Submission Package**, **Approval Workflow** and **Issues**. The list shows revisions (**Revision 1**, **Revision 2**, each with Created By and Created On) and each can be deleted. The empty message reads \"Qualify contractors from Pre-Qualification for submission creation.\" **Approval Workflow** has **Create Level** (Level, Description, Approvers, **All must approve** / **Any one can approve**); approvers are the system users. **Issues** shows total, approved and rejected counts."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Edit a tender profile",
+            "steps": [
+              "Open the tender and click **Tender Details**.",
+              "On **Profile** change the fields, including **Bid Status**, the values and **Connected Items**.",
+              "Click **Save Changes**."
+            ]
+          },
+          {
+            "title": "Add a team to a tender",
+            "steps": [
+              "Open **Tender Setup > Teams**.",
+              "On **Users** click **Add User**, tick people and submit; or open **Crews** and click **Add Crew**."
+            ]
+          },
+          {
+            "title": "Build the scope of work",
+            "steps": [
+              "Open **Tender Setup > Scope of Work** and click **Create**.",
+              "Choose **Import from settings**, **Scope of items** or **BOQ** and submit.",
+              "Click a bill, pick an estimate template and the packages, then update the BOQ quantities and check the **Preview**."
+            ]
+          },
+          {
+            "title": "Choose a technical package",
+            "steps": [
+              "Open **Tender Setup > Technical Package**.",
+              "Pick a template from **Templates (2)** and use **Expand All** to read its questions."
             ]
           }
         ]
       },
       {
-        "heading": "Bid Types",
-        "intro": "<p>Before any bid can be created, someone needs to define what kinds of bids your organization actually runs — and that's what Bid Types are for. A Bid Type isn't just a label; it carries an Estimate Type that determines how a bid built under it will be structured and evaluated, which means this small piece of configuration has an outsized effect on how consistently bids can be compared to one another later. Setting up a clear, well-thought-out set of bid types up front is what makes bid comparison meaningful down the line, since bids of the same type are far easier to line up against each other than bids that were each structured ad hoc.</p><p>Bid Types are company-wide configuration, reachable either from Proposal Management's own settings or from the broader Global Data area, which reflects the fact that this is a categorization decision made once for the organization rather than something reconfigured per proposal.</p>",
+        "heading": "Tender Event Schedule",
+        "intro": "<p>The <strong>Tender Event Schedule</strong> card sets the dates of the tender, used by the tender manager so bidders and the system know each deadline. Open the tender and click <strong>Tender Event Schedule</strong>.</p><p>The screen lists 14 events, each with a <strong>Due Date</strong> and a <strong>Time</strong> (the clock icon opens a time picker), and <strong>Reset</strong> and <strong>Save</strong> buttons.</p>",
+        "definitions": [
+          {
+            "term": "The 14 events",
+            "definition": "**Pre-Q Form Issuance**, **Pre-Q Query Deadline**, **Pre-Q Submission Deadline**, **Pre-Q Evaluation starts**, **Result List Date**, **Issue of Tender Documents (Tender Call Date)**, **Pre-Bid Meeting**, **Query/Addendum Deadline**, **Bid Submission Last date (Tender Close Date)**, **Bid Opening Date**, **Negotiations details issued**, **Negotiation deadline**, **Award Notification**, **Contract Award**. The dates were blank on the tender checked."
+          },
+          {
+            "term": "What the dates control",
+            "definition": "The product text says that bidders can fill the pre-qualification form only from the **Pre-Q Form Issuance** date. The pre-qualification and the invitation e-mails also point bidders to this schedule."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Set the tender dates",
+            "steps": [
+              "Open the tender and click **Tender Event Schedule**.",
+              "Enter a date and click the clock icon to set the time for each event.",
+              "Click **Save** (or **Reset** to clear)."
+            ]
+          },
+          {
+            "title": "Track bid-related deadlines on a calendar",
+            "steps": [
+              "Create an event within the <strong>Proposal Management Calendar</strong>.",
+              "Link the event to the appropriate module — <strong>Opportunity</strong>, <strong>Proposal</strong>, or <strong>Bid Management</strong> — so the deadline is visible in the context of the related record."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/proposal-management-calendar/010.jpg",
+                "caption": "Linking an event to Opportunity, Proposal or Bid Management",
+                "step": 2
+              }
+            ],
+            "note": "This calendar belongs to Proposal Management; the Tender Management schedule above is separate."
+          }
+        ]
+      },
+      {
+        "heading": "Pre-Qualification: Choose Which Vendors May Bid",
+        "intro": "<p>The <strong>Pre-Qualification</strong> card shortlists vendors before they receive the tender, used by the tender manager and approvers. It has four steps: <strong>1 Choose Template</strong>, <strong>2 Send to Tenderer</strong>, <strong>3 Response & Qualification</strong> and <strong>4 List of Qualified</strong>.</p><p>The qualified vendors are then the only ones who appear in the Technical Package and Financial Package. The option <strong>Selective Bidding - No Prequalification</strong> is named to skip this step.</p>",
+        "definitions": [
+          {
+            "term": "Step 1: Choose Template",
+            "definition": "**Templates (2)**: **Application Form** (particulars of firm, category of work applied for such as Building Works, M&E Works and Infrastructure Works) and **Application Form for Pre-Qualification** (**FINANCIAL**, **WORKING EXPERIENCE (TRACK RECORD)**, **PERSONNEL & MACHINERIES**). Both come from **Settings > Pre Qualification Template**. Once chosen the template is saved for the tender."
+          },
+          {
+            "term": "Step 2: Send to Tenderer",
+            "definition": "A list of vendors with **Name**, **Email**, **License**, **Phone no** and a tick box; the **Email** button stays disabled until you tick vendors. The list is **Global Data > Vendors** (37 vendors on the test site, including the \"(eco)\" vendors). The product e-mail asks the vendor to submit the pre-qualification form and to read the Tender Event Schedule."
+          },
+          {
+            "term": "Step 3: Response & Qualification",
+            "definition": "The left list **Tender (3)** shows the vendors who answered (**DEF SDN BHD (eco)**, **JKL SDN BHD (eco)**, **GHI SDN BHD (eco)**). Click one to read its filled form, for example Paid-up Capital \"Between RM 500k - RM 2 mil\"."
+          },
+          {
+            "term": "Step 4: List of Qualified",
+            "definition": "The vendors accepted: **JKL SDN BHD (eco)** and **DEF SDN BHD (eco)** (GHI was not). The same two vendors appear in **Technical Package > List of Qualified** and in the **Financial Package**."
+          },
+          {
+            "term": "Settings it depends on",
+            "definition": "The template choice is blocked until **Settings > Approval Workflow > Pre Qualification** has a level, and it is allowed only before the **Pre-Q Form Issuance** date. The product also asks for confirmation before starting evaluation because it stops accepting responses."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Pre-qualify vendors for a tender",
+            "steps": [
+              "Open the tender and click **Pre-Qualification**.",
+              "In **1 Choose Template** pick a template and submit it.",
+              "In **2 Send to Tenderer** tick the vendors and click **Email**.",
+              "In **3 Response & Qualification** open each vendor to read its answers and qualify it.",
+              "Check **4 List of Qualified**: these vendors move on to the packages."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Tender Response: Technical and Financial Packages",
+        "intro": "<p><strong>Tender Details > Tender Response</strong> is where the tender manager and evaluators read what the qualified vendors submitted. It has two tabs: <strong>Technical Package</strong> and <strong>Financial Package</strong>.</p><p>Vendors submit through the <strong>Bid</strong> tab of their own login (it lists the tenders they may answer and the <strong>Bid Submission Status</strong>); the admin's Bid tab is empty.</p>",
+        "definitions": [
+          {
+            "term": "Technical Package",
+            "definition": "Two steps: **1 Response of Technical Package** (left list **Tender (2)** of vendors; each question shows the answer, a **Weightage** and a **Score** box) and **2 List of Qualified** (**Name**, **Email**, **License**, **Phone no**)."
+          },
+          {
+            "term": "Financial Package",
+            "definition": "**BOQ Templates** page lists the same bills as the Scope of Work. Click a bill to open four tabs: **Responses**, **Comparison**, **Analytics**, **Shortlist for Negotiation**. The Financial Package needs a Scope of Work first: on a tender without one the page shows an error about scope of work items."
+          },
+          {
+            "term": "Responses tab",
+            "definition": "Left list of vendors with each response (JKL SDN BHD (eco) has **Response 2** and **Response 1**). For every package (**S**, **M**, **ABC**): **Item**, **Description**, **Previous Quantity**, **Current Quantity**, **Amount** (the vendor's rate) and **Cumulative Pay**. Items and quantities are the Scope of Work BOQ."
+          },
+          {
+            "term": "Where bidders come from",
+            "definition": "Vendors on these screens are those qualified in Pre-Qualification, which are **Global Data > Vendors** records (category **Eco category** for these two)."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Review a vendor's technical response",
+            "steps": [
+              "Open **Tender Details > Tender Response > Technical Package**.",
+              "Pick a vendor in **Tender (2)**.",
+              "Read each answer and enter a **Score** against the **Weightage**.",
+              "Open **2 List of Qualified** to see who passed."
+            ]
+          },
+          {
+            "title": "Review financial responses",
+            "steps": [
+              "Open **Tender Response > Financial Package** and click a bill.",
+              "On **Responses** pick a vendor and response to see rates per package."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Comparing Bids, Negotiating and Awarding a Work Order",
+        "intro": "<p>After responses come in, evaluators compare vendor prices, shortlist for negotiation and award a work order. This is done inside the <strong>Financial Package</strong>, <strong>Negotiated Responses</strong> and <strong>Awarded Work Order</strong> tabs.</p><p>The winner becomes a work order that lives inside the tender; it is not added to the Home <strong>Work Order</strong> list.</p>",
+        "definitions": [
+          {
+            "term": "Comparison",
+            "definition": "Filters **Select BOQ Items**, **Select Tenderers** and **Select Packages**, a **Download Excel** button, and for each package a table **Item**, **Description**, **Quantity** and one **Amount** column per vendor (for example Reinforced Concrete Frame, quantity 12: JKL 345, DEF 250). Each vendor shows its latest response."
+          },
+          {
+            "term": "Analytics",
+            "definition": "Charts of the vendors' prices by package and item, each with a download icon."
+          },
+          {
+            "term": "Shortlist for Negotiation",
+            "definition": "The vendors taken forward: **Name**, **Email**, **License**, **Phone no**. Only shortlisted vendors then appear in **Negotiated Responses**."
+          },
+          {
+            "term": "Negotiated Responses",
+            "definition": "Bill cards, then a page with the shortlisted vendor (**Tender (1)**: **JKL SDN BHD (eco)**), its responses and the full price table. **Select Items to Create WO** turns on tick boxes to choose which BOQ items go into the work order."
+          },
+          {
+            "term": "Awarded Work Order",
+            "definition": "Bill cards, then a card for the work order with **Awarded To**, **Project Linked**, **Description** and **Created On** (on the test site: \"Structural Works for the Development of Faculty Building at the University of Melaka, Malaysia\", awarded to JKL SDN BHD (eco), project not linked). Opening it shows the awarded BOQ per package (**Current Quantity**, **Amount**). The product e-mail to the winner says the vendor has been awarded the scope and asks it to confirm."
+          },
+          {
+            "term": "Where the award goes",
+            "definition": "The awarded work order is shown only in the tender. The Home **Work Order** list (7 unrelated work orders on the test site) does not contain it, and its **Project Linked** field was empty."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Compare vendor prices and award",
+            "steps": [
+              "Open **Tender Response > Financial Package** and click a bill, then **Comparison**.",
+              "Choose the items, tenderers and packages to compare; use **Download Excel** if needed.",
+              "Open **Shortlist for Negotiation** and shortlist the vendors.",
+              "Open **Negotiated Responses**, click the bill, compare the responses and use **Select Items to Create WO**.",
+              "Open **Awarded Work Order** to see the work order and the vendor it is awarded to."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Addendum",
+        "intro": "<p>The <strong>Addendum</strong> card records changes to the tender after it is issued, used by the tender manager. Open the tender and click <strong>Addendum</strong>.</p><p>It lists named addenda with search, a pager and table / grid views.</p>",
+        "definitions": [
+          {
+            "term": "Addendum list",
+            "definition": "Cards with **Name** and **Description** (on Tender 9: **Pre-Qualification Responses** and **Technical Addendum**); the menu offers **Edit**. Opening one shows **Addendum Data** with the same template pickers as the tender, for example **Technical Package** (**Critical Technical Aspects**, **General Technical Capabilities**)."
+          },
+          {
+            "term": "Settings it depends on",
+            "definition": "The **Query/Addendum Deadline** in the **Tender Event Schedule**. The e-mail to bidders is titled \"Addendum Update on Tender Submission\"."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Review an addendum",
+            "steps": [
+              "Open the tender and click **Addendum**.",
+              "Click an addendum card.",
+              "Read or change the technical package template in **Addendum Data**."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Bid Types and Tender Settings",
+        "intro": "<p><strong>Settings</strong> holds the lists and templates that shape every tender, used by the Module Admin. Its menu has <strong>Bid Type</strong>, <strong>Scope of Work</strong>, <strong>Agreement</strong>, <strong>Status Configuration</strong>, <strong>Approval Workflow</strong>, <strong>Bid Templates</strong>, <strong>BOQ & Estimate Template</strong>, <strong>Pre Qualification Template</strong>, <strong>Technical Package Template</strong> and <strong>Users and Permissions</strong>.</p>",
         "definitions": [
           {
             "term": "Bid Type",
-            "definition": "A company-wide category defining how a class of bids is structured, carrying a Name, Description, and an Estimate Type that governs how bids of that type are built and evaluated."
+            "definition": "Cards **Build-Own-Transfer Bid Type**, **Speciality Items Bid Type**, **General Bid Type** with Description, Created On and Created By; the **Bid Type** button adds one. These are the same three bid types as in **Proposal Management > Settings > Bid Types**, and feed **Select Bid Type**, the Profile and the analytics filters."
           },
           {
-            "term": "Estimate Type",
-            "definition": "The specific structuring/evaluation logic attached to a Bid Type, determining how a bid created under it is priced and assessed."
+            "term": "Scope of Work and Agreement",
+            "definition": "**Create Template** offers **Create Scope of Work Template** / **Upload Scope of Work Template**, and likewise for **Agreement** (the test site has **Bid Template 1** and **Agreement1**). The scope templates feed **Import from settings** in a tender."
+          },
+          {
+            "term": "Status Configuration",
+            "definition": "Nine statuses: **In-Progress** (first), **Draft**, **Under Review**, **Reopened**, **Shortlisted**, **Awarded**, **Rejected**, **Pre Qualification**, **Completed** (last). **Add Status** adds one; only the middle ones can be deleted. They feed **Bid Status** and the status chips."
+          },
+          {
+            "term": "Approval Workflow",
+            "definition": "Three tabs: **Bid**, **Pre Qualification**, **Technical Package**. Each has **Create Level** and a table (**Level**, **Level Description**, **Approvers**, **Workflow Type**, **Actions**). On the test site each has one level approved by 001 - System Admin: **Any one can approve** for Bid and Pre Qualification, **All must approve** for Technical Package."
+          },
+          {
+            "term": "Bid Templates",
+            "definition": "The list of BOQ items (63 on the test site: **Item Description**, **UOM Group**, **UOM**) with **Add Item**, **Download Excel**, **Download Sample Excel**, **Upload Excel**. It is the same list as **Global Data > Bid Templates**."
+          },
+          {
+            "term": "BOQ & Estimate Template",
+            "definition": "Ten estimate templates (**Test**, **Item Rate**, **Ori BQ**, **M&E BQ**, **Lump Sum**, **Unit Rate**, **Guaranteed Maximum Price**, **Cost-Plus**, **Time & Material**, **Time & Material (Global)**). **Create Template** asks for a **Name** and **Description**. They are the templates offered in a tender's Scope of Work."
+          },
+          {
+            "term": "Pre Qualification Template and Technical Package Template",
+            "definition": "Two templates each (**Application Form**, **Application Form for Pre-Qualification**; **Critical Technical Aspects**, **General Technical Capabilities**), each with **Create Template**."
+          },
+          {
+            "term": "Users and Permissions",
+            "definition": "**Add User Group** opens a page with **Permissions** and **Users** tabs. The grid has **View**, **Create**, **Edit**, **Delete**, **Admin**, **Download**, **Print**, **Assign To** and **Roll Back** for Bid Management (Profile, Team, Status And Comments, Documents, Communication, Scope Of Work, Bid Criteria, Submission, Submission Approval Workflow), Bid Management Settings, Bid Response (Log Subcontractor Response, Compare Contractor Price, Agreement, Work Order), Analytics and Issues. No groups exist on the test site."
           }
         ],
         "procedures": [
@@ -29661,6 +30496,21 @@ const MODULES = [
                 "caption": "Editing a bid type's name, description and estimate type",
                 "step": 3
               }
+            ],
+            "note": "The screenshots show the pop-up from Proposal Management, where bid types are shared."
+          },
+          {
+            "title": "Change the statuses a tender can have",
+            "steps": [
+              "Open **Settings > Status Configuration**.",
+              "Click **Add Status** to add one, the pencil to rename, or the bin to delete a middle status."
+            ]
+          },
+          {
+            "title": "Add an approval level",
+            "steps": [
+              "Open **Settings > Approval Workflow** and choose **Bid**, **Pre Qualification** or **Technical Package**.",
+              "Click **Create Level**, choose **All must approve** or **Any one can approve**, add a description and pick approvers."
             ]
           }
         ],
@@ -29672,118 +30522,81 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Bids",
-        "intro": "<p>A bid is the object you create in Arena to price and structure a proposed piece of work under a proposal, and it's the core unit of tendering activity in the platform. Bids live inside the Bid tab of an existing Proposal — you don't tender in the abstract; every bid is anchored to a specific proposal from the outset, which keeps pricing and scope conversations tied to the opportunity they're actually for. Before your team can create bids at all, the Bid tab needs to be switched on for your account through permissions in Bid Management, so this is usually a one-time setup step handled by an admin rather than something each user configures individually.</p><p>Once bidding is enabled, the Bids screen functions like most list-based screens in Arena: you can search within a proposal's bids, bulk-create or export them via Excel, and choose between Table, Grid, or Kanban layouts depending on how your team likes to work — a Kanban view, for instance, is useful when you want to see bids moving through stages at a glance, while Table view is better for scanning many bids' details side by side. Whichever layout you pick can be saved as your default so you don't have to reselect it every time you open the screen.</p>",
+        "heading": "Analytics, Issues and the Bid Tab",
+        "intro": "<p>These three tabs summarise tenders for managers: <strong>Analytics & Reports</strong>, <strong>Issues</strong> and <strong>Bid</strong>.</p><p>The charts read the tenders from the list, so a tender must exist and have a status and values to appear.</p>",
         "definitions": [
           {
-            "term": "Bid",
-            "definition": "A priced, structured response to a piece of work, created inside a Proposal's Bid tab. Each bid carries a Bid Name, Description, its parent Proposal, and a Bid Type that governs how it is structured and evaluated."
+            "term": "Analytics & Reports (5 cards)",
+            "definition": "**Bid Awarded Rate** (success rate by quantity and currency value, with a **Bid Types** filter), **Estimate Awarded Rate**, **Types of Bids** (quantity and amount), **Success & Estimate Over Time** (status filter) and **Weekly Report**. Charts have download and zoom icons."
+          },
+          {
+            "term": "Weekly Report",
+            "definition": "A **Date Range** filter, download / share / print icons and a table: **Tender Name**, **Bid Type**, **Description**, **Proposal Name**, **Start Date**, **End Date**, **Bid Estimated Value**, **Bid Submitted Value**, **Owner Name**, **Job Location**, **Opportunity**, **Project**. On the test site 6 of the 8 tenders are listed; the two with status **Unassigned** are not."
+          },
+          {
+            "term": "Issues",
+            "definition": "Workflow issues raised on tender approvals: counters (Total, Approved, Rejected), **Filters** and a table (**WFL Number**, **Level**, **Raised on Date/Time**, **Raised by**, **Comments**, **Assign To**, **Due Date**, **Chat**, **See History**). The Submission Package > Issues tab inside a tender is separate."
           },
           {
             "term": "Bid tab",
-            "definition": "The tab within a Proposal where bids for that proposal are created, searched, and managed. It must be explicitly enabled via permissions in Bid Management before it appears."
+            "definition": "The vendor-facing list of tenders to answer, with **Bid Submission Status**. It is empty for the admin (\"No Data Available\")."
           }
         ],
         "procedures": [
           {
-            "title": "Create a bid for a proposal",
+            "title": "Check how tenders are performing",
             "steps": [
-              "Confirm the <strong>Bid tab</strong> is enabled for your account via permissions in <strong>Bid Management</strong> — without this, the tab will not be available.",
-              "Open the relevant proposal and go to its <strong>Bid</strong> tab.",
-              "Click <strong>Create Bid</strong>.",
-              "Fill in <strong>Bid Name</strong>, <strong>Description</strong>, the parent <strong>Proposal</strong>, and <strong>Bid Type</strong>."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/proposal-management-bid/001.jpg",
-                "caption": "Create Bid: the pop-up with Bid Name, Description, Proposal and Bid Type",
-                "step": 3
-              }
+              "Open **Analytics & Reports**.",
+              "Click a card, for example **Bid Awarded Rate**, and filter by **Bid Types**.",
+              "Use the download icon to save a chart."
             ]
-          },
-          {
-            "title": "Find bids linked to a specific proposal",
-            "steps": [
-              "Open the proposal and go to its <strong>Bid</strong> tab.",
-              "Use the <strong>Search</strong> option to look up bids linked to that particular proposal."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/proposal-management-bid/002.jpg",
-                "caption": "Search, to find the bids linked to a proposal",
-                "step": 2
-              }
-            ]
-          },
-          {
-            "title": "Bulk create or export bids via Excel",
-            "steps": [
-              "Open the proposal's <strong>Bid</strong> tab.",
-              "Click <strong>Exports</strong>, then <strong>Upload excel</strong> to bulk-create bids from a spreadsheet.",
-              "Alternatively, click <strong>Download Excel</strong> to export existing bid data."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/proposal-management-bid/003.jpg",
-                "caption": "Exports, with Download Excel and Upload Excel",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/proposal-management-bid/004.jpg",
-                "caption": "Upload Excel, to create bids from a spreadsheet",
-                "step": 2
-              }
-            ]
-          },
-          {
-            "title": "Choose a layout for viewing bids",
-            "steps": [
-              "From the Bids list, choose <strong>Table View</strong>, <strong>Grid View</strong>, or <strong>Kanban View</strong> depending on how you want to review bids.",
-              "Click <strong>Save layout</strong> to keep your chosen view as the default the next time you open the screen."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/proposal-management-bid/007.jpg",
-                "caption": "Table, Grid and Kanban views, with Save Layout",
-                "step": 1
-              }
-            ]
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/notion/proposal-management-bid/005.jpg",
-            "caption": "Filters on the Bids list"
-          },
-          {
-            "src": "assets/notion/proposal-management-bid/006.jpg",
-            "caption": "Manage Columns: hiding or rearranging columns"
           }
         ]
       },
       {
-        "heading": "RFQ",
-        "intro": "<p>Once you know what you're bidding on, the next step in a tender process is usually going out to the market — inviting vendors to quote on the work. In Arena this happens through the RFQ (Request for Quotation) screen inside Procurement. An RFQ is built directly from existing requisitions, which keeps vendor solicitation tied back to actual approved demand rather than starting from a blank slate: you link the RFQ to the relevant REQs, adjust quantities and specifications as needed for what you're putting out to bid, and then choose which vendors from your pre-configured list should receive it.</p><p>Two supporting pieces make this process more consistent and easier to monitor. Vendor Instructions let you define standard guidelines, terms, and conditions once and have them sent with every RFQ, so vendors always receive the same baseline expectations regardless of who on your team created the RFQ. And because an RFQ moves through several stages between creation and final purchase order approval, Arena tracks its progress visually through a card view — so instead of having to open each RFQ to check on it, you can scan the board and immediately see what's been sent, what's pending, and what's already resulted in an approved PO.</p>",
+        "heading": "Where Tender Data Comes From and Goes",
+        "intro": "<p>This section traces each tender list and where its results end up, for admins checking why a value is missing.</p><p>Tender Management reuses data from <strong>Global Data</strong>, <strong>Proposal Management</strong>, <strong>Opportunity Management</strong> and <strong>Projects</strong>.</p>",
+        "definitions": [
+          {
+            "term": "Feeds in",
+            "definition": "**Vendors / bidders**: **Global Data > Vendors** (and the **Eco category** vendors for the test tenders). **Owners**: **Global Data > Owners**. **Team users and Assign To**: **Global Rosters**. **Team crews**: **Global Data > Crews**. **BOQ items**: **Global Data > Bid Templates** (= Settings > Bid Templates). **Bid types**, **statuses**: shared with **Proposal Management > Settings**."
+          },
+          {
+            "term": "Link to Proposal Management",
+            "definition": "A tender created from a proposal's **Bid** tab (or with **Select Proposal**) shows that proposal in **Proposal Linked**, and the proposal's Bid tab lists its tenders. On the test site no tender is linked yet, so the **Proposal Linked** column is empty."
+          },
+          {
+            "term": "Link to Opportunity and Projects",
+            "definition": "The tender **Profile** has **Opportunity** and **Project** pick lists. The awarded work order's **Project Linked** field was empty."
+          },
+          {
+            "term": "Feeds out",
+            "definition": "Approved tenders appear in **Analytics & Reports**. The awarded work order stays inside **Tender Details > Awarded Work Order**; it does not appear in Home > Work Order."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Trace a missing vendor or value",
+            "steps": [
+              "If a vendor is missing in **Pre-Qualification > Send to Tenderer**, check it exists in **Global Data > Vendors**.",
+              "If a bid type or status is missing, check **Settings** (it is shared with Proposal Management).",
+              "If a proposal is missing in **Select Proposal**, check **Proposal Management**.",
+              "If a tender is missing from the Weekly Report, check its status (**Unassigned** tenders were not listed)."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "RFQs and Vendor Quotes in Procurement",
+        "intro": "<p>Requests for quotation on materials and services are handled in the <strong>Procurement</strong> module, not inside the tender cards. Procurement staff use it to invite vendors to quote against a requisition.</p><p>A tender's own price comparison is the <strong>Financial Package > Comparison</strong> described above. The steps below stay here as the Procurement route.</p>",
         "definitions": [
           {
             "term": "RFQ (Request for Quotation)",
-            "definition": "A request sent to a shortlist of vendors, built from one or more existing requisitions (REQs), asking them to quote cost and lead time on specified quantities and specifications."
+            "definition": "Created in **Procurement > RFQ** from a requisition: step 1 select the requisition form, step 2 update quantities, step 3 identify vendors (**Vendor Category**, **Vendor Sub Category**, **Category Groups** from **Global Data > Vendors**)."
           },
           {
-            "term": "Requisition (REQ)",
-            "definition": "The approved demand record that an RFQ is linked to and built from, ensuring vendor solicitation traces back to legitimate project need."
-          },
-          {
-            "term": "Vendor Instructions",
-            "definition": "A configurable set of default guidelines, terms, and conditions attached to RFQs sent to vendors, ensuring consistent communication regardless of who creates the RFQ."
-          },
-          {
-            "term": "Vendor rating",
-            "definition": "A score shown next to each vendor's name during vendor selection on an RFQ, intended to help you choose which vendors to invite based on past performance."
-          },
-          {
-            "term": "RFQ status card view",
-            "definition": "A visual, stage-based tracking view in Procurement → RFQ showing each RFQ's progress through stages such as Created, Email Sent to Vendors, and PO Approved."
+            "term": "Vendor Response and comparison",
+            "definition": "Vendor quotes are recorded and compared in Procurement's Vendor Responses, by cost and lead time."
           }
         ],
         "procedures": [
@@ -29845,23 +30658,7 @@ const MODULES = [
                 "step": 1
               }
             ]
-          }
-        ]
-      },
-      {
-        "heading": "Bid Comparison",
-        "intro": "<p>After vendors respond to an RFQ, the tendering process shifts from solicitation to evaluation — and this is where Bid Comparison comes in. The first step is simply capturing what came back: for each RFQ, you record every vendor's quote, including their cost and lead time, in one place. This is deliberately kept separate from evaluation itself, so that data entry (getting every response recorded accurately) isn't conflated with judgment (deciding which response is actually best).</p><p>That judgment happens in Vendor Analysis and Selection, the second half of the same workflow, where the assembled vendor responses are laid side by side so you can weigh cost against lead time and any other relevant factors before settling on a winner. Keeping entry and analysis as two distinct tabs within the same Vendor Responses screen means you can come back and finish entering quotes as they trickle in from vendors, then move to analysis only once you're confident the data set is complete.</p>",
-        "definitions": [
-          {
-            "term": "Vendor Response",
-            "definition": "A vendor's quote against a specific RFQ, recorded manually in Procurement → Vendor Responses, including at minimum cost and lead time."
           },
-          {
-            "term": "Vendor Analysis and Selection",
-            "definition": "A tab within Vendor Responses used to evaluate and compare the recorded vendor responses for an RFQ based on cost, lead time, and other relevant factors, in order to select a winning vendor."
-          }
-        ],
-        "procedures": [
           {
             "title": "Enter vendor quotes for comparison",
             "steps": [
@@ -29897,51 +30694,31 @@ const MODULES = [
             ]
           }
         ]
-      },
-      {
-        "heading": "Proposals",
-        "intro": "<p>Bids and RFQs don't exist in a vacuum — they're time-bound activities with deadlines that need to be visible alongside everything else happening on a proposal. Rather than maintaining a separate calendar just for tendering dates, Arena lets the Proposal Management Calendar link events to multiple related modules, including Opportunity, Proposal, and Bid Management. This means a bid submission deadline can sit on the same calendar as proposal milestones and opportunity-stage dates, giving anyone tracking the proposal one place to see everything that's coming due rather than having to check a separate tendering-specific schedule.</p>",
-        "definitions": [
-          {
-            "term": "Proposal Management Calendar",
-            "definition": "A shared calendar within Proposal Management where events can be linked to related modules — Opportunity, Proposal, or Bid Management — so bid and tender deadlines appear alongside other proposal-related dates."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Track bid-related deadlines on a calendar",
-            "steps": [
-              "Create an event within the <strong>Proposal Management Calendar</strong>.",
-              "Link the event to the appropriate module — <strong>Opportunity</strong>, <strong>Proposal</strong>, or <strong>Bid Management</strong> — so the deadline is visible in the context of the related record."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/proposal-management-calendar/010.jpg",
-                "caption": "Linking an event to Opportunity, Proposal or Bid Management",
-                "step": 2
-              }
-            ]
-          }
-        ]
       }
     ],
     "name": "Tender Management",
     "alias": "Bid Comparison",
     "icon": "gavel",
-    "tagline": "Route tender and bid-comparison questions to the Bid and RFQ features that power them.",
+    "tagline": "Run a tender from creation to awarded work order: schedule, pre-qualification, technical and financial packages, comparison and negotiation.",
     "color": "#4b3f8a",
-    "overview": "<p>Inncircles Arena does not maintain a distinct <strong>Tender Management</strong> module page in the documentation; tendering-style workflows are split across two existing modules. Creating and comparing bids for a proposal is handled by the <strong>Bid</strong> feature inside <strong>Proposal Management</strong>, while vendor quote solicitation and comparison (<strong>RFQ</strong>, <strong>Vendor Responses</strong>) is handled inside the <strong>Procurement</strong> module.</p>\n    <p>The items in this module map \"tender\" and \"bid comparison\" questions to those closest equivalents so users asking from the Home tile are routed correctly.</p>",
+    "overview": "<p><strong>Tender Management</strong> is where your team runs formal tenders. You create a tender, set its event schedule, optionally pre-qualify vendors, collect technical and financial responses against a bill of quantities, compare and negotiate, and award a work order.</p><p>Vendors and bidders come from <strong>Global Data > Vendors</strong>, bid types and statuses are shared with <strong>Proposal Management</strong>, and a tender can be linked to a proposal, an opportunity and a project.</p>",
     "navigation": [
-      "From <strong>Home</strong>, click the <strong>Tender Management</strong> tile — this routes to bid creation inside a <strong>Proposal</strong> and quote comparison inside <strong>Procurement</strong>.",
-      "For bid creation, open a proposal's <strong>Bid</strong> tab. For vendor quote comparison, go to <strong>Procurement → RFQ</strong> and <strong>Vendor Responses</strong>."
+      "From <strong>Home</strong>, click the <strong>Tender Management</strong> tile. The module opens on <strong>Tenders</strong>; the other tabs are <strong>Bid</strong>, <strong>Analytics & Reports</strong>, <strong>Issues</strong> and the <strong>Settings</strong> gear.",
+      "Click a tender name to open its cards: <strong>Tender Event Schedule</strong>, <strong>Pre-Qualification</strong>, <strong>Tender Details</strong> and <strong>Addendum</strong>."
     ],
     "sections": [
-      "Admin Role",
-      "Bid Types",
-      "Bids",
-      "RFQ",
-      "Bid Comparison",
-      "Proposals"
+      "Who sets this up",
+      "Tender List and Creating a Tender",
+      "Tender Setup: Profile, Team, Scope of Work and Submission",
+      "Tender Event Schedule",
+      "Pre-Qualification: Choose Which Vendors May Bid",
+      "Tender Response: Technical and Financial Packages",
+      "Comparing Bids, Negotiating and Awarding a Work Order",
+      "Addendum",
+      "Bid Types and Tender Settings",
+      "Analytics, Issues and the Bid Tab",
+      "Where Tender Data Comes From and Goes",
+      "RFQs and Vendor Quotes in Procurement"
     ]
   },
   {
