@@ -6220,7 +6220,7 @@ const QA_DATAANALYTICS = [
     scope: "project",
     section: "Standard Reports",
     question: "Where are the ready-made progress reports?",
-    answer: "Go to **Data Analytics & Insights → Standard Reports**. It has two sub-tabs, **Reports** and **Other Reports**, and carries the **Daily Progress Report** and **Weekly Progress Report** cards — the canned, printable reports most projects are contractually or internally expected to produce on a routine cadence.",
+    answer: "Go to **Data Analytics & Insights → Standard Reports**. The **Reports** sub-tab has the **Daily Progress Report** (read-only snapshot by plant for today) and the **Weekly Progress Report** (with Edit Mode and Download Pdf). The **Other Reports** sub-tab has Scope, Cost, Schedule, Quality and Safety summary reports.",
     tags: ["standard reports","daily progress report","weekly progress report","other reports"]
   },
   {
@@ -6228,9 +6228,9 @@ const QA_DATAANALYTICS = [
     object: "where generated reports are archived",
     scope: "project",
     section: "Standard Reports",
-    question: "Once a Daily or Weekly Progress Report is generated, where can I find it again later?",
-    answer: "Generated reports are archived in the project's **Document Repository**, which carries dedicated **Daily Progress Reports** and **Weekly Progress Reports** categories in its left-pane filter list. Data Analytics & Insights is where a report is produced; Document Repository is where the produced record is later found, downloaded, printed, or emailed.",
-    tags: ["find generated report","document repository","report archive","daily progress reports"]
+    question: "Where can I find a Daily or Weekly Progress Report again later?",
+    answer: "The Document Repository has folders named **Daily Progress Reports** and **Weekly Progress Reports**, but on Arena Steel Plant - Phase 1 both are empty and the report screens do not show a save step. The Weekly Progress Report has a **Download Pdf** button, so download a copy when you need to keep one; the Daily report always shows today's date.",
+    tags: ["find generated report","document repository","report archive","daily progress reports","where do i find saved report","find report again","where do i find saved report","find report again"]
   },
   {
     action: "understand",
@@ -6279,8 +6279,8 @@ const QA_DATAANALYTICS = [
   },
   {
     action: "explain",
-    object: "analytics lineage",
-    scope: "module",
+    object: "construction progress and schedule dashboards",
+    scope: "project",
     section: "Standard Analytics",
     question: "What are the views inside the Construction Progress dashboard?",
     answer: "Construction Progress has ten left-menu views: **Activity Analysis**, **Project Drill Down** (Overall Progress, Detailed View, Work Summary, System Progress, Loop Progress, People, Earned Hours, Quantity), **Project Elements**, **Work Package**, **Location Type**, **Location Type Grids**, **Work Package Grids**, **Quality And Documents**, **Quality Dashboard** and **Work Milestones**. All are scoped to a Tree Version and mostly an Entity, and are built on the structure in Project Setup → Works with completion from Field Works → Work Logs.",
@@ -6288,8 +6288,8 @@ const QA_DATAANALYTICS = [
   },
   {
     action: "explain",
-    object: "analytics lineage",
-    scope: "module",
+    object: "construction progress and schedule dashboards",
+    scope: "project",
     section: "Standard Analytics",
     question: "How do I check a work package or location's progress from the dashboard?",
     answer: "Open **Construction Progress → Project Drill Down → Detailed View**, click an entity card, then a super location, then a location; the work packages list shows each one's percentage, and the **Work Packages**, **Drawings** and **Issues** tabs show related items. For a table of how many locations of each type are complete, use **Work Summary** and click refresh after changing the entity.",
@@ -6297,8 +6297,8 @@ const QA_DATAANALYTICS = [
   },
   {
     action: "explain",
-    object: "analytics lineage",
-    scope: "module",
+    object: "construction progress and schedule dashboards",
+    scope: "project",
     section: "Standard Analytics",
     question: "Where do the dates on the Schedule dashboard come from?",
     answer: "The Planned, Forecasted, Client, Skyline and Actual end dates come from **Project Setup → Works** (Other Attributes) and **Project Setup → Schedule**; the same columns appear in Field Works → Progress → Detailed Work Logs. Without dates there the burn up, burn down and count charts stay blank.",
@@ -6306,8 +6306,8 @@ const QA_DATAANALYTICS = [
   },
   {
     action: "explain",
-    object: "analytics lineage",
-    scope: "module",
+    object: "cost dashboards",
+    scope: "project",
     section: "Standard Analytics",
     question: "What is on the Cost dashboard and what does it need?",
     answer: "Cost has Payables (Cost Activity, Cost by Cost Types, Cost by Month, Payments by Month, Cost Analytics with an earned value table, Cost Graphs) and Receivables (Cost Plan Forecast, Monthly Payment Collection, Payment Milestones). It needs an active, approved estimate in **Project Setup → Estimate** and entries in **Field Works → Cost**; with none, every figure is ₹0 or No Data.",
@@ -6315,8 +6315,8 @@ const QA_DATAANALYTICS = [
   },
   {
     action: "explain",
-    object: "analytics lineage",
-    scope: "module",
+    object: "cost dashboards",
+    scope: "project",
     section: "Standard Analytics",
     question: "What does the Cost Report show?",
     answer: "Under **Cost Dashboards and Reports → Cost Report** the \"Lump Sum Project Cost Tracking Report\" shows project details (Client, Project Manager, Contract Type, Contract Value, Est. Completion), Budget Cost, Approved Changed Orders, Revised Budget, Total Committed and Actuals To Date, Forecast At Completion and variance, a Material / Equipment / Labor / Subcontractors table of budget, committed, actual and forecast, Commitments & Change Orders and a Forecast Analysis. Client, Manager and contract fields show N/A until the project profile is filled.",
@@ -6324,8 +6324,8 @@ const QA_DATAANALYTICS = [
   },
   {
     action: "explain",
-    object: "analytics lineage",
-    scope: "module",
+    object: "contractors performance dashboard",
+    scope: "project",
     section: "Standard Analytics",
     question: "Why do Workorders, DPR report and Contractors Performance show no data?",
     answer: "They are built from work orders created in **Project Setup → Workorder** (contractors come from Global Data → Vendors / Sub Contractors) and from the invoices raised in Field Works → Invoices. Arena Steel Plant - Phase 1 has no work orders, so the **Select Workorder** and **select Workorders** dropdowns are empty and each panel shows No Data. Create a work order first.",
@@ -6333,8 +6333,8 @@ const QA_DATAANALYTICS = [
   },
   {
     action: "explain",
-    object: "analytics lineage",
-    scope: "module",
+    object: "DPR and MIS reports",
+    scope: "project",
     section: "Standard Analytics",
     question: "What is the DPR report and how is it different from the Daily Progress Report?",
     answer: "The **DPR report** card on Standard Analytics is a work-order report: choose a work order and see, for today, each activity's estimated, executed and balance quantity and what was planned and executed this month and today. The **Daily Progress Report** on the Standard Reports tab is the separate canned daily report that is archived in the Document Repository.",
@@ -6342,8 +6342,8 @@ const QA_DATAANALYTICS = [
   },
   {
     action: "explain",
-    object: "analytics lineage",
-    scope: "module",
+    object: "resource and productivity dashboards",
+    scope: "project",
     section: "Standard Analytics",
     question: "What do the Productivity Reports tabs show?",
     answer: "Five tabs: **Detail Productivity Report** (budget, weekly, job-to-date, percent, labor unit, work factor, earned hours and forecast columns per work package and phase code, for Direct or Change Order), **Indirect and Non Productive Staff**, **Productivity Report Summary** (by phase code, with each day of the week), **Efforts Dashboard** (productivity factor by day, activity, foreman, supervisor and entity) and **Quantity Dashboard** (% complete by location type, super location type and activity). Budgets come from Project Setup → Works and phase codes; hours come from Field Works → Productivity Logs.",
@@ -6351,8 +6351,8 @@ const QA_DATAANALYTICS = [
   },
   {
     action: "explain",
-    object: "analytics lineage",
-    scope: "module",
+    object: "resource and productivity dashboards",
+    scope: "project",
     section: "Standard Analytics",
     question: "Why is Productivity Reports all zero?",
     answer: "Weekly and Job To Date hours and quantities come from submitted **Productivity Logs** in Field Works; none exist on Arena Steel Plant - Phase 1, so every Total shows 0. The Budget columns need budgeted hours and quantity and phase codes on the work packages in Project Setup → Works → Other Attributes. Submit and approve productivity logs, then refresh.",
@@ -6360,8 +6360,8 @@ const QA_DATAANALYTICS = [
   },
   {
     action: "explain",
-    object: "analytics lineage",
-    scope: "module",
+    object: "collaboration and RFI delay dashboards",
+    scope: "project",
     section: "Standard Analytics",
     question: "What is on the Collaboration Items dashboard?",
     answer: "It counts RFIs, Submittals and Change Orders by Created, Waiting for approval, Approved and Rejected (Table View) or as a bar chart. The numbers are the forms raised in Field Works → Progress; on the test project RFIs Created is 3, matching the three WIRs in the RFI card.",
@@ -6369,8 +6369,8 @@ const QA_DATAANALYTICS = [
   },
   {
     action: "explain",
-    object: "analytics lineage",
-    scope: "module",
+    object: "collaboration and RFI delay dashboards",
+    scope: "project",
     section: "Standard Analytics",
     question: "Why is RFI Approval Delays empty?",
     answer: "It lists RFIs that are sitting at an approval level (with the level description and the responsible person). On Arena Steel Plant - Phase 1 none of the three RFIs is under To Be Approved, so it shows No Data Available. Approval levels are defined in Project Setup → Forms → Approval Workflow.",
@@ -6378,8 +6378,8 @@ const QA_DATAANALYTICS = [
   },
   {
     action: "explain",
-    object: "analytics lineage",
-    scope: "module",
+    object: "quality and safety dashboards",
+    scope: "project",
     section: "Standard Analytics",
     question: "What do Quality Progress and Safety Analytics need before they show data?",
     answer: "Quality Progress needs quality logs submitted in Field Works → Quality, which in turn need work packages mapped to quality folders in Project Setup → Quality; it also counts punch lists, restraints and quality workflow issues. Safety Analytics needs safety forms mapped in Project Setup → Safety and logged in Field Works → Safety. Both show No Data on Arena Steel Plant - Phase 1.",
@@ -6387,8 +6387,8 @@ const QA_DATAANALYTICS = [
   },
   {
     action: "explain",
-    object: "analytics lineage",
-    scope: "module",
+    object: "project data to excel via sync",
+    scope: "project",
     section: "Standard Analytics",
     question: "What does the Sync card do?",
     answer: "Sync lists a dataset called **Project Data** with a **SYNC** button that sends the project's current data to Excel. It copies data out and does not change project records.",
@@ -6396,8 +6396,8 @@ const QA_DATAANALYTICS = [
   },
   {
     action: "explain",
-    object: "analytics lineage",
-    scope: "module",
+    object: "DPR and MIS reports",
+    scope: "project",
     section: "Standard Analytics",
     question: "What is in the Work Summary - MIS Report?",
     answer: "A tree table (project, plant, then location types) with Physical Target, Work Complete and Variance, each as Percentage and Count/Length. Expand a row with the plus icon. Structure comes from Project Setup → Works; completion comes from Field Works work logs.",
@@ -6405,12 +6405,111 @@ const QA_DATAANALYTICS = [
   },
   {
     action: "explain",
-    object: "analytics lineage",
-    scope: "module",
+    object: "construction progress and schedule dashboards",
+    scope: "project",
     section: "Standard Analytics",
     question: "What does the Progress Forecast Report show?",
     answer: "For one entity and super location type it shows each activity's Planned Start and Planned End Date over a chosen number of weeks (default 1), with a legend of Completed, Forecasted dates and Ongoing, and toggles for Activity or Work Package and schedule or percentage. Dates come from Project Setup → Works and Schedule.",
     tags: ["progress forecast report","forecast dates","planned start end date forecast","number of weeks forecast"]
+  },
+  {
+    action: "explain",
+    object: "analytics lineage",
+    scope: "module",
+    section: "Configurable Analytics",
+    question: "What is Data Classification and where do its numbers come from?",
+    answer: "Data Classification shows live counts of **Locations** and **Work Packages** by status (Not Yet Ready, Ready, In Progress, Completed), plus **Quality And Documents** folders and **Issues** (punch lists by priority), for a chosen Entity, as a table, pie or bar chart. The structure comes from **Project Setup → Works** and the statuses are the same as in **Field Works → Work Logs** and **Ready Works** (for example Piperack Footing: 4 locations, all Ready).",
+    tags: ["data classification","data classification numbers","locations by status","work packages by status","not yet ready ready in progress completed","classification pie chart","what is data classification","analytics data classification"]
+  },
+  {
+    action: "explain",
+    object: "data tables and counting tables",
+    scope: "project",
+    section: "Configurable Analytics",
+    question: "Why are Data Trends, Counting Tables and Configure Data Tables empty?",
+    answer: "They only list what you create. Click **Create**, enter a name (and description) and **Submit**. On Arena Steel Plant - Phase 1 nothing has been created yet, so each shows its \"Click on Create\" message. They read the same Field Works and Project Setup data as the dashboards.",
+    tags: ["data trends empty","counting tables empty","configure data tables create","how to create data table","custom data table","create data trend","why are data trends empty","data trends counting tables empty","analytics data trends empty"]
+  },
+  {
+    action: "explain",
+    object: "custom chart",
+    scope: "project",
+    section: "Configurable Analytics",
+    question: "How do I build my own chart or report?",
+    answer: "For charts open **Build your own Charts** (titled Inn BI) and click **Create Report**, enter a report name and Submit. For reports open **Build your own Reports** (Reports Builder), click **Create**, name the report builder and Submit; use its **Generated Reports** tab to see output filtered by report and date range (ALL, This Week, Last Week, Last Month). Both start empty.",
+    tags: ["build your own chart","build your own report","inn bi","reports builder","generated reports","create report builder"]
+  },
+  {
+    action: "explain",
+    object: "project data to excel via sync",
+    scope: "project",
+    section: "Configurable Analytics",
+    question: "What can I upload and download in the Excel card?",
+    answer: "**Uploads:** People Assignments, Quality And Documents files (then list the file names in the Excel to attach them to quality folders) and Tree Data (with a Create Mode checkbox), each with a downloadable template; uploads append to existing data. **Downloads:** DOWNLOAD ALL or one file each for Tree, WorkLogs, Punch Lists, Quality Restraints, Daily Safety Issues, Observations and Construction & Project forms. The downloads are the Works tree and Field Works records; the uploads write into Project Setup.",
+    tags: ["excel card","excel uploads","excel downloads","tree data upload","people assignments upload","download all excel","worklogs xlsx","analytics excel card","data analytics excel upload download","what can i upload in the excel card"]
+  },
+  {
+    action: "explain",
+    object: "power bi",
+    scope: "project",
+    section: "Configurable Analytics",
+    question: "Why does the Power BI card show nothing?",
+    answer: "It shows a report only when one is connected for the project. On Arena Steel Plant - Phase 1 the page opens with nothing embedded, and what connects a report was not found in the product. The home-page Power BI view in Global Data → Settings → Enterprise Dashboard is a different setting.",
+    tags: ["power bi empty","power bi not showing","power bi blank","connect power bi","power bi report"]
+  },
+  {
+    action: "explain",
+    object: "analytics lineage",
+    scope: "module",
+    section: "Configurable Analytics",
+    question: "What is the Reports card in Configurable Analytics?",
+    answer: "A place to store your own report files for the project: use **Add File**; it shows \"No data\" until you add one. It is separate from the Document Repository and from the Generated Reports output of Build your own Reports.",
+    tags: ["configurable analytics reports card","add file reports","store personal reports","reports card"]
+  },
+  {
+    action: "explain",
+    object: "standard reports tab",
+    scope: "project",
+    section: "Standard Reports",
+    question: "What is on the Daily Progress Report and where does it come from?",
+    answer: "It is a read-only page dated today. For each plant it shows Physical Progress of the Day, Cumulative Physical Progress, Cost of the Day and Cumulative Cost, then a Work Executed table by entity and location type (Total Locations, Completed Today, Cumulative Completed, % Complete). Structure comes from Project Setup → Works and completion from Field Works Work Logs; cost shows ₹0.00 on the test project. Plants with no locations say \"Package has not yet started\".",
+    tags: ["daily progress report","daily progress report contents","daily report source","physical progress of the day","work executed table","package has not yet started"]
+  },
+  {
+    action: "explain",
+    object: "standard reports tab",
+    scope: "project",
+    section: "Standard Reports",
+    question: "What is in the Weekly Progress Report and how do I fill it in?",
+    answer: "It has Edit Mode and Download Pdf. Sections: Schedule/Plan Information, Job Problems & Issues, Construction Project Punch List, Weekly Project Status (manpower hours, planned vs actual headcount, percent complete, safety, meeting topics, work accomplished and scheduled, action items, client meeting notes), RFI Log, Change Order Log, Project Delays Log and week-by-week charts. Click **Edit Mode** to type the free-text parts, then **Download Pdf**. The RFI Log lists the RFIs from Field Works → RFI (RFI 1, 2 and 3 on the test project).",
+    tags: ["weekly progress report","weekly report sections","edit mode weekly report","download pdf weekly report","rfi log weekly report","weekly report source","what is in the weekly progress report","weekly progress report contents"]
+  },
+  {
+    action: "explain",
+    object: "standard reports tab",
+    scope: "project",
+    section: "Standard Reports",
+    question: "What are the Other Reports?",
+    answer: "The **Other Reports** sub-tab has Scope (Progress summary report), Cost (Estimated cost vs actual cost, with Labor, Material and Equipment), Schedule (Schedule summary report), Quality (Issues Raised vs Issues Closed) and Safety (Issues Raised vs Issues Closed, Safety Calendar Logged Vs Total, Total Safety Forms Logged with a Select range). Each shows the company letterhead and charts from the same data as the matching dashboards.",
+    tags: ["other reports","scope report","schedule summary report","quality issues raised vs closed","safety calendar logged vs total","cost estimated vs actual report","what are the other reports","analytics other reports","standard reports other reports tab"]
+  },
+  {
+    action: "explain",
+    object: "where generated reports are archived",
+    scope: "project",
+    section: "Standard Reports",
+    question: "Why are the Daily and Weekly Progress Reports folders empty in the Document Repository?",
+    answer: "The Document Repository has folders named **Daily Progress Reports** and **Weekly Progress Reports**, but on Arena Steel Plant - Phase 1 both say \"There is no data in this folder\". The Daily and Weekly report screens show live data and the Weekly one offers Download Pdf; nothing on them was seen to save a copy into the Repository, so how copies get archived is not confirmed. By contrast the **RFI** folder lists WIR - 1, WIR - 2 and WIR - 3 raised in Field Works, with download, print, history and email thread actions.",
+    tags: ["daily progress reports folder empty","weekly progress reports folder","document repository reports","report archive empty","where are saved reports"]
+  },
+  {
+    action: "explain",
+    object: "standard reports tab",
+    scope: "project",
+    section: "Standard Reports",
+    question: "Where do the numbers in the progress reports come from?",
+    answer: "Plants, entities and location types come from **Project Setup → Works**; completed locations come from **Field Works → Work Logs** (the same as the Approve Work Logs Summary); the Weekly report's RFI Log comes from the RFI card. The cost, manpower, punch list and safety parts were empty on the test project, so their sources are not confirmed.",
+    tags: ["progress report numbers source","report data source","where do report numbers come from","progress report lineage"]
   }
 ];
 
@@ -22736,92 +22835,95 @@ const MODULES = [
       },
       {
         "heading": "Configurable Analytics",
-        "intro": "<p>No set of pre-built dashboards covers every question, and on construction projects the awkward questions tend to come from outside — a client wants a cut of the data nobody anticipated, or internal management wants a view shaped to their own reporting format. <strong>Configurable Analytics</strong> exists so a <strong>PM or analyst</strong> can answer those without exporting to a spreadsheet and rebuilding the same chart by hand every reporting cycle.</p><p>Its nine cards work as a stack. <strong>Data Classification</strong> and <strong>Data Trends</strong> sit at the bottom as the data-understanding layer. <strong>Counting Tables</strong> and <strong>Configure Data Tables</strong> shape project data into the tabular views you want to work with. <strong>Build your own Charts</strong> and <strong>Build your own Reports</strong> are the self-serve builders on top, and <strong>Reports</strong> stores personal reports so a view built once for recurring use is kept rather than rebuilt.</p><p>The last two cards are exit routes rather than builders. <strong>Excel</strong> covers project tree uploads and standard report downloads — data in as well as out. <strong>Power BI</strong> is a direct integration, which matters for a construction business that already reports company-wide through Power BI: rather than maintaining two parallel reporting worlds, project data can feed the dashboards management already reads.</p>",
+        "intro": "<p>Configurable Analytics is the self-serve half of the module: nine cards to classify project data, build your own tables, charts and reports, and move data to and from Excel and Power BI. PMs, analysts and Module Admins use it when no pre-built dashboard fits.</p><p>**Data Classification** works on live project data straight away. The builder cards (**Data Trends**, **Counting Tables**, **Configure Data Tables**, **Build your own Charts**, **Build your own Reports**) start empty: each shows an empty state with a **Create** button. **Excel** moves tree, people and quality data in and out, **Power BI** is an embedded view, and **Reports** keeps files.</p>",
         "definitions": [
           {
             "term": "Data Classification",
-            "definition": "The card for classifying project data as a foundation for the analysis built on top of it."
+            "definition": "Live status counts of the plant's structure, with four tabs and an **Entity** filter. **Locations** (table with Locations Type, Locations, Not Yet Ready, Ready, In Progress, Completed; Piperack shows Footing 4 all Ready, Media 3, PB Mark No 4, TS Mark No 4). **Work Packages** (filter by Entity and Super Location; each work package with its number of locations in each status, for example ARN- BA-01 | Barbending for Footing: 4 locations, 1 Not Yet Ready, 3 Ready). **Quality And Documents** (folders against the same statuses). **Issues** (punch lists by Priority: Raised, Rectified, QC Verified, Pending Issues). Each tab can be shown as a table, a pie chart or a bar chart. **Where this data comes from:** the structure is **Project Setup → Works**; the statuses are the same ones you see in **Field Works → Progress → Work Logs** and **Ready Works** (the four Footing locations are Ready to work there too). Quality And Documents and Issues are empty on Arena Steel Plant - Phase 1 because no folders are mapped and no punch lists exist."
           },
           {
             "term": "Data Trends",
-            "definition": "The card for examining how project data is trending over time."
+            "definition": "A list of the trends you have created to follow project attributes over time. It starts empty with the message to click **Create**; the **Create Data Trend** dialog asks for a **Data Trend Name*** and a **Data Trend Description**, then **Submit**. What you can then pick as attributes was not opened in testing (nothing was saved)."
           },
           {
             "term": "Counting Tables",
-            "definition": "The card producing count-based tabular summaries of project data."
+            "definition": "A list of count tables you configure to show how many of something exist for various project attributes. It starts empty with the message to click **Create**; the **Create Table** dialog asks for a **Name** and a **Description**, then **Submit**. Nothing was created in testing, so the attribute choices are not documented."
           },
           {
             "term": "Configure Data Tables",
-            "definition": "The card for shaping the tabular views of project data a user wants to work with."
+            "definition": "A list of custom data tables you configure from various project attributes. It starts empty with the message to click **Create**; the **Create Table** dialog asks for a **Name** and a **Description**, then **Submit**. Use it when the fixed tables in the dashboards do not combine the columns you need. Nothing was created in testing, so the attribute choices are not documented."
           },
           {
             "term": "Build your own Charts",
-            "definition": "The self-serve chart builder, for cuts of the data no pre-built dashboard covers."
+            "definition": "The chart builder, titled **Inn BI** on screen. It starts with \"Reports are not configured. Click 'Create Report' to create new Inn BI Reports\"; **Create Report** asks for a **Report Name** and Submit. Nothing was created in testing, so the builder itself is not documented."
           },
           {
             "term": "Build your own Reports",
-            "definition": "The self-serve report builder for defining a custom report."
+            "definition": "The report builder, titled **Reports Builder**, with two tabs: **Reports** (your report definitions) and **Generated Reports** (output, with Filters: Select Report, a date range, and ALL, This Week, Last Week or Last Month). It starts with \"Reports are not configured. Click 'Create' to create new Reports\"; **Create** asks for a **Report Builder Name**. **Generated Reports** shows \"No Data Present.\" until a report has been run."
           },
           {
             "term": "Excel",
-            "definition": "The card covering project tree uploads and standard report downloads."
+            "definition": "The route for moving structured data in and out as spreadsheets, with two tabs. **Uploads** has **People Assignments** (download the template, fill it and upload; the data is appended to what already exists), **Quality And Documents** (upload the files first, then list their file names in the Excel to attach them to quality folders; large uploads can take a while and you can leave the page), an **Upload Status** list, **Tree Data** (template download, a **Create Mode** checkbox and an upload box; the page says the application is populated with the uploaded data in the corresponding spaces) and **Reference Data**. **Downloads** has **DOWNLOAD ALL** and one file per sheet: **Tree.xlsx**, **WorkLogs.xlsx**, **Punch Lists.xlsx**, **Quality Restraints.xlsx**, **Daily Safety Issues.xlsx**, **Observations.xlsx** and **Construction & Project forms.xlsx**. **Where this data comes from and goes:** the downloads are the Works tree and the Field Works logs, issues and forms; the uploads fill the matching Project Setup areas (the tree, people assignments and quality documents). Take care: uploads append to existing data."
           },
           {
             "term": "Power BI",
-            "definition": "A direct integration with Power BI, for feeding project data into a company's existing BI reporting."
+            "definition": "A card for viewing project insights from **Power BI**. The page opens with no report on Arena Steel Plant - Phase 1 (nothing embedded), so it appears to need a report connected first; what connects it was not found in the product. This is separate from the Power BI view type that can be chosen for the home dashboard in Global Data → Settings → Enterprise Dashboard."
           },
           {
             "term": "Reports (Configurable Analytics)",
-            "definition": "The card that stores personal reports, so a report built for recurring use is kept rather than rebuilt each time."
+            "definition": "A list of stored files with an **Add File** button; it shows \"No data\" until files are added. It is separate from the **Document Repository**."
           }
         ],
         "procedures": [
           {
             "title": "Build and keep a custom view",
             "steps": [
-              "Go to **Data Analytics & Insights → Configurable Analytics**.",
-              "Use **Data Classification**, **Data Trends**, **Counting Tables**, or **Configure Data Tables** to shape the underlying data first.",
-              "Use **Build your own Charts** or **Build your own Reports** to create the view you need.",
-              "Use the **Reports** card to store a personal report you will come back to."
+              "Go to Data Analytics & Insights → Configurable Analytics.",
+              "Use Data Classification to see the live status of locations, work packages, quality folders and punch lists for a plant.",
+              "For your own view, open Configure Data Tables, Counting Tables, Data Trends, Build your own Charts or Build your own Reports and click Create (or Create Report).",
+              "Name it, click Submit, and build the view; use Generated Reports to find the output of a report you ran.",
+              "Use the Reports card to store files you want to keep with the project."
             ]
           },
           {
             "title": "Take project data into Excel or Power BI",
             "steps": [
-              "Go to **Data Analytics & Insights → Configurable Analytics**.",
-              "Use the **Excel** card for project tree uploads and standard report downloads.",
-              "Use the **Power BI** card for the direct integration into an existing company BI setup."
+              "Go to Data Analytics & Insights → Configurable Analytics → Excel → Downloads.",
+              "Click DOWNLOAD ALL, or the download icon beside Tree.xlsx, WorkLogs.xlsx, Punch Lists.xlsx, Quality Restraints.xlsx, Daily Safety Issues.xlsx, Observations.xlsx or Construction & Project forms.xlsx.",
+              "To load data in, open the Uploads tab, download the template, fill it in and use the upload box for People Assignments or Tree Data (uploads append to existing data).",
+              "For Power BI, open the Power BI card; it shows a report only when one has been connected for the project."
             ],
-            "note": "For pushing the project's data out to a spreadsheet as a whole, the Sync card on Standard Analytics is the other route."
+            "note": "For pushing the project's data out as a whole, the Sync card on Standard Analytics is the other route."
           }
         ]
       },
       {
         "heading": "Standard Reports",
-        "intro": "<p><strong>Standard Reports</strong> covers the reporting a construction project is routinely expected to produce, whether by contract or by internal convention. The tab has two sub-tabs, <strong>Reports</strong> and <strong>Other Reports</strong>, and carries the <strong>Daily Progress Report</strong> and <strong>Weekly Progress Report</strong> cards — the two cadences most site teams and clients work to.</p><p>Worth knowing: producing a report here and finding it again later are two different screens. Data Analytics &amp; Insights is where a report is generated; the project's <strong>Document Repository</strong> is where generated reports are archived, carrying dedicated <strong>Daily Progress Reports</strong> and <strong>Weekly Progress Reports</strong> categories in its left-pane filter list, complete with download, print, history, and email actions per record. A <strong>PM</strong> assembling a reporting pack for a client months later will usually want the Document Repository rather than this tab.</p>",
+        "intro": "<p>Standard Reports holds the two routine reports a project is expected to produce, the Daily Progress Report and the Weekly Progress Report, plus a set of summary reports under Other Reports. PMs, site managers and clients read them; they are built from Field Works logs and Project Setup data.</p><p>Reports show the current date when opened. The Weekly Progress Report has **Edit Mode** and **Download Pdf**; the Daily Progress Report is a read-only page. Whether a copy is saved to the Document Repository was not visible: its **Daily Progress Reports** and **Weekly Progress Reports** folders are empty on the test project.</p>",
         "definitions": [
           {
             "term": "Reports / Other Reports",
-            "definition": "The two sub-tabs of Standard Reports, separating the main canned reports from the additional ones."
+            "definition": "The two sub-tabs of Standard Reports. **Reports** holds the **Daily Progress Report** and **Weekly Progress Report** cards. **Other Reports** has a left menu of **Scope** (\"Progress summary report\"), **Cost** (\"Cost - Estimated cost vs actual cost Report\", with Labor, Material and Equipment views), **Schedule** (\"Schedule summary report\"), **Quality** (\"Quality - Issues Raised vs Issues Closed\", bar or pie chart) and **Safety** (\"Safety - Issues Raised vs Issues Closed\", **Safety Calendar Logged Vs Total** and **Total Safety Forms Logged**, each with a Select range). Each opens with a company letterhead (address, phone, zip code) and charts built from the same data as the matching dashboards."
           },
           {
             "term": "Daily Progress Report",
-            "definition": "The canned daily progress report card, matched by a Daily Progress Reports category in the project's Document Repository where generated copies are archived."
+            "definition": "A read-only snapshot titled \"Daily Progress Report | <project> - <today's date>\". For each plant it shows **Physical Progress of the Day**, **Cumulative Physical Progress**, **Cost of the Day** and **Cumulative Cost**, then a **Work Executed** table by Entity and Location Type with **Total Locations**, **Completed Today**, **Cumulative Completed** and **% Complete**. Plants with no locations built say \"Package has not yet started\". **Where this data comes from:** the structure from **Project Setup → Works** and completion from **Field Works → Progress → Work Logs**: ECR Footing shows 3 locations and 1 cumulative completed, the same as the Approve Work Logs Summary in Field Works. Cost of the Day and Cumulative Cost are ₹0.00 on Arena Steel Plant - Phase 1 (no cost entries). No date picker or download button is shown."
           },
           {
             "term": "Weekly Progress Report",
-            "definition": "The canned weekly progress report card, matched by a Weekly Progress Reports category in the project's Document Repository."
+            "definition": "A report page with **Edit Mode** and **Download Pdf**. It starts with Project, Project Number (ST-01) and Date, then **Schedule/Plan Information** (crew size, estimated original plan), **Job Problems & Issues (INTERNAL USE ONLY)**, the **Construction Project Punch List** (Item, Area, Description, Priority, Responsible, Due Date, Completion Status), **Weekly Project Status** for the period ending this week (**ManPower** hours spent this period and to date: direct, indirect, delay and subcontractor; planned against actual full-time-equivalent headcount; **Percent Complete To Date** planned and actual; Safety counts; Meeting Topics; Work Accomplished in the Past Week; Work Scheduled for this Week and next Week; Problems / Concerns / Action Items; Prior Week's Notes from Client Meeting), an **RFI Log**, a **Change Order Log** with a summary of Pending, Approved, Denied and N/A amounts, a **Project Delays Log**, and week-by-week Planned and Actual charts and hours. **Where this data comes from:** the RFI Log lists the RFIs raised in **Field Works → Progress → RFI** (RFI 1 on 03-25-2026, RFI 2 and RFI 3 on 03-31-2026, the three WIRs, shown with status Not Ready); the punch list, manpower, safety and change order sections were empty on the test project, so their sources are not confirmed (the matching Field Works cards are Quality → Punch Lists, Productivity Logs, Safety and Cost → Change order). Free-text parts (meeting topics, work scheduled) are filled in **Edit Mode**. Planned crew size shows 35, the same number as the project roster."
           }
         ],
         "procedures": [
           {
             "title": "Produce a routine progress report",
             "steps": [
-              "Go to **Data Analytics & Insights → Standard Reports**.",
-              "Use the **Reports** or **Other Reports** sub-tab as needed.",
-              "Open the **Daily Progress Report** or **Weekly Progress Report** card and generate the report."
+              "Go to Data Analytics & Insights → Standard Reports.",
+              "On Reports, open Daily Progress Report for today's snapshot by plant, or Weekly Progress Report for the week.",
+              "On the Weekly report click Edit Mode to type the meeting topics, work accomplished and work scheduled, then click Download Pdf to share it.",
+              "For a one-topic summary (scope, cost, schedule, quality or safety) use the Other Reports sub-tab."
             ],
-            "note": "To retrieve a previously generated report, go to Document Repository and filter by the Daily Progress Reports or Weekly Progress Reports category."
+            "note": "To look for a copy kept after the fact, check the Daily Progress Reports and Weekly Progress Reports folders in the Document Repository; on the test project they are empty."
           }
         ]
       }
