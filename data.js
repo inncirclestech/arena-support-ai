@@ -5614,7 +5614,7 @@ const QA_FIELDWORKS = [
     scope: "project",
     section: "Quality",
     question: "What is a Punch List and how does one get closed out?",
-    answer: "A Punch List is the standard construction-industry term for the list of defects or incomplete items identified during inspection that must be corrected before work is accepted or a project is closed out. Arena uses the same name: a Punch List item is created when a QA/QC inspector raises an issue from within a Quality Level 1 or Level 2 form — a defect needing physical rectification and re-verification. Open the **Punch Lists** card on the plant's Quality tab; each item moves **Open → Rectify → QC_Verify** (click **Rectify** once the defect is fixed, then **QC_Verify** to progress it to closure). Punch lists support due dates, assignees, Chat, filters, and Download Excel.",
+    answer: "A Punch List is the standard construction-industry term for the list of defects or incomplete items identified during inspection that must be corrected before work is accepted or a project is closed out. Arena uses the same name: a Punch List item is created when a QA/QC inspector raises an issue from within a Quality Level 1 or Level 2 form — a defect needing physical rectification and re-verification. Open the **Punch Lists** card on the plant's Quality tab; each item moves from open to **Rectified** (click **Rectified** once the defect is fixed) to **Verified** (the QA/QC person clicks **Verify**); the counters read **Issues Open / Issues Rectified / Issues Verified**, and Quality Progress dashboards call the last stage QC_VERIFIED. Cards show a priority, an **Assign to** person, Chat, filters and Download Excel.",
     tags: ["punch list","what is a punch list","punch list definition","glossary","rectify","qc verify","quality defect","close out"]
   },
   {
@@ -6444,6 +6444,87 @@ const QA_FIELDWORKS = [
     question: "What changes when Logging Type is By Locations or By Phase Code?",
     answer: "**Project Settings → Productivity Log Settings → Logging Type** chooses **Create Productivity Logs By Phase Code** or **By Locations**. Arena Steel Plant - Phase 1 and Elevated Corridor are both set to **By Locations**, and their grids show Entities, Super Locations and Locations. The By Phase Code layout was not seen. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["logging type","by locations","by phase code","productivity log settings"]
+  },
+  {
+    action: "view",
+    object: "quality level 1 form",
+    scope: "module",
+    section: "Quality",
+    question: "What is on a Quality Level 1 check list?",
+    answer: "The company letterhead and **Form Created**, the check list name, **General Information** (customer, manager, your project's level names, project number, work packages), **Inspection Items** answered **Yes** or **No**, **Other Fields** such as a **Signature**, and **Submit**. The panel **Hide Tagged Documents** shows documents tagged to the commodity from the quality folder. The three-dot menu offers **Download**, **PDF Share**, **Print**, **Compose Mail** and **See All Email Threads**.",
+    tags: ["level 1 form","quality check list","inspection items yes no","quality form fields","tagged documents"]
+  },
+  {
+    action: "view",
+    object: "quality level difference",
+    scope: "module",
+    section: "Quality",
+    question: "What is the difference between the Level 1 and Level 2 quality forms?",
+    answer: "Level 1 ends with **Submit**. Level 2 adds **Workflow Comments and Attachments** (a comment and attachments for each approval level) and ends with **Submit For Approval**, and it shows a status chip such as **Approved**. Level 2 work packages appear under **Ready** only after Level 1 clears (see **Project Settings → Quality Logs**).",
+    tags: ["level 1 vs level 2","quality level 2 form","submit for approval quality","workflow comments attachments"]
+  },
+  {
+    action: "view",
+    object: "quality level 2 empty",
+    scope: "module",
+    section: "Quality",
+    question: "Why is Quality Level 2 empty?",
+    answer: "The **Ready** tab only lists work packages whose Level 1 check has cleared (unless **Quality Logs → skip level 1** is Yes). On Warehouse Construction **Ready** was empty (\"No ready Work Packages available to log Quality check lists\") but **All** listed the Level 2 work packages. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["quality level 2 empty","no ready work packages level 2","level 2 not available","skip level 1"]
+  },
+  {
+    action: "log",
+    object: "punch list lifecycle",
+    scope: "module",
+    section: "Quality",
+    question: "How does a punch list item move from raised to closed?",
+    answer: "It starts as an open item created from a failed inspection question (the card shows the **Field name**, **Observation**, priority and **Assign to**). The assignee clicks **Rectified** once fixed; the QA/QC person then clicks **Verify**, and the counters **Issues Open**, **Issues Rectified** and **Issues Verified** change. Items also show in **Loop Progress → Punch Lists** and the **Punchlists** column of the quality folder.",
+    tags: ["punch list lifecycle","rectified verified","punch list counters","pnl number","close punch list"]
+  },
+  {
+    action: "view",
+    object: "punch list priority",
+    scope: "module",
+    section: "Quality",
+    question: "Where does the punch list priority come from?",
+    answer: "From **Project Settings → Punch Lists & Restraints**: Punch Lists Priority offers **High** (4 hours), **Medium** (24) and **Low** (48) due hours, and the Category list is empty on the test site. Cards on Warehouse Construction showed **Medium**.",
+    tags: ["punch list priority","punch list due hours","punch list category","priority high medium low"]
+  },
+  {
+    action: "view",
+    object: "quality lifecycle",
+    scope: "module",
+    section: "Quality",
+    question: "What is the full quality inspection flow from setup to reporting?",
+    answer: "Setup in **Project Setup → Quality** (folder, mapped work packages) and **Project Settings** (layout, skip Level 1); inspection in **Quality Level 1** then **Level 2**; failures to **Punch Lists** (Rectified, then Verified); approvals in **Approve Quality Logs**; history in **Submitted Quality Logs**; reporting in the folder counters, **Quality Progress** (**Loop Progress**) and **My Desk**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["quality flow","quality lifecycle","quality inspection process","who approves quality","quality reporting"]
+  },
+  {
+    action: "view",
+    object: "loop quality",
+    scope: "module",
+    section: "Quality",
+    question: "What does Loop mean in the quality screens?",
+    answer: "A **Loop** is a quality folder from **Project Setup → Quality**. **Data Analytics & Insights → Quality Progress → Project Drill Down → Loop Progress** shows each Loop's progress, commodities, work packages and punch lists. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["loop","loop folders","loop progress","quality loop"]
+  },
+  {
+    action: "view",
+    object: "leave quality form prompt",
+    scope: "module",
+    section: "Quality",
+    question: "Why does the app say \"Changes not saved\" when I leave a quality form?",
+    answer: "The quality form warns \"You have unsaved changes. Press Ok to proceed anyway\" whenever you navigate away with the form open. Press **Cancel** to stay and finish the form, or **Ok** to leave without saving.",
+    tags: ["changes not saved","unsaved changes quality","leave quality form"]
+  },
+  {
+    action: "view",
+    object: "approve quality logs filters",
+    scope: "module",
+    section: "Quality",
+    question: "What can I filter by on Approve Quality Logs?",
+    answer: "Status chips **Not Ready**, **Ready to Approve** and **Approved / Reject**, **To be approved** / **All**, a search box, and filters **Level-2s**, **Folders** and **Commodities Types** (your project's names) with **Apply**, **Clear** and **Save**.",
+    tags: ["approve quality logs filters","quality approval queue","ready to approve","folders commodities filter"]
   }
 ];
 
@@ -24689,19 +24770,19 @@ const MODULES = [
         "definitions": [
           {
             "term": "Quality Level 1",
-            "definition": "The first-pass quality inspection card. It shows an **Entity** picker, status chips (Not yet started, Ready to work, Started, In Progress, Completed, Issue Raised), and a **Work Packages** list with **Ready** and **All** tabs. Level 2 for an item opens only once its Level 1 is approved, because **Project Settings → Quality Logs → \"Do you want to skip level 1?\"** is set to **No** on Arena Steel Plant - Phase 1 (answer Yes to allow skipping). **Where this data comes from:** the entities and work packages are the Works tree from **Project Setup → Works**, and inspections are logged against work packages that have a quality form folder mapped to them in **Project Setup → Quality** (Folders, Map Work Packages) once their work is ready. On the test project Piperack and ECR both show \"No ready Work Packages available to log Quality check lists\" because Folder 1 has no mapped work packages. **Which setting changes it:** **Project Settings → Quality Work Logs Templates** (drill-down), **Quality Logs** (skip Level 1). **Where it goes next:** **Submitted Quality Logs**, **Approve Quality Logs**, **Punch Lists** when an item fails, the **Recent Quality Logs** panel on **My Desk**, the folder counters in Project Setup → Quality, and the **Quality Progress** dashboard in **Data Analytics & Insights**."
+            "definition": "The first-pass quality inspection card. It shows an **Entity** picker, status chips (Not yet started, Ready to work, Started, In Progress, Completed, Issue Raised), and a **Work Packages** list with **Ready** and **All** tabs. Level 2 for an item opens only once its Level 1 is approved, because **Project Settings → Quality Logs → \"Do you want to skip level 1?\"** is set to **No** on Arena Steel Plant - Phase 1 (answer Yes to allow skipping). **Where this data comes from:** the entities and work packages are the Works tree from **Project Setup → Works**, and inspections are logged against work packages that have a quality form folder mapped to them in **Project Setup → Quality** (Folders, Map Work Packages) once their work is ready. On Arena Steel Plant - Phase 1 Piperack and ECR both show \"No ready Work Packages available to log Quality check lists\" because Folder 1 has no mapped work packages. **Which setting changes it:** **Project Settings → Quality Work Logs Templates** (drill-down), **Quality Logs** (skip Level 1). **Where it goes next:** **Submitted Quality Logs**, **Approve Quality Logs**, **Punch Lists** when an item fails, the **Recent Quality Logs** panel on **My Desk**, the folder counters in Project Setup → Quality, and the **Quality Progress** dashboard in **Data Analytics & Insights**. **The form:** clicking a location opens a check list (for example **MOORE - QP - 008 | Preconstruction**) with the company letterhead (address, phone and zip of the company location from Global Data) and **Form Created**; the check list name (**Site Office Mobilization / Set Up**); **General Information** (Customer, Manager, the project's Level-1, Level-2 and Commodities names, Project No., Project Title, Work Packages, Project Location); **Expand All** / **Collapse All**; **Inspection Items** with **Yes** / **No** per question; **Other Fields** with a **Signature**; and **Submit**. The three-dot menu has **Download**, **PDF Share**, **Print**, **Compose Mail** and **See All Email Threads**, there is a **Follow Up Actions** button, and **Hide Tagged Documents** shows files tagged to the commodity in the folder's **Documents** tab. If you leave the form with unsaved changes the app asks \"Changes not saved - Press Ok to proceed anyway\"."
           },
           {
             "term": "Quality Level 2",
-            "definition": "The same screen and filters as Quality Level 1, for the second, more thorough verification pass. An item only reaches Level 2 once its Level 1 check has cleared (unless Level 1 is configured to be skippable). It uses the same Works tree and the same folder mapping as Level 1 and appears for a work package once Level 1 is approved (or when Level 1 may be skipped). It uses the same Works tree and the same folder mapping as Level 1 and appears for a work package once Level 1 is approved (or when Level 1 may be skipped)."
+            "definition": "The second, more thorough verification pass, on the same screen layout and filters as Quality Level 1. An item reaches Level 2 only once its Level 1 check has cleared (unless **Project Settings → Quality Logs** lets Level 1 be skipped). On **Warehouse Construction** the default **Ready** tab was empty (\"No ready Work Packages available to log Quality check lists\") while the **All** tab listed the Level 2 work packages (**MOORE - QP - 001** to **003** under **Milestone**). **The form:** the page title is the check list name (for example **Field Supervision**) with a status chip (**Approved**), **Inspection Items \\*** in numbered sections with **Yes** / **No** answers, a **Signature**, **Workflow Comments and Attachments** (one block per approval level, **Level 1** and **Level 2**, each with a comment and attachments) and a **Submit For Approval** button."
           },
           {
             "term": "Punch Lists",
-            "definition": "The defect-tracking card: an inspector raises a punch list item from within a Level 1 or Level 2 form when work fails inspection. It has two tabs, **Punch List** (counters **Open**, **Rectified** and **Verified**, Download Excel, Filters, grid or list view) and **Quality Workflow Issues** (problems raised against the quality approval workflow). A punch list item needs physical rectification and re-verification before the work is accepted. **Where this data comes from:** items are created from quality forms, so the card stays at \"No Punch Lists found\" until an inspection fails. **Which setting changes it:** **Project Settings → Punch Lists & Restraints** holds the Punch Lists Category list (empty here) and Punch Lists Priority (High 4 hours, Medium 24, Low 48 due hours). **Where it goes next:** the **Recent Punch List Items** panel and **My Actions → Issues → Punch List** on **My Desk**."
+            "definition": "The defect-tracking card (it is called **Snag Lists** on Arena Residential Project). It has two tabs, **Punch List** and **Quality Workflow Issues**. The **Punch List** tab shows counters (**Issues Open**, **Issues Rectified**, **Issues Verified**; on Warehouse Construction 0, 2 and 2), **Download Excel**, **Filters** and grid or list view. Each card shows when and by whom it was **Raised**, the priority (**Medium**), the number (**PNLNo.4**), the path (**Commodities: Warehouse | Construction Warehouse | Structural | MOORE - QP - 008**), the **Field name** (the inspection question that failed, for example \"Is secured storage and light established?\"), the **Observation**, an **Assign to** person, **Chat** and the action buttons: **Rectified** (work corrected) and **Verify** / **Verified** (QC accepted). **Where this data comes from:** items are created from quality forms, so the card stays empty until an inspection fails. **Which setting changes it:** **Project Settings → Punch Lists & Restraints** holds the Punch Lists Category list (empty here) and Punch Lists Priority (High 4 hours, Medium 24, Low 48 due hours). **Where it goes next:** the **Recent Punch List Items** panel and **My Actions → Issues → Punch List** on **My Desk**, the **Punchlists** column of the folder in **Project Setup → Quality**, **Loop Progress → Punch Lists** and the **PunchList** tab in Quality Progress."
           },
           {
             "term": "Submitted Quality Logs",
-            "definition": "The full history of quality logs for the plant, with a **Tree Version** dropdown, a **Level** dropdown (Quality Level 1 or Level 2), a **Users** filter, a date range calendar, **Filters** and **Download Excel**. It shows \"No Logs Present\" until a quality log is submitted. **Where this data comes from:** logs submitted from Quality Level 1 and Level 2. **Where it goes next:** the **Recent Quality Logs** panel on **My Desk** and the quality dashboards in **Data Analytics & Insights**."
+            "definition": "The full history of quality logs for the plant, with a **Tree Version** dropdown, a **Level** dropdown (it opened on Quality Level 2), a **Users** filter, a date range calendar, **Filters** and **Download Excel**. It shows \"No Logs Present\" until a quality log is submitted. **Where this data comes from:** logs submitted from Quality Level 1 and Level 2. **Where it goes next:** the **Recent Quality Logs** panel on **My Desk** and the quality dashboards in **Data Analytics & Insights**."
           },
           {
             "term": "Approve Quality Logs",
@@ -24714,6 +24795,14 @@ const MODULES = [
           {
             "term": "Super Location to Location Logging (Quality)",
             "definition": "The other option in Project Settings → Quality Work Logs Templates: an inspector picks a Super Location, then a Location within it, to see what is ready to check."
+          },
+          {
+            "term": "Quality lifecycle at a glance",
+            "definition": "**1. Set up (Module Admin / PM):** create a folder and map work packages in **Project Setup → Quality**; choose the layout in **Project Settings → Quality Work Logs Templates** and the Level 1 rule in **Quality Logs**; assign **Quality Package Responsible** and **Quality Package Approval** in **Works → People**. **2. Inspect (QA/QC inspector):** open **Quality Level 1**, fill and **Submit** the check list; once Level 1 clears, do the same on **Quality Level 2** with **Submit For Approval**. **3. Fail (inspector):** a failed item shows in **Punch Lists** and is assigned, marked **Rectified**, then **Verified**. **4. Approve (approver):** pending items appear in **Approve Quality Logs**; everything submitted is in **Submitted Quality Logs**. **5. Report:** folder counters in **Project Setup → Quality**, **Quality Progress** (including **Loop Progress**, where a folder is called a Loop) in **Data Analytics & Insights**, and **Recent Quality Logs** on **My Desk**."
+          },
+          {
+            "term": "Loop in Quality screens",
+            "definition": "The product's **Loop** is the quality folder from **Project Setup → Quality**. You will see the word in **Data Analytics & Insights → Quality Progress → Project Drill Down → Loop Progress**. See **Project Setup → Quality** for details."
           }
         ],
         "procedures": [
@@ -24723,7 +24812,7 @@ const MODULES = [
               "Go to **Field Works → Tree Version**, open the plant's card, and select the **Quality** tab.",
               "Open **Quality Level 1**, pick an Entity, and use the status filters to find a Work Package that is Ready to work.",
               "How you drill down to it follows the project's **Quality Work Logs Templates** setting — Work Package to Location Logging (Work Package first) or Super Location to Location Logging (Location first).",
-              "Fill in the form, then click **Save As Draft** or **Submit for Approval**. Repeat on **Quality Level 2** once Level 1 is approved."
+              "Fill in the check list. On Level 1 click **Submit**; on Level 2 click **Submit For Approval**. Do Level 2 once Level 1 has cleared."
             ],
             "note": "Level 2 only becomes available once Level 1 is approved, unless Level 1 has been configured as skippable in Project Settings → Quality Logs."
           },
@@ -24756,10 +24845,11 @@ const MODULES = [
           {
             "title": "Track a punch list item to closure",
             "steps": [
-              "Open the **Punch Lists** card on the plant's Quality tab to see items created when an issue was raised from a quality form.",
-              "Assign a due date and owner, and use Chat to coordinate the fix.",
-              "Click **Rectify** once the defect has been physically corrected, then **QC_Verify** to verify and close it.",
-              "Use filters and **Download Excel** to report on open punch items."
+              "Open the **Punch Lists** card (or **Snag Lists**) on the plant's Quality tab to see items created from failed inspection questions.",
+              "Check the priority and **Assign to** the person who will fix it; use **Chat** to coordinate.",
+              "Click **Rectified** once the defect has been corrected.",
+              "The QA/QC person clicks **Verify** to close it. The counters **Issues Open / Rectified / Verified** update.",
+              "Use **Filters** and **Download Excel** to report on open items."
             ],
             "images": [
               {
@@ -24815,7 +24905,7 @@ const MODULES = [
           },
           {
             "term": "Quality with Work Package to Location Logging",
-            "definition": "Seen on **Warehouse Construction** (Tree Version **Warehouse**). **Level 1** shows the entity, the status legend (**Not yet started**, **Ready to work**, **Started**, **In Progress**, **Completed**, **Issue Raised**) and a **Work Packages (3)** list on the left grouped by quality folder (**Preconstruction**, **Architectural & MEP**, **Structural**) with **Ready** and **All** tabs and a search box. Pick a work package such as **MOORE - QP - 008** and the right side shows its locations by series. On **Arena Steel Plant - Phase 1** and **Arena Roads and Highways Contractors** the list is empty (\"No ready Work Packages available to log Quality check lists\") because no work package is mapped to a quality folder yet."
+            "definition": "Seen on **Warehouse Construction** (Tree Version **Warehouse**). **Level 1** shows the entity, the status legend (**Not yet started**, **Ready to work**, **Started**, **In Progress**, **Completed**, **Issue Raised**) and a **Work Packages (3)** list on the left grouped under the project's **Commodities** (location types) such as **Preconstruction**, **Architectural & MEP** and **Structural** with **Ready** and **All** tabs and a search box. Pick a work package such as **MOORE - QP - 008** and the right side shows its locations by series. On **Arena Steel Plant - Phase 1** and **Arena Roads and Highways Contractors** the list is empty (\"No ready Work Packages available to log Quality check lists\") because no work package is mapped to a quality folder yet."
           },
           {
             "term": "Quality with Super Location to Location Logging",
@@ -24851,7 +24941,7 @@ const MODULES = [
             "title": "Open a quality check list in the Work Package layout",
             "steps": [
               "Open **Quality → Quality Level 1** and choose the entity.",
-              "Under **Work Packages**, open the quality folder and click the work package (use **Ready** to see only those ready to inspect).",
+              "Under **Work Packages**, open the group (for example **Preconstruction**) and click the work package (use **Ready** to see only those ready to inspect).",
               "Click the location in the grid on the right."
             ]
           }
