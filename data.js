@@ -7162,7 +7162,7 @@ const QA_OWNERS = [
     scope: "project",
     section: "Owners",
     question: "How do I register a new owner on a project?",
-    answer: "On the Owners screen, click <strong>Register Owner</strong> and provide the stakeholder's details. Once registered, the owner appears in the list/grid below, where you can use the search box to locate them again later.",
+    answer: "On <strong>Owners</strong> click <strong>Register Owner</strong>. In <strong>Provide Owners Details</strong> fill <strong>Owner ID</strong>, <strong>First Name</strong>, <strong>Last Name</strong>, <strong>Username</strong>, <strong>Email</strong> and <strong>Initials</strong> (required), optionally a photo, phone number and signature label, then <strong>Submit</strong>.",
     tags: ["register owner","add owner","create owner"]
   },
   {
@@ -7171,7 +7171,7 @@ const QA_OWNERS = [
     scope: "project",
     section: "Owners",
     question: "The Owners list is empty on my project — is that expected?",
-    answer: "Yes, an empty Owners list simply means no client or owner-side stakeholders have been registered yet. Register one via <strong>Register Owner</strong> whenever you're ready to give an owner-side contact visibility into the project.",
+    answer: "Yes. On Arena Steel Plant - Phase 1 the list is empty: no owner-side people have been registered. Use <strong>Register Owner</strong> to add one. This is separate from the company-level owners in Global Data → Owners.",
     tags: ["empty state","no owners registered"]
   },
   {
@@ -7180,7 +7180,7 @@ const QA_OWNERS = [
     scope: "project",
     section: "Owners",
     question: "How does registering an Owner relate to the Owner Dashboard I've seen under Project Settings?",
-    answer: "Registering a stakeholder here on the Owners screen is what feeds the <strong>Owner Dashboard</strong> category found under Project Settings — the two are connected: Owners is where you add the external client/developer contact, and Owner Dashboard is the owner-facing view that contact would use to check status without needing full internal access to the project.",
+    answer: "The <strong>Owners</strong> screen registers the people; <strong>Project Settings → Owner Dashboard</strong> chooses which Standard Analytics views owners can see (Construction Progress, Quality Progress, Cost, Contractors Performance), each with tick boxes that are all unticked on the test project. The views are the same ones as in <strong>Data Analytics & Insights</strong>. How an owner signs in was not visible because none is registered.",
     tags: ["owner dashboard","project settings","owner visibility"]
   },
   {
@@ -7198,7 +7198,7 @@ const QA_OWNERS = [
     scope: "project",
     section: "Owners",
     question: "Should I add a client contact under Owners or under Project Setup → People?",
-    answer: "Use <strong>Owners</strong> for client- or developer-side stakeholders — the party paying for and accountable for the work, who need limited, status-oriented visibility via the Owner Dashboard. Use <strong>Project Setup → People → Roster</strong> for the internal project team actually delivering the work, and <strong>Users and Permissions</strong> to control what those internal users can do inside the project. Mixing the two blurs the line between the delivery team and the client.",
+    answer: "Use <strong>Owners</strong> for client or developer-side people who should follow the project and get the Owner Dashboard views you choose. Use <strong>Project Setup → People</strong> for your own team members (roster system users, non-system users, crews, indirect staff). Roster people come from Global Data → Global Rosters.",
     tags: ["owners vs roster","client contact","project people","stakeholder type"]
   },
   {
@@ -7209,6 +7209,60 @@ const QA_OWNERS = [
     question: "Where else does owner-side information appear on a project?",
     answer: "Beyond the Owners screen, a project's own identity data on <strong>Project Setup → Works</strong> carries owner-side fields in its left panel — Owner Rep, CSE-PMC, Project Type, and Funding &amp; Implementing Agency — alongside Project Name/ID, Construction Type, Status, and Location. Owners is where stakeholders are registered for visibility; Project Setup → Works is where the project's contractual owner context is recorded.",
     tags: ["owner rep","cse-pmc","funding agency","project identity","project setup works"]
+  },
+  {
+    action: "view",
+    object: "owners lineage",
+    scope: "project",
+    section: "Owners",
+    question: "What fields are on the Register Owner form?",
+    answer: "Provide Owners Details: Upload Photo, Owner ID, First Name, Last Name, Username, Email and Initials (all required), plus Phone Number (country code, number, extension) and Sign Label. Buttons: Close, Notify User (inactive until the form is valid) and Submit.",
+    tags: ["register owner fields","owner form fields","provide owners details","owner id","owner initials","sign label","notify user owner"]
+  },
+  {
+    action: "view",
+    object: "owners lineage",
+    scope: "project",
+    section: "Owners",
+    question: "What is the difference between Owners on the project and Global Data → Owners?",
+    answer: "Global Data → Owners are organisations (Owner Name, addresses, tax codes, locations) used in the Owner dropdown when a project is created. Owners on the project are individual people (Owner ID, name, username, email, initials) registered for this project. They are separate lists: this project has no registered owner people and its Owner Representative is blank.",
+    tags: ["project owners vs global owners","global data owners difference","owner company vs owner person","where do owners come from","owners lineage","owner dropdown create project"]
+  },
+  {
+    action: "view",
+    object: "owners lineage",
+    scope: "project",
+    section: "Who Registers Owners and What They See",
+    question: "What can I choose to show on the Owner Dashboard?",
+    answer: "Project Settings → Owner Dashboard lists the Standard Analytics views to offer owners: Construction Progress (10 views), Quality Progress (9), Cost (Cost Plan Forecast, Cost Activity) and Contractors Performance (Contractor Performance). All boxes are unticked on the test project, and Standard Reports lists nothing.",
+    tags: ["owner dashboard options","owner dashboard settings","what owners can see","owner dashboard checkboxes","owner dashboard construction progress","owner dashboard views"]
+  },
+  {
+    action: "view",
+    object: "owners lineage",
+    scope: "project",
+    section: "Who Registers Owners and What They See",
+    question: "Where do the Owner Dashboard options come from?",
+    answer: "They are the views in Data Analytics & Insights → Standard Analytics: the Construction Progress left menu (Project Activity Analysis to Work Milestones), Quality Progress, Cost (Cost Plan Forecast, Cost Activity) and Contractors Performance, under the same names. The setting chooses which of them owners see.",
+    tags: ["owner dashboard source","owner dashboard lineage","where does owner dashboard come from","owner dashboard data analytics link"]
+  },
+  {
+    action: "view",
+    object: "owners lineage",
+    scope: "project",
+    section: "Who Registers Owners and What They See",
+    question: "Which permission controls Owners?",
+    answer: "The Owners → Project Owners row in Users and Permissions (View, Create, Edit, Delete). Owner Dashboard settings are under Project Settings, which has its own permission rows.",
+    tags: ["owners permission","who can register owners","owner permission row","project owners permission"]
+  },
+  {
+    action: "view",
+    object: "owners lineage",
+    scope: "project",
+    section: "Who Registers Owners and What They See",
+    question: "Why can't an owner see anything on the Owner Dashboard?",
+    answer: "On the test project every box on Project Settings → Owner Dashboard is unticked and no owner is registered, so nothing is offered. Tick the views to show (Construction Progress, Quality Progress, Cost, Contractors Performance) and register the owner under Owners. How owners sign in was not confirmed.",
+    tags: ["owner cannot see dashboard","owner dashboard empty","owner sees nothing","owner dashboard not showing","owner dashboard unticked"]
   }
 ];
 
@@ -7383,6 +7437,15 @@ const QA_PROJECTSETTINGS = [
     question: "Why does Field Works Quick Apps say \"Please configure Quick Apps in global\"?",
     answer: "The apps are built in **Global Data → Quick Apps**; the project side is **Project Settings → Quick Apps** (a Tree Versions dropdown, the list of apps, a Team table and a Workflow table). On Arena Steel Plant - Phase 1 the Team and Workflow tables are empty, so the Field Works card shows only that message.",
     tags: ["quick apps global message","configure quick apps","quick apps project settings","quick apps empty field works"]
+  },
+  {
+    action: "view",
+    object: "owner dashboard settings",
+    scope: "project",
+    section: "Scheduling, Views & Workflow Settings",
+    question: "What can I choose on the Owner Dashboard setting in Project Settings?",
+    answer: "Project Settings → Owner Dashboard has tick boxes for Standard Analytics views to show to owners: Construction Progress (10), Quality Progress (9), Cost (2) and Contractors Performance (1). They are the same views as in Data Analytics & Insights, and all are unticked on the test project. Owners are registered under Owners → Register Owner.",
+    tags: ["owner dashboard setting project settings","what can i choose on the owner dashboard setting","project settings owner dashboard checkboxes"]
   }
 ];
 
@@ -23948,41 +24011,65 @@ const MODULES = [
     "qaItems": QA_OWNERS,
     "narrative": [
       {
-        "heading": "Admin Role",
-        "intro": "<p>Registering an owner is inherently an internal, gatekeeping action — you're the one deciding to grant an external stakeholder visibility into the project — so it naturally sits with a <strong>PM</strong> or <strong>Module Admin</strong> rather than being something the owner does for themselves. There's no separate owner-specific permission panel documented beyond the standard Arena permission model; a Super Admin or Module Admin's role is making sure the right internal users have rights to register and manage owners in the first place.</p><p>Because owner registration feeds into the owner-facing Owner Dashboard under Project Settings, an admin should also think of this as the front door to a client-facing surface — what gets entered here (and who's authorized to enter it) has downstream visibility implications for the client relationship, not just an internal contact list.</p>",
+        "heading": "Who Registers Owners and What They See",
+        "intro": "<p>Registering owners is a PM or Module Admin task. This section covers who can do it and which project settings decide what owners see.</p><p>The **Owner Dashboard** page in **Project Settings** lists the **Standard Analytics** dashboards you can show to owners, each as a checkbox. On Arena Steel Plant - Phase 1 every box is unticked.</p>",
         "definitions": [
           {
-            "term": "Internal gatekeeping action",
-            "definition": "Registering an owner grants an external stakeholder visibility into the project, so it sits with a PM or Module Admin rather than being self-service for the owner."
+            "term": "Owner Dashboard (Project Settings)",
+            "definition": "A page titled **Owner Dashboard** (\"All related settings for owners to view key Project insights\") with two tabs, **Standard Analytics** and **Standard Reports**. Under **Standard Analytics** you pick a dashboard, then tick the views to show: **Construction Progress** (Project Activity Analysis, Project Drill Down, Project Elements, Work Packages, Locations Type, Locations Type Grids, Work Packages Grids, Quality And Documents, Qualities Dashboard, Work Milestones), **Quality Progress** (Project Drill Down, Project Elements, Work Packages, Locations Type, Quality Status, Locations Type Grids, Work Packages Grids, Quality And Documents, Work Milestones), **Cost** (Cost Plan Forecast, Cost Activity) and **Contractors Performance** (Contractor Performance). **Standard Reports** lists nothing. All boxes are unticked on the test project."
           },
           {
-            "term": "Owner Dashboard link",
-            "definition": "Owner registration feeds the Owner Dashboard category under Project Settings, making this screen the front door to a client-facing surface rather than just an internal contact list."
+            "term": "Where the Owner Dashboard options come from",
+            "definition": "The options are the left-menu views of **Data Analytics & Insights → Standard Analytics** (Construction Progress, Quality Progress, Cost, Contractors Performance), under the same names. Ticking one is how a view is offered to owners, so owners see the same dashboards you see, limited to what is ticked. How an owner signs in and opens the dashboard was not visible without a registered owner."
+          },
+          {
+            "term": "Where owner details show up",
+            "definition": "The **Initials** entered at registration are what appear as the owner's signature when documents are approved. The project's own owner-side fields (**Owner Representative**, **CSE / PMC**, **Project Type**, **Funding Agency**, **Implementing Agency**) are on **Project Setup → Works**, and **Project Type** and **Funding Agency** options come from **Global Data → Settings → Project Form**."
           }
         ],
-        "procedures": []
+        "procedures": [
+          {
+            "title": "Choose what owners can see",
+            "steps": [
+              "Go to **Project Settings → Owner Dashboard**.",
+              "Open **Standard Analytics** and pick a dashboard (**Construction Progress**, **Quality Progress**, **Cost** or **Contractors Performance**).",
+              "Tick the views owners should see.",
+              "Register the owner in **Owners → Register Owner** if they are not yet on the project."
+            ],
+            "note": "Ticking boxes was not tested (nothing may be saved during testing), so how often the change takes effect is not confirmed."
+          }
+        ]
       },
       {
         "heading": "Owners",
-        "intro": "<p>Every construction project has a client or developer footing the bill and ultimately accountable for the outcome, and that party usually wants visibility into progress without needing — or being entitled to — the same depth of access the contractor's own team has inside Arena. Owners, at <strong>Owners</strong>, is where that relationship gets formalized: a simple screen for registering the client- or owner-side stakeholders on a project, distinct from the internal users already working inside the system day to day.</p><p>The screen itself is intentionally lightweight — a <strong>Register Owner</strong> button plus a search box sit above a list or grid of stakeholders already registered, and in a fresh project that list is naturally empty until someone adds the first owner-side contact. What makes this screen more than a simple contact list is its connection to Project Settings' <strong>Owner Dashboard</strong> category: registering someone here is what feeds that owner-facing dashboard, giving the client a limited, status-oriented view of the project without exposing the full internal toolset a contractor's own PM or field team relies on. For a construction business, this is the mechanism that lets you keep a client informed and engaged on their own terms, while the day-to-day operational detail stays inside the team actually doing the work.</p>",
+        "intro": "<p>Owners is where a PM or Module Admin registers the client or developer-side people who should follow the project. It has a **Register Owner** button, a search box and the list of owners already registered.</p><p>Each owner is a person, not a company: the form asks for an **Owner ID**, first and last name, a **Username**, an **Email** and signature **Initials**. The companies behind them live in **Global Data → Owners**. On Arena Steel Plant - Phase 1 the list is empty.</p>",
         "definitions": [
           {
             "term": "Register Owner",
-            "definition": "The action used to add a new client- or developer-side stakeholder to a project's Owners list."
+            "definition": "Opens **Provide Owners Details**: **Upload Photo**; **Owner ID***, **First Name***, **Last Name***, **Username***, **Phone Number** (country code, number and extension; the code defaults to +91 (India)), **Email***, and **Sign Label** with **Initials*** (the name that represents the owner's signature and is shown when documents are approved). Buttons: **Close**, **Notify User** (inactive until the form is valid) and **Submit**. Nothing was submitted during testing."
           },
           {
-            "term": "Owner Dashboard",
-            "definition": "A category under Project Settings, fed by the Owners screen, that gives registered owner-side stakeholders a limited, status-focused view of the project."
+            "term": "Search",
+            "definition": "The box above the list finds a registered owner by name or ID; with an empty list there is nothing to search."
+          },
+          {
+            "term": "Project owner versus Global Data owner",
+            "definition": "A **Global Data → Owners** record is an organisation (**Owner Name**, addresses, tax codes, linked locations) that you pick in the **Owner** dropdown when a project is created. A record here is an individual person registered on this project. The two lists are separate: this project has no owner selected (its **Owner Representative** is blank on **Project Setup → Works**) and no registered owner people."
+          },
+          {
+            "term": "Permission",
+            "definition": "The **Owners → Project Owners** row in **Users and Permissions** has **View**, **Create**, **Edit** and **Delete** boxes; it decides who can see and register owners."
           }
         ],
         "procedures": [
           {
             "title": "Register a new project owner",
             "steps": [
-              "Go to <strong>Owners</strong>.",
-              "Click <strong>Register Owner</strong>.",
-              "Enter the stakeholder's details and save — they now appear in the Owners list and become eligible for owner-facing visibility such as the Owner Dashboard."
+              "Go to **Owners** and click **Register Owner**.",
+              "In **Provide Owners Details** enter **Owner ID**, **First Name**, **Last Name**, **Username**, **Email** and **Initials**; add a photo and phone number if you have them.",
+              "Click **Submit** (or **Notify User** once it becomes active) to create the owner."
             ],
+            "note": "Submit was not used during testing, so what Notify User sends and how an owner signs in were not confirmed.",
             "images": [
               {
                 "src": "assets/notion/lead-management-owners/001.jpg",
@@ -23999,8 +24086,8 @@ const MODULES = [
           {
             "title": "Find an already-registered owner",
             "steps": [
-              "Go to <strong>Owners</strong>.",
-              "Use the search box above the list/grid to locate the stakeholder by name."
+              "Go to **Owners**.",
+              "Type in the search box above the list to find the owner by ID or name."
             ],
             "images": [
               {
@@ -24016,15 +24103,15 @@ const MODULES = [
     "name": "Owners",
     "alias": "Client & Owner Registration",
     "icon": "supervisor_account",
-    "tagline": "Register the client or developer-side stakeholders who need their own limited view into the project.",
+    "tagline": "Register owner-side people for the project; the Owner Dashboard setting decides which analytics they see.",
     "color": "#7a2f3f",
-    "overview": "<p>Owners is a project-scope screen for registering client and developer-side stakeholders via Register Owner, feeding the owner-facing Owner Dashboard under Project Settings so external parties get limited status visibility without full internal access.</p>",
+    "overview": "<p>Owners is where a PM or Module Admin registers an owner-side person for the project: a **Register Owner** button, a search box and a list. The **Owner Dashboard** page in **Project Settings** chooses which analytics those owners can view. The list is empty on Arena Steel Plant - Phase 1.</p>",
     "navigation": [
       "Open a <strong>Project</strong>, then go to <strong>Owners</strong>.",
       "Use <strong>Register Owner</strong> to add a new stakeholder, or the search box to find an existing one."
     ],
     "sections": [
-      "Admin Role",
+      "Who Registers Owners and What They See",
       "Owners"
     ]
   },
@@ -24158,7 +24245,7 @@ const MODULES = [
           },
           {
             "term": "Owner Dashboard",
-            "definition": "Configures the dashboard view surfaced to the project owner or ownership representative."
+            "definition": "Lists the **Standard Analytics** views you can offer owners, as tick boxes: **Construction Progress** (10 views, Project Activity Analysis to Work Milestones), **Quality Progress** (9), **Cost** (Cost Plan Forecast, Cost Activity) and **Contractors Performance** (Contractor Performance); **Standard Reports** lists nothing. All boxes are unticked on Arena Steel Plant - Phase 1. **Where it comes from:** the options are the views of **Data Analytics & Insights → Standard Analytics**. **Who it is for:** the people registered under **Owners → Register Owner**."
           },
           {
             "term": "My Desk",
