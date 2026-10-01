@@ -5199,6 +5199,69 @@ const QA_PROJECTSETUP = [
     question: "Why is something I expect missing from a dropdown in Project Setup?",
     answer: "Most dropdowns read from Global Data (vendors, crews, phase codes, templates, cost types, activities) or from the project roster. Check the source list exists and is active, then reopen the screen. The **Lineage map** in this module lists each source.",
     tags: ["dropdown missing project setup","item missing project setup","why not showing project setup","missing option project setup"]
+  },
+  {
+    action: "view",
+    object: "level names",
+    scope: "module",
+    section: "Works",
+    question: "Why do my Works tabs say Level-1s, Level-2s and Commodities instead of Entities, Super Locations and Locations?",
+    answer: "Each plant can have its own names for the structure levels (three-dot menu on the plant card → **Naming Framework**). **Warehouse Construction** uses **Level-1s**, **Level-2s** and **Commodities**, and Field Works Quality shows the same words. They are the same levels as Entity, Super Location and Location. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["level-1s level-2s commodities","naming framework","rename entities super locations","commodities location type","different level names"]
+  },
+  {
+    action: "view",
+    object: "phase codes productivity",
+    scope: "module",
+    section: "Phase Codes",
+    question: "Where do the phase codes in Productivity Logs come from?",
+    answer: "From this list (**Project Setup → Phase Codes**; 963 on the test projects). In **Productivity Logs → Create** the **Set Phase Codes** dialog offers a subset that differs by project, and finished logs show codes like **1089-101 - Fabrication**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["phase codes productivity logs","set phase codes source","phase code list project setup","1089-101"]
+  },
+  {
+    action: "view",
+    object: "loop folders",
+    scope: "module",
+    section: "Quality",
+    question: "What are Loop folders?",
+    answer: "In the product, **Loop** is the Data Analytics name for a **quality folder** created in **Project Setup → Quality**. **Quality Progress → Project Drill Down → Loop Progress** shows each folder's progress, its commodities, work packages and punch lists, and **Quality And Documents** shows the folders by status. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["loop folders","loop progress","loop status","loop-folder","quality folder loop","what is a loop"]
+  },
+  {
+    action: "view",
+    object: "quality folder structure",
+    scope: "module",
+    section: "Quality",
+    question: "What is inside a Quality folder?",
+    answer: "Three tabs: **Documents** (sub folders and files), **Photos** (**Add File**) and **Linked Forms** (forms such as RFI linked to the folder), plus **Map Work Packages** for the work packages the folder covers and **Upload Excel**. Each folder also shows counters for **Total**, **Not Ready**, **Ready**, **In Progress** and **Completed Forms**.",
+    tags: ["quality folder contents","documents photos linked forms","map work packages","create sub folder","quality folder tabs"]
+  },
+  {
+    action: "view",
+    object: "tagged documents quality form",
+    scope: "module",
+    section: "Quality",
+    question: "Where do the tagged documents on a quality form come from?",
+    answer: "From the **Documents** tab of the quality folder that covers the work package, in **Project Setup → Quality**. The quality form's **Hide Tagged Documents** panel shows \"Tagged documents for <commodity>\" or \"No files for this Commodities\" when the folder has none.",
+    tags: ["tagged documents","hide tagged documents","quality form documents","folder documents"]
+  },
+  {
+    action: "view",
+    object: "quality approvers",
+    scope: "module",
+    section: "Quality",
+    question: "Where do I set who approves quality inspections?",
+    answer: "The Works → plant → **People** tab has **Quality Package Responsible** and **Quality Package Approval** for each work package. There is no **Create Workflow** tab under Project Setup → Quality on the test site. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["quality approvers","quality package approval","who approves quality","quality workflow setup"]
+  },
+  {
+    action: "view",
+    object: "safety setup lineage",
+    scope: "module",
+    section: "Safety",
+    question: "How do the Safety setup screens connect to Field Works Safety?",
+    answer: "Categories and forms set up in **Setup Project Safety Forms** (event based) and **Setup Safety Calendar** (scheduled) appear in **Field Works → Safety → Safety Forms** and **Safety Calendar**. The approval levels from **Create Workflow**, attached per activity and work package in **Assign Workflow**, drive **Approve Safety**. A \"No\" on an inspection item raises a **Daily Safety Issue**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["safety setup to field works","safety forms lineage","assign workflow safety","safety calendar setup","where safety forms appear"]
   }
 ];
 
@@ -22828,6 +22891,10 @@ const MODULES = [
           {
             "term": "Upload Excel and Download Excel",
             "definition": "Bulk-load or export the plant structure. The Excel upload on a plant card and the **Upload Tree Version Data** option use the same idea: prepare the structure offline and load it."
+          },
+          {
+            "term": "Level names differ by project",
+            "definition": "The levels are called **Entities**, **Super Locations** and **Locations** by default, but each plant can rename them (three-dot menu → **Naming Framework**; company defaults are in **Global Data → Settings → Naming Framework**). On **Warehouse Construction** the build screen tabs read **Level-1s**, **Level-2s** and **Commodities**, and Quality and Field Works use the same names (**Level-1**, **Level-2**, **Commodities**). When a guide says Entity, Super Location or Location, read your own project's names. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
           }
         ],
         "procedures": [
@@ -23207,6 +23274,10 @@ const MODULES = [
           {
             "term": "Where this data comes from and goes",
             "definition": "**Comes from:** Global Data phase codes (you cannot add codes here). **Goes to:** Time Management timesheets, equipment logs, Works → Other Attributes (Phase Codes), Estimate (cost breakdown by phase code) and cost reports."
+          },
+          {
+            "term": "Where phase codes are used in Field Works",
+            "definition": "The project phase codes (963 on both Arena Steel Plant - Phase 1 and Elevated Corridor) feed **Field Works → Progress → Productivity Logs**: the **Set Phase Codes** dialog offers a project-specific subset, and logs and **Data Summary** show codes such as **1089-101 - Fabrication** (Direct, Material, Labor, Equipment cost types), which was confirmed in this list on Elevated Corridor. **Project Settings → Phase Code Settings** sets whether a code is Unique (one work package and location) or Multiple-Use. See **Field Works → Productivity Logs Screen by Screen**."
           }
         ],
         "procedures": [
@@ -23228,7 +23299,7 @@ const MODULES = [
         "definitions": [
           {
             "term": "Quality And Documents",
-            "definition": "A list of folders (**Folders (1)** on this project: \"Folder 1\"), each with a drag handle, a three-dot menu (**Edit**, **Print**, **Share**, **Delete**) and five counters: **Total Forms**, **Not Ready Forms**, **Ready Forms**, **In Progress Forms** and **Completed Forms**. Search and a **Filter Folders** icon narrow the list. **Create Folder** asks only for a **Name** (then **Submit**)."
+            "definition": "A list of folders (**Folders (1)** on this project: \"Folder 1\"), each with a drag handle, a three-dot menu (**Edit**, **Print**, **Share**, **Delete**) and five counters: **Total Forms**, **Not Ready Forms**, **Ready Forms**, **In Progress Forms** and **Completed Forms**. Search and a **Filter Folders** icon narrow the list. **Create Folder** asks only for a **Name** (then **Submit**). On **Warehouse Construction** there are three folders: **Quality Folder 1** (4 forms, all completed), **Quality Folder 2** and **Test Package** (13 forms: 2 in progress, 11 completed)."
           },
           {
             "term": "Folder Items",
@@ -23252,7 +23323,19 @@ const MODULES = [
           },
           {
             "term": "Quality approval workflow",
-            "definition": "The Quality tab on the test environment shows only **Quality And Documents** and **Uploaded Files**; a **Create Workflow** sub-tab was not visible. Quality approval levels are built with the same **Create Level** dialog used for other workflows (see **Drawings → Create Approval Workflow**). Check with your admin where approval levels are managed in your environment."
+            "definition": "No **Create Workflow** sub-tab exists under Quality on the test site (only **Quality And Documents** and **Uploaded Files**). In **Field Works → Quality**, a Level 2 form shows **Workflow Comments and Attachments** for **Level 1** and **Level 2** and a **Submit For Approval** button, and **Approve Quality Logs** lists what is waiting. Who responds and approves is assigned per work package in **Works → [plant] → People** (**Quality Package Responsible** and **Quality Package Approval**). How these assignments combine with the approval levels on the form was not shown on screen. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
+          },
+          {
+            "term": "Folders are the \"Loop\" in Data Analytics",
+            "definition": "The product calls a quality folder a **Loop** in **Data Analytics & Insights → Quality Progress**. **Project Drill Down → Loop Progress** lists the folders (on Warehouse Construction: **Warehouse | Loop** shows **Test Package 75%**), then the folder's **Commodities**, **Work Packages** (for example **MOORE - QP - 004 100%**, **MOORE - QP - 008 0%**) and **Punch Lists**. The left menu item **Quality And Documents** shows the folders as tiles by status (**Not yet started**, **Started**, **Ready to work**, **In Progress**, **Completed**). On Arena Steel Plant - Phase 1 both are empty (\"Piperack | Loop – No Data\") because no work package is mapped to a folder. Construction Progress and Safety Analytics have the same **Loop Progress** tab. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
+          },
+          {
+            "term": "What the mapped items table shows",
+            "definition": "After **Map Work Packages**, a folder lists its items in a table: **S.No**, **Tree Versions**, the structure levels under your project's names (**Level-1s**, **Level-2s**, **Commodities Type**, **Commodities** on Warehouse Construction), **Work Packages** (for example **MOORE - QP - 008**), **Punchlists** and a print action. Quality Level 1 and Level 2 in Field Works offer only the work packages mapped here."
+          },
+          {
+            "term": "Folder Documents, Photos and Linked Forms (seen with data)",
+            "definition": "**Documents** shows the folder path (for example \"Quality Folder 1/\"), **Create Sub Folder**, and a table **Sub Folders | Last Modified | Added On | Action** (edit, print, delete); examples are **Quality Reference drawings** and **Quality Drawings**. **Photos** has **Add File** and **Image | Added By | Added On | Action** (edit, delete). **Linked Forms** groups forms by type (**RFI**) and says \"No forms are linked to this folder\" when none exist. **Where this goes:** when an inspector opens a quality form in Field Works, the **Hide Tagged Documents** panel shows \"Tagged documents for <commodity>\" from the folder's Documents."
           }
         ],
         "procedures": [
@@ -23267,26 +23350,13 @@ const MODULES = [
             "note": "Create Folder and Map Work Packages dialogs were opened and cancelled, not submitted."
           },
           {
-            "title": "Create a quality approval workflow",
+            "title": "Choose who responds to and approves quality work",
             "steps": [
-              "Go to **Project Setup → Quality → Create Workflow**.",
-              "Click **Create Workflow**, then **Create Level** to add a level to the selected workflow.",
-              "In the pop-up, choose the level type, **All must approve** or **Anyone can approve**, and select the approvers for that level.",
-              "Changing the levels of an existing workflow shows a warning, because it affects all linked forms and documents."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/create-quality-approval-workflow/001.jpg",
-                "caption": "Create Workflow and Create Level, with the level type and approvers",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/create-quality-approval-workflow/002.jpg",
-                "caption": "Warning shown when a workflow's levels are changed",
-                "step": 4
-              }
-            ],
-            "note": "Screens from the Arena guide. The test environment shows no Create Workflow sub-tab under Quality, so confirm the location in your environment."
+              "Open **Project Setup → Works** and click the plant's arrow.",
+              "Open the **People** tab and select **Quality Package Responsible** or **Quality Package Approval**.",
+              "Pick the work package, then tick the **Teams** or **Users** to assign.",
+              "For approval levels that this page does not explain, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
+            ]
           }
         ]
       },
@@ -23296,23 +23366,23 @@ const MODULES = [
         "definitions": [
           {
             "term": "Setup Project Safety Forms",
-            "definition": "For unscheduled, event-based safety forms. **Create Safety Form Category** opens a dialog: **Form Category Name***, then **Add Forms** with **Filter by Activities**, **Select All** and a **Safety Packages** table (**S.No | Activities | Form Name**). On this project the list is empty (\"No Data Available\") and the Activities filter has no options, because no safety forms are mapped to activities. The page instructions say: create the category, fill details and add forms, then add users to each form (use copy to apply the same users to several forms)."
+            "definition": "For unscheduled, event-based safety forms. **Create Safety Form Category** opens a dialog: **Form Category Name***, then **Add Forms** with **Filter by Activities**, **Select All** and a **Safety Packages** table (**S.No | Activities | Form Name**). On this project the list is empty (\"No Data Available\") and the Activities filter has no options, because no safety forms are mapped to activities. The page instructions say: create the category, fill details and add forms, then add users to each form (use copy to apply the same users to several forms). **Seen with data (Warehouse Construction):** the left list shows categories (**Safety form 1** to **Safety Form 4**; three-dot menu **Edit** / **Delete**) and the right table **Safety forms | People Assigned | Actions** lists each form with its people (for example **MOORE - SP - 001**: American Builders Inc., Star-Spangled Builders, Engineering Contractor - 1, System Admin) and **copy** / **delete**. The **Filter by Activities** list offered **General Conditions**. Arena Residential Project and Elevated Corridor also have categories (JSA's, Tool Box Talks, Safety Form 1, Safety, Equipment Check, Environmental Safety Concerns)."
           },
           {
             "term": "Create Workflow (Safety)",
-            "definition": "**Create Approval Workflow** opens \"Create Safety Approval Workflow\" with **Workflow Name***. Then create levels and add users to each level: levels offer **All must approve** or **Any one can approve**, with approvers chosen from the project roster (**People → Roster**)."
+            "definition": "**Create Approval Workflow** opens \"Create Safety Approval Workflow\" with **Workflow Name***. Then create levels and add users to each level: levels offer **All must approve** or **Any one can approve**, with approvers chosen from the project roster (**People → Roster**). **Seen with data:** the workflow **Safety approval** has **Level 1** (Engineering Contractor - 1, System Admin) and **Level 2** (System Admin, American Builders Inc.), both **Any one can approve**; the levels table has **Level | Level Description | Approvers | Workflow Type | SLS configured | Timeline Mandatory | Actions** (edit, delete)."
           },
           {
             "term": "Assign Workflow",
-            "definition": "Attaches an approval workflow to a safety activity and work package. The screen has **Safety Activities** on the left, the **Work Package** list (\"There are no Work Package under respective Activity.\") and **Assign Approval Workflow** / **Clear**. Empty until safety activities exist."
+            "definition": "Attaches an approval workflow to a safety activity and work package. The screen has **Safety Activities** on the left, the **Work Package** list (\"There are no Work Package under respective Activity.\") and **Assign Approval Workflow** / **Clear**. Empty until safety activities exist. **Seen with data:** the **Safety Activities** list (General Conditions, Sitework, Deep Foundations, Site Demo, Concrete, Masonry, Metals, Wood & Plastics - Millwork / Rough Carp, Thermal & Moisture Protection) opens the work packages of the selected activity (for example **MOORE - SP - 001 | Field Supervision**), a workflow drop-down (**Safety approval**), **Save Changes** and **Copy Safety Approval Workflow To**. In Field Works the approval column of a safety form reads **Approval Work Flow: 2/2** when both levels have approved."
           },
           {
             "term": "Setup Safety Calendar",
-            "definition": "For recurring safety forms. **Create Safety Calendar Category** has **Form Category Name***, **Recurrence Type** (**Daily**, **Weekly**, **Custom**), **Start Date**, **End Date**, **Time**, **Remind Before** (minutes, hours, days or weeks) and **Add Forms**. Scheduled forms show on **My Calendar** and in **Field Works → Safety → Safety Calendar**."
+            "definition": "For recurring safety forms. **Create Safety Calendar Category** has **Form Category Name***, **Recurrence Type** (**Daily**, **Weekly**, **Custom**), **Start Date**, **End Date**, **Time**, **Remind Before** (minutes, hours, days or weeks) and **Add Forms**. Scheduled forms show on **My Calendar** and in **Field Works → Safety → Safety Calendar**. **Seen with data:** the category **Safety Calendar** ran daily from 02-19-2024 to 04-19-2024 at 10:00 AM, with the form **Safety** assigned to System Admin."
           },
           {
             "term": "Safety And Documents",
-            "definition": "A folder store for safety files: \"Create new folder to add documents\"; none exist yet. Enter a name and click the plus to create a folder."
+            "definition": "A folder store for safety files: \"Create new folder to add documents\"; none exist yet. Enter a name and click the plus to create a folder. On Warehouse Construction there is a folder **Safety Instructions** with **edit**, **share**, **print** and **delete** actions."
           },
           {
             "term": "Where the safety forms come from",
