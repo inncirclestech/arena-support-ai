@@ -7586,94 +7586,319 @@ const QA_PROJECTSETTINGS = [
 
 const QA_COSTTRACKING = [
   {
+    action: "view",
+    object: "cost tracking",
+    scope: "module",
+    section: "Who sets this up",
+    question: "What is Cost Tracking?",
+    answer: "The company-wide, read-only view of estimated versus actual cost for all projects, grouped under Company Reports: Cost Control Dashboard, Cost by Projects and Cost by Cost Types. Estimates come from Project Setup > Estimate; actual costs from Field Works > Cost.",
+    tags: ["cost tracking","what is cost tracking","estimated vs actual cost","cost tracking module","company reports cost"]
+  },
+  {
+    action: "view",
+    object: "cost lineage",
+    scope: "module",
+    section: "Who sets this up",
+    question: "Where does Cost Tracking get its data?",
+    answer: "Estimated cost: approved estimates in Project Setup > Estimate. Actual cost: Field Works > Tree Version > Cost (Transaction, Change order, Transfer, Field Logs). Cost types, material, equipment and labor codes: Global Data > Cost. Project details: the project record.",
+    tags: ["cost tracking data source","where does cost data come from","cost lineage","cost tracking sources"]
+  },
+  {
+    action: "view",
+    object: "cost tracking setup",
+    scope: "module",
+    section: "Who sets this up",
+    question: "How do I make a project appear in Cost Tracking with numbers?",
+    answer: "Create the cost types and codes in Global Data > Cost; create and approve an estimate in Project Setup > Estimate; set Level of Detail and Estimate Type in Project Settings > Cost Breakdown Structure; record actual costs in Field Works > Cost. Then check the project row in Cost by Projects.",
+    tags: ["set up cost tracking","project not in cost tracking","cost tracking setup","who feeds cost tracking"]
+  },
+  {
+    action: "view",
+    object: "cost project twin",
+    scope: "module",
+    section: "Who sets this up",
+    question: "Is there a per-project version of Cost Tracking?",
+    answer: "Yes. Data Analytics & Insights > Cost has Cost Activity, Cost by Cost Types, Cost by Month, Payments by Month, Cost Analytics and Cost Graphs for one project. Its Cost by Cost Types shows the same rows as the company screen.",
+    tags: ["project cost tracking","cost by cost types project","data analytics cost","cost analytics"]
+  },
+  {
+    action: "view",
+    object: "cost control dashboard",
+    scope: "module",
+    section: "Cost Control Dashboard",
+    question: "What does the Cost Control Dashboard show?",
+    answer: "Five totals (Total Contract Value, Forecasted Value (EAC), Portfolio Profit Margin, Margin Erosion, Over Budget Projects), a Project Performance Overview table (Contract Value, Forecast Cost (EAC), Forecast Margin %, CPI, SPI, Status per project) and charts: Portfolio Breakdown Cost, Change Order Impact, Margin Erosion Trend and Portfolio Earned Value.",
+    tags: ["cost control dashboard","cost dashboard","portfolio performance","contract value dashboard","margin erosion"]
+  },
+  {
+    action: "view",
+    object: "contract value",
+    scope: "module",
+    section: "Cost Control Dashboard",
+    question: "Where does the Contract Value on the dashboard come from?",
+    answer: "It is the Total of the project's approved estimate in Project Setup > Estimate > Setup Estimate (including Unit Rate and contingencies). For Arena Residential Project both are ₹20,67,52,576.08.",
+    tags: ["contract value source","total contract value","dashboard contract value","estimate total contract value"]
+  },
+  {
+    action: "view",
+    object: "dashboard filter",
+    scope: "module",
+    section: "Cost Control Dashboard",
+    question: "How do I limit the dashboard to some projects?",
+    answer: "Use the Projects drop-down at the top of the Cost Control Dashboard; all projects are ticked by default and the tiles, table and charts follow your selection.",
+    tags: ["dashboard projects filter","select projects cost dashboard","portfolio filter"]
+  },
+  {
+    action: "view",
+    object: "over budget status",
+    scope: "module",
+    section: "Cost Control Dashboard",
+    question: "Why does every project show Over Budget while Over Budget Projects is 0?",
+    answer: "On the test site all 115 rows showed Over Budget even with ₹0 values, while the tile showed 0. It reflects missing actual or forecast cost: no forecast (EAC) was recorded, so the indexes were 0. Record estimates and actual cost for the project to see meaningful status.",
+    tags: ["over budget status","all projects over budget","cpi spi zero","forecast eac zero","dashboard status wrong"]
+  },
+  {
+    action: "view",
+    object: "cpi spi",
+    scope: "module",
+    section: "Cost Control Dashboard",
+    question: "What are CPI and SPI on the dashboard?",
+    answer: "CPI is the Cost Performance Index and SPI the Schedule Performance Index, shown per project. On the test site Arena Residential Project showed CPI 0 and SPI 0.96; other projects 0.",
+    tags: ["cpi","spi","cost performance index","schedule performance index","earned value"]
+  },
+  {
+    action: "view",
+    object: "cost by projects",
+    scope: "module",
+    section: "Cost by Projects",
+    question: "What does Cost by Projects show?",
+    answer: "A table of every project with Project Number, Name, Location, Contact, Sub Total, Contingencies Cost, Estimated Cost, Actual Cost and Total Project Cost, with Total Estimate Cost and Total Actual Cost in the header and Table and Graph views.",
+    tags: ["cost by projects","costs by projects","project cost table","total estimate cost","total actual cost"]
+  },
+  {
+    action: "view",
+    object: "total project cost",
+    scope: "module",
+    section: "Cost by Projects",
+    question: "What is Total Project Cost and why is it different from Estimated Cost?",
+    answer: "Total Project Cost is a separate project-level figure (₹12,00,00,000 for Arena Residential Project). It is not the sum of estimate lines, so it does not match Estimated Cost (₹20,61,62,037.33), and it does not feed the header totals.",
+    tags: ["total project cost","project cost vs estimated cost","estimated cost differs"]
+  },
+  {
+    action: "view",
+    object: "estimate totals match",
+    scope: "module",
+    section: "Cost by Projects",
+    question: "Why do the Dashboard and Cost by Projects show different estimate totals?",
+    answer: "The dashboard Contract Value (₹20,67,52,576.08) is the estimate Total including Unit Rate; Cost by Projects and Cost by Cost Types add only Labor, Material and Equipment (₹20,61,62,037.33). The ₹5,90,538.75 difference is exactly the Unit Rate block.",
+    tags: ["totals do not match","estimate total mismatch","unit rate not included","contract value vs estimate"]
+  },
+  {
+    action: "view",
+    object: "cost project columns",
+    scope: "module",
+    section: "Cost by Projects",
+    question: "Where do the project number, location and contact come from?",
+    answer: "From the project record (Projects > Create Project). The cost columns come from the project estimate and cost logs.",
+    tags: ["project location contact cost","project number cost","cost by projects columns source"]
+  },
+  {
+    action: "view",
+    object: "cost by cost types",
+    scope: "module",
+    section: "Cost by Cost Types",
+    question: "What does Cost by Cost Types show?",
+    answer: "Blocks for Labor, Material and Equipment, each listing the project, item name, code, Sub Total, Contingencies Cost, Total Costs and Actual Costs, with block totals. The header shows Total Estimate Cost and Total Actual Cost.",
+    tags: ["cost by cost types","costs by cost types","labor material equipment cost","estimated vs actual by type","how do i see costs broken down by cost type"]
+  },
+  {
+    action: "view",
+    object: "cost type rollup",
+    scope: "module",
+    section: "Cost by Cost Types",
+    question: "How do Labor, Material and Equipment add up to the total?",
+    answer: "On the test site Labor ₹82,70,946.00 + Material ₹9,98,90,891.33 + Equipment ₹9,80,00,200.00 = ₹20,61,62,037.33, the header Total Estimate Cost and the Cost by Projects total.",
+    tags: ["cost types add up","total estimate cost calculation","cost type totals"]
+  },
+  {
+    action: "view",
+    object: "cost item source",
+    scope: "module",
+    section: "Cost by Cost Types",
+    question: "Where do the item names and codes in Cost by Cost Types come from?",
+    answer: "From the lines of the approved estimate, added up per item. The codes are the codes in Global Data > Cost (for example material 0211LS90, labor 6107.07, equipment A-01).",
+    tags: ["cost code source","material code cost tracking","labor code cost tracking","where do cost items come from"]
+  },
+  {
+    action: "view",
+    object: "unit rate cost",
+    scope: "module",
+    section: "Cost by Cost Types",
+    question: "Why is Unit Rate missing from Cost by Cost Types?",
+    answer: "The estimate has a Unit Rate block, but the company Cost by Cost Types and Cost by Projects show only Labor, Material and Equipment. Unit Rate is counted only in the dashboard Contract Value.",
+    tags: ["unit rate missing","sub contractor cost types","cost types shown"]
+  },
+  {
     action: "create",
     object: "cost estimate",
-    scope: "project",
-    section: "Cost Estimate",
+    scope: "module",
+    section: "Where the Estimate Side Comes From",
     question: "How do I create a new cost estimate?",
-    answer: "Go to Project Setup → Cost Estimate, select the Estimate Category, and click \"Create Estimate\".",
-    tags: ["new cost estimate","add estimate","create estimate","cost-estimate"]
-  },
-  {
-    action: "track",
-    object: "material cost",
-    scope: "project",
-    section: "Cost Estimate",
-    question: "How do I record estimated material costs?",
-    answer: "In Cost Estimate, select the Material tab, then use the table's actions: \"Add Material\" to add a new material line from scratch, \"Get Materials from Global Data\" to pull materials from Global Data, or \"Add Custom Columns\" to add a new column. The total material cost is calculated automatically and shown top right.",
-    tags: ["material cost","add material","cost estimate material","get materials from global data"]
-  },
-  {
-    action: "define",
-    object: "get materials from global data",
-    scope: "project",
-    section: "Cost Estimate",
-    question: "What does \"Get Materials from Global Data\" do in Cost Estimate?",
-    answer: "Clicking \"Get Materials from Global Data\" on the Material tab offers two options: \"Keep existing and update with new materials\" (merges) or \"Replace all with Global Data\" (erases existing rows and replaces them with Global Data's materials).",
-    tags: ["get materials","replace materials","global data materials","merge materials"]
-  },
-  {
-    action: "configure",
-    object: "productivity settings",
-    scope: "project",
-    section: "Cost Estimate",
-    question: "How do I change how cost estimates are calculated?",
-    answer: "Click the \"Settings\" button in the top right corner of the Cost Estimate screen to open Productivity Settings, where you choose how estimates are calculated. This setting applies across Material, Labor, Equipment, and other estimate tabs. Note: the Settings button is only visible if your user permissions allow viewing/editing productivity settings.",
-    tags: ["productivity settings","cost estimate settings","calculation settings","estimate configuration"]
-  },
-  {
-    action: "track",
-    object: "labor cost",
-    scope: "project",
-    section: "Cost Estimate",
-    question: "How do I record labor, equipment, sub-contractor, or other expense costs?",
-    answer: "In Cost Estimate, select the Labor, Equipment, Sub-Contractor, or Other Expenses tab — each follows the same process as the Material tab (Add Custom Columns, pull from Global Data, or add a new entry manually).",
-    tags: ["labor cost","equipment cost","sub-contractor cost","other expenses","cost estimate tabs"]
+    answer: "In Project Setup > Estimate open the tree version card, click Create Estimate, enter Name, Description, Approval Workflow and Cost Breakdown Structure, choose a template per cost type and Submit. Then complete Setup CBS and Setup Estimate in the estimate.",
+    tags: ["create cost estimate","new estimate","create estimate","how do i create a new cost estimate"]
   },
   {
     action: "view",
-    object: "cost estimate summary",
-    scope: "project",
-    section: "Estimate Summary",
+    object: "estimate source",
+    scope: "module",
+    section: "Where the Estimate Side Comes From",
+    question: "Where does the estimated cost in Cost Tracking come from?",
+    answer: "From the approved estimate of each project (Project Setup > Estimate). Setup Estimate shows Material, Equipment, Labor, Unit Rate, Sub Total, Contingencies Value and Total; Estimate Summary lists the lines.",
+    tags: ["estimated cost source","where does estimated cost come from","estimate summary","setup estimate"]
+  },
+  {
+    action: "view",
+    object: "estimate summary",
+    scope: "module",
+    section: "Where the Estimate Side Comes From",
     question: "Where can I see a summary of all project costs?",
-    answer: "Go to Cost Estimate - Summary, a view-only page showing all costs documented via the Estimate tab for materials, labor, equipment, sub-contractor, and other expenses.",
-    tags: ["cost summary","estimate summary","view all costs","cost estimate summary"]
+    answer: "Open the estimate in Project Setup > Estimate and go to Estimate Summary: tabs Material, Equipment, Labor, Unit Rate and All; All groups lines by phase code. For company totals use Cost by Projects.",
+    tags: ["summary of project costs","estimate summary","where can i see a summary of all project costs"]
   },
   {
     action: "view",
-    object: "cost by cost type",
-    scope: "project",
-    section: "Cost Tracking by Type",
-    question: "How do I see costs broken down by cost type?",
-    answer: "Go to Cost Estimate - Cost Tracking (By Cost Types). This page lists the estimated and actual costs for each cost type.",
-    tags: ["cost by type","cost tracking by cost types","cost type breakdown","actual vs estimated cost"]
-  },
-  {
-    action: "configure",
-    object: "cost estimate workflow",
-    scope: "project",
-    section: "Approval Workflow",
+    object: "estimate approval",
+    scope: "module",
+    section: "Where the Estimate Side Comes From",
     question: "How do I set up an approval workflow for cost estimates?",
-    answer: "Navigate to Project Setup → Cost Estimate → Workflow. Select the feature the workflow applies to (Timesheets or Quantity Tracksheets), then click \"Create Level\" to add an approval level. Choose the level type (\"All must approve\" or \"Anyone can approve\") and select the approvers for that level.",
-    tags: ["cost estimate workflow","approval workflow","create level","timesheet approval","quantity tracksheet approval"]
+    answer: "Open Project Settings > Cost Breakdown Structure > Approval WorkFlow, click Create Approval WorkFlow, then Create Level, choose All must approve or Any one can approve and pick approvers; repeat for more levels.",
+    tags: ["cost estimate approval workflow","approval workflow estimate","create level estimate","how do i set up an approval workflow for cost estimates"]
   },
   {
-    action: "define",
-    object: "approval level type",
-    scope: "project",
-    section: "Approval Workflow",
-    question: "What is the difference between \"All must approve\" and \"Anyone can approve\" in Cost Estimate workflows?",
-    answer: "\"All must approve\" requires every approver assigned to that workflow level to approve before it advances; \"Anyone can approve\" only needs one of the assigned approvers to approve.",
-    tags: ["all must approve","anyone can approve","approval level","workflow level type"]
+    action: "view",
+    object: "approval types",
+    scope: "module",
+    section: "Where the Estimate Side Comes From",
+    question: "What is the difference between \"All must approve\" and \"Anyone can approve\"?",
+    answer: "All must approve needs every named approver on that level to approve; Any one can approve needs only one of them. The test project's estimate workflow has one level with All must approve (System Admin).",
+    tags: ["all must approve","anyone can approve","any one can approve","approval type difference"]
   },
   {
-    action: "edit",
-    object: "cost estimate workflow",
-    scope: "project",
-    section: "Approval Workflow",
-    question: "What happens if I change an existing cost estimate approval workflow?",
-    answer: "Modifying the levels of an existing workflow triggers a warning, because changes affect all forms or documents already linked to that workflow.",
-    tags: ["edit workflow","workflow warning","modify approval levels","linked documents"]
+    action: "view",
+    object: "cbs settings",
+    scope: "module",
+    section: "Where the Estimate Side Comes From",
+    question: "What do the Cost Breakdown Structure settings do?",
+    answer: "In Project Settings > Cost Breakdown Structure: CBS (how estimate lines are structured, Entity down to Work Package and Phase Code), Approval WorkFlow, Level of Detail (Phase Code or Phase Code - Cost Code) and Estimate Type (Lump Sum or Time & Material).",
+    tags: ["cost breakdown structure","level of detail","estimate type","lump sum time and material","cbs settings"]
+  },
+  {
+    action: "view",
+    object: "estimate lists",
+    scope: "module",
+    section: "Where the Estimate Side Comes From",
+    question: "Where do the cost types and templates in Create Estimate come from?",
+    answer: "Cost types and item codes come from Global Data > Cost; the template drop-downs are the Global Data cost templates. The approval workflow is the one set in Project Settings.",
+    tags: ["create estimate templates source","cost types source","global data cost estimate"]
+  },
+  {
+    action: "view",
+    object: "actual cost",
+    scope: "module",
+    section: "Where Actual Costs Come From",
+    question: "Where do actual costs come from?",
+    answer: "From the cost logs in Field Works > Tree Version > Cost: Transaction (purchase orders and other expenses), Change order, Transfer and Field Logs (Material, Machinery, Manpower, Sub Contractor). They need an active, approved estimate for the tree version.",
+    tags: ["where do actual costs come from","actual cost source","actual cost tracking","field works cost","cost transaction logs"]
+  },
+  {
+    action: "create",
+    object: "cost transaction",
+    scope: "module",
+    section: "Where Actual Costs Come From",
+    question: "How do I record an actual cost?",
+    answer: "In Field Works open the tree version, the Cost tab, Transaction, and click Create. Pick the Phase Code, enter Cost Code, Actual Cost, Committed Cost and Cost Type, then Save As Draft or Submit.",
+    tags: ["record actual cost","create cost transaction","add cost log","transaction log cost","committed cost"]
+  },
+  {
+    action: "view",
+    object: "transaction phase code",
+    scope: "module",
+    section: "Where Actual Costs Come From",
+    question: "Why is my phase code missing in a cost transaction?",
+    answer: "The Phase Code list shows only the phase codes used in the approved estimate of that tree version (9 on the test tree). For trees without an approved estimate the screen says \"No active and approved Estimate found.\"",
+    tags: ["phase code missing cost","no active and approved estimate","transaction phase code list"]
+  },
+  {
+    action: "view",
+    object: "cost transfer",
+    scope: "module",
+    section: "Where Actual Costs Come From",
+    question: "Why does Transfer say the level of detail is not set?",
+    answer: "Transfer moves budget between cost or phase codes and needs Project Settings > Cost Breakdown Structure > Level of Detail (Phase Code or Phase Code - Cost Code) to be chosen first.",
+    tags: ["level of detail not set","cost transfer","transfer budget"]
+  },
+  {
+    action: "view",
+    object: "procurement cost",
+    scope: "module",
+    section: "Where Actual Costs Come From",
+    question: "Do purchase orders and invoices count as actual cost?",
+    answer: "Not automatically on the test site: Procurement had 34 purchase orders and 46 invoices, but Cost Tracking actuals were only ₹147. Actual cost counts what is recorded and approved as cost logs in Field Works > Cost.",
+    tags: ["purchase orders actual cost","invoices actual cost","procurement cost tracking","timesheets cost tracking","equipment cost tracking"]
+  },
+  {
+    action: "view",
+    object: "zero actual",
+    scope: "module",
+    section: "Where Actual Costs Come From",
+    question: "Why is a project's actual cost zero?",
+    answer: "No approved cost log exists for it in Field Works > Cost (Transaction, Change order, Transfer, Field Logs), or its tree version has no approved estimate. On the test site only Arena Residential Project had any actual cost (₹147 of material).",
+    tags: ["why is actual cost zero","actual cost zero","no actual cost","actual costs missing"]
+  },
+  {
+    action: "view",
+    object: "phase code rollup",
+    scope: "module",
+    section: "How Phase Codes and Cost Types Roll Up",
+    question: "How do phase codes and cost types roll up?",
+    answer: "Each estimate line has a phase code and cost type. Estimate Summary > All groups lines by phase code; Cost by Cost Types adds lines per item and block (Labor, Material, Equipment); Cost by Projects and the dashboard add the blocks per project and company.",
+    tags: ["phase code roll up","cost type roll up","how phase codes roll up","phase code cost tracking"]
+  },
+  {
+    action: "view",
+    object: "cost types list",
+    scope: "module",
+    section: "How Phase Codes and Cost Types Roll Up",
+    question: "What cost types exist?",
+    answer: "Material, Equipment, Labor, Unit Rate, Sub Contractor, BOQ's, Freight Charges and Fuel & Gas (Global Data > Cost). Cost by Cost Types shows Labor, Material and Equipment blocks.",
+    tags: ["cost types","list of cost types","cost type options"]
+  },
+  {
+    action: "view",
+    object: "cost analytics phase",
+    scope: "module",
+    section: "How Phase Codes and Cost Types Roll Up",
+    question: "Where can I see cost by phase code?",
+    answer: "In Data Analytics & Insights > Cost > Cost Analytics (Inputs, Summary, Control Budget) per project and tree version: phase code with actual, committed, variance, CPI, SPI, EAC and ETC. These were empty on the test trees.",
+    tags: ["cost by phase code","cost analytics","control budget","eac etc"]
+  },
+  {
+    action: "view",
+    object: "zero estimate",
+    scope: "module",
+    section: "Checking the Numbers and Why a Cost Shows Zero",
+    question: "Why is a project's estimated cost zero?",
+    answer: "The project has no estimate in Project Setup > Estimate, the estimate is not approved, or its lines have zero quantity or rate. On the test site 114 of 115 projects had none; only Arena Residential Project (Tower Spire) had amounts.",
+    tags: ["why is estimate zero","estimated cost zero","no estimate cost tracking","project missing from cost tracking"]
+  },
+  {
+    action: "view",
+    object: "verify cost numbers",
+    scope: "module",
+    section: "Checking the Numbers and Why a Cost Shows Zero",
+    question: "How can I check that Cost Tracking numbers are right?",
+    answer: "Compare screens: Cost by Projects total = sum of Cost by Cost Types blocks; dashboard Contract Value = estimate Total in Setup Estimate; Unit Rate explains the difference. Then compare lines with Estimate Summary > All.",
+    tags: ["verify cost tracking","cost numbers do not match","reconcile cost tracking","check cost totals"]
   }
 ];
 
@@ -25696,156 +25921,193 @@ const MODULES = [
     "qaItems": QA_COSTTRACKING,
     "narrative": [
       {
-        "heading": "Admin Role",
-        "intro": "<p>Before a project team can build out a reliable cost estimate, an admin (or a user with the right permissions) most likely needs to review Productivity Settings first, since this single setting controls the calculation logic behind estimates across all five cost-type tabs at once — getting it right up front avoids having to re-derive totals later. Note that the Settings button for this only appears for users whose permissions include viewing or editing productivity settings, so this is likely a decision an admin makes deliberately about who can touch it, rather than something every user sees.</p><p>Separately, an admin likely needs to configure the Cost Estimate approval workflow before Timesheets or Quantity Tracksheets tied to the estimate can be signed off — this is built as one or more levels, each requiring either unanimous or single approval. Because a workflow becomes attached to real submitted documents once created, Arena treats changes to an existing workflow's levels as disruptive, warning before applying them — worth knowing so an admin doesn't casually tweak a live workflow mid-project.</p>",
+        "heading": "Who sets this up",
+        "intro": "<p>Cost Tracking is read-only and used by executives, finance and project controls to compare estimated and actual cost. The numbers come from <strong>project estimates</strong> and <strong>field cost logs</strong>, so the people who feed it are the project teams.</p><p>Open it from the <strong>Cost Tracking</strong> tile on <strong>Home</strong>. There are no settings inside the module; the settings that change its numbers are in <strong>Project Settings</strong> and <strong>Global Data</strong>.</p>",
         "definitions": [
           {
-            "term": "Productivity Settings",
-            "definition": "A configuration panel opened via the Settings button in the top right of the Cost Estimate screen, controlling how cost estimates are calculated across Material, Labor, Equipment, and the other tabs. Visible only to users whose permissions allow viewing or editing productivity settings."
+            "term": "Who does what",
+            "definition": "**Super Admin / Module Admin** maintains cost types, material, equipment and labor codes and phase codes in **Global Data > Cost**. **PM / Project Controls** creates and gets the project estimate approved in **Project Setup > Estimate** and sets **Project Settings > Cost Breakdown Structure**. **Field Users** record actual cost in **Field Works > Cost**; **Approvers** approve those logs. **Executives** read Cost Tracking."
           },
           {
-            "term": "Cost Estimate Workflow",
-            "definition": "An approval workflow, configured under Project Setup → Cost Estimate → Workflow, that governs sign-off for Timesheets or Quantity Tracksheets tied to the project's cost estimate."
+            "term": "Where the numbers come from, in one line",
+            "definition": "Estimated cost = approved estimate lines of each project (Project Setup > Estimate). Actual cost = logs in Field Works > Cost (Transaction, Change order, Transfer, Field Logs). Cost types and codes = Global Data > Cost."
           },
           {
-            "term": "All must approve / Anyone can approve",
-            "definition": "The two workflow level types: 'All must approve' requires every assigned approver at that level to sign off, while 'Anyone can approve' requires only one."
+            "term": "Project-level twin",
+            "definition": "Each project also has the same cost screens in **Data Analytics & Insights > Cost** (Cost Activity, Cost by Cost Types, Cost by Month, Payments by Month, Cost Analytics, Cost Graphs). The company **Cost by Cost Types** shows the same rows as the project one."
           }
         ],
         "procedures": [
           {
-            "title": "Change how cost estimates are calculated",
+            "title": "Make a project show up in Cost Tracking with real numbers",
             "steps": [
-              "Click the <strong>Settings</strong> button in the top right corner of the Cost Estimate screen to open <strong>Productivity Settings</strong>.",
-              "Choose how estimates should be calculated. This setting applies across the Material, Labor, Equipment, and other estimate tabs at once."
-            ],
-            "note": "The Settings button is only visible if your user permissions allow viewing or editing productivity settings."
-          },
-          {
-            "title": "Set up an approval workflow for cost estimates",
-            "steps": [
-              "Go to <strong>Project Setup → Cost Estimate → Workflow</strong>.",
-              "Select the feature the workflow applies to: <strong>Timesheets</strong> or <strong>Quantity Tracksheets</strong>.",
-              "Click <strong>Create Level</strong> to add an approval level.",
-              "Choose the level type — <strong>All must approve</strong> or <strong>Anyone can approve</strong> — and select the approvers for that level.",
-              "Repeat to add additional levels as needed."
-            ],
-            "note": "Modifying the levels of an existing workflow triggers a warning, because the change affects all forms or documents already linked to that workflow — review carefully before confirming an edit to a live workflow."
+              "In **Global Data > Cost** make sure the cost types and the material, equipment and labor codes exist.",
+              "In **Project Setup > Estimate** open a tree version, click **Create Estimate** and fill the estimate lines.",
+              "Get the estimate approved (the estimate shows a level count such as **1/1** and **Approved**).",
+              "Open **Project Settings > Cost Breakdown Structure** and set **Level of Detail** and **Estimate Type**.",
+              "Record actual cost in **Field Works > Tree Version > Cost** (Transaction, Change order, Transfer or Field Logs).",
+              "Open **Cost Tracking** and check the project row."
+            ]
           }
         ]
       },
       {
-        "heading": "Cost Estimate",
-        "intro": "<p>The Cost Estimate screen is where a project's anticipated spending gets built up from the ground, category by category, before any work begins. Rather than asking you to enter one lump-sum budget, Arena breaks the estimate into the five cost types that make up virtually any construction budget — Material, Labor, Equipment, Sub-Contractor, and Other Expenses — each with its own tab and its own line-item table. This structure means your estimate isn't just a number, it's a living breakdown you can drill into, adjust, and later compare against actuals type by type.</p><p>Every one of the five tabs works the same way, which keeps the learning curve flat regardless of which cost type you're populating: you can add a line item from scratch, pull existing entries in from Global Data (Arena's shared catalog of materials, labor rates, equipment, and so on), or extend the table itself with custom columns to capture information specific to your project. The consistency across tabs also means that once your team learns how to build out the Material tab, they already know how to build out Labor, Equipment, Sub-Contractor, and Other Expenses.</p><p>Before you start entering numbers, it's worth checking the Productivity Settings, reachable via the Settings button in the top right of the screen. This single setting controls the calculation logic behind estimates across all five tabs at once, so getting it right first avoids having to re-derive totals after the fact. Note that this Settings button only appears for users whose permissions include viewing or editing productivity settings — if you don't see it, your estimate will still use whatever productivity configuration is already in place, you just won't be able to change it.</p>",
+        "heading": "Cost Control Dashboard",
+        "intro": "<p>The <strong>Cost Control Dashboard</strong> is the company-wide health check, used by executives to see which projects are on budget. It shows five totals, a project table and charts for all projects at once.</p><p>A <strong>Projects</strong> drop-down at the top lets you pick which projects to include (all 115 are ticked by default).</p>",
         "definitions": [
           {
-            "term": "Cost Estimate",
-            "definition": "The project-scope screen (under Project Setup) where anticipated costs are built up across Material, Labor, Equipment, Sub-Contractor, and Other Expenses tabs."
+            "term": "Total tiles",
+            "definition": "**Total Contract Value**, **Forecasted Value (EAC)**, **Portfolio Profit Margin**, **Margin Erosion** and **Over Budget Projects**. On the test site Total Contract Value is ₹20,67,52,576.08 and Forecasted Value is 0."
           },
           {
-            "term": "Estimate Category",
-            "definition": "The classification chosen when first creating a cost estimate, which frames how the estimate is organized."
+            "term": "Project Performance Overview",
+            "definition": "A table with **Project Name**, **Contract Value**, **Forecast Cost (EAC)**, **Forecast Margin %**, **CPI**, **SPI** and **Status**, one row per project. **CPI** and **SPI** are the cost and schedule performance indexes."
           },
           {
-            "term": "Get Materials from Global Data",
-            "definition": "An action on the Material tab's table that pulls existing material records from Arena's shared Global Data catalog into the project's estimate, offering a choice between \"Keep existing and update with new materials\" (which merges incoming records with what's already there) and \"Replace all with Global Data\" (which erases the current rows and replaces them entirely with Global Data's materials)."
+            "term": "Charts",
+            "definition": "**Portfolio Breakdown Cost**, **Change Order Impact**, **Margin Erosion Trend** and **Portfolio Earned Value**. They are drawn as charts and follow the selected projects."
           },
           {
-            "term": "Add Custom Columns",
-            "definition": "A table action, available on every cost-type tab, for adding a new column to capture project-specific data beyond the tab's default fields."
+            "term": "Where this data comes from",
+            "definition": "Contract Value is the **Total** of the project's approved estimate (for Arena Residential Project the estimate Total of ₹20,67,52,576.08 equals the Contract Value). Only projects that have an approved estimate show a value; the other 114 projects show ₹0. The **Change Order Impact** chart is named after the change orders recorded in **Field Works > Cost > Change order** (there were none to chart on the test site)."
           },
           {
-            "term": "Productivity Settings",
-            "definition": "A configuration panel opened via the Settings button in the top right of the Cost Estimate screen, controlling how cost estimates are calculated across Material, Labor, Equipment, and the other tabs. Visible only to users whose permissions allow viewing or editing productivity settings."
+            "term": "What looked odd on the test site",
+            "definition": "Every row showed the status **Over Budget**, even rows with ₹0, while the tile **Over Budget Projects** showed 0. Forecast Cost (EAC) was 0 for Arena Residential Project, so its Forecast Margin showed 100 and its CPI 0 (SPI 0.96). Treat these as signs that no actual or forecast cost has been recorded yet."
           }
         ],
         "procedures": [
           {
-            "title": "Create a new cost estimate",
+            "title": "Read the dashboard",
             "steps": [
-              "Go to <strong>Project Setup → Cost Estimate</strong>.",
-              "Select the <strong>Estimate Category</strong>.",
-              "Click <strong>Create Estimate</strong>."
+              "Open **Cost Tracking**; the dashboard opens first.",
+              "Use the **Projects** drop-down to include or exclude projects.",
+              "Read the five tiles, then scan **Project Performance Overview** for projects with a low CPI or SPI.",
+              "For the estimate and actual detail, open **Cost by Projects** or **Cost by Cost Types**."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Cost by Projects",
+        "intro": "<p><strong>Cost by Projects</strong> lists the estimated and actual cost of each project in one table, used by finance to compare projects. A <strong>Table View</strong> and a <strong>Graph View</strong> button switch the display.</p><p>The header shows <strong>Total Estimate Cost</strong> and <strong>Total Actual Cost</strong> for all projects.</p>",
+        "definitions": [
+          {
+            "term": "Columns",
+            "definition": "**Project Number**, **Project Name**, **Project Location**, **Project Contact**, then under **Estimated Costs** **Sub Total**, **Contingencies Cost** and **Estimated Cost**, then **Actual Cost** and **Total Project Cost**. There are 115 rows, one per company project."
+          },
+          {
+            "term": "Header totals",
+            "definition": "**Total Estimate Cost** is the sum of the **Estimated Cost** column and **Total Actual Cost** the sum of **Actual Cost** (₹20,61,62,037.33 and ₹147.00 on the test site; both come from Arena Residential Project only)."
+          },
+          {
+            "term": "Total Project Cost",
+            "definition": "A different figure from the estimate: for example ₹12,00,00,000 for Arena Residential Project. It is not the sum of estimate lines and does not feed the header totals; where this figure is entered was not confirmed."
+          },
+          {
+            "term": "Where this data comes from",
+            "definition": "Project Number, Name, Location and Contact come from the project record (Projects > Create Project). Estimated Cost is the approved estimate; Actual Cost is the logs in Field Works > Cost. Rows cannot be clicked to drill down."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Compare projects",
+            "steps": [
+              "Open **Cost Tracking > Cost by Projects**.",
+              "Read **Estimated Cost** and **Actual Cost** per row, and the totals in the header.",
+              "Click **Graph View** for charts, **Table View** to return."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Cost by Cost Types",
+        "intro": "<p><strong>Cost by Cost Types</strong> breaks estimated and actual cost into <strong>Labor</strong>, <strong>Material</strong> and <strong>Equipment</strong> for every project, used by project controls to see which cost item drives a variance. Each block lists items with their code and a total.</p><p>The header shows the same <strong>Total Estimate Cost</strong> and <strong>Total Actual Cost</strong> as Cost by Projects. A <strong>Table View</strong> and a <strong>Graph View</strong> button switch the display.</p>",
+        "definitions": [
+          {
+            "term": "Columns",
+            "definition": "**Project**, the item name (**Labor Name**, **Material Name**, **Equipment Name**), **Code**, then under **Estimated Costs** **Sub Total**, **Contingencies Cost**, **Total Costs**, and **Actual Costs**. Each block ends with **Total <type> Estimate Cost** and **Total <type> Actual Cost**."
+          },
+          {
+            "term": "Roll-up that was verified",
+            "definition": "Labor ₹82,70,946.00 + Material ₹9,98,90,891.33 + Equipment ₹9,80,00,200.00 = ₹20,61,62,037.33, which is the header Total Estimate Cost and the Cost by Projects total. Actual cost of ₹147.00 is all Material."
+          },
+          {
+            "term": "Unit Rate is not listed",
+            "definition": "The estimate also has a **Unit Rate** block (₹5,86,645.00 plus ₹3,893.75 contingency). It is not shown here, which is why this total is ₹5,90,538.75 lower than the dashboard Contract Value."
+          },
+          {
+            "term": "Where this data comes from",
+            "definition": "Item rows are the lines of the approved estimate, added up per item across phase codes. Codes such as 0211LS90 (material) and 6107.07 (labor) are the codes in **Global Data > Cost > Material / Labor**; equipment codes (A-01) are Global Data equipment. Items with the same code but different lines are merged into one row."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "See cost by cost type",
+            "steps": [
+              "Open **Cost Tracking > Cost by Cost Types**.",
+              "Find the **Labor**, **Material** or **Equipment** block and read estimated against actual.",
+              "Compare the block totals with the header totals."
             ],
+            "note": "The same view for one project is in Data Analytics & Insights > Cost > Cost by Cost Types.",
             "images": [
               {
-                "src": "assets/notion/cost-estimate/001.jpg",
-                "caption": "Create Estimate, to start a new cost estimate",
-                "step": 3
+                "src": "assets/notion/cost-estimate-cost-tracking-by-cost-types/001.jpg",
+                "caption": "Cost by Cost Types: estimated and actual costs for each cost type"
               }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Where the Estimate Side Comes From",
+        "intro": "<p>The estimated cost on every screen is the <strong>approved estimate</strong> of each project, built by the PM in <strong>Project Setup > Estimate</strong>. If a project shows ₹0 estimate in Cost Tracking, it has no approved estimate lines.</p><p>An estimate is created per tree version, so a project can have several estimates; only those with amounts add to the totals.</p>",
+        "definitions": [
+          {
+            "term": "Estimate screens",
+            "definition": "**Project Setup > Estimate** has **Estimate**, **Resource Planning** and **Rate Card Template** sub-tabs. **Estimate** shows a card per tree version; open one and click **Create Estimate** (**Name**, **Description**, **Approval Workflow**, **Cost Breakdown Structure** and one template per cost type from Global Data). Each estimate then has tabs **Setup CBS**, **Setup Estimate**, **Schedule Cost** and **Estimate Summary**."
+          },
+          {
+            "term": "Setup Estimate",
+            "definition": "Shows the estimate with its workflow badge (for example **1/1 Approved**) and a row per level with **Material**, **Equipment**, **Labor**, **Unit Rate**, **Sub Total**, **Contingencies Value** and **Total**, plus **Estimate Total**, **Misc Cost** and **Contingey for misc**. For Arena Residential Project the Total ₹20,67,52,576.08 is the dashboard Contract Value."
+          },
+          {
+            "term": "Estimate Summary",
+            "definition": "Tabs **Material**, **Equipment**, **Labor**, **Unit Rate** and **All**. The material view lists each line with **Quantity**, **Rate/Unit**, **UOM**, **Sub Total**, **Contingencies Value** and **Net Total**; **All** groups the lines by **Phase Code**. These lines are what Cost by Cost Types adds up (for example quantity 345 at ₹76,543 = ₹2,64,07,335, the material row 0211LS90#1)."
+          },
+          {
+            "term": "Where the estimate lists come from",
+            "definition": "Cost types (Material, Equipment, Labor, Unit Rate, Sub Contractor, BOQ's, Freight Charges, Fuel & Gas) and the item codes come from **Global Data > Cost**. The template drop-downs in Create Estimate are the Global Data cost templates. The approval workflow is chosen in **Project Settings > Cost Breakdown Structure > Approval WorkFlow** (the form is Cost Estimate)."
+          },
+          {
+            "term": "Settings that change the estimate",
+            "definition": "**Project Settings > Cost Breakdown Structure** has **CBS** (how the estimate is structured, from Entity down to Work Package and Phase Code), **Approval WorkFlow**, **Level of Detail** (Phase Code or Phase Code - Cost Code) and **Estimate Type** (Lump Sum or Time & Material). On the test project Estimate Type was Lump Sum and Level of Detail was not set."
+          },
+          {
+            "term": "Approval workflow levels",
+            "definition": "A workflow has levels (**Create Level**), each **All must approve** or **Any one can approve** with named approvers. On the test project the workflow \"w1\" has one level, approved by System Admin, with All must approve."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Create a cost estimate for a tree version",
+            "steps": [
+              "Open **Project Setup > Estimate** and click the tree version card.",
+              "Click **Create Estimate** and enter the **Name**, **Description**, **Approval Workflow** and **Cost Breakdown Structure**.",
+              "Choose a template for each cost type you need (Material, Equipment, Labor, Unit Rate and others), then **Submit**.",
+              "Open the estimate and complete **Setup CBS** and **Setup Estimate**.",
+              "Get it approved through its approval workflow; cost logs for the tree version need an approved estimate."
             ]
           },
           {
-            "title": "Record estimated material costs",
+            "title": "Set up an approval workflow for cost estimates",
             "steps": [
-              "In <strong>Cost Estimate</strong>, select the <strong>Material</strong> tab.",
-              "Use <strong>Add Material</strong> to add a new material line from scratch.",
-              "Alternatively, use <strong>Get Materials from Global Data</strong> to pull materials in from Global Data — choosing either <strong>Keep existing and update with new materials</strong> to merge, or <strong>Replace all with Global Data</strong> to erase existing rows and replace them entirely.",
-              "Use <strong>Add Custom Columns</strong> to capture any project-specific fields the default table doesn't cover.",
-              "The total material cost recalculates automatically and displays in the top right of the table."
+              "Open **Project Settings > Cost Breakdown Structure > Approval WorkFlow**.",
+              "Click **Create Approval WorkFlow** and name it.",
+              "Click **Create Level**, choose **All must approve** or **Any one can approve**, and pick the approvers.",
+              "Repeat for further levels."
             ],
-            "note": "\"Replace all with Global Data\" is destructive to whatever material rows already exist in the estimate — use \"Keep existing and update with new materials\" if you want to preserve manual entries.",
-            "images": [
-              {
-                "src": "assets/notion/cost-estimates/001.jpg",
-                "caption": "Cost Estimate with the Material tab selected",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/cost-estimates/004.jpg",
-                "caption": "Add Material, to add a new material from scratch",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/cost-estimates/003.jpg",
-                "caption": "Get Materials from Global Data: keep existing and update, or replace all",
-                "step": 3
-              }
-            ]
-          },
-          {
-            "title": "Record labor, equipment, sub-contractor, or other expense costs",
-            "steps": [
-              "In <strong>Cost Estimate</strong>, select the <strong>Labor</strong>, <strong>Equipment</strong>, <strong>Sub-Contractor</strong>, or <strong>Other Expenses</strong> tab as needed.",
-              "Each tab follows the same process as Material: use <strong>Add Custom Columns</strong>, pull entries from <strong>Global Data</strong>, or add a new line manually."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/cost-estimate-estimate/002.jpg",
-                "caption": "The Labor tab: choose a template, then add labor or get it from Global Data",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/cost-estimate-estimate/003.jpg",
-                "caption": "The Equipment tab: choose a template, then add equipment or get it from Global Data",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/cost-estimate-estimate/004.jpg",
-                "caption": "The Sub Contractor tab: add a subcontractor or get them from Global Data",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/cost-estimate-estimate/005.jpg",
-                "caption": "The Other Expenses tab: add expenses or get them from Global Data",
-                "step": 2
-              }
-            ]
-          },
-          {
-            "title": "Change how cost estimates are calculated",
-            "steps": [
-              "Click the <strong>Settings</strong> button in the top right corner of the Cost Estimate screen to open <strong>Productivity Settings</strong>.",
-              "Choose how estimates should be calculated. This setting applies across the Material, Labor, Equipment, and other estimate tabs at once."
-            ],
-            "note": "The Settings button is only visible if your user permissions allow viewing or editing productivity settings.",
-            "images": [
-              {
-                "src": "assets/notion/cost-estimates/002.jpg",
-                "caption": "The Settings button, which opens Productivity Settings",
-                "step": 1
-              }
-            ]
+            "note": "The workflow is for the cost estimate. Timesheet and quantity approvals are set in Time Management."
           }
         ],
         "images": [
@@ -25856,102 +26118,121 @@ const MODULES = [
           {
             "src": "assets/notion/cost-estimate-map-scope-items/001.jpg",
             "caption": "Map Scope Items: choosing the version, levels and commodities, then Submit"
-          }
-        ]
-      },
-      {
-        "heading": "Approval Workflow",
-        "intro": "<p>Cost estimates don't operate in isolation from the timesheets and quantity tracksheets that record actual work performed — those records typically need their own sign-off before they can count toward actual costs, and that sign-off is governed by an approval workflow you configure specifically for Cost Estimate. As with other approval workflows in Arena, you build this out as one or more levels, each requiring either unanimous or single approval from its assigned approvers, which lets you scale the rigor of sign-off to match how much scrutiny a given project needs.</p><p>Because a workflow, once created, becomes attached to real submitted forms and documents, changing its structure later is treated as a meaningful, disruptive action rather than a routine edit — Arena will warn you before you modify an existing workflow's levels, specifically because that change ripples out to everything already linked to it. This is worth keeping in mind if you're tempted to tweak a workflow \"just slightly\" mid-project: even a small change can alter how already-submitted timesheets or tracksheets are (or were) approved.</p>",
-        "definitions": [
-          {
-            "term": "Cost Estimate Workflow",
-            "definition": "An approval workflow, configured under Project Setup → Cost Estimate → Workflow, that governs sign-off for Timesheets or Quantity Tracksheets tied to the project's cost estimate."
           },
           {
-            "term": "All must approve",
-            "definition": "A workflow level type requiring every assigned approver at that level to approve before the workflow advances."
+            "src": "assets/notion/cost-estimate/001.jpg",
+            "caption": "Create Estimate, to start a new cost estimate"
           },
           {
-            "term": "Anyone can approve",
-            "definition": "A workflow level type requiring only one of the assigned approvers to approve for the workflow to advance."
-          }
-        ],
-        "procedures": [
+            "src": "assets/notion/cost-estimates/001.jpg",
+            "caption": "Cost Estimate with the Material tab selected"
+          },
           {
-            "title": "Set up an approval workflow for cost estimates",
-            "steps": [
-              "Go to <strong>Project Setup → Cost Estimate → Workflow</strong>.",
-              "Select the feature the workflow applies to: <strong>Timesheets</strong> or <strong>Quantity Tracksheets</strong>.",
-              "Click <strong>Create Level</strong> to add an approval level.",
-              "Choose the level type — <strong>All must approve</strong> or <strong>Anyone can approve</strong> — and select the approvers for that level.",
-              "Repeat to add additional levels as needed."
-            ],
-            "note": "Modifying the levels of an existing workflow triggers a warning, because the change affects all forms or documents already linked to that workflow — review carefully before confirming an edit to a live workflow.",
-            "images": [
-              {
-                "src": "assets/notion/cost-estimate-workflows/001.jpg",
-                "caption": "Workflow: choosing the feature, then Create Level with its type and approvers",
-                "step": 4
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "heading": "Cost Tracking by Type",
-        "intro": "<p>Where Estimate Summary gives you the rolled-up total, Cost Tracking (By Cost Types) gives you the comparison that actually drives decisions during construction: estimated cost versus actual cost, broken out by cost type. This is the page you'd check to answer a question like \"are we overrunning on labor even though materials are tracking to plan?\" — because it keeps each cost type's estimate-versus-actual comparison separate rather than blending everything into one number, it's far easier to spot exactly where a budget is drifting and act on it before the gap widens.</p>",
-        "definitions": [
+            "src": "assets/notion/cost-estimates/004.jpg",
+            "caption": "Add Material, to add a new material from scratch"
+          },
           {
-            "term": "Cost Tracking (By Cost Types)",
-            "definition": "A page listing the estimated and actual costs for each cost type (Material, Labor, Equipment, Sub-Contractor, Other Expenses), allowing side-by-side comparison to spot overruns or savings by category."
-          }
-        ],
-        "procedures": [
+            "src": "assets/notion/cost-estimates/003.jpg",
+            "caption": "Get Materials from Global Data: keep existing and update, or replace all"
+          },
           {
-            "title": "See costs broken down by cost type",
-            "steps": [
-              "Go to <strong>Cost Estimate → Cost Tracking (By Cost Types)</strong>.",
-              "Review the estimated and actual costs listed for each cost type to identify where spending is tracking to plan or diverging from it."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/cost-estimate-cost-tracking-by-cost-types/001.jpg",
-                "caption": "Cost by Cost Types: estimated and actual costs for each cost type",
-                "step": 1
-              }
-            ]
-          }
-        ],
-        "images": [
+            "src": "assets/notion/cost-estimate-estimate/002.jpg",
+            "caption": "The Labor tab: choose a template, then add labor or get it from Global Data"
+          },
           {
-            "src": "assets/notion/cost-estimate-cost-tracking-by-phase-codes/001.jpg",
-            "caption": "Cost by Phase Codes: estimated and actual costs for each phase code"
+            "src": "assets/notion/cost-estimate-estimate/003.jpg",
+            "caption": "The Equipment tab: choose a template, then add equipment or get it from Global Data"
+          },
+          {
+            "src": "assets/notion/cost-estimate-estimate/004.jpg",
+            "caption": "The Sub Contractor tab: add a subcontractor or get them from Global Data"
+          },
+          {
+            "src": "assets/notion/cost-estimate-estimate/005.jpg",
+            "caption": "The Other Expenses tab: add expenses or get them from Global Data"
+          },
+          {
+            "src": "assets/notion/cost-estimates/002.jpg",
+            "caption": "The Settings button, which opens Productivity Settings"
+          },
+          {
+            "src": "assets/notion/cost-estimate-workflows/001.jpg",
+            "caption": "Workflow: choosing the feature, then Create Level with its type and approvers"
           }
         ]
       },
       {
-        "heading": "Estimate Summary",
-        "intro": "<p>Once an estimate has been built out across its five cost-type tabs, you need a single place to see the whole picture rolled up — that's what Estimate Summary provides. It's a deliberately view-only page: rather than letting you edit numbers here, Arena keeps editing confined to the individual cost-type tabs and treats the summary purely as a reporting surface, which avoids the risk of someone adjusting a rolled-up total that doesn't trace back to an actual line item. If a total looks wrong, the fix always happens back in Material, Labor, Equipment, Sub-Contractor, or Other Expenses, not on the summary page itself.</p>",
+        "heading": "Where Actual Costs Come From",
+        "intro": "<p>Actual cost comes from the cost logs entered in <strong>Field Works > Tree Version > Cost</strong>, by field users and approved by the approvers. Cost Tracking totals them against the estimate lines.</p><p>The Cost tab has four cards: <strong>Transaction</strong>, <strong>Change order</strong>, <strong>Transfer</strong> and <strong>Field Logs</strong>.</p>",
         "definitions": [
           {
-            "term": "Estimate Summary",
-            "definition": "A view-only page showing all costs documented via the Cost Estimate tabs, rolled up across Material, Labor, Equipment, Sub-Contractor, and Other Expenses."
+            "term": "Transaction",
+            "definition": "Records individual cost entries such as purchase orders and other expenses. Tabs **Open Logs** and **Rejected Logs**; columns **Log ID**, **Approval Status**, **Actual Cost**, **Committed Cost**. **Create** opens a form with **Phase Code**, **Cost Code**, **Actual Cost**, **Committed Cost**, **Cost Type** and a configurable section; buttons **Save As Draft** and **Submit**."
+          },
+          {
+            "term": "Where Transaction lists come from",
+            "definition": "The **Phase Code** drop-down lists only the phase codes used in the project's approved estimate (9 on the test tree: for example 52878 - Electrical, 932040 - Barbending, 1089-107 - Earthwork), not all phase codes of Global Data. For trees with no approved estimate the screen says \"No active and approved Estimate found.\""
+          },
+          {
+            "term": "Change order and Transfer",
+            "definition": "**Change order** manages budget and contract adjustments (the test tree says \"No Change Orders available\"). **Transfer** moves budget between cost codes or phase codes and needs **Level of Detail** to be set first in Project Settings; otherwise it says so."
+          },
+          {
+            "term": "Field Logs",
+            "definition": "Tabs **Material**, **Machinery**, **Manpower** and **Sub Contractor**, each with **Create**, and a **Settings** dialog giving each a frequency (**Daily** on the test project). The test tree had none of these logs."
+          },
+          {
+            "term": "What does not feed it on the test site",
+            "definition": "Procurement had 34 purchase orders, 72 delivery receipts and 46 invoices, and a dashboard spend of ₹15.7M, but none of these amounts appeared in Cost Tracking actuals (₹147 in total). Work order invoices (Field Works > Invoices) also had no data. Treat procurement and invoices as separate until entered as cost logs."
+          },
+          {
+            "term": "Approved timesheets, equipment and labor",
+            "definition": "The Labor and Equipment actuals were ₹0 on the test site. No link from Time Management or Equipment Management into these figures was found; record labor or equipment cost as cost logs in Field Works > Cost."
           }
         ],
         "procedures": [
           {
-            "title": "View a summary of all project costs",
+            "title": "Record an actual cost",
             "steps": [
-              "Go to <strong>Cost Estimate → Summary</strong>.",
-              "Review the consolidated view of all costs recorded across the Material, Labor, Equipment, Sub-Contractor, and Other Expenses tabs."
+              "Open **Field Works**, choose the tree version and the **Cost** tab.",
+              "Open **Transaction** and click **Create**.",
+              "Choose the **Phase Code** (from the approved estimate), then enter **Cost Code**, **Actual Cost**, **Committed Cost** and **Cost Type**.",
+              "Click **Save As Draft** or **Submit**.",
+              "After approval the amount appears under **Actual Cost** in Cost Tracking."
             ],
-            "note": "This page is view-only — to change a total, edit the underlying line items on the relevant cost-type tab.",
-            "images": [
-              {
-                "src": "assets/notion/cost-estimate-summary/001.jpg",
-                "caption": "Summary: a view-only page of the costs entered on the Estimate tab",
-                "step": 2
-              }
+            "note": "The exact approval-to-report timing was not observed because no logs exist on the test project."
+          }
+        ]
+      },
+      {
+        "heading": "How Phase Codes and Cost Types Roll Up",
+        "intro": "<p>Cost is built bottom-up: each estimate line has a phase code and a cost type, and the screens add them up along these two lines. Project controls use this to find which phase code or cost item is over plan.</p><p>Cost Tracking itself shows the cost-type roll-up; the phase-code view is in the project's own analytics.</p>",
+        "definitions": [
+          {
+            "term": "Cost types",
+            "definition": "The eight cost types are **Material**, **Equipment**, **Labor**, **Unit Rate**, **Sub Contractor**, **BOQ's**, **Freight Charges** and **Fuel & Gas** (Global Data > Cost). A phase code carries the cost types it may use. Cost by Cost Types shows the Labor, Material and Equipment blocks."
+          },
+          {
+            "term": "Phase codes",
+            "definition": "A phase code (for example 932040 - Barbending) groups estimate lines in **Estimate Summary > All** and is chosen on every Transaction log. The **Level of Detail** setting decides whether cost is tracked at **Phase Code** or **Phase Code - Cost Code**."
+          },
+          {
+            "term": "Phase code views by project",
+            "definition": "In **Data Analytics & Insights > Cost** the **Cost Analytics** tabs (**Cost Analytics Inputs**, **Cost Analytics Summary**, **Control Budget**) list phase codes with **Actual Cost**, **Committed Cost**, **Cost Variance**, **Cost Performance Index**, **Schedule Performance Index**, **Estimate At Completion (EAC)** and **Estimate To Completion (ETC)**. They were empty on the test trees."
+          },
+          {
+            "term": "Structure of the estimate",
+            "definition": "The **Cost Breakdown Structure** chosen when an estimate is created (for example Entity > Super Location > Location > Activity > Work Package > Phase Code) decides how lines are grouped before they reach the summary."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Trace a cost from phase code to company total",
+            "steps": [
+              "Open **Project Setup > Estimate > (estimate) > Estimate Summary > All** and find the phase code.",
+              "Open **Cost by Cost Types** and find the item (name and code).",
+              "Open **Cost by Projects** and compare the project's Estimated Cost with the sum of the three blocks.",
+              "Open the **Cost Control Dashboard** and compare Contract Value with the estimate Total."
             ]
           }
         ],
@@ -25971,6 +26252,48 @@ const MODULES = [
           {
             "src": "assets/notion/cost-estimate-proposal-form/001.jpg",
             "caption": "Proposal Form: a summary estimate of all cost types for each activity"
+          },
+          {
+            "src": "assets/notion/cost-estimate-summary/001.jpg",
+            "caption": "Summary: a view-only page of the costs entered on the Estimate tab"
+          },
+          {
+            "src": "assets/notion/cost-estimate-cost-tracking-by-phase-codes/001.jpg",
+            "caption": "Cost by Phase Codes: estimated and actual costs for each phase code"
+          }
+        ]
+      },
+      {
+        "heading": "Checking the Numbers and Why a Cost Shows Zero",
+        "intro": "<p>Use this section when a project shows ₹0 or a total does not match, for example during a monthly cost review. Each check points to the source screen to fix.</p><p>Everything below was checked on the test site by comparing figures across screens.</p>",
+        "definitions": [
+          {
+            "term": "Totals that match",
+            "definition": "Cost by Projects Estimated Cost total = Cost by Cost Types total (Labor + Material + Equipment) = header Total Estimate Cost. Dashboard Contract Value = approved estimate Total including Unit Rate and contingencies. Difference between the two = the Unit Rate block."
+          },
+          {
+            "term": "Why the estimate is zero",
+            "definition": "The project has no estimate, the estimate is not approved, or its lines have zero quantity or rate. On the test site 114 of 115 projects had no estimate, and two of the three estimates of Arena Residential Project (Tower Spire) had all zeros."
+          },
+          {
+            "term": "Why the actual is zero",
+            "definition": "No cost log has been recorded and approved in Field Works > Cost for that project, even if purchase orders, invoices or timesheets exist. On the test site only ₹147 of material was recorded."
+          },
+          {
+            "term": "Why the Phase Code list is short",
+            "definition": "Transaction logs offer only the phase codes of the approved estimate."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Find why a project shows zero cost",
+            "steps": [
+              "Open **Cost by Projects** and find the project; note Estimated Cost and Actual Cost.",
+              "If the estimate is zero, open **Project Setup > Estimate** for the project and check an estimate exists, has amounts and is **Approved**.",
+              "If the actual is zero, open **Field Works > Cost > Transaction** (and Change order, Transfer, Field Logs) and check logs exist and are approved.",
+              "Check **Project Settings > Cost Breakdown Structure** (Level of Detail, Estimate Type, approval workflow).",
+              "Check the code exists in **Global Data > Cost** (Material, Labor, Equipment)."
+            ]
           }
         ]
       }
@@ -25978,19 +26301,22 @@ const MODULES = [
     "name": "Cost Tracking",
     "alias": "Cost Estimating",
     "icon": "payments",
-    "tagline": "Build project cost estimates across material, labor, equipment and other expense types.",
+    "tagline": "Compare estimated and actual costs across all projects, by project and by cost type.",
     "color": "#6b4c9a",
-    "overview": "<p>Cost Tracking covers building out a project's Cost Estimate — recording anticipated Material, Labor, Equipment, Sub-Contractor and Other Expense costs — plus a read-only cost summary, cost breakdown by cost type, and configurable multi-level approval workflows for related timesheets and quantity tracksheets.</p>",
+    "overview": "<p><strong>Cost Tracking</strong> is the company-wide view of estimated versus actual cost. It reads the approved estimates of every project (built in <strong>Project Setup > Estimate</strong>) and the actual cost entries recorded in <strong>Field Works > Cost</strong>.</p><p>It has three read-only screens, grouped under <strong>Company Reports</strong>: <strong>Cost Control Dashboard</strong>, <strong>Cost by Projects</strong> and <strong>Cost by Cost Types</strong>. Nothing is entered here; if a number is missing, fix it at its source.</p>",
     "navigation": [
-      "Open a <strong>Project</strong>, then go to <strong>Project Setup → Cost Estimate</strong>.",
-      "Use the Material, Labor, Equipment, Sub-Contractor, and Other Expenses tabs to build the estimate, and Estimate Summary or Cost Tracking (By Cost Types) to review it."
+      "From <strong>Home</strong>, click the <strong>Cost Tracking</strong> tile (\"Track Estimated Costs Vs Actual Costs for all the projects, Phase Codes & cost types\"). It opens <strong>Company Reports > Cost Control Dashboard</strong>.",
+      "Use the links <strong>Cost Control Dashboard</strong>, <strong>Cost by Projects</strong> and <strong>Cost by Cost Types</strong> at the top to switch screens."
     ],
     "sections": [
-      "Admin Role",
-      "Cost Estimate",
-      "Approval Workflow",
-      "Cost Tracking by Type",
-      "Estimate Summary"
+      "Who sets this up",
+      "Cost Control Dashboard",
+      "Cost by Projects",
+      "Cost by Cost Types",
+      "Where the Estimate Side Comes From",
+      "Where Actual Costs Come From",
+      "How Phase Codes and Cost Types Roll Up",
+      "Checking the Numbers and Why a Cost Shows Zero"
     ]
   },
   {
