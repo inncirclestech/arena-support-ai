@@ -9307,7 +9307,7 @@ const QA_TENDERMANAGEMENT = [
     scope: "global",
     section: "Bid Types",
     question: "How do I define categories for tenders/bids?",
-    answer: "Go to Proposal Management Settings > Bid Types (or Global Data > Company > Proposal Management > Bid Types) and click \"Bid Type\" to enter a Name, Description, and Estimate Type defining how the bid is structured and evaluated.",
+    answer: "Go to Proposal Management > Settings > Bid Types and click \"Bid Type\" to enter a Name, Description, and Estimate Type defining how the bid is structured and evaluated.",
     tags: ["tender category","bid type setup","estimate type"]
   },
   {
@@ -29319,7 +29319,7 @@ const MODULES = [
           {
             "title": "Create a bid type",
             "steps": [
-              "Go to <strong>Proposal Management Settings</strong> (or <strong>Global Data → Company → Proposal Management</strong>) → <strong>Bid Types</strong>.",
+              "Go to <strong>Proposal Management → Settings → Bid Types</strong>.",
               "Click <strong>Bid Type</strong> and enter a Name, Description, and Estimate Type, then submit."
             ]
           },
@@ -29613,7 +29613,7 @@ const MODULES = [
           {
             "title": "Define a new bid type",
             "steps": [
-              "Go to <strong>Proposal Management Settings → Bid Types</strong> (equivalently, <strong>Global Data → Company → Proposal Management → Bid Types</strong>).",
+              "Go to <strong>Proposal Management → Settings → Bid Types</strong>.",
               "Click <strong>Bid Type</strong> to open the creation form.",
               "Enter a <strong>Name</strong> and <strong>Description</strong>, and choose the <strong>Estimate Type</strong> that defines how bids of this type will be structured and evaluated."
             ]
@@ -29646,7 +29646,7 @@ const MODULES = [
           {
             "title": "Define a new bid type",
             "steps": [
-              "Go to <strong>Proposal Management Settings → Bid Types</strong> (equivalently, <strong>Global Data → Company → Proposal Management → Bid Types</strong>).",
+              "Go to <strong>Proposal Management → Settings → Bid Types</strong>.",
               "Click <strong>Bid Type</strong> to open the creation form.",
               "Enter a <strong>Name</strong> and <strong>Description</strong>, and choose the <strong>Estimate Type</strong> that defines how bids of this type will be structured and evaluated."
             ],
