@@ -6071,274 +6071,346 @@ const QA_FIELDWORKS = [
 
 const QA_DATAANALYTICS = [
   {
-    "action": "view",
-    "object": "project dashboards",
-    "scope": "project",
-    "section": "Overview",
-    "question": "Where do I find dashboards and reports for a project?",
-    "answer": "Open the project and go to <strong>Data Analytics &amp; Insights</strong> in the left sidebar. It has three tabs in order: <strong>Standard Analytics</strong> (pre-built dashboards, the default tab), <strong>Configurable Analytics</strong> (self-serve chart, table, and report building plus Excel and Power BI routes), and <strong>Standard Reports</strong> (canned printable reports). This is the project's BI and reporting hub.",
-    "tags": [
-      "data analytics",
-      "insights",
-      "dashboards",
-      "reporting hub",
-      "analytics tabs",
-      "find dashboards",
-      "project dashboards",
-      "where are the dashboards"
-    ]
+    action: "view",
+    object: "project dashboards",
+    scope: "project",
+    section: "Overview",
+    question: "Where do I find dashboards and reports for a project?",
+    answer: "Open the project and go to **Data Analytics & Insights** in the left sidebar. It has three tabs in order: **Standard Analytics** (pre-built dashboards, the default tab), **Configurable Analytics** (self-serve chart, table, and report building plus Excel and Power BI routes), and **Standard Reports** (canned printable reports). This is the project's BI and reporting hub.",
+    tags: ["data analytics","insights","dashboards","reporting hub","analytics tabs","find dashboards","project dashboards","where are the dashboards"]
   },
   {
-    "action": "understand",
-    "object": "standard vs configurable analytics",
-    "scope": "project",
-    "section": "Overview",
-    "question": "Should I use Standard Analytics or Configurable Analytics?",
-    "answer": "Start with <strong>Standard Analytics</strong> — it holds 18 pre-built dashboards covering the questions most construction projects ask routinely (progress, schedule, cost, resources, quality, safety, contractor performance). Move to <strong>Configurable Analytics</strong> only when the pre-built set does not answer your question: that tab is where a PM or analyst builds their own charts, reports, and data tables, or exports the data to Excel or Power BI instead.",
-    "tags": [
-      "standard analytics",
-      "configurable analytics",
-      "which tab",
-      "build your own"
-    ]
+    action: "understand",
+    object: "standard vs configurable analytics",
+    scope: "project",
+    section: "Overview",
+    question: "Should I use Standard Analytics or Configurable Analytics?",
+    answer: "Start with **Standard Analytics** — it holds 18 pre-built dashboards covering the questions most construction projects ask routinely (progress, schedule, cost, resources, quality, safety, contractor performance). Move to **Configurable Analytics** only when the pre-built set does not answer your question: that tab is where a PM or analyst builds their own charts, reports, and data tables, or exports the data to Excel or Power BI instead.",
+    tags: ["standard analytics","configurable analytics","which tab","build your own"]
   },
   {
-    "action": "view",
-    "object": "standard analytics dashboard list",
-    "scope": "project",
-    "section": "Standard Analytics",
-    "question": "What pre-built dashboards ship with a project?",
-    "answer": "<strong>Standard Analytics</strong> has 18 dashboard cards: Construction Progress, Schedule, Cost, Equipment/Material/Manpower, Collaboration Items, Quality Progress, Safety Analytics, Contractors Performance, Activities &amp; Work Packages Progress, Productivity Reports, Amount Invoiced vs Amount Paid, Sync, Progress Forecast Report, DPR report, Cost Dashboards and Reports, Workorders, RFI Approval Delays, and Work Summary - MIS Report.",
-    "tags": [
-      "standard analytics cards",
-      "dashboard list",
-      "pre-built dashboards",
-      "18 dashboards"
-    ]
+    action: "view",
+    object: "standard analytics dashboard list",
+    scope: "project",
+    section: "Standard Analytics",
+    question: "What pre-built dashboards ship with a project?",
+    answer: "**Standard Analytics** has 18 dashboard cards: Construction Progress, Schedule, Cost, Equipment/Material/Manpower, Collaboration Items, Quality Progress, Safety Analytics, Contractors Performance, Activities & Work Packages Progress, Productivity Reports, Amount Invoiced vs Amount Paid, Sync, Progress Forecast Report, DPR report, Cost Dashboards and Reports, Workorders, RFI Approval Delays, and Work Summary - MIS Report.",
+    tags: ["standard analytics cards","dashboard list","pre-built dashboards","18 dashboards"]
   },
   {
-    "action": "view",
-    "object": "construction progress and schedule dashboards",
-    "scope": "project",
-    "section": "Standard Analytics",
-    "question": "Where do I see how the project is tracking against its schedule?",
-    "answer": "Three cards on <strong>Standard Analytics</strong> address this from different angles: <strong>Construction Progress</strong> for physical completion, <strong>Schedule</strong> for time performance, and <strong>Activities &amp; Work Packages Progress</strong> for progress at the level of individual activities and work packages. <strong>Progress Forecast Report</strong> is the forward-looking companion when a PM needs a projection rather than a status snapshot.",
-    "tags": [
-      "construction progress",
-      "schedule dashboard",
-      "work packages progress",
-      "progress forecast"
-    ]
+    action: "view",
+    object: "construction progress and schedule dashboards",
+    scope: "project",
+    section: "Standard Analytics",
+    question: "Where do I see how the project is tracking against its schedule?",
+    answer: "Three cards on **Standard Analytics** address this from different angles: **Construction Progress** for physical completion, **Schedule** for time performance, and **Activities & Work Packages Progress** for progress at the level of individual activities and work packages. **Progress Forecast Report** is the forward-looking companion when a PM needs a projection rather than a status snapshot.",
+    tags: ["construction progress","schedule dashboard","work packages progress","progress forecast"]
   },
   {
-    "action": "view",
-    "object": "cost dashboards",
-    "scope": "project",
-    "section": "Standard Analytics",
-    "question": "Which dashboards cover project cost and billing?",
-    "answer": "<strong>Cost</strong> and <strong>Cost Dashboards and Reports</strong> cover the project's cost picture, and <strong>Amount Invoiced vs Amount Paid</strong> covers the cash side — the gap between what has been billed and what has actually been received, which is the number a commercial manager on a construction project usually cares about most. <strong>Workorders</strong> gives the work-order view alongside them.",
-    "tags": [
-      "cost dashboard",
-      "amount invoiced vs paid",
-      "billing",
-      "workorders dashboard",
-      "cash"
-    ]
+    action: "view",
+    object: "cost dashboards",
+    scope: "project",
+    section: "Standard Analytics",
+    question: "Which dashboards cover project cost and billing?",
+    answer: "**Cost** and **Cost Dashboards and Reports** cover the project's cost picture, and **Amount Invoiced vs Amount Paid** covers the cash side — the gap between what has been billed and what has actually been received, which is the number a commercial manager on a construction project usually cares about most. **Workorders** gives the work-order view alongside them.",
+    tags: ["cost dashboard","amount invoiced vs paid","billing","workorders dashboard","cash"]
   },
   {
-    "action": "view",
-    "object": "resource and productivity dashboards",
-    "scope": "project",
-    "section": "Standard Analytics",
-    "question": "How do I see how equipment, material, manpower, and productivity are trending?",
-    "answer": "The <strong>Equipment/Material/Manpower</strong> card consolidates the three main resource streams into one dashboard, and <strong>Productivity Reports</strong> covers output relative to the effort put in. Together they answer whether resources on site are being used efficiently, rather than only whether work is getting done.",
-    "tags": [
-      "equipment material manpower",
-      "productivity reports",
-      "resource dashboard",
-      "utilization"
-    ]
+    action: "view",
+    object: "resource and productivity dashboards",
+    scope: "project",
+    section: "Standard Analytics",
+    question: "How do I see how equipment, material, manpower, and productivity are trending?",
+    answer: "The **Equipment/Material/Manpower** card consolidates the three main resource streams into one dashboard, and **Productivity Reports** covers output relative to the effort put in. Together they answer whether resources on site are being used efficiently, rather than only whether work is getting done.",
+    tags: ["equipment material manpower","productivity reports","resource dashboard","utilization"]
   },
   {
-    "action": "view",
-    "object": "quality and safety dashboards",
-    "scope": "project",
-    "section": "Standard Analytics",
-    "question": "Are there dashboards for quality and safety performance?",
-    "answer": "Yes — <strong>Quality Progress</strong> tracks how quality inspection work is advancing, and <strong>Safety Analytics</strong> covers the project's safety picture. Both roll up the activity logged day to day in Field Works, which is why disciplined logging by field teams and safety officers is what makes these dashboards worth looking at.",
-    "tags": [
-      "quality progress",
-      "safety analytics",
-      "quality dashboard",
-      "safety dashboard"
-    ]
+    action: "view",
+    object: "quality and safety dashboards",
+    scope: "project",
+    section: "Standard Analytics",
+    question: "Are there dashboards for quality and safety performance?",
+    answer: "Yes — **Quality Progress** tracks how quality inspection work is advancing, and **Safety Analytics** covers the project's safety picture. Both roll up the activity logged day to day in Field Works, which is why disciplined logging by field teams and safety officers is what makes these dashboards worth looking at.",
+    tags: ["quality progress","safety analytics","quality dashboard","safety dashboard"]
   },
   {
-    "action": "view",
-    "object": "collaboration and RFI delay dashboards",
-    "scope": "project",
-    "section": "Standard Analytics",
-    "question": "How do I find out whether approvals are holding the project up?",
-    "answer": "<strong>RFI Approval Delays</strong> is the dashboard aimed squarely at that question — surfacing where RFIs are sitting unanswered, which on most construction projects is a leading indicator of schedule slippage. <strong>Collaboration Items</strong> gives the broader view of collaborative activity across the project's forms and workflows.",
-    "tags": [
-      "rfi approval delays",
-      "collaboration items",
-      "approval bottleneck",
-      "schedule risk"
-    ]
+    action: "view",
+    object: "collaboration and RFI delay dashboards",
+    scope: "project",
+    section: "Standard Analytics",
+    question: "How do I find out whether approvals are holding the project up?",
+    answer: "**RFI Approval Delays** is the dashboard aimed squarely at that question — surfacing where RFIs are sitting unanswered, which on most construction projects is a leading indicator of schedule slippage. **Collaboration Items** gives the broader view of collaborative activity across the project's forms and workflows.",
+    tags: ["rfi approval delays","collaboration items","approval bottleneck","schedule risk"]
   },
   {
-    "action": "view",
-    "object": "contractors performance dashboard",
-    "scope": "project",
-    "section": "Standard Analytics",
-    "question": "Can I compare how contractors are performing on a project?",
-    "answer": "Yes — the <strong>Contractors Performance</strong> card on Standard Analytics is the dashboard for that. For a construction business running several subcontractors on one job, this is the view that supports evidence-based conversations at progress meetings and informs who gets invited onto the next project.",
-    "tags": [
-      "contractors performance",
-      "subcontractor comparison",
-      "vendor performance"
-    ]
+    action: "view",
+    object: "contractors performance dashboard",
+    scope: "project",
+    section: "Standard Analytics",
+    question: "Can I compare how contractors are performing on a project?",
+    answer: "Yes — the **Contractors Performance** card on Standard Analytics is the dashboard for that. For a construction business running several subcontractors on one job, this is the view that supports evidence-based conversations at progress meetings and informs who gets invited onto the next project.",
+    tags: ["contractors performance","subcontractor comparison","vendor performance"]
   },
   {
-    "action": "view",
-    "object": "DPR and MIS reports",
-    "scope": "project",
-    "section": "Standard Analytics",
-    "question": "Where are the daily progress report and management summary dashboards?",
-    "answer": "<strong>DPR report</strong> covers the daily progress report, and <strong>Work Summary - MIS Report</strong> is the management-information summary of work done. Both are on the <strong>Standard Analytics</strong> tab, and are the cards a PM typically reaches for when preparing routine reporting for internal management or the client.",
-    "tags": [
-      "dpr report",
-      "mis report",
-      "work summary",
-      "daily progress report",
-      "management reporting"
-    ]
+    action: "view",
+    object: "DPR and MIS reports",
+    scope: "project",
+    section: "Standard Analytics",
+    question: "Where are the daily progress report and management summary dashboards?",
+    answer: "The **DPR report** card on **Standard Analytics** is a work-order report (pick a work order and see each activity's estimated, executed and balance quantity, plus planned and executed for this month and today). **Work Summary - MIS Report** is the management summary tree of Physical Target, Work Complete and Variance by plant and location type. The canned **Daily Progress Report** and **Weekly Progress Report** are on the **Standard Reports** tab.",
+    tags: ["dpr report","mis report","work summary","daily progress report","management reporting","dpr report meaning","what is the dpr report","dpr report work order"]
   },
   {
-    "action": "export",
-    "object": "project data to excel via sync",
-    "scope": "project",
-    "section": "Standard Analytics",
-    "question": "How do I get project data out into Excel?",
-    "answer": "There are two routes. The <strong>Sync</strong> card on <strong>Standard Analytics</strong> is described as syncing projects data to Excel. Separately, the <strong>Excel</strong> card on <strong>Configurable Analytics</strong> covers project tree uploads and standard report downloads. Use Sync when you want the project's data pushed out to a spreadsheet, and the Configurable Analytics Excel card when you are uploading tree data in or pulling standard reports down.",
-    "tags": [
-      "sync",
-      "excel export",
-      "projects data to excel",
-      "data extract"
-    ]
+    action: "export",
+    object: "project data to excel via sync",
+    scope: "project",
+    section: "Standard Analytics",
+    question: "How do I get project data out into Excel?",
+    answer: "There are two routes. The **Sync** card on **Standard Analytics** is described as syncing projects data to Excel. Separately, the **Excel** card on **Configurable Analytics** covers project tree uploads and standard report downloads. Use Sync when you want the project's data pushed out to a spreadsheet, and the Configurable Analytics Excel card when you are uploading tree data in or pulling standard reports down.",
+    tags: ["sync","excel export","projects data to excel","data extract"]
   },
   {
-    "action": "view",
-    "object": "configurable analytics card list",
-    "scope": "project",
-    "section": "Configurable Analytics",
-    "question": "What is on the Configurable Analytics tab?",
-    "answer": "<strong>Configurable Analytics</strong> has 9 cards: Data Classification, Data Trends, Counting Tables, Configure Data Tables, Build your own Charts, Build your own Reports, Excel (project tree uploads and standard report downloads), Power BI (direct integration), and Reports (store personal reports). This is the self-serve half of the analytics module.",
-    "tags": [
-      "configurable analytics",
-      "self-serve analytics",
-      "9 cards",
-      "build your own"
-    ]
+    action: "view",
+    object: "configurable analytics card list",
+    scope: "project",
+    section: "Configurable Analytics",
+    question: "What is on the Configurable Analytics tab?",
+    answer: "**Configurable Analytics** has 9 cards: Data Classification, Data Trends, Counting Tables, Configure Data Tables, Build your own Charts, Build your own Reports, Excel (project tree uploads and standard report downloads), Power BI (direct integration), and Reports (store personal reports). This is the self-serve half of the analytics module.",
+    tags: ["configurable analytics","self-serve analytics","9 cards","build your own"]
   },
   {
-    "action": "create",
-    "object": "custom chart",
-    "scope": "project",
-    "section": "Configurable Analytics",
-    "question": "How do I build a chart that the standard dashboards do not cover?",
-    "answer": "Use the <strong>Build your own Charts</strong> card on <strong>Configurable Analytics</strong>. It exists for exactly the case where a client, a PM, or internal management wants a cut of the data that no pre-built dashboard provides — rather than exporting to a spreadsheet and rebuilding the chart by hand every reporting cycle.",
-    "tags": [
-      "build your own charts",
-      "custom chart",
-      "self-serve chart"
-    ]
+    action: "create",
+    object: "custom chart",
+    scope: "project",
+    section: "Configurable Analytics",
+    question: "How do I build a chart that the standard dashboards do not cover?",
+    answer: "Use the **Build your own Charts** card on **Configurable Analytics**. It exists for exactly the case where a client, a PM, or internal management wants a cut of the data that no pre-built dashboard provides — rather than exporting to a spreadsheet and rebuilding the chart by hand every reporting cycle.",
+    tags: ["build your own charts","custom chart","self-serve chart"]
   },
   {
-    "action": "create",
-    "object": "custom report",
-    "scope": "project",
-    "section": "Configurable Analytics",
-    "question": "Can I build and save my own reports?",
-    "answer": "Yes. <strong>Build your own Reports</strong> on <strong>Configurable Analytics</strong> is where a custom report is defined, and the <strong>Reports</strong> card on the same tab is described as storing personal reports — so a report you build for your own recurring use is kept rather than rebuilt each time.",
-    "tags": [
-      "build your own reports",
-      "custom report",
-      "personal reports",
-      "save report"
-    ]
+    action: "create",
+    object: "custom report",
+    scope: "project",
+    section: "Configurable Analytics",
+    question: "Can I build and save my own reports?",
+    answer: "Yes. **Build your own Reports** on **Configurable Analytics** is where a custom report is defined, and the **Reports** card on the same tab is described as storing personal reports — so a report you build for your own recurring use is kept rather than rebuilt each time.",
+    tags: ["build your own reports","custom report","personal reports","save report"]
   },
   {
-    "action": "configure",
-    "object": "data tables and counting tables",
-    "scope": "project",
-    "section": "Configurable Analytics",
-    "question": "What are Configure Data Tables and Counting Tables for?",
-    "answer": "<strong>Configure Data Tables</strong> lets a user shape the tabular views of project data they want to work with, and <strong>Counting Tables</strong> covers count-based tabular summaries. Both sit alongside <strong>Data Classification</strong> and <strong>Data Trends</strong> on <strong>Configurable Analytics</strong> as the data-shaping layer beneath the chart and report builders.",
-    "tags": [
-      "configure data tables",
-      "counting tables",
-      "data classification",
-      "data trends"
-    ]
+    action: "configure",
+    object: "data tables and counting tables",
+    scope: "project",
+    section: "Configurable Analytics",
+    question: "What are Configure Data Tables and Counting Tables for?",
+    answer: "**Configure Data Tables** lets a user shape the tabular views of project data they want to work with, and **Counting Tables** covers count-based tabular summaries. Both sit alongside **Data Classification** and **Data Trends** on **Configurable Analytics** as the data-shaping layer beneath the chart and report builders.",
+    tags: ["configure data tables","counting tables","data classification","data trends"]
   },
   {
-    "action": "integrate",
-    "object": "power bi",
-    "scope": "project",
-    "section": "Configurable Analytics",
-    "question": "Can I connect project data to Power BI?",
-    "answer": "Yes — the <strong>Power BI</strong> card on <strong>Configurable Analytics</strong> is described as a direct integration. For a construction business that already reports company-wide through Power BI, this is the route to bring a project's Arena data into those existing dashboards rather than maintaining two separate reporting worlds.",
-    "tags": [
-      "power bi",
-      "bi integration",
-      "external reporting",
-      "direct integration"
-    ]
+    action: "integrate",
+    object: "power bi",
+    scope: "project",
+    section: "Configurable Analytics",
+    question: "Can I connect project data to Power BI?",
+    answer: "Yes — the **Power BI** card on **Configurable Analytics** is described as a direct integration. For a construction business that already reports company-wide through Power BI, this is the route to bring a project's Arena data into those existing dashboards rather than maintaining two separate reporting worlds.",
+    tags: ["power bi","bi integration","external reporting","direct integration"]
   },
   {
-    "action": "view",
-    "object": "standard reports tab",
-    "scope": "project",
-    "section": "Standard Reports",
-    "question": "Where are the ready-made progress reports?",
-    "answer": "Go to <strong>Data Analytics &amp; Insights → Standard Reports</strong>. It has two sub-tabs, <strong>Reports</strong> and <strong>Other Reports</strong>, and carries the <strong>Daily Progress Report</strong> and <strong>Weekly Progress Report</strong> cards — the canned, printable reports most projects are contractually or internally expected to produce on a routine cadence.",
-    "tags": [
-      "standard reports",
-      "daily progress report",
-      "weekly progress report",
-      "other reports"
-    ]
+    action: "view",
+    object: "standard reports tab",
+    scope: "project",
+    section: "Standard Reports",
+    question: "Where are the ready-made progress reports?",
+    answer: "Go to **Data Analytics & Insights → Standard Reports**. It has two sub-tabs, **Reports** and **Other Reports**, and carries the **Daily Progress Report** and **Weekly Progress Report** cards — the canned, printable reports most projects are contractually or internally expected to produce on a routine cadence.",
+    tags: ["standard reports","daily progress report","weekly progress report","other reports"]
   },
   {
-    "action": "understand",
-    "object": "where generated reports are archived",
-    "scope": "project",
-    "section": "Standard Reports",
-    "question": "Once a Daily or Weekly Progress Report is generated, where can I find it again later?",
-    "answer": "Generated reports are archived in the project's <strong>Document Repository</strong>, which carries dedicated <strong>Daily Progress Reports</strong> and <strong>Weekly Progress Reports</strong> categories in its left-pane filter list. Data Analytics &amp; Insights is where a report is produced; Document Repository is where the produced record is later found, downloaded, printed, or emailed.",
-    "tags": [
-      "find generated report",
-      "document repository",
-      "report archive",
-      "daily progress reports"
-    ]
+    action: "understand",
+    object: "where generated reports are archived",
+    scope: "project",
+    section: "Standard Reports",
+    question: "Once a Daily or Weekly Progress Report is generated, where can I find it again later?",
+    answer: "Generated reports are archived in the project's **Document Repository**, which carries dedicated **Daily Progress Reports** and **Weekly Progress Reports** categories in its left-pane filter list. Data Analytics & Insights is where a report is produced; Document Repository is where the produced record is later found, downloaded, printed, or emailed.",
+    tags: ["find generated report","document repository","report archive","daily progress reports"]
   },
   {
-    "action": "understand",
-    "object": "analytics depends on field data quality",
-    "scope": "project",
-    "section": "Overview",
-    "question": "A dashboard looks empty or wrong — what is the usual cause?",
-    "answer": "Analytics is a downstream view: every dashboard here reflects what has actually been logged upstream. Progress and productivity dashboards depend on work logs and productivity logs captured in <strong>Field Works</strong>, quality and safety dashboards on inspections and safety forms submitted there, and cost dashboards on the cost structure configured in <strong>Project Setup</strong> and <strong>Project Settings</strong>. A thin dashboard is usually a logging-discipline problem rather than a reporting problem, which is worth checking before assuming the dashboard is at fault.",
-    "tags": [
-      "empty dashboard",
-      "analytics troubleshooting",
-      "data quality",
-      "field works dependency"
-    ]
+    action: "understand",
+    object: "analytics depends on field data quality",
+    scope: "project",
+    section: "Overview",
+    question: "A dashboard looks empty or wrong — what is the usual cause?",
+    answer: "Analytics is a downstream view: every dashboard here reflects what has actually been logged upstream. Progress and productivity dashboards depend on work logs and productivity logs captured in **Field Works**, quality and safety dashboards on inspections and safety forms submitted there, and cost dashboards on the cost structure configured in **Project Setup** and **Project Settings**. A thin dashboard is usually a logging-discipline problem rather than a reporting problem, which is worth checking before assuming the dashboard is at fault.",
+    tags: ["empty dashboard","analytics troubleshooting","data quality","field works dependency"]
+  },
+  {
+    action: "explain",
+    object: "analytics lineage",
+    scope: "module",
+    section: "Overview",
+    question: "Where does the data on the analytics dashboards come from?",
+    answer: "Plant structure and plans come from **Project Setup → Works**, **Schedule** and **Estimate**; actuals come from **Field Works** logs. Work Logs feed Construction Progress, Schedule and Work Summary; Productivity Logs feed Productivity Reports; Equipment, Material and Manpower Logs feed Equipment / Material / Manpower; RFI, Submittal and Change Order forms feed Collaboration Items and RFI Approval Delays; Quality logs, punch lists and restraints feed Quality Progress; safety forms feed Safety Analytics; Cost entries feed Cost; work orders and invoices feed Workorders, DPR report and Amount Invoiced vs Amount Paid. Dashboards are read-only.",
+    tags: ["analytics data source","where does dashboard data come from","analytics lineage","dashboard source data","what feeds analytics","analytics data comes from"]
+  },
+  {
+    action: "explain",
+    object: "analytics lineage",
+    scope: "module",
+    section: "Overview",
+    question: "Why is my dashboard showing old numbers?",
+    answer: "Dashboards show a saved snapshot. Look at **Last Updated At** next to the dashboard title and click the **refresh** icon to recalculate it. Example: after switching to the ECR (Electrical Control Room) entity in Construction Progress → Work Summary the table kept the old entity's figures until refresh, then showed 24 locations and 1 completed, the same as the Field Works Approve Work Logs summary.",
+    tags: ["dashboard old numbers","last updated at","refresh dashboard","analytics not updating","dashboard stale data","refresh icon analytics"]
+  },
+  {
+    action: "explain",
+    object: "analytics lineage",
+    scope: "module",
+    section: "Overview",
+    question: "Why is every dashboard empty or zero on my project?",
+    answer: "Analytics only shows what has been set up and logged. Cost and Cost Dashboards need an approved estimate (Project Setup → Estimate); Workorders, DPR report, Contractors Performance and Amount Invoiced vs Amount Paid need work orders and invoices; Productivity Reports need productivity logs; Quality Progress and Safety Analytics need quality and safety forms mapped to work packages (Project Setup → Quality and Safety); Equipment / Material / Manpower needs resource logs. Progress dashboards list the plant structure but show 0% until work logs are recorded and the work package weightages are set.",
+    tags: ["empty dashboard","dashboard zero","no data analytics","why dashboard blank","analytics shows nothing","oops no data found"]
+  },
+  {
+    action: "explain",
+    object: "analytics lineage",
+    scope: "module",
+    section: "Overview",
+    question: "Which settings change the percentages on the analytics dashboards?",
+    answer: "**Project Settings → Dashboard Percentages** decides the source (Worklogs only, Workorder and worklogs, P6 with Workorder and worklogs, or Milestone with Workorder and worklogs). **Project Settings → Project Work Measurement** decides whether completion is Percentage Based or Effort Based. **Project Settings → Productivity Log Settings** shapes productivity logs. The weightages assigned in Project Setup → Works (Assign Percentage and Measurement Methods) decide how locations roll up into plant percentages.",
+    tags: ["dashboard percentages setting","analytics percentage setting","project work measurement analytics","why progress shows 0","progress percentage zero","which setting changes dashboards"]
+  },
+  {
+    action: "explain",
+    object: "analytics lineage",
+    scope: "module",
+    section: "Standard Analytics",
+    question: "What are the views inside the Construction Progress dashboard?",
+    answer: "Construction Progress has ten left-menu views: **Activity Analysis**, **Project Drill Down** (Overall Progress, Detailed View, Work Summary, System Progress, Loop Progress, People, Earned Hours, Quantity), **Project Elements**, **Work Package**, **Location Type**, **Location Type Grids**, **Work Package Grids**, **Quality And Documents**, **Quality Dashboard** and **Work Milestones**. All are scoped to a Tree Version and mostly an Entity, and are built on the structure in Project Setup → Works with completion from Field Works → Work Logs.",
+    tags: ["construction progress views","project drill down","activity analysis","work summary dashboard","construction progress menu","location type grids"]
+  },
+  {
+    action: "explain",
+    object: "analytics lineage",
+    scope: "module",
+    section: "Standard Analytics",
+    question: "How do I check a work package or location's progress from the dashboard?",
+    answer: "Open **Construction Progress → Project Drill Down → Detailed View**, click an entity card, then a super location, then a location; the work packages list shows each one's percentage, and the **Work Packages**, **Drawings** and **Issues** tabs show related items. For a table of how many locations of each type are complete, use **Work Summary** and click refresh after changing the entity.",
+    tags: ["detailed view drill down","work package progress dashboard","location progress dashboard","drill down progress","check location progress"]
+  },
+  {
+    action: "explain",
+    object: "analytics lineage",
+    scope: "module",
+    section: "Standard Analytics",
+    question: "Where do the dates on the Schedule dashboard come from?",
+    answer: "The Planned, Forecasted, Client, Skyline and Actual end dates come from **Project Setup → Works** (Other Attributes) and **Project Setup → Schedule**; the same columns appear in Field Works → Progress → Detailed Work Logs. Without dates there the burn up, burn down and count charts stay blank.",
+    tags: ["schedule dashboard dates","burn up burn down","client end date","skyline end date","forecast end date","schedule dashboard source"]
+  },
+  {
+    action: "explain",
+    object: "analytics lineage",
+    scope: "module",
+    section: "Standard Analytics",
+    question: "What is on the Cost dashboard and what does it need?",
+    answer: "Cost has Payables (Cost Activity, Cost by Cost Types, Cost by Month, Payments by Month, Cost Analytics with an earned value table, Cost Graphs) and Receivables (Cost Plan Forecast, Monthly Payment Collection, Payment Milestones). It needs an active, approved estimate in **Project Setup → Estimate** and entries in **Field Works → Cost**; with none, every figure is ₹0 or No Data.",
+    tags: ["cost dashboard","payables receivables","cost by cost types","cost analytics earned value","cost dashboard empty","cost plan forecast"]
+  },
+  {
+    action: "explain",
+    object: "analytics lineage",
+    scope: "module",
+    section: "Standard Analytics",
+    question: "What does the Cost Report show?",
+    answer: "Under **Cost Dashboards and Reports → Cost Report** the \"Lump Sum Project Cost Tracking Report\" shows project details (Client, Project Manager, Contract Type, Contract Value, Est. Completion), Budget Cost, Approved Changed Orders, Revised Budget, Total Committed and Actuals To Date, Forecast At Completion and variance, a Material / Equipment / Labor / Subcontractors table of budget, committed, actual and forecast, Commitments & Change Orders and a Forecast Analysis. Client, Manager and contract fields show N/A until the project profile is filled.",
+    tags: ["cost report","lump sum cost report","cost dashboard report","forecast at completion","revised budget","cost report na"]
+  },
+  {
+    action: "explain",
+    object: "analytics lineage",
+    scope: "module",
+    section: "Standard Analytics",
+    question: "Why do Workorders, DPR report and Contractors Performance show no data?",
+    answer: "They are built from work orders created in **Project Setup → Workorder** (contractors come from Global Data → Vendors / Sub Contractors) and from the invoices raised in Field Works → Invoices. Arena Steel Plant - Phase 1 has no work orders, so the **Select Workorder** and **select Workorders** dropdowns are empty and each panel shows No Data. Create a work order first.",
+    tags: ["workorders dashboard empty","dpr report no data","contractors performance no data","select workorder empty","work order analytics","workorder dashboard source"]
+  },
+  {
+    action: "explain",
+    object: "analytics lineage",
+    scope: "module",
+    section: "Standard Analytics",
+    question: "What is the DPR report and how is it different from the Daily Progress Report?",
+    answer: "The **DPR report** card on Standard Analytics is a work-order report: choose a work order and see, for today, each activity's estimated, executed and balance quantity and what was planned and executed this month and today. The **Daily Progress Report** on the Standard Reports tab is the separate canned daily report that is archived in the Document Repository.",
+    tags: ["dpr report","dpr vs daily progress report","work order dpr","select workorder dpr","dpr report columns"]
+  },
+  {
+    action: "explain",
+    object: "analytics lineage",
+    scope: "module",
+    section: "Standard Analytics",
+    question: "What do the Productivity Reports tabs show?",
+    answer: "Five tabs: **Detail Productivity Report** (budget, weekly, job-to-date, percent, labor unit, work factor, earned hours and forecast columns per work package and phase code, for Direct or Change Order), **Indirect and Non Productive Staff**, **Productivity Report Summary** (by phase code, with each day of the week), **Efforts Dashboard** (productivity factor by day, activity, foreman, supervisor and entity) and **Quantity Dashboard** (% complete by location type, super location type and activity). Budgets come from Project Setup → Works and phase codes; hours come from Field Works → Productivity Logs.",
+    tags: ["productivity reports tabs","detail productivity report","efforts dashboard","productivity factor","indirect non productive staff","quantity dashboard","labor unit work factor"]
+  },
+  {
+    action: "explain",
+    object: "analytics lineage",
+    scope: "module",
+    section: "Standard Analytics",
+    question: "Why is Productivity Reports all zero?",
+    answer: "Weekly and Job To Date hours and quantities come from submitted **Productivity Logs** in Field Works; none exist on Arena Steel Plant - Phase 1, so every Total shows 0. The Budget columns need budgeted hours and quantity and phase codes on the work packages in Project Setup → Works → Other Attributes. Submit and approve productivity logs, then refresh.",
+    tags: ["productivity report zero","productivity reports empty","jtd hours zero","productivity data missing","weekly hours zero"]
+  },
+  {
+    action: "explain",
+    object: "analytics lineage",
+    scope: "module",
+    section: "Standard Analytics",
+    question: "What is on the Collaboration Items dashboard?",
+    answer: "It counts RFIs, Submittals and Change Orders by Created, Waiting for approval, Approved and Rejected (Table View) or as a bar chart. The numbers are the forms raised in Field Works → Progress; on the test project RFIs Created is 3, matching the three WIRs in the RFI card.",
+    tags: ["collaboration items","rfi counts","forms status dashboard","waiting for approval","construction forms dashboard"]
+  },
+  {
+    action: "explain",
+    object: "analytics lineage",
+    scope: "module",
+    section: "Standard Analytics",
+    question: "Why is RFI Approval Delays empty?",
+    answer: "It lists RFIs that are sitting at an approval level (with the level description and the responsible person). On Arena Steel Plant - Phase 1 none of the three RFIs is under To Be Approved, so it shows No Data Available. Approval levels are defined in Project Setup → Forms → Approval Workflow.",
+    tags: ["rfi approval delays empty","pending rfi approvals","rfi delay dashboard","level desc responsible"]
+  },
+  {
+    action: "explain",
+    object: "analytics lineage",
+    scope: "module",
+    section: "Standard Analytics",
+    question: "What do Quality Progress and Safety Analytics need before they show data?",
+    answer: "Quality Progress needs quality logs submitted in Field Works → Quality, which in turn need work packages mapped to quality folders in Project Setup → Quality; it also counts punch lists, restraints and quality workflow issues. Safety Analytics needs safety forms mapped in Project Setup → Safety and logged in Field Works → Safety. Both show No Data on Arena Steel Plant - Phase 1.",
+    tags: ["quality progress empty","safety analytics empty","quality dashboard no data","safety dashboard no data","punchlist restraint analytics"]
+  },
+  {
+    action: "explain",
+    object: "analytics lineage",
+    scope: "module",
+    section: "Standard Analytics",
+    question: "What does the Sync card do?",
+    answer: "Sync lists a dataset called **Project Data** with a **SYNC** button that sends the project's current data to Excel. It copies data out and does not change project records.",
+    tags: ["sync card","sync project data","sync to excel","analytics sync","dataset sync"]
+  },
+  {
+    action: "explain",
+    object: "analytics lineage",
+    scope: "module",
+    section: "Standard Analytics",
+    question: "What is in the Work Summary - MIS Report?",
+    answer: "A tree table (project, plant, then location types) with Physical Target, Work Complete and Variance, each as Percentage and Count/Length. Expand a row with the plus icon. Structure comes from Project Setup → Works; completion comes from Field Works work logs.",
+    tags: ["mis report","work summary mis","mis summary report","physical target work complete variance"]
+  },
+  {
+    action: "explain",
+    object: "analytics lineage",
+    scope: "module",
+    section: "Standard Analytics",
+    question: "What does the Progress Forecast Report show?",
+    answer: "For one entity and super location type it shows each activity's Planned Start and Planned End Date over a chosen number of weeks (default 1), with a legend of Completed, Forecasted dates and Ongoing, and toggles for Activity or Work Package and schedule or percentage. Dates come from Project Setup → Works and Schedule.",
+    tags: ["progress forecast report","forecast dates","planned start end date forecast","number of weeks forecast"]
   }
 ];
 
@@ -22522,11 +22594,11 @@ const MODULES = [
     "narrative": [
       {
         "heading": "Overview",
-        "intro": "<p>A construction project generates a great deal of data — progress logged per work package, hours and quantities against phase codes, quality inspections, safety forms, invoices, work orders, RFIs waiting on answers — and none of it is worth much until someone can see the pattern in it. <strong>Data Analytics &amp; Insights</strong> is the project's BI and reporting hub: the place a <strong>PM, commercial manager, or Module Admin</strong> goes to turn the day's field logging into the answers a progress meeting, a client report, or a board pack actually needs.</p><p>The module has three tabs, in order. <strong>Standard Analytics</strong> is the default and holds 18 pre-built dashboards covering the questions most projects ask routinely. <strong>Configurable Analytics</strong> is the self-serve half — nine cards for classifying and shaping data, building your own charts, tables, and reports, and pushing data out to Excel or Power BI. <strong>Standard Reports</strong> holds the canned, printable reports a project is typically expected to produce on a fixed cadence.</p><p>One structural point is worth understanding before relying on anything here: analytics is a downstream view. Every dashboard reflects what was actually logged upstream — progress and productivity dashboards depend on the work logs and productivity logs captured in <strong>Field Works</strong>, quality and safety dashboards on the inspections and safety forms submitted there, and cost dashboards on the cost structure configured in <strong>Project Setup</strong> and <strong>Project Settings</strong>. A thin or surprising dashboard is more often a field logging-discipline problem than a reporting fault, and checking the source module first saves a lot of wasted investigation.</p>",
+        "intro": "<p>Data Analytics & Insights turns what the field logs into dashboards, charts and reports. PMs, commercial managers and Module Admins use it; nothing is entered here.</p><p>It has three tabs: **Standard Analytics** (18 pre-built dashboards), **Configurable Analytics** (9 self-serve cards) and **Standard Reports**. Every screen is a downstream view of **Field Works** logs and **Project Setup** data for one plant (Tree Version) at a time, so an empty dashboard almost always means nothing has been logged or mapped yet. Dashboards show a saved snapshot: click the refresh icon next to **Last Updated At** to reload it.</p>",
         "definitions": [
           {
             "term": "Standard Analytics",
-            "definition": "The default tab, holding 18 pre-built dashboard cards covering progress, schedule, cost, resources, collaboration, quality, safety, contractor performance, and management reporting."
+            "definition": "The default tab, holding 18 pre-built dashboard cards covering progress, schedule, cost, resources, collaboration, quality, safety, contractor performance and management reporting."
           },
           {
             "term": "Configurable Analytics",
@@ -22535,16 +22607,28 @@ const MODULES = [
           {
             "term": "Standard Reports",
             "definition": "The tab holding canned printable reports, with Reports and Other Reports sub-tabs and the Daily Progress Report and Weekly Progress Report cards."
+          },
+          {
+            "term": "Where analytics data comes from",
+            "definition": "Plants, entities, super locations, locations and work packages come from **Project Setup → Works**, and planned dates and budgets from Works (Other Attributes) and **Project Setup → Schedule**. Actuals come from **Field Works**: **Work Logs** feed Construction Progress, Schedule and Work Summary; **Productivity Logs** feed Productivity Reports; **Equipment, Material and Manpower Logs** feed Equipment / Material / Manpower; **RFI**, Submittals and Change Orders feed Collaboration Items and RFI Approval Delays; **Quality** logs, punch lists and restraints feed Quality Progress; **Safety** forms feed Safety Analytics; **Cost** entries against the **Project Setup → Estimate** feed Cost and Cost Dashboards and Reports; work orders and invoices feed Workorders, DPR report, Contractors Performance and Amount Invoiced vs Amount Paid. Settings that change the numbers: **Project Settings → Dashboard Percentages** (Worklogs only, Workorder and worklogs, P6, or Milestone based), **Project Work Measurement** (Percentage Based or Effort Based) and **Productivity Log Settings**."
+          },
+          {
+            "term": "Plant selector and refresh",
+            "definition": "Most dashboards open with a **Tree Version** selector that lists the project's plants (13 on Arena Steel Plant - Phase 1, the same list as Field Works, Project Setup and My Desk) and many have an **Entity** selector, **From / To** dates and Filters. Figures are a saved snapshot: **Last Updated At** shows its age and the **refresh** icon recalculates it. For example, after choosing the ECR (Electrical Control Room) entity in Construction Progress → Work Summary the table kept showing the previous entity until refresh was clicked, then showed 24 locations with 1 completed, the same as the Field Works → Approve Work Logs Summary."
+          },
+          {
+            "term": "Why the test project's dashboards are empty",
+            "definition": "On Arena Steel Plant - Phase 1: **Cost**, **Cost Dashboards and Reports** and the cost figures show ₹0 because no estimate exists in Project Setup; **Workorders**, **DPR report**, **Contractors Performance** and **Amount Invoiced vs Amount Paid** show No Data because there are no work orders or invoices; **Productivity Reports** show 0 because no productivity logs exist; **Quality Progress** and **Safety Analytics** show No Data because no quality or safety forms are mapped to work packages; **Equipment / Material / Manpower** shows No Data because no resource logs exist. Progress dashboards list the plant's structure but show 0% complete."
           }
         ],
         "procedures": [
           {
             "title": "Decide which analytics tab to use",
             "steps": [
-              "Open the project and go to <strong>Data Analytics &amp; Insights</strong>.",
-              "Start on <strong>Standard Analytics</strong> and look for a pre-built dashboard that answers your question.",
-              "If nothing pre-built fits, move to <strong>Configurable Analytics</strong> to build your own chart, report, or data table, or to export to Excel or Power BI.",
-              "For routine printable progress reporting, go to <strong>Standard Reports</strong>."
+              "Open the project and go to **Data Analytics & Insights**.",
+              "Start on **Standard Analytics** and look for a pre-built dashboard that answers your question.",
+              "If nothing pre-built fits, move to **Configurable Analytics** to build your own chart, report, or data table, or to export to Excel or Power BI.",
+              "For routine printable progress reporting, go to **Standard Reports**."
             ],
             "note": "If a dashboard looks empty, check whether the underlying activity is actually being logged in Field Works before treating it as a reporting problem."
           }
@@ -22552,88 +22636,100 @@ const MODULES = [
       },
       {
         "heading": "Standard Analytics",
-        "intro": "<p><strong>Standard Analytics</strong> is the default tab and the right starting point for most questions. It presents 18 pre-built dashboard cards, each aimed at a question construction projects ask again and again, so a <strong>PM</strong> does not have to build a report from scratch every time someone asks how the job is doing.</p><p>Read as a group, the cards fall into recognizable themes. <strong>Construction Progress</strong>, <strong>Schedule</strong>, and <strong>Activities &amp; Work Packages Progress</strong> answer where the project stands physically and against time, with <strong>Progress Forecast Report</strong> as the forward-looking companion. <strong>Cost</strong>, <strong>Cost Dashboards and Reports</strong>, <strong>Amount Invoiced vs Amount Paid</strong>, and <strong>Workorders</strong> cover the commercial picture — the last of these being the gap between what has been billed and what has actually been received, which is usually the number a commercial manager cares about most. <strong>Equipment/Material/Manpower</strong> and <strong>Productivity Reports</strong> cover whether resources are being used efficiently rather than merely being present.</p><p><strong>Quality Progress</strong> and <strong>Safety Analytics</strong> roll up the inspection and safety activity logged in Field Works. <strong>Contractors Performance</strong> supports evidence-based conversations with subcontractors and informs who gets invited onto the next job. <strong>Collaboration Items</strong> and <strong>RFI Approval Delays</strong> surface where the project is waiting on people rather than on work — RFI delays in particular being a leading indicator of schedule slippage on most construction projects. <strong>DPR report</strong> and <strong>Work Summary - MIS Report</strong> cover routine daily and management reporting, and <strong>Sync</strong> pushes the project's data out to Excel.</p>",
+        "intro": "<p>Standard Analytics holds 18 pre-built dashboards, each aimed at a question projects ask again and again. PMs, commercial managers and safety and quality leads open it to see how a plant is doing without building a report.</p><p>The cards fall into themes: physical progress and time (Construction Progress, Schedule, Activities & Work Packages Progress, Progress Forecast Report, Work Summary - MIS Report), commercial (Cost, Cost Dashboards and Reports, Amount Invoiced vs Amount Paid, Workorders, DPR report, Contractors Performance), resources (Equipment / Material / Manpower, Productivity Reports), approvals and quality (Collaboration Items, RFI Approval Delays, Quality Progress, Safety Analytics) and **Sync**. Each card below says what it shows, its filters, which Field Works or Project Setup data feeds it, and what keeps it empty.</p>",
         "definitions": [
           {
             "term": "Construction Progress",
-            "definition": "The dashboard covering physical completion progress across the project."
+            "definition": "The main physical progress dashboard, with a left menu of ten views. **Activity Analysis** is a matrix of super location types (AS Civil, AS Pipe Bridge erection, AS Trestle Erection, AS Piping) against activities, coloured by status (Not yet started, Ready to work, In Progress, Completed, Issue Raised), with an Activity or Work Package toggle and an Entity filter. **Project Drill Down** has eight tabs: **Overall Progress** (graph), **Detailed View** (entity cards, then super locations, locations and work packages with Actual % and Planned %, and Work Packages, Drawings and Issues tabs), **Work Summary** (location types with Locations, Total Completed and % Completed, an Activities checklist of all 27 Global Data activities, Manage Columns and Custom Column), **System Progress**, **Loop Progress**, **People** (Work Completed vs Remaining, Issues Open vs Closed per user), **Earned Hours** and **Quantity** (actual against total quantity by work package). **Project Elements** picks work packages to focus on; **Work Package** and **Location Type** show percentage bar charts (vertical or horizontal) with a filter panel (Entities, Super Locations, Locations Type, Quality And Documents; Apply Filter, Clear Filter, Save Filter); **Location Type Grids**, **Work Package Grids** and **Quality And Documents** show status-coloured grids of every location (Piperack has 15); **Quality Dashboard** shows six punch list and quality form panels; **Work Milestones** shows a super location by activity timeline. **Where this data comes from:** the structure is **Project Setup → Works**; completion comes from **Field Works → Progress → Work Logs**, measured as set in **Project Settings → Project Work Measurement** and **Dashboard Percentages**. On Arena Steel Plant - Phase 1 every percentage shows 0% (Total Work Completed: 0%) although one ECR Footing location is completed, so check the weightages in Project Setup → Works → Measurement Methods if percentages stay at zero."
           },
           {
             "term": "Schedule",
-            "definition": "The dashboard covering the project's performance against time."
+            "definition": "The time-performance dashboard. It has a Tree Version selector, From and To date pickers, Filters and a progress S-curve (with the plant's entities and a Last Updated At refresh), plus panels for **Quality And Documents Burn Down** and **Burn Up** (series Actual End Date, Client End Date, Skyline End Date, Forecast End Date and Planned End Date), **Quality And Documents Status**, **Count vs Client End Date**, **Sold vs Actual End Date** and **Count vs Forecast End Date**. **Where this data comes from:** the Planned, Forecasted, Client, Skyline and Actual end dates are the date columns of **Project Setup → Works** (Other Attributes) and **Project Setup → Schedule** (the same columns appear in Field Works → Detailed Work Logs); actuals follow Work Logs. Without dates in Works and Schedule the charts stay blank."
           },
           {
             "term": "Cost",
-            "definition": "The dashboard covering the project's cost picture."
+            "definition": "The cost dashboard, with **Payables** and **Receivables** tabs. Payables has a left menu: **Cost Activity**; **Cost by Cost Types** (Total Estimate Cost and Total Actual Cost, with Labor, Material and Equipment sections each listing estimated costs by name, code, sub total, contingencies and total, beside actual costs); **Cost by Month** (bar or line graphs of Monthly Breakdown, Committed Cost, Projected Cost, Direct Monthly Costs and the cumulative planned, direct, committed and projected series); **Payments by Month** (invoiced and paid amount against time); **Cost Analytics** (tabs Cost Analytics Inputs, Cost Analytics Summary and Control Budget; an Earned Value Analysis table by phase code with change orders raised and approved, committed and actual cost, cost and schedule variance, CPI, SPI, EAC, ETC, invoiced amount and forecast); and **Cost Graphs** (Cost History and Project Change History). Receivables has **Cost Plan Forecast**, **Monthly Payment Collection** and **Payment Milestones**. **Where this data comes from:** estimate lines come from **Project Setup → Estimate** (built from Global Data cost types), actuals from **Field Works → Cost** (Transaction, Change order, Transfer, Field Logs, which need an approved estimate) and invoices from **Field Works → Invoices**. On Arena Steel Plant - Phase 1 all figures are ₹0 or No Data because no estimate exists."
           },
           {
             "term": "Equipment/Material/Manpower",
-            "definition": "A consolidated dashboard covering the three main resource streams on site."
+            "definition": "A \"Planned vs Actual Productivity\" dashboard with three tabs, **Equipment**, **Material** and **Man Power**, each with a Tree Version selector, a fullscreen view, a chart/table toggle, an **Actual Logs** panel (for example \"Equipment Actual Logs\") and a **Total Plan and Actual** panel. **Where this data comes from:** the actuals are the quantities logged in **Field Works → Progress → Equipment Logs, Material Logs and Manpower Logs** against work orders from **Project Setup → Workorder**. It shows \"No Data available\" on Arena Steel Plant - Phase 1 because no work orders or resource logs exist."
           },
           {
             "term": "Collaboration Items",
-            "definition": "The dashboard covering collaborative activity across the project's forms and workflows."
+            "definition": "A single **Construction Forms** tab with a **Table View** and a **Bar Chart View**. The table counts forms by status, **Created**, **Waiting for approval**, **Approved** and **Rejected**, for RFIs, Submittals and Change Orders. **Where this data comes from:** the RFI, Submittal and Change Order forms raised in **Field Works → Progress**; on Arena Steel Plant - Phase 1 the table shows RFIs Created 3, the three WIRs in the RFI card, and zeros elsewhere. Open it to see where forms are stuck waiting for approval."
           },
           {
             "term": "Quality Progress",
-            "definition": "The dashboard tracking how quality inspection work is advancing, built from the quality logs submitted in Field Works."
+            "definition": "The quality dashboard, built like Construction Progress but for quality. The left menu has **Project Drill Down**, **Project Elements**, **Work Package**, **Location Type**, **Location Type Grids**, **Work Package Grids**, **Quality And Documents**, **Quality Dashboard** and **Work Milestones**. Project Drill Down has **Detailed View**, **System Progress**, **Loop Progress**, **People**, and three issue tabs, **Quality Workflow Issue**, **PunchList** and **Restraint**, each with Entity, Super Location and Users filters and counters (for example Total Punch Lists with RAISED, RECTIFIED and QC_VERIFIED; Total Restraints; Total Quality Workflow Issues with APPROVED and REJECTED). **Where this data comes from:** quality logs submitted in **Field Works → Quality** against work packages mapped to quality folders in **Project Setup → Quality**, plus **Punch Lists** and **Restraints** from Field Works. It shows No Data on Arena Steel Plant - Phase 1 because Folder 1 has no mapped work packages and no punch lists or restraints exist."
           },
           {
             "term": "Safety Analytics",
-            "definition": "The dashboard covering the project's safety picture, built from the safety forms and issues recorded in Field Works."
+            "definition": "The safety dashboard, laid out like Construction Progress: **Project Drill Down** (Detailed View, System Progress, Loop Progress, People, Earned Hours, Quantity), Project Elements, Work Package, Location Type, Location Type Grids, Work Package Grids and the grid and dashboard views. The Detailed View lists entities then super locations, locations and work packages with Actual % and Planned %. **Where this data comes from:** safety forms and issues recorded in **Field Works → Safety** for work packages that have safety forms mapped in **Project Setup → Safety**. It shows No Data on Arena Steel Plant - Phase 1 because no safety form category is set up."
           },
           {
             "term": "Contractors Performance",
-            "definition": "The dashboard for comparing how contractors are performing on the project."
+            "definition": "A \"Contractor Performance\" table (with a bar chart view) that scores each contractor by **Productivity**, **Timelines** and **Quality**. **Where this data comes from:** the contractors on the project's work orders (**Project Setup → Workorder**; contractor names come from **Global Data → Vendors / Sub Contractors**). It shows \"No Data Available\" on Arena Steel Plant - Phase 1 because no work orders exist."
           },
           {
             "term": "Activities & Work Packages Progress",
-            "definition": "The dashboard covering progress at the level of individual activities and work packages."
+            "definition": "A **Cumulative Plan vs Actual** chart with a Project, Work Package or Activity toggle and a Time Period of Day, Week, Month or Year, plus a Tree Version selector, fullscreen and refresh. The card says the actuals are derived from RFI. **Where this data comes from:** plan from the work package dates and budgets in **Project Setup → Works**; actuals from the RFI-based progress in **Field Works → Progress → RFI**."
           },
           {
             "term": "Productivity Reports",
-            "definition": "The dashboard covering output relative to the effort put in, built from productivity logs."
+            "definition": "The productivity dashboard, with five tabs. **Detail Productivity Report** (toggle Direct or Change Order; Tree Version, From Date and To Date, Filters, Download Excel, Manage Columns) lists each work package and phase code with groups of columns: **Budget** (Budgeted, Change and Revised Budgeted Hours and Quantity), **Weekly** (the current week, for example 09-28-2026 to 10-04-2026), **Job To Date**, **Percent** (% Spent, % Installed, Weighted %, Weekly % Gain, Unit % Complete), **Labor Unit**, **Work Factor**, **Earned Hours** and **Forecast Information** (Hours Remaining In Budget, Hours Left To Earn, Hours To Complete, Hours At Completion, Hours Over / Under, Average MNLD). **Indirect and Non Productive Staff** lists indirect and non-productive phase codes with Budgeted, Weekly and JTD Hours and % Spent. **Productivity Report Summary** groups the same by phase code with hours, quantity and % spent for each day of the week. **Efforts Dashboard** has the productivity factor (PF) by day, activity, foreman, supervisor and entity (filters: Phase Code of Direct, Change Order, Indirect or Non Productive, and dates). **Quantity Dashboard** shows % Complete by location type, super location type and activity for Direct and Change Order codes. **Where this data comes from:** budgets, phase codes, schedule IDs and quantities are the work package attributes in **Project Setup → Works** and the phase codes in **Project Setup → Phase Codes**; weekly and JTD hours come from **Field Works → Progress → Productivity Logs**. Everything is 0 on Arena Steel Plant - Phase 1 because no productivity logs exist."
           },
           {
             "term": "Amount Invoiced vs Amount Paid",
-            "definition": "The dashboard comparing what has been billed against what has actually been received — the project's cash position."
+            "definition": "A month-wise \"Invoiced and Paid amount Vs Time\" chart with a Tree Version selector and a download icon. **Where this data comes from:** invoices raised in **Field Works → Invoices** against work orders, and their payments. It shows \"Oops! No Data Found\" on Arena Steel Plant - Phase 1 because no invoices exist. The same chart appears under Cost → Payments by Month and in Workorders."
           },
           {
             "term": "Sync",
-            "definition": "The card for syncing projects data to Excel."
+            "definition": "A card that lists datasets with an action column; it currently has one dataset, **Project Data**, with a **SYNC** button that pushes the project's data to Excel (the Excel and Power BI routes are described under Configurable Analytics). (The button was not clicked during testing.)"
           },
           {
             "term": "Progress Forecast Report",
-            "definition": "The forward-looking dashboard projecting where progress is heading rather than only where it stands."
+            "definition": "A forward-looking grid for one Entity and Super Location Type: Tree Version, Entity, Super Location Type, Activities, **No. of weeks** (default 1 Week), an Activity or Work Package toggle, a schedule or percentage toggle and a legend of Completed, Forecasted dates and Ongoing. Columns are activities (Excavation, Marking, Concreting, Shuttering, Barbending, Deshuttering, PCC) each with Planned Start Date and Planned End Date, one row per super location (AS Civil showed a start of 03-06-2026). **Where this data comes from:** the planned dates in **Project Setup → Works** and **Schedule**, and progress from **Field Works → Work Logs**."
           },
           {
             "term": "DPR report",
-            "definition": "The daily progress report dashboard."
+            "definition": "A work-order daily progress report (the card says \"View workorder dpr reports\"): pick a work order in **Select Workorder** and the table shows, for today's date (for example 01 Oct 2026), each Activity with Estimated Quantity, UOM, Executed Quantity, Balance Quantity To Be Executed, Planned For Current Month, Executed In Current Month, Planned For Today and Executed Today, with Export, Filters and Manage Columns. **Where this data comes from:** the work order's items from **Project Setup → Workorder** ; the Create Workorder form has an **Actuals Derived From** choice (Work Logs, RFIs or Service Entry Sheets) that decides where its executed quantities come from. It is empty on Arena Steel Plant - Phase 1 because there are no work orders. It is not the same as the Daily Progress Report on the Standard Reports tab."
           },
           {
             "term": "Cost Dashboards and Reports",
-            "definition": "The combined cost dashboard and report card on Standard Analytics."
+            "definition": "A **Cost Dashboard** and a **Cost Report**, each with a **Lumpsum** view (the project estimate type is set in **Project Settings → Cost Breakdown Structure**). The dashboard shows the project name, Project ID, Customer, Actual Progress, Budget Cost, Approved Changed Orders, Revised Budget, Actual Cost To Date, Forecast At Completion, Cost Performance Index (Over Budget), Schedule Performance Index (Behind Schedule), Profit Variance, charts and a **Change Order Status** table (ID, Description, Value, Status). The **Cost Report** is a \"Lump Sum Project Cost Tracking Report\": project details (Client, Project Manager, Contract Type, Contract Value, Est. Completion), Budget Cost, Revised Budget, Total Committed To Date, Total Actuals To Date, Forecast At Completion, a Material, Equipment, Labor and Subcontractors table of budget, committed, actual and forecast cost, Commitments & Change Orders and a Forecast Analysis. **Where this data comes from:** **Project Setup → Estimate** for budget, **Field Works → Cost** for actuals and change orders, and the project profile (Customer, Project Manager, contract details) which show N/A when not filled. All values are ₹0 on Arena Steel Plant - Phase 1."
           },
           {
             "term": "Workorders",
-            "definition": "The dashboard covering work order activity across the project."
+            "definition": "A work order dashboard with panels **Variation Orders** (total value, filter, download), **Invoice Status**, **Time Vs Workorder**, **Cost - Quantity Vs Workorder** (Type: Cost V/s Workorder) and **Invoiced and Paid amount Vs Time**, each with a **select Workorders** dropdown. **Where this data comes from:** work orders from **Project Setup → Workorder** and invoices from **Field Works → Invoices**. It shows \"Oops! No Data Found\" on Arena Steel Plant - Phase 1 because there are none."
           },
           {
             "term": "RFI Approval Delays",
-            "definition": "The dashboard surfacing where RFIs are sitting unanswered — often a leading indicator of schedule slippage."
+            "definition": "A table of pending RFI approvals for the plant selected in Tree Version: \"<plant> TOTAL\" and \"<plant> DUE AT\" with Total Planned, Total Actual, **Level Desc** and **Responsible (Contact no)**. **Where this data comes from:** pending RFI approvals from **Field Works → Progress → RFI**, with levels and approvers from **Project Setup → Forms → Approval Workflow**. It shows No Data Available on Arena Steel Plant - Phase 1, where the RFI card lists three RFIs and none under To Be Approved."
           },
           {
             "term": "Work Summary - MIS Report",
-            "definition": "The management-information summary report of work done on the project."
+            "definition": "A management summary table, \"MIS Summary Report\", with a plus/minus tree: Description, **Physical Target**, **Work Complete** and **Variance**, each as Percentage and Count/Length. The tree runs project, plant, then the plant's location types (Footing, Plinth Beam, Brick Wall, ECR Footing, Cable Laying and so on). On Arena Steel Plant - Phase 1 only Pellet Plant (1MTPA) and External Works are listed. **Where this data comes from:** the plant and location type structure in **Project Setup → Works**, targets from the schedule and Works, completion from **Field Works → Work Logs**. All values are 0.00 on the test project."
           }
         ],
         "procedures": [
           {
             "title": "Open a pre-built dashboard",
             "steps": [
-              "Open the project and go to <strong>Data Analytics &amp; Insights</strong>; <strong>Standard Analytics</strong> is the default tab.",
-              "Pick the dashboard card matching your question — for example <strong>Construction Progress</strong> for physical completion, <strong>Amount Invoiced vs Amount Paid</strong> for the cash position, or <strong>RFI Approval Delays</strong> for approval bottlenecks.",
-              "Use <strong>Sync</strong> if you need the project's data pushed out to Excel rather than viewed on screen."
+              "Open the project and go to Data Analytics & Insights; Standard Analytics is the default tab.",
+              "Pick the card matching your question, for example Construction Progress for physical completion, Cost for budget against actual, or RFI Approval Delays for approval bottlenecks.",
+              "Choose the plant in Tree Version (and Entity, dates or work order where offered).",
+              "If the numbers look old, click the refresh icon next to Last Updated At.",
+              "Use the chart/table toggle, Filters, Download Excel or the download icon on a panel to take the data out."
+            ],
+            "note": "Use Sync if you need the project's data pushed out to Excel rather than viewed on screen."
+          },
+          {
+            "title": "Trace a dashboard figure back to its source",
+            "steps": [
+              "Note the plant, entity and the figure on the dashboard (for example ECR Footing, 3 locations, 1 completed).",
+              "Open the matching Field Works screen for the same plant (here Progress → Approve Work Logs → Summary) and compare the totals.",
+              "If they differ, click refresh on the dashboard first, then check the setup in Project Setup → Works.",
+              "For cost figures, check the estimate in Project Setup → Estimate and the entries in Field Works → Cost."
             ]
           }
         ]
@@ -22683,18 +22779,18 @@ const MODULES = [
           {
             "title": "Build and keep a custom view",
             "steps": [
-              "Go to <strong>Data Analytics &amp; Insights → Configurable Analytics</strong>.",
-              "Use <strong>Data Classification</strong>, <strong>Data Trends</strong>, <strong>Counting Tables</strong>, or <strong>Configure Data Tables</strong> to shape the underlying data first.",
-              "Use <strong>Build your own Charts</strong> or <strong>Build your own Reports</strong> to create the view you need.",
-              "Use the <strong>Reports</strong> card to store a personal report you will come back to."
+              "Go to **Data Analytics & Insights → Configurable Analytics**.",
+              "Use **Data Classification**, **Data Trends**, **Counting Tables**, or **Configure Data Tables** to shape the underlying data first.",
+              "Use **Build your own Charts** or **Build your own Reports** to create the view you need.",
+              "Use the **Reports** card to store a personal report you will come back to."
             ]
           },
           {
             "title": "Take project data into Excel or Power BI",
             "steps": [
-              "Go to <strong>Data Analytics &amp; Insights → Configurable Analytics</strong>.",
-              "Use the <strong>Excel</strong> card for project tree uploads and standard report downloads.",
-              "Use the <strong>Power BI</strong> card for the direct integration into an existing company BI setup."
+              "Go to **Data Analytics & Insights → Configurable Analytics**.",
+              "Use the **Excel** card for project tree uploads and standard report downloads.",
+              "Use the **Power BI** card for the direct integration into an existing company BI setup."
             ],
             "note": "For pushing the project's data out to a spreadsheet as a whole, the Sync card on Standard Analytics is the other route."
           }
@@ -22721,9 +22817,9 @@ const MODULES = [
           {
             "title": "Produce a routine progress report",
             "steps": [
-              "Go to <strong>Data Analytics &amp; Insights → Standard Reports</strong>.",
-              "Use the <strong>Reports</strong> or <strong>Other Reports</strong> sub-tab as needed.",
-              "Open the <strong>Daily Progress Report</strong> or <strong>Weekly Progress Report</strong> card and generate the report."
+              "Go to **Data Analytics & Insights → Standard Reports**.",
+              "Use the **Reports** or **Other Reports** sub-tab as needed.",
+              "Open the **Daily Progress Report** or **Weekly Progress Report** card and generate the report."
             ],
             "note": "To retrieve a previously generated report, go to Document Repository and filter by the Daily Progress Reports or Weekly Progress Reports category."
           }
@@ -22735,7 +22831,7 @@ const MODULES = [
     "icon": "insights",
     "tagline": "Pre-built dashboards, a self-serve chart and report builder, and canned progress reports for the project.",
     "color": "#2f6f8f",
-    "overview": "<p>Data Analytics &amp; Insights is the project's BI and reporting hub. Standard Analytics holds 18 pre-built dashboards covering progress, schedule, cost, resources, quality, safety, contractor performance, and management reporting. Configurable Analytics provides self-serve data shaping, chart and report builders, and Excel and Power BI routes. Standard Reports holds the canned Daily and Weekly Progress Reports. Everything here reflects what has been logged upstream in Field Works and configured in Project Setup.</p>",
+    "overview": "<p>Data Analytics & Insights is the project's BI and reporting hub. Standard Analytics holds 18 pre-built dashboards covering progress, schedule, cost, resources, quality, safety, contractor performance, and management reporting. Configurable Analytics provides self-serve data shaping, chart and report builders, and Excel and Power BI routes. Standard Reports holds the canned Daily and Weekly Progress Reports. Everything here reflects what has been logged upstream in Field Works and configured in Project Setup.</p>",
     "navigation": [
       "Open a <strong>Project</strong>, then go to <strong>Data Analytics &amp; Insights</strong> in the left sidebar.",
       "Use the tab bar to switch between <strong>Standard Analytics</strong>, <strong>Configurable Analytics</strong>, and <strong>Standard Reports</strong>.",
