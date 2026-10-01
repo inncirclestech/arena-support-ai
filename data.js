@@ -7067,6 +7067,33 @@ const QA_PROJECTSETTINGS = [
     question: "Which Project Settings change Project Setup tabs?",
     answer: "**Phase Code Settings** (unique or multiple-use phase codes), **Configure Task Form** (Tasks), **Cost Breakdown Structure** (Estimate), **Drawing Status** (Drawing Register), plus **Work Logs Templates** and **Quality Work Logs Templates** for the Field Works screens built from the Works structure.",
     tags: ["project settings project setup","settings affect project setup","which settings change setup tabs"]
+  },
+  {
+    action: "explain",
+    object: "field works settings link",
+    scope: "module",
+    section: "Look, Forms & Field Templates",
+    question: "Which Project Settings change what Field Works and Data Analytics show?",
+    answer: "**Work Logs Templates** and **Quality Work Logs Templates** (drill-down of the logging screens), **Project Work Measurement** (Percentage Based or Effort Based), **Dashboard Percentages** (Worklogs, Workorder and worklogs, P6 or Milestone based), **Productivity Log Settings** (Logging Type and fields), **Quality Logs** (skip Level 1), **Punch Lists & Restraints** and **Daily Safety Issues & Observations** (categories and priorities with due hours), **Progress Forms** and **Workflow Issues** (priorities), and **Quick Apps** (team and workflow). Each is described under its own heading in this module.",
+    tags: ["settings that change field works","settings that change analytics","project settings field works link","which settings affect work logs","which settings change dashboards"]
+  },
+  {
+    action: "explain",
+    object: "field works settings link",
+    scope: "module",
+    section: "Look, Forms & Field Templates",
+    question: "Where do I set priorities and due hours for punch lists, restraints and safety issues?",
+    answer: "**Project Settings → Punch Lists & Restraints** holds Punch Lists Priority and Restraints Priority, and **Daily Safety Issues & Observations** holds Daily Safety Issues Priority and Observations Priority. On Arena Steel Plant - Phase 1 all four are High 4 hours, Medium 24, Low 48. Workflow issue priorities for forms are in **Workflow Issues** and **Progress Forms**.",
+    tags: ["punch list priority","restraint priority due hours","safety issue priority","where to set priority due hours","priority high medium low 4 24 48"]
+  },
+  {
+    action: "explain",
+    object: "field works settings link",
+    scope: "module",
+    section: "Look, Forms & Field Templates",
+    question: "Why does Field Works Quick Apps say \"Please configure Quick Apps in global\"?",
+    answer: "The apps are built in **Global Data → Quick Apps**; the project side is **Project Settings → Quick Apps** (a Tree Versions dropdown, the list of apps, a Team table and a Workflow table). On Arena Steel Plant - Phase 1 the Team and Workflow tables are empty, so the Field Works card shows only that message.",
+    tags: ["quick apps global message","configure quick apps","quick apps project settings","quick apps empty field works"]
   }
 ];
 
@@ -23577,27 +23604,27 @@ const MODULES = [
           },
           {
             "term": "Work Logs Templates",
-            "definition": "Sets which of 7 logging structures the <strong>Field Works → Progress → Work Logs</strong> screen uses for this project, under \"Work Log Reference — At what level do you want to log works?\": <strong>Work Package to Location Logging</strong> (status of Locations under each Work Package — the default on most projects), <strong>Location to Work Package Logging</strong> (the reverse: pick a Location, see its Work Packages, grouped by Super Location), <strong>Location to Work Package bulk logging</strong> (the same but with multiple filters, for logging or raising Restraints against several Locations at once), <strong>Super Location to Location Logging</strong>, <strong>Worklogs in Scheduled View</strong> and <strong>Quantity Work Logging</strong> (both present the Tree Version as a WBS/schedule instead of a location tree), and <strong>Worklogs enable by Certified RFIs</strong> (a location only becomes loggable once its RFI is certified). Each option shows a live preview before Save Changes. This is why the Work Logs screen can look structurally different from one project to the next — it is a per-project setting, not a different product version."
+            "definition": "Sets which of 7 logging structures the <strong>Field Works → Progress → Work Logs</strong> screen uses for this project, under \"Work Log Reference — At what level do you want to log works?\": <strong>Work Package to Location Logging</strong> (status of Locations under each Work Package — the default on most projects), <strong>Location to Work Package Logging</strong> (the reverse: pick a Location, see its Work Packages, grouped by Super Location), <strong>Location to Work Package bulk logging</strong> (the same but with multiple filters, for logging or raising Restraints against several Locations at once), <strong>Super Location to Location Logging</strong>, <strong>Worklogs in Scheduled View</strong> and <strong>Quantity Work Logging</strong> (both present the Tree Version as a WBS/schedule instead of a location tree), and <strong>Worklogs enable by Certified RFIs</strong> (a location only becomes loggable once its RFI is certified). Each option shows a live preview before Save Changes. This is why the Work Logs screen can look structurally different from one project to the next — it is a per-project setting, not a different product version. **Where it takes effect:** the page has **Project** and **Tree Version** selectors, so the choice can apply to the whole project or to one plant, and a gear beside each option. Arena Steel Plant - Phase 1 uses **Work Package to Location Logging**: **Field Works → Progress → Work Logs** then shows a Location Types tree (Media, Footing) with each work package opening a grid of super locations and locations. The same screen feeds Submitted Work Logs, Approve Work Logs, Detailed Work Logs, **My Desk → Recent Work Logs** and the progress dashboards in Data Analytics."
           },
           {
             "term": "Quality Work Logs Templates",
-            "definition": "The same idea as Work Logs Templates, applied to <strong>Field Works → Quality</strong> instead — but with only 2 of the 7 options available: <strong>Work Package to Location Logging</strong> and <strong>Super Location to Location Logging</strong>. Whichever is selected controls how an inspector finds what is ready to inspect on the Quality tab."
+            "definition": "The same idea as Work Logs Templates, applied to <strong>Field Works → Quality</strong> instead — but with only 2 of the 7 options available: <strong>Work Package to Location Logging</strong> and <strong>Super Location to Location Logging</strong>. Whichever is selected controls how an inspector finds what is ready to inspect on the Quality tab. (Work Package to Location Logging is selected on Arena Steel Plant - Phase 1.)"
           },
           {
             "term": "Project Work Measurement",
-            "definition": "Configures how work quantities and measurements are captured and structured for this project."
+            "definition": "Titled \"Progress And Quality Work Measurements Settings\": **How do you want to measure the Activity completion percentage?** with two options, **Percentage Based** (directly includes the percentage weightage of the activity; selected on Arena Steel Plant - Phase 1) and **Effort Based** (includes the man hours required for the activity). It changes how completion % is worked out for the progress and quality screens in **Field Works** and the dashboards in **Data Analytics & Insights**. Save Changes applies it."
           },
           {
             "term": "Quality Logs",
-            "definition": "Configures the structure and behavior of quality inspection logging for this project."
+            "definition": "**Levels:** the question **\"Do you want to skip level 1?\"** with Yes or No (No on Arena Steel Plant - Phase 1). With No, **Field Works → Quality → Quality Level 2** only opens for a work package once its Level 1 is approved; with Yes, Level 1 can be skipped. Save Changes applies it."
           },
           {
             "term": "Punch Lists & Restraints",
-            "definition": "Configures how punch list items and restraints are structured and tracked on this project."
+            "definition": "Three lists with Add and per-row edit and delete. **Punch Lists Category** (none defined on Arena Steel Plant - Phase 1), **Punch Lists Priority** and **Restraints Priority** (High 4 hours, Medium 24, Low 48; the number is the due hours). These feed the Priority choices on **Field Works → Quality → Punch Lists** and **Progress → Restraints**; restraint categories come from **Global Data → Settings → Hindrance Category** instead."
           },
           {
             "term": "Daily Safety Issues & Observations",
-            "definition": "Configures how daily safety issues and observations are structured and captured for this project."
+            "definition": "Two priority lists with Add Priority and per-row edit and delete: **Daily Safety Issues Priority** and **Observations Priority** (High 4 hours, Medium 24, Low 48 on Arena Steel Plant - Phase 1). They set the priority choices and due hours on **Field Works → Safety → Daily Safety Issues**."
           }
         ],
         "procedures": [],
@@ -23646,7 +23673,7 @@ const MODULES = [
           },
           {
             "term": "Quick Apps",
-            "definition": "Configures the lightweight custom mini-workflows (Quick Apps) available on this project."
+            "definition": "Configures the lightweight custom mini-workflows (Quick Apps) available on this project. **What is on the page:** a **Tree Versions** dropdown, the list of Quick Apps built in **Global Data → Quick Apps** (Bid or Estimate Log, Subcontractor Bid Proposal, Observation Report, Non-Conformance Report, Completion Notice, Initial Material Receiving, Storage Inspections, Stored Equipment Maintenance, Variance Request, Initial Electrical Equipment Receiving, Cable Receiving Insulation Resistance, Equipment Productivity Planner, plus Proposal Update, Proposal Close-Out and New Proposal), a **Team** table (Name, Edit & View, View) and a **Workflow** table (approval levels and approvers), with Save Changes. Both tables are empty on Arena Steel Plant - Phase 1, and the Field Works Quick Apps card shows \"Please configure Quick Apps in global\"."
           },
           {
             "term": "Owner Dashboard",
@@ -23658,7 +23685,7 @@ const MODULES = [
           },
           {
             "term": "Progress Forms",
-            "definition": "Configures the forms used to capture and report project progress."
+            "definition": "\"Settings needed for Progress Forms: RFI, Change Order, Submittals, Delay Forms and Meetings Minutes\": one tab per form, each with **Add Priority** (\"Configure priority levels and sequence\"; Priority, Due Hours, Actions). None are defined for RFI on Arena Steel Plant - Phase 1. These priorities apply to the forms raised in **Field Works → Progress**."
           },
           {
             "term": "Projects Forms",
@@ -23666,7 +23693,7 @@ const MODULES = [
           },
           {
             "term": "Workflow Issues",
-            "definition": "Configures how issues raised within configured workflows are structured and routed."
+            "definition": "\"Settings needed for Workflow Issues\": top tabs **Progress**, **Quality**, **Safety**, **Custom Forms**, **Quick Apps**, **Drawing Management** and **Task Forms**, with sub-tabs such as RFI, Submittal, Change Order, Delay Form, Time Sheet, Request for Information and Transmittal, each with **Add Priority** (Priority and Due Hours). Nothing is defined on Arena Steel Plant - Phase 1. These priorities and due hours apply to the workflow issues listed in **Field Works** (Issues, Quality Workflow Issues, Drawing Management, Invoices) and in **My Desk → My Actions**."
           },
           {
             "term": "Project Driven",
@@ -23686,11 +23713,11 @@ const MODULES = [
           },
           {
             "term": "Productivity Log Settings",
-            "definition": "Configures the Logging Type (Phase Code or Level 3s) and the fields used in Productivity Logs for this project."
+            "definition": "Three tabs. **Logging Type**: **Create Productivity Logs By Phase Code** or **Create Productivity Logs By Locations** (By Locations on Arena Steel Plant - Phase 1). **Timesheets**: the standard fields of the time log (Employee, Phase Code, Entity, Super Location, Location, Craft, Class, Revised Budgeted Hours, JTD Hours, Remaining Hours) each with Required, Show on cards and a field type, plus **Add Field**. **Quantity**: Phase Code, Entity, Super Location, Location, Time Sheet Hours, Revised Budgeted Quantity, JTD Quantity, Remaining Quantity, plus **Add Field**. It decides the columns and mode of **Field Works → Progress → Productivity Logs → Create**."
           },
           {
             "term": "Dashboard Percentages",
-            "definition": "Configures how completion percentages are calculated and displayed on project dashboards."
+            "definition": "Titled \"Dashboard Percentage Settings\": **Select View** with **Worklogs** (percentages based on worklogs logged; selected on Arena Steel Plant - Phase 1), **Workorder and worklogs**, **P6, Workorder and Worklogs** (planned percentages from P6, actual from workorder and worklogs) and **Milestone, Workorder and Worklogs** (planned from milestones, actual from workorder and worklogs), plus an **RFI** view. It decides where the planned and actual percentages shown on **Data Analytics & Insights** dashboards come from."
           },
           {
             "term": "My Desk Dashboards",
