@@ -5978,13 +5978,13 @@ const QA_FIELDWORKS = [
     tags: ["quick apps global","please configure quick apps in global","quick apps not showing","quick apps empty","quick apps project settings","quick apps team workflow"]
   },
   {
-    action: "explain",
-    object: "quality level 1 empty",
+    action: "view",
+    object: "quality work package list empty",
     scope: "module",
-    section: "Quality",
+    section: "Quality Logs Under Each Template",
     question: "Why does Quality Level 1 say \"No ready Work Packages available to log Quality check lists\"?",
-    answer: "Inspections are logged against work packages that have a quality form folder mapped to them in **Project Setup → Quality** (Folders → **Map Work Packages**), and whose work is ready. On Arena Steel Plant - Phase 1 **Folder 1** has no mapped work packages, so Piperack and ECR both show this message, even on the **All** tab. Map the work packages in Project Setup, then they appear under Quality Level 1 (and Level 2 once Level 1 is approved).",
-    tags: ["quality level 1 empty","no ready work packages","quality check lists missing","cant log quality inspection","map work packages quality","quality folder not mapped"]
+    answer: "On Arena Steel Plant - Phase 1 and Arena Roads and Highways Contractors no work package is mapped to a quality folder, so none is ready to inspect. Map work packages in **Project Setup → Quality** and check the layout in **Project Settings → Quality Work Logs Templates**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["no ready work packages","quality level 1 empty","quality check lists empty","map work packages quality"]
   },
   {
     action: "explain",
@@ -6066,6 +6066,213 @@ const QA_FIELDWORKS = [
     question: "Why is Field Works Workorder empty?",
     answer: "It lists the work orders created in **Project Setup → Workorder**; none exist on Arena Steel Plant - Phase 1, so it shows \"No Data\". Once work orders exist they feed Equipment, Material and Manpower Logs, Invoices and the Workorders analytics.",
     tags: ["field works workorder empty","workorder no data","where do work orders come from","workorder lineage"]
+  },
+  {
+    action: "view",
+    object: "work logs templates",
+    scope: "module",
+    section: "Work Logs Under Each Template",
+    question: "Which Work Logs templates exist and how do they differ?",
+    answer: "Seven templates exist under **Project Settings → Work Logs Templates**: **Work Package to Location Logging**, **Location to Work Package Logging**, **Location to Work Package bulk logging**, **Super Location to Location Logging**, **Worklogs in Scheduled View**, **Quantity Work Logging** and **Worklogs enable by Certified RFIs**. The first and fourth are the most common on the test site. In Work Package to Location you pick the work first and see a grid of locations; in Location to Work Package you see locations as rows and work packages as columns; in Super Location to Location you click a location tile and then choose its work package from a list. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["work logs templates","template differences","work log layouts","seven templates","work package to location","location to work package","super location to location"]
+  },
+  {
+    action: "view",
+    object: "work logs template in use",
+    scope: "module",
+    section: "Work Logs Under Each Template",
+    question: "How do I find which Work Logs template my project uses?",
+    answer: "Open **Project Settings → Work Logs Templates** and read which option under **Work Log Reference** is ticked. The **Project / Tree Version** switch shows whether a single Tree Version has its own choice. The gear beside the option shows how the form behaves. Do not click **Save Changes** unless you mean to change it.",
+    tags: ["which template","work logs template","find work logs template","project settings work logs templates","what layout work logs"]
+  },
+  {
+    action: "view",
+    object: "work package to location logging",
+    scope: "module",
+    section: "Work Logs Under Each Template",
+    question: "How does Work Package to Location Logging work?",
+    answer: "You choose a **Location Type** and a work package on the left, and the right shows every super location and location as a coloured cell (grey not yet started, blue ready, orange in progress, green completed). Click a cell to open the log form, fill in the values and click **Submit**. It is the layout on Arena Steel Plant - Phase 1.",
+    tags: ["work package to location logging","wp to location","work logs grid","location cells","log work package"]
+  },
+  {
+    action: "view",
+    object: "location to work package logging",
+    scope: "module",
+    section: "Work Logs Under Each Template",
+    question: "How does Location to Work Package Logging work?",
+    answer: "The Work Logs screen shows **Level 2 Types** on the left and a matrix on the right: locations are rows and work packages are columns, with filters for **Location Type**, **Level 3** and **Work Package**. Click the cell where they meet to open the log form. A \"-\" means that work package is not mapped to the location. It is the layout on Arena Residential Project.",
+    tags: ["location to work package logging","location to wp","work logs matrix","rows locations columns work packages","level 2 types"]
+  },
+  {
+    action: "view",
+    object: "super location to location logging",
+    scope: "module",
+    section: "Work Logs Under Each Template",
+    question: "How does Super Location to Location Logging work?",
+    answer: "Each super location is a panel of blue location tiles. Click a tile and the right pane lists the work packages mapped to that location; click the arrow beside one to open the log form. Chips **Ready**, **Delayed**, **Completed** and **All** and **Search Location** narrow the tiles. It is the layout on City Development Project and seven other test projects.",
+    tags: ["super location to location logging","super location tiles","location tiles","work packages mapped to location","ready delayed completed"]
+  },
+  {
+    action: "view",
+    object: "bulk work logging",
+    scope: "module",
+    section: "Work Logs Under Each Template",
+    question: "Why do I see Single Log and Bulk Log options on some projects but not others?",
+    answer: "The mode choice (**Single Log**, **Bulk Log - Work log**, **Bulk Log - Quantity**, **Bulk Log - Work Hours**) appeared on the Work Package to Location and Location to Work Package layouts. The Super Location to Location layout on City Development Project showed no mode choice. The layout is set in **Project Settings → Work Logs Templates**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["single log","bulk log","bulk log work log","no bulk logging","bulk mode missing","logging mode"]
+  },
+  {
+    action: "log",
+    object: "bulk work log",
+    scope: "module",
+    section: "Work Logs Under Each Template",
+    question: "How do I log work for many locations at once?",
+    answer: "Where the screen offers it, select **Bulk Log - Work log** (or Quantity or Work Hours), tick the work packages in the **Work Package** drop-down, tick the locations or **Select All**, adjust the percentage or quantity in each cell and click **LOG WORK**. **Clear all** resets the grid.",
+    tags: ["bulk log","log many locations","bulk work log steps","select all locations","log work button"]
+  },
+  {
+    action: "view",
+    object: "worklogs scheduled view",
+    scope: "module",
+    section: "Work Logs Under Each Template",
+    question: "What is Worklogs in Scheduled View?",
+    answer: "It is one of the seven Work Logs templates. The settings page says it \"Presents the Tree Version in WBS form\" (work breakdown structure). Its gear opens **Advance Settings** with **Slider** or **Radio Buttons**, an **Interval** value and a **Preview**. No project on the test site uses it, so the work-logging screen itself was not seen. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["scheduled view","worklogs in scheduled view","wbs form","slider radio buttons","work log interval"]
+  },
+  {
+    action: "view",
+    object: "quantity work logging",
+    scope: "module",
+    section: "Work Logs Under Each Template",
+    question: "What is Quantity Work Logging?",
+    answer: "It is one of the seven Work Logs templates. The settings page says it \"Presents the Tree Version in WBS form\" and its gear offers **Day**, **Week** and **Month**. No project on the test site uses it, so the logging screen was not seen. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["quantity work logging","work logs day week month","wbs quantity logging"]
+  },
+  {
+    action: "view",
+    object: "worklogs certified rfis",
+    scope: "module",
+    section: "Work Logs Under Each Template",
+    question: "What does Worklogs enable by Certified RFIs do?",
+    answer: "The settings page says \"Worklogs will get enabled for the locations for which RFIs are certified\", so a location can only be logged after its RFI is certified. No project on the test site uses it, so it was not seen working. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["worklogs enable by certified rfis","rfi certified work log","work logs rfi gate","enable work logs after rfi"]
+  },
+  {
+    action: "view",
+    object: "location to work package bulk logging",
+    scope: "module",
+    section: "Work Logs Under Each Template",
+    question: "What is Location to Work Package bulk logging?",
+    answer: "It is one of the seven Work Logs templates. The settings page says \"Displays status of Work Packages mapped to each of Location using multiple filters. Raising Restraints against multiple Locations\". No test project uses it. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["location to work package bulk logging","bulk logging template","restraints multiple locations"]
+  },
+  {
+    action: "view",
+    object: "work logs gear advanced settings",
+    scope: "module",
+    section: "Work Logs Under Each Template",
+    question: "What does the gear next to each Work Logs template do?",
+    answer: "It opens **Advanced Settings** for that template: **Checkbox**, **Text Box** or interval entry for **Work Completed**; **Actual Start & End Dates**; **Required Fields** (Percentage, Quantity, Hours, Comments); **Interval Quantity Logging** (Quantity or Measurement); and an **Auto Log** option where one value typed by hand fills in the other two. These decide which fields are editable on the log form. The Scheduled View and Quantity Work Logging gears have their own options.",
+    tags: ["advanced settings gear","work log gear","auto log option","text box checkbox work logging","actual start and end dates","interval quantity logging"]
+  },
+  {
+    action: "view",
+    object: "greyed actual quantity",
+    scope: "module",
+    section: "Work Logs Under Each Template",
+    question: "Why are Actual Quantity and Actual Hours greyed out on my Work Logs form?",
+    answer: "The template's gear has **Auto Log** switched on with another value as the one you log by hand. On City Development Project, **Percentage** is logged by hand, so **Actual Quantity** and **Actual Hours** are filled automatically and greyed. Check the gear under **Project Settings → Work Logs Templates**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["actual quantity greyed","auto log","greyed fields work log","cannot type quantity","work completed text box"]
+  },
+  {
+    action: "view",
+    object: "cumulative quantity table",
+    scope: "module",
+    section: "Work Logs Under Each Template",
+    question: "What is the CUMULATIVE QUANTITY table on a work log?",
+    answer: "On projects whose gear uses **Interval Quantity Logging** (Arena Residential Project), the log form lists earlier entries for that location: **User**, **Logged Date**, **Worked on Date**, **Cumulated Quantity**, **Actual Quantity**, **Approval Status** and **Comments**. **Cumulated Quantity** is the running total.",
+    tags: ["cumulative quantity","cumulated quantity","quantity history work log","previous entries work log"]
+  },
+  {
+    action: "view",
+    object: "work logs filters",
+    scope: "module",
+    section: "Work Logs Under Each Template",
+    question: "What does Filters do on the Work Logs screen?",
+    answer: "It opens **Custom Columns Filter**, which lists the custom columns defined on locations in the project (on Arena Residential Project: **TEST DATE** and **Type of Flat**) with **Clear** and **Apply**. They are location columns defined for the project. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["work logs filters","custom columns filter","filter locations work logs","type of flat filter"]
+  },
+  {
+    action: "view",
+    object: "work logs data source",
+    scope: "module",
+    section: "Work Logs Under Each Template",
+    question: "Where do the locations and work packages on the Work Logs screen come from?",
+    answer: "From **Project Setup → Works**: the entities, super locations, locations and the work packages mapped to them. Which of them appear, and in which layout, depends on **Project Settings → Work Logs Templates**. In the matrix layout a \"-\" marks a work package that is not mapped to that location.",
+    tags: ["work logs locations source","work logs work packages source","project setup works work logs","where work logs come from"]
+  },
+  {
+    action: "view",
+    object: "progress cards differ",
+    scope: "module",
+    section: "Work Logs Under Each Template",
+    question: "Why does the Progress tab show different cards on different projects?",
+    answer: "Arena Residential Project showed 22 cards (including Submittals, Change Orders, Delay Forms and Transmittals) while Arena Steel Plant - Phase 1 shows 18. The extra form cards follow the project's form settings. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["progress cards differ","more cards progress","submittals change orders delay forms","progress tab 22 cards"]
+  },
+  {
+    action: "view",
+    object: "upload excel work logs",
+    scope: "module",
+    section: "Work Logs Under Each Template",
+    question: "What do Upload Excel and Download Excel do on Work Logs?",
+    answer: "**Upload Excel** opens a box saying \"Click to upload your files here\" with **Close**. **Download Excel** is the matching export button. Both appear in all three live layouts. Neither was used, so the sheet layout and what happens on upload are not confirmed. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["upload excel work logs","download excel work logs","work logs excel"]
+  },
+  {
+    action: "view",
+    object: "quality work logs templates",
+    scope: "module",
+    section: "Quality Logs Under Each Template",
+    question: "What are the Quality Work Logs templates?",
+    answer: "Two layouts for **Quality Level 1 / Level 2**, chosen in **Project Settings → Quality Work Logs Templates**: **Work Package to Location Logging** (pick the quality work package, then a location) and **Super Location to Location Logging** (click a location tile, then pick its quality work package). No Project / Tree Version switch or gear exists on this page. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["quality work logs templates","quality templates","quality layouts","quality work log reference","super location quality"]
+  },
+  {
+    action: "view",
+    object: "quality template in use",
+    scope: "module",
+    section: "Quality Logs Under Each Template",
+    question: "How do I find which Quality template my project uses?",
+    answer: "Open **Project Settings → Quality Work Logs Templates** and read the ticked option, or open **Field Works → Quality → Quality Level 1**: a **Work Packages** list with **Ready / All** means Work Package to Location; panels of location tiles with **Filters** means Super Location to Location.",
+    tags: ["which quality template","quality template in use","quality layout","quality level 1 layout"]
+  },
+  {
+    action: "view",
+    object: "quality filters",
+    scope: "module",
+    section: "Quality Logs Under Each Template",
+    question: "What can I filter by on Quality Level 1 in the Super Location layout?",
+    answer: "**Super Locations**, **Folders** and **Locations Types**, with **Apply Filter**, **Clear Filter** and **Save Filter**, plus **Ready / All** chips and a search box.",
+    tags: ["quality filters","save filter quality","quality level 1 filters","folders super locations filter"]
+  },
+  {
+    action: "view",
+    object: "snag lists punch lists label",
+    scope: "module",
+    section: "Quality Logs Under Each Template",
+    question: "Why is the card called Snag Lists on one project and Punch Lists on another?",
+    answer: "Arena Residential Project shows **Snag Lists** on its Quality tab and Arena Steel Plant - Phase 1 shows **Punch Lists**; the reason for the different name was not confirmed. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["snag lists","punch lists","quality card name","snag list vs punch list"]
+  },
+  {
+    action: "view",
+    object: "handover tab",
+    scope: "module",
+    section: "Quality Logs Under Each Template",
+    question: "Why does my project show a Handover tab instead of Quality?",
+    answer: "Handover 2.0 shows a second-level tab named **Handover** where other projects show **Quality** (Progress, Quick Apps, Handover, Project Forms, Cost). What controls this was not confirmed. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["handover tab","quality tab renamed","handover 2.0"]
   }
 ];
 
@@ -7581,6 +7788,24 @@ const QA_PROJECTSETTINGS = [
     question: "Where do I see the Terms and Conditions clauses?",
     answer: "Edit them in <strong>Project Settings → Terms and Conditions</strong> (26 clauses on Arena Steel Plant - Phase 1, written as work order terms). The screen that prints them was not found on the test project.",
     tags: ["terms and conditions clauses","work order terms and conditions","where terms and conditions show"]
+  },
+  {
+    action: "view",
+    object: "work logs templates usage",
+    scope: "module",
+    section: "Look, Forms & Field Templates",
+    question: "Which projects use which Work Logs template?",
+    answer: "On the test site, **Work Package to Location Logging** is ticked on 15 of 30 projects, **Location to Work Package Logging** on 6 (for example Arena Residential Project), **Super Location to Location Logging** on 8 (for example City Development Project), and no project ticks **Location to Work Package bulk logging**, **Worklogs in Scheduled View**, **Quantity Work Logging** or **Worklogs enable by Certified RFIs**. Check yours in **Project Settings → Work Logs Templates**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["work logs templates usage","which projects use which template","work logs template counts","template in use"]
+  },
+  {
+    action: "view",
+    object: "work logs gear advanced settings",
+    scope: "module",
+    section: "Look, Forms & Field Templates",
+    question: "What does the gear beside a Work Logs template do?",
+    answer: "It opens **Advanced Settings** for that template: **Checkbox**, **Text Box** or interval entry, **Actual Start & End Dates**, **Required Fields**, **Interval Quantity Logging** and an **Auto Log** option. It controls which fields are editable on the Work Logs form. The Scheduled View gear has **Slider / Radio Buttons** and an **Interval**; the Quantity Work Logging gear has **Day / Week / Month**. Close without saving to leave settings unchanged.",
+    tags: ["gear work logs template","advanced settings work logs","auto log","work logs settings gear"]
   }
 ];
 
@@ -23808,7 +24033,7 @@ const MODULES = [
           },
           {
             "term": "Work Logs and the Project Settings that shape them",
-            "definition": "Five project settings change what Progress and Quality show. **Work Logs Templates** chooses the drill-down for Work Logs (seven options; it can be set for the whole project or per Tree Version). **Quality Work Logs Templates** does the same for Quality (two options). **Project Work Measurement** decides how completion % is measured: **Percentage Based** (the activity's percentage weightage, selected on Arena Steel Plant - Phase 1) or **Effort Based** (man hours). **Dashboard Percentages** decides how dashboard percentages are calculated: **Worklogs** only (selected here), **Workorder and worklogs**, **P6, Workorder and Worklogs** (planned from P6) or **Milestone, Workorder and Worklogs** (planned from milestones), plus an **RFI** view. **Productivity Log Settings** controls Productivity Logs (see that card). Changing any of them changes how the same logs are shown or counted; it does not delete data."
+            "definition": "Five project settings change what Progress and Quality show. **Work Logs Templates** chooses the drill-down for Work Logs (seven options; it can be set for the whole project or per Tree Version). **Quality Work Logs Templates** does the same for Quality (two options). **Project Work Measurement** decides how completion % is measured: **Percentage Based** (the activity's percentage weightage, selected on Arena Steel Plant - Phase 1) or **Effort Based** (man hours). **Dashboard Percentages** decides how dashboard percentages are calculated: **Worklogs** only (selected here), **Workorder and worklogs**, **P6, Workorder and Worklogs** (planned from P6) or **Milestone, Workorder and Worklogs** (planned from milestones), plus an **RFI** view. **Productivity Log Settings** controls Productivity Logs (see that card). Changing any of them changes how the same logs are shown or counted; it does not delete data. For how the screen differs under each of the seven Work Logs templates, see **Work Logs Under Each Template**."
           },
           {
             "term": "Productivity Log Settings (Project Settings)",
@@ -24042,6 +24267,120 @@ const MODULES = [
         ]
       },
       {
+        "heading": "Work Logs Under Each Template",
+        "intro": "<p>Work Logs is one card with several possible layouts. <strong>Project Settings → Work Logs Templates</strong> chooses the layout for the project, and the <strong>gear</strong> beside each option decides what the log form asks for. A <strong>Module Admin</strong> or <strong>PM</strong> sets this once; <strong>Field Users</strong> then log work with whichever layout the project uses.</p><p>Seven templates exist. On the test site three are in use (<strong>Work Package to Location Logging</strong>, <strong>Location to Work Package Logging</strong> and <strong>Super Location to Location Logging</strong>) and four are not selected by any of its 30 projects. Everything below was read from the live screens; the four unused templates are described only as far as the settings page shows. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.</p>",
+        "definitions": [
+          {
+            "term": "Which template does my project use?",
+            "definition": "Open **Project Settings → Work Logs Templates**. The ticked option under **Work Log Reference – At what level do you want to log works?** is the layout. The **Project / Tree Version** switch at the top lets the setting apply to the whole project or to one Tree Version; on the test site every Tree Version of every project showed the same choice as its project. The seven options, in page order: **Work Package to Location Logging**, **Location to Work Package Logging**, **Location to Work Package bulk logging**, **Super Location to Location Logging**, **Worklogs in Scheduled View**, **Quantity Work Logging**, **Worklogs enable by Certified RFIs**."
+          },
+          {
+            "term": "Which projects use which template (test site)",
+            "definition": "Of 30 projects: **Work Package to Location Logging** is ticked on 15 (for example **Arena Steel Plant - Phase 1**, **Interior Project**, **Handover 2.0**, **Arena Industrial Project**); **Location to Work Package Logging** on 6 (**Arena Residential Project**, **Borosil Renewables Limited**, **Ramky Eminent**, **Elevated Corridor**, **Road Maintenance Project**, **Arena Retail Condos**); **Super Location to Location Logging** on 8 (**City Development Project**, **OFFSHORE INFRASTRUCTURES LIMITED**, **595 MWac Floating Solar PV**, **NHM Government Hospitals**, **Arena Hydro Power Plant Project**, **Arena Airport Project**, **Jal Jeevan Mission**, **FEL Management**). **QA Test Project - Doc Research** has none ticked. No project ticks **Location to Work Package bulk logging**, **Worklogs in Scheduled View**, **Quantity Work Logging** or **Worklogs enable by Certified RFIs**."
+          },
+          {
+            "term": "The three live templates side by side",
+            "definition": "**Starts with:** Work Package to Location = a tree of **Location Types** and their work packages on the left; Location to Work Package = **Level 2 Types** on the left (each opens to its super location); Super Location to Location = no left tree, one panel per super location.\n**Grid:** Work Package to Location = pick a work package, then a grid of super locations by series with one coloured cell per location; Location to Work Package = a matrix with locations as rows and work packages as columns; Super Location to Location = blue location tiles grouped under each super location, and the work packages appear in a pane on the right after you click a tile.\n**Logging modes:** **Single Log**, **Bulk Log - Work log**, **Bulk Log - Quantity** and **Bulk Log - Work Hours** appear for the first two. The Super Location layout showed no mode choice, only single logs.\n**Filters:** Location to Work Package has **Location Type**, **Level 3** and **Work Package** drop-downs; Work Package to Location has **SuperLocation** and **From Location** filters in the bulk modes; the Super Location layout has **Ready / Delayed / Completed / All** chips and **Search Location**. All three have a **Filters** button.\n**All three:** an **Entity** picker, a colour legend (Not yet started grey, Ready to work blue, In Progress orange, Completed green), **Upload Excel**, **Download Excel**, and the same log form behind each cell."
+          },
+          {
+            "term": "Work Package to Location Logging",
+            "definition": "Pick the work, then see its locations. You choose a location type and a work package on the left; the right shows every super location and location with a coloured status cell. Click a cell to open the log form. Selected on Arena Steel Plant - Phase 1 (Piperack: **Media**, **Footing**; work packages such as **EXC-1 | Excavation for footing**). The page describes it as \"Displays status of Locations w.r.t each Work Package\"."
+          },
+          {
+            "term": "Location to Work Package Logging",
+            "definition": "Pick the place, then see all the work in it. On **Arena Residential Project** (Tree Version **Tower Spire**, entity **Tower**) the left list **Level 2 Types (3)** shows **Ground Floor**, **Floor** and **Basements**; the right shows a matrix with locations (G01, G02, Corridor 1 and so on) as rows and work packages (TW-Barbending-1 | Wall barbending - Mivan and so on) as columns. A cell shows the work package code and a chevron, and \"-\" where that work package is not mapped to the location. The page describes it as \"Displays status of Work Packages mapped to each Location in each Super Location\"."
+          },
+          {
+            "term": "Super Location to Location Logging",
+            "definition": "Pick a super location, then a location, then the work. On **City Development Project** (Tree Version **Package 8**) each super location is a panel (for example **J-119 to J-133**, **Locations : 6**) with blue tiles for its locations. Click a tile and the pane on the right heads \"J-119 to J-133 | Manhole | J-120\" and lists the work packages mapped to that location (for example **Item - 519 | Cable Protection/ Covering in Trench ...**), each with an arrow that opens the log form. The page describes it as \"Displays Locations present in each Super Location in a structured approach\"."
+          },
+          {
+            "term": "Location to Work Package bulk logging",
+            "definition": "Not selected by any project on the test site, so it was not opened. The settings page says: \"Displays status of Work Packages mapped to each of Location using multiple filters. Raising Restraints against multiple Locations\". The bulk modes you do see on the first two layouts are described under **Bulk logging** below. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
+          },
+          {
+            "term": "Worklogs in Scheduled View",
+            "definition": "Not selected by any project on the test site. The settings page says \"Presents the Tree Version in WBS form\" (a work breakdown structure). Its gear opens **Advance Settings** with **Slider** or **Radio Buttons**, an **Interval** value (20 by default) and a **Preview** slider, with **Close** and **Save**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
+          },
+          {
+            "term": "Quantity Work Logging",
+            "definition": "Not selected by any project on the test site. The settings page says \"Presents the Tree Version in WBS form\". Its gear opens **Advanced Settings** with **Day**, **Week** and **Month** choices and a **Submit** button. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
+          },
+          {
+            "term": "Worklogs enable by Certified RFIs",
+            "definition": "Not selected by any project on the test site. The settings page says \"Worklogs will get enabled for the locations for which RFIs are certified\". Its gear opens the same **Advanced Settings** as Work Package to Location Logging. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
+          },
+          {
+            "term": "The gear: Advanced Settings",
+            "definition": "Each template has a gear that opens **Advanced Settings** (view only unless you save). **Checkbox** = the user ticks a box to mark the work completed; **Text Box** = the user types the percentage completed; **Advanced Settings (interval)** = work is logged by interval. **Actual Start & End Dates** adds **Actual Start Date** and **Actual Finish Date** to the form. With Checkbox, **Required Fields** (**Percentage**, **Quantity**, **Hours**, **Comments**) can be made mandatory. With Text Box, **Interval Quantity Logging** (**Quantity** or **Measurement**) is available. **Select to enable an Auto Log option?** lets one value that is logged by hand (**Percentage**, **Quantity** or **Hours**) fill in the other two. Seen live: **Arena Steel Plant - Phase 1** all defaults; **Arena Residential Project** Text Box with Actual Start & End Dates, Interval Quantity Logging and Auto Log (Quantity), so its form shows **Cumulated Quantity** and a **CUMULATIVE QUANTITY** history table; **City Development Project** Text Box with Actual Start & End Dates and Auto Log (Percentage), so **Work Completed** is typed and **Actual Quantity** and **Actual Hours** are greyed."
+          },
+          {
+            "term": "The log form (all templates)",
+            "definition": "Opens from a cell or arrow with the work package and location as the title (for example **TW-Barbending-1 | G01**). Header buttons: **See History**, **Raise a Restraint**, **Chat**, **Tagged Files** (and **Follow Up Actions** on some). Read-only block: **Entity**, **Super Location**, **Location**, **Work Package**, **Work Package Description**, **Estimated Quantity (Specific to this location)** (shows \"Not provided to this specific location\" when none). You enter **Work Completed** (% or tick), **Actual Quantity (Specific to this location)**, **Worked On Date**, **Actual Hours (Optional)**, optional **Actual Start Date** / **Actual Finish Date**, **Comments** and **Upload Files**, then **Submit**."
+          },
+          {
+            "term": "Bulk logging",
+            "definition": "On the Work Package to Location and Location to Work Package layouts, choose **Bulk Log - Work log** to see a grid with **Select All**, a tick box per row and a percentage box per cell (100 by default on completed cells); **Bulk Log - Quantity** and **Bulk Log - Work Hours** do the same for quantities and hours. The **Work Package** drop-down is a multi-select with search and **Select All**. **Clear all** resets, and **LOG WORK** (or Log Quantity / Log Hours) submits the ticked cells. The grid stays empty until you pick work packages."
+          },
+          {
+            "term": "Where this data comes from",
+            "definition": "Entities, super locations, locations and work packages are the structure built in **Project Setup → Works**; the work packages offered per location come from the mapping there. The **Filters** button opens **Custom Columns Filter**, which lists the custom location columns of the project (on Arena Residential Project: **TEST DATE** and **Type of Flat**). The Progress tab shows more cards on projects that have extra forms switched on (Arena Residential Project showed 22 cards, including Submittals, Change Orders, Delay Forms and Transmittals; Arena Steel Plant - Phase 1 shows 18)."
+          },
+          {
+            "term": "Where Work Logs go next",
+            "definition": "Whatever the template, a submitted log goes to **Submitted Work Logs**, then **Approve Work Logs**, then **Detailed Work Logs** and the progress dashboards in **Data Analytics & Insights**. The template changes how you find the work and what the form asks, not where the data ends up."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Find out which Work Logs template your project uses",
+            "steps": [
+              "Open **Project Settings → Work Logs Templates**.",
+              "Read which option under **Work Log Reference** is ticked. Use the **Project / Tree Version** switch to see whether one Tree Version differs.",
+              "Open the gear beside the ticked option to see how the form behaves (Text Box or Checkbox, dates, auto log). Close it without saving.",
+              "If nothing is ticked or the layout looks wrong, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
+            ]
+          },
+          {
+            "title": "Log work with Work Package to Location Logging",
+            "steps": [
+              "Open **Field Works → Tree Version**, choose the plant, then **Progress → Work Logs**.",
+              "Pick the **Entity** and a **Location Type**, then click a work package.",
+              "Click the coloured cell for the location. Grey is not yet started, blue ready, orange in progress, green completed.",
+              "Fill in **Work Completed**, **Actual Quantity**, **Worked On Date**, hours and comments, add files, then click **Submit**."
+            ]
+          },
+          {
+            "title": "Log work with Location to Work Package Logging",
+            "steps": [
+              "Open **Progress → Work Logs** and pick the **Entity**.",
+              "Choose a group under **Level 2 Types** and open its location group. Use **Location Type**, **Level 3** and **Work Package** to narrow the matrix.",
+              "Find the row (location) and column (work package) and click the cell.",
+              "Enter the values the form asks for (percentage or quantity, depending on the gear settings) and click **Submit**. The **CUMULATIVE QUANTITY** table shows earlier entries for that location."
+            ]
+          },
+          {
+            "title": "Log work with Super Location to Location Logging",
+            "steps": [
+              "Open **Progress → Work Logs** and pick the **Entity**.",
+              "Optionally click **Ready**, **Delayed**, **Completed** or **All**, or type in **Search Location**.",
+              "Click the location tile inside its super location panel.",
+              "In the pane on the right, click the arrow beside the work package.",
+              "Enter **Work Completed** and the other fields, then click **Submit**."
+            ]
+          },
+          {
+            "title": "Log several locations at once (bulk)",
+            "steps": [
+              "On a layout that shows the mode choice, select **Bulk Log - Work log**, **Bulk Log - Quantity** or **Bulk Log - Work Hours**.",
+              "Open the **Work Package** drop-down and tick the work packages you want.",
+              "Tick the locations, or **Select All**, and adjust the values in the cells.",
+              "Click **LOG WORK** (or the quantity / hours button). Use **Clear all** to start again."
+            ]
+          }
+        ]
+      },
+      {
         "heading": "Quick Apps",
         "intro": "<p>Not every workflow a construction project needs is worth a formal form type and an approval chain configured in Project Setup — sometimes a team just needs a simple screen that captures a handful of fields and hands them to the right person. <strong>Quick Apps</strong>, the plant-scoped second-level tab in Field Works, exists for exactly that: it is described as a no-code app builder for connecting screens and auto-populating data, letting a project team stand up a lightweight, project-specific workflow without waiting on a development cycle.</p><p>The tab holds two cards. <strong>Quick Apps</strong> is the builder and runtime itself, though it must first be configured at the global level — a project that has not had this done shows \"Please configure Quick Apps in global\" instead of a builder. <strong>Issues</strong> holds the issues raised from no-code app approval workflows — the same principle applied elsewhere in Field Works, where anything that stalls in an approval becomes a tracked item rather than quietly disappearing. For a <strong>PM or Module Admin</strong>, Quick Apps is a useful pressure valve: it absorbs the one-off data-capture requests that would otherwise accumulate as unmet demands on the formal forms configuration.</p>",
         "definitions": [
@@ -24184,6 +24523,58 @@ const MODULES = [
           {
             "src": "assets/notion/quality-workflow-issues/003.jpg",
             "caption": "Quality workflow issues in table and card views"
+          }
+        ]
+      },
+      {
+        "heading": "Quality Logs Under Each Template",
+        "intro": "<p>Quality Level 1 and Level 2 find the work an inspector can check in one of two layouts, chosen in <strong>Project Settings → Quality Work Logs Templates</strong>. A <strong>Module Admin</strong> or <strong>PM</strong> sets it; <strong>QA/QC inspectors</strong> then use it on <strong>Field Works → Quality</strong>.</p><p>Only two templates exist here: <strong>Work Package to Location Logging</strong> (23 of 30 test projects) and <strong>Super Location to Location Logging</strong> (7: Arena Residential Project, Ramky Eminent, 595 MWac Floating Solar PV, Riverstone Residential Project, Elevated Corridor, Arena Airport Project, New Levonor Egeira). Unlike Work Logs there is no Project / Tree Version switch and no gear. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.</p>",
+        "definitions": [
+          {
+            "term": "Quality Work Logs Templates (settings page)",
+            "definition": "Header **Quality Work Log Settings** with **Save Changes**, then **Quality Work Log Reference – At what level do you want to log works?** and two options with a preview picture: **Work Package to Location Logging** (\"Displays status of Locations w.r.t each Work Package\") and **Super Location to Location Logging** (\"Displays Locations present in each Super Location in a structured approach. Clicking on a Location presents with mapped Work Packages for the Location\")."
+          },
+          {
+            "term": "Quality with Work Package to Location Logging",
+            "definition": "Seen on **Warehouse Construction** (Tree Version **Warehouse**). **Level 1** shows the entity, the status legend (**Not yet started**, **Ready to work**, **Started**, **In Progress**, **Completed**, **Issue Raised**) and a **Work Packages (3)** list on the left grouped by quality folder (**Preconstruction**, **Architectural & MEP**, **Structural**) with **Ready** and **All** tabs and a search box. Pick a work package such as **MOORE - QP - 008** and the right side shows its locations by series. On **Arena Steel Plant - Phase 1** and **Arena Roads and Highways Contractors** the list is empty (\"No ready Work Packages available to log Quality check lists\") because no work package is mapped to a quality folder yet."
+          },
+          {
+            "term": "Quality with Super Location to Location Logging",
+            "definition": "Seen on **Arena Residential Project** (Tree Version **Tower Spire**). **Level 1** shows the entity, the same legend, **Ready / All** chips, a search box and **Filters** (**Super Locations**, **Folders**, **Locations Types**, with **Apply Filter**, **Clear Filter**, **Save Filter**). Each super location is a panel of location tiles (for example **Floor 35**, **Locations : 183**). Click a tile and the right pane is headed \"Floor 35 | Unit | 3501\" and lists the quality work packages for that location (for example **QP-TW-Concreting-5 | Pedestal Concreting**), each with an arrow that opens the check list."
+          },
+          {
+            "term": "Where this data comes from",
+            "definition": "The entities, super locations and locations are the Works structure in **Project Setup → Works**. The quality work packages (QP-...) and folders are the ones mapped in **Project Setup → Quality**. The layout comes from **Project Settings → Quality Work Logs Templates**; whether Level 2 waits for Level 1 comes from **Project Settings → Quality Logs**."
+          },
+          {
+            "term": "Label differences between projects",
+            "definition": "The Quality tab on **Arena Residential Project** showed the card **Snag Lists** where **Arena Steel Plant - Phase 1** shows **Punch Lists**, and **Handover 2.0** showed a second-level tab named **Handover** instead of **Quality**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Find out which Quality layout your project uses",
+            "steps": [
+              "Open **Project Settings → Quality Work Logs Templates**.",
+              "Read which of the two options is ticked.",
+              "Open **Field Works → Tree Version**, pick the plant and open **Quality → Quality Level 1** to see the layout."
+            ]
+          },
+          {
+            "title": "Open a quality check list in the Super Location layout",
+            "steps": [
+              "Open **Quality → Quality Level 1** and choose the entity.",
+              "Use **Ready / All**, the search box or **Filters** to find the location tile.",
+              "Click the tile, then click the arrow beside the quality work package in the right pane."
+            ]
+          },
+          {
+            "title": "Open a quality check list in the Work Package layout",
+            "steps": [
+              "Open **Quality → Quality Level 1** and choose the entity.",
+              "Under **Work Packages**, open the quality folder and click the work package (use **Ready** to see only those ready to inspect).",
+              "Click the location in the grid on the right."
+            ]
           }
         ]
       },
@@ -24558,8 +24949,10 @@ const MODULES = [
       "Overview",
       "Tree Version",
       "Progress",
+      "Work Logs Under Each Template",
       "Quick Apps",
       "Quality",
+      "Quality Logs Under Each Template",
       "Project Forms",
       "Cost",
       "Safety",
@@ -25696,11 +26089,11 @@ const MODULES = [
           },
           {
             "term": "Work Logs Templates",
-            "definition": "Sets which of 7 logging structures the <strong>Field Works → Progress → Work Logs</strong> screen uses for this project, under \"Work Log Reference — At what level do you want to log works?\": <strong>Work Package to Location Logging</strong> (status of Locations under each Work Package — the default on most projects), <strong>Location to Work Package Logging</strong> (the reverse: pick a Location, see its Work Packages, grouped by Super Location), <strong>Location to Work Package bulk logging</strong> (the same but with multiple filters, for logging or raising Restraints against several Locations at once), <strong>Super Location to Location Logging</strong>, <strong>Worklogs in Scheduled View</strong> and <strong>Quantity Work Logging</strong> (both present the Tree Version as a WBS/schedule instead of a location tree), and <strong>Worklogs enable by Certified RFIs</strong> (a location only becomes loggable once its RFI is certified). Each option shows a live preview before Save Changes. This is why the Work Logs screen can look structurally different from one project to the next — it is a per-project setting, not a different product version. **Where it takes effect:** the page has **Project** and **Tree Version** selectors, so the choice can apply to the whole project or to one plant, and a gear beside each option. Arena Steel Plant - Phase 1 uses **Work Package to Location Logging**: **Field Works → Progress → Work Logs** then shows a Location Types tree (Media, Footing) with each work package opening a grid of super locations and locations. The same screen feeds Submitted Work Logs, Approve Work Logs, Detailed Work Logs, **My Desk → Recent Work Logs** and the progress dashboards in Data Analytics."
+            "definition": "Sets which of 7 logging structures the <strong>Field Works → Progress → Work Logs</strong> screen uses for this project, under \"Work Log Reference — At what level do you want to log works?\": <strong>Work Package to Location Logging</strong> (status of Locations under each Work Package — ticked on 15 of 30 test projects), <strong>Location to Work Package Logging</strong> (the reverse: pick a Location, see its Work Packages, grouped by Super Location), <strong>Location to Work Package bulk logging</strong> (the same but with multiple filters, for logging or raising Restraints against several Locations at once), <strong>Super Location to Location Logging</strong>, <strong>Worklogs in Scheduled View</strong> and <strong>Quantity Work Logging</strong> (both present the Tree Version as a WBS/schedule instead of a location tree), and <strong>Worklogs enable by Certified RFIs</strong> (a location only becomes loggable once its RFI is certified). Each option shows a live preview before Save Changes. This is why the Work Logs screen can look structurally different from one project to the next — it is a per-project setting, not a different product version. **Where it takes effect:** the page has **Project** and **Tree Version** selectors, so the choice can apply to the whole project or to one plant, and a gear beside each option. Arena Steel Plant - Phase 1 uses **Work Package to Location Logging**: **Field Works → Progress → Work Logs** then shows a Location Types tree (Media, Footing) with each work package opening a grid of super locations and locations. The same screen feeds Submitted Work Logs, Approve Work Logs, Detailed Work Logs, **My Desk → Recent Work Logs** and the progress dashboards in Data Analytics. **Seen live:** Work Package to Location Logging on 15 of the 30 test projects, Location to Work Package Logging on 6, Super Location to Location Logging on 8, and none of the other four options on any. The gear beside each option opens **Advanced Settings** (Checkbox, Text Box or interval entry; Actual Start & End Dates; Required Fields; Interval Quantity Logging; Auto Log), which decides what the log form asks for. Full detail is in **Field Works → Work Logs Under Each Template**."
           },
           {
             "term": "Quality Work Logs Templates",
-            "definition": "The same idea as Work Logs Templates, applied to <strong>Field Works → Quality</strong> instead — but with only 2 of the 7 options available: <strong>Work Package to Location Logging</strong> and <strong>Super Location to Location Logging</strong>. Whichever is selected controls how an inspector finds what is ready to inspect on the Quality tab. (Work Package to Location Logging is selected on Arena Steel Plant - Phase 1.)"
+            "definition": "The same idea as Work Logs Templates, applied to <strong>Field Works → Quality</strong> instead — but with only 2 of the 7 options available: <strong>Work Package to Location Logging</strong> and <strong>Super Location to Location Logging</strong>. Whichever is selected controls how an inspector finds what is ready to inspect on the Quality tab. (Work Package to Location Logging is selected on Arena Steel Plant - Phase 1.) **Seen live:** Work Package to Location Logging on 23 of the 30 test projects and Super Location to Location Logging on 7. This page has no Project / Tree Version switch and no gear. See **Field Works → Quality Logs Under Each Template**."
           },
           {
             "term": "Project Work Measurement",
