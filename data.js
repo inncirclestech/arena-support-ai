@@ -5262,6 +5262,51 @@ const QA_PROJECTSETUP = [
     question: "How do the Safety setup screens connect to Field Works Safety?",
     answer: "Categories and forms set up in **Setup Project Safety Forms** (event based) and **Setup Safety Calendar** (scheduled) appear in **Field Works → Safety → Safety Forms** and **Safety Calendar**. The approval levels from **Create Workflow**, attached per activity and work package in **Assign Workflow**, drive **Approve Safety**. A \"No\" on an inspection item raises a **Daily Safety Issue**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["safety setup to field works","safety forms lineage","assign workflow safety","safety calendar setup","where safety forms appear"]
+  },
+  {
+    action: "view",
+    object: "drawing revision",
+    scope: "module",
+    section: "Drawings",
+    question: "How do drawing revisions work?",
+    answer: "In a submittal click **Create Revision** and choose, for each page, **Do Not Change**, **Append** or **Replace**. **See Revisions** lists the revisions (\"Revision 0 - Latest Revision\", who revised it and when) and the viewer has a **Drawing Revision** selector. **See History** shows each approval step. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["drawing revision","create revision","see revisions","append replace drawing page","latest revision"]
+  },
+  {
+    action: "view",
+    object: "drawing markup tools",
+    scope: "module",
+    section: "Drawings",
+    question: "What markup tools does the drawing viewer have?",
+    answer: "**Select**, **Pen**, **Frame**, **Waved Frame**, **Circle**, **Drop**, **Text**, **Line**, **Comment**, **Zoom In**, **Zoom Out**, **Capture**, **Undo**, **Redo** and **Save**; **Threads** shows comment threads and **Publish Comments** (on the submittal) lists them. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["markup tools","drawing viewer tools","pen frame circle drop","comment on drawing","threads drawing"]
+  },
+  {
+    action: "view",
+    object: "drawing link",
+    scope: "module",
+    section: "Drawings",
+    question: "What does the Link action on a drawing do?",
+    answer: "It opens **Link** where you pick **Entity**, **Super Location**, **Location Types**, **Location** and **Work Packages**, and optionally **Quality And Documents**, then **Submit**. This ties the drawing to your work structure so it appears under the work package's **Drawing Items**.",
+    tags: ["link drawing","drawing link to tree","drawing items work package","link to quality and documents"]
+  },
+  {
+    action: "view",
+    object: "publish comments",
+    scope: "module",
+    section: "Drawings",
+    question: "What is Publish Comments on a drawing submittal?",
+    answer: "It lists comment threads made on the drawings (drawing name, page, revision, who started the thread, the comment, who it is assigned to, when it was published and its status) with **Download Excel** and **Publish**. No threads exist on the test drawing, so the list was empty. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["publish comments","drawing comments list","thread creator","comments assigned to"]
+  },
+  {
+    action: "view",
+    object: "drawing history",
+    scope: "module",
+    section: "Drawings",
+    question: "How do I see who approved a drawing and when?",
+    answer: "Click **See History** in the drawing row. The **Track** dialog shows lines such as \"Drawing has been approved at level 1\" with the date, time and approver. The **Approval Workflow Level** column shows the level reached.",
+    tags: ["drawing history","who approved drawing","see history drawing","approval workflow level drawing"]
   }
 ];
 
@@ -5335,7 +5380,7 @@ const QA_FIELDWORKS = [
     scope: "project",
     section: "Progress",
     question: "How do I create a productivity log (hours and quantities)?",
-    answer: "Go to **Field Works → Tree Version → [Plant] → Progress → Productivity Logs → Create**. Click **Set Phase Codes** to pick which phase codes are in scope and choose the date range, then click **Create Log** and use **Add Employee** (a row of hours/quantities per Phase Code/CWA/System/Commodity), **Add Crew** (log per member of a selected crew), or **Clone Log** (duplicate an existing log). Complete the **Log Time** tab, click **Next** to move to **Log Quantity**, then submit.",
+    answer: "Go to **Field Works → Tree Version → [Plant] → Progress → Productivity Logs → Create**. Click **Set Phase Codes** to pick which phase codes are in scope and choose the date range, then click **Create Log** and use **Add Employees** (a row per person with entity, location and phase code and the hours for each day), **Add Crews** (log per member of a selected project crew), **Clone Log** (copy an existing log) or **Import Log** (clock-in data for past dates, needs Marketplace consent). Complete **Step 1 Log Time**, then **Step 2 Log Quantity**, and click **Submit**.",
     tags: ["productivity log","create log","log time","log quantity","set phase codes"]
   },
   {
@@ -5605,7 +5650,7 @@ const QA_FIELDWORKS = [
     scope: "project",
     section: "Quality",
     question: "How do I approve submitted quality logs?",
-    answer: "Open the **Approve Quality Logs** card on the plant's Quality tab. The default **To Be Approved** tab shows only the items awaiting your approval, and is visible only to users with approval permissions; click a location or tag to open its pending work packages and approve or reject them. Click **All** to see every work package and its status across all CWAs and Systems.",
+    answer: "Open the **Approve Quality Logs** card on the plant's Quality tab. The default **To Be Approved** tab shows only the items awaiting your approval, and is visible only to users with approval permissions; open a pending item to approve or reject it. Click **All** to see every item and its status; the **Folders**, **Commodities Types** and level filters narrow the list.",
     tags: ["approve quality logs","to be approved","quality approval","reject quality log"]
   },
   {
@@ -6597,6 +6642,15 @@ const QA_FIELDWORKS = [
     question: "What does the Completed Safety feed show?",
     answer: "A day-by-day feed such as \"Completed Safety Forms of 28th February 2024\" with lines like \"System Admin has logged the Safety Package MOORE - SP - 001 (ID 8) at 12:32 PM\", plus a **Users** multi-select, **Filters**, **Filter by Range** and **Download Excel**.",
     tags: ["completed safety","safety feed","logged the safety package","completed safety filters"]
+  },
+  {
+    action: "view",
+    object: "drawing workflow issues empty",
+    scope: "module",
+    section: "Drawing Management",
+    question: "Why does Drawing Management show \"No Drawing WorkFlow Issues found\"?",
+    answer: "The only card here lists issues created when a drawing is rejected at an approval level. On Arena Steel Plant - Phase 1 the one drawing is approved, so nothing is listed. Change the **Tree Version** selector to check other plants. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["no drawing workflow issues","drawing management empty","drawing rejected issues","drawing workflow issues found"]
   }
 ];
 
@@ -23639,6 +23693,18 @@ const MODULES = [
           {
             "term": "Where this data comes from and goes",
             "definition": "**Comes from:** plants from Works; activities from Global Data; people from **People → Roster**; register form fields and templates from **Global Data → Forms → Drawing Management Forms** (**Drawing Package Submittal**, **Drawing Register**). **Goes to:** **Field Works → Drawing Management**, forms raised on drawings (visible on the Field Works cards and in **My Actions → Workflow Issues**), and the work package **Drawing Items** section in Works."
+          },
+          {
+            "term": "Revisions, history and comments (seen live)",
+            "definition": "**Create Revision** opens \"Select Drawing Page to be revised\" with **Do Not Change**, **Append** and **Replace** for each page. **See History** opens a **Track** dialog with one line per step, for example \"Drawing has been approved at level 1\", the date, time and the approver (Ravi Ravi), marked **Approved**. **See Revisions** opens a page listing each revision (\"Revision 0 - Latest Revision\", **Revised By**, **Revised On**). **Publish Comments** lists the comment threads on the submittal (**Drawing Name**, **Drawing Page**, **Drawing Revision**, **Thread Creator**, **Comment**, **Assigned To**, **Published On**, **Status**) with **Download Excel** and **Publish**. **Edit Bulk Drawings** lets you pick drawings (**Select All**) and edit their label data together."
+          },
+          {
+            "term": "Drawing viewer and markup tools",
+            "definition": "Click a **Drawing Page** link to open the viewer: the file name, a **Drawing Revision** selector (**Latest Revision**), a **Default Layer** drop-down, page arrows (**Page 1/1**), **Threads** (show comment threads), **share** and the markup icon. The markup toolbar offers **Select**, **Pen**, **Frame**, **Waved Frame**, **Circle**, **Drop** (with a **Colour** choice), **Text**, **Line**, **Comment**, **Zoom In**, **Zoom Out**, **Capture**, **Undo**, **Redo** and **Save**. What the **Drop** tool offers to attach (for example a form) could not be tested here. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
+          },
+          {
+            "term": "Link a drawing to the work structure",
+            "definition": "The **link** action in the drawing row opens **Link** with **Link to tree** (**Entity**, **Super Location**, **Location Types**, **Location**, **Work Packages**) and **Link to Quality And Documents**, plus lists **Selected Locations** and **Selected Documents** and **Submit**. A linked drawing then shows against that location or work package (the **Drawing Items** section of the work package in **Works**) and can be reached from quality documents."
           }
         ],
         "procedures": [
@@ -23720,7 +23786,7 @@ const MODULES = [
               "Click the **Revisions** icon to compare revisions of a drawing; minor and major changes show in different colours.",
               "Click **Share**, select the users, choose the email service and send the file.",
               "Click **Edit** to change the drawing's information.",
-              "Click **Link** to map the drawing to CWA, System and Tag elements, so it shows in the related work logs and quality forms.",
+              "Click **Link**, choose the **Entity**, **Super Location**, **Location** and **Work Packages** (and, if needed, quality documents), then **Submit**, so the drawing shows against those parts of the work structure.",
               "Switch to the grid view to **Approve** or **Reject** drawings on the cards."
             ],
             "images": [
@@ -23771,7 +23837,7 @@ const MODULES = [
               },
               {
                 "src": "assets/notion/drawing-packages/017.jpg",
-                "caption": "Link: mapping a drawing to CWA, System and Tag",
+                "caption": "Link: mapping a drawing to the work structure (this older screenshot names CWA, System and Tag; the current product shows Entity, Super Location, Location and Work Package)",
                 "step": 8
               },
               {
@@ -25294,7 +25360,7 @@ const MODULES = [
         "definitions": [
           {
             "term": "Workflow Issues (Drawing Management)",
-            "definition": "Cards created automatically whenever a drawing is rejected at any approval level, searchable by ID or status, supporting due dates, assignment, Chat, filters, Download Excel, and a table/card view toggle. **Where this data comes from:** the approval levels and approvers are those of the drawing workflows in **Project Setup → Drawings → Create Approval Workflow** (for example Drawing Approval Workflow-1 with two levels). Priorities and due hours are set in **Project Settings → Workflow Issues → Drawing Management**. The same items count under **My Actions → Issues → Drawing Workflow Issues** on **My Desk**."
+            "definition": "Cards created automatically whenever a drawing is rejected at any approval level, searchable by ID or status, supporting due dates, assignment, Chat, filters, Download Excel, and a table/card view toggle. **Where this data comes from:** the approval levels and approvers are those of the drawing workflows in **Project Setup → Drawings → Create Approval Workflow** (for example Drawing Approval Workflow-1 with two levels). Priorities and due hours are set in **Project Settings → Workflow Issues → Drawing Management**. The same items count under **My Actions → Issues → Drawing Workflow Issues** on **My Desk**. **Seen live:** the screen (**Field Works → Drawing Management → Workflow Issues**) has a **Tree Version** selector, a search box, **Download Excel**, **Filters** and grid or table icons, and shows \"No Drawing WorkFlow Issues found\" on Arena Steel Plant - Phase 1 because no drawing has been rejected. Approved drawings and their history are in **Project Setup → Drawings** (**See History**, **See Revisions**)."
           }
         ],
         "procedures": [
