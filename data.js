@@ -6525,6 +6525,78 @@ const QA_FIELDWORKS = [
     question: "What can I filter by on Approve Quality Logs?",
     answer: "Status chips **Not Ready**, **Ready to Approve** and **Approved / Reject**, **To be approved** / **All**, a search box, and filters **Level-2s**, **Folders** and **Commodities Types** (your project's names) with **Apply**, **Clear** and **Save**.",
     tags: ["approve quality logs filters","quality approval queue","ready to approve","folders commodities filter"]
+  },
+  {
+    action: "view",
+    object: "safety forms populated",
+    scope: "module",
+    section: "Safety",
+    question: "What do I see on Safety Forms when forms exist?",
+    answer: "The left list **Safety Forms (n)** shows the categories and the form inside each; the right side lists cards with status (**Approved**), who raised it and when, the **ID**, **Form Title**, **Issues Raised** and **Approval Work Flow** (for example 2/2). **Create Form** opens the checklist with **Save As Draft** and **Submit For Approval**.",
+    tags: ["safety forms cards","approval work flow 2/2","issues raised safety","create safety form","safety form id"]
+  },
+  {
+    action: "view",
+    object: "daily safety issue card",
+    scope: "module",
+    section: "Safety",
+    question: "What does a Daily Safety Issue card show?",
+    answer: "**DSI No.**, the priority, the **Inspection Item Name** that failed, **Observation**, **Form Name**, **Form Category** (for example Safety Form 4 or Safety Calendar), **Assign To** and a **Rectify** button. The tab counters show **Total Issues**, **Issues Raised** and **Issues Rectified**.",
+    tags: ["dsi card","daily safety issue fields","form category dsi","rectify dsi","safety issue counters"]
+  },
+  {
+    action: "create",
+    object: "safety observation",
+    scope: "module",
+    section: "Safety",
+    question: "How do I raise a safety observation?",
+    answer: "Open **Daily Safety Issues → Observations → Add Observation**, fill **Project Location**, **Supervisor**, **Observation**, **Priority** (High, Medium or Low) and optionally **Upload File**, then **Submit**. The assignee later clicks **Rectify** and can add a **Closure Photo**.",
+    tags: ["add observation","safety observation","observation priority","closure photo","create observation"]
+  },
+  {
+    action: "view",
+    object: "safety calendar empty",
+    scope: "module",
+    section: "Safety",
+    question: "Why is Safety Calendar empty for today?",
+    answer: "The screen lists \"Safety forms for <date>\". On Warehouse Construction the only calendar category ran daily from 02-19-2024 to 04-19-2024, so today shows **No Data**. Create or extend categories in **Project Setup → Safety → Setup Safety Calendar**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["safety calendar empty","safety calendar no data","setup safety calendar dates"]
+  },
+  {
+    action: "view",
+    object: "safety approve workflow",
+    scope: "module",
+    section: "Safety",
+    question: "How does a safety form get approved?",
+    answer: "The levels are built in **Project Setup → Safety → Create Workflow** (for example **Safety approval**: Level 1 and Level 2, each **Any one can approve**) and attached to work packages in **Assign Workflow**. After **Submit For Approval** the form waits in **Approve Safety** (**Ready to Approve**), and the form card shows **Approval Work Flow 2/2** when finished.",
+    tags: ["approve safety","safety approval levels","assign workflow safety","safety form approval","how does a safety form get approved","safety form gets approved","approve safety form steps"]
+  },
+  {
+    action: "view",
+    object: "safety lifecycle",
+    scope: "module",
+    section: "Safety",
+    question: "What is the full safety flow from setup to reporting?",
+    answer: "Setup in **Project Setup → Safety** (categories, people, workflow, calendar), filling in **Safety Forms** and **Safety Calendar**, issues in **Daily Safety Issues** and **Observations**, approvals in **Approve Safety**, history in **Completed Safety**, and reporting in **My Desk** panels and **Safety Analytics**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["safety flow","safety lifecycle","safety process","safety reporting","who fills safety forms"]
+  },
+  {
+    action: "view",
+    object: "safety analytics empty",
+    scope: "module",
+    section: "Safety",
+    question: "Why is Safety Analytics empty when we have safety forms?",
+    answer: "On Warehouse Construction **Safety Analytics** showed **No Data** (Detailed View, Loop Progress and others) although 4 safety forms and 3 issues exist in Field Works. What feeds those dashboards was not confirmed. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["safety analytics empty","safety analytics no data","safety dashboard empty"]
+  },
+  {
+    action: "view",
+    object: "completed safety feed",
+    scope: "module",
+    section: "Safety",
+    question: "What does the Completed Safety feed show?",
+    answer: "A day-by-day feed such as \"Completed Safety Forms of 28th February 2024\" with lines like \"System Admin has logged the Safety Package MOORE - SP - 001 (ID 8) at 12:32 PM\", plus a **Users** multi-select, **Filters**, **Filter by Range** and **Download Excel**.",
+    tags: ["completed safety","safety feed","logged the safety package","completed safety filters"]
   }
 ];
 
@@ -25021,7 +25093,7 @@ const MODULES = [
         "definitions": [
           {
             "term": "Transaction",
-            "definition": "The Cost tab card covering purchase orders and other expenses recorded against the plant, as Transaction Logs, with Open Logs and Rejected Logs views. Needs an active, approved Estimate on the project before it will accept entries — otherwise it shows \"No active and approved Estimate found.\" **Which setting changes it:** the project must have an active, approved estimate (**Project Setup → Estimate**; none exist on Pellet Plant, so the Open Logs and Rejected Logs tabs show only \"No active and approved Estimate found.\"). Approval levels come from **Project Setup → Forms → Approval Workflow → Cost Transaction Logs**. **Which setting changes it:** the project must have an active, approved estimate (**Project Setup → Estimate**; none exist on Pellet Plant, so the Open Logs and Rejected Logs tabs show only \"No active and approved Estimate found.\"). Approval levels come from **Project Setup → Forms → Approval Workflow → Cost Transaction Logs**."
+            "definition": "The Cost tab card covering purchase orders and other expenses recorded against the plant, as Transaction Logs, with Open Logs and Rejected Logs views. Needs an active, approved Estimate on the project before it will accept entries — otherwise it shows \"No active and approved Estimate found.\" **Which setting changes it:** the project must have an active, approved estimate (**Project Setup → Estimate**; none exist on Pellet Plant, so the Open Logs and Rejected Logs tabs show only \"No active and approved Estimate found.\"). Approval levels come from **Project Setup → Forms → Approval Workflow → Cost Transaction Logs**. "
           },
           {
             "term": "Cost Forecast",
@@ -25029,15 +25101,15 @@ const MODULES = [
           },
           {
             "term": "Change order (Cost tab)",
-            "definition": "The card for budget and contract adjustments — formal modifications to scope, cost, or schedule after contract signature, routed via Assign To and Due Date, with Open Logs, Rejected Logs, Create, Filters, and Download Excel. Also needs an active, approved Estimate to accept entries. **Which setting changes it:** an active, approved estimate in **Project Setup → Estimate**; approval levels in **Project Setup → Forms → Approval Workflow → Cost Change Orders**. **Which setting changes it:** an active, approved estimate in **Project Setup → Estimate**; approval levels in **Project Setup → Forms → Approval Workflow → Cost Change Orders**."
+            "definition": "The card for budget and contract adjustments — formal modifications to scope, cost, or schedule after contract signature, routed via Assign To and Due Date, with Open Logs, Rejected Logs, Create, Filters, and Download Excel. Also needs an active, approved Estimate to accept entries. **Which setting changes it:** an active, approved estimate in **Project Setup → Estimate**; approval levels in **Project Setup → Forms → Approval Workflow → Cost Change Orders**. "
           },
           {
             "term": "Transfer",
-            "definition": "The card for reallocation of budget or cost between Cost Codes and Phase Codes, with Open Logs and Rejected Logs views. This one is gated on a different setting than the other three Cost cards: it needs a project's \"Level of Detail\" to be set (Project Setup), not the Estimate — it shows \"Level of detail is not set for this project\" until that is done. **Which setting changes it:** the **Level of Detail** tab in **Project Settings → Cost Breakdown Structure** (Phase Code or Phase Code - Cost Code); approval levels in **Project Setup → Forms → Approval Workflow → Cost Transfers**. **Which setting changes it:** the **Level of Detail** tab in **Project Settings → Cost Breakdown Structure** (Phase Code or Phase Code - Cost Code); approval levels in **Project Setup → Forms → Approval Workflow → Cost Transfers**."
+            "definition": "The card for reallocation of budget or cost between Cost Codes and Phase Codes, with Open Logs and Rejected Logs views. This one is gated on a different setting than the other three Cost cards: it needs a project's \"Level of Detail\" to be set (Project Setup), not the Estimate — it shows \"Level of detail is not set for this project\" until that is done. **Which setting changes it:** the **Level of Detail** tab in **Project Settings → Cost Breakdown Structure** (Phase Code or Phase Code - Cost Code); approval levels in **Project Setup → Forms → Approval Workflow → Cost Transfers**. "
           },
           {
             "term": "Field Logs",
-            "definition": "The fourth Cost tab card, holding the field-side cost log records for the plant, split into 4 categories: Material, Machinery, Manpower, and Sub Contractor, each with its own Create and a Settings icon. Also needs an active, approved Estimate. Distinct from the Progress tab's Equipment Logs/Material Logs/Manpower Logs, which record physical quantity against a Work Order rather than cost against an Estimate. **Which setting changes it:** an active, approved estimate; approval levels in **Project Setup → Forms → Approval Workflow → Field Cost Logs**. **Which setting changes it:** an active, approved estimate; approval levels in **Project Setup → Forms → Approval Workflow → Field Cost Logs**."
+            "definition": "The fourth Cost tab card, holding the field-side cost log records for the plant, split into 4 categories: Material, Machinery, Manpower, and Sub Contractor, each with its own Create and a Settings icon. Also needs an active, approved Estimate. Distinct from the Progress tab's Equipment Logs/Material Logs/Manpower Logs, which record physical quantity against a Work Order rather than cost against an Estimate. **Which setting changes it:** an active, approved estimate; approval levels in **Project Setup → Forms → Approval Workflow → Field Cost Logs**. "
           }
         ],
         "procedures": [
@@ -25058,7 +25130,7 @@ const MODULES = [
         "definitions": [
           {
             "term": "Safety Forms",
-            "definition": "The card holding event-based project safety forms — ad-hoc, unscheduled safety checks organized by category and filled out on demand. **Where this data comes from:** the category list on the left (\"Safety Forms (0)\") is built in **Project Setup → Safety → Setup Project Safety Forms** from the safety forms mapped to activities in **Global Data → Construction Types → Global Work Packages → Safety Forms**, and each form must be assigned to users. On Arena Steel Plant - Phase 1 no category exists, so the screen shows \"No Logs Available\". Approval levels come from **Project Setup → Safety → Create Workflow** and **Assign Workflow**."
+            "definition": "The card holding event-based project safety forms — ad-hoc, unscheduled safety checks organized by category and filled out on demand. **Where this data comes from:** the category list on the left (\"Safety Forms (0)\") is built in **Project Setup → Safety → Setup Project Safety Forms** from the safety forms mapped to activities in **Global Data → Construction Types → Global Work Packages → Safety Forms**, and each form must be assigned to users. On Arena Steel Plant - Phase 1 no category exists, so the screen shows \"No Logs Available\". Approval levels come from **Project Setup → Safety → Create Workflow** and **Assign Workflow**. **Seen with data (Warehouse Construction):** the left list reads **Safety Forms (4)** with the categories **Safety form 1** to **Safety Form 4** and the form **Safety** under each. The right side has **Create Form**, a search box and **Filters**, and cards that show a status (**Approved**), \"Raised on 27th February 2024 by SYS_ADMIN\", **ID 3**, **Form Title**, **Issues Raised** and **Approval Work Flow** (**2/2** means both levels approved). **Create Form** opens a dialog with the letterhead, **Form Created** (now), the form name, **General Information** (Customer, Project Location, Work Packages **MOORE - SP - 001**, Project No., Manager, Work Packages Description, Project Title), **Inspection Items** (the **Daily Safety Checklist**), **Save As Draft** and **Submit For Approval**. An existing form opens with its answers (for example \"'No smoking' Regulations observed?\" **Yes** / **No**), **Submit**, **Close** and a **Chat** panel. **Seen with data (Warehouse Construction):** the left list reads **Safety Forms (4)** with the categories **Safety form 1** to **Safety Form 4** and the form **Safety** under each. The right side has **Create Form**, a search box and **Filters**, and cards that show a status (**Approved**), \"Raised on 27th February 2024 by SYS_ADMIN\", **ID 3**, **Form Title**, **Issues Raised** and **Approval Work Flow** (**2/2** means both levels approved). **Create Form** opens a dialog with the letterhead, **Form Created** (now), the form name, **General Information** (Customer, Project Location, Work Packages **MOORE - SP - 001**, Project No., Manager, Work Packages Description, Project Title), **Inspection Items** (the **Daily Safety Checklist**), **Save As Draft** and **Submit For Approval**. An existing form opens with its answers (for example \"'No smoking' Regulations observed?\" **Yes** / **No**), **Submit**, **Close** and a **Chat** panel."
           },
           {
             "term": "Safety Calendar",
@@ -25066,15 +25138,31 @@ const MODULES = [
           },
           {
             "term": "Daily Safety Issues (DSI)",
-            "definition": "Issues created automatically from a project safety form or calendar form, typically from a failed or \"No\" checkpoint. Each moves Open → Rectified with due dates, assignees, Chat, filters, and Excel export. **Which setting changes it:** **Project Settings → Daily Safety Issues & Observations** (Daily Safety Issues Priority and Observations Priority: High 4 hours, Medium 24, Low 48) and **Global Data → Settings → Configure Safety Observation**. **Where it goes next:** the **Recent Daily Safety Issues** panel and **My Actions → Issues → Safety Issue** on **My Desk**, and the **Safety Analytics** dashboard. **Which setting changes it:** **Project Settings → Daily Safety Issues & Observations** (Daily Safety Issues Priority and Observations Priority: High 4 hours, Medium 24, Low 48) and **Global Data → Settings → Configure Safety Observation**. **Where it goes next:** the **Recent Daily Safety Issues** panel and **My Actions → Issues → Safety Issue** on **My Desk**, and the **Safety Analytics** dashboard."
+            "definition": "Issues created automatically from a project safety form or calendar form, typically from a failed or \"No\" checkpoint. Each moves Open → Rectified with due dates, assignees, Chat, filters, and Excel export. **Which setting changes it:** **Project Settings → Daily Safety Issues & Observations** (Daily Safety Issues Priority and Observations Priority: High 4 hours, Medium 24, Low 48) and **Global Data → Settings → Configure Safety Observation**. **Where it goes next:** the **Recent Daily Safety Issues** panel and **My Actions → Issues → Safety Issue** on **My Desk**, and the **Safety Analytics** dashboard.  **Seen with data (Warehouse Construction):** three tabs, **Daily Safety Issues**, **Observations** and **Safety Workflow Issues**. The first shows counters (**3 Total Issues**, **1 Issues Raised**, **2 Issues Rectified**), **Follow Up Actions**, **Download Excel**, **Filters** and grid or list view. A card shows when it was raised, the priority (**High**, **Medium**), **DSI No. 3**, the **Inspection Item Name** that failed (for example \"Are pits and floor openings covered or guarded?\"), **Observation**, the **Form Name** and **Form Category** it came from (**Safety Calendar**, **Safety Form 3**, **Safety Form 4**), **Assign To** and the **Rectify** button (**Rectified** once done). **Seen with data (Warehouse Construction):** three tabs, **Daily Safety Issues**, **Observations** and **Safety Workflow Issues**. The first shows counters (**3 Total Issues**, **1 Issues Raised**, **2 Issues Rectified**), **Follow Up Actions**, **Download Excel**, **Filters** and grid or list view. A card shows when it was raised, the priority (**High**, **Medium**), **DSI No. 3**, the **Inspection Item Name** that failed (for example \"Are pits and floor openings covered or guarded?\"), **Observation**, the **Form Name** and **Form Category** it came from (**Safety Calendar**, **Safety Form 3**, **Safety Form 4**), **Assign To** and the **Rectify** button (**Rectified** once done)."
           },
           {
             "term": "Completed Safety",
-            "definition": "The retrospective repository of submitted logs from both Safety Forms and Safety Calendar Forms, most recent first, filterable by user or date range. **Where it goes next:** the **Recent Safety Logs** panel on **My Desk**. **Where it goes next:** the **Recent Safety Logs** panel on **My Desk**."
+            "definition": "The retrospective repository of submitted logs from both Safety Forms and Safety Calendar Forms, most recent first, filterable by user or date range. **Where it goes next:** the **Recent Safety Logs** panel on **My Desk**. "
           },
           {
             "term": "Approve Safety",
             "definition": "The review queue where submitted safety forms awaiting sign-off are approved or rejected. **Where this data comes from:** approval levels set in **Project Setup → Safety → Create Workflow / Assign Workflow**; the screen has status chips Not Ready, Ready to Approve, In Progress and Approved and shows \"No Logs Present\" until a form is submitted. Waiting items also count under **My Actions → Approvals → Safety Logs** on **My Desk**."
+          },
+          {
+            "term": "Observations tab",
+            "definition": "A manual route for hazards that do not come from a form. **Add Observation** opens **Create Observation** (Created By, Date, **Project Location\\***, **Supervisor\\***, **Observation\\***, **Priority\\*** = High, Medium or Low, **Attachments** with **Upload File**, **Submit**). Cards read **OBS No. 2**, the observation text (for example \"Puncture\"), **Project Location**, **Supervisor**, **Assign To**, **Closure Photo** and **Rectify**. Counters on Warehouse Construction: 2 total, 1 raised, 1 rectified. Priority due times come from **Project Settings → Daily Safety Issues & Observations**."
+          },
+          {
+            "term": "Safety Workflow Issues",
+            "definition": "The third tab of Daily Safety Issues lists problems raised against the safety approval workflow. It was empty on Warehouse Construction."
+          },
+          {
+            "term": "Safety lifecycle at a glance",
+            "definition": "**1. Set up (Module Admin / PM):** in **Project Setup → Safety** create form categories and assign people, build the approval levels in **Create Workflow** (Warehouse Construction: **Safety approval**, two levels) and attach them to work packages in **Assign Workflow**, and set a schedule in **Setup Safety Calendar**. **2. Fill (field user / safety officer):** an ad-hoc form from **Safety Forms** or a scheduled one from **Safety Calendar**; click **Submit For Approval**. **3. Flag:** a failed (\"No\") checkpoint raises a **Daily Safety Issue**, with its **Form Category** showing where it came from; hazards without a form go in **Observations**. **4. Close:** the assignee clicks **Rectify**. **5. Approve (approver):** the form waits in **Approve Safety** and the card shows **Approval Work Flow 2/2** when done. **6. Report:** **Completed Safety** (a feed such as \"System Admin has logged the Safety Package MOORE - SP - 001 (ID 8) at 12:32 PM\"), **Recent Safety Logs** and **My Actions** on **My Desk**, and **Safety Analytics**."
+          },
+          {
+            "term": "Safety Analytics link",
+            "definition": "**Data Analytics & Insights → Safety Analytics** (**Project Drill Down** with **Detailed View**, **System Progress**, **Loop Progress**, **People**, **Earned Hours**, **Quantity**) showed **No Data** on both Arena Steel Plant - Phase 1 and Warehouse Construction, even though Warehouse Construction has 4 safety forms and 3 issues. What drives those dashboards was not confirmed. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
           }
         ],
         "procedures": [
@@ -25257,7 +25345,7 @@ const MODULES = [
           },
           {
             "term": "Workflow Issues (Invoices)",
-            "definition": "The card holding work-order-invoice workflow issues — anything stuck or rejected in the invoice approval chain — as a table of WFL Number, Level, Raised on Date, Raised on Time, Raised by, Image, Chat, Assign To, and Due Date, with Download Excel, Filters, and a table/grid view toggle. **Which setting changes it:** invoice approval levels (**Project Setup → Forms → Approval Workflow → Invoices**); priorities in **Project Settings → Workflow Issues**. **Which setting changes it:** invoice approval levels (**Project Setup → Forms → Approval Workflow → Invoices**); priorities in **Project Settings → Workflow Issues**."
+            "definition": "The card holding work-order-invoice workflow issues — anything stuck or rejected in the invoice approval chain — as a table of WFL Number, Level, Raised on Date, Raised on Time, Raised by, Image, Chat, Assign To, and Due Date, with Download Excel, Filters, and a table/grid view toggle. **Which setting changes it:** invoice approval levels (**Project Setup → Forms → Approval Workflow → Invoices**); priorities in **Project Settings → Workflow Issues**. "
           }
         ],
         "procedures": [
