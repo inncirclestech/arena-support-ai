@@ -3308,6 +3308,60 @@ const QA_GLOBALDATA = [
     question: "Why doesn't my new Global Data entry show up in my project or dropdown?",
     answer: "Check that it was saved, that the person or item is active, and that you are looking in the right place. Some screens link to Global Data (for example Owners, Customers, Phase Codes); others copy from it (crews come in with **Copy Crews from Global Data**); and some filter by category or group (RFQ vendors). Open the source tile, confirm the entry, then reopen the dropdown.",
     tags: ["new entry not showing","new entry not showing in project","global data entry missing","global data missing project","dropdown missing entry","not appearing in dropdown","new global data entry project"]
+  },
+  {
+    action: "view",
+    object: "crews in productivity logs",
+    scope: "module",
+    section: "Users & Permissions",
+    question: "Why is a crew missing from Add Crews in Productivity Logs?",
+    answer: "Add Crews lists the **project's** crews from **Project Setup → People → Project Crews**, not every crew in **Global Data → Crews**. Click **Copy Crews from Global Data** in the project (or **Create Crew**) first. On Arena Steel Plant - Phase 1 the list is empty because the project has no crews; Elevated Corridor lists its 19 distinct crew names. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["crew missing add crews","productivity logs crews","copy crews from global data","global crews project crews"]
+  },
+  {
+    action: "view",
+    object: "quality forms lineage",
+    scope: "module",
+    section: "Construction Types",
+    question: "Where do the Quality Level 1 and Level 2 check lists in Field Works come from?",
+    answer: "From **Global Data → Construction Types → Step 2 Global Work Packages → Quality Forms** (tabs **Quality Level 1** and **Quality Level 2**), one form per work package for the project's construction type, built with **Create Inspection Items**, **Build Form**, **Setup Trigger Points** and **Preview Form**. A work package must also be mapped to a quality folder in **Project Setup → Quality** before it is ready to inspect. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["quality forms source","quality check list template","level 1 level 2 forms global data","trigger points","where quality forms come from"]
+  },
+  {
+    action: "view",
+    object: "safety forms lineage",
+    scope: "module",
+    section: "Construction Types",
+    question: "Where do the safety forms and activities in Project Setup Safety come from?",
+    answer: "From **Global Data → Construction Types → Step 2 Global Work Packages → Safety Forms**: work packages such as **MOORE - SP - 001** to **004** under the activity **General Conditions**, each with inspection items built in five steps. The activity list in **Project Setup → Safety → Filter by Activities** and the work packages in **Assign Workflow** come from here. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["safety forms source","safety activities source","filter by activities safety","where safety forms come from"]
+  },
+  {
+    action: "view",
+    object: "structure template import",
+    scope: "module",
+    section: "Forms & Quickapps",
+    question: "Where does the Import Template list in Project Setup Documents come from?",
+    answer: "From **Global Data → Document Management → Structure Template**. The **Global Templates** drop-down in **Project Setup → Documents → Import Template** showed **FEL - 1**, **FEL - 2**, **FEL - 3** and **Detailed Engineering**, the same four templates. Create new ones here first. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["import template","structure template","global templates documents","fel templates","document folder template"]
+  },
+  {
+    action: "view",
+    object: "notification events field works",
+    scope: "module",
+    section: "Notifications",
+    question: "Which notification events exist for quality, safety and drawings?",
+    answer: "Groups such as **Quality Forms**, **Punch Lists**, **Project Safety Forms**, **Scheduled Safety Forms**, **Safety Issues**, **Safety Observations**, **Restraints** and **Drawing Management** in **Global Data → Notifications → Events** (each event has Mail, Web and Mobile). No separate group for Productivity Logs was seen. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["notification events quality safety drawings","punch list notifications","safety notification events","drawing notifications","productivity notifications"]
+  },
+  {
+    action: "view",
+    object: "hindrance category field works",
+    scope: "module",
+    section: "Company-Wide Settings",
+    question: "Where does the Restraint Category list come from?",
+    answer: "From **Global Data → Settings → Hindrance Category** (**Site & Technical Constraints**, **Seasonal/Weather Constraints**, **Safey constarints**, **Resource Constraints**, **Others**); the **Restraint Category** drop-down in **Field Works → Progress → Restraints → Add Restraint** showed exactly these five. Add or edit categories here.",
+    tags: ["restraint category source","hindrance category","add restraint category list"]
   }
 ];
 
@@ -5307,6 +5361,15 @@ const QA_PROJECTSETUP = [
     question: "How do I see who approved a drawing and when?",
     answer: "Click **See History** in the drawing row. The **Track** dialog shows lines such as \"Drawing has been approved at level 1\" with the date, time and approver. The **Approval Workflow Level** column shows the level reached.",
     tags: ["drawing history","who approved drawing","see history drawing","approval workflow level drawing"]
+  },
+  {
+    action: "view",
+    object: "import template documents",
+    scope: "module",
+    section: "Documents",
+    question: "Where does the Import Template list in Project Setup Documents come from?",
+    answer: "From **Global Data → Document Management → Structure Template**. **Import Template** shows **Global Templates** with **FEL - 1**, **FEL - 2**, **FEL - 3** and **Detailed Engineering**; choose one and click **Import** to build that folder structure in the project. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["import template","project setup documents import template","global templates","fel templates documents","structure template import"]
   }
 ];
 
@@ -6651,6 +6714,15 @@ const QA_FIELDWORKS = [
     question: "Why does Drawing Management show \"No Drawing WorkFlow Issues found\"?",
     answer: "The only card here lists issues created when a drawing is rejected at an approval level. On Arena Steel Plant - Phase 1 the one drawing is approved, so nothing is listed. Change the **Tree Version** selector to check other plants. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["no drawing workflow issues","drawing management empty","drawing rejected issues","drawing workflow issues found"]
+  },
+  {
+    action: "view",
+    object: "quality check list source",
+    scope: "module",
+    section: "Quality",
+    question: "Where does the check list on Quality Level 1 or 2 come from?",
+    answer: "From **Global Data → Construction Types → Global Work Packages → Quality Forms** for your construction type (tabs **Quality Level 1** and **Quality Level 2**). The work package must be mapped to a folder in **Project Setup → Quality** to appear as ready.",
+    tags: ["quality check list source","quality form template source","where inspection items come from"]
   }
 ];
 
@@ -19797,7 +19869,7 @@ const MODULES = [
           },
           {
             "term": "Crew",
-            "definition": "A named work group built from roster people, with its Supervisors and Foremen. The **Crews** screen (**Global Data → Crews**) shows one card per crew (18 on the test site, for example **Welding Crew**, **Piping Team**, **Daily crew**) with **Total SUPERVISORS**, **Total FOREMEN** and **Total Crew Rosters**, a search box and **Create**. The **Create Crew** dialog has **Crew Name**, a **SUPERVISOR** dropdown, a **FOREMAN** dropdown, a search box, **Select All** and a people list on the left; on the right the **Supervisor**, **Foreman** and **Rosters** tabs count and list your picks. Who uses it: the Super Admin builds crews; a Project Manager or Time Management Lead copies them into a project."
+            "definition": "A named work group built from roster people, with its Supervisors and Foremen. The **Crews** screen (**Global Data → Crews**) shows one card per crew (18 on the test site, for example **Welding Crew**, **Piping Team**, **Daily crew**) with **Total SUPERVISORS**, **Total FOREMEN** and **Total Crew Rosters**, a search box and **Create**. The **Create Crew** dialog has **Crew Name**, a **SUPERVISOR** dropdown, a **FOREMAN** dropdown, a search box, **Select All** and a people list on the left; on the right the **Supervisor**, **Foreman** and **Rosters** tabs count and list your picks. Who uses it: the Super Admin builds crews; a Project Manager or Time Management Lead copies them into a project. **Where crews are used in Field Works:** after **Copy Crews from Global Data** in **Project Setup → People → Project Crews** (Elevated Corridor shows 20 crew cards), the same crew names appear in **Productivity Logs → Create Log → Add Crews** (19 distinct names listed) and in the **Crew** filter of the Productivity Logs list. A crew that was never copied to the project does not appear there."
           },
           {
             "term": "Roster Role (Supervisor / Foreman)",
@@ -20244,7 +20316,11 @@ const MODULES = [
           },
           {
             "term": "Where phase code data comes from and goes",
-            "definition": "**Comes from:** **Add** on the Phase Codes tab, Excel through **Export → Upload**, or a sync from Viewpoint through Staged Tables (**Phase Codes**). **Goes to:** (1) **Project Setup → Phase Codes** for every project: the test project showed all 963 codes, with **Timesheet Management** and **Equipment Management** tick boxes and a **Settings** button (\"Select the Cost Type for each category to display Phase Codes\": Material, Equipment, Labor, Unit Rate, Sub Contractor, BOQ's, Freight Charges, Fuel & Gas). (2) **Global Data → Cost → Cost Breakdown Structure → Phase Codes**, which is the same table. (3) **Time Management → My Timesheet → Default Phase Codes**, which lists Direct (D) and Indirect (I) phase codes with Labor in their Cost Types, shown as \"D - 01.001.0001 - Excavation\"; Non Productive and Change Order codes did not appear, and only 270 of the 944 Labor codes were offered (the rule for the subset was not identified). Global Rosters also carry a **Default Indirect Phase Code** per person."
+            "definition": "**Comes from:** **Add** on the Phase Codes tab, Excel through **Export → Upload**, or a sync from Viewpoint through Staged Tables (**Phase Codes**). **Goes to:** (1) **Project Setup → Phase Codes** for every project: the test project showed all 963 codes, with **Timesheet Management** and **Equipment Management** tick boxes and a **Settings** button (\"Select the Cost Type for each category to display Phase Codes\": Material, Equipment, Labor, Unit Rate, Sub Contractor, BOQ's, Freight Charges, Fuel & Gas). (2) **Global Data → Cost → Cost Breakdown Structure → Phase Codes**, which is the same table. (3) **Time Management → My Timesheet → Default Phase Codes**, which lists Direct (D) and Indirect (I) phase codes with Labor in their Cost Types, shown as \"D - 01.001.0001 - Excavation\"; Non Productive and Change Order codes did not appear, and only 270 of the 944 Labor codes were offered (the rule for the subset was not identified). Global Rosters also carry a **Default Indirect Phase Code** per person. (4) **Field Works → Progress → Productivity Logs**: the **Set Phase Codes** dialog offers a project-specific subset of the project list (108 codes on Arena Steel Plant - Phase 1, 278 on Elevated Corridor), and **Data Summary → Phase Codes** groups the logged hours by the phase code types **Direct**, **Indirect**, **Non Productive** and **Change Order**. A code such as **1089-101 - Fabrication** (Direct) was confirmed in both the Project Setup list and the logs."
+          },
+          {
+            "term": "Where UOMs are used in Field Works",
+            "definition": "**Global Data → Productivity → UOMs** (for example Kg, Lbs, Cum, Litres, Sqm) supplies the **UOM** of a work package, so **Estimated Quantity 45** with **UOM Cum** on a work package in **Project Setup → Works** comes from this list. A missing unit has to be added here first. Work logs then record **Actual Quantity** in that unit."
           }
         ],
         "procedures": [
@@ -20355,6 +20431,10 @@ const MODULES = [
           {
             "term": "Where construction type data comes from and goes",
             "definition": "**Comes from:** **Create** (new type), **Copy** (clone an existing type's setup) and the ten-step pipeline on the **Construction Type** tab. **Goes to:** the **Construction Type** dropdown on **Create Project** (same 56 names, default pre-selected) and the Construction Type shown in the **Project Setup** header (for example \"Arena Steel Plant - Phase 1\" shows \"Arena Integrated Steel Plant\"). The work areas, work packages, forms and templates you configure for a type are what projects of that type start from."
+          },
+          {
+            "term": "Quality Forms and Safety Forms feed Field Works",
+            "definition": "**Global Data → Construction Types → Step 2 Global Work Packages → Quality Forms** has **Quality Level 1** and **Quality Level 2** tabs, **Copy Form**, **Delete Form** and a **Work Packages** list grouped by activity (for the Moore Industries type: **General Conditions** with **MOORE - QP - 001** to **008** and **013**). Each form is built in four steps: **Create Inspection Items**, **Build Form**, **Setup Trigger Points**, **Preview Form**. **Safety Forms** (**MOORE - SP - 001** to **004**) has five steps (**Create Inspection Items**, **Inspection Items Response**, **Build Form**, **Setup Trigger Points**, **Preview Form**). **Where this goes:** the QP work packages are the ones that appear in **Field Works → Quality → Quality Level 1 / 2** (and in **Project Setup → Quality** folder mappings) on Warehouse Construction; the SP work packages and the **General Conditions** activity are what **Project Setup → Safety** offers in **Filter by Activities** and **Assign Workflow**, and what **Field Works → Safety** forms are built from. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
           }
         ],
         "procedures": [
@@ -20994,7 +21074,7 @@ const MODULES = [
           },
           {
             "term": "Document Management (templates)",
-            "definition": "Two tabs. **Structure Template** has **Create Template** and a list of folder templates (**FEL - 1**, **FEL - 2**, **FEL - 3**, **Detailed Engineering**); opening FEL - 1 shows **New Folder** and its folders (Civil, Mechanical, Structural, Architectural, Instrumentation, Process Controls) with Last Modified and Added On. **Document Template** has sub-tabs **Word**, **Excel**, **PPT** and **Text** with an **AddFile** button (no documents yet on the test site). A project's **Project Setup → Documents** had a FEL - 1 folder; how a structure template is applied to a project was not verified."
+            "definition": "Two tabs. **Structure Template** has **Create Template** and a list of folder templates (**FEL - 1**, **FEL - 2**, **FEL - 3**, **Detailed Engineering**); opening FEL - 1 shows **New Folder** and its folders (Civil, Mechanical, Structural, Architectural, Instrumentation, Process Controls) with Last Modified and Added On. **Document Template** has sub-tabs **Word**, **Excel**, **PPT** and **Text** with an **AddFile** button (no documents yet on the test site). A project's **Project Setup → Documents** had a FEL - 1 folder; how a structure template is applied to a project was not verified. **Where it goes:** in a project, **Project Setup → Documents → Import Template** opens **Global Templates**, whose list (**FEL - 1**, **FEL - 2**, **FEL - 3**, **Detailed Engineering** on the test site) is exactly the **Structure Template** list here; importing builds the folder structure in that project."
           },
           {
             "term": "Standard Tables",
@@ -21152,6 +21232,10 @@ const MODULES = [
           {
             "term": "Where notification settings come from and goes",
             "definition": "**Comes from:** the Events tab toggles, and Event Groups you add or load here. **Goes to:** **Project → Notifications** (tabs **Event Groups**, **Events**, **Reminders**, **Alerts**), which showed the identical 32 event groups on the test project, with the same **Reset to Standard**, **Add Event Groups** and **Get Standard Event Groups** buttons. Whether a change here carries into existing projects was not verified."
+          },
+          {
+            "term": "Events for productivity, quality, safety and drawings",
+            "definition": "The master **Events** list includes groups that cover the areas in this guide: **Progress** (18 events), **Timesheet** (4), **Quality Forms** (11), **Punch Lists** (5: PNL Raised, Assigned, Rectified, Chat New Comment, QC Verified), **Project Safety Forms** (13), **Scheduled Safety Forms** (10), **Safety Issues** (5), **Safety Observations** (7), **Restraints** (6), **Drawing Management** (20), **Workflow Issues** (3) and **Quantity Tracksheet** (4). Each event has **Mail**, **Web** and **Mobile** templates, and projects see the same events under **Project Notifications**. No group named for Productivity Logs was seen. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
           }
         ],
         "procedures": [
@@ -21470,7 +21554,7 @@ const MODULES = [
           },
           {
             "term": "Where measurement template data comes from and goes",
-            "definition": "**Comes from:** **Add Template**. **Goes to:** Step 10 of the Construction Type pipeline (**Global Data → Construction Type → Work Package Measurement Template Linking**: **Upload Excel**, **Download Excel**, search, and the columns Activity, Work Package, Description, Template), which ties a template to each work package. It was empty for the Metro type on the test site."
+            "definition": "**Comes from:** **Add Template**. **Goes to:** Step 10 of the Construction Type pipeline (**Global Data → Construction Type → Work Package Measurement Template Linking**: **Upload Excel**, **Download Excel**, search, and the columns Activity, Work Package, Description, Template), which ties a template to each work package. It was empty for the Metro type on the test site. On the Field Works Work Logs forms seen for this guide (**Estimated Quantity**, **Actual Quantity**, **Cumulated Quantity**) no measurement-template calculator was visible, so where a linked template appears to field users was not confirmed. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
           }
         ],
         "procedures": [
@@ -24007,6 +24091,10 @@ const MODULES = [
           {
             "term": "How this differs from other document areas",
             "definition": "**Project Setup → Documents** is the live working area. **Quality → Quality And Documents** and **Safety → Safety And Documents** hold discipline-specific files. **Document Repository** is the read-only archive across the project."
+          },
+          {
+            "term": "Import Template (from Global Data)",
+            "definition": "In **Project Setup → Documents**, **Import Template** opens **Global Templates** with a drop-down (**FEL - 1**, **FEL - 2**, **FEL - 3**, **Detailed Engineering** on the test site) and **Import**. The list is the **Structure Template** list in **Global Data → Document Management**, so a new template must be created there first. Other buttons seen on the page: **Create Team**, **New Folder**, **Sync Team**; the tabs are **My Files** and **Shared With Me**."
           }
         ],
         "procedures": [
@@ -24908,7 +24996,7 @@ const MODULES = [
         "definitions": [
           {
             "term": "Quality Level 1",
-            "definition": "The first-pass quality inspection card. It shows an **Entity** picker, status chips (Not yet started, Ready to work, Started, In Progress, Completed, Issue Raised), and a **Work Packages** list with **Ready** and **All** tabs. Level 2 for an item opens only once its Level 1 is approved, because **Project Settings → Quality Logs → \"Do you want to skip level 1?\"** is set to **No** on Arena Steel Plant - Phase 1 (answer Yes to allow skipping). **Where this data comes from:** the entities and work packages are the Works tree from **Project Setup → Works**, and inspections are logged against work packages that have a quality form folder mapped to them in **Project Setup → Quality** (Folders, Map Work Packages) once their work is ready. On Arena Steel Plant - Phase 1 Piperack and ECR both show \"No ready Work Packages available to log Quality check lists\" because Folder 1 has no mapped work packages. **Which setting changes it:** **Project Settings → Quality Work Logs Templates** (drill-down), **Quality Logs** (skip Level 1). **Where it goes next:** **Submitted Quality Logs**, **Approve Quality Logs**, **Punch Lists** when an item fails, the **Recent Quality Logs** panel on **My Desk**, the folder counters in Project Setup → Quality, and the **Quality Progress** dashboard in **Data Analytics & Insights**. **The form:** clicking a location opens a check list (for example **MOORE - QP - 008 | Preconstruction**) with the company letterhead (address, phone and zip of the company location from Global Data) and **Form Created**; the check list name (**Site Office Mobilization / Set Up**); **General Information** (Customer, Manager, the project's Level-1, Level-2 and Commodities names, Project No., Project Title, Work Packages, Project Location); **Expand All** / **Collapse All**; **Inspection Items** with **Yes** / **No** per question; **Other Fields** with a **Signature**; and **Submit**. The three-dot menu has **Download**, **PDF Share**, **Print**, **Compose Mail** and **See All Email Threads**, there is a **Follow Up Actions** button, and **Hide Tagged Documents** shows files tagged to the commodity in the folder's **Documents** tab. If you leave the form with unsaved changes the app asks \"Changes not saved - Press Ok to proceed anyway\"."
+            "definition": "The first-pass quality inspection card. It shows an **Entity** picker, status chips (Not yet started, Ready to work, Started, In Progress, Completed, Issue Raised), and a **Work Packages** list with **Ready** and **All** tabs. Level 2 for an item opens only once its Level 1 is approved, because **Project Settings → Quality Logs → \"Do you want to skip level 1?\"** is set to **No** on Arena Steel Plant - Phase 1 (answer Yes to allow skipping). **Where this data comes from:** the entities and work packages are the Works tree from **Project Setup → Works**, and inspections are logged against work packages that have a quality form folder mapped to them in **Project Setup → Quality** (Folders, Map Work Packages) once their work is ready. On Arena Steel Plant - Phase 1 Piperack and ECR both show \"No ready Work Packages available to log Quality check lists\" because Folder 1 has no mapped work packages. **Which setting changes it:** **Project Settings → Quality Work Logs Templates** (drill-down), **Quality Logs** (skip Level 1). **Where it goes next:** **Submitted Quality Logs**, **Approve Quality Logs**, **Punch Lists** when an item fails, the **Recent Quality Logs** panel on **My Desk**, the folder counters in Project Setup → Quality, and the **Quality Progress** dashboard in **Data Analytics & Insights**. **The form:** clicking a location opens a check list (for example **MOORE - QP - 008 | Preconstruction**) with the company letterhead (address, phone and zip of the company location from Global Data) and **Form Created**; the check list name (**Site Office Mobilization / Set Up**); **General Information** (Customer, Manager, the project's Level-1, Level-2 and Commodities names, Project No., Project Title, Work Packages, Project Location); **Expand All** / **Collapse All**; **Inspection Items** with **Yes** / **No** per question; **Other Fields** with a **Signature**; and **Submit**. The three-dot menu has **Download**, **PDF Share**, **Print**, **Compose Mail** and **See All Email Threads**, there is a **Follow Up Actions** button, and **Hide Tagged Documents** shows files tagged to the commodity in the folder's **Documents** tab. If you leave the form with unsaved changes the app asks \"Changes not saved - Press Ok to proceed anyway\". **Where the check list comes from:** the Quality Forms in Global Data (**Global Data → Construction Types → Global Work Packages → Quality Forms**), one per work package."
           },
           {
             "term": "Quality Level 2",
@@ -25196,7 +25284,7 @@ const MODULES = [
         "definitions": [
           {
             "term": "Safety Forms",
-            "definition": "The card holding event-based project safety forms — ad-hoc, unscheduled safety checks organized by category and filled out on demand. **Where this data comes from:** the category list on the left (\"Safety Forms (0)\") is built in **Project Setup → Safety → Setup Project Safety Forms** from the safety forms mapped to activities in **Global Data → Construction Types → Global Work Packages → Safety Forms**, and each form must be assigned to users. On Arena Steel Plant - Phase 1 no category exists, so the screen shows \"No Logs Available\". Approval levels come from **Project Setup → Safety → Create Workflow** and **Assign Workflow**. **Seen with data (Warehouse Construction):** the left list reads **Safety Forms (4)** with the categories **Safety form 1** to **Safety Form 4** and the form **Safety** under each. The right side has **Create Form**, a search box and **Filters**, and cards that show a status (**Approved**), \"Raised on 27th February 2024 by SYS_ADMIN\", **ID 3**, **Form Title**, **Issues Raised** and **Approval Work Flow** (**2/2** means both levels approved). **Create Form** opens a dialog with the letterhead, **Form Created** (now), the form name, **General Information** (Customer, Project Location, Work Packages **MOORE - SP - 001**, Project No., Manager, Work Packages Description, Project Title), **Inspection Items** (the **Daily Safety Checklist**), **Save As Draft** and **Submit For Approval**. An existing form opens with its answers (for example \"'No smoking' Regulations observed?\" **Yes** / **No**), **Submit**, **Close** and a **Chat** panel. **Seen with data (Warehouse Construction):** the left list reads **Safety Forms (4)** with the categories **Safety form 1** to **Safety Form 4** and the form **Safety** under each. The right side has **Create Form**, a search box and **Filters**, and cards that show a status (**Approved**), \"Raised on 27th February 2024 by SYS_ADMIN\", **ID 3**, **Form Title**, **Issues Raised** and **Approval Work Flow** (**2/2** means both levels approved). **Create Form** opens a dialog with the letterhead, **Form Created** (now), the form name, **General Information** (Customer, Project Location, Work Packages **MOORE - SP - 001**, Project No., Manager, Work Packages Description, Project Title), **Inspection Items** (the **Daily Safety Checklist**), **Save As Draft** and **Submit For Approval**. An existing form opens with its answers (for example \"'No smoking' Regulations observed?\" **Yes** / **No**), **Submit**, **Close** and a **Chat** panel."
+            "definition": "The card holding event-based project safety forms — ad-hoc, unscheduled safety checks organized by category and filled out on demand. **Where this data comes from:** the category list on the left (\"Safety Forms (0)\") is built in **Project Setup → Safety → Setup Project Safety Forms** from the safety forms mapped to activities in **Global Data → Construction Types → Global Work Packages → Safety Forms**, and each form must be assigned to users. On Arena Steel Plant - Phase 1 no category exists, so the screen shows \"No Logs Available\". Approval levels come from **Project Setup → Safety → Create Workflow** and **Assign Workflow**. **Seen with data (Warehouse Construction):** the left list reads **Safety Forms (4)** with the categories **Safety form 1** to **Safety Form 4** and the form **Safety** under each. The right side has **Create Form**, a search box and **Filters**, and cards that show a status (**Approved**), \"Raised on 27th February 2024 by SYS_ADMIN\", **ID 3**, **Form Title**, **Issues Raised** and **Approval Work Flow** (**2/2** means both levels approved). **Create Form** opens a dialog with the letterhead, **Form Created** (now), the form name, **General Information** (Customer, Project Location, Work Packages **MOORE - SP - 001**, Project No., Manager, Work Packages Description, Project Title), **Inspection Items** (the **Daily Safety Checklist**), **Save As Draft** and **Submit For Approval**. An existing form opens with its answers (for example \"'No smoking' Regulations observed?\" **Yes** / **No**), **Submit**, **Close** and a **Chat** panel. **Seen with data (Warehouse Construction):** the left list reads **Safety Forms (4)** with the categories **Safety form 1** to **Safety Form 4** and the form **Safety** under each. The right side has **Create Form**, a search box and **Filters**, and cards that show a status (**Approved**), \"Raised on 27th February 2024 by SYS_ADMIN\", **ID 3**, **Form Title**, **Issues Raised** and **Approval Work Flow** (**2/2** means both levels approved). **Create Form** opens a dialog with the letterhead, **Form Created** (now), the form name, **General Information** (Customer, Project Location, Work Packages **MOORE - SP - 001**, Project No., Manager, Work Packages Description, Project Title), **Inspection Items** (the **Daily Safety Checklist**), **Save As Draft** and **Submit For Approval**. An existing form opens with its answers (for example \"'No smoking' Regulations observed?\" **Yes** / **No**), **Submit**, **Close** and a **Chat** panel. **Form content:** the checklist (for example **Daily Safety Checklist**) is built in **Global Data → Construction Types → Global Work Packages → Safety Forms** (work packages such as MOORE - SP - 001) and made available in **Project Setup → Safety**."
           },
           {
             "term": "Safety Calendar",
