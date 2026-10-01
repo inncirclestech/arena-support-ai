@@ -8656,8 +8656,8 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "module",
     section: "Proposals",
     question: "How do I create a new proposal?",
-    answer: "Go to Proposal Management > Proposals and click \"Create\". In the pop-up, enter the Proposal Name, Description, Proposal Type, Proposal Value Estimated, and Business Development Code, then select the required Opportunity (or create a new one if it does not exist). Click \"Submit for Approval\" to create the proposal. The Proposal ID is auto-generated based on the ID Settings.",
-    tags: ["new proposal","add proposal","start proposal","proposal creation"]
+    answer: "Go to Proposal Management > Proposals and click \"Create\". In \"Create Proposal\" enter the Proposal Name, choose the Proposal Type and tick the Bid folder box if needed, then click \"Submit for Approval\". Open the proposal by clicking its name to fill the Profile (Opportunity, Bid Type, Project Type, customers, site, dates and values) and Save Changes. The Proposal ID is created from Settings > ID Settings.",
+    tags: ["new proposal","add proposal","start proposal","proposal creation","how do i create a proposal"]
   },
   {
     action: "edit",
@@ -8665,7 +8665,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "module",
     section: "Proposals",
     question: "How do I edit an existing proposal's details?",
-    answer: "In Proposal Management > Proposals, open the Actions menu for the proposal and select \"Edit\". You can modify the Proposal Name, Description, Proposal Type, Opportunity, Estimated Project Value, and Business Development Code.",
+    answer: "In Proposal Management > Proposals, click the edit icon in Actions to change the Proposal Name or Proposal Type, or click the proposal name to open the Profile and change everything else (then Save Changes).",
     tags: ["update proposal","modify proposal","change proposal details"]
   },
   {
@@ -8674,7 +8674,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "module",
     section: "Proposals",
     question: "How do I delete a proposal?",
-    answer: "In Proposal Management > Proposals, open the Actions menu for the proposal row and click \"Delete\" to permanently remove the proposal.",
+    answer: "In Proposal Management > Proposals, click the delete icon in the Actions column of the proposal row to permanently remove it.",
     tags: ["remove proposal","delete bid record"]
   },
   {
@@ -8692,7 +8692,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "module",
     section: "Proposals",
     question: "How can I see the history of changes made to a proposal?",
-    answer: "In Proposal Management > Proposals, open the Actions menu and select \"See History\" to view a log of created, edited, updated, and approval workflow status changes.",
+    answer: "In Proposal Management > Proposals click the history icon in the Actions column (or open the proposal and use its History tab) to see created, edited and updated entries and approval workflow status changes.",
     tags: ["proposal audit trail","change log","proposal history"]
   },
   {
@@ -8726,27 +8726,27 @@ const QA_PROPOSALMANAGEMENT = [
     action: "create",
     object: "bid",
     scope: "module",
-    section: "Bids",
-    question: "How do I create a bid within a proposal?",
-    answer: "Open the proposal's Bid tab and click \"Create Bid\". Fill in the Bid Name, Description, Proposal, and Bid Type in the pop-up window, then submit. Note: the Bid tab must first be enabled via permissions in Bid Management.",
-    tags: ["create bid","new bid","add bid to proposal"]
+    section: "Bid Tab (Tenders)",
+    question: "How do I create a bid (tender) within a proposal?",
+    answer: "Open the proposal, click the Bid tab and click \"Add Tender\". In \"Create Tender\" enter the Tender Name, a Description, check the Select Proposal value and choose Open Bidding, Selective Bidding or Selective Bidding - No Prequalification, then click \"Submit for Approval\". The tender is run in Tender Management and linked back through Proposal Linked.",
+    tags: ["create bid","new bid","add bid to proposal","add tender","how do I add a tender from a proposal","create tender from proposal"]
   },
   {
     action: "export",
     object: "bid",
     scope: "module",
-    section: "Bids",
+    section: "Bid Tab (Tenders)",
     question: "Can I export or import bids in bulk?",
-    answer: "Yes. In the Bids list, use \"Exports\" for Download Excel (export existing bid data) and Upload Excel (bulk-create bids via Excel upload).",
+    answer: "The Bid tab lists the proposal's tenders with Filters, Manage Columns, table / grid views, Save Layout and Show as Graph. Bulk Excel import of tenders is not shown on this tab.",
     tags: ["bulk bids","download bids","upload bids"]
   },
   {
     action: "view",
     object: "bid",
     scope: "module",
-    section: "Bids",
+    section: "Bid Tab (Tenders)",
     question: "What views are available for the Bids list?",
-    answer: "The Bids list supports Table View, Grid View, and Kanban View. Choose a view and click \"Save Layout\" to keep it as the default.",
+    answer: "The Bid tab (tenders) offers table and grid views, Manage Columns and \"Show as Graph\"; click \"Save Layout\" to keep your choice.",
     tags: ["bid views","kanban bids","table view"]
   },
   {
@@ -8824,10 +8824,10 @@ const QA_PROPOSALMANAGEMENT = [
   {
     action: "define",
     object: "proposal type",
-    scope: "global",
+    scope: "module",
     section: "Settings",
     question: "How do I set up a new proposal type?",
-    answer: "Go to Global Data > Company > Proposal Management > Proposal Types and click \"Proposal Type\" (or \"Create\") to open a pop-up for entering the Proposal Type Name and Description. Click into the created type to add and configure form sections and fields, then \"Save Changes\".",
+    answer: "Go to Proposal Management > Settings > Proposal > Proposal Types and click \"Proposal Type\" to enter a name and description (3 types exist on the test site). Then use the Proposal Form tab to configure the sections and fields, and Save Changes.",
     tags: ["proposal type setup","configure proposal type","add proposal type"]
   },
   {
@@ -8836,7 +8836,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "global",
     section: "Settings",
     question: "How do I create a bid type?",
-    answer: "Go to Proposal Management Settings (or Global Data > Company > Proposal Management) > Bid Types and click \"Bid Type\". Enter a Name, Description, and Estimate Type in the pop-up, then submit.",
+    answer: "Go to Proposal Management > Settings > Bid Types and click \"Bid Type\". Enter a Name, Description and Estimate Type, then submit. The bid types (3 on the test site) feed the Bid Type drop-down on the proposal Profile.",
     tags: ["bid type","define bid category","estimate type"]
   },
   {
@@ -8845,7 +8845,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "global",
     section: "Settings",
     question: "What is the Delivery Method setting for proposals?",
-    answer: "Delivery Method defines how a proposal is submitted or sent to the recipient. In Proposal Management Settings > Delivery Method, click \"Add\" to create a new row, or use \"Delete\" to remove one.",
+    answer: "Delivery Method defines how a proposal is submitted or sent (Website, Hard Copy, Auction, Letters, Manually, Phone, Email on the test site). In Proposal Management > Settings > Delivery Method, click \"Add\" to create a row or Delete to remove one. The list feeds the Delivery Method drop-down on the proposal Profile.",
     tags: ["proposal delivery method","submission channel"]
   },
   {
@@ -8854,7 +8854,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "global",
     section: "Settings",
     question: "How do I configure custom statuses for proposals and submission packages?",
-    answer: "Go to Proposal Management Settings (or Global Data) > Status Configuration. Click \"Add Status\" to enter a status name and color for either the Proposal or Submission Package tab. Two standard statuses can be set as \"Success\" or \"Failure\" via Edit.",
+    answer: "Go to Proposal Management > Settings > Status. Click \"Add Status\" to enter a status name and colour for the Proposal or Submission Package list. Use \"Edit\" on a last-level standard status to mark it Success or Failure. Proposal statuses on the test site: Start, Successful, Pending, Cancelled, No Bid, N/A, Completed, Lost.",
     tags: ["proposal status","custom status colors","status configuration"]
   },
   {
@@ -8863,7 +8863,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "global",
     section: "Settings",
     question: "How do I set up the approval workflow for proposals?",
-    answer: "Go to Global Data > Company > Proposal Management > Approval Workflow and click \"Create Level\" to select approvers and the workflow type (all must approve, or any one can approve). Multiple levels can be created. Use \"Open Workflow Graph View\" to see the workflow as a tree diagram.",
+    answer: "Go to Proposal Management > Settings > Approval Workflow and click \"Create Level\" to select approvers and the workflow type (all must approve, or any one can approve). Create several levels if needed and use \"Open Workflow Graph View\" to see the tree. The levels give the Workflow Level (for example 1/1) on each proposal.",
     tags: ["proposal approval levels","workflow graph","create approval level"]
   },
   {
@@ -8872,7 +8872,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "global",
     section: "Settings",
     question: "How do I configure automatic ID generation for proposals?",
-    answer: "Go to Global Data > Company > Proposal Management > ID Settings. Choose \"System Default\" for automatic IDs or \"Custom\" to configure separator, serial number, date, month, and year fields, then click \"Save Changes\". Separate ID settings exist for Proposal and Submission Package.",
+    answer: "Go to Proposal Management > Settings > ID Settings. Choose \"System Default\" for automatic IDs or \"Custom\" to configure separator, serial number, date, month and year, then Save Changes. Proposals and Submission Packages have separate settings.",
     tags: ["proposal id format","custom id","auto generated id"]
   },
   {
@@ -8897,9 +8897,9 @@ const QA_PROPOSALMANAGEMENT = [
     action: "view",
     object: "proposal dashboard",
     scope: "module",
-    section: "Dashboard",
+    section: "My Dashboard",
     question: "What does the Proposal Management Dashboard show?",
-    answer: "Navigate to Proposal Management > My Dashboard. It shows Total Proposals by status (Created, In Progress, Approved/Rejected), an Estimate Success Rate graph, Calendar Events, Issues/Forms/Approvals/Proposals summaries, a To Do List, and Proposal Deadlines based on due dates. Data shown is scoped to the logged-in user unless they are a system admin.",
+    answer: "My Dashboard shows Total Proposals, Proposals Created, Completed, Lost and In Progress Proposals (with counts, amounts and Daily/Weekly/Monthly/Yearly trends), three success-rate graphs filtered by Proposal Types and date, Calendar Events, Issues, Forms (Legal Review, Safety, Quality), Approvals, a Proposals list, a To Do List and Proposal Deadline.",
     tags: ["proposal dashboard","my dashboard","proposal overview"]
   },
   {
@@ -8924,7 +8924,7 @@ const QA_PROPOSALMANAGEMENT = [
     action: "track",
     object: "to do item",
     scope: "module",
-    section: "To Do",
+    section: "To Do List",
     question: "How do I create a to-do task for a proposal?",
     answer: "In Proposal Management > To Do, click \"Create To Do List\" and fill in Title, Description, Date, and Time, then submit. Use \"Assign To\" to assign the task to a user, and click the double-tick icon to mark it complete.",
     tags: ["proposal task","to-do list","assign task"]
@@ -8944,7 +8944,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "module",
     section: "Proposals",
     question: "How do I add a new customer directly from a proposal?",
-    answer: "In the proposal Profile's Project Location section, use \"Create a Customer\" or \"Create a Customer POC\" to add a new customer or point of contact inline; this also creates a record in the global Customer database.",
+    answer: "In the proposal Profile use \"Create a Customer\", \"Create a Customer POC\", \"Create an Owner\" or \"Create a Site\" under the matching field. The new entry is also a record in Global Data (Customers, Owners, Locations).",
     tags: ["add customer","customer poc","create customer from proposal"]
   },
   {
@@ -8953,7 +8953,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "module",
     section: "Proposals",
     question: "How do I add users or crews to a proposal team?",
-    answer: "In the proposal's Teams tab, click \"Add User\" to select individuals from the global roster, or \"Add Crew\" to add a crew from Global Data. Use the kebab menu's Delete to remove members.",
+    answer: "In the proposal's Teams tab, click \"Add User\" to pick company users (from Global Rosters), or switch to Crews and click \"Add Crew\" to pick a Global Data crew. Use the three-dot menu on a member to remove them.",
     tags: ["proposal team","add user to proposal","add crew"]
   },
   {
@@ -8987,10 +8987,307 @@ const QA_PROPOSALMANAGEMENT = [
     action: "configure",
     object: "proposal calendar event",
     scope: "module",
-    section: "Proposals",
+    section: "Calendar",
     question: "How do I create a calendar event for a proposal deadline?",
-    answer: "In the Proposal Management Calendar, click \"Create Event\" and enter the Title, Date, Time, Category, and Description. Events created here are automatically linked to the Proposal module and can sync with Outlook via Global Data > Marketplace > Microsoft Outlook.",
+    answer: "In Proposal Management > Calendar click \"Create Event\" and enter the Title, Date, Time, Category and Description. If you see \"Consent Not Granted\", give calendar consent first in My Profile > Settings. Events can sync with Outlook.",
     tags: ["proposal calendar","create event","outlook sync"]
+  },
+  {
+    action: "view",
+    object: "proposal field",
+    scope: "module",
+    section: "Where Proposal Fields Come From",
+    question: "Where do the drop-down values in a proposal come from?",
+    answer: "Proposal Type, Bid Type, Project Type, Business Development Code, Department Code, Delivery Method and Status come from Proposal Management > Settings. Customers, POCs, Owners and the Site Name / Job Site locations come from Global Data (Customers, Owners, Locations). Opportunity comes from Opportunity Management. Company Contact, Estimators, Teams and Assign To come from the company users in Global Rosters.",
+    tags: ["proposal dropdown source","where do proposal fields come from","proposal profile lineage"]
+  },
+  {
+    action: "view",
+    object: "proposal customer",
+    scope: "module",
+    section: "Where Proposal Fields Come From",
+    question: "Where does the Customers list on a proposal come from?",
+    answer: "From Global Data > Customers (8 customers on the test site, with their contacts as POCs). Adding a customer or POC from the proposal also creates it in Global Data.",
+    tags: ["proposal customers dropdown","where do customers on a proposal come from","customer poc source","customers global data proposal","customers list"]
+  },
+  {
+    action: "view",
+    object: "proposal owner",
+    scope: "module",
+    section: "Where Proposal Fields Come From",
+    question: "Where do Owners and Site Name come from on a proposal?",
+    answer: "Owners come from Global Data > Owners (3 on the test site). Site Name and Job Site come from Global Data > Locations (8 locations plus None); choosing a site fills City and State.",
+    tags: ["proposal owners","site name job site source","locations proposal"]
+  },
+  {
+    action: "view",
+    object: "proposal opportunity",
+    scope: "module",
+    section: "Where Proposal Fields Come From",
+    question: "Is a proposal linked to an Opportunity?",
+    answer: "Optionally. The Profile's Opportunity drop-down lists the opportunities of Opportunity Management (None, or for example \"1 Parent Opp Test A\"). On the test site all 13 proposals have no opportunity.",
+    tags: ["proposal from opportunity","link proposal to opportunity","opportunity dropdown proposal"]
+  },
+  {
+    action: "view",
+    object: "proposal type",
+    scope: "module",
+    section: "Where Proposal Fields Come From",
+    question: "Where do Proposal Types come from?",
+    answer: "Proposal Management > Settings > Proposal > Proposal Types (Fabrication, Roofing proposal and Cost Plus on the test site). The extra sections at the bottom of the Profile come from the Proposal Form tab of the same page.",
+    tags: ["proposal types source","proposal type list"]
+  },
+  {
+    action: "view",
+    object: "project type",
+    scope: "module",
+    section: "Where Proposal Fields Come From",
+    question: "What do Project Type and Bid Type mean on a proposal?",
+    answer: "Project Type is a code from Settings > Project Types that carries Field/Shop, Material and New/Repair (for S-PipingSS: SHOP, SS, NEW). Bid Type comes from Settings > Bid Types (Build-Own-Transfer, General, Speciality Items). They are different from the Open / Selective Bidding choice used when creating a tender.",
+    tags: ["project type proposal","bid type proposal","field shop material new repair"]
+  },
+  {
+    action: "view",
+    object: "estimators",
+    scope: "module",
+    section: "Where Proposal Fields Come From",
+    question: "Why do I see only a few people in the Estimators field?",
+    answer: "Estimators lists only people with the Estimator role in Global Data > Users & Permissions > Global Rosters (3 on the test site). Company Contact and Assign To list all users instead.",
+    tags: ["estimators dropdown","estimator role","proposal estimators"]
+  },
+  {
+    action: "view",
+    object: "proposal status",
+    scope: "module",
+    section: "Where Proposal Fields Come From",
+    question: "What proposal statuses are there?",
+    answer: "On the test site: Start, Successful, Pending, Cancelled, No Bid, N/A, Completed and Lost, each with a colour. Start is the first standard status; Completed and Lost are the last-level standard statuses that carry the Success / Failure flag. Add or edit them in Settings > Status.",
+    tags: ["proposal statuses list","what statuses can a proposal have","proposal status options","status colours","no bid lost completed"]
+  },
+  {
+    action: "view",
+    object: "proposal list",
+    scope: "module",
+    section: "Proposals",
+    question: "What columns does the Proposals list have?",
+    answer: "34 columns including Proposal ID, Name, Opportunity, Proposal Type, Bid Type, Project Type, Customers, Site Name, Estimators, Due Date, Project Value Estimated and Submitted, Anticipated Award Date, Contract Amount, Projected Cost, Chance of Success, Workflow Level, Follow Up, Recent Comments, Approve, Reject, Assign To and Actions. Use Manage Columns to choose which to show.",
+    tags: ["proposal list columns","manage columns proposals","proposal table"]
+  },
+  {
+    action: "view",
+    object: "proposal workflow level",
+    scope: "module",
+    section: "Proposals",
+    question: "What does Workflow Level 1/1 mean on a proposal?",
+    answer: "The number of approval levels completed out of the levels in Settings > Approval Workflow. 1/1 means the single level is done; 0/1 means it is still waiting. Approve and Reject show only for people in the workflow.",
+    tags: ["workflow level","proposal approval progress"]
+  },
+  {
+    action: "view",
+    object: "proposal dialog",
+    scope: "module",
+    section: "Proposals",
+    question: "What does the Create Proposal dialog ask for?",
+    answer: "Proposal Name, Proposal Type and a tick box \"Does a Bid folder need to be created by the Project Services Admin?\", then \"Submit for Approval\". All other details are filled in on the Profile after the proposal is created.",
+    tags: ["create proposal fields","new proposal dialog","what does the create proposal dialog ask for"]
+  },
+  {
+    action: "view",
+    object: "proposal tabs",
+    scope: "module",
+    section: "Proposals",
+    question: "What tabs does an open proposal have?",
+    answer: "Profile, Teams, Documents, Communication, Checklists, Bid, Submittals and Submission Packages, plus a Comments panel and a History tab.",
+    tags: ["proposal tabs","inside a proposal"]
+  },
+  {
+    action: "view",
+    object: "proposal document",
+    scope: "module",
+    section: "Proposals",
+    question: "Which folders does the proposal Documents tab have?",
+    answer: "Comments Attachments, Mail Attachments, Checklists, Submittals, Submission Packages and Bids, plus New Folder and Upload Documents. Whether files are stored in AWS S3 or SharePoint is set in Settings > Proposal > Settings > Document Management.",
+    tags: ["proposal documents folders","document management s3 sharepoint"]
+  },
+  {
+    action: "view",
+    object: "proposal team",
+    scope: "module",
+    section: "Proposals",
+    question: "Where do the users and crews in a proposal team come from?",
+    answer: "Add User lists the company's system users from Global Data > Users & Permissions > Global Rosters; Add Crew lists the crews in Global Data > Crews with their member counts.",
+    tags: ["proposal team source","add crew proposal list"]
+  },
+  {
+    action: "view",
+    object: "bid tab",
+    scope: "module",
+    section: "Bid Tab (Tenders)",
+    question: "What is the Bid tab on a proposal?",
+    answer: "A list of the tenders raised for that proposal (Tender Name, Tender ID, Bid Type, Status, Approval Status) with Add Tender. Tenders are run in Tender Management and linked back through Proposal Linked.",
+    tags: ["bid tab proposal","tender from proposal","proposal tender link"]
+  },
+  {
+    action: "view",
+    object: "tender",
+    scope: "module",
+    section: "Bid Tab (Tenders)",
+    question: "What bid types can I pick when adding a tender?",
+    answer: "Open Bidding, Selective Bidding and Selective Bidding - No Prequalification. These are the tender's own bidding types, separate from the Bid Type on the proposal Profile (Settings > Bid Types).",
+    tags: ["tender bid type","open bidding selective bidding"]
+  },
+  {
+    action: "view",
+    object: "checklist",
+    scope: "module",
+    section: "Checklists",
+    question: "What are the Safety, Legal Review and Quality tabs in Checklists?",
+    answer: "They are the checklist templates defined in Settings > Checklists. Click Create Form to fill one (for example Safety: address, phone, questions with Yes / No and Safety Response) and Submit. Filled forms go to Documents > Checklists and count on My Dashboard > Forms.",
+    tags: ["checklist templates safety legal review quality","proposal checklist forms"]
+  },
+  {
+    action: "view",
+    object: "submittal",
+    scope: "module",
+    section: "Submittals",
+    question: "What does Create Submittal Letter offer?",
+    answer: "Two options: Create new letter, or Import From Global Data to reuse a Submittals template from Settings. The tab has Letter and Budgetary Letter sub-tabs. No templates exist on the test site.",
+    tags: ["submittal letter options","import submittal template"]
+  },
+  {
+    action: "view",
+    object: "submission package",
+    scope: "module",
+    section: "Submission Packages",
+    question: "What sub-tabs does Submission Packages have?",
+    answer: "Logs (the packages, for example \"SP 1\"), Setup Approval Workflow (levels for approving packages) and Workflow Issue (rejections). Create Submission Package walks through Profile, Documents, Checklists, Submittals and Attachments.",
+    tags: ["submission package tabs","sp logs"]
+  },
+  {
+    action: "view",
+    object: "submission package status",
+    scope: "module",
+    section: "Submission Packages",
+    question: "What statuses can a submission package have?",
+    answer: "Start, Submitted and Completed on the test site, from Settings > Status > Submission Package.",
+    tags: ["submission package statuses"]
+  },
+  {
+    action: "view",
+    object: "proposal issue",
+    scope: "module",
+    section: "Issues",
+    question: "What does a proposal Issue show?",
+    answer: "The date raised, who raised it and the level (for example \"Level 1\"), the PI number, the Proposal ID, comments, the status Rejected and Assign To. Counters show Total Issues, Issues Approved and Issues Rejected. Filters: Log ID, Raised On, Raised By.",
+    tags: ["proposal issues tab","pi number","rejected proposals"]
+  },
+  {
+    action: "view",
+    object: "calendar",
+    scope: "module",
+    section: "Calendar",
+    question: "Why does Create Event say Consent Not Granted?",
+    answer: "Calendar events need calendar consent. Give it in My Profile > Settings > Calendar consent (Outlook management consent for the Dashboard events). The Outlook link itself is set up in Global Data > Marketplace.",
+    tags: ["calendar consent","why does create event say consent not granted","consent not granted proposal calendar","outlook consent"]
+  },
+  {
+    action: "view",
+    object: "to do list",
+    scope: "module",
+    section: "To Do List",
+    question: "What does the Create To Do List dialog ask for?",
+    answer: "Title (required), Description, Date and Time (hours, minutes, AM/PM), then Submit. The assignee is set afterwards; Assign To lists the system users from Global Data.",
+    tags: ["create to do fields","to do dialog"]
+  },
+  {
+    action: "view",
+    object: "dashboard card",
+    scope: "module",
+    section: "My Dashboard",
+    question: "What are the Forms and Approvals panels on My Dashboard?",
+    answer: "Forms counts checklist forms by template (Legal Review, Safety, Quality). Approvals counts Proposal Approvals and Submission Package Approvals waiting for you. Issues counts Proposal and Submission Package Workflow Issues.",
+    tags: ["dashboard forms approvals issues","proposal dashboard panels"]
+  },
+  {
+    action: "view",
+    object: "analytics",
+    scope: "module",
+    section: "Analytics & Reports",
+    question: "What analytics cards are in Proposal Management?",
+    answer: "Eight: Proposal Success Rate, Estimate Success Rate, Types of Proposals, Success & Estimate Over Time, Profit over time, Weekly Report (with Estimators Work Schedule Report and Follow Up Report), Report (all charts, Download PDF) and Best and Worst Customers.",
+    tags: ["analytics cards","proposal analytics list","weekly report follow up report"]
+  },
+  {
+    action: "view",
+    object: "weekly report",
+    scope: "module",
+    section: "Analytics & Reports",
+    question: "What is in the Proposal Weekly Report?",
+    answer: "A table of proposals with Proposal No., Status, Site, Customer, Department Code, Location, Bid Type, Proposal Name, Estimated and Actual Value, Due Date, Submitted Date, Estimators, Days Since and Comments, plus the total of pending / expected estimates. Download, share and print icons are at the top. Comments pinned with Add to Report appear in it.",
+    tags: ["weekly report proposals","estimators work schedule report","follow up report"]
+  },
+  {
+    action: "view",
+    object: "profit over time",
+    scope: "module",
+    section: "Analytics & Reports",
+    question: "Where do the Profit Over Time numbers come from?",
+    answer: "From Contract Amount minus Projected Cost entered on each proposal Profile, shown by year, together with estimating cost.",
+    tags: ["profit over time","contract amount projected cost"]
+  },
+  {
+    action: "view",
+    object: "push datasets",
+    scope: "module",
+    section: "Push Datasets",
+    question: "What is the Push Datasets tab?",
+    answer: "A list of four proposal datasets (Standard Proposal Data, Proposal Comments Data, Customers Data, Customers POC Data), each with a SYNC button to refresh it for reporting.",
+    tags: ["push datasets","sync proposal data","dataset sync"]
+  },
+  {
+    action: "view",
+    object: "proposal settings",
+    scope: "module",
+    section: "Settings",
+    question: "What pages are in Proposal Management Settings?",
+    answer: "Proposal (Proposal Form, Proposal Types and Settings tabs), Bid Types, Department Codes, Business Development, Project Types, Checklists, Submittals, Status, Approval Workflow, ID Settings, Delivery Method and Users and Permissions. They are inside Proposal Management; Global Data has no Proposal Management tile.",
+    tags: ["proposal management settings menu","where are proposal settings"]
+  },
+  {
+    action: "view",
+    object: "document management",
+    scope: "module",
+    section: "Settings",
+    question: "Can I change where proposal documents are stored?",
+    answer: "In Settings > Proposal > Settings choose Document Management: AWS S3 or Share point. It cannot be changed once proposals or Opportunities already exist.",
+    tags: ["document management setting","s3 or sharepoint proposals"]
+  },
+  {
+    action: "view",
+    object: "department code",
+    scope: "module",
+    section: "Settings",
+    question: "What are Department Codes and Business Development Codes?",
+    answer: "Lists in Settings used by the Profile drop-downs and the Weekly Report. A department code has a code, description, group and business unit (29 on the test site, for example 0402 - Tanks West-BEA); a business development code has a code and description (14 on the test site, for example Q-JohnD).",
+    tags: ["department codes","business development codes"]
+  },
+  {
+    action: "view",
+    object: "proposal setup order",
+    scope: "module",
+    section: "Who sets this up",
+    question: "In what order should I set up Proposal Management?",
+    answer: "Check Customers, Owners, Locations and Crews in Global Data and the Estimator roles in Global Rosters; then in Proposal Management > Settings create Proposal Types and the Proposal Form, fill Bid Types, Project Types, Department Codes, Business Development and Delivery Method, set Status, Approval Workflow, ID Settings and Users and Permissions, and add Checklist and Submittal templates.",
+    tags: ["proposal management setup order","set up proposal management","proposal admin setup"]
+  },
+  {
+    action: "view",
+    object: "proposal calendar",
+    scope: "module",
+    section: "Calendar",
+    question: "What does the Proposal Management Calendar show?",
+    answer: "Create Event, Filters, a month grid with the selected day's events and My Calendars. Events can be linked to Opportunity, Proposal or Bid and sync with Outlook once consent is given.",
+    tags: ["proposal calendar tab","calendar events"]
   }
 ];
 
@@ -27756,69 +28053,1132 @@ const MODULES = [
     "qaItems": QA_PROPOSALMANAGEMENT,
     "narrative": [
       {
-        "heading": "Admin Role",
-        "intro": "<p>Proposal Management leans heavily on centralized Settings, and an admin most likely needs to work through several of these screens before end users can create a usable proposal. Proposal Types, Bid Types, Delivery Methods, and Status Configuration establish the categorization and vocabulary every proposal will draw from — a &quot;Success&quot; status, for instance, needs to be marked as such so win/loss analytics calculate correctly elsewhere in the module. The company-wide Approval Workflow (Global Data → Company → Proposal Management → Approval Workflow) and ID Settings likely also need to exist before proposals can move through sign-off with a properly formatted ID.</p><p>Beyond the proposal record itself, an admin probably needs to set up two more admin-facing pieces before certain tabs will work end-to-end: the Bid tab has to be explicitly enabled via permissions in Bid Management before end users can create bids on a proposal at all, and a separate Setup Approval Workflow for Submission Packages needs configuring before a completed proposal package can be sent out with sign-off. Reusable Checklist and Submittal templates, also defined in Settings, are what let end users pull in pre-built forms and letters rather than creating them from scratch each time.</p><p>Finally, Users and Permissions inside Proposal Management Settings is where an admin scopes which user groups can do what within the module — this is the natural place to review access once the pipeline structure itself is in place.</p>",
+        "heading": "Who sets this up",
+        "intro": "<p>Proposal Management tracks each bid from first enquiry to submitted package. A <strong>Module Admin</strong> sets up the shared lists and approval workflows once; <strong>Estimators</strong> and <strong>PMs</strong> then create proposals, <strong>approvers</strong> sign them off, and results show up in the Dashboard and Analytics.</p><p>From <strong>Home</strong>, click the <strong>Proposal Management</strong> tile. The tabs are <strong>My Dashboard</strong>, <strong>Proposals</strong>, <strong>Analytics</strong>, <strong>Issues</strong>, <strong>Push Datasets</strong>, <strong>Calendar</strong>, <strong>To Do List</strong> and the <strong>Settings</strong> gear. The module opens on Proposals.</p>",
         "definitions": [
           {
+            "term": "Who does what",
+            "definition": "**Module Admin / Super Admin** builds everything in **Settings** (proposal types, bid types, codes, statuses, approval workflow, ID format, permissions) and keeps Customers, Owners and Locations in **Global Data**. **Estimator / Field User** creates proposals and fills their Profile. **PM / Module Manager** reviews. **Approver** (named in the workflow) approves or rejects. **Super Admin** connects Calendar and Outlook consent."
+          },
+          {
+            "term": "Where Proposal Management data comes from",
+            "definition": "Customers, customer POCs, Owners and the Site Name / Job Site locations come from **Global Data** (Customers, Owners, Locations). Opportunity comes from **Opportunity Management**. Projects, Company Contact, Estimators, Teams and Assign To come from the company's users in **Global Data → Users & Permissions → Global Rosters**; crews come from **Global Data → Crews**. Proposal Type, Bid Type, Project Type, Business Development Code, Department Code, Delivery Method and Status come from **Proposal Management → Settings**. See \"Where Proposal Fields Come From\"."
+          },
+          {
+            "term": "Where Proposal Management data goes",
+            "definition": "Proposals feed **My Dashboard** and **Analytics**. A proposal's **Bid** tab creates tenders in **Tender Management**. Calendar events and follow-up reminders depend on calendar consent (**Global Data → Marketplace**). A won proposal can create a project (Project Name and Project Number on the Profile). Submission package emails are kept in the proposal's Communication tab."
+          },
+          {
             "term": "Status Configuration",
-            "definition": "The screen for adding custom statuses (name + color) for either the Proposal or Submission Package tab; exactly two standard statuses can be marked \"Success\" or \"Failure\" via Edit, driving win/loss analytics."
+            "definition": "Settings screen for the status names and colours used on proposals (Proposal tab) and submission packages (Submission Package tab). Standard first and last statuses are fixed; the last-level statuses can be marked Success or Failure for win/loss analytics."
           },
           {
-            "term": "Approval Workflow (proposal, global)",
-            "definition": "The company-wide chain of approval levels (all must approve / any one can approve) that every proposal is routed through, viewable as a tree diagram via Open Workflow Graph View."
-          },
-          {
-            "term": "Bid Management permissions",
-            "definition": "The permission gate that must be enabled before the Bid tab becomes usable on a proposal."
+            "term": "Approval Workflow (proposal)",
+            "definition": "The company-wide chain of approval levels every proposal goes through (all must approve / any one can approve). On the test site the proposal workflow has one level, which is why proposals show Workflow Level 1/1."
           },
           {
             "term": "Setup Approval Workflow (Submission Packages)",
-            "definition": "The Settings screen where approval levels for submission packages are configured, each assigned a workflow type (all must approve / any one can approve) and a level description."
+            "definition": "A separate set of levels for submission packages, set under the **Submission Packages** tab of a proposal. Empty on the test site."
           }
         ],
         "procedures": [
           {
-            "title": "Configure custom statuses for proposals and submission packages",
+            "title": "Set Proposal Management up in the right order",
             "steps": [
-              "Go to <strong>Proposal Management Settings</strong> (or <strong>Global Data</strong>) → <strong>Status Configuration</strong>.",
-              "Click <strong>Add Status</strong> to enter a status name and color, choosing whether it applies to the Proposal tab or Submission Package tab.",
-              "Use <strong>Edit</strong> to mark up to two standard statuses as \"Success\" or \"Failure\"."
+              "In **Global Data**, check **Customers** (with contacts), **Owners**, **Locations** and **Crews**, and that people appear in **Users & Permissions → Global Rosters** (Estimators have the Estimator role).",
+              "Open **Proposal Management → Settings → Proposal** and create the **Proposal Types** (and their form sections on the **Proposal Form** tab); set the **Settings** tab (Document Management).",
+              "Fill the lists: **Bid Types**, **Project Types**, **Department Codes**, **Business Development**, **Delivery Method** and **Status**.",
+              "Set **Approval Workflow**, **ID Settings** and **Users and Permissions**; add **Checklists** and **Submittals** templates.",
+              "Ask each person to give calendar consent if they use Calendar or Dashboard events (My Profile → Settings).",
+              "Estimators can now create proposals."
             ]
           },
           {
-            "title": "Set up the company-wide approval workflow for proposals",
+            "title": "Trace where a proposal drop-down value comes from",
             "steps": [
-              "Go to <strong>Global Data → Company → Proposal Management → Approval Workflow</strong>.",
-              "Click <strong>Create Level</strong> to select approvers and the workflow type (all must approve, or any one can approve).",
-              "Create multiple levels as needed, and use <strong>Open Workflow Graph View</strong> to see the workflow as a tree diagram."
-            ]
-          },
-          {
-            "title": "Set up an approval workflow for submission packages",
-            "steps": [
-              "Go to <strong>Proposal Management Settings → Submission Packages → Setup Approval Workflow</strong>.",
-              "Click <strong>Create Level</strong> to choose approvers and assign the workflow type (all must approve / any one can approve), plus a level description.",
-              "Use Edit or Delete in Actions to manage existing levels."
-            ]
-          },
-          {
-            "title": "Manage user groups and permissions for Proposal Management",
-            "steps": [
-              "Go to <strong>Proposal Management Settings → Users and Permissions</strong>.",
-              "Click <strong>Add User Group</strong> to name the group and select its permissions.",
-              "Click <strong>Add Users</strong> to assign members to the group.",
-              "Use the kebab menu to Edit or Delete a group."
+              "Open the proposal (click its name) and find the field on the **Profile**.",
+              "Look up the field in \"Where Proposal Fields Come From\" to see its source screen.",
+              "If a value is missing, add it at the source (for example a new customer in Global Data → Customers) and reopen the proposal."
             ]
           }
         ]
       },
       {
-        "heading": "Settings",
-        "intro": "<p>Proposal Management Settings — reached either from within the module or via Global Data → Company → Proposal Management — is where the company defines the shared reference data and workflows that every proposal draws on: proposal and bid categorization, delivery methods, custom statuses, approval chains, ID formats, permissions, and project-type classification. This is deliberately centralized rather than left to each proposal to configure independently, so that reporting, filtering, and automation across proposals stay consistent — a &quot;Success&quot; status means the same thing on every proposal, and every proposal ID follows the same numbering scheme.</p><p>Two settings screens are worth understanding together: <strong>Status Configuration</strong> defines the custom status vocabulary (with color coding) used on both the Proposal and Submission Package tabs, while marking exactly two standard statuses as &quot;Success&quot; or &quot;Failure&quot; lets Arena calculate win/loss analytics elsewhere in the module. <strong>ID Settings</strong>, similarly, controls whether Proposal and Submission Package IDs are auto-generated in Arena's system default format or built from a custom combination of separator, serial number, date, month, and year — configured independently for each of the two record types.</p>",
+        "heading": "My Dashboard",
+        "intro": "<p>My Dashboard answers \"where do proposals stand right now\" without opening each one. <strong>Estimators</strong>, <strong>PMs</strong> and managers use it as their home screen.</p><p>Cards show <strong>Total Proposals</strong>, <strong>Proposals Created</strong>, <strong>Completed Proposals</strong>, <strong>Lost Proposals</strong> and <strong>In Progress Proposals</strong> (each with a count, a rupee amount and a Daily / Weekly / Monthly / Yearly trend). Below are three success-rate graphs, <strong>Calendar Events</strong>, <strong>Issues</strong>, <strong>Forms</strong>, <strong>Approvals</strong>, a <strong>Proposals</strong> list, a <strong>To Do List</strong> and <strong>Proposal Deadline</strong>.</p>",
+        "definitions": [
+          {
+            "term": "Total Proposals and the status cards",
+            "definition": "On the test site: Total Proposals 15 (INR 8,80,000), Completed 1 (INR 90,000), In Progress 7 (INR 6,40,000), Lost 0. They count the proposals by **Status** (Settings → Status). The Proposals tab listed 13 while the Dashboard counted 15, so the Dashboard may include proposals not shown in the list."
+          },
+          {
+            "term": "Estimate Success Rate and Success Rate graphs",
+            "definition": "Three graphs, each with a **Proposal Types** filter (Cost Plus, Roofing proposal, Fabrication; the types in Settings) and a date range: **Estimate Success Rate**, **Success Rate (Qty of Proposals)** and **Success Rate (Currency value)**. They match the Analytics cards of the same name."
+          },
+          {
+            "term": "Calendar Events",
+            "definition": "Shows \"Consent Not Granted! Please provide consent\" until the user gives Outlook consent (My Profile → Settings → Outlook management consent). **See All** opens the **Calendar** tab."
+          },
+          {
+            "term": "Issues, Forms and Approvals",
+            "definition": "**Issues** counts Proposal Workflow Issues and Submission Package Workflow Issues. **Forms (6)** counts checklists by template: **Legal Review (2)**, **Safety (3)**, **Quality (1)**, the templates in Settings → Checklists. **Approvals (17)** counts **Proposal Approvals (15)** and **Submission Package Approvals (2)** waiting for the signed-in user."
+          },
+          {
+            "term": "To Do List and Proposal Deadline panels",
+            "definition": "The To Do List panel shows recent items from the **To Do List** tab with **Create To Do List**. **Proposal Deadline** lists proposals approaching their Due Date (\"All set! no deadlines to catch\" when none)."
+          },
+          {
+            "term": "Who sees what",
+            "definition": "Per the guide, data is scoped to the signed-in user unless they are a system admin, who sees the whole module."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "View the Proposal Management dashboard",
+            "steps": [
+              "Open **Proposal Management → My Dashboard**.",
+              "Read the status cards, the three success-rate graphs (filter by **Proposal Types** and date range), **Calendar Events**, **Issues**, **Forms**, **Approvals**, the **Proposals** list, the **To Do List** and **Proposal Deadline**."
+            ],
+            "note": "Counts follow the statuses, proposal types and checklist templates you set in Settings.",
+            "images": [
+              {
+                "src": "assets/notion/proposal-management-dashboard/001.jpg",
+                "caption": "My Dashboard in Proposal Management",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/proposal-management-dashboard/002.jpg",
+                "caption": "Total Proposals by status",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/proposal-management-dashboard/003.jpg",
+                "caption": "The Estimate Success Rate graph",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/proposal-management-dashboard/004.jpg",
+                "caption": "Calendar Events, with Create Event",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/proposal-management-dashboard/005.jpg",
+                "caption": "Recent proposals with the total count",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/proposal-management-dashboard/006.jpg",
+                "caption": "Proposal Deadlines, based on proposal due dates",
+                "step": 2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Proposals",
+        "intro": "<p>The Proposals tab lists every proposal and is where an <strong>Estimator</strong> creates, opens, copies and tracks them. <strong>Approvers</strong> approve or reject from the same list.</p><p>A status legend sits above the list (on the test site 3 Start, 3 Successful, 1 Cancelled, 2 No Bid, 1 N/A, 1 Completed, 2 Unassigned). The toolbar has <strong>Create</strong>, search, <strong>Export</strong>, <strong>Filters</strong>, <strong>Manage Columns</strong> and Table / Grid / Kanban views. Click a proposal name to open its Profile.</p>",
+        "definitions": [
+          {
+            "term": "Proposal",
+            "definition": "The record that tracks one piece of business-development work from creation through approval, submission and result. Opening it shows the tabs **Profile**, **Teams**, **Documents**, **Communication**, **Checklists**, **Bid**, **Submittals**, **Submission Packages**, plus **Comments** and **History**."
+          },
+          {
+            "term": "Opportunity",
+            "definition": "The upstream record from **Opportunity Management**, chosen in the Profile's **Opportunity** drop-down (None, or an opportunity such as \"1 Parent Opp Test A\"; all 13 proposals on the test site have none)."
+          },
+          {
+            "term": "Proposal ID",
+            "definition": "Created automatically in the format set in **Settings → ID Settings** (plain numbers 1 to 13 on the test site). The edit dialog shows it but the ID is not a field you type when creating."
+          },
+          {
+            "term": "Business Development Code",
+            "definition": "A classification field captured on a proposal, used for business-development tracking/reporting."
+          },
+          {
+            "term": "See History",
+            "definition": "A log of created, edited, updated, and approval-workflow status changes for a proposal, viewed from its Actions menu."
+          },
+          {
+            "term": "Follow Up",
+            "definition": "Sends reminder emails to the customer once or on a Daily, Weekly or Monthly schedule. The proposal also holds a Follow Up Reminder date and time, **Notify Before** (hours) and **Notify To** users."
+          },
+          {
+            "term": "Teams tab",
+            "definition": "Tabs **Users** and **Crews**. **Add User** lists the company's system users (about 1,270 on the test site, from Global Rosters); **Add Crew** lists the 18 crews of Global Data → Crews with member counts. Each member has a three-dot menu to remove them."
+          },
+          {
+            "term": "Documents tab (proposal)",
+            "definition": "Auto folders **Comments Attachments**, **Mail Attachments**, **Checklists**, **Submittals**, **Submission Packages** and **Bids**, plus **New Folder** and **Upload Documents**. Columns: Folders & Documents, Items, Last Modified, Added On, Actions. Where files are kept (AWS S3 or SharePoint) comes from **Settings → Proposal → Settings → Document Management**."
+          },
+          {
+            "term": "Communication tab (proposal)",
+            "definition": "A mail client for the proposal: **All Emails**, **Inbox**, **Sent**, **Drafts**, **Starred**, **Trash**, **Import Group** and **Groups**. Whether it uses Gmail or Outlook follows **Global Data → Settings → Mail Settings** (row PROPOSAL MANAGEMENT)."
+          },
+          {
+            "term": "Calendar (Proposal Management)",
+            "definition": "A calendar for proposal-related events (e.g. deadlines), which can sync with Outlook once connected via Global Data → Marketplace."
+          },
+          {
+            "term": "Create Proposal dialog",
+            "definition": "Only three inputs: **Proposal Name**, **Proposal Type** (the types in Settings; 3 on the test site: Cost Plus, Roofing proposal, Fabrication) and a tick box \"Does a Bid folder need to be created by the Project Services Admin?\". Click **Submit for Approval** to create it. All other details are filled on the Profile."
+          },
+          {
+            "term": "List columns",
+            "definition": "34 columns: Proposal ID, Proposal Name, Description, Opportunity, Proposal Type, Bid Type, Project Type, Inquiry Number, Company Contact, Delivery Method, Business Development Code, Department Code, Customers, Site Name, Job Site, Estimators, Creation Date, Project Value Estimated, Due Date, Submitted Date, Project Value Submitted, Anticipated Award Date, Follow Up Reminder, Result Date, Contract Amount, Projected Cost, Chance of Success, Workflow Level, Follow Up, Recent Comments, Approve, Reject, Assign To and Actions. **Manage Columns** hides or arranges them."
+          },
+          {
+            "term": "Row actions",
+            "definition": "**history** (See History), **copy** (Duplicate, with a choice of what to include), **edit** (Edit Proposal dialog with Proposal ID, Proposal Name, Proposal Type and the Bid folder tick) and **delete**. **Follow Up** opens the reminder-email feature. **Approve** and **Reject** show only for people in the proposal's approval workflow."
+          },
+          {
+            "term": "Workflow Level",
+            "definition": "Shows how many approval levels are done, for example 1/1 or 0/1. The levels come from **Settings → Approval Workflow**."
+          },
+          {
+            "term": "Where this data comes from and goes",
+            "definition": "Types, statuses, codes and delivery methods come from **Settings**; customers, owners and locations from **Global Data**; the Opportunity from **Opportunity Management** (see \"Where Proposal Fields Come From\"). Proposals feed **My Dashboard**, **Analytics** and the **Weekly Report**."
+          },
+          {
+            "term": "Comments",
+            "definition": "A side panel titled \"Proposal ID-11 Comments\" with search and attachments. The latest comments show in the **Recent Comments** column."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Create a new proposal",
+            "steps": [
+              "Open **Proposal Management → Proposals** and click **Create**.",
+              "In **Create Proposal**, enter the **Proposal Name**, choose the **Proposal Type**, and tick the Bid folder box if the Project Services Admin should create a Bid folder.",
+              "Click **Submit for Approval**. The proposal appears in the list with its automatic ID and enters the approval workflow.",
+              "Click the proposal name to open its **Profile** and fill in Opportunity, Bid Type, Project Type, customers, site, dates and values, then **Save Changes**."
+            ],
+            "note": "The Proposal ID is created from the format in Settings → ID Settings.",
+            "images": [
+              {
+                "src": "assets/notion/proposal-management-proposals/001.jpg",
+                "caption": "Create: the pop-up for a new proposal",
+                "step": 2
+              }
+            ]
+          },
+          {
+            "title": "Edit or delete a proposal",
+            "steps": [
+              "In **Proposal Management → Proposals**, use the icons in the **Actions** column.",
+              "Click **edit** to change the Proposal Name or Proposal Type in the **Edit Proposal** dialog (other details are edited on the Profile).",
+              "Click **delete** to permanently remove the proposal."
+            ]
+          },
+          {
+            "title": "View a proposal's change history",
+            "steps": [
+              "In **Proposal Management → Proposals**, click the **history** icon in the Actions column (or the **History** tab on the Profile).",
+              "Read the log of created, edited and updated entries and approval-workflow status changes."
+            ]
+          },
+          {
+            "title": "Bulk create or update proposals via Excel",
+            "steps": [
+              "In <strong>Proposal Management → Proposals</strong>, click <strong>Export</strong>.",
+              "Use <strong>Download Excel</strong> to export current proposal data (the sheet is named by Proposal Type).",
+              "Use <strong>Upload Excel</strong> with the provided sample template to create or update proposals in bulk."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/proposal-management-proposals/003.jpg",
+                "caption": "Export, for downloading, uploading and updating proposals",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/proposal-management-proposals/004.jpg",
+                "caption": "Upload Excel, with a sample template for creating or updating proposals",
+                "step": 3
+              }
+            ]
+          },
+          {
+            "title": "Search or filter the proposals list",
+            "steps": [
+              "Use <strong>Search</strong> to find proposals by Proposal Name or Proposal ID.",
+              "Click <strong>Filters</strong> to open criteria for narrowing the list.",
+              "Use <strong>Manage Columns</strong> to choose and arrange visible columns."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/proposal-management-proposals/005.jpg",
+                "caption": "Filters: choosing the data to show",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/proposal-management-proposals/006.jpg",
+                "caption": "Manage Columns: choosing and arranging columns",
+                "step": 3
+              }
+            ]
+          },
+          {
+            "title": "Send follow-up reminder emails to a customer",
+            "steps": [
+              "Open the proposal and use the <strong>Follow Up</strong> feature.",
+              "Set a <strong>Recurrence Type</strong> — Daily, Weekly, Monthly, or None — to schedule repeated reminders, or send a one-time email."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/proposal-management-proposals/013.jpg",
+                "caption": "Follow Up: reminder emails to customers, with a recurrence type",
+                "step": 1
+              }
+            ]
+          },
+          {
+            "title": "Add users or crews to a proposal team",
+            "steps": [
+              "In the proposal's **Teams** tab, click **Add User** to pick people from the company roster, or switch to **Crews** and click **Add Crew** to pick a Global Data crew.",
+              "Use the three-dot menu on a member and choose **Delete** to remove them."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/proposal-management-proposals-teams/001.jpg",
+                "caption": "Add User: choosing from the global roster",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/proposal-management-proposals-teams/002.jpg",
+                "caption": "Add Crew: choosing from the crews in Global Data",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/proposal-management-proposals-teams/003.jpg",
+                "caption": "Delete, in the three-dot menu, to remove a member",
+                "step": 2
+              }
+            ]
+          },
+          {
+            "title": "Comment on a proposal and pin it to a report",
+            "steps": [
+              "In the proposal Profile, click <strong>Comments</strong> to add comments and attachments.",
+              "Use the comment menu to <strong>Edit</strong> or <strong>Delete</strong> your own comment.",
+              "Use <strong>Add to Report</strong> to pin a comment for inclusion in the weekly report."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/proposal-management-proposals-profile/007.jpg",
+                "caption": "Comments on a proposal, with like and search",
+                "step": 1
+              }
+            ]
+          },
+          {
+            "title": "Send an email to a client from a proposal",
+            "steps": [
+              "In the proposal's <strong>Communication</strong> tab, click <strong>Compose Mail</strong>.",
+              "Fill in To, CC, BCC, Subject, Message, and any attachments, then send."
+            ],
+            "note": "Sent submission-package emails are also stored here, organized into Inbox, Sent, Drafts, Starred, and Trash."
+          },
+          {
+            "title": "Add a customer, contact, owner or site from a proposal",
+            "steps": [
+              "Open the proposal **Profile** and find **Customers**, **POCs**, **Owners** or **Site Name**.",
+              "Click **Create a Customer**, **Create a Customer POC**, **Create an Owner** or **Create a Site** under the field to add one without leaving the proposal.",
+              "Save the new entry, then select it in the drop-down."
+            ],
+            "note": "The new entry is a record of Global Data (Customers, Owners, Locations), so it appears in those lists too."
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/proposal-management-proposals/002.jpg",
+            "caption": "Status Legend: the number of proposals in each status"
+          },
+          {
+            "src": "assets/notion/proposal-management-proposals/007.jpg",
+            "caption": "Grid, Table and Kanban views, with Save Layout"
+          },
+          {
+            "src": "assets/notion/proposal-management-proposals/008.jpg",
+            "caption": "Duplicate, to copy an existing proposal"
+          },
+          {
+            "src": "assets/notion/proposal-management-proposals/009.jpg",
+            "caption": "Choosing what to include in the duplicated proposal"
+          },
+          {
+            "src": "assets/notion/proposal-management-proposals/010.jpg",
+            "caption": "Approve and Reject, shown only to people in the approval workflow"
+          },
+          {
+            "src": "assets/notion/proposal-management-proposals/011.jpg",
+            "caption": "Recent Comments: the latest three comments on a proposal"
+          },
+          {
+            "src": "assets/notion/proposal-management-proposals/012.jpg",
+            "caption": "Chance of Success, based on the selected customers"
+          },
+          {
+            "src": "assets/notion/proposal-management-proposals-profile/001.jpg",
+            "caption": "Project Name and Project Number, created when a proposal is won"
+          },
+          {
+            "src": "assets/notion/proposal-management-proposals-profile/002.jpg",
+            "caption": "Estimators, chosen from the global roster"
+          },
+          {
+            "src": "assets/notion/proposal-management-proposals-profile/003.jpg",
+            "caption": "Projected Amount"
+          },
+          {
+            "src": "assets/notion/proposal-management-proposals-profile/004.jpg",
+            "caption": "Status, which is configured in settings"
+          },
+          {
+            "src": "assets/notion/proposal-management-proposals-profile/005.jpg",
+            "caption": "A configurable section, with fields set in Proposal Types"
+          },
+          {
+            "src": "assets/notion/proposal-management-proposals-profile/006.jpg",
+            "caption": "Assign To, to give people from the global roster access"
+          },
+          {
+            "src": "assets/notion/proposal-management-proposals-profile/008.jpg",
+            "caption": "History: changes, approvals and edits to the proposal"
+          },
+          {
+            "src": "assets/notion/proposal-management-proposals-teams/004.jpg",
+            "caption": "Searching for people or teams"
+          },
+          {
+            "src": "assets/notion/proposal-management-proposals-communication/001.jpg",
+            "caption": "Communication: mail sent from the proposal, including submission package emails"
+          },
+          {
+            "src": "assets/notion/proposal-management-proposals-communication/002.jpg",
+            "caption": "Map, to link one proposal to another"
+          },
+          {
+            "src": "assets/notion/proposal-management-proposals-communication/003.jpg",
+            "caption": "Import Groups, to bring in Outlook groups"
+          },
+          {
+            "src": "assets/notion/proposal-management-proposals-communication/004.jpg",
+            "caption": "Adding an automatic signature to outgoing mail"
+          },
+          {
+            "src": "assets/notion/proposal-management-proposals-documents/001.jpg",
+            "caption": "Documents: folders for the proposal's files"
+          },
+          {
+            "src": "assets/notion/proposal-management-proposals-documents/002.jpg",
+            "caption": "New Folder, for additional documents"
+          },
+          {
+            "src": "assets/notion/proposal-management-proposals-documents/003.jpg",
+            "caption": "Upload Documents into a folder"
+          },
+          {
+            "src": "assets/notion/proposal-management-proposals-documents/004.jpg",
+            "caption": "Download, to get the files in a folder"
+          },
+          {
+            "src": "assets/notion/proposal-management-proposals-status-comments/001.jpg",
+            "caption": "Status and Comments: update the status and see linked documents and assigned users"
+          },
+          {
+            "src": "assets/notion/proposal-management-proposals-status-comments/002.jpg",
+            "caption": "Changing the status on the Proposal Status tab"
+          },
+          {
+            "src": "assets/notion/proposal-management-proposals-status-comments/003.jpg",
+            "caption": "Search People, to find comments by a person"
+          }
+        ]
+      },
+      {
+        "heading": "Where Proposal Fields Come From",
+        "intro": "<p>Every drop-down on a proposal Profile reads a list kept somewhere else. This section names that source so a <strong>Module Admin</strong> or <strong>Estimator</strong> knows where to add a missing value.</p><p>Open a proposal (click its name) to see the Profile. Counts below are from the test site and show that each drop-down matches its source list.</p>",
         "definitions": [
           {
             "term": "Proposal Type",
-            "definition": "A configurable category (e.g. by industry or work type) with its own custom form sections and fields, defined at Global Data → Company → Proposal Management → Proposal Types."
+            "definition": "Settings → Proposal → **Proposal Types** (3 on the test site, created 06-12-2024: Fabrication, Roofing proposal, Cost Plus). The same list is in the Create Proposal dialog and the Dashboard and Analytics filters. Each type shares the **Proposal Form**; the extra sections at the bottom of the Profile (\"Section Name1\", configurable fields) come from the **Proposal Form** tab."
+          },
+          {
+            "term": "Opportunity",
+            "definition": "**Opportunity Management → Opportunities** (1 opportunity on the test site, \"1 Parent Opp Test A\", which is exactly what the drop-down offers, with a None choice)."
+          },
+          {
+            "term": "Bid Type",
+            "definition": "Settings → **Bid Types** (Build-Own-Transfer Bid Type, General Bid Type, Speciality Items Bid Type). Do not confuse it with the Open / Selective Bidding choice used when creating a tender."
+          },
+          {
+            "term": "Project Type",
+            "definition": "Settings → **Project Types** (19 codes on the test site such as F-GC, F-GC-Struc, S-Tank-CS, S-PipingSS, F-TankCSR). Each code carries Field/Shop, Material and New/Repair, which the Profile then shows (for S-PipingSS: Field/Shop SHOP, Material SS, New/Repair NEW)."
+          },
+          {
+            "term": "Projects",
+            "definition": "The company's projects, \"code - name\" (115 on the test site), plus **Create a Project**."
+          },
+          {
+            "term": "Company Contact and Estimators",
+            "definition": "**Company Contact** lists the company's users (99 on the test site). **Estimators** lists only people with the Estimator role (3: Randazzo Lou, System Admin, Engineering Contractor - 1); the role is set in **Global Data → Users & Permissions → Global Rosters**."
+          },
+          {
+            "term": "Business Development Code",
+            "definition": "Settings → **Business Development** (14 codes on the test site: Q-VivR, Q-Nick, Q-KP, Q-DongaH, Q-PattonM, Q-RamirezJ, Q-JessieH, Q-SmithD, Q-CovingtonW, Q-LedigC, Q-HenryC, Q-Jim, Q-JohnD and one more), each with a description."
+          },
+          {
+            "term": "Department Code",
+            "definition": "Settings → **Department Codes** (29 on the test site). Each has a code, description, group and business unit; the drop-down shows \"code - description\", for example \"0402 - Tanks West-BEA\"."
+          },
+          {
+            "term": "Customers and POCs",
+            "definition": "**Global Data → Customers** (8 customers on the test site, numbered 1 to 8) and their contacts (POCs: 6 - Madhu, 5 - Shiva Kumar). Adding one from the proposal also adds it to Global Data. The Weekly Report shows the customer's location (for example Delaware City, Delaware)."
+          },
+          {
+            "term": "Owners",
+            "definition": "**Global Data → Owners** (3 on the test site: Krishna and two NATIONAL HIGHWAYS AUTHORITY OF INDIA entries)."
+          },
+          {
+            "term": "Site Name and Job Site",
+            "definition": "**Global Data → Locations** (8 on the test site: Gachibowli, Lewes, Kompally, Kokapet, Kollur, Bangalore, Uttar Pradesh, Valigonda), plus None. Choosing a site fills City and State."
+          },
+          {
+            "term": "Delivery Method",
+            "definition": "Settings → **Delivery Method** (7 on the test site: Website, Hard Copy, Auction, Letters, Manually, Phone, Email), plus None."
+          },
+          {
+            "term": "Status",
+            "definition": "Settings → **Status** (Proposal tab). On the test site: Start (first standard status), Successful, Pending, Cancelled, No Bid, N/A, Completed and Lost (the last two are the standard last-level statuses that carry the success or failure flag). Each status has a colour used on the list."
+          },
+          {
+            "term": "Assign To and Notify To",
+            "definition": "**Assign To** lists the system users of Global Rosters (about 1,270 on the test site); **Notify To** lists the people chosen for the reminder (here System Admin, Urban Edge Contractors, Star-Spangled Builders)."
+          },
+          {
+            "term": "Money fields",
+            "definition": "**Project Value Estimated**, **Project Value Submitted**, **Contract Amount** and **Projected Cost** are typed in rupees. **Chance of Success** is calculated from the selected customers' results; **Projected Cost** and **Contract Amount** feed Profit Over Time in Analytics."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Add a missing value to a proposal drop-down",
+            "steps": [
+              "Find the field in the definitions above to see where its list lives.",
+              "Add the value at that source: Global Data for customers, owners and locations; Proposal Management → Settings for types, codes, statuses and delivery methods; Opportunity Management for opportunities.",
+              "Reopen the proposal and pick the new value."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Bid Tab (Tenders)",
+        "intro": "<p>The Bid tab of a proposal lists the tenders raised for that proposal and lets an <strong>Estimator</strong> or <strong>PM</strong> start a new one. Tenders themselves are run in <strong>Tender Management</strong>.</p><p>The tab shows <strong>Add Tender</strong>, search, <strong>Filters</strong>, <strong>Manage Columns</strong>, table / grid views, <strong>Show as Graph</strong> and a table with <strong>Tender Name</strong>, <strong>Tender ID</strong>, <strong>Description</strong>, <strong>Proposal Linked</strong>, <strong>Bid Type</strong>, <strong>Status</strong>, <strong>Approve</strong>, <strong>Reject</strong>, <strong>Approval Status</strong> and <strong>Actions</strong>. It is empty on the test site.</p>",
+        "definitions": [
+          {
+            "term": "Tender (Bid)",
+            "definition": "A costed offer or tender linked to a proposal. **Add Tender** opens **Create Tender** with **Tender Name***, **Description**, **Select Proposal** (the current proposal is preselected, for example \"11 - Roofing proposal - 004\") and **Select Bid Type***: **Open Bidding**, **Selective Bidding** or **Selective Bidding - No Prequalification**. Click **Submit for Approval**."
+          },
+          {
+            "term": "Two different Bid Types",
+            "definition": "The **Bid Type** on a proposal Profile comes from Settings → Bid Types. The Open / Selective Bidding choice when creating a tender is the tender's own bidding type, used by **Tender Management**."
+          },
+          {
+            "term": "Where this data comes from and goes",
+            "definition": "The tender is created in **Tender Management** and linked back here through **Proposal Linked**. Its status values (In-Progress, Draft, Under Review, Reopened, Shortlisted, Awarded, Rejected, Pre Qualification, Completed) are the tender statuses in Status Configuration. Files appear in the proposal's **Documents → Bids** folder."
+          },
+          {
+            "term": "Bid Management permissions",
+            "definition": "Per the guide, the Bid tab needs the matching permission to be used on a proposal."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Create a tender from a proposal",
+            "steps": [
+              "Open the proposal and click the **Bid** tab.",
+              "Click **Add Tender**.",
+              "In **Create Tender**, enter the **Tender Name**, an optional **Description**, check the **Select Proposal** value, and choose **Open Bidding**, **Selective Bidding** or **Selective Bidding - No Prequalification**.",
+              "Click **Submit for Approval**. The tender then appears in the Bid tab and in Tender Management."
+            ]
+          },
+          {
+            "title": "Switch the Bid tab layout",
+            "steps": [
+              "Choose the table or grid icon.",
+              "Click **Save Layout** to keep the choice, or **Show as Graph** to see the tenders as a chart."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Submittals",
+        "intro": "<p>Within Proposal Management, a Submittal is a formal letter attached to a proposal — for example, a budgetary letter — used to communicate specific information to the client as part of the proposal process. Rather than drafting each of these from a blank page, the feature is built around reuse: submittal letters can be authored fresh in Google Docs, or pulled in as a pre-built template from Proposal Settings and auto-filled with data straight from the proposal's own profile, cutting out repetitive manual entry.</p>",
+        "definitions": [
+          {
+            "term": "Submittal (proposal)",
+            "definition": "A formal letter (e.g. a budgetary letter) attached to a proposal, either drafted fresh or imported from a configured template."
+          },
+          {
+            "term": "Auto Fill Fields",
+            "definition": "An option, available when importing a submittal template from Global Data, that automatically populates submittal keys using data from the proposal profile."
+          },
+          {
+            "term": "Submittal tab layout",
+            "definition": "Sub-tabs **Letter** and **Budgetary Letter**, a **Create** button and search. **Create** opens **Create Submittal Letter** with **Create new letter** or **Import From Global Data**. Empty on the test site."
+          },
+          {
+            "term": "Where this data comes from and goes",
+            "definition": "Imported letters come from the **Submittals** templates in Settings (no templates exist on the test site). Filled letters are filed in the proposal's **Documents → Submittals** folder and can be added to a submission package."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Add a submittal letter to a proposal",
+            "steps": [
+              "In the proposal's <strong>Submittals</strong> tab, click <strong>Create</strong>.",
+              "Choose <strong>Create New Letter</strong> to draft a new template in Google Docs, or <strong>Import From Global Data</strong> to reuse a configured template from Proposal Settings.",
+              "If importing, optionally enable <strong>Auto Fill Fields</strong> to populate submittal keys from the proposal profile."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/proposal-management-proposals-submittals-letter/001.jpg",
+                "caption": "Import from Global Data, with Auto Fill Fields",
+                "step": 3
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/proposal-management-proposals-submittals-letter/002.jpg",
+            "caption": "Search, to find submittals"
+          },
+          {
+            "src": "assets/notion/proposal-management-proposals-submittals-letter/003.jpg",
+            "caption": "Deleting a submittal, with a confirmation pop-up"
+          }
+        ]
+      },
+      {
+        "heading": "Checklists",
+        "intro": "<p>Checklists give a proposal a structured way to confirm that required steps or quality criteria have been met before moving forward — the same kind of gating mechanism used elsewhere in Arena for quality inspections, applied here to the business-development process. Rather than being freeform, every checklist a proposal can use is built from a template configured centrally in Settings, ensuring the same checklist means the same thing across every proposal in the company. Once filled in, a checklist doesn't just sit inside its own tab — it's automatically filed into the proposal's Documents tab as a folder, keeping everything discoverable from one place.</p>",
+        "definitions": [
+          {
+            "term": "Checklist (proposal)",
+            "definition": "A form, built from a template configured in Proposal Settings → Checklists, filled out and submitted against a specific proposal."
+          },
+          {
+            "term": "Checklist tabs",
+            "definition": "The tab names across the top are the checklist templates in Settings → Checklists: **Safety**, **Legal Review** and **Quality**. **Create Form** opens the template form (for Safety: address, phone, zip code, questions such as Trenching/Excavation and Underground Piping with Yes/No, and Comments / Safety Response), with **Cancel** and **Submit**. Each saved form is a card such as \"ID 5, Created By System Admin, Created On 09-17-2024\"."
+          },
+          {
+            "term": "Where this data comes from and goes",
+            "definition": "Templates come from **Settings → Checklists**. Submitted forms are filed in **Documents → Checklists** and counted on the **My Dashboard → Forms** panel (Legal Review, Safety, Quality) and in submission packages."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Add a checklist to a proposal",
+            "steps": [
+              "In the proposal's <strong>Checklists</strong> tab, click <strong>Create Form</strong>.",
+              "Choose from the forms configured in Proposal Settings → Checklists.",
+              "Fill in the fields and click <strong>Submit</strong>."
+            ],
+            "note": "Created forms are stored automatically in the Documents tab as a folder.",
+            "images": [
+              {
+                "src": "assets/notion/proposal-management-proposals-checklists/001.jpg",
+                "caption": "Checklists: forms for quality, safety and legal checks",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/proposal-management-proposals-checklists/002.jpg",
+                "caption": "Create Form, choosing from the forms set up in settings",
+                "step": 2
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/proposal-management-proposals-checklists/003.jpg",
+            "caption": "Deleting a checklist on a proposal"
+          }
+        ]
+      },
+      {
+        "heading": "Submission Packages",
+        "intro": "<p>A <strong>Submission Package</strong> is the final, client-facing bundle that gets sent once a proposal is ready to go out the door. Rather than manually gathering documents, checklists, submittals, and attachments scattered across the various proposal tabs, the submission package flow pulls everything into one page and lets you choose exactly how it reaches the client — by email, physically mailed, or through a client portal. Because a submission package is often the single most important deliverable in the whole proposal process, it gets its own approval workflow, its own rejection-handling path, and its own status/history tracking, separate from the proposal's own approval chain.</p><p>When something goes wrong with a submission package — most commonly, it's rejected during its own approval workflow — Arena doesn't just mark it failed and stop. It creates a tracked entry in Workflow Issues, which can be assigned to a specific person with a due date, ensuring the block gets resolved rather than the package silently stalling.</p>",
+        "definitions": [
+          {
+            "term": "Submission Package",
+            "definition": "The consolidated, client-facing deliverable assembled from a proposal's Profile, Documents, Checklists, Submittals, and Attachments, sent via Email to Client, Physical mail, or Client Portal."
+          },
+          {
+            "term": "Setup Approval Workflow (Submission Packages)",
+            "definition": "The Settings screen where approval levels for submission packages are configured, each assigned a workflow type (all must approve / any one can approve) and a level description."
+          },
+          {
+            "term": "Workflow Issues (Submission Packages)",
+            "definition": "A tracked entry created automatically when a submission package is rejected in its approval workflow; the package cannot move forward until the linked issue is resolved."
+          },
+          {
+            "term": "Submission Package Logs",
+            "definition": "The tab listing sent submission packages, where each row's menu offers Download, History, Status, and Delete."
+          },
+          {
+            "term": "Tab layout",
+            "definition": "Sub-tabs **Logs**, **Setup Approval Workflow** and **Workflow Issue**. **Create Submission Package** opens a page with the steps **Profile, Documents, Checklists, Submittals, Attachments, Profile** and **Cancel** / **Submit**. A log card shows, for example, \"SP 1, Created By: System Admin, Created Date: 09-17-2024\" and a status picker."
+          },
+          {
+            "term": "Where this data comes from and goes",
+            "definition": "The package is assembled from the same proposal's Profile, Documents, Checklists, Submittals and Attachments. Its statuses (Start, Submitted, Completed) come from **Settings → Status → Submission Package**. Approval levels are the ones set under **Setup Approval Workflow** (none on the test site). Rejections become **Workflow Issue** entries and count on **My Dashboard** (Submission Package Workflow Issues, Submission Package Approvals)."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Create a proposal submission package",
+            "steps": [
+              "On the proposal, click <strong>Create Submission Package</strong>.",
+              "On the page that opens, pull in data from the proposal's previous tabs: Profile, Documents, Checklists, Submittals, and Attachments.",
+              "Choose how to send it: <strong>Email to Client</strong>, <strong>Physical</strong> (mail), or <strong>Client Portal</strong>."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/proposal-management-proposals-submission-packages-logs/001.jpg",
+                "caption": "Create Submission Package, pulling in data from the earlier tabs",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/proposal-management-proposals-submission-packages-logs/002.jpg",
+                "caption": "Choosing what to add and how to send the package",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/proposal-management-proposals-submission-packages-logs/003.jpg",
+                "caption": "Client Portal, to send the package through the client's website",
+                "step": 3
+              }
+            ]
+          },
+          {
+            "title": "Set up an approval workflow for submission packages",
+            "steps": [
+              "Go to <strong>Proposal Management → Settings → Submission Packages → Setup Approval Workflow</strong>.",
+              "Click <strong>Create Level</strong> to choose approvers and assign the workflow type (all must approve / any one can approve), plus a level description.",
+              "Use Edit or Delete in Actions to manage existing levels."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/proposal-management-proposals-submission-packages-setup/001.jpg",
+                "caption": "Create Level: approvers, workflow type and a level description",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/proposal-management-proposals-submission-packages-setup/002.jpg",
+                "caption": "Delete, to remove a level",
+                "step": 3
+              }
+            ]
+          },
+          {
+            "title": "Resolve a rejected submission package",
+            "steps": [
+              "Open <strong>Workflow Issues</strong> to find the rejected submission package log.",
+              "Use <strong>Assign To</strong> to assign the issue to a user with a due date.",
+              "Click <strong>Resolve</strong> once the underlying problem is fixed."
+            ],
+            "note": "A rejected submission package cannot move forward until its linked issue is resolved.",
+            "images": [
+              {
+                "src": "assets/notion/proposal-management-proposals-submission-packages-workf/001.jpg",
+                "caption": "Search, to find a workflow issue",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/proposal-management-proposals-submission-packages-workf/003.jpg",
+                "caption": "Assign To, with a due date, and Resolve once fixed",
+                "step": 2
+              }
+            ]
+          },
+          {
+            "title": "Check the status and history of a sent submission package",
+            "steps": [
+              "Go to the <strong>Submission Packages Logs</strong> tab.",
+              "Use the row menu: <strong>Download</strong> to retrieve the package, <strong>History</strong> to see creation and approval status history, <strong>Status</strong> to view/set the configured status, and <strong>Delete</strong> to remove the package."
+            ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/proposal-management-proposals-submission-packages-logs/004.jpg",
+            "caption": "Search, to find a submission package in the logs"
+          },
+          {
+            "src": "assets/notion/proposal-management-proposals-submission-packages-workf/002.jpg",
+            "caption": "Grid and Table views for workflow issues, with Save Layout"
+          }
+        ]
+      },
+      {
+        "heading": "Issues",
+        "intro": "<p>The Issues tab exists specifically for the moment a proposal's approval gets rejected. Rather than the rejection simply reverting the proposal to an editable state with no further record, Arena logs it as a distinct, trackable issue — preserving why it was rejected and by whom, and blocking the proposal from proceeding until the issue is explicitly resolved. This mirrors the same rejection-to-issue pattern used for forms, quality, and safety elsewhere in Arena, applied here to the proposal approval chain itself.</p>",
+        "definitions": [
+          {
+            "term": "Proposal Issue",
+            "definition": "A record created automatically when a proposal is rejected by an approver; the proposal cannot proceed until the issue is resolved."
+          },
+          {
+            "term": "Issues tab layout",
+            "definition": "Search, counters (Total Issues, Issues Approved, Issues Rejected), **Filters** (Log ID, Raised On, Raised By) and grid / table views. Each card shows \"Raised on 12th June 2024, at 06:46 pm by System Admin, Level 1\", the **PI No.** (for example PI No. 3), the **Proposal ID** (8), Comments, the word Rejected and **Assign To**. Two issues exist on the test site."
+          },
+          {
+            "term": "Where this data comes from and goes",
+            "definition": "An issue is created when an approver rejects a proposal at a level of the **Settings → Approval Workflow**. It is counted on **My Dashboard → Issues** (Proposal Workflow Issues). Submission package rejections are listed separately under the **Submission Packages → Workflow Issue** tab."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Track and resolve a proposal approval rejection",
+            "steps": [
+              "Open the proposal's <strong>Issues</strong> tab to see any rejection-generated issues.",
+              "Use <strong>Search</strong> (by Issue ID) or <strong>Filters</strong> (Log ID, Raised On, Raised By) to find a specific issue.",
+              "Use <strong>Assign To</strong> to route the issue to a user for resolution."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/proposal-management-issues/002.jpg",
+                "caption": "The status bar: issues raised, approved and rejected",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/proposal-management-issues/001.jpg",
+                "caption": "Search by Issue ID",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/proposal-management-issues/003.jpg",
+                "caption": "Filters: Log ID, Raised On and more",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/proposal-management-issues/005.jpg",
+                "caption": "Assign To, with a date",
+                "step": 3
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/proposal-management-issues/004.jpg",
+            "caption": "Grid and Table views for issues"
+          }
+        ]
+      },
+      {
+        "heading": "Calendar",
+        "intro": "<p>The Calendar tab holds proposal events such as deadlines and meetings, for <strong>Estimators</strong> and <strong>PMs</strong>. It needs calendar consent from each user before events can be created.</p><p>It shows <strong>Create Event</strong>, <strong>Filters</strong>, a month grid, the events of the selected day (\"Events 0, No Events\" on the test site) and <strong>My Calendars</strong>.</p>",
+        "definitions": [
+          {
+            "term": "Calendar consent",
+            "definition": "Clicking **Create Event** without consent shows \"Consent Not Granted! Please provide consent. Note: Give consent in My Profile → Settings → Calendar consent.\" The Dashboard's Calendar Events panel asks for Outlook consent in the same way. The Outlook link is set up under **Global Data → Marketplace** (Microsoft Outlook, Microsoft Calendar)."
+          },
+          {
+            "term": "Where this data comes from and goes",
+            "definition": "Events can be linked to an Opportunity, Proposal or Bid (see the screenshots) and sync with Outlook once consent is given. They show in **My Dashboard → Calendar Events**."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Create a calendar event for a proposal deadline",
+            "steps": [
+              "Open **Proposal Management → Calendar** and click **Create Event**. If a consent message appears, give consent first in My Profile → Settings.",
+              "Enter the Title, Date, Time, Category and Description."
+            ],
+            "note": "Events created here are automatically linked to the Proposal module and can sync with Outlook via Global Data → Marketplace → Microsoft Outlook."
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/proposal-management-calendar/001.jpg",
+            "caption": "The Proposal Calendar, which can sync with Outlook Calendar"
+          },
+          {
+            "src": "assets/notion/proposal-management-calendar/009.jpg",
+            "caption": "Filters, to show events from one category"
+          },
+          {
+            "src": "assets/notion/proposal-management-calendar/010.jpg",
+            "caption": "Linking an event to Opportunity, Proposal or Bid Management"
+          },
+          {
+            "src": "assets/notion/proposal-management-calendar/011.jpg",
+            "caption": "Editing an event's title, date, time and description"
+          },
+          {
+            "src": "assets/notion/proposal-management-calendar/012.jpg",
+            "caption": "Deleting an event from the calendar"
+          }
+        ]
+      },
+      {
+        "heading": "To Do List",
+        "intro": "<p>To Do gives proposal teams a lightweight task-tracking layer scoped specifically to Proposal Management work, so action items related to a proposal don't have to be tracked in a separate tool. Tasks can be assigned to a specific person and carry a date and time, and completing one is as simple as a single click — keeping the mechanics minimal so the feature gets used rather than avoided.</p>",
+        "definitions": [
+          {
+            "term": "To Do List",
+            "definition": "A task list within Proposal Management, with items carrying a Title, Description, Date, Time, and an assignable owner."
+          },
+          {
+            "term": "To Do List tab layout",
+            "definition": "**Create To Do List**, search, table / grid views and **Save Layout**. Each card shows the title, description, date, time, the creator and **Assign To** (for example \"Drawings Verification, 13th June 2024, 12:33 PM, Assign To System Admin\")."
+          },
+          {
+            "term": "Create To Do dialog",
+            "definition": "Fields **Title***, **Description**, **Date**, **Time** (hours, minutes, AM / PM), **Cancel** and **Submit**. The assignee is set afterwards from the item's menu or card; Assign To lists the system users from Global Data."
+          },
+          {
+            "term": "Where this data comes from and goes",
+            "definition": "Users come from Global Rosters. The items appear in the **To Do List** panel of **My Dashboard**."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Create a to-do task for a proposal",
+            "steps": [
+              "Go to <strong>Proposal Management → To Do</strong> and click <strong>Create To Do List</strong>.",
+              "Fill in Title, Description, Date, and Time, then submit.",
+              "Use <strong>Assign To</strong> to assign the task to a user.",
+              "Click the double-tick icon to mark a task complete."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/proposal-management-to-do/001.jpg",
+                "caption": "The To Do list, with Create To Do List",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/proposal-management-to-do/009.jpg",
+                "caption": "Assign To, listing the system users from Global Data",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/proposal-management-to-do/011.jpg",
+                "caption": "The double tick, which changes a to-do item's status",
+                "step": 4
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/proposal-management-to-do/002.jpg",
+            "caption": "Search, to find a to-do item"
+          },
+          {
+            "src": "assets/notion/proposal-management-to-do/003.jpg",
+            "caption": "Manage Columns for the table view"
+          },
+          {
+            "src": "assets/notion/proposal-management-to-do/004.jpg",
+            "caption": "Grid and Table views, with Save Layout"
+          },
+          {
+            "src": "assets/notion/proposal-management-to-do/005.jpg",
+            "caption": "Editing or deleting a to-do item from its three-dot menu in Grid view"
+          },
+          {
+            "src": "assets/notion/proposal-management-to-do/008.jpg",
+            "caption": "Filters and hide options for columns"
+          },
+          {
+            "src": "assets/notion/proposal-management-to-do/010.jpg",
+            "caption": "Edit and delete in the Actions column"
+          }
+        ]
+      },
+      {
+        "heading": "Analytics & Reports",
+        "intro": "<p>Analytics turns proposal records into charts and reports for leadership: success rates, volume by type, profit and customer rankings. <strong>PMs</strong> and managers use it; each card can be downloaded or shown full screen.</p><p>The tab has eight cards: <strong>Proposal Success Rate</strong>, <strong>Estimate Success Rate</strong>, <strong>Types of Proposals</strong>, <strong>Success & Estimate Over Time</strong>, <strong>Profit over time</strong>, <strong>Weekly Report</strong>, <strong>Report</strong> and <strong>Best and Worst Customers</strong>.</p>",
+        "definitions": [
+          {
+            "term": "Proposal Success Rate report",
+            "definition": "Two pie charts — \"Success Rate (Qty of Proposals)\" by status count, and \"Success Rate (Currency Value)\" by submitted amount — filterable by Proposal Type, with legend items toggling status visibility."
+          },
+          {
+            "term": "Types of Proposals report",
+            "definition": "Two bar graphs showing quantity of proposals and amount submitted, broken down by bid type within each proposal type, adjustable by date range and downloadable in Excel, PDF, PPT, or JPEG."
+          },
+          {
+            "term": "The eight analytics cards",
+            "definition": "**Proposal Success Rate** (Qty and Currency value pies), **Estimate Success Rate**, **Types of Proposals**, **Success & Estimate Over Time** (Success Over Time with a Proposal Status filter; Estimate Over Time), **Profit over time** (Estimating Cost and Profit Over Time), **Weekly Report** (sub-tabs Estimators Work Schedule Report, Follow Up Report, Weekly Report), **Report** (every chart in one page with **Download PDF** and **Filter**) and **Best and Worst Customers** (Customer Rankings by Criteria, Customer and Threshold, filtered by Proposal Types)."
+          },
+          {
+            "term": "Weekly Report columns",
+            "definition": "Proposal No., Status, Site, Customer, Department Code, Location, Bid Type, Proposal Name, Proposal Estimated, Proposal Actual Value, Due Date, Submitted Date, Estimators, Days Since and Comments, with a total such as \"Total of Pending/Expected Estimates: Rs. 5,20,000\" and chat, download, share, print and settings icons. Comments pinned with **Add to Report** appear here."
+          },
+          {
+            "term": "Where this data comes from",
+            "definition": "Every chart reads the proposals: Status and Proposal Type from Settings, Customer and Location from Global Data, estimated and submitted values, Contract Amount and Projected Cost from the Profile. The Proposal Type filters list the 3 types in Settings. Best and Worst Customers showed \"No data\" on the test site."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "View the success rate of proposals",
+            "steps": [
+              "Open the <strong>Proposal Success Rate</strong> report.",
+              "Use the Proposal Type dropdown to filter.",
+              "Click legend items on either pie chart to toggle specific statuses on or off."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/proposal-success-rate/001.jpg",
+                "caption": "Success Rate by quantity of proposals, as a pie chart",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/proposal-success-rate/002.jpg",
+                "caption": "Success Rate by currency value, as a pie chart",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/proposal-success-rate/003.jpg",
+                "caption": "The Proposal Type drop-down",
+                "step": 2
+              }
+            ]
+          },
+          {
+            "title": "View proposal quantity and value by bid type",
+            "steps": [
+              "Open the <strong>Types of Proposals</strong> report.",
+              "Adjust the date range as needed.",
+              "Download the report in Excel, PDF, PPT, or JPEG."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/types-of-proposals/001.jpg",
+                "caption": "Types of Proposals versus quantity",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/types-of-proposals/002.jpg",
+                "caption": "Types of Proposals versus amount",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/types-of-proposals/003.jpg",
+                "caption": "Adjusting the date range; legend items turn bars on and off",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/types-of-proposals/004.jpg",
+                "caption": "Download and Full Screen for the bar graph",
+                "step": 3
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/proposal-success-rate/004.jpg",
+            "caption": "Download and Full Screen for each pie chart"
+          },
+          {
+            "src": "assets/notion/estimate-success-rate/001.jpg",
+            "caption": "Estimate Success Rate: the number of proposals in each status"
+          },
+          {
+            "src": "assets/notion/estimate-success-rate/002.jpg",
+            "caption": "Choosing proposal types and a date range"
+          },
+          {
+            "src": "assets/notion/estimate-success-rate/003.jpg",
+            "caption": "Download and Full Screen for the bar graph"
+          },
+          {
+            "src": "assets/notion/success-estimate-over-time/001.jpg",
+            "caption": "Success Over Time: submitted project amount by date for each year"
+          },
+          {
+            "src": "assets/notion/success-estimate-over-time/002.jpg",
+            "caption": "Estimate Over Time: estimated project amount by date for each year"
+          },
+          {
+            "src": "assets/notion/success-estimate-over-time/003.jpg",
+            "caption": "Filtering by proposal type and status"
+          },
+          {
+            "src": "assets/notion/success-estimate-over-time/005.jpg",
+            "caption": "Legend items turn data on and off"
+          },
+          {
+            "src": "assets/notion/profit-over-time/001.jpg",
+            "caption": "Profit Over Time: contract amount minus projected cost, by year"
+          },
+          {
+            "src": "assets/notion/profit-over-time/002.jpg",
+            "caption": "Estimating Cost and Profit Over Time"
+          },
+          {
+            "src": "assets/notion/best-and-worst-clients/001.jpg",
+            "caption": "Best and Worst Clients, by customer or customer location, with a threshold value"
+          },
+          {
+            "src": "assets/notion/weekly-report/001.jpg",
+            "caption": "Weekly Report: proposal progress for the week by proposal type"
+          },
+          {
+            "src": "assets/notion/weekly-report/002.jpg",
+            "caption": "Date range, comments, download, share and print"
+          },
+          {
+            "src": "assets/notion/weekly-report/003.jpg",
+            "caption": "Layout Settings: page size and page header"
+          },
+          {
+            "src": "assets/notion/estimator-work-schedule-report/001.jpg",
+            "caption": "Estimator Work Schedule: proposal IDs, people, sites and months"
+          },
+          {
+            "src": "assets/notion/follow-up-report/001.jpg",
+            "caption": "Follow-Up Report: actions taken after an event or meeting"
+          },
+          {
+            "src": "assets/notion/follow-up-report/002.jpg",
+            "caption": "Export, to download the report as Excel or PDF"
+          },
+          {
+            "src": "assets/notion/report/001.jpg",
+            "caption": "The Report: a summary of all the analytics"
+          },
+          {
+            "src": "assets/notion/report/002.jpg",
+            "caption": "Choosing the date range and downloading the PDF"
+          }
+        ]
+      },
+      {
+        "heading": "Push Datasets",
+        "intro": "<p>Push Datasets lists the proposal datasets that can be synced with a reporting tool, for <strong>Module Admins</strong>. Each row has a <strong>SYNC</strong> button.</p><p>The table has <strong>Dataset Name</strong> and <strong>Actions</strong> with four rows: <strong>Standard Proposal Data</strong>, <strong>Proposal Comments Data</strong>, <strong>Customers Data</strong> and <strong>Customers POC Data</strong>.</p>",
+        "definitions": [
+          {
+            "term": "SYNC",
+            "definition": "Refreshes that dataset. The datasets mirror proposals, their comments, customers and customer contacts, which come from this module and Global Data. Click **SYNC** on a dataset after the underlying records change."
+          }
+        ],
+        "procedures": []
+      },
+      {
+        "heading": "Settings",
+        "intro": "<p>Proposal Management Settings holds the shared lists and rules every proposal draws on. A <strong>Module Admin</strong> sets it up once so reporting, filtering and numbering stay consistent across proposals.</p><p>Open the gear icon of the module. The menu is <strong>Proposal</strong> (tabs <strong>Proposal Form</strong>, <strong>Proposal Types</strong>, <strong>Settings</strong>), <strong>Bid Types</strong>, <strong>Department Codes</strong>, <strong>Business Development</strong>, <strong>Project Types</strong>, <strong>Checklists</strong>, <strong>Submittals</strong>, <strong>Status</strong>, <strong>Approval Workflow</strong>, <strong>ID Settings</strong>, <strong>Delivery Method</strong> and <strong>Users and Permissions</strong>. These pages are inside Proposal Management; there is no Proposal Management tile in Global Data.</p>",
+        "definitions": [
+          {
+            "term": "Proposal Type",
+            "definition": "A configurable category (3 on the test site) with its own Profile sections, created in Settings → Proposal → **Proposal Types**."
           },
           {
             "term": "Bid Type",
@@ -27826,11 +29186,11 @@ const MODULES = [
           },
           {
             "term": "Delivery Method",
-            "definition": "A configurable list of ways a proposal can be submitted or sent to a recipient, managed under Proposal Management Settings → Delivery Method."
+            "definition": "A configurable list of ways a proposal is submitted or sent (Website, Hard Copy, Auction, Letters, Manually, Phone, Email on the test site), managed under Settings → Delivery Method."
           },
           {
             "term": "Status Configuration",
-            "definition": "The screen for adding custom statuses (name + color) for either the Proposal or Submission Package tab; exactly two standard statuses can be marked \"Success\" or \"Failure\" via Edit, driving win/loss analytics."
+            "definition": "Has status lists for **Proposal** (Start, Successful, Pending, Cancelled, No Bid, N/A, Completed, Lost), **Submission Package** (Start, Submitted, Completed) and tenders (In-Progress, Draft, Under Review, Reopened, Shortlisted, Awarded, Rejected, Pre Qualification, Completed). The first and last standard statuses are fixed; the last-level ones carry the Success / Failure flag."
           },
           {
             "term": "Approval Workflow (proposal, global)",
@@ -27846,22 +29206,34 @@ const MODULES = [
           },
           {
             "term": "Project Type (Proposal Management)",
-            "definition": "A classification for proposals along three axes: Field/Shop, Material, and New/Repair."
+            "definition": "A code with a description and three classifications: Field/Shop, Material and New/Repair (19 on the test site). The Profile's Project Type drop-down lists these codes."
           },
           {
             "term": "Checklist template (settings)",
-            "definition": "A reusable checklist form defined in Proposal Management Settings → Checklists, built with configurable fields and previewable before saving."
+            "definition": "A reusable checklist form defined in Proposal Management → Settings → Checklists, built with configurable fields and previewable before saving."
           },
           {
             "term": "Submittal template (settings)",
-            "definition": "A reusable submittal document defined in Proposal Management Settings → Submittals, either name-only or built from an uploaded Word document with merge keys."
+            "definition": "A reusable submittal document defined in Proposal Management → Settings → Submittals, either name-only or built from an uploaded Word document with merge keys."
+          },
+          {
+            "term": "Proposal (Proposal Form, Proposal Types, Settings tabs)",
+            "definition": "**Proposal Form** holds the Standard Fields and the Configurable Fields of the proposal Profile (Section 1 with fields such as \"Configurable Field\", each with Required, field type and add / copy / delete icons) and **Save Changes**. **Proposal Types** has **Proposal Type** (add) and one card per type with Description, Created By and Created Date (Fabrication, Roofing proposal, Cost Plus). **Settings** has **Document Management**: **AWS S3** or **Share point**; it cannot be changed once proposals or Opportunities exist."
+          },
+          {
+            "term": "Where each list is used",
+            "definition": "Proposal Types: Create Proposal and Dashboard filters. Bid Types, Project Types, Business Development, Department Codes and Delivery Method: the matching Profile drop-downs. Status: the Status field and chart filters. Approval Workflow: the Workflow Level and Approve / Reject. ID Settings: the Proposal ID. Checklists and Submittals: the Checklists and Submittals tabs of each proposal. See \"Where Proposal Fields Come From\"."
+          },
+          {
+            "term": "Department Code and Business Development Code",
+            "definition": "Department Codes (29 on the test site) have a code, description, group and business unit. Business Development Codes (14) have a code and description. Both feed the Profile drop-downs and the Weekly Report."
           }
         ],
         "procedures": [
           {
             "title": "Create a reusable submittal template",
             "steps": [
-              "Go to <strong>Proposal Management Settings → Submittals</strong> and click <strong>Create Template</strong>.",
+              "Go to <strong>Proposal Management → Settings → Submittals</strong> and click <strong>Create Template</strong>.",
               "Choose <strong>Create Submittal Template</strong> (name only) or <strong>Upload Submittal Template</strong> (upload a Word document).",
               "Configure merge keys using double curly braces, e.g. <code>{{ }}</code> format.",
               "Use <strong>Sync</strong> from the kebab menu to update keys after making edits."
@@ -27897,7 +29269,7 @@ const MODULES = [
           {
             "title": "Create a new checklist template for proposals",
             "steps": [
-              "Go to <strong>Proposal Management Settings → Checklists</strong> and click <strong>Create Checklist</strong>.",
+              "Go to <strong>Proposal Management → Settings → Checklists</strong> and click <strong>Create Checklist</strong>.",
               "Name it, then click into the checklist to configure its form fields.",
               "Use <strong>Preview Form</strong> to review, then click <strong>Save Changes</strong>."
             ],
@@ -27917,9 +29289,9 @@ const MODULES = [
           {
             "title": "Set up a new proposal type",
             "steps": [
-              "Go to <strong>Global Data → Company → Proposal Management → Proposal Types</strong>.",
-              "Click <strong>Proposal Type</strong> (or <strong>Create</strong>) and enter the Proposal Type Name and Description.",
-              "Click into the created type to add and configure its form sections and fields, then click <strong>Save Changes</strong>."
+              "Go to **Proposal Management → Settings → Proposal → Proposal Types**.",
+              "Click **Proposal Type** and enter the Proposal Type Name and Description.",
+              "Open the **Proposal Form** tab to add and configure form sections and fields, then click **Save Changes**."
             ],
             "images": [
               {
@@ -27954,7 +29326,7 @@ const MODULES = [
           {
             "title": "Configure delivery methods",
             "steps": [
-              "Go to <strong>Proposal Management Settings → Delivery Method</strong>.",
+              "Go to <strong>Proposal Management → Settings → Delivery Method</strong>.",
               "Click <strong>Add</strong> to create a new delivery-method row, or <strong>Delete</strong> to remove one."
             ],
             "images": [
@@ -27968,9 +29340,9 @@ const MODULES = [
           {
             "title": "Configure custom statuses for proposals and submission packages",
             "steps": [
-              "Go to <strong>Proposal Management Settings</strong> (or <strong>Global Data</strong>) → <strong>Status Configuration</strong>.",
-              "Click <strong>Add Status</strong> to enter a status name and color, choosing whether it applies to the Proposal tab or Submission Package tab.",
-              "Use <strong>Edit</strong> to mark up to two standard statuses as \"Success\" or \"Failure\"."
+              "Go to **Proposal Management → Settings → Status**.",
+              "Click **Add Status** to enter a status name and color, choosing whether it applies to the Proposal tab or Submission Package tab.",
+              "Use **Edit** to mark a last-level standard status as \"Success\" or \"Failure\"."
             ],
             "images": [
               {
@@ -27998,9 +29370,9 @@ const MODULES = [
           {
             "title": "Set up the company-wide approval workflow for proposals",
             "steps": [
-              "Go to <strong>Global Data → Company → Proposal Management → Approval Workflow</strong>.",
-              "Click <strong>Create Level</strong> to select approvers and the workflow type (all must approve, or any one can approve).",
-              "Create multiple levels as needed, and use <strong>Open Workflow Graph View</strong> to see the workflow as a tree diagram."
+              "Go to **Proposal Management → Settings → Approval Workflow**.",
+              "Click **Create Level** to select approvers and the workflow type (all must approve, or any one can approve).",
+              "Create multiple levels as needed, and use **Open Workflow Graph View** to see the workflow as a tree diagram."
             ],
             "images": [
               {
@@ -28018,7 +29390,7 @@ const MODULES = [
           {
             "title": "Configure automatic ID generation for proposals",
             "steps": [
-              "Go to <strong>Global Data → Company → Proposal Management → ID Settings</strong>.",
+              "Go to <strong>Proposal Management → Settings → ID Settings</strong>.",
               "Choose <strong>System Default</strong> for automatic IDs, or <strong>Custom</strong> to configure separator, serial number, date, month, and year fields.",
               "Click <strong>Save Changes</strong>."
             ],
@@ -28044,7 +29416,7 @@ const MODULES = [
           {
             "title": "Manage user groups and permissions for Proposal Management",
             "steps": [
-              "Go to <strong>Proposal Management Settings → Users and Permissions</strong>.",
+              "Go to <strong>Proposal Management → Settings → Users and Permissions</strong>.",
               "Click <strong>Add User Group</strong> to name the group and select its permissions.",
               "Click <strong>Add Users</strong> to assign members to the group.",
               "Use the kebab menu to Edit or Delete a group."
@@ -28186,876 +29558,6 @@ const MODULES = [
             "caption": "Proposal navigation: open Proposal Management on the Dashboard or on Proposals"
           }
         ]
-      },
-      {
-        "heading": "Proposals",
-        "intro": "<p>A <strong>Proposal</strong> is the central record for a piece of business development work — the formal document (and its supporting workflow) that a company assembles in response to, or in pursuit of, an <strong>Opportunity</strong>. Rather than tracking proposals as static files on someone's desktop, Arena models the entire proposal as a living record with its own profile, team, documents, communications, checklists, submittals, and eventual submission package — all in one place, so that anyone opening the proposal later can see exactly what was sent, to whom, by whom, and what happened to it.</p><p>Every proposal is created against an Opportunity (an existing one is selected, or a new one is created inline), which is what ties Proposal Management back into the earlier stages of the sales pipeline. From there, a proposal accumulates its own auto-generated ID (following whatever ID Settings the company has configured), moves through an configurable approval workflow, and — if using the built-in <strong>Follow Up</strong> feature — can automatically nudge the customer with reminder emails on a recurring schedule. Because a proposal is rarely worked by one person alone, the Teams, Comments, Documents, and Communication tabs exist to keep everyone collaborating on the same record instead of scattering the work across email and shared drives.</p>",
-        "definitions": [
-          {
-            "term": "Proposal",
-            "definition": "The core record tracking a piece of business development work from creation through approval, submission, and outcome."
-          },
-          {
-            "term": "Opportunity",
-            "definition": "The upstream record (from Opportunity Management) that a proposal is created against — either an existing opportunity is selected, or a new one is created inline while creating the proposal."
-          },
-          {
-            "term": "Proposal ID",
-            "definition": "An identifier auto-generated for every new proposal, following the format configured in Global Data's ID Settings."
-          },
-          {
-            "term": "Business Development Code",
-            "definition": "A classification field captured on a proposal, used for business-development tracking/reporting."
-          },
-          {
-            "term": "See History",
-            "definition": "A log of created, edited, updated, and approval-workflow status changes for a proposal, viewed from its Actions menu."
-          },
-          {
-            "term": "Follow Up",
-            "definition": "A feature for sending reminder emails to a customer about a proposal, either once or on a recurring schedule (Daily, Weekly, Monthly, or None)."
-          },
-          {
-            "term": "Teams tab",
-            "definition": "Where individual users (from the global roster) or entire crews (from Global Data) are added to work on a proposal."
-          },
-          {
-            "term": "Documents tab (proposal)",
-            "definition": "An auto-organizing document space that files uploads from Comments, Communication, Checklists, Submittals, Submission Package, and Bids into folders, alongside manually created folders."
-          },
-          {
-            "term": "Communication tab (proposal)",
-            "definition": "An email client scoped to the proposal, supporting Compose Mail (To/CC/BCC/Subject/Message/attachments) and organizing mail into Inbox, Sent, Drafts, Starred, and Trash."
-          },
-          {
-            "term": "Calendar (Proposal Management)",
-            "definition": "A calendar for proposal-related events (e.g. deadlines), which can sync with Outlook once connected via Global Data → Marketplace."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Create a new proposal",
-            "steps": [
-              "Go to <strong>Proposal Management → Proposals</strong> and click <strong>Create</strong>.",
-              "In the pop-up, enter the Proposal Name, Description, Proposal Type, Proposal Value Estimated, and Business Development Code.",
-              "Select the required Opportunity, or create a new one inline if it doesn't already exist.",
-              "Click <strong>Submit for Approval</strong> to create the proposal."
-            ],
-            "note": "The Proposal ID is auto-generated based on the company's ID Settings.",
-            "images": [
-              {
-                "src": "assets/notion/proposal-management-proposals/001.jpg",
-                "caption": "Create: the pop-up for a new proposal",
-                "step": 2
-              }
-            ]
-          },
-          {
-            "title": "Edit or delete a proposal",
-            "steps": [
-              "In <strong>Proposal Management → Proposals</strong>, open the row's Actions menu.",
-              "Select <strong>Edit</strong> to modify the Proposal Name, Description, Proposal Type, Opportunity, Estimated Project Value, or Business Development Code.",
-              "Select <strong>Delete</strong> to permanently remove the proposal."
-            ]
-          },
-          {
-            "title": "View a proposal's change history",
-            "steps": [
-              "In <strong>Proposal Management → Proposals</strong>, open the Actions menu for the proposal.",
-              "Select <strong>See History</strong> to view its log of created, edited, updated, and approval-workflow status changes."
-            ]
-          },
-          {
-            "title": "Bulk create or update proposals via Excel",
-            "steps": [
-              "In <strong>Proposal Management → Proposals</strong>, click <strong>Export</strong>.",
-              "Use <strong>Download Excel</strong> to export current proposal data (the sheet is named by Proposal Type).",
-              "Use <strong>Upload Excel</strong> with the provided sample template to create or update proposals in bulk."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/proposal-management-proposals/003.jpg",
-                "caption": "Export, for downloading, uploading and updating proposals",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/proposal-management-proposals/004.jpg",
-                "caption": "Upload Excel, with a sample template for creating or updating proposals",
-                "step": 3
-              }
-            ]
-          },
-          {
-            "title": "Search or filter the proposals list",
-            "steps": [
-              "Use <strong>Search</strong> to find proposals by Proposal Name or Proposal ID.",
-              "Click <strong>Filters</strong> to open criteria for narrowing the list.",
-              "Use <strong>Manage Columns</strong> to choose and arrange visible columns."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/proposal-management-proposals/005.jpg",
-                "caption": "Filters: choosing the data to show",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/proposal-management-proposals/006.jpg",
-                "caption": "Manage Columns: choosing and arranging columns",
-                "step": 3
-              }
-            ]
-          },
-          {
-            "title": "Send follow-up reminder emails to a customer",
-            "steps": [
-              "Open the proposal and use the <strong>Follow Up</strong> feature.",
-              "Set a <strong>Recurrence Type</strong> — Daily, Weekly, Monthly, or None — to schedule repeated reminders, or send a one-time email."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/proposal-management-proposals/013.jpg",
-                "caption": "Follow Up: reminder emails to customers, with a recurrence type",
-                "step": 1
-              }
-            ]
-          },
-          {
-            "title": "Add a customer directly from a proposal",
-            "steps": [
-              "In the proposal's Profile, find the <strong>Project Location</strong> section.",
-              "Click <strong>Create a Customer</strong> to add a new customer inline, or <strong>Create a Customer POC</strong> to add a point of contact."
-            ],
-            "note": "This also creates the corresponding record in the global Customer database."
-          },
-          {
-            "title": "Add users or crews to a proposal team",
-            "steps": [
-              "In the proposal's <strong>Teams</strong> tab, click <strong>Add User</strong> to select individuals from the global roster, or <strong>Add Crew</strong> to add a crew from Global Data.",
-              "Use the kebab menu's <strong>Delete</strong> to remove a member."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/proposal-management-proposals-teams/001.jpg",
-                "caption": "Add User: choosing from the global roster",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/proposal-management-proposals-teams/002.jpg",
-                "caption": "Add Crew: choosing from the crews in Global Data",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/proposal-management-proposals-teams/003.jpg",
-                "caption": "Delete, in the three-dot menu, to remove a member",
-                "step": 2
-              }
-            ]
-          },
-          {
-            "title": "Comment on a proposal and pin it to a report",
-            "steps": [
-              "In the proposal Profile, click <strong>Comments</strong> to add comments and attachments.",
-              "Use the comment menu to <strong>Edit</strong> or <strong>Delete</strong> your own comment.",
-              "Use <strong>Add to Report</strong> to pin a comment for inclusion in the weekly report."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/proposal-management-proposals-profile/007.jpg",
-                "caption": "Comments on a proposal, with like and search",
-                "step": 1
-              }
-            ]
-          },
-          {
-            "title": "Send an email to a client from a proposal",
-            "steps": [
-              "In the proposal's <strong>Communication</strong> tab, click <strong>Compose Mail</strong>.",
-              "Fill in To, CC, BCC, Subject, Message, and any attachments, then send."
-            ],
-            "note": "Sent submission-package emails are also stored here, organized into Inbox, Sent, Drafts, Starred, and Trash."
-          },
-          {
-            "title": "Create a calendar event for a proposal deadline",
-            "steps": [
-              "Open the <strong>Proposal Management Calendar</strong> and click <strong>Create Event</strong>.",
-              "Enter the Title, Date, Time, Category, and Description."
-            ],
-            "note": "Events created here are automatically linked to the Proposal module and can sync with Outlook via Global Data → Marketplace → Microsoft Outlook."
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/notion/proposal-management-proposals/002.jpg",
-            "caption": "Status Legend: the number of proposals in each status"
-          },
-          {
-            "src": "assets/notion/proposal-management-proposals/007.jpg",
-            "caption": "Grid, Table and Kanban views, with Save Layout"
-          },
-          {
-            "src": "assets/notion/proposal-management-proposals/008.jpg",
-            "caption": "Duplicate, to copy an existing proposal"
-          },
-          {
-            "src": "assets/notion/proposal-management-proposals/009.jpg",
-            "caption": "Choosing what to include in the duplicated proposal"
-          },
-          {
-            "src": "assets/notion/proposal-management-proposals/010.jpg",
-            "caption": "Approve and Reject, shown only to people in the approval workflow"
-          },
-          {
-            "src": "assets/notion/proposal-management-proposals/011.jpg",
-            "caption": "Recent Comments: the latest three comments on a proposal"
-          },
-          {
-            "src": "assets/notion/proposal-management-proposals/012.jpg",
-            "caption": "Chance of Success, based on the selected customers"
-          },
-          {
-            "src": "assets/notion/proposal-management-proposals-profile/001.jpg",
-            "caption": "Project Name and Project Number, created when a proposal is won"
-          },
-          {
-            "src": "assets/notion/proposal-management-proposals-profile/002.jpg",
-            "caption": "Estimators, chosen from the global roster"
-          },
-          {
-            "src": "assets/notion/proposal-management-proposals-profile/003.jpg",
-            "caption": "Projected Amount"
-          },
-          {
-            "src": "assets/notion/proposal-management-proposals-profile/004.jpg",
-            "caption": "Status, which is configured in settings"
-          },
-          {
-            "src": "assets/notion/proposal-management-proposals-profile/005.jpg",
-            "caption": "A configurable section, with fields set in Proposal Types"
-          },
-          {
-            "src": "assets/notion/proposal-management-proposals-profile/006.jpg",
-            "caption": "Assign To, to give people from the global roster access"
-          },
-          {
-            "src": "assets/notion/proposal-management-proposals-profile/008.jpg",
-            "caption": "History: changes, approvals and edits to the proposal"
-          },
-          {
-            "src": "assets/notion/proposal-management-proposals-teams/004.jpg",
-            "caption": "Searching for people or teams"
-          },
-          {
-            "src": "assets/notion/proposal-management-proposals-communication/001.jpg",
-            "caption": "Communication: mail sent from the proposal, including submission package emails"
-          },
-          {
-            "src": "assets/notion/proposal-management-proposals-communication/002.jpg",
-            "caption": "Map, to link one proposal to another"
-          },
-          {
-            "src": "assets/notion/proposal-management-proposals-communication/003.jpg",
-            "caption": "Import Groups, to bring in Outlook groups"
-          },
-          {
-            "src": "assets/notion/proposal-management-proposals-communication/004.jpg",
-            "caption": "Adding an automatic signature to outgoing mail"
-          },
-          {
-            "src": "assets/notion/proposal-management-proposals-documents/001.jpg",
-            "caption": "Documents: folders for the proposal's files"
-          },
-          {
-            "src": "assets/notion/proposal-management-proposals-documents/002.jpg",
-            "caption": "New Folder, for additional documents"
-          },
-          {
-            "src": "assets/notion/proposal-management-proposals-documents/003.jpg",
-            "caption": "Upload Documents into a folder"
-          },
-          {
-            "src": "assets/notion/proposal-management-proposals-documents/004.jpg",
-            "caption": "Download, to get the files in a folder"
-          },
-          {
-            "src": "assets/notion/proposal-management-proposals-status-comments/001.jpg",
-            "caption": "Status and Comments: update the status and see linked documents and assigned users"
-          },
-          {
-            "src": "assets/notion/proposal-management-proposals-status-comments/002.jpg",
-            "caption": "Changing the status on the Proposal Status tab"
-          },
-          {
-            "src": "assets/notion/proposal-management-proposals-status-comments/003.jpg",
-            "caption": "Search People, to find comments by a person"
-          },
-          {
-            "src": "assets/notion/proposal-management-calendar/001.jpg",
-            "caption": "The Proposal Calendar, which can sync with Outlook Calendar"
-          },
-          {
-            "src": "assets/notion/proposal-management-calendar/009.jpg",
-            "caption": "Filters, to show events from one category"
-          },
-          {
-            "src": "assets/notion/proposal-management-calendar/010.jpg",
-            "caption": "Linking an event to Opportunity, Proposal or Bid Management"
-          },
-          {
-            "src": "assets/notion/proposal-management-calendar/011.jpg",
-            "caption": "Editing an event's title, date, time and description"
-          },
-          {
-            "src": "assets/notion/proposal-management-calendar/012.jpg",
-            "caption": "Deleting an event from the calendar"
-          }
-        ]
-      },
-      {
-        "heading": "Bids",
-        "intro": "<p>A <strong>Bid</strong> lives one level beneath a Proposal — it represents a specific costed offer or estimate submitted as part of that proposal. A single proposal can carry multiple bids (for example, alternate pricing options, or bids of different types), which is why Bids has its own tab, its own list views, and its own bulk import/export rather than being folded into the proposal's main profile. Before bids can be used at all, the Bid tab has to be switched on for the project via permissions in Bid Management — a one-time setup step that keeps the feature hidden for teams that don't use it.</p>",
-        "definitions": [
-          {
-            "term": "Bid",
-            "definition": "A specific costed offer created within a proposal's Bid tab, with its own name, description, and Bid Type."
-          },
-          {
-            "term": "Bid Management permissions",
-            "definition": "The permission gate that must be enabled before the Bid tab becomes usable on a proposal."
-          },
-          {
-            "term": "Table View / Grid View / Kanban View",
-            "definition": "The three layout options for browsing the Bids list; the chosen layout can be saved as the default via Save Layout."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Create a bid within a proposal",
-            "steps": [
-              "Open the proposal's <strong>Bid</strong> tab and click <strong>Create Bid</strong>.",
-              "Fill in the Bid Name, Description, Proposal, and Bid Type in the pop-up window, then submit."
-            ],
-            "note": "The Bid tab must first be enabled via permissions in Bid Management."
-          },
-          {
-            "title": "Export or import bids in bulk",
-            "steps": [
-              "In the Bids list, click <strong>Exports</strong>.",
-              "Use <strong>Download Excel</strong> to export existing bid data.",
-              "Use <strong>Upload Excel</strong> to bulk-create bids from a spreadsheet."
-            ]
-          },
-          {
-            "title": "Switch the Bids list layout",
-            "steps": [
-              "Choose <strong>Table View</strong>, <strong>Grid View</strong>, or <strong>Kanban View</strong> for the Bids list.",
-              "Click <strong>Save Layout</strong> to keep the chosen view as the default."
-            ]
-          }
-        ]
-      },
-      {
-        "heading": "Submittals",
-        "intro": "<p>Within Proposal Management, a Submittal is a formal letter attached to a proposal — for example, a budgetary letter — used to communicate specific information to the client as part of the proposal process. Rather than drafting each of these from a blank page, the feature is built around reuse: submittal letters can be authored fresh in Google Docs, or pulled in as a pre-built template from Proposal Settings and auto-filled with data straight from the proposal's own profile, cutting out repetitive manual entry.</p>",
-        "definitions": [
-          {
-            "term": "Submittal (proposal)",
-            "definition": "A formal letter (e.g. a budgetary letter) attached to a proposal, either drafted fresh or imported from a configured template."
-          },
-          {
-            "term": "Auto Fill Fields",
-            "definition": "An option, available when importing a submittal template from Global Data, that automatically populates submittal keys using data from the proposal profile."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Add a submittal letter to a proposal",
-            "steps": [
-              "In the proposal's <strong>Submittals</strong> tab, click <strong>Create</strong>.",
-              "Choose <strong>Create New Letter</strong> to draft a new template in Google Docs, or <strong>Import From Global Data</strong> to reuse a configured template from Proposal Settings.",
-              "If importing, optionally enable <strong>Auto Fill Fields</strong> to populate submittal keys from the proposal profile."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/proposal-management-proposals-submittals-letter/001.jpg",
-                "caption": "Import from Global Data, with Auto Fill Fields",
-                "step": 3
-              }
-            ]
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/notion/proposal-management-proposals-submittals-letter/002.jpg",
-            "caption": "Search, to find submittals"
-          },
-          {
-            "src": "assets/notion/proposal-management-proposals-submittals-letter/003.jpg",
-            "caption": "Deleting a submittal, with a confirmation pop-up"
-          }
-        ]
-      },
-      {
-        "heading": "Checklists",
-        "intro": "<p>Checklists give a proposal a structured way to confirm that required steps or quality criteria have been met before moving forward — the same kind of gating mechanism used elsewhere in Arena for quality inspections, applied here to the business-development process. Rather than being freeform, every checklist a proposal can use is built from a template configured centrally in Settings, ensuring the same checklist means the same thing across every proposal in the company. Once filled in, a checklist doesn't just sit inside its own tab — it's automatically filed into the proposal's Documents tab as a folder, keeping everything discoverable from one place.</p>",
-        "definitions": [
-          {
-            "term": "Checklist (proposal)",
-            "definition": "A form, built from a template configured in Proposal Settings → Checklists, filled out and submitted against a specific proposal."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Add a checklist to a proposal",
-            "steps": [
-              "In the proposal's <strong>Checklists</strong> tab, click <strong>Create Form</strong>.",
-              "Choose from the forms configured in Proposal Settings → Checklists.",
-              "Fill in the fields and click <strong>Submit</strong>."
-            ],
-            "note": "Created forms are stored automatically in the Documents tab as a folder.",
-            "images": [
-              {
-                "src": "assets/notion/proposal-management-proposals-checklists/001.jpg",
-                "caption": "Checklists: forms for quality, safety and legal checks",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/proposal-management-proposals-checklists/002.jpg",
-                "caption": "Create Form, choosing from the forms set up in settings",
-                "step": 2
-              }
-            ]
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/notion/proposal-management-proposals-checklists/003.jpg",
-            "caption": "Deleting a checklist on a proposal"
-          }
-        ]
-      },
-      {
-        "heading": "Submission Packages",
-        "intro": "<p>A <strong>Submission Package</strong> is the final, client-facing bundle that gets sent once a proposal is ready to go out the door. Rather than manually gathering documents, checklists, submittals, and attachments scattered across the various proposal tabs, the submission package flow pulls everything into one page and lets you choose exactly how it reaches the client — by email, physically mailed, or through a client portal. Because a submission package is often the single most important deliverable in the whole proposal process, it gets its own approval workflow, its own rejection-handling path, and its own status/history tracking, separate from the proposal's own approval chain.</p><p>When something goes wrong with a submission package — most commonly, it's rejected during its own approval workflow — Arena doesn't just mark it failed and stop. It creates a tracked entry in Workflow Issues, which can be assigned to a specific person with a due date, ensuring the block gets resolved rather than the package silently stalling.</p>",
-        "definitions": [
-          {
-            "term": "Submission Package",
-            "definition": "The consolidated, client-facing deliverable assembled from a proposal's Profile, Documents, Checklists, Submittals, and Attachments, sent via Email to Client, Physical mail, or Client Portal."
-          },
-          {
-            "term": "Setup Approval Workflow (Submission Packages)",
-            "definition": "The Settings screen where approval levels for submission packages are configured, each assigned a workflow type (all must approve / any one can approve) and a level description."
-          },
-          {
-            "term": "Workflow Issues (Submission Packages)",
-            "definition": "A tracked entry created automatically when a submission package is rejected in its approval workflow; the package cannot move forward until the linked issue is resolved."
-          },
-          {
-            "term": "Submission Package Logs",
-            "definition": "The tab listing sent submission packages, where each row's menu offers Download, History, Status, and Delete."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Create a proposal submission package",
-            "steps": [
-              "On the proposal, click <strong>Create Submission Package</strong>.",
-              "On the page that opens, pull in data from the proposal's previous tabs: Profile, Documents, Checklists, Submittals, and Attachments.",
-              "Choose how to send it: <strong>Email to Client</strong>, <strong>Physical</strong> (mail), or <strong>Client Portal</strong>."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/proposal-management-proposals-submission-packages-logs/001.jpg",
-                "caption": "Create Submission Package, pulling in data from the earlier tabs",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/proposal-management-proposals-submission-packages-logs/002.jpg",
-                "caption": "Choosing what to add and how to send the package",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/proposal-management-proposals-submission-packages-logs/003.jpg",
-                "caption": "Client Portal, to send the package through the client's website",
-                "step": 3
-              }
-            ]
-          },
-          {
-            "title": "Set up an approval workflow for submission packages",
-            "steps": [
-              "Go to <strong>Proposal Management Settings → Submission Packages → Setup Approval Workflow</strong>.",
-              "Click <strong>Create Level</strong> to choose approvers and assign the workflow type (all must approve / any one can approve), plus a level description.",
-              "Use Edit or Delete in Actions to manage existing levels."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/proposal-management-proposals-submission-packages-setup/001.jpg",
-                "caption": "Create Level: approvers, workflow type and a level description",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/proposal-management-proposals-submission-packages-setup/002.jpg",
-                "caption": "Delete, to remove a level",
-                "step": 3
-              }
-            ]
-          },
-          {
-            "title": "Resolve a rejected submission package",
-            "steps": [
-              "Open <strong>Workflow Issues</strong> to find the rejected submission package log.",
-              "Use <strong>Assign To</strong> to assign the issue to a user with a due date.",
-              "Click <strong>Resolve</strong> once the underlying problem is fixed."
-            ],
-            "note": "A rejected submission package cannot move forward until its linked issue is resolved.",
-            "images": [
-              {
-                "src": "assets/notion/proposal-management-proposals-submission-packages-workf/001.jpg",
-                "caption": "Search, to find a workflow issue",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/proposal-management-proposals-submission-packages-workf/003.jpg",
-                "caption": "Assign To, with a due date, and Resolve once fixed",
-                "step": 2
-              }
-            ]
-          },
-          {
-            "title": "Check the status and history of a sent submission package",
-            "steps": [
-              "Go to the <strong>Submission Packages Logs</strong> tab.",
-              "Use the row menu: <strong>Download</strong> to retrieve the package, <strong>History</strong> to see creation and approval status history, <strong>Status</strong> to view/set the configured status, and <strong>Delete</strong> to remove the package."
-            ]
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/notion/proposal-management-proposals-submission-packages-logs/004.jpg",
-            "caption": "Search, to find a submission package in the logs"
-          },
-          {
-            "src": "assets/notion/proposal-management-proposals-submission-packages-workf/002.jpg",
-            "caption": "Grid and Table views for workflow issues, with Save Layout"
-          }
-        ]
-      },
-      {
-        "heading": "Issues",
-        "intro": "<p>The Issues tab exists specifically for the moment a proposal's approval gets rejected. Rather than the rejection simply reverting the proposal to an editable state with no further record, Arena logs it as a distinct, trackable issue — preserving why it was rejected and by whom, and blocking the proposal from proceeding until the issue is explicitly resolved. This mirrors the same rejection-to-issue pattern used for forms, quality, and safety elsewhere in Arena, applied here to the proposal approval chain itself.</p>",
-        "definitions": [
-          {
-            "term": "Proposal Issue",
-            "definition": "A record created automatically when a proposal is rejected by an approver; the proposal cannot proceed until the issue is resolved."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Track and resolve a proposal approval rejection",
-            "steps": [
-              "Open the proposal's <strong>Issues</strong> tab to see any rejection-generated issues.",
-              "Use <strong>Search</strong> (by Issue ID) or <strong>Filters</strong> (Log ID, Raised On, Raised By) to find a specific issue.",
-              "Use <strong>Assign To</strong> to route the issue to a user for resolution."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/proposal-management-issues/002.jpg",
-                "caption": "The status bar: issues raised, approved and rejected",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/proposal-management-issues/001.jpg",
-                "caption": "Search by Issue ID",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/proposal-management-issues/003.jpg",
-                "caption": "Filters: Log ID, Raised On and more",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/proposal-management-issues/005.jpg",
-                "caption": "Assign To, with a date",
-                "step": 3
-              }
-            ]
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/notion/proposal-management-issues/004.jpg",
-            "caption": "Grid and Table views for issues"
-          }
-        ]
-      },
-      {
-        "heading": "To Do",
-        "intro": "<p>To Do gives proposal teams a lightweight task-tracking layer scoped specifically to Proposal Management work, so action items related to a proposal don't have to be tracked in a separate tool. Tasks can be assigned to a specific person and carry a date and time, and completing one is as simple as a single click — keeping the mechanics minimal so the feature gets used rather than avoided.</p>",
-        "definitions": [
-          {
-            "term": "To Do List",
-            "definition": "A task list within Proposal Management, with items carrying a Title, Description, Date, Time, and an assignable owner."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Create a to-do task for a proposal",
-            "steps": [
-              "Go to <strong>Proposal Management → To Do</strong> and click <strong>Create To Do List</strong>.",
-              "Fill in Title, Description, Date, and Time, then submit.",
-              "Use <strong>Assign To</strong> to assign the task to a user.",
-              "Click the double-tick icon to mark a task complete."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/proposal-management-to-do/001.jpg",
-                "caption": "The To Do list, with Create To Do List",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/proposal-management-to-do/009.jpg",
-                "caption": "Assign To, listing the system users from Global Data",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/proposal-management-to-do/011.jpg",
-                "caption": "The double tick, which changes a to-do item's status",
-                "step": 4
-              }
-            ]
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/notion/proposal-management-to-do/002.jpg",
-            "caption": "Search, to find a to-do item"
-          },
-          {
-            "src": "assets/notion/proposal-management-to-do/003.jpg",
-            "caption": "Manage Columns for the table view"
-          },
-          {
-            "src": "assets/notion/proposal-management-to-do/004.jpg",
-            "caption": "Grid and Table views, with Save Layout"
-          },
-          {
-            "src": "assets/notion/proposal-management-to-do/005.jpg",
-            "caption": "Editing or deleting a to-do item from its three-dot menu in Grid view"
-          },
-          {
-            "src": "assets/notion/proposal-management-to-do/008.jpg",
-            "caption": "Filters and hide options for columns"
-          },
-          {
-            "src": "assets/notion/proposal-management-to-do/010.jpg",
-            "caption": "Edit and delete in the Actions column"
-          }
-        ]
-      },
-      {
-        "heading": "Dashboard",
-        "intro": "<p>My Dashboard is the at-a-glance home screen for Proposal Management, built to answer the question &quot;where do things stand right now&quot; without navigating into individual proposals. It surfaces status counts, a success-rate visualization, upcoming calendar events, outstanding to-dos, and approaching deadlines in one view. By default, everything shown is scoped to the logged-in user's own work — only system admins see data across the whole module — which keeps the dashboard relevant to what a given person is actually responsible for rather than overwhelming them with company-wide noise.</p>",
-        "definitions": [
-          {
-            "term": "My Dashboard",
-            "definition": "The Proposal Management home screen showing Total Proposals by status, Estimate Success Rate, Calendar Events, Issues/Forms/Approvals/Proposals summaries, a To Do List, and Proposal Deadlines."
-          },
-          {
-            "term": "Estimate Success Rate (dashboard)",
-            "definition": "A graph on the dashboard summarizing how successful proposals have been."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "View the Proposal Management dashboard",
-            "steps": [
-              "Go to <strong>Proposal Management → My Dashboard</strong>.",
-              "Review Total Proposals by status (Created, In Progress, Approved/Rejected), the Estimate Success Rate graph, Calendar Events, summaries of Issues/Forms/Approvals/Proposals, the To Do List, and Proposal Deadlines based on due dates."
-            ],
-            "note": "Data shown is scoped to the logged-in user unless they are a system admin, in which case it covers the whole module.",
-            "images": [
-              {
-                "src": "assets/notion/proposal-management-dashboard/001.jpg",
-                "caption": "My Dashboard in Proposal Management",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/proposal-management-dashboard/002.jpg",
-                "caption": "Total Proposals by status",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/proposal-management-dashboard/003.jpg",
-                "caption": "The Estimate Success Rate graph",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/proposal-management-dashboard/004.jpg",
-                "caption": "Calendar Events, with Create Event",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/proposal-management-dashboard/005.jpg",
-                "caption": "Recent proposals with the total count",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/proposal-management-dashboard/006.jpg",
-                "caption": "Proposal Deadlines, based on proposal due dates",
-                "step": 2
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "heading": "Analytics & Reports",
-        "intro": "<p>Beyond the dashboard's quick summary, Analytics & Reports gives a deeper, filterable view of proposal performance — how often proposals win versus lose, and how proposal volume and value break down by type. These reports exist to support business-development reporting to leadership: rather than exporting raw proposal data and building charts manually, the two built-in reports here answer the most common questions directly, with export options for sharing outside Arena.</p>",
-        "definitions": [
-          {
-            "term": "Proposal Success Rate report",
-            "definition": "Two pie charts — \"Success Rate (Qty of Proposals)\" by status count, and \"Success Rate (Currency Value)\" by submitted amount — filterable by Proposal Type, with legend items toggling status visibility."
-          },
-          {
-            "term": "Types of Proposals report",
-            "definition": "Two bar graphs showing quantity of proposals and amount submitted, broken down by bid type within each proposal type, adjustable by date range and downloadable in Excel, PDF, PPT, or JPEG."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "View the success rate of proposals",
-            "steps": [
-              "Open the <strong>Proposal Success Rate</strong> report.",
-              "Use the Proposal Type dropdown to filter.",
-              "Click legend items on either pie chart to toggle specific statuses on or off."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/proposal-success-rate/001.jpg",
-                "caption": "Success Rate by quantity of proposals, as a pie chart",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/proposal-success-rate/002.jpg",
-                "caption": "Success Rate by currency value, as a pie chart",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/proposal-success-rate/003.jpg",
-                "caption": "The Proposal Type drop-down",
-                "step": 2
-              }
-            ]
-          },
-          {
-            "title": "View proposal quantity and value by bid type",
-            "steps": [
-              "Open the <strong>Types of Proposals</strong> report.",
-              "Adjust the date range as needed.",
-              "Download the report in Excel, PDF, PPT, or JPEG."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/types-of-proposals/001.jpg",
-                "caption": "Types of Proposals versus quantity",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/types-of-proposals/002.jpg",
-                "caption": "Types of Proposals versus amount",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/types-of-proposals/003.jpg",
-                "caption": "Adjusting the date range; legend items turn bars on and off",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/types-of-proposals/004.jpg",
-                "caption": "Download and Full Screen for the bar graph",
-                "step": 3
-              }
-            ]
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/notion/proposal-success-rate/004.jpg",
-            "caption": "Download and Full Screen for each pie chart"
-          },
-          {
-            "src": "assets/notion/estimate-success-rate/001.jpg",
-            "caption": "Estimate Success Rate: the number of proposals in each status"
-          },
-          {
-            "src": "assets/notion/estimate-success-rate/002.jpg",
-            "caption": "Choosing proposal types and a date range"
-          },
-          {
-            "src": "assets/notion/estimate-success-rate/003.jpg",
-            "caption": "Download and Full Screen for the bar graph"
-          },
-          {
-            "src": "assets/notion/success-estimate-over-time/001.jpg",
-            "caption": "Success Over Time: submitted project amount by date for each year"
-          },
-          {
-            "src": "assets/notion/success-estimate-over-time/002.jpg",
-            "caption": "Estimate Over Time: estimated project amount by date for each year"
-          },
-          {
-            "src": "assets/notion/success-estimate-over-time/003.jpg",
-            "caption": "Filtering by proposal type and status"
-          },
-          {
-            "src": "assets/notion/success-estimate-over-time/005.jpg",
-            "caption": "Legend items turn data on and off"
-          },
-          {
-            "src": "assets/notion/profit-over-time/001.jpg",
-            "caption": "Profit Over Time: contract amount minus projected cost, by year"
-          },
-          {
-            "src": "assets/notion/profit-over-time/002.jpg",
-            "caption": "Estimating Cost and Profit Over Time"
-          },
-          {
-            "src": "assets/notion/best-and-worst-clients/001.jpg",
-            "caption": "Best and Worst Clients, by customer or customer location, with a threshold value"
-          },
-          {
-            "src": "assets/notion/weekly-report/001.jpg",
-            "caption": "Weekly Report: proposal progress for the week by proposal type"
-          },
-          {
-            "src": "assets/notion/weekly-report/002.jpg",
-            "caption": "Date range, comments, download, share and print"
-          },
-          {
-            "src": "assets/notion/weekly-report/003.jpg",
-            "caption": "Layout Settings: page size and page header"
-          },
-          {
-            "src": "assets/notion/estimator-work-schedule-report/001.jpg",
-            "caption": "Estimator Work Schedule: proposal IDs, people, sites and months"
-          },
-          {
-            "src": "assets/notion/follow-up-report/001.jpg",
-            "caption": "Follow-Up Report: actions taken after an event or meeting"
-          },
-          {
-            "src": "assets/notion/follow-up-report/002.jpg",
-            "caption": "Export, to download the report as Excel or PDF"
-          },
-          {
-            "src": "assets/notion/report/001.jpg",
-            "caption": "The Report: a summary of all the analytics"
-          },
-          {
-            "src": "assets/notion/report/002.jpg",
-            "caption": "Choosing the date range and downloading the PDF"
-          }
-        ]
       }
     ],
     "name": "Proposal Management",
@@ -29069,17 +29571,20 @@ const MODULES = [
       "Open a proposal to reach its Bid, Submission Package, Submittals, Checklists, Teams, Documents, Communication, and Calendar tabs."
     ],
     "sections": [
-      "Admin Role",
-      "Settings",
+      "Who sets this up",
+      "My Dashboard",
       "Proposals",
-      "Bids",
+      "Where Proposal Fields Come From",
+      "Bid Tab (Tenders)",
       "Submittals",
       "Checklists",
       "Submission Packages",
       "Issues",
-      "To Do",
-      "Dashboard",
-      "Analytics & Reports"
+      "Calendar",
+      "To Do List",
+      "Analytics & Reports",
+      "Push Datasets",
+      "Settings"
     ]
   },
   {
