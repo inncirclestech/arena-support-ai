@@ -5967,6 +5967,105 @@ const QA_FIELDWORKS = [
     question: "Where does the Site Material Request form get its lists?",
     answer: "Requested By lists the project users (32, shown as \"ID - name\"), the plant, entity, locations and work packages follow the Works tree, and Select Material and UOM are picked in the materials table. Submitting sends it for approval; rejected requests move to the **Rejected Site Material Requests** tab. For the inventory side see the **Inventory Management** module.",
     tags: ["site material request","inventory management field works","requested by dropdown","pickup ticket","material request source","rejected site material requests"]
+  },
+  {
+    action: "explain",
+    object: "quick apps not configured",
+    scope: "module",
+    section: "Quick Apps",
+    question: "Why does the Quick Apps card say \"Please configure Quick Apps in global\"?",
+    answer: "The apps are built in **Global Data → Quick Apps** (12 on this site), but a plant only gets them once the project side is set up in **Project Settings → Quick Apps** (a Tree Versions selector, the list of apps, a **Team** table of who can edit/view each app, and a **Workflow** table of approvers). On Arena Steel Plant - Phase 1 the Team and Workflow tables are empty and the Field Works card shows only that message. Ask a Module Admin or Super Admin to set the app up for the project.",
+    tags: ["quick apps global","please configure quick apps in global","quick apps not showing","quick apps empty","quick apps project settings","quick apps team workflow"]
+  },
+  {
+    action: "explain",
+    object: "quality level 1 empty",
+    scope: "module",
+    section: "Quality",
+    question: "Why does Quality Level 1 say \"No ready Work Packages available to log Quality check lists\"?",
+    answer: "Inspections are logged against work packages that have a quality form folder mapped to them in **Project Setup → Quality** (Folders → **Map Work Packages**), and whose work is ready. On Arena Steel Plant - Phase 1 **Folder 1** has no mapped work packages, so Piperack and ECR both show this message, even on the **All** tab. Map the work packages in Project Setup, then they appear under Quality Level 1 (and Level 2 once Level 1 is approved).",
+    tags: ["quality level 1 empty","no ready work packages","quality check lists missing","cant log quality inspection","map work packages quality","quality folder not mapped"]
+  },
+  {
+    action: "explain",
+    object: "quality settings link",
+    scope: "module",
+    section: "Quality",
+    question: "Which settings change the Quality tab?",
+    answer: "**Project Settings → Quality Work Logs Templates** chooses the drill-down (Work Package to Location Logging, selected here, or Super Location to Location Logging). **Quality Logs** has \"Do you want to skip level 1?\" (**No** here). **Punch Lists & Restraints** holds punch categories and priorities (High 4 hours, Medium 24, Low 48). **Project Setup → Quality** holds the folders and their mapped work packages, and **Forms → Approval Workflow** holds approval levels.",
+    tags: ["quality settings","skip level 1","quality work logs templates","punch list priority","quality tab settings","what changes quality tab"]
+  },
+  {
+    action: "explain",
+    object: "quality approve folders",
+    scope: "module",
+    section: "Quality",
+    question: "Where does the Folders list in Approve Quality Logs come from?",
+    answer: "It lists the quality folders created in **Project Setup → Quality** (Folder 1 on Arena Steel Plant - Phase 1). Super Locations and Locations Types follow the Works tree from **Project Setup → Works**. The status tabs are Not Ready, Ready to Approve, Approved / Reject, To be approved and All.",
+    tags: ["approve quality logs folders","quality folders dropdown","approve quality filters","folders list source"]
+  },
+  {
+    action: "explain",
+    object: "project forms source",
+    scope: "module",
+    section: "Project Forms",
+    question: "Where does the Request Form asset list come from?",
+    answer: "The Internal LORs **Create** button opens a **Request Form** with an **Available Asset / Accessory** list. It is the **Equipment Master** and **Accessory Master** of Asset Management: \"Eqp\" rows are equipment and \"Acc\" rows are accessories, each with Type and ID (for example EqpExcavator ID 1). Add or edit items in the Equipment module and they show here. The form type itself reaches the plant through **Project Setup → Forms**.",
+    tags: ["request form assets","internal lor request","available asset accessory","equipment list project forms","load out request field works","project forms asset list"]
+  },
+  {
+    action: "explain",
+    object: "cost tab requirements",
+    scope: "module",
+    section: "Cost",
+    question: "Which settings do the Cost cards depend on?",
+    answer: "Transaction, Change order and Field Logs need an active, approved estimate (**Project Setup → Estimate**), otherwise they show \"No active and approved Estimate found.\" Transfer needs the **Level of Detail** (Project Settings → Cost Breakdown Structure). Approval levels for each card come from **Project Setup → Forms → Approval Workflow** (Cost Transaction Logs, Cost Change Orders, Cost Transfers, Field Cost Logs).",
+    tags: ["cost tab settings","cost tab dependencies","no active and approved estimate","level of detail cost","cost approval workflow","cost cards empty"]
+  },
+  {
+    action: "explain",
+    object: "safety forms empty",
+    scope: "module",
+    section: "Safety",
+    question: "Why is Safety Forms empty?",
+    answer: "The categories on the left of **Safety Forms** are made in **Project Setup → Safety → Setup Project Safety Forms** from safety forms mapped to activities in **Global Data → Global Work Packages → Safety Forms**, and each form must be assigned to users. On Arena Steel Plant - Phase 1 no category exists (\"Safety Forms (0)\", \"No Logs Available\"). The Safety Calendar likewise needs a calendar category in **Setup Safety Calendar** or a scheduled project form.",
+    tags: ["safety forms empty","no logs available safety","safety forms missing","safety category setup","safety calendar empty","where do safety forms come from"]
+  },
+  {
+    action: "explain",
+    object: "safety priorities",
+    scope: "module",
+    section: "Safety",
+    question: "Where are safety issue priorities and approvals set?",
+    answer: "Daily Safety Issue and Observation priorities (High 4 hours, Medium 24, Low 48) are in **Project Settings → Daily Safety Issues & Observations**. Approval levels for safety forms are in **Project Setup → Safety → Create Workflow** and **Assign Workflow**. Results appear in **Completed Safety**, **Recent Safety Logs** and **Recent Daily Safety Issues** on My Desk, and in the **Safety Analytics** dashboard.",
+    tags: ["safety priority settings","safety approval workflow","dsi priority","safety lineage","safety issue due hours"]
+  },
+  {
+    action: "explain",
+    object: "drawing issues source",
+    scope: "module",
+    section: "Drawing Management",
+    question: "Where do Drawing Management workflow issues come from?",
+    answer: "They are created when a drawing is rejected at a level of a drawing approval workflow built in **Project Setup → Drawings → Create Approval Workflow**. Priorities and due hours come from **Project Settings → Workflow Issues → Drawing Management**. They also appear under **My Actions → Issues → Drawing Workflow Issues** on My Desk.",
+    tags: ["drawing workflow issues source","rejected drawing issues","drawing issues priority","drawing management lineage"]
+  },
+  {
+    action: "explain",
+    object: "invoice workorder dropdown",
+    scope: "module",
+    section: "Invoices",
+    question: "Why is the Workorder list empty when I create an invoice?",
+    answer: "The **Workorder** dropdown lists work orders created in **Project Setup → Workorder**. Arena Steel Plant - Phase 1 has none, so no invoice can be raised and the list shows No Data. Create the work order first (its contractor comes from **Global Data → Vendors / Sub Contractors**), then raise the invoice with Type **Advance Amount** or **Work Completion**.",
+    tags: ["invoice workorder empty","create invoice no work order","workorder dropdown empty invoices","invoice lineage","cant create invoice","why is the workorder list empty when i create an invoice","workorder list empty create invoice"]
+  },
+  {
+    action: "explain",
+    object: "workorder list empty",
+    scope: "module",
+    section: "Workorder",
+    question: "Why is Field Works Workorder empty?",
+    answer: "It lists the work orders created in **Project Setup → Workorder**; none exist on Arena Steel Plant - Phase 1, so it shows \"No Data\". Once work orders exist they feed Equipment, Material and Manpower Logs, Invoices and the Workorders analytics.",
+    tags: ["field works workorder empty","workorder no data","where do work orders come from","workorder lineage"]
   }
 ];
 
@@ -21895,11 +21994,11 @@ const MODULES = [
         "definitions": [
           {
             "term": "Quick Apps",
-            "definition": "A no-code app builder for connecting screens and auto-populating data, used to create lightweight project-specific workflows without formal form configuration. Needs a Super Admin or Module Admin to configure Quick Apps globally before this per-project screen shows a builder — until then it displays \"Please configure Quick Apps in global.\""
+            "definition": "A no-code app builder for connecting screens and auto-populating data, used to create lightweight project-specific workflows without formal form configuration. Needs a Super Admin or Module Admin to configure Quick Apps globally before this per-project screen shows a builder — until then it displays \"Please configure Quick Apps in global.\" **Where this data comes from:** the apps themselves are built in **Global Data → Quick Apps** (12 on this site: Bid or Estimate Log, Subcontractor Bid Proposal, Observation Report, Non-Conformance Report, Completion Notice, Initial Material Receiving, Storage Inspections, Stored Equipment Maintenance, Variance Request, Initial Electrical Equipment Receiving, Cable Receiving Insulation Resistance, Equipment Productivity Planner). The project side is **Project Settings → Quick Apps**: a Tree Versions dropdown, the list of apps, a **Team** section (who may edit and view or only view each app) and a **Workflow** section (approval levels and approvers). On Arena Steel Plant - Phase 1 the Team and Workflow tables are empty and the Field Works card shows only \"Please configure Quick Apps in global\", so no app is available to the plant yet. **Where this data comes from:** the apps themselves are built in **Global Data → Quick Apps** (12 on this site: Bid or Estimate Log, Subcontractor Bid Proposal, Observation Report, Non-Conformance Report, Completion Notice, Initial Material Receiving, Storage Inspections, Stored Equipment Maintenance, Variance Request, Initial Electrical Equipment Receiving, Cable Receiving Insulation Resistance, Equipment Productivity Planner). The project side is **Project Settings → Quick Apps**: a Tree Versions dropdown, the list of apps, a **Team** section (who may edit and view or only view each app) and a **Workflow** section (approval levels and approvers). On Arena Steel Plant - Phase 1 the Team and Workflow tables are empty and the Field Works card shows only \"Please configure Quick Apps in global\", so no app is available to the plant yet."
           },
           {
             "term": "Quick Apps Issues",
-            "definition": "The card holding issues raised from no-code app approval workflows, so anything stuck in a Quick App approval stays visible and trackable."
+            "definition": "The card holding issues raised from no-code app approval workflows, so anything stuck in a Quick App approval stays visible and trackable. **Where this data comes from:** issues are raised from the approval workflow of a Quick App (levels set in **Project Settings → Quick Apps → Workflow**); priorities and due hours are set in **Project Settings → Workflow Issues → Quick Apps**. They also count under **My Actions → Issues → Quick Apps Form Issues / Quick Apps Workflow Issues** on **My Desk**. **Where this data comes from:** issues are raised from the approval workflow of a Quick App (levels set in **Project Settings → Quick Apps → Workflow**); priorities and due hours are set in **Project Settings → Workflow Issues → Quick Apps**. They also count under **My Actions → Issues → Quick Apps Form Issues / Quick Apps Workflow Issues** on **My Desk**."
           }
         ],
         "procedures": [
@@ -21919,27 +22018,27 @@ const MODULES = [
         "definitions": [
           {
             "term": "Quality Level 1",
-            "definition": "The first-pass quality inspection card. Shows an Entity picker and status filters — Not yet started, Ready to work, Started, In Progress, Completed, Issue Raised — then a Work Packages list (Ready / All) of items due for a Level 1 check. Level 2 for an item generally only opens once its Level 1 is approved, unless Project Settings → Quality Logs allows skipping Level 1."
+            "definition": "The first-pass quality inspection card. It shows an **Entity** picker, status chips (Not yet started, Ready to work, Started, In Progress, Completed, Issue Raised), and a **Work Packages** list with **Ready** and **All** tabs. Level 2 for an item opens only once its Level 1 is approved, because **Project Settings → Quality Logs → \"Do you want to skip level 1?\"** is set to **No** on Arena Steel Plant - Phase 1 (answer Yes to allow skipping). **Where this data comes from:** the entities and work packages are the Works tree from **Project Setup → Works**, and inspections are logged against work packages that have a quality form folder mapped to them in **Project Setup → Quality** (Folders, Map Work Packages) once their work is ready. On the test project Piperack and ECR both show \"No ready Work Packages available to log Quality check lists\" because Folder 1 has no mapped work packages. **Which setting changes it:** **Project Settings → Quality Work Logs Templates** (drill-down), **Quality Logs** (skip Level 1). **Where it goes next:** **Submitted Quality Logs**, **Approve Quality Logs**, **Punch Lists** when an item fails, the **Recent Quality Logs** panel on **My Desk**, the folder counters in Project Setup → Quality, and the **Quality Progress** dashboard in **Data Analytics & Insights**."
           },
           {
             "term": "Quality Level 2",
-            "definition": "The same screen and filters as Quality Level 1, for the second, more thorough verification pass. An item only reaches Level 2 once its Level 1 check has cleared (unless Level 1 is configured to be skippable)."
+            "definition": "The same screen and filters as Quality Level 1, for the second, more thorough verification pass. An item only reaches Level 2 once its Level 1 check has cleared (unless Level 1 is configured to be skippable). It uses the same Works tree and the same folder mapping as Level 1 and appears for a work package once Level 1 is approved (or when Level 1 may be skipped). It uses the same Works tree and the same folder mapping as Level 1 and appears for a work package once Level 1 is approved (or when Level 1 may be skipped)."
           },
           {
             "term": "Punch Lists",
-            "definition": "The defect-tracking card: an inspector raises a punch list item from within a Level 1 or Level 2 form when work fails inspection. Two sub-tabs — Punch List (with Open / Rectified / Verified counters, Download Excel, Filters) and Quality Workflow Issues (problems raised against the approval workflow itself, same pattern as Progress → Issues → Form Workflow Issues). A punch list item needs physical rectification and re-verification before the work is accepted."
+            "definition": "The defect-tracking card: an inspector raises a punch list item from within a Level 1 or Level 2 form when work fails inspection. It has two tabs, **Punch List** (counters **Open**, **Rectified** and **Verified**, Download Excel, Filters, grid or list view) and **Quality Workflow Issues** (problems raised against the quality approval workflow). A punch list item needs physical rectification and re-verification before the work is accepted. **Where this data comes from:** items are created from quality forms, so the card stays at \"No Punch Lists found\" until an inspection fails. **Which setting changes it:** **Project Settings → Punch Lists & Restraints** holds the Punch Lists Category list (empty here) and Punch Lists Priority (High 4 hours, Medium 24, Low 48 due hours). **Where it goes next:** the **Recent Punch List Items** panel and **My Actions → Issues → Punch List** on **My Desk**."
           },
           {
             "term": "Submitted Quality Logs",
-            "definition": "The full history of quality logs for the plant, scoped to the Tree Version, filterable by Level (Quality Level 1 / Level 2), by user, and by a full calendar date-range picker, exportable via Download Excel."
+            "definition": "The full history of quality logs for the plant, with a **Tree Version** dropdown, a **Level** dropdown (Quality Level 1 or Level 2), a **Users** filter, a date range calendar, **Filters** and **Download Excel**. It shows \"No Logs Present\" until a quality log is submitted. **Where this data comes from:** logs submitted from Quality Level 1 and Level 2. **Where it goes next:** the **Recent Quality Logs** panel on **My Desk** and the quality dashboards in **Data Analytics & Insights**."
           },
           {
             "term": "Approve Quality Logs",
-            "definition": "The QA/QC reviewer's approval queue, with status tabs Not Ready / Ready to Approve / Approved / Reject / To be approved / All, and filters for Super Locations, Folders, and Locations Types. Only visible to users with approval permissions."
+            "definition": "The QA/QC reviewer's approval queue, with status tabs **Not Ready**, **Ready to Approve**, **Approved / Reject**, **To be approved** and **All**, a search box, and dropdowns for **Super Locations**, **Folders** and **Locations Types** with **Apply**, **Clear** and **Save**. **Where this data comes from:** the Folders dropdown lists the quality folders from **Project Setup → Quality** (Folder 1 on Arena Steel Plant - Phase 1), and Super Locations and Location Types follow the Works tree. Only users with approval permission see this screen and its Approve and Reject actions. It shows \"There is no data to display\" until a quality log is submitted."
           },
           {
             "term": "Work Package to Location Logging (Quality)",
-            "definition": "One of the two options available in Project Settings → Quality Work Logs Templates: an inspector picks a Work Package and sees the Locations that are ready to check under it."
+            "definition": "One of the two options available in Project Settings → Quality Work Logs Templates: an inspector picks a Work Package and sees the Locations that are ready to check under it. (Selected on Arena Steel Plant - Phase 1.) (Selected on Arena Steel Plant - Phase 1.)"
           },
           {
             "term": "Super Location to Location Logging (Quality)",
@@ -22041,11 +22140,11 @@ const MODULES = [
         "definitions": [
           {
             "term": "Project Forms (Custom Forms)",
-            "definition": "The plant-scoped tab holding project-specific custom form types configured in Project Setup → Forms. The breadcrumb label for this tab reads \"Custom Forms\"."
+            "definition": "The plant-scoped tab holding project-specific custom form types configured in Project Setup → Forms. The breadcrumb label for this tab reads \"Custom Forms\". **Where this data comes from:** the form types listed are the project forms assigned to the project in **Project Setup → Forms** (project forms are defined in **Global Data → Forms → Project Forms**). Arena Steel Plant - Phase 1 shows one, **Internal LORs** (\"Project Forms (1)\"). **Create** opens a **Request Form** with an **Available Asset / Accessory** search and a list of equipment (\"Eqp\" items) and accessories (\"Acc\" items) with their Type and ID (for example EqpExcavator ID 1, EqpSoil Compactor CM-001); this list is the **Equipment Master** and **Accessory Master** of Asset Management (the Equipment module). **Where this data comes from:** the form types listed are the project forms assigned to the project in **Project Setup → Forms** (project forms are defined in **Global Data → Forms → Project Forms**). Arena Steel Plant - Phase 1 shows one, **Internal LORs** (\"Project Forms (1)\"). **Create** opens a **Request Form** with an **Available Asset / Accessory** search and a list of equipment (\"Eqp\" items) and accessories (\"Acc\" items) with their Type and ID (for example EqpExcavator ID 1, EqpSoil Compactor CM-001); this list is the **Equipment Master** and **Accessory Master** of Asset Management (the Equipment module)."
           },
           {
             "term": "Per-work-package form permissions",
-            "definition": "View/Create/Edit/Delete rights set per user, per form type, per work package under Project Setup → Forms → Assign Users — which determines whether a form appears for a given user on this tab."
+            "definition": "View/Create/Edit/Delete rights set per user, per form type, per work package under Project Setup → Forms → Assign Users — which determines whether a form appears for a given user on this tab. (In the product the right is set per user and per form type under Assign Users, with View, Create, Edit and Delete columns for the project's 35 roster users.) (In the product the right is set per user and per form type under Assign Users, with View, Create, Edit and Delete columns for the project's 35 roster users.)"
           }
         ],
         "procedures": [
@@ -22109,7 +22208,7 @@ const MODULES = [
         "definitions": [
           {
             "term": "Transaction",
-            "definition": "The Cost tab card covering purchase orders and other expenses recorded against the plant, as Transaction Logs, with Open Logs and Rejected Logs views. Needs an active, approved Estimate on the project before it will accept entries — otherwise it shows \"No active and approved Estimate found.\""
+            "definition": "The Cost tab card covering purchase orders and other expenses recorded against the plant, as Transaction Logs, with Open Logs and Rejected Logs views. Needs an active, approved Estimate on the project before it will accept entries — otherwise it shows \"No active and approved Estimate found.\" **Which setting changes it:** the project must have an active, approved estimate (**Project Setup → Estimate**; none exist on Pellet Plant, so the Open Logs and Rejected Logs tabs show only \"No active and approved Estimate found.\"). Approval levels come from **Project Setup → Forms → Approval Workflow → Cost Transaction Logs**. **Which setting changes it:** the project must have an active, approved estimate (**Project Setup → Estimate**; none exist on Pellet Plant, so the Open Logs and Rejected Logs tabs show only \"No active and approved Estimate found.\"). Approval levels come from **Project Setup → Forms → Approval Workflow → Cost Transaction Logs**."
           },
           {
             "term": "Cost Forecast",
@@ -22117,15 +22216,15 @@ const MODULES = [
           },
           {
             "term": "Change order (Cost tab)",
-            "definition": "The card for budget and contract adjustments — formal modifications to scope, cost, or schedule after contract signature, routed via Assign To and Due Date, with Open Logs, Rejected Logs, Create, Filters, and Download Excel. Also needs an active, approved Estimate to accept entries."
+            "definition": "The card for budget and contract adjustments — formal modifications to scope, cost, or schedule after contract signature, routed via Assign To and Due Date, with Open Logs, Rejected Logs, Create, Filters, and Download Excel. Also needs an active, approved Estimate to accept entries. **Which setting changes it:** an active, approved estimate in **Project Setup → Estimate**; approval levels in **Project Setup → Forms → Approval Workflow → Cost Change Orders**. **Which setting changes it:** an active, approved estimate in **Project Setup → Estimate**; approval levels in **Project Setup → Forms → Approval Workflow → Cost Change Orders**."
           },
           {
             "term": "Transfer",
-            "definition": "The card for reallocation of budget or cost between Cost Codes and Phase Codes, with Open Logs and Rejected Logs views. This one is gated on a different setting than the other three Cost cards: it needs a project's \"Level of Detail\" to be set (Project Setup), not the Estimate — it shows \"Level of detail is not set for this project\" until that is done."
+            "definition": "The card for reallocation of budget or cost between Cost Codes and Phase Codes, with Open Logs and Rejected Logs views. This one is gated on a different setting than the other three Cost cards: it needs a project's \"Level of Detail\" to be set (Project Setup), not the Estimate — it shows \"Level of detail is not set for this project\" until that is done. **Which setting changes it:** the **Level of Detail** tab in **Project Settings → Cost Breakdown Structure** (Phase Code or Phase Code - Cost Code); approval levels in **Project Setup → Forms → Approval Workflow → Cost Transfers**. **Which setting changes it:** the **Level of Detail** tab in **Project Settings → Cost Breakdown Structure** (Phase Code or Phase Code - Cost Code); approval levels in **Project Setup → Forms → Approval Workflow → Cost Transfers**."
           },
           {
             "term": "Field Logs",
-            "definition": "The fourth Cost tab card, holding the field-side cost log records for the plant, split into 4 categories: Material, Machinery, Manpower, and Sub Contractor, each with its own Create and a Settings icon. Also needs an active, approved Estimate. Distinct from the Progress tab's Equipment Logs/Material Logs/Manpower Logs, which record physical quantity against a Work Order rather than cost against an Estimate."
+            "definition": "The fourth Cost tab card, holding the field-side cost log records for the plant, split into 4 categories: Material, Machinery, Manpower, and Sub Contractor, each with its own Create and a Settings icon. Also needs an active, approved Estimate. Distinct from the Progress tab's Equipment Logs/Material Logs/Manpower Logs, which record physical quantity against a Work Order rather than cost against an Estimate. **Which setting changes it:** an active, approved estimate; approval levels in **Project Setup → Forms → Approval Workflow → Field Cost Logs**. **Which setting changes it:** an active, approved estimate; approval levels in **Project Setup → Forms → Approval Workflow → Field Cost Logs**."
           }
         ],
         "procedures": [
@@ -22146,23 +22245,23 @@ const MODULES = [
         "definitions": [
           {
             "term": "Safety Forms",
-            "definition": "The card holding event-based project safety forms — ad-hoc, unscheduled safety checks organized by category and filled out on demand."
+            "definition": "The card holding event-based project safety forms — ad-hoc, unscheduled safety checks organized by category and filled out on demand. **Where this data comes from:** the category list on the left (\"Safety Forms (0)\") is built in **Project Setup → Safety → Setup Project Safety Forms** from the safety forms mapped to activities in **Global Data → Construction Types → Global Work Packages → Safety Forms**, and each form must be assigned to users. On Arena Steel Plant - Phase 1 no category exists, so the screen shows \"No Logs Available\". Approval levels come from **Project Setup → Safety → Create Workflow** and **Assign Workflow**. **Where this data comes from:** the category list on the left (\"Safety Forms (0)\") is built in **Project Setup → Safety → Setup Project Safety Forms** from the safety forms mapped to activities in **Global Data → Construction Types → Global Work Packages → Safety Forms**, and each form must be assigned to users. On Arena Steel Plant - Phase 1 no category exists, so the screen shows \"No Logs Available\". Approval levels come from **Project Setup → Safety → Create Workflow** and **Assign Workflow**."
           },
           {
             "term": "Safety Calendar",
-            "definition": "The card holding scheduled safety forms, color-coded blue (Ready, due per schedule), grey (not yet enabled), or yellow (In Progress — awaiting approval or with open issues)."
+            "definition": "The card holding scheduled safety forms, color-coded blue (Ready, due per schedule), grey (not yet enabled), or yellow (In Progress — awaiting approval or with open issues). **Where this data comes from:** categories made in **Project Setup → Safety → Setup Safety Calendar** (recurrence Daily, Weekly or Custom, start and end date, time, Remind Before) plus scheduled project forms from **Project Setup → Forms → Schedule Project Forms**. The screen has status chips (Not Ready, Ready, In Progress, Completed), a date picker and the list \"Safety forms for <date>\" (No Data when nothing is scheduled). The same items appear on **My Calendar**. **Where this data comes from:** categories made in **Project Setup → Safety → Setup Safety Calendar** (recurrence Daily, Weekly or Custom, start and end date, time, Remind Before) plus scheduled project forms from **Project Setup → Forms → Schedule Project Forms**. The screen has status chips (Not Ready, Ready, In Progress, Completed), a date picker and the list \"Safety forms for <date>\" (No Data when nothing is scheduled). The same items appear on **My Calendar**."
           },
           {
             "term": "Daily Safety Issues (DSI)",
-            "definition": "Issues created automatically from a project safety form or calendar form, typically from a failed or \"No\" checkpoint. Each moves Open → Rectified with due dates, assignees, Chat, filters, and Excel export."
+            "definition": "Issues created automatically from a project safety form or calendar form, typically from a failed or \"No\" checkpoint. Each moves Open → Rectified with due dates, assignees, Chat, filters, and Excel export. **Which setting changes it:** **Project Settings → Daily Safety Issues & Observations** (Daily Safety Issues Priority and Observations Priority: High 4 hours, Medium 24, Low 48) and **Global Data → Settings → Configure Safety Observation**. **Where it goes next:** the **Recent Daily Safety Issues** panel and **My Actions → Issues → Safety Issue** on **My Desk**, and the **Safety Analytics** dashboard. **Which setting changes it:** **Project Settings → Daily Safety Issues & Observations** (Daily Safety Issues Priority and Observations Priority: High 4 hours, Medium 24, Low 48) and **Global Data → Settings → Configure Safety Observation**. **Where it goes next:** the **Recent Daily Safety Issues** panel and **My Actions → Issues → Safety Issue** on **My Desk**, and the **Safety Analytics** dashboard."
           },
           {
             "term": "Completed Safety",
-            "definition": "The retrospective repository of submitted logs from both Safety Forms and Safety Calendar Forms, most recent first, filterable by user or date range."
+            "definition": "The retrospective repository of submitted logs from both Safety Forms and Safety Calendar Forms, most recent first, filterable by user or date range. **Where it goes next:** the **Recent Safety Logs** panel on **My Desk**. **Where it goes next:** the **Recent Safety Logs** panel on **My Desk**."
           },
           {
             "term": "Approve Safety",
-            "definition": "The review queue where submitted safety forms awaiting sign-off are approved or rejected."
+            "definition": "The review queue where submitted safety forms awaiting sign-off are approved or rejected. **Where this data comes from:** approval levels set in **Project Setup → Safety → Create Workflow / Assign Workflow**; the screen has status chips Not Ready, Ready to Approve, In Progress and Approved and shows \"No Logs Present\" until a form is submitted. Waiting items also count under **My Actions → Approvals → Safety Logs** on **My Desk**. **Where this data comes from:** approval levels set in **Project Setup → Safety → Create Workflow / Assign Workflow**; the screen has status chips Not Ready, Ready to Approve, In Progress and Approved and shows \"No Logs Present\" until a form is submitted. Waiting items also count under **My Actions → Approvals → Safety Logs** on **My Desk**."
           }
         ],
         "procedures": [
@@ -22294,7 +22393,7 @@ const MODULES = [
         "definitions": [
           {
             "term": "Workflow Issues (Drawing Management)",
-            "definition": "Cards created automatically whenever a drawing is rejected at any approval level, searchable by ID or status, supporting due dates, assignment, Chat, filters, Download Excel, and a table/card view toggle."
+            "definition": "Cards created automatically whenever a drawing is rejected at any approval level, searchable by ID or status, supporting due dates, assignment, Chat, filters, Download Excel, and a table/card view toggle. **Where this data comes from:** the approval levels and approvers are those of the drawing workflows in **Project Setup → Drawings → Create Approval Workflow** (for example Drawing Approval Workflow-1 with two levels). Priorities and due hours are set in **Project Settings → Workflow Issues → Drawing Management**. The same items count under **My Actions → Issues → Drawing Workflow Issues** on **My Desk**. **Where this data comes from:** the approval levels and approvers are those of the drawing workflows in **Project Setup → Drawings → Create Approval Workflow** (for example Drawing Approval Workflow-1 with two levels). Priorities and due hours are set in **Project Settings → Workflow Issues → Drawing Management**. The same items count under **My Actions → Issues → Drawing Workflow Issues** on **My Desk**."
           }
         ],
         "procedures": [
@@ -22337,7 +22436,7 @@ const MODULES = [
           },
           {
             "term": "Create Invoice",
-            "definition": "The dialog opened from the Invoices card's Create button: Invoice Number, Date of Submission, a required Type (Advance Amount or Work Completion), Workorder (the work order this invoice bills against), an expandable configurable-fields section (e.g. Section 1 → Configurable Field 1, set up per project), and a file upload for supporting documents, then Submit."
+            "definition": "The dialog opened from the Invoices card's Create button: Invoice Number, Date of Submission, a required Type (Advance Amount or Work Completion), Workorder (the work order this invoice bills against), an expandable configurable-fields section (e.g. Section 1 → Configurable Field 1, set up per project), and a file upload for supporting documents, then Submit. **Where this data comes from:** **Type** has two options (Advance Amount, Work Completion) and **Workorder*** lists the project's work orders from **Project Setup → Workorder**; on Arena Steel Plant - Phase 1 there are none, so the dropdown is empty and no invoice can be raised. Approval levels are set in **Project Setup → Forms → Approval Workflow → Invoices**. **Where this data comes from:** **Type** has two options (Advance Amount, Work Completion) and **Workorder*** lists the project's work orders from **Project Setup → Workorder**; on Arena Steel Plant - Phase 1 there are none, so the dropdown is empty and no invoice can be raised. Approval levels are set in **Project Setup → Forms → Approval Workflow → Invoices**."
           },
           {
             "term": "Invoices Summary",
@@ -22345,7 +22444,7 @@ const MODULES = [
           },
           {
             "term": "Workflow Issues (Invoices)",
-            "definition": "The card holding work-order-invoice workflow issues — anything stuck or rejected in the invoice approval chain — as a table of WFL Number, Level, Raised on Date, Raised on Time, Raised by, Image, Chat, Assign To, and Due Date, with Download Excel, Filters, and a table/grid view toggle."
+            "definition": "The card holding work-order-invoice workflow issues — anything stuck or rejected in the invoice approval chain — as a table of WFL Number, Level, Raised on Date, Raised on Time, Raised by, Image, Chat, Assign To, and Due Date, with Download Excel, Filters, and a table/grid view toggle. **Which setting changes it:** invoice approval levels (**Project Setup → Forms → Approval Workflow → Invoices**); priorities in **Project Settings → Workflow Issues**. **Which setting changes it:** invoice approval levels (**Project Setup → Forms → Approval Workflow → Invoices**); priorities in **Project Settings → Workflow Issues**."
           }
         ],
         "procedures": [
@@ -22365,7 +22464,7 @@ const MODULES = [
               "Choose the **Type** — **Advance Amount** or **Work Completion** — then pick the **Workorder** it bills against.",
               "Fill in any project-configured fields (e.g. Section 1), attach supporting documents, and click **Submit**."
             ],
-            "note": "Type must be set before the Workorder list populates with that work order's own invoicing options."
+            "note": "The Workorder list holds the project's work orders from Project Setup → Workorder; if it is empty, create the work order there first."
           }
         ]
       },
@@ -22375,7 +22474,7 @@ const MODULES = [
         "definitions": [
           {
             "term": "Workorder (Field Works)",
-            "definition": "The execution-side work order tracking view — a table/list with search and a grid/list toggle — distinct from Project Setup → Workorder where work orders are created."
+            "definition": "The execution-side work order tracking view — a table/list with search and a grid/list toggle — distinct from Project Setup → Workorder where work orders are created. **Where this data comes from:** the list is the work orders created in **Project Setup → Workorder** (their contractors come from **Global Data → Vendors / Sub Contractors**). It shows \"No Data\" on Arena Steel Plant - Phase 1 because none exist yet. Work orders feed **Equipment Logs**, **Material Logs** and **Manpower Logs** (Progress), **Invoices**, and the Workorders dashboards in **Data Analytics & Insights**. **Where this data comes from:** the list is the work orders created in **Project Setup → Workorder** (their contractors come from **Global Data → Vendors / Sub Contractors**). It shows \"No Data\" on Arena Steel Plant - Phase 1 because none exist yet. Work orders feed **Equipment Logs**, **Material Logs** and **Manpower Logs** (Progress), **Invoices**, and the Workorders dashboards in **Data Analytics & Insights**."
           }
         ],
         "procedures": [
