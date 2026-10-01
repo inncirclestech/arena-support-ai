@@ -6671,85 +6671,103 @@ const QA_DOCUMENTREPOSITORY = [
 
 const QA_FOLLOWUPACTIONS = [
   {
-    "action": "view",
-    "object": "follow up actions",
-    "scope": "project",
-    "section": "Follow Up Actions",
-    "question": "What is the Follow Up Actions screen for?",
-    "answer": "Go to <strong>Follow Up Actions</strong>, a single-page screen with a search box and a list area. It's designed to track action items that get raised out of other modules' workflows — for example follow-ups tied to RFIs, Change Orders, or drawing issues — so a PM has one place to keep an eye on loose ends instead of re-checking every source module individually.",
-    "tags": [
-      "follow up actions",
-      "action tracker",
-      "cross-module"
-    ]
+    action: "view",
+    object: "follow up actions",
+    scope: "project",
+    section: "Follow Up Actions",
+    question: "What is the Follow Up Actions screen for?",
+    answer: "Go to <strong>Follow Up Actions</strong>. It is a single project page with a title, a <strong>Search</strong> box and a list, meant as one place to keep an eye on follow-up items. It has no Create button and no columns; the <strong>Follow Up Actions</strong> buttons on RFI forms and on Daily Safety Issues open it. On the test project it is empty.",
+    tags: ["follow up actions","action tracker","cross-module"]
   },
   {
-    "action": "view",
-    "object": "empty state",
-    "scope": "project",
-    "section": "Follow Up Actions",
-    "question": "I opened Follow Up Actions and it says there are no actions — is that normal?",
-    "answer": "Yes, that's the expected empty state (\"There are no Follow Up Actions\") on a project that has no outstanding cross-module follow-ups yet. Once items are raised from other modules that generate follow-up actions, they should populate this list; the exact fields shown per action item weren't confirmed in a populated project during documentation, so treat the list layout as approximate until you see it filled in.",
-    "tags": [
-      "empty state",
-      "no follow up actions",
-      "list view"
-    ]
+    action: "view",
+    object: "empty state",
+    scope: "project",
+    section: "Follow Up Actions",
+    question: "I opened Follow Up Actions and it says there are no actions — is that normal?",
+    answer: "Yes. On Arena Steel Plant - Phase 1 it says \"There are no Follow Up Actions\" even when opened from an RFI form or from Daily Safety Issues. What an entry looks like could not be seen, so the list layout is not documented.",
+    tags: ["empty state","no follow up actions","list view"]
   },
   {
-    "action": "view",
-    "object": "searching follow up actions",
-    "scope": "project",
-    "section": "Follow Up Actions",
-    "question": "How do I find a specific follow-up action once there are entries?",
-    "answer": "Use the search box at the top of the Follow Up Actions screen to filter the list. Since this is a cross-module tracker, search is the primary way to locate a specific item without needing to know which originating module (RFI, Change Order, drawing issue, etc.) it came from.",
-    "tags": [
-      "search",
-      "find action",
-      "filter list"
-    ]
+    action: "view",
+    object: "searching follow up actions",
+    scope: "project",
+    section: "Follow Up Actions",
+    question: "How do I find a specific follow-up action once there are entries?",
+    answer: "Type in the <strong>Search</strong> box above the list. It is the only control on the page; it could not be tried against real entries on the test project.",
+    tags: ["search","find action","filter list"]
   },
   {
-    "action": "view",
-    "object": "purpose vs source modules",
-    "scope": "project",
-    "section": "Follow Up Actions",
-    "question": "Should I use Follow Up Actions instead of tracking action items inside RFIs or Change Orders directly?",
-    "answer": "Follow Up Actions is meant to complement, not replace, tracking within the originating module. It exists so a PM or Module Manager can see action items that came out of RFIs, Change Orders, drawing issues, and similar workflows in one consolidated view, rather than opening each module in turn to hunt for outstanding items. For the authoritative record and full context of a given action, you'd still go back to the module it originated from.",
-    "tags": [
-      "follow up actions purpose",
-      "rfi",
-      "change orders",
-      "consolidated tracking"
-    ]
+    action: "view",
+    object: "purpose vs source modules",
+    scope: "project",
+    section: "Follow Up Actions",
+    question: "Should I use Follow Up Actions instead of tracking action items inside RFIs or Change Orders directly?",
+    answer: "No: keep working in the module that owns the record (Field Works → RFI and so on). Follow Up Actions has no way to add or edit items and was empty on the test project, so treat it as a view, not the authoritative tracker.",
+    tags: ["follow up actions purpose","rfi","change orders","consolidated tracking"]
   },
   {
-    "action": "understand",
-    "object": "follow up actions raised from a form",
-    "scope": "project",
-    "section": "Follow Up Actions",
-    "question": "How does an item get onto the Follow Up Actions list in the first place?",
-    "answer": "Follow-up items originate in other modules rather than being typed directly here. Construction forms in <strong>Field Works</strong> — RFIs, Submittals, Change Orders — carry a <strong>Follow Up Actions</strong> option on the form card itself, used to view and work with the items, forms, drawings, issues, or tree elements connected to that record. The project-level <strong>Follow Up Actions</strong> screen is the consolidated place a PM reviews those across the project instead of opening each source form.",
-    "tags": [
-      "how follow ups are raised",
-      "rfi follow up",
-      "connected items",
-      "cross-module"
-    ]
+    action: "understand",
+    object: "follow up actions raised from a form",
+    scope: "project",
+    section: "Follow Up Actions",
+    question: "How does an item get onto the Follow Up Actions list in the first place?",
+    answer: "Nothing on the page creates items. The <strong>Follow Up Actions</strong> buttons on an open RFI form and on <strong>Daily Safety Issues</strong> open this page. The closest action-item sources seen are the <strong>Actions</strong> table on the Meeting Minutes form and the Meeting Minutes <strong>Actions</strong> tab, but it was not confirmed that they appear here because the test project has none.",
+    tags: ["how follow ups are raised","rfi follow up","connected items","how does an item get onto follow up actions","populate follow up actions"]
   },
   {
-    "action": "understand",
-    "object": "follow up actions vs my desk actions",
-    "scope": "project",
-    "section": "Follow Up Actions",
-    "question": "Is Follow Up Actions the same as My Actions and Pending Actions on My Desk?",
-    "answer": "No. <strong>My Desk</strong> shows <strong>My Actions</strong> (items assigned to you personally) and <strong>Pending Actions</strong> (outstanding items relevant to your role) as part of your personal daily landing screen. <strong>Follow Up Actions</strong> is a separate project-level screen tracking follow-ups raised out of other modules' workflows across the whole project, regardless of who they are assigned to — a PM's view rather than an individual's to-do list.",
-    "tags": [
-      "follow up actions vs my actions",
-      "my desk",
-      "pending actions",
-      "distinction"
-    ]
+    action: "understand",
+    object: "follow up actions vs my desk actions",
+    scope: "project",
+    section: "Follow Up Actions",
+    question: "Is Follow Up Actions the same as My Actions and Pending Actions on My Desk?",
+    answer: "No. <strong>My Desk</strong> shows <strong>My Actions</strong> (items assigned to you personally) and <strong>Pending Actions</strong> (outstanding items relevant to your role) as part of your personal daily landing screen. <strong>Follow Up Actions</strong> is a separate project-level screen tracking follow-ups raised out of other modules' workflows across the whole project, regardless of who they are assigned to — a PM's view rather than an individual's to-do list.",
+    tags: ["follow up actions vs my actions","my desk","pending actions","distinction"]
+  },
+  {
+    action: "view",
+    object: "follow up actions source",
+    scope: "project",
+    section: "Follow Up Actions",
+    question: "What does the Follow Up Actions button on an RFI or Daily Safety Issues do?",
+    answer: "It opens the project's **Follow Up Actions** page (the same page for both). The address carries no record number, and on the test project the page was empty for the RFIs and for Daily Safety Issues.",
+    tags: ["follow up actions button","rfi follow up actions button","daily safety issues follow up actions","what does the follow up actions button do","work log follow up actions"]
+  },
+  {
+    action: "view",
+    object: "follow up actions source",
+    scope: "project",
+    section: "Follow Up Actions",
+    question: "Can I create or edit a follow-up action on the Follow Up Actions page?",
+    answer: "No. The page has only a title, a Search box and a list: no Create, Edit or Delete buttons and no columns or filters.",
+    tags: ["create follow up action","add follow up action","edit follow up action","follow up actions buttons","follow up actions columns"]
+  },
+  {
+    action: "view",
+    object: "follow up actions source",
+    scope: "project",
+    section: "Where Follow Up Actions Come From",
+    question: "Where do Follow Up Actions items come from?",
+    answer: "The page has no setup of its own and nothing on it creates items. The Follow Up Actions buttons on RFI forms and Daily Safety Issues open it. The closest action-item sources seen are the Actions table on the Meeting Minutes form and the Meeting Minutes Actions tab, but it was not confirmed that these appear on this page, because the test project has none.",
+    tags: ["where do follow up actions come from","what populates follow up actions","follow up actions source","how are follow up actions generated","follow up actions lineage","follow up actions data source"]
+  },
+  {
+    action: "view",
+    object: "follow up actions source",
+    scope: "project",
+    section: "Where Follow Up Actions Come From",
+    question: "Why is Follow Up Actions empty?",
+    answer: "On Arena Steel Plant - Phase 1 it says \"There are no Follow Up Actions\" even from the RFI form and from Daily Safety Issues, and Meeting Minutes has no actions recorded. It is not an error; there are simply no entries to list. If you expected items, check the source record and raise it with your Arena administrator.",
+    tags: ["follow up actions empty","no follow up actions","why is follow up actions empty","follow up actions blank"]
+  },
+  {
+    action: "view",
+    object: "follow up actions source",
+    scope: "project",
+    section: "Where Follow Up Actions Come From",
+    question: "Who sees the Follow Up Actions page?",
+    answer: "Anyone whose project permissions include it; it has no settings of its own. See Users and Permissions for how access is given.",
+    tags: ["who can see follow up actions","follow up actions permission","follow up actions access"]
   }
 ];
 
@@ -23158,37 +23176,60 @@ const MODULES = [
     "qaItems": QA_FOLLOWUPACTIONS,
     "narrative": [
       {
-        "heading": "Admin Role",
-        "intro": "<p>Follow Up Actions doesn't expose a separate admin settings screen — access to it follows the standard permission model configured by a <strong>Super Admin</strong> or <strong>Module Admin</strong>. Because it draws its content from action items raised in other modules (RFIs, Change Orders, drawing issues, and similar workflows), there isn't a local configuration to manage beyond ensuring the right users, typically <strong>PMs</strong> or <strong>Module Managers</strong>, have visibility into the project's follow-up items.</p><p>An admin's practical involvement is really about the health of the source modules feeding this tracker: if those workflows aren't set up to raise follow-up items consistently, this screen will understate what actually needs chasing.</p>",
+        "heading": "Where Follow Up Actions Come From",
+        "intro": "<p>The page has no setup of its own, so its content depends on the modules that feed it. This section says what was verified about where items could come from, and what was not.</p><p>The project's **Users and Permissions** setup decides who sees the page. Because it is empty here, ask your Arena administrator or support which modules raise items on your account before relying on it as a tracker.</p>",
         "definitions": [
           {
-            "term": "No local configuration",
-            "definition": "Follow Up Actions exposes no admin settings panel; access follows the standard permission model, and its content depends entirely on the source modules that raise follow-up items."
+            "term": "Where the buttons are",
+            "definition": "Verified on the test project: the **Follow Up Actions** button on an RFI form and the one on **Daily Safety Issues** both open **Follow Up Actions** in the project menu. So the page is the shared destination of those buttons, not a separate list per module."
           },
           {
-            "term": "Source modules",
-            "definition": "RFIs, Change Orders, drawing issues, and similar workflows in Field Works are where follow-up items originate — a form card's own Follow Up Actions option shows the items connected to that record."
-          }
-        ],
-        "procedures": []
-      },
-      {
-        "heading": "Follow Up Actions",
-        "intro": "<p>Not every loose end on a construction project lives inside one tidy module. An RFI response might imply a follow-up task for the field team, a Change Order might require someone to update a downstream schedule, or a flagged drawing issue might need a follow-up conversation with a subcontractor — and if the only place to track that is inside each originating module, a PM ends up hopping between screens just to make sure nothing was dropped. Follow Up Actions, at <strong>Follow Up Actions</strong>, is meant to be the answer to that: a simple, single-page screen with a search box and a list area intended to consolidate action items raised out of other modules' workflows into one place a PM can scan.</p><p>In practice, on a typical project you may well find this screen showing its empty state — \"There are no Follow Up Actions\" — which is the expected result when nothing has generated a cross-module follow-up yet, not a sign anything is broken. Because the screen was only observed in that empty state during documentation, the exact structure of a populated entry (what fields or details appear per action) isn't fully confirmed here; what's clear from the screen's design and placement is its evident purpose as a lightweight, cross-module action tracker, complementing rather than replacing tracking inside RFIs, Change Orders, and other source workflows.</p>",
-        "definitions": [
+            "term": "Likely feeders (not confirmed)",
+            "definition": "The **Meeting Minutes** form has an **Actions** table (Responsible, Due Date, Action) and **Field Works → Progress → Meeting Minutes** has an **Actions** tab (\"Currently there are no actions recorded for Meeting Minutes\"). These are the closest action-item sources seen, but because nothing could be saved on the test project, it was not confirmed that they appear on the Follow Up Actions page."
+          },
           {
-            "term": "Follow Up Actions",
-            "definition": "A project-scope, single-page screen intended to consolidate action items raised from other modules' workflows (e.g. RFIs, Change Orders, drawing issues) into one trackable list, so a PM doesn't have to check each source module individually."
+            "term": "Not the same as My Desk",
+            "definition": "**My Desk → My Actions** and **Pending Actions** list work assigned to you (issues, approvals, forms) from the project's live workflows. **Follow Up Actions** is its own project page with its own list."
           }
         ],
         "procedures": [
           {
-            "title": "Check for outstanding cross-module follow-ups",
+            "title": "Find out why Follow Up Actions is empty",
             "steps": [
-              "Go to <strong>Follow Up Actions</strong>.",
-              "Use the search box to look for a specific item if you're expecting one.",
-              "If the list shows \"There are no Follow Up Actions,\" that simply means nothing has generated a follow-up on this project yet."
+              "Open **Follow Up Actions** and confirm the page says \"There are no Follow Up Actions\".",
+              "Open **Field Works → Progress → Meeting Minutes → Actions** and check whether any actions are recorded.",
+              "Open the record you expected an item for (for example an RFI) and click its **Follow Up Actions** button to confirm it opens the same page.",
+              "If you expected items, raise it with your Arena administrator; the product does not show a setting for this page."
             ]
+          }
+        ]
+      },
+      {
+        "heading": "Follow Up Actions",
+        "intro": "<p>Follow Up Actions is where a PM or Module Manager looks for items that need chasing across the project. The page is deliberately simple: a **Follow Up Actions** title, a **Search** box and a list.</p><p>It has no columns, tabs, filters or Create button, so you cannot add an item here. On Arena Steel Plant - Phase 1 it shows \"There are no Follow Up Actions\". What a populated entry looks like could not be seen on the test project.</p>",
+        "definitions": [
+          {
+            "term": "Follow Up Actions page",
+            "definition": "A single page at **Follow Up Actions** in the project menu: a title, a **Search** box and a card list. With nothing to show it says \"There are no Follow Up Actions\". It has no Create, Edit or Delete buttons."
+          },
+          {
+            "term": "Follow Up Actions buttons",
+            "definition": "Buttons labelled **Follow Up Actions** sit on **Field Works → Progress → RFI** (inside an open RFI form, next to the **Form** and **Communication** tabs) and on **Field Works → Safety → Daily Safety Issues** (beside **Download Excel** and **Filters**). The work log detail screen has the same button. Both buttons tested open this project page and carry no record number in the address, and the page was empty either way."
+          },
+          {
+            "term": "Search",
+            "definition": "The search box above the list filters the entries. It could not be tried against real entries because the list is empty."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Check for outstanding follow-ups",
+            "steps": [
+              "Go to **Follow Up Actions** in the project menu, or click **Follow Up Actions** on an RFI form or on Daily Safety Issues.",
+              "Type in **Search** to look for a specific item.",
+              "If the page says \"There are no Follow Up Actions\", nothing has been raised on this project."
+            ],
+            "note": "The page only lists items. To act on a record, open it in its own module (Field Works → RFI, Daily Safety Issues and so on)."
           }
         ]
       }
@@ -23196,14 +23237,14 @@ const MODULES = [
     "name": "Follow Up Actions",
     "alias": "Cross-Module Action Tracker",
     "icon": "checklist",
-    "tagline": "A consolidated tracker for action items raised out of RFIs, Change Orders, and other module workflows.",
+    "tagline": "One project page that the Follow Up Actions buttons in Field Works open; empty on the test project.",
     "color": "#2f8f9c",
-    "overview": "<p>Follow Up Actions is a single-page, project-scope screen with a search box and list area intended to surface action items raised from other modules' workflows, such as RFIs, Change Orders, and drawing issues, in one consolidated place.</p>",
+    "overview": "<p>Follow Up Actions is a project-level list of follow-up items with a title and a search box. Several Field Works screens have a **Follow Up Actions** button that opens this same page. On Arena Steel Plant - Phase 1 it is empty.</p>",
     "navigation": [
       "Open a <strong>Project</strong>, then go to <strong>Follow Up Actions</strong>."
     ],
     "sections": [
-      "Admin Role",
+      "Where Follow Up Actions Come From",
       "Follow Up Actions"
     ]
   },
