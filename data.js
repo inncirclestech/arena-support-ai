@@ -6778,7 +6778,7 @@ const QA_PROJECTNOTIFICATIONS = [
     scope: "project",
     section: "Event Groups",
     question: "How do I organize which events trigger notifications for a project?",
-    answer: "Go to the project's Notification Schema and open the Event Groups tab. Click \"Add Event Groups\" to build a custom grouping of system events, or click \"Get Standard Event Groups\" to pull in Arena's pre-built groupings as a starting point rather than assembling every group by hand.",
+    answer: "Open <strong>Notifications</strong> (the <strong>Notification Schema</strong>) and stay on <strong>Event Groups</strong>: <strong>Get Standard Event Groups</strong> creates Arena's standard groups and <strong>Add Event Groups</strong> asks for a <strong>Name</strong>; on a group you then pick its events and its users (per Arena's guide). The event list itself and the message wording are on the <strong>Events</strong> tab (32 groups, 257 events). On the test project the Event Groups list is empty.",
     tags: ["event groups","notification schema","standard event groups"]
   },
   {
@@ -6787,7 +6787,7 @@ const QA_PROJECTNOTIFICATIONS = [
     scope: "project",
     section: "Events",
     question: "How do I control whether an event notifies by email, in-app, or mobile push?",
-    answer: "Go to Notification Schema → Events. Each system event (RFIs, Safety Issues, Drawing Management, Submittals, and the rest) is listed against the Mail, Web, and Mobile channels — toggle the channels that should fire for that event. Use \"Reset to Standard\" to discard custom changes and return to Arena's default channel mapping.",
+    answer: "On <strong>Notifications → Events</strong> expand a group, then click the <strong>Mail</strong>, <strong>Web</strong> or <strong>Mobile</strong> icon on the event. Each opens that channel's message template (<strong>Configure Mail Template</strong>, <strong>Configure Web Template</strong> or <strong>Configure Mobile Template</strong>) where you edit the subject or title and the message. The icons are template editors, not on/off switches, and this tab has no recipient list.",
     tags: ["notification channels","mail","web","mobile","reset to standard"]
   },
   {
@@ -6796,7 +6796,7 @@ const QA_PROJECTNOTIFICATIONS = [
     scope: "project",
     section: "Reminders",
     question: "How do I set up a recurring reminder for something like an upcoming inspection or expiring submittal?",
-    answer: "Go to Notification Schema → Reminders and click \"Create Reminder\". Reminders are separate from event-triggered notifications — they fire on a schedule or condition you define rather than in direct response to someone taking an action in the system. Use the search bar to find an existing reminder before creating a duplicate.",
+    answer: "Go to <strong>Notifications → Reminders</strong> and click <strong>Create Reminder</strong>. A reminder links to a <strong>Work Log</strong> or a <strong>Task</strong> (not to submittals), for one plant (<strong>Tree Version</strong>), with a name, a message, a <strong>Recurrence Type</strong> (Daily, Weekly, Monthly or Custom), a time, a start and end date, days of the week and the channels Web, Email and Mobile. Then <strong>Assign People</strong> and <strong>Preview</strong>.",
     tags: ["reminders","create reminder","scheduled notification"]
   },
   {
@@ -6805,8 +6805,8 @@ const QA_PROJECTNOTIFICATIONS = [
     scope: "project",
     section: "Alerts",
     question: "What's the difference between an Alert and a Reminder in the notification schema?",
-    answer: "Alerts (Notification Schema → Alerts) are typically threshold- or condition-based notices — flagging when something needs urgent attention — while Reminders are time-based nudges about upcoming or overdue items. Click \"Create Alert\" to configure a new one, and use the search bar to locate an existing alert.",
-    tags: ["alerts","create alert","notification schema"]
+    answer: "A <strong>Reminder</strong> links to a Work Log or a Task, runs on a recurrence (Daily, Weekly, Monthly, Custom) between a start and end date. An <strong>Alert</strong> links only to a Task, has an <strong>Alert Type</strong> (<strong>Drive By Initial Status</strong> or <strong>Drive By Final Status</strong>) and repeats at a <strong>Frequency of alert</strong> in days or hours. Both are created under Notifications and both choose people in an <strong>Assign People</strong> step.",
+    tags: ["alerts","create alert","notification schema","difference between alert and reminder","alert vs reminder","what is the difference between an alert and a reminder"]
   },
   {
     action: "view",
@@ -6814,7 +6814,7 @@ const QA_PROJECTNOTIFICATIONS = [
     scope: "project",
     section: "Events",
     question: "Where can I see every type of event in the system that can trigger a notification?",
-    answer: "Notification Schema → Events lists every system event type — covering AWP, Change Orders, Cost Transfers, Custom Forms, Document Management, Drawing Management, RFIs, Safety Issues, Submittals, Task, Timesheet, Transmittals, and more — each shown with its Mail/Web/Mobile channel toggles.",
+    answer: "<strong>Notifications → Events</strong> lists 32 groups with 257 events: AWP, Change Orders, Cost Change order, Cost Transfers, Custom Forms, Data Analytics, Document Management, Drawing Management, Estimate, Form Issues, Form Sharing, Meeting Minutes, Progress, Project Safety Forms, Punch Lists, Quality Forms, Quantity Tracksheet, Quick Apps, RFIS, Request For Informations, Restraints, Safety Issues, Safety Observations, Scheduled Safety Forms, Site Posts, Submittals, Task, Timesheet, Transmittals, Tree Version, Work Order Invoice Payment and Workflow Issues. Expand a group to see its events.",
     tags: ["system events","event list","notification matrix"]
   },
   {
@@ -6823,7 +6823,7 @@ const QA_PROJECTNOTIFICATIONS = [
     scope: "project",
     section: "Event Groups",
     question: "Is this the same as the notifications bell icon in the top navigation?",
-    answer: "No. The bell icon inbox shows an individual user their own received notifications. The project-level Notification Schema (Event Groups, Events, Reminders, Alerts) is the configuration layer behind it — it's where a PM or Module Admin decides which events generate notifications at all, and through which channels, for everyone on the project.",
+    answer: "No. The project <strong>Notification Schema</strong> (Event Groups, Events, Reminders, Alerts) sets the message wording and scheduled messages for the project. Each person controls their own switches in <strong>Notifications</strong> in the user menu at the top right (<strong>User Specific - Notifications</strong>).",
     tags: ["notification schema","bell icon","personal inbox","distinction"]
   },
   {
@@ -6831,9 +6831,9 @@ const QA_PROJECTNOTIFICATIONS = [
     object: "event notification defaults",
     scope: "project",
     section: "Events",
-    question: "I've made a mess of the channel toggles on the Events tab — can I undo it?",
-    answer: "Yes. On Notification Schema → Events, click \"Reset to Standard\" to revert every event's Mail/Web/Mobile channel configuration back to Arena's out-of-the-box defaults, discarding project-specific customizations.",
-    tags: ["reset to standard","events tab","undo notification changes"]
+    question: "I edited message templates on the Events tab by mistake — can I undo it?",
+    answer: "Click <strong>Reset to Standard</strong> at the top of the <strong>Events</strong> tab. The screen warns that the messages will be reset, and it restores Arena's standard wording. It was not clicked during testing, so the exact result is described from the screen's own warning.",
+    tags: ["reset to standard","events tab","undo notification changes","undo template edit","restore standard messages"]
   },
   {
     action: "search",
@@ -6850,8 +6850,125 @@ const QA_PROJECTNOTIFICATIONS = [
     scope: "project",
     section: "Events",
     question: "Someone on the project says they aren't getting notified about RFIs — where do I check?",
-    answer: "Start at <strong>Notification Schema → Events</strong> and confirm the relevant event (for example RFIS or Request For Informations) has the right <strong>Mail</strong>, <strong>Web</strong>, or <strong>Mobile</strong> channel toggled on for the project. If the channels look right, check that the person actually holds the role or group membership that makes them a recipient for that event, via <strong>Users and Permissions</strong>. Channel configuration and access are two separate gates, and either one can silence a notification.",
+    answer: "Check three places. (1) <strong>Notifications → Events</strong> in the project: the <strong>RFIS</strong> group (14 events) and <strong>Request For Informations</strong> group (13 events) have the message templates; this screen does not list recipients. (2) The person's own <strong>Notifications</strong> in the user menu at the top right: <strong>Enable Notifications</strong> and the per-event <strong>Mail</strong>, <strong>Web</strong> and <strong>Mobile</strong> switches. (3) Their access to the RFI in Users and Permissions.",
     tags: ["not receiving notifications","notification troubleshooting","channel toggle","permissions"]
+  },
+  {
+    action: "view",
+    object: "project notification lineage",
+    scope: "project",
+    section: "Events",
+    question: "What does clicking the Mail, Web or Mobile icon on an event do?",
+    answer: "It opens that channel's message template for the event: <strong>Configure Mail Template</strong> (Name, Subject for Mail, Message, Call To Actions buttons with Button Name, Action Value, Button Color and Validity in minutes), <strong>Configure Web Template</strong> or <strong>Configure Mobile Template</strong> (Name, Title, Message). Use <strong>Save Changes</strong> to keep edits or <strong>Cancel</strong> to leave.",
+    tags: ["mail icon","web icon","mobile icon","configure mail template","message template","notification template","edit notification message","what does the icon do events tab","call to action button notification","configure web template","configure mobile template"]
+  },
+  {
+    action: "view",
+    object: "project notification lineage",
+    scope: "project",
+    section: "Events",
+    question: "What do the {{placeholders}} in a notification message mean?",
+    answer: "Values in double braces, such as {{user}}, {{logId}}, {{createdAt}}, {{drawingName}} and {{timeSheetId}}, are filled in by Arena when the event happens, for example \"RFI {{logId}} has been created by {{user}} on {{createdAt}}\". Keep the braces if you edit the wording.",
+    tags: ["placeholders","double braces","user placeholder","logid","notification variables","template variables","message placeholders"]
+  },
+  {
+    action: "view",
+    object: "project notification lineage",
+    scope: "project",
+    section: "Events",
+    question: "Where does the project Events list come from?",
+    answer: "It is the system-wide list. The project Events tab (32 groups, 257 events, same order and same wording) is identical to <strong>Global Data → Notifications → Events</strong>; the RFI Created and DSI Raised templates read the same in both places. Whether edits here stay in the project only was not tested.",
+    tags: ["where does events list come from","events list source","global data notifications relation","project vs global notifications","notification lineage","standard events"]
+  },
+  {
+    action: "view",
+    object: "project notification lineage",
+    scope: "project",
+    section: "Events",
+    question: "Who receives the notifications for an event?",
+    answer: "Recipients are set in <strong>Event Groups</strong>: per Arena's setup guide a group pairs events (<strong>Notifications</strong> button) with people (<strong>Users</strong> button), and only the mapped users are notified. The <strong>Events</strong> tab only edits the message templates and has no recipient column. For Reminders and Alerts the people are chosen in the <strong>Assign People</strong> step. Each person can also switch their own notifications in <strong>Notifications</strong> in the user menu. The Event Groups list is empty on the test project, so the group buttons were not seen live.",
+    tags: ["who gets notified","who receives notifications","who receives notifications for an event","recipients of event notifications","notification recipients","who receives email for event"]
+  },
+  {
+    action: "view",
+    object: "project notification lineage",
+    scope: "project",
+    section: "Events",
+    question: "How many events are there in the Events tab and which groups have the most?",
+    answer: "257 events in 32 groups. The largest are <strong>Drawing Management</strong> (20), <strong>Progress</strong> (18), <strong>Document Management</strong> (17), <strong>Custom Forms</strong> (16) and <strong>RFIS</strong> (14). The smallest have one event: <strong>Data Analytics</strong> (Data Table Shared), <strong>Form Sharing</strong> (Form Received) and <strong>Site Posts</strong>.",
+    tags: ["how many events","number of events","largest event group","event count","how many notification events"]
+  },
+  {
+    action: "view",
+    object: "project notification lineage",
+    scope: "project",
+    section: "Events",
+    question: "What events does the Meeting Minutes group send?",
+    answer: "Seven: Meeting Minutes Form Created, Deleted and Updated; Meeting Minutes Chat New Comment; and Action Item Assigned, Action Item Deleted and Action Item Status Updated. The Action Item Assigned message reads \"Action Item {{itemName}} has been assigned to {{user}} in Meeting Minutes - {{formName}}\".",
+    tags: ["meeting minutes notifications","action item assigned notification","meeting minutes events"]
+  },
+  {
+    action: "view",
+    object: "project notification lineage",
+    scope: "project",
+    section: "Event Groups",
+    question: "Why is the Event Groups list empty on my project?",
+    answer: "On Arena Steel Plant - Phase 1 the Event Groups list is empty (as it is on Global Data → Notifications), so no one is mapped to events there. <strong>Get Standard Event Groups</strong> creates Arena's standard groups (run it when none exist; it overwrites same-named groups), and <strong>Add Event Groups</strong> (a Name) makes your own. Neither was clicked in testing. The events themselves are on the Events tab regardless.",
+    tags: ["event groups empty","no event groups","why are event groups empty","why is event groups empty","event groups list empty","add event group name"]
+  },
+  {
+    action: "view",
+    object: "project notification lineage",
+    scope: "project",
+    section: "Event Groups",
+    question: "How does the project Notifications setup relate to Global Data → Notifications?",
+    answer: "They mirror each other: both have Event Groups and Events tabs with the same 32 groups and 257 events and the same Add Event Groups, Get Standard Event Groups and Reset to Standard buttons, and the message wording matches. The project screen adds <strong>Reminders</strong> and <strong>Alerts</strong>. Each user then has their own switches under <strong>Notifications</strong> in the user menu.",
+    tags: ["global data notifications","global vs project notifications","notification hierarchy","project notification schema vs global","notification settings levels","how notifications settings relate"]
+  },
+  {
+    action: "view",
+    object: "project notification lineage",
+    scope: "project",
+    section: "Reminders",
+    question: "What can a reminder be linked to and which plants can I choose?",
+    answer: "<strong>Link Module</strong> offers <strong>Work Log</strong> and <strong>Task</strong>. <strong>Tree Version</strong> lists the project's 13 plants (Pellet Plant (1MTPA) through Slab Caster), the same list as Project Setup → Works.",
+    tags: ["reminder link module","reminder tree version","reminder work log","reminder task","which plants in reminder","reminder options"]
+  },
+  {
+    action: "view",
+    object: "project notification lineage",
+    scope: "project",
+    section: "Reminders",
+    question: "What are the fields on Create Reminder?",
+    answer: "Step 1 <strong>Configure Reminder</strong>: Link Module, Tree Version, Reminder Name, Reminder Message, Recurrence Type (Daily, Weekly, Monthly, Custom), Remind me at, Start Date, End Date, days of the week and channels (Web, Email, Mobile). Step 2 <strong>Assign People</strong>, step 3 <strong>Preview</strong>.",
+    tags: ["create reminder fields","reminder form","reminder recurrence","reminder steps","assign people reminder"]
+  },
+  {
+    action: "view",
+    object: "project notification lineage",
+    scope: "project",
+    section: "Alerts",
+    question: "What are the fields on Create Alert?",
+    answer: "Step 1 <strong>Configure Alert</strong>: Link Module (Task only), Alert Type (Drive By Initial Status or Drive By Final Status), Alert Name, Alert Message, Frequency of alert (days or hours), Remind me at and channels (Web, Email, Mobile). Step 2 <strong>Assign People</strong>, step 3 <strong>Preview</strong>.",
+    tags: ["create alert fields","alert form","alert type","drive by initial status","drive by final status","alert frequency"]
+  },
+  {
+    action: "view",
+    object: "project notification lineage",
+    scope: "project",
+    section: "Alerts",
+    question: "Why are Reminders and Alerts empty on my project?",
+    answer: "They only list ones you create. On Arena Steel Plant - Phase 1 both lists are empty and show only <strong>Create Reminder</strong> or <strong>Create Alert</strong> and a search box.",
+    tags: ["reminders empty","alerts empty","no reminders","no alerts","why are reminders empty"]
+  },
+  {
+    action: "view",
+    object: "project notification lineage",
+    scope: "project",
+    section: "Reminders",
+    question: "How do I turn my own notifications on or off?",
+    answer: "Open the user menu at the top right and click <strong>Notifications</strong> to get <strong>User Specific - Notifications</strong>: an <strong>Enable Notifications</strong> switch, then <strong>Mail</strong>, <strong>Web</strong> and <strong>Mobile</strong> switches by group and event. This is separate from the project Notification Schema. For the System Admin tested, only Cost Change order and Document Management were listed; what decides which groups appear was not confirmed.",
+    tags: ["turn off my notifications","my notification settings","user specific notifications","enable notifications","personal notification settings","stop receiving emails","mute notifications"]
   }
 ];
 
@@ -23255,26 +23372,31 @@ const MODULES = [
     "narrative": [
       {
         "heading": "Event Groups",
-        "intro": "<p>A project generates a constant stream of activity — RFIs get raised, drawings get approved, safety issues get logged, submittals move through review — and not every one of those events matters to every person on the job. Event Groups, the default tab under a project's Notification Schema, is where a <strong>PM / Module Admin</strong> starts organizing that activity into sensible clusters before deciding who should be told about what. Rather than configuring notification behavior one event at a time, grouping related events together makes the rest of the notification setup — covered in Events, Reminders, and Alerts — far more manageable.</p><p>Because building these groupings from a blank slate for every new project would be repetitive, this screen offers two paths: \"Add Event Groups\" to construct a custom grouping by hand, tailored to how a specific project or client wants activity organized, and \"Get Standard Event Groups\" to pull in Arena's pre-built groupings as a starting point. Most PMs likely lean on the standard groups first and only customize where the project has unusual needs, since it avoids re-inventing a structure that already covers the common cases well.</p>",
+        "intro": "<p>Event Groups is where a PM or Module Admin decides who receives which events: a group pairs a set of events with a set of users. It has two buttons, **Add Event Groups** and **Get Standard Event Groups**.</p><p>On Arena Steel Plant - Phase 1 the list is empty, so the per-group buttons could not be seen here. **Add Event Groups** opens **Add Event Group** with one required field, **Name**, and **Cancel** / **Add**. The 32 groups of events on the **Events** tab are the system's own and are the same in **Global Data → Notifications**.</p>",
         "definitions": [
           {
             "term": "Event Group",
-            "definition": "A named cluster of related system events (for example, all document-related events, or all safety-related events) used to organize notification configuration on a project rather than managing every event individually."
+            "definition": "A named bundle that pairs events with people. **Add Event Group** asks only for a **Name***. According to Arena's setup guide, each group then has a **Notifications** button to choose which events belong to it and a **Users** button to choose who receives them, and only the users mapped to a group are notified for its events. The list is empty on the test project, so those two buttons and the group three-dot menu were not seen live."
           },
           {
-            "term": "Standard Event Groups",
-            "definition": "Arena's pre-built event groupings, importable in one action via \"Get Standard Event Groups\", offered as a starting point instead of building groupings from scratch."
+            "term": "Get Standard Event Groups",
+            "definition": "Button that creates Arena's standard groups in one go. Per the guide, run it only when no groups exist: running it again overwrites groups with the same name, and the screen warns first. It was not clicked during testing. The same two buttons exist at **Global Data → Notifications**, whose list is also empty on the test site."
+          },
+          {
+            "term": "Where this comes from",
+            "definition": "The **Event Groups** tab and **Events** tab here have the same buttons as **Global Data → Notifications**, and the **Events** list is identical (32 groups, 257 events, same order and same message wording), so the project starts from the system-wide list."
           }
         ],
         "procedures": [
           {
             "title": "Set up event groups for a project's notification schema",
             "steps": [
-              "Open the project and go to <strong>Notification Schema → Event Groups</strong>.",
-              "Click <strong>\"Get Standard Event Groups\"</strong> to import Arena's default groupings, or click <strong>\"Add Event Groups\"</strong> to build a custom group.",
-              "Review the resulting list of event groupings for the project."
+              "Open the project and go to **Notifications** (the **Notification Schema** screen) and stay on **Event Groups**.",
+              "Click **Get Standard Event Groups** to create Arena's standard groups (best when no groups exist yet), or click **Add Event Groups**, type a **Name** and click **Add**.",
+              "On the group, use **Notifications** to choose its events and **Users** to choose who receives them (as described in Arena's guide; not visible on the empty test project).",
+              "Go to **Events** to review what each event sends."
             ],
-            "note": "Standard groups can typically be adjusted afterward, so importing them first and refining from there is usually faster than starting from an empty list.",
+            "note": "Neither button was clicked during testing; the group buttons are described from Arena's setup guide.",
             "images": [
               {
                 "src": "assets/notion/notifications/005.jpg",
@@ -23307,147 +23429,176 @@ const MODULES = [
       },
       {
         "heading": "Events",
-        "intro": "<p>Once events are grouped conceptually, the Events tab is where the actual notification behavior gets dialed in: for every system event type Arena tracks, a <strong>PM / Module Admin</strong> decides whether it should notify people by Mail, by an in-app Web notification, by Mobile push, or some combination of the three. Getting this right matters on both ends — miss the toggle for a critical event like a safety issue or an RFI, and the right person may not find out until it's too late; leave every toggle on for every low-priority event, and Field Users end up drowning in notification noise they start ignoring altogether, defeating the purpose of the system.</p><p>The event list spans the full breadth of what happens on a construction project day to day, and is worth understanding by category:</p>",
+        "intro": "<p>Events is the project's list of every system event Arena can notify about, with a message template for each channel. A PM or Module Admin edits the wording of what goes out by **Mail**, **Web** and **Mobile**.</p><p>The tab has a **Reset to Standard** button and a table with **Events**, **Mail**, **Web** and **Mobile** columns. There are 32 expandable groups and 257 events. Each event has three icons, one per channel, and clicking an icon opens that channel's message template. The tab sets what a message says; who receives it is set in **Event Groups**.</p>",
         "definitions": [
           {
+            "term": "Events table",
+            "definition": "32 groups you expand to see their events, each row ending in a **Mail** icon, a **Web** icon (a desktop symbol) and a **Mobile** icon. The icons look the same on every event; they open message templates, they are not toggles."
+          },
+          {
+            "term": "Configure Mail Template",
+            "definition": "Opens from the mail icon. Fields: **Name**, **Subject for Mail**, **Message**, and **Call To Actions** (**Button Name**, **Action Value**, **Button Color**, **Validity(in mins)**, **Add**, with a table of the buttons added). Defaults seen: button color #fab133 and validity 1440 minutes (24 hours). Buttons **Cancel** and **Save Changes**. Example: for **Timesheet Updated** the message is \"TimeSheet {{timeSheetId}} has been updated by {{user}}  Click here to view it\"."
+          },
+          {
+            "term": "Configure Web Template and Configure Mobile Template",
+            "definition": "Open from the web and mobile icons. Fields: **Name**, **Title for Web Notification** (or **Title for Mobile Notification**) and **Message**, with **Cancel** and **Save Changes**. The wording is the same as the mail message without the \"Click here\" text."
+          },
+          {
+            "term": "Placeholders",
+            "definition": "Messages use values in double braces that Arena fills in when the event happens, such as {{user}}, {{logId}}, {{createdAt}}, {{drawingName}} or {{timeSheetId}}. For example **RFI Created**: \"RFI {{logId}} has been created by {{user}} on {{createdAt}}\". Keep the braces when you edit the wording."
+          },
+          {
+            "term": "Reset to Standard",
+            "definition": "Button at the top of the tab that restores Arena's standard messages after edits; the screen warns before the messages are reset. It was not clicked during testing."
+          },
+          {
+            "term": "Where this comes from",
+            "definition": "The list of 32 groups, 257 events and their wording is identical to **Global Data → Notifications → Events**; the mail templates for **RFI Created** and **DSI Raised** read the same in both places. So the project starts from the system-wide template set. Whether changes made here are kept only for this project was not tested."
+          },
+          {
+            "term": "Who receives these messages",
+            "definition": "Set through **Event Groups** (the **Users** button on a group), not on this tab: the **Events** tab has no recipient column and no on/off switch, only the message templates. For **Reminders** and **Alerts** you choose people in the **Assign People** step. People can also switch their own notifications on or off in the user menu (see **Your own notification settings** in Reminders)."
+          },
+          {
             "term": "AWP",
-            "definition": "Advanced Work Packaging events — notifying the teams responsible for sequencing and readiness of work packages when packaging milestones change."
+            "definition": "3 events, for example IWP Assigned, Schedule IWP, IWP Status Change. By name this belongs to Advanced Work Packaging (IWP)."
           },
           {
             "term": "Change Orders",
-            "definition": "Notifies stakeholders (PMs, cost teams, sometimes the client) when a change order is raised, revised, or moves through approval, since change orders carry schedule and cost impact."
+            "definition": "13 events, for example Change Order Created, Approved, Rejected, Submitted For Approval, Chat New Comment. By name this belongs to Change Orders form in Field Works → Progress."
           },
           {
             "term": "Cost Change order",
-            "definition": "The cost-specific variant of change order notifications, keeping finance and budget owners informed when a change order affects project cost."
+            "definition": "7 events, for example Cost Change Order Created, Submitted for Approval, Approved, Rejected. By name this belongs to Field Works → Cost."
           },
           {
             "term": "Cost Transfers",
-            "definition": "Notifies relevant budget owners when cost is moved between line items or cost codes, so nobody is surprised by a shifted budget allocation."
+            "definition": "5 events, for example Transfers Created, Updated, Submitted for Approval, Approved, Rejected. By name this belongs to Field Works → Cost."
           },
           {
             "term": "Custom Forms",
-            "definition": "Notifications tied to project-specific custom forms, alerting the people responsible for reviewing or acting on submissions built outside Arena's standard form types."
+            "definition": "16 events, for example Other Form Created, Approved, Rejected, Status SLA Crossed; Work Package Approved, Rejected. By name this belongs to Project forms (Field Works → Project Forms)."
           },
           {
             "term": "Data Analytics",
-            "definition": "Notifies relevant stakeholders when analytics-related thresholds, reports, or data events occur, keeping oversight roles informed without requiring them to check dashboards manually."
+            "definition": "1 event, for example Data Table Shared. By name this belongs to Data Analytics → Configurable Analytics."
           },
           {
             "term": "Document Management",
-            "definition": "Alerts document owners and reviewers when files are uploaded, revised, or need action, keeping project documentation current and reviewed on time."
+            "definition": "17 events, for example Document Added, Edited, Approved, Rejected, Shared; Document Folder Created. By name this belongs to Project Setup → Documents."
           },
           {
             "term": "Drawing Management",
-            "definition": "Notifies relevant teams when drawings are issued, revised, or approved, since field crews and subcontractors need to know immediately when they're working from an outdated drawing."
+            "definition": "20 events, for example Drawing Package Created, Drawing Created, Approved, Rejected, Shared, Comment Added, Revision Uploaded. By name this belongs to Project Setup → Drawings."
           },
           {
             "term": "Estimate",
-            "definition": "Notifies stakeholders involved in estimating when an estimate is created, revised, or needs review, keeping cost projections moving through their approval cycle."
+            "definition": "4 events, for example Estimate Created, Revision Created, Approved, Rejected. By name this belongs to Project Setup → Estimate."
           },
           {
             "term": "Form Issues",
-            "definition": "Notifies the relevant owner when an issue is raised against a form, ensuring problems flagged on submitted paperwork don't sit unnoticed."
+            "definition": "5 events, for example Form Issue Raised, Assigned, Rectified, Deleted, Chat New Comment. By name this belongs to Workflow issues on forms."
           },
           {
             "term": "Form Sharing",
-            "definition": "Notifies a recipient when a form is shared with them, so external or cross-team collaborators know a form needs their attention."
+            "definition": "1 event, for example Form Received. By name this belongs to Forms shared between users."
           },
           {
             "term": "Meeting Minutes",
-            "definition": "Notifies attendees and action-item owners when meeting minutes are published or updated, reinforcing accountability for follow-up items."
+            "definition": "7 events, for example Meeting Minutes Form Created, Updated, Deleted; Action Item Assigned, Deleted, Status Updated. By name this belongs to Field Works → Progress → Meeting Minutes."
           },
           {
             "term": "Progress",
-            "definition": "Notifies relevant roles when progress updates are recorded, keeping schedule and completion tracking visible to the people managing it."
+            "definition": "18 events, for example Workpackage Ready, Logged, Complete; Quantity Approved, Rejected; Productivity Log Created, Approved, Rejected. By name this belongs to Field Works → Progress (Work Logs, Productivity Logs)."
           },
           {
             "term": "Project Safety Forms",
-            "definition": "Notifies safety officers and PMs when project-level safety forms are submitted, since safety documentation often needs prompt review."
+            "definition": "13 events, for example Project Safety Form Assigned, Logged, Submitted For Approval, Approved, Rejected; Safety Log Approval Request. By name this belongs to Field Works → Safety → Safety Forms."
           },
           {
             "term": "Punch Lists",
-            "definition": "Notifies responsible parties when punch list items are created, updated, or closed, so outstanding defects get resolved before close-out."
+            "definition": "5 events, for example PNL Raised, Assigned, Rectified, QC Verified, Chat New Comment. By name this belongs to Field Works → Quality → Punch Lists."
           },
           {
             "term": "Quality Forms",
-            "definition": "Notifies quality managers and inspectors when quality forms are submitted or require follow-up, supporting consistent quality control."
+            "definition": "11 events, for example Quality Workpackage Level1 Ready, Logged, Complete; Level2 Ready, Logged, Complete; Form Rejected. By name this belongs to Field Works → Quality."
           },
           {
             "term": "Quantity Tracksheet",
-            "definition": "Notifies relevant teams when quantity tracking entries are logged or updated, keeping measured-quantity data visible to those who bill or report against it."
+            "definition": "4 events, for example Updated, Sent For Approval, Approved, Rejected. By name this belongs to Quantity tracksheet approvals."
           },
           {
             "term": "Quick Apps",
-            "definition": "Notifies relevant users when activity occurs within Quick Apps-based mini workflows configured for the project."
+            "definition": "7 events, for example Quick App Created, Deleted; Screen Submitted For Approval, Approved, Rejected. By name this belongs to Field Works → Quick Apps."
           },
           {
             "term": "RFIS",
-            "definition": "Notifies recipients when a Request for Information is raised, answered, or overdue — one of the most time-sensitive notification categories, since RFI delays can stall work."
+            "definition": "14 events, for example RFI Created, Updated, Assigned, Submitted For Approval, Approved, Rejected, Chat New Comment. By name this belongs to Field Works → Progress → RFI."
           },
           {
             "term": "Request For Informations",
-            "definition": "A related RFI notification category covering broader Request for Information activity and status changes beyond the initial raise."
+            "definition": "13 events, for example RFI Sent, Reassigned, Due Date Reminder, RFI Overdue, Response Submitted, Reopened, Closed, Voided, Priority Escalation. By name this belongs to A second RFI event set; which screen raises these was not confirmed."
           },
           {
             "term": "Restraints",
-            "definition": "Notifies responsible parties when a restraint (a blocker preventing work from proceeding) is logged or resolved, since restraints directly affect schedule."
+            "definition": "6 events, for example Restraint Raised, Assigned, Rectified, Verified, Rectification Updated. By name this belongs to Field Works → Progress → Restraints."
           },
           {
             "term": "Safety Issues",
-            "definition": "Notifies safety officers and PMs immediately when a safety issue is logged, given how time-critical safety response is on an active job site."
+            "definition": "5 events, for example DSI Raised, Assigned, Rectified, Deleted, Chat New Comment. By name this belongs to Field Works → Safety → Daily Safety Issues."
           },
           {
             "term": "Safety Observations",
-            "definition": "Notifies relevant safety personnel when a safety observation is recorded, supporting proactive hazard tracking rather than only reactive incident response."
+            "definition": "7 events, for example Safety Observation Raised, Assigned, Rectified, Due Date Reminder, Overdue. By name this belongs to Field Works → Safety → Observations."
           },
           {
             "term": "Scheduled Safety Forms",
-            "definition": "Notifies responsible users when recurring, scheduled safety forms come due or are completed, helping ensure routine safety checks aren't missed."
+            "definition": "10 events, for example Scheduled Safety Form Reminder, Assigned, Logged, Submitted For Approval, Approved, Rejected. By name this belongs to Safety Calendar (Field Works → Safety)."
           },
           {
             "term": "Site Posts",
-            "definition": "Notifies relevant project members when a site post (a general field update or announcement) is made."
+            "definition": "1 event, for example Site Post Chat New Comment. By name this belongs to Site posts."
           },
           {
             "term": "Submittals",
-            "definition": "Notifies reviewers and originators as a submittal moves through its review cycle, since submittal delays are a common source of schedule risk."
+            "definition": "13 events, for example Submittal Created, Updated, Assigned, Approved, Rejected, Chat New Comment. By name this belongs to Submittals form in Field Works → Progress."
           },
           {
             "term": "Task",
-            "definition": "Notifies assignees and watchers when a task is created, updated, or completed, keeping day-to-day assignments visible."
+            "definition": "8 events, for example New Task Created, Task Updated, Task Assigned, New Message In Task Chat; Requisition Form Ready For Approval, Approved, Rejected. By name this belongs to Project Setup → Tasks."
           },
           {
             "term": "Timesheet",
-            "definition": "Notifies relevant approvers when timesheets are submitted or need approval, supporting timely payroll and labor cost processing."
+            "definition": "4 events, for example Timesheet Updated, Sent For Approval, Approved, Rejected. By name this belongs to Timesheets (Time Management)."
           },
           {
             "term": "Transmittals",
-            "definition": "Notifies recipients when a transmittal is sent, so formal document handoffs between parties are acknowledged promptly."
+            "definition": "6 events, for example Transmittal Sent, Acknowledged, Ready For Approval, Approved, Rejected. By name this belongs to Transmittals."
           },
           {
             "term": "Tree Version",
-            "definition": "Notifies relevant users when a new version of the project's work breakdown tree structure is published, since downstream logs and reports may depend on it."
+            "definition": "3 events, for example Tree Version Created, Updated, Deleted. By name this belongs to Project Setup → Works."
           },
           {
             "term": "Work Order Invoice Payment",
-            "definition": "Notifies relevant finance and vendor-management roles when a work order invoice payment event occurs, supporting timely vendor payment tracking."
+            "definition": "7 events, for example Created, Updated, Submitted For Approval, Ready for Approval, Approved, Rejected, Deleted. By name this belongs to Field Works → Invoices."
           },
           {
             "term": "Workflow Issues",
-            "definition": "Notifies the responsible party when an issue arises within a configured workflow, so process breakdowns get attention before they stall other work."
+            "definition": "3 events, for example Workflow Issue Assigned, Raised, Chat New Comment. By name this belongs to Workflow issues on approval workflows."
           }
         ],
         "procedures": [
           {
             "title": "Configure notification channels for a system event",
             "steps": [
-              "Go to <strong>Notification Schema → Events</strong>.",
-              "Locate the event type in the list (for example, RFIS, Safety Issues, or Submittals).",
-              "Toggle the <strong>Mail</strong>, <strong>Web</strong>, and/or <strong>Mobile</strong> channels for that event as needed.",
-              "Repeat for other events, or click <strong>\"Reset to Standard\"</strong> to discard all customizations and return to Arena's default channel mapping."
+              "Go to **Notifications → Events**.",
+              "Click the group (for example **RFIS**) to expand it and find the event (for example **RFI Created**).",
+              "Click the **Mail**, **Web** or **Mobile** icon on that row to open its template.",
+              "Edit the title or subject and the **Message**, keeping the {{placeholders}}; for mail, add any **Call To Actions** button.",
+              "Click **Save Changes**, or **Cancel** to leave it as it was. **Reset to Standard** on the tab restores the standard messages."
             ],
-            "note": "Reserve heavier channels like Mobile push for genuinely time-sensitive events (Safety Issues, RFIs, Restraints) to avoid notification fatigue on lower-priority events.",
+            "note": "The template editors were opened and closed without saving during testing.",
             "images": [
               {
                 "src": "assets/notion/notifications/001.jpg",
@@ -23470,41 +23621,63 @@ const MODULES = [
       },
       {
         "heading": "Reminders",
-        "intro": "<p>Not every notification a construction team needs is triggered by someone else's action — sometimes the important thing is simply that time has passed, or a due date is approaching, and nobody has acted yet. Reminders, configured by a <strong>PM / Module Admin</strong> under Notification Schema, cover exactly this case: a scheduled or condition-based nudge, separate from the event-driven notifications on the Events tab, for things like an upcoming inspection window or a submittal approaching its due date.</p><p>Because a project can accumulate many reminders over time, the tab pairs \"Create Reminder\" with a search bar, so a PM can check whether a similar reminder already exists before adding a new, possibly redundant one.</p>",
+        "intro": "<p>Reminders send a message on a schedule about a Work Log or a Task. A PM or Module Admin creates them so that people are nudged without waiting for an event.</p><p>The tab has a **Create Reminder** button and a search box, and the list is empty on Arena Steel Plant - Phase 1. **Create Reminder** is a three-step form: **Configure Reminder**, **Assign People** and **Preview**.</p>",
         "definitions": [
           {
             "term": "Reminder",
-            "definition": "A scheduled or condition-based notification configured under Notification Schema → Reminders, distinct from event-triggered notifications, used to nudge users about upcoming or overdue items."
+            "definition": "A scheduled message. Step 1, **Configure Reminder**, asks for **Link Module*** (**Work Log** or **Task**), **Tree Version*** (the plant), **Reminder Name***, **Reminder Message***, **Recurrence Type*** (**Daily**, **Weekly**, **Monthly** or **Custom**), **Remind me at*** (time), **Start Date***, **End Date***, the days of the week (**Sunday** to **Saturday**) and the channels **Web**, **Email** and **Mobile**. **Next** checks required fields (\"This field can't be empty\"). Steps 2 and 3 were not reachable without entering data."
+          },
+          {
+            "term": "Where the Tree Version list comes from",
+            "definition": "It lists the 13 plants of the project: Pellet Plant (1MTPA), Basic Oxygen Furnace (0.8 MTPA), Blast Furnace (0.6 MTPA), Coke Oven, Cold Rolling Mill, External Works, Hot Strip Mill, IBMD, Lime Dolomite Plant, Oxygen Plant, RMHS, Sinter Plant and Slab Caster, the same tree versions as **Project Setup → Works** and the plant selector in **Field Works**."
+          },
+          {
+            "term": "Your own notification settings",
+            "definition": "Each person has **Notifications** in the user menu at the top right (next to **My profile**, **Reset Password**, **Favorite Screens**, **Set a Status** and **Settings**). It opens **User Specific - Notifications**: an **Enable Notifications** switch, then a table of **Mail**, **Web** and **Mobile** switches by group and event. For the signed-in System Admin only two groups were listed: **Cost Change order** (on; one event, **Cost Change Order Ready For Approval**, all channels on) and **Document Management** (off; its 17 events all off). What decides which groups a person sees was not confirmed."
           }
         ],
         "procedures": [
           {
             "title": "Create a reminder",
             "steps": [
-              "Go to <strong>Notification Schema → Reminders</strong>.",
-              "Use the search bar to confirm a similar reminder doesn't already exist.",
-              "Click <strong>\"Create Reminder\"</strong> and configure its schedule/condition and recipients."
-            ]
+              "Go to **Notifications → Reminders** and use the search box to check a similar reminder does not exist.",
+              "Click **Create Reminder**.",
+              "In **Configure Reminder**, choose **Link Module** and **Tree Version**, then enter the **Reminder Name** and **Reminder Message**.",
+              "Choose the **Recurrence Type**, **Remind me at** time, **Start Date**, **End Date** and the channels (**Web**, **Email**, **Mobile**).",
+              "Click **Next**, choose the people in **Assign People**, check the **Preview**, and confirm."
+            ],
+            "note": "Steps 4 to 5 were not completed during testing, so the Assign People and Preview screens are not described."
           }
         ]
       },
       {
         "heading": "Alerts",
-        "intro": "<p>Alerts round out the Notification Schema as the mechanism for flagging conditions that need attention — typically threshold- or exception-based, as opposed to the routine, action-triggered notices on the Events tab or the time-based nudges in Reminders. A <strong>PM / Module Admin</strong> configures these to make sure specific, meaningful conditions on a project (rather than every minor status change) surface clearly to the people who need to act on them.</p><p>Like Reminders, the Alerts tab pairs \"Create Alert\" with a search bar, encouraging a quick check of existing alerts before adding another one that might overlap.</p>",
+        "intro": "<p>Alerts send a message about the status of a Task, repeating until it is dealt with. A PM or Module Admin creates them for the tasks that must not slip.</p><p>The tab has a **Create Alert** button and a search box, and the list is empty on Arena Steel Plant - Phase 1. **Create Alert** is a three-step form: **Configure Alert**, **Assign People** and **Preview**.</p>",
         "definitions": [
           {
             "term": "Alert",
-            "definition": "A condition- or threshold-based notification configured under Notification Schema → Alerts, used to flag conditions on a project that need attention, distinct from routine event notifications and scheduled reminders."
+            "definition": "A status-based message. Step 1, **Configure Alert**, asks for **Link Module*** (only **Task** is offered), **Alert Type*** (**Drive By Initial Status** or **Drive By Final Status**), **Alert Name***, **Alert Message***, **Frequency of alert*** (a number, with a unit of **days** or **hours**), **Remind me at*** (time) and the channels **Web**, **Email** and **Mobile**. Steps 2 and 3 (**Assign People**, **Preview**) were not reachable without entering data."
+          },
+          {
+            "term": "Alert versus Reminder",
+            "definition": "A **Reminder** is date-based and can link to a **Work Log** or a **Task**, with **Recurrence Type**, **Start Date** and **End Date**. An **Alert** only links to a **Task**, is tied to the task's initial or final status, and repeats at a frequency in days or hours. Both are configured here and neither is an **Events** template."
+          },
+          {
+            "term": "Where this connects",
+            "definition": "The linked module is the project's **Tasks** (see **Project Setup → Tasks**); people are chosen in **Assign People**."
           }
         ],
         "procedures": [
           {
             "title": "Create an alert",
             "steps": [
-              "Go to <strong>Notification Schema → Alerts</strong>.",
-              "Use the search bar to confirm a similar alert doesn't already exist.",
-              "Click <strong>\"Create Alert\"</strong> and configure the condition and recipients."
-            ]
+              "Go to **Notifications → Alerts** and search for a similar alert.",
+              "Click **Create Alert**.",
+              "Choose **Link Module** (**Task**) and an **Alert Type**, then enter the **Alert Name** and **Alert Message**.",
+              "Set the **Frequency of alert** (days or hours), **Remind me at** time and channels.",
+              "Click **Next**, choose people in **Assign People**, check the **Preview**, and confirm."
+            ],
+            "note": "The last two steps were not completed during testing."
           }
         ]
       }
@@ -23512,9 +23685,9 @@ const MODULES = [
     "name": "Notifications",
     "alias": "Project Notification Schema",
     "icon": "campaign",
-    "tagline": "Decide which project events notify whom, through which channel, plus scheduled reminders and condition-based alerts.",
+    "tagline": "The project's notification schema: event message templates for Mail, Web and Mobile, plus scheduled reminders and alerts.",
     "color": "#8f4fae",
-    "overview": "<p>Notifications (project-level) is the Notification Schema configuration area where a PM or Module Admin decides which project events — RFIs, safety issues, drawing approvals, submittals, and dozens more — trigger a notification, through which channel (Mail, Web, Mobile), plus scheduled Reminders and condition-based Alerts. This is notification configuration, not the personal notifications inbox behind the bell icon in the top navigation, which is covered separately.</p>",
+    "overview": "<p>Notifications (project) is the project's **Notification Schema**: four tabs, **Event Groups**, **Events**, **Reminders** and **Alerts**. **Events** lists 32 groups and 257 system events, each with a **Mail**, **Web** and **Mobile** message template. **Reminders** and **Alerts** are scheduled messages you create. It is not the personal bell inbox or your own **Notifications** switches in the user menu.</p>",
     "navigation": [
       "Open a <strong>Project</strong>, then go to its <strong>Notification Schema</strong> section.",
       "Use the tab bar to switch between <strong>Event Groups</strong>, <strong>Events</strong>, <strong>Reminders</strong>, and <strong>Alerts</strong>."
