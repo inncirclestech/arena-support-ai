@@ -9428,18 +9428,18 @@ const QA_TIMEMANAGEMENT = [
     action: "submit",
     object: "timesheet",
     scope: "project",
-    section: "Timesheet Logs",
+    section: "My Timesheet",
     question: "How do I log my own work hours?",
-    answer: "Go to My Timesheet, select the Company/Project/Work Order/GL Code and the Template (auto-populated from your default setting), pick a Date Range, click \"Add\" to insert a row, fill in phase code/earning code/hours, then click \"Submit for Approval\" (or \"Save as Draft\" to save incomplete data).",
+    answer: "Open My Timesheet, choose the Log Level Category (Company, Projects, Work Orders or GL Codes) and the Template, pick the date, click \"Add\", choose the project/work order/GL code and Phase Code, enter hours in the earning-code columns, then click \"Submit\" (or \"Save as Draft\" if incomplete). See \"Which Phase Codes a Timesheet Offers\" if a code is missing.",
     tags: ["log hours","my timesheet","submit timesheet","enter hours"]
   },
   {
     action: "submit",
     object: "crew timesheet",
     scope: "project",
-    section: "Timesheet Logs",
+    section: "My Crew Timesheet",
     question: "How does a supervisor log hours for an entire crew?",
-    answer: "Go to My Crew Timesheet, select the Company/Project/Work Order/GL Code and Crew, choose a Template and Date Range, click \"Add\" to add employee rows, fill in hours per phase/earning code, then \"Submit for Approval\". Timesheet settings and a workflow must be configured for the crew first.",
+    answer: "Open My Crew Timesheet, choose the Log Level Category, the project or work order if asked, the Crew and the Template, click \"Add\" for each employee row, choose the Roster, project and Phase Code, enter hours per earning code, then \"Submit for Approval\". The crew needs a Timesheet Mode and an approval workflow first (Settings).",
     tags: ["crew timesheet","log crew hours","supervisor timesheet","foreman timesheet"]
   },
   {
@@ -9466,7 +9466,7 @@ const QA_TIMEMANAGEMENT = [
     scope: "project",
     section: "Timesheet Logs",
     question: "What export formats are available for timesheet logs?",
-    answer: "From the Export menu in Timesheet Logs, you can download VP Excel (.xlsx), VP CSV, QuickBooks (.iif), or SAP (.csv) formats after selecting date range, log level, crews/users, mode, and earning codes. Only Admin users have access to Export.",
+    answer: "The Export menu on Timesheet Logs lists seven formats: Download VP Excel, VP CSV File, Dynamics 365 Excel, Quick Books, SAP, ComputerEase and Project Wise Excel. You then select the date range, log level, crews or users, mode and earning codes. Only Admin users have access to Export.",
     tags: ["export timesheet","quickbooks export","sap export","csv download"]
   },
   {
@@ -9475,7 +9475,7 @@ const QA_TIMEMANAGEMENT = [
     scope: "project",
     section: "Timesheet Logs",
     question: "How do I filter timesheet logs by project, crew, or status?",
-    answer: "In My Timesheet Logs / My Crew Timesheet Logs, click \"Filters\" to narrow by Log Level Category, Log Level, Crew, Logged By, Mode (Daily/Weekly by Day/Weekly), Status, and Date Range. Use \"Save filters\" to keep a filter set, \"Reset\" to revert, or \"Clear All\" to reset to defaults.",
+    answer: "On Timesheet Logs click the filter icon and narrow by Log Level Category, Log Level, Crew, Logged By, Mode (All, Daily, Weekly By Day, Weekly), Status and Date Range, then Apply. \"Save Filters\" keeps the set, \"Reset\" reverts and \"Clear All\" empties it. The Mode filter may open on Weekly By Day, which hides Daily logs.",
     tags: ["filter timesheets","timesheet search","log level filter"]
   },
   {
@@ -9493,7 +9493,7 @@ const QA_TIMEMANAGEMENT = [
     scope: "global",
     section: "Settings",
     question: "How do I create an approval workflow for timesheets?",
-    answer: "Go to Settings > Timesheet Workflow > Create Workflow, click \"Create Approval Workflow\", name it, then click \"Create Level\" to add approvers by User or by Role, choosing \"All must approve\" or \"Anyone can approve\" for each level.",
+    answer: "Go to Settings > Timesheet Workflow > Create Workflow, click \"Create Approval Workflow\", name it, then click \"Create Level\" (Add Level to Workflow): choose Users or Roles, the approvers, a description, and \"All must approve\" or \"Any one can approve\". Submit each level.",
     tags: ["timesheet approval workflow","create workflow","approval levels"]
   },
   {
@@ -9502,7 +9502,7 @@ const QA_TIMEMANAGEMENT = [
     scope: "global",
     section: "Settings",
     question: "How do I assign an approval workflow to a user or crew?",
-    answer: "Go to Settings > Timesheet Workflow > Assign Workflow, select a User or Crew, choose the Approval Workflow to apply, and click \"Save Changes\". Use \"Copy Approval Workflow To\" to apply the same workflow to multiple users/crews at once.",
+    answer: "Go to Settings > Timesheet Workflow > Assign Workflow, choose the Users or Crews tab, select the person or crew, pick the workflow under \"Assign Approval Workflow\" and click \"Save Changes\". \"Clear\" removes it and \"Copy Approval Workflow To\" applies it to several users or crews.",
     tags: ["assign timesheet workflow","copy workflow","workflow assignment"]
   },
   {
@@ -9511,7 +9511,7 @@ const QA_TIMEMANAGEMENT = [
     scope: "global",
     section: "Settings",
     question: "How do I set whether timesheets are logged Daily, Weekly, or Weekly by Day?",
-    answer: "Go to Timesheet Settings > Timesheet Mode. Under \"My Timesheet\" (individual) or \"My Crew Timesheet\" (per crew), select Daily, Weekly by Day, or Weekly, choose a Default Template, and click \"Save Changes\". Use \"Copy To\" to apply the same mode to other users or crews.",
+    answer: "Go to Settings > Timesheet Settings > Timesheet Mode. Choose the My Timesheet or My Crew Timesheet tab, select the person or crew and pick Daily, Weekly by day or Weekly, then \"Save Changes\". \"Copy To\" applies it to others. The mode decides which templates the user sees.",
     tags: ["timesheet mode","daily weekly configuration","default template"]
   },
   {
@@ -9520,7 +9520,7 @@ const QA_TIMEMANAGEMENT = [
     scope: "global",
     section: "Settings",
     question: "How do I create earning codes for payroll?",
-    answer: "Go to Timesheet Settings > Earning Codes, click \"Add\" to insert a row, enter Code, Description, and Short Name, set the Data Type (Hours or Amount), and choose Payroll Hours and/or Project Hours. \"Split Headers\" places the code under Phase Codes in weekly templates.",
+    answer: "Go to Settings > Timesheet Settings > Earnings Codes (the same codes as Global Data > Settings > Earnings Codes), click \"Add\", enter Code, Description, Shortname and VP Code, set the Data Type (HOURS or AMOUNT) and tick Payroll and/or Project. \"Split Header\" places the code under Phase Codes in weekly templates.",
     tags: ["earning codes","payroll codes","create earning code"]
   },
   {
@@ -9529,7 +9529,7 @@ const QA_TIMEMANAGEMENT = [
     scope: "global",
     section: "Settings",
     question: "How do I build a custom timesheet template?",
-    answer: "Go to Timesheet Settings > Timesheet Templates, click \"Create\", then open the new template to configure Standard and Configurable fields via \"Add Field\". Choose whether earning codes display as a \"Column\" or \"Split Time Header\", then \"Save Changes\".",
+    answer: "Go to Settings > Timesheet Settings > Timesheet Template, click \"Create\" or open a template. Under Configurable Fields use \"Add field\" (types Form, Multi Select, Roster, Single Select, Text Box, Time). Under Earnings Codes choose Column or Split Time Headers and add earning codes, then \"Save Changes\".",
     tags: ["timesheet template builder","configurable fields","custom timesheet"]
   },
   {
@@ -9538,7 +9538,7 @@ const QA_TIMEMANAGEMENT = [
     scope: "global",
     section: "Settings",
     question: "How do I lock payroll periods to prevent further edits?",
-    answer: "Go to Timesheet Settings > Payroll Locking. Choose Daily, Weekly, or Monthly mode. In Weekly mode pick the lock day and time; in Monthly mode choose Start of Month, End of Month, or a Custom date, then set the lock time.",
+    answer: "Go to Settings > Timesheet Settings > Payroll Locking. Choose Daily, Weekly or Monthly; for Monthly pick Start of The Month, End of The Month or Custom; set the Time and Buffer Time (In Days) and Save Changes. It applies to time management and productivity logs.",
     tags: ["payroll locking","lock timesheet period","prevent edits"]
   },
   {
@@ -9547,7 +9547,7 @@ const QA_TIMEMANAGEMENT = [
     scope: "project",
     section: "Reconciliation",
     question: "How do I manually reconcile timesheet data?",
-    answer: "Go to Timesheet Reconciliation > Timesheet, choose Daily & Weekly by Day or Weekly mode, click \"Create Log\" and select a date range to view submitted logs, then click the \"Phase code\" button for an employee to reconcile that entry manually.",
+    answer: "Open Reconciliation > Timesheets, choose Weekly or Daily & Weekly by Day, click \"Create Log\" and select a date range to see submitted logs (Date, Roster, Total Hours, Total Amount), then click the \"Phase code\" button for an employee to reconcile that entry.",
     tags: ["manual reconciliation","reconcile timesheet","timesheet accuracy"]
   },
   {
@@ -9556,16 +9556,16 @@ const QA_TIMEMANAGEMENT = [
     scope: "project",
     section: "Reconciliation",
     question: "Can I reconcile timesheets using uploaded gate/access logs?",
-    answer: "Yes. Go to Timesheet Reconciliation > Gate Logs, select Daily & Weekly by Day or Weekly mode, then use \"Upload Logs\" with the provided template to upload employee/crew hour verification data. The system validates Employee IDs and creates batches for organized reconciliation.",
+    answer: "Yes. Open Reconciliation > Gate Logs, choose Weekly or Daily & Weekly by Day, click \"Upload Logs\", download the template, enter Gate In and Gate Out in 24-hour format with dates as MM-DD-YYYY, then Upload and Submit. Employee IDs are validated against Global Rosters.",
     tags: ["gate logs","upload reconciliation","batch reconciliation"]
   },
   {
     action: "view",
     object: "timesheet data summary",
     scope: "project",
-    section: "Analytics & Reports",
+    section: "Timesheet Data Summary",
     question: "How do I see total logged hours broken down by project, crew, or phase code?",
-    answer: "Go to Timesheet Data Summary and switch between the People, Crew, Phase Codes, and Project tabs. Select a date range and log level, then use \"Download Excel\" to export. Toggle \"Submitted\" or \"Approved\" at the top right to filter by log status.",
+    answer: "Open Timesheet Data Summary and switch between the tabs People, Crew, Phase Code, Project, Work Order, Earnings Code, GL Code and Detailed View. Choose Daily & Weekly by Day or Weekly, a date range and log level, and toggle Submitted or Approved and Hours or Amount.",
     tags: ["timesheet summary","hours by project","hours by crew","phase code report"]
   },
   {
@@ -9583,7 +9583,7 @@ const QA_TIMEMANAGEMENT = [
     scope: "project",
     section: "Rosters & Crews",
     question: "How do I add a crew to a specific project?",
-    answer: "Go to Project Setup > Roster > Project Crews and click \"Create Crew\" to build one manually, or \"Copy Crews from Global Data\" to import existing crews. Use \"Map Crews to Projects\" to copy a crew to other projects.",
+    answer: "Go to Project Setup > People > Project Crews and click \"Create Crew\" to build one, or \"Copy Crews from Global Data\" to import existing crews. \"Copy Crews to Projects\" copies a crew to other projects.",
     tags: ["project crew","add crew to project","copy crew"]
   },
   {
@@ -9592,7 +9592,7 @@ const QA_TIMEMANAGEMENT = [
     scope: "project",
     section: "Rosters & Crews",
     question: "How do I add a system user to a project roster?",
-    answer: "Go to Project Setup > Roster > System User, click \"Add\", and select users from Global Data (Global Data > Users & Permissions > Global Rosters). Selected users appear on the right side of the dialog; click \"Submit\" to add them.",
+    answer: "Go to Project Setup > People > Roster > System User, click \"Add\", and select users from Global Data > Users & Permissions > Global Rosters. Selected users appear on the right of the dialog; click \"Submit\".",
     tags: ["add system user","project roster","system user assignment"]
   },
   {
@@ -9608,9 +9608,9 @@ const QA_TIMEMANAGEMENT = [
     action: "configure",
     object: "roster custom column",
     scope: "global",
-    section: "Settings",
+    section: "Rosters & Crews",
     question: "How do I add custom fields to the roster tables?",
-    answer: "Go to Global Settings > Roster Settings and use \"Configurable Fields\" to add custom columns, choosing a field type (Attachment, Check box, Date, Label, Multi select, Paragraph, Roster, Scribble, Single select, Table, Text box, Time, Signature). Click \"Save Changes\" to apply.",
+    answer: "Go to Global Data > Settings > Roster Settings and use \"Add Field\" under Configurable Fields to add custom columns (set Required, Show on cards and the field type), then \"Save Changes\".",
     tags: ["roster custom fields","configure roster columns","field types"]
   },
   {
@@ -9621,6 +9621,366 @@ const QA_TIMEMANAGEMENT = [
     question: "Can I bulk upload rosters via Excel?",
     answer: "Yes. On the Roster (System Users or Non-System Users) page, use \"Upload Excel\" to bulk-add roster records, or \"Download Excel\" to export the current roster list.",
     tags: ["bulk upload roster","download roster excel"]
+  },
+  {
+    action: "view",
+    object: "phase code",
+    scope: "module",
+    section: "Which Phase Codes a Timesheet Offers",
+    question: "Why does my timesheet show only some phase codes?",
+    answer: "It depends on what the row is charged to. A project shows only the phase codes ticked \"Timesheet Management\" in that project's Project Setup > Phase Codes. Company shows a company list: the codes ticked in Default Phase Codes plus your own Default Indirect Phase Code (261 codes on the test site, not all 963). With no project on a crew row you see Indirect codes only. Work-order items and GL codes have no phase code.",
+    tags: ["phase code dropdown","only some phase codes","timesheet phase codes","phase code list","missing phase code","company vs project phase codes"]
+  },
+  {
+    action: "view",
+    object: "phase code",
+    scope: "module",
+    section: "Which Phase Codes a Timesheet Offers",
+    question: "Does the Phase Code dropdown in a timesheet use Global Data or the project's mapped phase codes?",
+    answer: "Both, depending on the row. Choose a project and it uses that project's mapped codes (Project Setup > Phase Codes, Timesheet Management box). Choose Company and it uses a company list built from Global Data phase codes with the Labor cost type, narrowed by your Default Phase Codes. All codes, types and cost types are defined in Global Data > UOM, Phasecode & GL Codes.",
+    tags: ["phase code global data or project","company phase codes","project mapped phase codes","timesheet management checkbox","cost type filter"]
+  },
+  {
+    action: "view",
+    object: "phase code",
+    scope: "module",
+    section: "Which Phase Codes a Timesheet Offers",
+    question: "Why is the Phase Code dropdown empty for my project?",
+    answer: "No phase code has the Timesheet Management box ticked in that project's Project Setup > Phase Codes. Ask the PM to tick the codes field staff may use (and check the Cost Type ticks under the gear icon > Settings). On the test site only 6 of 50 projects had any, so Arena Steel Plant - Phase 1 showed none.",
+    tags: ["phase code dropdown empty","no phase codes for project","timesheet management box","project phase codes not showing"]
+  },
+  {
+    action: "configure",
+    object: "phase code",
+    scope: "module",
+    section: "Which Phase Codes a Timesheet Offers",
+    question: "How do I make a project's phase codes appear in timesheets?",
+    answer: "Open the project, go to Project Setup > Phase Codes, click the gear icon to choose the Cost Types for Timesheet Management, then tick the Timesheet Management box on each phase code field staff may charge. In Time Management choose that project and open Phase Code to check.",
+    tags: ["map phase codes to project","timesheet management checkbox","enable phase codes for timesheets"]
+  },
+  {
+    action: "view",
+    object: "phase code",
+    scope: "module",
+    section: "Which Phase Codes a Timesheet Offers",
+    question: "What does the Cost Type setting do for timesheet phase codes?",
+    answer: "On Project Setup > Phase Codes the gear icon opens Settings (\"Select the Cost Type for each category to display Phase Codes\"). Timesheet Management and Equipment Management each have their own Cost Type ticks (Material, Equipment, Labor, Unit Rate, Sub Contractor, BOQ's, Freight Charges, Fuel & Gas). In Arena Residential Project Timesheet Management has Material, Equipment and Labor ticked, and every ticked code carries those cost types.",
+    tags: ["cost type phase codes","timesheet management cost type","phase code settings gear"]
+  },
+  {
+    action: "configure",
+    object: "default phase codes",
+    scope: "module",
+    section: "My Timesheet",
+    question: "What does the Default Phase Codes button do?",
+    answer: "It opens \"Set Default Phase Code\", a tick list of the codes available for your log level (with Company: 269 labor codes; with a project: that project's mapped codes). The Phase Code drop-down on your rows offers only the ticked ones, plus your Default Indirect Phase Code from Global Rosters for Company. Untick codes you never use.",
+    tags: ["default phase codes","what does default phase codes do","default phase codes button","set default phase code","phase code shortlist","timesheet default codes"]
+  },
+  {
+    action: "view",
+    object: "phase code",
+    scope: "module",
+    section: "Which Phase Codes a Timesheet Offers",
+    question: "Why do I see Indirect phase codes first in the timesheet?",
+    answer: "With no project chosen the list offers Indirect codes only (67 on the test site). On My Timesheet your own Default Indirect Phase Code from Global Data > Users & Permissions > Global Rosters is added at the top (System Admin: 10.2020 OVHD - Project Manager).",
+    tags: ["indirect phase codes","default indirect phase code","ovhd project manager"]
+  },
+  {
+    action: "view",
+    object: "crew",
+    scope: "module",
+    section: "My Crew Timesheet",
+    question: "Where does the Crew list in My Crew Timesheet come from?",
+    answer: "From the Log Level Category. Company and GL Codes list the crews in Global Data > Crews (18 on the test site). Projects lists that project's Project Crews (Project Setup > People > Project Crews). Work Orders lists the crews assigned to the chosen work order. If none exist you see \"Please create a Crew in order to continue\".",
+    tags: ["crew dropdown","which crews can I choose","crew list","where crews come from","global crews vs project crews","crew list timesheet"]
+  },
+  {
+    action: "view",
+    object: "crew",
+    scope: "module",
+    section: "My Crew Timesheet",
+    question: "Why don't I see my crew in My Crew Timesheet?",
+    answer: "Check the Log Level Category. A crew created only in a project shows under Projects with that project chosen, not under Company; a Global Data crew shows under Company and GL Codes. Arena Steel Plant - Phase 1 has no Project Crews, so choosing Projects there says \"Please create a Crew in order to continue\".",
+    tags: ["crew missing timesheet","crew not showing","please create a crew"]
+  },
+  {
+    action: "view",
+    object: "roster",
+    scope: "module",
+    section: "My Crew Timesheet",
+    question: "Where does the Roster dropdown on a crew timesheet row come from?",
+    answer: "It lists the crew's members first (tagged Crew) and then every other person in Global Data > Users & Permissions > Global Rosters (tagged Global), as \"ID - Name\" with a search box. Daily crew has 100 rosters, which are the first 100 entries.",
+    tags: ["roster dropdown","employee dropdown","crew members list","global rosters timesheet"]
+  },
+  {
+    action: "view",
+    object: "timesheet mode",
+    scope: "module",
+    section: "My Crew Timesheet",
+    question: "Why does my crew timesheet say to select a shift type in settings?",
+    answer: "The crew has no Timesheet Mode. Open Settings > Timesheet Settings > Timesheet Mode, choose the crew and pick Daily, Weekly by day or Weekly, then Save Changes. The crew's mode then shows as \"Timesheet Mode: ...\" at the top.",
+    tags: ["select shift type in settings","timesheet mode missing","cannot create timesheet log"]
+  },
+  {
+    action: "view",
+    object: "template",
+    scope: "module",
+    section: "My Timesheet",
+    question: "Why do I see only some timesheet templates?",
+    answer: "The Select Template list follows the Timesheet Mode of the person or crew. Daily and Weekly By Day offer 8 templates on the test site (Crew Timesheet, CS Tech Daily Template, CS Tech Weekly by Day Template, Daily Test Template, dsfd, Field Template, Moore Template, Weekly By Day Template); Weekly offers 5. All 18 are managed in Settings > Timesheet Template.",
+    tags: ["template dropdown","timesheet templates missing","template by mode"]
+  },
+  {
+    action: "view",
+    object: "craft class",
+    scope: "module",
+    section: "My Timesheet",
+    question: "Where do Craft and Class come from on a timesheet row?",
+    answer: "They fill in from the employee's record in Global Data > Users & Permissions > Global Rosters (System Admin shows Craft labourer, Class 1). Change them there.",
+    tags: ["craft","class","craft and class timesheet"]
+  },
+  {
+    action: "view",
+    object: "earning code",
+    scope: "module",
+    section: "My Timesheet",
+    question: "Where do the 1 (ST), 2 (OT) hour columns come from?",
+    answer: "They are the earning codes added to the chosen timesheet template (Settings > Timesheet Template > Earnings Codes). The codes themselves are the Global Data > Settings > Earnings Codes. Add or remove earning codes in the template to change the columns.",
+    tags: ["earning code columns","st ot columns","regular pay over time"]
+  },
+  {
+    action: "import",
+    object: "innclock",
+    scope: "module",
+    section: "My Timesheet",
+    question: "How does Import From Innclock AI work?",
+    answer: "Choose a past date on My Timesheet (or My Crew Timesheet) and click \"Import From Innclock AI\" to bring in clock-in and clock-out data. The organisation must give consent in Global Data > Marketplace > Inn Clock Consent (\"Sign In to Inn Clock AI\"). For today or a future date you get \"Logs for the current and future dates cannot be fetched\".",
+    tags: ["innclock import","clock in clock out import","inn clock ai","innclock consent"]
+  },
+  {
+    action: "view",
+    object: "clone log",
+    scope: "module",
+    section: "My Timesheet",
+    question: "What does Clone Log do?",
+    answer: "It lists your earlier logs grouped by date (for example drafts of 2nd February 2026) with a preview showing mode, template and Ball in Court. Pick one and Submit to copy it into the current log; you are asked whether to append the data to the existing data.",
+    tags: ["clone log","copy previous timesheet","duplicate log"]
+  },
+  {
+    action: "view",
+    object: "unsaved changes",
+    scope: "module",
+    section: "My Timesheet",
+    question: "Why does it say Changes not saved when I leave the timesheet?",
+    answer: "You added rows that were not saved. The prompt \"You have unsaved changes. Press Ok to proceed anyway.\" lets you leave and lose them; Cancel keeps you on the timesheet so you can Save as Draft or Submit.",
+    tags: ["changes not saved","unsaved changes timesheet"]
+  },
+  {
+    action: "view",
+    object: "timesheet dashboard",
+    scope: "module",
+    section: "Dashboard",
+    question: "What does the Time Management Dashboard show?",
+    answer: "Total Hours Worked, Total Labor Cost, the charts Hours by Earning Code and Cost by Earning Code, and a Detailed Breakdown table (Project, Phase Code, Labor Code, Craft, Class, Total). Pick a date range and the Company/Projects/WO/GL Accounts filter; Hours View and Amount View switch between hours and cost.",
+    tags: ["time management dashboard","timesheet dashboard","what is the timesheet dashboard","total hours worked","total labor cost","hours by earning code"]
+  },
+  {
+    action: "view",
+    object: "timesheet dashboard",
+    scope: "module",
+    section: "Dashboard",
+    question: "Why is the Time Management Dashboard empty?",
+    answer: "No date range is chosen or no timesheets are logged for the selection. On the test site it showed 0.00 H, 0 cost and \"No data\" because no logs are submitted. Choose a date range and the projects you want.",
+    tags: ["dashboard empty","no data dashboard timesheet"]
+  },
+  {
+    action: "view",
+    object: "timesheet dashboard",
+    scope: "module",
+    section: "Dashboard",
+    question: "Where does the Company/Projects/WO/GL Accounts list on the Dashboard come from?",
+    answer: "It lists Company, the projects, and the work-order items and GL codes timesheet rows can use. It is the same set as the row drop-down on My Timesheet.",
+    tags: ["dashboard filter projects work orders gl","company projects wo gl accounts"]
+  },
+  {
+    action: "view",
+    object: "timesheet logs",
+    scope: "module",
+    section: "Timesheet Logs",
+    question: "Why are my timesheet logs not showing in Timesheet Logs?",
+    answer: "Check the filters. The Mode filter may open on Weekly By Day, which hides Daily logs; set Mode to All and widen the Date Range and Status. Drafts may not be listed. The test site showed \"Total Logs : 0\" on both tabs.",
+    tags: ["no timesheet logs","logs missing","timesheet logs empty","mode filter weekly by day"]
+  },
+  {
+    action: "view",
+    object: "timesheet logs",
+    scope: "module",
+    section: "Timesheet Logs",
+    question: "What is the difference between My Timesheet Logs and My Crew Timesheet Logs?",
+    answer: "My Timesheet Logs list logs entered on My Timesheet (one person); My Crew Timesheet Logs list logs entered on My Crew Timesheet (a crew). Both have the same filters and Export menu.",
+    tags: ["my timesheet logs","my crew timesheet logs"]
+  },
+  {
+    action: "view",
+    object: "timesheet data",
+    scope: "module",
+    section: "Timesheet Logs",
+    question: "Where do approved timesheet hours go?",
+    answer: "Completed logs feed the Timesheet Data Summary (Approved toggle), the Time Management Dashboard and the Export formats (VP Excel, VP CSV, Dynamics 365, QuickBooks, SAP, ComputerEase, Project Wise). Payroll Locking then stops edits after the cut-off. The Work Order module has its own Timesheets tabs that use the same screens.",
+    tags: ["approved hours","where do timesheets go","timesheet payroll export","timesheet cost"]
+  },
+  {
+    action: "view",
+    object: "timesheet issue",
+    scope: "module",
+    section: "Timesheet Issues",
+    question: "What does the Issues tab in Time Management show?",
+    answer: "Rejected timesheets as items: counters Total Issues, Issues Approved and Issues Rejected, and a table with TSI Number, Level, Raised on Date and Time, Raised by, Image, Assign To, Due Date, Chat, Comments and See History. Filters: Log ID, Raised On, Raised By. It is empty until a log is rejected.",
+    tags: ["timesheet issues tab","tsi number","issues approved rejected"]
+  },
+  {
+    action: "view",
+    object: "data summary",
+    scope: "module",
+    section: "Timesheet Data Summary",
+    question: "What tabs does the Timesheet Data Summary have?",
+    answer: "People, Crew, Phase Code, Project, Work Order, Earnings Code, GL Code and Detailed View. Each has Daily & Weekly by Day and Weekly sub-tabs, a date range, a log level, Amount/Hours and Submitted/Approved toggles and Color Configuration.",
+    tags: ["data summary tabs","timesheet data summary tabs"]
+  },
+  {
+    action: "view",
+    object: "data summary",
+    scope: "module",
+    section: "Timesheet Data Summary",
+    question: "What is the difference between Submitted and Approved in the Data Summary?",
+    answer: "Submitted counts logs sent for approval, including those still waiting. Approved counts only logs approved at every level. Use Approved for payroll and client cost reports.",
+    tags: ["submitted vs approved","data summary approved toggle"]
+  },
+  {
+    action: "view",
+    object: "data summary",
+    scope: "module",
+    section: "Timesheet Data Summary",
+    question: "What are Payroll Hours and Project Hours in the Weekly data summary?",
+    answer: "They follow the Payroll and Project flags on each earning code (Settings > Earnings Codes, shared with Global Data > Settings > Earnings Codes). Payroll Hours are hours paid; Project Hours are hours charged to projects.",
+    tags: ["payroll hours","project hours","weekly data summary"]
+  },
+  {
+    action: "view",
+    object: "color configuration",
+    scope: "module",
+    section: "Timesheet Data Summary",
+    question: "What does Color Configuration do?",
+    answer: "It opens Configure Colors with Hours and Amount tabs. Click Add to make a rule \"Format cells if...\" by Earning Code, Condition, Start Value, End Value and Color, so cells that meet the rule are coloured. It appears on the Data Summary and Reconciliation.",
+    tags: ["color configuration","format cells","configure colors"]
+  },
+  {
+    action: "view",
+    object: "reconciliation",
+    scope: "module",
+    section: "Reconciliation",
+    question: "What are the tabs in Reconciliation?",
+    answer: "Timesheets (with Create Log) and Gate Logs (with Upload Logs), each with Weekly and Daily & Weekly by Day sub-tabs and Color Configuration. Gate Logs has a Reconciliation Logs list with filters for Log IDs, Created By and Rosters.",
+    tags: ["reconciliation tabs","timesheets gate logs","create log reconciliation"]
+  },
+  {
+    action: "upload",
+    object: "gate log",
+    scope: "module",
+    section: "Reconciliation",
+    question: "What format does the gate log upload need?",
+    answer: "Use the template from \"Click here to download template\". Enter Gate In and Gate Out in 24-hour format and dates as MM-DD-YYYY; the maximum is 24 hours. Then Upload and Submit.",
+    tags: ["gate log template","gate in gate out","upload logs format"]
+  },
+  {
+    action: "view",
+    object: "timesheet template",
+    scope: "module",
+    section: "Settings",
+    question: "What is on the Settings page of Time Management?",
+    answer: "Two groups: Timesheet Workflow (Create Workflow, Assign Workflow) and Timesheet Settings (Timesheet Mode, Earnings Codes, Timesheet Template, Payroll Locking, Exclude Projects, Users And Permissions).",
+    tags: ["time management settings","timesheet settings menu"]
+  },
+  {
+    action: "view",
+    object: "earning code",
+    scope: "module",
+    section: "Settings",
+    question: "Are the earning codes in Time Management the same as in Global Data?",
+    answer: "Yes. Settings > Timesheet Settings > Earnings Codes shows the same list as Global Data > Settings > Earnings Codes (for example 1 Regular pay ST, 2 Over Time pay OT, 31 PerDIEM AMOUNT), and the Add Earnings Codes dialog in a template lists the same 15 codes.",
+    tags: ["earning codes global data","earnings codes shared"]
+  },
+  {
+    action: "view",
+    object: "workflow",
+    scope: "module",
+    section: "Settings",
+    question: "Where do timesheet approvers come from?",
+    answer: "From the approvers you pick when you create a level in Settings > Timesheet Workflow (by User or by Role). The user list is the Global Roster system users. The workflow reaches a person or crew through Assign Workflow.",
+    tags: ["timesheet approvers","approver list","who approves timesheets"]
+  },
+  {
+    action: "view",
+    object: "workflow",
+    scope: "module",
+    section: "Settings",
+    question: "What is the difference between Time Management Settings and Project Settings > Time Management?",
+    answer: "Home Time Management > Settings is company-wide: its user list is every Global Roster system user. Project Settings > Time Management does workflow, assign workflow and assign mode for one project: its list is that project's roster and Project Crews. The crews list on the Home page also follows the project you have open.",
+    tags: ["project settings time management","timesheet settings project vs company"]
+  },
+  {
+    action: "view",
+    object: "payroll locking",
+    scope: "global",
+    section: "Settings",
+    question: "Does Payroll Locking also lock productivity logs?",
+    answer: "Yes. The Payroll Locking page says it applies to time management and productivity logs, so Field Works productivity logs close at the same cut-off.",
+    tags: ["payroll locking productivity","lock productivity logs"]
+  },
+  {
+    action: "view",
+    object: "exclude projects",
+    scope: "module",
+    section: "Settings",
+    question: "What is Exclude Projects?",
+    answer: "A Timesheet Settings page where you choose projects to leave out of the global timesheet configuration. It showed \"No Available Projects\" on the test site.",
+    tags: ["exclude projects","timesheet exclude project"]
+  },
+  {
+    action: "view",
+    object: "users permissions",
+    scope: "module",
+    section: "Settings",
+    question: "How do I give people access to Time Management?",
+    answer: "Time Management has its own Users And Permissions page under Settings > Timesheet Settings. Click Add User Group to create a group. It was empty on the test site (\"There are no User Groups created yet!\").",
+    tags: ["timesheet permissions","time management user group"]
+  },
+  {
+    action: "view",
+    object: "roster",
+    scope: "module",
+    section: "Rosters & Crews",
+    question: "Where do rosters and crews in Time Management come from?",
+    answer: "Global Data > Users & Permissions > Global Rosters (people, Craft, Class, Default Indirect Phase Code), Global Data > Crews (company crews) and Project Setup > People > Project Crews (project crews). Time Management has no roster screens of its own; its drop-downs read these lists.",
+    tags: ["rosters and crews source","where do crews come from","timesheet roster lineage"]
+  },
+  {
+    action: "view",
+    object: "setup order",
+    scope: "module",
+    section: "Who sets this up",
+    question: "In what order should I set up Time Management?",
+    answer: "Global Data first (Crews, Global Rosters, Earnings Codes, Work Orders, GL Codes), then Settings (workflow, assign workflow, timesheet mode, template), then each project (Timesheet Management ticks on Phase Codes and Project Crews), then Payroll Locking. After that Field Users can log.",
+    tags: ["time management setup order","how do i set up time management","set up timesheets","set up time management"]
+  },
+  {
+    action: "view",
+    object: "payroll locking",
+    scope: "global",
+    section: "Settings",
+    question: "What is Payroll Locking?",
+    answer: "A cut-off in Settings > Timesheet Settings > Payroll Locking that stops edits to a pay period once payroll has closed. Choose Daily, Weekly or Monthly (Start of The Month, End of The Month or Custom), a Time and a Buffer Time (In Days). It applies to time management and productivity logs.",
+    tags: ["what is payroll locking","payroll locking","payroll lock timesheet"]
   }
 ];
 
@@ -29927,459 +30287,146 @@ const MODULES = [
     "qaItems": QA_TIMEMANAGEMENT,
     "narrative": [
       {
-        "heading": "Admin Role",
-        "intro": "<p>Labor is one of the largest and most closely-watched costs on any construction project, and Time Management is how a company turns hours worked in the field into data the business can act on — payroll, job costing, and productivity analysis all depend on what gets logged here. None of that works, though, until a Time Management Admin (a company-wide, module-scoped admin role, not a single project's Project Manager) has configured the rules every timesheet in the organization operates under. This admin most likely needs to work through most of the Settings area before a single crew can submit a timesheet: a crew can't submit one until an approval workflow has been created (Settings → Timesheet Workflow) and assigned to it; the Timesheet Mode needs setting per user or crew to decide the logging cadence (Daily, Weekly, or Weekly by Day) and default template; Earning Codes need to exist to categorize hours for payroll; and Timesheet Templates need building if the standard fields don't cover what the organization tracks. The admin will also want to decide on Payroll Locking cutoffs so historical pay periods can't be edited after the fact once payroll has processed them.</p><p>Underneath all of this sits the roster and crew structure itself — the Admin (or a Super Admin working in Global Data) most likely needs to create crews in Global Data and populate project rosters with system and non-system users before timesheets can even be logged against them, since My Crew Timesheet explicitly requires a configured crew to log hours for. Configuring these building blocks once and using Copy To / Copy Approval Workflow To to apply them to other users or crews is probably the more efficient path as the roster grows, rather than a Timesheet Lead or PM repeating setup for every crew individually.</p>",
+        "heading": "Who sets this up",
+        "intro": "<p>Time Management turns the hours that people and crews work into approved timesheets, payroll exports and labor reports. A <strong>Module Admin</strong> (or <strong>Super Admin</strong>) sets the rules once; <strong>Field Users</strong> log hours, <strong>PMs</strong> and other approvers review them, and the results show up in Timesheet Logs, the Dashboard and the Data Summary.</p><p>From <strong>Home</strong>, click the <strong>Time Management</strong> tile. The tabs on the left are <strong>Dashboard</strong>, <strong>My Crew Timesheet</strong>, <strong>My Timesheet</strong>, <strong>Timesheet Logs</strong>, <strong>Issues</strong>, <strong>Timesheet Data Summary</strong>, <strong>Reconciliation</strong> and <strong>Settings</strong>. The module opens on My Crew Timesheet.</p>",
         "definitions": [
           {
+            "term": "Who does what",
+            "definition": "**Module Admin / Super Admin** builds workflows, modes, earning codes and templates in **Settings** and keeps the master lists in **Global Data**. **PM / Module Manager** maps phase codes and crews to their project in **Project Setup** and **Project Settings**. **Field User** (foreman, engineer, crew member) logs hours. **Approver** (named in the workflow) approves or rejects. Reconcilers check logs against gate data."
+          },
+          {
+            "term": "Where Time Management data comes from",
+            "definition": "**People:** the Roster drop-down lists the crew members first (tagged **Crew**), then everyone else in **Global Data → Users & Permissions → Global Rosters** (tagged **Global**). **Crews:** **Global Data → Crews** for Company and GL Codes logs; the project's **Project Setup → People → Project Crews** for Project logs. **Projects, work orders, GL codes:** the Projects list, **Global Data → Work Orders** and **Global Data → UOM, Phasecode & GL Codes → GL Codes**. **Phase codes:** see \"Which Phase Codes a Timesheet Offers\". **Earning columns (ST, OT...):** the template's earning codes, which come from **Global Data → Settings → Earnings Codes**. **Craft and Class:** the employee's Global Roster record. **Clock-in data:** **Inn Clock AI**, connected in **Global Data → Marketplace → Inn Clock Consent**."
+          },
+          {
+            "term": "Where Time Management data goes",
+            "definition": "Submitted logs go through the approval workflow set in **Settings → Timesheet Workflow**. Rejected logs raise an item in **Issues**. Logs then feed the **Dashboard** (Total Hours Worked, Total Labor Cost), the **Timesheet Data Summary** (Submitted or Approved toggle) and the payroll **Export** formats on **Timesheet Logs**. **Payroll Locking** closes a pay period; it also applies to **Field Works** productivity logs. The **Work Order** module has its own Timesheets tabs that use the same screens."
+          },
+          {
             "term": "Timesheet Workflow",
-            "definition": "The approval-workflow configuration area for Time Management, where multi-level workflows are created and then assigned to specific users or crews."
+            "definition": "The approval path for timesheets. You create the levels under **Settings → Timesheet Workflow → Create Workflow** and give it to people or crews under **Assign Workflow**. A crew cannot submit until a workflow is assigned."
           },
           {
             "term": "Timesheet Mode",
-            "definition": "The configured cadence at which an individual or crew logs time — Daily, Weekly by Day, or Weekly — along with their default timesheet template."
+            "definition": "How often a person or crew logs time: **Daily**, **Weekly by day** or **Weekly**. It also decides which templates they can pick."
           },
           {
             "term": "Earning Code",
-            "definition": "A payroll classification (with a Code, Description, Short Name, and Data Type of Hours or Amount) used to categorize logged time for payroll and/or project-hours reporting. Earning codes can be flagged for Payroll Hours, Project Hours, or both."
+            "definition": "A pay category (for example 1 Regular pay, 2 Over Time pay, 31 PerDIEM) with a Data Type of **HOURS** or **AMOUNT** and flags for **Payroll**, **Project** and **Split Header**. The list is shared with **Global Data → Settings → Earnings Codes**."
           },
           {
             "term": "Payroll Locking",
-            "definition": "A setting that prevents further edits to timesheet data once a payroll period closes. It can be configured on a Daily, Weekly, or Monthly cadence, with specific lock days/dates and times."
+            "definition": "A cut-off that stops edits once a pay period closes: **Daily**, **Weekly** or **Monthly** (Start of The Month, End of The Month or Custom), with a **Time** and a **Buffer Time (In Days)**. The page says it applies to time management and productivity logs."
           }
         ],
         "procedures": [
           {
-            "title": "Create an approval workflow for timesheets",
+            "title": "Set Time Management up in the right order",
             "steps": [
-              "Go to <strong>Settings &gt; Timesheet Workflow &gt; Create Workflow</strong>.",
-              "Click <strong>Create Approval Workflow</strong> and name it.",
-              "Click <strong>Create Level</strong> to add approvers by User or by Role.",
-              "For each level, choose <strong>All must approve</strong> or <strong>Anyone can approve</strong>."
+              "In **Global Data**, check that **Crews**, **Global Rosters** (with Craft, Class and Default Indirect Phase Code), **Earnings Codes**, **Work Orders** and **GL Codes** exist.",
+              "In **Time Management → Settings → Timesheet Workflow**, create an approval workflow and assign it to users and crews.",
+              "In **Settings → Timesheet Settings → Timesheet Mode**, set Daily, Weekly by day or Weekly for each user and crew.",
+              "In **Settings → Timesheet Template**, check the template has the earning codes you need.",
+              "In each project, tick **Timesheet Management** on the phase codes field staff may use (**Project Setup → Phase Codes**) and add the project's crews (**Project Setup → People → Project Crews**).",
+              "Set **Payroll Locking**, then ask Field Users to log hours."
             ]
           },
           {
-            "title": "Assign an approval workflow to a user or crew",
+            "title": "Trace where a timesheet drop-down value comes from",
             "steps": [
-              "Go to <strong>Settings &gt; Timesheet Workflow &gt; Assign Workflow</strong>.",
-              "Select a User or Crew.",
-              "Choose the Approval Workflow to apply.",
-              "Click <strong>Save Changes</strong>."
-            ],
-            "note": "Use <strong>Copy Approval Workflow To</strong> to apply the same workflow to multiple users or crews at once instead of repeating this for each one."
+              "Note which drop-down looks wrong (Roster, Crew, Projects, Phase Code or Template) and which **Log Level Category** is chosen.",
+              "Compare it with the source list named in \"Where Time Management data comes from\" (for example Global Data → Crews for a crew).",
+              "For a phase code, open \"Which Phase Codes a Timesheet Offers\" and follow the checks there.",
+              "If the source list is right but the drop-down is not, check the project selected at the top and the Timesheet Mode of the person or crew."
+            ]
           }
         ]
       },
       {
-        "heading": "Settings",
-        "intro": "<p>Time Management Settings is where a company-wide Time Management Admin configures the rules that every timesheet in the company operates under: who needs to approve what, whether time is logged daily or weekly, how payroll categories map to hours, what a timesheet form actually looks like, and when a payroll period locks for good. This is deliberately not something left to individual Project Managers to decide project-by-project — labor cost categorization and payroll cutoffs need to be consistent across the business, or job-cost and payroll reporting stop being comparable across projects. None of the day-to-day logging and approval described elsewhere in this module works correctly until these are configured — a crew can't submit a timesheet, for instance, until an approval workflow has been assigned to it.</p><p>These settings are organized as a set of distinct, composable building blocks rather than one monolithic configuration screen. Approval Workflows define who signs off and how — typically a Timesheet Lead, PM, or supervisor named as an approver for their crew or project. Timesheet Mode decides the cadence (Daily, Weekly, or Weekly by Day) and default template per user or crew. Earning Codes define the payroll categories that hours get logged against, which is squarely the Time Management Admin's call since it feeds payroll company-wide. Timesheet Templates control the actual fields on the form. And Payroll Locking enforces a hard cutoff so historical pay periods can't be edited after the fact. Each of these can be configured once and then copied to other users or crews, which keeps setup consistent as the roster of people and crews grows.</p>",
+        "heading": "Dashboard",
+        "intro": "<p>The Dashboard shows how many hours were worked and what labor cost, so a <strong>PM</strong> or <strong>Module Admin</strong> can check a period at a glance. It is read-only.</p><p>Choose a <strong>Select Date Range</strong> and one or more entries in the <strong>Company/Projects/WO/GL Accounts</strong> drop-down. The cards <strong>Total Hours Worked</strong> and <strong>Total Labor Cost</strong>, the charts <strong>Hours by Earning Code</strong> and <strong>Cost by Earning Code</strong>, and a <strong>Detailed Breakdown</strong> table then fill in.</p>",
         "definitions": [
           {
-            "term": "Timesheet Workflow",
-            "definition": "The approval-workflow configuration area for Time Management, where multi-level workflows are created and then assigned to specific users or crews."
+            "term": "Company/Projects/WO/GL Accounts filter",
+            "definition": "A multi-select with search and **Select All**. Its options are **Company**, then every project as \"code - name\" (50 on the test site, including **ST-01 - Arena Steel Plant - Phase 1**), then the work-order items and GL codes that timesheet rows can use (**Equipment - Item 1**, **Service - Item 1**, **test - Test** and so on). It is the same set of choices as the Projects/Work Orders/GL Codes drop-down on a timesheet row."
           },
           {
-            "term": "Timesheet Mode",
-            "definition": "The configured cadence at which an individual or crew logs time — Daily, Weekly by Day, or Weekly — along with their default timesheet template."
+            "term": "Hours View and Amount View",
+            "definition": "The two icons above the **Detailed Breakdown** table. **Hours View** shows hours; **Amount View** shows cost and renames the table \"Cost View\" with a **Total** column in rupees. **Manage Columns** and **Save Layout** change which columns you see."
           },
           {
-            "term": "Earning Code",
-            "definition": "A payroll classification (with a Code, Description, Short Name, and Data Type of Hours or Amount) used to categorize logged time for payroll and/or project-hours reporting. Earning codes can be flagged for Payroll Hours, Project Hours, or both."
+            "term": "Detailed Breakdown columns",
+            "definition": "**Project**, **Phase Code - Description**, **Labor Code - Description**, **Craft**, **Class** and **Total (HRS+amount)**. Phase code, craft and class come from what was entered on each timesheet row; the labor code is the earning code."
           },
           {
-            "term": "Split Headers",
-            "definition": "An earning-code setting that places that code under Phase Codes within weekly timesheet templates, rather than as its own column."
-          },
-          {
-            "term": "Timesheet Template",
-            "definition": "A configurable form definition for timesheets, built from Standard and Configurable fields, that determines what a user fills in when logging time. Earning codes can display within a template as a Column or as a Split Time Header."
-          },
-          {
-            "term": "Payroll Locking",
-            "definition": "A setting that prevents further edits to timesheet data once a payroll period closes. It can be configured on a Daily, Weekly, or Monthly cadence, with specific lock days/dates and times."
+            "term": "Where this data comes from",
+            "definition": "Hours logged on **My Timesheet** and **My Crew Timesheet**. On the test site the Dashboard was empty (0.00 H, 0 cost, \"No data\") because no logs are submitted. Which logs count (submitted or approved) was not confirmed on this screen; the **Timesheet Data Summary** has an explicit Submitted/Approved toggle."
           }
         ],
         "procedures": [
           {
-            "title": "Create an approval workflow for timesheets",
+            "title": "Check hours and labor cost for a period",
             "steps": [
-              "Go to <strong>Settings &gt; Timesheet Workflow &gt; Create Workflow</strong>.",
-              "Click <strong>Create Approval Workflow</strong> and name it.",
-              "Click <strong>Create Level</strong> to add approvers by User or by Role.",
-              "For each level, choose <strong>All must approve</strong> or <strong>Anyone can approve</strong>."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/timesheet-workflow/001.jpg",
-                "caption": "Timesheet Workflow under Settings",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/timesheet-create-workflow/001.jpg",
-                "caption": "Create Approval Workflow, to create a workflow",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/timesheet-workflow/003.jpg",
-                "caption": "Several workflows for different approval processes",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/timesheet-create-workflow/002.jpg",
-                "caption": "The Description tab for a level",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/timesheet-create-workflow/003.jpg",
-                "caption": "Edit and Delete icons beside each level",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/timesheet-workflow/004.jpg",
-                "caption": "A workflow with more than one approval level",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/timesheet-workflow/006.jpg",
-                "caption": "Add Role, for choosing a role such as Foreman or Supervisor",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/timesheet-create-workflow/006.jpg",
-                "caption": "Tree view of the workflow as a flow chart",
-                "step": 4
-              },
-              {
-                "src": "assets/notion/timesheet-workflow/005.jpg",
-                "caption": "Choosing All must approve or Anyone can approve for a level",
-                "step": 4
-              }
+              "Open **Time Management → Dashboard**.",
+              "Pick a **Select Date Range**.",
+              "Open **Company/Projects/WO/GL Accounts** and choose what to include.",
+              "Read **Total Hours Worked**, **Total Labor Cost** and the two earning-code charts.",
+              "Use **Hours View** or **Amount View** to switch the **Detailed Breakdown** between hours and cost."
             ]
-          },
-          {
-            "title": "Assign an approval workflow to a user or crew",
-            "steps": [
-              "Go to <strong>Settings &gt; Timesheet Workflow &gt; Assign Workflow</strong>.",
-              "Select a User or Crew.",
-              "Choose the Approval Workflow to apply.",
-              "Click <strong>Save Changes</strong>."
-            ],
-            "note": "Use <strong>Copy Approval Workflow To</strong> to apply the same workflow to multiple users or crews at once instead of repeating this for each one.",
-            "images": [
-              {
-                "src": "assets/notion/timesheet-assign-workflow/001.jpg",
-                "caption": "Assign Workflow: choosing a user or crew and a workflow",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/timesheet-workflow/007.jpg",
-                "caption": "Save Changes, to assign the workflow to the selected user or crew",
-                "step": 4
-              },
-              {
-                "src": "assets/notion/timesheet-assign-workflow/002.jpg",
-                "caption": "Clear, to reset the selection and detach the workflow",
-                "step": 4
-              }
-            ]
-          },
-          {
-            "title": "Set the timesheet logging mode",
-            "steps": [
-              "Go to <strong>Timesheet Settings &gt; Timesheet Mode</strong>.",
-              "Under <strong>My Timesheet</strong> (individual) or <strong>My Crew Timesheet</strong> (per crew), select <strong>Daily</strong>, <strong>Weekly by Day</strong>, or <strong>Weekly</strong>.",
-              "Choose a Default Template.",
-              "Click <strong>Save Changes</strong>."
-            ],
-            "note": "Use <strong>Copy To</strong> to apply the same mode to other users or crews.",
-            "images": [
-              {
-                "src": "assets/notion/timesheet-settings/002.jpg",
-                "caption": "Timesheet Mode: Daily, Weekly by Day or Weekly, with a default template",
-                "step": 2
-              }
-            ]
-          },
-          {
-            "title": "Create earning codes for payroll",
-            "steps": [
-              "Go to <strong>Timesheet Settings &gt; Earning Codes</strong>.",
-              "Click <strong>Add</strong> to insert a row.",
-              "Enter the Code, Description, and Short Name.",
-              "Set the Data Type to Hours or Amount.",
-              "Choose whether the code counts toward Payroll Hours and/or Project Hours."
-            ],
-            "note": "Enable <strong>Split Headers</strong> to have the code appear under Phase Codes in weekly templates instead of as its own column.",
-            "images": [
-              {
-                "src": "assets/notion/timesheet-settings/003.jpg",
-                "caption": "Earning Codes: several codes, then Save Changes",
-                "step": 1
-              }
-            ]
-          },
-          {
-            "title": "Build a custom timesheet template",
-            "steps": [
-              "Go to <strong>Timesheet Settings &gt; Timesheet Templates</strong>.",
-              "Click <strong>Create</strong>.",
-              "Open the new template and use <strong>Add Field</strong> to configure Standard and Configurable fields.",
-              "Choose whether earning codes display as a Column or a Split Time Header.",
-              "Click <strong>Save Changes</strong>."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/timesheet-settings/004.jpg",
-                "caption": "Create, for a new timesheet template",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/timesheet-settings/005.jpg",
-                "caption": "Add Field, for a configurable field with its type",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/timesheet-settings/006.jpg",
-                "caption": "Adding more configurable fields",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/timesheet-settings/007.jpg",
-                "caption": "Copy Field, to create a similar field",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/timesheet-settings/008.jpg",
-                "caption": "Delete Field",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/timesheet-settings/009.jpg",
-                "caption": "A time header type for each time header",
-                "step": 4
-              },
-              {
-                "src": "assets/notion/timesheet-settings/010.jpg",
-                "caption": "Save Changes for the template",
-                "step": 5
-              }
-            ]
-          },
-          {
-            "title": "Lock payroll periods",
-            "steps": [
-              "Go to <strong>Timesheet Settings &gt; Payroll Locking</strong>.",
-              "Choose Daily, Weekly, or Monthly mode.",
-              "In Weekly mode, pick the lock day and time. In Monthly mode, choose Start of Month, End of Month, or a Custom date, then set the lock time."
-            ],
-            "note": "Once a period locks, timesheet data within it can no longer be edited — make sure corrections are made before the lock takes effect.",
-            "images": [
-              {
-                "src": "assets/notion/timesheet-settings/013.jpg",
-                "caption": "Payroll Locking: Daily, Weekly or Monthly",
-                "step": 2
-              }
-            ]
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/notion/timesheet-workflow/002.jpg",
-            "caption": "Approval workflows can be set up to suit your organization"
-          },
-          {
-            "src": "assets/notion/timesheet-settings/001.jpg",
-            "caption": "Timesheet Settings"
-          },
-          {
-            "src": "assets/notion/timesheet-settings/011.jpg",
-            "caption": "Searching the timesheet templates"
-          },
-          {
-            "src": "assets/notion/timesheet-settings/012.jpg",
-            "caption": "Deleting a template from its menu"
           }
         ]
       },
       {
-        "heading": "Rosters & Crews",
-        "intro": "<p>Rosters and crews are the backbone that timesheets are logged against — you cannot log crew hours without a crew to log them for, and you cannot assign a system or non-system worker to a project without them existing on that project's roster. This section covers how the people and groups that Time Management (and other modules) depend on are actually set up, both at the company-wide (Global Data) level, where a Super Admin or Time Management Admin maintains the master crew list, and at the individual project level, where a Project Manager assembles the specific team a given job needs.</p><p>Arena distinguishes between a crew defined once in Global Data — available for reuse across the company — and a crew or roster entry that's specific to one project. This two-tier model means a company can standardize its crew definitions centrally while still letting individual Project Managers assemble the specific mix of system users, non-system (temporary) workers, and crews that a given job actually needs. Non-system users deserve particular attention: not every worker on a job site is a licensed Arena user, and the roster needs a way to represent temporary or subcontracted labor without requiring a full account for each person — a distinction a PM or field administrator manages directly on their project's roster.</p><p>Because roster data can be extensive — potentially hundreds of workers across a large project — Arena supports bulk operations (Excel upload/download) and configurable custom columns, so a roster can capture whatever fields a project actually needs to track (certifications, badge numbers, trade classifications) without being limited to a fixed schema.</p>",
+        "heading": "My Timesheet",
+        "intro": "<p>My Timesheet is where one person logs their own hours against a project, work order or GL code. <strong>Field Users</strong> and anyone who logs time for themselves use it; the <strong>Timesheet Mode</strong> and the approval workflow come from <strong>Settings</strong>.</p><p>The top shows <strong>Select Log Level Category</strong>, <strong>Select Template</strong>, <strong>Manage Columns</strong> and <strong>Notes</strong>, then \"Created by\" and \"Timesheet Mode: Daily\", the date and the buttons <strong>Add</strong>, <strong>Clone Log</strong>, <strong>Default Phase Codes</strong>, <strong>Show Data Summary</strong>, <strong>Import From Innclock AI</strong>, <strong>Save as Draft</strong> and <strong>Submit</strong>.</p>",
         "definitions": [
           {
-            "term": "Crew (Global Data)",
-            "definition": "A company-wide crew definition created once in Global Data, consisting of a name, assigned Supervisors and Foremen, and a set of Rosters (system and non-system users), available for reuse across projects."
+            "term": "Log Level Category",
+            "definition": "**Company**, **Projects**, **Work Orders** or **GL Codes**. It decides what the hours are charged to and where the phase codes come from. With **Company** each row has a **Company/Projects/Work Orders/GL Codes** drop-down (59 options on the test site: Company, 50 projects, 7 work-order items, 1 GL code). With **Projects** a project drop-down appears at the top (it opens on the first project) and every new row is fixed to that project; the column is then called **Projects**. A GL code or work-order item row has no phase code."
           },
           {
-            "term": "Project Crew",
-            "definition": "A crew as it exists on a specific project — either built manually or copied in from Global Data — that can also be mapped to other projects."
+            "term": "Timesheet Mode and template",
+            "definition": "The mode (**Daily**, **Weekly By Day** or **Weekly**) is the one assigned to you in **Settings → Timesheet Mode** (or **Project Settings → Time Management → Assign Mode**). The **Select Template** list depends on the mode: Daily and Weekly By Day show 8 templates on the test site (Crew Timesheet, CS Tech Daily Template, CS Tech Weekly by Day Template, Daily Test Template, dsfd, Field Template, Moore Template, Weekly By Day Template); a weekly user sees the weekly templates. The templates are built in **Settings → Timesheet Template**."
           },
           {
-            "term": "System User (Roster)",
-            "definition": "A licensed Arena user added to a project's roster, sourced from Global Data's Users & Permissions (Global Rosters)."
+            "term": "Craft and Class",
+            "definition": "Filled in automatically from your record in **Global Data → Users & Permissions → Global Rosters**. On the test site System Admin (001) shows Craft **labourer**, Class **1**, the same as in Global Rosters."
           },
           {
-            "term": "Non-System User (Roster)",
-            "definition": "A temporary or subcontracted worker added to a project's roster who does not have (and does not need) an Arena login. Non-system users can be created manually or pulled in from existing non-system users in Global Data."
+            "term": "Earning-code columns",
+            "definition": "The columns after Class (for example **1 (ST)**, **2 (OT)**, **3**) are the earning codes added to the chosen template. In the **Crew Timesheet** template they are 1 Regular pay, 2 Over Time pay and 3 Double pay; the codes themselves are the **Global Data → Settings → Earnings Codes**."
           },
           {
-            "term": "Configurable Fields (Roster)",
-            "definition": "Custom columns added to roster tables to capture additional data, using field types such as Attachment, Check box, Date, Label, Multi select, Paragraph, Roster, Scribble, Single select, Table, Text box, Time, or Signature."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Create a new crew (Global Data)",
-            "steps": [
-              "Go to <strong>Global Data &gt; Crews</strong>.",
-              "Click <strong>Create</strong>.",
-              "Enter the Crew Name.",
-              "Choose Supervisors and Foremen from their dropdowns.",
-              "Select Rosters (system and non-system users) for the crew.",
-              "Click <strong>Submit</strong>."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/timesheet-crew/001.jpg",
-                "caption": "Company-level crews",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/timesheet-crew/002.jpg",
-                "caption": "Create, with a crew name",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/timesheet-crew/003.jpg",
-                "caption": "Selecting the users for the crew and clicking Submit",
-                "step": 5
-              }
-            ]
+            "term": "Default Phase Codes",
+            "definition": "Opens **Set Default Phase Code**: a searchable, A-Z sortable tick list (\"D - code - description\" for Direct, \"I - ...\" for Indirect) with **Submit**. What you tick is the short list your Phase Code drop-down offers. With category Company the list held 269 labor codes (260 ticked on the test site); with category Projects it held only that project's mapped codes. See \"Which Phase Codes a Timesheet Offers\"."
           },
           {
-            "title": "Add a crew to a specific project",
-            "steps": [
-              "Go to <strong>Project Setup &gt; Roster &gt; Project Crews</strong>.",
-              "Click <strong>Create Crew</strong> to build one manually, or <strong>Copy Crews from Global Data</strong> to import existing crews."
-            ],
-            "note": "Use <strong>Map Crews to Projects</strong> to copy a crew across to other projects instead of recreating it each time."
+            "term": "Clone Log",
+            "definition": "Opens a list of your earlier logs, grouped by date (for example \"Timesheet Logs of 2nd February, 2026 (2)\", each marked **Draft**), with a preview that shows Created by, Mode, Template, Log Level Category and **Ball in Court**. Pick one and **Submit** to copy it into the current log; you are asked whether to append to existing data."
           },
           {
-            "title": "Add a system user to a project roster",
-            "steps": [
-              "Go to <strong>Project Setup &gt; Roster &gt; System User</strong>.",
-              "Click <strong>Add</strong>.",
-              "Select users from Global Data (<strong>Global Data &gt; Users &amp; Permissions &gt; Global Rosters</strong>) — selected users appear on the right side of the dialog.",
-              "Click <strong>Submit</strong>."
-            ]
+            "term": "Import From Innclock AI",
+            "definition": "Pulls clock-in and clock-out records for the chosen date from **Inn Clock AI** into the log. It needs the organisation to have given consent in **Global Data → Marketplace → Inn Clock Consent**. For today or a future date it shows \"Logs for the current and future dates cannot be fetched\", so pick a past date."
           },
           {
-            "title": "Add a temporary (non-system) worker to a project",
-            "steps": [
-              "Go to <strong>Project Setup &gt; Roster &gt; Non System User</strong>.",
-              "Click <strong>Add</strong> to manually create one, or <strong>Get Users from Global Data</strong> to select existing non-system users.",
-              "Fill in the required fields and click <strong>Submit</strong>."
-            ]
+            "term": "Draft versus Submit",
+            "definition": "**Save as Draft** keeps an incomplete log (an Employee is always needed). **Submit** sends it to the first level of your approval workflow. Leaving the screen with unsaved rows asks \"Changes not saved - You have unsaved changes. Press Ok to proceed anyway.\""
           },
           {
-            "title": "Bulk upload or export rosters",
-            "steps": [
-              "On the Roster (System Users or Non-System Users) page, use <strong>Upload Excel</strong> to bulk-add roster records, or <strong>Download Excel</strong> to export the current roster list."
-            ]
-          },
-          {
-            "title": "Add custom fields to roster tables",
-            "steps": [
-              "Go to <strong>Global Settings &gt; Roster Settings</strong>.",
-              "Use <strong>Configurable Fields</strong> to add a custom column, choosing its field type (Attachment, Check box, Date, Label, Multi select, Paragraph, Roster, Scribble, Single select, Table, Text box, Time, Signature).",
-              "Click <strong>Save Changes</strong>."
-            ]
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/notion/timesheet-crew/004.jpg",
-            "caption": "Searching for people when building a crew"
-          },
-          {
-            "src": "assets/notion/timesheet-crew/005.jpg",
-            "caption": "Searching the list of crews"
-          },
-          {
-            "src": "assets/notion/roster-system-users/001.jpg",
-            "caption": "Rosters for system users"
-          },
-          {
-            "src": "assets/notion/roster-system-users/002.jpg",
-            "caption": "Roster cards with Edit and Delete"
-          },
-          {
-            "src": "assets/notion/roster-system-users/003.jpg",
-            "caption": "Upload Excel to add many rosters at once"
-          },
-          {
-            "src": "assets/notion/roster-system-users/005.jpg",
-            "caption": "Switching the roster between card and table view"
-          },
-          {
-            "src": "assets/notion/rosters-non-system-users/001.jpg",
-            "caption": "Add, to register a non-system user"
-          },
-          {
-            "src": "assets/notion/rosters-non-system-users/002.jpg",
-            "caption": "Non-system roster cards with Edit and Delete"
-          },
-          {
-            "src": "assets/notion/rosters-non-system-users/003.jpg",
-            "caption": "Non-system roster in card and table views"
-          }
-        ]
-      },
-      {
-        "heading": "Timesheet Logs",
-        "intro": "<p>Timesheet Logs is where day-to-day work hours get captured, submitted, reviewed, and either approved or sent back for correction. It is the operational core of Time Management: every hour a person or crew works against a project, work order, or GL code eventually passes through here, whether it's a Field User (a foreman, field engineer, or crew member) entering their own time in My Timesheet, or a supervisor or Timesheet Lead logging a whole crew's hours at once in My Crew Timesheet.</p><p>The reason Arena separates individual and crew logging is that construction labor is tracked both ways in practice — a salaried project engineer logs their own time as an End User, while a foreman is often the one accounting for an entire crew's hours across phase codes and earning codes for the day. Both paths funnel into the same underlying log structure and the same approval mechanics, so payroll and project-cost reporting can treat them uniformly once they're submitted.</p><p>Getting hours logged accurately is only half the job — a Timesheet Lead or Project Manager also needs confidence that hours are charged against the RIGHT phase code and the right job, not just logged with the right number of hours. This is what the row's <strong>\"Company/Projects/Work Orders/GL Codes\"</strong> selector, immediately before the Phase Code field, is for. It decides where the adjacent Phase Code dropdown pulls its list from:</p><ul><li>Choosing <strong>\"Company\"</strong> pulls the Phase Code dropdown from the full company-wide Global Data master list — every phase code the organization has ever defined, unfiltered. This is convenient because it always has something to pick from, but it also means a field user can accidentally select a phase code that actually belongs to a completely different job, which quietly miscodes labor cost against the wrong project.</li><li>Choosing a specific <strong>Project</strong> restricts the Phase Code dropdown to only that project's own mapped subset. That subset isn't automatic — it exists only because a Project Manager or module manager went into that project's own <strong>Project Setup → Phase Codes</strong> screen and checked a \"Timesheet Management\" box for each phase code their field staff should be able to see there (further narrowed by a Cost Type setting on that same screen, so a project can restrict mapping to, say, only Labor-type codes). If a project has never done this setup step, its Phase Code dropdown under that project's name will show nothing at all — which is a real, expected business process a PM needs to complete before their crews can log project-scoped time, not a bug.</li></ul><p>Because of this, leaving a row set to \"Company\" out of habit is a genuine risk that construction operations teams should actively manage: it bypasses the very filtering a Project Manager set up to keep a project's field staff choosing only from codes relevant to their job. A Timesheet Lead reviewing logs should watch for this, and a Time Management Admin or PM should treat getting project-level Phase Code mapping done early as part of standard project setup, not an optional nicety.</p><p>Separately, the <strong>\"Default Phase Codes\"</strong> button on My Timesheet is unrelated to this Company/Project source choice — it just opens a personal shortlist (still drawn from the full global list) that a Field User can pre-select for faster logging of their own usual codes. It doesn't change which list the row's dropdown ultimately draws from.</p><p>Because timesheets feed payroll and job costing, Arena tracks a log's lifecycle explicitly rather than treating it as a simple yes/no submission. A log can sit as an incomplete draft, move to submitted, work through multiple approval levels, get rejected and bounced back, or finally lock as completed. This status model is what lets approvers, Time Management Admins, and the Field Users who submitted the hours all know exactly where a given entry stands at any moment — and it's also what protects payroll from processing hours that haven't cleared review.</p><p>Once logs exist, filtering and exporting become just as important as entering the data in the first place. A payroll administrator rarely wants to look at one person's timesheet at a time; they need to slice logs by project, crew, status, or date range, and then get that data into whatever system actually runs payroll — which is why dedicated export formats exist for common downstream tools, and why Export is restricted to Admin users.</p>",
-        "definitions": [
-          {
-            "term": "My Timesheet",
-            "definition": "The screen where an individual logs their own work hours against a Company/Project/Work Order/GL Code combination, using a template and a selected date range."
-          },
-          {
-            "term": "My Crew Timesheet",
-            "definition": "The screen a supervisor or foreman uses to log hours for an entire crew at once, entering hours per employee, phase code, and earning code for a selected date range. Requires timesheet settings and an approval workflow to already be configured for that crew."
-          },
-          {
-            "term": "My Timesheet Logs / My Crew Timesheet Logs",
-            "definition": "The review screens where submitted individual or crew timesheets are approved or rejected by designated approvers."
-          },
-          {
-            "term": "Draft",
-            "definition": "A timesheet log status for an entry saved without all mandatory fields filled in (aside from Employee, which is always required). Drafts are incomplete and not yet submitted for approval."
-          },
-          {
-            "term": "Submitted for Approval",
-            "definition": "The status of a timesheet log that has been completed and sent into the approval workflow, but has not yet been acted on by an approver."
-          },
-          {
-            "term": "Workflow in Progress",
-            "definition": "The status of a timesheet log that has been approved at one level of a multi-level approval workflow but is still pending approval at another level."
-          },
-          {
-            "term": "Completed",
-            "definition": "The status of a timesheet log that has been approved at every level of its workflow. A completed log is locked and can no longer be edited."
-          },
-          {
-            "term": "Rejected",
-            "definition": "The status of a timesheet log that an approver declined. Rejection automatically creates a corresponding entry in Timesheet Issues so the submitter can correct and resubmit."
+            "term": "Where this data goes",
+            "definition": "Submitted logs appear in **Timesheet Logs → My Timesheet Logs** and in the **Timesheet Data Summary**; approvers act on them there. Rejections raise an item in **Issues**."
           }
         ],
         "procedures": [
           {
             "title": "Log your own work hours",
             "steps": [
-              "Go to <strong>My Timesheet</strong>.",
-              "Select the Company, Project, Work Order, and GL Code, and confirm the Template (auto-populated from your default setting).",
-              "Pick a Date Range.",
-              "Click <strong>Add</strong> to insert a row.",
-              "Fill in the phase code, earning code, and hours.",
-              "Click <strong>Submit for Approval</strong>, or click <strong>Save as Draft</strong> if the entry is incomplete."
+              "Open **My Timesheet**. A message such as \"Timesheet Mode: Daily\" shows how you log.",
+              "Choose **Log Level Category** (**Company**, **Projects**, **Work Orders** or **GL Codes**). For Projects or Work Orders a second drop-down appears for the project or work order. Confirm the **Select Template**.",
+              "Pick the date (Daily) or a date range, depending on your mode.",
+              "Click **Add** to insert a row.",
+              "Choose the **Company/Projects/Work Orders/GL Codes** value and the **Phase Code** (see \"Which Phase Codes a Timesheet Offers\"), then enter hours in the earning-code columns (for example **1 (ST)**, **2 (OT)**). **Craft** and **Class** fill in from your roster record.",
+              "Click **Submit** to send the log into the approval workflow, or **Save as Draft** if it is incomplete."
             ],
             "images": [
               {
@@ -30449,7 +30496,7 @@ const MODULES = [
               },
               {
                 "src": "assets/notion/my-timesheet/013.jpg",
-                "caption": "Company level: every phase code created in Global Data",
+                "caption": "Company level: phase codes from the Global Data list, narrowed by your Default Phase Codes",
                 "step": 5
               },
               {
@@ -30525,16 +30572,136 @@ const MODULES = [
             ]
           },
           {
+            "title": "Import clock-in data from Inn Clock AI",
+            "steps": [
+              "Ask your **Super Admin** to confirm that **Global Data → Marketplace → Inn Clock Consent** is connected.",
+              "Open **My Timesheet** and choose a date in the past.",
+              "Click **Import From Innclock AI**.",
+              "Check the imported hours, then **Submit** or **Save as Draft**."
+            ]
+          },
+          {
+            "title": "Use the timesheet row tools",
+            "steps": [
+              "Click **Copy by Phase Codes**, choose one or more phase codes and copy the log to them.",
+              "Click **Duplicate** to create a new log that replicates the previous one, then change what you need.",
+              "Click **Comments** to open **Add Comments**, type your comment and click **Submit**.",
+              "Click **Notes** to add extra details about the logged hours.",
+              "Click **Delete** to remove the whole row.",
+              "Click **Clone Log** to copy an earlier log, or append it to the current log. When you submit, choose **Yes** to append the data to the existing data.",
+              "Click **Show Data Summary** to see data from previous logs for the selected date range and timesheet mode."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/my-timesheet/026.jpg",
+                "caption": "Copy by Phase Codes",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/my-timesheet/027.jpg",
+                "caption": "Choosing the phase codes to copy the log to",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/my-timesheet/028.jpg",
+                "caption": "Duplicate",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/my-timesheet/029.jpg",
+                "caption": "A duplicated log, ready to edit",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/my-timesheet/030.jpg",
+                "caption": "Comments",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/my-timesheet/031.jpg",
+                "caption": "The Add Comments dialog",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/my-timesheet/033.jpg",
+                "caption": "Notes",
+                "step": 4
+              },
+              {
+                "src": "assets/notion/my-timesheet/034.jpg",
+                "caption": "The Notes dialog",
+                "step": 4
+              },
+              {
+                "src": "assets/notion/my-timesheet/032.jpg",
+                "caption": "Delete, which removes the whole row",
+                "step": 5
+              },
+              {
+                "src": "assets/notion/my-timesheet/035.jpg",
+                "caption": "Clone Log",
+                "step": 6
+              },
+              {
+                "src": "assets/notion/my-timesheet/036.jpg",
+                "caption": "Previous logs listed in the Clone Log dialog",
+                "step": 6
+              },
+              {
+                "src": "assets/notion/my-timesheet/037.jpg",
+                "caption": "The prompt asking whether to append the data to existing data",
+                "step": 6
+              },
+              {
+                "src": "assets/notion/my-timesheet/042.jpg",
+                "caption": "Show Data Summary: data from previous logs for the date range",
+                "step": 7
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "My Crew Timesheet",
+        "intro": "<p>My Crew Timesheet is where a foreman, supervisor or <strong>Field User</strong> logs the hours of a whole crew in one go. It is the landing page of Time Management.</p><p>You choose the <strong>Log Level Category</strong>, the <strong>Crew</strong> and the <strong>Template</strong>; the crew's <strong>Timesheet Mode</strong> then appears (for example \"Timesheet Mode: Daily\"). Each row is one employee, one project, work order or GL code, one phase code and the hours per earning code.</p>",
+        "definitions": [
+          {
+            "term": "Where the Crew list comes from",
+            "definition": "It depends on **Log Level Category**. **Company** and **GL Codes** list the crews of **Global Data → Crews** (18 on the test site: Crew, Welding Crew, Liner Crew, Maintenance Crew, Residential Crew, Construction Flyover Crew, Piping Team, Mechanical Team, Instrumentation Team, Electrical Team, Process Team, Civil Team, Pro Service Team, Arena Crew, Daily crew, Weekly crew, Weekly by day crew, Testing Crew). **Projects** shows a project drop-down and lists only that project's **Project Crews** (**Project Setup → People → Project Crews**). **Work Orders** shows a work-order drop-down (7 on the test site, the same as **Global Data → Work Orders**) and lists the crews assigned to it. When the chosen project or work order has no crew the screen says \"Please create a Crew in order to continue\" (true for Arena Steel Plant - Phase 1, whose Project Crews are empty)."
+          },
+          {
+            "term": "Where the Roster list comes from",
+            "definition": "Each row's **Roster** drop-down lists the crew's members first, tagged **Crew**, then every other person from **Global Data → Users & Permissions → Global Rosters**, tagged **Global**, as \"ID - Name\" with a search box. For **Daily crew** the first 100 entries are its 100 rosters, matching the crew card in Global Data (2 Supervisors, 1 Foreman, 100 rosters). You can therefore log someone who is not in the crew."
+          },
+          {
+            "term": "Where the Mode and Template come from",
+            "definition": "The mode shown is the one saved for that crew in **Settings → Timesheet Mode** (**Daily crew** shows Daily, **Weekly crew** shows Weekly, **Weekly by day crew** shows Weekly By Day). The template list follows the mode: Daily and Weekly By Day offer 8 templates, Weekly offers 5 (CS Tech Weekly Template, Moore Template 1, Weekly, Weekly Template, Weekly Test Template)."
+          },
+          {
+            "term": "Grid columns",
+            "definition": "**Roster**, **Projects/Work Orders/GL Codes**, **Phase Code**, **Craft**, **Class**, the earning-code columns (**1 (ST)**, **2 (OT)**, **3**), **Total Hours** and **Actions**, with a **Total (Row level)** footer. Row actions: **Copy by Employee**, **Duplicate**, **Copy by Phase Codes**, **Notes** and **Delete**. A GL code or work-order item removes the phase code and the Duplicate icon."
+          },
+          {
+            "term": "Buttons above the grid",
+            "definition": "**Add**, **Clone Log**, **Default Phase Code**, **Show Data Summary**, **Import From Innclock AI**, **Save as Draft** and **Submit for Approval** work as on My Timesheet. **Per Diem Amount** appears for Weekly templates."
+          },
+          {
+            "term": "Where this data goes",
+            "definition": "Submitted crew logs appear under **Timesheet Logs → My Crew Timesheet Logs** for the approvers of the crew's workflow, then in the Data Summary (Crew and People tabs) and the exports."
+          }
+        ],
+        "procedures": [
+          {
             "title": "Log hours for an entire crew",
             "steps": [
-              "Go to <strong>My Crew Timesheet</strong>.",
-              "Select the Company, Project, Work Order, GL Code, and Crew.",
-              "Choose a Template and Date Range.",
-              "Click <strong>Add</strong> to add rows for employees.",
-              "Fill in hours per phase code and earning code for each employee.",
-              "Click <strong>Submit for Approval</strong>."
+              "Open **My Crew Timesheet**.",
+              "Choose **Log Level Category** (**Company**, **Projects**, **Work Orders** or **GL Codes**), then the project or work order if asked, then **Select Crew**.",
+              "Confirm **Select Template**. A line such as \"Timesheet Mode: Daily\" shows how this crew logs. Pick the date or range.",
+              "Click **Add** to add a row for an employee.",
+              "Choose the **Roster**, the **Projects/Work Orders/GL Codes** value and the **Phase Code**, then enter hours in each earning-code column. **Craft** and **Class** fill in from the employee.",
+              "Click **Submit for Approval**, or **Save as Draft** if the log is incomplete."
             ],
-            "note": "Timesheet settings and an approval workflow must already be configured for the crew before crew timesheets can be submitted — see Settings.",
+            "note": "A crew needs a Timesheet Mode and an approval workflow before it can submit. Without a mode the screen says \"Select Shift type in settings in order to create timesheet Log. To assign Shift, go to Timesheet Settings\".",
             "images": [
               {
                 "src": "assets/notion/my-crew-timesheet/001.jpg",
@@ -30625,197 +30792,6 @@ const MODULES = [
                 "src": "assets/notion/my-crew-timesheet/050.jpg",
                 "caption": "The summary for each employee when submitting for approval",
                 "step": 6
-              }
-            ]
-          },
-          {
-            "title": "Approve or reject a submitted timesheet",
-            "steps": [
-              "Go to <strong>My Timesheet Logs</strong> (or <strong>My Crew Timesheet Logs</strong>).",
-              "Select the submitted log you want to review.",
-              "Click <strong>Approve</strong> or <strong>Reject</strong>, optionally adding comments."
-            ],
-            "note": "The Approve and Reject buttons only appear for users designated as approvers in the Approval Workflow — they are not visible to everyone.",
-            "images": [
-              {
-                "src": "assets/notion/my-crew-timesheet-logs/001.jpg",
-                "caption": "My Crew Timesheet Logs: submitted timesheets, most recent first",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet-logs/002.jpg",
-                "caption": "Logs grouped by date range",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet-logs/026.jpg",
-                "caption": "An approver selecting a timesheet to approve or reject, with comments",
-                "step": 3
-              }
-            ]
-          },
-          {
-            "title": "Filter timesheet logs",
-            "steps": [
-              "In <strong>My Timesheet Logs</strong> or <strong>My Crew Timesheet Logs</strong>, click <strong>Filters</strong>.",
-              "Narrow results by Log Level Category, Log Level, Crew, Logged By, Mode (Daily/Weekly by Day/Weekly), Status, and Date Range.",
-              "Click <strong>Save filters</strong> to keep the current filter set for future use, <strong>Reset</strong> to revert your changes, or <strong>Clear All</strong> to return to defaults."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/my-crew-timesheet-logs/003.jpg",
-                "caption": "Filters on the logs list",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet-logs/005.jpg",
-                "caption": "The Log Level filter changes name with the Log Level Category",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet-logs/009.jpg",
-                "caption": "Crew filter",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet-logs/010.jpg",
-                "caption": "Logged By filter",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet-logs/011.jpg",
-                "caption": "Mode filter: Daily, Weekly by Day or Weekly",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet-logs/012.jpg",
-                "caption": "Status filter",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet-logs/013.jpg",
-                "caption": "Date range filter",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet-logs/017.jpg",
-                "caption": "Save filters",
-                "step": 3
-              }
-            ]
-          },
-          {
-            "title": "Export timesheet logs",
-            "steps": [
-              "From <strong>Timesheet Logs</strong>, open the <strong>Export</strong> menu.",
-              "Select date range, log level, crews/users, mode, and earning codes.",
-              "Choose a format: VP Excel (.xlsx), VP CSV, QuickBooks (.iif), or SAP (.csv)."
-            ],
-            "note": "Only Admin users have access to Export.",
-            "images": [
-              {
-                "src": "assets/notion/my-crew-timesheet-logs/037.jpg",
-                "caption": "The Export option",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet-logs/038.jpg",
-                "caption": "Download VP Excel: choosing date range, log level, crews, users, mode and earning codes",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet-logs/039.jpg",
-                "caption": "Download VP CSV file",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet-logs/040.jpg",
-                "caption": "Download QuickBooks",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet-logs/041.jpg",
-                "caption": "Download SAP",
-                "step": 3
-              }
-            ]
-          },
-          {
-            "title": "Use the timesheet row tools",
-            "steps": [
-              "Click **Copy by Phase Codes**, choose one or more phase codes and copy the log to them.",
-              "Click **Duplicate** to create a new log that replicates the previous one, then change what you need.",
-              "Click **Comments** to open **Add Comments**, type your comment and click **Submit**.",
-              "Click **Notes** to add extra details about the logged hours.",
-              "Click **Delete** to remove the whole row.",
-              "Click **Clone Log** to copy an earlier log, or append it to the current log. When you submit, choose **Yes** to append the data to the existing data.",
-              "Click **Show Data Summary** to see data from previous logs for the selected date range and timesheet mode."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/my-timesheet/026.jpg",
-                "caption": "Copy by Phase Codes",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/my-timesheet/027.jpg",
-                "caption": "Choosing the phase codes to copy the log to",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/my-timesheet/028.jpg",
-                "caption": "Duplicate",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/my-timesheet/029.jpg",
-                "caption": "A duplicated log, ready to edit",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/my-timesheet/030.jpg",
-                "caption": "Comments",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/my-timesheet/031.jpg",
-                "caption": "The Add Comments dialog",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/my-timesheet/033.jpg",
-                "caption": "Notes",
-                "step": 4
-              },
-              {
-                "src": "assets/notion/my-timesheet/034.jpg",
-                "caption": "The Notes dialog",
-                "step": 4
-              },
-              {
-                "src": "assets/notion/my-timesheet/032.jpg",
-                "caption": "Delete, which removes the whole row",
-                "step": 5
-              },
-              {
-                "src": "assets/notion/my-timesheet/035.jpg",
-                "caption": "Clone Log",
-                "step": 6
-              },
-              {
-                "src": "assets/notion/my-timesheet/036.jpg",
-                "caption": "Previous logs listed in the Clone Log dialog",
-                "step": 6
-              },
-              {
-                "src": "assets/notion/my-timesheet/037.jpg",
-                "caption": "The prompt asking whether to append the data to existing data",
-                "step": 6
-              },
-              {
-                "src": "assets/notion/my-timesheet/042.jpg",
-                "caption": "Show Data Summary: data from previous logs for the date range",
-                "step": 7
               }
             ]
           },
@@ -30919,6 +30895,222 @@ const MODULES = [
                 "step": 9
               }
             ]
+          }
+        ]
+      },
+      {
+        "heading": "Which Phase Codes a Timesheet Offers",
+        "intro": "<p>This section explains why the <strong>Phase Code</strong> drop-down on a timesheet row shows some codes and not others. It matters to <strong>PMs</strong> (who map codes to their project), <strong>Module Admins</strong> and <strong>Field Users</strong> who cannot find a code.</p><p>The list depends on what the row is charged to: a project uses that project's mapped codes, Company uses a company list, and work-order items and GL codes use none. Everything below was checked in the live product.</p>",
+        "definitions": [
+          {
+            "term": "Project chosen: the project's mapped codes",
+            "definition": "The drop-down shows the phase codes whose **Timesheet Management** box is ticked in that project's **Project Setup → Phase Codes**. On the test site only 6 of 50 projects had any: Arena Residential Project (ARN001), Tunnel (123454), Valigonda - Thorrur NH 930 P (VT002), Elevated Corridor (NEC 557), Pilot Project Demo (Test - 001) and Glove Manufacturing Unit (ARGMU001), each with the same 13 Direct codes (01.001.0001 Excavation, 0002 Backfilling, 0003 Shuttering, 0004 Barbending, 0005 Concreting, 0006 Brickwork, 0007 Plastering, 0008 Water Proofing, 0009 Electrical, 01.001.1 Plumbing, 01.001.2 False Ceiling, 01.001.31 Flooring, 01.001.32 Windows). The Arena Residential Project screen shows exactly those 13 ticks among its 963 rows."
+          },
+          {
+            "term": "Project with nothing ticked: an empty list",
+            "definition": "The other 44 projects, including **Arena Steel Plant - Phase 1 (ST-01)**, offer no phase codes at all: the drop-down does not open. This is not a fault; the PM has not ticked any **Timesheet Management** boxes yet."
+          },
+          {
+            "term": "Cost Type setting on the Phase Codes screen",
+            "definition": "The gear icon on **Project Setup → Phase Codes** opens **Settings** (\"Select the Cost Type for each category to display Phase Codes\"). **Timesheet Management** and **Equipment Management** each have their own Cost Type ticks (Material, Equipment, Labor, Unit Rate, Sub Contractor, BOQ's, Freight Charges, Fuel & Gas). In Arena Residential Project, Timesheet Management has Material, Equipment and Labor ticked. The 13 ticked codes all have those cost types."
+          },
+          {
+            "term": "Company chosen: a company list",
+            "definition": "With **Company**, the drop-down offered 261 codes on the test site: 193 Direct and 68 Indirect, all with the **Labor** cost type. This is not the full Global Data list of 963 codes. The list is exactly the codes ticked in **Default Phase Codes** (260 ticked of the 269 in its pool) plus the employee's own **Default Indirect Phase Code** from Global Rosters (System Admin: 10.2020 OVHD - Project Manager, shown first). The 9 unticked codes (0.1, 0.2, 0.3, 01.000.000 to 01.000.004 and 01.001.000) were exactly the 9 missing from the drop-down."
+          },
+          {
+            "term": "No project chosen on a crew row",
+            "definition": "On **My Crew Timesheet** a row with nothing selected offers only Indirect codes: 67 on the test site (for example PCN-017, PCN-018, PCN-035 to PCN-081, OB-001, HRG-B Structural, HRG-M Mechanical, USF - L Labor, 01.001.107 Design and Preparation, 45.1300 USF Field - Piping). Direct, Non Productive and Change Order codes never appear without a project."
+          },
+          {
+            "term": "Default Phase Codes narrow the list",
+            "definition": "On **My Timesheet** with category Projects and Arena Residential Project, **Default Phase Codes** listed the project's 13 codes with 5 ticked (Excavation, Backfilling, Shuttering, Barbending, Concreting), and the row's drop-down offered only those 5. Searching for Plastering found nothing. So ticking fewer codes there makes your list shorter without changing Project Setup."
+          },
+          {
+            "term": "Work-order items and GL codes",
+            "definition": "When a row is charged to a work-order item (for example **Equipment - Item 1**) or a GL code (**test - Test**), the phase code cell is blank and not used."
+          },
+          {
+            "term": "Where the codes themselves come from",
+            "definition": "Every code, its description, its **Phase Code Type** (Direct, Indirect, Non Productive, Change Order) and its **Cost Types** are defined once in **Global Data → UOM, Phasecode & GL Codes → Phase Codes** (963 codes on the test site: 694 Direct, 221 Indirect, 45 Non Productive, 3 Change Order). Project Setup shows the same 963 and adds the two tick boxes. What decides the 269-code pool behind Default Phase Codes was not found."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Make a project's phase codes appear in timesheets",
+            "steps": [
+              "Open the project and go to **Project Setup → Phase Codes**.",
+              "Click the gear icon (**Settings**) and tick the Cost Types you want under **Timesheet Management**, then **Save**.",
+              "Tick the **Timesheet Management** box on each phase code field staff may charge hours to.",
+              "In **Time Management**, choose Log Level Category **Projects** (or pick the project on a crew row) and open **Phase Code** to confirm the codes appear."
+            ],
+            "note": "Field Users can then shorten their own list with **Default Phase Codes** on My Timesheet."
+          },
+          {
+            "title": "Find out why a phase code is missing",
+            "steps": [
+              "Check what the row is charged to: project, Company, work-order item or GL code.",
+              "For a project, open that project's **Project Setup → Phase Codes** and check the **Timesheet Management** box of the code.",
+              "For Company or after choosing a project on My Timesheet, open **Default Phase Codes** and check the code is ticked.",
+              "If the code is not in the list at all, check its Phase Code Type (Direct or Indirect only) and that **Labor** is in its Cost Types in **Global Data → UOM, Phasecode & GL Codes**."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Timesheet Logs",
+        "intro": "<p>Timesheet Logs is where submitted timesheets are reviewed, approved, rejected, filtered and exported. <strong>Approvers</strong> named in the workflow, <strong>PMs</strong> and <strong>Module Admins</strong> use it; payroll uses its exports.</p><p>There are two tabs: <strong>My Crew Timesheet Logs</strong> and <strong>My Timesheet Logs</strong>. Each shows \"Total Logs\", a filter icon and the <strong>Export</strong> menu, and reads \"There are no time sheet logs for the selected Range and filters\" when nothing matches. A log moves from Draft to Submitted for Approval, Workflow in Progress, Completed or Rejected.</p>",
+        "definitions": [
+          {
+            "term": "My Timesheet Logs and My Crew Timesheet Logs",
+            "definition": "The same list in two views: logs entered on **My Timesheet** and logs entered on **My Crew Timesheet**. Approve and Reject appear only for people named as approvers in the log's workflow."
+          },
+          {
+            "term": "Filters",
+            "definition": "**Log Level Category** (All, Company, Projects, Work Orders, GL Codes), **Log Level** (the projects and work orders), **Crew** (the Global Data crews), **Logged By** (users), **Mode** (All, Daily, Weekly By Day, Weekly), **Status** (All, Draft, Completed, Submitted For Approval, Workflow In Progress, Rejected) and **Date Range**; buttons **Clear All**, **Reset**, **Apply**, **Save Filters**."
+          },
+          {
+            "term": "Export formats",
+            "definition": "Seven formats in the **Export** menu: VP Excel, VP CSV File, Dynamics 365 Excel, Quick Books, SAP, ComputerEase and Project Wise Excel. They carry approved hours with the earning codes to the payroll or accounting system. The menu was not run on the test site because it downloads a file."
+          },
+          {
+            "term": "Draft",
+            "definition": "A log saved without all mandatory fields (Employee is always needed). Not yet in approval."
+          },
+          {
+            "term": "Submitted for Approval",
+            "definition": "Sent into the workflow, not yet acted on."
+          },
+          {
+            "term": "Workflow in Progress",
+            "definition": "Approved at one level, waiting at another."
+          },
+          {
+            "term": "Completed",
+            "definition": "Approved at every level. A completed log is locked and can no longer be edited."
+          },
+          {
+            "term": "Rejected",
+            "definition": "Declined by an approver. This creates an entry in **Issues** so the submitter can fix and resubmit."
+          },
+          {
+            "term": "Where this data comes from and goes",
+            "definition": "Logs come from My Timesheet and My Crew Timesheet; the approvers and levels come from **Settings → Timesheet Workflow**. Approved hours flow to the **Timesheet Data Summary** and the exports; **Payroll Locking** stops edits after the cut-off. On the test site both tabs were empty, even though two Draft logs for 2 February 2026 appear in Clone Log, so drafts may not be listed here."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Approve or reject a submitted timesheet",
+            "steps": [
+              "Go to <strong>My Timesheet Logs</strong> (or <strong>My Crew Timesheet Logs</strong>).",
+              "Select the submitted log you want to review.",
+              "Click <strong>Approve</strong> or <strong>Reject</strong>, optionally adding comments."
+            ],
+            "note": "The Approve and Reject buttons only appear for users designated as approvers in the Approval Workflow — they are not visible to everyone.",
+            "images": [
+              {
+                "src": "assets/notion/my-crew-timesheet-logs/001.jpg",
+                "caption": "My Crew Timesheet Logs: submitted timesheets, most recent first",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet-logs/002.jpg",
+                "caption": "Logs grouped by date range",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet-logs/026.jpg",
+                "caption": "An approver selecting a timesheet to approve or reject, with comments",
+                "step": 3
+              }
+            ]
+          },
+          {
+            "title": "Filter timesheet logs",
+            "steps": [
+              "In **My Timesheet Logs** or **My Crew Timesheet Logs**, click the filter icon to open **Filters**.",
+              "Narrow results by **Log Level Category**, **Log Level**, **Crew**, **Logged By**, **Mode**, **Status** and **Date Range**.",
+              "Click **Apply**. Click **Save Filters** to keep the set, **Reset** to revert or **Clear All** to empty it."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/my-crew-timesheet-logs/003.jpg",
+                "caption": "Filters on the logs list",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet-logs/005.jpg",
+                "caption": "The Log Level filter changes name with the Log Level Category",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet-logs/009.jpg",
+                "caption": "Crew filter",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet-logs/010.jpg",
+                "caption": "Logged By filter",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet-logs/011.jpg",
+                "caption": "Mode filter: Daily, Weekly by Day or Weekly",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet-logs/012.jpg",
+                "caption": "Status filter",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet-logs/013.jpg",
+                "caption": "Date range filter",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet-logs/017.jpg",
+                "caption": "Save filters",
+                "step": 3
+              }
+            ],
+            "note": "The Mode filter opened on **Weekly By Day** on the test site, so Daily logs can be hidden until you choose **All**."
+          },
+          {
+            "title": "Export timesheet logs",
+            "steps": [
+              "From **Timesheet Logs**, open the **Export** menu.",
+              "The menu lists **Download VP Excel**, **Download VP CSV File**, **Download Dynamics 365 Excel**, **Download Quick Books**, **Download SAP**, **Download ComputerEase** and **Download Project Wise Excel**.",
+              "Choose a format and select the date range, log level, crews or users, mode and earning codes, then download."
+            ],
+            "note": "Only Admin users have access to Export. The guide screenshots show VP Excel, VP CSV, QuickBooks and SAP.",
+            "images": [
+              {
+                "src": "assets/notion/my-crew-timesheet-logs/037.jpg",
+                "caption": "The Export option",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet-logs/038.jpg",
+                "caption": "Download VP Excel: choosing date range, log level, crews, users, mode and earning codes",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet-logs/039.jpg",
+                "caption": "Download VP CSV file",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet-logs/040.jpg",
+                "caption": "Download QuickBooks",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/my-crew-timesheet-logs/041.jpg",
+                "caption": "Download SAP",
+                "step": 3
+              }
+            ]
           },
           {
             "title": "See history, print or share a timesheet log",
@@ -31012,26 +31204,114 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Reconciliation",
-        "intro": "<p>Timesheet Reconciliation exists because logged time and actual verified time don't always match, and construction sites often have independent sources of truth for who was actually on-site and for how long. Reconciliation is the process a Timesheet Lead, PM, or Time Management Admin uses to check submitted timesheet entries against those independent records, either by manually reviewing and correcting entries, or by importing external verification data — most commonly gate or access-control logs — and letting Arena validate against it automatically.</p><p>Manual reconciliation is a hands-on review: someone with reconciliation permission opens submitted logs for a date range and works through them phase code by phase code. Gate Log reconciliation, by contrast, is built for scale — it validates Employee IDs against uploaded access data and groups the results into batches so a reconciler isn't checking one entry at a time. Both approaches ultimately protect the integrity of what gets paid out and what gets billed to a project, which is exactly why they matter to the business, not just to the person doing the clicking.</p>",
+        "heading": "Timesheet Issues",
+        "intro": "<p>Timesheet Issues turns a rejected timesheet into a tracked item so it gets fixed. The submitter, a supervisor or a <strong>PM</strong> works from it until the log is corrected and resubmitted.</p><p>The <strong>Issues</strong> tab shows the counters <strong>Total Issues</strong>, <strong>Issues Approved</strong> and <strong>Issues Rejected</strong>, a <strong>Filters</strong> button (Log ID, Raised On, Raised By), a Grid View / Table View switch and a table with <strong>TSI Number</strong>, <strong>Level</strong>, <strong>Raised on Date</strong>, <strong>Raised on Time</strong>, <strong>Raised by</strong>, <strong>Image</strong>, <strong>Assign To</strong>, <strong>Due Date</strong>, <strong>Chat</strong>, <strong>Comments</strong> and <strong>See History</strong>.</p>",
         "definitions": [
           {
-            "term": "Timesheet Reconciliation",
-            "definition": "The process of checking submitted timesheet entries against an independent source of truth, either manually or via uploaded verification data."
+            "term": "Timesheet Issue",
+            "definition": "An item created automatically when an approver rejects a log. It carries the approver's comments and any attached image, can be given an **Assign To** person and a **Due Date**, and stays open until the timesheet is corrected and resubmitted."
           },
           {
-            "term": "Gate Logs",
-            "definition": "Uploaded employee or crew hour-verification data (e.g. from site access/gate systems) used to reconcile timesheet entries automatically. The system validates Employee IDs and groups the results into batches."
+            "term": "Where this data comes from and goes",
+            "definition": "Items are raised by **Reject** on **Timesheet Logs**; the rejecting person is the approver set in **Settings → Timesheet Workflow**. The Raised By filter lists the users. After correction the log goes back through the approval levels. The Issues screen was empty on the test site (0 Total Issues)."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Resolve a rejected timesheet",
+            "steps": [
+              "Open the entry in <strong>Timesheet Issues</strong> to review the approver's comments and any supporting information.",
+              "Use <strong>Assign To</strong> to delegate the correction if needed.",
+              "Set a <strong>Due Date</strong> to keep the correction on schedule.",
+              "Correct the underlying timesheet and resubmit it for approval."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Timesheet Data Summary",
+        "intro": "<p>The Timesheet Data Summary rolls logged hours up by person, crew, phase code, project, work order, earning code or GL code, so a <strong>PM</strong>, <strong>Module Admin</strong> or cost accountant can see totals without opening each log.</p><p>It has eight tabs: <strong>People</strong>, <strong>Crew</strong>, <strong>Phase Code</strong>, <strong>Project</strong>, <strong>Work Order</strong>, <strong>Earnings Code</strong>, <strong>GL Code</strong> and <strong>Detailed View</strong>. Each has <strong>Daily &amp; Weekly by Day</strong> and <strong>Weekly</strong> sub-tabs, a date range, a log level, an <strong>Amount / Hours</strong> toggle, a <strong>Submitted / Approved</strong> toggle and a <strong>Color Configuration</strong> icon.</p>",
+        "definitions": [
+          {
+            "term": "Daily & Weekly by Day columns",
+            "definition": "The first column (Roster, Crew, Phase Code and Description, Project, Work Order or GL Code) then **Monday** to **Sunday** with their dates (for the current week 9-28-2026 to 10-4-2026) and **Total Hours**."
+          },
+          {
+            "term": "Weekly columns",
+            "definition": "The first column, then **Payroll Hours** and **Project Hours**. These follow the **Payroll** and **Project** flags of each earning code in **Settings → Earnings Codes**."
+          },
+          {
+            "term": "Submitted and Approved toggle",
+            "definition": "Submitted counts logs sent for approval, including ones still waiting; Approved counts only logs approved at every level. Use Approved for payroll or client cost reports."
+          },
+          {
+            "term": "Color Configuration",
+            "definition": "Opens **Configure Colors** with **Hours** and **Amount** tabs and an **Add** button for rules \"Format cells if...\" (Earning Code, Condition, Start Value, End Value, Color). It colours cells that meet a rule."
+          },
+          {
+            "term": "Where this data comes from",
+            "definition": "Hours come from submitted and approved logs; names come from Global Rosters, crews from Global Data or Project Crews, phase codes from Global Data. All tabs were empty on the test site (the Phase Code tab showed \"Loading..\")."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "View logged hours by project, crew, or phase code",
+            "steps": [
+              "Open **Timesheet Data Summary**.",
+              "Switch between the tabs **People**, **Crew**, **Phase Code**, **Project**, **Work Order**, **Earnings Code**, **GL Code** and **Detailed View**.",
+              "Choose **Daily & Weekly by Day** or **Weekly**, then a date range and a log level.",
+              "Toggle **Submitted** or **Approved** to choose which logs to count, and **Hours** or **Amount**.",
+              "Download the results to Excel if the button is shown."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/timesheet-data-summary/002.jpg",
+                "caption": "Expanding an employee row to see their phase codes",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/timesheet-data-summary/003.jpg",
+                "caption": "Phase codes for the selected employee",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/timesheet-data-summary/001.jpg",
+                "caption": "Timesheet Data Summary with a date range filter",
+                "step": 3
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Reconciliation",
+        "intro": "<p>Reconciliation checks submitted hours against an independent record, such as gate or clock-in data, before they are paid or billed. <strong>PMs</strong>, reconcilers and <strong>Module Admins</strong> use it.</p><p>There are two tabs, <strong>Timesheets</strong> and <strong>Gate Logs</strong>, each with <strong>Weekly</strong> and <strong>Daily & Weekly by Day</strong> sub-tabs and a <strong>Color Configuration</strong> icon.</p>",
+        "definitions": [
+          {
+            "term": "Timesheets tab",
+            "definition": "Has a **Create Log** button and a **Timesheet Logs** list (filter All, date range). **Create Log** opens a dialog with a date range and a grid of Date, Roster, Total Hours and Total Amount (each column filterable) and **Submit**. The source is the logs entered on My Timesheet and My Crew Timesheet."
+          },
+          {
+            "term": "Gate Logs tab",
+            "definition": "Has **Upload Logs** and a **Reconciliation Logs** list (filter All, date range, **Filters** by Log IDs, Created By and Rosters). Uploaded rows are validated against Employee IDs, which come from **Global Rosters**, and grouped into batches."
+          },
+          {
+            "term": "Color Configuration",
+            "definition": "**Configure Colors**: tabs Hours and Amount, **Add**, \"Format cells if...\" with Earning Code, Condition, Start Value, End Value and Color. The Earning Code list comes from **Global Data → Settings → Earnings Codes**."
+          },
+          {
+            "term": "Where this data comes from and goes",
+            "definition": "Gate data comes from the Excel template the site uploads (or a clock system). Both tabs were empty on the test site. What reconciliation changes in the approved hours was not confirmed."
           }
         ],
         "procedures": [
           {
             "title": "Manually reconcile timesheet data",
             "steps": [
-              "Go to <strong>Timesheet Reconciliation &gt; Timesheet</strong>.",
-              "Choose Daily & Weekly by Day or Weekly mode.",
-              "Click <strong>Create Log</strong> and select a date range to view submitted logs.",
-              "Click the <strong>Phase code</strong> button for an employee to reconcile that entry manually."
+              "Open **Reconciliation** and choose the **Timesheets** tab.",
+              "Choose **Weekly** or **Daily & Weekly by Day**.",
+              "Click **Create Log** and select a date range to view submitted logs (columns Date, Roster, Total Hours, Total Amount).",
+              "Click the **Phase code** button for an employee to reconcile that entry manually."
             ],
             "images": [
               {
@@ -31054,11 +31334,11 @@ const MODULES = [
           {
             "title": "Reconcile using uploaded gate/access logs",
             "steps": [
-              "Go to <strong>Timesheet Reconciliation &gt; Gate Logs</strong>.",
-              "Select Daily & Weekly by Day or Weekly mode.",
-              "Use <strong>Upload Logs</strong> with the provided template to upload employee/crew hour verification data."
+              "Open **Reconciliation** and choose the **Gate Logs** tab.",
+              "Choose **Weekly** or **Daily & Weekly by Day**.",
+              "Click **Upload Logs**, download the template with **Click here to download template**, fill it in, then **Upload** and **Submit**."
             ],
-            "note": "The system validates Employee IDs on upload and organizes the data into batches for structured reconciliation.",
+            "note": "Enter Gate In and Gate Out in 24 hours format and the date as MM-DD-YYYY. The maximum is 24 hours.",
             "images": [
               {
                 "src": "assets/notion/timesheet-reconciliation-gate-logs/002.jpg",
@@ -31081,62 +31361,382 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Timesheet Issues",
-        "intro": "<p>Timesheet Issues exists to make timesheet rejection an actionable workflow rather than a dead end. When an approver — typically a Timesheet Lead or PM designated in the approval workflow — rejects a submitted timesheet, that rejection doesn't just disappear back to the submitter as a status change; it automatically opens a tracked issue with the approver's comments and any supporting information attached, so the reason for rejection is explicit and preserved.</p><p>This matters because timesheet corrections often need to be delegated or prioritized like any other piece of unresolved work: the issue can be assigned to whoever needs to fix the entry — often the original Field User, but sometimes a supervisor correcting on their behalf — and a due date keeps the correction from stalling indefinitely. The issue stays open and active until the underlying timesheet is corrected and resubmitted, at which point it moves back into the approval flow described under Timesheet Logs.</p>",
+        "heading": "Settings",
+        "intro": "<p>Settings is where a <strong>Module Admin</strong> builds the rules every timesheet follows: approval workflows, logging mode, earning codes, templates and payroll lock. Do this before Field Users log time; a crew cannot submit until its workflow and mode are in place.</p><p>The page has two groups. <strong>Timesheet Workflow</strong> has <strong>Create Workflow</strong> and <strong>Assign Workflow</strong>. <strong>Timesheet Settings</strong> has <strong>Timesheet Mode</strong>, <strong>Earnings Codes</strong>, <strong>Timesheet Template</strong>, <strong>Payroll Locking</strong>, <strong>Exclude Projects</strong> and <strong>Users And Permissions</strong>.</p>",
         "definitions": [
           {
-            "term": "Timesheet Issue",
-            "definition": "An automatically created record tracking a rejected timesheet, including the approver's comments and supporting information. It remains active until the timesheet is corrected and resubmitted."
+            "term": "Create Workflow",
+            "definition": "Lists the workflows (5 on the test site: Timesheet Approval Workflow, Timesheet Approval Workflow 2 and 3, Timesheet Approval, Timesheet Approval 4). A selected workflow shows **Create Level**, a flow-chart icon and a table of Level, Level Description, Approvers, Workflow Type and Actions (edit, delete). Example: Timesheet Approval Workflow has two levels, each \"Any one can approve\". Approvers are picked from the Global Roster system users."
+          },
+          {
+            "term": "Assign Workflow",
+            "definition": "Tabs **Users** and **Crews**; **Assign Approval Workflow**, **Clear**, **Save Changes**, **Copy Approval Workflow To**. The Users list is the Global Roster system users (the same order as the Add dialog in Project Setup). The Crews tab listed 4 crews while Arena Residential Project was open and none while Arena Steel Plant - Phase 1 was open: crews follow the active project."
+          },
+          {
+            "term": "Timesheet Mode",
+            "definition": "Tabs **My Timesheet** and **My Crew Timesheet**, a list of people or crews, and the choices **Daily** (regular basis), **Weekly by day** and **Weekly**. In Arena Steel Plant - Phase 1 the crew tab says \"There are no Crews. To create go to Timesheet crew\". The mode decides which templates the user sees."
+          },
+          {
+            "term": "Earnings Codes",
+            "definition": "Columns Code, Description, Shortname, VP Code*, Data Type, Payroll, Project, Split Header, Actions. It shows the same codes as **Global Data → Settings → Earnings Codes** (for example 1 Regular pay ST, 2 Over Time pay OT, 31 PerDIEM AMOUNT). **Payroll** and **Project** feed the Payroll Hours and Project Hours columns of the Data Summary; **Split Header** places the code under Phase Codes in weekly templates."
+          },
+          {
+            "term": "Timesheet Template",
+            "definition": "Eighteen templates on the test site (for example Crew Timesheet, Weekly (Standard), Hourly Field Timesheet, Regular Timesheet). The editor shows **Standard Fields** (Crew Timesheet: Roster, Company/Project, Phase Code, Phase Code Description; Weekly (Standard): Roster Name, Craft, Roster Number, Phase Codes, Per Diem Days), **Configurable Fields** and **Earnings Codes**. The timesheet screens list only the templates that match the user's mode (8 for Daily and Weekly By Day, 5 for Weekly)."
+          },
+          {
+            "term": "Payroll Locking",
+            "definition": "See the Who sets this up section. It \"applies to time management and productivity logs\", so it also closes Field Works productivity logs."
+          },
+          {
+            "term": "Exclude Projects",
+            "definition": "Choose projects to leave out of the global timesheet configuration. It listed \"No Available Projects\" on the test site."
+          },
+          {
+            "term": "Users And Permissions",
+            "definition": "Time Management's own permission groups: **Add User Group**. It said \"There are no User Groups created yet!\" on the test site."
+          },
+          {
+            "term": "Project-level settings",
+            "definition": "Each project also has **Project Settings → Time Management** with **Create Workflow**, **Assign Workflow** and **Assign Mode** for that project's roster and crews (\"Change the crew settings according to the Home Time Management requirement\"). Its user list is the project roster; the Home Settings list is the whole Global Roster."
           }
         ],
         "procedures": [
           {
-            "title": "Resolve a rejected timesheet",
+            "title": "Create an approval workflow for timesheets",
             "steps": [
-              "Open the entry in <strong>Timesheet Issues</strong> to review the approver's comments and any supporting information.",
-              "Use <strong>Assign To</strong> to delegate the correction if needed.",
-              "Set a <strong>Due Date</strong> to keep the correction on schedule.",
-              "Correct the underlying timesheet and resubmit it for approval."
+              "Open **Settings → Timesheet Workflow → Create Workflow**.",
+              "Click **Create Approval Workflow** and name it.",
+              "Click **Create Level** (the dialog is **Add Level to Workflow**), choose **Users** or **Roles**, pick the approvers and add a Description.",
+              "Choose **All must approve** or **Any one can approve** for the level, then **Submit**."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/timesheet-workflow/001.jpg",
+                "caption": "Timesheet Workflow under Settings",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/timesheet-create-workflow/001.jpg",
+                "caption": "Create Approval Workflow, to create a workflow",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/timesheet-workflow/003.jpg",
+                "caption": "Several workflows for different approval processes",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/timesheet-create-workflow/002.jpg",
+                "caption": "The Description tab for a level",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/timesheet-create-workflow/003.jpg",
+                "caption": "Edit and Delete icons beside each level",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/timesheet-workflow/004.jpg",
+                "caption": "A workflow with more than one approval level",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/timesheet-workflow/006.jpg",
+                "caption": "Add Role, for choosing a role such as Foreman or Supervisor",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/timesheet-create-workflow/006.jpg",
+                "caption": "Tree view of the workflow as a flow chart",
+                "step": 4
+              },
+              {
+                "src": "assets/notion/timesheet-workflow/005.jpg",
+                "caption": "Choosing All must approve or Anyone can approve for a level",
+                "step": 4
+              }
             ]
+          },
+          {
+            "title": "Assign an approval workflow to a user or crew",
+            "steps": [
+              "Open **Settings → Timesheet Workflow → Assign Workflow**.",
+              "Choose the **Users** or **Crews** tab and select the person or crew.",
+              "Pick the workflow under **Assign Approval Workflow**.",
+              "Click **Save Changes**. **Clear** removes the workflow."
+            ],
+            "note": "Use **Copy Approval Workflow To** to give the same workflow to several users or crews.",
+            "images": [
+              {
+                "src": "assets/notion/timesheet-assign-workflow/001.jpg",
+                "caption": "Assign Workflow: choosing a user or crew and a workflow",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/timesheet-workflow/007.jpg",
+                "caption": "Save Changes, to assign the workflow to the selected user or crew",
+                "step": 4
+              },
+              {
+                "src": "assets/notion/timesheet-assign-workflow/002.jpg",
+                "caption": "Clear, to reset the selection and detach the workflow",
+                "step": 4
+              }
+            ]
+          },
+          {
+            "title": "Set the timesheet logging mode",
+            "steps": [
+              "Open **Settings → Timesheet Settings → Timesheet Mode**.",
+              "Choose the **My Timesheet** or **My Crew Timesheet** tab, select the person or crew, and pick **Daily**, **Weekly by day** or **Weekly**.",
+              "Check the default template for that mode.",
+              "Click **Save Changes**."
+            ],
+            "note": "Use **Copy To** to apply the same mode to others. The crew list on this page shows the crews of the project you are working in.",
+            "images": [
+              {
+                "src": "assets/notion/timesheet-settings/002.jpg",
+                "caption": "Timesheet Mode: Daily, Weekly by Day or Weekly, with a default template",
+                "step": 2
+              }
+            ]
+          },
+          {
+            "title": "Create earning codes for payroll",
+            "steps": [
+              "Go to <strong>Timesheet Settings &gt; Earning Codes</strong>.",
+              "Click <strong>Add</strong> to insert a row.",
+              "Enter the Code, Description, and Short Name.",
+              "Set the Data Type to Hours or Amount.",
+              "Choose whether the code counts toward Payroll Hours and/or Project Hours."
+            ],
+            "note": "Enable <strong>Split Headers</strong> to have the code appear under Phase Codes in weekly templates instead of as its own column.",
+            "images": [
+              {
+                "src": "assets/notion/timesheet-settings/003.jpg",
+                "caption": "Earning Codes: several codes, then Save Changes",
+                "step": 1
+              }
+            ]
+          },
+          {
+            "title": "Build a custom timesheet template",
+            "steps": [
+              "Open **Settings → Timesheet Settings → Timesheet Template**.",
+              "Click **Create**, or click an existing template (its menu offers **Edit** and **Delete**).",
+              "Under **Configurable Fields** click **Add field**, name it and choose a type (**Form**, **Multi Select**, **Roster**, **Single Select**, **Text Box** or **Time**).",
+              "Under **Earnings Codes** choose **Column** or **Split Time Headers**, and **Add Earnings Codes** from the list.",
+              "Click **Save Changes**."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/timesheet-settings/004.jpg",
+                "caption": "Create, for a new timesheet template",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/timesheet-settings/005.jpg",
+                "caption": "Add Field, for a configurable field with its type",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/timesheet-settings/006.jpg",
+                "caption": "Adding more configurable fields",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/timesheet-settings/007.jpg",
+                "caption": "Copy Field, to create a similar field",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/timesheet-settings/008.jpg",
+                "caption": "Delete Field",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/timesheet-settings/009.jpg",
+                "caption": "A time header type for each time header",
+                "step": 4
+              },
+              {
+                "src": "assets/notion/timesheet-settings/010.jpg",
+                "caption": "Save Changes for the template",
+                "step": 5
+              }
+            ]
+          },
+          {
+            "title": "Lock payroll periods",
+            "steps": [
+              "Open **Settings → Timesheet Settings → Payroll Locking**.",
+              "Choose **Daily**, **Weekly** or **Monthly** under \"Select the option on which payroll happens\".",
+              "For Monthly choose **Start of The Month**, **End of The Month** or **Custom**; set the **Time** and the **Buffer Time (In Days)**, then **Save Changes**."
+            ],
+            "note": "Once a period locks, timesheet data within it can no longer be edited — make sure corrections are made before the lock takes effect.",
+            "images": [
+              {
+                "src": "assets/notion/timesheet-settings/013.jpg",
+                "caption": "Payroll Locking: Daily, Weekly or Monthly",
+                "step": 2
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/timesheet-workflow/002.jpg",
+            "caption": "Approval workflows can be set up to suit your organization"
+          },
+          {
+            "src": "assets/notion/timesheet-settings/001.jpg",
+            "caption": "Timesheet Settings"
+          },
+          {
+            "src": "assets/notion/timesheet-settings/011.jpg",
+            "caption": "Searching the timesheet templates"
+          },
+          {
+            "src": "assets/notion/timesheet-settings/012.jpg",
+            "caption": "Deleting a template from its menu"
           }
         ]
       },
       {
-        "heading": "Analytics & Reports",
-        "intro": "<p>Timesheet Data Summary is the reporting layer over all the hours logged across the company, built for the people who need the big picture rather than one timesheet at a time — a PM checking a project's labor spend, a Time Management Admin auditing company-wide utilization, or a cost accountant reconciling payroll. Rather than reviewing timesheets one log at a time, this view rolls logged hours up by the dimension that matters for the question being asked — by person, by crew, by phase code, or by project.</p><p>Because submitted and approved hours can tell different stories (a submitted total might still change before approval), the summary lets you toggle between the two so you're always clear on whether you're looking at a provisional or a finalized number — an important distinction when the numbers being reviewed are about to inform payroll or a client cost report.</p>",
+        "heading": "Rosters & Crews",
+        "intro": "<p>Rosters and crews are the people that timesheets are logged against. A <strong>Super Admin</strong> keeps the company-wide lists in Global Data and a <strong>PM</strong> builds each project's team in Project Setup.</p><p>There are no roster tabs inside Time Management itself; its drop-downs read these lists.</p>",
         "definitions": [
           {
-            "term": "Timesheet Data Summary",
-            "definition": "A reporting view of total logged hours, broken down across People, Crew, Phase Codes, and Project tabs, filterable by date range and log level, with an Excel export option."
+            "term": "Crew (Global Data)",
+            "definition": "A company-wide crew in **Global Data → Crews** with Supervisors, Foremen and Rosters (18 crews on the test site; **Daily crew** shows 2 Supervisors, 1 Foreman and 100 rosters). Used for Company and GL Codes timesheets."
+          },
+          {
+            "term": "Project Crew",
+            "definition": "A crew in **Project Setup → People → Project Crews**, created there or copied with **Copy Crews from Global Data** (it lists the 18 Global Data crews), and shared with **Copy Crews to Projects**. Used for Project timesheets. It is empty for Arena Steel Plant - Phase 1."
+          },
+          {
+            "term": "System User (Roster)",
+            "definition": "A licensed user in **Global Data → Users & Permissions → Global Rosters**. A project roster adds them with **Add** under **Project Setup → People → Roster → System User**. Global Rosters hold Craft, Class and Default Indirect Phase Code that timesheets use."
+          },
+          {
+            "term": "Non-System User (Roster)",
+            "definition": "A temporary or subcontracted worker without a login, added with **Add** or **Get Users from Global Data** under **Roster → Non System User**."
+          },
+          {
+            "term": "Configurable Fields (Roster)",
+            "definition": "Custom columns for roster tables, added in **Global Data → Settings → Roster Settings** (Add Field with Required, Show on cards and a type)."
+          },
+          {
+            "term": "Where rosters and crews feed timesheets",
+            "definition": "The Roster drop-down of My Crew Timesheet lists the crew's members first and then all Global Rosters; the Crew drop-down lists Global Data crews or Project Crews by Log Level Category; the Settings pages for workflow and mode list Global Roster users (Home) or the project roster (Project Settings)."
           }
         ],
         "procedures": [
           {
-            "title": "View logged hours by project, crew, or phase code",
+            "title": "Create a new crew (Global Data)",
             "steps": [
-              "Go to <strong>Timesheet Data Summary</strong>.",
-              "Switch between the People, Crew, Phase Codes, and Project tabs.",
-              "Select a date range and log level.",
-              "Toggle <strong>Submitted</strong> or <strong>Approved</strong> at the top right to filter by log status.",
-              "Click <strong>Download Excel</strong> to export the results."
+              "Go to <strong>Global Data &gt; Crews</strong>.",
+              "Click <strong>Create</strong>.",
+              "Enter the Crew Name.",
+              "Choose Supervisors and Foremen from their dropdowns.",
+              "Select Rosters (system and non-system users) for the crew.",
+              "Click <strong>Submit</strong>."
             ],
             "images": [
               {
-                "src": "assets/notion/timesheet-data-summary/002.jpg",
-                "caption": "Expanding an employee row to see their phase codes",
+                "src": "assets/notion/timesheet-crew/001.jpg",
+                "caption": "Company-level crews",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/timesheet-crew/002.jpg",
+                "caption": "Create, with a crew name",
                 "step": 2
               },
               {
-                "src": "assets/notion/timesheet-data-summary/003.jpg",
-                "caption": "Phase codes for the selected employee",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/timesheet-data-summary/001.jpg",
-                "caption": "Timesheet Data Summary with a date range filter",
-                "step": 3
+                "src": "assets/notion/timesheet-crew/003.jpg",
+                "caption": "Selecting the users for the crew and clicking Submit",
+                "step": 5
               }
             ]
+          },
+          {
+            "title": "Add a crew to a specific project",
+            "steps": [
+              "Open **Project Setup → People → Project Crews**.",
+              "Click **Create Crew** to build one, or **Copy Crews from Global Data** to import existing crews."
+            ],
+            "note": "Use **Copy Crews to Projects** to copy a crew to other projects."
+          },
+          {
+            "title": "Add a system user to a project roster",
+            "steps": [
+              "Go to <strong>Project Setup &gt; Roster &gt; System User</strong>.",
+              "Click <strong>Add</strong>.",
+              "Select users from Global Data (<strong>Global Data &gt; Users &amp; Permissions &gt; Global Rosters</strong>) — selected users appear on the right side of the dialog.",
+              "Click <strong>Submit</strong>."
+            ]
+          },
+          {
+            "title": "Add a temporary (non-system) worker to a project",
+            "steps": [
+              "Go to <strong>Project Setup &gt; Roster &gt; Non System User</strong>.",
+              "Click <strong>Add</strong> to manually create one, or <strong>Get Users from Global Data</strong> to select existing non-system users.",
+              "Fill in the required fields and click <strong>Submit</strong>."
+            ]
+          },
+          {
+            "title": "Bulk upload or export rosters",
+            "steps": [
+              "On the Roster (System Users or Non-System Users) page, use <strong>Upload Excel</strong> to bulk-add roster records, or <strong>Download Excel</strong> to export the current roster list."
+            ]
+          },
+          {
+            "title": "Add custom fields to roster tables",
+            "steps": [
+              "Go to <strong>Global Settings &gt; Roster Settings</strong>.",
+              "Use <strong>Configurable Fields</strong> to add a custom column, choosing its field type (Attachment, Check box, Date, Label, Multi select, Paragraph, Roster, Scribble, Single select, Table, Text box, Time, Signature).",
+              "Click <strong>Save Changes</strong>."
+            ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/timesheet-crew/004.jpg",
+            "caption": "Searching for people when building a crew"
+          },
+          {
+            "src": "assets/notion/timesheet-crew/005.jpg",
+            "caption": "Searching the list of crews"
+          },
+          {
+            "src": "assets/notion/roster-system-users/001.jpg",
+            "caption": "Rosters for system users"
+          },
+          {
+            "src": "assets/notion/roster-system-users/002.jpg",
+            "caption": "Roster cards with Edit and Delete"
+          },
+          {
+            "src": "assets/notion/roster-system-users/003.jpg",
+            "caption": "Upload Excel to add many rosters at once"
+          },
+          {
+            "src": "assets/notion/roster-system-users/005.jpg",
+            "caption": "Switching the roster between card and table view"
+          },
+          {
+            "src": "assets/notion/rosters-non-system-users/001.jpg",
+            "caption": "Add, to register a non-system user"
+          },
+          {
+            "src": "assets/notion/rosters-non-system-users/002.jpg",
+            "caption": "Non-system roster cards with Edit and Delete"
+          },
+          {
+            "src": "assets/notion/rosters-non-system-users/003.jpg",
+            "caption": "Non-system roster in card and table views"
           }
         ]
       }
@@ -31146,19 +31746,23 @@ const MODULES = [
     "icon": "schedule",
     "tagline": "Log, approve, and reconcile employee and crew hours through configurable timesheets.",
     "color": "#1f7d8c",
-    "overview": "<p><strong>Time Management</strong> covers logging, reviewing, and approving employee and crew work hours through configurable <strong>timesheets</strong> (Daily, Weekly, or Weekly by Day), plus <strong>roster/crew administration</strong>, <strong>approval workflows</strong>, <strong>reconciliation</strong> against external data, and reporting/data-summary views for payroll and project cost tracking.</p>",
+    "overview": "Time Management turns hours worked by people and crews into approved timesheets, payroll exports and labor reports. This guide covers every tab and screen and shows where each drop-down gets its values (Global Data, Project Setup, Settings) and where approved hours go.",
     "navigation": [
-      "From <strong>Home</strong>, click the <strong>Time Management</strong> tile.",
-      "Use <strong>My Timesheet</strong> or <strong>My Crew Timesheet</strong> to log hours; approvers work from <strong>My Timesheet Logs</strong>. Rosters, crews, and workflow settings live under their own tabs and Global Data."
+      "From <strong>Home</strong>, click the <strong>Time Management</strong> tile. The module opens on <strong>My Crew Timesheet</strong>.",
+      "Use <strong>My Timesheet</strong> or <strong>My Crew Timesheet</strong> to log hours; approvers work from <strong>Timesheet Logs</strong>. Workflows, modes, earning codes and templates live under <strong>Settings</strong>; phase codes, rosters and crews come from <strong>Global Data</strong> and <strong>Project Setup</strong>."
     ],
     "sections": [
-      "Admin Role",
-      "Settings",
-      "Rosters & Crews",
+      "Who sets this up",
+      "Dashboard",
+      "My Timesheet",
+      "My Crew Timesheet",
+      "Which Phase Codes a Timesheet Offers",
       "Timesheet Logs",
-      "Reconciliation",
       "Timesheet Issues",
-      "Analytics & Reports"
+      "Timesheet Data Summary",
+      "Reconciliation",
+      "Settings",
+      "Rosters & Crews"
     ]
   },
   {
