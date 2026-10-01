@@ -7282,7 +7282,7 @@ const QA_PROJECTSETTINGS = [
     scope: "project",
     section: "Overview: The Project Configuration Hub",
     question: "There are dozens of settings categories — how do I quickly find the one I need?",
-    answer: "Use the search box above the left-hand category list in Project Settings to filter the 39 categories by name instead of scrolling through all of them, then select the one you need to open its panel on the right.",
+    answer: "Use the search box above the left-hand category list in <strong>Project Settings</strong> to filter the <strong>40</strong> categories by name, then select the one you need. The <strong>Which screen each category changes</strong> list in the overview tells you which category to open for a given screen.",
     tags: ["search settings","category list","project settings navigation"]
   },
   {
@@ -7309,7 +7309,7 @@ const QA_PROJECTSETTINGS = [
     scope: "project",
     section: "Look, Forms & Field Templates",
     question: "How do I configure how Punch Lists and Restraints behave for this specific project?",
-    answer: "Go to Project Settings → Punch Lists & Restraints. This panel controls project-specific configuration for how punch items and restraints are structured and tracked, overriding organization-wide defaults where needed.",
+    answer: "Go to <strong>Project Settings → Punch Lists &amp; Restraints</strong>. It has three lists: <strong>Punch Lists Category</strong>, <strong>Punch Lists Priority</strong> and <strong>Restraints Priority</strong> (High 4, Medium 24, Low 48 hours on Arena Steel Plant - Phase 1), each with <strong>Add</strong>, edit and delete. Restraint categories come from <strong>Global Data → Settings → Hindrance Category</strong>, not from here.",
     tags: ["punch lists","restraints","project settings"]
   },
   {
@@ -7318,8 +7318,8 @@ const QA_PROJECTSETTINGS = [
     scope: "project",
     section: "Scheduling, Views & Workflow Settings",
     question: "Where do I configure the map/location integration for a project?",
-    answer: "Go to Project Settings → googlemaps. This is where the mapping integration used for project location display and geolocation-linked features is configured.",
-    tags: ["google maps","location settings","map integration"]
+    answer: "Go to <strong>Project Settings → googlemaps</strong>: <strong>googlemaps Pin Category</strong> (Created, Rejected, Approved, Worklogs History, plus <strong>Add Category</strong>), <strong>googlemaps Enabled Modules</strong> (<strong>Tree</strong>, <strong>Task Management</strong>) and the default centre latitude, longitude and zoom level. Both module boxes and the three defaults are empty on Arena Steel Plant - Phase 1. <strong>My Desk Dashboards</strong> has a separate <strong>Google Maps</strong> tick box.",
+    tags: ["google maps","location settings","map integration","google maps default zoom","default center latitude longitude"]
   },
   {
     action: "configure",
@@ -7327,7 +7327,7 @@ const QA_PROJECTSETTINGS = [
     scope: "project",
     section: "Cost, Procurement & Resource Settings",
     question: "How do I change the date format displayed throughout a project?",
-    answer: "Go to Project Settings → Project Date Format and choose the display format that should be used across the project's forms, logs, and dashboards.",
+    answer: "Go to <strong>Project Settings → Project Date Format</strong> and choose <strong>MM-DD-YYYY</strong> or <strong>DD-MM-YYYY</strong>, then <strong>Save Changes</strong>. Global Data has a matching <strong>Global Date Format</strong> page. Some screens write dates out in words or use their own layout, so not every date follows this setting.",
     tags: ["date format","project settings","display preferences"]
   },
   {
@@ -7336,7 +7336,7 @@ const QA_PROJECTSETTINGS = [
     scope: "project",
     section: "Cost, Procurement & Resource Settings",
     question: "Where is the project's cost breakdown structure defined?",
-    answer: "Go to Project Settings → Cost Breakdown Structure. This defines the cost coding hierarchy that Cost Management and related budget/change-order workflows use for this project.",
+    answer: "Go to <strong>Project Settings → Cost Breakdown Structure</strong>. It has four tabs: <strong>CBS</strong> (pick a Tree Version and the phase-code level), <strong>Approval WorkFlow</strong>, <strong>Level of Detail</strong> and <strong>Estimate Type</strong>. The result shows up when you create an estimate in <strong>Project Setup → Estimate → Create Estimate</strong>.",
     tags: ["cost breakdown structure","cost coding","project settings"]
   },
   {
@@ -7345,8 +7345,8 @@ const QA_PROJECTSETTINGS = [
     scope: "project",
     section: "Drawings, Compliance & Identifiers",
     question: "How do I change what fields appear on the drawing register for a project?",
-    answer: "Go to Project Settings → Configure Drawing Register Form to adjust the fields captured when drawings are logged into the project's Drawing Register.",
-    tags: ["drawing register","configure form","drawing management"]
+    answer: "Go to <strong>Project Settings → Configure Drawing Register Form</strong>. <strong>Drawing Id</strong> and <strong>Drawing Name</strong> are standard required fields, and seven fields can be set to <strong>Required</strong> or <strong>Show on card</strong>: <strong>Received Date</strong>, <strong>Locations</strong>, <strong>Network</strong>, <strong>Drawing Types</strong>, <strong>Sheets</strong>, <strong>Drawing Status</strong> and <strong>Remarks</strong>. They are the fields of <strong>Project Setup → Drawings → Drawing Register → Create</strong>.",
+    tags: ["drawing register","configure form","drawing management","which project setting changes the drawing register fields","project settings drawing register fields","configure drawing register form required show on card"]
   },
   {
     action: "configure",
@@ -7354,7 +7354,7 @@ const QA_PROJECTSETTINGS = [
     scope: "project",
     section: "Cost, Procurement & Resource Settings",
     question: "Where do I set the approval workflow used for procurement on a project?",
-    answer: "Go to Project Settings → Procurement Workflow Settings to configure the stages and routing that procurement requests follow for this project.",
+    answer: "Go to <strong>Project Settings → Procurement Workflow Settings</strong>. Under <strong>Requisition Form (REQ)</strong> pick the type (Equipment Rental, Equipment Purchased, Material, Equipment Part Rental, Equipment Part Purchased or Delivery Service), click <strong>Create Approval WorkFlow</strong>, create the levels and add users to each level. None exist yet on Arena Steel Plant - Phase 1.",
     tags: ["procurement workflow","project settings","approval routing"]
   },
   {
@@ -7363,7 +7363,7 @@ const QA_PROJECTSETTINGS = [
     scope: "project",
     section: "Overview: The Project Configuration Hub",
     question: "How is Project Settings different from the settings under Global Data?",
-    answer: "Global Data holds the organization-wide defaults that apply across every project. Project Settings is the project-scoped layer on top of that — it lets a Module Admin or PM override or fine-tune how a given module behaves and is labeled for this specific project, without changing the defaults everyone else inherits.",
+    answer: "Global Data holds the company-wide lists and templates; <strong>Project Settings</strong> holds the choices for one project. Four pages exist in both places: Date Format, Request for Information, Transmittals Submitted Type and Market Type. On the test project those values are identical or empty, so which one wins on a screen could not be tested. Other settings, such as <strong>Forms</strong> (colour only) and <strong>Quick Apps</strong> (who can use apps built in Global Data), only exist at project level.",
     tags: ["project settings","global data","override","distinction"]
   },
   {
@@ -7372,7 +7372,7 @@ const QA_PROJECTSETTINGS = [
     scope: "project",
     section: "Cost, Procurement & Resource Settings",
     question: "Where do I manage custom resources and where they're sourced from for a project?",
-    answer: "Go to Project Settings → Custom Resources to define project-specific resource entries, and Project Settings → Resource Data Source to configure where resource data is pulled from.",
+    answer: "Go to <strong>Project Settings → Custom Resources</strong> for the <strong>Labor</strong> and <strong>Machinery</strong> lists (<strong>Create</strong> asks for a Custom Resource Name), and <strong>Project Settings → Resource Data Source</strong> to choose <strong>P6</strong> or <strong>Work Order</strong> as the source of planned and actual resource figures on the dashboards (P6 on Arena Steel Plant - Phase 1).",
     tags: ["custom resources","resource data source","project settings"]
   },
   {
@@ -7381,7 +7381,7 @@ const QA_PROJECTSETTINGS = [
     scope: "project",
     section: "Drawings, Compliance & Identifiers",
     question: "How do I set the terms and conditions text that appears on project documents?",
-    answer: "Go to Project Settings → Terms and Conditions to define or edit the standard terms and conditions language applied to relevant project documents.",
+    answer: "Go to <strong>Project Settings → Terms and Conditions</strong>. Each clause is a text block you can edit, copy or delete, and <strong>Add field</strong> adds another. Arena Steel Plant - Phase 1 has 26 clauses written as work order terms. Click <strong>Save Changes</strong> afterwards. The screen that prints them was not found on the test project.",
     tags: ["terms and conditions","document text","project settings"]
   },
   {
@@ -7390,7 +7390,7 @@ const QA_PROJECTSETTINGS = [
     scope: "project",
     section: "Overview: The Project Configuration Hub",
     question: "Which Project Settings categories most affect what field teams see day to day?",
-    answer: "A handful have outsized reach into Field Works. <strong>Work Logs Templates</strong> and <strong>Quality Work Logs Templates</strong> shape how field logging and quality inspection screens are laid out. <strong>Quality Logs</strong> controls whether Level 1 must be approved before Level 2 becomes available. <strong>Productivity Log Settings</strong> sets whether productivity logs are created by Phase Code or by Level 3s, plus the Timesheets and Quantity tab fields. <strong>Punch Lists &amp; Restraints</strong> and <strong>Daily Safety Issues &amp; Observations</strong> shape how defects and safety issues are structured. <strong>My Desk</strong> and <strong>My Desk Dashboards</strong> shape the landing screen everyone opens first.",
+    answer: "A handful have outsized reach into Field Works. <strong>Work Logs Templates</strong> and <strong>Quality Work Logs Templates</strong> shape how field logging and quality inspection screens are laid out. <strong>Quality Logs</strong> controls whether Level 1 must be approved before Level 2 becomes available. <strong>Productivity Log Settings</strong> sets whether productivity logs are created By Phase Code or By Locations, plus the Timesheets and Quantity tab fields. <strong>Punch Lists &amp; Restraints</strong> and <strong>Daily Safety Issues &amp; Observations</strong> shape how defects and safety issues are structured. <strong>My Desk</strong> and <strong>My Desk Dashboards</strong> shape the landing screen everyone opens first.",
     tags: ["settings that affect field works","work logs templates","quality logs","productivity log settings"]
   },
   {
@@ -7408,7 +7408,7 @@ const QA_PROJECTSETTINGS = [
     scope: "module",
     section: "Cost, Procurement & Resource Settings",
     question: "Which Project Settings change Project Setup tabs?",
-    answer: "**Phase Code Settings** (unique or multiple-use phase codes), **Configure Task Form** (Tasks), **Cost Breakdown Structure** (Estimate), **Drawing Status** (Drawing Register), plus **Work Logs Templates** and **Quality Work Logs Templates** for the Field Works screens built from the Works structure.",
+    answer: "**Phase Code Settings** (unique or multiple-use phase codes in Works), **Configure Task Form** (Tasks), **Cost Breakdown Structure** (Estimate), **Drawing Status** and **Configure Drawing Register Form** (Drawings), **Project Setup View** (Template 1 or 2 layout), plus **Work Logs Templates** and **Quality Work Logs Templates** for the Field Works screens built from the Works structure.",
     tags: ["project settings project setup","settings affect project setup","which settings change setup tabs"]
   },
   {
@@ -7446,6 +7446,141 @@ const QA_PROJECTSETTINGS = [
     question: "What can I choose on the Owner Dashboard setting in Project Settings?",
     answer: "Project Settings → Owner Dashboard has tick boxes for Standard Analytics views to show to owners: Construction Progress (10), Quality Progress (9), Cost (2) and Contractors Performance (1). They are the same views as in Data Analytics & Insights, and all are unticked on the test project. Owners are registered under Owners → Register Owner.",
     tags: ["owner dashboard setting project settings","what can i choose on the owner dashboard setting","project settings owner dashboard checkboxes"]
+  },
+  {
+    action: "explain",
+    object: "Why is my date format different in this ",
+    scope: "module",
+    section: "Overview: The Project Configuration Hub",
+    question: "Why is my date format different in this project?",
+    answer: "Check <strong>Project Settings → Project Date Format</strong> (<strong>MM-DD-YYYY</strong> or <strong>DD-MM-YYYY</strong>) and compare it with <strong>Global Data → Settings → Global Date Format</strong>. Both are MM-DD-YYYY on the test project, so a difference seen there is not caused by these two pages. Some screens write dates out in words (\"31st March 2026\" on Field Works RFIs) or print day/month/year (Estimate → Resource Planning week ranges).",
+    tags: ["date format different","why is my date format different","project date format global date format","dd-mm-yyyy mm-dd-yyyy"]
+  },
+  {
+    action: "explain",
+    object: "Which Project Settings page changes whic",
+    scope: "module",
+    section: "Overview: The Project Configuration Hub",
+    question: "Which Project Settings page changes which screen?",
+    answer: "See <strong>Which screen each category changes</strong> in the overview: Field Works Progress (Work Logs Templates, Project Work Measurement, Productivity Log Settings, Progress Forms, Workflow Issues), Quality and Safety (Quality Work Logs Templates, Quality Logs, Punch Lists &amp; Restraints, Daily Safety Issues &amp; Observations), My Desk (My Desk, My Desk Dashboards), Data Analytics (Dashboard Percentages, Owner Dashboard, Resource Data Source), Project Setup (Phase Code Settings, Configure Task Form, Cost Breakdown Structure, Drawing Status, Configure Drawing Register Form, Project Setup View), Time Management and Procurement.",
+    tags: ["which project setting changes which screen","settings map","project settings lineage","what does each project setting change"]
+  },
+  {
+    action: "explain",
+    object: "Where does the Tree Version dropdown in ",
+    scope: "module",
+    section: "Overview: The Project Configuration Hub",
+    question: "Where does the Tree Version dropdown in Project Settings come from?",
+    answer: "Every Tree Version dropdown in Project Settings (Work Logs Templates, User Preferences, Drawing Register Form, Cost Breakdown Structure, Custom Work Packages Name) lists the 13 plants of <strong>Field Works → Tree Version</strong> (Pellet Plant (1MTPA) to Slab Caster), which are built in <strong>Project Setup → Works</strong>.",
+    tags: ["tree version dropdown project settings","where do tree versions come from","project settings dropdown source"]
+  },
+  {
+    action: "explain",
+    object: "Why do I see \"Select a project to contin",
+    scope: "module",
+    section: "Overview: The Project Configuration Hub",
+    question: "Why do I see \"Select a project to continue\" in Project Settings?",
+    answer: "The page needs a selected project. Open <strong>Projects</strong>, pick the project (for example Arena Steel Plant - Phase 1) and then open <strong>Project Settings</strong> again.",
+    tags: ["select a project to continue","project settings project not selected"]
+  },
+  {
+    action: "explain",
+    object: "What does the Forms setting do in Projec",
+    scope: "module",
+    section: "Look, Forms & Field Templates",
+    question: "What does the Forms setting do in Project Settings?",
+    answer: "It only chooses the colour forms appear in: <strong>BLUE</strong>, <strong>DARK BLUE</strong>, <strong>PURPLE</strong>, <strong>YELLOW</strong> or <strong>GREY</strong> (YELLOW on Arena Steel Plant - Phase 1). Form templates are built in <strong>Global Data → Forms</strong> and assigned in <strong>Project Setup → Forms</strong>.",
+    tags: ["forms setting project settings","form colour","forms color yellow blue purple grey","what does the forms setting do in project settings","project settings forms colour setting","change the colour of forms","form appearance yellow"]
+  },
+  {
+    action: "explain",
+    object: "What does the Time Management setting do",
+    scope: "module",
+    section: "Scheduling, Views & Workflow Settings",
+    question: "What does the Time Management setting do in Project Settings?",
+    answer: "It sets up timesheet approvals and mode for this project in three tabs: <strong>Create Workflow</strong> (Create Approval Workflow, a name then levels), <strong>Assign Workflow</strong> (assign a workflow to Users or Crews; users are the project roster) and <strong>Assign Mode</strong> (<strong>Daily</strong>, <strong>Weekly by day</strong> or <strong>Weekly</strong> for My Timesheet and My Crew Timesheet). No workflow exists yet on Arena Steel Plant - Phase 1. It affects <strong>Home → Time Management</strong> timesheets.",
+    tags: ["time management project settings","timesheet approval workflow project settings","timesheet mode daily weekly","assign workflow users crews"]
+  },
+  {
+    action: "explain",
+    object: "Where do I change the Project Setup layo",
+    scope: "module",
+    section: "Scheduling, Views & Workflow Settings",
+    question: "Where do I change the Project Setup layout?",
+    answer: "Go to <strong>Project Settings → Project Setup View</strong> and pick <strong>Template 1</strong> (selected on Arena Steel Plant - Phase 1) or <strong>Template 2</strong>, then <strong>Save Changes</strong>.",
+    tags: ["project setup view template 1 template 2","change project setup layout","where do i set the project setup template","project setup template","project setup appearance"]
+  },
+  {
+    action: "explain",
+    object: "What do Progress Forms and Workflow Issu",
+    scope: "module",
+    section: "Scheduling, Views & Workflow Settings",
+    question: "What do Progress Forms and Workflow Issues settings do?",
+    answer: "<strong>Progress Forms</strong> has one <strong>Add Priority</strong> list per form (RFI, Change Orders, Submittals, Delay Forms, Meeting Minutes). <strong>Workflow Issues</strong> has the same for the issues raised by workflows, across the tabs Progress, Quality, Safety, Custom Forms, Quick Apps, Drawing Management and Task Forms. Each priority has a name and Due Hours. All are empty on Arena Steel Plant - Phase 1. <strong>Projects Forms</strong> has one list for Project Forms.",
+    tags: ["progress forms priority","workflow issues priority due hours","projects forms priority","add priority project settings"]
+  },
+  {
+    action: "explain",
+    object: "What do Project Driven, User Preferences",
+    scope: "module",
+    section: "Scheduling, Views & Workflow Settings",
+    question: "What do Project Driven, User Preferences and Define Location do?",
+    answer: "<strong>Project Driven</strong> chooses what drives field work progress (Tree Version with WorkLogs or Checklists, or Schedule; WorkLogs selected here). <strong>User Preferences</strong> picks a Tree Version for web view, mobile view, Work Logs and Productivity Logs (none picked here; options are the 13 plants). <strong>Define Location</strong> chooses <strong>Individual</strong> or <strong>From-To</strong> (neither picked here).",
+    tags: ["project driven setting","user preferences tree version","define location individual from-to","default tree version web mobile"]
+  },
+  {
+    action: "explain",
+    object: "What does the Configure Form Id Type set",
+    scope: "module",
+    section: "Cost, Procurement & Resource Settings",
+    question: "What does the Configure Form Id Type setting do?",
+    answer: "It decides how log IDs of each form are created: a table of 149 forms with <strong>Project Based</strong> or <strong>Tree Based</strong> per form. All are Project Based on Arena Steel Plant - Phase 1, and Field Works RFIs are numbered WIR 1, WIR 2, WIR 3. The list includes the progress forms plus the Quick Apps and Project Forms built in Global Data.",
+    tags: ["configure form id type","form id numbering project based tree based","why are rfi numbered wir","log id format","why are rfis numbered wir","rfi numbering wir 1 wir 2","wir numbering"]
+  },
+  {
+    action: "explain",
+    object: "What is Tree Versions Custom Work Packag",
+    scope: "module",
+    section: "Cost, Procurement & Resource Settings",
+    question: "What is Tree Versions Custom Work Packages Name?",
+    answer: "A page where each work package of a plant can be given a <strong>Custom Name</strong>. Choose the Tree Version, and the table lists Activities, Work Packages Name, Description and Custom Name (Pellet Plant has 96, all custom names equal to the originals). The work packages come from <strong>Project Setup → Works</strong>.",
+    tags: ["custom work package name","tree versions custom work packages name","rename work packages"]
+  },
+  {
+    action: "explain",
+    object: "Why is the Procurement approval workflow",
+    scope: "module",
+    section: "Cost, Procurement & Resource Settings",
+    question: "Why is the Procurement approval workflow empty?",
+    answer: "No approval workflow has been created. In <strong>Project Settings → Procurement Workflow Settings</strong> choose the requisition type tab, click <strong>Create Approval WorkFlow</strong>, create the levels and add users to each level.",
+    tags: ["procurement workflow empty","no approval workflow procurement","requisition approval levels"]
+  },
+  {
+    action: "explain",
+    object: "What is Vista Progress in Project Settin",
+    scope: "module",
+    section: "Drawings, Compliance & Identifiers",
+    question: "What is Vista Progress in Project Settings?",
+    answer: "The last category, <strong>Vista Progress Batch Entries</strong>, is a read-only table with the columns Phase, Actual Date, Cost Type, Actual Units, Sync Status, Sync Error and Synced At (empty on Arena Steel Plant - Phase 1), with <strong>Manage Columns</strong> and a search box. It has no Save or Create.",
+    tags: ["vista progress","vista progress batch entries","sync status sync error synced at"]
+  },
+  {
+    action: "explain",
+    object: "Which screens use the Request for Inform",
+    scope: "module",
+    section: "Drawings, Compliance & Identifiers",
+    question: "Which screens use the Request for Information, Transmittals Submitted Type and Market Type settings?",
+    answer: "<strong>Request for Information</strong> (Categories and Priorities) is for the Request for Information form; <strong>Transmittals Submitted Type</strong> is the list of submitted types for the Transmittal form; <strong>Market Type</strong> holds market and sub-market names. All three exist in both Project Settings and Global Data → Settings and are empty on the test project, so the final dropdown was not seen.",
+    tags: ["request for information settings categories priorities","transmittals submitted type","market type sub market type","project settings vs global data same name"]
+  },
+  {
+    action: "explain",
+    object: "Where do I see the Terms and Conditions ",
+    scope: "module",
+    section: "Drawings, Compliance & Identifiers",
+    question: "Where do I see the Terms and Conditions clauses?",
+    answer: "Edit them in <strong>Project Settings → Terms and Conditions</strong> (26 clauses on Arena Steel Plant - Phase 1, written as work order terms). The screen that prints them was not found on the test project.",
+    tags: ["terms and conditions clauses","work order terms and conditions","where terms and conditions show"]
   }
 ];
 
@@ -24122,19 +24257,31 @@ const MODULES = [
     "narrative": [
       {
         "heading": "Overview: The Project Configuration Hub",
-        "intro": "<p>Every module in Arena — Forms, Work Logs, Quality, Safety, Time Management, Drawings, Procurement, Cost, RFIs, Transmittals, and the rest — has behavior and labeling that can, and often should, differ slightly from one project to the next. Project Settings is the single hub where a <strong>Module Admin / PM</strong> with admin rights makes those project-specific adjustments: a searchable category list on the left, and a configuration panel on the right for whichever category is selected. Look & Feel is the default landing panel.</p><p>Conceptually, Project Settings sits directly below Global Data in the configuration hierarchy: Global Data defines the organization-wide defaults every project inherits, while Project Settings lets a given project override or fine-tune those defaults — its own branding, its own field structures, its own naming conventions — without touching what every other project sees. This is squarely admin-facing territory; a Field User completing forms or logging safety issues day to day has no reason to open it, since nothing here is part of daily fieldwork — it's the configuration that shapes what daily fieldwork looks like.</p><p>Because there are 39 distinct settings categories covering everything from visual theme to cost coding to drawing identifiers, they're grouped thematically below rather than documented one by one — but every category works the same way: find it in the left rail, select it, adjust its panel, and save.</p>",
+        "intro": "<p><strong>Project Settings</strong> is where a <strong>Module Admin / PM</strong> adjusts how Arena behaves for one project: a searchable list of 40 categories on the left and the panel for the selected category on the right. <strong>Look &amp; Feel</strong> opens first. Field users do not need it; it shapes what their daily screens look like.</p><p>Global Data holds the company-wide lists and templates (vendors, crews, phase codes, form templates, quick apps). Project Settings holds the choices that apply to this project only. Four pages exist in both places under the same name (<strong>Date Format</strong>, <strong>Request for Information</strong>, <strong>Transmittals Submitted Type</strong>, <strong>Market Type</strong>), so check both when a project behaves differently from another. Each category below says which screen it changes and where its options come from.</p>",
         "definitions": [
           {
             "term": "Settings category rail",
-            "definition": "The searchable left-hand list of settings categories; selecting one opens its configuration panel on the right. Look & Feel is the default landing panel."
+            "definition": "The searchable left-hand list of <strong>40</strong> categories (39 plus <strong>Vista Progress</strong> at the end). Selecting one opens its panel on the right. Each category has its own page address, and the project must be selected first: if you jump to a page from another module and see \"Select a project to continue\", pick the project again."
           },
           {
-            "term": "Per-project override layer",
-            "definition": "Project Settings sits below Global Data in the configuration hierarchy — Global Data holds org-wide defaults, and Project Settings fine-tunes them for this project without changing what other projects inherit."
+            "term": "Who changes it",
+            "definition": "A <strong>Module Admin / PM</strong> with admin rights. Panels with a <strong>Save Changes</strong> button save when you click it; the list panels (priorities, categories, drawing statuses, custom resources) save per row with <strong>Add</strong>, edit and delete."
           },
           {
-            "term": "Admin-facing scope",
-            "definition": "Nothing here is part of daily fieldwork; it is the configuration that shapes what daily fieldwork looks like, used by a Module Admin or PM with admin rights rather than Field Users."
+            "term": "Project Settings and Global Data",
+            "definition": "Global Data defines the lists and templates; Project Settings picks and tunes them for one project. Same-name pairs seen: <strong>Date Format</strong> (Global Data → Settings → Global Date Format and Project Settings → Project Date Format, both MM-DD-YYYY on the test project), <strong>Request for Information</strong> (Categories and Priorities tabs in both, both empty), <strong>Transmittals Submitted Type</strong> and <strong>Market Type</strong> (both empty in both places). Which side wins on a screen could not be tested because the values are the same or empty. <strong>Forms</strong> in Project Settings is only a colour choice and is not the Global Data Forms templates. <strong>Quick Apps</strong> here chooses who can use the apps built in Global Data."
+          },
+          {
+            "term": "Which screen each category changes",
+            "definition": "<strong>Field Works → Progress:</strong> Work Logs Templates, Project Work Measurement, Productivity Log Settings, Progress Forms, Workflow Issues. <strong>Field Works → Quality / Safety:</strong> Quality Work Logs Templates, Quality Logs, Punch Lists &amp; Restraints, Daily Safety Issues &amp; Observations. <strong>Field Works → Quick Apps:</strong> Quick Apps. <strong>My Desk:</strong> My Desk, My Desk Dashboards. <strong>Data Analytics &amp; Insights:</strong> Dashboard Percentages, Owner Dashboard, Resource Data Source. <strong>Project Setup:</strong> Phase Code Settings (Works), Configure Task Form (Tasks), Cost Breakdown Structure (Estimate), Drawing Status and Configure Drawing Register Form (Drawings), Project Setup View. <strong>Time Management:</strong> Time Management. <strong>Procurement:</strong> Procurement Workflow Settings. <strong>Form numbering:</strong> Configure Form Id Type."
+          },
+          {
+            "term": "Where the dropdowns inside Project Settings come from",
+            "definition": "Every <strong>Tree Version</strong> dropdown (Work Logs Templates, User Preferences, Drawing Register Form, Cost Breakdown Structure, Tree Versions Custom Work Packages Name, Quick Apps) lists the 13 plants of <strong>Field Works → Tree Version</strong>, which are built in <strong>Project Setup → Works</strong>. People lists (Time Management Assign Workflow) are the project roster from <strong>Global Data → Users &amp; Permissions</strong>. Status, priority and category lists are the project's own and start empty or with the defaults shown below."
+          },
+          {
+            "term": "Search and save behaviour",
+            "definition": "Type in the search box to filter the 40 names. Changes on a panel are not kept until you save it, and a few pages (<strong>Vista Progress</strong>, the lists) have no Save Changes button."
           }
         ],
         "procedures": [
@@ -24142,12 +24289,12 @@ const MODULES = [
             "title": "Find and change a project setting (using Look & Feel as an example)",
             "steps": [
               "Open the project and go to <strong>Project Settings</strong>.",
-              "Use the search box above the category list to find the setting — for example, type \"Look\" to find <strong>Look & Feel</strong>, the default landing panel.",
-              "Select the category from the left-hand list to open its panel on the right.",
-              "Make the needed change — for Look & Feel, choose <strong>Light</strong> or <strong>Dark</strong>.",
-              "Click <strong>Save Changes</strong> to apply it."
+              "Use the search box above the category list, for example type \"Look\".",
+              "Select the category in the left-hand list to open its panel.",
+              "Make the change: for <strong>Look &amp; Feel</strong>, choose <strong>LIGHT</strong> or <strong>DARK</strong> (Light on Arena Steel Plant - Phase 1).",
+              "Click <strong>Save Changes</strong>."
             ],
-            "note": "The same search-select-edit-save pattern applies across all 39 categories, even though each panel's actual fields differ by category.",
+            "note": "The same search, select, edit and save pattern applies to every category, even though each panel has different fields.",
             "images": [
               {
                 "src": "assets/notion/project-settings-look-feel/001.jpg",
@@ -24155,20 +24302,29 @@ const MODULES = [
                 "step": 4
               }
             ]
+          },
+          {
+            "title": "Find out why a screen behaves differently in this project",
+            "steps": [
+              "Note the screen (for example Field Works → Progress → Work Logs, or My Desk).",
+              "Look up that screen in <strong>Which screen each category changes</strong> above and open the matching Project Settings category.",
+              "Compare the selected option with another project.",
+              "If the category has a Global Data twin (Date Format, Request for Information, Transmittals Submitted Type, Market Type), open the Global Data page too."
+            ]
           }
         ]
       },
       {
         "heading": "Look, Forms & Field Templates",
-        "intro": "<p>This first group covers the settings that shape how the project looks and how its most frequently used field documentation — forms, work logs, quality logs, and measurement records — is structured before a single Field User ever opens one. Getting these right early avoids inconsistency later, since changing a template's structure after a project has been actively logging against it can make old and new records harder to compare.</p>",
+        "intro": "<p>This group covers the settings that shape how the project looks and how logs, quality checks and issues are structured before the field team uses them. A <strong>Module Admin / PM</strong> sets them early, because changing a template after logging has started makes old and new records harder to compare.</p>",
         "definitions": [
           {
             "term": "Look & Feel",
-            "definition": "Sets the project's Light or Dark visual theme; the default panel a Module Admin sees on opening Project Settings."
+            "definition": "Sets the project's <strong>LIGHT</strong> or <strong>DARK</strong> appearance (\"How do you want the app to appear?\"), then <strong>Save Changes</strong>. <strong>LIGHT</strong> is selected on Arena Steel Plant - Phase 1 and the page is the default when Project Settings opens. It changes the look only, not any data."
           },
           {
             "term": "Forms",
-            "definition": "Configures branding and template behavior applied across the forms generated within this project."
+            "definition": "A colour picker: \"In which color would you like forms to appear?\" with <strong>BLUE</strong>, <strong>DARK BLUE</strong>, <strong>PURPLE</strong>, <strong>YELLOW</strong> and <strong>GREY</strong> (<strong>YELLOW</strong> on Arena Steel Plant - Phase 1), then <strong>Save Changes</strong>. It is only a colour. The form templates themselves are in <strong>Global Data → Forms</strong> and are assigned in <strong>Project Setup → Forms</strong>."
           },
           {
             "term": "Work Logs Templates",
@@ -24188,7 +24344,7 @@ const MODULES = [
           },
           {
             "term": "Punch Lists & Restraints",
-            "definition": "Three lists with Add and per-row edit and delete. **Punch Lists Category** (none defined on Arena Steel Plant - Phase 1), **Punch Lists Priority** and **Restraints Priority** (High 4 hours, Medium 24, Low 48; the number is the due hours). These feed the Priority choices on **Field Works → Quality → Punch Lists** and **Progress → Restraints**; restraint categories come from **Global Data → Settings → Hindrance Category** instead."
+            "definition": "Three lists on one page, each with an <strong>Add</strong> button and per-row edit and delete. <strong>Punch Lists Category</strong> (S.No, Category, Actions; none defined on Arena Steel Plant - Phase 1), <strong>Punch Lists Priority</strong> and <strong>Restraints Priority</strong> (High 4, Medium 24, Low 48; the number is the due hours). <strong>Where it goes:</strong> the Priority and Category choices on <strong>Field Works → Quality → Punch Lists</strong> and the Priority choice on <strong>Field Works → Progress → Restraints</strong>. <strong>Restraint categories do not come from here:</strong> they come from <strong>Global Data → Settings → Hindrance Category</strong> (the five global categories)."
           },
           {
             "term": "Daily Safety Issues & Observations",
@@ -24225,19 +24381,19 @@ const MODULES = [
       },
       {
         "heading": "Scheduling, Views & Workflow Settings",
-        "intro": "<p>The next group governs how time is tracked, how project views and dashboards are laid out for different roles, and how several project-specific workflows and forms behave — the settings that shape the day-to-day operating rhythm of the project beyond raw field data capture.</p>",
+        "intro": "<p>This group covers timesheet approvals, maps, the Project Setup layout, form priorities, which plant each user opens, and the dashboards and percentages that Data Analytics and My Desk use. A <strong>Module Admin / PM</strong> sets them once and revisits them when the way of working changes.</p>",
         "definitions": [
           {
             "term": "Time Management",
-            "definition": "Configures timesheet and labor time tracking behavior for this project."
+            "definition": "Titled \"Change the crew settings according to the Home Time Management requirement\". Three tabs. <strong>Create Workflow</strong>: <strong>Create Approval Workflow</strong> opens <strong>Create Timesheet Workflow</strong> (Workflow Name, Submit); the table lists Level, Level Description, Approvers, Workflow Type, Actions (empty on Arena Steel Plant - Phase 1). <strong>Assign Workflow</strong>: a <strong>Users</strong> / <strong>Crews</strong> switch with search, then <strong>Assign Approval Workflow</strong>, <strong>Clear</strong>, <strong>Save Changes</strong> and <strong>Copy Approval Workflow To</strong>; it says \"There is no approval workflow present to assign\" until one is created. <strong>Assign Mode</strong>: sub-tabs <strong>My Timesheet</strong> and <strong>My Crew Timesheet</strong> (\"Change the timesheet logging settings as per your requirements\") with <strong>Timesheet Mode</strong> <strong>Daily</strong>, <strong>Weekly by day</strong> or <strong>Weekly</strong>, plus <strong>Copy To</strong> and <strong>Save Changes</strong>; none is ticked here. <strong>Where the data comes from:</strong> the Users list is the project roster (32 people, the same as Project Setup → People and Global Data → Users &amp; Permissions); the Crews list says \"To create go to Timesheet crew\" and is empty. <strong>Where it goes:</strong> the timesheets of <strong>Home → Time Management</strong>."
           },
           {
             "term": "googlemaps",
-            "definition": "Configures the Google Maps integration used for project location display and map-based features."
+            "definition": "\"Settings and Configuration for googlemaps Integration\". <strong>googlemaps Pin Category</strong> lists the pin types <strong>Created</strong>, <strong>Rejected</strong>, <strong>Approved</strong> and <strong>Worklogs History</strong> (each with a Description) and <strong>Add Category</strong> opens <strong>Create Category</strong> (Category Name, Category Color, Category Description, Upload Category Icon). <strong>googlemaps Enabled Modules</strong> has <strong>Tree</strong> and <strong>Task Management</strong> tick boxes (both unticked here). Then <strong>Default Center Latitude</strong>, <strong>Default Center Longitude</strong> and <strong>Default Zoom Level</strong> (empty here) and <strong>Save Changes</strong>. The matching app is the Google Maps card in <strong>Global Data → Marketplace</strong>, and <strong>My Desk Dashboards</strong> has its own <strong>Google Maps</strong> tick box. Which map screens use these pins was not visible on the test project."
           },
           {
             "term": "Project Setup View",
-            "definition": "Configures how the project's structural setup information is displayed."
+            "definition": "Titled \"UI options to view Project Setup screen\": <strong>Appearance - How do you want the Project setup to appear?</strong> with <strong>Template 1</strong> (selected on Arena Steel Plant - Phase 1) or <strong>Template 2</strong>. It changes the layout of the <strong>Project Setup</strong> screen only (Template 1 is the left-hand list of Works, Tasks, People, Estimate and so on). What Template 2 looks like was not opened."
           },
           {
             "term": "Quick Apps",
@@ -24253,11 +24409,11 @@ const MODULES = [
           },
           {
             "term": "Progress Forms",
-            "definition": "\"Settings needed for Progress Forms: RFI, Change Order, Submittals, Delay Forms and Meetings Minutes\": one tab per form, each with **Add Priority** (\"Configure priority levels and sequence\"; Priority, Due Hours, Actions). None are defined for RFI on Arena Steel Plant - Phase 1. These priorities apply to the forms raised in **Field Works → Progress**."
+            "definition": "\"Settings needed for Progress Forms: RFI, Change Order, Submittals, Delay Forms and Meetings Minutes\": one tab per form (<strong>RFI</strong>, <strong>Change Orders</strong>, <strong>Submittals</strong>, <strong>Delay Forms</strong>, <strong>Meeting Minutes</strong>), each with <strong>Add Priority</strong> (\"Configure priority levels and sequence\"; Priority, Due Hours, Actions). None are defined on Arena Steel Plant - Phase 1. These are priority levels for the progress forms of <strong>Field Works → Progress</strong>; the Create RFI form on the test project shows no Priority field, so where the RFI priorities appear is unconfirmed."
           },
           {
             "term": "Projects Forms",
-            "definition": "Configures general project-level form behavior beyond progress-specific forms."
+            "definition": "Titled \"Settings needed for Project Forms\": a single <strong>Add Priority</strong> list (\"Configure priority levels and sequence for Project Forms\"; Priority, Due Hours, Actions), empty here. The forms it refers to are the Project Forms built in <strong>Global Data → Forms → Project Forms</strong> and used on <strong>Field Works → Project Forms</strong>."
           },
           {
             "term": "Workflow Issues",
@@ -24265,15 +24421,15 @@ const MODULES = [
           },
           {
             "term": "Project Driven",
-            "definition": "Configures settings that determine project-driven behavior specific to how this project operates."
+            "definition": "Titled \"Project Driven Settings\": \"Entire project field work will be driven by the below selected settings\". Options: <strong>Tree Version</strong> (selected) with <strong>Drive progress through WorkLogs</strong> (selected) or <strong>Drive progress through Checklists</strong>, and <strong>Schedule</strong>; <strong>Save Changes</strong>. It chooses what drives progress in Field Works. The effect of switching was not tested."
           },
           {
             "term": "User Preferences",
-            "definition": "Configures default user-facing preferences applied for participants on this project."
+            "definition": "Four <strong>Tree Version</strong> dropdowns, each with <strong>Clear</strong>: \"Select a Tree Version for web view\", \"for mobile view\", \"for Work Logs\" and \"for Productivity Logs\"; <strong>Save Changes</strong>. None is selected on Arena Steel Plant - Phase 1. The choices are the 13 plants of <strong>Field Works → Tree Version</strong> (Pellet Plant (1MTPA) to Slab Caster). Use it to point each screen at one plant."
           },
           {
             "term": "Define Location",
-            "definition": "Configures the location structure (sites, zones, or areas) used to organize this project spatially."
+            "definition": "Titled \"Location Defined By\": <strong>Individual</strong> or <strong>From-To</strong>, then <strong>Save Changes</strong>; neither is selected on Arena Steel Plant - Phase 1. It sets how locations are described. The Create RFI form in Field Works already has <strong>From Location</strong> and <strong>To Location</strong> fields beside a Location Type; whether this setting drives them was not tested."
           },
           {
             "term": "Drawing Status",
@@ -24296,7 +24452,7 @@ const MODULES = [
       },
       {
         "heading": "Cost, Procurement & Resource Settings",
-        "intro": "<p>This group covers the financial and resourcing backbone of the project — how cost is coded and broken down, how procurement requests move through approval, and how resources are sourced and categorized — configuration that a PM typically wants settled early since cost and procurement structures are difficult to change cleanly once transactions have started flowing through them.</p>",
+        "intro": "<p>This group covers phase-code rules, naming, date format, form numbering, procurement approvals, the cost structure and resources. A <strong>PM / Module Admin</strong> settles them early, because they are hard to change once cost and procurement records exist.</p>",
         "definitions": [
           {
             "term": "Phase Code Settings",
@@ -24304,23 +24460,23 @@ const MODULES = [
           },
           {
             "term": "Tree Versions Custom Work Packages Name",
-            "definition": "Configures the custom naming convention used for work packages within the project's tree version structure."
+            "definition": "A <strong>Tree Version</strong> dropdown (13 plants) above a table: <strong>S.No.</strong>, <strong>Activities</strong>, <strong>Work Packages Name</strong>, <strong>Work Packages Description</strong> and <strong>Custom Name</strong>, with <strong>Save Changes</strong>. Pellet Plant (1MTPA) lists 96 work packages (Excavation EXC-1, Marking ARN-MA-1, Concreting ARN-CO-1 and so on) and each Custom Name starts equal to the work package name. <strong>Where the data comes from:</strong> the work packages built in <strong>Project Setup → Works</strong>. Where the custom name is displayed was not tested."
           },
           {
             "term": "Project Date Format",
-            "definition": "Configures the date format displayed across the project's forms, logs, and dashboards."
+            "definition": "Titled \"Settings needed to configure date format\": <strong>MM-DD-YYYY</strong> (selected on Arena Steel Plant - Phase 1) or <strong>DD-MM-YYYY</strong>, then <strong>Save Changes</strong>. <strong>Global Data → Settings → Global Date Format</strong> offers the same two choices (also MM-DD-YYYY here). Not every screen follows it: Field Works RFI writes dates out in words (\"31st March 2026\") and <strong>Project Setup → Estimate → Resource Planning</strong> prints week ranges as 4/10/2026 - 10/10/2026 (day/month/year)."
           },
           {
             "term": "Configure Task Form",
-            "definition": "Defines the fields of the task form: tabs **Project Configuration** and **Global Configuration**, a **Status** switch (Inactive / Active), **Configurable Fields** (Required, Show on card, field type such as Text Box, **Add field**) and **Save Changes**. Until it is configured, **Project Setup → Tasks → Create** shows \"Task Form is not configured in project settings\"."
+            "definition": "Defines the fields of the task form: tabs <strong>Project Configuration</strong> and <strong>Global Configuration</strong> (both show one empty template row, \"Configurable Field 1\"), a <strong>Status</strong> switch (<strong>Inactive</strong> / <strong>Active</strong>), <strong>Configurable Fields</strong> (<strong>Required</strong>, <strong>Show on card</strong>, field type such as Text Box, <strong>Add field</strong>) and <strong>Save Changes</strong>. Until it is configured, <strong>Project Setup → Tasks → Create</strong> shows \"Task Form is not configured in project settings\"."
           },
           {
             "term": "Configure Form Id Type",
-            "definition": "Configures the identifier format used when numbering or IDing forms on this project."
+            "definition": "Titled \"Configure Form ID Type\": \"log Ids of form will be created based on the option selected here\". A search box and a table of <strong>Form Title</strong> with two choices per form, <strong>Project Based</strong> or <strong>Tree Based</strong>, then <strong>Save Changes</strong>. The table has 149 forms: RFI, REQUEST-FOR-INFORMATION, CHANGE-ORDER, SUBMITTAL, DELAY-FORMS, MEETING-MINUTES, then the Quick Apps and Project Forms built in Global Data (Observation Report, Non-Conformance Report, Contractor Onboarding, Estimate Quantity and many more). All 149 are <strong>Project Based</strong> on Arena Steel Plant - Phase 1, and Field Works RFIs are numbered <strong>WIR 1</strong>, <strong>WIR 2</strong>, <strong>WIR 3</strong> in one running series. The effect of Tree Based was not tested."
           },
           {
             "term": "Procurement Workflow Settings",
-            "definition": "Configures the approval stages and routing that procurement requests follow on this project."
+            "definition": "The approval chain for procurement requests. Under <strong>Requisition Form (REQ)</strong> there is one tab per type: <strong>Equipment Rental</strong>, <strong>Equipment Purchased</strong>, <strong>Material</strong>, <strong>Equipment Part Rental</strong>, <strong>Equipment Part Purchased</strong> and <strong>Delivery Service</strong>. <strong>Create Approval WorkFlow</strong> opens <strong>Create Workflow</strong> (a name, Cancel, Submit). The page instructions are: 1. Click Create Approval Workflow, 2. Create workflow levels, 3. Add users to each level. Nothing is defined here yet. <strong>Where it goes:</strong> the requisitions raised in <strong>Home → Procurement</strong>. Global Data → Settings → Procurement Settings has a separate <strong>Global Level / Project Level</strong> pair of tabs."
           },
           {
             "term": "Cost Breakdown Structure",
@@ -24328,42 +24484,46 @@ const MODULES = [
           },
           {
             "term": "Custom Resources",
-            "definition": "Configures project-specific resource entries beyond the organization's standard resource list."
+            "definition": "Two tabs, <strong>Labor</strong> and <strong>Machinery</strong>, each with <strong>Create</strong> (a \"Custom Resource Name\" dialog; titled <strong>Create Labor</strong> on the Labor tab) and a list of Resource Names with Actions. Both are empty on Arena Steel Plant - Phase 1. Use it for resources that are not in the standard lists. Estimate → Resource Planning on the test project lists only roster people and sub contractors, so where custom names appear was not confirmed."
           },
           {
             "term": "Resource Data Source",
-            "definition": "Configures where resource data used on this project is sourced from."
+            "definition": "Titled \"Resources planned and actual data will be shown on dashboard according to the selected settings\": <strong>P6</strong> (selected on Arena Steel Plant - Phase 1) or <strong>Work Order</strong>, then <strong>Save Changes</strong>. It decides where the planned and actual resource figures on the Data Analytics &amp; Insights dashboards come from, the same idea as <strong>Dashboard Percentages</strong> for percentages."
           }
         ],
         "procedures": []
       },
       {
         "heading": "Drawings, Compliance & Identifiers",
-        "intro": "<p>The final group rounds out the more specialized, lower-frequency settings — drawing register structure, standard legal/compliance text, and the identifier and classification conventions used for RFIs, transmittals, and market/project typing. These are typically configured once, early in a project's setup, and revisited rarely afterward.</p>",
+        "intro": "<p>This group covers the drawing register form, the work order terms, the numbering and category lists for RFIs and transmittals, market types and the Vista Progress log. A <strong>Module Admin / PM</strong> sets most of them once, early in the project.</p>",
         "definitions": [
           {
             "term": "Configure Drawing Register Form",
-            "definition": "Configures the fields captured when drawings are logged into the project's Drawing Register."
+            "definition": "Titled \"Configure Drawing Register Form\" with <strong>Project Level</strong> and <strong>Tree Version</strong> selectors, a <strong>Status Configuration</strong> (<strong>Assign To Inactive</strong> / <strong>Assign To Active</strong>), the <strong>Standard Fields</strong> <strong>Drawing Id</strong> and <strong>Drawing Name</strong> (both Required, text), and seven <strong>Configurable Fields</strong>: <strong>Received Date</strong>, <strong>Locations</strong>, <strong>Network</strong>, <strong>Drawing Types</strong>, <strong>Sheets</strong>, <strong>Drawing Status</strong> and <strong>Remarks</strong> (each with <strong>Required</strong> and <strong>Show on card</strong> switches, off here, and a field type, Text Box), plus <strong>Add field</strong> and <strong>Save Changes</strong>. <strong>Where it goes:</strong> these are exactly the fields of <strong>Project Setup → Drawings → Drawing Register → Create</strong> (the Drawing Status values come from <strong>Drawing Status</strong> in this list)."
           },
           {
             "term": "Variation Order Form",
-            "definition": "Configures the fields and layout of the form used to raise and track variation orders on this project."
+            "definition": "Titled \"Variation Order Form\": <strong>Configurable Fields</strong> with one empty template row (\"Configurable Field 1\", Required, field type Text Box, copy and delete icons), <strong>Add field</strong> and <strong>Save Changes</strong>. No fields are defined on Arena Steel Plant - Phase 1. Variation Order is also one of the forms in the <strong>Project Setup → Forms → Approval Workflow</strong> form list, which is where its approval levels are created."
           },
           {
             "term": "Terms and Conditions",
-            "definition": "Defines the standard terms and conditions text applied to relevant project documents."
+            "definition": "A <strong>Save Changes</strong> page holding a list of text blocks (each type <strong>Label</strong>, with copy, add and delete icons) and <strong>Add field</strong> to add another. Arena Steel Plant - Phase 1 has 26 clauses, from \"1. PRICES &amp; QUANTITY\" and \"2. PAYMENT TERMS\" to \"24. Dispute Resolution\", \"25. Damages for non-completion\" and \"26. BILLING ADDRESS\". The wording is written as work order terms (it refers to \"this Work Order\"). The screen that prints the clauses was not found in the test project."
           },
           {
             "term": "Request for Information",
-            "definition": "Configures settings specific to how RFIs are structured and numbered on this project."
+            "definition": "Two tabs: <strong>Categories</strong> (<strong>Create</strong> opens <strong>Create Category</strong> with a Category Name; Category and Actions columns) and <strong>Priorities</strong> (Priority, Due Days, Due Hours, Escalation Users). Both are empty on Arena Steel Plant - Phase 1 and Global Data → Settings → Request for Information is identical and also empty. It is for the <strong>Request for Information</strong> form (the one beside Submittal and Change Order in Project Setup → Forms), not for the Request for Inspection RFI logged in Field Works → Progress."
           },
           {
             "term": "Transmittals Submitted Type",
-            "definition": "Configures the classification types available when logging a submitted transmittal."
+            "definition": "<strong>Create</strong> opens <strong>Create Submitted Type</strong> (Submitted Type Name); the list shows Submitted Type and Actions and is empty on Arena Steel Plant - Phase 1. Global Data → Settings has the same page, also empty. It supplies the submitted-type choices for the <strong>Transmittal</strong> form."
           },
           {
             "term": "Market Type",
-            "definition": "Configures the market type classification (e.g. the industry/sector categorization) associated with this project."
+            "definition": "Two lists: <strong>Create Market Type</strong> (\"Please enter the name of Market Type to create\") and <strong>Create Sub-Market Type</strong>; both say \"No ... Found\" on Arena Steel Plant - Phase 1, and the same page exists in Global Data → Settings. The <strong>Create Project</strong> form has no Market Type field. Home → Opportunity Management has a Market Type field on Create Opportunity."
+          },
+          {
+            "term": "Vista Progress",
+            "definition": "The last category, titled <strong>Vista Progress Batch Entries</strong>: a read-only table with a search box and <strong>Manage Columns</strong>, with the columns <strong>S.No.</strong>, <strong>Phase</strong>, <strong>Actual Date</strong>, <strong>Cost Type</strong>, <strong>Actual Units</strong>, <strong>Sync Status</strong>, <strong>Sync Error</strong> and <strong>Synced At</strong>. It is empty on Arena Steel Plant - Phase 1 and has no Save button or Create. Use it to check whether progress entries have synced to an outside system; Global Data → Marketplace lists <strong>Trimble Viewpoint</strong> apps, but the link to this table was not confirmed."
           }
         ],
         "procedures": []
