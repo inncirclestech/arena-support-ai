@@ -11202,6 +11202,35 @@ const QA_WORKORDER = [
     question: "What must be in place before the first work order is raised?",
     answer: "Set up the work order types, maintenance types, statuses and priorities, mark an approval workflow **Set as Default**, configure invoice approvals, make sure the equipment exists in Equipment Management with a Business Unit and Location, create the Projects and Phase Codes for cost, stock the items in Inventory and add users under **Users and Permissions**.",
     tags: ["before first work order","prerequisites","checklist","setup order work order"]
+  },
+  {
+    "action": "view",
+    "object": "work order history",
+    "scope": "module",
+    "section": "The Work Orders Page",
+    "question": "Where do I see the history of a work order from the list?",
+    "answer": "From **Home**, open **Work Order → Work Orders**. Each row has a **History** action that shows the work order history. The other row action is **Delete**.",
+    "tags": [
+      "work order history",
+      "history action",
+      "work order row actions",
+      "delete work order",
+      "see changes on work order"
+    ]
+  },
+  {
+    "action": "view",
+    "object": "asset breakdown report",
+    "scope": "module",
+    "section": "Reports",
+    "question": "Is the Asset Breakdown Report the same as the Equipment Breakdown Report?",
+    "answer": "Yes. The report under **Work Order → Reports** is named by your company's naming framework, so you may see **Asset Breakdown Report** instead of **Equipment Breakdown Report** (**Global Data → Settings → Naming Framework**).",
+    "tags": [
+      "asset breakdown report",
+      "equipment breakdown report name",
+      "naming framework asset equipment",
+      "breakdown report"
+    ]
   }
 ];
 
@@ -29587,7 +29616,7 @@ const MODULES = [
       {
         "heading": "The Work Orders Page",
         "intro": "<p>The <strong>Work Orders</strong> list is where every user of the module finds, filters, creates and exports work orders. Requesters click <strong>Create</strong> to raise work against equipment, and everyone else opens a work order from the list.</p><p>The Work Order page has three tabs, <strong>Work Orders</strong>, <strong>Workflow Issues</strong> and <strong>Reports</strong>, plus <strong>Settings</strong> on the right.</p>",
-        "definitions": [
+        "definitions":[
           {
             "term": "Work Order",
             "definition": "The record of one job of work on equipment. It is created from a work order type, routed through approval, and worked through its own tabs (Profile, Items, Team, Timesheets and the rest)."
@@ -29615,6 +29644,10 @@ const MODULES = [
           {
             "term": "Work order roles at a glance",
             "definition": "The Requester creates and assigns; the Approver approves; the Technician and Supervisor execute; the Store Keeper and Purchase Executive supply materials and parts; the Accounts user handles invoices; the Administrator configures. Each role sees only the actions its permissions allow."
+          },
+          {
+            "term": "Work Orders list: views, more columns and row actions",
+            "definition": "Click **Create** to raise a work order. The list can be shown as a table, grid or week view, and **Manage Columns** adds more columns such as **Equipment Issue Linked**, **Maintenance Type**, **Complaint**, **Cause**, **Correction** and **Vendor PO Number**. Each row has the actions **History**, which shows the work order history, and **Delete**."
           }
         ],
         "procedures": [
@@ -30772,10 +30805,10 @@ const MODULES = [
       {
         "heading": "Reports",
         "intro": "<p>The <strong>Reports</strong> tab of the Work Order page has the <strong>Equipment Breakdown Report</strong>, which Administrators and Approvers use to track which equipment is down and what it costs.</p>",
-        "definitions": [
+        "definitions":[
           {
             "term": "Equipment Breakdown Report",
-            "definition": "Lists equipment breakdowns recorded through work orders. Columns: **Equipment ID**, **Status**, **Make**, **Model**, **Category**, **Project**, **Down Date**, **Estimated Back in Service**, **Vendor** (Internal when done in-house), **Notes**, **Cost/Estimate**, **Warranty** and **Responsible party**. Search by work order or asset ID, use **Filters** or column filters, **Manage Columns** (you can save several layouts) and **Export** to download with the filters applied."
+            "definition": "Lists equipment breakdowns recorded through work orders. Columns: **Equipment ID**, **Status**, **Make**, **Model**, **Category**, **Project**, **Down Date**, **Estimated Back in Service**, **Vendor** (Internal when done in-house), **Notes**, **Cost/Estimate**, **Warranty** and **Responsible party**. Search by work order or asset ID, use **Filters** or column filters, **Manage Columns** (you can save several layouts) and **Export** to download with the filters applied. Your company may see this as the **Asset Breakdown Report** (naming framework: **Global Data → Settings → Naming Framework**)."
           },
           {
             "term": "Who uses the Equipment Breakdown Report",
@@ -30898,7 +30931,7 @@ const MODULES = [
       "Click <strong>Settings</strong> for <strong>Work Order Types</strong>, <strong>Maintenance Types</strong>, <strong>Invoices</strong>, <strong>Approval Workflow</strong>, <strong>Status</strong>, <strong>Priority</strong>, <strong>Configuration</strong> and <strong>Users and Permissions</strong>.",
       "Open the <strong>Reports</strong> tab for the <strong>Equipment Breakdown Report</strong>."
     ],
-    "sections": [
+    "sections":[
       "Who Does What",
       "Settings",
       "The Work Orders Page",
