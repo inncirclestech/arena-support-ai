@@ -2689,7 +2689,7 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "Company-Wide Settings",
     question: "How do I change the company's currency?",
-    answer: "1. Global Data → **Settings** → **Currency** (left nav).\n2. Choose the desired currency from the dropdown.\n3. Click **Save Changes**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "1. Global Data → **Settings** → **Currency** (left nav).\n2. Choose the desired currency from the dropdown.\n3. Click **Save Changes**.\n\nThe **Create Project** form has its own **Currency** field. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["currency","change currency","settings"]
   },
   {
@@ -3112,7 +3112,7 @@ const QA_GLOBALDATA = [
     scope: "module",
     section: "UOM & Phase Codes",
     question: "Where does the Phase Code list in Project Setup come from?",
-    answer: "From **Global Data → UOM, Phasecode & GL Codes → Phase Codes**. Add or edit a code in Global Data and it is the same list everywhere. The list is also reachable under **Cost → Cost Breakdown Structure → Phase Codes**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "From **Global Data → UOM, Phasecode & GL Codes → Phase Codes**. Add or edit a code in Global Data and it is the same list everywhere. **Project Setup → Phase Codes** shows the same list, with **Timesheet Management** and **Equipment Management** tick boxes and a **Settings** button that chooses which cost types show for each category. The list is also reachable under **Cost → Cost Breakdown Structure → Phase Codes**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["phase code project","project phase codes","where do phase codes come from","project setup phase codes","phase code mapping"]
   },
   {
@@ -3121,7 +3121,7 @@ const QA_GLOBALDATA = [
     scope: "module",
     section: "UOM & Phase Codes",
     question: "Where does the Phase Code list in timesheets come from?",
-    answer: "From the company Phase Codes in **Global Data → UOM, Phasecode & GL Codes**. In **Time Management → My Timesheet → Default Phase Codes** the list shows Direct (D) and Indirect (I) codes whose **Cost Types** include **Labor**, written as \"D - code - description\". If a code is missing, check that it has the Labor cost type in Global Data and that it is a Direct or Indirect code. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "From the company Phase Codes in **Global Data → UOM, Phasecode & GL Codes**. In **Time Management → My Timesheet → Default Phase Codes** the list shows Direct (D) and Indirect (I) codes whose **Cost Types** include **Labor**, written as \"D - code - description\". Non Productive and Change Order codes are not offered. **Project Setup → Phase Codes → Settings** has a **Timesheet Management** category where you choose the cost types shown (for example Labor). If a code is missing, check that it has the Labor cost type in Global Data and that it is a Direct or Indirect code. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["timesheet phase code","phase code dropdown timesheet","default phase codes","where does timesheet phase code come from","phase code missing timesheet","time management phase codes"]
   },
   {
@@ -3157,7 +3157,7 @@ const QA_GLOBALDATA = [
     scope: "module",
     section: "Construction Types",
     question: "Where does the Construction Type dropdown in Create Project come from?",
-    answer: "From **Global Data → Construction Types**. If a type is missing, add it with **Create** on the Construction Types screen.",
+    answer: "From **Global Data → Construction Types**. If a type is missing, add it with **Create** on the Construction Types screen. The dropdown on **Projects → Create Project** lists the same types in the same order, and the type marked **Set as Default** is pre-selected.",
     tags: ["construction type dropdown","create project construction type","construction type missing","default construction type"]
   },
   {
@@ -3175,7 +3175,7 @@ const QA_GLOBALDATA = [
     scope: "module",
     section: "Construction Types",
     question: "What does Set as Default do on the Construction Types screen?",
-    answer: "The **Set as Default** radio button marks one construction type as the default. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "The **Set as Default** radio button marks one construction type as the default, and **Projects → Create Project** opens with that type already selected in the **Construction Type** field. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["set as default","default construction type","default type create project"]
   },
   {
@@ -3283,7 +3283,7 @@ const QA_GLOBALDATA = [
     scope: "module",
     section: "Company-Wide Settings",
     question: "Where do Project Type, Funding Agency and Implementing Agency in Create Project come from?",
-    answer: "From **Global Data → Settings → Project Form**. The Create Project dropdowns showed the same options. Edit the options there to change them. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "From **Global Data → Settings → Project Form**. The Create Project dropdowns show the same options. Under **Configurable Fields → Groups** you can define Single Select fields, e.g. a Project Type field with values like Roads or Metro. Edit the options there to change them. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["project type dropdown","funding agency dropdown","implementing agency","create project dropdowns","project form settings","project type funding agency","funding agency implementing agency","project type funding agency create project"]
   },
   {
@@ -3346,7 +3346,7 @@ const QA_GLOBALDATA = [
     scope: "module",
     section: "Forms & Quickapps",
     question: "Where do the RFI templates in a project come from?",
-    answer: "From **Global Data → Forms → Construction Forms → RFI**. Create a template in Global Data first, then assign it in the project. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "From **Global Data → Forms → Construction Forms → RFI**. In a project, **Project Setup → Forms → Assign Templates → RFI** offers exactly those templates. Create a template in Global Data first, then assign it in the project. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["rfi templates project","assign templates","project forms templates","template missing project forms"]
   },
   {
@@ -3364,7 +3364,7 @@ const QA_GLOBALDATA = [
     scope: "module",
     section: "Forms & Quickapps",
     question: "What is the Quick Apps tile for?",
-    answer: "Projects use the apps you configure here in **Field Works → Quick Apps**.",
+    answer: "The **Quick Apps** tile has two tabs: **Standard Tables** (reusable reference tables such as Drawing Status) and **Quick Apps** (custom mini-apps such as Observation Report, Non-Conformance Report, Variance Request and Equipment Productivity Planner). Projects use the apps you configure here in **Field Works → Quick Apps**.",
     tags: ["quick apps tile","what is quick apps","quick apps list","standard tables tab"]
   },
   {
@@ -3391,7 +3391,7 @@ const QA_GLOBALDATA = [
     scope: "module",
     section: "Notifications",
     question: "Do project notifications use the same events as Global Data?",
-    answer: "Yes, the list matches. Each screen has **Reset to Standard**. Whether a change in Global Data carries into an existing project was not verified, so check the project screen after you change the global one. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "Yes, the list matches. **Project → Notifications** (Event Groups, Events, Reminders, Alerts) shows the same event groups as **Global Data → Notifications → Events**. Each screen has **Reset to Standard**. Whether a change in Global Data carries into an existing project was not verified, so check the project screen after you change the global one. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["project notifications","notification events project","notification not in project","global vs project notifications"]
   },
   {
@@ -4169,7 +4169,7 @@ const QA_MYDESK = [
     scope: "module",
     section: "Project Progress",
     question: "Where do the Project Progress cards come from?",
-    answer: "Each card is an Entity of a plant (Tree Version): the same Entities listed on **Field Works → Tree Version**, built in **Project Setup → Works**. Weights for the overall percentage are set in **Project Setup → Works → Assign Percentage**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "Each card is an Entity of a plant (Tree Version): the same Entities listed on **Field Works → Tree Version**, built in **Project Setup → Works**. A plant with no Entities has no card. Weights for the overall percentage are set in **Project Setup → Works → Assign Percentage**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["progress cards source","where do progress cards come from","entities on my desk","progress plant list","project progress lineage"]
   },
   {
@@ -4196,7 +4196,7 @@ const QA_MYDESK = [
     scope: "module",
     section: "Project Progress",
     question: "Why is a plant or Entity missing from the Project Progress row?",
-    answer: "Cards are built from the Entities of each Tree Version. Add Entities in **Project Setup → Works**. If the plant itself is missing, check that the Tree Version exists in **Field Works → Tree Version**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "Cards are built from the Entities of each Tree Version. A plant with no Entities has no card. Add Entities in **Project Setup → Works**. If the plant itself is missing, check that the Tree Version exists in **Field Works → Tree Version**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["missing plant card","plant not showing my desk","entity not on my desk","why is my plant missing"]
   },
   {
@@ -5615,7 +5615,7 @@ const QA_PROJECTSETUP = [
     scope: "module",
     section: "Phase Codes",
     question: "Where do the phase codes in Productivity Logs come from?",
-    answer: "From this list. In **Productivity Logs → Create** the **Set Phase Codes** dialog offers a subset that differs by project, and finished logs show codes like **1089-101 - Fabrication**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "From the **Project Setup → Phase Codes** list. In **Productivity Logs → Create** the **Set Phase Codes** dialog offers a subset that differs by project, and finished logs show codes like **1089-101 - Fabrication**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["phase codes productivity logs","set phase codes source","phase code list project setup","1089-101"]
   },
   {
@@ -6455,7 +6455,7 @@ const QA_FIELDWORKS = [
     scope: "module",
     section: "Progress",
     question: "Why does Detailed Work Logs show Actual Quantity 0 for a completed work package?",
-    answer: "Detailed Work Logs lists every work package at every location (697 on Pellet Plant) from **Project Setup → Works**. The single log form has an Actual Quantity box and the bulk modes include **Bulk Log - Quantity** and **Bulk Log - Work Hours** for logging quantities and hours. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "Detailed Work Logs lists every work package at every location from **Project Setup → Works**. Actual Quantity and Actual Hours only increase when a work log records quantity or hours; logs recorded as percentages (0 to 100) move the work log status to Completed but do not add quantity. The single log form has an Actual Quantity box and the bulk modes include **Bulk Log - Quantity** and **Bulk Log - Work Hours** for logging quantities and hours. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["detailed work logs actual quantity zero","actual quantity 0","detailed work log columns","work log percentage vs quantity","detailed work logs 697","where do detailed work logs come from"]
   },
   {
@@ -6941,7 +6941,7 @@ const QA_FIELDWORKS = [
     scope: "module",
     section: "Quality",
     question: "Where does the punch list priority come from?",
-    answer: "Cards on Warehouse Construction showed **Medium**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "From **Project Settings → Punch Lists & Restraints**: Punch Lists Priority offers **High** (4 hours), **Medium** (24) and **Low** (48) due hours. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["punch list priority","punch list due hours","punch list category","priority high medium low"]
   },
   {
@@ -7367,7 +7367,7 @@ const QA_DATAANALYTICS = [
     scope: "project",
     section: "Standard Analytics",
     question: "What is on the Collaboration Items dashboard?",
-    answer: "It counts RFIs, Submittals and Change Orders by Created, Waiting for approval, Approved and Rejected (Table View) or as a bar chart. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "It counts RFIs, Submittals and Change Orders by Created, Waiting for approval, Approved and Rejected (Table View) or as a bar chart. The numbers are the forms raised in Field Works → Progress. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["collaboration items","rfi counts","forms status dashboard","waiting for approval","construction forms dashboard"]
   },
   {
@@ -7475,7 +7475,7 @@ const QA_DATAANALYTICS = [
     scope: "project",
     section: "Standard Reports",
     question: "What is on the Daily Progress Report and where does it come from?",
-    answer: "It is a read-only page dated today. For each plant it shows Physical Progress of the Day, Cumulative Physical Progress, Cost of the Day and Cumulative Cost, then a Work Executed table by entity and location type (Total Locations, Completed Today, Cumulative Completed, % Complete). Plants with no locations say \"Package has not yet started\". For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "It is a read-only page dated today. For each plant it shows Physical Progress of the Day, Cumulative Physical Progress, Cost of the Day and Cumulative Cost, then a Work Executed table by entity and location type (Total Locations, Completed Today, Cumulative Completed, % Complete). Structure comes from Project Setup → Works and completion from Field Works Work Logs. Plants with no locations say \"Package has not yet started\". For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["daily progress report","daily progress report contents","daily report source","physical progress of the day","work executed table","package has not yet started"]
   },
   {
@@ -7568,7 +7568,7 @@ const QA_DOCUMENTREPOSITORY = [
     scope: "project",
     section: "Document Repository",
     question: "Can I email a record from the Document Repository, or check who opened it?",
-    answer: "The history icon (**Access Logs**) lists who opened the record, with IP address, operating system and browser; it is an access log, not a revision trail. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "The email icon (**Email Threads**) opens the email conversations tied to the record; it has no send box, so it is a view of conversations, not a send form. The history icon (**Access Logs**) lists who opened the record, with IP address, operating system and browser; it is an access log, not a revision trail. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["email record","email threads","record history","actions column","access logs","can i email a record"]
   },
   {
@@ -7631,7 +7631,7 @@ const QA_DOCUMENTREPOSITORY = [
     scope: "project",
     section: "Where Records Come From",
     question: "Why is my drawing not showing under Drawings in the Document Repository?",
-    answer: "Check the drawing's approval workflow level in Drawing Master. What exactly moves a drawing into the archive was not confirmed. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "The Drawings category lists the drawing package categories from Project Setup → Drawings, but a drawing uploaded to **Drawing Master** with status Created does not appear there by itself. Check the drawing's approval workflow level in Drawing Master. What exactly moves a drawing into the archive was not confirmed. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["drawing not in document repository","drawings category empty","walls drawings repository","drawing missing from archive","drawing package archive"]
   },
   {
@@ -7649,7 +7649,7 @@ const QA_DOCUMENTREPOSITORY = [
     scope: "project",
     section: "Where Records Come From",
     question: "What are the sub-categories under Drawings, Invoices and Workorders?",
-    answer: "They are created from the project's own data. Under Drawings the sub-category is the drawing package category from Project Setup → Drawings → Drawing Packages. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "They are created from the project's own data. Under Drawings the sub-category is the drawing package category from Project Setup → Drawings → Drawing Packages. Under Other Forms, Safety Forms, Safety Scheduled Forms, Workorders and Invoices the sub-categories appear only when records of that type exist. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["sub categories","drawing sub category","walls category","expandable category contents","what are the subcategories"]
   },
   {
@@ -8144,7 +8144,7 @@ const QA_USERSANDPERMISSIONS = [
     scope: "project",
     section: "User Permission",
     question: "Why does the System Admin have no groups but can see everything?",
-    answer: "Treat groups as the way to give everyone else access. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "Company-level administrators such as System Admin are not limited by project groups: they can open every screen even when User Permission shows no groups for them. Treat groups as the way to give everyone else access. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["system admin no groups","admin without group","super admin permissions","no groups were assigned","why no groups assigned"]
   }
 ];
@@ -8183,7 +8183,7 @@ const QA_OWNERS = [
     scope: "project",
     section: "Owners",
     question: "How does registering an Owner relate to the Owner Dashboard I've seen under Project Settings?",
-    answer: "The views are the same ones as in <strong>Data Analytics & Insights</strong>. How an owner signs in was not visible because none is registered. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "The <strong>Owners</strong> screen registers the people; <strong>Project Settings → Owner Dashboard</strong> chooses which Standard Analytics views owners can see (Construction Progress, Quality Progress, Cost, Contractors Performance). The views are the same ones as in <strong>Data Analytics & Insights</strong>. How an owner signs in was not visible because none is registered. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["owner dashboard","project settings","owner visibility"]
   },
   {
@@ -8384,7 +8384,7 @@ const QA_PROJECTSETTINGS = [
     scope: "project",
     section: "Drawings, Compliance & Identifiers",
     question: "How do I set the terms and conditions text that appears on project documents?",
-    answer: "Go to <strong>Project Settings → Terms and Conditions</strong>. Each clause is a text block you can edit, copy or delete, and <strong>Add field</strong> adds another. Arena Steel Plant - Phase 1 has 26 clauses written as work order terms. Click <strong>Save Changes</strong> afterwards. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "Go to <strong>Project Settings → Terms and Conditions</strong>. Each clause is a text block you can edit, copy or delete, and <strong>Add field</strong> adds another. The wording is written as work order terms. Click <strong>Save Changes</strong> afterwards. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["terms and conditions","document text","project settings"]
   },
   {
@@ -8447,7 +8447,7 @@ const QA_PROJECTSETTINGS = [
     scope: "project",
     section: "Scheduling, Views & Workflow Settings",
     question: "What can I choose on the Owner Dashboard setting in Project Settings?",
-    answer: "Project Settings → Owner Dashboard has tick boxes for Standard Analytics views to show to owners: Construction Progress (10), Quality Progress (9), Cost (2) and Contractors Performance (1). Owners are registered under Owners → Register Owner. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "Project Settings → Owner Dashboard has tick boxes for Standard Analytics views to show to owners: Construction Progress (10), Quality Progress (9), Cost (2) and Contractors Performance (1). They are the same views as in Data Analytics & Insights. Owners are registered under Owners → Register Owner. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["owner dashboard setting project settings","what can i choose on the owner dashboard setting","project settings owner dashboard checkboxes"]
   },
   {
@@ -8582,7 +8582,7 @@ const QA_PROJECTSETTINGS = [
     scope: "module",
     section: "Drawings, Compliance & Identifiers",
     question: "Where do I see the Terms and Conditions clauses?",
-    answer: "Edit them in <strong>Project Settings → Terms and Conditions</strong> (26 clauses on Arena Steel Plant - Phase 1, written as work order terms). For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "Edit them in <strong>Project Settings → Terms and Conditions</strong> (the clauses are written as work order terms). For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["terms and conditions clauses","work order terms and conditions","where terms and conditions show"]
   },
   {
@@ -8591,7 +8591,7 @@ const QA_PROJECTSETTINGS = [
     scope: "module",
     section: "Look, Forms & Field Templates",
     question: "Which projects use which Work Logs template?",
-    answer: "Check yours in **Project Settings → Work Logs Templates**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "Each project ticks the templates it uses: **Work Package to Location Logging**, **Location to Work Package Logging**, **Super Location to Location Logging**, **Location to Work Package bulk logging**, **Worklogs in Scheduled View**, **Quantity Work Logging** and **Worklogs enable by Certified RFIs**. Check yours in **Project Settings → Work Logs Templates**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["work logs templates usage","which projects use which template","work logs template counts","template in use"]
   },
   {
@@ -8738,7 +8738,7 @@ const QA_COSTTRACKING = [
     scope: "module",
     section: "Cost by Cost Types",
     question: "How do Labor, Material and Equipment add up to the total?",
-    answer: "For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "Labor, Material and Equipment add up to the header **Total Estimate Cost** and to the Cost by Projects total. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["cost types add up","total estimate cost calculation","cost type totals"]
   },
   {
@@ -8864,7 +8864,7 @@ const QA_COSTTRACKING = [
     scope: "module",
     section: "Where Actual Costs Come From",
     question: "Do purchase orders and invoices count as actual cost?",
-    answer: "Actual cost counts what is recorded and approved as cost logs in Field Works > Cost. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "Not automatically. Actual cost counts what is recorded and approved as cost logs in Field Works > Cost. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["purchase orders actual cost","invoices actual cost","procurement cost tracking","timesheets cost tracking","equipment cost tracking"]
   },
   {
@@ -10312,7 +10312,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "module",
     section: "Where Proposal Fields Come From",
     question: "What proposal statuses are there?",
-    answer: "Start is the first standard status; Completed and Lost are the last-level standard statuses that carry the Success / Failure flag. Add or edit them in Settings > Status. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "Each status has a colour. Start is the first standard status; Completed and Lost are the last-level standard statuses that carry the Success / Failure flag. Add or edit them in Settings > Status. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["proposal statuses list","what statuses can a proposal have","proposal status options","status colours","no bid lost completed"]
   },
   {
@@ -10519,7 +10519,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "module",
     section: "Settings",
     question: "What are Department Codes and Business Development Codes?",
-    answer: "Lists in Settings used by the Profile drop-downs and the Weekly Report.",
+    answer: "Lists in Settings used by the Profile drop-downs and the Weekly Report. A department code has a code, description, group and business unit; a business development code has a code and description.",
     tags: ["department codes","business development codes"]
   },
   {
@@ -10684,7 +10684,7 @@ const QA_TENDERMANAGEMENT = [
     scope: "module",
     section: "Tender Setup: Profile, Team, Scope of Work and Submission",
     question: "Why do I see only Tender Setup on some tenders?",
-    answer: "The tender page shows tabs according to how far the tender has progressed. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "The tender page shows tabs according to how far the tender has progressed. For example, a tender that has just been set up shows only Tender Setup, while a Completed tender also shows Tender Response, Negotiated Responses and Awarded Work Order. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["tender response tab missing","only tender setup","negotiated responses tab missing","awarded work order tab missing"]
   },
   {
@@ -10954,7 +10954,7 @@ const QA_TENDERMANAGEMENT = [
     scope: "module",
     section: "Comparing Bids, Negotiating and Awarding a Work Order",
     question: "Where does the winner of a tender go?",
-    answer: "To Tender Management > Tender Details > Awarded Work Order, where the work order shows who it is awarded to and its BOQ. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "To Tender Management > Tender Details > Awarded Work Order, where the work order shows who it is awarded to and its BOQ. It is not added to the Home **Work Order** list. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["where does winner go","tender winner","awarded work order location","tender to work order","tender to purchase order"]
   },
   {
@@ -11044,7 +11044,7 @@ const QA_TENDERMANAGEMENT = [
     scope: "module",
     section: "Analytics, Issues and the Bid Tab",
     question: "Why is a tender missing from the Weekly Report?",
-    answer: "Check the tender status and use the Date Range filter. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "Tenders with status Unassigned are not shown in the Weekly Report. Check the tender status and use the Date Range filter. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["tender missing weekly report","weekly report tender columns","tender weekly report"]
   },
   {
@@ -11089,7 +11089,7 @@ const QA_TENDERMANAGEMENT = [
     scope: "module",
     section: "Where Tender Data Comes From and Goes",
     question: "Does an awarded tender create a Work Order or Purchase Order?",
-    answer: "It creates an awarded work order inside the tender (Tender Details > Awarded Work Order). For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "It creates an awarded work order inside the tender (Tender Details > Awarded Work Order). It does not appear in the Home Work Order list, and no purchase order is created. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["tender creates work order","tender purchase order","award creates po","tender to project"]
   },
   {
@@ -11770,7 +11770,7 @@ const QA_TIMEMANAGEMENT = [
     scope: "module",
     section: "Which Phase Codes a Timesheet Offers",
     question: "Why does my timesheet show only some phase codes?",
-    answer: "It depends on what the row is charged to. A project shows only the phase codes ticked \"Timesheet Management\" in that project's Project Setup > Phase Codes. With no project on a crew row you see Indirect codes only. Work-order items and GL codes have no phase code. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "It depends on what the row is charged to. A project shows only the phase codes ticked \"Timesheet Management\" in that project's Project Setup > Phase Codes. On a company row you see the codes ticked in Default Phase Codes plus your own Default Indirect Phase Code, not the full Global Data list. With no project on a crew row you see Indirect codes only. Work-order items and GL codes have no phase code. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["phase code dropdown","only some phase codes","timesheet phase codes","phase code list","missing phase code","company vs project phase codes"]
   },
   {
@@ -11869,7 +11869,7 @@ const QA_TIMEMANAGEMENT = [
     scope: "module",
     section: "My Timesheet",
     question: "Why do I see only some timesheet templates?",
-    answer: "The Select Template list follows the Timesheet Mode of the person or crew. All 18 are managed in Settings > Timesheet Template. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "The Select Template list follows the Timesheet Mode of the person or crew. All templates are managed in Settings > Timesheet Template. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["template dropdown","timesheet templates missing","template by mode"]
   },
   {
@@ -13205,7 +13205,7 @@ const QA_CAPITALMANAGEMENT = [
     scope: "module",
     section: "Budget Planning",
     question: "What is on the Budget Planning Form?",
-    answer: "A grid of Budget Items by year with row and column totals, **+ Add Budget Item**, the extra fields your admin built in **Settings → Budget Forms** (Fund Name, Business Area, Fund No./Bus. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "A grid of Budget Items by year with row and column totals, **+ Add Budget Item**, the extra fields your admin built in **Settings → Budget Forms** (for example Fund Name, Business Area, Fund No./Bus. Area No. and an FTEs table) and the **Submit For Approval** button. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["budget planning form fields","enter budget amounts","add budget item","ftes table"]
   },
   {
@@ -20551,7 +20551,7 @@ const MODULES = [
           },
           {
             "term": "Where Global Data shows up (verified links)",
-            "definition": "- **Owners** → Create Project **Owner** dropdown; **Locations** → Owners → Link Locations; **Tax Configuration** → Tax Codes on Locations and Owners.\n- **Construction Types** → Create Project **Construction Type** dropdown (default pre-selected).\n- **Customer** → Create Project **Customer** dropdown.\n- **Settings → Project Form** → Create Project **Project Type**, **Funding Agency**, **Implementing Agency**.\n- **Users / Global Rosters** → Project Setup → People → Add; **Crews** → People → Project Crews → Copy Crews from Global Data.\n- **Phase Codes** → Project Setup → Phase Codes (same 963) and timesheet Default Phase Codes (Direct and Indirect Labor codes).\n- **Vendors** → Procurement RFQ (Vendor Category, Sub Category, Category Groups) and dashboard vendor list; **Cost Material/Equipment** → vendor Rate Card rows; **Earnings Codes** → Cost Labor rate columns.\n- **Forms** → Project Setup → Forms (Assign Templates, form types); **Hindrance Category** → Field Works Restraint Category; **Sub Contractor Settings** → Sub Contractor CERTIFICATIONS.\n- **Notifications** → Project Notifications (same 32 event groups); **Work Order Management** → same module as Home → Work Order."
+            "definition": "Each Global Data list feeds these places:\n- **Owners** → Create Project **Owner** dropdown; **Locations** → Owners → Link Locations; **Tax Configuration** → Tax Codes on Locations and Owners.\n- **Construction Types** → Create Project **Construction Type** dropdown (default pre-selected).\n- **Customer** → Create Project **Customer** dropdown.\n- **Settings → Project Form** → Create Project **Project Type**, **Funding Agency**, **Implementing Agency**.\n- **Users / Global Rosters** → Project Setup → People → Add; **Crews** → People → Project Crews → Copy Crews from Global Data.\n- **Phase Codes** → Project Setup → Phase Codes and timesheet Default Phase Codes (Direct and Indirect Labor codes).\n- **Vendors** → Procurement RFQ (Vendor Category, Sub Category, Category Groups) and dashboard vendor list; **Cost Material/Equipment** → vendor Rate Card rows; **Earnings Codes** → Cost Labor rate columns.\n- **Forms** → Project Setup → Forms (Assign Templates, form types); **Hindrance Category** → Field Works Restraint Category; **Sub Contractor Settings** → Sub Contractor CERTIFICATIONS.\n- **Notifications** → Project Notifications ; **Work Order Management** → same module as Home → Work Order."
           },
           {
             "term": "Why a new Global Data entry may not show up",
@@ -20571,7 +20571,7 @@ const MODULES = [
       },
       {
         "heading": "Company & Business Units",
-        "intro": "<p>Use this section to record the company's own profile, its subsidiaries and its business units. The Super Admin sets it up once when the account is created.</p><p><strong>Where this data goes:</strong> the profile is the company's own record and the lists sit under Global Data → Company and Global Data → Business Units.",
+        "intro": "<p>Use this section to record the company's own profile, its subsidiaries and its business units. The Super Admin sets it up once when the account is created.</p><p><strong>Where this data goes:</strong> the profile is the company's own record and the lists sit under Global Data → Company and Global Data → Business Units. The Create Project form has a <strong>Business Unit</strong> dropdown fed by the Business Units list, so add business units here first.</p>",
         "definitions": [
           {
             "term": "Company Details",
@@ -20587,7 +20587,7 @@ const MODULES = [
           },
           {
             "term": "Business Unit",
-            "definition": "A simple record made of a numeric **Code**, a **Description** and an optional colour tag. The **Business Unit** screen (its own tile, **Global Data → Business Units**) is a table with **Serial Number**, **Code**, **Description** and **Actions**, and an **Add** button that opens an inline row instead of a pop-up. Who uses it: the Super Admin maintains the list."
+            "definition": "A simple record made of a numeric **Code**, a **Description** and an optional colour tag. The **Business Unit** screen (its own tile, **Global Data → Business Units**) is a table with **Serial Number**, **Code**, **Description** and **Actions**, and an **Add** button that opens an inline row instead of a pop-up. Who uses it: the Super Admin maintains the list. The Create Project form has a **Business Unit** dropdown fed by this list."
           }
         ],
         "procedures": [
@@ -20635,7 +20635,7 @@ const MODULES = [
         "definitions": [
           {
             "term": "User Accounts (Active / Inactive)",
-            "definition": "The login-level user list under **Global Data → Users & Permissions → User Accounts**, with sub-tabs **Active Users** and **Inactive Users** (35). Columns: **Profile**, **Created From** (ARENA for people added in Arena), **Employee ID**, **First Name**, **Last Name**, **Last Login**, **User Name**, **Contact No.**, **Email ID**, **Vendor Number** and **Actions** (edit, delete, star). Inactive Users adds **Deactivated on**. Toolbar: **Register User**, search, pager, **Export**, **Manage Columns**, list/grid icons, save layout. Deleting moves a user to Inactive Users; nothing is erased."
+            "definition": "The login-level user list under **Global Data → Users & Permissions → User Accounts**, with sub-tabs **Active Users** and **Inactive Users**. Columns: **Profile**, **Created From** (ARENA for people added in Arena), **Employee ID**, **First Name**, **Last Name**, **Last Login**, **User Name**, **Contact No.**, **Email ID**, **Vendor Number** and **Actions** (edit, delete, star). Inactive Users adds **Deactivated on**. Toolbar: **Register User**, search, pager, **Export**, **Manage Columns**, list/grid icons, save layout. Deleting moves a user to Inactive Users; nothing is erased."
           },
           {
             "term": "Signature field (user registration)",
@@ -20643,7 +20643,7 @@ const MODULES = [
           },
           {
             "term": "Global Rosters",
-            "definition": "The people list used for timesheets, crews and project teams. Sub-tabs: **System User**, **Non System User** (56; no login) and **Non System Inactive User**. Columns: **Profile**, **Roster ID**, **First Name**, **Last Name**, **Group No.**, **Last Login**, **Email ID**, **Default Indirect Phase Code**, **Address**, **Designation**, **Skills**, **Experience**, **Craft**, **Class**, **Contact No.**, **Vendor Number**, **Labor**, **Role** and **Actions**. System rows have notes, edit and remove-person icons; Non System rows have notes, a login icon, edit and delete. Buttons: **Add Role** (both), **Add Non System Roster** and **Export All Users** (Non System), search, **More** and **Manage Columns**."
+            "definition": "The people list used for timesheets, crews and project teams. Sub-tabs: **System User**, **Non System User** (no login) and **Non System Inactive User**. Columns: **Profile**, **Roster ID**, **First Name**, **Last Name**, **Group No.**, **Last Login**, **Email ID**, **Default Indirect Phase Code**, **Address**, **Designation**, **Skills**, **Experience**, **Craft**, **Class**, **Contact No.**, **Vendor Number**, **Labor**, **Role** and **Actions**. System rows have notes, edit and remove-person icons; Non System rows have notes, a login icon, edit and delete. Buttons: **Add Role** (both), **Add Non System Roster** and **Export All Users** (Non System), search, **More** and **Manage Columns**."
           },
           {
             "term": "Non-system user",
@@ -20947,7 +20947,7 @@ const MODULES = [
         "definitions": [
           {
             "term": "Vendor",
-            "definition": "An external supplier. Each vendor is a card with photo, name, vendor ID and two switches, **Preferred** and **Blocked**. The ⋮ menu gives **Edit** and **Delete**."
+            "definition": "An external supplier. Each vendor is a card with photo, name, vendor ID and two switches, **Preferred** and **Blocked**. The ⋮ menu gives **Edit** and **Delete**. The **Vendors** screen (tabs **Vendors** and **Ratings Form**) has a left panel with **Create Category** and the category tree (categories with sub-categories), and a toolbar with **Restore Vendors**, **Register Vendor**, a search box, **Add Groups**, **Download Excel**, **Upload Vendors** and **Settings**."
           },
           {
             "term": "Vendor categories",
@@ -20963,11 +20963,11 @@ const MODULES = [
           },
           {
             "term": "Sub Contractor",
-            "definition": "A subcontracted trade company, kept in its own list (**Global Data → Sub Contractors**) separate from Vendors. The **Create Sub Contractor** dialog asks for **Upload Photo**, **Sub Contractor ID**, **First Name**, **Last Name**, **User Name**, **Phone Number**, **Company Name**, **Email Address**, **Subcontractor Specialists**, **Website**, **Location**, **Experience**, **License Number**, **License Document**, **Insurance Document** and **Resume** (three uploads), **Linked SubContractor Groups**, then a **CERTIFICATIONS** section of upload fields."
+            "definition": "A subcontracted trade company, kept in its own list (**Global Data → Sub Contractors**) separate from Vendors. The **Create Sub Contractor** dialog asks for **Upload Photo**, **Sub Contractor ID**, **First Name**, **Last Name**, **User Name**, **Phone Number**, **Company Name**, **Email Address**, **Subcontractor Specialists**, **Website**, **Location**, **Experience**, **License Number**, **License Document**, **Insurance Document** and **Resume** (three uploads), **Linked SubContractor Groups**, then a **CERTIFICATIONS** section of upload fields. The screen has **Register Sub Contractor**, a search box, **Add Groups**, grid/list icons, and one card per subcontractor."
           },
           {
             "term": "Sub Contractor Settings (compliance fields)",
-            "definition": "Set in **Global Data → Settings → Sub Contractor Settings** (standard fields plus **Add Field**). The fields you add there become the upload fields in the **CERTIFICATIONS** section of **Create Sub Contractor**. Add a field in Settings and it appears in the dialog."
+            "definition": "Set in **Global Data → Settings → Sub Contractor Settings** (standard fields plus **Add Field**). The fields you add there become the upload fields in the **CERTIFICATIONS** section of **Create Sub Contractor**. Add a field in Settings and it appears in the dialog. For example, you can add upload fields for licences or certifications such as ISO 9001 or ISO 45001."
           },
           {
             "term": "Owner-style Settings hierarchy",
@@ -21086,11 +21086,11 @@ const MODULES = [
         "definitions": [
           {
             "term": "UOM (Unit of Measure)",
-            "definition": "One unit name, for example **Kg**, **Cum**, **Sqm**, **each**, **Nos.**. The screen title is **Productivity** and its four tabs are **UOMs**, **Phase Codes**, **Repair Types** and **GL Codes**."
+            "definition": "One unit name, for example **Kg**, **Cum**, **Sqm**, **each**, **Nos.**. The screen title is **Productivity** and its four tabs are **UOMs**, **Phase Codes**, **Repair Types** and **GL Codes**. The **UOMs** sub-tab has **Add UOM** and a table with **S.No**, **Unit of Measurement** and **Actions** (edit, delete)."
           },
           {
             "term": "UOM Group",
-            "definition": "A category that holds compatible units. **UOM Groups** has **Add UOM Group** and a table with **Group**, **Uoms** and **Actions**. The UOM Group and UOM columns on vendor rate cards and Bid Templates use these values."
+            "definition": "A category that holds compatible units. **UOM Groups** has **Add UOM Group** and a table with **Group**, **Uoms** and **Actions**. The UOM Group and UOM columns on vendor rate cards and Bid Templates use these values. Examples: **Area** (Sqm, Square Feet, Hectare), **Length** (Rm, LF, km, metre), **Mass** (Kg, Lbs), **Time** (Month, Day) and **Volume** (Cum, Litres)."
           },
           {
             "term": "UOM Conversions",
@@ -21110,7 +21110,7 @@ const MODULES = [
           },
           {
             "term": "Where phase code data comes from and goes",
-            "definition": "**Comes from:** **Add** on the Phase Codes tab, Excel through **Export → Upload**, or a sync from Viewpoint through Staged Tables (**Phase Codes**). (2) **Global Data → Cost → Cost Breakdown Structure → Phase Codes**, which is the same table. (3) **Time Management → My Timesheet → Default Phase Codes**, which lists Direct (D) and Indirect (I) phase codes with Labor in their Cost Types, shown as \"D - 01.001.0001 - Excavation\"; Non Productive and Change Order codes did not appear, and only 270 of the 944 Labor codes were offered (the rule for the subset was not identified). Global Rosters also carry a **Default Indirect Phase Code** per person. (4) **Field Works → Progress → Productivity Logs**: the **Set Phase Codes** dialog offers a project-specific subset of the project list (108 codes on Arena Steel Plant - Phase 1, 278 on Elevated Corridor), and **Data Summary → Phase Codes** groups the logged hours by the phase code types **Direct**, **Indirect**, **Non Productive** and **Change Order**. A code such as **1089-101 - Fabrication** (Direct) was confirmed in both the Project Setup list and the logs."
+            "definition": "**Comes from:** **Add** on the Phase Codes tab, Excel through **Export → Upload**, or a sync from Viewpoint through Staged Tables (**Phase Codes**). **Goes to:** (1) **Project Setup → Phase Codes** for every project, with **Timesheet Management** and **Equipment Management** tick boxes and a **Settings** button (\"Select the Cost Type for each category to display Phase Codes\": Material, Equipment, Labor, Unit Rate, Sub Contractor, BOQ's, Freight Charges, Fuel & Gas). (2) **Global Data → Cost → Cost Breakdown Structure → Phase Codes**, which is the same table. (3) **Time Management → My Timesheet → Default Phase Codes**, which lists Direct (D) and Indirect (I) phase codes with Labor in their Cost Types, shown as \"D - 01.001.0001 - Excavation\"; Non Productive and Change Order codes are not offered. Global Rosters also carry a **Default Indirect Phase Code** per person. (4) **Field Works → Progress → Productivity Logs**: the **Set Phase Codes** dialog offers a project-specific subset of the project list, and **Data Summary → Phase Codes** groups the logged hours by the phase code types **Direct**, **Indirect**, **Non Productive** and **Change Order**. A code such as **1089-101 - Fabrication** (Direct) appears in both the Project Setup list and the logs."
           },
           {
             "term": "Where UOMs are used in Field Works",
@@ -21168,7 +21168,7 @@ const MODULES = [
       },
       {
         "heading": "Construction Types",
-        "intro": "<p>Use this section to keep the list of project categories and to build the work breakdown for each one. Each project then shows its Construction Type in the Project Setup header.</p>",
+        "intro": "<p>Use this section to keep the list of project categories and to build the work breakdown for each one. Each project then shows its Construction Type in the Project Setup header. The Super Admin sets it up, often with a senior estimating or operations lead.</p><p><strong>Where this data goes:</strong> the <strong>Construction Type</strong> dropdown on <strong>Projects → Create Project</strong> lists exactly the types on this screen, in the same order, with the <strong>Set as Default</strong> type pre-selected.</p>",
         "definitions": [
           {
             "term": "Construction Types (tile)",
@@ -21414,7 +21414,7 @@ const MODULES = [
         "definitions": [
           {
             "term": "Cost Type",
-            "definition": "The **Cost Type** tab (**Global Data → Cost**) shows one card per type with **Add Type**, a search box and a refresh icon. These are the same names offered as **Cost Types** on each phase code and in **Project Setup → Phase Codes → Settings**."
+            "definition": "The **Cost Type** tab (**Global Data → Cost**) shows one card per type with **Add Type**, a search box and a refresh icon. These are the same names offered as **Cost Types** on each phase code and in **Project Setup → Phase Codes → Settings**. The eight types are **Material**, **Equipment**, **Labor**, **Unit Rate**, **Sub Contractor**, **BOQ's**, **Freight Charges** and **Fuel & Gas**."
           },
           {
             "term": "Cost Breakdown Structure (CBS)",
@@ -21556,7 +21556,7 @@ const MODULES = [
                 "step": 5
               }
             ],
-            "note": "This screen isn't covered here yet."
+            "note": "The Material and Labor screens have **Add Material** / **Add Labor**, **Add Category**, **Add Custom Column** and **Export**."
           }
         ],
         "images": [
@@ -21662,7 +21662,7 @@ const MODULES = [
           },
           {
             "term": "Currency",
-            "definition": "This screen isn't covered here yet."
+            "definition": "The **Currency** page has one dropdown and **Save Changes**. The Create Project form has its own **Currency** field."
           },
           {
             "term": "Global Date Format",
@@ -21690,7 +21690,7 @@ const MODULES = [
           },
           {
             "term": "Procurement Settings",
-            "definition": "This screen isn't covered here yet."
+            "definition": "Has **Global Level** and **Project Level** options and **Save Changes**."
           },
           {
             "term": "Holidays",
@@ -21706,7 +21706,7 @@ const MODULES = [
           },
           {
             "term": "Project Form",
-            "definition": "**Project Settings** page for the Create Project form. **Table Standard Fields** are Project Name, Project Number, Construction Type, Project Location, Owner Representative, Project Manager, Currency, Lead and Customer. **Add Field** adds more. These options are exactly what the Create Project dropdowns show."
+            "definition": "**Project Settings** page for the Create Project form. **Table Standard Fields** are Project Name, Project Number, Construction Type, Project Location, Owner Representative, Project Manager, Currency, Lead and Customer. **Add Field** adds more. These options are exactly what the Create Project dropdowns show. Under **Configurable Fields → Groups** you can define Single Select fields, for example a **Project Type** field with values like Roads or Metro, each with a **Required** switch."
           },
           {
             "term": "Keyboard Shortcuts",
@@ -21718,7 +21718,7 @@ const MODULES = [
           },
           {
             "term": "Earnings Codes",
-            "definition": "A table of pay codes with **Add**, columns **Code**, **Description**, **Shortname**, **VP Code**, **Data Type** (HOURS or AMOUNT), **Payroll**, **Project**, **Split Header** and **Actions**. The short names and VP codes appear as the rate columns on **Cost → Labor**. **Time Management → Settings → Timesheet Settings** also has an Earnings Codes page."
+            "definition": "A table of pay codes with **Add**, columns **Code**, **Description**, **Shortname**, **VP Code**, **Data Type** (HOURS or AMOUNT), **Payroll**, **Project**, **Split Header** and **Actions**. The short names and VP codes appear as the rate columns on **Cost → Labor**. **Time Management → Settings → Timesheet Settings** also has an Earnings Codes page. Examples of pay codes are Regular pay (ST), Over Time pay (OT), Double pay, Sick, Vacation, Holiday and Bonus."
           },
           {
             "term": "Enterprise Dashboard",
@@ -21726,7 +21726,7 @@ const MODULES = [
           },
           {
             "term": "Hindrance Category",
-            "definition": "**Create** and a table of **Categories** with edit and delete. These are the options in the **Restraint Category** field when you click **Add Restraint** in **Field Works → Progress → Restraints**."
+            "definition": "**Create** and a table of **Categories** with edit and delete. These are the options in the **Restraint Category** field when you click **Add Restraint** in **Field Works → Progress → Restraints**. Examples: **Site & Technical Constraints**, **Seasonal/Weather Constraints**, **Resource Constraints** and **Others**."
           },
           {
             "term": "Location settings",
@@ -21868,11 +21868,11 @@ const MODULES = [
           },
           {
             "term": "Document Management (templates)",
-            "definition": "Two tabs. **Structure Template** has **Create Template** and a list of folder templates (**FEL - 1**, **FEL - 2**, **FEL - 3**, **Detailed Engineering**); opening FEL - 1 shows **New Folder** and its folders (Civil, Mechanical, Structural, Architectural, Instrumentation, Process Controls) with Last Modified and Added On. A project's **Project Setup → Documents** had a FEL - 1 folder; how a structure template is applied to a project was not verified."
+            "definition": "Two tabs. **Structure Template** has **Create Template** and a list of folder templates (**FEL - 1**, **FEL - 2**, **FEL - 3**, **Detailed Engineering**); opening FEL - 1 shows **New Folder** and its folders (Civil, Mechanical, Structural, Architectural, Instrumentation, Process Controls) with Last Modified and Added On. **Document Template** has sub-tabs **Word**, **Excel**, **PPT** and **Text** with an **AddFile** button. **Where it goes:** in a project, **Project Setup → Documents → Import Template** opens **Global Templates**, whose list is exactly the **Structure Template** list here; importing builds the folder structure in that project."
           },
           {
             "term": "Standard Tables",
-            "definition": "This screen isn't covered here yet."
+            "definition": "The **Standard Tables** tab of **Quick Apps** has **Add** and cards for reusable reference tables, such as **Drawing Status**."
           },
           {
             "term": "Quick Apps",
@@ -22009,7 +22009,7 @@ const MODULES = [
         "definitions": [
           {
             "term": "Event Group",
-            "definition": "A named collection of events and the users who receive them."
+            "definition": "A named collection of events and the users who receive them. The **Event Groups** tab has **Add Event Groups** and **Get Standard Event Groups**, which loads the standard groups."
           },
           {
             "term": "Add Event Groups",
@@ -22021,11 +22021,11 @@ const MODULES = [
           },
           {
             "term": "Events tab",
-            "definition": "The master list under **Global Data → Notifications → Events**, with columns **Events**, **Mail**, **Web** and **Mobile** and a **Reset to Standard** button. Open a group to see its events with mail, desktop and mobile icons (for example Timesheet: Timesheet Updated, Sent For Approval, Approved, Rejected)."
+            "definition": "The master list under **Global Data → Notifications → Events**, with columns **Events**, **Mail**, **Web** and **Mobile** and a **Reset to Standard** button. Open a group to see its events with mail, desktop and mobile icons (for example Timesheet: Timesheet Updated, Sent For Approval, Approved, Rejected). The groups include AWP, Change Orders, Cost Change order, Cost Transfers, Custom Forms, Data Analytics, Document Management, Drawing Management, Estimate, Form Issues, Form Sharing, Meeting Minutes, Progress, Project Safety Forms, Punch Lists, Quality Forms, Quantity Tracksheet, Quick Apps, RFIS, Request For Informations, Restraints, Safety Issues, Safety Observations, Scheduled Safety Forms, Site Posts, Submittals, Task, Timesheet, Transmittals, Tree Version, Work Order Invoice Payment and Workflow Issues."
           },
           {
             "term": "Where notification settings come from and goes",
-            "definition": "**Comes from:** the Events tab toggles, and Event Groups you add or load here. Whether a change here carries into existing projects was not verified."
+            "definition": "**Comes from:** the Events tab toggles, and Event Groups you add or load here. **Goes to:** **Project → Notifications** (tabs **Event Groups**, **Events**, **Reminders**, **Alerts**), which shows the same event groups, with the same **Reset to Standard**, **Add Event Groups** and **Get Standard Event Groups** buttons. Whether a change here carries into existing projects was not verified."
           },
           {
             "term": "Events for productivity, quality, safety and drawings",
@@ -22082,7 +22082,7 @@ const MODULES = [
         "definitions": [
           {
             "term": "Marketplace",
-            "definition": "The grid of integration cards at **Global Data → Marketplace**, with a search box."
+            "definition": "The grid of integration cards at **Global Data → Marketplace**, with a search box. The cards include **Microsoft OneDrive**, **Microsoft Sharepoint**, **Microsoft Outlook**, **Microsoft Users**, **Microsoft Calendar**, **Adobe Sign**, **Trimble Viewpoint**, **Google Maps**, **Inn Clock Consent**, **Zoom Info**, **Telematics**, **Weather Station**, **Trimble Viewpoint (App Xchange)** and **IFS**."
           },
           {
             "term": "Org-wide consent",
@@ -22296,7 +22296,7 @@ const MODULES = [
       },
       {
         "heading": "Compliance Hub",
-        "intro": "<p>Use the Compliance Hub to define the compliance items the company must hold (licences, certificates, insurance) and track the company's actual status against them. A Super Admin or compliance lead maintains it.</p><p><strong>Where this data goes:</strong> requirements defined in the <strong>Compliance Directory</strong> are tracked under <strong>My Company Compliance</strong>, and the expiry warning period is set under <strong>Settings</strong>.",
+        "intro": "<p>Use the Compliance Hub to define the compliance items the company must hold (licences, certificates, insurance) and track the company's actual status against them. A Super Admin or compliance lead maintains it.</p><p><strong>Where this data goes:</strong> requirements defined in the <strong>Compliance Directory</strong> are tracked under <strong>My Company Compliance</strong>, and the expiry warning period is set under <strong>Settings</strong>.</p>",
         "definitions": [
           {
             "term": "Compliance Directory",
@@ -23176,7 +23176,7 @@ const MODULES = [
           },
           {
             "term": "Categorize",
-            "definition": "A searchable list of where the event goes. **Where this comes from:** your own calendar plus the group names set up for your company; groups imported through **Communications → Import Group** are documented as appearing here (not verified)."
+            "definition": "A searchable list of where the event goes. **My Calendar** is ticked by default. **Where this comes from:** your own calendar plus the group names set up for your company; groups imported through **Communications → Import Group** are documented as appearing here (not verified)."
           },
           {
             "term": "Filters",
@@ -23302,7 +23302,7 @@ const MODULES = [
     "narrative": [
       {
         "heading": "Who sets this up",
-        "intro": "<p>Admin Role is who connects Outlook for the organisation and gives users access to Communications. An admin grants Outlook consent in <strong>Global Data → Marketplace</strong> and adds the communication module permission to the user's group; a single user can instead grant their own consent from <strong>My Profile → Settings → Outlook Management Consent</strong>.</p><p>Communications and Calendar use the same Microsoft connection but have separate consent screens and permissions, so setting up one does not set up the other. Please provide consent</strong>.</p>",
+        "intro": "<p>Admin Role is who connects Outlook for the organisation and gives users access to Communications. An admin grants Outlook consent in <strong>Global Data → Marketplace</strong> and adds the communication module permission to the user's group; a single user can instead grant their own consent from <strong>My Profile → Settings → Outlook Management Consent</strong>.</p><p>Communications and Calendar use the same Microsoft connection but have separate consent screens and permissions, so setting up one does not set up the other. Without personal consent, <strong>Import Group</strong> warns <strong>Consent Not Granted! Please provide consent</strong>.</p>",
         "definitions": [
           {
             "term": "Outlook Consent (Communications)",
@@ -23597,7 +23597,7 @@ const MODULES = [
           },
           {
             "term": "Where the cards come from",
-            "definition": "Plants and Entities are the **Tree Versions** and Entities defined in **Project Setup → Works** and shown on **Field Works → Tree Version** (for example **Pellet Plant (1MTPA)** lists Piperack, Indurating Building, Mixing Building, ECR (Electrical Control Room), Balling Building, Kiln). Progress weights come from **Project Setup → Works → Assign Percentage**. The Tree Versions themselves are built from the **Construction Type** set in **Global Data** when the project was created."
+            "definition": "Plants and Entities are the **Tree Versions** and Entities defined in **Project Setup → Works** and shown on **Field Works → Tree Version** (for example **Pellet Plant (1MTPA)** lists Piperack, Indurating Building, Mixing Building, ECR (Electrical Control Room), Balling Building, Kiln). A plant with no Entities has no card. Progress weights come from **Project Setup → Works → Assign Percentage**. The Tree Versions themselves are built from the **Construction Type** set in **Global Data** when the project was created."
           }
         ],
         "procedures": [
@@ -23655,7 +23655,7 @@ const MODULES = [
       },
       {
         "heading": "Pending Actions",
-        "intro": "<p>Pending Actions shows what is still open for a chosen person or role, so a <strong>PM</strong> can chase late items. It sits under My Actions and has the same Issues, Approvals and Forms groups.</p><p>At the top is a <strong>Roles / Users</strong> switch and a dropdown.",
+        "intro": "<p>Pending Actions shows what is still open for a chosen person or role, so a <strong>PM</strong> can chase late items. It sits under My Actions and has the same Issues, Approvals and Forms groups.</p><p>At the top is a <strong>Roles / Users</strong> switch and a dropdown.</p>",
         "definitions": [
           {
             "term": "Roles / Users switch and dropdown",
@@ -24147,7 +24147,7 @@ const MODULES = [
           },
           {
             "term": "Workflow Issues (Tasks)",
-            "definition": "Shows problems raised by approval workflows on tasks."
+            "definition": "Shows problems raised by approval workflows on tasks, with **Download Excel** and **Grid View** / **Table View**."
           },
           {
             "term": "Where this data goes",
@@ -24578,7 +24578,7 @@ const MODULES = [
           },
           {
             "term": "Drawing Training",
-            "definition": "Templates that teach Arena to read drawing labels by OCR. A template has four steps: **Upload Sample Drawing**, **Create Labels**, **OCR Training** and **Preview Table**. Labels become columns on drawings (for example **Lead Consultant**, **Drawing Title**, **MEPF Engineer** on drawings made with Wall). **Where it goes:** the template is required when creating a drawing package."
+            "definition": "Templates that teach Arena to read drawing labels by OCR. **Create Training Template** adds one (each template has a three-dot menu). A template has four steps: **Upload Sample Drawing**, **Create Labels**, **OCR Training** and **Preview Table**. Labels become columns on drawings (for example **Lead Consultant**, **Drawing Title**, **MEPF Engineer** on drawings made with Wall). **Where it goes:** the template is required when creating a drawing package."
           },
           {
             "term": "Drawing Packages",
@@ -25114,7 +25114,7 @@ const MODULES = [
       },
       {
         "heading": "GIS",
-        "intro": "<p>GIS stores map and survey documents for the project. A <strong>PM</strong> or <strong>Module Admin</strong> uploads them so the team has one place for geospatial reference.</p><p>Open <strong>Project Setup → GIS</strong> and click <strong>Upload GIS Document</strong> (a dialog asks for a <strong>Name</strong>, then <strong>Submit</strong>).",
+        "intro": "<p>GIS stores map and survey documents for the project. A <strong>PM</strong> or <strong>Module Admin</strong> uploads them so the team has one place for geospatial reference.</p><p>Open <strong>Project Setup → GIS</strong> and click <strong>Upload GIS Document</strong> (a dialog asks for a <strong>Name</strong>, then <strong>Submit</strong>).</p>",
         "definitions": [
           {
             "term": "Upload GIS Document",
@@ -25268,7 +25268,7 @@ const MODULES = [
           },
           {
             "term": "Submitted Work Logs",
-            "definition": "A day-by-day feed of every Work Log submitted from the field (for example \"Work Logs of 2nd April 2026\"). Each entry reads \"<user> has logged the work for <Entity> | <Super Location> | <Location> | <work package> | <activity> | Percentage - (0 -> 100) at <time> | Latitude | Longitude | Worked on Date | Source : Bulk Log\" and has a kebab menu. **Filters:** Filter by Range, Users, Type of log (Hours, Quantity, Percentage), Entities, Super Locations, Location Types, Locations, Activities, Work Packages and Status (Ready, In Progress, Completed, Not Ready, Rejected). **Where the filter lists come from:** Users are the project's system users (32 on Arena Steel Plant - Phase 1, the same people as the Pending Actions list on My Desk and the Approvers list in Productivity Logs); Entities are the plant's entities; Super Locations, Location Types and Locations stay empty until you pick an Entity and then follow the Works tree; Activities are the activity names from **Global Data → Construction Types → Global Work Packages → Activities** that this project uses (21 of the 27 in Global Data; the six railway activities such as Track Installation are not offered). **Where it goes next:** the same entries appear as **Recent Work Logs** on My Desk (top rows, with a See All link to this screen), then in **Approve Work Logs** and **Detailed Work Logs**."
+            "definition": "A day-by-day feed of every Work Log submitted from the field (for example \"Work Logs of 2nd April 2026\"). Each entry reads \"<user> has logged the work for <Entity> | <Super Location> | <Location> | <work package> | <activity> | Percentage - (0 -> 100) at <time> | Latitude | Longitude | Worked on Date | Source : Bulk Log\" and has a kebab menu. The page has two tabs, **Work Logs** and **Reconciliation** (a table of Entities, Super Locations, Locations Type, Locations, Activities, Work Packages, description, Percentage Complete, Estimated Quantities, Actual Quantity, User and Logged on, with Manage Columns), a status legend (Not Ready, Ready, In Progress, Completed, Rejected) and the buttons **Download Excel** and **Bulk Delete**. **Filters:** Filter by Range, Users, Type of log (Hours, Quantity, Percentage), Entities, Super Locations, Location Types, Locations, Activities, Work Packages and Status (Ready, In Progress, Completed, Not Ready, Rejected). **Where the filter lists come from:** Users are the project's system users (the same people as the Pending Actions list on My Desk and the Approvers list in Productivity Logs); Entities are the plant's entities; Super Locations, Location Types and Locations stay empty until you pick an Entity and then follow the Works tree; Activities are the activity names from **Global Data → Construction Types → Global Work Packages → Activities** that this project uses. **Where it goes next:** the same entries appear as **Recent Work Logs** on My Desk (top rows, with a See All link to this screen), then in **Approve Work Logs** and **Detailed Work Logs**."
           },
           {
             "term": "Approve Work Logs",
@@ -25579,11 +25579,11 @@ const MODULES = [
       },
       {
         "heading": "Work Logs Under Each Template",
-        "intro": "<p>Work Logs is one card with several possible layouts. <strong>Project Settings → Work Logs Templates</strong> chooses the layout for the project, and the <strong>gear</strong> beside each option decides what the log form asks for. A <strong>Module Admin</strong> or <strong>PM</strong> sets this once; <strong>Field Users</strong> then log work with whichever layout the project uses.</p><p>Seven templates exist. Everything below was read from the live screens; the four unused templates are described only as far as the settings page shows. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.</p>",
+        "intro": "<p>Work Logs is one card with several possible layouts. <strong>Project Settings → Work Logs Templates</strong> chooses the layout for the project, and the <strong>gear</strong> beside each option decides what the log form asks for. A <strong>Module Admin</strong> or <strong>PM</strong> sets this once; <strong>Field Users</strong> then log work with whichever layout the project uses.</p><p>Seven templates exist. Everything below was read from the live screens; templates that were not opened are described only as far as the settings page shows. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.</p>",
         "definitions": [
           {
             "term": "Which template does my project use?",
-            "definition": "Open **Project Settings → Work Logs Templates**. The ticked option under **Work Log Reference – At what level do you want to log works?** is the layout. The **Project / Tree Version** switch at the top lets the setting apply to the whole project or to one Tree Version; every Tree Version of every project showed the same choice as its project. The seven options, in page order: **Work Package to Location Logging**, **Location to Work Package Logging**, **Location to Work Package bulk logging**, **Super Location to Location Logging**, **Worklogs in Scheduled View**, **Quantity Work Logging**, **Worklogs enable by Certified RFIs**."
+            "definition": "Open **Project Settings → Work Logs Templates**. The ticked option under **Work Log Reference – At what level do you want to log works?** is the layout. The **Project / Tree Version** switch at the top lets the setting apply to the whole project or to one Tree Version. The seven options, in page order: **Work Package to Location Logging**, **Location to Work Package Logging**, **Location to Work Package bulk logging**, **Super Location to Location Logging**, **Worklogs in Scheduled View**, **Quantity Work Logging**, **Worklogs enable by Certified RFIs**."
           },
           {
             "term": "Which projects use which template",
@@ -25949,7 +25949,7 @@ const MODULES = [
       },
       {
         "heading": "Quality Logs Under Each Template",
-        "intro": "<p>Quality Level 1 and Level 2 find the work an inspector can check in one of two layouts, chosen in <strong>Project Settings → Quality Work Logs Templates</strong>. Unlike Work Logs there is no Project / Tree Version switch and no gear. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.</p>",
+        "intro": "<p>Quality Level 1 and Level 2 find the work an inspector can check in one of two layouts, chosen in <strong>Project Settings → Quality Work Logs Templates</strong>. A <strong>Module Admin</strong> or <strong>PM</strong> sets it; <strong>QA/QC inspectors</strong> then use it on <strong>Field Works → Quality</strong>.</p><p>Only two templates exist here: <strong>Work Package to Location Logging</strong> and <strong>Super Location to Location Logging</strong>. Unlike Work Logs there is no Project / Tree Version switch and no gear. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.</p>",
         "definitions": [
           {
             "term": "Quality Work Logs Templates (settings page)",
@@ -26520,7 +26520,7 @@ const MODULES = [
           },
           {
             "term": "Work Summary - MIS Report",
-            "definition": "A management summary table, \"MIS Summary Report\", with a plus/minus tree: Description, **Physical Target**, **Work Complete** and **Variance**, each as Percentage and Count/Length. The tree runs project, plant, then the plant's location types (Footing, Plinth Beam, Brick Wall, ECR Footing, Cable Laying and so on). On Arena Steel Plant - Phase 1 only Pellet Plant (1MTPA) and External Works are listed. **Where this data comes from:** the plant and location type structure in **Project Setup → Works**, targets from the schedule and Works, completion from **Field Works → Work Logs**."
+            "definition": "A management summary table, \"MIS Summary Report\", with a plus/minus tree: Description, **Physical Target**, **Work Complete** and **Variance**, each as Percentage and Count/Length. The tree runs project, plant, then the plant's location types (Footing, Plinth Beam, Brick Wall, ECR Footing, Cable Laying and so on). **Where this data comes from:** the plant and location type structure in **Project Setup → Works**, targets from the schedule and Works, completion from **Field Works → Work Logs**."
           }
         ],
         "procedures": [
@@ -26612,7 +26612,7 @@ const MODULES = [
       },
       {
         "heading": "Standard Reports",
-        "intro": "<p>Standard Reports holds the two routine reports a project is expected to produce, the Daily Progress Report and the Weekly Progress Report, plus a set of summary reports under Other Reports. PMs, site managers and clients read them; they are built from Field Works logs and Project Setup data.</p><p>Reports show the current date when opened. The Weekly Progress Report has **Edit Mode** and **Download Pdf**; the Daily Progress Report is a read-only page.",
+        "intro": "<p>Standard Reports holds the two routine reports a project is expected to produce, the Daily Progress Report and the Weekly Progress Report, plus a set of summary reports under Other Reports. PMs, site managers and clients read them; they are built from Field Works logs and Project Setup data.</p><p>Reports show the current date when opened. The Weekly Progress Report has **Edit Mode** and **Download Pdf**; the Daily Progress Report is a read-only page.</p>",
         "definitions": [
           {
             "term": "Reports / Other Reports",
@@ -26624,7 +26624,7 @@ const MODULES = [
           },
           {
             "term": "Weekly Progress Report",
-            "definition": "A report page with **Edit Mode** and **Download Pdf**. It starts with Project, Project Number (ST-01) and Date, then **Schedule/Plan Information** (crew size, estimated original plan), **Job Problems & Issues (INTERNAL USE ONLY)**, the **Construction Project Punch List** (Item, Area, Description, Priority, Responsible, Due Date, Completion Status), **Weekly Project Status** for the period ending this week (**ManPower** hours spent this period and to date: direct, indirect, delay and subcontractor; planned against actual full-time-equivalent headcount; **Percent Complete To Date** planned and actual; Safety counts; Meeting Topics; Work Accomplished in the Past Week; Work Scheduled for this Week and next Week; Problems / Concerns / Action Items; Prior Week's Notes from Client Meeting), an **RFI Log**, a **Change Order Log** with a summary of Pending, Approved, Denied and N/A amounts, a **Project Delays Log**, and week-by-week Planned and Actual charts and hours. Free-text parts (meeting topics, work scheduled) are filled in **Edit Mode**. Planned crew size shows 35, the same number as the project roster."
+            "definition": "A report page with **Edit Mode** and **Download Pdf**. It starts with Project, Project Number and Date, then **Schedule/Plan Information** (crew size, estimated original plan), **Job Problems & Issues (INTERNAL USE ONLY)**, the **Construction Project Punch List** (Item, Area, Description, Priority, Responsible, Due Date, Completion Status), **Weekly Project Status** for the period ending this week (**ManPower** hours spent this period and to date: direct, indirect, delay and subcontractor; planned against actual full-time-equivalent headcount; **Percent Complete To Date** planned and actual; Safety counts; Meeting Topics; Work Accomplished in the Past Week; Work Scheduled for this Week and next Week; Problems / Concerns / Action Items; Prior Week's Notes from Client Meeting), an **RFI Log**, a **Change Order Log** with a summary of Pending, Approved, Denied and N/A amounts, a **Project Delays Log**, and week-by-week Planned and Actual charts and hours. **Where this data comes from:** the RFI Log lists the RFIs raised in **Field Works → Progress → RFI**; the punch list, manpower, safety and change order sections are expected to come from the matching Field Works cards (Quality → Punch Lists, Productivity Logs, Safety and Cost → Change order), which was not confirmed. Free-text parts (meeting topics, work scheduled) are filled in **Edit Mode**. Planned crew size matches the project roster."
           }
         ],
         "procedures": [
@@ -26670,7 +26670,7 @@ const MODULES = [
         "definitions": [
           {
             "term": "RFI",
-            "definition": "**Where it comes from:** **Field Works → Progress → RFI**. The same RFIs feed the **RFI Log** in **Data Analytics → Standard Reports → Weekly Progress Report**."
+            "definition": "**Where it comes from:** **Field Works → Progress → RFI**. The records here are the same RFIs listed in Field Works, and their cards still show the workflow control (**Start**, **Assign To**), so they are archived without waiting for approval. The same RFIs feed the **RFI Log** in **Data Analytics → Standard Reports → Weekly Progress Report**."
           },
           {
             "term": "Meeting Minutes",
@@ -26823,7 +26823,7 @@ const MODULES = [
       },
       {
         "heading": "Follow Up Actions",
-        "intro": "<p>Follow Up Actions is where a PM or Module Manager looks for items that need chasing across the project. The page is deliberately simple: a **Follow Up Actions** title, a **Search** box and a list.</p><p>It has no columns, tabs, filters or Create button, so you cannot add an item here. On Arena Steel Plant - Phase 1 it shows \"There are no Follow Up Actions\".",
+        "intro": "<p>Follow Up Actions is where a PM or Module Manager looks for items that need chasing across the project. The page is deliberately simple: a **Follow Up Actions** title, a **Search** box and a list.</p><p>It has no columns, tabs, filters or Create button, so you cannot add an item here. An empty page reads \"There are no Follow Up Actions\".</p>",
         "definitions": [
           {
             "term": "Follow Up Actions page",
@@ -27242,7 +27242,7 @@ const MODULES = [
           },
           {
             "term": "Group type chip",
-            "definition": "The chip on each card (**Restricted Users** on both groups here)."
+            "definition": "The chip on each card (for example **Restricted Users**)."
           }
         ],
         "procedures": [
@@ -27527,7 +27527,7 @@ const MODULES = [
           },
           {
             "term": "Work Logs Templates",
-            "definition": "Sets which of 7 logging structures the <strong>Field Works → Progress → Work Logs</strong> screen uses for this project, under \"Work Log Reference — At what level do you want to log works?\": <strong>Work Package to Location Logging</strong>, <strong>Location to Work Package Logging</strong> (the reverse: pick a Location, see its Work Packages, grouped by Super Location), <strong>Location to Work Package bulk logging</strong> (the same but with multiple filters, for logging or raising Restraints against several Locations at once), <strong>Super Location to Location Logging</strong>, <strong>Worklogs in Scheduled View</strong> and <strong>Quantity Work Logging</strong> (both present the Tree Version as a WBS/schedule instead of a location tree), and <strong>Worklogs enable by Certified RFIs</strong> (a location only becomes loggable once its RFI is certified). Each option shows a live preview before Save Changes. This is why the Work Logs screen can look structurally different from one project to the next — it is a per-project setting, not a different product version. **Where it takes effect:** the page has **Project** and **Tree Version** selectors, so the choice can apply to the whole project or to one plant, and a gear beside each option. Arena Steel Plant - Phase 1 uses **Work Package to Location Logging**: **Field Works → Progress → Work Logs** then shows a Location Types tree (Media, Footing) with each work package opening a grid of super locations and locations. The same screen feeds Submitted Work Logs, Approve Work Logs, Detailed Work Logs, **My Desk → Recent Work Logs** and the progress dashboards in Data Analytics. The gear beside each option opens **Advanced Settings** (Checkbox, Text Box or interval entry; Actual Start & End Dates; Required Fields; Interval Quantity Logging; Auto Log), which decides what the log form asks for. Full detail is in **Field Works → Work Logs Under Each Template**."
+            "definition": "Sets which of 7 logging structures the <strong>Field Works → Progress → Work Logs</strong> screen uses for this project, under \"Work Log Reference — At what level do you want to log works?\": <strong>Work Package to Location Logging</strong>, <strong>Location to Work Package Logging</strong> (the reverse: pick a Location, see its Work Packages, grouped by Super Location), <strong>Location to Work Package bulk logging</strong> (the same but with multiple filters, for logging or raising Restraints against several Locations at once), <strong>Super Location to Location Logging</strong>, <strong>Worklogs in Scheduled View</strong> and <strong>Quantity Work Logging</strong> (both present the Tree Version as a WBS/schedule instead of a location tree), and <strong>Worklogs enable by Certified RFIs</strong> (a location only becomes loggable once its RFI is certified). Each option shows a live preview before Save Changes. This is why the Work Logs screen can look structurally different from one project to the next — it is a per-project setting, not a different product version. **Where it takes effect:** the page has **Project** and **Tree Version** selectors, so the choice can apply to the whole project or to one plant, and a gear beside each option. With **Work Package to Location Logging**, **Field Works → Progress → Work Logs** shows a Location Types tree with each work package opening a grid of super locations and locations. The same screen feeds Submitted Work Logs, Approve Work Logs, Detailed Work Logs, **My Desk → Recent Work Logs** and the progress dashboards in Data Analytics. The gear beside each option opens **Advanced Settings** (Checkbox, Text Box or interval entry; Actual Start & End Dates; Required Fields; Interval Quantity Logging; Auto Log), which decides what the log form asks for. Full detail is in **Field Works → Work Logs Under Each Template**."
           },
           {
             "term": "Quality Work Logs Templates",
@@ -27608,7 +27608,7 @@ const MODULES = [
           },
           {
             "term": "Progress Forms",
-            "definition": "\"Settings needed for Progress Forms: RFI, Change Order, Submittals, Delay Forms and Meetings Minutes\": one tab per form (<strong>RFI</strong>, <strong>Change Orders</strong>, <strong>Submittals</strong>, <strong>Delay Forms</strong>, <strong>Meeting Minutes</strong>), each with <strong>Add Priority</strong> (\"Configure priority levels and sequence\"; Priority, Due Hours, Actions). None are defined on Arena Steel Plant - Phase 1."
+            "definition": "\"Settings needed for Progress Forms: RFI, Change Order, Submittals, Delay Forms and Meetings Minutes\": one tab per form (<strong>RFI</strong>, <strong>Change Orders</strong>, <strong>Submittals</strong>, <strong>Delay Forms</strong>, <strong>Meeting Minutes</strong>), each with <strong>Add Priority</strong> (\"Configure priority levels and sequence\"; Priority, Due Hours, Actions). These are priority levels for the progress forms of **Field Works → Progress**."
           },
           {
             "term": "Projects Forms",
@@ -27683,7 +27683,7 @@ const MODULES = [
           },
           {
             "term": "Custom Resources",
-            "definition": "Two tabs, <strong>Labor</strong> and <strong>Machinery</strong>, each with <strong>Create</strong> (a \"Custom Resource Name\" dialog; titled <strong>Create Labor</strong> on the Labor tab) and a list of Resource Names with Actions. Both are empty on Arena Steel Plant - Phase 1. Use it for resources that are not in the standard lists."
+            "definition": "Two tabs, <strong>Labor</strong> and <strong>Machinery</strong>, each with <strong>Create</strong> (a \"Custom Resource Name\" dialog; titled <strong>Create Labor</strong> on the Labor tab) and a list of Resource Names with Actions. Use it for resources that are not in the standard lists."
           },
           {
             "term": "Resource Data Source",
@@ -27706,7 +27706,7 @@ const MODULES = [
           },
           {
             "term": "Terms and Conditions",
-            "definition": "A <strong>Save Changes</strong> page holding a list of text blocks (each type <strong>Label</strong>, with copy, add and delete icons) and <strong>Add field</strong> to add another. Arena Steel Plant - Phase 1 has 26 clauses, from \"1. PRICES &amp; QUANTITY\" and \"2. PAYMENT TERMS\" to \"24. Dispute Resolution\", \"25. Damages for non-completion\" and \"26. BILLING ADDRESS\". The wording is written as work order terms (it refers to \"this Work Order\")."
+            "definition": "A <strong>Save Changes</strong> page holding a list of text blocks (each type <strong>Label</strong>, with copy, add and delete icons) and <strong>Add field</strong> to add another. The clauses run from \"1. PRICES &amp; QUANTITY\" and \"2. PAYMENT TERMS\" to \"24. Dispute Resolution\", \"25. Damages for non-completion\" and \"26. BILLING ADDRESS\". The wording is written as work order terms (it refers to \"this Work Order\")."
           },
           {
             "term": "Request for Information",
@@ -27800,7 +27800,7 @@ const MODULES = [
           },
           {
             "term": "Where this data comes from",
-            "definition": "Contract Value is the **Total** of the project's approved estimate (for Arena Residential Project the estimate Total of ₹20,67,52,576.08 equals the Contract Value). Only projects that have an approved estimate show a value; the other 114 projects show ₹0. The **Change Order Impact** chart is named after the change orders recorded in **Field Works > Cost > Change order**."
+            "definition": "Contract Value is the **Total** of the project's approved estimate. Only projects that have an approved estimate show a value; the others show ₹0. The **Change Order Impact** chart is named after the change orders recorded in **Field Works > Cost > Change order**."
           },
           {
             "term": "Things to watch for",
@@ -30571,7 +30571,7 @@ const MODULES = [
           },
           {
             "term": "Where this data comes from",
-            "definition": "**Header block** (Address, Phone, Zip Code): the company details in **Global Data → Company**. **Select Expense Type**: the eleven types in **Settings → Expense Type** (Capital, Direct, Financial, Fixed, Indirect, Miscellaneous, Non-Operating, Operating, Personal Expenses, Phase Code and Variable Expenses). **Details grids and extra fields**: the form template chosen in **Settings → Expense Form**. **Select Approval Workflow**: the named workflows in **Settings → Approval WorkFlow**. **Form ID and Invoice ID**: the numbering in **Settings → ID Settings**. The Expense Forms list is the same whichever project you have open; it is not filtered by project."
+            "definition": "**Name**: Arena users, defaulting to you, so a claim can be raised for someone else if your group has **Expense Form - User Name** edit permission. **Header block** (Address, Phone, Zip Code): the company details in **Global Data → Company**. **Select Expense Type**: the eleven types in **Settings → Expense Type** (Capital, Direct, Financial, Fixed, Indirect, Miscellaneous, Non-Operating, Operating, Personal Expenses, Phase Code and Variable Expenses). **Details grids and extra fields**: the form template chosen in **Settings → Expense Form**. **Select Approval Workflow**: the named workflows in **Settings → Approval WorkFlow**. **Form ID and Invoice ID**: the numbering in **Settings → ID Settings**. The Expense Forms list is the same whichever project you have open; it is not filtered by project."
           },
           {
             "term": "Unsaved changes prompt",
@@ -30881,7 +30881,7 @@ const MODULES = [
           },
           {
             "term": "Teams tab",
-            "definition": "Tabs **Users** and **Crews**. **Add User** lists the company's system users; **Add Crew** lists the 18 crews of Global Data → Crews with member counts. Each member has a three-dot menu to remove them."
+            "definition": "Tabs **Users** and **Crews**. **Add User** lists the company's system users; **Add Crew** lists the crews of Global Data → Crews with member counts. Each member has a three-dot menu to remove them."
           },
           {
             "term": "Documents tab (proposal)",
@@ -30897,7 +30897,7 @@ const MODULES = [
           },
           {
             "term": "Create Proposal dialog",
-            "definition": "Click **Submit for Approval** to create it. All other details are filled on the Profile."
+            "definition": "Only three inputs: **Proposal Name**, **Proposal Type** (the types in Settings) and a tick box \"Does a Bid folder need to be created by the Project Services Admin?\". Click **Submit for Approval** to create it. All other details are filled on the Profile."
           },
           {
             "term": "List columns",
@@ -31173,7 +31173,7 @@ const MODULES = [
       },
       {
         "heading": "Where Proposal Fields Come From",
-        "intro": "<p>Every drop-down on a proposal Profile reads a list kept somewhere else. This section names that source so a <strong>Module Admin</strong> or <strong>Estimator</strong> knows where to add a missing value.</p><p>Open a proposal (click its name) to see the Profile. Counts below are and show that each drop-down matches its source list.</p>",
+        "intro": "<p>Every drop-down on a proposal Profile reads a list kept somewhere else. This section names that source so a <strong>Module Admin</strong> or <strong>Estimator</strong> knows where to add a missing value.</p><p>Open a proposal (click its name) to see the Profile. Each drop-down below matches its source list.</p>",
         "definitions": [
           {
             "term": "Proposal Type",
@@ -31209,7 +31209,7 @@ const MODULES = [
           },
           {
             "term": "Customers and POCs",
-            "definition": "**Global Data → Customers** and their contacts (POCs: 6 - Madhu, 5 - Shiva Kumar). Adding one from the proposal also adds it to Global Data. The Weekly Report shows the customer's location (for example Delaware City, Delaware)."
+            "definition": "**Global Data → Customers** and their contacts (POCs). Adding one from the proposal also adds it to Global Data. The Weekly Report shows the customer's location (for example Delaware City, Delaware)."
           },
           {
             "term": "Owners",
@@ -31225,11 +31225,11 @@ const MODULES = [
           },
           {
             "term": "Status",
-            "definition": "Settings → **Status** (Proposal tab). Each status has a colour used on the list."
+            "definition": "Settings → **Status** (Proposal tab). Start is the first standard status; Completed and Lost are the standard last-level statuses that carry the success or failure flag. Each status has a colour used on the list."
           },
           {
             "term": "Assign To and Notify To",
-            "definition": "**Assign To** lists the system users of Global Rosters; **Notify To** lists the people chosen for the reminder (here System Admin, Urban Edge Contractors, Star-Spangled Builders)."
+            "definition": "**Assign To** lists the system users of Global Rosters; **Notify To** lists the people chosen for the reminder."
           },
           {
             "term": "Money fields",
@@ -31249,7 +31249,7 @@ const MODULES = [
       },
       {
         "heading": "Bid Tab (Tenders)",
-        "intro": "<p>The Bid tab of a proposal lists the tenders raised for that proposal and lets an <strong>Estimator</strong> or <strong>PM</strong> start a new one. Tenders themselves are run in <strong>Tender Management</strong>.</p><p>The tab shows <strong>Add Tender</strong>, search, <strong>Filters</strong>, <strong>Manage Columns</strong>, table / grid views, <strong>Show as Graph</strong> and a table with <strong>Tender Name</strong>, <strong>Tender ID</strong>, <strong>Description</strong>, <strong>Proposal Linked</strong>, <strong>Bid Type</strong>, <strong>Status</strong>, <strong>Approve</strong>, <strong>Reject</strong>, <strong>Approval Status</strong> and <strong>Actions</strong>.",
+        "intro": "<p>The Bid tab of a proposal lists the tenders raised for that proposal and lets an <strong>Estimator</strong> or <strong>PM</strong> start a new one. Tenders themselves are run in <strong>Tender Management</strong>.</p><p>The tab shows <strong>Add Tender</strong>, search, <strong>Filters</strong>, <strong>Manage Columns</strong>, table / grid views, <strong>Show as Graph</strong> and a table with <strong>Tender Name</strong>, <strong>Tender ID</strong>, <strong>Description</strong>, <strong>Proposal Linked</strong>, <strong>Bid Type</strong>, <strong>Status</strong>, <strong>Approve</strong>, <strong>Reject</strong>, <strong>Approval Status</strong> and <strong>Actions</strong>.</p>",
         "definitions": [
           {
             "term": "Tender (Bid)",
@@ -31698,7 +31698,7 @@ const MODULES = [
           },
           {
             "term": "Where this data comes from",
-            "definition": "Every chart reads the proposals: Status and Proposal Type from Settings, Customer and Location from Global Data, estimated and submitted values, Contract Amount and Projected Cost from the Profile. The Proposal Type filters list the 3 types in Settings."
+            "definition": "Every chart reads the proposals: Status and Proposal Type from Settings, Customer and Location from Global Data, estimated and submitted values, Contract Amount and Projected Cost from the Profile. The Proposal Type filters list the types in Settings."
           }
         ],
         "procedures": [
@@ -31902,7 +31902,7 @@ const MODULES = [
           },
           {
             "term": "Department Code and Business Development Code",
-            "definition": "Business Development Codes (14) have a code and description. Both feed the Profile drop-downs and the Weekly Report."
+            "definition": "Department Codes have a code, description, group and business unit. Business Development Codes have a code and description. Both feed the Profile drop-downs and the Weekly Report."
           }
         ],
         "procedures": [
@@ -32306,7 +32306,7 @@ const MODULES = [
         "definitions": [
           {
             "term": "Tender list columns",
-            "definition": "**Tender Name**, **Tender ID**, **Description**, **Proposal Linked**, **Bid Type**, **Status**, **Approve**, **Reject**, **Approval Status** and **Actions** (edit, notes, delete)."
+            "definition": "**Tender Name**, **Tender ID**, **Description**, **Proposal Linked**, **Bid Type**, **Status**, **Approve**, **Reject**, **Approval Status** and **Actions** (edit, notes, delete). The **Tender ID** is the number shown as \"Tender <ID>\" inside the tender."
           },
           {
             "term": "Status chips",
@@ -32371,7 +32371,7 @@ const MODULES = [
       },
       {
         "heading": "Tender Setup: Profile, Team, Scope of Work and Submission",
-        "intro": "<p><strong>Tender Details > Tender Setup</strong> holds everything about the tender itself, and is used by the tender manager before bidders are invited.",
+        "intro": "<p><strong>Tender Details > Tender Setup</strong> holds everything about the tender itself, and is used by the tender manager before bidders are invited. Its tabs are <strong>Profile</strong>, <strong>Teams</strong>, <strong>Status & Comments</strong>, <strong>Documents</strong>, <strong>Communication</strong>, <strong>Scope of Work</strong>, <strong>Technical Package</strong> and <strong>Submission Package</strong>.</p><p>Which tabs you see depends on how far the tender has progressed: a tender that has just been set up shows only Tender Setup, while a Completed tender also shows Tender Response, Negotiated Responses and Awarded Work Order.</p>",
         "definitions": [
           {
             "term": "Profile",
@@ -32496,7 +32496,7 @@ const MODULES = [
           },
           {
             "term": "Step 2: Send to Tenderer",
-            "definition": "A list of vendors with **Name**, **Email**, **License**, **Phone no** and a tick box; the **Email** button stays disabled until you tick vendors. The product e-mail asks the vendor to submit the pre-qualification form and to read the Tender Event Schedule."
+            "definition": "A list of vendors with **Name**, **Email**, **License**, **Phone no** and a tick box; the **Email** button stays disabled until you tick vendors. The list is **Global Data > Vendors**. The product e-mail asks the vendor to submit the pre-qualification form and to read the Tender Event Schedule."
           },
           {
             "term": "Step 3: Response & Qualification",
@@ -32586,7 +32586,7 @@ const MODULES = [
           },
           {
             "term": "Awarded Work Order",
-            "definition": "Opening it shows the awarded BOQ per package (**Current Quantity**, **Amount**). The product e-mail to the winner says the vendor has been awarded the scope and asks it to confirm."
+            "definition": "Bill cards, then a card for the work order with **Awarded To**, **Project Linked**, **Description** and **Created On**. Opening it shows the awarded BOQ per package (**Current Quantity**, **Amount**). The product e-mail to the winner says the vendor has been awarded the scope and asks it to confirm."
           },
           {
             "term": "Where the award goes",
@@ -32721,7 +32721,7 @@ const MODULES = [
           },
           {
             "term": "Weekly Report",
-            "definition": "A **Date Range** filter, download / share / print icons and a table: **Tender Name**, **Bid Type**, **Description**, **Proposal Name**, **Start Date**, **End Date**, **Bid Estimated Value**, **Bid Submitted Value**, **Owner Name**, **Job Location**, **Opportunity**, **Project**."
+            "definition": "A **Date Range** filter, download / share / print icons and a table: **Tender Name**, **Bid Type**, **Description**, **Proposal Name**, **Start Date**, **End Date**, **Bid Estimated Value**, **Bid Submitted Value**, **Owner Name**, **Job Location**, **Opportunity**, **Project**. Tenders with status **Unassigned** are not listed."
           },
           {
             "term": "Issues",
@@ -32922,7 +32922,7 @@ const MODULES = [
         "definitions": [
           {
             "term": "Approval Workflow",
-            "definition": "The **Procurement → Settings → Approval Workflow** screen where multi-level approval chains are defined. It has four top tabs, **Requisition Form (REQ)**, **Purchase Order (PO)**, **Invoices** and **Pickup Request**. Under **Requisition Form (REQ)** there is a second row of tabs for the category: **Equipment Rental**, **Equipment Procured**, **Material**, **Equipment Part Rental**, **Equipment Part Purchased** and **Delivery Service**. Each tab has its own chain. **+ Create** adds a level; each level has a **Level**, **Level Description**, **Approvers** and **Workflow Type** (**All must approve** or **Any one can approve**). **Where it goes:** each document shows its chain in its **Approval work flow data** viewer and its Approve / Reject buttons go to the approvers you picked."
+            "definition": "The **Procurement → Settings → Approval Workflow** screen where multi-level approval chains are defined. It has four top tabs, **Requisition Form (REQ)**, **Purchase Order (PO)**, **Invoices** and **Pickup Request**. Under **Requisition Form (REQ)** there is a second row of tabs for the category: **Equipment Rental**, **Equipment Procured**, **Material**, **Equipment Part Rental**, **Equipment Part Purchased** and **Delivery Service**. Each tab has its own chain. **+ Create** adds a level; each level has a **Level**, **Level Description**, **Approvers** and **Workflow Type** (**All must approve** or **Any one can approve**). **Where the approvers come from:** the **Select Approver(s)** list in the Create Level dialog shows every company user, contractor accounts included, not only the project team, and has a **Select All** box. **Where it goes:** each document shows its chain in its **Approval work flow data** viewer and its Approve / Reject buttons go to the approvers you picked."
           },
           {
             "term": "ID Settings (Procurement)",
@@ -32991,7 +32991,7 @@ const MODULES = [
           },
           {
             "term": "Where settings lists come from",
-            "definition": "**RFQ Settings → Default Point Of Contact**: every company user (about 1,275). **Procurement Issues**: the priorities that Delivery Receipt inspection issues can use. **ID Settings**: only changes the numbering of new documents."
+            "definition": "**Approvers** (Approval Workflow, Create Level): every company user. **Default Assign To**: eight tabs, **REQ**, **RFQ**, **Vendor Response**, **Purchase Order**, **Direct Purchase Order**, **Delivery Receipt**, **Invoice** and **Pickup Request**; **+ Add** opens an **Assign To** list with search and **Select All** showing the project's people, and the people you tick are filled into the **Assignee** field of new records of that type. **RFQ Settings → Default Point Of Contact**: every company user. **Procurement Issues**: the priorities that Delivery Receipt inspection issues can use. **ID Settings**: only changes the numbering of new documents."
           }
         ],
         "procedures": [
@@ -33578,7 +33578,7 @@ const MODULES = [
           },
           {
             "term": "Where Delivery Receipt data comes from and goes",
-            "definition": "Picking a vendor lists its Purchase Orders and their requisition lines. **Goes to:** the Purchase Order status (**Delivery Receipt Created**, **Partial Delivery Receipt Created**, **Delivery Receipt Issue Raised**), Inventory Management stock and its Transaction History, and the **Inspection Issues** list with the due times set in **Settings → Procurement Issues**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
+            "definition": "**Comes from:** the **Select Vendor** list in **+ Delivery Receipt** shows only vendors that already have a Purchase Order. Picking a vendor lists its Purchase Orders and their requisition lines. **Goes to:** the Purchase Order status (**Delivery Receipt Created**, **Partial Delivery Receipt Created**, **Delivery Receipt Issue Raised**), Inventory Management stock and its Transaction History, and the **Inspection Issues** list with the due times set in **Settings → Procurement Issues**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
           }
         ],
         "procedures": [
@@ -33882,11 +33882,11 @@ const MODULES = [
         "definitions": [
           {
             "term": "Log Level Category",
-            "definition": "**Company**, **Projects**, **Work Orders** or **GL Codes**. It decides what the hours are charged to and where the phase codes come from. With **Projects** a project drop-down appears at the top (it opens on the first project) and every new row is fixed to that project; the column is then called **Projects**. A GL code or work-order item row has no phase code."
+            "definition": "**Company**, **Projects**, **Work Orders** or **GL Codes**. It decides what the hours are charged to and where the phase codes come from. With **Company** each row has a **Company/Projects/Work Orders/GL Codes** drop-down. With **Projects** a project drop-down appears at the top (it opens on the first project) and every new row is fixed to that project; the column is then called **Projects**. A GL code or work-order item row has no phase code."
           },
           {
             "term": "Timesheet Mode and template",
-            "definition": "The mode (**Daily**, **Weekly By Day** or **Weekly**) is the one assigned to you in **Settings → Timesheet Mode** (or **Project Settings → Time Management → Assign Mode**). The templates are built in **Settings → Timesheet Template**."
+            "definition": "The mode (**Daily**, **Weekly By Day** or **Weekly**) is the one assigned to you in **Settings → Timesheet Mode** (or **Project Settings → Time Management → Assign Mode**). The **Select Template** list depends on the mode: Daily and Weekly By Day show their own templates, and a weekly user sees the weekly templates. The templates are built in **Settings → Timesheet Template**."
           },
           {
             "term": "Craft and Class",
@@ -33898,7 +33898,7 @@ const MODULES = [
           },
           {
             "term": "Default Phase Codes",
-            "definition": "Opens **Set Default Phase Code**: a searchable, A-Z sortable tick list (\"D - code - description\" for Direct, \"I - ...\" for Indirect) with **Submit**. What you tick is the short list your Phase Code drop-down offers. With category Company the list held 269 labor codes; with category Projects it held only that project's mapped codes. See \"Which Phase Codes a Timesheet Offers\"."
+            "definition": "Opens **Set Default Phase Code**: a searchable, A-Z sortable tick list (\"D - code - description\" for Direct, \"I - ...\" for Indirect) with **Submit**. What you tick is the short list your Phase Code drop-down offers. With category Company the list held the company's labor codes; with category Projects it held only that project's mapped codes. See \"Which Phase Codes a Timesheet Offers\"."
           },
           {
             "term": "Clone Log",
@@ -34167,7 +34167,7 @@ const MODULES = [
         "definitions": [
           {
             "term": "Where the Crew list comes from",
-            "definition": "It depends on **Log Level Category**. **Company** and **GL Codes** list the crews of **Global Data → Crews**. **Projects** shows a project drop-down and lists only that project's **Project Crews** (**Project Setup → People → Project Crews**). **Work Orders** shows a work-order drop-down and lists the crews assigned to it. When the chosen project or work order has no crew the screen says \"Please create a Crew in order to continue\" (true for Arena Steel Plant - Phase 1, whose Project Crews are empty)."
+            "definition": "It depends on **Log Level Category**. **Company** and **GL Codes** list the crews of **Global Data → Crews**. **Projects** shows a project drop-down and lists only that project's **Project Crews** (**Project Setup → People → Project Crews**). **Work Orders** shows a work-order drop-down and lists the crews assigned to it. When the chosen project or work order has no crew the screen says \"Please create a Crew in order to continue\"."
           },
           {
             "term": "Where the Roster list comes from",
@@ -34404,7 +34404,7 @@ const MODULES = [
         "definitions": [
           {
             "term": "Project chosen: the project's mapped codes",
-            "definition": "The drop-down shows the phase codes whose **Timesheet Management** box is ticked in that project's **Project Setup → Phase Codes**. The Arena Residential Project screen shows exactly those 13 ticks among its 963 rows."
+            "definition": "The drop-down shows the phase codes whose **Timesheet Management** box is ticked in that project's **Project Setup → Phase Codes**."
           },
           {
             "term": "Project with nothing ticked: an empty list",
@@ -34416,11 +34416,11 @@ const MODULES = [
           },
           {
             "term": "Company chosen: a company list",
-            "definition": "This is not the full Global Data list of 963 codes. The list is exactly the codes ticked in **Default Phase Codes** (260 ticked of the 269 in its pool) plus the employee's own **Default Indirect Phase Code** from Global Rosters (System Admin: 10.2020 OVHD - Project Manager, shown first). The 9 unticked codes (0.1, 0.2, 0.3, 01.000.000 to 01.000.004 and 01.001.000) were exactly the 9 missing from the drop-down."
+            "definition": "With **Company**, the drop-down offers Direct and Indirect codes that have the **Labor** cost type, not the full Global Data list. The list is exactly the codes ticked in **Default Phase Codes** plus the employee's own **Default Indirect Phase Code** from Global Rosters, shown first."
           },
           {
             "term": "No project chosen on a crew row",
-            "definition": "Direct, Non Productive and Change Order codes never appear without a project."
+            "definition": "On **My Crew Timesheet** a row with nothing selected offers only Indirect codes. Direct, Non Productive and Change Order codes never appear without a project."
           },
           {
             "term": "Default Phase Codes narrow the list",
@@ -34432,7 +34432,7 @@ const MODULES = [
           },
           {
             "term": "Where the codes themselves come from",
-            "definition": "Every code, its description, its **Phase Code Type** (Direct, Indirect, Non Productive, Change Order) and its **Cost Types** are defined once in **Global Data → UOM, Phasecode & GL Codes → Phase Codes**. Project Setup shows the same 963 and adds the two tick boxes. What decides the 269-code pool behind Default Phase Codes was not found."
+            "definition": "Every code, its description, its **Phase Code Type** (Direct, Indirect, Non Productive, Change Order) and its **Cost Types** are defined once in **Global Data → UOM, Phasecode & GL Codes → Phase Codes**. Project Setup shows the same list and adds the two tick boxes."
           }
         ],
         "procedures": [
@@ -34882,7 +34882,7 @@ const MODULES = [
           },
           {
             "term": "Timesheet Template",
-            "definition": "Eighteen templates (for example Crew Timesheet, Weekly (Standard), Hourly Field Timesheet, Regular Timesheet). The editor shows **Standard Fields** (Crew Timesheet: Roster, Company/Project, Phase Code, Phase Code Description; Weekly (Standard): Roster Name, Craft, Roster Number, Phase Codes, Per Diem Days), **Configurable Fields** and **Earnings Codes**. The timesheet screens list only the templates that match the user's mode (8 for Daily and Weekly By Day, 5 for Weekly)."
+            "definition": "The templates (for example Crew Timesheet, Weekly (Standard), Hourly Field Timesheet, Regular Timesheet). The editor shows **Standard Fields** (Crew Timesheet: Roster, Company/Project, Phase Code, Phase Code Description; Weekly (Standard): Roster Name, Craft, Roster Number, Phase Codes, Per Diem Days), **Configurable Fields** and **Earnings Codes**. The timesheet screens list only the templates that match the user's mode (8 for Daily and Weekly By Day, 5 for Weekly)."
           },
           {
             "term": "Payroll Locking",
@@ -36733,7 +36733,7 @@ const MODULES = [
           },
           {
             "term": "Budget Planning Form (fields)",
-            "definition": "The form shows the budget name, **Budget Function Code** and **Budget Function Name**, **+ Add Budget Item**, and a grid with one row per Budget Item and one column per year (for example 2025 (₹) and 2026 (₹)) plus **Total (₹)**, with a totals row. Area No.** and an **FTEs** table by division). **Submit For Approval** sends it to the approvers in **Settings → Approval Workflow**; approvers see Approve and Reject."
+            "definition": "The form shows the budget name, **Budget Function Code** and **Budget Function Name**, **+ Add Budget Item**, and a grid with one row per Budget Item and one column per year (for example 2025 (₹) and 2026 (₹)) plus **Total (₹)**, with a totals row. Below it are the extra fields built in **Settings → Budget Forms** (for example **Fund Name**, **Business Area**, **Fund No./Bus. Area No.** and an **FTEs** table by division). **Submit For Approval** sends it to the approvers in **Settings → Approval Workflow**; approvers see Approve and Reject."
           },
           {
             "term": "Workflow Issues (Budget Planning)",
@@ -36788,7 +36788,7 @@ const MODULES = [
           },
           {
             "term": "Create CIP dialog",
-            "definition": "Fields: **Department*** (cascading levels from Settings → Organization Structure), **CIP ID*** (typed in, not numbered by Arena), **CIP Name***, **CIP Description***, the optional profile fields built in **Settings → CIP Profile**, and **From Year*** and **To Year***. There is no project or budget picker."
+            "definition": "Fields: **Department*** (cascading levels from Settings → Organization Structure), **CIP ID*** (typed in, not numbered by Arena), **CIP Name***, **CIP Description***, the optional profile fields built in **Settings → CIP Profile** (for example **Location**, **Key Map**, **Category** or **Project Justification**), and **From Year*** and **To Year***. There is no project or budget picker."
           },
           {
             "term": "CIP record tabs",
