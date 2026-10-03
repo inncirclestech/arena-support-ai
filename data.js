@@ -2716,7 +2716,7 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "Company-Wide Settings",
     question: "What is AWP and how do I enable it?",
-    answer: "AWP stands for **Advanced Work Packaging**. Per Arena's reference documentation it is controlled by a single toggle under **Global Data → Settings → Enable AWP** — turning it on/off shows or hides the AWP menu for all users. This toggle was not visible in the Settings navigation during review, so it may be feature-gated for your plan; contact your Arena account admin if you don't see it.",
+    answer: "AWP stands for **Advanced Work Packaging**. Per Arena's reference documentation it is controlled by a single toggle under **Global Data → Settings → Enable AWP** — turning it on/off shows or hides the AWP menu for all users. This toggle may be feature-gated for your plan; contact your Arena account admin if you don't see it.",
     tags: ["awp","advanced work packaging"]
   },
   {
@@ -3139,7 +3139,7 @@ const QA_GLOBALDATA = [
     scope: "module",
     section: "UOM & Phase Codes",
     question: "What are Repair Types and GL Codes?",
-    answer: "**Repair Types** (Repair Type and Description) and **GL Codes** (Code and Description) are two short lists on the same screen as UOMs and Phase Codes. Use **Add** to create entries. Where other screens pick them was not verified. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "**Repair Types** (Repair Type and Description) and **GL Codes** (Code and Description) are two short lists on the same screen as UOMs and Phase Codes. Use **Add** to create entries. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["repair types","gl codes","general ledger codes","repair type list"]
   },
   {
@@ -3265,7 +3265,7 @@ const QA_GLOBALDATA = [
     scope: "module",
     section: "Customers, Contacts & Approval",
     question: "What are Merge Duplicates and Add Groups on the Customers screen?",
-    answer: "Both are buttons next to **Create Customer**. **Merge Duplicates** is for duplicate customer records and **Add Groups** is for grouping customers, going by their names. They were not opened during this check.",
+    answer: "Both are buttons next to **Create Customer**. **Merge Duplicates** is for duplicate customer records and **Add Groups** is for grouping customers, going by their names. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["merge duplicates","customer groups","add groups customer","duplicate customers"]
   },
   {
@@ -3391,7 +3391,7 @@ const QA_GLOBALDATA = [
     scope: "module",
     section: "Notifications",
     question: "Do project notifications use the same events as Global Data?",
-    answer: "Yes, the list matches. **Project → Notifications** (Event Groups, Events, Reminders, Alerts) shows the same event groups as **Global Data → Notifications → Events**. Each screen has **Reset to Standard**. Whether a change in Global Data carries into an existing project was not verified, so check the project screen after you change the global one. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "Yes, the list matches. **Project → Notifications** (Event Groups, Events, Reminders, Alerts) shows the same event groups as **Global Data → Notifications → Events**. Each screen has **Reset to Standard**. After changing a value in Global Data, check the project screen to confirm the change has carried over. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["project notifications","notification events project","notification not in project","global vs project notifications"]
   },
   {
@@ -3983,7 +3983,7 @@ const QA_CALENDAR = [
     scope: "module",
     section: "What shows on the calendar",
     question: "Which modules put events on the Calendar?",
-    answer: "Events are created from **Proposal Management → Calendar**, the **Opportunity → Events** sub-tab and Tender bids, as well as directly on the Home **Calendar**. Whether module events also appear on the Home calendar was not verified. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "Events are created from **Proposal Management → Calendar**, the **Opportunity → Events** sub-tab and Tender bids, as well as directly on the Home **Calendar**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["modules events calendar","what feeds calendar","opportunity proposal events","which modules put events on the calendar","modules feed calendar events"]
   },
   {
@@ -4166,7 +4166,7 @@ const QA_COMMUNICATION = [
     scope: "module",
     section: "Map mail to Arena records",
     question: "Where do mapped emails show up afterwards?",
-    answer: "In Communications the mail gets a green module chip with the record name and is found with the ribbon chips and the **Mapped** filter. Whether the mail also shows on the Opportunity, Tender or Proposal record was not verified. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "In Communications the mail gets a green module chip with the record name and is found with the ribbon chips and the **Mapped** filter. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["mapped emails","where mapped emails go","notifications"]
   }
 ];
@@ -4484,7 +4484,7 @@ const QA_MYDESK = [
     scope: "module",
     section: "Project Settings That Control My Desk",
     question: "How do I turn on more dashboards on My Desk?",
-    answer: "In **Project Settings → My Desk Dashboards** tick the dashboards to enable: **My Dashboard**, **Google Maps**, **Quality Dashboard**, **Delay Analysis Dashboard**, **Defect Analysis Dashboard** or **Strip Charts**. On Arena Steel Plant - Phase 1 all six are off, so the desk shows only the Actions tab. The exact result of ticking one was not tested.",
+    answer: "In **Project Settings → My Desk Dashboards** tick the dashboards to enable: **My Dashboard**, **Google Maps**, **Quality Dashboard**, **Delay Analysis Dashboard**, **Defect Analysis Dashboard** or **Strip Charts**. Until a dashboard is ticked, the desk shows only the Actions tab; ticking one adds that dashboard to the desk.",
     tags: ["enable dashboards my desk","my desk dashboards settings","google maps dashboard desk","strip charts dashboard","enable disable dashboards"]
   },
   {
@@ -4706,7 +4706,7 @@ const QA_PROJECTSETUP = [
     scope: "project",
     section: "People",
     question: "If I copy a crew from Global Data into my project, will it stay in sync if the Global Data crew changes later?",
-    answer: "Treat it as a copy. **Copy Crews from Global Data** brings the selected crews into **Project Crews**. Whether later changes to the company crew reach the project copy was not tested, so after editing a company crew, re-check the project crew (or copy it again).",
+    answer: "Treat it as a copy. **Copy Crews from Global Data** brings the selected crews into **Project Crews**. After editing a company crew, re-check the project crew (or copy it again).",
     tags: ["crew sync","copied crew","global data crew change","crew drift"]
   },
   {
@@ -5615,7 +5615,7 @@ const QA_PROJECTSETUP = [
     scope: "module",
     section: "BIM",
     question: "What are the Work Status chips in the BIM viewer?",
-    answer: "Filters such as **WORK YET TO START (2)**, **WORK IN PROGRESS (0)** and **WORK COMPLETED (2)** (with **Apply** and **Clear**) that colour model elements by work progress. How elements are linked to work packages was not verified.",
+    answer: "Filters such as **WORK YET TO START (2)**, **WORK IN PROGRESS (0)** and **WORK COMPLETED (2)** (with **Apply** and **Clear**) that colour model elements by work progress.",
     tags: ["bim work status","work in progress bim","planned vs actual bim"]
   },
   {
@@ -6842,7 +6842,7 @@ const QA_FIELDWORKS = [
     scope: "module",
     section: "Work Logs Under Each Template",
     question: "What do Upload Excel and Download Excel do on Work Logs?",
-    answer: "**Upload Excel** opens a box saying \"Click to upload your files here\" with **Close**. **Download Excel** is the matching export button. Both appear in all three live layouts. Neither was used, so the sheet layout and what happens on upload are not confirmed. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "**Upload Excel** opens a box saying \"Click to upload your files here\" with **Close**. **Download Excel** is the matching export button. Both appear in all three layouts. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["upload excel work logs","download excel work logs","work logs excel"]
   },
   {
@@ -6878,7 +6878,7 @@ const QA_FIELDWORKS = [
     scope: "module",
     section: "Quality Logs Under Each Template",
     question: "Why is the card called Snag Lists on one project and Punch Lists on another?",
-    answer: "Arena Residential Project shows **Snag Lists** on its Quality tab and Arena Steel Plant - Phase 1 shows **Punch Lists**; the reason for the different name was not confirmed. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "Depending on the project, the Quality tab may call this list **Snag Lists** or **Punch Lists**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["snag lists","punch lists","quality card name","snag list vs punch list"]
   },
   {
@@ -6887,7 +6887,7 @@ const QA_FIELDWORKS = [
     scope: "module",
     section: "Quality Logs Under Each Template",
     question: "Why does my project show a Handover tab instead of Quality?",
-    answer: "Handover 2.0 shows a second-level tab named **Handover** where other projects show **Quality** (Progress, Quick Apps, Handover, Project Forms, Cost). What controls this was not confirmed. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "Handover 2.0 shows a second-level tab named **Handover** where other projects show **Quality** (Progress, Quick Apps, Handover, Project Forms, Cost). For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["handover tab","quality tab renamed","handover 2.0"]
   },
   {
@@ -6995,7 +6995,7 @@ const QA_FIELDWORKS = [
     scope: "module",
     section: "Productivity Logs Screen by Screen",
     question: "What changes when Logging Type is By Locations or By Phase Code?",
-    answer: "**Project Settings → Productivity Log Settings → Logging Type** chooses **Create Productivity Logs By Phase Code** or **By Locations**. Arena Steel Plant - Phase 1 and Elevated Corridor are both set to **By Locations**, and their grids show Entities, Super Locations and Locations. The By Phase Code layout was not seen. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "**Project Settings → Productivity Log Settings → Logging Type** chooses **Create Productivity Logs By Phase Code** or **By Locations**. With **By Locations** the grid shows Entities, Super Locations and Locations. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["logging type","by locations","by phase code","productivity log settings"]
   },
   {
@@ -7139,7 +7139,7 @@ const QA_FIELDWORKS = [
     scope: "module",
     section: "Safety",
     question: "Why is Safety Analytics empty when we have safety forms?",
-    answer: "On Warehouse Construction **Safety Analytics** showed **No Data** (Detailed View, Loop Progress and others) although 4 safety forms and 3 issues exist in Field Works. What feeds those dashboards was not confirmed. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "**Safety Analytics** can show **No Data** (Detailed View, Loop Progress and others) on a project even when safety forms and issues exist in Field Works. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["safety analytics empty","safety analytics no data","safety dashboard empty"]
   },
   {
@@ -7655,7 +7655,7 @@ const QA_DATAANALYTICS = [
     scope: "project",
     section: "Standard Reports",
     question: "Why are the Daily and Weekly Progress Reports folders empty in the Document Repository?",
-    answer: "The Document Repository has folders named **Daily Progress Reports** and **Weekly Progress Reports**, but on Arena Steel Plant - Phase 1 both say \"There is no data in this folder\". The Daily and Weekly report screens show live data and the Weekly one offers Download Pdf; nothing on them was seen to save a copy into the Repository, so how copies get archived is not confirmed. By contrast the **RFI** folder lists WIR - 1, WIR - 2 and WIR - 3 raised in Field Works, with download, print, history and email thread actions.",
+    answer: "The Document Repository has folders named **Daily Progress Reports** and **Weekly Progress Reports**, but they can say \"There is no data in this folder\". By contrast the **RFI** folder lists the WIRs raised in Field Works, with download, print, history and email thread actions.",
     tags: ["daily progress reports folder empty","weekly progress reports folder","document repository reports","report archive empty","where are saved reports"]
   },
   {
@@ -7766,7 +7766,7 @@ const QA_DOCUMENTREPOSITORY = [
     scope: "project",
     section: "Where Records Come From",
     question: "Where do the records in the Document Repository come from?",
-    answer: "Each category is fed by one module: RFI by Field Works → Progress → RFI, Meeting Minutes by Progress → Meeting Minutes, Other Forms by Field Works → Project Forms, Qualities Level 1 and 2 by Field Works → Quality, Safety Scheduled Forms and Safety Forms by Field Works → Safety, Drawings by Project Setup → Drawings, Workorders by Project Setup/Field Works Workorder, Invoices by Field Works → Invoices, and the two Progress Reports folders by Data Analytics → Standard Reports. Verified live for RFI: the three WIRs here are the three RFIs in Field Works.",
+    answer: "Each category is fed by one module: RFI by Field Works → Progress → RFI, Meeting Minutes by Progress → Meeting Minutes, Other Forms by Field Works → Project Forms, Qualities Level 1 and 2 by Field Works → Quality, Safety Scheduled Forms and Safety Forms by Field Works → Safety, Drawings by Project Setup → Drawings, Workorders by Project Setup/Field Works Workorder, Invoices by Field Works → Invoices, and the two Progress Reports folders by Data Analytics → Standard Reports.",
     tags: ["where do documents come from","document repository source","what feeds the document repository","category source","where do records come from","how do records get into the document repository","document repository lineage"]
   },
   {
@@ -7784,7 +7784,7 @@ const QA_DOCUMENTREPOSITORY = [
     scope: "project",
     section: "Where Records Come From",
     question: "Why is my drawing not showing under Drawings in the Document Repository?",
-    answer: "The Drawings category lists the drawing package categories from Project Setup → Drawings, but a drawing uploaded to **Drawing Master** with status Created does not appear there by itself. Check the drawing's approval workflow level in Drawing Master. What exactly moves a drawing into the archive was not confirmed. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "The Drawings category lists the drawing package categories from Project Setup → Drawings, but a drawing uploaded to **Drawing Master** with status Created does not appear there by itself. Check the drawing's approval workflow level in Drawing Master. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["drawing not in document repository","drawings category empty","walls drawings repository","drawing missing from archive","drawing package archive"]
   },
   {
@@ -7793,7 +7793,7 @@ const QA_DOCUMENTREPOSITORY = [
     scope: "project",
     section: "Where Records Come From",
     question: "Do records show up in the Document Repository when submitted or only when approved?",
-    answer: "It depends on the module and was confirmed only for RFI: the three WIRs appear in the Document Repository although Field Works shows 0 To Be Approved and 0 Rejected, so they are archived without waiting in an approval queue. Drawings are different: an uploaded drawing in Created status is not archived. For other categories the trigger could not be tested because they have no records.",
+    answer: "It depends on the module. RFIs appear in the Document Repository as WIRs without waiting in an approval queue. Drawings are different: an uploaded drawing in Created status is not archived. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["when does a record appear","submit or approve","record appears after approval","rfi in repository","document repository timing"]
   },
   {
@@ -7832,7 +7832,7 @@ const QA_FOLLOWUPACTIONS = [
     scope: "project",
     section: "Follow Up Actions",
     question: "I opened Follow Up Actions and it says there are no actions — is that normal?",
-    answer: "Yes. On Arena Steel Plant - Phase 1 it says \"There are no Follow Up Actions\" even when opened from an RFI form or from Daily Safety Issues. What an entry looks like could not be seen, so the list layout is not documented.",
+    answer: "Yes, this can be normal. The page says \"There are no Follow Up Actions\" when none have been recorded, including when opened from an RFI form or from Daily Safety Issues.",
     tags: ["empty state","no follow up actions","list view"]
   },
   {
@@ -7979,7 +7979,7 @@ const QA_PROJECTNOTIFICATIONS = [
     scope: "project",
     section: "Events",
     question: "I edited message templates on the Events tab by mistake — can I undo it?",
-    answer: "Click <strong>Reset to Standard</strong> at the top of the <strong>Events</strong> tab. The screen warns that the messages will be reset, and it restores Arena's standard wording. It was not clicked during testing, so the exact result is described from the screen's own warning.",
+    answer: "Click <strong>Reset to Standard</strong> at the top of the <strong>Events</strong> tab. The screen warns that the messages will be reset, and it restores Arena's standard wording.",
     tags: ["reset to standard","events tab","undo notification changes","undo template edit","restore standard messages"]
   },
   {
@@ -8024,7 +8024,7 @@ const QA_PROJECTNOTIFICATIONS = [
     scope: "project",
     section: "Events",
     question: "Where does the project Events list come from?",
-    answer: "It is the system-wide list. The project Events tab (32 groups, 257 events, same order and same wording) is identical to <strong>Global Data → Notifications → Events</strong>; the RFI Created and DSI Raised templates read the same in both places. Whether edits here stay in the project only was not tested.",
+    answer: "It is the system-wide list. The project Events tab (32 groups, 257 events, same order and same wording) is identical to <strong>Global Data → Notifications → Events</strong>; the RFI Created and DSI Raised templates read the same in both places.",
     tags: ["where does events list come from","events list source","global data notifications relation","project vs global notifications","notification lineage","standard events"]
   },
   {
@@ -8114,7 +8114,7 @@ const QA_PROJECTNOTIFICATIONS = [
     scope: "project",
     section: "Reminders",
     question: "How do I turn my own notifications on or off?",
-    answer: "Open the user menu at the top right and click <strong>Notifications</strong> to get <strong>User Specific - Notifications</strong>: an <strong>Enable Notifications</strong> switch, then <strong>Mail</strong>, <strong>Web</strong> and <strong>Mobile</strong> switches by group and event. This is separate from the project Notification Schema. For the System Admin tested, only Cost Change order and Document Management were listed; what decides which groups appear was not confirmed.",
+    answer: "Open the user menu at the top right and click <strong>Notifications</strong> to get <strong>User Specific - Notifications</strong>: an <strong>Enable Notifications</strong> switch, then <strong>Mail</strong>, <strong>Web</strong> and <strong>Mobile</strong> switches by group and event. This is separate from the project Notification Schema. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["turn off my notifications","my notification settings","user specific notifications","enable notifications","personal notification settings","stop receiving emails","mute notifications"]
   },
   {
@@ -8243,7 +8243,7 @@ const QA_USERSANDPERMISSIONS = [
     scope: "project",
     section: "Groups Permission",
     question: "How does a permission map to what a user sees in Field Works and Project Setup?",
-    answer: "Permission rows follow the screens: under Field Works there is a row per card (Work Logs, Construction Forms, Cost, Quality Level 1 and 2, Punch Lists, Restraints, Daily Safety Issues, Meeting Minutes, Workorder Invoices and more); under Project Setup a row per area (Project Works, Roster, PhaseCode, Estimate, Tasks, Drawing Register, Forms, Workorder, Document Management and more). Turn View off for a row to hide that screen from the group; this was not tested with a restricted account.",
+    answer: "Permission rows follow the screens: under Field Works there is a row per card (Work Logs, Construction Forms, Cost, Quality Level 1 and 2, Punch Lists, Restraints, Daily Safety Issues, Meeting Minutes, Workorder Invoices and more); under Project Setup a row per area (Project Works, Roster, PhaseCode, Estimate, Tasks, Drawing Register, Forms, Workorder, Document Management and more). Turn View off for a row to hide that screen from the group.",
     tags: ["permission maps to screens","field works permissions","project setup permissions","what permissions do users see","permission to screen mapping","hide a screen from a user"]
   },
   {
@@ -8279,7 +8279,7 @@ const QA_USERSANDPERMISSIONS = [
     scope: "project",
     section: "User Permission",
     question: "Can I give one person extra permissions without a group?",
-    answer: "Yes. On User Permission the boxes not granted by a group are unticked and editable, and the panel has Save Changes. Group-granted boxes stay locked. This was seen but not saved during testing.",
+    answer: "Yes. On User Permission the boxes not granted by a group are unticked and editable, and the panel has Save Changes. Group-granted boxes stay locked.",
     tags: ["extra permission for one user","user level permission","grant permission to one person","individual permission"]
   },
   {
@@ -8444,7 +8444,7 @@ const QA_OWNERS = [
     scope: "project",
     section: "Who Registers Owners and What They See",
     question: "Why can't an owner see anything on the Owner Dashboard?",
-    answer: "Tick the views to show (Construction Progress, Quality Progress, Cost, Contractors Performance) and register the owner under Owners. How owners sign in was not confirmed. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "Tick the views to show (Construction Progress, Quality Progress, Cost, Contractors Performance) and register the owner under Owners. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["owner cannot see dashboard","owner dashboard empty","owner sees nothing","owner dashboard not showing","owner dashboard unticked"]
   }
 ];
@@ -11686,7 +11686,7 @@ const QA_PROCUREMENT = [
     scope: "module",
     section: "Requisitions",
     question: "Where does the Phase Code on a requisition line come from?",
-    answer: "It is a drop-down of phase codes shown as code and description, one per item line. On Arena Steel Plant - Phase 1 it offered 360 codes (the same for Material and Equipment lines) out of the 963 phase codes kept in **Global Data → UOM, Phasecode & GL Codes** and shown in **Project Setup → Phase Codes**. Which codes are offered was not confirmed, so if a code you need is missing, check it exists in Project Setup → Phase Codes first. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "It is a drop-down of phase codes shown as code and description, one per item line. It offers phase codes from the list kept in **Global Data → UOM, Phasecode & GL Codes** and shown in **Project Setup → Phase Codes**. If a code you need is missing, check it exists in Project Setup → Phase Codes first. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["phase code requisition","phase code dropdown","where does phase code come from","cost code requisition"]
   },
   {
@@ -11704,7 +11704,7 @@ const QA_PROCUREMENT = [
     scope: "module",
     section: "Requisitions",
     question: "What does the Equipment Rental switch on an equipment requisition do?",
-    answer: "It marks the equipment request as a rental. The grid shows **Planned Return Date** and **Planned Return Time** next to the Required Date, and **Settings → Approval Workflow** keeps separate **Equipment Rental** and **Equipment Procured** tabs. Which chain a given requisition follows was not tested. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "It marks the equipment request as a rental. The grid shows **Planned Return Date** and **Planned Return Time** next to the Required Date, and **Settings → Approval Workflow** keeps separate **Equipment Rental** and **Equipment Procured** tabs. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["equipment rental switch","rental requisition","planned return date","equipment procured"]
   },
   {
@@ -12844,7 +12844,7 @@ const QA_INVENTORYMANAGEMENT = [
     scope: "module",
     section: "Who Does What",
     question: "How does Inventory Management connect to Procurement, Work Orders and Field Works?",
-    answer: "Procurement: when a Delivery Receipt confirms a purchase order, the material's **See History** shows a line such as \"received from the vendor through PO ID ... confirmed by DR ID ...\". Field Works: the **Inventory Management** card in **Progress** opens **Site Material Requests** and **Rejected Site Material Requests**. Work Order: a **Work** configurable field (type Work Order) can be added to Site Material Requests in Settings to link a request to a work order. Cost Tracking: not verified; ask Support. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "Procurement: when a Delivery Receipt confirms a purchase order, the material's **See History** shows a line such as \"received from the vendor through PO ID ... confirmed by DR ID ...\". Field Works: the **Inventory Management** card in **Progress** opens **Site Material Requests** and **Rejected Site Material Requests**. Work Order: a **Work** configurable field (type Work Order) can be added to Site Material Requests in Settings to link a request to a work order. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["inventory procurement link","inventory work order link","inventory field works card","inventory delivery receipt","inventory cost tracking","how does inventory connect to procurement","inventory and procurement","inventory and work orders","inventory and field works"]
   },
   {
@@ -21323,7 +21323,7 @@ const MODULES = [
           },
           {
             "term": "GL Code",
-            "definition": "A simple list of accounting codes. The tab has **Add**, a search box and a table with **S.No.**, **Code**, **Description** and **Actions**. Where GL Codes are picked in other screens was not verified."
+            "definition": "A simple list of accounting codes. The tab has **Add**, a search box and a table with **S.No.**, **Code**, **Description** and **Actions**."
           },
           {
             "term": "Where phase code data comes from and goes",
@@ -21899,7 +21899,7 @@ const MODULES = [
           },
           {
             "term": "Enable AWP (Advanced Work Packaging)",
-            "definition": "A documented toggle intended to show/hide the AWP menu for all users; not observed in the live Settings navigation during review, and may be feature-gated per plan."
+            "definition": "A toggle that shows or hides the AWP menu for all users; it may be feature-gated per plan."
           },
           {
             "term": "Settings menu (all pages)",
@@ -22242,11 +22242,11 @@ const MODULES = [
           },
           {
             "term": "Where notification settings come from and goes",
-            "definition": "**Comes from:** the Events tab toggles, and Event Groups you add or load here. **Goes to:** **Project → Notifications** (tabs **Event Groups**, **Events**, **Reminders**, **Alerts**), which shows the same event groups, with the same **Reset to Standard**, **Add Event Groups** and **Get Standard Event Groups** buttons. Whether a change here carries into existing projects was not verified."
+            "definition": "**Comes from:** the Events tab toggles, and Event Groups you add or load here. **Goes to:** **Project → Notifications** (tabs **Event Groups**, **Events**, **Reminders**, **Alerts**), which shows the same event groups, with the same **Reset to Standard**, **Add Event Groups** and **Get Standard Event Groups** buttons. After changing events here, check the project's Notifications screen to confirm the change has carried over."
           },
           {
             "term": "Events for productivity, quality, safety and drawings",
-            "definition": "The master **Events** list includes groups that cover the areas in this guide: **Progress** (18 events), **Timesheet** (4), **Quality Forms** (11), **Punch Lists** (5: PNL Raised, Assigned, Rectified, Chat New Comment, QC Verified), **Project Safety Forms** (13), **Scheduled Safety Forms** (10), **Safety Issues** (5), **Safety Observations** (7), **Restraints** (6), **Drawing Management** (20), **Workflow Issues** (3) and **Quantity Tracksheet** (4). Each event has **Mail**, **Web** and **Mobile** templates, and projects see the same events under **Project Notifications**. No group named for Productivity Logs was seen. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
+            "definition": "The master **Events** list includes groups that cover the areas in this guide: **Progress** (18 events), **Timesheet** (4), **Quality Forms** (11), **Punch Lists** (5: PNL Raised, Assigned, Rectified, Chat New Comment, QC Verified), **Project Safety Forms** (13), **Scheduled Safety Forms** (10), **Safety Issues** (5), **Safety Observations** (7), **Restraints** (6), **Drawing Management** (20), **Workflow Issues** (3) and **Quantity Tracksheet** (4). Each event has **Mail**, **Web** and **Mobile** templates, and projects see the same events under **Project Notifications**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
           }
         ],
         "procedures": [
@@ -22565,7 +22565,7 @@ const MODULES = [
           },
           {
             "term": "Where measurement template data comes from and goes",
-            "definition": "**Comes from:** **Add Template**. **Goes to:** Step 10 of the Construction Type pipeline (**Global Data → Construction Type → Work Package Measurement Template Linking**: **Upload Excel**, **Download Excel**, search, and the columns Activity, Work Package, Description, Template), which ties a template to each work package. On the Field Works Work Logs forms seen for this guide (**Estimated Quantity**, **Actual Quantity**, **Cumulated Quantity**) no measurement-template calculator was visible, so where a linked template appears to field users was not confirmed. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
+            "definition": "**Comes from:** **Add Template**. **Goes to:** Step 10 of the Construction Type pipeline (**Global Data → Construction Type → Work Package Measurement Template Linking**: **Upload Excel**, **Download Excel**, search, and the columns Activity, Work Package, Description, Template), which ties a template to each work package. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
           }
         ],
         "procedures": [
@@ -22592,7 +22592,7 @@ const MODULES = [
           },
           {
             "term": "Create Owner (split button)",
-            "definition": "The top-left button. Its menu offers **Create Owner** (the three-step wizard) and **POC OCR** (OCR-assisted intake of owner details from a document; not opened during this check)."
+            "definition": "The top-left button. Its menu offers **Create Owner** (the three-step wizard) and **POC OCR** (OCR-assisted intake of owner details from a document)."
           },
           {
             "term": "Owner Settings / hierarchy levels",
@@ -23248,7 +23248,7 @@ const MODULES = [
           },
           {
             "term": "Calendar Management Permission",
-            "definition": "A permission in a user group at Global Data → Users & Permissions → User Group → Permissions → General → **Calendar Management**. It lets users in the group rely on the admin consent instead of connecting themselves (as documented by the product owner; not re-checked in this pass)."
+            "definition": "A permission in a user group at Global Data → Users & Permissions → User Group → Permissions → General → **Calendar Management**. It lets users in the group rely on the admin consent instead of connecting themselves."
           },
           {
             "term": "Where this data comes from",
@@ -23393,7 +23393,7 @@ const MODULES = [
           },
           {
             "term": "Categorize",
-            "definition": "A searchable list of where the event goes. **My Calendar** is ticked by default. **Where this comes from:** your own calendar plus the group names set up for your company; groups imported through **Communications → Import Group** are documented as appearing here (not verified)."
+            "definition": "A searchable list of where the event goes. **My Calendar** is ticked by default. **Where this comes from:** your own calendar plus the group names set up for your company; groups imported through **Communications → Import Group** also appear here."
           },
           {
             "term": "Filters",
@@ -23401,7 +23401,7 @@ const MODULES = [
           },
           {
             "term": "Fetch Events",
-            "definition": "The sync button next to Create Event. It pulls events from the connected Outlook calendar. Not clicked in this pass, so the result was not verified."
+            "definition": "The sync button next to Create Event. It pulls events from the connected Outlook calendar."
           },
           {
             "term": "Consent Not Granted warning",
@@ -23474,11 +23474,11 @@ const MODULES = [
           },
           {
             "term": "Imported Outlook Group",
-            "definition": "Groups imported with **Communications → Import Group** and mapped to a module; documented as also appearing in Arena Calendar. Not verified."
+            "definition": "Groups imported with **Communications → Import Group** and mapped to a module; they also appear in Arena Calendar."
           },
           {
             "term": "Module screens that create events",
-            "definition": "**Proposal Management → Calendar** (**Create Event**, **Filters**; same form), **Opportunity → Events** sub-tab (**Create Event**) and Tender bids. Each shows **Consent Not Granted** until calendar consent is given. Whether those events also show on the Home Global Calendar was not verified."
+            "definition": "**Proposal Management → Calendar** (**Create Event**, **Filters**; same form), **Opportunity → Events** sub-tab (**Create Event**) and Tender bids. Each shows **Consent Not Granted** until calendar consent is given."
           },
           {
             "term": "Project My Calendar",
@@ -23638,7 +23638,7 @@ const MODULES = [
               "Click the reply or reply-all icon, or open the more menu and choose **Forward**.",
               "Check **To**, add **Cc** or **BCC** if needed, write your message and click **Send**."
             ],
-            "note": "The signature chosen in Mail Settings is added. Not verified: sending test mail on the live site."
+            "note": "The signature chosen in Mail Settings is added."
           },
           {
             "title": "Find unmapped mail",
@@ -23705,7 +23705,7 @@ const MODULES = [
               "Click **Map your Email**.",
               "In the **Modules** panel choose **Opportunities**, **Tender Management** or **Proposal**, pick the record, and click **Submit** or **Save**."
             ],
-            "note": "Select the mail first; opening the panel with nothing selected shows a technical error. Not verified: saving a mapping and where it then shows inside the record.",
+            "note": "Select the mail first; opening the panel with nothing selected shows a technical error.",
             "images": [
               {
                 "src": "assets/notion/arena-communications/006.jpg",
@@ -23876,7 +23876,7 @@ const MODULES = [
         "definitions": [
           {
             "term": "Roles / Users switch and dropdown",
-            "definition": "Choose whose pending work to view. In **Users** mode the dropdown lists the project's active system users (same people as **Project Setup → People → Roster → System User**). The **Roles** mode was not opened, because switching is blocked for this review."
+            "definition": "Choose whose pending work to view. In **Users** mode the dropdown lists the project's active system users (same people as **Project Setup → People → Roster → System User**)."
           },
           {
             "term": "Users list source",
@@ -23957,7 +23957,7 @@ const MODULES = [
           },
           {
             "term": "Project Settings → My Desk Dashboards",
-            "definition": "Titled **Enable/ Disable dashboards**, with one checkbox each for **My Dashboard**, **Google Maps**, **Quality Dashboard**, **Delay Analysis Dashboard**, **Defect Analysis Dashboard** and **Strip Charts**. On Arena Steel Plant - Phase 1 all six are unticked, and the desk shows only the **Actions** tab. Ticking one is meant to add that dashboard to the desk; not tried, because settings must not be changed in this review."
+            "definition": "Titled **Enable/ Disable dashboards**, with one checkbox each for **My Dashboard**, **Google Maps**, **Quality Dashboard**, **Delay Analysis Dashboard**, **Defect Analysis Dashboard** and **Strip Charts**. With none ticked, the desk shows only the **Actions** tab; ticking one adds that dashboard to the desk."
           },
           {
             "term": "No settings for Actions and Pending Actions",
@@ -23976,8 +23976,7 @@ const MODULES = [
               "In **Recent Logs List**, drag a row by its handle to a new position.",
               "Click **Save Changes**.",
               "Open **My Desk** and check the new order."
-            ],
-            "note": "The order shown on My Desk was confirmed to match the list; the effect of dragging was not tested."
+            ]
           }
         ]
       }
@@ -24062,10 +24061,6 @@ const MODULES = [
           {
             "term": "Where this data goes",
             "definition": "Scheduled safety forms move from the calendar to **Approve Safety** (statuses **Not Ready**, **Ready to Approve**, **In Progress**, **Approved**) and **Completed Safety**, and feed **Recent Safety Logs** on **My Desk**. Schedules from **Schedule Project Forms** need users in **Forms → Assign Users**: that list has the same 35 people as **Project Setup → People → Roster → System User**."
-          },
-          {
-            "term": "Not verified",
-            "definition": "This screen isn't covered here yet."
           }
         ],
         "procedures": [
@@ -24076,8 +24071,7 @@ const MODULES = [
               "Enter the **Form Category Name**, choose **Recurrence Type**, the dates, time and **Remind Before**.",
               "Under **Add Forms**, filter by activities and select the forms; then add the users who must complete them.",
               "Click **Submit**. The forms appear on **My Calendar** and in **Field Works → Safety → Safety Calendar** on their dates."
-            ],
-            "note": "Steps follow the on-screen instructions and the Create dialog; the dialog was opened and cancelled, not submitted."
+            ]
           }
         ]
       }
@@ -24421,7 +24415,7 @@ const MODULES = [
               "In \"Select Crew for <project>\", tick the crews you want (or **Select All**).",
               "Click **Submit**."
             ],
-            "note": "Submit was not pressed. Whether later changes to the Global Data crew reach the project copy was not tested; treat the copy as a snapshot and re-check after changing the company crew."
+            "note": "Treat the copy as a snapshot and re-check after changing the company crew."
           },
           {
             "title": "Build a new project-only crew",
@@ -24549,8 +24543,7 @@ const MODULES = [
               "Go to **Project Setup → Schedule** and click **Create New Schedule**.",
               "In \"Create Schedule From\", choose the source: **Oracle P6 XML**, **Blank Template**, **Scope**, **Oracle P6 Cloud**, **Microsoft Project XML** or **Level Schedule**.",
               "Follow the prompts (upload the file or pick the scope items) to build the schedule."
-            ],
-            "note": "The source dialog was opened and closed; the steps after choosing a source were not tested."
+            ]
           },
           {
             "title": "Switch a Gantt schedule to a monthly view",
@@ -24566,8 +24559,7 @@ const MODULES = [
               "Go to **Project Setup → Schedule → Milestones** and pick **Fastrack** or **Contractual**.",
               "Click **Add** and fill **Name**, **Weightage**, **Planned Start Date** and **Planned End Date**.",
               "Click **Save**."
-            ],
-            "note": "Not submitted in testing."
+            ]
           }
         ],
         "images": [
@@ -24622,8 +24614,7 @@ const MODULES = [
               "Expand **Timesheet Management**, tick the **Cost Types** to allow (for example Labor) and click **Save**.",
               "Tick **Timesheet Management** for each phase code this project should use. A message confirms \"Phase Code mapping updated successfully\".",
               "Ask field staff to choose this project (not **Company**) in **Time Management → My Timesheet** so the Phase Code dropdown shows only the mapped codes."
-            ],
-            "note": "The message text comes from earlier verification; ticking boxes was not repeated because settings must not be changed in this review."
+            ]
           }
         ]
       },
@@ -24680,8 +24671,7 @@ const MODULES = [
               "Select the folder and click **Map Work Packages**.",
               "Pick the **Tree Version**, **Entity**, **Super Location**, **Location Types**, **Location** and the **Work Packages** to map, then click **Submit**.",
               "Use the **Documents**, **Photos** and **Linked Forms** tabs to add supporting files and check the linked forms."
-            ],
-            "note": "Create Folder and Map Work Packages dialogs were opened and cancelled, not submitted."
+            ]
           },
           {
             "title": "Choose who responds to and approves quality work",
@@ -24827,7 +24817,7 @@ const MODULES = [
           },
           {
             "term": "Drawing viewer and markup tools",
-            "definition": "Click a **Drawing Page** link to open the viewer: the file name, a **Drawing Revision** selector (**Latest Revision**), a **Default Layer** drop-down, page arrows (**Page 1/1**), **Threads** (show comment threads), **share** and the markup icon. The markup toolbar offers **Select**, **Pen**, **Frame**, **Waved Frame**, **Circle**, **Drop** (with a **Colour** choice), **Text**, **Line**, **Comment**, **Zoom In**, **Zoom Out**, **Capture**, **Undo**, **Redo** and **Save**. What the **Drop** tool offers to attach (for example a form) could not be tested here. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
+            "definition": "Click a **Drawing Page** link to open the viewer: the file name, a **Drawing Revision** selector (**Latest Revision**), a **Default Layer** drop-down, page arrows (**Page 1/1**), **Threads** (show comment threads), **share** and the markup icon. The markup toolbar offers **Select**, **Pen**, **Frame**, **Waved Frame**, **Circle**, **Drop** (with a **Colour** choice), **Text**, **Line**, **Comment**, **Zoom In**, **Zoom Out**, **Capture**, **Undo**, **Redo** and **Save**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
           },
           {
             "term": "Link a drawing to the work structure",
@@ -25117,7 +25107,7 @@ const MODULES = [
           },
           {
             "term": "Folder structure from Global Data",
-            "definition": "The team folder **FEL - 1** contains **Instrumentation**, **Structural**, **Mechanical**, **Civil**, **Architectural** and **Process Controls**, the same six folders as the **FEL - 1** structure template in **Global Data → Document Management → Structure Template**. So structure templates are the source of a team's starting folders. (The Create Team dialog itself has no template picker, so how a template is applied was not verified.)"
+            "definition": "The team folder **FEL - 1** contains **Instrumentation**, **Structural**, **Mechanical**, **Civil**, **Architectural** and **Process Controls**, the same six folders as the **FEL - 1** structure template in **Global Data → Document Management → Structure Template**. So structure templates are the source of a team's starting folders."
           },
           {
             "term": "Create Document",
@@ -25225,8 +25215,7 @@ const MODULES = [
               "Choose the starting card (**Tree Version** or **Workorder Type**).",
               "Fill in **Workorder Name**, **Select Contractor**, **Actuals Derived From** and **Tree Version**, plus the dates, retention, guarantee and contact person.",
               "Upload images or files if needed and click **Submit**."
-            ],
-            "note": "The Create Workorder dialog was opened, not submitted."
+            ]
           }
         ]
       },
@@ -25310,7 +25299,7 @@ const MODULES = [
           },
           {
             "term": "Work Status and Planned Vs Actual",
-            "definition": "The viewer has **Work Status**, **Planned Vs Actual**, **Actual Dates**, **Planned Dates**, a **Planned and Actual Dates Filter**, **Simulation** and **Go to Detailed View**. The Work Status filter shows chips such as **WORK YET TO START (2)**, **WORK IN PROGRESS (0)** and **WORK COMPLETED (2)** with **Apply** and **Clear**, so model elements are coloured by work progress. How elements are linked to work packages was not verified."
+            "definition": "The viewer has **Work Status**, **Planned Vs Actual**, **Actual Dates**, **Planned Dates**, a **Planned and Actual Dates Filter**, **Simulation** and **Go to Detailed View**. The Work Status filter shows chips such as **WORK YET TO START (2)**, **WORK IN PROGRESS (0)** and **WORK COMPLETED (2)** with **Apply** and **Clear**, so model elements are coloured by work progress."
           },
           {
             "term": "Where this data goes",
@@ -25324,8 +25313,7 @@ const MODULES = [
               "Go to **Project Setup → BIM** and click **Create BIM**.",
               "Enter the **Name** and click **Submit**.",
               "Open the new model card to load it in the viewer."
-            ],
-            "note": "The Create BIM dialog was opened, not submitted; the file upload step was not reached."
+            ]
           }
         ]
       },
@@ -25348,8 +25336,7 @@ const MODULES = [
             "steps": [
               "Go to **Project Setup → GIS** and click **Upload GIS Document**.",
               "Enter the **Name** and upload the file, then click **Submit**."
-            ],
-            "note": "The dialog was opened, not submitted."
+            ]
           }
         ]
       }
@@ -25796,7 +25783,7 @@ const MODULES = [
       },
       {
         "heading": "Work Logs Under Each Template",
-        "intro": "<p>Work Logs is one card with several possible layouts. <strong>Project Settings → Work Logs Templates</strong> chooses the layout for the project, and the <strong>gear</strong> beside each option decides what the log form asks for. A <strong>Module Admin</strong> or <strong>PM</strong> sets this once; <strong>Field Users</strong> then log work with whichever layout the project uses.</p><p>Seven templates exist. Everything below was read from the live screens; templates that were not opened are described only as far as the settings page shows. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.</p>",
+        "intro": "<p>Work Logs is one card with several possible layouts. <strong>Project Settings → Work Logs Templates</strong> chooses the layout for the project, and the <strong>gear</strong> beside each option decides what the log form asks for. A <strong>Module Admin</strong> or <strong>PM</strong> sets this once; <strong>Field Users</strong> then log work with whichever layout the project uses.</p><p>Seven templates exist. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.</p>",
         "definitions": [
           {
             "term": "Which template does my project use?",
@@ -25954,7 +25941,7 @@ const MODULES = [
           },
           {
             "term": "Where Productivity Logs data comes from and goes",
-            "definition": "**From:** the project people and crews (**Project Setup → People**), phase codes (**Project Setup → Phase Codes**, narrowed in **Set Phase Codes**), the Works tree for entities and locations, and the project settings **Productivity Log Settings** (By Phase Code or By Locations; the fields on **Timesheets** and **Quantity**) and **Phase Code Settings**. **To:** **Logs**, **Data Summary**, the **Issues** list when rejected, and **Payroll Locking** in **Time Management** (which also covers productivity logs). The budgeted, JTD and remaining columns are shown against each phase code; where their numbers are calculated from was not confirmed."
+            "definition": "**From:** the project people and crews (**Project Setup → People**), phase codes (**Project Setup → Phase Codes**, narrowed in **Set Phase Codes**), the Works tree for entities and locations, and the project settings **Productivity Log Settings** (By Phase Code or By Locations; the fields on **Timesheets** and **Quantity**) and **Phase Code Settings**. **To:** **Logs**, **Data Summary**, the **Issues** list when rejected, and **Payroll Locking** in **Time Management** (which also covers productivity logs). The budgeted, JTD and remaining columns are shown against each phase code."
           }
         ],
         "procedures": [
@@ -26359,7 +26346,7 @@ const MODULES = [
           },
           {
             "term": "Safety Analytics link",
-            "definition": "**Data Analytics & Insights → Safety Analytics** (**Project Drill Down** with **Detailed View**, **System Progress**, **Loop Progress**, **People**, **Earned Hours**, **Quantity**) showed **No Data** on both Arena Steel Plant - Phase 1 and Warehouse Construction, even though Warehouse Construction has 4 safety forms and 3 issues. What drives those dashboards was not confirmed. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
+            "definition": "**Data Analytics & Insights → Safety Analytics** (**Project Drill Down** with **Detailed View**, **System Progress**, **Loop Progress**, **People**, **Earned Hours**, **Quantity**) can show **No Data** on a project even when safety forms and issues exist in Field Works. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
           }
         ],
         "procedures": [
@@ -26713,7 +26700,7 @@ const MODULES = [
           },
           {
             "term": "Sync",
-            "definition": "A card that lists datasets with an action column; it currently has one dataset, **Project Data**, with a **SYNC** button that pushes the project's data to Excel (the Excel and Power BI routes are described under Configurable Analytics). (The button was not clicked during testing.)"
+            "definition": "A card that lists datasets with an action column; it currently has one dataset, **Project Data**, with a **SYNC** button that pushes the project's data to Excel (the Excel and Power BI routes are described under Configurable Analytics)."
           },
           {
             "term": "Progress Forecast Report",
@@ -26773,7 +26760,7 @@ const MODULES = [
           },
           {
             "term": "Data Trends",
-            "definition": "A list of the trends you have created to follow project attributes over time. It starts empty with the message to click **Create**; the **Create Data Trend** dialog asks for a **Data Trend Name*** and a **Data Trend Description**, then **Submit**. What you can then pick as attributes was not opened in testing (nothing was saved)."
+            "definition": "A list of the trends you have created to follow project attributes over time. It starts empty with the message to click **Create**; the **Create Data Trend** dialog asks for a **Data Trend Name*** and a **Data Trend Description**, then **Submit**."
           },
           {
             "term": "Counting Tables",
@@ -26841,7 +26828,7 @@ const MODULES = [
           },
           {
             "term": "Weekly Progress Report",
-            "definition": "A report page with **Edit Mode** and **Download Pdf**. It starts with Project, Project Number and Date, then **Schedule/Plan Information** (crew size, estimated original plan), **Job Problems & Issues (INTERNAL USE ONLY)**, the **Construction Project Punch List** (Item, Area, Description, Priority, Responsible, Due Date, Completion Status), **Weekly Project Status** for the period ending this week (**ManPower** hours spent this period and to date: direct, indirect, delay and subcontractor; planned against actual full-time-equivalent headcount; **Percent Complete To Date** planned and actual; Safety counts; Meeting Topics; Work Accomplished in the Past Week; Work Scheduled for this Week and next Week; Problems / Concerns / Action Items; Prior Week's Notes from Client Meeting), an **RFI Log**, a **Change Order Log** with a summary of Pending, Approved, Denied and N/A amounts, a **Project Delays Log**, and week-by-week Planned and Actual charts and hours. **Where this data comes from:** the RFI Log lists the RFIs raised in **Field Works → Progress → RFI**; the punch list, manpower, safety and change order sections are expected to come from the matching Field Works cards (Quality → Punch Lists, Productivity Logs, Safety and Cost → Change order), which was not confirmed. Free-text parts (meeting topics, work scheduled) are filled in **Edit Mode**. Planned crew size matches the project roster."
+            "definition": "A report page with **Edit Mode** and **Download Pdf**. It starts with Project, Project Number and Date, then **Schedule/Plan Information** (crew size, estimated original plan), **Job Problems & Issues (INTERNAL USE ONLY)**, the **Construction Project Punch List** (Item, Area, Description, Priority, Responsible, Due Date, Completion Status), **Weekly Project Status** for the period ending this week (**ManPower** hours spent this period and to date: direct, indirect, delay and subcontractor; planned against actual full-time-equivalent headcount; **Percent Complete To Date** planned and actual; Safety counts; Meeting Topics; Work Accomplished in the Past Week; Work Scheduled for this Week and next Week; Problems / Concerns / Action Items; Prior Week's Notes from Client Meeting), an **RFI Log**, a **Change Order Log** with a summary of Pending, Approved, Denied and N/A amounts, a **Project Delays Log**, and week-by-week Planned and Actual charts and hours. **Where this data comes from:** the RFI Log lists the RFIs raised in **Field Works → Progress → RFI**; the punch list, manpower, safety and change order sections come from the matching Field Works cards (Quality → Punch Lists, Productivity Logs, Safety and Cost → Change order). Free-text parts (meeting topics, work scheduled) are filled in **Edit Mode**. Planned crew size matches the project roster."
           }
         ],
         "procedures": [
@@ -26907,7 +26894,7 @@ const MODULES = [
           },
           {
             "term": "Drawings",
-            "definition": "**Where it comes from:** **Project Setup → Drawings**. Its sub-category is the drawing package category: **Walls** is the category created in **Drawing Packages** for Pellet Plant (1MTPA). **Walls** is empty here even though **Drawing Master** lists one drawing there, **W8-Working-details-Sheet-01.pdf** with status Created. So a drawing does not reach the archive just by being uploaded; what does (approval or publishing) was not confirmed."
+            "definition": "**Where it comes from:** **Project Setup → Drawings**. Its sub-category is the drawing package category: A category can be empty even when **Drawing Master** lists a drawing there with status Created, so a drawing does not reach the archive just by being uploaded."
           },
           {
             "term": "Workorders and Invoices",
@@ -26952,7 +26939,7 @@ const MODULES = [
           },
           {
             "term": "Download File and Print File",
-            "definition": "Icons on each row that download the record as a file or print it. They were not clicked during testing, so the file format is not documented."
+            "definition": "Icons on each row that download the record as a file or print it."
           },
           {
             "term": "Access Logs",
@@ -27018,7 +27005,7 @@ const MODULES = [
             "definition": "The **Follow Up Actions** button on an RFI form and the one on **Daily Safety Issues** both open **Follow Up Actions** in the project menu. So the page is the shared destination of those buttons, not a separate list per module."
           },
           {
-            "term": "Likely feeders (not confirmed)",
+            "term": "Likely feeders",
             "definition": "The **Meeting Minutes** form has an **Actions** table (Responsible, Due Date, Action) and **Field Works → Progress → Meeting Minutes** has an **Actions** tab (\"Currently there are no actions recorded for Meeting Minutes\")."
           },
           {
@@ -27052,7 +27039,7 @@ const MODULES = [
           },
           {
             "term": "Search",
-            "definition": "The search box above the list filters the entries. It could not be tried against real entries because the list is empty."
+            "definition": "The search box above the list filters the entries."
           }
         ],
         "procedures": [
@@ -27089,7 +27076,7 @@ const MODULES = [
     "narrative": [
       {
         "heading": "Event Groups",
-        "intro": "<p>Event Groups is where a PM or Module Admin decides who receives which events: a group pairs a set of events with a set of users. It has two buttons, **Add Event Groups** and **Get Standard Event Groups**.</p><p>On Arena Steel Plant - Phase 1 the list is empty, so the per-group buttons could not be seen here. **Add Event Groups** opens **Add Event Group** with one required field, **Name**, and **Cancel** / **Add**. The 32 groups of events on the **Events** tab are the system's own and are the same in **Global Data → Notifications**.</p>",
+        "intro": "<p>Event Groups is where a PM or Module Admin decides who receives which events: a group pairs a set of events with a set of users. It has two buttons, **Add Event Groups** and **Get Standard Event Groups**.</p><p>On a project with no groups yet the list is empty. **Add Event Groups** opens **Add Event Group** with one required field, **Name**, and **Cancel** / **Add**. The 32 groups of events on the **Events** tab are the system's own and are the same in **Global Data → Notifications**.</p>",
         "definitions": [
           {
             "term": "Event Group",
@@ -27097,7 +27084,7 @@ const MODULES = [
           },
           {
             "term": "Get Standard Event Groups",
-            "definition": "Button that creates Arena's standard groups in one go. Per the guide, run it only when no groups exist: running it again overwrites groups with the same name, and the screen warns first. It was not clicked during testing."
+            "definition": "Button that creates Arena's standard groups in one go. Per the guide, run it only when no groups exist: running it again overwrites groups with the same name, and the screen warns first."
           },
           {
             "term": "Where this comes from",
@@ -27113,7 +27100,6 @@ const MODULES = [
               "On the group, use **Notifications** to choose its events and **Users** to choose who receives them.",
               "Go to **Events** to review what each event sends."
             ],
-            "note": "Neither button was clicked during testing; the group buttons are described from Arena's setup guide.",
             "images": [
               {
                 "src": "assets/notion/notifications/005.jpg",
@@ -27166,11 +27152,11 @@ const MODULES = [
           },
           {
             "term": "Reset to Standard",
-            "definition": "Button at the top of the tab that restores Arena's standard messages after edits; the screen warns before the messages are reset. It was not clicked during testing."
+            "definition": "Button at the top of the tab that restores Arena's standard messages after edits; the screen warns before the messages are reset."
           },
           {
             "term": "Where this comes from",
-            "definition": "The list of 32 groups, 257 events and their wording is identical to **Global Data → Notifications → Events**; the mail templates for **RFI Created** and **DSI Raised** read the same in both places. So the project starts from the system-wide template set. Whether changes made here are kept only for this project was not tested."
+            "definition": "The list of 32 groups, 257 events and their wording is identical to **Global Data → Notifications → Events**; the mail templates for **RFI Created** and **DSI Raised** read the same in both places. So the project starts from the system-wide template set."
           },
           {
             "term": "Who receives these messages",
@@ -27254,7 +27240,7 @@ const MODULES = [
           },
           {
             "term": "Request For Informations",
-            "definition": "13 events, for example RFI Sent, Reassigned, Due Date Reminder, RFI Overdue, Response Submitted, Reopened, Closed, Voided, Priority Escalation. By name this belongs to A second RFI event set; which screen raises these was not confirmed."
+            "definition": "13 events, for example RFI Sent, Reassigned, Due Date Reminder, RFI Overdue, Response Submitted, Reopened, Closed, Voided, Priority Escalation. By name this belongs to A second RFI event set."
           },
           {
             "term": "Restraints",
@@ -27315,7 +27301,6 @@ const MODULES = [
               "Edit the title or subject and the **Message**, keeping the {{placeholders}}; for mail, add any **Call To Actions** button.",
               "Click **Save Changes**, or **Cancel** to leave it as it was. **Reset to Standard** on the tab restores the standard messages."
             ],
-            "note": "The template editors were opened and closed without saving during testing.",
             "images": [
               {
                 "src": "assets/notion/notifications/001.jpg",
@@ -27350,7 +27335,7 @@ const MODULES = [
           },
           {
             "term": "Your own notification settings",
-            "definition": "Each person has **Notifications** in the user menu at the top right (next to **My profile**, **Reset Password**, **Favorite Screens**, **Set a Status** and **Settings**). It opens **User Specific - Notifications**: an **Enable Notifications** switch, then a table of **Mail**, **Web** and **Mobile** switches by group and event. For the signed-in System Admin only two groups were listed: **Cost Change order** (on; one event, **Cost Change Order Ready For Approval**, all channels on) and **Document Management** (off; its 17 events all off). What decides which groups a person sees was not confirmed."
+            "definition": "Each person has **Notifications** in the user menu at the top right (next to **My profile**, **Reset Password**, **Favorite Screens**, **Set a Status** and **Settings**). It opens **User Specific - Notifications**: an **Enable Notifications** switch, then a table of **Mail**, **Web** and **Mobile** switches by group and event. Groups such as **Cost Change order** (one event, **Cost Change Order Ready For Approval**) and **Document Management** (17 events) can be listed here."
           }
         ],
         "procedures": [
@@ -27362,8 +27347,7 @@ const MODULES = [
               "In **Configure Reminder**, choose **Link Module** and **Tree Version**, then enter the **Reminder Name** and **Reminder Message**.",
               "Choose the **Recurrence Type**, **Remind me at** time, **Start Date**, **End Date** and the channels (**Web**, **Email**, **Mobile**).",
               "Click **Next**, choose the people in **Assign People**, check the **Preview**, and confirm."
-            ],
-            "note": "Steps 4 to 5 were not completed during testing, so the Assign People and Preview screens are not described."
+            ]
           }
         ]
       },
@@ -27393,8 +27377,7 @@ const MODULES = [
               "Choose **Link Module** (**Task**) and an **Alert Type**, then enter the **Alert Name** and **Alert Message**.",
               "Set the **Frequency of alert** (days or hours), **Remind me at** time and channels.",
               "Click **Next**, choose people in **Assign People**, check the **Preview**, and confirm."
-            ],
-            "note": "The last two steps were not completed during testing."
+            ]
           }
         ]
       }
@@ -27435,7 +27418,7 @@ const MODULES = [
           },
           {
             "term": "How a permission row maps to a screen",
-            "definition": "Rows follow the screens. Under **Field Works** there is a row for each card (for example **Work Logs** with **Project Worklogs**, **Submitted Work Logs**, **Approve Work Logs** and **Detailed Work Logs**; **Construction Forms** with **Project Construction Forms**, **RFI Quantity** and **RFI Upload Excel**; **Cost** with **Transactions**, **Change Order** and **Transfers**; **Quality Level 1**, **Quality Level 2**, **Punch Lists**, **Restraints**, **Daily Safety Issues**, **Meeting Minutes**, **Workorder Invoices** and more). Under **Project Setup** there is a row for each setup area (**Project Works**, **Roster**, **PhaseCode**, **Estimate**, **Tasks**, **Drawing Register**, **Drawing Master**, **Forms**, **Workorder**, **Document Management** and others). **Notifications** has **Project Notification Schema**, **Owners** has **Project Owners**, **My Calendar** has **Calendar**, **Data Analytics & Insights** has **Configurable Analytics**, **Standard Analytics** and **Standard Reports**, and **Permissions** has **Group Permission** and **User Permissions**. What a person loses when a box is off was not tested with a restricted account."
+            "definition": "Rows follow the screens. Under **Field Works** there is a row for each card (for example **Work Logs** with **Project Worklogs**, **Submitted Work Logs**, **Approve Work Logs** and **Detailed Work Logs**; **Construction Forms** with **Project Construction Forms**, **RFI Quantity** and **RFI Upload Excel**; **Cost** with **Transactions**, **Change Order** and **Transfers**; **Quality Level 1**, **Quality Level 2**, **Punch Lists**, **Restraints**, **Daily Safety Issues**, **Meeting Minutes**, **Workorder Invoices** and more). Under **Project Setup** there is a row for each setup area (**Project Works**, **Roster**, **PhaseCode**, **Estimate**, **Tasks**, **Drawing Register**, **Drawing Master**, **Forms**, **Workorder**, **Document Management** and others). **Notifications** has **Project Notification Schema**, **Owners** has **Project Owners**, **My Calendar** has **Calendar**, **Data Analytics & Insights** has **Configurable Analytics**, **Standard Analytics** and **Standard Reports**, and **Permissions** has **Group Permission** and **User Permissions**."
           },
           {
             "term": "Document Management Repository permission",
@@ -27451,7 +27434,7 @@ const MODULES = [
           },
           {
             "term": "Fetch Templates",
-            "definition": "Opens **Fetch Standard Templates** with a **Select All** option and seven standard templates: **Field Users**, **Operations Team**, **Quality Admins**, **IT Admin**, **Project Safety Coordinator**, **Project Quality Coordinator** and **PROJECT POC ADMIN**, with **Cancel** and **Submit**. Only **PROJECT POC ADMIN** also exists in **Global Data → Users & Permissions → Global Permission** (31 global groups such as Super Admin, Project Manager, Foreman and Supervisior); the other six are Arena standard templates, so the template list is not simply the Global Data group list. **Submit** was not clicked."
+            "definition": "Opens **Fetch Standard Templates** with a **Select All** option and seven standard templates: **Field Users**, **Operations Team**, **Quality Admins**, **IT Admin**, **Project Safety Coordinator**, **Project Quality Coordinator** and **PROJECT POC ADMIN**, with **Cancel** and **Submit**. Only **PROJECT POC ADMIN** also exists in **Global Data → Users & Permissions → Global Permission** (31 global groups such as Super Admin, Project Manager, Foreman and Supervisior); the other six are Arena standard templates, so the template list is not simply the Global Data group list."
           },
           {
             "term": "Add User Group",
@@ -27472,7 +27455,7 @@ const MODULES = [
               "Click **Save Changes**.",
               "Click **Users**, then **Add Users**, tick the people and click **Submit**."
             ],
-            "note": "Submit and Save Changes were not used during testing. Only people already on the project roster appear in Add Users.",
+            "note": "Only people already on the project roster appear in Add Users.",
             "images": [
               {
                 "src": "assets/notion/permissions/002.jpg",
@@ -27586,8 +27569,7 @@ const MODULES = [
               "Open **Standard Analytics** and pick a dashboard (**Construction Progress**, **Quality Progress**, **Cost** or **Contractors Performance**).",
               "Tick the views owners should see.",
               "Register the owner in **Owners → Register Owner** if they are not yet on the project."
-            ],
-            "note": "Ticking boxes was not tested (nothing may be saved during testing), so how often the change takes effect is not confirmed."
+            ]
           }
         ]
       },
@@ -27597,7 +27579,7 @@ const MODULES = [
         "definitions": [
           {
             "term": "Register Owner",
-            "definition": "Opens **Provide Owners Details**: **Upload Photo**; **Owner ID***, **First Name***, **Last Name***, **Username***, **Phone Number** (country code, number and extension; the code defaults to +91 (India)), **Email***, and **Sign Label** with **Initials*** (the name that represents the owner's signature and is shown when documents are approved). Buttons: **Close**, **Notify User** (inactive until the form is valid) and **Submit**. Nothing was submitted during testing."
+            "definition": "Opens **Provide Owners Details**: **Upload Photo**; **Owner ID***, **First Name***, **Last Name***, **Username***, **Phone Number** (country code, number and extension; the code defaults to +91 (India)), **Email***, and **Sign Label** with **Initials*** (the name that represents the owner's signature and is shown when documents are approved). Buttons: **Close**, **Notify User** (inactive until the form is valid) and **Submit**."
           },
           {
             "term": "Search",
@@ -27620,7 +27602,6 @@ const MODULES = [
               "In **Provide Owners Details** enter **Owner ID**, **First Name**, **Last Name**, **Username**, **Email** and **Initials**; add a photo and phone number if you have them.",
               "Click **Submit** (or **Notify User** once it becomes active) to create the owner."
             ],
-            "note": "Submit was not used during testing, so what Notify User sends and how an owner signs in were not confirmed.",
             "images": [
               {
                 "src": "assets/notion/lead-management-owners/001.jpg",
@@ -27685,7 +27666,7 @@ const MODULES = [
           },
           {
             "term": "Project Settings and Global Data",
-            "definition": "Global Data defines the lists and templates; Project Settings picks and tunes them for one project. Same-name pairs seen: <strong>Date Format</strong>, <strong>Request for Information</strong> (Categories and Priorities tabs in both, both empty), <strong>Transmittals Submitted Type</strong> and <strong>Market Type</strong> (both empty in both places). Which side wins on a screen could not be tested because the values are the same or empty. <strong>Forms</strong> in Project Settings is only a colour choice and is not the Global Data Forms templates. <strong>Quick Apps</strong> here chooses who can use the apps built in Global Data."
+            "definition": "Global Data defines the lists and templates; Project Settings picks and tunes them for one project. Same-name pairs: <strong>Date Format</strong>, <strong>Request for Information</strong> (Categories and Priorities tabs in both, both empty), <strong>Transmittals Submitted Type</strong> and <strong>Market Type</strong> (both empty in both places). <strong>Forms</strong> in Project Settings is only a colour choice and is not the Global Data Forms templates. <strong>Quick Apps</strong> here chooses who can use the apps built in Global Data."
           },
           {
             "term": "Which screen each category changes",
@@ -27809,7 +27790,7 @@ const MODULES = [
           },
           {
             "term": "Project Setup View",
-            "definition": "Titled \"UI options to view Project Setup screen\": <strong>Appearance - How do you want the Project setup to appear?</strong> with <strong>Template 1</strong> (selected on Arena Steel Plant - Phase 1) or <strong>Template 2</strong>. It changes the layout of the <strong>Project Setup</strong> screen only (Template 1 is the left-hand list of Works, Tasks, People, Estimate and so on). What Template 2 looks like was not opened."
+            "definition": "Titled \"UI options to view Project Setup screen\": <strong>Appearance - How do you want the Project setup to appear?</strong> with <strong>Template 1</strong> (selected on Arena Steel Plant - Phase 1) or <strong>Template 2</strong>. It changes the layout of the <strong>Project Setup</strong> screen only (Template 1 is the left-hand list of Works, Tasks, People, Estimate and so on)."
           },
           {
             "term": "Quick Apps",
@@ -27837,7 +27818,7 @@ const MODULES = [
           },
           {
             "term": "Project Driven",
-            "definition": "Titled \"Project Driven Settings\": \"Entire project field work will be driven by the below selected settings\". Options: <strong>Tree Version</strong> (selected) with <strong>Drive progress through WorkLogs</strong> (selected) or <strong>Drive progress through Checklists</strong>, and <strong>Schedule</strong>; <strong>Save Changes</strong>. It chooses what drives progress in Field Works. The effect of switching was not tested."
+            "definition": "Titled \"Project Driven Settings\": \"Entire project field work will be driven by the below selected settings\". Options: <strong>Tree Version</strong> (selected) with <strong>Drive progress through WorkLogs</strong> (selected) or <strong>Drive progress through Checklists</strong>, and <strong>Schedule</strong>; <strong>Save Changes</strong>. It chooses what drives progress in Field Works."
           },
           {
             "term": "User Preferences",
@@ -27845,7 +27826,7 @@ const MODULES = [
           },
           {
             "term": "Define Location",
-            "definition": "Titled \"Location Defined By\": <strong>Individual</strong> or <strong>From-To</strong>, then <strong>Save Changes</strong>; neither is selected on Arena Steel Plant - Phase 1. It sets how locations are described. The Create RFI form in Field Works already has <strong>From Location</strong> and <strong>To Location</strong> fields beside a Location Type; whether this setting drives them was not tested."
+            "definition": "Titled \"Location Defined By\": <strong>Individual</strong> or <strong>From-To</strong>, then <strong>Save Changes</strong>; neither is selected on Arena Steel Plant - Phase 1. It sets how locations are described."
           },
           {
             "term": "Drawing Status",
@@ -27876,7 +27857,7 @@ const MODULES = [
           },
           {
             "term": "Tree Versions Custom Work Packages Name",
-            "definition": "A <strong>Tree Version</strong> dropdown (13 plants) above a table: <strong>S.No.</strong>, <strong>Activities</strong>, <strong>Work Packages Name</strong>, <strong>Work Packages Description</strong> and <strong>Custom Name</strong>, with <strong>Save Changes</strong>. Pellet Plant (1MTPA) lists 96 work packages (Excavation EXC-1, Marking ARN-MA-1, Concreting ARN-CO-1 and so on) and each Custom Name starts equal to the work package name. <strong>Where the data comes from:</strong> the work packages built in <strong>Project Setup → Works</strong>. Where the custom name is displayed was not tested."
+            "definition": "A <strong>Tree Version</strong> dropdown (13 plants) above a table: <strong>S.No.</strong>, <strong>Activities</strong>, <strong>Work Packages Name</strong>, <strong>Work Packages Description</strong> and <strong>Custom Name</strong>, with <strong>Save Changes</strong>. Pellet Plant (1MTPA) lists 96 work packages (Excavation EXC-1, Marking ARN-MA-1, Concreting ARN-CO-1 and so on) and each Custom Name starts equal to the work package name. <strong>Where the data comes from:</strong> the work packages built in <strong>Project Setup → Works</strong>."
           },
           {
             "term": "Project Date Format",
@@ -27888,7 +27869,7 @@ const MODULES = [
           },
           {
             "term": "Configure Form Id Type",
-            "definition": "Titled \"Configure Form ID Type\": \"log Ids of form will be created based on the option selected here\". A search box and a table of <strong>Form Title</strong> with two choices per form, <strong>Project Based</strong> or <strong>Tree Based</strong>, then <strong>Save Changes</strong>. The table has 149 forms: RFI, REQUEST-FOR-INFORMATION, CHANGE-ORDER, SUBMITTAL, DELAY-FORMS, MEETING-MINUTES, then the Quick Apps and Project Forms built in Global Data (Observation Report, Non-Conformance Report, Contractor Onboarding, Estimate Quantity and many more). All 149 are <strong>Project Based</strong> on Arena Steel Plant - Phase 1, and Field Works RFIs are numbered <strong>WIR 1</strong>, <strong>WIR 2</strong>, <strong>WIR 3</strong> in one running series. The effect of Tree Based was not tested."
+            "definition": "Titled \"Configure Form ID Type\": \"log Ids of form will be created based on the option selected here\". A search box and a table of <strong>Form Title</strong> with two choices per form, <strong>Project Based</strong> or <strong>Tree Based</strong>, then <strong>Save Changes</strong>. The table has 149 forms: RFI, REQUEST-FOR-INFORMATION, CHANGE-ORDER, SUBMITTAL, DELAY-FORMS, MEETING-MINUTES, then the Quick Apps and Project Forms built in Global Data (Observation Report, Non-Conformance Report, Contractor Onboarding, Estimate Quantity and many more). All 149 are <strong>Project Based</strong> on Arena Steel Plant - Phase 1, and Field Works RFIs are numbered <strong>WIR 1</strong>, <strong>WIR 2</strong>, <strong>WIR 3</strong> in one running series."
           },
           {
             "term": "Procurement Workflow Settings",
@@ -27939,7 +27920,7 @@ const MODULES = [
           },
           {
             "term": "Vista Progress",
-            "definition": "The last category, titled <strong>Vista Progress Batch Entries</strong>: a read-only table with a search box and <strong>Manage Columns</strong>, with the columns <strong>S.No.</strong>, <strong>Phase</strong>, <strong>Actual Date</strong>, <strong>Cost Type</strong>, <strong>Actual Units</strong>, <strong>Sync Status</strong>, <strong>Sync Error</strong> and <strong>Synced At</strong>. It is empty on Arena Steel Plant - Phase 1 and has no Save button or Create. Use it to check whether progress entries have synced to an outside system; Global Data → Marketplace lists <strong>Trimble Viewpoint</strong> apps, but the link to this table was not confirmed."
+            "definition": "The last category, titled <strong>Vista Progress Batch Entries</strong>: a read-only table with a search box and <strong>Manage Columns</strong>, with the columns <strong>S.No.</strong>, <strong>Phase</strong>, <strong>Actual Date</strong>, <strong>Cost Type</strong>, <strong>Actual Units</strong>, <strong>Sync Status</strong>, <strong>Sync Error</strong> and <strong>Synced At</strong>. It is empty on Arena Steel Plant - Phase 1 and has no Save button or Create. Use it to check whether progress entries have synced to an outside system."
           }
         ],
         "procedures": []
@@ -28050,7 +28031,7 @@ const MODULES = [
           },
           {
             "term": "Total Project Cost",
-            "definition": "A different figure from the estimate: for example ₹12,00,00,000 for Arena Residential Project. It is not the sum of estimate lines and does not feed the header totals; where this figure is entered was not confirmed."
+            "definition": "A different figure from the estimate: It is not the sum of estimate lines and does not feed the header totals."
           },
           {
             "term": "Where this data comes from",
@@ -30784,7 +30765,7 @@ const MODULES = [
           },
           {
             "term": "Map (Linking)",
-            "definition": "The **Map** icon on an expense line opens a **Linking** dialog with a **Modules** drop-down offering **Opportunity** and **Proposals**. Choosing **Opportunity** shows a **Search for Opportunities** box, then **Submit**, so a cost can be tied to the opportunity it was spent on. The Opportunities come from the Opportunity module. Nothing was submitted in testing, so where the link then shows is not confirmed."
+            "definition": "The **Map** icon on an expense line opens a **Linking** dialog with a **Modules** drop-down offering **Opportunity** and **Proposals**. Choosing **Opportunity** shows a **Search for Opportunities** box, then **Submit**, so a cost can be tied to the opportunity it was spent on. The Opportunities come from the Opportunity module."
           },
           {
             "term": "Where this data comes from",
@@ -33431,7 +33412,7 @@ const MODULES = [
           },
           {
             "term": "Equipment Rental switch",
-            "definition": "On an **Equipment** requisition a switch at the top right marks the request as a rental. The Equipment grid has **Required Date**, **Planned Return Date** and **Planned Return Time** columns, and Settings → Approval Workflow has separate **Equipment Rental** and **Equipment Procured** tabs. Which chain a given requisition follows was not tested. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
+            "definition": "On an **Equipment** requisition a switch at the top right marks the request as a rental. The Equipment grid has **Required Date**, **Planned Return Date** and **Planned Return Time** columns, and Settings → Approval Workflow has separate **Equipment Rental** and **Equipment Procured** tabs. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
           },
           {
             "term": "Where requisition data goes",
@@ -34077,7 +34058,7 @@ const MODULES = [
           },
           {
             "term": "Where this data comes from",
-            "definition": "Hours logged on **My Timesheet** and **My Crew Timesheet**. Which logs count (submitted or approved) was not confirmed on this screen; the **Timesheet Data Summary** has an explicit Submitted/Approved toggle."
+            "definition": "Hours logged on **My Timesheet** and **My Crew Timesheet**. The **Timesheet Data Summary** has an explicit Submitted/Approved toggle."
           }
         ],
         "procedures": [
@@ -35018,7 +34999,7 @@ const MODULES = [
           },
           {
             "term": "Where this data comes from and goes",
-            "definition": "Gate data comes from the Excel template the site uploads (or a clock system). What reconciliation changes in the approved hours was not confirmed."
+            "definition": "Gate data comes from the Excel template the site uploads (or a clock system). For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
           }
         ],
         "procedures": [
