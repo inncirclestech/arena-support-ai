@@ -3617,7 +3617,7 @@ const QA_CALENDAR = [
     action: "configure",
     object: "microsoft calendar integration",
     scope: "global",
-    section: "Outlook Integration",
+    section: "Connect Outlook so events sync",
     question: "How do I connect Arena to Outlook Calendar as an admin?",
     answer: "Go to Global Data → Marketplace, click \"Sign in with Microsoft\" to grant Outlook consent. After signing in with Microsoft credentials, on the Permissions Requested page check the box to consent on behalf of the organization — this lets all users access the integration without individually consenting.",
     tags: ["microsoft calendar integration","connect outlook","admin consent","marketplace","sign in with microsoft"]
@@ -3626,7 +3626,7 @@ const QA_CALENDAR = [
     action: "configure",
     object: "calendar consent",
     scope: "module",
-    section: "Outlook Integration",
+    section: "Connect Outlook so events sync",
     question: "How do I revoke or change the Microsoft account connected to Arena Calendar?",
     answer: "In Global Data → Marketplace (Microsoft integration), click \"Revoke Consent\", then sign in again with a different Microsoft account to grant new consent.",
     tags: ["revoke consent","change microsoft account","disconnect calendar","reconnect outlook"]
@@ -3635,43 +3635,43 @@ const QA_CALENDAR = [
     action: "configure",
     object: "user calendar consent",
     scope: "module",
-    section: "Outlook Integration",
+    section: "Connect Outlook so events sync",
     question: "How do I personally connect my Outlook calendar to Arena?",
-    answer: "Go to My Profile → Settings → Calendar Consent, then click \"Sign in with Microsoft\" and add your Microsoft account.",
+    answer: "Click your avatar (top-right) → **Settings** → **Microsoft Calendar** → **Sign In with Microsoft**. Use the same email as your Arena login.",
     tags: ["user calendar consent","my profile settings","personal outlook connect","calendar consent"]
   },
   {
     action: "create",
     object: "calendar event",
     scope: "module",
-    section: "Events",
+    section: "View, create and filter events",
     question: "How do I create an event in Arena Calendar?",
-    answer: "In Arena Calendar, click \"Create Event\" and choose a Category (multi-select, Group, or Primary Calendar). Only categories selected in \"Configure Categories\" are available in the Category options.",
+    answer: "Open **Home → Calendar**, click **Create Event**, fill **Title**, **Date**, **Time**, **Location**, pick a **Categorize** entry, add a description and click **Submit**. If **Consent Not Granted** appears, connect via avatar → **Settings** → **Microsoft Calendar** first. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["create event","calendar event","add event","configure categories"]
   },
   {
     action: "edit",
     object: "calendar event",
     scope: "module",
-    section: "Events",
+    section: "View, create and filter events",
     question: "How do I edit or delete a calendar event?",
-    answer: "Open the event in Arena Calendar; events can be edited or deleted directly from there.",
+    answer: "Click the event in the month grid; its details open in the right-hand pane. Editing and deleting were not verified on the test site (no events). For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["edit event","delete event","calendar event","remove event"]
   },
   {
     action: "link",
     object: "calendar event",
     scope: "module",
-    section: "Events",
+    section: "View, create and filter events",
     question: "Can I link a calendar event to a specific module?",
-    answer: "Yes. Events created in Arena Calendar can be mapped to Modules, and once mapped, events can be further selected/filtered based on the module.",
+    answer: "The Create Event form on the Home Calendar has no module picker. Events made from a module screen, such as **Proposal Management → Calendar** or **Opportunity → Events**, belong to that module. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["link event to module","map event","module event filter","event mapping"]
   },
   {
     action: "view",
     object: "synced outlook event",
     scope: "module",
-    section: "Sync & Groups",
+    section: "What shows on the calendar",
     question: "Do Outlook calendar events show up in Arena?",
     answer: "Yes. Events created in your Outlook calendar are also synced to the Arena calendar automatically.",
     tags: ["outlook sync","synced events","calendar sync","outlook events in arena"]
@@ -3680,7 +3680,7 @@ const QA_CALENDAR = [
     action: "import",
     object: "outlook group",
     scope: "module",
-    section: "Sync & Groups",
+    section: "What shows on the calendar",
     question: "How are imported Outlook groups shown in the Calendar?",
     answer: "Groups imported and mapped via Arena Communications → Import Groups are also displayed in Arena Calendar.",
     tags: ["import groups calendar","outlook groups calendar","group mapping","communications import"]
@@ -3689,10 +3689,100 @@ const QA_CALENDAR = [
     action: "configure",
     object: "calendar management permission",
     scope: "global",
-    section: "Permissions",
+    section: "Who can use the admin Outlook connection",
     question: "What permission is needed for a user to access Admin Calendar Consent?",
     answer: "If a user hasn't granted consent individually, they can still use the admin consent granted in Global Data → Marketplace, but only if Admin Permission is enabled at Global Data → Users & Permissions → User Group → Permissions → General → Calendar Management.",
     tags: ["calendar management permission","admin permission","user group permissions","calendar access control"]
+  },
+  {
+    action: "explain",
+    object: "calendar",
+    scope: "module",
+    section: "View, create and filter events",
+    question: "What is on the Global Calendar screen?",
+    answer: "**Create Event**, **Fetch Events** and **Filters** at the top; a mini month picker, the day's **Events** list and **My Calendars** on the left; the month grid in the middle; and an event detail pane on the right.",
+    tags: ["global calendar","calendar screen","calendar buttons"]
+  },
+  {
+    action: "explain",
+    object: "calendar",
+    scope: "module",
+    section: "View, create and filter events",
+    question: "What fields are in the Create Event form on the Calendar?",
+    answer: "**Title**, **Date*** , **Time***, **Location**, **Categorize**, **Event Description** and a calendar drop-down (**My Calendar** by default), then **Submit**.",
+    tags: ["create event fields","event form","calendar event fields","what fields are in the create event form on the calendar","create event form fields","calendar create event fields"]
+  },
+  {
+    action: "explain",
+    object: "calendar",
+    scope: "module",
+    section: "View, create and filter events",
+    question: "Where does the Categorize list in Create Event come from?",
+    answer: "It lists **My Calendar** plus group names set up for your company (**Testing Team** and **Opportunity Team** on the test site). Groups imported through Communications are documented as appearing here. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["categorize","category list","where categories come from","calendar groups","where does the categorize list come from","categorize list calendar"]
+  },
+  {
+    action: "explain",
+    object: "calendar",
+    scope: "module",
+    section: "View, create and filter events",
+    question: "What does the Filters button on the Calendar do?",
+    answer: "It opens **Filter Categories**: pick categories (or **Select All**) and click **Submit**; **Clear & Apply** resets it.",
+    tags: ["calendar filters","filter categories"]
+  },
+  {
+    action: "explain",
+    object: "calendar",
+    scope: "module",
+    section: "View, create and filter events",
+    question: "What does Fetch Events do?",
+    answer: "It is the sync button next to **Create Event** and pulls events from your connected Outlook calendar. It needs calendar consent. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["fetch events","sync calendar","refresh events","what does fetch events do","fetch events button"]
+  },
+  {
+    action: "explain",
+    object: "calendar",
+    scope: "module",
+    section: "View, create and filter events",
+    question: "Why does Create Event or Filters say Consent Not Granted?",
+    answer: "You have not connected a Microsoft calendar. Click **Ok**, then avatar → **Settings** → **Microsoft Calendar** → **Sign In with Microsoft**, or ask an admin to grant organisation consent in **Global Data → Marketplace → Microsoft Calendar**.",
+    tags: ["calendar consent not granted","consent not granted calendar","why does create event say consent not granted","create event consent not granted","calendar create event consent"]
+  },
+  {
+    action: "explain",
+    object: "calendar",
+    scope: "module",
+    section: "What shows on the calendar",
+    question: "Which modules put events on the Calendar?",
+    answer: "Events are created from **Proposal Management → Calendar**, the **Opportunity → Events** sub-tab and Tender bids, as well as directly on the Home **Calendar**. Whether module events also appear on the Home calendar was not verified. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["modules events calendar","what feeds calendar","opportunity proposal events","which modules put events on the calendar","modules feed calendar events"]
+  },
+  {
+    action: "explain",
+    object: "calendar",
+    scope: "module",
+    section: "What shows on the calendar",
+    question: "Why is my event or Outlook meeting missing from the Calendar?",
+    answer: "Check that calendar consent is given (**Settings → Microsoft Calendar**), that the consent email matches your Arena login, and use **Fetch Events**. Check **Filters** are not hiding the category. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["missing event","outlook event not showing","calendar empty"]
+  },
+  {
+    action: "explain",
+    object: "calendar",
+    scope: "module",
+    section: "What shows on the calendar",
+    question: "How is the Home Calendar different from My Calendar in a project?",
+    answer: "The Home **Calendar** is the company-wide calendar with Outlook sync and events. **My Calendar** in a project shows scheduled safety forms and project forms for that project (see the My Calendar module).",
+    tags: ["calendar vs my calendar","difference global calendar project calendar"]
+  },
+  {
+    action: "explain",
+    object: "calendar",
+    scope: "module",
+    section: "Who sets this up",
+    question: "Where do Calendar events and consent come from?",
+    answer: "Events come from your connected Outlook calendar and from events created in Arena. Consent comes from **Global Data → Marketplace → Microsoft Calendar** (organisation) or avatar → **Settings → Microsoft Calendar** (personal). For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["calendar data source","where events come from","marketplace microsoft calendar"]
   }
 ];
 
@@ -3803,7 +3893,7 @@ const QA_COMMUNICATION = [
     section: "Map mail to Arena records",
     question: "What can I map an email to in Communications?",
     answer: "Click **Map your Email** and choose **Opportunities** (customer group, customer, point of contact, opportunity), **Tender Management** (a bid) or **Proposal** (proposal type and proposal).",
-    tags: ["map email options","map to opportunity","map to proposal","map to bid"]
+    tags: ["map email options","map to opportunity","map to proposal","map to bid","map an email to a proposal","how do I map an email to a proposal","map email to proposal","communications map email"]
   },
   {
     action: "explain",
@@ -22624,48 +22714,27 @@ const MODULES = [
     "qaItems": QA_CALENDAR,
     "narrative": [
       {
-        "heading": "Admin Role",
-        "intro": "<p>Before end users see any events in Arena Calendar, an admin most likely needs to establish the Microsoft connection that the whole module depends on. The most efficient path is granting organization-wide admin consent in Global Data → Marketplace, checking the box to consent on behalf of the organization, so that every user gets the integration without individually signing in — the alternative is leaving each person to connect their own account from My Profile → Settings, which works but doesn't scale across a team.</p><p>Beyond the initial connection, an admin likely also needs to decide who can rely on that organization-wide consent versus who needs their own. This is governed by a Calendar Management permission inside a user group's configuration (Global Data → Users & Permissions), and it's worth setting up deliberately: users without personal Outlook consent can only use Arena Calendar if their group has this permission enabled. If users report they can't access calendar features despite admin consent being granted, checking this permission is the likely fix, rather than re-checking the Microsoft integration itself.</p><p>Finally, an admin should expect to pre-configure the Category list before end users start creating events, since only categories enabled through Configure Categories appear as choices — leaving this unconfigured would either block event creation or leave users with an empty or unhelpful category picker.</p>",
+        "heading": "Who sets this up",
+        "intro": "<p>Admin Role is for the Super Admin or admin who connects Microsoft Outlook for the whole company and decides which user groups may rely on it. Everyone else only creates and views events.</p><p>Do it in <strong>Global Data → Marketplace → Microsoft Calendar</strong> (organisation-wide), and give user groups the <strong>Calendar Management</strong> permission. Individuals can also connect themselves from the avatar menu → <strong>Settings</strong>.</p>",
         "definitions": [
           {
             "term": "Admin Consent",
-            "definition": "A one-time authorization granted by an administrator in Global Data → Marketplace that connects Arena to the organization's Microsoft account and, when the organization-wide consent box is checked, extends that connection to every user without requiring them to sign in individually."
+            "definition": "Consent given once by an admin in **Global Data → Marketplace → Microsoft Calendar**. The page says the consent is given on behalf of the organisation for all users. On the test site its status chip showed **PENDING**."
           },
           {
             "term": "Calendar Management Permission",
-            "definition": "A permission found at Global Data → Users & Permissions → User Group → Permissions → General → Calendar Management. When enabled for a user's group, it lets that user rely on the organization's admin-wide Outlook consent (granted in Global Data → Marketplace) even if they have not personally granted their own calendar consent."
+            "definition": "A permission in a user group at Global Data → Users & Permissions → User Group → Permissions → General → **Calendar Management**. It lets users in the group rely on the admin consent instead of connecting themselves (as documented by the product owner; not re-checked in this pass)."
           },
           {
-            "term": "Configure Categories",
-            "definition": "The setup step that controls which category options appear when a user creates a calendar event, keeping the category list limited to organization-approved choices."
+            "term": "Where this data comes from",
+            "definition": "Calendar events come from the connected Microsoft Outlook calendar and from events created in Arena. The consent setting is in **Global Data → Marketplace** (organisation) or avatar → **Settings** (personal). The **Categorize** list is covered under **View, create and filter events**."
           }
         ],
-        "procedures": [
-          {
-            "title": "Connect Arena to Outlook Calendar as an admin",
-            "steps": [
-              "Go to <strong>Global Data → Marketplace</strong>.",
-              "Click <strong>Sign in with Microsoft</strong> to begin granting Outlook consent.",
-              "Sign in with your Microsoft credentials.",
-              "On the <strong>Permissions Requested</strong> page, check the box to consent on behalf of the organization.",
-              "Confirm — this step is what allows every user in the organization to access the integration without individually consenting."
-            ],
-            "note": "Skipping the organization-wide consent checkbox means only the signed-in admin's account is connected; every other user would need to grant their own personal consent instead."
-          },
-          {
-            "title": "Grant a user access to admin calendar consent",
-            "steps": [
-              "Go to <strong>Global Data → Users & Permissions → User Group</strong>.",
-              "Open the relevant user group and go to <strong>Permissions → General</strong>.",
-              "Enable <strong>Calendar Management</strong>.",
-              "Save the change — users in this group can now use the admin-wide Marketplace consent even without granting personal consent."
-            ]
-          }
-        ]
+        "procedures": []
       },
       {
-        "heading": "Outlook Integration",
-        "intro": "<p>Arena Calendar is not a standalone scheduling tool that lives only inside Arena — it is designed to mirror the calendar your team already keeps in Microsoft Outlook. Before any events can appear, someone has to establish a trust relationship between Arena and your organization's Microsoft 365 tenant (or an individual user's Microsoft account). This section covers that setup work: granting consent, connecting accounts, and knowing which level of connection you need.</p><p>There are two distinct ways to establish this connection, and understanding the difference matters. An <strong>admin-wide connection</strong>, granted once in Global Data → Marketplace, lets every user in the organization use the integration without each person having to sign in separately. A <strong>personal connection</strong>, granted from My Profile → Settings, links a single user's own Outlook mailbox and calendar and does not depend on admin action. Most organizations set up the admin-wide connection first so the feature is available company-wide, and only fall back to personal consent for edge cases (for example, a user on a different Microsoft tenant).</p><p>Because Arena Calendar depends entirely on this Microsoft connection, any calendar sync issue almost always traces back to consent: either it was never granted, it was granted to the wrong account, or it was revoked. Knowing where to look — Global Data → Marketplace for the org-wide state, My Profile → Settings → Calendar Consent for an individual's state — is the first troubleshooting step before assuming a bug in Arena itself.</p>",
+        "heading": "Connect Outlook so events sync",
+        "intro": "<p>This section is for anyone connecting Outlook so that Arena Calendar can sync with it. Until consent is given, <strong>Create Event</strong> and <strong>Filters</strong> show <strong>Consent Not Granted! Please provide consent</strong>.</p><p>Use the admin route (<strong>Global Data → Marketplace → Microsoft Calendar → Sign In with Microsoft</strong>) for everyone, or the personal route (avatar menu → <strong>Settings</strong> → <strong>Microsoft Calendar</strong>). The personal page warns that the consent Mail ID must match the logged-in user's Mail ID.</p>",
         "definitions": [
           {
             "term": "Admin Consent",
@@ -22673,11 +22742,11 @@ const MODULES = [
           },
           {
             "term": "Calendar Consent",
-            "definition": "The personal, per-user equivalent of admin consent, granted from My Profile → Settings → Calendar Consent, that links an individual user's own Microsoft account to Arena Calendar."
+            "definition": "The personal route: avatar menu (top-right) → **Settings**, a dialog listing **OneDrive Integration**, **Microsoft Outlook Integration**, **Microsoft Calendar** and **SharePoint Integration**. **Microsoft Calendar** shows **Connect Your Microsoft Account for Calendar**, **Sign In with Microsoft** and the note \"Please make sure consent Mail ID matches with the Logged in User Mail ID\"."
           },
           {
             "term": "Marketplace",
-            "definition": "The Global Data screen where organization-wide third-party integrations, including the Microsoft Calendar Integration, are connected, reconnected, or revoked."
+            "definition": "The Global Data screen of integration tiles: **Microsoft OneDrive**, **Microsoft Sharepoint**, **Microsoft Outlook**, **Microsoft Users**, **Microsoft Calendar**, **Adobe Sign**, **Trimble Viewpoint**, **Google Maps**, **Inn Clock Consent**, **Zoom Info** and **Telematics**. Calendar uses the **Microsoft Calendar** tile; mail uses **Microsoft Outlook**."
           }
         ],
         "procedures": [
@@ -22737,11 +22806,11 @@ const MODULES = [
           {
             "title": "Connect your personal Outlook calendar",
             "steps": [
-              "Go to <strong>My Profile → Settings → Calendar Consent</strong>.",
-              "Click <strong>Sign in with Microsoft</strong>.",
-              "Add your Microsoft account credentials to complete the connection."
+              "Click your avatar (top-right) and choose **Settings**.",
+              "Click **Microsoft Calendar** in the left list.",
+              "Click **Sign In with Microsoft** and sign in with the same email you use in Arena."
             ],
-            "note": "Use this path if your organization hasn't set up admin-wide consent, or if you need to connect a Microsoft account different from the one used for admin consent.",
+            "note": "Use this if your organisation has not given admin consent. The Mail ID must match your Arena login.",
             "images": [
               {
                 "src": "assets/notion/microsoft-calendar-integration/007.jpg",
@@ -22758,8 +22827,8 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Permissions",
-        "intro": "<p>Access to Arena Calendar's admin-level features is controlled the same way most administrative capabilities in Arena are: through a specific permission toggle inside a user group's configuration, rather than a blanket \"is this person an admin\" flag. This matters most in the scenario where a user has not personally connected their own Outlook account — in that case, whether they can still rely on the organization-wide admin consent depends entirely on this one permission.</p><p>Understanding this permission is important for admins rolling out the Calendar module broadly: if users report that they can't access calendar features despite the organization having granted admin consent in Marketplace, the fix is very likely to check their user group's Calendar Management permission rather than to re-check the Microsoft integration itself.</p>",
+        "heading": "Who can use the admin Outlook connection",
+        "intro": "<p>This section is for admins who find a user cannot use the calendar even though the company connected Outlook. The usual fix is the user group's Calendar Management permission rather than the Microsoft connection.</p>",
         "definitions": [
           {
             "term": "Calendar Management Permission",
@@ -22786,31 +22855,44 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Events",
-        "intro": "<p>Once the Outlook connection is live, the Events area of Arena Calendar is where the day-to-day scheduling work happens: creating meetings, deadlines, and reminders, and — uniquely to Arena — tying those events directly to the module they relate to. This is what distinguishes Arena Calendar from a plain Outlook view: an event isn't just a block of time, it can be a first-class reference point for a specific opportunity, proposal, project task, or any other record in the system.</p><p>Events support flexible visibility through Categories. When you create an event, you choose whether it applies to yourself (a personal or primary calendar event), a specific group, or multiple selections at once. This categorization is configured ahead of time so that only relevant, pre-approved categories show up as choices when someone creates an event, keeping the list manageable rather than a free-for-all of ad hoc labels.</p><p>The ability to map an event to a module also has downstream value: once mapped, users can filter or search their calendar by module, making it possible to answer questions like \"what meetings are scheduled this week related to Opportunity X\" directly from the calendar rather than hunting through separate module screens.</p>",
+        "heading": "View, create and filter events",
+        "intro": "<p>This is the Global Calendar screen where everyone views and creates events. Top-left: <strong>Create Event</strong> and <strong>Fetch Events</strong>; top-right: <strong>Filters</strong>.</p><p>The left side has a mini month picker, the <strong>Events</strong> list for the selected day and a <strong>My Calendars</strong> list; the middle is the month grid; the right pane says <strong>Please Select Event</strong> until you click an event.</p>",
         "definitions": [
           {
-            "term": "Category",
-            "definition": "The classification chosen when creating an event — multi-select, Group, or Primary Calendar — that determines who the event applies to. Only categories enabled in Configure Categories are available as options."
+            "term": "Global Calendar screen",
+            "definition": "Home → **Calendar**. Buttons: **Create Event**, **Fetch Events** (sync icon), **Filters**. Left: mini month picker, selected date, **Events (count)** for the day (shows **No Events** when empty) and **My Calendars** (one entry **Calendar** on the test site). Middle: month grid Sunday to Saturday with previous/next month arrows. Right: event detail pane."
           },
           {
-            "term": "Configure Categories",
-            "definition": "The setup step that controls which category options appear when a user creates a calendar event, keeping the category list limited to organization-approved choices."
+            "term": "Create Event fields",
+            "definition": "**Title**, **Date*** (dd-mm-yyyy, date picker), **Time*** (HH : MM and AM/PM), **Location**, **Categorize** (searchable drop-down), **Event Description** (text box with bold, italic, underline, strike, link, headings, lists and alignment), a calendar drop-down at the bottom (**My Calendar** by default) and **Submit**."
           },
           {
-            "term": "Module Mapping (Calendar)",
-            "definition": "The association of a calendar event with a specific Arena module (such as an opportunity or project), which then allows that event to be filtered or surfaced from within the context of that module."
+            "term": "Categorize",
+            "definition": "A searchable list of where the event goes. On the test site it showed **My Calendar** (ticked by default), **Testing Team** and **Opportunity Team**. **Where this comes from:** your own calendar plus the group names set up for your company; groups imported through **Communications → Import Group** are documented as appearing here (not verified)."
+          },
+          {
+            "term": "Filters",
+            "definition": "Opens **Filter Categories** with a **Select Categories** drop-down, **Select All**, **Clear & Apply** and **Submit**. The category list was empty for the admin user without calendar consent."
+          },
+          {
+            "term": "Fetch Events",
+            "definition": "The sync button next to Create Event. It pulls events from the connected Outlook calendar. Not clicked in this pass, so the result was not verified."
+          },
+          {
+            "term": "Consent Not Granted warning",
+            "definition": "Create Event and Filters first show \"Consent Not Granted! Please provide consent. Note: Give consent in My Profile → Settings → Calendar consent.\" Click **Ok**, then connect through avatar → **Settings** → **Microsoft Calendar**."
           }
         ],
         "procedures": [
           {
             "title": "Create a calendar event",
             "steps": [
-              "In Arena Calendar, click <strong>Create Event</strong>.",
-              "Choose a <strong>Category</strong> — multi-select, Group, or Primary Calendar.",
-              "Fill in the remaining event details and save."
+              "Open **Home → Calendar** and click **Create Event** (if **Consent Not Granted** appears, click **Ok** and connect your calendar first).",
+              "Enter the **Title**, **Date**, **Time** and **Location**.",
+              "Pick a **Categorize** entry (for example **My Calendar**).",
+              "Write the **Event Description**, check the calendar drop-down at the bottom and click **Submit**."
             ],
-            "note": "Only categories that have been enabled in Configure Categories will appear as selectable options here.",
+            "note": "The Create Event form on this screen has no module picker. Events created from a module screen (Proposal Management → Calendar, Opportunity → Events) use the same form.",
             "images": [
               {
                 "src": "assets/notion/arena-calendar/006.jpg",
@@ -22834,19 +22916,20 @@ const MODULES = [
             ]
           },
           {
-            "title": "Link an event to a module",
+            "title": "Filter events by category",
             "steps": [
-              "While creating or editing an event, map it to the relevant Arena <strong>Module</strong>.",
-              "Save the event.",
-              "Afterward, use module-based filtering in the calendar to view only events tied to that module."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/arena-calendar/008.jpg",
-                "caption": "Mapping an event to a module, then filtering events by module",
-                "step": 1
-              }
+              "Click **Filters** (top-right).",
+              "In **Filter Categories**, open **Select Categories** and tick the ones you want, or **Select All**.",
+              "Click **Submit**; use **Clear & Apply** to reset."
             ]
+          },
+          {
+            "title": "Fetch events from Outlook",
+            "steps": [
+              "Click **Fetch Events** next to Create Event.",
+              "Wait for the month grid to refresh, then pick a date to see its events."
+            ],
+            "note": "Not verified on the test site (no calendar consent for the admin user)."
           }
         ],
         "images": [
@@ -22857,16 +22940,24 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Sync & Groups",
-        "intro": "<p>Arena Calendar is a two-way mirror of Outlook, not a one-directional import. Events you create natively in your Outlook calendar automatically flow into Arena — you don't need to manually re-create your existing meetings once the connection is established. This automatic sync is what makes Arena Calendar useful day-to-day rather than becoming a second calendar you have to maintain separately from the one your team already lives in.</p><p>Beyond individual events, Arena also understands Outlook Groups — the distribution-list-style groups many organizations use for teams, departments, or project cohorts. These aren't imported through the Calendar module itself, but through Arena Communications' Import Groups feature, where each Outlook group gets mapped to an Arena module. Once that mapping exists, those groups also become visible inside Arena Calendar, tying the group's context (and by extension, its members' shared scheduling) back to the relevant part of the product.</p><p>This cross-module behavior is a good example of how Arena's Outlook integrations are built as a shared layer: the Microsoft connection is established once, and both Calendar and Communications draw on it, with Communications acting as the entry point for group-level mapping that Calendar then reflects.</p>",
+        "heading": "What shows on the calendar",
+        "intro": "<p>This section explains what appears on the calendar and where it comes from. It is for users who ask why an event is missing and for admins checking sync.</p><p>Events come from your connected Outlook calendar and from events created in Arena, including those made on module screens such as <strong>Proposal Management → Calendar</strong> and <strong>Opportunity → Events</strong>. A project's scheduled safety forms and project forms appear on that project's <strong>My Calendar</strong> instead.</p>",
         "definitions": [
           {
             "term": "Outlook Sync",
-            "definition": "The automatic, ongoing synchronization that brings events created directly in a connected Outlook calendar into Arena Calendar without manual re-entry."
+            "definition": "Events in a connected Outlook calendar are brought into Arena Calendar (the **Fetch Events** button and automatic sync). Requires Microsoft Calendar consent."
           },
           {
             "term": "Imported Outlook Group",
-            "definition": "An Outlook distribution or team group that has been imported and mapped to an Arena module via Communications → Import Groups, after which it also appears within Arena Calendar."
+            "definition": "Groups imported with **Communications → Import Group** and mapped to a module; documented as also appearing in Arena Calendar. Not verified (no consent on the test site)."
+          },
+          {
+            "term": "Module screens that create events",
+            "definition": "**Proposal Management → Calendar** (**Create Event**, **Filters**; same form), **Opportunity → Events** sub-tab (**Create Event**) and Tender bids. Each shows **Consent Not Granted** until calendar consent is given. Whether those events also show on the Home Global Calendar was not verified."
+          },
+          {
+            "term": "Project My Calendar",
+            "definition": "A different screen in the project menu for scheduled safety forms and project forms. See the **My Calendar** module."
           }
         ],
         "procedures": [],
@@ -22883,17 +22974,17 @@ const MODULES = [
     "icon": "calendar_month",
     "tagline": "Sync an Outlook calendar into Arena and map events to modules.",
     "color": "#b8860b",
-    "overview": "<p>Arena Calendar (Home → Calendar) syncs a user's Outlook calendar into Arena, letting events be created, mapped to specific modules, and viewed alongside imported Outlook groups; Microsoft Calendar Integration covers the admin/marketplace side of connecting Outlook to Arena.</p>",
+    "overview": "<p>Calendar (Home → <strong>Calendar</strong> tile, page title <strong>Global Calendar</strong>) is the company-wide calendar. It shows a month grid with the day's events, a <strong>My Calendars</strong> list, <strong>Create Event</strong>, <strong>Fetch Events</strong> and <strong>Filters</strong>, and works with the user's Microsoft Outlook calendar once Outlook consent is given. For a project's own scheduled forms see <strong>My Calendar</strong> in the project menu.</p>",
     "navigation": [
-      "From <strong>Home</strong>, click the <strong>Calendar</strong> tile.",
-      "Connect your account under <strong>My Profile → Settings → Calendar Consent</strong>, or use the admin-wide connection at <strong>Global Data → Marketplace</strong>."
+      "From <strong>Home</strong>, click the <strong>Calendar</strong> tile (opens <strong>Global Calendar</strong>).",
+      "If <strong>Create Event</strong> or <strong>Filters</strong> shows <strong>Consent Not Granted</strong>, connect your calendar: avatar (top-right) → <strong>Settings</strong> → <strong>Microsoft Calendar</strong> → <strong>Sign In with Microsoft</strong>, or ask an admin to grant organisation consent in <strong>Global Data → Marketplace → Microsoft Calendar</strong>."
     ],
     "sections": [
-      "Admin Role",
-      "Outlook Integration",
-      "Permissions",
-      "Events",
-      "Sync & Groups"
+      "Who sets this up",
+      "Connect Outlook so events sync",
+      "Who can use the admin Outlook connection",
+      "View, create and filter events",
+      "What shows on the calendar"
     ]
   },
   {
