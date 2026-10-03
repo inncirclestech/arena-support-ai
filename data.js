@@ -14031,6 +14031,189 @@ const QA_INVENTORYMANAGEMENT = [
     question: "Which setting changes the fields, IDs and UOM behavior in Inventory Management?",
     answer: "**Settings → External Orders / Tickets** decide the form fields; **ID Settings** builds the order and ticket numbers (locked once a ticket exists); **Users and Permissions** decides who can open each screen; **General** switches External Tickets and UOM Conversions Required on, and holds Print Settings. The equivalent screens are Site Material Requests, Material Issue Tickets, Return Tickets and Approval WorkFlow. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["inventory settings feeds","which setting controls inventory","setting changes form fields"]
+  },
+  {
+    "action": "create",
+    "object": "site material request",
+    "scope": "module",
+    "section": "Earlier Version: Site Material Requests, Issue Tickets and Return Tickets",
+    "question": "How do I raise a site material request?",
+    "answer": "From **Home**, open **Inventory Management → Site Material Request** and click **Add**. Choose the **Project**, **Required Date** and **Requested By**, add materials with **Quantity**, **UOM** and **Remarks**, then click **Submit for Approval**.",
+    "tags": [
+      "site material request",
+      "raise site material request",
+      "pickup ticket",
+      "request materials for site",
+      "smr",
+      "submit for approval materials",
+      "material request form"
+    ]
+  },
+  {
+    "action": "view",
+    "object": "site material request list",
+    "scope": "module",
+    "section": "Earlier Version: Site Material Requests, Issue Tickets and Return Tickets",
+    "question": "Where do I see all site material requests?",
+    "answer": "Open **Inventory Management → Site Material Request**. Cards show the status, **Raised on**, **Raised by**, number, **Materials** and **Required Date**. Use **Filters**, **Manage Columns** or **Export**. Rejected requests are on the **Rejected Pickup Tickets** sub-tab.",
+    "tags": [
+      "site material request list",
+      "rejected pickup tickets",
+      "rejected requests",
+      "pickup ticket list",
+      "smr list"
+    ]
+  },
+  {
+    "action": "approve",
+    "object": "site material request approval",
+    "scope": "module",
+    "section": "Earlier Version: Site Material Requests, Issue Tickets and Return Tickets",
+    "question": "How is a site material request approved?",
+    "answer": "Open a raised request from **Inventory Management → Site Material Request**. The **Approvals** panel shows each approval level, and an approver can approve with a comment. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    "tags": [
+      "approve site material request",
+      "approvals panel",
+      "material request approval",
+      "smr approval levels"
+    ]
+  },
+  {
+    "action": "create",
+    "object": "material issue ticket",
+    "scope": "module",
+    "section": "Earlier Version: Site Material Requests, Issue Tickets and Return Tickets",
+    "question": "How do I create a material issue ticket?",
+    "answer": "Open **Inventory Management → Material Issue Ticket** and click **Add**. Choose the **Site Material Request** and **Ship Material From**, enter **Ship Now** quantities, the shipping agent name and contact, then sign as **Shipped By** and set the **Date**.",
+    "tags": [
+      "material issue ticket",
+      "issue materials",
+      "ship ticket",
+      "internal material issue ticket",
+      "ship now",
+      "issue ticket form"
+    ]
+  },
+  {
+    "action": "create",
+    "object": "return ticket",
+    "scope": "module",
+    "section": "Earlier Version: Site Material Requests, Issue Tickets and Return Tickets",
+    "question": "How do I return materials with a return ticket?",
+    "answer": "Open **Inventory Management → Return Ticket** and click **Add**. Choose the **Site Material Request** and **Return Material To**, fill **Reason for returning materials** and **Material Condition**, enter **Return Now** quantities, then sign and set the **Date**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    "tags": [
+      "return ticket",
+      "return materials",
+      "return material to",
+      "material condition",
+      "return now",
+      "send materials back"
+    ]
+  },
+  {
+    "action": "configure",
+    "object": "site material request settings",
+    "scope": "module",
+    "section": "Earlier Version: Site Material Requests, Issue Tickets and Return Tickets",
+    "question": "How do I change the fields on a site material request?",
+    "answer": "Open **Inventory Management → Settings → Pickup**. **Standard Fields** are **Id**, **Status**, **Project Name**, **Requested by**, **Required date** and **Materials**. Click **Add field** for a custom field (**Required**, **Show on card**, **Unique**), choose **Ship To Text Box** or **Ship To Location**, then click **Save Changes**.",
+    "tags": [
+      "pickup settings",
+      "pickup settings in inventory",
+      "site material request fields",
+      "site material request settings",
+      "add custom field site material request",
+      "ship to location",
+      "ship to text box",
+      "connected services"
+    ]
+  },
+  {
+    "action": "configure",
+    "object": "ship and return settings",
+    "scope": "module",
+    "section": "Earlier Version: Site Material Requests, Issue Tickets and Return Tickets",
+    "question": "Where do I set up fields for Material Issue Tickets and Return Tickets?",
+    "answer": "Open **Inventory Management → Settings → Ship** or **Settings → Return**. **Return** also has the **Material Condition** options: **Seal opened**, **Partially used**, **Leftovers** and **Unused**. Use **Add field** for custom fields.",
+    "tags": [
+      "ship settings",
+      "return settings",
+      "material condition options",
+      "standard fields ship",
+      "seal opened partially used leftovers unused"
+    ]
+  },
+  {
+    "action": "define",
+    "object": "earlier version inventory",
+    "scope": "module",
+    "section": "Earlier Version: Site Material Requests, Issue Tickets and Return Tickets",
+    "question": "Why do I see Inventory Master and Site Material Request instead of Orders?",
+    "answer": "Environments running an earlier version of Arena show **Inventory Master**, **Site Material Request**, **Material Issue Ticket** and **Return Ticket**. Arena 2.0 uses the **Inventory Locations**, **External Orders**, **Hauling Trucks** and **External Tickets** screens described above. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    "tags": [
+      "earlier version inventory",
+      "old inventory screens",
+      "inventory master",
+      "why no orders tab",
+      "pickup ship return tickets"
+    ]
+  },
+  {
+    "action": "view",
+    "object": "inventory master list",
+    "scope": "module",
+    "section": "Inventory Locations and Overview Map",
+    "question": "What does the Inventory Master list show in the earlier version?",
+    "answer": "Open **Inventory Management → Inventory Master**. Locations show as cards with a **more_vert** menu. The list has **Add Location**, search, **Export**, **Filters**, **Manage Columns** and saved views. Open a location to see its materials with **Quantity**, **Minimum Required Quantity** and **Maximum Quantity**.",
+    "tags": [
+      "inventory master",
+      "inventory master list",
+      "location cards",
+      "add location earlier version"
+    ]
+  },
+  {
+    "action": "create",
+    "object": "inventory location required fields",
+    "scope": "module",
+    "section": "Inventory Locations and Overview Map",
+    "question": "Which fields are required when I create an inventory location?",
+    "answer": "In the **Create Inventory Location** dialog, **Location Name**, **Location ID** and **Inventory manager** are required. **Location Type**, **Business Unit**, **Project** and **Active** are optional.",
+    "tags": [
+      "create inventory location fields",
+      "required location fields",
+      "location id required",
+      "inventory manager required"
+    ]
+  },
+  {
+    "action": "configure",
+    "object": "id settings earlier version",
+    "scope": "module",
+    "section": "Settings: Fields, IDs, Permissions and General",
+    "question": "How do I set ID formats for site material requests and issue tickets?",
+    "answer": "Open **Inventory Management → Settings → ID Settings**. Choose a tab (**Site Material Requests**, **External Site Material Requests**, **Material Issue Tickets**, **External Material Issue Tickets** or **Return Tickets**), pick **System Default** or **Custom**, and check **Example Format**.",
+    "tags": [
+      "id settings site material requests",
+      "material issue ticket id format",
+      "return ticket id",
+      "custom id format"
+    ]
+  },
+  {
+    "action": "configure",
+    "object": "print settings",
+    "scope": "module",
+    "section": "Settings: Fields, IDs, Permissions and General",
+    "question": "How do I set up print copies in Inventory General settings?",
+    "answer": "Open **Inventory Management → Settings → General**. In **Print Settings** use **Add Row Name** to name each copy and turn on **Include Header** to print the header. **External Tickets** and **UOM Conversions Required** are on the same page.",
+    "tags": [
+      "print settings",
+      "include header",
+      "add row name",
+      "general settings inventory",
+      "print copies"
+    ]
   }
 ];
 
@@ -35512,7 +35695,7 @@ const MODULES = [
       {
         "heading": "Settings: Fields, IDs, Permissions and General",
         "intro": "<p>The Inventory Administrator uses <strong>Inventory Management → Settings</strong> to decide which fields orders and tickets carry, how their IDs are numbered, who can do what, and how units convert. Do this before creating any records.</p><p>The left side of Settings lists <strong>External Orders</strong>, <strong>Tickets</strong>, <strong>ID Settings</strong>, <strong>Users and Permissions</strong> and <strong>General</strong>. Complete <strong>ID Settings</strong> before the first ticket, because they lock once a ticket exists.</p>",
-        "definitions": [
+        "definitions":[
           {
             "term": "External Orders and Tickets fields",
             "definition": "On the **External Orders** and **Tickets** tabs, review the standard fields and click **Add field** for configurable ones. Pick a type in **Choose type**, name the field, and switch **Required**, **Show on Card** and **Unique** on or off. Actions add, duplicate or delete a field, and the drag icon reorders them. Click **Save Changes**."
@@ -35528,6 +35711,14 @@ const MODULES = [
           {
             "term": "General settings",
             "definition": "Keep **External Tickets** on to use tickets. Turn on **UOM Conversions Required** if quantities must convert between units; once it is on and in use it cannot be turned off. **Print Settings** lets you add a row for each print copy (for example office copy, operator copy, customer copy) and choose **Include Header**. **Material UOM Conversions → Create** sets a factor between at least two UOMs for one material."
+          },
+          {
+            "term": "Earlier version: ID Settings tabs",
+            "definition": "In earlier-version environments, **Settings → ID Settings** has the tabs **Site Material Requests**, **External Site Material Requests**, **Material Issue Tickets**, **External Material Issue Tickets** and **Return Tickets**. On each, pick **System Default** or **Custom** ID format; **Example Format** shows the result."
+          },
+          {
+            "term": "Earlier version: General settings and Print Settings",
+            "definition": "**Settings → General** has **External Tickets**, **UOM Conversions Required** and **Print Settings**. In **Print Settings**, use **Add Row Name** to name each printed copy and **Include Header** to print the header."
           }
         ],
         "procedures": [
@@ -35912,7 +36103,7 @@ const MODULES = [
       {
         "heading": "Inventory Locations and Overview Map",
         "intro": "<p>An <strong>Inventory Location</strong> is a store, yard or stockpile that holds materials, and it is marked on a map with a geofence. The Inventory Administrator creates locations, and Inventory Managers watch them on the <strong>Overview</strong> map. Only active locations can be used on ship tickets.</p>",
-        "definitions": [
+        "definitions":[
           {
             "term": "Create Inventory Location fields",
             "definition": "**Location Name**, **Location ID** (unique), **Location Type**, **Inventory manager** (one or more users), **Business Unit**, **Project** (if it applies), the **Active** toggle and the **Geofence**."
@@ -35932,6 +36123,14 @@ const MODULES = [
           {
             "term": "Where this data comes from: location fields",
             "definition": "**Inventory manager** lists Arena users. **Business Unit** and **Project** list your organisation's Business Units and projects. **Location Type** is a fixed list. Locations then feed the Site, Ship Material From and Inventory pickers on orders, tickets and Material Reconciliation, and the **Overview** map; only **Active** locations can be used on tickets."
+          },
+          {
+            "term": "Earlier version: Inventory Master (Locations list)",
+            "definition": "In earlier-version environments, **Inventory Management → Inventory Master** opens the list of locations as cards, each with a **more_vert** actions menu. The list has **Add Location**, search, **Export**, **Filters**, **Manage Columns** and saved views."
+          },
+          {
+            "term": "Earlier version: required fields on Create Inventory Location",
+            "definition": "**Location Name**, **Location ID** and **Inventory manager** are required. **Location Type**, **Business Unit**, **Project** and the **Active** toggle are optional."
           }
         ],
         "procedures": [
@@ -36204,7 +36403,7 @@ const MODULES = [
       {
         "heading": "Materials at a Location",
         "intro": "<p>Each Inventory Location has its own list of materials with quantities and stock limits. The Inventory Manager adds materials, sets minimum and maximum quantities, and tops up stock. A red flag marks any material that has fallen below its minimum.</p>",
-        "definitions": [
+        "definitions":[
           {
             "term": "Add material fields",
             "definition": "**Material** (from the materials in Global Data), **Quantity** (held now), **Minimum Required Quantity** (below this the material shows as low stock), **Maximum Quantity**, **UOM** and an optional **Icon**. Minimum and maximum must be greater than 0."
@@ -36216,6 +36415,10 @@ const MODULES = [
           {
             "term": "Where this data comes from and where it goes",
             "definition": "Quantities come from three places: what the Inventory Manager enters with **+ Add** and **Add Quantity**, bulk **Upload Excel**, and stock received through **Procurement** when a Delivery Receipt confirms a purchase order. **See History** records each change. The quantity at a location feeds the low-stock flag and **Low Stock Items**, **Stock Available** on tickets, the **Overview** map and **Current Available** in **Material Reconciliation**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
+          },
+          {
+            "term": "Earlier version: materials at a location",
+            "definition": "Opening a location from **Inventory Master** shows **Add**, **Add Custom Column**, **Low Stock Items**, **Add Quantity**, **Export** and **Manage Columns**. Columns: **Image**, **Material Name**, **Quantity**, **Minimum Required Quantity**, **Maximum Quantity**, **UOM**, **Size & Specifications**, **See History** and **Actions** (edit, delete)."
           }
         ],
         "procedures": [
@@ -36704,6 +36907,76 @@ const MODULES = [
         ]
       },
       {
+        "heading": "Earlier Version: Site Material Requests, Issue Tickets and Return Tickets",
+        "intro": "<p>Environments running an earlier version of Arena show these screens; Arena 2.0 uses the screens above. A project team raises a **Site Material Request**, the store ships materials with a **Material Issue Ticket**, and leftovers come back with a **Return Ticket**.</p>",
+        "definitions": [
+          {
+            "term": "Site Material Request list",
+            "definition": "From **Home**, open **Inventory Management → Site Material Request**. Each request shows as a card with its status, **Raised on**, **Raised by**, number, **Materials** and **Required Date**. Buttons: **Add**, **Add Custom Columns**, **Export**, **Filters** and **Manage Columns**."
+          },
+          {
+            "term": "Rejected Site Material Requests",
+            "definition": "The **Rejected Pickup Tickets** sub-tab of **Site Material Request** lists requests that were rejected."
+          },
+          {
+            "term": "Site Material Request form",
+            "definition": "Click **Add**. The fields are **Project**, **Order Date**, **Ship To**, **Requested By** and **Required Date** (Project, Requested By and Required Date are required), plus fields your administrator configured, such as **Required to execute which work**, **Logistics**, **Handling Instructions** and **Work**. The **Materials** table has **Product Description**, **Quantity**, **UOM** and **Remarks**, and **Add Custom Column** adds a column. Click **Submit for Approval** to send it."
+          },
+          {
+            "term": "Site Material Request: open an existing request",
+            "definition": "Opening a raised request shows the same form with a **Stock** column, **Add Row**, an **Approvals** panel where each approval level can approve with a comment, and a **more_vert** menu."
+          },
+          {
+            "term": "Material Issue Ticket list",
+            "definition": "Open **Inventory Management → Material Issue Ticket** (labelled **Internal Material Issue Ticket**). Cards show the status (**Shipped** or **Delivered**), **Shipped From** and **Raised on**. Buttons: **Add**, **Export** and **Filters**."
+          },
+          {
+            "term": "Material Issue Ticket form",
+            "definition": "Click **Add**. Fields: **Site Material Request** (required), **Project**, **Ship Material From** (required), **Time In** and **Time Out**, and **Shipping Agent Name** and **Contact** under details of the shipping vehicle. The **Materials** table has **Stock**, **Ordered**, **Shipped Already** and **Ship Now**. **Shipped By** (signature) and **Date** are required."
+          },
+          {
+            "term": "Return Ticket list and form",
+            "definition": "Open **Inventory Management → Return Ticket**; buttons are **Add**, **Export**, **Filters** and **Manage Columns**. In the form, **Site Material Request** and **Return Material To** are required, with configurable fields such as **Reason for returning materials** and **Material Condition**. The **Materials** table has **Ordered**, **Delivered**, **Returned Already** and **Return Now**, followed by a signature and a required **Date**."
+          },
+          {
+            "term": "Settings → Pickup (Site Material Request)",
+            "definition": "Open **Inventory Management → Settings → Pickup**. It shows **Connected Services** (**Active**, **Inactive**, **Old**, **New**), a **Ship To Text Box / Ship To Location** toggle, and the **Standard Fields** (**Id**, **Status**, **Project Name**, **Requested by**, **Required date**, **Materials**). **Add field** creates a custom field; each can be **Required**, **Show on card**, **Unique** and has a type. Click **Save Changes**."
+          },
+          {
+            "term": "Settings → Ship (Material Issue Ticket)",
+            "definition": "**Standard Fields**: **Id**, **Status**, **SMR Id**, **Project**, **Shipped by**, **Shipped date**, **Materials Shipped**, **Received by** and **Received date**. **Add field** adds custom fields."
+          },
+          {
+            "term": "Settings → Return",
+            "definition": "**Standard Fields** are the same as Ship, with **Materials Returned**. **Material Condition** options are **Seal opened**, **Partially used**, **Leftovers** and **Unused**."
+          },
+          {
+            "term": "Where this data comes from and goes",
+            "definition": "The **Project** and **Materials** you choose come from the project and the materials set up in Global Data. A **Material Issue Ticket** and a **Return Ticket** are raised against a **Site Material Request**. Stock quantities are those at the Inventory Location in **Inventory Master**."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Raise a Site Material Request",
+            "steps": [
+              "From **Home**, open **Inventory Management → Site Material Request** and click **Add**.",
+              "Choose the **Project**, set the **Required Date** and **Requested By**, and fill any configured fields.",
+              "Add the materials with **Quantity**, **UOM** and **Remarks**.",
+              "Click **Submit for Approval**. Approvers review it in the **Approvals** panel."
+            ],
+            "note": "For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
+          },
+          {
+            "title": "Issue materials against a request",
+            "steps": [
+              "Open **Inventory Management → Material Issue Ticket** and click **Add**.",
+              "Choose the **Site Material Request** and **Ship Material From**.",
+              "Enter **Ship Now** quantities, the shipping agent details, then sign as **Shipped By** and set the **Date**."
+            ]
+          }
+        ]
+      },
+      {
         "heading": "Troubleshooting: Inventory Problems",
         "intro": "<p>Use this page when an Inventory Management screen does not let you do something. Most cases come from a setting made earlier or a rule on the form.</p>",
         "definitions": [],
@@ -36767,14 +37040,15 @@ const MODULES = [
     "tagline": "Keep stock at geofenced locations, raise External Orders, record each load on External Tickets and review the reports.",
     "color": "#7a2f3f",
     "overview": "<p><strong>Inventory Management</strong> keeps the material stock held at each <strong>Inventory Location</strong>, lets you raise <strong>External Orders</strong> for customers and projects, records each load shipped as an <strong>External Ticket</strong> against a <strong>Hauling Truck</strong>, and gives you reports on material movement and stock.</p><p>The tabs are <strong>Overview</strong> (a map of every location with its geofence), <strong>Inventory</strong> (locations and the materials at each), <strong>Orders</strong>, <strong>Hauling Trucks</strong>, <strong>Tickets</strong>, <strong>Reports</strong> and <strong>Settings</strong>. UOMs and materials are set up first in Global Data.</p>",
-    "navigation": [
+    "navigation":[
       "From <strong>Home</strong>, click the <strong>Inventory Management</strong> tile. The <strong>Overview</strong> tab opens first and shows the map.",
       "Open <strong>Inventory</strong> to create Inventory Locations and to manage the materials and quantities at each one.",
       "Open <strong>Orders → External Orders</strong> to raise orders for customers or projects, <strong>Hauling Trucks</strong> to add trucks, and <strong>Tickets → External Tickets</strong> to record each load.",
       "Open <strong>Reports</strong> for the <strong>Hauling Report</strong>, <strong>Client Portal</strong> and <strong>Material Reconciliation</strong>.",
-      "Open <strong>Settings</strong> for <strong>External Orders</strong> and <strong>Tickets</strong> fields, <strong>ID Settings</strong>, <strong>Users and Permissions</strong> and <strong>General</strong>."
+      "Open <strong>Settings</strong> for <strong>External Orders</strong> and <strong>Tickets</strong> fields, <strong>ID Settings</strong>, <strong>Users and Permissions</strong> and <strong>General</strong>.",
+      "Environments running an earlier version show <strong>Inventory Master</strong>, <strong>Site Material Request</strong>, <strong>Material Issue Ticket</strong> and <strong>Return Ticket</strong>, with <strong>Pickup</strong>, <strong>Ship</strong> and <strong>Return</strong> in <strong>Settings</strong>."
     ],
-    "sections": [
+    "sections":[
       "Who Does What",
       "Settings: Fields, IDs, Permissions and General",
       "Global Data Prerequisites: UOMs and Materials",
@@ -36785,6 +37059,7 @@ const MODULES = [
       "External Tickets",
       "Reports: Hauling, Client Portal and Reconciliation",
       "Lists: Columns, Filters and Excel Export",
+      "Earlier Version: Site Material Requests, Issue Tickets and Return Tickets",
       "Troubleshooting: Inventory Problems"
     ]
   },
