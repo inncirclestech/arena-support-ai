@@ -3701,7 +3701,7 @@ const QA_COMMUNICATION = [
     action: "configure",
     object: "outlook consent",
     scope: "global",
-    section: "Outlook Setup",
+    section: "Connect Outlook so mail syncs",
     question: "How do I enable Outlook integration for Arena Communications?",
     answer: "An admin must grant Outlook consent in Global Data → Marketplace, and admin permissions for the communication module must be given to the user. Alternatively, an individual user can grant their own consent without admin consent via My Profile → Settings → Outlook Management Consent.",
     tags: ["outlook consent","enable communications","marketplace integration","admin consent","user consent"]
@@ -3710,16 +3710,16 @@ const QA_COMMUNICATION = [
     action: "submit",
     object: "email",
     scope: "module",
-    section: "Inbox & Mail",
+    section: "Read, reply and send mail",
     question: "How do I send an email in Arena Communications?",
-    answer: "Go to Home → Communications and click \"Compose mail\" at the top to send a new message.",
+    answer: "Open a mail in **Home → Communication** and use reply, reply all or **Forward**, or open a draft; fill **To**, **Cc**, **BCC** and click **Send**. No **Compose** button was visible on the test site. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["compose mail","send email","arena communications","new mail"]
   },
   {
     action: "filter",
     object: "email",
     scope: "module",
-    section: "Module Mapping",
+    section: "Map mail to Arena records",
     question: "How do I filter emails by module in Arena Communications?",
     answer: "Use the ribbon at the top of Communications, which lists all modules, to filter mail by which module it's mapped to.",
     tags: ["filter mail by module","communications ribbon","module filter","mail filter"]
@@ -3728,16 +3728,16 @@ const QA_COMMUNICATION = [
     action: "view",
     object: "inbox",
     scope: "module",
-    section: "Inbox & Mail",
+    section: "Read, reply and send mail",
     question: "What are the mail folders available in Arena Communications?",
-    answer: "Arena Communications has Inbox (received mail), Sent (mail you sent), Drafts (saved drafts), Saved (starred mail), and Trash (deleted mail).",
-    tags: ["inbox","sent","drafts","saved","trash","mail folders","sent emails","see sent emails","where are my sent emails","sent mail"]
+    answer: "All Emails, Inbox, Sent, Drafts, Starred and Trash, each with a count. There is no Saved folder.",
+    tags: ["inbox","sent","drafts","saved","trash","mail folders","sent emails","see sent emails","where are my sent emails","sent mail","mail folders in communications","communications folders","inbox sent drafts starred trash"]
   },
   {
     action: "import",
     object: "outlook group",
     scope: "module",
-    section: "Module Mapping",
+    section: "Map mail to Arena records",
     question: "How do I import Outlook groups into Arena Communications?",
     answer: "Use the \"Import Groups\" feature in Communications. It opens a pop-up showing your Outlook groups alongside a Module dropdown, so you can map each imported group to a module.",
     tags: ["import groups","outlook groups","import groups feature","map group to module"]
@@ -3746,10 +3746,109 @@ const QA_COMMUNICATION = [
     action: "link",
     object: "email",
     scope: "module",
-    section: "Module Mapping",
+    section: "Map mail to Arena records",
     question: "Can I link an email to a specific module record?",
     answer: "Yes. Mails composed in Arena Communications can be mapped directly to different modules such as Opportunity, Proposal, and Bid Management.",
-    tags: ["map email to module","link email","email mapping","module mail linking"]
+    tags: ["map email to module","link email","email mapping","module mail linking","map an email to a proposal","map email to proposal","map your email"]
+  },
+  {
+    action: "explain",
+    object: "communications",
+    scope: "module",
+    section: "Read, reply and send mail",
+    question: "What do the Communications filters do?",
+    answer: "The filter icon opens **Filters** with **From**, **To**, a **Date** range, **All / Mapped / Unmapped**, **Includes attachments**, **Clear** and **Apply**. Use **Unmapped** to find mail not yet linked to a record.",
+    tags: ["communications filter","mapped unmapped","filter emails","includes attachments","communications filters","what do the communications filters do","filters communications"]
+  },
+  {
+    action: "explain",
+    object: "communications",
+    scope: "module",
+    section: "Read, reply and send mail",
+    question: "How do I add or change my email signature in Communications?",
+    answer: "Click the gear icon (**Mail Settings**), use **Create New** under **Signature**, pick the default with the radio button and click **Save Changes**.",
+    tags: ["email signature","mail settings","signature","change my email signature","how do I change my email signature","email signature communications","signature communications","add signature"]
+  },
+  {
+    action: "explain",
+    object: "communications",
+    scope: "module",
+    section: "Read, reply and send mail",
+    question: "How do I reply to or forward an email in Communications?",
+    answer: "Open the mail, then click reply or reply all, or open the more menu and choose **Forward**. Add **Cc** or **BCC** if needed and click **Send**.",
+    tags: ["reply email","forward email","reply all"]
+  },
+  {
+    action: "explain",
+    object: "communications",
+    scope: "module",
+    section: "Read, reply and send mail",
+    question: "Why is there no Compose button in Communications?",
+    answer: "No **Compose** button was visible on the test site. New mail starts from a reply, forward or draft, or from Proposal Management drafts such as **Email Submission Package**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["compose mail","new email","write email"]
+  },
+  {
+    action: "explain",
+    object: "communications",
+    scope: "module",
+    section: "Read, reply and send mail",
+    question: "What do the icons above the Communications mail list do?",
+    answer: "**Select All** ticks every mail; the next icons mark read and delete (to **Trash**); **Map your Email** ties ticked mail to a record. The star on each row adds it to **Starred**.",
+    tags: ["mark read","star email","delete email","toolbar"]
+  },
+  {
+    action: "explain",
+    object: "communications",
+    scope: "module",
+    section: "Map mail to Arena records",
+    question: "What can I map an email to in Communications?",
+    answer: "Click **Map your Email** and choose **Opportunities** (customer group, customer, point of contact, opportunity), **Tender Management** (a bid) or **Proposal** (proposal type and proposal).",
+    tags: ["map email options","map to opportunity","map to proposal","map to bid"]
+  },
+  {
+    action: "explain",
+    object: "communications",
+    scope: "module",
+    section: "Map mail to Arena records",
+    question: "Where do the lists in the Map your Email panel come from?",
+    answer: "From the records already created in Opportunity (customers, points of contact, opportunities), Tender Management (bids) and Proposal Management (proposal types and proposals). For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["map email lists","customers poc","where lists come from"]
+  },
+  {
+    action: "explain",
+    object: "communications",
+    scope: "module",
+    section: "Map mail to Arena records",
+    question: "What are the chips in the Communications ribbon?",
+    answer: "All, Opportunity, Proposal Management, Work Order, Request for Information and Transmittal. They filter the mailbox to mail mapped to that module.",
+    tags: ["ribbon","module chips","filter by module"]
+  },
+  {
+    action: "explain",
+    object: "communications",
+    scope: "module",
+    section: "Map mail to Arena records",
+    question: "Why is the Import Group list empty or showing Consent Not Granted?",
+    answer: "Outlook groups are read from your Outlook account, so you need Outlook consent first (admin in **Global Data → Marketplace**, or yourself in **My Profile → Settings → Outlook Management Consent**). Without it the warning appears and **Groups** shows 0.",
+    tags: ["import group empty","consent not granted","outlook groups","import group consent not granted","why does import group say consent not granted","communications consent not granted"]
+  },
+  {
+    action: "explain",
+    object: "communications",
+    scope: "module",
+    section: "Who sets this up",
+    question: "Where does the mail in Communications come from?",
+    answer: "From the connected Microsoft Outlook mailbox of the signed-in user, so each user sees their own mail. Mail you map shows a module chip. The consent is set in **Global Data → Marketplace** or **My Profile → Settings**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["where mail comes from","outlook mailbox","sync"]
+  },
+  {
+    action: "explain",
+    object: "communications",
+    scope: "module",
+    section: "Map mail to Arena records",
+    question: "Where do mapped emails show up afterwards?",
+    answer: "In Communications the mail gets a green module chip with the record name and is found with the ribbon chips and the **Mapped** filter. Whether the mail also shows on the Opportunity, Tender or Proposal record was not verified. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["mapped emails","where mapped emails go","notifications"]
   }
 ];
 
@@ -22803,8 +22902,8 @@ const MODULES = [
     "qaItems": QA_COMMUNICATION,
     "narrative": [
       {
-        "heading": "Admin Role",
-        "intro": "<p>Before anyone can send or receive mail through Arena Communications, an admin most likely needs to establish the same kind of Microsoft connection required by Arena Calendar. Granting organization-wide Outlook consent in Global Data → Marketplace is the path that scales — it lets every user access the integration without individually authenticating — but it only takes effect for users whose group also carries the admin permission for the communication module, so both pieces likely need to be set up together rather than assuming consent alone is sufficient.</p><p>An admin evaluating rollout options should also know that individual users can bypass admin involvement entirely by granting their own consent from My Profile → Settings → Outlook Management Consent. This is probably worth keeping in mind for piloting the module with a single team before committing to the organization-wide setup, since it lets one department start using Communications without waiting on company-wide approval.</p>",
+        "heading": "Who sets this up",
+        "intro": "<p>Admin Role is who connects Outlook for the organisation and gives users access to Communications. An admin grants Outlook consent in <strong>Global Data → Marketplace</strong> and adds the communication module permission to the user's group; a single user can instead grant their own consent from <strong>My Profile → Settings → Outlook Management Consent</strong>.</p><p>Communications and Calendar use the same Microsoft connection but have separate consent screens and permissions, so setting up one does not set up the other. In the test site, the System Admin user had mail showing but no personal consent: <strong>Import Group</strong> warned <strong>Consent Not Granted! Please provide consent</strong>.</p>",
         "definitions": [
           {
             "term": "Outlook Consent (Communications)",
@@ -22813,23 +22912,17 @@ const MODULES = [
           {
             "term": "Admin Permission for Communication Module",
             "definition": "A permission that, combined with admin-granted Outlook consent in Marketplace, allows a user to use Arena Communications without personally granting their own consent."
+          },
+          {
+            "term": "Where this data comes from",
+            "definition": "The mail itself comes from the connected Microsoft Outlook mailbox of the signed-in user, so each person sees their own mail. The consent comes from **Global Data → Marketplace** (organisation-wide) or **My Profile → Settings** (personal). The module chips and mapping lists come from Opportunity, Tender and Proposal Management."
           }
         ],
-        "procedures": [
-          {
-            "title": "Enable Outlook integration for Arena Communications",
-            "steps": [
-              "As an admin, go to <strong>Global Data → Marketplace</strong> and grant Outlook consent for the organization.",
-              "Ensure the target user has the admin permission for the communication module assigned to their user group.",
-              "Alternatively, skip admin involvement entirely: have the individual user go to <strong>My Profile → Settings → Outlook Management Consent</strong> and grant their own consent directly."
-            ],
-            "note": "The individual consent path is useful for piloting Communications with a single user or team before committing to an organization-wide rollout."
-          }
-        ]
+        "procedures": []
       },
       {
-        "heading": "Outlook Setup",
-        "intro": "<p>Arena Communications brings your team's Outlook mailbox into Arena, so that project-related email doesn't live in a separate silo from the rest of your project data. Like Arena Calendar, it depends entirely on a Microsoft integration being established first — no mail will sync, and no mail can be sent from within Arena, until that consent is in place.</p><p>Arena supports the same two consent models here as it does for Calendar: an administrator can grant organization-wide consent through Global Data → Marketplace (paired with the correct admin permission for the communication module), or an individual user can bypass admin involvement entirely and grant their own consent from My Profile → Settings → Outlook Management Consent. This flexibility means a single power user or department can start using Communications even before a company-wide rollout is approved.</p><p>Because Communications and Calendar share the same underlying Microsoft connection mechanism, admins troubleshooting one often need to check the other — but each module has its own consent screen and its own permission gate, so granting access to one does not automatically grant access to the other.</p>",
+        "heading": "Connect Outlook so mail syncs",
+        "intro": "<p>This section is for the admin or user who connects a mailbox so mail syncs into Arena. Nothing syncs and nothing can be sent from Arena until Outlook consent exists.</p><p>Use organisation-wide consent in <strong>Global Data → Marketplace</strong> together with the communication module permission, or a personal consent in <strong>My Profile → Settings → Outlook Management Consent</strong> to pilot with one team first.</p>",
         "definitions": [
           {
             "term": "Outlook Consent (Communications)",
@@ -22885,37 +22978,66 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Inbox & Mail",
-        "intro": "<p>Once connected, Arena Communications behaves like a familiar email client embedded inside Arena, organized into the standard folder structure most users already expect: Inbox, Sent, Drafts, Saved, and Trash. This design choice is deliberate — it minimizes the learning curve for a feature that could otherwise feel like an unnecessary duplicate of Outlook itself. The value isn't in reinventing email, it's in keeping project-relevant correspondence visible alongside the project data it concerns.</p><p>Composing and sending mail works the same way it would in any inbox: a single \"Compose mail\" entry point at the top of the screen opens a new message. What makes this more than a mirror of Outlook is covered in the Module Mapping section below — the ability to tie any given email to a specific record inside Arena.</p>",
+        "heading": "Read, reply and send mail",
+        "intro": "<p>This section is for anyone reading and answering project email without leaving Arena. The left side lists folders, the middle lists mail, and the right shows the open message.</p><p>Folders are <strong>All Emails</strong>, <strong>Inbox</strong>, <strong>Sent</strong>, <strong>Drafts</strong>, <strong>Starred</strong> and <strong>Trash</strong>, each with a count.</p>",
         "definitions": [
           {
-            "term": "Inbox",
-            "definition": "The folder showing mail received into the connected mailbox."
+            "term": "Folders",
+            "definition": "**All Emails**, **Inbox**, **Sent**, **Drafts**, **Starred** and **Trash**, each with a count. There is no separate Saved folder; **Starred** holds mail you star."
           },
           {
-            "term": "Sent",
-            "definition": "The folder showing mail the user has sent from Arena Communications."
+            "term": "Search mail and Filters",
+            "definition": "The **Search mail** box finds mail by text. The filter icon opens **Filters**: **From**, **To**, **Date** (start and end), a drop-down of **All**, **Mapped** or **Unmapped**, an **Includes attachments** checkbox, and **Clear** / **Apply**. Use **Unmapped** to find mail not yet tied to a record."
+          },
+          {
+            "term": "List toolbar",
+            "definition": "Above the mail list: **Select All**, a mark-as-read icon, a delete icon (moves mail to **Trash**) and **Map your Email**. Tick one or more mails first. Each row shows a star, the sender, a green module chip with the record name when mapped (for example **Proposal Management** and **6-Cost Plus -002**), the subject, date and a preview."
+          },
+          {
+            "term": "Open message actions",
+            "definition": "The open message has icons for reply, reply all, star and print, and a more menu with **Reply**, **Reply All**, **Forward**, **Print** and **Delete**. Reply opens an editor with **To***, **Cc**, **BCC**, the message body and **Send** (a bin icon discards it)."
           },
           {
             "term": "Drafts",
-            "definition": "The folder holding messages that have been started but not yet sent."
+            "definition": "Opening a draft shows **To***, **Cc**, **BCC**, the body, your signature and **Save as Draft** / **Send**. Many drafts on the test site belong to Proposal records, for example **Email Submission Package** mails created from Proposal Management."
           },
           {
-            "term": "Saved",
-            "definition": "The folder holding starred or flagged mail for quick reference."
+            "term": "Mail Settings (signature)",
+            "definition": "The gear icon opens **Mail Settings** with a **Signature** list. **Create New** adds a signature; each has edit and delete icons and a radio button to pick the default, and **Save Changes** stores them. The default signature name (for example **System Admin**) appears on drafts and replies."
           },
           {
-            "term": "Trash",
-            "definition": "The folder holding deleted mail."
+            "term": "Where mail goes",
+            "definition": "Deleted mail goes to **Trash**. Mail you map shows a module chip in the list and is filtered by the ribbon at the top (see **Map mail to Arena records**)."
+          },
+          {
+            "term": "Starting a brand-new email",
+            "definition": "On the test site no **Compose** button was visible on the Communications screen. New mail starts from replying, forwarding or opening a draft, and from modules such as Proposal Management that create mail drafts. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
           }
         ],
         "procedures": [
           {
-            "title": "Send an email from Arena Communications",
+            "title": "Reply to or forward an email",
             "steps": [
-              "Go to <strong>Home → Communications</strong>.",
-              "Click <strong>Compose mail</strong> at the top of the screen.",
-              "Fill in the recipient, subject, and body, then send."
+              "Open **Home → Communication** and click the mail in the list.",
+              "Click the reply or reply-all icon, or open the more menu and choose **Forward**.",
+              "Check **To**, add **Cc** or **BCC** if needed, write your message and click **Send**."
+            ],
+            "note": "The signature chosen in Mail Settings is added. Not verified: sending test mail on the live site."
+          },
+          {
+            "title": "Find unmapped mail",
+            "steps": [
+              "Click the filter icon at the top.",
+              "Set the drop-down to **Unmapped** and click **Apply**.",
+              "Tick the mails and click **Map your Email** to tie them to a record."
+            ]
+          },
+          {
+            "title": "Add or change an email signature",
+            "steps": [
+              "Click the gear icon at the top right.",
+              "Under **Signature**, click **Create New**, or the edit icon on an existing signature.",
+              "Choose the default with the radio button and click **Save Changes**."
             ]
           }
         ],
@@ -22927,59 +23049,67 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Module Mapping",
-        "intro": "<p>Module Mapping is the feature that elevates Arena Communications above a plain webmail client: it lets you tie an email — or an entire imported Outlook group — to a specific place in Arena's data model, such as an Opportunity, a Proposal, or a Bid Management record. Instead of forwarding an email thread into a CRM or manually summarizing correspondence for a teammate, you map the message directly, and it becomes part of that record's history.</p><p>This works at two levels. At the individual message level, any email you compose can be mapped directly to the module record it concerns. At the group level, entire Outlook Groups — the distribution lists your organization already uses in Microsoft 365 — can be imported once and mapped to a module, so ongoing traffic tied to that group has an obvious home in Arena. The ribbon at the top of the Communications screen, which lists every module, is the mechanism for filtering mail down to only what's relevant to a particular part of the business, turning what would otherwise be a single flat inbox into something closer to a set of module-specific mail views.</p><p>This same group-import mechanism is also what feeds Arena Calendar's group visibility (see the Calendar module's Sync & Groups section) — mapping a group here has effects beyond Communications alone.</p>",
+        "heading": "Map mail to Arena records",
+        "intro": "<p>Mapping ties an email to an Opportunity, a Tender bid or a Proposal, so the mail stays with that record. Users mapping mail pick the module, then the record; the ribbon at the top then filters the mailbox by module.</p><p>Outlook groups can also be imported and mapped to a module with <strong>Import Group</strong>; groups mapped here also feed the Calendar module.</p>",
         "definitions": [
           {
             "term": "Module Mapping (Communications)",
-            "definition": "The association of an individual email with a specific Arena module record (e.g. an Opportunity, Proposal, or Bid Management entry), making that email part of the record's history."
+            "definition": "Tying an email to an Arena record. Tick the mail, click **Map your Email** and a **Modules** panel opens with **Opportunities**, **Tender Management** or **Proposal**."
           },
           {
-            "term": "Import Groups",
-            "definition": "A feature in Communications that opens a pop-up listing your Outlook groups alongside a Module dropdown, letting you map each imported group to an Arena module."
+            "term": "Map your Email panel fields",
+            "definition": "**Opportunities** shows **Customer Groups**, **Customers**, **Customers POC** and **Opportunities** pickers and a **Submit** button. **Tender Management** shows **Bids** and **Save**. **Proposal** shows **Proposal Type** and **Proposals** and **Save**. **Where this data comes from:** the customers, bids, proposal types and proposals you already created in the Opportunity, Tender and Proposal Management modules."
           },
           {
             "term": "Communications Ribbon",
-            "definition": "The row at the top of the Communications screen listing all Arena modules, used to filter the mailbox down to messages mapped to a specific module."
+            "definition": "The row of chips under the search box: **All**, **Opportunity**, **Proposal Management**, **Work Order**, **Request for Information** and **Transmittal**. Click a chip to show only mail mapped to that module. On the test site only **Proposal Management** had mail for the admin user."
+          },
+          {
+            "term": "Import Group",
+            "definition": "Link in the left column. It opens a dialog with **Group** and **Module** drop-downs and **Cancel** / **Map**. Groups are Outlook groups, so the list needs Outlook consent; without it a **Consent Not Granted** warning appears and **Groups** shows 0."
+          },
+          {
+            "term": "Mapped chip",
+            "definition": "A green chip on a mail row (for example **Proposal Management**) with the record name below it. It appears once the mail is mapped."
           }
         ],
         "procedures": [
           {
             "title": "Filter emails by module",
             "steps": [
-              "Open <strong>Home → Communications</strong>.",
-              "Use the ribbon at the top, which lists every module.",
-              "Select a module to filter the mailbox to only mail mapped to it."
-            ]
-          },
-          {
-            "title": "Import Outlook groups into Communications",
-            "steps": [
-              "In Communications, open <strong>Import Groups</strong>.",
-              "In the pop-up, review your available Outlook groups.",
-              "For each group you want to bring in, choose the target Arena module from the <strong>Module</strong> dropdown.",
-              "Confirm the import."
-            ],
-            "note": "Groups mapped here also become visible inside Arena Calendar.",
-            "images": [
-              {
-                "src": "assets/notion/arena-communications/005.jpg",
-                "caption": "Import Groups: a pop-up of Outlook groups with a module drop-down",
-                "step": 2
-              }
+              "Open **Home → Communication**.",
+              "Click a chip in the ribbon, for example **Proposal Management**.",
+              "Click **All** to see every mail again."
             ]
           },
           {
             "title": "Link an email to a module record",
             "steps": [
-              "Compose or open the relevant email in Arena Communications.",
-              "Map the email to the module it concerns — for example Opportunity, Proposal, or Bid Management.",
-              "Save or send — the email now appears as part of that record's associated correspondence."
+              "Tick the mail in the list.",
+              "Click **Map your Email**.",
+              "In the **Modules** panel choose **Opportunities**, **Tender Management** or **Proposal**, pick the record, and click **Submit** or **Save**."
             ],
+            "note": "Select the mail first; opening the panel with nothing selected shows a technical error. Not verified: saving a mapping and where it then shows inside the record.",
             "images": [
               {
                 "src": "assets/notion/arena-communications/006.jpg",
                 "caption": "Mapping a composed email to a module such as Opportunity, Proposal or Bid Management",
+                "step": 2
+              }
+            ]
+          },
+          {
+            "title": "Import Outlook groups into Communications",
+            "steps": [
+              "Click **Import Group** in the left column.",
+              "Choose the **Group** and the target **Module**.",
+              "Click **Map**."
+            ],
+            "note": "Needs Outlook consent. Groups mapped here also become visible in Arena Calendar.",
+            "images": [
+              {
+                "src": "assets/notion/arena-communications/005.jpg",
+                "caption": "Import Groups: a pop-up of Outlook groups with a module drop-down",
                 "step": 2
               }
             ]
@@ -22992,16 +23122,16 @@ const MODULES = [
     "icon": "mail",
     "tagline": "Sync an Outlook mailbox into Arena and map emails to the modules they relate to.",
     "color": "#a8456b",
-    "overview": "<p>Arena Communication (Home → Communications) is an integrated email hub that syncs a user's Outlook mailbox into Arena and lets mail be mapped to specific modules (e.g. opportunities, proposals, bid management), with standard inbox functions like Compose, Sent, Drafts, Saved, and Trash.</p>",
+    "overview": "<p>Communications (Home → <strong>Communication</strong> tile) is Arena's mailbox. It shows the Outlook mail of the signed-in user, lets you reply, forward and star mail, and lets you tie each email to an Opportunity, a Tender bid or a Proposal so the mail stays with the record. Anyone with access to the module uses it; an admin or the user must connect Outlook first.</p>",
     "navigation": [
-      "From <strong>Home</strong>, click the <strong>Communications</strong> tile.",
-      "Grant Outlook consent (admin via Global Data → Marketplace, or individually via My Profile → Settings) before mail will sync."
+      "From <strong>Home</strong>, click the <strong>Communication</strong> tile (page title <strong>Communications</strong>).",
+      "If mail does not load or <strong>Import Group</strong> says <strong>Consent Not Granted</strong>, grant Outlook consent first (admin via Global Data → Marketplace, or yourself via My Profile → Settings → Outlook Management Consent)."
     ],
     "sections": [
-      "Admin Role",
-      "Outlook Setup",
-      "Inbox & Mail",
-      "Module Mapping"
+      "Who sets this up",
+      "Connect Outlook so mail syncs",
+      "Read, reply and send mail",
+      "Map mail to Arena records"
     ]
   },
   {
