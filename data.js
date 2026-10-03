@@ -14180,42 +14180,13 @@ const MODULES = [
               "Add at least one Status under that stage's Allowed Statuses (for the Lead stage, New Lead).",
               "Return to Create Opportunity — the Status dropdown should now be populated."
             ],
-            "note": "This is the single most common blocker preventing new opportunities from being created: the Status dropdown is driven entirely by whatever Statuses are configured for the opportunity's current Stage, and if a Stage has none configured, the dropdown is empty and the Create Opportunity dialog cannot be submitted.",
-            "images": [
-              {
-                "src": "assets/notion/lead-management-settings/010.jpg",
-                "caption": "Add Status, for the statuses within a stage, which can be edited or deleted",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/opportunity-management-global-opportunity-status/003.jpg",
-                "caption": "Add Status, with a name for the new status",
-                "step": 3
-              }
-            ]
+            "note": "This is the single most common blocker preventing new opportunities from being created: the Status dropdown is driven entirely by whatever Statuses are configured for the opportunity's current Stage, and if a Stage has none configured, the dropdown is empty and the Create Opportunity dialog cannot be submitted."
           },
           {
             "title": "Adding a whole new Stage or reordering the pipeline",
             "steps": [
               "Go to <strong>Settings → Stages & Statuses Configuration</strong>.",
               "Click <strong>Add Stages</strong> to add a new pipeline stage, or <strong>Reorder Stages</strong> to change the order of existing stages."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/lead-management-settings/007.jpg",
-                "caption": "Stage Name, Default Win Probability and Stage Threshold for a new stage",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/lead-management-settings/008.jpg",
-                "caption": "Choosing a colour for the stage",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/lead-management-settings/009.jpg",
-                "caption": "Add, to create the stage",
-                "step": 1
-              }
             ]
           },
           {
@@ -14224,13 +14195,6 @@ const MODULES = [
               "Go to <strong>Settings → Opportunities Form</strong>.",
               "Set the <strong>Stale Threshold</strong> field to the number of days of inactivity after which an opportunity should be flagged stale.",
               "This value immediately feeds the dashboard's Stale Opportunities KPI."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/lead-management-settings/016.jpg",
-                "caption": "Stale Threshold, for tracking opportunities with little activity",
-                "step": 2
-              }
             ]
           },
           {
@@ -14239,23 +14203,6 @@ const MODULES = [
               "Go to <strong>Settings → Opportunities Form → Configurable Fields</strong>.",
               "Add the custom field there.",
               "Reference the <strong>Standard Fields</strong> tab in the same section if you need to check what's already built in before adding a duplicate custom field."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/lead-management-settings/013.jpg",
-                "caption": "Configurable Fields: adding a section and fields",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/lead-management-settings/014.jpg",
-                "caption": "A section name, field name and field type, with the Required toggle",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/lead-management-settings/012.jpg",
-                "caption": "The Opportunities Form: required standard fields",
-                "step": 3
-              }
             ]
           },
           {
@@ -14267,16 +14214,6 @@ const MODULES = [
               "Configure <strong>Child ID Settings</strong> separately if your organization uses parent/child opportunity hierarchies."
             ],
             "images": [
-              {
-                "src": "assets/notion/lead-management-settings/025.jpg",
-                "caption": "System Default, the automatic ID by order of creation",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/lead-management-settings/026.jpg",
-                "caption": "Custom, for configuring the ID the way you want",
-                "step": 2
-              },
               {
                 "src": "assets/guides/opportunity/050.jpg",
                 "caption": "ID Settings for child and parent IDs",
@@ -14290,33 +14227,6 @@ const MODULES = [
               "Go to <strong>Settings → Users and Permissions</strong>.",
               "To modify an existing group (e.g. Opportunity Manager, Opportunity Estimator), use its three-dot menu to manage Permissions and Users.",
               "To create a new group, click <strong>Add User Group</strong> and configure its Permissions and Users."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/lead-management-settings-users-and-permissions/012.jpg",
-                "caption": "The three-dot menu on a group: Edit, Delete and Copy",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/lead-management-settings-users-and-permissions/013.jpg",
-                "caption": "Copy user group, to copy a group's permissions to another group",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/lead-management-settings-users-and-permissions/002.jpg",
-                "caption": "Add User Group, with a group name",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/lead-management-settings-users-and-permissions/003.jpg",
-                "caption": "Permissions, listing every available permission to tick",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/lead-management-settings-users-and-permissions/006.jpg",
-                "caption": "Users and Add Users, to map users to the group",
-                "step": 3
-              }
             ]
           },
           {
@@ -14334,70 +14244,6 @@ const MODULES = [
           {
             "src": "assets/guides/opportunity/049.jpg",
             "caption": "Opportunities Form settings for Required, Hide and Show At Creation"
-          },
-          {
-            "src": "assets/notion/lead-management-settings/001.jpg",
-            "caption": "Competitor Form: the required standard fields"
-          },
-          {
-            "src": "assets/notion/lead-management-settings/002.jpg",
-            "caption": "Competitor Form: Add Field, for a new configurable field"
-          },
-          {
-            "src": "assets/notion/lead-management-settings/004.jpg",
-            "caption": "Competitor Form: the Required toggle on a field"
-          },
-          {
-            "src": "assets/notion/lead-management-settings/011.jpg",
-            "caption": "Save Changes, to keep the stage and status settings"
-          },
-          {
-            "src": "assets/notion/lead-management-settings/015.jpg",
-            "caption": "Save Changes, after configuring the Opportunities Form"
-          },
-          {
-            "src": "assets/notion/lead-management-settings/017.jpg",
-            "caption": "Expense form: the required standard fields"
-          },
-          {
-            "src": "assets/notion/lead-management-settings/018.jpg",
-            "caption": "Expense form: Add Field, for extra fields"
-          },
-          {
-            "src": "assets/notion/lead-management-settings/020.jpg",
-            "caption": "Expense form: Show on Cards, which puts a field on the grid view cards"
-          },
-          {
-            "src": "assets/notion/lead-management-settings/022.jpg",
-            "caption": "Expense form Approval Workflow: Create Level"
-          },
-          {
-            "src": "assets/notion/lead-management-settings/023.jpg",
-            "caption": "A level description and its approvers from Global Data Users & Permissions"
-          },
-          {
-            "src": "assets/notion/lead-management-settings/027.jpg",
-            "caption": "Business Unit: Add, to enter a name and description"
-          },
-          {
-            "src": "assets/notion/lead-management-settings/029.jpg",
-            "caption": "Project Types: Add, to enter a code, description and classification"
-          },
-          {
-            "src": "assets/notion/lead-management-settings/031.jpg",
-            "caption": "Project Types: Upload Excel"
-          },
-          {
-            "src": "assets/notion/lead-management-settings/032.jpg",
-            "caption": "Look Back Window in days and SLA in hours"
-          },
-          {
-            "src": "assets/notion/lead-management-settings-users-and-permissions/009.jpg",
-            "caption": "Manage Columns for user groups"
-          },
-          {
-            "src": "assets/notion/opportunity-management-global-opportunity-status/001.jpg",
-            "caption": "Opportunity Status: the statuses that can be given to an opportunity"
           }
         ]
       },
@@ -14552,19 +14398,9 @@ const MODULES = [
             "note": "Only four things are required to save a lead: **Opportunity Name**, **Business Unit**, **Status** and **Created Date**. Everything else can wait: open the lead later to fill in the rest. If Submit fails with \"Status is required\", the Lead stage has no statuses configured under Settings → Stages & Statuses Configuration.",
             "images": [
               {
-                "src": "assets/notion/lead-management-leads-main-page/001.jpg",
-                "caption": "The Opportunities tab, listing every opportunity that has been created",
-                "step": 1
-              },
-              {
                 "src": "assets/guides/opportunity/007.jpg",
                 "caption": "Create Opportunity window with its four sections",
                 "step": 2
-              },
-              {
-                "src": "assets/notion/lead-management-leads-main-page/003.jpg",
-                "caption": "Submit, to create the opportunity from the dialog",
-                "step": 6
               }
             ]
           },
@@ -14616,23 +14452,6 @@ const MODULES = [
               "In <strong>Column Options</strong>, use the searchable checkbox list to turn fields on or off.",
               "In <strong>Column Arrangement</strong>, drag a column by its handle to reorder it, or click the × next to a column to remove it.",
               "Click <strong>Apply</strong> to commit your changes, or <strong>Reset to Default</strong> to restore the original column set."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/lead-management-leads-main-page/027.jpg",
-                "caption": "Manage Columns: ticking the fields to show",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/lead-management-leads-main-page/028.jpg",
-                "caption": "Column Arrangement: dragging columns into order",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/lead-management-leads-main-page/029.jpg",
-                "caption": "Apply, to save the arranged columns",
-                "step": 4
-              }
             ]
           },
           {
@@ -14640,13 +14459,6 @@ const MODULES = [
             "steps": [
               "Configure your desired filters, visible columns, and layout (Table/Grid/Kanban).",
               "Click the <strong>save</strong> icon in the Opportunities toolbar — this persists the filter, column, and layout configuration together as a single saved view."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/lead-management-leads-main-page/021.jpg",
-                "caption": "View: Table, Card or Kanban, then Save Layout",
-                "step": 2
-              }
             ]
           },
           {
@@ -14697,26 +14509,6 @@ const MODULES = [
                 "src": "assets/guides/opportunity/008.jpg",
                 "caption": "Opportunity profile with Details, Status & Value, Timeline & Activity and Contact",
                 "step": 1
-              },
-              {
-                "src": "assets/notion/lead-management-leads-profile/002.jpg",
-                "caption": "The opportunity profile, with all the details of the selected opportunity",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/lead-management-leads-profile/003.jpg",
-                "caption": "Business Unit, chosen from a drop-down set up in Settings",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/lead-management-leads-profile/006.jpg",
-                "caption": "Competitor, chosen from the competitors you have set up",
-                "step": 5
-              },
-              {
-                "src": "assets/notion/lead-management-leads-profile/010.jpg",
-                "caption": "Save Changes, to keep everything entered on the profile",
-                "step": 6
               }
             ]
           },
@@ -14726,23 +14518,6 @@ const MODULES = [
               "Open the three-dot menu on an opportunity. It shows **History**, **Edit**, **Clone** and **Delete**.",
               "Click **Clone** and tick the fields you want to copy to the new opportunity.",
               "Click **Submit** to create the new opportunity with the selected details."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/lead-management-leads-main-page/007.jpg",
-                "caption": "The three-dot menu: History, Edit, Clone and Delete",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/lead-management-leads-main-page/009.jpg",
-                "caption": "Ticking the fields to copy to another opportunity",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/lead-management-leads-main-page/010.jpg",
-                "caption": "Submit, to create the new opportunity from the copy",
-                "step": 3
-              }
             ]
           },
           {
@@ -14750,28 +14525,6 @@ const MODULES = [
             "steps": [
               "Click **Filters** and pick the fields to filter by: Opportunity Name, ID, Status, Created By, Created Date, Due Date, Groups, Customers, Customer POC, Owner, Owner POC, Locations or Assign To.",
               "Click **Submit** to apply the filters, **Save Filters** to keep them or **Clear Filters** to remove them."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/lead-management-leads-main-page/022.jpg",
-                "caption": "Filters on the opportunities list",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/lead-management-leads-main-page/023.jpg",
-                "caption": "The fields available as filters",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/lead-management-leads-main-page/024.jpg",
-                "caption": "Save Filters",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/lead-management-leads-main-page/026.jpg",
-                "caption": "Submit, to apply the filters",
-                "step": 2
-              }
             ]
           },
           {
@@ -14782,48 +14535,6 @@ const MODULES = [
               "Fill in the details and click **Upload**.",
               "To change existing opportunities, choose **Update** mode and download the **Update** Excel. **Opportunity ID** is the only mandatory field.",
               "Fill in the fields to change and click **Upload**."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/lead-management-leads-main-page/013.jpg",
-                "caption": "Export, for downloading or uploading opportunities through Excel",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/lead-management-leads-main-page/014.jpg",
-                "caption": "Create mode for new opportunities",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/lead-management-leads-main-page/015.jpg",
-                "caption": "The link to download the Create Excel",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/lead-management-leads-main-page/016.jpg",
-                "caption": "The Create Excel, with mandatory fields marked",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/lead-management-leads-main-page/017.jpg",
-                "caption": "Upload, for the filled Create Excel",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/lead-management-leads-main-page/018.jpg",
-                "caption": "The link to download the Update Excel",
-                "step": 4
-              },
-              {
-                "src": "assets/notion/lead-management-leads-main-page/019.jpg",
-                "caption": "The Update Excel, where Opportunity ID is the only mandatory field",
-                "step": 4
-              },
-              {
-                "src": "assets/notion/lead-management-leads-main-page/020.jpg",
-                "caption": "Upload, for the filled Update Excel",
-                "step": 5
-              }
             ]
           }
         ],
@@ -14831,90 +14542,6 @@ const MODULES = [
           {
             "src": "assets/guides/opportunity/006.jpg",
             "caption": "Stage chips with counts"
-          },
-          {
-            "src": "assets/notion/lead-management-leads-main-page/006.jpg",
-            "caption": "Assign to, choosing the rosters for an opportunity"
-          },
-          {
-            "src": "assets/notion/lead-management-leads-main-page/008.jpg",
-            "caption": "History: every action on the opportunity since it was created"
-          },
-          {
-            "src": "assets/notion/lead-management-leads-main-page/011.jpg",
-            "caption": "Search by Name"
-          },
-          {
-            "src": "assets/notion/lead-management-leads-main-page/012.jpg",
-            "caption": "The status bar: opportunities in each status"
-          },
-          {
-            "src": "assets/notion/lead-management-leads-main-page/030.jpg",
-            "caption": "Filter and sort options on each column in Table view"
-          },
-          {
-            "src": "assets/notion/lead-management-leads-main-page/031.jpg",
-            "caption": "The Proposals column with a Linked Proposals link"
-          },
-          {
-            "src": "assets/notion/lead-management-leads-main-page/032.jpg",
-            "caption": "The Linked Proposals dialog, listing the proposals"
-          },
-          {
-            "src": "assets/notion/lead-management-leads-profile/004.jpg",
-            "caption": "Required Compliances: choosing the compliance requirements that apply"
-          },
-          {
-            "src": "assets/notion/lead-management-leads-profile/005.jpg",
-            "caption": "Inactive Threshold Notification, to get an alert when an opportunity goes quiet"
-          },
-          {
-            "src": "assets/notion/lead-management-leads-profile/007.jpg",
-            "caption": "Configurable Fields added in Settings, shown on the profile"
-          },
-          {
-            "src": "assets/notion/lead-management-leads-profile/008.jpg",
-            "caption": "Attachments, for files related to the opportunity"
-          },
-          {
-            "src": "assets/notion/lead-management-leads-profile/009.jpg",
-            "caption": "Assign To, choosing the rosters for the opportunity"
-          },
-          {
-            "src": "assets/notion/lead-management-leads-profile/011.jpg",
-            "caption": "History: the opportunity from creation to now"
-          },
-          {
-            "src": "assets/notion/lead-management-leads-profile/012.jpg",
-            "caption": "Linked Proposals, shown at the top of the opportunity"
-          },
-          {
-            "src": "assets/notion/lead-management-leads-profile/013.jpg",
-            "caption": "Submit, to create a proposal and link it to the opportunity"
-          },
-          {
-            "src": "assets/notion/lead-management-leads-profile/040.jpg",
-            "caption": "Table view and Card view for tasks, with Save Layout"
-          },
-          {
-            "src": "assets/notion/lead-management-leads-profile/060.jpg",
-            "caption": "Actions on an expense: History, Edit and Delete"
-          },
-          {
-            "src": "assets/notion/lead-management-leads-profile/061.jpg",
-            "caption": "Expense Workflow Issues: search by ID"
-          },
-          {
-            "src": "assets/notion/lead-management-leads-profile/062.jpg",
-            "caption": "The status bar for expense workflow issues: approved and rejected"
-          },
-          {
-            "src": "assets/notion/lead-management-leads-profile/064.jpg",
-            "caption": "Assign to, for an expense form issue"
-          },
-          {
-            "src": "assets/notion/lead-management-leads-profile/067.jpg",
-            "caption": "Filters on expense workflow issues"
           }
         ]
       },
@@ -14971,28 +14598,6 @@ const MODULES = [
               "Click a row's <strong>Customer Name</strong> to open its list of contacts.",
               "Click a specific <strong>Contact</strong> card to open that person's interaction workspace.",
               "Use the sub-tabs — <strong>Call Logs, Mails, Events, Meetings, Task, Comments, Notes, See History</strong> — to view or log that particular type of interaction."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/lead-management-customer-interactions/001.jpg",
-                "caption": "Customers created in the Customers tab, listed on Clients Interactions",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/lead-management-customer-interactions/013.jpg",
-                "caption": "The customer's points of contact",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/lead-management-customer-interactions/016.jpg",
-                "caption": "Choosing General or a specific opportunity, then the contact's tabs",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/lead-management-customer-interactions/054.jpg",
-                "caption": "See History: everything since the opportunity was created, including its tasks",
-                "step": 4
-              }
             ]
           },
           {
@@ -15001,18 +14606,6 @@ const MODULES = [
               "Open the contact's interaction workspace.",
               "Go to the <strong>Call Logs</strong> sub-tab.",
               "Click <strong>+ Create</strong> and fill in Call Type, Date, Time, Summary, Tag, and any Attachments."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/lead-management-customer-interactions/017.jpg",
-                "caption": "The Create call log window",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/lead-management-customer-interactions/018.jpg",
-                "caption": "Submit, to save the call log with its attachments",
-                "step": 3
-              }
             ]
           },
           {
@@ -15021,18 +14614,6 @@ const MODULES = [
               "Open the contact's interaction workspace.",
               "Go to the <strong>Notes</strong> sub-tab.",
               "Type your note into the rich text editor, optionally attaching a file, then save."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/lead-management-customer-interactions/051.jpg",
-                "caption": "Notes: information about the contact",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/lead-management-customer-interactions/052.jpg",
-                "caption": "Typing a message and clicking Send to create the note",
-                "step": 3
-              }
             ]
           },
           {
@@ -15058,38 +14639,6 @@ const MODULES = [
               "Click **Compose Mail**, fill in **To**, **CC** and **Message**, then click **Send** or **Save as Draft**.",
               "To link an email to an opportunity, choose **Modules** under **Map your Email**.",
               "Use **Reply**, **Reply All**, **Forward**, **Star** and **Print** as needed."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/lead-management-customer-interactions/022.jpg",
-                "caption": "Inbox: all received mail",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/lead-management-customer-interactions/025.jpg",
-                "caption": "Sent: all mail that has been sent",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/lead-management-customer-interactions/020.jpg",
-                "caption": "Compose Mail",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/lead-management-customer-interactions/021.jpg",
-                "caption": "To, CC and Message, then Send or Save as Draft",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/lead-management-customer-interactions/023.jpg",
-                "caption": "Map your Email: choosing Modules to link the email to an opportunity",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/lead-management-customer-interactions/024.jpg",
-                "caption": "Reply, Reply All, Forward, Star and Print",
-                "step": 4
-              }
             ]
           },
           {
@@ -15099,68 +14648,6 @@ const MODULES = [
               "Open **Meetings** and click **Create Meeting**. Fill in the required fields and click **Submit**.",
               "Open **Task** and click **Add Task**. Fill in the fields and click **Create**.",
               "Use **Move** to move an event or task from General to a specific opportunity."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/lead-management-customer-interactions/026.jpg",
-                "caption": "The Events tab for the contact",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/lead-management-customer-interactions/027.jpg",
-                "caption": "Add Event",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/lead-management-customer-interactions/028.jpg",
-                "caption": "Choosing the group for the event",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/lead-management-customer-interactions/029.jpg",
-                "caption": "Submit, to save the event",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/lead-management-customer-interactions/033.jpg",
-                "caption": "Meetings",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/lead-management-customer-interactions/034.jpg",
-                "caption": "The Create Meeting window",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/lead-management-customer-interactions/035.jpg",
-                "caption": "Submit, to save the meeting",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/lead-management-customer-interactions/036.jpg",
-                "caption": "The Task tab for the contact",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/lead-management-customer-interactions/037.jpg",
-                "caption": "Add Task",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/lead-management-customer-interactions/039.jpg",
-                "caption": "Create, to add the task",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/lead-management-customer-interactions/031.jpg",
-                "caption": "Move, to move an event from General to a specific opportunity",
-                "step": 4
-              },
-              {
-                "src": "assets/notion/lead-management-customer-interactions/044.jpg",
-                "caption": "Move, to move a task from General to a specific opportunity",
-                "step": 4
-              }
             ]
           }
         ],
@@ -15168,22 +14655,6 @@ const MODULES = [
           {
             "src": "assets/guides/opportunity/010.jpg",
             "caption": "Clients Interactions tab on an opportunity"
-          },
-          {
-            "src": "assets/notion/lead-management-customer-interactions/002.jpg",
-            "caption": "Search by ID and Name"
-          },
-          {
-            "src": "assets/notion/lead-management-customer-interactions/004.jpg",
-            "caption": "Filters: customer ID, name and created date"
-          },
-          {
-            "src": "assets/notion/lead-management-customer-interactions/007.jpg",
-            "caption": "Manage Columns for the customers list"
-          },
-          {
-            "src": "assets/notion/lead-management-customer-interactions/012.jpg",
-            "caption": "Table view and Card view for customers"
           }
         ]
       },
@@ -15298,13 +14769,6 @@ const MODULES = [
               "On <strong>My Dashboard</strong>, check the <strong>Due This Week</strong> KPI card for a quick count.",
               "Scroll to the <strong>Upcoming Opportunity Due Date</strong> list to see the actual records approaching their due date.",
               "Alternatively, go to the main <strong>Opportunities</strong> list and filter by <strong>Due Date</strong> for a fully customizable date range instead of the dashboard's fixed \"this week\" window."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/lead-management-dashboard/011.jpg",
-                "caption": "Opportunity Deadline: due dates and follow-up dates to watch",
-                "step": 2
-              }
             ]
           },
           {
@@ -15324,22 +14788,6 @@ const MODULES = [
           {
             "src": "assets/guides/opportunity/002.jpg",
             "caption": "Task panel with + Create Task"
-          },
-          {
-            "src": "assets/notion/lead-management-dashboard/001.jpg",
-            "caption": "The dashboard, which can be set as the default tab from its three-dot menu"
-          },
-          {
-            "src": "assets/notion/lead-management-dashboard/005.jpg",
-            "caption": "Events: upcoming events for the opportunities, with Create Event"
-          },
-          {
-            "src": "assets/notion/lead-management-dashboard/007.jpg",
-            "caption": "To Do list: tasks for opportunities by date, with Add a task"
-          },
-          {
-            "src": "assets/notion/lead-management-dashboard/009.jpg",
-            "caption": "Mails: Compose Mail opens Arena Communications"
           }
         ]
       },
@@ -15425,23 +14873,6 @@ const MODULES = [
               "Fill in <strong>Name</strong> and <strong>Date</strong> (both required), and optionally add a Description and Time.",
               "Search for and link the required <strong>Opportunity</strong>.",
               "Click <strong>Create</strong> (or Cancel to discard)."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/opportunity-management-tasks/001.jpg",
-                "caption": "The Task screen",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/opportunity-management-tasks/002.jpg",
-                "caption": "Add Task",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/lead-management-tasks/001.jpg",
-                "caption": "Linking a task to an opportunity",
-                "step": 4
-              }
             ]
           },
           {
@@ -15451,19 +14882,7 @@ const MODULES = [
               "Browse the month-view calendar of opportunity due dates, meetings, and follow-ups.",
               "Use the mini date-picker and My Calendars panel to navigate, and check the daily Events list for a selected day's schedule."
             ],
-            "note": "Like the Events, Meetings, Task, and Comments sub-tabs elsewhere in the module, this shortcut needs Calendar consent (My Profile → Settings → Calendar consent) to fully function.",
-            "images": [
-              {
-                "src": "assets/notion/lead-management-calendar/001.jpg",
-                "caption": "The calendar, which syncs both ways with Outlook",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/lead-management-calendar/009.jpg",
-                "caption": "Filters, to show events by category",
-                "step": 3
-              }
-            ]
+            "note": "Like the Events, Meetings, Task, and Comments sub-tabs elsewhere in the module, this shortcut needs Calendar consent (My Profile → Settings → Calendar consent) to fully function."
           },
           {
             "title": "Creating a new customer",
@@ -15472,28 +14891,6 @@ const MODULES = [
               "Step 1 — <strong>Basic Details</strong>: enter Customer Name (required), plus optional Short Name, Alias Name, Phone Number, Email, Fax Number, Url, Group, and Primary/Mailing/Billing Address (use the \"Same as Primary address\" shortcut to save time on Mailing/Billing).",
               "Step 2 — <strong>Locations & Tax Codes</strong>: complete this step as applicable.",
               "Step 3 — <strong>Preview</strong>: review the entered data, then submit."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/lead-management-customers/002.jpg",
-                "caption": "Create Customer, which opens the customer dialog",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/lead-management-customers/003.jpg",
-                "caption": "Choosing a group for the customer",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/lead-management-customers/004.jpg",
-                "caption": "The zip code field",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/lead-management-customers/005.jpg",
-                "caption": "Preview, then Submit to create the customer",
-                "step": 4
-              }
             ]
           },
           {
@@ -15501,18 +14898,6 @@ const MODULES = [
             "steps": [
               "Open the customer card's three-dot menu.",
               "Choose <strong>Edit</strong> to open the record in an editable form, <strong>Delete</strong> to remove it, or <strong>History</strong> to view its audit/change history."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/lead-management-customers/022.jpg",
-                "caption": "The three-dot menu: Edit, Delete and Notes",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/lead-management-customers/023.jpg",
-                "caption": "Edit, to change the customer's details",
-                "step": 2
-              }
             ]
           },
           {
@@ -15527,23 +14912,6 @@ const MODULES = [
             "steps": [
               "In the Customers toolbar, click <strong>Convert Customers to Owners</strong> to migrate a customer record into the Owners list.",
               "Or click <strong>Add Groups</strong> to organize multiple customer records together into a group."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/lead-management-customers/010.jpg",
-                "caption": "Convert Customers to Owners: customers not yet converted",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/lead-management-customers/011.jpg",
-                "caption": "Choosing customers to convert, then Convert",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/lead-management-customers/001.jpg",
-                "caption": "Add Row in the Groups tab",
-                "step": 2
-              }
             ]
           },
           {
@@ -15552,18 +14920,6 @@ const MODULES = [
               "Open the <strong>Owners</strong> shortcut and click <strong>Create Owner</strong>.",
               "Complete the creation form and submit.",
               "To edit or delete an existing Owner later, use the same three-dot menu pattern as Customers and Competitors."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/lead-management-owners/001.jpg",
-                "caption": "Register Owner, which opens the owner dialog",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/lead-management-owners/007.jpg",
-                "caption": "Preview, then Submit to create the owner",
-                "step": 2
-              }
             ]
           },
           {
@@ -15574,23 +14930,6 @@ const MODULES = [
               "Select the <strong>Competitor Type</strong> (required — Direct, Indirect, or Replacement Competitor).",
               "Optionally add a Description.",
               "Click <strong>Submit</strong> (or Cancel to discard)."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/lead-management-competitors/001.jpg",
-                "caption": "Create Competitor, which opens the competitor dialog",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/lead-management-competitors/002.jpg",
-                "caption": "Competitor Name and Competitor Type",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/lead-management-competitors/003.jpg",
-                "caption": "Submit, to create the competitor",
-                "step": 5
-              }
             ]
           },
           {
@@ -15598,28 +14937,6 @@ const MODULES = [
             "steps": [
               "Use the upload option on the Customers screen. Choose **Create** to add customers from an Excel sheet, or **Update** to edit existing ones.",
               "Download the template, fill it in and upload it. **Download** exports the list of customers."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/lead-management-customers/014.jpg",
-                "caption": "Upload: Create or Update",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/lead-management-customers/015.jpg",
-                "caption": "Create mode, to add customers from Excel",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/lead-management-customers/016.jpg",
-                "caption": "Update mode, to edit existing customers from Excel",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/lead-management-customers/013.jpg",
-                "caption": "Download, for the list of customers in Excel",
-                "step": 2
-              }
             ]
           },
           {
@@ -15630,43 +14947,6 @@ const MODULES = [
               "To fill in the details from an image, click **OCR** and choose the image.",
               "Choose **Default** to make the new contact the customer's default point of contact.",
               "Use **Copy Contacts to Customers** to copy contacts from one customer to others."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/lead-management-customers/027.jpg",
-                "caption": "Create Contact",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/lead-management-customers/028.jpg",
-                "caption": "The contact form, with a secondary email address",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/lead-management-customers/030.jpg",
-                "caption": "Preview, then Submit to create the contact",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/lead-management-customers/031.jpg",
-                "caption": "OCR, to choose an image for automatic extraction",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/lead-management-customers/039.jpg",
-                "caption": "Default, to set the new contact as the default point of contact",
-                "step": 4
-              },
-              {
-                "src": "assets/notion/lead-management-customers/032.jpg",
-                "caption": "Copy Contacts to Customers",
-                "step": 5
-              },
-              {
-                "src": "assets/notion/lead-management-customers/033.jpg",
-                "caption": "Choosing the customers to copy contacts to",
-                "step": 5
-              }
             ]
           }
         ],
@@ -15674,162 +14954,6 @@ const MODULES = [
           {
             "src": "assets/guides/opportunity/017.jpg",
             "caption": "Toolbar with Tasks, Calendar, Contacts, Customers, Owners, Competitors and Settings"
-          },
-          {
-            "src": "assets/notion/lead-management-tasks/003.jpg",
-            "caption": "Tasks in Grid view, as cards"
-          },
-          {
-            "src": "assets/notion/lead-management-tasks/006.jpg",
-            "caption": "Mark Completed, to set a task as done or pending"
-          },
-          {
-            "src": "assets/notion/lead-management-tasks/007.jpg",
-            "caption": "Assigning a task to one user, several users or all users"
-          },
-          {
-            "src": "assets/notion/lead-management-tasks/009.jpg",
-            "caption": "Mapping a task: the drop-down lists only customers linked to the opportunity"
-          },
-          {
-            "src": "assets/notion/lead-management-calendar/010.jpg",
-            "caption": "Mapping an event to a customer, customer POC or opportunity"
-          },
-          {
-            "src": "assets/notion/lead-management-calendar/011.jpg",
-            "caption": "Editing an event's title, date, time and description"
-          },
-          {
-            "src": "assets/notion/lead-management-calendar/012.jpg",
-            "caption": "Deleting an event from the calendar"
-          },
-          {
-            "src": "assets/notion/lead-management-customers/006.jpg",
-            "caption": "POC OCR: reading contact details from an uploaded document or image"
-          },
-          {
-            "src": "assets/notion/lead-management-customers/007.jpg",
-            "caption": "Zoom Info, to fill in customer details from the ZoomInfo database"
-          },
-          {
-            "src": "assets/notion/lead-management-customers/008.jpg",
-            "caption": "The Create from Zoom Info window"
-          },
-          {
-            "src": "assets/notion/lead-management-customers/012.jpg",
-            "caption": "Search, to find a customer"
-          },
-          {
-            "src": "assets/notion/lead-management-customers/017.jpg",
-            "caption": "Filters: customer ID, name and created date"
-          },
-          {
-            "src": "assets/notion/lead-management-customers/018.jpg",
-            "caption": "Manage Columns, available in Table view"
-          },
-          {
-            "src": "assets/notion/lead-management-customers/019.jpg",
-            "caption": "Table view for customers"
-          },
-          {
-            "src": "assets/notion/lead-management-customers/020.jpg",
-            "caption": "Grid view for customers, as cards"
-          },
-          {
-            "src": "assets/notion/lead-management-customers/025.jpg",
-            "caption": "Notes, for chats or comments on the customer"
-          },
-          {
-            "src": "assets/notion/lead-management-customers/034.jpg",
-            "caption": "Search, to find a customer contact by ID or name"
-          },
-          {
-            "src": "assets/notion/lead-management-customers/040.jpg",
-            "caption": "Edit, to change a contact's details"
-          },
-          {
-            "src": "assets/notion/lead-management-owners/004.jpg",
-            "caption": "Billing Address: the same as the primary address or a different one"
-          },
-          {
-            "src": "assets/notion/lead-management-owners/005.jpg",
-            "caption": "Locations: choosing from the locations in Global Data"
-          },
-          {
-            "src": "assets/notion/lead-management-owners/006.jpg",
-            "caption": "Tax Codes: choosing from the tax codes in Global Data"
-          },
-          {
-            "src": "assets/notion/lead-management-owners/008.jpg",
-            "caption": "Settings, for the levels used when creating an owner"
-          },
-          {
-            "src": "assets/notion/lead-management-owners/009.jpg",
-            "caption": "Search, by owner ID or name"
-          },
-          {
-            "src": "assets/notion/lead-management-owners/011.jpg",
-            "caption": "Download, for the list of owners in Excel"
-          },
-          {
-            "src": "assets/notion/lead-management-owners/012.jpg",
-            "caption": "Upload: Create or Update"
-          },
-          {
-            "src": "assets/notion/lead-management-owners/015.jpg",
-            "caption": "Filters: owner ID, name and dates"
-          },
-          {
-            "src": "assets/notion/lead-management-owners/016.jpg",
-            "caption": "Manage Columns, available in Table view"
-          },
-          {
-            "src": "assets/notion/lead-management-owners/017.jpg",
-            "caption": "Table view for owners"
-          },
-          {
-            "src": "assets/notion/lead-management-owners/018.jpg",
-            "caption": "Grid view for owners, as cards"
-          },
-          {
-            "src": "assets/notion/lead-management-owners/023.jpg",
-            "caption": "Create Contact, for an owner's contact details"
-          },
-          {
-            "src": "assets/notion/lead-management-owners/031.jpg",
-            "caption": "Default, to set a contact as the owner's default point of contact"
-          },
-          {
-            "src": "assets/notion/lead-management-competitors/004.jpg",
-            "caption": "Search, to find a competitor"
-          },
-          {
-            "src": "assets/notion/lead-management-competitors/005.jpg",
-            "caption": "Download, for the list of competitors in Excel"
-          },
-          {
-            "src": "assets/notion/lead-management-competitors/006.jpg",
-            "caption": "Upload: Create or Update"
-          },
-          {
-            "src": "assets/notion/lead-management-competitors/009.jpg",
-            "caption": "Manage Columns, available in Table view"
-          },
-          {
-            "src": "assets/notion/lead-management-competitors/010.jpg",
-            "caption": "Table view for competitors"
-          },
-          {
-            "src": "assets/notion/lead-management-competitors/011.jpg",
-            "caption": "Grid view for competitors, as cards"
-          },
-          {
-            "src": "assets/notion/lead-management-competitors/013.jpg",
-            "caption": "Edit, to change a competitor's fields"
-          },
-          {
-            "src": "assets/notion/lead-management-competitors/014.jpg",
-            "caption": "Delete, to remove a competitor"
           }
         ]
       },
@@ -15953,32 +15077,13 @@ const MODULES = [
               "Use <strong>Filters</strong> or <strong>Sort By</strong> to narrow the data, then click <strong>Export</strong>.",
               "Use the back arrow next to the report title to return to the reports list."
             ],
-            "note": "Huddle Report and Pipeline Gantt View don't follow this exact pattern — instead of Export, you set parameters and click Generate. See the dedicated procedure for Huddle Report below.",
-            "images": [
-              {
-                "src": "assets/notion/opportunity-management-reports/002.jpg",
-                "caption": "Filters on the left: opportunity, dates, assigned to and status",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/opportunity-management-reports/004.jpg",
-                "caption": "Excel, to download the report",
-                "step": 3
-              }
-            ]
+            "note": "Huddle Report and Pipeline Gantt View don't follow this exact pattern — instead of Export, you set parameters and click Generate. See the dedicated procedure for Huddle Report below."
           },
           {
             "title": "Customizing which columns appear in a report",
             "steps": [
               "Open the desired report.",
               "Click <strong>Manage Columns</strong> — the same control used on the main Opportunities list — to add, remove, or reorder columns."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/opportunity-management-reports/003.jpg",
-                "caption": "Columns, to choose and arrange what the report shows",
-                "step": 2
-              }
             ]
           },
           {
@@ -16002,10 +15107,6 @@ const MODULES = [
           {
             "src": "assets/guides/opportunity/015.jpg",
             "caption": "Report tiles on the Reports tab"
-          },
-          {
-            "src": "assets/notion/opportunity-management-reports/001.jpg",
-            "caption": "Reports: task, notes and email reports built from opportunity data"
           }
         ]
       },
@@ -16116,11 +15217,6 @@ const MODULES = [
             ],
             "images": [
               {
-                "src": "assets/notion/lead-management-leads-profile/050.jpg",
-                "caption": "The Expenses tab, with the costs for the opportunity",
-                "step": 1
-              },
-              {
                 "src": "assets/guides/opportunity/014.jpg",
                 "caption": "Expenses tab",
                 "step": 2
@@ -16135,11 +15231,6 @@ const MODULES = [
               "For any missing or expired item, fix the record under <strong>Global Data → Compliance Hub</strong>."
             ],
             "images": [
-              {
-                "src": "assets/notion/lead-management-leads-profile/042.jpg",
-                "caption": "Linked compliances shown in the Compliance Tracker",
-                "step": 1
-              },
               {
                 "src": "assets/guides/opportunity/013.jpg",
                 "caption": "Compliance Tracker with Readiness Score",
@@ -16162,63 +15253,6 @@ const MODULES = [
               "Click **Add User**. The dialog lists the users created in Global Data. Search by name, tick the users and click **Submit**.",
               "Click **Add Crew**. The dialog lists the crews from Global Data → Crews. Search, tick the crews and click **Submit**.",
               "To remove a user or crew, open the three-dot menu on its card and click **Delete**."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/lead-management-leads-profile/014.jpg",
-                "caption": "The Teams tab, with Users and Crews",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/lead-management-leads-profile/015.jpg",
-                "caption": "Add User, to add users to the opportunity",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/lead-management-leads-profile/016.jpg",
-                "caption": "The Add Users dialog, listing users from Global Data",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/lead-management-leads-profile/018.jpg",
-                "caption": "Ticking a user to select them",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/lead-management-leads-profile/019.jpg",
-                "caption": "Submit, to save the user selection",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/lead-management-leads-profile/022.jpg",
-                "caption": "Add Crew, to add crews to the opportunity",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/lead-management-leads-profile/023.jpg",
-                "caption": "The Add Crews dialog, listing crews from Global Data",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/lead-management-leads-profile/025.jpg",
-                "caption": "Ticking a crew to select it",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/lead-management-leads-profile/026.jpg",
-                "caption": "Submit, to save the crew selection",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/lead-management-leads-profile/021.jpg",
-                "caption": "Delete, from the three-dot menu on a user's card",
-                "step": 4
-              },
-              {
-                "src": "assets/notion/lead-management-leads-profile/028.jpg",
-                "caption": "Delete, from the three-dot menu on a crew's card",
-                "step": 4
-              }
             ]
           },
           {
@@ -16228,58 +15262,6 @@ const MODULES = [
               "Click **Add Task**, fill in the task details and click **Create**.",
               "Open the three-dot menu to **Edit**, **Map** or **Delete** the task. **Map** links it to a customer group, customer and customer POC.",
               "Use **Assign to** to give the task to rosters, and tick the checkbox on the card when it is done."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/lead-management-leads-profile/029.jpg",
-                "caption": "The Task tab, listing the tasks for the opportunity",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/lead-management-leads-profile/030.jpg",
-                "caption": "Add Task",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/lead-management-leads-profile/031.jpg",
-                "caption": "The Add Task dialog and its fields",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/lead-management-leads-profile/032.jpg",
-                "caption": "Create, to add the task",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/lead-management-leads-profile/034.jpg",
-                "caption": "The three-dot menu: Edit, Map and Delete",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/lead-management-leads-profile/035.jpg",
-                "caption": "The Map dialog",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/lead-management-leads-profile/036.jpg",
-                "caption": "Choosing the group, customer and customer POC to map the task to",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/lead-management-leads-profile/037.jpg",
-                "caption": "Submit, to map the task to the customer details",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/lead-management-leads-profile/038.jpg",
-                "caption": "Assign to, choosing the rosters for the task",
-                "step": 4
-              },
-              {
-                "src": "assets/notion/lead-management-leads-profile/039.jpg",
-                "caption": "The checkbox on a task card, ticked when the task is done",
-                "step": 4
-              }
             ]
           },
           {
@@ -16288,28 +15270,6 @@ const MODULES = [
               "Open the opportunity and click the **Documents** tab. **Chat Documents** holds files sent through chat and **Mail Documents** holds files exchanged by email.",
               "Click **New Folder**, enter a name and click **Submit**.",
               "Click **Add File** to upload documents into the folder."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/lead-management-leads-profile/045.jpg",
-                "caption": "The Documents tab, with all the documents for the opportunity",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/lead-management-leads-profile/046.jpg",
-                "caption": "Chat Documents and Mail Documents folders",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/lead-management-leads-profile/047.jpg",
-                "caption": "New Folder, to name and create a folder",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/lead-management-leads-profile/048.jpg",
-                "caption": "Add File, to upload documents into a folder",
-                "step": 3
-              }
             ]
           }
         ],
@@ -16860,7 +15820,10 @@ const MODULES = [
         "heading": "Equipment Master and Accessory Master",
         "intro": "<p>The **Equipment Master** and **Accessory Master** (Equipment Management → Equipment) list every piece of equipment and accessory in the organization. Equipment Master Users use them to create and update records, monitor statuses and run actions such as Request Haul.</p><p>Only equipment set up in **Settings → Equipment Setup** (or **Accessory Setup**) can be registered. The top of the page groups records by status; click a status to see only those records. Open a record to see its profile.</p>",
         "definitions": [
-          {"term":"Where this data comes from (Equipment Master lists)","definition":"The **Equipment** (or **Accessory**) dropdown lists only items configured in **Settings → Equipment Setup** (or **Accessory Setup**); those entries use the codes created in **Global Data → Cost → Equipment**. **Category** and **Sub-category** fill in automatically from the chosen equipment. **Fuel Type** comes from **Settings → Equipment Setup → Fuel Type**. The **Location** dropdown depends on the Inventory or Project toggle: Inventory locations come from **Inventory Locations** (the Business Unit must be mapped to the inventory location in Inventory Management), and Project locations come from your projects. Rates default from the category's **Rate Card Template** (Global Data) and can be overridden before you confirm. Live readings (Engine Hours, GPS Fix Time, Message Time, geofence and map) come from the telematics device mapped to the equipment. On a request, **Work Location** lists only projects where you are added under **Project Setup → People**. Where the data goes: the equipment record feeds the Allocation Lifecycle, hauling, work orders and maintenance history. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."},
+          {
+            "term": "Where this data comes from (Equipment Master lists)",
+            "definition": "The **Equipment** (or **Accessory**) dropdown lists only items configured in **Settings → Equipment Setup** (or **Accessory Setup**); those entries use the codes created in **Global Data → Cost → Equipment**. **Category** and **Sub-category** fill in automatically from the chosen equipment. **Fuel Type** comes from **Settings → Equipment Setup → Fuel Type**. The **Location** dropdown depends on the Inventory or Project toggle: Inventory locations come from **Inventory Locations** (the Business Unit must be mapped to the inventory location in Inventory Management), and Project locations come from your projects. Rates default from the category's **Rate Card Template** (Global Data) and can be overridden before you confirm. Live readings (Engine Hours, GPS Fix Time, Message Time, geofence and map) come from the telematics device mapped to the equipment. On a request, **Work Location** lists only projects where you are added under **Project Setup → People**. Where the data goes: the equipment record feeds the Allocation Lifecycle, hauling, work orders and maintenance history. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
+          },
           {
             "term": "Equipment Master / Accessory Master",
             "definition": "The page that lists all equipment records (or accessory records) with their status, business unit and location. From it you create records with **Add Equipment**, filter and sort, switch between Grid and Table views, and open a record's profile."
@@ -20017,48 +18980,6 @@ const MODULES = [
               "In <strong>Identify Forms</strong>, use Add Form, tick the required forms, and Submit.",
               "In <strong>Prepare Schedule</strong>, choose the Recurrence Type and set Start/End dates and Time.",
               "In <strong>Assign Crew</strong>, select the responsible individuals or crews and Save."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/equipment-setup-maintenance-logs/001.jpg",
-                "caption": "Equipment Setup: a space to schedule maintenance logs and utilization logs",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/equipment-setup-maintenance-logs/002.jpg",
-                "caption": "The Maintenance Log and Utilization tabs",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/equipment-setup-maintenance-logs/003.jpg",
-                "caption": "Create Maintenance Package, to group equipment or accessories and set a schedule",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/equipment-setup-maintenance-logs/004.jpg",
-                "caption": "Step 1, List Items: adding equipment or accessories to the package",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/equipment-setup-maintenance-logs/005.jpg",
-                "caption": "Step 2, Identify Forms: the maintenance forms set up by the admin",
-                "step": 4
-              },
-              {
-                "src": "assets/notion/equipment-setup-maintenance-logs/006.jpg",
-                "caption": "Add Form: the forms needed for the package, ticked and then submitted",
-                "step": 4
-              },
-              {
-                "src": "assets/notion/equipment-setup-maintenance-logs/007.jpg",
-                "caption": "Step 3, Prepare Schedule: a recurrence type, dates and time",
-                "step": 5
-              },
-              {
-                "src": "assets/notion/equipment-setup-maintenance-logs/008.jpg",
-                "caption": "Step 4, Assign Crew: choosing the users or crews responsible",
-                "step": 6
-              }
             ]
           },
           {
@@ -20074,13 +18995,6 @@ const MODULES = [
             "steps": [
               "In the <strong>Assign Crew</strong> step of the Create Maintenance Package wizard, select individual users or entire Crews responsible for the maintenance.",
               "Once saved, the schedule appears automatically on each assignee's personal calendar and becomes fillable at the scheduled time."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/equipment-setup-maintenance-logs/009.jpg",
-                "caption": "Individual and crew selections shown on the package",
-                "step": 2
-              }
             ]
           }
         ]
@@ -20126,23 +19040,6 @@ const MODULES = [
               "Pick the due date — forms are shown color-coded (Blue means ready to fill).",
               "Open the form, fill in the required fields, and Submit — the form turns Green once complete.",
               "If a check fails, raise an <strong>issue</strong> directly from that field — it's logged to Equipment Issues automatically, with no separate step needed."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/equipment-management-field-inspections/002.jpg",
-                "caption": "The Maintenance, Utilization and Equipment Photos tabs",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/equipment-management-field-inspections/003.jpg",
-                "caption": "Picking a date to see the maintenance scheduled for that day",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/equipment-maintenance-calendar/001.jpg",
-                "caption": "The equipment maintenance calendar: tasks due for the day",
-                "step": 2
-              }
             ]
           },
           {
@@ -20151,18 +19048,6 @@ const MODULES = [
               "Go to <strong>Field Inspections → Maintenance</strong> (or Utilization) and switch to the list/ad-hoc tab.",
               "Select the relevant form category from the left-hand list.",
               "Click <strong>Create Form</strong>, complete the fields, and Submit — it appears as a new card with Download, Share, Print, and Chat available."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/equipment-management-field-inspections/004.jpg",
-                "caption": "Create Form, to open a new inspection form",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/equipment-maintenance/001.jpg",
-                "caption": "A submitted form appearing as a card",
-                "step": 3
-              }
             ]
           },
           {
@@ -20170,23 +19055,6 @@ const MODULES = [
             "steps": [
               "Click the card for the submitted form to re-open it for review or editing.",
               "Use the card's Download, Share, Print, and Chat options for collaborative notes alongside the edit."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/equipment-maintenance/002.jpg",
-                "caption": "Opening a submitted form to review or change it",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/equipment-maintenance/003.jpg",
-                "caption": "Download, Share and Print on a submitted form",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/equipment-maintenance/004.jpg",
-                "caption": "Chat, for notes on how the inspection was done",
-                "step": 2
-              }
             ]
           },
           {
@@ -20196,23 +19064,6 @@ const MODULES = [
               "Select the equipment or accessory from the left-hand list.",
               "Click <strong>Add</strong>, then Upload File to select one or more images.",
               "Optionally annotate using the built-in markup tools, then click <strong>Save</strong>."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/equipment-management-field-inspections/005.jpg",
-                "caption": "Choosing equipment and clicking Add to upload photos",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/equipment-photos/001.jpg",
-                "caption": "Choosing the equipment and clicking Add",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/equipment-photos/002.jpg",
-                "caption": "Upload File, for several images under one label",
-                "step": 3
-              }
             ]
           },
           {
@@ -20221,25 +19072,7 @@ const MODULES = [
               "Click \"Click to View\" on a photo to open the viewer, which supports next/previous navigation.",
               "Use the annotation tools below the image to mark it up, then click <strong>Save</strong> to persist the markup.",
               "Use the kebab (⋮) menu in the viewer to <strong>Delete</strong> the photo."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/equipment-photos/003.jpg",
-                "caption": "Click to View, with arrows to move between images",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/equipment-photos/004.jpg",
-                "caption": "Annotation tools below an image, and Save",
-                "step": 2
-              }
             ]
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/notion/equipment-management-field-inspections/001.jpg",
-            "caption": "Field Inspections: scheduled or ad-hoc maintenance inspections, and equipment photos"
           }
         ]
       },
@@ -20276,23 +19109,6 @@ const MODULES = [
               "Review the issue's details, and add notes in <strong>Chat</strong> if collaborating with others on the fix.",
               "Once the underlying problem is fixed, click <strong>Rectify</strong> — the status becomes Rectified and the linked form re-opens for completion.",
               "If formal remediation tracking is needed (labor, cost, parts), click <strong>Create Work Order</strong> on the toolbar."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/equipment-issues/004.jpg",
-                "caption": "Filters and Save, to narrow the issue list",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/equipment-issues/003.jpg",
-                "caption": "An issue with its date, details, creator and status",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/equipment-issues/007.jpg",
-                "caption": "Create Work Order on the toolbar",
-                "step": 4
-              }
             ]
           },
           {
@@ -20301,18 +19117,6 @@ const MODULES = [
               "Click the <strong>delete_outline</strong> icon on an issue's row to delete it.",
               "Click <strong>Export</strong> to download all issue records to Excel.",
               "Use the view toggle in the top-right to switch between table and card/grid view."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/equipment-issues/005.jpg",
-                "caption": "Export to Excel, and Search by ID or status",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/equipment-issues/002.jpg",
-                "caption": "Issues as cards, with a table view at the top right",
-                "step": 3
-              }
             ]
           },
           {
@@ -20321,12 +19125,6 @@ const MODULES = [
               "If you raised an issue from a failing field on a maintenance form during an inspection, no additional step is needed to log it.",
               "The issue is automatically routed to the <strong>Equipment Issues</strong> tab, where it can be reviewed, assigned, and eventually marked Rectified."
             ]
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/notion/equipment-issues/001.jpg",
-            "caption": "Equipment Issues: every issue raised from equipment maintenance"
           }
         ]
       },
@@ -20356,40 +19154,7 @@ const MODULES = [
               "Assign an owner via <strong>Assign To</strong> and set a <strong>Due Date</strong>.",
               "Use <strong>Chat</strong> to document remediation steps as they happen.",
               "Once the issue is corrected, click <strong>Rectify</strong> to close the report out."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/non-conformance-report/005.jpg",
-                "caption": "Add, to create a Non-Conformance Report",
-                "step": 1
-              }
             ]
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/notion/non-conformance-report/002.jpg",
-            "caption": "Reports as cards, with a table view at the top right"
-          },
-          {
-            "src": "assets/notion/non-conformance-report/004.jpg",
-            "caption": "A report with its date, details, creator and status"
-          },
-          {
-            "src": "assets/notion/non-conformance-report/006.jpg",
-            "caption": "Filters and Save, to narrow the report list"
-          },
-          {
-            "src": "assets/notion/non-conformance-report/007.jpg",
-            "caption": "Export to Excel, and Search by ID or status"
-          },
-          {
-            "src": "assets/notion/non-conformance-report/008.jpg",
-            "caption": "The three-dot menu, with Delete, and the counts"
-          },
-          {
-            "src": "assets/notion/non-conformance-report/009.jpg",
-            "caption": "Create Work Order on the toolbar"
           }
         ]
       },
@@ -20447,23 +19212,6 @@ const MODULES = [
               "On step 2, <strong>Setup Trigger Points</strong>: tick which fields should let end-users raise an issue if that checkpoint fails.",
               "On step 3, <strong>Preview Form</strong>: check the form exactly as end-users will see it, including company branding.",
               "Click <strong>Save Changes</strong>."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/equipment-management-maintenance-forms/001.jpg",
-                "caption": "Maintenance Forms settings",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/equipment-management-maintenance-forms/002.jpg",
-                "caption": "Create Form, to start a maintenance form",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/equipment-management-maintenance-forms/003.jpg",
-                "caption": "The form builder, with trigger points, then Save",
-                "step": 2
-              }
             ]
           },
           {
@@ -20481,24 +19229,7 @@ const MODULES = [
               "Open each lifecycle card in turn — <strong>Request, Check Out, Shipment, Ship, Load, In Transit, Delivered, Received, Lease Agreement, Maintenance Forms, Equipment Utilization Forms & Logs</strong> — and configure the fields/steps your organization needs at that stage.",
               "Confirm the Lease Agreement form is set up if your organization sends equipment to 3rd parties, since that stage only applies to Rentals (3rd Party) Load Out Requests on earlier-version environments."
             ],
-            "note": "The order shown here follows the equipment lifecycle itself (requested, then checked out, shipped, delivered, and so on). This ordering is a reasonable default based on how the stages depend on each other, though it hasn't been confirmed as the only valid sequence to configure them in.",
-            "images": [
-              {
-                "src": "assets/notion/global-data-equipment-management/001.jpg",
-                "caption": "Equipment Management in Global Data: Load Out Request, Ship In, Lease Agreement, Maintenance Forms and more",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/global-data-equipment-management/002.jpg",
-                "caption": "Choosing the form category to configure",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/global-data-equipment-management/003.jpg",
-                "caption": "The form builder for a category, then Save Changes",
-                "step": 2
-              }
-            ]
+            "note": "The order shown here follows the equipment lifecycle itself (requested, then checked out, shipped, delivered, and so on). This ordering is a reasonable default based on how the stages depend on each other, though it hasn't been confirmed as the only valid sequence to configure them in."
           }
         ]
       },
@@ -20519,77 +19250,7 @@ const MODULES = [
             "definition": "In Arena 2.0, requests are raised with **New Request** under Operations, **Self Pickup** and **Company Logistics** are chosen at the Assign stage, hauls are managed under Hauling, and the equipment statuses are Available, Allocated, In Transit, On Rent, Off Rent and In Maintenance."
           }
         ],
-        "procedures": [],
-        "images": [
-          {
-            "src": "assets/notion/lor-internal-job/001.jpg",
-            "caption": "Earlier version: the internal job Load Out Request flowchart"
-          },
-          {
-            "src": "assets/notion/lor-internal-job/002.jpg",
-            "caption": "Earlier version: Add opens the Request Form"
-          },
-          {
-            "src": "assets/notion/lor-internal-job/003.jpg",
-            "caption": "Earlier version: a Load Out Request card with its equipment, required date and workflow level"
-          },
-          {
-            "src": "assets/notion/lor-internal-job/006.jpg",
-            "caption": "Earlier version: Assign to, with View or Edit permission"
-          },
-          {
-            "src": "assets/notion/lor-internal-job/016.jpg",
-            "caption": "Earlier version: the request form fields"
-          },
-          {
-            "src": "assets/notion/lor-internal-job/018.jpg",
-            "caption": "Earlier version: Approve and Reject buttons for the warehouse manager"
-          },
-          {
-            "src": "assets/notion/lor-internal-job/021.jpg",
-            "caption": "Earlier version: the Check Out stage, with the selected equipment on the left"
-          },
-          {
-            "src": "assets/notion/lor-internal-job/023.jpg",
-            "caption": "Earlier version: the maintenance form at check out, with issues raised from trigger points"
-          },
-          {
-            "src": "assets/notion/lor-internal-job/026.jpg",
-            "caption": "Earlier version: the Ship stage"
-          },
-          {
-            "src": "assets/notion/lor-internal-job/030.jpg",
-            "caption": "Earlier version: the Check In stage"
-          },
-          {
-            "src": "assets/notion/lor-internal-job/035.jpg",
-            "caption": "Earlier version: Shop In, moving equipment into an inventory location"
-          },
-          {
-            "src": "assets/notion/3rd-party-lor/011.jpg",
-            "caption": "Earlier version, Rentals: the Lease Agreement stage"
-          },
-          {
-            "src": "assets/notion/3rd-party-lor/013.jpg",
-            "caption": "Earlier version, Rentals: Email Agreement for Approval, with the email to the third party"
-          },
-          {
-            "src": "assets/notion/3rd-party-lor/014.jpg",
-            "caption": "Earlier version, Rentals: the lease agreement waiting for approval"
-          },
-          {
-            "src": "assets/notion/3rd-party-lor/024.jpg",
-            "caption": "Earlier version, Rentals: Preview, with every form for the equipment"
-          },
-          {
-            "src": "assets/notion/lor-workflows/001.jpg",
-            "caption": "Earlier version, Workflows: Create Level with All must approve or Anyone can approve"
-          },
-          {
-            "src": "assets/notion/lor-workflows/003.jpg",
-            "caption": "Earlier version, Workflows: the workflow graph view"
-          }
-        ]
+        "procedures": []
       },
       {
         "heading": "Troubleshooting: Equipment Management Problems",
@@ -28819,12 +27480,6 @@ const MODULES = [
             ],
             "note": "Do this before requesters start raising work orders. The ID format cannot be changed once a work order exists."
           }
-        ],
-        "images": [
-          {
-            "src": "assets/notion/work-order-lors/001.jpg",
-            "caption": "The Work Order flow, from creating a contract to managing documents and drawings"
-          }
         ]
       },
       {
@@ -29328,13 +27983,6 @@ const MODULES = [
               "Open <strong>Settings → Work Order Types</strong>.",
               "Click the type to open its configuration, or use its menu to edit or delete it.",
               "Change the sub-tab you need and click <strong>Save Changes</strong>."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/work-order-types/004.jpg",
-                "caption": "Edit on a work order type card",
-                "step": 2
-              }
             ]
           }
         ],
@@ -29392,14 +28040,7 @@ const MODULES = [
             "steps": [
               "On the <strong>Work Orders</strong> tab, click the work order you want to open. It opens on the <strong>Profile</strong> tab."
             ],
-            "note": "Use the list, grid and column view icons on the right to change how the list looks.",
-            "images": [
-              {
-                "src": "assets/notion/work-order-creation/005.jpg",
-                "caption": "Opening a work order from its card, with the view options at the top right",
-                "step": 1
-              }
-            ]
+            "note": "Use the list, grid and column view icons on the right to change how the list looks."
           },
           {
             "title": "Raise a work order against equipment",
@@ -29572,7 +28213,10 @@ const MODULES = [
         "heading": "Profile and Items",
         "intro": "<p>The <strong>Profile</strong> tab is the front page of a work order. Requesters record what is wrong and how urgent it is, Technicians record the diagnosis, and the same tab holds the items of work. It is always on and cannot be switched off.</p><p>The tab has four sections: <strong>Basic Information</strong>, <strong>Priority</strong>, <strong>Service Assignment</strong> and <strong>Diagnosis</strong>. The fields you see depend on how the administrator set up the work order type.</p>",
         "definitions": [
-          {"term":"Where this data comes from (work order lists)","definition":"**Work Order Type**, its **Status**, **Priority** (with Due Hours and order), **Maintenance Type**, ID format and tabs come from **Settings → Work Orders** for that type. **Technician**, **Assign To** and **Approver** list only users added under **Settings → Users and Permissions** with the matching permission. **Equipment** and its status, hours reading and location are fetched from the Equipment Master (the **Assigned location** follows the equipment location) and cannot be edited here. **Business Unit, Project and Phase Code** are the cost details the work is booked against; timesheet Phase Codes must be set up under **Projects → Project Setup → Phase Codes**. **Vendor** and **Vendor Contact** can be added from the field with **Add Vendor** and **Add Contact**. Crew time can be booked only for users added on the **Team** tab. Part details, including Unit Cost, come from **Equipment Management → Maintenance → Parts PO**. Where it goes: hours go to **Labor**, inventory materials to **Parts**, expenses to **Other**, and approved vendor invoices to the **Cost** tab, which fills automatically. An approved work order updates the equipment status and is added to the equipment's maintenance history. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."},
+          {
+            "term": "Where this data comes from (work order lists)",
+            "definition": "**Work Order Type**, its **Status**, **Priority** (with Due Hours and order), **Maintenance Type**, ID format and tabs come from **Settings → Work Orders** for that type. **Technician**, **Assign To** and **Approver** list only users added under **Settings → Users and Permissions** with the matching permission. **Equipment** and its status, hours reading and location are fetched from the Equipment Master (the **Assigned location** follows the equipment location) and cannot be edited here. **Business Unit, Project and Phase Code** are the cost details the work is booked against; timesheet Phase Codes must be set up under **Projects → Project Setup → Phase Codes**. **Vendor** and **Vendor Contact** can be added from the field with **Add Vendor** and **Add Contact**. Crew time can be booked only for users added on the **Team** tab. Part details, including Unit Cost, come from **Equipment Management → Maintenance → Parts PO**. Where it goes: hours go to **Labor**, inventory materials to **Parts**, expenses to **Other**, and approved vendor invoices to the **Cost** tab, which fills automatically. An approved work order updates the equipment status and is added to the equipment's maintenance history. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
+          },
           {
             "term": "Work Order Profile",
             "definition": "The tab where a work order's profile details are recorded, using the form set up under **Settings → Work Order Types → Profile** for the work order's type. The Items tab holds its items of work."
@@ -29609,14 +28253,7 @@ const MODULES = [
               "Open the work order's <strong>Profile</strong> tab.",
               "Click <strong>Create Item</strong>."
             ],
-            "note": "You can create multiple items inside one work order, and each can be connected to a Project tree or to Issues.",
-            "images": [
-              {
-                "src": "assets/notion/work-order-profile/004.jpg",
-                "caption": "Create Item, for adding an item inside a work order",
-                "step": 2
-              }
-            ]
+            "note": "You can create multiple items inside one work order, and each can be connected to a Project tree or to Issues."
           },
           {
             "title": "Link a work order item to a project tree",
@@ -29624,18 +28261,6 @@ const MODULES = [
               "In Work Order - Profile, when linking an item to a tree, select the Project.",
               "Select its tree version.",
               "Continue through the remaining tree selections."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/work-order-profile/005.jpg",
-                "caption": "Connecting an item to a project tree or to issues",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/work-order-profile/006.jpg",
-                "caption": "Linking an item to a tree: choose the project, its tree version and so on",
-                "step": 2
-              }
             ]
           },
           {
@@ -29643,13 +28268,6 @@ const MODULES = [
             "steps": [
               "In Work Order - Profile, when linking with Issues, select the Issue type from the dropdown to see the detailed list of issues.",
               "Select one or multiple issues to link to the item."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/work-order-profile/007.jpg",
-                "caption": "Linking an item to issues: choose an issue type, then one or more issues",
-                "step": 1
-              }
             ]
           },
           {
@@ -29791,11 +28409,6 @@ const MODULES = [
             ],
             "images": [
               {
-                "src": "assets/notion/work-order-team/003.jpg",
-                "caption": "The Crews tab, with crews created in Global Data",
-                "step": 2
-              },
-              {
                 "src": "assets/guides/work-order/107.jpg",
                 "caption": "Selecting users to add to the team",
                 "step": 4
@@ -29814,12 +28427,6 @@ const MODULES = [
               "Open <strong>Timesheets → My Crew Timesheet</strong> and book the time there."
             ],
             "note": "A person who is not on the Team tab cannot have time booked to the work order through My Crew Timesheet."
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/notion/work-order-team/001.jpg",
-            "caption": "The Team tab for setting up users and crews on a work order"
           }
         ]
       },
@@ -35537,44 +34144,6 @@ const MODULES = [
               "Tell Order Creators and Ticket Creators they can now create External Orders and External Tickets."
             ],
             "note": "Do not create tickets until ID Settings are final."
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/notion/inventory-master/001.jpg",
-            "caption": "Earlier version, Inventory Master: Add, to create a new material"
-          },
-          {
-            "src": "assets/notion/inventory-master/004.jpg",
-            "caption": "Earlier version, Inventory Master: Add Quantity, to top up an existing material"
-          },
-          {
-            "src": "assets/notion/pick-up-ticket/001.jpg",
-            "caption": "Earlier version, Pick Up Ticket (Site Material Request): the Add button"
-          },
-          {
-            "src": "assets/notion/pick-up-ticket/002.jpg",
-            "caption": "Earlier version: the pick up ticket form"
-          },
-          {
-            "src": "assets/notion/pick-up-ticket/003.jpg",
-            "caption": "Earlier version: a raised ticket goes for approval to the warehouse manager"
-          },
-          {
-            "src": "assets/notion/pick-up-ticket/005.jpg",
-            "caption": "Earlier version: a rejected ticket shows the REJECTED status"
-          },
-          {
-            "src": "assets/notion/pick-up-ticket/006.jpg",
-            "caption": "Earlier version: an approved ticket shows the APPROVED status"
-          },
-          {
-            "src": "assets/notion/ship-ticket/002.jpg",
-            "caption": "Earlier version, Ship Ticket (Material Issue Ticket): the form, linked to a pick up ticket"
-          },
-          {
-            "src": "assets/notion/return-ticket/002.jpg",
-            "caption": "Earlier version, Return Ticket: the form, linked to a pick up ticket"
           }
         ]
       },
