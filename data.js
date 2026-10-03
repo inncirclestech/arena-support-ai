@@ -12261,209 +12261,292 @@ const QA_INVENTORYMANAGEMENT = [
 
 const QA_EXPENSETRACKER = [
   {
-    "action": "create",
-    "object": "expense claim",
-    "scope": "module",
-    "section": "Expense Forms",
-    "question": "How do I submit an expense claim?",
-    "answer": "Go to **Expense Tracker → Expense Forms** and click **+ Create**. The form opens as a full page (the template in use is usually \"Travel and Business Expense Report\").\n1. Check **Name*** (it defaults to you) and set the **Period*** from and to dates.\n2. Pick a category in **Select Expense Type** and click **+ Add Expense Type**. Add a row for each expense with its **Date**, **Description** and **Total**, and attach the receipt on the row.\n3. Fill in the **Details** grids that apply: Travel Details, Accommodation Details, and Meal and Miscellaneous Expenses. Then check the **Total Expense Summary**.\n4. Choose the **Approval Workflow** and click **Submit For Approval**. You can also use **Save as Draft** to finish it later.\nOnce submitted, the form shows as **Ready for Approval** at level 0.",
-    "tags": [
-      "submit expense",
-      "create expense form",
-      "expense claim",
-      "reimbursement",
-      "new expense",
-      "raise expense"
-    ]
+    action: "create",
+    object: "expense claim",
+    scope: "module",
+    section: "Expense Forms",
+    question: "How do I submit an expense claim?",
+    answer: "Go to **Expense Tracker → Expense Forms** and click **+ Create**. The form opens as a full page (the template in use is usually \"Travel and Business Expense Report\").\n1. Check **Name*** (it defaults to you) and set the **Period*** from and to dates.\n2. Pick a category in **Select Expense Type** and click **+ Add Expense Type**. Add a row for each expense with its **Date**, **Description** and **Total**, and attach the receipt on the row.\n3. Fill in the **Details** grids that apply: Travel Details, Accommodation Details, and Meal and Miscellaneous Expenses. Then check the **Total Expense Summary**.\n4. Choose the **Approval Workflow** and click **Submit For Approval**. You can also use **Save as Draft** to finish it later.\nOnce submitted, the form shows as **Ready for Approval** at level 0.",
+    tags: ["submit expense","create expense form","expense claim","reimbursement","new expense","raise expense"]
   },
   {
-    "action": "understand",
-    "object": "expense type section",
-    "scope": "module",
-    "section": "Expense Forms",
-    "question": "What is an Expense Type section on the expense form?",
-    "answer": "Each **Expense Type** is a category such as Capital, Direct, Indirect, Operating or Personal Expenses. You add it to the form with **Select Expense Type → + Add Expense Type**, and it becomes its own section of line items (Date, Description, Attachments/Missing Receipts, Total). Row actions let you **Clone Row**, add **Attachments**, **Map** the row, or delete it. A form can hold several expense-type sections, and each one shows its own subtotal and threshold, for example \"Indirect Expenses (Threshold: ₹0.00)\". Forms above a threshold appear in the dashboard's **Forms Exceeding Threshold** list.",
-    "tags": [
-      "expense type",
-      "expense category",
-      "add expense type",
-      "expense threshold",
-      "expense line items"
-    ]
+    action: "understand",
+    object: "expense type section",
+    scope: "module",
+    section: "Expense Forms",
+    question: "What is an Expense Type section on the expense form?",
+    answer: "Each **Expense Type** is a category such as Capital, Direct, Indirect, Operating or Personal Expenses. You add it to the form with **Select Expense Type → + Add Expense Type**, and it becomes its own section of line items (Date, Description, Attachments/Missing Receipts, Total). Row actions let you **Clone Row**, add **Attachments**, **Map** the row, or delete it. A form can hold several expense-type sections, and each one shows its own subtotal and threshold, for example \"Indirect Expenses (Threshold: ₹0.00)\". Forms above a threshold appear in the dashboard's **Forms Exceeding Threshold** list.",
+    tags: ["expense type","expense category","add expense type","expense threshold","expense line items"]
   },
   {
-    "action": "approve",
-    "object": "expense form",
-    "scope": "module",
-    "section": "Expense Forms",
-    "question": "How do I approve or reject an expense form?",
-    "answer": "If you are an approver at the form's current level, **Approve** and **Reject** buttons appear on the form in the **Expense Forms** list, in both card and table view. Forms waiting on you show as **Ready for Approval** (nothing approved yet) or **In Progress** (earlier levels already approved). Each approval is recorded as \"approved and digitally signed at level X\". Once the last level approves, the form becomes **Approved**. If you reject it, Arena asks for a comment and raises an Issue.",
-    "tags": [
-      "approve expense",
-      "reject expense",
-      "expense approval",
-      "approve reimbursement"
-    ]
+    action: "approve",
+    object: "expense form",
+    scope: "module",
+    section: "Expense Forms",
+    question: "How do I approve or reject an expense form?",
+    answer: "If you are an approver at the form's current level, **Approve** and **Reject** buttons appear on the form in the **Expense Forms** list, in both card and table view. Forms waiting on you show as **Ready for Approval** (nothing approved yet) or **In Progress** (earlier levels already approved). Each approval is recorded as \"approved and digitally signed at level X\". Once the last level approves, the form becomes **Approved**. If you reject it, Arena asks for a comment and raises an Issue.",
+    tags: ["approve expense","reject expense","expense approval","approve reimbursement"]
   },
   {
-    "action": "understand",
-    "object": "expense status",
-    "scope": "module",
-    "section": "Expense Forms",
-    "question": "What do the expense form statuses mean?",
-    "answer": "- **Ready for Approval**: submitted, and waiting for the first approval level (Workflow Level 0 of N).\n- **In Progress**: some levels have approved, others are still pending (e.g. 1/2).\n- **Approved**: every level has approved (e.g. 2/2). The form moves to Processed Forms → Approved Items.\n- **Rejected**: an approver rejected it. An Issue was raised and the workflow reset, so the submitter needs to fix the form and submit it again.\nThere is no \"paid\" or \"reimbursed\" status. Payment happens in your accounting system after the batch export.",
-    "tags": [
-      "expense status",
-      "ready for approval",
-      "in progress",
-      "expense approved",
-      "expense rejected",
-      "workflow level"
-    ]
+    action: "understand",
+    object: "expense status",
+    scope: "module",
+    section: "Expense Forms",
+    question: "What do the expense form statuses mean?",
+    answer: "- **Ready for Approval**: submitted, and waiting for the first approval level (Workflow Level 0 of N).\n- **In Progress**: some levels have approved, others are still pending (e.g. 1/2).\n- **Approved**: every level has approved (e.g. 2/2). The form moves to Processed Forms → Approved Items.\n- **Rejected**: an approver rejected it. An Issue was raised and the workflow reset, so the submitter needs to fix the form and submit it again.\nThere is no \"paid\" or \"reimbursed\" status. Payment happens in your accounting system after the batch export.",
+    tags: ["expense status","ready for approval","in progress","expense approved","expense rejected","workflow level"]
   },
   {
-    "action": "understand",
-    "object": "rejected expense",
-    "scope": "module",
-    "section": "Issues",
-    "question": "What happens when an expense form is rejected?",
-    "answer": "Three things happen automatically. The form's status becomes **Rejected**. An **Issue** is raised in **Expense Tracker → Issues**, carrying the approver's comment, the level it was rejected at, and fields for **Assign To**, **Due Date** and a **Chat**. And the approval workflow resets to the start. The submitter opens the form, fixes what the comment asks for, and clicks **Submit For Approval** again, which restarts approvals from level 1.",
-    "tags": [
-      "rejected expense",
-      "expense rejected what next",
-      "resubmit expense",
-      "expense issue",
-      "fix rejected expense"
-    ]
+    action: "understand",
+    object: "rejected expense",
+    scope: "module",
+    section: "Issues",
+    question: "What happens when an expense form is rejected?",
+    answer: "Three things happen automatically. The form's status becomes **Rejected**. An **Issue** is raised in **Expense Tracker → Issues**, carrying the approver's comment, the level it was rejected at, and fields for **Assign To**, **Due Date** and a **Chat**. And the approval workflow resets to the start. The submitter opens the form, fixes what the comment asks for, and clicks **Submit For Approval** again, which restarts approvals from level 1.",
+    tags: ["rejected expense","expense rejected what next","resubmit expense","expense issue","fix rejected expense"]
   },
   {
-    "action": "view",
-    "object": "expense history",
-    "scope": "module",
-    "section": "Expense Forms",
-    "question": "How do I see who approved an expense form and when?",
-    "answer": "Open the form's menu (the ⋮ on the card, or the history icon in table view) and choose **See History**. The **Track Expense** timeline shows every step with its date, time and user: created, \"approved and digitally signed at level 1\", level 2 and so on, or where it was rejected. The form page itself doesn't list approvers, so See History is the place to check.",
-    "tags": [
-      "expense history",
-      "who approved expense",
-      "expense audit trail",
-      "track expense",
-      "see history"
-    ]
+    action: "view",
+    object: "expense history",
+    scope: "module",
+    section: "Expense Forms",
+    question: "How do I see who approved an expense form and when?",
+    answer: "Open the form's menu (the ⋮ on the card, or the history icon in table view) and choose **See History**. The **Track Expense** timeline shows every step with its date, time and user: created, \"approved and digitally signed at level 1\", level 2 and so on, or where it was rejected. The form page itself doesn't list approvers, so See History is the place to check.",
+    tags: ["expense history","who approved expense","expense audit trail","track expense","see history"]
   },
   {
-    "action": "export",
-    "object": "expense batch export",
-    "scope": "module",
-    "section": "Processed Forms",
-    "question": "How do I send approved expenses to accounting (or Vista)?",
-    "answer": "Go to **Expense Tracker → Processed Forms → Approved Items**. This lists fully approved forms that haven't been batched yet. Tick the forms you want and click **Convert to Batch**. The batch then appears under **Batch Items** (Name, Generated Date, Total Amount, Number of List Items), and you can download it as a CSV. The CSV uses an accounts-payable import layout, with AP header (APHB) and AP line (APLB) fields such as Vendor, Invoice ID, Job, Phase, General Ledger Account, Cost Code and Work Order. That layout matches the AP batch import in Trimble Viewpoint (Vista). Use **CSV Download Filters** to choose which of these columns go into the file.",
-    "tags": [
-      "export expenses",
-      "expense batch",
-      "convert to batch",
-      "expenses to accounting",
-      "vista expense export",
-      "viewpoint ap import",
-      "expense csv"
-    ]
+    action: "export",
+    object: "expense batch export",
+    scope: "module",
+    section: "Processed Forms",
+    question: "How do I send approved expenses to accounting (or Vista)?",
+    answer: "Go to **Expense Tracker → Processed Forms → Approved Items**. This lists fully approved forms that haven't been batched yet. Tick the forms you want and click **Convert to Batch**. The batch then appears under **Batch Items** (Name, Generated Date, Total Amount, Number of List Items), and you can download it as a CSV. The CSV uses an accounts-payable import layout, with AP header (APHB) and AP line (APLB) fields such as Vendor, Invoice ID, Job, Phase, General Ledger Account, Cost Code and Work Order. That layout matches the AP batch import in Trimble Viewpoint (Vista). Use **CSV Download Filters** to choose which of these columns go into the file.",
+    tags: ["export expenses","expense batch","convert to batch","expenses to accounting","vista expense export","viewpoint ap import","expense csv"]
   },
   {
-    "action": "view",
-    "object": "expense dashboard",
-    "scope": "module",
-    "section": "My Dashboard",
-    "question": "What does the Expense Tracker dashboard show?",
-    "answer": "**My Dashboard** shows a **Total Forms** headline card and four KPI cards, each with an amount and a form count: **Expenses Created**, **Expenses Approved**, **Expenses Rejected** and **Expenses In Progress**. Switch the time range with **Daily / Weekly / Monthly / Yearly / All**. Below the cards are charts you can filter by expense category or by submitter, each with a download button, and a **Forms Exceeding Threshold** list with **See All**.",
-    "tags": [
-      "expense dashboard",
-      "expense kpi",
-      "expense summary",
-      "forms exceeding threshold",
-      "expense report"
-    ]
+    action: "view",
+    object: "expense dashboard",
+    scope: "module",
+    section: "My Dashboard",
+    question: "What does the Expense Tracker dashboard show?",
+    answer: "**My Dashboard** shows a **Total Forms** headline card and four KPI cards, each with an amount and a form count: **Expenses Created**, **Expenses Approved**, **Expenses Rejected** and **Expenses In Progress**. Switch the time range with **Daily / Weekly / Monthly / Yearly / All**. Below the cards are charts you can filter by expense category or by submitter, each with a download button, and a **Forms Exceeding Threshold** list with **See All**.",
+    tags: ["expense dashboard","expense kpi","expense summary","forms exceeding threshold","expense report"]
   },
   {
-    "action": "configure",
-    "object": "expense approval workflow",
-    "scope": "module",
-    "section": "Settings",
-    "question": "How do I set up the approval workflow for expense forms?",
-    "answer": "Go to **Expense Tracker → Settings → Approval WorkFlow**. Click **+ Create Approval Workflow**, or open an existing one, then click **+ Create Level** for each approval step. For each level, set the **Workflow Type** (**All must approve** or **Any one can approve**), add a **Description**, and pick the **approvers** from the user list. Levels run in order. Submitters choose which workflow to use at the bottom of the expense form.",
-    "tags": [
-      "expense approval workflow",
-      "expense approvers",
-      "expense workflow levels",
-      "set up expense approval"
-    ]
+    action: "configure",
+    object: "expense approval workflow",
+    scope: "module",
+    section: "Settings",
+    question: "How do I set up the approval workflow for expense forms?",
+    answer: "Go to **Expense Tracker → Settings → Approval WorkFlow**. Click **+ Create Approval Workflow**, or open an existing one, then click **+ Create Level** for each approval step. For each level, set the **Workflow Type** (**All must approve** or **Any one can approve**), add a **Description**, and pick the **approvers** from the user list. Levels run in order. Submitters choose which workflow to use at the bottom of the expense form.",
+    tags: ["expense approval workflow","expense approvers","expense workflow levels","set up expense approval"]
   },
   {
-    "action": "create",
-    "object": "expense type",
-    "scope": "module",
-    "section": "Settings",
-    "question": "How do I add a new expense category?",
-    "answer": "Go to **Expense Tracker → Settings → Expense Type**, click **+ Create Expense Type**, and enter a **Name*** and an optional **Description**. The new category appears in the **Select Expense Type** list on expense forms and in the dashboard's category filter. The built-in categories are Capital, Direct, Financial, Fixed, Indirect, Miscellaneous, Non-Operating, Operating, Personal Expenses, Phase Code and Variable Expenses.",
-    "tags": [
-      "add expense category",
-      "create expense type",
-      "expense categories",
-      "new expense type"
-    ]
+    action: "create",
+    object: "expense type",
+    scope: "module",
+    section: "Settings",
+    question: "How do I add a new expense category?",
+    answer: "Go to **Expense Tracker → Settings → Expense Type**, click **+ Create Expense Type**, and enter a **Name*** and an optional **Description**. The new category appears in the **Select Expense Type** list on expense forms and in the dashboard's category filter. The built-in categories are Capital, Direct, Financial, Fixed, Indirect, Miscellaneous, Non-Operating, Operating, Personal Expenses, Phase Code and Variable Expenses.",
+    tags: ["add expense category","create expense type","expense categories","new expense type"]
   },
   {
-    "action": "configure",
-    "object": "expense form template",
-    "scope": "module",
-    "section": "Settings",
-    "question": "How do I change the layout of the expense form?",
-    "answer": "The expense form is built from a template. Go to **Expense Tracker → Settings → Expense Form** to see the template library. It includes Project Expense Tracking Form, Travel and Business Expense Report, and General Expense Reimbursement Form. Use **+ Create Template** for a new layout, or **Edit** from a template's menu. The Details grids a submitter fills in (Travel, Accommodation, Meals) come from the template.",
-    "tags": [
-      "expense form template",
-      "customize expense form",
-      "expense form layout",
-      "create expense template"
-    ]
+    action: "configure",
+    object: "expense form template",
+    scope: "module",
+    section: "Settings",
+    question: "How do I change the layout of the expense form?",
+    answer: "The expense form is built from a template. Go to **Expense Tracker → Settings → Expense Form** to see the template library. It includes Project Expense Tracking Form, Travel and Business Expense Report, and General Expense Reimbursement Form. Use **+ Create Template** for a new layout, or **Edit** from a template's menu. The Details grids a submitter fills in (Travel, Accommodation, Meals) come from the template.",
+    tags: ["expense form template","customize expense form","expense form layout","create expense template"]
   },
   {
-    "action": "configure",
-    "object": "expense permissions",
-    "scope": "module",
-    "section": "Settings",
-    "question": "Can someone submit an expense on behalf of another person?",
-    "answer": "Yes, if their user group allows it. The **Name*** field on the expense form defaults to the logged-in user but can be changed. Whether a user may change it is controlled by the **Expense Form - User Name** (Edit) permission in **Expense Tracker → Settings → Users and Permissions**. The same permission matrix (View, Create, Edit, Delete, Admin, Download, Print) controls access to forms, processed forms, issues and settings.",
-    "tags": [
-      "expense on behalf",
-      "submit expense for someone",
-      "expense permissions",
-      "expense user group"
-    ]
+    action: "configure",
+    object: "expense permissions",
+    scope: "module",
+    section: "Settings",
+    question: "Can someone submit an expense on behalf of another person?",
+    answer: "Yes, if their user group allows it. The **Name*** field on the expense form defaults to the logged-in user but can be changed. Whether a user may change it is controlled by the **Expense Form - User Name** (Edit) permission in **Expense Tracker → Settings → Users and Permissions**. The same permission matrix (View, Create, Edit, Delete, Admin, Download, Print) controls access to forms, processed forms, issues and settings.",
+    tags: ["expense on behalf","submit expense for someone","expense permissions","expense user group"]
   },
   {
-    "action": "configure",
-    "object": "expense id format",
-    "scope": "module",
-    "section": "Settings",
-    "question": "How do I change the expense form or invoice ID format?",
-    "answer": "Go to **Expense Tracker → Settings → ID Settings**. There are two sections, **Expense Form ID settings** and **Invoice ID settings**. For each one, choose **System Default** or **Custom** and click **Submit**.",
-    "tags": [
-      "expense id format",
-      "invoice id",
-      "expense numbering"
-    ]
+    action: "configure",
+    object: "expense id format",
+    scope: "module",
+    section: "Settings",
+    question: "How do I change the expense form or invoice ID format?",
+    answer: "Go to **Expense Tracker → Settings → ID Settings**. There are two sections, **Expense Form ID settings** and **Invoice ID settings**. For each one, choose **System Default** or **Custom** and click **Submit**.",
+    tags: ["expense id format","invoice id","expense numbering"]
   },
   {
-    "action": "understand",
-    "object": "expense draft",
-    "scope": "module",
-    "section": "Expense Forms",
-    "question": "Can I save an expense form and finish it later?",
-    "answer": "Yes. Click **Save as Draft** at the bottom of the form instead of **Submit For Approval**. Nothing goes to approvers until you submit.",
-    "tags": [
-      "expense draft",
-      "save expense draft",
-      "finish expense later"
-    ]
+    action: "understand",
+    object: "expense draft",
+    scope: "module",
+    section: "Expense Forms",
+    question: "Can I save an expense form and finish it later?",
+    answer: "Yes. Click **Save as Draft** at the bottom of the form instead of **Submit For Approval**. Nothing goes to approvers until you submit.",
+    tags: ["expense draft","save expense draft","finish expense later"]
+  },
+  {
+    action: "explain",
+    object: "expense tracker",
+    scope: "module",
+    section: "My Dashboard",
+    question: "What do the time-range buttons on the Expense Tracker dashboard do?",
+    answer: "**Daily**, **Weekly**, **Monthly**, **Yearly** and **All** change the period used by the **Total Forms** card and the four KPI cards (**Expenses Created**, **Approved**, **Rejected**, **In Progress**). Daily shows only today, so it is often 0; choose **All** to see every form. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["dashboard time range","daily weekly monthly yearly","dashboard shows zero","expense dashboard filter"]
+  },
+  {
+    action: "explain",
+    object: "expense tracker",
+    scope: "module",
+    section: "My Dashboard",
+    question: "What are Forms Exceeding Threshold on the expense dashboard?",
+    answer: "A list of forms whose expense-type totals are above the threshold shown for that category on the form (for example **Indirect Expenses (Threshold: ₹0.00)**). Click **See All** for the full list. Where a category's threshold is set was not found, so ask Support if you need to change one. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["forms exceeding threshold","expense threshold","threshold expense type","see all"]
+  },
+  {
+    action: "explain",
+    object: "expense tracker",
+    scope: "module",
+    section: "My Dashboard",
+    question: "Where do the categories on the Expense Tracker dashboard charts come from?",
+    answer: "The category filters list the eleven expense types from **Settings → Expense Type** (Capital, Direct, Financial, Fixed, Indirect, Miscellaneous, Non-Operating, Operating, Personal Expenses, Phase Code, Variable Expenses). The third chart is filtered by a user (System Admin by default). Each chart has a **download** button. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["dashboard categories","expense chart filter","where do expense types come from","spend by category"]
+  },
+  {
+    action: "explain",
+    object: "expense tracker",
+    scope: "module",
+    section: "Expense Forms",
+    question: "Where does the Expense Type list on an expense form come from?",
+    answer: "The **Select Expense Type** drop-down shows the eleven types set up in **Settings → Expense Type**. A Module Admin adds more with **+ Create Expense Type**; they then appear in the drop-down and in the dashboard filters. If a type is missing, ask your Module Admin. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["expense type dropdown","select expense type","expense category list","why dont i see expense type","where does the expense type list come from","expense type list","expense types list source","expense tracker expense type"]
+  },
+  {
+    action: "explain",
+    object: "expense tracker",
+    scope: "module",
+    section: "Expense Forms",
+    question: "What does the Map icon on an expense line do?",
+    answer: "It opens a **Linking** dialog. Choose **Opportunity** (or **Proposals**) in **Modules**, search for the opportunity and **Submit** to tie that cost to it. The Opportunity list comes from the Opportunity module. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["map expense line","linking opportunity expense","link expense to opportunity","expense line actions"]
+  },
+  {
+    action: "explain",
+    object: "expense tracker",
+    scope: "module",
+    section: "Expense Forms",
+    question: "How do I attach a receipt to an expense line?",
+    answer: "On the line, use the **Attachments/Missing Receipts** cell (**+** adds a file, **View → View Attachment** shows what is attached) or the **Attachments** icon in Actions. Use **Clone Row** to copy a line and **Delete** to remove it. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["attach receipt","missing receipts","clone row expense","expense attachment"]
+  },
+  {
+    action: "explain",
+    object: "expense tracker",
+    scope: "module",
+    section: "Expense Forms",
+    question: "Where does the company address at the top of an expense form come from?",
+    answer: "From **Global Data → Company** (Company Details). The template's **Show Header for Form** and **Show Header for PDF** switches in **Settings → Expense Form** turn it on or off for the screen and the PDF. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["expense form header","company address expense form","show header for pdf","expense pdf header"]
+  },
+  {
+    action: "explain",
+    object: "expense tracker",
+    scope: "module",
+    section: "Expense Forms",
+    question: "What happens if I leave an expense form without saving?",
+    answer: "Arena asks \"You have unsaved changes. Would you like to save before proceeding?\" Choose **Save As Draft** to keep it, **Don't Save** to discard, or **Cancel** to stay on the form. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["unsaved changes expense","save as draft","lost expense form"]
+  },
+  {
+    action: "explain",
+    object: "expense tracker",
+    scope: "module",
+    section: "Expense Forms",
+    question: "How do I print an expense form, or download or share it?",
+    answer: "Open the form from **Expense Forms**; **Download**, **Share** and **Print** are at the top right. For the whole list use **Export** on the list toolbar, and in table view use **Manage Columns** to choose columns. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["print expense form","download expense form","share expense form","export expense forms","how do i print an expense form","print an expense form","print expense","expense tracker print"]
+  },
+  {
+    action: "explain",
+    object: "expense tracker",
+    scope: "module",
+    section: "Expense Forms",
+    question: "Why do I see the same expense forms in every project?",
+    answer: "Expense Tracker works at company level, so the **Expense Forms** list, dashboard and Processed Forms are the same whichever project is open. Forms are not tied to a project. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["expense forms project","expense tracker project filter","expense forms all projects","same expense forms in every project","expense forms every project","expense tracker same forms all projects","why do i see the same expense forms"]
+  },
+  {
+    action: "explain",
+    object: "expense tracker",
+    scope: "module",
+    section: "Processed Forms",
+    question: "What do Approved Items and Batch Items show on Processed Forms?",
+    answer: "**Approved Items** lists fully approved forms that have not been batched; tick them and use **Convert to Batch**. **Batch Items** lists each batch with **Name**, **Generated Date**, **Total Amount** and **Number of List Items**, and a download icon for the CSV. Each approved form row has **See History**, **Download** and **Print**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["approved items","batch items","convert to batch","processed forms"]
+  },
+  {
+    action: "explain",
+    object: "expense tracker",
+    scope: "module",
+    section: "Processed Forms",
+    question: "What does CSV Download Filters do?",
+    answer: "It lets you choose which columns go in the batch CSV: **APHB Configurable Fields** (header: Company, Month, Form created date, Invoice Date, Vendor, AP Reference, Invoice ID, Description, Invoice Total, Attachment File) and **APLB Configurable Fields** (lines: Date of expense, AP Line, Line Type, Description, Gross amount, Job, Phase, General Ledger Account, Equipment, Cost Code, Work Order, Work Order Item, RecKey, Detail Record Key). Tick the ones you need and **Save**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["csv download filters","aphb aplb","batch csv columns","accounting export fields"]
+  },
+  {
+    action: "explain",
+    object: "expense tracker",
+    scope: "module",
+    section: "Processed Forms",
+    question: "Where do the Job, Phase and GL Account values in the batch CSV come from?",
+    answer: "These columns are in the **CSV Download Filters** list, but the expense form itself has no Job, Phase or GL fields on the lines, and the **Map** action links a line to an Opportunity or Proposal. How they are filled was not found, so check a downloaded batch before uploading it to your accounting system. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["job phase gl account csv","where does gl code come from expense","batch csv job phase"]
+  },
+  {
+    action: "explain",
+    object: "expense tracker",
+    scope: "module",
+    section: "Issues",
+    question: "What do the columns on the Expense Tracker Issues screen mean?",
+    answer: "**Issue No.**, **ID** (the expense form), **Level** (where it was rejected), **Raised on Date/Time**, **Raised by**, **Image**, **Comments** (the approver's reason), **Assign To**, **Due Date**, **Chat** and **See History**. The strip at the top shows **Total Issues**, **Issues Closed** and **Issues Rejected**. **Filters**, search and **Export** are in the toolbar. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["issues columns","expense issues screen","assign to issue","issue due date"]
+  },
+  {
+    action: "explain",
+    object: "expense tracker",
+    scope: "module",
+    section: "Settings",
+    question: "What is in the Expense Form template editor?",
+    answer: "Open a template under **Settings → Expense Form**. You can switch the header on for the form and PDF, edit the **Basic Details** (Name, Period), add fields, write the **Form Description** and build **Configurable Fields** in sections, each with **Required** and a type. **Create Template** starts a new one (name and description). Click **Save Changes** when done. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["template editor","create template expense","configurable fields expense","edit expense form template"]
+  },
+  {
+    action: "explain",
+    object: "expense tracker",
+    scope: "module",
+    section: "Settings",
+    question: "What can I put in a Custom expense ID format?",
+    answer: "Under **Settings → ID Settings**, choose **Custom** for Expense Form IDs or Invoice IDs, tick **Created By Initials First Name**, **Created By Initials Last Name**, **Created By Employee ID**, **Date**, **Month**, **Year** and **Serial No./ID**, drag them into order, pick the **ID Separator** (/, - or None) and check the **Example Format**, then **Submit**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["custom expense id","expense id format fields","invoice id format expense"]
+  },
+  {
+    action: "explain",
+    object: "expense tracker",
+    scope: "module",
+    section: "Settings",
+    question: "Where do approvers for an expense workflow come from?",
+    answer: "The **Select Approvers** list in **Create Level** shows all Arena users (about 1,270 on the test site, contractor accounts included), with search and **Select All**. Users are added in **Global Data → Users & Permissions**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["expense approvers list","who can approve expense","approver missing expense","select approvers","where do approvers for expense workflow come from","approvers for expense workflow","expense workflow approvers"]
+  },
+  {
+    action: "explain",
+    object: "expense tracker",
+    scope: "module",
+    section: "Settings",
+    question: "Can I link expenses to a project or a job?",
+    answer: "The Expense Tracker is not tied to a project. On a line, **Map** links the cost to an Opportunity or Proposal. The batch CSV has Job and Phase columns, but how they are filled was not found. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["expense project link","expense job code","expense phase code"]
   }
 ];
 
@@ -29825,7 +29908,7 @@ const MODULES = [
           },
           {
             "term": "Forms Exceeding Threshold",
-            "definition": "Forms whose expense-type totals are above the threshold shown for that category on the form."
+            "definition": "A list on My Dashboard of forms (ID, period, amount) whose expense-type totals are above the threshold shown for that category on the form, for example **Indirect Expenses (Threshold: ₹0.00)**. On the test site all seven forms were listed because the threshold showed ₹0.00. **See All** opens the full list. Where an expense type's threshold is set was not found: the **Create / Update Expense Type** dialog only asks for a **Name*** and **Description**."
           }
         ],
         "procedures": []
@@ -29840,11 +29923,27 @@ const MODULES = [
           },
           {
             "term": "Expense Type section",
-            "definition": "A block of dated line items for one category (e.g. Indirect Expenses), with receipts, a subtotal and a threshold."
+            "definition": "A block of dated line items for one category (for example **Indirect Expenses**), with a heading that shows the category's threshold, a **Delete Expense Type** link, and a table with **S.No**, **Date***, **Description**, **Attachments/Missing Receipts**, **Total*** and **Actions**. The section footer shows the section total, and an **add** button adds a row. Row actions: **Map** (links the line to an Opportunity or Proposal), **Attachments**, **Clone Row** and **Delete**."
           },
           {
             "term": "Details grids",
             "definition": "Template-driven tables such as Travel Details, Accommodation Details, Meal and Miscellaneous Expenses, and Total Expense Summary."
+          },
+          {
+            "term": "Map (Linking)",
+            "definition": "The **Map** icon on an expense line opens a **Linking** dialog with a **Modules** drop-down offering **Opportunity** and **Proposals**. Choosing **Opportunity** shows a **Search for Opportunities** box, then **Submit**, so a cost can be tied to the opportunity it was spent on. The Opportunities come from the Opportunity module. Nothing was submitted in testing, so where the link then shows is not confirmed."
+          },
+          {
+            "term": "Where this data comes from",
+            "definition": "**Name**: Arena users, defaulting to you (about 1,300 on the test site), so a claim can be raised for someone else if your group has **Expense Form - User Name** edit permission. **Header block** (Address, Phone, Zip Code): the company details in **Global Data → Company**. **Select Expense Type**: the eleven types in **Settings → Expense Type** (Capital, Direct, Financial, Fixed, Indirect, Miscellaneous, Non-Operating, Operating, Personal Expenses, Phase Code and Variable Expenses). **Details grids and extra fields**: the form template chosen in **Settings → Expense Form**. **Select Approval Workflow**: the named workflows in **Settings → Approval WorkFlow**. **Form ID and Invoice ID**: the numbering in **Settings → ID Settings**. The Expense Forms list is the same whichever project you have open; it is not filtered by project."
+          },
+          {
+            "term": "Unsaved changes prompt",
+            "definition": "Leaving a form you have edited shows \"You have unsaved changes. Would you like to save before proceeding?\" with **Cancel**, **Don't Save** and **Save As Draft**."
+          },
+          {
+            "term": "Download, Share and Print",
+            "definition": "On an existing form, the top-right buttons **Download**, **Share** and **Print** produce or send a copy of the form. The list toolbar has **Export** (the list), **Filters**, a list/card switch and a save-view button; in table view **Manage Columns** chooses the columns (**Expense ID**, **Workflow Level**, **Name**, **Period**, **Total Amount**, **Status**, **Actions**), and each row has **history** and **delete** icons."
           }
         ],
         "procedures": [
@@ -29884,6 +29983,10 @@ const MODULES = [
           {
             "term": "APHB / APLB fields",
             "definition": "The AP header batch and AP line batch columns in the CSV export, chosen in CSV Download Filters."
+          },
+          {
+            "term": "Where processed form data comes from and goes",
+            "definition": "**Comes from:** forms that reached **Approved** (all levels signed) and are not yet in a batch. **Goes to:** **Batch Items**, one row per batch (**Name**, **Generated Date**, **Total Amount**, **Number of List Items**, download icon), and then to the CSV you upload to accounting. The **CSV Download Filters** columns (APHB: Company, Month, Form created date, Invoice Date, Vendor, AP Reference, Invoice ID, Description, Invoice Total, Attachment File; APLB: Date of expense, AP Line, Line Type, Description, Gross amount, Job, Phase, General Ledger Account, Equipment, Cost Code, Work Order, Work Order Item, RecKey, Detail Record Key) choose what the file contains. How Job, Phase, GL Account and Cost Code get filled for an expense line was not found on the form; check the downloaded file before importing."
           }
         ],
         "procedures": [
@@ -29905,6 +30008,10 @@ const MODULES = [
           {
             "term": "Issue",
             "definition": "An automatic record of a rejection, with the approver's comment, level, assignee, due date and chat."
+          },
+          {
+            "term": "Where issue data comes from",
+            "definition": "An issue is created by the system when an approver rejects a form at a level: the **ID** is the expense form ID, the **Level** is where it was rejected and **Comments** is the rejection reason the approver typed. **Assign To** lists users and **Due Date** is a date you set; **Chat** and **See History** track the conversation and the steps (created, rejected, issue raised, \"Approval workflow has been set to initial\")."
           }
         ],
         "procedures": []
@@ -29932,6 +30039,14 @@ const MODULES = [
           {
             "term": "Users and Permissions",
             "definition": "User groups with a View, Create, Edit, Delete, Admin, Download and Print matrix. Includes whether a user may file on someone else's behalf (Expense Form - User Name)."
+          },
+          {
+            "term": "Where settings lists come from",
+            "definition": "**Expense Type** feeds the type drop-down on forms and the dashboard filters. **Approval WorkFlow → Create Level → Select Approvers** lists all users (about 1,270 on the test site, contractor accounts included) with **Select All**. **Expense Form** templates decide the fields and grids on the form. **ID Settings → Custom** offers **Created By Initials First Name**, **Created By Initials Last Name**, **Created By Employee ID**, **Date**, **Month**, **Year** and **Serial No./ID**, with an **ID Separator** of /, - or None and a live **Example Format**. **Users and Permissions** groups control who sees each screen."
+          },
+          {
+            "term": "Template editor",
+            "definition": "Opening a template in **Settings → Expense Form** shows **Show Header for Form** and **Show Header for PDF**, the header fields (Address, Zip Code, City, State, PhoneNo), **Table Standard Fields → Basic Details** (Name and Period, with **Add field**), a **Form Description**, and **Configurable Fields** in sections (**Add field**, **Add section**; each field has **Required**, **CHOOSE TYPE** and copy/delete). **Create Template** asks for an **Expense Form Name*** and **Expense Form Description**. Click **Save Changes** to keep edits."
           }
         ],
         "procedures": [
