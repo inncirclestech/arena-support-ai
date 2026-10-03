@@ -6878,8 +6878,8 @@ const QA_FIELDWORKS = [
     scope: "module",
     section: "Productivity Logs Screen by Screen",
     question: "What do Reconciliation and Configure Rules do in Productivity Logs?",
-    answer: "**Reconciliation → Create Log** opens a **Reconcile** dialog (**Hours** or **Quantity**, a **Date Range**). **Configure Rules** sets colour rules: a **Condition** (greater than, less than, equal, between and their opposites), **Start Value**, **End Value** and **Color**. No reconciliation exists on the test projects, so the result screen was not seen. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
-    tags: ["reconciliation","configure rules","reconcile hours quantity","rules colour"]
+    answer: "**Reconciliation → Create Log** opens a **Reconcile** dialog (**Hours** or **Quantity**, a **Date Range**). **Configure Rules** sets colour rules: a **Condition** (greater than, less than, equal, between and their opposites), **Start Value**, **End Value** and **Color**. The reconciliation result screen is not covered here yet. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["reconciliation","configure rules","reconcile hours quantity","rules colour","what is reconciliation in productivity logs","productivity log reconciliation","reconciliation productivity logs","reconcile productivity"]
   },
   {
     action: "view",
