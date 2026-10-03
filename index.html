@@ -169,8 +169,10 @@
     display: flex; align-items: center; justify-content: center;
     font-family: var(--font-ui); font-size: 10.5px; font-weight: 700;
   }
-  .chat-avatar.assistant { background: linear-gradient(155deg, var(--accent) 0%, #e0932a 100%); color: var(--accent-ink); box-shadow: var(--shadow-sm); }
-  .chat-avatar.user { background: var(--code-bg); color: var(--ink-soft); }
+  .chat-avatar { width: 32px; height: 32px; }
+  .chat-avatar.assistant { background: #fff; border: 1px solid var(--border); box-shadow: var(--shadow-sm); overflow: hidden; }
+  .chat-avatar.assistant img { width: 30px; height: 30px; display: block; }
+  .chat-avatar.user { background: var(--ink); color: #fff; }
   .chat-bubble {
     background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md);
     padding: 12px 16px; font-size: 14.5px; color: var(--ink-soft); max-width: 84%;
@@ -1206,7 +1208,7 @@
     // worked example steer it toward an actual conversational answer.
     async function answer(userQuestion, contextEntries) {
       if (!ready || !engine) return null;
-      const notes = contextEntries.map(e => `- ${e.answer.replace(/<\/?strong>/g, "**")}`).join("\n");
+      const notes = contextEntries.map(e => `- [${e.moduleName}${e.section ? " → " + e.section : ""}] ${e.answer.replace(/<\/?strong>/g, "**")}`).join("\n");
       const system = `You are Arena Support AI, a documentation assistant for the Inncircles Arena construction management product. A user asks a question in plain English; you answer it directly and conversationally, like a knowledgeable colleague, using ONLY the facts in the reference notes below — never invent steps, screen names, or fields that aren't in them.
 
 Reference notes (internal — do not quote, number, or label these; use them only as source material for your own sentences):
@@ -1214,11 +1216,13 @@ ${notes}
 
 Rules:
 - Answer using ONLY the single note that best matches the user's specific question. The other notes are decoys included for context — most of them are NOT what the user asked about, so ignore them completely. Do not combine or summarize multiple notes together.
-- Write 2-5 short sentences of plain prose, in your own words. Never output a list, never output "Q:"/"A:" labels, never repeat a note word-for-word.
+- Start with WHERE to go in Arena: the module and the screen path from the note (for example "Open the project and go to Project Setup → People → Roster." or "From Home, open Procurement → Purchase Orders."). If the note has no path, start with the module named in the note's [brackets], e.g. "In Opportunity Management, …".
+- Keep every screen name, tab, button and path from the note, in the same order. Never shorten "Project Setup → People → Roster" to just "Roster".
+- Write 2-6 short sentences of plain prose. Never output "Q:"/"A:" labels and never show the [brackets] themselves.
 - Only restate the steps and facts in the note. Never invent examples, scenarios or "let's say…" situations.
 - If NONE of the notes actually answer the question, respond with exactly: "I don't have documented steps for that yet. Please raise a ticket with Arena Support: click the Support icon (headset, top-right) in Arena, or email support@inncircles.com." Do not guess, and do not describe an unrelated note just because it's the closest thing available.
 
-Example of the style to use — if a note says "Go to Settings, click Add User, fill the form, click Save" and the user asks "how do I add someone", a good answer is: "You can add a new user from Settings — click Add User, fill in their details, and hit Save." Write like that: natural, direct, one topic, no labels.`;
+Example of the style to use — if a note says "[Global Data → Users] Go to Global Data → Users & Permissions → User Accounts, click Register User, fill the form, click Submit" and the user asks "how do I add someone", a good answer is: "Go to Global Data → Users & Permissions → User Accounts and click Register User. Fill in their details and click Submit." Write like that: where to go first, then the steps, natural and direct, one topic.`;
       try {
         const res = await engine.chat.completions.create({
           messages: [
@@ -2208,15 +2212,11 @@ Example of the style to use — if a note says "Go to Settings, click Add User, 
   }
 
   // ---------- Chat view ----------
+  const AVATAR_AI = `<img src="assets/favicon.svg" alt="Arena AI" width="30" height="30">`;
+  const AVATAR_USER = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-label="You"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>`;
   function chatMsgHtml(msg, idx) {
     const isUser = msg.role === "user";
     let body = renderAnswerHtml(msg.content);
-    if (msg.sourceModule) {
-      body += `<span class="chat-source-tag" style="background:${tint(msg.sourceModule)};color:${fg(msg.sourceModule)}">${msg.sourceModuleName}</span>`;
-      if (msg.aiSynthesized) {
-        body += `<span class="chat-source-tag ai-tag">AI-phrased</span>`;
-      }
-    }
     if (msg.clarifyOptions && msg.clarifyOptions.length) {
       body += `<div class="chat-clarify">` + msg.clarifyOptions.map((o, i) =>
         `<button class="chat-clarify-btn" data-idx="${idx}" data-opt="${i}">${escapeHtml(o.question)}</button>`
@@ -2229,7 +2229,7 @@ Example of the style to use — if a note says "Go to Settings, click Add User, 
     }
     return `
       <div class="chat-msg ${isUser ? 'user' : 'assistant'}">
-        <div class="chat-avatar ${isUser ? 'user' : 'assistant'}">${isUser ? 'Y' : 'AR'}</div>
+        <div class="chat-avatar ${isUser ? 'user' : 'assistant'}">${isUser ? AVATAR_USER : AVATAR_AI}</div>
         <div class="chat-bubble">${body}</div>
       </div>`;
   }
@@ -2455,7 +2455,7 @@ Example of the style to use — if a note says "Go to Settings, click Add User, 
       const el = document.createElement("div");
       el.className = "chat-msg assistant";
       el.id = "thinking-msg";
-      el.innerHTML = `<div class="chat-avatar assistant">AR</div><div class="chat-bubble"><em style="color:var(--muted)">Thinking…</em></div>`;
+      el.innerHTML = `<div class="chat-avatar assistant">${AVATAR_AI}</div><div class="chat-bubble"><em style="color:var(--muted)">Thinking…</em></div>`;
       log.appendChild(el);
       scroller.scrollTop = scroller.scrollHeight;
     }
@@ -2493,9 +2493,15 @@ Example of the style to use — if a note says "Go to Settings, click Add User, 
         // wider set — with more candidates it tends to just summarize all of
         // them into a run-on list instead of answering the specific question.
         const context = retrieveTopEntries(KB, q, lastMatchedContext, 3);
-        const synthesized = context.length ? await ArenaLLM.answer(q, context) : null;
+        let synthesized = context.length ? await ArenaLLM.answer(q, context) : null;
         hideThinking();
 
+        // Never lose the "where to go" context: if the documented answer has a
+        // screen path (→ or >) and the AI's wording dropped it, use the documented answer.
+        if (synthesized && !/don't have documented steps/i.test(synthesized) && context[0]
+            && /→|&gt;| > /.test(context[0].answer) && !/→|>/.test(synthesized)) {
+          synthesized = context[0].answer;
+        }
         if (synthesized) {
           // The model's own honest "I don't have documented steps" decline
           // (see ArenaLLM.answer's system prompt) shouldn't be tagged with a
