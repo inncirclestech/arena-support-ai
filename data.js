@@ -12396,13 +12396,13 @@ const QA_TIMEMANAGEMENT = [
     tags: ["project crew","add crew to project","copy crew"]
   },
   {
-    action: "create",
-    object: "system user roster",
+    action: "assign",
+    object: "user to project",
     scope: "project",
     section: "Rosters & Crews",
-    question: "How do I add a system user to a project roster?",
-    answer: "Go to Project Setup > People > Roster > System User, click \"Add\", and select users from Global Data > Users & Permissions > Global Rosters. Selected users appear on the right of the dialog; click \"Submit\".",
-    tags: ["add system user","project roster","system user assignment"]
+    question: "How do I add a user to a project (project roster)?",
+    answer: "Open the project and go to **Project Setup → People → Roster → System User**. Click **Add**, pick the people from the company list (it comes from **Global Data → Users & Permissions → Global Rosters**), then click **Submit**. To control what they can do in the project, add them to a group under **Users and Permissions → Groups Permission**.",
+    tags: ["add system user","project roster","system user assignment","assign user to project","assign a user to a project","add user to project","add people to project","add someone to a project","add team member to project"]
   },
   {
     action: "create",
