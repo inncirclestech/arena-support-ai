@@ -1124,6 +1124,159 @@ const QA_OPPORTUNITY = [
     question: "How do I add milestones to an opportunity?",
     answer: "Choose a **Milestone Template** on the profile, then open the **Milestones** tab. Each row shows an **Icon**, **Milestone**, **Target Date**, **Actual dates** and **Notes**. Remove a milestone that does not apply, add one from the master list, enter a **Target Date** for each and add notes. The system needs at least an approximate target date on the milestones before it lets you move the opportunity to Qualified.",
     tags: ["add a milestone","milestone target date","milestones tab","milestone template"]
+  },
+  {
+    action: "view",
+    object: "opportunity dropdown source",
+    scope: "module",
+    section: "Opportunities",
+    question: "Where does the Client list on an opportunity come from?",
+    answer: "The **Client** list shows the approved customers from the **Customers** shortcut in the module toolbar (Active Customers). A customer created by a BD user goes to Sales Ops for approval first and appears in the list only once approved; rejected ones sit under **Rejected**. **Client POC** then shows the contacts of that client. If the client is missing, use **+ Create a Client** or ask Sales Ops in the opportunity **Comments** tab.",
+    tags: ["client list source","where does client dropdown come from","customer list opportunity","customers feed opportunity client","new customer approval"]
+  },
+  {
+    action: "view",
+    object: "opportunity dropdown source",
+    scope: "module",
+    section: "Opportunities",
+    question: "Why do I only see some locations in the Location dropdown?",
+    answer: "**Location** is not free-pick. It lists only the locations mapped to the selected client in **Account Assignment**. Sales Ops creates the location under **Global Data → Locations** (named Client - City) and then maps it in **Account Assignment**. Choose the client first, then open Location. If it is still missing, message Sales Ops from the opportunity **Comments** tab.",
+    tags: ["location dropdown empty","why no location","location list opportunity","locations mapped to client"]
+  },
+  {
+    action: "view",
+    object: "opportunity dropdown source",
+    scope: "module",
+    section: "Opportunities",
+    question: "Where do the BD Rep, Corporate Lead and Executive Lead lists come from?",
+    answer: "You pick each person from a dropdown of users. They can also fill in on their own: when the Client, Location and Market you chose match a row in **Account Assignment**, that row's BD Rep, Corporate Lead and Executive Lead are applied. The **Business Development** name pool and the **Users and Permissions** groups under **Settings** are maintained by Sales Ops.",
+    tags: ["bd rep list source","corporate lead dropdown","executive lead dropdown source","auto fill leads from account assignment"]
+  },
+  {
+    action: "view",
+    object: "opportunity dropdown source",
+    scope: "module",
+    section: "Opportunities",
+    question: "Where do the Business Unit, Opportunity Type and Milestone Template lists come from?",
+    answer: "They come from the module **Settings**: **Opportunity Type** (New Build, Existing Facility) and **Milestone Templates** are maintained by Sales Ops, and each Opportunity Type shows only the Milestone Templates mapped to it. **Business Unit** is chosen when you create the lead and is read only afterwards. If a value you need is missing, ask Sales Ops.",
+    tags: ["opportunity type list source","milestone template list","business unit dropdown source","why no milestone template"]
+  },
+  {
+    action: "view",
+    object: "opportunity dropdown source",
+    scope: "module",
+    section: "Opportunities",
+    question: "Where do Competitors on an opportunity come from?",
+    answer: "From the **Competitors** shortcut in the module toolbar. Add a competitor there (Direct, Indirect or Replacement competitor) and it becomes selectable on every opportunity. Once an opportunity is closed, **Analytics** can show which competitors you won or lost against.",
+    tags: ["competitors list source","competitor dropdown opportunity","why competitor missing"]
+  },
+  {
+    action: "view",
+    object: "opportunity data flow",
+    scope: "module",
+    section: "Opportunities",
+    question: "Where does opportunity data end up (reports, calendar, Gantt)?",
+    answer: "Opportunity data feeds the **Dashboard** (value cards, funnel, Top 10), the **Reports** tiles, the **Analytics** tabs and, through milestone target dates, the **Pipeline Gantt View**. Due dates and follow-ups show on the module **Calendar**, and interactions logged on a client contact stay on the opportunity and under **Clients Interactions**.",
+    tags: ["where does opportunity data go","opportunity feeds reports","milestones feed gantt","opportunity calendar events"]
+  },
+  {
+    action: "view",
+    object: "opportunity dropdown source",
+    scope: "module",
+    section: "Opportunities",
+    question: "Why is a dropdown on the Create Opportunity form empty or showing None?",
+    answer: "The dropdown has nothing to show yet. Each list is fed by a master list: customers (Customers shortcut), locations and markets (Account Assignment), competitors (Competitors shortcut), stages and statuses, types and templates (Settings). Fill or approve the source list, then reopen the form. On the older test site some lists read \"None\" for this reason. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["dropdown empty","dropdown shows none","create opportunity list empty","why dropdown blank"]
+  },
+  {
+    action: "view",
+    object: "record data source",
+    scope: "module",
+    section: "Opportunity Record: Milestones, Team, Proposals, Compliance and Expenses",
+    question: "Where do the Compliance Tracker requirements come from?",
+    answer: "From **Global Data → Compliance Hub**. The tab compares the requirements selected for the opportunity against what your company holds in **My Company Compliance**, so an item shown as Missing, Incomplete or Expired is fixed in the Compliance Hub, not on the opportunity.",
+    tags: ["compliance tracker source","where do compliance items come from","compliance hub opportunity","readiness score source"]
+  },
+  {
+    action: "view",
+    object: "record data source",
+    scope: "module",
+    section: "Opportunity Record: Milestones, Team, Proposals, Compliance and Expenses",
+    question: "Where do the expense categories and approvers on an opportunity come from?",
+    answer: "From **Settings → Expense**, set by Sales Ops. When you click **+ Create** on the **Expenses** tab you pick from those categories, and the expense routes to the approver configured there. Approved lines add up to the opportunity's total pursuit cost. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["expense category source","expense approver opportunity","pursuit cost where","expenses feed"]
+  },
+  {
+    action: "view",
+    object: "record data source",
+    scope: "module",
+    section: "Opportunity Record: Milestones, Team, Proposals, Compliance and Expenses",
+    question: "Who can I add to the opportunity Teams tab, and where does that list come from?",
+    answer: "The **Teams** tab holds **Users** and **Crews**. **Add User** lists the users created in Global Data; tick them and save. Added members can edit the opportunity fields and add information.",
+    tags: ["teams list source","who can i add to team","team members opportunity source"]
+  },
+  {
+    action: "view",
+    object: "record data source",
+    scope: "module",
+    section: "Opportunity Record: Milestones, Team, Proposals, Compliance and Expenses",
+    question: "Where do the Milestones on an opportunity come from, and where do they go?",
+    answer: "They come from the **Milestone Template** you choose on the profile (templates are mapped to the Opportunity Type and kept in **Settings**); you can remove rows or add more from the master list. The **Target Date** values feed the **Pipeline Gantt View** under **Reports**, and the system needs approximate target dates before it lets you move the opportunity to Qualified.",
+    tags: ["milestone source","milestone template feeds","milestones gantt","target date gantt"]
+  },
+  {
+    action: "view",
+    object: "record data source",
+    scope: "module",
+    section: "Opportunity Record: Milestones, Team, Proposals, Compliance and Expenses",
+    question: "Where do opportunity documents get stored?",
+    answer: "In the document storage chosen under **Settings → Opportunities Form → Settings** (AWS S3 or SharePoint). The choice locks once opportunities or proposals exist, so set it before the team starts. Chat and email attachments appear under **Chat Documents** and **Mail Documents** on the **Documents** tab.",
+    tags: ["document storage source","sharepoint opportunity documents","where are files stored opportunity"]
+  },
+  {
+    action: "view",
+    object: "account assignment source",
+    scope: "module",
+    section: "Account Assignment",
+    question: "Where does the Customer list in Account Assignment come from?",
+    answer: "From the approved customers under the **Customers** shortcut. We compared the **Add Account Assignment** customer list with that screen and they match. A customer that is still waiting for approval, or was rejected, will not appear.",
+    tags: ["account assignment customer list","why customer missing account assignment","account assignment source"]
+  },
+  {
+    action: "view",
+    object: "account assignment destination",
+    scope: "module",
+    section: "Account Assignment",
+    question: "Where does Account Assignment data go?",
+    answer: "Matching rows pre-fill **BD Rep, Corporate Lead and Executive Lead** (and limit Location and market choices) on new opportunities, and the **Account Assignment Report** under **Reports** lists the mapping. Changing a row does not rewrite leads already saved. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["account assignment feeds","account assignment report","what uses account assignment","where does account assignment data go","account assignment data destination"]
+  },
+  {
+    action: "view",
+    object: "interactions source",
+    scope: "module",
+    section: "Clients Interactions",
+    question: "Where does the customer and contact list in Clients Interactions come from?",
+    answer: "Customers come from the **Customers** shortcut and contacts from the **Contacts Directory** (Customer Contacts and Owner Contacts). If one is missing, create it there; a new customer must be approved first.",
+    tags: ["clients interactions list source","why contact missing interactions","customers interactions source"]
+  },
+  {
+    action: "view",
+    object: "interactions destination",
+    scope: "module",
+    section: "Clients Interactions",
+    question: "Where does a logged call, meeting or note go?",
+    answer: "It is saved against that contact (and the opportunity you picked in the **Opportunity** scope dropdown, or General), shows under **See History**, and feeds the relationship score on the interactions summary (**Customer Relation** in Settings). Meetings and events also appear on the module **Calendar**.",
+    tags: ["logged interaction goes","see history source","customer relation score source"]
+  },
+  {
+    action: "view",
+    object: "settings feeds",
+    scope: "module",
+    section: "Settings",
+    question: "Which Settings screen controls which dropdown on an opportunity?",
+    answer: "**Stages & Statuses Configuration** controls Stage and Status; **Opportunity Type** and **Milestone Templates** control the type and template choices; **Business Development** is the BD name pool; **Expense** controls expense categories and approval; **Opportunities Form** controls which fields are required, hidden or shown at creation. Clients, locations and competitors are not in Settings: they come from the Customers, Account Assignment/Global Data → Locations and Competitors screens.",
+    tags: ["settings feeds dropdown","which setting controls list","settings opportunity lists"]
   }
 ];
 
@@ -13670,6 +13823,10 @@ const MODULES = [
           {
             "term": "Sales Ops shared settings",
             "definition": "Sales Ops also maintains **Opportunity Type** (New Build, Existing Facility), **Milestone Templates**, **Business Development** (the BD name pool), **Manage Columns** (Sales Ops can save the default layout for everyone) and **Users and Permissions** (the BD group and the Admin group). Proposal statuses, the compliance requirement directory (under Global Data) and the expense categories with their approval routing are maintained here too."
+          },
+          {
+            "term": "Which setting feeds which list",
+            "definition": "**Stages & Statuses Configuration** feeds the Stage and Status dropdowns and the stage chips. **Opportunities Form** decides which fields are required, hidden or shown at creation. **Opportunity Type** and **Milestone Templates** feed the Details section and the Milestones tab. **Business Development** feeds the BD name pool. **Expense** feeds the Expenses tab categories and approver. **ID Settings** builds the Opportunity ID. **Customer Relation** feeds the score on the interactions summary. **Competitor Form** shapes the Competitors shortcut. **Users and Permissions** decides who can open the module. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
           }
         ],
         "procedures": [
@@ -14025,6 +14182,18 @@ const MODULES = [
           {
             "term": "Stage chips",
             "definition": "The coloured stage chips at the top left of the Opportunities screen show a count for each stage. Click a chip to filter the screen to that stage. Search, Filters, Manage Columns, Export and the sort arrow on a column header work with every view."
+          },
+          {
+            "term": "Where this data comes from: Create Opportunity and the profile",
+            "definition": "Each list on an opportunity is fed by a master list kept elsewhere, so a missing value is fixed at its source, not on the opportunity. **Client** (and Client Group) comes from the approved customers under the **Customers** shortcut; a newly created customer goes to Sales Ops for approval and cannot be picked until approved. **Location** shows only the locations mapped to the chosen client in **Account Assignment** (the locations themselves are created under **Global Data → Locations**). **Market Type / Sub Market Type** are mapped to the client in **Account Assignment**. **BD Rep, Corporate Lead and Executive Lead** are picked from users and can auto-fill from the matching **Account Assignment** row. **Owner, EPC / Engineer and Contracting Entity** and their POCs come from the Owners and Contacts records. **Competitors** come from the **Competitors** shortcut. **Business Unit**, **Opportunity Type**, **Milestone Template**, **Stage / Status** and the **Business Development** name pool come from **Settings**. Your own pipeline is what you see unless you have the **Admin View** permission under Global Data."
+          },
+          {
+            "term": "Where this data goes",
+            "definition": "An opportunity feeds the **Dashboard** cards, funnel and Top 10, the **Reports** tiles (Forecast, Opportunity Aging, Outcome Analysis, Client Win Rate, Pipeline Report, Huddle Report, Pipeline Gantt View, Account Assignment Report) and the **Analytics** tabs. Milestone target dates feed the **Pipeline Gantt View**. **Due Date** and follow-up dates show on the module **Calendar**. Calls, mails, meetings, tasks and notes you log on the linked client contact are kept on the opportunity and in **Clients Interactions**. Proposals, compliance and expenses sit on the same record as tabs."
+          },
+          {
+            "term": "Why a dropdown is empty or missing a value",
+            "definition": "Opportunity dropdowns only show what is already set up. If a client, location, market, competitor or contact is missing, add or approve it at its source (Customers, Account Assignment, Global Data → Locations, Competitors, Contacts Directory) or ask Sales Ops in the opportunity **Comments** tab. On the older test site the Create form is shorter (Opportunity Name, Market Type, Status, Customer Groups, Site Representative, Corporate Lead, Executive Lead) and some lists show \"None\" until their source lists are filled. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
           }
         ],
         "procedures": [
@@ -14446,6 +14615,10 @@ const MODULES = [
           {
             "term": "Opportunity scope (General / a specific Opportunity)",
             "definition": "A dropdown at the top of a contact's interaction workspace, defaulted to General. Switching it to a specific Opportunity scopes every sub-tab — Call Logs, Mails, Events, Meetings, Task, Comments, Notes — to interactions logged against that deal specifically, letting a rep keep a contact's overall relationship history (General) separate from the conversation trail tied to one active pursuit."
+          },
+          {
+            "term": "Where this data comes from",
+            "definition": "The customer and contact lists come from the **Customers** shortcut and **Contacts Directory**; customers can arrive by manual entry, ZoomInfo import or a business-card photo (OCR). Interactions you log (calls, mails, meetings, tasks, comments, notes) are stored against the contact, and against one opportunity when you pick it in the **Opportunity** scope dropdown (default General). Events, Meetings, Task and Comments need Calendar consent from your Microsoft calendar. Logged items feed **See History**, the interactions summary and the **Customer Relation** score set up under **Settings**, and show on the module **Calendar**. Mails you map through **Map your Email** attach to the opportunity chosen there. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
           }
         ],
         "procedures": [
@@ -14687,6 +14860,10 @@ const MODULES = [
           {
             "term": "Auto-fill on Create Opportunity",
             "definition": "When a matching Account Assignment record already exists for a given Customer/Market Type combination, the BD Rep, Corporate Lead, and Executive Lead fields on the Create Opportunity dialog are pre-populated automatically from that record, saving you from re-entering the same assignment on every new opportunity for that customer."
+          },
+          {
+            "term": "Where this data comes from",
+            "definition": "Each row picks its **Customer Name** from the approved customers on the **Customers** shortcut (checked live: the list is exactly that customer list). Location is a location created under **Global Data → Locations** for that customer, and BD Rep, Corporate Lead and Executive Lead come from users. The rows then go to the **Create Opportunity** form, which uses a matching row to fill the three leads and to limit the Location, Market Type and Sub Market Type choices, and to the **Account Assignment Report** under **Reports**. Market Type and Sub Market Type values were not readable on the test site. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
           }
         ],
         "procedures": [
@@ -15564,6 +15741,10 @@ const MODULES = [
           {
             "term": "Stale and inactive alerts",
             "definition": "On the **Timeline & Activity** section, the **Stage / Inactive Threshold Notification** warns you when an opportunity sits too long with no updated information. The thresholds come from **Settings**, and stale opportunities count on **My Dashboard**."
+          },
+          {
+            "term": "Where this data comes from: record tabs",
+            "definition": "**Teams** lists the users created in Global Data (and Crews); only added members can edit the opportunity. **Compliance Tracker** compares the requirements selected for the opportunity with what your company holds in **My Company Compliance**; the records are kept under **Global Data → Compliance Hub**, so fix a missing or expired item there. **Expenses** use the expense categories and approver set under **Settings → Expense**; approved lines add up to a total on the opportunity. **Documents** are stored in the AWS S3 or SharePoint location chosen under **Settings → Opportunities Form → Settings**. **Milestones** come from the Milestone Template chosen on the profile (templates are maintained in **Settings**), and can also be added from the master list."
           }
         ],
         "procedures": [
