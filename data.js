@@ -1281,7 +1281,7 @@ const QA_OPPORTUNITY = [
 ];
 
 const QA_EQUIPMENT = [
-  {"action":"explain","object":"data lineage","scope":"module","section":"Master Data: Cost Codes, Categories and Equipment Setup","question":"Where does the Equipment list come from when I add an equipment record in Equipment Management?","answer":"The **Equipment** dropdown shows only equipment configured in **Settings → Equipment Setup** (accessories: **Accessory Setup**), which in turn uses the equipment codes in **Global Data → Cost → Equipment**. Category and sub-category fill in automatically. If an item is missing, add it to the setup first.","tags":["where does equipment list come from","equipment dropdown source","equipment setup global data","add equipment record dropdown source","asset master equipment dropdown"]},
+  {"action":"explain","object":"data lineage","scope":"module","section":"Master Data: Cost Codes, Categories and Equipment Setup","question":"Where does the Equipment list come from when I add an equipment record in Equipment Management?","answer":"The **Equipment** dropdown shows only equipment configured in **Settings → Equipment Setup** (accessories: **Accessory Setup**), which in turn uses the equipment codes in **Global Data → Cost → Equipment**. Category and sub-category fill in automatically. If an item is missing, add it to the setup first.","tags":["where does equipment list come from","equipment dropdown source","equipment setup global data","add equipment record dropdown source","equipment master equipment dropdown"]},
   {"action":"explain","object":"data lineage","scope":"module","section":"Equipment Master and Accessory Master","question":"Why is the Location dropdown empty or where does it come from when I add equipment in Equipment Management?","answer":"Pick **Inventory** or **Project** first. Inventory locations come from **Inventory Locations** (the Business Unit must be mapped to that inventory location in Inventory Management). Project locations come from your projects. If no location appears, check the toggle and that mapping. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.","tags":["location dropdown source","no location in dropdown","inventory or project location","equipment location dropdown empty","add equipment location not showing"]},
   {"action":"explain","object":"data lineage","scope":"module","section":"Request Creation","question":"Why do I not see a project in the Work Location dropdown on an equipment request?","answer":"Work locations appear only for projects where you are added under **Project Setup → People**, and they follow the business unit you select. Ask a project admin to add you to the project.","tags":["work location missing","project not in work location","request work location"]},
   {"action":"explain","object":"data lineage","scope":"module","section":"Equipment Master and Accessory Master","question":"Where do the Fuel Type and rates on an equipment record come from?","answer":"**Fuel Type** comes from **Settings → Equipment Setup → Fuel Type**. The hourly, daily and monthly rates default from the category's **Rate Card Template** in Global Data and can be overridden before you confirm.","tags":["fuel type source","rates source","rate card default"]},
@@ -1291,8 +1291,8 @@ const QA_EQUIPMENT = [
     scope: "module",
     section: "Equipment Master and Accessory Master",
     question: "How do I add a new piece of equipment?",
-    answer: "Open **Equipment Management → Equipment → Equipment Master** and click **Add Equipment**. Enter the **Equipment ID** (it must be unique), choose the **Equipment** from the configured list, add a **Description**, pick the initial **Status** (manual statuses only), the **Business Unit** and the **Location** (Inventory or Project, then the location). Fill in make, model, purchase date, year, serial number, VIN, license plate, engine hours, fuel tank capacity, fuel type and production category, upload images and click **Submit**. Some earlier-version environments show a **+ Asset** form with Asset Name, Asset ID, Asset Description, Replacement Value and Current Location instead.",
-    tags: ["add asset","create equipment","new equipment","add asset form","add equipment","equipment id","register equipment","add equipment form fields"]
+    answer: "Open **Equipment Management → Equipment → Equipment Master** and click **Add Equipment**. Enter the **Equipment ID** (it must be unique), choose the **Equipment** from the configured list, add a **Description**, pick the initial **Status** (manual statuses only), the **Business Unit** and the **Location** (Inventory or Project, then the location). Fill in make, model, purchase date, year, serial number, VIN, license plate, engine hours, fuel tank capacity, fuel type and production category, upload images and click **Submit**. Some earlier-version environments show a **+ Equipment** form with Equipment Name, Equipment ID, Equipment Description, Replacement Value and Current Location instead.",
+    tags: ["add equipment","create equipment","new equipment","add equipment form","add equipment","equipment id","register equipment","add equipment form fields"]
   },
   {
     action: "view",
@@ -1309,17 +1309,17 @@ const QA_EQUIPMENT = [
     scope: "module",
     section: "Equipment Master and Accessory Master",
     question: "How do I delete or retire an equipment item?",
-    answer: "In Table View click **Delete** on the row; in Grid View use the delete icon. Delete is subject to your permissions and business rules, so an asset that is on an allocation cannot be removed. To take an asset out of use without deleting it, set its **Status** to **Inactive**, **Out of Service** or **Dispose Initiated**.",
-    tags: ["delete equipment","retire asset","retire equipment"]
+    answer: "In Table View click **Delete** on the row; in Grid View use the delete icon. Delete is subject to your permissions and business rules, so a piece of equipment that is on an allocation cannot be removed. To take a piece of equipment out of use without deleting it, set its **Status** to **Inactive**, **Out of Service** or **Dispose Initiated**.",
+    tags: ["delete equipment","retire equipment","retire equipment"]
   },
   {
     action: "define",
-    object: "asset vs accessory",
+    object: "equipment vs accessory",
     scope: "module",
     section: "Equipment Master and Accessory Master",
-    question: "What's the difference between an Asset and an Accessory in Asset Master?",
-    answer: "Equipment is the machine itself, kept in the **Equipment Master**. An accessory is an attachment or add-on, kept in the **Accessory Master**, and can be linked to one or more equipment records under **Linked Asset** on its profile. Each is set up separately, equipment under **Settings → Equipment Setup** and accessories under **Settings → Accessory Setup**.",
-    tags: ["asset vs accessory","equipment terminology"]
+    question: "What's the difference between an Equipment and an Accessory in Equipment Master?",
+    answer: "Equipment is the machine itself, kept in the **Equipment Master**. An accessory is an attachment or add-on, kept in the **Accessory Master**, and can be linked to one or more equipment records under **Linked Equipment** on its profile. Each is set up separately, equipment under **Settings → Equipment Setup** and accessories under **Settings → Accessory Setup**.",
+    tags: ["equipment vs accessory","equipment terminology"]
   },
   {
     action: "create",
@@ -1327,7 +1327,7 @@ const QA_EQUIPMENT = [
     scope: "module",
     section: "Equipment Master and Accessory Master",
     question: "How do I add a new accessory?",
-    answer: "Open **Accessory Master** and click **Add Accessory**. Choose the accessory (only accessories set up under **Settings → Accessory Setup** appear), complete the same details as for equipment and click **Submit**. To tie it to equipment, choose the **Equipment IDs** under **Linked Asset** on its profile.",
+    answer: "Open **Accessory Master** and click **Add Accessory**. Choose the accessory (only accessories set up under **Settings → Accessory Setup** appear), complete the same details as for equipment and click **Submit**. To tie it to equipment, choose the **Equipment IDs** under **Linked Equipment** on its profile.",
     tags: ["add accessory","company owned accessory"]
   },
   {
@@ -1337,7 +1337,7 @@ const QA_EQUIPMENT = [
     section: "Equipment Master and Accessory Master",
     question: "How do I edit an equipment record?",
     answer: "In Table View click **Edit** on the row; in Grid View use the pencil icon. Change the details, including **Status** (manual statuses only), **Business Unit** and **Location**, and click **Submit**. Panels on the profile can also be edited one by one.",
-    tags: ["edit equipment","update asset"]
+    tags: ["edit equipment","update equipment"]
   },
   {
     action: "delete",
@@ -1353,9 +1353,9 @@ const QA_EQUIPMENT = [
     object: "maintenance records",
     scope: "module",
     section: "Equipment Master and Accessory Master",
-    question: "How do I see maintenance records for a specific asset?",
-    answer: "Open the Maintenance Records icon on the equipment's row (shown only for assets with scheduled maintenance) or use the Maintenance Records column in the list.",
-    tags: ["maintenance records icon","asset maintenance history"]
+    question: "How do I see maintenance records for a specific equipment?",
+    answer: "Open the Maintenance Records icon on the equipment's row (shown only for equipment with scheduled maintenance) or use the Maintenance Records column in the list.",
+    tags: ["maintenance records icon","equipment maintenance history"]
   },
   {
     action: "create",
@@ -1372,15 +1372,15 @@ const QA_EQUIPMENT = [
     scope: "module",
     section: "Equipment Master and Accessory Master",
     question: "How do I export or filter the equipment list?",
-    answer: "Click **Filters** and choose Equipment ID, Equipment, Status, Category, Business Unit, Make and Model, plus the switches **Equipment with Telematics**, **Only Running Assets** and **Not Reported in Last 72 Hours**; **Submit** applies and **Clear** removes them. For Excel, click **Export**: **Upload Excel** (download **Sample Excel** first) creates or updates records in bulk, and **Download Excel** exports the current records.",
+    answer: "Click **Filters** and choose Equipment ID, Equipment, Status, Category, Business Unit, Make and Model, plus the switches **Equipment with Telematics**, **Only Running Equipment** and **Not Reported in Last 72 Hours**; **Submit** applies and **Clear** removes them. For Excel, click **Export**: **Upload Excel** (download **Sample Excel** first) creates or updates records in bulk, and **Download Excel** exports the current records.",
     tags: ["export equipment list","filter equipment"]
   },
   {
     action: "configure",
-    object: "asset master view",
+    object: "equipment master view",
     scope: "module",
     section: "Equipment Master and Accessory Master",
-    question: "How do I switch between grid and table view, or add a custom column, in Asset Master?",
+    question: "How do I switch between grid and table view, or add a custom column, in Equipment Master?",
     answer: "Use the view option in the top right corner to switch between **Grid View** and **Table View**; the actions differ between them. Click **Add Custom Column** to add a Text, Single Select, Multi-select, Date or Formulae column, **Manage Columns** to choose and arrange columns, and **Save Layout** to keep the view.",
     tags: ["custom column","grid view table view","custom column grid table view"]
   },
@@ -1388,16 +1388,16 @@ const QA_EQUIPMENT = [
     action: "create",
     object: "maintenance package",
     scope: "module",
-    section: "Asset Setup",
+    section: "Equipment Setup",
     question: "How do I set up a recurring maintenance schedule?",
-    answer: "1. Go to **Asset Setup**, click **Create Maintenance Package**.\n2. Enter Package Name and Description; Submit.\n3. **List Equipment**: Add Equipment to select items.\n4. **Identify Forms**: Add Form, tick required forms, Submit.\n5. **Prepare Schedule**: choose Recurrence Type, Start/End dates, Time.\n6. **Assign Crew**: select responsible individuals/crew, Save.",
+    answer: "1. Go to **Equipment Setup**, click **Create Maintenance Package**.\n2. Enter Package Name and Description; Submit.\n3. **List Equipment**: Add Equipment to select items.\n4. **Identify Forms**: Add Form, tick required forms, Submit.\n5. **Prepare Schedule**: choose Recurrence Type, Start/End dates, Time.\n6. **Assign Crew**: select responsible individuals/crew, Save.",
     tags: ["maintenance package","schedule maintenance","recurring","recurring maintenance schedule"]
   },
   {
     action: "define",
     object: "maintenance package wizard steps",
     scope: "module",
-    section: "Asset Setup",
+    section: "Equipment Setup",
     question: "What are the four steps of the Create Maintenance Package wizard?",
     answer: "**List Equipment** (pick equipment/accessories), **Identify Forms** (attach maintenance forms), **Prepare Schedule** (set recurrence, dates, time), and **Assign Crew** (assign users/crews responsible).",
     tags: ["maintenance package steps","wizard steps","create maintenance package"]
@@ -1406,7 +1406,7 @@ const QA_EQUIPMENT = [
     action: "define",
     object: "maintenance recurrence type",
     scope: "module",
-    section: "Asset Setup",
+    section: "Equipment Setup",
     question: "What's the difference between a Daily/Weekly recurrence and a Check Out/Check In recurrence?",
     answer: "Daily and Weekly recurrence trigger the maintenance form on a calendar cadence (a specific date/time). Check Out and Check In recurrence instead trigger the form automatically as part of the equipment's checkout or check-in step in the Load Out Request flow, rather than on a fixed schedule.",
     tags: ["recurrence type","check out recurrence","check in recurrence","check out check in recurrence"]
@@ -1415,18 +1415,18 @@ const QA_EQUIPMENT = [
     action: "assign",
     object: "maintenance schedule crew",
     scope: "module",
-    section: "Asset Setup",
+    section: "Equipment Setup",
     question: "How do I assign a maintenance schedule to specific people?",
     answer: "In the **Assign Crew** step of the Create Maintenance Package wizard, select individual users or whole Crews responsible for that maintenance — the schedule then appears on each assignee's personal calendar and becomes fillable at the scheduled time.",
     tags: ["assign crew","maintenance schedule assignment"]
   },
   {
     action: "define",
-    object: "maintenance logs vs asset setup",
+    object: "maintenance logs vs equipment setup",
     scope: "module",
-    section: "Asset Setup",
-    question: "What is \"Maintenance Logs\" and how is it different from Asset Setup?",
-    answer: "It isn't a different screen — **Maintenance Logs** is one of Asset Setup's own two sub-tabs (the other is **Utilization**). Maintenance Logs is where Create Maintenance Package lives; Utilization follows the identical 4-step pattern (List Items / Identify Forms / Prepare Schedule / Assign Crew) but for scheduling utilization logs instead, via its own Create Utilization Package.",
+    section: "Equipment Setup",
+    question: "What is \"Maintenance Logs\" and how is it different from Equipment Setup?",
+    answer: "It isn't a different screen — **Maintenance Logs** is one of Equipment Setup's own two sub-tabs (the other is **Utilization**). Maintenance Logs is where Create Maintenance Package lives; Utilization follows the identical 4-step pattern (List Items / Identify Forms / Prepare Schedule / Assign Crew) but for scheduling utilization logs instead, via its own Create Utilization Package.",
     tags: ["maintenance logs","utilization setup"]
   },
   {
@@ -1435,7 +1435,7 @@ const QA_EQUIPMENT = [
     scope: "module",
     section: "Field Inspections",
     question: "How do I log a scheduled maintenance activity?",
-    answer: "1. Go to **Field Inspections → Maintenance → Asset Maintenance Calendar**.\n2. Pick the due date — forms are grouped by project and color-coded (Blue = Ready).\n3. Open the form, fill required fields, Submit — turns Green (Completed) once complete.\n4. If a check fails, raise an **issue** directly from that field — it's logged to **Asset Issues** automatically.",
+    answer: "1. Go to **Field Inspections → Maintenance → Equipment Maintenance Calendar**.\n2. Pick the due date — forms are grouped by project and color-coded (Blue = Ready).\n3. Open the form, fill required fields, Submit — turns Green (Completed) once complete.\n4. If a check fails, raise an **issue** directly from that field — it's logged to **Equipment Issues** automatically.",
     tags: ["scheduled maintenance","field inspection","field inspection log"]
   },
   {
@@ -1444,8 +1444,8 @@ const QA_EQUIPMENT = [
     scope: "module",
     section: "Field Inspections",
     question: "How do I upload equipment photos?",
-    answer: "1. Go to **Field Inspections → Asset Photos** (also called Equipment Photos).\n2. Select the equipment/accessory from the left list.\n3. Click **Add**, then Upload File to select one or more images.\n4. Optionally annotate using the markup tools, add a Label and Description, then **Save**.",
-    tags: ["equipment photos","upload image","upload equipment photo","asset photos"]
+    answer: "1. Go to **Field Inspections → Equipment Photos** (also called Equipment Photos).\n2. Select the equipment/accessory from the left list.\n3. Click **Add**, then Upload File to select one or more images.\n4. Optionally annotate using the markup tools, add a Label and Description, then **Save**.",
+    tags: ["equipment photos","upload image","upload equipment photo","equipment photos"]
   },
   {
     action: "define",
@@ -1489,17 +1489,17 @@ const QA_EQUIPMENT = [
     scope: "module",
     section: "Field Inspections",
     question: "What is a trigger point on a maintenance form?",
-    answer: "A trigger point is a checkbox configured per field in the form builder (**Setup Trigger Points**) that lets end-users raise an issue or note directly from that field if the checkpoint fails during an inspection. A triggered issue is logged automatically under **Asset Issues**.",
+    answer: "A trigger point is a checkbox configured per field in the form builder (**Setup Trigger Points**) that lets end-users raise an issue or note directly from that field if the checkpoint fails during an inspection. A triggered issue is logged automatically under **Equipment Issues**.",
     tags: ["trigger point","setup trigger points"]
   },
   {
     action: "define",
-    object: "asset maintenance calendar colors",
+    object: "equipment maintenance calendar colors",
     scope: "module",
     section: "Field Inspections",
-    question: "What do the colors on the Asset Maintenance Calendar mean?",
+    question: "What do the colors on the Equipment Maintenance Calendar mean?",
     answer: "**Grey = Not Ready**, **Blue = Ready**, **Amber = In Progress**, **Green = Completed**. Each day's due forms are grouped by project in a collapsible section, showing the form name, the equipment, and its current status.",
-    tags: ["asset maintenance calendar colors","equipment maintenance calendar legend","not ready ready in progress completed"]
+    tags: ["equipment maintenance calendar colors","equipment maintenance calendar legend","not ready ready in progress completed"]
   },
   {
     action: "define",
@@ -1507,41 +1507,41 @@ const QA_EQUIPMENT = [
     scope: "module",
     section: "Field Inspections",
     question: "What's the difference between a scheduled maintenance form and an ad-hoc inspection?",
-    answer: "A scheduled form is generated automatically by a maintenance package's Prepare Schedule settings (Daily/Weekly/Check Out/Check In) and shows up on the Asset Maintenance Calendar at the right time. An ad-hoc inspection is created manually at any time via Create Form on the Asset Maintenance list tab, without being tied to a pre-set schedule.",
+    answer: "A scheduled form is generated automatically by a maintenance package's Prepare Schedule settings (Daily/Weekly/Check Out/Check In) and shows up on the Equipment Maintenance Calendar at the right time. An ad-hoc inspection is created manually at any time via Create Form on the Equipment Maintenance list tab, without being tied to a pre-set schedule.",
     tags: ["scheduled vs ad-hoc inspection","inspection type comparison"]
   },
   {
     action: "edit",
     object: "equipment issue",
     scope: "module",
-    section: "Asset Issues",
+    section: "Equipment Issues",
     question: "How do I resolve an equipment issue?",
-    answer: "1. Go to **Asset Issues**, locate the issue via Search/Filters.\n2. Review details, add notes in **Chat** if collaborating.\n3. Once fixed, click **Rectify** — status becomes Rectified and the linked form re-opens for completion.\n4. Optionally click **Create Work Order** if formal remediation tracking is needed.",
+    answer: "1. Go to **Equipment Issues**, locate the issue via Search/Filters.\n2. Review details, add notes in **Chat** if collaborating.\n3. Once fixed, click **Rectify** — status becomes Rectified and the linked form re-opens for completion.\n4. Optionally click **Create Work Order** if formal remediation tracking is needed.",
     tags: ["resolve issue","rectify","equipment issue","resolve rectify issue"]
   },
   {
     action: "define",
-    object: "asset issue vs ncr",
+    object: "equipment issue vs ncr",
     scope: "module",
-    section: "Asset Issues",
-    question: "What's the difference between an Asset Issue and a Non-Conformance Report?",
-    answer: "Asset Issues are typically raised automatically from a failed trigger-point check during a maintenance form, inspection, or an allocation inspection. NCRs are created manually (via + Add on the Non Conformance Report tab) to formally track a non-conformance event. Both use the same card/table view, Rectify workflow, Chat, Assign To/Due Date, and Create Work Order pattern, but they are separate, independently tracked records.",
-    tags: ["asset issue vs ncr","issue comparison"]
+    section: "Equipment Issues",
+    question: "What's the difference between an Equipment Issue and a Non-Conformance Report?",
+    answer: "Equipment Issues are typically raised automatically from a failed trigger-point check during a maintenance form, inspection, or an allocation inspection. NCRs are created manually (via + Add on the Non Conformance Report tab) to formally track a non-conformance event. Both use the same card/table view, Rectify workflow, Chat, Assign To/Due Date, and Create Work Order pattern, but they are separate, independently tracked records.",
+    tags: ["equipment issue vs ncr","issue comparison"]
   },
   {
     action: "create",
     object: "work order",
     scope: "module",
-    section: "Asset Issues",
+    section: "Equipment Issues",
     question: "How do I create a Work Order from an equipment issue?",
-    answer: "Click **Create Work Order** on the Asset Issues (or NCR) toolbar — this spins up a Work Order to track remediation labor/cost.",
+    answer: "Click **Create Work Order** on the Equipment Issues (or NCR) toolbar — this spins up a Work Order to track remediation labor/cost.",
     tags: ["create work order from issue"]
   },
   {
     action: "delete",
-    object: "asset issue",
+    object: "equipment issue",
     scope: "module",
-    section: "Asset Issues",
+    section: "Equipment Issues",
     question: "How do I delete, export, or change the view for issues and NCRs?",
     answer: "Click the delete icon on an issue's row to remove it; click **Export** to download all records to Excel; and use the view toggle (top-right) to switch between the default table view and a card/grid view.",
     tags: ["delete issue","export issues","table view toggle","export issues table view toggle"]
@@ -1550,8 +1550,8 @@ const QA_EQUIPMENT = [
     action: "view",
     object: "issue header counters",
     scope: "module",
-    section: "Asset Issues",
-    question: "What do the header counters mean on Asset Issues / NCR?",
+    section: "Equipment Issues",
+    question: "What do the header counters mean on Equipment Issues / NCR?",
     answer: "They show totals for the tab, e.g. \"42 Total Issues | 28 Open Issues | 14 Issues Rectified\" — total records, how many are still open, and how many have been rectified.",
     tags: ["header counters","issue totals"]
   },
@@ -1570,7 +1570,7 @@ const QA_EQUIPMENT = [
     scope: "module",
     section: "Non Conformance Report",
     question: "What does \"Rectify\" do on an Issue vs. on an NCR?",
-    answer: "In both cases, **Rectify** marks the record as Rectified. On an Asset Issue, it additionally re-enables the associated maintenance form for completion/re-submission. On an NCR it simply closes the report out as resolved.",
+    answer: "In both cases, **Rectify** marks the record as Rectified. On an Equipment Issue, it additionally re-enables the associated maintenance form for completion/re-submission. On an NCR it simply closes the report out as resolved.",
     tags: ["rectify behavior","issue vs ncr rectify"]
   },
   {
@@ -1578,9 +1578,9 @@ const QA_EQUIPMENT = [
     object: "rectify behavior",
     scope: "module",
     section: "Non Conformance Report",
-    question: "What's the difference between Asset Issues' Rectify and an NCR's Rectify?",
-    answer: "Functionally similar — both set status to Rectified. On an Asset Issue, Rectify additionally re-enables the linked maintenance form so it can be completed/resubmitted; an NCR's Rectify simply closes the report, with no equivalent form-reopening behavior described.",
-    tags: ["asset issue rectify vs ncr rectify"]
+    question: "What's the difference between Equipment Issues' Rectify and an NCR's Rectify?",
+    answer: "Functionally similar — both set status to Rectified. On an Equipment Issue, Rectify additionally re-enables the linked maintenance form so it can be completed/resubmitted; an NCR's Rectify simply closes the report, with no equivalent form-reopening behavior described.",
+    tags: ["equipment issue rectify vs ncr rectify"]
   },
   {
     action: "create",
@@ -1604,10 +1604,10 @@ const QA_EQUIPMENT = [
     action: "track",
     object: "maintenance form issue routing",
     scope: "module",
-    section: "Asset Issues",
+    section: "Equipment Issues",
     question: "I raised an issue from a maintenance form — where did it go?",
-    answer: "It's automatically logged under the **Asset Issues** tab, where it can be reviewed, assigned, and eventually marked Rectified.",
-    tags: ["issue routed to asset issues"]
+    answer: "It's automatically logged under the **Equipment Issues** tab, where it can be reviewed, assigned, and eventually marked Rectified.",
+    tags: ["issue routed to equipment issues"]
   },
   {
     action: "create",
@@ -1615,7 +1615,7 @@ const QA_EQUIPMENT = [
     scope: "module",
     section: "Configure Equipment Management Forms & Global Setup",
     question: "How do I build or edit maintenance/inspection form templates, and how do I create a new one?",
-    answer: "1. Go to **Equipment Management → Settings → Assets Management Forms → Maintenance Forms** (this lives in the module's own Settings, not Global Data), click **Create Form**.\n2. Step 1, **Build Form**: click **Add section**, then add fields from the field-type library (Attachment, Check box, Date, Label, Multi select, Paragraph, Roster, Scribble, Single select, Table, Text box, Time, Signature).\n3. Step 2, **Setup Trigger Points**: tick which fields should let end-users raise an issue if that checkpoint fails.\n4. Step 3, **Preview Form**: check the form as end-users will see it, including company branding.\n5. Click **Save Changes**.",
+    answer: "1. Go to **Equipment Management → Settings → Equipment Management Forms → Maintenance Forms** (this lives in the module's own Settings, not Global Data), click **Create Form**.\n2. Step 1, **Build Form**: click **Add section**, then add fields from the field-type library (Attachment, Check box, Date, Label, Multi select, Paragraph, Roster, Scribble, Single select, Table, Text box, Time, Signature).\n3. Step 2, **Setup Trigger Points**: tick which fields should let end-users raise an issue if that checkpoint fails.\n4. Step 3, **Preview Form**: check the form as end-users will see it, including company branding.\n5. Click **Save Changes**.",
     tags: ["maintenance builder","create form template","maintenance form builder"]
   },
   {
@@ -1647,12 +1647,12 @@ const QA_EQUIPMENT = [
   },
   {
     action: "define",
-    object: "equipment management vs asset management",
+    object: "equipment management vs equipment management",
     scope: "module",
     section: "Configure Equipment Management Forms & Global Setup",
     question: "Is \"Equipment Management\" a different module from \"Equipment Management\"?",
-    answer: "No — they're the same module. This guide calls it **Equipment Management**. In Arena the Home hub tile may read \"Asset Management\", and the module's own breadcrumb says \"Equipment Master\". The UI itself mostly uses \"Asset\" in labels (Asset Master, Asset Setup, Asset Issues, + Asset).",
-    tags: ["equipment management vs asset management","module naming"]
+    answer: "No — they're the same module. This guide calls it **Equipment Management**. Arena lets each company rename terms to match its own standard (**Global Data → Settings → Naming Framework**), so your screens may say \"Equipment\" or \"Asset\" (for example **Asset Management**, **Asset Master**, **Asset Issues**). They are the same screens; this guide uses Equipment throughout.",
+    tags: ["equipment management vs equipment management","module naming"]
   },
   {
     action: "configure",
@@ -1688,16 +1688,16 @@ const QA_EQUIPMENT = [
     section: "Equipment and Accessory Profile",
     question: "What is on an equipment or accessory profile?",
     answer: "Open the record from **Equipment Master** or **Accessory Master**. A left panel shows the ID, name, status, location, image and **QR Code**. The **Overview** tab has five panels: **Basic Details**, **Specifications**, **Purchase & Ownership**, **Warranty & Insurance** and **Depreciation**. Each has an edit icon and its own **Save** button.",
-    tags: ["equipment profile","overview tab","detail panels","qr code","accessory profile","asset profile"]
+    tags: ["equipment profile","overview tab","detail panels","qr code","accessory profile","equipment profile"]
   },
   {
     action: "update",
     object: "purchase ownership",
     scope: "module",
     section: "Equipment and Accessory Profile",
-    question: "Where do I record purchase price, warranty, insurance and depreciation for an asset?",
-    answer: "On the asset profile's **Overview** tab. **Purchase & Ownership** holds ownership type (Owned, Leased, On Finance), purchase date and price, vendor, sales tax, source of funds and job costing. **Warranty & Insurance** holds providers, expiry dates, insured value and annual cost. **Depreciation** holds useful life, salvage value, method, start date, monthly and accumulated depreciation and current book value. Click the panel's edit icon, change the values and click **Save**.",
-    tags: ["purchase price","warranty expiration","insurance expiration","depreciation","book value","ownership type","asset accountant"]
+    question: "Where do I record purchase price, warranty, insurance and depreciation for a piece of equipment?",
+    answer: "On the equipment profile's **Overview** tab. **Purchase & Ownership** holds ownership type (Owned, Leased, On Finance), purchase date and price, vendor, sales tax, source of funds and job costing. **Warranty & Insurance** holds providers, expiry dates, insured value and annual cost. **Depreciation** holds useful life, salvage value, method, start date, monthly and accumulated depreciation and current book value. Click the panel's edit icon, change the values and click **Save**.",
+    tags: ["purchase price","warranty expiration","insurance expiration","depreciation","book value","ownership type","equipment accountant"]
   },
   {
     action: "update",
@@ -1705,16 +1705,16 @@ const QA_EQUIPMENT = [
     scope: "module",
     section: "Equipment and Accessory Profile",
     question: "How do I link an accessory to a piece of equipment?",
-    answer: "Open the accessory profile and edit **Basic Details**. Select the Equipment IDs under **Linked Asset** and click **Save**. The equipment records must already exist.",
-    tags: ["link accessory","linked asset","accessory to equipment","attach accessory"]
+    answer: "Open the accessory profile and edit **Basic Details**. Select the Equipment IDs under **Linked Equipment** and click **Save**. The equipment records must already exist.",
+    tags: ["link accessory","linked equipment","accessory to equipment","attach accessory"]
   },
   {
     action: "view",
     object: "telematics fields",
     scope: "module",
     section: "Equipment and Accessory Profile",
-    question: "Why are Engine Hours, GPS Fix Time or the map blank on an asset?",
-    answer: "Those fields come from the telematics device, so they fill in only after a device is mapped on the asset's **Telematics** tab. **Engine Hours**, **GPS Fix Time** and **Message Time** cannot be typed. Use **Engine Hours (Acquisition)** in Specifications to record the hours when the asset was acquired.",
+    question: "Why are Engine Hours, GPS Fix Time or the map blank on a piece of equipment?",
+    answer: "Those fields come from the telematics device, so they fill in only after a device is mapped on the equipment's **Telematics** tab. **Engine Hours**, **GPS Fix Time** and **Message Time** cannot be typed. Use **Engine Hours (Acquisition)** in Specifications to record the hours when the equipment was acquired.",
     tags: ["engine hours blank","map not showing","gps fix time","geofence address blank","engine hours acquisition"]
   },
   {
@@ -1732,8 +1732,8 @@ const QA_EQUIPMENT = [
     scope: "module",
     section: "Telematics: Device Mapping and Live Data",
     question: "How do I map a telematics device to equipment?",
-    answer: "Open **Equipment Management → Equipment**, click the asset and open the **Telematics** tab (it opens **Device Mapping**). Click **Map Device**, choose the **Telematics Provider**, pick the device from **Available Devices**, and click **Map Device**. Use **View Details** to see the device or **Unmap Device** to remove it. If no devices show, check you chose the right provider and the device is reporting.",
-    tags: ["map device","telematics device","unmap device","available devices","device mapping","telematics tab","map a telematics device","map device","device mapping","map telematics device to asset"]
+    answer: "Open **Equipment Management → Equipment**, click the equipment and open the **Telematics** tab (it opens **Device Mapping**). Click **Map Device**, choose the **Telematics Provider**, pick the device from **Available Devices**, and click **Map Device**. Use **View Details** to see the device or **Unmap Device** to remove it. If no devices show, check you chose the right provider and the device is reporting.",
+    tags: ["map device","telematics device","unmap device","available devices","device mapping","telematics tab","map a telematics device","map device","device mapping","map telematics device to equipment"]
   },
   {
     action: "view",
@@ -1750,7 +1750,7 @@ const QA_EQUIPMENT = [
     scope: "module",
     section: "Telematics: Device Mapping and Live Data",
     question: "How do I see where a machine has been?",
-    answer: "On the asset's **Telematics** tab, open **Trip History**, choose the date range and coordinate precision and click **Apply** to see routes and locations. **Location History** lists the device history by recorded location, and **Device History** lists everything the device reported. If Trip History is empty, widen the date range.",
+    answer: "On the equipment's **Telematics** tab, open **Trip History**, choose the date range and coordinate precision and click **Apply** to see routes and locations. **Location History** lists the device history by recorded location, and **Device History** lists everything the device reported. If Trip History is empty, widen the date range.",
     tags: ["trip history","location history","device history","where has machine been","routes travelled"]
   },
   {
@@ -1758,8 +1758,8 @@ const QA_EQUIPMENT = [
     object: "readings history",
     scope: "module",
     section: "Telematics: Device Mapping and Live Data",
-    question: "How do I move telematics readings from one asset to another?",
-    answer: "On the asset's **Telematics → Readings History**, choose the **Date Range**, **Device** and **Category**. Select the rows with the Action box, click **Transfer**, choose the destination asset and click **Submit**. Do this before unmapping a replaced device so the history is kept.",
+    question: "How do I move telematics readings from one equipment to another?",
+    answer: "On the equipment's **Telematics → Readings History**, choose the **Date Range**, **Device** and **Category**. Select the rows with the Action box, click **Transfer**, choose the destination equipment and click **Submit**. Do this before unmapping a replaced device so the history is kept.",
     tags: ["transfer readings","readings history","replace telematics device","meter reconciliation"]
   },
   {
@@ -1786,8 +1786,8 @@ const QA_EQUIPMENT = [
     scope: "module",
     section: "Geofencing and Fleet Map",
     question: "How do I use the Fleet Map?",
-    answer: "Open **Overview → Fleet Map**. Active geofences show as yellow regions, numbers are clusters of devices, and blue arrows are individual mapped devices once you zoom in. Switch **Map** or **Satellite**, use the Pegman for Street View, and in **Filters** search by **Asset ID**, **Description** or device serial number. Filter by **Geofences**, **Clusters**, **Only Running Equipment**, **Not Reported in Last 72 Hours**, **Status**, **Category**, **Business Unit**, **Make** and **Model**, then **Apply**, **Clear** or **Save Filter**.",
-    tags: ["fleet map","find equipment on map","clusters","only running equipment","not reported 72 hours","search asset map"]
+    answer: "Open **Overview → Fleet Map**. Active geofences show as yellow regions, numbers are clusters of devices, and blue arrows are individual mapped devices once you zoom in. Switch **Map** or **Satellite**, use the Pegman for Street View, and in **Filters** search by **Equipment ID**, **Description** or device serial number. Filter by **Geofences**, **Clusters**, **Only Running Equipment**, **Not Reported in Last 72 Hours**, **Status**, **Category**, **Business Unit**, **Make** and **Model**, then **Apply**, **Clear** or **Save Filter**.",
+    tags: ["fleet map","find equipment on map","clusters","only running equipment","not reported 72 hours","search equipment map"]
   },
   {
     action: "create",
@@ -1827,12 +1827,12 @@ const QA_EQUIPMENT = [
   },
   {
     action: "assign",
-    object: "asset assignment",
+    object: "equipment assignment",
     scope: "module",
     section: "Allocation: Internal Self-Pickup to Off-Rent",
-    question: "How do I assign an asset to an approved request?",
-    answer: "Open the card in the **Assign** stage and choose **Internal → Self Pickup** or **Internal → Company Logistics**. Pick the **Available Asset**, **Operator** and **Rate Card Template** (rates fill in and can be edited); for Company Logistics also pick the **Vehicle** and **Driver**. Switch **Pre-Dispatch Inspection** on if needed, assign users to the next stages, click **Submit** and then **Confirm Assignment**. The asset becomes **Allocated**, and a Company Logistics choice creates an outbound haul and a **Haul Initiated** tag.",
-    tags: ["assign asset","self pickup","company logistics","confirm assignment","available asset","rate card assign","pre-dispatch inspection toggle"]
+    question: "How do I assign a piece of equipment to an approved request?",
+    answer: "Open the card in the **Assign** stage and choose **Internal → Self Pickup** or **Internal → Company Logistics**. Pick the **Available Equipment**, **Operator** and **Rate Card Template** (rates fill in and can be edited); for Company Logistics also pick the **Vehicle** and **Driver**. Switch **Pre-Dispatch Inspection** on if needed, assign users to the next stages, click **Submit** and then **Confirm Assignment**. The equipment becomes **Allocated**, and a Company Logistics choice creates an outbound haul and a **Haul Initiated** tag.",
+    tags: ["assign equipment","self pickup","company logistics","confirm assignment","available equipment","rate card assign","pre-dispatch inspection toggle"]
   },
   {
     action: "record",
@@ -1849,7 +1849,7 @@ const QA_EQUIPMENT = [
     scope: "module",
     section: "Allocation: Internal Self-Pickup to Off-Rent",
     question: "How do I dispatch equipment and put it on rent?",
-    answer: "At **Ready for Dispatch**, the Dispatch Assignee enters the **Dispatch Date** and the **On-Rent Date** (when rental charges start) and clicks **Dispatch**. When the asset reaches the site, the Site Custodian opens the card in **On Rent**, selects the On-Rent option and clicks **Submit**. The asset status changes to **On Rent**.",
+    answer: "At **Ready for Dispatch**, the Dispatch Assignee enters the **Dispatch Date** and the **On-Rent Date** (when rental charges start) and clicks **Dispatch**. When the equipment reaches the site, the Site Custodian opens the card in **On Rent**, selects the On-Rent option and clicks **Submit**. The equipment status changes to **On Rent**.",
     tags: ["dispatch date","on rent date","confirm on rent","site custodian","ready for dispatch"]
   },
   {
@@ -1867,7 +1867,7 @@ const QA_EQUIPMENT = [
     scope: "module",
     section: "Allocation: Internal Self-Pickup to Off-Rent",
     question: "What happens after an off-rent is approved?",
-    answer: "The Equipment Coordinator chooses a destination. **Project**: **Keep at Project** closes the request and makes the asset **Available**, or **Re-allocate to Request** sends it to another open request (it restarts at Assign). **Inventory**: **Self Pickup** (choose destination location, operator, pickup and post-inspection assignees) moves the card to **Pickup**, or **Company Logistics** (also vehicle and driver) starts a return haul. Then the Pickup Assignee selects the **Return Date** and clicks **Schedule Pickup**, and the post-rent inspection closes the request.",
+    answer: "The Equipment Coordinator chooses a destination. **Project**: **Keep at Project** closes the request and makes the equipment **Available**, or **Re-allocate to Request** sends it to another open request (it restarts at Assign). **Inventory**: **Self Pickup** (choose destination location, operator, pickup and post-inspection assignees) moves the card to **Pickup**, or **Company Logistics** (also vehicle and driver) starts a return haul. Then the Pickup Assignee selects the **Return Date** and clicks **Schedule Pickup**, and the post-rent inspection closes the request.",
     tags: ["off rent return","keep at project","reallocate to request","return to inventory","schedule pickup","return date"]
   },
   {
@@ -1894,7 +1894,7 @@ const QA_EQUIPMENT = [
     scope: "module",
     section: "Company Logistics with Hauling",
     question: "How do I create a haul request manually?",
-    answer: "In **Hauling**, click **New Request**. Choose Equipment or Accessory and the asset, then the **Original Location** and **Destination Location** (each Inventory or Project). Enter the **Request Date**, **Estimated Cost** and any phase codes, escort cost and permit cost, and click **Save**. Choose the vehicle and driver at the Approved stage. In the Equipment Master grid view, **Request Haul** on an asset opens the same kind of request.",
+    answer: "In **Hauling**, click **New Request**. Choose Equipment or Accessory and the equipment, then the **Original Location** and **Destination Location** (each Inventory or Project). Enter the **Request Date**, **Estimated Cost** and any phase codes, escort cost and permit cost, and click **Save**. Choose the vehicle and driver at the Approved stage. In the Equipment Master grid view, **Request Haul** on a piece of equipment opens the same kind of request.",
     tags: ["new haul request","request haul","manual hauling request","haul between locations"]
   },
   {
@@ -1917,21 +1917,21 @@ const QA_EQUIPMENT = [
   },
   {
     action: "define",
-    object: "asset management roles",
+    object: "equipment management roles",
     scope: "module",
     section: "Who Does What in Equipment Management",
     question: "Who does what in Equipment Management?",
-    answer: "The **Global Data Administrator** sets up cost codes, categories, rate cards and the telematics provider. The **Equipment Management Administrator** sets up Equipment Setup, Accessory Setup, checklists, approval workflows and thresholds. The **Equipment Master User** keeps records current and the **Asset Accountant** keeps purchase, warranty and depreciation. For a request, the **Requester** raises it, the **Approver** approves, the **Equipment Coordinator** assigns and processes off-rent, inspectors complete checklists, the **Dispatch Assignee** dispatches, the **Site Custodian** confirms On-Rent and asks for off-rent, the **Off-Rent Approver** decides, and the **Pickup Assignee** records the return date. Hauling adds the **Fleet Administrator**, **Hauling Coordinator** and **Hauling Approver**.",
-    tags: ["asset management roles","who does what asset management","equipment management roles","roles and responsibilities equipment","equipment roles"]
+    answer: "The **Global Data Administrator** sets up cost codes, categories, rate cards and the telematics provider. The **Equipment Management Administrator** sets up Equipment Setup, Accessory Setup, checklists, approval workflows and thresholds. The **Equipment Master User** keeps records current and the **Equipment Accountant** keeps purchase, warranty and depreciation. For a request, the **Requester** raises it, the **Approver** approves, the **Equipment Coordinator** assigns and processes off-rent, inspectors complete checklists, the **Dispatch Assignee** dispatches, the **Site Custodian** confirms On-Rent and asks for off-rent, the **Off-Rent Approver** decides, and the **Pickup Assignee** records the return date. Hauling adds the **Fleet Administrator**, **Hauling Coordinator** and **Hauling Approver**.",
+    tags: ["equipment management roles","who does what equipment management","equipment management roles","roles and responsibilities equipment","equipment roles"]
   },
   {
     action: "configure",
-    object: "asset management setup order",
+    object: "equipment management setup order",
     scope: "module",
     section: "Who Does What in Equipment Management",
     question: "In what order should I set up Equipment Management for allocation requests?",
-    answer: "Create cost codes, categories and rate card templates in Global Data. Then in **Settings** set up **Equipment Setup** and **Accessory Setup** with fuel types, build and link an **Inspection Checklist**, create and default the **Approval Workflow** for Equipment Request, Hauling Request and Off-Rent / Extension Request, set the **Utility Threshold** and **Request Priority Threshold**, add vehicles and drivers under **Hauling → Fleet and Schedule**, connect the telematics provider, create geofences and register the assets.",
-    tags: ["setup order equipment","set up allocation lifecycle","first time setup asset management","prerequisite settings allocation","system administrator equipment setup"]
+    answer: "Create cost codes, categories and rate card templates in Global Data. Then in **Settings** set up **Equipment Setup** and **Accessory Setup** with fuel types, build and link an **Inspection Checklist**, create and default the **Approval Workflow** for Equipment Request, Hauling Request and Off-Rent / Extension Request, set the **Utility Threshold** and **Request Priority Threshold**, add vehicles and drivers under **Hauling → Fleet and Schedule**, connect the telematics provider, create geofences and register the equipment.",
+    tags: ["setup order equipment","set up allocation lifecycle","first time setup equipment management","prerequisite settings allocation","system administrator equipment setup"]
   },
   {
     action: "define",
@@ -1957,7 +1957,7 @@ const QA_EQUIPMENT = [
     scope: "module",
     section: "Master Data: Cost Codes, Categories and Equipment Setup",
     question: "How do I create a rate card template for equipment?",
-    answer: "In Global Data → Cost, open **Rate Card Template** and click **New Rate Card Template**. The template can then be chosen as the **Default Rate Card Template** in Equipment Setup and when an asset is assigned to a request.",
+    answer: "In Global Data → Cost, open **Rate Card Template** and click **New Rate Card Template**. The template can then be chosen as the **Default Rate Card Template** in Equipment Setup and when a piece of equipment is assigned to a request.",
     tags: ["rate card template","new rate card template","default rate card","equipment rates template"]
   },
   {
@@ -2002,8 +2002,8 @@ const QA_EQUIPMENT = [
     scope: "module",
     section: "Equipment and Accessory Profile",
     question: "Who maintains each panel of an equipment profile?",
-    answer: "The **Equipment Master User** maintains **Basic Details** and **Specifications**, the status, current location and image. The **Asset Accountant** maintains **Purchase & Ownership**, **Warranty & Insurance** and **Depreciation**. The Equipment Administrator sets the Fuel Type options in Settings, and the Equipment Manager reviews profiles, including telematics readings and geofence information.",
-    tags: ["profile panel roles","asset accountant","who edits profile","equipment master user profile"]
+    answer: "The **Equipment Master User** maintains **Basic Details** and **Specifications**, the status, current location and image. The **Equipment Accountant** maintains **Purchase & Ownership**, **Warranty & Insurance** and **Depreciation**. The Equipment Administrator sets the Fuel Type options in Settings, and the Equipment Manager reviews profiles, including telematics readings and geofence information.",
+    tags: ["profile panel roles","equipment accountant","who edits profile","equipment master user profile"]
   },
   {
     action: "define",
@@ -2011,8 +2011,8 @@ const QA_EQUIPMENT = [
     scope: "module",
     section: "Equipment and Accessory Profile",
     question: "How is an accessory profile different from an equipment profile?",
-    answer: "Only **Basic Details** and one specification field differ. An accessory shows **Accessory ID**, has a **Linked Asset** field to select the Equipment IDs it belongs to, and has no **Fuel Type**. An equipment shows **Equipment ID** and **Fuel Type**. The other four panels are identical.",
-    tags: ["accessory vs equipment","accessory profile differences","linked asset accessory","fuel type equipment only"]
+    answer: "Only **Basic Details** and one specification field differ. An accessory shows **Accessory ID**, has a **Linked Equipment** field to select the Equipment IDs it belongs to, and has no **Fuel Type**. An equipment shows **Equipment ID** and **Fuel Type**. The other four panels are identical.",
+    tags: ["accessory vs equipment","accessory profile differences","linked equipment accessory","fuel type equipment only"]
   },
   {
     action: "edit",
@@ -2021,7 +2021,7 @@ const QA_EQUIPMENT = [
     section: "Equipment and Accessory Profile",
     question: "How do I change or remove an equipment image?",
     answer: "Open the profile and click the edit icon on the image in the left panel. Upload the image and click **Submit**, or click the edit icon again to change or remove it.",
-    tags: ["equipment image","change equipment photo","remove equipment image","profile picture asset"]
+    tags: ["equipment image","change equipment photo","remove equipment image","profile picture equipment"]
   },
   {
     action: "define",
@@ -2029,7 +2029,7 @@ const QA_EQUIPMENT = [
     scope: "module",
     section: "Telematics: Device Mapping and Live Data",
     question: "Who sets up and uses telematics?",
-    answer: "The **Global Data Administrator** sets up the provider once under **Global Data → Marketplace → Telematics**. The **Equipment Administrator** maps, views and unmaps devices. The **Fleet Monitor** watches **Live Data**, **Trip History**, **Device History** and **Location History**. The **Maintenance Planner** reviews **Readings History** and transfers readings between assets.",
+    answer: "The **Global Data Administrator** sets up the provider once under **Global Data → Marketplace → Telematics**. The **Equipment Administrator** maps, views and unmaps devices. The **Fleet Monitor** watches **Live Data**, **Trip History**, **Device History** and **Location History**. The **Maintenance Planner** reviews **Readings History** and transfers readings between equipment.",
     tags: ["telematics roles","who maps telematics","fleet monitor","maintenance planner","meter administrator"]
   },
   {
@@ -2037,7 +2037,7 @@ const QA_EQUIPMENT = [
     object: "telematics tabs",
     scope: "module",
     section: "Telematics: Device Mapping and Live Data",
-    question: "What are the telematics tabs on an asset and what does Info Mapping show?",
+    question: "What are the telematics tabs on a piece of equipment and what does Info Mapping show?",
     answer: "The tabs are **Device Mapping**, **Live Data**, **Trip History**, **Device History**, **Location History** and **Readings History**. The **Info Mapping** panel on Device Mapping shows where each telemetry category is sourced from, which helps when a reading comes from an unexpected place.",
     tags: ["telematics tabs","info mapping","device history","location history","telematics screens"]
   },
@@ -2046,8 +2046,8 @@ const QA_EQUIPMENT = [
     object: "telematics device",
     scope: "module",
     section: "Telematics: Device Mapping and Live Data",
-    question: "How do I replace a telematics device on an asset?",
-    answer: "First transfer the readings you want to keep from **Readings History** to the asset you choose. Then click **Unmap Device** on **Device Mapping**, click **Map Device**, choose the provider and the replacement device from **Available Devices**, and click **Map Device**.",
+    question: "How do I replace a telematics device on a piece of equipment?",
+    answer: "First transfer the readings you want to keep from **Readings History** to the equipment you choose. Then click **Unmap Device** on **Device Mapping**, click **Map Device**, choose the provider and the replacement device from **Available Devices**, and click **Map Device**.",
     tags: ["replace telematics device","unmap device","swap device","change telematics device"]
   },
   {
@@ -2065,7 +2065,7 @@ const QA_EQUIPMENT = [
     scope: "module",
     section: "Geofencing and Fleet Map",
     question: "Who creates geofences and who uses the Fleet Map?",
-    answer: "The **Geofence Administrator** creates the geofence, sets its coordinates, saves it and switches **Active** on. The **Inventory In-charge** confirms that inventory geofences match the right inventory location. The **Fleet Monitor** uses the Fleet Map. The **Equipment Administrator** maps telematics devices so assets show on the map.",
+    answer: "The **Geofence Administrator** creates the geofence, sets its coordinates, saves it and switches **Active** on. The **Inventory In-charge** confirms that inventory geofences match the right inventory location. The **Fleet Monitor** uses the Fleet Map. The **Equipment Administrator** maps telematics devices so equipment show on the map.",
     tags: ["geofence administrator","who creates geofence","fleet monitor map","geofence roles"]
   },
   {
@@ -2092,7 +2092,7 @@ const QA_EQUIPMENT = [
     scope: "module",
     section: "Geofencing and Fleet Map",
     question: "How do I filter the Fleet Map?",
-    answer: "Click **Filters**. Search by Asset ID, Description or telematics device serial number, and switch the map options **Geofences**, **Clusters**, **Only Running Equipment** and **Not Reported in Last 72 Hours**. Filter equipment by Status, Category, Business Unit, Make and Model. Click **Apply**, **Clear**, or **Save Filter** to keep your choice.",
+    answer: "Click **Filters**. Search by Equipment ID, Description or telematics device serial number, and switch the map options **Geofences**, **Clusters**, **Only Running Equipment** and **Not Reported in Last 72 Hours**. Filter equipment by Status, Category, Business Unit, Make and Model. Click **Apply**, **Clear**, or **Save Filter** to keep your choice.",
     tags: ["fleet map filters","save filter fleet map","only running equipment","not reported 72 hours","search device serial"]
   },
   {
@@ -2100,9 +2100,9 @@ const QA_EQUIPMENT = [
     object: "fleet map markers",
     scope: "module",
     section: "Geofencing and Fleet Map",
-    question: "Why are no asset markers showing on the Fleet Map?",
-    answer: "Assets appear only if a telematics device is mapped to them. Zoom in, because at wide zoom they are grouped into clusters. Click **Clear** and reapply filters one at a time, and check whether **Only Running Equipment** or **Not Reported in Last 72 Hours** is on.",
-    tags: ["no markers fleet map","assets missing fleet map","fleet map empty","clusters zoom"]
+    question: "Why are no equipment markers showing on the Fleet Map?",
+    answer: "Equipment appear only if a telematics device is mapped to them. Zoom in, because at wide zoom they are grouped into clusters. Click **Clear** and reapply filters one at a time, and check whether **Only Running Equipment** or **Not Reported in Last 72 Hours** is on.",
+    tags: ["no markers fleet map","equipment missing fleet map","fleet map empty","clusters zoom"]
   },
   {
     action: "define",
@@ -2110,7 +2110,7 @@ const QA_EQUIPMENT = [
     scope: "module",
     section: "Allocation: Internal Self-Pickup to Off-Rent",
     question: "Who does what in the Allocation Lifecycle?",
-    answer: "The **Requester** raises the request and the **Approver** approves it. The **Equipment Coordinator** assigns the asset. The **Pre-Dispatch Inspector** completes the pre-dispatch checklist, the **Dispatch Assignee** enters the dispatch and on-rent dates, and the **Site Custodian** confirms On-Rent and raises extension or off-rent. The **Off-Rent Approver** decides, the Equipment Coordinator processes the approved off-rent, the **Pickup Assignee** records the Return Date and the **Post-Rent Inspector** completes the last checklist.",
+    answer: "The **Requester** raises the request and the **Approver** approves it. The **Equipment Coordinator** assigns the equipment. The **Pre-Dispatch Inspector** completes the pre-dispatch checklist, the **Dispatch Assignee** enters the dispatch and on-rent dates, and the **Site Custodian** confirms On-Rent and raises extension or off-rent. The **Off-Rent Approver** decides, the Equipment Coordinator processes the approved off-rent, the **Pickup Assignee** records the Return Date and the **Post-Rent Inspector** completes the last checklist.",
     tags: ["allocation lifecycle roles","who does what allocation","equipment coordinator","site custodian","dispatch assignee","pickup assignee"]
   },
   {
@@ -2119,8 +2119,8 @@ const QA_EQUIPMENT = [
     scope: "module",
     section: "Allocation: Internal Self-Pickup to Off-Rent",
     question: "What are the steps of a Self Pickup allocation?",
-    answer: "Assign (Equipment Coordinator selects **Internal → Self Pickup** and confirms), **Inspection (Pre-Dispatch)** if switched on, **Ready for Dispatch** (Dispatch Assignee enters dates), **On Rent** (Site Custodian confirms), **Off-Rent / Extension** (request and approval), processing the return, **Pickup** (Pickup Assignee schedules), **Inspection (Post-Rent)**, then **Closed**, when the asset becomes Available. No haul is created on this route.",
-    tags: ["self pickup steps","self pickup flow","internal self pickup","no company transport","collect asset from yard"]
+    answer: "Assign (Equipment Coordinator selects **Internal → Self Pickup** and confirms), **Inspection (Pre-Dispatch)** if switched on, **Ready for Dispatch** (Dispatch Assignee enters dates), **On Rent** (Site Custodian confirms), **Off-Rent / Extension** (request and approval), processing the return, **Pickup** (Pickup Assignee schedules), **Inspection (Post-Rent)**, then **Closed**, when the equipment becomes Available. No haul is created on this route.",
+    tags: ["self pickup steps","self pickup flow","internal self pickup","no company transport","collect equipment from yard"]
   },
   {
     action: "overview",
@@ -2128,7 +2128,7 @@ const QA_EQUIPMENT = [
     scope: "module",
     section: "Company Logistics with Hauling",
     question: "What are the steps of a Company Logistics allocation?",
-    answer: "The Equipment Coordinator assigns the asset, vehicle and driver, which creates an outbound haul. The haul is approved, scheduled, picked up, marked In Transit and Delivered (the request moves to **On Rent**), then closed. After the rental, off-rent is approved and processed to **Inventory → Company Logistics**, which creates a return haul that runs the same steps and, on Delivered, moves the request to **Pickup**. Then the Pickup Assignee schedules the pickup, the Post-Rent Inspector inspects and the request closes.",
+    answer: "The Equipment Coordinator assigns the equipment, vehicle and driver, which creates an outbound haul. The haul is approved, scheduled, picked up, marked In Transit and Delivered (the request moves to **On Rent**), then closed. After the rental, off-rent is approved and processed to **Inventory → Company Logistics**, which creates a return haul that runs the same steps and, on Delivered, moves the request to **Pickup**. Then the Pickup Assignee schedules the pickup, the Post-Rent Inspector inspects and the request closes.",
     tags: ["company logistics steps","company logistics flow","outbound haul return haul","hauling lifecycle","internal company logistics"]
   },
   {
@@ -2136,9 +2136,9 @@ const QA_EQUIPMENT = [
     object: "assignment fields",
     scope: "module",
     section: "Allocation: Internal Self-Pickup to Off-Rent",
-    question: "What fields do I fill in when assigning an asset to a request?",
-    answer: "**Available Asset**, **Operator**, **Rate Card Template** (rates fill in and can be changed), the **Pre-Dispatch Inspection** toggle, and users for the Pre-Dispatch and Ready for Dispatch stages with View or Edit access. For Company Logistics also choose the **Vehicle** and **Driver**. Then click **Submit**, add files if needed and click **Confirm Assignment**.",
-    tags: ["assignment fields","available asset operator rate card","confirm assignment","vehicle driver assign"]
+    question: "What fields do I fill in when assigning a piece of equipment to a request?",
+    answer: "**Available Equipment**, **Operator**, **Rate Card Template** (rates fill in and can be changed), the **Pre-Dispatch Inspection** toggle, and users for the Pre-Dispatch and Ready for Dispatch stages with View or Edit access. For Company Logistics also choose the **Vehicle** and **Driver**. Then click **Submit**, add files if needed and click **Confirm Assignment**.",
+    tags: ["assignment fields","available equipment operator rate card","confirm assignment","vehicle driver assign"]
   },
   {
     action: "create",
@@ -2169,12 +2169,12 @@ const QA_EQUIPMENT = [
   },
   {
     action: "define",
-    object: "asset status lifecycle",
+    object: "equipment status lifecycle",
     scope: "module",
     section: "Allocation: Internal Self-Pickup to Off-Rent",
-    question: "What happens to the asset status during an allocation?",
+    question: "What happens to the equipment status during an allocation?",
     answer: "In the Allocation Lifecycle guides, **Confirm Assignment** sets Allocated, **Confirm On-Rent** changes it to On Rent, an approved off-rent to a project sets Off Rent, and closing sets Available. For Inventory Self Pickup it stays On Rent until the post-rent inspection is submitted. With Company Logistics it goes to Allocated when a haul is created, then In Transit while moving, and follows the On-Rent Date or Pickup Date when delivered.",
-    tags: ["asset status allocation","status after confirm assignment","on rent status change","available after closed","status transitions equipment"]
+    tags: ["equipment status allocation","status after confirm assignment","on rent status change","available after closed","status transitions equipment"]
   },
   {
     action: "approve",
@@ -2190,17 +2190,17 @@ const QA_EQUIPMENT = [
     object: "on rent",
     scope: "module",
     section: "Allocation: Internal Self-Pickup to Off-Rent",
-    question: "As a site custodian, how do I confirm an asset as On-Rent?",
-    answer: "Open the card in the **On-Rent** stage, review the details, choose the On-Rent option and click **Submit**. The asset status changes to On Rent, and rental charges apply from the On-Rent Date. When the asset is no longer needed, use **Request Off-Rent** or **Request Extension** on the same card.",
-    tags: ["site custodian","confirm on rent","on rent confirmation","as a site custodian","confirm asset arrived"]
+    question: "As a site custodian, how do I confirm a piece of equipment as On-Rent?",
+    answer: "Open the card in the **On-Rent** stage, review the details, choose the On-Rent option and click **Submit**. The equipment status changes to On Rent, and rental charges apply from the On-Rent Date. When the equipment is no longer needed, use **Request Off-Rent** or **Request Extension** on the same card.",
+    tags: ["site custodian","confirm on rent","on rent confirmation","as a site custodian","confirm equipment arrived"]
   },
   {
     action: "dispatch",
-    object: "asset",
+    object: "equipment",
     scope: "module",
     section: "Allocation: Internal Self-Pickup to Off-Rent",
-    question: "As a dispatch assignee, how do I dispatch an asset?",
-    answer: "Open the card in **Ready for Dispatch**, enter the **Dispatch Date** (when the asset is handed over) and the **On-Rent Date** (when rental charges start), add attachments if needed and click **Dispatch**. The card moves to On-Rent. On Company Logistics it moves on only as the outbound haul progresses.",
+    question: "As a dispatch assignee, how do I dispatch a piece of equipment?",
+    answer: "Open the card in **Ready for Dispatch**, enter the **Dispatch Date** (when the equipment is handed over) and the **On-Rent Date** (when rental charges start), add attachments if needed and click **Dispatch**. The card moves to On-Rent. On Company Logistics it moves on only as the outbound haul progresses.",
     tags: ["dispatch assignee","dispatch date on rent date","as a dispatch assignee","ready for dispatch steps"]
   },
   {
@@ -2214,12 +2214,12 @@ const QA_EQUIPMENT = [
   },
   {
     action: "keep",
-    object: "asset at project",
+    object: "equipment at project",
     scope: "module",
     section: "Allocation: Internal Self-Pickup to Off-Rent",
-    question: "How do I keep an asset at the project or re-allocate it after off-rent?",
-    answer: "After the off-rent is approved, open the card and choose **Project**, pick the project and **Submit**, then reopen it. **Keep at Project** closes the request and sets the asset to Available. **Re-allocate to Request** lets you pick another matching request and click the **Open Allocation** icon; the asset restarts at that request's Assign stage.",
-    tags: ["keep at project","re-allocate to request","reallocate asset","open allocation icon","off rent project option"]
+    question: "How do I keep a piece of equipment at the project or re-allocate it after off-rent?",
+    answer: "After the off-rent is approved, open the card and choose **Project**, pick the project and **Submit**, then reopen it. **Keep at Project** closes the request and sets the equipment to Available. **Re-allocate to Request** lets you pick another matching request and click the **Open Allocation** icon; the equipment restarts at that request's Assign stage.",
+    tags: ["keep at project","re-allocate to request","reallocate equipment","open allocation icon","off rent project option"]
   },
   {
     action: "define",
@@ -2227,7 +2227,7 @@ const QA_EQUIPMENT = [
     scope: "module",
     section: "Company Logistics with Hauling",
     question: "Who does what in Hauling?",
-    answer: "The **Fleet Administrator** keeps vehicles and drivers under **Fleet and Schedule**. The **Hauling Coordinator** reviews and submits the haul, schedules it, records pickup, transit and delivery and closes it with final costs. The **Hauling Approver** approves or rejects outbound and return hauls. The Driver moves the asset and the **Receiving Representative** confirms receipt and the Condition on Arrival.",
+    answer: "The **Fleet Administrator** keeps vehicles and drivers under **Fleet and Schedule**. The **Hauling Coordinator** reviews and submits the haul, schedules it, records pickup, transit and delivery and closes it with final costs. The **Hauling Approver** approves or rejects outbound and return hauls. The Driver moves the equipment and the **Receiving Representative** confirms receipt and the Condition on Arrival.",
     tags: ["hauling roles","hauling coordinator","hauling approver","fleet administrator","receiving representative"]
   },
   {
@@ -2245,7 +2245,7 @@ const QA_EQUIPMENT = [
     scope: "module",
     section: "Company Logistics with Hauling",
     question: "As a hauling approver, how do I approve or reject a haul request?",
-    answer: "Open the haul on the **Requests** tab and review the asset, route, estimated cost and other costs. Approve it to move it to the **Approved** stage. If you reject an outbound haul, it does not proceed and the allocation stays on hold; if you reject a return haul, the allocation request goes back to Off-Rent Approval.",
+    answer: "Open the haul on the **Requests** tab and review the equipment, route, estimated cost and other costs. Approve it to move it to the **Approved** stage. If you reject an outbound haul, it does not proceed and the allocation stays on hold; if you reject a return haul, the allocation request goes back to Off-Rent Approval.",
     tags: ["hauling approver","approve haul","reject haul","haul approval outcome","as a hauling approver"]
   },
   {
@@ -2281,17 +2281,17 @@ const QA_EQUIPMENT = [
     scope: "module",
     section: "Troubleshooting: Equipment Management Problems",
     question: "Why does an allocation request not move past Ready for Dispatch, Off-Rent or Closed?",
-    answer: "For Ready for Dispatch, enter both the **Dispatch Date** and the **On-Rent Date**. Check **Inspection Checklist Issues** for an open issue against the asset and rectify it; this also blocks Closed and a haul pickup. A card held at Off-Rent with a **Haul Initiated** tag needs its return haul taken through to Completed in Hauling.",
+    answer: "For Ready for Dispatch, enter both the **Dispatch Date** and the **On-Rent Date**. Check **Inspection Checklist Issues** for an open issue against the equipment and rectify it; this also blocks Closed and a haul pickup. A card held at Off-Rent with a **Haul Initiated** tag needs its return haul taken through to Completed in Hauling.",
     tags: ["request stuck","not moving ready for dispatch","stuck off rent","will not close","open inspection issue"]
   },
   {
     action: "troubleshoot",
-    object: "available asset",
+    object: "available equipment",
     scope: "module",
     section: "Troubleshooting: Equipment Management Problems",
-    question: "Why does no asset appear under Available Asset, or why are the rates blank?",
-    answer: "Only assets with **Available** status are offered; Allocated, On Rent, In Transit and Off Rent assets are not. Check that a matching unit exists in the master. For blank rates, check that the **Rate Card Template** covers the asset's category and select it again.",
-    tags: ["no available asset","asset not listed assign","rates blank rate card","available asset dropdown empty"]
+    question: "Why does no equipment appear under Available Equipment, or why are the rates blank?",
+    answer: "Only equipment with **Available** status are offered; Allocated, On Rent, In Transit and Off Rent equipment are not. Check that a matching unit exists in the master. For blank rates, check that the **Rate Card Template** covers the equipment's category and select it again.",
+    tags: ["no available equipment","equipment not listed assign","rates blank rate card","available equipment dropdown empty"]
   },
   {
     action: "troubleshoot",
@@ -2299,7 +2299,7 @@ const QA_EQUIPMENT = [
     scope: "module",
     section: "Troubleshooting: Equipment Management Problems",
     question: "Why was the pre-dispatch inspection skipped, or why is the inspection form empty?",
-    answer: "The stage appears only if **Pre-Dispatch Inspection** was switched on when confirming assignment; move the request back and confirm again with it on. An empty form means no **Inspection Checklist** is linked to the asset under **Settings → Equipment Setup / Accessory Setup**.",
+    answer: "The stage appears only if **Pre-Dispatch Inspection** was switched on when confirming assignment; move the request back and confirm again with it on. An empty form means no **Inspection Checklist** is linked to the equipment under **Settings → Equipment Setup / Accessory Setup**.",
     tags: ["inspection skipped","inspection form empty","pre dispatch inspection missing","checklist not linked"]
   },
   {
@@ -2316,16 +2316,16 @@ const QA_EQUIPMENT = [
     object: "vehicle driver",
     scope: "module",
     section: "Troubleshooting: Equipment Management Problems",
-    question: "Why does no vehicle or driver appear when I assign or haul an asset?",
+    question: "Why does no vehicle or driver appear when I assign or haul a piece of equipment?",
     answer: "Add them under **Hauling → Fleet and Schedule**, check their status is **Available**, and check that the driver is mapped to a vehicle. Only vehicles and drivers set up there can be chosen.",
     tags: ["no vehicle driver","driver not listed","vehicle dropdown empty","fleet and schedule missing"]
   },
   {
     action: "troubleshoot",
-    object: "asset status after haul",
+    object: "equipment status after haul",
     scope: "module",
     section: "Troubleshooting: Equipment Management Problems",
-    question: "Why has the asset status not changed after delivery or return processing?",
+    question: "Why has the equipment status not changed after delivery or return processing?",
     answer: "After a haul, the status follows the **On-Rent Date** (outbound) or the **Pickup Date** (return), so update that date in the allocation request. On Inventory Self Pickup the status stays On Rent until the post-rent inspection is submitted. If no destination location appears, add the Inventory Location first.",
     tags: ["status not changed after delivery","status still on rent","no destination location","return processing status"]
   },
@@ -2343,9 +2343,9 @@ const QA_EQUIPMENT = [
     object: "equipment statuses",
     scope: "module",
     section: "Equipment Master and Accessory Master",
-    question: "What statuses can an asset have in Asset Master?",
+    question: "What statuses can a piece of equipment have in Equipment Master?",
     answer: "You set these yourself: **Available**, **Out of Service**, **Inactive**, **Dispose Initiated**, **Yard Only** and **Unavailable**. The system sets these from operations and hauling: **Allocated**, **In Transit**, **On Rent**, **Off Rent** and **In Maintenance** (the last through a Work Order). System-driven statuses appear in the dropdown but cannot be selected.",
-    tags: ["asset statuses","asset status list","ready to rent","on rent project","on rent customer","pending shipment","checked in","asset master statuses","status filter","what are the asset master statuses","what statuses can an asset have","asset status options","equipment statuses","manual status","system driven status","available allocated on rent off rent"]
+    tags: ["equipment statuses","equipment status list","ready to rent","on rent project","on rent customer","pending shipment","checked in","equipment master statuses","status filter","what are the equipment master statuses","what statuses can a piece of equipment have","equipment status options","equipment statuses","manual status","system driven status","available allocated on rent off rent"]
   },
   {
     action: "view",
@@ -2388,9 +2388,9 @@ const QA_EQUIPMENT = [
     object: "equipment filters",
     scope: "module",
     section: "Equipment Master and Accessory Master",
-    question: "What are Equipment with Telematics, Only Running Assets and Not Reported in Last 72 Hours?",
-    answer: "Extra switches on the Equipment Master **Filters**. They show only equipment that has a mapped telematics device, only assets that are currently running, and only assets that have not reported in the last 72 hours.",
-    tags: ["equipment with telematics","only running assets","not reported in last 72 hours","filters"]
+    question: "What are Equipment with Telematics, Only Running Equipment and Not Reported in Last 72 Hours?",
+    answer: "Extra switches on the Equipment Master **Filters**. They show only equipment that has a mapped telematics device, only equipment that are currently running, and only equipment that have not reported in the last 72 hours.",
+    tags: ["equipment with telematics","only running equipment","not reported in last 72 hours","filters"]
   },
   {
     action: "troubleshoot",
@@ -2406,7 +2406,7 @@ const QA_EQUIPMENT = [
     object: "qr code",
     scope: "module",
     section: "Equipment Master and Accessory Master",
-    question: "Where is the QR code for an asset?",
+    question: "Where is the QR code for a piece of equipment?",
     answer: "In Table View click **QR Code** on the row, or open the profile and view the QR Code in the left panel. You can scan or download it for quick identification and tracking.",
     tags: ["qr code","scan equipment","download qr"]
   },
@@ -6626,7 +6626,7 @@ const QA_FIELDWORKS = [
     scope: "module",
     section: "Project Forms",
     question: "Where does the Request Form asset list come from?",
-    answer: "The Internal LORs **Create** button opens a **Request Form** with an **Available Asset / Accessory** list. It is the **Equipment Master** and **Accessory Master** of Equipment Management: \"Eqp\" rows are equipment and \"Acc\" rows are accessories, each with Type and ID (for example EqpExcavator ID 1). Add or edit items in the Equipment module and they show here. The form type itself reaches the plant through **Project Setup → Forms**.",
+    answer: "The Internal LORs **Create** button opens a **Request Form** with an **Available Equipment / Accessory** list. It is the **Equipment Master** and **Accessory Master** of Equipment Management: \"Eqp\" rows are equipment and \"Acc\" rows are accessories, each with Type and ID (for example EqpExcavator ID 1). Add or edit items in the Equipment module and they show here. The form type itself reaches the plant through **Project Setup → Forms**.",
     tags: ["request form assets","internal lor request","available asset accessory","equipment list project forms","load out request field works","project forms asset list"]
   },
   {
@@ -9652,7 +9652,7 @@ const QA_WORKORDER = [
     scope: "module",
     section: "Reports",
     question: "How do I run the Equipment Breakdown Report?",
-    answer: "Open the **Reports** tab on the Work Order page and click **Equipment Breakdown Report**. Search by work order or asset ID, use **Filters** or column filters, and **Manage Columns** (you can save several layouts). Columns include **Asset ID**, **Status**, **Make**, **Model**, **Category**, **Project**, **Down Date**, **Estimated Back in Service**, **Vendor**, **Notes**, **Cost/Estimate**, **Warranty** and **Responsible party**. Click **Export** to download it with the filters applied.",
+    answer: "Open the **Reports** tab on the Work Order page and click **Equipment Breakdown Report**. Search by work order or asset ID, use **Filters** or column filters, and **Manage Columns** (you can save several layouts). Columns include **Equipment ID**, **Status**, **Make**, **Model**, **Category**, **Project**, **Down Date**, **Estimated Back in Service**, **Vendor**, **Notes**, **Cost/Estimate**, **Warranty** and **Responsible party**. Click **Export** to download it with the filters applied.",
     tags: ["equipment breakdown report","breakdown report","equipment down","work order report","down date","back in service"]
   },
   {
@@ -16567,23 +16567,23 @@ const MODULES = [
         "definitions": [
           {
             "term": "Flow at a glance",
-            "definition": "Master data comes first: the Global Data Administrator creates cost codes, categories and rate card templates, and the Equipment Management Administrator adds them to **Equipment Setup** or **Accessory Setup**. The Equipment Master User then registers each asset with **Add Equipment**. A Requester raises an allocation request in **Operations**, an Approver approves it, and the Equipment Coordinator assigns an asset by **Self Pickup** or **Company Logistics** (which creates a haul in **Hauling**). The asset is inspected, dispatched, confirmed **On-Rent**, extended or taken off rent, picked up, inspected again and closed. Telematics readings, geofences and the **Fleet Map** show where every asset is."
+            "definition": "Master data comes first: the Global Data Administrator creates cost codes, categories and rate card templates, and the Equipment Management Administrator adds them to **Equipment Setup** or **Accessory Setup**. The Equipment Master User then registers each equipment with **Add Equipment**. A Requester raises an allocation request in **Operations**, an Approver approves it, and the Equipment Coordinator assigns a piece of equipment by **Self Pickup** or **Company Logistics** (which creates a haul in **Hauling**). The equipment is inspected, dispatched, confirmed **On-Rent**, extended or taken off rent, picked up, inspected again and closed. Telematics readings, geofences and the **Fleet Map** show where every equipment is."
           },
           {
             "term": "Roles: master data and profile",
-            "definition": "Global Data Administrator (System Administrator or Cost Controller): equipment cost codes, categories and subcategories, rate card templates, and the telematics provider. Equipment Management Administrator (Equipment Admin or IT Administrator): Equipment Setup and Accessory Setup, fuel types, inspection checklists, approval workflows, statuses and thresholds. Equipment Master User (Asset Coordinator or Equipment Executive): creates and maintains records, status, location and image. Inventory In-charge (Yard In-charge or Store Keeper): inventory locations. Asset Accountant (Finance Executive): purchase, warranty, insurance and depreciation panels. Equipment Manager or Fleet Manager: reviews profiles, telematics readings and geofences."
+            "definition": "Global Data Administrator (System Administrator or Cost Controller): equipment cost codes, categories and subcategories, rate card templates, and the telematics provider. Equipment Management Administrator (Equipment Admin or IT Administrator): Equipment Setup and Accessory Setup, fuel types, inspection checklists, approval workflows, statuses and thresholds. Equipment Master User (Equipment Coordinator or Equipment Executive): creates and maintains records, status, location and image. Inventory In-charge (Yard In-charge or Store Keeper): inventory locations. Equipment Accountant (Finance Executive): purchase, warranty, insurance and depreciation panels. Equipment Manager or Fleet Manager: reviews profiles, telematics readings and geofences."
           },
           {
             "term": "Roles: allocation requests",
-            "definition": "Requester (Site Engineer, Project Coordinator or Foreman): raises the request. Approver (Equipment Manager or Operations Manager): approves or rejects at each configured level. Equipment Coordinator (Yard In-charge, Allocator or Dispatcher): assigns the asset and later processes the approved off-rent. Pre-Dispatch Inspector and Post-Rent Inspector (Mechanic, Workshop Supervisor or QA Inspector): complete the checklists. Dispatch Assignee (Yard Supervisor): enters dispatch and on-rent dates. Site Custodian (Site Engineer or Foreman): confirms On-Rent and raises off-rent or extension. Off-Rent Approver (Equipment Manager or Operations Manager): decides those requests. Pickup Assignee (Yard Supervisor or Logistics staff): records the return date. The Collecting Representative on Self Pickup only collects the asset and needs no system action."
+            "definition": "Requester (Site Engineer, Project Coordinator or Foreman): raises the request. Approver (Equipment Manager or Operations Manager): approves or rejects at each configured level. Equipment Coordinator (Yard In-charge, Allocator or Dispatcher): assigns the equipment and later processes the approved off-rent. Pre-Dispatch Inspector and Post-Rent Inspector (Mechanic, Workshop Supervisor or QA Inspector): complete the checklists. Dispatch Assignee (Yard Supervisor): enters dispatch and on-rent dates. Site Custodian (Site Engineer or Foreman): confirms On-Rent and raises off-rent or extension. Off-Rent Approver (Equipment Manager or Operations Manager): decides those requests. Pickup Assignee (Yard Supervisor or Logistics staff): records the return date. The Collecting Representative on Self Pickup only collects the equipment and needs no system action."
           },
           {
             "term": "Roles: hauling, telematics and geofences",
-            "definition": "Fleet Administrator (Transport Admin): vehicles and drivers. Hauling Coordinator (Logistics or Transport Coordinator): moves each haul through its stages and closes it. Hauling Approver (Operations Manager or Cost Controller): approves hauls. Driver: physically moves the asset, with status recorded by the Hauling Coordinator. Receiving Representative: confirms receipt and Condition on Arrival. Equipment Administrator: maps telematics devices. Fleet Monitor (Equipment Manager or Site Supervisor): watches live data, history and the Fleet Map. Maintenance Planner: reviews and transfers readings. Geofence Administrator (Equipment Admin or Site Administrator): creates and activates geofences."
+            "definition": "Fleet Administrator (Transport Admin): vehicles and drivers. Hauling Coordinator (Logistics or Transport Coordinator): moves each haul through its stages and closes it. Hauling Approver (Operations Manager or Cost Controller): approves hauls. Driver: physically moves the equipment, with status recorded by the Hauling Coordinator. Receiving Representative: confirms receipt and Condition on Arrival. Equipment Administrator: maps telematics devices. Fleet Monitor (Equipment Manager or Site Supervisor): watches live data, history and the Fleet Map. Maintenance Planner: reviews and transfers readings. Geofence Administrator (Equipment Admin or Site Administrator): creates and activates geofences."
           },
           {
             "term": "Setup order for allocation, hauling and telematics",
-            "definition": "Do this before the first request. (1) In Global Data, create cost codes, categories and rate card templates. (2) In Settings, set up Equipment Setup and Accessory Setup, including fuel types. (3) Build an Inspection Checklist and link it to each category. (4) Create approval workflows for Equipment Request, Hauling Request and Off-Rent / Extension Request, and mark one of each Set as Default. (5) Check Equipment/Accessory Status and set the Utility Threshold, then set the Request Priority Threshold. (6) Add vehicles and drivers under Hauling → Fleet and Schedule. (7) Connect the telematics provider in Global Data, then map devices. (8) Create and activate geofences. (9) Register the assets."
+            "definition": "Do this before the first request. (1) In Global Data, create cost codes, categories and rate card templates. (2) In Settings, set up Equipment Setup and Accessory Setup, including fuel types. (3) Build an Inspection Checklist and link it to each category. (4) Create approval workflows for Equipment Request, Hauling Request and Off-Rent / Extension Request, and mark one of each Set as Default. (5) Check Equipment/Accessory Status and set the Utility Threshold, then set the Request Priority Threshold. (6) Add vehicles and drivers under Hauling → Fleet and Schedule. (7) Connect the telematics provider in Global Data, then map devices. (8) Create and activate geofences. (9) Register the equipment."
           },
           {
             "term": "Users and Permissions (Equipment Management)",
@@ -16615,7 +16615,7 @@ const MODULES = [
       },
       {
         "heading": "Master Data: Cost Codes, Categories and Equipment Setup",
-        "intro": "<p><strong> </strong> Before anyone registers an asset, a <strong>Global Data Administrator</strong> sets up equipment cost codes, categories and rate card templates, and an <strong>Equipment Management Administrator</strong> links them to the assets in <strong>Settings</strong>. Only assets configured this way appear in the dropdowns when records are created.</p>",
+        "intro": "<p><strong> </strong> Before anyone registers a piece of equipment, a <strong>Global Data Administrator</strong> sets up equipment cost codes, categories and rate card templates, and an <strong>Equipment Management Administrator</strong> links them to the equipment in <strong>Settings</strong>. Only equipment configured this way appear in the dropdowns when records are created.</p>",
         "definitions": [
           {
             "term": "Equipment cost codes (Global Data)",
@@ -16712,7 +16712,7 @@ const MODULES = [
             "steps": [
               "In Global Data → Cost, open <strong>Rate Card Template</strong>.",
               "Click <strong>New Rate Card Template</strong> and fill it in.",
-              "The template can then be chosen as the Default Rate Card Template in Equipment Setup and when an asset is assigned to a request."
+              "The template can then be chosen as the Default Rate Card Template in Equipment Setup and when a piece of equipment is assigned to a request."
             ],
             "images": [
               {
@@ -16860,7 +16860,7 @@ const MODULES = [
         "heading": "Equipment Master and Accessory Master",
         "intro": "<p>The **Equipment Master** and **Accessory Master** (Equipment Management → Equipment) list every piece of equipment and accessory in the organization. Equipment Master Users use them to create and update records, monitor statuses and run actions such as Request Haul.</p><p>Only equipment set up in **Settings → Equipment Setup** (or **Accessory Setup**) can be registered. The top of the page groups records by status; click a status to see only those records. Open a record to see its profile.</p>",
         "definitions": [
-          {"term":"Where this data comes from (Equipment Master lists)","definition":"The **Equipment** (or **Accessory**) dropdown lists only items configured in **Settings → Equipment Setup** (or **Accessory Setup**); those entries use the codes created in **Global Data → Cost → Equipment**. **Category** and **Sub-category** fill in automatically from the chosen equipment. **Fuel Type** comes from **Settings → Equipment Setup → Fuel Type**. The **Location** dropdown depends on the Inventory or Project toggle: Inventory locations come from **Inventory Locations** (the Business Unit must be mapped to the inventory location in Inventory Management), and Project locations come from your projects. Rates default from the category's **Rate Card Template** (Global Data) and can be overridden before you confirm. Live readings (Engine Hours, GPS Fix Time, Message Time, geofence and map) come from the telematics device mapped to the asset. On a request, **Work Location** lists only projects where you are added under **Project Setup → People**. Where the data goes: the equipment record feeds the Allocation Lifecycle, hauling, work orders and maintenance history. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."},
+          {"term":"Where this data comes from (Equipment Master lists)","definition":"The **Equipment** (or **Accessory**) dropdown lists only items configured in **Settings → Equipment Setup** (or **Accessory Setup**); those entries use the codes created in **Global Data → Cost → Equipment**. **Category** and **Sub-category** fill in automatically from the chosen equipment. **Fuel Type** comes from **Settings → Equipment Setup → Fuel Type**. The **Location** dropdown depends on the Inventory or Project toggle: Inventory locations come from **Inventory Locations** (the Business Unit must be mapped to the inventory location in Inventory Management), and Project locations come from your projects. Rates default from the category's **Rate Card Template** (Global Data) and can be overridden before you confirm. Live readings (Engine Hours, GPS Fix Time, Message Time, geofence and map) come from the telematics device mapped to the equipment. On a request, **Work Location** lists only projects where you are added under **Project Setup → People**. Where the data goes: the equipment record feeds the Allocation Lifecycle, hauling, work orders and maintenance history. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."},
           {
             "term": "Equipment Master / Accessory Master",
             "definition": "The page that lists all equipment records (or accessory records) with their status, business unit and location. From it you create records with **Add Equipment**, filter and sort, switch between Grid and Table views, and open a record's profile."
@@ -16879,11 +16879,11 @@ const MODULES = [
           },
           {
             "term": "Filters",
-            "definition": "Filter by **Equipment ID**, **Equipment**, **Status**, **Category**, **Business Unit**, **Make** and **Model**. Extra switches: **Equipment with Telematics**, **Only Running Assets** and **Not Reported in Last 72 Hours**. **Submit** applies the filter; **Clear** removes it. Use **Save Filters** to keep a filter."
+            "definition": "Filter by **Equipment ID**, **Equipment**, **Status**, **Category**, **Business Unit**, **Make** and **Model**. Extra switches: **Equipment with Telematics**, **Only Running Equipment** and **Not Reported in Last 72 Hours**. **Submit** applies the filter; **Clear** removes it. Use **Save Filters** to keep a filter."
           },
           {
             "term": "Table View actions",
-            "definition": "**View** (read-only details), **QR Code** (scan or download the asset's QR code), **Edit**, **Delete** and **History** (status changes, updates and other actions over time)."
+            "definition": "**View** (read-only details), **QR Code** (scan or download the equipment's QR code), **Edit**, **Delete** and **History** (status changes, updates and other actions over time)."
           },
           {
             "term": "Grid View actions",
@@ -16907,11 +16907,11 @@ const MODULES = [
           },
           {
             "term": "Maintenance Records icon",
-            "definition": "A row-level icon in the Equipment Master that opens that item's maintenance history. It only appears for assets that have scheduled maintenance configured — items without a maintenance package won't show this icon. The same information is also visible in the grid's Maintenance Records column."
+            "definition": "A row-level icon in the Equipment Master that opens that item's maintenance history. It only appears for equipment that have scheduled maintenance configured — items without a maintenance package won't show this icon. The same information is also visible in the grid's Maintenance Records column."
           },
           {
             "term": "Earlier-version screens",
-            "definition": "Some environments running an earlier version show the name **Asset Master** with sub-tabs **Company Owned Asset**, **Company Owned Accessory** and **3rd Party Asset**, a **+ Asset** button whose form asks for Asset Name, Asset ID, Asset Description, Replacement Value and Current Location, and status chips such as **Ready to Rent**, **On Rent - Project**, **Pending Shipment**, **On Rent - Customer** and **Checked In**. The steps on this page describe the Arena 2.0 Equipment Master."
+            "definition": "Some environments running an earlier version show the name **Equipment Master** with sub-tabs **Company Owned Equipment**, **Company Owned Accessory** and **3rd Party Equipment**, a **+ Equipment** button whose form asks for Equipment Name, Equipment ID, Equipment Description, Replacement Value and Current Location, and status chips such as **Ready to Rent**, **On Rent - Project**, **Pending Shipment**, **On Rent - Customer** and **Checked In**. The steps on this page describe the Arena 2.0 Equipment Master."
           }
         ],
         "procedures": [
@@ -16987,7 +16987,7 @@ const MODULES = [
             "steps": [
               "In the Equipment Master, click the equipment.",
               "Its <strong>Overview</strong> opens with the five detail panels.",
-              "In Table View, click <strong>QR Code</strong> on the row to scan or download the asset's QR code."
+              "In Table View, click <strong>QR Code</strong> on the row to scan or download the equipment's QR code."
             ]
           },
           {
@@ -16995,7 +16995,7 @@ const MODULES = [
             "steps": [
               "Click <strong>Filters</strong>.",
               "Choose values for Equipment ID, Equipment, Status, Category, Business Unit, Make and Model.",
-              "Switch on <strong>Equipment with Telematics</strong>, <strong>Only Running Assets</strong> or <strong>Not Reported in Last 72 Hours</strong> if you need them.",
+              "Switch on <strong>Equipment with Telematics</strong>, <strong>Only Running Equipment</strong> or <strong>Not Reported in Last 72 Hours</strong> if you need them.",
               "Click <strong>Submit</strong> to apply, or <strong>Clear</strong> to show all equipment."
             ],
             "images": [
@@ -17016,7 +17016,7 @@ const MODULES = [
               },
               {
                 "src": "assets/guides/equipment/050.jpg",
-                "caption": "Equipment with Telematics, Only Running Assets and Not Reported in Last 72 Hours",
+                "caption": "Equipment with Telematics, Only Running Equipment and Not Reported in Last 72 Hours",
                 "step": 3
               },
               {
@@ -17066,7 +17066,7 @@ const MODULES = [
             "title": "Request a haul from the Equipment Master",
             "steps": [
               "Switch to <strong>Grid View</strong>.",
-              "Click <strong>Request Haul</strong> on the asset.",
+              "Click <strong>Request Haul</strong> on the equipment.",
               "Complete the dialog and submit it. It is processed through the hauling workflow."
             ],
             "images": [
@@ -17132,7 +17132,7 @@ const MODULES = [
             "title": "Check an equipment item's history or maintenance records",
             "steps": [
               "Click <strong>History</strong> on the item's row to see its status changes and other actions.",
-              "Open the Maintenance Records icon on the row (shown only for assets with scheduled maintenance) or use the Maintenance Records column."
+              "Open the Maintenance Records icon on the row (shown only for equipment with scheduled maintenance) or use the Maintenance Records column."
             ]
           }
         ],
@@ -17149,7 +17149,7 @@ const MODULES = [
       },
       {
         "heading": "Equipment and Accessory Profile",
-        "intro": "<p><strong> </strong> Every equipment and accessory record has its own profile page. The <strong>Equipment Master User</strong> keeps identity and location current, and the <strong>Asset Accountant</strong> maintains purchase, warranty, insurance and depreciation details. Open it from <strong>Equipment → Equipment Master / Accessory Master</strong> by clicking the record.</p>",
+        "intro": "<p><strong> </strong> Every equipment and accessory record has its own profile page. The <strong>Equipment Master User</strong> keeps identity and location current, and the <strong>Equipment Accountant</strong> maintains purchase, warranty, insurance and depreciation details. Open it from <strong>Equipment → Equipment Master / Accessory Master</strong> by clicking the record.</p>",
         "definitions": [
           {
             "term": "Profile header",
@@ -17157,7 +17157,7 @@ const MODULES = [
           },
           {
             "term": "Basic Details panel",
-            "definition": "The one panel that differs between equipment and accessory. It shows the ID, category and sub-category (filled in automatically), and lets you edit **Description**, **Owning Business Unit**, **Status**, **Current Location** (use the Inventory or Project toggle, then pick the location) and **Billed**. For an accessory, **Linked Asset** lets you select the Equipment IDs it belongs to."
+            "definition": "The one panel that differs between equipment and accessory. It shows the ID, category and sub-category (filled in automatically), and lets you edit **Description**, **Owning Business Unit**, **Status**, **Current Location** (use the Inventory or Project toggle, then pick the location) and **Billed**. For an accessory, **Linked Equipment** lets you select the Equipment IDs it belongs to."
           },
           {
             "term": "Specifications panel",
@@ -17165,7 +17165,7 @@ const MODULES = [
           },
           {
             "term": "Purchase & Ownership panel",
-            "definition": "For the Asset Accountant: **Ownership Type** (Owned, Leased or On Finance), **Acquisition / Purchase Date**, **Purchase Price**, **Vendor / Dealer**, **Sales Tax**, **Source of Funds** (Cash, Loan, LOC or Dealer), **Department / Job Costed** (Equipment, Technology, Hauling or Project) and **Revenue Generating** (Yes or No)."
+            "definition": "For the Equipment Accountant: **Ownership Type** (Owned, Leased or On Finance), **Acquisition / Purchase Date**, **Purchase Price**, **Vendor / Dealer**, **Sales Tax**, **Source of Funds** (Cash, Loan, LOC or Dealer), **Department / Job Costed** (Equipment, Technology, Hauling or Project) and **Revenue Generating** (Yes or No)."
           },
           {
             "term": "Warranty & Insurance panel",
@@ -17181,11 +17181,11 @@ const MODULES = [
           },
           {
             "term": "Who maintains each profile panel",
-            "definition": "The Equipment Master User maintains **Basic Details** and **Specifications**, keeps status and current location up to date, and manages the image. The Asset Accountant maintains **Purchase & Ownership**, **Warranty & Insurance** and **Depreciation**. The Equipment Administrator sets the Fuel Type options in Settings. The Equipment Manager reviews profiles, including the telematics readings and geofence information."
+            "definition": "The Equipment Master User maintains **Basic Details** and **Specifications**, keeps status and current location up to date, and manages the image. The Equipment Accountant maintains **Purchase & Ownership**, **Warranty & Insurance** and **Depreciation**. The Equipment Administrator sets the Fuel Type options in Settings. The Equipment Manager reviews profiles, including the telematics readings and geofence information."
           },
           {
             "term": "Equipment and accessory differences",
-            "definition": "Only Basic Details and one specification field differ. An equipment shows Equipment ID and its Fuel Type; an accessory shows Accessory ID, has a Linked Asset field to pick the Equipment IDs it belongs to, and has no Fuel Type. Category and sub-category fill in from the equipment or accessory in both. The Specifications, Purchase & Ownership, Warranty & Insurance and Depreciation panels are identical."
+            "definition": "Only Basic Details and one specification field differ. An equipment shows Equipment ID and its Fuel Type; an accessory shows Accessory ID, has a Linked Equipment field to pick the Equipment IDs it belongs to, and has no Fuel Type. Category and sub-category fill in from the equipment or accessory in both. The Specifications, Purchase & Ownership, Warranty & Insurance and Depreciation panels are identical."
           }
         ],
         "procedures": [
@@ -17289,7 +17289,7 @@ const MODULES = [
             "title": "Link an accessory to equipment",
             "steps": [
               "Open the accessory from <strong>Accessory Master</strong> and edit the <strong>Basic Details</strong> panel.",
-              "Select the Equipment IDs under <strong>Linked Asset</strong>.",
+              "Select the Equipment IDs under <strong>Linked Equipment</strong>.",
               "Click <strong>Save</strong>."
             ],
             "images": [
@@ -17325,7 +17325,7 @@ const MODULES = [
               },
               {
                 "src": "assets/guides/equipment/078.jpg",
-                "caption": "Linked Asset with Equipment IDs",
+                "caption": "Linked Equipment with Equipment IDs",
                 "step": 2
               },
               {
@@ -17376,7 +17376,7 @@ const MODULES = [
             ]
           },
           {
-            "title": "Record purchase, warranty and depreciation details (Asset Accountant)",
+            "title": "Record purchase, warranty and depreciation details (Equipment Accountant)",
             "steps": [
               "Open the profile from Equipment Master or Accessory Master.",
               "On the <strong>Overview</strong> tab, click the edit icon on <strong>Purchase & Ownership</strong>, enter Ownership Type, dates, price, vendor, tax, source of funds, department and revenue flag, then click <strong>Save</strong>.",
@@ -17449,7 +17449,7 @@ const MODULES = [
         "definitions": [
           {
             "term": "Allocation Lifecycle stages",
-            "definition": "**Request** (pending approval), **Assign** (approved, awaiting an asset and fulfilment method), **Inspection (Pre-Dispatch)** (only if switched on), **Ready for Dispatch**, **In Transit (Outbound)**, **On Rent**, **Off-Rent / Extension**, **In Transit (Return)**, **Pickup**, **Inspection (Post-Rent)** and **Closed**."
+            "definition": "**Request** (pending approval), **Assign** (approved, awaiting a piece of equipment and fulfilment method), **Inspection (Pre-Dispatch)** (only if switched on), **Ready for Dispatch**, **In Transit (Outbound)**, **On Rent**, **Off-Rent / Extension**, **In Transit (Return)**, **Pickup**, **Inspection (Post-Rent)** and **Closed**."
           },
           {
             "term": "New Request form",
@@ -17457,7 +17457,7 @@ const MODULES = [
           },
           {
             "term": "Settings behind the lifecycle",
-            "definition": "In the module Settings: **Approval Workflow** holds separate workflows for **Equipment Request**, **Hauling Request** and **Off-Rent / Extension Request** (only the one marked **Set as Default** applies automatically); **Request Priority Threshold** sets the number of days used for priority; **Equipment/Accessory Status** lists the operational statuses with colours and the **Utility Threshold** for Off Rent; the **Inspection Checklist** is built under **Equipment Forms → Inspection Checklist** and linked to each category in Equipment Setup. Without a linked checklist the inspection stages cannot be used for that asset."
+            "definition": "In the module Settings: **Approval Workflow** holds separate workflows for **Equipment Request**, **Hauling Request** and **Off-Rent / Extension Request** (only the one marked **Set as Default** applies automatically); **Request Priority Threshold** sets the number of days used for priority; **Equipment/Accessory Status** lists the operational statuses with colours and the **Utility Threshold** for Off Rent; the **Inspection Checklist** is built under **Equipment Forms → Inspection Checklist** and linked to each category in Equipment Setup. Without a linked checklist the inspection stages cannot be used for that equipment."
           },
           {
             "term": "Roles in Request Creation",
@@ -17501,7 +17501,7 @@ const MODULES = [
               "Use <strong>Build Form</strong> to enter the Form Title and add configurable fields, then click <strong>Save Changes</strong>. Set Trigger Points if needed, and use <strong>Preview Form</strong> to check it.",
               "Open <strong>Settings → Equipment Setup</strong> or <strong>Accessory Setup</strong>, click the edit icon against the category, pick the checklist in <strong>Inspection Checklist</strong> and click <strong>Submit</strong>."
             ],
-            "note": "Without a linked checklist the inspection stage cannot be used for that asset.",
+            "note": "Without a linked checklist the inspection stage cannot be used for that equipment.",
             "images": [
               {
                 "src": "assets/guides/equipment/094.jpg",
@@ -17810,11 +17810,11 @@ const MODULES = [
       },
       {
         "heading": "Allocation: Internal Self-Pickup to Off-Rent",
-        "intro": "<p>This flow covers a request fulfilled from internal inventory when the project team collects the asset itself (<strong>Internal → Self Pickup</strong>), from <strong>Assign</strong> through <strong>Inspection (Pre-Dispatch)</strong>, <strong>Ready for Dispatch</strong>, <strong>On Rent</strong>, <strong>Off-Rent / Extension</strong>, <strong>Pickup</strong> and <strong>Inspection (Post-Rent)</strong> to <strong>Closed</strong>. No haul is created, so there is no In Transit (Outbound) stage.</p><p>The Equipment Coordinator assigns and processes the return, inspectors complete the checklists, the Dispatch Assignee dispatches, the Site Custodian confirms On-Rent and raises extensions or off-rent, the Off-Rent Approver decides them, and the Pickup Assignee schedules the return. The other route, Company Logistics, is covered under Company Logistics with Hauling.</p>",
+        "intro": "<p>This flow covers a request fulfilled from internal inventory when the project team collects the equipment itself (<strong>Internal → Self Pickup</strong>), from <strong>Assign</strong> through <strong>Inspection (Pre-Dispatch)</strong>, <strong>Ready for Dispatch</strong>, <strong>On Rent</strong>, <strong>Off-Rent / Extension</strong>, <strong>Pickup</strong> and <strong>Inspection (Post-Rent)</strong> to <strong>Closed</strong>. No haul is created, so there is no In Transit (Outbound) stage.</p><p>The Equipment Coordinator assigns and processes the return, inspectors complete the checklists, the Dispatch Assignee dispatches, the Site Custodian confirms On-Rent and raises extensions or off-rent, the Off-Rent Approver decides them, and the Pickup Assignee schedules the return. The other route, Company Logistics, is covered under Company Logistics with Hauling.</p>",
         "definitions": [
           {
             "term": "Assign stage",
-            "definition": "The Equipment Coordinator opens the card, chooses **Internal → Self Pickup** or **Internal → Company Logistics**, picks an **Available Asset**, the **Operator** (and, for Company Logistics, the **Vehicle** and **Driver**), and a **Rate Card Template** (rates fill in and can be changed). Switch **Pre-Dispatch Inspection** on if needed, assign users to the inspection and dispatch stages with View or Edit access, then **Confirm Assignment**. The asset becomes **Allocated**. With Company Logistics, an outbound haul is created and the card shows a **Haul Initiated** tag."
+            "definition": "The Equipment Coordinator opens the card, chooses **Internal → Self Pickup** or **Internal → Company Logistics**, picks an **Available Equipment**, the **Operator** (and, for Company Logistics, the **Vehicle** and **Driver**), and a **Rate Card Template** (rates fill in and can be changed). Switch **Pre-Dispatch Inspection** on if needed, assign users to the inspection and dispatch stages with View or Edit access, then **Confirm Assignment**. The equipment becomes **Allocated**. With Company Logistics, an outbound haul is created and the card shows a **Haul Initiated** tag."
           },
           {
             "term": "Inspections (pre-dispatch and post-rent)",
@@ -17822,7 +17822,7 @@ const MODULES = [
           },
           {
             "term": "Ready for Dispatch and On Rent",
-            "definition": "The Dispatch Assignee enters the **Dispatch Date** and the **On-Rent Date** (when rental charges start) and clicks **Dispatch**. At the site, the Site Custodian confirms the asset as On-Rent, and its status changes from Allocated (or In Transit) to **On Rent**."
+            "definition": "The Dispatch Assignee enters the **Dispatch Date** and the **On-Rent Date** (when rental charges start) and clicks **Dispatch**. At the site, the Site Custodian confirms the equipment as On-Rent, and its status changes from Allocated (or In Transit) to **On Rent**."
           },
           {
             "term": "Off-Rent or Extension request",
@@ -17830,46 +17830,46 @@ const MODULES = [
           },
           {
             "term": "Processing an approved off-rent",
-            "definition": "The Equipment Coordinator chooses a destination. **Project**: **Keep at Project** closes the request and makes the asset Available, or **Re-allocate to Request** sends it to another open request, which restarts at Assign. **Inventory**: **Self Pickup** (pick the **Destination Location**, operator, **Pickup Assignees** and **Post-Inspection Assignees**) moves the card to Pickup, or **Company Logistics** (also pick vehicle and driver) starts a return haul."
+            "definition": "The Equipment Coordinator chooses a destination. **Project**: **Keep at Project** closes the request and makes the equipment Available, or **Re-allocate to Request** sends it to another open request, which restarts at Assign. **Inventory**: **Self Pickup** (pick the **Destination Location**, operator, **Pickup Assignees** and **Post-Inspection Assignees**) moves the card to Pickup, or **Company Logistics** (also pick vehicle and driver) starts a return haul."
           },
           {
             "term": "Pickup and closing",
-            "definition": "The Pickup Assignee selects the **Return Date** and clicks **Schedule Pickup**, moving the card to **Inspection (Post-Rent)**. When that inspection is submitted with no open issue, the request becomes **Closed** and the asset status returns to **Available**."
+            "definition": "The Pickup Assignee selects the **Return Date** and clicks **Schedule Pickup**, moving the card to **Inspection (Post-Rent)**. When that inspection is submitted with no open issue, the request becomes **Closed** and the equipment status returns to **Available**."
           },
           {
             "term": "Roles in the Allocation Lifecycle",
-            "definition": "Requester raises the request. Approver approves it. The Equipment Coordinator assigns the asset. Pre-Dispatch Inspector completes the pre-dispatch checklist. Dispatch Assignee enters the dispatch and on-rent dates. Collecting Representative collects the asset on Self Pickup (no system action). Site Custodian confirms On-Rent and raises extension or off-rent. Off-Rent Approver decides those requests. The Equipment Coordinator processes the approved off-rent. Pickup Assignee records the Return Date. Post-Rent Inspector completes the post-rent checklist. On Company Logistics, the Fleet Administrator, Hauling Coordinator, Hauling Approver, Driver and Receiving Representative also take part."
+            "definition": "Requester raises the request. Approver approves it. The Equipment Coordinator assigns the equipment. Pre-Dispatch Inspector completes the pre-dispatch checklist. Dispatch Assignee enters the dispatch and on-rent dates. Collecting Representative collects the equipment on Self Pickup (no system action). Site Custodian confirms On-Rent and raises extension or off-rent. Off-Rent Approver decides those requests. The Equipment Coordinator processes the approved off-rent. Pickup Assignee records the Return Date. Post-Rent Inspector completes the post-rent checklist. On Company Logistics, the Fleet Administrator, Hauling Coordinator, Hauling Approver, Driver and Receiving Representative also take part."
           },
           {
             "term": "Self Pickup sequence",
-            "definition": "Use it when the project team collects the asset and no company transport is arranged. (1) Assign: Equipment Coordinator selects Self Pickup, assigns the asset and confirms. (2) Inspection (Pre-Dispatch): Pre-Dispatch Inspector submits the form (only if switched on). (3) Ready for Dispatch: Dispatch Assignee enters the dates and dispatches. (4) On Rent: Site Custodian confirms On-Rent. (5) and (6) Off-Rent / Extension: Site Custodian requests, Off-Rent Approver decides. (7) Off-Rent: Equipment Coordinator processes the return. (8) Pickup: Pickup Assignee selects the Return Date and clicks Schedule Pickup. (9) Inspection (Post-Rent): Post-Rent Inspector submits. (10) Closed: the system closes it and the asset becomes Available. No haul is created, so there is no In Transit (Outbound) stage."
+            "definition": "Use it when the project team collects the equipment and no company transport is arranged. (1) Assign: Equipment Coordinator selects Self Pickup, assigns the equipment and confirms. (2) Inspection (Pre-Dispatch): Pre-Dispatch Inspector submits the form (only if switched on). (3) Ready for Dispatch: Dispatch Assignee enters the dates and dispatches. (4) On Rent: Site Custodian confirms On-Rent. (5) and (6) Off-Rent / Extension: Site Custodian requests, Off-Rent Approver decides. (7) Off-Rent: Equipment Coordinator processes the return. (8) Pickup: Pickup Assignee selects the Return Date and clicks Schedule Pickup. (9) Inspection (Post-Rent): Post-Rent Inspector submits. (10) Closed: the system closes it and the equipment becomes Available. No haul is created, so there is no In Transit (Outbound) stage."
           },
           {
             "term": "Assignment fields",
-            "definition": "Available Asset (the unit from the master being allocated; only assets with Available status are offered), Vehicle and Driver (Company Logistics only; drawn from Fleet and Schedule, and the driver must be mapped to the vehicle), Operator (runs the equipment at site, not the driver), Rate Card Template (fills in hourly, daily and monthly rates, which you may change), the Pre-Dispatch Inspection toggle, and the users for the Pre-Dispatch and Ready for Dispatch stages with View or Edit access."
+            "definition": "Available Equipment (the unit from the master being allocated; only equipment with Available status are offered), Vehicle and Driver (Company Logistics only; drawn from Fleet and Schedule, and the driver must be mapped to the vehicle), Operator (runs the equipment at site, not the driver), Rate Card Template (fills in hourly, daily and monthly rates, which you may change), the Pre-Dispatch Inspection toggle, and the users for the Pre-Dispatch and Ready for Dispatch stages with View or Edit access."
           },
           {
             "term": "Off-Rent and extension outcomes",
-            "definition": "For an **extension**: approval returns the request to On-Rent, and the asset stays On Rent; rejection leaves it under Off-Rent / Extension, where it can be processed as an off-rent and sent for approval. For an **off-rent**: approval sets the request to Off-Rent so it can be returned or re-allocated; rejection returns it to On-Rent. Approve with comments; reject with comments and files."
+            "definition": "For an **extension**: approval returns the request to On-Rent, and the equipment stays On Rent; rejection leaves it under Off-Rent / Extension, where it can be processed as an off-rent and sent for approval. For an **off-rent**: approval sets the request to Off-Rent so it can be returned or re-allocated; rejection returns it to On-Rent. Approve with comments; reject with comments and files."
           },
           {
-            "term": "Asset status after each step (guide flow)",
-            "definition": "In this guide's flow the asset moves through Available, Allocated, In Transit, On Rent, Off Rent and back to Available. Confirm Assignment sets Allocated. Dispatch leaves it Allocated. Confirm On-Rent changes Allocated (or In Transit) to On Rent. An extension request or approved extension leaves it On Rent. An approved off-rent processed to a Project sets Off Rent, and Keep at Project closes the request and sets Available. With Inventory Self Pickup it stays On Rent until the post-rent inspection is submitted, then becomes Available. With Company Logistics it goes On Rent to Allocated when the return haul starts, then In Transit, and Available at closing. An open inspection issue holds the request and leaves the status unchanged."
+            "term": "Equipment status after each step (guide flow)",
+            "definition": "In this guide's flow the equipment moves through Available, Allocated, In Transit, On Rent, Off Rent and back to Available. Confirm Assignment sets Allocated. Dispatch leaves it Allocated. Confirm On-Rent changes Allocated (or In Transit) to On Rent. An extension request or approved extension leaves it On Rent. An approved off-rent processed to a Project sets Off Rent, and Keep at Project closes the request and sets Available. With Inventory Self Pickup it stays On Rent until the post-rent inspection is submitted, then becomes Available. With Company Logistics it goes On Rent to Allocated when the return haul starts, then In Transit, and Available at closing. An open inspection issue holds the request and leaves the status unchanged."
           }
         ],
         "procedures": [
           {
-            "title": "Assign an asset for self pickup",
+            "title": "Assign a piece of equipment for self pickup",
             "steps": [
               "Open <strong>Equipment Management → Operations</strong> and click the request card in the <strong>Assign</strong> stage.",
               "Review the allocation details and choose <strong>Internal → Self Pickup</strong>.",
-              "Choose the <strong>Available Asset</strong> from the matching assets and the <strong>Operator</strong> who will run it.",
+              "Choose the <strong>Available Equipment</strong> from the matching equipment and the <strong>Operator</strong> who will run it.",
               "Choose the <strong>Rate Card Template</strong>. The rates fill in; check them and change them if needed.",
-              "Switch on <strong>Pre-Dispatch Inspection</strong> if an inspection is needed before the asset leaves the yard.",
+              "Switch on <strong>Pre-Dispatch Inspection</strong> if an inspection is needed before the equipment leaves the yard.",
               "Assign users to the Pre-dispatch (if on) and Ready for Dispatch stages, choosing View or Edit access, and click <strong>Submit</strong>.",
               "Upload files if needed and click <strong>Confirm Assignment</strong> to move the card on."
             ],
-            "note": "If Pre-Dispatch Inspection is on, the request moves to Inspection (Pre-Dispatch); otherwise it goes straight to Ready for Dispatch. Either way the asset status becomes Allocated.",
+            "note": "If Pre-Dispatch Inspection is on, the request moves to Inspection (Pre-Dispatch); otherwise it goes straight to Ready for Dispatch. Either way the equipment status becomes Allocated.",
             "images": [
               {
                 "src": "assets/guides/equipment/139.jpg",
@@ -17893,7 +17893,7 @@ const MODULES = [
               },
               {
                 "src": "assets/guides/equipment/143.jpg",
-                "caption": "Available Asset list",
+                "caption": "Available Equipment list",
                 "step": 3
               },
               {
@@ -18107,10 +18107,10 @@ const MODULES = [
             ]
           },
           {
-            "title": "Dispatch an asset (Dispatch Assignee)",
+            "title": "Dispatch a piece of equipment (Dispatch Assignee)",
             "steps": [
               "Open the card in <strong>Ready for Dispatch</strong>.",
-              "Enter the <strong>Dispatch Date</strong> (when the asset is handed over) and the <strong>On-Rent Date</strong> (when rental charges start).",
+              "Enter the <strong>Dispatch Date</strong> (when the equipment is handed over) and the <strong>On-Rent Date</strong> (when rental charges start).",
               "Add attachments if needed and click <strong>Dispatch</strong>."
             ],
             "note": "The card moves to On-Rent. On Company Logistics, it moves on only as the outbound haul progresses.",
@@ -18158,13 +18158,13 @@ const MODULES = [
             ]
           },
           {
-            "title": "Confirm an asset as On-Rent (Site Custodian)",
+            "title": "Confirm a piece of equipment as On-Rent (Site Custodian)",
             "steps": [
               "Open the card in the <strong>On-Rent</strong> stage and review the details.",
               "Choose the On-Rent option.",
               "Click <strong>Submit</strong>."
             ],
-            "note": "The asset status changes to On Rent, and rental charges apply from the On-Rent Date.",
+            "note": "The equipment status changes to On Rent, and rental charges apply from the On-Rent Date.",
             "images": [
               {
                 "src": "assets/guides/equipment/169.jpg",
@@ -18208,7 +18208,7 @@ const MODULES = [
               },
               {
                 "src": "assets/guides/equipment/173.jpg",
-                "caption": "Asset status On Rent",
+                "caption": "Equipment status On Rent",
                 "step": 3
               },
               {
@@ -18218,7 +18218,7 @@ const MODULES = [
               },
               {
                 "src": "assets/guides/equipment/320.jpg",
-                "caption": "Asset status On Rent",
+                "caption": "Equipment status On Rent",
                 "step": 3
               }
             ]
@@ -18232,7 +18232,7 @@ const MODULES = [
               "Upload attachments if needed.",
               "Click <strong>Submit Request</strong>."
             ],
-            "note": "The request moves to Off-Rent / Extension and waits for approval. The asset stays On Rent.",
+            "note": "The request moves to Off-Rent / Extension and waits for approval. The equipment stays On Rent.",
             "images": [
               {
                 "src": "assets/guides/equipment/174.jpg",
@@ -18320,7 +18320,7 @@ const MODULES = [
               "Upload attachments if needed.",
               "Click <strong>Submit Request</strong>."
             ],
-            "note": "The request moves to Off-Rent / Extension and waits for approval. The asset stays On Rent until the request is approved.",
+            "note": "The request moves to Off-Rent / Extension and waits for approval. The equipment stays On Rent until the request is approved.",
             "images": [
               {
                 "src": "assets/guides/equipment/182.jpg",
@@ -18425,11 +18425,11 @@ const MODULES = [
             ]
           },
           {
-            "title": "Keep an asset at the project or re-allocate it",
+            "title": "Keep a piece of equipment at the project or re-allocate it",
             "steps": [
               "After the off-rent is approved, open the card and choose <strong>Project</strong>. Enable the toggle to select the project, add attachments and click <strong>Submit</strong>, then reopen the card.",
-              "To leave the asset there, choose <strong>Keep at Project</strong> and click <strong>Submit</strong>. The request closes and the asset becomes Available.",
-              "To use it on another request, choose <strong>Re-allocate to Request</strong>, pick the matching request and click the <strong>Open Allocation</strong> icon. The asset restarts at the Assign stage of that request."
+              "To leave the equipment there, choose <strong>Keep at Project</strong> and click <strong>Submit</strong>. The request closes and the equipment becomes Available.",
+              "To use it on another request, choose <strong>Re-allocate to Request</strong>, pick the matching request and click the <strong>Open Allocation</strong> icon. The equipment restarts at the Assign stage of that request."
             ],
             "images": [
               {
@@ -18530,7 +18530,7 @@ const MODULES = [
             ]
           },
           {
-            "title": "Return an asset to inventory by self pickup",
+            "title": "Return a piece of equipment to inventory by self pickup",
             "steps": [
               "After the off-rent is approved, open the request card and choose <strong>Inventory</strong>. Turn off the project toggle.",
               "Choose <strong>Self Pickup</strong> as the method and select the <strong>Destination Location</strong> (from the configured Inventory Locations).",
@@ -18538,7 +18538,7 @@ const MODULES = [
               "Choose the <strong>Pickup Assignees</strong> and the <strong>Post-Inspection Assignees</strong> and click <strong>Submit</strong> for each.",
               "Upload attachments if needed and click <strong>Submit</strong>."
             ],
-            "note": "The request moves to the Pickup stage. The asset status stays On Rent until the pickup and post-rent inspection are done.",
+            "note": "The request moves to the Pickup stage. The equipment status stays On Rent until the pickup and post-rent inspection are done.",
             "images": [
               {
                 "src": "assets/guides/equipment/201.jpg",
@@ -18727,7 +18727,7 @@ const MODULES = [
             "title": "Close the allocation",
             "steps": [
               "After the post-rent inspection is submitted with no open issue, the request moves to <strong>Closed</strong>.",
-              "The equipment status becomes <strong>Available</strong>, so the asset can be used on the next request."
+              "The equipment status becomes <strong>Available</strong>, so the equipment can be used on the next request."
             ],
             "images": [
               {
@@ -18776,11 +18776,11 @@ const MODULES = [
           },
           {
             "term": "Request Haul",
-            "definition": "In the Equipment Master grid view, **Request Haul** on an asset opens a dialog to create a haul between inventory and project locations, or between projects."
+            "definition": "In the Equipment Master grid view, **Request Haul** on a piece of equipment opens a dialog to create a haul between inventory and project locations, or between projects."
           },
           {
             "term": "Roles in Hauling",
-            "definition": "Fleet Administrator (Transport Admin) keeps vehicles and drivers. Hauling Coordinator (Logistics or Transport Coordinator) reviews the request, submits it, schedules it, records pickup, transit and delivery on the driver's behalf, and closes it with final costs. Hauling Approver (Operations Manager or Cost Controller) approves outbound and return hauls. The Driver moves the asset. The Receiving Representative confirms receipt and the Condition on Arrival at the destination."
+            "definition": "Fleet Administrator (Transport Admin) keeps vehicles and drivers. Hauling Coordinator (Logistics or Transport Coordinator) reviews the request, submits it, schedules it, records pickup, transit and delivery on the driver's behalf, and closes it with final costs. Hauling Approver (Operations Manager or Cost Controller) approves outbound and return hauls. The Driver moves the equipment. The Receiving Representative confirms receipt and the Condition on Arrival at the destination."
           },
           {
             "term": "Haul request fields by stage",
@@ -18788,15 +18788,15 @@ const MODULES = [
           },
           {
             "term": "Haul approval outcomes",
-            "definition": "Approved: the request moves to the Approved stage and can be scheduled. Rejected outbound haul: it does not proceed and the allocation stays on hold, so reassign the asset in Operations; a manual request is marked Rejected and cannot proceed. Rejected return haul: the linked allocation request goes back to Off-Rent Approval, where the return is corrected and resubmitted or a different return method is chosen."
+            "definition": "Approved: the request moves to the Approved stage and can be scheduled. Rejected outbound haul: it does not proceed and the allocation stays on hold, so reassign the equipment in Operations; a manual request is marked Rejected and cannot proceed. Rejected return haul: the linked allocation request goes back to Off-Rent Approval, where the return is corrected and resubmitted or a different return method is chosen."
           },
           {
             "term": "Company Logistics sequence",
-            "definition": "Use it when the company arranges transport with its own vehicle and driver. Outbound: the Equipment Coordinator assigns the asset, vehicle and driver; the Pre-Dispatch Inspector inspects if enabled; the Hauling Coordinator submits the outbound haul, the Hauling Approver approves it, then it is scheduled and picked up; the Dispatch Assignee handles Ready for Dispatch; the haul is marked In Transit, then Delivered (the request moves to On Rent) and closed with final costs. Rental: the Site Custodian confirms On-Rent and requests off-rent or extension; the Off-Rent Approver decides; the Equipment Coordinator processes the return. Return: the same haul steps run in reverse to the inventory location; Delivered moves the request to Pickup. Then the Pickup Assignee schedules the pickup, the Post-Rent Inspector inspects and the request closes."
+            "definition": "Use it when the company arranges transport with its own vehicle and driver. Outbound: the Equipment Coordinator assigns the equipment, vehicle and driver; the Pre-Dispatch Inspector inspects if enabled; the Hauling Coordinator submits the outbound haul, the Hauling Approver approves it, then it is scheduled and picked up; the Dispatch Assignee handles Ready for Dispatch; the haul is marked In Transit, then Delivered (the request moves to On Rent) and closed with final costs. Rental: the Site Custodian confirms On-Rent and requests off-rent or extension; the Off-Rent Approver decides; the Equipment Coordinator processes the return. Return: the same haul steps run in reverse to the inventory location; Delivered moves the request to Pickup. Then the Pickup Assignee schedules the pickup, the Post-Rent Inspector inspects and the request closes."
           },
           {
             "term": "Company Logistics: outbound vs return haul",
-            "definition": "Outbound is triggered by choosing Company Logistics on Assign and runs inventory to project; the request is on Assign or Pre-Dispatch Inspection with a Haul Initiated tag, the asset goes Available to Allocated, Picked Up lets the request reach Ready for Dispatch (if the inspection is done), and Delivered moves it to On Rent (governed by the On-Rent Date). Return is triggered by choosing Inventory then Company Logistics while processing an approved off-rent and runs project to inventory; the request stays at Off-Rent with a Haul Initiated tag, the asset goes On Rent to Allocated, Picked Up changes no stage, and Delivered moves it to Pickup (governed by the Pickup Date). A rejected outbound haul holds the allocation to be corrected; a rejected return haul sends the request back to Off-Rent approval."
+            "definition": "Outbound is triggered by choosing Company Logistics on Assign and runs inventory to project; the request is on Assign or Pre-Dispatch Inspection with a Haul Initiated tag, the equipment goes Available to Allocated, Picked Up lets the request reach Ready for Dispatch (if the inspection is done), and Delivered moves it to On Rent (governed by the On-Rent Date). Return is triggered by choosing Inventory then Company Logistics while processing an approved off-rent and runs project to inventory; the request stays at Off-Rent with a Haul Initiated tag, the equipment goes On Rent to Allocated, Picked Up changes no stage, and Delivered moves it to Pickup (governed by the Pickup Date). A rejected outbound haul holds the allocation to be corrected; a rejected return haul sends the request back to Off-Rent approval."
           }
         ],
         "procedures": [
@@ -18861,17 +18861,17 @@ const MODULES = [
             ]
           },
           {
-            "title": "Assign an asset for Company Logistics",
+            "title": "Assign a piece of equipment for Company Logistics",
             "steps": [
               "Open <strong>Equipment Management → Operations</strong> and click the request card in the <strong>Assign</strong> stage.",
               "Review the allocation details and choose <strong>Internal → Company Logistics</strong>.",
-              "Choose the <strong>Available Asset</strong>, then the <strong>Vehicle</strong>, the <strong>Driver</strong> and the <strong>Operator</strong>.",
+              "Choose the <strong>Available Equipment</strong>, then the <strong>Vehicle</strong>, the <strong>Driver</strong> and the <strong>Operator</strong>.",
               "Choose the <strong>Rate Card Template</strong>. Check the auto-filled rates and change them if needed.",
-              "Switch on <strong>Pre-Dispatch Inspection</strong> if the asset is to be inspected before it leaves the yard.",
+              "Switch on <strong>Pre-Dispatch Inspection</strong> if the equipment is to be inspected before it leaves the yard.",
               "Assign users (with View or Edit access) to the Pre-dispatch and Ready for Dispatch stages, and click <strong>Submit</strong>.",
               "Upload files if needed and click <strong>Confirm Assignment</strong>."
             ],
-            "note": "The asset status becomes Allocated, a Haul Initiated tag shows on the card, and an outbound haul request is created in Hauling with the asset, route, vehicle and driver.",
+            "note": "The equipment status becomes Allocated, a Haul Initiated tag shows on the card, and an outbound haul request is created in Hauling with the equipment, route, vehicle and driver.",
             "images": [
               {
                 "src": "assets/guides/equipment/247.jpg",
@@ -18890,7 +18890,7 @@ const MODULES = [
               },
               {
                 "src": "assets/guides/equipment/250.jpg",
-                "caption": "Available Asset list",
+                "caption": "Available Equipment list",
                 "step": 2
               },
               {
@@ -18964,7 +18964,7 @@ const MODULES = [
             "title": "Create a haul request by hand",
             "steps": [
               "In <strong>Hauling</strong>, click <strong>New Request</strong>.",
-              "Choose Equipment or Accessory and the asset, then the <strong>Original Location</strong> and <strong>Destination Location</strong>.",
+              "Choose Equipment or Accessory and the equipment, then the <strong>Original Location</strong> and <strong>Destination Location</strong>.",
               "Enter the <strong>Request Date</strong>, <strong>Estimated Cost</strong> and any phase codes, escort cost and permit cost.",
               "Click <strong>Save</strong>. Choose the vehicle and driver at the Approved stage."
             ],
@@ -19005,7 +19005,7 @@ const MODULES = [
             "title": "Review and submit an auto-generated haul request",
             "steps": [
               "Open <strong>Equipment Management → Hauling → Internal Hauling → Requests</strong>.",
-              "Open the haul created from Operations and check the asset, original and destination locations, vehicle and driver.",
+              "Open the haul created from Operations and check the equipment, original and destination locations, vehicle and driver.",
               "Enter the Estimated Cost and any Phase Codes, Escort Cost and Permit Cost.",
               "Click <strong>Submit for Approval</strong>."
             ],
@@ -19027,7 +19027,7 @@ const MODULES = [
               },
               {
                 "src": "assets/guides/equipment/283.jpg",
-                "caption": "Asset, locations, vehicle and driver",
+                "caption": "Equipment, locations, vehicle and driver",
                 "step": 2
               },
               {
@@ -19045,7 +19045,7 @@ const MODULES = [
           {
             "title": "Approve or reject a haul request (Hauling Approver)",
             "steps": [
-              "Open the haul on the <strong>Requests</strong> tab and review the asset, route, estimated cost and other costs.",
+              "Open the haul on the <strong>Requests</strong> tab and review the equipment, route, estimated cost and other costs.",
               "Approve it to move it to the Approved stage, or reject it."
             ],
             "images": [
@@ -19056,7 +19056,7 @@ const MODULES = [
               },
               {
                 "src": "assets/guides/equipment/287.jpg",
-                "caption": "Asset, route and costs to review",
+                "caption": "Equipment, route and costs to review",
                 "step": 1
               }
             ]
@@ -19066,7 +19066,7 @@ const MODULES = [
             "steps": [
               "Open the card under <strong>Approved</strong>. For a manual request, select the Vehicle and Driver. Click <strong>Schedule Haul</strong>.",
               "Open the card under <strong>Schedule Pickup</strong>, select the <strong>Pickup Date</strong> and click <strong>Submit Date</strong>.",
-              "Open the card under <strong>Scheduled</strong> and click <strong>Picked Up</strong> once the asset has been collected."
+              "Open the card under <strong>Scheduled</strong> and click <strong>Picked Up</strong> once the equipment has been collected."
             ],
             "note": "On the outbound haul, Picked Up lets the request reach Ready for Dispatch once the pre-dispatch inspection is complete.",
             "images": [
@@ -19148,7 +19148,7 @@ const MODULES = [
               },
               {
                 "src": "assets/guides/equipment/304.jpg",
-                "caption": "Asset status In Transit",
+                "caption": "Equipment status In Transit",
                 "step": 1
               },
               {
@@ -19204,14 +19204,14 @@ const MODULES = [
             ]
           },
           {
-            "title": "Return an asset with Company Logistics",
+            "title": "Return a piece of equipment with Company Logistics",
             "steps": [
               "After the off-rent is approved, open the request card and choose <strong>Inventory</strong>, then <strong>Company Logistics</strong>.",
               "Choose the <strong>Destination Location</strong>, the <strong>Vehicle</strong> and the <strong>Driver</strong>.",
               "Choose the <strong>Pickup Assignees</strong> and <strong>Post-Inspection Assignees</strong> and upload files if needed.",
               "Click <strong>Submit</strong>. A return haul request is created in Hauling."
             ],
-            "note": "The asset status changes from On Rent to Allocated and a Haul Initiated tag shows while the haul is processed. The request stays at Off-Rent until the haul is done.",
+            "note": "The equipment status changes from On Rent to Allocated and a Haul Initiated tag shows while the haul is processed. The request stays at Off-Rent until the haul is done.",
             "images": [
               {
                 "src": "assets/guides/equipment/209.jpg",
@@ -19279,7 +19279,7 @@ const MODULES = [
             "title": "Review and approve the return haul",
             "steps": [
               "Open <strong>Equipment Management → Hauling → Internal Hauling → Requests</strong> and click the return haul created from the off-rent.",
-              "Check the asset, the original location (project), the destination location (inventory) and the requested date.",
+              "Check the equipment, the original location (project), the destination location (inventory) and the requested date.",
               "Enter the <strong>Estimated Cost</strong> and any Phase Codes, Escort Cost and Permit Cost, then click <strong>Submit for Approval</strong>.",
               "The Hauling Approver approves it, which moves it to the <strong>Approved</strong> stage, or rejects it."
             ],
@@ -19296,7 +19296,7 @@ const MODULES = [
               },
               {
                 "src": "assets/guides/equipment/362.jpg",
-                "caption": "Asset, original and destination locations",
+                "caption": "Equipment, original and destination locations",
                 "step": 3
               },
               {
@@ -19326,7 +19326,7 @@ const MODULES = [
             "steps": [
               "Click the approved return request and review the haul details. Click <strong>Schedule Haul</strong>.",
               "Under <strong>Schedule Pickup</strong>, select the <strong>Pickup Date</strong> and click <strong>Submit Date</strong>.",
-              "Under <strong>Scheduled</strong>, click <strong>Picked Up</strong> once the asset has been collected from the project."
+              "Under <strong>Scheduled</strong>, click <strong>Picked Up</strong> once the equipment has been collected from the project."
             ],
             "images": [
               {
@@ -19402,7 +19402,7 @@ const MODULES = [
               },
               {
                 "src": "assets/guides/equipment/379.jpg",
-                "caption": "Asset status In Transit",
+                "caption": "Equipment status In Transit",
                 "step": 1
               },
               {
@@ -19469,7 +19469,7 @@ const MODULES = [
       },
       {
         "heading": "Telematics: Device Mapping and Live Data",
-        "intro": "<p><strong> </strong> Telematics connects assets to a third-party provider so a <strong>Fleet Monitor</strong> can see engine, fuel, operation and movement readings inside Arena. A <strong>Global Data Administrator</strong> connects the provider once, and an <strong>Equipment Administrator</strong> maps each device to an asset.</p>",
+        "intro": "<p><strong> </strong> Telematics connects equipment to a third-party provider so a <strong>Fleet Monitor</strong> can see engine, fuel, operation and movement readings inside Arena. A <strong>Global Data Administrator</strong> connects the provider once, and an <strong>Equipment Administrator</strong> maps each device to a piece of equipment.</p>",
         "definitions": [
           {
             "term": "Telematics provider setup",
@@ -19477,7 +19477,7 @@ const MODULES = [
           },
           {
             "term": "Device Mapping",
-            "definition": "Open the asset, click the **Telematics** tab, and use **Map Device** to pick a provider and one of its **Available Devices**. **View Details** shows the mapped device, **Unmap Device** removes it, and the **Info Mapping** panel shows the source of each telemetry category."
+            "definition": "Open the equipment, click the **Telematics** tab, and use **Map Device** to pick a provider and one of its **Available Devices**. **View Details** shows the mapped device, **Unmap Device** removes it, and the **Info Mapping** panel shows the source of each telemetry category."
           },
           {
             "term": "Live Data",
@@ -19489,19 +19489,19 @@ const MODULES = [
           },
           {
             "term": "Readings History",
-            "definition": "Recorded readings filtered by **Date Range**, **Device** and **Category**. A Maintenance Planner can select rows with the Action box, click **Transfer**, pick the destination asset and **Submit** to move readings to another asset."
+            "definition": "Recorded readings filtered by **Date Range**, **Device** and **Category**. A Maintenance Planner can select rows with the Action box, click **Transfer**, pick the destination equipment and **Submit** to move readings to another equipment."
           },
           {
             "term": "Roles for telematics",
-            "definition": "Global Data Administrator: sets up the provider once, including the fetch interval. Equipment Administrator: maps, views and unmaps devices. Fleet Monitor (Equipment Manager or Site Supervisor): watches Live Data and the history tabs. Maintenance Planner (Meter Administrator or Maintenance Engineer): reviews Readings History and transfers readings between assets."
+            "definition": "Global Data Administrator: sets up the provider once, including the fetch interval. Equipment Administrator: maps, views and unmaps devices. Fleet Monitor (Equipment Manager or Site Supervisor): watches Live Data and the history tabs. Maintenance Planner (Meter Administrator or Maintenance Engineer): reviews Readings History and transfers readings between equipment."
           },
           {
             "term": "Telematics flow",
-            "definition": "(1) The Global Data Administrator configures the provider credentials and fetch interval under **Global Data → Marketplace → Telematics** and clicks Submit. (2) The Equipment Administrator opens the asset and clicks **Telematics**. (3) The Equipment Administrator maps the device. (4) The Fleet Monitor reviews **Live Data**. (5) Then **Trip History** with precision and date range. (6) **Device History**. (7) **Location History**. (8) The Maintenance Planner reviews **Readings History** and transfers readings."
+            "definition": "(1) The Global Data Administrator configures the provider credentials and fetch interval under **Global Data → Marketplace → Telematics** and clicks Submit. (2) The Equipment Administrator opens the equipment and clicks **Telematics**. (3) The Equipment Administrator maps the device. (4) The Fleet Monitor reviews **Live Data**. (5) Then **Trip History** with precision and date range. (6) **Device History**. (7) **Location History**. (8) The Maintenance Planner reviews **Readings History** and transfers readings."
           },
           {
             "term": "Info Mapping and the telematics tabs",
-            "definition": "The **Info Mapping** panel on Device Mapping shows where each telemetry category is sourced from. The telematics tabs are Device Mapping, Live Data, Trip History, Device History, Location History and Readings History. Each is available from the same row of tabs on the asset."
+            "definition": "The **Info Mapping** panel on Device Mapping shows where each telemetry category is sourced from. The telematics tabs are Device Mapping, Live Data, Trip History, Device History, Location History and Readings History. Each is available from the same row of tabs on the equipment."
           }
         ],
         "procedures": [
@@ -19551,9 +19551,9 @@ const MODULES = [
             ]
           },
           {
-            "title": "Map a telematics device to an asset",
+            "title": "Map a telematics device to a piece of equipment",
             "steps": [
-              "Open <strong>Equipment Management → Equipment</strong> and click the asset.",
+              "Open <strong>Equipment Management → Equipment</strong> and click the equipment.",
               "Click the <strong>Telematics</strong> tab, which opens <strong>Device Mapping</strong>.",
               "Click <strong>Map Device</strong>, choose the <strong>Telematics Provider</strong>, then choose the device from <strong>Available Devices</strong>.",
               "Click <strong>Map Device</strong> to save."
@@ -19603,11 +19603,11 @@ const MODULES = [
             ]
           },
           {
-            "title": "Transfer readings to another asset",
+            "title": "Transfer readings to another equipment",
             "steps": [
-              "Open the asset's <strong>Telematics → Readings History</strong> and choose the <strong>Date Range</strong>, <strong>Device</strong> and <strong>Category</strong>.",
+              "Open the equipment's <strong>Telematics → Readings History</strong> and choose the <strong>Date Range</strong>, <strong>Device</strong> and <strong>Category</strong>.",
               "Select the rows with the Action box and click <strong>Transfer</strong>.",
-              "Choose the destination asset and click <strong>Submit</strong>."
+              "Choose the destination equipment and click <strong>Submit</strong>."
             ],
             "images": [
               {
@@ -19632,7 +19632,7 @@ const MODULES = [
               },
               {
                 "src": "assets/guides/equipment/468.jpg",
-                "caption": "Destination asset dropdown",
+                "caption": "Destination equipment dropdown",
                 "step": 2
               },
               {
@@ -19643,9 +19643,9 @@ const MODULES = [
             ]
           },
           {
-            "title": "Replace a telematics device on an asset",
+            "title": "Replace a telematics device on a piece of equipment",
             "steps": [
-              "Open the asset's <strong>Telematics → Readings History</strong> and transfer the readings you want to keep to the asset you choose.",
+              "Open the equipment's <strong>Telematics → Readings History</strong> and transfer the readings you want to keep to the equipment you choose.",
               "On <strong>Device Mapping</strong>, click <strong>Unmap Device</strong> to remove the current device.",
               "Click <strong>Map Device</strong>, choose the provider and the replacement device from Available Devices, and click <strong>Map Device</strong>."
             ],
@@ -19660,7 +19660,7 @@ const MODULES = [
           {
             "title": "Check trip history for a machine",
             "steps": [
-              "Open the asset and click <strong>Telematics → Trip History</strong>.",
+              "Open the equipment and click <strong>Telematics → Trip History</strong>.",
               "Set the coordinate precision and the date range.",
               "Click <strong>Apply</strong> to see routes and locations for that period."
             ],
@@ -19717,7 +19717,7 @@ const MODULES = [
       },
       {
         "heading": "Geofencing and Fleet Map",
-        "intro": "<p><strong> </strong> A <strong>geofence</strong> is a boundary drawn around a work location. A Geofence Administrator creates and activates geofences on the <strong>Overview → Geofencing</strong> tab, and a Fleet Monitor uses the <strong>Fleet Map</strong> to see active geofences and the assets reporting inside them.</p>",
+        "intro": "<p><strong> </strong> A <strong>geofence</strong> is a boundary drawn around a work location. A Geofence Administrator creates and activates geofences on the <strong>Overview → Geofencing</strong> tab, and a Fleet Monitor uses the <strong>Fleet Map</strong> to see active geofences and the equipment reporting inside them.</p>",
         "definitions": [
           {
             "term": "Geofencing tab",
@@ -19729,7 +19729,7 @@ const MODULES = [
           },
           {
             "term": "Fleet Map",
-            "definition": "Shows equipment reporting through telematics. Active geofences show as yellow regions, numbered highlights are clusters, and blue arrows are individual mapped devices once you zoom in. Switch **Map** or **Satellite**, use the Pegman for Street View, and search by **Asset ID**, **Description** or telematics device serial number."
+            "definition": "Shows equipment reporting through telematics. Active geofences show as yellow regions, numbered highlights are clusters, and blue arrows are individual mapped devices once you zoom in. Switch **Map** or **Satellite**, use the Pegman for Street View, and search by **Equipment ID**, **Description** or telematics device serial number."
           },
           {
             "term": "Fleet Map filters",
@@ -19737,11 +19737,11 @@ const MODULES = [
           },
           {
             "term": "Roles for geofences and the Fleet Map",
-            "definition": "Geofence Administrator (Equipment Admin or Site Administrator): creates geofences, sets coordinates, activates them and maintains the list. Inventory In-charge: confirms that inventory geofences match the right inventory location. Fleet Monitor (Equipment Manager or Operations Manager): uses the Fleet Map. Equipment Administrator: maps telematics devices so assets appear on the map."
+            "definition": "Geofence Administrator (Equipment Admin or Site Administrator): creates geofences, sets coordinates, activates them and maintains the list. Inventory In-charge: confirms that inventory geofences match the right inventory location. Fleet Monitor (Equipment Manager or Operations Manager): uses the Fleet Map. Equipment Administrator: maps telematics devices so equipment appear on the map."
           },
           {
             "term": "Geofence flow",
-            "definition": "(1) The Geofence Administrator opens **Overview → Geofencing** and clicks **Add Location**. (2) Switches the Inventory or Project toggle and selects the work location. (3) Sets at least three coordinates. (4) Clicks **Save Geofence**. (5) Switches **Active** on. (6) The Fleet Monitor finds the geofence and the assets inside it on **Overview → Fleet Map**."
+            "definition": "(1) The Geofence Administrator opens **Overview → Geofencing** and clicks **Add Location**. (2) Switches the Inventory or Project toggle and selects the work location. (3) Sets at least three coordinates. (4) Clicks **Save Geofence**. (5) Switches **Active** on. (6) The Fleet Monitor finds the geofence and the equipment inside it on **Overview → Fleet Map**."
           },
           {
             "term": "Geofence location fields",
@@ -19860,13 +19860,13 @@ const MODULES = [
             ]
           },
           {
-            "title": "Find an asset on the Fleet Map",
+            "title": "Find a piece of equipment on the Fleet Map",
             "steps": [
               "Open <strong>Overview → Fleet Map</strong>.",
-              "Click <strong>Filters</strong> and search by Asset ID, description or device serial number, or set the map and equipment filters.",
+              "Click <strong>Filters</strong> and search by Equipment ID, description or device serial number, or set the map and equipment filters.",
               "Zoom in past the clusters and click the blue marker."
             ],
-            "note": "An asset shows only if a telematics device is mapped to it.",
+            "note": "A piece of equipment shows only if a telematics device is mapped to it.",
             "images": [
               {
                 "src": "assets/guides/equipment/426.jpg",
@@ -19975,8 +19975,8 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Asset Setup",
-        "intro": "<p>Equipment that isn't maintained on schedule is equipment that fails at the worst possible moment — mid-pour, mid-lift, or mid-shift, when the cost of downtime is highest. Rather than relying on a Fleet Manager to remember every crane's inspection date by hand, Asset Setup lets a <strong>Fleet/Equipment Module Manager or Equipment Management Admin</strong> build that discipline into the system once, as a maintenance package, so the right form reaches the right crew member automatically instead of depending on someone's memory.</p><p>The Asset Setup tab (not the same as Settings → Equipment Setup, which configures categories for registration) is where administrators define recurring maintenance obligations for equipment — grouping items together into a maintenance package that bundles which equipment needs attention, what forms need to be filled out, how often, and who's responsible. Rather than manually reminding field crews to inspect or service equipment, a properly configured maintenance package automates that entire cadence, surfacing the right form to the right person at the right time.</p>\n    <p>The screen is built around a four-step wizard, launched via Create Maintenance Package, that walks you through listing the equipment covered, identifying which forms apply, setting the schedule, and assigning the crew responsible. This structure matters because the four pieces are genuinely independent decisions — the same form might apply to different equipment on different schedules, and different crews might be responsible for different packages — so Arena separates them into discrete wizard steps rather than one large form.</p>\n    <p>A particularly important design choice is the Recurrence Type setting in the Prepare Schedule step: maintenance can be triggered either on a fixed calendar cadence (Daily or Weekly) or dynamically, as part of the equipment's own check-out or check-in step (in the earlier Load Out Request flow). This second option, Check Out or Check In recurrence, makes a maintenance form a condition of the equipment leaving or returning to inventory.</p>",
+        "heading": "Equipment Setup",
+        "intro": "<p>Equipment that isn't maintained on schedule is equipment that fails at the worst possible moment — mid-pour, mid-lift, or mid-shift, when the cost of downtime is highest. Rather than relying on a Fleet Manager to remember every crane's inspection date by hand, Equipment Setup lets a <strong>Fleet/Equipment Module Manager or Equipment Management Admin</strong> build that discipline into the system once, as a maintenance package, so the right form reaches the right crew member automatically instead of depending on someone's memory.</p><p>The Equipment Setup tab (not the same as Settings → Equipment Setup, which configures categories for registration) is where administrators define recurring maintenance obligations for equipment — grouping items together into a maintenance package that bundles which equipment needs attention, what forms need to be filled out, how often, and who's responsible. Rather than manually reminding field crews to inspect or service equipment, a properly configured maintenance package automates that entire cadence, surfacing the right form to the right person at the right time.</p>\n    <p>The screen is built around a four-step wizard, launched via Create Maintenance Package, that walks you through listing the equipment covered, identifying which forms apply, setting the schedule, and assigning the crew responsible. This structure matters because the four pieces are genuinely independent decisions — the same form might apply to different equipment on different schedules, and different crews might be responsible for different packages — so Arena separates them into discrete wizard steps rather than one large form.</p>\n    <p>A particularly important design choice is the Recurrence Type setting in the Prepare Schedule step: maintenance can be triggered either on a fixed calendar cadence (Daily or Weekly) or dynamically, as part of the equipment's own check-out or check-in step (in the earlier Load Out Request flow). This second option, Check Out or Check In recurrence, makes a maintenance form a condition of the equipment leaving or returning to inventory.</p>",
         "definitions": [
           {
             "term": "Maintenance Package",
@@ -19988,7 +19988,7 @@ const MODULES = [
           },
           {
             "term": "Identify Forms (wizard step 2)",
-            "definition": "The second wizard step: use Add Form to choose from centrally-configured maintenance forms (built in the Maintenance Builder under the module's own Settings → Assets Management Forms) that should be attached to this package."
+            "definition": "The second wizard step: use Add Form to choose from centrally-configured maintenance forms (built in the Maintenance Builder under the module's own Settings → Equipment Management Forms) that should be attached to this package."
           },
           {
             "term": "Prepare Schedule (wizard step 3)",
@@ -20003,15 +20003,15 @@ const MODULES = [
             "definition": "The setting, chosen in the Prepare Schedule step, that determines how a maintenance form gets triggered. Daily and Weekly recurrence trigger the form on a fixed calendar cadence at a specific date and time. Check Out and Check In recurrence instead trigger the form automatically as part of the equipment's checkout or check-in step within the Load Out Request flow, rather than on any fixed schedule — meaning the form appears exactly when that equipment is being moved, not on a calendar date."
           },
           {
-            "term": "Maintenance Logs vs. Utilization (Asset Setup tabs)",
-            "definition": "Asset Setup itself has two sub-tabs, not two separate screens. Maintenance Logs is where Create Maintenance Package lives (the 4-step wizard described above). Utilization is the parallel tab for scheduling utilization logs the same way — Create Utilization Package follows the identical 4-step pattern (List Items / Identify Forms / Prepare Schedule / Assign Crew), with its own + Add Equipments/Accessories button."
+            "term": "Maintenance Logs vs. Utilization (Equipment Setup tabs)",
+            "definition": "Equipment Setup itself has two sub-tabs, not two separate screens. Maintenance Logs is where Create Maintenance Package lives (the 4-step wizard described above). Utilization is the parallel tab for scheduling utilization logs the same way — Create Utilization Package follows the identical 4-step pattern (List Items / Identify Forms / Prepare Schedule / Assign Crew), with its own + Add Equipments/Accessories button."
           }
         ],
         "procedures": [
           {
             "title": "Setting up a recurring maintenance schedule",
             "steps": [
-              "Go to <strong>Asset Setup</strong> and click <strong>Create Maintenance Package</strong>.",
+              "Go to <strong>Equipment Setup</strong> and click <strong>Create Maintenance Package</strong>.",
               "Enter a Package Name and Description, then Submit.",
               "In <strong>List Equipment</strong>, use Add Equipment to select the items covered by this package.",
               "In <strong>Identify Forms</strong>, use Add Form, tick the required forms, and Submit.",
@@ -20021,7 +20021,7 @@ const MODULES = [
             "images": [
               {
                 "src": "assets/notion/equipment-setup-maintenance-logs/001.jpg",
-                "caption": "Asset Setup: a space to schedule maintenance logs and utilization logs",
+                "caption": "Equipment Setup: a space to schedule maintenance logs and utilization logs",
                 "step": 1
               },
               {
@@ -20087,31 +20087,31 @@ const MODULES = [
       },
       {
         "heading": "Field Inspections",
-        "intro": "<p>This is where the admin's upfront maintenance-package configuration meets the reality of the job site. Field Inspections is the <strong>End User</strong> screen — the one a foreman, mechanic, or field engineer actually opens day to day to complete a scheduled maintenance check, log something unplanned, or document equipment condition with photos before or after a job.</p><p>Field Inspections is where the maintenance packages configured in Asset Setup actually get executed — the screen field crews use day to day to complete scheduled forms, log unplanned inspections, and manage photographic documentation of equipment condition. It's organized into three tabs — Maintenance, Utilization, and Asset Photos — each covering a different flavor of on-the-ground equipment tracking.</p>\n    <p>Both Maintenance and Utilization share the same underlying interaction model: a calendar view for scheduled entries generated automatically by a maintenance package, and a list view for ad-hoc entries created manually whenever something needs recording outside of any pre-set schedule. This dual structure reflects a real operational need — most inspections happen on a predictable cadence, but crews also need the ability to log something unplanned, like a mid-shift equipment failure, without waiting for the next scheduled slot.</p>\n    <p>A key mechanism woven throughout this screen is the trigger point: certain fields on a maintenance form are configured (in the Maintenance Builder) to let the person filling out the form raise an issue directly from that field if a checkpoint fails. This is what connects Field Inspections to Asset Issues — a failed check during a routine inspection doesn't just sit in the completed form, it automatically becomes a tracked issue that someone can be assigned to resolve.</p>",
+        "intro": "<p>This is where the admin's upfront maintenance-package configuration meets the reality of the job site. Field Inspections is the <strong>End User</strong> screen — the one a foreman, mechanic, or field engineer actually opens day to day to complete a scheduled maintenance check, log something unplanned, or document equipment condition with photos before or after a job.</p><p>Field Inspections is where the maintenance packages configured in Equipment Setup actually get executed — the screen field crews use day to day to complete scheduled forms, log unplanned inspections, and manage photographic documentation of equipment condition. It's organized into three tabs — Maintenance, Utilization, and Equipment Photos — each covering a different flavor of on-the-ground equipment tracking.</p>\n    <p>Both Maintenance and Utilization share the same underlying interaction model: a calendar view for scheduled entries generated automatically by a maintenance package, and a list view for ad-hoc entries created manually whenever something needs recording outside of any pre-set schedule. This dual structure reflects a real operational need — most inspections happen on a predictable cadence, but crews also need the ability to log something unplanned, like a mid-shift equipment failure, without waiting for the next scheduled slot.</p>\n    <p>A key mechanism woven throughout this screen is the trigger point: certain fields on a maintenance form are configured (in the Maintenance Builder) to let the person filling out the form raise an issue directly from that field if a checkpoint fails. This is what connects Field Inspections to Equipment Issues — a failed check during a routine inspection doesn't just sit in the completed form, it automatically becomes a tracked issue that someone can be assigned to resolve.</p>",
         "definitions": [
           {
             "term": "Field Inspections",
-            "definition": "The screen where field crews perform and record maintenance activity and manage equipment photos, organized into three tabs: Maintenance, Utilization, and Asset Photos."
+            "definition": "The screen where field crews perform and record maintenance activity and manage equipment photos, organized into three tabs: Maintenance, Utilization, and Equipment Photos."
           },
           {
             "term": "Maintenance tab",
-            "definition": "Logs maintenance and inspection activity, on two sub-tabs: Asset Maintenance Calendar (scheduled, generated by a maintenance package, grouped by project in collapsible sections) or Asset Maintenance (a list/ad-hoc tab with Create Form, for unplanned inspections)."
+            "definition": "Logs maintenance and inspection activity, on two sub-tabs: Equipment Maintenance Calendar (scheduled, generated by a maintenance package, grouped by project in collapsible sections) or Equipment Maintenance (a list/ad-hoc tab with Create Form, for unplanned inspections)."
           },
           {
             "term": "Utilization tab",
             "definition": "Structurally identical to the Maintenance tab — calendar-driven scheduled entries plus ad-hoc list entries — but scoped to logging ad-hoc utilization entries rather than maintenance/inspection activity."
           },
           {
-            "term": "Asset Maintenance Calendar color legend",
+            "term": "Equipment Maintenance Calendar color legend",
             "definition": "The color coding used on the calendar view, with these exact on-screen labels: Grey = Not Ready, Blue = Ready, Amber = In Progress, Green = Completed. Each day's due forms are grouped by project in a collapsible section, listing form name, equipment, and its current status/stage."
           },
           {
-            "term": "Asset Photos tab",
-            "definition": "A dedicated tab (on-screen name \"Asset Photos\"; the underlying route and older docs call it Equipment Photos) for managing photographic documentation of equipment. Select an item from the left-hand list of Assets/Accessories, click Add, then Upload File to attach one or more images, optionally annotate them with the built-in markup tools, and Save. Each photo carries a Label, Description, and \"Raised on [date] by [user]\" attribution, plus a kebab menu."
+            "term": "Equipment Photos tab",
+            "definition": "A dedicated tab (on-screen name \"Equipment Photos\"; the underlying route and older docs call it Equipment Photos) for managing photographic documentation of equipment. Select an item from the left-hand list of Equipment/Accessories, click Add, then Upload File to attach one or more images, optionally annotate them with the built-in markup tools, and Save. Each photo carries a Label, Description, and \"Raised on [date] by [user]\" attribution, plus a kebab menu."
           },
           {
             "term": "Trigger point",
-            "definition": "A checkbox configured per field in the maintenance form builder (under Setup Trigger Points) that lets an end-user raise an issue or note directly from that field if the checkpoint fails during an inspection. Any issue raised this way is logged automatically to Asset Issues, without requiring a separate manual step to create the issue record."
+            "definition": "A checkbox configured per field in the maintenance form builder (under Setup Trigger Points) that lets an end-user raise an issue or note directly from that field if the checkpoint fails during an inspection. Any issue raised this way is logged automatically to Equipment Issues, without requiring a separate manual step to create the issue record."
           },
           {
             "term": "Scheduled vs. ad-hoc inspection",
@@ -20125,7 +20125,7 @@ const MODULES = [
               "Go to <strong>Field Inspections → Maintenance</strong> and switch to <strong>Calendar</strong>.",
               "Pick the due date — forms are shown color-coded (Blue means ready to fill).",
               "Open the form, fill in the required fields, and Submit — the form turns Green once complete.",
-              "If a check fails, raise an <strong>issue</strong> directly from that field — it's logged to Asset Issues automatically, with no separate step needed."
+              "If a check fails, raise an <strong>issue</strong> directly from that field — it's logged to Equipment Issues automatically, with no separate step needed."
             ],
             "images": [
               {
@@ -20244,35 +20244,35 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Asset Issues",
-        "intro": "<p>A failed safety check on a crane or a hydraulic leak on an excavator cannot be allowed to fade into an informal conversation between a foreman and a mechanic — it needs an owner, a due date, and a paper trail that a Fleet Manager or Safety lead can audit later. Asset Issues gives that structure to the whole company: <strong>End Users</strong> (field crews, mechanics) raise or resolve issues day to day, while a <strong>Fleet/Equipment Module Manager</strong> monitors the header counters to spot problem equipment before it becomes a bigger failure.</p><p>Asset Issues is the central log for problems raised against equipment — most commonly generated automatically when a trigger-point check fails during a maintenance form, a field inspection, or an allocation inspection. Rather than a problem getting noted informally and potentially forgotten, Arena routes it into a single, trackable record with an owner, a due date, and a defined resolution path.</p>\n    <p>The screen defaults to a table view (a card/grid view toggle is also available) and is built around a simple lifecycle: an issue is raised, optionally discussed via Chat, and eventually marked Rectified once the underlying problem is fixed. For issues that require more formal remediation — labor, cost, parts — a Work Order can be spun up directly from the toolbar's Create Work Order button, connecting equipment problem-tracking to the broader work-order/cost-tracking machinery elsewhere in Arena.</p>\n    <p>Asset Issues is closely related to, but distinct from, Non Conformance Reports, covered in the next section. Both share the same UI patterns (table/card views, Rectify, Chat, Assign To/Due Date, Create Work Order, header counters), but they differ in how they originate: Asset Issues are almost always system-raised from a failed check, while NCRs are manually created to formally document a non-conformance event.</p>",
+        "heading": "Equipment Issues",
+        "intro": "<p>A failed safety check on a crane or a hydraulic leak on an excavator cannot be allowed to fade into an informal conversation between a foreman and a mechanic — it needs an owner, a due date, and a paper trail that a Fleet Manager or Safety lead can audit later. Equipment Issues gives that structure to the whole company: <strong>End Users</strong> (field crews, mechanics) raise or resolve issues day to day, while a <strong>Fleet/Equipment Module Manager</strong> monitors the header counters to spot problem equipment before it becomes a bigger failure.</p><p>Equipment Issues is the central log for problems raised against equipment — most commonly generated automatically when a trigger-point check fails during a maintenance form, a field inspection, or an allocation inspection. Rather than a problem getting noted informally and potentially forgotten, Arena routes it into a single, trackable record with an owner, a due date, and a defined resolution path.</p>\n    <p>The screen defaults to a table view (a card/grid view toggle is also available) and is built around a simple lifecycle: an issue is raised, optionally discussed via Chat, and eventually marked Rectified once the underlying problem is fixed. For issues that require more formal remediation — labor, cost, parts — a Work Order can be spun up directly from the toolbar's Create Work Order button, connecting equipment problem-tracking to the broader work-order/cost-tracking machinery elsewhere in Arena.</p>\n    <p>Equipment Issues is closely related to, but distinct from, Non Conformance Reports, covered in the next section. Both share the same UI patterns (table/card views, Rectify, Chat, Assign To/Due Date, Create Work Order, header counters), but they differ in how they originate: Equipment Issues are almost always system-raised from a failed check, while NCRs are manually created to formally document a non-conformance event.</p>",
         "definitions": [
           {
-            "term": "Asset Issues (Equipment Issues)",
+            "term": "Equipment Issues (Equipment Issues)",
             "definition": "The central log of issues raised during maintenance forms, field inspections, or allocation inspections. Presented as a table by default (IDs prefixed \"DEI No.\"), with a card/grid view toggle available. Columns: Issue Number, Form, Stage, Observation, Raised on Date/Time, Raised by, Image, Status, Chat, Assign To, Due Date, Actions."
           },
           {
             "term": "Rectify",
-            "definition": "The action that marks an Asset Issue as resolved. Clicking Rectify sets the issue's status to Rectified and re-opens the linked maintenance form so it can be completed or resubmitted — Rectify on an Asset Issue is not just a status change, it actively unblocks the form that the issue interrupted."
+            "definition": "The action that marks an Equipment Issue as resolved. Clicking Rectify sets the issue's status to Rectified and re-opens the linked maintenance form so it can be completed or resubmitted — Rectify on an Equipment Issue is not just a status change, it actively unblocks the form that the issue interrupted."
           },
           {
             "term": "Create Work Order (from an issue)",
-            "definition": "A toolbar button (not a per-row action) on Asset Issues and NCR that spins up a formal Work Order, used when the remediation requires tracked labor or cost rather than a quick fix."
+            "definition": "A toolbar button (not a per-row action) on Equipment Issues and NCR that spins up a formal Work Order, used when the remediation requires tracked labor or cost rather than a quick fix."
           },
           {
-            "term": "Asset Issue vs. Non-Conformance Report",
-            "definition": "Asset Issues are typically raised automatically from a failed trigger-point check during a maintenance form, inspection, or an allocation inspection. NCRs, by contrast, are created manually (via + Add on the Non Conformance Report tab) to formally document a non-conformance event. Both default to a table view with header counters, Rectify workflow, Chat, Assign To/Due Date fields, and a Create Work Order toolbar button, but they remain separate, independently tracked record types with different columns (Asset Issues: Form/Stage/Observation; NCR: Asset/Location/Description)."
+            "term": "Equipment Issue vs. Non-Conformance Report",
+            "definition": "Equipment Issues are typically raised automatically from a failed trigger-point check during a maintenance form, inspection, or an allocation inspection. NCRs, by contrast, are created manually (via + Add on the Non Conformance Report tab) to formally document a non-conformance event. Both default to a table view with header counters, Rectify workflow, Chat, Assign To/Due Date fields, and a Create Work Order toolbar button, but they remain separate, independently tracked record types with different columns (Equipment Issues: Form/Stage/Observation; NCR: Equipment/Location/Description)."
           },
           {
             "term": "Header counters",
-            "definition": "Summary totals shown at the top of the Asset Issues (and NCR) tab, e.g. \"42 Total Issues | 28 Open Issues | 14 Issues Rectified\" — a quick health check on outstanding equipment problems without opening individual records."
+            "definition": "Summary totals shown at the top of the Equipment Issues (and NCR) tab, e.g. \"42 Total Issues | 28 Open Issues | 14 Issues Rectified\" — a quick health check on outstanding equipment problems without opening individual records."
           }
         ],
         "procedures": [
           {
             "title": "Resolving an equipment issue",
             "steps": [
-              "Go to <strong>Asset Issues</strong> and locate the issue using Search or Filters.",
+              "Go to <strong>Equipment Issues</strong> and locate the issue using Search or Filters.",
               "Review the issue's details, and add notes in <strong>Chat</strong> if collaborating with others on the fix.",
               "Once the underlying problem is fixed, click <strong>Rectify</strong> — the status becomes Rectified and the linked form re-opens for completion.",
               "If formal remediation tracking is needed (labor, cost, parts), click <strong>Create Work Order</strong> on the toolbar."
@@ -20319,32 +20319,32 @@ const MODULES = [
             "title": "Understanding where a trigger-point issue ends up",
             "steps": [
               "If you raised an issue from a failing field on a maintenance form during an inspection, no additional step is needed to log it.",
-              "The issue is automatically routed to the <strong>Asset Issues</strong> tab, where it can be reviewed, assigned, and eventually marked Rectified."
+              "The issue is automatically routed to the <strong>Equipment Issues</strong> tab, where it can be reviewed, assigned, and eventually marked Rectified."
             ]
           }
         ],
         "images": [
           {
             "src": "assets/notion/equipment-issues/001.jpg",
-            "caption": "Asset Issues: every issue raised from equipment maintenance"
+            "caption": "Equipment Issues: every issue raised from equipment maintenance"
           }
         ]
       },
       {
         "heading": "Non Conformance Report",
-        "intro": "<p>Not every problem worth documenting is caught automatically by a failed checklist item — sometimes a <strong>field End User</strong> (a foreman, safety officer, or QC inspector) simply notices something wrong with a piece of equipment and needs a formal way to flag it, independent of any scheduled inspection. NCR gives that person the same trusted workflow used for system-raised issues, so the two problem types end up in one auditable place a <strong>Module Manager</strong> can review together.</p><p>Non Conformance Report (NCR) is the tab for formally documenting a non-conformance event — a deviation from expected standards or process that someone needs to intentionally flag, rather than one the system caught automatically through a failed trigger-point check. Where Asset Issues are almost always system-generated, an NCR is a deliberate, manually initiated record: someone observed something wrong and chose to formally document it.</p>\n    <p>Structurally, NCRs mirror Asset Issues closely — the same table-by-default layout, the same Assign To/Due Date pattern, the same Chat panel for documenting remediation steps, and the same Rectify action to close things out, though the columns differ (Asset, Location, and Description here, versus Form, Stage, and Observation on Asset Issues; NCR IDs are prefixed \"NCR No.\"). This consistency is intentional: whether a problem was caught by an automated check or flagged manually by a person, the resolution workflow should feel the same to whoever is responsible for fixing it.</p>\n    <p>The one meaningful difference between the two record types shows up in what Rectify actually does. On an Asset Issue, Rectify re-opens the linked maintenance form for completion, because the issue interrupted an in-progress form. An NCR isn't tied to an in-progress form in the same way, so Rectify on an NCR simply closes the report out as resolved, with no equivalent form-reopening behavior.</p>",
+        "intro": "<p>Not every problem worth documenting is caught automatically by a failed checklist item — sometimes a <strong>field End User</strong> (a foreman, safety officer, or QC inspector) simply notices something wrong with a piece of equipment and needs a formal way to flag it, independent of any scheduled inspection. NCR gives that person the same trusted workflow used for system-raised issues, so the two problem types end up in one auditable place a <strong>Module Manager</strong> can review together.</p><p>Non Conformance Report (NCR) is the tab for formally documenting a non-conformance event — a deviation from expected standards or process that someone needs to intentionally flag, rather than one the system caught automatically through a failed trigger-point check. Where Equipment Issues are almost always system-generated, an NCR is a deliberate, manually initiated record: someone observed something wrong and chose to formally document it.</p>\n    <p>Structurally, NCRs mirror Equipment Issues closely — the same table-by-default layout, the same Assign To/Due Date pattern, the same Chat panel for documenting remediation steps, and the same Rectify action to close things out, though the columns differ (Equipment, Location, and Description here, versus Form, Stage, and Observation on Equipment Issues; NCR IDs are prefixed \"NCR No.\"). This consistency is intentional: whether a problem was caught by an automated check or flagged manually by a person, the resolution workflow should feel the same to whoever is responsible for fixing it.</p>\n    <p>The one meaningful difference between the two record types shows up in what Rectify actually does. On an Equipment Issue, Rectify re-opens the linked maintenance form for completion, because the issue interrupted an in-progress form. An NCR isn't tied to an in-progress form in the same way, so Rectify on an NCR simply closes the report out as resolved, with no equivalent form-reopening behavior.</p>",
         "definitions": [
           {
             "term": "Non Conformance Report (NCR)",
-            "definition": "A manually created record (ID prefix \"NCR No.\") documenting a non-conformance event, raised via + Add on the Non Conformance Report tab — distinct from Asset Issues, which are almost always system-raised from a failed trigger-point check. Table view by default, with columns Issue Number, Asset, Location, Description, Raised on Date/Time, Raised by, Image, Status, Chat, Assign To, Due Date, Actions."
+            "definition": "A manually created record (ID prefix \"NCR No.\") documenting a non-conformance event, raised via + Add on the Non Conformance Report tab — distinct from Equipment Issues, which are almost always system-raised from a failed trigger-point check. Table view by default, with columns Issue Number, Equipment, Location, Description, Raised on Date/Time, Raised by, Image, Status, Chat, Assign To, Due Date, Actions."
           },
           {
             "term": "Rectify (on an NCR)",
-            "definition": "Marks the NCR as Rectified, closing the report out as resolved. Unlike Rectify on an Asset Issue, there is no equivalent form-reopening behavior — an NCR isn't tied to an in-progress maintenance form, so closing it is simpler."
+            "definition": "Marks the NCR as Rectified, closing the report out as resolved. Unlike Rectify on an Equipment Issue, there is no equivalent form-reopening behavior — an NCR isn't tied to an in-progress maintenance form, so closing it is simpler."
           },
           {
             "term": "Rectify: Issue vs. NCR",
-            "definition": "Functionally similar in that both set the record's status to Rectified. On an Asset Issue, Rectify additionally re-enables the associated maintenance form so it can be completed or resubmitted. On an NCR, Rectify simply closes the report, with no linked form to reopen."
+            "definition": "Functionally similar in that both set the record's status to Rectified. On an Equipment Issue, Rectify additionally re-enables the associated maintenance form so it can be completed or resubmitted. On an NCR, Rectify simply closes the report, with no linked form to reopen."
           }
         ],
         "procedures": [
@@ -20399,7 +20399,7 @@ const MODULES = [
         "definitions": [
           {
             "term": "Maintenance Builder (Equipment Maintenance Forms)",
-            "definition": "The module's own screen (not Global Data) for building and editing maintenance/inspection form templates — reached via Equipment Management → Settings → Assets Management Forms → Maintenance Forms. A 3-step wizard: Build Form, Setup Trigger Points, Preview Form. Forms are structured with Add Section and populated with fields from a library of field types."
+            "definition": "The module's own screen (not Global Data) for building and editing maintenance/inspection form templates — reached via Equipment Management → Settings → Equipment Management Forms → Maintenance Forms. A 3-step wizard: Build Form, Setup Trigger Points, Preview Form. Forms are structured with Add Section and populated with fields from a library of field types."
           },
           {
             "term": "Form field types",
@@ -20414,7 +20414,7 @@ const MODULES = [
             "definition": "The 3rd and final step of the Maintenance Builder wizard, showing the form exactly as end-users will see it, including company branding — useful for verifying a form's layout and content before publishing it for use."
           },
           {
-            "term": "Assets Management Forms (module Settings)",
+            "term": "Equipment Management Forms (module Settings)",
             "definition": "On earlier-version environments that use the Load Out Request tab, the card in the module's own Settings (breadcrumb \"Equipment Forms\") listing one form builder per lifecycle stage: Request, Check Out, Shipment, Ship, Load, In Transit, Delivered, Received, Lease Agreement, Maintenance Forms, and Equipment Utilization Forms & Logs — confirming Shipment/Load/In Transit/Delivered/Received (LOR Internal Jobs) and Ship (Rentals) are separately configurable stages."
           },
           {
@@ -20423,26 +20423,26 @@ const MODULES = [
           },
           {
             "term": "Equipment Management vs. Equipment Management vs. Equipment Master",
-            "definition": "All three names refer to the same module. This guide calls it **Equipment Management**; in Arena the Home hub tile may read \"Asset Management\" and the module's own breadcrumb says \"Equipment Master\". Day-to-day, the UI itself mostly favors \"Asset\" in its labels — Asset Master, Asset Setup, Asset Issues, + Asset."
+            "definition": "All three names refer to the same module. This guide calls it **Equipment Management**. Arena lets each company rename terms to match its own standard (**Global Data → Settings → Naming Framework**), so your screens may say \"Equipment\" or \"Asset\" (for example **Asset Management**, **Asset Master**, **Asset Issues**). They are the same screens; this guide uses Equipment throughout."
           },
           {
-            "term": "Assets Management Forms",
-            "definition": "The set of configurable form templates covering each stage of an equipment asset's lifecycle — Request, Check Out, Shipment, Ship, Load, In Transit, Delivered, Received, Lease Agreement, Maintenance Forms, and Equipment Utilization Forms & Logs — each configured via its own card under Settings."
+            "term": "Equipment Management Forms",
+            "definition": "The set of configurable form templates covering each stage of an equipment's lifecycle — Request, Check Out, Shipment, Ship, Load, In Transit, Delivered, Received, Lease Agreement, Maintenance Forms, and Equipment Utilization Forms & Logs — each configured via its own card under Settings."
           },
           {
             "term": "Maintenance Forms",
-            "definition": "The Assets Management Forms template governing what fields appear when scheduled or ad hoc equipment maintenance is logged."
+            "definition": "The Equipment Management Forms template governing what fields appear when scheduled or ad hoc equipment maintenance is logged."
           },
           {
             "term": "Equipment Utilization Forms & Logs",
-            "definition": "The Assets Management Forms template controlling the fields captured when logging how equipment is being utilized over time."
+            "definition": "The Equipment Management Forms template controlling the fields captured when logging how equipment is being utilized over time."
           }
         ],
         "procedures": [
           {
             "title": "Building or editing a maintenance/inspection form template",
             "steps": [
-              "Go to <strong>Equipment Management → Settings → Assets Management Forms → Maintenance Forms</strong> and click <strong>Create Form</strong>.",
+              "Go to <strong>Equipment Management → Settings → Equipment Management Forms → Maintenance Forms</strong> and click <strong>Create Form</strong>.",
               "On step 1, <strong>Build Form</strong>: click <strong>Add section</strong> to structure the form into logical groupings, and add fields from the field-type library (Attachment, Check box, Date, Label, Multi select, Paragraph, Roster, Scribble, Single select, Table, Text box, Time, or Signature).",
               "On step 2, <strong>Setup Trigger Points</strong>: tick which fields should let end-users raise an issue if that checkpoint fails.",
               "On step 3, <strong>Preview Form</strong>: check the form exactly as end-users will see it, including company branding.",
@@ -20477,7 +20477,7 @@ const MODULES = [
           {
             "title": "Configure the equipment lifecycle forms before go-live",
             "steps": [
-              "Go to <strong>Equipment Management → Settings → Assets Management Forms</strong>.",
+              "Go to <strong>Equipment Management → Settings → Equipment Management Forms</strong>.",
               "Open each lifecycle card in turn — <strong>Request, Check Out, Shipment, Ship, Load, In Transit, Delivered, Received, Lease Agreement, Maintenance Forms, Equipment Utilization Forms & Logs</strong> — and configure the fields/steps your organization needs at that stage.",
               "Confirm the Lease Agreement form is set up if your organization sends equipment to 3rd parties, since that stage only applies to Rentals (3rd Party) Load Out Requests on earlier-version environments."
             ],
@@ -20512,11 +20512,11 @@ const MODULES = [
           },
           {
             "term": "Earlier approvals and forms",
-            "definition": "Approval chains for Load Out Request, Return Request and Rentals are set under the Workflows tab, each level being **All must approve** or **Anyone can approve**. The forms for each stage (Request, Check Out, Shipment, Ship, Load, In Transit, Delivered, Received and Lease Agreement) are configured under **Settings → Assets Management Forms**. Equipment with a Check Out or Check In maintenance package needs its maintenance form completed first."
+            "definition": "Approval chains for Load Out Request, Return Request and Rentals are set under the Workflows tab, each level being **All must approve** or **Anyone can approve**. The forms for each stage (Request, Check Out, Shipment, Ship, Load, In Transit, Delivered, Received and Lease Agreement) are configured under **Settings → Equipment Management Forms**. Equipment with a Check Out or Check In maintenance package needs its maintenance form completed first."
           },
           {
             "term": "Where the Arena 2.0 flow differs",
-            "definition": "In Arena 2.0, requests are raised with **New Request** under Operations, **Self Pickup** and **Company Logistics** are chosen at the Assign stage, hauls are managed under Hauling, and the asset statuses are Available, Allocated, In Transit, On Rent, Off Rent and In Maintenance."
+            "definition": "In Arena 2.0, requests are raised with **New Request** under Operations, **Self Pickup** and **Company Logistics** are chosen at the Assign stage, hauls are managed under Hauling, and the equipment statuses are Available, Allocated, In Transit, On Rent, Off Rent and In Maintenance."
           }
         ],
         "procedures": [],
@@ -20621,7 +20621,7 @@ const MODULES = [
           {
             "title": "The map, geofence, Engine Hours, GPS Fix Time or Message Time are blank",
             "steps": [
-              "Open the asset's <strong>Telematics</strong> tab and check that a device is mapped. These fields fill in from the device and cannot be typed.",
+              "Open the equipment's <strong>Telematics</strong> tab and check that a device is mapped. These fields fill in from the device and cannot be typed.",
               "Use <strong>Engine Hours (Acquisition)</strong> on the Specifications panel to record hours at acquisition.",
               "Check the last-updated time on each Live Data reading. Readings can lag by the fetch interval set for the provider."
             ],
@@ -20638,7 +20638,7 @@ const MODULES = [
             "steps": [
               "Check that the provider is configured under <strong>Global Data → Marketplace → Telematics</strong>, and that you clicked <strong>Attach</strong> and then <strong>Submit</strong>.",
               "Pick the right Telematics Provider, because devices are listed per provider, and check the device is registered with it.",
-              "The asset must already exist in the Equipment Master."
+              "The equipment must already exist in the Equipment Master."
             ],
             "note": ""
           },
@@ -20652,26 +20652,26 @@ const MODULES = [
             "note": ""
           },
           {
-            "title": "No asset markers show on the Fleet Map",
+            "title": "No equipment markers show on the Fleet Map",
             "steps": [
-              "Only assets with a mapped telematics device appear. Zoom in, because wide zoom groups them into clusters.",
+              "Only equipment with a mapped telematics device appear. Zoom in, because wide zoom groups them into clusters.",
               "Click <strong>Clear</strong> and reapply the filters one at a time. Check <strong>Only Running Equipment</strong> and <strong>Not Reported in Last 72 Hours</strong>.",
               "Click <strong>Save Filter</strong> to keep your choices between visits."
             ],
             "note": ""
           },
           {
-            "title": "No asset appears under Available Asset, or rates are blank",
+            "title": "No equipment appears under Available Equipment, or rates are blank",
             "steps": [
-              "Check that a matching unit exists in the master with status <strong>Available</strong>. Allocated, On Rent, In Transit and Off Rent assets are not offered.",
-              "Check that the Rate Card Template covers the asset's category, then select it again."
+              "Check that a matching unit exists in the master with status <strong>Available</strong>. Allocated, On Rent, In Transit and Off Rent equipment are not offered.",
+              "Check that the Rate Card Template covers the equipment's category, then select it again."
             ]
           },
           {
             "title": "The inspection stage was skipped, or the inspection form is empty",
             "steps": [
               "The stage appears only if <strong>Pre-Dispatch Inspection</strong> was switched on when confirming assignment. Move the request back and confirm the assignment again with it switched on.",
-              "Link an <strong>Inspection Checklist</strong> to the asset under <strong>Settings → Equipment Setup / Accessory Setup</strong>."
+              "Link an <strong>Inspection Checklist</strong> to the equipment under <strong>Settings → Equipment Setup / Accessory Setup</strong>."
             ],
             "note": ""
           },
@@ -20679,7 +20679,7 @@ const MODULES = [
             "title": "A request does not move past Ready for Dispatch, Off-Rent or Closed",
             "steps": [
               "For Ready for Dispatch, enter both the <strong>Dispatch Date</strong> and the <strong>On-Rent Date</strong>.",
-              "Check <strong>Inspection Checklist Issues</strong> for an open issue against the asset and rectify it. This also blocks Closed and a haul pickup.",
+              "Check <strong>Inspection Checklist Issues</strong> for an open issue against the equipment and rectify it. This also blocks Closed and a haul pickup.",
               "For a card held at Off-Rent with a <strong>Haul Initiated</strong> tag, take the return haul through to Completed in Hauling."
             ],
             "note": ""
@@ -20693,7 +20693,7 @@ const MODULES = [
             "note": ""
           },
           {
-            "title": "The asset status did not change, or no destination location appears",
+            "title": "The equipment status did not change, or no destination location appears",
             "steps": [
               "After a haul, the status follows the On-Rent Date (outbound) or the Pickup Date (return). Update the date in the allocation request.",
               "On Inventory Self Pickup the status stays On Rent until the post-rent inspection is submitted.",
@@ -20713,18 +20713,18 @@ const MODULES = [
       }
     ],
     "name": "Equipment Management",
-    "alias": "Fleet, Assets & Load Outs",
+    "alias": "Fleet, Equipment & Load Outs",
     "searchAlso": "Asset Management",
     "icon": "handyman",
     "tagline": "Register equipment and accessories, allocate them to projects, haul them, and track them by telematics and geofence.",
     "color": "#3c7a5f",
-    "overview": "<p><strong>Equipment Management</strong> (Equipment Management) is Arena's system for equipment and accessories. It keeps the <strong>Equipment Master</strong> and <strong>Accessory Master</strong>, sets up the cost codes, categories and rate cards behind them, and shows each asset's profile with its purchase, warranty and depreciation details.</p><p>Requests for equipment are raised and moved through the <strong>Allocation Lifecycle</strong> board under <strong>Operations</strong>, from Request to Closed, by <strong>Self Pickup</strong> or <strong>Company Logistics</strong>. Company Logistics creates hauls under <strong>Hauling</strong>. <strong>Telematics</strong>, <strong>Geofencing</strong> and the <strong>Fleet Map</strong> show where every asset is. Maintenance, inspections, issues and non-conformance reports sit alongside.</p>",
+    "overview": "<p><strong>Equipment Management</strong> (Equipment Management) is Arena's system for equipment and accessories. It keeps the <strong>Equipment Master</strong> and <strong>Accessory Master</strong>, sets up the cost codes, categories and rate cards behind them, and shows each equipment's profile with its purchase, warranty and depreciation details.</p><p>Requests for equipment are raised and moved through the <strong>Allocation Lifecycle</strong> board under <strong>Operations</strong>, from Request to Closed, by <strong>Self Pickup</strong> or <strong>Company Logistics</strong>. Company Logistics creates hauls under <strong>Hauling</strong>. <strong>Telematics</strong>, <strong>Geofencing</strong> and the <strong>Fleet Map</strong> show where every equipment is. Maintenance, inspections, issues and non-conformance reports sit alongside.</p>",
     "navigation": [
       "From <strong>Home</strong>, click the <strong>Equipment Management</strong> tile (its module breadcrumb reads <strong>Equipment Management</strong>).",
       "<strong>Overview</strong> holds <strong>Geofencing</strong> and the <strong>Fleet Map</strong>. <strong>Equipment</strong> holds the <strong>Equipment Master</strong>, <strong>Accessory Master</strong> and <strong>Inventory Locations</strong>.",
       "<strong>Operations</strong> is the <strong>Allocation Lifecycle</strong> board for requests. <strong>Hauling</strong> has <strong>Internal Hauling</strong> (Requests) and <strong>Fleet and Schedule</strong>.",
-      "Open an asset and use its <strong>Overview</strong> and <strong>Telematics</strong> tabs. <strong>Settings</strong> holds <strong>Equipment Setup</strong>, <strong>Accessory Setup</strong>, <strong>Equipment Forms</strong>, <strong>Approval Workflow</strong>, <strong>Equipment/Accessory Status</strong> and <strong>Request Priority Threshold</strong>.",
-      "Maintenance tabs: <strong>Asset Setup</strong>, <strong>Field Inspections</strong>, <strong>Asset Issues</strong> and <strong>Non Conformance Report</strong>. Some environments running an earlier version also show <strong>Asset Master</strong> and <strong>Load Out Request</strong> tabs."
+      "Open a piece of equipment and use its <strong>Overview</strong> and <strong>Telematics</strong> tabs. <strong>Settings</strong> holds <strong>Equipment Setup</strong>, <strong>Accessory Setup</strong>, <strong>Equipment Forms</strong>, <strong>Approval Workflow</strong>, <strong>Equipment/Accessory Status</strong> and <strong>Request Priority Threshold</strong>.",
+      "Maintenance tabs: <strong>Equipment Setup</strong>, <strong>Field Inspections</strong>, <strong>Equipment Issues</strong> and <strong>Non Conformance Report</strong>. Some environments running an earlier version also show <strong>Equipment Master</strong> and <strong>Load Out Request</strong> tabs."
     ],
     "sections": [
       "Who Does What in Equipment Management",
@@ -20736,9 +20736,9 @@ const MODULES = [
       "Company Logistics with Hauling",
       "Telematics: Device Mapping and Live Data",
       "Geofencing and Fleet Map",
-      "Asset Setup",
+      "Equipment Setup",
       "Field Inspections",
-      "Asset Issues",
+      "Equipment Issues",
       "Non Conformance Report",
       "Configure Equipment Management Forms & Global Setup",
       "Earlier Version: Load Out Request",
@@ -26222,7 +26222,7 @@ const MODULES = [
         "definitions": [
           {
             "term": "Project Forms (Custom Forms)",
-            "definition": "The plant-scoped tab holding project-specific custom form types configured in Project Setup → Forms. The breadcrumb label for this tab reads \"Custom Forms\". **Where this data comes from:** the form types listed are the project forms assigned to the project in **Project Setup → Forms** (project forms are defined in **Global Data → Forms → Project Forms**). Arena Steel Plant - Phase 1 shows one, **Internal LORs** (\"Project Forms (1)\"). **Create** opens a **Request Form** with an **Available Asset / Accessory** search and a list of equipment (\"Eqp\" items) and accessories (\"Acc\" items) with their Type and ID (for example EqpExcavator ID 1, EqpSoil Compactor CM-001); this list is the **Equipment Master** and **Accessory Master** of Equipment Management (the Equipment module)."
+            "definition": "The plant-scoped tab holding project-specific custom form types configured in Project Setup → Forms. The breadcrumb label for this tab reads \"Custom Forms\". **Where this data comes from:** the form types listed are the project forms assigned to the project in **Project Setup → Forms** (project forms are defined in **Global Data → Forms → Project Forms**). Arena Steel Plant - Phase 1 shows one, **Internal LORs** (\"Project Forms (1)\"). **Create** opens a **Request Form** with an **Available Equipment / Accessory** search and a list of equipment (\"Eqp\" items) and accessories (\"Acc\" items) with their Type and ID (for example EqpExcavator ID 1, EqpSoil Compactor CM-001); this list is the **Equipment Master** and **Accessory Master** of Equipment Management (the Equipment module)."
           },
           {
             "term": "Per-work-package form permissions",
@@ -30604,7 +30604,7 @@ const MODULES = [
         "definitions": [
           {
             "term": "Equipment Breakdown Report",
-            "definition": "Lists equipment breakdowns recorded through work orders. Columns: **Asset ID**, **Status**, **Make**, **Model**, **Category**, **Project**, **Down Date**, **Estimated Back in Service**, **Vendor** (Internal when done in-house), **Notes**, **Cost/Estimate**, **Warranty** and **Responsible party**. Search by work order or asset ID, use **Filters** or column filters, **Manage Columns** (you can save several layouts) and **Export** to download with the filters applied."
+            "definition": "Lists equipment breakdowns recorded through work orders. Columns: **Equipment ID**, **Status**, **Make**, **Model**, **Category**, **Project**, **Down Date**, **Estimated Back in Service**, **Vendor** (Internal when done in-house), **Notes**, **Cost/Estimate**, **Warranty** and **Responsible party**. Search by work order or asset ID, use **Filters** or column filters, **Manage Columns** (you can save several layouts) and **Export** to download with the filters applied."
           },
           {
             "term": "Who uses the Equipment Breakdown Report",

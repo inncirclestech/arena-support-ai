@@ -804,21 +804,33 @@
   .doc-breadcrumb a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
   .doc-breadcrumb .sep { color: #b4bdc8; }
 
-  /* Contents page: quick module finder */
-  .toc-quick { margin: 22px 0 6px; }
-  .toc-quick-cat { margin: 0 0 16px; }
-  .toc-quick-label { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 0 0 8px; }
-  .toc-quick-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 8px; }
+  /* Contents page: compact module finder (one row of small pills per category) */
+  .toc-quick { margin: 14px 0 0; display: flex; flex-direction: column; gap: 8px; }
+  .toc-quick-cat { display: grid; grid-template-columns: 92px 1fr; gap: 10px; align-items: start; margin: 0; }
+  .toc-quick-label { font-size: 10.5px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 0; padding-top: 5px; }
+  .toc-quick-grid { display: flex; flex-wrap: wrap; gap: 6px; }
   .toc-quick-link {
-    display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink);
-    background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 11px 13px;
-    font-size: 14px; font-weight: 600; letter-spacing: -0.01em; transition: border-color .15s ease, box-shadow .15s ease;
+    display: inline-flex; align-items: center; gap: 6px; text-decoration: none; color: var(--ink-soft);
+    background: var(--surface); border: 1px solid var(--border); border-radius: 999px; padding: 3px 10px 3px 8px;
+    font-size: 12.5px; font-weight: 500; line-height: 1.5; white-space: nowrap; transition: border-color .15s ease, background .15s ease;
   }
-  .toc-quick-link:hover { border-color: color-mix(in srgb, var(--accent) 65%, var(--border)); box-shadow: var(--shadow-md); }
+  .toc-quick-link:hover { border-color: var(--accent); background: var(--accent-tint-soft); color: var(--ink); }
   .toc-quick-link:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-  .toc-quick-link .toc-module-dot { width: 9px; height: 9px; }
-  .toc-quick-link span:last-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  .toc-divider { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 26px 0 0; padding-top: 18px; border-top: 1px solid var(--border-soft); }
+  .toc-quick-link .toc-module-dot { width: 7px; height: 7px; }
+  .toc-divider { font-size: 10.5px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 18px 0 0; padding-top: 14px; border-top: 1px solid var(--border-soft); }
+  .toc-shell .doc-header { margin-bottom: 4px; }
+  .toc-shell .doc-title { font-size: 30px; margin: 4px 0 4px; }
+  .toc-shell .doc-tagline { font-size: 15.5px; }
+  .toc-shell .toc-toolbar { margin: 12px 0 0; }
+  .toc-shell .toc-count:empty { display: none; }
+  .toc-shell .toc-category { margin-top: 14px; }
+  .toc-shell .toc-category:first-child { margin-top: 10px; }
+  .toc-shell .toc-category-label { margin-bottom: 8px; padding-bottom: 6px; }
+  .toc-shell .toc-module-toggle { padding: 10px 8px 10px 14px; }
+  .toc-shell .toc-module { margin-bottom: 6px; }
+  .toc-shell .toc-module-name { font-size: 14.5px; }
+  .toc-shell .toc-module-tag { font-size: 12px; }
+  @media (max-width: 560px) { .toc-quick-cat { grid-template-columns: 1fr; gap: 4px; } }
   .toc-section-link { font-size: 16px; font-weight: 600; letter-spacing: -0.012em; }
   .toc-module { border-radius: 12px; }
   .toc-module-tag { font-style: normal; }
@@ -1762,7 +1774,7 @@ Example of the style to use — if a note says "Go to Settings, click Add User, 
         <div class="doc-header">
           <span class="doc-eyebrow" style="background:var(--accent-tint);color:var(--accent-ink)">Documentation</span>
           <h1 class="doc-title">Contents</h1>
-          <p class="doc-tagline">Pick a module below, or type what you're looking for. Expand a module further down to jump straight to a section, card or how-to.</p>
+          <p class="doc-tagline">Jump to a module, or expand one below to reach a section, card or how-to.</p>
         </div>
         <div class="toc-toolbar">
           <div class="doc-search-box">
@@ -1774,7 +1786,7 @@ Example of the style to use — if a note says "Go to Settings, click Add User, 
         </div>
         <p class="toc-count" id="toc-count" aria-live="polite"></p>
         <div class="toc-quick" id="toc-quick"></div>
-        <p class="toc-divider" id="toc-divider">Everything inside each module</p>
+        <p class="toc-divider" id="toc-divider">Expand a module to see its sections, cards and how-tos</p>
         <div id="toc-tree"></div>
       </div>`;
     renderContentsTree();
