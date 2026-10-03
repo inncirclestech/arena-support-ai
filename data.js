@@ -10957,8 +10957,8 @@ const QA_PROCUREMENT = [
     scope: "global",
     section: "Configure Procurement Forms & Settings",
     question: "How do I set up approval workflows for procurement documents?",
-    answer: "Go to Procurement Settings > Approval Workflow and click \"Create Level\" to build a workflow. You can create multiple levels and choose \"All must approve\" or \"Any one can approve\" for each level. This applies to Requisition forms, Purchase Orders, Invoices, and Pickup Requests.",
-    tags: ["procurement approval workflow","create level","po approval"]
+    answer: "Go to **Procurement → Settings → Approval Workflow**. Choose the tab for the document (**Requisition Form (REQ)**, **Purchase Order (PO)**, **Invoices** or **Pickup Request**); for requisitions also choose the category (**Equipment Rental**, **Equipment Procured**, **Material**, **Equipment Part Rental**, **Equipment Part Purchased** or **Delivery Service**). Click **+ Create**, pick **All must approve** or **Any one can approve**, tick the approvers and **Submit**. Every tab has its own chain.",
+    tags: ["procurement approval workflow","create level","po approval","approval workflow categories","equipment rental approval"]
   },
   {
     action: "configure",
@@ -11103,6 +11103,114 @@ const QA_PROCUREMENT = [
     question: "Is there a shared folder for procurement documents that aren't tied to one REQ or PO?",
     answer: "Yes. Click the Document icon next to Communications on the Procurement toolbar. It's a module-wide folder/file repository (folders seen include RFQ and DIRECT REQ) with New Folder and Add File actions.",
     tags: ["procurement document repository","procurement files","document folder"]
+  },
+  {
+    action: "explain",
+    object: "requisition lists",
+    scope: "module",
+    section: "Requisitions",
+    question: "Where does the item list on a requisition come from?",
+    answer: "The **Search for Materials** or **Search for Equipments or Accessories** box lists the company's material and equipment items (tagged **Mat**, **Eqp** or **Acc**). When you pick one, its **UOM** is filled in and locked. If an item you need is missing, ask your admin to add it to the company item lists; for anything else raise a ticket with Arena Support. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["requisition item list","where do items come from","material picker","equipment picker","uom locked","requisition dropdown source"]
+  },
+  {
+    action: "explain",
+    object: "requisition delivery location",
+    scope: "module",
+    section: "Requisitions",
+    question: "Why is the Delivery Location, Project Manager or On-Site Contact list empty on a requisition?",
+    answer: "These lists come from the project, not from the requisition. **Delivery Location** lists the project owner's locations, and **Project Manager** and **On-Site Contact** list the project's people, all set when the project was created. If they are empty the dialog says \"Please configure owner and owner location during Project creation\" (or owner and people). Arena Steel Plant - Phase 1 had none set up; Arena Residential Project showed Gachibowli - Hyderabad and Bangalore - Bangalore. Ask your Project Admin to add the owner and people, then reopen the form. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["delivery location empty","project manager dropdown empty","on-site contact empty","requisition dropdown empty","configure owner and owner location","why dont i see"]
+  },
+  {
+    action: "explain",
+    object: "requisition phase code",
+    scope: "module",
+    section: "Requisitions",
+    question: "Where does the Phase Code on a requisition line come from?",
+    answer: "It is a drop-down of phase codes shown as code and description, one per item line. On Arena Steel Plant - Phase 1 it offered 360 codes (the same for Material and Equipment lines) out of the 963 phase codes kept in **Global Data → UOM, Phasecode & GL Codes** and shown in **Project Setup → Phase Codes**. Which codes are offered was not confirmed, so if a code you need is missing, check it exists in Project Setup → Phase Codes first. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["phase code requisition","phase code dropdown","where does phase code come from","cost code requisition"]
+  },
+  {
+    action: "explain",
+    object: "requisition project dropdown",
+    scope: "module",
+    section: "Requisitions",
+    question: "Why do I see requisitions only for one project?",
+    answer: "The **Requisition Form** list shows the requisitions of the project you are working in (46 on Arena Residential Project, none on Arena Steel Plant - Phase 1). Switch project from **Projects** to see another one's requisitions. The **Project Number / Project Name** drop-down inside the form lists all projects you can open, and the Direct Purchase Order wizard lists requisitions from several projects with their project names.",
+    tags: ["requisition list project","no requisitions showing","switch project procurement","why dont i see my requisition"]
+  },
+  {
+    action: "explain",
+    object: "equipment rental requisition",
+    scope: "module",
+    section: "Requisitions",
+    question: "What does the Equipment Rental switch on an equipment requisition do?",
+    answer: "It marks the equipment request as a rental. The grid shows **Planned Return Date** and **Planned Return Time** next to the Required Date, and **Settings → Approval Workflow** keeps separate **Equipment Rental** and **Equipment Procured** tabs. Which chain a given requisition follows was not tested. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["equipment rental switch","rental requisition","planned return date","equipment procured"]
+  },
+  {
+    action: "explain",
+    object: "procurement settings lists",
+    scope: "module",
+    section: "Configure Procurement Forms & Settings",
+    question: "Where do the approver and default assignee lists in Procurement Settings come from?",
+    answer: "The **Select Approver(s)** list in **Approval Workflow → Create Level** shows all company users (about 1,280 on the test site), contractor accounts included. **Default Assign To → + Add** shows the project's people (about 40), and **RFQ Settings → Default Point Of Contact** shows all company users. If someone is missing, add them in **Global Data → Users & Permissions** (company users) or in the project's people list. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["approver list","default assign to","default point of contact","where does approver list come from","user missing in approver list"]
+  },
+  {
+    action: "explain",
+    object: "default assign to",
+    scope: "module",
+    section: "Configure Procurement Forms & Settings",
+    question: "What does Default Assign To do in Procurement Settings?",
+    answer: "It pre-fills the **Assignee** on new records. It has a tab for each document: **REQ**, **RFQ**, **Vendor Response**, **Purchase Order**, **Direct Purchase Order**, **Delivery Receipt**, **Invoice** and **Pickup Request**. Click **+ Add**, tick the users in the **Assign To** list and submit; they appear as cards on that tab. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["default assign to","default assignee procurement","assign to settings","pre-fill assignee"]
+  },
+  {
+    action: "explain",
+    object: "vendor list",
+    scope: "module",
+    section: "Purchase Orders",
+    question: "Where does the vendor list on a Purchase Order or Delivery Receipt come from?",
+    answer: "Vendors are kept in **Global Data → Vendors** (30 on the test site). Purchase Orders use those vendors; the Vendor ID in **Purchase Order Master** (for example VND0012, 1229844) is the Global Data vendor number. The **Delivery Receipt** vendor list is shorter: it shows only vendors that already have a Purchase Order. To add a vendor, a Super Admin or procurement admin uses **Register Vendor** in Global Data (or **Register Vendors** in the RFQ wizard). For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["where does vendor list come from","vendor dropdown","vendor picker","global data vendors procurement","vendor missing","why dont i see my vendor"]
+  },
+  {
+    action: "explain",
+    object: "delivery receipt vendor",
+    scope: "module",
+    section: "Delivery Receipts",
+    question: "Why is my vendor missing from the Delivery Receipt Select Vendor list?",
+    answer: "The list shows only vendors that already have a Purchase Order (12 of 30 vendors on the test site). Create and approve a Purchase Order for the vendor first, or check the vendor is registered in **Global Data → Vendors**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["delivery receipt vendor missing","select vendor delivery receipt","no purchase order for vendor"]
+  },
+  {
+    action: "explain",
+    object: "po master invoice cost",
+    scope: "module",
+    section: "Purchase Orders",
+    question: "How are Total Invoice Cost and Balance Cost on Purchase Order Master calculated?",
+    answer: "**Total Invoice Cost** is the total of the **Approved** invoices raised against the Purchase Order, and **Balance Cost** is **Total Cost** minus that. Invoices still in **Created** status do not count yet (the **Invoice status** column shows CREATED). For example PO 83 had Total Cost 1,39,650, an approved invoice of 1,27,575 and a balance of 12,075. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["total invoice cost","balance cost","invoice status po master","how much invoiced","po invoiced amount"]
+  },
+  {
+    action: "explain",
+    object: "procurement downstream",
+    scope: "module",
+    section: "Delivery Receipts",
+    question: "Where does procurement data show up in Inventory and Cost Tracking?",
+    answer: "A **Delivery Receipt** adds the received quantity to **Inventory Management**; the material's **See History** reads \"received from <vendor> through PO ID ... confirmed by DR ID ...\". On the test site the Purchase Orders and invoices did not appear in **Cost Tracking** actuals, so the link to cost was not confirmed. The Procurement **Dashboard** (Total Spend, Vendor Performance Summary) and **Purchase Order Master** report the spend. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["procurement inventory link","cost tracking purchase orders","where does po data go","delivery receipt inventory"]
+  },
+  {
+    action: "explain",
+    object: "direct po wizard",
+    scope: "module",
+    section: "Purchase Orders",
+    question: "Why can I order less than the requested quantity on a Direct Purchase Order?",
+    answer: "In the **Create Direct Purchase Order** wizard (step 1, Select Items) each line shows **Remaining Quantity** (requested minus what earlier orders took), **Requested Quantity** and an editable **Procuring Quantity**. Order only what you need now; the rest stays as Remaining for another order. Lines with 0 remaining are fully ordered.",
+    tags: ["remaining quantity","procuring quantity","partial purchase order","direct po quantity"]
   }
 ];
 
@@ -32063,7 +32171,7 @@ const MODULES = [
         "definitions": [
           {
             "term": "Approval Workflow",
-            "definition": "The Procurement Settings screen where multi-level approval chains are defined per document type (Requisition Form, Purchase Order, Invoices, Pickup Request) and, for Requisition Form, per category (Equipment, Material, Equipment Part, Delivery Service). Each level is added with + Create Level and has a Level, Level Description, Approvers, and Workflow Type (e.g. \"Any one can approve\")."
+            "definition": "The **Procurement → Settings → Approval Workflow** screen where multi-level approval chains are defined. It has four top tabs, **Requisition Form (REQ)**, **Purchase Order (PO)**, **Invoices** and **Pickup Request**. Under **Requisition Form (REQ)** there is a second row of tabs for the category: **Equipment Rental**, **Equipment Procured**, **Material**, **Equipment Part Rental**, **Equipment Part Purchased** and **Delivery Service**. Each tab has its own chain. **+ Create** adds a level; each level has a **Level**, **Level Description**, **Approvers** and **Workflow Type** (**All must approve** or **Any one can approve**). **Where the approvers come from:** the **Select Approver(s)** list in the Create Level dialog shows every company user (about 1,280 on the test site, contractor accounts included), not only the project team, and has a **Select All** box. **Where it goes:** each document shows its chain in its **Approval work flow data** viewer and its Approve / Reject buttons go to the approvers you picked."
           },
           {
             "term": "ID Settings (Procurement)",
@@ -32129,13 +32237,17 @@ const MODULES = [
           {
             "term": "Issues Priority",
             "definition": "A set of priority levels (each with a Due Hours value) that can be applied to procurement issues, giving them a service-level expectation for resolution."
+          },
+          {
+            "term": "Where settings lists come from",
+            "definition": "**Approvers** (Approval Workflow, Create Level): every company user, about 1,280 on the test site. **Default Assign To**: eight tabs, **REQ**, **RFQ**, **Vendor Response**, **Purchase Order**, **Direct Purchase Order**, **Delivery Receipt**, **Invoice** and **Pickup Request**; **+ Add** opens an **Assign To** list with search and **Select All** showing the project's people (about 40 on the test site), and the people you tick are filled into the **Assignee** field of new records of that type (Arena Residential Project had six defaults for REQ). **RFQ Settings → Default Point Of Contact**: every company user (about 1,275). **Procurement Issues**: the priorities that Delivery Receipt inspection issues can use. **ID Settings**: only changes the numbering of new documents."
           }
         ],
         "procedures": [
           {
             "title": "Customize the requisition form",
             "steps": [
-              "Go to <strong>Procurement Settings &gt; REQ Form</strong>.",
+              "Go to **Procurement → Settings → Requisition Form (REQ)**.",
               "Use the form builder to add sections and choose field types (paragraph, single select, multi-select, tables, etc.) for each.",
               "Save your changes."
             ],
@@ -32155,7 +32267,7 @@ const MODULES = [
           {
             "title": "Configure the Purchase Order form",
             "steps": [
-              "Go to <strong>Procurement Settings &gt; PO Configuration</strong>.",
+              "Go to **Procurement → Settings → Purchase Order Form (PO)**.",
               "Select the tab for the procurement type you want to configure: <strong>Material</strong>, <strong>Equipment</strong>, <strong>Equipment Part</strong>, or <strong>Delivery Service</strong>.",
               "Use the form builder to configure that type's fields separately from the others."
             ],
@@ -32175,7 +32287,7 @@ const MODULES = [
           {
             "title": "Configure the Delivery Receipt form",
             "steps": [
-              "Go to <strong>Procurement Settings &gt; Delivery Request</strong>.",
+              "Go to **Procurement → Settings → Delivery Receipt Form**.",
               "Use the form builder to configure the Delivery Receipt form for <strong>Material</strong>, <strong>Equipment</strong>, <strong>Equipment Part</strong>, and <strong>Delivery Service</strong>."
             ],
             "images": [
@@ -32194,7 +32306,7 @@ const MODULES = [
           {
             "title": "Configure the Invoice form",
             "steps": [
-              "Go to <strong>Procurement Settings &gt; Invoice</strong>.",
+              "Go to **Procurement → Settings → Invoices Form**.",
               "Use the form builder to configure the invoice form for <strong>Equipment</strong>, <strong>Material</strong>, <strong>Equipment Part</strong>, and <strong>Delivery Service</strong>, adding multiple sections and field types as needed."
             ],
             "images": [
@@ -32213,7 +32325,7 @@ const MODULES = [
           {
             "title": "Configure the Pickup Request form",
             "steps": [
-              "Go to <strong>Procurement Settings &gt; Pickup Request</strong>.",
+              "Go to **Procurement → Settings → Pickup Request Form**.",
               "Configure the form fields using the form builder.",
               "Click <strong>Save changes</strong>."
             ],
@@ -32233,12 +32345,12 @@ const MODULES = [
           {
             "title": "Set up a procurement approval workflow",
             "steps": [
-              "Go to <strong>Procurement Settings &gt; Approval Workflow</strong>.",
-              "Click <strong>Create Level</strong> to add a level to the workflow.",
-              "For each level, choose <strong>All must approve</strong> or <strong>Any one can approve</strong>.",
-              "Repeat to add as many levels as your sign-off process requires."
+              "Go to **Procurement Settings → Approval Workflow**.",
+              "Pick the document tab: **Requisition Form (REQ)**, **Purchase Order (PO)**, **Invoices** or **Pickup Request**. For a requisition also pick the category tab (for example **Material** or **Equipment Rental**).",
+              "Click **+ Create** to add a level, choose **All must approve** or **Any one can approve**, add a description, tick the approvers and click **Submit**.",
+              "Repeat to add as many levels as your sign-off process needs."
             ],
-            "note": "This single workflow configuration applies across Requisition forms, Purchase Orders, Invoices, and Pickup Requests — you are not configuring approvals separately for each document type.",
+            "note": "Each document type, and each requisition category, has its own chain. A category with no levels has no approval chain to follow.",
             "images": [
               {
                 "src": "assets/notion/procurement-settings-approval-workflow/001.jpg",
@@ -32344,6 +32456,18 @@ const MODULES = [
           {
             "term": "LOR from REQ",
             "definition": "A REQ creation path that lets you generate a new requisition directly from a rejected Load Out Request, so equipment that couldn't be fulfilled from existing inventory stock can instead be purchased through procurement."
+          },
+          {
+            "term": "Where the requisition form gets its lists",
+            "definition": "Each list on the **Create Requisition Form** dialog comes from a different place. **Requested By**: Arena users, defaulting to you. **Project Number / Project Name**: the projects you can open (the same list as the Projects page; it does not pre-select the project you are working in). **Item picker** (**Search for Materials** or **Search for Equipments or Accessories**): the company item lists, tagged **Mat**, **Eqp** (equipment) or **Acc** (accessory); picking one fills the row, and **UOM** is filled in from the item and cannot be edited. **Phase Code** (per line): a list of phase codes shown as code and description (360 of the 963 phase codes on Arena Steel Plant - Phase 1, the same 360 for Material and Equipment lines); how those 360 are chosen was not found. **Delivery Location**: the locations of the project's owner, set when the project was created; picking one fills Zip Code, City and State, which you cannot edit. If the list is empty, the dialog says to configure the owner and owner location during project creation. **Project Manager** and **On-Site Contact**: the project's people (about 40 on Arena Residential Project); empty if no owner and people were configured. **Assignee**: starts with the defaults from **Settings → Default Assign To → REQ**. **Job Location**, its Zip Code, City and State, **Notes** and **Phone Number**: typed in by you. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
+          },
+          {
+            "term": "Equipment Rental switch",
+            "definition": "On an **Equipment** requisition a switch at the top right marks the request as a rental. The Equipment grid has **Required Date**, **Planned Return Date** and **Planned Return Time** columns, and Settings → Approval Workflow has separate **Equipment Rental** and **Equipment Procured** tabs. Which chain a given requisition follows was not tested. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
+          },
+          {
+            "term": "Where requisition data goes",
+            "definition": "The Requisition Form list shows only the requisitions of the project you are working in (46 on Arena Residential Project, none on Arena Steel Plant - Phase 1). Once a requisition is **Approved**, it appears in the **Create RFQ** wizard (step 1) and in the **Create Direct Purchase Order** wizard (step 1); other projects' requisitions also appear in the Direct Purchase Order list, each with its Project ID / Project Name. In those wizards **Remaining Quantity** is the requested quantity minus what earlier orders already took, and **Procuring Quantity** is what you order now. Approvers see the requisition through the **Approve** and **Reject** buttons and the **Approval work flow data** viewer."
           }
         ],
         "procedures": [
@@ -32590,6 +32714,10 @@ const MODULES = [
           {
             "term": "Terms & Conditions (Purchase Orders)",
             "definition": "A company-wide, rich-text boilerplate block (gear icon on the Purchase Orders tab) stamped onto every generated PO, with placeholders like [Amount] and [30/60] for payment terms."
+          },
+          {
+            "term": "Where Purchase Order data comes from and goes",
+            "definition": "**Comes from:** the **Vendor** on a Purchase Order is a vendor from **Global Data → Vendors** (Vendor ID such as VND0012 or 1229844 is the Global Data vendor number); the lines come from the requisition or RFQ you picked, and **Remaining Quantity** (requested quantity minus what earlier orders took) limits what you can still order. The list shows POs from several projects, with the project in the **Job ID / Job Name** column. **Goes to:** Delivery Receipts (the PO appears under its vendor, tagged Direct or Process Purchase Order), Invoices, and **Purchase Order Master**, where **Total Invoice Cost** and **Balance Cost** are worked out from approved invoices. Stock received through a Delivery Receipt is added to Inventory Management (its Transaction History reads \"received from <vendor> through PO ID ... confirmed by DR ID ...\"). On the test site Purchase Orders and invoices did not appear in the **Cost Tracking** actuals, so do not rely on them as a cost source there. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
           }
         ],
         "procedures": [
@@ -32696,6 +32824,10 @@ const MODULES = [
           {
             "term": "Inspection Issues (Delivery Receipts)",
             "definition": "A sub-tab next to Create Delivery Receipt logging quality-check failures found while inspecting a delivery: Issue Number, DR ID, Field Name (the checkpoint, e.g. \"Check Per MTR\"), Observation, Raised on Date/Time, Raised by, an optional photo, a Rectify button, Chat, Assign To, and Due Date. Header counters show Total/Open/Rectified issue counts. A Delivery Receipt with an open inspection issue shows status Delivery Receipt Issue Raised on the Purchase Order Master."
+          },
+          {
+            "term": "Where Delivery Receipt data comes from and goes",
+            "definition": "**Comes from:** the **Select Vendor** list in **+ Delivery Receipt** shows only vendors that already have a Purchase Order (12 of the 30 vendors in Global Data on the test site). Picking a vendor lists its Purchase Orders and their requisition lines. **Goes to:** the Purchase Order status (**Delivery Receipt Created**, **Partial Delivery Receipt Created**, **Delivery Receipt Issue Raised**), Inventory Management stock and its Transaction History, and the **Inspection Issues** list with the due times set in **Settings → Procurement Issues**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
           }
         ],
         "procedures": [
@@ -32749,6 +32881,10 @@ const MODULES = [
           {
             "term": "Invoice (Procurement)",
             "definition": "A billing document tied to one of a vendor's Purchase Orders, recording the invoice number, date, payment terms, billed items, subtotal, and tax amount."
+          },
+          {
+            "term": "Where invoice numbers show up",
+            "definition": "An invoice is tied to one Purchase Order and vendor and shows the invoice and billing dates, tax and total. On **Purchase Order Master**, only **Approved** invoices count: PO 83 (total 1,39,650) had Approved invoice INV 44 for 1,27,575, so its **Total Invoice Cost** was 1,27,575 and **Balance Cost** 12,075, while PO 81 had two invoices still **Created**, so its Total Invoice Cost stayed 0.00 and its **Invoice status** read CREATED. Approve the invoice for the amount to count against the PO. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
           }
         ],
         "procedures": [
