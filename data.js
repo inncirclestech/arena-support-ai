@@ -51,7 +51,7 @@ const QA_OPPORTUNITY = [
     scope: "module",
     section: "Opportunities",
     question: "How do I clone an opportunity, and can I choose which fields get copied?",
-    answer: "Click the **Clone** (duplicate/file_copy) icon on an opportunity's row in the Opportunities list. This opens a **Clone Opportunity** dialog with a checkbox picker organized by section (Details, Status & Value, Timeline & Activity, Contact, etc.) — you choose exactly which fields carry over into the new record instead of copying everything automatically.",
+    answer: "From **Home**, open **Opportunity Management → Opportunities**. Click the **Clone** (duplicate/file_copy) icon on an opportunity's row in the Opportunities list. This opens a **Clone Opportunity** dialog with a checkbox picker organized by section (Details, Status & Value, Timeline & Activity, Contact, etc.) — you choose exactly which fields carry over into the new record instead of copying everything automatically.",
     tags: ["clone opportunity","duplicate opportunity","copy opportunity","clone lead"]
   },
   {
@@ -87,7 +87,7 @@ const QA_OPPORTUNITY = [
     scope: "module",
     section: "Dashboard",
     question: "Where can I see a quick summary of pipeline health?",
-    answer: "**My Dashboard** is the personal, KPI-driven landing page showing totals, value, staleness, funnel shape, tasks, and upcoming due dates.",
+    answer: "From **Home**, open **Opportunity Management → My Dashboard**. **My Dashboard** is the personal, KPI-driven landing page showing totals, value, staleness, funnel shape, tasks, and upcoming due dates.",
     tags: ["pipeline summary","dashboard overview","my dashboard"]
   },
   {
@@ -96,7 +96,7 @@ const QA_OPPORTUNITY = [
     scope: "module",
     section: "Dashboard",
     question: "Where do I see opportunities that are overdue or coming due soon?",
-    answer: "Check **My Dashboard's Due This Week** KPI card and **Upcoming Opportunity Due Date** list, or filter the Opportunities list by **Due Date**.",
+    answer: "From **Home**, open **Opportunity Management → My Dashboard**. Check **My Dashboard's Due This Week** KPI card and **Upcoming Opportunity Due Date** list, or filter the Opportunities list by **Due Date**.",
     tags: ["due date","overdue opportunities","upcoming due date","due this week"]
   },
   {
@@ -105,7 +105,7 @@ const QA_OPPORTUNITY = [
     scope: "module",
     section: "Dashboard",
     question: "Where do I see the top opportunities by value?",
-    answer: "**My Dashboard's Top 10 Opportunities** widget, ranked by value, with its own **+ Create Opportunity** shortcut.",
+    answer: "From **Home**, open **Opportunity Management → My Dashboard**. **My Dashboard's Top 10 Opportunities** widget, ranked by value, with its own **+ Create Opportunity** shortcut.",
     tags: ["top opportunities","highest value","highest value list"]
   },
   {
@@ -159,7 +159,7 @@ const QA_OPPORTUNITY = [
     scope: "module",
     section: "Opportunities",
     question: "Where do I set the Opportunity's Description, Owner, or Opportunity Value if they aren't on the Create dialog?",
-    answer: "Fields like **Description, Project Types, Business Development, Business Unit, Opportunity Type, Milestone Template, Sub Market Type, TIC, Opportunity Value, Owner, Owner POC, Customer, Tier, EPC/Engineer, Contracting Entity, Project Locations, Competitors, Assign To**, and others exist on the full Opportunity record (visible in **Manage Columns** and the Pipeline Report) but aren't present on the initial Create dialog — they're editable from the Opportunity's detail/edit view once the record exists.",
+    answer: "From **Home**, open **Opportunity Management → Opportunities**. Fields like **Description, Project Types, Business Development, Business Unit, Opportunity Type, Milestone Template, Sub Market Type, TIC, Opportunity Value, Owner, Owner POC, Customer, Tier, EPC/Engineer, Contracting Entity, Project Locations, Competitors, Assign To**, and others exist on the full Opportunity record (visible in **Manage Columns** and the Pipeline Report) but aren't present on the initial Create dialog — they're editable from the Opportunity's detail/edit view once the record exists.",
     tags: ["opportunity fields","edit opportunity value","owner field","opportunity value owner description"]
   },
   {
@@ -186,7 +186,7 @@ const QA_OPPORTUNITY = [
     scope: "module",
     section: "Opportunities",
     question: "How do I save my current view (filters, columns, and layout) for next time?",
-    answer: "Click the **save** icon in the Opportunities toolbar — it saves the current filter, column, and layout configuration together.",
+    answer: "From **Home**, open **Opportunity Management → Opportunities**. Click the **save** icon in the Opportunities toolbar — it saves the current filter, column, and layout configuration together.",
     tags: ["save view","save filters and columns","save filters and layout"]
   },
   {
@@ -375,7 +375,7 @@ const QA_OPPORTUNITY = [
     scope: "module",
     section: "Analytics",
     question: "How do I share or filter an analytics dashboard?",
-    answer: "Every Analytics sub-tab has a **Filters** button to narrow the data and a **share** icon to share the dashboard.",
+    answer: "From **Home**, open **Opportunity Management → Analytics**. Every Analytics sub-tab has a **Filters** button to narrow the data and a **share** icon to share the dashboard.",
     tags: ["share dashboard","filter analytics"]
   },
   {
@@ -384,7 +384,7 @@ const QA_OPPORTUNITY = [
     scope: "module",
     section: "Analytics",
     question: "Where do I track permit and insurance expirations?",
-    answer: "The **Permit & Insurance Expiry Tracker** table, found on both the **Market & Operations** and **Executive Summary** analytics tabs.",
+    answer: "From **Home**, open **Opportunity Management → Analytics**. The **Permit & Insurance Expiry Tracker** table, found on both the **Market & Operations** and **Executive Summary** analytics tabs.",
     tags: ["permit expiry","insurance expiry","compliance tracker"]
   },
   {
@@ -393,7 +393,7 @@ const QA_OPPORTUNITY = [
     scope: "module",
     section: "Analytics",
     question: "Where do I see which stage an opportunity's proposal cycle time falls into?",
-    answer: "The **Proposal Cycle Time Distribution** chart on the **Market & Operations** analytics tab.",
+    answer: "From **Home**, open **Opportunity Management → Analytics → Market & Operations**. The **Proposal Cycle Time Distribution** chart on the **Market & Operations** analytics tab.",
     tags: ["proposal cycle time","cycle time distribution"]
   },
   {
@@ -411,7 +411,7 @@ const QA_OPPORTUNITY = [
     scope: "module",
     section: "Reports",
     question: "How do I customize which columns show in a report?",
-    answer: "Reports share the same toolbar pattern as the main Opportunities list: use **Manage Columns** to add/remove/reorder columns, the same way you would on the Opportunities table.",
+    answer: "From **Home**, open **Opportunity Management → Reports**. Reports share the same toolbar pattern as the main Opportunities list: use **Manage Columns** to add/remove/reorder columns, the same way you would on the Opportunities table.",
     tags: ["report columns","manage columns reports"]
   },
   {
@@ -492,7 +492,7 @@ const QA_OPPORTUNITY = [
     scope: "module",
     section: "Sidebar Shortcuts",
     question: "How do I create a task linked to an Opportunity?",
-    answer: "1. Open the **Task** shortcut icon in the module's tab bar.\n2. Click **+ Add Task**.\n3. Fill in **Name*** and **Date*** (required), and optionally Description and Time.\n4. Search for and link the required **Opportunity***.\n5. Click **Create** (or Cancel to discard).",
+    answer: "From **Home**, open **Opportunity Management** and click the **Task** icon in the toolbar at the top right. 1. Open the **Task** shortcut icon in the module's tab bar.\n2. Click **+ Add Task**.\n3. Fill in **Name*** and **Date*** (required), and optionally Description and Time.\n4. Search for and link the required **Opportunity***.\n5. Click **Create** (or Cancel to discard).",
     tags: ["create task","link task to opportunity"]
   },
   {
@@ -528,7 +528,7 @@ const QA_OPPORTUNITY = [
     scope: "module",
     section: "Sidebar Shortcuts",
     question: "How do I create a new customer?",
-    answer: "1. Open the **Customers** shortcut and click **Create Customer**.\n2. Step 1 — **Basic Details**: enter Customer Name* (required), plus Short Name, Alias Name, Phone Number, Email, Fax Number, Url, Group, and Primary/Mailing/Billing Address (use \"Same as Primary address\" as a shortcut).\n3. Step 2 — **Locations & Tax Codes**.\n4. Step 3 — **Preview**, then submit.",
+    answer: "From **Home**, open **Opportunity Management** and click the **Customers** icon in the toolbar at the top right. 1. Open the **Customers** shortcut and click **Create Customer**.\n2. Step 1 — **Basic Details**: enter Customer Name* (required), plus Short Name, Alias Name, Phone Number, Email, Fax Number, Url, Group, and Primary/Mailing/Billing Address (use \"Same as Primary address\" as a shortcut).\n3. Step 2 — **Locations & Tax Codes**.\n4. Step 3 — **Preview**, then submit.",
     tags: ["create customer","new customer wizard"]
   },
   {
@@ -555,7 +555,7 @@ const QA_OPPORTUNITY = [
     scope: "module",
     section: "Sidebar Shortcuts",
     question: "How do I merge two duplicate customer records?",
-    answer: "Click **Merge Duplicates** in the Customers toolbar.",
+    answer: "From **Home**, open **Opportunity Management** and click the **Customers** icon in the toolbar at the top right. Click **Merge Duplicates** in the Customers toolbar.",
     tags: ["merge duplicates","duplicate customer"]
   },
   {
@@ -564,7 +564,7 @@ const QA_OPPORTUNITY = [
     scope: "module",
     section: "Sidebar Shortcuts",
     question: "How do I turn a Customer into an Owner, or group customers together?",
-    answer: "Use **Convert Customers to Owners** to migrate a customer record, or **Add Groups** to group customers — both are buttons in the Customers toolbar.",
+    answer: "From **Home**, open **Opportunity Management** and click the **Customers** icon in the toolbar at the top right. Use **Convert Customers to Owners** to migrate a customer record, or **Add Groups** to group customers — both are buttons in the Customers toolbar.",
     tags: ["convert customer to owner","add groups","convert to owner add groups"]
   },
   {
@@ -591,7 +591,7 @@ const QA_OPPORTUNITY = [
     scope: "module",
     section: "Sidebar Shortcuts",
     question: "How do I add a competitor?",
-    answer: "1. Open the **Competitors** shortcut and click **Create Competitor**.\n2. Enter **Competitor Name*** (required).\n3. Select **Competitor Type*** (required — Direct, Indirect, or Replacement Competitor).\n4. Optionally add a Description.\n5. Click **Submit** (or Cancel to discard).",
+    answer: "From **Home**, open **Opportunity Management** and click the **Competitors** icon in the toolbar at the top right. 1. Open the **Competitors** shortcut and click **Create Competitor**.\n2. Enter **Competitor Name*** (required).\n3. Select **Competitor Type*** (required — Direct, Indirect, or Replacement Competitor).\n4. Optionally add a Description.\n5. Click **Submit** (or Cancel to discard).",
     tags: ["add competitor","create competitor"]
   },
   {
@@ -600,7 +600,7 @@ const QA_OPPORTUNITY = [
     scope: "module",
     section: "Sidebar Shortcuts",
     question: "Where do competitors show up once created?",
-    answer: "They populate the searchable **Competitors** field/column on Opportunities, letting you track which competing firms are pursuing the same job.",
+    answer: "From **Home**, open **Opportunity Management → Opportunities**. They populate the searchable **Competitors** field/column on Opportunities, letting you track which competing firms are pursuing the same job.",
     tags: ["competitors field","track competing firms"]
   },
   {
@@ -780,7 +780,7 @@ const QA_OPPORTUNITY = [
     scope: "module",
     section: "Opportunities",
     question: "How do I group several business unit opportunities under one parent?",
-    answer: "For an **existing facility**, log the first opportunity as a normal child. When a second related one appears, open either and click **Create Parent**, enter the **Name**, **Stage**, **Status** and **Due Date**, then add more children from the parent's **Child** tab with **Link Parent**. For a **new build** with unknown scope, log it under your placeholder business unit; when the scope breaks into packages, reduce the placeholder value to $1, click **Create Parent**, and log a child for each business unit. The parent adds up the children's values. Parent Mode must be turned on in Settings.",
+    answer: "From **Home**, open **Opportunity Management → Opportunities**. For an **existing facility**, log the first opportunity as a normal child. When a second related one appears, open either and click **Create Parent**, enter the **Name**, **Stage**, **Status** and **Due Date**, then add more children from the parent's **Child** tab with **Link Parent**. For a **new build** with unknown scope, log it under your placeholder business unit; when the scope breaks into packages, reduce the placeholder value to $1, click **Create Parent**, and log a child for each business unit. The parent adds up the children's values. Parent Mode must be turned on in Settings.",
     tags: ["parent child opportunity","placeholder business unit","new build parent","existing facility parent","multi BU opportunity","group opportunities"]
   },
   {
@@ -996,7 +996,7 @@ const QA_OPPORTUNITY = [
     scope: "module",
     section: "Opportunities",
     question: "How do I complete the opportunity profile after creating a lead?",
-    answer: "Click the lead to open its profile. Fill in **Details** (Project Type, Opportunity Type, Milestone Template, Market Type), **Status & Value** (TIC, Opportunity Value, Go %, Get %), **Timeline & Activity** (Due Date, Follow Up) and **Contact** (customer, owner, EPC, contracting entity, location, competitors, team). Click **Save Changes**. If a customer, location or contact is not listed, ask Sales Ops in the **Comments** tab.",
+    answer: "From **Home**, open **Opportunity Management → Opportunities**. Click the lead to open its profile. Fill in **Details** (Project Type, Opportunity Type, Milestone Template, Market Type), **Status & Value** (TIC, Opportunity Value, Go %, Get %), **Timeline & Activity** (Due Date, Follow Up) and **Contact** (customer, owner, EPC, contracting entity, location, competitors, team). Click **Save Changes**. If a customer, location or contact is not listed, ask Sales Ops in the **Comments** tab.",
     tags: ["complete opportunity profile","fill in profile","profile after create","edit lead profile"]
   },
   {
@@ -1014,7 +1014,7 @@ const QA_OPPORTUNITY = [
     scope: "module",
     section: "Opportunities",
     question: "How do I filter opportunities by stage?",
-    answer: "Click a coloured **stage chip** at the top left of the **Opportunities** screen. Each chip shows the count for that stage, and clicking it filters the screen to that stage. You can also use **Filters**, **Search** and **Manage Columns**.",
+    answer: "From **Home**, open **Opportunity Management → Opportunities**. Click a coloured **stage chip** at the top left of the **Opportunities** screen. Each chip shows the count for that stage, and clicking it filters the screen to that stage. You can also use **Filters**, **Search** and **Manage Columns**.",
     tags: ["stage chips","filter by stage","stage counts","opportunities by stage"]
   },
   {
@@ -1068,7 +1068,7 @@ const QA_OPPORTUNITY = [
     scope: "module",
     section: "Opportunities",
     question: "How is Weighted Value calculated?",
-    answer: "**Weighted Value = Opportunity Value × Go % × Get %**, calculated automatically. The **Manual % / AI %** toggle lets you use the **AI Probability** instead. The result feeds the weighted pipeline on **My Dashboard**, the Kanban columns and the reports.",
+    answer: "From **Home**, open **Opportunity Management → Opportunities**. **Weighted Value = Opportunity Value × Go % × Get %**, calculated automatically. The **Manual % / AI %** toggle lets you use the **AI Probability** instead. The result feeds the weighted pipeline on **My Dashboard**, the Kanban columns and the reports.",
     tags: ["weighted value","weighted opportunity value","forecasted value","formula"]
   },
   {
@@ -1095,7 +1095,7 @@ const QA_OPPORTUNITY = [
     scope: "module",
     section: "Sidebar Shortcuts",
     question: "Can I import clients and contacts from ZoomInfo or scan a business card?",
-    answer: "Yes. Clients and contacts can be imported from **ZoomInfo**, and a point of contact can be created from a photo of a business card (**OCR**), also from the **Arena Onsite** app. New clients still go to Sales Ops for approval before they can be used.",
+    answer: "From **Home**, open **Opportunity Management** and click the **Customers** icon in the toolbar at the top right. Yes. Clients and contacts can be imported from **ZoomInfo**, and a point of contact can be created from a photo of a business card (**OCR**), also from the **Arena Onsite** app. New clients still go to Sales Ops for approval before they can be used.",
     tags: ["zoominfo","ocr","business card","import contacts"]
   },
   {
@@ -1104,7 +1104,7 @@ const QA_OPPORTUNITY = [
     scope: "module",
     section: "Opportunity Record: Milestones, Team, Proposals, Compliance and Expenses",
     question: "How do stale and inactive alerts work?",
-    answer: "The **Stage / Inactive Threshold Notification** in **Timeline & Activity** warns you when an opportunity sits too long with no updated information. The thresholds are set by Sales Ops, and stale opportunities count on **My Dashboard**.",
+    answer: "From **Home**, open **Opportunity Management → Opportunities**. The **Stage / Inactive Threshold Notification** in **Timeline & Activity** warns you when an opportunity sits too long with no updated information. The thresholds are set by Sales Ops, and stale opportunities count on **My Dashboard**.",
     tags: ["stale","inactive threshold","notification","inactivity alert"]
   },
   {
@@ -1122,7 +1122,7 @@ const QA_OPPORTUNITY = [
     scope: "module",
     section: "Opportunity Record: Milestones, Team, Proposals, Compliance and Expenses",
     question: "How do I add milestones to an opportunity?",
-    answer: "Choose a **Milestone Template** on the profile, then open the **Milestones** tab. Each row shows an **Icon**, **Milestone**, **Target Date**, **Actual dates** and **Notes**. Remove a milestone that does not apply, add one from the master list, enter a **Target Date** for each and add notes. The system needs at least an approximate target date on the milestones before it lets you move the opportunity to Qualified.",
+    answer: "From **Home**, open **Opportunity Management → Opportunities** and open the opportunity. Choose a **Milestone Template** on the profile, then open the **Milestones** tab. Each row shows an **Icon**, **Milestone**, **Target Date**, **Actual dates** and **Notes**. Remove a milestone that does not apply, add one from the master list, enter a **Target Date** for each and add notes. The system needs at least an approximate target date on the milestones before it lets you move the opportunity to Qualified.",
     tags: ["add a milestone","milestone target date","milestones tab","milestone template"]
   },
   {
@@ -1131,7 +1131,7 @@ const QA_OPPORTUNITY = [
     scope: "module",
     section: "Opportunities",
     question: "Where does the Client list on an opportunity come from?",
-    answer: "The **Client** list shows the approved customers from the **Customers** shortcut in the module toolbar (Active Customers). A customer created by a BD user goes to Sales Ops for approval first and appears in the list only once approved; rejected ones sit under **Rejected**. **Client POC** then shows the contacts of that client. If the client is missing, use **+ Create a Client** or ask Sales Ops in the opportunity **Comments** tab.",
+    answer: "From **Home**, open **Opportunity Management → Opportunities**. The **Client** list shows the approved customers from the **Customers** shortcut in the module toolbar (Active Customers). A customer created by a BD user goes to Sales Ops for approval first and appears in the list only once approved; rejected ones sit under **Rejected**. **Client POC** then shows the contacts of that client. If the client is missing, use **+ Create a Client** or ask Sales Ops in the opportunity **Comments** tab.",
     tags: ["client list source","where does client dropdown come from","customer list opportunity","customers feed opportunity client","new customer approval"]
   },
   {
@@ -1149,7 +1149,7 @@ const QA_OPPORTUNITY = [
     scope: "module",
     section: "Opportunities",
     question: "Where do the BD Rep, Corporate Lead and Executive Lead lists come from?",
-    answer: "You pick each person from a dropdown of users. They can also fill in on their own: when the Client, Location and Market you chose match a row in **Account Assignment**, that row's BD Rep, Corporate Lead and Executive Lead are applied. The **Business Development** name pool and the **Users and Permissions** groups under **Settings** are maintained by Sales Ops.",
+    answer: "From **Home**, open **Opportunity Management → Opportunities**. You pick each person from a dropdown of users. They can also fill in on their own: when the Client, Location and Market you chose match a row in **Account Assignment**, that row's BD Rep, Corporate Lead and Executive Lead are applied. The **Business Development** name pool and the **Users and Permissions** groups under **Settings** are maintained by Sales Ops.",
     tags: ["bd rep list source","corporate lead dropdown","executive lead dropdown source","auto fill leads from account assignment"]
   },
   {
@@ -1158,7 +1158,7 @@ const QA_OPPORTUNITY = [
     scope: "module",
     section: "Opportunities",
     question: "Where do the Business Unit, Opportunity Type and Milestone Template lists come from?",
-    answer: "They come from the module **Settings**: **Opportunity Type** (New Build, Existing Facility) and **Milestone Templates** are maintained by Sales Ops, and each Opportunity Type shows only the Milestone Templates mapped to it. **Business Unit** is chosen when you create the lead and is read only afterwards. If a value you need is missing, ask Sales Ops.",
+    answer: "From **Home**, open **Opportunity Management → Opportunities**. They come from the module **Settings**: **Opportunity Type** (New Build, Existing Facility) and **Milestone Templates** are maintained by Sales Ops, and each Opportunity Type shows only the Milestone Templates mapped to it. **Business Unit** is chosen when you create the lead and is read only afterwards. If a value you need is missing, ask Sales Ops.",
     tags: ["opportunity type list source","milestone template list","business unit dropdown source","why no milestone template"]
   },
   {
@@ -1176,7 +1176,7 @@ const QA_OPPORTUNITY = [
     scope: "module",
     section: "Opportunities",
     question: "Where does opportunity data end up (reports, calendar, Gantt)?",
-    answer: "Opportunity data feeds the **Dashboard** (value cards, funnel, Top 10), the **Reports** tiles, the **Analytics** tabs and, through milestone target dates, the **Pipeline Gantt View**. Due dates and follow-ups show on the module **Calendar**, and interactions logged on a client contact stay on the opportunity and under **Clients Interactions**.",
+    answer: "From **Home**, open **Opportunity Management**. Opportunity data feeds the **Dashboard** (value cards, funnel, Top 10), the **Reports** tiles, the **Analytics** tabs and, through milestone target dates, the **Pipeline Gantt View**. Due dates and follow-ups show on the module **Calendar**, and interactions logged on a client contact stay on the opportunity and under **Clients Interactions**.",
     tags: ["where does opportunity data go","opportunity feeds reports","milestones feed gantt","opportunity calendar events"]
   },
   {
@@ -1221,7 +1221,7 @@ const QA_OPPORTUNITY = [
     scope: "module",
     section: "Opportunity Record: Milestones, Team, Proposals, Compliance and Expenses",
     question: "Where do the Milestones on an opportunity come from, and where do they go?",
-    answer: "They come from the **Milestone Template** you choose on the profile (templates are mapped to the Opportunity Type and kept in **Settings**); you can remove rows or add more from the master list. The **Target Date** values feed the **Pipeline Gantt View** under **Reports**, and the system needs approximate target dates before it lets you move the opportunity to Qualified.",
+    answer: "From **Home**, open **Opportunity Management → Opportunities** and open the opportunity. They come from the **Milestone Template** you choose on the profile (templates are mapped to the Opportunity Type and kept in **Settings**); you can remove rows or add more from the master list. The **Target Date** values feed the **Pipeline Gantt View** under **Reports**, and the system needs approximate target dates before it lets you move the opportunity to Qualified.",
     tags: ["milestone source","milestone template feeds","milestones gantt","target date gantt"]
   },
   {
@@ -1248,7 +1248,7 @@ const QA_OPPORTUNITY = [
     scope: "module",
     section: "Account Assignment",
     question: "Where does Account Assignment data go?",
-    answer: "Matching rows pre-fill **BD Rep, Corporate Lead and Executive Lead** (and limit Location and market choices) on new opportunities, and the **Account Assignment Report** under **Reports** lists the mapping. Changing a row does not rewrite leads already saved. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "From **Home**, open **Opportunity Management → Account Assignment**. Matching rows pre-fill **BD Rep, Corporate Lead and Executive Lead** (and limit Location and market choices) on new opportunities, and the **Account Assignment Report** under **Reports** lists the mapping. Changing a row does not rewrite leads already saved. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["account assignment feeds","account assignment report","what uses account assignment","where does account assignment data go","account assignment data destination"]
   },
   {
@@ -1257,7 +1257,7 @@ const QA_OPPORTUNITY = [
     scope: "module",
     section: "Clients Interactions",
     question: "Where does the customer and contact list in Clients Interactions come from?",
-    answer: "Customers come from the **Customers** shortcut and contacts from the **Contacts Directory** (Customer Contacts and Owner Contacts). If one is missing, create it there; a new customer must be approved first.",
+    answer: "From **Home**, open **Opportunity Management → Clients Interactions**. Customers come from the **Customers** shortcut and contacts from the **Contacts Directory** (Customer Contacts and Owner Contacts). If one is missing, create it there; a new customer must be approved first.",
     tags: ["clients interactions list source","why contact missing interactions","customers interactions source"]
   },
   {
@@ -1266,7 +1266,7 @@ const QA_OPPORTUNITY = [
     scope: "module",
     section: "Clients Interactions",
     question: "Where does a logged call, meeting or note go?",
-    answer: "It is saved against that contact (and the opportunity you picked in the **Opportunity** scope dropdown, or General), shows under **See History**, and feeds the relationship score on the interactions summary (**Customer Relation** in Settings). Meetings and events also appear on the module **Calendar**.",
+    answer: "From **Home**, open **Opportunity Management → Clients Interactions**. It is saved against that contact (and the opportunity you picked in the **Opportunity** scope dropdown, or General), shows under **See History**, and feeds the relationship score on the interactions summary (**Customer Relation** in Settings). Meetings and events also appear on the module **Calendar**.",
     tags: ["logged interaction goes","see history source","customer relation score source"]
   },
   {
@@ -1361,7 +1361,7 @@ const QA_EQUIPMENT = [
     "scope": "module",
     "section": "Equipment Master and Accessory Master",
     "question": "How do I check an equipment item's full history?",
-    "answer": "Click **History** on the item's row in Table View. It shows the status changes, updates and other actions performed on the equipment over time.",
+    "answer": "From **Home**, open **Equipment Management → Equipment → Equipment Master**. Click **History** on the item's row in Table View. It shows the status changes, updates and other actions performed on the equipment over time.",
     "tags": [
       "equipment history",
       "audit log",
@@ -1375,7 +1375,7 @@ const QA_EQUIPMENT = [
     "scope": "module",
     "section": "Equipment Master and Accessory Master",
     "question": "How do I delete or retire an equipment item?",
-    "answer": "In Table View click **Delete** on the row; in Grid View use the delete icon. Delete is subject to your permissions and business rules, so a piece of equipment that is on an allocation cannot be removed. To take a piece of equipment out of use without deleting it, set its **Status** to **Inactive**, **Out of Service** or **Dispose Initiated**.",
+    "answer": "From **Home**, open **Equipment Management → Equipment → Equipment Master**. In Table View click **Delete** on the row; in Grid View use the delete icon. Delete is subject to your permissions and business rules, so a piece of equipment that is on an allocation cannot be removed. To take a piece of equipment out of use without deleting it, set its **Status** to **Inactive**, **Out of Service** or **Dispose Initiated**.",
     "tags": [
       "delete equipment",
       "retire equipment",
@@ -1412,7 +1412,7 @@ const QA_EQUIPMENT = [
     "scope": "module",
     "section": "Equipment Master and Accessory Master",
     "question": "How do I edit an equipment record?",
-    "answer": "In Table View click **Edit** on the row; in Grid View use the pencil icon. Change the details, including **Status** (manual statuses only), **Business Unit** and **Location**, and click **Submit**. Panels on the profile can also be edited one by one.",
+    "answer": "From **Home**, open **Equipment Management → Equipment → Equipment Master**. In Table View click **Edit** on the row; in Grid View use the pencil icon. Change the details, including **Status** (manual statuses only), **Business Unit** and **Location**, and click **Submit**. Panels on the profile can also be edited one by one.",
     "tags": [
       "edit equipment",
       "update equipment"
@@ -1437,7 +1437,7 @@ const QA_EQUIPMENT = [
     "scope": "module",
     "section": "Equipment Master and Accessory Master",
     "question": "How do I see maintenance records for a specific equipment?",
-    "answer": "Open the Maintenance Records icon on the equipment's row (shown only for equipment with scheduled maintenance) or use the Maintenance Records column in the list.",
+    "answer": "From **Home**, open **Equipment Management → Equipment → Equipment Master**. Open the Maintenance Records icon on the equipment's row (shown only for equipment with scheduled maintenance) or use the Maintenance Records column in the list.",
     "tags": [
       "maintenance records icon",
       "equipment maintenance history"
@@ -1461,7 +1461,7 @@ const QA_EQUIPMENT = [
     "scope": "module",
     "section": "Equipment Master and Accessory Master",
     "question": "How do I export or filter the equipment list?",
-    "answer": "Click **Filters** and choose Equipment ID, Equipment, Status, Category, Business Unit, Make and Model, plus the switches **Equipment with Telematics**, **Only Running Equipment** and **Not Reported in Last 72 Hours**; **Submit** applies and **Clear** removes them. For Excel, click **Export**: **Upload Excel** (download **Sample Excel** first) creates or updates records in bulk, and **Download Excel** exports the current records.",
+    "answer": "From **Home**, open **Equipment Management → Equipment → Equipment Master**. Click **Filters** and choose Equipment ID, Equipment, Status, Category, Business Unit, Make and Model, plus the switches **Equipment with Telematics**, **Only Running Equipment** and **Not Reported in Last 72 Hours**; **Submit** applies and **Clear** removes them. For Excel, click **Export**: **Upload Excel** (download **Sample Excel** first) creates or updates records in bulk, and **Download Excel** exports the current records.",
     "tags": [
       "export equipment list",
       "filter equipment"
@@ -1473,7 +1473,7 @@ const QA_EQUIPMENT = [
     "scope": "module",
     "section": "Equipment Master and Accessory Master",
     "question": "How do I switch between grid and table view, or add a custom column, in Equipment Master?",
-    "answer": "Use the view option in the top right corner to switch between **Grid View** and **Table View**; the actions differ between them. Click **Add Custom Column** to add a Text, Single Select, Multi-select, Date or Formulae column, **Manage Columns** to choose and arrange columns, and **Save Layout** to keep the view.",
+    "answer": "From **Home**, open **Equipment Management → Equipment → Equipment Master**. Use the view option in the top right corner to switch between **Grid View** and **Table View**; the actions differ between them. Click **Add Custom Column** to add a Text, Single Select, Multi-select, Date or Formulae column, **Manage Columns** to choose and arrange columns, and **Save Layout** to keep the view.",
     "tags": [
       "custom column",
       "grid view table view",
@@ -1486,7 +1486,7 @@ const QA_EQUIPMENT = [
     "scope": "module",
     "section": "Equipment Setup",
     "question": "How do I set up a recurring maintenance schedule?",
-    "answer": "1. Go to **Equipment Setup**, click **Create Maintenance Package**.\n2. Enter Package Name and Description; Submit.\n3. **List Equipment**: Add Equipment to select items.\n4. **Identify Forms**: Add Form, tick required forms, Submit.\n5. **Prepare Schedule**: choose Recurrence Type, Start/End dates, Time.\n6. **Assign Crew**: select responsible individuals/crew, Save.",
+    "answer": "From **Home**, open **Equipment Management** and go to **Equipment Setup**. 1. Go to **Equipment Setup**, click **Create Maintenance Package**.\n2. Enter Package Name and Description; Submit.\n3. **List Equipment**: Add Equipment to select items.\n4. **Identify Forms**: Add Form, tick required forms, Submit.\n5. **Prepare Schedule**: choose Recurrence Type, Start/End dates, Time.\n6. **Assign Crew**: select responsible individuals/crew, Save.",
     "tags": [
       "maintenance package",
       "schedule maintenance",
@@ -1527,7 +1527,7 @@ const QA_EQUIPMENT = [
     "scope": "module",
     "section": "Equipment Setup",
     "question": "How do I assign a maintenance schedule to specific people?",
-    "answer": "In the **Assign Crew** step of the Create Maintenance Package wizard, select individual users or whole Crews responsible for that maintenance — the schedule then appears on each assignee's personal calendar and becomes fillable at the scheduled time.",
+    "answer": "From **Home**, open **Equipment Management** and go to **Equipment Setup**. In the **Assign Crew** step of the Create Maintenance Package wizard, select individual users or whole Crews responsible for that maintenance — the schedule then appears on each assignee's personal calendar and becomes fillable at the scheduled time.",
     "tags": [
       "assign crew",
       "maintenance schedule assignment"
@@ -1675,7 +1675,7 @@ const QA_EQUIPMENT = [
     "scope": "module",
     "section": "Equipment and Accessory Profile",
     "question": "Where do I record purchase price, warranty, insurance and depreciation for a piece of equipment?",
-    "answer": "On the equipment profile's **Overview** tab. **Purchase & Ownership** holds ownership type (Owned, Leased, On Finance), purchase date and price, vendor, sales tax, source of funds and job costing. **Warranty & Insurance** holds providers, expiry dates, insured value and annual cost. **Depreciation** holds useful life, salvage value, method, start date, monthly and accumulated depreciation and current book value. Click the panel's edit icon, change the values and click **Save**.",
+    "answer": "From **Home**, open **Equipment Management → Equipment → Equipment Master** and open the equipment. On the equipment profile's **Overview** tab. **Purchase & Ownership** holds ownership type (Owned, Leased, On Finance), purchase date and price, vendor, sales tax, source of funds and job costing. **Warranty & Insurance** holds providers, expiry dates, insured value and annual cost. **Depreciation** holds useful life, salvage value, method, start date, monthly and accumulated depreciation and current book value. Click the panel's edit icon, change the values and click **Save**.",
     "tags": [
       "purchase price",
       "warranty expiration",
@@ -1772,7 +1772,7 @@ const QA_EQUIPMENT = [
     "scope": "module",
     "section": "Telematics: Device Mapping and Live Data",
     "question": "How do I see where a machine has been?",
-    "answer": "On the equipment's **Telematics** tab, open **Trip History**, choose the date range and coordinate precision and click **Apply** to see routes and locations. **Location History** lists the device history by recorded location, and **Device History** lists everything the device reported. If Trip History is empty, widen the date range.",
+    "answer": "From **Home**, open **Equipment Management → Equipment → Equipment Master** and open the equipment. On the equipment's **Telematics** tab, open **Trip History**, choose the date range and coordinate precision and click **Apply** to see routes and locations. **Location History** lists the device history by recorded location, and **Device History** lists everything the device reported. If Trip History is empty, widen the date range.",
     "tags": [
       "trip history",
       "location history",
@@ -1933,7 +1933,7 @@ const QA_EQUIPMENT = [
     "scope": "module",
     "section": "Allocation: Internal Self-Pickup to Off-Rent",
     "question": "How do pre-dispatch and post-rent inspections work?",
-    "answer": "The inspector opens the card, clicks **Form Ready**, completes each checklist item and clicks **Submit**. If issues are found, choose a priority, add observations and images, and submit. The request proceeds only after the issue is rectified in **Inspection Checklist Issues**, or you move it back to the previous stage. The stage shows only if the toggle was on at Assign and a checklist is linked in Equipment Setup.",
+    "answer": "From **Home**, open **Equipment Management → Operations**. The inspector opens the card, clicks **Form Ready**, completes each checklist item and clicks **Submit**. If issues are found, choose a priority, add observations and images, and submit. The request proceeds only after the issue is rectified in **Inspection Checklist Issues**, or you move it back to the previous stage. The stage shows only if the toggle was on at Assign and a checklist is linked in Equipment Setup.",
     "tags": [
       "pre-dispatch inspection",
       "post-rent inspection",
@@ -1948,7 +1948,7 @@ const QA_EQUIPMENT = [
     "scope": "module",
     "section": "Allocation: Internal Self-Pickup to Off-Rent",
     "question": "How do I dispatch equipment and put it on rent?",
-    "answer": "At **Ready for Dispatch**, the Dispatch Assignee enters the **Dispatch Date** and the **On-Rent Date** (when rental charges start) and clicks **Dispatch**. When the equipment reaches the site, the Site Custodian opens the card in **On Rent**, selects the On-Rent option and clicks **Submit**. The equipment status changes to **On Rent**.",
+    "answer": "From **Home**, open **Equipment Management → Operations**. At **Ready for Dispatch**, the Dispatch Assignee enters the **Dispatch Date** and the **On-Rent Date** (when rental charges start) and clicks **Dispatch**. When the equipment reaches the site, the Site Custodian opens the card in **On Rent**, selects the On-Rent option and clicks **Submit**. The equipment status changes to **On Rent**.",
     "tags": [
       "dispatch date",
       "on rent date",
@@ -2035,7 +2035,7 @@ const QA_EQUIPMENT = [
     "scope": "module",
     "section": "Company Logistics with Hauling",
     "question": "How do I create a haul request manually?",
-    "answer": "In **Hauling**, click **New Request**. Choose Equipment or Accessory and the equipment, then the **Original Location** and **Destination Location** (each Inventory or Project). Enter the **Request Date**, **Estimated Cost** and any phase codes, escort cost and permit cost, and click **Save**. Choose the vehicle and driver at the Approved stage. In the Equipment Master grid view, **Request Haul** on a piece of equipment opens the same kind of request.",
+    "answer": "From **Home**, open **Equipment Management → Hauling**. In **Hauling**, click **New Request**. Choose Equipment or Accessory and the equipment, then the **Original Location** and **Destination Location** (each Inventory or Project). Enter the **Request Date**, **Estimated Cost** and any phase codes, escort cost and permit cost, and click **Save**. Choose the vehicle and driver at the Approved stage. In the Equipment Master grid view, **Request Haul** on a piece of equipment opens the same kind of request.",
     "tags": [
       "new haul request",
       "request haul",
@@ -2222,7 +2222,7 @@ const QA_EQUIPMENT = [
     "scope": "module",
     "section": "Equipment and Accessory Profile",
     "question": "How is an accessory profile different from an equipment profile?",
-    "answer": "Only **Basic Details** and one specification field differ. An accessory shows **Accessory ID**, has a **Linked Equipment** field to select the Equipment IDs it belongs to, and has no **Fuel Type**. An equipment shows **Equipment ID** and **Fuel Type**. The other four panels are identical.",
+    "answer": "From **Home**, open **Equipment Management → Equipment → Equipment Master** and open the equipment. Only **Basic Details** and one specification field differ. An accessory shows **Accessory ID**, has a **Linked Equipment** field to select the Equipment IDs it belongs to, and has no **Fuel Type**. An equipment shows **Equipment ID** and **Fuel Type**. The other four panels are identical.",
     "tags": [
       "accessory vs equipment",
       "accessory profile differences",
@@ -2236,7 +2236,7 @@ const QA_EQUIPMENT = [
     "scope": "module",
     "section": "Equipment and Accessory Profile",
     "question": "How do I change or remove an equipment image?",
-    "answer": "Open the profile and click the edit icon on the image in the left panel. Upload the image and click **Submit**, or click the edit icon again to change or remove it.",
+    "answer": "From **Home**, open **Equipment Management → Equipment → Equipment Master** and open the equipment. Open the profile and click the edit icon on the image in the left panel. Upload the image and click **Submit**, or click the edit icon again to change or remove it.",
     "tags": [
       "equipment image",
       "change equipment photo",
@@ -2280,7 +2280,7 @@ const QA_EQUIPMENT = [
     "scope": "module",
     "section": "Telematics: Device Mapping and Live Data",
     "question": "How do I replace a telematics device on a piece of equipment?",
-    "answer": "First transfer the readings you want to keep from **Readings History** to the equipment you choose. Then click **Unmap Device** on **Device Mapping**, click **Map Device**, choose the provider and the replacement device from **Available Devices**, and click **Map Device**.",
+    "answer": "From **Home**, open **Equipment Management → Equipment → Equipment Master** and open the equipment. First transfer the readings you want to keep from **Readings History** to the equipment you choose. Then click **Unmap Device** on **Device Mapping**, click **Map Device**, choose the provider and the replacement device from **Available Devices**, and click **Map Device**.",
     "tags": [
       "replace telematics device",
       "unmap device",
@@ -2336,7 +2336,7 @@ const QA_EQUIPMENT = [
     "scope": "module",
     "section": "Geofencing and Fleet Map",
     "question": "How do I set the coordinates of a geofence?",
-    "answer": "Use any of three methods, and combine them: **Search Location** (enter the address and click the exact point), **Add Coordinates** (type latitude and longitude), or drag and select on the map. You need at least three points. Remove one with the minus icon or use **Clear All Coordinates**. **Upload KML** imports an existing boundary.",
+    "answer": "From **Home**, open **Equipment Management → Overview → Geofencing**. Use any of three methods, and combine them: **Search Location** (enter the address and click the exact point), **Add Coordinates** (type latitude and longitude), or drag and select on the map. You need at least three points. Remove one with the minus icon or use **Clear All Coordinates**. **Upload KML** imports an existing boundary.",
     "tags": [
       "geofence coordinates",
       "three points geofence",
@@ -2351,7 +2351,7 @@ const QA_EQUIPMENT = [
     "scope": "module",
     "section": "Geofencing and Fleet Map",
     "question": "How do I filter the Fleet Map?",
-    "answer": "Click **Filters**. Search by Equipment ID, Description or telematics device serial number, and switch the map options **Geofences**, **Clusters**, **Only Running Equipment** and **Not Reported in Last 72 Hours**. Filter equipment by Status, Category, Business Unit, Make and Model. Click **Apply**, **Clear**, or **Save Filter** to keep your choice.",
+    "answer": "From **Home**, open **Equipment Management → Overview → Fleet Map**. Click **Filters**. Search by Equipment ID, Description or telematics device serial number, and switch the map options **Geofences**, **Clusters**, **Only Running Equipment** and **Not Reported in Last 72 Hours**. Filter equipment by Status, Category, Business Unit, Make and Model. Click **Apply**, **Clear**, or **Save Filter** to keep your choice.",
     "tags": [
       "fleet map filters",
       "save filter fleet map",
@@ -2557,7 +2557,7 @@ const QA_EQUIPMENT = [
     "scope": "module",
     "section": "Allocation: Internal Self-Pickup to Off-Rent",
     "question": "How do I keep a piece of equipment at the project or re-allocate it after off-rent?",
-    "answer": "After the off-rent is approved, open the card and choose **Project**, pick the project and **Submit**, then reopen it. **Keep at Project** closes the request and sets the equipment to Available. **Re-allocate to Request** lets you pick another matching request and click the **Open Allocation** icon; the equipment restarts at that request's Assign stage.",
+    "answer": "From **Home**, open **Equipment Management → Operations**. After the off-rent is approved, open the card and choose **Project**, pick the project and **Submit**, then reopen it. **Keep at Project** closes the request and sets the equipment to Available. **Re-allocate to Request** lets you pick another matching request and click the **Open Allocation** icon; the equipment restarts at that request's Assign stage.",
     "tags": [
       "keep at project",
       "re-allocate to request",
@@ -2632,7 +2632,7 @@ const QA_EQUIPMENT = [
     "scope": "module",
     "section": "Company Logistics with Hauling",
     "question": "What do I do if a return haul is rejected?",
-    "answer": "The linked allocation request returns to **Off-Rent Approval**. Reprocess the off-rent: correct the return details, or choose a different return method, and submit again.",
+    "answer": "From **Home**, open **Equipment Management → Hauling**. The linked allocation request returns to **Off-Rent Approval**. Reprocess the off-rent: correct the return details, or choose a different return method, and submit again.",
     "tags": [
       "return haul rejected",
       "rejected return haul",
@@ -2854,7 +2854,7 @@ const QA_EQUIPMENT = [
     "scope": "module",
     "section": "Equipment Master and Accessory Master",
     "question": "Where is the QR code for a piece of equipment?",
-    "answer": "In Table View click **QR Code** on the row, or open the profile and view the QR Code in the left panel. You can scan or download it for quick identification and tracking.",
+    "answer": "From **Home**, open **Equipment Management → Equipment → Equipment Master**. In Table View click **QR Code** on the row, or open the profile and view the QR Code in the left panel. You can scan or download it for quick identification and tracking.",
     "tags": [
       "qr code",
       "scan equipment",
@@ -2888,7 +2888,7 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "Company & Business Units",
     question: "How do I update the company profile?",
-    answer: "1. Global Data → **Company** tile → **Company Details** tab.\n2. Click **Upload Company Logo** to set the brand logo used across generated documents.\n3. Fill in/update the required fields (Company Name, ID, Address, City, State, Zip, Contact Person details, Company Email/Phone, optionally PAN/GST).\n4. To configure SSO, click **Add SSO Provider** under SSO Clients and complete the provider's setup.\n5. Click **Submit** to save.",
+    answer: "1. **Global Data → Company** tile → **Company Details** tab.\n2. Click **Upload Company Logo** to set the brand logo used across generated documents.\n3. Fill in/update the required fields (Company Name, ID, Address, City, State, Zip, Contact Person details, Company Email/Phone, optionally PAN/GST).\n4. To configure SSO, click **Add SSO Provider** under SSO Clients and complete the provider's setup.\n5. Click **Submit** to save.",
     tags: ["company profile","company logo","company details","company logo details"]
   },
   {
@@ -2897,7 +2897,7 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "Company & Business Units",
     question: "How do I add a business unit?",
-    answer: "1. Global Data → **Business Units** → **Add**. A new row opens in the table (not a pop-up).\n2. Enter a numeric **Code** and a **Description**, and optionally pick a colour.\n3. Click the row's save/check action to confirm, or the delete icon to discard it.",
+    answer: "1. **Global Data → Business Units → Add**. A new row opens in the table (not a pop-up).\n2. Enter a numeric **Code** and a **Description**, and optionally pick a colour.\n3. Click the row's save/check action to confirm, or the delete icon to discard it.",
     tags: ["business unit","add business unit"]
   },
   {
@@ -2906,7 +2906,7 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "Owners: Client & Project-Owner Directory",
     question: "How do I create a new Owner record?",
-    answer: "1. Global Data → **Owners** tile → **Create Owner** (split button) → **Create Owner**.\n2. **Step 1 – Basic Details:** enter **Owner Name** (the only required field), then Short Name, Alias Name, Phone Number (country code, number, extension), Email, Fax Number and Url. Fill the Primary, Mailing and Billing Address (tick **Same as Primary address** to copy).\n3. **Step 2 – Locations & Tax Codes:** click **Link Locations** and choose from the company locations, mark one as **Default**, and use **Add Tax Codes** to attach Tax Group, Tax Class and Tax Code.\n4. **Step 3 – Preview:** review the data.\n5. Click **Submit**.\n\nTo bulk-create Owners use **Export** (it offers Download and Upload).",
+    answer: "1. **Global Data → Owners** tile → **Create Owner** (split button) → **Create Owner**.\n2. **Step 1 – Basic Details:** enter **Owner Name** (the only required field), then Short Name, Alias Name, Phone Number (country code, number, extension), Email, Fax Number and Url. Fill the Primary, Mailing and Billing Address (tick **Same as Primary address** to copy).\n3. **Step 2 – Locations & Tax Codes:** click **Link Locations** and choose from the company locations, mark one as **Default**, and use **Add Tax Codes** to attach Tax Group, Tax Class and Tax Code.\n4. **Step 3 – Preview:** review the data.\n5. Click **Submit**.\n\nTo bulk-create Owners use **Export** (it offers Download and Upload).",
     tags: ["create owner","register owner","new owner"]
   },
   {
@@ -2924,7 +2924,7 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "Locations & Tax",
     question: "How do I add a new company delivery location?",
-    answer: "1. Global Data → **Locations** tile → **Create**.\n2. In the **Add Location** dialog, fill Location Name, Address, Zip Code, City and State.\n3. Under **Tax Codes**, click **Add** to attach a Tax Group, Tax Class and Tax Code from Tax Configuration.\n4. Click **Submit**.\n\nFor bulk setup use **Export → Upload Excel** on this screen. New locations show up in the **Link Locations** picker of Create Owner.",
+    answer: "1. **Global Data → Locations** tile → **Create**.\n2. In the **Add Location** dialog, fill Location Name, Address, Zip Code, City and State.\n3. Under **Tax Codes**, click **Add** to attach a Tax Group, Tax Class and Tax Code from Tax Configuration.\n4. Click **Submit**.\n\nFor bulk setup use **Export → Upload Excel** on this screen. New locations show up in the **Link Locations** picker of Create Owner.",
     tags: ["add location","delivery location","create location"]
   },
   {
@@ -2933,7 +2933,7 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "Locations & Tax",
     question: "How do I set up tax groups and tax codes?",
-    answer: "1. Global Data → **Tax Configuration** → **Add Tax Group** → enter the Group name → **Submit**.\n2. Open the group in the left panel and select its class (for example Tax → CGST). The table on the right lists that class's Tax Codes.\n3. Click **Add Tax Code**, enter **Tax Code** and **Tax Percentage**, then **Submit**. Repeat for each code (for example CGST, SGST, ITC, Freight).\n4. Use **Upload Excel** / **Download Excel** to bulk manage tax codes.\n\nThe tax tree has three levels: Tax Group > Tax Class > Tax Code.",
+    answer: "1. **Global Data → Tax Configuration → Add Tax Group** → enter the Group name → **Submit**.\n2. Open the group in the left panel and select its class (for example **Tax → CGST**). The table on the right lists that class's Tax Codes.\n3. Click **Add Tax Code**, enter **Tax Code** and **Tax Percentage**, then **Submit**. Repeat for each code (for example CGST, SGST, ITC, Freight).\n4. Use **Upload Excel** / **Download Excel** to bulk manage tax codes.\n\nThe tax tree has three levels: **Tax Group → Tax Class → Tax Code**.",
     tags: ["tax configuration","tax group","tax code","gst","gst setup","tax class"]
   },
   {
@@ -2942,7 +2942,7 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "Vendors & Subcontractors",
     question: "How do I add a new vendor?",
-    answer: "1. Global Data → **Vendors** tile → **Register Vendor**.\n2. Upload a profile picture (optional), then fill Vendor ID, Company Name, First Name and Last Name (Company Name, First Name and Last Name are required).\n3. Click **Add** in the contact table to add one or more contact persons.\n4. Fill Username, Phone Number (with country code) and Email (required).\n5. Choose a **Select Sign Label** (for example Initials) and fill Initials — used as the digital signature label on approved documents.\n6. Optionally fill Vendor Title, Address, Licence Number, Fax, Scope and Website.\n7. Under **Additional Information**, set Vendor Type, Vendor Business Size, Vendor Minority, Notes, Warning, Extra Copy, Sent By, Freight Terms, GST IN and **Linked Vendor Groups**, and tick **Domestic**, **Preferred** and/or **Blocked** as they apply.\n8. Click **Submit**.\n\nTo be found in a Procurement RFQ, put the vendor in a category and link it to a group. For bulk loading use **Upload Vendors**.",
+    answer: "1. **Global Data → Vendors** tile → **Register Vendor**.\n2. Upload a profile picture (optional), then fill Vendor ID, Company Name, First Name and Last Name (Company Name, First Name and Last Name are required).\n3. Click **Add** in the contact table to add one or more contact persons.\n4. Fill Username, Phone Number (with country code) and Email (required).\n5. Choose a **Select Sign Label** (for example Initials) and fill Initials — used as the digital signature label on approved documents.\n6. Optionally fill Vendor Title, Address, Licence Number, Fax, Scope and Website.\n7. Under **Additional Information**, set Vendor Type, Vendor Business Size, Vendor Minority, Notes, Warning, Extra Copy, Sent By, Freight Terms, GST IN and **Linked Vendor Groups**, and tick **Domestic**, **Preferred** and/or **Blocked** as they apply.\n8. Click **Submit**.\n\nTo be found in a Procurement RFQ, put the vendor in a category and link it to a group. For bulk loading use **Upload Vendors**.",
     tags: ["register vendor","add vendor","new vendor"]
   },
   {
@@ -2978,7 +2978,7 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "Vendors & Subcontractors",
     question: "How do I register a subcontractor?",
-    answer: "1. Global Data → **Sub Contractors** tile → **Register Sub Contractor**.\n2. Fill the **Create Sub Contractor** dialog: Sub Contractor ID, First Name, Last Name, User Name, Phone Number, Company Name, Email Address, Subcontractor Specialists, Website, Location, Experience, License Number, and the License Document, Insurance Document and Resume uploads.\n3. Choose **Linked SubContractor Groups**, upload any files under **CERTIFICATIONS**, then click **Submit**.\n4. Use **Add Groups** on the list to organise subcontractors into groups.",
+    answer: "1. **Global Data → Sub Contractors** tile → **Register Sub Contractor**.\n2. Fill the **Create Sub Contractor** dialog: Sub Contractor ID, First Name, Last Name, User Name, Phone Number, Company Name, Email Address, Subcontractor Specialists, Website, Location, Experience, License Number, and the License Document, Insurance Document and Resume uploads.\n3. Choose **Linked SubContractor Groups**, upload any files under **CERTIFICATIONS**, then click **Submit**.\n4. Use **Add Groups** on the list to organise subcontractors into groups.",
     tags: ["subcontractor","register sub contractor"]
   },
   {
@@ -2996,7 +2996,7 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "Work Order Management",
     question: "How do I create a Work Order Type?",
-    answer: "1. Global Data → **Work Order Management** → **Settings** (gear icon) → **Work Order Types**.\n2. Click **+ Work Order Type**, fill in the details and save.\n\nThe same page is reachable from **Home → Work Order → Settings**. See the Work Order module for tabs, forms and ID format.",
+    answer: "1. **Global Data → Work Order Management → Settings** (gear icon) → **Work Order Types**.\n2. Click **+ Work Order Type**, fill in the details and save.\n\nThe same page is reachable from **Home → Work Order → Settings**. See the Work Order module for tabs, forms and ID format.",
     tags: ["work order type","create work order type","work order type setup"]
   },
   {
@@ -3005,7 +3005,7 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "Work Order Management",
     question: "How do I create a Work Order Contract template?",
-    answer: "1. Global Data → **Work Order Management** → **Work Orders** tab → **Create**.\n2. Enter the name and description, and choose the **Work Order Type**.\n3. Open the new record to add items and other details (see the Work Order module section for the full form).",
+    answer: "1. **Global Data → Work Order Management → Work Orders** tab → **Create**.\n2. Enter the name and description, and choose the **Work Order Type**.\n3. Open the new record to add items and other details (see the Work Order module section for the full form).",
     tags: ["work order contract","create work order"]
   },
   {
@@ -3014,7 +3014,7 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "Construction Types",
     question: "How do I configure which construction categories are available when creating a project?",
-    answer: "1. Global Data → **Construction Types** tile.\n2. Click **Create** to add a new type, or **Copy** an existing type to clone its full setup into a new one.\n3. Optionally mark one type as **Set as Default**.",
+    answer: "1. **Global Data → Construction Types** tile.\n2. Click **Create** to add a new type, or **Copy** an existing type to clone its full setup into a new one.\n3. Optionally mark one type as **Set as Default**.",
     tags: ["construction types","project category","construction category"]
   },
   {
@@ -3032,7 +3032,7 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "Construction Types",
     question: "How do I bulk-load historical data instead of entering it manually?",
-    answer: "1. Global Data → **Construction Type** tab → **Step 7 (Data Migration)**.\n2. For each section (Master Data, Global Work Packages, Locations Type Work Packages, Global Sequence Model, etc.), click the **Template** link to download the correctly-formatted Excel file.\n3. Fill it in and drag it into the upload zone. Existing data is preserved — new rows are appended.",
+    answer: "1. **Global Data → Construction Type** tab → **Step 7 (Data Migration)**.\n2. For each section (Master Data, Global Work Packages, Locations Type Work Packages, Global Sequence Model, etc.), click the **Template** link to download the correctly-formatted Excel file.\n3. Fill it in and drag it into the upload zone. Existing data is preserved — new rows are appended.",
     tags: ["data migration","bulk upload","excel import","bulk upload excel import"]
   },
   {
@@ -3041,7 +3041,7 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "Users & Permissions",
     question: "How do I register a new user or employee?",
-    answer: "1. Global Data → **Users & Permissions** → **User Accounts** → **Active Users** tab.\n2. Click **Register User**. Fill Employee ID, First Name, Last Name, Username, Phone Number, Email, and optionally Vendor Number (to link the login to a Vendor record).\n3. Enter a temporary Password and Confirm Password, choose a **Select Sign Label** and fill Initials, and optionally toggle **Enable Security Key Authentication**.\n4. Click **Submit**. Use **Notify User** to email them their login/setup instructions.",
+    answer: "1. **Global Data → Users & Permissions → User Accounts → Active Users** tab.\n2. Click **Register User**. Fill Employee ID, First Name, Last Name, Username, Phone Number, Email, and optionally Vendor Number (to link the login to a Vendor record).\n3. Enter a temporary Password and Confirm Password, choose a **Select Sign Label** and fill Initials, and optionally toggle **Enable Security Key Authentication**.\n4. Click **Submit**. Use **Notify User** to email them their login/setup instructions.",
     tags: ["register user","add employee","new user account","register user employee","register user dialog fields","user registration form fields","employee id username vendor number"]
   },
   {
@@ -3050,7 +3050,7 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "Users & Permissions",
     question: "How do I bulk-import users instead of adding them one by one?",
-    answer: "1. Users & Permissions → **Active Users** tab.\n2. Click the **Export** button to open its menu and choose **Download Sample**; fill in one row per user (use correct country codes for phone numbers).\n3. Reopen **Export** and choose **Upload Excel**, then select the completed file — Arena creates the accounts and emails each new user automatically.",
+    answer: "1. **Users & Permissions → Active Users** tab.\n2. Click the **Export** button to open its menu and choose **Download Sample**; fill in one row per user (use correct country codes for phone numbers).\n3. Reopen **Export** and choose **Upload Excel**, then select the completed file — Arena creates the accounts and emails each new user automatically.",
     tags: ["bulk import users","upload excel users","onboard users","bulk import users upload excel"]
   },
   {
@@ -3059,7 +3059,7 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "Users & Permissions",
     question: "How do I set up permissions for a group of users?",
-    answer: "1. Global Data → **Users & Permissions** → **Global Permission** tab.\n2. Click **Add User Group**, name it, then click its **Permissions** button and select the allowed modules/actions.\n3. Click its **Users** button to add members — they inherit the group's permissions.\n4. Optionally use **Fetch Templates** to start from one of Arena's standard permission templates (e.g. Super Admin).",
+    answer: "1. **Global Data → Users & Permissions → Global Permission** tab.\n2. Click **Add User Group**, name it, then click its **Permissions** button and select the allowed modules/actions.\n3. Click its **Users** button to add members — they inherit the group's permissions.\n4. Optionally use **Fetch Templates** to start from one of Arena's standard permission templates (e.g. Super Admin).",
     tags: ["permission group","user group","global permission"]
   },
   {
@@ -3068,7 +3068,7 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "Users & Permissions",
     question: "How do I set up permissions for an individual user?",
-    answer: "Arena's permissioning is group-based, not per-person — there's no screen that grants a one-off permission to a single user independent of a group. To give one person a specific set of rights:\n1. Go to Global Data → **Users & Permissions** → **Global Permission**.\n2. Either create a new group scoped to just that person (or find an existing group with the right access) via **+ Add User Group**, then use its **Permissions** button to set the exact View/Create/Edit/Delete/Admin/Download/Print/Assign To/Roll Back rights per module.\n3. Open that group's **Users** button and add the person to it.\n\nTo check what a specific person can already do (and which group is granting it), use **User Permission** — see the next question.",
+    answer: "Arena's permissioning is group-based, not per-person — there's no screen that grants a one-off permission to a single user independent of a group. To give one person a specific set of rights:\n1. Go to **Global Data → Users & Permissions → Global Permission**.\n2. Either create a new group scoped to just that person (or find an existing group with the right access) via **+ Add User Group**, then use its **Permissions** button to set the exact View/Create/Edit/Delete/Admin/Download/Print/Assign To/Roll Back rights per module.\n3. Open that group's **Users** button and add the person to it.\n\nTo check what a specific person can already do (and which group is granting it), use **User Permission** — see the next question.",
     tags: ["individual permission","one user permission","per-user access","single user rights","user-specific permission"]
   },
   {
@@ -3095,7 +3095,7 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "Users & Permissions",
     question: "How do I add a non-system (temporary) worker to the global roster?",
-    answer: "1. Users & Permissions → **Global Rosters** → **Non System User** → **Add Non System Roster**.\n2. Fill in worker details (name, designation, skills, experience, group number, etc.) → Submit.\n3. Use **Export All Users** to download the full roster, or **Add Role** to assign a role to selected rosters.",
+    answer: "1. **Users & Permissions → Global Rosters → Non System User → Add Non System Roster**.\n2. Fill in worker details (name, designation, skills, experience, group number, etc.) → Submit.\n3. Use **Export All Users** to download the full roster, or **Add Role** to assign a role to selected rosters.",
     tags: ["non system user","temporary worker","global roster","temporary worker global roster"]
   },
   {
@@ -3104,7 +3104,7 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "Users & Permissions",
     question: "How do I create a crew?",
-    answer: "1. Global Data → **Crews** tile → **Create**.\n2. Enter the **Crew Name**.\n3. Pick supervisors in the **SUPERVISOR** dropdown and foremen in the **FOREMAN** dropdown (they list rosters that hold those roles in Global Rosters).\n4. Tick the people who belong to the crew in the list (system and non-system rosters). The **Supervisor**, **Foreman** and **Rosters** tabs show your picks.\n5. Click **Submit**.\n\nThen copy it into a project with **Project Setup → People → Project Crews → Copy Crews from Global Data**.",
+    answer: "1. **Global Data → Crews** tile → **Create**.\n2. Enter the **Crew Name**.\n3. Pick supervisors in the **SUPERVISOR** dropdown and foremen in the **FOREMAN** dropdown (they list rosters that hold those roles in Global Rosters).\n4. Tick the people who belong to the crew in the list (system and non-system rosters). The **Supervisor**, **Foreman** and **Rosters** tabs show your picks.\n5. Click **Submit**.\n\nThen copy it into a project with **Project Setup → People → Project Crews → Copy Crews from Global Data**.",
     tags: ["create crew","crew setup","supervisor foreman","crew setup supervisor foreman"]
   },
   {
@@ -3113,7 +3113,7 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "UOM & Phase Codes",
     question: "How do I add a new unit of measure (UOM) and group it?",
-    answer: "1. Global Data → **UOM, Phasecode & GL Codes** tile → **UOMs** tab.\n2. Click **Add UOM**, type the unit name (for example \"Tonne\"), and save.\n3. To group it, open **UOM Groups** and add it to (or create) a group with **Add UOM Group**.\n\nConversions between units of a group are listed under **UOM Conversions** (Source, Conversion Factor, Target).",
+    answer: "1. **Global Data → UOM, Phasecode & GL Codes** tile → **UOMs** tab.\n2. Click **Add UOM**, type the unit name (for example \"Tonne\"), and save.\n3. To group it, open **UOM Groups** and add it to (or create) a group with **Add UOM Group**.\n\nConversions between units of a group are listed under **UOM Conversions** (Source, Conversion Factor, Target).",
     tags: ["uom","unit of measure","uom conversion","uom group conversion"]
   },
   {
@@ -3122,7 +3122,7 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "UOM & Phase Codes",
     question: "How do I add a Phase Code?",
-    answer: "1. Global Data → **UOM, Phasecode & GL Codes** → **Phase Codes** tab → **Add**. A blank row opens at the top of the table.\n2. Type the Phase Code and Phase Code Description, and tick the **Cost Types** that apply (Material, Equipment, Labor, Unit Rate, Sub Contractor, BOQ's, Freight Charges, Fuel & Gas).\n3. Save the row.\n\nBulk create/update is also available via Excel Upload, which supports a **Create Mode** and an **Update Mode**. The new code appears in every project's Project Setup → Phase Codes list.",
+    answer: "1. **Global Data → UOM, Phasecode & GL Codes → Phase Codes** tab → **Add**. A blank row opens at the top of the table.\n2. Type the Phase Code and Phase Code Description, and tick the **Cost Types** that apply (Material, Equipment, Labor, Unit Rate, Sub Contractor, BOQ's, Freight Charges, Fuel & Gas).\n3. Save the row.\n\nBulk create/update is also available via Excel Upload, which supports a **Create Mode** and an **Update Mode**. The new code appears in every project's Project Setup → Phase Codes list.",
     tags: ["phase code","add phase code","cost type","cost type classification"]
   },
   {
@@ -3149,7 +3149,7 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "Company-Wide Settings",
     question: "How do I change the company's currency?",
-    answer: "1. Global Data → **Settings** → **Currency** (left nav).\n2. Choose the desired currency from the dropdown.\n3. Click **Save Changes**.\n\nThe **Create Project** form has its own **Currency** field. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "1. **Global Data → Settings → Currency** (left nav).\n2. Choose the desired currency from the dropdown.\n3. Click **Save Changes**.\n\nThe **Create Project** form has its own **Currency** field. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["currency","change currency","settings"]
   },
   {
@@ -3158,7 +3158,7 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "Company-Wide Settings",
     question: "How do I change the global date format?",
-    answer: "1. Settings → **Global Date Format**.\n2. Select **MM-DD-YYYY** or **DD-MM-YYYY**.\n3. Click **Save Changes**.",
+    answer: "1. **Settings → Global Date Format**.\n2. Select **MM-DD-YYYY** or **DD-MM-YYYY**.\n3. Click **Save Changes**.",
     tags: ["date format","global date format"]
   },
   {
@@ -3167,7 +3167,7 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "Company-Wide Settings",
     question: "How do I route a module's emails through Outlook instead of Gmail?",
-    answer: "1. Settings → **Mail Settings**.\n2. Find the module row (e.g. Work Order) and click the **Outlook** radio button in that row.\n3. The change saves immediately per row (ensure Outlook has been connected first via Marketplace).",
+    answer: "1. **Settings → Mail Settings**.\n2. Find the module row (e.g. Work Order) and click the **Outlook** radio button in that row.\n3. The change saves immediately per row (ensure Outlook has been connected first via Marketplace).",
     tags: ["mail settings","outlook","gmail routing","outlook gmail settings","outlook routing","outlook routing"]
   },
   {
@@ -3194,7 +3194,7 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "Forms & Quickapps",
     question: "How do I create a new RFI template?",
-    answer: "1. Global Data → **Forms** → **Construction Forms** tab → click **RFI**.\n2. Click **Create Template**.\n3. Build the form layout (sections/fields) as needed and save.\n4. The new template becomes available for selection whenever an RFI is raised on a project.",
+    answer: "1. **Global Data → Forms → Construction Forms** tab → click **RFI**.\n2. Click **Create Template**.\n3. Build the form layout (sections/fields) as needed and save.\n4. The new template becomes available for selection whenever an RFI is raised on a project.",
     tags: ["rfi template","create template","construction forms"]
   },
   {
@@ -3203,7 +3203,7 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "Forms & Quickapps",
     question: "How do I create a reusable folder structure for project documents?",
-    answer: "1. Global Data → **Document Management** → **Create Template**, name it (e.g. \"FEL-1\").\n2. Select the template, then click **New Folder** repeatedly to build out the folder hierarchy (e.g. Civil, Mechanical, Structural).\n3. Apply this template when setting up a new project's document space.",
+    answer: "1. **Global Data → Document Management → Create Template**, name it (e.g. \"FEL-1\").\n2. Select the template, then click **New Folder** repeatedly to build out the folder hierarchy (e.g. Civil, Mechanical, Structural).\n3. Apply this template when setting up a new project's document space.",
     tags: ["document template","folder structure","document management","document management structure"]
   },
   {
@@ -3212,7 +3212,7 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "Forms & Quickapps",
     question: "How do I create a Quick App?",
-    answer: "1. Global Data → **Quickapps** → **Quick Apps** tab → **Create**.\n2. Name the app and design its data-capture fields.\n3. Save — the Quick App becomes available from the mobile/field app or relevant project screen.",
+    answer: "1. **Global Data → Quickapps → Quick Apps** tab → **Create**.\n2. Name the app and design its data-capture fields.\n3. Save — the Quick App becomes available from the mobile/field app or relevant project screen.",
     tags: ["quick app","create quickapp","custom form"]
   },
   {
@@ -3221,7 +3221,7 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "Forms & Quickapps",
     question: "How do I create a Standard Table?",
-    answer: "1. Quickapps → **Standard Tables** tab → **Add**.\n2. Define the table's name and columns.\n3. Save — the table can then be reused/referenced across projects.",
+    answer: "1. **Quickapps → Standard Tables** tab → **Add**.\n2. Define the table's name and columns.\n3. Save — the table can then be reused/referenced across projects.",
     tags: ["standard table","reference table"]
   },
   {
@@ -3230,7 +3230,7 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "Notifications",
     question: "How do I set up notification rules (e.g. email alerts for low inventory)?",
-    answer: "1. Global Data → **Notifications** → **Event Groups**.\n2. Click **Notifications** on the relevant group (e.g. Inventory Management).\n3. Expand the module section, find the specific event (e.g. \"Minimum Stock Reached\"), and toggle **Mail**, **Web**, and/or **Mobile** on.",
+    answer: "1. **Global Data → Notifications → Event Groups**.\n2. Click **Notifications** on the relevant group (e.g. Inventory Management).\n3. Expand the module section, find the specific event (e.g. \"Minimum Stock Reached\"), and toggle **Mail**, **Web**, and/or **Mobile** on.",
     tags: ["notification rules","event groups","alerts","event groups alerts"]
   },
   {
@@ -3239,7 +3239,7 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "Notifications",
     question: "How do I create a custom notification group?",
-    answer: "1. Notifications → **Event Groups** → **Add Event Groups**.\n2. Name the group, then use its **Notifications** button to select which events feed into it and on which channels.\n3. Use its **Users** button to add the people who should receive these notifications.",
+    answer: "1. **Notifications → Event Groups → Add Event Groups**.\n2. Name the group, then use its **Notifications** button to select which events feed into it and on which channels.\n3. Use its **Users** button to add the people who should receive these notifications.",
     tags: ["custom notification group","add event group","custom event group"]
   },
   {
@@ -3248,7 +3248,7 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "Integrations: Marketplace & Staged Tables",
     question: "How do I connect Arena to Microsoft Outlook for email?",
-    answer: "1. Global Data → **Marketplace** → **Microsoft Outlook**.\n2. Click **Sign in with Microsoft** and grant organization-wide consent (must use a company-domain email, not personal).\n3. Then go to **Settings → Mail Settings** and switch the relevant modules (e.g. Work Order) to **Outlook**.",
+    answer: "1. **Global Data → Marketplace → Microsoft Outlook**.\n2. Click **Sign in with Microsoft** and grant organization-wide consent (must use a company-domain email, not personal).\n3. Then go to **Settings → Mail Settings** and switch the relevant modules (e.g. Work Order) to **Outlook**.",
     tags: ["connect outlook","marketplace","microsoft integration","connect marketplace"]
   },
   {
@@ -3257,7 +3257,7 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "Integrations: Marketplace & Staged Tables",
     question: "How do I sync external users into Arena via Staged Tables?",
-    answer: "1. Connect the source system first: Global Data → **Marketplace** → **Trimble Viewpoint** → enter Hostname, Port Number, Username, Password and Database → **Test Connection and Save**.\n2. Global Data → **Staged Tables** → **View Point** tab → select **Users** in the left nav.\n3. Click **Map Attributes**, choose the Viewpoint column for each Arena field (Employee ID, First Name, Last Name, Phone Number, Email, Craft, Class, Vendor Number), tick **Update after sync?** where Viewpoint should keep overwriting, and Save.\n4. Either set **Auto Sync Criteria** (every 1 to 24 hours, optionally with **Auto create arena records after sync?**), or click **Bulk Create Arena Records** to create records now from the rows your Filters currently show.",
+    answer: "1. Connect the source system first: **Global Data → Marketplace → Trimble Viewpoint** → enter Hostname, Port Number, Username, Password and **Database → Test Connection and Save**.\n2. **Global Data → Staged Tables → View Point** tab → select **Users** in the left nav.\n3. Click **Map Attributes**, choose the Viewpoint column for each Arena field (Employee ID, First Name, Last Name, Phone Number, Email, Craft, Class, Vendor Number), tick **Update after sync?** where Viewpoint should keep overwriting, and Save.\n4. Either set **Auto Sync Criteria** (every 1 to 24 hours, optionally with **Auto create arena records after sync?**), or click **Bulk Create Arena Records** to create records now from the rows your Filters currently show.",
     tags: ["staged tables","sync external data","map attributes","map attributes external data"]
   },
   {
@@ -3266,7 +3266,7 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "Integrations: Marketplace & Staged Tables",
     question: "How do I connect Arena to Vista?",
-    answer: "Vista is Trimble Viewpoint's construction ERP, and in Arena it's the **Trimble Viewpoint** integration. There's no card called \"Vista\".\n1. Go to Global Data → **Marketplace** → **Trimble Viewpoint**.\n2. Enter your Viewpoint database details: **Hostname**, **Port Number**, **Username**, **Password** and **Database**.\n3. Click **Test Connection and Save**.\nOnce connected, Viewpoint data lands in Global Data → **Staged Tables** → **View Point**, where you map it and turn it into Arena records. Usually your IT team or a Global Admin handles this, since it needs Viewpoint database credentials.",
+    answer: "Vista is Trimble Viewpoint's construction ERP, and in Arena it's the **Trimble Viewpoint** integration. There's no card called \"Vista\".\n1. Go to **Global Data → Marketplace → Trimble Viewpoint**.\n2. Enter your Viewpoint database details: **Hostname**, **Port Number**, **Username**, **Password** and **Database**.\n3. Click **Test Connection and Save**.\nOnce connected, Viewpoint data lands in **Global Data → Staged Tables → View Point**, where you map it and turn it into Arena records. Usually your IT team or a Global Admin handles this, since it needs Viewpoint database credentials.",
     tags: ["vista","viewpoint vista","connect vista","vista integration","trimble viewpoint","viewpoint connection","erp integration"]
   },
   {
@@ -3275,7 +3275,7 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "Integrations: Marketplace & Staged Tables",
     question: "What data does Arena pull from Vista (Trimble Viewpoint)?",
-    answer: "Arena can stage 13 kinds of records from Vista, all under Global Data → **Staged Tables** → **View Point**: Users, Projects, Crews, Phase Codes, Customers, Vendors, Owners, Project User Mapping, Project Crew Mapping, Work Order Crew Mapping, GL Codes, Work Orders, and Logs.\n\nData first lands in the staged table, not straight into Arena. You then map each Viewpoint column to an Arena field (**Map Attributes**) and create the records, either automatically on a 1 to 24 hour schedule (**Auto Sync Criteria**) or on demand (**Bulk Create Arena Records**). This keeps Vista as the source of truth for employees, crews, phase codes and GL codes, so field timesheets and cost tracking use the same codes as payroll and accounting.",
+    answer: "Arena can stage 13 kinds of records from Vista, all under **Global Data → Staged Tables → View Point**: Users, Projects, Crews, Phase Codes, Customers, Vendors, Owners, Project User Mapping, Project Crew Mapping, Work Order Crew Mapping, GL Codes, Work Orders, and Logs.\n\nData first lands in the staged table, not straight into Arena. You then map each Viewpoint column to an Arena field (**Map Attributes**) and create the records, either automatically on a 1 to 24 hour schedule (**Auto Sync Criteria**) or on demand (**Bulk Create Arena Records**). This keeps Vista as the source of truth for employees, crews, phase codes and GL codes, so field timesheets and cost tracking use the same codes as payroll and accounting.",
     tags: ["vista data","what does vista sync","viewpoint entities","staged tables entities","vista sync","what comes from viewpoint"]
   },
   {
@@ -3302,7 +3302,7 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "Customers, Contacts & Approval",
     question: "How do I add an approval level for customer records?",
-    answer: "1. Global Data → **Customer** tile → **Approval Workflow** tab → **Create Level**.\n2. Name/describe the level, assign Approvers, and choose the Workflow Type.\n3. Save — subsequent opportunity/customer approvals will route through this chain in order.",
+    answer: "1. **Global Data → Customer** tile → **Approval Workflow** tab → **Create Level**.\n2. Name/describe the level, assign Approvers, and choose the Workflow Type.\n3. Save — subsequent opportunity/customer approvals will route through this chain in order.",
     tags: ["customer approval workflow","create level","approval workflow"]
   },
   {
@@ -3311,7 +3311,7 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "Cost & Bid Templates",
     question: "How do I add a custom cost category (like \"Freight Charges\")?",
-    answer: "1. Global Data → **Cost** → **Cost Type** tab → **Add Type**.\n2. Enter the name (e.g. \"Freight Charges\") and a description, then submit.",
+    answer: "1. **Global Data → Cost → Cost Type** tab → **Add Type**.\n2. Enter the name (e.g. \"Freight Charges\") and a description, then submit.",
     tags: ["cost type","add cost category","freight charges"]
   },
   {
@@ -3320,7 +3320,7 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "Cost & Bid Templates",
     question: "How do I set up a Cost Breakdown Structure (CBS) template?",
-    answer: "1. Global Data → **Cost** → **Cost Breakdown Structure** tab → **Templates** → **Add Template**.\n2. Name it and build its structure using the available Phase Codes (managed under the Phase Codes side-list on the same screen, or under UOM/Phasecode & GL Codes).\n3. Optionally mark it as the company's Default CBS template.",
+    answer: "1. **Global Data → Cost → Cost Breakdown Structure** tab → **Templates → Add Template**.\n2. Name it and build its structure using the available Phase Codes (managed under the Phase Codes side-list on the same screen, or under UOM/Phasecode & GL Codes).\n3. Optionally mark it as the company's Default CBS template.",
     tags: ["cost breakdown structure","cbs template"]
   },
   {
@@ -3329,7 +3329,7 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "Cost & Bid Templates",
     question: "How do I add a bid line item?",
-    answer: "1. Global Data → **Bid Templates** → **Add Item**.\n2. Enter the Item Description and choose its UOM Group and UOM.\n3. Submit. For bulk loading, use **Download Sample Excel**, fill it in, then **Upload Excel**.",
+    answer: "1. **Global Data → Bid Templates → Add Item**.\n2. Enter the Item Description and choose its UOM Group and UOM.\n3. Submit. For bulk loading, use **Download Sample Excel**, fill it in, then **Upload Excel**.",
     tags: ["bid template","add item","estimate line item"]
   },
   {
@@ -3338,7 +3338,7 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "Compliance Hub",
     question: "How do I define a new compliance requirement?",
-    answer: "1. Global Data → **Compliance Hub** → **Compliance Directory** → **Create**.\n2. Fill Compliance Name*, Description, Category/Type*, Renewal Frequency and Period (if periodic renewal applies), Evidence Type*, and upload the Required Evidence template/sample.\n3. Submit — this requirement is now tracked (and can show as Missing/Expiring/Expired) under **My Company Compliance**.",
+    answer: "1. **Global Data → Compliance Hub → Compliance Directory → Create**.\n2. Fill Compliance Name*, Description, Category/Type*, Renewal Frequency and Period (if periodic renewal applies), Evidence Type*, and upload the Required Evidence template/sample.\n3. Submit — this requirement is now tracked (and can show as Missing/Expiring/Expired) under **My Company Compliance**.",
     tags: ["compliance directory","compliance requirement"]
   },
   {
@@ -3347,7 +3347,7 @@ const QA_GLOBALDATA = [
     scope: "global",
     section: "Measurement Templates",
     question: "How do I build a quantity take-off formula for progress tracking?",
-    answer: "1. Global Data → **Measurement Templates** → **Add Template**.\n2. Enter a Template ID* and Template Name* (e.g. \"LBD\").\n3. Under **Parameters**, add each variable the formula needs (e.g. L, B, D, Nos), clicking + after each.\n4. Enter the **Formula** referencing the parameters (e.g. `(L)*(B)*(D)*(Nos)`).\n5. Click **Submit**.\n6. Later, link this template to a Work Package via the Construction Type pipeline's Step 10 (Work Package Measurement Template Linking).",
+    answer: "1. **Global Data → Measurement Templates → Add Template**.\n2. Enter a Template ID* and Template Name* (e.g. \"LBD\").\n3. Under **Parameters**, add each variable the formula needs (e.g. L, B, D, Nos), clicking + after each.\n4. Enter the **Formula** referencing the parameters (e.g. `(L)*(B)*(D)*(Nos)`).\n5. Click **Submit**.\n6. Later, link this template to a Work Package via the Construction Type pipeline's Step 10 (Work Package Measurement Template Linking).",
     tags: ["measurement template","quantity takeoff","formula","quantity takeoff formula"]
   },
   {
@@ -3383,7 +3383,7 @@ const QA_GLOBALDATA = [
     scope: "module",
     section: "Owners: Client & Project-Owner Directory",
     question: "What is the Owners tile for and who uses it?",
-    answer: "The **Owners** tile is the master list of clients who commission your projects. The Super Admin (or an admin with owner rights) creates them once; project creators then pick one in the **Owner** dropdown on **Projects → Create Project**. Each owner has basic details, three addresses, linked company **Locations** and **Tax Codes**. Use **Settings** to choose one, two or three levels (Owner; Category > Owner; Category > SubCategory > Owner).",
+    answer: "The **Owners** tile is the master list of clients who commission your projects. The Super Admin (or an admin with owner rights) creates them once; project creators then pick one in the **Owner** dropdown on **Projects → Create Project**. Each owner has basic details, three addresses, linked company **Locations** and **Tax Codes**. Use **Settings** to choose one, two or three levels (Owner; **Category → Owner**; **Category → SubCategory → Owner**).",
     tags: ["owners tile","what is owners","owner directory","client list","owner master"]
   },
   {
@@ -4080,7 +4080,7 @@ const QA_ACCOUNTBASICS = [
     scope: "project",
     section: "Home Page",
     question: "How do I get to a specific project's detail view from Home?",
-    answer: "On the Home page, click on any project's progress card in the horizontal project tab. This navigates you to that project's Project Desk page for a more refined view of project insights.",
+    answer: "From **Home**, click on any project's progress card in the horizontal project tab. This navigates you to that project's Project Desk page for a more refined view of project insights.",
     tags: ["project desk","project navigation","progress card","project insights","click through"]
   },
   {
@@ -4098,7 +4098,7 @@ const QA_ACCOUNTBASICS = [
     scope: "system",
     section: "User Registration",
     question: "How do I register a new user in Arena?",
-    answer: "Go to the Company section of Global Data, open the Users and Permissions tab, and click \"Register User.\" Fill in the required fields (name, email, contact number with country code, etc.), set a signature method, and click \"Submit\" to create the user card.",
+    answer: "Go to **Global Data → Company → Users and Permissions** and click **Register User**. Fill in the required fields (name, email, contact number with country code, etc.), set a signature method, and click \"Submit\" to create the user card.",
     tags: ["register user","add user","create account","new user","user registration form"]
   },
   {
@@ -4107,7 +4107,7 @@ const QA_ACCOUNTBASICS = [
     scope: "system",
     section: "User Registration",
     question: "How is a user's signature set up during registration?",
-    answer: "The registration form includes a Signature field with three input methods: \"Initials,\" \"Sign\" (opens a scribble/drawing pad), or \"Upload\" (upload a signature image file from another source).",
+    answer: "On the **Register User** form (**Global Data → Company → Users and Permissions**): The registration form includes a Signature field with three input methods: \"Initials,\" \"Sign\" (opens a scribble/drawing pad), or \"Upload\" (upload a signature image file from another source).",
     tags: ["signature setup","e-signature","scribble pad","upload signature","initials","registration form"]
   },
   {
@@ -4116,7 +4116,7 @@ const QA_ACCOUNTBASICS = [
     scope: "system",
     section: "User Registration",
     question: "How does a new user set their password for the first time?",
-    answer: "After a user is registered, click \"Notify User\" (or the system auto-sends on submit) to email the user a welcome registration link. The user follows that email link to set their own password.",
+    answer: "Go to **Global Data → Company → Users and Permissions → Active Users**. After a user is registered, click \"Notify User\" (or the system auto-sends on submit) to email the user a welcome registration link. The user follows that email link to set their own password.",
     tags: ["set password","first login","welcome email","registration email","notify user","password setup"]
   },
   {
@@ -4125,7 +4125,7 @@ const QA_ACCOUNTBASICS = [
     scope: "system",
     section: "User Registration",
     question: "How do I resend a password-reset email to an existing user?",
-    answer: "In Users & Permissions - Active Users, use the \"Notify User\" option on that user's row/card. This sends the user a registration email they can use to reset their password.",
+    answer: "Go to **Global Data → Company → Users and Permissions → Active Users**. Use the \"Notify User\" option on that user's row/card. This sends the user a registration email they can use to reset their password.",
     tags: ["resend password email","notify user","password reset","forgot password workaround","admin reset"]
   },
   {
@@ -4134,7 +4134,7 @@ const QA_ACCOUNTBASICS = [
     scope: "system",
     section: "User Registration",
     question: "Can I register many users at once instead of one at a time?",
-    answer: "Yes. In Users & Permissions - Active Users, click \"Download Sample\" to get the Excel template, fill it in, then use \"Upload Excel\" to bulk-create users. All users created this way receive welcome registration emails automatically.",
+    answer: "Go to **Global Data → Company → Users and Permissions → Active Users**. Yes. Click \"Download Sample\" to get the Excel template, fill it in, then use \"Upload Excel\" to bulk-create users. All users created this way receive welcome registration emails automatically.",
     tags: ["bulk register","upload excel","import users","sample excel","mass user creation"]
   },
   {
@@ -4143,7 +4143,7 @@ const QA_ACCOUNTBASICS = [
     scope: "system",
     section: "User Registration",
     question: "How do I edit or delete a registered user?",
-    answer: "On the user's card or table row in Users & Permissions - Active Users, use the kebab (3-dot) menu or the Action column's edit/delete icons. Deleting a user moves their account to Inactive Users rather than permanently removing it.",
+    answer: "Go to **Global Data → Company → Users and Permissions → Active Users**. On the user's card or table row, use the kebab (3-dot) menu or the Action column's edit/delete icons. Deleting a user moves their account to Inactive Users rather than permanently removing it.",
     tags: ["edit user","delete user","deactivate user","kebab menu","inactive users"]
   },
   {
@@ -4152,7 +4152,7 @@ const QA_ACCOUNTBASICS = [
     scope: "system",
     section: "User Registration",
     question: "How do I find a specific user in the registered users list?",
-    answer: "Use the Search bar next to the \"Register User\" button in Users & Permissions - Active Users. You can search by first name, last name, employee ID, contact number, or email.",
+    answer: "Go to **Global Data → Company → Users and Permissions → Active Users**. Use the Search bar next to the **Register User** button. You can search by first name, last name, employee ID, contact number, or email.",
     tags: ["search user","find user","user lookup","search profiles"]
   },
   {
@@ -4161,7 +4161,7 @@ const QA_ACCOUNTBASICS = [
     scope: "system",
     section: "User Registration",
     question: "How do I download a list of all registered users?",
-    answer: "In Users & Permissions - Active Users, click \"Export\" or \"Download Excel\" to download the details of all registered users.",
+    answer: "Go to **Global Data → Company → Users and Permissions → Active Users**. Click \"Export\" or \"Download Excel\" to download the details of all registered users.",
     tags: ["export users","download users","user list export","download excel"]
   },
   {
@@ -4179,7 +4179,7 @@ const QA_ACCOUNTBASICS = [
     scope: "project",
     section: "Permissions & Groups",
     question: "How do I create a permission/user group for a project?",
-    answer: "Go to the project's Permissions screen and click the \"User Group\" button. Enter a name for the group in the pop-up and confirm to create it as a new role card.",
+    answer: "Open the project and go to **Users and Permissions → Groups Permission**, then click the **User Group** button. Enter a name for the group in the pop-up and confirm to create it as a new role card.",
     tags: ["user group","permission group","role creation","add role","project permissions"]
   },
   {
@@ -4188,7 +4188,7 @@ const QA_ACCOUNTBASICS = [
     scope: "project",
     section: "Permissions & Groups",
     question: "How do I copy a user group's permissions to other projects?",
-    answer: "On the Permissions screen, click \"Copy User Groups to Projects.\" A pop-up lets you select which projects should receive a copy of that user group's setup.",
+    answer: "Open the project and go to **Users and Permissions → Groups Permission**, then click **Copy User Groups to Projects**. A pop-up lets you select which projects should receive a copy of that user group's setup.",
     tags: ["copy permissions","duplicate user group","copy to projects","clone role"]
   },
   {
@@ -4206,7 +4206,7 @@ const QA_ACCOUNTBASICS = [
     scope: "project",
     section: "Permissions & Groups",
     question: "How do I assign users to a permission/role group?",
-    answer: "On the role's card in the Permissions screen, click the \"Users\" button, which opens a list where you select which users belong to that role/permission group.",
+    answer: "Open the project and go to **Users and Permissions → Groups Permission**. On the group's card, click the \"Users\" button, which opens a list where you select which users belong to that role/permission group.",
     tags: ["assign users","add users to role","users button","role membership"]
   },
   {
@@ -4215,7 +4215,7 @@ const QA_ACCOUNTBASICS = [
     scope: "project",
     section: "Notifications",
     question: "How do I set up which notifications users receive for a project?",
-    answer: "Go to the project's Notifications screen, select the \"Events\" tab, and toggle the Email, Web, and/or Mobile icon on each event to control how that notification is delivered. Click the message icon to customize the notification's wording.",
+    answer: "Open the project and go to **Notifications → Events**, then toggle the Email, Web, and/or Mobile icon on each event to control how that notification is delivered. Click the message icon to customize the notification's wording.",
     tags: ["configure notifications","event notifications","email web mobile alerts","notification settings"]
   },
   {
@@ -4224,7 +4224,7 @@ const QA_ACCOUNTBASICS = [
     scope: "project",
     section: "Notifications",
     question: "How do I create a new notification event group?",
-    answer: "In Notifications > Event Groups, click \"Add Event Group\" and enter a name in the pop-up. Alternatively, click \"Get Standard Event Groups\" to auto-create Arena's default event groups.",
+    answer: "In **Notifications → Event Groups**, click \"Add Event Group\" and enter a name in the pop-up. Alternatively, click \"Get Standard Event Groups\" to auto-create Arena's default event groups.",
     tags: ["event group","add event group","standard event groups","notification grouping"]
   },
   {
@@ -4242,7 +4242,7 @@ const QA_ACCOUNTBASICS = [
     scope: "system",
     section: "Company & Global Data Setup",
     question: "Where do I set up my company's name, logo, and address in Arena?",
-    answer: "Go to Global Data > Company (Company Details). Enter the company's name, logo, address, and contact information, then click \"Submit.\" This information auto-populates forms and other places across the application. Edit it later by returning to the same Company tab.",
+    answer: "Go to **Global Data → Company** (Company Details). Enter the company's name, logo, address, and contact information, then click \"Submit.\" This information auto-populates forms and other places across the application. Edit it later by returning to the same Company tab.",
     tags: ["company details","company setup","company logo","company address","company profile"]
   },
   {
@@ -4326,7 +4326,7 @@ const QA_CALENDAR = [
     scope: "module",
     section: "Connect Outlook so events sync",
     question: "How do I personally connect my Outlook calendar to Arena?",
-    answer: "Click your avatar (top-right) → **Settings** → **Microsoft Calendar** → **Sign In with Microsoft**. Use the same email as your Arena login.",
+    answer: "Click your avatar (top-right) → **Settings → Microsoft Calendar → Sign In with Microsoft**. Use the same email as your Arena login.",
     tags: ["user calendar consent","my profile settings","personal outlook connect","calendar consent"]
   },
   {
@@ -4335,7 +4335,7 @@ const QA_CALENDAR = [
     scope: "module",
     section: "View, create and filter events",
     question: "How do I create an event in Arena Calendar?",
-    answer: "Open **Home → Calendar**, click **Create Event**, fill **Title**, **Date**, **Time**, **Location**, pick a **Categorize** entry, add a description and click **Submit**. If **Consent Not Granted** appears, connect via avatar → **Settings** → **Microsoft Calendar** first. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "Open **Home → Calendar**, click **Create Event**, fill **Title**, **Date**, **Time**, **Location**, pick a **Categorize** entry, add a description and click **Submit**. If **Consent Not Granted** appears, connect via avatar → **Settings → Microsoft Calendar** first. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["create event","calendar event","add event","configure categories"]
   },
   {
@@ -4344,7 +4344,7 @@ const QA_CALENDAR = [
     scope: "module",
     section: "View, create and filter events",
     question: "How do I edit or delete a calendar event?",
-    answer: "Click the event in the month grid; its details open in the right-hand pane. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "From **Home**, open **Calendar**. Click the event in the month grid; its details open in the right-hand pane. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["edit event","delete event","calendar event","remove event"]
   },
   {
@@ -4407,7 +4407,7 @@ const QA_CALENDAR = [
     scope: "module",
     section: "View, create and filter events",
     question: "Where does the Categorize list in Create Event come from?",
-    answer: "It lists **My Calendar** plus group names set up for your company. Groups imported through Communications are documented as appearing here. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "From **Home**, open **Calendar** and click **Create Event**. It lists **My Calendar** plus group names set up for your company. Groups imported through Communications are documented as appearing here. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["categorize","category list","where categories come from","calendar groups","where does the categorize list come from","categorize list calendar"]
   },
   {
@@ -4434,7 +4434,7 @@ const QA_CALENDAR = [
     scope: "module",
     section: "View, create and filter events",
     question: "Why does Create Event or Filters say Consent Not Granted?",
-    answer: "You have not connected a Microsoft calendar. Click **Ok**, then avatar → **Settings** → **Microsoft Calendar** → **Sign In with Microsoft**, or ask an admin to grant organisation consent in **Global Data → Marketplace → Microsoft Calendar**.",
+    answer: "You have not connected a Microsoft calendar. Click **Ok**, then avatar → **Settings → Microsoft Calendar → Sign In with Microsoft**, or ask an admin to grant organisation consent in **Global Data → Marketplace → Microsoft Calendar**.",
     tags: ["calendar consent not granted","consent not granted calendar","why does create event say consent not granted","create event consent not granted","calendar create event consent"]
   },
   {
@@ -4500,7 +4500,7 @@ const QA_COMMUNICATION = [
     scope: "module",
     section: "Map mail to Arena records",
     question: "How do I filter emails by module in Arena Communications?",
-    answer: "Use the ribbon at the top of Communications, which lists all modules, to filter mail by which module it's mapped to.",
+    answer: "From **Home**, open **Communication**. Use the ribbon at the top of Communications, which lists all modules, to filter mail by which module it's mapped to.",
     tags: ["filter mail by module","communications ribbon","module filter","mail filter"]
   },
   {
@@ -4518,7 +4518,7 @@ const QA_COMMUNICATION = [
     scope: "module",
     section: "Map mail to Arena records",
     question: "How do I import Outlook groups into Arena Communications?",
-    answer: "Use the \"Import Groups\" feature in Communications. It opens a pop-up showing your Outlook groups alongside a Module dropdown, so you can map each imported group to a module.",
+    answer: "From **Home**, open **Communication**. Use the \"Import Groups\" feature in Communications. It opens a pop-up showing your Outlook groups alongside a Module dropdown, so you can map each imported group to a module.",
     tags: ["import groups","outlook groups","import groups feature","map group to module"]
   },
   {
@@ -4527,7 +4527,7 @@ const QA_COMMUNICATION = [
     scope: "module",
     section: "Map mail to Arena records",
     question: "Can I link an email to a specific module record?",
-    answer: "Yes. Mails composed in Arena Communications can be mapped directly to different modules such as Opportunity, Proposal, and Bid Management.",
+    answer: "From **Home**, open **Communication**. Yes. Mails composed in Arena Communications can be mapped directly to different modules such as Opportunity, Proposal, and Bid Management.",
     tags: ["map email to module","link email","email mapping","module mail linking","map an email to a proposal","map email to proposal","map your email"]
   },
   {
@@ -4545,7 +4545,7 @@ const QA_COMMUNICATION = [
     scope: "module",
     section: "Read, reply and send mail",
     question: "How do I add or change my email signature in Communications?",
-    answer: "Click the gear icon (**Mail Settings**), use **Create New** under **Signature**, pick the default with the radio button and click **Save Changes**.",
+    answer: "From **Home**, open **Communication**. Click the gear icon (**Mail Settings**), use **Create New** under **Signature**, pick the default with the radio button and click **Save Changes**.",
     tags: ["email signature","mail settings","signature","change my email signature","how do I change my email signature","email signature communications","signature communications","add signature"]
   },
   {
@@ -4590,7 +4590,7 @@ const QA_COMMUNICATION = [
     scope: "module",
     section: "Map mail to Arena records",
     question: "Where do the lists in the Map your Email panel come from?",
-    answer: "From the records already created in Opportunity (customers, points of contact, opportunities), Tender Management (bids) and Proposal Management (proposal types and proposals). For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "From **Home**, open **Communication** and look at the **Map your Email** panel. From the records already created in Opportunity (customers, points of contact, opportunities), Tender Management (bids) and Proposal Management (proposal types and proposals). For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["map email lists","customers poc","where lists come from"]
   },
   {
@@ -4626,7 +4626,7 @@ const QA_COMMUNICATION = [
     scope: "module",
     section: "Map mail to Arena records",
     question: "Where do mapped emails show up afterwards?",
-    answer: "In Communications the mail gets a green module chip with the record name and is found with the ribbon chips and the **Mapped** filter. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "From **Home**, open **Communication**. In Communications the mail gets a green module chip with the record name and is found with the ribbon chips and the **Mapped** filter. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["mapped emails","where mapped emails go","notifications"]
   }
 ];
@@ -4674,7 +4674,7 @@ const QA_MYDESK = [
     scope: "module",
     section: "My Desk",
     question: "Can I create or edit things on My Desk?",
-    answer: "No. My Desk only summarizes records. Open the item (or **See All >**) to go to the Field Works screen where you can act on it.",
+    answer: "Open the project and go to **My Desk**. No. My Desk only summarizes records. Open the item (or **See All >**) to go to the Field Works screen where you can act on it.",
     tags: ["edit my desk","create on my desk","my desk read only","act on my desk items"]
   },
   {
@@ -4737,7 +4737,7 @@ const QA_MYDESK = [
     scope: "module",
     section: "Project Progress",
     question: "How do I know the progress numbers on My Desk are current?",
-    answer: "Check **Last Updated At** next to the headline percentage and click the **refresh** button (tooltip **Refresh**) to reload the figures.",
+    answer: "Open the project and go to **My Desk**. Check **Last Updated At** next to the headline percentage and click the **refresh** button (tooltip **Refresh**) to reload the figures.",
     tags: ["refresh progress","last updated","progress current","update progress my desk"]
   },
   {
@@ -4809,7 +4809,7 @@ const QA_MYDESK = [
     scope: "module",
     section: "My Actions",
     question: "How do I work through my actions?",
-    answer: "Pick the plant, expand **My Actions**, open the group and click a row with a non-zero count. You land in the source list in Field Works, where you fix the issue, approve or reject the record, or complete the form.",
+    answer: "Open the project and go to **My Desk → My Actions**. Pick the plant, expand **My Actions**, open the group and click a row with a non-zero count. You land in the source list in Field Works, where you fix the issue, approve or reject the record, or complete the form.",
     tags: ["work through actions","respond to actions","clear my actions","handle issues desk"]
   },
   {
@@ -4983,7 +4983,7 @@ const QA_MYCALENDAR = [
     scope: "module",
     section: "My Calendar",
     question: "How do I switch between Month and Day view?",
-    answer: "Use the **Month | Day** toggle on the main calendar. **Month** shows a 7-column grid (SUN to SAT); **Day** shows one day's items, or **No Work Scheduled For Today** when empty.",
+    answer: "Open the project and go to **My Calendar**. Use the **Month | Day** toggle on the main calendar. **Month** shows a 7-column grid (SUN to SAT); **Day** shows one day's items, or **No Work Scheduled For Today** when empty.",
     tags: ["month view","day view","calendar toggle","switch month day calendar"]
   },
   {
@@ -4992,7 +4992,7 @@ const QA_MYCALENDAR = [
     scope: "module",
     section: "My Calendar",
     question: "How do I jump to a particular date on My Calendar?",
-    answer: "In **Select date**, use **Choose month and year** (year grid 2016 to 2039) or **Previous month** / **Next month**, then click the day. The main calendar follows.",
+    answer: "Open the project and go to **My Calendar**. In **Select date**, use **Choose month and year** (year grid 2016 to 2039) or **Previous month** / **Next month**, then click the day. The main calendar follows.",
     tags: ["jump to date","date picker calendar","change month calendar","select date calendar"]
   },
   {
@@ -5091,7 +5091,7 @@ const QA_MYCALENDAR = [
     scope: "module",
     section: "What Appears on My Calendar",
     question: "Where do calendar items go after they are completed?",
-    answer: "Scheduled safety forms move through **Approve Safety** (**Not Ready**, **Ready to Approve**, **In Progress**, **Approved**) into **Completed Safety**, and show as **Recent Safety Logs** on **My Desk**.",
+    answer: "Open the project and go to **My Calendar**. Scheduled safety forms move through **Approve Safety** (**Not Ready**, **Ready to Approve**, **In Progress**, **Approved**) into **Completed Safety**, and show as **Recent Safety Logs** on **My Desk**.",
     tags: ["after calendar item completed","completed safety forms","approve safety","calendar data goes where"]
   }
 ];
@@ -5238,7 +5238,7 @@ const QA_PROJECTSETUP = [
     scope: "project",
     section: "Schedule",
     question: "Can I see a monthly breakdown of the schedule instead of just quarterly or yearly?",
-    answer: "Yes. On a plant's Gantt screen choose **Month** under **Time Period** (the other options are **Day**, **Week** and **Year**). **Planned Date** narrows the range and **Gantt View** (**Full**, **Half**, **None**) changes the bars.",
+    answer: "Open the project and go to **Project Setup → Schedule**. Yes. On a plant's Gantt screen choose **Month** under **Time Period** (the other options are **Day**, **Week** and **Year**). **Planned Date** narrows the range and **Gantt View** (**Full**, **Half**, **None**) changes the bars.",
     tags: ["monthly schedule","time period schedule","gantt month","schedule zoom"]
   },
   {
@@ -5400,7 +5400,7 @@ const QA_PROJECTSETUP = [
     scope: "project",
     section: "Forms",
     question: "How is the Forms setup area structured — what are the levels of navigation?",
-    answer: "Across the top are form categories (**Construction Forms**, **Workorder**, **Project Forms** and the Project Form categories from Global Data). On the left are the form types of that category (for example RFI, Submittal, Change Order). The main area has tabs: **Assign Users** (View/Create/Edit/Delete per user per plant), **Approval Workflow**, **Schedule Project Forms** (not for Workorder) and **Assign Templates**.",
+    answer: "Open the project and go to **Project Setup → Forms**. Across the top are form categories (**Construction Forms**, **Workorder**, **Project Forms** and the Project Form categories from Global Data). On the left are the form types of that category (for example RFI, Submittal, Change Order). The main area has tabs: **Assign Users** (View/Create/Edit/Delete per user per plant), **Approval Workflow**, **Schedule Project Forms** (not for Workorder) and **Assign Templates**.",
     tags: ["forms setup levels","forms structure","form categories","project setup forms navigation"]
   },
   {
@@ -5625,7 +5625,7 @@ const QA_PROJECTSETUP = [
     scope: "module",
     section: "People",
     question: "What do I fill in to create a project crew?",
-    answer: "Click **Create Crew**: **Crew Name***, pick **SUPERVISOR** and **FOREMAN** from the dropdowns, tick crew members from the project roster list, check the **Supervisor**, **Foreman** and **Rosters** counters and the **Selected Supervisors** table, then **Submit**.",
+    answer: "Open the project and go to **Project Setup → People → Project Crews**. Click **Create Crew**: **Crew Name***, pick **SUPERVISOR** and **FOREMAN** from the dropdowns, tick crew members from the project roster list, check the **Supervisor**, **Foreman** and **Rosters** counters and the **Selected Supervisors** table, then **Submit**.",
     tags: ["create crew fields","crew name supervisor foreman","new crew"]
   },
   {
@@ -5652,7 +5652,7 @@ const QA_PROJECTSETUP = [
     scope: "module",
     section: "People",
     question: "What do I do on Project Indirect Staff?",
-    answer: "The tab lists the project's system users with tick boxes and a **Submit** button. Tick the people whose time is overhead (management, admin, support), then **Submit**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "Open the project and go to **Project Setup → People → Project Indirect Staff**. The tab lists the project's system users with tick boxes and a **Submit** button. Tick the people whose time is overhead (management, admin, support), then **Submit**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["project indirect staff","tick indirect staff","overhead staff"]
   },
   {
@@ -5805,7 +5805,7 @@ const QA_PROJECTSETUP = [
     scope: "module",
     section: "Quality",
     question: "Where does the quality data end up?",
-    answer: "Folder counts roll up Field Works quality forms. Submitted quality logs also appear as **Recent Quality Logs** on **My Desk**, and punch list items as **Recent Punch List Items**.",
+    answer: "Open the project and go to **Project Setup → Quality**. Folder counts roll up Field Works quality forms. Submitted quality logs also appear as **Recent Quality Logs** on **My Desk**, and punch list items as **Recent Punch List Items**.",
     tags: ["quality data goes","recent quality logs source","quality feeds my desk"]
   },
   {
@@ -5877,7 +5877,7 @@ const QA_PROJECTSETUP = [
     scope: "module",
     section: "Drawings",
     question: "Where do the options in Create Drawing Package come from?",
-    answer: "**Work Division** lists the Global Data activities (Excavation, Marking, Concreting...), **Team Users** the active project roster users (32), **Drawing Training Template** the templates in **Drawing Training** (Wall, Elevation, Sections) and **Approval Workflow** the workflows in **Create Approval Workflow**. Create the template or workflow first if the list is empty.",
+    answer: "Open the project and go to **Project Setup → Drawings** and click **Create Drawing Package**. **Work Division** lists the Global Data activities (Excavation, Marking, Concreting...), **Team Users** the active project roster users (32), **Drawing Training Template** the templates in **Drawing Training** (Wall, Elevation, Sections) and **Approval Workflow** the workflows in **Create Approval Workflow**. Create the template or workflow first if the list is empty.",
     tags: ["create drawing package options","work division drawing","drawing package dropdown source","drawing package lineage","drawing package fields","where do drawing package options come from"]
   },
   {
@@ -5886,7 +5886,7 @@ const QA_PROJECTSETUP = [
     scope: "module",
     section: "Drawings",
     question: "What do I set when I create a workflow level?",
-    answer: "**Workflow Type** (**All must approve** or **Any one can approve**), **Security Key Requirement** (require security key authentication), **Description** and **Select Approver** (search the project roster). Levels run in order.",
+    answer: "Open the project and go to **Project Setup → Drawings → Create Approval Workflow**. **Workflow Type** (**All must approve** or **Any one can approve**), **Security Key Requirement** (require security key authentication), **Description** and **Select Approver** (search the project roster). Levels run in order.",
     tags: ["create level","workflow level approvers","all must approve any one","security key approval"]
   },
   {
@@ -5949,7 +5949,7 @@ const QA_PROJECTSETUP = [
     scope: "module",
     section: "Documents",
     question: "What do I fill in to create a document team?",
-    answer: "**Name your documents folder***, **Select the team who will be working on these documents*** and **Select the Admins for document folder***, then **Submit**. The people come from the project roster.",
+    answer: "Open the project and go to **Project Setup → Documents**. **Name your documents folder***, **Select the team who will be working on these documents*** and **Select the Admins for document folder***, then **Submit**. The people come from the project roster.",
     tags: ["create team fields","document team fields","team admins documents"]
   },
   {
@@ -6084,7 +6084,7 @@ const QA_PROJECTSETUP = [
     scope: "module",
     section: "BIM",
     question: "What do I enter to create a BIM model?",
-    answer: "Click **Create BIM**, enter the **Name** and **Submit**; then open the card to load the model in the viewer (**Forge View**, **BIM Connector**).",
+    answer: "Open the project and go to **Project Setup → BIM**. Click **Create BIM**, enter the **Name** and **Submit**; then open the card to load the model in the viewer (**Forge View**, **BIM Connector**).",
     tags: ["create bim model","bim name","add bim"]
   },
   {
@@ -6093,7 +6093,7 @@ const QA_PROJECTSETUP = [
     scope: "module",
     section: "GIS",
     question: "Where does GIS data come from and where does it go?",
-    answer: "GIS files are uploaded by the project team with **Upload GIS Document** (Name, then Submit); nothing is fed from Global Data. The tab lists uploaded documents (\"There are no GIS Documents\" until one is added).",
+    answer: "Open the project and go to **Project Setup → GIS**. GIS files are uploaded by the project team with **Upload GIS Document** (Name, then Submit); nothing is fed from Global Data. The tab lists uploaded documents (\"There are no GIS Documents\" until one is added).",
     tags: ["gis source","gis lineage","gis data source"]
   },
   {
@@ -6120,7 +6120,7 @@ const QA_PROJECTSETUP = [
     scope: "module",
     section: "Overview",
     question: "Where does Project Setup data show up in the rest of the project?",
-    answer: "Works plants appear on **My Desk**, Field Works and every plant selector; People feed all user pickers; Phase Codes feed Time Management; Forms, Quality and Safety drive what field users see; Safety Calendar and Schedule Project Forms feed **My Calendar**; Estimate and Schedule feed Data Analytics.",
+    answer: "Open the project and go to **Project Setup**. Works plants appear on **My Desk**, Field Works and every plant selector; People feed all user pickers; Phase Codes feed Time Management; Forms, Quality and Safety drive what field users see; Safety Calendar and Schedule Project Forms feed **My Calendar**; Estimate and Schedule feed Data Analytics.",
     tags: ["project setup feeds","where project setup data shows","project setup downstream","project setup lineage goes"]
   },
   {
@@ -6201,7 +6201,7 @@ const QA_PROJECTSETUP = [
     scope: "module",
     section: "Drawings",
     question: "How do drawing revisions work?",
-    answer: "In a submittal click **Create Revision** and choose, for each page, **Do Not Change**, **Append** or **Replace**. **See Revisions** lists the revisions (\"Revision 0 - Latest Revision\", who revised it and when) and the viewer has a **Drawing Revision** selector. **See History** shows each approval step. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "Open the project and go to **Project Setup → Drawings**. In a submittal click **Create Revision** and choose, for each page, **Do Not Change**, **Append** or **Replace**. **See Revisions** lists the revisions (\"Revision 0 - Latest Revision\", who revised it and when) and the viewer has a **Drawing Revision** selector. **See History** shows each approval step. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["drawing revision","create revision","see revisions","append replace drawing page","latest revision"]
   },
   {
@@ -6237,7 +6237,7 @@ const QA_PROJECTSETUP = [
     scope: "module",
     section: "Drawings",
     question: "How do I see who approved a drawing and when?",
-    answer: "Click **See History** in the drawing row. The **Track** dialog shows lines such as \"Drawing has been approved at level 1\" with the date, time and approver. The **Approval Workflow Level** column shows the level reached.",
+    answer: "Open the project and go to **Project Setup → Drawings**. Click **See History** in the drawing row. The **Track** dialog shows lines such as \"Drawing has been approved at level 1\" with the date, time and approver. The **Approval Workflow Level** column shows the level reached.",
     tags: ["drawing history","who approved drawing","see history drawing","approval workflow level drawing"]
   },
   {
@@ -6375,7 +6375,7 @@ const QA_FIELDWORKS = [
     scope: "project",
     section: "Progress",
     question: "Where can I see a rolled-up summary of hours, quantities, and labor units?",
-    answer: "The **Productivity Logs** card's **Data Summary** view has three tabs: **Timesheets** (hours by employee or crew), **Quantities** (quantity achieved by Phase Code or Location), and **Labor Units** (the ratio of submitted hours to submitted quantities). Each tab offers a Download Excel export for the selected date range — the fastest way for a supervisor to see where labor is actually going without opening individual logs.",
+    answer: "Open the project and go to **Field Works → Tree Version**, open the plant, then **Progress → Productivity Logs**. The **Productivity Logs** card's **Data Summary** view has three tabs: **Timesheets** (hours by employee or crew), **Quantities** (quantity achieved by Phase Code or Location), and **Labor Units** (the ratio of submitted hours to submitted quantities). Each tab offers a Download Excel export for the selected date range — the fastest way for a supervisor to see where labor is actually going without opening individual logs.",
     tags: ["data summary","labor units","timesheet summary","quantity summary"]
   },
   {
@@ -6429,7 +6429,7 @@ const QA_FIELDWORKS = [
     scope: "project",
     section: "Progress",
     question: "How do I record meeting minutes and track the actions that come out of them?",
-    answer: "Use the **Meeting Minutes** card under Progress. On its **Forms** tab click **Create**, fill in the meeting details, then **Save As Draft** or **Submit**. The **Actions** tab — available within a single meeting or across all meetings — tracks the action items raised, each with a status, assignee(s), and due date. Download, Share, Print, and built-in chat are available for collaborating on the minutes.",
+    answer: "Open the project and go to **Field Works → Tree Version**, open the plant, then **Progress → Meeting Minutes**. On its **Forms** tab click **Create**, fill in the meeting details, then **Save As Draft** or **Submit**. The **Actions** tab — available within a single meeting or across all meetings — tracks the action items raised, each with a status, assignee(s), and due date. Download, Share, Print, and built-in chat are available for collaborating on the minutes.",
     tags: ["meeting minutes","action items","meeting actions","create meeting"]
   },
   {
@@ -6447,7 +6447,7 @@ const QA_FIELDWORKS = [
     scope: "project",
     section: "Progress",
     question: "Where do I log equipment, material, manpower, labor, and machinery used on site?",
-    answer: "Progress carries a dedicated card for each: **Equipment Logs**, **Material Logs**, **Manpower Logs**, **Labor Logs**, and **Machinery Logs**. Splitting resource capture by type is what lets a construction business answer cost and productivity questions separately — how much plant was on site, how much material was consumed, and how many people were working — rather than lumping everything into one undifferentiated daily entry.",
+    answer: "Open the project and go to **Field Works → Tree Version**, open the plant, then **Progress**. Progress carries a dedicated card for each: **Equipment Logs**, **Material Logs**, **Manpower Logs**, **Labor Logs**, and **Machinery Logs**. Splitting resource capture by type is what lets a construction business answer cost and productivity questions separately — how much plant was on site, how much material was consumed, and how many people were working — rather than lumping everything into one undifferentiated daily entry.",
     tags: ["equipment logs","material logs","manpower logs","labor logs","machinery logs"]
   },
   {
@@ -6456,7 +6456,7 @@ const QA_FIELDWORKS = [
     scope: "project",
     section: "Progress",
     question: "How do I raise a restraint and get it verified?",
-    answer: "Use the **Restraints** card under Progress, and click **Add Restraint**. A restraint is a physical, legal, or contractual blocker logged independently of any single form — the form takes Tree Version, Entity, Super Location, Location, Work Package, Restraint Category, Detailed Description, Priority, an optional file, Start/End Date, and an assignee. Each restraint moves through a three-stage loop tracked as **Open / Rectified / Verified** counters, with its own **Restraints Rectification** tab for working through fixes. Restraints support filters and Download Excel.",
+    answer: "Open the project and go to **Field Works → Tree Version**, open the plant, then **Progress → Restraints**. Click **Add Restraint**. A restraint is a physical, legal, or contractual blocker logged independently of any single form — the form takes Tree Version, Entity, Super Location, Location, Work Package, Restraint Category, Detailed Description, Priority, an optional file, Start/End Date, and an assignee. Each restraint moves through a three-stage loop tracked as **Open / Rectified / Verified** counters, with its own **Restraints Rectification** tab for working through fixes. Restraints support filters and Download Excel.",
     tags: ["restraints","blocker","rectify","verify","restraint rectification","add restraint","blocking work"]
   },
   {
@@ -6663,7 +6663,7 @@ const QA_FIELDWORKS = [
     scope: "project",
     section: "Cost",
     question: "How do I record a budget or contract adjustment on a plant?",
-    answer: "Use the **Change order** card on the plant's **Cost** tab, described as budget and contract adjustments. A change order records a formal modification to the original scope, cost, or schedule after contract signature; use **Assign To** and **Due Date** to route responsibility so it does not stall without an accountable owner, and Chat, Follow Up Actions, History, Download, Share, Print, and Compose Mail work the same way as they do on RFIs.",
+    answer: "Open the project and go to **Field Works → Tree Version**, open the plant, then **Cost → Change order**. Use the **Change order** card on the plant's **Cost** tab, described as budget and contract adjustments. A change order records a formal modification to the original scope, cost, or schedule after contract signature; use **Assign To** and **Due Date** to route responsibility so it does not stall without an accountable owner, and Chat, Follow Up Actions, History, Download, Share, Print, and Compose Mail work the same way as they do on RFIs.",
     tags: ["change order","budget adjustment","contract adjustment","assign to","due date"]
   },
   {
@@ -6672,7 +6672,7 @@ const QA_FIELDWORKS = [
     scope: "project",
     section: "Cost",
     question: "How do I move budget between cost codes or phase codes?",
-    answer: "Use the **Transfer** card on the plant's **Cost** tab, described as reallocation of budget or cost between Cost Codes and Phase Codes. This is the controlled way to shift money between buckets when the original cost breakdown no longer reflects how work is actually being executed, rather than editing historical transactions.",
+    answer: "Open the project and go to **Field Works → Tree Version**, open the plant, then **Cost → Transfer**. Use the **Transfer** card on the plant's **Cost** tab, described as reallocation of budget or cost between Cost Codes and Phase Codes. This is the controlled way to shift money between buckets when the original cost breakdown no longer reflects how work is actually being executed, rather than editing historical transactions.",
     tags: ["cost transfer","reallocate budget","cost codes","phase codes"]
   },
   {
@@ -6717,7 +6717,7 @@ const QA_FIELDWORKS = [
     scope: "project",
     section: "Safety",
     question: "Where do I review or sign off on safety forms that have been submitted?",
-    answer: "**Completed Safety** is the retrospective repository of submitted logs from both Safety Forms and Safety Calendar Forms, most recent first, filterable by user or date range and exportable via Download Excel — the view a safety lead or PM uses for an audit or compliance spot-check. **Approve Safety** is the separate review queue where submitted safety forms awaiting sign-off are approved or rejected.",
+    answer: "Open the project and go to **Field Works → Safety → Completed Safety**. **Completed Safety** is the retrospective repository of submitted logs from both Safety Forms and Safety Calendar Forms, most recent first, filterable by user or date range and exportable via Download Excel — the view a safety lead or PM uses for an audit or compliance spot-check. **Approve Safety** is the separate review queue where submitted safety forms awaiting sign-off are approved or rejected.",
     tags: ["completed safety","approve safety","safety repository","safety audit"]
   },
   {
@@ -6789,7 +6789,7 @@ const QA_FIELDWORKS = [
     scope: "project",
     section: "Progress",
     question: "Can I attach a file or a drawing to a Work Log?",
-    answer: "Work Logs support the same \"Connected Drawings\" pattern used elsewhere in Field Works — RFI and Meeting Minutes forms both have a Connect button that links a drawing straight from Drawing Management, alongside the ability to attach media (the Work Logs screen itself has a Media button). This lets a foreman point to exactly which sheet or photo the logged work matches without leaving the screen.",
+    answer: "Open the project and go to **Field Works → Tree Version**, open the plant, then **Progress → Work Logs**. Work Logs support the same \"Connected Drawings\" pattern used elsewhere in Field Works — RFI and Meeting Minutes forms both have a Connect button that links a drawing straight from Drawing Management, alongside the ability to attach media (the Work Logs screen itself has a Media button). This lets a foreman point to exactly which sheet or photo the logged work matches without leaving the screen.",
     tags: ["work log attachment","link drawing to work log","side panel","attach file"]
   },
   {
@@ -6798,7 +6798,7 @@ const QA_FIELDWORKS = [
     scope: "project",
     section: "Cost",
     question: "Where do I see a forecasted cost-to-complete, not just actual transactions?",
-    answer: "Where the project has IFS integration enabled, a **Cost Forecast** table becomes available under **Transaction Logs** on the plant's Cost tab, with an editable **Completion Allowance %** per line that a PM or cost controller uses to project remaining cost-to-complete on top of the transactions actually recorded.",
+    answer: "Open the project and go to **Field Works → Tree Version**, open the plant, then **Cost → Transaction Logs**. Where the project has IFS integration enabled, a **Cost Forecast** table becomes available under **Transaction Logs** on the plant's Cost tab, with an editable **Completion Allowance %** per line that a PM or cost controller uses to project remaining cost-to-complete on top of the transactions actually recorded.",
     tags: ["cost forecast","completion allowance","transaction logs","ifs integration"]
   },
   {
@@ -6888,7 +6888,7 @@ const QA_FIELDWORKS = [
     scope: "module",
     section: "Progress",
     question: "What do I fill in on a single work log form?",
-    answer: "Click a location cell under a work package. The form shows Entity, Super Location, Location, Work Package, Work Package Description and Estimated Quantity (Specific to this location) as read-only. You enter **Work Completed** (tick box), **Actual Quantity**, **Worked On Date**, **Actual Hours (Optional)**, **Comments** and files, then click **Submit**. Buttons at the top: **Follow Up Actions**, **See History**, **Raise a Restraint**, **Chat** and **Tagged Files**.",
+    answer: "Open the project and go to **Field Works → Tree Version**, open the plant, then **Progress → Work Logs**. Click a location cell under a work package. The form shows Entity, Super Location, Location, Work Package, Work Package Description and Estimated Quantity (Specific to this location) as read-only. You enter **Work Completed** (tick box), **Actual Quantity**, **Worked On Date**, **Actual Hours (Optional)**, **Comments** and files, then click **Submit**. Buttons at the top: **Follow Up Actions**, **See History**, **Raise a Restraint**, **Chat** and **Tagged Files**.",
     tags: ["single work log","work log form fields","log work completed","actual quantity work log","worked on date","raise restraint from work log"]
   },
   {
@@ -6897,7 +6897,7 @@ const QA_FIELDWORKS = [
     scope: "module",
     section: "Progress",
     question: "How do I log many locations at once?",
-    answer: "On **Work Logs** switch from Single Log to **Bulk Log - Work log**, **Bulk Log - Quantity** or **Bulk Log - Work Hours**. Pick the work package, optionally filter by **SuperLocation** and **From Location**, tick the locations (or a whole row or column) and type the percentage, quantity or hours in each cell, then click **Log Work**, **Log Quantity** or **Log Hours**. **Clear** resets the selection. Bulk entries show \"Source : Bulk Log\" in Submitted Work Logs.",
+    answer: "Open the project and go to **Field Works → Tree Version**, open the plant, then **Progress → Work Logs**. On **Work Logs** switch from Single Log to **Bulk Log - Work log**, **Bulk Log - Quantity** or **Bulk Log - Work Hours**. Pick the work package, optionally filter by **SuperLocation** and **From Location**, tick the locations (or a whole row or column) and type the percentage, quantity or hours in each cell, then click **Log Work**, **Log Quantity** or **Log Hours**. **Clear** resets the selection. Bulk entries show \"Source : Bulk Log\" in Submitted Work Logs.",
     tags: ["bulk log","bulk work log","log multiple locations","log work button","bulk log quantity","bulk log hours","log many locations at once","how do i log many locations at once"]
   },
   {
@@ -7032,7 +7032,7 @@ const QA_FIELDWORKS = [
     scope: "module",
     section: "Progress",
     question: "Where do Site Photographs come from?",
-    answer: "The **Work Logs Site Photograph** tab shows photos uploaded on work log forms (the Upload Files control) for the plant picked in its Tree Version dropdown. The **Site Photograph** tab is a separate feed: use **Create a post** with a photo or video, then filter by person or ALL / THIS WEEK / LAST WEEK / LAST MONTH. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "Open the project and go to **Field Works → Tree Version**, open the plant, then **Progress → Work Logs**. The **Work Logs Site Photograph** tab shows photos uploaded on work log forms (the Upload Files control) for the plant picked in its Tree Version dropdown. The **Site Photograph** tab is a separate feed: use **Create a post** with a photo or video, then filter by person or ALL / THIS WEEK / LAST WEEK / LAST MONTH. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["site photographs source","work log photos","create a post photo","site photo feed","where do site photos come from"]
   },
   {
@@ -7041,7 +7041,7 @@ const QA_FIELDWORKS = [
     scope: "module",
     section: "Progress",
     question: "Where does the Site Material Request form get its lists?",
-    answer: "Requested By lists the project users (32, shown as \"ID - name\"), the plant, entity, locations and work packages follow the Works tree, and Select Material and UOM are picked in the materials table. Submitting sends it for approval; rejected requests move to the **Rejected Site Material Requests** tab. For the inventory side see the **Inventory Management** module.",
+    answer: "Open the project and go to **Field Works → Tree Version**, open the plant, then **Progress**. Requested By lists the project users (32, shown as \"ID - name\"), the plant, entity, locations and work packages follow the Works tree, and Select Material and UOM are picked in the materials table. Submitting sends it for approval; rejected requests move to the **Rejected Site Material Requests** tab. For the inventory side see the **Inventory Management** module.",
     tags: ["site material request","inventory management field works","requested by dropdown","pickup ticket","material request source","rejected site material requests"]
   },
   {
@@ -7167,7 +7167,7 @@ const QA_FIELDWORKS = [
     scope: "module",
     section: "Work Logs Under Each Template",
     question: "How does Work Package to Location Logging work?",
-    answer: "You choose a **Location Type** and a work package on the left, and the right shows every super location and location as a coloured cell (grey not yet started, blue ready, orange in progress, green completed). Click a cell to open the log form, fill in the values and click **Submit**. It is the layout on Arena Steel Plant - Phase 1.",
+    answer: "Open the project and go to **Field Works → Tree Version**, open the plant, then **Progress → Work Logs**. You choose a **Location Type** and a work package on the left, and the right shows every super location and location as a coloured cell (grey not yet started, blue ready, orange in progress, green completed). Click a cell to open the log form, fill in the values and click **Submit**. It is the layout on Arena Steel Plant - Phase 1.",
     tags: ["work package to location logging","wp to location","work logs grid","location cells","log work package"]
   },
   {
@@ -7176,7 +7176,7 @@ const QA_FIELDWORKS = [
     scope: "module",
     section: "Work Logs Under Each Template",
     question: "How does Location to Work Package Logging work?",
-    answer: "The Work Logs screen shows **Level 2 Types** on the left and a matrix on the right: locations are rows and work packages are columns, with filters for **Location Type**, **Level 3** and **Work Package**. Click the cell where they meet to open the log form. A \"-\" means that work package is not mapped to the location. It is the layout on Arena Residential Project.",
+    answer: "Open the project and go to **Field Works → Tree Version**, open the plant, then **Progress → Work Logs**. The Work Logs screen shows **Level 2 Types** on the left and a matrix on the right: locations are rows and work packages are columns, with filters for **Location Type**, **Level 3** and **Work Package**. Click the cell where they meet to open the log form. A \"-\" means that work package is not mapped to the location. It is the layout on Arena Residential Project.",
     tags: ["location to work package logging","location to wp","work logs matrix","rows locations columns work packages","level 2 types"]
   },
   {
@@ -7185,7 +7185,7 @@ const QA_FIELDWORKS = [
     scope: "module",
     section: "Work Logs Under Each Template",
     question: "How does Super Location to Location Logging work?",
-    answer: "Each super location is a panel of blue location tiles. Click a tile and the right pane lists the work packages mapped to that location; click the arrow beside one to open the log form. Chips **Ready**, **Delayed**, **Completed** and **All** and **Search Location** narrow the tiles. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "Open the project and go to **Field Works → Tree Version**, open the plant, then **Progress → Work Logs**. Each super location is a panel of blue location tiles. Click a tile and the right pane lists the work packages mapped to that location; click the arrow beside one to open the log form. Chips **Ready**, **Delayed**, **Completed** and **All** and **Search Location** narrow the tiles. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["super location to location logging","super location tiles","location tiles","work packages mapped to location","ready delayed completed"]
   },
   {
@@ -7203,7 +7203,7 @@ const QA_FIELDWORKS = [
     scope: "module",
     section: "Work Logs Under Each Template",
     question: "How do I log work for many locations at once?",
-    answer: "Where the screen offers it, select **Bulk Log - Work log** (or Quantity or Work Hours), tick the work packages in the **Work Package** drop-down, tick the locations or **Select All**, adjust the percentage or quantity in each cell and click **LOG WORK**. **Clear all** resets the grid.",
+    answer: "Open the project and go to **Field Works → Tree Version**, open the plant, then **Progress → Work Logs**. Where the screen offers it, select **Bulk Log - Work log** (or Quantity or Work Hours), tick the work packages in the **Work Package** drop-down, tick the locations or **Select All**, adjust the percentage or quantity in each cell and click **LOG WORK**. **Clear all** resets the grid.",
     tags: ["bulk log","log many locations","bulk work log steps","select all locations","log work button"]
   },
   {
@@ -7410,7 +7410,7 @@ const QA_FIELDWORKS = [
     scope: "module",
     section: "Productivity Logs Screen by Screen",
     question: "What do I see on the Productivity Logs Logs tab and how do I open a log?",
-    answer: "Cards with **Log ID**, status, **From Date**, **To Date**, **Total Hours**, **Employees**, **Approval Status** and **Created By**. **Filters** has Log IDs, Created By, Filter By Date, Employees, Crew, Phase Codes and Approval Status (Approved, Rejected, Ready, In Progress, Draft). Click a card for the **Timesheets** and **Quantities** tabs, history, download, share and print.",
+    answer: "Open the project and go to **Field Works → Tree Version**, open the plant, then **Progress → Productivity Logs → Logs**. Cards with **Log ID**, status, **From Date**, **To Date**, **Total Hours**, **Employees**, **Approval Status** and **Created By**. **Filters** has Log IDs, Created By, Filter By Date, Employees, Crew, Phase Codes and Approval Status (Approved, Rejected, Ready, In Progress, Draft). Click a card for the **Timesheets** and **Quantities** tabs, history, download, share and print.",
     tags: ["productivity logs list","log detail","logs tab filters","log id","approval status filter"]
   },
   {
@@ -7545,7 +7545,7 @@ const QA_FIELDWORKS = [
     scope: "module",
     section: "Safety",
     question: "What do I see on Safety Forms when forms exist?",
-    answer: "The left list **Safety Forms (n)** shows the categories and the form inside each; the right side lists cards with status (**Approved**), who raised it and when, the **ID**, **Form Title**, **Issues Raised** and **Approval Work Flow** (for example 2/2). **Create Form** opens the checklist with **Save As Draft** and **Submit For Approval**.",
+    answer: "Open the project and go to **Field Works → Safety → Safety Forms**. The left list **Safety Forms (n)** shows the categories and the form inside each; the right side lists cards with status (**Approved**), who raised it and when, the **ID**, **Form Title**, **Issues Raised** and **Approval Work Flow** (for example 2/2). **Create Form** opens the checklist with **Save As Draft** and **Submit For Approval**.",
     tags: ["safety forms cards","approval work flow 2/2","issues raised safety","create safety form","safety form id"]
   },
   {
@@ -7719,7 +7719,7 @@ const QA_DATAANALYTICS = [
     scope: "project",
     section: "Standard Analytics",
     question: "Where do I see how the project is tracking against its schedule?",
-    answer: "Three cards on **Standard Analytics** address this from different angles: **Construction Progress** for physical completion, **Schedule** for time performance, and **Activities & Work Packages Progress** for progress at the level of individual activities and work packages. **Progress Forecast Report** is the forward-looking companion when a PM needs a projection rather than a status snapshot.",
+    answer: "Open the project and go to **Data Analytics & Insights → Standard Analytics**. Three cards on **Standard Analytics** address this from different angles: **Construction Progress** for physical completion, **Schedule** for time performance, and **Activities & Work Packages Progress** for progress at the level of individual activities and work packages. **Progress Forecast Report** is the forward-looking companion when a PM needs a projection rather than a status snapshot.",
     tags: ["construction progress","schedule dashboard","work packages progress","progress forecast"]
   },
   {
@@ -7737,7 +7737,7 @@ const QA_DATAANALYTICS = [
     scope: "project",
     section: "Standard Analytics",
     question: "How do I see how equipment, material, manpower, and productivity are trending?",
-    answer: "The **Equipment/Material/Manpower** card consolidates the three main resource streams into one dashboard, and **Productivity Reports** covers output relative to the effort put in. Together they answer whether resources on site are being used efficiently, rather than only whether work is getting done.",
+    answer: "Open the project and go to **Data Analytics & Insights → Standard Analytics**. The **Equipment/Material/Manpower** card consolidates the three main resource streams into one dashboard, and **Productivity Reports** covers output relative to the effort put in. Together they answer whether resources on site are being used efficiently, rather than only whether work is getting done.",
     tags: ["equipment material manpower","productivity reports","resource dashboard","utilization"]
   },
   {
@@ -7755,7 +7755,7 @@ const QA_DATAANALYTICS = [
     scope: "project",
     section: "Standard Analytics",
     question: "How do I find out whether approvals are holding the project up?",
-    answer: "**RFI Approval Delays** is the dashboard aimed squarely at that question — surfacing where RFIs are sitting unanswered, which on most construction projects is a leading indicator of schedule slippage. **Collaboration Items** gives the broader view of collaborative activity across the project's forms and workflows.",
+    answer: "Open the project and go to **Data Analytics & Insights → Standard Analytics**. **RFI Approval Delays** is the dashboard aimed squarely at that question — surfacing where RFIs are sitting unanswered, which on most construction projects is a leading indicator of schedule slippage. **Collaboration Items** gives the broader view of collaborative activity across the project's forms and workflows.",
     tags: ["rfi approval delays","collaboration items","approval bottleneck","schedule risk"]
   },
   {
@@ -7764,7 +7764,7 @@ const QA_DATAANALYTICS = [
     scope: "project",
     section: "Standard Analytics",
     question: "Can I compare how contractors are performing on a project?",
-    answer: "Yes — the **Contractors Performance** card on Standard Analytics is the dashboard for that. For a construction business running several subcontractors on one job, this is the view that supports evidence-based conversations at progress meetings and informs who gets invited onto the next project.",
+    answer: "Open the project and go to **Data Analytics & Insights → Standard Analytics**. Yes — the **Contractors Performance** card on Standard Analytics is the dashboard for that. For a construction business running several subcontractors on one job, this is the view that supports evidence-based conversations at progress meetings and informs who gets invited onto the next project.",
     tags: ["contractors performance","subcontractor comparison","vendor performance"]
   },
   {
@@ -7773,7 +7773,7 @@ const QA_DATAANALYTICS = [
     scope: "project",
     section: "Standard Analytics",
     question: "Where are the daily progress report and management summary dashboards?",
-    answer: "The **DPR report** card on **Standard Analytics** is a work-order report (pick a work order and see each activity's estimated, executed and balance quantity, plus planned and executed for this month and today). **Work Summary - MIS Report** is the management summary tree of Physical Target, Work Complete and Variance by plant and location type. The canned **Daily Progress Report** and **Weekly Progress Report** are on the **Standard Reports** tab.",
+    answer: "Open the project and go to **Data Analytics & Insights → Standard Analytics**. The **DPR report** card on **Standard Analytics** is a work-order report (pick a work order and see each activity's estimated, executed and balance quantity, plus planned and executed for this month and today). **Work Summary - MIS Report** is the management summary tree of Physical Target, Work Complete and Variance by plant and location type. The canned **Daily Progress Report** and **Weekly Progress Report** are on the **Standard Reports** tab.",
     tags: ["dpr report","mis report","work summary","daily progress report","management reporting","dpr report meaning","what is the dpr report","dpr report work order"]
   },
   {
@@ -7782,7 +7782,7 @@ const QA_DATAANALYTICS = [
     scope: "project",
     section: "Standard Analytics",
     question: "How do I get project data out into Excel?",
-    answer: "There are two routes. The **Sync** card on **Standard Analytics** is described as syncing projects data to Excel. Separately, the **Excel** card on **Configurable Analytics** covers project tree uploads and standard report downloads. Use Sync when you want the project's data pushed out to a spreadsheet, and the Configurable Analytics Excel card when you are uploading tree data in or pulling standard reports down.",
+    answer: "Open the project and go to **Data Analytics & Insights → Standard Analytics**. There are two routes. The **Sync** card on **Standard Analytics** is described as syncing projects data to Excel. Separately, the **Excel** card on **Configurable Analytics** covers project tree uploads and standard report downloads. Use Sync when you want the project's data pushed out to a spreadsheet, and the Configurable Analytics Excel card when you are uploading tree data in or pulling standard reports down.",
     tags: ["sync","excel export","projects data to excel","data extract"]
   },
   {
@@ -7800,7 +7800,7 @@ const QA_DATAANALYTICS = [
     scope: "project",
     section: "Configurable Analytics",
     question: "How do I build a chart that the standard dashboards do not cover?",
-    answer: "Use the **Build your own Charts** card on **Configurable Analytics**. It exists for exactly the case where a client, a PM, or internal management wants a cut of the data that no pre-built dashboard provides — rather than exporting to a spreadsheet and rebuilding the chart by hand every reporting cycle.",
+    answer: "Open the project and go to **Data Analytics & Insights → Configurable Analytics**. Use the **Build your own Charts** card on **Configurable Analytics**. It exists for exactly the case where a client, a PM, or internal management wants a cut of the data that no pre-built dashboard provides — rather than exporting to a spreadsheet and rebuilding the chart by hand every reporting cycle.",
     tags: ["build your own charts","custom chart","self-serve chart"]
   },
   {
@@ -7809,7 +7809,7 @@ const QA_DATAANALYTICS = [
     scope: "project",
     section: "Configurable Analytics",
     question: "Can I build and save my own reports?",
-    answer: "Yes. **Build your own Reports** on **Configurable Analytics** is where a custom report is defined, and the **Reports** card on the same tab is described as storing personal reports — so a report you build for your own recurring use is kept rather than rebuilt each time.",
+    answer: "Open the project and go to **Data Analytics & Insights → Configurable Analytics**. Yes. **Build your own Reports** on **Configurable Analytics** is where a custom report is defined, and the **Reports** card on the same tab is described as storing personal reports — so a report you build for your own recurring use is kept rather than rebuilt each time.",
     tags: ["build your own reports","custom report","personal reports","save report"]
   },
   {
@@ -7827,7 +7827,7 @@ const QA_DATAANALYTICS = [
     scope: "project",
     section: "Configurable Analytics",
     question: "Can I connect project data to Power BI?",
-    answer: "Yes — the **Power BI** card on **Configurable Analytics** is described as a direct integration. For a construction business that already reports company-wide through Power BI, this is the route to bring a project's Arena data into those existing dashboards rather than maintaining two separate reporting worlds.",
+    answer: "Open the project and go to **Data Analytics & Insights → Configurable Analytics**. Yes — the **Power BI** card on **Configurable Analytics** is described as a direct integration. For a construction business that already reports company-wide through Power BI, this is the route to bring a project's Arena data into those existing dashboards rather than maintaining two separate reporting worlds.",
     tags: ["power bi","bi integration","external reporting","direct integration"]
   },
   {
@@ -7845,7 +7845,7 @@ const QA_DATAANALYTICS = [
     scope: "project",
     section: "Standard Reports",
     question: "Where can I find a Daily or Weekly Progress Report again later?",
-    answer: "The Document Repository has folders named **Daily Progress Reports** and **Weekly Progress Reports**, but on Arena Steel Plant - Phase 1 both are empty and the report screens do not show a save step. The Weekly Progress Report has a **Download Pdf** button, so download a copy when you need to keep one; the Daily report always shows today's date.",
+    answer: "Open the project and go to **Data Analytics & Insights → Standard Reports**. The Document Repository has folders named **Daily Progress Reports** and **Weekly Progress Reports**, but on Arena Steel Plant - Phase 1 both are empty and the report screens do not show a save step. The Weekly Progress Report has a **Download Pdf** button, so download a copy when you need to keep one; the Daily report always shows today's date.",
     tags: ["find generated report","document repository","report archive","daily progress reports","where do i find saved report","find report again","where do i find saved report","find report again"]
   },
   {
@@ -8052,7 +8052,7 @@ const QA_DATAANALYTICS = [
     scope: "project",
     section: "Configurable Analytics",
     question: "How do I build my own chart or report?",
-    answer: "For charts open **Build your own Charts** (titled Inn BI) and click **Create Report**, enter a report name and Submit. For reports open **Build your own Reports** (Reports Builder), click **Create**, name the report builder and Submit; use its **Generated Reports** tab to see output filtered by report and date range (ALL, This Week, Last Week, Last Month). Both start empty.",
+    answer: "Open the project and go to **Data Analytics & Insights → Configurable Analytics**. For charts open **Build your own Charts** (titled Inn BI) and click **Create Report**, enter a report name and Submit. For reports open **Build your own Reports** (Reports Builder), click **Create**, name the report builder and Submit; use its **Generated Reports** tab to see output filtered by report and date range (ALL, This Week, Last Week, Last Month). Both start empty.",
     tags: ["build your own chart","build your own report","inn bi","reports builder","generated reports","create report builder"]
   },
   {
@@ -8136,7 +8136,7 @@ const QA_DOCUMENTREPOSITORY = [
     scope: "project",
     section: "Document Repository",
     question: "Where do I find every generated form or record on a project in one place?",
-    answer: "Go to <strong>Document Repository</strong>. It's a two-pane, single-page screen: the left pane lists categories (RFI, Meeting Minutes, Other Forms, Qualities Level 1, Qualities Level 2, Safety Scheduled Forms, Safety Forms, Drawings, Workorders, Invoices, Daily Progress Reports, Weekly Progress Reports), and clicking a category filters the table on the right to just that category's records.",
+    answer: "Open the project and go to **Document Repository**. It's a two-pane, single-page screen: the left pane lists categories (RFI, Meeting Minutes, Other Forms, Qualities Level 1, Qualities Level 2, Safety Scheduled Forms, Safety Forms, Drawings, Workorders, Invoices, Daily Progress Reports, Weekly Progress Reports), and clicking a category filters the table on the right to just that category's records.",
     tags: ["document repository","records archive","category filter","find all project documents","where are my documents","all documents","project documents","find documents"]
   },
   {
@@ -8163,7 +8163,7 @@ const QA_DOCUMENTREPOSITORY = [
     scope: "project",
     section: "Document Repository",
     question: "How do I narrow down records in a large category like Drawings or Invoices?",
-    answer: "The right pane has its own search box and a **Start date** to **End date** range, separate from the search box above the category list on the left. Select a category first, then combine search and the date range.",
+    answer: "Open the project and go to **Document Repository**. The right pane has its own search box and a **Start date** to **End date** range, separate from the search box above the category list on the left. Select a category first, then combine search and the date range.",
     tags: ["search","date range filter","find record"]
   },
   {
@@ -8181,7 +8181,7 @@ const QA_DOCUMENTREPOSITORY = [
     scope: "project",
     section: "Document Repository",
     question: "Can I email a record from the Document Repository, or check who opened it?",
-    answer: "The email icon (**Email Threads**) opens the email conversations tied to the record; it has no send box, so it is a view of conversations, not a send form. The history icon (**Access Logs**) lists who opened the record, with IP address, operating system and browser; it is an access log, not a revision trail. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "Open the project and go to **Document Repository**. The email icon (**Email Threads**) opens the email conversations tied to the record; it has no send box, so it is a view of conversations, not a send form. The history icon (**Access Logs**) lists who opened the record, with IP address, operating system and browser; it is an access log, not a revision trail. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["email record","email threads","record history","actions column","access logs","can i email a record"]
   },
   {
@@ -8208,7 +8208,7 @@ const QA_DOCUMENTREPOSITORY = [
     scope: "project",
     section: "Document Repository",
     question: "How do I see who opened a document in the Document Repository?",
-    answer: "Click the history icon on its row. The **Access Logs** dialog lists each access with Name, Accessed On, User IP, Operating System and Browser. It shows \"No Data Available\" if nobody has opened the record.",
+    answer: "Open the project and go to **Document Repository**. Click the history icon on its row. The **Access Logs** dialog lists each access with Name, Accessed On, User IP, Operating System and Browser. It shows \"No Data Available\" if nobody has opened the record.",
     tags: ["access logs","who opened document","document history","audit trail","who viewed record","user ip"]
   },
   {
@@ -8301,7 +8301,7 @@ const QA_FOLLOWUPACTIONS = [
     scope: "project",
     section: "Follow Up Actions",
     question: "How do I find a specific follow-up action once there are entries?",
-    answer: "Type in the <strong>Search</strong> box above the list. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "Open the project and go to **Follow Up Actions**. Type in the <strong>Search</strong> box above the list. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["search","find action","filter list"]
   },
   {
@@ -8319,7 +8319,7 @@ const QA_FOLLOWUPACTIONS = [
     scope: "project",
     section: "Follow Up Actions",
     question: "How does an item get onto the Follow Up Actions list in the first place?",
-    answer: "Nothing on the page creates items. The <strong>Follow Up Actions</strong> buttons on an open RFI form and on <strong>Daily Safety Issues</strong> open this page. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "Open the project and go to **Follow Up Actions**. Nothing on the page creates items. The <strong>Follow Up Actions</strong> buttons on an open RFI form and on <strong>Daily Safety Issues</strong> open this page. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["how follow ups are raised","rfi follow up","connected items","how does an item get onto follow up actions","populate follow up actions"]
   },
   {
@@ -8346,7 +8346,7 @@ const QA_FOLLOWUPACTIONS = [
     scope: "project",
     section: "Follow Up Actions",
     question: "Can I create or edit a follow-up action on the Follow Up Actions page?",
-    answer: "No. The page has only a title, a Search box and a list: no Create, Edit or Delete buttons and no columns or filters.",
+    answer: "Open the project and go to **Follow Up Actions**. No. The page has only a title, a Search box and a list: no Create, Edit or Delete buttons and no columns or filters.",
     tags: ["create follow up action","add follow up action","edit follow up action","follow up actions buttons","follow up actions columns"]
   },
   {
@@ -8355,7 +8355,7 @@ const QA_FOLLOWUPACTIONS = [
     scope: "project",
     section: "Where Follow Up Actions Come From",
     question: "Where do Follow Up Actions items come from?",
-    answer: "The page has no setup of its own and nothing on it creates items. The Follow Up Actions buttons on RFI forms and Daily Safety Issues open it. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "Open the project and go to **Follow Up Actions**. The page has no setup of its own and nothing on it creates items. The Follow Up Actions buttons on RFI forms and Daily Safety Issues open it. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["where do follow up actions come from","what populates follow up actions","follow up actions source","how are follow up actions generated","follow up actions lineage","follow up actions data source"]
   },
   {
@@ -8385,7 +8385,7 @@ const QA_PROJECTNOTIFICATIONS = [
     scope: "project",
     section: "Event Groups",
     question: "How do I organize which events trigger notifications for a project?",
-    answer: "Open <strong>Notifications</strong> (the <strong>Notification Schema</strong>) and stay on <strong>Event Groups</strong>: <strong>Get Standard Event Groups</strong> creates Arena's standard groups and <strong>Add Event Groups</strong> asks for a <strong>Name</strong>; on a group you then pick its events and its users (per Arena's guide). The event list itself and the message wording are on the <strong>Events</strong> tab (32 groups, 257 events). For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "Open the project and go to **Notifications → Event Groups** (the **Notification Schema**) and stay on <strong>Event Groups</strong>: <strong>Get Standard Event Groups</strong> creates Arena's standard groups and <strong>Add Event Groups</strong> asks for a <strong>Name</strong>; on a group you then pick its events and its users (per Arena's guide). The event list itself and the message wording are on the <strong>Events</strong> tab (32 groups, 257 events). For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["event groups","notification schema","standard event groups"]
   },
   {
@@ -8448,7 +8448,7 @@ const QA_PROJECTNOTIFICATIONS = [
     scope: "project",
     section: "Reminders",
     question: "How do I check if a reminder already exists before creating a new one?",
-    answer: "Use the search bar at the top of the Reminders tab (or the Alerts tab, for alerts) to look through the list of already-configured reminders/alerts by name before clicking Create, to avoid duplicating one that already covers the same event.",
+    answer: "Open the project and go to **Notifications → Reminders**. Use the search bar at the top of the Reminders tab (or the Alerts tab, for alerts) to look through the list of already-configured reminders/alerts by name before clicking Create, to avoid duplicating one that already covers the same event.",
     tags: ["search reminders","search alerts","duplicate prevention"]
   },
   {
@@ -8502,7 +8502,7 @@ const QA_PROJECTNOTIFICATIONS = [
     scope: "project",
     section: "Events",
     question: "How many events are there in the Events tab and which groups have the most?",
-    answer: "257 events in 32 groups. The largest are <strong>Drawing Management</strong> (20), <strong>Progress</strong> (18), <strong>Document Management</strong> (17), <strong>Custom Forms</strong> (16) and <strong>RFIS</strong> (14). The smallest have one event: <strong>Data Analytics</strong> (Data Table Shared), <strong>Form Sharing</strong> (Form Received) and <strong>Site Posts</strong>.",
+    answer: "Open the project and go to **Notifications → Events**. 257 events in 32 groups. The largest are <strong>Drawing Management</strong> (20), <strong>Progress</strong> (18), <strong>Document Management</strong> (17), <strong>Custom Forms</strong> (16) and <strong>RFIS</strong> (14). The smallest have one event: <strong>Data Analytics</strong> (Data Table Shared), <strong>Form Sharing</strong> (Form Received) and <strong>Site Posts</strong>.",
     tags: ["how many events","number of events","largest event group","event count","how many notification events"]
   },
   {
@@ -8595,7 +8595,7 @@ const QA_USERSANDPERMISSIONS = [
     scope: "project",
     section: "Groups Permission",
     question: "How do I create a new permission group for this project?",
-    answer: "Go to <strong>Groups Permission</strong> and click <strong>Add User Group</strong> (name, description, permissions, users, <strong>Save Changes</strong>), or click <strong>Fetch Templates</strong> to create groups from seven standard templates (Field Users, Operations Team, Quality Admins, IT Admin, Project Safety Coordinator, Project Quality Coordinator, PROJECT POC ADMIN). Then use <strong>Users</strong> on the card to add members.",
+    answer: "Open the project and go to **Users and Permissions → Groups Permission**, then click <strong>Add User Group</strong> (name, description, permissions, users, <strong>Save Changes</strong>), or click <strong>Fetch Templates</strong> to create groups from seven standard templates (Field Users, Operations Team, Quality Admins, IT Admin, Project Safety Coordinator, Project Quality Coordinator, PROJECT POC ADMIN). Then use <strong>Users</strong> on the card to add members.",
     tags: ["add user group","fetch templates","permission group"]
   },
   {
@@ -8604,7 +8604,7 @@ const QA_USERSANDPERMISSIONS = [
     scope: "project",
     section: "Groups Permission",
     question: "How do I see who belongs to a permission group and what it can access?",
-    answer: "On <strong>Groups Permission</strong> each group is a card with a type chip. Click <strong>Users</strong> to see its members (S.No., Name, Roster ID, Email ID, Username) or <strong>Permissions</strong> to see the View / Create / Edit / Delete / Admin / Download / Print / Assign To / Roll Back boxes by module.",
+    answer: "Open the project and go to **Users and Permissions → Groups Permission**. On <strong>Groups Permission</strong> each group is a card with a type chip. Click <strong>Users</strong> to see its members (S.No., Name, Roster ID, Email ID, Username) or <strong>Permissions</strong> to see the View / Create / Edit / Delete / Admin / Download / Print / Assign To / Roll Back boxes by module.",
     tags: ["group card","permissions button","users button","restricted group"]
   },
   {
@@ -8613,7 +8613,7 @@ const QA_USERSANDPERMISSIONS = [
     scope: "project",
     section: "Groups Permission",
     question: "How do I find a specific permission group in a project with many groups?",
-    answer: "Use the search bar on the Groups Permission tab to filter the group cards by name rather than scrolling through the full list.",
+    answer: "Open the project and go to **Users and Permissions → Groups Permission**. Use the search bar on the Groups Permission tab to filter the group cards by name rather than scrolling through the full list.",
     tags: ["search groups","groups permission","filter by name"]
   },
   {
@@ -8622,7 +8622,7 @@ const QA_USERSANDPERMISSIONS = [
     scope: "project",
     section: "User Permission",
     question: "How do I check exactly what one specific person can do on this project?",
-    answer: "Go to the User Permission tab (breadcrumb: User Permissions), select the user from the list on the left (shown by name and email), and review their Basic Details, Groups, and Permissions in the detail panel on the right.",
+    answer: "Open the project and go to **Users and Permissions → User Permission**, then select the user from the list on the left (shown by name and email), and review their Basic Details, Groups, and Permissions in the detail panel on the right.",
     tags: ["user permission","basic details","groups","individual access lookup"]
   },
   {
@@ -8640,7 +8640,7 @@ const QA_USERSANDPERMISSIONS = [
     scope: "project",
     section: "Groups Permission",
     question: "How do I add a user to an existing permission group on this project?",
-    answer: "Open the group's card on the Groups Permission tab and click Users to manage its membership, or go to the User Permission tab, select the user, and review/update their Groups from their individual detail panel.",
+    answer: "Open the project and go to **Users and Permissions → Groups Permission**. Open the group's card on the Groups Permission tab and click Users to manage its membership, or go to the User Permission tab, select the user, and review/update their Groups from their individual detail panel.",
     tags: ["assign user","group membership","groups permission"]
   },
   {
@@ -8649,7 +8649,7 @@ const QA_USERSANDPERMISSIONS = [
     scope: "project",
     section: "User Permission",
     question: "Where can I see a list of everyone who has access to this project?",
-    answer: "The User Permission tab shows a left-hand list of every user in the project, by name and email. Selecting any one of them opens their Basic Details, Groups, and Permissions on the right.",
+    answer: "Open the project and go to **Users and Permissions → User Permission**. The User Permission tab shows a left-hand list of every user in the project, by name and email. Selecting any one of them opens their Basic Details, Groups, and Permissions on the right.",
     tags: ["project user list","user permission tab","access roster"]
   },
   {
@@ -8703,7 +8703,7 @@ const QA_USERSANDPERMISSIONS = [
     scope: "project",
     section: "Groups Permission",
     question: "How does a permission map to what a user sees in Field Works and Project Setup?",
-    answer: "Permission rows follow the screens: under Field Works there is a row per card (Work Logs, Construction Forms, Cost, Quality Level 1 and 2, Punch Lists, Restraints, Daily Safety Issues, Meeting Minutes, Workorder Invoices and more); under Project Setup a row per area (Project Works, Roster, PhaseCode, Estimate, Tasks, Drawing Register, Forms, Workorder, Document Management and more). Turn View off for a row to hide that screen from the group.",
+    answer: "Open the project and go to **Users and Permissions → Groups Permission**. Permission rows follow the screens: under Field Works there is a row per card (Work Logs, Construction Forms, Cost, Quality Level 1 and 2, Punch Lists, Restraints, Daily Safety Issues, Meeting Minutes, Workorder Invoices and more); under Project Setup a row per area (Project Works, Roster, PhaseCode, Estimate, Tasks, Drawing Register, Forms, Workorder, Document Management and more). Turn View off for a row to hide that screen from the group.",
     tags: ["permission maps to screens","field works permissions","project setup permissions","what permissions do users see","permission to screen mapping","hide a screen from a user"]
   },
   {
@@ -8739,7 +8739,7 @@ const QA_USERSANDPERMISSIONS = [
     scope: "project",
     section: "User Permission",
     question: "Can I give one person extra permissions without a group?",
-    answer: "Yes. On User Permission the boxes not granted by a group are unticked and editable, and the panel has Save Changes. Group-granted boxes stay locked.",
+    answer: "Open the project and go to **Users and Permissions → User Permission**. Yes. On User Permission the boxes not granted by a group are unticked and editable, and the panel has Save Changes. Group-granted boxes stay locked.",
     tags: ["extra permission for one user","user level permission","grant permission to one person","individual permission"]
   },
   {
@@ -8805,7 +8805,7 @@ const QA_OWNERS = [
     scope: "project",
     section: "Owners",
     question: "How do I register a new owner on a project?",
-    answer: "On <strong>Owners</strong> click <strong>Register Owner</strong>. In <strong>Provide Owners Details</strong> fill <strong>Owner ID</strong>, <strong>First Name</strong>, <strong>Last Name</strong>, <strong>Username</strong>, <strong>Email</strong> and <strong>Initials</strong> (required), optionally a photo, phone number and signature label, then <strong>Submit</strong>.",
+    answer: "Open the project, go to **Owners** and click <strong>Register Owner</strong>. In <strong>Provide Owners Details</strong> fill <strong>Owner ID</strong>, <strong>First Name</strong>, <strong>Last Name</strong>, <strong>Username</strong>, <strong>Email</strong> and <strong>Initials</strong> (required), optionally a photo, phone number and signature label, then <strong>Submit</strong>.",
     tags: ["register owner","add owner","create owner"]
   },
   {
@@ -8916,7 +8916,7 @@ const QA_PROJECTSETTINGS = [
     scope: "project",
     section: "Look, Forms & Field Templates",
     question: "How do I switch the project's display theme between light and dark mode?",
-    answer: "Go to Project Settings — Look & Feel is the default landing panel. Choose Light or Dark, then click \"Save Changes\".",
+    answer: "Open the project and go to **Project Settings → Look & Feel** (the default landing panel). Choose Light or Dark, then click \"Save Changes\".",
     tags: ["look and feel","dark mode","light mode","appearance"]
   },
   {
@@ -9006,7 +9006,7 @@ const QA_PROJECTSETTINGS = [
     scope: "project",
     section: "Overview: The Project Configuration Hub",
     question: "How is Project Settings different from the settings under Global Data?",
-    answer: "Global Data holds the company-wide lists and templates; <strong>Project Settings</strong> holds the choices for one project. Four pages exist in both places: Date Format, Request for Information, Transmittals Submitted Type and Market Type. Other settings, such as <strong>Forms</strong> (colour only) and <strong>Quick Apps</strong> (who can use apps built in Global Data), only exist at project level. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "Open the project and go to **Project Settings**. Global Data holds the company-wide lists and templates; <strong>Project Settings</strong> holds the choices for one project. Four pages exist in both places: Date Format, Request for Information, Transmittals Submitted Type and Market Type. Other settings, such as <strong>Forms</strong> (colour only) and <strong>Quick Apps</strong> (who can use apps built in Global Data), only exist at project level. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["project settings","global data","override","distinction"]
   },
   {
@@ -9252,7 +9252,7 @@ const QA_COSTTRACKING = [
     scope: "module",
     section: "Who sets this up",
     question: "What is Cost Tracking?",
-    answer: "The company-wide, read-only view of estimated versus actual cost for all projects, grouped under Company Reports: Cost Control Dashboard, Cost by Projects and Cost by Cost Types. Estimates come from Project Setup > Estimate; actual costs from Field Works > Cost.",
+    answer: "The company-wide, read-only view of estimated versus actual cost for all projects, grouped under Company Reports: Cost Control Dashboard, Cost by Projects and Cost by Cost Types. Estimates come from **Project Setup → Estimate**; actual costs from **Field Works → Cost**.",
     tags: ["cost tracking","what is cost tracking","estimated vs actual cost","cost tracking module","company reports cost"]
   },
   {
@@ -9261,7 +9261,7 @@ const QA_COSTTRACKING = [
     scope: "module",
     section: "Who sets this up",
     question: "Where does Cost Tracking get its data?",
-    answer: "Estimated cost: approved estimates in Project Setup > Estimate. Actual cost: Field Works > Tree Version > Cost (Transaction, Change order, Transfer, Field Logs). Cost types, material, equipment and labor codes: Global Data > Cost. Project details: the project record.",
+    answer: "Estimated cost: approved estimates in **Project Setup → Estimate**. Actual cost: **Field Works → Tree Version → Cost** (Transaction, Change order, Transfer, Field Logs). Cost types, material, equipment and labor codes: **Global Data → Cost**. Project details: the project record.",
     tags: ["cost tracking data source","where does cost data come from","cost lineage","cost tracking sources"]
   },
   {
@@ -9270,7 +9270,7 @@ const QA_COSTTRACKING = [
     scope: "module",
     section: "Who sets this up",
     question: "How do I make a project appear in Cost Tracking with numbers?",
-    answer: "Create the cost types and codes in Global Data > Cost; create and approve an estimate in Project Setup > Estimate; set Level of Detail and Estimate Type in Project Settings > Cost Breakdown Structure; record actual costs in Field Works > Cost. Then check the project row in Cost by Projects.",
+    answer: "Create the cost types and codes in **Global Data → Cost**; create and approve an estimate in **Project Setup → Estimate**; set **Level of Detail and Estimate Type in Project Settings → Cost Breakdown Structure**; record actual costs in **Field Works → Cost**. Then check the project row in Cost by Projects.",
     tags: ["set up cost tracking","project not in cost tracking","cost tracking setup","who feeds cost tracking"]
   },
   {
@@ -9279,7 +9279,7 @@ const QA_COSTTRACKING = [
     scope: "module",
     section: "Who sets this up",
     question: "Is there a per-project version of Cost Tracking?",
-    answer: "Yes. Data Analytics & Insights > Cost has Cost Activity, Cost by Cost Types, Cost by Month, Payments by Month, Cost Analytics and Cost Graphs for one project. Its Cost by Cost Types shows the same rows as the company screen.",
+    answer: "Yes. **Data Analytics & Insights → Cost** has Cost Activity, Cost by Cost Types, Cost by Month, Payments by Month, Cost Analytics and Cost Graphs for one project. Its Cost by Cost Types shows the same rows as the company screen.",
     tags: ["project cost tracking","cost by cost types project","data analytics cost","cost analytics"]
   },
   {
@@ -9297,7 +9297,7 @@ const QA_COSTTRACKING = [
     scope: "module",
     section: "Cost Control Dashboard",
     question: "Where does the Contract Value on the dashboard come from?",
-    answer: "It is the Total of the project's approved estimate in Project Setup > Estimate > Setup Estimate (including Unit Rate and contingencies). For Arena Residential Project both are ₹20,67,52,576.08.",
+    answer: "It is the Total of the project's approved estimate in **Project Setup → Estimate → Setup Estimate** (including Unit Rate and contingencies). For Arena Residential Project both are ₹20,67,52,576.08.",
     tags: ["contract value source","total contract value","dashboard contract value","estimate total contract value"]
   },
   {
@@ -9306,7 +9306,7 @@ const QA_COSTTRACKING = [
     scope: "module",
     section: "Cost Control Dashboard",
     question: "How do I limit the dashboard to some projects?",
-    answer: "Use the Projects drop-down at the top of the Cost Control Dashboard; all projects are ticked by default and the tiles, table and charts follow your selection.",
+    answer: "From **Home**, open **Cost Tracking → Cost Control Dashboard**. Use the Projects drop-down at the top of the Cost Control Dashboard; all projects are ticked by default and the tiles, table and charts follow your selection.",
     tags: ["dashboard projects filter","select projects cost dashboard","portfolio filter"]
   },
   {
@@ -9360,7 +9360,7 @@ const QA_COSTTRACKING = [
     scope: "module",
     section: "Cost by Projects",
     question: "Where do the project number, location and contact come from?",
-    answer: "From the project record (Projects > Create Project). The cost columns come from the project estimate and cost logs.",
+    answer: "From the project record (**Projects → Create Project**). The cost columns come from the project estimate and cost logs.",
     tags: ["project location contact cost","project number cost","cost by projects columns source"]
   },
   {
@@ -9378,7 +9378,7 @@ const QA_COSTTRACKING = [
     scope: "module",
     section: "Cost by Cost Types",
     question: "How do Labor, Material and Equipment add up to the total?",
-    answer: "Labor, Material and Equipment add up to the header **Total Estimate Cost** and to the Cost by Projects total. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "From **Home**, open **Cost Tracking → Cost by Cost Types**. Labor, Material and Equipment add up to the header **Total Estimate Cost** and to the Cost by Projects total. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["cost types add up","total estimate cost calculation","cost type totals"]
   },
   {
@@ -9387,7 +9387,7 @@ const QA_COSTTRACKING = [
     scope: "module",
     section: "Cost by Cost Types",
     question: "Where do the item names and codes in Cost by Cost Types come from?",
-    answer: "From the lines of the approved estimate, added up per item. The codes are the codes in Global Data > Cost (for example material 0211LS90, labor 6107.07, equipment A-01).",
+    answer: "From the lines of the approved estimate, added up per item. The codes are the codes in **Global Data → Cost** (for example material 0211LS90, labor 6107.07, equipment A-01).",
     tags: ["cost code source","material code cost tracking","labor code cost tracking","where do cost items come from"]
   },
   {
@@ -9405,7 +9405,7 @@ const QA_COSTTRACKING = [
     scope: "module",
     section: "Where the Estimate Side Comes From",
     question: "How do I create a new cost estimate?",
-    answer: "In Project Setup > Estimate open the tree version card, click Create Estimate, enter Name, Description, Approval Workflow and Cost Breakdown Structure, choose a template per cost type and Submit. Then complete Setup CBS and Setup Estimate in the estimate.",
+    answer: "In **Project Setup → Estimate** open the tree version card, click Create Estimate, enter Name, Description, Approval Workflow and Cost Breakdown Structure, choose a template per cost type and Submit. Then complete Setup CBS and Setup Estimate in the estimate.",
     tags: ["create cost estimate","new estimate","create estimate","how do i create a new cost estimate"]
   },
   {
@@ -9414,7 +9414,7 @@ const QA_COSTTRACKING = [
     scope: "module",
     section: "Where the Estimate Side Comes From",
     question: "Where does the estimated cost in Cost Tracking come from?",
-    answer: "From the approved estimate of each project (Project Setup > Estimate). Setup Estimate shows Material, Equipment, Labor, Unit Rate, Sub Total, Contingencies Value and Total; Estimate Summary lists the lines.",
+    answer: "From the approved estimate of each project (**Project Setup → Estimate**). Setup Estimate shows Material, Equipment, Labor, Unit Rate, Sub Total, Contingencies Value and Total; Estimate Summary lists the lines.",
     tags: ["estimated cost source","where does estimated cost come from","estimate summary","setup estimate"]
   },
   {
@@ -9423,7 +9423,7 @@ const QA_COSTTRACKING = [
     scope: "module",
     section: "Where the Estimate Side Comes From",
     question: "Where can I see a summary of all project costs?",
-    answer: "Open the estimate in Project Setup > Estimate and go to Estimate Summary: tabs Material, Equipment, Labor, Unit Rate and All; All groups lines by phase code. For company totals use Cost by Projects.",
+    answer: "Open the estimate in **Project Setup → Estimate** and go to Estimate Summary: tabs Material, Equipment, Labor, Unit Rate and All; All groups lines by phase code. For company totals use Cost by Projects.",
     tags: ["summary of project costs","estimate summary","where can i see a summary of all project costs"]
   },
   {
@@ -9432,7 +9432,7 @@ const QA_COSTTRACKING = [
     scope: "module",
     section: "Where the Estimate Side Comes From",
     question: "How do I set up an approval workflow for cost estimates?",
-    answer: "Open Project Settings > Cost Breakdown Structure > Approval WorkFlow, click Create Approval WorkFlow, then Create Level, choose All must approve or Any one can approve and pick approvers; repeat for more levels.",
+    answer: "Open **Project Settings → Cost Breakdown Structure → Approval WorkFlow**, click Create Approval WorkFlow, then Create Level, choose All must approve or Any one can approve and pick approvers; repeat for more levels.",
     tags: ["cost estimate approval workflow","approval workflow estimate","create level estimate","how do i set up an approval workflow for cost estimates"]
   },
   {
@@ -9450,7 +9450,7 @@ const QA_COSTTRACKING = [
     scope: "module",
     section: "Where the Estimate Side Comes From",
     question: "What do the Cost Breakdown Structure settings do?",
-    answer: "In Project Settings > Cost Breakdown Structure: CBS (how estimate lines are structured, Entity down to Work Package and Phase Code), Approval WorkFlow, Level of Detail (Phase Code or Phase Code - Cost Code) and Estimate Type (Lump Sum or Time & Material).",
+    answer: "In **Project Settings → Cost Breakdown Structure**: CBS (how estimate lines are structured, Entity down to Work Package and Phase Code), Approval WorkFlow, Level of Detail (Phase Code or Phase Code - Cost Code) and Estimate Type (Lump Sum or Time & Material).",
     tags: ["cost breakdown structure","level of detail","estimate type","lump sum time and material","cbs settings"]
   },
   {
@@ -9459,7 +9459,7 @@ const QA_COSTTRACKING = [
     scope: "module",
     section: "Where the Estimate Side Comes From",
     question: "Where do the cost types and templates in Create Estimate come from?",
-    answer: "Cost types and item codes come from Global Data > Cost; the template drop-downs are the Global Data cost templates. The approval workflow is the one set in Project Settings.",
+    answer: "Cost types and item codes come from **Global Data → Cost**; the template drop-downs are the Global Data cost templates. The approval workflow is the one set in Project Settings.",
     tags: ["create estimate templates source","cost types source","global data cost estimate"]
   },
   {
@@ -9468,7 +9468,7 @@ const QA_COSTTRACKING = [
     scope: "module",
     section: "Where Actual Costs Come From",
     question: "Where do actual costs come from?",
-    answer: "From the cost logs in Field Works > Tree Version > Cost: Transaction (purchase orders and other expenses), Change order, Transfer and Field Logs (Material, Machinery, Manpower, Sub Contractor). They need an active, approved estimate for the tree version.",
+    answer: "From the cost logs in **Field Works → Tree Version → Cost**: Transaction (purchase orders and other expenses), Change order, Transfer and Field Logs (Material, Machinery, Manpower, Sub Contractor). They need an active, approved estimate for the tree version.",
     tags: ["where do actual costs come from","actual cost source","actual cost tracking","field works cost","cost transaction logs"]
   },
   {
@@ -9477,7 +9477,7 @@ const QA_COSTTRACKING = [
     scope: "module",
     section: "Where Actual Costs Come From",
     question: "How do I record an actual cost?",
-    answer: "In Field Works open the tree version, the Cost tab, Transaction, and click Create. Pick the Phase Code, enter Cost Code, Actual Cost, Committed Cost and Cost Type, then Save As Draft or Submit.",
+    answer: "Open the project and go to **Field Works**, open the tree version, then **Cost → Transaction** and click **Create**. Pick the Phase Code, enter Cost Code, Actual Cost, Committed Cost and Cost Type, then Save As Draft or Submit.",
     tags: ["record actual cost","create cost transaction","add cost log","transaction log cost","committed cost"]
   },
   {
@@ -9495,7 +9495,7 @@ const QA_COSTTRACKING = [
     scope: "module",
     section: "Where Actual Costs Come From",
     question: "Why does Transfer say the level of detail is not set?",
-    answer: "Transfer moves budget between cost or phase codes and needs Project Settings > Cost Breakdown Structure > Level of Detail (Phase Code or Phase Code - Cost Code) to be chosen first.",
+    answer: "Transfer moves budget between cost or phase codes and needs **Project Settings → Cost Breakdown Structure → Level of Detail** (Phase Code or Phase Code - Cost Code) to be chosen first.",
     tags: ["level of detail not set","cost transfer","transfer budget"]
   },
   {
@@ -9504,7 +9504,7 @@ const QA_COSTTRACKING = [
     scope: "module",
     section: "Where Actual Costs Come From",
     question: "Do purchase orders and invoices count as actual cost?",
-    answer: "Not automatically. Actual cost counts what is recorded and approved as cost logs in Field Works > Cost. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "Not automatically. Actual cost counts what is recorded and approved as cost logs in **Field Works → Cost**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["purchase orders actual cost","invoices actual cost","procurement cost tracking","timesheets cost tracking","equipment cost tracking"]
   },
   {
@@ -9513,7 +9513,7 @@ const QA_COSTTRACKING = [
     scope: "module",
     section: "Where Actual Costs Come From",
     question: "Why is a project's actual cost zero?",
-    answer: "No approved cost log exists for it in Field Works > Cost (Transaction, Change order, Transfer, Field Logs), or its tree version has no approved estimate. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "No approved cost log exists for it in **Field Works → Cost** (Transaction, Change order, Transfer, Field Logs), or its tree version has no approved estimate. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["why is actual cost zero","actual cost zero","no actual cost","actual costs missing"]
   },
   {
@@ -9522,7 +9522,7 @@ const QA_COSTTRACKING = [
     scope: "module",
     section: "How Phase Codes and Cost Types Roll Up",
     question: "How do phase codes and cost types roll up?",
-    answer: "Each estimate line has a phase code and cost type. Estimate Summary > All groups lines by phase code; Cost by Cost Types adds lines per item and block (Labor, Material, Equipment); Cost by Projects and the dashboard add the blocks per project and company.",
+    answer: "Each estimate line has a phase code and cost type. **Estimate Summary → All** groups lines by phase code; Cost by Cost Types adds lines per item and block (Labor, Material, Equipment); Cost by Projects and the dashboard add the blocks per project and company.",
     tags: ["phase code roll up","cost type roll up","how phase codes roll up","phase code cost tracking"]
   },
   {
@@ -9531,7 +9531,7 @@ const QA_COSTTRACKING = [
     scope: "module",
     section: "How Phase Codes and Cost Types Roll Up",
     question: "What cost types exist?",
-    answer: "Material, Equipment, Labor, Unit Rate, Sub Contractor, BOQ's, Freight Charges and Fuel & Gas (Global Data > Cost). Cost by Cost Types shows Labor, Material and Equipment blocks.",
+    answer: "Material, Equipment, Labor, Unit Rate, Sub Contractor, BOQ's, Freight Charges and Fuel & Gas (**Global Data → Cost**). Cost by Cost Types shows Labor, Material and Equipment blocks.",
     tags: ["cost types","list of cost types","cost type options"]
   },
   {
@@ -9540,7 +9540,7 @@ const QA_COSTTRACKING = [
     scope: "module",
     section: "How Phase Codes and Cost Types Roll Up",
     question: "Where can I see cost by phase code?",
-    answer: "In Data Analytics & Insights > Cost > Cost Analytics (Inputs, Summary, Control Budget) per project and tree version: phase code with actual, committed, variance, CPI, SPI, EAC and ETC. These were empty on the test trees.",
+    answer: "In **Data Analytics & Insights → Cost → Cost Analytics** (Inputs, Summary, Control Budget) per project and tree version: phase code with actual, committed, variance, CPI, SPI, EAC and ETC. These were empty on the test trees.",
     tags: ["cost by phase code","cost analytics","control budget","eac etc"]
   },
   {
@@ -9549,7 +9549,7 @@ const QA_COSTTRACKING = [
     scope: "module",
     section: "Checking the Numbers and Why a Cost Shows Zero",
     question: "Why is a project's estimated cost zero?",
-    answer: "The project has no estimate in Project Setup > Estimate, the estimate is not approved, or its lines have zero quantity or rate. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "The project has no estimate in **Project Setup → Estimate**, the estimate is not approved, or its lines have zero quantity or rate. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["why is estimate zero","estimated cost zero","no estimate cost tracking","project missing from cost tracking"]
   },
   {
@@ -9558,7 +9558,7 @@ const QA_COSTTRACKING = [
     scope: "module",
     section: "Checking the Numbers and Why a Cost Shows Zero",
     question: "How can I check that Cost Tracking numbers are right?",
-    answer: "Compare screens: Cost by Projects total = sum of Cost by Cost Types blocks; dashboard Contract Value = estimate Total in Setup Estimate; Unit Rate explains the difference. Then compare lines with Estimate Summary > All.",
+    answer: "Compare screens: Cost by Projects total = sum of Cost by Cost Types blocks; dashboard Contract Value = estimate Total in Setup Estimate; Unit Rate explains the difference. Then compare lines with **Estimate Summary → All**.",
     tags: ["verify cost tracking","cost numbers do not match","reconcile cost tracking","check cost totals"]
   }
 ];
@@ -9591,7 +9591,7 @@ const QA_PERMISSIONS = [
     scope: "project",
     section: "User Groups",
     question: "How do I create a new role or permission group in a project?",
-    answer: "Open the project's Permissions screen, click the \"User Group\" button, and enter the name of the new user group in the pop-up.",
+    answer: "Open the project and go to **Permissions**, then click the **User Group** button, and enter the name of the new user group in the pop-up.",
     tags: ["create permission group","project role","user group project"]
   },
   {
@@ -9609,7 +9609,7 @@ const QA_PERMISSIONS = [
     scope: "project",
     section: "Copy to Projects",
     question: "How do I copy a user group's permissions to other projects?",
-    answer: "On the Permissions screen, click \"Copy User Groups to Projects\", which opens a pop-up to select the target projects to copy the user group(s) to.",
+    answer: "Open the project and go to **Permissions**, then click \"Copy User Groups to Projects\", which opens a pop-up to select the target projects to copy the user group(s) to.",
     tags: ["copy user group","copy permissions to projects"]
   },
   {
@@ -9618,7 +9618,7 @@ const QA_PERMISSIONS = [
     scope: "project",
     section: "User Groups",
     question: "How do I rename, duplicate, or delete a permission role?",
-    answer: "On the role's kebab menu (3 vertical dots): \"Edit\" opens a pop-up to rename the group; \"Copy\" duplicates the group's users and permissions into a new named group; \"Delete\" removes the group with a confirmation warning.",
+    answer: "Open the project and go to **Permissions**. On the role's kebab menu (3 vertical dots): \"Edit\" opens a pop-up to rename the group; \"Copy\" duplicates the group's users and permissions into a new named group; \"Delete\" removes the group with a confirmation warning.",
     tags: ["edit role","copy role","delete permission group"]
   },
   {
@@ -9627,7 +9627,7 @@ const QA_PERMISSIONS = [
     scope: "project",
     section: "User Groups",
     question: "How do I add users to a permission/role group?",
-    answer: "On the role's card, click \"Users\" to open the list of users, and select which users should have that role's configured permissions and rights.",
+    answer: "Open the project and go to **Permissions**. On the role's card, click \"Users\" to open the list of users, and select which users should have that role's configured permissions and rights.",
     tags: ["assign users to role","add users to permission group"]
   }
 ];
@@ -9635,8 +9635,8 @@ const QA_PERMISSIONS = [
 const QA_WORKORDER = [
   {"action":"explain","object":"data lineage","scope":"module","section":"Profile and Items","question":"Where does the Technician list on a work order come from, and why is someone missing?","answer":"The **Technician**, **Assign To** and **Approver** dropdowns list only users added under **Settings → Users and Permissions** with the matching permission. Technician shows only when **Service Location** is **Internal (Shop / In-House)**.","tags":["technician list source","assign to dropdown source","approver dropdown","work order technician dropdown","work order technician list come from","where does the technician list on a work order come from","technician missing from work order dropdown"]},
   {"action":"explain","object":"data lineage","scope":"module","section":"The Work Orders Page","question":"Where do the Priority, Work Order Status and Maintenance Type lists come from?","answer":"They come from **Settings → Work Orders** for the work order type: statuses, **Priority** levels (with Due Hours, shown in the order set there) and **Maintenance Types**. Change them there, not on the work order.","tags":["priority list source","status dropdown source","maintenance type source"]},
-  {"action":"explain","object":"data lineage","scope":"module","section":"Profile and Items","question":"Where does the equipment information on a work order come from?","answer":"The **Equipment** status, hours reading, warranty and location are fetched from the Equipment Master and cannot be edited on the work order. When the work order is approved, the equipment status updates from the **Operational Status** and the work order is added to the equipment's maintenance history.","tags":["equipment info source","equipment status fetched","maintenance history"]},
-  {"action":"explain","object":"data lineage","scope":"module","section":"Invoices and Cost","question":"Where do the Cost tab values on a work order come from?","answer":"The **Cost** tab fills automatically; you cannot type on it. Hours booked in Timesheets go to **Labor**, materials issued from inventory to **Parts**, expenses to **Other**, and vendor invoices count only after all approval levels are done.","tags":["cost tab source","labor parts other","where does cost come from"]},
+  {"action":"explain","object":"data lineage","scope":"module","section":"Profile and Items","question":"Where does the equipment information on a work order come from?","answer":"From **Home**, open **Work Order → Work Orders**, open the work order, then its **Profile** tab. The **Equipment** status, hours reading, warranty and location are fetched from the Equipment Master and cannot be edited on the work order. When the work order is approved, the equipment status updates from the **Operational Status** and the work order is added to the equipment's maintenance history.","tags":["equipment info source","equipment status fetched","maintenance history"]},
+  {"action":"explain","object":"data lineage","scope":"module","section":"Invoices and Cost","question":"Where do the Cost tab values on a work order come from?","answer":"From **Home**, open **Work Order → Work Orders**, open the work order, then its **Cost** tab. The **Cost** tab fills automatically; you cannot type on it. Hours booked in Timesheets go to **Labor**, materials issued from inventory to **Parts**, expenses to **Other**, and vendor invoices count only after all approval levels are done.","tags":["cost tab source","labor parts other","where does cost come from"]},
   {"action":"explain","object":"data lineage","scope":"module","section":"Timesheets","question":"Why do I not see a phase code or crew member when booking time on a work order?","answer":"Phase Codes must be configured under **Projects → Project Setup → Phase Codes**, and time can be booked under **My Crew Timesheet** only for users added on the **Team** tab.","tags":["phase code missing timesheet","crew member missing timesheet","book time crew"]},
   {
     action: "create",
@@ -9653,7 +9653,7 @@ const QA_WORKORDER = [
     scope: "module",
     section: "The Work Orders Page",
     question: "How do I open a work order I already created?",
-    answer: "On the **Work Orders** tab, click the work order. It opens on the **Profile** tab. Use the list, grid and column view icons on the right to change how the list looks.",
+    answer: "From **Home**, open **Work Order → Work Orders**. On the **Work Orders** tab, click the work order. It opens on the **Profile** tab. Use the list, grid and column view icons on the right to change how the list looks.",
     tags: ["open work order","view work order","work order card","switch view"]
   },
   {
@@ -9671,7 +9671,7 @@ const QA_WORKORDER = [
     scope: "module",
     section: "Profile and Items",
     question: "How do I add an item inside a work order?",
-    answer: "Open the work order's Profile tab and click \"Create Item\". You can create multiple items inside one work order, and each item can be connected to a Project tree or to Issues.",
+    answer: "From **Home**, open **Work Order → Work Orders**, open the work order, then its **Profile** tab. Click \"Create Item\". You can create multiple items inside one work order, and each item can be connected to a Project tree or to Issues.",
     tags: ["add item","work order item","create item","link item"]
   },
   {
@@ -9680,7 +9680,7 @@ const QA_WORKORDER = [
     scope: "module",
     section: "Profile and Items",
     question: "How do I link a work order item to a project tree?",
-    answer: "In Work Order - Profile, when linking an item to a tree, select the Project, then select its tree version, and continue through the remaining tree selections.",
+    answer: "From **Home**, open **Work Order → Work Orders**, open the work order, then its **Profile** tab. When linking an item to a tree, select the Project, then select its tree version, and continue through the remaining tree selections.",
     tags: ["link project tree","item to tree","project version","tree linking"]
   },
   {
@@ -9689,7 +9689,7 @@ const QA_WORKORDER = [
     scope: "module",
     section: "Profile and Items",
     question: "How do I link issues to a work order item?",
-    answer: "In Work Order - Profile, when linking with Issues, select the Issue type from the dropdown to see the detailed list of issues, then select one or multiple issues to link to the item.",
+    answer: "From **Home**, open **Work Order → Work Orders**, open the work order, then its **Profile** tab. When linking with Issues, select the Issue type from the dropdown to see the detailed list of issues, then select one or multiple issues to link to the item.",
     tags: ["link issues","item issues","issue linking","work order issues"]
   },
   {
@@ -9698,7 +9698,7 @@ const QA_WORKORDER = [
     scope: "module",
     section: "Team",
     question: "How do I add users to a work order's team?",
-    answer: "Go to Work Order - Team, select the \"Users\" tab at the top, multi-select the users you want to add, then click Submit.",
+    answer: "From **Home**, open **Work Order → Work Orders**, open the work order, then its **Team** tab. Select the \"Users\" tab at the top, multi-select the users you want to add, then click Submit.",
     tags: ["add users","work order team","assign users","team setup"]
   },
   {
@@ -9716,7 +9716,7 @@ const QA_WORKORDER = [
     scope: "module",
     section: "Drawings",
     question: "How do I upload a drawing to a work order?",
-    answer: "Go to Work Order - Drawings and click \"Upload Drawing\". Once uploaded, the drawing appears on the same page; you can switch between table view and card view.",
+    answer: "From **Home**, open **Work Order → Work Orders**, open the work order, then its **Drawings** tab. Click \"Upload Drawing\". Once uploaded, the drawing appears on the same page; you can switch between table view and card view.",
     tags: ["upload drawing","work order drawing","add drawing","drawing tab"]
   },
   {
@@ -9725,7 +9725,7 @@ const QA_WORKORDER = [
     scope: "module",
     section: "Drawings",
     question: "How do I annotate or delete a work order drawing?",
-    answer: "On Work Order - Drawings, open the ellipsis (...) menu on the drawing and choose Edit, Annotate, or Delete. Choose \"Annotate\" to mark changes directly on the drawing file.",
+    answer: "From **Home**, open **Work Order → Work Orders**, open the work order, then its **Drawings** tab. Open the ellipsis (...) menu on the drawing and choose Edit, Annotate, or Delete. Choose \"Annotate\" to mark changes directly on the drawing file.",
     tags: ["annotate drawing","edit drawing","delete drawing","drawing menu"]
   },
   {
@@ -9743,7 +9743,7 @@ const QA_WORKORDER = [
     scope: "module",
     section: "Communication",
     question: "How do I send an email from a work order?",
-    answer: "Go to Work Order - Communication and click \"Compose Mail\" to send a new mail. This tab is a mail repository for the work order with Sent, Starred, Drafts, and Trash sections, similar to a standard inbox.",
+    answer: "From **Home**, open **Work Order → Work Orders**, open the work order, then its **Communication** tab. Click \"Compose Mail\" to send a new mail. This tab is a mail repository for the work order with Sent, Starred, Drafts, and Trash sections, similar to a standard inbox.",
     tags: ["compose mail","work order email","send mail","communication tab"]
   },
   {
@@ -9887,7 +9887,7 @@ const QA_WORKORDER = [
     scope: "module",
     section: "The Work Orders Page",
     question: "How do I filter or export the work order list?",
-    answer: "On the **Work Orders** tab, use **Search by ID**, or click **Filters** to narrow by Work Order Status, Created By, Equipment Number, Equipment Status, Maintenance Type, Operational Status, Location, Service Type, Priority or Business Unit. Use **Manage Columns** and **Apply** to choose the columns, the view icons for list, grid or column view, and **Export** to download.",
+    answer: "From **Home**, open **Work Order → Work Orders**. On the **Work Orders** tab, use **Search by ID**, or click **Filters** to narrow by Work Order Status, Created By, Equipment Number, Equipment Status, Maintenance Type, Operational Status, Location, Service Type, Priority or Business Unit. Use **Manage Columns** and **Apply** to choose the columns, the view icons for list, grid or column view, and **Export** to download.",
     tags: ["filter work orders","export work orders","manage columns","search work order","work order list","work order filters"]
   },
   {
@@ -9896,7 +9896,7 @@ const QA_WORKORDER = [
     scope: "module",
     section: "The Work Orders Page",
     question: "How do I raise a work order against equipment or from an inspection issue?",
-    answer: "On the **Work Orders** tab, click **Create**, pick the **Work Order Type** and enter the **WO Description** and **Work Order Status**. Choose **Create By**: **Inspection Issue** (pick the **Equipment Issue Linked** and the equipment fills in) or **Equipment** (pick the equipment). Then set the **Maintenance Type**, **Business Unit**, **Project**, **Phase Code**, **Created Date** and **Notes**, the **Priority**, **Operational Status** and **Due Date**, and the **Service Location**. Choose **Internal (Shop / In-House)** and a **Technician**, or **External Vendor** with the **Vendor**, **Vendor Contact** and **Vendor PO Number**. Click **Submit**.",
+    answer: "From **Home**, open **Work Order → Work Orders**. On the **Work Orders** tab, click **Create**, pick the **Work Order Type** and enter the **WO Description** and **Work Order Status**. Choose **Create By**: **Inspection Issue** (pick the **Equipment Issue Linked** and the equipment fills in) or **Equipment** (pick the equipment). Then set the **Maintenance Type**, **Business Unit**, **Project**, **Phase Code**, **Created Date** and **Notes**, the **Priority**, **Operational Status** and **Due Date**, and the **Service Location**. Choose **Internal (Shop / In-House)** and a **Technician**, or **External Vendor** with the **Vendor**, **Vendor Contact** and **Vendor PO Number**. Click **Submit**.",
     tags: ["create work order from inspection issue","raise work order equipment","create by","inspection issue","service location","internal or vendor","work order fields"]
   },
   {
@@ -9932,7 +9932,7 @@ const QA_WORKORDER = [
     scope: "module",
     section: "Profile and Items",
     question: "How do I assign a work order or send it for approval?",
-    answer: "At the bottom of the Profile, pick the user in **Assign To**, then click **Submit** to save and assign, or **Submit for Approval** to route it through the approval workflow. The equipment status changes only after you submit.",
+    answer: "From **Home**, open **Work Order → Work Orders**, open the work order, then its **Profile** tab. At the bottom of the Profile, pick the user in **Assign To**, then click **Submit** to save and assign, or **Submit for Approval** to route it through the approval workflow. The equipment status changes only after you submit.",
     tags: ["assign work order","submit for approval","assign to","submit work order"]
   },
   {
@@ -9995,7 +9995,7 @@ const QA_WORKORDER = [
     scope: "module",
     section: "Equipment",
     question: "How do I request equipment or accessories for a work order?",
-    answer: "On the work order's equipment tab, click **Add** to open the **Request Form**. Pick the equipment or accessories from the **Available Equipment / Accessory** panel, then enter the **Requested Date**, **Supervisor**, **Job ID / Job Name** (required), **Job Location** and **Notes** and click **Submit**. In the **Transfer** dialog, choose **New LOR** or **REQ** as the destination. This is separate from the equipment being serviced, which you choose on the Profile.",
+    answer: "From **Home**, open **Work Order → Work Orders**, open the work order, then its **Equipment** tab. On the work order's equipment tab, click **Add** to open the **Request Form**. Pick the equipment or accessories from the **Available Equipment / Accessory** panel, then enter the **Requested Date**, **Supervisor**, **Job ID / Job Name** (required), **Job Location** and **Notes** and click **Submit**. In the **Transfer** dialog, choose **New LOR** or **REQ** as the destination. This is separate from the equipment being serviced, which you choose on the Profile.",
     tags: ["request equipment","equipment tab","request form","transfer new LOR","accessories","job id"]
   },
   {
@@ -10013,7 +10013,7 @@ const QA_WORKORDER = [
     scope: "module",
     section: "Documents",
     question: "How are documents organised on a work order?",
-    answer: "The **Documents** tab shows folders named after the tab the files came from: Profile, Items, Timesheet, Equipment, Inventory, Procurement, Expense and Communication. Click a folder to open it and use the breadcrumb to go back up.",
+    answer: "From **Home**, open **Work Order → Work Orders**, open the work order, then its **Documents** tab. The **Documents** tab shows folders named after the tab the files came from: Profile, Items, Timesheet, Equipment, Inventory, Procurement, Expense and Communication. Click a folder to open it and use the breadcrumb to go back up.",
     tags: ["document folders","documents by tab","work order documents folders","breadcrumb"]
   },
   {
@@ -10076,7 +10076,7 @@ const QA_WORKORDER = [
     scope: "module",
     section: "Invoices and Cost",
     question: "How is the cost of a work order calculated?",
-    answer: "The **Cost** tab fills itself from the other tabs; nobody types a cost into it. **Parts** = approved purchase orders from Procurement plus Inventory pulls. **Labor** = timesheet hours times rate. **External / Vendor** = approved vendor invoices matched to the work order. **Other** = Expense tab entries. **Net Cost** = the total of all of these.",
+    answer: "From **Home**, open **Work Order → Work Orders**, open the work order, then its **Cost** tab. The **Cost** tab fills itself from the other tabs; nobody types a cost into it. **Parts** = approved purchase orders from Procurement plus Inventory pulls. **Labor** = timesheet hours times rate. **External / Vendor** = approved vendor invoices matched to the work order. **Other** = Expense tab entries. **Net Cost** = the total of all of these.",
     tags: ["work order cost","cost tab","net cost","parts labor other","cost breakdown","how cost is calculated"]
   },
   {
@@ -10085,7 +10085,7 @@ const QA_WORKORDER = [
     scope: "module",
     section: "Approval, Cancel and Reopen",
     question: "How do I approve or reject a work order?",
-    answer: "Open the work order and review its tabs, items, cost and attachments. The Requester clicks **Submit for Approval**, and the Approver clicks **Approve** or **Reject** and enters comments. On approval the work goes ahead and the work order becomes read-only. On rejection it returns to the Requester with the remarks, and a workflow issue appears under **Workflow Issues**. With several levels it stays pending until every level approves.",
+    answer: "From **Home**, open **Work Order → Work Orders** and open the work order. Open the work order and review its tabs, items, cost and attachments. The Requester clicks **Submit for Approval**, and the Approver clicks **Approve** or **Reject** and enters comments. On approval the work goes ahead and the work order becomes read-only. On rejection it returns to the Requester with the remarks, and a workflow issue appears under **Workflow Issues**. With several levels it stays pending until every level approves.",
     tags: ["approve work order","reject work order","work order approval","submit for approval","approver comments"]
   },
   {
@@ -10472,7 +10472,7 @@ const QA_WORKORDER = [
     scope: "module",
     section: "Equipment",
     question: "Where do equipment requests appear on a work order?",
-    answer: "On the work order's **Equipment** tab. Click **Add** for the Request Form; the requests and Load Out Requests raised for this work order are listed there.",
+    answer: "From **Home**, open **Work Order → Work Orders**, open the work order, then its **Equipment** tab. On the work order's **Equipment** tab. Click **Add** for the Request Form; the requests and Load Out Requests raised for this work order are listed there.",
     tags: ["equipment tab work order","load out request from work order","lor tab"]
   },
   {
@@ -10547,7 +10547,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "module",
     section: "Proposals",
     question: "How do I create a new proposal?",
-    answer: "Go to Proposal Management > Proposals and click \"Create\". In \"Create Proposal\" enter the Proposal Name, choose the Proposal Type and tick the Bid folder box if needed, then click \"Submit for Approval\". Open the proposal by clicking its name to fill the Profile (Opportunity, Bid Type, Project Type, customers, site, dates and values) and Save Changes. The Proposal ID is created from Settings > ID Settings.",
+    answer: "Go to **Proposal Management → Proposals** and click \"Create\". In \"Create Proposal\" enter the Proposal Name, choose the Proposal Type and tick the Bid folder box if needed, then click \"Submit for Approval\". Open the proposal by clicking its name to fill the Profile (Opportunity, Bid Type, Project Type, customers, site, dates and values) and Save Changes. The Proposal ID is created from **Settings → ID Settings**.",
     tags: ["new proposal","add proposal","start proposal","proposal creation","how do i create a proposal"]
   },
   {
@@ -10556,7 +10556,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "module",
     section: "Proposals",
     question: "How do I edit an existing proposal's details?",
-    answer: "In Proposal Management > Proposals, click the edit icon in Actions to change the Proposal Name or Proposal Type, or click the proposal name to open the Profile and change everything else (then Save Changes).",
+    answer: "In **Proposal Management → Proposals**, click the edit icon in Actions to change the Proposal Name or Proposal Type, or click the proposal name to open the Profile and change everything else (then Save Changes).",
     tags: ["update proposal","modify proposal","change proposal details"]
   },
   {
@@ -10565,7 +10565,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "module",
     section: "Proposals",
     question: "How do I delete a proposal?",
-    answer: "In Proposal Management > Proposals, click the delete icon in the Actions column of the proposal row to permanently remove it.",
+    answer: "In **Proposal Management → Proposals**, click the delete icon in the Actions column of the proposal row to permanently remove it.",
     tags: ["remove proposal","delete bid record"]
   },
   {
@@ -10583,7 +10583,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "module",
     section: "Proposals",
     question: "How can I see the history of changes made to a proposal?",
-    answer: "In Proposal Management > Proposals click the history icon in the Actions column (or open the proposal and use its History tab) to see created, edited and updated entries and approval workflow status changes.",
+    answer: "In **Proposal Management → Proposals** click the history icon in the Actions column (or open the proposal and use its History tab) to see created, edited and updated entries and approval workflow status changes.",
     tags: ["proposal audit trail","change log","proposal history"]
   },
   {
@@ -10592,7 +10592,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "module",
     section: "Proposals",
     question: "Can I bulk create or update proposals using Excel?",
-    answer: "Yes. In Proposal Management > Proposals, use the \"Export\" option: \"Download Excel\" exports current proposal data (sheet named by Proposal Type), and \"Upload Excel\" lets you create or update proposals in bulk using the provided sample template.",
+    answer: "Yes. In **Proposal Management → Proposals**, use the \"Export\" option: \"Download Excel\" exports current proposal data (sheet named by Proposal Type), and \"Upload Excel\" lets you create or update proposals in bulk using the provided sample template.",
     tags: ["excel upload","bulk import proposals","download proposals"]
   },
   {
@@ -10601,7 +10601,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "module",
     section: "Proposals",
     question: "How do I filter or search the proposals list?",
-    answer: "Use \"Search\" to find proposals by Proposal Name or Proposal ID, or click \"Filters\" to open a pop-up where you can set criteria to narrow down the proposal list. \"Manage Columns\" lets you choose and arrange which columns are visible.",
+    answer: "From **Home**, open **Proposal Management → Proposals**. Use \"Search\" to find proposals by Proposal Name or Proposal ID, or click \"Filters\" to open a pop-up where you can set criteria to narrow down the proposal list. \"Manage Columns\" lets you choose and arrange which columns are visible.",
     tags: ["search proposals","filter proposals","manage columns"]
   },
   {
@@ -10610,7 +10610,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "module",
     section: "Proposals",
     question: "How do I send reminder emails to a customer about a proposal?",
-    answer: "Use the \"Follow Up\" feature on a proposal to send reminder emails to customers. Set a \"Recurrence Type\" (Daily, Weekly, Monthly, or None) to schedule repeated reminders or send a one-time email.",
+    answer: "From **Home**, open **Proposal Management → Proposals**, open the proposal, then its **Profile** tab. Use the \"Follow Up\" feature on a proposal to send reminder emails to customers. Set a \"Recurrence Type\" (Daily, Weekly, Monthly, or None) to schedule repeated reminders or send a one-time email.",
     tags: ["follow up reminder","customer reminder","recurring email"]
   },
   {
@@ -10619,7 +10619,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "module",
     section: "Bid Tab (Tenders)",
     question: "How do I create a bid (tender) within a proposal?",
-    answer: "Open the proposal, click the Bid tab and click \"Add Tender\". In \"Create Tender\" enter the Tender Name, a Description, check the Select Proposal value and choose Open Bidding, Selective Bidding or Selective Bidding - No Prequalification, then click \"Submit for Approval\". The tender is run in Tender Management and linked back through Proposal Linked.",
+    answer: "From **Home**, open **Proposal Management → Proposals** and open the proposal. Open the proposal, click the Bid tab and click \"Add Tender\". In \"Create Tender\" enter the Tender Name, a Description, check the Select Proposal value and choose Open Bidding, Selective Bidding or Selective Bidding - No Prequalification, then click \"Submit for Approval\". The tender is run in Tender Management and linked back through Proposal Linked.",
     tags: ["create bid","new bid","add bid to proposal","add tender","how do I add a tender from a proposal","create tender from proposal"]
   },
   {
@@ -10628,7 +10628,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "module",
     section: "Bid Tab (Tenders)",
     question: "Can I export or import bids in bulk?",
-    answer: "The Bid tab lists the proposal's tenders with Filters, Manage Columns, table / grid views, Save Layout and Show as Graph. Bulk Excel import of tenders is not shown on this tab.",
+    answer: "From **Home**, open **Proposal Management → Proposals**, open the proposal, then its **Bid** tab. The Bid tab lists the proposal's tenders with Filters, Manage Columns, table / grid views, Save Layout and Show as Graph. Bulk Excel import of tenders is not shown on this tab.",
     tags: ["bulk bids","download bids","upload bids"]
   },
   {
@@ -10646,7 +10646,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "module",
     section: "Submission Packages",
     question: "How do I create a proposal submission package?",
-    answer: "On the proposal, click \"Create Submission Package\". This opens a page to pull in data from previous tabs (Profile, Documents, Checklists, Submittals, Attachments), then choose how to send it to the client: Email to Client, Physical (mail), or Client Portal.",
+    answer: "From **Home**, open **Proposal Management → Proposals** and open the proposal. On the proposal, click \"Create Submission Package\". This opens a page to pull in data from previous tabs (Profile, Documents, Checklists, Submittals, Attachments), then choose how to send it to the client: Email to Client, Physical (mail), or Client Portal.",
     tags: ["submission package","create submittal package","send proposal to client"]
   },
   {
@@ -10655,7 +10655,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "module",
     section: "Submission Packages",
     question: "How do I set up an approval workflow for submission packages?",
-    answer: "Go to Proposal Management Settings > Submission Packages > Setup Approval Workflow, click \"Create Level\" to choose approvers, assign the workflow type (all must approve / any one can approve), and add a level description. Use Edit or Delete in Actions to manage levels.",
+    answer: "Go to **Proposal Management Settings → Submission Packages → Setup Approval Workflow**, click \"Create Level\" to choose approvers, assign the workflow type (all must approve / any one can approve), and add a level description. Use Edit or Delete in Actions to manage levels.",
     tags: ["submission approval workflow","configure workflow levels"]
   },
   {
@@ -10673,7 +10673,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "module",
     section: "Submission Packages",
     question: "Where can I see the status and history of a sent submission package?",
-    answer: "In the Submission Packages Logs tab, use the row menu: \"Download\" retrieves the package, \"History\" shows creation and approval status history, \"Status\" shows/sets the configured status, and \"Delete\" removes the package.",
+    answer: "From **Home**, open **Proposal Management → Proposals**, open the proposal, then its **Submission Package** tab. In the Submission Packages Logs tab, use the row menu: \"Download\" retrieves the package, \"History\" shows creation and approval status history, \"Status\" shows/sets the configured status, and \"Delete\" removes the package.",
     tags: ["submission package status","submission package history","download package"]
   },
   {
@@ -10682,7 +10682,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "module",
     section: "Submittals",
     question: "How do I add a submittal letter to a proposal?",
-    answer: "In the proposal's Submittals tab, click \"Create\". Choose \"Create New Letter\" to draft a new template in Google Docs, or \"Import From Global Data\" to reuse a configured template from Proposal Settings, optionally enabling \"Auto Fill Fields\" to populate submittal keys from the proposal profile.",
+    answer: "From **Home**, open **Proposal Management → Proposals**, open the proposal, then its **Submittals** tab. In the proposal's Submittals tab, click \"Create\". Choose \"Create New Letter\" to draft a new template in Google Docs, or \"Import From Global Data\" to reuse a configured template from Proposal Settings, optionally enabling \"Auto Fill Fields\" to populate submittal keys from the proposal profile.",
     tags: ["submittal letter","budgetary letter","create submittal"]
   },
   {
@@ -10691,7 +10691,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "module",
     section: "Settings",
     question: "How do I create a reusable submittal template?",
-    answer: "Go to Proposal Management Settings > Submittals and click \"Create Template\", then choose \"Create Submittal Template\" (name only) or \"Upload Submittal Template\" (upload a Word document). Configure merge keys using double curly braces {{ }} format, then use \"Sync\" from the kebab menu to update keys after edits.",
+    answer: "Go to **Proposal Management Settings → Submittals** and click \"Create Template\", then choose \"Create Submittal Template\" (name only) or \"Upload Submittal Template\" (upload a Word document). Configure merge keys using double curly braces {{ }} format, then use \"Sync\" from the kebab menu to update keys after edits.",
     tags: ["submittal template","upload template","merge keys","sync template"]
   },
   {
@@ -10700,7 +10700,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "module",
     section: "Checklists",
     question: "How do I add a checklist to a proposal?",
-    answer: "In the proposal's Checklists tab, click \"Create Form\", which shows the forms configured in Proposal Settings > Checklists. Fill in the fields and click Submit. Created forms are stored automatically in the Documents tab as a folder.",
+    answer: "In the proposal's Checklists tab, click \"Create Form\", which shows the forms configured in **Proposal Settings → Checklists**. Fill in the fields and click Submit. Created forms are stored automatically in the Documents tab as a folder.",
     tags: ["proposal checklist","quality checklist","submit checklist"]
   },
   {
@@ -10709,7 +10709,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "module",
     section: "Settings",
     question: "How do I create a new checklist template for proposals?",
-    answer: "Go to Proposal Management Settings > Checklists and click \"Create Checklist\". After naming it, click into the checklist to configure its form fields, use \"Preview Form\" to review, then \"Save Changes\".",
+    answer: "Go to **Proposal Management Settings → Checklists** and click \"Create Checklist\". After naming it, click into the checklist to configure its form fields, use \"Preview Form\" to review, then \"Save Changes\".",
     tags: ["checklist template","configure checklist form"]
   },
   {
@@ -10718,7 +10718,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "module",
     section: "Settings",
     question: "How do I set up a new proposal type?",
-    answer: "Go to Proposal Management > Settings > Proposal > Proposal Types and click \"Proposal Type\" to enter a name and description. Then use the Proposal Form tab to configure the sections and fields, and Save Changes.",
+    answer: "Go to **Proposal Management → Settings → Proposal → Proposal Types** and click \"Proposal Type\" to enter a name and description. Then use the Proposal Form tab to configure the sections and fields, and Save Changes.",
     tags: ["proposal type setup","configure proposal type","add proposal type"]
   },
   {
@@ -10727,7 +10727,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "global",
     section: "Settings",
     question: "How do I create a bid type?",
-    answer: "Go to Proposal Management > Settings > Bid Types and click \"Bid Type\". Enter a Name, Description and Estimate Type, then submit. The bid types feed the Bid Type drop-down on the proposal Profile.",
+    answer: "Go to **Proposal Management → Settings → Bid Types** and click \"Bid Type\". Enter a Name, Description and Estimate Type, then submit. The bid types feed the Bid Type drop-down on the proposal Profile.",
     tags: ["bid type","define bid category","estimate type"]
   },
   {
@@ -10736,7 +10736,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "global",
     section: "Settings",
     question: "What is the Delivery Method setting for proposals?",
-    answer: "Delivery Method defines how a proposal is submitted or sent. In Proposal Management > Settings > Delivery Method, click \"Add\" to create a row or Delete to remove one. The list feeds the Delivery Method drop-down on the proposal Profile.",
+    answer: "Delivery Method defines how a proposal is submitted or sent. In **Proposal Management → Settings → Delivery Method**, click \"Add\" to create a row or Delete to remove one. The list feeds the Delivery Method drop-down on the proposal Profile.",
     tags: ["proposal delivery method","submission channel"]
   },
   {
@@ -10745,7 +10745,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "global",
     section: "Settings",
     question: "How do I configure custom statuses for proposals and submission packages?",
-    answer: "Go to Proposal Management > Settings > Status. Click \"Add Status\" to enter a status name and colour for the Proposal or Submission Package list. Use \"Edit\" on a last-level standard status to mark it Success or Failure. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "Go to **Proposal Management → Settings → Status**. Click \"Add Status\" to enter a status name and colour for the Proposal or Submission Package list. Use \"Edit\" on a last-level standard status to mark it Success or Failure. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["proposal status","custom status colors","status configuration"]
   },
   {
@@ -10754,7 +10754,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "global",
     section: "Settings",
     question: "How do I set up the approval workflow for proposals?",
-    answer: "Go to Proposal Management > Settings > Approval Workflow and click \"Create Level\" to select approvers and the workflow type (all must approve, or any one can approve). Create several levels if needed and use \"Open Workflow Graph View\" to see the tree. The levels give the Workflow Level (for example 1/1) on each proposal.",
+    answer: "Go to **Proposal Management → Settings → Approval Workflow** and click \"Create Level\" to select approvers and the workflow type (all must approve, or any one can approve). Create several levels if needed and use \"Open Workflow Graph View\" to see the tree. The levels give the Workflow Level (for example 1/1) on each proposal.",
     tags: ["proposal approval levels","workflow graph","create approval level"]
   },
   {
@@ -10763,7 +10763,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "global",
     section: "Settings",
     question: "How do I configure automatic ID generation for proposals?",
-    answer: "Go to Proposal Management > Settings > ID Settings. Choose \"System Default\" for automatic IDs or \"Custom\" to configure separator, serial number, date, month and year, then Save Changes. Proposals and Submission Packages have separate settings.",
+    answer: "Go to **Proposal Management → Settings → ID Settings**. Choose \"System Default\" for automatic IDs or \"Custom\" to configure separator, serial number, date, month and year, then Save Changes. Proposals and Submission Packages have separate settings.",
     tags: ["proposal id format","custom id","auto generated id"]
   },
   {
@@ -10772,7 +10772,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "global",
     section: "Settings",
     question: "How do I manage user groups and permissions for Proposal Management?",
-    answer: "Go to Proposal Management Settings > Users and Permissions and click \"Add User Group\" to name the group and select permissions, then \"Add Users\" to assign members. Use the kebab menu to Edit or Delete a group.",
+    answer: "Go to **Proposal Management Settings → Users and Permissions** and click \"Add User Group\" to name the group and select permissions, then \"Add Users\" to assign members. Use the kebab menu to Edit or Delete a group.",
     tags: ["proposal user group","permissions setup","add users"]
   },
   {
@@ -10781,7 +10781,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "global",
     section: "Settings",
     question: "How are project types categorized in Proposal Management settings?",
-    answer: "Project Types are categorized by Field/Shop, Material, and New/Repair. Click \"Add\" to add a row, edit fields directly (dropdowns for Field/Shop and New/Repair), or use \"Upload Excel\" to bulk create or update project types.",
+    answer: "From **Home**, open **Proposal Management → Settings**. Project Types are categorized by Field/Shop, Material, and New/Repair. Click \"Add\" to add a row, edit fields directly (dropdowns for Field/Shop and New/Repair), or use \"Upload Excel\" to bulk create or update project types.",
     tags: ["project type settings","field shop repair","bulk upload project types"]
   },
   {
@@ -10799,7 +10799,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "module",
     section: "Analytics & Reports",
     question: "How do I see the success rate of proposals?",
-    answer: "Go to the Proposal Success Rate report. It shows two pie charts: \"Success Rate (Qty of Proposals)\" by status count, and \"Success Rate (Currency Value)\" by submitted amount. Use the Proposal Type dropdown to filter and click legend items to toggle statuses.",
+    answer: "From **Home**, open **Proposal Management** and go to **Analytics & Reports**. Go to the Proposal Success Rate report. It shows two pie charts: \"Success Rate (Qty of Proposals)\" by status count, and \"Success Rate (Currency Value)\" by submitted amount. Use the Proposal Type dropdown to filter and click legend items to toggle statuses.",
     tags: ["success rate report","win rate","proposal analytics"]
   },
   {
@@ -10808,7 +10808,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "module",
     section: "Analytics & Reports",
     question: "Where can I see proposal quantity and value broken down by bid type?",
-    answer: "The \"Types of Proposals\" report shows two bar graphs: Quantity of proposals and Amount submitted, both broken down by bid type within each proposal type. Adjust the date range and download in Excel, PDF, PPT, or JPEG.",
+    answer: "From **Home**, open **Proposal Management** and go to **Analytics & Reports**. The \"Types of Proposals\" report shows two bar graphs: Quantity of proposals and Amount submitted, both broken down by bid type within each proposal type. Adjust the date range and download in Excel, PDF, PPT, or JPEG.",
     tags: ["proposal analytics by bid type","proposal volume report"]
   },
   {
@@ -10817,7 +10817,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "module",
     section: "To Do List",
     question: "How do I create a to-do task for a proposal?",
-    answer: "In Proposal Management > To Do, click \"Create To Do List\" and fill in Title, Description, Date, and Time, then submit. Use \"Assign To\" to assign the task to a user, and click the double-tick icon to mark it complete.",
+    answer: "In **Proposal Management → To Do**, click \"Create To Do List\" and fill in Title, Description, Date, and Time, then submit. Use \"Assign To\" to assign the task to a user, and click the double-tick icon to mark it complete.",
     tags: ["proposal task","to-do list","assign task"]
   },
   {
@@ -10826,7 +10826,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "module",
     section: "Issues",
     question: "How are proposal approval rejections tracked?",
-    answer: "When a proposal is rejected by an approver, it appears in the proposal's Issues tab. The proposal cannot proceed until the associated issue is resolved. Use Search (by Issue ID), Filters (Log ID, Raised On, Raised By), and \"Assign To\" to manage it.",
+    answer: "From **Home**, open **Proposal Management → Proposals**, open the proposal, then its **Issues** tab. When a proposal is rejected by an approver, it appears in the proposal's Issues tab. The proposal cannot proceed until the associated issue is resolved. Use Search (by Issue ID), Filters (Log ID, Raised On, Raised By), and \"Assign To\" to manage it.",
     tags: ["proposal rejection","issue tracking","workflow rejection"]
   },
   {
@@ -10835,7 +10835,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "module",
     section: "Proposals",
     question: "How do I add a new customer directly from a proposal?",
-    answer: "In the proposal Profile use \"Create a Customer\", \"Create a Customer POC\", \"Create an Owner\" or \"Create a Site\" under the matching field. The new entry is also a record in Global Data (Customers, Owners, Locations).",
+    answer: "From **Home**, open **Proposal Management → Proposals**, open the proposal, then its **Profile** tab. In the proposal Profile use \"Create a Customer\", \"Create a Customer POC\", \"Create an Owner\" or \"Create a Site\" under the matching field. The new entry is also a record in Global Data (Customers, Owners, Locations).",
     tags: ["add customer","customer poc","create customer from proposal"]
   },
   {
@@ -10844,7 +10844,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "module",
     section: "Proposals",
     question: "How do I add users or crews to a proposal team?",
-    answer: "In the proposal's Teams tab, click \"Add User\" to pick company users (from Global Rosters), or switch to Crews and click \"Add Crew\" to pick a Global Data crew. Use the three-dot menu on a member to remove them.",
+    answer: "From **Home**, open **Proposal Management → Proposals**, open the proposal, then its **Teams** tab. In the proposal's Teams tab, click \"Add User\" to pick company users (from Global Rosters), or switch to Crews and click \"Add Crew\" to pick a Global Data crew. Use the three-dot menu on a member to remove them.",
     tags: ["proposal team","add user to proposal","add crew"]
   },
   {
@@ -10853,7 +10853,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "module",
     section: "Proposals",
     question: "How do I comment on a proposal and pin it to a report?",
-    answer: "In the proposal Profile, click \"Comments\" to add comments and attachments. Use the comment menu to Edit or Delete your own comment, or \"Add to Report\" to pin it for inclusion in the weekly report.",
+    answer: "From **Home**, open **Proposal Management → Proposals**, open the proposal, then its **Profile** tab. In the proposal Profile, click \"Comments\" to add comments and attachments. Use the comment menu to Edit or Delete your own comment, or \"Add to Report\" to pin it for inclusion in the weekly report.",
     tags: ["proposal comments","pin comment","weekly report"]
   },
   {
@@ -10862,7 +10862,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "module",
     section: "Proposals",
     question: "Where are all files related to a proposal stored?",
-    answer: "The proposal's Documents tab automatically organizes uploads from Comments, Communication, Checklists, Submittals, Submission Package, and Bids into folders. Use \"New Folder\" to add a custom folder and \"Upload Documents\" to add files.",
+    answer: "From **Home**, open **Proposal Management → Proposals**, open the proposal, then its **Documents** tab. The proposal's Documents tab automatically organizes uploads from Comments, Communication, Checklists, Submittals, Submission Package, and Bids into folders. Use \"New Folder\" to add a custom folder and \"Upload Documents\" to add files.",
     tags: ["proposal documents","document storage","upload files"]
   },
   {
@@ -10871,7 +10871,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "module",
     section: "Proposals",
     question: "Can I send emails to clients directly from a proposal?",
-    answer: "Yes. In the proposal's Communication tab, click \"Compose Mail\" to send an email with To, CC, BCC, Subject, Message, and attachments. Sent submission package emails are also stored here, organized into Inbox, Sent, Drafts, Starred, and Trash.",
+    answer: "From **Home**, open **Proposal Management → Proposals**, open the proposal, then its **Communication** tab. Yes. In the proposal's Communication tab, click \"Compose Mail\" to send an email with To, CC, BCC, Subject, Message, and attachments. Sent submission package emails are also stored here, organized into Inbox, Sent, Drafts, Starred, and Trash.",
     tags: ["proposal email","compose mail","client communication"]
   },
   {
@@ -10880,7 +10880,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "module",
     section: "Calendar",
     question: "How do I create a calendar event for a proposal deadline?",
-    answer: "In Proposal Management > Calendar click \"Create Event\" and enter the Title, Date, Time, Category and Description. If you see \"Consent Not Granted\", give calendar consent first in My Profile > Settings. Events can sync with Outlook.",
+    answer: "In **Proposal Management → Calendar** click \"Create Event\" and enter the Title, Date, Time, Category and Description. If you see \"Consent Not Granted\", give calendar consent first in **My Profile → Settings**. Events can sync with Outlook.",
     tags: ["proposal calendar","create event","outlook sync"]
   },
   {
@@ -10889,7 +10889,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "module",
     section: "Where Proposal Fields Come From",
     question: "Where do the drop-down values in a proposal come from?",
-    answer: "Proposal Type, Bid Type, Project Type, Business Development Code, Department Code, Delivery Method and Status come from Proposal Management > Settings. Customers, POCs, Owners and the Site Name / Job Site locations come from Global Data (Customers, Owners, Locations). Opportunity comes from Opportunity Management. Company Contact, Estimators, Teams and Assign To come from the company users in Global Rosters.",
+    answer: "Proposal Type, Bid Type, Project Type, Business Development Code, Department Code, Delivery Method and Status come from **Proposal Management → Settings**. Customers, POCs, Owners and the Site Name / Job Site locations come from Global Data (Customers, Owners, Locations). Opportunity comes from Opportunity Management. Company Contact, Estimators, Teams and Assign To come from the company users in Global Rosters.",
     tags: ["proposal dropdown source","where do proposal fields come from","proposal profile lineage"]
   },
   {
@@ -10898,7 +10898,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "module",
     section: "Where Proposal Fields Come From",
     question: "Where does the Customers list on a proposal come from?",
-    answer: "From Global Data > Customers. Adding a customer or POC from the proposal also creates it in Global Data.",
+    answer: "From **Global Data → Customers**. Adding a customer or POC from the proposal also creates it in Global Data.",
     tags: ["proposal customers dropdown","where do customers on a proposal come from","customer poc source","customers global data proposal","customers list"]
   },
   {
@@ -10907,7 +10907,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "module",
     section: "Where Proposal Fields Come From",
     question: "Where do Owners and Site Name come from on a proposal?",
-    answer: "Owners come from Global Data > Owners. Site Name and Job Site come from Global Data > Locations (8 locations plus None); choosing a site fills City and State.",
+    answer: "Owners come from **Global Data → Owners**. Site Name and Job Site come from **Global Data → Locations** (8 locations plus None); choosing a site fills City and State.",
     tags: ["proposal owners","site name job site source","locations proposal"]
   },
   {
@@ -10925,7 +10925,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "module",
     section: "Where Proposal Fields Come From",
     question: "Where do Proposal Types come from?",
-    answer: "Proposal Management > Settings > Proposal > Proposal Types. The extra sections at the bottom of the Profile come from the Proposal Form tab of the same page.",
+    answer: "**Proposal Management → Settings → Proposal → Proposal Types**. The extra sections at the bottom of the Profile come from the Proposal Form tab of the same page.",
     tags: ["proposal types source","proposal type list"]
   },
   {
@@ -10934,7 +10934,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "module",
     section: "Where Proposal Fields Come From",
     question: "What do Project Type and Bid Type mean on a proposal?",
-    answer: "Project Type is a code from Settings > Project Types that carries Field/Shop, Material and New/Repair (for S-PipingSS: SHOP, SS, NEW). Bid Type comes from Settings > Bid Types (Build-Own-Transfer, General, Speciality Items). They are different from the Open / Selective Bidding choice used when creating a tender.",
+    answer: "Project Type is a code from **Settings → Project Types** that carries Field/Shop, Material and New/Repair (for S-PipingSS: SHOP, SS, NEW). Bid Type comes from **Settings → Bid Types** (Build-Own-Transfer, General, Speciality Items). They are different from the Open / Selective Bidding choice used when creating a tender.",
     tags: ["project type proposal","bid type proposal","field shop material new repair"]
   },
   {
@@ -10943,7 +10943,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "module",
     section: "Where Proposal Fields Come From",
     question: "Why do I see only a few people in the Estimators field?",
-    answer: "Estimators lists only people with the Estimator role in Global Data > Users & Permissions > Global Rosters. Company Contact and Assign To list all users instead.",
+    answer: "Estimators lists only people with the Estimator role in **Global Data → Users & Permissions → Global Rosters**. Company Contact and Assign To list all users instead.",
     tags: ["estimators dropdown","estimator role","proposal estimators"]
   },
   {
@@ -10952,7 +10952,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "module",
     section: "Where Proposal Fields Come From",
     question: "What proposal statuses are there?",
-    answer: "Each status has a colour. Start is the first standard status; Completed and Lost are the last-level standard statuses that carry the Success / Failure flag. Add or edit them in Settings > Status. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "Each status has a colour. Start is the first standard status; Completed and Lost are the last-level standard statuses that carry the Success / Failure flag. Add or edit them in **Settings → Status**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["proposal statuses list","what statuses can a proposal have","proposal status options","status colours","no bid lost completed"]
   },
   {
@@ -10970,7 +10970,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "module",
     section: "Proposals",
     question: "What does Workflow Level 1/1 mean on a proposal?",
-    answer: "The number of approval levels completed out of the levels in Settings > Approval Workflow. 1/1 means the single level is done; 0/1 means it is still waiting. Approve and Reject show only for people in the workflow.",
+    answer: "The number of approval levels completed out of the levels in **Settings → Approval Workflow**. 1/1 means the single level is done; 0/1 means it is still waiting. Approve and Reject show only for people in the workflow.",
     tags: ["workflow level","proposal approval progress"]
   },
   {
@@ -10997,7 +10997,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "module",
     section: "Proposals",
     question: "Which folders does the proposal Documents tab have?",
-    answer: "Comments Attachments, Mail Attachments, Checklists, Submittals, Submission Packages and Bids, plus New Folder and Upload Documents. Whether files are stored in AWS S3 or SharePoint is set in Settings > Proposal > Settings > Document Management.",
+    answer: "Comments Attachments, Mail Attachments, Checklists, Submittals, Submission Packages and Bids, plus New Folder and Upload Documents. Whether files are stored in AWS S3 or SharePoint is set in **Settings → Proposal → Settings → Document Management**.",
     tags: ["proposal documents folders","document management s3 sharepoint"]
   },
   {
@@ -11006,7 +11006,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "module",
     section: "Proposals",
     question: "Where do the users and crews in a proposal team come from?",
-    answer: "Add User lists the company's system users from Global Data > Users & Permissions > Global Rosters; Add Crew lists the crews in Global Data > Crews with their member counts.",
+    answer: "Add User lists the company's system users from **Global Data → Users & Permissions → Global Rosters**; Add Crew lists the crews in **Global Data → Crews** with their member counts.",
     tags: ["proposal team source","add crew proposal list"]
   },
   {
@@ -11024,7 +11024,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "module",
     section: "Bid Tab (Tenders)",
     question: "What bid types can I pick when adding a tender?",
-    answer: "Open Bidding, Selective Bidding and Selective Bidding - No Prequalification. These are the tender's own bidding types, separate from the Bid Type on the proposal Profile (Settings > Bid Types).",
+    answer: "Open Bidding, Selective Bidding and Selective Bidding - No Prequalification. These are the tender's own bidding types, separate from the Bid Type on the proposal Profile (**Settings → Bid Types**).",
     tags: ["tender bid type","open bidding selective bidding"]
   },
   {
@@ -11033,7 +11033,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "module",
     section: "Checklists",
     question: "What are the Safety, Legal Review and Quality tabs in Checklists?",
-    answer: "They are the checklist templates defined in Settings > Checklists. Click Create Form to fill one (for example Safety: address, phone, questions with Yes / No and Safety Response) and Submit. Filled forms go to Documents > Checklists and count on My Dashboard > Forms.",
+    answer: "They are the checklist templates defined in **Settings → Checklists**. Click Create Form to fill one (for example Safety: address, phone, questions with Yes / No and Safety Response) and Submit. Filled forms go to **Documents → Checklists** and count on **My Dashboard → Forms**.",
     tags: ["checklist templates safety legal review quality","proposal checklist forms"]
   },
   {
@@ -11060,7 +11060,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "module",
     section: "Submission Packages",
     question: "What statuses can a submission package have?",
-    answer: "Start, Submitted and Completed, from Settings > Status > Submission Package.",
+    answer: "Start, Submitted and Completed, from **Settings → Status → Submission Package**.",
     tags: ["submission package statuses"]
   },
   {
@@ -11078,7 +11078,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "module",
     section: "Calendar",
     question: "Why does Create Event say Consent Not Granted?",
-    answer: "Calendar events need calendar consent. Give it in My Profile > Settings > Calendar consent (Outlook management consent for the Dashboard events). The Outlook link itself is set up in Global Data > Marketplace.",
+    answer: "Calendar events need calendar consent. Give it in **My Profile → Settings → Calendar** consent (Outlook management consent for the Dashboard events). The Outlook link itself is set up in **Global Data → Marketplace**.",
     tags: ["calendar consent","why does create event say consent not granted","consent not granted proposal calendar","outlook consent"]
   },
   {
@@ -11123,7 +11123,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "module",
     section: "Analytics & Reports",
     question: "Where do the Profit Over Time numbers come from?",
-    answer: "From Contract Amount minus Projected Cost entered on each proposal Profile, shown by year, together with estimating cost.",
+    answer: "From **Home**, open **Proposal Management → Proposals**, open the proposal, then its **Profile** tab. From Contract Amount minus Projected Cost entered on each proposal Profile, shown by year, together with estimating cost.",
     tags: ["profit over time","contract amount projected cost"]
   },
   {
@@ -11150,7 +11150,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "module",
     section: "Settings",
     question: "Can I change where proposal documents are stored?",
-    answer: "In Settings > Proposal > Settings choose Document Management: AWS S3 or Share point. It cannot be changed once proposals or Opportunities already exist.",
+    answer: "In **Settings → Proposal → Settings** choose Document Management: AWS S3 or Share point. It cannot be changed once proposals or Opportunities already exist.",
     tags: ["document management setting","s3 or sharepoint proposals"]
   },
   {
@@ -11168,7 +11168,7 @@ const QA_PROPOSALMANAGEMENT = [
     scope: "module",
     section: "Who sets this up",
     question: "In what order should I set up Proposal Management?",
-    answer: "Check Customers, Owners, Locations and Crews in Global Data and the Estimator roles in Global Rosters; then in Proposal Management > Settings create Proposal Types and the Proposal Form, fill Bid Types, Project Types, Department Codes, Business Development and Delivery Method, set Status, Approval Workflow, ID Settings and Users and Permissions, and add Checklist and Submittal templates.",
+    answer: "Check Customers, Owners, Locations and Crews in Global Data and the Estimator roles in Global Rosters; then in **Proposal Management → Settings** create Proposal Types and the Proposal Form, fill Bid Types, Project Types, Department Codes, Business Development and Delivery Method, set Status, Approval Workflow, ID Settings and Users and Permissions, and add Checklist and Submittal templates.",
     tags: ["proposal management setup order","set up proposal management","proposal admin setup"]
   },
   {
@@ -11225,7 +11225,7 @@ const QA_TENDERMANAGEMENT = [
     scope: "module",
     section: "Who sets this up",
     question: "In what order should I set up Tender Management?",
-    answer: "First make sure the vendors exist in Global Data > Vendors. Then in Tender Management > Settings review Bid Type, Status Configuration and Bid Templates, create BOQ & Estimate, Pre Qualification and Technical Package templates, add approval levels for Bid, Pre Qualification and Technical Package, and add user groups. Then create a tender.",
+    answer: "First make sure the vendors exist in **Global Data → Vendors**. Then **in Tender Management → Settings** review Bid Type, Status Configuration and Bid Templates, create BOQ & Estimate, Pre Qualification and Technical Package templates, add approval levels for Bid, Pre Qualification and Technical Package, and add user groups. Then create a tender.",
     tags: ["set up tender management","tender admin setup","tender setup order","tender settings first"]
   },
   {
@@ -11252,7 +11252,7 @@ const QA_TENDERMANAGEMENT = [
     scope: "module",
     section: "Who sets this up",
     question: "Where are the Tender Management settings?",
-    answer: "Click the Settings gear inside Tender Management. The menu is Bid Type, Scope of Work, Agreement, Status Configuration, Approval Workflow, Bid Templates, BOQ & Estimate Template, Pre Qualification Template, Technical Package Template and Users and Permissions. Only the vendors and the Bid Templates list are shared with Global Data.",
+    answer: "From **Home**, open **Tender Management**. Click the Settings gear inside Tender Management. The menu is Bid Type, Scope of Work, Agreement, Status Configuration, Approval Workflow, Bid Templates, BOQ & Estimate Template, Pre Qualification Template, Technical Package Template and Users and Permissions. Only the vendors and the Bid Templates list are shared with Global Data.",
     tags: ["tender management settings","where are tender settings","tender settings menu"]
   },
   {
@@ -11261,7 +11261,7 @@ const QA_TENDERMANAGEMENT = [
     scope: "module",
     section: "Tender List and Creating a Tender",
     question: "How do I create a tender?",
-    answer: "Open Tender Management > Tenders and click Add Tender. Enter the Tender Name and Description, optionally Select Proposal, choose a Select Bid Type and Open Bidding, Selective Bidding or Selective Bidding - No Prequalification, then click Submit for Approval. The tender shows Ready for Approval until it is approved.",
+    answer: "Open **Tender Management → Tenders** and click Add Tender. Enter the Tender Name and Description, optionally Select Proposal, choose a Select Bid Type and Open Bidding, Selective Bidding or Selective Bidding - No Prequalification, then click Submit for Approval. The tender shows Ready for Approval until it is approved.",
     tags: ["create tender","add tender","new tender","create a tender/bid for a proposal","how do I create a tender/bid for a proposal","create bid","new bid"]
   },
   {
@@ -11279,7 +11279,7 @@ const QA_TENDERMANAGEMENT = [
     scope: "module",
     section: "Tender List and Creating a Tender",
     question: "Why can't I open a tender?",
-    answer: "A new tender goes through Submit for Approval and the Bid approval workflow. Ask the approver in Settings > Approval Workflow > Bid to approve it. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "A new tender goes through Submit for Approval and the Bid approval workflow. Ask the approver in **Settings → Approval Workflow → Bid** to approve it. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["tender will not open","cannot open tender","tender ready for approval","tender approval status","why tender does not open"]
   },
   {
@@ -11288,7 +11288,7 @@ const QA_TENDERMANAGEMENT = [
     scope: "module",
     section: "Tender List and Creating a Tender",
     question: "Where do the Select Proposal and Select Bid Type lists come from?",
-    answer: "Select Proposal lists the proposals of Proposal Management. Select Bid Type lists the bid types from Tender Management Settings (Build-Own-Transfer, Speciality Items, General), which are the same as in Proposal Management. Open / Selective Bidding is a fixed choice.",
+    answer: "From **Home**, open **Tender Management → Tenders** and click **Create**. Select Proposal lists the proposals of Proposal Management. Select Bid Type lists the bid types from Tender Management Settings (Build-Own-Transfer, Speciality Items, General), which are the same as in Proposal Management. Open / Selective Bidding is a fixed choice.",
     tags: ["select proposal list","select bid type list","tender bid type source","where does bid type come from","proposal dropdown tender"]
   },
   {
@@ -11306,7 +11306,7 @@ const QA_TENDERMANAGEMENT = [
     scope: "module",
     section: "Tender List and Creating a Tender",
     question: "How do I filter or find tenders?",
-    answer: "Use the search box, or Filters (Tender Name, Tender ID, Status, Bid Type) then Submit; Clear & Apply resets. Table View and Grid View change the layout and Save Layout keeps it. Show as Graph opens Tenders By Status.",
+    answer: "From **Home**, open **Tender Management → Tenders**. Use the search box, or Filters (Tender Name, Tender ID, Status, Bid Type) then Submit; Clear & Apply resets. Table View and Grid View change the layout and Save Layout keeps it. Show as Graph opens Tenders By Status.",
     tags: ["filter tenders","search tender","tender grid view","tender graph","show as graph tenders","what layout options are available for viewing bids"]
   },
   {
@@ -11324,7 +11324,7 @@ const QA_TENDERMANAGEMENT = [
     scope: "module",
     section: "Tender List and Creating a Tender",
     question: "How do I find tenders linked to a proposal?",
-    answer: "Open the proposal's Bid tab, which lists the tenders linked to that proposal, or look at the Proposal Linked column of the Tenders list. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "From **Home**, open **Tender Management → Tenders**. Open the proposal's Bid tab, which lists the tenders linked to that proposal, or look at the Proposal Linked column of the Tenders list. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["tenders linked to proposal","proposal linked column","find bids linked to a specific proposal","link tender to proposal"]
   },
   {
@@ -11333,7 +11333,7 @@ const QA_TENDERMANAGEMENT = [
     scope: "module",
     section: "Tender List and Creating a Tender",
     question: "Can I bulk create tenders from a spreadsheet?",
-    answer: "The Tenders list has no Excel import or export buttons. The Download Excel / Upload Excel buttons in Tender Management are on Settings > Bid Templates (BOQ items).",
+    answer: "The Tenders list has no Excel import or export buttons. The Download Excel / Upload Excel buttons in Tender Management are on **Settings → Bid Templates** (BOQ items).",
     tags: ["bulk create tenders","upload excel tenders","import tenders","can i bulk create bids from a spreadsheet"]
   },
   {
@@ -11369,7 +11369,7 @@ const QA_TENDERMANAGEMENT = [
     scope: "module",
     section: "Tender Setup: Profile, Team, Scope of Work and Submission",
     question: "Where do the Profile drop-down values come from?",
-    answer: "Bid Type and Bid Status come from Tender Management Settings (3 bid types, 9 statuses). Owner Name lists Global Data > Owners; Proposals, Opportunity and Project list the proposals, opportunities and all company projects; Assign To lists the system users of Global Rosters. Location showed the same names as Owner Name.",
+    answer: "Bid Type and Bid Status come from Tender Management Settings (3 bid types, 9 statuses). Owner Name lists **Global Data → Owners**; Proposals, Opportunity and Project list the proposals, opportunities and all company projects; Assign To lists the system users of Global Rosters. Location showed the same names as Owner Name.",
     tags: ["tender profile dropdown","owner name tender","assign to tender","where do tender fields come from","connected items tender"]
   },
   {
@@ -11387,7 +11387,7 @@ const QA_TENDERMANAGEMENT = [
     scope: "module",
     section: "Tender Setup: Profile, Team, Scope of Work and Submission",
     question: "How do I add people or crews to a tender?",
-    answer: "Open Tender Setup > Teams. On Users click Add User and tick people from the company users; on Crews click Add Crew to pick from the Global Data crews.",
+    answer: "Open **Tender Setup → Teams**. On Users click Add User and tick people from the company users; on Crews click Add Crew to pick from the Global Data crews.",
     tags: ["tender team","add user to tender","add crew to tender","tender teams tab"]
   },
   {
@@ -11405,7 +11405,7 @@ const QA_TENDERMANAGEMENT = [
     scope: "module",
     section: "Tender Setup: Profile, Team, Scope of Work and Submission",
     question: "Where are tender documents and e-mails kept?",
-    answer: "Tender Setup > Documents has New Folder, Upload Documents and automatic folders Profile, Status & Comments, Mail Attachments and Submission. Communication is a mail client for the tender, using the account chosen for Tender Management in Global Data > Settings > Mail Settings.",
+    answer: "**Tender Setup → Documents** has New Folder, Upload Documents and automatic folders Profile, Status & Comments, Mail Attachments and Submission. Communication is a mail client for the tender, using the account chosen for **Tender Management in Global Data → Settings → Mail Settings**.",
     tags: ["tender documents","tender mail","tender communication","upload tender documents"]
   },
   {
@@ -11414,7 +11414,7 @@ const QA_TENDERMANAGEMENT = [
     scope: "module",
     section: "Tender Setup: Profile, Team, Scope of Work and Submission",
     question: "How do I create a scope of work for a tender?",
-    answer: "Open Tender Setup > Scope of Work and click Create. Choose Import from settings, Scope of items or BOQ and submit. Each bill then opens a three-step flow: Choose Estimate Template and Package, BOQ Update and Preview.",
+    answer: "Open **Tender Setup → Scope of Work** and click Create. Choose Import from settings, Scope of items or BOQ and submit. Each bill then opens a three-step flow: Choose Estimate Template and Package, BOQ Update and Preview.",
     tags: ["scope of work tender","create scope of work","bill of quantities tender","boq tender","boq update"]
   },
   {
@@ -11423,7 +11423,7 @@ const QA_TENDERMANAGEMENT = [
     scope: "module",
     section: "Tender Setup: Profile, Team, Scope of Work and Submission",
     question: "Where do the estimate templates and packages come from?",
-    answer: "The 10 templates in Choose Estimate Template and Package are the cards in Settings > BOQ & Estimate Template (Item Rate, Lump Sum, Unit Rate, Cost-Plus, Time & Material and others). The packages (S, M, ABC) are part of the tender's BOQ, and each package has its own quantity column.",
+    answer: "The 10 templates in Choose Estimate Template and Package are the cards in **Settings → BOQ & Estimate Template** (Item Rate, Lump Sum, Unit Rate, Cost-Plus, Time & Material and others). The packages (S, M, ABC) are part of the tender's BOQ, and each package has its own quantity column.",
     tags: ["estimate template list","boq estimate template","packages s m abc","where do templates come from tender"]
   },
   {
@@ -11432,7 +11432,7 @@ const QA_TENDERMANAGEMENT = [
     scope: "module",
     section: "Tender Setup: Profile, Team, Scope of Work and Submission",
     question: "What is the Technical Package?",
-    answer: "A questionnaire the tender sends to bidders (for example System Architecture, Integration, Customization). On Tender Setup > Technical Package you pick one of the templates from Settings > Technical Package Template; evaluators score each answer against its weightage in Tender Response.",
+    answer: "A questionnaire the tender sends to bidders (for example System Architecture, Integration, Customization). On **Tender Setup → Technical Package** you pick one of the templates from **Settings → Technical Package Template**; evaluators score each answer against its weightage in Tender Response.",
     tags: ["technical package","technical package tender","technical questions tender","critical technical aspects"]
   },
   {
@@ -11441,7 +11441,7 @@ const QA_TENDERMANAGEMENT = [
     scope: "module",
     section: "Tender Setup: Profile, Team, Scope of Work and Submission",
     question: "What is the Submission Package?",
-    answer: "Tender Setup > Submission Package lists the revisions of the package sent to qualified vendors (Revision 1, Revision 2 with Created By and Created On), with Approval Workflow and Issues sub-tabs. Contractors must be qualified in Pre-Qualification before a package can be created.",
+    answer: "**Tender Setup → Submission Package** lists the revisions of the package sent to qualified vendors (Revision 1, Revision 2 with Created By and Created On), with Approval Workflow and Issues sub-tabs. Contractors must be qualified in Pre-Qualification before a package can be created.",
     tags: ["submission package tender","submission revision","tender submission package","qualify contractors for submission"]
   },
   {
@@ -11450,7 +11450,7 @@ const QA_TENDERMANAGEMENT = [
     scope: "module",
     section: "Tender Setup: Profile, Team, Scope of Work and Submission",
     question: "How do I set approvers for a submission package?",
-    answer: "Open Tender Setup > Submission Package > Approval Workflow, click Create Level, choose All must approve or Any one can approve, add a description and pick approvers from the system users.",
+    answer: "Open **Tender Setup → Submission Package → Approval Workflow**, click Create Level, choose All must approve or Any one can approve, add a description and pick approvers from the system users.",
     tags: ["submission approval workflow","submission package approvers","create level tender"]
   },
   {
@@ -11468,7 +11468,7 @@ const QA_TENDERMANAGEMENT = [
     scope: "module",
     section: "Tender Event Schedule",
     question: "How do I set tender dates and times?",
-    answer: "Open the tender, click Tender Event Schedule, enter a Due Date and click the clock icon to set the Time for each event, then click Save (Reset clears the changes).",
+    answer: "From **Home**, open **Tender Management → Tenders** and open the tender, then **Tender Event Schedule**. Open the tender, click Tender Event Schedule, enter a Due Date and click the clock icon to set the Time for each event, then click Save (Reset clears the changes).",
     tags: ["set tender dates","tender close date","tender call date","event schedule save"]
   },
   {
@@ -11504,7 +11504,7 @@ const QA_TENDERMANAGEMENT = [
     scope: "module",
     section: "Pre-Qualification: Choose Which Vendors May Bid",
     question: "How do I send the pre-qualification form to vendors?",
-    answer: "Open Pre-Qualification, choose and submit a template in step 1, then in Send to Tenderer tick the vendors and click Email. The e-mail asks them to submit the form and refer to the Tender Event Schedule.",
+    answer: "From **Home**, open **Tender Management → Tenders** and open the tender, then **Pre-Qualification**. Open Pre-Qualification, choose and submit a template in step 1, then in Send to Tenderer tick the vendors and click Email. The e-mail asks them to submit the form and refer to the Tender Event Schedule.",
     tags: ["send pre qualification","email vendors pre qualification","send to tenderer","invite vendors to tender","how do I invite vendors to quote"]
   },
   {
@@ -11513,7 +11513,7 @@ const QA_TENDERMANAGEMENT = [
     scope: "module",
     section: "Pre-Qualification: Choose Which Vendors May Bid",
     question: "Where does the vendor list in Send to Tenderer come from?",
-    answer: "A vendor that is not in Global Data cannot be invited. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "From **Home**, open **Tender Management → Tenders** and open the tender, then **Pre-Qualification**. A vendor that is not in Global Data cannot be invited. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["send to tenderer list","vendor list pre qualification","why vendor missing pre qualification","tenderer list source"]
   },
   {
@@ -11522,7 +11522,7 @@ const QA_TENDERMANAGEMENT = [
     scope: "module",
     section: "Pre-Qualification: Choose Which Vendors May Bid",
     question: "Where do the pre-qualification forms come from?",
-    answer: "The two templates (Application Form and Application Form for Pre-Qualification) are in Settings > Pre Qualification Template. Choosing one needs an approval workflow for Pre Qualification in Settings > Approval Workflow.",
+    answer: "The two templates (Application Form and Application Form for Pre-Qualification) are in **Settings → Pre Qualification Template**. Choosing one needs an approval workflow for **Pre Qualification in Settings → Approval Workflow**.",
     tags: ["pre qualification template","application form pre qualification","financial working experience personnel machinery"]
   },
   {
@@ -11531,7 +11531,7 @@ const QA_TENDERMANAGEMENT = [
     scope: "module",
     section: "Pre-Qualification: Choose Which Vendors May Bid",
     question: "Where can I see the vendor responses to pre-qualification?",
-    answer: "In step 3, Response & Qualification, the left list shows each vendor that answered; click one to read its filled form (for example Paid-up Capital, Net Worth, track record). Step 4, List of Qualified, shows who was accepted.",
+    answer: "From **Home**, open **Tender Management → Tenders** and open the tender, then **Pre-Qualification**. In step 3, Response & Qualification, the left list shows each vendor that answered; click one to read its filled form (for example Paid-up Capital, Net Worth, track record). Step 4, List of Qualified, shows who was accepted.",
     tags: ["pre qualification responses","list of qualified","qualified contractors","qualify vendor"]
   },
   {
@@ -11549,7 +11549,7 @@ const QA_TENDERMANAGEMENT = [
     scope: "module",
     section: "Tender Response: Technical and Financial Packages",
     question: "How do I score a vendor's technical response?",
-    answer: "Open Tender Response > Technical Package, pick the vendor in the left list and enter a Score for each question against its Weightage. List of Qualified shows the vendors that passed.",
+    answer: "Open **Tender Response → Technical Package**, pick the vendor in the left list and enter a Score for each question against its Weightage. List of Qualified shows the vendors that passed.",
     tags: ["score technical package","weightage score","evaluate technical response","technical evaluation"]
   },
   {
@@ -11558,7 +11558,7 @@ const QA_TENDERMANAGEMENT = [
     scope: "module",
     section: "Tender Response: Technical and Financial Packages",
     question: "Where do I see a vendor's prices?",
-    answer: "Open Tender Response > Financial Package, click a bill, and on Responses choose the vendor and its response. For each package you see Previous Quantity, Current Quantity, Amount (rate) and Cumulative Pay. A vendor can have several responses (Response 1, Response 2).",
+    answer: "Open **Tender Response → Financial Package**, click a bill, and on Responses choose the vendor and its response. For each package you see Previous Quantity, Current Quantity, Amount (rate) and Cumulative Pay. A vendor can have several responses (Response 1, Response 2).",
     tags: ["vendor prices tender","financial responses","enter vendor quotes for comparison","where do i enter vendor quotes"]
   },
   {
@@ -11567,7 +11567,7 @@ const QA_TENDERMANAGEMENT = [
     scope: "module",
     section: "Tender Response: Technical and Financial Packages",
     question: "Why does the Financial Package show an error?",
-    answer: "It needs a Scope of Work. A tender with no scope of work shows an error about scope of work items; create the scope (bills) first under Tender Setup > Scope of Work.",
+    answer: "It needs a Scope of Work. A tender with no scope of work shows an error about scope of work items; create the scope (bills) first under **Tender Setup → Scope of Work**.",
     tags: ["financial package error","scopeofworkitems error","boq templates empty"]
   },
   {
@@ -11576,7 +11576,7 @@ const QA_TENDERMANAGEMENT = [
     scope: "module",
     section: "Tender Response: Technical and Financial Packages",
     question: "Where do the bidders in the technical and financial packages come from?",
-    answer: "They are the vendors qualified in Pre-Qualification, which are Global Data > Vendors records (the test tender uses vendors in the Eco category).",
+    answer: "They are the vendors qualified in Pre-Qualification, which are **Global Data → Vendors** records (the test tender uses vendors in the Eco category).",
     tags: ["bidders source","tenderer list source","who can bid on tender"]
   },
   {
@@ -11594,7 +11594,7 @@ const QA_TENDERMANAGEMENT = [
     scope: "module",
     section: "Comparing Bids, Negotiating and Awarding a Work Order",
     question: "How do I compare vendor bids to select a winner?",
-    answer: "Open Tender Response > Financial Package, click a bill and choose Comparison. Pick the BOQ items, tenderers and packages; each vendor's amounts show side by side and Download Excel exports them. Then shortlist vendors in Shortlist for Negotiation.",
+    answer: "Open **Tender Response → Financial Package**, click a bill and choose Comparison. Pick the BOQ items, tenderers and packages; each vendor's amounts show side by side and Download Excel exports them. Then shortlist vendors in Shortlist for Negotiation.",
     tags: ["compare vendor bids","bid comparison","compare quotes tender","select winner tender","tender comparison","how do I compare vendor bids to select a winner"]
   },
   {
@@ -11603,7 +11603,7 @@ const QA_TENDERMANAGEMENT = [
     scope: "module",
     section: "Comparing Bids, Negotiating and Awarding a Work Order",
     question: "How do I shortlist vendors for negotiation?",
-    answer: "In the Financial Package bill, open Shortlist for Negotiation (Name, Email, License, Phone no). Shortlisted vendors then appear in Negotiated Responses.",
+    answer: "From **Home**, open **Tender Management → Tenders** and open the tender, then **Tender Details → Tender Response → Financial Package**. In the Financial Package bill, open Shortlist for Negotiation (Name, Email, License, Phone no). Shortlisted vendors then appear in Negotiated Responses.",
     tags: ["shortlist for negotiation","negotiation tender","negotiated responses"]
   },
   {
@@ -11612,7 +11612,7 @@ const QA_TENDERMANAGEMENT = [
     scope: "module",
     section: "Comparing Bids, Negotiating and Awarding a Work Order",
     question: "How do I create a work order from a tender?",
-    answer: "Open Negotiated Responses, click the bill and use Select Items to Create WO to choose which BOQ items go in. The awarded work order then shows under Awarded Work Order with Awarded To, Project Linked, Description and Created On.",
+    answer: "From **Home**, open **Tender Management → Tenders** and open the tender. Open Negotiated Responses, click the bill and use Select Items to Create WO to choose which BOQ items go in. The awarded work order then shows under Awarded Work Order with Awarded To, Project Linked, Description and Created On.",
     tags: ["create work order from tender","award tender","select items to create wo","awarded work order","tender winner work order"]
   },
   {
@@ -11621,7 +11621,7 @@ const QA_TENDERMANAGEMENT = [
     scope: "module",
     section: "Comparing Bids, Negotiating and Awarding a Work Order",
     question: "Where does the winner of a tender go?",
-    answer: "To Tender Management > Tender Details > Awarded Work Order, where the work order shows who it is awarded to and its BOQ. It is not added to the Home **Work Order** list. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "**To Tender Management → Tender Details → Awarded Work Order**, where the work order shows who it is awarded to and its BOQ. It is not added to the Home **Work Order** list. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["where does winner go","tender winner","awarded work order location","tender to work order","tender to purchase order"]
   },
   {
@@ -11648,7 +11648,7 @@ const QA_TENDERMANAGEMENT = [
     scope: "module",
     section: "Bid Types and Tender Settings",
     question: "How do I define categories for tenders/bids?",
-    answer: "Open Tender Management > Settings > Bid Type and click Bid Type. The three bid types (Build-Own-Transfer, Speciality Items, General) are shared with Proposal Management and feed Select Bid Type and the analytics filters.",
+    answer: "Open **Tender Management → Settings → Bid Type** and click Bid Type. The three bid types (Build-Own-Transfer, Speciality Items, General) are shared with Proposal Management and feed Select Bid Type and the analytics filters.",
     tags: ["bid types","define bid type","create bid type","tender categories","how do i define categories for tenders/bids"]
   },
   {
@@ -11657,7 +11657,7 @@ const QA_TENDERMANAGEMENT = [
     scope: "module",
     section: "Bid Types and Tender Settings",
     question: "What statuses can a tender have?",
-    answer: "Nine: In-Progress, Draft, Under Review, Reopened, Shortlisted, Awarded, Rejected, Pre Qualification and Completed (Settings > Status Configuration). Add Status adds one; In-Progress and Completed cannot be deleted.",
+    answer: "Nine: In-Progress, Draft, Under Review, Reopened, Shortlisted, Awarded, Rejected, Pre Qualification and Completed (**Settings → Status Configuration**). Add Status adds one; In-Progress and Completed cannot be deleted.",
     tags: ["tender statuses","bid status list","status configuration tender","add tender status"]
   },
   {
@@ -11666,7 +11666,7 @@ const QA_TENDERMANAGEMENT = [
     scope: "module",
     section: "Bid Types and Tender Settings",
     question: "How do I set up tender approvals?",
-    answer: "In Settings > Approval Workflow choose Bid, Pre Qualification or Technical Package, click Create Level and pick approvers and All must approve or Any one can approve. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "In **Settings → Approval Workflow** choose Bid, Pre Qualification or Technical Package, click Create Level and pick approvers and All must approve or Any one can approve. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["tender approval workflow","approval levels tender","pre qualification approval","technical package approval","all must approve any one can approve"]
   },
   {
@@ -11675,7 +11675,7 @@ const QA_TENDERMANAGEMENT = [
     scope: "module",
     section: "Bid Types and Tender Settings",
     question: "What are Bid Templates in Settings?",
-    answer: "The list of BOQ items with Add Item, Download Excel, Download Sample Excel and Upload Excel. It is the same list as Global Data > Bid Templates.",
+    answer: "The list of BOQ items with Add Item, Download Excel, Download Sample Excel and Upload Excel. It is the same list as **Global Data → Bid Templates**.",
     tags: ["bid templates","boq items list","bid templates global data","upload excel boq items"]
   },
   {
@@ -11684,7 +11684,7 @@ const QA_TENDERMANAGEMENT = [
     scope: "module",
     section: "Bid Types and Tender Settings",
     question: "How do I give people access to Tender Management?",
-    answer: "Settings > Users and Permissions > Add User Group opens a Permissions grid (View, Create, Edit, Delete, Admin, Download, Print, Assign To, Roll Back) for Bid Management, its Settings, Bid Response, Analytics and Issues, plus a Users tab. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "**Settings → Users and Permissions → Add User Group** opens a Permissions grid (View, Create, Edit, Delete, Admin, Download, Print, Assign To, Roll Back) for Bid Management, its Settings, Bid Response, Analytics and Issues, plus a Users tab. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["tender permissions","tender user group","bid management permissions","who can see tender management"]
   },
   {
@@ -11729,7 +11729,7 @@ const QA_TENDERMANAGEMENT = [
     scope: "module",
     section: "Where Tender Data Comes From and Goes",
     question: "Where does Tender Management get its data?",
-    answer: "Vendors and bidders from Global Data > Vendors; owners from Global Data > Owners; users from Global Rosters; crews from Global Data > Crews; BOQ items from Bid Templates (shared with Global Data); bid types and statuses shared with Proposal Management; proposals, opportunities and projects from their modules.",
+    answer: "Vendors and bidders from **Global Data → Vendors**; owners from **Global Data → Owners**; users from Global Rosters; crews from **Global Data → Crews**; BOQ items from Bid Templates (shared with Global Data); bid types and statuses shared with Proposal Management; proposals, opportunities and projects from their modules.",
     tags: ["tender data source","tender lineage","where does tender data come from","tender management data"]
   },
   {
@@ -11738,7 +11738,7 @@ const QA_TENDERMANAGEMENT = [
     scope: "module",
     section: "Where Tender Data Comes From and Goes",
     question: "How is Tender Management linked to Proposal Management?",
-    answer: "A proposal's Bid tab creates and lists tenders. The Select Proposal field fills Proposal Linked on the tender, and bid types and statuses are shared. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "From **Home**, open **Tender Management**. A proposal's Bid tab creates and lists tenders. The Select Proposal field fills Proposal Linked on the tender, and bid types and statuses are shared. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["tender proposal link","proposal management tender","proposals tab tender","link tender and proposal"]
   },
   {
@@ -11747,7 +11747,7 @@ const QA_TENDERMANAGEMENT = [
     scope: "module",
     section: "Where Tender Data Comes From and Goes",
     question: "Why is a vendor missing when I invite bidders?",
-    answer: "The Send to Tenderer list is Global Data > Vendors. Register the vendor there (and check its category) and it will appear.",
+    answer: "The Send to Tenderer list is **Global Data → Vendors**. Register the vendor there (and check its category) and it will appear.",
     tags: ["vendor missing tender","add vendor for tender","register vendor tender"]
   },
   {
@@ -11756,7 +11756,7 @@ const QA_TENDERMANAGEMENT = [
     scope: "module",
     section: "Where Tender Data Comes From and Goes",
     question: "Does an awarded tender create a Work Order or Purchase Order?",
-    answer: "It creates an awarded work order inside the tender (Tender Details > Awarded Work Order). It does not appear in the Home Work Order list, and no purchase order is created. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "It creates an awarded work order inside the tender (**Tender Details → Awarded Work Order**). It does not appear in the Home Work Order list, and no purchase order is created. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["tender creates work order","tender purchase order","award creates po","tender to project"]
   },
   {
@@ -11765,7 +11765,7 @@ const QA_TENDERMANAGEMENT = [
     scope: "module",
     section: "RFQs and Vendor Quotes in Procurement",
     question: "How do I invite vendors to quote (create an RFQ)?",
-    answer: "RFQs are in the Procurement module, not in the tender cards. In Procurement > RFQ create an RFQ: select the requisition form, update quantities, then identify vendors by category, sub category and group from Global Data > Vendors.",
+    answer: "RFQs are in the Procurement module, not in the tender cards. In **Procurement → RFQ** create an RFQ: select the requisition form, update quantities, then identify vendors by category, sub category and group from **Global Data → Vendors**.",
     tags: ["create rfq","invite vendors to quote","rfq","request for quotation","procurement rfq"]
   },
   {
@@ -11774,7 +11774,7 @@ const QA_TENDERMANAGEMENT = [
     scope: "module",
     section: "RFQs and Vendor Quotes in Procurement",
     question: "How do I set standard instructions for vendors on an RFQ?",
-    answer: "Use Vendor Instructions on the RFQ in Procurement to add guidelines and terms and conditions that go to the vendors.",
+    answer: "From **Home**, open **Procurement → RFQ**. Use Vendor Instructions on the RFQ in Procurement to add guidelines and terms and conditions that go to the vendors.",
     tags: ["rfq vendor instructions","standard instructions rfq","rfq terms"]
   },
   {
@@ -11783,7 +11783,7 @@ const QA_TENDERMANAGEMENT = [
     scope: "module",
     section: "RFQs and Vendor Quotes in Procurement",
     question: "How do I track the status of an RFQ sent to vendors?",
-    answer: "Open Procurement > RFQ: the RFQ list shows progress and pending actions per RFQ and the vendor names.",
+    answer: "Open **Procurement → RFQ**: the RFQ list shows progress and pending actions per RFQ and the vendor names.",
     tags: ["track rfq","rfq status","rfq list"]
   },
   {
@@ -11804,7 +11804,7 @@ const QA_PROCUREMENT = [
     scope: "project",
     section: "Requisitions",
     question: "How do I create a requisition (REQ)?",
-    answer: "Go to Procurement > REQ and click \"Create\". Choose the requisition type (Equipment, Material, Equipment Part, or Delivery Service), fill in details and specifications, then click Submit.",
+    answer: "Go to **Procurement → REQ** and click \"Create\". Choose the requisition type (Equipment, Material, Equipment Part, or Delivery Service), fill in details and specifications, then click Submit.",
     tags: ["create req","new requisition","request material"]
   },
   {
@@ -11813,7 +11813,7 @@ const QA_PROCUREMENT = [
     scope: "project",
     section: "Requisitions",
     question: "How do I assign a requisition to someone after creating it?",
-    answer: "After creating a REQ in Procurement > REQ, use the \"Assign To\" button to assign the requisition to a specific user.",
+    answer: "After creating a **REQ in Procurement → REQ**, use the \"Assign To\" button to assign the requisition to a specific user.",
     tags: ["assign req","requisition owner","delegate requisition"]
   },
   {
@@ -11822,7 +11822,7 @@ const QA_PROCUREMENT = [
     scope: "project",
     section: "Requisitions",
     question: "Where do I see rejected requisitions?",
-    answer: "Raised issues for rejected REQs can be tracked in the REQ module's \"Workflow Issues\" tab.",
+    answer: "From **Home**, open **Procurement → REQ**. Raised issues for rejected REQs can be tracked in the REQ module's \"Workflow Issues\" tab.",
     tags: ["rejected req","requisition issues","workflow issues"]
   },
   {
@@ -11831,7 +11831,7 @@ const QA_PROCUREMENT = [
     scope: "project",
     section: "Requisitions",
     question: "Can I create a requisition from a rejected Load Out Request?",
-    answer: "Yes. In Procurement > REQ, you can create REQs from rejected LORs by clicking \"LOR from REQ\".",
+    answer: "Yes. In **Procurement → REQ**, you can create REQs from rejected LORs by clicking \"LOR from REQ\".",
     tags: ["req from lor","load out request requisition"]
   },
   {
@@ -11840,7 +11840,7 @@ const QA_PROCUREMENT = [
     scope: "global",
     section: "Configure Procurement Forms & Settings",
     question: "How do I customize the fields on the requisition form?",
-    answer: "Go to Procurement Settings > REQ Form and use Inncircles Arena's form builder to create multiple sections with different field types (paragraph, single select, multi-select, tables, etc.).",
+    answer: "Go to **Procurement Settings → REQ Form** and use Inncircles Arena's form builder to create multiple sections with different field types (paragraph, single select, multi-select, tables, etc.).",
     tags: ["req form builder","configure requisition fields"]
   },
   {
@@ -11849,7 +11849,7 @@ const QA_PROCUREMENT = [
     scope: "project",
     section: "RFQ",
     question: "How do I create an RFQ from a requisition?",
-    answer: "Go to Procurement > RFQ and click \"Create\". Link relevant procurement packages to the corresponding requisitions (REQ), update quantities/specifications, then select vendors from the pre-configured list to request quotes.",
+    answer: "Go to **Procurement → RFQ** and click \"Create\". Link relevant procurement packages to the corresponding requisitions (REQ), update quantities/specifications, then select vendors from the pre-configured list to request quotes.",
     tags: ["create rfq","request for quotation","link req to rfq"]
   },
   {
@@ -11858,7 +11858,7 @@ const QA_PROCUREMENT = [
     scope: "project",
     section: "Vendor Responses",
     question: "How do I record a vendor's quote for an RFQ?",
-    answer: "Go to Procurement > Vendor Responses, select the RFQ from the list on the left, and enter the vendor's cost and lead time. Then move to \"Vendor Analysis and Selection\" to compare responses.",
+    answer: "Go to **Procurement → Vendor Responses**, select the RFQ from the list on the left, and enter the vendor's cost and lead time. Then move to \"Vendor Analysis and Selection\" to compare responses.",
     tags: ["vendor quote entry","record vendor response"]
   },
   {
@@ -11867,7 +11867,7 @@ const QA_PROCUREMENT = [
     scope: "project",
     section: "Purchase Orders",
     question: "How do I create a Purchase Order from an RFQ?",
-    answer: "Go to Procurement > Purchase Order, select the procurement type tab (Material, Equipment, Equipment Part, or Delivery Service), click \"Create\", select the relevant RFQ, enter quantities/pricing/tax code, then click Submit.",
+    answer: "Go to **Procurement → Purchase Order**, select the procurement type tab (Material, Equipment, Equipment Part, or Delivery Service), click \"Create\", select the relevant RFQ, enter quantities/pricing/tax code, then click Submit.",
     tags: ["create po","purchase order from rfq","generate po"]
   },
   {
@@ -11876,7 +11876,7 @@ const QA_PROCUREMENT = [
     scope: "project",
     section: "Purchase Orders",
     question: "Can I create a Purchase Order without going through an RFQ?",
-    answer: "Yes. Go to Procurement > Direct Purchase Order, select the procurement type tab, click \"Create\", and select the REQ directly (skipping the RFQ step). Enter pricing and lead time, select the tax code in the Preview PO step, then Submit.",
+    answer: "Yes. Go to **Procurement → Direct Purchase Order**, select the procurement type tab, click \"Create\", and select the REQ directly (skipping the RFQ step). Enter pricing and lead time, select the tax code in the Preview PO step, then Submit.",
     tags: ["direct po","skip rfq","purchase order without quote"]
   },
   {
@@ -11885,7 +11885,7 @@ const QA_PROCUREMENT = [
     scope: "project",
     section: "Purchase Orders",
     question: "Where can I see all Purchase Orders and their status?",
-    answer: "Go to Procurement > Purchase Order Master to view all Purchase Orders along with their current status, history, and linked REQs.",
+    answer: "Go to **Procurement → Purchase Order Master** to view all Purchase Orders along with their current status, history, and linked REQs.",
     tags: ["po master","purchase order list","po status"]
   },
   {
@@ -11903,7 +11903,7 @@ const QA_PROCUREMENT = [
     scope: "global",
     section: "Configure Procurement Forms & Settings",
     question: "How do I configure the Purchase Order form fields?",
-    answer: "Go to Procurement Settings > PO Configuration and use the form builder to configure the Purchase Order form separately for Material, Equipment, Equipment Part, and Delivery Service tabs.",
+    answer: "Go to **Procurement Settings → PO Configuration** and use the form builder to configure the Purchase Order form separately for Material, Equipment, Equipment Part, and Delivery Service tabs.",
     tags: ["po form configuration","purchase order fields"]
   },
   {
@@ -11912,7 +11912,7 @@ const QA_PROCUREMENT = [
     scope: "project",
     section: "Delivery Receipts",
     question: "How do I create a Delivery Receipt for a Purchase Order?",
-    answer: "Go to Procurement > Delivery Receipts and click \"Create\". Select the vendor and the associated Purchase Order, fill in receiving quantity and additional info, then click Submit.",
+    answer: "Go to **Procurement → Delivery Receipts** and click \"Create\". Select the vendor and the associated Purchase Order, fill in receiving quantity and additional info, then click Submit.",
     tags: ["delivery receipt","dr creation","receive goods"]
   },
   {
@@ -11921,7 +11921,7 @@ const QA_PROCUREMENT = [
     scope: "global",
     section: "Configure Procurement Forms & Settings",
     question: "How do I configure the Delivery Receipt form?",
-    answer: "Go to Procurement Settings > Delivery Request and use the form builder to configure the Delivery Receipt form for Material, Equipment, Equipment Part, and Delivery Service.",
+    answer: "Go to **Procurement Settings → Delivery Request** and use the form builder to configure the Delivery Receipt form for Material, Equipment, Equipment Part, and Delivery Service.",
     tags: ["delivery receipt settings","configure delivery form"]
   },
   {
@@ -11930,7 +11930,7 @@ const QA_PROCUREMENT = [
     scope: "project",
     section: "Invoices",
     question: "How do I create an invoice for a procured item?",
-    answer: "Go to Procurement > Invoices, click \"Create\", choose the vendor, expand to view associated Purchase Orders, and select the relevant one. Enter invoice number, date, payment terms, select items for billing, then enter the subtotal and tax amount before submitting.",
+    answer: "Go to **Procurement → Invoices**, click \"Create\", choose the vendor, expand to view associated Purchase Orders, and select the relevant one. Enter invoice number, date, payment terms, select items for billing, then enter the subtotal and tax amount before submitting.",
     tags: ["create invoice","procurement billing","invoice from po"]
   },
   {
@@ -11939,7 +11939,7 @@ const QA_PROCUREMENT = [
     scope: "global",
     section: "Configure Procurement Forms & Settings",
     question: "How do I configure the Invoice form fields?",
-    answer: "Go to Procurement Settings > Invoice and use the form builder to configure the invoice form for Equipment, Material, Equipment Part, and Delivery Service, with multiple sections and field types.",
+    answer: "Go to **Procurement Settings → Invoice** and use the form builder to configure the invoice form for Equipment, Material, Equipment Part, and Delivery Service, with multiple sections and field types.",
     tags: ["invoice settings","configure invoice form"]
   },
   {
@@ -11948,7 +11948,7 @@ const QA_PROCUREMENT = [
     scope: "project",
     section: "Pickup Requests",
     question: "How do I create a Pickup Request for procured items?",
-    answer: "Go to Procurement > Pickup Request and click \"Create\". Select the Vendor and Purchase Order, fill in the Pickup Date and Address, set the Pickup Request status, then click Submit.",
+    answer: "Go to **Procurement → Pickup Request** and click \"Create\". Select the Vendor and Purchase Order, fill in the Pickup Date and Address, set the Pickup Request status, then click Submit.",
     tags: ["pickup request","schedule pickup","procurement pickup"]
   },
   {
@@ -11957,7 +11957,7 @@ const QA_PROCUREMENT = [
     scope: "global",
     section: "Configure Procurement Forms & Settings",
     question: "How do I configure the Pickup Request form?",
-    answer: "Go to Procurement Settings > Pickup Request and configure the form fields using the form builder, then click \"Save changes\".",
+    answer: "Go to **Procurement Settings → Pickup Request** and configure the form fields using the form builder, then click \"Save changes\".",
     tags: ["pickup request settings","configure pickup form"]
   },
   {
@@ -11966,7 +11966,7 @@ const QA_PROCUREMENT = [
     scope: "project",
     section: "Communications",
     question: "Where can I find emails related to procured items?",
-    answer: "Go to Procurement > Communications, which is a mail repository where all emails linked to procured items are tracked.",
+    answer: "Go to **Procurement → Communications**, which is a mail repository where all emails linked to procured items are tracked.",
     tags: ["procurement mail","communication log","procurement emails"]
   },
   {
@@ -11984,7 +11984,7 @@ const QA_PROCUREMENT = [
     scope: "global",
     section: "Configure Procurement Forms & Settings",
     question: "How do I configure ID formats for procurement documents?",
-    answer: "Go to Procurement > ID Settings, select System Default for auto-generated IDs, or Custom to choose fields and their order, then click \"Save Changes\".",
+    answer: "Go to **Procurement → ID Settings**, select System Default for auto-generated IDs, or Custom to choose fields and their order, then click \"Save Changes\".",
     tags: ["procurement id format","custom id","auto id"]
   },
   {
@@ -12002,7 +12002,7 @@ const QA_PROCUREMENT = [
     scope: "global",
     section: "Configure Procurement Forms & Settings",
     question: "How do I set priority levels for procurement issues?",
-    answer: "Go to Procurement Settings > Procurement Issues and click \"Add Priority\" to create priority levels along with their Due Hours. This priority list is specifically for issues raised while inspecting a Delivery Receipt (Delivery Receipts > Inspection Issues) — a verified environment had High (4 hours), Medium (24 hours), and Low (48 hours).",
+    answer: "Go to **Procurement Settings → Procurement Issues** and click \"Add Priority\" to create priority levels along with their Due Hours. This priority list is specifically for issues raised while inspecting a Delivery Receipt (**Delivery Receipts → Inspection Issues**) — a verified environment had High (4 hours), Medium (24 hours), and Low (48 hours).",
     tags: ["issue priority","procurement issue sla","due hours","delivery receipt inspection issue priority"]
   },
   {
@@ -12011,7 +12011,7 @@ const QA_PROCUREMENT = [
     scope: "project",
     section: "Procurement Analytics Dashboard",
     question: "Where can I see overall procurement spend and vendor performance?",
-    answer: "Go to Home > Procurement — it opens on the Dashboard tab. KPI tiles show Total Spend, Budget Variance, Avg Lead Time, and Quality Issue Rate; the Vendor Performance Summary table below ranks each vendor by Total Spend, Avg Lead Time, Quality Issue Rate, On-Time Delivery, Total Orders, and a Performance Score. Filter by project (\"By Projects\") or by date range.",
+    answer: "Go to **Home → Procurement** — it opens on the Dashboard tab. KPI tiles show Total Spend, Budget Variance, Avg Lead Time, and Quality Issue Rate; the Vendor Performance Summary table below ranks each vendor by Total Spend, Avg Lead Time, Quality Issue Rate, On-Time Delivery, Total Orders, and a Performance Score. Filter by project (\"By Projects\") or by date range.",
     tags: ["procurement dashboard","vendor performance","total spend","quality issue rate"]
   },
   {
@@ -12020,7 +12020,7 @@ const QA_PROCUREMENT = [
     scope: "project",
     section: "Requisitions",
     question: "How do I check who needs to approve a specific requisition?",
-    answer: "On the Requisition Form list, click the tree/hierarchy icon in that REQ's Actions column. It opens \"Approval work flow data\" showing Level, Level Description, Approvers, and Workflow Type (e.g. \"Any one can approve\") for that REQ's approval chain.",
+    answer: "From **Home**, open **Procurement → Requisition Form**. On the Requisition Form list, click the tree/hierarchy icon in that REQ's Actions column. It opens \"Approval work flow data\" showing Level, Level Description, Approvers, and Workflow Type (e.g. \"Any one can approve\") for that REQ's approval chain.",
     tags: ["requisition approval chain","approval workflow viewer","who approves req","device_hub icon"]
   },
   {
@@ -12056,7 +12056,7 @@ const QA_PROCUREMENT = [
     scope: "global",
     section: "RFQ",
     question: "How do I set up standard instructions to send vendors with an RFQ?",
-    answer: "Go to Procurement > RFQ and click the Vendor Instructions gear icon, then \"+ Add Instruction\". Name it, write its description, and choose which vendors it applies to, then Submit. These reusable instructions can then be attached to any RFQ instead of retyping standard terms each time.",
+    answer: "Go to **Procurement → RFQ** and click the Vendor Instructions gear icon, then \"+ Add Instruction\". Name it, write its description, and choose which vendors it applies to, then Submit. These reusable instructions can then be attached to any RFQ instead of retyping standard terms each time.",
     tags: ["vendor instructions","rfq boilerplate","standard rfq terms"]
   },
   {
@@ -12065,7 +12065,7 @@ const QA_PROCUREMENT = [
     scope: "project",
     section: "Vendor Responses",
     question: "Can I see a chart comparing vendor prices for an RFQ?",
-    answer: "Yes. On Vendor Responses (\"Quotation\") step 2, Vendor Analysis & Selection, use the Chart View toggle to see a Vendor Price Chart: pick an equipment item and compare Daily/Weekly/Monthly rates across vendors as a bar chart, with a download option.",
+    answer: "From **Home**, open **Procurement → Vendor Responses**. Yes. On Vendor Responses (\"Quotation\") step 2, Vendor Analysis & Selection, use the Chart View toggle to see a Vendor Price Chart: pick an equipment item and compare Daily/Weekly/Monthly rates across vendors as a bar chart, with a download option.",
     tags: ["vendor price chart","chart view","compare vendor rates"]
   },
   {
@@ -12083,7 +12083,7 @@ const QA_PROCUREMENT = [
     scope: "global",
     section: "Purchase Orders",
     question: "How do I set the standard Terms & Conditions text that appears on Purchase Orders?",
-    answer: "Go to Procurement > Purchase Orders and click \"Terms & Conditions\". Write the boilerplate text in the rich-text editor (bold/italic/underline/strikethrough, links, headings, lists) — it can include placeholders like [Amount] and [30/60] for payment terms — then Submit. This one company-wide block is stamped onto every generated PO.",
+    answer: "Go to **Procurement → Purchase Orders** and click \"Terms & Conditions\". Write the boilerplate text in the rich-text editor (bold/italic/underline/strikethrough, links, headings, lists) — it can include placeholders like [Amount] and [30/60] for payment terms — then Submit. This one company-wide block is stamped onto every generated PO.",
     tags: ["purchase order terms and conditions","po boilerplate","payment terms"]
   },
   {
@@ -12092,7 +12092,7 @@ const QA_PROCUREMENT = [
     scope: "project",
     section: "Purchase Orders",
     question: "How do I see how much of a Purchase Order has been invoiced?",
-    answer: "Go to Procurement > Purchase Order Master. Total Cost, Total Invoice Cost, and Balance Cost columns show how much of the PO has been billed and what remains, alongside an Invoice status column (e.g. APPROVED, CREATED, N/A).",
+    answer: "Go to **Procurement → Purchase Order Master**. Total Cost, Total Invoice Cost, and Balance Cost columns show how much of the PO has been billed and what remains, alongside an Invoice status column (e.g. APPROVED, CREATED, N/A).",
     tags: ["purchase order balance","total invoice cost","po invoice status"]
   },
   {
@@ -12128,7 +12128,7 @@ const QA_PROCUREMENT = [
     scope: "module",
     section: "Requisitions",
     question: "Where does the item list on a requisition come from?",
-    answer: "The **Search for Materials** or **Search for Equipments or Accessories** box lists the company's material and equipment items (tagged **Mat**, **Eqp** or **Acc**). When you pick one, its **UOM** is filled in and locked. If an item you need is missing, ask your admin to add it to the company item lists; for anything else, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "From **Home**, open **Procurement → Requisition Form**. The **Search for Materials** or **Search for Equipments or Accessories** box lists the company's material and equipment items (tagged **Mat**, **Eqp** or **Acc**). When you pick one, its **UOM** is filled in and locked. If an item you need is missing, ask your admin to add it to the company item lists; for anything else, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["requisition item list","where do items come from","material picker","equipment picker","uom locked","requisition dropdown source"]
   },
   {
@@ -12209,7 +12209,7 @@ const QA_PROCUREMENT = [
     scope: "module",
     section: "Purchase Orders",
     question: "How are Total Invoice Cost and Balance Cost on Purchase Order Master calculated?",
-    answer: "**Total Invoice Cost** is the total of the **Approved** invoices raised against the Purchase Order, and **Balance Cost** is **Total Cost** minus that. Invoices still in **Created** status do not count yet (the **Invoice status** column shows CREATED). For example PO 83 had Total Cost 1,39,650, an approved invoice of 1,27,575 and a balance of 12,075. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "From **Home**, open **Procurement → Purchase Order Master**. **Total Invoice Cost** is the total of the **Approved** invoices raised against the Purchase Order, and **Balance Cost** is **Total Cost** minus that. Invoices still in **Created** status do not count yet (the **Invoice status** column shows CREATED). For example PO 83 had Total Cost 1,39,650, an approved invoice of 1,27,575 and a balance of 12,075. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["total invoice cost","balance cost","invoice status po master","how much invoiced","po invoiced amount"]
   },
   {
@@ -12218,7 +12218,7 @@ const QA_PROCUREMENT = [
     scope: "module",
     section: "Delivery Receipts",
     question: "Where does procurement data show up in Inventory and Cost Tracking?",
-    answer: "A **Delivery Receipt** adds the received quantity to **Inventory Management**; the material's **See History** reads \"received from <vendor> through PO ID ... confirmed by DR ID ...\". The Procurement **Dashboard** (Total Spend, Vendor Performance Summary) and **Purchase Order Master** report the spend. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "From **Home**, open **Procurement → Delivery Receipts**. A **Delivery Receipt** adds the received quantity to **Inventory Management**; the material's **See History** reads \"received from <vendor> through PO ID ... confirmed by DR ID ...\". The Procurement **Dashboard** (Total Spend, Vendor Performance Summary) and **Purchase Order Master** report the spend. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["procurement inventory link","cost tracking purchase orders","where does po data go","delivery receipt inventory"]
   },
   {
@@ -12239,7 +12239,7 @@ const QA_TIMEMANAGEMENT = [
     scope: "project",
     section: "My Timesheet",
     question: "How do I log my own work hours?",
-    answer: "Open My Timesheet, choose the Log Level Category (Company, Projects, Work Orders or GL Codes) and the Template, pick the date, click \"Add\", choose the project/work order/GL code and Phase Code, enter hours in the earning-code columns, then click \"Submit\" (or \"Save as Draft\" if incomplete). See \"Which Phase Codes a Timesheet Offers\" if a code is missing.",
+    answer: "From **Home**, open **Time Management → My Timesheet**, choose the Log Level Category (Company, Projects, Work Orders or GL Codes) and the Template, pick the date, click \"Add\", choose the project/work order/GL code and Phase Code, enter hours in the earning-code columns, then click \"Submit\" (or \"Save as Draft\" if incomplete). See \"Which Phase Codes a Timesheet Offers\" if a code is missing.",
     tags: ["log hours","my timesheet","submit timesheet","enter hours"]
   },
   {
@@ -12248,7 +12248,7 @@ const QA_TIMEMANAGEMENT = [
     scope: "project",
     section: "My Crew Timesheet",
     question: "How does a supervisor log hours for an entire crew?",
-    answer: "Open My Crew Timesheet, choose the Log Level Category, the project or work order if asked, the Crew and the Template, click \"Add\" for each employee row, choose the Roster, project and Phase Code, enter hours per earning code, then \"Submit for Approval\". The crew needs a Timesheet Mode and an approval workflow first (Settings).",
+    answer: "From **Home**, open **Time Management → My Crew Timesheet**, choose the Log Level Category, the project or work order if asked, the Crew and the Template, click \"Add\" for each employee row, choose the Roster, project and Phase Code, enter hours per earning code, then \"Submit for Approval\". The crew needs a Timesheet Mode and an approval workflow first (Settings).",
     tags: ["crew timesheet","log crew hours","supervisor timesheet","foreman timesheet"]
   },
   {
@@ -12257,7 +12257,7 @@ const QA_TIMEMANAGEMENT = [
     scope: "project",
     section: "Timesheet Logs",
     question: "How do I approve or reject a submitted timesheet?",
-    answer: "Go to My Timesheet Logs (or My Crew Timesheet Logs), select a submitted log, then use the \"Approve\" or \"Reject\" buttons shown on the right side, optionally adding comments. These buttons only appear for users designated as approvers in the Approval Workflow.",
+    answer: "From **Home**, open **Time Management → Timesheet Logs → My Timesheet Logs** (or **My Crew Timesheet Logs**), then select a submitted log, then use the \"Approve\" or \"Reject\" buttons shown on the right side, optionally adding comments. These buttons only appear for users designated as approvers in the Approval Workflow.",
     tags: ["approve timesheet","reject timesheet","timesheet approval"]
   },
   {
@@ -12284,7 +12284,7 @@ const QA_TIMEMANAGEMENT = [
     scope: "project",
     section: "Timesheet Logs",
     question: "How do I filter timesheet logs by project, crew, or status?",
-    answer: "On Timesheet Logs click the filter icon and narrow by Log Level Category, Log Level, Crew, Logged By, Mode (All, Daily, Weekly By Day, Weekly), Status and Date Range, then Apply. \"Save Filters\" keeps the set, \"Reset\" reverts and \"Clear All\" empties it. The Mode filter may open on Weekly By Day, which hides Daily logs.",
+    answer: "From **Home**, open **Time Management → Timesheet Logs**. On Timesheet Logs click the filter icon and narrow by Log Level Category, Log Level, Crew, Logged By, Mode (All, Daily, Weekly By Day, Weekly), Status and Date Range, then Apply. \"Save Filters\" keeps the set, \"Reset\" reverts and \"Clear All\" empties it. The Mode filter may open on Weekly By Day, which hides Daily logs.",
     tags: ["filter timesheets","timesheet search","log level filter"]
   },
   {
@@ -12302,7 +12302,7 @@ const QA_TIMEMANAGEMENT = [
     scope: "global",
     section: "Settings",
     question: "How do I create an approval workflow for timesheets?",
-    answer: "Go to Settings > Timesheet Workflow > Create Workflow, click \"Create Approval Workflow\", name it, then click \"Create Level\" (Add Level to Workflow): choose Users or Roles, the approvers, a description, and \"All must approve\" or \"Any one can approve\". Submit each level.",
+    answer: "Go to **Settings → Timesheet Workflow → Create Workflow**, click \"Create Approval Workflow\", name it, then click \"Create Level\" (Add Level to Workflow): choose Users or Roles, the approvers, a description, and \"All must approve\" or \"Any one can approve\". Submit each level.",
     tags: ["timesheet approval workflow","create workflow","approval levels"]
   },
   {
@@ -12311,7 +12311,7 @@ const QA_TIMEMANAGEMENT = [
     scope: "global",
     section: "Settings",
     question: "How do I assign an approval workflow to a user or crew?",
-    answer: "Go to Settings > Timesheet Workflow > Assign Workflow, choose the Users or Crews tab, select the person or crew, pick the workflow under \"Assign Approval Workflow\" and click \"Save Changes\". \"Clear\" removes it and \"Copy Approval Workflow To\" applies it to several users or crews.",
+    answer: "Go to **Settings → Timesheet Workflow → Assign Workflow**, choose the Users or Crews tab, select the person or crew, pick the workflow under \"Assign Approval Workflow\" and click \"Save Changes\". \"Clear\" removes it and \"Copy Approval Workflow To\" applies it to several users or crews.",
     tags: ["assign timesheet workflow","copy workflow","workflow assignment"]
   },
   {
@@ -12320,7 +12320,7 @@ const QA_TIMEMANAGEMENT = [
     scope: "global",
     section: "Settings",
     question: "How do I set whether timesheets are logged Daily, Weekly, or Weekly by Day?",
-    answer: "Go to Settings > Timesheet Settings > Timesheet Mode. Choose the My Timesheet or My Crew Timesheet tab, select the person or crew and pick Daily, Weekly by day or Weekly, then \"Save Changes\". \"Copy To\" applies it to others. The mode decides which templates the user sees.",
+    answer: "Go to **Settings → Timesheet Settings → Timesheet Mode**. Choose the My Timesheet or My Crew Timesheet tab, select the person or crew and pick Daily, Weekly by day or Weekly, then \"Save Changes\". \"Copy To\" applies it to others. The mode decides which templates the user sees.",
     tags: ["timesheet mode","daily weekly configuration","default template"]
   },
   {
@@ -12329,7 +12329,7 @@ const QA_TIMEMANAGEMENT = [
     scope: "global",
     section: "Settings",
     question: "How do I create earning codes for payroll?",
-    answer: "Go to Settings > Timesheet Settings > Earnings Codes (the same codes as Global Data > Settings > Earnings Codes), click \"Add\", enter Code, Description, Shortname and VP Code, set the Data Type (HOURS or AMOUNT) and tick Payroll and/or Project. \"Split Header\" places the code under Phase Codes in weekly templates.",
+    answer: "Go to **Settings → Timesheet Settings → Earnings Codes** (the same codes as **Global Data → Settings → Earnings Codes**), click \"Add\", enter Code, Description, Shortname and VP Code, set the Data Type (HOURS or AMOUNT) and tick Payroll and/or Project. \"Split Header\" places the code under Phase Codes in weekly templates.",
     tags: ["earning codes","payroll codes","create earning code"]
   },
   {
@@ -12338,7 +12338,7 @@ const QA_TIMEMANAGEMENT = [
     scope: "global",
     section: "Settings",
     question: "How do I build a custom timesheet template?",
-    answer: "Go to Settings > Timesheet Settings > Timesheet Template, click \"Create\" or open a template. Under Configurable Fields use \"Add field\" (types Form, Multi Select, Roster, Single Select, Text Box, Time). Under Earnings Codes choose Column or Split Time Headers and add earning codes, then \"Save Changes\".",
+    answer: "Go to **Settings → Timesheet Settings → Timesheet Template**, click \"Create\" or open a template. Under Configurable Fields use \"Add field\" (types Form, Multi Select, Roster, Single Select, Text Box, Time). Under Earnings Codes choose Column or Split Time Headers and add earning codes, then \"Save Changes\".",
     tags: ["timesheet template builder","configurable fields","custom timesheet"]
   },
   {
@@ -12347,7 +12347,7 @@ const QA_TIMEMANAGEMENT = [
     scope: "global",
     section: "Settings",
     question: "How do I lock payroll periods to prevent further edits?",
-    answer: "Go to Settings > Timesheet Settings > Payroll Locking. Choose Daily, Weekly or Monthly; for Monthly pick Start of The Month, End of The Month or Custom; set the Time and Buffer Time (In Days) and Save Changes. It applies to time management and productivity logs.",
+    answer: "Go to **Settings → Timesheet Settings → Payroll Locking**. Choose Daily, Weekly or Monthly; for Monthly pick Start of The Month, End of The Month or Custom; set the Time and Buffer Time (In Days) and Save Changes. It applies to time management and productivity logs.",
     tags: ["payroll locking","lock timesheet period","prevent edits"]
   },
   {
@@ -12356,7 +12356,7 @@ const QA_TIMEMANAGEMENT = [
     scope: "project",
     section: "Reconciliation",
     question: "How do I manually reconcile timesheet data?",
-    answer: "Open Reconciliation > Timesheets, choose Weekly or Daily & Weekly by Day, click \"Create Log\" and select a date range to see submitted logs (Date, Roster, Total Hours, Total Amount), then click the \"Phase code\" button for an employee to reconcile that entry.",
+    answer: "Open **Reconciliation → Timesheets**, choose Weekly or Daily & Weekly by Day, click \"Create Log\" and select a date range to see submitted logs (Date, Roster, Total Hours, Total Amount), then click the \"Phase code\" button for an employee to reconcile that entry.",
     tags: ["manual reconciliation","reconcile timesheet","timesheet accuracy"]
   },
   {
@@ -12365,7 +12365,7 @@ const QA_TIMEMANAGEMENT = [
     scope: "project",
     section: "Reconciliation",
     question: "Can I reconcile timesheets using uploaded gate/access logs?",
-    answer: "Yes. Open Reconciliation > Gate Logs, choose Weekly or Daily & Weekly by Day, click \"Upload Logs\", download the template, enter Gate In and Gate Out in 24-hour format with dates as MM-DD-YYYY, then Upload and Submit. Employee IDs are validated against Global Rosters.",
+    answer: "Yes. Open **Reconciliation → Gate Logs**, choose Weekly or Daily & Weekly by Day, click \"Upload Logs\", download the template, enter Gate In and Gate Out in 24-hour format with dates as MM-DD-YYYY, then Upload and Submit. Employee IDs are validated against Global Rosters.",
     tags: ["gate logs","upload reconciliation","batch reconciliation"]
   },
   {
@@ -12374,7 +12374,7 @@ const QA_TIMEMANAGEMENT = [
     scope: "project",
     section: "Timesheet Data Summary",
     question: "How do I see total logged hours broken down by project, crew, or phase code?",
-    answer: "Open Timesheet Data Summary and switch between the tabs People, Crew, Phase Code, Project, Work Order, Earnings Code, GL Code and Detailed View. Choose Daily & Weekly by Day or Weekly, a date range and log level, and toggle Submitted or Approved and Hours or Amount.",
+    answer: "From **Home**, open **Time Management → Timesheet Data Summary** and switch between the tabs People, Crew, Phase Code, Project, Work Order, Earnings Code, GL Code and Detailed View. Choose Daily & Weekly by Day or Weekly, a date range and log level, and toggle Submitted or Approved and Hours or Amount.",
     tags: ["timesheet summary","hours by project","hours by crew","phase code report"]
   },
   {
@@ -12383,7 +12383,7 @@ const QA_TIMEMANAGEMENT = [
     scope: "global",
     section: "Rosters & Crews",
     question: "How do I create a new crew?",
-    answer: "Go to Global Data > Crews and click \"Create\". Enter the Crew Name, choose Supervisors and Foremen from their dropdowns, select Rosters (system and non-system users) for the crew, then click \"Submit\".",
+    answer: "Go to **Global Data → Crews** and click \"Create\". Enter the Crew Name, choose Supervisors and Foremen from their dropdowns, select Rosters (system and non-system users) for the crew, then click \"Submit\".",
     tags: ["create crew","new crew","global crew setup"]
   },
   {
@@ -12392,7 +12392,7 @@ const QA_TIMEMANAGEMENT = [
     scope: "project",
     section: "Rosters & Crews",
     question: "How do I add a crew to a specific project?",
-    answer: "Go to Project Setup > People > Project Crews and click \"Create Crew\" to build one, or \"Copy Crews from Global Data\" to import existing crews. \"Copy Crews to Projects\" copies a crew to other projects.",
+    answer: "Go to **Project Setup → People → Project Crews** and click \"Create Crew\" to build one, or \"Copy Crews from Global Data\" to import existing crews. \"Copy Crews to Projects\" copies a crew to other projects.",
     tags: ["project crew","add crew to project","copy crew"]
   },
   {
@@ -12410,7 +12410,7 @@ const QA_TIMEMANAGEMENT = [
     scope: "project",
     section: "Rosters & Crews",
     question: "How do I add a temporary (non-system) worker to a project?",
-    answer: "Go to Project Setup > Roster > Non System User and click \"Add\" to manually create one, or \"Get Users from Global Data\" to select existing non-system users. Fill required fields and Submit.",
+    answer: "Go to **Project Setup → Roster → Non System User** and click \"Add\" to manually create one, or \"Get Users from Global Data\" to select existing non-system users. Fill required fields and Submit.",
     tags: ["non-system user","temp worker","add temporary user"]
   },
   {
@@ -12419,7 +12419,7 @@ const QA_TIMEMANAGEMENT = [
     scope: "global",
     section: "Rosters & Crews",
     question: "How do I add custom fields to the roster tables?",
-    answer: "Go to Global Data > Settings > Roster Settings and use \"Add Field\" under Configurable Fields to add custom columns (set Required, Show on cards and the field type), then \"Save Changes\".",
+    answer: "Go to **Global Data → Settings → Roster Settings** and use \"Add Field\" under Configurable Fields to add custom columns (set Required, Show on cards and the field type), then \"Save Changes\".",
     tags: ["roster custom fields","configure roster columns","field types"]
   },
   {
@@ -12428,7 +12428,7 @@ const QA_TIMEMANAGEMENT = [
     scope: "project",
     section: "Rosters & Crews",
     question: "Can I bulk upload rosters via Excel?",
-    answer: "Yes. On the Roster (System Users or Non-System Users) page, use \"Upload Excel\" to bulk-add roster records, or \"Download Excel\" to export the current roster list.",
+    answer: "From **Home**, open **Time Management** and go to **Rosters & Crews**. Yes. On the Roster (System Users or Non-System Users) page, use \"Upload Excel\" to bulk-add roster records, or \"Download Excel\" to export the current roster list.",
     tags: ["bulk upload roster","download roster excel"]
   },
   {
@@ -12437,7 +12437,7 @@ const QA_TIMEMANAGEMENT = [
     scope: "module",
     section: "Which Phase Codes a Timesheet Offers",
     question: "Why does my timesheet show only some phase codes?",
-    answer: "It depends on what the row is charged to. A project shows only the phase codes ticked \"Timesheet Management\" in that project's Project Setup > Phase Codes. On a company row you see the codes ticked in Default Phase Codes plus your own Default Indirect Phase Code, not the full Global Data list. With no project on a crew row you see Indirect codes only. Work-order items and GL codes have no phase code. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "It depends on what the row is charged to. A project shows only the phase codes ticked \"Timesheet Management\" in that project's **Project Setup → Phase Codes**. On a company row you see the codes ticked in Default Phase Codes plus your own Default Indirect Phase Code, not the full Global Data list. With no project on a crew row you see Indirect codes only. Work-order items and GL codes have no phase code. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["phase code dropdown","only some phase codes","timesheet phase codes","phase code list","missing phase code","company vs project phase codes"]
   },
   {
@@ -12446,7 +12446,7 @@ const QA_TIMEMANAGEMENT = [
     scope: "module",
     section: "Which Phase Codes a Timesheet Offers",
     question: "Does the Phase Code dropdown in a timesheet use Global Data or the project's mapped phase codes?",
-    answer: "Both, depending on the row. Choose a project and it uses that project's mapped codes (Project Setup > Phase Codes, Timesheet Management box). Choose Company and it uses a company list built from Global Data phase codes with the Labor cost type, narrowed by your Default Phase Codes. All codes, types and cost types are defined in Global Data > UOM, Phasecode & GL Codes.",
+    answer: "Both, depending on the row. Choose a project and it uses that project's mapped codes (**Project Setup → Phase Codes**, Timesheet Management box). Choose Company and it uses a company list built from Global Data phase codes with the Labor cost type, narrowed by your Default Phase Codes. All codes, types and cost types are defined in **Global Data → UOM**, Phasecode & GL Codes.",
     tags: ["phase code global data or project","company phase codes","project mapped phase codes","timesheet management checkbox","cost type filter"]
   },
   {
@@ -12455,7 +12455,7 @@ const QA_TIMEMANAGEMENT = [
     scope: "module",
     section: "Which Phase Codes a Timesheet Offers",
     question: "Why is the Phase Code dropdown empty for my project?",
-    answer: "No phase code has the Timesheet Management box ticked in that project's Project Setup > Phase Codes. Ask the PM to tick the codes field staff may use (and check the Cost Type ticks under the gear icon > Settings). For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "No phase code has the Timesheet Management box ticked in that project's **Project Setup → Phase Codes**. Ask the PM to tick the codes field staff may use (and check the Cost Type ticks under the gear icon → Settings). For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["phase code dropdown empty","no phase codes for project","timesheet management box","project phase codes not showing"]
   },
   {
@@ -12464,7 +12464,7 @@ const QA_TIMEMANAGEMENT = [
     scope: "module",
     section: "Which Phase Codes a Timesheet Offers",
     question: "How do I make a project's phase codes appear in timesheets?",
-    answer: "Open the project, go to Project Setup > Phase Codes, click the gear icon to choose the Cost Types for Timesheet Management, then tick the Timesheet Management box on each phase code field staff may charge. In Time Management choose that project and open Phase Code to check.",
+    answer: "Open the project, go to **Project Setup → Phase Codes**, click the gear icon to choose the Cost Types for Timesheet Management, then tick the Timesheet Management box on each phase code field staff may charge. In Time Management choose that project and open Phase Code to check.",
     tags: ["map phase codes to project","timesheet management checkbox","enable phase codes for timesheets"]
   },
   {
@@ -12473,7 +12473,7 @@ const QA_TIMEMANAGEMENT = [
     scope: "module",
     section: "Which Phase Codes a Timesheet Offers",
     question: "What does the Cost Type setting do for timesheet phase codes?",
-    answer: "On Project Setup > Phase Codes the gear icon opens Settings (\"Select the Cost Type for each category to display Phase Codes\"). Timesheet Management and Equipment Management each have their own Cost Type ticks (Material, Equipment, Labor, Unit Rate, Sub Contractor, BOQ's, Freight Charges, Fuel & Gas). In Arena Residential Project Timesheet Management has Material, Equipment and Labor ticked, and every ticked code carries those cost types.",
+    answer: "On **Project Setup → Phase Codes** the gear icon opens Settings (\"Select the Cost Type for each category to display Phase Codes\"). Timesheet Management and Equipment Management each have their own Cost Type ticks (Material, Equipment, Labor, Unit Rate, Sub Contractor, BOQ's, Freight Charges, Fuel & Gas). In Arena Residential Project Timesheet Management has Material, Equipment and Labor ticked, and every ticked code carries those cost types.",
     tags: ["cost type phase codes","timesheet management cost type","phase code settings gear"]
   },
   {
@@ -12491,7 +12491,7 @@ const QA_TIMEMANAGEMENT = [
     scope: "module",
     section: "Which Phase Codes a Timesheet Offers",
     question: "Why do I see Indirect phase codes first in the timesheet?",
-    answer: "With no project chosen the list offers Indirect codes only. On My Timesheet your own Default Indirect Phase Code from Global Data > Users & Permissions > Global Rosters is added at the top (System Admin: 10.2020 OVHD - Project Manager). For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "With no project chosen the list offers Indirect codes only. On My Timesheet your own Default Indirect Phase Code from **Global Data → Users & Permissions → Global Rosters** is added at the top (System Admin: 10.2020 OVHD - Project Manager). For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["indirect phase codes","default indirect phase code","ovhd project manager"]
   },
   {
@@ -12500,7 +12500,7 @@ const QA_TIMEMANAGEMENT = [
     scope: "module",
     section: "My Crew Timesheet",
     question: "Where does the Crew list in My Crew Timesheet come from?",
-    answer: "From the Log Level Category. Company and GL Codes list the crews in Global Data > Crews. Projects lists that project's Project Crews (Project Setup > People > Project Crews). Work Orders lists the crews assigned to the chosen work order. If none exist you see \"Please create a Crew in order to continue\".",
+    answer: "From the Log Level Category. Company and GL Codes list the crews in **Global Data → Crews**. Projects lists that project's Project Crews (**Project Setup → People → Project Crews**). Work Orders lists the crews assigned to the chosen work order. If none exist you see \"Please create a Crew in order to continue\".",
     tags: ["crew dropdown","which crews can I choose","crew list","where crews come from","global crews vs project crews","crew list timesheet"]
   },
   {
@@ -12518,7 +12518,7 @@ const QA_TIMEMANAGEMENT = [
     scope: "module",
     section: "My Crew Timesheet",
     question: "Where does the Roster dropdown on a crew timesheet row come from?",
-    answer: "It lists the crew's members first (tagged Crew) and then every other person in Global Data > Users & Permissions > Global Rosters (tagged Global), as \"ID - Name\" with a search box. Daily crew has 100 rosters, which are the first 100 entries.",
+    answer: "It lists the crew's members first (tagged Crew) and then every other person in **Global Data → Users & Permissions → Global Rosters** (tagged Global), as \"ID - Name\" with a search box. Daily crew has 100 rosters, which are the first 100 entries.",
     tags: ["roster dropdown","employee dropdown","crew members list","global rosters timesheet"]
   },
   {
@@ -12527,7 +12527,7 @@ const QA_TIMEMANAGEMENT = [
     scope: "module",
     section: "My Crew Timesheet",
     question: "Why does my crew timesheet say to select a shift type in settings?",
-    answer: "The crew has no Timesheet Mode. Open Settings > Timesheet Settings > Timesheet Mode, choose the crew and pick Daily, Weekly by day or Weekly, then Save Changes. The crew's mode then shows as \"Timesheet Mode: ...\" at the top.",
+    answer: "The crew has no Timesheet Mode. Open **Settings → Timesheet Settings → Timesheet Mode**, choose the crew and pick Daily, Weekly by day or Weekly, then Save Changes. The crew's mode then shows as \"Timesheet Mode: ...\" at the top.",
     tags: ["select shift type in settings","timesheet mode missing","cannot create timesheet log"]
   },
   {
@@ -12536,7 +12536,7 @@ const QA_TIMEMANAGEMENT = [
     scope: "module",
     section: "My Timesheet",
     question: "Why do I see only some timesheet templates?",
-    answer: "The Select Template list follows the Timesheet Mode of the person or crew. All templates are managed in Settings > Timesheet Template. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "The Select Template list follows the Timesheet Mode of the person or crew. All templates are managed in **Settings → Timesheet Template**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["template dropdown","timesheet templates missing","template by mode"]
   },
   {
@@ -12545,7 +12545,7 @@ const QA_TIMEMANAGEMENT = [
     scope: "module",
     section: "My Timesheet",
     question: "Where do Craft and Class come from on a timesheet row?",
-    answer: "They fill in from the employee's record in Global Data > Users & Permissions > Global Rosters (System Admin shows Craft labourer, Class 1). Change them there.",
+    answer: "They fill in from the employee's record in **Global Data → Users & Permissions → Global Rosters** (System Admin shows Craft labourer, Class 1). Change them there.",
     tags: ["craft","class","craft and class timesheet"]
   },
   {
@@ -12554,7 +12554,7 @@ const QA_TIMEMANAGEMENT = [
     scope: "module",
     section: "My Timesheet",
     question: "Where do the 1 (ST), 2 (OT) hour columns come from?",
-    answer: "They are the earning codes added to the chosen timesheet template (Settings > Timesheet Template > Earnings Codes). The codes themselves are the Global Data > Settings > Earnings Codes. Add or remove earning codes in the template to change the columns.",
+    answer: "They are the earning codes added to the chosen timesheet template (**Settings → Timesheet Template → Earnings Codes**). The codes themselves are the **Global Data → Settings → Earnings Codes**. Add or remove earning codes in the template to change the columns.",
     tags: ["earning code columns","st ot columns","regular pay over time"]
   },
   {
@@ -12563,7 +12563,7 @@ const QA_TIMEMANAGEMENT = [
     scope: "module",
     section: "My Timesheet",
     question: "How does Import From Innclock AI work?",
-    answer: "Choose a past date on My Timesheet (or My Crew Timesheet) and click \"Import From Innclock AI\" to bring in clock-in and clock-out data. The organisation must give consent in Global Data > Marketplace > Inn Clock Consent (\"Sign In to Inn Clock AI\"). For today or a future date you get \"Logs for the current and future dates cannot be fetched\".",
+    answer: "Choose a past date on My Timesheet (or My Crew Timesheet) and click \"Import From Innclock AI\" to bring in clock-in and clock-out data. The organisation must give consent in **Global Data → Marketplace → Inn Clock Consent** (\"Sign In to Inn Clock AI\"). For today or a future date you get \"Logs for the current and future dates cannot be fetched\".",
     tags: ["innclock import","clock in clock out import","inn clock ai","innclock consent"]
   },
   {
@@ -12608,7 +12608,7 @@ const QA_TIMEMANAGEMENT = [
     scope: "module",
     section: "Dashboard",
     question: "Where does the Company/Projects/WO/GL Accounts list on the Dashboard come from?",
-    answer: "It lists Company, the projects, and the work-order items and GL codes timesheet rows can use. It is the same set as the row drop-down on My Timesheet.",
+    answer: "From **Home**, open **Time Management → Dashboard**. It lists Company, the projects, and the work-order items and GL codes timesheet rows can use. It is the same set as the row drop-down on My Timesheet.",
     tags: ["dashboard filter projects work orders gl","company projects wo gl accounts"]
   },
   {
@@ -12635,7 +12635,7 @@ const QA_TIMEMANAGEMENT = [
     scope: "module",
     section: "Timesheet Logs",
     question: "Where do approved timesheet hours go?",
-    answer: "Completed logs feed the Timesheet Data Summary (Approved toggle), the Time Management Dashboard and the Export formats (VP Excel, VP CSV, Dynamics 365, QuickBooks, SAP, ComputerEase, Project Wise). Payroll Locking then stops edits after the cut-off. The Work Order module has its own Timesheets tabs that use the same screens.",
+    answer: "From **Home**, open **Time Management → Timesheet Logs**. Completed logs feed the Timesheet Data Summary (Approved toggle), the Time Management Dashboard and the Export formats (VP Excel, VP CSV, Dynamics 365, QuickBooks, SAP, ComputerEase, Project Wise). Payroll Locking then stops edits after the cut-off. The Work Order module has its own Timesheets tabs that use the same screens.",
     tags: ["approved hours","where do timesheets go","timesheet payroll export","timesheet cost"]
   },
   {
@@ -12671,7 +12671,7 @@ const QA_TIMEMANAGEMENT = [
     scope: "module",
     section: "Timesheet Data Summary",
     question: "What are Payroll Hours and Project Hours in the Weekly data summary?",
-    answer: "They follow the Payroll and Project flags on each earning code (Settings > Earnings Codes, shared with Global Data > Settings > Earnings Codes). Payroll Hours are hours paid; Project Hours are hours charged to projects.",
+    answer: "They follow the Payroll and Project flags on each earning code (**Settings → Earnings Codes**, shared with **Global Data → Settings → Earnings Codes**). Payroll Hours are hours paid; Project Hours are hours charged to projects.",
     tags: ["payroll hours","project hours","weekly data summary"]
   },
   {
@@ -12716,7 +12716,7 @@ const QA_TIMEMANAGEMENT = [
     scope: "module",
     section: "Settings",
     question: "Are the earning codes in Time Management the same as in Global Data?",
-    answer: "Yes. Settings > Timesheet Settings > Earnings Codes shows the same list as Global Data > Settings > Earnings Codes (for example 1 Regular pay ST, 2 Over Time pay OT, 31 PerDIEM AMOUNT), and the Add Earnings Codes dialog in a template lists the same 15 codes.",
+    answer: "Yes. **Settings → Timesheet Settings → Earnings Codes** shows the same list as **Global Data → Settings → Earnings Codes** (for example 1 Regular pay ST, 2 Over Time pay OT, 31 PerDIEM AMOUNT), and the Add Earnings Codes dialog in a template lists the same 15 codes.",
     tags: ["earning codes global data","earnings codes shared"]
   },
   {
@@ -12725,7 +12725,7 @@ const QA_TIMEMANAGEMENT = [
     scope: "module",
     section: "Settings",
     question: "Where do timesheet approvers come from?",
-    answer: "From the approvers you pick when you create a level in Settings > Timesheet Workflow (by User or by Role). The user list is the Global Roster system users. The workflow reaches a person or crew through Assign Workflow.",
+    answer: "From the approvers you pick when you create a level in **Settings → Timesheet Workflow** (by User or by Role). The user list is the Global Roster system users. The workflow reaches a person or crew through Assign Workflow.",
     tags: ["timesheet approvers","approver list","who approves timesheets"]
   },
   {
@@ -12734,7 +12734,7 @@ const QA_TIMEMANAGEMENT = [
     scope: "module",
     section: "Settings",
     question: "What is the difference between Time Management Settings and Project Settings > Time Management?",
-    answer: "Home Time Management > Settings is company-wide: its user list is every Global Roster system user. Project Settings > Time Management does workflow, assign workflow and assign mode for one project: its list is that project's roster and Project Crews. The crews list on the Home page also follows the project you have open.",
+    answer: "**Home Time Management → Settings** is company-wide: its user list is every Global Roster system user. **Project Settings → Time Management** does workflow, assign workflow and assign mode for one project: its list is that project's roster and Project Crews. The crews list on the Home page also follows the project you have open.",
     tags: ["project settings time management","timesheet settings project vs company"]
   },
   {
@@ -12761,7 +12761,7 @@ const QA_TIMEMANAGEMENT = [
     scope: "module",
     section: "Settings",
     question: "How do I give people access to Time Management?",
-    answer: "Time Management has its own Users And Permissions page under Settings > Timesheet Settings. Click Add User Group to create a group. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "Time Management has its own Users And Permissions page under **Settings → Timesheet Settings**. Click Add User Group to create a group. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["timesheet permissions","time management user group"]
   },
   {
@@ -12770,7 +12770,7 @@ const QA_TIMEMANAGEMENT = [
     scope: "module",
     section: "Rosters & Crews",
     question: "Where do rosters and crews in Time Management come from?",
-    answer: "Global Data > Users & Permissions > Global Rosters (people, Craft, Class, Default Indirect Phase Code), Global Data > Crews (company crews) and Project Setup > People > Project Crews (project crews). Time Management has no roster screens of its own; its drop-downs read these lists.",
+    answer: "**Global Data → Users & Permissions → Global Rosters** (people, Craft, Class, Default Indirect Phase Code), **Global Data → Crews** (company crews) and **Project Setup → People → Project Crews** (project crews). Time Management has no roster screens of its own; its drop-downs read these lists.",
     tags: ["rosters and crews source","where do crews come from","timesheet roster lineage"]
   },
   {
@@ -12788,7 +12788,7 @@ const QA_TIMEMANAGEMENT = [
     scope: "global",
     section: "Settings",
     question: "What is Payroll Locking?",
-    answer: "A cut-off in Settings > Timesheet Settings > Payroll Locking that stops edits to a pay period once payroll has closed. Choose Daily, Weekly or Monthly (Start of The Month, End of The Month or Custom), a Time and a Buffer Time (In Days). It applies to time management and productivity logs.",
+    answer: "A cut-off in **Settings → Timesheet Settings → Payroll Locking** that stops edits to a pay period once payroll has closed. Choose Daily, Weekly or Monthly (Start of The Month, End of The Month or Custom), a Time and a Buffer Time (In Days). It applies to time management and productivity logs.",
     tags: ["what is payroll locking","payroll locking","payroll lock timesheet"]
   },
   {
@@ -12899,7 +12899,7 @@ const QA_INVENTORYMANAGEMENT = [
     scope: "module",
     section: "Inventory Locations and Overview Map",
     question: "How do I find, filter or deactivate an Inventory Location?",
-    answer: "On the **Inventory** tab, search by name, check the geofence icon, flip the **Active** toggle to activate or deactivate, or use the edit icon under Actions. **Filters** narrow by Business Units, Project, Material and Active or Inactive; **Save filters** keeps them.",
+    answer: "From **Home**, open **Inventory Management → Inventory**. On the **Inventory** tab, search by name, check the geofence icon, flip the **Active** toggle to activate or deactivate, or use the edit icon under Actions. **Filters** narrow by Business Units, Project, Material and Active or Inactive; **Save filters** keeps them.",
     tags: ["deactivate location","filter locations","active toggle","edit location","location list"]
   },
   {
@@ -12908,7 +12908,7 @@ const QA_INVENTORYMANAGEMENT = [
     scope: "module",
     section: "Materials at a Location",
     question: "How do I add a material to an Inventory Location and set stock limits?",
-    answer: "Click the Inventory Location and click **+ Add**. Choose the **Material** (from Global Data), then enter **Quantity**, **Minimum Required Quantity**, **Maximum Quantity** and **UOM**, and optionally an **Icon**. Click **Submit**. Minimum and maximum must be greater than 0. When stock falls below the minimum, the material shows a red flag.",
+    answer: "From **Home**, open **Inventory Management → Inventory**. Click the Inventory Location and click **+ Add**. Choose the **Material** (from Global Data), then enter **Quantity**, **Minimum Required Quantity**, **Maximum Quantity** and **UOM**, and optionally an **Icon**. Click **Submit**. Minimum and maximum must be greater than 0. When stock falls below the minimum, the material shows a red flag.",
     tags: ["add material to location","minimum quantity","maximum quantity","stock limits","reorder level","location stock"]
   },
   {
@@ -12971,7 +12971,7 @@ const QA_INVENTORYMANAGEMENT = [
     scope: "module",
     section: "Hauling Trucks",
     question: "How do I stop a truck being used on tickets?",
-    answer: "On **Hauling Trucks**, find the truck and click **Mark as Blacklist** under **Actions**. You can also edit or delete a truck from the same column.",
+    answer: "From **Home**, open **Inventory Management → Hauling Trucks**. On **Hauling Trucks**, find the truck and click **Mark as Blacklist** under **Actions**. You can also edit or delete a truck from the same column.",
     tags: ["blacklist truck","block truck","remove truck","mark as blacklist"]
   },
   {
@@ -12998,7 +12998,7 @@ const QA_INVENTORYMANAGEMENT = [
     scope: "module",
     section: "External Tickets",
     question: "How do I void an External Ticket?",
-    answer: "Find the ticket in **External Tickets** and set the **Status** dropdown to **Voided** (the other value is **Valid**). You can also open the ticket and update **Status** and **Status Notes**.",
+    answer: "From **Home**, open **Inventory Management → Tickets → External Tickets**. Find the ticket in **External Tickets** and set the **Status** dropdown to **Voided** (the other value is **Valid**). You can also open the ticket and update **Status** and **Status Notes**.",
     tags: ["void ticket","voided status","valid status","cancel ticket"]
   },
   {
@@ -13124,7 +13124,7 @@ const QA_INVENTORYMANAGEMENT = [
     scope: "module",
     section: "Inventory Locations and Overview Map",
     question: "How do I add a geofence to an Inventory Location?",
-    answer: "In **Create Inventory Location**, click **Add Geofences**. On the **Details** tab check the **Geofence Name** and **Geofence Code**. Then search an address and click the exact point, or click points directly on the map. Place at least three points (use **Undo Last Point** or **Clear All**), click **Add Geofence**, then click **Create**. The geofence is saved only when the location is created.",
+    answer: "From **Home**, open **Inventory Management → Inventory**. In **Create Inventory Location**, click **Add Geofences**. On the **Details** tab check the **Geofence Name** and **Geofence Code**. Then search an address and click the exact point, or click points directly on the map. Place at least three points (use **Undo Last Point** or **Clear All**), click **Add Geofence**, then click **Create**. The geofence is saved only when the location is created.",
     tags: ["add geofence","geofence points","three points geofence","undo last point","clear all geofence","geofence name code"]
   },
   {
@@ -13304,7 +13304,7 @@ const QA_INVENTORYMANAGEMENT = [
     scope: "module",
     section: "Who Does What",
     question: "How does Inventory Management connect to Procurement, Work Orders and Field Works?",
-    answer: "Procurement: when a Delivery Receipt confirms a purchase order, the material's **See History** shows a line such as \"received from the vendor through PO ID ... confirmed by DR ID ...\". Field Works: the **Inventory Management** card in **Progress** opens **Site Material Requests** and **Rejected Site Material Requests**. Work Order: a **Work** configurable field (type Work Order) can be added to Site Material Requests in Settings to link a request to a work order. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "From **Home**, open **Inventory Management**. Procurement: when a Delivery Receipt confirms a purchase order, the material's **See History** shows a line such as \"received from the vendor through PO ID ... confirmed by DR ID ...\". Field Works: the **Inventory Management** card in **Progress** opens **Site Material Requests** and **Rejected Site Material Requests**. Work Order: a **Work** configurable field (type Work Order) can be added to Site Material Requests in Settings to link a request to a work order. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["inventory procurement link","inventory work order link","inventory field works card","inventory delivery receipt","inventory cost tracking","how does inventory connect to procurement","inventory and procurement","inventory and work orders","inventory and field works"]
   },
   {
@@ -13331,7 +13331,7 @@ const QA_INVENTORYMANAGEMENT = [
     scope: "module",
     section: "Inventory Locations and Overview Map",
     question: "Where do the Business Unit, Project and Inventory manager lists on a location come from?",
-    answer: "Business Unit and Project show the organisation's existing Business Units and projects, and Inventory manager shows Arena users, so a missing value is added at its source (Business Units and projects in their own setup, users in Users and Permissions). A location must be **Active** before you can pick it on a ticket. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "From **Home**, open **Inventory Management → Inventory**. Business Unit and Project show the organisation's existing Business Units and projects, and Inventory manager shows Arena users, so a missing value is added at its source (Business Units and projects in their own setup, users in Users and Permissions). A location must be **Active** before you can pick it on a ticket. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["inventory manager list","business unit list location","project list location inventory"]
   },
   {
@@ -13349,7 +13349,7 @@ const QA_INVENTORYMANAGEMENT = [
     scope: "module",
     section: "External Orders",
     question: "Where do the Customer and Location lists on an External Order come from?",
-    answer: "**Customer** comes from the customers in Global Data. **Location** lists that customer's locations, and Phone Number, Address, City, State and Zip Code fill in on their own. If a customer is missing and **Add Customer** is hidden, customer creation runs through an approval workflow in Global Data; get it approved there first. A new geofence made on the order is saved only when the order is submitted. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "From **Home**, open **Inventory Management → Orders → External Orders**. **Customer** comes from the customers in Global Data. **Location** lists that customer's locations, and Phone Number, Address, City, State and Zip Code fill in on their own. If a customer is missing and **Add Customer** is hidden, customer creation runs through an approval workflow in Global Data; get it approved there first. A new geofence made on the order is saved only when the order is submitted. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["customer list external order","location list external order","add customer missing order","where does customer dropdown come from"]
   },
   {
@@ -13358,7 +13358,7 @@ const QA_INVENTORYMANAGEMENT = [
     scope: "module",
     section: "External Orders",
     question: "Where does an External Order show up after I submit it?",
-    answer: "It appears in the **External Orders** list with status **RAISED** and becomes available in the **Order Number** dropdown on External Tickets. The **Client Portal** report then compares its ordered quantity with the delivered quantity from tickets.",
+    answer: "From **Home**, open **Inventory Management → Orders → External Orders**. It appears in the **External Orders** list with status **RAISED** and becomes available in the **Order Number** dropdown on External Tickets. The **Client Portal** report then compares its ordered quantity with the delivered quantity from tickets.",
     tags: ["order destination","where does order go","order available for ticket"]
   },
   {
@@ -13376,7 +13376,7 @@ const QA_INVENTORYMANAGEMENT = [
     scope: "module",
     section: "External Tickets",
     question: "Where does an External Ticket go after I create it?",
-    answer: "Into the **Hauling Report** (trucks, site, material, net quantity), the **Client Portal** report and the order's **Ship Tickets** page (Delivered, Remaining, Total Loads, Fulfillment Progress). Gross cannot be changed after creation, so check it first. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "From **Home**, open **Inventory Management → Tickets → External Tickets**. Into the **Hauling Report** (trucks, site, material, net quantity), the **Client Portal** report and the order's **Ship Tickets** page (Delivered, Remaining, Total Loads, Fulfillment Progress). Gross cannot be changed after creation, so check it first. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["ticket destination","ticket feeds report","where do tickets go"]
   },
   {
@@ -13385,7 +13385,7 @@ const QA_INVENTORYMANAGEMENT = [
     scope: "module",
     section: "Reports: Hauling, Client Portal and Reconciliation",
     question: "Where do the report figures come from?",
-    answer: "**Hauling Report**: External Tickets. **Client Portal** and the **Ship Tickets** page: External Orders (ordered quantity) against External Tickets (delivered). **Material Reconciliation**: the Current Available quantity at the Inventory Location against the surveyed stockpile you enter.",
+    answer: "From **Home**, open **Inventory Management → Reports**. **Hauling Report**: External Tickets. **Client Portal** and the **Ship Tickets** page: External Orders (ordered quantity) against External Tickets (delivered). **Material Reconciliation**: the Current Available quantity at the Inventory Location against the surveyed stockpile you enter.",
     tags: ["report data source","hauling report source","client portal source","reconciliation source","where do the hauling report figures come from","where does hauling report data come from","where do report figures come from"]
   },
   {
@@ -13419,7 +13419,7 @@ const QA_EXPENSETRACKER = [
     scope: "module",
     section: "Expense Forms",
     question: "What is an Expense Type section on the expense form?",
-    answer: "Each **Expense Type** is a category such as Capital, Direct, Indirect, Operating or Personal Expenses. You add it to the form with **Select Expense Type → + Add Expense Type**, and it becomes its own section of line items (Date, Description, Attachments/Missing Receipts, Total). Row actions let you **Clone Row**, add **Attachments**, **Map** the row, or delete it. A form can hold several expense-type sections, and each one shows its own subtotal and threshold, for example \"Indirect Expenses (Threshold: ₹0.00)\". Forms above a threshold appear in the dashboard's **Forms Exceeding Threshold** list.",
+    answer: "Each **Expense Type** is a category such as Capital, Direct, Indirect, Operating or Personal Expenses. You add it to the form with Select **Expense Type → + Add Expense Type**, and it becomes its own section of line items (Date, Description, Attachments/Missing Receipts, Total). Row actions let you **Clone Row**, add **Attachments**, **Map** the row, or delete it. A form can hold several expense-type sections, and each one shows its own subtotal and threshold, for example \"Indirect Expenses (Threshold: ₹0.00)\". Forms above a threshold appear in the dashboard's **Forms Exceeding Threshold** list.",
     tags: ["expense type","expense category","add expense type","expense threshold","expense line items"]
   },
   {
@@ -13428,7 +13428,7 @@ const QA_EXPENSETRACKER = [
     scope: "module",
     section: "Expense Forms",
     question: "How do I approve or reject an expense form?",
-    answer: "If you are an approver at the form's current level, **Approve** and **Reject** buttons appear on the form in the **Expense Forms** list, in both card and table view. Forms waiting on you show as **Ready for Approval** (nothing approved yet) or **In Progress** (earlier levels already approved). Each approval is recorded as \"approved and digitally signed at level X\". Once the last level approves, the form becomes **Approved**. If you reject it, Arena asks for a comment and raises an Issue.",
+    answer: "From **Home**, open **Expense Tracker → Expense Forms**. If you are an approver at the form's current level, **Approve** and **Reject** buttons appear on the form in the **Expense Forms** list, in both card and table view. Forms waiting on you show as **Ready for Approval** (nothing approved yet) or **In Progress** (earlier levels already approved). Each approval is recorded as \"approved and digitally signed at level X\". Once the last level approves, the form becomes **Approved**. If you reject it, Arena asks for a comment and raises an Issue.",
     tags: ["approve expense","reject expense","expense approval","approve reimbursement"]
   },
   {
@@ -13527,7 +13527,7 @@ const QA_EXPENSETRACKER = [
     scope: "module",
     section: "Expense Forms",
     question: "Can I save an expense form and finish it later?",
-    answer: "Yes. Click **Save as Draft** at the bottom of the form instead of **Submit For Approval**. Nothing goes to approvers until you submit.",
+    answer: "From **Home**, open **Expense Tracker → Expense Forms**. Yes. Click **Save as Draft** at the bottom of the form instead of **Submit For Approval**. Nothing goes to approvers until you submit.",
     tags: ["expense draft","save expense draft","finish expense later"]
   },
   {
@@ -13644,7 +13644,7 @@ const QA_EXPENSETRACKER = [
     scope: "module",
     section: "Processed Forms",
     question: "Where do the Job, Phase and GL Account values in the batch CSV come from?",
-    answer: "These columns are in the **CSV Download Filters** list, but the expense form itself has no Job, Phase or GL fields on the lines, and the **Map** action links a line to an Opportunity or Proposal. How they are filled was not found, so check a downloaded batch before uploading it to your accounting system. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "From **Home**, open **Expense Tracker → Processed Forms**. These columns are in the **CSV Download Filters** list, but the expense form itself has no Job, Phase or GL fields on the lines, and the **Map** action links a line to an Opportunity or Proposal. How they are filled was not found, so check a downloaded batch before uploading it to your accounting system. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["job phase gl account csv","where does gl code come from expense","batch csv job phase"]
   },
   {
@@ -13689,7 +13689,7 @@ const QA_EXPENSETRACKER = [
     scope: "module",
     section: "Settings",
     question: "Can I link expenses to a project or a job?",
-    answer: "The Expense Tracker is not tied to a project. On a line, **Map** links the cost to an Opportunity or Proposal. The batch CSV has Job and Phase columns, but how they are filled was not found. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "From **Home**, open **Expense Tracker → Expense Forms**. The Expense Tracker is not tied to a project. On a line, **Map** links the cost to an Opportunity or Proposal. The batch CSV has Job and Phase columns, but how they are filled was not found. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["expense project link","expense job code","expense phase code"]
   }
 ];
@@ -13719,7 +13719,7 @@ const QA_CAPITALMANAGEMENT = [
     scope: "module",
     section: "Budget Planning",
     question: "Where do I see how much of a budget is used?",
-    answer: "The **Budget Planning Form** for a budget shows a grid of Budget Item by year, with a **Total** row and column. For a company-wide view, the **Dashboard** tab has a **Budget Allocated** card (total across all budgets), plus **Budget Distribution** (by department, as percentage or amount) and **Budget Analysis** (pick a budget by name) charts.",
+    answer: "From **Home**, open **Capital Management → Budget Planning**. The **Budget Planning Form** for a budget shows a grid of Budget Item by year, with a **Total** row and column. For a company-wide view, the **Dashboard** tab has a **Budget Allocated** card (total across all budgets), plus **Budget Distribution** (by department, as percentage or amount) and **Budget Analysis** (pick a budget by name) charts.",
     tags: ["budget total","budget used","budget distribution","budget analysis","how much budget"]
   },
   {
@@ -13800,7 +13800,7 @@ const QA_CAPITALMANAGEMENT = [
     scope: "module",
     section: "Settings",
     question: "What do I set up before anyone can create a budget or CIP?",
-    answer: "A **Module Admin** opens **Settings** (the gear icon, visible on the Budget Planning and CIP tabs) and sets up, on the Budget Planning side: **Budget Functions** (departments), **Budget Items** (capital programs), **Budget Funds** (funding sources), **Organization Structure** (the Department hierarchy), the **Budget Forms** layout, and the budget **Approval Workflow**. On the CIP side: **CIP Profile** fields, **CIP Category** (Estimate Categories and Items used for costing), **CIP Objectives** and their weightings (used for scoring), **Checklists**, and the CIP **Approval Workflow**. Until these exist, the Add Budget and Create CIP dialogs have nothing to pick from.",
+    answer: "From **Home**, open **Capital Management → Budget Planning** and click the **Settings** gear. A **Module Admin** opens **Settings** (the gear icon, visible on the Budget Planning and CIP tabs) and sets up, on the Budget Planning side: **Budget Functions** (departments), **Budget Items** (capital programs), **Budget Funds** (funding sources), **Organization Structure** (the Department hierarchy), the **Budget Forms** layout, and the budget **Approval Workflow**. On the CIP side: **CIP Profile** fields, **CIP Category** (Estimate Categories and Items used for costing), **CIP Objectives** and their weightings (used for scoring), **Checklists**, and the CIP **Approval Workflow**. Until these exist, the Add Budget and Create CIP dialogs have nothing to pick from.",
     tags: ["capital management setup","budget planning settings","cip settings","initial setup","what to configure first"]
   },
   {
@@ -13836,7 +13836,7 @@ const QA_CAPITALMANAGEMENT = [
     scope: "module",
     section: "Dashboard",
     question: "Where do the Capital Management dashboard numbers come from?",
-    answer: "**Budget Allocated** adds up the budgets in Budget Planning. **CIP Budgeted** is the total of the Cost Estimate tabs, the allocated figure is the total of Fund Allocations, and **Actual** is the total of the Actual tabs. Scores come from the star ratings on each CIP Score tab. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    answer: "From **Home**, open **Capital Management → Dashboard**. **Budget Allocated** adds up the budgets in Budget Planning. **CIP Budgeted** is the total of the Cost Estimate tabs, the allocated figure is the total of Fund Allocations, and **Actual** is the total of the Actual tabs. Scores come from the star ratings on each CIP Score tab. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["where do capital dashboard numbers come from","budget allocated","cip budgeted allocated actual","dashboard totals"]
   },
   {
@@ -13872,7 +13872,7 @@ const QA_CAPITALMANAGEMENT = [
     scope: "module",
     section: "Budget Planning",
     question: "How do I edit or delete a budget?",
-    answer: "Click the ⋮ menu on the budget card and choose **Edit** (the **Edit Budget Plan** dialog, then **Update**) or **Delete**.",
+    answer: "From **Home**, open **Capital Management → Budget Planning**. Click the ⋮ menu on the budget card and choose **Edit** (the **Edit Budget Plan** dialog, then **Update**) or **Delete**.",
     tags: ["edit budget","delete budget","budget card menu"]
   },
   {
@@ -13980,7 +13980,7 @@ const QA_CAPITALMANAGEMENT = [
     scope: "module",
     section: "Settings",
     question: "Where is the Settings button in Capital Management?",
-    answer: "It is the gear **Settings** button at the top right of the **Budget Planning** and **CIP** tabs, not the Dashboard. From Budget Planning it opens Budget Planning Settings; from CIP it opens CIP Settings.",
+    answer: "From **Home**, open **Capital Management**. It is the gear **Settings** button at the top right of the **Budget Planning** and **CIP** tabs, not the Dashboard. From Budget Planning it opens Budget Planning Settings; from CIP it opens CIP Settings.",
     tags: ["capital settings button","where is settings capital management","cip settings","budget planning settings"]
   },
   {
