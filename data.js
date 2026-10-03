@@ -1277,6 +1277,36 @@ const QA_OPPORTUNITY = [
     question: "Which Settings screen controls which dropdown on an opportunity?",
     answer: "**Stages & Statuses Configuration** controls Stage and Status; **Opportunity Type** and **Milestone Templates** control the type and template choices; **Business Development** is the BD name pool; **Expense** controls expense categories and approval; **Opportunities Form** controls which fields are required, hidden or shown at creation. Clients, locations and competitors are not in Settings: they come from the Customers, Account Assignment/Global Data → Locations and Competitors screens.",
     tags: ["settings feeds dropdown","which setting controls list","settings opportunity lists"]
+  },
+  {
+    "action": "define",
+    "object": "competitor form fields",
+    "scope": "module",
+    "section": "Settings",
+    "question": "Which fields are on the Competitor form and can I add more?",
+    "answer": "Open **Opportunity Management → Settings → Competitor Form**. The **Standard Fields** are **Competitor Name**, **Type** (Direct, Indirect or Replacement) and **Description**. Click **Add Field** to add a custom field to the **Create Competitor** form.",
+    "tags": [
+      "competitor form fields",
+      "standard fields competitor",
+      "add field competitor form",
+      "competitor name type description",
+      "competitor settings"
+    ]
+  },
+  {
+    "action": "configure",
+    "object": "owner settings",
+    "scope": "module",
+    "section": "Settings",
+    "question": "Where are the Owner settings?",
+    "answer": "From **Home**, open **Opportunity Management → Owners**. Click the **Settings** button next to **Create Owner** and **Export** to open the owner settings. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    "tags": [
+      "owner settings",
+      "owners settings button",
+      "owner form settings",
+      "owner form fields",
+      "configure owners"
+    ]
   }
 ];
 
@@ -15395,7 +15425,7 @@ const MODULES = [
       {
         "heading": "Settings",
         "intro": "<p><strong>Settings</strong> (the gear icon on the module toolbar) is where Sales Ops or an administrator configures the pipeline, the form fields, the ID format and who can use the module. End users rarely open it, but a gap here can stop the whole team logging leads.</p><p>Settings has these areas: <strong>Competitor Form</strong>, <strong>Stages & Statuses Configuration</strong>, <strong>Opportunities Form</strong>, <strong>Expense</strong>, <strong>ID Settings</strong>, <strong>Business Development</strong>, <strong>Project Types</strong>, <strong>Opportunity Type</strong>, <strong>Milestone Templates</strong>, <strong>Customer Relation</strong> and <strong>Users and Permissions</strong>. Most \"why can't I do X\" questions trace back to a gap in <strong>Stages & Statuses Configuration</strong> or <strong>Opportunities Form</strong>.</p>",
-        "definitions": [
+        "definitions":[
           {
             "term": "Stages & Statuses Configuration",
             "definition": "The screen that defines the pipeline: the stages (Lead → Opportunity → Proposal → Inquiry → Bidding → Closed by default) and, within each stage, the allowed statuses. By default Opportunity has Active and On Hold; Proposal has Active, In Progress, Under Review and In Review; Inquiry has Received Inquiry, Submitted and Awaiting Client Response; Bidding has RFP Receipt, RFP Submitted, Clarification, Best & Final and Awaiting Decision; Closed has Won, Lost, No Bid and Cancelled. Per stage you set a name, a color, a Default Win Probability (%), a Stage Threshold (Days) and the allowed statuses. Each Closed status carries its own outcome label, which the Outcome Analysis and Client Win Rate reports read to tell wins from other closures. **Reorder Stages** and **Add Stages** restructure the pipeline. Closed stays one stage, so win and loss analytics stay clean."
@@ -15447,6 +15477,14 @@ const MODULES = [
           {
             "term": "Which setting feeds which list",
             "definition": "**Stages & Statuses Configuration** feeds the Stage and Status dropdowns and the stage chips. **Opportunities Form** decides which fields are required, hidden or shown at creation. **Opportunity Type** and **Milestone Templates** feed the Details section and the Milestones tab. **Business Development** feeds the BD name pool. **Expense** feeds the Expenses tab categories and approver. **ID Settings** builds the Opportunity ID. **Customer Relation** feeds the score on the interactions summary. **Competitor Form** shapes the Competitors shortcut. **Users and Permissions** decides who can open the module. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
+          },
+          {
+            "term": "Competitor Form",
+            "definition": "From **Home**, open **Opportunity Management**, click **Settings** (gear) and choose **Competitor Form**. The **Standard Fields** are **Competitor Name**, **Type** and **Description**. Click **Add Field** to add your own field to the **Create Competitor** form."
+          },
+          {
+            "term": "Owner Settings",
+            "definition": "Open **Owners** from the icon toolbar. Next to **Create Owner** and **Export** is a **Settings** button that opens the settings for the owner form. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
           }
         ],
         "procedures": [
@@ -16779,7 +16817,7 @@ const MODULES = [
       "The icon toolbar at the top right has <strong>Tasks</strong>, <strong>Calendar</strong>, <strong>Contacts</strong>, <strong>Customers</strong>, <strong>Owners</strong>, <strong>Competitors</strong> and <strong>Settings</strong> (the gear).",
       "The <strong>Arena Onsite</strong> mobile app mirrors the core flows for the field."
     ],
-    "sections": [
+    "sections":[
       "Who Does What in Opportunity Management",
       "Settings",
       "Opportunities",
