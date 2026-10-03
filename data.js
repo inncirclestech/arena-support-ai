@@ -2878,6 +2878,641 @@ const QA_EQUIPMENT = [
       "log equipment issue",
       "equipment inspection"
     ]
+  },
+  {
+    "action": "track",
+    "object": "scheduled maintenance activity",
+    "scope": "module",
+    "section": "Field Inspections",
+    "question": "How do I log a scheduled maintenance activity?",
+    "answer": "1. Go to **Field Inspections → Maintenance → Equipment Maintenance Calendar**.\n2. Pick the due date — forms are grouped by project and color-coded (Blue = Ready).\n3. Open the form, fill required fields, Submit — turns Green (Completed) once complete.\n4. If a check fails, raise an **issue** directly from that field — it's logged to **Equipment Issues** automatically.",
+    "tags": [
+      "scheduled maintenance",
+      "field inspection",
+      "field inspection log"
+    ]
+  },
+  {
+    "action": "create",
+    "object": "equipment photo",
+    "scope": "module",
+    "section": "Field Inspections",
+    "question": "How do I upload equipment photos?",
+    "answer": "1. Go to **Field Inspections → Equipment Photos** (also called Equipment Photos).\n2. Select the equipment/accessory from the left list.\n3. Click **Add**, then Upload File to select one or more images.\n4. Optionally annotate using the markup tools, add a Label and Description, then **Save**.",
+    "tags": [
+      "equipment photos",
+      "upload image",
+      "upload equipment photo",
+      "equipment photos"
+    ]
+  },
+  {
+    "action": "define",
+    "object": "maintenance vs utilization tab",
+    "scope": "module",
+    "section": "Field Inspections",
+    "question": "What's the difference between the Maintenance and Utilization tabs in Field Inspections?",
+    "answer": "Both work the same way (calendar-driven scheduled entries plus ad-hoc list entries), but **Maintenance** logs maintenance/inspection activity while **Utilization** logs ad-hoc utilization entries — they mirror each other in structure.",
+    "tags": [
+      "maintenance vs utilization tab",
+      "field inspections tabs"
+    ]
+  },
+  {
+    "action": "create",
+    "object": "ad-hoc inspection",
+    "scope": "module",
+    "section": "Field Inspections",
+    "question": "How do I log an ad-hoc (unplanned) inspection?",
+    "answer": "1. Go to **Field Inspections → Maintenance** (or Utilization) and switch to the list/ad-hoc tab.\n2. Select the relevant form category on the left.\n3. Click **Create Form**, complete the fields, and Submit — it appears as a new card with Download, Share, Print, and Chat available.",
+    "tags": [
+      "ad-hoc inspection",
+      "create form"
+    ]
+  },
+  {
+    "action": "edit",
+    "object": "maintenance form",
+    "scope": "module",
+    "section": "Field Inspections",
+    "question": "How do I edit a maintenance form after it's been submitted?",
+    "answer": "Click the card for that submitted form to re-open it for review/editing — each card also offers Download, Share, Print, and a Chat panel for collaborative notes.",
+    "tags": [
+      "edit submitted form",
+      "reopen maintenance form",
+      "reopen submitted form"
+    ]
+  },
+  {
+    "action": "edit",
+    "object": "equipment photo",
+    "scope": "module",
+    "section": "Field Inspections",
+    "question": "How do I view, annotate, or delete an equipment photo?",
+    "answer": "Click \"Click to View\" on a photo to open a viewer with next/previous arrows. Use the built-in annotation tools below the image to mark it up, then click **Save** to persist the markup. Use the kebab (⋮) menu in the viewer to **Delete** the photo.",
+    "tags": [
+      "view photo",
+      "annotate photo",
+      "delete photo",
+      "annotate delete photo"
+    ]
+  },
+  {
+    "action": "define",
+    "object": "trigger point",
+    "scope": "module",
+    "section": "Field Inspections",
+    "question": "What is a trigger point on a maintenance form?",
+    "answer": "A trigger point is a checkbox configured per field in the form builder (**Setup Trigger Points**) that lets end-users raise an issue or note directly from that field if the checkpoint fails during an inspection. A triggered issue is logged automatically under **Equipment Issues**.",
+    "tags": [
+      "trigger point",
+      "setup trigger points"
+    ]
+  },
+  {
+    "action": "define",
+    "object": "equipment maintenance calendar colors",
+    "scope": "module",
+    "section": "Field Inspections",
+    "question": "What do the colors on the Equipment Maintenance Calendar mean?",
+    "answer": "**Grey = Not Ready**, **Blue = Ready**, **Amber = In Progress**, **Green = Completed**. Each day's due forms are grouped by project in a collapsible section, showing the form name, the equipment, and its current status.",
+    "tags": [
+      "equipment maintenance calendar colors",
+      "equipment maintenance calendar legend",
+      "not ready ready in progress completed"
+    ]
+  },
+  {
+    "action": "define",
+    "object": "scheduled vs ad-hoc inspection",
+    "scope": "module",
+    "section": "Field Inspections",
+    "question": "What's the difference between a scheduled maintenance form and an ad-hoc inspection?",
+    "answer": "A scheduled form is generated automatically by a maintenance package's Prepare Schedule settings (Daily/Weekly/Check Out/Check In) and shows up on the Equipment Maintenance Calendar at the right time. An ad-hoc inspection is created manually at any time via Create Form on the Equipment Maintenance list tab, without being tied to a pre-set schedule.",
+    "tags": [
+      "scheduled vs ad-hoc inspection",
+      "inspection type comparison"
+    ]
+  },
+  {
+    "action": "edit",
+    "object": "equipment issue",
+    "scope": "module",
+    "section": "Equipment Issues (Inspection Checklists Issues)",
+    "question": "How do I resolve an equipment issue?",
+    "answer": "1. Go to **Equipment Issues**, locate the issue via Search/Filters.\n2. Review details, add notes in **Chat** if collaborating.\n3. Once fixed, click **Rectify** — status becomes Rectified and the linked form re-opens for completion.\n4. Optionally click **Create Work Order** if formal remediation tracking is needed.",
+    "tags": [
+      "resolve issue",
+      "rectify",
+      "equipment issue",
+      "resolve rectify issue"
+    ]
+  },
+  {
+    "action": "define",
+    "object": "equipment issue vs ncr",
+    "scope": "module",
+    "section": "Equipment Issues (Inspection Checklists Issues)",
+    "question": "What's the difference between an Equipment Issue and a Non-Conformance Report?",
+    "answer": "Equipment Issues are typically raised automatically from a failed trigger-point check during a maintenance form, inspection, or an allocation inspection. NCRs are created manually (via + Add on the Non Conformance Report tab) to formally track a non-conformance event. Both use the same card/table view, Rectify workflow, Chat, Assign To/Due Date, and Create Work Order pattern, but they are separate, independently tracked records.",
+    "tags": [
+      "equipment issue vs ncr",
+      "issue comparison"
+    ]
+  },
+  {
+    "action": "create",
+    "object": "work order",
+    "scope": "module",
+    "section": "Equipment Issues (Inspection Checklists Issues)",
+    "question": "How do I create a Work Order from an equipment issue?",
+    "answer": "Click **Create Work Order** on the Equipment Issues (or NCR) toolbar — this spins up a Work Order to track remediation labor/cost.",
+    "tags": [
+      "create work order from issue"
+    ]
+  },
+  {
+    "action": "delete",
+    "object": "equipment issue",
+    "scope": "module",
+    "section": "Equipment Issues (Inspection Checklists Issues)",
+    "question": "How do I delete, export, or change the view for issues and NCRs?",
+    "answer": "Click the delete icon on an issue's row to remove it; click **Export** to download all records to Excel; and use the view toggle (top-right) to switch between the default table view and a card/grid view.",
+    "tags": [
+      "delete issue",
+      "export issues",
+      "table view toggle",
+      "export issues table view toggle"
+    ]
+  },
+  {
+    "action": "view",
+    "object": "issue header counters",
+    "scope": "module",
+    "section": "Equipment Issues (Inspection Checklists Issues)",
+    "question": "What do the header counters mean on Equipment Issues / NCR?",
+    "answer": "They show totals for the tab, e.g. \"42 Total Issues | 28 Open Issues | 14 Issues Rectified\" — total records, how many are still open, and how many have been rectified.",
+    "tags": [
+      "header counters",
+      "issue totals"
+    ]
+  },
+  {
+    "action": "create",
+    "object": "non conformance report",
+    "scope": "module",
+    "section": "Non Conformance Report",
+    "question": "How do I raise and close a Non-Conformance Report?",
+    "answer": "1. Go to **Non Conformance Report**, click **+ Add**.\n2. Fill in NCR details and submit.\n3. Assign an owner (**Assign To**) and **Due Date**.\n4. Use Chat to document remediation steps.\n5. Once corrected, click **Rectify** to close it out.",
+    "tags": [
+      "ncr",
+      "non conformance report",
+      "raise and close ncr"
+    ]
+  },
+  {
+    "action": "define",
+    "object": "rectify action",
+    "scope": "module",
+    "section": "Non Conformance Report",
+    "question": "What does \"Rectify\" do on an Issue vs. on an NCR?",
+    "answer": "In both cases, **Rectify** marks the record as Rectified. On an Equipment Issue, it additionally re-enables the associated maintenance form for completion/re-submission. On an NCR it simply closes the report out as resolved.",
+    "tags": [
+      "rectify behavior",
+      "issue vs ncr rectify"
+    ]
+  },
+  {
+    "action": "define",
+    "object": "rectify behavior",
+    "scope": "module",
+    "section": "Non Conformance Report",
+    "question": "What's the difference between Equipment Issues' Rectify and an NCR's Rectify?",
+    "answer": "Functionally similar — both set status to Rectified. On an Equipment Issue, Rectify additionally re-enables the linked maintenance form so it can be completed/resubmitted; an NCR's Rectify simply closes the report, with no equivalent form-reopening behavior described.",
+    "tags": [
+      "equipment issue rectify vs ncr rectify"
+    ]
+  },
+  {
+    "action": "create",
+    "object": "load out request",
+    "scope": "module",
+    "section": "Earlier Version: Load Out Request",
+    "question": "How do I raise an internal Load Out Request?",
+    "answer": "On an earlier-version environment: open the **Load Out Request** tab, click **Add** under **LOR Internal Jobs** to open the Request Form, pick the equipment or accessories, enter quantity, dates, supervisor and job, and submit. It is then approved and moves through Check Out, Shipment, Load, In Transit, Delivered and Received. In Arena 2.0, raise the request with **New Request** under **Equipment Management → Operations** instead.",
+    "tags": [
+      "load out request",
+      "lor",
+      "checkout equipment",
+      "internal job lor"
+    ]
+  },
+  {
+    "action": "define",
+    "object": "lor internal vs 3rd party",
+    "scope": "module",
+    "section": "Earlier Version: Load Out Request",
+    "question": "What's different between LOR Internal Jobs and Rentals?",
+    "answer": "LOR Internal Jobs splits into two separate documents — Load Out Requests (outbound: Request → Check Out → Shipment → Load → In Transit → Delivered → Received → Preview) and Return Requests (inbound, same stages minus Check Out). Rentals (3rd-party) is a single record covering the whole cycle with different stage names: Request → Check Out → Lease Agreement → Ship → Check In → Shop In → Preview, and its Request form omits Job Name/Job Location since there's no internal job involved.",
+    "tags": [
+      "lor internal vs 3rd party",
+      "lor flow comparison",
+      "rentals vs internal jobs"
+    ]
+  },
+  {
+    "action": "track",
+    "object": "maintenance form issue routing",
+    "scope": "module",
+    "section": "Equipment Issues (Inspection Checklists Issues)",
+    "question": "I raised an issue from a maintenance form — where did it go?",
+    "answer": "It's automatically logged under the **Equipment Issues** tab, where it can be reviewed, assigned, and eventually marked Rectified.",
+    "tags": [
+      "issue routed to equipment issues"
+    ]
+  },
+  {
+    "action": "view",
+    "object": "load out request stages",
+    "scope": "module",
+    "section": "Earlier Version: Load Out Request",
+    "question": "What are the stages shown on a Load Out Request page?",
+    "answer": "On earlier-version environments a Load Out Request shows a stepper: **Request**, **Check Out**, **Shipment**, **Load**, **In Transit**, **Delivered**, **Received** and **Preview**. Rentals use **Request**, **Check Out**, **Lease Agreement**, **Ship**, **Check In**, **Shop In** and **Preview**. A later stage cannot be opened until the earlier ones are done. Arena 2.0 uses the Allocation Lifecycle stages on the Operations board instead.",
+    "tags": [
+      "lor stages",
+      "load out request stepper",
+      "check out shipment load",
+      "lease agreement ship check in shop in"
+    ]
+  },
+  {
+    "action": "define",
+    "object": "load out request",
+    "scope": "module",
+    "section": "Earlier Version: Load Out Request",
+    "question": "What is a Load Out Request?",
+    "answer": "A **Load Out Request** (LOR) is the request used on earlier-version environments to move equipment or accessories out of inventory to a job site, or to a third party on lease, and back. It moves through stages such as Request, Check Out, Shipment, Load, In Transit, Delivered and Received. In Arena 2.0, requests are raised with **New Request** on the **Operations** board and moved through the **Allocation Lifecycle** instead.",
+    "tags": [
+      "what is a load out request",
+      "lor",
+      "load out request",
+      "earlier version"
+    ]
+  },
+  {
+    "action": "create",
+    "object": "equipment utilization log",
+    "scope": "module",
+    "section": "Log Daily Equipment Utilization (Add Utilization Log and Auto Log Utilization)",
+    "question": "How do I add an equipment utilization log?",
+    "answer": "From **Home**, open **Equipment Management → Utilization → Add Utilization Log**. Click **Import from Equipment Master** or **Add** to list equipment, choose the **Assigned Project** and **Phase Code** for each row, enter **Work Hours**, **Idle Hours**, **Billing Hours** and **Fuel**, then click **Save as Draft** or **Submit**.",
+    "tags": [
+      "add utilization log",
+      "daily utilization log",
+      "log equipment hours",
+      "equipment hours log",
+      "record work hours and idle hours",
+      "utilisation log",
+      "submit utilization log"
+    ]
+  },
+  {
+    "action": "define",
+    "object": "utilization log columns",
+    "scope": "module",
+    "section": "Log Daily Equipment Utilization (Add Utilization Log and Auto Log Utilization)",
+    "question": "What are the columns on the Add Utilization Log screen?",
+    "answer": "From **Home**, open **Equipment Management → Utilization → Add Utilization Log**. Each row has **Equipment**, **Assigned Project**, **Phase Code**, **Billing Hours**, **Total Hours**, **Work Hours**, **Idle Hours**, **Idle %** and **Fuel**. Buttons: **Add**, **Clone Log**, **Import from Equipment Master**, **Save as Draft**, **Submit** and **Telematics**.",
+    "tags": [
+      "utilization log fields",
+      "idle percent",
+      "billing hours",
+      "total hours",
+      "fuel column",
+      "clone log",
+      "import from equipment master"
+    ]
+  },
+  {
+    "action": "configure",
+    "object": "auto log utilization",
+    "scope": "module",
+    "section": "Log Daily Equipment Utilization (Add Utilization Log and Auto Log Utilization)",
+    "question": "What is Auto Log Utilization and how do I set it up?",
+    "answer": "From **Home**, open **Equipment Management → Utilization → Auto Log Utilization** and click **Create**. Enter the **Equipment ID**, **Project**, **Phase Code**, **From Date**, **To Date**, **Work Hours** and **Idle Hours**. The list shows these columns for every automatic log. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    "tags": [
+      "auto log",
+      "automatic utilization",
+      "auto utilization log",
+      "create auto log utilization",
+      "bulk utilization hours"
+    ]
+  },
+  {
+    "action": "view",
+    "object": "utilization logs",
+    "scope": "module",
+    "section": "Review Utilization: Logs, Summary and Issues",
+    "question": "Where do I see submitted utilization logs?",
+    "answer": "From **Home**, open **Equipment Management → Utilization → Utilization Logs**. The list of logs has a detail pane beside it.",
+    "tags": [
+      "utilization logs list",
+      "submitted utilization",
+      "view utilization logs",
+      "past utilization logs",
+      "utilization log detail"
+    ]
+  },
+  {
+    "action": "view",
+    "object": "utilization summary",
+    "scope": "module",
+    "section": "Review Utilization: Logs, Summary and Issues",
+    "question": "Where is the utilization summary?",
+    "answer": "From **Home**, open **Equipment Management → Utilization → Utilization Summary**. Choose a date range and the log level (project) filter to see the summary. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    "tags": [
+      "utilization summary",
+      "summary of equipment hours",
+      "equipment utilization by project",
+      "utilization date range",
+      "utilisation summary"
+    ]
+  },
+  {
+    "action": "view",
+    "object": "utilization issues",
+    "scope": "module",
+    "section": "Review Utilization: Logs, Summary and Issues",
+    "question": "What is the Issues screen under Utilization?",
+    "answer": "From **Home**, open **Equipment Management → Utilization → Issues**. The list shows **Util Number**, **Level**, **Raised by**, **Assign To** and **Due Date**, with counts of **Approved** and **Rejected**. Click **Download Excel** to export it.",
+    "tags": [
+      "utilization issues",
+      "utilization log issues",
+      "util number",
+      "rejected utilization logs",
+      "download excel utilization issues"
+    ]
+  },
+  {
+    "action": "configure",
+    "object": "utilization approval workflow",
+    "scope": "module",
+    "section": "Review Utilization: Logs, Summary and Issues",
+    "question": "Where do I set the approval workflow for utilization logs?",
+    "answer": "From **Home**, open **Equipment Management → Settings → Approval Workflow** and choose the **Utilization Logs** tab. The other tabs are **Asset Requests**, **Hauling Request** and **Off Rent / Extension Request**.",
+    "tags": [
+      "utilization logs approval",
+      "approve utilization logs",
+      "utilization approval levels",
+      "approval workflow utilization tab"
+    ]
+  },
+  {
+    "action": "schedule",
+    "object": "preventive maintenance",
+    "scope": "module",
+    "section": "Schedule Preventive Maintenance",
+    "question": "Where is the preventive maintenance schedule?",
+    "answer": "From **Home**, open **Equipment Management → Maintenance → Preventive Maintenance**. Click **Schedule PM** to add one. The trigger is **Calendar**, **Hours** or **Distance**, and the list shows **Last PM Due**, **Current** and **Next PM Due**.",
+    "tags": [
+      "preventive maintenance",
+      "pm schedule",
+      "schedule pm",
+      "pm due",
+      "next pm due",
+      "service due",
+      "maintenance schedule hours distance",
+      "pm trigger"
+    ]
+  },
+  {
+    "action": "schedule",
+    "object": "pm trigger",
+    "scope": "module",
+    "section": "Schedule Preventive Maintenance",
+    "question": "What are the PM triggers: Calendar, Hours and Distance?",
+    "answer": "On **Equipment Management → Maintenance → Preventive Maintenance**, a schedule is triggered by **Calendar**, **Hours** or **Distance**. The intervals and hours thresholds come from **Settings → Maintenance Config → PM Interval Configuration**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    "tags": [
+      "calendar hours distance",
+      "pm interval",
+      "hours threshold",
+      "pm service interval",
+      "maintenance trigger"
+    ]
+  },
+  {
+    "action": "view",
+    "object": "parts po",
+    "scope": "module",
+    "section": "Manage the Parts Catalogue (Parts PO)",
+    "question": "What is the Parts PO screen?",
+    "answer": "From **Home**, open **Equipment Management → Maintenance → Parts PO**. It is the parts catalogue: click **Add Part**, and the list shows **Part**, **Category**, **Manufacturer**, **Unit Cost** and **Stock**. Parts are also handled on the **Parts** tab of a **Work Order**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    "tags": [
+      "parts po",
+      "parts catalogue",
+      "spare parts",
+      "add part",
+      "part stock",
+      "parts purchase order",
+      "maintenance parts",
+      "parts catalog"
+    ]
+  },
+  {
+    "action": "view",
+    "object": "maintenance calendar",
+    "scope": "module",
+    "section": "See Maintenance on the Maintenance Calendar",
+    "question": "Where is the maintenance calendar?",
+    "answer": "From **Home**, open **Equipment Management → Maintenance → Maintenance Calendar**. It is a month calendar with the legend **Not Ready**, **Ready**, **In Progress With Issues** and **Completed**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    "tags": [
+      "maintenance calendar",
+      "maintenance calendar legend",
+      "not ready ready completed",
+      "pm calendar",
+      "maintenance schedule calendar",
+      "in progress with issues"
+    ]
+  },
+  {
+    "action": "configure",
+    "object": "maintenance config",
+    "scope": "module",
+    "section": "Configure Maintenance: PM Intervals and Work Order Types",
+    "question": "What is Maintenance Config and what does it contain?",
+    "answer": "From **Home**, open **Equipment Management → Settings → Maintenance Config**. **PM Interval Configuration** lists **Category**, **Interval**, **Type**, **Hours Threshold** and **Check List**. The same screen has **Work Order Types**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    "tags": [
+      "maintenance config",
+      "pm interval configuration",
+      "work order types maintenance",
+      "hours threshold",
+      "pm checklist",
+      "maintenance settings"
+    ]
+  },
+  {
+    "action": "view",
+    "object": "equipment reports",
+    "scope": "module",
+    "section": "Run Equipment Reports",
+    "question": "What reports are in Equipment Management?",
+    "answer": "From **Home**, open **Equipment Management → Reports**. The six reports are **Equipment Utilization Report**, **PM Service Tracker Report**, **Compliance Warranty Tracker**, **Hauling Cost Log**, **3rd Party Rental Activity & Spend Report** and **Equipment Billing Worksheet**. Your company may see **Asset** instead of **Equipment** (**Global Data → Settings → Naming Framework**). For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    "tags": [
+      "equipment reports",
+      "list of reports",
+      "utilization report",
+      "pm service tracker",
+      "compliance warranty tracker",
+      "hauling cost log",
+      "billing worksheet",
+      "rental spend report",
+      "asset reports"
+    ]
+  },
+  {
+    "action": "view",
+    "object": "3rd party rental",
+    "scope": "module",
+    "section": "3rd Party Rental and External Hauling Lists",
+    "question": "Where do I see rented-in (3rd party) equipment?",
+    "answer": "From **Home**, open **Equipment Management → Equipment → 3rd Party Rental**. The list shows **REQ ID**, **PO ID**, **Vendor**, **Delivered Date**, **Length of Rent**, **Days in Rent**, **Billing Rule**, the **Hourly**, **Daily**, **Weekly** and **Monthly Rate**, **Freight Cost**, **PO Value**, **Total Cost YTD** and **Phase Codes**.",
+    "tags": [
+      "3rd party rental",
+      "third party rental",
+      "rented equipment",
+      "rental list",
+      "days in rent",
+      "rented in equipment",
+      "total cost ytd",
+      "rental rates"
+    ]
+  },
+  {
+    "action": "view",
+    "object": "external hauling",
+    "scope": "module",
+    "section": "3rd Party Rental and External Hauling Lists",
+    "question": "Where is the External Hauling list?",
+    "answer": "From **Home**, open **Equipment Management → Hauling → External Hauling**. The list shows **Allocation Id**, **REQ ID**, **PO ID**, **Vendor**, **Cost**, **Price**, **Escort Cost**, **Permit Cost**, **Service Company**, **Service Type**, **Pick Up Address**, **Dimensions**, **Weight**, **Received By**, **Delivered Date** and **Stage**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    "tags": [
+      "external hauling",
+      "outside hauling",
+      "hauling vendor",
+      "escort cost",
+      "permit cost",
+      "external hauling list",
+      "third party hauling"
+    ]
+  },
+  {
+    "action": "configure",
+    "object": "billing rules",
+    "scope": "module",
+    "section": "More Equipment Settings: Billing Rules, Disposal Methods, Thresholds and Status",
+    "question": "Where do I set equipment billing rules?",
+    "answer": "From **Home**, open **Equipment Management → Settings → Billing Rules**. It has **Billable Hours** and the list of billing rules. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    "tags": [
+      "billing rules",
+      "billable hours",
+      "equipment billing rule",
+      "rental billing rule",
+      "set billing rules"
+    ]
+  },
+  {
+    "action": "configure",
+    "object": "disposal methods",
+    "scope": "module",
+    "section": "More Equipment Settings: Billing Rules, Disposal Methods, Thresholds and Status",
+    "question": "What disposal methods are available?",
+    "answer": "Open **Equipment Management → Settings → Disposal Methods**. The methods are **Auction**, **Private Sale**, **Trade-in**, **Scrap** and **Internal Transfer**.",
+    "tags": [
+      "disposal methods",
+      "dispose equipment",
+      "auction scrap trade-in",
+      "equipment disposal",
+      "dispose initiated"
+    ]
+  },
+  {
+    "action": "configure",
+    "object": "notification thresholds",
+    "scope": "module",
+    "section": "More Equipment Settings: Billing Rules, Disposal Methods, Thresholds and Status",
+    "question": "How do I set expiry and reminder alerts for equipment?",
+    "answer": "Open **Equipment Management → Settings → Notification Thresholds**. Set the days for **Registration Expiry**, **Warranty Expiry**, **Insurance Expiry**, **Telemetry Stale** and **Approaching Planned Return Date**, and set the **Utilization Log Reminder** (days, time and emails). For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    "tags": [
+      "notification thresholds",
+      "expiry alerts",
+      "warranty expiry days",
+      "insurance expiry",
+      "registration expiry",
+      "utilization log reminder",
+      "telemetry stale",
+      "planned return date alert"
+    ]
+  },
+  {
+    "action": "configure",
+    "object": "due assignment days",
+    "scope": "module",
+    "section": "More Equipment Settings: Billing Rules, Disposal Methods, Thresholds and Status",
+    "question": "What are Equipment Due Assignment Days and the Utilization Idle Percentage?",
+    "answer": "Open **Equipment Management → Settings → Equipment Due Assignment Days**. **Due Period** is set in days, months or years, and **Utilization Idle Percentage %** sets the idle limit used on utilization logs.",
+    "tags": [
+      "equipment due assignment days",
+      "due period",
+      "utilization idle percentage",
+      "idle percent setting",
+      "asset due assignment days"
+    ]
+  },
+  {
+    "action": "configure",
+    "object": "equipment status",
+    "scope": "module",
+    "section": "More Equipment Settings: Billing Rules, Disposal Methods, Thresholds and Status",
+    "question": "What equipment statuses can I set up?",
+    "answer": "Open **Equipment Management → Settings → Equipment Status** (or **Accessory Status**). Each status has a name, colour, enabled switch and utility threshold. Statuses include **Yard Only**, **Unavailable** and **Dispose Initiated**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    "tags": [
+      "equipment status",
+      "accessory status",
+      "status colour",
+      "yard only",
+      "unavailable status",
+      "utility threshold",
+      "asset status"
+    ]
+  },
+  {
+    "action": "view",
+    "object": "inspection checklists issues",
+    "scope": "module",
+    "section": "Equipment Issues (Inspection Checklists Issues)",
+    "question": "Where is the Inspection Checklists Issues screen?",
+    "answer": "From **Home**, open **Equipment Management → Inspection Checklists Issues**. The header shows **Total**, **Open** and **Rectified** counts. The list has **Equipment Issues Number**, **Priority**, **Observation**, **Source**, **Form**, **Raised by**, **Rectified by**, **Image**, **Work Order**, **Assign To** and **Due Date**.",
+    "tags": [
+      "inspection checklists issues",
+      "equipment issues list",
+      "equipment issue columns",
+      "open rectified issues",
+      "where are equipment issues"
+    ]
+  },
+  {
+    "action": "view",
+    "object": "field inspections list",
+    "scope": "module",
+    "section": "Field Inspections",
+    "question": "Where are Field Inspections and what does the list show?",
+    "answer": "From **Home**, open **Equipment Management → Maintenance → Field Inspections**. Click **New Inspection** to start one. The list shows **ID**, **Equipment**, **Type**, **Status**, **Inspector**, **Date** and **Priority**.",
+    "tags": [
+      "field inspections list",
+      "new inspection",
+      "inspection list columns",
+      "inspector priority",
+      "field inspection screen"
+    ]
   }
 ];
 
@@ -9897,7 +10532,7 @@ const QA_WORKORDER = [
     section: "The Work Orders Page",
     question: "How do I raise a work order against equipment or from an inspection issue?",
     answer: "From **Home**, open **Work Order → Work Orders**. On the **Work Orders** tab, click **Create**, pick the **Work Order Type** and enter the **WO Description** and **Work Order Status**. Choose **Create By**: **Inspection Issue** (pick the **Equipment Issue Linked** and the equipment fills in) or **Equipment** (pick the equipment). Then set the **Maintenance Type**, **Business Unit**, **Project**, **Phase Code**, **Created Date** and **Notes**, the **Priority**, **Operational Status** and **Due Date**, and the **Service Location**. Choose **Internal (Shop / In-House)** and a **Technician**, or **External Vendor** with the **Vendor**, **Vendor Contact** and **Vendor PO Number**. Click **Submit**.",
-    tags: ["create work order from inspection issue","raise work order equipment","create by","inspection issue","service location","internal or vendor","work order fields"]
+    tags: ["create work order from inspection issue","raise work order equipment","create by","inspection issue","service location","internal or vendor","work order fields","create a work order","create work order","new work order","add a work order","raise work order"]
   },
   {
     action: "view",
@@ -19398,6 +20033,390 @@ const MODULES = [
         ]
       },
       {
+        "heading": "Log Daily Equipment Utilization (Add Utilization Log and Auto Log Utilization)",
+        "intro": "<p>Use the Utilization screens to record how many hours each piece of equipment worked, sat idle and could be billed on a project each day. Field users and equipment coordinators fill in the daily log and submit it for approval; **Auto Log Utilization** fills hours for a date range for you. Your company may see **Asset** instead of **Equipment** (**Global Data → Settings → Naming Framework**).</p>",
+        "definitions": [
+          {
+            "term": "Add Utilization Log",
+            "definition": "From **Home**, open **Equipment Management → Utilization → Add Utilization Log**. The screen is a daily log grid with the columns **Equipment**, **Assigned Project**, **Phase Code**, **Billing Hours**, **Total Hours**, **Work Hours**, **Idle Hours**, **Idle %** and **Fuel**."
+          },
+          {
+            "term": "Buttons on Add Utilization Log",
+            "definition": "**Add**, **Clone Log**, **Import from Equipment Master**, **Save as Draft**, **Submit** and **Telematics**. **Import from Equipment Master** brings equipment in from the **Equipment Master**; **Save as Draft** keeps the log without sending it; **Submit** sends it for approval."
+          },
+          {
+            "term": "Idle %",
+            "definition": "The **Idle %** column sits beside **Idle Hours** and **Work Hours** in each log row. The company-wide idle percentage limit is set in **Settings → Equipment Due Assignment Days → Utilization Idle Percentage %**."
+          },
+          {
+            "term": "Auto Log Utilization",
+            "definition": "Open **Equipment Management → Utilization → Auto Log Utilization** and click **Create** to set up an automatic log. The list shows **Equipment ID**, **Project**, **Phase Code**, **From Date**, **To Date**, **Work Hours** and **Idle Hours**."
+          },
+          {
+            "term": "Where this data comes from and goes",
+            "definition": "The equipment in a log come from the **Equipment Master**. Submitted logs appear in **Utilization Logs** and **Utilization Summary**, are checked through the approval levels set in **Settings → Approval Workflow → Utilization Logs**, and the **Equipment Utilization Report** and **Equipment Billing Worksheet** are in **Reports**."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Add a daily utilization log",
+            "steps": [
+              "From **Home**, open **Equipment Management → Utilization → Add Utilization Log**.",
+              "Click **Import from Equipment Master** or **Add** to list the equipment.",
+              "For each row choose the **Assigned Project** and **Phase Code**, then enter the **Work Hours**, **Idle Hours**, **Billing Hours** and **Fuel**.",
+              "Click **Save as Draft** to keep working later, or **Submit** to send the log for approval."
+            ],
+            "note": "To copy an earlier log, use **Clone Log**."
+          },
+          {
+            "title": "Set up Auto Log Utilization",
+            "steps": [
+              "Open **Equipment Management → Utilization → Auto Log Utilization** and click **Create**.",
+              "Enter the **Equipment ID**, **Project**, **Phase Code**, **From Date**, **To Date**, **Work Hours** and **Idle Hours**.",
+              "Confirm the entry. It then shows in the **Auto Log Utilization** list."
+            ],
+            "note": "For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
+          }
+        ]
+      },
+      {
+        "heading": "Review Utilization: Logs, Summary and Issues",
+        "intro": "<p>Use **Utilization Logs**, **Utilization Summary** and **Issues** to review what was logged, total it by project and date, and follow up on logs with approval problems. Equipment managers and project managers use them after field users submit their daily logs.</p>",
+        "definitions": [
+          {
+            "term": "Utilization Logs",
+            "definition": "Open **Equipment Management → Utilization → Utilization Logs**. The screen lists the logs with a detail pane beside the list."
+          },
+          {
+            "term": "Utilization Summary",
+            "definition": "Open **Equipment Management → Utilization → Utilization Summary**. Choose a date range and a log level (project) filter to see a summary of utilization."
+          },
+          {
+            "term": "Utilization Issues",
+            "definition": "Open **Equipment Management → Utilization → Issues**. The list shows **Util Number**, **Level**, **Raised by**, **Assign To** and **Due Date**, with counts of **Approved** and **Rejected**. Use **Download Excel** to export the list."
+          },
+          {
+            "term": "Utilization Logs approval workflow",
+            "definition": "In **Settings → Approval Workflow** the **Utilization Logs** tab sets the approval for submitted logs. The other tabs are **Asset Requests** (equipment requests), **Hauling Request** and **Off Rent / Extension Request**."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Check utilization for a period",
+            "steps": [
+              "Open **Equipment Management → Utilization → Utilization Summary**.",
+              "Choose the date range.",
+              "Choose the log level (project) filter to see the summary for that project."
+            ],
+            "note": "For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
+          }
+        ]
+      },
+      {
+        "heading": "Field Inspections",
+        "intro": "<p>This is where the admin's upfront maintenance-package configuration meets the reality of the job site. Field Inspections is the <strong>End User</strong> screen — the one a foreman, mechanic, or field engineer actually opens day to day to complete a scheduled maintenance check, log something unplanned, or document equipment condition with photos before or after a job.</p><p>Field Inspections is where the maintenance packages configured in Equipment Setup actually get executed — the screen field crews use day to day to complete scheduled forms, log unplanned inspections, and manage photographic documentation of equipment condition. It's organized into three tabs — Maintenance, Utilization, and Equipment Photos — each covering a different flavor of on-the-ground equipment tracking.</p>\n    <p>Both Maintenance and Utilization share the same underlying interaction model: a calendar view for scheduled entries generated automatically by a maintenance package, and a list view for ad-hoc entries created manually whenever something needs recording outside of any pre-set schedule. This dual structure reflects a real operational need — most inspections happen on a predictable cadence, but crews also need the ability to log something unplanned, like a mid-shift equipment failure, without waiting for the next scheduled slot.</p>\n    <p>A key mechanism woven throughout this screen is the trigger point: certain fields on a maintenance form are configured (in the Maintenance Builder) to let the person filling out the form raise an issue directly from that field if a checkpoint fails. This is what connects Field Inspections to Equipment Issues — a failed check during a routine inspection doesn't just sit in the completed form, it automatically becomes a tracked issue that someone can be assigned to resolve.</p>",
+        "definitions": [
+          {
+            "term": "Field Inspections list",
+            "definition": "From **Home**, open **Equipment Management → Maintenance → Field Inspections**. Click **New Inspection** to start one. The list shows **ID**, **Equipment**, **Type**, **Status**, **Inspector**, **Date** and **Priority**."
+          },
+          {
+            "term": "Field Inspections",
+            "definition": "The screen where field crews perform and record maintenance activity and manage equipment photos, organized into three tabs: Maintenance, Utilization, and Equipment Photos."
+          },
+          {
+            "term": "Maintenance tab",
+            "definition": "Logs maintenance and inspection activity, on two sub-tabs: Equipment Maintenance Calendar (scheduled, generated by a maintenance package, grouped by project in collapsible sections) or Equipment Maintenance (a list/ad-hoc tab with Create Form, for unplanned inspections)."
+          },
+          {
+            "term": "Utilization tab",
+            "definition": "Structurally identical to the Maintenance tab — calendar-driven scheduled entries plus ad-hoc list entries — but scoped to logging ad-hoc utilization entries rather than maintenance/inspection activity."
+          },
+          {
+            "term": "Equipment Maintenance Calendar color legend",
+            "definition": "The color coding used on the calendar view, with these exact on-screen labels: Grey = Not Ready, Blue = Ready, Amber = In Progress, Green = Completed. Each day's due forms are grouped by project in a collapsible section, listing form name, equipment, and its current status/stage."
+          },
+          {
+            "term": "Equipment Photos tab",
+            "definition": "A dedicated tab (on-screen name \"Equipment Photos\"; the underlying route and older docs call it Equipment Photos) for managing photographic documentation of equipment. Select an item from the left-hand list of Equipment/Accessories, click Add, then Upload File to attach one or more images, optionally annotate them with the built-in markup tools, and Save. Each photo carries a Label, Description, and \"Raised on [date] by [user]\" attribution, plus a kebab menu."
+          },
+          {
+            "term": "Trigger point",
+            "definition": "A checkbox configured per field in the maintenance form builder (under Setup Trigger Points) that lets an end-user raise an issue or note directly from that field if the checkpoint fails during an inspection. Any issue raised this way is logged automatically to Equipment Issues, without requiring a separate manual step to create the issue record."
+          },
+          {
+            "term": "Scheduled vs. ad-hoc inspection",
+            "definition": "A scheduled form is generated automatically by a maintenance package's Prepare Schedule settings (Daily, Weekly, Check Out, or Check In) and appears on the Equipment Maintenance Calendar at the appropriate time. An ad-hoc inspection is instead created manually at any time via Create Form on the list tab, with no tie to any pre-set schedule — useful for capturing something unplanned."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Logging a scheduled maintenance activity",
+            "steps": [
+              "Go to <strong>Field Inspections → Maintenance</strong> and switch to <strong>Calendar</strong>.",
+              "Pick the due date — forms are shown color-coded (Blue means ready to fill).",
+              "Open the form, fill in the required fields, and Submit — the form turns Green once complete.",
+              "If a check fails, raise an <strong>issue</strong> directly from that field — it's logged to Equipment Issues automatically, with no separate step needed."
+            ]
+          },
+          {
+            "title": "Logging an ad-hoc (unplanned) inspection",
+            "steps": [
+              "Go to <strong>Field Inspections → Maintenance</strong> (or Utilization) and switch to the list/ad-hoc tab.",
+              "Select the relevant form category from the left-hand list.",
+              "Click <strong>Create Form</strong>, complete the fields, and Submit — it appears as a new card with Download, Share, Print, and Chat available."
+            ]
+          },
+          {
+            "title": "Editing a maintenance form after it's been submitted",
+            "steps": [
+              "Click the card for the submitted form to re-open it for review or editing.",
+              "Use the card's Download, Share, Print, and Chat options for collaborative notes alongside the edit."
+            ]
+          },
+          {
+            "title": "Uploading equipment photos",
+            "steps": [
+              "Go to <strong>Field Inspections → Equipment Photos</strong>.",
+              "Select the equipment or accessory from the left-hand list.",
+              "Click <strong>Add</strong>, then Upload File to select one or more images.",
+              "Optionally annotate using the built-in markup tools, then click <strong>Save</strong>."
+            ]
+          },
+          {
+            "title": "Viewing, annotating, or deleting an equipment photo",
+            "steps": [
+              "Click \"Click to View\" on a photo to open the viewer, which supports next/previous navigation.",
+              "Use the annotation tools below the image to mark it up, then click <strong>Save</strong> to persist the markup.",
+              "Use the kebab (⋮) menu in the viewer to <strong>Delete</strong> the photo."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Equipment Issues (Inspection Checklists Issues)",
+        "intro": "<p>A failed safety check on a crane or a hydraulic leak on an excavator cannot be allowed to fade into an informal conversation between a foreman and a mechanic — it needs an owner, a due date, and a paper trail that a Fleet Manager or Safety lead can audit later. Equipment Issues gives that structure to the whole company: <strong>End Users</strong> (field crews, mechanics) raise or resolve issues day to day, while a <strong>Fleet/Equipment Module Manager</strong> monitors the header counters to spot problem equipment before it becomes a bigger failure.</p><p>Equipment Issues is the central log for problems raised against equipment — most commonly generated automatically when a trigger-point check fails during a maintenance form, a field inspection, or an allocation inspection. Rather than a problem getting noted informally and potentially forgotten, Arena routes it into a single, trackable record with an owner, a due date, and a defined resolution path.</p>\n    <p>The screen defaults to a table view (a card/grid view toggle is also available) and is built around a simple lifecycle: an issue is raised, optionally discussed via Chat, and eventually marked Rectified once the underlying problem is fixed. For issues that require more formal remediation — labor, cost, parts — a Work Order can be spun up directly from the toolbar's Create Work Order button, connecting equipment problem-tracking to the broader work-order/cost-tracking machinery elsewhere in Arena.</p>\n    <p>Equipment Issues is closely related to, but distinct from, Non Conformance Reports, covered in the next section. Both share the same UI patterns (table/card views, Rectify, Chat, Assign To/Due Date, Create Work Order, header counters), but they differ in how they originate: Equipment Issues are almost always system-raised from a failed check, while NCRs are manually created to formally document a non-conformance event.</p>",
+        "definitions": [
+          {
+            "term": "Inspection Checklists Issues screen",
+            "definition": "From **Home**, open **Equipment Management → Inspection Checklists Issues**. The header shows **Total**, **Open** and **Rectified** counts. The list shows **Equipment Issues Number**, **Priority**, **Observation**, **Source**, **Form**, **Raised by**, **Rectified by**, **Image**, **Work Order**, **Assign To** and **Due Date**."
+          },
+          {
+            "term": "Equipment Issues (Equipment Issues)",
+            "definition": "The central log of issues raised during maintenance forms, field inspections, or allocation inspections. Presented as a table by default (IDs prefixed \"DEI No.\"), with a card/grid view toggle available. Columns: Issue Number, Form, Stage, Observation, Raised on Date/Time, Raised by, Image, Status, Chat, Assign To, Due Date, Actions."
+          },
+          {
+            "term": "Rectify",
+            "definition": "The action that marks an Equipment Issue as resolved. Clicking Rectify sets the issue's status to Rectified and re-opens the linked maintenance form so it can be completed or resubmitted — Rectify on an Equipment Issue is not just a status change, it actively unblocks the form that the issue interrupted."
+          },
+          {
+            "term": "Create Work Order (from an issue)",
+            "definition": "A toolbar button (not a per-row action) on Equipment Issues and NCR that spins up a formal Work Order, used when the remediation requires tracked labor or cost rather than a quick fix."
+          },
+          {
+            "term": "Equipment Issue vs. Non-Conformance Report",
+            "definition": "Equipment Issues are typically raised automatically from a failed trigger-point check during a maintenance form, inspection, or an allocation inspection. NCRs, by contrast, are created manually (via + Add on the Non Conformance Report tab) to formally document a non-conformance event. Both default to a table view with header counters, Rectify workflow, Chat, Assign To/Due Date fields, and a Create Work Order toolbar button, but they remain separate, independently tracked record types with different columns (Equipment Issues: Form/Stage/Observation; NCR: Equipment/Location/Description)."
+          },
+          {
+            "term": "Header counters",
+            "definition": "Summary totals shown at the top of the Equipment Issues (and NCR) tab, e.g. \"42 Total Issues | 28 Open Issues | 14 Issues Rectified\" — a quick health check on outstanding equipment problems without opening individual records."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Resolving an equipment issue",
+            "steps": [
+              "Go to <strong>Equipment Issues</strong> and locate the issue using Search or Filters.",
+              "Review the issue's details, and add notes in <strong>Chat</strong> if collaborating with others on the fix.",
+              "Once the underlying problem is fixed, click <strong>Rectify</strong> — the status becomes Rectified and the linked form re-opens for completion.",
+              "If formal remediation tracking is needed (labor, cost, parts), click <strong>Create Work Order</strong> on the toolbar."
+            ]
+          },
+          {
+            "title": "Deleting, exporting, or changing the view for issues",
+            "steps": [
+              "Click the <strong>delete_outline</strong> icon on an issue's row to delete it.",
+              "Click <strong>Export</strong> to download all issue records to Excel.",
+              "Use the view toggle in the top-right to switch between table and card/grid view."
+            ]
+          },
+          {
+            "title": "Understanding where a trigger-point issue ends up",
+            "steps": [
+              "If you raised an issue from a failing field on a maintenance form during an inspection, no additional step is needed to log it.",
+              "The issue is automatically routed to the <strong>Equipment Issues</strong> tab, where it can be reviewed, assigned, and eventually marked Rectified."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Non Conformance Report",
+        "intro": "<p>Not every problem worth documenting is caught automatically by a failed checklist item — sometimes a <strong>field End User</strong> (a foreman, safety officer, or QC inspector) simply notices something wrong with a piece of equipment and needs a formal way to flag it, independent of any scheduled inspection. NCR gives that person the same trusted workflow used for system-raised issues, so the two problem types end up in one auditable place a <strong>Module Manager</strong> can review together.</p><p>Non Conformance Report (NCR) is the tab for formally documenting a non-conformance event — a deviation from expected standards or process that someone needs to intentionally flag, rather than one the system caught automatically through a failed trigger-point check. Where Equipment Issues are almost always system-generated, an NCR is a deliberate, manually initiated record: someone observed something wrong and chose to formally document it.</p>\n    <p>Structurally, NCRs mirror Equipment Issues closely — the same table-by-default layout, the same Assign To/Due Date pattern, the same Chat panel for documenting remediation steps, and the same Rectify action to close things out, though the columns differ (Equipment, Location, and Description here, versus Form, Stage, and Observation on Equipment Issues; NCR IDs are prefixed \"NCR No.\"). This consistency is intentional: whether a problem was caught by an automated check or flagged manually by a person, the resolution workflow should feel the same to whoever is responsible for fixing it.</p>\n    <p>The one meaningful difference between the two record types shows up in what Rectify actually does. On an Equipment Issue, Rectify re-opens the linked maintenance form for completion, because the issue interrupted an in-progress form. An NCR isn't tied to an in-progress form in the same way, so Rectify on an NCR simply closes the report out as resolved, with no equivalent form-reopening behavior.</p>",
+        "definitions": [
+          {
+            "term": "Non Conformance Report (NCR)",
+            "definition": "A manually created record (ID prefix \"NCR No.\") documenting a non-conformance event, raised via + Add on the Non Conformance Report tab — distinct from Equipment Issues, which are almost always system-raised from a failed trigger-point check. Table view by default, with columns Issue Number, Equipment, Location, Description, Raised on Date/Time, Raised by, Image, Status, Chat, Assign To, Due Date, Actions."
+          },
+          {
+            "term": "Rectify (on an NCR)",
+            "definition": "Marks the NCR as Rectified, closing the report out as resolved. Unlike Rectify on an Equipment Issue, there is no equivalent form-reopening behavior — an NCR isn't tied to an in-progress maintenance form, so closing it is simpler."
+          },
+          {
+            "term": "Rectify: Issue vs. NCR",
+            "definition": "Functionally similar in that both set the record's status to Rectified. On an Equipment Issue, Rectify additionally re-enables the associated maintenance form so it can be completed or resubmitted. On an NCR, Rectify simply closes the report, with no linked form to reopen."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Raising and closing a Non-Conformance Report",
+            "steps": [
+              "Go to <strong>Non Conformance Report</strong> and click <strong>+ Add</strong>.",
+              "Fill in the NCR details and submit.",
+              "Assign an owner via <strong>Assign To</strong> and set a <strong>Due Date</strong>.",
+              "Use <strong>Chat</strong> to document remediation steps as they happen.",
+              "Once the issue is corrected, click <strong>Rectify</strong> to close the report out."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Schedule Preventive Maintenance",
+        "intro": "<p>Use **Preventive Maintenance** to schedule preventive maintenance (PM) for equipment and see when each one is next due. Equipment and maintenance managers use it to keep PM on time; the trigger can be a calendar interval, running hours or distance.</p>",
+        "definitions": [
+          {
+            "term": "Preventive Maintenance screen",
+            "definition": "From **Home**, open **Equipment Management → Maintenance → Preventive Maintenance**. Click **Schedule PM** to add a schedule. The trigger is **Calendar**, **Hours** or **Distance**."
+          },
+          {
+            "term": "Columns",
+            "definition": "The list shows **Last PM Due**, **Current** and **Next PM Due**, plus status columns, so you can see which equipment is due."
+          },
+          {
+            "term": "Where this data comes from",
+            "definition": "Intervals, hours thresholds and checklists are set in **Settings → Maintenance Config → PM Interval Configuration** (see \"Configure Maintenance: PM Intervals and Work Order Types\")."
+          },
+          {
+            "term": "Preventive Maintenance and Equipment Setup",
+            "definition": "Some guides describe building maintenance packages in an **Equipment Setup** wizard (see the section **Equipment Setup**). If your menu shows **Maintenance → Preventive Maintenance**, schedule PM there."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Schedule preventive maintenance",
+            "steps": [
+              "From **Home**, open **Equipment Management → Maintenance → Preventive Maintenance**.",
+              "Click **Schedule PM**.",
+              "Choose the equipment and the trigger: **Calendar**, **Hours** or **Distance**.",
+              "Confirm. The **Last PM Due**, **Current** and **Next PM Due** columns then show where it stands."
+            ],
+            "note": "For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
+          }
+        ]
+      },
+      {
+        "heading": "Manage the Parts Catalogue (Parts PO)",
+        "intro": "<p>Use **Parts PO** to keep the catalogue of spare parts used for equipment maintenance and see what is in stock. Maintenance and store teams use it when they plan repairs.</p>",
+        "definitions": [
+          {
+            "term": "Parts PO screen",
+            "definition": "From **Home**, open **Equipment Management → Maintenance → Parts PO**. Click **Add Part** to add a part. The list shows **Part**, **Category**, **Manufacturer**, **Unit Cost** and **Stock**."
+          },
+          {
+            "term": "Where this data goes",
+            "definition": "Parts are also handled on the **Parts** tab inside a **Work Order** (see the **Work Order** module)."
+          }
+        ],
+        "procedures": []
+      },
+      {
+        "heading": "See Maintenance on the Maintenance Calendar",
+        "intro": "<p>Use the **Maintenance Calendar** to see scheduled maintenance by day across a month. Maintenance planners and field crews use it to see what is ready, in progress or done.</p>",
+        "definitions": [
+          {
+            "term": "Maintenance Calendar",
+            "definition": "From **Home**, open **Equipment Management → Maintenance → Maintenance Calendar**. It is a month calendar."
+          },
+          {
+            "term": "Status legend",
+            "definition": "**Not Ready**, **Ready**, **In Progress With Issues** and **Completed**."
+          },
+          {
+            "term": "Related screens",
+            "definition": "Maintenance forms are set up in **Settings → Equipment Forms** and completed from **Field Inspections**; PM schedules are in **Preventive Maintenance**."
+          }
+        ],
+        "procedures": []
+      },
+      {
+        "heading": "Configure Maintenance: PM Intervals and Work Order Types",
+        "intro": "<p>Use **Maintenance Config** to set how often each category of equipment is serviced and which work order types are used for maintenance. Equipment Management administrators set it once; **Preventive Maintenance** then uses it.</p>",
+        "definitions": [
+          {
+            "term": "PM Interval Configuration",
+            "definition": "From **Home**, open **Equipment Management → Settings → Maintenance Config**. The **PM Interval Configuration** list has **Category**, **Interval**, **Type**, **Hours Threshold** and **Check List**."
+          },
+          {
+            "term": "Work Order Types",
+            "definition": "The same **Maintenance Config** screen has **Work Order Types**, the types of work order used for maintenance work."
+          }
+        ],
+        "procedures": []
+      },
+      {
+        "heading": "Run Equipment Reports",
+        "intro": "<p>Use **Reports** to see equipment utilization, service, compliance, hauling, rental and billing figures in one place. Equipment managers and finance staff open it. Your company may see **Asset** instead of **Equipment** (**Global Data → Settings → Naming Framework**).</p>",
+        "definitions": [
+          {
+            "term": "Where to find the reports",
+            "definition": "From **Home**, open **Equipment Management → Reports**. There are six reports."
+          },
+          {
+            "term": "Equipment Utilization Report",
+            "definition": "A report on equipment utilization hours."
+          },
+          {
+            "term": "PM Service Tracker Report",
+            "definition": "A report that tracks preventive maintenance service."
+          },
+          {
+            "term": "Compliance Warranty Tracker",
+            "definition": "A report that tracks equipment compliance and warranty."
+          },
+          {
+            "term": "Hauling Cost Log",
+            "definition": "A report of hauling costs. The **External Hauling** list holds **Cost**, **Price**, **Escort Cost** and **Permit Cost** for each haul."
+          },
+          {
+            "term": "3rd Party Rental Activity & Spend Report",
+            "definition": "A report of rental activity and spend on rented-in equipment, based on the **3rd Party Rental** list."
+          },
+          {
+            "term": "Equipment Billing Worksheet",
+            "definition": "A worksheet for equipment billing. Billing rules are set in **Settings → Billing Rules**."
+          }
+        ],
+        "procedures": []
+      },
+      {
+        "heading": "3rd Party Rental and External Hauling Lists",
+        "intro": "<p>Use **3rd Party Rental** and **External Hauling** to see equipment you rent in from vendors and hauls done by outside companies. Equipment coordinators and cost controllers use these lists to track dates, rates and costs. Your company may see **Asset** instead of **Equipment** (**Global Data → Settings → Naming Framework**).</p>",
+        "definitions": [
+          {
+            "term": "3rd Party Rental",
+            "definition": "From **Home**, open **Equipment Management → Equipment → 3rd Party Rental**. The list of rented-in equipment shows **REQ ID**, **PO ID**, **Vendor**, **Delivered Date**, **Length of Rent**, **Days in Rent**, **Billing Rule**, **Hourly Rate**, **Daily Rate**, **Weekly Rate**, **Monthly Rate**, **Freight Cost**, **PO Value**, **Total Cost YTD** and **Phase Codes**."
+          },
+          {
+            "term": "External Hauling",
+            "definition": "From **Home**, open **Equipment Management → Hauling → External Hauling**. The list shows **Allocation Id**, **REQ ID**, **PO ID**, **Vendor**, **Cost**, **Price**, **Escort Cost**, **Permit Cost**, **Service Company**, **Service Type**, **Pick Up Address**, **Dimensions**, **Weight**, **Received By**, **Delivered Date** and **Stage**."
+          },
+          {
+            "term": "Where this data goes",
+            "definition": "The **3rd Party Rental Activity & Spend Report** and **Hauling Cost Log** are in **Reports**. The **Billing Rule** column follows **Settings → Billing Rules**."
+          }
+        ],
+        "procedures": []
+      },
+      {
         "heading": "Equipment Setup",
         "intro": "<p>Equipment that isn't maintained on schedule is equipment that fails at the worst possible moment — mid-pour, mid-lift, or mid-shift, when the cost of downtime is highest. Rather than relying on a Fleet Manager to remember every crane's inspection date by hand, Equipment Setup lets a <strong>Fleet/Equipment Module Manager or Equipment Management Admin</strong> build that discipline into the system once, as a maintenance package, so the right form reaches the right crew member automatically instead of depending on someone's memory.</p><p>The Equipment Setup tab (not the same as Settings → Equipment Setup, which configures categories for registration) is where administrators define recurring maintenance obligations for equipment — grouping items together into a maintenance package that bundles which equipment needs attention, what forms need to be filled out, how often, and who's responsible. Rather than manually reminding field crews to inspect or service equipment, a properly configured maintenance package automates that entire cadence, surfacing the right form to the right person at the right time.</p>\n    <p>The screen is built around a four-step wizard, launched via Create Maintenance Package, that walks you through listing the equipment covered, identifying which forms apply, setting the schedule, and assigning the crew responsible. This structure matters because the four pieces are genuinely independent decisions — the same form might apply to different equipment on different schedules, and different crews might be responsible for different packages — so Arena separates them into discrete wizard steps rather than one large form.</p>\n    <p>A particularly important design choice is the Recurrence Type setting in the Prepare Schedule step: maintenance can be triggered either on a fixed calendar cadence (Daily or Weekly) or dynamically, as part of the equipment's own check-out or check-in step (in the earlier Load Out Request flow). This second option, Check Out or Check In recurrence, makes a maintenance form a condition of the equipment leaving or returning to inventory.</p>",
         "definitions": [
@@ -19535,6 +20554,56 @@ const MODULES = [
         ]
       },
       {
+        "heading": "More Equipment Settings: Billing Rules, Disposal Methods, Thresholds and Status",
+        "intro": "<p>These **Settings** pages hold company rules for equipment billing, disposal, reminders and status. Equipment Management administrators set them once; they apply to everyone using the module. Your company may see **Asset** instead of **Equipment** (**Global Data → Settings → Naming Framework**).</p>",
+        "definitions": [
+          {
+            "term": "Billing Rules",
+            "definition": "Open **Equipment Management → Settings → Billing Rules**. It has **Billable Hours** and a list of billing rules."
+          },
+          {
+            "term": "Disposal Methods",
+            "definition": "Open **Equipment Management → Settings → Disposal Methods**. The methods are **Auction**, **Private Sale**, **Trade-in**, **Scrap** and **Internal Transfer**."
+          },
+          {
+            "term": "Notification Thresholds",
+            "definition": "Open **Equipment Management → Settings → Notification Thresholds**. It sets the days for **Registration Expiry**, **Warranty Expiry**, **Insurance Expiry**, **Telemetry Stale** and **Approaching Planned Return Date**, plus **Utilization Log Reminder** (days, time and emails)."
+          },
+          {
+            "term": "Equipment Due Assignment Days",
+            "definition": "Open **Equipment Management → Settings → Equipment Due Assignment Days**. **Due Period** is set in days, months or years. **Utilization Idle Percentage %** is the idle limit used on utilization logs."
+          },
+          {
+            "term": "Equipment/Accessory Status",
+            "definition": "Open **Equipment Management → Settings → Equipment Status** (or **Accessory Status**). Each status has a name, a colour, an enabled switch and a utility threshold. Statuses include **Yard Only**, **Unavailable** and **Dispose Initiated**."
+          },
+          {
+            "term": "Approval Workflow: Utilization Logs",
+            "definition": "The **Utilization Logs** tab in **Settings → Approval Workflow** sets the approval levels for submitted utilization logs."
+          }
+        ],
+        "procedures": []
+      },
+      {
+        "heading": "Earlier Version: Load Out Request",
+        "intro": "<p>Some environments running an earlier version of Equipment Management move equipment through a <strong>Load Out Request</strong> tab instead of the Operations board and Hauling. This short note describes it. New setups should use Request Creation, Allocation and Company Logistics above.</p>",
+        "definitions": [
+          {
+            "term": "Earlier Load Out Request flow",
+            "definition": "The **Load Out Request** tab has three sub-tabs: **LOR Internal Jobs**, **Rentals** and **Workflows**. Internal jobs have Load Out Requests (LOR-#) that go Request, Check Out, Shipment, Load, In Transit, Delivered, Received and Preview, and Return Requests (RR-#) for the way back. Rentals from or to a third party go Request, Check Out, Lease Agreement, Ship, Check In, Shop In and Preview."
+          },
+          {
+            "term": "Earlier approvals and forms",
+            "definition": "Approval chains for Load Out Request, Return Request and Rentals are set under the Workflows tab, each level being **All must approve** or **Anyone can approve**. The forms for each stage (Request, Check Out, Shipment, Ship, Load, In Transit, Delivered, Received and Lease Agreement) are configured under **Settings → Equipment Management Forms**. Equipment with a Check Out or Check In maintenance package needs its maintenance form completed first."
+          },
+          {
+            "term": "Where the Arena 2.0 flow differs",
+            "definition": "In Arena 2.0, requests are raised with **New Request** under Operations, **Self Pickup** and **Company Logistics** are chosen at the Assign stage, hauls are managed under Hauling, and the equipment statuses are Available, Allocated, In Transit, On Rent, Off Rent and In Maintenance."
+          }
+        ],
+        "procedures": []
+      },
+      {
         "heading": "Troubleshooting: Equipment Management Problems",
         "intro": "<p>Use this page when an Equipment Management step does not work as expected. Most problems trace back to master data, a setting, or an open inspection issue. Steps about master data, profiles, telematics, geofences, hauling and the Allocation Lifecycle follow the company's Arena 2.0 guides and are labelled as such.</p>",
         "definitions": [],
@@ -19666,7 +20735,10 @@ const MODULES = [
       "From <strong>Home</strong>, click the <strong>Equipment Management</strong> tile (its module breadcrumb reads <strong>Equipment Management</strong>).",
       "<strong>Overview</strong> holds <strong>Geofencing</strong> and the <strong>Fleet Map</strong>. <strong>Equipment</strong> holds the <strong>Equipment Master</strong>, <strong>Accessory Master</strong> and <strong>Inventory Locations</strong>.",
       "<strong>Operations</strong> is the <strong>Allocation Lifecycle</strong> board for requests. <strong>Hauling</strong> has <strong>Internal Hauling</strong> (Requests) and <strong>Fleet and Schedule</strong>.",
-      "Open a piece of equipment and use its <strong>Overview</strong> and <strong>Telematics</strong> tabs. <strong>Settings</strong> holds <strong>Equipment Setup</strong>, <strong>Accessory Setup</strong>, <strong>Equipment Forms</strong>, <strong>Approval Workflow</strong>, <strong>Equipment/Accessory Status</strong> and <strong>Request Priority Threshold</strong>."
+      "Open a piece of equipment and use its <strong>Overview</strong> and <strong>Telematics</strong> tabs. <strong>Settings</strong> holds <strong>Equipment Setup</strong>, <strong>Accessory Setup</strong>, <strong>Equipment Forms</strong>, <strong>Approval Workflow</strong>, <strong>Equipment/Accessory Status</strong> and <strong>Request Priority Threshold</strong>.",
+      "<strong>Equipment</strong> also holds <strong>3rd Party Rental</strong>, and <strong>Hauling</strong> also has <strong>External Hauling</strong>. <strong>Utilization</strong> holds <strong>Add Utilization Log</strong>, <strong>Utilization Logs</strong>, <strong>Utilization Summary</strong>, <strong>Issues</strong> and <strong>Auto Log Utilization</strong>.",
+      "<strong>Maintenance</strong> holds <strong>Field Inspections</strong>, <strong>Parts PO</strong>, <strong>Preventive Maintenance</strong> and <strong>Maintenance Calendar</strong>. <strong>Inspection Checklists Issues</strong> is the Equipment Issues list, and <strong>Reports</strong> holds six reports.",
+      "<strong>Settings</strong> also holds <strong>Maintenance Config</strong>, <strong>Billing Rules</strong>, <strong>Disposal Methods</strong>, <strong>Notification Thresholds</strong> and <strong>Equipment Due Assignment Days</strong>. Your company may see <strong>Asset</strong> instead of <strong>Equipment</strong> (<strong>Global Data → Settings → Naming Framework</strong>)."
     ],
     "sections": [
       "Who Does What in Equipment Management",
@@ -19678,8 +20750,21 @@ const MODULES = [
       "Company Logistics with Hauling",
       "Telematics: Device Mapping and Live Data",
       "Geofencing and Fleet Map",
+      "Log Daily Equipment Utilization (Add Utilization Log and Auto Log Utilization)",
+      "Review Utilization: Logs, Summary and Issues",
+      "Field Inspections",
+      "Equipment Issues (Inspection Checklists Issues)",
+      "Non Conformance Report",
+      "Schedule Preventive Maintenance",
+      "Manage the Parts Catalogue (Parts PO)",
+      "See Maintenance on the Maintenance Calendar",
+      "Configure Maintenance: PM Intervals and Work Order Types",
+      "Run Equipment Reports",
+      "3rd Party Rental and External Hauling Lists",
       "Equipment Setup",
       "Configure Equipment Management Forms & Global Setup",
+      "More Equipment Settings: Billing Rules, Disposal Methods, Thresholds and Status",
+      "Earlier Version: Load Out Request",
       "Troubleshooting: Equipment Management Problems"
     ]
   },
