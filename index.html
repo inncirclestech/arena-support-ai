@@ -1238,6 +1238,35 @@ Example of the style to use — if a note says "Go to Settings, click Add User, 
     return String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
   }
 
+  // Markdown bold inside fields that are inserted as HTML (steps, intros, overviews).
+  function mdInline(html) {
+    return String(html == null ? "" : html).replace(/\*\*([^*]+?)\*\*/g, "<strong>$1</strong>");
+  }
+  // Safety net: turn any **bold** left in rendered text nodes into <strong>, wherever it came from.
+  function fixStars(root) {
+    if (!root || !root.querySelectorAll) return;
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+      acceptNode: n => n.nodeValue.includes("**") && !n.parentElement.closest("input, textarea, code, script, style")
+        ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT
+    });
+    const nodes = []; while (walker.nextNode()) nodes.push(walker.currentNode);
+    nodes.forEach(n => {
+      const parts = n.nodeValue.split(/\*\*([^*]+?)\*\*/);
+      if (parts.length < 2) { n.nodeValue = n.nodeValue.replace(/\*\*/g, ""); return; }
+      const frag = document.createDocumentFragment();
+      parts.forEach((p, i) => {
+        if (!p) return;
+        if (i % 2) { const b = document.createElement("strong"); b.textContent = p; frag.appendChild(b); }
+        else frag.appendChild(document.createTextNode(p.replace(/\*\*/g, "")));
+      });
+      n.replaceWith(frag);
+    });
+  }
+  new MutationObserver(muts => muts.forEach(m => m.addedNodes.forEach(n => {
+    if (n.nodeType === 1) fixStars(n);
+    else if (n.nodeType === 3 && n.parentElement) fixStars(n.parentElement);
+  }))).observe(document.body, { childList: true, subtree: true });
+
   // ---------- Answer text -> HTML (plain markdown-lite, matches the extraction format) ----------
   function renderAnswerHtml(text) {
     let html = escapeHtml(text);
@@ -1441,8 +1470,8 @@ Example of the style to use — if a note says "Go to Settings, click Add User, 
     if (!images || !images.length) return "";
     return `<div class="doc-shots">${images.map(im => `
       <figure class="doc-shot">
-        <button type="button" class="doc-shot-btn" data-full="${escapeHtml(im.src)}" data-caption="${escapeHtml(im.caption || "")}" aria-label="Open screenshot full size${im.caption ? ": " + escapeHtml(im.caption) : ""}">
-          <img src="${escapeHtml(im.src)}" alt="${escapeHtml(im.caption || "Screenshot")}" loading="lazy">
+        <button type="button" class="doc-shot-btn" data-full="${escapeHtml(im.src)}" data-caption="${escapeHtml(String(im.caption || "").replace(/\*\*/g, ""))}" aria-label="Open screenshot full size${im.caption ? ": " + escapeHtml(im.caption) : ""}">
+          <img src="${escapeHtml(im.src)}" alt="${escapeHtml(String(im.caption || "Screenshot").replace(/\*\*/g, ""))}" loading="lazy">
         </button>
         ${im.caption ? `<figcaption>${escapeHtml(im.caption)}</figcaption>` : ""}
       </figure>`).join("")}</div>`;
@@ -1458,7 +1487,7 @@ Example of the style to use — if a note says "Go to Settings, click Add User, 
       return `
       <div class="doc-procedure" id="${ids[pi]}" tabindex="-1">
         <h4 class="doc-procedure-title">${escapeHtml(p.title)}</h4>
-        <ol class="doc-procedure-steps">${(p.steps || []).map((s, i) => `<li><span class="doc-step-text">${s}${renderShotsHtml(atStep(i))}</span></li>`).join("")}</ol>
+        <ol class="doc-procedure-steps">${(p.steps || []).map((s, i) => `<li><span class="doc-step-text">${mdInline(s)}${renderShotsHtml(atStep(i))}</span></li>`).join("")}</ol>
         ${renderShotsHtml(loose)}
         ${p.note ? `<div class="doc-callout">${renderAnswerHtml(p.note)}</div>` : ""}
       </div>
@@ -1555,7 +1584,7 @@ Example of the style to use — if a note says "Go to Settings, click Add User, 
         <div class="doc-header">
           <span class="doc-eyebrow" style="background:${tint(mod.id)};color:${fg(mod.id)}">${mod.alias || mod.name}</span>
           <h1 class="doc-title">${mod.name}</h1>
-          <p class="doc-tagline">${mod.tagline || ""}</p>
+          <p class="doc-tagline">${mdInline(mod.tagline || "")}</p>
         </div>
 
         <button type="button" class="ask-banner" data-ask-ai>
@@ -1564,7 +1593,7 @@ Example of the style to use — if a note says "Go to Settings, click Add User, 
           <span class="ask-banner-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </button>
 
-        ${mod.overview ? `<div class="doc-module-overview">${mod.overview}</div>` : ""}
+        ${mod.overview ? `<div class="doc-module-overview">${mdInline(mod.overview)}</div>` : ""}
 
         ${commonTasks.length ? `
         <div class="doc-tasks-card">
@@ -1714,6 +1743,7 @@ Example of the style to use — if a note says "Go to Settings, click Add User, 
   // Show only the first paragraph of a section intro so the Steps come into
   // view quickly; the rest sits behind a native "Read more" disclosure.
   function renderIntroHtml(intro) {
+    intro = mdInline(intro);
     const paras = String(intro).match(/<p>[\s\S]*?<\/p>/g);
     if (!paras || paras.length < 2) return `<div class="doc-intro">${intro}</div>`;
     return `<div class="doc-intro">${paras[0]}<details class="doc-intro-more"><summary>Read more</summary>${paras.slice(1).join("")}</details></div>`;
