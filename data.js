@@ -3519,6 +3519,42 @@ const QA_GLOBALDATA = [
     question: "Where does the Restraint Category list come from?",
     answer: "From **Global Data → Settings → Hindrance Category** (**Site & Technical Constraints**, **Seasonal/Weather Constraints**, **Safey constarints**, **Resource Constraints**, **Others**); the **Restraint Category** drop-down in **Field Works → Progress → Restraints → Add Restraint** showed exactly these five. Add or edit categories here.",
     tags: ["restraint category source","hindrance category","add restraint category list"]
+  },
+  {
+    action: "explain",
+    object: "project missing from viewpoint",
+    scope: "module",
+    section: "Integrations: Marketplace & Staged Tables",
+    question: "Why is a project open in Viewpoint missing in Arena?",
+    answer: "Arena builds projects from the staged tables with **Create Arena Records**. If the project does not appear, the cause is often an older record with the same project number that was deleted in Arena, which blocks the new one from being created. Support can clear that record and create the project from the staged table, so raise a ticket with the project number. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["project missing from viewpoint","project not available timesheet","project not syncing","staging table project error","project number already exists"]
+  },
+  {
+    action: "explain",
+    object: "phase codes not syncing",
+    scope: "module",
+    section: "Integrations: Marketplace & Staged Tables",
+    question: "Why have new Viewpoint phase codes not appeared in Arena?",
+    answer: "Phase codes arrive in the staged table first and become Arena records only when you run **Create Arena Records** (or the **Auto Sync Criteria** schedule fires). Open the staged table, filter for the rows, and create the records. If rows are queued but fail to create, raise a ticket. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["phase codes not syncing","viewpoint phase codes missing","staged table phase codes","sync phase codes arena","phase codes red staging"]
+  },
+  {
+    action: "explain",
+    object: "employee not syncing",
+    scope: "module",
+    section: "Integrations: Marketplace & Staged Tables",
+    question: "Why will an employee not come across from the staged table?",
+    answer: "An employee needs an **Employee ID** to be fetched from the source system into Arena, including temporary employees. Add the ID in the source system first and sync again. Once they are in Arena and set as a system user or on the project roster, they appear in timesheet and crew lists. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["employee not syncing","temp employee roster staging","employee id mandatory","employee missing arena","staged table employee error"]
+  },
+  {
+    action: "explain",
+    object: "innclock sync",
+    scope: "module",
+    section: "Integrations: Marketplace & Staged Tables",
+    question: "Why are new hires missing from Innclock?",
+    answer: "Employees reach Innclock on a scheduled sync, so someone added minutes ago may not be there yet. Wait for the next sync, or for an urgent case start a manual sync from **Integrations → Manage Data**, select the project or employee details and click **Sync**. If they still do not show after a scheduled run, raise a ticket with the employee numbers. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["members missing innclock","new employees not in innclock","innclock sync","manual sync employees","innclock employee missing"]
   }
 ];
 
@@ -3766,6 +3802,42 @@ const QA_ACCOUNTBASICS = [
     question: "What order should I set up data in Global Data?",
     answer: "After selecting a Construction Type, follow: Step 1 Global Work Areas, Step 2 Global Work Packages, Step 3 Activity Sequence Templates.",
     tags: ["global data setup order","work areas","work packages","activity sequence templates","setup steps"]
+  },
+  {
+    action: "explain",
+    object: "login error",
+    scope: "module",
+    section: "User Registration",
+    question: "Why can a user not log in even though their account and group look correct?",
+    answer: "First check that the person is a system user and sits in the right user group. If everything looks right, ask them to **log out of Arena and log back in once**; this cleared a recurring login error in support cases. If it still fails, note the exact error text and the time, then contact Support. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["cannot log in","unable to access arena","login error","user cannot access arena","log out and log back in","system user cannot sign in","why can't I log in","can't log in","cant login arena","login not working","unable to log in account set up correctly","user cannot log in to arena"]
+  },
+  {
+    action: "explain",
+    object: "registration email",
+    scope: "module",
+    section: "User Registration",
+    question: "Why did a new user not receive the registration email?",
+    answer: "Ask the user to check spam or junk and confirm the email address on the user record is spelled correctly. If their company mail gateway never receives the message, the cause is usually on the sending side, and Inncircles Support can fix delivery for that address. Raise a ticket with the address and the time you sent it. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["registration email not received","new user not receiving email","not receiving arena emails","email not delivered","invite email missing"]
+  },
+  {
+    action: "explain",
+    object: "password reset otp",
+    scope: "module",
+    section: "User Registration",
+    question: "Why is the password reset email or one-time code not working?",
+    answer: "First request a fresh reset and use only the newest code, because older ones stop working. Check spam or junk for the email. If no code ever arrives for anyone, it is a service problem that Inncircles fixes on its side, so raise a ticket right away. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["password reset not working","otp not working","one time code not arriving","reset password email","forgot password code"]
+  },
+  {
+    action: "explain",
+    object: "emails not received",
+    scope: "module",
+    section: "Notifications",
+    question: "Why am I not receiving Arena notification emails?",
+    answer: "Check three things in order. First, spam or junk and your company mail filter. Second, that you are on the project **Notifications** event group for that event, because a person only gets emails for events they have been added to. Third, that the event has the email channel turned on. If all three are right and nothing arrives, raise a ticket with the event name and your address. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["not receiving arena emails","notification emails missing","no email notification","why no emails","email notifications not coming"]
   }
 ];
 
@@ -5716,6 +5788,33 @@ const QA_PROJECTSETUP = [
     question: "Where does the Import Template list in Project Setup Documents come from?",
     answer: "From **Global Data → Document Management → Structure Template**. **Import Template** shows **Global Templates** with **FEL - 1**, **FEL - 2**, **FEL - 3** and **Detailed Engineering**; choose one and click **Import** to build that folder structure in the project. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["import template","project setup documents import template","global templates","fel templates documents","structure template import"]
+  },
+  {
+    action: "explain",
+    object: "tree version permission",
+    scope: "module",
+    section: "Works",
+    question: "Why do I not see an option to create a Tree Version?",
+    answer: "Your user group needs **Create** and **Edit** permission on **Project Setup → Tree Version** in the group's permissions. Quality, safety or read-only groups often lack it. Ask your admin to enable it, then log out and in again. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["cannot create tree version","tree creation option missing","project setup tree version permission","no create plant button"]
+  },
+  {
+    action: "explain",
+    object: "people tab permission",
+    scope: "module",
+    section: "People",
+    question: "Why is the People tab missing in Project Setup?",
+    answer: "The **People** tab, with **Roster**, **Project Crews** and **Project Indirect Staff**, appears when the user's group has the **Roster** permission under Project Setup. Ask your admin to enable it, so only the people you trust can set up crews on a project. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["people tab missing","roster permission","who can set up crews","project crews permission","cannot add crew to project"]
+  },
+  {
+    action: "explain",
+    object: "set phasecodes permission",
+    scope: "module",
+    section: "Phase Codes",
+    question: "Why can some groups not set phase codes on a project?",
+    answer: "Setting phase codes is its own permission, **Set Phasecodes**, and it is off by default for some groups. Check the group's permissions and enable it for the groups that should map phase codes. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["set phasecodes permission","cannot set phase codes","phase code permission group","phase codes locked"]
   }
 ];
 
@@ -7069,6 +7168,60 @@ const QA_FIELDWORKS = [
     question: "Where does the check list on Quality Level 1 or 2 come from?",
     answer: "From **Global Data → Construction Types → Global Work Packages → Quality Forms** for your construction type (tabs **Quality Level 1** and **Quality Level 2**). The work package must be mapped to a folder in **Project Setup → Quality** to appear as ready.",
     tags: ["quality check list source","quality form template source","where inspection items come from"]
+  },
+  {
+    action: "explain",
+    object: "productivity logs visibility",
+    scope: "module",
+    section: "Productivity Logs Screen by Screen",
+    question: "Why can't I see productivity logs that other people created?",
+    answer: "Visibility depends on the user group. A group such as **Project Coordinator** shows only the logs the user created personally, so a new user sees an empty list until they create one. To see other people's logs, the user must be a reviewer in the approval workflow or belong to a group with admin permission for productivity logs. Also check the user is assigned to the tree. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["cannot see productivity logs","productivity logs empty","only my own logs","see other users logs","productivity log visibility","why can't I see productivity logs created by others","logs created by other users","can't see productivity logs"]
+  },
+  {
+    action: "explain",
+    object: "workflow deleted logs rejected",
+    scope: "module",
+    section: "Productivity Logs Screen by Screen",
+    question: "What happens to submitted and approved productivity logs if I delete the approval workflow?",
+    answer: "Deleting the levels of the approval workflow sends the affected submitted and approved logs to **Rejected**, and people may then resubmit them. Do not delete workflow levels on a live project. If it has already happened, Inncircles can move the logs back to their earlier status, so raise a ticket quickly with the project and the date of the change. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["delete approval workflow productivity","logs went to rejected","workflow removed logs rejected","restore approved logs","productivity logs rejected after workflow change"]
+  },
+  {
+    action: "explain",
+    object: "crew foreman productivity",
+    scope: "module",
+    section: "Productivity Logs Screen by Screen",
+    question: "Does a crew include its foreman when I log time for a crew?",
+    answer: "Yes. When you choose a crew while logging time in Productivity Logs, the foreman assigned to that crew is added along with the other crew members, so you do not need a separate entry for them. If a foreman is still missing, check that they are set on the crew in **Project Setup → People**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["foreman missing from crew","crew time entry foreman","add crews foreman","foreman not in crew"]
+  },
+  {
+    action: "explain",
+    object: "project form create button",
+    scope: "module",
+    section: "Project Forms",
+    question: "Why is the Create or Delete button missing on a project form?",
+    answer: "Turn on the action for the user's group. The **Create** button needs **Create** ticked under **Custom Forms** in the group's permissions; **Delete** is set per form under **Project Setup → Forms → Project Forms**, on the form, for the user or group. Being named on the form with view access is not enough. Save, then log out and back in. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["create button missing project forms","delete option missing form","cannot create daily construction report","form permission create delete","project forms no create button"]
+  },
+  {
+    action: "explain",
+    object: "form rejection priority",
+    scope: "module",
+    section: "Project Forms",
+    question: "Why can an approver not reject a project form such as a daily report?",
+    answer: "Rejecting a project form asks for a priority level, and those levels are set per project under **Project Settings → Workflow Issues → Custom Forms**. If none are added there, the reject step stalls. Add the priorities, then the approver can reject by choosing one. The rejected form goes back to its creator, who can edit it and resubmit. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["cannot reject form","reject daily construction report","priority level reject form","rejection workflow stuck","form reject popup"]
+  },
+  {
+    action: "explain",
+    object: "progress not on dashboard",
+    scope: "module",
+    section: "Progress",
+    question: "Why is approved work log or RFI progress not showing on the progress dashboard?",
+    answer: "Progress counts only against the work item the log or RFI was raised on. If it was raised against an item that has been descoped or replaced, it will not appear against the live item. Check the work package or BOQ item on the log; if it is wrong, re-raise the RFI or work log against the correct item. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["progress not reflecting dashboard","approved rfi not in progress","work log progress missing","dashboard progress wrong","descoped item rfi"]
   }
 ];
 
@@ -7963,6 +8116,15 @@ const QA_PROJECTNOTIFICATIONS = [
     question: "How do I turn my own notifications on or off?",
     answer: "Open the user menu at the top right and click <strong>Notifications</strong> to get <strong>User Specific - Notifications</strong>: an <strong>Enable Notifications</strong> switch, then <strong>Mail</strong>, <strong>Web</strong> and <strong>Mobile</strong> switches by group and event. This is separate from the project Notification Schema. For the System Admin tested, only Cost Change order and Document Management were listed; what decides which groups appear was not confirmed.",
     tags: ["turn off my notifications","my notification settings","user specific notifications","enable notifications","personal notification settings","stop receiving emails","mute notifications"]
+  },
+  {
+    action: "explain",
+    object: "productivity notifications off",
+    scope: "module",
+    section: "Events",
+    question: "How do I turn on notifications for productivity logs?",
+    answer: "Productivity log notifications are off by default. Open the project, then **Notifications**, click **Add Event group**, name it and save. On the group card click **Notifications**, expand **Progress**, switch on the productivity log events and save. Then click **Users** on the same card and add the people who should receive them. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["productivity log notifications","no productivity emails","turn on productivity notifications","progress notifications off","event group productivity"]
   }
 ];
 
@@ -8146,6 +8308,24 @@ const QA_USERSANDPERMISSIONS = [
     question: "Why does the System Admin have no groups but can see everything?",
     answer: "Company-level administrators such as System Admin are not limited by project groups: they can open every screen even when User Permission shows no groups for them. Treat groups as the way to give everyone else access. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["system admin no groups","admin without group","super admin permissions","no groups were assigned","why no groups assigned"]
+  },
+  {
+    action: "explain",
+    object: "missing screen permission",
+    scope: "module",
+    section: "Groups Permission",
+    question: "Why can't I see a screen, tab or Create button that my colleague can?",
+    answer: "What a person sees comes from the permissions of their **user group**, so the quickest check is the group's **Permissions** tree. A missing **Create** or **Delete** button means that action is switched off for that screen or form; a missing tab (for example **People** under Project Setup) means the matching permission row is off; a missing tree-creation option means **Create** and **Edit** are off for **Tree Version**. Ask your admin to tick the right rows for your group, then log out and back in. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["cannot see tab","create button missing","delete button missing","permission missing","why cant i see module","user group permissions","no create button"]
+  },
+  {
+    action: "explain",
+    object: "project access",
+    scope: "module",
+    section: "User Permission",
+    question: "Why am I denied access to a project even though I have Project Admin or Project Manager?",
+    answer: "Group roles only apply to projects you have been assigned to. A project you are not assigned to stays closed even with an admin group, so an admin must assign you to that project. If you are assigned and still locked out, or it keeps happening on new projects, raise a ticket naming the project number. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["project access denied","not assigned to project","cannot open project setup","access denied despite role","need access to project"]
   }
 ];
 
@@ -10539,6 +10719,33 @@ const QA_PROPOSALMANAGEMENT = [
     question: "What does the Proposal Management Calendar show?",
     answer: "Create Event, Filters, a month grid with the selected day's events and My Calendars. Events can be linked to Opportunity, Proposal or Bid and sync with Outlook once consent is given.",
     tags: ["proposal calendar tab","calendar events"]
+  },
+  {
+    action: "explain",
+    object: "no proposals showing",
+    scope: "module",
+    section: "Proposals",
+    question: "Why are no proposals showing, or the page will not load properly?",
+    answer: "Log out of Arena and log in again, then open Arena from a fresh bookmark of the site address, since an old saved link can leave the page empty. Estimators only see the proposals they are assigned to, so check your assignment too. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["no proposals showing","proposal page not loading","proposals empty","arena will not load","proposals missing after login"]
+  },
+  {
+    action: "explain",
+    object: "estimator visibility",
+    scope: "module",
+    section: "Proposals",
+    question: "Why can an estimator not find a proposal they are not assigned to?",
+    answer: "By design, estimators can search and see only proposals assigned to them. A manager or admin who needs wider visibility needs that in their group permissions. To give an estimator a proposal, assign it to them on the proposal. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["estimator cannot see proposal","proposal visibility assigned","search proposals not assigned","proposal permission estimator"]
+  },
+  {
+    action: "explain",
+    object: "update excel assignment",
+    scope: "module",
+    section: "Proposals",
+    question: "Why was I assigned to many proposals after an Update Excel?",
+    answer: "Whoever runs an **Update Excel** is automatically assigned to every proposal the file changed. This is expected. Remove yourself on a proposal if you should not stay on it. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["update excel assigned","assigned automatically proposals","excel update assignment","assign to proposals after upload"]
   }
 ];
 
@@ -12123,6 +12330,15 @@ const QA_TIMEMANAGEMENT = [
     question: "What is Payroll Locking?",
     answer: "A cut-off in Settings > Timesheet Settings > Payroll Locking that stops edits to a pay period once payroll has closed. Choose Daily, Weekly or Monthly (Start of The Month, End of The Month or Custom), a Time and a Buffer Time (In Days). It applies to time management and productivity logs.",
     tags: ["what is payroll locking","payroll locking","payroll lock timesheet"]
+  },
+  {
+    action: "explain",
+    object: "mobile employee list",
+    scope: "module",
+    section: "Rosters & Crews",
+    question: "Why is an employee missing from the mobile app list when I log time?",
+    answer: "The person must be in Arena as an active employee on the project roster, and they should show in the same list on the website. If they appear on the website but not on the mobile app, it is a sync problem on Inncircles' side, so raise a ticket with the employee number. Pull to refresh the app first. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["employee missing mobile app","mobile timesheet employee dropdown","crew member not showing mobile","my crew timesheet missing member","cannot select employee mobile"]
   }
 ];
 
