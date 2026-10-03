@@ -1281,8 +1281,8 @@ const QA_OPPORTUNITY = [
 ];
 
 const QA_EQUIPMENT = [
-  {"action":"explain","object":"data lineage","scope":"module","section":"Master Data: Cost Codes, Categories and Equipment Setup","question":"Where does the Equipment list come from when I add an equipment record in Asset Management?","answer":"The **Equipment** dropdown shows only equipment configured in **Settings → Equipment Setup** (accessories: **Accessory Setup**), which in turn uses the equipment codes in **Global Data → Cost → Equipment**. Category and sub-category fill in automatically. If an item is missing, add it to the setup first.","tags":["where does equipment list come from","equipment dropdown source","equipment setup global data","add equipment record dropdown source","asset master equipment dropdown"]},
-  {"action":"explain","object":"data lineage","scope":"module","section":"Equipment Master and Accessory Master","question":"Why is the Location dropdown empty or where does it come from when I add equipment in Asset Management?","answer":"Pick **Inventory** or **Project** first. Inventory locations come from **Inventory Locations** (the Business Unit must be mapped to that inventory location in Inventory Management). Project locations come from your projects. If no location appears, check the toggle and that mapping. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.","tags":["location dropdown source","no location in dropdown","inventory or project location","equipment location dropdown empty","add equipment location not showing"]},
+  {"action":"explain","object":"data lineage","scope":"module","section":"Master Data: Cost Codes, Categories and Equipment Setup","question":"Where does the Equipment list come from when I add an equipment record in Equipment Management?","answer":"The **Equipment** dropdown shows only equipment configured in **Settings → Equipment Setup** (accessories: **Accessory Setup**), which in turn uses the equipment codes in **Global Data → Cost → Equipment**. Category and sub-category fill in automatically. If an item is missing, add it to the setup first.","tags":["where does equipment list come from","equipment dropdown source","equipment setup global data","add equipment record dropdown source","asset master equipment dropdown"]},
+  {"action":"explain","object":"data lineage","scope":"module","section":"Equipment Master and Accessory Master","question":"Why is the Location dropdown empty or where does it come from when I add equipment in Equipment Management?","answer":"Pick **Inventory** or **Project** first. Inventory locations come from **Inventory Locations** (the Business Unit must be mapped to that inventory location in Inventory Management). Project locations come from your projects. If no location appears, check the toggle and that mapping. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.","tags":["location dropdown source","no location in dropdown","inventory or project location","equipment location dropdown empty","add equipment location not showing"]},
   {"action":"explain","object":"data lineage","scope":"module","section":"Request Creation","question":"Why do I not see a project in the Work Location dropdown on an equipment request?","answer":"Work locations appear only for projects where you are added under **Project Setup → People**, and they follow the business unit you select. Ask a project admin to add you to the project.","tags":["work location missing","project not in work location","request work location"]},
   {"action":"explain","object":"data lineage","scope":"module","section":"Equipment Master and Accessory Master","question":"Where do the Fuel Type and rates on an equipment record come from?","answer":"**Fuel Type** comes from **Settings → Equipment Setup → Fuel Type**. The hourly, daily and monthly rates default from the category's **Rate Card Template** in Global Data and can be overridden before you confirm.","tags":["fuel type source","rates source","rate card default"]},
   {
@@ -1613,16 +1613,16 @@ const QA_EQUIPMENT = [
     action: "create",
     object: "maintenance form template",
     scope: "module",
-    section: "Configure Asset Management Forms & Global Setup",
+    section: "Configure Equipment Management Forms & Global Setup",
     question: "How do I build or edit maintenance/inspection form templates, and how do I create a new one?",
-    answer: "1. Go to **Asset Management → Settings → Assets Management Forms → Maintenance Forms** (this lives in the module's own Settings, not Global Data), click **Create Form**.\n2. Step 1, **Build Form**: click **Add section**, then add fields from the field-type library (Attachment, Check box, Date, Label, Multi select, Paragraph, Roster, Scribble, Single select, Table, Text box, Time, Signature).\n3. Step 2, **Setup Trigger Points**: tick which fields should let end-users raise an issue if that checkpoint fails.\n4. Step 3, **Preview Form**: check the form as end-users will see it, including company branding.\n5. Click **Save Changes**.",
+    answer: "1. Go to **Equipment Management → Settings → Assets Management Forms → Maintenance Forms** (this lives in the module's own Settings, not Global Data), click **Create Form**.\n2. Step 1, **Build Form**: click **Add section**, then add fields from the field-type library (Attachment, Check box, Date, Label, Multi select, Paragraph, Roster, Scribble, Single select, Table, Text box, Time, Signature).\n3. Step 2, **Setup Trigger Points**: tick which fields should let end-users raise an issue if that checkpoint fails.\n4. Step 3, **Preview Form**: check the form as end-users will see it, including company branding.\n5. Click **Save Changes**.",
     tags: ["maintenance builder","create form template","maintenance form builder"]
   },
   {
     action: "define",
     object: "form field types",
     scope: "module",
-    section: "Configure Asset Management Forms & Global Setup",
+    section: "Configure Equipment Management Forms & Global Setup",
     question: "What field types are available in the maintenance form builder?",
     answer: "**Attachment, Check box, Date, Label, Multi select, Paragraph, Roster, Scribble** (signature/print name), **Single select, Table** (configurable rows/columns), **Text box** (default), **Time, Signature**.",
     tags: ["form field types","maintenance builder field types"]
@@ -1631,7 +1631,7 @@ const QA_EQUIPMENT = [
     action: "define",
     object: "adobe sign integration",
     scope: "module",
-    section: "Configure Asset Management Forms & Global Setup",
+    section: "Configure Equipment Management Forms & Global Setup",
     question: "What is the Adobe Acrobat Sign integration used for?",
     answer: "It lets a 3rd-party signer affix a legal e-signature to a Rentals (3rd-Party) Lease Agreement as part of approving it, instead of just clicking Approve/Reject. It's configured once, company-wide, at Global Data → Global Settings → Adobe Sign Settings (Client Id, Client Secret, Consent).",
     tags: ["adobe sign purpose","e-signature purpose"]
@@ -1640,7 +1640,7 @@ const QA_EQUIPMENT = [
     action: "define",
     object: "adobe sign lor usage",
     scope: "module",
-    section: "Configure Asset Management Forms & Global Setup",
+    section: "Configure Equipment Management Forms & Global Setup",
     question: "Once Adobe Sign is set up, how does it get used in the LOR flow?",
     answer: "On earlier-version environments that use the Load Out Request tab, the Rentals flow's Lease Agreement stage is sent for signature through Adobe Sign. In the Rentals (3rd Party) flow, once equipment is checked out, the Lease Agreement emailed to the 3rd party can be digitally signed via the Adobe Sign integration as part of their approval.",
     tags: ["adobe sign lor usage","lease agreement e-sign"]
@@ -1649,9 +1649,9 @@ const QA_EQUIPMENT = [
     action: "define",
     object: "equipment management vs asset management",
     scope: "module",
-    section: "Configure Asset Management Forms & Global Setup",
-    question: "Is \"Equipment Management\" a different module from \"Asset Management\"?",
-    answer: "No — they're the same module. \"Asset Management\" is the name on the Home hub tile, \"Equipment Master\" appears in the module's own breadcrumb, and \"Equipment Management\" is the name used in the underlying documentation. The UI itself mostly uses \"Asset\" in labels (Asset Master, Asset Setup, Asset Issues, + Asset).",
+    section: "Configure Equipment Management Forms & Global Setup",
+    question: "Is \"Equipment Management\" a different module from \"Equipment Management\"?",
+    answer: "No — they're the same module. This guide calls it **Equipment Management**. In Arena the Home hub tile may read \"Asset Management\", and the module's own breadcrumb says \"Equipment Master\". The UI itself mostly uses \"Asset\" in labels (Asset Master, Asset Setup, Asset Issues, + Asset).",
     tags: ["equipment management vs asset management","module naming"]
   },
   {
@@ -1919,8 +1919,8 @@ const QA_EQUIPMENT = [
     action: "define",
     object: "asset management roles",
     scope: "module",
-    section: "Who Does What in Asset Management",
-    question: "Who does what in Asset Management?",
+    section: "Who Does What in Equipment Management",
+    question: "Who does what in Equipment Management?",
     answer: "The **Global Data Administrator** sets up cost codes, categories, rate cards and the telematics provider. The **Equipment Management Administrator** sets up Equipment Setup, Accessory Setup, checklists, approval workflows and thresholds. The **Equipment Master User** keeps records current and the **Asset Accountant** keeps purchase, warranty and depreciation. For a request, the **Requester** raises it, the **Approver** approves, the **Equipment Coordinator** assigns and processes off-rent, inspectors complete checklists, the **Dispatch Assignee** dispatches, the **Site Custodian** confirms On-Rent and asks for off-rent, the **Off-Rent Approver** decides, and the **Pickup Assignee** records the return date. Hauling adds the **Fleet Administrator**, **Hauling Coordinator** and **Hauling Approver**.",
     tags: ["asset management roles","who does what asset management","equipment management roles","roles and responsibilities equipment","equipment roles"]
   },
@@ -1928,8 +1928,8 @@ const QA_EQUIPMENT = [
     action: "configure",
     object: "asset management setup order",
     scope: "module",
-    section: "Who Does What in Asset Management",
-    question: "In what order should I set up Asset Management for allocation requests?",
+    section: "Who Does What in Equipment Management",
+    question: "In what order should I set up Equipment Management for allocation requests?",
     answer: "Create cost codes, categories and rate card templates in Global Data. Then in **Settings** set up **Equipment Setup** and **Accessory Setup** with fuel types, build and link an **Inspection Checklist**, create and default the **Approval Workflow** for Equipment Request, Hauling Request and Off-Rent / Extension Request, set the **Utility Threshold** and **Request Priority Threshold**, add vehicles and drivers under **Hauling → Fleet and Schedule**, connect the telematics provider, create geofences and register the assets.",
     tags: ["setup order equipment","set up allocation lifecycle","first time setup asset management","prerequisite settings allocation","system administrator equipment setup"]
   },
@@ -2279,7 +2279,7 @@ const QA_EQUIPMENT = [
     action: "troubleshoot",
     object: "allocation request",
     scope: "module",
-    section: "Troubleshooting: Asset Management Problems",
+    section: "Troubleshooting: Equipment Management Problems",
     question: "Why does an allocation request not move past Ready for Dispatch, Off-Rent or Closed?",
     answer: "For Ready for Dispatch, enter both the **Dispatch Date** and the **On-Rent Date**. Check **Inspection Checklist Issues** for an open issue against the asset and rectify it; this also blocks Closed and a haul pickup. A card held at Off-Rent with a **Haul Initiated** tag needs its return haul taken through to Completed in Hauling.",
     tags: ["request stuck","not moving ready for dispatch","stuck off rent","will not close","open inspection issue"]
@@ -2288,7 +2288,7 @@ const QA_EQUIPMENT = [
     action: "troubleshoot",
     object: "available asset",
     scope: "module",
-    section: "Troubleshooting: Asset Management Problems",
+    section: "Troubleshooting: Equipment Management Problems",
     question: "Why does no asset appear under Available Asset, or why are the rates blank?",
     answer: "Only assets with **Available** status are offered; Allocated, On Rent, In Transit and Off Rent assets are not. Check that a matching unit exists in the master. For blank rates, check that the **Rate Card Template** covers the asset's category and select it again.",
     tags: ["no available asset","asset not listed assign","rates blank rate card","available asset dropdown empty"]
@@ -2297,7 +2297,7 @@ const QA_EQUIPMENT = [
     action: "troubleshoot",
     object: "inspection stage",
     scope: "module",
-    section: "Troubleshooting: Asset Management Problems",
+    section: "Troubleshooting: Equipment Management Problems",
     question: "Why was the pre-dispatch inspection skipped, or why is the inspection form empty?",
     answer: "The stage appears only if **Pre-Dispatch Inspection** was switched on when confirming assignment; move the request back and confirm again with it on. An empty form means no **Inspection Checklist** is linked to the asset under **Settings → Equipment Setup / Accessory Setup**.",
     tags: ["inspection skipped","inspection form empty","pre dispatch inspection missing","checklist not linked"]
@@ -2306,7 +2306,7 @@ const QA_EQUIPMENT = [
     action: "troubleshoot",
     object: "off rent submit request",
     scope: "module",
-    section: "Troubleshooting: Asset Management Problems",
+    section: "Troubleshooting: Equipment Management Problems",
     question: "Why can I not submit an off-rent request?",
     answer: "Check that the request is in the **On-Rent** stage and that an **Off-Rent / Extension Request** approval workflow is marked **Set as Default** under **Settings → Approval Workflow**.",
     tags: ["cannot submit off rent","off rent request blocked","off rent workflow default","request extension not working"]
@@ -2315,7 +2315,7 @@ const QA_EQUIPMENT = [
     action: "troubleshoot",
     object: "vehicle driver",
     scope: "module",
-    section: "Troubleshooting: Asset Management Problems",
+    section: "Troubleshooting: Equipment Management Problems",
     question: "Why does no vehicle or driver appear when I assign or haul an asset?",
     answer: "Add them under **Hauling → Fleet and Schedule**, check their status is **Available**, and check that the driver is mapped to a vehicle. Only vehicles and drivers set up there can be chosen.",
     tags: ["no vehicle driver","driver not listed","vehicle dropdown empty","fleet and schedule missing"]
@@ -2324,7 +2324,7 @@ const QA_EQUIPMENT = [
     action: "troubleshoot",
     object: "asset status after haul",
     scope: "module",
-    section: "Troubleshooting: Asset Management Problems",
+    section: "Troubleshooting: Equipment Management Problems",
     question: "Why has the asset status not changed after delivery or return processing?",
     answer: "After a haul, the status follows the **On-Rent Date** (outbound) or the **Pickup Date** (return), so update that date in the allocation request. On Inventory Self Pickup the status stays On Rent until the post-rent inspection is submitted. If no destination location appears, add the Inventory Location first.",
     tags: ["status not changed after delivery","status still on rent","no destination location","return processing status"]
@@ -6626,7 +6626,7 @@ const QA_FIELDWORKS = [
     scope: "module",
     section: "Project Forms",
     question: "Where does the Request Form asset list come from?",
-    answer: "The Internal LORs **Create** button opens a **Request Form** with an **Available Asset / Accessory** list. It is the **Equipment Master** and **Accessory Master** of Asset Management: \"Eqp\" rows are equipment and \"Acc\" rows are accessories, each with Type and ID (for example EqpExcavator ID 1). Add or edit items in the Equipment module and they show here. The form type itself reaches the plant through **Project Setup → Forms**.",
+    answer: "The Internal LORs **Create** button opens a **Request Form** with an **Available Asset / Accessory** list. It is the **Equipment Master** and **Accessory Master** of Equipment Management: \"Eqp\" rows are equipment and \"Acc\" rows are accessories, each with Type and ID (for example EqpExcavator ID 1). Add or edit items in the Equipment module and they show here. The form type itself reaches the plant through **Project Setup → Forms**.",
     tags: ["request form assets","internal lor request","available asset accessory","equipment list project forms","load out request field works","project forms asset list"]
   },
   {
@@ -9589,7 +9589,7 @@ const QA_WORKORDER = [
     scope: "module",
     section: "Procurement, Parts, Expense and Schedule",
     question: "How do I add parts to a work order?",
-    answer: "Open the **Parts** tab and click **Import**, choose the parts and quantities and click **Submit**. Unit cost comes from the maintenance parts purchase orders in Asset Management. The parts are added to the maintenance history of the equipment being serviced. Use the delete icon in the Actions column to remove one.",
+    answer: "Open the **Parts** tab and click **Import**, choose the parts and quantities and click **Submit**. Unit cost comes from the maintenance parts purchase orders in Equipment Management. The parts are added to the maintenance history of the equipment being serviced. Use the delete icon in the Actions column to remove one.",
     tags: ["parts required","import parts","work order parts","maintenance history parts"]
   },
   {
@@ -9751,7 +9751,7 @@ const QA_WORKORDER = [
     scope: "module",
     section: "Who Does What",
     question: "As an administrator, what do I set up before people raise work orders?",
-    answer: "Under **Home → Work Order → Settings**: configure the work order type (**Tab Visibility**, **Profile**, **Item Form**, **Expense Form**, **ID Settings** and, for Equipment, **Operational Status**); add **Maintenance Types**, **Status** and **Priority**; create the **Approval Workflow** and **Invoices** approval and mark the workflow **Set as Default**; set the **Reopen Window (days)** under **Configuration**; and add user groups under **Users and Permissions**. Also check that the equipment exists in Asset Management with a Business Unit and Location.",
+    answer: "Under **Home → Work Order → Settings**: configure the work order type (**Tab Visibility**, **Profile**, **Item Form**, **Expense Form**, **ID Settings** and, for Equipment, **Operational Status**); add **Maintenance Types**, **Status** and **Priority**; create the **Approval Workflow** and **Invoices** approval and mark the workflow **Set as Default**; set the **Reopen Window (days)** under **Configuration**; and add user groups under **Users and Permissions**. Also check that the equipment exists in Equipment Management with a Business Unit and Location.",
     tags: ["administrator setup","work order administrator","first time setup","before first work order","as an administrator","set up work orders","who configures work orders"]
   },
   {
@@ -10075,7 +10075,7 @@ const QA_WORKORDER = [
     scope: "module",
     section: "Who Does What",
     question: "What must be in place before the first work order is raised?",
-    answer: "Set up the work order types, maintenance types, statuses and priorities, mark an approval workflow **Set as Default**, configure invoice approvals, make sure the equipment exists in Asset Management with a Business Unit and Location, create the Projects and Phase Codes for cost, stock the items in Inventory and add users under **Users and Permissions**.",
+    answer: "Set up the work order types, maintenance types, statuses and priorities, mark an approval workflow **Set as Default**, configure invoice approvals, make sure the equipment exists in Equipment Management with a Business Unit and Location, create the Projects and Phase Codes for cost, stock the items in Inventory and add users under **Users and Permissions**.",
     tags: ["before first work order","prerequisites","checklist","setup order work order"]
   }
 ];
@@ -11650,7 +11650,7 @@ const QA_PROCUREMENT = [
     scope: "project",
     section: "Pickup Requests",
     question: "What are the possible statuses of a Pickup Request?",
-    answer: "Created, Vendor Pickup Request Created, Picked up from Site, and Closed as it's actioned, or Rejected if turned down. This mirrors the Load Out Request flow in Asset Management, but for procurement-sourced rented equipment.",
+    answer: "Created, Vendor Pickup Request Created, Picked up from Site, and Closed as it's actioned, or Rejected if turned down. This mirrors the Load Out Request flow in Equipment Management, but for procurement-sourced rented equipment.",
     tags: ["pickup request status list","pickup request lifecycle"]
   },
   {
@@ -12790,7 +12790,7 @@ const QA_INVENTORYMANAGEMENT = [
     scope: "module",
     section: "Who Does What",
     question: "Where are Load Out Requests for equipment?",
-    answer: "Load Out Requests are not part of Inventory Management. Request and move equipment under **Asset Management → Load Out Request**. Inventory Management keeps material stock, External Orders and External Tickets.",
+    answer: "Load Out Requests are not part of Inventory Management. Request and move equipment under **Equipment Management → Load Out Request**. Inventory Management keeps material stock, External Orders and External Tickets.",
     tags: ["load out request","lor","equipment request","where is lor"]
   },
   {
@@ -16562,8 +16562,8 @@ const MODULES = [
     "qaItems": QA_EQUIPMENT,
     "narrative": [
       {
-        "heading": "Who Does What in Asset Management",
-        "intro": "<p>Asset Management gives the company one record of every piece of equipment and accessory, where it is, and what condition it is in. This section shows who sets it up and who does what: administrators configure master data and settings, coordinators maintain records and run allocations, and inspectors, dispatchers, approvers and site staff move each request along.</p><p>Set up in this order: cost codes, categories and rate cards in Global Data; Equipment Setup and Accessory Setup in Settings; equipment records; then the approval workflows, inspection checklists and thresholds that drive the allocation lifecycle.</p>",
+        "heading": "Who Does What in Equipment Management",
+        "intro": "<p>Equipment Management gives the company one record of every piece of equipment and accessory, where it is, and what condition it is in. This section shows who sets it up and who does what: administrators configure master data and settings, coordinators maintain records and run allocations, and inspectors, dispatchers, approvers and site staff move each request along.</p><p>Set up in this order: cost codes, categories and rate cards in Global Data; Equipment Setup and Accessory Setup in Settings; equipment records; then the approval workflows, inspection checklists and thresholds that drive the allocation lifecycle.</p>",
         "definitions": [
           {
             "term": "Flow at a glance",
@@ -16600,7 +16600,7 @@ const MODULES = [
             ]
           },
           {
-            "title": "Prepare Asset Management for allocation requests (System Administrator)",
+            "title": "Prepare Equipment Management for allocation requests (System Administrator)",
             "steps": [
               "In Global Data → Cost, create the equipment cost codes, categories and rate card templates.",
               "In the module <strong>Settings</strong>, open <strong>Equipment Setup</strong> and <strong>Accessory Setup</strong> and add each category with its cost code, rate card, checklist, depreciation method and useful life.",
@@ -20394,12 +20394,12 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Configure Asset Management Forms & Global Setup",
+        "heading": "Configure Equipment Management Forms & Global Setup",
         "intro": "<p>This section covers the form builders in the module <strong>Settings</strong> (breadcrumb Equipment Forms): the <strong>Inspection Checklist</strong>, the maintenance and utilization forms, and, on earlier-version environments, the Load Out Request stage forms. It also covers <strong>Adobe Acrobat Sign</strong>, set up once in Global Data to sign Rentals lease agreements.</p><p>An Equipment Management Admin or a Maintenance / Fleet Module Manager builds these once, and every inspection and maintenance form downstream depends on them.</p>",
         "definitions": [
           {
             "term": "Maintenance Builder (Equipment Maintenance Forms)",
-            "definition": "The module's own screen (not Global Data) for building and editing maintenance/inspection form templates — reached via Asset Management → Settings → Assets Management Forms → Maintenance Forms. A 3-step wizard: Build Form, Setup Trigger Points, Preview Form. Forms are structured with Add Section and populated with fields from a library of field types."
+            "definition": "The module's own screen (not Global Data) for building and editing maintenance/inspection form templates — reached via Equipment Management → Settings → Assets Management Forms → Maintenance Forms. A 3-step wizard: Build Form, Setup Trigger Points, Preview Form. Forms are structured with Add Section and populated with fields from a library of field types."
           },
           {
             "term": "Form field types",
@@ -20422,8 +20422,8 @@ const MODULES = [
             "definition": "An integration letting a 3rd-party signer affix a legally binding e-signature to a Rentals (3rd-Party) Lease Agreement, as part of approving it, rather than simply clicking Approve/Reject in-app. Configured once, company-wide, at Global Data → Global Settings → Adobe Sign Settings (Client Id, Client Secret, Consent). Once configured, the Lease Agreement emailed to the 3rd party in the Rentals flow can be digitally signed through this integration as part of their approval."
           },
           {
-            "term": "Equipment Management vs. Asset Management vs. Equipment Master",
-            "definition": "All three names refer to the same module. \"Asset Management\" is the name shown on the Home hub tile; \"Equipment Master\" is the label used in the module's own breadcrumb; \"Equipment Management\" is the name used in the underlying documentation. Day-to-day, the UI itself mostly favors \"Asset\" in its labels — Asset Master, Asset Setup, Asset Issues, + Asset."
+            "term": "Equipment Management vs. Equipment Management vs. Equipment Master",
+            "definition": "All three names refer to the same module. This guide calls it **Equipment Management**; in Arena the Home hub tile may read \"Asset Management\" and the module's own breadcrumb says \"Equipment Master\". Day-to-day, the UI itself mostly favors \"Asset\" in its labels — Asset Master, Asset Setup, Asset Issues, + Asset."
           },
           {
             "term": "Assets Management Forms",
@@ -20442,7 +20442,7 @@ const MODULES = [
           {
             "title": "Building or editing a maintenance/inspection form template",
             "steps": [
-              "Go to <strong>Asset Management → Settings → Assets Management Forms → Maintenance Forms</strong> and click <strong>Create Form</strong>.",
+              "Go to <strong>Equipment Management → Settings → Assets Management Forms → Maintenance Forms</strong> and click <strong>Create Form</strong>.",
               "On step 1, <strong>Build Form</strong>: click <strong>Add section</strong> to structure the form into logical groupings, and add fields from the field-type library (Attachment, Check box, Date, Label, Multi select, Paragraph, Roster, Scribble, Single select, Table, Text box, Time, or Signature).",
               "On step 2, <strong>Setup Trigger Points</strong>: tick which fields should let end-users raise an issue if that checkpoint fails.",
               "On step 3, <strong>Preview Form</strong>: check the form exactly as end-users will see it, including company branding.",
@@ -20477,7 +20477,7 @@ const MODULES = [
           {
             "title": "Configure the equipment lifecycle forms before go-live",
             "steps": [
-              "Go to <strong>Asset Management → Settings → Assets Management Forms</strong>.",
+              "Go to <strong>Equipment Management → Settings → Assets Management Forms</strong>.",
               "Open each lifecycle card in turn — <strong>Request, Check Out, Shipment, Ship, Load, In Transit, Delivered, Received, Lease Agreement, Maintenance Forms, Equipment Utilization Forms & Logs</strong> — and configure the fields/steps your organization needs at that stage.",
               "Confirm the Lease Agreement form is set up if your organization sends equipment to 3rd parties, since that stage only applies to Rentals (3rd Party) Load Out Requests on earlier-version environments."
             ],
@@ -20504,7 +20504,7 @@ const MODULES = [
       },
       {
         "heading": "Earlier Version: Load Out Request",
-        "intro": "<p>Some environments running an earlier version of Asset Management move equipment through a <strong>Load Out Request</strong> tab instead of the Operations board and Hauling. This short note describes it. New setups should use Request Creation, Allocation and Company Logistics above.</p>",
+        "intro": "<p>Some environments running an earlier version of Equipment Management move equipment through a <strong>Load Out Request</strong> tab instead of the Operations board and Hauling. This short note describes it. New setups should use Request Creation, Allocation and Company Logistics above.</p>",
         "definitions": [
           {
             "term": "Earlier Load Out Request flow",
@@ -20592,8 +20592,8 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Troubleshooting: Asset Management Problems",
-        "intro": "<p>Use this page when an Asset Management step does not work as expected. Most problems trace back to master data, a setting, or an open inspection issue. Steps about master data, profiles, telematics, geofences, hauling and the Allocation Lifecycle follow the company's Arena 2.0 guides and are labelled as such.</p>",
+        "heading": "Troubleshooting: Equipment Management Problems",
+        "intro": "<p>Use this page when an Equipment Management step does not work as expected. Most problems trace back to master data, a setting, or an open inspection issue. Steps about master data, profiles, telematics, geofences, hauling and the Allocation Lifecycle follow the company's Arena 2.0 guides and are labelled as such.</p>",
         "definitions": [],
         "procedures": [
           {
@@ -20712,21 +20712,22 @@ const MODULES = [
         ]
       }
     ],
-    "name": "Asset Management",
-    "alias": "Equipment Management",
+    "name": "Equipment Management",
+    "alias": "Fleet, Assets & Load Outs",
+    "searchAlso": "Asset Management",
     "icon": "handyman",
     "tagline": "Register equipment and accessories, allocate them to projects, haul them, and track them by telematics and geofence.",
     "color": "#3c7a5f",
-    "overview": "<p><strong>Asset Management</strong> (Equipment Management) is Arena's system for equipment and accessories. It keeps the <strong>Equipment Master</strong> and <strong>Accessory Master</strong>, sets up the cost codes, categories and rate cards behind them, and shows each asset's profile with its purchase, warranty and depreciation details.</p><p>Requests for equipment are raised and moved through the <strong>Allocation Lifecycle</strong> board under <strong>Operations</strong>, from Request to Closed, by <strong>Self Pickup</strong> or <strong>Company Logistics</strong>. Company Logistics creates hauls under <strong>Hauling</strong>. <strong>Telematics</strong>, <strong>Geofencing</strong> and the <strong>Fleet Map</strong> show where every asset is. Maintenance, inspections, issues and non-conformance reports sit alongside.</p>",
+    "overview": "<p><strong>Equipment Management</strong> (Equipment Management) is Arena's system for equipment and accessories. It keeps the <strong>Equipment Master</strong> and <strong>Accessory Master</strong>, sets up the cost codes, categories and rate cards behind them, and shows each asset's profile with its purchase, warranty and depreciation details.</p><p>Requests for equipment are raised and moved through the <strong>Allocation Lifecycle</strong> board under <strong>Operations</strong>, from Request to Closed, by <strong>Self Pickup</strong> or <strong>Company Logistics</strong>. Company Logistics creates hauls under <strong>Hauling</strong>. <strong>Telematics</strong>, <strong>Geofencing</strong> and the <strong>Fleet Map</strong> show where every asset is. Maintenance, inspections, issues and non-conformance reports sit alongside.</p>",
     "navigation": [
-      "From <strong>Home</strong>, click the <strong>Asset Management</strong> tile (its module breadcrumb reads <strong>Equipment Management</strong>).",
+      "From <strong>Home</strong>, click the <strong>Equipment Management</strong> tile (its module breadcrumb reads <strong>Equipment Management</strong>).",
       "<strong>Overview</strong> holds <strong>Geofencing</strong> and the <strong>Fleet Map</strong>. <strong>Equipment</strong> holds the <strong>Equipment Master</strong>, <strong>Accessory Master</strong> and <strong>Inventory Locations</strong>.",
       "<strong>Operations</strong> is the <strong>Allocation Lifecycle</strong> board for requests. <strong>Hauling</strong> has <strong>Internal Hauling</strong> (Requests) and <strong>Fleet and Schedule</strong>.",
       "Open an asset and use its <strong>Overview</strong> and <strong>Telematics</strong> tabs. <strong>Settings</strong> holds <strong>Equipment Setup</strong>, <strong>Accessory Setup</strong>, <strong>Equipment Forms</strong>, <strong>Approval Workflow</strong>, <strong>Equipment/Accessory Status</strong> and <strong>Request Priority Threshold</strong>.",
       "Maintenance tabs: <strong>Asset Setup</strong>, <strong>Field Inspections</strong>, <strong>Asset Issues</strong> and <strong>Non Conformance Report</strong>. Some environments running an earlier version also show <strong>Asset Master</strong> and <strong>Load Out Request</strong> tabs."
     ],
     "sections": [
-      "Who Does What in Asset Management",
+      "Who Does What in Equipment Management",
       "Master Data: Cost Codes, Categories and Equipment Setup",
       "Equipment Master and Accessory Master",
       "Equipment and Accessory Profile",
@@ -20739,9 +20740,9 @@ const MODULES = [
       "Field Inspections",
       "Asset Issues",
       "Non Conformance Report",
-      "Configure Asset Management Forms & Global Setup",
+      "Configure Equipment Management Forms & Global Setup",
       "Earlier Version: Load Out Request",
-      "Troubleshooting: Asset Management Problems"
+      "Troubleshooting: Equipment Management Problems"
     ]
   },
   {
@@ -26221,7 +26222,7 @@ const MODULES = [
         "definitions": [
           {
             "term": "Project Forms (Custom Forms)",
-            "definition": "The plant-scoped tab holding project-specific custom form types configured in Project Setup → Forms. The breadcrumb label for this tab reads \"Custom Forms\". **Where this data comes from:** the form types listed are the project forms assigned to the project in **Project Setup → Forms** (project forms are defined in **Global Data → Forms → Project Forms**). Arena Steel Plant - Phase 1 shows one, **Internal LORs** (\"Project Forms (1)\"). **Create** opens a **Request Form** with an **Available Asset / Accessory** search and a list of equipment (\"Eqp\" items) and accessories (\"Acc\" items) with their Type and ID (for example EqpExcavator ID 1, EqpSoil Compactor CM-001); this list is the **Equipment Master** and **Accessory Master** of Asset Management (the Equipment module)."
+            "definition": "The plant-scoped tab holding project-specific custom form types configured in Project Setup → Forms. The breadcrumb label for this tab reads \"Custom Forms\". **Where this data comes from:** the form types listed are the project forms assigned to the project in **Project Setup → Forms** (project forms are defined in **Global Data → Forms → Project Forms**). Arena Steel Plant - Phase 1 shows one, **Internal LORs** (\"Project Forms (1)\"). **Create** opens a **Request Form** with an **Available Asset / Accessory** search and a list of equipment (\"Eqp\" items) and accessories (\"Acc\" items) with their Type and ID (for example EqpExcavator ID 1, EqpSoil Compactor CM-001); this list is the **Equipment Master** and **Accessory Master** of Equipment Management (the Equipment module)."
           },
           {
             "term": "Per-work-package form permissions",
@@ -28764,7 +28765,7 @@ const MODULES = [
     "narrative": [
       {
         "heading": "Who Does What",
-        "intro": "<p>This section is for the Work Order Administrator (usually a System Administrator or Equipment Admin), who decides which work order types exist, which tabs each type shows and who can use the module, and for everyone else who wants to know their part in the flow. Do the one-time setup before requesters start raising work orders.</p><p>Six roles share the work: the administrator, the Requester (site engineer or equipment coordinator), the Approver (maintenance manager or business unit head), the Technician / Supervisor, the Store and Procurement user and the Accounts user. A work order is raised against a piece of equipment, so the equipment must already exist in Asset Management with a valid status.</p>",
+        "intro": "<p>This section is for the Work Order Administrator (usually a System Administrator or Equipment Admin), who decides which work order types exist, which tabs each type shows and who can use the module, and for everyone else who wants to know their part in the flow. Do the one-time setup before requesters start raising work orders.</p><p>Six roles share the work: the administrator, the Requester (site engineer or equipment coordinator), the Approver (maintenance manager or business unit head), the Technician / Supervisor, the Store and Procurement user and the Accounts user. A work order is raised against a piece of equipment, so the equipment must already exist in Equipment Management with a valid status.</p>",
         "definitions": [
           {
             "term": "Work Order Types",
@@ -28828,7 +28829,7 @@ const MODULES = [
           {
             "title": "Set up work orders for the first time (Administrator)",
             "steps": [
-              "Confirm the equipment exists in <strong>Asset Management</strong> with a valid status, a Business Unit and a Location.",
+              "Confirm the equipment exists in <strong>Equipment Management</strong> with a valid status, a Business Unit and a Location.",
               "Open <strong>Home → Work Order → Settings → Work Order Types</strong> and configure the type: <strong>Tab Visibility</strong>, <strong>Profile</strong>, <strong>Item Form</strong>, <strong>Expense Form</strong>, <strong>ID Settings</strong> and, for Equipment, <strong>Operational Status</strong>. Click <strong>Save Changes</strong> on each sub-tab.",
               "Set <strong>Maintenance Types</strong>, <strong>Status</strong> and <strong>Priority</strong>.",
               "Create the <strong>Approval Workflow</strong> and the <strong>Invoices</strong> approval, and mark the workflow <strong>Set as Default</strong>.",
@@ -28867,7 +28868,7 @@ const MODULES = [
           },
           {
             "term": "Operational Status",
-            "definition": "For the Equipment type, this page lists the values in the **Operational Status** dropdown on the work order, with the **Linked Equipment Status** beside each. Default mapping: **Operational** → In Maintenance, **Down - Major Repairs** → In Maintenance, **Running - Minor Repairs** → In Maintenance, **Running - Due for PM** → Out of Service, **Dispose Initiated** → In Maintenance. When the work order is submitted, the equipment record takes the linked status in **Asset Management → Equipment Master**, and the same value shows in the **Status** column of the Equipment Breakdown Report. Use **Add Status** to add your own, choose its linked equipment status, and use the delete icon in the **Actions** column to remove one you added. Changes save automatically."
+            "definition": "For the Equipment type, this page lists the values in the **Operational Status** dropdown on the work order, with the **Linked Equipment Status** beside each. Default mapping: **Operational** → In Maintenance, **Down - Major Repairs** → In Maintenance, **Running - Minor Repairs** → In Maintenance, **Running - Due for PM** → Out of Service, **Dispose Initiated** → In Maintenance. When the work order is submitted, the equipment record takes the linked status in **Equipment Management → Equipment Master**, and the same value shows in the **Status** column of the Equipment Breakdown Report. Use **Add Status** to add your own, choose its linked equipment status, and use the delete icon in the **Actions** column to remove one you added. Changes save automatically."
           },
           {
             "term": "Maintenance Types",
@@ -29601,7 +29602,7 @@ const MODULES = [
           },
           {
             "term": "Basic Information",
-            "definition": "The core of the work order: **WO ID** (automatic), **WO Description**, **Work Order Type**, **Work Order Status**, **Equipment** (with its warranty expiration, hours reading, location and current status shown below it), **Assigned location** (filled from the equipment), **Maintenance Type**, **Business Unit**, **Project**, **Phase Code**, **Created Date**, **Created By** (automatic) and **Notes**. Click the equipment link to open its profile in Asset Management."
+            "definition": "The core of the work order: **WO ID** (automatic), **WO Description**, **Work Order Type**, **Work Order Status**, **Equipment** (with its warranty expiration, hours reading, location and current status shown below it), **Assigned location** (filled from the equipment), **Maintenance Type**, **Business Unit**, **Project**, **Phase Code**, **Created Date**, **Created By** (automatic) and **Notes**. Click the equipment link to open its profile in Equipment Management."
           },
           {
             "term": "Priority section",
@@ -30316,7 +30317,7 @@ const MODULES = [
           },
           {
             "term": "Parts tab",
-            "definition": "The **Parts Required** list. Click **Import**, choose the parts and quantities, and click **Submit**. Unit cost comes from the maintenance parts purchase orders in Asset Management. Parts recorded here are added to the maintenance history of the equipment being serviced. Use the delete icon in the Actions column to remove one."
+            "definition": "The **Parts Required** list. Click **Import**, choose the parts and quantities, and click **Submit**. Unit cost comes from the maintenance parts purchase orders in Equipment Management. Parts recorded here are added to the maintenance history of the equipment being serviced. Use the delete icon in the Actions column to remove one."
           },
           {
             "term": "Expense tab",
@@ -30718,7 +30719,7 @@ const MODULES = [
     "icon": "assignment",
     "tagline": "Raise, approve, carry out and close the work done on equipment, and track its hours, materials, parts and cost.",
     "color": "#2d7d7d",
-    "overview": "<p>The <strong>Work Order</strong> module (Home) is where a team raises, approves, carries out and closes work on equipment. Each <strong>work order</strong> holds the whole record of the job: the items to do, the crew, the hours booked, the materials and parts used, the expenses and vendor invoices, and the cost that results.</p><p>The page has three tabs, <strong>Work Orders</strong>, <strong>Workflow Issues</strong> and <strong>Reports</strong>, plus <strong>Settings</strong> (gear icon) where the administrator sets up work order types, tabs, forms, ID format, operational statuses, maintenance types, statuses, priorities, approval workflows, the reopen window and user access. Work orders are raised against equipment held in Asset Management.</p>",
+    "overview": "<p>The <strong>Work Order</strong> module (Home) is where a team raises, approves, carries out and closes work on equipment. Each <strong>work order</strong> holds the whole record of the job: the items to do, the crew, the hours booked, the materials and parts used, the expenses and vendor invoices, and the cost that results.</p><p>The page has three tabs, <strong>Work Orders</strong>, <strong>Workflow Issues</strong> and <strong>Reports</strong>, plus <strong>Settings</strong> (gear icon) where the administrator sets up work order types, tabs, forms, ID format, operational statuses, maintenance types, statuses, priorities, approval workflows, the reopen window and user access. Work orders are raised against equipment held in Equipment Management.</p>",
     "navigation": [
       "From <strong>Home</strong>, click the <strong>Work Order</strong> tile. The page has the tabs <strong>Work Orders</strong>, <strong>Workflow Issues</strong> and <strong>Reports</strong>, and <strong>Settings</strong> on the right.",
       "On <strong>Work Orders</strong>, click <strong>Create</strong> to raise a work order, or click a row to open it on its <strong>Profile</strong> tab.",
@@ -33891,7 +33892,7 @@ const MODULES = [
           },
           {
             "term": "Pickup Request status",
-            "definition": "A Pickup Request moves through Created → Vendor Pickup Request Created → Picked up from Site → Closed as it's actioned, or Rejected if turned down. This is the return/pickup counterpart to the Load Out Request flow in Asset Management, but for procurement-sourced rented items specifically."
+            "definition": "A Pickup Request moves through Created → Vendor Pickup Request Created → Picked up from Site → Closed as it's actioned, or Rejected if turned down. This is the return/pickup counterpart to the Load Out Request flow in Equipment Management, but for procurement-sourced rented items specifically."
           }
         ],
         "procedures": [
@@ -35536,7 +35537,7 @@ const MODULES = [
           },
           {
             "term": "Earlier-version screens",
-            "definition": "Some environments running an earlier version show different screens: an **Inventory Master** list, **Site Material Request** (earlier called Pick Up Ticket), **Material Issue Ticket** (earlier called Ship Ticket) and **Return Ticket** tabs, and no Overview map, Orders, Hauling Trucks, External Tickets or Reports tabs. Load Out Requests for equipment are under Asset Management → Load Out Request, not here."
+            "definition": "Some environments running an earlier version show different screens: an **Inventory Master** list, **Site Material Request** (earlier called Pick Up Ticket), **Material Issue Ticket** (earlier called Ship Ticket) and **Return Ticket** tabs, and no Overview map, Orders, Hauling Trucks, External Tickets or Reports tabs. Load Out Requests for equipment are under Equipment Management → Load Out Request, not here."
           },
           {
             "term": "Where this data comes from and where it goes",

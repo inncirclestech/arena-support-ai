@@ -1,9 +1,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Arena Support AI</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Source+Serif+4:opsz,ital,wght@8..60,0,400;8..60,0,600;8..60,1,400&family=JetBrains+Mono:wght@500&display=swap">
 <style>
   :root {
+    --font-ui: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --font-read: Charter, "Bitstream Charter", "Source Serif 4", Georgia, serif;
+    --font-mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
     /* Palette matched to the live Arena product: navy #112d57 ink + amber #fab133 accent
        (sampled from the product's own Create Project button and nav). */
     --base: #f4f6f9;
@@ -34,7 +39,9 @@
     margin: 0;
     background: var(--base);
     color: var(--ink);
-    font-family: "IBM Plex Sans", -apple-system, "Segoe UI", sans-serif;
+    font-family: var(--font-ui);
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: "cv11", "ss01";
     font-size: 15px;
     line-height: 1.55;
   }
@@ -86,11 +93,11 @@
   .rail-nav-btn.primary:hover { box-shadow: var(--shadow-md); }
   .module-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
   .rail-section-label {
-    font-family: "IBM Plex Mono", monospace; font-size: 10px; letter-spacing: 0.09em;
+    font-family: var(--font-ui); font-size: 10px; letter-spacing: 0.09em;
     text-transform: uppercase; color: var(--muted); margin: 6px 4px 2px;
   }
   .rail-category-label {
-    font-family: "IBM Plex Mono", monospace; font-size: 10px; letter-spacing: 0.09em;
+    font-family: var(--font-ui); font-size: 10px; letter-spacing: 0.09em;
     text-transform: uppercase; color: var(--accent); font-weight: 600;
     margin: 14px 4px 4px; padding-top: 10px; border-top: 1px solid var(--border-soft);
   }
@@ -133,7 +140,7 @@
   .chat-hero { text-align: center; margin-bottom: 22px; }
   .chat-hero-badge {
     display: inline-flex; align-items: center; gap: 7px;
-    font-family: "IBM Plex Mono", monospace; font-size: 11px; font-weight: 600;
+    font-family: var(--font-ui); font-size: 11px; font-weight: 600;
     letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent);
     background: var(--accent-tint-soft); padding: 5px 13px; border-radius: 999px;
     margin-bottom: 14px;
@@ -142,7 +149,7 @@
   @keyframes pulse-dot { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.55;transform:scale(.8)} }
   @media (prefers-reduced-motion: reduce) { .chat-hero-badge .status-dot { animation: none; } }
   .chat-hero h1 {
-    font-family: "Fraunces", serif; font-weight: 600; font-size: 30px;
+    font-family: var(--font-ui); font-weight: 600; font-size: 30px;
     margin: 0 0 8px; letter-spacing: -0.015em; text-wrap: balance;
   }
   .chat-hero p { color: var(--muted); font-size: 14px; margin: 0; max-width: 480px; margin: 0 auto; }
@@ -157,7 +164,7 @@
   .chat-avatar {
     width: 26px; height: 26px; border-radius: 50%; flex-shrink: 0;
     display: flex; align-items: center; justify-content: center;
-    font-family: "IBM Plex Mono", monospace; font-size: 10.5px; font-weight: 700;
+    font-family: var(--font-ui); font-size: 10.5px; font-weight: 700;
   }
   .chat-avatar.assistant { background: linear-gradient(155deg, var(--accent) 0%, #e0932a 100%); color: var(--accent-ink); box-shadow: var(--shadow-sm); }
   .chat-avatar.user { background: var(--code-bg); color: var(--ink-soft); }
@@ -174,12 +181,12 @@
   .chat-bubble ol, .chat-bubble ul { margin: 6px 0; padding-left: 20px; }
   .chat-bubble li { margin-bottom: 5px; }
   .chat-bubble strong { font-weight: 600; }
-  .chat-bubble code { background: var(--code-bg); color: var(--ink); font-family: "IBM Plex Mono", monospace; font-size: 0.9em; padding: 1px 5px; border-radius: 4px; }
+  .chat-bubble code { background: var(--code-bg); color: var(--ink); font-family: var(--font-mono); font-size: 0.86em; padding: 1px 5px; border-radius: 4px; }
   .chat-msg.user .chat-bubble code { background: rgba(255,255,255,0.22); color: inherit; }
 
   .chat-source-tag {
     display: inline-flex; align-items: center; gap: 5px; margin-top: 10px;
-    font-family: "IBM Plex Mono", monospace; font-size: 10px; letter-spacing: 0.04em;
+    font-family: var(--font-ui); font-size: 10px; letter-spacing: 0.04em;
     text-transform: uppercase; padding: 3px 9px; border-radius: 999px; font-weight: 600;
   }
   .chat-followups { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; align-items: center; }
@@ -261,7 +268,7 @@
     display: inline-flex; align-items: center; gap: 7px; cursor: pointer;
     padding: 6px 12px; border-radius: 999px; border: 1px solid var(--border);
     background: var(--surface); transition: border-color 0.15s ease, background 0.15s ease;
-    font-family: "IBM Plex Mono", monospace; font-size: 11px; font-weight: 600;
+    font-family: var(--font-ui); font-size: 11px; font-weight: 600;
     letter-spacing: 0.02em; user-select: none;
   }
   .ai-mode-toggle:hover { border-color: var(--accent); }
@@ -315,7 +322,7 @@
     transition: width 0.2s ease;
   }
   .ai-gate-progress-pct {
-    font-family: "IBM Plex Mono", monospace; font-size: 11.5px; font-weight: 600;
+    font-family: var(--font-ui); font-size: 11.5px; font-weight: 600;
     color: var(--ink-soft); min-width: 34px; text-align: right; flex-shrink: 0;
   }
   .ai-gate-text { margin: 0; font-size: 12.5px; color: var(--ink-soft); }
@@ -346,7 +353,7 @@
   }
   .doc-tasks-label {
     display: flex; align-items: center; gap: 7px;
-    font-family: "IBM Plex Mono", monospace; font-size: 10.5px; font-weight: 600;
+    font-family: var(--font-ui); font-size: 10.5px; font-weight: 600;
     letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 0 0 12px;
   }
   .doc-tasks-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 8px; }
@@ -375,7 +382,7 @@
   }
   .doc-search-box input:focus { border-color: var(--accent); }
   .doc-toc-label {
-    font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 600;
+    font-family: var(--font-ui); font-size: 10px; font-weight: 600;
     letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 0;
   }
   .doc-toc { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; }
@@ -399,7 +406,7 @@
       overflow-y: auto; padding-left: 2px;
     }
     .doc-toc-rail .doc-toc-label {
-      font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 600;
+      font-family: var(--font-ui); font-size: 10px; font-weight: 600;
       letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px;
     }
     .doc-toc-rail-list { display: flex; flex-direction: column; gap: 2px; list-style: none; margin: 0; padding: 0; }
@@ -408,7 +415,7 @@
       font-size: 12.5px; color: var(--muted); padding: 6px 10px; border-radius: var(--radius-sm);
       border-left: 2px solid transparent; line-height: 1.4;
     }
-    .doc-toc-rail-num { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; flex-shrink: 0; }
+    .doc-toc-rail-num { font-family: var(--font-ui); font-size: 10.5px; flex-shrink: 0; }
     .doc-toc-rail-link:hover { color: var(--ink); background: var(--surface-raised); }
     .doc-toc-rail-link.active { color: var(--accent-ink); font-weight: 600; border-left-color: var(--accent); background: var(--accent-tint-soft); }
     .doc-toc-rail-link.doc-toc-link-dim { opacity: 0.35; }
@@ -428,12 +435,12 @@
   .doc-section-badge {
     flex-shrink: 0; width: 34px; height: 34px; border-radius: 50%;
     background: var(--accent-tint); color: var(--accent-ink); font-weight: 700;
-    font-family: "IBM Plex Mono", monospace; font-size: 14px;
+    font-family: var(--font-ui); font-size: 14px;
     display: flex; align-items: center; justify-content: center; margin-top: 2px;
   }
   .doc-section-heading-wrap { flex: 1; min-width: 0; }
   .browse-group-heading {
-    font-family: "Fraunces", serif; font-size: 22px; font-weight: 600; margin: 0 0 4px;
+    font-family: var(--font-ui); font-size: 22px; font-weight: 600; margin: 0 0 4px;
     letter-spacing: -0.01em; color: var(--ink); text-wrap: balance;
   }
   .doc-section-meta {
@@ -515,7 +522,7 @@
     counter-increment: step; content: counter(step);
     flex-shrink: 0; width: 20px; height: 20px; border-radius: 50%;
     background: var(--accent-tint); color: var(--accent-ink); font-weight: 700;
-    font-family: "IBM Plex Mono", monospace; font-size: 11px;
+    font-family: var(--font-ui); font-size: 11px;
     display: flex; align-items: center; justify-content: center; margin-top: 1px;
   }
   .doc-procedure-steps li > .doc-step-text { flex: 1; min-width: 0; overflow-wrap: break-word; }
@@ -538,18 +545,18 @@
   }
   .search-result-item:hover { border-color: var(--accent); box-shadow: var(--shadow-sm); }
   .search-result-module {
-    font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 600; text-transform: uppercase;
+    font-family: var(--font-ui); font-size: 9.5px; font-weight: 600; text-transform: uppercase;
     letter-spacing: 0.04em; padding: 3px 8px; border-radius: 5px; flex-shrink: 0;
   }
   .search-result-heading { font-size: 11.5px; color: var(--muted); flex-shrink: 0; }
   .search-result-term { font-size: 13.5px; color: var(--ink); font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
   .doc-eyebrow {
-    font-family: "IBM Plex Mono", monospace; font-size: 11px; font-weight: 600;
+    font-family: var(--font-ui); font-size: 11px; font-weight: 600;
     letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 10px;
     display: inline-flex; align-items: center; gap: 6px; padding: 5px 11px; border-radius: 999px;
   }
-  .doc-title { font-family: "Fraunces", serif; font-size: 30px; font-weight: 600; margin: 4px 0 6px; letter-spacing: -0.015em; }
+  .doc-title { font-family: var(--font-ui); font-size: 30px; font-weight: 600; margin: 4px 0 6px; letter-spacing: -0.015em; }
   .doc-tagline { color: var(--muted); font-size: 14.5px; margin: 0; font-style: italic; }
 
   .browse-qa-list { display: flex; flex-direction: column; gap: 8px; }
@@ -566,7 +573,7 @@
   }
   .browse-qa-trigger:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
   .browse-qa-trigger::before {
-    content: "?"; font-family: "IBM Plex Mono", monospace; font-size: 11px;
+    content: "?"; font-family: var(--font-ui); font-size: 11px;
     width: 18px; height: 18px; border-radius: 50%; background: var(--accent-tint); color: var(--accent);
     display: flex; align-items: center; justify-content: center; flex-shrink: 0;
   }
@@ -582,7 +589,7 @@
   .browse-qa-body ol, .browse-qa-body ul { padding-left: 20px; margin: 6px 0; }
   .browse-qa-body li { margin-bottom: 5px; }
   .browse-scope-pill {
-    font-family: "IBM Plex Mono", monospace; font-size: 9.5px; text-transform: uppercase;
+    font-family: var(--font-ui); font-size: 9.5px; text-transform: uppercase;
     letter-spacing: 0.05em; color: var(--muted); background: var(--base);
     border: 1px solid var(--border); padding: 2px 7px; border-radius: 5px; margin-left: auto; flex-shrink: 0;
     margin-right: 4px;
@@ -615,7 +622,7 @@
   .toc-count { font-size: 12.5px; color: var(--muted); margin: 0 0 4px; min-height: 18px; }
   .toc-category { margin-top: 26px; }
   .toc-category-label {
-    font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase;
+    font-family: var(--font-ui); font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase;
     color: var(--accent-hover); font-weight: 600; margin: 0 0 10px; padding-bottom: 8px; border-bottom: 1px solid var(--border-soft);
   }
   .toc-module {
@@ -635,7 +642,7 @@
   .toc-module-text { min-width: 0; flex: 1; }
   .toc-module-name { display: block; font-weight: 700; font-size: 15px; color: var(--ink); }
   .toc-module-tag { display: block; font-size: 12.5px; color: var(--muted); font-style: italic; overflow-wrap: anywhere; }
-  .toc-module-meta { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; color: var(--muted); flex-shrink: 0; white-space: nowrap; }
+  .toc-module-meta { font-family: var(--font-ui); font-size: 10.5px; color: var(--muted); flex-shrink: 0; white-space: nowrap; }
   .toc-open {
     align-self: center; flex-shrink: 0; margin-right: 12px; font-size: 12.5px; font-weight: 600; color: var(--ink);
     text-decoration: none; padding: 6px 12px; border: 1px solid var(--border); border-radius: 999px; background: var(--surface); white-space: nowrap;
@@ -649,14 +656,14 @@
   .toc-section-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
   .toc-section-num {
     flex-shrink: 0; width: 24px; height: 24px; border-radius: 50%; background: var(--accent-tint); color: var(--accent-ink);
-    font-family: "IBM Plex Mono", monospace; font-size: 11.5px; font-weight: 700; display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-ui); font-size: 11.5px; font-weight: 700; display: flex; align-items: center; justify-content: center;
   }
-  .toc-section-link { font-family: "Fraunces", serif; font-size: 16.5px; font-weight: 600; color: var(--ink); text-decoration: none; overflow-wrap: anywhere; min-width: 0; }
+  .toc-section-link { font-family: var(--font-ui); font-size: 16.5px; font-weight: 600; color: var(--ink); text-decoration: none; overflow-wrap: anywhere; min-width: 0; }
   .toc-section-link:hover { color: var(--accent-hover); text-decoration: underline; }
   .toc-section-meta { font-size: 12px; color: var(--muted); }
   .toc-group { display: grid; grid-template-columns: 74px 1fr; gap: 8px; margin: 9px 0 0 34px; align-items: start; }
   .toc-group-label {
-    display: inline-flex; align-items: center; gap: 5px; font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 600;
+    display: inline-flex; align-items: center; gap: 5px; font-family: var(--font-ui); font-size: 10px; font-weight: 600;
     letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); padding-top: 6px;
   }
   .toc-group-label svg { color: var(--accent); flex-shrink: 0; }
@@ -700,6 +707,133 @@
     .doc-section { padding: 18px 16px 20px; }
     .doc-title { font-size: 24px; }
   }
+
+  /* ================= Premium reading pass (2026-10-03) ================= */
+  :root {
+    --base: #f7f8fa;
+    --border: #e3e7ed;
+    --border-soft: #eef1f5;
+    --muted: #5f6b7a;
+    --ink-soft: #2c3e55;
+    --shadow-sm: 0 1px 2px rgba(17, 45, 87, 0.05);
+    --shadow-md: 0 1px 3px rgba(17, 45, 87, 0.05), 0 8px 24px -14px rgba(17, 45, 87, 0.16);
+    --radius-md: 12px;
+  }
+  body { font-size: 15px; letter-spacing: -0.006em; }
+
+  /* Long-form text reads in a serif, like Medium */
+  .doc-module-overview, .doc-intro, .doc-def-row dd, .doc-procedure-steps,
+  .browse-qa-body, .doc-callout {
+    font-family: var(--font-read); letter-spacing: 0; color: #24364d;
+  }
+  .doc-module-overview { font-size: 18px; line-height: 1.72; max-width: 70ch; }
+  .doc-intro { font-size: 17px; line-height: 1.72; max-width: 70ch; }
+  .doc-def-row dd { font-size: 15.5px; line-height: 1.65; }
+  .doc-procedure-steps { font-size: 16px; line-height: 1.65; }
+  .browse-qa-body { font-size: 16px; line-height: 1.68; padding: 6px 22px 20px 52px; }
+  .doc-callout { font-size: 15px; line-height: 1.6; }
+  .doc-module-overview strong, .doc-intro strong, .doc-def-row dd strong, .doc-procedure-steps strong, .browse-qa-body strong {
+    font-family: var(--font-ui); font-weight: 600; font-size: 0.9em; color: var(--ink);
+  }
+
+  /* Headings: clean, tight sans */
+  .doc-title { font-size: 36px; font-weight: 700; letter-spacing: -0.028em; line-height: 1.15; margin: 8px 0 8px; }
+  .doc-tagline { font-family: var(--font-read); font-size: 18px; font-style: normal; color: var(--muted); line-height: 1.5; max-width: 62ch; }
+  .browse-group-heading { font-size: 23px; font-weight: 700; letter-spacing: -0.022em; line-height: 1.25; }
+  .chat-hero h1, .chat-hero h2 { font-weight: 700; letter-spacing: -0.028em; }
+  .doc-procedure-title { font-size: 15.5px; font-weight: 600; letter-spacing: -0.01em; }
+  .doc-def-row dt { font-size: 14.5px; letter-spacing: -0.01em; }
+  .doc-subheading { font-size: 11.5px; letter-spacing: 0.08em; color: var(--muted); font-weight: 600; }
+
+  /* Small labels: refined caps instead of monospace */
+  .doc-eyebrow, .rail-section-label, .rail-category-label, .doc-tasks-label, .doc-toc-label,
+  .toc-category-label, .toc-group-label, .search-result-module, .chat-source-tag {
+    letter-spacing: 0.07em; font-weight: 600;
+  }
+  .doc-eyebrow { font-size: 11px; padding: 5px 11px; }
+  .rail-category-label { color: var(--accent-hover); }
+
+  /* Sections: quiet cards, no heavy orange bar */
+  .browse-shell { max-width: 1180px; margin: 0 auto; padding: 40px 48px 96px; }
+  .doc-section {
+    border: 1px solid var(--border); border-top: 1px solid var(--border);
+    border-radius: 16px; padding: 32px 36px 34px; box-shadow: var(--shadow-sm); margin-bottom: 28px;
+  }
+  .doc-section-badge { width: 30px; height: 30px; font-size: 13px; background: var(--accent-tint-soft); border: 1px solid var(--accent-tint); }
+  .doc-procedure { border-color: var(--border-soft); background: #fbfcfd; border-radius: 12px; padding: 18px 22px; }
+  .doc-procedure-steps li::before { font-family: var(--font-ui); font-size: 11px; width: 22px; height: 22px; margin-top: 2px; }
+  .doc-tasks-card, .doc-toc-and-search { border-radius: 14px; box-shadow: var(--shadow-sm); }
+
+  /* Question rows: question left, scope chip right next to the arrow */
+  .browse-qa-list { gap: 10px; }
+  .browse-qa-item { border-radius: 12px; border-color: var(--border); }
+  .browse-qa-item:hover { border-color: color-mix(in srgb, var(--accent) 60%, var(--border)); box-shadow: var(--shadow-md); }
+  .browse-qa-item.open { border-color: color-mix(in srgb, var(--accent) 60%, var(--border)); box-shadow: var(--shadow-md); }
+  .browse-qa-trigger { padding: 16px 20px; font-size: 15px; font-weight: 600; letter-spacing: -0.01em; gap: 14px; line-height: 1.4; }
+  .browse-qa-trigger::before { width: 22px; height: 22px; font-family: var(--font-ui); font-size: 12px; font-weight: 700; }
+  .browse-qa-q { flex: 1; min-width: 0; }
+  .browse-scope-pill {
+    margin-left: 12px; margin-right: 0; font-family: var(--font-ui); font-size: 10px; font-weight: 600;
+    letter-spacing: 0.07em; padding: 3px 9px; border-radius: 999px; background: var(--base); color: var(--muted);
+  }
+  .browse-qa-trigger::after { margin-left: 4px; }
+
+  /* Rail: prominent Contents entry */
+  .rail-contents-card {
+    display: flex; align-items: center; gap: 12px; width: 100%; text-align: left; cursor: pointer;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+    padding: 12px 12px; font-family: inherit; color: var(--ink); box-shadow: var(--shadow-sm);
+    transition: border-color .15s ease, box-shadow .15s ease;
+  }
+  .rail-contents-card:hover, .rail-contents-card.active { border-color: color-mix(in srgb, var(--accent) 65%, var(--border)); box-shadow: var(--shadow-md); }
+  .rail-contents-card.active { background: var(--accent-tint-soft); }
+  .rail-contents-card:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .rail-contents-icon {
+    width: 34px; height: 34px; border-radius: 10px; flex-shrink: 0; display: flex; align-items: center; justify-content: center;
+    background: var(--ink); color: #fff;
+  }
+  .rail-contents-text { display: flex; flex-direction: column; min-width: 0; flex: 1; }
+  .rail-contents-title { font-size: 13.5px; font-weight: 600; letter-spacing: -0.01em; }
+  .rail-contents-sub { font-size: 11.5px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .rail-contents-arrow { color: var(--muted); flex-shrink: 0; }
+
+  /* Module page breadcrumb */
+  .doc-breadcrumb { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 0 0 18px; font-size: 13px; color: var(--muted); }
+  .doc-breadcrumb a { color: var(--ink-soft); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 6px; padding: 5px 11px 5px 9px; border: 1px solid var(--border); border-radius: 999px; background: var(--surface); }
+  .doc-breadcrumb a:hover { border-color: var(--accent); color: var(--ink); }
+  .doc-breadcrumb a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .doc-breadcrumb .sep { color: #b4bdc8; }
+
+  /* Contents page: quick module finder */
+  .toc-quick { margin: 22px 0 6px; }
+  .toc-quick-cat { margin: 0 0 16px; }
+  .toc-quick-label { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 0 0 8px; }
+  .toc-quick-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 8px; }
+  .toc-quick-link {
+    display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink);
+    background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 11px 13px;
+    font-size: 14px; font-weight: 600; letter-spacing: -0.01em; transition: border-color .15s ease, box-shadow .15s ease;
+  }
+  .toc-quick-link:hover { border-color: color-mix(in srgb, var(--accent) 65%, var(--border)); box-shadow: var(--shadow-md); }
+  .toc-quick-link:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .toc-quick-link .toc-module-dot { width: 9px; height: 9px; }
+  .toc-quick-link span:last-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .toc-divider { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 26px 0 0; padding-top: 18px; border-top: 1px solid var(--border-soft); }
+  .toc-section-link { font-size: 16px; font-weight: 600; letter-spacing: -0.012em; }
+  .toc-module { border-radius: 12px; }
+  .toc-module-tag { font-style: normal; }
+
+  @media (max-width: 860px) {
+    .browse-shell { padding: 22px 16px 64px; }
+    .doc-section { padding: 22px 18px 24px; }
+    .doc-title { font-size: 28px; }
+    .doc-module-overview { font-size: 17px; }
+    .browse-qa-body { padding: 4px 16px 18px 18px; }
+  }
+  @media (max-width: 560px) {
+    .browse-qa-trigger { flex-wrap: wrap; row-gap: 6px; }
+    .browse-qa-q { flex-basis: calc(100% - 70px); }
+  }
 </style>
 
 <div class="app">
@@ -720,11 +854,12 @@
       <input id="global-search" type="text" placeholder="Search all documentation…" autocomplete="off">
     </div>
 
-    <div class="rail-section-label">Browse documentation</div>
-    <button class="rail-nav-btn" id="nav-contents" type="button">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>
-      <span>Contents</span>
+    <button class="rail-contents-card" id="nav-contents" type="button">
+      <span class="rail-contents-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span>
+      <span class="rail-contents-text"><span class="rail-contents-title">Contents</span><span class="rail-contents-sub" id="nav-contents-sub">Browse every module</span></span>
+      <svg class="rail-contents-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 6l6 6-6 6"/></svg>
     </button>
+    <div class="rail-section-label">Modules</div>
     <div class="module-search-box">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
       <input id="module-search" type="text" placeholder="Filter modules…" autocomplete="off">
@@ -1063,7 +1198,7 @@ Example of the style to use — if a note says "Go to Settings, click Add User, 
 
   function renderRail() {
     const q = moduleFilter.trim().toLowerCase();
-    const visible = q ? MODULES.filter(m => m.name.toLowerCase().includes(q) || (m.alias||"").toLowerCase().includes(q)) : MODULES;
+    const visible = q ? MODULES.filter(m => [m.name, m.alias, m.searchAlso].some(t => (t||"").toLowerCase().includes(q))) : MODULES;
 
     if (!visible.length) {
       railNav.innerHTML = `<div class="module-nav-empty">No modules match "${escapeHtml(moduleFilter)}"</div>`;
@@ -1222,7 +1357,7 @@ Example of the style to use — if a note says "Go to Settings, click Add User, 
       const bodyId = `${idPrefix}-qa-${i}`;
       return `
       <div class="browse-qa-item">
-        <button type="button" class="browse-qa-trigger" aria-expanded="false" aria-controls="${bodyId}">${escapeHtml(it.question)}<span class="browse-scope-pill">${it.scope}</span></button>
+        <button type="button" class="browse-qa-trigger" aria-expanded="false" aria-controls="${bodyId}"><span class="browse-qa-q">${escapeHtml(it.question)}</span><span class="browse-scope-pill">${it.scope}</span></button>
         <div class="browse-qa-body" id="${bodyId}" hidden>${renderAnswerHtml(it.answer)}</div>
       </div>
     `;
@@ -1276,7 +1411,7 @@ Example of the style to use — if a note says "Go to Settings, click Add User, 
 
     main.innerHTML = `
       <div class="browse-shell">
-        <a class="back-link" href="#/contents" data-nav>← Contents</a>
+        <nav class="doc-breadcrumb" aria-label="Breadcrumb"><a href="#/contents" data-nav><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 18l-6-6 6-6"/></svg>Contents</a><span class="sep">/</span><span>${CATEGORY_LABELS[mod.category] || ""}</span><span class="sep">/</span><span>${escapeHtml(mod.name)}</span></nav>
         <div class="doc-header">
           <span class="doc-eyebrow" style="background:${tint(mod.id)};color:${fg(mod.id)}">${mod.alias || mod.name}</span>
           <h1 class="doc-title">${mod.name}</h1>
@@ -1562,7 +1697,7 @@ Example of the style to use — if a note says "Go to Settings, click Add User, 
       const blocks = model.filter(x => x.mod.category === cat)
         .sort((a, b) => moduleSortKey(a.mod) - moduleSortKey(b.mod))
         .map(({ mod, sections }) => {
-          const modMatch = !q || has(mod.name) || has(mod.alias) || has(mod.tagline);
+          const modMatch = !q || has(mod.name) || has(mod.alias) || has(mod.searchAlso) || has(mod.tagline);
           const shown = sections.map(sec => {
             if (modMatch || has(sec.heading)) return { sec, cards: sec.cards, steps: sec.steps };
             const cards = sec.cards.filter(c => has(c.label));
@@ -1608,6 +1743,15 @@ Example of the style to use — if a note says "Go to Settings, click Add User, 
       return `<section class="toc-category" aria-label="${CATEGORY_LABELS[cat]}"><h2 class="toc-category-label">${CATEGORY_LABELS[cat]}</h2>${blocks}</section>`;
     }).join("");
 
+    const quick = CATEGORY_ORDER.map(cat => {
+      const mods = MODULES.filter(m => m.category === cat && (!q || has(m.name) || has(m.alias) || has(m.searchAlso) || has(m.tagline)))
+        .sort((a, b) => moduleSortKey(a) - moduleSortKey(b));
+      if (!mods.length) return "";
+      return `<div class="toc-quick-cat"><p class="toc-quick-label">${CATEGORY_LABELS[cat]}</p><div class="toc-quick-grid">${mods.map(m =>
+        `<a class="toc-quick-link" href="#/doc/${m.id}" data-nav title="${escapeHtml(m.tagline || "")}"><span class="toc-module-dot" style="background:${m.color}"></span><span>${escapeHtml(m.name)}</span></a>`).join("")}</div></div>`;
+    }).join("");
+    document.getElementById("toc-quick").innerHTML = quick;
+    document.getElementById("toc-divider").hidden = !quick;
     document.getElementById("toc-tree").innerHTML = html || `<p class="toc-empty">No modules, sections, cards or how-tos match "${escapeHtml(contentsFilter)}".</p>`;
     document.getElementById("toc-count").textContent = q ? `${shownModules} module${shownModules === 1 ? "" : "s"} match "${contentsFilter.trim()}"` : "";
   }
@@ -1618,7 +1762,7 @@ Example of the style to use — if a note says "Go to Settings, click Add User, 
         <div class="doc-header">
           <span class="doc-eyebrow" style="background:var(--accent-tint);color:var(--accent-ink)">Documentation</span>
           <h1 class="doc-title">Contents</h1>
-          <p class="doc-tagline">Every module, section, card and how-to in one place. Expand a module to jump straight to the item you need.</p>
+          <p class="doc-tagline">Pick a module below, or type what you're looking for. Expand a module further down to jump straight to a section, card or how-to.</p>
         </div>
         <div class="toc-toolbar">
           <div class="doc-search-box">
@@ -1629,6 +1773,8 @@ Example of the style to use — if a note says "Go to Settings, click Add User, 
           <button type="button" class="toc-tool-btn" id="toc-collapse-all">Collapse all</button>
         </div>
         <p class="toc-count" id="toc-count" aria-live="polite"></p>
+        <div class="toc-quick" id="toc-quick"></div>
+        <p class="toc-divider" id="toc-divider">Everything inside each module</p>
         <div id="toc-tree"></div>
       </div>`;
     renderContentsTree();
