@@ -12594,6 +12594,123 @@ const QA_INVENTORYMANAGEMENT = [
     question: "How do I see which materials are in an Inventory Location?",
     answer: "Open the **Inventory** tab and click the location, or click its geofence on the **Overview** map and use the link at the top of the details. The page lists each material with its quantity, minimum and maximum.",
     tags: ["materials in location","stock at location","location materials"]
+  },
+  {
+    action: "view",
+    object: "data lineage",
+    scope: "module",
+    section: "Who Does What",
+    question: "Where does the data in Inventory Management come from?",
+    answer: "Materials, UOMs and UOM conversions come from **Global Data** (**Company → Cost → Material** and **UOM, Phasecodes and GL codes**). Customers come from Global Data, projects and Business Units from the organisation's existing records, and users from Arena users. Stock quantities are entered at each Inventory Location by the Inventory Manager, and also arrive from **Procurement** when a Delivery Receipt confirms a purchase order. Fix a missing value at its source, not in Inventory Management. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["where does inventory data come from","inventory master data source","inventory lineage","what feeds inventory"]
+  },
+  {
+    action: "view",
+    object: "data lineage",
+    scope: "module",
+    section: "Who Does What",
+    question: "Where does Inventory Management data go?",
+    answer: "Tickets feed the **Hauling Report**, the **Client Portal** report and each order's delivered, remaining and fulfilment figures. Quantities held at a location feed the low-stock flag, the **Overview** map and **Material Reconciliation**. Procurement receipts add to location stock, and the **Inventory Management** card in **Field Works → Progress** raises Site Material Requests for the same locations. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["where does inventory data go","inventory feeds reports","inventory destination","what uses inventory data"]
+  },
+  {
+    action: "view",
+    object: "data lineage",
+    scope: "module",
+    section: "Who Does What",
+    question: "How does Inventory Management connect to Procurement, Work Orders and Field Works?",
+    answer: "Procurement: when a Delivery Receipt confirms a purchase order, the material's **See History** shows a line such as \"received from the vendor through PO ID ... confirmed by DR ID ...\" (seen on the test site). Field Works: the **Inventory Management** card in **Progress** opens **Site Material Requests** and **Rejected Site Material Requests**. Work Order: a **Work** configurable field (type Work Order) can be added to Site Material Requests in Settings to link a request to a work order (seen on the test site). Cost Tracking: not verified; ask Support. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["inventory procurement link","inventory work order link","inventory field works card","inventory delivery receipt","inventory cost tracking","how does inventory connect to procurement","inventory and procurement","inventory and work orders","inventory and field works"]
+  },
+  {
+    action: "view",
+    object: "dropdown source",
+    scope: "module",
+    section: "Global Data Prerequisites: UOMs and Materials",
+    question: "Where does the Material list in Inventory Management come from?",
+    answer: "From **Global Data → Company → Cost → Material**. When you click **+ Add** on an Inventory Location, the **Material** dropdown shows each material as its name and Material Cost Code, the same records as the Global Data material list. Add or correct a material there, then reopen the dialog.",
+    tags: ["material list source inventory","where do materials come from","material dropdown inventory","inventory material master"]
+  },
+  {
+    action: "view",
+    object: "dropdown source",
+    scope: "module",
+    section: "Global Data Prerequisites: UOMs and Materials",
+    question: "Why don't I see a material or UOM when adding stock to a location?",
+    answer: "It has not been set up in Global Data. Materials come from **Global Data → Company → Cost → Material** (check the rate card too) and UOMs from **UOM, Phasecodes and GL codes**. Ask the Global Data Administrator to add it, then try again. Quantities must also be greater than 0 for Minimum and Maximum. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["material not in dropdown","why no material","why cant i find a material when adding stock to a location","find a material adding stock","uom missing inventory","cannot find material inventory"]
+  },
+  {
+    action: "view",
+    object: "dropdown source",
+    scope: "module",
+    section: "Inventory Locations and Overview Map",
+    question: "Where do the Business Unit, Project and Inventory manager lists on a location come from?",
+    answer: "Business Unit and Project show the organisation's existing Business Units and projects, and Inventory manager shows Arena users, so a missing value is added at its source (Business Units and projects in their own setup, users in Users and Permissions). A location must be **Active** before you can pick it on a ticket. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["inventory manager list","business unit list location","project list location inventory"]
+  },
+  {
+    action: "view",
+    object: "data lineage",
+    scope: "module",
+    section: "Materials at a Location",
+    question: "Where does the stock quantity at a location come from?",
+    answer: "From what the Inventory Manager enters (**+ Add**, **Add Quantity**, Excel upload) and from **Procurement**: when a Delivery Receipt confirms a purchase order, the material's **See History** shows the receipt with its PO and DR numbers. The same quantity feeds the low-stock flag, Overview map, ticket Stock Available and **Material Reconciliation**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["stock quantity source","where does stock come from","delivery receipt adds stock","po adds inventory","where does stock quantity at a location come from","where does inventory quantity come from","stock quantity at location"]
+  },
+  {
+    action: "view",
+    object: "dropdown source",
+    scope: "module",
+    section: "External Orders",
+    question: "Where do the Customer and Location lists on an External Order come from?",
+    answer: "**Customer** comes from the customers in Global Data. **Location** lists that customer's locations, and Phone Number, Address, City, State and Zip Code fill in on their own. If a customer is missing and **Add Customer** is hidden, customer creation runs through an approval workflow in Global Data; get it approved there first. A new geofence made on the order is saved only when the order is submitted. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["customer list external order","location list external order","add customer missing order","where does customer dropdown come from"]
+  },
+  {
+    action: "view",
+    object: "data lineage",
+    scope: "module",
+    section: "External Orders",
+    question: "Where does an External Order show up after I submit it?",
+    answer: "It appears in the **External Orders** list with status **RAISED** and becomes available in the **Order Number** dropdown on External Tickets. The **Client Portal** report then compares its ordered quantity with the delivered quantity from tickets.",
+    tags: ["order destination","where does order go","order available for ticket"]
+  },
+  {
+    action: "view",
+    object: "dropdown source",
+    scope: "module",
+    section: "External Tickets",
+    question: "Why don't I see a site, product or truck on an External Ticket?",
+    answer: "The lists narrow step by step. **Hauling Vehicle** shows trucks from **Hauling Trucks** (a blacklisted truck is not usable). **Order Number** shows raised External Orders. **Site Name** shows only sites holding the order's materials, and **Product** only products at that site. A location must be **Active** to appear. The ticket also needs the truck's **Tare Weight UOM** to be one of the product's UOMs. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["site not showing ticket","product list ticket","truck not showing ticket","order number missing ticket","why dont i see a truck on an external ticket","why cant i see a truck on a ticket","hauling vehicle list empty","external ticket dropdown empty"]
+  },
+  {
+    action: "view",
+    object: "data lineage",
+    scope: "module",
+    section: "External Tickets",
+    question: "Where does an External Ticket go after I create it?",
+    answer: "Into the **Hauling Report** (trucks, site, material, net quantity), the **Client Portal** report and the order's **Ship Tickets** page (Delivered, Remaining, Total Loads, Fulfillment Progress). Gross cannot be changed after creation, so check it first. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["ticket destination","ticket feeds report","where do tickets go"]
+  },
+  {
+    action: "view",
+    object: "data lineage",
+    scope: "module",
+    section: "Reports: Hauling, Client Portal and Reconciliation",
+    question: "Where do the report figures come from?",
+    answer: "**Hauling Report**: External Tickets. **Client Portal** and the **Ship Tickets** page: External Orders (ordered quantity) against External Tickets (delivered). **Material Reconciliation**: the Current Available quantity at the Inventory Location against the surveyed stockpile you enter.",
+    tags: ["report data source","hauling report source","client portal source","reconciliation source","where do the hauling report figures come from","where does hauling report data come from","where do report figures come from"]
+  },
+  {
+    action: "view",
+    object: "dropdown source",
+    scope: "module",
+    section: "Settings: Fields, IDs, Permissions and General",
+    question: "Which setting changes the fields, IDs and UOM behavior in Inventory Management?",
+    answer: "**Settings → External Orders / Tickets** decide the form fields; **ID Settings** builds the order and ticket numbers (locked once a ticket exists); **Users and Permissions** decides who can open each screen; **General** switches External Tickets and UOM Conversions Required on, and holds Print Settings. On the test site the equivalent screens are Site Material Requests, Material Issue Tickets, Return Tickets and Approval WorkFlow. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
+    tags: ["inventory settings feeds","which setting controls inventory","setting changes form fields"]
   }
 ];
 
@@ -35193,6 +35310,10 @@ const MODULES = [
           {
             "term": "Earlier-version screens",
             "definition": "Some environments running an earlier version show different screens: an **Inventory Master** list, **Site Material Request** (earlier called Pick Up Ticket), **Material Issue Ticket** (earlier called Ship Ticket) and **Return Ticket** tabs, and no Overview map, Orders, Hauling Trucks, External Tickets or Reports tabs. Load Out Requests for equipment are under Asset Management → Load Out Request, not here."
+          },
+          {
+            "term": "Where this data comes from and where it goes",
+            "definition": "Inventory Management reads its master lists from other places and passes its results on. **In:** UOMs, UOM groups and materials come from **Global Data → Company → UOM, Phasecodes and GL codes** and **Global Data → Company → Cost → Material**; customers come from Global Data (through its approval workflow if one is on); projects and Business Units come from the organisation's existing projects and Business Units; users (Inventory manager, Requested By, group members) come from the users in Arena; stock also arrives from **Procurement** when a purchase order is confirmed by a Delivery Receipt. **Out:** External Tickets feed the **Hauling Report** and **Client Portal** report and the delivered and remaining quantities on each External Order; stock held at a location feeds **Material Reconciliation**, the low-stock flag and the **Overview** map; the **Inventory Management** card in **Field Works → Progress** lets site users raise Site Material Requests against the same locations. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
           }
         ],
         "procedures": [
@@ -35562,6 +35683,10 @@ const MODULES = [
           {
             "term": "Materials (Global Data)",
             "definition": "In **Global Data → Company → Cost**, choose **Material** under Cost Type, select or create a rate card under Material Code, and click **Add Material**. Enter **Material Code** (unique), **Material Name**, **UOM**, **Size and Specifications** and **Unit Price**, then **Submit**."
+          },
+          {
+            "term": "Where this data comes from: material and UOM lists",
+            "definition": "The **Material** dropdown when you add stock to a location lists the materials from **Global Data → Company → Cost → Material** (the rate card you chose), shown as Material Name with its Material Cost Code (checked live: for example Granular Material (10003013) and material123 (m1) appear in both places). The **UOM** lists on locations, orders and tickets come from the material's UOM and the UOM conversions in **UOM, Phasecodes and GL codes**; on a ticket the UOM dropdown shows the product's global UOM plus its conversion UOMs. Conversions only apply when **UOM Conversions Required** is on under **Settings → General**."
           }
         ],
         "procedures": [
@@ -35663,6 +35788,10 @@ const MODULES = [
           {
             "term": "Inventory Locations list",
             "definition": "Search by name, check the geofence icon, flip the **Active** toggle, or use the edit icon in Actions. **Filters** narrow by Business Units, Project, Material and Active or Inactive. See the Lists section for columns, layouts and Excel."
+          },
+          {
+            "term": "Where this data comes from: location fields",
+            "definition": "**Inventory manager** lists Arena users. **Business Unit** and **Project** list your organisation's Business Units and projects (on the test site, the Site Material Request **Project** list shows each project as its code and name). **Location Type** is a fixed list. Locations then feed the Site, Ship Material From and Inventory pickers on orders, tickets and Material Reconciliation, and the **Overview** map; only **Active** locations can be used on tickets."
           }
         ],
         "procedures": [
@@ -35943,6 +36072,10 @@ const MODULES = [
           {
             "term": "Low stock flag and history",
             "definition": "A red flag beside a material means it is low at this location, and **Low Stock Items** lists all of them. **See History** shows the history of a material at the location. **Add Custom Column** adds your own column to the table."
+          },
+          {
+            "term": "Where this data comes from and where it goes",
+            "definition": "Quantities come from three places: what the Inventory Manager enters with **+ Add** and **Add Quantity**, bulk **Upload Excel**, and stock received through **Procurement** when a Delivery Receipt confirms a purchase order. **See History** records each change. The quantity at a location feeds the low-stock flag and **Low Stock Items**, **Stock Available** on tickets, the **Overview** map and **Current Available** in **Material Reconciliation**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
           }
         ],
         "procedures": [
@@ -36125,6 +36258,10 @@ const MODULES = [
           {
             "term": "External Order status",
             "definition": "A new External Order shows the status **RAISED** and is available for selection while creating External Tickets. Delivery progress against the order is then tracked in **Reports → Client Portal**."
+          },
+          {
+            "term": "Where this data comes from and where it goes",
+            "definition": "On an External Order, **Customer** comes from the customers in Global Data (Add Customer is hidden when customer creation has an approval workflow there), **Location** lists that customer's locations, and **Phone Number**, **Address**, **City**, **State** and **Zip Code** fill in from the customer and location. **Project** lists projects, **Requested By** lists users, and **Material** and **UOM** come from the Global Data materials. A submitted order (status RAISED) appears in the **Order Number** list on External Tickets, and its delivered quantity grows as tickets are created."
           }
         ],
         "procedures": [
@@ -36267,6 +36404,10 @@ const MODULES = [
           {
             "term": "Add Hauling Truck fields",
             "definition": "Required: **Trucking Company**, **License Plate**, **Truck**, **Five-S test Number**, and **Tare Weight** with its UOM. Optional: **VIN**, year, make, driver, **Tag**, **Max Weight**, **Adj Max Weight**, bed and dog house measurements, **Aprx CY**, **Measured CY**, **Freight Rate**, **Insurance** with its date, **Overweight Permit** and **Bedliner**."
+          },
+          {
+            "term": "Where this data comes from and where it goes",
+            "definition": "Truck details are typed in on the Add Hauling Truck form (**Tare Weight UOM** is picked from the UOM list). The truck is then available in **Hauling Vehicle** on External Tickets, and its Trucking Company, Five-S test Number and Tag show in the **Hauling Report**. A truck marked **Blacklist** can no longer be used."
           }
         ],
         "procedures": [
@@ -36311,6 +36452,10 @@ const MODULES = [
           {
             "term": "External Ticket loop",
             "definition": "The Order Creator raises the External Order. The Ticket Creator records each load against it as a ticket. The tickets feed the **Hauling Report** (what moved, which truck) and the **Client Portal** report (Delivered against Units, Remaining and Fulfillment Progress). The Inventory Manager sees stock at the site change in the location."
+          },
+          {
+            "term": "Where this data comes from and where it goes",
+            "definition": "**Hauling Vehicle** lists the trucks from **Hauling Trucks**. **Order Number** lists the External Orders raised in **External Orders**. **Site Name** is limited to the sites that hold the materials of the selected order, **Product** to the products at that site, and **UOM** to the product's UOMs (global plus conversions). The right-hand panel (Stock Available, Net Ordered Weight, Shipped Quantity) is read from the order and the location. A saved ticket feeds the **Hauling Report**, the **Client Portal** report and the **Ship Tickets** page of its order. Whether a ticket reduces the stock held at the location is not stated in the guide. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
           }
         ],
         "procedures": [
@@ -36357,6 +36502,10 @@ const MODULES = [
           {
             "term": "Who uses which report",
             "definition": "The Report User (Operations Manager or Project Manager) uses all three. The Hauling Report answers what moved, by which truck and when. The Client Portal answers how much of each order is delivered. Material Reconciliation answers whether the stock in Arena matches the surveyed stockpile."
+          },
+          {
+            "term": "Where this data comes from",
+            "definition": "**Hauling Report** is built from External Tickets; **Client Portal** compares each External Order's ordered quantity with the quantity delivered on its tickets; **Material Reconciliation** takes **Current Available** from the Inventory Location and compares it with the surveyed quantity you enter. Its **Inventory** and **Material** pickers list your Inventory Locations and materials."
           }
         ],
         "procedures": [
