@@ -1312,6 +1312,22 @@ const QA_OPPORTUNITY = [
 
 const QA_EQUIPMENT = [
   {
+    "action": "define",
+    "object": "geofence",
+    "scope": "project",
+    "section": "Fleet Map",
+    "question": "What is a geofence?",
+    "answer": "A geofence is a boundary drawn around a work location. From **Home**, open **Equipment Management → Overview → Geofencing**: a Geofence Administrator creates and activates geofences there, and a Fleet Monitor uses **Overview → Fleet Map** to see the active geofences and the equipment reporting inside them. For inventory locations, the geofence links to the inventory location automatically.",
+    "tags": [
+      "what is a geofence",
+      "geofence meaning",
+      "define geofence",
+      "geofencing",
+      "what does geofence mean",
+      "boundary around a work location"
+    ]
+  },
+  {
     "action": "explain",
     "object": "data lineage",
     "scope": "module",
@@ -3806,6 +3822,25 @@ const QA_EQUIPMENT = [
 
 const QA_GLOBALDATA = [
   {
+    "action": "rename",
+    "object": "equipment asset name",
+    "scope": "global",
+    "section": "Settings",
+    "question": "How do I rename Equipment to Asset (or change any term name)?",
+    "answer": "Go to **Global Data → Settings → Naming Framework**. Find the term in the **Default Name** column (for example **Equipment**), type the name your company uses in the **Custom Name** column (for example **Asset**), add a **Short Name** if you want one, then save. Terms for Activity, Work Package and Location levels are renamed per Construction Type in **Global Data → Construction Type → Step 5 (Naming Framework)**.",
+    "tags": [
+      "rename equipment to asset",
+      "rename asset to equipment",
+      "change equipment to asset",
+      "change module name",
+      "rename a module",
+      "change the name of a term",
+      "custom name",
+      "naming framework",
+      "rename terminology"
+    ]
+  },
+  {
     action: "edit",
     object: "company profile",
     scope: "global",
@@ -4109,7 +4144,7 @@ const QA_GLOBALDATA = [
     section: "Settings",
     question: "How do I rename terminology used throughout the app (e.g. call \"Work Package\" something else)?",
     answer: "There are two Naming Framework screens:\n\n1. **Global Data → Construction Type tab → Step 5 (Naming Framework)** — renames Activity/Work-Package/Location-hierarchy terms, scoped per Construction Type.\n2. **Global Data → Settings → Naming Framework** — renames Procurement/Inventory/Roster/Cost terms company-wide.\n\nIn either, edit the **Custom Name** (and optionally **Short Name**) column next to the term you want to relabel, then save.",
-    tags: ["naming framework","rename terminology","custom labels","rename terminology custom labels"]
+    tags: ["naming framework","rename terminology","custom labels","rename terminology custom labels","rename equipment to asset","rename asset to equipment","change module name","rename a module","change the name of equipment","custom name","naming framework"]
   },
   {
     action: "create",
@@ -5450,7 +5485,7 @@ const QA_COMMUNICATION = [
     scope: "module",
     section: "Module Mapping",
     question: "Can I link an email to a specific module record?",
-    answer: "From **Home**, open **Communication**. Yes. Mails composed in Arena Communications can be mapped directly to different modules such as Opportunity, Proposal, and Bid Management.",
+    answer: "From **Home**, open **Communication**. Mails composed in Arena Communications can be mapped directly to different modules such as Opportunity, Proposal, and Bid Management.",
     tags: ["map email to module","link email","email mapping","module mail linking","map an email to a proposal","map email to proposal","map your email"]
   },
   {
@@ -6020,6 +6055,15 @@ const QA_MYCALENDAR = [
 ];
 
 const QA_PROJECTSETUP = [
+  {
+    action: "upload",
+    object: "drawing",
+    scope: "project",
+    section: "Drawings",
+    question: "How do I upload a drawing?",
+    answer: "Open the project and go to **Project Setup → Drawings → Drawing Packages**. Open the package and click **Upload Drawing** to add one or more PDF or image files. Choose **Auto Label Upload** to read the labels from the drawings, or **Write Label Manually** to type them in; both lead to **Review & Edit**. Use **Review & Submit** for each drawing, or **Submit All** to upload them in one go. To create a new package first, click **Create Drawing Package**, enter the package details and the training template, then click **Submit**.",
+    tags: ["upload a drawing","add a drawing","upload drawing","upload drawings","new drawing","add drawings to a package","drawing upload"]
+  },
   {
     action: "configure",
     object: "project work packages / plants",
@@ -7202,6 +7246,22 @@ const QA_PROJECTSETUP = [
 ];
 
 const QA_FIELDWORKS = [
+  {
+    "action": "create",
+    "object": "punch list item",
+    "scope": "project",
+    "section": "Quality",
+    "question": "How do I create a punch list item?",
+    "answer": "Open the project and go to **Field Works → Quality**. A punch list item starts as an open item created from a failed inspection question; the card shows the **Field name**, **Observation**, priority and **Assign to**. The assignee clicks **Rectified** once it is fixed, then the QA/QC person clicks **Verify**. Items also show in **Loop Progress → Punch Lists** and in the **Punchlists** column of the quality folder.",
+    "tags": [
+      "create a punch list item",
+      "raise a punch list item",
+      "add a punch list item",
+      "new punch list item",
+      "punch list",
+      "snag list item"
+    ]
+  },
   {
     action: "view",
     object: "field works tab structure",
@@ -8415,7 +8475,7 @@ const QA_FIELDWORKS = [
     section: "Quality",
     question: "How does a punch list item move from raised to closed?",
     answer: "It starts as an open item created from a failed inspection question (the card shows the **Field name**, **Observation**, priority and **Assign to**). The assignee clicks **Rectified** once fixed; the QA/QC person then clicks **Verify**, and the counters **Issues Open**, **Issues Rectified** and **Issues Verified** change. Items also show in **Loop Progress → Punch Lists** and the **Punchlists** column of the quality folder.",
-    tags: ["punch list lifecycle","rectified verified","punch list counters","pnl number","close punch list"]
+    tags: ["punch list lifecycle","rectified verified","punch list counters","pnl number","close punch list","create a punch list item","raise a punch list item","add a punch list item","new punch list item","how do I create a punch list item"]
   },
   {
     action: "view",
@@ -14541,12 +14601,12 @@ const QA_INVENTORYMANAGEMENT = [
 const QA_EXPENSETRACKER = [
   {
     action: "create",
-    object: "expense claim",
+    object: "expense",
     scope: "module",
     section: "Expense Forms",
     question: "How do I submit an expense claim?",
     answer: "Go to **Expense Tracker → Expense Forms** and click **+ Create**. The form opens as a full page (the template in use is usually \"Travel and Business Expense Report\").\n1. Check **Name*** (it defaults to you) and set the **Period*** from and to dates.\n2. Pick a category in **Select Expense Type** and click **+ Add Expense Type**. Add a row for each expense with its **Date**, **Description** and **Total**, and attach the receipt on the row.\n3. Fill in the **Details** grids that apply: Travel Details, Accommodation Details, and Meal and Miscellaneous Expenses. Then check the **Total Expense Summary**.\n4. Choose the **Approval Workflow** and click **Submit For Approval**. You can also use **Save as Draft** to finish it later.\nOnce submitted, the form shows as **Ready for Approval** at level 0.",
-    tags: ["submit expense","create expense form","expense claim","reimbursement","new expense","raise expense"]
+    tags: ["submit expense","create expense form","expense claim","reimbursement","new expense","raise expense","add an expense","create an expense","new expense","record an expense","log an expense","enter an expense"]
   },
   {
     action: "understand",
@@ -15186,7 +15246,7 @@ const QA_ADMINSETUPGUIDE = [
   },
   {
     action: "configure",
-    object: "register user",
+    object: "admin setup of new users",
     scope: "global",
     section: "Users & Permissions",
     question: "How do I add a new user or employee?",

@@ -169,6 +169,12 @@ function scoreEntry(entry, queryTokens, queryStems) {
   new Set(questionTokens).forEach(qt => {
     if (qStemSet.has(qt)) score += 1;
   });
+  // Prefer the entry whose question is closest to what was asked ("create a tender" over "create a work order from a tender").
+  const qtSet = new Set(questionTokens);
+  if (qtSet.size) {
+    const hit = [...qtSet].filter(qt => qStemSet.has(qt)).length;
+    score += 3 * (hit / qtSet.size);
+  }
   // A "what's the difference between X and Y?" entry legitimately shares
   // vocabulary with BOTH X's and Y's own direct topic — that's not a false
   // match, but it means such entries can out-score the plain "about X" entry
