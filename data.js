@@ -2926,19 +2926,6 @@ const QA_EQUIPMENT = [
   },
   {
     "action": "define",
-    "object": "equipment maintenance calendar colors",
-    "scope": "module",
-    "section": "Field Inspections",
-    "question": "What do the colors on the Equipment Maintenance Calendar mean?",
-    "answer": "**Grey = Not Ready**, **Blue = Ready**, **Amber = In Progress**, **Green = Completed**. Each day's due forms are grouped by project in a collapsible section, showing the form name, the equipment, and its current status.",
-    "tags": [
-      "equipment maintenance calendar colors",
-      "equipment maintenance calendar legend",
-      "not ready ready in progress completed"
-    ]
-  },
-  {
-    "action": "define",
     "object": "equipment issue vs ncr",
     "scope": "module",
     "section": "Equipment Issues",
@@ -3186,39 +3173,6 @@ const QA_EQUIPMENT = [
     ]
   },
   {
-    "action": "schedule",
-    "object": "preventive maintenance",
-    "scope": "module",
-    "section": "Preventive Maintenance",
-    "question": "Where is the preventive maintenance schedule?",
-    "answer": "From **Home**, open **Equipment Management → Maintenance → Preventive Maintenance**. Click **Schedule PM** to add one. The trigger is **Calendar**, **Hours** or **Distance**, and the list shows **Last PM Due**, **Current** and **Next PM Due**.",
-    "tags": [
-      "preventive maintenance",
-      "pm schedule",
-      "schedule pm",
-      "pm due",
-      "next pm due",
-      "service due",
-      "maintenance schedule hours distance",
-      "pm trigger"
-    ]
-  },
-  {
-    "action": "schedule",
-    "object": "pm trigger",
-    "scope": "module",
-    "section": "Preventive Maintenance",
-    "question": "What are the PM triggers: Calendar, Hours and Distance?",
-    "answer": "On **Equipment Management → Maintenance → Preventive Maintenance**, a schedule is triggered by **Calendar**, **Hours** or **Distance**. The intervals and hours thresholds come from **Settings → Maintenance Config → PM Interval Configuration**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
-    "tags": [
-      "calendar hours distance",
-      "pm interval",
-      "hours threshold",
-      "pm service interval",
-      "maintenance trigger"
-    ]
-  },
-  {
     "action": "view",
     "object": "parts po",
     "scope": "module",
@@ -3234,22 +3188,6 @@ const QA_EQUIPMENT = [
       "parts purchase order",
       "maintenance parts",
       "parts catalog"
-    ]
-  },
-  {
-    "action": "view",
-    "object": "maintenance calendar",
-    "scope": "module",
-    "section": "Maintenance Calendar",
-    "question": "Where is the maintenance calendar?",
-    "answer": "From **Home**, open **Equipment Management → Maintenance → Maintenance Calendar**. It is a month calendar with the legend **Not Ready**, **Ready**, **In Progress With Issues** and **Completed**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
-    "tags": [
-      "maintenance calendar",
-      "maintenance calendar legend",
-      "not ready ready completed",
-      "pm calendar",
-      "maintenance schedule calendar",
-      "in progress with issues"
     ]
   },
   {
@@ -3716,6 +3654,152 @@ const QA_EQUIPMENT = [
       "resolve equipment issue",
       "close issue",
       "fix issue"
+    ]
+  },
+  {
+    "action": "schedule",
+    "object": "preventive maintenance",
+    "scope": "module",
+    "section": "Preventive Maintenance",
+    "question": "How do I schedule preventive maintenance?",
+    "answer": "From **Home**, open **Equipment Management → Maintenance → Preventive Maintenance** and click **Schedule PM**.\n1. Use the **Equipment / Accessory** toggle.\n2. Select the **Equipment** (or **Accessory**) from the dropdown.\n3. Select one or more **Schedule Type** values: **CALENDAR**, **HOURS** or **DISTANCE** (**Select All** picks all three).\n4. Select the **Interval** for each type.\n5. Click on the schedule. A card is created for each schedule type.\nFor Hours and Distance, map a Telematics Device to the equipment first; intervals come from **Settings → Maintenance Config**.",
+    "tags": [
+      "schedule preventive maintenance",
+      "schedule pm",
+      "pm schedule",
+      "schedule maintenance",
+      "create pm",
+      "plan maintenance",
+      "add pm schedule",
+      "preventive maintenance"
+    ]
+  },
+  {
+    "action": "view",
+    "object": "preventive maintenance page",
+    "scope": "module",
+    "section": "Preventive Maintenance",
+    "question": "Where is the Preventive Maintenance page and how do I filter it?",
+    "answer": "From **Home**, open **Equipment Management → Maintenance → Preventive Maintenance**. Use the dropdown (**All**, **Calendar**, **Hours**, **Distance**) to filter by trigger type, **Search** by Equipment / Accessory ID, the list or grid icon (top right) to switch between list and card view, and **Save layout** to keep the view.",
+    "tags": [
+      "preventive maintenance page",
+      "filter pm",
+      "pm list view",
+      "pm card view",
+      "search pm",
+      "save layout"
+    ]
+  },
+  {
+    "action": "define",
+    "object": "pm card",
+    "scope": "module",
+    "section": "Preventive Maintenance",
+    "question": "What do the fields on a PM card mean?",
+    "answer": "Each card on **Equipment Management → Maintenance → Preventive Maintenance** shows: the **schedule label** (for example CALENDAR (EVERY 5 DAYS)), the **Equipment** ID and name, a **status chip** (**UPCOMING** or **OVERDUE** once the due point has passed), **Schedule Type**, **Last PM**, **Next PM Due**, **Current** (the equipment's current date, hours or distance) and **Inspection** (the maintenance form status: **FORM READY** or **INPROGRESS WITH ISSUES**).",
+    "tags": [
+      "pm card fields",
+      "upcoming overdue",
+      "last pm",
+      "next pm due",
+      "pm status chip",
+      "overdue maintenance",
+      "current hours"
+    ]
+  },
+  {
+    "action": "define",
+    "object": "pm schedule types",
+    "scope": "module",
+    "section": "Preventive Maintenance",
+    "question": "What are the PM schedule types: Calendar, Hours and Distance?",
+    "answer": "**Calendar**: due after a fixed period, for example every 5 or 30 Days, counted from the last PM date. **Hours**: due after a set number of running hours (for example 250), from the equipment's hour meter. **Distance**: due after a set distance (for example 100 Kilometer), from the odometer. Hours and Distance readings come from the Telematics Device mapped to the equipment, and intervals come from **Settings → Maintenance Config**.",
+    "tags": [
+      "calendar hours distance",
+      "pm trigger",
+      "pm interval",
+      "hours threshold",
+      "schedule type",
+      "telematics hours distance",
+      "maintenance trigger"
+    ]
+  },
+  {
+    "action": "fill",
+    "object": "maintenance form",
+    "scope": "module",
+    "section": "Preventive Maintenance",
+    "question": "How do I fill in the maintenance form for a PM?",
+    "answer": "From **Home**, open **Equipment Management → Maintenance → Preventive Maintenance** and click the **View** icon on the PM card. The maintenance form linked in the PM Interval Configuration opens. Select the response for each item, record an issue for any failed item (as in a field inspection), fill the **Form Details** and click **Submit**.",
+    "tags": [
+      "fill maintenance form",
+      "complete pm",
+      "submit maintenance form",
+      "do the service",
+      "mechanic fills form"
+    ]
+  },
+  {
+    "action": "skip",
+    "object": "service",
+    "scope": "module",
+    "section": "Preventive Maintenance",
+    "question": "How do I skip a service or create a Work Order from a PM card?",
+    "answer": "From **Home**, open **Equipment Management → Maintenance → Preventive Maintenance**. On the PM card, **Skip Service** skips the current service and moves the schedule to the next due point, and **Create Work Order** raises a Work Order for the equipment from the PM (for example when the maintenance form has issues). The Work Order is created in the Work Order module.",
+    "tags": [
+      "skip service",
+      "create work order from pm",
+      "pm card actions",
+      "skip pm",
+      "work order maintenance"
+    ]
+  },
+  {
+    "action": "define",
+    "object": "pm card actions",
+    "scope": "module",
+    "section": "Preventive Maintenance",
+    "question": "What do the actions on a PM card do?",
+    "answer": "**View** opens the maintenance form to fill and submit. **Schedule PM** schedules the PM for the equipment. **Skip Service** skips the current service and moves the schedule to the next due point. **Create Work Order** raises a Work Order from the PM.",
+    "tags": [
+      "pm actions",
+      "view schedule pm skip service create work order"
+    ]
+  },
+  {
+    "action": "view",
+    "object": "maintenance calendar",
+    "scope": "module",
+    "section": "Maintenance Calendar",
+    "question": "Where is the maintenance calendar and how do I use it?",
+    "answer": "From **Home**, open **Equipment Management → Maintenance → Maintenance Calendar**. The **Select date** calendar on the left shows the current month (pick another month from the month and year dropdown or with the arrows). Dates with a small dot have maintenance forms scheduled. Click a date to see its assigned Maintenance forms on the right, check each form's colour against the legend, and click a form to open it.",
+    "tags": [
+      "maintenance calendar",
+      "use maintenance calendar",
+      "select date",
+      "pm calendar",
+      "maintenance by date",
+      "dates with dot",
+      "open maintenance form from calendar"
+    ]
+  },
+  {
+    "action": "define",
+    "object": "calendar status",
+    "scope": "module",
+    "section": "Maintenance Calendar",
+    "question": "What do the maintenance calendar status colours mean?",
+    "answer": "The legend at the top right of **Equipment Management → Maintenance → Maintenance Calendar**: **Grey** = Not Ready, **Blue** = Ready, **Amber** (with a warning icon) = In Progress With Issues, **Green** = Completed. Review amber entries on the Preventive Maintenance page and create a Work Order where required.",
+    "tags": [
+      "calendar status",
+      "maintenance calendar status",
+      "calendar colours",
+      "calendar colors",
+      "legend",
+      "not ready ready completed",
+      "in progress with issues",
+      "what does the status mean",
+      "status meaning"
     ]
   }
 ];
@@ -20917,35 +21001,192 @@ const MODULES = [
       },
       {
         "heading": "Preventive Maintenance",
-        "intro": "<p>Use **Preventive Maintenance** to schedule preventive maintenance (PM) for equipment and see when each one is next due. Equipment and maintenance managers use it to keep PM on time; the trigger can be a calendar interval, running hours or distance.</p>",
+        "intro": "<p>Use **Preventive Maintenance** to schedule maintenance on equipment and accessories by **Calendar**, **Hours** or **Distance**, and to track each schedule as **UPCOMING** or **OVERDUE**. Maintenance Planners, Mechanics and Maintenance Supervisors use it: planners schedule PM, mechanics fill the maintenance form when the service is done, and supervisors skip a service or create a Work Order for repair.</p><p>Each schedule is shown as a card with its interval, due point and form status. Before scheduling, set the intervals and maintenance form for the category in **Settings → Maintenance Config**.</p>",
         "definitions": [
           {
-            "term": "Preventive Maintenance screen",
-            "definition": "From **Home**, open **Equipment Management → Maintenance → Preventive Maintenance**. Click **Schedule PM** to add a schedule. The trigger is **Calendar**, **Hours** or **Distance**."
+            "term": "Who does this",
+            "definition": "**Maintenance Planner / Workshop In-charge** schedules PM and monitors upcoming and overdue maintenance. **Mechanic / Technician** fills the Maintenance Form. **Maintenance Supervisor** reviews maintenance with issues, skips a service where required and creates Work Orders."
           },
           {
-            "term": "Columns",
-            "definition": "The list shows **Last PM Due**, **Current** and **Next PM Due**, plus status columns, so you can see which equipment is due."
+            "term": "Preventive Maintenance page",
+            "definition": "From **Home**, open **Equipment Management → Maintenance → Preventive Maintenance**. Use the dropdown (**All**, **Calendar**, **Hours**, **Distance**) to filter by trigger type, **Search** by Equipment / Accessory ID, the list or grid icon (top right) to switch between list view and card view, and the **Save layout** icon to save the selected view. Click **Schedule PM** to add a schedule."
           },
           {
-            "term": "Where this data comes from",
-            "definition": "Intervals, hours thresholds and checklists are set in **Settings → Maintenance Config → PM Interval Configuration** (see \"Configure Maintenance: PM Intervals and Work Order Types\")."
+            "term": "Schedule label (PM card)",
+            "definition": "The trigger and interval, for example CALENDAR (EVERY 5 DAYS), HOURS (EVERY 1 HOURS) or DISTANCE (EVERY 100 KILOMETER)."
           },
           {
-            "term": "Preventive Maintenance and Equipment Setup",
-            "definition": "Some guides describe building maintenance packages in an **Equipment Setup** wizard (see the section **Equipment Setup**). If your menu shows **Maintenance → Preventive Maintenance**, schedule PM there."
+            "term": "Equipment (PM card)",
+            "definition": "The equipment or accessory ID and name."
+          },
+          {
+            "term": "Status chip",
+            "definition": "**UPCOMING** when the maintenance is not yet due, **OVERDUE** when the due point has passed."
+          },
+          {
+            "term": "Schedule Type (PM card)",
+            "definition": "The trigger type and interval."
+          },
+          {
+            "term": "Last PM",
+            "definition": "The date, hours or distance at which the last PM was done (Cal / Hrs / Dist)."
+          },
+          {
+            "term": "Next PM Due",
+            "definition": "The date, hours or distance at which the next PM is due. It is calculated from the Last PM and the interval."
+          },
+          {
+            "term": "Current",
+            "definition": "The current date, hours or distance of the equipment."
+          },
+          {
+            "term": "Inspection (PM card)",
+            "definition": "The status of the maintenance form: **FORM READY** or **INPROGRESS WITH ISSUES**."
+          },
+          {
+            "term": "Calendar schedule type",
+            "definition": "Maintenance is due after a fixed period of time, for example every 5 Days or every 30 Days, counted from the last PM date."
+          },
+          {
+            "term": "Hours schedule type",
+            "definition": "Maintenance is due after a set number of running hours, for example every 250 Hours, based on the equipment's hour meter reading."
+          },
+          {
+            "term": "Distance schedule type",
+            "definition": "Maintenance is due after a set distance travelled, for example every 100 Kilometer, based on the equipment's odometer reading."
+          },
+          {
+            "term": "Card actions",
+            "definition": "**View** opens the maintenance form to fill and submit. **Schedule PM** schedules the PM for the equipment. **Skip Service** skips the current service and moves the schedule to the next due point. **Create Work Order** raises a Work Order for the equipment from the PM, for example when the maintenance form has issues; it is created in the Work Order module."
+          },
+          {
+            "term": "Where this data comes from and goes",
+            "definition": "The interval for each schedule type comes from the PM Interval Configuration of the equipment's category (**Settings → Maintenance Config**). The current hours and distance for Hours and Distance schedules come from the Telematics Device mapped to the equipment, so map the device before scheduling these types. PM due dates feed the **Maintenance Calendar**, and a Work Order raised from a PM goes to the Work Order module."
           }
         ],
         "procedures": [
           {
+            "title": "Use the Preventive Maintenance page",
+            "steps": [
+              "Navigate to **Equipment Management → Maintenance** and click the **Preventive Maintenance** sub-tab.",
+              "Select **All**, **Calendar**, **Hours** or **Distance** in the dropdown to filter the schedules by trigger type.",
+              "Type in **Search** using the Equipment / Accessory ID to find a schedule.",
+              "Click the list or grid icon at the top right to switch between the list view and the card view.",
+              "Click the **Save layout** icon to save the selected view."
+            ],
+            "images": [
+              {
+                "src": "assets/guides/equipment/570.png",
+                "caption": "Navigate to Equipment Management → Maintenance and click the Preventive…",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/equipment/571.png",
+                "caption": "Select All, Calendar, Hours or Distance in the dropdown to filter the…",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/equipment/572.png",
+                "caption": "Type in Search using the Equipment / Accessory ID to find a schedule.",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/equipment/573.png",
+                "caption": "Click the list or grid icon at the top right to switch between the list view…",
+                "step": 4
+              },
+              {
+                "src": "assets/guides/equipment/574.png",
+                "caption": "Click the Save layout icon to save the selected view.",
+                "step": 5
+              }
+            ]
+          },
+          {
             "title": "Schedule preventive maintenance",
             "steps": [
-              "From **Home**, open **Equipment Management → Maintenance → Preventive Maintenance**.",
-              "Click **Schedule PM**.",
-              "Choose the equipment and the trigger: **Calendar**, **Hours** or **Distance**.",
-              "Confirm. The **Last PM Due**, **Current** and **Next PM Due** columns then show where it stands."
+              "Click **Schedule PM**. The **Schedule PM** window opens.",
+              "Use the **Equipment / Accessory** toggle to choose an equipment or an accessory.",
+              "Select the **Equipment** (or **Accessory**) from the dropdown.",
+              "Select one or more **Schedule Type** values: **CALENDAR**, **HOURS** or **DISTANCE**. Click **Select All** to select all three.",
+              "Select the **Interval** for the respective Schedule Type.",
+              "Click on the schedule. A card is created for each schedule type."
             ],
-            "note": "For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
+            "images": [
+              {
+                "src": "assets/guides/equipment/575.png",
+                "caption": "Click Schedule PM. The Schedule PM window opens.",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/equipment/576.png",
+                "caption": "Use the Equipment / Accessory toggle to choose an equipment or an accessory.",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/equipment/577.png",
+                "caption": "Select the Equipment (or Accessory) from the dropdown.",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/equipment/578.png",
+                "caption": "Select one or more Schedule Type values: CALENDAR, HOURS or DISTANCE. Click…",
+                "step": 4
+              },
+              {
+                "src": "assets/guides/equipment/579.png",
+                "caption": "Select the Interval for the respective Schedule Type.",
+                "step": 5
+              },
+              {
+                "src": "assets/guides/equipment/580.png",
+                "caption": "Click on the schedule. A card is created for each schedule type.",
+                "step": 6
+              }
+            ],
+            "note": "The current hours and distance for Hours and Distance schedule types come from the Telematics Device mapped to the equipment. Map the telematics device to the equipment before scheduling these types. The interval for each type comes from the PM Interval Configuration of the equipment's category."
+          },
+          {
+            "title": "Fill the maintenance form",
+            "steps": [
+              "Click the **View** icon on the PM card. The maintenance form linked in the PM Interval Configuration opens.",
+              "Select the response for each maintenance item and record an issue for any failed item, in the same way as a field inspection.",
+              "Fill the **Form Details**. Click **Submit**."
+            ],
+            "images": [
+              {
+                "src": "assets/guides/equipment/581.png",
+                "caption": "Click the View icon on the PM card. The maintenance form linked in the PM…",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/equipment/582.png",
+                "caption": "Select the response for each maintenance item and record an issue for any…",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/equipment/583.png",
+                "caption": "Fill the Form Details. Click Submit.",
+                "step": 3
+              }
+            ]
+          },
+          {
+            "title": "Use the PM card actions",
+            "steps": [
+              "Click **View** to open the maintenance form for the schedule, to fill it and submit it.",
+              "Click **Schedule PM** to schedule the PM for the equipment.",
+              "Click **Skip Service** to skip the current service and move the schedule to the next due point.",
+              "Click **Create Work Order** to raise a Work Order for the equipment from the PM, for example when the maintenance form has issues."
+            ],
+            "images": [
+              {
+                "src": "assets/guides/equipment/584.png",
+                "caption": "Click Create Work Order to raise a Work Order for the equipment from the PM,…",
+                "step": 4
+              }
+            ],
+            "note": "Selecting **Create Work Order** creates the work order in the Work Order module."
           }
         ]
       },
@@ -20966,22 +21207,87 @@ const MODULES = [
       },
       {
         "heading": "Maintenance Calendar",
-        "intro": "<p>Use the **Maintenance Calendar** to see scheduled maintenance by day across a month. Maintenance planners and field crews use it to see what is ready, in progress or done.</p>",
+        "intro": "<p>Use the **Maintenance Calendar** to review the maintenance forms due on each date, colour-coded by status. Maintenance Planners and Maintenance Supervisors use it to see what is scheduled, what is ready and what has issues.</p><p>The calendar displays only the Scheduled PM forms for the equipment on the selected scheduled dates, so dates appear here once PM has been scheduled in **Preventive Maintenance**.</p>",
         "definitions": [
           {
+            "term": "Who does this",
+            "definition": "**Maintenance Planner** and **Maintenance Supervisor** review the forms due on each date."
+          },
+          {
             "term": "Maintenance Calendar",
-            "definition": "From **Home**, open **Equipment Management → Maintenance → Maintenance Calendar**. It is a month calendar."
+            "definition": "From **Home**, open **Equipment Management → Maintenance → Maintenance Calendar**. The **Select date** calendar on the left shows the current month; dates with a small dot have maintenance forms scheduled. The right panel shows the assigned Maintenance forms for the selected date."
           },
           {
             "term": "Status legend",
-            "definition": "**Not Ready**, **Ready**, **In Progress With Issues** and **Completed**."
+            "definition": "Colour-coded at the top right of the page: **Grey** is Not Ready, **Blue** is Ready, **Amber** (with a warning icon) is In Progress With Issues, **Green** is Completed."
           },
           {
-            "term": "Related screens",
-            "definition": "Maintenance forms are set up in **Settings → Equipment Forms** and completed from **Field Inspections**; PM schedules are in **Preventive Maintenance**."
+            "term": "Not Ready (grey)",
+            "definition": "The form is on the calendar but not ready to be filled yet."
+          },
+          {
+            "term": "Ready (blue)",
+            "definition": "The form is ready to be filled."
+          },
+          {
+            "term": "In Progress With Issues (amber, warning icon)",
+            "definition": "The form has failed items with issues. Review these on the Preventive Maintenance page and create a Work Order where required."
+          },
+          {
+            "term": "Completed (green)",
+            "definition": "The form is complete."
+          },
+          {
+            "term": "Where this data comes from",
+            "definition": "The dates come from PM scheduled in **Preventive Maintenance**, which uses the intervals in **Settings → Maintenance Config**."
           }
         ],
-        "procedures": []
+        "procedures": [
+          {
+            "title": "Use the Maintenance Calendar",
+            "steps": [
+              "Navigate to **Equipment Management → Maintenance**. Click the **Maintenance Calendar** sub-tab. The **Select date** calendar opens on the left, showing the current month.",
+              "Click the month and year dropdown under **Select date** and select the required month, or use the left and right arrows to move one month back or forward.",
+              "Check the dates marked with a small dot. These dates have maintenance forms scheduled.",
+              "Click the required date. The date is highlighted and the right panel shows the assigned Maintenance forms for that date.",
+              "Check the colour of each form against the legend at the top right of the page to see its status.",
+              "Click a form to open it."
+            ],
+            "images": [
+              {
+                "src": "assets/guides/equipment/585.png",
+                "caption": "Navigate to Equipment Management → Maintenance. Click the Maintenance…",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/equipment/586.png",
+                "caption": "Click the month and year dropdown under Select date and select the required…",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/equipment/587.png",
+                "caption": "Check the dates marked with a small dot. These dates have maintenance forms…",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/equipment/588.png",
+                "caption": "Click the required date. The date is highlighted and the right panel shows…",
+                "step": 4
+              },
+              {
+                "src": "assets/guides/equipment/589.png",
+                "caption": "Click a form to open it.",
+                "step": 6
+              },
+              {
+                "src": "assets/guides/equipment/590.png",
+                "caption": "Click a form to open it.",
+                "step": 6
+              }
+            ],
+            "note": "Entries marked with a warning icon are **In Progress With Issues**. Review these on the Preventive Maintenance page and create a Work Order where required."
+          }
+        ]
       },
       {
         "heading": "Reports",
