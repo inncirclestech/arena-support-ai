@@ -1576,19 +1576,6 @@ const QA_EQUIPMENT = [
     ]
   },
   {
-    "action": "create",
-    "object": "maintenance form template",
-    "scope": "module",
-    "section": "Equipment Forms",
-    "question": "How do I build or edit maintenance/inspection form templates, and how do I create a new one?",
-    "answer": "1. Go to **Equipment Management → Settings → Equipment Management Forms → Maintenance Forms** (this lives in the module's own Settings, not Global Data), click **Create Form**.\n2. Step 1, **Build Form**: click **Add section**, then add fields from the field-type library (Attachment, Check box, Date, Label, Multi select, Paragraph, Roster, Scribble, Single select, Table, Text box, Time, Signature).\n3. Step 2, **Setup Trigger Points**: tick which fields should let end-users raise an issue if that checkpoint fails.\n4. Step 3, **Preview Form**: check the form as end-users will see it, including company branding.\n5. Click **Save Changes**.",
-    "tags": [
-      "maintenance builder",
-      "create form template",
-      "maintenance form builder"
-    ]
-  },
-  {
     "action": "define",
     "object": "form field types",
     "scope": "module",
@@ -3365,22 +3352,6 @@ const QA_EQUIPMENT = [
     ]
   },
   {
-    "action": "configure",
-    "object": "maintenance config",
-    "scope": "module",
-    "section": "Maintenance Config",
-    "question": "What is Maintenance Config and what does it contain?",
-    "answer": "From **Home**, open **Equipment Management → Settings → Maintenance Config**. **PM Interval Configuration** lists **Category**, **Interval**, **Type**, **Hours Threshold** and **Check List**. The same screen has **Work Order Types**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
-    "tags": [
-      "maintenance config",
-      "pm interval configuration",
-      "work order types maintenance",
-      "hours threshold",
-      "pm checklist",
-      "maintenance settings"
-    ]
-  },
-  {
     "action": "view",
     "object": "equipment reports",
     "scope": "module",
@@ -3542,6 +3513,189 @@ const QA_EQUIPMENT = [
       "inspection list columns",
       "inspector priority",
       "field inspection screen"
+    ]
+  },
+  {
+    "action": "create",
+    "object": "inspection checklist",
+    "scope": "module",
+    "section": "Equipment Forms",
+    "question": "How do I create an inspection checklist?",
+    "answer": "From **Home**, open **Equipment Management → Settings → Equipment Management Forms**, open **Inspection Checklists** and click **Create Form**.\n1. **Step 1 – Create Inspection Items:** click **Create**, enter the **Name** of each item; drag to reorder; **Edit** or **Delete** under **Actions**.\n2. **Step 2 – Inspection Items Response:** **Yes** is added by default; click **Create** to add **No** and set the options for each item.\n3. **Step 3 – Build Form:** enter the **Form Title**, click **Add field**, pick the type from **Choose type**, set **Required** and the **Name**, then **Save Changes**.\n4. **Step 4 – Setup Trigger Points:** tick **Raise Issue when the field is updated** for the failing response.\n5. **Step 5 – Preview Form** to check it.\nThen link the checklist to categories in **Settings → Equipment Setup / Accessory Setup**.",
+    "tags": [
+      "create inspection checklist",
+      "new inspection checklist",
+      "inspection checklist builder",
+      "build inspection form",
+      "inspection form template",
+      "checkpoint builder",
+      "create form"
+    ]
+  },
+  {
+    "action": "create",
+    "object": "maintenance form",
+    "scope": "module",
+    "section": "Equipment Forms",
+    "question": "How do I create a maintenance form?",
+    "answer": "From **Home**, open **Equipment Management → Settings → Equipment Management Forms**, click the arrow on **Maintenance Forms** and click **Create Form**. The builder has the same five steps as an inspection checklist: **Create Inspection Items** (for example Engine oil change), **Inspection Items Response**, **Build Form**, **Setup Trigger Points** and **Preview Form**. Then select the form in **Settings → Maintenance Config** when you add a PM interval; only saved forms are available there.",
+    "tags": [
+      "create maintenance form",
+      "new maintenance form",
+      "maintenance form builder",
+      "pm form",
+      "build maintenance checklist"
+    ]
+  },
+  {
+    "action": "define",
+    "object": "form builder steps",
+    "scope": "module",
+    "section": "Equipment Forms",
+    "question": "What are the five steps of the form builder?",
+    "answer": "Both **Inspection Checklists** and **Maintenance Forms** use the same five steps: 1. **Create Inspection Items** (the checkpoints), 2. **Inspection Items Response** (the answer options such as Yes / No), 3. **Build Form** (extra fields under **Form Details**: readings, locations, attachments), 4. **Setup Trigger Points** (the responses that raise an issue against an item), 5. **Preview Form** (see the final form before it is saved).",
+    "tags": [
+      "form builder steps",
+      "five steps",
+      "trigger points",
+      "build form",
+      "preview form",
+      "inspection items response"
+    ]
+  },
+  {
+    "action": "edit",
+    "object": "checklist or maintenance form",
+    "scope": "module",
+    "section": "Equipment Forms",
+    "question": "How do I edit or delete an inspection checklist or maintenance form?",
+    "answer": "From **Home**, open **Equipment Management → Settings → Equipment Management Forms** and open **Inspection Checklists** or **Maintenance Forms**. Click the ⋮ menu on the form card and choose **Edit** or **Delete**. An inspection form that is already linked to a category cannot be deleted.",
+    "tags": [
+      "edit inspection checklist",
+      "delete inspection checklist",
+      "cannot delete checklist",
+      "delete maintenance form",
+      "edit form card"
+    ]
+  },
+  {
+    "action": "define",
+    "object": "who builds forms",
+    "scope": "module",
+    "section": "Equipment Forms",
+    "question": "Who creates inspection checklists and maintenance forms?",
+    "answer": "The **Equipment Management Administrator** (System Administrator / Equipment Admin) creates them in **Settings → Equipment Management Forms**, links checklists to categories and sets the PM intervals. Field inspectors and mechanics only fill them in. Access is given through User Groups under **Settings → Users and Permissions**.",
+    "tags": [
+      "who creates checklist",
+      "equipment admin",
+      "forms permission"
+    ]
+  },
+  {
+    "action": "link",
+    "object": "inspection checklist category",
+    "scope": "module",
+    "section": "Equipment Setup",
+    "question": "How do I link an inspection checklist to an equipment category?",
+    "answer": "From **Home**, open **Equipment Management → Settings → Equipment Setup**. Click **Add Category** (or the **Edit** icon under **Actions** on an existing one), select the **Equipment Cost Code** and **Default Rate Card Template** for a new category, then in the **Inspection Checklist** dropdown search and select one or more checklists (**Select All** selects every checklist) and click **Submit**. The linked checklists appear in the **Inspection Checklist** column and become the **Inspection Type** choices for that category's equipment.",
+    "tags": [
+      "link checklist to category",
+      "inspection checklist category",
+      "equipment category checklist",
+      "map checklist",
+      "equipment categories",
+      "select all checklists"
+    ]
+  },
+  {
+    "action": "link",
+    "object": "inspection checklist accessory category",
+    "scope": "module",
+    "section": "Equipment Setup",
+    "question": "How do I link an inspection checklist to an accessory category?",
+    "answer": "From **Home**, open **Equipment Management → Settings → Accessory Setup**. Click **Add Category** (or the **Edit** icon on an existing category), select the **Equipment Cost Code** and **Default Rate Card Template**, select one or more checklists in **Inspection Checklist**, and click **Submit**.",
+    "tags": [
+      "accessory category checklist",
+      "accessory setup",
+      "accessory categories",
+      "link checklist accessory"
+    ]
+  },
+  {
+    "action": "upload",
+    "object": "categories excel",
+    "scope": "module",
+    "section": "Equipment Setup",
+    "question": "How do I upload equipment or accessory categories in bulk?",
+    "answer": "From **Home**, open **Equipment Management → Settings → Equipment Setup** (or **Accessory Setup**) and click **Upload Excel**. Download the sample Excel format, enter the category details as per the instructions, save the file and upload the filled file.",
+    "tags": [
+      "bulk upload categories",
+      "upload excel categories",
+      "category excel sample"
+    ]
+  },
+  {
+    "action": "troubleshoot",
+    "object": "no inspection type",
+    "scope": "module",
+    "section": "Equipment Setup",
+    "question": "Why is no Inspection Type available when I create a field inspection?",
+    "answer": "The **Inspection Type** list only shows the checklists linked to the equipment's category, and loads after you select the equipment. Link a checklist in **Settings → Equipment Setup** (or **Settings → Accessory Setup** for accessories) by editing the category and selecting it in **Inspection Checklist**. The equipment must also exist in the Equipment Master.",
+    "tags": [
+      "inspection type empty",
+      "no inspection type",
+      "checklist not showing",
+      "inspection type not loading",
+      "why no checklist"
+    ]
+  },
+  {
+    "action": "add",
+    "object": "pm interval",
+    "scope": "module",
+    "section": "Maintenance Config",
+    "question": "How do I add a PM interval?",
+    "answer": "From **Home**, open **Equipment Management → Settings → Maintenance Config**. The **PM Interval Configuration** list opens.\n1. Click **Add**.\n2. Select the **Category**.\n3. Under **Intervals**, select the **Trigger Type** (Calendar / Hours / Distance), enter the **Trigger Value** and select the **Trigger Unit**.\n4. Click **Add Interval** for another trigger on the same category (the **Delete** icon removes a row).\n5. Select the **Maintenance Form**.\n6. Click **Submit**. The interval shows in the list with the **Status** toggle on.",
+    "tags": [
+      "add pm interval",
+      "pm interval configuration",
+      "add interval",
+      "preventive maintenance interval",
+      "trigger type",
+      "trigger value",
+      "set maintenance frequency"
+    ]
+  },
+  {
+    "action": "define",
+    "object": "add interval fields",
+    "scope": "module",
+    "section": "Maintenance Config",
+    "question": "What fields are on the Add Interval window?",
+    "answer": "**Category** (the equipment or accessory category), **Trigger Type** (Calendar, Hours or Distance), **Trigger Value** (for example 2, 100 or 200), **Trigger Unit** (for example Days for Calendar; loads after you pick the type) and **Maintenance Form** (the form filled when the maintenance is done). All are mandatory.",
+    "tags": [
+      "add interval fields",
+      "trigger unit",
+      "trigger value",
+      "maintenance form dropdown"
+    ]
+  },
+  {
+    "action": "define",
+    "object": "pm interval list",
+    "scope": "module",
+    "section": "Maintenance Config",
+    "question": "What does the PM Interval Configuration list show, and how do I switch an interval off?",
+    "answer": "From **Home**, open **Equipment Management → Settings → Maintenance Config**. The list shows **Category**, **Interval** (for example 100 DAYS / 100 HOURS / 200 KILOMETERS), **Type**, **Hours Threshold**, **Check List** (the linked maintenance form), **Status** and **Actions**. Use the **Status** toggle to activate or deactivate an interval, and the **Edit** or **Delete** icon under **Actions**. If the interval is off, the equipment cannot be added to maintenance. Maintenance Config also holds **Work Order Types**.",
+    "tags": [
+      "maintenance config",
+      "pm interval list",
+      "hours threshold",
+      "status toggle",
+      "deactivate interval",
+      "work order types maintenance",
+      "maintenance settings",
+      "cannot add equipment to maintenance"
     ]
   }
 ];
@@ -20653,8 +20807,36 @@ const MODULES = [
       },
       {
         "heading": "Equipment Setup",
-        "intro": "<p>Equipment that isn't maintained on schedule is equipment that fails at the worst possible moment — mid-pour, mid-lift, or mid-shift, when the cost of downtime is highest. Rather than relying on a Fleet Manager to remember every crane's inspection date by hand, Equipment Setup lets a <strong>Fleet/Equipment Module Manager or Equipment Management Admin</strong> build that discipline into the system once, as a maintenance package, so the right form reaches the right crew member automatically instead of depending on someone's memory.</p><p>The Equipment Setup tab (not the same as Settings → Equipment Setup, which configures categories for registration) is where administrators define recurring maintenance obligations for equipment — grouping items together into a maintenance package that bundles which equipment needs attention, what forms need to be filled out, how often, and who's responsible. Rather than manually reminding field crews to inspect or service equipment, a properly configured maintenance package automates that entire cadence, surfacing the right form to the right person at the right time.</p>\n    <p>The screen is built around a four-step wizard, launched via Create Maintenance Package, that walks you through listing the equipment covered, identifying which forms apply, setting the schedule, and assigning the crew responsible. This structure matters because the four pieces are genuinely independent decisions — the same form might apply to different equipment on different schedules, and different crews might be responsible for different packages — so Arena separates them into discrete wizard steps rather than one large form.</p>\n    <p>A particularly important design choice is the Recurrence Type setting in the Prepare Schedule step: maintenance can be triggered either on a fixed calendar cadence (Daily or Weekly) or dynamically, as part of the equipment's own check-out or check-in step (in the earlier Load Out Request flow). This second option, Check Out or Check In recurrence, makes a maintenance form a condition of the equipment leaving or returning to inventory.</p>",
+        "intro": "<p>Use **Settings → Equipment Setup** and **Settings → Accessory Setup** to decide which inspection checklists apply to each equipment and accessory category. Equipment Management Administrators do this once; only the checklists linked to a category are then offered as the **Inspection Type** when an inspector creates a field inspection for equipment or an accessory of that category.</p><p>The **Equipment Setup** tab in the module (not the Settings page above) is where a Fleet / Equipment Module Manager builds recurring maintenance packages: equipment, forms, schedule and crew in one four-step wizard.</p>",
         "definitions": [
+          {
+            "term": "Who does this",
+            "definition": "The **Equipment Management Administrator** links checklists to categories. Inspectors then pick from the linked checklists when creating a field inspection."
+          },
+          {
+            "term": "Equipment Categories",
+            "definition": "The list under **Settings → Equipment Setup**. Click **Add Category** to add one, or the **Edit** icon under **Actions** to change one. The linked checklists are shown in the **Inspection Checklist** column."
+          },
+          {
+            "term": "Accessory Categories",
+            "definition": "The list under **Settings → Accessory Setup**, with the same **Add Category**, **Edit** and **Inspection Checklist** column as equipment categories."
+          },
+          {
+            "term": "Equipment Cost Code and Default Rate Card Template",
+            "definition": "Selected in the category dialog when you add a new category, together with the **Inspection Checklist**."
+          },
+          {
+            "term": "Inspection Checklist (category dropdown)",
+            "definition": "Type in **Search** to find a checklist and select one or more; click **Select All** to select every checklist. Checklists come from **Settings → Equipment Management Forms → Inspection Checklists**."
+          },
+          {
+            "term": "Where this data goes",
+            "definition": "The checklists linked here feed the **Inspection Type** list in **Maintenance → Field Inspections → New Inspection** for equipment of that category. If a category has no checklist linked, no Inspection Type is available for its equipment or accessories."
+          },
+          {
+            "term": "Upload Excel (categories)",
+            "definition": "Button on the Equipment Categories and Accessory Categories pages to add categories in bulk from a filled sample Excel file."
+          },
           {
             "term": "Maintenance Package",
             "definition": "A configured bundle, created via the Create Maintenance Package wizard, that groups a set of equipment together with the maintenance forms that apply to them and the schedule on which those forms should be completed. It is the mechanism that drives both scheduled field inspections and, when configured with Check Out/Check In recurrence, the maintenance gates inside the Load Out Request flow."
@@ -20686,6 +20868,135 @@ const MODULES = [
         ],
         "procedures": [
           {
+            "title": "Link inspection checklists to an equipment category",
+            "steps": [
+              "Click **Settings → Equipment Setup**. The **Equipment Categories** list opens.",
+              "Click **Add Category** to add a new category, or click the **Edit** icon under **Actions** on an existing one.",
+              "When adding a new category, select the **Equipment Cost Code** and **Default Rate Card Template** in the dialog.",
+              "In the **Inspection Checklist** dropdown, type in **Search** to find a checklist and select one or more checklists. Click **Select All** to select every checklist.",
+              "Click **Submit**. The linked checklists are shown in the **Inspection Checklist** column."
+            ],
+            "images": [
+              {
+                "src": "assets/guides/equipment/517.png",
+                "caption": "Click Settings → Equipment Setup. The Equipment Categories list opens.",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/equipment/518.png",
+                "caption": "Click Add Category to add a new category, or click the Edit icon under…",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/equipment/519.png",
+                "caption": "Click Add Category to add a new category, or click the Edit icon under…",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/equipment/520.png",
+                "caption": "When adding a new category, select the Equipment Cost Code and Default Rate…",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/equipment/521.png",
+                "caption": "In the Inspection Checklist dropdown, type in Search to find a checklist and…",
+                "step": 4
+              },
+              {
+                "src": "assets/guides/equipment/522.png",
+                "caption": "Click Submit. The linked checklists are shown in the Inspection Checklist…",
+                "step": 5
+              },
+              {
+                "src": "assets/guides/equipment/523.png",
+                "caption": "Click Submit. The linked checklists are shown in the Inspection Checklist…",
+                "step": 5
+              }
+            ]
+          },
+          {
+            "title": "Link inspection checklists to an accessory category",
+            "steps": [
+              "Click **Settings → Accessory Setup**. The **Accessory Categories** list opens.",
+              "Click **Add Category**, or click the **Edit** icon on an existing category.",
+              "When adding a new category, select the **Equipment Cost Code** and **Default Rate Card Template**.",
+              "Select one or more checklists in the **Inspection Checklist** dropdown.",
+              "Click **Submit**."
+            ],
+            "images": [
+              {
+                "src": "assets/guides/equipment/524.png",
+                "caption": "Click Settings → Accessory Setup. The Accessory Categories list opens.",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/equipment/525.png",
+                "caption": "Click Add Category, or click the Edit icon on an existing category.",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/equipment/526.png",
+                "caption": "Click Add Category, or click the Edit icon on an existing category.",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/equipment/527.png",
+                "caption": "When adding a new category, select the Equipment Cost Code and Default Rate…",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/equipment/528.png",
+                "caption": "Select one or more checklists in the Inspection Checklist dropdown.",
+                "step": 4
+              },
+              {
+                "src": "assets/guides/equipment/529.png",
+                "caption": "Click Submit.",
+                "step": 5
+              }
+            ]
+          },
+          {
+            "title": "Upload equipment or accessory categories in bulk",
+            "steps": [
+              "Click **Upload Excel** on the **Equipment Categories** or **Accessory Categories** page.",
+              "Download the sample Excel format and enter the category details as per the instructions given.",
+              "Save the file and upload the filled file."
+            ],
+            "images": [
+              {
+                "src": "assets/guides/equipment/530.png",
+                "caption": "Click Upload Excel on the Equipment Categories or Accessory Categories page.",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/equipment/531.png",
+                "caption": "Click Upload Excel on the Equipment Categories or Accessory Categories page.",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/equipment/532.png",
+                "caption": "Download the sample Excel format and enter the category details as per the…",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/equipment/533.png",
+                "caption": "Download the sample Excel format and enter the category details as per the…",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/equipment/534.png",
+                "caption": "Save the file and upload the filled file.",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/equipment/535.png",
+                "caption": "Save the file and upload the filled file.",
+                "step": 3
+              }
+            ]
+          },
+          {
             "title": "Setting up a recurring maintenance schedule",
             "steps": [
               "Go to <strong>Equipment Setup</strong> and click <strong>Create Maintenance Package</strong>.",
@@ -20715,23 +21026,51 @@ const MODULES = [
       },
       {
         "heading": "Equipment Forms",
-        "intro": "<p>This section covers the form builders in the module <strong>Settings</strong> (breadcrumb Equipment Forms): the <strong>Inspection Checklist</strong>, the maintenance and utilization forms, and, on earlier-version environments, the Load Out Request stage forms. It also covers <strong>Adobe Acrobat Sign</strong>, set up once in Global Data to sign Rentals lease agreements.</p><p>An Equipment Management Admin or a Maintenance / Fleet Module Manager builds these once, and every inspection and maintenance form downstream depends on them.</p>",
+        "intro": "<p>Use **Equipment Management Forms** to build the **Inspection Checklists** checked during a field inspection and the **Maintenance Forms** completed during preventive maintenance. Equipment Management Administrators (System Administrator or Equipment Admin) build them once in Settings; inspectors and mechanics then fill them in the field. Both are built in the checkpoint Builder using the same five-step form builder.</p><p>Linking a checklist to a category happens in **Equipment Setup** and **Accessory Setup**, and a maintenance form is chosen in **Maintenance Config**. **Adobe Acrobat Sign**, set up once in Global Data, signs Rentals lease agreements.</p>",
         "definitions": [
           {
-            "term": "Maintenance Builder (Equipment Maintenance Forms)",
-            "definition": "The module's own screen (not Global Data) for building and editing maintenance/inspection form templates — reached via Equipment Management → Settings → Equipment Management Forms → Maintenance Forms. A 3-step wizard: Build Form, Setup Trigger Points, Preview Form. Forms are structured with Add Section and populated with fields from a library of field types."
+            "term": "Who does this",
+            "definition": "The **Equipment Management Administrator** (System Administrator / Equipment Admin) creates the Inspection Checklists and Maintenance Forms. Access for each role is given through User Groups and their permissions under **Settings → Users and Permissions**."
+          },
+          {
+            "term": "Inspection Checklists (tile)",
+            "definition": "One of two tiles under **Settings → Equipment Management Forms**. Open it to reach the checkpoint Builder, where each existing checklist form is a card. A checklist holds the checkpoints checked during a field inspection."
+          },
+          {
+            "term": "Maintenance Forms (tile)",
+            "definition": "The second tile under **Settings → Equipment Management Forms**. A maintenance form holds the checks completed during preventive maintenance, for example Engine oil change or Air filter replacement. Only saved maintenance forms appear in the **Maintenance Form** dropdown of **Maintenance Config → PM Interval Configuration**."
+          },
+          {
+            "term": "Create Form",
+            "definition": "The button in the checkpoint Builder that opens the five-step form builder for a new checklist or maintenance form. Use the ⋮ menu on a form card to **Edit** or **Delete** it. Once an inspection form is linked to a category it cannot be deleted."
+          },
+          {
+            "term": "Step 1 – Create Inspection Items",
+            "definition": "The list of checkpoints in the form. Click **Create** and enter the **Name** of each item. Items are listed with their **S.No** and **Name**; drag the handle on the left to reorder, and use the **Edit** and **Delete** icons under **Actions** to rename or remove an item."
+          },
+          {
+            "term": "Step 2 – Inspection Items Response",
+            "definition": "The answer options for each checkpoint. **Yes** is added by default; click **Create** to add another response type, such as **No**, then set the response options for each item."
+          },
+          {
+            "term": "Step 3 – Build Form",
+            "definition": "The additional fields shown under **Form Details**, such as readings, locations and attachments. Enter the **Form Title**, click **Add field**, pick the type from the **Choose type** dropdown, turn the **Required** toggle on or off, and enter the **Name** shown on the form. Use **Actions** to add, duplicate or delete a field, then click **Save Changes**."
+          },
+          {
+            "term": "Step 4 – Setup Trigger Points",
+            "definition": "The responses that raise an issue against an item. Open the **Section Dropdown** and tick **Raise Issue when the field is updated** for the response that marks an item as failed."
+          },
+          {
+            "term": "Step 5 – Preview Form",
+            "definition": "A preview of the final form, exactly as the field user will see it, before it is saved."
           },
           {
             "term": "Form field types",
-            "definition": "The available field types in the Maintenance Builder: Attachment, Check box, Date, Label, Multi select, Paragraph, Roster, Scribble (signature/print name), Single select, Table (with configurable rows/columns), Text box (the default type), Time, and Signature."
+            "definition": "The field types in the **Choose type** dropdown include Attachment, Check box, Date, Label, Multi select, Paragraph, Roster, Scribble (signature/print name), Single select, Table (with configurable rows/columns), Text box (the default type), Time, and Signature."
           },
           {
-            "term": "Setup Trigger Points",
-            "definition": "The 2nd step of the Maintenance Builder wizard, where you tick which fields should let end-users raise an issue directly from that field if the checkpoint fails during an inspection. This is what connects the form builder to the automatic issue-routing behavior seen throughout Field Inspections and Load Out Request."
-          },
-          {
-            "term": "Preview Form (form builder)",
-            "definition": "The 3rd and final step of the Maintenance Builder wizard, showing the form exactly as end-users will see it, including company branding — useful for verifying a form's layout and content before publishing it for use."
+            "term": "Where this data goes",
+            "definition": "When a field user selects a trigger response for an item, an **Issue** panel opens under that item for **Priority**, **Observation** and **Upload Image**, and the inspection status becomes **In Progress with issues**. Each issue is created in **Equipment Management → Equipment Issues**. An inspection checklist reaches the inspection form through **Settings → Equipment Setup / Accessory Setup** (the **Inspection Type** list); a maintenance form reaches Preventive Maintenance through **Maintenance Config**."
           },
           {
             "term": "Equipment Management Forms (module Settings)",
@@ -20746,28 +21085,291 @@ const MODULES = [
             "definition": "All three names refer to the same module. This guide calls it **Equipment Management**. Arena lets each company rename terms to match its own standard (**Global Data → Settings → Naming Framework**), so your screens may say \"Equipment\" or \"Asset\" (for example **Asset Management**, **Asset Master**, **Asset Issues**). They are the same screens; this guide uses Equipment throughout."
           },
           {
-            "term": "Equipment Management Forms",
-            "definition": "The set of configurable form templates covering each stage of an equipment's lifecycle — Request, Check Out, Shipment, Ship, Load, In Transit, Delivered, Received, Lease Agreement, Maintenance Forms, and Equipment Utilization Forms & Logs — each configured via its own card under Settings."
-          },
-          {
-            "term": "Maintenance Forms",
-            "definition": "The Equipment Management Forms template governing what fields appear when scheduled or ad hoc equipment maintenance is logged."
-          },
-          {
             "term": "Equipment Utilization Forms & Logs",
             "definition": "The Equipment Management Forms template controlling the fields captured when logging how equipment is being utilized over time."
           }
         ],
         "procedures": [
           {
-            "title": "Building or editing a maintenance/inspection form template",
+            "title": "Create an inspection checklist",
             "steps": [
-              "Go to <strong>Equipment Management → Settings → Equipment Management Forms → Maintenance Forms</strong> and click <strong>Create Form</strong>.",
-              "On step 1, <strong>Build Form</strong>: click <strong>Add section</strong> to structure the form into logical groupings, and add fields from the field-type library (Attachment, Check box, Date, Label, Multi select, Paragraph, Roster, Scribble, Single select, Table, Text box, Time, or Signature).",
-              "On step 2, <strong>Setup Trigger Points</strong>: tick which fields should let end-users raise an issue if that checkpoint fails.",
-              "On step 3, <strong>Preview Form</strong>: check the form exactly as end-users will see it, including company branding.",
-              "Click <strong>Save Changes</strong>."
-            ]
+              "Go to **Home → Equipment Management**.",
+              "Click **Settings** at the top right of the page.",
+              "Click **Equipment Management Forms** in the left menu. Two tiles are displayed: **Inspection Checklists** and **Maintenance Forms**.",
+              "Click the arrow on the **Inspection Checklists** tile. The checkpoint Builder opens with the existing checklist forms as cards.",
+              "To change an existing form, click the ⋮ menu on its card and choose **Edit** or **Delete**.",
+              "Click **Create Form** to create a new checklist form.",
+              "**Step 1 – Create Inspection Items:** click **Create** and enter the **Name** of the inspection item. Repeat for each item.",
+              "Use the drag handle on the left of a row to reorder the items.",
+              "Click the **Edit** icon under **Actions** to rename an item, or the **Delete** icon to remove it.",
+              "**Step 2 – Inspection Items Response:** click **Inspection Items Response**. The **Yes** response type is added by default.",
+              "Click **Create** to add a new response type, such as **No**.",
+              "Set the response options for each inspection item, for example **Yes** and **No**.",
+              "**Step 3 – Build Form:** click **Build Form** and enter the **Form Title**.",
+              "Click **Add field**, then select the field type from the **Choose type** dropdown.",
+              "Turn the **Required** toggle on or off, and enter the **Name** to be displayed on the form.",
+              "Repeat to add and configure the required fields. Use **Actions** to add, duplicate or delete a field.",
+              "Click **Save Changes**.",
+              "**Step 4 – Setup Trigger Points:** click **Setup Trigger Points**.",
+              "Open the **Section Dropdown** and tick **Raise Issue when the field is updated** for the response that marks an item as failed.",
+              "**Step 5 – Preview Form:** click **Preview Form** and check the form as the field user will see it."
+            ],
+            "images": [
+              {
+                "src": "assets/guides/equipment/470.png",
+                "caption": "Go to Home → Equipment Management.",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/equipment/471.png",
+                "caption": "Click Settings at the top right of the page.",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/equipment/472.png",
+                "caption": "Click Equipment Management Forms in the left menu. Two tiles are displayed:…",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/equipment/473.png",
+                "caption": "Click Equipment Management Forms in the left menu. Two tiles are displayed:…",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/equipment/474.png",
+                "caption": "Click the arrow on the Inspection Checklists tile. The checkpoint Builder…",
+                "step": 4
+              },
+              {
+                "src": "assets/guides/equipment/475.png",
+                "caption": "To change an existing form, click the ⋮ menu on its card and choose Edit or…",
+                "step": 5
+              },
+              {
+                "src": "assets/guides/equipment/476.png",
+                "caption": "Click Create Form to create a new checklist form.",
+                "step": 6
+              },
+              {
+                "src": "assets/guides/equipment/477.png",
+                "caption": "Create Inspection Items: click Create and enter the Name of the inspection…",
+                "step": 7
+              },
+              {
+                "src": "assets/guides/equipment/478.png",
+                "caption": "Create Inspection Items: click Create and enter the Name of the inspection…",
+                "step": 7
+              },
+              {
+                "src": "assets/guides/equipment/479.png",
+                "caption": "Create Inspection Items: click Create and enter the Name of the inspection…",
+                "step": 7
+              },
+              {
+                "src": "assets/guides/equipment/480.png",
+                "caption": "Use the drag handle on the left of a row to reorder the items.",
+                "step": 8
+              },
+              {
+                "src": "assets/guides/equipment/481.png",
+                "caption": "Click the Edit icon under Actions to rename an item, or the Delete icon to…",
+                "step": 9
+              },
+              {
+                "src": "assets/guides/equipment/482.png",
+                "caption": "Inspection Items Response: click Inspection Items Response. The Yes response…",
+                "step": 10
+              },
+              {
+                "src": "assets/guides/equipment/483.png",
+                "caption": "Click Create to add a new response type, such as No.",
+                "step": 11
+              },
+              {
+                "src": "assets/guides/equipment/484.png",
+                "caption": "Click Create to add a new response type, such as No.",
+                "step": 11
+              },
+              {
+                "src": "assets/guides/equipment/485.png",
+                "caption": "Set the response options for each inspection item, for example Yes and No.",
+                "step": 12
+              },
+              {
+                "src": "assets/guides/equipment/486.png",
+                "caption": "Build Form: click Build Form and enter the Form Title.",
+                "step": 13
+              },
+              {
+                "src": "assets/guides/equipment/487.png",
+                "caption": "Click Add field, then select the field type from the Choose type dropdown.",
+                "step": 14
+              },
+              {
+                "src": "assets/guides/equipment/488.png",
+                "caption": "Click Add field, then select the field type from the Choose type dropdown.",
+                "step": 14
+              },
+              {
+                "src": "assets/guides/equipment/489.png",
+                "caption": "Turn the Required toggle on or off, and enter the Name to be displayed on…",
+                "step": 15
+              },
+              {
+                "src": "assets/guides/equipment/490.png",
+                "caption": "Turn the Required toggle on or off, and enter the Name to be displayed on…",
+                "step": 15
+              },
+              {
+                "src": "assets/guides/equipment/491.png",
+                "caption": "Repeat to add and configure the required fields. Use Actions to add,…",
+                "step": 16
+              },
+              {
+                "src": "assets/guides/equipment/492.png",
+                "caption": "Click Save Changes.",
+                "step": 17
+              },
+              {
+                "src": "assets/guides/equipment/493.png",
+                "caption": "Setup Trigger Points: click Setup Trigger Points.",
+                "step": 18
+              },
+              {
+                "src": "assets/guides/equipment/494.png",
+                "caption": "Open the Section Dropdown and tick Raise Issue when the field is updated for…",
+                "step": 19
+              },
+              {
+                "src": "assets/guides/equipment/495.png",
+                "caption": "Preview Form: click Preview Form and check the form as the field user will…",
+                "step": 20
+              }
+            ],
+            "note": "Once an inspection form is linked to a category, it cannot be deleted. Link the checklist to equipment and accessory categories in **Settings → Equipment Setup / Accessory Setup** so it appears as an **Inspection Type**."
+          },
+          {
+            "title": "Create a maintenance form",
+            "steps": [
+              "Click **Settings → Equipment Management Forms**, then click the arrow on the **Maintenance Forms** tile. The existing maintenance forms are displayed as cards.",
+              "Click **Create Form**. The form builder opens with the same five steps as an inspection checklist.",
+              "**Step 1 – Create Inspection Items:** click **Create** and enter the **Name** of the maintenance item, for example Engine oil change or Air filter replacement. Repeat for each item.",
+              "Drag the handle on the left of a row to reorder the items; use the **Edit** and **Delete** icons under **Actions** to rename or remove one.",
+              "**Step 2 – Inspection Items Response:** click **Inspection Items Response** (**Yes** is added by default), click **Create** to add a response such as **No**, then set the response options for each item.",
+              "**Step 3 – Build Form:** click **Build Form** and enter the **Form Title**.",
+              "Click **Add field**, select the type from **Choose type**, set the **Required** toggle and enter the **Name** to display. Repeat for each field.",
+              "Use **Actions** to add, duplicate or delete a field, then click **Save Changes**.",
+              "**Step 4 – Setup Trigger Points:** click **Setup Trigger Points**, open the **Section Dropdown** and tick **Raise Issue when the field is updated**.",
+              "**Step 5 – Preview Form:** click **Preview Form** and check the form as the mechanic will see it."
+            ],
+            "images": [
+              {
+                "src": "assets/guides/equipment/496.png",
+                "caption": "Click Settings → Equipment Management Forms, then click the arrow on the…",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/equipment/497.png",
+                "caption": "Click Settings → Equipment Management Forms, then click the arrow on the…",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/equipment/498.png",
+                "caption": "Click Create Form. The form builder opens with the same five steps as an…",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/equipment/499.png",
+                "caption": "Create Inspection Items: click Create and enter the Name of the maintenance…",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/equipment/500.png",
+                "caption": "Create Inspection Items: click Create and enter the Name of the maintenance…",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/equipment/501.png",
+                "caption": "Create Inspection Items: click Create and enter the Name of the maintenance…",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/equipment/502.png",
+                "caption": "Drag the handle on the left of a row to reorder the items; use the Edit and…",
+                "step": 4
+              },
+              {
+                "src": "assets/guides/equipment/503.png",
+                "caption": "Drag the handle on the left of a row to reorder the items; use the Edit and…",
+                "step": 4
+              },
+              {
+                "src": "assets/guides/equipment/504.png",
+                "caption": "Inspection Items Response: click Inspection Items Response (Yes is added by…",
+                "step": 5
+              },
+              {
+                "src": "assets/guides/equipment/505.png",
+                "caption": "Inspection Items Response: click Inspection Items Response (Yes is added by…",
+                "step": 5
+              },
+              {
+                "src": "assets/guides/equipment/506.png",
+                "caption": "Inspection Items Response: click Inspection Items Response (Yes is added by…",
+                "step": 5
+              },
+              {
+                "src": "assets/guides/equipment/507.png",
+                "caption": "Build Form: click Build Form and enter the Form Title.",
+                "step": 6
+              },
+              {
+                "src": "assets/guides/equipment/508.png",
+                "caption": "Click Add field, select the type from Choose type, set the Required toggle…",
+                "step": 7
+              },
+              {
+                "src": "assets/guides/equipment/509.png",
+                "caption": "Click Add field, select the type from Choose type, set the Required toggle…",
+                "step": 7
+              },
+              {
+                "src": "assets/guides/equipment/510.png",
+                "caption": "Click Add field, select the type from Choose type, set the Required toggle…",
+                "step": 7
+              },
+              {
+                "src": "assets/guides/equipment/511.png",
+                "caption": "Click Add field, select the type from Choose type, set the Required toggle…",
+                "step": 7
+              },
+              {
+                "src": "assets/guides/equipment/512.png",
+                "caption": "Use Actions to add, duplicate or delete a field, then click Save Changes.",
+                "step": 8
+              },
+              {
+                "src": "assets/guides/equipment/513.png",
+                "caption": "Use Actions to add, duplicate or delete a field, then click Save Changes.",
+                "step": 8
+              },
+              {
+                "src": "assets/guides/equipment/514.png",
+                "caption": "Setup Trigger Points: click Setup Trigger Points, open the Section Dropdown…",
+                "step": 9
+              },
+              {
+                "src": "assets/guides/equipment/515.png",
+                "caption": "Setup Trigger Points: click Setup Trigger Points, open the Section Dropdown…",
+                "step": 9
+              },
+              {
+                "src": "assets/guides/equipment/516.png",
+                "caption": "Preview Form: click Preview Form and check the form as the mechanic will see it.",
+                "step": 10
+              }
+            ],
+            "note": "A maintenance form is selected in **Maintenance Config → PM Interval Configuration**. Only saved maintenance forms are available in the **Maintenance Form** dropdown."
           },
           {
             "title": "Using Adobe Sign in the Rentals (3rd Party) flow",
@@ -20790,18 +21392,129 @@ const MODULES = [
       },
       {
         "heading": "Maintenance Config",
-        "intro": "<p>Use **Maintenance Config** to set how often each category of equipment is serviced and which work order types are used for maintenance. Equipment Management administrators set it once; **Preventive Maintenance** then uses it.</p>",
+        "intro": "<p>Use **Maintenance Config** to set how often preventive maintenance is due for each equipment or accessory category, and which maintenance form is filled when it is done. Equipment Management Administrators set it once under **Settings → Maintenance Config**; **Preventive Maintenance** then uses these intervals when a planner schedules PM.</p>",
+        "images": [
+          {
+            "src": "assets/guides/equipment/536.png",
+            "caption": "PM Interval Configuration list"
+          }
+        ],
         "definitions": [
           {
+            "term": "Who does this",
+            "definition": "The **Equipment Management Administrator** (System Administrator / Equipment Admin) configures the PM intervals. Maintenance Planners then schedule PM from them."
+          },
+          {
             "term": "PM Interval Configuration",
-            "definition": "From **Home**, open **Equipment Management → Settings → Maintenance Config**. The **PM Interval Configuration** list has **Category**, **Interval**, **Type**, **Hours Threshold** and **Check List**."
+            "definition": "The list under **Settings → Maintenance Config**. Columns: **Category** (the category the interval applies to), **Interval** (for example 100 DAYS / 100 HOURS / 200 KILOMETERS), **Type** (the trigger types used: Calendar, Hours, Distance), **Hours Threshold**, **Check List** (the maintenance form linked to the interval), **Status** and **Actions**."
+          },
+          {
+            "term": "Status (toggle)",
+            "definition": "Turns the interval on or off. It must be enabled to add maintenance forms for the equipment; if it is disabled, the equipment cannot be added to maintenance."
+          },
+          {
+            "term": "Actions (interval row)",
+            "definition": "Click the **Edit** icon to edit, or the **Delete** icon to delete the interval."
+          },
+          {
+            "term": "Category (Add Interval)",
+            "definition": "The equipment or accessory category the interval applies to. Mandatory."
+          },
+          {
+            "term": "Trigger Type",
+            "definition": "How the maintenance becomes due: **Calendar**, **Hours** or **Distance**. Mandatory."
+          },
+          {
+            "term": "Trigger Value",
+            "definition": "The interval value, for example 2, 100 or 200. Mandatory."
+          },
+          {
+            "term": "Trigger Unit",
+            "definition": "The unit for the trigger, for example Days for Calendar. The list loads after the trigger type is selected. Mandatory."
+          },
+          {
+            "term": "Maintenance Form",
+            "definition": "The maintenance form to be filled when the maintenance is done. Mandatory. Only saved forms from **Equipment Management Forms → Maintenance Forms** appear."
+          },
+          {
+            "term": "Where this data goes",
+            "definition": "The interval for each schedule type on **Maintenance → Preventive Maintenance → Schedule PM** comes from the PM Interval Configuration of the equipment's category. The **Next PM Due** is calculated from the **Last PM** and the interval, and the due dates appear on the Maintenance Calendar."
           },
           {
             "term": "Work Order Types",
-            "definition": "The same **Maintenance Config** screen has **Work Order Types**, the types of work order used for maintenance work."
+            "definition": "The same **Maintenance Config** screen has **Work Order Types**, the types of work order used for maintenance work. Configure them if Work Orders are to be raised from Preventive Maintenance."
           }
         ],
-        "procedures": []
+        "procedures": [
+          {
+            "title": "Add a PM interval",
+            "steps": [
+              "Click **Settings → Maintenance Config**. The **PM Interval Configuration** list opens.",
+              "Click **Add**. The **Add Interval** window opens.",
+              "Select the **Category**.",
+              "Under **Intervals**, select the **Trigger Type** (Calendar / Hours / Distance), enter the **Trigger Value** and select its **Trigger Unit**.",
+              "Click **Add Interval** to add another trigger to the same category, or click the **Delete** icon to remove a trigger row.",
+              "Select the **Maintenance Form**.",
+              "Click **Submit**. The interval is displayed in the list with the **Status** toggle on."
+            ],
+            "images": [
+              {
+                "src": "assets/guides/equipment/536.png",
+                "caption": "Click Settings → Maintenance Config. The PM Interval Configuration list opens.",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/equipment/537.png",
+                "caption": "Click Add. The Add Interval window opens.",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/equipment/538.png",
+                "caption": "Click Add. The Add Interval window opens.",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/equipment/539.png",
+                "caption": "Select the Category.",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/equipment/540.png",
+                "caption": "Under Intervals, select the Trigger Type (Calendar / Hours / Distance),…",
+                "step": 4
+              },
+              {
+                "src": "assets/guides/equipment/541.png",
+                "caption": "Click Add Interval to add another trigger to the same category, or click the…",
+                "step": 5
+              },
+              {
+                "src": "assets/guides/equipment/542.png",
+                "caption": "Select the Maintenance Form.",
+                "step": 6
+              },
+              {
+                "src": "assets/guides/equipment/543.png",
+                "caption": "Click Submit. The interval is displayed in the list with the Status toggle on.",
+                "step": 7
+              },
+              {
+                "src": "assets/guides/equipment/544.png",
+                "caption": "Click Submit. The interval is displayed in the list with the Status toggle on.",
+                "step": 7
+              }
+            ],
+            "note": "The **Status** toggle must be enabled to add maintenance forms for the equipment. If disabled, the equipment cannot be added to maintenance."
+          },
+          {
+            "title": "Edit, switch off or delete a PM interval",
+            "steps": [
+              "Go to **Settings → Maintenance Config**.",
+              "Click the **Edit** icon under **Actions** to change the interval, or the **Delete** icon to delete it.",
+              "Turn the **Status** toggle off to deactivate an interval, or on to activate it."
+            ]
+          }
+        ]
       },
       {
         "heading": "More Settings",
