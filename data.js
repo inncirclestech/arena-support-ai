@@ -3551,7 +3551,7 @@ const QA_GLOBALDATA = [
     action: "edit",
     object: "company profile",
     scope: "global",
-    section: "Company & Business Units",
+    section: "Company",
     question: "How do I update the company profile?",
     answer: "1. **Global Data → Company** tile → **Company Details** tab.\n2. Click **Upload Company Logo** to set the brand logo used across generated documents.\n3. Fill in/update the required fields (Company Name, ID, Address, City, State, Zip, Contact Person details, Company Email/Phone, optionally PAN/GST).\n4. To configure SSO, click **Add SSO Provider** under SSO Clients and complete the provider's setup.\n5. Click **Submit** to save.",
     tags: ["company profile","company logo","company details","company logo details"]
@@ -3560,7 +3560,7 @@ const QA_GLOBALDATA = [
     action: "create",
     object: "business unit",
     scope: "global",
-    section: "Company & Business Units",
+    section: "Company",
     question: "How do I add a business unit?",
     answer: "1. **Global Data → Business Units → Add**. A new row opens in the table (not a pop-up).\n2. Enter a numeric **Code** and a **Description**, and optionally pick a colour.\n3. Click the row's save/check action to confirm, or the delete icon to discard it.",
     tags: ["business unit","add business unit"]
@@ -3569,7 +3569,7 @@ const QA_GLOBALDATA = [
     action: "create",
     object: "owner",
     scope: "global",
-    section: "Owners: Client & Project-Owner Directory",
+    section: "Owners",
     question: "How do I create a new Owner record?",
     answer: "1. **Global Data → Owners** tile → **Create Owner** (split button) → **Create Owner**.\n2. **Step 1 – Basic Details:** enter **Owner Name** (the only required field), then Short Name, Alias Name, Phone Number (country code, number, extension), Email, Fax Number and Url. Fill the Primary, Mailing and Billing Address (tick **Same as Primary address** to copy).\n3. **Step 2 – Locations & Tax Codes:** click **Link Locations** and choose from the company locations, mark one as **Default**, and use **Add Tax Codes** to attach Tax Group, Tax Class and Tax Code.\n4. **Step 3 – Preview:** review the data.\n5. Click **Submit**.\n\nTo bulk-create Owners use **Export** (it offers Download and Upload).",
     tags: ["create owner","register owner","new owner"]
@@ -3578,7 +3578,7 @@ const QA_GLOBALDATA = [
     action: "configure",
     object: "owner hierarchy levels",
     scope: "global",
-    section: "Owners: Client & Project-Owner Directory",
+    section: "Owners",
     question: "How do I configure Owner hierarchy levels?",
     answer: "1. Owners tile → **Settings** (gear icon, top right).\n2. In \"Owner Settings,\" choose Level 1, Level 2, or Level 3 depending on how granular owner categorization should be company-wide.",
     tags: ["owner settings","owner hierarchy","owner levels"]
@@ -3587,7 +3587,7 @@ const QA_GLOBALDATA = [
     action: "create",
     object: "delivery location",
     scope: "global",
-    section: "Locations & Tax",
+    section: "Locations",
     question: "How do I add a new company delivery location?",
     answer: "1. **Global Data → Locations** tile → **Create**.\n2. In the **Add Location** dialog, fill Location Name, Address, Zip Code, City and State.\n3. Under **Tax Codes**, click **Add** to attach a Tax Group, Tax Class and Tax Code from Tax Configuration.\n4. Click **Submit**.\n\nFor bulk setup use **Export → Upload Excel** on this screen. New locations show up in the **Link Locations** picker of Create Owner.",
     tags: ["add location","delivery location","create location"]
@@ -3596,7 +3596,7 @@ const QA_GLOBALDATA = [
     action: "configure",
     object: "tax group and tax code",
     scope: "global",
-    section: "Locations & Tax",
+    section: "Locations",
     question: "How do I set up tax groups and tax codes?",
     answer: "1. **Global Data → Tax Configuration → Add Tax Group** → enter the Group name → **Submit**.\n2. Open the group in the left panel and select its class (for example **Tax → CGST**). The table on the right lists that class's Tax Codes.\n3. Click **Add Tax Code**, enter **Tax Code** and **Tax Percentage**, then **Submit**. Repeat for each code (for example CGST, SGST, ITC, Freight).\n4. Use **Upload Excel** / **Download Excel** to bulk manage tax codes.\n\nThe tax tree has three levels: **Tax Group → Tax Class → Tax Code**.",
     tags: ["tax configuration","tax group","tax code","gst","gst setup","tax class"]
@@ -3605,7 +3605,7 @@ const QA_GLOBALDATA = [
     action: "create",
     object: "vendor",
     scope: "global",
-    section: "Vendors & Subcontractors",
+    section: "Vendors",
     question: "How do I add a new vendor?",
     answer: "1. **Global Data → Vendors** tile → **Register Vendor**.\n2. Upload a profile picture (optional), then fill Vendor ID, Company Name, First Name and Last Name (Company Name, First Name and Last Name are required).\n3. Click **Add** in the contact table to add one or more contact persons.\n4. Fill Username, Phone Number (with country code) and Email (required).\n5. Choose a **Select Sign Label** (for example Initials) and fill Initials — used as the digital signature label on approved documents.\n6. Optionally fill Vendor Title, Address, Licence Number, Fax, Scope and Website.\n7. Under **Additional Information**, set Vendor Type, Vendor Business Size, Vendor Minority, Notes, Warning, Extra Copy, Sent By, Freight Terms, GST IN and **Linked Vendor Groups**, and tick **Domestic**, **Preferred** and/or **Blocked** as they apply.\n8. Click **Submit**.\n\nTo be found in a Procurement RFQ, put the vendor in a category and link it to a group. For bulk loading use **Upload Vendors**.",
     tags: ["register vendor","add vendor","new vendor"]
@@ -3614,7 +3614,7 @@ const QA_GLOBALDATA = [
     action: "configure",
     object: "vendor status",
     scope: "global",
-    section: "Vendors & Subcontractors",
+    section: "Vendors",
     question: "How do I mark a vendor as preferred or block it from being used?",
     answer: "1. Go to **Global Data → Vendors**. Each vendor card has **Preferred** and **Blocked** switches you can use directly.\n2. Or open the vendor with ⋮ → **Edit**, go to the **Profile** tab and scroll to **Additional Information**.\n3. Tick **Preferred** for a favoured supplier, or **Blocked** to stop the vendor being used.\n4. Click **Submit**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["preferred vendor","blocked vendor","vendor status"]
@@ -3623,7 +3623,7 @@ const QA_GLOBALDATA = [
     action: "configure",
     object: "vendor rate card",
     scope: "global",
-    section: "Vendors & Subcontractors",
+    section: "Vendors",
     question: "How do I set up a vendor's rate card?",
     answer: "1. Go to **Global Data → Vendors** and open the vendor (⋮ → **Edit**).\n2. Open the **Rate Card** tab and choose **Materials** or **Equipment**. The rows are the company's items from **Global Data → Cost** (Material and Equipment).\n3. Click **Upload Logs**, download the Excel template, fill in the rates (Daily, Weekly, Monthly for equipment), then upload the file — or type the rate in each row.",
     tags: ["rate card","vendor rates","upload logs","vendor rates upload logs"]
@@ -3632,7 +3632,7 @@ const QA_GLOBALDATA = [
     action: "configure",
     object: "vendor rating form",
     scope: "global",
-    section: "Vendors & Subcontractors",
+    section: "Vendors",
     question: "How do I configure the vendor rating form?",
     answer: "1. Vendors tile → **Ratings Form** tab.\n2. Click **Add field** to add a new custom rating criterion (e.g. \"Safety\").\n3. Set its weight/value, toggle **Required** and/or **Show on card** as needed, choose its type via **Choose Type** (e.g. Rating).\n4. Click **Save Changes**.",
     tags: ["vendor rating","ratings form","vendor evaluation"]
@@ -3641,7 +3641,7 @@ const QA_GLOBALDATA = [
     action: "create",
     object: "subcontractor",
     scope: "global",
-    section: "Vendors & Subcontractors",
+    section: "Vendors",
     question: "How do I register a subcontractor?",
     answer: "1. **Global Data → Sub Contractors** tile → **Register Sub Contractor**.\n2. Fill the **Create Sub Contractor** dialog: Sub Contractor ID, First Name, Last Name, User Name, Phone Number, Company Name, Email Address, Subcontractor Specialists, Website, Location, Experience, License Number, and the License Document, Insurance Document and Resume uploads.\n3. Choose **Linked SubContractor Groups**, upload any files under **CERTIFICATIONS**, then click **Submit**.\n4. Use **Add Groups** on the list to organise subcontractors into groups.",
     tags: ["subcontractor","register sub contractor"]
@@ -3650,7 +3650,7 @@ const QA_GLOBALDATA = [
     action: "track",
     object: "vendor certification",
     scope: "global",
-    section: "Vendors & Subcontractors",
+    section: "Vendors",
     question: "How do I track vendor/subcontractor certifications like ISO or safety licenses?",
     answer: "1. Go to **Global Data → Settings → Sub Contractor Settings** and use **Add Field** to add each certificate (for example ISO 9001) as an **Attachment** field; tick **Required** if it is compulsory.\n2. Those fields appear under **CERTIFICATIONS** in **Sub Contractors → Register Sub Contractor**, ready for uploads.\n3. For company-wide compliance items, use **Global Data → Compliance Hub → Compliance Directory → Create**, then track status under **My Company Compliance**.",
     tags: ["subcontractor compliance","iso certification","safety license","iso certification safety license"]
@@ -3812,7 +3812,7 @@ const QA_GLOBALDATA = [
     action: "configure",
     object: "currency",
     scope: "global",
-    section: "Company-Wide Settings",
+    section: "Settings",
     question: "How do I change the company's currency?",
     answer: "1. **Global Data → Settings → Currency** (left nav).\n2. Choose the desired currency from the dropdown.\n3. Click **Save Changes**.\n\nThe **Create Project** form has its own **Currency** field. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["currency","change currency","settings"]
@@ -3821,7 +3821,7 @@ const QA_GLOBALDATA = [
     action: "configure",
     object: "date format",
     scope: "global",
-    section: "Company-Wide Settings",
+    section: "Settings",
     question: "How do I change the global date format?",
     answer: "1. **Settings → Global Date Format**.\n2. Select **MM-DD-YYYY** or **DD-MM-YYYY**.\n3. Click **Save Changes**.",
     tags: ["date format","global date format"]
@@ -3830,7 +3830,7 @@ const QA_GLOBALDATA = [
     action: "configure",
     object: "mail routing",
     scope: "global",
-    section: "Company-Wide Settings",
+    section: "Settings",
     question: "How do I route a module's emails through Outlook instead of Gmail?",
     answer: "1. **Settings → Mail Settings**.\n2. Find the module row (e.g. Work Order) and click the **Outlook** radio button in that row.\n3. The change saves immediately per row (ensure Outlook has been connected first via Marketplace).",
     tags: ["mail settings","outlook","gmail routing","outlook gmail settings","outlook routing","outlook routing"]
@@ -3839,7 +3839,7 @@ const QA_GLOBALDATA = [
     action: "define",
     object: "awp toggle",
     scope: "global",
-    section: "Company-Wide Settings",
+    section: "Settings",
     question: "What is AWP and how do I enable it?",
     answer: "AWP stands for **Advanced Work Packaging**. Per Arena's reference documentation it is controlled by a single toggle under **Global Data → Settings → Enable AWP** — turning it on/off shows or hides the AWP menu for all users. This toggle may be feature-gated for your plan; contact your Arena account admin if you don't see it.",
     tags: ["awp","advanced work packaging"]
@@ -3848,7 +3848,7 @@ const QA_GLOBALDATA = [
     action: "configure",
     object: "naming framework",
     scope: "global",
-    section: "Company-Wide Settings",
+    section: "Settings",
     question: "How do I rename terminology used throughout the app (e.g. call \"Work Package\" something else)?",
     answer: "There are two Naming Framework screens:\n\n1. **Global Data → Construction Type tab → Step 5 (Naming Framework)** — renames Activity/Work-Package/Location-hierarchy terms, scoped per Construction Type.\n2. **Global Data → Settings → Naming Framework** — renames Procurement/Inventory/Roster/Cost terms company-wide.\n\nIn either, edit the **Custom Name** (and optionally **Short Name**) column next to the term you want to relabel, then save.",
     tags: ["naming framework","rename terminology","custom labels","rename terminology custom labels"]
@@ -3857,7 +3857,7 @@ const QA_GLOBALDATA = [
     action: "create",
     object: "rfi template",
     scope: "global",
-    section: "Forms & Quickapps",
+    section: "Forms",
     question: "How do I create a new RFI template?",
     answer: "1. **Global Data → Forms → Construction Forms** tab → click **RFI**.\n2. Click **Create Template**.\n3. Build the form layout (sections/fields) as needed and save.\n4. The new template becomes available for selection whenever an RFI is raised on a project.",
     tags: ["rfi template","create template","construction forms"]
@@ -3866,7 +3866,7 @@ const QA_GLOBALDATA = [
     action: "create",
     object: "document folder template",
     scope: "global",
-    section: "Forms & Quickapps",
+    section: "Forms",
     question: "How do I create a reusable folder structure for project documents?",
     answer: "1. **Global Data → Document Management → Create Template**, name it (e.g. \"FEL-1\").\n2. Select the template, then click **New Folder** repeatedly to build out the folder hierarchy (e.g. Civil, Mechanical, Structural).\n3. Apply this template when setting up a new project's document space.",
     tags: ["document template","folder structure","document management","document management structure"]
@@ -3875,7 +3875,7 @@ const QA_GLOBALDATA = [
     action: "create",
     object: "quick app",
     scope: "global",
-    section: "Forms & Quickapps",
+    section: "Forms",
     question: "How do I create a Quick App?",
     answer: "1. **Global Data → Quickapps → Quick Apps** tab → **Create**.\n2. Name the app and design its data-capture fields.\n3. Save — the Quick App becomes available from the mobile/field app or relevant project screen.",
     tags: ["quick app","create quickapp","custom form"]
@@ -3884,7 +3884,7 @@ const QA_GLOBALDATA = [
     action: "create",
     object: "standard table",
     scope: "global",
-    section: "Forms & Quickapps",
+    section: "Forms",
     question: "How do I create a Standard Table?",
     answer: "1. **Quickapps → Standard Tables** tab → **Add**.\n2. Define the table's name and columns.\n3. Save — the table can then be reused/referenced across projects.",
     tags: ["standard table","reference table"]
@@ -3911,7 +3911,7 @@ const QA_GLOBALDATA = [
     action: "configure",
     object: "outlook integration",
     scope: "global",
-    section: "Integrations: Marketplace & Staged Tables",
+    section: "Marketplace",
     question: "How do I connect Arena to Microsoft Outlook for email?",
     answer: "1. **Global Data → Marketplace → Microsoft Outlook**.\n2. Click **Sign in with Microsoft** and grant organization-wide consent (must use a company-domain email, not personal).\n3. Then go to **Settings → Mail Settings** and switch the relevant modules (e.g. Work Order) to **Outlook**.",
     tags: ["connect outlook","marketplace","microsoft integration","connect marketplace"]
@@ -3920,7 +3920,7 @@ const QA_GLOBALDATA = [
     action: "configure",
     object: "staged tables sync",
     scope: "global",
-    section: "Integrations: Marketplace & Staged Tables",
+    section: "Marketplace",
     question: "How do I sync external users into Arena via Staged Tables?",
     answer: "1. Connect the source system first: **Global Data → Marketplace → Trimble Viewpoint** → enter Hostname, Port Number, Username, Password and **Database → Test Connection and Save**.\n2. **Global Data → Staged Tables → View Point** tab → select **Users** in the left nav.\n3. Click **Map Attributes**, choose the Viewpoint column for each Arena field (Employee ID, First Name, Last Name, Phone Number, Email, Craft, Class, Vendor Number), tick **Update after sync?** where Viewpoint should keep overwriting, and Save.\n4. Either set **Auto Sync Criteria** (every 1 to 24 hours, optionally with **Auto create arena records after sync?**), or click **Bulk Create Arena Records** to create records now from the rows your Filters currently show.",
     tags: ["staged tables","sync external data","map attributes","map attributes external data"]
@@ -3929,7 +3929,7 @@ const QA_GLOBALDATA = [
     action: "configure",
     object: "vista integration",
     scope: "global",
-    section: "Integrations: Marketplace & Staged Tables",
+    section: "Marketplace",
     question: "How do I connect Arena to Vista?",
     answer: "Vista is Trimble Viewpoint's construction ERP, and in Arena it's the **Trimble Viewpoint** integration. There's no card called \"Vista\".\n1. Go to **Global Data → Marketplace → Trimble Viewpoint**.\n2. Enter your Viewpoint database details: **Hostname**, **Port Number**, **Username**, **Password** and **Database**.\n3. Click **Test Connection and Save**.\nOnce connected, Viewpoint data lands in **Global Data → Staged Tables → View Point**, where you map it and turn it into Arena records. Usually your IT team or a Global Admin handles this, since it needs Viewpoint database credentials.",
     tags: ["vista","viewpoint vista","connect vista","vista integration","trimble viewpoint","viewpoint connection","erp integration"]
@@ -3938,7 +3938,7 @@ const QA_GLOBALDATA = [
     action: "understand",
     object: "vista data sync",
     scope: "global",
-    section: "Integrations: Marketplace & Staged Tables",
+    section: "Marketplace",
     question: "What data does Arena pull from Vista (Trimble Viewpoint)?",
     answer: "Arena can stage 13 kinds of records from Vista, all under **Global Data → Staged Tables → View Point**: Users, Projects, Crews, Phase Codes, Customers, Vendors, Owners, Project User Mapping, Project Crew Mapping, Work Order Crew Mapping, GL Codes, Work Orders, and Logs.\n\nData first lands in the staged table, not straight into Arena. You then map each Viewpoint column to an Arena field (**Map Attributes**) and create the records, either automatically on a 1 to 24 hour schedule (**Auto Sync Criteria**) or on demand (**Bulk Create Arena Records**). This keeps Vista as the source of truth for employees, crews, phase codes and GL codes, so field timesheets and cost tracking use the same codes as payroll and accounting.",
     tags: ["vista data","what does vista sync","viewpoint entities","staged tables entities","vista sync","what comes from viewpoint"]
@@ -3947,7 +3947,7 @@ const QA_GLOBALDATA = [
     action: "understand",
     object: "staged tables update after sync",
     scope: "global",
-    section: "Integrations: Marketplace & Staged Tables",
+    section: "Marketplace",
     question: "What does 'Update after sync?' mean in Map Attributes?",
     answer: "It's a checkbox on each mapped field. When ticked, every later sync from Viewpoint overwrites that field in Arena, so Vista stays the master for it. When unticked, the value is filled on first creation and then Arena keeps its own copy, so edits made in Arena aren't wiped by the next sync.",
     tags: ["update after sync","map attributes checkbox","overwrite on sync","staged tables mapping"]
@@ -3956,7 +3956,7 @@ const QA_GLOBALDATA = [
     action: "understand",
     object: "soft tech staging",
     scope: "global",
-    section: "Integrations: Marketplace & Staged Tables",
+    section: "Marketplace",
     question: "What is the Soft Tech tab in Staged Tables?",
     answer: "Soft Tech is a second, separate staging source, unrelated to Vista/Viewpoint, and it has no Marketplace card. It covers only two things: **Work Orders**, pulled with **Get Data From SoftTech** and **Sync** (fields such as Work No, Agreement No, Agreement Amount, Contract Start/Completion Date, Estimated Cost and Tender Type), and **BOQ**, handled by Excel upload and download. It doesn't have Map Attributes, Auto Sync or Bulk Create.",
     tags: ["soft tech","softtech","staged tables soft tech","get data from softtech","boq staging"]
@@ -3965,7 +3965,7 @@ const QA_GLOBALDATA = [
     action: "create",
     object: "customer approval level",
     scope: "global",
-    section: "Customers, Contacts & Approval",
+    section: "Customer",
     question: "How do I add an approval level for customer records?",
     answer: "1. **Global Data → Customer** tile → **Approval Workflow** tab → **Create Level**.\n2. Name/describe the level, assign Approvers, and choose the Workflow Type.\n3. Save — subsequent opportunity/customer approvals will route through this chain in order.",
     tags: ["customer approval workflow","create level","approval workflow"]
@@ -4019,7 +4019,7 @@ const QA_GLOBALDATA = [
     action: "explain",
     object: "company tile",
     scope: "module",
-    section: "Company & Business Units",
+    section: "Company",
     question: "What is the Company tile for and who uses it?",
     answer: "The **Company** tile under **Global Data** holds the company's own profile (**Company Details** tab) and its **Subsidiary** list. The Super Admin fills it in once when the account is set up. Required fields are Company Name, Company ID, address, contact person, company email and company phone; PAN Number and GST IN are optional. The Business Unit list is a separate tile (**Global Data → Business Units**).",
     tags: ["company tile","company details","company profile","what is company","company setup"]
@@ -4028,7 +4028,7 @@ const QA_GLOBALDATA = [
     action: "create",
     object: "subsidiary",
     scope: "module",
-    section: "Company & Business Units",
+    section: "Company",
     question: "How do I create a subsidiary?",
     answer: "1. Go to **Global Data → Company** tile → **Subsidiary** tab.\n2. Click **Create Subsidiary**.\n3. Fill in Subsidiary Name, Subsidiary ID, Street Address, City, State and State Zip Code (required). Contact person, email, phone, PAN Number and GST IN are optional; you can also upload a logo.\n4. Click **Submit**.",
     tags: ["subsidiary","create subsidiary","add subsidiary","subsidiary company"]
@@ -4037,7 +4037,7 @@ const QA_GLOBALDATA = [
     action: "explain",
     object: "business unit dropdown",
     scope: "module",
-    section: "Company & Business Units",
+    section: "Company",
     question: "Why is the Business Unit dropdown empty in Create Project?",
     answer: "If your dropdown is empty, add business units under **Global Data → Business Units** first, then reopen Create Project to check that they appear. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["business unit dropdown","create project business unit","business unit empty","where does business unit come from"]
@@ -4046,7 +4046,7 @@ const QA_GLOBALDATA = [
     action: "explain",
     object: "owners tile",
     scope: "module",
-    section: "Owners: Client & Project-Owner Directory",
+    section: "Owners",
     question: "What is the Owners tile for and who uses it?",
     answer: "The **Owners** tile is the master list of clients who commission your projects. The Super Admin (or an admin with owner rights) creates them once; project creators then pick one in the **Owner** dropdown on **Projects → Create Project**. Each owner has basic details, three addresses, linked company **Locations** and **Tax Codes**. Use **Settings** to choose one, two or three levels (Owner; **Category → Owner**; **Category → SubCategory → Owner**).",
     tags: ["owners tile","what is owners","owner directory","client list","owner master"]
@@ -4055,7 +4055,7 @@ const QA_GLOBALDATA = [
     action: "explain",
     object: "owner dropdown create project",
     scope: "module",
-    section: "Owners: Client & Project-Owner Directory",
+    section: "Owners",
     question: "Where does the Owner dropdown in Create Project come from?",
     answer: "From **Global Data → Owners**. The **Owner** dropdown on **Projects → Create Project** listed exactly the three owners on the Owners screen (Krishna and the two NATIONAL HIGHWAYS AUTHORITY entries). If an owner is missing, add it in **Global Data → Owners** first, then reopen Create Project.",
     tags: ["owner dropdown","create project owner","owner not showing","where does owner come from","why is owner missing"]
@@ -4064,7 +4064,7 @@ const QA_GLOBALDATA = [
     action: "explain",
     object: "owner locations link",
     scope: "module",
-    section: "Owners: Client & Project-Owner Directory",
+    section: "Owners",
     question: "Where do the locations I can link to an owner come from?",
     answer: "From **Global Data → Locations**. In the Create Owner wizard, step 2, **Link Locations** opens a picker that lists every company location. The **Tax Group**, **Tax Class** and **Tax Code** dropdowns below it are filled from **Tax Configuration**. Add the location or tax code there first if you do not see it.",
     tags: ["link locations owner","owner locations","owner tax codes","locations missing for owner"]
@@ -4073,7 +4073,7 @@ const QA_GLOBALDATA = [
     action: "explain",
     object: "owner required fields",
     scope: "module",
-    section: "Owners: Client & Project-Owner Directory",
+    section: "Owners",
     question: "Which fields are required when I create an owner?",
     answer: "Only **Owner Name**. Short Name, Alias Name, Phone Number (with extension), Email, Fax Number, Url and the Primary, Mailing and Billing addresses are optional. Step 2 (**Link Locations** and **Add Tax Codes**) and step 3 (Preview) follow.",
     tags: ["owner required fields","owner name required","create owner fields"]
@@ -4082,7 +4082,7 @@ const QA_GLOBALDATA = [
     action: "explain",
     object: "locations tile",
     scope: "module",
-    section: "Locations & Tax",
+    section: "Locations",
     question: "What is the Locations tile for and who uses it?",
     answer: "The **Locations** tile (**Global Data → Locations**) is the company's list of places, kept by the Super Admin. Each location has a name, address, zip code, city, state and optional **Tax Codes**. Other screens use it, for example the **Link Locations** picker in the Create Owner wizard. The table has **Export** (Download Excel, Upload Excel), **Filters** and **Manage Columns**.",
     tags: ["locations tile","what is locations","company locations","delivery locations","location list"]
@@ -4091,7 +4091,7 @@ const QA_GLOBALDATA = [
     action: "explain",
     object: "locations owner picker",
     scope: "module",
-    section: "Locations & Tax",
+    section: "Locations",
     question: "Why is a location missing when I link locations to an owner?",
     answer: "The picker in **Owners → Create Owner → step 2 → Link Locations** lists what is on **Global Data → Locations**. Add the place under **Locations → Create** first, then reopen the owner. Note that the **Project Location** box on Create Project is free text and does not use this list.",
     tags: ["location missing owner","link locations empty","project location dropdown","where do locations come from"]
@@ -4100,7 +4100,7 @@ const QA_GLOBALDATA = [
     action: "explain",
     object: "tax configuration tile",
     scope: "module",
-    section: "Locations & Tax",
+    section: "Locations",
     question: "What is the Tax Configuration tile for, and what are Tax Group, Tax Class and Tax Code?",
     answer: "**Tax Configuration** (**Global Data → Tax Configuration**) stores the company's tax set-up in three levels: a **Tax Group** (for example GST 18), its **Tax Class** (for example CGST), and the **Tax Code** with a **Tax Percentage** (for example CGST -1 at 5). You pick all three in the **Tax Codes** tables on Locations and Owners. Buttons: **Add Tax Group**, **Add Tax Code**, **Upload Excel**, **Download Excel**.",
     tags: ["tax configuration tile","tax group tax class tax code","what is tax configuration","gst group","tax levels"]
@@ -4109,7 +4109,7 @@ const QA_GLOBALDATA = [
     action: "explain",
     object: "vendors tile",
     scope: "module",
-    section: "Vendors & Subcontractors",
+    section: "Vendors",
     question: "What is the Vendors tile for and who uses it?",
     answer: "The **Vendors** tile is the company-wide vendor list. The Super Admin or procurement admin registers vendors, sorts them into categories and groups, sets **Preferred** / **Blocked**, and keeps each vendor's **Rate Card**. Procurement users then pick from this list in the **RFQ** wizard and Direct Purchase Orders. A separate tile, **Sub Contractors**, holds trade subcontractors.",
     tags: ["vendors tile","what is vendors","vendor master","vendor list","supplier list"]
@@ -4118,7 +4118,7 @@ const QA_GLOBALDATA = [
     action: "troubleshoot",
     object: "vendor missing in rfq po",
     scope: "module",
-    section: "Vendors & Subcontractors",
+    section: "Vendors",
     question: "Why doesn't a new vendor show in my RFQ or PO?",
     answer: "Procurement takes its vendors from **Global Data → Vendors**. In **Procurement → RFQ → Create RFQ → step 3 (Identify Vendors)** you must choose **Vendor Category**, **Vendor Sub Category** and **Category Groups** before **Add Vendors** works (otherwise you get \"Please select all filters\"). So check that (1) the vendor is registered and submitted, (2) it sits in the category you selected, and (3) it is linked to a vendor group such as **Domestic** (set in **Additional Information → Linked Vendor Groups**). You can also use **Register Vendors** inside the RFQ, which adds to the same list. Purchase orders then use the vendors from the RFQ, or the **Select Vendor** step of a Direct Purchase Order.",
     tags: ["new vendor not showing","vendor missing rfq","vendor missing po","vendor not in purchase order","vendor not appearing","why doesnt vendor show","add vendors rfq"]
@@ -4127,7 +4127,7 @@ const QA_GLOBALDATA = [
     action: "explain",
     object: "rfq vendor categories",
     scope: "module",
-    section: "Vendors & Subcontractors",
+    section: "Vendors",
     question: "Where do the vendor categories and groups in an RFQ come from?",
     answer: "From **Global Data → Vendors**. The **Vendor Category** dropdown in the RFQ wizard lists exactly the categories in the left panel of the Vendors screen, and **Category Groups** lists the groups under **Add Groups**. Create categories with **Create Category** and groups with **Add Groups**, then link each vendor to them.",
     tags: ["rfq vendor category","rfq category groups","vendor sub category","where do vendor categories come from"]
@@ -4136,7 +4136,7 @@ const QA_GLOBALDATA = [
     action: "explain",
     object: "rate card rows",
     scope: "module",
-    section: "Vendors & Subcontractors",
+    section: "Vendors",
     question: "Where do the rows in a vendor's rate card come from?",
     answer: "From **Global Data → Cost**. The **Materials** rows on a vendor's Rate Card are the items under **Cost → Material** (Material Cost Code, Material Name, UOM, Type) and the **Equipment** rows are the items under **Cost → Equipment**. The vendor only adds the **Rate** (or Daily, Weekly, Monthly for equipment). To price a new item, add it under Cost first, then it appears on each vendor's Rate Card.",
     tags: ["rate card rows","rate card items","vendor rate card materials","rate card missing item"]
@@ -4145,7 +4145,7 @@ const QA_GLOBALDATA = [
     action: "explain",
     object: "sub contractors tile",
     scope: "module",
-    section: "Vendors & Subcontractors",
+    section: "Vendors",
     question: "What is the Sub Contractors tile for?",
     answer: "The **Sub Contractors** tile (**Global Data → Sub Contractors**) is the company's list of trade subcontractors, separate from Vendors. Use **Register Sub Contractor** to add one (ID, name, contact, licence, insurance and resume uploads, **Linked SubContractor Groups**), **Add Groups** to group them, and the **CERTIFICATIONS** section for certificates. The certificate fields are defined in **Global Data → Settings → Sub Contractor Settings**.",
     tags: ["sub contractors tile","what is sub contractors","subcontractor list","subcontractor register"]
@@ -4154,7 +4154,7 @@ const QA_GLOBALDATA = [
     action: "explain",
     object: "vendor groups",
     scope: "module",
-    section: "Vendors & Subcontractors",
+    section: "Vendors",
     question: "What are Vendor Groups and where do I use them?",
     answer: "**Vendor Groups** are created with **Add Groups** on the Vendors screen (**Group Name**, **Group Description**, **Add Row**). A vendor is linked to groups in **Additional Information → Linked Vendor Groups**, and Procurement's RFQ wizard filters vendors by **Category Groups**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["vendor groups","add groups vendors","linked vendor groups","domestic group"]
@@ -4163,7 +4163,7 @@ const QA_GLOBALDATA = [
     action: "create",
     object: "restore vendor",
     scope: "module",
-    section: "Vendors & Subcontractors",
+    section: "Vendors",
     question: "How do I restore a deleted vendor?",
     answer: "1. Go to **Global Data → Vendors**.\n2. Click **Restore Vendors**.\n3. Tick the vendors you want back (the list shows **Vendor** and **First Name**).\n4. Click **Submit**.",
     tags: ["restore vendor","deleted vendor","undelete vendor","bring back vendor"]
@@ -4361,7 +4361,7 @@ const QA_GLOBALDATA = [
     action: "explain",
     object: "customer tile",
     scope: "module",
-    section: "Customers, Contacts & Approval",
+    section: "Customer",
     question: "What is the Customer tile for and who uses it?",
     answer: "The **Customer** tile holds the company's customers (**Customers** tab with **Active Customers** and **Rejected**), their **Contacts**, and **Settings** (customer fields, contact fields and the **Approval Workflow**). A Global Admin or Opportunity Management admin maintains it. The **Customer** dropdown on **Projects → Create Project** lists these customers.",
     tags: ["customer tile","what is customer tile","customer list global data","lead customers"]
@@ -4370,7 +4370,7 @@ const QA_GLOBALDATA = [
     action: "explain",
     object: "create project customer",
     scope: "module",
-    section: "Customers, Contacts & Approval",
+    section: "Customer",
     question: "Where does the Customer dropdown in Create Project come from?",
     answer: "From **Global Data → Customer → Customers**. The dropdown on **Projects → Create Project** listed the same eight customers as the Customers screen (NATIONAL HIGHWAYS AUTHORITY OF_INDIA, chandu, Exxon - Test, Vikram, Gopichand, Manoj, Krishna, Anish Nagubothu). A customer that is still waiting for approval, or is under **Rejected**, is not an Approved customer, so check its status first.",
     tags: ["customer dropdown","create project customer","customer missing create project","where do customers come from"]
@@ -4379,7 +4379,7 @@ const QA_GLOBALDATA = [
     action: "explain",
     object: "customer contacts",
     scope: "module",
-    section: "Customers, Contacts & Approval",
+    section: "Customer",
     question: "What does the Contacts tab under Customer show?",
     answer: "The **Contacts** tab lists the people at each customer and owner: **Customer / Owner**, **Contact ID**, name parts, **Job Title**, emails, phone numbers, two addresses, **Services Provided** and **Personal Website**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["customer contacts","contacts tab","owner contacts","contact list"]
@@ -4388,7 +4388,7 @@ const QA_GLOBALDATA = [
     action: "explain",
     object: "merge duplicates customers",
     scope: "module",
-    section: "Customers, Contacts & Approval",
+    section: "Customer",
     question: "What are Merge Duplicates and Add Groups on the Customers screen?",
     answer: "Both are buttons next to **Create Customer**. **Merge Duplicates** is for duplicate customer records and **Add Groups** is for grouping customers, going by their names. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["merge duplicates","customer groups","add groups customer","duplicate customers"]
@@ -4397,7 +4397,7 @@ const QA_GLOBALDATA = [
     action: "explain",
     object: "settings tile",
     scope: "module",
-    section: "Company-Wide Settings",
+    section: "Settings",
     question: "What is the Settings tile for and what pages does it have?",
     answer: "The **Settings** tile is the company-wide settings hub with 22 pages: Roster Settings, Procurement Settings, Holidays, Naming Framework, Currency, Attachment Settings, Project Status, Project Form, Mail Settings, Keyboard Shortcuts, Adobe Sign Settings, Global Date Format, Sub Contractor Settings, Owner, Earnings Codes, Enterprise Dashboard, Hindrance Category, Location settings, Request for Information, Transmittals Submitted Type, Market Type and Configure Safety Observation. Only the Super Admin normally changes them.",
     tags: ["settings tile","what is settings","global settings pages","settings menu list"]
@@ -4406,7 +4406,7 @@ const QA_GLOBALDATA = [
     action: "explain",
     object: "project form dropdowns",
     scope: "module",
-    section: "Company-Wide Settings",
+    section: "Settings",
     question: "Where do Project Type, Funding Agency and Implementing Agency in Create Project come from?",
     answer: "From **Global Data → Settings → Project Form**. The Create Project dropdowns show the same options. Under **Configurable Fields → Groups** you can define Single Select fields, e.g. a Project Type field with values like Roads or Metro. Edit the options there to change them. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["project type dropdown","funding agency dropdown","implementing agency","create project dropdowns","project form settings","project type funding agency","funding agency implementing agency","project type funding agency create project"]
@@ -4415,7 +4415,7 @@ const QA_GLOBALDATA = [
     action: "explain",
     object: "hindrance category",
     scope: "module",
-    section: "Company-Wide Settings",
+    section: "Settings",
     question: "Where does the Restraint Category dropdown come from?",
     answer: "From **Global Data → Settings → Hindrance Category**. In **Field Works → Progress → Restraints → Add Restraint**, the **Restraint Category** options (Site & Technical Constraints, Seasonal/Weather Constraints, Safey constarints, Resource Constraints, Others) are exactly the Hindrance Categories. Use **Create** there to add your own.",
     tags: ["restraint category","hindrance category","restraint dropdown","add restraint category","restraint category dropdown","restraint category where from","restraint categories"]
@@ -4424,7 +4424,7 @@ const QA_GLOBALDATA = [
     action: "explain",
     object: "project status settings",
     scope: "module",
-    section: "Company-Wide Settings",
+    section: "Settings",
     question: "Where do the project status options (Created, Work in progress...) come from?",
     answer: "From **Global Data → Settings → Project Status**: Created, Approved, Work in progress, On hold and Completed, with **Add Status** for more. Project cards on the **Projects** page show the chip.",
     tags: ["project status","project status options","add project status"]
@@ -4433,7 +4433,7 @@ const QA_GLOBALDATA = [
     action: "explain",
     object: "earnings codes",
     scope: "module",
-    section: "Company-Wide Settings",
+    section: "Settings",
     question: "What are Earnings Codes and where are they used?",
     answer: "**Global Data → Settings → Earnings Codes** is the list of pay codes: Code, Description, Shortname, VP Code, Data Type (HOURS or AMOUNT), Payroll, Project and Split Header. The short names appear as the rate columns of the **Labor** list under **Cost**, and **Time Management → Settings → Timesheet Settings** has its own Earnings Codes page.",
     tags: ["earnings codes","pay codes","vp code","earnings code settings"]
@@ -4442,7 +4442,7 @@ const QA_GLOBALDATA = [
     action: "explain",
     object: "naming framework global",
     scope: "module",
-    section: "Company-Wide Settings",
+    section: "Settings",
     question: "Why do some screens use different names than the product guide (for example Site Material Request)?",
     answer: "Your company can rename terms in **Global Data → Settings → Naming Framework** (46 rows: Default Name, Custom Name, Short Name). For example, Pickup Ticket shows as **Site Material Request**, Ship Ticket as **Material Issue Ticket**, Lead as **Opportunity**, Equipment as **Asset** and Equipment Issues as **Asset Issues**. If a label differs from a guide, check that page.",
     tags: ["naming framework","renamed terms","different names screens","custom name","site material request pickup ticket"]
@@ -4451,7 +4451,7 @@ const QA_GLOBALDATA = [
     action: "explain",
     object: "mail settings",
     scope: "module",
-    section: "Company-Wide Settings",
+    section: "Settings",
     question: "Which modules can I route through Gmail or Outlook?",
     answer: "In **Global Data → Settings → Mail Settings**: LOR, Procurement, Leads, Work Order, Proposal Management, Arena Communications, Expense Tracker, Request for Information, Transmittal, Tender Management, Capital Management, RFI, Submittal, Change Order, Delay Form and Other Forms. Each row has a Gmail or Outlook choice.",
     tags: ["mail settings modules","gmail outlook modules","email routing modules"]
@@ -4460,7 +4460,7 @@ const QA_GLOBALDATA = [
     action: "explain",
     object: "forms tile",
     scope: "module",
-    section: "Forms & Quickapps",
+    section: "Forms",
     question: "What is the Forms tile for and who uses it?",
     answer: "The **Forms** tile holds the templates for every form type, in nine tabs: Construction Forms, Workorder Forms, Procurement, Inventory Forms, Project Forms, Drawing Management Forms, Cost, Invoice Forms and Requisition Form. The Super Admin or forms manager builds them once; each project then picks templates in **Project Setup → Forms → Assign Templates**.",
     tags: ["forms tile","what is forms","form templates global data","form types list"]
@@ -4469,7 +4469,7 @@ const QA_GLOBALDATA = [
     action: "explain",
     object: "rfi template project source",
     scope: "module",
-    section: "Forms & Quickapps",
+    section: "Forms",
     question: "Where do the RFI templates in a project come from?",
     answer: "From **Global Data → Forms → Construction Forms → RFI**. In a project, **Project Setup → Forms → Assign Templates → RFI** offers exactly those templates. Create a template in Global Data first, then assign it in the project. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["rfi templates project","assign templates","project forms templates","template missing project forms"]
@@ -4478,7 +4478,7 @@ const QA_GLOBALDATA = [
     action: "explain",
     object: "project form types source",
     scope: "module",
-    section: "Forms & Quickapps",
+    section: "Forms",
     question: "Where do the form types in Project Setup → Forms come from?",
     answer: "From **Global Data → Forms**. The project list under **Project Forms** showed the same names as the **Project Forms** group in Global Data (Laboratory Test Results, Field Test Results, Checklists, Permit to work, Near Miss and so on). Safety form types sit in the separate **Safety Form** group. Add a form type with **Create** in Global Data.",
     tags: ["project forms list","form types project","where do project forms come from","project setup forms"]
@@ -4487,7 +4487,7 @@ const QA_GLOBALDATA = [
     action: "explain",
     object: "quick apps tile",
     scope: "module",
-    section: "Forms & Quickapps",
+    section: "Forms",
     question: "What is the Quick Apps tile for?",
     answer: "The **Quick Apps** tile has two tabs: **Standard Tables** (reusable reference tables such as Drawing Status) and **Quick Apps** (custom mini-apps such as Observation Report, Non-Conformance Report, Variance Request and Equipment Productivity Planner). Projects use the apps you configure here in **Field Works → Quick Apps**.",
     tags: ["quick apps tile","what is quick apps","quick apps list","standard tables tab"]
@@ -4496,7 +4496,7 @@ const QA_GLOBALDATA = [
     action: "explain",
     object: "document management tile",
     scope: "module",
-    section: "Forms & Quickapps",
+    section: "Forms",
     question: "What are Structure Template and Document Template in Document Management?",
     answer: "**Document Management** has two tabs. **Structure Template** holds folder structures (FEL - 1, FEL - 2, FEL - 3, Detailed Engineering) with **New Folder**; FEL - 1 has Civil, Mechanical, Structural, Architectural, Instrumentation and Process Controls. **Document Template** holds starter files by type (**Word**, **Excel**, **PPT**, **Text**) with **AddFile**. Projects see their documents under **Project Setup → Documents**.",
     tags: ["document management tile","structure template","document template","fel folder structure","what is document management"]
@@ -4523,7 +4523,7 @@ const QA_GLOBALDATA = [
     action: "explain",
     object: "marketplace tile",
     scope: "module",
-    section: "Integrations: Marketplace & Staged Tables",
+    section: "Marketplace",
     question: "What apps are in the Marketplace?",
     answer: "The **Marketplace** tile has 14 cards: Microsoft OneDrive, Microsoft Sharepoint, Microsoft Outlook, Microsoft Users, Microsoft Calendar, Adobe Sign, Trimble Viewpoint, Google Maps, Inn Clock Consent, Zoom Info, Telematics, Weather Station, Trimble Viewpoint (App Xchange) and IFS. Most Microsoft cards need an administrator to grant consent once with a company-domain email.",
     tags: ["marketplace apps","marketplace list","integrations list","what integrations are available","telematics weather station ifs"]
@@ -4532,7 +4532,7 @@ const QA_GLOBALDATA = [
     action: "explain",
     object: "staged tables destination",
     scope: "module",
-    section: "Integrations: Marketplace & Staged Tables",
+    section: "Marketplace",
     question: "Where does staged data end up after I create Arena records?",
     answer: "In the Global Data list with the same name. **Staged Tables → View Point** stages Users, Projects, Crews, Phase Codes, Customers, Vendors, Owners, Project User Mapping, Project Crew Mapping, Work Order Crew Mapping, GL Codes, Work Orders and Logs. After **Map Attributes** and **Bulk Create Arena Records** (or **Auto Sync Criteria**) the rows become records, for example Vendors in **Global Data → Vendors** and Phase Codes in **UOM, Phasecode & GL Codes**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["staged tables destination","where does staged data go","bulk create arena records result","staged vendors phase codes"]
@@ -4559,7 +4559,7 @@ const QA_GLOBALDATA = [
     action: "explain",
     object: "create project dropdown sources",
     scope: "module",
-    section: "About Global Data",
+    section: "Overview",
     question: "Where do the dropdowns in Create Project come from?",
     answer: "- **Construction Type**: Global Data → Construction Types (default = the one marked Set as Default).\n- **Owner**: Global Data → Owners.\n- **Customer**: Global Data → Customer → Customers.\n- **Project Type**, **Funding Agency**, **Implementing Agency**: Global Data → Settings → Project Form.\n- **Opportunity**: Opportunity Management.\n- **Business Unit**: expected from Global Data → Business Units.\n- **Project Location** is free text, and **Currency** is chosen on the form. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["create project dropdowns","create project fields source","where do project form options come from","create project owner customer construction type"]
@@ -4568,7 +4568,7 @@ const QA_GLOBALDATA = [
     action: "get",
     object: "data into global data",
     scope: "module",
-    section: "About Global Data",
+    section: "Overview",
     question: "How does data get into Global Data?",
     answer: "Three ways: **manual** entry with Add / Create / Register buttons; **Excel** with **Export → Upload** (or **Download Excel / Upload Excel**, **Upload Vendors**, **Download Sample Excel** on Bid Templates, and Construction Type Step 7 Data Migration); and **sync** from Viewpoint through **Staged Tables** (Users, Projects, Crews, Phase Codes, Customers, Vendors, Owners, GL Codes, Work Orders) or from Soft Tech (Work Orders, BOQ).",
     tags: ["how data gets into global data","how does data get into global data","get data into global data","manual excel sync global data","excel upload global data","import global data","data entry methods","bulk upload global data","data into global data","get data global data"]
@@ -4577,7 +4577,7 @@ const QA_GLOBALDATA = [
     action: "explain",
     object: "global data lineage map",
     scope: "module",
-    section: "About Global Data",
+    section: "Overview",
     question: "Which project and Home screens use Global Data?",
     answer: "See **Where Global Data shows up**: Owners, Customer and Construction Types feed Create Project; Users and Crews feed Project Setup → People; Phase Codes feed Project Setup → Phase Codes and timesheets; Vendors, Cost lists and Earnings Codes feed Procurement and vendor rate cards; Forms feed Project Setup → Forms; Hindrance Category feeds Field Works Restraints; Notifications feed Project Notifications. Work Order Management is the same module as Home → Work Order.",
     tags: ["what uses global data","global data dependencies","global data lineage","where is global data used"]
@@ -4586,7 +4586,7 @@ const QA_GLOBALDATA = [
     action: "troubleshoot",
     object: "global data entry missing",
     scope: "module",
-    section: "About Global Data",
+    section: "Overview",
     question: "Why doesn't my new Global Data entry show up in my project or dropdown?",
     answer: "Check that it was saved, that the person or item is active, and that you are looking in the right place. Some screens link to Global Data (for example Owners, Customers, Phase Codes); others copy from it (crews come in with **Copy Crews from Global Data**); and some filter by category or group (RFQ vendors). Open the source tile, confirm the entry, then reopen the dropdown.",
     tags: ["new entry not showing","new entry not showing in project","global data entry missing","global data missing project","dropdown missing entry","not appearing in dropdown","new global data entry project"]
@@ -4622,7 +4622,7 @@ const QA_GLOBALDATA = [
     action: "view",
     object: "structure template import",
     scope: "module",
-    section: "Forms & Quickapps",
+    section: "Forms",
     question: "Where does the Import Template list in Project Setup Documents come from?",
     answer: "From **Global Data → Document Management → Structure Template**. The **Global Templates** drop-down in **Project Setup → Documents → Import Template** showed **FEL - 1**, **FEL - 2**, **FEL - 3** and **Detailed Engineering**, the same four templates. Create new ones here first. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["import template","structure template","global templates documents","fel templates","document folder template"]
@@ -4640,7 +4640,7 @@ const QA_GLOBALDATA = [
     action: "view",
     object: "hindrance category field works",
     scope: "module",
-    section: "Company-Wide Settings",
+    section: "Settings",
     question: "Where does the Restraint Category list come from?",
     answer: "From **Global Data → Settings → Hindrance Category** (**Site & Technical Constraints**, **Seasonal/Weather Constraints**, **Safey constarints**, **Resource Constraints**, **Others**); the **Restraint Category** drop-down in **Field Works → Progress → Restraints → Add Restraint** showed exactly these five. Add or edit categories here.",
     tags: ["restraint category source","hindrance category","add restraint category list"]
@@ -4649,7 +4649,7 @@ const QA_GLOBALDATA = [
     action: "explain",
     object: "project missing from viewpoint",
     scope: "module",
-    section: "Integrations: Marketplace & Staged Tables",
+    section: "Marketplace",
     question: "Why is a project open in Viewpoint missing in Arena?",
     answer: "Arena builds projects from the staged tables with **Create Arena Records**. If the project does not appear, the cause is often an older record with the same project number that was deleted in Arena, which blocks the new one from being created. Support can clear that record and create the project from the staged table, so raise a ticket with the project number. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["project missing from viewpoint","project not available timesheet","project not syncing","staging table project error","project number already exists"]
@@ -4658,7 +4658,7 @@ const QA_GLOBALDATA = [
     action: "explain",
     object: "phase codes not syncing",
     scope: "module",
-    section: "Integrations: Marketplace & Staged Tables",
+    section: "Marketplace",
     question: "Why have new Viewpoint phase codes not appeared in Arena?",
     answer: "Phase codes arrive in the staged table first and become Arena records only when you run **Create Arena Records** (or the **Auto Sync Criteria** schedule fires). Open the staged table, filter for the rows, and create the records. If rows are queued but fail to create, raise a ticket. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["phase codes not syncing","viewpoint phase codes missing","staged table phase codes","sync phase codes arena","phase codes red staging"]
@@ -4667,7 +4667,7 @@ const QA_GLOBALDATA = [
     action: "explain",
     object: "employee not syncing",
     scope: "module",
-    section: "Integrations: Marketplace & Staged Tables",
+    section: "Marketplace",
     question: "Why will an employee not come across from the staged table?",
     answer: "An employee needs an **Employee ID** to be fetched from the source system into Arena, including temporary employees. Add the ID in the source system first and sync again. Once they are in Arena and set as a system user or on the project roster, they appear in timesheet and crew lists. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["employee not syncing","temp employee roster staging","employee id mandatory","employee missing arena","staged table employee error"]
@@ -4676,7 +4676,7 @@ const QA_GLOBALDATA = [
     action: "explain",
     object: "innclock sync",
     scope: "module",
-    section: "Integrations: Marketplace & Staged Tables",
+    section: "Marketplace",
     question: "Why are new hires missing from Innclock?",
     answer: "Employees reach Innclock on a scheduled sync, so someone added minutes ago may not be there yet. Wait for the next sync, or for an urgent case start a manual sync from **Integrations → Manage Data**, select the project or employee details and click **Sync**. If they still do not show after a scheduled run, raise a ticket with the employee numbers. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["members missing innclock","new employees not in innclock","innclock sync","manual sync employees","innclock employee missing"]
@@ -7722,7 +7722,7 @@ const QA_FIELDWORKS = [
     action: "view",
     object: "quality work package list empty",
     scope: "module",
-    section: "Quality Logs Under Each Template",
+    section: "Quality Logs",
     question: "Why does Quality Level 1 say \"No ready Work Packages available to log Quality check lists\"?",
     answer: "On Arena Steel Plant - Phase 1 and Arena Roads and Highways Contractors no work package is mapped to a quality folder, so none is ready to inspect. Map work packages in **Project Setup → Quality** and check the layout in **Project Settings → Quality Work Logs Templates**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["no ready work packages","quality level 1 empty","quality check lists empty","map work packages quality"]
@@ -7812,7 +7812,7 @@ const QA_FIELDWORKS = [
     action: "view",
     object: "work logs templates",
     scope: "module",
-    section: "Work Logs Under Each Template",
+    section: "Work Logs",
     question: "Which Work Logs templates exist and how do they differ?",
     answer: "Seven templates exist under **Project Settings → Work Logs Templates**: **Work Package to Location Logging**, **Location to Work Package Logging**, **Location to Work Package bulk logging**, **Super Location to Location Logging**, **Worklogs in Scheduled View**, **Quantity Work Logging** and **Worklogs enable by Certified RFIs**. In Work Package to Location you pick the work first and see a grid of locations; in Location to Work Package you see locations as rows and work packages as columns; in Super Location to Location you click a location tile and then choose its work package from a list. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["work logs templates","template differences","work log layouts","seven templates","work package to location","location to work package","super location to location"]
@@ -7821,7 +7821,7 @@ const QA_FIELDWORKS = [
     action: "view",
     object: "work logs template in use",
     scope: "module",
-    section: "Work Logs Under Each Template",
+    section: "Work Logs",
     question: "How do I find which Work Logs template my project uses?",
     answer: "Open **Project Settings → Work Logs Templates** and read which option under **Work Log Reference** is ticked. The **Project / Tree Version** switch shows whether a single Tree Version has its own choice. The gear beside the option shows how the form behaves. Do not click **Save Changes** unless you mean to change it.",
     tags: ["which template","work logs template","find work logs template","project settings work logs templates","what layout work logs"]
@@ -7830,7 +7830,7 @@ const QA_FIELDWORKS = [
     action: "view",
     object: "work package to location logging",
     scope: "module",
-    section: "Work Logs Under Each Template",
+    section: "Work Logs",
     question: "How does Work Package to Location Logging work?",
     answer: "Open the project and go to **Field Works → Tree Version**, open the plant, then **Progress → Work Logs**. You choose a **Location Type** and a work package on the left, and the right shows every super location and location as a coloured cell (grey not yet started, blue ready, orange in progress, green completed). Click a cell to open the log form, fill in the values and click **Submit**. It is the layout on Arena Steel Plant - Phase 1.",
     tags: ["work package to location logging","wp to location","work logs grid","location cells","log work package"]
@@ -7839,7 +7839,7 @@ const QA_FIELDWORKS = [
     action: "view",
     object: "location to work package logging",
     scope: "module",
-    section: "Work Logs Under Each Template",
+    section: "Work Logs",
     question: "How does Location to Work Package Logging work?",
     answer: "Open the project and go to **Field Works → Tree Version**, open the plant, then **Progress → Work Logs**. The Work Logs screen shows **Level 2 Types** on the left and a matrix on the right: locations are rows and work packages are columns, with filters for **Location Type**, **Level 3** and **Work Package**. Click the cell where they meet to open the log form. A \"-\" means that work package is not mapped to the location. It is the layout on Arena Residential Project.",
     tags: ["location to work package logging","location to wp","work logs matrix","rows locations columns work packages","level 2 types"]
@@ -7848,7 +7848,7 @@ const QA_FIELDWORKS = [
     action: "view",
     object: "super location to location logging",
     scope: "module",
-    section: "Work Logs Under Each Template",
+    section: "Work Logs",
     question: "How does Super Location to Location Logging work?",
     answer: "Open the project and go to **Field Works → Tree Version**, open the plant, then **Progress → Work Logs**. Each super location is a panel of blue location tiles. Click a tile and the right pane lists the work packages mapped to that location; click the arrow beside one to open the log form. Chips **Ready**, **Delayed**, **Completed** and **All** and **Search Location** narrow the tiles. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["super location to location logging","super location tiles","location tiles","work packages mapped to location","ready delayed completed"]
@@ -7857,7 +7857,7 @@ const QA_FIELDWORKS = [
     action: "view",
     object: "bulk work logging",
     scope: "module",
-    section: "Work Logs Under Each Template",
+    section: "Work Logs",
     question: "Why do I see Single Log and Bulk Log options on some projects but not others?",
     answer: "The mode choice (**Single Log**, **Bulk Log - Work log**, **Bulk Log - Quantity**, **Bulk Log - Work Hours**) appeared on the Work Package to Location and Location to Work Package layouts. The Super Location to Location layout on City Development Project showed no mode choice. The layout is set in **Project Settings → Work Logs Templates**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["single log","bulk log","bulk log work log","no bulk logging","bulk mode missing","logging mode"]
@@ -7866,7 +7866,7 @@ const QA_FIELDWORKS = [
     action: "log",
     object: "bulk work log",
     scope: "module",
-    section: "Work Logs Under Each Template",
+    section: "Work Logs",
     question: "How do I log work for many locations at once?",
     answer: "Open the project and go to **Field Works → Tree Version**, open the plant, then **Progress → Work Logs**. Where the screen offers it, select **Bulk Log - Work log** (or Quantity or Work Hours), tick the work packages in the **Work Package** drop-down, tick the locations or **Select All**, adjust the percentage or quantity in each cell and click **LOG WORK**. **Clear all** resets the grid.",
     tags: ["bulk log","log many locations","bulk work log steps","select all locations","log work button"]
@@ -7875,7 +7875,7 @@ const QA_FIELDWORKS = [
     action: "view",
     object: "worklogs scheduled view",
     scope: "module",
-    section: "Work Logs Under Each Template",
+    section: "Work Logs",
     question: "What is Worklogs in Scheduled View?",
     answer: "It is one of the seven Work Logs templates. The settings page says it \"Presents the Tree Version in WBS form\" (work breakdown structure). Its gear opens **Advance Settings** with **Slider** or **Radio Buttons**, an **Interval** value and a **Preview**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["scheduled view","worklogs in scheduled view","wbs form","slider radio buttons","work log interval"]
@@ -7884,7 +7884,7 @@ const QA_FIELDWORKS = [
     action: "view",
     object: "quantity work logging",
     scope: "module",
-    section: "Work Logs Under Each Template",
+    section: "Work Logs",
     question: "What is Quantity Work Logging?",
     answer: "It is one of the seven Work Logs templates. The settings page says it \"Presents the Tree Version in WBS form\" and its gear offers **Day**, **Week** and **Month**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["quantity work logging","work logs day week month","wbs quantity logging"]
@@ -7893,7 +7893,7 @@ const QA_FIELDWORKS = [
     action: "view",
     object: "worklogs certified rfis",
     scope: "module",
-    section: "Work Logs Under Each Template",
+    section: "Work Logs",
     question: "What does Worklogs enable by Certified RFIs do?",
     answer: "The settings page says \"Worklogs will get enabled for the locations for which RFIs are certified\", so a location can only be logged after its RFI is certified. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["worklogs enable by certified rfis","rfi certified work log","work logs rfi gate","enable work logs after rfi"]
@@ -7902,7 +7902,7 @@ const QA_FIELDWORKS = [
     action: "view",
     object: "location to work package bulk logging",
     scope: "module",
-    section: "Work Logs Under Each Template",
+    section: "Work Logs",
     question: "What is Location to Work Package bulk logging?",
     answer: "It is one of the seven Work Logs templates. The settings page says \"Displays status of Work Packages mapped to each of Location using multiple filters. Raising Restraints against multiple Locations\". For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["location to work package bulk logging","bulk logging template","restraints multiple locations"]
@@ -7911,7 +7911,7 @@ const QA_FIELDWORKS = [
     action: "view",
     object: "work logs gear advanced settings",
     scope: "module",
-    section: "Work Logs Under Each Template",
+    section: "Work Logs",
     question: "What does the gear next to each Work Logs template do?",
     answer: "It opens **Advanced Settings** for that template: **Checkbox**, **Text Box** or interval entry for **Work Completed**; **Actual Start & End Dates**; **Required Fields** (Percentage, Quantity, Hours, Comments); **Interval Quantity Logging** (Quantity or Measurement); and an **Auto Log** option where one value typed by hand fills in the other two. These decide which fields are editable on the log form. The Scheduled View and Quantity Work Logging gears have their own options.",
     tags: ["advanced settings gear","work log gear","auto log option","text box checkbox work logging","actual start and end dates","interval quantity logging"]
@@ -7920,7 +7920,7 @@ const QA_FIELDWORKS = [
     action: "view",
     object: "greyed actual quantity",
     scope: "module",
-    section: "Work Logs Under Each Template",
+    section: "Work Logs",
     question: "Why are Actual Quantity and Actual Hours greyed out on my Work Logs form?",
     answer: "The template's gear has **Auto Log** switched on with another value as the one you log by hand. On City Development Project, **Percentage** is logged by hand, so **Actual Quantity** and **Actual Hours** are filled automatically and greyed. Check the gear under **Project Settings → Work Logs Templates**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["actual quantity greyed","auto log","greyed fields work log","cannot type quantity","work completed text box"]
@@ -7929,7 +7929,7 @@ const QA_FIELDWORKS = [
     action: "view",
     object: "cumulative quantity table",
     scope: "module",
-    section: "Work Logs Under Each Template",
+    section: "Work Logs",
     question: "What is the CUMULATIVE QUANTITY table on a work log?",
     answer: "On projects whose gear uses **Interval Quantity Logging** (Arena Residential Project), the log form lists earlier entries for that location: **User**, **Logged Date**, **Worked on Date**, **Cumulated Quantity**, **Actual Quantity**, **Approval Status** and **Comments**. **Cumulated Quantity** is the running total.",
     tags: ["cumulative quantity","cumulated quantity","quantity history work log","previous entries work log"]
@@ -7938,7 +7938,7 @@ const QA_FIELDWORKS = [
     action: "view",
     object: "work logs filters",
     scope: "module",
-    section: "Work Logs Under Each Template",
+    section: "Work Logs",
     question: "What does Filters do on the Work Logs screen?",
     answer: "It opens **Custom Columns Filter**, which lists the custom columns defined on locations in the project (on Arena Residential Project: **TEST DATE** and **Type of Flat**) with **Clear** and **Apply**. They are location columns defined for the project. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["work logs filters","custom columns filter","filter locations work logs","type of flat filter"]
@@ -7947,7 +7947,7 @@ const QA_FIELDWORKS = [
     action: "view",
     object: "work logs data source",
     scope: "module",
-    section: "Work Logs Under Each Template",
+    section: "Work Logs",
     question: "Where do the locations and work packages on the Work Logs screen come from?",
     answer: "From **Project Setup → Works**: the entities, super locations, locations and the work packages mapped to them. Which of them appear, and in which layout, depends on **Project Settings → Work Logs Templates**. In the matrix layout a \"-\" marks a work package that is not mapped to that location.",
     tags: ["work logs locations source","work logs work packages source","project setup works work logs","where work logs come from"]
@@ -7956,7 +7956,7 @@ const QA_FIELDWORKS = [
     action: "view",
     object: "progress cards differ",
     scope: "module",
-    section: "Work Logs Under Each Template",
+    section: "Work Logs",
     question: "Why does the Progress tab show different cards on different projects?",
     answer: "Arena Residential Project showed 22 cards (including Submittals, Change Orders, Delay Forms and Transmittals) while Arena Steel Plant - Phase 1 shows 18. The extra form cards follow the project's form settings. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["progress cards differ","more cards progress","submittals change orders delay forms","progress tab 22 cards"]
@@ -7965,7 +7965,7 @@ const QA_FIELDWORKS = [
     action: "view",
     object: "upload excel work logs",
     scope: "module",
-    section: "Work Logs Under Each Template",
+    section: "Work Logs",
     question: "What do Upload Excel and Download Excel do on Work Logs?",
     answer: "**Upload Excel** opens a box saying \"Click to upload your files here\" with **Close**. **Download Excel** is the matching export button. Both appear in all three layouts. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["upload excel work logs","download excel work logs","work logs excel"]
@@ -7974,7 +7974,7 @@ const QA_FIELDWORKS = [
     action: "view",
     object: "quality work logs templates",
     scope: "module",
-    section: "Quality Logs Under Each Template",
+    section: "Quality Logs",
     question: "What are the Quality Work Logs templates?",
     answer: "Two layouts for **Quality Level 1 / Level 2**, chosen in **Project Settings → Quality Work Logs Templates**: **Work Package to Location Logging** (pick the quality work package, then a location) and **Super Location to Location Logging** (click a location tile, then pick its quality work package). No Project / Tree Version switch or gear exists on this page. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["quality work logs templates","quality templates","quality layouts","quality work log reference","super location quality"]
@@ -7983,7 +7983,7 @@ const QA_FIELDWORKS = [
     action: "view",
     object: "quality template in use",
     scope: "module",
-    section: "Quality Logs Under Each Template",
+    section: "Quality Logs",
     question: "How do I find which Quality template my project uses?",
     answer: "Open **Project Settings → Quality Work Logs Templates** and read the ticked option, or open **Field Works → Quality → Quality Level 1**: a **Work Packages** list with **Ready / All** means Work Package to Location; panels of location tiles with **Filters** means Super Location to Location.",
     tags: ["which quality template","quality template in use","quality layout","quality level 1 layout"]
@@ -7992,7 +7992,7 @@ const QA_FIELDWORKS = [
     action: "view",
     object: "quality filters",
     scope: "module",
-    section: "Quality Logs Under Each Template",
+    section: "Quality Logs",
     question: "What can I filter by on Quality Level 1 in the Super Location layout?",
     answer: "**Super Locations**, **Folders** and **Locations Types**, with **Apply Filter**, **Clear Filter** and **Save Filter**, plus **Ready / All** chips and a search box.",
     tags: ["quality filters","save filter quality","quality level 1 filters","folders super locations filter"]
@@ -8001,7 +8001,7 @@ const QA_FIELDWORKS = [
     action: "view",
     object: "snag lists punch lists label",
     scope: "module",
-    section: "Quality Logs Under Each Template",
+    section: "Quality Logs",
     question: "Why is the card called Snag Lists on one project and Punch Lists on another?",
     answer: "Depending on the project, the Quality tab may call this list **Snag Lists** or **Punch Lists**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["snag lists","punch lists","quality card name","snag list vs punch list"]
@@ -8010,7 +8010,7 @@ const QA_FIELDWORKS = [
     action: "view",
     object: "handover tab",
     scope: "module",
-    section: "Quality Logs Under Each Template",
+    section: "Quality Logs",
     question: "Why does my project show a Handover tab instead of Quality?",
     answer: "Handover 2.0 shows a second-level tab named **Handover** where other projects show **Quality** (Progress, Quick Apps, Handover, Project Forms, Cost). For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["handover tab","quality tab renamed","handover 2.0"]
@@ -8019,7 +8019,7 @@ const QA_FIELDWORKS = [
     action: "create",
     object: "crew productivity log",
     scope: "module",
-    section: "Productivity Logs Screen by Screen",
+    section: "Productivity Logs",
     question: "What is the difference between Add Employees and Add Crews in Productivity Logs?",
     answer: "**Add Employees** adds one row for a person chosen from the **Employee** list (the project people). **Add Crews** opens **Select the members from the Crew** and uses the project's crews. On Arena Steel Plant - Phase 1 the crew list is empty because no project crews exist; add them in **Project Setup → People**.",
     tags: ["add crews","add employees","crew vs employee productivity","select crew empty"]
@@ -8028,7 +8028,7 @@ const QA_FIELDWORKS = [
     action: "view",
     object: "productivity phase code source",
     scope: "module",
-    section: "Productivity Logs Screen by Screen",
+    section: "Productivity Logs",
     question: "Why is the Phase Code drop-down empty or limited in Productivity Logs?",
     answer: "It shows **None** until you click **Set Phase Codes** and tick codes. The dialog offers the project's phase codes and the list differs by project (108 on Arena Steel Plant - Phase 1, 278 on Elevated Corridor). For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["phase code dropdown productivity","set phase codes","phase code none","phase codes differ by project"]
@@ -8037,7 +8037,7 @@ const QA_FIELDWORKS = [
     action: "view",
     object: "phase code settings",
     scope: "module",
-    section: "Productivity Logs Screen by Screen",
+    section: "Productivity Logs",
     question: "What do Unique and Multiple-Use phase codes mean?",
     answer: "**Project Settings → Phase Code Settings** offers **Unique phase code (can be used across only 1 Work Package and Location)** and **Multiple-Use Phase Code (can be used across multiple Locations)**. Elevated Corridor has Unique ticked.",
     tags: ["unique phase code","multiple use phase code","phase code settings"]
@@ -8046,7 +8046,7 @@ const QA_FIELDWORKS = [
     action: "view",
     object: "import log ai",
     scope: "module",
-    section: "Productivity Logs Screen by Screen",
+    section: "Productivity Logs",
     question: "What does Import Log (AI) do in Productivity Logs?",
     answer: "It fetches clock-in data into your draft for **past** dates. For today or a future date it says \"Logs for the current and future dates cannot be fetched\". For past dates it showed \"Please provide consent in Marketplace.\", which means clock-in consent must be given in **Global Data → Marketplace**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["import log ai","inn clock productivity","consent marketplace","cannot be fetched"]
@@ -8055,7 +8055,7 @@ const QA_FIELDWORKS = [
     action: "view",
     object: "clone log",
     scope: "module",
-    section: "Productivity Logs Screen by Screen",
+    section: "Productivity Logs",
     question: "What does Clone Log do?",
     answer: "**Create Log → Clone Log** opens a list of existing productivity logs (with a filter and an **All** chip) so you can start a new log from one of them. The list is empty (\"No Data\") on projects with no logs.",
     tags: ["clone log","copy productivity log","duplicate log"]
@@ -8064,7 +8064,7 @@ const QA_FIELDWORKS = [
     action: "view",
     object: "log quantity step",
     scope: "module",
-    section: "Productivity Logs Screen by Screen",
+    section: "Productivity Logs",
     question: "What is Step 2 Log Quantity?",
     answer: "The second step of **Create**. It lists the rows with **Phase Code**, **Detailed Phase Code**, **Time Sheet Hours**, **Revised Budgeted Quantity**, **JTD Quantity**, **Remaining Quantity** and an **Activity 100% Complete** tick, with **Save As Draft**, **Submit** and **Back**.",
     tags: ["log quantity","step 2","activity 100 complete","productivity quantity"]
@@ -8073,7 +8073,7 @@ const QA_FIELDWORKS = [
     action: "view",
     object: "productivity logs list",
     scope: "module",
-    section: "Productivity Logs Screen by Screen",
+    section: "Productivity Logs",
     question: "What do I see on the Productivity Logs Logs tab and how do I open a log?",
     answer: "Open the project and go to **Field Works → Tree Version**, open the plant, then **Progress → Productivity Logs → Logs**. Cards with **Log ID**, status, **From Date**, **To Date**, **Total Hours**, **Employees**, **Approval Status** and **Created By**. **Filters** has Log IDs, Created By, Filter By Date, Employees, Crew, Phase Codes and Approval Status (Approved, Rejected, Ready, In Progress, Draft). Click a card for the **Timesheets** and **Quantities** tabs, history, download, share and print.",
     tags: ["productivity logs list","log detail","logs tab filters","log id","approval status filter"]
@@ -8082,7 +8082,7 @@ const QA_FIELDWORKS = [
     action: "view",
     object: "productivity approval",
     scope: "module",
-    section: "Productivity Logs Screen by Screen",
+    section: "Productivity Logs",
     question: "How are productivity logs approved?",
     answer: "Through the levels built in **Approval Workflow → Create Level**. If no levels exist (as on Elevated Corridor) logs show **Approved** with **Approval Status 0/0**. A rejected log goes to **Issues**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["productivity approval","approval workflow productivity","approved 0/0","productivity log approval levels"]
@@ -8091,7 +8091,7 @@ const QA_FIELDWORKS = [
     action: "view",
     object: "data summary phase codes",
     scope: "module",
-    section: "Productivity Logs Screen by Screen",
+    section: "Productivity Logs",
     question: "What does the Phase Codes tab in Productivity Data Summary show?",
     answer: "Hours (or quantities) by phase code with chips **Direct**, **Indirect**, **Non Productive** and **Change Order**, columns **Phase Code**, **Phase Code Description**, **Total Hours** and one column per day. In the Quantities view direct codes carry a \"D - \" prefix.",
     tags: ["data summary phase codes","direct indirect non productive","change order phase codes"]
@@ -8100,7 +8100,7 @@ const QA_FIELDWORKS = [
     action: "view",
     object: "reconciliation productivity",
     scope: "module",
-    section: "Productivity Logs Screen by Screen",
+    section: "Productivity Logs",
     question: "What do Reconciliation and Configure Rules do in Productivity Logs?",
     answer: "**Reconciliation → Create Log** opens a **Reconcile** dialog (**Hours** or **Quantity**, a **Date Range**). **Configure Rules** sets colour rules: a **Condition** (greater than, less than, equal, between and their opposites), **Start Value**, **End Value** and **Color**. The reconciliation result screen is not covered here yet. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["reconciliation","configure rules","reconcile hours quantity","rules colour","what is reconciliation in productivity logs","productivity log reconciliation","reconciliation productivity logs","reconcile productivity"]
@@ -8109,7 +8109,7 @@ const QA_FIELDWORKS = [
     action: "view",
     object: "productivity vs time management",
     scope: "module",
-    section: "Productivity Logs Screen by Screen",
+    section: "Productivity Logs",
     question: "How are Productivity Logs related to Time Management?",
     answer: "They are separate screens. **Payroll Locking** in **Time Management → Settings** also applies to productivity logs, and the clock-in import uses the same consent in **Global Data → Marketplace**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["productivity time management","payroll locking productivity","timesheets vs productivity logs"]
@@ -8118,7 +8118,7 @@ const QA_FIELDWORKS = [
     action: "view",
     object: "productivity log settings by locations",
     scope: "module",
-    section: "Productivity Logs Screen by Screen",
+    section: "Productivity Logs",
     question: "What changes when Logging Type is By Locations or By Phase Code?",
     answer: "**Project Settings → Productivity Log Settings → Logging Type** chooses **Create Productivity Logs By Phase Code** or **By Locations**. With **By Locations** the grid shows Entities, Super Locations and Locations. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["logging type","by locations","by phase code","productivity log settings"]
@@ -8298,7 +8298,7 @@ const QA_FIELDWORKS = [
     action: "explain",
     object: "productivity logs visibility",
     scope: "module",
-    section: "Productivity Logs Screen by Screen",
+    section: "Productivity Logs",
     question: "Why can't I see productivity logs that other people created?",
     answer: "Visibility depends on the user group. A group such as **Project Coordinator** shows only the logs the user created personally, so a new user sees an empty list until they create one. To see other people's logs, the user must be a reviewer in the approval workflow or belong to a group with admin permission for productivity logs. Also check the user is assigned to the tree. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["cannot see productivity logs","productivity logs empty","only my own logs","see other users logs","productivity log visibility","why can't I see productivity logs created by others","logs created by other users","can't see productivity logs"]
@@ -8307,7 +8307,7 @@ const QA_FIELDWORKS = [
     action: "explain",
     object: "workflow deleted logs rejected",
     scope: "module",
-    section: "Productivity Logs Screen by Screen",
+    section: "Productivity Logs",
     question: "What happens to submitted and approved productivity logs if I delete the approval workflow?",
     answer: "Deleting the levels of the approval workflow sends the affected submitted and approved logs to **Rejected**, and people may then resubmit them. Do not delete workflow levels on a live project. If it has already happened, Inncircles can move the logs back to their earlier status, so raise a ticket quickly with the project and the date of the change. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["delete approval workflow productivity","logs went to rejected","workflow removed logs rejected","restore approved logs","productivity logs rejected after workflow change"]
@@ -8316,7 +8316,7 @@ const QA_FIELDWORKS = [
     action: "explain",
     object: "crew foreman productivity",
     scope: "module",
-    section: "Productivity Logs Screen by Screen",
+    section: "Productivity Logs",
     question: "Does a crew include its foreman when I log time for a crew?",
     answer: "Yes. When you choose a crew while logging time in Productivity Logs, the foreman assigned to that crew is added along with the other crew members, so you do not need a separate entry for them. If a foreman is still missing, check that they are set on the crew in **Project Setup → People**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["foreman missing from crew","crew time entry foreman","add crews foreman","foreman not in crew"]
@@ -8799,7 +8799,7 @@ const QA_DOCUMENTREPOSITORY = [
     action: "view",
     object: "document repository",
     scope: "project",
-    section: "Document Repository",
+    section: "Records",
     question: "Where do I find every generated form or record on a project in one place?",
     answer: "Open the project and go to **Document Repository**. It's a two-pane, single-page screen: the left pane lists categories (RFI, Meeting Minutes, Other Forms, Qualities Level 1, Qualities Level 2, Safety Scheduled Forms, Safety Forms, Drawings, Workorders, Invoices, Daily Progress Reports, Weekly Progress Reports), and clicking a category filters the table on the right to just that category's records.",
     tags: ["document repository","records archive","category filter","find all project documents","where are my documents","all documents","project documents","find documents"]
@@ -8808,7 +8808,7 @@ const QA_DOCUMENTREPOSITORY = [
     action: "view",
     object: "document repository table",
     scope: "project",
-    section: "Document Repository",
+    section: "Records",
     question: "What information does the Document Repository table show for each record?",
     answer: "The table shows **Tree Version** (the plant), **Name** (the record's own number, for example WIR - 1), **Description**, **Added On** and an **Actions** column with four icons: **Download File**, **Print File**, **Access Logs** and **Email Threads**.",
     tags: ["document table","record columns","download","history"]
@@ -8817,7 +8817,7 @@ const QA_DOCUMENTREPOSITORY = [
     action: "view",
     object: "expandable categories",
     scope: "project",
-    section: "Document Repository",
+    section: "Records",
     question: "Some categories in Document Repository have an arrow next to them — what does that mean?",
     answer: "Other Forms, Safety Scheduled Forms, Safety Forms, Drawings, Workorders and Invoices are expandable and open into sub-categories built from the project's data. On Arena Steel Plant - Phase 1 only **Drawings** has one (**Walls**, the drawing package category from Project Setup → Drawings); the others expand to nothing because they have no records.",
     tags: ["expandable categories","sub-categories","category tree"]
@@ -8826,7 +8826,7 @@ const QA_DOCUMENTREPOSITORY = [
     action: "view",
     object: "search and date filter",
     scope: "project",
-    section: "Document Repository",
+    section: "Records",
     question: "How do I narrow down records in a large category like Drawings or Invoices?",
     answer: "Open the project and go to **Document Repository**. The right pane has its own search box and a **Start date** to **End date** range, separate from the search box above the category list on the left. Select a category first, then combine search and the date range.",
     tags: ["search","date range filter","find record"]
@@ -8835,7 +8835,7 @@ const QA_DOCUMENTREPOSITORY = [
     action: "view",
     object: "difference from Project Setup documents",
     scope: "project",
-    section: "Document Repository",
+    section: "Records",
     question: "Is Document Repository the same thing as Project Setup > Documents?",
     answer: "No. Document Repository is a centralized, read-only-style registry of every generated form or record across the project's modules (RFIs, meeting minutes, quality forms, safety forms, drawings, workorders, invoices, and progress reports), organized as the project's single source of truth archive. <strong>Project Setup → Documents</strong> is a separate general-purpose file/folder manager, and <strong>Project Setup → Drawings</strong> covers drawing-specific workflows — both are documented in their own modules.",
     tags: ["document repository vs documents","project setup","drawings workflow"]
@@ -8844,7 +8844,7 @@ const QA_DOCUMENTREPOSITORY = [
     action: "view",
     object: "record history and email",
     scope: "project",
-    section: "Document Repository",
+    section: "Records",
     question: "Can I email a record from the Document Repository, or check who opened it?",
     answer: "Open the project and go to **Document Repository**. The email icon (**Email Threads**) opens the email conversations tied to the record; it has no send box, so it is a view of conversations, not a send form. The history icon (**Access Logs**) lists who opened the record, with IP address, operating system and browser; it is an access log, not a revision trail. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["email record","email threads","record history","actions column","access logs","can i email a record"]
@@ -8853,7 +8853,7 @@ const QA_DOCUMENTREPOSITORY = [
     action: "view",
     object: "document repository category list",
     scope: "project",
-    section: "Document Repository",
+    section: "Records",
     question: "Which record categories can I filter by in the Document Repository?",
     answer: "The left pane lists <strong>RFI</strong>, <strong>Meeting Minutes</strong>, <strong>Other Forms</strong>, <strong>Qualities Level 1</strong>, <strong>Qualities Level 2</strong>, <strong>Safety Scheduled Forms</strong>, <strong>Safety Forms</strong>, <strong>Drawings</strong>, <strong>Workorders</strong>, <strong>Invoices</strong>, <strong>Daily Progress Reports</strong>, and <strong>Weekly Progress Reports</strong>. Other Forms, Safety Scheduled Forms, Safety Forms, Drawings, Workorders, and Invoices are expandable into sub-categories for narrower filtering.",
     tags: ["repository categories","category list","filter categories","expandable"]
@@ -8862,7 +8862,7 @@ const QA_DOCUMENTREPOSITORY = [
     action: "view",
     object: "document repository row actions",
     scope: "project",
-    section: "Document Repository",
+    section: "Records",
     question: "What do the four icons in the Document Repository Actions column do?",
     answer: "**Download File** and **Print File** export or print the record. The history icon opens **Access Logs** (S.No., Name, Accessed On, User IP, Operating System, Browser). The email icon opens **Email Threads**, which lists email conversations about the record (\"No Conversation has been started\" when there are none).",
     tags: ["actions column icons","access logs","email threads","download file","print file","what does the history icon do","document repository actions","who opened a record"]
@@ -8871,7 +8871,7 @@ const QA_DOCUMENTREPOSITORY = [
     action: "view",
     object: "document repository row actions",
     scope: "project",
-    section: "Document Repository",
+    section: "Records",
     question: "How do I see who opened a document in the Document Repository?",
     answer: "Open the project and go to **Document Repository**. Click the history icon on its row. The **Access Logs** dialog lists each access with Name, Accessed On, User IP, Operating System and Browser. It shows \"No Data Available\" if nobody has opened the record.",
     tags: ["access logs","who opened document","document history","audit trail","who viewed record","user ip"]
@@ -8880,7 +8880,7 @@ const QA_DOCUMENTREPOSITORY = [
     action: "view",
     object: "document repository records source",
     scope: "project",
-    section: "Document Repository",
+    section: "Records",
     question: "Can I upload a file to the Document Repository or edit a record there?",
     answer: "No. It has no upload, create or edit button. Records come from the module that produced them (RFIs from Field Works → RFI, drawings from Project Setup → Drawings, and so on); fix or add them there.",
     tags: ["upload to document repository","upload a file","upload file document repository","edit record","add document","document repository read only","cannot upload"]
@@ -8889,7 +8889,7 @@ const QA_DOCUMENTREPOSITORY = [
     action: "view",
     object: "document repository records source",
     scope: "project",
-    section: "Where Records Come From",
+    section: "Overview",
     question: "Where do the records in the Document Repository come from?",
     answer: "Each category is fed by one module: RFI by Field Works → Progress → RFI, Meeting Minutes by Progress → Meeting Minutes, Other Forms by Field Works → Project Forms, Qualities Level 1 and 2 by Field Works → Quality, Safety Scheduled Forms and Safety Forms by Field Works → Safety, Drawings by Project Setup → Drawings, Workorders by Project Setup/Field Works Workorder, Invoices by Field Works → Invoices, and the two Progress Reports folders by Data Analytics → Standard Reports.",
     tags: ["where do documents come from","document repository source","what feeds the document repository","category source","where do records come from","how do records get into the document repository","document repository lineage"]
@@ -8898,7 +8898,7 @@ const QA_DOCUMENTREPOSITORY = [
     action: "view",
     object: "document repository records source",
     scope: "project",
-    section: "Where Records Come From",
+    section: "Overview",
     question: "Why is a Document Repository category empty?",
     answer: "Because the source module has no record of that kind yet. On Arena Steel Plant - Phase 1 only RFI has records (3). Meeting Minutes, quality logs, safety forms, work orders and invoices do not exist in Field Works either, and the report folders have no saved copies. Open the source module and check the record exists and is submitted.",
     tags: ["document repository empty","there is no data in this folder","category empty","why is my category empty","folder empty","no data in this folder"]
@@ -8907,7 +8907,7 @@ const QA_DOCUMENTREPOSITORY = [
     action: "view",
     object: "document repository records source",
     scope: "project",
-    section: "Where Records Come From",
+    section: "Overview",
     question: "Why is my drawing not showing under Drawings in the Document Repository?",
     answer: "The Drawings category lists the drawing package categories from Project Setup → Drawings, but a drawing uploaded to **Drawing Master** with status Created does not appear there by itself. Check the drawing's approval workflow level in Drawing Master. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["drawing not in document repository","drawings category empty","walls drawings repository","drawing missing from archive","drawing package archive"]
@@ -8916,7 +8916,7 @@ const QA_DOCUMENTREPOSITORY = [
     action: "view",
     object: "document repository records source",
     scope: "project",
-    section: "Where Records Come From",
+    section: "Overview",
     question: "Do records show up in the Document Repository when submitted or only when approved?",
     answer: "It depends on the module. RFIs appear in the Document Repository as WIRs without waiting in an approval queue. Drawings are different: an uploaded drawing in Created status is not archived. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["when does a record appear","submit or approve","record appears after approval","rfi in repository","document repository timing"]
@@ -8925,7 +8925,7 @@ const QA_DOCUMENTREPOSITORY = [
     action: "view",
     object: "document repository records source",
     scope: "project",
-    section: "Where Records Come From",
+    section: "Overview",
     question: "What are the sub-categories under Drawings, Invoices and Workorders?",
     answer: "They are created from the project's own data. Under Drawings the sub-category is the drawing package category from Project Setup → Drawings → Drawing Packages. Under Other Forms, Safety Forms, Safety Scheduled Forms, Workorders and Invoices the sub-categories appear only when records of that type exist. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["sub categories","drawing sub category","walls category","expandable category contents","what are the subcategories"]
@@ -8934,7 +8934,7 @@ const QA_DOCUMENTREPOSITORY = [
     action: "view",
     object: "document repository records source",
     scope: "project",
-    section: "Where Records Come From",
+    section: "Overview",
     question: "Are the Daily and Weekly Progress Reports saved in the Document Repository?",
     answer: "The Daily Progress Report screen is a live snapshot and the Weekly Progress Report offers Download Pdf; neither was seen to save a copy to the archive. Download the PDF yourself and keep it. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["progress reports in repository","daily progress report archive","weekly progress report archive","saved reports","report copies"]
@@ -9018,7 +9018,7 @@ const QA_FOLLOWUPACTIONS = [
     action: "view",
     object: "follow up actions source",
     scope: "project",
-    section: "Where Follow Up Actions Come From",
+    section: "Overview",
     question: "Where do Follow Up Actions items come from?",
     answer: "Open the project and go to **Follow Up Actions**. The page has no setup of its own and nothing on it creates items. The Follow Up Actions buttons on RFI forms and Daily Safety Issues open it. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["where do follow up actions come from","what populates follow up actions","follow up actions source","how are follow up actions generated","follow up actions lineage","follow up actions data source"]
@@ -9027,7 +9027,7 @@ const QA_FOLLOWUPACTIONS = [
     action: "view",
     object: "follow up actions source",
     scope: "project",
-    section: "Where Follow Up Actions Come From",
+    section: "Overview",
     question: "Why is Follow Up Actions empty?",
     answer: "On Arena Steel Plant - Phase 1 it says \"There are no Follow Up Actions\" even from the RFI form and from Daily Safety Issues, and Meeting Minutes has no actions recorded. It is not an error; there are simply no entries to list. If you expected items, check the source record and raise it with your Arena administrator.",
     tags: ["follow up actions empty","no follow up actions","why is follow up actions empty","follow up actions blank"]
@@ -9036,7 +9036,7 @@ const QA_FOLLOWUPACTIONS = [
     action: "view",
     object: "follow up actions permission",
     scope: "project",
-    section: "Where Follow Up Actions Come From",
+    section: "Overview",
     question: "Is there a permission for Follow Up Actions?",
     answer: "No. The permission tree in Users and Permissions has no row for Follow Up Actions (its ten top rows are My Desk, Project Setup, Notifications, Owners, Project Settings, Field Works, Permissions, My Calendar, Data Analytics & Insights and Document Management Repository), so no separate permission controls this page.",
     tags: ["is there a permission for follow up actions","follow up actions permission","permission for follow up actions","who can see follow up actions","follow up actions access","follow up actions permission row"]
@@ -9540,7 +9540,7 @@ const QA_OWNERS = [
     action: "view",
     object: "owners lineage",
     scope: "project",
-    section: "Who Registers Owners and What They See",
+    section: "Owner Dashboard",
     question: "What can I choose to show on the Owner Dashboard?",
     answer: "Project Settings → Owner Dashboard lists the Standard Analytics views to offer owners: Construction Progress (10 views), Quality Progress (9), Cost (Cost Plan Forecast, Cost Activity) and Contractors Performance (Contractor Performance). For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["owner dashboard options","owner dashboard settings","what owners can see","owner dashboard checkboxes","owner dashboard construction progress","owner dashboard views"]
@@ -9549,7 +9549,7 @@ const QA_OWNERS = [
     action: "view",
     object: "owners lineage",
     scope: "project",
-    section: "Who Registers Owners and What They See",
+    section: "Owner Dashboard",
     question: "Where do the Owner Dashboard options come from?",
     answer: "They are the views in Data Analytics & Insights → Standard Analytics: the Construction Progress left menu (Project Activity Analysis to Work Milestones), Quality Progress, Cost (Cost Plan Forecast, Cost Activity) and Contractors Performance, under the same names. The setting chooses which of them owners see.",
     tags: ["owner dashboard source","owner dashboard lineage","where does owner dashboard come from","owner dashboard data analytics link"]
@@ -9558,7 +9558,7 @@ const QA_OWNERS = [
     action: "view",
     object: "owners lineage",
     scope: "project",
-    section: "Who Registers Owners and What They See",
+    section: "Owner Dashboard",
     question: "Which permission controls Owners?",
     answer: "The Owners → Project Owners row in Users and Permissions (View, Create, Edit, Delete). Owner Dashboard settings are under Project Settings, which has its own permission rows.",
     tags: ["owners permission","who can register owners","owner permission row","project owners permission"]
@@ -9567,7 +9567,7 @@ const QA_OWNERS = [
     action: "view",
     object: "owners lineage",
     scope: "project",
-    section: "Who Registers Owners and What They See",
+    section: "Owner Dashboard",
     question: "Why can't an owner see anything on the Owner Dashboard?",
     answer: "Tick the views to show (Construction Progress, Quality Progress, Cost, Contractors Performance) and register the owner under Owners. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["owner cannot see dashboard","owner dashboard empty","owner sees nothing","owner dashboard not showing","owner dashboard unticked"]
@@ -9579,7 +9579,7 @@ const QA_PROJECTSETTINGS = [
     action: "configure",
     object: "light/dark appearance",
     scope: "project",
-    section: "Look, Forms & Field Templates",
+    section: "Forms & Templates",
     question: "How do I switch the project's display theme between light and dark mode?",
     answer: "Open the project and go to **Project Settings → Look & Feel** (the default landing panel). Choose Light or Dark, then click \"Save Changes\".",
     tags: ["look and feel","dark mode","light mode","appearance"]
@@ -9588,7 +9588,7 @@ const QA_PROJECTSETTINGS = [
     action: "find",
     object: "a specific settings category",
     scope: "project",
-    section: "Overview: The Project Configuration Hub",
+    section: "Overview",
     question: "There are dozens of settings categories — how do I quickly find the one I need?",
     answer: "Use the search box above the left-hand category list in <strong>Project Settings</strong> to filter the <strong>40</strong> categories by name, then select the one you need. The <strong>Which screen each category changes</strong> list in the overview tells you which category to open for a given screen.",
     tags: ["search settings","category list","project settings navigation"]
@@ -9597,7 +9597,7 @@ const QA_PROJECTSETTINGS = [
     action: "configure",
     object: "work log and quality log templates",
     scope: "project",
-    section: "Look, Forms & Field Templates",
+    section: "Forms & Templates",
     question: "Where do I set up the templates used for Work Logs and Quality Work Logs on this project?",
     answer: "Go to <strong>Project Settings → Work Logs Templates</strong> for the Field Works → Progress → Work Logs screen, and <strong>Project Settings → Quality Work Logs Templates</strong> for the Field Works → Quality screen. Work Logs Templates offers 7 logging structures (Work Package to Location Logging, Location to Work Package Logging, Location to Work Package bulk logging, Super Location to Location Logging, Worklogs in Scheduled View, Quantity Work Logging, and Worklogs enable by Certified RFIs); Quality Work Logs Templates offers 2 of those same options (Work Package to Location Logging and Super Location to Location Logging). Each shows a live preview before you Save Changes.",
     tags: ["work logs templates","quality work logs templates","field templates"]
@@ -9606,7 +9606,7 @@ const QA_PROJECTSETTINGS = [
     action: "configure",
     object: "work log screen difference between projects",
     scope: "project",
-    section: "Look, Forms & Field Templates",
+    section: "Forms & Templates",
     question: "Why does my Work Logs screen look different from another project's?",
     answer: "Because Work Logs Templates is a per-project setting, not a fixed layout. Go to <strong>Project Settings → Work Logs Templates</strong> and check which of the 7 options is selected — if one project uses <strong>Work Package to Location Logging</strong> (pick a Work Package, see its Locations) and another uses <strong>Location to Work Package Logging</strong> (pick a Location, see its Work Packages) or a <strong>Scheduled/WBS view</strong>, their Work Logs screens will look and drill down differently even though both are the same feature. The same applies to Quality: check <strong>Project Settings → Quality Work Logs Templates</strong> if the Quality tab's logging screen looks different across projects.",
     tags: ["work logs templates","different layout","project settings","work package to location","location to work package"]
@@ -9615,7 +9615,7 @@ const QA_PROJECTSETTINGS = [
     action: "configure",
     object: "punch lists and restraints settings",
     scope: "project",
-    section: "Look, Forms & Field Templates",
+    section: "Forms & Templates",
     question: "How do I configure how Punch Lists and Restraints behave for this specific project?",
     answer: "Go to <strong>Project Settings → Punch Lists &amp; Restraints</strong>. It has three lists: <strong>Punch Lists Category</strong>, <strong>Punch Lists Priority</strong> and <strong>Restraints Priority</strong> (High 4, Medium 24, Low 48 hours on Arena Steel Plant - Phase 1), each with <strong>Add</strong>, edit and delete. Restraint categories come from <strong>Global Data → Settings → Hindrance Category</strong>, not from here.",
     tags: ["punch lists","restraints","project settings"]
@@ -9624,7 +9624,7 @@ const QA_PROJECTSETTINGS = [
     action: "configure",
     object: "google maps integration",
     scope: "project",
-    section: "Scheduling, Views & Workflow Settings",
+    section: "Time Management Settings",
     question: "Where do I configure the map/location integration for a project?",
     answer: "Go to <strong>Project Settings → googlemaps</strong>: <strong>googlemaps Pin Category</strong> (Created, Rejected, Approved, Worklogs History, plus <strong>Add Category</strong>), <strong>googlemaps Enabled Modules</strong> (<strong>Tree</strong>, <strong>Task Management</strong>) and the default centre latitude, longitude and zoom level. Both module boxes and the three defaults are empty on Arena Steel Plant - Phase 1. <strong>My Desk Dashboards</strong> has a separate <strong>Google Maps</strong> tick box.",
     tags: ["google maps","location settings","map integration","google maps default zoom","default center latitude longitude"]
@@ -9633,7 +9633,7 @@ const QA_PROJECTSETTINGS = [
     action: "configure",
     object: "date format",
     scope: "project",
-    section: "Cost, Procurement & Resource Settings",
+    section: "Phase Code Settings",
     question: "How do I change the date format displayed throughout a project?",
     answer: "Go to <strong>Project Settings → Project Date Format</strong> and choose <strong>MM-DD-YYYY</strong> or <strong>DD-MM-YYYY</strong>, then <strong>Save Changes</strong>. Global Data has a matching <strong>Global Date Format</strong> page. Some screens write dates out in words or use their own layout, so not every date follows this setting.",
     tags: ["date format","project settings","display preferences"]
@@ -9642,7 +9642,7 @@ const QA_PROJECTSETTINGS = [
     action: "configure",
     object: "cost breakdown structure",
     scope: "project",
-    section: "Cost, Procurement & Resource Settings",
+    section: "Phase Code Settings",
     question: "Where is the project's cost breakdown structure defined?",
     answer: "Go to <strong>Project Settings → Cost Breakdown Structure</strong>. It has four tabs: <strong>CBS</strong> (pick a Tree Version and the phase-code level), <strong>Approval WorkFlow</strong>, <strong>Level of Detail</strong> and <strong>Estimate Type</strong>. The result shows up when you create an estimate in <strong>Project Setup → Estimate → Create Estimate</strong>.",
     tags: ["cost breakdown structure","cost coding","project settings"]
@@ -9651,7 +9651,7 @@ const QA_PROJECTSETTINGS = [
     action: "configure",
     object: "drawing register form",
     scope: "project",
-    section: "Drawings, Compliance & Identifiers",
+    section: "Drawing Register",
     question: "How do I change what fields appear on the drawing register for a project?",
     answer: "Go to <strong>Project Settings → Configure Drawing Register Form</strong>. <strong>Drawing Id</strong> and <strong>Drawing Name</strong> are standard required fields, and seven fields can be set to <strong>Required</strong> or <strong>Show on card</strong>: <strong>Received Date</strong>, <strong>Locations</strong>, <strong>Network</strong>, <strong>Drawing Types</strong>, <strong>Sheets</strong>, <strong>Drawing Status</strong> and <strong>Remarks</strong>. They are the fields of <strong>Project Setup → Drawings → Drawing Register → Create</strong>.",
     tags: ["drawing register","configure form","drawing management","which project setting changes the drawing register fields","project settings drawing register fields","configure drawing register form required show on card"]
@@ -9660,7 +9660,7 @@ const QA_PROJECTSETTINGS = [
     action: "configure",
     object: "procurement workflow",
     scope: "project",
-    section: "Cost, Procurement & Resource Settings",
+    section: "Phase Code Settings",
     question: "Where do I set the approval workflow used for procurement on a project?",
     answer: "Go to <strong>Project Settings → Procurement Workflow Settings</strong>. Under <strong>Requisition Form (REQ)</strong> pick the type (Equipment Rental, Equipment Purchased, Material, Equipment Part Rental, Equipment Part Purchased or Delivery Service), click <strong>Create Approval WorkFlow</strong>, create the levels and add users to each level. None exist yet on Arena Steel Plant - Phase 1.",
     tags: ["procurement workflow","project settings","approval routing"]
@@ -9669,7 +9669,7 @@ const QA_PROJECTSETTINGS = [
     action: "understand",
     object: "project settings vs global data settings",
     scope: "project",
-    section: "Overview: The Project Configuration Hub",
+    section: "Overview",
     question: "How is Project Settings different from the settings under Global Data?",
     answer: "Open the project and go to **Project Settings**. Global Data holds the company-wide lists and templates; <strong>Project Settings</strong> holds the choices for one project. Four pages exist in both places: Date Format, Request for Information, Transmittals Submitted Type and Market Type. Other settings, such as <strong>Forms</strong> (colour only) and <strong>Quick Apps</strong> (who can use apps built in Global Data), only exist at project level. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["project settings","global data","override","distinction"]
@@ -9678,7 +9678,7 @@ const QA_PROJECTSETTINGS = [
     action: "configure",
     object: "custom resources and resource data source",
     scope: "project",
-    section: "Cost, Procurement & Resource Settings",
+    section: "Phase Code Settings",
     question: "Where do I manage custom resources and where they're sourced from for a project?",
     answer: "Go to <strong>Project Settings → Custom Resources</strong> for the <strong>Labor</strong> and <strong>Machinery</strong> lists (<strong>Create</strong> asks for a Custom Resource Name), and <strong>Project Settings → Resource Data Source</strong> to choose <strong>P6</strong> or <strong>Work Order</strong> as the source of planned and actual resource figures on the dashboards (P6 on Arena Steel Plant - Phase 1).",
     tags: ["custom resources","resource data source","project settings"]
@@ -9687,7 +9687,7 @@ const QA_PROJECTSETTINGS = [
     action: "configure",
     object: "terms and conditions text",
     scope: "project",
-    section: "Drawings, Compliance & Identifiers",
+    section: "Drawing Register",
     question: "How do I set the terms and conditions text that appears on project documents?",
     answer: "Go to <strong>Project Settings → Terms and Conditions</strong>. Each clause is a text block you can edit, copy or delete, and <strong>Add field</strong> adds another. The wording is written as work order terms. Click <strong>Save Changes</strong> afterwards. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["terms and conditions","document text","project settings"]
@@ -9696,7 +9696,7 @@ const QA_PROJECTSETTINGS = [
     action: "understand",
     object: "which settings shape field-facing screens",
     scope: "project",
-    section: "Overview: The Project Configuration Hub",
+    section: "Overview",
     question: "Which Project Settings categories most affect what field teams see day to day?",
     answer: "A handful have outsized reach into Field Works. <strong>Work Logs Templates</strong> and <strong>Quality Work Logs Templates</strong> shape how field logging and quality inspection screens are laid out. <strong>Quality Logs</strong> controls whether Level 1 must be approved before Level 2 becomes available. <strong>Productivity Log Settings</strong> sets whether productivity logs are created By Phase Code or By Locations, plus the Timesheets and Quantity tab fields. <strong>Punch Lists &amp; Restraints</strong> and <strong>Daily Safety Issues &amp; Observations</strong> shape how defects and safety issues are structured. <strong>My Desk</strong> and <strong>My Desk Dashboards</strong> shape the landing screen everyone opens first.",
     tags: ["settings that affect field works","work logs templates","quality logs","productivity log settings"]
@@ -9705,7 +9705,7 @@ const QA_PROJECTSETTINGS = [
     action: "get",
     object: "project settings my desk",
     scope: "module",
-    section: "Scheduling, Views & Workflow Settings",
+    section: "Time Management Settings",
     question: "Which Project Settings control My Desk?",
     answer: "**My Desk** (order of the five Recent panels and the dashboard graph list) and **My Desk Dashboards** (enable or disable My Dashboard, Google Maps, Quality Dashboard, Delay Analysis Dashboard, Defect Analysis Dashboard and Strip Charts). Actions and Pending Actions have no setting of their own.",
     tags: ["project settings my desk","my desk settings","my desk dashboards settings","recent logs list order"]
@@ -9714,7 +9714,7 @@ const QA_PROJECTSETTINGS = [
     action: "get",
     object: "project settings affect setup tabs",
     scope: "module",
-    section: "Cost, Procurement & Resource Settings",
+    section: "Phase Code Settings",
     question: "Which Project Settings change Project Setup tabs?",
     answer: "**Phase Code Settings** (unique or multiple-use phase codes in Works), **Configure Task Form** (Tasks), **Cost Breakdown Structure** (Estimate), **Drawing Status** and **Configure Drawing Register Form** (Drawings), **Project Setup View** (Template 1 or 2 layout), plus **Work Logs Templates** and **Quality Work Logs Templates** for the Field Works screens built from the Works structure.",
     tags: ["project settings project setup","settings affect project setup","which settings change setup tabs"]
@@ -9723,7 +9723,7 @@ const QA_PROJECTSETTINGS = [
     action: "explain",
     object: "field works settings link",
     scope: "module",
-    section: "Look, Forms & Field Templates",
+    section: "Forms & Templates",
     question: "Which Project Settings change what Field Works and Data Analytics show?",
     answer: "**Work Logs Templates** and **Quality Work Logs Templates** (drill-down of the logging screens), **Project Work Measurement** (Percentage Based or Effort Based), **Dashboard Percentages** (Worklogs, Workorder and worklogs, P6 or Milestone based), **Productivity Log Settings** (Logging Type and fields), **Quality Logs** (skip Level 1), **Punch Lists & Restraints** and **Daily Safety Issues & Observations** (categories and priorities with due hours), **Progress Forms** and **Workflow Issues** (priorities), and **Quick Apps** (team and workflow). Each is described under its own heading in this module.",
     tags: ["settings that change field works","settings that change analytics","project settings field works link","which settings affect work logs","which settings change dashboards"]
@@ -9732,7 +9732,7 @@ const QA_PROJECTSETTINGS = [
     action: "explain",
     object: "field works settings link",
     scope: "module",
-    section: "Look, Forms & Field Templates",
+    section: "Forms & Templates",
     question: "Where do I set priorities and due hours for punch lists, restraints and safety issues?",
     answer: "**Project Settings → Punch Lists & Restraints** holds Punch Lists Priority and Restraints Priority, and **Daily Safety Issues & Observations** holds Daily Safety Issues Priority and Observations Priority. On Arena Steel Plant - Phase 1 all four are High 4 hours, Medium 24, Low 48. Workflow issue priorities for forms are in **Workflow Issues** and **Progress Forms**.",
     tags: ["punch list priority","restraint priority due hours","safety issue priority","where to set priority due hours","priority high medium low 4 24 48"]
@@ -9741,7 +9741,7 @@ const QA_PROJECTSETTINGS = [
     action: "explain",
     object: "field works settings link",
     scope: "module",
-    section: "Look, Forms & Field Templates",
+    section: "Forms & Templates",
     question: "Why does Field Works Quick Apps say \"Please configure Quick Apps in global\"?",
     answer: "The apps are built in **Global Data → Quick Apps**; the project side is **Project Settings → Quick Apps** (a Tree Versions dropdown, the list of apps, a Team table and a Workflow table). On Arena Steel Plant - Phase 1 the Team and Workflow tables are empty, so the Field Works card shows only that message.",
     tags: ["quick apps global message","configure quick apps","quick apps project settings","quick apps empty field works"]
@@ -9750,7 +9750,7 @@ const QA_PROJECTSETTINGS = [
     action: "view",
     object: "owner dashboard settings",
     scope: "project",
-    section: "Scheduling, Views & Workflow Settings",
+    section: "Time Management Settings",
     question: "What can I choose on the Owner Dashboard setting in Project Settings?",
     answer: "Project Settings → Owner Dashboard has tick boxes for Standard Analytics views to show to owners: Construction Progress (10), Quality Progress (9), Cost (2) and Contractors Performance (1). They are the same views as in Data Analytics & Insights. Owners are registered under Owners → Register Owner. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["owner dashboard setting project settings","what can i choose on the owner dashboard setting","project settings owner dashboard checkboxes"]
@@ -9759,7 +9759,7 @@ const QA_PROJECTSETTINGS = [
     action: "explain",
     object: "Why is my date format different in this ",
     scope: "module",
-    section: "Overview: The Project Configuration Hub",
+    section: "Overview",
     question: "Why is my date format different in this project?",
     answer: "Check <strong>Project Settings → Project Date Format</strong> (<strong>MM-DD-YYYY</strong> or <strong>DD-MM-YYYY</strong>) and compare it with <strong>Global Data → Settings → Global Date Format</strong>. Some screens write dates out in words (\"31st March 2026\" on Field Works RFIs) or print day/month/year (Estimate → Resource Planning week ranges). For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["date format different","why is my date format different","project date format global date format","dd-mm-yyyy mm-dd-yyyy"]
@@ -9768,7 +9768,7 @@ const QA_PROJECTSETTINGS = [
     action: "explain",
     object: "Which Project Settings page changes whic",
     scope: "module",
-    section: "Overview: The Project Configuration Hub",
+    section: "Overview",
     question: "Which Project Settings page changes which screen?",
     answer: "See <strong>Which screen each category changes</strong> in the overview: Field Works Progress (Work Logs Templates, Project Work Measurement, Productivity Log Settings, Progress Forms, Workflow Issues), Quality and Safety (Quality Work Logs Templates, Quality Logs, Punch Lists &amp; Restraints, Daily Safety Issues &amp; Observations), My Desk (My Desk, My Desk Dashboards), Data Analytics (Dashboard Percentages, Owner Dashboard, Resource Data Source), Project Setup (Phase Code Settings, Configure Task Form, Cost Breakdown Structure, Drawing Status, Configure Drawing Register Form, Project Setup View), Time Management and Procurement.",
     tags: ["which project setting changes which screen","settings map","project settings lineage","what does each project setting change"]
@@ -9777,7 +9777,7 @@ const QA_PROJECTSETTINGS = [
     action: "explain",
     object: "Where does the Tree Version dropdown in ",
     scope: "module",
-    section: "Overview: The Project Configuration Hub",
+    section: "Overview",
     question: "Where does the Tree Version dropdown in Project Settings come from?",
     answer: "Every Tree Version dropdown in Project Settings (Work Logs Templates, User Preferences, Drawing Register Form, Cost Breakdown Structure, Custom Work Packages Name) lists the 13 plants of <strong>Field Works → Tree Version</strong> (Pellet Plant (1MTPA) to Slab Caster), which are built in <strong>Project Setup → Works</strong>.",
     tags: ["tree version dropdown project settings","where do tree versions come from","project settings dropdown source"]
@@ -9786,7 +9786,7 @@ const QA_PROJECTSETTINGS = [
     action: "explain",
     object: "Why do I see \"Select a project to contin",
     scope: "module",
-    section: "Overview: The Project Configuration Hub",
+    section: "Overview",
     question: "Why do I see \"Select a project to continue\" in Project Settings?",
     answer: "The page needs a selected project. Open <strong>Projects</strong>, pick the project (for example Arena Steel Plant - Phase 1) and then open <strong>Project Settings</strong> again.",
     tags: ["select a project to continue","project settings project not selected"]
@@ -9795,7 +9795,7 @@ const QA_PROJECTSETTINGS = [
     action: "explain",
     object: "What does the Forms setting do in Projec",
     scope: "module",
-    section: "Look, Forms & Field Templates",
+    section: "Forms & Templates",
     question: "What does the Forms setting do in Project Settings?",
     answer: "It only chooses the colour forms appear in: <strong>BLUE</strong>, <strong>DARK BLUE</strong>, <strong>PURPLE</strong>, <strong>YELLOW</strong> or <strong>GREY</strong> (YELLOW on Arena Steel Plant - Phase 1). Form templates are built in <strong>Global Data → Forms</strong> and assigned in <strong>Project Setup → Forms</strong>.",
     tags: ["forms setting project settings","form colour","forms color yellow blue purple grey","what does the forms setting do in project settings","project settings forms colour setting","change the colour of forms","form appearance yellow"]
@@ -9804,7 +9804,7 @@ const QA_PROJECTSETTINGS = [
     action: "explain",
     object: "What does the Time Management setting do",
     scope: "module",
-    section: "Scheduling, Views & Workflow Settings",
+    section: "Time Management Settings",
     question: "What does the Time Management setting do in Project Settings?",
     answer: "It sets up timesheet approvals and mode for this project in three tabs: <strong>Create Workflow</strong> (Create Approval Workflow, a name then levels), <strong>Assign Workflow</strong> (assign a workflow to Users or Crews; users are the project roster) and <strong>Assign Mode</strong> (<strong>Daily</strong>, <strong>Weekly by day</strong> or <strong>Weekly</strong> for My Timesheet and My Crew Timesheet). No workflow exists yet on Arena Steel Plant - Phase 1. It affects <strong>Home → Time Management</strong> timesheets.",
     tags: ["time management project settings","timesheet approval workflow project settings","timesheet mode daily weekly","assign workflow users crews"]
@@ -9813,7 +9813,7 @@ const QA_PROJECTSETTINGS = [
     action: "explain",
     object: "Where do I change the Project Setup layo",
     scope: "module",
-    section: "Scheduling, Views & Workflow Settings",
+    section: "Time Management Settings",
     question: "Where do I change the Project Setup layout?",
     answer: "Go to <strong>Project Settings → Project Setup View</strong> and pick <strong>Template 1</strong> (selected on Arena Steel Plant - Phase 1) or <strong>Template 2</strong>, then <strong>Save Changes</strong>.",
     tags: ["project setup view template 1 template 2","change project setup layout","where do i set the project setup template","project setup template","project setup appearance"]
@@ -9822,7 +9822,7 @@ const QA_PROJECTSETTINGS = [
     action: "explain",
     object: "What do Progress Forms and Workflow Issu",
     scope: "module",
-    section: "Scheduling, Views & Workflow Settings",
+    section: "Time Management Settings",
     question: "What do Progress Forms and Workflow Issues settings do?",
     answer: "<strong>Progress Forms</strong> has one <strong>Add Priority</strong> list per form (RFI, Change Orders, Submittals, Delay Forms, Meeting Minutes). <strong>Workflow Issues</strong> has the same for the issues raised by workflows, across the tabs Progress, Quality, Safety, Custom Forms, Quick Apps, Drawing Management and Task Forms. Each priority has a name and Due Hours. All are empty on Arena Steel Plant - Phase 1. <strong>Projects Forms</strong> has one list for Project Forms.",
     tags: ["progress forms priority","workflow issues priority due hours","projects forms priority","add priority project settings"]
@@ -9831,7 +9831,7 @@ const QA_PROJECTSETTINGS = [
     action: "explain",
     object: "What do Project Driven, User Preferences",
     scope: "module",
-    section: "Scheduling, Views & Workflow Settings",
+    section: "Time Management Settings",
     question: "What do Project Driven, User Preferences and Define Location do?",
     answer: "<strong>Project Driven</strong> chooses what drives field work progress (Tree Version with WorkLogs or Checklists, or Schedule; WorkLogs selected here). <strong>User Preferences</strong> picks a Tree Version for web view, mobile view, Work Logs and Productivity Logs (none picked here; options are the 13 plants). <strong>Define Location</strong> chooses <strong>Individual</strong> or <strong>From-To</strong> (neither picked here).",
     tags: ["project driven setting","user preferences tree version","define location individual from-to","default tree version web mobile"]
@@ -9840,7 +9840,7 @@ const QA_PROJECTSETTINGS = [
     action: "explain",
     object: "What does the Configure Form Id Type set",
     scope: "module",
-    section: "Cost, Procurement & Resource Settings",
+    section: "Phase Code Settings",
     question: "What does the Configure Form Id Type setting do?",
     answer: "It decides how log IDs of each form are created: a table of 149 forms with <strong>Project Based</strong> or <strong>Tree Based</strong> per form. All are Project Based on Arena Steel Plant - Phase 1, and Field Works RFIs are numbered WIR 1, WIR 2, WIR 3. The list includes the progress forms plus the Quick Apps and Project Forms built in Global Data.",
     tags: ["configure form id type","form id numbering project based tree based","why are rfi numbered wir","log id format","why are rfis numbered wir","rfi numbering wir 1 wir 2","wir numbering"]
@@ -9849,7 +9849,7 @@ const QA_PROJECTSETTINGS = [
     action: "explain",
     object: "What is Tree Versions Custom Work Packag",
     scope: "module",
-    section: "Cost, Procurement & Resource Settings",
+    section: "Phase Code Settings",
     question: "What is Tree Versions Custom Work Packages Name?",
     answer: "A page where each work package of a plant can be given a <strong>Custom Name</strong>. Choose the Tree Version, and the table lists Activities, Work Packages Name, Description and Custom Name (Pellet Plant has 96, all custom names equal to the originals). The work packages come from <strong>Project Setup → Works</strong>.",
     tags: ["custom work package name","tree versions custom work packages name","rename work packages"]
@@ -9858,7 +9858,7 @@ const QA_PROJECTSETTINGS = [
     action: "explain",
     object: "Why is the Procurement approval workflow",
     scope: "module",
-    section: "Cost, Procurement & Resource Settings",
+    section: "Phase Code Settings",
     question: "Why is the Procurement approval workflow empty?",
     answer: "No approval workflow has been created. In <strong>Project Settings → Procurement Workflow Settings</strong> choose the requisition type tab, click <strong>Create Approval WorkFlow</strong>, create the levels and add users to each level.",
     tags: ["procurement workflow empty","no approval workflow procurement","requisition approval levels"]
@@ -9867,7 +9867,7 @@ const QA_PROJECTSETTINGS = [
     action: "explain",
     object: "What is Vista Progress in Project Settin",
     scope: "module",
-    section: "Drawings, Compliance & Identifiers",
+    section: "Drawing Register",
     question: "What is Vista Progress in Project Settings?",
     answer: "The last category, <strong>Vista Progress Batch Entries</strong>, is a read-only table with the columns Phase, Actual Date, Cost Type, Actual Units, Sync Status, Sync Error and Synced At (empty on Arena Steel Plant - Phase 1), with <strong>Manage Columns</strong> and a search box. It has no Save or Create.",
     tags: ["vista progress","vista progress batch entries","sync status sync error synced at"]
@@ -9876,7 +9876,7 @@ const QA_PROJECTSETTINGS = [
     action: "explain",
     object: "Which screens use the Request for Inform",
     scope: "module",
-    section: "Drawings, Compliance & Identifiers",
+    section: "Drawing Register",
     question: "Which screens use the Request for Information, Transmittals Submitted Type and Market Type settings?",
     answer: "<strong>Request for Information</strong> (Categories and Priorities) is for the Request for Information form; <strong>Transmittals Submitted Type</strong> is the list of submitted types for the Transmittal form; <strong>Market Type</strong> holds market and sub-market names. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["request for information settings categories priorities","transmittals submitted type","market type sub market type","project settings vs global data same name"]
@@ -9885,7 +9885,7 @@ const QA_PROJECTSETTINGS = [
     action: "explain",
     object: "Where do I see the Terms and Conditions ",
     scope: "module",
-    section: "Drawings, Compliance & Identifiers",
+    section: "Drawing Register",
     question: "Where do I see the Terms and Conditions clauses?",
     answer: "Edit them in <strong>Project Settings → Terms and Conditions</strong> (the clauses are written as work order terms). For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["terms and conditions clauses","work order terms and conditions","where terms and conditions show"]
@@ -9894,7 +9894,7 @@ const QA_PROJECTSETTINGS = [
     action: "view",
     object: "work logs templates usage",
     scope: "module",
-    section: "Look, Forms & Field Templates",
+    section: "Forms & Templates",
     question: "Which projects use which Work Logs template?",
     answer: "Each project ticks the templates it uses: **Work Package to Location Logging**, **Location to Work Package Logging**, **Super Location to Location Logging**, **Location to Work Package bulk logging**, **Worklogs in Scheduled View**, **Quantity Work Logging** and **Worklogs enable by Certified RFIs**. Check yours in **Project Settings → Work Logs Templates**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["work logs templates usage","which projects use which template","work logs template counts","template in use"]
@@ -9903,7 +9903,7 @@ const QA_PROJECTSETTINGS = [
     action: "view",
     object: "work logs gear advanced settings",
     scope: "module",
-    section: "Look, Forms & Field Templates",
+    section: "Forms & Templates",
     question: "What does the gear beside a Work Logs template do?",
     answer: "It opens **Advanced Settings** for that template: **Checkbox**, **Text Box** or interval entry, **Actual Start & End Dates**, **Required Fields**, **Interval Quantity Logging** and an **Auto Log** option. It controls which fields are editable on the Work Logs form. The Scheduled View gear has **Slider / Radio Buttons** and an **Interval**; the Quantity Work Logging gear has **Day / Week / Month**. Close without saving to leave settings unchanged.",
     tags: ["gear work logs template","advanced settings work logs","auto log","work logs settings gear"]
@@ -10263,7 +10263,7 @@ const QA_PERMISSIONS = [
     action: "configure",
     object: "module permissions (rights)",
     scope: "project",
-    section: "Permission Rights",
+    section: "Permissions",
     question: "What permission rights can I grant to a role for a module?",
     answer: "On a role's card, click \"Permissions\", turn on \"Roll Back\" for the module, then choose from: Assign To (only the assigned user can view/create/edit/delete), View (view only), Create (add new data), Edit (update but not delete), Delete, Download (export excel), Print, and Admin (grants all of the above for that module).",
     tags: ["permission rights","assign to view create edit delete","admin permission","roll back toggle"]
@@ -14894,7 +14894,7 @@ const QA_ADMINSETUPGUIDE = [
     action: "understand",
     object: "first setup step",
     scope: "global",
-    section: "Step 1 · Set up your company and business units",
+    section: "Company Setup",
     question: "What do I set up first in Arena?",
     answer: "Start with your company profile. Go to **Global Data → Company → Company Details** and fill in your legal/business information, then upload your logo. Do this before anything else — the company profile, plus **Business Units**, is the foundation every project, user, and document rolls up under.",
     tags: ["what to set up first","first step setup","where to start admin","initial arena setup"]
@@ -14903,7 +14903,7 @@ const QA_ADMINSETUPGUIDE = [
     action: "understand",
     object: "company setup order",
     scope: "global",
-    section: "Step 1 · Set up your company and business units",
+    section: "Company Setup",
     question: "What's the order to set up a new company in Arena?",
     answer: "Follow six steps in order:\n1. **Company profile & Business Units** — your legal identity and internal divisions.\n2. **Users & Permission Groups** — get people into Arena with the right access.\n3. **Master data** — Phase Codes, GL Codes, UOM, Construction Types, Vendors, Crews, Locations & Tax.\n4. **Integrations** — connect Microsoft 365, your accounting/ERP system, and Adobe Sign if you use them.\n5. **Create your first project** and add its team.\n6. **Module settings** — configure each module you use (Time Management, Procurement, Opportunity, Expense Tracker, and so on) before end users start relying on it.\nEach step depends on the ones before it, so working through them in order avoids rework — you can't assign a Tax Code to a Vendor before Tax Groups exist, and there's little point configuring a module's approval workflow before the people who'll approve things are registered as users.",
     tags: ["setup order","setup checklist","onboarding steps","new company setup","day one setup"]
@@ -14912,7 +14912,7 @@ const QA_ADMINSETUPGUIDE = [
     action: "configure",
     object: "company profile",
     scope: "global",
-    section: "Step 1 · Set up your company and business units",
+    section: "Company Setup",
     question: "How do I set up my company profile and logo?",
     answer: "Go to **Global Data → Company → Company Details**. Fill in Company Name, Company ID, Address, Contact Person and Company Email/Phone, then click **Upload Company Logo** to set the brand logo used on generated documents. Click **Submit**. If you have subsidiary companies, use the **Subsidiary** tab and **Create Subsidiary**. A **Super Admin** normally does this.",
     tags: ["company profile","company logo","company details","set up company"]
@@ -14921,7 +14921,7 @@ const QA_ADMINSETUPGUIDE = [
     action: "configure",
     object: "business unit",
     scope: "global",
-    section: "Step 1 · Set up your company and business units",
+    section: "Company Setup",
     question: "How do I add a business unit?",
     answer: "Go to **Global Data → Company → Business Units** and click **Add**. Enter a Code and Description, then submit. Business Units are a simple Code/Description list used to categorize operations and reporting, and some ID-numbering schemes reference them, so set them up early.",
     tags: ["business unit","add business unit","company divisions"]
@@ -14930,7 +14930,7 @@ const QA_ADMINSETUPGUIDE = [
     action: "configure",
     object: "register user",
     scope: "global",
-    section: "Step 2 · Add users and permission groups",
+    section: "Users & Permissions",
     question: "How do I add a new user or employee?",
     answer: "Go to **Global Data → Users & Permissions → User Accounts → Active Users** and click **Register User**. Fill in their name, contact details, email, and set up their signature (Initials, Sign, or Upload). Click **Submit**, then use **Notify User** to email them their login instructions. To add many users at once, use **Download Sample Excel**, fill in one row per person, then **Upload Excel** — Arena creates each account and emails them automatically. A **Super Admin** typically does this.",
     tags: ["register user","add employee","new user account","bulk import users","onboard users"]
@@ -14939,7 +14939,7 @@ const QA_ADMINSETUPGUIDE = [
     action: "configure",
     object: "permission group",
     scope: "global",
-    section: "Step 2 · Add users and permission groups",
+    section: "Users & Permissions",
     question: "How do I create a permission group for a module admin?",
     answer: "Go to **Global Data → Users & Permissions → Global Permission** and click **+ Add User Group**. Name it after its scope (for example \"Procurement Admin\"), then open its **Permissions** button and check only the modules and actions that admin needs — View, Create, Edit, Delete, Admin View, Admin, and so on. Click **Save Changes**, then open the group's **Users** button and add the people who should have this access. Nothing forces a group to cover more than one module, so you can run one Global Admin, several module-scoped admins, or a mix of both.",
     tags: ["create permission group","module admin","scoped admin","user group setup","procurement admin"]
@@ -14948,7 +14948,7 @@ const QA_ADMINSETUPGUIDE = [
     action: "understand",
     object: "cross-module permission",
     scope: "global",
-    section: "Step 2 · Add users and permission groups",
+    section: "Users & Permissions",
     question: "Why can't my users see a tab (like Procurement or Timesheets) inside another module?",
     answer: "Some tabs depend on permissions in a different module than the one you're looking at. For example, a Work Order Contract's Timesheet, Equipment, Inventory, and Procurement tabs only appear for a user whose permission group also grants rights in those standalone modules — Work Order access alone isn't enough. The permission tree calls this out next to the affected rows, so check those notes when a tab seems to be missing.",
     tags: ["missing tab","cross module permissions","hidden tab","permission dependency"]
@@ -14957,7 +14957,7 @@ const QA_ADMINSETUPGUIDE = [
     action: "configure",
     object: "phase codes and gl codes",
     scope: "global",
-    section: "Step 3 · Build your master data",
+    section: "Master Data",
     question: "How do I set up Phase Codes and GL Codes?",
     answer: "Go to **Global Data → UOM, Phasecode & GL Codes → Phase Codes** and click **Add**. Enter the Phase Code and Description, choose its Phase Code Type (Direct, Indirect, Non-Productive, or Change Order), and select which Cost Types apply (Material, Labor, Equipment, Subcontractors, Other Expenses). For **GL Codes**, use the **GL Codes** tab on the same screen and click **Add**. Both are reference data used across Estimating, Work Orders, Procurement, and Cost modules, so set them up before those modules go live.",
     tags: ["phase codes","gl codes","add phase code","cost type setup"]
@@ -14966,7 +14966,7 @@ const QA_ADMINSETUPGUIDE = [
     action: "configure",
     object: "uom",
     scope: "global",
-    section: "Step 3 · Build your master data",
+    section: "Master Data",
     question: "How do I set up Units of Measure (UOM)?",
     answer: "Go to **Global Data → UOM, Phasecode & GL Codes → UOMs** and click **Add UOM** to add a unit (for example \"Tonne\"). To make it convertible with other units, go to **UOM Groups**, add it to a group, and enter the conversion factor. The resulting conversions appear read-only under **UOM Conversions**.",
     tags: ["unit of measure","uom setup","uom conversion","uom groups"]
@@ -14975,7 +14975,7 @@ const QA_ADMINSETUPGUIDE = [
     action: "configure",
     object: "construction type",
     scope: "global",
-    section: "Step 3 · Build your master data",
+    section: "Master Data",
     question: "How do I set up Construction Types before creating projects?",
     answer: "Go to **Global Data → Construction Types** and click **Create** to add a new category (for example Infrastructure, Residential, Roads), or **Copy** an existing type to clone its full configuration into a new one. Every project must be tagged with a Construction Type at creation, so have at least one ready before your team starts creating projects. The separate **Construction Type** tab (next to Company on the Global Data home page) is where you build out the deeper work-breakdown-structure library for a type — that is a more advanced, ongoing configuration, not a Day 1 requirement.",
     tags: ["construction type","construction category","set up construction types"]
@@ -14984,7 +14984,7 @@ const QA_ADMINSETUPGUIDE = [
     action: "configure",
     object: "vendor",
     scope: "global",
-    section: "Step 3 · Build your master data",
+    section: "Master Data",
     question: "How do I register vendors?",
     answer: "Go to **Global Data → Vendors** and click **Register Vendor**. Fill in Vendor ID, Company Name, First/Last Name, add contact persons, and enter Username, Phone Number and Email. Before bulk-registering vendors, decide the vendor hierarchy depth in **Vendors → Settings** (Level 1/2/3) — changing it later disrupts existing categorization. Vendors are needed before Procurement and Work Orders can reference them.",
     tags: ["register vendor","add vendor","vendor setup","vendor hierarchy"]
@@ -14993,7 +14993,7 @@ const QA_ADMINSETUPGUIDE = [
     action: "configure",
     object: "crew",
     scope: "global",
-    section: "Step 3 · Build your master data",
+    section: "Master Data",
     question: "How do I set up Crews?",
     answer: "Go to **Global Data → Crews** and click **Create**. Enter a Crew Name, choose a Supervisor and a Foreman from the dropdown (they must already exist in Global Rosters), then check the roster members who belong to the crew and submit. Crews are used company-wide for labor tracking, timesheets, and work assignment; projects can later copy a crew in from Global Data.",
     tags: ["create crew","crew setup","supervisor foreman"]
@@ -15002,7 +15002,7 @@ const QA_ADMINSETUPGUIDE = [
     action: "configure",
     object: "locations and tax",
     scope: "global",
-    section: "Step 3 · Build your master data",
+    section: "Master Data",
     question: "How do I set up Locations and Tax Configuration?",
     answer: "Go to **Global Data → Locations** and click **Create** to add a delivery/company location (Location Name, Address, Zip Code, City, State) plus its Tax Codes. Set up the tax structure first at **Global Data → Tax Configuration**: click **Add Tax Group**, then select the group and **Add Tax Code** for each code and percentage it contains (for example CGST, SGST). Locations and Tax Codes are needed before Owners, Vendors, and Work Orders can reference them.",
     tags: ["locations setup","tax configuration","tax group","tax code","delivery location"]
@@ -15011,7 +15011,7 @@ const QA_ADMINSETUPGUIDE = [
     action: "configure",
     object: "marketplace integration",
     scope: "global",
-    section: "Step 4 · Connect your integrations",
+    section: "Integrations",
     question: "How do I connect Arena to Microsoft 365 (Outlook, OneDrive, SharePoint)?",
     answer: "Go to **Global Data → Marketplace** and open the Microsoft integration you need (Outlook, OneDrive, SharePoint, Users, or Calendar). Click **Sign in with Microsoft** and grant organization-wide consent — this must use a company-domain email, not a personal Microsoft account. Once connected, all users benefit without individually consenting, though a user can also connect their own mailbox later via **My Profile → Settings**. For mail routing specifically, go to **Global Data → Settings → Mail Settings** and switch the relevant module (for example Work Order) to Outlook.",
     tags: ["connect microsoft","microsoft 365","outlook integration","onedrive","sharepoint","marketplace"]
@@ -15020,7 +15020,7 @@ const QA_ADMINSETUPGUIDE = [
     action: "configure",
     object: "trimble viewpoint integration",
     scope: "global",
-    section: "Step 4 · Connect your integrations",
+    section: "Integrations",
     question: "How do I connect Arena to Trimble Viewpoint (Vista)?",
     answer: "Go to **Global Data → Marketplace → Trimble Viewpoint**, enter your connection credentials, and click **Test Connection and Save**. Then map each module's Table Name/Schema Name and click **Save Configuration**. Each module gets a **Link** button to tie it to a Stage feeding **Global Data → Staged Tables**, where data synced from Vista is mapped (**Map Attributes**) and promoted into native Arena records (**Bulk Create Arena Records**), optionally on a recurring schedule (**Auto Sync Criteria**).",
     tags: ["trimble viewpoint","vista integration","staged tables","erp sync","accounting integration"]
@@ -15029,7 +15029,7 @@ const QA_ADMINSETUPGUIDE = [
     action: "configure",
     object: "adobe sign integration",
     scope: "global",
-    section: "Step 4 · Connect your integrations",
+    section: "Integrations",
     question: "How do I set up Adobe Sign for electronic signatures?",
     answer: "Go to **Global Data → Marketplace → Adobe Sign**, log in with your Adobe Sign credentials, and configure the Adobe API settings. Once connected, documents in Arena can be routed for electronic signature through Adobe Sign.",
     tags: ["adobe sign","electronic signature","esign setup"]
@@ -15038,7 +15038,7 @@ const QA_ADMINSETUPGUIDE = [
     action: "create",
     object: "first project",
     scope: "global",
-    section: "Step 5 · Create your first project and add its team",
+    section: "First Project",
     question: "How do I create my first project?",
     answer: "Go to **Home → Projects** and click **+ Create Project**, top-left of the project grid. Fill in the three required fields — **Project Name**, **Project Number / ID**, and **Construction Type** — and optionally Project Location, Business Unit, Owner Representative, Project Manager, Currency, Customer, Owner and more (these can all be added or changed later). Click **Submit**; the project appears immediately with status \"Created,\" but it is functionally empty until you go into **Project Setup** to build out its work breakdown, team, schedule and forms.",
     tags: ["create project","first project","new project setup","create project button"]
@@ -15047,7 +15047,7 @@ const QA_ADMINSETUPGUIDE = [
     action: "configure",
     object: "project team",
     scope: "global",
-    section: "Step 5 · Create your first project and add its team",
+    section: "First Project",
     question: "How do I add my new project's team?",
     answer: "Open the project and go to **Project Setup → People**. To bring in an existing company crew, use the **Project Crews** sub-tab and click **Copy Crews from Global Data** — this is a one-time copy, not a live link, so re-copy later if the source crew changes. To build a project-only crew, click **Create Crew** instead. Use **Project Indirect Staff** for supervisory/support roles, and the **System User** / **Non System User** sub-tabs to track people with or without their own Arena login. This is typically **PM / Module Admin** work.",
     tags: ["add project team","project crew setup","assign staff to project","project people"]
@@ -15056,7 +15056,7 @@ const QA_ADMINSETUPGUIDE = [
     action: "understand",
     object: "module settings location",
     scope: "global",
-    section: "Step 6 · Configure each module's own settings",
+    section: "Module Settings",
     question: "Where does each module store its own settings?",
     answer: "Every Home-hub module has its own **Settings** area — usually a gear icon next to the module's tab bar — separate from Global Data. A **Module Admin** configures it once; end users then just work with the records that setup produces. See the module's own documentation for the exact screens: **Time Management** (Approval Workflows, Timesheet Mode, Earning Codes, Timesheet Templates, Payroll Locking), **Procurement** (Requisition/PO/Invoice/Pickup Request form builders, Approval Workflow, ID Settings, Issues Priority), **Opportunity Management** (Stages & Statuses Configuration, Opportunities Form, ID Settings, Users and Permissions), **Expense Tracker** (Expense Type, Expense Form templates, Approval Workflow, ID Settings), and similarly for other modules you use.",
     tags: ["module settings","where is settings","per module configuration","admin settings gear"]
@@ -15065,7 +15065,7 @@ const QA_ADMINSETUPGUIDE = [
     action: "configure",
     object: "time management settings",
     scope: "global",
-    section: "Step 6 · Configure each module's own settings",
+    section: "Module Settings",
     question: "What do I configure in Time Management before crews can log time?",
     answer: "Open **Time Management → Settings**. Set up an **Approval Workflow** (who signs off on a crew's or project's timesheets), a **Timesheet Mode** (Daily, Weekly, or Weekly by Day, per user or crew), **Earning Codes** (payroll categories hours get logged against), and a **Timesheet Template** (the fields on the form). Optionally configure **Payroll Locking** so closed pay periods can't be edited. None of the day-to-day logging works until an approval workflow and timesheet mode exist.",
     tags: ["time management settings","timesheet setup","earning codes","payroll locking","approval workflow timesheet"]
@@ -15074,7 +15074,7 @@ const QA_ADMINSETUPGUIDE = [
     action: "configure",
     object: "procurement settings",
     scope: "global",
-    section: "Step 6 · Configure each module's own settings",
+    section: "Module Settings",
     question: "What do I configure in Procurement before requisitions can be raised?",
     answer: "Open **Procurement → Settings**. Build the **REQ**, **PO**, **Delivery Receipt**, and **Invoice** forms (split by procurement type: Material, Equipment, Equipment Part, Delivery Service), set an **Approval Workflow** for each document type, choose **ID Settings** for how document numbers generate, and set **Issues Priority** levels. This is **Module Admin** work, and it shapes how disciplined the whole purchasing process is in practice.",
     tags: ["procurement settings","requisition setup","purchase order setup","procurement approval workflow"]
@@ -15083,7 +15083,7 @@ const QA_ADMINSETUPGUIDE = [
     action: "configure",
     object: "opportunity settings",
     scope: "global",
-    section: "Step 6 · Configure each module's own settings",
+    section: "Module Settings",
     question: "What do I configure in Opportunity Management before the BD team starts logging pursuits?",
     answer: "Open **Opportunity Management → Settings**. Set up **Stages & Statuses Configuration** first (the pipeline: Lead → Proposal → Closed, and the statuses allowed at each stage) — most \"why can't I do X\" issues in this module trace back to this screen. Then configure the **Opportunities Form** (fields and Stale Threshold), **ID Settings**, and **Users and Permissions**. This is **Module Admin** work; End Users (BD reps) should never need to open Settings themselves.",
     tags: ["opportunity settings","stages and statuses","pipeline setup","opportunity form setup"]
@@ -15092,7 +15092,7 @@ const QA_ADMINSETUPGUIDE = [
     action: "configure",
     object: "expense tracker settings",
     scope: "global",
-    section: "Step 6 · Configure each module's own settings",
+    section: "Module Settings",
     question: "What do I configure in Expense Tracker before employees can submit claims?",
     answer: "Open **Expense Tracker → Settings**. Set up **Expense Type** categories, an **Expense Form** template, an **Approval WorkFlow** (levels and approvers), and **ID Settings** for form and invoice numbering. This is **Module Admin** work, usually done once by finance.",
     tags: ["expense tracker settings","expense type setup","expense approval workflow setup"]
@@ -15106,7 +15106,7 @@ const MODULES = [
     "qaItems": QA_ADMINSETUPGUIDE,
     "narrative": [
       {
-        "heading": "Step 1 · Set up your company and business units",
+        "heading": "Company Setup",
         "intro": "<p>This is where every Arena setup starts: establishing the company's legal identity and its internal divisions, done once by a <strong>Super Admin</strong> before anyone else logs in. Nearly everything else — projects, vendors, generated documents — rolls up under the company profile created here.</p>",
         "definitions": [
           {
@@ -15139,7 +15139,7 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Step 2 · Add users and permission groups",
+        "heading": "Users & Permissions",
         "intro": "<p>With the company profile in place, bring in the people who will use Arena and decide what each of them can do. Arena's permissions are entirely group-based, so you can run one Global Admin, several module-scoped admins (a Procurement Admin with no visibility into other modules, for example), or a mix of both.</p>",
         "definitions": [
           {
@@ -15197,7 +15197,7 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Step 3 · Build your master data",
+        "heading": "Master Data",
         "intro": "<p>Master data is the shared reference data every project and module draws on: how work is coded and costed, what units are used, what kind of construction is being built, who supplies materials and labor, and where tax applies. Set this up before creating projects, since projects and vendors reference it immediately.</p>",
         "definitions": [
           {
@@ -15272,7 +15272,7 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Step 4 · Connect your integrations",
+        "heading": "Integrations",
         "intro": "<p>Once your core company data exists, connect the outside systems your team already uses, so email, files, accounting and signatures flow through Arena instead of being duplicated by hand. Every integration lives under one screen.</p>",
         "definitions": [
           {
@@ -15315,7 +15315,7 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Step 5 · Create your first project and add its team",
+        "heading": "First Project",
         "intro": "<p>With the company set up, create the first real project and staff it. A project starts as a blank record — the work you do here is what turns it into something a field team can actually use.</p>",
         "definitions": [
           {
@@ -15349,7 +15349,7 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Step 6 · Configure each module's own settings",
+        "heading": "Module Settings",
         "intro": "<p>Finally, before end users rely on a module day to day, configure that module's own <strong>Settings</strong> — usually a gear icon next to its tab bar, separate from Global Data. Each module has its own admin, its own approval rules, and its own form builders; the pattern repeats even though the exact screens differ.</p>",
         "definitions": [
           {
@@ -15385,12 +15385,12 @@ const MODULES = [
       "This is a reference guide, not a product screen — the steps happen across <strong>Global Data</strong>, <strong>Home → Projects</strong>, and each module's own <strong>Settings</strong> gear icon."
     ],
     "sections": [
-      "Step 1 · Set up your company and business units",
-      "Step 2 · Add users and permission groups",
-      "Step 3 · Build your master data",
-      "Step 4 · Connect your integrations",
-      "Step 5 · Create your first project and add its team",
-      "Step 6 · Configure each module's own settings"
+      "Company Setup",
+      "Users & Permissions",
+      "Master Data",
+      "Integrations",
+      "First Project",
+      "Module Settings"
     ]
   },
   {
@@ -21024,7 +21024,7 @@ const MODULES = [
     "qaItems": QA_GLOBALDATA,
     "narrative": [
       {
-        "heading": "About Global Data",
+        "heading": "Overview",
         "intro": "<p>Global Data is the company-wide master data of Arena. The Super Admin (Global Admin) sets it up once; Projects and the Home modules then read from it instead of keeping their own lists.</p><p>Every tile follows the same path: data comes in by hand (Add, Create, Register), by Excel (Export → Upload), or by sync from Viewpoint (Staged Tables), and then shows up in project dropdowns and module pickers. The definitions below map each tile to the screens that use it.</p>",
         "definitions": [
           {
@@ -21060,7 +21060,7 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Company & Business Units",
+        "heading": "Company",
         "intro": "<p>Use this section to record the company's own profile, its subsidiaries and its business units. The Super Admin sets it up once when the account is created.</p><p><strong>Where this data goes:</strong> the profile is the company's own record and the lists sit under Global Data → Company and Global Data → Business Units. The Create Project form has a <strong>Business Unit</strong> dropdown fed by the Business Units list, so add business units here first.</p>",
         "definitions": [
           {
@@ -21116,6 +21116,548 @@ const MODULES = [
               "Fill in <strong>Subsidiary Name</strong>, <strong>Subsidiary ID</strong>, <strong>Street Address</strong>, <strong>City</strong>, <strong>State</strong> and <strong>State Zip Code</strong>. Add the contact, email, phone, <strong>PAN Number</strong> and <strong>GST IN</strong> if you have them, and upload a logo if you want one.",
               "Click <strong>Submit</strong>."
             ]
+          }
+        ]
+      },
+      {
+        "heading": "Owners",
+        "intro": "<p>Use Owners to keep one master record for each client who commissions your projects. The Super Admin maintains the list, and project creators pick from it.</p><p><strong>Where this data goes:</strong> the <strong>Owner</strong> dropdown on <strong>Projects → Create Project</strong> shows exactly the owners on this screen. Each owner can be linked to company <strong>Locations</strong> and <strong>Tax Codes</strong>, and owner contacts show up under <strong>Customer → Contacts</strong>.</p>",
+        "definitions": [
+          {
+            "term": "Owner",
+            "definition": "The client entity that commissions a project. The **Owners** screen shows one card per owner with **Owner ID**, **Owner Name** and **Owner Email**. The toolbar has **Create Owner**, **Settings**, a search box (by ID and name), the pager, **Export**, **Filters**, list and grid icons and a save-layout icon. The ⋮ menu on a card gives **Edit** and **Delete**. Edit opens the same wizard titled **Update Owner**, with an extra editable **Owner Id** field."
+          },
+          {
+            "term": "Create Owner (split button)",
+            "definition": "The top-left button. Its menu offers **Create Owner** (the three-step wizard) and **POC OCR** (OCR-assisted intake of owner details from a document)."
+          },
+          {
+            "term": "Owner Settings / hierarchy levels",
+            "definition": "The **Settings** button on the Owners screen opens **Owner Settings**: \"Divide Owner into how many levels\". Choose **Level 1 (Owner)**, **Level 2 (Category > Owner)** or **Level 3 (Category > SubCategory > Owner)**. Decide early, because moving to a deeper level later means recategorising the owners you already have. The form fields themselves are set in **Global Data → Settings → Owner** (sub-tabs **Form** and **Owner POC**; standard fields Owner ID, Owner Name, Short Name, Alias Name, Primary, Mailing and Billing Address, Email Address, Phone Number, Fax Number, URL, Tax Codes and Locations, plus **Add Field** for your own)."
+          },
+          {
+            "term": "Link Locations",
+            "definition": "Step 2 of the wizard. The **Location** section has a **Link Locations** button and a table with **Location Name**, **State**, **Default** (radio button) and **Actions** (delete). **Link Locations** opens a picker with a search box, **SELECT ALL**, and the company locations from **Global Data → Locations**. The **Tax Codes** section below has **Add Tax Codes** and a table with **Tax Group**, **Tax Class** and **Tax Code** dropdowns filled from **Tax Configuration**."
+          },
+          {
+            "term": "Where owner data comes from and goes",
+            "definition": "**Comes from:** manual entry in the wizard, or an Excel file through **Export → Upload**. Locations and Tax Codes inside the wizard come from **Locations** and **Tax Configuration**. **Goes to:** the **Owner** dropdown on **Create Project**, and owner contacts in **Customer → Contacts**. If a new owner does not show in Create Project, check that it was submitted and reopen the form."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Create a new Owner record",
+            "steps": [
+              "Go to <strong>Global Data → Owners</strong> tile → <strong>Create Owner</strong> (split button) → <strong>Create Owner</strong>.",
+              "<strong>Step 1 – Basic Details:</strong> enter <strong>Owner Name</strong> (the only required field), then <strong>Short Name</strong>, <strong>Alias Name</strong>, <strong>Phone Number</strong> (country code, number, extension), <strong>Email</strong>, <strong>Fax Number</strong> and <strong>Url</strong>. Fill <strong>Primary Address</strong>, <strong>Mailing Address</strong> and <strong>Billing Address</strong> (Address Line 1 and 2, Country, City, State, Zip Code); tick <strong>Same as Primary address</strong> to copy it.",
+              "<strong>Step 2 – Locations &amp; Tax Codes:</strong> click <strong>Link Locations</strong> and tick the company locations that apply, then mark one as <strong>Default</strong>. Click <strong>Add Tax Codes</strong> to attach a <strong>Tax Group</strong>, <strong>Tax Class</strong> and <strong>Tax Code</strong>.",
+              "<strong>Step 3 – Preview:</strong> review all entered data.",
+              "Click <strong>Submit</strong> to create the Owner."
+            ],
+            "note": "To bulk-create Owners, use Export, which offers Download and Upload. Owners you create appear in the Owner dropdown on Create Project.",
+            "images": [
+              {
+                "src": "assets/notion/global-data-owners-creation/001.jpg",
+                "caption": "The Owners screen",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/global-data-owners-creation/003.jpg",
+                "caption": "Register Owner",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/global-data-owners-creation/004.jpg",
+                "caption": "Step 1: basic details and addresses",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/global-data-owners-creation/005.jpg",
+                "caption": "Step 2: Link Locations and Add Tax Codes",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/global-data-owners-creation/006.jpg",
+                "caption": "Step 3: preview of the owner",
+                "step": 4
+              }
+            ]
+          },
+          {
+            "title": "Configure Owner hierarchy levels",
+            "steps": [
+              "On the Owners tile, click the <strong>Settings</strong> gear icon (top right).",
+              "In \"Owner Settings,\" choose Level 1, Level 2, or Level 3 depending on how granular owner categorization should be company-wide."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/global-data-owners-creation/002.jpg",
+                "caption": "Owner Settings, for dividing owners into levels",
+                "step": 2
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/global-data-owners-creation/007.jpg",
+            "caption": "Export, to download or upload owners in Excel"
+          },
+          {
+            "src": "assets/notion/global-data-owners-creation/008.jpg",
+            "caption": "Filters and Save Layout on the owners list"
+          }
+        ]
+      },
+      {
+        "heading": "Locations",
+        "intro": "<p>Use this section to keep the company's list of places and its tax set-up. The Super Admin maintains both, and other screens pick from them.</p><p><strong>Where this data goes:</strong> company locations are offered in <strong>Owners → Link Locations</strong>, and tax codes (Tax Group, Tax Class, Tax Code) are attached to locations and owners. The <strong>Project Location</strong> box on Create Project is plain text, not a dropdown of these locations.</p>",
+        "definitions": [
+          {
+            "term": "Location",
+            "definition": "A registered company place (older guides call it a Delivery Location). The **Locations** screen (**Global Data → Locations**) has **Create**, a search box, the pager, **Export** (**Download Excel**, **Upload Excel**), **Filters**, **Manage Columns** and a save-layout icon. Columns: **Location ID**, **Location Name**, **Address**, **Zip Code**, **City**, **State** and **Actions** (edit, delete). The **Add Location** dialog asks for **Location Name**, **Address**, **Zip Code**, **City** and **State**, plus a **Tax Codes** table (**Add** → **Tax Group**, **Tax Class**, **Tax Code**)."
+          },
+          {
+            "term": "Tax Group",
+            "definition": "The top level of the tax tree on **Tax Configuration**. Groups appear as accordions in the left panel (for example **Tax**, **GST 111**, **GST 18**). **Add Tax Group** asks for one field, **Group**. The ⋮ menu on a group has **Add**, **Edit** and **Delete**."
+          },
+          {
+            "term": "Tax Code",
+            "definition": "The bottom level: a **Tax Code** name with a **Tax Percentage** (for example CGST -1 at 5, ITC at 1, Freight at 5). **Add Tax Code** asks for those two fields; each row has edit and delete icons; **Upload Excel** and **Download Excel** load or export codes in bulk. Locations and owners show the full path as three dropdowns: **Tax Group**, **Tax Class**, **Tax Code**."
+          },
+          {
+            "term": "Tax Class",
+            "definition": "The middle level. A group opens into its classes (for example **Tax → CGST**). Selecting a class shows its tax codes in the table on the right."
+          },
+          {
+            "term": "Where location and tax data comes from and goes",
+            "definition": "**Comes from:** manual entry on each screen, or Excel upload (Locations: **Export → Upload Excel**; Tax Configuration: **Upload Excel**). **Goes to:** **Owners → Link Locations** and the **Tax Codes** tables on Locations and Owners, which are filled from Tax Configuration. To make a new tax code usable, add it under its group and class in Tax Configuration first."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Add a new company delivery location",
+            "steps": [
+              "Go to <strong>Global Data → Locations</strong> tile → <strong>Create</strong>.",
+              "In the <strong>Add Location</strong> dialog, fill in <strong>Location Name</strong>, <strong>Address</strong>, <strong>Zip Code</strong>, <strong>City</strong> and <strong>State</strong>.",
+              "Under <strong>Tax Codes</strong>, click <strong>Add</strong> to attach a <strong>Tax Group</strong>, <strong>Tax Class</strong> and <strong>Tax Code</strong> from Tax Configuration.",
+              "Click <strong>Submit</strong>."
+            ],
+            "note": "New locations appear in the Link Locations picker of the Create Owner wizard. For bulk setup use Export → Upload Excel on this screen.",
+            "images": [
+              {
+                "src": "assets/notion/global-data-delivery-locations/001.jpg",
+                "caption": "The Locations screen",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/global-data-delivery-locations/002.jpg",
+                "caption": "Add Location, for setting up delivery locations",
+                "step": 2
+              }
+            ]
+          },
+          {
+            "title": "Set up tax groups and tax codes",
+            "steps": [
+              "Go to <strong>Global Data → Tax Configuration</strong> → <strong>Add Tax Group</strong>, enter the <strong>Group</strong> name and click <strong>Submit</strong>.",
+              "Open the group in the left panel and select its class (for example <strong>Tax → CGST</strong>). The table on the right lists that class's Tax Codes.",
+              "Click <strong>Add Tax Code</strong>, enter the <strong>Tax Code</strong> and <strong>Tax Percentage</strong>, and click <strong>Submit</strong>. Repeat for each code (for example CGST, SGST, ITC, Freight).",
+              "Use <strong>Upload Excel</strong> / <strong>Download Excel</strong> to bulk manage tax codes."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/tax-configuration/001.jpg",
+                "caption": "Tax Configuration screen",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/tax-configuration/002.jpg",
+                "caption": "A tax group with its tax codes",
+                "step": 2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Vendors",
+        "intro": "<p>Use this section to keep one company-wide list of vendors and subcontractors. The Super Admin or procurement admin maintains it, and every project shares it.</p><p><strong>Where this data goes:</strong> Procurement's <strong>RFQ</strong> wizard picks vendors from the vendor categories and groups defined here, and the Procurement dashboard's <strong>Vendor Performance Summary</strong> lists the same vendors. A vendor's <strong>Rate Card</strong> rows come from the Material and Equipment lists under <strong>Cost</strong>.</p>",
+        "definitions": [
+          {
+            "term": "Vendor",
+            "definition": "An external supplier. Each vendor is a card with photo, name, vendor ID and two switches, **Preferred** and **Blocked**. The ⋮ menu gives **Edit** and **Delete**. The **Vendors** screen (tabs **Vendors** and **Ratings Form**) has a left panel with **Create Category** and the category tree (categories with sub-categories), and a toolbar with **Restore Vendors**, **Register Vendor**, a search box, **Add Groups**, **Download Excel**, **Upload Vendors** and **Settings**."
+          },
+          {
+            "term": "Vendor categories",
+            "definition": "A left-panel hierarchy (e.g. Equipment Vendors, Material Vendors, Cement Vendors, General, Eco category) for organizing vendors, expandable into sub-categories via Create Category."
+          },
+          {
+            "term": "Rate Card",
+            "definition": "A vendor's prices, on the vendor's **Rate Card** tab. **Materials** columns: **Material Cost Code**, **Material Name**, **UOM Group**, **UOM**, **Type**, **Rate**. **Equipment** columns: **Equipment Cost Code**, **Equipment Name**, **Type**, **Group**, **UOM Group**, **UOM**, and **Daily**, **Weekly**, **Monthly** rates. **Upload Logs** bulk-loads rates from an Excel template. **Where the rows come from:** the same material and equipment items (for example Cement Bag, Sand, HandSaw, Hammer) that are listed under **Global Data → Cost → Material** and **Equipment**, with UOM Group and UOM from the UOM lists. Add an item there first to price it here."
+          },
+          {
+            "term": "Ratings Form",
+            "definition": "A form-builder for vendor evaluation, combining a Standard field (\"Vendor Rating\") with Custom fields (e.g. Safety, Quality), each configurable with a weight/value, Required toggle, Show on card toggle, and field type."
+          },
+          {
+            "term": "Sub Contractor",
+            "definition": "A subcontracted trade company, kept in its own list (**Global Data → Sub Contractors**) separate from Vendors. The **Create Sub Contractor** dialog asks for **Upload Photo**, **Sub Contractor ID**, **First Name**, **Last Name**, **User Name**, **Phone Number**, **Company Name**, **Email Address**, **Subcontractor Specialists**, **Website**, **Location**, **Experience**, **License Number**, **License Document**, **Insurance Document** and **Resume** (three uploads), **Linked SubContractor Groups**, then a **CERTIFICATIONS** section of upload fields. The screen has **Register Sub Contractor**, a search box, **Add Groups**, grid/list icons, and one card per subcontractor."
+          },
+          {
+            "term": "Sub Contractor Settings (compliance fields)",
+            "definition": "Set in **Global Data → Settings → Sub Contractor Settings** (standard fields plus **Add Field**). The fields you add there become the upload fields in the **CERTIFICATIONS** section of **Create Sub Contractor**. Add a field in Settings and it appears in the dialog. For example, you can add upload fields for licences or certifications such as ISO 9001 or ISO 45001."
+          },
+          {
+            "term": "Owner-style Settings hierarchy",
+            "definition": "The **Settings** button on the Vendors screen opens **Vendor Settings**: \"Divide Vendor into how many levels\" with **Level 1 (Vendor)**, **Level 2 (Category > Vendor)** and **Level 3 (Category > SubCategory > Vendor)**. It works the same way as Owner Settings. The Procurement RFQ wizard asks for **Vendor Category**, **Vendor Sub Category** and **Category Groups**, so vendors need a category to be found there."
+          },
+          {
+            "term": "Preferred / Blocked (vendor status)",
+            "definition": "Two switches on every vendor card, and two check boxes under **Additional Information** on the vendor's **Profile** tab. **Preferred** marks a favoured supplier. **Blocked** is meant to stop a vendor being used."
+          },
+          {
+            "term": "Additional Information (vendor profile)",
+            "definition": "Extra fields under **Additional Information** on a vendor's **Profile** tab: **Vendor Type**, **Vendor Business Size**, **Vendor Minority**, **Notes**, **Warning**, **Extra Copy**, **Sent By**, **Freight Terms**, **GST IN**, **Linked Vendor Groups**, **Domestic**, **Preferred** and **Blocked**. The contact table above it has **Contact Name**, **Contact Number**, **Address**, **Vendor**, **Vendor Title**, **fax**, **Cell**, **Vendor Parish**, **email1**, **email2**, **Req Type**, **PhaseCode**, **Default** and **Actions**. **Add** opens a contact dialog (**Username**, **Phone Number**, **Email**, **Select Sign Label**, **Initials**)."
+          },
+          {
+            "term": "Vendor Groups",
+            "definition": "Opened with **Add Groups**: the **Vendors Groups** dialog has **Group Name**, **Group Description** and **Actions**, with **Add Row**, **Cancel** and **Submit**. Groups are what you pick in a vendor's **Linked Vendor Groups** field and in the **Category Groups** dropdown of the Procurement RFQ wizard."
+          },
+          {
+            "term": "Restore Vendors",
+            "definition": "Deleting a vendor is reversible. **Restore Vendors** opens a list of deleted vendors (**Vendor**, **First Name**, **Actions**) with check boxes and a **Submit** button that brings the ticked vendors back."
+          },
+          {
+            "term": "Where vendor data comes from and goes",
+            "definition": "**Comes from:** **Register Vendor** (one at a time), **Upload Vendors** (Excel), or a sync from Viewpoint through Staged Tables. **Goes to:** the Procurement **RFQ** wizard (step 3, Identify Vendors: Vendor Category, Vendor Sub Category, Category Groups, **Add Vendors**), the Procurement dashboard's **Vendor Performance Summary**, and the vendor picker in Direct Purchase Orders (step **Select Vendor**). A new vendor only appears in an RFQ when it has a category and a group that you select there; RFQ's **Register Vendors** button adds to this same list."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Add a new vendor",
+            "steps": [
+              "Go to <strong>Global Data → Vendors</strong> tile → <strong>Register Vendor</strong>.",
+              "Upload a profile picture (optional), then fill <strong>Vendor ID</strong>, <strong>Company Name</strong>, <strong>First Name</strong> and <strong>Last Name</strong>. Company Name, First Name and Last Name are marked as required.",
+              "Click <strong>Add</strong> in the contact table to add one or more contact persons with their details.",
+              "Fill <strong>Username</strong>, <strong>Phone Number</strong> (with country code) and <strong>Email</strong>; these three are required.",
+              "Choose a <strong>Select Sign Label</strong> (e.g. Initials) and fill Initials* — used as the digital signature label on approved documents; optionally toggle <strong>Enable Security Key Authentication</strong>.",
+              "Optionally fill <strong>Vendor Title</strong>, <strong>Address</strong>, <strong>Licence Number</strong>, <strong>Fax</strong>, <strong>Scope</strong> and <strong>Website</strong>.",
+              "Under <strong>Additional Information</strong>, optionally set Vendor Type, Vendor Business Size, Vendor Minority, Notes, Warning, Extra Copy, Sent By, Freight Terms, GST IN, and Linked Vendor Groups, and check <strong>Domestic</strong>, <strong>Preferred</strong>, and/or <strong>Blocked</strong> as they apply.",
+              "Click <strong>Submit</strong>. Use <strong>Upload Vendors</strong> (next to Download Excel) on the main Vendors screen to bulk-register vendors from an Excel template instead."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/global-data-vendor-creation/003.jpg",
+                "caption": "Register Vendor",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/global-data-vendor-creation/004.jpg",
+                "caption": "A vendor profile where contact details are added",
+                "step": 3
+              }
+            ],
+            "note": "Put the vendor in a category (left panel) and link it to a vendor group so it can be found in the Procurement RFQ wizard."
+          },
+          {
+            "title": "Set up a vendor's rate card",
+            "steps": [
+              "Open the vendor's card from the <strong>Vendors</strong> tile.",
+              "Go to the <strong>Rate Card</strong> tab and choose <strong>Materials</strong> or <strong>Equipment</strong>. The rows listed are the company's material or equipment items from <strong>Global Data → Cost</strong>.",
+              "Click <strong>Upload Logs</strong>, download the Excel template, fill in Daily/Weekly/Monthly rates per item, and upload the completed file — or edit the <strong>Rate</strong> field inline per row."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/global-data-vendors-rate-card/002.jpg",
+                "caption": "Downloading the Excel template from the dialog",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/global-data-vendors-rate-card/003.jpg",
+                "caption": "Uploading the filled template to update Daily, Weekly and Monthly rates",
+                "step": 3
+              }
+            ]
+          },
+          {
+            "title": "Configure the vendor rating form",
+            "steps": [
+              "Go to the <strong>Vendors</strong> tile → <strong>Ratings Form</strong> tab.",
+              "Click <strong>Add field</strong> to add a new custom rating criterion (for example \"Safety\").",
+              "Switch <strong>Required</strong> and/or <strong>Show on card</strong> on as needed, and choose the type with <strong>CHOOSE TYPE</strong> (for example Rating).",
+              "Click <strong>Save Changes</strong>."
+            ],
+            "note": "The form has a Standard section (with Reset) and a Custom section. The same form applies to every vendor."
+          },
+          {
+            "title": "Register a subcontractor",
+            "steps": [
+              "Go to <strong>Global Data → Sub Contractors</strong> tile → <strong>Register Sub Contractor</strong>.",
+              "Fill in the <strong>Create Sub Contractor</strong> dialog: ID, name, user name, phone, company name, email, specialists, website, location, experience, licence number, the licence, insurance and resume uploads, and <strong>Linked SubContractor Groups</strong>.",
+              "Upload any files in the <strong>CERTIFICATIONS</strong> section, then click <strong>Submit</strong>.",
+              "Use <strong>Add Groups</strong> on the list screen to organise subcontractors into groups."
+            ]
+          },
+          {
+            "title": "Track vendor/subcontractor certifications (ISO, safety licenses)",
+            "steps": [
+              "Go to <strong>Global Data → Settings → Sub Contractor Settings</strong> and use <strong>Add Field</strong> to define each certification (for example ISO 9001) as an <strong>Attachment</strong> field. Tick <strong>Required</strong> if it must be uploaded.",
+              "Open <strong>Global Data → Sub Contractors → Register Sub Contractor</strong>: the fields you added show under <strong>CERTIFICATIONS</strong>, ready for uploads.",
+              "For company-wide compliance items, use <strong>Global Data → Compliance Hub → Compliance Directory → Create</strong>, then track status under <strong>My Company Compliance</strong>."
+            ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/global-data-vendor-creation/001.jpg",
+            "caption": "Vendors: categories on the left and vendor profiles"
+          },
+          {
+            "src": "assets/notion/global-data-vendor-creation/002.jpg",
+            "caption": "Vendor settings for up to three levels of categories"
+          }
+        ]
+      },
+      {
+        "heading": "Work Order Management",
+        "intro": "<p>This tile is the Global Data entrance to the same Work Order module you see under <strong>Home → Work Order</strong>. The Super Admin or Work Order Admin uses it to set up work order types, approvals and access.</p><p><strong>Where this data goes:</strong> the work orders listed here are the same records as in Home → Work Order; this view shows fewer columns. The full field, tab and settings detail is in the Work Order module section.</p>",
+        "definitions": [
+          {
+            "term": "Work Order Type",
+            "definition": "The kind of work order: the **Work Order Type** column shows **Service**, **Equipment** and **Material**. Types are managed in **Settings → Work Order Types**."
+          },
+          {
+            "term": "Work Order Contract",
+            "definition": "A work order record. The Global Data screen (**Global Data → Work Order Management**) has the tabs **Work Orders**, **Workflow Issues**, **Reports** and **Settings**; the list has **Create**, search, pager, **Export**, **Filters**, **Manage Columns** and table/grid/board icons, with columns **ID**, **Description**, **Work Order Status**, **Work Order Type**, **Created Date**, **Created By**, **Notes**, **Due Date**, **Assign To** and **Actions** (history, delete)."
+          },
+          {
+            "term": "Work Order Status",
+            "definition": "The **Work Order Status** column in the list and the **Status** page under Settings."
+          },
+          {
+            "term": "Item Details / Create Items",
+            "definition": "The items of work inside a work order. Open a work order from the list to add them; see the Work Order module section for the item form."
+          },
+          {
+            "term": "Users and Permissions (Work Order Management)",
+            "definition": "The last page in the Work Order **Settings** menu. The full menu is **Work Order Types**, **Maintenance Types**, **Invoices**, **Approval Workflow**, **Status**, **Priority**, **Configuration** and **Users and Permissions**, with a search box. It is the same Settings screen as in Home → Work Order."
+          },
+          {
+            "term": "Where work order data comes from and goes",
+            "definition": "Global Data → Work Order Management and **Home → Work Order** are two doors to the same module and the same records. Home → Work Order shows extra columns (for example Assigned Project/Location, Equipment, Maintenance Type, Project, Phase Code, Priority, Technician, Vendor). Settings made here apply in both places."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Create a Work Order Type",
+            "steps": [
+              "Go to <strong>Global Data → Work Order Management</strong> → <strong>Settings</strong> (gear icon) → <strong>Work Order Types</strong>.",
+              "Click <strong>+ Work Order Type</strong> and fill in the details, then save. See the Work Order module section for tabs, forms and ID format."
+            ]
+          },
+          {
+            "title": "Create a Work Order Contract template",
+            "steps": [
+              "Go to <strong>Global Data → Work Order Management</strong> and click <strong>Create</strong> on the <strong>Work Orders</strong> tab.",
+              "Enter the name and description, and choose the <strong>Work Order Type</strong>.",
+              "Submit, then open the new record to configure its Profile fields, add Items via <strong>Create Items</strong>, and configure Expense forms under the <strong>Expense</strong> tab."
+            ],
+            "note": "The full create form is described in the Work Order module section."
+          }
+        ]
+      },
+      {
+        "heading": "Construction Types",
+        "intro": "<p>Use this section to keep the list of project categories and to build the work breakdown for each one. Each project then shows its Construction Type in the Project Setup header. The Super Admin sets it up, often with a senior estimating or operations lead.</p><p><strong>Where this data goes:</strong> the <strong>Construction Type</strong> dropdown on <strong>Projects → Create Project</strong> lists exactly the types on this screen, in the same order, with the <strong>Set as Default</strong> type pre-selected.</p>",
+        "definitions": [
+          {
+            "term": "Construction Types (tile)",
+            "definition": "The master list of project categories. The screen (**Global Data → Construction Types**) has **Create** and **Copy** buttons and a table with a drag handle, **S.No**, **Types of Construction**, **Set as Default** (a radio button) and **Actions** (edit, delete). A type cannot be edited or deleted once projects use it."
+          },
+          {
+            "term": "Construction Type (pipeline tab)",
+            "definition": "A separate top-level tab (next to \"Company\") presenting a 10-step configuration pipeline for building the full work-breakdown-structure library for a selected Construction Type."
+          },
+          {
+            "term": "Global Work Areas",
+            "definition": "Step 1 of the pipeline: the physical/organizational location hierarchy of a project site as a three-tier nested structure (Tier 1 → Tier 2 → Tier 3, e.g. Tower → Floor → Room), configured via Entity Types, Super Location Types, and Location Types sub-tabs."
+          },
+          {
+            "term": "Global Work Packages",
+            "definition": "Step 2 of the pipeline: the library of work content. Its sub-cards are **Activities** (major areas of work), **Work Packages** (the library of construction works), **Progress Forms**, **Quality Forms** (level-1 and level-2 inspections) and **Safety Forms**, all scoped to the selected Construction Type."
+          },
+          {
+            "term": "Activity Sequence Templates",
+            "definition": "Step 3 of the pipeline. Two sub-cards: **Map Work Packages to Work Location Types** (which work happens at each type of location) and **Create Activity Sequence Templates** (the order and dependencies of Work Packages). The pipeline page has a dropdown for the Construction Type it configures."
+          },
+          {
+            "term": "Material and Labor Estimation Templates",
+            "definition": "Step 4 of the pipeline: four mapping cards — Map Materials to Activity, Map Labor to Activity, Map Materials to Work Package, Map Labor to Work Package — used for cost/productivity estimation."
+          },
+          {
+            "term": "Naming Framework (Construction Type)",
+            "definition": "Step 5 of the pipeline: a table of Activity Sequence Level rows (Tree Version, Entity, Super Location, Location, Activity, Work Package, Sub Activity, and more) with editable Custom Name and Short Name columns; changes relabel that concept everywhere in the app for this construction type."
+          },
+          {
+            "term": "P6 Activity Codes",
+            "definition": "Step 6 of the pipeline: Primavera P6 activity codes used to categorize/classify project activities for schedule interoperability with P6."
+          },
+          {
+            "term": "Data Migration (Construction Type)",
+            "definition": "Step 7 of the pipeline: bulk-loads historical/master data from Excel into the construction type's structures (Master Data, Global Work Packages, Locations Type Work Packages, Global Sequence Model, etc.), appending to existing data rather than overwriting it."
+          },
+          {
+            "term": "Metadata (Construction Type)",
+            "definition": "Step 8 of the pipeline: custom Metadata fields added globally to extend the standard data model."
+          },
+          {
+            "term": "Work Package Linked Forms",
+            "definition": "Step 9 of the pipeline: associates specific forms (Progress/Quality/Safety/etc.) with individual Work Packages so the correct form appears when work is logged in the field."
+          },
+          {
+            "term": "Work Package Measurement Template Linking",
+            "definition": "Step 10 of the pipeline: links a Measurement Template to a Work Package so quantity take-off math is automatically available when recording progress against it."
+          },
+          {
+            "term": "Copy Construction Type",
+            "definition": "The **Copy** button opens **Copy Construction Type** with **Source ConstructionType**, **Destination ConstructionType** and a **Features** list of switches: **Entity Types** (with **Super Location Types** and **Location Types**), **Activity** (with **Work Package**, **Quality Forms**, **Safety Forms**), **Map WP to Location type** and **Activity Sequence template**. Switch on what you want to clone, then **Submit**. This saves rebuilding a similar type from scratch."
+          },
+          {
+            "term": "Where construction type data comes from and goes",
+            "definition": "**Comes from:** **Create** (new type), **Copy** (clone an existing type's setup) and the ten-step pipeline on the **Construction Type** tab. **Goes to:** the **Construction Type** dropdown on **Create Project** (same 56 names, default pre-selected) and the Construction Type shown in the **Project Setup** header (for example \"Arena Steel Plant - Phase 1\" shows \"Arena Integrated Steel Plant\"). The work areas, work packages, forms and templates you configure for a type are what projects of that type start from."
+          },
+          {
+            "term": "Quality Forms and Safety Forms feed Field Works",
+            "definition": "**Global Data → Construction Types → Step 2 Global Work Packages → Quality Forms** has **Quality Level 1** and **Quality Level 2** tabs, **Copy Form**, **Delete Form** and a **Work Packages** list grouped by activity (for the Moore Industries type: **General Conditions** with **MOORE - QP - 001** to **008** and **013**). Each form is built in four steps: **Create Inspection Items**, **Build Form**, **Setup Trigger Points**, **Preview Form**. **Safety Forms** (**MOORE - SP - 001** to **004**) has five steps (**Create Inspection Items**, **Inspection Items Response**, **Build Form**, **Setup Trigger Points**, **Preview Form**). **Where this goes:** the QP work packages are the ones that appear in **Field Works → Quality → Quality Level 1 / 2** (and in **Project Setup → Quality** folder mappings) on Warehouse Construction; the SP work packages and the **General Conditions** activity are what **Project Setup → Safety** offers in **Filter by Activities** and **Assign Workflow**, and what **Field Works → Safety** forms are built from. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Configure which construction categories are available when creating a project",
+            "steps": [
+              "Go to <strong>Global Data → Construction Types</strong> tile.",
+              "Click <strong>Create</strong> to add a new type, or <strong>Copy</strong> to clone an existing type's setup (choose Source, Destination and the features to copy).",
+              "Tick the <strong>Set as Default</strong> radio button on the type you want pre-selected on Create Project."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/construction-types/001.jpg",
+                "caption": "Create a construction type; created types appear in a table",
+                "step": 2
+              }
+            ],
+            "note": "Changes show in the Create Project dropdown the next time the form is opened."
+          },
+          {
+            "title": "Bulk-load historical data into a Construction Type",
+            "steps": [
+              "Go to <strong>Global Data → Construction Type</strong> tab → <strong>Step 7 (Data Migration)</strong>.",
+              "For each section (Master Data, Global Work Packages, Locations Type Work Packages, Global Sequence Model, etc.), click the <strong>Template</strong> link to download the correctly-formatted Excel file.",
+              "Fill it in and drag it into the upload zone."
+            ],
+            "note": "Existing data is preserved — new rows are appended, not overwritten.",
+            "images": [
+              {
+                "src": "assets/notion/data-migration/001.jpg",
+                "caption": "Data Migration: the upload spaces for each kind of data",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/data-migration/002.jpg",
+                "caption": "Master Data and Global Work Areas upload",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/data-migration/003.jpg",
+                "caption": "Global Work Packages upload",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/data-migration/004.jpg",
+                "caption": "Location Type Work Package mapping upload",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/data-migration/005.jpg",
+                "caption": "Global Sequence Model upload, and P6 project upload",
+                "step": 2
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/global-data/001.jpg",
+            "caption": "Global Data construction-type setup: choose the construction type from the drop-down"
+          },
+          {
+            "src": "assets/notion/global-work-areas/001.jpg",
+            "caption": "Global Work Areas: the three level types for a construction type"
+          },
+          {
+            "src": "assets/notion/global-work-areas/002.jpg",
+            "caption": "Editing or deleting a work area type"
+          },
+          {
+            "src": "assets/notion/global-work-packages/001.jpg",
+            "caption": "Global Work Packages: editing or deleting a work package from its three-dot menu"
+          },
+          {
+            "src": "assets/notion/global-activities/001.jpg",
+            "caption": "Global Activities: editing or deleting an activity from its three-dot menu"
+          },
+          {
+            "src": "assets/notion/activity-sequence-templates/001.jpg",
+            "caption": "Map Work Packages to Location Types: choosing a location type and adding work packages"
+          },
+          {
+            "src": "assets/notion/activity-sequence-templates/002.jpg",
+            "caption": "Deleting a mapped work package"
+          },
+          {
+            "src": "assets/notion/activity-sequence-templates/003.jpg",
+            "caption": "The work package count for the selected location type"
+          },
+          {
+            "src": "assets/notion/activity-sequence-templates/004.jpg",
+            "caption": "Create Activity Sequence Template for a location type"
+          },
+          {
+            "src": "assets/notion/activity-sequence-templates/006.jpg",
+            "caption": "Pause and Play switch for an activity sequence template"
+          },
+          {
+            "src": "assets/notion/mappings-map-labor-to-activities/001.jpg",
+            "caption": "Map Labor to Activities tab"
+          },
+          {
+            "src": "assets/notion/mappings-map-labor-to-activities/003.jpg",
+            "caption": "Selecting roles to map to an activity"
+          },
+          {
+            "src": "assets/notion/mappings-map-materials-to-activities/001.jpg",
+            "caption": "Map Materials to Activities tab"
+          },
+          {
+            "src": "assets/notion/mappings-map-materials-to-activities/002.jpg",
+            "caption": "Work divisions on the left and the materials mapped to a selected activity on the right"
+          },
+          {
+            "src": "assets/notion/mappings-map-materials-to-activities/003.jpg",
+            "caption": "Map Material with a multi-select list of materials"
+          },
+          {
+            "src": "assets/notion/mappings-map-materials-to-activities/004.jpg",
+            "caption": "Selecting materials to map to an activity"
+          },
+          {
+            "src": "assets/notion/naming-framework/001.jpg",
+            "caption": "Naming Framework table with a default name and a custom name for each level"
+          },
+          {
+            "src": "assets/notion/activity-codes/001.jpg",
+            "caption": "Activity Codes imported from P6 projects, with Activity Code Type to add a new one"
           }
         ]
       },
@@ -21361,216 +21903,6 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Locations & Tax",
-        "intro": "<p>Use this section to keep the company's list of places and its tax set-up. The Super Admin maintains both, and other screens pick from them.</p><p><strong>Where this data goes:</strong> company locations are offered in <strong>Owners → Link Locations</strong>, and tax codes (Tax Group, Tax Class, Tax Code) are attached to locations and owners. The <strong>Project Location</strong> box on Create Project is plain text, not a dropdown of these locations.</p>",
-        "definitions": [
-          {
-            "term": "Location",
-            "definition": "A registered company place (older guides call it a Delivery Location). The **Locations** screen (**Global Data → Locations**) has **Create**, a search box, the pager, **Export** (**Download Excel**, **Upload Excel**), **Filters**, **Manage Columns** and a save-layout icon. Columns: **Location ID**, **Location Name**, **Address**, **Zip Code**, **City**, **State** and **Actions** (edit, delete). The **Add Location** dialog asks for **Location Name**, **Address**, **Zip Code**, **City** and **State**, plus a **Tax Codes** table (**Add** → **Tax Group**, **Tax Class**, **Tax Code**)."
-          },
-          {
-            "term": "Tax Group",
-            "definition": "The top level of the tax tree on **Tax Configuration**. Groups appear as accordions in the left panel (for example **Tax**, **GST 111**, **GST 18**). **Add Tax Group** asks for one field, **Group**. The ⋮ menu on a group has **Add**, **Edit** and **Delete**."
-          },
-          {
-            "term": "Tax Code",
-            "definition": "The bottom level: a **Tax Code** name with a **Tax Percentage** (for example CGST -1 at 5, ITC at 1, Freight at 5). **Add Tax Code** asks for those two fields; each row has edit and delete icons; **Upload Excel** and **Download Excel** load or export codes in bulk. Locations and owners show the full path as three dropdowns: **Tax Group**, **Tax Class**, **Tax Code**."
-          },
-          {
-            "term": "Tax Class",
-            "definition": "The middle level. A group opens into its classes (for example **Tax → CGST**). Selecting a class shows its tax codes in the table on the right."
-          },
-          {
-            "term": "Where location and tax data comes from and goes",
-            "definition": "**Comes from:** manual entry on each screen, or Excel upload (Locations: **Export → Upload Excel**; Tax Configuration: **Upload Excel**). **Goes to:** **Owners → Link Locations** and the **Tax Codes** tables on Locations and Owners, which are filled from Tax Configuration. To make a new tax code usable, add it under its group and class in Tax Configuration first."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Add a new company delivery location",
-            "steps": [
-              "Go to <strong>Global Data → Locations</strong> tile → <strong>Create</strong>.",
-              "In the <strong>Add Location</strong> dialog, fill in <strong>Location Name</strong>, <strong>Address</strong>, <strong>Zip Code</strong>, <strong>City</strong> and <strong>State</strong>.",
-              "Under <strong>Tax Codes</strong>, click <strong>Add</strong> to attach a <strong>Tax Group</strong>, <strong>Tax Class</strong> and <strong>Tax Code</strong> from Tax Configuration.",
-              "Click <strong>Submit</strong>."
-            ],
-            "note": "New locations appear in the Link Locations picker of the Create Owner wizard. For bulk setup use Export → Upload Excel on this screen.",
-            "images": [
-              {
-                "src": "assets/notion/global-data-delivery-locations/001.jpg",
-                "caption": "The Locations screen",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/global-data-delivery-locations/002.jpg",
-                "caption": "Add Location, for setting up delivery locations",
-                "step": 2
-              }
-            ]
-          },
-          {
-            "title": "Set up tax groups and tax codes",
-            "steps": [
-              "Go to <strong>Global Data → Tax Configuration</strong> → <strong>Add Tax Group</strong>, enter the <strong>Group</strong> name and click <strong>Submit</strong>.",
-              "Open the group in the left panel and select its class (for example <strong>Tax → CGST</strong>). The table on the right lists that class's Tax Codes.",
-              "Click <strong>Add Tax Code</strong>, enter the <strong>Tax Code</strong> and <strong>Tax Percentage</strong>, and click <strong>Submit</strong>. Repeat for each code (for example CGST, SGST, ITC, Freight).",
-              "Use <strong>Upload Excel</strong> / <strong>Download Excel</strong> to bulk manage tax codes."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/tax-configuration/001.jpg",
-                "caption": "Tax Configuration screen",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/tax-configuration/002.jpg",
-                "caption": "A tax group with its tax codes",
-                "step": 2
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "heading": "Vendors & Subcontractors",
-        "intro": "<p>Use this section to keep one company-wide list of vendors and subcontractors. The Super Admin or procurement admin maintains it, and every project shares it.</p><p><strong>Where this data goes:</strong> Procurement's <strong>RFQ</strong> wizard picks vendors from the vendor categories and groups defined here, and the Procurement dashboard's <strong>Vendor Performance Summary</strong> lists the same vendors. A vendor's <strong>Rate Card</strong> rows come from the Material and Equipment lists under <strong>Cost</strong>.</p>",
-        "definitions": [
-          {
-            "term": "Vendor",
-            "definition": "An external supplier. Each vendor is a card with photo, name, vendor ID and two switches, **Preferred** and **Blocked**. The ⋮ menu gives **Edit** and **Delete**. The **Vendors** screen (tabs **Vendors** and **Ratings Form**) has a left panel with **Create Category** and the category tree (categories with sub-categories), and a toolbar with **Restore Vendors**, **Register Vendor**, a search box, **Add Groups**, **Download Excel**, **Upload Vendors** and **Settings**."
-          },
-          {
-            "term": "Vendor categories",
-            "definition": "A left-panel hierarchy (e.g. Equipment Vendors, Material Vendors, Cement Vendors, General, Eco category) for organizing vendors, expandable into sub-categories via Create Category."
-          },
-          {
-            "term": "Rate Card",
-            "definition": "A vendor's prices, on the vendor's **Rate Card** tab. **Materials** columns: **Material Cost Code**, **Material Name**, **UOM Group**, **UOM**, **Type**, **Rate**. **Equipment** columns: **Equipment Cost Code**, **Equipment Name**, **Type**, **Group**, **UOM Group**, **UOM**, and **Daily**, **Weekly**, **Monthly** rates. **Upload Logs** bulk-loads rates from an Excel template. **Where the rows come from:** the same material and equipment items (for example Cement Bag, Sand, HandSaw, Hammer) that are listed under **Global Data → Cost → Material** and **Equipment**, with UOM Group and UOM from the UOM lists. Add an item there first to price it here."
-          },
-          {
-            "term": "Ratings Form",
-            "definition": "A form-builder for vendor evaluation, combining a Standard field (\"Vendor Rating\") with Custom fields (e.g. Safety, Quality), each configurable with a weight/value, Required toggle, Show on card toggle, and field type."
-          },
-          {
-            "term": "Sub Contractor",
-            "definition": "A subcontracted trade company, kept in its own list (**Global Data → Sub Contractors**) separate from Vendors. The **Create Sub Contractor** dialog asks for **Upload Photo**, **Sub Contractor ID**, **First Name**, **Last Name**, **User Name**, **Phone Number**, **Company Name**, **Email Address**, **Subcontractor Specialists**, **Website**, **Location**, **Experience**, **License Number**, **License Document**, **Insurance Document** and **Resume** (three uploads), **Linked SubContractor Groups**, then a **CERTIFICATIONS** section of upload fields. The screen has **Register Sub Contractor**, a search box, **Add Groups**, grid/list icons, and one card per subcontractor."
-          },
-          {
-            "term": "Sub Contractor Settings (compliance fields)",
-            "definition": "Set in **Global Data → Settings → Sub Contractor Settings** (standard fields plus **Add Field**). The fields you add there become the upload fields in the **CERTIFICATIONS** section of **Create Sub Contractor**. Add a field in Settings and it appears in the dialog. For example, you can add upload fields for licences or certifications such as ISO 9001 or ISO 45001."
-          },
-          {
-            "term": "Owner-style Settings hierarchy",
-            "definition": "The **Settings** button on the Vendors screen opens **Vendor Settings**: \"Divide Vendor into how many levels\" with **Level 1 (Vendor)**, **Level 2 (Category > Vendor)** and **Level 3 (Category > SubCategory > Vendor)**. It works the same way as Owner Settings. The Procurement RFQ wizard asks for **Vendor Category**, **Vendor Sub Category** and **Category Groups**, so vendors need a category to be found there."
-          },
-          {
-            "term": "Preferred / Blocked (vendor status)",
-            "definition": "Two switches on every vendor card, and two check boxes under **Additional Information** on the vendor's **Profile** tab. **Preferred** marks a favoured supplier. **Blocked** is meant to stop a vendor being used."
-          },
-          {
-            "term": "Additional Information (vendor profile)",
-            "definition": "Extra fields under **Additional Information** on a vendor's **Profile** tab: **Vendor Type**, **Vendor Business Size**, **Vendor Minority**, **Notes**, **Warning**, **Extra Copy**, **Sent By**, **Freight Terms**, **GST IN**, **Linked Vendor Groups**, **Domestic**, **Preferred** and **Blocked**. The contact table above it has **Contact Name**, **Contact Number**, **Address**, **Vendor**, **Vendor Title**, **fax**, **Cell**, **Vendor Parish**, **email1**, **email2**, **Req Type**, **PhaseCode**, **Default** and **Actions**. **Add** opens a contact dialog (**Username**, **Phone Number**, **Email**, **Select Sign Label**, **Initials**)."
-          },
-          {
-            "term": "Vendor Groups",
-            "definition": "Opened with **Add Groups**: the **Vendors Groups** dialog has **Group Name**, **Group Description** and **Actions**, with **Add Row**, **Cancel** and **Submit**. Groups are what you pick in a vendor's **Linked Vendor Groups** field and in the **Category Groups** dropdown of the Procurement RFQ wizard."
-          },
-          {
-            "term": "Restore Vendors",
-            "definition": "Deleting a vendor is reversible. **Restore Vendors** opens a list of deleted vendors (**Vendor**, **First Name**, **Actions**) with check boxes and a **Submit** button that brings the ticked vendors back."
-          },
-          {
-            "term": "Where vendor data comes from and goes",
-            "definition": "**Comes from:** **Register Vendor** (one at a time), **Upload Vendors** (Excel), or a sync from Viewpoint through Staged Tables. **Goes to:** the Procurement **RFQ** wizard (step 3, Identify Vendors: Vendor Category, Vendor Sub Category, Category Groups, **Add Vendors**), the Procurement dashboard's **Vendor Performance Summary**, and the vendor picker in Direct Purchase Orders (step **Select Vendor**). A new vendor only appears in an RFQ when it has a category and a group that you select there; RFQ's **Register Vendors** button adds to this same list."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Add a new vendor",
-            "steps": [
-              "Go to <strong>Global Data → Vendors</strong> tile → <strong>Register Vendor</strong>.",
-              "Upload a profile picture (optional), then fill <strong>Vendor ID</strong>, <strong>Company Name</strong>, <strong>First Name</strong> and <strong>Last Name</strong>. Company Name, First Name and Last Name are marked as required.",
-              "Click <strong>Add</strong> in the contact table to add one or more contact persons with their details.",
-              "Fill <strong>Username</strong>, <strong>Phone Number</strong> (with country code) and <strong>Email</strong>; these three are required.",
-              "Choose a <strong>Select Sign Label</strong> (e.g. Initials) and fill Initials* — used as the digital signature label on approved documents; optionally toggle <strong>Enable Security Key Authentication</strong>.",
-              "Optionally fill <strong>Vendor Title</strong>, <strong>Address</strong>, <strong>Licence Number</strong>, <strong>Fax</strong>, <strong>Scope</strong> and <strong>Website</strong>.",
-              "Under <strong>Additional Information</strong>, optionally set Vendor Type, Vendor Business Size, Vendor Minority, Notes, Warning, Extra Copy, Sent By, Freight Terms, GST IN, and Linked Vendor Groups, and check <strong>Domestic</strong>, <strong>Preferred</strong>, and/or <strong>Blocked</strong> as they apply.",
-              "Click <strong>Submit</strong>. Use <strong>Upload Vendors</strong> (next to Download Excel) on the main Vendors screen to bulk-register vendors from an Excel template instead."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/global-data-vendor-creation/003.jpg",
-                "caption": "Register Vendor",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/global-data-vendor-creation/004.jpg",
-                "caption": "A vendor profile where contact details are added",
-                "step": 3
-              }
-            ],
-            "note": "Put the vendor in a category (left panel) and link it to a vendor group so it can be found in the Procurement RFQ wizard."
-          },
-          {
-            "title": "Set up a vendor's rate card",
-            "steps": [
-              "Open the vendor's card from the <strong>Vendors</strong> tile.",
-              "Go to the <strong>Rate Card</strong> tab and choose <strong>Materials</strong> or <strong>Equipment</strong>. The rows listed are the company's material or equipment items from <strong>Global Data → Cost</strong>.",
-              "Click <strong>Upload Logs</strong>, download the Excel template, fill in Daily/Weekly/Monthly rates per item, and upload the completed file — or edit the <strong>Rate</strong> field inline per row."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/global-data-vendors-rate-card/002.jpg",
-                "caption": "Downloading the Excel template from the dialog",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/global-data-vendors-rate-card/003.jpg",
-                "caption": "Uploading the filled template to update Daily, Weekly and Monthly rates",
-                "step": 3
-              }
-            ]
-          },
-          {
-            "title": "Configure the vendor rating form",
-            "steps": [
-              "Go to the <strong>Vendors</strong> tile → <strong>Ratings Form</strong> tab.",
-              "Click <strong>Add field</strong> to add a new custom rating criterion (for example \"Safety\").",
-              "Switch <strong>Required</strong> and/or <strong>Show on card</strong> on as needed, and choose the type with <strong>CHOOSE TYPE</strong> (for example Rating).",
-              "Click <strong>Save Changes</strong>."
-            ],
-            "note": "The form has a Standard section (with Reset) and a Custom section. The same form applies to every vendor."
-          },
-          {
-            "title": "Register a subcontractor",
-            "steps": [
-              "Go to <strong>Global Data → Sub Contractors</strong> tile → <strong>Register Sub Contractor</strong>.",
-              "Fill in the <strong>Create Sub Contractor</strong> dialog: ID, name, user name, phone, company name, email, specialists, website, location, experience, licence number, the licence, insurance and resume uploads, and <strong>Linked SubContractor Groups</strong>.",
-              "Upload any files in the <strong>CERTIFICATIONS</strong> section, then click <strong>Submit</strong>.",
-              "Use <strong>Add Groups</strong> on the list screen to organise subcontractors into groups."
-            ]
-          },
-          {
-            "title": "Track vendor/subcontractor certifications (ISO, safety licenses)",
-            "steps": [
-              "Go to <strong>Global Data → Settings → Sub Contractor Settings</strong> and use <strong>Add Field</strong> to define each certification (for example ISO 9001) as an <strong>Attachment</strong> field. Tick <strong>Required</strong> if it must be uploaded.",
-              "Open <strong>Global Data → Sub Contractors → Register Sub Contractor</strong>: the fields you added show under <strong>CERTIFICATIONS</strong>, ready for uploads.",
-              "For company-wide compliance items, use <strong>Global Data → Compliance Hub → Compliance Directory → Create</strong>, then track status under <strong>My Company Compliance</strong>."
-            ]
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/notion/global-data-vendor-creation/001.jpg",
-            "caption": "Vendors: categories on the left and vendor profiles"
-          },
-          {
-            "src": "assets/notion/global-data-vendor-creation/002.jpg",
-            "caption": "Vendor settings for up to three levels of categories"
-          }
-        ]
-      },
-      {
         "heading": "UOM & Phase Codes",
         "intro": "<p>Use this section to keep the shared lists for units of measure, phase codes, repair types and GL codes. The Super Admin maintains them, and projects and cost screens read from them.</p><p><strong>Where this data goes:</strong> the <strong>Phase Codes</strong> list is the same list that <strong>Project Setup → Phase Codes</strong> and <strong>Cost → Cost Breakdown Structure → Phase Codes</strong> show. Timesheets offer Direct and Indirect phase codes that carry the Labor cost type. UOM and UOM Group values appear on vendor rate cards, bid templates and cost lists.</p>",
         "definitions": [
@@ -21657,489 +21989,7 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Construction Types",
-        "intro": "<p>Use this section to keep the list of project categories and to build the work breakdown for each one. Each project then shows its Construction Type in the Project Setup header. The Super Admin sets it up, often with a senior estimating or operations lead.</p><p><strong>Where this data goes:</strong> the <strong>Construction Type</strong> dropdown on <strong>Projects → Create Project</strong> lists exactly the types on this screen, in the same order, with the <strong>Set as Default</strong> type pre-selected.</p>",
-        "definitions": [
-          {
-            "term": "Construction Types (tile)",
-            "definition": "The master list of project categories. The screen (**Global Data → Construction Types**) has **Create** and **Copy** buttons and a table with a drag handle, **S.No**, **Types of Construction**, **Set as Default** (a radio button) and **Actions** (edit, delete). A type cannot be edited or deleted once projects use it."
-          },
-          {
-            "term": "Construction Type (pipeline tab)",
-            "definition": "A separate top-level tab (next to \"Company\") presenting a 10-step configuration pipeline for building the full work-breakdown-structure library for a selected Construction Type."
-          },
-          {
-            "term": "Global Work Areas",
-            "definition": "Step 1 of the pipeline: the physical/organizational location hierarchy of a project site as a three-tier nested structure (Tier 1 → Tier 2 → Tier 3, e.g. Tower → Floor → Room), configured via Entity Types, Super Location Types, and Location Types sub-tabs."
-          },
-          {
-            "term": "Global Work Packages",
-            "definition": "Step 2 of the pipeline: the library of work content. Its sub-cards are **Activities** (major areas of work), **Work Packages** (the library of construction works), **Progress Forms**, **Quality Forms** (level-1 and level-2 inspections) and **Safety Forms**, all scoped to the selected Construction Type."
-          },
-          {
-            "term": "Activity Sequence Templates",
-            "definition": "Step 3 of the pipeline. Two sub-cards: **Map Work Packages to Work Location Types** (which work happens at each type of location) and **Create Activity Sequence Templates** (the order and dependencies of Work Packages). The pipeline page has a dropdown for the Construction Type it configures."
-          },
-          {
-            "term": "Material and Labor Estimation Templates",
-            "definition": "Step 4 of the pipeline: four mapping cards — Map Materials to Activity, Map Labor to Activity, Map Materials to Work Package, Map Labor to Work Package — used for cost/productivity estimation."
-          },
-          {
-            "term": "Naming Framework (Construction Type)",
-            "definition": "Step 5 of the pipeline: a table of Activity Sequence Level rows (Tree Version, Entity, Super Location, Location, Activity, Work Package, Sub Activity, and more) with editable Custom Name and Short Name columns; changes relabel that concept everywhere in the app for this construction type."
-          },
-          {
-            "term": "P6 Activity Codes",
-            "definition": "Step 6 of the pipeline: Primavera P6 activity codes used to categorize/classify project activities for schedule interoperability with P6."
-          },
-          {
-            "term": "Data Migration (Construction Type)",
-            "definition": "Step 7 of the pipeline: bulk-loads historical/master data from Excel into the construction type's structures (Master Data, Global Work Packages, Locations Type Work Packages, Global Sequence Model, etc.), appending to existing data rather than overwriting it."
-          },
-          {
-            "term": "Metadata (Construction Type)",
-            "definition": "Step 8 of the pipeline: custom Metadata fields added globally to extend the standard data model."
-          },
-          {
-            "term": "Work Package Linked Forms",
-            "definition": "Step 9 of the pipeline: associates specific forms (Progress/Quality/Safety/etc.) with individual Work Packages so the correct form appears when work is logged in the field."
-          },
-          {
-            "term": "Work Package Measurement Template Linking",
-            "definition": "Step 10 of the pipeline: links a Measurement Template to a Work Package so quantity take-off math is automatically available when recording progress against it."
-          },
-          {
-            "term": "Copy Construction Type",
-            "definition": "The **Copy** button opens **Copy Construction Type** with **Source ConstructionType**, **Destination ConstructionType** and a **Features** list of switches: **Entity Types** (with **Super Location Types** and **Location Types**), **Activity** (with **Work Package**, **Quality Forms**, **Safety Forms**), **Map WP to Location type** and **Activity Sequence template**. Switch on what you want to clone, then **Submit**. This saves rebuilding a similar type from scratch."
-          },
-          {
-            "term": "Where construction type data comes from and goes",
-            "definition": "**Comes from:** **Create** (new type), **Copy** (clone an existing type's setup) and the ten-step pipeline on the **Construction Type** tab. **Goes to:** the **Construction Type** dropdown on **Create Project** (same 56 names, default pre-selected) and the Construction Type shown in the **Project Setup** header (for example \"Arena Steel Plant - Phase 1\" shows \"Arena Integrated Steel Plant\"). The work areas, work packages, forms and templates you configure for a type are what projects of that type start from."
-          },
-          {
-            "term": "Quality Forms and Safety Forms feed Field Works",
-            "definition": "**Global Data → Construction Types → Step 2 Global Work Packages → Quality Forms** has **Quality Level 1** and **Quality Level 2** tabs, **Copy Form**, **Delete Form** and a **Work Packages** list grouped by activity (for the Moore Industries type: **General Conditions** with **MOORE - QP - 001** to **008** and **013**). Each form is built in four steps: **Create Inspection Items**, **Build Form**, **Setup Trigger Points**, **Preview Form**. **Safety Forms** (**MOORE - SP - 001** to **004**) has five steps (**Create Inspection Items**, **Inspection Items Response**, **Build Form**, **Setup Trigger Points**, **Preview Form**). **Where this goes:** the QP work packages are the ones that appear in **Field Works → Quality → Quality Level 1 / 2** (and in **Project Setup → Quality** folder mappings) on Warehouse Construction; the SP work packages and the **General Conditions** activity are what **Project Setup → Safety** offers in **Filter by Activities** and **Assign Workflow**, and what **Field Works → Safety** forms are built from. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Configure which construction categories are available when creating a project",
-            "steps": [
-              "Go to <strong>Global Data → Construction Types</strong> tile.",
-              "Click <strong>Create</strong> to add a new type, or <strong>Copy</strong> to clone an existing type's setup (choose Source, Destination and the features to copy).",
-              "Tick the <strong>Set as Default</strong> radio button on the type you want pre-selected on Create Project."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/construction-types/001.jpg",
-                "caption": "Create a construction type; created types appear in a table",
-                "step": 2
-              }
-            ],
-            "note": "Changes show in the Create Project dropdown the next time the form is opened."
-          },
-          {
-            "title": "Bulk-load historical data into a Construction Type",
-            "steps": [
-              "Go to <strong>Global Data → Construction Type</strong> tab → <strong>Step 7 (Data Migration)</strong>.",
-              "For each section (Master Data, Global Work Packages, Locations Type Work Packages, Global Sequence Model, etc.), click the <strong>Template</strong> link to download the correctly-formatted Excel file.",
-              "Fill it in and drag it into the upload zone."
-            ],
-            "note": "Existing data is preserved — new rows are appended, not overwritten.",
-            "images": [
-              {
-                "src": "assets/notion/data-migration/001.jpg",
-                "caption": "Data Migration: the upload spaces for each kind of data",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/data-migration/002.jpg",
-                "caption": "Master Data and Global Work Areas upload",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/data-migration/003.jpg",
-                "caption": "Global Work Packages upload",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/data-migration/004.jpg",
-                "caption": "Location Type Work Package mapping upload",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/data-migration/005.jpg",
-                "caption": "Global Sequence Model upload, and P6 project upload",
-                "step": 2
-              }
-            ]
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/notion/global-data/001.jpg",
-            "caption": "Global Data construction-type setup: choose the construction type from the drop-down"
-          },
-          {
-            "src": "assets/notion/global-work-areas/001.jpg",
-            "caption": "Global Work Areas: the three level types for a construction type"
-          },
-          {
-            "src": "assets/notion/global-work-areas/002.jpg",
-            "caption": "Editing or deleting a work area type"
-          },
-          {
-            "src": "assets/notion/global-work-packages/001.jpg",
-            "caption": "Global Work Packages: editing or deleting a work package from its three-dot menu"
-          },
-          {
-            "src": "assets/notion/global-activities/001.jpg",
-            "caption": "Global Activities: editing or deleting an activity from its three-dot menu"
-          },
-          {
-            "src": "assets/notion/activity-sequence-templates/001.jpg",
-            "caption": "Map Work Packages to Location Types: choosing a location type and adding work packages"
-          },
-          {
-            "src": "assets/notion/activity-sequence-templates/002.jpg",
-            "caption": "Deleting a mapped work package"
-          },
-          {
-            "src": "assets/notion/activity-sequence-templates/003.jpg",
-            "caption": "The work package count for the selected location type"
-          },
-          {
-            "src": "assets/notion/activity-sequence-templates/004.jpg",
-            "caption": "Create Activity Sequence Template for a location type"
-          },
-          {
-            "src": "assets/notion/activity-sequence-templates/006.jpg",
-            "caption": "Pause and Play switch for an activity sequence template"
-          },
-          {
-            "src": "assets/notion/mappings-map-labor-to-activities/001.jpg",
-            "caption": "Map Labor to Activities tab"
-          },
-          {
-            "src": "assets/notion/mappings-map-labor-to-activities/003.jpg",
-            "caption": "Selecting roles to map to an activity"
-          },
-          {
-            "src": "assets/notion/mappings-map-materials-to-activities/001.jpg",
-            "caption": "Map Materials to Activities tab"
-          },
-          {
-            "src": "assets/notion/mappings-map-materials-to-activities/002.jpg",
-            "caption": "Work divisions on the left and the materials mapped to a selected activity on the right"
-          },
-          {
-            "src": "assets/notion/mappings-map-materials-to-activities/003.jpg",
-            "caption": "Map Material with a multi-select list of materials"
-          },
-          {
-            "src": "assets/notion/mappings-map-materials-to-activities/004.jpg",
-            "caption": "Selecting materials to map to an activity"
-          },
-          {
-            "src": "assets/notion/naming-framework/001.jpg",
-            "caption": "Naming Framework table with a default name and a custom name for each level"
-          },
-          {
-            "src": "assets/notion/activity-codes/001.jpg",
-            "caption": "Activity Codes imported from P6 projects, with Activity Code Type to add a new one"
-          }
-        ]
-      },
-      {
-        "heading": "Work Order Management",
-        "intro": "<p>This tile is the Global Data entrance to the same Work Order module you see under <strong>Home → Work Order</strong>. The Super Admin or Work Order Admin uses it to set up work order types, approvals and access.</p><p><strong>Where this data goes:</strong> the work orders listed here are the same records as in Home → Work Order; this view shows fewer columns. The full field, tab and settings detail is in the Work Order module section.</p>",
-        "definitions": [
-          {
-            "term": "Work Order Type",
-            "definition": "The kind of work order: the **Work Order Type** column shows **Service**, **Equipment** and **Material**. Types are managed in **Settings → Work Order Types**."
-          },
-          {
-            "term": "Work Order Contract",
-            "definition": "A work order record. The Global Data screen (**Global Data → Work Order Management**) has the tabs **Work Orders**, **Workflow Issues**, **Reports** and **Settings**; the list has **Create**, search, pager, **Export**, **Filters**, **Manage Columns** and table/grid/board icons, with columns **ID**, **Description**, **Work Order Status**, **Work Order Type**, **Created Date**, **Created By**, **Notes**, **Due Date**, **Assign To** and **Actions** (history, delete)."
-          },
-          {
-            "term": "Work Order Status",
-            "definition": "The **Work Order Status** column in the list and the **Status** page under Settings."
-          },
-          {
-            "term": "Item Details / Create Items",
-            "definition": "The items of work inside a work order. Open a work order from the list to add them; see the Work Order module section for the item form."
-          },
-          {
-            "term": "Users and Permissions (Work Order Management)",
-            "definition": "The last page in the Work Order **Settings** menu. The full menu is **Work Order Types**, **Maintenance Types**, **Invoices**, **Approval Workflow**, **Status**, **Priority**, **Configuration** and **Users and Permissions**, with a search box. It is the same Settings screen as in Home → Work Order."
-          },
-          {
-            "term": "Where work order data comes from and goes",
-            "definition": "Global Data → Work Order Management and **Home → Work Order** are two doors to the same module and the same records. Home → Work Order shows extra columns (for example Assigned Project/Location, Equipment, Maintenance Type, Project, Phase Code, Priority, Technician, Vendor). Settings made here apply in both places."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Create a Work Order Type",
-            "steps": [
-              "Go to <strong>Global Data → Work Order Management</strong> → <strong>Settings</strong> (gear icon) → <strong>Work Order Types</strong>.",
-              "Click <strong>+ Work Order Type</strong> and fill in the details, then save. See the Work Order module section for tabs, forms and ID format."
-            ]
-          },
-          {
-            "title": "Create a Work Order Contract template",
-            "steps": [
-              "Go to <strong>Global Data → Work Order Management</strong> and click <strong>Create</strong> on the <strong>Work Orders</strong> tab.",
-              "Enter the name and description, and choose the <strong>Work Order Type</strong>.",
-              "Submit, then open the new record to configure its Profile fields, add Items via <strong>Create Items</strong>, and configure Expense forms under the <strong>Expense</strong> tab."
-            ],
-            "note": "The full create form is described in the Work Order module section."
-          }
-        ]
-      },
-      {
-        "heading": "Cost & Bid Templates",
-        "intro": "<p>Use this section to keep the company's cost types, the material, equipment and labor lists under them, cost breakdown structures and the bid item catalog. The Super Admin or an estimating lead maintains it.</p><p><strong>Where this data goes:</strong> the eight cost types are the <strong>Cost Types</strong> you tick on every phase code. The Material and Equipment lists are the rows on each vendor's <strong>Rate Card</strong>, and the Labor list takes its rate columns from <strong>Settings → Earnings Codes</strong>.</p>",
-        "definitions": [
-          {
-            "term": "Cost Type",
-            "definition": "The **Cost Type** tab (**Global Data → Cost**) shows one card per type with **Add Type**, a search box and a refresh icon. These are the same names offered as **Cost Types** on each phase code and in **Project Setup → Phase Codes → Settings**. The eight types are **Material**, **Equipment**, **Labor**, **Unit Rate**, **Sub Contractor**, **BOQ's**, **Freight Charges** and **Fuel & Gas**."
-          },
-          {
-            "term": "Cost Breakdown Structure (CBS)",
-            "definition": "The **Cost Breakdown Structure** tab has a left menu with **Phase Codes** and **Templates**. **Phase Codes** shows the same table as **UOM, Phasecode & GL Codes → Phase Codes**. **Templates** holds the named CBS templates, one of which can be marked Default."
-          },
-          {
-            "term": "Bid Templates",
-            "definition": "A catalog of bid line items. **Global Data → Bid Templates** has **Add Item**, **Download Excel**, **Download Sample Excel** and **Upload Excel**, and a table with **S.No**, **Item Description**, **UOM Group**, **UOM** and **Actions** (edit, delete). UOM Group and UOM come from the UOM lists."
-          },
-          {
-            "term": "Cost type catalogs (what each card opens)",
-            "definition": "Click a card to open its list. **Material** opens **Material Code** (columns S.No., **Material Cost Code**, **Material Name**, **UOM**, **Size & Specifications**, **Unit Price**, **Type**, Actions; buttons **Add Material**, **Add Custom Column**, **Add Category**, **Export**; a template dropdown) and a **Material Estimate Template** tab. **Equipment** opens **Equipment Code** (**Equipment Cost Code**, **Equipment Name**, **Type**, **Category**, **Subcategory**, **UOM** and **Hourly**, **Daily**, **Weekly**, **Monthly** rates) with **Equipment Estimate Template**, **Equipment Category** and **Equipment Part** tabs. **Labor** opens **Labor Code** (**Labor Cost Code**, **Labor Name**, **Type**, conversion factors per earnings code such as ST, OT, PD) with a **Labor Estimate Template** tab and a weekly-rate dropdown. **Unit Rate** and **Sub Contractor** open template lists (**Add Template**). **BOQ's** (a custom type) opens **BOQ's Code** with **Add BOQ's**."
-          },
-          {
-            "term": "Where cost data comes from and goes",
-            "definition": "**Comes from:** Add Type and the **Add Material / Add Equipment / Add Labor** buttons. **Goes to:** (1) the Cost Types options on phase codes; (2) each vendor's **Rate Card**; (3) the Labor list's rate columns, which are the **Earnings Codes** from Settings (PD, NS, ST, 17, 18, OT and so on); (4) bid forms that pull from Bid Templates. To price a new material or equipment item for a vendor, add it here first."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Add a custom cost category",
-            "steps": [
-              "Go to <strong>Global Data → Cost</strong> → <strong>Cost Type</strong> tab → <strong>Add Type</strong>.",
-              "Enter the name (e.g. \"Freight Charges\") and a description, then submit."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/cost-types-material/002.jpg",
-                "caption": "Add Type, to create a custom cost type",
-                "step": 1
-              }
-            ]
-          },
-          {
-            "title": "Set up a Cost Breakdown Structure (CBS) template",
-            "steps": [
-              "Go to <strong>Global Data → Cost</strong> → <strong>Cost Breakdown Structure</strong> tab → <strong>Templates</strong> → <strong>Add Template</strong>.",
-              "Name it and build its structure using the available Phase Codes (managed under the Phase Codes side-list on the same screen, or under UOM/Phasecode & GL Codes).",
-              "Optionally mark it as the company's Default CBS template."
-            ]
-          },
-          {
-            "title": "Add a bid line item",
-            "steps": [
-              "Go to <strong>Global Data → Bid Templates</strong> → <strong>Add Item</strong>.",
-              "Enter the Item Description and choose its UOM Group and UOM.",
-              "Submit."
-            ],
-            "note": "For bulk loading, use Download Sample Excel, fill it in, then Upload Excel."
-          },
-          {
-            "title": "Set up Materials and Labor cost types",
-            "steps": [
-              "Go to <strong>Global Data → Cost → Cost Type</strong> and click the <strong>Material</strong> or <strong>Labor</strong> card, then open its code tab (<strong>Material Code</strong> or <strong>Labor Code</strong>).",
-              "Click **Settings** and choose how entries are grouped: Level 1 (Materials), Level 2 (Categories > Materials) or Level 3 (Categories > Sub Categories > Materials). Pick one type and keep to it. You can move one level at a time, but you cannot skip a level.",
-              "Click **Add**, enter the details and click **Submit**. Labor entries also take a **Standard Unit Price** when that setting is on. You can also bulk-load entries with **Upload Excel**.",
-              "When you move up a level, use the restore option to keep the entries you already have. They stay available under **Restore Materials** or **Restore Labors**.",
-              "To go back from Level 2 to Level 1, open **Settings**, uncheck Level 2, and confirm the delete warning by entering the level name."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/cost-types-material/001.jpg",
-                "caption": "Cost Types with the Materials tab selected",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/cost-types-labor/002.jpg",
-                "caption": "Cost Types with the Labor tab selected",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/cost-types-material/006.jpg",
-                "caption": "The Settings button for grouping materials",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/cost-types-material/007.jpg",
-                "caption": "The Settings dialog with the three grouping levels",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/cost-types-material/009.jpg",
-                "caption": "Level 1: materials listed with cost codes",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/cost-types-material/010.jpg",
-                "caption": "Level 2: categories on the left with their materials",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/cost-types-material/011.jpg",
-                "caption": "Level 3: categories and sub categories on the left",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/cost-types-labor/004.jpg",
-                "caption": "The Settings dialog for labor levels",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/cost-types-labor/006.jpg",
-                "caption": "Level 1: labor entries with cost codes",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/cost-types-labor/007.jpg",
-                "caption": "Level 2: labor categories on the left",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/cost-types-material/005.jpg",
-                "caption": "Add, with a code number and code description",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/cost-types-material/008.jpg",
-                "caption": "Upload Excel, in Create or Update mode",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/cost-types-labor/005.jpg",
-                "caption": "Add, for a labor role or designation",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/cost-types-material/012.jpg",
-                "caption": "Restore option when moving from Level 1 to Level 2",
-                "step": 4
-              },
-              {
-                "src": "assets/notion/cost-types-material/013.jpg",
-                "caption": "Restore Materials button",
-                "step": 4
-              },
-              {
-                "src": "assets/notion/cost-types-material/014.jpg",
-                "caption": "Uncheck Level 2 in Settings and confirm the delete warning",
-                "step": 5
-              }
-            ],
-            "note": "The Material and Labor screens have **Add Material** / **Add Labor**, **Add Category**, **Add Custom Column** and **Export**."
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/notion/cost-types-material/003.jpg",
-            "caption": "Renaming or deleting a custom cost type by right-clicking its tab"
-          },
-          {
-            "src": "assets/notion/cost-types-material/004.jpg",
-            "caption": "Add Custom Columns for a new cost type"
-          },
-          {
-            "src": "assets/notion/cost-types-equipment/003.jpg",
-            "caption": "Equipment cost types: the equipment table"
-          },
-          {
-            "src": "assets/notion/cost-types-equipment/004.jpg",
-            "caption": "Equipment Groups, for grouping equipment into types"
-          },
-          {
-            "src": "assets/notion/cost-types-equipment/006.jpg",
-            "caption": "Add, for a new piece of equipment"
-          },
-          {
-            "src": "assets/notion/cost-types-sub-contractor/002.jpg",
-            "caption": "Sub Contractor cost types: the sub contractor table"
-          },
-          {
-            "src": "assets/notion/cost-types-other-expenses/002.jpg",
-            "caption": "Other Expenses: cost types for travel, lodging and similar costs"
-          },
-          {
-            "src": "assets/notion/cost-types-other-expenses/003.jpg",
-            "caption": "Add, to enter a new expense"
-          }
-        ]
-      },
-      {
-        "heading": "Customers, Contacts & Approval",
-        "intro": "<p>Use this section to keep the customer list, its contacts and the approval steps customer records go through. A Global Admin or the Opportunity Management admin maintains it.</p><p><strong>Where this data goes:</strong> the <strong>Customer</strong> dropdown on <strong>Projects → Create Project</strong> lists exactly the customers on this screen, and opportunities use the same customers.</p>",
-        "definitions": [
-          {
-            "term": "Customer (Standard/Configurable Fields)",
-            "definition": "The **Customers** tab (**Global Data → Customer**; the page heading says \"Lead Customers\") has sub-tabs **Active Customers** and **Rejected**, and the buttons **Create Customer**, **Merge Duplicates**, **Add Groups**, search, **Export**, **Filters**, list/grid icons and a save-layout icon. Each customer is a card with an **Approved** chip, **Customer ID**, **Customer Name** and **Customer Email**. The fields on a customer are set under **Settings → Customer**: standard fields **Customer ID**, **Customer Name**, **Short Name**, **Alias Name**, **Primary**, **Mailing** and **Billing Address**, **Email Address**, **Phone Number**, **Fax Number**, **URL**, **Tax Codes** and **Locations**, plus your own via **Add Field**."
-          },
-          {
-            "term": "Contact",
-            "definition": "The **Contacts** tab lists people at customers and owners. Columns include **Customer / Owner**, **Customer / Owner Name**, **Contact ID**, **Salutation**, **First Name**, **Middle Name**, **Last Name**, **Suffix**, **Job Title**, **Primary Email**, **Secondary Email**, **Primary Phone Number**, **Work Phone Number**, primary and secondary address lines, country, state, city and zip, **Services Provided** and **Personal Website**. The **Settings** menu also has a **Contact** page for contact fields."
-          },
-          {
-            "term": "Approval Workflow (Customer)",
-            "definition": "The third page of **Customer → Settings** (left menu: **Customer**, **Contact**, **Approval Workflow**). A table of approval levels (**Level**, **Level Description**, **Approvers**, **Workflow Type**) defines the sign-off chain a new customer goes through."
-          },
-          {
-            "term": "Where customer data comes from and goes",
-            "definition": "**Comes from:** **Create Customer**, or a sync from Viewpoint through Staged Tables (**Customers**). **Goes to:** the **Customer** dropdown on **Create Project** and, per the Opportunity Management section, to opportunities. The status chip on each card (**Approved**) and the **Rejected** sub-tab show where a customer stands in the approval workflow."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Add an approval level for customer records",
-            "steps": [
-              "Go to <strong>Global Data → Customer</strong> tile → <strong>Approval Workflow</strong> tab → <strong>Create Level</strong>.",
-              "Name/describe the level, assign Approvers, and choose the Workflow Type.",
-              "Save — subsequent opportunity/customer approvals will route through this chain in order."
-            ]
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/notion/customers/001.jpg",
-            "caption": "Add Field, for a new customer field"
-          },
-          {
-            "src": "assets/notion/customers/003.jpg",
-            "caption": "Choose Type, for the kind of input"
-          },
-          {
-            "src": "assets/notion/customers/004.jpg",
-            "caption": "Required toggle on a customer field"
-          },
-          {
-            "src": "assets/notion/customers/005.jpg",
-            "caption": "Show on cards toggle on a customer field"
-          },
-          {
-            "src": "assets/notion/customers/006.jpg",
-            "caption": "Save Changes, to keep the new customer fields"
-          }
-        ]
-      },
-      {
-        "heading": "Company-Wide Settings",
+        "heading": "Settings",
         "intro": "<p>Use this hub for preferences that apply to the whole company: currency, date format, mail routing, naming, statuses and form options. The Super Admin sets them. The left menu has 22 pages.</p><p><strong>Where this data goes:</strong> for example <strong>Project Form</strong> fills the Project Type, Funding Agency and Implementing Agency dropdowns on Create Project; <strong>Hindrance Category</strong> fills the Restraint Category dropdown; <strong>Sub Contractor Settings</strong> fills the CERTIFICATIONS section when registering a subcontractor; <strong>Earnings Codes</strong> become the rate columns on Cost → Labor.</p>",
         "definitions": [
           {
@@ -22345,7 +22195,7 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Forms & Quickapps",
+        "heading": "Forms",
         "intro": "<p>Use this section to set up the form templates, document folder structures, Quick Apps and Standard Tables that projects start from. The Super Admin or a forms manager builds them once.</p><p><strong>Where this data goes:</strong> a project's <strong>Project Setup → Forms → Assign Templates</strong> picks from the templates built here (the RFI template list matched exactly), and its form list shows the same Project Forms names. Quick Apps show in Field Works, and notification events exist for forms.</p>",
         "definitions": [
           {
@@ -22567,7 +22417,7 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Integrations: Marketplace & Staged Tables",
+        "heading": "Marketplace",
         "intro": "<p>Use this section to connect Arena to outside systems (Microsoft 365, Adobe Sign, Trimble Viewpoint, Soft Tech and more) and to review data pulled in from them. The Super Admin sets it up.</p><p><strong>Where this data goes:</strong> Staged Tables hold the rows first; once mapped and created, they become records in the matching Global Data lists (Users, Crews, Phase Codes, GL Codes, Customers, Vendors, Owners) and in Projects and Work Orders. Outlook choices here feed <strong>Settings → Mail Settings</strong>.</p>",
         "definitions": [
           {
@@ -22785,6 +22635,246 @@ const MODULES = [
         ]
       },
       {
+        "heading": "Cost & Bid Templates",
+        "intro": "<p>Use this section to keep the company's cost types, the material, equipment and labor lists under them, cost breakdown structures and the bid item catalog. The Super Admin or an estimating lead maintains it.</p><p><strong>Where this data goes:</strong> the eight cost types are the <strong>Cost Types</strong> you tick on every phase code. The Material and Equipment lists are the rows on each vendor's <strong>Rate Card</strong>, and the Labor list takes its rate columns from <strong>Settings → Earnings Codes</strong>.</p>",
+        "definitions": [
+          {
+            "term": "Cost Type",
+            "definition": "The **Cost Type** tab (**Global Data → Cost**) shows one card per type with **Add Type**, a search box and a refresh icon. These are the same names offered as **Cost Types** on each phase code and in **Project Setup → Phase Codes → Settings**. The eight types are **Material**, **Equipment**, **Labor**, **Unit Rate**, **Sub Contractor**, **BOQ's**, **Freight Charges** and **Fuel & Gas**."
+          },
+          {
+            "term": "Cost Breakdown Structure (CBS)",
+            "definition": "The **Cost Breakdown Structure** tab has a left menu with **Phase Codes** and **Templates**. **Phase Codes** shows the same table as **UOM, Phasecode & GL Codes → Phase Codes**. **Templates** holds the named CBS templates, one of which can be marked Default."
+          },
+          {
+            "term": "Bid Templates",
+            "definition": "A catalog of bid line items. **Global Data → Bid Templates** has **Add Item**, **Download Excel**, **Download Sample Excel** and **Upload Excel**, and a table with **S.No**, **Item Description**, **UOM Group**, **UOM** and **Actions** (edit, delete). UOM Group and UOM come from the UOM lists."
+          },
+          {
+            "term": "Cost type catalogs (what each card opens)",
+            "definition": "Click a card to open its list. **Material** opens **Material Code** (columns S.No., **Material Cost Code**, **Material Name**, **UOM**, **Size & Specifications**, **Unit Price**, **Type**, Actions; buttons **Add Material**, **Add Custom Column**, **Add Category**, **Export**; a template dropdown) and a **Material Estimate Template** tab. **Equipment** opens **Equipment Code** (**Equipment Cost Code**, **Equipment Name**, **Type**, **Category**, **Subcategory**, **UOM** and **Hourly**, **Daily**, **Weekly**, **Monthly** rates) with **Equipment Estimate Template**, **Equipment Category** and **Equipment Part** tabs. **Labor** opens **Labor Code** (**Labor Cost Code**, **Labor Name**, **Type**, conversion factors per earnings code such as ST, OT, PD) with a **Labor Estimate Template** tab and a weekly-rate dropdown. **Unit Rate** and **Sub Contractor** open template lists (**Add Template**). **BOQ's** (a custom type) opens **BOQ's Code** with **Add BOQ's**."
+          },
+          {
+            "term": "Where cost data comes from and goes",
+            "definition": "**Comes from:** Add Type and the **Add Material / Add Equipment / Add Labor** buttons. **Goes to:** (1) the Cost Types options on phase codes; (2) each vendor's **Rate Card**; (3) the Labor list's rate columns, which are the **Earnings Codes** from Settings (PD, NS, ST, 17, 18, OT and so on); (4) bid forms that pull from Bid Templates. To price a new material or equipment item for a vendor, add it here first."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Add a custom cost category",
+            "steps": [
+              "Go to <strong>Global Data → Cost</strong> → <strong>Cost Type</strong> tab → <strong>Add Type</strong>.",
+              "Enter the name (e.g. \"Freight Charges\") and a description, then submit."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/cost-types-material/002.jpg",
+                "caption": "Add Type, to create a custom cost type",
+                "step": 1
+              }
+            ]
+          },
+          {
+            "title": "Set up a Cost Breakdown Structure (CBS) template",
+            "steps": [
+              "Go to <strong>Global Data → Cost</strong> → <strong>Cost Breakdown Structure</strong> tab → <strong>Templates</strong> → <strong>Add Template</strong>.",
+              "Name it and build its structure using the available Phase Codes (managed under the Phase Codes side-list on the same screen, or under UOM/Phasecode & GL Codes).",
+              "Optionally mark it as the company's Default CBS template."
+            ]
+          },
+          {
+            "title": "Add a bid line item",
+            "steps": [
+              "Go to <strong>Global Data → Bid Templates</strong> → <strong>Add Item</strong>.",
+              "Enter the Item Description and choose its UOM Group and UOM.",
+              "Submit."
+            ],
+            "note": "For bulk loading, use Download Sample Excel, fill it in, then Upload Excel."
+          },
+          {
+            "title": "Set up Materials and Labor cost types",
+            "steps": [
+              "Go to <strong>Global Data → Cost → Cost Type</strong> and click the <strong>Material</strong> or <strong>Labor</strong> card, then open its code tab (<strong>Material Code</strong> or <strong>Labor Code</strong>).",
+              "Click **Settings** and choose how entries are grouped: Level 1 (Materials), Level 2 (Categories > Materials) or Level 3 (Categories > Sub Categories > Materials). Pick one type and keep to it. You can move one level at a time, but you cannot skip a level.",
+              "Click **Add**, enter the details and click **Submit**. Labor entries also take a **Standard Unit Price** when that setting is on. You can also bulk-load entries with **Upload Excel**.",
+              "When you move up a level, use the restore option to keep the entries you already have. They stay available under **Restore Materials** or **Restore Labors**.",
+              "To go back from Level 2 to Level 1, open **Settings**, uncheck Level 2, and confirm the delete warning by entering the level name."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/cost-types-material/001.jpg",
+                "caption": "Cost Types with the Materials tab selected",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/cost-types-labor/002.jpg",
+                "caption": "Cost Types with the Labor tab selected",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/cost-types-material/006.jpg",
+                "caption": "The Settings button for grouping materials",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/cost-types-material/007.jpg",
+                "caption": "The Settings dialog with the three grouping levels",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/cost-types-material/009.jpg",
+                "caption": "Level 1: materials listed with cost codes",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/cost-types-material/010.jpg",
+                "caption": "Level 2: categories on the left with their materials",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/cost-types-material/011.jpg",
+                "caption": "Level 3: categories and sub categories on the left",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/cost-types-labor/004.jpg",
+                "caption": "The Settings dialog for labor levels",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/cost-types-labor/006.jpg",
+                "caption": "Level 1: labor entries with cost codes",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/cost-types-labor/007.jpg",
+                "caption": "Level 2: labor categories on the left",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/cost-types-material/005.jpg",
+                "caption": "Add, with a code number and code description",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/cost-types-material/008.jpg",
+                "caption": "Upload Excel, in Create or Update mode",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/cost-types-labor/005.jpg",
+                "caption": "Add, for a labor role or designation",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/cost-types-material/012.jpg",
+                "caption": "Restore option when moving from Level 1 to Level 2",
+                "step": 4
+              },
+              {
+                "src": "assets/notion/cost-types-material/013.jpg",
+                "caption": "Restore Materials button",
+                "step": 4
+              },
+              {
+                "src": "assets/notion/cost-types-material/014.jpg",
+                "caption": "Uncheck Level 2 in Settings and confirm the delete warning",
+                "step": 5
+              }
+            ],
+            "note": "The Material and Labor screens have **Add Material** / **Add Labor**, **Add Category**, **Add Custom Column** and **Export**."
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/cost-types-material/003.jpg",
+            "caption": "Renaming or deleting a custom cost type by right-clicking its tab"
+          },
+          {
+            "src": "assets/notion/cost-types-material/004.jpg",
+            "caption": "Add Custom Columns for a new cost type"
+          },
+          {
+            "src": "assets/notion/cost-types-equipment/003.jpg",
+            "caption": "Equipment cost types: the equipment table"
+          },
+          {
+            "src": "assets/notion/cost-types-equipment/004.jpg",
+            "caption": "Equipment Groups, for grouping equipment into types"
+          },
+          {
+            "src": "assets/notion/cost-types-equipment/006.jpg",
+            "caption": "Add, for a new piece of equipment"
+          },
+          {
+            "src": "assets/notion/cost-types-sub-contractor/002.jpg",
+            "caption": "Sub Contractor cost types: the sub contractor table"
+          },
+          {
+            "src": "assets/notion/cost-types-other-expenses/002.jpg",
+            "caption": "Other Expenses: cost types for travel, lodging and similar costs"
+          },
+          {
+            "src": "assets/notion/cost-types-other-expenses/003.jpg",
+            "caption": "Add, to enter a new expense"
+          }
+        ]
+      },
+      {
+        "heading": "Customer",
+        "intro": "<p>Use this section to keep the customer list, its contacts and the approval steps customer records go through. A Global Admin or the Opportunity Management admin maintains it.</p><p><strong>Where this data goes:</strong> the <strong>Customer</strong> dropdown on <strong>Projects → Create Project</strong> lists exactly the customers on this screen, and opportunities use the same customers.</p>",
+        "definitions": [
+          {
+            "term": "Customer (Standard/Configurable Fields)",
+            "definition": "The **Customers** tab (**Global Data → Customer**; the page heading says \"Lead Customers\") has sub-tabs **Active Customers** and **Rejected**, and the buttons **Create Customer**, **Merge Duplicates**, **Add Groups**, search, **Export**, **Filters**, list/grid icons and a save-layout icon. Each customer is a card with an **Approved** chip, **Customer ID**, **Customer Name** and **Customer Email**. The fields on a customer are set under **Settings → Customer**: standard fields **Customer ID**, **Customer Name**, **Short Name**, **Alias Name**, **Primary**, **Mailing** and **Billing Address**, **Email Address**, **Phone Number**, **Fax Number**, **URL**, **Tax Codes** and **Locations**, plus your own via **Add Field**."
+          },
+          {
+            "term": "Contact",
+            "definition": "The **Contacts** tab lists people at customers and owners. Columns include **Customer / Owner**, **Customer / Owner Name**, **Contact ID**, **Salutation**, **First Name**, **Middle Name**, **Last Name**, **Suffix**, **Job Title**, **Primary Email**, **Secondary Email**, **Primary Phone Number**, **Work Phone Number**, primary and secondary address lines, country, state, city and zip, **Services Provided** and **Personal Website**. The **Settings** menu also has a **Contact** page for contact fields."
+          },
+          {
+            "term": "Approval Workflow (Customer)",
+            "definition": "The third page of **Customer → Settings** (left menu: **Customer**, **Contact**, **Approval Workflow**). A table of approval levels (**Level**, **Level Description**, **Approvers**, **Workflow Type**) defines the sign-off chain a new customer goes through."
+          },
+          {
+            "term": "Where customer data comes from and goes",
+            "definition": "**Comes from:** **Create Customer**, or a sync from Viewpoint through Staged Tables (**Customers**). **Goes to:** the **Customer** dropdown on **Create Project** and, per the Opportunity Management section, to opportunities. The status chip on each card (**Approved**) and the **Rejected** sub-tab show where a customer stands in the approval workflow."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Add an approval level for customer records",
+            "steps": [
+              "Go to <strong>Global Data → Customer</strong> tile → <strong>Approval Workflow</strong> tab → <strong>Create Level</strong>.",
+              "Name/describe the level, assign Approvers, and choose the Workflow Type.",
+              "Save — subsequent opportunity/customer approvals will route through this chain in order."
+            ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/customers/001.jpg",
+            "caption": "Add Field, for a new customer field"
+          },
+          {
+            "src": "assets/notion/customers/003.jpg",
+            "caption": "Choose Type, for the kind of input"
+          },
+          {
+            "src": "assets/notion/customers/004.jpg",
+            "caption": "Required toggle on a customer field"
+          },
+          {
+            "src": "assets/notion/customers/005.jpg",
+            "caption": "Show on cards toggle on a customer field"
+          },
+          {
+            "src": "assets/notion/customers/006.jpg",
+            "caption": "Save Changes, to keep the new customer fields"
+          }
+        ]
+      },
+      {
         "heading": "Compliance Hub",
         "intro": "<p>Use the Compliance Hub to define the compliance items the company must hold (licences, certificates, insurance) and track the company's actual status against them. A Super Admin or compliance lead maintains it.</p><p><strong>Where this data goes:</strong> requirements defined in the <strong>Compliance Directory</strong> are tracked under <strong>My Company Compliance</strong>, and the expiry warning period is set under <strong>Settings</strong>.</p>",
         "definitions": [
@@ -22854,96 +22944,6 @@ const MODULES = [
             "note": "Later, link this template to a Work Package via the Construction Type pipeline's Step 10 (Work Package Measurement Template Linking)."
           }
         ]
-      },
-      {
-        "heading": "Owners: Client & Project-Owner Directory",
-        "intro": "<p>Use Owners to keep one master record for each client who commissions your projects. The Super Admin maintains the list, and project creators pick from it.</p><p><strong>Where this data goes:</strong> the <strong>Owner</strong> dropdown on <strong>Projects → Create Project</strong> shows exactly the owners on this screen. Each owner can be linked to company <strong>Locations</strong> and <strong>Tax Codes</strong>, and owner contacts show up under <strong>Customer → Contacts</strong>.</p>",
-        "definitions": [
-          {
-            "term": "Owner",
-            "definition": "The client entity that commissions a project. The **Owners** screen shows one card per owner with **Owner ID**, **Owner Name** and **Owner Email**. The toolbar has **Create Owner**, **Settings**, a search box (by ID and name), the pager, **Export**, **Filters**, list and grid icons and a save-layout icon. The ⋮ menu on a card gives **Edit** and **Delete**. Edit opens the same wizard titled **Update Owner**, with an extra editable **Owner Id** field."
-          },
-          {
-            "term": "Create Owner (split button)",
-            "definition": "The top-left button. Its menu offers **Create Owner** (the three-step wizard) and **POC OCR** (OCR-assisted intake of owner details from a document)."
-          },
-          {
-            "term": "Owner Settings / hierarchy levels",
-            "definition": "The **Settings** button on the Owners screen opens **Owner Settings**: \"Divide Owner into how many levels\". Choose **Level 1 (Owner)**, **Level 2 (Category > Owner)** or **Level 3 (Category > SubCategory > Owner)**. Decide early, because moving to a deeper level later means recategorising the owners you already have. The form fields themselves are set in **Global Data → Settings → Owner** (sub-tabs **Form** and **Owner POC**; standard fields Owner ID, Owner Name, Short Name, Alias Name, Primary, Mailing and Billing Address, Email Address, Phone Number, Fax Number, URL, Tax Codes and Locations, plus **Add Field** for your own)."
-          },
-          {
-            "term": "Link Locations",
-            "definition": "Step 2 of the wizard. The **Location** section has a **Link Locations** button and a table with **Location Name**, **State**, **Default** (radio button) and **Actions** (delete). **Link Locations** opens a picker with a search box, **SELECT ALL**, and the company locations from **Global Data → Locations**. The **Tax Codes** section below has **Add Tax Codes** and a table with **Tax Group**, **Tax Class** and **Tax Code** dropdowns filled from **Tax Configuration**."
-          },
-          {
-            "term": "Where owner data comes from and goes",
-            "definition": "**Comes from:** manual entry in the wizard, or an Excel file through **Export → Upload**. Locations and Tax Codes inside the wizard come from **Locations** and **Tax Configuration**. **Goes to:** the **Owner** dropdown on **Create Project**, and owner contacts in **Customer → Contacts**. If a new owner does not show in Create Project, check that it was submitted and reopen the form."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Create a new Owner record",
-            "steps": [
-              "Go to <strong>Global Data → Owners</strong> tile → <strong>Create Owner</strong> (split button) → <strong>Create Owner</strong>.",
-              "<strong>Step 1 – Basic Details:</strong> enter <strong>Owner Name</strong> (the only required field), then <strong>Short Name</strong>, <strong>Alias Name</strong>, <strong>Phone Number</strong> (country code, number, extension), <strong>Email</strong>, <strong>Fax Number</strong> and <strong>Url</strong>. Fill <strong>Primary Address</strong>, <strong>Mailing Address</strong> and <strong>Billing Address</strong> (Address Line 1 and 2, Country, City, State, Zip Code); tick <strong>Same as Primary address</strong> to copy it.",
-              "<strong>Step 2 – Locations &amp; Tax Codes:</strong> click <strong>Link Locations</strong> and tick the company locations that apply, then mark one as <strong>Default</strong>. Click <strong>Add Tax Codes</strong> to attach a <strong>Tax Group</strong>, <strong>Tax Class</strong> and <strong>Tax Code</strong>.",
-              "<strong>Step 3 – Preview:</strong> review all entered data.",
-              "Click <strong>Submit</strong> to create the Owner."
-            ],
-            "note": "To bulk-create Owners, use Export, which offers Download and Upload. Owners you create appear in the Owner dropdown on Create Project.",
-            "images": [
-              {
-                "src": "assets/notion/global-data-owners-creation/001.jpg",
-                "caption": "The Owners screen",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/global-data-owners-creation/003.jpg",
-                "caption": "Register Owner",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/global-data-owners-creation/004.jpg",
-                "caption": "Step 1: basic details and addresses",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/global-data-owners-creation/005.jpg",
-                "caption": "Step 2: Link Locations and Add Tax Codes",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/global-data-owners-creation/006.jpg",
-                "caption": "Step 3: preview of the owner",
-                "step": 4
-              }
-            ]
-          },
-          {
-            "title": "Configure Owner hierarchy levels",
-            "steps": [
-              "On the Owners tile, click the <strong>Settings</strong> gear icon (top right).",
-              "In \"Owner Settings,\" choose Level 1, Level 2, or Level 3 depending on how granular owner categorization should be company-wide."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/global-data-owners-creation/002.jpg",
-                "caption": "Owner Settings, for dividing owners into levels",
-                "step": 2
-              }
-            ]
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/notion/global-data-owners-creation/007.jpg",
-            "caption": "Export, to download or upload owners in Excel"
-          },
-          {
-            "src": "assets/notion/global-data-owners-creation/008.jpg",
-            "caption": "Filters and Save Layout on the owners list"
-          }
-        ]
       }
     ],
     "name": "Global Data",
@@ -22959,23 +22959,23 @@ const MODULES = [
       "Clicking a tile drills into that module; a breadcrumb trail top-left (e.g. <code>Global Data &gt; Owners</code>) navigates back. Most modules also have their own internal tabs once opened."
     ],
     "sections": [
-      "About Global Data",
-      "Company & Business Units",
-      "Users & Permissions",
-      "Locations & Tax",
-      "Vendors & Subcontractors",
-      "UOM & Phase Codes",
-      "Construction Types",
+      "Overview",
+      "Company",
+      "Owners",
+      "Locations",
+      "Vendors",
       "Work Order Management",
-      "Cost & Bid Templates",
-      "Customers, Contacts & Approval",
-      "Company-Wide Settings",
-      "Forms & Quickapps",
+      "Construction Types",
+      "Users & Permissions",
+      "UOM & Phase Codes",
+      "Settings",
+      "Forms",
       "Notifications",
-      "Integrations: Marketplace & Staged Tables",
+      "Marketplace",
+      "Cost & Bid Templates",
+      "Customer",
       "Compliance Hub",
-      "Measurement Templates",
-      "Owners: Client & Project-Owner Directory"
+      "Measurement Templates"
     ]
   },
   {
@@ -24876,7 +24876,7 @@ const MODULES = [
           },
           {
             "term": "Where phase codes are used in Field Works",
-            "definition": "The project phase codes (963 on both Arena Steel Plant - Phase 1 and Elevated Corridor) feed **Field Works → Progress → Productivity Logs**: the **Set Phase Codes** dialog offers a project-specific subset, and logs and **Data Summary** show codes such as **1089-101 - Fabrication** (Direct, Material, Labor, Equipment cost types), which was confirmed in this list on Elevated Corridor. **Project Settings → Phase Code Settings** sets whether a code is Unique (one work package and location) or Multiple-Use. See **Field Works → Productivity Logs Screen by Screen**."
+            "definition": "The project phase codes (963 on both Arena Steel Plant - Phase 1 and Elevated Corridor) feed **Field Works → Progress → Productivity Logs**: the **Set Phase Codes** dialog offers a project-specific subset, and logs and **Data Summary** show codes such as **1089-101 - Fabrication** (Direct, Material, Labor, Equipment cost types), which was confirmed in this list on Elevated Corridor. **Project Settings → Phase Code Settings** sets whether a code is Unique (one work package and location) or Multiple-Use. See **Field Works → Productivity Logs**."
           }
         ],
         "procedures": [
@@ -25753,7 +25753,7 @@ const MODULES = [
           },
           {
             "term": "Productivity Logs",
-            "definition": "A separate card from Work Logs: it records the hours and quantities an employee spent against a **Phase Code**, for productivity and cost analysis, rather than the physical completion of a work package. It has six views: **Create**, **Logs**, **Data Summary**, **Issues**, **Approval Workflow** and **Reconciliation**. **Create** has two steps, **Step 1 Log Time** and **Step 2 Log Quantity**. You must first pick a date range (the app says \"Select date range to proceed\"), then **Create Log** offers **Add Employees**, **Add Crews**, **Clone Log** and **Import Log** (marked AI). The table has **Employee***, **Entities**, **Super Locations**, **Locations**, **Phase Code***, **Revised Budgeted Hours**, **JTD Hours**, **Remaining Hours**, one hours column per day of the range, and row actions (add employee, duplicate, copy, delete). The buttons are **Set Phase Codes**, **Save As Draft**, **Submit**, **Export** and **Manage Columns**. **Logs** is a list with a filter and an **All** chip; **Issues** shows form workflow issues (counters Total, Approved, Rejected, with Download Excel and Filters); **Approval Workflow** lists the approval levels (Level, Level Description, Approvers, Workflow Type; **Create Level** takes a Workflow Type of All must approve or Any one can approve, a Description and Approvers picked from the project users); **Reconciliation** has Create Log, a filter and **Configure Rules**. **Where this data comes from:** the Employee list is the project roster from **Project Setup → People** (shown as \"ID - name\", 35 entries including three System Admin rows); **Add Crews** lists the **Project Crews** from Project Setup → People (empty on this project, so the crew list is empty); Entities, Super Locations and Locations follow the Works tree; the Phase Code list holds only what you chose in **Set Phase Codes**. **Which setting changes it:** **Project Settings → Productivity Log Settings**. **Where it goes next:** approved logs feed Data Summary and the productivity and cost reporting. For every button and screen in detail, including Import Log (AI), Reconciliation rules and the Data Summary phase code views, see **Productivity Logs Screen by Screen**."
+            "definition": "A separate card from Work Logs: it records the hours and quantities an employee spent against a **Phase Code**, for productivity and cost analysis, rather than the physical completion of a work package. It has six views: **Create**, **Logs**, **Data Summary**, **Issues**, **Approval Workflow** and **Reconciliation**. **Create** has two steps, **Step 1 Log Time** and **Step 2 Log Quantity**. You must first pick a date range (the app says \"Select date range to proceed\"), then **Create Log** offers **Add Employees**, **Add Crews**, **Clone Log** and **Import Log** (marked AI). The table has **Employee***, **Entities**, **Super Locations**, **Locations**, **Phase Code***, **Revised Budgeted Hours**, **JTD Hours**, **Remaining Hours**, one hours column per day of the range, and row actions (add employee, duplicate, copy, delete). The buttons are **Set Phase Codes**, **Save As Draft**, **Submit**, **Export** and **Manage Columns**. **Logs** is a list with a filter and an **All** chip; **Issues** shows form workflow issues (counters Total, Approved, Rejected, with Download Excel and Filters); **Approval Workflow** lists the approval levels (Level, Level Description, Approvers, Workflow Type; **Create Level** takes a Workflow Type of All must approve or Any one can approve, a Description and Approvers picked from the project users); **Reconciliation** has Create Log, a filter and **Configure Rules**. **Where this data comes from:** the Employee list is the project roster from **Project Setup → People** (shown as \"ID - name\", 35 entries including three System Admin rows); **Add Crews** lists the **Project Crews** from Project Setup → People (empty on this project, so the crew list is empty); Entities, Super Locations and Locations follow the Works tree; the Phase Code list holds only what you chose in **Set Phase Codes**. **Which setting changes it:** **Project Settings → Productivity Log Settings**. **Where it goes next:** approved logs feed Data Summary and the productivity and cost reporting. For every button and screen in detail, including Import Log (AI), Reconciliation rules and the Data Summary phase code views, see **Productivity Logs**."
           },
           {
             "term": "Set Phase Codes",
@@ -25821,7 +25821,7 @@ const MODULES = [
           },
           {
             "term": "Work Logs and the Project Settings that shape them",
-            "definition": "Five project settings change what Progress and Quality show. **Work Logs Templates** chooses the drill-down for Work Logs (seven options; it can be set for the whole project or per Tree Version). **Quality Work Logs Templates** does the same for Quality (two options). **Project Work Measurement** decides how completion % is measured: **Percentage Based** (the activity's percentage weightage, selected on Arena Steel Plant - Phase 1) or **Effort Based** (man hours). **Dashboard Percentages** decides how dashboard percentages are calculated: **Worklogs** only (selected here), **Workorder and worklogs**, **P6, Workorder and Worklogs** (planned from P6) or **Milestone, Workorder and Worklogs** (planned from milestones), plus an **RFI** view. **Productivity Log Settings** controls Productivity Logs (see that card). Changing any of them changes how the same logs are shown or counted; it does not delete data. For how the screen differs under each of the seven Work Logs templates, see **Work Logs Under Each Template**."
+            "definition": "Five project settings change what Progress and Quality show. **Work Logs Templates** chooses the drill-down for Work Logs (seven options; it can be set for the whole project or per Tree Version). **Quality Work Logs Templates** does the same for Quality (two options). **Project Work Measurement** decides how completion % is measured: **Percentage Based** (the activity's percentage weightage, selected on Arena Steel Plant - Phase 1) or **Effort Based** (man hours). **Dashboard Percentages** decides how dashboard percentages are calculated: **Worklogs** only (selected here), **Workorder and worklogs**, **P6, Workorder and Worklogs** (planned from P6) or **Milestone, Workorder and Worklogs** (planned from milestones), plus an **RFI** view. **Productivity Log Settings** controls Productivity Logs (see that card). Changing any of them changes how the same logs are shown or counted; it does not delete data. For how the screen differs under each of the seven Work Logs templates, see **Work Logs**."
           },
           {
             "term": "Productivity Log Settings (Project Settings)",
@@ -26055,7 +26055,7 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Work Logs Under Each Template",
+        "heading": "Work Logs",
         "intro": "<p>Work Logs is one card with several possible layouts. <strong>Project Settings → Work Logs Templates</strong> chooses the layout for the project, and the <strong>gear</strong> beside each option decides what the log form asks for. A <strong>Module Admin</strong> or <strong>PM</strong> sets this once; <strong>Field Users</strong> then log work with whichever layout the project uses.</p><p>Seven templates exist. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.</p>",
         "definitions": [
           {
@@ -26169,7 +26169,7 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Productivity Logs Screen by Screen",
+        "heading": "Productivity Logs",
         "intro": "<p>Productivity Logs records the hours and quantities people spent against a phase code, so a <strong>PM</strong> or <strong>Cost Controller</strong> can measure productivity and cost. A <strong>Field User</strong>, foreman or timekeeper creates the log, an <strong>Approver</strong> named in the card's <strong>Approval Workflow</strong> signs it off, and the numbers show in <strong>Data Summary</strong>.</p><p>It is not the same as <strong>Work Logs</strong>: Work Logs says a piece of physical work is done at a location; Productivity Logs says who spent how many hours (and what quantity) under which phase code. Open <strong>Field Works → Tree Version → [plant] → Progress → Productivity Logs</strong>. The card has six tabs: <strong>Create</strong>, <strong>Logs</strong>, <strong>Data Summary</strong>, <strong>Issues</strong>, <strong>Approval Workflow</strong>, <strong>Reconciliation</strong>.</p>",
         "definitions": [
           {
@@ -26425,7 +26425,7 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Quality Logs Under Each Template",
+        "heading": "Quality Logs",
         "intro": "<p>Quality Level 1 and Level 2 find the work an inspector can check in one of two layouts, chosen in <strong>Project Settings → Quality Work Logs Templates</strong>. A <strong>Module Admin</strong> or <strong>PM</strong> sets it; <strong>QA/QC inspectors</strong> then use it on <strong>Field Works → Quality</strong>.</p><p>Only two templates exist here: <strong>Work Package to Location Logging</strong> and <strong>Super Location to Location Logging</strong>. Unlike Work Logs there is no Project / Tree Version switch and no gear. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.</p>",
         "definitions": [
           {
@@ -26863,11 +26863,11 @@ const MODULES = [
       "Overview",
       "Tree Version",
       "Progress",
-      "Work Logs Under Each Template",
-      "Productivity Logs Screen by Screen",
+      "Work Logs",
+      "Productivity Logs",
       "Quick Apps",
       "Quality",
-      "Quality Logs Under Each Template",
+      "Quality Logs",
       "Project Forms",
       "Cost",
       "Safety",
@@ -27142,7 +27142,7 @@ const MODULES = [
     "qaItems": QA_DOCUMENTREPOSITORY,
     "narrative": [
       {
-        "heading": "Where Records Come From",
+        "heading": "Overview",
         "intro": "<p>Document Repository has no settings or upload button, so what appears here depends only on the module that produces each record. This section maps each category to its source and says what was seen on Arena Steel Plant - Phase 1.</p><p>Access is controlled by the **Document Management Repository** row in **Users and Permissions** (boxes **View**, **Download** and **Print**). Record quality, such as clear names and descriptions, is decided in the source modules.</p>",
         "definitions": [
           {
@@ -27191,7 +27191,7 @@ const MODULES = [
             "title": "Trace a missing record",
             "steps": [
               "Open **Document Repository** and select the category; confirm the table is empty and the date range is not narrowing it.",
-              "Open the source module from Where Records Come From (for example **Field Works → Progress → RFI** for RFIs).",
+              "Open the source module listed under Overview (for example **Field Works → Progress → RFI** for RFIs).",
               "Check that the record exists there and has moved past draft (submitted or approved, as the module requires).",
               "Return to the archive and reopen the category."
             ]
@@ -27199,7 +27199,7 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Document Repository",
+        "heading": "Records",
         "intro": "<p>Document Repository is where a PM, Module Manager or auditor finds a record again without opening the module that produced it. Pick a category on the left and the table on the right lists its records.</p><p>The table has **Tree Version** (the plant), **Name**, **Description** and **Added On**, then an **Actions** column with four icons: **Download File**, **Print File**, **Access Logs** and **Email Threads**. The right pane has its own search box and a **Start date** to **End date** range; the left pane has a separate search box for the category list. Until you choose a category it says \"There is no data in this folder\". On Arena Steel Plant - Phase 1 only **RFI** has records (three); every other category is empty.</p>",
         "definitions": [
           {
@@ -27236,7 +27236,7 @@ const MODULES = [
               "Optionally set **Start date** and **End date** or type in the right-hand search box.",
               "Read the row, or use the icons in **Actions**."
             ],
-            "note": "If the table says \"There is no data in this folder\", nothing from the source module has reached the archive yet. See Where Records Come From."
+            "note": "If the table says \"There is no data in this folder\", nothing from the source module has reached the archive yet. See the Overview section."
           },
           {
             "title": "See who opened a record or follow its email thread",
@@ -27260,8 +27260,8 @@ const MODULES = [
       "Select a category (or sub-category) in the left pane to filter the record table on the right."
     ],
     "sections": [
-      "Where Records Come From",
-      "Document Repository"
+      "Overview",
+      "Records"
     ]
   },
   {
@@ -27270,7 +27270,7 @@ const MODULES = [
     "qaItems": QA_FOLLOWUPACTIONS,
     "narrative": [
       {
-        "heading": "Where Follow Up Actions Come From",
+        "heading": "Overview",
         "intro": "<p>The page has no setup of its own, so its content depends on the modules that feed it. This section says what was verified about where items could come from, and what was not.</p><p>Unlike the other project screens, **Follow Up Actions** has no row in the permission tree of **Users and Permissions**, so no separate permission controls it. Because it is empty here, ask your Arena administrator which modules raise items on your account before relying on it as a tracker.</p>",
         "definitions": [
           {
@@ -27338,7 +27338,7 @@ const MODULES = [
       "Open a <strong>Project</strong>, then go to <strong>Follow Up Actions</strong>."
     ],
     "sections": [
-      "Where Follow Up Actions Come From",
+      "Overview",
       "Follow Up Actions"
     ]
   },
@@ -27818,35 +27818,6 @@ const MODULES = [
     "qaItems": QA_OWNERS,
     "narrative": [
       {
-        "heading": "Who Registers Owners and What They See",
-        "intro": "<p>Registering owners is a PM or Module Admin task. This section covers who can do it and which project settings decide what owners see.</p><p>The **Owner Dashboard** page in **Project Settings** lists the **Standard Analytics** dashboards you can show to owners, each as a checkbox. On Arena Steel Plant - Phase 1 every box is unticked.</p>",
-        "definitions": [
-          {
-            "term": "Owner Dashboard (Project Settings)",
-            "definition": "A page titled **Owner Dashboard** (\"All related settings for owners to view key Project insights\") with two tabs, **Standard Analytics** and **Standard Reports**. Under **Standard Analytics** you pick a dashboard, then tick the views to show: **Construction Progress** (Project Activity Analysis, Project Drill Down, Project Elements, Work Packages, Locations Type, Locations Type Grids, Work Packages Grids, Quality And Documents, Qualities Dashboard, Work Milestones), **Quality Progress** (Project Drill Down, Project Elements, Work Packages, Locations Type, Quality Status, Locations Type Grids, Work Packages Grids, Quality And Documents, Work Milestones), **Cost** (Cost Plan Forecast, Cost Activity) and **Contractors Performance** (Contractor Performance). **Standard Reports** lists nothing."
-          },
-          {
-            "term": "Where the Owner Dashboard options come from",
-            "definition": "The options are the left-menu views of **Data Analytics & Insights → Standard Analytics** (Construction Progress, Quality Progress, Cost, Contractors Performance), under the same names. Ticking one is how a view is offered to owners, so owners see the same dashboards you see, limited to what is ticked. How an owner signs in and opens the dashboard was not visible without a registered owner."
-          },
-          {
-            "term": "Where owner details show up",
-            "definition": "The **Initials** entered at registration are what appear as the owner's signature when documents are approved. The project's own owner-side fields (**Owner Representative**, **CSE / PMC**, **Project Type**, **Funding Agency**, **Implementing Agency**) are on **Project Setup → Works**, and **Project Type** and **Funding Agency** options come from **Global Data → Settings → Project Form**."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Choose what owners can see",
-            "steps": [
-              "Go to **Project Settings → Owner Dashboard**.",
-              "Open **Standard Analytics** and pick a dashboard (**Construction Progress**, **Quality Progress**, **Cost** or **Contractors Performance**).",
-              "Tick the views owners should see.",
-              "Register the owner in **Owners → Register Owner** if they are not yet on the project."
-            ]
-          }
-        ]
-      },
-      {
         "heading": "Owners",
         "intro": "<p>Owners is where a PM or Module Admin registers the client or developer-side people who should follow the project. It has a **Register Owner** button, a search box and the list of owners already registered.</p><p>Each owner is a person, not a company: the form asks for an **Owner ID**, first and last name, a **Username**, an **Email** and signature **Initials**. The companies behind them live in **Global Data → Owners**. On Arena Steel Plant - Phase 1 the list is empty.</p>",
         "definitions": [
@@ -27903,6 +27874,35 @@ const MODULES = [
             ]
           }
         ]
+      },
+      {
+        "heading": "Owner Dashboard",
+        "intro": "<p>Registering owners is a PM or Module Admin task. This section covers who can do it and which project settings decide what owners see.</p><p>The **Owner Dashboard** page in **Project Settings** lists the **Standard Analytics** dashboards you can show to owners, each as a checkbox. On Arena Steel Plant - Phase 1 every box is unticked.</p>",
+        "definitions": [
+          {
+            "term": "Owner Dashboard (Project Settings)",
+            "definition": "A page titled **Owner Dashboard** (\"All related settings for owners to view key Project insights\") with two tabs, **Standard Analytics** and **Standard Reports**. Under **Standard Analytics** you pick a dashboard, then tick the views to show: **Construction Progress** (Project Activity Analysis, Project Drill Down, Project Elements, Work Packages, Locations Type, Locations Type Grids, Work Packages Grids, Quality And Documents, Qualities Dashboard, Work Milestones), **Quality Progress** (Project Drill Down, Project Elements, Work Packages, Locations Type, Quality Status, Locations Type Grids, Work Packages Grids, Quality And Documents, Work Milestones), **Cost** (Cost Plan Forecast, Cost Activity) and **Contractors Performance** (Contractor Performance). **Standard Reports** lists nothing."
+          },
+          {
+            "term": "Where the Owner Dashboard options come from",
+            "definition": "The options are the left-menu views of **Data Analytics & Insights → Standard Analytics** (Construction Progress, Quality Progress, Cost, Contractors Performance), under the same names. Ticking one is how a view is offered to owners, so owners see the same dashboards you see, limited to what is ticked. How an owner signs in and opens the dashboard was not visible without a registered owner."
+          },
+          {
+            "term": "Where owner details show up",
+            "definition": "The **Initials** entered at registration are what appear as the owner's signature when documents are approved. The project's own owner-side fields (**Owner Representative**, **CSE / PMC**, **Project Type**, **Funding Agency**, **Implementing Agency**) are on **Project Setup → Works**, and **Project Type** and **Funding Agency** options come from **Global Data → Settings → Project Form**."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Choose what owners can see",
+            "steps": [
+              "Go to **Project Settings → Owner Dashboard**.",
+              "Open **Standard Analytics** and pick a dashboard (**Construction Progress**, **Quality Progress**, **Cost** or **Contractors Performance**).",
+              "Tick the views owners should see.",
+              "Register the owner in **Owners → Register Owner** if they are not yet on the project."
+            ]
+          }
+        ]
       }
     ],
     "name": "Owners",
@@ -27916,8 +27916,8 @@ const MODULES = [
       "Use <strong>Register Owner</strong> to add a new stakeholder, or the search box to find an existing one."
     ],
     "sections": [
-      "Who Registers Owners and What They See",
-      "Owners"
+      "Owners",
+      "Owner Dashboard"
     ]
   },
   {
@@ -27926,7 +27926,7 @@ const MODULES = [
     "qaItems": QA_PROJECTSETTINGS,
     "narrative": [
       {
-        "heading": "Overview: The Project Configuration Hub",
+        "heading": "Overview",
         "intro": "<p><strong>Project Settings</strong> is where a <strong>Module Admin / PM</strong> adjusts how Arena behaves for one project: a searchable list of 40 categories on the left and the panel for the selected category on the right. <strong>Look &amp; Feel</strong> opens first. Field users do not need it; it shapes what their daily screens look like.</p><p>Global Data holds the company-wide lists and templates (vendors, crews, phase codes, form templates, quick apps). Project Settings holds the choices that apply to this project only. Four pages exist in both places under the same name (<strong>Date Format</strong>, <strong>Request for Information</strong>, <strong>Transmittals Submitted Type</strong>, <strong>Market Type</strong>), so check both when a project behaves differently from another. Each category below says which screen it changes and where its options come from.</p>",
         "definitions": [
           {
@@ -27985,7 +27985,7 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Look, Forms & Field Templates",
+        "heading": "Forms & Templates",
         "intro": "<p>This group covers the settings that shape how the project looks and how logs, quality checks and issues are structured before the field team uses them. A <strong>Module Admin / PM</strong> sets them early, because changing a template after logging has started makes old and new records harder to compare.</p>",
         "definitions": [
           {
@@ -27998,7 +27998,7 @@ const MODULES = [
           },
           {
             "term": "Work Logs Templates",
-            "definition": "Sets which of 7 logging structures the <strong>Field Works → Progress → Work Logs</strong> screen uses for this project, under \"Work Log Reference — At what level do you want to log works?\": <strong>Work Package to Location Logging</strong>, <strong>Location to Work Package Logging</strong> (the reverse: pick a Location, see its Work Packages, grouped by Super Location), <strong>Location to Work Package bulk logging</strong> (the same but with multiple filters, for logging or raising Restraints against several Locations at once), <strong>Super Location to Location Logging</strong>, <strong>Worklogs in Scheduled View</strong> and <strong>Quantity Work Logging</strong> (both present the Tree Version as a WBS/schedule instead of a location tree), and <strong>Worklogs enable by Certified RFIs</strong> (a location only becomes loggable once its RFI is certified). Each option shows a live preview before Save Changes. This is why the Work Logs screen can look structurally different from one project to the next — it is a per-project setting, not a different product version. **Where it takes effect:** the page has **Project** and **Tree Version** selectors, so the choice can apply to the whole project or to one plant, and a gear beside each option. With **Work Package to Location Logging**, **Field Works → Progress → Work Logs** shows a Location Types tree with each work package opening a grid of super locations and locations. The same screen feeds Submitted Work Logs, Approve Work Logs, Detailed Work Logs, **My Desk → Recent Work Logs** and the progress dashboards in Data Analytics. The gear beside each option opens **Advanced Settings** (Checkbox, Text Box or interval entry; Actual Start & End Dates; Required Fields; Interval Quantity Logging; Auto Log), which decides what the log form asks for. Full detail is in **Field Works → Work Logs Under Each Template**."
+            "definition": "Sets which of 7 logging structures the <strong>Field Works → Progress → Work Logs</strong> screen uses for this project, under \"Work Log Reference — At what level do you want to log works?\": <strong>Work Package to Location Logging</strong>, <strong>Location to Work Package Logging</strong> (the reverse: pick a Location, see its Work Packages, grouped by Super Location), <strong>Location to Work Package bulk logging</strong> (the same but with multiple filters, for logging or raising Restraints against several Locations at once), <strong>Super Location to Location Logging</strong>, <strong>Worklogs in Scheduled View</strong> and <strong>Quantity Work Logging</strong> (both present the Tree Version as a WBS/schedule instead of a location tree), and <strong>Worklogs enable by Certified RFIs</strong> (a location only becomes loggable once its RFI is certified). Each option shows a live preview before Save Changes. This is why the Work Logs screen can look structurally different from one project to the next — it is a per-project setting, not a different product version. **Where it takes effect:** the page has **Project** and **Tree Version** selectors, so the choice can apply to the whole project or to one plant, and a gear beside each option. With **Work Package to Location Logging**, **Field Works → Progress → Work Logs** shows a Location Types tree with each work package opening a grid of super locations and locations. The same screen feeds Submitted Work Logs, Approve Work Logs, Detailed Work Logs, **My Desk → Recent Work Logs** and the progress dashboards in Data Analytics. The gear beside each option opens **Advanced Settings** (Checkbox, Text Box or interval entry; Actual Start & End Dates; Required Fields; Interval Quantity Logging; Auto Log), which decides what the log form asks for. Full detail is in **Field Works → Work Logs**."
           },
           {
             "term": "Quality Work Logs Templates",
@@ -28050,7 +28050,7 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Scheduling, Views & Workflow Settings",
+        "heading": "Time Management Settings",
         "intro": "<p>This group covers timesheet approvals, maps, the Project Setup layout, form priorities, which plant each user opens, and the dashboards and percentages that Data Analytics and My Desk use. A <strong>Module Admin / PM</strong> sets them once and revisits them when the way of working changes.</p>",
         "definitions": [
           {
@@ -28121,7 +28121,7 @@ const MODULES = [
         "procedures": []
       },
       {
-        "heading": "Cost, Procurement & Resource Settings",
+        "heading": "Phase Code Settings",
         "intro": "<p>This group covers phase-code rules, naming, date format, form numbering, procurement approvals, the cost structure and resources. A <strong>PM / Module Admin</strong> settles them early, because they are hard to change once cost and procurement records exist.</p>",
         "definitions": [
           {
@@ -28164,7 +28164,7 @@ const MODULES = [
         "procedures": []
       },
       {
-        "heading": "Drawings, Compliance & Identifiers",
+        "heading": "Drawing Register",
         "intro": "<p>This group covers the drawing register form, the work order terms, the numbering and category lists for RFIs and transmittals, market types and the Vista Progress log. A <strong>Module Admin / PM</strong> sets most of them once, early in the project.</p>",
         "definitions": [
           {
@@ -28210,11 +28210,11 @@ const MODULES = [
       "Use the search box or scroll the left-hand category list, then edit the selected category's panel on the right."
     ],
     "sections": [
-      "Overview: The Project Configuration Hub",
-      "Look, Forms & Field Templates",
-      "Scheduling, Views & Workflow Settings",
-      "Cost, Procurement & Resource Settings",
-      "Drawings, Compliance & Identifiers"
+      "Overview",
+      "Forms & Templates",
+      "Time Management Settings",
+      "Phase Code Settings",
+      "Drawing Register"
     ]
   },
   {
@@ -28627,7 +28627,7 @@ const MODULES = [
     "qaItems": QA_NOTIFICATIONS,
     "narrative": [
       {
-        "heading": "Admin Role",
+        "heading": "Overview",
         "intro": "<p>A rejected submittal or an overdue approval that no one hears about until it's too late is exactly the kind of gap that costs a construction project time and money — which is why deciding what gets an alert, and who receives it, is deliberate <strong>PM / Module Manager</strong> or <strong>Super Admin</strong> configuration rather than something left to chance. Before end users receive any alerts through Email, Web, or Mobile, an admin needs to configure which events are even enabled for delivery and how they're organized. The Events tab is where each trackable event is independently toggled for delivery channel and where the notification's wording itself can be customized rather than left as a generic system message — this is admin-level configuration, not something an individual user tunes for themselves.</p><p>For companies with many distinct events, an admin likely also needs to organize them into Event Groups so related alerts can be managed together rather than one at a time. Rather than building every group manually, Arena offers a one-click option to auto-create its own default set of standard event groups as a starting point, which an admin can then adjust.</p>",
         "definitions": [
           {
@@ -28789,7 +28789,7 @@ const MODULES = [
       "Use the Events tab to customize templates and the Event Groups tab to map events to recipients."
     ],
     "sections": [
-      "Admin Role",
+      "Overview",
       "Events",
       "Event Groups"
     ]
@@ -28800,7 +28800,7 @@ const MODULES = [
     "qaItems": QA_PERMISSIONS,
     "narrative": [
       {
-        "heading": "Admin Role",
+        "heading": "Overview",
         "intro": "<p>Handing every user the same blanket access on a construction project is a liability — a subcontractor's crew, a site engineer, and a project director all need different levels of control, and getting that boundary wrong can mean anything from a missed approval to an unauthorized deletion of project records. Permissions configuration is inherently <strong>Module Admin / Super Admin</strong> work: it exists specifically so that a project or system administrator can decide, module by module, what each role is allowed to see and do, rather than granting every user the same blanket access. Before any end user can create, edit, view, or delete records in a module, an admin needs to have created a User Group, assigned it a graduated set of Permission Rights, and added that user to the group.</p><p>An admin managing a portfolio of similar projects likely also needs the Copy to Projects capability, which copies an entire user group's configuration to other projects at once — this avoids rebuilding the same role definition by hand every time a structurally similar project starts, and keeps permission structures consistent across the portfolio.</p>",
         "definitions": [
           {
@@ -28927,7 +28927,7 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Permission Rights",
+        "heading": "Permissions",
         "intro": "<p>Once a role exists, the next question an admin has to answer is exactly what that role can do — and Arena breaks this down at a per-module level rather than as a single blanket access flag. This granularity is what lets one role see and edit Cost Estimates while only viewing Drawing Management, and a different role do the reverse — for example, giving a subcontractor's crew visibility into their scope of work without exposing the full project budget.</p><p>Configuration starts with a master switch, Roll Back, which must be turned on for a given module before that module's specific rights become active for the role. Once enabled, the individual rights available are: Assign To, a uniquely restrictive right where only the person the record is specifically assigned to can view, create, edit, or delete it; View, for read-only access; Create, for adding new records; Edit, for updating without deleting; Delete; Download, for exporting to Excel; Print; and Admin, a shortcut that grants every one of the above rights for that module in a single toggle rather than checking each box individually.</p>",
         "definitions": [
           {
@@ -29006,9 +29006,9 @@ const MODULES = [
       "Use User Group to create a role, then Permissions and Users buttons on each role's card to configure it."
     ],
     "sections": [
-      "Admin Role",
+      "Overview",
       "User Groups",
-      "Permission Rights",
+      "Permissions",
       "Copy to Projects"
     ]
   },
