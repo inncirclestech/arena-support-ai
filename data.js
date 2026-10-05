@@ -2897,19 +2897,6 @@ const QA_EQUIPMENT = [
     ]
   },
   {
-    "action": "track",
-    "object": "scheduled maintenance activity",
-    "scope": "module",
-    "section": "Field Inspections",
-    "question": "How do I log a scheduled maintenance activity?",
-    "answer": "1. Go to **Field Inspections → Maintenance → Equipment Maintenance Calendar**.\n2. Pick the due date — forms are grouped by project and color-coded (Blue = Ready).\n3. Open the form, fill required fields, Submit — turns Green (Completed) once complete.\n4. If a check fails, raise an **issue** directly from that field — it's logged to **Equipment Issues** automatically.",
-    "tags": [
-      "scheduled maintenance",
-      "field inspection",
-      "field inspection log"
-    ]
-  },
-  {
     "action": "create",
     "object": "equipment photo",
     "scope": "module",
@@ -2921,43 +2908,6 @@ const QA_EQUIPMENT = [
       "upload image",
       "upload equipment photo",
       "equipment photos"
-    ]
-  },
-  {
-    "action": "define",
-    "object": "maintenance vs utilization tab",
-    "scope": "module",
-    "section": "Field Inspections",
-    "question": "What's the difference between the Maintenance and Utilization tabs in Field Inspections?",
-    "answer": "Both work the same way (calendar-driven scheduled entries plus ad-hoc list entries), but **Maintenance** logs maintenance/inspection activity while **Utilization** logs ad-hoc utilization entries — they mirror each other in structure.",
-    "tags": [
-      "maintenance vs utilization tab",
-      "field inspections tabs"
-    ]
-  },
-  {
-    "action": "create",
-    "object": "ad-hoc inspection",
-    "scope": "module",
-    "section": "Field Inspections",
-    "question": "How do I log an ad-hoc (unplanned) inspection?",
-    "answer": "1. Go to **Field Inspections → Maintenance** (or Utilization) and switch to the list/ad-hoc tab.\n2. Select the relevant form category on the left.\n3. Click **Create Form**, complete the fields, and Submit — it appears as a new card with Download, Share, Print, and Chat available.",
-    "tags": [
-      "ad-hoc inspection",
-      "create form"
-    ]
-  },
-  {
-    "action": "edit",
-    "object": "maintenance form",
-    "scope": "module",
-    "section": "Field Inspections",
-    "question": "How do I edit a maintenance form after it's been submitted?",
-    "answer": "Click the card for that submitted form to re-open it for review/editing — each card also offers Download, Share, Print, and a Chat panel for collaborative notes.",
-    "tags": [
-      "edit submitted form",
-      "reopen maintenance form",
-      "reopen submitted form"
     ]
   },
   {
@@ -2976,18 +2926,6 @@ const QA_EQUIPMENT = [
   },
   {
     "action": "define",
-    "object": "trigger point",
-    "scope": "module",
-    "section": "Field Inspections",
-    "question": "What is a trigger point on a maintenance form?",
-    "answer": "A trigger point is a checkbox configured per field in the form builder (**Setup Trigger Points**) that lets end-users raise an issue or note directly from that field if the checkpoint fails during an inspection. A triggered issue is logged automatically under **Equipment Issues**.",
-    "tags": [
-      "trigger point",
-      "setup trigger points"
-    ]
-  },
-  {
-    "action": "define",
     "object": "equipment maintenance calendar colors",
     "scope": "module",
     "section": "Field Inspections",
@@ -3001,32 +2939,6 @@ const QA_EQUIPMENT = [
   },
   {
     "action": "define",
-    "object": "scheduled vs ad-hoc inspection",
-    "scope": "module",
-    "section": "Field Inspections",
-    "question": "What's the difference between a scheduled maintenance form and an ad-hoc inspection?",
-    "answer": "A scheduled form is generated automatically by a maintenance package's Prepare Schedule settings (Daily/Weekly/Check Out/Check In) and shows up on the Equipment Maintenance Calendar at the right time. An ad-hoc inspection is created manually at any time via Create Form on the Equipment Maintenance list tab, without being tied to a pre-set schedule.",
-    "tags": [
-      "scheduled vs ad-hoc inspection",
-      "inspection type comparison"
-    ]
-  },
-  {
-    "action": "edit",
-    "object": "equipment issue",
-    "scope": "module",
-    "section": "Equipment Issues",
-    "question": "How do I resolve an equipment issue?",
-    "answer": "1. Go to **Equipment Issues**, locate the issue via Search/Filters.\n2. Review details, add notes in **Chat** if collaborating.\n3. Once fixed, click **Rectify** — status becomes Rectified and the linked form re-opens for completion.\n4. Optionally click **Create Work Order** if formal remediation tracking is needed.",
-    "tags": [
-      "resolve issue",
-      "rectify",
-      "equipment issue",
-      "resolve rectify issue"
-    ]
-  },
-  {
-    "action": "define",
     "object": "equipment issue vs ncr",
     "scope": "module",
     "section": "Equipment Issues",
@@ -3035,17 +2947,6 @@ const QA_EQUIPMENT = [
     "tags": [
       "equipment issue vs ncr",
       "issue comparison"
-    ]
-  },
-  {
-    "action": "create",
-    "object": "work order",
-    "scope": "module",
-    "section": "Equipment Issues",
-    "question": "How do I create a Work Order from an equipment issue?",
-    "answer": "Click **Create Work Order** on the Equipment Issues (or NCR) toolbar — this spins up a Work Order to track remediation labor/cost.",
-    "tags": [
-      "create work order from issue"
     ]
   },
   {
@@ -3501,21 +3402,6 @@ const QA_EQUIPMENT = [
     ]
   },
   {
-    "action": "view",
-    "object": "field inspections list",
-    "scope": "module",
-    "section": "Field Inspections",
-    "question": "Where are Field Inspections and what does the list show?",
-    "answer": "From **Home**, open **Equipment Management → Maintenance → Field Inspections**. Click **New Inspection** to start one. The list shows **ID**, **Equipment**, **Type**, **Status**, **Inspector**, **Date** and **Priority**.",
-    "tags": [
-      "field inspections list",
-      "new inspection",
-      "inspection list columns",
-      "inspector priority",
-      "field inspection screen"
-    ]
-  },
-  {
     "action": "create",
     "object": "inspection checklist",
     "scope": "module",
@@ -3696,6 +3582,140 @@ const QA_EQUIPMENT = [
       "work order types maintenance",
       "maintenance settings",
       "cannot add equipment to maintenance"
+    ]
+  },
+  {
+    "action": "create",
+    "object": "field inspection",
+    "scope": "module",
+    "section": "Field Inspections",
+    "question": "How do I create a field inspection?",
+    "answer": "From **Home**, open **Equipment Management → Maintenance → Field Inspections** and click **New Inspection**.\n1. Use the **Equipment / Accessory** toggle to choose equipment or an accessory.\n2. Select the **Equipment** (or **Accessory**) from the dropdown.\n3. Select the **Inspection Type** (it loads after the equipment is selected and lists the checklists linked to its category).\n4. Click **Create Inspection**. The inspection is added to the list with the status **Form ready**.\nIf no Inspection Type appears, link a checklist to the category in **Settings → Equipment Setup / Accessory Setup**.",
+    "tags": [
+      "create field inspection",
+      "new inspection",
+      "start an inspection",
+      "log inspection",
+      "inspect equipment",
+      "create inspection",
+      "field inspection"
+    ]
+  },
+  {
+    "action": "view",
+    "object": "field inspections list",
+    "scope": "module",
+    "section": "Field Inspections",
+    "question": "Where are Field Inspections and what does the list show?",
+    "answer": "From **Home**, open **Equipment Management → Maintenance → Field Inspections**. The list shows the **ID**, **Equipment / Accessory**, **Status** and **Date** of each inspection. Use **Manage Columns** to show, hide or reorder columns, the **Save layout** icon to keep the layout, **Search by ID** to find an inspection, and the **View** (eye) icon under **Actions** to open it.",
+    "tags": [
+      "field inspections page",
+      "inspection list",
+      "manage columns",
+      "search by id",
+      "save layout",
+      "inspections"
+    ]
+  },
+  {
+    "action": "fill",
+    "object": "inspection form",
+    "scope": "module",
+    "section": "Field Inspections",
+    "question": "How do I fill in an inspection form?",
+    "answer": "From **Home**, open **Equipment Management → Maintenance → Field Inspections**, then click the **View** icon under **Actions** on the inspection. Complete the required fields; under **Inspection Items** select the response for each item (for example **Yes** or **No**). For a failed item record an issue, then click **Submit** (or **Close** to exit without submitting). Use the **Print** icon at the top right to print the inspection.",
+    "tags": [
+      "fill inspection form",
+      "complete inspection",
+      "submit inspection",
+      "inspection items",
+      "print inspection"
+    ]
+  },
+  {
+    "action": "record",
+    "object": "inspection issue",
+    "scope": "module",
+    "section": "Field Inspections",
+    "question": "How do I record an issue during an inspection?",
+    "answer": "From **Home**, open **Equipment Management → Maintenance → Field Inspections** and open the inspection with the **View** icon. Under **Inspection Items**, select **No** (the failed response) for the item; the **Issue for \"<item name>\"** panel opens. Select the **Priority**, enter the **Observation**, upload a photo with **Upload Image** (mandatory; use the **Edit** icon to replace it), repeat for each failed item and click **Submit**. The inspection becomes **In Progress with issues** and an issue is created for each failed item in **Equipment Issues**.",
+    "tags": [
+      "record issue during inspection",
+      "raise issue inspection",
+      "failed item",
+      "report a problem found during inspection",
+      "add issue",
+      "priority observation upload image"
+    ]
+  },
+  {
+    "action": "define",
+    "object": "inspection status",
+    "scope": "module",
+    "section": "Field Inspections",
+    "question": "What do the field inspection statuses mean?",
+    "answer": "**Form ready**: the inspection is created and the form is ready to be filled. **In Progress with issues**: one or more items have a failed response and a recorded issue. **Completed**: the inspection is submitted with no open issues.",
+    "tags": [
+      "inspection status",
+      "form ready",
+      "in progress with issues",
+      "completed inspection",
+      "status reference"
+    ]
+  },
+  {
+    "action": "define",
+    "object": "trigger point",
+    "scope": "module",
+    "section": "Field Inspections",
+    "question": "What is a trigger point on an inspection form?",
+    "answer": "A trigger point is a response marked **Raise Issue when the field is updated** under **Setup Trigger Points** in the form builder. When the field user selects it for an inspection item, an **Issue** panel opens for **Priority**, **Observation** and **Upload Image**, and the issue is logged in **Equipment Issues**.",
+    "tags": [
+      "trigger point",
+      "raise issue when field is updated",
+      "setup trigger points"
+    ]
+  },
+  {
+    "action": "review",
+    "object": "equipment issue",
+    "scope": "module",
+    "section": "Equipment Issues",
+    "question": "How do I view an equipment issue?",
+    "answer": "From **Home**, open **Equipment Management → Equipment Issues**. The list shows the issues raised from field inspections with the equipment, inspection item, priority and status. Click the **View** icon under **Actions** to see the details, including the **Observation** and the uploaded image.",
+    "tags": [
+      "view equipment issue",
+      "equipment issues list",
+      "issue details",
+      "open issue"
+    ]
+  },
+  {
+    "action": "create",
+    "object": "work order from issue",
+    "scope": "module",
+    "section": "Equipment Issues",
+    "question": "How do I create a Work Order from an equipment issue?",
+    "answer": "From **Home**, open **Equipment Management → Equipment Issues** and click the **Create Work order** hyperlink under the **Work order** column of the issue. Closing the Work Order completes the rectification of the linked issue.",
+    "tags": [
+      "create work order from issue",
+      "work order for issue",
+      "repair issue",
+      "raise work order equipment issue"
+    ]
+  },
+  {
+    "action": "rectify",
+    "object": "equipment issue",
+    "scope": "module",
+    "section": "Equipment Issues",
+    "question": "How do I resolve (rectify) an equipment issue?",
+    "answer": "From **Home**, open **Equipment Management → Equipment Issues** and click **Rectify** under the **Status** column of the issue. If the issue is rectified through a Work Order, closing the Work Order completes the rectification of the linked issue.",
+    "tags": [
+      "rectify equipment issue",
+      "resolve equipment issue",
+      "close issue",
+      "fix issue"
     ]
   }
 ];
@@ -20537,27 +20557,51 @@ const MODULES = [
       },
       {
         "heading": "Field Inspections",
-        "intro": "<p>This is where the admin's upfront maintenance-package configuration meets the reality of the job site. Field Inspections is the <strong>End User</strong> screen — the one a foreman, mechanic, or field engineer actually opens day to day to complete a scheduled maintenance check, log something unplanned, or document equipment condition with photos before or after a job.</p><p>Field Inspections is where the maintenance packages configured in Equipment Setup actually get executed — the screen field crews use day to day to complete scheduled forms, log unplanned inspections, and manage photographic documentation of equipment condition. It's organized into three tabs — Maintenance, Utilization, and Equipment Photos — each covering a different flavor of on-the-ground equipment tracking.</p>\n    <p>Both Maintenance and Utilization share the same underlying interaction model: a calendar view for scheduled entries generated automatically by a maintenance package, and a list view for ad-hoc entries created manually whenever something needs recording outside of any pre-set schedule. This dual structure reflects a real operational need — most inspections happen on a predictable cadence, but crews also need the ability to log something unplanned, like a mid-shift equipment failure, without waiting for the next scheduled slot.</p>\n    <p>A key mechanism woven throughout this screen is the trigger point: certain fields on a maintenance form are configured (in the Maintenance Builder) to let the person filling out the form raise an issue directly from that field if a checkpoint fails. This is what connects Field Inspections to Equipment Issues — a failed check during a routine inspection doesn't just sit in the completed form, it automatically becomes a tracked issue that someone can be assigned to resolve.</p>",
+        "intro": "<p>Use **Field Inspections** to record the condition of equipment or an accessory on site against an **Inspection Checklist**. Field Inspectors and Operators (equipment operator, site supervisor, safety officer) create and fill the inspection; when an item fails, they record an issue with a **Priority**, an **Observation** and a photo, and the inspection moves to **In Progress with issues**.</p><p>A Maintenance Supervisor (plant manager, equipment manager) reviews inspections with issues in **Equipment Issues**. Before logging an inspection, make sure the equipment or accessory exists in the Equipment Master and its category has a checklist linked in **Settings → Equipment Setup / Accessory Setup**; otherwise no **Inspection Type** is available. All equipment and accessories appear in the **New Inspection** window, whatever their Equipment Status.</p>",
         "definitions": [
           {
+            "term": "Who does this",
+            "definition": "**Field Inspector / Operator** creates and fills the inspection and records issues. **Maintenance Supervisor** reviews inspections with issues and raises Work Orders. **Equipment Management Administrator** builds the checklists and links them to categories."
+          },
+          {
             "term": "Field Inspections list",
-            "definition": "From **Home**, open **Equipment Management → Maintenance → Field Inspections**. Click **New Inspection** to start one. The list shows **ID**, **Equipment**, **Type**, **Status**, **Inspector**, **Date** and **Priority**."
+            "definition": "From **Home**, open **Equipment Management → Maintenance → Field Inspections**. The list shows the **ID**, **Equipment / Accessory**, **Status** and **Date** of each inspection (it may also show **Type**, **Inspector** and **Priority**). Use **Manage Columns** to show, hide or reorder columns and the **Save layout** icon to keep the layout. Type an ID in **Search by ID** to find an inspection."
           },
           {
-            "term": "Field Inspections",
-            "definition": "The screen where field crews perform and record maintenance activity and manage equipment photos, organized into three tabs: Maintenance, Utilization, and Equipment Photos."
+            "term": "New Inspection",
+            "definition": "The button that opens the **New Inspection** window. Fields: the **Equipment / Accessory** toggle, the **Equipment** (or **Accessory**) dropdown, and the **Inspection Type**."
           },
           {
-            "term": "Maintenance tab",
-            "definition": "Logs maintenance and inspection activity, on two sub-tabs: Equipment Maintenance Calendar (scheduled, generated by a maintenance package, grouped by project in collapsible sections) or Equipment Maintenance (a list/ad-hoc tab with Create Form, for unplanned inspections)."
+            "term": "Inspection Type",
+            "definition": "The checklist used for the inspection. The list loads only after the equipment is selected and shows the checklists linked to its category in Settings → Equipment Setup / Accessory Setup."
           },
           {
-            "term": "Utilization tab",
-            "definition": "Structurally identical to the Maintenance tab — calendar-driven scheduled entries plus ad-hoc list entries — but scoped to logging ad-hoc utilization entries rather than maintenance/inspection activity."
+            "term": "Priority (issue)",
+            "definition": "The priority of the issue recorded against a failed item, for example Medium. Chosen from a dropdown."
           },
           {
-            "term": "Equipment Maintenance Calendar color legend",
-            "definition": "The color coding used on the calendar view, with these exact on-screen labels: Grey = Not Ready, Blue = Ready, Amber = In Progress, Green = Completed. Each day's due forms are grouped by project in a collapsible section, listing form name, equipment, and its current status/stage."
+            "term": "Observation (issue)",
+            "definition": "The details of the issue. The text editor supports bold, italics, links, headings and lists."
+          },
+          {
+            "term": "Upload Image (issue)",
+            "definition": "A photo of the issue. Mandatory. Click the **Edit** icon on the uploaded image to replace it."
+          },
+          {
+            "term": "Status: Form ready",
+            "definition": "The inspection is created and the form is ready to be filled."
+          },
+          {
+            "term": "Status: In Progress with issues",
+            "definition": "The inspection has one or more items with a failed response and a recorded issue."
+          },
+          {
+            "term": "Status: Completed",
+            "definition": "The inspection is submitted with no open issues."
+          },
+          {
+            "term": "Where this data comes from and goes",
+            "definition": "The **Inspection Type** list comes from the checklist linked to the equipment's category in **Settings → Equipment Setup / Accessory Setup**, built in **Equipment Management Forms → Inspection Checklists**. Each issue recorded here is created as a record in **Equipment Management → Equipment Issues**, where a Work Order can be raised."
           },
           {
             "term": "Equipment Photos tab",
@@ -20565,37 +20609,165 @@ const MODULES = [
           },
           {
             "term": "Trigger point",
-            "definition": "A checkbox configured per field in the maintenance form builder (under Setup Trigger Points) that lets an end-user raise an issue or note directly from that field if the checkpoint fails during an inspection. Any issue raised this way is logged automatically to Equipment Issues, without requiring a separate manual step to create the issue record."
-          },
-          {
-            "term": "Scheduled vs. ad-hoc inspection",
-            "definition": "A scheduled form is generated automatically by a maintenance package's Prepare Schedule settings (Daily, Weekly, Check Out, or Check In) and appears on the Equipment Maintenance Calendar at the appropriate time. An ad-hoc inspection is instead created manually at any time via Create Form on the list tab, with no tie to any pre-set schedule — useful for capturing something unplanned."
+            "definition": "A response marked **Raise Issue when the field is updated** under **Setup Trigger Points** in the form builder. When the field user selects that response (for example **No**) on an inspection item, an **Issue** panel opens under the item and the issue is logged to **Equipment Issues** without a separate manual step."
           }
         ],
         "procedures": [
           {
-            "title": "Logging a scheduled maintenance activity",
+            "title": "Open the Field Inspections page",
             "steps": [
-              "Go to <strong>Field Inspections → Maintenance</strong> and switch to <strong>Calendar</strong>.",
-              "Pick the due date — forms are shown color-coded (Blue means ready to fill).",
-              "Open the form, fill in the required fields, and Submit — the form turns Green once complete.",
-              "If a check fails, raise an <strong>issue</strong> directly from that field — it's logged to Equipment Issues automatically, with no separate step needed."
+              "Go to **Equipment Management → Maintenance**.",
+              "Click the **Field Inspections** sub-tab. The inspections are listed with the **ID**, **Equipment / Accessory**, **Status** and **Date**.",
+              "Click **Manage Columns** to show, hide or reorder the columns of the list.",
+              "Click the **Save layout** icon next to **Manage Columns** to save the layout.",
+              "Type an ID in **Search by ID** to find an inspection.",
+              "Click the **View** (eye) icon under **Actions** to open an inspection."
+            ],
+            "images": [
+              {
+                "src": "assets/guides/equipment/545.png",
+                "caption": "Go to Equipment Management → Maintenance.",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/equipment/546.png",
+                "caption": "Click the Field Inspections sub-tab. The inspections are listed with the ID,…",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/equipment/547.png",
+                "caption": "Click Manage Columns to show, hide or reorder the columns of the list.",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/equipment/548.png",
+                "caption": "Click the Save layout icon next to Manage Columns to save the layout.",
+                "step": 4
+              },
+              {
+                "src": "assets/guides/equipment/549.png",
+                "caption": "Type an ID in Search by ID to find an inspection.",
+                "step": 5
+              },
+              {
+                "src": "assets/guides/equipment/550.png",
+                "caption": "Click the View (eye) icon under Actions to open an inspection.",
+                "step": 6
+              }
             ]
           },
           {
-            "title": "Logging an ad-hoc (unplanned) inspection",
+            "title": "Create a field inspection",
             "steps": [
-              "Go to <strong>Field Inspections → Maintenance</strong> (or Utilization) and switch to the list/ad-hoc tab.",
-              "Select the relevant form category from the left-hand list.",
-              "Click <strong>Create Form</strong>, complete the fields, and Submit — it appears as a new card with Download, Share, Print, and Chat available."
-            ]
+              "Click **New Inspection**. The **New Inspection** window opens.",
+              "Use the **Equipment / Accessory** toggle to choose whether the inspection is for an equipment or an accessory.",
+              "Select the **Equipment** (or **Accessory**) from the dropdown.",
+              "Select the **Inspection Type**. The list loads only after the equipment is selected and shows the checklists linked to its category.",
+              "Click **Create Inspection**. The inspection is added to the list with the status **Form ready**."
+            ],
+            "images": [
+              {
+                "src": "assets/guides/equipment/551.png",
+                "caption": "Click New Inspection. The New Inspection window opens.",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/equipment/552.png",
+                "caption": "Use the Equipment / Accessory toggle to choose whether the inspection is for…",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/equipment/553.png",
+                "caption": "Select the Equipment (or Accessory) from the dropdown.",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/equipment/554.png",
+                "caption": "Select the Inspection Type. The list loads only after the equipment is…",
+                "step": 4
+              },
+              {
+                "src": "assets/guides/equipment/555.png",
+                "caption": "Click Create Inspection. The inspection is added to the list with the status…",
+                "step": 5
+              },
+              {
+                "src": "assets/guides/equipment/556.png",
+                "caption": "Click Create Inspection. The inspection is added to the list with the status…",
+                "step": 5
+              }
+            ],
+            "note": "Field inspections can be done only for equipment and accessories added in their Master list. If no **Inspection Type** appears, link a checklist to the category in **Settings → Equipment Setup / Accessory Setup**."
           },
           {
-            "title": "Editing a maintenance form after it's been submitted",
+            "title": "Fill the inspection form",
             "steps": [
-              "Click the card for the submitted form to re-open it for review or editing.",
-              "Use the card's Download, Share, Print, and Chat options for collaborative notes alongside the edit."
-            ]
+              "Click the **View** icon under the **Actions** column. The inspection form opens.",
+              "Complete the required fields in the form. Under **Inspection Items**, select the response for each item, for example **Yes** or **No**.",
+              "For a failed item, record the issue as described in \"Record an issue during an inspection\".",
+              "Click **Submit**, or click **Close** to exit without submitting."
+            ],
+            "images": [
+              {
+                "src": "assets/guides/equipment/557.png",
+                "caption": "Click the View icon under the Actions column. The inspection form opens.",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/equipment/558.png",
+                "caption": "Complete the required fields in the form. Under Inspection Items, select the…",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/equipment/559.png",
+                "caption": "Click Submit, or click Close to exit without submitting.",
+                "step": 4
+              }
+            ],
+            "note": "Use the **Print** icon at the top right of the inspection form to print the inspection."
+          },
+          {
+            "title": "Record an issue during an inspection",
+            "steps": [
+              "Under **Inspection Items**, select **No** (the failed response) for the item. The **Issue for \"<item name>\"** panel opens under the item.",
+              "Select the **Priority** of the issue from the dropdown. Enter the **Observation** describing the issue.",
+              "Click the upload icon next to **Upload Image** and upload a photo of the issue.",
+              "Click the **Edit** icon on the uploaded image to replace it, if required. Repeat for each failed item.",
+              "Click **Submit**. The inspection status changes to **In Progress with issues**, and an issue is created for each failed item in **Equipment Management → Equipment Issues**."
+            ],
+            "images": [
+              {
+                "src": "assets/guides/equipment/560.png",
+                "caption": "Under Inspection Items, select No (the failed response) for the item. The…",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/equipment/561.png",
+                "caption": "Select the Priority of the issue from the dropdown. Enter the Observation…",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/equipment/562.png",
+                "caption": "Click the upload icon next to Upload Image and upload a photo of the issue.",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/equipment/563.png",
+                "caption": "Click the Edit icon on the uploaded image to replace it, if required. Repeat…",
+                "step": 4
+              },
+              {
+                "src": "assets/guides/equipment/564.png",
+                "caption": "Click Submit. The inspection status changes to In Progress with issues, and…",
+                "step": 5
+              },
+              {
+                "src": "assets/guides/equipment/565.png",
+                "caption": "Click Submit. The inspection status changes to In Progress with issues, and…",
+                "step": 5
+              }
+            ],
+            "note": "Each issue recorded here is created as a record in the **Equipment Issues** tab."
           },
           {
             "title": "Uploading equipment photos",
@@ -20618,27 +20790,35 @@ const MODULES = [
       },
       {
         "heading": "Equipment Issues",
-        "intro": "<p>A failed safety check on a crane or a hydraulic leak on an excavator cannot be allowed to fade into an informal conversation between a foreman and a mechanic — it needs an owner, a due date, and a paper trail that a Fleet Manager or Safety lead can audit later. Equipment Issues gives that structure to the whole company: <strong>End Users</strong> (field crews, mechanics) raise or resolve issues day to day, while a <strong>Fleet/Equipment Module Manager</strong> monitors the header counters to spot problem equipment before it becomes a bigger failure.</p><p>Equipment Issues is the central log for problems raised against equipment — most commonly generated automatically when a trigger-point check fails during a maintenance form, a field inspection, or an allocation inspection. Rather than a problem getting noted informally and potentially forgotten, Arena routes it into a single, trackable record with an owner, a due date, and a defined resolution path.</p>\n    <p>The screen defaults to a table view (a card/grid view toggle is also available) and is built around a simple lifecycle: an issue is raised, optionally discussed via Chat, and eventually marked Rectified once the underlying problem is fixed. For issues that require more formal remediation — labor, cost, parts — a Work Order can be spun up directly from the toolbar's Create Work Order button, connecting equipment problem-tracking to the broader work-order/cost-tracking machinery elsewhere in Arena.</p>\n    <p>Equipment Issues is closely related to, but distinct from, Non Conformance Reports, covered in the next section. Both share the same UI patterns (table/card views, Rectify, Chat, Assign To/Due Date, Create Work Order, header counters), but they differ in how they originate: Equipment Issues are almost always system-raised from a failed check, while NCRs are manually created to formally document a non-conformance event.</p>",
+        "intro": "<p>Use **Equipment Issues** to see every issue raised from field inspections, with the equipment, inspection item, priority and status, and to get each one repaired and closed. Field inspectors raise the issues; the Maintenance Supervisor (plant manager, equipment manager) reviews them, creates Work Orders where repair is needed and rectifies them.</p><p>The header counters (**Total**, **Open**, **Rectified**) give a quick health check on outstanding equipment problems. Equipment Issues are raised from a failed check; Non Conformance Reports, covered in the next section, are created by hand.</p>",
         "definitions": [
+          {
+            "term": "Who does this",
+            "definition": "**Field Inspector / Operator** raises issues during an inspection. **Maintenance Supervisor** reviews them, creates Work Orders and rectifies them."
+          },
+          {
+            "term": "Equipment Issues list",
+            "definition": "From **Home**, open **Equipment Management → Equipment Issues**. The list shows the issues raised from field inspections with the equipment, inspection item, priority and status. It also has columns such as **Observation**, **Raised by**, **Image**, **Work Order**, **Chat**, **Assign To** and **Due Date**. Click the **View** icon under **Actions** to see the details, including the **Observation** and the uploaded image."
+          },
+          {
+            "term": "Create Work order (hyperlink)",
+            "definition": "The **Create Work order** link under the **Work order** column of an issue. Click it to create a Work Order for the issue where repair is needed."
+          },
+          {
+            "term": "Rectify",
+            "definition": "The **Rectify** link under the **Status** column. Click it to resolve the equipment issue. If the issue is rectified through a Work Order, closing the Work Order completes the rectification of the linked issue."
+          },
+          {
+            "term": "Where this data comes from and goes",
+            "definition": "Issues come from failed items on field inspections (see **Field Inspections**); a Work Order raised from an issue goes to the Work Order module, and closing it rectifies the issue."
+          },
           {
             "term": "Inspection Checklists Issues screen",
             "definition": "From **Home**, open **Equipment Management → Inspection Checklists Issues**. The header shows **Total**, **Open** and **Rectified** counts. The list shows **Equipment Issues Number**, **Priority**, **Observation**, **Source**, **Form**, **Raised by**, **Rectified by**, **Image**, **Work Order**, **Assign To** and **Due Date**."
           },
           {
-            "term": "Equipment Issues (Equipment Issues)",
-            "definition": "The central log of issues raised during maintenance forms, field inspections, or allocation inspections. Presented as a table by default (IDs prefixed \"DEI No.\"), with a card/grid view toggle available. Columns: Issue Number, Form, Stage, Observation, Raised on Date/Time, Raised by, Image, Status, Chat, Assign To, Due Date, Actions."
-          },
-          {
-            "term": "Rectify",
-            "definition": "The action that marks an Equipment Issue as resolved. Clicking Rectify sets the issue's status to Rectified and re-opens the linked maintenance form so it can be completed or resubmitted — Rectify on an Equipment Issue is not just a status change, it actively unblocks the form that the issue interrupted."
-          },
-          {
-            "term": "Create Work Order (from an issue)",
-            "definition": "A toolbar button (not a per-row action) on Equipment Issues and NCR that spins up a formal Work Order, used when the remediation requires tracked labor or cost rather than a quick fix."
-          },
-          {
             "term": "Equipment Issue vs. Non-Conformance Report",
-            "definition": "Equipment Issues are typically raised automatically from a failed trigger-point check during a maintenance form, inspection, or an allocation inspection. NCRs, by contrast, are created manually (via + Add on the Non Conformance Report tab) to formally document a non-conformance event. Both default to a table view with header counters, Rectify workflow, Chat, Assign To/Due Date fields, and a Create Work Order toolbar button, but they remain separate, independently tracked record types with different columns (Equipment Issues: Form/Stage/Observation; NCR: Equipment/Location/Description)."
+            "definition": "Equipment Issues are typically raised automatically from a failed trigger-point check during a maintenance form, inspection, or an allocation inspection. NCRs, by contrast, are created manually (via + Add on the Non Conformance Report tab) to formally document a non-conformance event. Both default to a table view with header counters, Rectify workflow, Chat, Assign To/Due Date fields, and a Create Work Order option, but they remain separate, independently tracked record types with different columns (Equipment Issues: Form/Stage/Observation; NCR: Equipment/Location/Description)."
           },
           {
             "term": "Header counters",
@@ -20647,13 +20827,53 @@ const MODULES = [
         ],
         "procedures": [
           {
-            "title": "Resolving an equipment issue",
+            "title": "Review an equipment issue",
             "steps": [
-              "Go to <strong>Equipment Issues</strong> and locate the issue using Search or Filters.",
-              "Review the issue's details, and add notes in <strong>Chat</strong> if collaborating with others on the fix.",
-              "Once the underlying problem is fixed, click <strong>Rectify</strong> — the status becomes Rectified and the linked form re-opens for completion.",
-              "If formal remediation tracking is needed (labor, cost, parts), click <strong>Create Work Order</strong> on the toolbar."
+              "Go to **Equipment Management → Equipment Issues**. View the issues raised from field inspections, with the equipment, inspection item, priority and status.",
+              "Click the **View** icon under the **Actions** column to see the issue's details, including the **Observation** and the uploaded image."
+            ],
+            "images": [
+              {
+                "src": "assets/guides/equipment/566.png",
+                "caption": "Go to Equipment Management → Equipment Issues. View the issues raised from…",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/equipment/567.png",
+                "caption": "Click the View icon under the Actions column to see the issue's details,…",
+                "step": 2
+              }
             ]
+          },
+          {
+            "title": "Create a Work Order for an equipment issue",
+            "steps": [
+              "In **Equipment Issues**, find the issue where repair is needed.",
+              "Click the **Create Work order** hyperlink under the **Work order** column."
+            ],
+            "images": [
+              {
+                "src": "assets/guides/equipment/568.png",
+                "caption": "Click the Create Work order hyperlink under the Work order column.",
+                "step": 2
+              }
+            ],
+            "note": "The Work Order is created in the Work Order module (configure the Work Order Types first). Closing the Work Order completes the rectification of the linked issue."
+          },
+          {
+            "title": "Rectify an equipment issue",
+            "steps": [
+              "In **Equipment Issues**, find the issue.",
+              "Click **Rectify** under the **Status** column to resolve the equipment issue."
+            ],
+            "images": [
+              {
+                "src": "assets/guides/equipment/569.png",
+                "caption": "Click Rectify under the Status column to resolve the equipment issue.",
+                "step": 2
+              }
+            ],
+            "note": "If the issue is rectified through a Work Order, closing the Work Order completes the rectification of the linked issue."
           },
           {
             "title": "Deleting, exporting, or changing the view for issues",
@@ -20661,13 +20881,6 @@ const MODULES = [
               "Click the <strong>delete_outline</strong> icon on an issue's row to delete it.",
               "Click <strong>Export</strong> to download all issue records to Excel.",
               "Use the view toggle in the top-right to switch between table and card/grid view."
-            ]
-          },
-          {
-            "title": "Understanding where a trigger-point issue ends up",
-            "steps": [
-              "If you raised an issue from a failing field on a maintenance form during an inspection, no additional step is needed to log it.",
-              "The issue is automatically routed to the <strong>Equipment Issues</strong> tab, where it can be reviewed, assigned, and eventually marked Rectified."
             ]
           }
         ]
