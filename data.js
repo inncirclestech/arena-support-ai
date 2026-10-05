@@ -58,7 +58,7 @@ const QA_OPPORTUNITY = [
     action: "configure",
     object: "customer deduplication",
     scope: "module",
-    section: "Sidebar Shortcuts",
+    section: "Toolbar Shortcuts",
     question: "How do I merge duplicate customer records?",
     answer: "Go to **Opportunity Management → Customers** (people icon) and use the **Merge Duplicates** button on the toolbar. The same screen also has **Convert Customers to Owners**, for turning a Customer record into an Owner record when the same organization plays both roles.",
     tags: ["merge duplicate customers","deduplicate customers","merge customers","convert customer to owner"]
@@ -490,7 +490,7 @@ const QA_OPPORTUNITY = [
     action: "create",
     object: "task",
     scope: "module",
-    section: "Sidebar Shortcuts",
+    section: "Toolbar Shortcuts",
     question: "How do I create a task linked to an Opportunity?",
     answer: "From **Home**, open **Opportunity Management** and click the **Task** icon in the toolbar at the top right. 1. Open the **Task** shortcut icon in the module's tab bar.\n2. Click **+ Add Task**.\n3. Fill in **Name*** and **Date*** (required), and optionally Description and Time.\n4. Search for and link the required **Opportunity***.\n5. Click **Create** (or Cancel to discard).",
     tags: ["create task","link task to opportunity"]
@@ -499,7 +499,7 @@ const QA_OPPORTUNITY = [
     action: "view",
     object: "module calendar",
     scope: "module",
-    section: "Sidebar Shortcuts",
+    section: "Toolbar Shortcuts",
     question: "How do I see all module-related events on a calendar?",
     answer: "Open the **Calendar** shortcut icon — it shows a full month-view calendar of module-related events (opportunity due dates, meetings, follow-ups), with a mini date-picker, a My Calendars panel, and a daily Events list for the selected day.",
     tags: ["calendar shortcut","module events"]
@@ -508,7 +508,7 @@ const QA_OPPORTUNITY = [
     action: "define",
     object: "contacts directory vs customer interactions",
     scope: "module",
-    section: "Sidebar Shortcuts",
+    section: "Toolbar Shortcuts",
     question: "What's the difference between the Contacts Directory and Clients Interactions?",
     answer: "**Contacts Directory** is the master people directory — every Customer contact and Owner contact in one place, organized into Contacts (all), Customer Contacts, and Owner Contacts sub-tabs. **Clients Interactions** is where you drill into a specific customer and log/view interactions (calls, mail, meetings, notes) with their contacts. The Directory is the contact list; Clients Interactions is the activity log built on top of it.",
     tags: ["contacts directory vs customers interactions","module comparison"]
@@ -517,7 +517,7 @@ const QA_OPPORTUNITY = [
     action: "view",
     object: "contact fields",
     scope: "module",
-    section: "Sidebar Shortcuts",
+    section: "Toolbar Shortcuts",
     question: "What information is stored per contact in the Contacts Directory?",
     answer: "Customer/Owner (type), Customer/Owner Name, Contact ID, Salutation, First/Middle/Last Name, Suffix, Job Title, Primary Email, Secondary Email, Primary Phone Number, Work Phone Number, Primary Address (Line 1/2, Country, State, City, Zip), Secondary Address (same fields), Services Provided, and Personal Website. Use the Contacts (all), Customer Contacts, or Owner Contacts sub-tabs to narrow the list.",
     tags: ["contact fields","contacts directory fields"]
@@ -526,7 +526,7 @@ const QA_OPPORTUNITY = [
     action: "create",
     object: "customer",
     scope: "module",
-    section: "Sidebar Shortcuts",
+    section: "Toolbar Shortcuts",
     question: "How do I create a new customer?",
     answer: "From **Home**, open **Opportunity Management** and click the **Customers** icon in the toolbar at the top right. 1. Open the **Customers** shortcut and click **Create Customer**.\n2. Step 1 — **Basic Details**: enter Customer Name* (required), plus Short Name, Alias Name, Phone Number, Email, Fax Number, Url, Group, and Primary/Mailing/Billing Address (use \"Same as Primary address\" as a shortcut).\n3. Step 2 — **Locations & Tax Codes**.\n4. Step 3 — **Preview**, then submit.",
     tags: ["create customer","new customer wizard"]
@@ -535,7 +535,7 @@ const QA_OPPORTUNITY = [
     action: "define",
     object: "poc ocr",
     scope: "module",
-    section: "Sidebar Shortcuts",
+    section: "Toolbar Shortcuts",
     question: "What is POC OCR?",
     answer: "An option on the **Create Customer** split button that lets you scan a business card or document to auto-populate a contact's details, rather than typing them manually.",
     tags: ["poc ocr","scan business card"]
@@ -544,7 +544,7 @@ const QA_OPPORTUNITY = [
     action: "edit",
     object: "customer record",
     scope: "module",
-    section: "Sidebar Shortcuts",
+    section: "Toolbar Shortcuts",
     question: "How do I edit, delete, or view the history of a customer record?",
     answer: "Open the customer card's three-dot menu — it offers **Edit** (opens the record in an editable form), **Delete**, and **History** (audit/change history).",
     tags: ["edit customer","delete customer","customer history","delete customer history"]
@@ -553,7 +553,7 @@ const QA_OPPORTUNITY = [
     action: "edit",
     object: "duplicate customer",
     scope: "module",
-    section: "Sidebar Shortcuts",
+    section: "Toolbar Shortcuts",
     question: "How do I merge two duplicate customer records?",
     answer: "From **Home**, open **Opportunity Management** and click the **Customers** icon in the toolbar at the top right. Click **Merge Duplicates** in the Customers toolbar.",
     tags: ["merge duplicates","duplicate customer"]
@@ -562,7 +562,7 @@ const QA_OPPORTUNITY = [
     action: "edit",
     object: "customer",
     scope: "module",
-    section: "Sidebar Shortcuts",
+    section: "Toolbar Shortcuts",
     question: "How do I turn a Customer into an Owner, or group customers together?",
     answer: "From **Home**, open **Opportunity Management** and click the **Customers** icon in the toolbar at the top right. Use **Convert Customers to Owners** to migrate a customer record, or **Add Groups** to group customers — both are buttons in the Customers toolbar.",
     tags: ["convert customer to owner","add groups","convert to owner add groups"]
@@ -571,7 +571,7 @@ const QA_OPPORTUNITY = [
     action: "define",
     object: "customer vs owner",
     scope: "module",
-    section: "Sidebar Shortcuts",
+    section: "Toolbar Shortcuts",
     question: "What's the difference between a Customer and an Owner?",
     answer: "A **Customer** is a customer account/company that can be linked to Opportunities. An **Owner** is the project Owner organization — the client entity that owns/commissions a project. The two lists can overlap (a Customer can become an Owner via Convert Customers to Owners), but they're tracked as separate master lists.",
     tags: ["customer vs owner","terminology"]
@@ -580,7 +580,7 @@ const QA_OPPORTUNITY = [
     action: "create",
     object: "owner",
     scope: "module",
-    section: "Sidebar Shortcuts",
+    section: "Toolbar Shortcuts",
     question: "How do I create a new Owner from Opportunity Management?",
     answer: "Open the **Owners** shortcut and click **Create Owner**. Editing/deleting an Owner uses the same three-dot menu pattern as Customers and Competitors; the Owners screen also has its own Settings shortcut alongside Create Owner, Search, Export, and Filters.",
     tags: ["create owner shortcut","owners sidebar"]
@@ -589,7 +589,7 @@ const QA_OPPORTUNITY = [
     action: "create",
     object: "competitor",
     scope: "module",
-    section: "Sidebar Shortcuts",
+    section: "Toolbar Shortcuts",
     question: "How do I add a competitor?",
     answer: "From **Home**, open **Opportunity Management** and click the **Competitors** icon in the toolbar at the top right. 1. Open the **Competitors** shortcut and click **Create Competitor**.\n2. Enter **Competitor Name*** (required).\n3. Select **Competitor Type*** (required — Direct, Indirect, or Replacement Competitor).\n4. Optionally add a Description.\n5. Click **Submit** (or Cancel to discard).",
     tags: ["add competitor","create competitor"]
@@ -598,7 +598,7 @@ const QA_OPPORTUNITY = [
     action: "view",
     object: "competitor field",
     scope: "module",
-    section: "Sidebar Shortcuts",
+    section: "Toolbar Shortcuts",
     question: "Where do competitors show up once created?",
     answer: "From **Home**, open **Opportunity Management → Opportunities**. They populate the searchable **Competitors** field/column on Opportunities, letting you track which competing firms are pursuing the same job.",
     tags: ["competitors field","track competing firms"]
@@ -715,7 +715,7 @@ const QA_OPPORTUNITY = [
     action: "define",
     object: "module naming",
     scope: "module",
-    section: "Troubleshooting & Naming Differences",
+    section: "Troubleshooting",
     question: "Why is the module sometimes called \"Leads Management\" and sometimes \"Opportunities Management\"?",
     answer: "This is a per-context terminology setting. When the module is opened from **Home** with no project selected, it's labeled **Opportunities Management** with an **Opportunities** tab. When opened while a construction Project is in context, it's labeled **Leads Management** with a **Leads** tab and a project badge next to the Arena logo. The screens, fields, and functionality are identical either way.",
     tags: ["leads vs opportunities","module naming"]
@@ -724,7 +724,7 @@ const QA_OPPORTUNITY = [
     action: "define",
     object: "module scope",
     scope: "module",
-    section: "Troubleshooting & Naming Differences",
+    section: "Troubleshooting",
     question: "Is Opportunity Management tied to a specific construction project?",
     answer: "No. The module is company-wide, not tied to a single project. It covers a personal dashboard, the Opportunity list/board, a customer-interaction CRM log, analytics, reports, and account assignment across the whole business.",
     tags: ["company-wide module","project scope"]
@@ -733,7 +733,7 @@ const QA_OPPORTUNITY = [
     action: "define",
     object: "opportunities vs leads terminology",
     scope: "module",
-    section: "Troubleshooting & Naming Differences",
+    section: "Troubleshooting",
     question: "Opportunities vs. Leads — is there a difference?",
     answer: "No functional difference. \"Opportunity\" and \"Lead\" are two labels for the same module and the same records, chosen based on context: **Opportunities** when the module is reached from Home with no project selected, **Leads** when reached with a construction Project in context. Screens, fields, and functionality are identical.",
     tags: ["opportunities vs leads","terminology"]
@@ -742,7 +742,7 @@ const QA_OPPORTUNITY = [
     action: "define",
     object: "customer vs contact",
     scope: "module",
-    section: "Troubleshooting & Naming Differences",
+    section: "Troubleshooting",
     question: "What's the difference between a Customer and a Contact?",
     answer: "A **Customer** is the company/account record. A **Contact** is an individual person associated with that Customer (or an Owner), tracked in the Contacts Directory and drilled into from Clients Interactions. A single Customer can have multiple Contacts.",
     tags: ["customer vs contact","terminology"]
@@ -751,7 +751,7 @@ const QA_OPPORTUNITY = [
     action: "define",
     object: "create opportunity blocked",
     scope: "module",
-    section: "Troubleshooting & Naming Differences",
+    section: "Troubleshooting",
     question: "Why can't I submit the Create Opportunity form even after filling in the Contact section fields?",
     answer: "The **Contact** section is optional. Check the four mandatory fields: **Opportunity Name**, **Business Unit**, **Status** and **Created Date**. If **Status** is empty or says \"Status is required\", the Lead stage has no statuses: a Sales Ops user must add one (for example **New Lead**) under **Settings → Stages & Statuses Configuration**.",
     tags: ["create opportunity blocked","contact fields optional","cannot submit create opportunity","status is required","business unit required"]
@@ -760,7 +760,7 @@ const QA_OPPORTUNITY = [
     action: "view",
     object: "empty catalog list",
     scope: "module",
-    section: "Troubleshooting & Naming Differences",
+    section: "Troubleshooting",
     question: "Why are the Opportunity Type list and Milestone Templates empty?",
     answer: "No entries have been added yet — **Settings → Opportunity Type** and **Settings → Milestone Templates** (Milestone Templates and Master Milestones sub-tabs) are empty by default until an administrator adds entries, using **Create** for Milestone Templates.",
     tags: ["empty opportunity type list","empty milestone templates","opportunity type milestone templates empty"]
@@ -805,7 +805,7 @@ const QA_OPPORTUNITY = [
     action: "request",
     object: "missing customer",
     scope: "module",
-    section: "Sidebar Shortcuts",
+    section: "Toolbar Shortcuts",
     question: "What do I do when a customer, location or contact is not in the system?",
     answer: "Open the opportunity, click the **Comments** tab and message Sales Ops with what you need. A new customer goes to Sales Ops for approval before it can be used. Sales Ops adds a new location (named Customer - City, and mapped in **Account Assignment**) or a new assignment, and you get a notification, so you can carry on in the same record.",
     tags: ["customer not found","missing location","new customer approval","ask sales ops","add location customer","customer approval workflow"]
@@ -814,7 +814,7 @@ const QA_OPPORTUNITY = [
     action: "define",
     object: "milestones tab",
     scope: "module",
-    section: "Opportunity Record: Milestones, Team, Proposals, Compliance and Expenses",
+    section: "Opportunity Record",
     question: "What is the Milestones tab on an opportunity?",
     answer: "After you choose a **Milestone Template** on the profile, the **Milestones** tab shows a row per milestone with **Milestone**, **Target Date**, **Actual** dates and **Notes**. Remove ones that do not apply or add from the master list, and enter a target date for each. The dates feed the **Pipeline Gantt View** for resource planning, and the standard setup needs at least approximate target dates before a lead is qualified. Each opportunity type shows only its own templates.",
     tags: ["milestones tab","milestone template","target date","gantt view milestones","opportunity milestones","add a milestone","add milestones","milestone target date","how do I add a milestone"]
@@ -823,7 +823,7 @@ const QA_OPPORTUNITY = [
     action: "define",
     object: "opportunity tabs",
     scope: "module",
-    section: "Opportunity Record: Milestones, Team, Proposals, Compliance and Expenses",
+    section: "Opportunity Record",
     question: "What tabs does an opportunity have besides the profile?",
     answer: "The record has tabs for **Milestones**, **Teams** (members who can edit it), **Clients Interactions** (unlocks once a customer and contact are added; includes a **Comments** team chat), **Documents**, **Proposals**, **Compliance Tracker** and **Expenses**. Together they keep the profile, people, proposals, bid readiness and pursuit cost on one record.",
     tags: ["opportunity tabs","teams tab","documents tab","proposals tab","comments tab","opportunity record tabs"]
@@ -832,7 +832,7 @@ const QA_OPPORTUNITY = [
     action: "view",
     object: "compliance tracker",
     scope: "module",
-    section: "Opportunity Record: Milestones, Team, Proposals, Compliance and Expenses",
+    section: "Opportunity Record",
     question: "What is the Compliance Tracker on an opportunity?",
     answer: "It lists the compliance requirements selected for the opportunity and checks them against what your company holds. The cards show **Compliant**, **Missing / Incomplete / Expired**, **Expiring Soon** and **Readiness Score**. The table lists each requirement with its ID, category, renewal frequency and required evidence. Records are kept under **Global Data → Compliance Hub**, so fix a missing or expired item there.",
     tags: ["compliance tracker","readiness score","bid readiness","expired compliance","compliance hub"]
@@ -841,7 +841,7 @@ const QA_OPPORTUNITY = [
     action: "create",
     object: "opportunity expense",
     scope: "module",
-    section: "Opportunity Record: Milestones, Team, Proposals, Compliance and Expenses",
+    section: "Opportunity Record",
     question: "How do I record a pursuit expense on an opportunity?",
     answer: "Open the opportunity, click the **Expenses** tab and **+ Create**. Select the expense category, enter the date, amount and description, attach the receipt and click **Submit**. It goes to the configured approver, and approved lines add up to a total on the opportunity so you can compare cost of pursuit with the outcome.",
     tags: ["pursuit expense","opportunity expenses tab","bid bond expense","proposal cost","travel expense opportunity"]
@@ -850,7 +850,7 @@ const QA_OPPORTUNITY = [
     action: "create",
     object: "opportunity proposal",
     scope: "module",
-    section: "Opportunity Record: Milestones, Team, Proposals, Compliance and Expenses",
+    section: "Opportunity Record",
     question: "How do I add a proposal to an opportunity?",
     answer: "Open the opportunity, click the **Proposals** tab and **+ Create**. Enter the proposal details and update its status as it moves from draft to submitted. Each proposal is one row on the tab.",
     tags: ["add proposal opportunity","proposals tab","proposal status draft submitted"]
@@ -859,7 +859,7 @@ const QA_OPPORTUNITY = [
     action: "view",
     object: "arena onsite",
     scope: "module",
-    section: "Mobile App (Arena Onsite)",
+    section: "Mobile App",
     question: "Is there a mobile app for Opportunity Management?",
     answer: "Yes, **Arena Onsite**. Sign in with your Arena credentials. The Home screen has an **Opportunity Management** card with Opportunities, Client Interactions, Clients, Owners and Contact Directory, and the bottom bar has Home, Alerts and My Account. You can search and filter opportunities, create them, link or create a parent, log interactions and scan business cards.",
     tags: ["mobile app","arena onsite","opportunity mobile","field app","mobile opportunities"]
@@ -868,7 +868,7 @@ const QA_OPPORTUNITY = [
     action: "create",
     object: "mobile opportunity",
     scope: "module",
-    section: "Mobile App (Arena Onsite)",
+    section: "Mobile App",
     question: "How do I create an opportunity on the mobile app?",
     answer: "In **Arena Onsite**, open **Opportunities**, tap **+ Create**, fill the collapsible sections (**Details**, **Status & Value**, **Timeline & Activity**, **Contact**) and tap **Submit**. Open the created opportunity to see its tabs, and tap **Link Parent** or **Create Parent** to group it.",
     tags: ["create opportunity mobile","mobile create","onsite create opportunity","link parent mobile"]
@@ -877,7 +877,7 @@ const QA_OPPORTUNITY = [
     action: "create",
     object: "mobile client",
     scope: "module",
-    section: "Mobile App (Arena Onsite)",
+    section: "Mobile App",
     question: "How do I add a client, owner or contact from my phone?",
     answer: "In **Arena Onsite**, open **Clients** or **Owners** and tap **+ Create** (use **Create Owner From Client** to make the same record an owner), then **Submit**. A new client goes through approval, and once approved you can add its contacts; turned-down clients appear under **Rejected**. In **Contact Directory**, tap **+ Create** under **Client Contacts** or **Owner Contacts**. You can also scan a business card to create the client, owner and contact automatically.",
     tags: ["create client mobile","business card scan","contact directory mobile","rejected clients","add contact mobile","ocr business card"]
@@ -886,7 +886,7 @@ const QA_OPPORTUNITY = [
     action: "create",
     object: "mobile interaction",
     scope: "module",
-    section: "Mobile App (Arena Onsite)",
+    section: "Mobile App",
     question: "How do I log a call or note from the field?",
     answer: "In **Arena Onsite**, open **Client Interactions** and tap **Notes** on the contact, or tap the client and open the contact card. Use the **Opportunities** dropdown to pick the deal, then log the call, meeting, task or note. **See History** shows everything logged for that contact.",
     tags: ["log call mobile","client interactions mobile","notes button mobile","see history mobile"]
@@ -895,7 +895,7 @@ const QA_OPPORTUNITY = [
     action: "overview",
     object: "opportunity flow",
     scope: "module",
-    section: "Who Does What in Opportunity Management",
+    section: "Overview",
     question: "What is the opportunity process and who does what?",
     answer: "A **BD user** logs a lead with **+ Create**, completes the profile (**Details**, **Status & Value**, **Timeline & Activity**, **Contact**), sets **Milestones** and changes the **Stage**, filling every field marked with a red asterisk. The opportunity then advances through its stages and statuses until it closes. **Sales Ops** keeps customers, locations, **Account Assignment** and templates ready. **Leadership** follows the pipeline on **My Dashboard**, **Reports** and **Analytics**.",
     tags: ["opportunity process","who does what opportunity","opportunity roles","pipeline process","opportunity workflow overview"]
@@ -904,7 +904,7 @@ const QA_OPPORTUNITY = [
     action: "define",
     object: "bd user",
     scope: "module",
-    section: "Who Does What in Opportunity Management",
+    section: "Overview",
     question: "As a BD user, how do I take a lead through to a qualified opportunity?",
     answer: "Click **+ Create** on the **Opportunities** tab, enter the required fields and click **Submit**. Open the lead and complete the profile. Choose the **Milestone Template** and enter target dates on the **Milestones** tab. Change **Stage**, fill in every field with a red asterisk and click **Save Changes**. Then keep Stage, Status and interactions up to date. If a customer, location or contact is missing, ask Sales Ops in the opportunity's **Comments** tab.",
     tags: ["bd user","business development rep","as a bd user","lead to opportunity","qualify lead steps","what does bd do"]
@@ -913,7 +913,7 @@ const QA_OPPORTUNITY = [
     action: "define",
     object: "sales ops",
     scope: "module",
-    section: "Who Does What in Opportunity Management",
+    section: "Overview",
     question: "As Sales Ops, what do I set up for Opportunity Management?",
     answer: "Under **Settings**: **Stages & Statuses Configuration**, the **Opportunities Form** (Required by stage, Hide, Show At Creation), **ID Settings**, Opportunity Types and **Milestone Templates**, the Business Development pool, expense categories with approval routing, and **Users and Permissions**. Keep **Account Assignment** up to date, create **Locations** (named Client - City) in Global Data and map them, approve new customers, and answer requests in an opportunity's **Comments**.",
     tags: ["sales ops","module manager","as sales ops","administrator opportunity","who configures opportunity","opportunity admin setup"]
@@ -922,7 +922,7 @@ const QA_OPPORTUNITY = [
     action: "define",
     object: "team member",
     scope: "module",
-    section: "Who Does What in Opportunity Management",
+    section: "Overview",
     question: "What can a team member do on an opportunity?",
     answer: "Once added on the **Teams** tab, a team member can edit the opportunity's fields and add information. The **Comments** tab is the internal chat for that deal, so the team can talk without leaving the record.",
     tags: ["team member opportunity","teams tab","add team opportunity","edit opportunity team","comments team chat"]
@@ -931,7 +931,7 @@ const QA_OPPORTUNITY = [
     action: "define",
     object: "leadership",
     scope: "module",
-    section: "Who Does What in Opportunity Management",
+    section: "Overview",
     question: "As a leader or executive, where do I follow the pipeline?",
     answer: "Use **Analytics** (Market & Operations, Executive Summary, Pipeline by BU, Pipeline Intelligence) and **Reports** (Forecast, Opportunity Aging, Outcome Analysis, Customer Win Rate, Pipeline Report, Huddle Report, Pipeline Gantt View). To see every opportunity on **My Dashboard**, you need the **Admin View** permission under Global Data.",
     tags: ["leadership opportunity","executive pipeline","as an executive","sales director","where to follow pipeline","admin view leadership"]
@@ -940,7 +940,7 @@ const QA_OPPORTUNITY = [
     action: "approve",
     object: "customer",
     scope: "module",
-    section: "Sidebar Shortcuts",
+    section: "Toolbar Shortcuts",
     question: "Who approves a new customer in Opportunity Management?",
     answer: "A customer created by a BD user goes to Sales Ops for approval before anyone can use it on an opportunity. Once approved, the BD user can use it and add its POCs. For a new location or a new account assignment, Sales Ops adds it against the opportunity and you get a notification.",
     tags: ["who approves customer","new customer approval","sales ops approves customer","customer approval workflow","client approval"]
@@ -1030,7 +1030,7 @@ const QA_OPPORTUNITY = [
     action: "link",
     object: "parent mobile",
     scope: "module",
-    section: "Mobile App (Arena Onsite)",
+    section: "Mobile App",
     question: "How do I link or create a parent opportunity on the mobile app?",
     answer: "In **Arena Onsite**, tap **Opportunities**, open the opportunity, then tap **Link Parent** to add it under an existing parent or **Create Parent** to make a new one. The **Child** and **Parent** tabs on the list show the result.",
     tags: ["mobile parent","link parent mobile","create parent mobile","arena onsite parent"]
@@ -1048,7 +1048,7 @@ const QA_OPPORTUNITY = [
     action: "define",
     object: "admin view",
     scope: "module",
-    section: "Who Does What in Opportunity Management",
+    section: "Overview",
     question: "Who can see all opportunities in the organisation?",
     answer: "By default **My Dashboard** and the list show your own pipeline. A user needs the **Admin View** permission enabled under **Global Data** to see every opportunity. Ask your administrator to turn it on; leadership and Sales Ops usually have it.",
     tags: ["who can see all opportunities","admin view permission","see everyone pipeline","organisation wide opportunities"]
@@ -1093,7 +1093,7 @@ const QA_OPPORTUNITY = [
     action: "define",
     object: "zoominfo",
     scope: "module",
-    section: "Sidebar Shortcuts",
+    section: "Toolbar Shortcuts",
     question: "Can I import clients and contacts from ZoomInfo or scan a business card?",
     answer: "From **Home**, open **Opportunity Management** and click the **Customers** icon in the toolbar at the top right. Yes. Clients and contacts can be imported from **ZoomInfo**, and a point of contact can be created from a photo of a business card (**OCR**), also from the **Arena Onsite** app. New clients still go to Sales Ops for approval before they can be used.",
     tags: ["zoominfo","ocr","business card","import contacts"]
@@ -1102,7 +1102,7 @@ const QA_OPPORTUNITY = [
     action: "define",
     object: "stale alerts",
     scope: "module",
-    section: "Opportunity Record: Milestones, Team, Proposals, Compliance and Expenses",
+    section: "Opportunity Record",
     question: "How do stale and inactive alerts work?",
     answer: "From **Home**, open **Opportunity Management → Opportunities**. The **Stage / Inactive Threshold Notification** in **Timeline & Activity** warns you when an opportunity sits too long with no updated information. The thresholds are set by Sales Ops, and stale opportunities count on **My Dashboard**.",
     tags: ["stale","inactive threshold","notification","inactivity alert"]
@@ -1111,7 +1111,7 @@ const QA_OPPORTUNITY = [
     action: "define",
     object: "client naming",
     scope: "module",
-    section: "Troubleshooting & Naming Differences",
+    section: "Troubleshooting",
     question: "Why do some screens say Client and others Customer?",
     answer: "This documentation uses **Client**, **Clients Interactions** and **BD Rep**. Some screens or environments say **Customer**, **Customers Interactions** and **Site Representative** for the same things. The **Customers** shortcut in the toolbar and **Global Data → Customers** keep their own names.",
     tags: ["client vs customer","site representative","bd rep","naming"]
@@ -1120,7 +1120,7 @@ const QA_OPPORTUNITY = [
     action: "add",
     object: "milestone",
     scope: "module",
-    section: "Opportunity Record: Milestones, Team, Proposals, Compliance and Expenses",
+    section: "Opportunity Record",
     question: "How do I add milestones to an opportunity?",
     answer: "From **Home**, open **Opportunity Management → Opportunities** and open the opportunity. Choose a **Milestone Template** on the profile, then open the **Milestones** tab. Each row shows an **Icon**, **Milestone**, **Target Date**, **Actual dates** and **Notes**. Remove a milestone that does not apply, add one from the master list, enter a **Target Date** for each and add notes. The system needs at least an approximate target date on the milestones before it lets you move the opportunity to Qualified.",
     tags: ["add a milestone","milestone target date","milestones tab","milestone template"]
@@ -1192,7 +1192,7 @@ const QA_OPPORTUNITY = [
     action: "view",
     object: "record data source",
     scope: "module",
-    section: "Opportunity Record: Milestones, Team, Proposals, Compliance and Expenses",
+    section: "Opportunity Record",
     question: "Where do the Compliance Tracker requirements come from?",
     answer: "From **Global Data → Compliance Hub**. The tab compares the requirements selected for the opportunity against what your company holds in **My Company Compliance**, so an item shown as Missing, Incomplete or Expired is fixed in the Compliance Hub, not on the opportunity.",
     tags: ["compliance tracker source","where do compliance items come from","compliance hub opportunity","readiness score source"]
@@ -1201,7 +1201,7 @@ const QA_OPPORTUNITY = [
     action: "view",
     object: "record data source",
     scope: "module",
-    section: "Opportunity Record: Milestones, Team, Proposals, Compliance and Expenses",
+    section: "Opportunity Record",
     question: "Where do the expense categories and approvers on an opportunity come from?",
     answer: "From **Settings → Expense**, set by Sales Ops. When you click **+ Create** on the **Expenses** tab you pick from those categories, and the expense routes to the approver configured there. Approved lines add up to the opportunity's total pursuit cost. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["expense category source","expense approver opportunity","pursuit cost where","expenses feed"]
@@ -1210,7 +1210,7 @@ const QA_OPPORTUNITY = [
     action: "view",
     object: "record data source",
     scope: "module",
-    section: "Opportunity Record: Milestones, Team, Proposals, Compliance and Expenses",
+    section: "Opportunity Record",
     question: "Who can I add to the opportunity Teams tab, and where does that list come from?",
     answer: "The **Teams** tab holds **Users** and **Crews**. **Add User** lists the users created in Global Data; tick them and save. Added members can edit the opportunity fields and add information.",
     tags: ["teams list source","who can i add to team","team members opportunity source"]
@@ -1219,7 +1219,7 @@ const QA_OPPORTUNITY = [
     action: "view",
     object: "record data source",
     scope: "module",
-    section: "Opportunity Record: Milestones, Team, Proposals, Compliance and Expenses",
+    section: "Opportunity Record",
     question: "Where do the Milestones on an opportunity come from, and where do they go?",
     answer: "From **Home**, open **Opportunity Management → Opportunities** and open the opportunity. They come from the **Milestone Template** you choose on the profile (templates are mapped to the Opportunity Type and kept in **Settings**); you can remove rows or add more from the master list. The **Target Date** values feed the **Pipeline Gantt View** under **Reports**, and the system needs approximate target dates before it lets you move the opportunity to Qualified.",
     tags: ["milestone source","milestone template feeds","milestones gantt","target date gantt"]
@@ -1228,7 +1228,7 @@ const QA_OPPORTUNITY = [
     action: "view",
     object: "record data source",
     scope: "module",
-    section: "Opportunity Record: Milestones, Team, Proposals, Compliance and Expenses",
+    section: "Opportunity Record",
     question: "Where do opportunity documents get stored?",
     answer: "In the document storage chosen under **Settings → Opportunities Form → Settings** (AWS S3 or SharePoint). The choice locks once opportunities or proposals exist, so set it before the team starts. Chat and email attachments appear under **Chat Documents** and **Mail Documents** on the **Documents** tab.",
     tags: ["document storage source","sharepoint opportunity documents","where are files stored opportunity"]
@@ -1315,7 +1315,7 @@ const QA_EQUIPMENT = [
     "action": "explain",
     "object": "data lineage",
     "scope": "module",
-    "section": "Master Data: Cost Codes, Categories and Equipment Setup",
+    "section": "Master Data",
     "question": "Where does the Equipment list come from when I add an equipment record in Equipment Management?",
     "answer": "The **Equipment** dropdown shows only equipment configured in **Settings → Equipment Setup** (accessories: **Accessory Setup**), which in turn uses the equipment codes in **Global Data → Cost → Equipment**. Category and sub-category fill in automatically. If an item is missing, add it to the setup first.",
     "tags": [
@@ -1330,7 +1330,7 @@ const QA_EQUIPMENT = [
     "action": "explain",
     "object": "data lineage",
     "scope": "module",
-    "section": "Equipment Master and Accessory Master",
+    "section": "Equipment Master",
     "question": "Why is the Location dropdown empty or where does it come from when I add equipment in Equipment Management?",
     "answer": "Pick **Inventory** or **Project** first. Inventory locations come from **Inventory Locations** (the Business Unit must be mapped to that inventory location in Inventory Management). Project locations come from your projects. If no location appears, check the toggle and that mapping. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     "tags": [
@@ -1345,7 +1345,7 @@ const QA_EQUIPMENT = [
     "action": "explain",
     "object": "data lineage",
     "scope": "module",
-    "section": "Request Creation",
+    "section": "Requests",
     "question": "Why do I not see a project in the Work Location dropdown on an equipment request?",
     "answer": "Work locations appear only for projects where you are added under **Project Setup → People**, and they follow the business unit you select. Ask a project admin to add you to the project.",
     "tags": [
@@ -1358,7 +1358,7 @@ const QA_EQUIPMENT = [
     "action": "explain",
     "object": "data lineage",
     "scope": "module",
-    "section": "Equipment Master and Accessory Master",
+    "section": "Equipment Master",
     "question": "Where do the Fuel Type and rates on an equipment record come from?",
     "answer": "**Fuel Type** comes from **Settings → Equipment Setup → Fuel Type**. The hourly, daily and monthly rates default from the category's **Rate Card Template** in Global Data and can be overridden before you confirm.",
     "tags": [
@@ -1371,7 +1371,7 @@ const QA_EQUIPMENT = [
     "action": "create",
     "object": "equipment",
     "scope": "module",
-    "section": "Equipment Master and Accessory Master",
+    "section": "Equipment Master",
     "question": "How do I add a new piece of equipment?",
     "answer": "Open **Equipment Management → Equipment → Equipment Master** and click **Add Equipment**. Enter the **Equipment ID** (it must be unique), choose the **Equipment** from the configured list, add a **Description**, pick the initial **Status** (manual statuses only), the **Business Unit** and the **Location** (Inventory or Project, then the location). Fill in make, model, purchase date, year, serial number, VIN, license plate, engine hours, fuel tank capacity, fuel type and production category, upload images and click **Submit**. Some earlier-version environments show a **+ Equipment** form with Equipment Name, Equipment ID, Equipment Description, Replacement Value and Current Location instead.",
     "tags": [
@@ -1389,7 +1389,7 @@ const QA_EQUIPMENT = [
     "action": "view",
     "object": "equipment history",
     "scope": "module",
-    "section": "Equipment Master and Accessory Master",
+    "section": "Equipment Master",
     "question": "How do I check an equipment item's full history?",
     "answer": "From **Home**, open **Equipment Management → Equipment → Equipment Master**. Click **History** on the item's row in Table View. It shows the status changes, updates and other actions performed on the equipment over time.",
     "tags": [
@@ -1403,7 +1403,7 @@ const QA_EQUIPMENT = [
     "action": "delete",
     "object": "equipment",
     "scope": "module",
-    "section": "Equipment Master and Accessory Master",
+    "section": "Equipment Master",
     "question": "How do I delete or retire an equipment item?",
     "answer": "From **Home**, open **Equipment Management → Equipment → Equipment Master**. In Table View click **Delete** on the row; in Grid View use the delete icon. Delete is subject to your permissions and business rules, so a piece of equipment that is on an allocation cannot be removed. To take a piece of equipment out of use without deleting it, set its **Status** to **Inactive**, **Out of Service** or **Dispose Initiated**.",
     "tags": [
@@ -1416,7 +1416,7 @@ const QA_EQUIPMENT = [
     "action": "define",
     "object": "equipment vs accessory",
     "scope": "module",
-    "section": "Equipment Master and Accessory Master",
+    "section": "Equipment Master",
     "question": "What's the difference between an Equipment and an Accessory in Equipment Master?",
     "answer": "Equipment is the machine itself, kept in the **Equipment Master**. An accessory is an attachment or add-on, kept in the **Accessory Master**, and can be linked to one or more equipment records under **Linked Equipment** on its profile. Each is set up separately, equipment under **Settings → Equipment Setup** and accessories under **Settings → Accessory Setup**.",
     "tags": [
@@ -1428,7 +1428,7 @@ const QA_EQUIPMENT = [
     "action": "create",
     "object": "accessory",
     "scope": "module",
-    "section": "Equipment Master and Accessory Master",
+    "section": "Equipment Master",
     "question": "How do I add a new accessory?",
     "answer": "Open **Accessory Master** and click **Add Accessory**. Choose the accessory (only accessories set up under **Settings → Accessory Setup** appear), complete the same details as for equipment and click **Submit**. To tie it to equipment, choose the **Equipment IDs** under **Linked Equipment** on its profile.",
     "tags": [
@@ -1440,7 +1440,7 @@ const QA_EQUIPMENT = [
     "action": "edit",
     "object": "equipment record",
     "scope": "module",
-    "section": "Equipment Master and Accessory Master",
+    "section": "Equipment Master",
     "question": "How do I edit an equipment record?",
     "answer": "From **Home**, open **Equipment Management → Equipment → Equipment Master**. In Table View click **Edit** on the row; in Grid View use the pencil icon. Change the details, including **Status** (manual statuses only), **Business Unit** and **Location**, and click **Submit**. Panels on the profile can also be edited one by one.",
     "tags": [
@@ -1452,7 +1452,7 @@ const QA_EQUIPMENT = [
     "action": "delete",
     "object": "equipment",
     "scope": "module",
-    "section": "Equipment Master and Accessory Master",
+    "section": "Equipment Master",
     "question": "Why can't I delete a piece of equipment?",
     "answer": "Delete is subject to your permissions and to business rules, so equipment that is allocated, in transit or on rent cannot be removed. Finish or close the allocation first, or ask an administrator for the delete permission.",
     "tags": [
@@ -1465,7 +1465,7 @@ const QA_EQUIPMENT = [
     "action": "view",
     "object": "maintenance records",
     "scope": "module",
-    "section": "Equipment Master and Accessory Master",
+    "section": "Equipment Master",
     "question": "How do I see maintenance records for a specific equipment?",
     "answer": "From **Home**, open **Equipment Management → Equipment → Equipment Master**. Open the Maintenance Records icon on the equipment's row (shown only for equipment with scheduled maintenance) or use the Maintenance Records column in the list.",
     "tags": [
@@ -1477,7 +1477,7 @@ const QA_EQUIPMENT = [
     "action": "create",
     "object": "inventory location",
     "scope": "module",
-    "section": "Equipment Master and Accessory Master",
+    "section": "Equipment Master",
     "question": "How do I add a new inventory location?",
     "answer": "Open **Inventory Locations** and click **Add Location**. Enter the **Location ID**, **Location Name** and **Location Type** and click **Submit**. Use Actions to edit or delete a location. Map the Business Unit to its Inventory Location in Inventory Management first.",
     "tags": [
@@ -1489,7 +1489,7 @@ const QA_EQUIPMENT = [
     "action": "filter",
     "object": "equipment list",
     "scope": "module",
-    "section": "Equipment Master and Accessory Master",
+    "section": "Equipment Master",
     "question": "How do I export or filter the equipment list?",
     "answer": "From **Home**, open **Equipment Management → Equipment → Equipment Master**. Click **Filters** and choose Equipment ID, Equipment, Status, Category, Business Unit, Make and Model, plus the switches **Equipment with Telematics**, **Only Running Equipment** and **Not Reported in Last 72 Hours**; **Submit** applies and **Clear** removes them. For Excel, click **Export**: **Upload Excel** (download **Sample Excel** first) creates or updates records in bulk, and **Download Excel** exports the current records.",
     "tags": [
@@ -1501,7 +1501,7 @@ const QA_EQUIPMENT = [
     "action": "configure",
     "object": "equipment master view",
     "scope": "module",
-    "section": "Equipment Master and Accessory Master",
+    "section": "Equipment Master",
     "question": "How do I switch between grid and table view, or add a custom column, in Equipment Master?",
     "answer": "From **Home**, open **Equipment Management → Equipment → Equipment Master**. Use the view option in the top right corner to switch between **Grid View** and **Table View**; the actions differ between them. Click **Add Custom Column** to add a Text, Single Select, Multi-select, Date or Formulae column, **Manage Columns** to choose and arrange columns, and **Save Layout** to keep the view.",
     "tags": [
@@ -1579,7 +1579,7 @@ const QA_EQUIPMENT = [
     "action": "create",
     "object": "maintenance form template",
     "scope": "module",
-    "section": "Configure Equipment Management Forms & Global Setup",
+    "section": "Equipment Forms",
     "question": "How do I build or edit maintenance/inspection form templates, and how do I create a new one?",
     "answer": "1. Go to **Equipment Management → Settings → Equipment Management Forms → Maintenance Forms** (this lives in the module's own Settings, not Global Data), click **Create Form**.\n2. Step 1, **Build Form**: click **Add section**, then add fields from the field-type library (Attachment, Check box, Date, Label, Multi select, Paragraph, Roster, Scribble, Single select, Table, Text box, Time, Signature).\n3. Step 2, **Setup Trigger Points**: tick which fields should let end-users raise an issue if that checkpoint fails.\n4. Step 3, **Preview Form**: check the form as end-users will see it, including company branding.\n5. Click **Save Changes**.",
     "tags": [
@@ -1592,7 +1592,7 @@ const QA_EQUIPMENT = [
     "action": "define",
     "object": "form field types",
     "scope": "module",
-    "section": "Configure Equipment Management Forms & Global Setup",
+    "section": "Equipment Forms",
     "question": "What field types are available in the maintenance form builder?",
     "answer": "**Attachment, Check box, Date, Label, Multi select, Paragraph, Roster, Scribble** (signature/print name), **Single select, Table** (configurable rows/columns), **Text box** (default), **Time, Signature**.",
     "tags": [
@@ -1604,7 +1604,7 @@ const QA_EQUIPMENT = [
     "action": "define",
     "object": "adobe sign integration",
     "scope": "module",
-    "section": "Configure Equipment Management Forms & Global Setup",
+    "section": "Equipment Forms",
     "question": "What is the Adobe Acrobat Sign integration used for?",
     "answer": "It lets a 3rd-party signer affix a legal e-signature to a Rentals (3rd-Party) Lease Agreement as part of approving it, instead of just clicking Approve/Reject. It's configured once, company-wide, at Global Data → Global Settings → Adobe Sign Settings (Client Id, Client Secret, Consent).",
     "tags": [
@@ -1616,7 +1616,7 @@ const QA_EQUIPMENT = [
     "action": "define",
     "object": "adobe sign lor usage",
     "scope": "module",
-    "section": "Configure Equipment Management Forms & Global Setup",
+    "section": "Equipment Forms",
     "question": "Once Adobe Sign is set up, how does it get used in the LOR flow?",
     "answer": "On earlier-version environments that use the Load Out Request tab, the Rentals flow's Lease Agreement stage is sent for signature through Adobe Sign. In the Rentals (3rd Party) flow, once equipment is checked out, the Lease Agreement emailed to the 3rd party can be digitally signed via the Adobe Sign integration as part of their approval.",
     "tags": [
@@ -1628,7 +1628,7 @@ const QA_EQUIPMENT = [
     "action": "define",
     "object": "equipment management vs equipment management",
     "scope": "module",
-    "section": "Configure Equipment Management Forms & Global Setup",
+    "section": "Equipment Forms",
     "question": "Is \"Equipment Management\" a different module from \"Equipment Management\"?",
     "answer": "No — they're the same module. This guide calls it **Equipment Management**. Arena lets each company rename terms to match its own standard (**Global Data → Settings → Naming Framework**), so your screens may say \"Equipment\" or \"Asset\" (for example **Asset Management**, **Asset Master**, **Asset Issues**). They are the same screens; this guide uses Equipment throughout.",
     "tags": [
@@ -1640,7 +1640,7 @@ const QA_EQUIPMENT = [
     "action": "configure",
     "object": "equipment cost code",
     "scope": "module",
-    "section": "Master Data: Cost Codes, Categories and Equipment Setup",
+    "section": "Master Data",
     "question": "How do I set up a new type of equipment so it can be registered?",
     "answer": "First, in **Global Data → Cost → Equipment**, click **Add Equipment** and enter the **Equipment Code**, **Equipment Name**, **Type** (Equipment or Accessory), **Category**, **Subcategory**, **UOM** and the hourly, daily, weekly and monthly rates. Make sure the category and a rate card template exist in Global Data. Then in the module **Settings → Equipment Setup** (or **Accessory Setup**), click **Add Category**, choose the cost code, **Default Rate Card Template**, **Inspection Checklist**, **Depreciation Method** and **Default Useful Life**, and **Submit**. Only equipment configured this way appears in the dropdown when you create a record.",
     "tags": [
@@ -1658,7 +1658,7 @@ const QA_EQUIPMENT = [
     "action": "configure",
     "object": "fuel type",
     "scope": "module",
-    "section": "Master Data: Cost Codes, Categories and Equipment Setup",
+    "section": "Master Data",
     "question": "Where do I add fuel types for equipment?",
     "answer": "Fuel types are set in the module **Settings → Equipment Setup**. They then appear in the **Fuel Type** field on the equipment profile (Specifications panel). The field shows for equipment only, not accessories. If a fuel type is missing, add it there first.",
     "tags": [
@@ -1672,7 +1672,7 @@ const QA_EQUIPMENT = [
     "action": "troubleshoot",
     "object": "equipment dropdown",
     "scope": "module",
-    "section": "Master Data: Cost Codes, Categories and Equipment Setup",
+    "section": "Master Data",
     "question": "Why does the equipment I need not appear in the dropdown when creating a record?",
     "answer": "Only equipment configured under **Settings → Equipment Setup** (or accessories under **Accessory Setup**) can be selected. If no cost code shows when you add a category, create it first in **Global Data → Cost → Equipment Code**. If no rate card defaults, set the **Default Rate Card Template** on the category and check it exists under **Rate Card Template** in Global Data.",
     "tags": [
@@ -1687,7 +1687,7 @@ const QA_EQUIPMENT = [
     "action": "view",
     "object": "equipment profile",
     "scope": "module",
-    "section": "Equipment and Accessory Profile",
+    "section": "Equipment Profile",
     "question": "What is on an equipment or accessory profile?",
     "answer": "Open the record from **Equipment Master** or **Accessory Master**. A left panel shows the ID, name, status, location, image and **QR Code**. The **Overview** tab has five panels: **Basic Details**, **Specifications**, **Purchase & Ownership**, **Warranty & Insurance** and **Depreciation**. Each has an edit icon and its own **Save** button.",
     "tags": [
@@ -1703,7 +1703,7 @@ const QA_EQUIPMENT = [
     "action": "update",
     "object": "purchase ownership",
     "scope": "module",
-    "section": "Equipment and Accessory Profile",
+    "section": "Equipment Profile",
     "question": "Where do I record purchase price, warranty, insurance and depreciation for a piece of equipment?",
     "answer": "From **Home**, open **Equipment Management → Equipment → Equipment Master** and open the equipment. On the equipment profile's **Overview** tab. **Purchase & Ownership** holds ownership type (Owned, Leased, On Finance), purchase date and price, vendor, sales tax, source of funds and job costing. **Warranty & Insurance** holds providers, expiry dates, insured value and annual cost. **Depreciation** holds useful life, salvage value, method, start date, monthly and accumulated depreciation and current book value. Click the panel's edit icon, change the values and click **Save**.",
     "tags": [
@@ -1720,7 +1720,7 @@ const QA_EQUIPMENT = [
     "action": "update",
     "object": "accessory link",
     "scope": "module",
-    "section": "Equipment and Accessory Profile",
+    "section": "Equipment Profile",
     "question": "How do I link an accessory to a piece of equipment?",
     "answer": "Open the accessory profile and edit **Basic Details**. Select the Equipment IDs under **Linked Equipment** and click **Save**. The equipment records must already exist.",
     "tags": [
@@ -1734,7 +1734,7 @@ const QA_EQUIPMENT = [
     "action": "view",
     "object": "telematics fields",
     "scope": "module",
-    "section": "Equipment and Accessory Profile",
+    "section": "Equipment Profile",
     "question": "Why are Engine Hours, GPS Fix Time or the map blank on a piece of equipment?",
     "answer": "Those fields come from the telematics device, so they fill in only after a device is mapped on the equipment's **Telematics** tab. **Engine Hours**, **GPS Fix Time** and **Message Time** cannot be typed. Use **Engine Hours (Acquisition)** in Specifications to record the hours when the equipment was acquired.",
     "tags": [
@@ -1749,7 +1749,7 @@ const QA_EQUIPMENT = [
     "action": "configure",
     "object": "telematics provider",
     "scope": "module",
-    "section": "Telematics: Device Mapping and Live Data",
+    "section": "Telematics",
     "question": "How do I connect a telematics provider?",
     "answer": "Go to **Global Data → Marketplace → Telematics** and open the provider card. Enter the credentials and the interval, in hours, at which equipment information is fetched, click **Attach**, then **Submit**. The provider then appears when you map a device. Live readings can lag the machine by up to the fetch interval.",
     "tags": [
@@ -1764,7 +1764,7 @@ const QA_EQUIPMENT = [
     "action": "map",
     "object": "telematics device mapping",
     "scope": "module",
-    "section": "Telematics: Device Mapping and Live Data",
+    "section": "Telematics",
     "question": "How do I map a telematics device to equipment?",
     "answer": "Open **Equipment Management → Equipment**, click the equipment and open the **Telematics** tab (it opens **Device Mapping**). Click **Map Device**, choose the **Telematics Provider**, pick the device from **Available Devices**, and click **Map Device**. Use **View Details** to see the device or **Unmap Device** to remove it. If no devices show, check you chose the right provider and the device is reporting.",
     "tags": [
@@ -1784,7 +1784,7 @@ const QA_EQUIPMENT = [
     "action": "view",
     "object": "live data",
     "scope": "module",
-    "section": "Telematics: Device Mapping and Live Data",
+    "section": "Telematics",
     "question": "What does Live Data show for a machine?",
     "answer": "The latest readings in four groups: **Engine Info** (hours operated, idle hours, non-operating hours, load factor, regeneration hours), **Fuel Info** (fuel level, fuel used, capacity, DEF level and capacity), **Operation Info** (payload, load count, power take-off hours) and **Movement Info** (peak speed, odometer). Each reading shows its own last-updated time.",
     "tags": [
@@ -1800,7 +1800,7 @@ const QA_EQUIPMENT = [
     "action": "view",
     "object": "telematics history",
     "scope": "module",
-    "section": "Telematics: Device Mapping and Live Data",
+    "section": "Telematics",
     "question": "How do I see where a machine has been?",
     "answer": "From **Home**, open **Equipment Management → Equipment → Equipment Master** and open the equipment. On the equipment's **Telematics** tab, open **Trip History**, choose the date range and coordinate precision and click **Apply** to see routes and locations. **Location History** lists the device history by recorded location, and **Device History** lists everything the device reported. If Trip History is empty, widen the date range.",
     "tags": [
@@ -1815,7 +1815,7 @@ const QA_EQUIPMENT = [
     "action": "transfer",
     "object": "readings history",
     "scope": "module",
-    "section": "Telematics: Device Mapping and Live Data",
+    "section": "Telematics",
     "question": "How do I move telematics readings from one equipment to another?",
     "answer": "On the equipment's **Telematics → Readings History**, choose the **Date Range**, **Device** and **Category**. Select the rows with the Action box, click **Transfer**, choose the destination equipment and click **Submit**. Do this before unmapping a replaced device so the history is kept.",
     "tags": [
@@ -1829,7 +1829,7 @@ const QA_EQUIPMENT = [
     "action": "create",
     "object": "geofence",
     "scope": "module",
-    "section": "Geofencing and Fleet Map",
+    "section": "Fleet Map",
     "question": "How do I create a geofence?",
     "answer": "Open **Equipment Management → Overview → Geofencing** and click **Add Location**. Enter the **Location Type**, **Name**, **Description** and **Code**, and set the **Inventory / Project** toggle and work location. Set at least three coordinates: use **Search Location** and click the point, **Add Coordinates** to type latitude and longitude, or drag and select on the map (**Upload KML** imports a boundary file). Click **Save Geofence**, then switch the **Active** toggle on in the Geofencing list.",
     "tags": [
@@ -1845,7 +1845,7 @@ const QA_EQUIPMENT = [
     "action": "troubleshoot",
     "object": "geofence",
     "scope": "module",
-    "section": "Geofencing and Fleet Map",
+    "section": "Fleet Map",
     "question": "Why does my geofence not show on the Fleet Map?",
     "answer": "Switch its **Active** toggle on in the Geofencing list, and make sure the **Geofences** filter is on in the Fleet Map. To save a geofence you also need at least three coordinates.",
     "tags": [
@@ -1859,7 +1859,7 @@ const QA_EQUIPMENT = [
     "action": "view",
     "object": "fleet map",
     "scope": "module",
-    "section": "Geofencing and Fleet Map",
+    "section": "Fleet Map",
     "question": "How do I use the Fleet Map?",
     "answer": "Open **Overview → Fleet Map**. Active geofences show as yellow regions, numbers are clusters of devices, and blue arrows are individual mapped devices once you zoom in. Switch **Map** or **Satellite**, use the Pegman for Street View, and in **Filters** search by **Equipment ID**, **Description** or device serial number. Filter by **Geofences**, **Clusters**, **Only Running Equipment**, **Not Reported in Last 72 Hours**, **Status**, **Category**, **Business Unit**, **Make** and **Model**, then **Apply**, **Clear** or **Save Filter**.",
     "tags": [
@@ -1875,7 +1875,7 @@ const QA_EQUIPMENT = [
     "action": "create",
     "object": "allocation request",
     "scope": "module",
-    "section": "Request Creation",
+    "section": "Requests",
     "question": "How do I request equipment or accessories for a project?",
     "answer": "Open **Equipment Management → Operations** and click **New Request**. Pick equipment or accessories in the left panel, then enter **Quantity**, **Requested By**, **Required Date**, **Planned Return Date**, **Estimated Hours**, **Business Unit**, **Work Location** and **Pickup Preference** (Self Pickup or Company Logistics), plus notes and attachments. Click **Submit for Approval**. The **Request Priority** is set automatically from the Required Date, and work locations show only for projects where you are on the project team.",
     "tags": [
@@ -1899,7 +1899,7 @@ const QA_EQUIPMENT = [
     "action": "define",
     "object": "allocation lifecycle",
     "scope": "module",
-    "section": "Request Creation",
+    "section": "Requests",
     "question": "What are the stages of the Allocation Lifecycle board?",
     "answer": "**Request**, **Assign**, **Inspection (Pre-Dispatch)** (only if switched on), **Ready for Dispatch**, **In Transit (Outbound)**, **On Rent**, **Off-Rent / Extension**, **In Transit (Return)**, **Pickup**, **Inspection (Post-Rent)** and **Closed**. Requests appear as cards on a board by stage.",
     "tags": [
@@ -1914,7 +1914,7 @@ const QA_EQUIPMENT = [
     "action": "configure",
     "object": "request priority",
     "scope": "module",
-    "section": "Request Creation",
+    "section": "Requests",
     "question": "How is request priority set, and what settings drive the lifecycle?",
     "answer": "Priority is automatic: **Settings → Request Priority Threshold** holds a number of days, and Arena compares the request's Required Date against it. The requester cannot set it. Other settings: **Approval Workflow** (separate workflows for Equipment Request, Hauling Request and Off-Rent / Extension Request; only the one set as Default applies), **Equipment/Accessory Status** (statuses, colours and the Off Rent **Utility Threshold**), and the **Inspection Checklist** under **Equipment Forms**, linked to each category in Equipment Setup.",
     "tags": [
@@ -1929,7 +1929,7 @@ const QA_EQUIPMENT = [
     "action": "approve",
     "object": "allocation request",
     "scope": "module",
-    "section": "Request Creation",
+    "section": "Requests",
     "question": "How do I approve or reject an equipment request?",
     "answer": "Open the card in the **Request** stage and review the request form. To approve, enter comments and click **Submit**; the card moves to **Assign**. To reject, enter comments, upload files and submit; the card goes to **Workflow Issues**. Only the workflow marked **Set as Default** is applied.",
     "tags": [
@@ -1944,7 +1944,7 @@ const QA_EQUIPMENT = [
     "action": "assign",
     "object": "equipment assignment",
     "scope": "module",
-    "section": "Allocation: Internal Self-Pickup to Off-Rent",
+    "section": "Allocation",
     "question": "How do I assign a piece of equipment to an approved request?",
     "answer": "Open the card in the **Assign** stage and choose **Internal → Self Pickup** or **Internal → Company Logistics**. Pick the **Available Equipment**, **Operator** and **Rate Card Template** (rates fill in and can be edited); for Company Logistics also pick the **Vehicle** and **Driver**. Switch **Pre-Dispatch Inspection** on if needed, assign users to the next stages, click **Submit** and then **Confirm Assignment**. The equipment becomes **Allocated**, and a Company Logistics choice creates an outbound haul and a **Haul Initiated** tag.",
     "tags": [
@@ -1961,7 +1961,7 @@ const QA_EQUIPMENT = [
     "action": "record",
     "object": "inspection stage",
     "scope": "module",
-    "section": "Allocation: Internal Self-Pickup to Off-Rent",
+    "section": "Allocation",
     "question": "How do pre-dispatch and post-rent inspections work?",
     "answer": "From **Home**, open **Equipment Management → Operations**. The inspector opens the card, clicks **Form Ready**, completes each checklist item and clicks **Submit**. If issues are found, choose a priority, add observations and images, and submit. The request proceeds only after the issue is rectified in **Inspection Checklist Issues**, or you move it back to the previous stage. The stage shows only if the toggle was on at Assign and a checklist is linked in Equipment Setup.",
     "tags": [
@@ -1976,7 +1976,7 @@ const QA_EQUIPMENT = [
     "action": "update",
     "object": "dispatch on rent",
     "scope": "module",
-    "section": "Allocation: Internal Self-Pickup to Off-Rent",
+    "section": "Allocation",
     "question": "How do I dispatch equipment and put it on rent?",
     "answer": "From **Home**, open **Equipment Management → Operations**. At **Ready for Dispatch**, the Dispatch Assignee enters the **Dispatch Date** and the **On-Rent Date** (when rental charges start) and clicks **Dispatch**. When the equipment reaches the site, the Site Custodian opens the card in **On Rent**, selects the On-Rent option and clicks **Submit**. The equipment status changes to **On Rent**.",
     "tags": [
@@ -1991,7 +1991,7 @@ const QA_EQUIPMENT = [
     "action": "request",
     "object": "off rent extension",
     "scope": "module",
-    "section": "Allocation: Internal Self-Pickup to Off-Rent",
+    "section": "Allocation",
     "question": "How do I request an extension or off-rent for equipment on site?",
     "answer": "Open the card in the **On-Rent** stage and choose **Request Extension** (enter a **Requested Extension Date**) or **Request Off-Rent** (enter a **Requested Off-Rent Date**). Pick the **Operator**, add attachments and click **Submit Request**. The card moves to **Off-Rent / Extension** for approval. An approved extension returns to On-Rent; an approved off-rent moves to Off-Rent for return; a rejected off-rent returns to On-Rent.",
     "tags": [
@@ -2006,7 +2006,7 @@ const QA_EQUIPMENT = [
     "action": "update",
     "object": "off rent return",
     "scope": "module",
-    "section": "Allocation: Internal Self-Pickup to Off-Rent",
+    "section": "Allocation",
     "question": "What happens after an off-rent is approved?",
     "answer": "The Equipment Coordinator chooses a destination. **Project**: **Keep at Project** closes the request and makes the equipment **Available**, or **Re-allocate to Request** sends it to another open request (it restarts at Assign). **Inventory**: **Self Pickup** (choose destination location, operator, pickup and post-inspection assignees) moves the card to **Pickup**, or **Company Logistics** (also vehicle and driver) starts a return haul. Then the Pickup Assignee selects the **Return Date** and clicks **Schedule Pickup**, and the post-rent inspection closes the request.",
     "tags": [
@@ -2022,7 +2022,7 @@ const QA_EQUIPMENT = [
     "action": "add",
     "object": "vehicle and driver",
     "scope": "module",
-    "section": "Company Logistics with Hauling",
+    "section": "Hauling",
     "question": "How do I add vehicles and drivers in Fleet and Schedule for equipment hauling?",
     "answer": "Open **Equipment Management → Hauling → Fleet and Schedule**. Click **Add Vehicle** and enter the **Vehicle ID**, **Description** and **Vehicle Status** (Available, In Use, Maintenance, Out of Service). Click **Add Driver**, choose the roster user, a vehicle and a **Driver Status** (Available, On route, Off Duty, On leave). Only vehicles and drivers set up here can be chosen in Operations and Hauling.",
     "tags": [
@@ -2045,7 +2045,7 @@ const QA_EQUIPMENT = [
     "action": "process",
     "object": "haul request",
     "scope": "module",
-    "section": "Company Logistics with Hauling",
+    "section": "Hauling",
     "question": "How do I take a haul from request to completion?",
     "answer": "Open **Hauling → Internal Hauling → Requests** and click the haul. Enter the **Estimated Cost**, phase codes, escort cost and permit cost and click **Submit for Approval**. After approval, click **Schedule Haul**, pick the **Pickup Date** under **Schedule Pending** and click **Submit Date**. Click **Picked Up**, then **Mark as In Transit**, then record the **Condition on Arrival** and click **Mark as Delivered**. Finally enter the final costs and click **Close Haul**. Stages: Request, Approved, Schedule Pending, Scheduled, Picked Up, In Transit, Delivered, Completed.",
     "tags": [
@@ -2063,7 +2063,7 @@ const QA_EQUIPMENT = [
     "action": "create",
     "object": "manual haul",
     "scope": "module",
-    "section": "Company Logistics with Hauling",
+    "section": "Hauling",
     "question": "How do I create a haul request manually?",
     "answer": "From **Home**, open **Equipment Management → Hauling**. In **Hauling**, click **New Request**. Choose Equipment or Accessory and the equipment, then the **Original Location** and **Destination Location** (each Inventory or Project). Enter the **Request Date**, **Estimated Cost** and any phase codes, escort cost and permit cost, and click **Save**. Choose the vehicle and driver at the Approved stage. In the Equipment Master grid view, **Request Haul** on a piece of equipment opens the same kind of request.",
     "tags": [
@@ -2077,7 +2077,7 @@ const QA_EQUIPMENT = [
     "action": "define",
     "object": "outbound return haul",
     "scope": "module",
-    "section": "Company Logistics with Hauling",
+    "section": "Hauling",
     "question": "What is the difference between an outbound haul and a return haul?",
     "answer": "The **outbound** haul is created when **Company Logistics** is confirmed at Assign; it runs inventory to project, and delivery puts the request On Rent. The **return** haul is created when **Inventory → Company Logistics** is chosen while processing an off-rent; it runs project to inventory, and delivery moves the request to Pickup. A rejected outbound haul keeps the allocation on hold; a rejected return haul sends the request back to Off-Rent approval. A **Haul Initiated** tag shows while either haul is open.",
     "tags": [
@@ -2092,7 +2092,7 @@ const QA_EQUIPMENT = [
     "action": "troubleshoot",
     "object": "haul initiated",
     "scope": "module",
-    "section": "Company Logistics with Hauling",
+    "section": "Hauling",
     "question": "Why is my allocation request stuck with a Haul Initiated tag?",
     "answer": "An open hauling request is holding it. Open **Hauling → Requests** and progress the haul through to **Completed**. If it is an outbound haul that will not pick up, complete the pre-dispatch inspection and rectify any open issue in **Inspection Checklist Issues**. If no vehicle or driver appears, add them under **Hauling → Fleet and Schedule** with status Available.",
     "tags": [
@@ -2107,7 +2107,7 @@ const QA_EQUIPMENT = [
     "action": "define",
     "object": "equipment management roles",
     "scope": "module",
-    "section": "Who Does What in Equipment Management",
+    "section": "Overview",
     "question": "Who does what in Equipment Management?",
     "answer": "The **Global Data Administrator** sets up cost codes, categories, rate cards and the telematics provider. The **Equipment Management Administrator** sets up Equipment Setup, Accessory Setup, checklists, approval workflows and thresholds. The **Equipment Master User** keeps records current and the **Equipment Accountant** keeps purchase, warranty and depreciation. For a request, the **Requester** raises it, the **Approver** approves, the **Equipment Coordinator** assigns and processes off-rent, inspectors complete checklists, the **Dispatch Assignee** dispatches, the **Site Custodian** confirms On-Rent and asks for off-rent, the **Off-Rent Approver** decides, and the **Pickup Assignee** records the return date. Hauling adds the **Fleet Administrator**, **Hauling Coordinator** and **Hauling Approver**.",
     "tags": [
@@ -2122,7 +2122,7 @@ const QA_EQUIPMENT = [
     "action": "configure",
     "object": "equipment management setup order",
     "scope": "module",
-    "section": "Who Does What in Equipment Management",
+    "section": "Overview",
     "question": "In what order should I set up Equipment Management for allocation requests?",
     "answer": "Create cost codes, categories and rate card templates in Global Data. Then in **Settings** set up **Equipment Setup** and **Accessory Setup** with fuel types, build and link an **Inspection Checklist**, create and default the **Approval Workflow** for Equipment Request, Hauling Request and Off-Rent / Extension Request, set the **Utility Threshold** and **Request Priority Threshold**, add vehicles and drivers under **Hauling → Fleet and Schedule**, connect the telematics provider, create geofences and register the equipment.",
     "tags": [
@@ -2137,7 +2137,7 @@ const QA_EQUIPMENT = [
     "action": "define",
     "object": "master data flow",
     "scope": "module",
-    "section": "Master Data: Cost Codes, Categories and Equipment Setup",
+    "section": "Master Data",
     "question": "What is the flow for setting up and registering equipment?",
     "answer": "The Global Data Administrator creates the equipment cost code (with type, category, UOM and rates), the categories and subcategories, and the rate card templates. The Equipment Management Administrator then adds the category in **Settings → Equipment Setup** (or **Accessory Setup**) with the cost code, rate card, checklist, depreciation method and useful life. Only then can the Equipment Master User register records and manage them with custom columns, views, filters and actions.",
     "tags": [
@@ -2151,7 +2151,7 @@ const QA_EQUIPMENT = [
     "action": "create",
     "object": "equipment category",
     "scope": "module",
-    "section": "Master Data: Cost Codes, Categories and Equipment Setup",
+    "section": "Master Data",
     "question": "How do I add an equipment category and subcategories?",
     "answer": "In Global Data → Cost, open **Equipment Category**, click **Add Row**, enter the **Category Name** and **Submit**. Use the (+) icon to add subcategories: click **Add Row**, type the name and **Submit**. Use Actions to delete a subcategory.",
     "tags": [
@@ -2165,7 +2165,7 @@ const QA_EQUIPMENT = [
     "action": "create",
     "object": "rate card template",
     "scope": "module",
-    "section": "Master Data: Cost Codes, Categories and Equipment Setup",
+    "section": "Master Data",
     "question": "How do I create a rate card template for equipment?",
     "answer": "In Global Data → Cost, open **Rate Card Template** and click **New Rate Card Template**. The template can then be chosen as the **Default Rate Card Template** in Equipment Setup and when a piece of equipment is assigned to a request.",
     "tags": [
@@ -2179,7 +2179,7 @@ const QA_EQUIPMENT = [
     "action": "create",
     "object": "equipment cost code",
     "scope": "module",
-    "section": "Master Data: Cost Codes, Categories and Equipment Setup",
+    "section": "Master Data",
     "question": "How do I add an equipment cost code?",
     "answer": "Open **Global Data → Cost → Equipment** and click **Add Equipment**. Enter the **Equipment Code**, **Equipment Name**, **Type** (Equipment or Accessory), **Category**, **Subcategory** and **UOM**, and the hourly, daily, weekly and monthly rates, then **Submit**. Create it before adding the category in Equipment Setup.",
     "tags": [
@@ -2193,7 +2193,7 @@ const QA_EQUIPMENT = [
     "action": "configure",
     "object": "equipment setup category",
     "scope": "module",
-    "section": "Master Data: Cost Codes, Categories and Equipment Setup",
+    "section": "Master Data",
     "question": "What fields are on the Add Category dialog in Equipment Setup?",
     "answer": "**Equipment Cost Code**, **Category** (fills in automatically), **Default Rate Card Template**, **Inspection Checklist**, **Depreciation Method** and **Default Useful Life**. Accessory Setup uses the same fields, and both have **Sample Excel** and **Upload Excel** for bulk create or update.",
     "tags": [
@@ -2208,7 +2208,7 @@ const QA_EQUIPMENT = [
     "action": "add",
     "object": "custom column equipment",
     "scope": "module",
-    "section": "Master Data: Cost Codes, Categories and Equipment Setup",
+    "section": "Master Data",
     "question": "What types of custom column can I add on the equipment lists?",
     "answer": "Click **Add Custom Column**, enter the **Column Name** and choose the **Type**: Text, Single Select, Multi-select, Date or Formulae. Then use **Manage Columns** to show or arrange it.",
     "tags": [
@@ -2222,7 +2222,7 @@ const QA_EQUIPMENT = [
     "action": "upload",
     "object": "equipment excel",
     "scope": "module",
-    "section": "Master Data: Cost Codes, Categories and Equipment Setup",
+    "section": "Master Data",
     "question": "How do I bulk upload equipment or setup entries from Excel?",
     "answer": "Click **Export → Upload Excel**, then **Sample Excel** to download the template. Fill it in, save it and upload it to create or update records. Always use the current template, and make sure the referenced equipment, categories, business units and locations already exist. **Download Excel** exports the current records.",
     "tags": [
@@ -2236,7 +2236,7 @@ const QA_EQUIPMENT = [
     "action": "define",
     "object": "profile roles",
     "scope": "module",
-    "section": "Equipment and Accessory Profile",
+    "section": "Equipment Profile",
     "question": "Who maintains each panel of an equipment profile?",
     "answer": "The **Equipment Master User** maintains **Basic Details** and **Specifications**, the status, current location and image. The **Equipment Accountant** maintains **Purchase & Ownership**, **Warranty & Insurance** and **Depreciation**. The Equipment Administrator sets the Fuel Type options in Settings, and the Equipment Manager reviews profiles, including telematics readings and geofence information.",
     "tags": [
@@ -2250,7 +2250,7 @@ const QA_EQUIPMENT = [
     "action": "define",
     "object": "equipment vs accessory profile",
     "scope": "module",
-    "section": "Equipment and Accessory Profile",
+    "section": "Equipment Profile",
     "question": "How is an accessory profile different from an equipment profile?",
     "answer": "From **Home**, open **Equipment Management → Equipment → Equipment Master** and open the equipment. Only **Basic Details** and one specification field differ. An accessory shows **Accessory ID**, has a **Linked Equipment** field to select the Equipment IDs it belongs to, and has no **Fuel Type**. An equipment shows **Equipment ID** and **Fuel Type**. The other four panels are identical.",
     "tags": [
@@ -2264,7 +2264,7 @@ const QA_EQUIPMENT = [
     "action": "edit",
     "object": "equipment image",
     "scope": "module",
-    "section": "Equipment and Accessory Profile",
+    "section": "Equipment Profile",
     "question": "How do I change or remove an equipment image?",
     "answer": "From **Home**, open **Equipment Management → Equipment → Equipment Master** and open the equipment. Open the profile and click the edit icon on the image in the left panel. Upload the image and click **Submit**, or click the edit icon again to change or remove it.",
     "tags": [
@@ -2278,7 +2278,7 @@ const QA_EQUIPMENT = [
     "action": "define",
     "object": "telematics roles",
     "scope": "module",
-    "section": "Telematics: Device Mapping and Live Data",
+    "section": "Telematics",
     "question": "Who sets up and uses telematics?",
     "answer": "The **Global Data Administrator** sets up the provider once under **Global Data → Marketplace → Telematics**. The **Equipment Administrator** maps, views and unmaps devices. The **Fleet Monitor** watches **Live Data**, **Trip History**, **Device History** and **Location History**. The **Maintenance Planner** reviews **Readings History** and transfers readings between equipment.",
     "tags": [
@@ -2293,7 +2293,7 @@ const QA_EQUIPMENT = [
     "action": "define",
     "object": "telematics tabs",
     "scope": "module",
-    "section": "Telematics: Device Mapping and Live Data",
+    "section": "Telematics",
     "question": "What are the telematics tabs on a piece of equipment and what does Info Mapping show?",
     "answer": "The tabs are **Device Mapping**, **Live Data**, **Trip History**, **Device History**, **Location History** and **Readings History**. The **Info Mapping** panel on Device Mapping shows where each telemetry category is sourced from, which helps when a reading comes from an unexpected place.",
     "tags": [
@@ -2308,7 +2308,7 @@ const QA_EQUIPMENT = [
     "action": "replace",
     "object": "telematics device",
     "scope": "module",
-    "section": "Telematics: Device Mapping and Live Data",
+    "section": "Telematics",
     "question": "How do I replace a telematics device on a piece of equipment?",
     "answer": "From **Home**, open **Equipment Management → Equipment → Equipment Master** and open the equipment. First transfer the readings you want to keep from **Readings History** to the equipment you choose. Then click **Unmap Device** on **Device Mapping**, click **Map Device**, choose the provider and the replacement device from **Available Devices**, and click **Map Device**.",
     "tags": [
@@ -2322,7 +2322,7 @@ const QA_EQUIPMENT = [
     "action": "troubleshoot",
     "object": "telematics live data",
     "scope": "module",
-    "section": "Telematics: Device Mapping and Live Data",
+    "section": "Telematics",
     "question": "Why is Live Data blank or out of date?",
     "answer": "Check the last-updated time on each reading. Readings are fetched at the interval set for the provider in **Global Data → Marketplace → Telematics**, so they can lag by that interval. Also confirm a device is still mapped on **Device Mapping**.",
     "tags": [
@@ -2336,7 +2336,7 @@ const QA_EQUIPMENT = [
     "action": "define",
     "object": "geofence roles",
     "scope": "module",
-    "section": "Geofencing and Fleet Map",
+    "section": "Fleet Map",
     "question": "Who creates geofences and who uses the Fleet Map?",
     "answer": "The **Geofence Administrator** creates the geofence, sets its coordinates, saves it and switches **Active** on. The **Inventory In-charge** confirms that inventory geofences match the right inventory location. The **Fleet Monitor** uses the Fleet Map. The **Equipment Administrator** maps telematics devices so equipment show on the map.",
     "tags": [
@@ -2350,7 +2350,7 @@ const QA_EQUIPMENT = [
     "action": "define",
     "object": "geofence fields",
     "scope": "module",
-    "section": "Geofencing and Fleet Map",
+    "section": "Fleet Map",
     "question": "What fields are on the Add Location form for a geofence?",
     "answer": "Required: **Location Type**, **Name**, **Description**, **Code** and the **Inventory / Project** toggle. Optional: Street Address, City, State, Postal Code, Country (city, state and country fill in from the map), Start Date, End Date, POC Name, POC Phone and POC Email. For inventory locations the geofence links to the inventory location automatically.",
     "tags": [
@@ -2364,7 +2364,7 @@ const QA_EQUIPMENT = [
     "action": "configure",
     "object": "geofence coordinates",
     "scope": "module",
-    "section": "Geofencing and Fleet Map",
+    "section": "Fleet Map",
     "question": "How do I set the coordinates of a geofence?",
     "answer": "From **Home**, open **Equipment Management → Overview → Geofencing**. Use any of three methods, and combine them: **Search Location** (enter the address and click the exact point), **Add Coordinates** (type latitude and longitude), or drag and select on the map. You need at least three points. Remove one with the minus icon or use **Clear All Coordinates**. **Upload KML** imports an existing boundary.",
     "tags": [
@@ -2379,7 +2379,7 @@ const QA_EQUIPMENT = [
     "action": "filter",
     "object": "fleet map",
     "scope": "module",
-    "section": "Geofencing and Fleet Map",
+    "section": "Fleet Map",
     "question": "How do I filter the Fleet Map?",
     "answer": "From **Home**, open **Equipment Management → Overview → Fleet Map**. Click **Filters**. Search by Equipment ID, Description or telematics device serial number, and switch the map options **Geofences**, **Clusters**, **Only Running Equipment** and **Not Reported in Last 72 Hours**. Filter equipment by Status, Category, Business Unit, Make and Model. Click **Apply**, **Clear**, or **Save Filter** to keep your choice.",
     "tags": [
@@ -2394,7 +2394,7 @@ const QA_EQUIPMENT = [
     "action": "troubleshoot",
     "object": "fleet map markers",
     "scope": "module",
-    "section": "Geofencing and Fleet Map",
+    "section": "Fleet Map",
     "question": "Why are no equipment markers showing on the Fleet Map?",
     "answer": "Equipment appear only if a telematics device is mapped to them. Zoom in, because at wide zoom they are grouped into clusters. Click **Clear** and reapply filters one at a time, and check whether **Only Running Equipment** or **Not Reported in Last 72 Hours** is on.",
     "tags": [
@@ -2408,7 +2408,7 @@ const QA_EQUIPMENT = [
     "action": "define",
     "object": "allocation roles",
     "scope": "module",
-    "section": "Allocation: Internal Self-Pickup to Off-Rent",
+    "section": "Allocation",
     "question": "Who does what in the Allocation Lifecycle?",
     "answer": "The **Requester** raises the request and the **Approver** approves it. The **Equipment Coordinator** assigns the equipment. The **Pre-Dispatch Inspector** completes the pre-dispatch checklist, the **Dispatch Assignee** enters the dispatch and on-rent dates, and the **Site Custodian** confirms On-Rent and raises extension or off-rent. The **Off-Rent Approver** decides, the Equipment Coordinator processes the approved off-rent, the **Pickup Assignee** records the Return Date and the **Post-Rent Inspector** completes the last checklist.",
     "tags": [
@@ -2424,7 +2424,7 @@ const QA_EQUIPMENT = [
     "action": "overview",
     "object": "self pickup sequence",
     "scope": "module",
-    "section": "Allocation: Internal Self-Pickup to Off-Rent",
+    "section": "Allocation",
     "question": "What are the steps of a Self Pickup allocation?",
     "answer": "Assign (Equipment Coordinator selects **Internal → Self Pickup** and confirms), **Inspection (Pre-Dispatch)** if switched on, **Ready for Dispatch** (Dispatch Assignee enters dates), **On Rent** (Site Custodian confirms), **Off-Rent / Extension** (request and approval), processing the return, **Pickup** (Pickup Assignee schedules), **Inspection (Post-Rent)**, then **Closed**, when the equipment becomes Available. No haul is created on this route.",
     "tags": [
@@ -2439,7 +2439,7 @@ const QA_EQUIPMENT = [
     "action": "overview",
     "object": "company logistics sequence",
     "scope": "module",
-    "section": "Company Logistics with Hauling",
+    "section": "Hauling",
     "question": "What are the steps of a Company Logistics allocation?",
     "answer": "The Equipment Coordinator assigns the equipment, vehicle and driver, which creates an outbound haul. The haul is approved, scheduled, picked up, marked In Transit and Delivered (the request moves to **On Rent**), then closed. After the rental, off-rent is approved and processed to **Inventory → Company Logistics**, which creates a return haul that runs the same steps and, on Delivered, moves the request to **Pickup**. Then the Pickup Assignee schedules the pickup, the Post-Rent Inspector inspects and the request closes.",
     "tags": [
@@ -2454,7 +2454,7 @@ const QA_EQUIPMENT = [
     "action": "define",
     "object": "assignment fields",
     "scope": "module",
-    "section": "Allocation: Internal Self-Pickup to Off-Rent",
+    "section": "Allocation",
     "question": "What fields do I fill in when assigning a piece of equipment to a request?",
     "answer": "**Available Equipment**, **Operator**, **Rate Card Template** (rates fill in and can be changed), the **Pre-Dispatch Inspection** toggle, and users for the Pre-Dispatch and Ready for Dispatch stages with View or Edit access. For Company Logistics also choose the **Vehicle** and **Driver**. Then click **Submit**, add files if needed and click **Confirm Assignment**.",
     "tags": [
@@ -2468,7 +2468,7 @@ const QA_EQUIPMENT = [
     "action": "create",
     "object": "inspection checklist",
     "scope": "module",
-    "section": "Request Creation",
+    "section": "Requests",
     "question": "How do I build an inspection checklist and link it to equipment?",
     "answer": "In **Settings → Equipment Forms → Inspection Checklist**, click **Create Form**, add inspection items under **Create inspection Items**, use **Build Form** for the title and fields, set Trigger Points if needed, then **Save Changes** and **Preview Form**. Then in **Equipment Setup** or **Accessory Setup**, click the edit icon on the category, choose the checklist in **Inspection Checklist** and **Submit**. Without it the inspection stage cannot be used.",
     "tags": [
@@ -2482,7 +2482,7 @@ const QA_EQUIPMENT = [
     "action": "configure",
     "object": "approval workflow equipment",
     "scope": "module",
-    "section": "Request Creation",
+    "section": "Requests",
     "question": "How do I set up approval workflows for equipment, hauling and off-rent requests?",
     "answer": "Open **Settings → Approval Workflow**. Choose Equipment Request, Hauling Request or Off-Rent / Extension Request, click **Create Approval Workflow**, enter the name, tick **Set as Default** and **Submit**. Then click **Create levels**, pick the workflow type and approvers and **Submit**. Only the workflow marked Default applies automatically.",
     "tags": [
@@ -2497,7 +2497,7 @@ const QA_EQUIPMENT = [
     "action": "configure",
     "object": "thresholds",
     "scope": "module",
-    "section": "Request Creation",
+    "section": "Requests",
     "question": "How do I set the request priority threshold and off-rent utility threshold?",
     "answer": "For priority, open **Settings → Request Priority Threshold**, enter the number of days from today and click **Save changes**; the system then sets each request's priority from its Required Date. For the off-rent threshold, open **Settings → Equipment/Accessory Status** and set the **Utility Threshold** for the Off Rent status.",
     "tags": [
@@ -2511,7 +2511,7 @@ const QA_EQUIPMENT = [
     "action": "define",
     "object": "equipment status lifecycle",
     "scope": "module",
-    "section": "Allocation: Internal Self-Pickup to Off-Rent",
+    "section": "Allocation",
     "question": "What happens to the equipment status during an allocation?",
     "answer": "In the Allocation Lifecycle guides, **Confirm Assignment** sets Allocated, **Confirm On-Rent** changes it to On Rent, an approved off-rent to a project sets Off Rent, and closing sets Available. For Inventory Self Pickup it stays On Rent until the post-rent inspection is submitted. With Company Logistics it goes to Allocated when a haul is created, then In Transit while moving, and follows the On-Rent Date or Pickup Date when delivered.",
     "tags": [
@@ -2526,7 +2526,7 @@ const QA_EQUIPMENT = [
     "action": "approve",
     "object": "off rent request",
     "scope": "module",
-    "section": "Allocation: Internal Self-Pickup to Off-Rent",
+    "section": "Allocation",
     "question": "As an off-rent approver, how do I approve or reject an off-rent or extension request?",
     "answer": "Open the card under **Off-Rent / Extension** and review the Requested Type, operator, details and attachments. Click **Approve** with comments, or **Reject** with comments and files. An approved extension returns the request to On-Rent; a rejected extension stays under Off-Rent / Extension and can be processed as an off-rent. An approved off-rent sets Off-Rent for return or re-allocation; a rejected off-rent returns it to On-Rent.",
     "tags": [
@@ -2542,7 +2542,7 @@ const QA_EQUIPMENT = [
     "action": "confirm",
     "object": "on rent",
     "scope": "module",
-    "section": "Allocation: Internal Self-Pickup to Off-Rent",
+    "section": "Allocation",
     "question": "As a site custodian, how do I confirm a piece of equipment as On-Rent?",
     "answer": "Open the card in the **On-Rent** stage, review the details, choose the On-Rent option and click **Submit**. The equipment status changes to On Rent, and rental charges apply from the On-Rent Date. When the equipment is no longer needed, use **Request Off-Rent** or **Request Extension** on the same card.",
     "tags": [
@@ -2557,7 +2557,7 @@ const QA_EQUIPMENT = [
     "action": "dispatch",
     "object": "equipment",
     "scope": "module",
-    "section": "Allocation: Internal Self-Pickup to Off-Rent",
+    "section": "Allocation",
     "question": "As a dispatch assignee, how do I dispatch a piece of equipment?",
     "answer": "Open the card in **Ready for Dispatch**, enter the **Dispatch Date** (when the equipment is handed over) and the **On-Rent Date** (when rental charges start), add attachments if needed and click **Dispatch**. The card moves to On-Rent. On Company Logistics it moves on only as the outbound haul progresses.",
     "tags": [
@@ -2571,7 +2571,7 @@ const QA_EQUIPMENT = [
     "action": "schedule",
     "object": "pickup",
     "scope": "module",
-    "section": "Allocation: Internal Self-Pickup to Off-Rent",
+    "section": "Allocation",
     "question": "As a pickup assignee, how do I schedule the return pickup?",
     "answer": "Open the card in the **Pickup** stage, select the **Return Date**, add attachments if needed and click **Schedule Pickup**. The card moves to **Inspection (Post-Rent)**.",
     "tags": [
@@ -2585,7 +2585,7 @@ const QA_EQUIPMENT = [
     "action": "keep",
     "object": "equipment at project",
     "scope": "module",
-    "section": "Allocation: Internal Self-Pickup to Off-Rent",
+    "section": "Allocation",
     "question": "How do I keep a piece of equipment at the project or re-allocate it after off-rent?",
     "answer": "From **Home**, open **Equipment Management → Operations**. After the off-rent is approved, open the card and choose **Project**, pick the project and **Submit**, then reopen it. **Keep at Project** closes the request and sets the equipment to Available. **Re-allocate to Request** lets you pick another matching request and click the **Open Allocation** icon; the equipment restarts at that request's Assign stage.",
     "tags": [
@@ -2600,7 +2600,7 @@ const QA_EQUIPMENT = [
     "action": "define",
     "object": "hauling roles",
     "scope": "module",
-    "section": "Company Logistics with Hauling",
+    "section": "Hauling",
     "question": "Who does what in Hauling?",
     "answer": "The **Fleet Administrator** keeps vehicles and drivers under **Fleet and Schedule**. The **Hauling Coordinator** reviews and submits the haul, schedules it, records pickup, transit and delivery and closes it with final costs. The **Hauling Approver** approves or rejects outbound and return hauls. The Driver moves the equipment and the **Receiving Representative** confirms receipt and the Condition on Arrival.",
     "tags": [
@@ -2615,7 +2615,7 @@ const QA_EQUIPMENT = [
     "action": "define",
     "object": "haul fields",
     "scope": "module",
-    "section": "Company Logistics with Hauling",
+    "section": "Hauling",
     "question": "What fields are on a haul request and when are they filled in?",
     "answer": "At **Request**: Equipment / Accessory, Original Location, Destination Location, Request Date, Estimated Cost, Phase Codes, Escort Cost and Permit Cost. At **Approved**: Vehicle and Driver. At **Schedule Pending**: Pickup Date. At **In Transit**: Condition on Arrival. At **Delivered**: Phase Codes, Escort Cost, Permit Cost and Final Cost, before **Close Haul**.",
     "tags": [
@@ -2630,7 +2630,7 @@ const QA_EQUIPMENT = [
     "action": "approve",
     "object": "haul request",
     "scope": "module",
-    "section": "Company Logistics with Hauling",
+    "section": "Hauling",
     "question": "As a hauling approver, how do I approve or reject a haul request?",
     "answer": "Open the haul on the **Requests** tab and review the equipment, route, estimated cost and other costs. Approve it to move it to the **Approved** stage. If you reject an outbound haul, it does not proceed and the allocation stays on hold; if you reject a return haul, the allocation request goes back to Off-Rent Approval.",
     "tags": [
@@ -2645,7 +2645,7 @@ const QA_EQUIPMENT = [
     "action": "close",
     "object": "haul",
     "scope": "module",
-    "section": "Company Logistics with Hauling",
+    "section": "Hauling",
     "question": "As a hauling coordinator, how do I deliver and close a haul?",
     "answer": "Click **Mark as In Transit** on the Picked Up card. On the In Transit card, select the **Condition on Arrival** and click **Mark as Delivered**. On the Delivered card, enter Phase Codes, Escort Cost, Permit Cost and **Final Cost** and click **Close Haul**. The haul moves to **Completed** for later review.",
     "tags": [
@@ -2660,7 +2660,7 @@ const QA_EQUIPMENT = [
     "action": "fix",
     "object": "return haul rejected",
     "scope": "module",
-    "section": "Company Logistics with Hauling",
+    "section": "Hauling",
     "question": "What do I do if a return haul is rejected?",
     "answer": "From **Home**, open **Equipment Management → Hauling**. The linked allocation request returns to **Off-Rent Approval**. Reprocess the off-rent: correct the return details, or choose a different return method, and submit again.",
     "tags": [
@@ -2674,7 +2674,7 @@ const QA_EQUIPMENT = [
     "action": "define",
     "object": "outbound vs return haul",
     "scope": "module",
-    "section": "Company Logistics with Hauling",
+    "section": "Hauling",
     "question": "How do the outbound and return hauls differ in the Allocation Lifecycle?",
     "answer": "The outbound haul starts when **Company Logistics** is confirmed on Assign, runs inventory to project, holds the request at Assign or Pre-Dispatch with a Haul Initiated tag, and on Delivered moves it to On Rent. The return haul starts when **Inventory → Company Logistics** is chosen while processing an off-rent, runs project to inventory, holds the request at Off-Rent, and on Delivered moves it to Pickup.",
     "tags": [
@@ -2688,7 +2688,7 @@ const QA_EQUIPMENT = [
     "action": "troubleshoot",
     "object": "allocation request",
     "scope": "module",
-    "section": "Troubleshooting: Equipment Management Problems",
+    "section": "Troubleshooting",
     "question": "Why does an allocation request not move past Ready for Dispatch, Off-Rent or Closed?",
     "answer": "For Ready for Dispatch, enter both the **Dispatch Date** and the **On-Rent Date**. Check **Inspection Checklist Issues** for an open issue against the equipment and rectify it; this also blocks Closed and a haul pickup. A card held at Off-Rent with a **Haul Initiated** tag needs its return haul taken through to Completed in Hauling.",
     "tags": [
@@ -2703,7 +2703,7 @@ const QA_EQUIPMENT = [
     "action": "troubleshoot",
     "object": "available equipment",
     "scope": "module",
-    "section": "Troubleshooting: Equipment Management Problems",
+    "section": "Troubleshooting",
     "question": "Why does no equipment appear under Available Equipment, or why are the rates blank?",
     "answer": "Only equipment with **Available** status are offered; Allocated, On Rent, In Transit and Off Rent equipment are not. Check that a matching unit exists in the master. For blank rates, check that the **Rate Card Template** covers the equipment's category and select it again.",
     "tags": [
@@ -2717,7 +2717,7 @@ const QA_EQUIPMENT = [
     "action": "troubleshoot",
     "object": "inspection stage",
     "scope": "module",
-    "section": "Troubleshooting: Equipment Management Problems",
+    "section": "Troubleshooting",
     "question": "Why was the pre-dispatch inspection skipped, or why is the inspection form empty?",
     "answer": "The stage appears only if **Pre-Dispatch Inspection** was switched on when confirming assignment; move the request back and confirm again with it on. An empty form means no **Inspection Checklist** is linked to the equipment under **Settings → Equipment Setup / Accessory Setup**.",
     "tags": [
@@ -2731,7 +2731,7 @@ const QA_EQUIPMENT = [
     "action": "troubleshoot",
     "object": "off rent submit request",
     "scope": "module",
-    "section": "Troubleshooting: Equipment Management Problems",
+    "section": "Troubleshooting",
     "question": "Why can I not submit an off-rent request?",
     "answer": "Check that the request is in the **On-Rent** stage and that an **Off-Rent / Extension Request** approval workflow is marked **Set as Default** under **Settings → Approval Workflow**.",
     "tags": [
@@ -2745,7 +2745,7 @@ const QA_EQUIPMENT = [
     "action": "troubleshoot",
     "object": "vehicle driver",
     "scope": "module",
-    "section": "Troubleshooting: Equipment Management Problems",
+    "section": "Troubleshooting",
     "question": "Why does no vehicle or driver appear when I assign or haul a piece of equipment?",
     "answer": "Add them under **Hauling → Fleet and Schedule**, check their status is **Available**, and check that the driver is mapped to a vehicle. Only vehicles and drivers set up there can be chosen.",
     "tags": [
@@ -2759,7 +2759,7 @@ const QA_EQUIPMENT = [
     "action": "troubleshoot",
     "object": "equipment status after haul",
     "scope": "module",
-    "section": "Troubleshooting: Equipment Management Problems",
+    "section": "Troubleshooting",
     "question": "Why has the equipment status not changed after delivery or return processing?",
     "answer": "After a haul, the status follows the **On-Rent Date** (outbound) or the **Pickup Date** (return), so update that date in the allocation request. On Inventory Self Pickup the status stays On Rent until the post-rent inspection is submitted. If no destination location appears, add the Inventory Location first.",
     "tags": [
@@ -2773,7 +2773,7 @@ const QA_EQUIPMENT = [
     "action": "approve",
     "object": "equipment request",
     "scope": "module",
-    "section": "Request Creation",
+    "section": "Requests",
     "question": "Who approves an equipment or accessory request?",
     "answer": "The **Approver** (Equipment Manager or Operations Manager, per configured level) approves it. The request card sits in the **Request** stage with its auto-set priority. The approver opens it, then clicks **Submit** with comments to approve (the card moves to **Assign**), or rejects with comments and files (the card goes to **Workflow Issues**). The levels come from the **Equipment Request** workflow marked **Set as Default** under Settings → Approval Workflow.",
     "tags": [
@@ -2788,7 +2788,7 @@ const QA_EQUIPMENT = [
     "action": "view",
     "object": "equipment statuses",
     "scope": "module",
-    "section": "Equipment Master and Accessory Master",
+    "section": "Equipment Master",
     "question": "What statuses can a piece of equipment have in Equipment Master?",
     "answer": "You set these yourself: **Available**, **Out of Service**, **Inactive**, **Dispose Initiated**, **Yard Only** and **Unavailable**. The system sets these from operations and hauling: **Allocated**, **In Transit**, **On Rent**, **Off Rent** and **In Maintenance** (the last through a Work Order). System-driven statuses appear in the dropdown but cannot be selected.",
     "tags": [
@@ -2814,7 +2814,7 @@ const QA_EQUIPMENT = [
     "action": "define",
     "object": "add equipment fields",
     "scope": "module",
-    "section": "Equipment Master and Accessory Master",
+    "section": "Equipment Master",
     "question": "What fields are on the Add Equipment form?",
     "answer": "**Equipment ID** (unique), **Equipment**, **Description**, **Status**, **Business Unit**, **Location** (Inventory or Project), **Make**, **Model**, **Purchase Date**, **Year of Manufacture**, **Serial Number**, **VIN Number**, **License Plate**, **Engine Hours**, **Fuel Tank Capacity**, **Fuel Type**, **Production Category** and **Upload Images**. Fuel types are set under **Settings → Equipment Setup**.",
     "tags": [
@@ -2828,7 +2828,7 @@ const QA_EQUIPMENT = [
     "action": "define",
     "object": "equipment status rules",
     "scope": "module",
-    "section": "Equipment Master and Accessory Master",
+    "section": "Equipment Master",
     "question": "Why can I not select Allocated or On Rent as a status?",
     "answer": "They are system-driven. **Allocated**, **In Transit**, **On Rent** and **Off Rent** are set by processing the matching step in **Equipment Management → Operations**, and **In Maintenance** through a Work Order. Only the manual statuses can be chosen on the record.",
     "tags": [
@@ -2841,7 +2841,7 @@ const QA_EQUIPMENT = [
     "action": "view",
     "object": "table view actions",
     "scope": "module",
-    "section": "Equipment Master and Accessory Master",
+    "section": "Equipment Master",
     "question": "What actions are available on an equipment row?",
     "answer": "In Table View: **View**, **QR Code**, **Edit**, **Delete** and **History**. In Grid View: **Edit**, **Delete** and **Request Haul**.",
     "tags": [
@@ -2856,7 +2856,7 @@ const QA_EQUIPMENT = [
     "action": "configure",
     "object": "equipment filters",
     "scope": "module",
-    "section": "Equipment Master and Accessory Master",
+    "section": "Equipment Master",
     "question": "What are Equipment with Telematics, Only Running Equipment and Not Reported in Last 72 Hours?",
     "answer": "Extra switches on the Equipment Master **Filters**. They show only equipment that has a mapped telematics device, only equipment that are currently running, and only equipment that have not reported in the last 72 hours.",
     "tags": [
@@ -2870,7 +2870,7 @@ const QA_EQUIPMENT = [
     "action": "troubleshoot",
     "object": "equipment id unique",
     "scope": "module",
-    "section": "Equipment Master and Accessory Master",
+    "section": "Equipment Master",
     "question": "Why is my Equipment ID rejected?",
     "answer": "The **Equipment ID** must be unique across the organization. Check whether it is already used on another record.",
     "tags": [
@@ -2882,7 +2882,7 @@ const QA_EQUIPMENT = [
     "action": "view",
     "object": "qr code",
     "scope": "module",
-    "section": "Equipment Master and Accessory Master",
+    "section": "Equipment Master",
     "question": "Where is the QR code for a piece of equipment?",
     "answer": "From **Home**, open **Equipment Management → Equipment → Equipment Master**. In Table View click **QR Code** on the row, or open the profile and view the QR Code in the left panel. You can scan or download it for quick identification and tracking.",
     "tags": [
@@ -2895,7 +2895,7 @@ const QA_EQUIPMENT = [
     "action": "explain",
     "object": "inspections issues ncr",
     "scope": "module",
-    "section": "Troubleshooting: Equipment Management Problems",
+    "section": "Troubleshooting",
     "question": "Where do I log equipment inspections, equipment issues or a non conformance report?",
     "answer": "In Equipment Management, inspection checklists are set up in **Settings → Equipment Setup** and are completed as part of the request lifecycle, for example the pre-dispatch inspection before equipment is checked out. Separate inspection, issue or non conformance screens are not covered in this guide. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     "tags": [
@@ -3028,7 +3028,7 @@ const QA_EQUIPMENT = [
     "action": "edit",
     "object": "equipment issue",
     "scope": "module",
-    "section": "Equipment Issues (Inspection Checklists Issues)",
+    "section": "Equipment Issues",
     "question": "How do I resolve an equipment issue?",
     "answer": "1. Go to **Equipment Issues**, locate the issue via Search/Filters.\n2. Review details, add notes in **Chat** if collaborating.\n3. Once fixed, click **Rectify** — status becomes Rectified and the linked form re-opens for completion.\n4. Optionally click **Create Work Order** if formal remediation tracking is needed.",
     "tags": [
@@ -3042,7 +3042,7 @@ const QA_EQUIPMENT = [
     "action": "define",
     "object": "equipment issue vs ncr",
     "scope": "module",
-    "section": "Equipment Issues (Inspection Checklists Issues)",
+    "section": "Equipment Issues",
     "question": "What's the difference between an Equipment Issue and a Non-Conformance Report?",
     "answer": "Equipment Issues are typically raised automatically from a failed trigger-point check during a maintenance form, inspection, or an allocation inspection. NCRs are created manually (via + Add on the Non Conformance Report tab) to formally track a non-conformance event. Both use the same card/table view, Rectify workflow, Chat, Assign To/Due Date, and Create Work Order pattern, but they are separate, independently tracked records.",
     "tags": [
@@ -3054,7 +3054,7 @@ const QA_EQUIPMENT = [
     "action": "create",
     "object": "work order",
     "scope": "module",
-    "section": "Equipment Issues (Inspection Checklists Issues)",
+    "section": "Equipment Issues",
     "question": "How do I create a Work Order from an equipment issue?",
     "answer": "Click **Create Work Order** on the Equipment Issues (or NCR) toolbar — this spins up a Work Order to track remediation labor/cost.",
     "tags": [
@@ -3065,7 +3065,7 @@ const QA_EQUIPMENT = [
     "action": "delete",
     "object": "equipment issue",
     "scope": "module",
-    "section": "Equipment Issues (Inspection Checklists Issues)",
+    "section": "Equipment Issues",
     "question": "How do I delete, export, or change the view for issues and NCRs?",
     "answer": "Click the delete icon on an issue's row to remove it; click **Export** to download all records to Excel; and use the view toggle (top-right) to switch between the default table view and a card/grid view.",
     "tags": [
@@ -3079,7 +3079,7 @@ const QA_EQUIPMENT = [
     "action": "view",
     "object": "issue header counters",
     "scope": "module",
-    "section": "Equipment Issues (Inspection Checklists Issues)",
+    "section": "Equipment Issues",
     "question": "What do the header counters mean on Equipment Issues / NCR?",
     "answer": "They show totals for the tab, e.g. \"42 Total Issues | 28 Open Issues | 14 Issues Rectified\" — total records, how many are still open, and how many have been rectified.",
     "tags": [
@@ -3127,7 +3127,7 @@ const QA_EQUIPMENT = [
     "action": "create",
     "object": "load out request",
     "scope": "module",
-    "section": "Earlier Version: Load Out Request",
+    "section": "Earlier Version Load Out",
     "question": "How do I raise an internal Load Out Request?",
     "answer": "On an earlier-version environment: open the **Load Out Request** tab, click **Add** under **LOR Internal Jobs** to open the Request Form, pick the equipment or accessories, enter quantity, dates, supervisor and job, and submit. It is then approved and moves through Check Out, Shipment, Load, In Transit, Delivered and Received. In Arena 2.0, raise the request with **New Request** under **Equipment Management → Operations** instead.",
     "tags": [
@@ -3141,7 +3141,7 @@ const QA_EQUIPMENT = [
     "action": "define",
     "object": "lor internal vs 3rd party",
     "scope": "module",
-    "section": "Earlier Version: Load Out Request",
+    "section": "Earlier Version Load Out",
     "question": "What's different between LOR Internal Jobs and Rentals?",
     "answer": "LOR Internal Jobs splits into two separate documents — Load Out Requests (outbound: Request → Check Out → Shipment → Load → In Transit → Delivered → Received → Preview) and Return Requests (inbound, same stages minus Check Out). Rentals (3rd-party) is a single record covering the whole cycle with different stage names: Request → Check Out → Lease Agreement → Ship → Check In → Shop In → Preview, and its Request form omits Job Name/Job Location since there's no internal job involved.",
     "tags": [
@@ -3154,7 +3154,7 @@ const QA_EQUIPMENT = [
     "action": "track",
     "object": "maintenance form issue routing",
     "scope": "module",
-    "section": "Equipment Issues (Inspection Checklists Issues)",
+    "section": "Equipment Issues",
     "question": "I raised an issue from a maintenance form — where did it go?",
     "answer": "It's automatically logged under the **Equipment Issues** tab, where it can be reviewed, assigned, and eventually marked Rectified.",
     "tags": [
@@ -3165,7 +3165,7 @@ const QA_EQUIPMENT = [
     "action": "view",
     "object": "load out request stages",
     "scope": "module",
-    "section": "Earlier Version: Load Out Request",
+    "section": "Earlier Version Load Out",
     "question": "What are the stages shown on a Load Out Request page?",
     "answer": "On earlier-version environments a Load Out Request shows a stepper: **Request**, **Check Out**, **Shipment**, **Load**, **In Transit**, **Delivered**, **Received** and **Preview**. Rentals use **Request**, **Check Out**, **Lease Agreement**, **Ship**, **Check In**, **Shop In** and **Preview**. A later stage cannot be opened until the earlier ones are done. Arena 2.0 uses the Allocation Lifecycle stages on the Operations board instead.",
     "tags": [
@@ -3179,7 +3179,7 @@ const QA_EQUIPMENT = [
     "action": "define",
     "object": "load out request",
     "scope": "module",
-    "section": "Earlier Version: Load Out Request",
+    "section": "Earlier Version Load Out",
     "question": "What is a Load Out Request?",
     "answer": "A **Load Out Request** (LOR) is the request used on earlier-version environments to move equipment or accessories out of inventory to a job site, or to a third party on lease, and back. It moves through stages such as Request, Check Out, Shipment, Load, In Transit, Delivered and Received. In Arena 2.0, requests are raised with **New Request** on the **Operations** board and moved through the **Allocation Lifecycle** instead.",
     "tags": [
@@ -3193,7 +3193,7 @@ const QA_EQUIPMENT = [
     "action": "create",
     "object": "equipment utilization log",
     "scope": "module",
-    "section": "Log Daily Equipment Utilization (Add Utilization Log and Auto Log Utilization)",
+    "section": "Add Utilization Log",
     "question": "How do I add an equipment utilization log?",
     "answer": "From **Home**, open **Equipment Management → Utilization → Add Utilization Log**. Click **Import from Equipment Master** or **Add** to list equipment, choose the **Assigned Project** and **Phase Code** for each row, enter **Work Hours**, **Idle Hours**, **Billing Hours** and **Fuel**, then click **Save as Draft** or **Submit**.",
     "tags": [
@@ -3210,7 +3210,7 @@ const QA_EQUIPMENT = [
     "action": "define",
     "object": "utilization log columns",
     "scope": "module",
-    "section": "Log Daily Equipment Utilization (Add Utilization Log and Auto Log Utilization)",
+    "section": "Add Utilization Log",
     "question": "What are the columns on the Add Utilization Log screen?",
     "answer": "From **Home**, open **Equipment Management → Utilization → Add Utilization Log**. Each row has **Equipment**, **Assigned Project**, **Phase Code**, **Billing Hours**, **Total Hours**, **Work Hours**, **Idle Hours**, **Idle %** and **Fuel**. Buttons: **Add**, **Clone Log**, **Import from Equipment Master**, **Save as Draft**, **Submit** and **Telematics**.",
     "tags": [
@@ -3227,7 +3227,7 @@ const QA_EQUIPMENT = [
     "action": "configure",
     "object": "auto log utilization",
     "scope": "module",
-    "section": "Log Daily Equipment Utilization (Add Utilization Log and Auto Log Utilization)",
+    "section": "Add Utilization Log",
     "question": "What is Auto Log Utilization and how do I set it up?",
     "answer": "From **Home**, open **Equipment Management → Utilization → Auto Log Utilization** and click **Create**. Enter the **Equipment ID**, **Project**, **Phase Code**, **From Date**, **To Date**, **Work Hours** and **Idle Hours**. The list shows these columns for every automatic log. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     "tags": [
@@ -3242,7 +3242,7 @@ const QA_EQUIPMENT = [
     "action": "view",
     "object": "utilization logs",
     "scope": "module",
-    "section": "Review Utilization: Logs, Summary and Issues",
+    "section": "Utilization Logs",
     "question": "Where do I see submitted utilization logs?",
     "answer": "From **Home**, open **Equipment Management → Utilization → Utilization Logs**. The list of logs has a detail pane beside it.",
     "tags": [
@@ -3257,7 +3257,7 @@ const QA_EQUIPMENT = [
     "action": "view",
     "object": "utilization summary",
     "scope": "module",
-    "section": "Review Utilization: Logs, Summary and Issues",
+    "section": "Utilization Logs",
     "question": "Where is the utilization summary?",
     "answer": "From **Home**, open **Equipment Management → Utilization → Utilization Summary**. Choose a date range and the log level (project) filter to see the summary. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     "tags": [
@@ -3272,7 +3272,7 @@ const QA_EQUIPMENT = [
     "action": "view",
     "object": "utilization issues",
     "scope": "module",
-    "section": "Review Utilization: Logs, Summary and Issues",
+    "section": "Utilization Logs",
     "question": "What is the Issues screen under Utilization?",
     "answer": "From **Home**, open **Equipment Management → Utilization → Issues**. The list shows **Util Number**, **Level**, **Raised by**, **Assign To** and **Due Date**, with counts of **Approved** and **Rejected**. Click **Download Excel** to export it.",
     "tags": [
@@ -3287,7 +3287,7 @@ const QA_EQUIPMENT = [
     "action": "configure",
     "object": "utilization approval workflow",
     "scope": "module",
-    "section": "Review Utilization: Logs, Summary and Issues",
+    "section": "Utilization Logs",
     "question": "Where do I set the approval workflow for utilization logs?",
     "answer": "From **Home**, open **Equipment Management → Settings → Approval Workflow** and choose the **Utilization Logs** tab. The other tabs are **Asset Requests**, **Hauling Request** and **Off Rent / Extension Request**.",
     "tags": [
@@ -3301,7 +3301,7 @@ const QA_EQUIPMENT = [
     "action": "schedule",
     "object": "preventive maintenance",
     "scope": "module",
-    "section": "Schedule Preventive Maintenance",
+    "section": "Preventive Maintenance",
     "question": "Where is the preventive maintenance schedule?",
     "answer": "From **Home**, open **Equipment Management → Maintenance → Preventive Maintenance**. Click **Schedule PM** to add one. The trigger is **Calendar**, **Hours** or **Distance**, and the list shows **Last PM Due**, **Current** and **Next PM Due**.",
     "tags": [
@@ -3319,7 +3319,7 @@ const QA_EQUIPMENT = [
     "action": "schedule",
     "object": "pm trigger",
     "scope": "module",
-    "section": "Schedule Preventive Maintenance",
+    "section": "Preventive Maintenance",
     "question": "What are the PM triggers: Calendar, Hours and Distance?",
     "answer": "On **Equipment Management → Maintenance → Preventive Maintenance**, a schedule is triggered by **Calendar**, **Hours** or **Distance**. The intervals and hours thresholds come from **Settings → Maintenance Config → PM Interval Configuration**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     "tags": [
@@ -3334,7 +3334,7 @@ const QA_EQUIPMENT = [
     "action": "view",
     "object": "parts po",
     "scope": "module",
-    "section": "Manage the Parts Catalogue (Parts PO)",
+    "section": "Parts PO",
     "question": "What is the Parts PO screen?",
     "answer": "From **Home**, open **Equipment Management → Maintenance → Parts PO**. It is the parts catalogue: click **Add Part**, and the list shows **Part**, **Category**, **Manufacturer**, **Unit Cost** and **Stock**. Parts are also handled on the **Parts** tab of a **Work Order**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     "tags": [
@@ -3352,7 +3352,7 @@ const QA_EQUIPMENT = [
     "action": "view",
     "object": "maintenance calendar",
     "scope": "module",
-    "section": "See Maintenance on the Maintenance Calendar",
+    "section": "Maintenance Calendar",
     "question": "Where is the maintenance calendar?",
     "answer": "From **Home**, open **Equipment Management → Maintenance → Maintenance Calendar**. It is a month calendar with the legend **Not Ready**, **Ready**, **In Progress With Issues** and **Completed**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     "tags": [
@@ -3368,7 +3368,7 @@ const QA_EQUIPMENT = [
     "action": "configure",
     "object": "maintenance config",
     "scope": "module",
-    "section": "Configure Maintenance: PM Intervals and Work Order Types",
+    "section": "Maintenance Config",
     "question": "What is Maintenance Config and what does it contain?",
     "answer": "From **Home**, open **Equipment Management → Settings → Maintenance Config**. **PM Interval Configuration** lists **Category**, **Interval**, **Type**, **Hours Threshold** and **Check List**. The same screen has **Work Order Types**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     "tags": [
@@ -3384,7 +3384,7 @@ const QA_EQUIPMENT = [
     "action": "view",
     "object": "equipment reports",
     "scope": "module",
-    "section": "Run Equipment Reports",
+    "section": "Reports",
     "question": "What reports are in Equipment Management?",
     "answer": "From **Home**, open **Equipment Management → Reports**. The six reports are **Equipment Utilization Report**, **PM Service Tracker Report**, **Compliance Warranty Tracker**, **Hauling Cost Log**, **3rd Party Rental Activity & Spend Report** and **Equipment Billing Worksheet**. Your company may see **Asset** instead of **Equipment** (**Global Data → Settings → Naming Framework**). For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     "tags": [
@@ -3403,7 +3403,7 @@ const QA_EQUIPMENT = [
     "action": "view",
     "object": "3rd party rental",
     "scope": "module",
-    "section": "3rd Party Rental and External Hauling Lists",
+    "section": "3rd Party Rental",
     "question": "Where do I see rented-in (3rd party) equipment?",
     "answer": "From **Home**, open **Equipment Management → Equipment → 3rd Party Rental**. The list shows **REQ ID**, **PO ID**, **Vendor**, **Delivered Date**, **Length of Rent**, **Days in Rent**, **Billing Rule**, the **Hourly**, **Daily**, **Weekly** and **Monthly Rate**, **Freight Cost**, **PO Value**, **Total Cost YTD** and **Phase Codes**.",
     "tags": [
@@ -3421,7 +3421,7 @@ const QA_EQUIPMENT = [
     "action": "view",
     "object": "external hauling",
     "scope": "module",
-    "section": "3rd Party Rental and External Hauling Lists",
+    "section": "3rd Party Rental",
     "question": "Where is the External Hauling list?",
     "answer": "From **Home**, open **Equipment Management → Hauling → External Hauling**. The list shows **Allocation Id**, **REQ ID**, **PO ID**, **Vendor**, **Cost**, **Price**, **Escort Cost**, **Permit Cost**, **Service Company**, **Service Type**, **Pick Up Address**, **Dimensions**, **Weight**, **Received By**, **Delivered Date** and **Stage**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     "tags": [
@@ -3438,7 +3438,7 @@ const QA_EQUIPMENT = [
     "action": "configure",
     "object": "billing rules",
     "scope": "module",
-    "section": "More Equipment Settings: Billing Rules, Disposal Methods, Thresholds and Status",
+    "section": "More Settings",
     "question": "Where do I set equipment billing rules?",
     "answer": "From **Home**, open **Equipment Management → Settings → Billing Rules**. It has **Billable Hours** and the list of billing rules. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     "tags": [
@@ -3453,7 +3453,7 @@ const QA_EQUIPMENT = [
     "action": "configure",
     "object": "disposal methods",
     "scope": "module",
-    "section": "More Equipment Settings: Billing Rules, Disposal Methods, Thresholds and Status",
+    "section": "More Settings",
     "question": "What disposal methods are available?",
     "answer": "Open **Equipment Management → Settings → Disposal Methods**. The methods are **Auction**, **Private Sale**, **Trade-in**, **Scrap** and **Internal Transfer**.",
     "tags": [
@@ -3468,7 +3468,7 @@ const QA_EQUIPMENT = [
     "action": "configure",
     "object": "notification thresholds",
     "scope": "module",
-    "section": "More Equipment Settings: Billing Rules, Disposal Methods, Thresholds and Status",
+    "section": "More Settings",
     "question": "How do I set expiry and reminder alerts for equipment?",
     "answer": "Open **Equipment Management → Settings → Notification Thresholds**. Set the days for **Registration Expiry**, **Warranty Expiry**, **Insurance Expiry**, **Telemetry Stale** and **Approaching Planned Return Date**, and set the **Utilization Log Reminder** (days, time and emails). For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     "tags": [
@@ -3486,7 +3486,7 @@ const QA_EQUIPMENT = [
     "action": "configure",
     "object": "due assignment days",
     "scope": "module",
-    "section": "More Equipment Settings: Billing Rules, Disposal Methods, Thresholds and Status",
+    "section": "More Settings",
     "question": "What are Equipment Due Assignment Days and the Utilization Idle Percentage?",
     "answer": "Open **Equipment Management → Settings → Equipment Due Assignment Days**. **Due Period** is set in days, months or years, and **Utilization Idle Percentage %** sets the idle limit used on utilization logs.",
     "tags": [
@@ -3501,7 +3501,7 @@ const QA_EQUIPMENT = [
     "action": "configure",
     "object": "equipment status",
     "scope": "module",
-    "section": "More Equipment Settings: Billing Rules, Disposal Methods, Thresholds and Status",
+    "section": "More Settings",
     "question": "What equipment statuses can I set up?",
     "answer": "Open **Equipment Management → Settings → Equipment Status** (or **Accessory Status**). Each status has a name, colour, enabled switch and utility threshold. Statuses include **Yard Only**, **Unavailable** and **Dispose Initiated**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     "tags": [
@@ -3518,7 +3518,7 @@ const QA_EQUIPMENT = [
     "action": "view",
     "object": "inspection checklists issues",
     "scope": "module",
-    "section": "Equipment Issues (Inspection Checklists Issues)",
+    "section": "Equipment Issues",
     "question": "Where is the Inspection Checklists Issues screen?",
     "answer": "From **Home**, open **Equipment Management → Inspection Checklists Issues**. The header shows **Total**, **Open** and **Rectified** counts. The list has **Equipment Issues Number**, **Priority**, **Observation**, **Source**, **Form**, **Raised by**, **Rectified by**, **Image**, **Work Order**, **Assign To** and **Due Date**.",
     "tags": [
@@ -9915,7 +9915,7 @@ const QA_COSTTRACKING = [
     action: "view",
     object: "cost tracking",
     scope: "module",
-    section: "Who sets this up",
+    section: "Overview",
     question: "What is Cost Tracking?",
     answer: "The company-wide, read-only view of estimated versus actual cost for all projects, grouped under Company Reports: Cost Control Dashboard, Cost by Projects and Cost by Cost Types. Estimates come from **Project Setup → Estimate**; actual costs from **Field Works → Cost**.",
     tags: ["cost tracking","what is cost tracking","estimated vs actual cost","cost tracking module","company reports cost"]
@@ -9924,7 +9924,7 @@ const QA_COSTTRACKING = [
     action: "view",
     object: "cost lineage",
     scope: "module",
-    section: "Who sets this up",
+    section: "Overview",
     question: "Where does Cost Tracking get its data?",
     answer: "Estimated cost: approved estimates in **Project Setup → Estimate**. Actual cost: **Field Works → Tree Version → Cost** (Transaction, Change order, Transfer, Field Logs). Cost types, material, equipment and labor codes: **Global Data → Cost**. Project details: the project record.",
     tags: ["cost tracking data source","where does cost data come from","cost lineage","cost tracking sources"]
@@ -9933,7 +9933,7 @@ const QA_COSTTRACKING = [
     action: "view",
     object: "cost tracking setup",
     scope: "module",
-    section: "Who sets this up",
+    section: "Overview",
     question: "How do I make a project appear in Cost Tracking with numbers?",
     answer: "Create the cost types and codes in **Global Data → Cost**; create and approve an estimate in **Project Setup → Estimate**; set **Level of Detail and Estimate Type in Project Settings → Cost Breakdown Structure**; record actual costs in **Field Works → Cost**. Then check the project row in Cost by Projects.",
     tags: ["set up cost tracking","project not in cost tracking","cost tracking setup","who feeds cost tracking"]
@@ -9942,7 +9942,7 @@ const QA_COSTTRACKING = [
     action: "view",
     object: "cost project twin",
     scope: "module",
-    section: "Who sets this up",
+    section: "Overview",
     question: "Is there a per-project version of Cost Tracking?",
     answer: "Yes. **Data Analytics & Insights → Cost** has Cost Activity, Cost by Cost Types, Cost by Month, Payments by Month, Cost Analytics and Cost Graphs for one project. Its Cost by Cost Types shows the same rows as the company screen.",
     tags: ["project cost tracking","cost by cost types project","data analytics cost","cost analytics"]
@@ -10068,7 +10068,7 @@ const QA_COSTTRACKING = [
     action: "create",
     object: "cost estimate",
     scope: "module",
-    section: "Where the Estimate Side Comes From",
+    section: "Estimate",
     question: "How do I create a new cost estimate?",
     answer: "In **Project Setup → Estimate** open the tree version card, click Create Estimate, enter Name, Description, Approval Workflow and Cost Breakdown Structure, choose a template per cost type and Submit. Then complete Setup CBS and Setup Estimate in the estimate.",
     tags: ["create cost estimate","new estimate","create estimate","how do i create a new cost estimate"]
@@ -10077,7 +10077,7 @@ const QA_COSTTRACKING = [
     action: "view",
     object: "estimate source",
     scope: "module",
-    section: "Where the Estimate Side Comes From",
+    section: "Estimate",
     question: "Where does the estimated cost in Cost Tracking come from?",
     answer: "From the approved estimate of each project (**Project Setup → Estimate**). Setup Estimate shows Material, Equipment, Labor, Unit Rate, Sub Total, Contingencies Value and Total; Estimate Summary lists the lines.",
     tags: ["estimated cost source","where does estimated cost come from","estimate summary","setup estimate"]
@@ -10086,7 +10086,7 @@ const QA_COSTTRACKING = [
     action: "view",
     object: "estimate summary",
     scope: "module",
-    section: "Where the Estimate Side Comes From",
+    section: "Estimate",
     question: "Where can I see a summary of all project costs?",
     answer: "Open the estimate in **Project Setup → Estimate** and go to Estimate Summary: tabs Material, Equipment, Labor, Unit Rate and All; All groups lines by phase code. For company totals use Cost by Projects.",
     tags: ["summary of project costs","estimate summary","where can i see a summary of all project costs"]
@@ -10095,7 +10095,7 @@ const QA_COSTTRACKING = [
     action: "view",
     object: "estimate approval",
     scope: "module",
-    section: "Where the Estimate Side Comes From",
+    section: "Estimate",
     question: "How do I set up an approval workflow for cost estimates?",
     answer: "Open **Project Settings → Cost Breakdown Structure → Approval WorkFlow**, click Create Approval WorkFlow, then Create Level, choose All must approve or Any one can approve and pick approvers; repeat for more levels.",
     tags: ["cost estimate approval workflow","approval workflow estimate","create level estimate","how do i set up an approval workflow for cost estimates"]
@@ -10104,7 +10104,7 @@ const QA_COSTTRACKING = [
     action: "view",
     object: "approval types",
     scope: "module",
-    section: "Where the Estimate Side Comes From",
+    section: "Estimate",
     question: "What is the difference between \"All must approve\" and \"Anyone can approve\"?",
     answer: "All must approve needs every named approver on that level to approve; Any one can approve needs only one of them. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["all must approve","anyone can approve","any one can approve","approval type difference"]
@@ -10113,7 +10113,7 @@ const QA_COSTTRACKING = [
     action: "view",
     object: "cbs settings",
     scope: "module",
-    section: "Where the Estimate Side Comes From",
+    section: "Estimate",
     question: "What do the Cost Breakdown Structure settings do?",
     answer: "In **Project Settings → Cost Breakdown Structure**: CBS (how estimate lines are structured, Entity down to Work Package and Phase Code), Approval WorkFlow, Level of Detail (Phase Code or Phase Code - Cost Code) and Estimate Type (Lump Sum or Time & Material).",
     tags: ["cost breakdown structure","level of detail","estimate type","lump sum time and material","cbs settings"]
@@ -10122,7 +10122,7 @@ const QA_COSTTRACKING = [
     action: "view",
     object: "estimate lists",
     scope: "module",
-    section: "Where the Estimate Side Comes From",
+    section: "Estimate",
     question: "Where do the cost types and templates in Create Estimate come from?",
     answer: "Cost types and item codes come from **Global Data → Cost**; the template drop-downs are the Global Data cost templates. The approval workflow is the one set in Project Settings.",
     tags: ["create estimate templates source","cost types source","global data cost estimate"]
@@ -10131,7 +10131,7 @@ const QA_COSTTRACKING = [
     action: "view",
     object: "actual cost",
     scope: "module",
-    section: "Where Actual Costs Come From",
+    section: "Actual Costs",
     question: "Where do actual costs come from?",
     answer: "From the cost logs in **Field Works → Tree Version → Cost**: Transaction (purchase orders and other expenses), Change order, Transfer and Field Logs (Material, Machinery, Manpower, Sub Contractor). They need an active, approved estimate for the tree version.",
     tags: ["where do actual costs come from","actual cost source","actual cost tracking","field works cost","cost transaction logs"]
@@ -10140,7 +10140,7 @@ const QA_COSTTRACKING = [
     action: "create",
     object: "cost transaction",
     scope: "module",
-    section: "Where Actual Costs Come From",
+    section: "Actual Costs",
     question: "How do I record an actual cost?",
     answer: "Open the project and go to **Field Works**, open the tree version, then **Cost → Transaction** and click **Create**. Pick the Phase Code, enter Cost Code, Actual Cost, Committed Cost and Cost Type, then Save As Draft or Submit.",
     tags: ["record actual cost","create cost transaction","add cost log","transaction log cost","committed cost"]
@@ -10149,7 +10149,7 @@ const QA_COSTTRACKING = [
     action: "view",
     object: "transaction phase code",
     scope: "module",
-    section: "Where Actual Costs Come From",
+    section: "Actual Costs",
     question: "Why is my phase code missing in a cost transaction?",
     answer: "The Phase Code list shows only the phase codes used in the approved estimate of that tree version (9 on the test tree). For trees without an approved estimate the screen says \"No active and approved Estimate found.\"",
     tags: ["phase code missing cost","no active and approved estimate","transaction phase code list"]
@@ -10158,7 +10158,7 @@ const QA_COSTTRACKING = [
     action: "view",
     object: "cost transfer",
     scope: "module",
-    section: "Where Actual Costs Come From",
+    section: "Actual Costs",
     question: "Why does Transfer say the level of detail is not set?",
     answer: "Transfer moves budget between cost or phase codes and needs **Project Settings → Cost Breakdown Structure → Level of Detail** (Phase Code or Phase Code - Cost Code) to be chosen first.",
     tags: ["level of detail not set","cost transfer","transfer budget"]
@@ -10167,7 +10167,7 @@ const QA_COSTTRACKING = [
     action: "view",
     object: "procurement cost",
     scope: "module",
-    section: "Where Actual Costs Come From",
+    section: "Actual Costs",
     question: "Do purchase orders and invoices count as actual cost?",
     answer: "Not automatically. Actual cost counts what is recorded and approved as cost logs in **Field Works → Cost**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["purchase orders actual cost","invoices actual cost","procurement cost tracking","timesheets cost tracking","equipment cost tracking"]
@@ -10176,7 +10176,7 @@ const QA_COSTTRACKING = [
     action: "view",
     object: "zero actual",
     scope: "module",
-    section: "Where Actual Costs Come From",
+    section: "Actual Costs",
     question: "Why is a project's actual cost zero?",
     answer: "No approved cost log exists for it in **Field Works → Cost** (Transaction, Change order, Transfer, Field Logs), or its tree version has no approved estimate. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["why is actual cost zero","actual cost zero","no actual cost","actual costs missing"]
@@ -10185,7 +10185,7 @@ const QA_COSTTRACKING = [
     action: "view",
     object: "phase code rollup",
     scope: "module",
-    section: "How Phase Codes and Cost Types Roll Up",
+    section: "Phase Codes",
     question: "How do phase codes and cost types roll up?",
     answer: "Each estimate line has a phase code and cost type. **Estimate Summary → All** groups lines by phase code; Cost by Cost Types adds lines per item and block (Labor, Material, Equipment); Cost by Projects and the dashboard add the blocks per project and company.",
     tags: ["phase code roll up","cost type roll up","how phase codes roll up","phase code cost tracking"]
@@ -10194,7 +10194,7 @@ const QA_COSTTRACKING = [
     action: "view",
     object: "cost types list",
     scope: "module",
-    section: "How Phase Codes and Cost Types Roll Up",
+    section: "Phase Codes",
     question: "What cost types exist?",
     answer: "Material, Equipment, Labor, Unit Rate, Sub Contractor, BOQ's, Freight Charges and Fuel & Gas (**Global Data → Cost**). Cost by Cost Types shows Labor, Material and Equipment blocks.",
     tags: ["cost types","list of cost types","cost type options"]
@@ -10203,7 +10203,7 @@ const QA_COSTTRACKING = [
     action: "view",
     object: "cost analytics phase",
     scope: "module",
-    section: "How Phase Codes and Cost Types Roll Up",
+    section: "Phase Codes",
     question: "Where can I see cost by phase code?",
     answer: "In **Data Analytics & Insights → Cost → Cost Analytics** (Inputs, Summary, Control Budget) per project and tree version: phase code with actual, committed, variance, CPI, SPI, EAC and ETC. These were empty on the test trees.",
     tags: ["cost by phase code","cost analytics","control budget","eac etc"]
@@ -10212,7 +10212,7 @@ const QA_COSTTRACKING = [
     action: "view",
     object: "zero estimate",
     scope: "module",
-    section: "Checking the Numbers and Why a Cost Shows Zero",
+    section: "Troubleshooting",
     question: "Why is a project's estimated cost zero?",
     answer: "The project has no estimate in **Project Setup → Estimate**, the estimate is not approved, or its lines have zero quantity or rate. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["why is estimate zero","estimated cost zero","no estimate cost tracking","project missing from cost tracking"]
@@ -10221,7 +10221,7 @@ const QA_COSTTRACKING = [
     action: "view",
     object: "verify cost numbers",
     scope: "module",
-    section: "Checking the Numbers and Why a Cost Shows Zero",
+    section: "Troubleshooting",
     question: "How can I check that Cost Tracking numbers are right?",
     answer: "Compare screens: Cost by Projects total = sum of Cost by Cost Types blocks; dashboard Contract Value = estimate Total in Setup Estimate; Unit Rate explains the difference. Then compare lines with **Estimate Summary → All**.",
     tags: ["verify cost tracking","cost numbers do not match","reconcile cost tracking","check cost totals"]
@@ -10298,16 +10298,16 @@ const QA_PERMISSIONS = [
 ];
 
 const QA_WORKORDER = [
-  {"action":"explain","object":"data lineage","scope":"module","section":"Profile and Items","question":"Where does the Technician list on a work order come from, and why is someone missing?","answer":"The **Technician**, **Assign To** and **Approver** dropdowns list only users added under **Settings → Users and Permissions** with the matching permission. Technician shows only when **Service Location** is **Internal (Shop / In-House)**.","tags":["technician list source","assign to dropdown source","approver dropdown","work order technician dropdown","work order technician list come from","where does the technician list on a work order come from","technician missing from work order dropdown"]},
-  {"action":"explain","object":"data lineage","scope":"module","section":"The Work Orders Page","question":"Where do the Priority, Work Order Status and Maintenance Type lists come from?","answer":"They come from **Settings → Work Orders** for the work order type: statuses, **Priority** levels (with Due Hours, shown in the order set there) and **Maintenance Types**. Change them there, not on the work order.","tags":["priority list source","status dropdown source","maintenance type source"]},
-  {"action":"explain","object":"data lineage","scope":"module","section":"Profile and Items","question":"Where does the equipment information on a work order come from?","answer":"From **Home**, open **Work Order → Work Orders**, open the work order, then its **Profile** tab. The **Equipment** status, hours reading, warranty and location are fetched from the Equipment Master and cannot be edited on the work order. When the work order is approved, the equipment status updates from the **Operational Status** and the work order is added to the equipment's maintenance history.","tags":["equipment info source","equipment status fetched","maintenance history"]},
-  {"action":"explain","object":"data lineage","scope":"module","section":"Invoices and Cost","question":"Where do the Cost tab values on a work order come from?","answer":"From **Home**, open **Work Order → Work Orders**, open the work order, then its **Cost** tab. The **Cost** tab fills automatically; you cannot type on it. Hours booked in Timesheets go to **Labor**, materials issued from inventory to **Parts**, expenses to **Other**, and vendor invoices count only after all approval levels are done.","tags":["cost tab source","labor parts other","where does cost come from"]},
+  {"action":"explain","object":"data lineage","scope":"module","section":"Profile","question":"Where does the Technician list on a work order come from, and why is someone missing?","answer":"The **Technician**, **Assign To** and **Approver** dropdowns list only users added under **Settings → Users and Permissions** with the matching permission. Technician shows only when **Service Location** is **Internal (Shop / In-House)**.","tags":["technician list source","assign to dropdown source","approver dropdown","work order technician dropdown","work order technician list come from","where does the technician list on a work order come from","technician missing from work order dropdown"]},
+  {"action":"explain","object":"data lineage","scope":"module","section":"Work Orders","question":"Where do the Priority, Work Order Status and Maintenance Type lists come from?","answer":"They come from **Settings → Work Orders** for the work order type: statuses, **Priority** levels (with Due Hours, shown in the order set there) and **Maintenance Types**. Change them there, not on the work order.","tags":["priority list source","status dropdown source","maintenance type source"]},
+  {"action":"explain","object":"data lineage","scope":"module","section":"Profile","question":"Where does the equipment information on a work order come from?","answer":"From **Home**, open **Work Order → Work Orders**, open the work order, then its **Profile** tab. The **Equipment** status, hours reading, warranty and location are fetched from the Equipment Master and cannot be edited on the work order. When the work order is approved, the equipment status updates from the **Operational Status** and the work order is added to the equipment's maintenance history.","tags":["equipment info source","equipment status fetched","maintenance history"]},
+  {"action":"explain","object":"data lineage","scope":"module","section":"Invoices","question":"Where do the Cost tab values on a work order come from?","answer":"From **Home**, open **Work Order → Work Orders**, open the work order, then its **Cost** tab. The **Cost** tab fills automatically; you cannot type on it. Hours booked in Timesheets go to **Labor**, materials issued from inventory to **Parts**, expenses to **Other**, and vendor invoices count only after all approval levels are done.","tags":["cost tab source","labor parts other","where does cost come from"]},
   {"action":"explain","object":"data lineage","scope":"module","section":"Timesheets","question":"Why do I not see a phase code or crew member when booking time on a work order?","answer":"Phase Codes must be configured under **Projects → Project Setup → Phase Codes**, and time can be booked under **My Crew Timesheet** only for users added on the **Team** tab.","tags":["phase code missing timesheet","crew member missing timesheet","book time crew"]},
   {
     action: "create",
     object: "work order",
     scope: "module",
-    section: "The Work Orders Page",
+    section: "Work Orders",
     question: "How do I create a new work order?",
     answer: "Go to **Home → Work Order**, open the **Work Orders** tab and click **Create**. In the **Create Work Order Contract** window, choose the **Work Order Type** (for example Equipment), enter the **WO Description**, pick **Create By** (Inspection Issue or Equipment), choose the equipment, add the maintenance, cost and service details and click **Submit**. The work order appears on the list with its new ID. Some environments running an earlier version show only Name, Description and Type in this window.",
     tags: ["new work order","add work order","work order contract","create contract","work order creation"]
@@ -10316,7 +10316,7 @@ const QA_WORKORDER = [
     action: "view",
     object: "work order",
     scope: "module",
-    section: "The Work Orders Page",
+    section: "Work Orders",
     question: "How do I open a work order I already created?",
     answer: "From **Home**, open **Work Order → Work Orders**. On the **Work Orders** tab, click the work order. It opens on the **Profile** tab. Use the list, grid and column view icons on the right to change how the list looks.",
     tags: ["open work order","view work order","work order card","switch view"]
@@ -10325,7 +10325,7 @@ const QA_WORKORDER = [
     action: "define",
     object: "work order profile",
     scope: "module",
-    section: "Profile and Items",
+    section: "Profile",
     question: "What is the Work Order Profile tab?",
     answer: "The **Profile** tab is the front page of a work order. It has four sections: **Basic Information**, **Priority**, **Service Assignment** and **Diagnosis**. The fields follow the form the administrator set up under **Settings → Work Order Types → Profile**. It is always on and cannot be switched off.",
     tags: ["work order profile","profile tab","work order details","item setup"]
@@ -10334,7 +10334,7 @@ const QA_WORKORDER = [
     action: "create",
     object: "work order item",
     scope: "module",
-    section: "Profile and Items",
+    section: "Profile",
     question: "How do I add an item inside a work order?",
     answer: "From **Home**, open **Work Order → Work Orders**, open the work order, then its **Profile** tab. Click \"Create Item\". You can create multiple items inside one work order, and each item can be connected to a Project tree or to Issues.",
     tags: ["add item","work order item","create item","link item"]
@@ -10343,7 +10343,7 @@ const QA_WORKORDER = [
     action: "link",
     object: "work order item",
     scope: "module",
-    section: "Profile and Items",
+    section: "Profile",
     question: "How do I link a work order item to a project tree?",
     answer: "From **Home**, open **Work Order → Work Orders**, open the work order, then its **Profile** tab. When linking an item to a tree, select the Project, then select its tree version, and continue through the remaining tree selections.",
     tags: ["link project tree","item to tree","project version","tree linking"]
@@ -10352,7 +10352,7 @@ const QA_WORKORDER = [
     action: "link",
     object: "work order item",
     scope: "module",
-    section: "Profile and Items",
+    section: "Profile",
     question: "How do I link issues to a work order item?",
     answer: "From **Home**, open **Work Order → Work Orders**, open the work order, then its **Profile** tab. When linking with Issues, select the Issue type from the dropdown to see the detailed list of issues, then select one or multiple issues to link to the item.",
     tags: ["link issues","item issues","issue linking","work order issues"]
@@ -10469,7 +10469,7 @@ const QA_WORKORDER = [
     action: "define",
     object: "work order roles",
     scope: "module",
-    section: "Who Does What",
+    section: "Overview",
     question: "Who does what on a work order?",
     answer: "Six roles share the work. The **Work Order Administrator** sets up types, tabs, statuses, approvals, the reopen window and access. The **Requester** (site engineer or equipment coordinator) raises the work order, records the complaint and assigns it. The **Approver** (maintenance manager or business unit head) approves or rejects work orders and invoices. The **Technician / Supervisor** does the work and books hours, materials, parts and expenses. The **Store and Procurement user** issues materials and processes requisitions. The **Accounts user** records vendor invoices and follows them through approval.",
     tags: ["work order roles","who approves work order","requester","technician","work order administrator","roles and responsibilities"]
@@ -10550,7 +10550,7 @@ const QA_WORKORDER = [
     action: "view",
     object: "work order list",
     scope: "module",
-    section: "The Work Orders Page",
+    section: "Work Orders",
     question: "How do I filter or export the work order list?",
     answer: "From **Home**, open **Work Order → Work Orders**. On the **Work Orders** tab, use **Search by ID**, or click **Filters** to narrow by Work Order Status, Created By, Equipment Number, Equipment Status, Maintenance Type, Operational Status, Location, Service Type, Priority or Business Unit. Use **Manage Columns** and **Apply** to choose the columns, the view icons for list, grid or column view, and **Export** to download.",
     tags: ["filter work orders","export work orders","manage columns","search work order","work order list","work order filters"]
@@ -10559,7 +10559,7 @@ const QA_WORKORDER = [
     action: "create",
     object: "work order",
     scope: "module",
-    section: "The Work Orders Page",
+    section: "Work Orders",
     question: "How do I raise a work order against equipment or from an inspection issue?",
     answer: "From **Home**, open **Work Order → Work Orders**. On the **Work Orders** tab, click **Create**, pick the **Work Order Type** and enter the **WO Description** and **Work Order Status**. Choose **Create By**: **Inspection Issue** (pick the **Equipment Issue Linked** and the equipment fills in) or **Equipment** (pick the equipment). Then set the **Maintenance Type**, **Business Unit**, **Project**, **Phase Code**, **Created Date** and **Notes**, the **Priority**, **Operational Status** and **Due Date**, and the **Service Location**. Choose **Internal (Shop / In-House)** and a **Technician**, or **External Vendor** with the **Vendor**, **Vendor Contact** and **Vendor PO Number**. Click **Submit**.",
     tags: ["create work order from inspection issue","raise work order equipment","create by","inspection issue","service location","internal or vendor","work order fields","create a work order","create work order","new work order","add a work order","raise work order"]
@@ -10568,7 +10568,7 @@ const QA_WORKORDER = [
     action: "view",
     object: "workflow issues",
     scope: "module",
-    section: "The Work Orders Page",
+    section: "Work Orders",
     question: "What are Workflow Issues on the Work Order page?",
     answer: "The **Workflow Issues** tab lists work orders that failed to move through the approval workflow, along with the remarks the approver entered. A rejected work order returns to the Requester with these remarks, and the Requester edits and resubmits it.",
     tags: ["workflow issues","rejected work order","approval stuck","approver remarks"]
@@ -10577,7 +10577,7 @@ const QA_WORKORDER = [
     action: "define",
     object: "work order profile sections",
     scope: "module",
-    section: "Profile and Items",
+    section: "Profile",
     question: "What is on the Work Order Profile?",
     answer: "The Profile has four sections. **Basic Information** holds the WO ID, description, type, status, equipment (with warranty expiration, hours reading, location and status), maintenance type, Business Unit, Project, Phase Code, dates and notes. **Priority** holds Priority, Equipment Status, Operational Status and Due Date. **Service Assignment** holds the Service Location and the Technician or vendor details. **Diagnosis** holds Complaint, Cause and Correction.",
     tags: ["profile sections","basic information","work order profile fields","priority section","service assignment"]
@@ -10586,7 +10586,7 @@ const QA_WORKORDER = [
     action: "record",
     object: "diagnosis",
     scope: "module",
-    section: "Profile and Items",
+    section: "Profile",
     question: "What are Complaint, Cause and Correction on a work order?",
     answer: "They are the three **Diagnosis** boxes on the Profile. **Complaint** is the problem as reported and the Requester fills it in when raising the work order. **Cause** is the reason found after examining the equipment, filled in by the Technician. **Correction** is the work done, including parts replaced and adjustments, filled in by the Technician before closing. Each box supports bold, italics, lists, headings and links.",
     tags: ["complaint","cause","correction","diagnosis","work order diagnosis","root cause"]
@@ -10595,7 +10595,7 @@ const QA_WORKORDER = [
     action: "assign",
     object: "work order",
     scope: "module",
-    section: "Profile and Items",
+    section: "Profile",
     question: "How do I assign a work order or send it for approval?",
     answer: "From **Home**, open **Work Order → Work Orders**, open the work order, then its **Profile** tab. At the bottom of the Profile, pick the user in **Assign To**, then click **Submit** to save and assign, or **Submit for Approval** to route it through the approval workflow. The equipment status changes only after you submit.",
     tags: ["assign work order","submit for approval","assign to","submit work order"]
@@ -10604,7 +10604,7 @@ const QA_WORKORDER = [
     action: "create",
     object: "work order item",
     scope: "module",
-    section: "Profile and Items",
+    section: "Profile",
     question: "How do I set the status of an item on a work order?",
     answer: "Open the **Items** tab, click **Create Items**, enter the item name and **Description** and click **Submit**. Fill in the item form your administrator set up, choose the **Item Status** from the dropdown and click **Submit**.",
     tags: ["item status","work order items","create items","item form"]
@@ -10694,7 +10694,7 @@ const QA_WORKORDER = [
     action: "create",
     object: "requisition",
     scope: "module",
-    section: "Procurement, Parts, Expense and Schedule",
+    section: "Procurement",
     question: "How do I raise a requisition from a work order?",
     answer: "Open the **Procurement** tab, click **Requisition** and choose **Equipment**, **Material**, **Equipment Part** or **Delivery Service**. Enter the item details and submit. The requisition goes into the normal Procurement process. Approved purchase orders count under **Parts** on the **Cost** tab.",
     tags: ["requisition work order","procurement tab","buy parts","equipment part","delivery service"]
@@ -10703,7 +10703,7 @@ const QA_WORKORDER = [
     action: "create",
     object: "work order expense",
     scope: "module",
-    section: "Procurement, Parts, Expense and Schedule",
+    section: "Procurement",
     question: "How do I record an expense on a work order?",
     answer: "Open the **Expense** tab and click **Create**. Add a row for each item with **Item Name**, **Quantity** and **Unit Price** (the **Amount** is calculated), click **Upload** under Upload Invoice to attach the bill and click **Submit**. Each expense shows as a card with the Expense ID, Total Items, Amount and Created By. Expenses count under **Other** on the **Cost** tab.",
     tags: ["work order expense","add expense","expense tab","shop supplies","expense bill"]
@@ -10712,7 +10712,7 @@ const QA_WORKORDER = [
     action: "create",
     object: "work order parts",
     scope: "module",
-    section: "Procurement, Parts, Expense and Schedule",
+    section: "Procurement",
     question: "How do I add parts to a work order?",
     answer: "Open the **Parts** tab and click **Import**, choose the parts and quantities and click **Submit**. Unit cost comes from the maintenance parts purchase orders in Equipment Management. The parts are added to the maintenance history of the equipment being serviced. Use the delete icon in the Actions column to remove one.",
     tags: ["parts required","import parts","work order parts","maintenance history parts"]
@@ -10721,7 +10721,7 @@ const QA_WORKORDER = [
     action: "view",
     object: "work order schedule",
     scope: "module",
-    section: "Procurement, Parts, Expense and Schedule",
+    section: "Procurement",
     question: "What is the Schedule tab on a work order?",
     answer: "It shows the planned activities of the work order. The Supervisor updates the actual dates, the responsible person and the progress against each activity as the work goes on.",
     tags: ["work order schedule","schedule tab","planned activities","actual dates"]
@@ -10730,7 +10730,7 @@ const QA_WORKORDER = [
     action: "create",
     object: "work order invoice",
     scope: "module",
-    section: "Invoices and Cost",
+    section: "Invoices",
     question: "How do I record and approve a vendor invoice on a work order?",
     answer: "An Accounts user opens the **Invoices** tab, clicks **Create** on the **Invoice** sub-tab, enters the invoice details (**Vendor**, **Date**, **Amount**) and submits it for approval. Approvers use **Approve** or **Reject** on each row. Stuck invoices appear under **Workflow Issues**. The routing is set under **Settings → Invoices**. The invoice value counts in the work order cost only after every approval level approves.",
     tags: ["vendor invoice work order","approve invoice","invoices tab","invoice approval","workflow issues invoices"]
@@ -10739,7 +10739,7 @@ const QA_WORKORDER = [
     action: "view",
     object: "work order cost",
     scope: "module",
-    section: "Invoices and Cost",
+    section: "Invoices",
     question: "How is the cost of a work order calculated?",
     answer: "From **Home**, open **Work Order → Work Orders**, open the work order, then its **Cost** tab. The **Cost** tab fills itself from the other tabs; nobody types a cost into it. **Parts** = approved purchase orders from Procurement plus Inventory pulls. **Labor** = timesheet hours times rate. **External / Vendor** = approved vendor invoices matched to the work order. **Other** = Expense tab entries. **Net Cost** = the total of all of these.",
     tags: ["work order cost","cost tab","net cost","parts labor other","cost breakdown","how cost is calculated"]
@@ -10748,7 +10748,7 @@ const QA_WORKORDER = [
     action: "approve",
     object: "work order",
     scope: "module",
-    section: "Approval, Cancel and Reopen",
+    section: "Approval",
     question: "How do I approve or reject a work order?",
     answer: "From **Home**, open **Work Order → Work Orders** and open the work order. Open the work order and review its tabs, items, cost and attachments. The Requester clicks **Submit for Approval**, and the Approver clicks **Approve** or **Reject** and enters comments. On approval the work goes ahead and the work order becomes read-only. On rejection it returns to the Requester with the remarks, and a workflow issue appears under **Workflow Issues**. With several levels it stays pending until every level approves.",
     tags: ["approve work order","reject work order","work order approval","submit for approval","approver comments"]
@@ -10757,7 +10757,7 @@ const QA_WORKORDER = [
     action: "cancel",
     object: "work order",
     scope: "module",
-    section: "Approval, Cancel and Reopen",
+    section: "Approval",
     question: "How do I cancel a work order?",
     answer: "Open the work order, click the kebab menu on the **Profile** tab and choose **Cancel Work Order**, then confirm the warning. Return any materials already issued to the store through the Inventory module.",
     tags: ["cancel work order","kebab menu","cancel wo","issued materials return"]
@@ -10766,7 +10766,7 @@ const QA_WORKORDER = [
     action: "reopen",
     object: "work order",
     scope: "module",
-    section: "Approval, Cancel and Reopen",
+    section: "Approval",
     question: "How do I reopen a work order?",
     answer: "Open the Completed or Cancelled work order, click the kebab menu on the **Profile** tab and choose **Reopen Work Order**, enter the reason and click **reopen**. This works only within the **Reopen Window (days)** set under **Settings → Configuration**. After that the work order is locked.",
     tags: ["reopen work order","reopen cancelled","reopen reason","work order locked"]
@@ -10784,7 +10784,7 @@ const QA_WORKORDER = [
     action: "troubleshoot",
     object: "work order",
     scope: "module",
-    section: "Troubleshooting: Work Order Problems",
+    section: "Troubleshooting",
     question: "Why is my work order not moving forward for approval?",
     answer: "Check that an approval workflow is marked **Set as Default** under **Settings → Approval Workflow**, and look at the **Workflow Issues** tab for the approver's remarks. For a rejected work order, edit it and resubmit.",
     tags: ["work order not approving","approval stuck","set as default","workflow issues","work order not moving"]
@@ -10793,7 +10793,7 @@ const QA_WORKORDER = [
     action: "troubleshoot",
     object: "work order",
     scope: "module",
-    section: "Troubleshooting: Work Order Problems",
+    section: "Troubleshooting",
     question: "Why does the Cost tab not show the value I expect?",
     answer: "The Cost tab is rolled up from other tabs and cannot be edited. Invoices count only after every approval level under **Settings → Invoices** approves. Purchase orders count under **Parts** only once approved. Labor comes from timesheet hours, so check the timesheets were approved and every row has a **Phase Code**.",
     tags: ["cost tab wrong","cost missing","invoice not in cost","po not in cost","cost not updating"]
@@ -10802,7 +10802,7 @@ const QA_WORKORDER = [
     action: "troubleshoot",
     object: "work order",
     scope: "module",
-    section: "Troubleshooting: Work Order Problems",
+    section: "Troubleshooting",
     question: "Why can I not submit my work order?",
     answer: "If **Create By** is **Inspection Issue**, you must pick the **Equipment Issue Linked**, or change **Create By** to **Equipment** and choose the equipment. Work Order Type, Equipment, Created Date and Notes are always required, plus a **Technician** for internal work or a **Vendor** for external work. A message under a field tells you what is missing.",
     tags: ["cannot submit work order","validation message","equipment issue linked required","mandatory fields"]
@@ -10811,7 +10811,7 @@ const QA_WORKORDER = [
     action: "troubleshoot",
     object: "work order",
     scope: "module",
-    section: "Troubleshooting: Work Order Problems",
+    section: "Troubleshooting",
     question: "Why is the technician missing, or the equipment status not changing?",
     answer: "For a missing technician, add the user under **Settings → Users and Permissions** with the right permission, and check **Service Location** is **Internal (Shop / In-House)**. For a status that did not change, check the **Linked Equipment Status** under **Settings → Work Order Types → Operational Status**, and make sure the work order was submitted.",
     tags: ["technician not listed","equipment status not changing","linked equipment status","technician dropdown"]
@@ -10820,7 +10820,7 @@ const QA_WORKORDER = [
     action: "overview",
     object: "work order flow",
     scope: "module",
-    section: "Who Does What",
+    section: "Overview",
     question: "What is the full work order process from setup to reporting?",
     answer: "First the **Work Order Administrator** configures the type, **Maintenance Types**, **Status**, **Priority**, **Approval Workflow**, **Invoices** approval, **Configuration** and **Users and Permissions** under **Settings**. Then the **Requester** clicks **Create** on the **Work Orders** tab and raises the work order against the equipment. The **Technician**, **Supervisor**, **Store Keeper** and **Purchase Executive** record items, crew, hours, materials, parts and expenses. The **Accounts user** raises vendor invoices and the **Approver** processes them. The Approver and Requester approve, complete, cancel or reopen the work order. Finally the Administrator and Approver review the **Equipment Breakdown Report**.",
     tags: ["work order process","work order flow","end to end","setup to reporting","work order steps","how does work order work","work order lifecycle"]
@@ -10829,7 +10829,7 @@ const QA_WORKORDER = [
     action: "define",
     object: "requester",
     scope: "module",
-    section: "Who Does What",
+    section: "Overview",
     question: "As a requester, how do I raise a work order?",
     answer: "Open **Home → Work Order**, click **Create** on the **Work Orders** tab and choose the **Work Order Type**. Enter the **WO Description** and **Work Order Status**, then choose **Create By**: **Inspection Issue** (pick the **Equipment Issue Linked**) or **Equipment** (pick the equipment). Fill in the maintenance type, business unit, project, phase code, created date and notes, set the priority, operational status and due date, and choose the **Service Location** with a technician or vendor. Click **Submit**. Then open the work order, write the **Complaint**, add items, choose **Assign To** and click **Submit** or **Submit for Approval**.",
     tags: ["requester","site engineer","equipment coordinator","raise work order","as a requester","what does the requester do"]
@@ -10838,7 +10838,7 @@ const QA_WORKORDER = [
     action: "define",
     object: "technician",
     scope: "module",
-    section: "Who Does What",
+    section: "Overview",
     question: "As a technician, what do I do on a work order?",
     answer: "Open the work order from the **Work Orders** tab. On the **Profile**, record the **Cause** after examining the equipment and the **Correction** as you do the work. Keep each item's status up to date on the **Items** tab. Book your hours under **Timesheets → My Timesheet** (or **My Crew Timesheet** for a crew, if you are on the Team tab). Request equipment on the **Equipment** tab, order materials on **Inventory**, import parts on **Parts**, record extra spend on **Expense** and upload drawings on **Drawings**. You appear in the Technician dropdown only if your user group has the right permission.",
     tags: ["technician","mechanic","shop supervisor","as a technician","record diagnosis","what does the technician do","technician work order"]
@@ -10847,7 +10847,7 @@ const QA_WORKORDER = [
     action: "define",
     object: "approver",
     scope: "module",
-    section: "Who Does What",
+    section: "Overview",
     question: "As an approver, how do I approve a work order?",
     answer: "When the Requester clicks **Submit for Approval**, open the work order and review its tabs, items, cost and attachments. Click **Approve** or **Reject** and enter your comments. If you approve, the work proceeds; if you reject, the work order goes back to the Requester with your remarks and a workflow issue appears under **Workflow Issues**. With several approval levels, the work order stays pending until every level approves. You also approve vendor invoices on the **Invoices** tab and timesheets in **Timesheet Logs**.",
     tags: ["approver","maintenance manager","business unit head","as an approver","who approves work order","approve reject work order"]
@@ -10856,7 +10856,7 @@ const QA_WORKORDER = [
     action: "define",
     object: "store keeper",
     scope: "module",
-    section: "Who Does What",
+    section: "Overview",
     question: "As a store keeper or purchase executive, what do I do on a work order?",
     answer: "The Store Keeper opens the **Inventory** tab, checks the orders raised against the work order (**Orders**, **Rejected Orders**, **EX Orders**) and issues the materials from stock. If the work order is cancelled, return issued materials to the store through the Inventory module. The Purchase Executive opens the **Procurement** tab, clicks **Requisition**, picks **Equipment**, **Material**, **Equipment Part** or **Delivery Service**, enters the items and submits. Approved purchase orders count under **Parts** on the **Cost** tab.",
     tags: ["store keeper","purchase executive","store and procurement user","issue materials","as a store keeper","as a purchase executive"]
@@ -10865,7 +10865,7 @@ const QA_WORKORDER = [
     action: "define",
     object: "accounts user",
     scope: "module",
-    section: "Who Does What",
+    section: "Overview",
     question: "As an accounts user, how do I record a vendor invoice on a work order?",
     answer: "Open the work order, go to the **Invoices** tab and click **Create** on the **Invoice** sub-tab. Enter the invoice details: the **Vendor**, the invoice **Date** and the **Amount**, then submit it for approval. Follow it through the approval levels; stuck invoices appear under the **Workflow Issues** sub-tab. Its value is added to the **External / Vendor** line of the **Cost** tab only after every level approves.",
     tags: ["accounts user","accounts executive","as an accounts user","vendor invoice","invoice work order","raise invoice"]
@@ -10874,7 +10874,7 @@ const QA_WORKORDER = [
     action: "configure",
     object: "administrator setup",
     scope: "module",
-    section: "Who Does What",
+    section: "Overview",
     question: "As an administrator, what do I set up before people raise work orders?",
     answer: "Under **Home → Work Order → Settings**: configure the work order type (**Tab Visibility**, **Profile**, **Item Form**, **Expense Form**, **ID Settings** and, for Equipment, **Operational Status**); add **Maintenance Types**, **Status** and **Priority**; create the **Approval Workflow** and **Invoices** approval and mark the workflow **Set as Default**; set the **Reopen Window (days)** under **Configuration**; and add user groups under **Users and Permissions**. Also check that the equipment exists in Equipment Management with a Business Unit and Location.",
     tags: ["administrator setup","work order administrator","first time setup","before first work order","as an administrator","set up work orders","who configures work orders"]
@@ -10883,7 +10883,7 @@ const QA_WORKORDER = [
     action: "define",
     object: "work order settings",
     scope: "module",
-    section: "Who Does What",
+    section: "Overview",
     question: "Where do I find the work order settings?",
     answer: "Open **Home → Work Order** and click **Settings** (the gear icon). The left panel lists **Work Order Types**, **Maintenance Types**, **Invoices**, **Approval Workflow**, **Status**, **Priority**, **Configuration** and **Users and Permissions**, with a search box to find a page. Each page saves on its own. Global Data → Work Order also has the type list and status colours.",
     tags: ["work order settings","settings gear","where is settings","work order configuration pages"]
@@ -10937,7 +10937,7 @@ const QA_WORKORDER = [
     action: "define",
     object: "work order tabs",
     scope: "module",
-    section: "The Work Orders Page",
+    section: "Work Orders",
     question: "Which tab do I use on a work order for hours, parts, materials, expenses or invoices?",
     answer: "Hours go on **Timesheets**. Parts go on **Parts** (**Import**). Materials from stock go on **Inventory**. Items to buy go on **Procurement** (**Requisition**). Extra spend goes on **Expense**. Vendor bills go on **Invoices**. Equipment and accessories needed for the job go on **Equipment**. The crew goes on **Team**, plans on **Schedule**, files on **Documents** and **Drawings**, and mail on **Communication**. **Cost** collects it all automatically.",
     tags: ["which tab","tabs of a work order","where do I record","work order tabs who uses","tab for hours","tab for parts"]
@@ -10946,7 +10946,7 @@ const QA_WORKORDER = [
     action: "define",
     object: "create work order fields",
     scope: "module",
-    section: "The Work Orders Page",
+    section: "Work Orders",
     question: "What fields are on the Create Work Order window?",
     answer: "Work Order Type, WO Description, Location, Work Order Status, Create By, Equipment Issue Linked (Inspection Issue path only), Equipment, Maintenance Type, Business Unit, Project, Phase Code, Created Date, Notes, Priority, Equipment Status (read-only), Operational Status, Due Date and Service Location. Then Technician for **Internal (Shop / In-House)**, or Vendor, Vendor Contact and Vendor PO Number for **External Vendor**. Work Order Type, Equipment, Created Date, Notes and Service Location are required, plus the Equipment Issue Linked, Technician or Vendor on their paths.",
     tags: ["create work order fields","work order form fields","mandatory fields work order","required fields","field reference"]
@@ -10955,7 +10955,7 @@ const QA_WORKORDER = [
     action: "define",
     object: "create by",
     scope: "module",
-    section: "The Work Orders Page",
+    section: "Work Orders",
     question: "What is the difference between Create By Inspection Issue and Equipment?",
     answer: "**Inspection Issue** is for work that comes from an issue reported in an equipment inspection: you pick the **Equipment Issue Linked** and the equipment is taken from it. **Equipment** is for work raised directly against a piece of equipment: you pick the equipment from the dropdown and no linked issue is shown.",
     tags: ["create by inspection issue","create by equipment","equipment issue linked","inspection issue work order"]
@@ -10991,7 +10991,7 @@ const QA_WORKORDER = [
     action: "define",
     object: "work order lifecycle",
     scope: "module",
-    section: "Approval, Cancel and Reopen",
+    section: "Approval",
     question: "What statuses and steps does a work order go through?",
     answer: "It starts with the **Work Order Status** picked at creation. The Requester submits it (**Submit** or **Submit for Approval**). The Approver approves it, or rejects it and it returns to the Requester with remarks to edit and resubmit. Finished work becomes Completed and read-only. It can be cancelled from the kebab menu, and a Completed or Cancelled work order can be reopened with a reason inside the **Reopen Window (days)**. The list of statuses is set under **Settings → Status**.",
     tags: ["work order status flow","work order life cycle","statuses and transitions","completed read-only","work order steps approval"]
@@ -11000,7 +11000,7 @@ const QA_WORKORDER = [
     action: "define",
     object: "approval",
     scope: "module",
-    section: "Approval, Cancel and Reopen",
+    section: "Approval",
     question: "Who approves work orders, invoices and timesheets?",
     answer: "Work orders go to the approvers on the **Approval Workflow** for the work order type (**Settings → Approval Workflow**). Vendor invoices go to the approvers set under **Settings → Invoices**. Timesheets are approved from **Timesheet Logs** using the timesheet approval workflow. Each has its own levels, and the item moves on only when every level has approved.",
     tags: ["who approves","approvers","invoice approver","timesheet approver","approval levels who"]
@@ -11009,7 +11009,7 @@ const QA_WORKORDER = [
     action: "reopen",
     object: "work order",
     scope: "module",
-    section: "Approval, Cancel and Reopen",
+    section: "Approval",
     question: "Can I reopen a completed work order?",
     answer: "Yes, a Completed or Cancelled work order can be reopened while it is still inside the **Reopen Window (days)** set under **Settings → Configuration**. Open it, click the kebab menu on the **Profile** tab, choose **Reopen Work Order**, enter the reason and click **reopen**. After the window passes the work order is locked.",
     tags: ["reopen completed work order","reopen window passed","reopen option missing","locked work order"]
@@ -11018,7 +11018,7 @@ const QA_WORKORDER = [
     action: "troubleshoot",
     object: "work order tab",
     scope: "module",
-    section: "Troubleshooting: Work Order Problems",
+    section: "Troubleshooting",
     question: "Why is a tab missing on my work order?",
     answer: "The tab is switched off for that work order type. Go to **Settings → Work Order Types**, click the type, open **Tab Visibility**, turn the tab on and click **Save Changes**. Visibility is set per type, so check the type the work order was raised under. **Profile** is always on.",
     tags: ["tab missing","missing tab work order","tab not showing","tab visibility fix"]
@@ -11027,7 +11027,7 @@ const QA_WORKORDER = [
     action: "troubleshoot",
     object: "work order type",
     scope: "module",
-    section: "Troubleshooting: Work Order Problems",
+    section: "Troubleshooting",
     question: "Why is the work order type I need not available when I create a work order?",
     answer: "The type has not been created. Go to **Settings → Work Order Types**, click **+ Work Order Type**, enter the details and save. **Equipment** is the only type available by default.",
     tags: ["work order type missing","type not available","no work order type","create type"]
@@ -11036,7 +11036,7 @@ const QA_WORKORDER = [
     action: "troubleshoot",
     object: "reopen",
     scope: "module",
-    section: "Troubleshooting: Work Order Problems",
+    section: "Troubleshooting",
     question: "Why is the Reopen option missing on a work order?",
     answer: "The **Reopen Window (days)** under **Settings → Configuration** has passed, so the work order is locked. The window counts from the first time the work order became Completed or Cancelled. Ask an administrator if the window needs to be longer for future work orders.",
     tags: ["reopen missing","cannot reopen","reopen option not available","work order locked"]
@@ -11045,7 +11045,7 @@ const QA_WORKORDER = [
     action: "troubleshoot",
     object: "technician",
     scope: "module",
-    section: "Troubleshooting: Work Order Problems",
+    section: "Troubleshooting",
     question: "Why is the technician missing from the Technician dropdown?",
     answer: "Add the user under **Settings → Users and Permissions** with the matching permission. Also check that **Service Location** is **Internal (Shop / In-House)**, because **External Vendor** shows the vendor fields instead.",
     tags: ["technician missing","technician not in dropdown","assign to missing user","user not listed work order"]
@@ -11054,7 +11054,7 @@ const QA_WORKORDER = [
     action: "troubleshoot",
     object: "equipment status",
     scope: "module",
-    section: "Troubleshooting: Work Order Problems",
+    section: "Troubleshooting",
     question: "Why did the equipment status not change after I updated the work order?",
     answer: "Check the **Linked Equipment Status** for the operational status you chose under **Settings → Work Order Types → Operational Status**. Also make sure the work order was submitted: the equipment status changes only after you submit.",
     tags: ["equipment status not changing","status not updated","operational status linked","equipment master status work order"]
@@ -11063,7 +11063,7 @@ const QA_WORKORDER = [
     action: "troubleshoot",
     object: "work order id",
     scope: "module",
-    section: "Troubleshooting: Work Order Problems",
+    section: "Troubleshooting",
     question: "Why is the work order ID not in the format I expected?",
     answer: "Open **Settings → Work Order Types**, click the type and open **ID Settings**. Check which components are switched on, their order and the **ID Separator**; the **Example Format** line shows how the ID will look. IDs are fixed once a work order exists, so a change only affects settings you make before work orders are created.",
     tags: ["work order id wrong","id format wrong","wo id not expected","example format"]
@@ -11072,7 +11072,7 @@ const QA_WORKORDER = [
     action: "troubleshoot",
     object: "timesheet",
     scope: "module",
-    section: "Troubleshooting: Work Order Problems",
+    section: "Troubleshooting",
     question: "Why can I not book time against my work order?",
     answer: "The person must be on the work order's **Team** tab before you can book their time under **My Crew Timesheet**, and every timesheet row needs a **Phase Code** (set up under **Projects → Project Setup → Phase Codes**). Import or add the rows again after adding the person.",
     tags: ["cannot book time","time not booking","phase code required","add to team first"]
@@ -11090,7 +11090,7 @@ const QA_WORKORDER = [
     action: "define",
     object: "documents",
     scope: "module",
-    section: "Invoices and Cost",
+    section: "Invoices",
     question: "Who approves vendor invoices on a work order?",
     answer: "The approvers you set under **Settings → Invoices**. The Accounts user submits the invoice from the **Invoices** tab, and the approver clicks **Approve** or **Reject** on the row. When several levels are set, the invoice moves on only after every level approves, and only then is its value added to the **External / Vendor** line of the **Cost** tab. Stuck invoices appear under **Workflow Issues**.",
     tags: ["invoice approver","who approves invoices","invoice approval levels","workflow issues invoice"]
@@ -11099,7 +11099,7 @@ const QA_WORKORDER = [
     action: "define",
     object: "work order types",
     scope: "module",
-    section: "Who Does What",
+    section: "Overview",
     question: "Which work order types are available?",
     answer: "**Equipment** is the default type. Add others under **Settings → Work Order Types** with **+ Work Order Type**. Each type has its own tabs, forms and ID format. Some environments running an earlier version also show **Service** and **Material** types.",
     tags: ["work order types","default type","equipment type","service type","material type"]
@@ -11126,7 +11126,7 @@ const QA_WORKORDER = [
     action: "view",
     object: "work order page tabs",
     scope: "module",
-    section: "The Work Orders Page",
+    section: "Work Orders",
     question: "What are the tabs on the Work Order page?",
     answer: "The page has three tabs: **Work Orders** (every work order), **Workflow Issues** (work orders that failed approval, with the approver's remarks) and **Reports** (the Equipment Breakdown Report). **Settings** is on the right.",
     tags: ["work order page tabs","workflow issues","reports tab","settings"]
@@ -11144,7 +11144,7 @@ const QA_WORKORDER = [
     action: "view",
     object: "rejected work orders",
     scope: "module",
-    section: "Approval, Cancel and Reopen",
+    section: "Approval",
     question: "Where do I see rejected work orders?",
     answer: "Open **Work Order → Workflow Issues**. It lists work orders that failed to move through approval with the approver's remarks. The work order goes back to the Requester, who edits and resubmits it.",
     tags: ["rejected work order","workflow issues","approver remarks"]
@@ -11153,7 +11153,7 @@ const QA_WORKORDER = [
     action: "view",
     object: "work order tabs",
     scope: "module",
-    section: "The Work Orders Page",
+    section: "Work Orders",
     question: "What tabs does a work order have?",
     answer: "A work order can show **Profile**, **Items**, **Team**, **Timesheets**, **Equipment**, **Inventory**, **Procurement**, **Expense**, **Schedule**, **Communication**, **Documents**, **Drawings**, **Parts**, **Invoices** and **Cost**. The administrator switches tabs on or off per work order type under **Settings → Work Order Types → Tab Visibility**. **Profile** is always on.",
     tags: ["work order tabs","tabs of a work order","which tabs","tab list","what tabs does a work order have"]
@@ -11162,7 +11162,7 @@ const QA_WORKORDER = [
     action: "view",
     object: "work order cost tab",
     scope: "module",
-    section: "Invoices and Cost",
+    section: "Invoices",
     question: "What does the Cost tab show on a work order?",
     answer: "The **Cost** tab shows the work order cost by category with its source: **Parts** (approved purchase orders plus Inventory pulls), **Labor** (timesheet hours times rate), **External / Vendor** (approved vendor invoices), **Other** (Expense tab entries) and **Net Cost** (the total). Nothing is typed into it. It fills itself as the other tabs are used.",
     tags: ["cost tab","work order cost tab","what does the cost tab show","net cost","parts labor external other"]
@@ -11171,7 +11171,7 @@ const QA_WORKORDER = [
     action: "define",
     object: "work order creator permission",
     scope: "module",
-    section: "The Work Orders Page",
+    section: "Work Orders",
     question: "Who can create a work order?",
     answer: "A user whose group has the create permission under **Settings → Users and Permissions**, usually a **Requester** such as a site engineer or equipment coordinator. They click **Create** on the **Work Orders** tab and raise the work order against equipment.",
     tags: ["who can create work order","create permission","requester","raise work order permission"]
@@ -11180,7 +11180,7 @@ const QA_WORKORDER = [
     action: "view",
     object: "wo id",
     scope: "module",
-    section: "Profile and Items",
+    section: "Profile",
     question: "What is the WO ID and where do I see it?",
     answer: "The **WO ID** is generated automatically when the work order is created, in the format set under **Settings → Work Order Types → ID Settings**. It shows at the top of the **Profile** tab and in the first column of the **Work Orders** list.",
     tags: ["wo id","work order id","work order number","id shown"]
@@ -11189,7 +11189,7 @@ const QA_WORKORDER = [
     action: "define",
     object: "work order administrator",
     scope: "module",
-    section: "Who Does What",
+    section: "Overview",
     question: "Who is the Work Order Administrator?",
     answer: "Usually a System Administrator or Equipment Admin. They set up work order types, tabs, forms, ID format, operational statuses, maintenance types, statuses, priorities, approval workflows, the reopen window and user access under **Home → Work Order → Settings**.",
     tags: ["work order administrator","admin role","who sets up work orders","system administrator"]
@@ -11198,7 +11198,7 @@ const QA_WORKORDER = [
     action: "define",
     object: "work order prerequisites",
     scope: "module",
-    section: "Who Does What",
+    section: "Overview",
     question: "What must be in place before the first work order is raised?",
     answer: "Set up the work order types, maintenance types, statuses and priorities, mark an approval workflow **Set as Default**, configure invoice approvals, make sure the equipment exists in Equipment Management with a Business Unit and Location, create the Projects and Phase Codes for cost, stock the items in Inventory and add users under **Users and Permissions**.",
     tags: ["before first work order","prerequisites","checklist","setup order work order"]
@@ -11207,7 +11207,7 @@ const QA_WORKORDER = [
     "action": "view",
     "object": "work order history",
     "scope": "module",
-    "section": "The Work Orders Page",
+    "section": "Work Orders",
     "question": "Where do I see the history of a work order from the list?",
     "answer": "From **Home**, open **Work Order → Work Orders**. Each row has a **History** action that shows the work order history. The other row action is **Delete**.",
     "tags": [
@@ -11311,7 +11311,7 @@ const QA_PROPOSALMANAGEMENT = [
     action: "create",
     object: "bid",
     scope: "module",
-    section: "Bid Tab (Tenders)",
+    section: "Bid",
     question: "How do I create a bid (tender) within a proposal?",
     answer: "From **Home**, open **Proposal Management → Proposals** and open the proposal. Open the proposal, click the Bid tab and click \"Add Tender\". In \"Create Tender\" enter the Tender Name, a Description, check the Select Proposal value and choose Open Bidding, Selective Bidding or Selective Bidding - No Prequalification, then click \"Submit for Approval\". The tender is run in Tender Management and linked back through Proposal Linked.",
     tags: ["create bid","new bid","add bid to proposal","add tender","how do I add a tender from a proposal","create tender from proposal"]
@@ -11320,7 +11320,7 @@ const QA_PROPOSALMANAGEMENT = [
     action: "export",
     object: "bid",
     scope: "module",
-    section: "Bid Tab (Tenders)",
+    section: "Bid",
     question: "Can I export or import bids in bulk?",
     answer: "From **Home**, open **Proposal Management → Proposals**, open the proposal, then its **Bid** tab. The Bid tab lists the proposal's tenders with Filters, Manage Columns, table / grid views, Save Layout and Show as Graph. Bulk Excel import of tenders is not shown on this tab.",
     tags: ["bulk bids","download bids","upload bids"]
@@ -11329,7 +11329,7 @@ const QA_PROPOSALMANAGEMENT = [
     action: "view",
     object: "bid",
     scope: "module",
-    section: "Bid Tab (Tenders)",
+    section: "Bid",
     question: "What views are available for the Bids list?",
     answer: "The Bid tab (tenders) offers table and grid views, Manage Columns and \"Show as Graph\"; click \"Save Layout\" to keep your choice.",
     tags: ["bid views","kanban bids","table view"]
@@ -11581,7 +11581,7 @@ const QA_PROPOSALMANAGEMENT = [
     action: "view",
     object: "proposal field",
     scope: "module",
-    section: "Where Proposal Fields Come From",
+    section: "Proposal Fields",
     question: "Where do the drop-down values in a proposal come from?",
     answer: "Proposal Type, Bid Type, Project Type, Business Development Code, Department Code, Delivery Method and Status come from **Proposal Management → Settings**. Customers, POCs, Owners and the Site Name / Job Site locations come from Global Data (Customers, Owners, Locations). Opportunity comes from Opportunity Management. Company Contact, Estimators, Teams and Assign To come from the company users in Global Rosters.",
     tags: ["proposal dropdown source","where do proposal fields come from","proposal profile lineage"]
@@ -11590,7 +11590,7 @@ const QA_PROPOSALMANAGEMENT = [
     action: "view",
     object: "proposal customer",
     scope: "module",
-    section: "Where Proposal Fields Come From",
+    section: "Proposal Fields",
     question: "Where does the Customers list on a proposal come from?",
     answer: "From **Global Data → Customers**. Adding a customer or POC from the proposal also creates it in Global Data.",
     tags: ["proposal customers dropdown","where do customers on a proposal come from","customer poc source","customers global data proposal","customers list"]
@@ -11599,7 +11599,7 @@ const QA_PROPOSALMANAGEMENT = [
     action: "view",
     object: "proposal owner",
     scope: "module",
-    section: "Where Proposal Fields Come From",
+    section: "Proposal Fields",
     question: "Where do Owners and Site Name come from on a proposal?",
     answer: "Owners come from **Global Data → Owners**. Site Name and Job Site come from **Global Data → Locations** (8 locations plus None); choosing a site fills City and State.",
     tags: ["proposal owners","site name job site source","locations proposal"]
@@ -11608,7 +11608,7 @@ const QA_PROPOSALMANAGEMENT = [
     action: "view",
     object: "proposal opportunity",
     scope: "module",
-    section: "Where Proposal Fields Come From",
+    section: "Proposal Fields",
     question: "Is a proposal linked to an Opportunity?",
     answer: "Optionally. The Profile's Opportunity drop-down lists the opportunities of Opportunity Management (None, or for example \"1 Parent Opp Test A\"). For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["proposal from opportunity","link proposal to opportunity","opportunity dropdown proposal"]
@@ -11617,7 +11617,7 @@ const QA_PROPOSALMANAGEMENT = [
     action: "view",
     object: "proposal type",
     scope: "module",
-    section: "Where Proposal Fields Come From",
+    section: "Proposal Fields",
     question: "Where do Proposal Types come from?",
     answer: "**Proposal Management → Settings → Proposal → Proposal Types**. The extra sections at the bottom of the Profile come from the Proposal Form tab of the same page.",
     tags: ["proposal types source","proposal type list"]
@@ -11626,7 +11626,7 @@ const QA_PROPOSALMANAGEMENT = [
     action: "view",
     object: "project type",
     scope: "module",
-    section: "Where Proposal Fields Come From",
+    section: "Proposal Fields",
     question: "What do Project Type and Bid Type mean on a proposal?",
     answer: "Project Type is a code from **Settings → Project Types** that carries Field/Shop, Material and New/Repair (for S-PipingSS: SHOP, SS, NEW). Bid Type comes from **Settings → Bid Types** (Build-Own-Transfer, General, Speciality Items). They are different from the Open / Selective Bidding choice used when creating a tender.",
     tags: ["project type proposal","bid type proposal","field shop material new repair"]
@@ -11635,7 +11635,7 @@ const QA_PROPOSALMANAGEMENT = [
     action: "view",
     object: "estimators",
     scope: "module",
-    section: "Where Proposal Fields Come From",
+    section: "Proposal Fields",
     question: "Why do I see only a few people in the Estimators field?",
     answer: "Estimators lists only people with the Estimator role in **Global Data → Users & Permissions → Global Rosters**. Company Contact and Assign To list all users instead.",
     tags: ["estimators dropdown","estimator role","proposal estimators"]
@@ -11644,7 +11644,7 @@ const QA_PROPOSALMANAGEMENT = [
     action: "view",
     object: "proposal status",
     scope: "module",
-    section: "Where Proposal Fields Come From",
+    section: "Proposal Fields",
     question: "What proposal statuses are there?",
     answer: "Each status has a colour. Start is the first standard status; Completed and Lost are the last-level standard statuses that carry the Success / Failure flag. Add or edit them in **Settings → Status**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["proposal statuses list","what statuses can a proposal have","proposal status options","status colours","no bid lost completed"]
@@ -11707,7 +11707,7 @@ const QA_PROPOSALMANAGEMENT = [
     action: "view",
     object: "bid tab",
     scope: "module",
-    section: "Bid Tab (Tenders)",
+    section: "Bid",
     question: "What is the Bid tab on a proposal?",
     answer: "A list of the tenders raised for that proposal (Tender Name, Tender ID, Bid Type, Status, Approval Status) with Add Tender. Tenders are run in Tender Management and linked back through Proposal Linked.",
     tags: ["bid tab proposal","tender from proposal","proposal tender link"]
@@ -11716,7 +11716,7 @@ const QA_PROPOSALMANAGEMENT = [
     action: "view",
     object: "tender",
     scope: "module",
-    section: "Bid Tab (Tenders)",
+    section: "Bid",
     question: "What bid types can I pick when adding a tender?",
     answer: "Open Bidding, Selective Bidding and Selective Bidding - No Prequalification. These are the tender's own bidding types, separate from the Bid Type on the proposal Profile (**Settings → Bid Types**).",
     tags: ["tender bid type","open bidding selective bidding"]
@@ -11860,7 +11860,7 @@ const QA_PROPOSALMANAGEMENT = [
     action: "view",
     object: "proposal setup order",
     scope: "module",
-    section: "Who sets this up",
+    section: "Overview",
     question: "In what order should I set up Proposal Management?",
     answer: "Check Customers, Owners, Locations and Crews in Global Data and the Estimator roles in Global Rosters; then in **Proposal Management → Settings** create Proposal Types and the Proposal Form, fill Bid Types, Project Types, Department Codes, Business Development and Delivery Method, set Status, Approval Workflow, ID Settings and Users and Permissions, and add Checklist and Submittal templates.",
     tags: ["proposal management setup order","set up proposal management","proposal admin setup"]
@@ -11908,7 +11908,7 @@ const QA_TENDERMANAGEMENT = [
     action: "view",
     object: "tender management",
     scope: "module",
-    section: "Who sets this up",
+    section: "Overview",
     question: "What is Tender Management?",
     answer: "The module where you run formal tenders: create a tender, set its event schedule, pre-qualify vendors, collect technical and financial responses, compare and negotiate prices and award a work order. Open it from the Home tile; it starts on the Tenders list.",
     tags: ["tender management","what is tender management","tender module","tendering","how does tender management work"]
@@ -11917,7 +11917,7 @@ const QA_TENDERMANAGEMENT = [
     action: "view",
     object: "tender setup order",
     scope: "module",
-    section: "Who sets this up",
+    section: "Overview",
     question: "In what order should I set up Tender Management?",
     answer: "First make sure the vendors exist in **Global Data → Vendors**. Then **in Tender Management → Settings** review Bid Type, Status Configuration and Bid Templates, create BOQ & Estimate, Pre Qualification and Technical Package templates, add approval levels for Bid, Pre Qualification and Technical Package, and add user groups. Then create a tender.",
     tags: ["set up tender management","tender admin setup","tender setup order","tender settings first"]
@@ -11926,7 +11926,7 @@ const QA_TENDERMANAGEMENT = [
     action: "view",
     object: "tender roles",
     scope: "module",
-    section: "Who sets this up",
+    section: "Overview",
     question: "Who does what in Tender Management?",
     answer: "The Module Admin sets up Settings and Global Data vendors; the PM or tender manager creates tenders and runs the cards; approvers named in the approval workflow approve tenders and packages; vendors answer pre-qualification and submit responses from their own Bid tab.",
     tags: ["who creates a tender","who approves a tender","tender roles","tender approver"]
@@ -11935,7 +11935,7 @@ const QA_TENDERMANAGEMENT = [
     action: "view",
     object: "tender bid name",
     scope: "module",
-    section: "Who sets this up",
+    section: "Overview",
     question: "Is a Tender the same as a Bid?",
     answer: "Yes. The product calls the object a Tender in the list and breadcrumbs, but some fields and tabs still say Bid (Bid Name, Bid Type, Bid Status, the Bid tab).",
     tags: ["tender vs bid","tender and bid same","difference between tender and bid"]
@@ -11944,7 +11944,7 @@ const QA_TENDERMANAGEMENT = [
     action: "view",
     object: "tender settings location",
     scope: "module",
-    section: "Who sets this up",
+    section: "Overview",
     question: "Where are the Tender Management settings?",
     answer: "From **Home**, open **Tender Management**. Click the Settings gear inside Tender Management. The menu is Bid Type, Scope of Work, Agreement, Status Configuration, Approval Workflow, Bid Templates, BOQ & Estimate Template, Pre Qualification Template, Technical Package Template and Users and Permissions. Only the vendors and the Bid Templates list are shared with Global Data.",
     tags: ["tender management settings","where are tender settings","tender settings menu"]
@@ -11953,7 +11953,7 @@ const QA_TENDERMANAGEMENT = [
     action: "create",
     object: "tender",
     scope: "module",
-    section: "Tender List and Creating a Tender",
+    section: "Tenders",
     question: "How do I create a tender?",
     answer: "Open **Tender Management → Tenders** and click Add Tender. Enter the Tender Name and Description, optionally Select Proposal, choose a Select Bid Type and Open Bidding, Selective Bidding or Selective Bidding - No Prequalification, then click Submit for Approval. The tender shows Ready for Approval until it is approved.",
     tags: ["create tender","add tender","new tender","create a tender/bid for a proposal","how do I create a tender/bid for a proposal","create bid","new bid"]
@@ -11962,7 +11962,7 @@ const QA_TENDERMANAGEMENT = [
     action: "view",
     object: "tender list",
     scope: "module",
-    section: "Tender List and Creating a Tender",
+    section: "Tenders",
     question: "What does the Tenders list show?",
     answer: "Tender Name, Tender ID, Description, Proposal Linked, Bid Type, Status, Approve, Reject, Approval Status and Actions (edit, notes, delete), with status chips such as Under Review, Reopened, Shortlisted, Awarded and Completed. Use Filters, Manage Columns, Table or Grid View, Save Layout and Show as Graph.",
     tags: ["tender list columns","tenders tab","tender list","tender status chips","what is on the tenders screen"]
@@ -11971,7 +11971,7 @@ const QA_TENDERMANAGEMENT = [
     action: "view",
     object: "tender approval",
     scope: "module",
-    section: "Tender List and Creating a Tender",
+    section: "Tenders",
     question: "Why can't I open a tender?",
     answer: "A new tender goes through Submit for Approval and the Bid approval workflow. Ask the approver in **Settings → Approval Workflow → Bid** to approve it. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["tender will not open","cannot open tender","tender ready for approval","tender approval status","why tender does not open"]
@@ -11980,7 +11980,7 @@ const QA_TENDERMANAGEMENT = [
     action: "view",
     object: "tender create fields",
     scope: "module",
-    section: "Tender List and Creating a Tender",
+    section: "Tenders",
     question: "Where do the Select Proposal and Select Bid Type lists come from?",
     answer: "From **Home**, open **Tender Management → Tenders** and click **Create**. Select Proposal lists the proposals of Proposal Management. Select Bid Type lists the bid types from Tender Management Settings (Build-Own-Transfer, Speciality Items, General), which are the same as in Proposal Management. Open / Selective Bidding is a fixed choice.",
     tags: ["select proposal list","select bid type list","tender bid type source","where does bid type come from","proposal dropdown tender"]
@@ -11989,7 +11989,7 @@ const QA_TENDERMANAGEMENT = [
     action: "view",
     object: "open bidding selective",
     scope: "module",
-    section: "Tender List and Creating a Tender",
+    section: "Tenders",
     question: "What is the difference between Open Bidding and Selective Bidding?",
     answer: "Create Tender offers Open Bidding, Selective Bidding and Selective Bidding - No Prequalification. The names show that the third option skips pre-qualification; Selective Bidding uses the Pre-Qualification card to choose which vendors may bid.",
     tags: ["open bidding","selective bidding","no prequalification","bidding type tender"]
@@ -11998,7 +11998,7 @@ const QA_TENDERMANAGEMENT = [
     action: "view",
     object: "tender filters",
     scope: "module",
-    section: "Tender List and Creating a Tender",
+    section: "Tenders",
     question: "How do I filter or find tenders?",
     answer: "From **Home**, open **Tender Management → Tenders**. Use the search box, or Filters (Tender Name, Tender ID, Status, Bid Type) then Submit; Clear & Apply resets. Table View and Grid View change the layout and Save Layout keeps it. Show as Graph opens Tenders By Status.",
     tags: ["filter tenders","search tender","tender grid view","tender graph","show as graph tenders","what layout options are available for viewing bids"]
@@ -12007,7 +12007,7 @@ const QA_TENDERMANAGEMENT = [
     action: "view",
     object: "tender notes",
     scope: "module",
-    section: "Tender List and Creating a Tender",
+    section: "Tenders",
     question: "What do the notes and delete icons on a tender do?",
     answer: "The notes icon opens a Note dialog (Cancel, Submit) for the tender; edit opens Edit Tender; delete removes the tender (the same three actions are in the Grid View card menu).",
     tags: ["tender notes","edit tender","delete tender","sticky note tender"]
@@ -12016,7 +12016,7 @@ const QA_TENDERMANAGEMENT = [
     action: "view",
     object: "tender from proposal",
     scope: "module",
-    section: "Tender List and Creating a Tender",
+    section: "Tenders",
     question: "How do I find tenders linked to a proposal?",
     answer: "From **Home**, open **Tender Management → Tenders**. Open the proposal's Bid tab, which lists the tenders linked to that proposal, or look at the Proposal Linked column of the Tenders list. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["tenders linked to proposal","proposal linked column","find bids linked to a specific proposal","link tender to proposal"]
@@ -12025,7 +12025,7 @@ const QA_TENDERMANAGEMENT = [
     action: "view",
     object: "bulk tender excel",
     scope: "module",
-    section: "Tender List and Creating a Tender",
+    section: "Tenders",
     question: "Can I bulk create tenders from a spreadsheet?",
     answer: "The Tenders list has no Excel import or export buttons. The Download Excel / Upload Excel buttons in Tender Management are on **Settings → Bid Templates** (BOQ items).",
     tags: ["bulk create tenders","upload excel tenders","import tenders","can i bulk create bids from a spreadsheet"]
@@ -12034,7 +12034,7 @@ const QA_TENDERMANAGEMENT = [
     action: "view",
     object: "tender card",
     scope: "module",
-    section: "Tender Setup: Profile, Team, Scope of Work and Submission",
+    section: "Tender Details",
     question: "What cards are inside a tender?",
     answer: "Tender Event Schedule, Pre-Qualification, Tender Details (tender documents, responses, comparison and awarding) and Addendum. Tender Details has Tender Setup, and once the tender progresses Tender Response, Negotiated Responses and Awarded Work Order.",
     tags: ["tender cards","what is inside a tender","tender details","open a tender"]
@@ -12043,7 +12043,7 @@ const QA_TENDERMANAGEMENT = [
     action: "view",
     object: "tender tabs",
     scope: "module",
-    section: "Tender Setup: Profile, Team, Scope of Work and Submission",
+    section: "Tender Details",
     question: "Why do I see only Tender Setup on some tenders?",
     answer: "The tender page shows tabs according to how far the tender has progressed. For example, a tender that has just been set up shows only Tender Setup, while a Completed tender also shows Tender Response, Negotiated Responses and Awarded Work Order. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["tender response tab missing","only tender setup","negotiated responses tab missing","awarded work order tab missing"]
@@ -12052,7 +12052,7 @@ const QA_TENDERMANAGEMENT = [
     action: "view",
     object: "tender profile",
     scope: "module",
-    section: "Tender Setup: Profile, Team, Scope of Work and Submission",
+    section: "Tender Details",
     question: "What fields does a tender Profile have?",
     answer: "Bid Name, Bid Type, Description, Start, End and Due Date, Bid Status, Owner Name, Location, Bid Estimated Value and Bid Submitted Value, Connected Items (Proposals, Opportunity, Project), Attachments, configurable fields of the bid type and Assign To; click Save Changes.",
     tags: ["tender profile fields","bid profile","tender details fields","bid estimated value"]
@@ -12061,7 +12061,7 @@ const QA_TENDERMANAGEMENT = [
     action: "view",
     object: "tender profile source",
     scope: "module",
-    section: "Tender Setup: Profile, Team, Scope of Work and Submission",
+    section: "Tender Details",
     question: "Where do the Profile drop-down values come from?",
     answer: "Bid Type and Bid Status come from Tender Management Settings (3 bid types, 9 statuses). Owner Name lists **Global Data → Owners**; Proposals, Opportunity and Project list the proposals, opportunities and all company projects; Assign To lists the system users of Global Rosters. Location showed the same names as Owner Name.",
     tags: ["tender profile dropdown","owner name tender","assign to tender","where do tender fields come from","connected items tender"]
@@ -12070,7 +12070,7 @@ const QA_TENDERMANAGEMENT = [
     action: "view",
     object: "bid type fields",
     scope: "module",
-    section: "Tender Setup: Profile, Team, Scope of Work and Submission",
+    section: "Tender Details",
     question: "Why does my tender have extra fields like Speciality Item 1?",
     answer: "Configurable fields come from the tender's Bid Type. A Speciality Items Bid Type tender shows Speciality Item 1 to 6; a General Bid Type tender shows none.",
     tags: ["speciality item fields","configurable fields tender","extra fields bid type"]
@@ -12079,7 +12079,7 @@ const QA_TENDERMANAGEMENT = [
     action: "create",
     object: "tender team",
     scope: "module",
-    section: "Tender Setup: Profile, Team, Scope of Work and Submission",
+    section: "Tender Details",
     question: "How do I add people or crews to a tender?",
     answer: "Open **Tender Setup → Teams**. On Users click Add User and tick people from the company users; on Crews click Add Crew to pick from the Global Data crews.",
     tags: ["tender team","add user to tender","add crew to tender","tender teams tab"]
@@ -12088,7 +12088,7 @@ const QA_TENDERMANAGEMENT = [
     action: "view",
     object: "tender comments",
     scope: "module",
-    section: "Tender Setup: Profile, Team, Scope of Work and Submission",
+    section: "Tender Details",
     question: "What are Status & Comments on a tender?",
     answer: "A comment box with a map type (General, Negotiation or Clarification), the current Bid Status and a Search by People filter, so discussions stay tagged to the tender stage.",
     tags: ["tender comments","bid status comments","clarification comment tender","negotiation comment"]
@@ -12097,7 +12097,7 @@ const QA_TENDERMANAGEMENT = [
     action: "view",
     object: "tender documents",
     scope: "module",
-    section: "Tender Setup: Profile, Team, Scope of Work and Submission",
+    section: "Tender Details",
     question: "Where are tender documents and e-mails kept?",
     answer: "**Tender Setup → Documents** has New Folder, Upload Documents and automatic folders Profile, Status & Comments, Mail Attachments and Submission. Communication is a mail client for the tender, using the account chosen for **Tender Management in Global Data → Settings → Mail Settings**.",
     tags: ["tender documents","tender mail","tender communication","upload tender documents"]
@@ -12106,7 +12106,7 @@ const QA_TENDERMANAGEMENT = [
     action: "create",
     object: "scope of work",
     scope: "module",
-    section: "Tender Setup: Profile, Team, Scope of Work and Submission",
+    section: "Tender Details",
     question: "How do I create a scope of work for a tender?",
     answer: "Open **Tender Setup → Scope of Work** and click Create. Choose Import from settings, Scope of items or BOQ and submit. Each bill then opens a three-step flow: Choose Estimate Template and Package, BOQ Update and Preview.",
     tags: ["scope of work tender","create scope of work","bill of quantities tender","boq tender","boq update"]
@@ -12115,7 +12115,7 @@ const QA_TENDERMANAGEMENT = [
     action: "view",
     object: "estimate template tender",
     scope: "module",
-    section: "Tender Setup: Profile, Team, Scope of Work and Submission",
+    section: "Tender Details",
     question: "Where do the estimate templates and packages come from?",
     answer: "The 10 templates in Choose Estimate Template and Package are the cards in **Settings → BOQ & Estimate Template** (Item Rate, Lump Sum, Unit Rate, Cost-Plus, Time & Material and others). The packages (S, M, ABC) are part of the tender's BOQ, and each package has its own quantity column.",
     tags: ["estimate template list","boq estimate template","packages s m abc","where do templates come from tender"]
@@ -12124,7 +12124,7 @@ const QA_TENDERMANAGEMENT = [
     action: "view",
     object: "technical package",
     scope: "module",
-    section: "Tender Setup: Profile, Team, Scope of Work and Submission",
+    section: "Tender Details",
     question: "What is the Technical Package?",
     answer: "A questionnaire the tender sends to bidders (for example System Architecture, Integration, Customization). On **Tender Setup → Technical Package** you pick one of the templates from **Settings → Technical Package Template**; evaluators score each answer against its weightage in Tender Response.",
     tags: ["technical package","technical package tender","technical questions tender","critical technical aspects"]
@@ -12133,7 +12133,7 @@ const QA_TENDERMANAGEMENT = [
     action: "view",
     object: "submission package",
     scope: "module",
-    section: "Tender Setup: Profile, Team, Scope of Work and Submission",
+    section: "Tender Details",
     question: "What is the Submission Package?",
     answer: "**Tender Setup → Submission Package** lists the revisions of the package sent to qualified vendors (Revision 1, Revision 2 with Created By and Created On), with Approval Workflow and Issues sub-tabs. Contractors must be qualified in Pre-Qualification before a package can be created.",
     tags: ["submission package tender","submission revision","tender submission package","qualify contractors for submission"]
@@ -12142,7 +12142,7 @@ const QA_TENDERMANAGEMENT = [
     action: "view",
     object: "submission approval",
     scope: "module",
-    section: "Tender Setup: Profile, Team, Scope of Work and Submission",
+    section: "Tender Details",
     question: "How do I set approvers for a submission package?",
     answer: "Open **Tender Setup → Submission Package → Approval Workflow**, click Create Level, choose All must approve or Any one can approve, add a description and pick approvers from the system users.",
     tags: ["submission approval workflow","submission package approvers","create level tender"]
@@ -12187,7 +12187,7 @@ const QA_TENDERMANAGEMENT = [
     action: "view",
     object: "pre qualification",
     scope: "module",
-    section: "Pre-Qualification: Choose Which Vendors May Bid",
+    section: "Pre-Qualification",
     question: "What is Pre-Qualification in a tender?",
     answer: "A four-step card that shortlists vendors before they receive the tender: 1 Choose Template, 2 Send to Tenderer, 3 Response & Qualification, 4 List of Qualified. The qualified vendors are the ones that appear in the technical and financial packages.",
     tags: ["pre qualification","pre-qualification tender","prequalification","shortlist vendors tender"]
@@ -12196,7 +12196,7 @@ const QA_TENDERMANAGEMENT = [
     action: "create",
     object: "pre qualification send",
     scope: "module",
-    section: "Pre-Qualification: Choose Which Vendors May Bid",
+    section: "Pre-Qualification",
     question: "How do I send the pre-qualification form to vendors?",
     answer: "From **Home**, open **Tender Management → Tenders** and open the tender, then **Pre-Qualification**. Open Pre-Qualification, choose and submit a template in step 1, then in Send to Tenderer tick the vendors and click Email. The e-mail asks them to submit the form and refer to the Tender Event Schedule.",
     tags: ["send pre qualification","email vendors pre qualification","send to tenderer","invite vendors to tender","how do I invite vendors to quote"]
@@ -12205,7 +12205,7 @@ const QA_TENDERMANAGEMENT = [
     action: "view",
     object: "pre q vendors",
     scope: "module",
-    section: "Pre-Qualification: Choose Which Vendors May Bid",
+    section: "Pre-Qualification",
     question: "Where does the vendor list in Send to Tenderer come from?",
     answer: "From **Home**, open **Tender Management → Tenders** and open the tender, then **Pre-Qualification**. A vendor that is not in Global Data cannot be invited. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["send to tenderer list","vendor list pre qualification","why vendor missing pre qualification","tenderer list source"]
@@ -12214,7 +12214,7 @@ const QA_TENDERMANAGEMENT = [
     action: "view",
     object: "pre q templates",
     scope: "module",
-    section: "Pre-Qualification: Choose Which Vendors May Bid",
+    section: "Pre-Qualification",
     question: "Where do the pre-qualification forms come from?",
     answer: "The two templates (Application Form and Application Form for Pre-Qualification) are in **Settings → Pre Qualification Template**. Choosing one needs an approval workflow for **Pre Qualification in Settings → Approval Workflow**.",
     tags: ["pre qualification template","application form pre qualification","financial working experience personnel machinery"]
@@ -12223,7 +12223,7 @@ const QA_TENDERMANAGEMENT = [
     action: "view",
     object: "pre q response",
     scope: "module",
-    section: "Pre-Qualification: Choose Which Vendors May Bid",
+    section: "Pre-Qualification",
     question: "Where can I see the vendor responses to pre-qualification?",
     answer: "From **Home**, open **Tender Management → Tenders** and open the tender, then **Pre-Qualification**. In step 3, Response & Qualification, the left list shows each vendor that answered; click one to read its filled form (for example Paid-up Capital, Net Worth, track record). Step 4, List of Qualified, shows who was accepted.",
     tags: ["pre qualification responses","list of qualified","qualified contractors","qualify vendor"]
@@ -12232,7 +12232,7 @@ const QA_TENDERMANAGEMENT = [
     action: "view",
     object: "tender response",
     scope: "module",
-    section: "Tender Response: Technical and Financial Packages",
+    section: "Tender Response",
     question: "What is in Tender Response?",
     answer: "Two tabs: Technical Package (vendor answers with a Weightage and a Score per question, then List of Qualified) and Financial Package (bills with Responses, Comparison, Analytics and Shortlist for Negotiation).",
     tags: ["tender response","technical response","financial package","vendor response tender"]
@@ -12241,7 +12241,7 @@ const QA_TENDERMANAGEMENT = [
     action: "view",
     object: "technical scoring",
     scope: "module",
-    section: "Tender Response: Technical and Financial Packages",
+    section: "Tender Response",
     question: "How do I score a vendor's technical response?",
     answer: "Open **Tender Response → Technical Package**, pick the vendor in the left list and enter a Score for each question against its Weightage. List of Qualified shows the vendors that passed.",
     tags: ["score technical package","weightage score","evaluate technical response","technical evaluation"]
@@ -12250,7 +12250,7 @@ const QA_TENDERMANAGEMENT = [
     action: "view",
     object: "financial responses",
     scope: "module",
-    section: "Tender Response: Technical and Financial Packages",
+    section: "Tender Response",
     question: "Where do I see a vendor's prices?",
     answer: "Open **Tender Response → Financial Package**, click a bill, and on Responses choose the vendor and its response. For each package you see Previous Quantity, Current Quantity, Amount (rate) and Cumulative Pay. A vendor can have several responses (Response 1, Response 2).",
     tags: ["vendor prices tender","financial responses","enter vendor quotes for comparison","where do i enter vendor quotes"]
@@ -12259,7 +12259,7 @@ const QA_TENDERMANAGEMENT = [
     action: "view",
     object: "financial package error",
     scope: "module",
-    section: "Tender Response: Technical and Financial Packages",
+    section: "Tender Response",
     question: "Why does the Financial Package show an error?",
     answer: "It needs a Scope of Work. A tender with no scope of work shows an error about scope of work items; create the scope (bills) first under **Tender Setup → Scope of Work**.",
     tags: ["financial package error","scopeofworkitems error","boq templates empty"]
@@ -12268,7 +12268,7 @@ const QA_TENDERMANAGEMENT = [
     action: "view",
     object: "tender bidders source",
     scope: "module",
-    section: "Tender Response: Technical and Financial Packages",
+    section: "Tender Response",
     question: "Where do the bidders in the technical and financial packages come from?",
     answer: "They are the vendors qualified in Pre-Qualification, which are **Global Data → Vendors** records (the test tender uses vendors in the Eco category).",
     tags: ["bidders source","tenderer list source","who can bid on tender"]
@@ -12277,7 +12277,7 @@ const QA_TENDERMANAGEMENT = [
     action: "view",
     object: "bid tab",
     scope: "module",
-    section: "Tender Response: Technical and Financial Packages",
+    section: "Tender Response",
     question: "What is the Bid tab for?",
     answer: "The Bid tab is the vendor's own list of tenders to answer, with Bid Submission Status. It is empty for the admin (\"No Data Available\"); the admin works through the Tenders tab.",
     tags: ["bid tab","bid submission status","vendor bid tab","bid response tab empty"]
@@ -12286,7 +12286,7 @@ const QA_TENDERMANAGEMENT = [
     action: "view",
     object: "bid comparison",
     scope: "module",
-    section: "Comparing Bids, Negotiating and Awarding a Work Order",
+    section: "Bid Comparison",
     question: "How do I compare vendor bids to select a winner?",
     answer: "Open **Tender Response → Financial Package**, click a bill and choose Comparison. Pick the BOQ items, tenderers and packages; each vendor's amounts show side by side and Download Excel exports them. Then shortlist vendors in Shortlist for Negotiation.",
     tags: ["compare vendor bids","bid comparison","compare quotes tender","select winner tender","tender comparison","how do I compare vendor bids to select a winner"]
@@ -12295,7 +12295,7 @@ const QA_TENDERMANAGEMENT = [
     action: "view",
     object: "shortlist negotiation",
     scope: "module",
-    section: "Comparing Bids, Negotiating and Awarding a Work Order",
+    section: "Bid Comparison",
     question: "How do I shortlist vendors for negotiation?",
     answer: "From **Home**, open **Tender Management → Tenders** and open the tender, then **Tender Details → Tender Response → Financial Package**. In the Financial Package bill, open Shortlist for Negotiation (Name, Email, License, Phone no). Shortlisted vendors then appear in Negotiated Responses.",
     tags: ["shortlist for negotiation","negotiation tender","negotiated responses"]
@@ -12304,7 +12304,7 @@ const QA_TENDERMANAGEMENT = [
     action: "create",
     object: "create work order tender",
     scope: "module",
-    section: "Comparing Bids, Negotiating and Awarding a Work Order",
+    section: "Bid Comparison",
     question: "How do I create a work order from a tender?",
     answer: "From **Home**, open **Tender Management → Tenders** and open the tender. Open Negotiated Responses, click the bill and use Select Items to Create WO to choose which BOQ items go in. The awarded work order then shows under Awarded Work Order with Awarded To, Project Linked, Description and Created On.",
     tags: ["create work order from tender","award tender","select items to create wo","awarded work order","tender winner work order"]
@@ -12313,7 +12313,7 @@ const QA_TENDERMANAGEMENT = [
     action: "view",
     object: "awarded work order",
     scope: "module",
-    section: "Comparing Bids, Negotiating and Awarding a Work Order",
+    section: "Bid Comparison",
     question: "Where does the winner of a tender go?",
     answer: "**To Tender Management → Tender Details → Awarded Work Order**, where the work order shows who it is awarded to and its BOQ. It is not added to the Home **Work Order** list. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["where does winner go","tender winner","awarded work order location","tender to work order","tender to purchase order"]
@@ -12322,7 +12322,7 @@ const QA_TENDERMANAGEMENT = [
     action: "view",
     object: "tender analytics comparison",
     scope: "module",
-    section: "Comparing Bids, Negotiating and Awarding a Work Order",
+    section: "Bid Comparison",
     question: "What do the Comparison and Analytics tabs show?",
     answer: "Comparison is a table of each vendor's Amount per item and package with Download Excel. Analytics shows charts of the same prices by package and item, each with a download icon.",
     tags: ["comparison tab","analytics tab tender","price comparison charts"]
@@ -12340,7 +12340,7 @@ const QA_TENDERMANAGEMENT = [
     action: "create",
     object: "bid type",
     scope: "module",
-    section: "Bid Types and Tender Settings",
+    section: "Settings",
     question: "How do I define categories for tenders/bids?",
     answer: "Open **Tender Management → Settings → Bid Type** and click Bid Type. The three bid types (Build-Own-Transfer, Speciality Items, General) are shared with Proposal Management and feed Select Bid Type and the analytics filters.",
     tags: ["bid types","define bid type","create bid type","tender categories","how do i define categories for tenders/bids"]
@@ -12349,7 +12349,7 @@ const QA_TENDERMANAGEMENT = [
     action: "view",
     object: "tender status",
     scope: "module",
-    section: "Bid Types and Tender Settings",
+    section: "Settings",
     question: "What statuses can a tender have?",
     answer: "Nine: In-Progress, Draft, Under Review, Reopened, Shortlisted, Awarded, Rejected, Pre Qualification and Completed (**Settings → Status Configuration**). Add Status adds one; In-Progress and Completed cannot be deleted.",
     tags: ["tender statuses","bid status list","status configuration tender","add tender status"]
@@ -12358,7 +12358,7 @@ const QA_TENDERMANAGEMENT = [
     action: "view",
     object: "tender approval workflow",
     scope: "module",
-    section: "Bid Types and Tender Settings",
+    section: "Settings",
     question: "How do I set up tender approvals?",
     answer: "In **Settings → Approval Workflow** choose Bid, Pre Qualification or Technical Package, click Create Level and pick approvers and All must approve or Any one can approve. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["tender approval workflow","approval levels tender","pre qualification approval","technical package approval","all must approve any one can approve"]
@@ -12367,7 +12367,7 @@ const QA_TENDERMANAGEMENT = [
     action: "view",
     object: "bid templates",
     scope: "module",
-    section: "Bid Types and Tender Settings",
+    section: "Settings",
     question: "What are Bid Templates in Settings?",
     answer: "The list of BOQ items with Add Item, Download Excel, Download Sample Excel and Upload Excel. It is the same list as **Global Data → Bid Templates**.",
     tags: ["bid templates","boq items list","bid templates global data","upload excel boq items"]
@@ -12376,7 +12376,7 @@ const QA_TENDERMANAGEMENT = [
     action: "view",
     object: "tender permissions",
     scope: "module",
-    section: "Bid Types and Tender Settings",
+    section: "Settings",
     question: "How do I give people access to Tender Management?",
     answer: "**Settings → Users and Permissions → Add User Group** opens a Permissions grid (View, Create, Edit, Delete, Admin, Download, Print, Assign To, Roll Back) for Bid Management, its Settings, Bid Response, Analytics and Issues, plus a Users tab. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["tender permissions","tender user group","bid management permissions","who can see tender management"]
@@ -12385,7 +12385,7 @@ const QA_TENDERMANAGEMENT = [
     action: "view",
     object: "scope agreement templates",
     scope: "module",
-    section: "Bid Types and Tender Settings",
+    section: "Settings",
     question: "What are the Scope of Work and Agreement settings?",
     answer: "Template lists with Create Template, which offers Create or Upload for a Scope of Work or Agreement template. Scope of Work templates feed Import from settings when you build a tender's scope.",
     tags: ["scope of work template","agreement template","import from settings"]
@@ -12394,7 +12394,7 @@ const QA_TENDERMANAGEMENT = [
     action: "view",
     object: "tender analytics",
     scope: "module",
-    section: "Analytics, Issues and the Bid Tab",
+    section: "Analytics & Reports",
     question: "What reports does Tender Management have?",
     answer: "Analytics & Reports has 5 cards: Bid Awarded Rate, Estimate Awarded Rate, Types of Bids, Success & Estimate Over Time and Weekly Report. Charts can be downloaded and filtered by Bid Types.",
     tags: ["tender analytics","tender reports","bid awarded rate","weekly report tender","success rate tenders"]
@@ -12403,7 +12403,7 @@ const QA_TENDERMANAGEMENT = [
     action: "view",
     object: "weekly report tender",
     scope: "module",
-    section: "Analytics, Issues and the Bid Tab",
+    section: "Analytics & Reports",
     question: "Why is a tender missing from the Weekly Report?",
     answer: "Tenders with status Unassigned are not shown in the Weekly Report. Check the tender status and use the Date Range filter. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["tender missing weekly report","weekly report tender columns","tender weekly report"]
@@ -12412,7 +12412,7 @@ const QA_TENDERMANAGEMENT = [
     action: "view",
     object: "tender issues",
     scope: "module",
-    section: "Analytics, Issues and the Bid Tab",
+    section: "Analytics & Reports",
     question: "What are Issues in Tender Management?",
     answer: "The Issues tab lists workflow issues raised on tender approvals: WFL Number, Level, who raised it, Comments, Assign To, Due Date, Chat and See History, with counters for Total, Approved and Rejected.",
     tags: ["tender issues","workflow issues tender","approval issues tender"]
@@ -12421,7 +12421,7 @@ const QA_TENDERMANAGEMENT = [
     action: "view",
     object: "tender lineage",
     scope: "module",
-    section: "Where Tender Data Comes From and Goes",
+    section: "Data Sources",
     question: "Where does Tender Management get its data?",
     answer: "Vendors and bidders from **Global Data → Vendors**; owners from **Global Data → Owners**; users from Global Rosters; crews from **Global Data → Crews**; BOQ items from Bid Templates (shared with Global Data); bid types and statuses shared with Proposal Management; proposals, opportunities and projects from their modules.",
     tags: ["tender data source","tender lineage","where does tender data come from","tender management data"]
@@ -12430,7 +12430,7 @@ const QA_TENDERMANAGEMENT = [
     action: "view",
     object: "tender proposal link",
     scope: "module",
-    section: "Where Tender Data Comes From and Goes",
+    section: "Data Sources",
     question: "How is Tender Management linked to Proposal Management?",
     answer: "From **Home**, open **Tender Management**. A proposal's Bid tab creates and lists tenders. The Select Proposal field fills Proposal Linked on the tender, and bid types and statuses are shared. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["tender proposal link","proposal management tender","proposals tab tender","link tender and proposal"]
@@ -12439,7 +12439,7 @@ const QA_TENDERMANAGEMENT = [
     action: "view",
     object: "tender vendors global data",
     scope: "module",
-    section: "Where Tender Data Comes From and Goes",
+    section: "Data Sources",
     question: "Why is a vendor missing when I invite bidders?",
     answer: "The Send to Tenderer list is **Global Data → Vendors**. Register the vendor there (and check its category) and it will appear.",
     tags: ["vendor missing tender","add vendor for tender","register vendor tender"]
@@ -12448,7 +12448,7 @@ const QA_TENDERMANAGEMENT = [
     action: "view",
     object: "tender winner lineage",
     scope: "module",
-    section: "Where Tender Data Comes From and Goes",
+    section: "Data Sources",
     question: "Does an awarded tender create a Work Order or Purchase Order?",
     answer: "It creates an awarded work order inside the tender (**Tender Details → Awarded Work Order**). It does not appear in the Home Work Order list, and no purchase order is created. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["tender creates work order","tender purchase order","award creates po","tender to project"]
@@ -12457,7 +12457,7 @@ const QA_TENDERMANAGEMENT = [
     action: "create",
     object: "rfq",
     scope: "module",
-    section: "RFQs and Vendor Quotes in Procurement",
+    section: "RFQs",
     question: "How do I invite vendors to quote (create an RFQ)?",
     answer: "RFQs are in the Procurement module, not in the tender cards. In **Procurement → RFQ** create an RFQ: select the requisition form, update quantities, then identify vendors by category, sub category and group from **Global Data → Vendors**.",
     tags: ["create rfq","invite vendors to quote","rfq","request for quotation","procurement rfq"]
@@ -12466,7 +12466,7 @@ const QA_TENDERMANAGEMENT = [
     action: "view",
     object: "rfq instructions",
     scope: "module",
-    section: "RFQs and Vendor Quotes in Procurement",
+    section: "RFQs",
     question: "How do I set standard instructions for vendors on an RFQ?",
     answer: "From **Home**, open **Procurement → RFQ**. Use Vendor Instructions on the RFQ in Procurement to add guidelines and terms and conditions that go to the vendors.",
     tags: ["rfq vendor instructions","standard instructions rfq","rfq terms"]
@@ -12475,7 +12475,7 @@ const QA_TENDERMANAGEMENT = [
     action: "view",
     object: "rfq status",
     scope: "module",
-    section: "RFQs and Vendor Quotes in Procurement",
+    section: "RFQs",
     question: "How do I track the status of an RFQ sent to vendors?",
     answer: "Open **Procurement → RFQ**: the RFQ list shows progress and pending actions per RFQ and the vendor names.",
     tags: ["track rfq","rfq status","rfq list"]
@@ -12484,7 +12484,7 @@ const QA_TENDERMANAGEMENT = [
     action: "view",
     object: "rfq vs tender",
     scope: "module",
-    section: "RFQs and Vendor Quotes in Procurement",
+    section: "RFQs",
     question: "Is an RFQ the same as a tender?",
     answer: "No. An RFQ in Procurement asks vendors to quote against a requisition. A tender in Tender Management is a staged process (pre-qualification, technical and financial packages, negotiation, award). They share Global Data vendors.",
     tags: ["rfq vs tender","difference rfq tender","tender or rfq"]
@@ -12532,7 +12532,7 @@ const QA_PROCUREMENT = [
     action: "configure",
     object: "requisition form",
     scope: "global",
-    section: "Configure Procurement Forms & Settings",
+    section: "Settings",
     question: "How do I customize the fields on the requisition form?",
     answer: "Go to **Procurement Settings → REQ Form** and use Inncircles Arena's form builder to create multiple sections with different field types (paragraph, single select, multi-select, tables, etc.).",
     tags: ["req form builder","configure requisition fields"]
@@ -12595,7 +12595,7 @@ const QA_PROCUREMENT = [
     action: "configure",
     object: "purchase order form",
     scope: "global",
-    section: "Configure Procurement Forms & Settings",
+    section: "Settings",
     question: "How do I configure the Purchase Order form fields?",
     answer: "Go to **Procurement Settings → PO Configuration** and use the form builder to configure the Purchase Order form separately for Material, Equipment, Equipment Part, and Delivery Service tabs.",
     tags: ["po form configuration","purchase order fields"]
@@ -12613,7 +12613,7 @@ const QA_PROCUREMENT = [
     action: "configure",
     object: "delivery receipt form",
     scope: "global",
-    section: "Configure Procurement Forms & Settings",
+    section: "Settings",
     question: "How do I configure the Delivery Receipt form?",
     answer: "Go to **Procurement Settings → Delivery Request** and use the form builder to configure the Delivery Receipt form for Material, Equipment, Equipment Part, and Delivery Service.",
     tags: ["delivery receipt settings","configure delivery form"]
@@ -12631,7 +12631,7 @@ const QA_PROCUREMENT = [
     action: "configure",
     object: "invoice form",
     scope: "global",
-    section: "Configure Procurement Forms & Settings",
+    section: "Settings",
     question: "How do I configure the Invoice form fields?",
     answer: "Go to **Procurement Settings → Invoice** and use the form builder to configure the invoice form for Equipment, Material, Equipment Part, and Delivery Service, with multiple sections and field types.",
     tags: ["invoice settings","configure invoice form"]
@@ -12649,7 +12649,7 @@ const QA_PROCUREMENT = [
     action: "configure",
     object: "pickup request form",
     scope: "global",
-    section: "Configure Procurement Forms & Settings",
+    section: "Settings",
     question: "How do I configure the Pickup Request form?",
     answer: "Go to **Procurement Settings → Pickup Request** and configure the form fields using the form builder, then click \"Save changes\".",
     tags: ["pickup request settings","configure pickup form"]
@@ -12667,7 +12667,7 @@ const QA_PROCUREMENT = [
     action: "configure",
     object: "approval workflow",
     scope: "global",
-    section: "Configure Procurement Forms & Settings",
+    section: "Settings",
     question: "How do I set up approval workflows for procurement documents?",
     answer: "Go to **Procurement → Settings → Approval Workflow**. Choose the tab for the document (**Requisition Form (REQ)**, **Purchase Order (PO)**, **Invoices** or **Pickup Request**); for requisitions also choose the category (**Equipment Rental**, **Equipment Procured**, **Material**, **Equipment Part Rental**, **Equipment Part Purchased** or **Delivery Service**). Click **+ Create**, pick **All must approve** or **Any one can approve**, tick the approvers and **Submit**. Every tab has its own chain.",
     tags: ["procurement approval workflow","create level","po approval","approval workflow categories","equipment rental approval"]
@@ -12676,7 +12676,7 @@ const QA_PROCUREMENT = [
     action: "configure",
     object: "id settings",
     scope: "global",
-    section: "Configure Procurement Forms & Settings",
+    section: "Settings",
     question: "How do I configure ID formats for procurement documents?",
     answer: "Go to **Procurement → ID Settings**, select System Default for auto-generated IDs, or Custom to choose fields and their order, then click \"Save Changes\".",
     tags: ["procurement id format","custom id","auto id"]
@@ -12694,7 +12694,7 @@ const QA_PROCUREMENT = [
     action: "configure",
     object: "issue priority",
     scope: "global",
-    section: "Configure Procurement Forms & Settings",
+    section: "Settings",
     question: "How do I set priority levels for procurement issues?",
     answer: "Go to **Procurement Settings → Procurement Issues** and click \"Add Priority\" to create priority levels along with their Due Hours. This priority list is specifically for issues raised while inspecting a Delivery Receipt (**Delivery Receipts → Inspection Issues**) — a verified environment had High (4 hours), Medium (24 hours), and Low (48 hours).",
     tags: ["issue priority","procurement issue sla","due hours","delivery receipt inspection issue priority"]
@@ -12703,7 +12703,7 @@ const QA_PROCUREMENT = [
     action: "view",
     object: "procurement analytics dashboard",
     scope: "project",
-    section: "Procurement Analytics Dashboard",
+    section: "Analytics Dashboard",
     question: "Where can I see overall procurement spend and vendor performance?",
     answer: "Go to **Home → Procurement** — it opens on the Dashboard tab. KPI tiles show Total Spend, Budget Variance, Avg Lead Time, and Quality Issue Rate; the Vendor Performance Summary table below ranks each vendor by Total Spend, Avg Lead Time, Quality Issue Rate, On-Time Delivery, Total Orders, and a Performance Score. Filter by project (\"By Projects\") or by date range.",
     tags: ["procurement dashboard","vendor performance","total spend","quality issue rate"]
@@ -12865,7 +12865,7 @@ const QA_PROCUREMENT = [
     action: "explain",
     object: "procurement settings lists",
     scope: "module",
-    section: "Configure Procurement Forms & Settings",
+    section: "Settings",
     question: "Where do the approver and default assignee lists in Procurement Settings come from?",
     answer: "The **Select Approver(s)** list in **Approval Workflow → Create Level** shows all company users, contractor accounts included. **Default Assign To → + Add** shows the project's people (about 40), and **RFQ Settings → Default Point Of Contact** shows all company users. If someone is missing, add them in **Global Data → Users & Permissions** (company users) or in the project's people list. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["approver list","default assign to","default point of contact","where does approver list come from","user missing in approver list"]
@@ -12874,7 +12874,7 @@ const QA_PROCUREMENT = [
     action: "explain",
     object: "default assign to",
     scope: "module",
-    section: "Configure Procurement Forms & Settings",
+    section: "Settings",
     question: "What does Default Assign To do in Procurement Settings?",
     answer: "It pre-fills the **Assignee** on new records. It has a tab for each document: **REQ**, **RFQ**, **Vendor Response**, **Purchase Order**, **Direct Purchase Order**, **Delivery Receipt**, **Invoice** and **Pickup Request**. Click **+ Add**, tick the users in the **Assign To** list and submit; they appear as cards on that tab. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["default assign to","default assignee procurement","assign to settings","pre-fill assignee"]
@@ -13501,7 +13501,7 @@ const QA_INVENTORYMANAGEMENT = [
     action: "define",
     object: "inventory roles",
     scope: "module",
-    section: "Who Does What",
+    section: "Overview",
     question: "Who does what in Inventory Management?",
     answer: "The **Global Data Administrator** sets up UOMs and materials. The **Inventory Administrator** sets up settings, ID formats, user groups, Inventory Locations and Hauling Trucks. The **Inventory Manager** (store or yard in-charge) keeps materials, quantities and stock limits at each location. The **Order Creator** raises External Orders. The **Ticket Creator** (dispatcher or weighbridge operator) records each load as an External Ticket. The **Report User** reviews the reports and records Material Reconciliation. Each role gets access through user groups and permissions.",
     tags: ["inventory roles","who creates external orders","ticket creator","order creator","inventory manager","report user"]
@@ -13510,7 +13510,7 @@ const QA_INVENTORYMANAGEMENT = [
     action: "define",
     object: "setup order",
     scope: "module",
-    section: "Who Does What",
+    section: "Overview",
     question: "In what order should I set up Inventory Management?",
     answer: "First set up **UOMs and UOM groups**, then **materials**, in Global Data. Then complete **Inventory Management → Settings** (fields, ID settings, users and permissions, General). Next create **Inventory Locations** with geofences, add **Hauling Trucks**, and add materials and quantities at each location. After that, create **External Orders** and **External Tickets**.",
     tags: ["setup order","inventory setup","first time setup inventory","prerequisites inventory"]
@@ -13519,7 +13519,7 @@ const QA_INVENTORYMANAGEMENT = [
     action: "configure",
     object: "uom group",
     scope: "module",
-    section: "Global Data Prerequisites: UOMs and Materials",
+    section: "UOMs & Materials",
     question: "How do I add a UOM and set up conversions between units?",
     answer: "Go to **Global Data → Company → UOM, Phasecodes and GL codes**. On the **UOMs** tab click **Add UOM**, enter the name and **Submit**. Open **UOM Groups**, click **Add UOM Group**, name it, choose the UOMs and enter the **Conversion Factor**, then **Submit**. The **UOM Conversions** tab shows the conversions. They apply only when UOMs are picked while creating materials.",
     tags: ["add uom","uom group","uom conversion","conversion factor","unit of measure setup"]
@@ -13528,7 +13528,7 @@ const QA_INVENTORYMANAGEMENT = [
     action: "create",
     object: "material",
     scope: "module",
-    section: "Global Data Prerequisites: UOMs and Materials",
+    section: "UOMs & Materials",
     question: "How do I add a material to Global Data for inventory?",
     answer: "Go to **Global Data → Company → Cost**, click **Material** under Cost Type, select or create a rate card under Material Code, and click **Add Material**. Enter **Material Code** (unique), **Material Name**, **UOM**, **Size and Specifications** and **Unit Price**, then **Submit**. Inventory Management picks up the material from here.",
     tags: ["add material global data","material code","rate card material","unit price","cost material"]
@@ -13537,7 +13537,7 @@ const QA_INVENTORYMANAGEMENT = [
     action: "configure",
     object: "orders tickets fields",
     scope: "module",
-    section: "Settings: Fields, IDs, Permissions and General",
+    section: "Settings",
     question: "How do I add or change fields on External Orders and Tickets?",
     answer: "Go to **Inventory Management → Settings** and open the **External Orders** or **Tickets** tab. Click **Add field**, pick a type in **Choose type** and enter the name. Switch **Required**, **Show on Card** and **Unique** on or off, drag the field into place and click **Save Changes**. Actions let you add, duplicate or delete a field.",
     tags: ["add field orders","configurable field","ticket fields","required show on card unique","order fields settings"]
@@ -13546,7 +13546,7 @@ const QA_INVENTORYMANAGEMENT = [
     action: "configure",
     object: "inventory id settings",
     scope: "module",
-    section: "Settings: Fields, IDs, Permissions and General",
+    section: "Settings",
     question: "How do I set the ID format for orders and tickets?",
     answer: "Go to **Settings → ID Settings** and choose **External Orders** or **External Tickets**. Pick **System Default** or **Custom**, choose the **ID Separator** (/, - or None), select the components (Serial No./ID, Year, Customer Reference Number, Customer/Project ID, custom text) and drag them into order. **Example Format** shows the result. Click **Save Changes**. Once a ticket is created, the ID settings lock, so do this first.",
     tags: ["ticket id format","order id format","id settings inventory","numbering tickets","id separator"]
@@ -13555,7 +13555,7 @@ const QA_INVENTORYMANAGEMENT = [
     action: "configure",
     object: "inventory permissions",
     scope: "module",
-    section: "Settings: Fields, IDs, Permissions and General",
+    section: "Settings",
     question: "How do I give users access to Inventory Management?",
     answer: "Go to **Settings → Users and Permissions** and click **Add User Group**. On the **Users** tab click **Add Users**, search and pick the users, and **Submit**. Click **Permissions** on the group card and choose the rights under **Inventory Management**: View, Create, Edit, Delete, Admin, Download, Print, Assign To and Roll Back. Click **Save Changes**.",
     tags: ["inventory user group","inventory permissions","add users inventory","roll back permission","access inventory management"]
@@ -13564,7 +13564,7 @@ const QA_INVENTORYMANAGEMENT = [
     action: "configure",
     object: "uom conversions required",
     scope: "module",
-    section: "Settings: Fields, IDs, Permissions and General",
+    section: "Settings",
     question: "What do UOM Conversions Required and Print Settings do?",
     answer: "They are on **Settings → General**. Turn on **UOM Conversions Required** if quantities must convert between units, then use **Material UOM Conversions → Create** to pick a material, at least two UOMs and the conversion factor. Once it is on and in use you cannot turn it off. **Print Settings** lets you add a row for each print copy (for example office copy, operator copy, customer copy) and choose **Include Header**. The **External Tickets** toggle here turns tickets on.",
     tags: ["uom conversions required","print settings","print copies","general settings inventory","external tickets toggle"]
@@ -13573,7 +13573,7 @@ const QA_INVENTORYMANAGEMENT = [
     action: "create",
     object: "inventory location",
     scope: "module",
-    section: "Inventory Locations and Overview Map",
+    section: "Inventory Locations",
     question: "How do I create an Inventory Location with a geofence?",
     answer: "Open the **Inventory** tab and click **Add Location**. Enter **Location Name**, **Location ID**, **Location Type**, **Inventory manager**, **Business Unit** and **Project**, and turn on **Active**. Click **Add Geofences**, place at least three points (search an address and click the point, or click on the map), and click **Add Geofence**. Then click **Create**. The geofence saves only when the location is created, and only active locations can be used on ship tickets.",
     tags: ["create inventory location","add location","geofence","location id","active location","yard location"]
@@ -13582,7 +13582,7 @@ const QA_INVENTORYMANAGEMENT = [
     action: "view",
     object: "overview map",
     scope: "module",
-    section: "Inventory Locations and Overview Map",
+    section: "Inventory Locations",
     question: "What does the Overview map in Inventory Management show?",
     answer: "The **Overview** tab is the default. It shows all Inventory Locations on a map with geofences in yellow. Click a geofence to see the location name and its materials with quantities, and click the link at the top to open the location. Switch **Map** or **Satellite**, use the filter icon to search by name or code or filter by city, state or country, go full screen, or open Street View with the Pegman icon.",
     tags: ["overview map","inventory map","geofence yellow","map satellite","street view","find location map"]
@@ -13591,7 +13591,7 @@ const QA_INVENTORYMANAGEMENT = [
     action: "view",
     object: "inventory locations list",
     scope: "module",
-    section: "Inventory Locations and Overview Map",
+    section: "Inventory Locations",
     question: "How do I find, filter or deactivate an Inventory Location?",
     answer: "From **Home**, open **Inventory Management → Inventory**. On the **Inventory** tab, search by name, check the geofence icon, flip the **Active** toggle to activate or deactivate, or use the edit icon under Actions. **Filters** narrow by Business Units, Project, Material and Active or Inactive; **Save filters** keeps them.",
     tags: ["deactivate location","filter locations","active toggle","edit location","location list"]
@@ -13600,7 +13600,7 @@ const QA_INVENTORYMANAGEMENT = [
     action: "create",
     object: "location material",
     scope: "module",
-    section: "Materials at a Location",
+    section: "Materials",
     question: "How do I add a material to an Inventory Location and set stock limits?",
     answer: "From **Home**, open **Inventory Management → Inventory**. Click the Inventory Location and click **+ Add**. Choose the **Material** (from Global Data), then enter **Quantity**, **Minimum Required Quantity**, **Maximum Quantity** and **UOM**, and optionally an **Icon**. Click **Submit**. Minimum and maximum must be greater than 0. When stock falls below the minimum, the material shows a red flag.",
     tags: ["add material to location","minimum quantity","maximum quantity","stock limits","reorder level","location stock"]
@@ -13609,7 +13609,7 @@ const QA_INVENTORYMANAGEMENT = [
     action: "view",
     object: "low stock",
     scope: "module",
-    section: "Materials at a Location",
+    section: "Materials",
     question: "How do I see which materials are low on stock?",
     answer: "Open the Inventory Location and look for a **red flag** beside a material. Click **Low Stock Items** to list all materials below their minimum. **See History** shows the history of a material at that location.",
     tags: ["low stock","red flag","low stock items","material history","below minimum"]
@@ -13618,7 +13618,7 @@ const QA_INVENTORYMANAGEMENT = [
     action: "add",
     object: "material quantity",
     scope: "module",
-    section: "Materials at a Location",
+    section: "Materials",
     question: "How do I add quantity to a material at a location?",
     answer: "Open the location and click **Add Quantity**. Choose the material (its current details show), enter the extra quantity and click **Submit**. To create or update many materials at once, use **Export → Upload Excel**, choose **Create** or **Update**, fill in the sample file and upload it.",
     tags: ["add quantity","top up stock","bulk update materials","upload excel materials","add quantity to material","add quantity","increase stock","top up stock","add stock"]
@@ -13699,7 +13699,7 @@ const QA_INVENTORYMANAGEMENT = [
     action: "view",
     object: "hauling report",
     scope: "module",
-    section: "Reports: Hauling, Client Portal and Reconciliation",
+    section: "Reports",
     question: "What is the Hauling Report?",
     answer: "It lists every ticket in date and time order with the trucker, Five-S test Number, tag, site, material, customer or project, order and net quantity. Column headers show the ticket count, trucker count and net total. Use **Search by Tickets**, **Filters** and **Export**. The export also includes **Gross**, **Time In**, **Time Out** and **Delivery Time (Hours)**.",
     tags: ["hauling report","tickets hauled","trucker count","net total","delivery time hours"]
@@ -13708,7 +13708,7 @@ const QA_INVENTORYMANAGEMENT = [
     action: "view",
     object: "client portal report",
     scope: "module",
-    section: "Reports: Hauling, Client Portal and Reconciliation",
+    section: "Reports",
     question: "How do I see how much of an order has been delivered?",
     answer: "Open **Reports → Client Portal**. Each order shows **Units**, **Delivered**, UOM and a progress bar. Open an order to see the **Ship Tickets** page with **Ordered Qty**, **Delivered**, **Remaining**, **Total Loads**, **Avg Load Size** and **Fulfillment Progress**, plus the tickets delivered. Click **Export** for the ticket list.",
     tags: ["client portal","order progress","delivered quantity","fulfillment progress","ship tickets page","remaining quantity"]
@@ -13717,7 +13717,7 @@ const QA_INVENTORYMANAGEMENT = [
     action: "create",
     object: "material reconciliation",
     scope: "module",
-    section: "Reports: Hauling, Client Portal and Reconciliation",
+    section: "Reports",
     question: "How do I reconcile surveyed stock with Arena stock?",
     answer: "Open **Reports → Material Reconciliation** and click **Create**. Choose the **Inventory** location, **Date** and **Material**, and enter the **Surveyed Stockpile (Propeller)**. **Current Available** fills in from the location. Check the **Delta** (surveyed minus current) and click **Save**. The list shows **Delta** and **Delta %**, green for a gain and red for a loss.",
     tags: ["material reconciliation","stockpile survey","propeller","delta","reconcile stock"]
@@ -13726,7 +13726,7 @@ const QA_INVENTORYMANAGEMENT = [
     action: "view",
     object: "list controls",
     scope: "module",
-    section: "Lists: Columns, Filters and Excel Export",
+    section: "List Tools",
     question: "How do I customise columns, filters and Excel upload on inventory lists?",
     answer: "Every list has **Manage Columns** (show, hide, reorder; **Save layout**; **Multiple layouts** for a personal layout), a list or grid toggle, and **Filters** (**Apply**, **Save filters**, **Clear all**). **Export → Upload Excel** gives a sample file to fill in and upload for bulk records, and **Export → Download** saves current records to Excel.",
     tags: ["manage columns","save layout","save filters","export excel","upload excel","bulk upload inventory","list view grid view"]
@@ -13735,7 +13735,7 @@ const QA_INVENTORYMANAGEMENT = [
     action: "overview",
     object: "inventory management flow",
     scope: "module",
-    section: "Who Does What",
+    section: "Overview",
     question: "What is the full Inventory Management process from setup to reports?",
     answer: "The **Global Data Administrator** adds UOMs, UOM groups and materials. The **Inventory Administrator** completes **Settings** (fields, **ID Settings**, **Users and Permissions**, **General**), creates **Inventory Locations** with geofences and adds **Hauling Trucks**. The **Inventory Manager** adds materials and quantities at each location. The **Order Creator** raises **External Orders**, the **Ticket Creator** creates an **External Ticket** for each load shipped, and the **Report User** reviews the **Hauling Report**, **Client Portal** report and **Material Reconciliation**.",
     tags: ["inventory process","inventory flow","end to end inventory","setup to reports","inventory management steps","how does inventory management work"]
@@ -13744,7 +13744,7 @@ const QA_INVENTORYMANAGEMENT = [
     action: "define",
     object: "global data administrator",
     scope: "module",
-    section: "Who Does What",
+    section: "Overview",
     question: "As a Global Data administrator, what do I set up for Inventory Management?",
     answer: "Add UOMs and UOM groups (with conversion factors) under **Global Data → Company → UOM, Phasecodes and GL codes**, then add materials under **Global Data → Company → Cost → Material** with Material Code, Material Name, UOM, Size and Specifications and Unit Price. Inventory Management picks its materials and units from these.",
     tags: ["global data administrator","cost controller","as a global data administrator","set up uoms materials","who sets up materials"]
@@ -13753,7 +13753,7 @@ const QA_INVENTORYMANAGEMENT = [
     action: "define",
     object: "inventory administrator",
     scope: "module",
-    section: "Who Does What",
+    section: "Overview",
     question: "As an inventory administrator, what do I configure?",
     answer: "Open **Home → Inventory Management → Settings** and set the **External Orders** and **Tickets** fields, **ID Settings**, **Users and Permissions** and **General**. Then create **Inventory Locations** with geofences, and add **Hauling Trucks** (use **Mark as Blacklist** to stop one being used). Complete ID Settings before the first ticket, because they lock afterwards.",
     tags: ["inventory administrator","inventory admin","as an inventory administrator","configure inventory management","who configures inventory"]
@@ -13762,7 +13762,7 @@ const QA_INVENTORYMANAGEMENT = [
     action: "define",
     object: "inventory manager",
     scope: "module",
-    section: "Who Does What",
+    section: "Overview",
     question: "As an inventory manager, how do I keep stock at my location correct?",
     answer: "Open the Inventory Location and click **+ Add** to add a material with its **Quantity**, **Minimum Required Quantity**, **Maximum Quantity** and **UOM**. Use **Add Quantity** to top up stock, and watch the red flag or **Low Stock Items** for anything below its minimum. **See History** shows the history of a material. For a surveyed stockpile that differs from Arena, use **Reports → Material Reconciliation**.",
     tags: ["inventory manager","add stock to location","store in charge","yard in charge","as an inventory manager","keep stock correct","low stock manager"]
@@ -13771,7 +13771,7 @@ const QA_INVENTORYMANAGEMENT = [
     action: "define",
     object: "order creator",
     scope: "module",
-    section: "Who Does What",
+    section: "Overview",
     question: "As an order creator, how do I raise an External Order?",
     answer: "Open **Orders → External Orders** and click **+ Add**. Set **Type** to **Customer** or **Project**, fill in the order details (order date, customer or project, customer reference number, requested by), click **Add Material** for each material with price, tax and quantity, and click **Submit**. The order shows as **RAISED** and becomes available for External Tickets.",
     tags: ["order creator","order coordinator","as an order creator","raise external order","who creates external orders"]
@@ -13780,7 +13780,7 @@ const QA_INVENTORYMANAGEMENT = [
     action: "define",
     object: "ticket creator",
     scope: "module",
-    section: "Who Does What",
+    section: "Overview",
     question: "As a ticket creator or weighbridge operator, how do I record a load?",
     answer: "Open **Tickets → External Tickets** and click **+ Add**. Choose the **Hauling Vehicle** and **Order Number**, then the **Site Name**, **Product** and **UOM**, and enter the **Gross** or **Net** value (the other is calculated). Check the details on the right and click **Create**, then confirm. The Gross value cannot be changed afterwards. You can set a ticket to **Valid** or **Voided**.",
     tags: ["ticket creator","dispatcher","weighbridge operator","as a ticket creator","record load","who creates external tickets"]
@@ -13789,7 +13789,7 @@ const QA_INVENTORYMANAGEMENT = [
     action: "define",
     object: "report user",
     scope: "module",
-    section: "Who Does What",
+    section: "Overview",
     question: "As a report user, which reports do I use?",
     answer: "Open **Inventory Management → Reports**. The **Hauling Report** lists every ticket hauled with truck, site, material and net quantity. The **Client Portal** report shows ordered against delivered quantity with a progress bar for each order. **Material Reconciliation** compares the surveyed stockpile with the stock in Arena for a location and shows the Delta.",
     tags: ["report user","operations manager reports","as a report user","which reports","inventory reports list"]
@@ -13798,7 +13798,7 @@ const QA_INVENTORYMANAGEMENT = [
     action: "configure",
     object: "inventory prerequisites",
     scope: "module",
-    section: "Who Does What",
+    section: "Overview",
     question: "What must exist before I create records in Inventory Management?",
     answer: "The UOMs and materials must be set up in Global Data, the **Inventory Management Settings** (including **ID Settings**) must be done, the Business Units, Projects and Customers you need must exist, and users must be in user groups with the right permissions.",
     tags: ["before inventory management","prerequisites inventory","what is required first","business units projects customers"]
@@ -13807,7 +13807,7 @@ const QA_INVENTORYMANAGEMENT = [
     action: "define",
     object: "inventory location",
     scope: "module",
-    section: "Who Does What",
+    section: "Overview",
     question: "What is an Inventory Location?",
     answer: "An Inventory Location is a store, yard or stockpile that holds materials with their quantities and stock limits. It is marked on the map with a geofence, and only **Active** locations can be used when creating tickets. The Inventory Administrator creates locations on the **Inventory** tab with **Add Location**.",
     tags: ["what is inventory location","inventory location meaning","yard store stockpile","active location"]
@@ -13816,7 +13816,7 @@ const QA_INVENTORYMANAGEMENT = [
     action: "configure",
     object: "geofence",
     scope: "module",
-    section: "Inventory Locations and Overview Map",
+    section: "Inventory Locations",
     question: "How do I add a geofence to an Inventory Location?",
     answer: "From **Home**, open **Inventory Management → Inventory**. In **Create Inventory Location**, click **Add Geofences**. On the **Details** tab check the **Geofence Name** and **Geofence Code**. Then search an address and click the exact point, or click points directly on the map. Place at least three points (use **Undo Last Point** or **Clear All**), click **Add Geofence**, then click **Create**. The geofence is saved only when the location is created.",
     tags: ["add geofence","geofence points","three points geofence","undo last point","clear all geofence","geofence name code"]
@@ -13825,7 +13825,7 @@ const QA_INVENTORYMANAGEMENT = [
     action: "upload",
     object: "inventory locations excel",
     scope: "module",
-    section: "Inventory Locations and Overview Map",
+    section: "Inventory Locations",
     question: "How do I bulk upload Inventory Locations from Excel?",
     answer: "On the **Inventory** tab, click **Export → Upload Excel**, download the sample format from the hyperlink, fill it in as the instructions say, save it and upload it. **Export → Download** saves the current records to Excel.",
     tags: ["bulk upload locations","upload excel locations","import locations","location excel"]
@@ -13834,7 +13834,7 @@ const QA_INVENTORYMANAGEMENT = [
     action: "define",
     object: "inventory location fields",
     scope: "module",
-    section: "Inventory Locations and Overview Map",
+    section: "Inventory Locations",
     question: "What fields are on the Create Inventory Location form?",
     answer: "**Location Name**, **Location ID** (unique), **Location Type**, **Inventory manager** (one or more users), **Business Unit**, **Project** (if it applies), the **Active** toggle and the **Geofence**.",
     tags: ["create location fields","inventory location form fields","location type","location id"]
@@ -13843,7 +13843,7 @@ const QA_INVENTORYMANAGEMENT = [
     action: "edit",
     object: "material at location",
     scope: "module",
-    section: "Materials at a Location",
+    section: "Materials",
     question: "How do I edit or delete a material at an Inventory Location?",
     answer: "Open the Inventory Location, find the material and click the edit or delete icon under **Actions**. Use **Add Custom Column** or **Manage Columns** to change what the table shows.",
     tags: ["edit material location","delete material location","actions edit delete material"]
@@ -13870,7 +13870,7 @@ const QA_INVENTORYMANAGEMENT = [
     action: "define",
     object: "hauling report",
     scope: "module",
-    section: "Reports: Hauling, Client Portal and Reconciliation",
+    section: "Reports",
     question: "Who uses the Hauling Report and Client Portal, and for what?",
     answer: "The Report User (Operations Manager or Project Manager) uses them. The **Hauling Report** shows what moved, by which truck and when, with ticket count, trucker count and net total. The **Client Portal** shows how much of each order has been delivered against what was ordered.",
     tags: ["who uses hauling report","who uses client portal","hauling report purpose","client portal purpose"]
@@ -13879,7 +13879,7 @@ const QA_INVENTORYMANAGEMENT = [
     action: "troubleshoot",
     object: "id settings",
     scope: "module",
-    section: "Troubleshooting: Inventory Problems",
+    section: "Troubleshooting",
     question: "Why can I not change the ID settings for orders and tickets?",
     answer: "Once a ticket has been created, the **ID Settings** are locked. Set the **System Default** or **Custom** format, the **ID Separator** and the components before the first ticket is created.",
     tags: ["id settings locked","cannot change id format","ticket id locked"]
@@ -13888,7 +13888,7 @@ const QA_INVENTORYMANAGEMENT = [
     action: "troubleshoot",
     object: "inventory location",
     scope: "module",
-    section: "Troubleshooting: Inventory Problems",
+    section: "Troubleshooting",
     question: "Why does an Inventory Location not appear when I create a ticket?",
     answer: "Only **Active** Inventory Locations can be used while creating tickets. Open the **Inventory** tab and switch the **Active** toggle on for the location.",
     tags: ["location not showing ticket","inactive location","active toggle location"]
@@ -13897,7 +13897,7 @@ const QA_INVENTORYMANAGEMENT = [
     action: "troubleshoot",
     object: "material location",
     scope: "module",
-    section: "Troubleshooting: Inventory Problems",
+    section: "Troubleshooting",
     question: "Why can I not find a material or UOM when adding stock to a location?",
     answer: "Materials and UOMs come from **Global Data → Company → Cost → Material**, so a Global Data Administrator must add them first. The **Minimum Required Quantity** and **Maximum Quantity** must also be greater than 0.",
     tags: ["material missing location","uom missing","minimum maximum greater than 0"]
@@ -13906,7 +13906,7 @@ const QA_INVENTORYMANAGEMENT = [
     action: "troubleshoot",
     object: "uom conversions",
     scope: "module",
-    section: "Troubleshooting: Inventory Problems",
+    section: "Troubleshooting",
     question: "Why can I not turn off UOM Conversions Required?",
     answer: "Once **UOM Conversions Required** under **Settings → General** is on and in use, the toggle cannot be turned off.",
     tags: ["uom conversions required cannot disable","turn off uom conversion"]
@@ -13915,7 +13915,7 @@ const QA_INVENTORYMANAGEMENT = [
     action: "troubleshoot",
     object: "add customer",
     scope: "module",
-    section: "Troubleshooting: Inventory Problems",
+    section: "Troubleshooting",
     question: "Why is Add Customer missing on an External Order?",
     answer: "If customer creation has an approval workflow in Global Data, the **Add Customer** option is not available on the order. Get the customer added through that workflow first.",
     tags: ["add customer missing","customer approval workflow","new customer external order"]
@@ -13924,7 +13924,7 @@ const QA_INVENTORYMANAGEMENT = [
     action: "troubleshoot",
     object: "geofence",
     scope: "module",
-    section: "Troubleshooting: Inventory Problems",
+    section: "Troubleshooting",
     question: "Why did my geofence not save?",
     answer: "A geofence needs at least three points, and it is saved only when the Inventory Location is created (or when a customer External Order is submitted). Add the points, then click **Create** or **Submit**.",
     tags: ["geofence not saved","geofence minimum points","geofence missing"]
@@ -13933,7 +13933,7 @@ const QA_INVENTORYMANAGEMENT = [
     action: "define",
     object: "earlier version inventory screens",
     scope: "module",
-    section: "Who Does What",
+    section: "Overview",
     question: "What are Pick Up Tickets, Ship Tickets and Return Tickets?",
     answer: "They are the names used on earlier versions of Inventory Management. There the tabs are **Inventory Master**, **Site Material Request** (earlier **Pick Up Ticket**), **Material Issue Ticket** (earlier **Ship Ticket**) and **Return Ticket**. Arena 2.0 documentation covers **Overview**, **Inventory**, **Orders**, **Hauling Trucks**, **Tickets** and **Reports**; ask your administrator to upgrade the environment to get them.",
     tags: ["pick up ticket","ship ticket","return ticket","site material request","material issue ticket","inventory master","earlier version"]
@@ -13942,7 +13942,7 @@ const QA_INVENTORYMANAGEMENT = [
     action: "view",
     object: "load out request inventory",
     scope: "module",
-    section: "Who Does What",
+    section: "Overview",
     question: "Where are Load Out Requests for equipment?",
     answer: "Load Out Requests are not part of Inventory Management. Request and move equipment under **Equipment Management → Load Out Request**. Inventory Management keeps material stock, External Orders and External Tickets.",
     tags: ["load out request","lor","equipment request","where is lor"]
@@ -13951,7 +13951,7 @@ const QA_INVENTORYMANAGEMENT = [
     action: "view",
     object: "inventory management tabs",
     scope: "module",
-    section: "Who Does What",
+    section: "Overview",
     question: "What tabs does Inventory Management have?",
     answer: "**Overview** (map of locations), **Inventory** (locations and their materials), **Orders** (External Orders), **Hauling Trucks**, **Tickets** (External Tickets), **Reports** and **Settings**.",
     tags: ["inventory tabs","inventory management tabs","what tabs","module tabs"]
@@ -13960,7 +13960,7 @@ const QA_INVENTORYMANAGEMENT = [
     action: "configure",
     object: "custom column materials",
     scope: "module",
-    section: "Materials at a Location",
+    section: "Materials",
     question: "How do I add a custom column to the materials list at a location?",
     answer: "Open the Inventory Location, click **Add Custom Column**, choose the field type and enter the column name. Use **Manage Columns** to show, hide or reorder columns.",
     tags: ["custom column","add column","extra field materials"]
@@ -13969,7 +13969,7 @@ const QA_INVENTORYMANAGEMENT = [
     action: "view",
     object: "inventory location list",
     scope: "module",
-    section: "Inventory Locations and Overview Map",
+    section: "Inventory Locations",
     question: "How do I see which materials are in an Inventory Location?",
     answer: "Open the **Inventory** tab and click the location, or click its geofence on the **Overview** map and use the link at the top of the details. The page lists each material with its quantity, minimum and maximum.",
     tags: ["materials in location","stock at location","location materials"]
@@ -13978,7 +13978,7 @@ const QA_INVENTORYMANAGEMENT = [
     action: "view",
     object: "data lineage",
     scope: "module",
-    section: "Who Does What",
+    section: "Overview",
     question: "Where does the data in Inventory Management come from?",
     answer: "Materials, UOMs and UOM conversions come from **Global Data** (**Company → Cost → Material** and **UOM, Phasecodes and GL codes**). Customers come from Global Data, projects and Business Units from the organisation's existing records, and users from Arena users. Stock quantities are entered at each Inventory Location by the Inventory Manager, and also arrive from **Procurement** when a Delivery Receipt confirms a purchase order. Fix a missing value at its source, not in Inventory Management. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["where does inventory data come from","inventory master data source","inventory lineage","what feeds inventory"]
@@ -13987,7 +13987,7 @@ const QA_INVENTORYMANAGEMENT = [
     action: "view",
     object: "data lineage",
     scope: "module",
-    section: "Who Does What",
+    section: "Overview",
     question: "Where does Inventory Management data go?",
     answer: "Tickets feed the **Hauling Report**, the **Client Portal** report and each order's delivered, remaining and fulfilment figures. Quantities held at a location feed the low-stock flag, the **Overview** map and **Material Reconciliation**. Procurement receipts add to location stock, and the **Inventory Management** card in **Field Works → Progress** raises Site Material Requests for the same locations. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["where does inventory data go","inventory feeds reports","inventory destination","what uses inventory data"]
@@ -13996,7 +13996,7 @@ const QA_INVENTORYMANAGEMENT = [
     action: "view",
     object: "data lineage",
     scope: "module",
-    section: "Who Does What",
+    section: "Overview",
     question: "How does Inventory Management connect to Procurement, Work Orders and Field Works?",
     answer: "From **Home**, open **Inventory Management**. Procurement: when a Delivery Receipt confirms a purchase order, the material's **See History** shows a line such as \"received from the vendor through PO ID ... confirmed by DR ID ...\". Field Works: the **Inventory Management** card in **Progress** opens **Site Material Requests** and **Rejected Site Material Requests**. Work Order: a **Work** configurable field (type Work Order) can be added to Site Material Requests in Settings to link a request to a work order. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["inventory procurement link","inventory work order link","inventory field works card","inventory delivery receipt","inventory cost tracking","how does inventory connect to procurement","inventory and procurement","inventory and work orders","inventory and field works"]
@@ -14005,7 +14005,7 @@ const QA_INVENTORYMANAGEMENT = [
     action: "view",
     object: "dropdown source",
     scope: "module",
-    section: "Global Data Prerequisites: UOMs and Materials",
+    section: "UOMs & Materials",
     question: "Where does the Material list in Inventory Management come from?",
     answer: "From **Global Data → Company → Cost → Material**. When you click **+ Add** on an Inventory Location, the **Material** dropdown shows each material as its name and Material Cost Code, the same records as the Global Data material list. Add or correct a material there, then reopen the dialog.",
     tags: ["material list source inventory","where do materials come from","material dropdown inventory","inventory material master"]
@@ -14014,7 +14014,7 @@ const QA_INVENTORYMANAGEMENT = [
     action: "view",
     object: "dropdown source",
     scope: "module",
-    section: "Global Data Prerequisites: UOMs and Materials",
+    section: "UOMs & Materials",
     question: "Why don't I see a material or UOM when adding stock to a location?",
     answer: "It has not been set up in Global Data. Materials come from **Global Data → Company → Cost → Material** (check the rate card too) and UOMs from **UOM, Phasecodes and GL codes**. Ask the Global Data Administrator to add it, then try again. Quantities must also be greater than 0 for Minimum and Maximum. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["material not in dropdown","why no material","why cant i find a material when adding stock to a location","find a material adding stock","uom missing inventory","cannot find material inventory"]
@@ -14023,7 +14023,7 @@ const QA_INVENTORYMANAGEMENT = [
     action: "view",
     object: "dropdown source",
     scope: "module",
-    section: "Inventory Locations and Overview Map",
+    section: "Inventory Locations",
     question: "Where do the Business Unit, Project and Inventory manager lists on a location come from?",
     answer: "From **Home**, open **Inventory Management → Inventory**. Business Unit and Project show the organisation's existing Business Units and projects, and Inventory manager shows Arena users, so a missing value is added at its source (Business Units and projects in their own setup, users in Users and Permissions). A location must be **Active** before you can pick it on a ticket. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["inventory manager list","business unit list location","project list location inventory"]
@@ -14032,7 +14032,7 @@ const QA_INVENTORYMANAGEMENT = [
     action: "view",
     object: "data lineage",
     scope: "module",
-    section: "Materials at a Location",
+    section: "Materials",
     question: "Where does the stock quantity at a location come from?",
     answer: "From what the Inventory Manager enters (**+ Add**, **Add Quantity**, Excel upload) and from **Procurement**: when a Delivery Receipt confirms a purchase order, the material's **See History** shows the receipt with its PO and DR numbers. The same quantity feeds the low-stock flag, Overview map, ticket Stock Available and **Material Reconciliation**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["stock quantity source","where does stock come from","delivery receipt adds stock","po adds inventory","where does stock quantity at a location come from","where does inventory quantity come from","stock quantity at location"]
@@ -14077,7 +14077,7 @@ const QA_INVENTORYMANAGEMENT = [
     action: "view",
     object: "data lineage",
     scope: "module",
-    section: "Reports: Hauling, Client Portal and Reconciliation",
+    section: "Reports",
     question: "Where do the report figures come from?",
     answer: "From **Home**, open **Inventory Management → Reports**. **Hauling Report**: External Tickets. **Client Portal** and the **Ship Tickets** page: External Orders (ordered quantity) against External Tickets (delivered). **Material Reconciliation**: the Current Available quantity at the Inventory Location against the surveyed stockpile you enter.",
     tags: ["report data source","hauling report source","client portal source","reconciliation source","where do the hauling report figures come from","where does hauling report data come from","where do report figures come from"]
@@ -14086,7 +14086,7 @@ const QA_INVENTORYMANAGEMENT = [
     action: "view",
     object: "dropdown source",
     scope: "module",
-    section: "Settings: Fields, IDs, Permissions and General",
+    section: "Settings",
     question: "Which setting changes the fields, IDs and UOM behavior in Inventory Management?",
     answer: "**Settings → External Orders / Tickets** decide the form fields; **ID Settings** builds the order and ticket numbers (locked once a ticket exists); **Users and Permissions** decides who can open each screen; **General** switches External Tickets and UOM Conversions Required on, and holds Print Settings. The equivalent screens are Site Material Requests, Material Issue Tickets, Return Tickets and Approval WorkFlow. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["inventory settings feeds","which setting controls inventory","setting changes form fields"]
@@ -14095,7 +14095,7 @@ const QA_INVENTORYMANAGEMENT = [
     "action": "create",
     "object": "site material request",
     "scope": "module",
-    "section": "Earlier Version: Site Material Requests, Issue Tickets and Return Tickets",
+    "section": "Earlier Version Tickets",
     "question": "How do I raise a site material request?",
     "answer": "From **Home**, open **Inventory Management → Site Material Request** and click **Add**. Choose the **Project**, **Required Date** and **Requested By**, add materials with **Quantity**, **UOM** and **Remarks**, then click **Submit for Approval**.",
     "tags": [
@@ -14112,7 +14112,7 @@ const QA_INVENTORYMANAGEMENT = [
     "action": "view",
     "object": "site material request list",
     "scope": "module",
-    "section": "Earlier Version: Site Material Requests, Issue Tickets and Return Tickets",
+    "section": "Earlier Version Tickets",
     "question": "Where do I see all site material requests?",
     "answer": "Open **Inventory Management → Site Material Request**. Cards show the status, **Raised on**, **Raised by**, number, **Materials** and **Required Date**. Use **Filters**, **Manage Columns** or **Export**. Rejected requests are on the **Rejected Pickup Tickets** sub-tab.",
     "tags": [
@@ -14127,7 +14127,7 @@ const QA_INVENTORYMANAGEMENT = [
     "action": "approve",
     "object": "site material request approval",
     "scope": "module",
-    "section": "Earlier Version: Site Material Requests, Issue Tickets and Return Tickets",
+    "section": "Earlier Version Tickets",
     "question": "How is a site material request approved?",
     "answer": "Open a raised request from **Inventory Management → Site Material Request**. The **Approvals** panel shows each approval level, and an approver can approve with a comment. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     "tags": [
@@ -14141,7 +14141,7 @@ const QA_INVENTORYMANAGEMENT = [
     "action": "create",
     "object": "material issue ticket",
     "scope": "module",
-    "section": "Earlier Version: Site Material Requests, Issue Tickets and Return Tickets",
+    "section": "Earlier Version Tickets",
     "question": "How do I create a material issue ticket?",
     "answer": "Open **Inventory Management → Material Issue Ticket** and click **Add**. Choose the **Site Material Request** and **Ship Material From**, enter **Ship Now** quantities, the shipping agent name and contact, then sign as **Shipped By** and set the **Date**.",
     "tags": [
@@ -14157,7 +14157,7 @@ const QA_INVENTORYMANAGEMENT = [
     "action": "create",
     "object": "return ticket",
     "scope": "module",
-    "section": "Earlier Version: Site Material Requests, Issue Tickets and Return Tickets",
+    "section": "Earlier Version Tickets",
     "question": "How do I return materials with a return ticket?",
     "answer": "Open **Inventory Management → Return Ticket** and click **Add**. Choose the **Site Material Request** and **Return Material To**, fill **Reason for returning materials** and **Material Condition**, enter **Return Now** quantities, then sign and set the **Date**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     "tags": [
@@ -14173,7 +14173,7 @@ const QA_INVENTORYMANAGEMENT = [
     "action": "configure",
     "object": "site material request settings",
     "scope": "module",
-    "section": "Earlier Version: Site Material Requests, Issue Tickets and Return Tickets",
+    "section": "Earlier Version Tickets",
     "question": "How do I change the fields on a site material request?",
     "answer": "Open **Inventory Management → Settings → Pickup**. **Standard Fields** are **Id**, **Status**, **Project Name**, **Requested by**, **Required date** and **Materials**. Click **Add field** for a custom field (**Required**, **Show on card**, **Unique**), choose **Ship To Text Box** or **Ship To Location**, then click **Save Changes**.",
     "tags": [
@@ -14191,7 +14191,7 @@ const QA_INVENTORYMANAGEMENT = [
     "action": "configure",
     "object": "ship and return settings",
     "scope": "module",
-    "section": "Earlier Version: Site Material Requests, Issue Tickets and Return Tickets",
+    "section": "Earlier Version Tickets",
     "question": "Where do I set up fields for Material Issue Tickets and Return Tickets?",
     "answer": "Open **Inventory Management → Settings → Ship** or **Settings → Return**. **Return** also has the **Material Condition** options: **Seal opened**, **Partially used**, **Leftovers** and **Unused**. Use **Add field** for custom fields.",
     "tags": [
@@ -14206,7 +14206,7 @@ const QA_INVENTORYMANAGEMENT = [
     "action": "define",
     "object": "earlier version inventory",
     "scope": "module",
-    "section": "Earlier Version: Site Material Requests, Issue Tickets and Return Tickets",
+    "section": "Earlier Version Tickets",
     "question": "Why do I see Inventory Master and Site Material Request instead of Orders?",
     "answer": "Environments running an earlier version of Arena show **Inventory Master**, **Site Material Request**, **Material Issue Ticket** and **Return Ticket**. Arena 2.0 uses the **Inventory Locations**, **External Orders**, **Hauling Trucks** and **External Tickets** screens described above. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     "tags": [
@@ -14221,7 +14221,7 @@ const QA_INVENTORYMANAGEMENT = [
     "action": "view",
     "object": "inventory master list",
     "scope": "module",
-    "section": "Inventory Locations and Overview Map",
+    "section": "Inventory Locations",
     "question": "What does the Inventory Master list show in the earlier version?",
     "answer": "Open **Inventory Management → Inventory Master**. Locations show as cards with a **more_vert** menu. The list has **Add Location**, search, **Export**, **Filters**, **Manage Columns** and saved views. Open a location to see its materials with **Quantity**, **Minimum Required Quantity** and **Maximum Quantity**.",
     "tags": [
@@ -14235,7 +14235,7 @@ const QA_INVENTORYMANAGEMENT = [
     "action": "create",
     "object": "inventory location required fields",
     "scope": "module",
-    "section": "Inventory Locations and Overview Map",
+    "section": "Inventory Locations",
     "question": "Which fields are required when I create an inventory location?",
     "answer": "In the **Create Inventory Location** dialog, **Location Name**, **Location ID** and **Inventory manager** are required. **Location Type**, **Business Unit**, **Project** and **Active** are optional.",
     "tags": [
@@ -14249,7 +14249,7 @@ const QA_INVENTORYMANAGEMENT = [
     "action": "configure",
     "object": "id settings earlier version",
     "scope": "module",
-    "section": "Settings: Fields, IDs, Permissions and General",
+    "section": "Settings",
     "question": "How do I set ID formats for site material requests and issue tickets?",
     "answer": "Open **Inventory Management → Settings → ID Settings**. Choose a tab (**Site Material Requests**, **External Site Material Requests**, **Material Issue Tickets**, **External Material Issue Tickets** or **Return Tickets**), pick **System Default** or **Custom**, and check **Example Format**.",
     "tags": [
@@ -14263,7 +14263,7 @@ const QA_INVENTORYMANAGEMENT = [
     "action": "configure",
     "object": "print settings",
     "scope": "module",
-    "section": "Settings: Fields, IDs, Permissions and General",
+    "section": "Settings",
     "question": "How do I set up print copies in Inventory General settings?",
     "answer": "Open **Inventory Management → Settings → General**. In **Print Settings** use **Add Row Name** to name each copy and turn on **Include Header** to print the header. **External Tickets** and **UOM Conversions Required** are on the same page.",
     "tags": [
@@ -15399,7 +15399,7 @@ const MODULES = [
     "qaItems": QA_OPPORTUNITY,
     "narrative": [
       {
-        "heading": "Who Does What in Opportunity Management",
+        "heading": "Overview",
         "intro": "<p>This section is for anyone who wants to know who does what in Opportunity Management: BD users log and work the pursuits, team members help on them, leads oversee them, and Sales Ops keeps the master data and setup in order. Each role works on the same opportunity record.</p><p>Access comes from user groups under <strong>Settings → Users and Permissions</strong> (the BD group and the Admin group). To see every opportunity in the organisation, a user needs the <strong>Admin View</strong> permission under Global Data.</p>",
         "definitions": [
           {
@@ -15452,143 +15452,93 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Settings",
-        "intro": "<p><strong>Settings</strong> (the gear icon on the module toolbar) is where Sales Ops or an administrator configures the pipeline, the form fields, the ID format and who can use the module. End users rarely open it, but a gap here can stop the whole team logging leads.</p><p>Settings has these areas: <strong>Competitor Form</strong>, <strong>Stages & Statuses Configuration</strong>, <strong>Opportunities Form</strong>, <strong>Expense</strong>, <strong>ID Settings</strong>, <strong>Business Development</strong>, <strong>Project Types</strong>, <strong>Opportunity Type</strong>, <strong>Milestone Templates</strong>, <strong>Customer Relation</strong> and <strong>Users and Permissions</strong>. Most \"why can't I do X\" questions trace back to a gap in <strong>Stages & Statuses Configuration</strong> or <strong>Opportunities Form</strong>.</p>",
-        "definitions":[
+        "heading": "Dashboard",
+        "intro": "<p>A BD Manager or Sales Director needs a same-day answer to \"how healthy is our pipeline right now\" — without digging through spreadsheets or asking each rep individually for a status update. </p><p>My Dashboard is the landing screen for Opportunity Management (labeled Leads Management inside a Project) — the personal, KPI-driven home page a <strong>BD End User</strong> sees the moment they open the module. Rather than dropping you straight into a raw list of records, Arena surfaces the handful of numbers and lists that matter most for managing a pipeline day to day: how many pursuits you're carrying, how much they're collectively worth, which ones need attention because they've gone quiet, and which ones are coming due.</p>\n    <p>The dashboard exists to answer a simple recurring question — \"what does my pipeline look like right now, and what needs my attention today?\" — without requiring you to build a filtered view of the Opportunities list yourself. Every KPI card is clickable or linked to the underlying data, so the dashboard functions as a jumping-off point into the rest of the module as much as a summary of it.</p>\n    <p>Because staleness and due dates are time-sensitive, several of the dashboard's cards are driven by configuration set elsewhere in the module (specifically under Settings), which means the dashboard's behavior changes depending on how an administrator has tuned thresholds for your organization. Understanding those underlying settings — covered in the Settings section — helps you interpret what the dashboard is telling you.</p><p>Because the dashboard is personal by default, a <strong>BD Manager</strong> typically also relies on the company-wide Analytics tab (see below) for a rolled-up view across the whole team, rather than trying to read every individual rep's My Dashboard separately.</p>",
+        "definitions": [
           {
-            "term": "Stages & Statuses Configuration",
-            "definition": "The screen that defines the pipeline: the stages (Lead → Opportunity → Proposal → Inquiry → Bidding → Closed by default) and, within each stage, the allowed statuses. By default Opportunity has Active and On Hold; Proposal has Active, In Progress, Under Review and In Review; Inquiry has Received Inquiry, Submitted and Awaiting Client Response; Bidding has RFP Receipt, RFP Submitted, Clarification, Best & Final and Awaiting Decision; Closed has Won, Lost, No Bid and Cancelled. Per stage you set a name, a color, a Default Win Probability (%), a Stage Threshold (Days) and the allowed statuses. Each Closed status carries its own outcome label, which the Outcome Analysis and Client Win Rate reports read to tell wins from other closures. **Reorder Stages** and **Add Stages** restructure the pipeline. Closed stays one stage, so win and loss analytics stay clean."
+            "term": "My Dashboard",
+            "definition": "The personal, KPI-driven landing tab of Opportunity Management, opened by default when you enter the module. It shows totals, value, staleness, pipeline funnel shape, your tasks, recent activity, and upcoming due dates in one place, with a Daily/Weekly/Monthly toggle that re-bases every KPI card to that time window."
           },
           {
-            "term": "Opportunities Form",
-            "definition": "Controls the Create Opportunity form and what each stage requires, in four sub-tabs: **Standard Fields**, **Configurable Fields**, **Stale Threshold** (days without activity before an opportunity counts as stale) and **Settings**. For each field you set **Required** (and the stage it applies to), **Hide** and **Show At Creation**. This is what produces the red asterisks when a lead is qualified, and what keeps the create form short."
+            "term": "Total Opportunities",
+            "definition": "A KPI card showing the count of opportunities you're tracking plus their combined Total Value (₹), along with a trend indicator comparing today's numbers to yesterday's."
           },
           {
-            "term": "Opportunities Form → Settings",
-            "definition": "A sub-tab of **Opportunities Form** with four settings. **Parent Mode** turns on parent and child opportunities. **AutoFill Customer Details** fills the client fields once a client is picked. **Document Management** chooses AWS S3 or SharePoint as the storage for opportunity attachments (the guide describes documents held on the organisation's SharePoint site); it locks once any opportunity or proposal exists. The **Weighted Value Formula** shows how weighted value is worked out: Opportunity Value × Go % × Get %."
+            "term": "Total Opportunity Value",
+            "definition": "The sum of the Opportunity Value field across every opportunity record in view — a raw, unweighted total of everything in the pipeline."
           },
           {
-            "term": "Expense",
-            "definition": "The settings area for tracking pursuit-related spend, with two sub-tabs: Form (Standard Fields — S.No, Expense Type, Item Name, Quantity, Unit Price, Amount, Comments — plus Configurable Fields) and Approval Workflow."
+            "term": "Weighted Opportunity Value",
+            "definition": "The sum of opportunity values weighted by win-probability, rather than a raw total. Because not every opportunity in the pipeline is equally likely to close, this KPI gives a probability-adjusted view of how much pipeline value you can realistically expect to convert — a more honest forecasting number than Total Opportunity Value alone."
           },
           {
-            "term": "ID Settings",
-            "definition": "The screen controlling the auto-generated Opportunity ID format. You choose an ID Separator (/, -, or None) and compose the ID from Business Unit, Year, and Serial No./ID components. Child ID Settings configures the ID format for child opportunities separately from top-level ones."
+            "term": "Stale Opportunity",
+            "definition": "An opportunity that has crossed the configurable Stale Threshold — a number of days of inactivity defined in Settings → Opportunities Form → Stale Threshold. The dashboard's Stale Opportunities KPI counts how many records currently exceed that threshold, giving you an early warning list of pursuits that risk going cold from neglect."
           },
           {
-            "term": "Business Development",
-            "definition": "A maintained catalog of BD codes and representatives, tracked with Serial Number, VP Business Unit, Description, and Actions columns."
+            "term": "Due This Week",
+            "definition": "A KPI card counting opportunities whose Due Date falls within the current week, helping you triage what needs action in the near term rather than scanning the full list for due dates manually."
           },
           {
-            "term": "Project Types",
-            "definition": "A maintained catalog of the project/work-type classifications used elsewhere in the module, tracked by category (such as FIELD or SHOP), material, and status flags."
+            "term": "Opportunity Funnel",
+            "definition": "A chart on the dashboard visualizing opportunity counts and value broken down by pipeline Stage, giving you an at-a-glance read on where the bulk of your pipeline currently sits (e.g., heavily weighted toward Lead vs. further along in Proposal)."
           },
           {
-            "term": "Opportunity Type",
-            "definition": "A simple maintained list (Serial Number, Opportunity Type, Actions) — empty by default until an administrator populates it."
+            "term": "Top 10 Opportunities",
+            "definition": "A dashboard widget ranking your ten highest-value opportunities, with its own dedicated + Create Opportunity shortcut so you can add a new high-priority pursuit without leaving the dashboard."
           },
           {
-            "term": "Milestone Templates",
-            "definition": "A settings area with two sub-tabs, Milestone Templates and Master Milestones, each with its own Create button — empty by default until entries are added."
+            "term": "Upcoming Opportunity Due Date",
+            "definition": "A dashboard list surfacing opportunities that are nearing their due date, distinct from the Due This Week KPI card in that it shows the actual list of upcoming records rather than just a count, and also carries its own + Create shortcut."
           },
           {
-            "term": "Customer Relation",
-            "definition": "The screen configuring a Look Back Window (In Days) and an SLA (In Hours), both used for customer-relationship and response-time tracking."
+            "term": "Whose pipeline you see",
+            "definition": "My Dashboard shows your own pipeline. To see every opportunity in the organisation, a user needs the **Admin View** permission enabled under Global Data."
           },
           {
-            "term": "Users and Permissions",
-            "definition": "The access-control screen for the module. Existing User Groups (for example, Opportunity Manager or Opportunity Estimator) are managed via a three-dot menu offering Permissions and Users management, and Add User Group creates a new group along with its Permissions and Users."
+            "term": "Top cards and the period toggle",
+            "definition": "The top of **My Dashboard** shows four cards: **Total Opportunity Value**, **Weighted Opportunity Value**, **Due This Week** and **Stale Opportunities**. Use the **Daily / Weekly / Monthly** toggle to change the period. Below them are the **Opportunity Funnel** (value by stage, so you see where the money sits) and the **Task** panel with **+ Create Task**."
           },
           {
-            "term": "Sales Ops shared settings",
-            "definition": "Sales Ops also maintains **Opportunity Type** (New Build, Existing Facility), **Milestone Templates**, **Business Development** (the BD name pool), **Manage Columns** (Sales Ops can save the default layout for everyone) and **Users and Permissions** (the BD group and the Admin group). Proposal statuses, the compliance requirement directory (under Global Data) and the expense categories with their approval routing are maintained here too."
-          },
-          {
-            "term": "Which setting feeds which list",
-            "definition": "**Stages & Statuses Configuration** feeds the Stage and Status dropdowns and the stage chips. **Opportunities Form** decides which fields are required, hidden or shown at creation. **Opportunity Type** and **Milestone Templates** feed the Details section and the Milestones tab. **Business Development** feeds the BD name pool. **Expense** feeds the Expenses tab categories and approver. **ID Settings** builds the Opportunity ID. **Customer Relation** feeds the score on the interactions summary. **Competitor Form** shapes the Competitors shortcut. **Users and Permissions** decides who can open the module. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
-          },
-          {
-            "term": "Competitor Form",
-            "definition": "From **Home**, open **Opportunity Management**, click **Settings** (gear) and choose **Competitor Form**. The **Standard Fields** are **Competitor Name**, **Type** and **Description**. Click **Add Field** to add your own field to the **Create Competitor** form."
-          },
-          {
-            "term": "Owner Settings",
-            "definition": "Open **Owners** from the icon toolbar. Next to **Create Owner** and **Export** is a **Settings** button that opens the settings for the owner form. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
+            "term": "Recent Activity",
+            "definition": "A feed of the latest calls, mails, meetings and events across your opportunities. It shows whether a pursuit is being worked or going cold."
           }
         ],
         "procedures": [
           {
-            "title": "Fixing \"Status is required\" errors when creating an opportunity",
+            "title": "Reading pipeline health at a glance",
             "steps": [
-              "Go to <strong>Settings → Stages & Statuses Configuration</strong>.",
-              "Select the <strong>Lead</strong> stage (or whichever stage is affected).",
-              "Add at least one Status under that stage's Allowed Statuses (for the Lead stage, New Lead).",
-              "Return to Create Opportunity — the Status dropdown should now be populated."
-            ],
-            "note": "This is the single most common blocker preventing new opportunities from being created: the Status dropdown is driven entirely by whatever Statuses are configured for the opportunity's current Stage, and if a Stage has none configured, the dropdown is empty and the Create Opportunity dialog cannot be submitted."
-          },
-          {
-            "title": "Adding a whole new Stage or reordering the pipeline",
-            "steps": [
-              "Go to <strong>Settings → Stages & Statuses Configuration</strong>.",
-              "Click <strong>Add Stages</strong> to add a new pipeline stage, or <strong>Reorder Stages</strong> to change the order of existing stages."
+              "Open <strong>Opportunity Management</strong> (or <strong>Leads Management</strong> inside a Project) — it opens directly on <strong>My Dashboard</strong>.",
+              "Use the <strong>Daily / Weekly / Monthly</strong> toggle at the top of the dashboard to re-base every KPI card to the time window you care about.",
+              "Scan the <strong>Total Opportunities</strong>, <strong>Total Opportunity Value</strong>, <strong>Weighted Opportunity Value</strong>, <strong>Due This Week</strong>, and <strong>Stale Opportunities</strong> cards for a top-line read on volume, value, urgency, and pipeline hygiene.",
+              "Check the <strong>Opportunity Funnel</strong> chart to see how your pipeline is distributed across Stages."
             ]
           },
           {
-            "title": "Setting the Stale Threshold",
+            "title": "Finding opportunities that are overdue or coming due soon",
             "steps": [
-              "Go to <strong>Settings → Opportunities Form</strong>.",
-              "Set the <strong>Stale Threshold</strong> field to the number of days of inactivity after which an opportunity should be flagged stale.",
-              "This value immediately feeds the dashboard's Stale Opportunities KPI."
+              "On <strong>My Dashboard</strong>, check the <strong>Due This Week</strong> KPI card for a quick count.",
+              "Scroll to the <strong>Upcoming Opportunity Due Date</strong> list to see the actual records approaching their due date.",
+              "Alternatively, go to the main <strong>Opportunities</strong> list and filter by <strong>Due Date</strong> for a fully customizable date range instead of the dashboard's fixed \"this week\" window."
             ]
           },
           {
-            "title": "Adding a custom field to the Create Opportunity form",
+            "title": "Finding your highest-value opportunities",
             "steps": [
-              "Go to <strong>Settings → Opportunities Form → Configurable Fields</strong>.",
-              "Add the custom field there.",
-              "Reference the <strong>Standard Fields</strong> tab in the same section if you need to check what's already built in before adding a duplicate custom field."
+              "On <strong>My Dashboard</strong>, locate the <strong>Top 10 Opportunities</strong> widget.",
+              "Review the ranked list, sorted by opportunity value from highest to lowest.",
+              "Use the widget's own <strong>+ Create Opportunity</strong> shortcut if you want to add a new high-value pursuit directly from this view."
             ]
-          },
-          {
-            "title": "Configuring the Opportunity ID format",
-            "steps": [
-              "Go to <strong>Settings → ID Settings</strong>.",
-              "Choose an ID Separator (<code>/</code>, <code>-</code>, or None).",
-              "Compose the ID from Business Unit, Year, and Serial No./ID components.",
-              "Configure <strong>Child ID Settings</strong> separately if your organization uses parent/child opportunity hierarchies."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/opportunity/050.jpg",
-                "caption": "ID Settings for child and parent IDs",
-                "step": 3
-              }
-            ]
-          },
-          {
-            "title": "Managing user access to Opportunity Management",
-            "steps": [
-              "Go to <strong>Settings → Users and Permissions</strong>.",
-              "To modify an existing group (e.g. Opportunity Manager, Opportunity Estimator), use its three-dot menu to manage Permissions and Users.",
-              "To create a new group, click <strong>Add User Group</strong> and configure its Permissions and Users."
-            ]
-          },
-          {
-            "title": "Turn on parent/child opportunities or change the Weighted Value formula",
-            "steps": [
-              "Go to <strong>Settings → Opportunities Form → Settings</strong>.",
-              "Toggle <strong>Parent Mode</strong> on to let opportunities be created as Parent, Child, or Standalone.",
-              "Toggle <strong>AutoFill Customer Details</strong> on so picking a Customer on Create Opportunity fills in its related fields automatically.",
-              "Check the Weighted Value Formula (Opportunity Value × Go % × Get %) to see how the dashboard's Weighted Opportunity Value is calculated."
-            ],
-            "note": "Document Management (AWS S3 or SharePoint) is also set on this sub-tab, but it locks permanently as soon as any Opportunity or Proposal exists — decide it before the module goes live."
           }
         ],
         "images": [
           {
-            "src": "assets/guides/opportunity/049.jpg",
-            "caption": "Opportunities Form settings for Required, Hide and Show At Creation"
+            "src": "assets/guides/opportunity/001.jpg",
+            "caption": "My Dashboard cards and Opportunity Funnel"
+          },
+          {
+            "src": "assets/guides/opportunity/002.jpg",
+            "caption": "Task panel with + Create Task"
           }
         ]
       },
@@ -15891,6 +15841,141 @@ const MODULES = [
         ]
       },
       {
+        "heading": "Opportunity Record",
+        "intro": "<p>Each opportunity opens as a full record with tabs beyond the profile. The BD user or team member working the pursuit uses them to plan dates, share the work, track proposals, check bid readiness and record what the pursuit costs. They sit on the same record so the whole history stays together.</p>",
+        "definitions": [
+          {
+            "term": "Milestones tab",
+            "definition": "Dates across the life of the opportunity. Once you choose a **Milestone Template** on the profile, the tab shows one row per milestone with **Icon**, **Milestone**, **Target Date**, **Actual** dates and **Notes**. Remove a milestone that does not apply, or add one from the master list. Each opportunity type shows only the templates mapped to it. The dates feed the **Pipeline Gantt View**, and the standard setup needs at least approximate target dates before a lead is qualified."
+          },
+          {
+            "term": "Teams tab",
+            "definition": "Add team members to the opportunity so they can edit its fields and add information."
+          },
+          {
+            "term": "Clients Interactions tab",
+            "definition": "Turns on once a customer and a customer contact are added on the opportunity. Log calls, mails, meetings, tasks, comments and notes here. The **Comments** tab works as an internal team chat for that one opportunity."
+          },
+          {
+            "term": "Documents tab",
+            "definition": "Files attached here go to the shared document storage chosen for your organisation in Opportunities Form → Settings (AWS S3 or SharePoint). The guide describes these documents being held on the organisation's SharePoint site rather than local drives."
+          },
+          {
+            "term": "Proposals tab",
+            "definition": "Lists the proposals raised against the opportunity, one row each. Click **+ Create**, enter the details and move the status on as the proposal goes from draft to submitted."
+          },
+          {
+            "term": "Compliance Tracker tab",
+            "definition": "Lists the compliance requirements selected for the opportunity and checks them against what your company holds. Four cards head the screen: **Compliant**, **Missing / Incomplete / Expired**, **Expiring Soon** and **Readiness Score** (what is available against the total selected). The table shows each requirement with its ID, name, description, category, renewal frequency, required evidence and source. The records themselves live under **Global Data → Compliance Hub**, so a missing or expired item is fixed there, not on the opportunity."
+          },
+          {
+            "term": "Expenses tab",
+            "definition": "What the pursuit costs: travel, proposal production, third-party studies, bid bonds. Approved lines add up to a total on the opportunity, so the cost of pursuit can be read against the outcome. The expense categories and approval routing are set up in Settings."
+          },
+          {
+            "term": "Stale and inactive alerts",
+            "definition": "On the **Timeline & Activity** section, the **Stage / Inactive Threshold Notification** warns you when an opportunity sits too long with no updated information. The thresholds come from **Settings**, and stale opportunities count on **My Dashboard**."
+          },
+          {
+            "term": "Where this data comes from: record tabs",
+            "definition": "**Teams** lists the users created in Global Data (and Crews); only added members can edit the opportunity. **Compliance Tracker** compares the requirements selected for the opportunity with what your company holds in **My Company Compliance**; the records are kept under **Global Data → Compliance Hub**, so fix a missing or expired item there. **Expenses** use the expense categories and approver set under **Settings → Expense**; approved lines add up to a total on the opportunity. **Documents** are stored in the AWS S3 or SharePoint location chosen under **Settings → Opportunities Form → Settings**. **Milestones** come from the Milestone Template chosen on the profile (templates are maintained in **Settings**), and can also be added from the master list."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Set milestone dates on an opportunity",
+            "steps": [
+              "Open the opportunity and choose the <strong>Milestone Template</strong> on the profile.",
+              "Open the <strong>Milestones</strong> tab.",
+              "Remove any milestone that does not apply, or add one from the master list.",
+              "Enter a <strong>Target Date</strong> for each milestone and add <strong>Notes</strong>."
+            ],
+            "note": "Opportunity Type and Milestone Templates are maintained by Sales Ops in Settings.",
+            "images": [
+              {
+                "src": "assets/guides/opportunity/009.jpg",
+                "caption": "Milestones tab with Target Date and Notes",
+                "step": 4
+              }
+            ]
+          },
+          {
+            "title": "Record a pursuit expense",
+            "steps": [
+              "Open the opportunity and click the <strong>Expenses</strong> tab, then <strong>+ Create</strong>.",
+              "Select the expense category, enter the date, amount and description, and attach the receipt.",
+              "Click <strong>Submit</strong>. The expense goes to the configured approver."
+            ],
+            "images": [
+              {
+                "src": "assets/guides/opportunity/014.jpg",
+                "caption": "Expenses tab",
+                "step": 2
+              }
+            ]
+          },
+          {
+            "title": "Check bid readiness on an opportunity",
+            "steps": [
+              "Open the opportunity and click the <strong>Compliance Tracker</strong> tab.",
+              "Read the four cards, especially <strong>Readiness Score</strong>.",
+              "For any missing or expired item, fix the record under <strong>Global Data → Compliance Hub</strong>."
+            ],
+            "images": [
+              {
+                "src": "assets/guides/opportunity/013.jpg",
+                "caption": "Compliance Tracker with Readiness Score",
+                "step": 3
+              }
+            ]
+          },
+          {
+            "title": "Ask Sales Ops to add a missing customer, location or contact",
+            "steps": [
+              "Open the opportunity and click the <strong>Comments</strong> tab.",
+              "Post a message to Sales Ops saying what you need.",
+              "Continue on the same record once Sales Ops adds it and you get a notification."
+            ]
+          },
+          {
+            "title": "Add users or crews to an opportunity team",
+            "steps": [
+              "Open the opportunity and click the **Teams** tab, which holds both **Users** and **Crews**.",
+              "Click **Add User**. The dialog lists the users created in Global Data. Search by name, tick the users and click **Submit**.",
+              "Click **Add Crew**. The dialog lists the crews from Global Data → Crews. Search, tick the crews and click **Submit**.",
+              "To remove a user or crew, open the three-dot menu on its card and click **Delete**."
+            ]
+          },
+          {
+            "title": "Add a task on an opportunity",
+            "steps": [
+              "Open the opportunity and click the **Task** tab.",
+              "Click **Add Task**, fill in the task details and click **Create**.",
+              "Open the three-dot menu to **Edit**, **Map** or **Delete** the task. **Map** links it to a customer group, customer and customer POC.",
+              "Use **Assign to** to give the task to rosters, and tick the checkbox on the card when it is done."
+            ]
+          },
+          {
+            "title": "Store documents on an opportunity",
+            "steps": [
+              "Open the opportunity and click the **Documents** tab. **Chat Documents** holds files sent through chat and **Mail Documents** holds files exchanged by email.",
+              "Click **New Folder**, enter a name and click **Submit**.",
+              "Click **Add File** to upload documents into the folder."
+            ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/guides/opportunity/011.jpg",
+            "caption": "Documents tab"
+          },
+          {
+            "src": "assets/guides/opportunity/012.jpg",
+            "caption": "Proposals tab"
+          }
+        ]
+      },
+      {
         "heading": "Clients Interactions",
         "intro": "<p>Winning construction work is a relationship business as much as a bidding one — a GC or subcontractor rarely wins a job cold, they win it because someone on the BD team has been building trust with the owner's or GC's decision-makers over months or years of calls, site visits, and proposals. Clients Interactions is where a <strong>BD rep or Account Manager (End User)</strong> keeps that relationship history somewhere other than their own memory or inbox, so the relationship survives even if that individual changes roles or leaves the account.</p><p>Clients Interactions is Arena's lightweight CRM layer inside Opportunity Management — the place where you log and review every touchpoint your team has with a customer's contacts, from phone calls to meetings to freeform notes. Where the Opportunities list tracks the deal itself, Clients Interactions tracks the relationship: the ongoing conversation history that supports and informs the pursuit.</p> <p>The screen is organized as a drill-down: you start at a company-level list, click into a specific customer to see its contacts, and click into a specific contact to open a full interaction workspace with dedicated sub-tabs for each interaction type (calls, mail, events, meetings, tasks, comments, notes, and history). This structure mirrors how relationship-building actually works in construction business development — you're rarely interacting with \"a customer\" in the abstract, you're building a relationship with named individuals at that customer.</p> <p>A few of the sub-tabs (Events, Meetings, Task, Comments) integrate directly with your connected calendar (Microsoft), which means they require an explicit consent grant before they'll function — a one-time setup step covered below. If you hit a \"Consent Not Granted\" message, that's the fix.</p>",
         "definitions": [
@@ -16004,6 +16089,159 @@ const MODULES = [
         ]
       },
       {
+        "heading": "Analytics",
+        "intro": "<p>Where a BD rep's My Dashboard answers \"how is my book of work doing,\" a <strong>Sales Director, VP of Business Development, or company executive</strong> needs a different question answered: how is the whole pipeline performing across business units, regions, and forecast scenarios. Analytics exists for that leadership audience, and its four dashboards are built to be shared upward and across the organization rather than used as a personal daily tool the way My Dashboard is.</p><p>Analytics is the business-intelligence layer of Opportunity Management — four dedicated dashboards that go beyond the personal, single-user view of My Dashboard to give leadership and operations a company-wide read on pipeline performance. Where My Dashboard answers \"what does my pipeline look like,\" Analytics answers broader questions: which business units are converting best, how the pipeline breaks down geographically, and how forecast scenarios compare against reality.</p>\n    <p>Every Analytics sub-tab follows the same interaction pattern — a Filters button to narrow the underlying data set and a Share icon to distribute the dashboard to other stakeholders — which keeps the four dashboards consistent to navigate even though their content differs substantially. This consistency matters because Analytics is typically consumed by people who move quickly between the four views looking for different cuts of the same underlying pipeline data.</p>\n    <p>The four sub-tabs are: <strong>Market & Operations</strong> (project-type and geographic distribution, cycle times, compliance tracking), <strong>Executive Summary</strong> (leadership-facing KPIs and win-rate performance), <strong>Pipeline by BU</strong> (a breakdown by Business Unit), and <strong>Pipeline Intelligence</strong> (AI-driven forecasting views). Together they give every level of the organization — from an individual rep checking a compliance deadline to an executive reviewing quarterly forecasts — a dashboard suited to their vantage point.</p>",
+        "definitions": [
+          {
+            "term": "Market & Operations",
+            "definition": "An Analytics sub-tab covering Opportunity Project Type (with a Count/Dollar toggle), Geographic Distribution, the Proposal Cycle Time Distribution chart, and the Permit & Insurance Expiry Tracker table."
+          },
+          {
+            "term": "Executive Summary",
+            "definition": "The leadership-facing Analytics dashboard, built around five headline KPI cards — Total Opportunity Value, Weighted Forecasted Value, Weighted Forecast This Quarter, Overall Win Rate (%), and Average Deal Size — plus a Scenario Forecast Comparison chart, an Opportunity by Stage Value breakdown, a Top Customers Performance table (Opportunity Value, Win Rate %, Average Cycle Days per customer), a Team Performance Leadership table (per BD rep: Total Opportunities Created, Opportunity Value, Win Rate %, Average Deal Size, TIC), an Opportunity by Project Type chart, an Opportunity by Business Development chart, and its own copy of the Permit & Insurance Expiry Tracker."
+          },
+          {
+            "term": "Pipeline by BU",
+            "definition": "An Analytics sub-tab that breaks the pipeline down by Business Unit. It includes summary stats (Total Opportunities, Top BU by Volume, Highest Win Rate), several charts (Opportunity Count by BU, Opportunity Value by BU, Pipeline Forecast by BU, Opportunities by BU and Region, Opportunity Stage Mix), and the BU Performance Matrix table (Business Unit, Lead, Proposal, Closed, Total, Win Rate)."
+          },
+          {
+            "term": "Pipeline Intelligence",
+            "definition": "An Analytics sub-tab built around AI-driven views: the Opportunity Distribution Heatmap, a Scenario Forecast Comparison (Month/Quarter toggle), Opportunity Dynamics by Month, and BD Opportunity Load."
+          },
+          {
+            "term": "Permit & Insurance Expiry Tracker",
+            "definition": "A compliance-tracking table appearing on both the Market & Operations and Executive Summary tabs, surfacing upcoming permit and insurance expirations so they don't lapse unnoticed."
+          },
+          {
+            "term": "Proposal Cycle Time Distribution",
+            "definition": "A chart on the Market & Operations tab showing which stage of the proposal cycle time distribution an opportunity's turnaround falls into — useful for identifying whether deals are moving through the proposal process at a healthy pace."
+          },
+          {
+            "term": "BU Performance Matrix",
+            "definition": "A table on the Pipeline by BU tab cross-referencing each Business Unit against its Lead, Proposal, Closed, and Total counts plus Win Rate — a compact way to compare business unit performance side by side."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Reviewing leadership-facing pipeline KPIs",
+            "steps": [
+              "Go to <strong>Opportunities Management → Analytics → Executive Summary</strong>.",
+              "Review the five headline KPI cards: <strong>Total Opportunity Value, Weighted Forecasted Value, Weighted Forecast This Quarter, Overall Win Rate (%),</strong> and <strong>Average Deal Size</strong>.",
+              "Check the <strong>Scenario Forecast Comparison</strong> chart and <strong>Opportunity by Stage Value</strong> breakdown for deeper context.",
+              "Review the <strong>Top Customers Performance</strong> and <strong>Team Performance Leadership</strong> tables to see who and what is driving results."
+            ]
+          },
+          {
+            "title": "Filtering or sharing any Analytics dashboard",
+            "steps": [
+              "Open the desired Analytics sub-tab (Market & Operations, Executive Summary, Pipeline by BU, or Pipeline Intelligence).",
+              "Click <strong>Filters</strong> to narrow the data shown on that dashboard.",
+              "Click the <strong>share</strong> icon to distribute the dashboard to other stakeholders."
+            ]
+          },
+          {
+            "title": "Tracking permit and insurance expirations",
+            "steps": [
+              "Go to either the <strong>Market & Operations</strong> or <strong>Executive Summary</strong> Analytics tab.",
+              "Locate the <strong>Permit & Insurance Expiry Tracker</strong> table on that dashboard.",
+              "Review upcoming expirations to stay ahead of compliance lapses."
+            ]
+          },
+          {
+            "title": "Checking proposal cycle time performance",
+            "steps": [
+              "Go to <strong>Analytics → Market & Operations</strong>.",
+              "Locate the <strong>Proposal Cycle Time Distribution</strong> chart to see which stage an opportunity's proposal cycle time falls into."
+            ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/guides/opportunity/016.jpg",
+            "caption": "Analytics sub-tabs"
+          }
+        ]
+      },
+      {
+        "heading": "Reports",
+        "intro": "<p>Not every audience wants a chart — a controller preparing a board deck, a BD Manager running a Monday pipeline huddle, or an executive doing a win/loss retrospective often just needs the underlying numbers in a clean, exportable format. Reports serves that need for <strong>BD Managers and leadership End Users</strong> who want to pull a defined data set out of Arena rather than interact with it inside the product.</p><p>Reports is the module's library of pre-built, exportable reports — a step beyond Analytics' visual dashboards, aimed at users who need structured, filterable, downloadable data rather than charts. Where Analytics is for reading trends visually, Reports is for extracting a defined data set to share, archive, or feed into another process (a spreadsheet, a leadership deck, a compliance file).</p>\n    <p>Every report in this section shares a consistent toolbar pattern — Search, Sort By, Export, Filters, and Manage Columns — the same pattern used on the main Opportunities list, so once you know how to customize columns there, you already know how to do it here. This consistency is deliberate: reports are essentially pre-filtered, purpose-built views over the same underlying opportunity data model that Opportunities and Analytics also draw from.</p>\n    <p>The module ships seven reports, each suited to a different question: Forecast Report (value and probability modeling), Opportunity Aging Report (staleness and velocity), Outcome Analysis Report (closed-deal retrospectives), Customer Win Rate Report (win rate by customer), Pipeline Report (the single most complete export of the data model), Huddle Report (a BD-representative-scoped snapshot for team meetings), and Pipeline Gantt View (a visual project timeline). Two of these — Huddle Report and Pipeline Gantt View — deviate slightly from the standard pattern by requiring you to set parameters and click Generate rather than simply exporting.</p>",
+        "definitions": [
+          {
+            "term": "Forecast Report",
+            "definition": "A report covering opportunity value, the various probability measures (Stage/AI/Manual), weighted values, and Go%/Get% — the report to use when you need the full probability-and-value picture for forecasting purposes."
+          },
+          {
+            "term": "Opportunity Aging Report",
+            "definition": "A report narrowly focused on staleness and velocity metrics: Days In Current Stage, Days Since Last Activity, Stale Flag, and Aging Status. It's the report to reach for when the question is specifically about how long opportunities have been sitting idle, rather than their financials."
+          },
+          {
+            "term": "Outcome Analysis Report",
+            "definition": "A report covering closed date, sales cycle length, and project type — useful for retrospective analysis of deals that have already closed, won or lost."
+          },
+          {
+            "term": "Customer Win Rate Report",
+            "definition": "A report showing deals won and lost, win rate percentage, and average cycle days, broken down by customer."
+          },
+          {
+            "term": "Pipeline Report",
+            "definition": "The single most complete report in the module — it covers nearly every field on the Opportunity record, including identifiers, financials, dates, contacts, and parent/child hierarchy. Unlike the Opportunity Aging Report, which is scoped narrowly to staleness metrics, the Pipeline Report is the report to use when you need the fullest possible export of opportunity data."
+          },
+          {
+            "term": "Huddle Report",
+            "definition": "A report scoped to a specific BD Representative and Date Range, generated on demand via a Generate button rather than the standard Export flow — designed to produce a downloadable snapshot suited to a team huddle or standup meeting."
+          },
+          {
+            "term": "Pipeline Gantt View",
+            "definition": "A Gantt-chart timeline visualization of opportunities, with a granularity toggle (Daily / Weekly / Monthly / Quarterly / Yearly) and a date-range picker, alongside Filters and download/save icons — the report to use when you need to see pursuits laid out against a timeline rather than as tabular data."
+          },
+          {
+            "term": "Account Assignment Report",
+            "definition": "The company guide lists an **Account Assignment Report** among the tiles on the **Reports** tab, next to Forecast, Opportunity Aging, Outcome Analysis, Client Win Rate, Pipeline Report, Huddle Report and Pipeline Gantt View. It shows who is assigned to each customer account. The maintenance screen itself is the **Account Assignment** tab."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Running a standard report",
+            "steps": [
+              "Go to <strong>Opportunities Management → Reports</strong>.",
+              "Click the report's name (for example, <strong>Forecast Report</strong>).",
+              "Use <strong>Filters</strong> or <strong>Sort By</strong> to narrow the data, then click <strong>Export</strong>.",
+              "Use the back arrow next to the report title to return to the reports list."
+            ],
+            "note": "Huddle Report and Pipeline Gantt View don't follow this exact pattern — instead of Export, you set parameters and click Generate. See the dedicated procedure for Huddle Report below."
+          },
+          {
+            "title": "Customizing which columns appear in a report",
+            "steps": [
+              "Open the desired report.",
+              "Click <strong>Manage Columns</strong> — the same control used on the main Opportunities list — to add, remove, or reorder columns."
+            ]
+          },
+          {
+            "title": "Generating the Huddle Report",
+            "steps": [
+              "Go to <strong>Reports → Huddle Report</strong>.",
+              "Select a <strong>BD Representative</strong> and a <strong>Date Range</strong>.",
+              "Optionally use <strong>Save Filters</strong> or <strong>Clear Filters</strong>.",
+              "Click <strong>Generate</strong> to produce a downloadable report."
+            ]
+          },
+          {
+            "title": "Finding customer win rate",
+            "steps": [
+              "Go to <strong>Reports → Customer Win Rate Report</strong> for a dedicated report on this metric.",
+              "Alternatively, check the <strong>Top Customers Performance</strong> table on the <strong>Executive Summary</strong> Analytics tab for the same information presented alongside other executive KPIs."
+            ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/guides/opportunity/015.jpg",
+            "caption": "Report tiles on the Reports tab"
+          }
+        ]
+      },
+      {
         "heading": "Account Assignment",
         "intro": "<p>On any account of size, more than one person at your company touches the relationship — a site-level contact, a corporate-level relationship owner, and an executive sponsor who steps in for the highest-stakes conversations. Account Assignment exists so a <strong>BD Manager (Module Manager)</strong> can define that ownership structure once per account rather than leaving it to individual BD reps to remember or re-explain on every new pursuit.</p><p>Account Assignment is the registry that connects a customer account to the internal people responsible for it. Rather than manually re-entering who the BD Rep, Corporate Lead, and Executive Lead are every time you create an opportunity for a given customer, Account Assignment lets you define that responsibility chain once, per Customer and Market Type combination, and have it auto-populate everywhere else in the module that needs it.</p>\n    <p>This distinction matters because it's easy to confuse Account Assignment with the Contacts Directory, but the two serve opposite purposes: Account Assignment is about internal ownership — who on your team owns this relationship — while the Contacts Directory is the external people directory of actual contacts at the customer's or owner's organization. One tracks \"who at our company is responsible,\" the other tracks \"who at their company do we talk to.\"</p>\n    <p>Because the assignment is keyed on Customer plus Market Type (and further refined by Sub Market Type and Tier), a single customer can have different responsibility chains for different market segments — reflecting how larger accounts are often split across multiple business lines internally.</p>",
         "definitions": [
@@ -16046,98 +16284,7 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Dashboard",
-        "intro": "<p>A BD Manager or Sales Director needs a same-day answer to \"how healthy is our pipeline right now\" — without digging through spreadsheets or asking each rep individually for a status update. </p><p>My Dashboard is the landing screen for Opportunity Management (labeled Leads Management inside a Project) — the personal, KPI-driven home page a <strong>BD End User</strong> sees the moment they open the module. Rather than dropping you straight into a raw list of records, Arena surfaces the handful of numbers and lists that matter most for managing a pipeline day to day: how many pursuits you're carrying, how much they're collectively worth, which ones need attention because they've gone quiet, and which ones are coming due.</p>\n    <p>The dashboard exists to answer a simple recurring question — \"what does my pipeline look like right now, and what needs my attention today?\" — without requiring you to build a filtered view of the Opportunities list yourself. Every KPI card is clickable or linked to the underlying data, so the dashboard functions as a jumping-off point into the rest of the module as much as a summary of it.</p>\n    <p>Because staleness and due dates are time-sensitive, several of the dashboard's cards are driven by configuration set elsewhere in the module (specifically under Settings), which means the dashboard's behavior changes depending on how an administrator has tuned thresholds for your organization. Understanding those underlying settings — covered in the Settings section — helps you interpret what the dashboard is telling you.</p><p>Because the dashboard is personal by default, a <strong>BD Manager</strong> typically also relies on the company-wide Analytics tab (see below) for a rolled-up view across the whole team, rather than trying to read every individual rep's My Dashboard separately.</p>",
-        "definitions": [
-          {
-            "term": "My Dashboard",
-            "definition": "The personal, KPI-driven landing tab of Opportunity Management, opened by default when you enter the module. It shows totals, value, staleness, pipeline funnel shape, your tasks, recent activity, and upcoming due dates in one place, with a Daily/Weekly/Monthly toggle that re-bases every KPI card to that time window."
-          },
-          {
-            "term": "Total Opportunities",
-            "definition": "A KPI card showing the count of opportunities you're tracking plus their combined Total Value (₹), along with a trend indicator comparing today's numbers to yesterday's."
-          },
-          {
-            "term": "Total Opportunity Value",
-            "definition": "The sum of the Opportunity Value field across every opportunity record in view — a raw, unweighted total of everything in the pipeline."
-          },
-          {
-            "term": "Weighted Opportunity Value",
-            "definition": "The sum of opportunity values weighted by win-probability, rather than a raw total. Because not every opportunity in the pipeline is equally likely to close, this KPI gives a probability-adjusted view of how much pipeline value you can realistically expect to convert — a more honest forecasting number than Total Opportunity Value alone."
-          },
-          {
-            "term": "Stale Opportunity",
-            "definition": "An opportunity that has crossed the configurable Stale Threshold — a number of days of inactivity defined in Settings → Opportunities Form → Stale Threshold. The dashboard's Stale Opportunities KPI counts how many records currently exceed that threshold, giving you an early warning list of pursuits that risk going cold from neglect."
-          },
-          {
-            "term": "Due This Week",
-            "definition": "A KPI card counting opportunities whose Due Date falls within the current week, helping you triage what needs action in the near term rather than scanning the full list for due dates manually."
-          },
-          {
-            "term": "Opportunity Funnel",
-            "definition": "A chart on the dashboard visualizing opportunity counts and value broken down by pipeline Stage, giving you an at-a-glance read on where the bulk of your pipeline currently sits (e.g., heavily weighted toward Lead vs. further along in Proposal)."
-          },
-          {
-            "term": "Top 10 Opportunities",
-            "definition": "A dashboard widget ranking your ten highest-value opportunities, with its own dedicated + Create Opportunity shortcut so you can add a new high-priority pursuit without leaving the dashboard."
-          },
-          {
-            "term": "Upcoming Opportunity Due Date",
-            "definition": "A dashboard list surfacing opportunities that are nearing their due date, distinct from the Due This Week KPI card in that it shows the actual list of upcoming records rather than just a count, and also carries its own + Create shortcut."
-          },
-          {
-            "term": "Whose pipeline you see",
-            "definition": "My Dashboard shows your own pipeline. To see every opportunity in the organisation, a user needs the **Admin View** permission enabled under Global Data."
-          },
-          {
-            "term": "Top cards and the period toggle",
-            "definition": "The top of **My Dashboard** shows four cards: **Total Opportunity Value**, **Weighted Opportunity Value**, **Due This Week** and **Stale Opportunities**. Use the **Daily / Weekly / Monthly** toggle to change the period. Below them are the **Opportunity Funnel** (value by stage, so you see where the money sits) and the **Task** panel with **+ Create Task**."
-          },
-          {
-            "term": "Recent Activity",
-            "definition": "A feed of the latest calls, mails, meetings and events across your opportunities. It shows whether a pursuit is being worked or going cold."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Reading pipeline health at a glance",
-            "steps": [
-              "Open <strong>Opportunity Management</strong> (or <strong>Leads Management</strong> inside a Project) — it opens directly on <strong>My Dashboard</strong>.",
-              "Use the <strong>Daily / Weekly / Monthly</strong> toggle at the top of the dashboard to re-base every KPI card to the time window you care about.",
-              "Scan the <strong>Total Opportunities</strong>, <strong>Total Opportunity Value</strong>, <strong>Weighted Opportunity Value</strong>, <strong>Due This Week</strong>, and <strong>Stale Opportunities</strong> cards for a top-line read on volume, value, urgency, and pipeline hygiene.",
-              "Check the <strong>Opportunity Funnel</strong> chart to see how your pipeline is distributed across Stages."
-            ]
-          },
-          {
-            "title": "Finding opportunities that are overdue or coming due soon",
-            "steps": [
-              "On <strong>My Dashboard</strong>, check the <strong>Due This Week</strong> KPI card for a quick count.",
-              "Scroll to the <strong>Upcoming Opportunity Due Date</strong> list to see the actual records approaching their due date.",
-              "Alternatively, go to the main <strong>Opportunities</strong> list and filter by <strong>Due Date</strong> for a fully customizable date range instead of the dashboard's fixed \"this week\" window."
-            ]
-          },
-          {
-            "title": "Finding your highest-value opportunities",
-            "steps": [
-              "On <strong>My Dashboard</strong>, locate the <strong>Top 10 Opportunities</strong> widget.",
-              "Review the ranked list, sorted by opportunity value from highest to lowest.",
-              "Use the widget's own <strong>+ Create Opportunity</strong> shortcut if you want to add a new high-value pursuit directly from this view."
-            ]
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/guides/opportunity/001.jpg",
-            "caption": "My Dashboard cards and Opportunity Funnel"
-          },
-          {
-            "src": "assets/guides/opportunity/002.jpg",
-            "caption": "Task panel with + Create Task"
-          }
-        ]
-      },
-      {
-        "heading": "Sidebar Shortcuts",
+        "heading": "Toolbar Shortcuts",
         "intro": "<p>A pursuit never exists in isolation from the people and companies around it — every opportunity needs a named customer, every customer has real contacts, and every competitive deal has known competitors to track. These shortcuts keep that supporting master data one click away for the <strong>BD End User</strong> building or updating an opportunity, while giving a <strong>BD Manager or Opportunity Management Admin</strong> a central place to keep the underlying Customers, Owners, and Competitors lists clean as the company's book of business grows.</p><p>Alongside the module's main tabs, Arena surfaces a row of icon shortcuts — Task, Calendar, Contacts Directory, Customers, Owners, Competitors, and Settings — that give you quick access to supporting master data and personal productivity tools without navigating away from wherever you are in the module. These shortcuts exist because opportunities don't live in isolation: a pursuit needs a customer, a customer needs contacts, deals have competitors, and work needs to be tracked as tasks and scheduled on a calendar. Rather than burying this supporting data several clicks deep, Arena keeps it one click away at all times.</p>\n    <p>Several of these shortcuts maintain master lists that are shared and reused across the module — Customers, Owners, and Competitors, in particular, are foundational reference data that opportunities, Account Assignment, and Clients Interactions all draw from. Understanding the distinctions between related concepts here (Customer vs. Owner, Customer vs. Contact, Contacts Directory vs. Clients Interactions) will help you avoid duplicate or misplaced records as your data grows.</p>\n    <p>The Customers shortcut in particular carries the richest functionality of the group: a full multi-step creation wizard, OCR-based contact scanning, duplicate merging, and the ability to convert a customer into an Owner record — reflecting how central customer data is to the rest of the module.</p>",
         "definitions": [
           {
@@ -16303,334 +16450,148 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Analytics",
-        "intro": "<p>Where a BD rep's My Dashboard answers \"how is my book of work doing,\" a <strong>Sales Director, VP of Business Development, or company executive</strong> needs a different question answered: how is the whole pipeline performing across business units, regions, and forecast scenarios. Analytics exists for that leadership audience, and its four dashboards are built to be shared upward and across the organization rather than used as a personal daily tool the way My Dashboard is.</p><p>Analytics is the business-intelligence layer of Opportunity Management — four dedicated dashboards that go beyond the personal, single-user view of My Dashboard to give leadership and operations a company-wide read on pipeline performance. Where My Dashboard answers \"what does my pipeline look like,\" Analytics answers broader questions: which business units are converting best, how the pipeline breaks down geographically, and how forecast scenarios compare against reality.</p>\n    <p>Every Analytics sub-tab follows the same interaction pattern — a Filters button to narrow the underlying data set and a Share icon to distribute the dashboard to other stakeholders — which keeps the four dashboards consistent to navigate even though their content differs substantially. This consistency matters because Analytics is typically consumed by people who move quickly between the four views looking for different cuts of the same underlying pipeline data.</p>\n    <p>The four sub-tabs are: <strong>Market & Operations</strong> (project-type and geographic distribution, cycle times, compliance tracking), <strong>Executive Summary</strong> (leadership-facing KPIs and win-rate performance), <strong>Pipeline by BU</strong> (a breakdown by Business Unit), and <strong>Pipeline Intelligence</strong> (AI-driven forecasting views). Together they give every level of the organization — from an individual rep checking a compliance deadline to an executive reviewing quarterly forecasts — a dashboard suited to their vantage point.</p>",
-        "definitions": [
+        "heading": "Settings",
+        "intro": "<p><strong>Settings</strong> (the gear icon on the module toolbar) is where Sales Ops or an administrator configures the pipeline, the form fields, the ID format and who can use the module. End users rarely open it, but a gap here can stop the whole team logging leads.</p><p>Settings has these areas: <strong>Competitor Form</strong>, <strong>Stages & Statuses Configuration</strong>, <strong>Opportunities Form</strong>, <strong>Expense</strong>, <strong>ID Settings</strong>, <strong>Business Development</strong>, <strong>Project Types</strong>, <strong>Opportunity Type</strong>, <strong>Milestone Templates</strong>, <strong>Customer Relation</strong> and <strong>Users and Permissions</strong>. Most \"why can't I do X\" questions trace back to a gap in <strong>Stages & Statuses Configuration</strong> or <strong>Opportunities Form</strong>.</p>",
+        "definitions":[
           {
-            "term": "Market & Operations",
-            "definition": "An Analytics sub-tab covering Opportunity Project Type (with a Count/Dollar toggle), Geographic Distribution, the Proposal Cycle Time Distribution chart, and the Permit & Insurance Expiry Tracker table."
+            "term": "Stages & Statuses Configuration",
+            "definition": "The screen that defines the pipeline: the stages (Lead → Opportunity → Proposal → Inquiry → Bidding → Closed by default) and, within each stage, the allowed statuses. By default Opportunity has Active and On Hold; Proposal has Active, In Progress, Under Review and In Review; Inquiry has Received Inquiry, Submitted and Awaiting Client Response; Bidding has RFP Receipt, RFP Submitted, Clarification, Best & Final and Awaiting Decision; Closed has Won, Lost, No Bid and Cancelled. Per stage you set a name, a color, a Default Win Probability (%), a Stage Threshold (Days) and the allowed statuses. Each Closed status carries its own outcome label, which the Outcome Analysis and Client Win Rate reports read to tell wins from other closures. **Reorder Stages** and **Add Stages** restructure the pipeline. Closed stays one stage, so win and loss analytics stay clean."
           },
           {
-            "term": "Executive Summary",
-            "definition": "The leadership-facing Analytics dashboard, built around five headline KPI cards — Total Opportunity Value, Weighted Forecasted Value, Weighted Forecast This Quarter, Overall Win Rate (%), and Average Deal Size — plus a Scenario Forecast Comparison chart, an Opportunity by Stage Value breakdown, a Top Customers Performance table (Opportunity Value, Win Rate %, Average Cycle Days per customer), a Team Performance Leadership table (per BD rep: Total Opportunities Created, Opportunity Value, Win Rate %, Average Deal Size, TIC), an Opportunity by Project Type chart, an Opportunity by Business Development chart, and its own copy of the Permit & Insurance Expiry Tracker."
+            "term": "Opportunities Form",
+            "definition": "Controls the Create Opportunity form and what each stage requires, in four sub-tabs: **Standard Fields**, **Configurable Fields**, **Stale Threshold** (days without activity before an opportunity counts as stale) and **Settings**. For each field you set **Required** (and the stage it applies to), **Hide** and **Show At Creation**. This is what produces the red asterisks when a lead is qualified, and what keeps the create form short."
           },
           {
-            "term": "Pipeline by BU",
-            "definition": "An Analytics sub-tab that breaks the pipeline down by Business Unit. It includes summary stats (Total Opportunities, Top BU by Volume, Highest Win Rate), several charts (Opportunity Count by BU, Opportunity Value by BU, Pipeline Forecast by BU, Opportunities by BU and Region, Opportunity Stage Mix), and the BU Performance Matrix table (Business Unit, Lead, Proposal, Closed, Total, Win Rate)."
+            "term": "Opportunities Form → Settings",
+            "definition": "A sub-tab of **Opportunities Form** with four settings. **Parent Mode** turns on parent and child opportunities. **AutoFill Customer Details** fills the client fields once a client is picked. **Document Management** chooses AWS S3 or SharePoint as the storage for opportunity attachments (the guide describes documents held on the organisation's SharePoint site); it locks once any opportunity or proposal exists. The **Weighted Value Formula** shows how weighted value is worked out: Opportunity Value × Go % × Get %."
           },
           {
-            "term": "Pipeline Intelligence",
-            "definition": "An Analytics sub-tab built around AI-driven views: the Opportunity Distribution Heatmap, a Scenario Forecast Comparison (Month/Quarter toggle), Opportunity Dynamics by Month, and BD Opportunity Load."
+            "term": "Expense",
+            "definition": "The settings area for tracking pursuit-related spend, with two sub-tabs: Form (Standard Fields — S.No, Expense Type, Item Name, Quantity, Unit Price, Amount, Comments — plus Configurable Fields) and Approval Workflow."
           },
           {
-            "term": "Permit & Insurance Expiry Tracker",
-            "definition": "A compliance-tracking table appearing on both the Market & Operations and Executive Summary tabs, surfacing upcoming permit and insurance expirations so they don't lapse unnoticed."
+            "term": "ID Settings",
+            "definition": "The screen controlling the auto-generated Opportunity ID format. You choose an ID Separator (/, -, or None) and compose the ID from Business Unit, Year, and Serial No./ID components. Child ID Settings configures the ID format for child opportunities separately from top-level ones."
           },
           {
-            "term": "Proposal Cycle Time Distribution",
-            "definition": "A chart on the Market & Operations tab showing which stage of the proposal cycle time distribution an opportunity's turnaround falls into — useful for identifying whether deals are moving through the proposal process at a healthy pace."
+            "term": "Business Development",
+            "definition": "A maintained catalog of BD codes and representatives, tracked with Serial Number, VP Business Unit, Description, and Actions columns."
           },
           {
-            "term": "BU Performance Matrix",
-            "definition": "A table on the Pipeline by BU tab cross-referencing each Business Unit against its Lead, Proposal, Closed, and Total counts plus Win Rate — a compact way to compare business unit performance side by side."
+            "term": "Project Types",
+            "definition": "A maintained catalog of the project/work-type classifications used elsewhere in the module, tracked by category (such as FIELD or SHOP), material, and status flags."
+          },
+          {
+            "term": "Opportunity Type",
+            "definition": "A simple maintained list (Serial Number, Opportunity Type, Actions) — empty by default until an administrator populates it."
+          },
+          {
+            "term": "Milestone Templates",
+            "definition": "A settings area with two sub-tabs, Milestone Templates and Master Milestones, each with its own Create button — empty by default until entries are added."
+          },
+          {
+            "term": "Customer Relation",
+            "definition": "The screen configuring a Look Back Window (In Days) and an SLA (In Hours), both used for customer-relationship and response-time tracking."
+          },
+          {
+            "term": "Users and Permissions",
+            "definition": "The access-control screen for the module. Existing User Groups (for example, Opportunity Manager or Opportunity Estimator) are managed via a three-dot menu offering Permissions and Users management, and Add User Group creates a new group along with its Permissions and Users."
+          },
+          {
+            "term": "Sales Ops shared settings",
+            "definition": "Sales Ops also maintains **Opportunity Type** (New Build, Existing Facility), **Milestone Templates**, **Business Development** (the BD name pool), **Manage Columns** (Sales Ops can save the default layout for everyone) and **Users and Permissions** (the BD group and the Admin group). Proposal statuses, the compliance requirement directory (under Global Data) and the expense categories with their approval routing are maintained here too."
+          },
+          {
+            "term": "Which setting feeds which list",
+            "definition": "**Stages & Statuses Configuration** feeds the Stage and Status dropdowns and the stage chips. **Opportunities Form** decides which fields are required, hidden or shown at creation. **Opportunity Type** and **Milestone Templates** feed the Details section and the Milestones tab. **Business Development** feeds the BD name pool. **Expense** feeds the Expenses tab categories and approver. **ID Settings** builds the Opportunity ID. **Customer Relation** feeds the score on the interactions summary. **Competitor Form** shapes the Competitors shortcut. **Users and Permissions** decides who can open the module. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
+          },
+          {
+            "term": "Competitor Form",
+            "definition": "From **Home**, open **Opportunity Management**, click **Settings** (gear) and choose **Competitor Form**. The **Standard Fields** are **Competitor Name**, **Type** and **Description**. Click **Add Field** to add your own field to the **Create Competitor** form."
+          },
+          {
+            "term": "Owner Settings",
+            "definition": "Open **Owners** from the icon toolbar. Next to **Create Owner** and **Export** is a **Settings** button that opens the settings for the owner form. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
           }
         ],
         "procedures": [
           {
-            "title": "Reviewing leadership-facing pipeline KPIs",
+            "title": "Fixing \"Status is required\" errors when creating an opportunity",
             "steps": [
-              "Go to <strong>Opportunities Management → Analytics → Executive Summary</strong>.",
-              "Review the five headline KPI cards: <strong>Total Opportunity Value, Weighted Forecasted Value, Weighted Forecast This Quarter, Overall Win Rate (%),</strong> and <strong>Average Deal Size</strong>.",
-              "Check the <strong>Scenario Forecast Comparison</strong> chart and <strong>Opportunity by Stage Value</strong> breakdown for deeper context.",
-              "Review the <strong>Top Customers Performance</strong> and <strong>Team Performance Leadership</strong> tables to see who and what is driving results."
-            ]
-          },
-          {
-            "title": "Filtering or sharing any Analytics dashboard",
-            "steps": [
-              "Open the desired Analytics sub-tab (Market & Operations, Executive Summary, Pipeline by BU, or Pipeline Intelligence).",
-              "Click <strong>Filters</strong> to narrow the data shown on that dashboard.",
-              "Click the <strong>share</strong> icon to distribute the dashboard to other stakeholders."
-            ]
-          },
-          {
-            "title": "Tracking permit and insurance expirations",
-            "steps": [
-              "Go to either the <strong>Market & Operations</strong> or <strong>Executive Summary</strong> Analytics tab.",
-              "Locate the <strong>Permit & Insurance Expiry Tracker</strong> table on that dashboard.",
-              "Review upcoming expirations to stay ahead of compliance lapses."
-            ]
-          },
-          {
-            "title": "Checking proposal cycle time performance",
-            "steps": [
-              "Go to <strong>Analytics → Market & Operations</strong>.",
-              "Locate the <strong>Proposal Cycle Time Distribution</strong> chart to see which stage an opportunity's proposal cycle time falls into."
-            ]
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/guides/opportunity/016.jpg",
-            "caption": "Analytics sub-tabs"
-          }
-        ]
-      },
-      {
-        "heading": "Reports",
-        "intro": "<p>Not every audience wants a chart — a controller preparing a board deck, a BD Manager running a Monday pipeline huddle, or an executive doing a win/loss retrospective often just needs the underlying numbers in a clean, exportable format. Reports serves that need for <strong>BD Managers and leadership End Users</strong> who want to pull a defined data set out of Arena rather than interact with it inside the product.</p><p>Reports is the module's library of pre-built, exportable reports — a step beyond Analytics' visual dashboards, aimed at users who need structured, filterable, downloadable data rather than charts. Where Analytics is for reading trends visually, Reports is for extracting a defined data set to share, archive, or feed into another process (a spreadsheet, a leadership deck, a compliance file).</p>\n    <p>Every report in this section shares a consistent toolbar pattern — Search, Sort By, Export, Filters, and Manage Columns — the same pattern used on the main Opportunities list, so once you know how to customize columns there, you already know how to do it here. This consistency is deliberate: reports are essentially pre-filtered, purpose-built views over the same underlying opportunity data model that Opportunities and Analytics also draw from.</p>\n    <p>The module ships seven reports, each suited to a different question: Forecast Report (value and probability modeling), Opportunity Aging Report (staleness and velocity), Outcome Analysis Report (closed-deal retrospectives), Customer Win Rate Report (win rate by customer), Pipeline Report (the single most complete export of the data model), Huddle Report (a BD-representative-scoped snapshot for team meetings), and Pipeline Gantt View (a visual project timeline). Two of these — Huddle Report and Pipeline Gantt View — deviate slightly from the standard pattern by requiring you to set parameters and click Generate rather than simply exporting.</p>",
-        "definitions": [
-          {
-            "term": "Forecast Report",
-            "definition": "A report covering opportunity value, the various probability measures (Stage/AI/Manual), weighted values, and Go%/Get% — the report to use when you need the full probability-and-value picture for forecasting purposes."
-          },
-          {
-            "term": "Opportunity Aging Report",
-            "definition": "A report narrowly focused on staleness and velocity metrics: Days In Current Stage, Days Since Last Activity, Stale Flag, and Aging Status. It's the report to reach for when the question is specifically about how long opportunities have been sitting idle, rather than their financials."
-          },
-          {
-            "term": "Outcome Analysis Report",
-            "definition": "A report covering closed date, sales cycle length, and project type — useful for retrospective analysis of deals that have already closed, won or lost."
-          },
-          {
-            "term": "Customer Win Rate Report",
-            "definition": "A report showing deals won and lost, win rate percentage, and average cycle days, broken down by customer."
-          },
-          {
-            "term": "Pipeline Report",
-            "definition": "The single most complete report in the module — it covers nearly every field on the Opportunity record, including identifiers, financials, dates, contacts, and parent/child hierarchy. Unlike the Opportunity Aging Report, which is scoped narrowly to staleness metrics, the Pipeline Report is the report to use when you need the fullest possible export of opportunity data."
-          },
-          {
-            "term": "Huddle Report",
-            "definition": "A report scoped to a specific BD Representative and Date Range, generated on demand via a Generate button rather than the standard Export flow — designed to produce a downloadable snapshot suited to a team huddle or standup meeting."
-          },
-          {
-            "term": "Pipeline Gantt View",
-            "definition": "A Gantt-chart timeline visualization of opportunities, with a granularity toggle (Daily / Weekly / Monthly / Quarterly / Yearly) and a date-range picker, alongside Filters and download/save icons — the report to use when you need to see pursuits laid out against a timeline rather than as tabular data."
-          },
-          {
-            "term": "Account Assignment Report",
-            "definition": "The company guide lists an **Account Assignment Report** among the tiles on the **Reports** tab, next to Forecast, Opportunity Aging, Outcome Analysis, Client Win Rate, Pipeline Report, Huddle Report and Pipeline Gantt View. It shows who is assigned to each customer account. The maintenance screen itself is the **Account Assignment** tab."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Running a standard report",
-            "steps": [
-              "Go to <strong>Opportunities Management → Reports</strong>.",
-              "Click the report's name (for example, <strong>Forecast Report</strong>).",
-              "Use <strong>Filters</strong> or <strong>Sort By</strong> to narrow the data, then click <strong>Export</strong>.",
-              "Use the back arrow next to the report title to return to the reports list."
+              "Go to <strong>Settings → Stages & Statuses Configuration</strong>.",
+              "Select the <strong>Lead</strong> stage (or whichever stage is affected).",
+              "Add at least one Status under that stage's Allowed Statuses (for the Lead stage, New Lead).",
+              "Return to Create Opportunity — the Status dropdown should now be populated."
             ],
-            "note": "Huddle Report and Pipeline Gantt View don't follow this exact pattern — instead of Export, you set parameters and click Generate. See the dedicated procedure for Huddle Report below."
+            "note": "This is the single most common blocker preventing new opportunities from being created: the Status dropdown is driven entirely by whatever Statuses are configured for the opportunity's current Stage, and if a Stage has none configured, the dropdown is empty and the Create Opportunity dialog cannot be submitted."
           },
           {
-            "title": "Customizing which columns appear in a report",
+            "title": "Adding a whole new Stage or reordering the pipeline",
             "steps": [
-              "Open the desired report.",
-              "Click <strong>Manage Columns</strong> — the same control used on the main Opportunities list — to add, remove, or reorder columns."
+              "Go to <strong>Settings → Stages & Statuses Configuration</strong>.",
+              "Click <strong>Add Stages</strong> to add a new pipeline stage, or <strong>Reorder Stages</strong> to change the order of existing stages."
             ]
           },
           {
-            "title": "Generating the Huddle Report",
+            "title": "Setting the Stale Threshold",
             "steps": [
-              "Go to <strong>Reports → Huddle Report</strong>.",
-              "Select a <strong>BD Representative</strong> and a <strong>Date Range</strong>.",
-              "Optionally use <strong>Save Filters</strong> or <strong>Clear Filters</strong>.",
-              "Click <strong>Generate</strong> to produce a downloadable report."
+              "Go to <strong>Settings → Opportunities Form</strong>.",
+              "Set the <strong>Stale Threshold</strong> field to the number of days of inactivity after which an opportunity should be flagged stale.",
+              "This value immediately feeds the dashboard's Stale Opportunities KPI."
             ]
           },
           {
-            "title": "Finding customer win rate",
+            "title": "Adding a custom field to the Create Opportunity form",
             "steps": [
-              "Go to <strong>Reports → Customer Win Rate Report</strong> for a dedicated report on this metric.",
-              "Alternatively, check the <strong>Top Customers Performance</strong> table on the <strong>Executive Summary</strong> Analytics tab for the same information presented alongside other executive KPIs."
-            ]
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/guides/opportunity/015.jpg",
-            "caption": "Report tiles on the Reports tab"
-          }
-        ]
-      },
-      {
-        "heading": "Troubleshooting & Naming Differences",
-        "intro": "<p>New users of the module — whether a <strong>BD End User</strong> logging their first pursuit or a <strong>Project Manager</strong> encountering Leads Management for the first time inside one of their construction projects — tend to hit the same handful of points of confusion early on. This section exists to clear those up quickly.</p><p>This section collects the conceptual clarifications that don't belong to any single screen but come up repeatedly as users get oriented in Opportunity Management — most notably, the module's dual identity as both \"Opportunities Management\" and \"Leads Management.\" Understanding these naming and scoping questions early prevents confusion later, especially for users who move between the company-wide Home view and individual construction Projects.</p>\n    <p>The recurring theme across this section is that several apparent differences in the product are purely contextual or terminological rather than functional: Opportunities and Leads are the same records under different labels, and a blocked Create Opportunity form is almost always traceable back to the same root cause (a missing Status configuration) rather than a new, distinct problem. Keeping these clarifications in mind will help you troubleshoot faster and avoid treating cosmetic differences as functional ones.</p>",
-        "definitions": [
-          {
-            "term": "Opportunities Management vs. Leads Management",
-            "definition": "A per-context terminology setting, not two different modules. When opened from Home with no project selected, the module is labeled Opportunities Management with an Opportunities tab. When opened while a construction Project is in context, it's labeled Leads Management with a Leads tab and a project badge next to the Arena logo. The screens, fields, and functionality are identical either way — only the label changes."
-          },
-          {
-            "term": "Module scope",
-            "definition": "Opportunity Management is not tied to any single construction project — it is company-wide. It covers a personal dashboard, the opportunity list/board, a customer-interaction CRM log, analytics, reports, and account assignment across the entire business, regardless of which context (Home or a specific Project) you happened to open it from."
-          },
-          {
-            "term": "Opportunities vs. Leads (terminology)",
-            "definition": "There is no functional difference. \"Opportunity\" and \"Lead\" are two labels for the same underlying module and the same records, chosen based on where you opened it from: Opportunities from Home with no project selected, Leads with a construction Project in context."
-          },
-          {
-            "term": "Client, Customer and BD Rep wording",
-            "definition": "This guide uses **Client**, **Clients Interactions** and **BD Rep**. Some screens or environments say **Customer**, **Customers Interactions** and **Site Representative** for the same things. The **Customers** shortcut in the toolbar and **Global Data → Customers** keep their own names."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Diagnosing a blocked Create Opportunity form",
-            "steps": [
-              "Check whether the required <strong>Status</strong> field is empty — this is almost always the actual blocker.",
-              "If Status is empty, go to <strong>Settings → Stages & Statuses Configuration</strong> and confirm the current Stage (usually Lead) has at least one Status configured.",
-              "Remember that the Contact section fields (Client Group, BD Rep, Corporate Lead, Executive Lead) are all optional — they are not what's preventing submission, even if they appear unfilled."
+              "Go to <strong>Settings → Opportunities Form → Configurable Fields</strong>.",
+              "Add the custom field there.",
+              "Reference the <strong>Standard Fields</strong> tab in the same section if you need to check what's already built in before adding a duplicate custom field."
             ]
           },
           {
-            "title": "Populating empty catalog lists",
+            "title": "Configuring the Opportunity ID format",
             "steps": [
-              "If <strong>Settings → Opportunity Type</strong> or <strong>Settings → Milestone Templates</strong> appear empty, this is expected default behavior, not an error — no entries have been added yet.",
-              "An administrator should add entries manually: directly for Opportunity Type, or via the <strong>Create</strong> button for Milestone Templates (under either the Milestone Templates or Master Milestones sub-tab)."
-            ]
-          }
-        ]
-      },
-      {
-        "heading": "Opportunity Record: Milestones, Team, Proposals, Compliance and Expenses",
-        "intro": "<p>Each opportunity opens as a full record with tabs beyond the profile. The BD user or team member working the pursuit uses them to plan dates, share the work, track proposals, check bid readiness and record what the pursuit costs. They sit on the same record so the whole history stays together.</p>",
-        "definitions": [
-          {
-            "term": "Milestones tab",
-            "definition": "Dates across the life of the opportunity. Once you choose a **Milestone Template** on the profile, the tab shows one row per milestone with **Icon**, **Milestone**, **Target Date**, **Actual** dates and **Notes**. Remove a milestone that does not apply, or add one from the master list. Each opportunity type shows only the templates mapped to it. The dates feed the **Pipeline Gantt View**, and the standard setup needs at least approximate target dates before a lead is qualified."
-          },
-          {
-            "term": "Teams tab",
-            "definition": "Add team members to the opportunity so they can edit its fields and add information."
-          },
-          {
-            "term": "Clients Interactions tab",
-            "definition": "Turns on once a customer and a customer contact are added on the opportunity. Log calls, mails, meetings, tasks, comments and notes here. The **Comments** tab works as an internal team chat for that one opportunity."
-          },
-          {
-            "term": "Documents tab",
-            "definition": "Files attached here go to the shared document storage chosen for your organisation in Opportunities Form → Settings (AWS S3 or SharePoint). The guide describes these documents being held on the organisation's SharePoint site rather than local drives."
-          },
-          {
-            "term": "Proposals tab",
-            "definition": "Lists the proposals raised against the opportunity, one row each. Click **+ Create**, enter the details and move the status on as the proposal goes from draft to submitted."
-          },
-          {
-            "term": "Compliance Tracker tab",
-            "definition": "Lists the compliance requirements selected for the opportunity and checks them against what your company holds. Four cards head the screen: **Compliant**, **Missing / Incomplete / Expired**, **Expiring Soon** and **Readiness Score** (what is available against the total selected). The table shows each requirement with its ID, name, description, category, renewal frequency, required evidence and source. The records themselves live under **Global Data → Compliance Hub**, so a missing or expired item is fixed there, not on the opportunity."
-          },
-          {
-            "term": "Expenses tab",
-            "definition": "What the pursuit costs: travel, proposal production, third-party studies, bid bonds. Approved lines add up to a total on the opportunity, so the cost of pursuit can be read against the outcome. The expense categories and approval routing are set up in Settings."
-          },
-          {
-            "term": "Stale and inactive alerts",
-            "definition": "On the **Timeline & Activity** section, the **Stage / Inactive Threshold Notification** warns you when an opportunity sits too long with no updated information. The thresholds come from **Settings**, and stale opportunities count on **My Dashboard**."
-          },
-          {
-            "term": "Where this data comes from: record tabs",
-            "definition": "**Teams** lists the users created in Global Data (and Crews); only added members can edit the opportunity. **Compliance Tracker** compares the requirements selected for the opportunity with what your company holds in **My Company Compliance**; the records are kept under **Global Data → Compliance Hub**, so fix a missing or expired item there. **Expenses** use the expense categories and approver set under **Settings → Expense**; approved lines add up to a total on the opportunity. **Documents** are stored in the AWS S3 or SharePoint location chosen under **Settings → Opportunities Form → Settings**. **Milestones** come from the Milestone Template chosen on the profile (templates are maintained in **Settings**), and can also be added from the master list."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Set milestone dates on an opportunity",
-            "steps": [
-              "Open the opportunity and choose the <strong>Milestone Template</strong> on the profile.",
-              "Open the <strong>Milestones</strong> tab.",
-              "Remove any milestone that does not apply, or add one from the master list.",
-              "Enter a <strong>Target Date</strong> for each milestone and add <strong>Notes</strong>."
-            ],
-            "note": "Opportunity Type and Milestone Templates are maintained by Sales Ops in Settings.",
-            "images": [
-              {
-                "src": "assets/guides/opportunity/009.jpg",
-                "caption": "Milestones tab with Target Date and Notes",
-                "step": 4
-              }
-            ]
-          },
-          {
-            "title": "Record a pursuit expense",
-            "steps": [
-              "Open the opportunity and click the <strong>Expenses</strong> tab, then <strong>+ Create</strong>.",
-              "Select the expense category, enter the date, amount and description, and attach the receipt.",
-              "Click <strong>Submit</strong>. The expense goes to the configured approver."
+              "Go to <strong>Settings → ID Settings</strong>.",
+              "Choose an ID Separator (<code>/</code>, <code>-</code>, or None).",
+              "Compose the ID from Business Unit, Year, and Serial No./ID components.",
+              "Configure <strong>Child ID Settings</strong> separately if your organization uses parent/child opportunity hierarchies."
             ],
             "images": [
               {
-                "src": "assets/guides/opportunity/014.jpg",
-                "caption": "Expenses tab",
-                "step": 2
-              }
-            ]
-          },
-          {
-            "title": "Check bid readiness on an opportunity",
-            "steps": [
-              "Open the opportunity and click the <strong>Compliance Tracker</strong> tab.",
-              "Read the four cards, especially <strong>Readiness Score</strong>.",
-              "For any missing or expired item, fix the record under <strong>Global Data → Compliance Hub</strong>."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/opportunity/013.jpg",
-                "caption": "Compliance Tracker with Readiness Score",
+                "src": "assets/guides/opportunity/050.jpg",
+                "caption": "ID Settings for child and parent IDs",
                 "step": 3
               }
             ]
           },
           {
-            "title": "Ask Sales Ops to add a missing customer, location or contact",
+            "title": "Managing user access to Opportunity Management",
             "steps": [
-              "Open the opportunity and click the <strong>Comments</strong> tab.",
-              "Post a message to Sales Ops saying what you need.",
-              "Continue on the same record once Sales Ops adds it and you get a notification."
+              "Go to <strong>Settings → Users and Permissions</strong>.",
+              "To modify an existing group (e.g. Opportunity Manager, Opportunity Estimator), use its three-dot menu to manage Permissions and Users.",
+              "To create a new group, click <strong>Add User Group</strong> and configure its Permissions and Users."
             ]
           },
           {
-            "title": "Add users or crews to an opportunity team",
+            "title": "Turn on parent/child opportunities or change the Weighted Value formula",
             "steps": [
-              "Open the opportunity and click the **Teams** tab, which holds both **Users** and **Crews**.",
-              "Click **Add User**. The dialog lists the users created in Global Data. Search by name, tick the users and click **Submit**.",
-              "Click **Add Crew**. The dialog lists the crews from Global Data → Crews. Search, tick the crews and click **Submit**.",
-              "To remove a user or crew, open the three-dot menu on its card and click **Delete**."
-            ]
-          },
-          {
-            "title": "Add a task on an opportunity",
-            "steps": [
-              "Open the opportunity and click the **Task** tab.",
-              "Click **Add Task**, fill in the task details and click **Create**.",
-              "Open the three-dot menu to **Edit**, **Map** or **Delete** the task. **Map** links it to a customer group, customer and customer POC.",
-              "Use **Assign to** to give the task to rosters, and tick the checkbox on the card when it is done."
-            ]
-          },
-          {
-            "title": "Store documents on an opportunity",
-            "steps": [
-              "Open the opportunity and click the **Documents** tab. **Chat Documents** holds files sent through chat and **Mail Documents** holds files exchanged by email.",
-              "Click **New Folder**, enter a name and click **Submit**.",
-              "Click **Add File** to upload documents into the folder."
-            ]
+              "Go to <strong>Settings → Opportunities Form → Settings</strong>.",
+              "Toggle <strong>Parent Mode</strong> on to let opportunities be created as Parent, Child, or Standalone.",
+              "Toggle <strong>AutoFill Customer Details</strong> on so picking a Customer on Create Opportunity fills in its related fields automatically.",
+              "Check the Weighted Value Formula (Opportunity Value × Go % × Get %) to see how the dashboard's Weighted Opportunity Value is calculated."
+            ],
+            "note": "Document Management (AWS S3 or SharePoint) is also set on this sub-tab, but it locks permanently as soon as any Opportunity or Proposal exists — decide it before the module goes live."
           }
         ],
         "images": [
           {
-            "src": "assets/guides/opportunity/011.jpg",
-            "caption": "Documents tab"
-          },
-          {
-            "src": "assets/guides/opportunity/012.jpg",
-            "caption": "Proposals tab"
+            "src": "assets/guides/opportunity/049.jpg",
+            "caption": "Opportunities Form settings for Required, Hide and Show At Creation"
           }
         ]
       },
       {
-        "heading": "Mobile App (Arena Onsite)",
+        "heading": "Mobile App",
         "intro": "<p><strong>Arena Onsite</strong> is the mobile app that mirrors the main Opportunity Management flows for people in the field. BD users sign in with their Arena credentials to look up opportunities, log customer interactions and create records on the go.</p>",
         "definitions": [
           {
@@ -16832,6 +16793,45 @@ const MODULES = [
             "caption": "Creating a contact manually"
           }
         ]
+      },
+      {
+        "heading": "Troubleshooting",
+        "intro": "<p>New users of the module — whether a <strong>BD End User</strong> logging their first pursuit or a <strong>Project Manager</strong> encountering Leads Management for the first time inside one of their construction projects — tend to hit the same handful of points of confusion early on. This section exists to clear those up quickly.</p><p>This section collects the conceptual clarifications that don't belong to any single screen but come up repeatedly as users get oriented in Opportunity Management — most notably, the module's dual identity as both \"Opportunities Management\" and \"Leads Management.\" Understanding these naming and scoping questions early prevents confusion later, especially for users who move between the company-wide Home view and individual construction Projects.</p>\n    <p>The recurring theme across this section is that several apparent differences in the product are purely contextual or terminological rather than functional: Opportunities and Leads are the same records under different labels, and a blocked Create Opportunity form is almost always traceable back to the same root cause (a missing Status configuration) rather than a new, distinct problem. Keeping these clarifications in mind will help you troubleshoot faster and avoid treating cosmetic differences as functional ones.</p>",
+        "definitions": [
+          {
+            "term": "Opportunities Management vs. Leads Management",
+            "definition": "A per-context terminology setting, not two different modules. When opened from Home with no project selected, the module is labeled Opportunities Management with an Opportunities tab. When opened while a construction Project is in context, it's labeled Leads Management with a Leads tab and a project badge next to the Arena logo. The screens, fields, and functionality are identical either way — only the label changes."
+          },
+          {
+            "term": "Module scope",
+            "definition": "Opportunity Management is not tied to any single construction project — it is company-wide. It covers a personal dashboard, the opportunity list/board, a customer-interaction CRM log, analytics, reports, and account assignment across the entire business, regardless of which context (Home or a specific Project) you happened to open it from."
+          },
+          {
+            "term": "Opportunities vs. Leads (terminology)",
+            "definition": "There is no functional difference. \"Opportunity\" and \"Lead\" are two labels for the same underlying module and the same records, chosen based on where you opened it from: Opportunities from Home with no project selected, Leads with a construction Project in context."
+          },
+          {
+            "term": "Client, Customer and BD Rep wording",
+            "definition": "This guide uses **Client**, **Clients Interactions** and **BD Rep**. Some screens or environments say **Customer**, **Customers Interactions** and **Site Representative** for the same things. The **Customers** shortcut in the toolbar and **Global Data → Customers** keep their own names."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Diagnosing a blocked Create Opportunity form",
+            "steps": [
+              "Check whether the required <strong>Status</strong> field is empty — this is almost always the actual blocker.",
+              "If Status is empty, go to <strong>Settings → Stages & Statuses Configuration</strong> and confirm the current Stage (usually Lead) has at least one Status configured.",
+              "Remember that the Contact section fields (Client Group, BD Rep, Corporate Lead, Executive Lead) are all optional — they are not what's preventing submission, even if they appear unfilled."
+            ]
+          },
+          {
+            "title": "Populating empty catalog lists",
+            "steps": [
+              "If <strong>Settings → Opportunity Type</strong> or <strong>Settings → Milestone Templates</strong> appear empty, this is expected default behavior, not an error — no entries have been added yet.",
+              "An administrator should add entries manually: directly for Opportunity Type, or via the <strong>Create</strong> button for Milestone Templates (under either the Milestone Templates or Master Milestones sub-tab)."
+            ]
+          }
+        ]
       }
     ],
     "name": "Opportunity Management",
@@ -16847,18 +16847,18 @@ const MODULES = [
       "The <strong>Arena Onsite</strong> mobile app mirrors the core flows for the field."
     ],
     "sections":[
-      "Who Does What in Opportunity Management",
-      "Settings",
-      "Opportunities",
-      "Clients Interactions",
-      "Account Assignment",
+      "Overview",
       "Dashboard",
-      "Sidebar Shortcuts",
+      "Opportunities",
+      "Opportunity Record",
+      "Clients Interactions",
       "Analytics",
       "Reports",
-      "Troubleshooting & Naming Differences",
-      "Opportunity Record: Milestones, Team, Proposals, Compliance and Expenses",
-      "Mobile App (Arena Onsite)"
+      "Account Assignment",
+      "Toolbar Shortcuts",
+      "Settings",
+      "Mobile App",
+      "Troubleshooting"
     ]
   },
   {
@@ -16867,7 +16867,7 @@ const MODULES = [
     "qaItems": QA_EQUIPMENT,
     "narrative": [
       {
-        "heading": "Who Does What in Equipment Management",
+        "heading": "Overview",
         "intro": "<p>Equipment Management gives the company one record of every piece of equipment and accessory, where it is, and what condition it is in. This section shows who sets it up and who does what: administrators configure master data and settings, coordinators maintain records and run allocations, and inspectors, dispatchers, approvers and site staff move each request along.</p><p>Set up in this order: cost codes, categories and rate cards in Global Data; Equipment Setup and Accessory Setup in Settings; equipment records; then the approval workflows, inspection checklists and thresholds that drive the allocation lifecycle.</p>",
         "definitions": [
           {
@@ -16919,250 +16919,266 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Master Data: Cost Codes, Categories and Equipment Setup",
-        "intro": "<p><strong> </strong> Before anyone registers a piece of equipment, a <strong>Global Data Administrator</strong> sets up equipment cost codes, categories and rate card templates, and an <strong>Equipment Management Administrator</strong> links them to the equipment in <strong>Settings</strong>. Only equipment configured this way appear in the dropdowns when records are created.</p>",
+        "heading": "Fleet Map",
+        "intro": "<p><strong> </strong> A <strong>geofence</strong> is a boundary drawn around a work location. A Geofence Administrator creates and activates geofences on the <strong>Overview → Geofencing</strong> tab, and a Fleet Monitor uses the <strong>Fleet Map</strong> to see active geofences and the equipment reporting inside them.</p>",
         "definitions": [
           {
-            "term": "Equipment cost codes (Global Data)",
-            "definition": "In **Global Data → Cost → Equipment**, click **Add Equipment** and enter the **Equipment Code**, **Equipment Name**, **Type** (Equipment or Accessory), **Category**, **Subcategory**, **UOM** and the hourly, daily, weekly and monthly rates, then **Submit**."
+            "term": "Geofencing tab",
+            "definition": "Click **Add Location** and enter **Location Type**, **Name**, **Description** and **Code** (all required), plus optional address, **Start Date**, **End Date** and point-of-contact name, phone and email. The **Inventory / Project** toggle chooses which work locations you can pick; an inventory geofence links to its inventory location automatically. The list has **Active** toggles, **Export** (Sample Excel, Upload Excel, Download Excel), **Manage Columns** and **Filters** (Name, Code, City, State, Country, Pincode, Active or Inactive)."
           },
           {
-            "term": "Equipment categories and rate card templates",
-            "definition": "Under **Equipment Category**, click **Add Row**, name the category and **Submit**; use the (+) icon to add subcategories. **Rate Card Template → New Rate Card Template** creates the templates you can pick later. Both are maintained by the Global Data Administrator."
+            "term": "Setting coordinates",
+            "definition": "You need at least three points (three make a triangle, more make larger shapes). Use **Search Location** then click the exact point, or **Add Coordinates** to type latitude and longitude, or drag and select on the map. City, state and country fill in from map points. Remove one point with the minus icon, or use **Clear All Coordinates**. **Upload KML** imports an existing boundary."
           },
           {
-            "term": "Equipment Setup and Accessory Setup",
-            "definition": "In the module **Settings**, **Equipment Setup** lists the equipment that can be registered, and **Accessory Setup** does the same for accessories. Click **Add Category** and choose the **Equipment Cost Code** (the category fills in), a **Default Rate Card Template**, an **Inspection Checklist**, a **Depreciation Method** and a **Default Useful Life**. Only items configured here show in the Equipment or Accessory dropdown when records are created. **Sample Excel** and **Upload Excel** create or update them in bulk. **Fuel Type** options are also set here."
+            "term": "Fleet Map",
+            "definition": "Shows equipment reporting through telematics. Active geofences show as yellow regions, numbered highlights are clusters, and blue arrows are individual mapped devices once you zoom in. Switch **Map** or **Satellite**, use the Pegman for Street View, and search by **Equipment ID**, **Description** or telematics device serial number."
           },
           {
-            "term": "Master data creation flow",
-            "definition": "Steps 1 to 5 are one-time setup and steps 6 to 7 repeat. (1) The Global Data Administrator creates the equipment cost code with type, category, UOM and rates under Global Data → Cost → Equipment Code. (2) The same person creates categories and subcategories. (3) And creates the rate card templates. (4) The Equipment Management Administrator adds the category in **Settings → Equipment Setup**, linking cost code, rate card, checklist, depreciation and useful life. (5) The same administrator does **Accessory Setup** in the same way. (6) The Equipment Master User adds and updates records in the Equipment Master. (7) The Equipment Master User manages them with custom columns, views, filters and actions."
+            "term": "Fleet Map filters",
+            "definition": "Map options: **Geofences**, **Clusters**, **Only Running Equipment** and **Not Reported in Last 72 Hours**. Equipment filters: **Status**, **Category**, **Business Unit**, **Make** and **Model**. Use **Apply**, **Clear** and **Save Filter**."
           },
           {
-            "term": "Before you register equipment",
-            "definition": "Check that equipment cost codes, categories and subcategories exist, that the rate card templates you need are created, that the equipment is configured in Equipment Setup (or the accessory in Accessory Setup), that Fuel Types are set up, that the Business Units exist and are mapped to an Inventory Location in Inventory Management, and that the Inventory and Project Locations are configured."
+            "term": "Roles for geofences and the Fleet Map",
+            "definition": "Geofence Administrator (Equipment Admin or Site Administrator): creates geofences, sets coordinates, activates them and maintains the list. Inventory In-charge: confirms that inventory geofences match the right inventory location. Fleet Monitor (Equipment Manager or Operations Manager): uses the Fleet Map. Equipment Administrator: maps telematics devices so equipment appear on the map."
           },
           {
-            "term": "Add Category fields (Equipment Setup)",
-            "definition": "Equipment Cost Code (choose the item from Global Data → Cost → Equipment Code), Category (fills in automatically), Default Rate Card Template, Inspection Checklist, Depreciation Method and Default Useful Life. The same fields apply in Accessory Setup. Sample Excel and Upload Excel create or update entries in bulk in both."
+            "term": "Geofence flow",
+            "definition": "(1) The Geofence Administrator opens **Overview → Geofencing** and clicks **Add Location**. (2) Switches the Inventory or Project toggle and selects the work location. (3) Sets at least three coordinates. (4) Clicks **Save Geofence**. (5) Switches **Active** on. (6) The Fleet Monitor finds the geofence and the equipment inside it on **Overview → Fleet Map**."
           },
           {
-            "term": "Custom column types",
-            "definition": "On Global Data → Cost → Equipment Code and on the Equipment Master lists, **Add Custom Column** lets you add a column of type Text, Single Select, Multi-select, Date or Formulae. Enter the Column Name, choose the Type and click Add Custom Column. Manage Columns then shows or hides it."
+            "term": "Geofence location fields",
+            "definition": "Required: Location Type, Name, Description, Code and the Inventory / Project toggle. Optional: Street Address, City, State, Postal Code, Country (city, state and country fill in from map points), Start Date, End Date, POC Name, POC Phone and POC Email. For inventory locations the geofence links to the inventory location automatically."
+          },
+          {
+            "term": "Ways to set geofence coordinates",
+            "definition": "Three methods that can be combined. Method 1, Search Location: enter address, city, state and postal code, click Search, then click the exact point. Method 2, Add Coordinates: type latitude and longitude. Method 3: drag and select on the map. Fewer than three points cannot be saved. Three make a triangle and four or more make larger shapes. Delete one point with the minus icon and confirm, or use Clear All Coordinates. Upload KML imports an existing boundary."
+          },
+          {
+            "term": "Fleet Map status filter",
+            "definition": "In the equipment detail filters, Status lists Available, Allocated, In Transit, On-Rent, In Maintenance, Out of Service, Off-Rent, Inactive, Yard Only, Unavailable and Dispose Initiated. Category, Business Unit, Make and Model can also be filtered. Apply shows the result, Clear removes the filters and Save Filter keeps them for next time."
           }
         ],
         "procedures": [
           {
-            "title": "Set up a new type of equipment for registration",
+            "title": "Create and activate a geofence",
             "steps": [
-              "In <strong>Global Data → Cost → Equipment</strong>, click <strong>Add Equipment</strong> and create the equipment code with its category, UOM and rates.",
-              "Make sure the category exists under <strong>Equipment Category</strong>, and that the rate card template exists under <strong>Rate Card Template</strong>.",
-              "In the module <strong>Settings → Equipment Setup</strong> (or <strong>Accessory Setup</strong>), click <strong>Add Category</strong> and choose the cost code, default rate card template, inspection checklist, depreciation method and default useful life.",
-              "Click <strong>Submit</strong>. The equipment can now be picked when a record is created."
+              "Open <strong>Equipment Management → Overview → Geofencing</strong> and click <strong>Add Location</strong>.",
+              "Enter the location details and set the <strong>Inventory / Project</strong> toggle and work location.",
+              "Set at least three coordinates.",
+              "Click <strong>Save Geofence</strong>, go back to the <strong>Geofencing</strong> tab and switch the <strong>Active</strong> toggle on."
             ],
-            "note": "The Equipment Management Administrator also sets the Fuel Type options in Equipment Setup, which populate the Fuel Type field on equipment profiles."
-          },
-          {
-            "title": "Add an equipment category and subcategories",
-            "steps": [
-              "In Global Data → Cost, open <strong>Equipment Category</strong> and click <strong>Add Row</strong>.",
-              "Enter the Category Name and click <strong>Submit</strong>.",
-              "Use the (+) icon to add subcategories: click <strong>Add Row</strong>, type the name, and click <strong>Submit</strong>. Use Actions to delete a subcategory."
-            ],
+            "note": "Only active geofences show on the Fleet Map.",
             "images": [
               {
-                "src": "assets/guides/equipment/004.jpg",
-                "caption": "Equipment Category page",
+                "src": "assets/guides/equipment/404.jpg",
+                "caption": "Equipment Management Overview",
                 "step": 1
               },
               {
-                "src": "assets/guides/equipment/005.jpg",
-                "caption": "Add Row for a new category",
+                "src": "assets/guides/equipment/405.jpg",
+                "caption": "Geofencing tab",
                 "step": 1
               },
               {
-                "src": "assets/guides/equipment/006.jpg",
-                "caption": "Category Name entered",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/007.jpg",
-                "caption": "Submit on the category",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/008.jpg",
-                "caption": "Subcategory (+) icon",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/009.jpg",
-                "caption": "Add Row for a subcategory",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/equipment/010.jpg",
-                "caption": "Actions menu that deletes a subcategory",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/equipment/011.jpg",
-                "caption": "Submit on the subcategories",
-                "step": 3
-              }
-            ]
-          },
-          {
-            "title": "Create a rate card template",
-            "steps": [
-              "In Global Data → Cost, open <strong>Rate Card Template</strong>.",
-              "Click <strong>New Rate Card Template</strong> and fill it in.",
-              "The template can then be chosen as the Default Rate Card Template in Equipment Setup and when a piece of equipment is assigned to a request."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/equipment/012.jpg",
-                "caption": "Rate Card Template page",
-                "step": 2
-              }
-            ]
-          },
-          {
-            "title": "Add an equipment cost code",
-            "steps": [
-              "Open <strong>Global Data → Cost → Equipment</strong> and click <strong>Add Equipment</strong>.",
-              "Enter the Equipment Code, Equipment Name, Type (Equipment or Accessory), Category, Subcategory and UOM.",
-              "Enter the Hourly, Daily, Weekly and Monthly rates.",
-              "Click <strong>Submit</strong>."
-            ],
-            "note": "Create the cost code before you add a category in Equipment Setup, or no cost code will be available.",
-            "images": [
-              {
-                "src": "assets/guides/equipment/013.jpg",
-                "caption": "Add Equipment on the Equipment Code page",
+                "src": "assets/guides/equipment/406.jpg",
+                "caption": "Add Location on the Geofencing tab",
                 "step": 1
               },
               {
-                "src": "assets/guides/equipment/014.jpg",
-                "caption": "Equipment code details",
+                "src": "assets/guides/equipment/407.jpg",
+                "caption": "Location Type, Name, Description and Code",
                 "step": 2
               },
               {
-                "src": "assets/guides/equipment/015.jpg",
-                "caption": "Hourly, Daily, Weekly and Monthly rates",
+                "src": "assets/guides/equipment/408.jpg",
+                "caption": "Inventory or Project toggle",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/equipment/409.jpg",
+                "caption": "Location details reference",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/equipment/410.jpg",
+                "caption": "Search Location bar",
                 "step": 3
               },
               {
-                "src": "assets/guides/equipment/016.jpg",
-                "caption": "Submit on the equipment code",
+                "src": "assets/guides/equipment/411.jpg",
+                "caption": "Map moved to the searched location",
                 "step": 3
-              }
-            ]
-          },
-          {
-            "title": "Add a category in Equipment Setup or Accessory Setup",
-            "steps": [
-              "Open the module <strong>Settings</strong> and choose <strong>Equipment Setup</strong> (or <strong>Accessory Setup</strong>).",
-              "Click <strong>Add Category</strong>.",
-              "Choose the Equipment Cost Code, Default Rate Card Template, Inspection Checklist, Depreciation Method and Default Useful Life.",
-              "Click <strong>Submit</strong>."
-            ],
-            "note": "Only equipment configured here appears in the Equipment dropdown when a record is created.",
-            "images": [
-              {
-                "src": "assets/guides/equipment/024.jpg",
-                "caption": "Equipment Setup page",
-                "step": 1
               },
               {
-                "src": "assets/guides/equipment/025.jpg",
-                "caption": "Add Category button",
+                "src": "assets/guides/equipment/412.jpg",
+                "caption": "Point placed on the map with its coordinates",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/equipment/413.jpg",
+                "caption": "Add Coordinates button",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/equipment/414.jpg",
+                "caption": "Latitude and longitude entered",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/equipment/415.jpg",
+                "caption": "Coordinates selected on the map",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/equipment/416.jpg",
+                "caption": "City, State and Country filled in",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/equipment/417.jpg",
+                "caption": "Delete a single coordinate",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/equipment/418.jpg",
+                "caption": "Clear All Coordinates",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/equipment/419.jpg",
+                "caption": "Save Geofence",
+                "step": 4
+              },
+              {
+                "src": "assets/guides/equipment/420.jpg",
+                "caption": "New geofence in the Geofencing table",
+                "step": 4
+              },
+              {
+                "src": "assets/guides/equipment/421.jpg",
+                "caption": "Active toggle",
                 "step": 4
               }
             ]
           },
           {
-            "title": "Bulk upload equipment or setup entries from Excel",
+            "title": "Find a piece of equipment on the Fleet Map",
             "steps": [
-              "Click <strong>Export → Upload Excel</strong> and then <strong>Sample Excel</strong> to download the template.",
-              "Enter the equipment information in the template and save it.",
-              "Upload the file to create or update records."
+              "Open <strong>Overview → Fleet Map</strong>.",
+              "Click <strong>Filters</strong> and search by Equipment ID, description or device serial number, or set the map and equipment filters.",
+              "Zoom in past the clusters and click the blue marker."
             ],
-            "note": "Always start from the current Sample Excel. The referenced equipment, categories, business units and locations must already exist.",
+            "note": "A piece of equipment shows only if a telematics device is mapped to it.",
             "images": [
               {
-                "src": "assets/guides/equipment/021.jpg",
-                "caption": "Export and Download Excel",
+                "src": "assets/guides/equipment/426.jpg",
+                "caption": "Fleet Map under Overview",
                 "step": 1
               },
               {
-                "src": "assets/guides/equipment/026.jpg",
-                "caption": "Upload Excel and Sample Excel",
+                "src": "assets/guides/equipment/427.jpg",
+                "caption": "Map and Satellite views",
                 "step": 1
               },
               {
-                "src": "assets/guides/equipment/027.jpg",
-                "caption": "Sample Excel template",
+                "src": "assets/guides/equipment/428.jpg",
+                "caption": "Map controls",
                 "step": 1
+              },
+              {
+                "src": "assets/guides/equipment/433.jpg",
+                "caption": "Filters on the Fleet Map",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/equipment/434.jpg",
+                "caption": "Telematics device serial number search",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/equipment/435.jpg",
+                "caption": "Not reported in the last 72 hours filter",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/equipment/436.jpg",
+                "caption": "Equipment model filter",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/equipment/437.jpg",
+                "caption": "Save Filters",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/equipment/429.jpg",
+                "caption": "Active geofences highlighted in yellow",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/equipment/430.jpg",
+                "caption": "Clusters of telematics devices",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/equipment/431.jpg",
+                "caption": "Individual equipment markers",
+                "step": 3
               }
             ]
           },
           {
-            "title": "Add a custom column to a list",
+            "title": "Import a geofence boundary from a KML file",
             "steps": [
-              "Click <strong>Add Custom Column</strong>.",
-              "Enter the <strong>Column Name</strong> and choose the <strong>Column Type</strong>: Text, Single Select, Multi-select, Date or Formulae.",
-              "Click <strong>Add Custom Column</strong> and check that the new column shows in the table."
+              "Open <strong>Overview → Geofencing</strong> and click <strong>Add Location</strong>.",
+              "Enter the location details and choose the Inventory or Project location.",
+              "Click <strong>Upload KML</strong> and select the file.",
+              "Click <strong>Save Geofence</strong> and switch <strong>Active</strong> on."
             ],
             "images": [
               {
-                "src": "assets/guides/equipment/017.jpg",
-                "caption": "Add Custom Column button",
+                "src": "assets/guides/equipment/422.jpg",
+                "caption": "Upload KML for an existing boundary",
+                "step": 3
+              }
+            ]
+          },
+          {
+            "title": "Bulk upload or filter geofences",
+            "steps": [
+              "On the Geofencing tab, click <strong>Export → Upload Excel</strong>, then <strong>Sample Excel</strong>, fill in the template and upload it. <strong>Download Excel</strong> exports the current geofences.",
+              "Click <strong>Filters</strong> and choose Name, Code, City, State, Country, Pincode or Active / Inactive, then click <strong>Submit</strong> (or <strong>Clear</strong>).",
+              "Use <strong>Manage Columns</strong> to choose and arrange columns."
+            ],
+            "images": [
+              {
+                "src": "assets/guides/equipment/423.jpg",
+                "caption": "Upload Excel and Sample Excel for geofences",
                 "step": 1
               },
               {
-                "src": "assets/guides/equipment/018.jpg",
-                "caption": "Column Name and Column Type",
-                "step": 2
+                "src": "assets/guides/equipment/424.jpg",
+                "caption": "Sample geofence Excel template",
+                "step": 1
               },
               {
-                "src": "assets/guides/equipment/019.jpg",
-                "caption": "Confirming the custom column",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/020.jpg",
-                "caption": "New custom column in the table",
-                "step": 3
+                "src": "assets/guides/equipment/425.jpg",
+                "caption": "Download Excel for geofences",
+                "step": 1
               }
             ]
           }
         ],
         "images": [
           {
-            "src": "assets/guides/equipment/001.jpg",
-            "caption": "Equipment cost codes under Global Data, Cost"
-          },
-          {
-            "src": "assets/guides/equipment/002.jpg",
-            "caption": "Equipment Code page"
-          },
-          {
-            "src": "assets/guides/equipment/003.jpg",
-            "caption": "Equipment Code list"
-          },
-          {
-            "src": "assets/guides/equipment/022.jpg",
-            "caption": "Settings in Equipment Management"
-          },
-          {
-            "src": "assets/guides/equipment/023.jpg",
-            "caption": "Equipment Setup and Accessory Setup in Settings"
+            "src": "assets/guides/equipment/432.jpg",
+            "caption": "Street View with the Pegman icon"
           }
         ]
       },
       {
-        "heading": "Equipment Master and Accessory Master",
+        "heading": "Equipment Master",
         "intro": "<p>The **Equipment Master** and **Accessory Master** (Equipment Management → Equipment) list every piece of equipment and accessory in the organization. Equipment Master Users use them to create and update records, monitor statuses and run actions such as Request Haul.</p><p>Only equipment set up in **Settings → Equipment Setup** (or **Accessory Setup**) can be registered. The top of the page groups records by status; click a status to see only those records. Open a record to see its profile.</p>",
         "definitions": [
           {
@@ -17456,7 +17472,7 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Equipment and Accessory Profile",
+        "heading": "Equipment Profile",
         "intro": "<p><strong> </strong> Every equipment and accessory record has its own profile page. The <strong>Equipment Master User</strong> keeps identity and location current, and the <strong>Equipment Accountant</strong> maintains purchase, warranty, insurance and depreciation details. Open it from <strong>Equipment → Equipment Master / Accessory Master</strong> by clicking the record.</p>",
         "definitions": [
           {
@@ -17752,7 +17768,517 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Request Creation",
+        "heading": "Master Data",
+        "intro": "<p><strong> </strong> Before anyone registers a piece of equipment, a <strong>Global Data Administrator</strong> sets up equipment cost codes, categories and rate card templates, and an <strong>Equipment Management Administrator</strong> links them to the equipment in <strong>Settings</strong>. Only equipment configured this way appear in the dropdowns when records are created.</p>",
+        "definitions": [
+          {
+            "term": "Equipment cost codes (Global Data)",
+            "definition": "In **Global Data → Cost → Equipment**, click **Add Equipment** and enter the **Equipment Code**, **Equipment Name**, **Type** (Equipment or Accessory), **Category**, **Subcategory**, **UOM** and the hourly, daily, weekly and monthly rates, then **Submit**."
+          },
+          {
+            "term": "Equipment categories and rate card templates",
+            "definition": "Under **Equipment Category**, click **Add Row**, name the category and **Submit**; use the (+) icon to add subcategories. **Rate Card Template → New Rate Card Template** creates the templates you can pick later. Both are maintained by the Global Data Administrator."
+          },
+          {
+            "term": "Equipment Setup and Accessory Setup",
+            "definition": "In the module **Settings**, **Equipment Setup** lists the equipment that can be registered, and **Accessory Setup** does the same for accessories. Click **Add Category** and choose the **Equipment Cost Code** (the category fills in), a **Default Rate Card Template**, an **Inspection Checklist**, a **Depreciation Method** and a **Default Useful Life**. Only items configured here show in the Equipment or Accessory dropdown when records are created. **Sample Excel** and **Upload Excel** create or update them in bulk. **Fuel Type** options are also set here."
+          },
+          {
+            "term": "Master data creation flow",
+            "definition": "Steps 1 to 5 are one-time setup and steps 6 to 7 repeat. (1) The Global Data Administrator creates the equipment cost code with type, category, UOM and rates under Global Data → Cost → Equipment Code. (2) The same person creates categories and subcategories. (3) And creates the rate card templates. (4) The Equipment Management Administrator adds the category in **Settings → Equipment Setup**, linking cost code, rate card, checklist, depreciation and useful life. (5) The same administrator does **Accessory Setup** in the same way. (6) The Equipment Master User adds and updates records in the Equipment Master. (7) The Equipment Master User manages them with custom columns, views, filters and actions."
+          },
+          {
+            "term": "Before you register equipment",
+            "definition": "Check that equipment cost codes, categories and subcategories exist, that the rate card templates you need are created, that the equipment is configured in Equipment Setup (or the accessory in Accessory Setup), that Fuel Types are set up, that the Business Units exist and are mapped to an Inventory Location in Inventory Management, and that the Inventory and Project Locations are configured."
+          },
+          {
+            "term": "Add Category fields (Equipment Setup)",
+            "definition": "Equipment Cost Code (choose the item from Global Data → Cost → Equipment Code), Category (fills in automatically), Default Rate Card Template, Inspection Checklist, Depreciation Method and Default Useful Life. The same fields apply in Accessory Setup. Sample Excel and Upload Excel create or update entries in bulk in both."
+          },
+          {
+            "term": "Custom column types",
+            "definition": "On Global Data → Cost → Equipment Code and on the Equipment Master lists, **Add Custom Column** lets you add a column of type Text, Single Select, Multi-select, Date or Formulae. Enter the Column Name, choose the Type and click Add Custom Column. Manage Columns then shows or hides it."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Set up a new type of equipment for registration",
+            "steps": [
+              "In <strong>Global Data → Cost → Equipment</strong>, click <strong>Add Equipment</strong> and create the equipment code with its category, UOM and rates.",
+              "Make sure the category exists under <strong>Equipment Category</strong>, and that the rate card template exists under <strong>Rate Card Template</strong>.",
+              "In the module <strong>Settings → Equipment Setup</strong> (or <strong>Accessory Setup</strong>), click <strong>Add Category</strong> and choose the cost code, default rate card template, inspection checklist, depreciation method and default useful life.",
+              "Click <strong>Submit</strong>. The equipment can now be picked when a record is created."
+            ],
+            "note": "The Equipment Management Administrator also sets the Fuel Type options in Equipment Setup, which populate the Fuel Type field on equipment profiles."
+          },
+          {
+            "title": "Add an equipment category and subcategories",
+            "steps": [
+              "In Global Data → Cost, open <strong>Equipment Category</strong> and click <strong>Add Row</strong>.",
+              "Enter the Category Name and click <strong>Submit</strong>.",
+              "Use the (+) icon to add subcategories: click <strong>Add Row</strong>, type the name, and click <strong>Submit</strong>. Use Actions to delete a subcategory."
+            ],
+            "images": [
+              {
+                "src": "assets/guides/equipment/004.jpg",
+                "caption": "Equipment Category page",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/equipment/005.jpg",
+                "caption": "Add Row for a new category",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/equipment/006.jpg",
+                "caption": "Category Name entered",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/equipment/007.jpg",
+                "caption": "Submit on the category",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/equipment/008.jpg",
+                "caption": "Subcategory (+) icon",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/equipment/009.jpg",
+                "caption": "Add Row for a subcategory",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/equipment/010.jpg",
+                "caption": "Actions menu that deletes a subcategory",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/equipment/011.jpg",
+                "caption": "Submit on the subcategories",
+                "step": 3
+              }
+            ]
+          },
+          {
+            "title": "Create a rate card template",
+            "steps": [
+              "In Global Data → Cost, open <strong>Rate Card Template</strong>.",
+              "Click <strong>New Rate Card Template</strong> and fill it in.",
+              "The template can then be chosen as the Default Rate Card Template in Equipment Setup and when a piece of equipment is assigned to a request."
+            ],
+            "images": [
+              {
+                "src": "assets/guides/equipment/012.jpg",
+                "caption": "Rate Card Template page",
+                "step": 2
+              }
+            ]
+          },
+          {
+            "title": "Add an equipment cost code",
+            "steps": [
+              "Open <strong>Global Data → Cost → Equipment</strong> and click <strong>Add Equipment</strong>.",
+              "Enter the Equipment Code, Equipment Name, Type (Equipment or Accessory), Category, Subcategory and UOM.",
+              "Enter the Hourly, Daily, Weekly and Monthly rates.",
+              "Click <strong>Submit</strong>."
+            ],
+            "note": "Create the cost code before you add a category in Equipment Setup, or no cost code will be available.",
+            "images": [
+              {
+                "src": "assets/guides/equipment/013.jpg",
+                "caption": "Add Equipment on the Equipment Code page",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/equipment/014.jpg",
+                "caption": "Equipment code details",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/equipment/015.jpg",
+                "caption": "Hourly, Daily, Weekly and Monthly rates",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/equipment/016.jpg",
+                "caption": "Submit on the equipment code",
+                "step": 3
+              }
+            ]
+          },
+          {
+            "title": "Add a category in Equipment Setup or Accessory Setup",
+            "steps": [
+              "Open the module <strong>Settings</strong> and choose <strong>Equipment Setup</strong> (or <strong>Accessory Setup</strong>).",
+              "Click <strong>Add Category</strong>.",
+              "Choose the Equipment Cost Code, Default Rate Card Template, Inspection Checklist, Depreciation Method and Default Useful Life.",
+              "Click <strong>Submit</strong>."
+            ],
+            "note": "Only equipment configured here appears in the Equipment dropdown when a record is created.",
+            "images": [
+              {
+                "src": "assets/guides/equipment/024.jpg",
+                "caption": "Equipment Setup page",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/equipment/025.jpg",
+                "caption": "Add Category button",
+                "step": 4
+              }
+            ]
+          },
+          {
+            "title": "Bulk upload equipment or setup entries from Excel",
+            "steps": [
+              "Click <strong>Export → Upload Excel</strong> and then <strong>Sample Excel</strong> to download the template.",
+              "Enter the equipment information in the template and save it.",
+              "Upload the file to create or update records."
+            ],
+            "note": "Always start from the current Sample Excel. The referenced equipment, categories, business units and locations must already exist.",
+            "images": [
+              {
+                "src": "assets/guides/equipment/021.jpg",
+                "caption": "Export and Download Excel",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/equipment/026.jpg",
+                "caption": "Upload Excel and Sample Excel",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/equipment/027.jpg",
+                "caption": "Sample Excel template",
+                "step": 1
+              }
+            ]
+          },
+          {
+            "title": "Add a custom column to a list",
+            "steps": [
+              "Click <strong>Add Custom Column</strong>.",
+              "Enter the <strong>Column Name</strong> and choose the <strong>Column Type</strong>: Text, Single Select, Multi-select, Date or Formulae.",
+              "Click <strong>Add Custom Column</strong> and check that the new column shows in the table."
+            ],
+            "images": [
+              {
+                "src": "assets/guides/equipment/017.jpg",
+                "caption": "Add Custom Column button",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/equipment/018.jpg",
+                "caption": "Column Name and Column Type",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/equipment/019.jpg",
+                "caption": "Confirming the custom column",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/equipment/020.jpg",
+                "caption": "New custom column in the table",
+                "step": 3
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/guides/equipment/001.jpg",
+            "caption": "Equipment cost codes under Global Data, Cost"
+          },
+          {
+            "src": "assets/guides/equipment/002.jpg",
+            "caption": "Equipment Code page"
+          },
+          {
+            "src": "assets/guides/equipment/003.jpg",
+            "caption": "Equipment Code list"
+          },
+          {
+            "src": "assets/guides/equipment/022.jpg",
+            "caption": "Settings in Equipment Management"
+          },
+          {
+            "src": "assets/guides/equipment/023.jpg",
+            "caption": "Equipment Setup and Accessory Setup in Settings"
+          }
+        ]
+      },
+      {
+        "heading": "3rd Party Rental",
+        "intro": "<p>Use **3rd Party Rental** and **External Hauling** to see equipment you rent in from vendors and hauls done by outside companies. Equipment coordinators and cost controllers use these lists to track dates, rates and costs. Your company may see **Asset** instead of **Equipment** (**Global Data → Settings → Naming Framework**).</p>",
+        "definitions": [
+          {
+            "term": "3rd Party Rental",
+            "definition": "From **Home**, open **Equipment Management → Equipment → 3rd Party Rental**. The list of rented-in equipment shows **REQ ID**, **PO ID**, **Vendor**, **Delivered Date**, **Length of Rent**, **Days in Rent**, **Billing Rule**, **Hourly Rate**, **Daily Rate**, **Weekly Rate**, **Monthly Rate**, **Freight Cost**, **PO Value**, **Total Cost YTD** and **Phase Codes**."
+          },
+          {
+            "term": "External Hauling",
+            "definition": "From **Home**, open **Equipment Management → Hauling → External Hauling**. The list shows **Allocation Id**, **REQ ID**, **PO ID**, **Vendor**, **Cost**, **Price**, **Escort Cost**, **Permit Cost**, **Service Company**, **Service Type**, **Pick Up Address**, **Dimensions**, **Weight**, **Received By**, **Delivered Date** and **Stage**."
+          },
+          {
+            "term": "Where this data goes",
+            "definition": "The **3rd Party Rental Activity & Spend Report** and **Hauling Cost Log** are in **Reports**. The **Billing Rule** column follows **Settings → Billing Rules**."
+          }
+        ],
+        "procedures": []
+      },
+      {
+        "heading": "Telematics",
+        "intro": "<p><strong> </strong> Telematics connects equipment to a third-party provider so a <strong>Fleet Monitor</strong> can see engine, fuel, operation and movement readings inside Arena. A <strong>Global Data Administrator</strong> connects the provider once, and an <strong>Equipment Administrator</strong> maps each device to a piece of equipment.</p>",
+        "definitions": [
+          {
+            "term": "Telematics provider setup",
+            "definition": "In **Global Data → Marketplace → Telematics**, open the provider card, set its credentials and the interval, in hours, at which equipment information is fetched, click **Attach** and then **Submit**. The provider then shows when you map a device. Readings can lag the machine by up to that interval."
+          },
+          {
+            "term": "Device Mapping",
+            "definition": "Open the equipment, click the **Telematics** tab, and use **Map Device** to pick a provider and one of its **Available Devices**. **View Details** shows the mapped device, **Unmap Device** removes it, and the **Info Mapping** panel shows the source of each telemetry category."
+          },
+          {
+            "term": "Live Data",
+            "definition": "The latest readings in four groups. **Engine Info**: hours operated, hours idle, non-operating hours, load factor, regeneration hours. **Fuel Info**: fuel level, fuel used, fuel capacity, DEF level and capacity. **Operation Info**: payload, load count, power take-off hours. **Movement Info**: peak speed and odometer. Each reading has its own last-updated time."
+          },
+          {
+            "term": "Trip, Device and Location History",
+            "definition": "**Trip History** shows routes and locations for a date range and coordinate precision, then **Apply**. **Device History** lists everything the device reported in a table. **Location History** lists the device history by recorded location."
+          },
+          {
+            "term": "Readings History",
+            "definition": "Recorded readings filtered by **Date Range**, **Device** and **Category**. A Maintenance Planner can select rows with the Action box, click **Transfer**, pick the destination equipment and **Submit** to move readings to another equipment."
+          },
+          {
+            "term": "Roles for telematics",
+            "definition": "Global Data Administrator: sets up the provider once, including the fetch interval. Equipment Administrator: maps, views and unmaps devices. Fleet Monitor (Equipment Manager or Site Supervisor): watches Live Data and the history tabs. Maintenance Planner (Meter Administrator or Maintenance Engineer): reviews Readings History and transfers readings between equipment."
+          },
+          {
+            "term": "Telematics flow",
+            "definition": "(1) The Global Data Administrator configures the provider credentials and fetch interval under **Global Data → Marketplace → Telematics** and clicks Submit. (2) The Equipment Administrator opens the equipment and clicks **Telematics**. (3) The Equipment Administrator maps the device. (4) The Fleet Monitor reviews **Live Data**. (5) Then **Trip History** with precision and date range. (6) **Device History**. (7) **Location History**. (8) The Maintenance Planner reviews **Readings History** and transfers readings."
+          },
+          {
+            "term": "Info Mapping and the telematics tabs",
+            "definition": "The **Info Mapping** panel on Device Mapping shows where each telemetry category is sourced from. The telematics tabs are Device Mapping, Live Data, Trip History, Device History, Location History and Readings History. Each is available from the same row of tabs on the equipment."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Connect a telematics provider",
+            "steps": [
+              "Go to <strong>Global Data → Marketplace → Telematics</strong> and open the provider card.",
+              "Enter the credentials and set the fetch interval in hours.",
+              "Click <strong>Attach</strong>, then <strong>Submit</strong>."
+            ],
+            "images": [
+              {
+                "src": "assets/guides/equipment/438.jpg",
+                "caption": "Global Data tab",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/equipment/439.jpg",
+                "caption": "Marketplace card",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/equipment/440.jpg",
+                "caption": "Telematics card",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/equipment/441.jpg",
+                "caption": "Telematics provider card",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/equipment/442.jpg",
+                "caption": "Fetch interval in hours",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/equipment/443.jpg",
+                "caption": "Attach completed",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/equipment/444.jpg",
+                "caption": "Submit on the telematics integration",
+                "step": 3
+              }
+            ]
+          },
+          {
+            "title": "Map a telematics device to a piece of equipment",
+            "steps": [
+              "Open <strong>Equipment Management → Equipment</strong> and click the equipment.",
+              "Click the <strong>Telematics</strong> tab, which opens <strong>Device Mapping</strong>.",
+              "Click <strong>Map Device</strong>, choose the <strong>Telematics Provider</strong>, then choose the device from <strong>Available Devices</strong>.",
+              "Click <strong>Map Device</strong> to save."
+            ],
+            "note": "When you replace a device, transfer its readings first, then use Unmap Device and map the new one.",
+            "images": [
+              {
+                "src": "assets/guides/equipment/445.jpg",
+                "caption": "Home tab",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/equipment/446.jpg",
+                "caption": "Equipment Management card",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/equipment/447.jpg",
+                "caption": "Equipment menu",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/equipment/448.jpg",
+                "caption": "Equipment selected for mapping",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/equipment/449.jpg",
+                "caption": "Telematics tab",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/equipment/450.jpg",
+                "caption": "Map Device button",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/equipment/451.jpg",
+                "caption": "Telematics Provider dropdown",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/equipment/452.jpg",
+                "caption": "Available Devices list",
+                "step": 3
+              }
+            ]
+          },
+          {
+            "title": "Transfer readings to another equipment",
+            "steps": [
+              "Open the equipment's <strong>Telematics → Readings History</strong> and choose the <strong>Date Range</strong>, <strong>Device</strong> and <strong>Category</strong>.",
+              "Select the rows with the Action box and click <strong>Transfer</strong>.",
+              "Choose the destination equipment and click <strong>Submit</strong>."
+            ],
+            "images": [
+              {
+                "src": "assets/guides/equipment/464.jpg",
+                "caption": "Readings History",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/equipment/465.jpg",
+                "caption": "Date Range, Device and Category",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/equipment/466.jpg",
+                "caption": "Action box for selecting readings",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/equipment/467.jpg",
+                "caption": "Transfer button",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/equipment/468.jpg",
+                "caption": "Destination equipment dropdown",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/equipment/469.jpg",
+                "caption": "Submit on the transfer",
+                "step": 3
+              }
+            ]
+          },
+          {
+            "title": "Replace a telematics device on a piece of equipment",
+            "steps": [
+              "Open the equipment's <strong>Telematics → Readings History</strong> and transfer the readings you want to keep to the equipment you choose.",
+              "On <strong>Device Mapping</strong>, click <strong>Unmap Device</strong> to remove the current device.",
+              "Click <strong>Map Device</strong>, choose the provider and the replacement device from Available Devices, and click <strong>Map Device</strong>."
+            ],
+            "images": [
+              {
+                "src": "assets/guides/equipment/453.jpg",
+                "caption": "Unmap Device",
+                "step": 2
+              }
+            ]
+          },
+          {
+            "title": "Check trip history for a machine",
+            "steps": [
+              "Open the equipment and click <strong>Telematics → Trip History</strong>.",
+              "Set the coordinate precision and the date range.",
+              "Click <strong>Apply</strong> to see routes and locations for that period."
+            ],
+            "note": "If no routes appear, widen the date range and adjust the precision.",
+            "images": [
+              {
+                "src": "assets/guides/equipment/457.jpg",
+                "caption": "Trip History",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/equipment/458.jpg",
+                "caption": "Coordinate precision and date range",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/equipment/459.jpg",
+                "caption": "Trip details after Apply",
+                "step": 2
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/guides/equipment/454.jpg",
+            "caption": "Info Mapping panel"
+          },
+          {
+            "src": "assets/guides/equipment/455.jpg",
+            "caption": "Live Data"
+          },
+          {
+            "src": "assets/guides/equipment/456.jpg",
+            "caption": "Telemetry categories"
+          },
+          {
+            "src": "assets/guides/equipment/460.jpg",
+            "caption": "Device History"
+          },
+          {
+            "src": "assets/guides/equipment/461.jpg",
+            "caption": "Device history table"
+          },
+          {
+            "src": "assets/guides/equipment/462.jpg",
+            "caption": "Location History"
+          },
+          {
+            "src": "assets/guides/equipment/463.jpg",
+            "caption": "Location history by recorded location"
+          }
+        ]
+      },
+      {
+        "heading": "Requests",
         "intro": "<p>Request Creation is how a Requester asks for equipment or accessories in <strong>Equipment Management → Operations</strong> and how an Approver decides it. Administrators first set up the inspection checklist, approval workflow, statuses and request priority threshold; Requesters then raise requests; Approvers approve or reject them.</p><p>An approved request moves to the <strong>Assign</strong> stage, where the Equipment Coordinator picks the fulfilment method. Some environments running an earlier version raise and move equipment through a Load Out Request tab instead. See the short note at the end of this page.</p>",
         "definitions": [
           {
@@ -18117,7 +18643,7 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Allocation: Internal Self-Pickup to Off-Rent",
+        "heading": "Allocation",
         "intro": "<p>This flow covers a request fulfilled from internal inventory when the project team collects the equipment itself (<strong>Internal → Self Pickup</strong>), from <strong>Assign</strong> through <strong>Inspection (Pre-Dispatch)</strong>, <strong>Ready for Dispatch</strong>, <strong>On Rent</strong>, <strong>Off-Rent / Extension</strong>, <strong>Pickup</strong> and <strong>Inspection (Post-Rent)</strong> to <strong>Closed</strong>. No haul is created, so there is no In Transit (Outbound) stage.</p><p>The Equipment Coordinator assigns and processes the return, inspectors complete the checklists, the Dispatch Assignee dispatches, the Site Custodian confirms On-Rent and raises extensions or off-rent, the Off-Rent Approver decides them, and the Pickup Assignee schedules the return. The other route, Company Logistics, is covered under Company Logistics with Hauling.</p>",
         "definitions": [
           {
@@ -19063,7 +19589,7 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Company Logistics with Hauling",
+        "heading": "Hauling",
         "intro": "<p><strong>Company Logistics</strong> is used when the company arranges transport with its own vehicle and driver. It creates an outbound haul from inventory to the project and, after off-rent, a return haul back to inventory, both managed in <strong>Equipment Management → Hauling</strong>.</p><p>A Fleet Administrator keeps vehicles and drivers current, the Hauling Coordinator moves each haul through its stages and closes it with final costs, and the Hauling Approver approves or rejects requests. The allocation request on the Operations board shows a <strong>Haul Initiated</strong> tag while a haul is open.</p>",
         "definitions": [
           {
@@ -19776,514 +20302,7 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Telematics: Device Mapping and Live Data",
-        "intro": "<p><strong> </strong> Telematics connects equipment to a third-party provider so a <strong>Fleet Monitor</strong> can see engine, fuel, operation and movement readings inside Arena. A <strong>Global Data Administrator</strong> connects the provider once, and an <strong>Equipment Administrator</strong> maps each device to a piece of equipment.</p>",
-        "definitions": [
-          {
-            "term": "Telematics provider setup",
-            "definition": "In **Global Data → Marketplace → Telematics**, open the provider card, set its credentials and the interval, in hours, at which equipment information is fetched, click **Attach** and then **Submit**. The provider then shows when you map a device. Readings can lag the machine by up to that interval."
-          },
-          {
-            "term": "Device Mapping",
-            "definition": "Open the equipment, click the **Telematics** tab, and use **Map Device** to pick a provider and one of its **Available Devices**. **View Details** shows the mapped device, **Unmap Device** removes it, and the **Info Mapping** panel shows the source of each telemetry category."
-          },
-          {
-            "term": "Live Data",
-            "definition": "The latest readings in four groups. **Engine Info**: hours operated, hours idle, non-operating hours, load factor, regeneration hours. **Fuel Info**: fuel level, fuel used, fuel capacity, DEF level and capacity. **Operation Info**: payload, load count, power take-off hours. **Movement Info**: peak speed and odometer. Each reading has its own last-updated time."
-          },
-          {
-            "term": "Trip, Device and Location History",
-            "definition": "**Trip History** shows routes and locations for a date range and coordinate precision, then **Apply**. **Device History** lists everything the device reported in a table. **Location History** lists the device history by recorded location."
-          },
-          {
-            "term": "Readings History",
-            "definition": "Recorded readings filtered by **Date Range**, **Device** and **Category**. A Maintenance Planner can select rows with the Action box, click **Transfer**, pick the destination equipment and **Submit** to move readings to another equipment."
-          },
-          {
-            "term": "Roles for telematics",
-            "definition": "Global Data Administrator: sets up the provider once, including the fetch interval. Equipment Administrator: maps, views and unmaps devices. Fleet Monitor (Equipment Manager or Site Supervisor): watches Live Data and the history tabs. Maintenance Planner (Meter Administrator or Maintenance Engineer): reviews Readings History and transfers readings between equipment."
-          },
-          {
-            "term": "Telematics flow",
-            "definition": "(1) The Global Data Administrator configures the provider credentials and fetch interval under **Global Data → Marketplace → Telematics** and clicks Submit. (2) The Equipment Administrator opens the equipment and clicks **Telematics**. (3) The Equipment Administrator maps the device. (4) The Fleet Monitor reviews **Live Data**. (5) Then **Trip History** with precision and date range. (6) **Device History**. (7) **Location History**. (8) The Maintenance Planner reviews **Readings History** and transfers readings."
-          },
-          {
-            "term": "Info Mapping and the telematics tabs",
-            "definition": "The **Info Mapping** panel on Device Mapping shows where each telemetry category is sourced from. The telematics tabs are Device Mapping, Live Data, Trip History, Device History, Location History and Readings History. Each is available from the same row of tabs on the equipment."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Connect a telematics provider",
-            "steps": [
-              "Go to <strong>Global Data → Marketplace → Telematics</strong> and open the provider card.",
-              "Enter the credentials and set the fetch interval in hours.",
-              "Click <strong>Attach</strong>, then <strong>Submit</strong>."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/equipment/438.jpg",
-                "caption": "Global Data tab",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/439.jpg",
-                "caption": "Marketplace card",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/440.jpg",
-                "caption": "Telematics card",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/441.jpg",
-                "caption": "Telematics provider card",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/442.jpg",
-                "caption": "Fetch interval in hours",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/443.jpg",
-                "caption": "Attach completed",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/equipment/444.jpg",
-                "caption": "Submit on the telematics integration",
-                "step": 3
-              }
-            ]
-          },
-          {
-            "title": "Map a telematics device to a piece of equipment",
-            "steps": [
-              "Open <strong>Equipment Management → Equipment</strong> and click the equipment.",
-              "Click the <strong>Telematics</strong> tab, which opens <strong>Device Mapping</strong>.",
-              "Click <strong>Map Device</strong>, choose the <strong>Telematics Provider</strong>, then choose the device from <strong>Available Devices</strong>.",
-              "Click <strong>Map Device</strong> to save."
-            ],
-            "note": "When you replace a device, transfer its readings first, then use Unmap Device and map the new one.",
-            "images": [
-              {
-                "src": "assets/guides/equipment/445.jpg",
-                "caption": "Home tab",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/446.jpg",
-                "caption": "Equipment Management card",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/447.jpg",
-                "caption": "Equipment menu",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/448.jpg",
-                "caption": "Equipment selected for mapping",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/449.jpg",
-                "caption": "Telematics tab",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/450.jpg",
-                "caption": "Map Device button",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/equipment/451.jpg",
-                "caption": "Telematics Provider dropdown",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/equipment/452.jpg",
-                "caption": "Available Devices list",
-                "step": 3
-              }
-            ]
-          },
-          {
-            "title": "Transfer readings to another equipment",
-            "steps": [
-              "Open the equipment's <strong>Telematics → Readings History</strong> and choose the <strong>Date Range</strong>, <strong>Device</strong> and <strong>Category</strong>.",
-              "Select the rows with the Action box and click <strong>Transfer</strong>.",
-              "Choose the destination equipment and click <strong>Submit</strong>."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/equipment/464.jpg",
-                "caption": "Readings History",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/465.jpg",
-                "caption": "Date Range, Device and Category",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/466.jpg",
-                "caption": "Action box for selecting readings",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/467.jpg",
-                "caption": "Transfer button",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/468.jpg",
-                "caption": "Destination equipment dropdown",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/469.jpg",
-                "caption": "Submit on the transfer",
-                "step": 3
-              }
-            ]
-          },
-          {
-            "title": "Replace a telematics device on a piece of equipment",
-            "steps": [
-              "Open the equipment's <strong>Telematics → Readings History</strong> and transfer the readings you want to keep to the equipment you choose.",
-              "On <strong>Device Mapping</strong>, click <strong>Unmap Device</strong> to remove the current device.",
-              "Click <strong>Map Device</strong>, choose the provider and the replacement device from Available Devices, and click <strong>Map Device</strong>."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/equipment/453.jpg",
-                "caption": "Unmap Device",
-                "step": 2
-              }
-            ]
-          },
-          {
-            "title": "Check trip history for a machine",
-            "steps": [
-              "Open the equipment and click <strong>Telematics → Trip History</strong>.",
-              "Set the coordinate precision and the date range.",
-              "Click <strong>Apply</strong> to see routes and locations for that period."
-            ],
-            "note": "If no routes appear, widen the date range and adjust the precision.",
-            "images": [
-              {
-                "src": "assets/guides/equipment/457.jpg",
-                "caption": "Trip History",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/458.jpg",
-                "caption": "Coordinate precision and date range",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/459.jpg",
-                "caption": "Trip details after Apply",
-                "step": 2
-              }
-            ]
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/guides/equipment/454.jpg",
-            "caption": "Info Mapping panel"
-          },
-          {
-            "src": "assets/guides/equipment/455.jpg",
-            "caption": "Live Data"
-          },
-          {
-            "src": "assets/guides/equipment/456.jpg",
-            "caption": "Telemetry categories"
-          },
-          {
-            "src": "assets/guides/equipment/460.jpg",
-            "caption": "Device History"
-          },
-          {
-            "src": "assets/guides/equipment/461.jpg",
-            "caption": "Device history table"
-          },
-          {
-            "src": "assets/guides/equipment/462.jpg",
-            "caption": "Location History"
-          },
-          {
-            "src": "assets/guides/equipment/463.jpg",
-            "caption": "Location history by recorded location"
-          }
-        ]
-      },
-      {
-        "heading": "Geofencing and Fleet Map",
-        "intro": "<p><strong> </strong> A <strong>geofence</strong> is a boundary drawn around a work location. A Geofence Administrator creates and activates geofences on the <strong>Overview → Geofencing</strong> tab, and a Fleet Monitor uses the <strong>Fleet Map</strong> to see active geofences and the equipment reporting inside them.</p>",
-        "definitions": [
-          {
-            "term": "Geofencing tab",
-            "definition": "Click **Add Location** and enter **Location Type**, **Name**, **Description** and **Code** (all required), plus optional address, **Start Date**, **End Date** and point-of-contact name, phone and email. The **Inventory / Project** toggle chooses which work locations you can pick; an inventory geofence links to its inventory location automatically. The list has **Active** toggles, **Export** (Sample Excel, Upload Excel, Download Excel), **Manage Columns** and **Filters** (Name, Code, City, State, Country, Pincode, Active or Inactive)."
-          },
-          {
-            "term": "Setting coordinates",
-            "definition": "You need at least three points (three make a triangle, more make larger shapes). Use **Search Location** then click the exact point, or **Add Coordinates** to type latitude and longitude, or drag and select on the map. City, state and country fill in from map points. Remove one point with the minus icon, or use **Clear All Coordinates**. **Upload KML** imports an existing boundary."
-          },
-          {
-            "term": "Fleet Map",
-            "definition": "Shows equipment reporting through telematics. Active geofences show as yellow regions, numbered highlights are clusters, and blue arrows are individual mapped devices once you zoom in. Switch **Map** or **Satellite**, use the Pegman for Street View, and search by **Equipment ID**, **Description** or telematics device serial number."
-          },
-          {
-            "term": "Fleet Map filters",
-            "definition": "Map options: **Geofences**, **Clusters**, **Only Running Equipment** and **Not Reported in Last 72 Hours**. Equipment filters: **Status**, **Category**, **Business Unit**, **Make** and **Model**. Use **Apply**, **Clear** and **Save Filter**."
-          },
-          {
-            "term": "Roles for geofences and the Fleet Map",
-            "definition": "Geofence Administrator (Equipment Admin or Site Administrator): creates geofences, sets coordinates, activates them and maintains the list. Inventory In-charge: confirms that inventory geofences match the right inventory location. Fleet Monitor (Equipment Manager or Operations Manager): uses the Fleet Map. Equipment Administrator: maps telematics devices so equipment appear on the map."
-          },
-          {
-            "term": "Geofence flow",
-            "definition": "(1) The Geofence Administrator opens **Overview → Geofencing** and clicks **Add Location**. (2) Switches the Inventory or Project toggle and selects the work location. (3) Sets at least three coordinates. (4) Clicks **Save Geofence**. (5) Switches **Active** on. (6) The Fleet Monitor finds the geofence and the equipment inside it on **Overview → Fleet Map**."
-          },
-          {
-            "term": "Geofence location fields",
-            "definition": "Required: Location Type, Name, Description, Code and the Inventory / Project toggle. Optional: Street Address, City, State, Postal Code, Country (city, state and country fill in from map points), Start Date, End Date, POC Name, POC Phone and POC Email. For inventory locations the geofence links to the inventory location automatically."
-          },
-          {
-            "term": "Ways to set geofence coordinates",
-            "definition": "Three methods that can be combined. Method 1, Search Location: enter address, city, state and postal code, click Search, then click the exact point. Method 2, Add Coordinates: type latitude and longitude. Method 3: drag and select on the map. Fewer than three points cannot be saved. Three make a triangle and four or more make larger shapes. Delete one point with the minus icon and confirm, or use Clear All Coordinates. Upload KML imports an existing boundary."
-          },
-          {
-            "term": "Fleet Map status filter",
-            "definition": "In the equipment detail filters, Status lists Available, Allocated, In Transit, On-Rent, In Maintenance, Out of Service, Off-Rent, Inactive, Yard Only, Unavailable and Dispose Initiated. Category, Business Unit, Make and Model can also be filtered. Apply shows the result, Clear removes the filters and Save Filter keeps them for next time."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Create and activate a geofence",
-            "steps": [
-              "Open <strong>Equipment Management → Overview → Geofencing</strong> and click <strong>Add Location</strong>.",
-              "Enter the location details and set the <strong>Inventory / Project</strong> toggle and work location.",
-              "Set at least three coordinates.",
-              "Click <strong>Save Geofence</strong>, go back to the <strong>Geofencing</strong> tab and switch the <strong>Active</strong> toggle on."
-            ],
-            "note": "Only active geofences show on the Fleet Map.",
-            "images": [
-              {
-                "src": "assets/guides/equipment/404.jpg",
-                "caption": "Equipment Management Overview",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/405.jpg",
-                "caption": "Geofencing tab",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/406.jpg",
-                "caption": "Add Location on the Geofencing tab",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/407.jpg",
-                "caption": "Location Type, Name, Description and Code",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/408.jpg",
-                "caption": "Inventory or Project toggle",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/409.jpg",
-                "caption": "Location details reference",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/410.jpg",
-                "caption": "Search Location bar",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/equipment/411.jpg",
-                "caption": "Map moved to the searched location",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/equipment/412.jpg",
-                "caption": "Point placed on the map with its coordinates",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/equipment/413.jpg",
-                "caption": "Add Coordinates button",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/equipment/414.jpg",
-                "caption": "Latitude and longitude entered",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/equipment/415.jpg",
-                "caption": "Coordinates selected on the map",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/equipment/416.jpg",
-                "caption": "City, State and Country filled in",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/equipment/417.jpg",
-                "caption": "Delete a single coordinate",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/equipment/418.jpg",
-                "caption": "Clear All Coordinates",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/equipment/419.jpg",
-                "caption": "Save Geofence",
-                "step": 4
-              },
-              {
-                "src": "assets/guides/equipment/420.jpg",
-                "caption": "New geofence in the Geofencing table",
-                "step": 4
-              },
-              {
-                "src": "assets/guides/equipment/421.jpg",
-                "caption": "Active toggle",
-                "step": 4
-              }
-            ]
-          },
-          {
-            "title": "Find a piece of equipment on the Fleet Map",
-            "steps": [
-              "Open <strong>Overview → Fleet Map</strong>.",
-              "Click <strong>Filters</strong> and search by Equipment ID, description or device serial number, or set the map and equipment filters.",
-              "Zoom in past the clusters and click the blue marker."
-            ],
-            "note": "A piece of equipment shows only if a telematics device is mapped to it.",
-            "images": [
-              {
-                "src": "assets/guides/equipment/426.jpg",
-                "caption": "Fleet Map under Overview",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/427.jpg",
-                "caption": "Map and Satellite views",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/428.jpg",
-                "caption": "Map controls",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/433.jpg",
-                "caption": "Filters on the Fleet Map",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/434.jpg",
-                "caption": "Telematics device serial number search",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/435.jpg",
-                "caption": "Not reported in the last 72 hours filter",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/436.jpg",
-                "caption": "Equipment model filter",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/437.jpg",
-                "caption": "Save Filters",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/429.jpg",
-                "caption": "Active geofences highlighted in yellow",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/equipment/430.jpg",
-                "caption": "Clusters of telematics devices",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/equipment/431.jpg",
-                "caption": "Individual equipment markers",
-                "step": 3
-              }
-            ]
-          },
-          {
-            "title": "Import a geofence boundary from a KML file",
-            "steps": [
-              "Open <strong>Overview → Geofencing</strong> and click <strong>Add Location</strong>.",
-              "Enter the location details and choose the Inventory or Project location.",
-              "Click <strong>Upload KML</strong> and select the file.",
-              "Click <strong>Save Geofence</strong> and switch <strong>Active</strong> on."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/equipment/422.jpg",
-                "caption": "Upload KML for an existing boundary",
-                "step": 3
-              }
-            ]
-          },
-          {
-            "title": "Bulk upload or filter geofences",
-            "steps": [
-              "On the Geofencing tab, click <strong>Export → Upload Excel</strong>, then <strong>Sample Excel</strong>, fill in the template and upload it. <strong>Download Excel</strong> exports the current geofences.",
-              "Click <strong>Filters</strong> and choose Name, Code, City, State, Country, Pincode or Active / Inactive, then click <strong>Submit</strong> (or <strong>Clear</strong>).",
-              "Use <strong>Manage Columns</strong> to choose and arrange columns."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/equipment/423.jpg",
-                "caption": "Upload Excel and Sample Excel for geofences",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/424.jpg",
-                "caption": "Sample geofence Excel template",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/425.jpg",
-                "caption": "Download Excel for geofences",
-                "step": 1
-              }
-            ]
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/guides/equipment/432.jpg",
-            "caption": "Street View with the Pegman icon"
-          }
-        ]
-      },
-      {
-        "heading": "Log Daily Equipment Utilization (Add Utilization Log and Auto Log Utilization)",
+        "heading": "Add Utilization Log",
         "intro": "<p>Use the Utilization screens to record how many hours each piece of equipment worked, sat idle and could be billed on a project each day. Field users and equipment coordinators fill in the daily log and submit it for approval; **Auto Log Utilization** fills hours for a date range for you. Your company may see **Asset** instead of **Equipment** (**Global Data → Settings → Naming Framework**).</p>",
         "definitions": [
           {
@@ -20330,7 +20349,7 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Review Utilization: Logs, Summary and Issues",
+        "heading": "Utilization Logs",
         "intro": "<p>Use **Utilization Logs**, **Utilization Summary** and **Issues** to review what was logged, total it by project and date, and follow up on logs with approval problems. Equipment managers and project managers use them after field users submit their daily logs.</p>",
         "definitions": [
           {
@@ -20444,7 +20463,7 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Equipment Issues (Inspection Checklists Issues)",
+        "heading": "Equipment Issues",
         "intro": "<p>A failed safety check on a crane or a hydraulic leak on an excavator cannot be allowed to fade into an informal conversation between a foreman and a mechanic — it needs an owner, a due date, and a paper trail that a Fleet Manager or Safety lead can audit later. Equipment Issues gives that structure to the whole company: <strong>End Users</strong> (field crews, mechanics) raise or resolve issues day to day, while a <strong>Fleet/Equipment Module Manager</strong> monitors the header counters to spot problem equipment before it becomes a bigger failure.</p><p>Equipment Issues is the central log for problems raised against equipment — most commonly generated automatically when a trigger-point check fails during a maintenance form, a field inspection, or an allocation inspection. Rather than a problem getting noted informally and potentially forgotten, Arena routes it into a single, trackable record with an owner, a due date, and a defined resolution path.</p>\n    <p>The screen defaults to a table view (a card/grid view toggle is also available) and is built around a simple lifecycle: an issue is raised, optionally discussed via Chat, and eventually marked Rectified once the underlying problem is fixed. For issues that require more formal remediation — labor, cost, parts — a Work Order can be spun up directly from the toolbar's Create Work Order button, connecting equipment problem-tracking to the broader work-order/cost-tracking machinery elsewhere in Arena.</p>\n    <p>Equipment Issues is closely related to, but distinct from, Non Conformance Reports, covered in the next section. Both share the same UI patterns (table/card views, Rectify, Chat, Assign To/Due Date, Create Work Order, header counters), but they differ in how they originate: Equipment Issues are almost always system-raised from a failed check, while NCRs are manually created to formally document a non-conformance event.</p>",
         "definitions": [
           {
@@ -20530,7 +20549,7 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Schedule Preventive Maintenance",
+        "heading": "Preventive Maintenance",
         "intro": "<p>Use **Preventive Maintenance** to schedule preventive maintenance (PM) for equipment and see when each one is next due. Equipment and maintenance managers use it to keep PM on time; the trigger can be a calendar interval, running hours or distance.</p>",
         "definitions": [
           {
@@ -20564,7 +20583,7 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Manage the Parts Catalogue (Parts PO)",
+        "heading": "Parts PO",
         "intro": "<p>Use **Parts PO** to keep the catalogue of spare parts used for equipment maintenance and see what is in stock. Maintenance and store teams use it when they plan repairs.</p>",
         "definitions": [
           {
@@ -20579,7 +20598,7 @@ const MODULES = [
         "procedures": []
       },
       {
-        "heading": "See Maintenance on the Maintenance Calendar",
+        "heading": "Maintenance Calendar",
         "intro": "<p>Use the **Maintenance Calendar** to see scheduled maintenance by day across a month. Maintenance planners and field crews use it to see what is ready, in progress or done.</p>",
         "definitions": [
           {
@@ -20598,22 +20617,7 @@ const MODULES = [
         "procedures": []
       },
       {
-        "heading": "Configure Maintenance: PM Intervals and Work Order Types",
-        "intro": "<p>Use **Maintenance Config** to set how often each category of equipment is serviced and which work order types are used for maintenance. Equipment Management administrators set it once; **Preventive Maintenance** then uses it.</p>",
-        "definitions": [
-          {
-            "term": "PM Interval Configuration",
-            "definition": "From **Home**, open **Equipment Management → Settings → Maintenance Config**. The **PM Interval Configuration** list has **Category**, **Interval**, **Type**, **Hours Threshold** and **Check List**."
-          },
-          {
-            "term": "Work Order Types",
-            "definition": "The same **Maintenance Config** screen has **Work Order Types**, the types of work order used for maintenance work."
-          }
-        ],
-        "procedures": []
-      },
-      {
-        "heading": "Run Equipment Reports",
+        "heading": "Reports",
         "intro": "<p>Use **Reports** to see equipment utilization, service, compliance, hauling, rental and billing figures in one place. Equipment managers and finance staff open it. Your company may see **Asset** instead of **Equipment** (**Global Data → Settings → Naming Framework**).</p>",
         "definitions": [
           {
@@ -20643,25 +20647,6 @@ const MODULES = [
           {
             "term": "Equipment Billing Worksheet",
             "definition": "A worksheet for equipment billing. Billing rules are set in **Settings → Billing Rules**."
-          }
-        ],
-        "procedures": []
-      },
-      {
-        "heading": "3rd Party Rental and External Hauling Lists",
-        "intro": "<p>Use **3rd Party Rental** and **External Hauling** to see equipment you rent in from vendors and hauls done by outside companies. Equipment coordinators and cost controllers use these lists to track dates, rates and costs. Your company may see **Asset** instead of **Equipment** (**Global Data → Settings → Naming Framework**).</p>",
-        "definitions": [
-          {
-            "term": "3rd Party Rental",
-            "definition": "From **Home**, open **Equipment Management → Equipment → 3rd Party Rental**. The list of rented-in equipment shows **REQ ID**, **PO ID**, **Vendor**, **Delivered Date**, **Length of Rent**, **Days in Rent**, **Billing Rule**, **Hourly Rate**, **Daily Rate**, **Weekly Rate**, **Monthly Rate**, **Freight Cost**, **PO Value**, **Total Cost YTD** and **Phase Codes**."
-          },
-          {
-            "term": "External Hauling",
-            "definition": "From **Home**, open **Equipment Management → Hauling → External Hauling**. The list shows **Allocation Id**, **REQ ID**, **PO ID**, **Vendor**, **Cost**, **Price**, **Escort Cost**, **Permit Cost**, **Service Company**, **Service Type**, **Pick Up Address**, **Dimensions**, **Weight**, **Received By**, **Delivered Date** and **Stage**."
-          },
-          {
-            "term": "Where this data goes",
-            "definition": "The **3rd Party Rental Activity & Spend Report** and **Hauling Cost Log** are in **Reports**. The **Billing Rule** column follows **Settings → Billing Rules**."
           }
         ],
         "procedures": []
@@ -20729,7 +20714,7 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Configure Equipment Management Forms & Global Setup",
+        "heading": "Equipment Forms",
         "intro": "<p>This section covers the form builders in the module <strong>Settings</strong> (breadcrumb Equipment Forms): the <strong>Inspection Checklist</strong>, the maintenance and utilization forms, and, on earlier-version environments, the Load Out Request stage forms. It also covers <strong>Adobe Acrobat Sign</strong>, set up once in Global Data to sign Rentals lease agreements.</p><p>An Equipment Management Admin or a Maintenance / Fleet Module Manager builds these once, and every inspection and maintenance form downstream depends on them.</p>",
         "definitions": [
           {
@@ -20804,7 +20789,22 @@ const MODULES = [
         ]
       },
       {
-        "heading": "More Equipment Settings: Billing Rules, Disposal Methods, Thresholds and Status",
+        "heading": "Maintenance Config",
+        "intro": "<p>Use **Maintenance Config** to set how often each category of equipment is serviced and which work order types are used for maintenance. Equipment Management administrators set it once; **Preventive Maintenance** then uses it.</p>",
+        "definitions": [
+          {
+            "term": "PM Interval Configuration",
+            "definition": "From **Home**, open **Equipment Management → Settings → Maintenance Config**. The **PM Interval Configuration** list has **Category**, **Interval**, **Type**, **Hours Threshold** and **Check List**."
+          },
+          {
+            "term": "Work Order Types",
+            "definition": "The same **Maintenance Config** screen has **Work Order Types**, the types of work order used for maintenance work."
+          }
+        ],
+        "procedures": []
+      },
+      {
+        "heading": "More Settings",
         "intro": "<p>These **Settings** pages hold company rules for equipment billing, disposal, reminders and status. Equipment Management administrators set them once; they apply to everyone using the module. Your company may see **Asset** instead of **Equipment** (**Global Data → Settings → Naming Framework**).</p>",
         "definitions": [
           {
@@ -20835,8 +20835,8 @@ const MODULES = [
         "procedures": []
       },
       {
-        "heading": "Earlier Version: Load Out Request",
-        "intro": "<p>Some environments running an earlier version of Equipment Management move equipment through a <strong>Load Out Request</strong> tab instead of the Operations board and Hauling. This short note describes it. New setups should use Request Creation, Allocation and Company Logistics above.</p>",
+        "heading": "Earlier Version Load Out",
+        "intro": "<p>Some environments running an earlier version of Equipment Management move equipment through a <strong>Load Out Request</strong> tab instead of the Operations board and Hauling. This short note describes it. New setups should use Requests, Allocation and Hauling above.</p>",
         "definitions": [
           {
             "term": "Earlier Load Out Request flow",
@@ -20854,7 +20854,7 @@ const MODULES = [
         "procedures": []
       },
       {
-        "heading": "Troubleshooting: Equipment Management Problems",
+        "heading": "Troubleshooting",
         "intro": "<p>Use this page when an Equipment Management step does not work as expected. Most problems trace back to master data, a setting, or an open inspection issue. Steps about master data, profiles, telematics, geofences, hauling and the Allocation Lifecycle follow the company's Arena 2.0 guides and are labelled as such.</p>",
         "definitions": [],
         "procedures": [
@@ -20991,31 +20991,31 @@ const MODULES = [
       "<strong>Settings</strong> also holds <strong>Maintenance Config</strong>, <strong>Billing Rules</strong>, <strong>Disposal Methods</strong>, <strong>Notification Thresholds</strong> and <strong>Equipment Due Assignment Days</strong>. Your company may see <strong>Asset</strong> instead of <strong>Equipment</strong> (<strong>Global Data → Settings → Naming Framework</strong>)."
     ],
     "sections": [
-      "Who Does What in Equipment Management",
-      "Master Data: Cost Codes, Categories and Equipment Setup",
-      "Equipment Master and Accessory Master",
-      "Equipment and Accessory Profile",
-      "Request Creation",
-      "Allocation: Internal Self-Pickup to Off-Rent",
-      "Company Logistics with Hauling",
-      "Telematics: Device Mapping and Live Data",
-      "Geofencing and Fleet Map",
-      "Log Daily Equipment Utilization (Add Utilization Log and Auto Log Utilization)",
-      "Review Utilization: Logs, Summary and Issues",
+      "Overview",
+      "Fleet Map",
+      "Equipment Master",
+      "Equipment Profile",
+      "Master Data",
+      "3rd Party Rental",
+      "Telematics",
+      "Requests",
+      "Allocation",
+      "Hauling",
+      "Add Utilization Log",
+      "Utilization Logs",
       "Field Inspections",
-      "Equipment Issues (Inspection Checklists Issues)",
+      "Equipment Issues",
       "Non Conformance Report",
-      "Schedule Preventive Maintenance",
-      "Manage the Parts Catalogue (Parts PO)",
-      "See Maintenance on the Maintenance Calendar",
-      "Configure Maintenance: PM Intervals and Work Order Types",
-      "Run Equipment Reports",
-      "3rd Party Rental and External Hauling Lists",
+      "Preventive Maintenance",
+      "Parts PO",
+      "Maintenance Calendar",
+      "Reports",
       "Equipment Setup",
-      "Configure Equipment Management Forms & Global Setup",
-      "More Equipment Settings: Billing Rules, Disposal Methods, Thresholds and Status",
-      "Earlier Version: Load Out Request",
-      "Troubleshooting: Equipment Management Problems"
+      "Equipment Forms",
+      "Maintenance Config",
+      "More Settings",
+      "Earlier Version Load Out",
+      "Troubleshooting"
     ]
   },
   {
@@ -28223,7 +28223,7 @@ const MODULES = [
     "qaItems": QA_COSTTRACKING,
     "narrative": [
       {
-        "heading": "Who sets this up",
+        "heading": "Overview",
         "intro": "<p>Cost Tracking is read-only and used by executives, finance and project controls to compare estimated and actual cost. The numbers come from <strong>project estimates</strong> and <strong>field cost logs</strong>, so the people who feed it are the project teams.</p><p>Open it from the <strong>Cost Tracking</strong> tile on <strong>Home</strong>. There are no settings inside the module; the settings that change its numbers are in <strong>Project Settings</strong> and <strong>Global Data</strong>.</p>",
         "definitions": [
           {
@@ -28362,7 +28362,7 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Where the Estimate Side Comes From",
+        "heading": "Estimate",
         "intro": "<p>The estimated cost on every screen is the <strong>approved estimate</strong> of each project, built by the PM in <strong>Project Setup > Estimate</strong>. If a project shows ₹0 estimate in Cost Tracking, it has no approved estimate lines.</p><p>An estimate is created per tree version, so a project can have several estimates; only those with amounts add to the totals.</p>",
         "definitions": [
           {
@@ -28464,7 +28464,7 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Where Actual Costs Come From",
+        "heading": "Actual Costs",
         "intro": "<p>Actual cost comes from the cost logs entered in <strong>Field Works > Tree Version > Cost</strong>, by field users and approved by the approvers. Cost Tracking totals them against the estimate lines.</p><p>The Cost tab has four cards: <strong>Transaction</strong>, <strong>Change order</strong>, <strong>Transfer</strong> and <strong>Field Logs</strong>.</p>",
         "definitions": [
           {
@@ -28507,7 +28507,7 @@ const MODULES = [
         ]
       },
       {
-        "heading": "How Phase Codes and Cost Types Roll Up",
+        "heading": "Phase Codes",
         "intro": "<p>Cost is built bottom-up: each estimate line has a phase code and a cost type, and the screens add them up along these two lines. Project controls use this to find which phase code or cost item is over plan.</p><p>Cost Tracking itself shows the cost-type roll-up; the phase-code view is in the project's own analytics.</p>",
         "definitions": [
           {
@@ -28566,7 +28566,7 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Checking the Numbers and Why a Cost Shows Zero",
+        "heading": "Troubleshooting",
         "intro": "<p>Use this section when a project shows ₹0 or a total does not match, for example during a monthly cost review. Each check points to the source screen to fix.</p><p>Everything below was checked by comparing figures across screens.</p>",
         "definitions": [
           {
@@ -28611,14 +28611,14 @@ const MODULES = [
       "Use the links <strong>Cost Control Dashboard</strong>, <strong>Cost by Projects</strong> and <strong>Cost by Cost Types</strong> at the top to switch screens."
     ],
     "sections": [
-      "Who sets this up",
+      "Overview",
       "Cost Control Dashboard",
       "Cost by Projects",
       "Cost by Cost Types",
-      "Where the Estimate Side Comes From",
-      "Where Actual Costs Come From",
-      "How Phase Codes and Cost Types Roll Up",
-      "Checking the Numbers and Why a Cost Shows Zero"
+      "Estimate",
+      "Actual Costs",
+      "Phase Codes",
+      "Troubleshooting"
     ]
   },
   {
@@ -29018,7 +29018,7 @@ const MODULES = [
     "qaItems": QA_WORKORDER,
     "narrative": [
       {
-        "heading": "Who Does What",
+        "heading": "Overview",
         "intro": "<p>This section is for the Work Order Administrator (usually a System Administrator or Equipment Admin), who decides which work order types exist, which tabs each type shows and who can use the module, and for everyone else who wants to know their part in the flow. Do the one-time setup before requesters start raising work orders.</p><p>Six roles share the work: the administrator, the Requester (site engineer or equipment coordinator), the Approver (maintenance manager or business unit head), the Technician / Supervisor, the Store and Procurement user and the Accounts user. A work order is raised against a piece of equipment, so the equipment must already exist in Equipment Management with a valid status.</p>",
         "definitions": [
           {
@@ -29091,6 +29091,1253 @@ const MODULES = [
               "Add user groups under <strong>Users and Permissions</strong> with the permissions each role needs."
             ],
             "note": "Do this before requesters start raising work orders. The ID format cannot be changed once a work order exists."
+          }
+        ]
+      },
+      {
+        "heading": "Work Orders",
+        "intro": "<p>The <strong>Work Orders</strong> list is where every user of the module finds, filters, creates and exports work orders. Requesters click <strong>Create</strong> to raise work against equipment, and everyone else opens a work order from the list.</p><p>The Work Order page has three tabs, <strong>Work Orders</strong>, <strong>Workflow Issues</strong> and <strong>Reports</strong>, plus <strong>Settings</strong> on the right.</p>",
+        "definitions":[
+          {
+            "term": "Work Order",
+            "definition": "The record of one job of work on equipment. It is created from a work order type, routed through approval, and worked through its own tabs (Profile, Items, Team, Timesheets and the rest)."
+          },
+          {
+            "term": "Work Order Type",
+            "definition": "The setting that decides which tabs, forms and ID format a work order uses. Choose it in the Create Work Order Contract window. Equipment is the default type."
+          },
+          {
+            "term": "Work Orders list",
+            "definition": "Lists every work order with its **ID**, **Description**, **Status**, **Type**, **Project**, **Created Date**, **Created By** and **Equipment**. Use **Search by ID**, **Filters** (Work Order Status, Created By, Equipment Number, Equipment Status, Maintenance Type, Operational Status, Location, Service Type, Priority, Business Unit), **Manage Columns**, the list, grid and column view icons, and **Export**."
+          },
+          {
+            "term": "Workflow Issues (work orders)",
+            "definition": "Work orders that failed to move through the approval workflow are listed here with the remarks the approver recorded. A rejected work order goes back to the requester from here."
+          },
+          {
+            "term": "Tabs of a work order and who uses them",
+            "definition": "The tabs you see depend on the Tab Visibility set for the type. (1) **Items**: Requester or Technician, the jobs to do. (2) **Team**: Supervisor, the users and crews. (3) **Timesheets**: Technician or Supervisor, labour hours. (4) **Equipment**: Technician, equipment and accessories requested for the work. (5) **Inventory**: Store Keeper, material orders. (6) **Procurement**: Purchase Executive, requisitions. (7) **Expense**: Technician or Accounts, extra spend with the bill. (8) **Schedule**: Supervisor, planned activities and progress. (9) **Communication**: everyone, mail. (10) **Documents**: everyone, files by folder. (11) **Drawings**: Technician, drawings used. (12) **Parts**: Technician, parts required. (13) **Invoices**: Accounts or Approver, vendor invoices. (14) **Cost**: Approver or Administrator, category-wise cost. **Profile** is always first."
+          },
+          {
+            "term": "Create Work Order Contract fields",
+            "definition": "Work Order Type (required), WO Description, Location (where the work is done), Work Order Status (the status it starts with), Create By (Inspection Issue or Equipment), Equipment Issue Linked (only for Inspection Issue, required there), Equipment (required; from the linked issue or the dropdown), Maintenance Type, Business Unit, Project and Phase Code (where cost is booked), Created Date (required), Notes (required), Priority (its Due Hours apply), Equipment Status (read-only, from the equipment record), Operational Status, Due Date, Service Location (required: Internal (Shop / In-House) or External Vendor), Technician (internal path), and Vendor, Vendor Contact and Vendor PO Number (external path). Fields shown follow the type's configuration."
+          },
+          {
+            "term": "Work order roles at a glance",
+            "definition": "The Requester creates and assigns; the Approver approves; the Technician and Supervisor execute; the Store Keeper and Purchase Executive supply materials and parts; the Accounts user handles invoices; the Administrator configures. Each role sees only the actions its permissions allow."
+          },
+          {
+            "term": "Work Orders list: views, more columns and row actions",
+            "definition": "Click **Create** to raise a work order. The list can be shown as a table, grid or week view, and **Manage Columns** adds more columns such as **Equipment Issue Linked**, **Maintenance Type**, **Complaint**, **Cause**, **Correction** and **Vendor PO Number**. Each row has the actions **History**, which shows the work order history, and **Delete**."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Open an existing work order",
+            "steps": [
+              "On the <strong>Work Orders</strong> tab, click the work order you want to open. It opens on the <strong>Profile</strong> tab."
+            ],
+            "note": "Use the list, grid and column view icons on the right to change how the list looks."
+          },
+          {
+            "title": "Raise a work order against equipment",
+            "steps": [
+              "On the <strong>Work Orders</strong> tab, click <strong>Create</strong>.",
+              "Pick the <strong>Work Order Type</strong>, for example Equipment. The window shows the fields set up for that type.",
+              "Enter the <strong>WO Description</strong> and <strong>Work Order Status</strong>.",
+              "Choose <strong>Create By</strong>. Pick <strong>Inspection Issue</strong> for work that came out of an inspection, then choose the <strong>Equipment Issue Linked</strong>, and the equipment fills in from the issue. Pick <strong>Equipment</strong> to choose the equipment directly.",
+              "Choose the <strong>Maintenance Type</strong>, and the <strong>Business Unit</strong>, <strong>Project</strong>, <strong>Phase Code</strong>, <strong>Created Date</strong> and <strong>Notes</strong> the work is booked against.",
+              "Under Priority, set the <strong>Priority</strong>, <strong>Operational Status</strong> and <strong>Due Date</strong>. <strong>Equipment Status</strong> comes from the equipment record and cannot be edited.",
+              "Under Service Assignment, choose the <strong>Service Location</strong>. For <strong>Internal (Shop / In-House)</strong> pick the <strong>Technician</strong>. For <strong>External Vendor</strong> pick the <strong>Vendor</strong> and <strong>Vendor Contact</strong> and enter the <strong>Vendor PO Number</strong> (use <strong>Add Vendor</strong> or <strong>Add Contact</strong> if they are not listed).",
+              "Click <strong>Submit</strong>."
+            ],
+            "note": "The work order gets an ID in the format set under ID Settings. Work Order Type, Equipment, Created Date and Notes are always required. Equipment Issue Linked is required on the Inspection Issue path, Technician on the internal path and Vendor on the external path. Some environments running an earlier version show a simpler screen here, so a field or page described in this guide may be missing.",
+            "images": [
+              {
+                "src": "assets/guides/work-order/077.jpg",
+                "caption": "Create button on the Work Orders tab",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/work-order/078.jpg",
+                "caption": "Create Work Order Contract window with Work Order Type",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/work-order/079.jpg",
+                "caption": "WO Description and Work Order Status",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/work-order/080.jpg",
+                "caption": "Create By options, Inspection Issue or Equipment",
+                "step": 4
+              },
+              {
+                "src": "assets/guides/work-order/081.jpg",
+                "caption": "Equipment Issue Linked for an Inspection Issue work order",
+                "step": 4
+              },
+              {
+                "src": "assets/guides/work-order/082.jpg",
+                "caption": "Equipment dropdown for work raised against equipment",
+                "step": 4
+              },
+              {
+                "src": "assets/guides/work-order/083.jpg",
+                "caption": "Maintenance Type, Business Unit, Project and Phase Code",
+                "step": 5
+              },
+              {
+                "src": "assets/guides/work-order/084.jpg",
+                "caption": "Priority, Operational Status and Due Date",
+                "step": 6
+              },
+              {
+                "src": "assets/guides/work-order/085.jpg",
+                "caption": "Service Location options",
+                "step": 7
+              },
+              {
+                "src": "assets/guides/work-order/086.jpg",
+                "caption": "Technician for an internal work order",
+                "step": 7
+              },
+              {
+                "src": "assets/guides/work-order/087.jpg",
+                "caption": "Vendor, Vendor Contact and Vendor PO Number",
+                "step": 7
+              },
+              {
+                "src": "assets/guides/work-order/088.jpg",
+                "caption": "Submit on the Create Work Order Contract window",
+                "step": 7
+              }
+            ]
+          },
+          {
+            "title": "Filter, export or customise the work order list",
+            "steps": [
+              "Click <strong>Filters</strong> and choose the values to narrow the list.",
+              "Click <strong>Manage Columns</strong>, choose and arrange the columns, then click <strong>Apply</strong>.",
+              "Use the view icons on the right to switch between list, grid and column views.",
+              "Click <strong>Export</strong> to download the list."
+            ],
+            "images": [
+              {
+                "src": "assets/guides/work-order/069.jpg",
+                "caption": "Filters button on the Work Orders tab",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/work-order/070.jpg",
+                "caption": "Work order filter options",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/work-order/071.jpg",
+                "caption": "Manage Columns button",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/work-order/072.jpg",
+                "caption": "Column selection and arrangement with Apply",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/work-order/073.jpg",
+                "caption": "List, grid and column view icons",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/work-order/074.jpg",
+                "caption": "Export button on the Work Orders tab",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/work-order/075.jpg",
+                "caption": "Record count and page arrows on the list",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/work-order/076.jpg",
+                "caption": "Workflow Issues tab",
+                "step": 4
+              }
+            ]
+          },
+          {
+            "title": "Find a work order",
+            "steps": [
+              "Open <strong>Home → Work Order</strong> and stay on the <strong>Work Orders</strong> tab.",
+              "Type in <strong>Search by ID</strong>, or click <strong>Filters</strong> and choose values such as Work Order Status, Equipment Number, Maintenance Type, Priority or Business Unit.",
+              "Click the work order to open it on the <strong>Profile</strong> tab."
+            ],
+            "images": [
+              {
+                "src": "assets/guides/work-order/065.jpg",
+                "caption": "Work Order page with its tabs and Settings",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/work-order/066.jpg",
+                "caption": "Work Order page tabs",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/work-order/067.jpg",
+                "caption": "Work Orders tab listing all work orders",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/work-order/068.jpg",
+                "caption": "Search by ID on the Work Orders tab",
+                "step": 2
+              }
+            ]
+          },
+          {
+            "title": "Review work orders that failed approval",
+            "steps": [
+              "Open the <strong>Workflow Issues</strong> tab on the Work Order page.",
+              "Find the work order and read the remarks the approver entered.",
+              "Open the work order, correct it and resubmit it."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Profile",
+        "intro": "<p>The <strong>Profile</strong> tab is the front page of a work order. Requesters record what is wrong and how urgent it is, Technicians record the diagnosis, and the same tab holds the items of work. It is always on and cannot be switched off.</p><p>The tab has four sections: <strong>Basic Information</strong>, <strong>Priority</strong>, <strong>Service Assignment</strong> and <strong>Diagnosis</strong>. The fields you see depend on how the administrator set up the work order type.</p>",
+        "definitions": [
+          {
+            "term": "Where this data comes from (work order lists)",
+            "definition": "**Work Order Type**, its **Status**, **Priority** (with Due Hours and order), **Maintenance Type**, ID format and tabs come from **Settings → Work Orders** for that type. **Technician**, **Assign To** and **Approver** list only users added under **Settings → Users and Permissions** with the matching permission. **Equipment** and its status, hours reading and location are fetched from the Equipment Master (the **Assigned location** follows the equipment location) and cannot be edited here. **Business Unit, Project and Phase Code** are the cost details the work is booked against; timesheet Phase Codes must be set up under **Projects → Project Setup → Phase Codes**. **Vendor** and **Vendor Contact** can be added from the field with **Add Vendor** and **Add Contact**. Crew time can be booked only for users added on the **Team** tab. Part details, including Unit Cost, come from **Equipment Management → Maintenance → Parts PO**. Where it goes: hours go to **Labor**, inventory materials to **Parts**, expenses to **Other**, and approved vendor invoices to the **Cost** tab, which fills automatically. An approved work order updates the equipment status and is added to the equipment's maintenance history. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
+          },
+          {
+            "term": "Work Order Profile",
+            "definition": "The tab where a work order's profile details are recorded, using the form set up under **Settings → Work Order Types → Profile** for the work order's type. The Items tab holds its items of work."
+          },
+          {
+            "term": "Work Order Item",
+            "definition": "A unit of scope within a work order. A work order can contain multiple items, and each item can be linked to a project tree or to one or more issues."
+          },
+          {
+            "term": "Basic Information",
+            "definition": "The core of the work order: **WO ID** (automatic), **WO Description**, **Work Order Type**, **Work Order Status**, **Equipment** (with its warranty expiration, hours reading, location and current status shown below it), **Assigned location** (filled from the equipment), **Maintenance Type**, **Business Unit**, **Project**, **Phase Code**, **Created Date**, **Created By** (automatic) and **Notes**. Click the equipment link to open its profile in Equipment Management."
+          },
+          {
+            "term": "Priority section",
+            "definition": "Holds **Priority** (the Due Hours of the chosen level apply), **Equipment Status** (fetched from the equipment, not editable), **Operational Status** and **Due Date**. The operational status updates the equipment record when you submit and shows in the Equipment Breakdown Report."
+          },
+          {
+            "term": "Service Assignment",
+            "definition": "Records who does the work. **Service Location** is required. **Internal (Shop / In-House)** shows **Technician**, and only users added under Users and Permissions with the right permission are listed. **External Vendor** shows **Vendor**, **Vendor Contact** and **Vendor PO Number**. These four fields become part of the equipment's maintenance record."
+          },
+          {
+            "term": "Diagnosis: Complaint, Cause and Correction",
+            "definition": "Three rich-text boxes. **Complaint** is the problem as reported, entered by the Requester when the work order is raised. **Cause** is the reason, entered by the Technician after examining the equipment. **Correction** is the work done, including parts replaced and adjustments, entered by the Technician before the work order is closed. The toolbar gives bold, italics, underline, strikethrough, headings, lists and links."
+          },
+          {
+            "term": "Assign To and Submit",
+            "definition": "At the bottom of the Profile, pick a user in **Assign To**, then click **Submit** to save and assign, or **Submit for Approval** to send it through the approval workflow. The Equipment Status changes only after you submit."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Add an item to a work order",
+            "steps": [
+              "Open the work order's <strong>Profile</strong> tab.",
+              "Click <strong>Create Item</strong>."
+            ],
+            "note": "You can create multiple items inside one work order, and each can be connected to a Project tree or to Issues."
+          },
+          {
+            "title": "Link a work order item to a project tree",
+            "steps": [
+              "In Work Order - Profile, when linking an item to a tree, select the Project.",
+              "Select its tree version.",
+              "Continue through the remaining tree selections."
+            ]
+          },
+          {
+            "title": "Link issues to a work order item",
+            "steps": [
+              "In Work Order - Profile, when linking with Issues, select the Issue type from the dropdown to see the detailed list of issues.",
+              "Select one or multiple issues to link to the item."
+            ]
+          },
+          {
+            "title": "Record the diagnosis on a work order",
+            "steps": [
+              "Open the work order from the <strong>Work Orders</strong> tab. It opens on the <strong>Profile</strong> tab.",
+              "Under <strong>Diagnosis</strong>, the Requester enters the <strong>Complaint</strong>.",
+              "After examining the equipment, the Technician enters the <strong>Cause</strong>.",
+              "As the work proceeds, the Technician enters the <strong>Correction</strong>.",
+              "Pick a user in <strong>Assign To</strong> and click <strong>Submit</strong>, or click <strong>Submit for Approval</strong>."
+            ],
+            "images": [
+              {
+                "src": "assets/guides/work-order/093.jpg",
+                "caption": "Diagnosis section with Complaint, Cause and Correction",
+                "step": 3
+              }
+            ]
+          },
+          {
+            "title": "Create an item and set its status",
+            "steps": [
+              "Open the <strong>Items</strong> tab and click <strong>Create Items</strong> in the left panel.",
+              "Enter the item <strong>name</strong> and <strong>Description</strong>, then click <strong>Submit</strong>.",
+              "Fill in the item form your administrator set up for the work order type.",
+              "Choose the <strong>Item Status</strong> from the dropdown, then click <strong>Submit</strong>."
+            ],
+            "images": [
+              {
+                "src": "assets/guides/work-order/099.jpg",
+                "caption": "Items tab of a work order",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/work-order/100.jpg",
+                "caption": "Create Items in the left panel",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/work-order/101.jpg",
+                "caption": "Item name and Description",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/work-order/102.jpg",
+                "caption": "Item form for the work order type",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/work-order/103.jpg",
+                "caption": "Item Status dropdown",
+                "step": 4
+              },
+              {
+                "src": "assets/guides/work-order/104.jpg",
+                "caption": "Submit on the item",
+                "step": 4
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/guides/work-order/089.jpg",
+            "caption": "Work order Profile tab with the WO ID"
+          },
+          {
+            "src": "assets/guides/work-order/090.jpg",
+            "caption": "Profile tab sections"
+          },
+          {
+            "src": "assets/guides/work-order/091.jpg",
+            "caption": "Basic Information fields"
+          },
+          {
+            "src": "assets/guides/work-order/092.jpg",
+            "caption": "Notes field on the Profile"
+          },
+          {
+            "src": "assets/guides/work-order/094.jpg",
+            "caption": "Priority section on the Profile"
+          },
+          {
+            "src": "assets/guides/work-order/095.jpg",
+            "caption": "Service Assignment section"
+          },
+          {
+            "src": "assets/guides/work-order/096.jpg",
+            "caption": "Vendor fields in Service Assignment"
+          },
+          {
+            "src": "assets/guides/work-order/097.jpg",
+            "caption": "Vendor PO Number field"
+          },
+          {
+            "src": "assets/guides/work-order/098.jpg",
+            "caption": "Assign To and Submit at the bottom of the Profile"
+          }
+        ]
+      },
+      {
+        "heading": "Team",
+        "intro": "<p>The <strong>Team</strong> tab lists the users and crews working on a work order. A Supervisor or PM adds them, and only people added here can book time to the work order through <strong>My Crew Timesheet</strong>.</p>",
+        "definitions": [
+          {
+            "term": "Work Order Team",
+            "definition": "The set of users and/or crews assigned to a work order, managed via the Users and Crews tabs on the Team screen."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Add users to a work order's team",
+            "steps": [
+              "Go to <strong>Work Order &gt; Team</strong>.",
+              "Select the <strong>Users</strong> tab at the top.",
+              "Multi-select the users you want to add.",
+              "Click <strong>Submit</strong>."
+            ],
+            "images": [
+              {
+                "src": "assets/guides/work-order/105.jpg",
+                "caption": "Team tab listing users with role and craft",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/work-order/106.jpg",
+                "caption": "Users and Crews tabs on the Team tab",
+                "step": 4
+              }
+            ]
+          },
+          {
+            "title": "Add a crew to a work order",
+            "steps": [
+              "Go to <strong>Work Order &gt; Team</strong>.",
+              "Select the <strong>Crews</strong> tab at the top.",
+              "Multi-select from the crews already created in Global Data.",
+              "Click <strong>Submit</strong>."
+            ],
+            "images": [
+              {
+                "src": "assets/guides/work-order/107.jpg",
+                "caption": "Selecting users to add to the team",
+                "step": 4
+              },
+              {
+                "src": "assets/guides/work-order/108.jpg",
+                "caption": "Submit on the Team tab",
+                "step": 4
+              }
+            ]
+          },
+          {
+            "title": "Book time for a crew member",
+            "steps": [
+              "Add the person or crew on the <strong>Team</strong> tab first.",
+              "Open <strong>Timesheets → My Crew Timesheet</strong> and book the time there."
+            ],
+            "note": "A person who is not on the Team tab cannot have time booked to the work order through My Crew Timesheet."
+          }
+        ]
+      },
+      {
+        "heading": "Timesheets",
+        "intro": "<p>The <strong>Timesheets</strong> tab is where Technicians and Supervisors book labour hours against a work order, and where approvers approve them. The hours feed the <strong>Labor</strong> line on the <strong>Cost</strong> tab.</p><p>It has four sub-tabs: <strong>Timesheet Summary</strong>, <strong>My Crew Timesheet</strong>, <strong>My Timesheet</strong> and <strong>Timesheet Logs</strong>. The timesheet layout follows the Timesheet Template you choose.</p>",
+        "definitions": [
+          {
+            "term": "Work Order Timesheet",
+            "definition": "The tab within a work order used to manage crew and vendor timesheet entries specific to that work order."
+          },
+          {
+            "term": "Timesheet Summary",
+            "definition": "Shows **Total Hours** and **Total Labor Cost** for the work order, with a row per entry: **Date**, **Roster**, **Projects / Work Order / GL Code**, **Phase Code**, **Earnings Code**, **Hours**, **Rate** and **Total**. The total labor cost is the value on the **Labor** line of the Cost tab. Some environments running an earlier version label this sub-tab **Dashboard**."
+          },
+          {
+            "term": "Timesheet Logs",
+            "definition": "Two sub-tabs, **My Crew Timesheet Logs** and **My Timesheet Logs**. The left panel lists logs for the selected date with a **Total Logs** count, each showing status, work order ID and the action recorded. Click a log to open it. Use **View By** (All or Summary), **Approve** or **Reject** on the log card, **Download Excel**, **Export** and filters. **Ball in Court** shows who has the timesheet now, and the **Approval Workflow Level** shows how many levels are done."
+          },
+          {
+            "term": "Timesheet template, category and mode",
+            "definition": "The layout of a timesheet follows the **Timesheet Template**, for example Company, Equipment Team or Salary Timecard. Choose the **Log Level Category** first (Company, Work Orders, GL Codes or Projects). The timesheet header shows the **Created By** user and the **Timesheet Mode**. Phase Codes come from **Projects → Project Setup → Phase Codes**. Approved hours feed the Labor line on the Cost tab."
+          },
+          {
+            "term": "Timesheet row actions",
+            "definition": "On each row, the **Actions** menu lets you duplicate the log, copy it with the same Phase Codes, add a description, or delete it. **Manage Columns** controls the columns, and **Notes** records remarks against the timesheet. On **Timesheet Logs**, the edit and delete icons on a log card correct or remove a log, and **Download Excel** downloads the day's logs."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Book hours on a work order",
+            "steps": [
+              "Open the <strong>Timesheets</strong> tab. Use <strong>My Timesheet</strong> for your own hours or <strong>My Crew Timesheet</strong> for a crew.",
+              "Choose the <strong>Log Level Category</strong> (Company, Work Orders, GL Codes or Projects) and the <strong>Template</strong> (for example Company, Equipment Team or Salary Timecard). For a crew, choose the <strong>Crew</strong> as well.",
+              "Pick the <strong>Date</strong> and click <strong>Add</strong> to add a row.",
+              "Choose the Company, Project or Work Order, the <strong>Phase Code</strong>, the <strong>Craft</strong> and the <strong>Class</strong>.",
+              "Enter the hours against the pay types (for example Salary, Holiday, PTO, Per Diem), or click <strong>Import From Innclock AI</strong> to pull recorded clock data.",
+              "Click <strong>Save as Draft</strong>, or <strong>Submit for Approval</strong>."
+            ],
+            "note": "Phase Code is required on every row. Set up Phase Codes under Project Setup first.",
+            "images": [
+              {
+                "src": "assets/guides/work-order/109.jpg",
+                "caption": "Timesheets tab and its sub-tabs",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/work-order/110.jpg",
+                "caption": "My Crew Timesheet with category, crew and template",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/work-order/111.jpg",
+                "caption": "My Timesheet with category and template",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/work-order/112.jpg",
+                "caption": "Date and Add button on a timesheet",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/work-order/113.jpg",
+                "caption": "Default Phase Codes dialog",
+                "step": 4
+              },
+              {
+                "src": "assets/guides/work-order/114.jpg",
+                "caption": "Phase codes selected for the timesheet",
+                "step": 4
+              },
+              {
+                "src": "assets/guides/work-order/115.jpg",
+                "caption": "Timesheet row with project, phase code, craft and class",
+                "step": 4
+              },
+              {
+                "src": "assets/guides/work-order/116.jpg",
+                "caption": "Hours entered against pay types",
+                "step": 5
+              }
+            ]
+          },
+          {
+            "title": "Approve or reject a submitted timesheet",
+            "steps": [
+              "Open <strong>Timesheets → Timesheet Logs</strong> and pick the date.",
+              "Click the log in the left panel to open it.",
+              "Review the grid and notes, then click <strong>Approve</strong> or <strong>Reject</strong> on the log card or at the bottom."
+            ],
+            "note": "The timesheet moves on only after every configured approval level has approved.",
+            "images": [
+              {
+                "src": "assets/guides/work-order/121.jpg",
+                "caption": "Timesheet Logs sub-tab",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/work-order/122.jpg",
+                "caption": "Logs list for the selected date",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/work-order/123.jpg",
+                "caption": "Open timesheet log with its header",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/work-order/124.jpg",
+                "caption": "View By All on a log",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/work-order/125.jpg",
+                "caption": "View By Summary on a log",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/work-order/126.jpg",
+                "caption": "Timesheet log grid and notes",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/work-order/127.jpg",
+                "caption": "Approve and Reject on the log card",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/work-order/128.jpg",
+                "caption": "Edit and delete icons on a log card",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/work-order/129.jpg",
+                "caption": "Download Excel for the day's logs",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/work-order/130.jpg",
+                "caption": "Timesheet log filters",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/work-order/131.jpg",
+                "caption": "Filtered timesheet logs",
+                "step": 3
+              }
+            ]
+          },
+          {
+            "title": "Set default phase codes and add a timesheet row",
+            "steps": [
+              "Open <strong>Timesheets → My Timesheet</strong> (or <strong>My Crew Timesheet</strong>) and choose the <strong>Log Level Category</strong> and <strong>Template</strong>.",
+              "Pick the <strong>Date</strong> and click <strong>Add</strong>.",
+              "Set the <strong>Default Phase Codes</strong>, select the phase codes you need and click <strong>Submit</strong>.",
+              "On the row, choose the Company, Project or Work Order, the Phase Code, the Craft and the Class, then enter hours by pay type.",
+              "Click <strong>Save as Draft</strong> or <strong>Submit for Approval</strong>."
+            ],
+            "note": "Every row needs a Phase Code."
+          },
+          {
+            "title": "Copy, duplicate or delete a timesheet log",
+            "steps": [
+              "Open the log in <strong>My Timesheet</strong> or <strong>My Crew Timesheet</strong>.",
+              "Open the <strong>Actions</strong> menu on the row.",
+              "Choose duplicate, copy with the same Phase Codes, add a description, or delete."
+            ],
+            "images": [
+              {
+                "src": "assets/guides/work-order/117.jpg",
+                "caption": "Actions menu on a timesheet row",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/work-order/118.jpg",
+                "caption": "Manage Columns and Notes on a timesheet",
+                "step": 3
+              }
+            ]
+          },
+          {
+            "title": "Import hours from Innclock AI",
+            "steps": [
+              "Open <strong>Timesheets → My Timesheet</strong> or <strong>My Crew Timesheet</strong> and choose the category and template.",
+              "Click <strong>Import From Innclock AI</strong> to pull the recorded clock data instead of typing hours.",
+              "Check the hours, then click <strong>Save as Draft</strong> or <strong>Submit for Approval</strong>."
+            ],
+            "images": [
+              {
+                "src": "assets/guides/work-order/119.jpg",
+                "caption": "Import From Innclock AI button",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/work-order/120.jpg",
+                "caption": "Save as Draft and Submit for Approval",
+                "step": 3
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/guides/work-order/132.jpg",
+            "caption": "Timesheet Summary with Total Hours and Total Labor Cost"
+          }
+        ]
+      },
+      {
+        "heading": "Equipment",
+        "intro": "<p>The <strong>Equipment</strong> tab is where a Technician requests the equipment and accessories needed to do the job, and where the Load Out Requests raised for this work order are listed. It gives the PM or coordinator one place to see what equipment moved for the work.</p>",
+        "definitions": [
+          {
+            "term": "Work Order LORs",
+            "definition": "The list of Load Out Requests (equipment records) tied to this work order. On the work order the **Equipment** tab opens the **Request Form**; submitting it creates a Load Out Request or a requisition through the Transfer dialog."
+          },
+          {
+            "term": "Equipment request from a work order",
+            "definition": "The equipment needed to carry out the work is requested here, and is separate from the equipment being serviced (which you choose on the Profile). Click **Add** to open the **Request Form**, pick equipment or accessories from the **Available Equipment / Accessory** panel, and check the grid (**Item**, **Type**, **Quantity**, **UOM**, **Requested By**, **Required Date**, **Planned Return Date**). Enter the **Requested Date**, **Supervisor**, **Job ID / Job Name** (required), **Job Location** and **Notes**, then click **Submit**."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Access Load Out Requests from a work order",
+            "steps": [
+              "Open the work order.",
+              "Go to its <strong>Equipment</strong> tab to see the equipment requests and Load Out Requests linked to it."
+            ],
+            "note": "Some environments running an earlier version show this tab with the Request Form only, and end it with **Submit For Approval**."
+          },
+          {
+            "title": "Request equipment for a work order",
+            "steps": [
+              "Open the equipment tab of the work order and click <strong>Add</strong>.",
+              "Select the equipment or accessories from the <strong>Available Equipment / Accessory</strong> panel. Use the search bar to find items.",
+              "Fill in the <strong>Requested Date</strong>, <strong>Supervisor</strong>, <strong>Job ID / Job Name</strong>, <strong>Job Location</strong> and <strong>Notes</strong>.",
+              "Click <strong>Submit</strong>.",
+              "In the <strong>Transfer</strong> dialog, choose the destination, <strong>New LOR</strong> or <strong>REQ</strong>, and set the transfer options."
+            ],
+            "images": [
+              {
+                "src": "assets/guides/work-order/133.jpg",
+                "caption": "Equipment tab with Add button",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/work-order/134.jpg",
+                "caption": "Available Equipment / Accessory panel",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/work-order/135.jpg",
+                "caption": "Submit on the equipment Request Form",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/work-order/136.jpg",
+                "caption": "Transfer dialog",
+                "step": 5
+              },
+              {
+                "src": "assets/guides/work-order/137.jpg",
+                "caption": "Transfer destination New LOR or REQ",
+                "step": 5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Inventory",
+        "intro": "<p>The <strong>Inventory</strong> tab is where a Store Keeper raises and tracks material orders for a work order. The value of materials pulled from stock is added to the <strong>Parts</strong> line on the <strong>Cost</strong> tab.</p><p>It has three sub-tabs: <strong>Orders</strong>, <strong>Rejected Orders</strong> and <strong>EX Orders</strong>.</p>",
+        "definitions": [
+          {
+            "term": "Work Order Inventory Management",
+            "definition": "The tab within a work order for tracking inventory associated with that specific work order."
+          },
+          {
+            "term": "Inventory orders",
+            "definition": "Each order lists its **Ticket Number**, **Description**, **Status**, **Order Date**, **Customers**, **Project** and **Materials**. Click **Add** on **Orders** to raise a new order for materials. Orders that are not approved move to **Rejected Orders**. Use **Search by Ticket Number**, **Export**, **Filters** and **Manage Columns**, and the Actions column to view or delete an order."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Order materials for a work order",
+            "steps": [
+              "Open the <strong>Inventory</strong> tab and choose the <strong>Orders</strong> sub-tab.",
+              "Click <strong>Add</strong> and choose the materials needed.",
+              "Submit the order. The Store Keeper issues it from stock."
+            ],
+            "note": "The value of issued materials is added to the Parts line on the Cost tab. If a work order is cancelled, return issued materials to the store through the Inventory module.",
+            "images": [
+              {
+                "src": "assets/guides/work-order/138.jpg",
+                "caption": "Inventory tab with Orders, Rejected Orders and EX Orders",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/work-order/139.jpg",
+                "caption": "Add button on the Orders sub-tab",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/work-order/140.jpg",
+                "caption": "Order list with Ticket Number and Status",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/work-order/141.jpg",
+                "caption": "Search, Export, Filters and Manage Columns on Orders",
+                "step": 3
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Procurement",
+        "intro": "<p>These four tabs record what the work consumes and how it is planned: <strong>Procurement</strong> for items to buy, <strong>Parts</strong> for parts the job needs, <strong>Expense</strong> for extra spend, and <strong>Schedule</strong> for planned activities. Technicians, Purchase Executives, Accounts users and Supervisors fill them in. Each one feeds the <strong>Cost</strong> tab.</p>",
+        "definitions": [
+          {
+            "term": "Procurement tab",
+            "definition": "A Purchase Executive or Technician clicks **Requisition** and picks **Equipment**, **Material**, **Equipment Part** or **Delivery Service**, enters the items and submits. The requisition goes into the normal Procurement process. Approved purchase orders count under **Parts** on the Cost tab."
+          },
+          {
+            "term": "Parts tab",
+            "definition": "The **Parts Required** list. Click **Import**, choose the parts and quantities, and click **Submit**. Unit cost comes from the maintenance parts purchase orders in Equipment Management. Parts recorded here are added to the maintenance history of the equipment being serviced. Use the delete icon in the Actions column to remove one."
+          },
+          {
+            "term": "Expense tab",
+            "definition": "Click **Create**, then enter rows with **Item Name**, **Quantity** and **Unit Price**; the **Amount** is calculated. Click **Upload** under Upload Invoice to attach the bill and **Submit**. Each expense shows as a card with the **Expense ID**, **Total Items**, **Amount** and **Created By**. Expenses count under **Other** on the Cost tab."
+          },
+          {
+            "term": "Schedule tab",
+            "definition": "Shows the planned activities of the work order. The Supervisor updates the actual dates, the responsible person and the progress as the work goes on."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Raise a requisition from a work order",
+            "steps": [
+              "Open the <strong>Procurement</strong> tab and click <strong>Requisition</strong>.",
+              "Choose <strong>Equipment</strong>, <strong>Material</strong>, <strong>Equipment Part</strong> or <strong>Delivery Service</strong>.",
+              "Enter the item details and submit."
+            ],
+            "note": "Purchase orders count in the work order cost only after they are approved.",
+            "images": [
+              {
+                "src": "assets/guides/work-order/142.jpg",
+                "caption": "Procurement tab",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/work-order/143.jpg",
+                "caption": "Requisition types",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/work-order/144.jpg",
+                "caption": "Requisition item details",
+                "step": 3
+              }
+            ]
+          },
+          {
+            "title": "Record an expense on a work order",
+            "steps": [
+              "Open the <strong>Expense</strong> tab and click <strong>Create</strong>.",
+              "Add a row for each item with <strong>Item Name</strong>, <strong>Quantity</strong> and <strong>Unit Price</strong>.",
+              "Click <strong>Upload</strong> under Upload Invoice and attach the bill.",
+              "Click <strong>Submit</strong>."
+            ],
+            "images": [
+              {
+                "src": "assets/guides/work-order/145.jpg",
+                "caption": "Create button on the Expense tab",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/work-order/146.jpg",
+                "caption": "Expense rows with Item Name, Quantity and Unit Price",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/work-order/147.jpg",
+                "caption": "Upload Invoice on an expense",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/work-order/148.jpg",
+                "caption": "Submit on an expense",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/work-order/149.jpg",
+                "caption": "Expense cards with Expense ID and Amount",
+                "step": 4
+              }
+            ]
+          },
+          {
+            "title": "Add parts to a work order",
+            "steps": [
+              "Open the <strong>Parts</strong> tab and click <strong>Import</strong>.",
+              "Choose the parts and set the quantity.",
+              "Click <strong>Submit</strong>."
+            ],
+            "images": [
+              {
+                "src": "assets/guides/work-order/164.jpg",
+                "caption": "Parts tab with the Parts Required list",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/work-order/165.jpg",
+                "caption": "Import button on the Parts tab",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/work-order/166.jpg",
+                "caption": "Parts and quantities to submit",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/work-order/167.jpg",
+                "caption": "Added parts with the delete icon",
+                "step": 3
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/guides/work-order/150.jpg",
+            "caption": "Schedule tab with planned activities"
+          }
+        ]
+      },
+      {
+        "heading": "Communication",
+        "intro": "<p>The <strong>Communication</strong> tab is the mailbox of a work order, so correspondence stays attached to the work order instead of a personal inbox. Anyone on the work order can send and read mail here.</p>",
+        "definitions": [
+          {
+            "term": "Work Order Communication",
+            "definition": "A mail repository tab within a work order, with Sent, Starred, Drafts, and Trash sections, functioning like a standard inbox scoped to that work order."
+          },
+          {
+            "term": "Work order mailbox",
+            "definition": "Compose mail, and use the left panel to move between **All Emails**, **Inbox**, **Sent**, **Drafts**, **Starred** and **Trash**. Use **Search mail** to find a message by subject or content. The **Settings** icon sets the signature for the work order."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Send an email from a work order",
+            "steps": [
+              "Go to <strong>Work Order &gt; Communication</strong>.",
+              "Click <strong>Compose Mail</strong> to send a new email."
+            ],
+            "images": [
+              {
+                "src": "assets/guides/work-order/151.jpg",
+                "caption": "Communication tab mailbox",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/work-order/152.jpg",
+                "caption": "Mail folders in the left panel",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/work-order/153.jpg",
+                "caption": "Settings icon on the Communication tab",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/work-order/154.jpg",
+                "caption": "Signature settings",
+                "step": 2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Documents",
+        "intro": "<p>The <strong>Documents</strong> tab is a folder view of the files that belong to a work order, including the Procurement documents generated at each stage. Anyone on the work order can browse it.</p>",
+        "definitions": [
+          {
+            "term": "Work Order Documents",
+            "definition": "A tab showing all Procurement documents fetched from every Procurement stage related to the work order, organized into folders by stage."
+          },
+          {
+            "term": "Folders by tab",
+            "definition": "Documents are filed in folders named after the tab they came from: Profile, Items, Timesheet, Equipment, Inventory, Procurement, Expense and Communication. Click a folder to open it and use the breadcrumb to go back up."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "View documents related to a work order's procurement",
+            "steps": [
+              "Go to <strong>Work Order &gt; Documents</strong>.",
+              "Click a folder to open the documents linked to that Procurement stage."
+            ],
+            "images": [
+              {
+                "src": "assets/guides/work-order/155.jpg",
+                "caption": "Documents tab folders",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/work-order/156.jpg",
+                "caption": "Folders named after each tab",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/work-order/157.jpg",
+                "caption": "Documents inside a folder",
+                "step": 2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Drawings",
+        "intro": "<p>The <strong>Drawings</strong> tab holds the drawings a Technician needs to carry out the work, and lets field staff mark them up. Upload, view, edit, annotate or delete drawings here.</p>",
+        "definitions": [
+          {
+            "term": "Annotate (Drawings)",
+            "definition": "An action available from a drawing's menu that lets you mark changes directly on the drawing file, rather than editing the underlying document."
+          },
+          {
+            "term": "Work order drawing cards",
+            "definition": "Each drawing shows as a card with a thumbnail, title, the uploader and the upload date. Click the thumbnail to open it. Use the options icon for **Edit**, **Annotate** or **Delete**, **Filters** to narrow the list, and the view icons for grid or list."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Upload a drawing to a work order",
+            "steps": [
+              "Go to <strong>Work Order → Drawings</strong>.",
+              "Click <strong>Upload Drawings</strong>.",
+              "Enter the <strong>Drawing Name</strong> and upload the file."
+            ],
+            "note": "The drawing appears as a card with its thumbnail and title, the uploader and the date. Switch between grid and list views.",
+            "images": [
+              {
+                "src": "assets/guides/work-order/158.jpg",
+                "caption": "Drawings tab",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/work-order/159.jpg",
+                "caption": "Upload Drawings button",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/work-order/160.jpg",
+                "caption": "Drawing Name field",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/work-order/161.jpg",
+                "caption": "Drawing cards with thumbnail and uploader",
+                "step": 3
+              }
+            ]
+          },
+          {
+            "title": "Annotate or delete a work order drawing",
+            "steps": [
+              "On Work Order - Drawings, open the ellipsis (...) menu on the drawing.",
+              "Choose <strong>Edit</strong>, <strong>Annotate</strong>, or <strong>Delete</strong>."
+            ],
+            "note": "Choosing Annotate lets you mark changes directly on the drawing file.",
+            "images": [
+              {
+                "src": "assets/guides/work-order/162.jpg",
+                "caption": "Edit, Annotate and Delete options on a drawing",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/work-order/163.jpg",
+                "caption": "Drawing filters and view icons",
+                "step": 2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Invoices",
+        "intro": "<p>The <strong>Invoices</strong> tab is where an Accounts user records vendor invoices for a work order and approvers approve them. The <strong>Cost</strong> tab is where an Approver or Administrator sees the resulting cost. Nobody types a cost into the Cost tab, because it fills itself from the other tabs.</p>",
+        "definitions": [
+          {
+            "term": "Invoices tab",
+            "definition": "Two sub-tabs: **Invoice** and **Workflow Issues**. Each invoice lists **Invoice**, **Vendor**, **Date**, **Amount**, **Status** and **Created By**. Approvers use **Approve** and **Reject** on each row. Invoices stuck in approval appear under **Workflow Issues**. The routing is set under **Settings → Invoices**."
+          },
+          {
+            "term": "Cost tab",
+            "definition": "Shows cost by category with its source. **Parts** = approved purchase orders from the Procurement tab plus Inventory pulls. **Labor** = timesheet hours times rate. **External / Vendor** = approved vendor invoices matched to the work order. **Other** = Expense tab entries. **Net Cost** = the total."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Record a vendor invoice on a work order",
+            "steps": [
+              "Open the <strong>Invoices</strong> tab and click <strong>Create</strong> on the <strong>Invoice</strong> sub-tab.",
+              "Enter the invoice details: the <strong>Vendor</strong>, the invoice <strong>Date</strong> and the <strong>Amount</strong>.",
+              "Submit it for approval. Approvers then use <strong>Approve</strong> or <strong>Reject</strong> on the row."
+            ],
+            "note": "The invoice value is added to the work order cost only after every approval level has approved.",
+            "images": [
+              {
+                "src": "assets/guides/work-order/168.jpg",
+                "caption": "Invoices tab with Invoice and Workflow Issues",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/work-order/169.jpg",
+                "caption": "Create on the Invoice sub-tab",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/work-order/170.jpg",
+                "caption": "Invoice details form",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/work-order/171.jpg",
+                "caption": "Submit for approval",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/work-order/172.jpg",
+                "caption": "Invoice list with status",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/work-order/173.jpg",
+                "caption": "Invoice search and Manage Columns",
+                "step": 3
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/guides/work-order/174.jpg",
+            "caption": "Cost tab with category-wise cost"
+          }
+        ]
+      },
+      {
+        "heading": "Approval",
+        "intro": "<p>An Approver decides whether a work order goes ahead, and the Requester or Approver can later cancel or reopen it. Approval follows the workflow set up under <strong>Settings → Approval Workflow</strong>.</p>",
+        "definitions": [
+          {
+            "term": "Approved and Completed work orders",
+            "definition": "An approved or completed work order becomes read-only. The equipment record updates to match the operational status on the work order, and the work order is added to the equipment's maintenance history."
+          },
+          {
+            "term": "Reopen Window",
+            "definition": "The number of days after a work order first becomes Completed or Cancelled during which it can be reopened. It is counted from the first time it reached that state, and set under **Settings → Configuration**."
+          },
+          {
+            "term": "Work order life cycle",
+            "definition": "A work order starts with the status chosen in **Work Order Status** when it is created. The Requester then clicks **Submit** or **Submit for Approval**. If the Approver approves, the work proceeds. If the Approver rejects, the work order returns to the Requester with the remarks and a workflow issue is listed, and the Requester edits and resubmits. When the work is done it becomes Completed and read-only. Anyone with permission can cancel it from the kebab menu. A Completed or Cancelled work order can be reopened, with a reason, until the Reopen Window (days) runs out, after which it locks. The statuses you can pick are set under **Settings → Status**."
+          },
+          {
+            "term": "Who approves what",
+            "definition": "Work orders go to the approvers set on the **Approval Workflow** for the work order type. Vendor invoices go to the approvers set under **Settings → Invoices**. Timesheets go to the approvers on the timesheet approval workflow. Each has its own levels, and the item moves on only when every level has approved."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Approve or reject a work order",
+            "steps": [
+              "Open the work order, and review its tabs, items, cost and attachments.",
+              "The Requester clicks <strong>Submit for Approval</strong>.",
+              "The Approver clicks <strong>Approve</strong> or <strong>Reject</strong> and enters comments."
+            ],
+            "note": "On approval, the work proceeds. On rejection, the work order returns to the Requester with the remarks, and a workflow issue appears under **Workflow Issues**. The Requester edits it and resubmits. With several levels, it stays pending until every level approves.",
+            "images": [
+              {
+                "src": "assets/guides/work-order/175.jpg",
+                "caption": "Work order ready for review",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/work-order/176.jpg",
+                "caption": "Submit for Approval button",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/work-order/177.jpg",
+                "caption": "Approve and Reject with comments",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/work-order/178.jpg",
+                "caption": "Approved work order",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/work-order/179.jpg",
+                "caption": "Rejected work order in Workflow Issues",
+                "step": 2
+              }
+            ]
+          },
+          {
+            "title": "Cancel a work order",
+            "steps": [
+              "Open the work order and click the kebab menu on the <strong>Profile</strong> tab.",
+              "Choose <strong>Cancel Work Order</strong> and confirm the warning."
+            ],
+            "note": "Materials already issued must be returned to the store through the Inventory module.",
+            "images": [
+              {
+                "src": "assets/guides/work-order/180.jpg",
+                "caption": "Kebab menu with Cancel Work Order",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/work-order/181.jpg",
+                "caption": "Cancel confirmation warning",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/work-order/182.jpg",
+                "caption": "Cancelled work order",
+                "step": 2
+              }
+            ]
+          },
+          {
+            "title": "Reopen a cancelled work order",
+            "steps": [
+              "Open the Completed or Cancelled work order and click the kebab menu on the <strong>Profile</strong> tab.",
+              "Choose <strong>Reopen Work Order</strong>.",
+              "Enter the reason and click <strong>reopen</strong>."
+            ],
+            "note": "This works only within the Reopen Window (days) set under Settings → Configuration. The window counts from the first time the work order became Completed or Cancelled.",
+            "images": [
+              {
+                "src": "assets/guides/work-order/183.jpg",
+                "caption": "Reopen Work Order in the kebab menu",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/work-order/184.jpg",
+                "caption": "Reason for reopening",
+                "step": 3
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Reports",
+        "intro": "<p>The <strong>Reports</strong> tab of the Work Order page has the <strong>Equipment Breakdown Report</strong>, which Administrators and Approvers use to track which equipment is down and what it costs.</p>",
+        "definitions":[
+          {
+            "term": "Equipment Breakdown Report",
+            "definition": "Lists equipment breakdowns recorded through work orders. Columns: **Equipment ID**, **Status**, **Make**, **Model**, **Category**, **Project**, **Down Date**, **Estimated Back in Service**, **Vendor** (Internal when done in-house), **Notes**, **Cost/Estimate**, **Warranty** and **Responsible party**. Search by work order or asset ID, use **Filters** or column filters, **Manage Columns** (you can save several layouts) and **Export** to download with the filters applied. Your company may see this as the **Asset Breakdown Report** (naming framework: **Global Data → Settings → Naming Framework**)."
+          },
+          {
+            "term": "Who uses the Equipment Breakdown Report",
+            "definition": "Administrators and Approvers use it to track the condition of the fleet: which assets are down, since when, when they should be back, who is repairing them and what it costs. Status shows the operational status chosen on the work order (Operational, Down - Major Repairs, Running - Minor Repairs or Running - Due for PM). Vendor shows Internal when the work is done in-house."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Run the Equipment Breakdown Report",
+            "steps": [
+              "Open the <strong>Reports</strong> tab on the Work Order page.",
+              "Click <strong>Equipment Breakdown Report</strong>.",
+              "Search or filter, and adjust the columns with <strong>Manage Columns</strong>.",
+              "Click <strong>Export</strong> to download it."
+            ],
+            "note": "The Status column shows the operational status set on the work order.",
+            "images": [
+              {
+                "src": "assets/guides/work-order/185.jpg",
+                "caption": "Reports tab",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/work-order/186.jpg",
+                "caption": "Equipment Breakdown Report",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/work-order/187.jpg",
+                "caption": "Search by work order or asset ID",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/work-order/188.jpg",
+                "caption": "Filters and Manage Columns on the report",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/work-order/189.jpg",
+                "caption": "Export on the Equipment Breakdown Report",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/work-order/190.jpg",
+                "caption": "Responsible party column",
+                "step": 3
+              }
+            ]
           }
         ]
       },
@@ -29614,1254 +30861,7 @@ const MODULES = [
         ]
       },
       {
-        "heading": "The Work Orders Page",
-        "intro": "<p>The <strong>Work Orders</strong> list is where every user of the module finds, filters, creates and exports work orders. Requesters click <strong>Create</strong> to raise work against equipment, and everyone else opens a work order from the list.</p><p>The Work Order page has three tabs, <strong>Work Orders</strong>, <strong>Workflow Issues</strong> and <strong>Reports</strong>, plus <strong>Settings</strong> on the right.</p>",
-        "definitions":[
-          {
-            "term": "Work Order",
-            "definition": "The record of one job of work on equipment. It is created from a work order type, routed through approval, and worked through its own tabs (Profile, Items, Team, Timesheets and the rest)."
-          },
-          {
-            "term": "Work Order Type",
-            "definition": "The setting that decides which tabs, forms and ID format a work order uses. Choose it in the Create Work Order Contract window. Equipment is the default type."
-          },
-          {
-            "term": "Work Orders list",
-            "definition": "Lists every work order with its **ID**, **Description**, **Status**, **Type**, **Project**, **Created Date**, **Created By** and **Equipment**. Use **Search by ID**, **Filters** (Work Order Status, Created By, Equipment Number, Equipment Status, Maintenance Type, Operational Status, Location, Service Type, Priority, Business Unit), **Manage Columns**, the list, grid and column view icons, and **Export**."
-          },
-          {
-            "term": "Workflow Issues (work orders)",
-            "definition": "Work orders that failed to move through the approval workflow are listed here with the remarks the approver recorded. A rejected work order goes back to the requester from here."
-          },
-          {
-            "term": "Tabs of a work order and who uses them",
-            "definition": "The tabs you see depend on the Tab Visibility set for the type. (1) **Items**: Requester or Technician, the jobs to do. (2) **Team**: Supervisor, the users and crews. (3) **Timesheets**: Technician or Supervisor, labour hours. (4) **Equipment**: Technician, equipment and accessories requested for the work. (5) **Inventory**: Store Keeper, material orders. (6) **Procurement**: Purchase Executive, requisitions. (7) **Expense**: Technician or Accounts, extra spend with the bill. (8) **Schedule**: Supervisor, planned activities and progress. (9) **Communication**: everyone, mail. (10) **Documents**: everyone, files by folder. (11) **Drawings**: Technician, drawings used. (12) **Parts**: Technician, parts required. (13) **Invoices**: Accounts or Approver, vendor invoices. (14) **Cost**: Approver or Administrator, category-wise cost. **Profile** is always first."
-          },
-          {
-            "term": "Create Work Order Contract fields",
-            "definition": "Work Order Type (required), WO Description, Location (where the work is done), Work Order Status (the status it starts with), Create By (Inspection Issue or Equipment), Equipment Issue Linked (only for Inspection Issue, required there), Equipment (required; from the linked issue or the dropdown), Maintenance Type, Business Unit, Project and Phase Code (where cost is booked), Created Date (required), Notes (required), Priority (its Due Hours apply), Equipment Status (read-only, from the equipment record), Operational Status, Due Date, Service Location (required: Internal (Shop / In-House) or External Vendor), Technician (internal path), and Vendor, Vendor Contact and Vendor PO Number (external path). Fields shown follow the type's configuration."
-          },
-          {
-            "term": "Work order roles at a glance",
-            "definition": "The Requester creates and assigns; the Approver approves; the Technician and Supervisor execute; the Store Keeper and Purchase Executive supply materials and parts; the Accounts user handles invoices; the Administrator configures. Each role sees only the actions its permissions allow."
-          },
-          {
-            "term": "Work Orders list: views, more columns and row actions",
-            "definition": "Click **Create** to raise a work order. The list can be shown as a table, grid or week view, and **Manage Columns** adds more columns such as **Equipment Issue Linked**, **Maintenance Type**, **Complaint**, **Cause**, **Correction** and **Vendor PO Number**. Each row has the actions **History**, which shows the work order history, and **Delete**."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Open an existing work order",
-            "steps": [
-              "On the <strong>Work Orders</strong> tab, click the work order you want to open. It opens on the <strong>Profile</strong> tab."
-            ],
-            "note": "Use the list, grid and column view icons on the right to change how the list looks."
-          },
-          {
-            "title": "Raise a work order against equipment",
-            "steps": [
-              "On the <strong>Work Orders</strong> tab, click <strong>Create</strong>.",
-              "Pick the <strong>Work Order Type</strong>, for example Equipment. The window shows the fields set up for that type.",
-              "Enter the <strong>WO Description</strong> and <strong>Work Order Status</strong>.",
-              "Choose <strong>Create By</strong>. Pick <strong>Inspection Issue</strong> for work that came out of an inspection, then choose the <strong>Equipment Issue Linked</strong>, and the equipment fills in from the issue. Pick <strong>Equipment</strong> to choose the equipment directly.",
-              "Choose the <strong>Maintenance Type</strong>, and the <strong>Business Unit</strong>, <strong>Project</strong>, <strong>Phase Code</strong>, <strong>Created Date</strong> and <strong>Notes</strong> the work is booked against.",
-              "Under Priority, set the <strong>Priority</strong>, <strong>Operational Status</strong> and <strong>Due Date</strong>. <strong>Equipment Status</strong> comes from the equipment record and cannot be edited.",
-              "Under Service Assignment, choose the <strong>Service Location</strong>. For <strong>Internal (Shop / In-House)</strong> pick the <strong>Technician</strong>. For <strong>External Vendor</strong> pick the <strong>Vendor</strong> and <strong>Vendor Contact</strong> and enter the <strong>Vendor PO Number</strong> (use <strong>Add Vendor</strong> or <strong>Add Contact</strong> if they are not listed).",
-              "Click <strong>Submit</strong>."
-            ],
-            "note": "The work order gets an ID in the format set under ID Settings. Work Order Type, Equipment, Created Date and Notes are always required. Equipment Issue Linked is required on the Inspection Issue path, Technician on the internal path and Vendor on the external path. Some environments running an earlier version show a simpler screen here, so a field or page described in this guide may be missing.",
-            "images": [
-              {
-                "src": "assets/guides/work-order/077.jpg",
-                "caption": "Create button on the Work Orders tab",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/work-order/078.jpg",
-                "caption": "Create Work Order Contract window with Work Order Type",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/work-order/079.jpg",
-                "caption": "WO Description and Work Order Status",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/work-order/080.jpg",
-                "caption": "Create By options, Inspection Issue or Equipment",
-                "step": 4
-              },
-              {
-                "src": "assets/guides/work-order/081.jpg",
-                "caption": "Equipment Issue Linked for an Inspection Issue work order",
-                "step": 4
-              },
-              {
-                "src": "assets/guides/work-order/082.jpg",
-                "caption": "Equipment dropdown for work raised against equipment",
-                "step": 4
-              },
-              {
-                "src": "assets/guides/work-order/083.jpg",
-                "caption": "Maintenance Type, Business Unit, Project and Phase Code",
-                "step": 5
-              },
-              {
-                "src": "assets/guides/work-order/084.jpg",
-                "caption": "Priority, Operational Status and Due Date",
-                "step": 6
-              },
-              {
-                "src": "assets/guides/work-order/085.jpg",
-                "caption": "Service Location options",
-                "step": 7
-              },
-              {
-                "src": "assets/guides/work-order/086.jpg",
-                "caption": "Technician for an internal work order",
-                "step": 7
-              },
-              {
-                "src": "assets/guides/work-order/087.jpg",
-                "caption": "Vendor, Vendor Contact and Vendor PO Number",
-                "step": 7
-              },
-              {
-                "src": "assets/guides/work-order/088.jpg",
-                "caption": "Submit on the Create Work Order Contract window",
-                "step": 7
-              }
-            ]
-          },
-          {
-            "title": "Filter, export or customise the work order list",
-            "steps": [
-              "Click <strong>Filters</strong> and choose the values to narrow the list.",
-              "Click <strong>Manage Columns</strong>, choose and arrange the columns, then click <strong>Apply</strong>.",
-              "Use the view icons on the right to switch between list, grid and column views.",
-              "Click <strong>Export</strong> to download the list."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/work-order/069.jpg",
-                "caption": "Filters button on the Work Orders tab",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/work-order/070.jpg",
-                "caption": "Work order filter options",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/work-order/071.jpg",
-                "caption": "Manage Columns button",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/work-order/072.jpg",
-                "caption": "Column selection and arrangement with Apply",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/work-order/073.jpg",
-                "caption": "List, grid and column view icons",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/work-order/074.jpg",
-                "caption": "Export button on the Work Orders tab",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/work-order/075.jpg",
-                "caption": "Record count and page arrows on the list",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/work-order/076.jpg",
-                "caption": "Workflow Issues tab",
-                "step": 4
-              }
-            ]
-          },
-          {
-            "title": "Find a work order",
-            "steps": [
-              "Open <strong>Home → Work Order</strong> and stay on the <strong>Work Orders</strong> tab.",
-              "Type in <strong>Search by ID</strong>, or click <strong>Filters</strong> and choose values such as Work Order Status, Equipment Number, Maintenance Type, Priority or Business Unit.",
-              "Click the work order to open it on the <strong>Profile</strong> tab."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/work-order/065.jpg",
-                "caption": "Work Order page with its tabs and Settings",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/work-order/066.jpg",
-                "caption": "Work Order page tabs",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/work-order/067.jpg",
-                "caption": "Work Orders tab listing all work orders",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/work-order/068.jpg",
-                "caption": "Search by ID on the Work Orders tab",
-                "step": 2
-              }
-            ]
-          },
-          {
-            "title": "Review work orders that failed approval",
-            "steps": [
-              "Open the <strong>Workflow Issues</strong> tab on the Work Order page.",
-              "Find the work order and read the remarks the approver entered.",
-              "Open the work order, correct it and resubmit it."
-            ]
-          }
-        ]
-      },
-      {
-        "heading": "Profile and Items",
-        "intro": "<p>The <strong>Profile</strong> tab is the front page of a work order. Requesters record what is wrong and how urgent it is, Technicians record the diagnosis, and the same tab holds the items of work. It is always on and cannot be switched off.</p><p>The tab has four sections: <strong>Basic Information</strong>, <strong>Priority</strong>, <strong>Service Assignment</strong> and <strong>Diagnosis</strong>. The fields you see depend on how the administrator set up the work order type.</p>",
-        "definitions": [
-          {
-            "term": "Where this data comes from (work order lists)",
-            "definition": "**Work Order Type**, its **Status**, **Priority** (with Due Hours and order), **Maintenance Type**, ID format and tabs come from **Settings → Work Orders** for that type. **Technician**, **Assign To** and **Approver** list only users added under **Settings → Users and Permissions** with the matching permission. **Equipment** and its status, hours reading and location are fetched from the Equipment Master (the **Assigned location** follows the equipment location) and cannot be edited here. **Business Unit, Project and Phase Code** are the cost details the work is booked against; timesheet Phase Codes must be set up under **Projects → Project Setup → Phase Codes**. **Vendor** and **Vendor Contact** can be added from the field with **Add Vendor** and **Add Contact**. Crew time can be booked only for users added on the **Team** tab. Part details, including Unit Cost, come from **Equipment Management → Maintenance → Parts PO**. Where it goes: hours go to **Labor**, inventory materials to **Parts**, expenses to **Other**, and approved vendor invoices to the **Cost** tab, which fills automatically. An approved work order updates the equipment status and is added to the equipment's maintenance history. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
-          },
-          {
-            "term": "Work Order Profile",
-            "definition": "The tab where a work order's profile details are recorded, using the form set up under **Settings → Work Order Types → Profile** for the work order's type. The Items tab holds its items of work."
-          },
-          {
-            "term": "Work Order Item",
-            "definition": "A unit of scope within a work order. A work order can contain multiple items, and each item can be linked to a project tree or to one or more issues."
-          },
-          {
-            "term": "Basic Information",
-            "definition": "The core of the work order: **WO ID** (automatic), **WO Description**, **Work Order Type**, **Work Order Status**, **Equipment** (with its warranty expiration, hours reading, location and current status shown below it), **Assigned location** (filled from the equipment), **Maintenance Type**, **Business Unit**, **Project**, **Phase Code**, **Created Date**, **Created By** (automatic) and **Notes**. Click the equipment link to open its profile in Equipment Management."
-          },
-          {
-            "term": "Priority section",
-            "definition": "Holds **Priority** (the Due Hours of the chosen level apply), **Equipment Status** (fetched from the equipment, not editable), **Operational Status** and **Due Date**. The operational status updates the equipment record when you submit and shows in the Equipment Breakdown Report."
-          },
-          {
-            "term": "Service Assignment",
-            "definition": "Records who does the work. **Service Location** is required. **Internal (Shop / In-House)** shows **Technician**, and only users added under Users and Permissions with the right permission are listed. **External Vendor** shows **Vendor**, **Vendor Contact** and **Vendor PO Number**. These four fields become part of the equipment's maintenance record."
-          },
-          {
-            "term": "Diagnosis: Complaint, Cause and Correction",
-            "definition": "Three rich-text boxes. **Complaint** is the problem as reported, entered by the Requester when the work order is raised. **Cause** is the reason, entered by the Technician after examining the equipment. **Correction** is the work done, including parts replaced and adjustments, entered by the Technician before the work order is closed. The toolbar gives bold, italics, underline, strikethrough, headings, lists and links."
-          },
-          {
-            "term": "Assign To and Submit",
-            "definition": "At the bottom of the Profile, pick a user in **Assign To**, then click **Submit** to save and assign, or **Submit for Approval** to send it through the approval workflow. The Equipment Status changes only after you submit."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Add an item to a work order",
-            "steps": [
-              "Open the work order's <strong>Profile</strong> tab.",
-              "Click <strong>Create Item</strong>."
-            ],
-            "note": "You can create multiple items inside one work order, and each can be connected to a Project tree or to Issues."
-          },
-          {
-            "title": "Link a work order item to a project tree",
-            "steps": [
-              "In Work Order - Profile, when linking an item to a tree, select the Project.",
-              "Select its tree version.",
-              "Continue through the remaining tree selections."
-            ]
-          },
-          {
-            "title": "Link issues to a work order item",
-            "steps": [
-              "In Work Order - Profile, when linking with Issues, select the Issue type from the dropdown to see the detailed list of issues.",
-              "Select one or multiple issues to link to the item."
-            ]
-          },
-          {
-            "title": "Record the diagnosis on a work order",
-            "steps": [
-              "Open the work order from the <strong>Work Orders</strong> tab. It opens on the <strong>Profile</strong> tab.",
-              "Under <strong>Diagnosis</strong>, the Requester enters the <strong>Complaint</strong>.",
-              "After examining the equipment, the Technician enters the <strong>Cause</strong>.",
-              "As the work proceeds, the Technician enters the <strong>Correction</strong>.",
-              "Pick a user in <strong>Assign To</strong> and click <strong>Submit</strong>, or click <strong>Submit for Approval</strong>."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/work-order/093.jpg",
-                "caption": "Diagnosis section with Complaint, Cause and Correction",
-                "step": 3
-              }
-            ]
-          },
-          {
-            "title": "Create an item and set its status",
-            "steps": [
-              "Open the <strong>Items</strong> tab and click <strong>Create Items</strong> in the left panel.",
-              "Enter the item <strong>name</strong> and <strong>Description</strong>, then click <strong>Submit</strong>.",
-              "Fill in the item form your administrator set up for the work order type.",
-              "Choose the <strong>Item Status</strong> from the dropdown, then click <strong>Submit</strong>."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/work-order/099.jpg",
-                "caption": "Items tab of a work order",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/work-order/100.jpg",
-                "caption": "Create Items in the left panel",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/work-order/101.jpg",
-                "caption": "Item name and Description",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/work-order/102.jpg",
-                "caption": "Item form for the work order type",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/work-order/103.jpg",
-                "caption": "Item Status dropdown",
-                "step": 4
-              },
-              {
-                "src": "assets/guides/work-order/104.jpg",
-                "caption": "Submit on the item",
-                "step": 4
-              }
-            ]
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/guides/work-order/089.jpg",
-            "caption": "Work order Profile tab with the WO ID"
-          },
-          {
-            "src": "assets/guides/work-order/090.jpg",
-            "caption": "Profile tab sections"
-          },
-          {
-            "src": "assets/guides/work-order/091.jpg",
-            "caption": "Basic Information fields"
-          },
-          {
-            "src": "assets/guides/work-order/092.jpg",
-            "caption": "Notes field on the Profile"
-          },
-          {
-            "src": "assets/guides/work-order/094.jpg",
-            "caption": "Priority section on the Profile"
-          },
-          {
-            "src": "assets/guides/work-order/095.jpg",
-            "caption": "Service Assignment section"
-          },
-          {
-            "src": "assets/guides/work-order/096.jpg",
-            "caption": "Vendor fields in Service Assignment"
-          },
-          {
-            "src": "assets/guides/work-order/097.jpg",
-            "caption": "Vendor PO Number field"
-          },
-          {
-            "src": "assets/guides/work-order/098.jpg",
-            "caption": "Assign To and Submit at the bottom of the Profile"
-          }
-        ]
-      },
-      {
-        "heading": "Team",
-        "intro": "<p>The <strong>Team</strong> tab lists the users and crews working on a work order. A Supervisor or PM adds them, and only people added here can book time to the work order through <strong>My Crew Timesheet</strong>.</p>",
-        "definitions": [
-          {
-            "term": "Work Order Team",
-            "definition": "The set of users and/or crews assigned to a work order, managed via the Users and Crews tabs on the Team screen."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Add users to a work order's team",
-            "steps": [
-              "Go to <strong>Work Order &gt; Team</strong>.",
-              "Select the <strong>Users</strong> tab at the top.",
-              "Multi-select the users you want to add.",
-              "Click <strong>Submit</strong>."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/work-order/105.jpg",
-                "caption": "Team tab listing users with role and craft",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/work-order/106.jpg",
-                "caption": "Users and Crews tabs on the Team tab",
-                "step": 4
-              }
-            ]
-          },
-          {
-            "title": "Add a crew to a work order",
-            "steps": [
-              "Go to <strong>Work Order &gt; Team</strong>.",
-              "Select the <strong>Crews</strong> tab at the top.",
-              "Multi-select from the crews already created in Global Data.",
-              "Click <strong>Submit</strong>."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/work-order/107.jpg",
-                "caption": "Selecting users to add to the team",
-                "step": 4
-              },
-              {
-                "src": "assets/guides/work-order/108.jpg",
-                "caption": "Submit on the Team tab",
-                "step": 4
-              }
-            ]
-          },
-          {
-            "title": "Book time for a crew member",
-            "steps": [
-              "Add the person or crew on the <strong>Team</strong> tab first.",
-              "Open <strong>Timesheets → My Crew Timesheet</strong> and book the time there."
-            ],
-            "note": "A person who is not on the Team tab cannot have time booked to the work order through My Crew Timesheet."
-          }
-        ]
-      },
-      {
-        "heading": "Timesheets",
-        "intro": "<p>The <strong>Timesheets</strong> tab is where Technicians and Supervisors book labour hours against a work order, and where approvers approve them. The hours feed the <strong>Labor</strong> line on the <strong>Cost</strong> tab.</p><p>It has four sub-tabs: <strong>Timesheet Summary</strong>, <strong>My Crew Timesheet</strong>, <strong>My Timesheet</strong> and <strong>Timesheet Logs</strong>. The timesheet layout follows the Timesheet Template you choose.</p>",
-        "definitions": [
-          {
-            "term": "Work Order Timesheet",
-            "definition": "The tab within a work order used to manage crew and vendor timesheet entries specific to that work order."
-          },
-          {
-            "term": "Timesheet Summary",
-            "definition": "Shows **Total Hours** and **Total Labor Cost** for the work order, with a row per entry: **Date**, **Roster**, **Projects / Work Order / GL Code**, **Phase Code**, **Earnings Code**, **Hours**, **Rate** and **Total**. The total labor cost is the value on the **Labor** line of the Cost tab. Some environments running an earlier version label this sub-tab **Dashboard**."
-          },
-          {
-            "term": "Timesheet Logs",
-            "definition": "Two sub-tabs, **My Crew Timesheet Logs** and **My Timesheet Logs**. The left panel lists logs for the selected date with a **Total Logs** count, each showing status, work order ID and the action recorded. Click a log to open it. Use **View By** (All or Summary), **Approve** or **Reject** on the log card, **Download Excel**, **Export** and filters. **Ball in Court** shows who has the timesheet now, and the **Approval Workflow Level** shows how many levels are done."
-          },
-          {
-            "term": "Timesheet template, category and mode",
-            "definition": "The layout of a timesheet follows the **Timesheet Template**, for example Company, Equipment Team or Salary Timecard. Choose the **Log Level Category** first (Company, Work Orders, GL Codes or Projects). The timesheet header shows the **Created By** user and the **Timesheet Mode**. Phase Codes come from **Projects → Project Setup → Phase Codes**. Approved hours feed the Labor line on the Cost tab."
-          },
-          {
-            "term": "Timesheet row actions",
-            "definition": "On each row, the **Actions** menu lets you duplicate the log, copy it with the same Phase Codes, add a description, or delete it. **Manage Columns** controls the columns, and **Notes** records remarks against the timesheet. On **Timesheet Logs**, the edit and delete icons on a log card correct or remove a log, and **Download Excel** downloads the day's logs."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Book hours on a work order",
-            "steps": [
-              "Open the <strong>Timesheets</strong> tab. Use <strong>My Timesheet</strong> for your own hours or <strong>My Crew Timesheet</strong> for a crew.",
-              "Choose the <strong>Log Level Category</strong> (Company, Work Orders, GL Codes or Projects) and the <strong>Template</strong> (for example Company, Equipment Team or Salary Timecard). For a crew, choose the <strong>Crew</strong> as well.",
-              "Pick the <strong>Date</strong> and click <strong>Add</strong> to add a row.",
-              "Choose the Company, Project or Work Order, the <strong>Phase Code</strong>, the <strong>Craft</strong> and the <strong>Class</strong>.",
-              "Enter the hours against the pay types (for example Salary, Holiday, PTO, Per Diem), or click <strong>Import From Innclock AI</strong> to pull recorded clock data.",
-              "Click <strong>Save as Draft</strong>, or <strong>Submit for Approval</strong>."
-            ],
-            "note": "Phase Code is required on every row. Set up Phase Codes under Project Setup first.",
-            "images": [
-              {
-                "src": "assets/guides/work-order/109.jpg",
-                "caption": "Timesheets tab and its sub-tabs",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/work-order/110.jpg",
-                "caption": "My Crew Timesheet with category, crew and template",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/work-order/111.jpg",
-                "caption": "My Timesheet with category and template",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/work-order/112.jpg",
-                "caption": "Date and Add button on a timesheet",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/work-order/113.jpg",
-                "caption": "Default Phase Codes dialog",
-                "step": 4
-              },
-              {
-                "src": "assets/guides/work-order/114.jpg",
-                "caption": "Phase codes selected for the timesheet",
-                "step": 4
-              },
-              {
-                "src": "assets/guides/work-order/115.jpg",
-                "caption": "Timesheet row with project, phase code, craft and class",
-                "step": 4
-              },
-              {
-                "src": "assets/guides/work-order/116.jpg",
-                "caption": "Hours entered against pay types",
-                "step": 5
-              }
-            ]
-          },
-          {
-            "title": "Approve or reject a submitted timesheet",
-            "steps": [
-              "Open <strong>Timesheets → Timesheet Logs</strong> and pick the date.",
-              "Click the log in the left panel to open it.",
-              "Review the grid and notes, then click <strong>Approve</strong> or <strong>Reject</strong> on the log card or at the bottom."
-            ],
-            "note": "The timesheet moves on only after every configured approval level has approved.",
-            "images": [
-              {
-                "src": "assets/guides/work-order/121.jpg",
-                "caption": "Timesheet Logs sub-tab",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/work-order/122.jpg",
-                "caption": "Logs list for the selected date",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/work-order/123.jpg",
-                "caption": "Open timesheet log with its header",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/work-order/124.jpg",
-                "caption": "View By All on a log",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/work-order/125.jpg",
-                "caption": "View By Summary on a log",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/work-order/126.jpg",
-                "caption": "Timesheet log grid and notes",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/work-order/127.jpg",
-                "caption": "Approve and Reject on the log card",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/work-order/128.jpg",
-                "caption": "Edit and delete icons on a log card",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/work-order/129.jpg",
-                "caption": "Download Excel for the day's logs",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/work-order/130.jpg",
-                "caption": "Timesheet log filters",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/work-order/131.jpg",
-                "caption": "Filtered timesheet logs",
-                "step": 3
-              }
-            ]
-          },
-          {
-            "title": "Set default phase codes and add a timesheet row",
-            "steps": [
-              "Open <strong>Timesheets → My Timesheet</strong> (or <strong>My Crew Timesheet</strong>) and choose the <strong>Log Level Category</strong> and <strong>Template</strong>.",
-              "Pick the <strong>Date</strong> and click <strong>Add</strong>.",
-              "Set the <strong>Default Phase Codes</strong>, select the phase codes you need and click <strong>Submit</strong>.",
-              "On the row, choose the Company, Project or Work Order, the Phase Code, the Craft and the Class, then enter hours by pay type.",
-              "Click <strong>Save as Draft</strong> or <strong>Submit for Approval</strong>."
-            ],
-            "note": "Every row needs a Phase Code."
-          },
-          {
-            "title": "Copy, duplicate or delete a timesheet log",
-            "steps": [
-              "Open the log in <strong>My Timesheet</strong> or <strong>My Crew Timesheet</strong>.",
-              "Open the <strong>Actions</strong> menu on the row.",
-              "Choose duplicate, copy with the same Phase Codes, add a description, or delete."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/work-order/117.jpg",
-                "caption": "Actions menu on a timesheet row",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/work-order/118.jpg",
-                "caption": "Manage Columns and Notes on a timesheet",
-                "step": 3
-              }
-            ]
-          },
-          {
-            "title": "Import hours from Innclock AI",
-            "steps": [
-              "Open <strong>Timesheets → My Timesheet</strong> or <strong>My Crew Timesheet</strong> and choose the category and template.",
-              "Click <strong>Import From Innclock AI</strong> to pull the recorded clock data instead of typing hours.",
-              "Check the hours, then click <strong>Save as Draft</strong> or <strong>Submit for Approval</strong>."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/work-order/119.jpg",
-                "caption": "Import From Innclock AI button",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/work-order/120.jpg",
-                "caption": "Save as Draft and Submit for Approval",
-                "step": 3
-              }
-            ]
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/guides/work-order/132.jpg",
-            "caption": "Timesheet Summary with Total Hours and Total Labor Cost"
-          }
-        ]
-      },
-      {
-        "heading": "Inventory",
-        "intro": "<p>The <strong>Inventory</strong> tab is where a Store Keeper raises and tracks material orders for a work order. The value of materials pulled from stock is added to the <strong>Parts</strong> line on the <strong>Cost</strong> tab.</p><p>It has three sub-tabs: <strong>Orders</strong>, <strong>Rejected Orders</strong> and <strong>EX Orders</strong>.</p>",
-        "definitions": [
-          {
-            "term": "Work Order Inventory Management",
-            "definition": "The tab within a work order for tracking inventory associated with that specific work order."
-          },
-          {
-            "term": "Inventory orders",
-            "definition": "Each order lists its **Ticket Number**, **Description**, **Status**, **Order Date**, **Customers**, **Project** and **Materials**. Click **Add** on **Orders** to raise a new order for materials. Orders that are not approved move to **Rejected Orders**. Use **Search by Ticket Number**, **Export**, **Filters** and **Manage Columns**, and the Actions column to view or delete an order."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Order materials for a work order",
-            "steps": [
-              "Open the <strong>Inventory</strong> tab and choose the <strong>Orders</strong> sub-tab.",
-              "Click <strong>Add</strong> and choose the materials needed.",
-              "Submit the order. The Store Keeper issues it from stock."
-            ],
-            "note": "The value of issued materials is added to the Parts line on the Cost tab. If a work order is cancelled, return issued materials to the store through the Inventory module.",
-            "images": [
-              {
-                "src": "assets/guides/work-order/138.jpg",
-                "caption": "Inventory tab with Orders, Rejected Orders and EX Orders",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/work-order/139.jpg",
-                "caption": "Add button on the Orders sub-tab",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/work-order/140.jpg",
-                "caption": "Order list with Ticket Number and Status",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/work-order/141.jpg",
-                "caption": "Search, Export, Filters and Manage Columns on Orders",
-                "step": 3
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "heading": "Equipment",
-        "intro": "<p>The <strong>Equipment</strong> tab is where a Technician requests the equipment and accessories needed to do the job, and where the Load Out Requests raised for this work order are listed. It gives the PM or coordinator one place to see what equipment moved for the work.</p>",
-        "definitions": [
-          {
-            "term": "Work Order LORs",
-            "definition": "The list of Load Out Requests (equipment records) tied to this work order. On the work order the **Equipment** tab opens the **Request Form**; submitting it creates a Load Out Request or a requisition through the Transfer dialog."
-          },
-          {
-            "term": "Equipment request from a work order",
-            "definition": "The equipment needed to carry out the work is requested here, and is separate from the equipment being serviced (which you choose on the Profile). Click **Add** to open the **Request Form**, pick equipment or accessories from the **Available Equipment / Accessory** panel, and check the grid (**Item**, **Type**, **Quantity**, **UOM**, **Requested By**, **Required Date**, **Planned Return Date**). Enter the **Requested Date**, **Supervisor**, **Job ID / Job Name** (required), **Job Location** and **Notes**, then click **Submit**."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Access Load Out Requests from a work order",
-            "steps": [
-              "Open the work order.",
-              "Go to its <strong>Equipment</strong> tab to see the equipment requests and Load Out Requests linked to it."
-            ],
-            "note": "Some environments running an earlier version show this tab with the Request Form only, and end it with **Submit For Approval**."
-          },
-          {
-            "title": "Request equipment for a work order",
-            "steps": [
-              "Open the equipment tab of the work order and click <strong>Add</strong>.",
-              "Select the equipment or accessories from the <strong>Available Equipment / Accessory</strong> panel. Use the search bar to find items.",
-              "Fill in the <strong>Requested Date</strong>, <strong>Supervisor</strong>, <strong>Job ID / Job Name</strong>, <strong>Job Location</strong> and <strong>Notes</strong>.",
-              "Click <strong>Submit</strong>.",
-              "In the <strong>Transfer</strong> dialog, choose the destination, <strong>New LOR</strong> or <strong>REQ</strong>, and set the transfer options."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/work-order/133.jpg",
-                "caption": "Equipment tab with Add button",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/work-order/134.jpg",
-                "caption": "Available Equipment / Accessory panel",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/work-order/135.jpg",
-                "caption": "Submit on the equipment Request Form",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/work-order/136.jpg",
-                "caption": "Transfer dialog",
-                "step": 5
-              },
-              {
-                "src": "assets/guides/work-order/137.jpg",
-                "caption": "Transfer destination New LOR or REQ",
-                "step": 5
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "heading": "Drawings",
-        "intro": "<p>The <strong>Drawings</strong> tab holds the drawings a Technician needs to carry out the work, and lets field staff mark them up. Upload, view, edit, annotate or delete drawings here.</p>",
-        "definitions": [
-          {
-            "term": "Annotate (Drawings)",
-            "definition": "An action available from a drawing's menu that lets you mark changes directly on the drawing file, rather than editing the underlying document."
-          },
-          {
-            "term": "Work order drawing cards",
-            "definition": "Each drawing shows as a card with a thumbnail, title, the uploader and the upload date. Click the thumbnail to open it. Use the options icon for **Edit**, **Annotate** or **Delete**, **Filters** to narrow the list, and the view icons for grid or list."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Upload a drawing to a work order",
-            "steps": [
-              "Go to <strong>Work Order → Drawings</strong>.",
-              "Click <strong>Upload Drawings</strong>.",
-              "Enter the <strong>Drawing Name</strong> and upload the file."
-            ],
-            "note": "The drawing appears as a card with its thumbnail and title, the uploader and the date. Switch between grid and list views.",
-            "images": [
-              {
-                "src": "assets/guides/work-order/158.jpg",
-                "caption": "Drawings tab",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/work-order/159.jpg",
-                "caption": "Upload Drawings button",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/work-order/160.jpg",
-                "caption": "Drawing Name field",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/work-order/161.jpg",
-                "caption": "Drawing cards with thumbnail and uploader",
-                "step": 3
-              }
-            ]
-          },
-          {
-            "title": "Annotate or delete a work order drawing",
-            "steps": [
-              "On Work Order - Drawings, open the ellipsis (...) menu on the drawing.",
-              "Choose <strong>Edit</strong>, <strong>Annotate</strong>, or <strong>Delete</strong>."
-            ],
-            "note": "Choosing Annotate lets you mark changes directly on the drawing file.",
-            "images": [
-              {
-                "src": "assets/guides/work-order/162.jpg",
-                "caption": "Edit, Annotate and Delete options on a drawing",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/work-order/163.jpg",
-                "caption": "Drawing filters and view icons",
-                "step": 2
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "heading": "Documents",
-        "intro": "<p>The <strong>Documents</strong> tab is a folder view of the files that belong to a work order, including the Procurement documents generated at each stage. Anyone on the work order can browse it.</p>",
-        "definitions": [
-          {
-            "term": "Work Order Documents",
-            "definition": "A tab showing all Procurement documents fetched from every Procurement stage related to the work order, organized into folders by stage."
-          },
-          {
-            "term": "Folders by tab",
-            "definition": "Documents are filed in folders named after the tab they came from: Profile, Items, Timesheet, Equipment, Inventory, Procurement, Expense and Communication. Click a folder to open it and use the breadcrumb to go back up."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "View documents related to a work order's procurement",
-            "steps": [
-              "Go to <strong>Work Order &gt; Documents</strong>.",
-              "Click a folder to open the documents linked to that Procurement stage."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/work-order/155.jpg",
-                "caption": "Documents tab folders",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/work-order/156.jpg",
-                "caption": "Folders named after each tab",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/work-order/157.jpg",
-                "caption": "Documents inside a folder",
-                "step": 2
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "heading": "Communication",
-        "intro": "<p>The <strong>Communication</strong> tab is the mailbox of a work order, so correspondence stays attached to the work order instead of a personal inbox. Anyone on the work order can send and read mail here.</p>",
-        "definitions": [
-          {
-            "term": "Work Order Communication",
-            "definition": "A mail repository tab within a work order, with Sent, Starred, Drafts, and Trash sections, functioning like a standard inbox scoped to that work order."
-          },
-          {
-            "term": "Work order mailbox",
-            "definition": "Compose mail, and use the left panel to move between **All Emails**, **Inbox**, **Sent**, **Drafts**, **Starred** and **Trash**. Use **Search mail** to find a message by subject or content. The **Settings** icon sets the signature for the work order."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Send an email from a work order",
-            "steps": [
-              "Go to <strong>Work Order &gt; Communication</strong>.",
-              "Click <strong>Compose Mail</strong> to send a new email."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/work-order/151.jpg",
-                "caption": "Communication tab mailbox",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/work-order/152.jpg",
-                "caption": "Mail folders in the left panel",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/work-order/153.jpg",
-                "caption": "Settings icon on the Communication tab",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/work-order/154.jpg",
-                "caption": "Signature settings",
-                "step": 2
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "heading": "Procurement, Parts, Expense and Schedule",
-        "intro": "<p>These four tabs record what the work consumes and how it is planned: <strong>Procurement</strong> for items to buy, <strong>Parts</strong> for parts the job needs, <strong>Expense</strong> for extra spend, and <strong>Schedule</strong> for planned activities. Technicians, Purchase Executives, Accounts users and Supervisors fill them in. Each one feeds the <strong>Cost</strong> tab.</p>",
-        "definitions": [
-          {
-            "term": "Procurement tab",
-            "definition": "A Purchase Executive or Technician clicks **Requisition** and picks **Equipment**, **Material**, **Equipment Part** or **Delivery Service**, enters the items and submits. The requisition goes into the normal Procurement process. Approved purchase orders count under **Parts** on the Cost tab."
-          },
-          {
-            "term": "Parts tab",
-            "definition": "The **Parts Required** list. Click **Import**, choose the parts and quantities, and click **Submit**. Unit cost comes from the maintenance parts purchase orders in Equipment Management. Parts recorded here are added to the maintenance history of the equipment being serviced. Use the delete icon in the Actions column to remove one."
-          },
-          {
-            "term": "Expense tab",
-            "definition": "Click **Create**, then enter rows with **Item Name**, **Quantity** and **Unit Price**; the **Amount** is calculated. Click **Upload** under Upload Invoice to attach the bill and **Submit**. Each expense shows as a card with the **Expense ID**, **Total Items**, **Amount** and **Created By**. Expenses count under **Other** on the Cost tab."
-          },
-          {
-            "term": "Schedule tab",
-            "definition": "Shows the planned activities of the work order. The Supervisor updates the actual dates, the responsible person and the progress as the work goes on."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Raise a requisition from a work order",
-            "steps": [
-              "Open the <strong>Procurement</strong> tab and click <strong>Requisition</strong>.",
-              "Choose <strong>Equipment</strong>, <strong>Material</strong>, <strong>Equipment Part</strong> or <strong>Delivery Service</strong>.",
-              "Enter the item details and submit."
-            ],
-            "note": "Purchase orders count in the work order cost only after they are approved.",
-            "images": [
-              {
-                "src": "assets/guides/work-order/142.jpg",
-                "caption": "Procurement tab",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/work-order/143.jpg",
-                "caption": "Requisition types",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/work-order/144.jpg",
-                "caption": "Requisition item details",
-                "step": 3
-              }
-            ]
-          },
-          {
-            "title": "Record an expense on a work order",
-            "steps": [
-              "Open the <strong>Expense</strong> tab and click <strong>Create</strong>.",
-              "Add a row for each item with <strong>Item Name</strong>, <strong>Quantity</strong> and <strong>Unit Price</strong>.",
-              "Click <strong>Upload</strong> under Upload Invoice and attach the bill.",
-              "Click <strong>Submit</strong>."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/work-order/145.jpg",
-                "caption": "Create button on the Expense tab",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/work-order/146.jpg",
-                "caption": "Expense rows with Item Name, Quantity and Unit Price",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/work-order/147.jpg",
-                "caption": "Upload Invoice on an expense",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/work-order/148.jpg",
-                "caption": "Submit on an expense",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/work-order/149.jpg",
-                "caption": "Expense cards with Expense ID and Amount",
-                "step": 4
-              }
-            ]
-          },
-          {
-            "title": "Add parts to a work order",
-            "steps": [
-              "Open the <strong>Parts</strong> tab and click <strong>Import</strong>.",
-              "Choose the parts and set the quantity.",
-              "Click <strong>Submit</strong>."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/work-order/164.jpg",
-                "caption": "Parts tab with the Parts Required list",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/work-order/165.jpg",
-                "caption": "Import button on the Parts tab",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/work-order/166.jpg",
-                "caption": "Parts and quantities to submit",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/work-order/167.jpg",
-                "caption": "Added parts with the delete icon",
-                "step": 3
-              }
-            ]
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/guides/work-order/150.jpg",
-            "caption": "Schedule tab with planned activities"
-          }
-        ]
-      },
-      {
-        "heading": "Invoices and Cost",
-        "intro": "<p>The <strong>Invoices</strong> tab is where an Accounts user records vendor invoices for a work order and approvers approve them. The <strong>Cost</strong> tab is where an Approver or Administrator sees the resulting cost. Nobody types a cost into the Cost tab, because it fills itself from the other tabs.</p>",
-        "definitions": [
-          {
-            "term": "Invoices tab",
-            "definition": "Two sub-tabs: **Invoice** and **Workflow Issues**. Each invoice lists **Invoice**, **Vendor**, **Date**, **Amount**, **Status** and **Created By**. Approvers use **Approve** and **Reject** on each row. Invoices stuck in approval appear under **Workflow Issues**. The routing is set under **Settings → Invoices**."
-          },
-          {
-            "term": "Cost tab",
-            "definition": "Shows cost by category with its source. **Parts** = approved purchase orders from the Procurement tab plus Inventory pulls. **Labor** = timesheet hours times rate. **External / Vendor** = approved vendor invoices matched to the work order. **Other** = Expense tab entries. **Net Cost** = the total."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Record a vendor invoice on a work order",
-            "steps": [
-              "Open the <strong>Invoices</strong> tab and click <strong>Create</strong> on the <strong>Invoice</strong> sub-tab.",
-              "Enter the invoice details: the <strong>Vendor</strong>, the invoice <strong>Date</strong> and the <strong>Amount</strong>.",
-              "Submit it for approval. Approvers then use <strong>Approve</strong> or <strong>Reject</strong> on the row."
-            ],
-            "note": "The invoice value is added to the work order cost only after every approval level has approved.",
-            "images": [
-              {
-                "src": "assets/guides/work-order/168.jpg",
-                "caption": "Invoices tab with Invoice and Workflow Issues",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/work-order/169.jpg",
-                "caption": "Create on the Invoice sub-tab",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/work-order/170.jpg",
-                "caption": "Invoice details form",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/work-order/171.jpg",
-                "caption": "Submit for approval",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/work-order/172.jpg",
-                "caption": "Invoice list with status",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/work-order/173.jpg",
-                "caption": "Invoice search and Manage Columns",
-                "step": 3
-              }
-            ]
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/guides/work-order/174.jpg",
-            "caption": "Cost tab with category-wise cost"
-          }
-        ]
-      },
-      {
-        "heading": "Approval, Cancel and Reopen",
-        "intro": "<p>An Approver decides whether a work order goes ahead, and the Requester or Approver can later cancel or reopen it. Approval follows the workflow set up under <strong>Settings → Approval Workflow</strong>.</p>",
-        "definitions": [
-          {
-            "term": "Approved and Completed work orders",
-            "definition": "An approved or completed work order becomes read-only. The equipment record updates to match the operational status on the work order, and the work order is added to the equipment's maintenance history."
-          },
-          {
-            "term": "Reopen Window",
-            "definition": "The number of days after a work order first becomes Completed or Cancelled during which it can be reopened. It is counted from the first time it reached that state, and set under **Settings → Configuration**."
-          },
-          {
-            "term": "Work order life cycle",
-            "definition": "A work order starts with the status chosen in **Work Order Status** when it is created. The Requester then clicks **Submit** or **Submit for Approval**. If the Approver approves, the work proceeds. If the Approver rejects, the work order returns to the Requester with the remarks and a workflow issue is listed, and the Requester edits and resubmits. When the work is done it becomes Completed and read-only. Anyone with permission can cancel it from the kebab menu. A Completed or Cancelled work order can be reopened, with a reason, until the Reopen Window (days) runs out, after which it locks. The statuses you can pick are set under **Settings → Status**."
-          },
-          {
-            "term": "Who approves what",
-            "definition": "Work orders go to the approvers set on the **Approval Workflow** for the work order type. Vendor invoices go to the approvers set under **Settings → Invoices**. Timesheets go to the approvers on the timesheet approval workflow. Each has its own levels, and the item moves on only when every level has approved."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Approve or reject a work order",
-            "steps": [
-              "Open the work order, and review its tabs, items, cost and attachments.",
-              "The Requester clicks <strong>Submit for Approval</strong>.",
-              "The Approver clicks <strong>Approve</strong> or <strong>Reject</strong> and enters comments."
-            ],
-            "note": "On approval, the work proceeds. On rejection, the work order returns to the Requester with the remarks, and a workflow issue appears under **Workflow Issues**. The Requester edits it and resubmits. With several levels, it stays pending until every level approves.",
-            "images": [
-              {
-                "src": "assets/guides/work-order/175.jpg",
-                "caption": "Work order ready for review",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/work-order/176.jpg",
-                "caption": "Submit for Approval button",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/work-order/177.jpg",
-                "caption": "Approve and Reject with comments",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/work-order/178.jpg",
-                "caption": "Approved work order",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/work-order/179.jpg",
-                "caption": "Rejected work order in Workflow Issues",
-                "step": 2
-              }
-            ]
-          },
-          {
-            "title": "Cancel a work order",
-            "steps": [
-              "Open the work order and click the kebab menu on the <strong>Profile</strong> tab.",
-              "Choose <strong>Cancel Work Order</strong> and confirm the warning."
-            ],
-            "note": "Materials already issued must be returned to the store through the Inventory module.",
-            "images": [
-              {
-                "src": "assets/guides/work-order/180.jpg",
-                "caption": "Kebab menu with Cancel Work Order",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/work-order/181.jpg",
-                "caption": "Cancel confirmation warning",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/work-order/182.jpg",
-                "caption": "Cancelled work order",
-                "step": 2
-              }
-            ]
-          },
-          {
-            "title": "Reopen a cancelled work order",
-            "steps": [
-              "Open the Completed or Cancelled work order and click the kebab menu on the <strong>Profile</strong> tab.",
-              "Choose <strong>Reopen Work Order</strong>.",
-              "Enter the reason and click <strong>reopen</strong>."
-            ],
-            "note": "This works only within the Reopen Window (days) set under Settings → Configuration. The window counts from the first time the work order became Completed or Cancelled.",
-            "images": [
-              {
-                "src": "assets/guides/work-order/183.jpg",
-                "caption": "Reopen Work Order in the kebab menu",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/work-order/184.jpg",
-                "caption": "Reason for reopening",
-                "step": 3
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "heading": "Reports",
-        "intro": "<p>The <strong>Reports</strong> tab of the Work Order page has the <strong>Equipment Breakdown Report</strong>, which Administrators and Approvers use to track which equipment is down and what it costs.</p>",
-        "definitions":[
-          {
-            "term": "Equipment Breakdown Report",
-            "definition": "Lists equipment breakdowns recorded through work orders. Columns: **Equipment ID**, **Status**, **Make**, **Model**, **Category**, **Project**, **Down Date**, **Estimated Back in Service**, **Vendor** (Internal when done in-house), **Notes**, **Cost/Estimate**, **Warranty** and **Responsible party**. Search by work order or asset ID, use **Filters** or column filters, **Manage Columns** (you can save several layouts) and **Export** to download with the filters applied. Your company may see this as the **Asset Breakdown Report** (naming framework: **Global Data → Settings → Naming Framework**)."
-          },
-          {
-            "term": "Who uses the Equipment Breakdown Report",
-            "definition": "Administrators and Approvers use it to track the condition of the fleet: which assets are down, since when, when they should be back, who is repairing them and what it costs. Status shows the operational status chosen on the work order (Operational, Down - Major Repairs, Running - Minor Repairs or Running - Due for PM). Vendor shows Internal when the work is done in-house."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Run the Equipment Breakdown Report",
-            "steps": [
-              "Open the <strong>Reports</strong> tab on the Work Order page.",
-              "Click <strong>Equipment Breakdown Report</strong>.",
-              "Search or filter, and adjust the columns with <strong>Manage Columns</strong>.",
-              "Click <strong>Export</strong> to download it."
-            ],
-            "note": "The Status column shows the operational status set on the work order.",
-            "images": [
-              {
-                "src": "assets/guides/work-order/185.jpg",
-                "caption": "Reports tab",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/work-order/186.jpg",
-                "caption": "Equipment Breakdown Report",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/work-order/187.jpg",
-                "caption": "Search by work order or asset ID",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/work-order/188.jpg",
-                "caption": "Filters and Manage Columns on the report",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/work-order/189.jpg",
-                "caption": "Export on the Equipment Breakdown Report",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/work-order/190.jpg",
-                "caption": "Responsible party column",
-                "step": 3
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "heading": "Troubleshooting: Work Order Problems",
+        "heading": "Troubleshooting",
         "intro": "<p>Use this page when a work order does not behave as expected. Most problems come from a setting the administrator has not made yet.</p>",
         "definitions": [],
         "procedures": [
@@ -30932,22 +30932,22 @@ const MODULES = [
       "Open the <strong>Reports</strong> tab for the <strong>Equipment Breakdown Report</strong>."
     ],
     "sections":[
-      "Who Does What",
-      "Settings",
-      "The Work Orders Page",
-      "Profile and Items",
+      "Overview",
+      "Work Orders",
+      "Profile",
       "Team",
       "Timesheets",
-      "Inventory",
       "Equipment",
-      "Drawings",
-      "Documents",
+      "Inventory",
+      "Procurement",
       "Communication",
-      "Procurement, Parts, Expense and Schedule",
-      "Invoices and Cost",
-      "Approval, Cancel and Reopen",
+      "Documents",
+      "Drawings",
+      "Invoices",
+      "Approval",
       "Reports",
-      "Troubleshooting: Work Order Problems"
+      "Settings",
+      "Troubleshooting"
     ]
   },
   {
@@ -31150,7 +31150,7 @@ const MODULES = [
     "qaItems": QA_PROPOSALMANAGEMENT,
     "narrative": [
       {
-        "heading": "Who sets this up",
+        "heading": "Overview",
         "intro": "<p>Proposal Management tracks each bid from first enquiry to submitted package. A <strong>Module Admin</strong> sets up the shared lists and approval workflows once; <strong>Estimators</strong> and <strong>PMs</strong> then create proposals, <strong>approvers</strong> sign them off, and results show up in the Dashboard and Analytics.</p><p>From <strong>Home</strong>, click the <strong>Proposal Management</strong> tile. The tabs are <strong>My Dashboard</strong>, <strong>Proposals</strong>, <strong>Analytics</strong>, <strong>Issues</strong>, <strong>Push Datasets</strong>, <strong>Calendar</strong>, <strong>To Do List</strong> and the <strong>Settings</strong> gear. The module opens on Proposals.</p>",
         "definitions": [
           {
@@ -31334,7 +31334,7 @@ const MODULES = [
           },
           {
             "term": "Where this data comes from and goes",
-            "definition": "Types, statuses, codes and delivery methods come from **Settings**; customers, owners and locations from **Global Data**; the Opportunity from **Opportunity Management** (see \"Where Proposal Fields Come From\"). Proposals feed **My Dashboard**, **Analytics** and the **Weekly Report**."
+            "definition": "Types, statuses, codes and delivery methods come from **Settings**; customers, owners and locations from **Global Data**; the Opportunity from **Opportunity Management** (see \"Proposal Fields\"). Proposals feed **My Dashboard**, **Analytics** and the **Weekly Report**."
           },
           {
             "term": "Comments",
@@ -31593,7 +31593,7 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Where Proposal Fields Come From",
+        "heading": "Proposal Fields",
         "intro": "<p>Every drop-down on a proposal Profile reads a list kept somewhere else. This section names that source so a <strong>Module Admin</strong> or <strong>Estimator</strong> knows where to add a missing value.</p><p>Open a proposal (click its name) to see the Profile. Each drop-down below matches its source list.</p>",
         "definitions": [
           {
@@ -31669,7 +31669,7 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Bid Tab (Tenders)",
+        "heading": "Bid",
         "intro": "<p>The Bid tab of a proposal lists the tenders raised for that proposal and lets an <strong>Estimator</strong> or <strong>PM</strong> start a new one. Tenders themselves are run in <strong>Tender Management</strong>.</p><p>The tab shows <strong>Add Tender</strong>, search, <strong>Filters</strong>, <strong>Manage Columns</strong>, table / grid views, <strong>Show as Graph</strong> and a table with <strong>Tender Name</strong>, <strong>Tender ID</strong>, <strong>Description</strong>, <strong>Proposal Linked</strong>, <strong>Bid Type</strong>, <strong>Status</strong>, <strong>Approve</strong>, <strong>Reject</strong>, <strong>Approval Status</strong> and <strong>Actions</strong>.</p>",
         "definitions": [
           {
@@ -31705,102 +31705,6 @@ const MODULES = [
               "Choose the table or grid icon.",
               "Click **Save Layout** to keep the choice, or **Show as Graph** to see the tenders as a chart."
             ]
-          }
-        ]
-      },
-      {
-        "heading": "Submittals",
-        "intro": "<p>Within Proposal Management, a Submittal is a formal letter attached to a proposal — for example, a budgetary letter — used to communicate specific information to the client as part of the proposal process. Rather than drafting each of these from a blank page, the feature is built around reuse: submittal letters can be authored fresh in Google Docs, or pulled in as a pre-built template from Proposal Settings and auto-filled with data straight from the proposal's own profile, cutting out repetitive manual entry.</p>",
-        "definitions": [
-          {
-            "term": "Submittal (proposal)",
-            "definition": "A formal letter (e.g. a budgetary letter) attached to a proposal, either drafted fresh or imported from a configured template."
-          },
-          {
-            "term": "Auto Fill Fields",
-            "definition": "An option, available when importing a submittal template from Global Data, that automatically populates submittal keys using data from the proposal profile."
-          },
-          {
-            "term": "Submittal tab layout",
-            "definition": "Sub-tabs **Letter** and **Budgetary Letter**, a **Create** button and search. **Create** opens **Create Submittal Letter** with **Create new letter** or **Import From Global Data**."
-          },
-          {
-            "term": "Where this data comes from and goes",
-            "definition": "Imported letters come from the **Submittals** templates in Settings. Filled letters are filed in the proposal's **Documents → Submittals** folder and can be added to a submission package."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Add a submittal letter to a proposal",
-            "steps": [
-              "In the proposal's <strong>Submittals</strong> tab, click <strong>Create</strong>.",
-              "Choose <strong>Create New Letter</strong> to draft a new template in Google Docs, or <strong>Import From Global Data</strong> to reuse a configured template from Proposal Settings.",
-              "If importing, optionally enable <strong>Auto Fill Fields</strong> to populate submittal keys from the proposal profile."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/proposal-management-proposals-submittals-letter/001.jpg",
-                "caption": "Import from Global Data, with Auto Fill Fields",
-                "step": 3
-              }
-            ]
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/notion/proposal-management-proposals-submittals-letter/002.jpg",
-            "caption": "Search, to find submittals"
-          },
-          {
-            "src": "assets/notion/proposal-management-proposals-submittals-letter/003.jpg",
-            "caption": "Deleting a submittal, with a confirmation pop-up"
-          }
-        ]
-      },
-      {
-        "heading": "Checklists",
-        "intro": "<p>Checklists give a proposal a structured way to confirm that required steps or quality criteria have been met before moving forward — the same kind of gating mechanism used elsewhere in Arena for quality inspections, applied here to the business-development process. Rather than being freeform, every checklist a proposal can use is built from a template configured centrally in Settings, ensuring the same checklist means the same thing across every proposal in the company. Once filled in, a checklist doesn't just sit inside its own tab — it's automatically filed into the proposal's Documents tab as a folder, keeping everything discoverable from one place.</p>",
-        "definitions": [
-          {
-            "term": "Checklist (proposal)",
-            "definition": "A form, built from a template configured in Proposal Settings → Checklists, filled out and submitted against a specific proposal."
-          },
-          {
-            "term": "Checklist tabs",
-            "definition": "The tab names across the top are the checklist templates in Settings → Checklists: **Safety**, **Legal Review** and **Quality**. **Create Form** opens the template form (for Safety: address, phone, zip code, questions such as Trenching/Excavation and Underground Piping with Yes/No, and Comments / Safety Response), with **Cancel** and **Submit**. Each saved form is a card such as \"ID 5, Created By System Admin, Created On 09-17-2024\"."
-          },
-          {
-            "term": "Where this data comes from and goes",
-            "definition": "Templates come from **Settings → Checklists**. Submitted forms are filed in **Documents → Checklists** and counted on the **My Dashboard → Forms** panel (Legal Review, Safety, Quality) and in submission packages."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Add a checklist to a proposal",
-            "steps": [
-              "In the proposal's <strong>Checklists</strong> tab, click <strong>Create Form</strong>.",
-              "Choose from the forms configured in Proposal Settings → Checklists.",
-              "Fill in the fields and click <strong>Submit</strong>."
-            ],
-            "note": "Created forms are stored automatically in the Documents tab as a folder.",
-            "images": [
-              {
-                "src": "assets/notion/proposal-management-proposals-checklists/001.jpg",
-                "caption": "Checklists: forms for quality, safety and legal checks",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/proposal-management-proposals-checklists/002.jpg",
-                "caption": "Create Form, choosing from the forms set up in settings",
-                "step": 2
-              }
-            ]
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/notion/proposal-management-proposals-checklists/003.jpg",
-            "caption": "Deleting a checklist on a proposal"
           }
         ]
       },
@@ -31920,49 +31824,38 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Issues",
-        "intro": "<p>The Issues tab exists specifically for the moment a proposal's approval gets rejected. Rather than the rejection simply reverting the proposal to an editable state with no further record, Arena logs it as a distinct, trackable issue — preserving why it was rejected and by whom, and blocking the proposal from proceeding until the issue is explicitly resolved. This mirrors the same rejection-to-issue pattern used for forms, quality, and safety elsewhere in Arena, applied here to the proposal approval chain itself.</p>",
+        "heading": "Submittals",
+        "intro": "<p>Within Proposal Management, a Submittal is a formal letter attached to a proposal — for example, a budgetary letter — used to communicate specific information to the client as part of the proposal process. Rather than drafting each of these from a blank page, the feature is built around reuse: submittal letters can be authored fresh in Google Docs, or pulled in as a pre-built template from Proposal Settings and auto-filled with data straight from the proposal's own profile, cutting out repetitive manual entry.</p>",
         "definitions": [
           {
-            "term": "Proposal Issue",
-            "definition": "A record created automatically when a proposal is rejected by an approver; the proposal cannot proceed until the issue is resolved."
+            "term": "Submittal (proposal)",
+            "definition": "A formal letter (e.g. a budgetary letter) attached to a proposal, either drafted fresh or imported from a configured template."
           },
           {
-            "term": "Issues tab layout",
-            "definition": "Search, counters (Total Issues, Issues Approved, Issues Rejected), **Filters** (Log ID, Raised On, Raised By) and grid / table views. Each card shows \"Raised on 12th June 2024, at 06:46 pm by System Admin, Level 1\", the **PI No.** (for example PI No. 3), the **Proposal ID** (8), Comments, the word Rejected and **Assign To**."
+            "term": "Auto Fill Fields",
+            "definition": "An option, available when importing a submittal template from Global Data, that automatically populates submittal keys using data from the proposal profile."
+          },
+          {
+            "term": "Submittal tab layout",
+            "definition": "Sub-tabs **Letter** and **Budgetary Letter**, a **Create** button and search. **Create** opens **Create Submittal Letter** with **Create new letter** or **Import From Global Data**."
           },
           {
             "term": "Where this data comes from and goes",
-            "definition": "An issue is created when an approver rejects a proposal at a level of the **Settings → Approval Workflow**. It is counted on **My Dashboard → Issues** (Proposal Workflow Issues). Submission package rejections are listed separately under the **Submission Packages → Workflow Issue** tab."
+            "definition": "Imported letters come from the **Submittals** templates in Settings. Filled letters are filed in the proposal's **Documents → Submittals** folder and can be added to a submission package."
           }
         ],
         "procedures": [
           {
-            "title": "Track and resolve a proposal approval rejection",
+            "title": "Add a submittal letter to a proposal",
             "steps": [
-              "Open the proposal's <strong>Issues</strong> tab to see any rejection-generated issues.",
-              "Use <strong>Search</strong> (by Issue ID) or <strong>Filters</strong> (Log ID, Raised On, Raised By) to find a specific issue.",
-              "Use <strong>Assign To</strong> to route the issue to a user for resolution."
+              "In the proposal's <strong>Submittals</strong> tab, click <strong>Create</strong>.",
+              "Choose <strong>Create New Letter</strong> to draft a new template in Google Docs, or <strong>Import From Global Data</strong> to reuse a configured template from Proposal Settings.",
+              "If importing, optionally enable <strong>Auto Fill Fields</strong> to populate submittal keys from the proposal profile."
             ],
             "images": [
               {
-                "src": "assets/notion/proposal-management-issues/002.jpg",
-                "caption": "The status bar: issues raised, approved and rejected",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/proposal-management-issues/001.jpg",
-                "caption": "Search by Issue ID",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/proposal-management-issues/003.jpg",
-                "caption": "Filters: Log ID, Raised On and more",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/proposal-management-issues/005.jpg",
-                "caption": "Assign To, with a date",
+                "src": "assets/notion/proposal-management-proposals-submittals-letter/001.jpg",
+                "caption": "Import from Global Data, with Auto Fill Fields",
                 "step": 3
               }
             ]
@@ -31970,8 +31863,59 @@ const MODULES = [
         ],
         "images": [
           {
-            "src": "assets/notion/proposal-management-issues/004.jpg",
-            "caption": "Grid and Table views for issues"
+            "src": "assets/notion/proposal-management-proposals-submittals-letter/002.jpg",
+            "caption": "Search, to find submittals"
+          },
+          {
+            "src": "assets/notion/proposal-management-proposals-submittals-letter/003.jpg",
+            "caption": "Deleting a submittal, with a confirmation pop-up"
+          }
+        ]
+      },
+      {
+        "heading": "Checklists",
+        "intro": "<p>Checklists give a proposal a structured way to confirm that required steps or quality criteria have been met before moving forward — the same kind of gating mechanism used elsewhere in Arena for quality inspections, applied here to the business-development process. Rather than being freeform, every checklist a proposal can use is built from a template configured centrally in Settings, ensuring the same checklist means the same thing across every proposal in the company. Once filled in, a checklist doesn't just sit inside its own tab — it's automatically filed into the proposal's Documents tab as a folder, keeping everything discoverable from one place.</p>",
+        "definitions": [
+          {
+            "term": "Checklist (proposal)",
+            "definition": "A form, built from a template configured in Proposal Settings → Checklists, filled out and submitted against a specific proposal."
+          },
+          {
+            "term": "Checklist tabs",
+            "definition": "The tab names across the top are the checklist templates in Settings → Checklists: **Safety**, **Legal Review** and **Quality**. **Create Form** opens the template form (for Safety: address, phone, zip code, questions such as Trenching/Excavation and Underground Piping with Yes/No, and Comments / Safety Response), with **Cancel** and **Submit**. Each saved form is a card such as \"ID 5, Created By System Admin, Created On 09-17-2024\"."
+          },
+          {
+            "term": "Where this data comes from and goes",
+            "definition": "Templates come from **Settings → Checklists**. Submitted forms are filed in **Documents → Checklists** and counted on the **My Dashboard → Forms** panel (Legal Review, Safety, Quality) and in submission packages."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Add a checklist to a proposal",
+            "steps": [
+              "In the proposal's <strong>Checklists</strong> tab, click <strong>Create Form</strong>.",
+              "Choose from the forms configured in Proposal Settings → Checklists.",
+              "Fill in the fields and click <strong>Submit</strong>."
+            ],
+            "note": "Created forms are stored automatically in the Documents tab as a folder.",
+            "images": [
+              {
+                "src": "assets/notion/proposal-management-proposals-checklists/001.jpg",
+                "caption": "Checklists: forms for quality, safety and legal checks",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/proposal-management-proposals-checklists/002.jpg",
+                "caption": "Create Form, choosing from the forms set up in settings",
+                "step": 2
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/proposal-management-proposals-checklists/003.jpg",
+            "caption": "Deleting a checklist on a proposal"
           }
         ]
       },
@@ -32094,6 +32038,62 @@ const MODULES = [
           {
             "src": "assets/notion/proposal-management-to-do/010.jpg",
             "caption": "Edit and delete in the Actions column"
+          }
+        ]
+      },
+      {
+        "heading": "Issues",
+        "intro": "<p>The Issues tab exists specifically for the moment a proposal's approval gets rejected. Rather than the rejection simply reverting the proposal to an editable state with no further record, Arena logs it as a distinct, trackable issue — preserving why it was rejected and by whom, and blocking the proposal from proceeding until the issue is explicitly resolved. This mirrors the same rejection-to-issue pattern used for forms, quality, and safety elsewhere in Arena, applied here to the proposal approval chain itself.</p>",
+        "definitions": [
+          {
+            "term": "Proposal Issue",
+            "definition": "A record created automatically when a proposal is rejected by an approver; the proposal cannot proceed until the issue is resolved."
+          },
+          {
+            "term": "Issues tab layout",
+            "definition": "Search, counters (Total Issues, Issues Approved, Issues Rejected), **Filters** (Log ID, Raised On, Raised By) and grid / table views. Each card shows \"Raised on 12th June 2024, at 06:46 pm by System Admin, Level 1\", the **PI No.** (for example PI No. 3), the **Proposal ID** (8), Comments, the word Rejected and **Assign To**."
+          },
+          {
+            "term": "Where this data comes from and goes",
+            "definition": "An issue is created when an approver rejects a proposal at a level of the **Settings → Approval Workflow**. It is counted on **My Dashboard → Issues** (Proposal Workflow Issues). Submission package rejections are listed separately under the **Submission Packages → Workflow Issue** tab."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Track and resolve a proposal approval rejection",
+            "steps": [
+              "Open the proposal's <strong>Issues</strong> tab to see any rejection-generated issues.",
+              "Use <strong>Search</strong> (by Issue ID) or <strong>Filters</strong> (Log ID, Raised On, Raised By) to find a specific issue.",
+              "Use <strong>Assign To</strong> to route the issue to a user for resolution."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/proposal-management-issues/002.jpg",
+                "caption": "The status bar: issues raised, approved and rejected",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/proposal-management-issues/001.jpg",
+                "caption": "Search by Issue ID",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/proposal-management-issues/003.jpg",
+                "caption": "Filters: Log ID, Raised On and more",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/proposal-management-issues/005.jpg",
+                "caption": "Assign To, with a date",
+                "step": 3
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/proposal-management-issues/004.jpg",
+            "caption": "Grid and Table views for issues"
           }
         ]
       },
@@ -32668,17 +32668,17 @@ const MODULES = [
       "Open a proposal to reach its Bid, Submission Package, Submittals, Checklists, Teams, Documents, Communication, and Calendar tabs."
     ],
     "sections": [
-      "Who sets this up",
+      "Overview",
       "My Dashboard",
       "Proposals",
-      "Where Proposal Fields Come From",
-      "Bid Tab (Tenders)",
+      "Proposal Fields",
+      "Bid",
+      "Submission Packages",
       "Submittals",
       "Checklists",
-      "Submission Packages",
-      "Issues",
       "Calendar",
       "To Do List",
+      "Issues",
       "Analytics & Reports",
       "Push Datasets",
       "Settings"
@@ -32690,7 +32690,7 @@ const MODULES = [
     "qaItems": QA_TENDERMANAGEMENT,
     "narrative": [
       {
-        "heading": "Who sets this up",
+        "heading": "Overview",
         "intro": "<p>Tender Management is run by a <strong>Module Admin</strong> who sets up the lists and approval workflows once, and by <strong>Tender Managers / PMs</strong> who create and run each tender. Approvers sign tenders off, and vendors respond through their own view of the module.</p><p>From <strong>Home</strong>, click the <strong>Tender Management</strong> tile (\"Create Tenders, compare bids, and manage all tendering operations in one place\"). The module opens on the <strong>Tenders</strong> list.</p>",
         "definitions": [
           {
@@ -32722,7 +32722,7 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Tender List and Creating a Tender",
+        "heading": "Tenders",
         "intro": "<p>The <strong>Tenders</strong> tab is the list of every tender, used by tender managers to create tenders and by approvers to review them. A new tender is sent for approval, and only an approved tender can be opened.</p><p>The list has <strong>Add Tender</strong>, search, <strong>Filters</strong>, <strong>Manage Columns</strong>, <strong>Table View</strong> and <strong>Grid View</strong>, <strong>Save Layout</strong> and <strong>Show as Graph</strong>. Status chips along the top count tenders by status.</p>",
         "definitions": [
           {
@@ -32791,7 +32791,7 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Tender Setup: Profile, Team, Scope of Work and Submission",
+        "heading": "Tender Details",
         "intro": "<p><strong>Tender Details > Tender Setup</strong> holds everything about the tender itself, and is used by the tender manager before bidders are invited. Its tabs are <strong>Profile</strong>, <strong>Teams</strong>, <strong>Status & Comments</strong>, <strong>Documents</strong>, <strong>Communication</strong>, <strong>Scope of Work</strong>, <strong>Technical Package</strong> and <strong>Submission Package</strong>.</p><p>Which tabs you see depends on how far the tender has progressed: a tender that has just been set up shows only Tender Setup, while a Completed tender also shows Tender Response, Negotiated Responses and Awarded Work Order.</p>",
         "definitions": [
           {
@@ -32908,7 +32908,7 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Pre-Qualification: Choose Which Vendors May Bid",
+        "heading": "Pre-Qualification",
         "intro": "<p>The <strong>Pre-Qualification</strong> card shortlists vendors before they receive the tender, used by the tender manager and approvers. It has four steps: <strong>1 Choose Template</strong>, <strong>2 Send to Tenderer</strong>, <strong>3 Response & Qualification</strong> and <strong>4 List of Qualified</strong>.</p><p>The qualified vendors are then the only ones who appear in the Technical Package and Financial Package. The option <strong>Selective Bidding - No Prequalification</strong> is named to skip this step.</p>",
         "definitions": [
           {
@@ -32946,7 +32946,7 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Tender Response: Technical and Financial Packages",
+        "heading": "Tender Response",
         "intro": "<p><strong>Tender Details > Tender Response</strong> is where the tender manager and evaluators read what the qualified vendors submitted. It has two tabs: <strong>Technical Package</strong> and <strong>Financial Package</strong>.</p><p>Vendors submit through the <strong>Bid</strong> tab of their own login (it lists the tenders they may answer and the <strong>Bid Submission Status</strong>); the admin's Bid tab is empty.</p>",
         "definitions": [
           {
@@ -32986,7 +32986,7 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Comparing Bids, Negotiating and Awarding a Work Order",
+        "heading": "Bid Comparison",
         "intro": "<p>After responses come in, evaluators compare vendor prices, shortlist for negotiation and award a work order. This is done inside the <strong>Financial Package</strong>, <strong>Negotiated Responses</strong> and <strong>Awarded Work Order</strong> tabs.</p><p>The winner becomes a work order that lives inside the tender; it is not added to the Home <strong>Work Order</strong> list.</p>",
         "definitions": [
           {
@@ -33052,153 +33052,7 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Bid Types and Tender Settings",
-        "intro": "<p><strong>Settings</strong> holds the lists and templates that shape every tender, used by the Module Admin. Its menu has <strong>Bid Type</strong>, <strong>Scope of Work</strong>, <strong>Agreement</strong>, <strong>Status Configuration</strong>, <strong>Approval Workflow</strong>, <strong>Bid Templates</strong>, <strong>BOQ & Estimate Template</strong>, <strong>Pre Qualification Template</strong>, <strong>Technical Package Template</strong> and <strong>Users and Permissions</strong>.</p>",
-        "definitions": [
-          {
-            "term": "Bid Type",
-            "definition": "Cards **Build-Own-Transfer Bid Type**, **Speciality Items Bid Type**, **General Bid Type** with Description, Created On and Created By; the **Bid Type** button adds one. These are the same three bid types as in **Proposal Management > Settings > Bid Types**, and feed **Select Bid Type**, the Profile and the analytics filters."
-          },
-          {
-            "term": "Scope of Work and Agreement",
-            "definition": "**Create Template** offers **Create Scope of Work Template** / **Upload Scope of Work Template**, and likewise for **Agreement**. The scope templates feed **Import from settings** in a tender."
-          },
-          {
-            "term": "Status Configuration",
-            "definition": "Nine statuses: **In-Progress** (first), **Draft**, **Under Review**, **Reopened**, **Shortlisted**, **Awarded**, **Rejected**, **Pre Qualification**, **Completed** (last). **Add Status** adds one; only the middle ones can be deleted. They feed **Bid Status** and the status chips."
-          },
-          {
-            "term": "Approval Workflow",
-            "definition": "Three tabs: **Bid**, **Pre Qualification**, **Technical Package**. Each has **Create Level** and a table (**Level**, **Level Description**, **Approvers**, **Workflow Type**, **Actions**)."
-          },
-          {
-            "term": "Bid Templates",
-            "definition": "The list of BOQ items with **Add Item**, **Download Excel**, **Download Sample Excel**, **Upload Excel**. It is the same list as **Global Data > Bid Templates**."
-          },
-          {
-            "term": "BOQ & Estimate Template",
-            "definition": "Ten estimate templates (**Test**, **Item Rate**, **Ori BQ**, **M&E BQ**, **Lump Sum**, **Unit Rate**, **Guaranteed Maximum Price**, **Cost-Plus**, **Time & Material**, **Time & Material (Global)**). **Create Template** asks for a **Name** and **Description**. They are the templates offered in a tender's Scope of Work."
-          },
-          {
-            "term": "Pre Qualification Template and Technical Package Template",
-            "definition": "Two templates each (**Application Form**, **Application Form for Pre-Qualification**; **Critical Technical Aspects**, **General Technical Capabilities**), each with **Create Template**."
-          },
-          {
-            "term": "Users and Permissions",
-            "definition": "**Add User Group** opens a page with **Permissions** and **Users** tabs. The grid has **View**, **Create**, **Edit**, **Delete**, **Admin**, **Download**, **Print**, **Assign To** and **Roll Back** for Bid Management (Profile, Team, Status And Comments, Documents, Communication, Scope Of Work, Bid Criteria, Submission, Submission Approval Workflow), Bid Management Settings, Bid Response (Log Subcontractor Response, Compare Contractor Price, Agreement, Work Order), Analytics and Issues."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Define a new bid type",
-            "steps": [
-              "Go to <strong>Proposal Management → Settings → Bid Types</strong>.",
-              "Click <strong>Bid Type</strong> to open the creation form.",
-              "Enter a <strong>Name</strong> and <strong>Description</strong>, and choose the <strong>Estimate Type</strong> that defines how bids of this type will be structured and evaluated."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/proposal-management-global-bid-types/001.jpg",
-                "caption": "Bid Type: the pop-up with Name, Description and Estimate Type",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/proposal-management-global-bid-types/002.jpg",
-                "caption": "Editing a bid type's name, description and estimate type",
-                "step": 3
-              }
-            ],
-            "note": "The screenshots show the pop-up from Proposal Management, where bid types are shared."
-          },
-          {
-            "title": "Change the statuses a tender can have",
-            "steps": [
-              "Open **Settings > Status Configuration**.",
-              "Click **Add Status** to add one, the pencil to rename, or the bin to delete a middle status."
-            ]
-          },
-          {
-            "title": "Add an approval level",
-            "steps": [
-              "Open **Settings > Approval Workflow** and choose **Bid**, **Pre Qualification** or **Technical Package**.",
-              "Click **Create Level**, choose **All must approve** or **Any one can approve**, add a description and pick approvers."
-            ]
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/notion/proposal-management-global-bid-types/004.jpg",
-            "caption": "Deleting a bid type, with a warning"
-          }
-        ]
-      },
-      {
-        "heading": "Analytics, Issues and the Bid Tab",
-        "intro": "<p>These three tabs summarise tenders for managers: <strong>Analytics & Reports</strong>, <strong>Issues</strong> and <strong>Bid</strong>.</p><p>The charts read the tenders from the list, so a tender must exist and have a status and values to appear.</p>",
-        "definitions": [
-          {
-            "term": "Analytics & Reports (5 cards)",
-            "definition": "**Bid Awarded Rate** (success rate by quantity and currency value, with a **Bid Types** filter), **Estimate Awarded Rate**, **Types of Bids** (quantity and amount), **Success & Estimate Over Time** (status filter) and **Weekly Report**. Charts have download and zoom icons."
-          },
-          {
-            "term": "Weekly Report",
-            "definition": "A **Date Range** filter, download / share / print icons and a table: **Tender Name**, **Bid Type**, **Description**, **Proposal Name**, **Start Date**, **End Date**, **Bid Estimated Value**, **Bid Submitted Value**, **Owner Name**, **Job Location**, **Opportunity**, **Project**. Tenders with status **Unassigned** are not listed."
-          },
-          {
-            "term": "Issues",
-            "definition": "Workflow issues raised on tender approvals: counters (Total, Approved, Rejected), **Filters** and a table (**WFL Number**, **Level**, **Raised on Date/Time**, **Raised by**, **Comments**, **Assign To**, **Due Date**, **Chat**, **See History**). The Submission Package > Issues tab inside a tender is separate."
-          },
-          {
-            "term": "Bid tab",
-            "definition": "The vendor-facing list of tenders to answer, with **Bid Submission Status**. It is empty for the admin (\"No Data Available\")."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Check how tenders are performing",
-            "steps": [
-              "Open **Analytics & Reports**.",
-              "Click a card, for example **Bid Awarded Rate**, and filter by **Bid Types**.",
-              "Use the download icon to save a chart."
-            ]
-          }
-        ]
-      },
-      {
-        "heading": "Where Tender Data Comes From and Goes",
-        "intro": "<p>This section traces each tender list and where its results end up, for admins checking why a value is missing.</p><p>Tender Management reuses data from <strong>Global Data</strong>, <strong>Proposal Management</strong>, <strong>Opportunity Management</strong> and <strong>Projects</strong>.</p>",
-        "definitions": [
-          {
-            "term": "Feeds in",
-            "definition": "**Vendors / bidders**: **Global Data > Vendors** (and the **Eco category** vendors for the test tenders). **Owners**: **Global Data > Owners**. **Team users and Assign To**: **Global Rosters**. **Team crews**: **Global Data > Crews**. **BOQ items**: **Global Data > Bid Templates** (= Settings > Bid Templates). **Bid types**, **statuses**: shared with **Proposal Management > Settings**."
-          },
-          {
-            "term": "Link to Proposal Management",
-            "definition": "A tender created from a proposal's **Bid** tab (or with **Select Proposal**) shows that proposal in **Proposal Linked**, and the proposal's Bid tab lists its tenders."
-          },
-          {
-            "term": "Link to Opportunity and Projects",
-            "definition": "The tender **Profile** has **Opportunity** and **Project** pick lists. The awarded work order's **Project Linked** field was empty."
-          },
-          {
-            "term": "Feeds out",
-            "definition": "Approved tenders appear in **Analytics & Reports**. The awarded work order stays inside **Tender Details > Awarded Work Order**; it does not appear in Home > Work Order."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Trace a missing vendor or value",
-            "steps": [
-              "If a vendor is missing in **Pre-Qualification > Send to Tenderer**, check it exists in **Global Data > Vendors**.",
-              "If a bid type or status is missing, check **Settings** (it is shared with Proposal Management).",
-              "If a proposal is missing in **Select Proposal**, check **Proposal Management**.",
-              "If a tender is missing from the Weekly Report, check its status (**Unassigned** tenders were not listed)."
-            ]
-          }
-        ]
-      },
-      {
-        "heading": "RFQs and Vendor Quotes in Procurement",
+        "heading": "RFQs",
         "intro": "<p>Requests for quotation on materials and services are handled in the <strong>Procurement</strong> module, not inside the tender cards. Procurement staff use it to invite vendors to quote against a requisition.</p><p>A tender's own price comparison is the <strong>Financial Package > Comparison</strong> described above. The steps below stay here as the Procurement route.</p>",
         "definitions": [
           {
@@ -33305,6 +33159,152 @@ const MODULES = [
             ]
           }
         ]
+      },
+      {
+        "heading": "Analytics & Reports",
+        "intro": "<p>These three tabs summarise tenders for managers: <strong>Analytics & Reports</strong>, <strong>Issues</strong> and <strong>Bid</strong>.</p><p>The charts read the tenders from the list, so a tender must exist and have a status and values to appear.</p>",
+        "definitions": [
+          {
+            "term": "Analytics & Reports (5 cards)",
+            "definition": "**Bid Awarded Rate** (success rate by quantity and currency value, with a **Bid Types** filter), **Estimate Awarded Rate**, **Types of Bids** (quantity and amount), **Success & Estimate Over Time** (status filter) and **Weekly Report**. Charts have download and zoom icons."
+          },
+          {
+            "term": "Weekly Report",
+            "definition": "A **Date Range** filter, download / share / print icons and a table: **Tender Name**, **Bid Type**, **Description**, **Proposal Name**, **Start Date**, **End Date**, **Bid Estimated Value**, **Bid Submitted Value**, **Owner Name**, **Job Location**, **Opportunity**, **Project**. Tenders with status **Unassigned** are not listed."
+          },
+          {
+            "term": "Issues",
+            "definition": "Workflow issues raised on tender approvals: counters (Total, Approved, Rejected), **Filters** and a table (**WFL Number**, **Level**, **Raised on Date/Time**, **Raised by**, **Comments**, **Assign To**, **Due Date**, **Chat**, **See History**). The Submission Package > Issues tab inside a tender is separate."
+          },
+          {
+            "term": "Bid tab",
+            "definition": "The vendor-facing list of tenders to answer, with **Bid Submission Status**. It is empty for the admin (\"No Data Available\")."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Check how tenders are performing",
+            "steps": [
+              "Open **Analytics & Reports**.",
+              "Click a card, for example **Bid Awarded Rate**, and filter by **Bid Types**.",
+              "Use the download icon to save a chart."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Data Sources",
+        "intro": "<p>This section traces each tender list and where its results end up, for admins checking why a value is missing.</p><p>Tender Management reuses data from <strong>Global Data</strong>, <strong>Proposal Management</strong>, <strong>Opportunity Management</strong> and <strong>Projects</strong>.</p>",
+        "definitions": [
+          {
+            "term": "Feeds in",
+            "definition": "**Vendors / bidders**: **Global Data > Vendors** (and the **Eco category** vendors for the test tenders). **Owners**: **Global Data > Owners**. **Team users and Assign To**: **Global Rosters**. **Team crews**: **Global Data > Crews**. **BOQ items**: **Global Data > Bid Templates** (= Settings > Bid Templates). **Bid types**, **statuses**: shared with **Proposal Management > Settings**."
+          },
+          {
+            "term": "Link to Proposal Management",
+            "definition": "A tender created from a proposal's **Bid** tab (or with **Select Proposal**) shows that proposal in **Proposal Linked**, and the proposal's Bid tab lists its tenders."
+          },
+          {
+            "term": "Link to Opportunity and Projects",
+            "definition": "The tender **Profile** has **Opportunity** and **Project** pick lists. The awarded work order's **Project Linked** field was empty."
+          },
+          {
+            "term": "Feeds out",
+            "definition": "Approved tenders appear in **Analytics & Reports**. The awarded work order stays inside **Tender Details > Awarded Work Order**; it does not appear in Home > Work Order."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Trace a missing vendor or value",
+            "steps": [
+              "If a vendor is missing in **Pre-Qualification > Send to Tenderer**, check it exists in **Global Data > Vendors**.",
+              "If a bid type or status is missing, check **Settings** (it is shared with Proposal Management).",
+              "If a proposal is missing in **Select Proposal**, check **Proposal Management**.",
+              "If a tender is missing from the Weekly Report, check its status (**Unassigned** tenders were not listed)."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Settings",
+        "intro": "<p><strong>Settings</strong> holds the lists and templates that shape every tender, used by the Module Admin. Its menu has <strong>Bid Type</strong>, <strong>Scope of Work</strong>, <strong>Agreement</strong>, <strong>Status Configuration</strong>, <strong>Approval Workflow</strong>, <strong>Bid Templates</strong>, <strong>BOQ & Estimate Template</strong>, <strong>Pre Qualification Template</strong>, <strong>Technical Package Template</strong> and <strong>Users and Permissions</strong>.</p>",
+        "definitions": [
+          {
+            "term": "Bid Type",
+            "definition": "Cards **Build-Own-Transfer Bid Type**, **Speciality Items Bid Type**, **General Bid Type** with Description, Created On and Created By; the **Bid Type** button adds one. These are the same three bid types as in **Proposal Management > Settings > Bid Types**, and feed **Select Bid Type**, the Profile and the analytics filters."
+          },
+          {
+            "term": "Scope of Work and Agreement",
+            "definition": "**Create Template** offers **Create Scope of Work Template** / **Upload Scope of Work Template**, and likewise for **Agreement**. The scope templates feed **Import from settings** in a tender."
+          },
+          {
+            "term": "Status Configuration",
+            "definition": "Nine statuses: **In-Progress** (first), **Draft**, **Under Review**, **Reopened**, **Shortlisted**, **Awarded**, **Rejected**, **Pre Qualification**, **Completed** (last). **Add Status** adds one; only the middle ones can be deleted. They feed **Bid Status** and the status chips."
+          },
+          {
+            "term": "Approval Workflow",
+            "definition": "Three tabs: **Bid**, **Pre Qualification**, **Technical Package**. Each has **Create Level** and a table (**Level**, **Level Description**, **Approvers**, **Workflow Type**, **Actions**)."
+          },
+          {
+            "term": "Bid Templates",
+            "definition": "The list of BOQ items with **Add Item**, **Download Excel**, **Download Sample Excel**, **Upload Excel**. It is the same list as **Global Data > Bid Templates**."
+          },
+          {
+            "term": "BOQ & Estimate Template",
+            "definition": "Ten estimate templates (**Test**, **Item Rate**, **Ori BQ**, **M&E BQ**, **Lump Sum**, **Unit Rate**, **Guaranteed Maximum Price**, **Cost-Plus**, **Time & Material**, **Time & Material (Global)**). **Create Template** asks for a **Name** and **Description**. They are the templates offered in a tender's Scope of Work."
+          },
+          {
+            "term": "Pre Qualification Template and Technical Package Template",
+            "definition": "Two templates each (**Application Form**, **Application Form for Pre-Qualification**; **Critical Technical Aspects**, **General Technical Capabilities**), each with **Create Template**."
+          },
+          {
+            "term": "Users and Permissions",
+            "definition": "**Add User Group** opens a page with **Permissions** and **Users** tabs. The grid has **View**, **Create**, **Edit**, **Delete**, **Admin**, **Download**, **Print**, **Assign To** and **Roll Back** for Bid Management (Profile, Team, Status And Comments, Documents, Communication, Scope Of Work, Bid Criteria, Submission, Submission Approval Workflow), Bid Management Settings, Bid Response (Log Subcontractor Response, Compare Contractor Price, Agreement, Work Order), Analytics and Issues."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Define a new bid type",
+            "steps": [
+              "Go to <strong>Proposal Management → Settings → Bid Types</strong>.",
+              "Click <strong>Bid Type</strong> to open the creation form.",
+              "Enter a <strong>Name</strong> and <strong>Description</strong>, and choose the <strong>Estimate Type</strong> that defines how bids of this type will be structured and evaluated."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/proposal-management-global-bid-types/001.jpg",
+                "caption": "Bid Type: the pop-up with Name, Description and Estimate Type",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/proposal-management-global-bid-types/002.jpg",
+                "caption": "Editing a bid type's name, description and estimate type",
+                "step": 3
+              }
+            ],
+            "note": "The screenshots show the pop-up from Proposal Management, where bid types are shared."
+          },
+          {
+            "title": "Change the statuses a tender can have",
+            "steps": [
+              "Open **Settings > Status Configuration**.",
+              "Click **Add Status** to add one, the pencil to rename, or the bin to delete a middle status."
+            ]
+          },
+          {
+            "title": "Add an approval level",
+            "steps": [
+              "Open **Settings > Approval Workflow** and choose **Bid**, **Pre Qualification** or **Technical Package**.",
+              "Click **Create Level**, choose **All must approve** or **Any one can approve**, add a description and pick approvers."
+            ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/proposal-management-global-bid-types/004.jpg",
+            "caption": "Deleting a bid type, with a warning"
+          }
+        ]
       }
     ],
     "name": "Tender Management",
@@ -33318,18 +33318,18 @@ const MODULES = [
       "Click a tender name to open its cards: <strong>Tender Event Schedule</strong>, <strong>Pre-Qualification</strong>, <strong>Tender Details</strong> and <strong>Addendum</strong>."
     ],
     "sections": [
-      "Who sets this up",
-      "Tender List and Creating a Tender",
-      "Tender Setup: Profile, Team, Scope of Work and Submission",
+      "Overview",
+      "Tenders",
+      "Tender Details",
       "Tender Event Schedule",
-      "Pre-Qualification: Choose Which Vendors May Bid",
-      "Tender Response: Technical and Financial Packages",
-      "Comparing Bids, Negotiating and Awarding a Work Order",
+      "Pre-Qualification",
+      "Tender Response",
+      "Bid Comparison",
       "Addendum",
-      "Bid Types and Tender Settings",
-      "Analytics, Issues and the Bid Tab",
-      "Where Tender Data Comes From and Goes",
-      "RFQs and Vendor Quotes in Procurement"
+      "RFQs",
+      "Analytics & Reports",
+      "Data Sources",
+      "Settings"
     ]
   },
   {
@@ -33338,7 +33338,7 @@ const MODULES = [
     "qaItems": QA_PROCUREMENT,
     "narrative": [
       {
-        "heading": "Who Sets Up Procurement",
+        "heading": "Overview",
         "intro": "<p>Procurement is where a construction company turns an internal need into a paid, delivered purchase, and getting that pipeline right depends on decisions a Procurement Admin makes once, up front, that every project team then works within. This admin configuration lives behind Home → <strong>Procurement</strong> → the gear-icon <strong>Settings</strong>, next to the Dashboard / Requisition Form / RFQ / Vendor Responses / Purchase Orders / Delivery Receipts / Invoice / Pickup Request / Purchase Order Master tabs. The single most important one-time admin task in this module is <strong>Approval Workflow</strong>: for each document type — Requisition Form (REQ), Purchase Order (PO), Invoices, and Pickup Request — and, for Requisition Form specifically, per category (Equipment, Material, Equipment Part, Delivery Service), the Procurement Admin builds a multi-level approval chain using <strong>+ Create Level</strong>, defining each level's Level Description, Approvers (typically a Purchasing Manager or PM), and Workflow Type (for example, \"Any one can approve\"). Every PO, Requisition, Invoice, and Pickup Request an End User submits is gated behind whichever approval chain the admin has defined here, which is exactly the control a business wants before company money is committed.</p><p>Beyond approvals, the admin also configures per-document-type form templates (Requisition Form, Purchase Order Form, Delivery Receipt Form, Invoices Form, Pickup Request Form), <strong>ID Settings</strong> (choosing System Default or Custom ID formats separately for REQ, RFQ, Vendor Response, Purchase Order, Direct Purchase Order, Delivery Receipt, Invoice, and Pickup Request), Procurement Issues configuration, RFQ Settings, and a Default Assign To for new procurement records. <strong>Users and Permissions</strong> inside Settings manages the module's permission groups — in the verified environment these included \"System Admin Role 1,\" \"Procurement Team,\" and \"Admin Permissions,\" the last of which is the same group referenced from Arena's central Global Permission registry.</p><p>One related setting lives outside the module entirely and is a Super Admin / Global Admin decision: <strong>Global Data → Settings → Procurement Settings</strong> has two checkboxes, <strong>Global Level</strong> and <strong>Project Level</strong>, controlling whether Procurement operates company-wide, per-Project, or both. It's worth deciding this scope before building out Approval Workflows and ID Settings, since those are likely configured per scope.</p>",
         "definitions": [
           {
@@ -33391,193 +33391,7 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Configure Procurement Forms & Settings",
-        "intro": "<p>Procurement Settings is the administrative control center for the entire module, and getting it right matters to the business because it defines how disciplined the company's purchasing process actually is in practice. Rather than hard-coding what a requisition, purchase order, invoice, or pickup request looks like, Arena exposes each of these as a configurable form, plus company-wide rules for how approvals, IDs, and issue priorities behave. This is where a Procurement Admin shapes procurement to match the company's actual paperwork and sign-off process, instead of forcing every project to use one rigid template.</p><p>Because procurement documents differ meaningfully by type — a Material purchase order looks different from a Delivery Service one — most of the form builders here are split by procurement type (Material, Equipment, Equipment Part, Delivery Service), letting the admin tailor fields precisely to what each category of purchase actually needs to capture. Settings also governs cross-cutting behavior that applies no matter which document type is in play: how approval chains are built, how document IDs are generated, and how urgently an issue needs to be resolved.</p><p>Getting these settings right up front avoids a lot of friction later for the people who actually run purchasing day to day. A well-configured REQ form, for instance, captures the specifications a vendor will need at RFQ time; a properly leveled approval workflow makes sure spend actually gets the right eyes — a Purchasing Manager, a PM, a finance approver — before it becomes a commitment. Most of Procurement Settings should be revisited by the admin whenever the company's purchasing policy changes, not just at initial setup.</p>",
-        "definitions": [
-          {
-            "term": "Form builder",
-            "definition": "Arena's tool for constructing custom document forms out of configurable sections and field types (paragraph, single select, multi-select, tables, and more). Used throughout Procurement Settings to define the REQ, PO, Delivery Receipt, Invoice, and Pickup Request forms."
-          },
-          {
-            "term": "Approval Workflow (Procurement)",
-            "definition": "A configurable, multi-level chain of approvers applied to Requisition forms, Purchase Orders, Invoices, and Pickup Requests. Each level can require that all assigned approvers sign off (\"All must approve\") or that just one does (\"Any one can approve\")."
-          },
-          {
-            "term": "ID Settings",
-            "definition": "The configuration for how procurement document IDs are generated — either a System Default auto-generated format, or a Custom format built from selected fields in a chosen order."
-          },
-          {
-            "term": "Issues Priority",
-            "definition": "A set of priority levels (each with a Due Hours value) that can be applied to procurement issues, giving them a service-level expectation for resolution."
-          },
-          {
-            "term": "Where settings lists come from",
-            "definition": "**Approvers** (Approval Workflow, Create Level): every company user. **Default Assign To**: eight tabs, **REQ**, **RFQ**, **Vendor Response**, **Purchase Order**, **Direct Purchase Order**, **Delivery Receipt**, **Invoice** and **Pickup Request**; **+ Add** opens an **Assign To** list with search and **Select All** showing the project's people, and the people you tick are filled into the **Assignee** field of new records of that type. **RFQ Settings → Default Point Of Contact**: every company user. **Procurement Issues**: the priorities that Delivery Receipt inspection issues can use. **ID Settings**: only changes the numbering of new documents."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Customize the requisition form",
-            "steps": [
-              "Go to **Procurement → Settings → Requisition Form (REQ)**.",
-              "Use the form builder to add sections and choose field types (paragraph, single select, multi-select, tables, etc.) for each.",
-              "Save your changes."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/procurement-settings-req-form/001.jpg",
-                "caption": "REQ Form settings",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/procurement-settings-req-form/002.jpg",
-                "caption": "The form builder for the requisition form",
-                "step": 2
-              }
-            ]
-          },
-          {
-            "title": "Configure the Purchase Order form",
-            "steps": [
-              "Go to **Procurement → Settings → Purchase Order Form (PO)**.",
-              "Select the tab for the procurement type you want to configure: <strong>Material</strong>, <strong>Equipment</strong>, <strong>Equipment Part</strong>, or <strong>Delivery Service</strong>.",
-              "Use the form builder to configure that type's fields separately from the others."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/procurement-settings-po-configuration/001.jpg",
-                "caption": "PO Configuration settings",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/procurement-settings-po-configuration/002.jpg",
-                "caption": "The form builder for each procurement type",
-                "step": 3
-              }
-            ]
-          },
-          {
-            "title": "Configure the Delivery Receipt form",
-            "steps": [
-              "Go to **Procurement → Settings → Delivery Receipt Form**.",
-              "Use the form builder to configure the Delivery Receipt form for <strong>Material</strong>, <strong>Equipment</strong>, <strong>Equipment Part</strong>, and <strong>Delivery Service</strong>."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/procurement-settings-delivery-request/001.jpg",
-                "caption": "Delivery Request settings",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/procurement-settings-delivery-request/002.jpg",
-                "caption": "The form builder for Delivery Receipts",
-                "step": 2
-              }
-            ]
-          },
-          {
-            "title": "Configure the Invoice form",
-            "steps": [
-              "Go to **Procurement → Settings → Invoices Form**.",
-              "Use the form builder to configure the invoice form for <strong>Equipment</strong>, <strong>Material</strong>, <strong>Equipment Part</strong>, and <strong>Delivery Service</strong>, adding multiple sections and field types as needed."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/procurement-settings-invoice/001.jpg",
-                "caption": "Invoice settings",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/procurement-settings-invoice/002.jpg",
-                "caption": "The form builder for invoices, with a tab for each procurement type",
-                "step": 2
-              }
-            ]
-          },
-          {
-            "title": "Configure the Pickup Request form",
-            "steps": [
-              "Go to **Procurement → Settings → Pickup Request Form**.",
-              "Configure the form fields using the form builder.",
-              "Click <strong>Save changes</strong>."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/procurement-settings-pickup-request/001.jpg",
-                "caption": "Pickup Request settings",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/procurement-settings-pickup-request/002.jpg",
-                "caption": "The form builder for the pickup request, then Save changes",
-                "step": 3
-              }
-            ]
-          },
-          {
-            "title": "Set up a procurement approval workflow",
-            "steps": [
-              "Go to **Procurement Settings → Approval Workflow**.",
-              "Pick the document tab: **Requisition Form (REQ)**, **Purchase Order (PO)**, **Invoices** or **Pickup Request**. For a requisition also pick the category tab (for example **Material** or **Equipment Rental**).",
-              "Click **+ Create** to add a level, choose **All must approve** or **Any one can approve**, add a description, tick the approvers and click **Submit**.",
-              "Repeat to add as many levels as your sign-off process needs."
-            ],
-            "note": "Each document type, and each requisition category, has its own chain. A category with no levels has no approval chain to follow.",
-            "images": [
-              {
-                "src": "assets/notion/procurement-settings-approval-workflow/001.jpg",
-                "caption": "Approval Workflow settings for requisitions, purchase orders, invoices and pickup requests",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/procurement-settings-approval-workflow/002.jpg",
-                "caption": "Create Level, with All must approve or Any one can approve",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/procurement-settings-approval-workflow/003.jpg",
-                "caption": "A workflow with several levels",
-                "step": 4
-              }
-            ]
-          },
-          {
-            "title": "Configure ID formats for procurement documents",
-            "steps": [
-              "Go to <strong>Procurement &gt; ID Settings</strong>, then pick a tab: REQ, RFQ, Vendor Response, Purchase Order, Direct Purchase Order, Delivery Receipt, Invoice, or Pickup Request.",
-              "Choose <strong>System Default</strong> for an auto-generated ID, or <strong>Custom</strong>.",
-              "For Custom, check the fields to include — Date, Month, Year, Serial No./ID, Requester Initials First/Last Name, Project Number — drag them into the order you want, and pick an ID Separator (<strong>/</strong>, <strong>-</strong>, or none). The Example Format at the top updates live as you check fields.",
-              "Click <strong>Save Changes</strong>."
-            ],
-            "note": "Checking Project Number adds the project's number as an extra segment of the ID (e.g. an example format changes from \"PO ID\" to \"PO ID/PN\"). It does not restart the Serial No./ID counter per project — that counter keeps counting company-wide regardless of which fields are included.",
-            "images": [
-              {
-                "src": "assets/notion/procurement-id-settings/002.jpg",
-                "caption": "ID format options for a document type",
-                "step": 3
-              }
-            ]
-          },
-          {
-            "title": "Set priority levels for Delivery Receipt inspection issues",
-            "steps": [
-              "Go to <strong>Procurement Settings &gt; Procurement Issues</strong>.",
-              "Click <strong>Add Priority</strong>.",
-              "Name the priority level and set its <strong>Due Hours</strong> — the SLA for rectifying an issue raised at that priority."
-            ],
-            "note": "This priority list is specifically for issues raised while inspecting a Delivery Receipt (see Delivery Receipts → Inspection Issues), not a general-purpose priority list for every procurement document. A verified environment had High (4 hours), Medium (24 hours), and Low (48 hours).",
-            "images": [
-              {
-                "src": "assets/notion/procurement-settings-issues-priority/002.jpg",
-                "caption": "Adding a priority level with its due hours",
-                "step": 2
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "heading": "Procurement Analytics Dashboard",
+        "heading": "Analytics Dashboard",
         "intro": "<p>The <strong>Dashboard</strong> tab is the landing page when anyone opens Procurement, and it exists to answer one question at a glance: is the company's purchasing running efficiently and are vendors performing well. A Procurement Admin, PM, or executive uses it to spot slow vendors, cost overruns, and quality problems without digging through individual REQs, RFQs, and POs one at a time.</p><p>It shows company-wide (or project-scoped, via the <strong>By Projects</strong> filter) KPI tiles and a per-vendor scorecard, filterable by a Start date/End date range.</p>",
         "definitions": [
           {
@@ -34176,6 +33990,192 @@ const MODULES = [
             ]
           }
         ]
+      },
+      {
+        "heading": "Settings",
+        "intro": "<p>Procurement Settings is the administrative control center for the entire module, and getting it right matters to the business because it defines how disciplined the company's purchasing process actually is in practice. Rather than hard-coding what a requisition, purchase order, invoice, or pickup request looks like, Arena exposes each of these as a configurable form, plus company-wide rules for how approvals, IDs, and issue priorities behave. This is where a Procurement Admin shapes procurement to match the company's actual paperwork and sign-off process, instead of forcing every project to use one rigid template.</p><p>Because procurement documents differ meaningfully by type — a Material purchase order looks different from a Delivery Service one — most of the form builders here are split by procurement type (Material, Equipment, Equipment Part, Delivery Service), letting the admin tailor fields precisely to what each category of purchase actually needs to capture. Settings also governs cross-cutting behavior that applies no matter which document type is in play: how approval chains are built, how document IDs are generated, and how urgently an issue needs to be resolved.</p><p>Getting these settings right up front avoids a lot of friction later for the people who actually run purchasing day to day. A well-configured REQ form, for instance, captures the specifications a vendor will need at RFQ time; a properly leveled approval workflow makes sure spend actually gets the right eyes — a Purchasing Manager, a PM, a finance approver — before it becomes a commitment. Most of Procurement Settings should be revisited by the admin whenever the company's purchasing policy changes, not just at initial setup.</p>",
+        "definitions": [
+          {
+            "term": "Form builder",
+            "definition": "Arena's tool for constructing custom document forms out of configurable sections and field types (paragraph, single select, multi-select, tables, and more). Used throughout Procurement Settings to define the REQ, PO, Delivery Receipt, Invoice, and Pickup Request forms."
+          },
+          {
+            "term": "Approval Workflow (Procurement)",
+            "definition": "A configurable, multi-level chain of approvers applied to Requisition forms, Purchase Orders, Invoices, and Pickup Requests. Each level can require that all assigned approvers sign off (\"All must approve\") or that just one does (\"Any one can approve\")."
+          },
+          {
+            "term": "ID Settings",
+            "definition": "The configuration for how procurement document IDs are generated — either a System Default auto-generated format, or a Custom format built from selected fields in a chosen order."
+          },
+          {
+            "term": "Issues Priority",
+            "definition": "A set of priority levels (each with a Due Hours value) that can be applied to procurement issues, giving them a service-level expectation for resolution."
+          },
+          {
+            "term": "Where settings lists come from",
+            "definition": "**Approvers** (Approval Workflow, Create Level): every company user. **Default Assign To**: eight tabs, **REQ**, **RFQ**, **Vendor Response**, **Purchase Order**, **Direct Purchase Order**, **Delivery Receipt**, **Invoice** and **Pickup Request**; **+ Add** opens an **Assign To** list with search and **Select All** showing the project's people, and the people you tick are filled into the **Assignee** field of new records of that type. **RFQ Settings → Default Point Of Contact**: every company user. **Procurement Issues**: the priorities that Delivery Receipt inspection issues can use. **ID Settings**: only changes the numbering of new documents."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Customize the requisition form",
+            "steps": [
+              "Go to **Procurement → Settings → Requisition Form (REQ)**.",
+              "Use the form builder to add sections and choose field types (paragraph, single select, multi-select, tables, etc.) for each.",
+              "Save your changes."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/procurement-settings-req-form/001.jpg",
+                "caption": "REQ Form settings",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/procurement-settings-req-form/002.jpg",
+                "caption": "The form builder for the requisition form",
+                "step": 2
+              }
+            ]
+          },
+          {
+            "title": "Configure the Purchase Order form",
+            "steps": [
+              "Go to **Procurement → Settings → Purchase Order Form (PO)**.",
+              "Select the tab for the procurement type you want to configure: <strong>Material</strong>, <strong>Equipment</strong>, <strong>Equipment Part</strong>, or <strong>Delivery Service</strong>.",
+              "Use the form builder to configure that type's fields separately from the others."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/procurement-settings-po-configuration/001.jpg",
+                "caption": "PO Configuration settings",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/procurement-settings-po-configuration/002.jpg",
+                "caption": "The form builder for each procurement type",
+                "step": 3
+              }
+            ]
+          },
+          {
+            "title": "Configure the Delivery Receipt form",
+            "steps": [
+              "Go to **Procurement → Settings → Delivery Receipt Form**.",
+              "Use the form builder to configure the Delivery Receipt form for <strong>Material</strong>, <strong>Equipment</strong>, <strong>Equipment Part</strong>, and <strong>Delivery Service</strong>."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/procurement-settings-delivery-request/001.jpg",
+                "caption": "Delivery Request settings",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/procurement-settings-delivery-request/002.jpg",
+                "caption": "The form builder for Delivery Receipts",
+                "step": 2
+              }
+            ]
+          },
+          {
+            "title": "Configure the Invoice form",
+            "steps": [
+              "Go to **Procurement → Settings → Invoices Form**.",
+              "Use the form builder to configure the invoice form for <strong>Equipment</strong>, <strong>Material</strong>, <strong>Equipment Part</strong>, and <strong>Delivery Service</strong>, adding multiple sections and field types as needed."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/procurement-settings-invoice/001.jpg",
+                "caption": "Invoice settings",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/procurement-settings-invoice/002.jpg",
+                "caption": "The form builder for invoices, with a tab for each procurement type",
+                "step": 2
+              }
+            ]
+          },
+          {
+            "title": "Configure the Pickup Request form",
+            "steps": [
+              "Go to **Procurement → Settings → Pickup Request Form**.",
+              "Configure the form fields using the form builder.",
+              "Click <strong>Save changes</strong>."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/procurement-settings-pickup-request/001.jpg",
+                "caption": "Pickup Request settings",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/procurement-settings-pickup-request/002.jpg",
+                "caption": "The form builder for the pickup request, then Save changes",
+                "step": 3
+              }
+            ]
+          },
+          {
+            "title": "Set up a procurement approval workflow",
+            "steps": [
+              "Go to **Procurement Settings → Approval Workflow**.",
+              "Pick the document tab: **Requisition Form (REQ)**, **Purchase Order (PO)**, **Invoices** or **Pickup Request**. For a requisition also pick the category tab (for example **Material** or **Equipment Rental**).",
+              "Click **+ Create** to add a level, choose **All must approve** or **Any one can approve**, add a description, tick the approvers and click **Submit**.",
+              "Repeat to add as many levels as your sign-off process needs."
+            ],
+            "note": "Each document type, and each requisition category, has its own chain. A category with no levels has no approval chain to follow.",
+            "images": [
+              {
+                "src": "assets/notion/procurement-settings-approval-workflow/001.jpg",
+                "caption": "Approval Workflow settings for requisitions, purchase orders, invoices and pickup requests",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/procurement-settings-approval-workflow/002.jpg",
+                "caption": "Create Level, with All must approve or Any one can approve",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/procurement-settings-approval-workflow/003.jpg",
+                "caption": "A workflow with several levels",
+                "step": 4
+              }
+            ]
+          },
+          {
+            "title": "Configure ID formats for procurement documents",
+            "steps": [
+              "Go to <strong>Procurement &gt; ID Settings</strong>, then pick a tab: REQ, RFQ, Vendor Response, Purchase Order, Direct Purchase Order, Delivery Receipt, Invoice, or Pickup Request.",
+              "Choose <strong>System Default</strong> for an auto-generated ID, or <strong>Custom</strong>.",
+              "For Custom, check the fields to include — Date, Month, Year, Serial No./ID, Requester Initials First/Last Name, Project Number — drag them into the order you want, and pick an ID Separator (<strong>/</strong>, <strong>-</strong>, or none). The Example Format at the top updates live as you check fields.",
+              "Click <strong>Save Changes</strong>."
+            ],
+            "note": "Checking Project Number adds the project's number as an extra segment of the ID (e.g. an example format changes from \"PO ID\" to \"PO ID/PN\"). It does not restart the Serial No./ID counter per project — that counter keeps counting company-wide regardless of which fields are included.",
+            "images": [
+              {
+                "src": "assets/notion/procurement-id-settings/002.jpg",
+                "caption": "ID format options for a document type",
+                "step": 3
+              }
+            ]
+          },
+          {
+            "title": "Set priority levels for Delivery Receipt inspection issues",
+            "steps": [
+              "Go to <strong>Procurement Settings &gt; Procurement Issues</strong>.",
+              "Click <strong>Add Priority</strong>.",
+              "Name the priority level and set its <strong>Due Hours</strong> — the SLA for rectifying an issue raised at that priority."
+            ],
+            "note": "This priority list is specifically for issues raised while inspecting a Delivery Receipt (see Delivery Receipts → Inspection Issues), not a general-purpose priority list for every procurement document. A verified environment had High (4 hours), Medium (24 hours), and Low (48 hours).",
+            "images": [
+              {
+                "src": "assets/notion/procurement-settings-issues-priority/002.jpg",
+                "caption": "Adding a priority level with its due hours",
+                "step": 2
+              }
+            ]
+          }
+        ]
       }
     ],
     "name": "Procurement",
@@ -34189,9 +34189,8 @@ const MODULES = [
       "Second-level tabs include REQ, RFQ, Vendor Responses, Purchase Order, Direct Purchase Order, Purchase Order Master, Delivery Receipts, Invoices, Pickup Request, and Communications."
     ],
     "sections": [
-      "Who Sets Up Procurement",
-      "Configure Procurement Forms & Settings",
-      "Procurement Analytics Dashboard",
+      "Overview",
+      "Analytics Dashboard",
       "Requisitions",
       "RFQ",
       "Vendor Responses",
@@ -34199,7 +34198,8 @@ const MODULES = [
       "Delivery Receipts",
       "Invoices",
       "Pickup Requests",
-      "Communications"
+      "Communications",
+      "Settings"
     ]
   },
   {
@@ -35692,7 +35692,7 @@ const MODULES = [
     "qaItems": QA_INVENTORYMANAGEMENT,
     "narrative": [
       {
-        "heading": "Who Does What",
+        "heading": "Overview",
         "intro": "<p>The <strong>Inventory Administrator</strong> (a System Administrator or inventory admin) sets up Inventory Locations, hauling trucks, ID formats, user groups and LOR approval workflows before anyone moves stock. A <strong>Global Data Administrator</strong> sets up the units and materials first.</p><p>Four more roles work from that setup: the <strong>Inventory Manager</strong> (store or yard in-charge) keeps stock and limits, the <strong>Order Creator</strong> raises External Orders, the <strong>Ticket Creator</strong> (dispatcher or weighbridge operator) records each load shipped, and the <strong>Report User</strong> (operations manager or PM) reviews the reports.</p>",
         "definitions": [
           {
@@ -35764,318 +35764,7 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Settings: Fields, IDs, Permissions and General",
-        "intro": "<p>The Inventory Administrator uses <strong>Inventory Management → Settings</strong> to decide which fields orders and tickets carry, how their IDs are numbered, who can do what, and how units convert. Do this before creating any records.</p><p>The left side of Settings lists <strong>External Orders</strong>, <strong>Tickets</strong>, <strong>ID Settings</strong>, <strong>Users and Permissions</strong> and <strong>General</strong>. Complete <strong>ID Settings</strong> before the first ticket, because they lock once a ticket exists.</p>",
-        "definitions":[
-          {
-            "term": "External Orders and Tickets fields",
-            "definition": "On the **External Orders** and **Tickets** tabs, review the standard fields and click **Add field** for configurable ones. Pick a type in **Choose type**, name the field, and switch **Required**, **Show on Card** and **Unique** on or off. Actions add, duplicate or delete a field, and the drag icon reorders them. Click **Save Changes**."
-          },
-          {
-            "term": "ID Settings (orders and tickets)",
-            "definition": "Choose the **External Orders** or **External Tickets** sub-tab, pick **System Default** or **Custom**, choose the **ID Separator** (**/**, **-** or **None**), pick components (Serial No./ID, Year, Customer Reference Number, Customer/Project ID, custom text) and drag them into order. **Example Format** shows the result. Once a ticket is created, the ID settings lock."
-          },
-          {
-            "term": "Users and Permissions (Inventory Management)",
-            "definition": "User groups show as cards. **Add User Group**, then on the **Users** tab click **Add Users** (search by name, Roster ID, email or username) and **Submit**. Click **Permissions** on the card and, under **Inventory Management**, choose View, Create, Edit, Delete, Admin, Download, Print, Assign To and Roll Back for each item, then **Save Changes**. The edit icon renames the group."
-          },
-          {
-            "term": "General settings",
-            "definition": "Keep **External Tickets** on to use tickets. Turn on **UOM Conversions Required** if quantities must convert between units; once it is on and in use it cannot be turned off. **Print Settings** lets you add a row for each print copy (for example office copy, operator copy, customer copy) and choose **Include Header**. **Material UOM Conversions → Create** sets a factor between at least two UOMs for one material."
-          },
-          {
-            "term": "Earlier version: ID Settings tabs",
-            "definition": "In earlier-version environments, **Settings → ID Settings** has the tabs **Site Material Requests**, **External Site Material Requests**, **Material Issue Tickets**, **External Material Issue Tickets** and **Return Tickets**. On each, pick **System Default** or **Custom** ID format; **Example Format** shows the result."
-          },
-          {
-            "term": "Earlier version: General settings and Print Settings",
-            "definition": "**Settings → General** has **External Tickets**, **UOM Conversions Required** and **Print Settings**. In **Print Settings**, use **Add Row Name** to name each printed copy and **Include Header** to print the header."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Add a field to External Orders or Tickets",
-            "steps": [
-              "Open <strong>Inventory Management → Settings</strong> and choose the <strong>External Orders</strong> or <strong>Tickets</strong> tab.",
-              "Click <strong>Add field</strong>, pick the type in <strong>Choose type</strong> and enter the field name.",
-              "Set the <strong>Required</strong>, <strong>Show on Card</strong> and <strong>Unique</strong> toggles.",
-              "Drag the field into position and click <strong>Save Changes</strong>."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/inventory-management/014.jpg",
-                "caption": "External Orders Standard Fields",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/inventory-management/015.jpg",
-                "caption": "Add field on External Orders",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/inventory-management/021.jpg",
-                "caption": "Tickets Standard Fields",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/inventory-management/022.jpg",
-                "caption": "Add field on Tickets",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/inventory-management/016.jpg",
-                "caption": "Choose type and field name",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/inventory-management/023.jpg",
-                "caption": "Choose type and field name for a ticket field",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/inventory-management/017.jpg",
-                "caption": "Required, Show on Card and Unique toggles",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/inventory-management/018.jpg",
-                "caption": "Field Actions menu",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/inventory-management/024.jpg",
-                "caption": "Required, Show on Card and Unique toggles for a ticket field",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/inventory-management/025.jpg",
-                "caption": "Field Actions menu on Tickets",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/inventory-management/019.jpg",
-                "caption": "Field Name and drag icon",
-                "step": 4
-              },
-              {
-                "src": "assets/guides/inventory-management/020.jpg",
-                "caption": "Save Changes on External Orders fields",
-                "step": 4
-              },
-              {
-                "src": "assets/guides/inventory-management/026.jpg",
-                "caption": "Field Name and drag icon on Tickets",
-                "step": 4
-              },
-              {
-                "src": "assets/guides/inventory-management/027.jpg",
-                "caption": "Save Changes on Tickets fields",
-                "step": 4
-              }
-            ]
-          },
-          {
-            "title": "Set the ID format for orders and tickets",
-            "steps": [
-              "Open <strong>Settings → ID Settings</strong> and choose <strong>External Orders</strong> or <strong>External Tickets</strong>.",
-              "Choose <strong>System Default</strong> or <strong>Custom</strong>, then the <strong>ID Separator</strong>.",
-              "Select the components and drag them into order. Check the <strong>Example Format</strong>.",
-              "Click <strong>Save Changes</strong>."
-            ],
-            "note": "Do this before the first ticket is created, because the settings lock after that.",
-            "images": [
-              {
-                "src": "assets/guides/inventory-management/028.jpg",
-                "caption": "ID Settings sub-tabs",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/inventory-management/029.jpg",
-                "caption": "External Tickets ID Settings",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/inventory-management/030.jpg",
-                "caption": "ID Separator options",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/inventory-management/031.jpg",
-                "caption": "ID components to include",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/inventory-management/032.jpg",
-                "caption": "ID components selected",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/inventory-management/033.jpg",
-                "caption": "Dragging ID components into order",
-                "step": 4
-              },
-              {
-                "src": "assets/guides/inventory-management/034.jpg",
-                "caption": "Example Format and Save Changes",
-                "step": 4
-              }
-            ]
-          },
-          {
-            "title": "Give a group access to Inventory Management",
-            "steps": [
-              "Open <strong>Settings → Users and Permissions</strong> and click <strong>Add User Group</strong>.",
-              "Enter the group name, open the <strong>Users</strong> tab, click <strong>Add Users</strong>, pick users and click <strong>Submit</strong>.",
-              "Click <strong>Permissions</strong> on the group card and choose the rights under <strong>Inventory Management</strong>.",
-              "Click <strong>Save Changes</strong>."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/inventory-management/035.jpg",
-                "caption": "Users and Permissions user group cards",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/inventory-management/036.jpg",
-                "caption": "Add User Group and Search by group name",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/inventory-management/037.jpg",
-                "caption": "Group name entered",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/inventory-management/038.jpg",
-                "caption": "Users tab of a user group",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/inventory-management/039.jpg",
-                "caption": "Add Users button",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/inventory-management/040.jpg",
-                "caption": "Search Profiles list of users",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/inventory-management/041.jpg",
-                "caption": "Selected users and Submit",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/inventory-management/042.jpg",
-                "caption": "Delete icon that removes a user from the group",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/inventory-management/043.jpg",
-                "caption": "Permissions on the group card",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/inventory-management/044.jpg",
-                "caption": "Inventory Management permission rights",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/inventory-management/045.jpg",
-                "caption": "Permissions for modules, features and settings",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/inventory-management/046.jpg",
-                "caption": "Save Changes on the permissions page",
-                "step": 4
-              },
-              {
-                "src": "assets/guides/inventory-management/047.jpg",
-                "caption": "Edit icon that renames the group",
-                "step": 4
-              }
-            ]
-          },
-          {
-            "title": "Turn on unit conversions for a material",
-            "steps": [
-              "Open <strong>Settings → General</strong> and switch on <strong>UOM Conversions Required</strong>.",
-              "Under <strong>Material UOM Conversions</strong>, click <strong>Create</strong>.",
-              "Select the material, select at least two UOMs and enter the conversion factor between the source and target unit.",
-              "Click <strong>Submit</strong>."
-            ],
-            "note": "You cannot switch UOM Conversions Required off once it is in use.",
-            "images": [
-              {
-                "src": "assets/guides/inventory-management/055.jpg",
-                "caption": "Material UOM Conversions window",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/inventory-management/056.jpg",
-                "caption": "Material selected for a conversion",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/inventory-management/057.jpg",
-                "caption": "UOMs selected for a conversion",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/inventory-management/058.jpg",
-                "caption": "Conversion Factor between source and target unit",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/inventory-management/059.jpg",
-                "caption": "Submit on Material UOM Conversions",
-                "step": 3
-              }
-            ]
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/guides/inventory-management/012.jpg",
-            "caption": "Inventory Management tile on Home"
-          },
-          {
-            "src": "assets/guides/inventory-management/013.jpg",
-            "caption": "Settings tabs on the left side"
-          },
-          {
-            "src": "assets/guides/inventory-management/048.jpg",
-            "caption": "General settings"
-          },
-          {
-            "src": "assets/guides/inventory-management/049.jpg",
-            "caption": "External Tickets toggle"
-          },
-          {
-            "src": "assets/guides/inventory-management/050.jpg",
-            "caption": "UOM Conversions Required toggle"
-          },
-          {
-            "src": "assets/guides/inventory-management/051.jpg",
-            "caption": "Print Settings button"
-          },
-          {
-            "src": "assets/guides/inventory-management/052.jpg",
-            "caption": "Print Settings window"
-          },
-          {
-            "src": "assets/guides/inventory-management/053.jpg",
-            "caption": "Print copy names added with Add Row"
-          },
-          {
-            "src": "assets/guides/inventory-management/054.jpg",
-            "caption": "Include Header option"
-          }
-        ]
-      },
-      {
-        "heading": "Global Data Prerequisites: UOMs and Materials",
+        "heading": "UOMs & Materials",
         "intro": "<p>A Global Data Administrator sets up the units of measurement and the materials once, and Inventory Management then uses them. Do this before anything else, because locations, orders and tickets all pick materials and UOMs from here.</p>",
         "definitions": [
           {
@@ -36172,7 +35861,7 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Inventory Locations and Overview Map",
+        "heading": "Inventory Locations",
         "intro": "<p>An <strong>Inventory Location</strong> is a store, yard or stockpile that holds materials, and it is marked on a map with a geofence. The Inventory Administrator creates locations, and Inventory Managers watch them on the <strong>Overview</strong> map. Only active locations can be used on ship tickets.</p>",
         "definitions":[
           {
@@ -36472,7 +36161,7 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Materials at a Location",
+        "heading": "Materials",
         "intro": "<p>Each Inventory Location has its own list of materials with quantities and stock limits. The Inventory Manager adds materials, sets minimum and maximum quantities, and tops up stock. A red flag marks any material that has fallen below its minimum.</p>",
         "definitions":[
           {
@@ -36894,7 +36583,7 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Reports: Hauling, Client Portal and Reconciliation",
+        "heading": "Reports",
         "intro": "<p>The <strong>Reports</strong> tab has three reports for the Report User (an operations manager or PM): the <strong>Hauling Report</strong> for every load moved, the <strong>Client Portal</strong> for order delivery progress, and <strong>Material Reconciliation</strong> for matching surveyed stock to Arena.</p>",
         "definitions": [
           {
@@ -36950,7 +36639,7 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Lists: Columns, Filters and Excel Export",
+        "heading": "List Tools",
         "intro": "<p>Every list in Inventory Management (locations, materials, External Orders, Hauling Trucks and External Tickets) shares the same controls for columns, filters, views and Excel. Use them to see only what you need and to load or download records in bulk.</p>",
         "definitions": [
           {
@@ -36978,7 +36667,318 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Earlier Version: Site Material Requests, Issue Tickets and Return Tickets",
+        "heading": "Settings",
+        "intro": "<p>The Inventory Administrator uses <strong>Inventory Management → Settings</strong> to decide which fields orders and tickets carry, how their IDs are numbered, who can do what, and how units convert. Do this before creating any records.</p><p>The left side of Settings lists <strong>External Orders</strong>, <strong>Tickets</strong>, <strong>ID Settings</strong>, <strong>Users and Permissions</strong> and <strong>General</strong>. Complete <strong>ID Settings</strong> before the first ticket, because they lock once a ticket exists.</p>",
+        "definitions":[
+          {
+            "term": "External Orders and Tickets fields",
+            "definition": "On the **External Orders** and **Tickets** tabs, review the standard fields and click **Add field** for configurable ones. Pick a type in **Choose type**, name the field, and switch **Required**, **Show on Card** and **Unique** on or off. Actions add, duplicate or delete a field, and the drag icon reorders them. Click **Save Changes**."
+          },
+          {
+            "term": "ID Settings (orders and tickets)",
+            "definition": "Choose the **External Orders** or **External Tickets** sub-tab, pick **System Default** or **Custom**, choose the **ID Separator** (**/**, **-** or **None**), pick components (Serial No./ID, Year, Customer Reference Number, Customer/Project ID, custom text) and drag them into order. **Example Format** shows the result. Once a ticket is created, the ID settings lock."
+          },
+          {
+            "term": "Users and Permissions (Inventory Management)",
+            "definition": "User groups show as cards. **Add User Group**, then on the **Users** tab click **Add Users** (search by name, Roster ID, email or username) and **Submit**. Click **Permissions** on the card and, under **Inventory Management**, choose View, Create, Edit, Delete, Admin, Download, Print, Assign To and Roll Back for each item, then **Save Changes**. The edit icon renames the group."
+          },
+          {
+            "term": "General settings",
+            "definition": "Keep **External Tickets** on to use tickets. Turn on **UOM Conversions Required** if quantities must convert between units; once it is on and in use it cannot be turned off. **Print Settings** lets you add a row for each print copy (for example office copy, operator copy, customer copy) and choose **Include Header**. **Material UOM Conversions → Create** sets a factor between at least two UOMs for one material."
+          },
+          {
+            "term": "Earlier version: ID Settings tabs",
+            "definition": "In earlier-version environments, **Settings → ID Settings** has the tabs **Site Material Requests**, **External Site Material Requests**, **Material Issue Tickets**, **External Material Issue Tickets** and **Return Tickets**. On each, pick **System Default** or **Custom** ID format; **Example Format** shows the result."
+          },
+          {
+            "term": "Earlier version: General settings and Print Settings",
+            "definition": "**Settings → General** has **External Tickets**, **UOM Conversions Required** and **Print Settings**. In **Print Settings**, use **Add Row Name** to name each printed copy and **Include Header** to print the header."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Add a field to External Orders or Tickets",
+            "steps": [
+              "Open <strong>Inventory Management → Settings</strong> and choose the <strong>External Orders</strong> or <strong>Tickets</strong> tab.",
+              "Click <strong>Add field</strong>, pick the type in <strong>Choose type</strong> and enter the field name.",
+              "Set the <strong>Required</strong>, <strong>Show on Card</strong> and <strong>Unique</strong> toggles.",
+              "Drag the field into position and click <strong>Save Changes</strong>."
+            ],
+            "images": [
+              {
+                "src": "assets/guides/inventory-management/014.jpg",
+                "caption": "External Orders Standard Fields",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/inventory-management/015.jpg",
+                "caption": "Add field on External Orders",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/inventory-management/021.jpg",
+                "caption": "Tickets Standard Fields",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/inventory-management/022.jpg",
+                "caption": "Add field on Tickets",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/inventory-management/016.jpg",
+                "caption": "Choose type and field name",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/inventory-management/023.jpg",
+                "caption": "Choose type and field name for a ticket field",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/inventory-management/017.jpg",
+                "caption": "Required, Show on Card and Unique toggles",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/inventory-management/018.jpg",
+                "caption": "Field Actions menu",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/inventory-management/024.jpg",
+                "caption": "Required, Show on Card and Unique toggles for a ticket field",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/inventory-management/025.jpg",
+                "caption": "Field Actions menu on Tickets",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/inventory-management/019.jpg",
+                "caption": "Field Name and drag icon",
+                "step": 4
+              },
+              {
+                "src": "assets/guides/inventory-management/020.jpg",
+                "caption": "Save Changes on External Orders fields",
+                "step": 4
+              },
+              {
+                "src": "assets/guides/inventory-management/026.jpg",
+                "caption": "Field Name and drag icon on Tickets",
+                "step": 4
+              },
+              {
+                "src": "assets/guides/inventory-management/027.jpg",
+                "caption": "Save Changes on Tickets fields",
+                "step": 4
+              }
+            ]
+          },
+          {
+            "title": "Set the ID format for orders and tickets",
+            "steps": [
+              "Open <strong>Settings → ID Settings</strong> and choose <strong>External Orders</strong> or <strong>External Tickets</strong>.",
+              "Choose <strong>System Default</strong> or <strong>Custom</strong>, then the <strong>ID Separator</strong>.",
+              "Select the components and drag them into order. Check the <strong>Example Format</strong>.",
+              "Click <strong>Save Changes</strong>."
+            ],
+            "note": "Do this before the first ticket is created, because the settings lock after that.",
+            "images": [
+              {
+                "src": "assets/guides/inventory-management/028.jpg",
+                "caption": "ID Settings sub-tabs",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/inventory-management/029.jpg",
+                "caption": "External Tickets ID Settings",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/inventory-management/030.jpg",
+                "caption": "ID Separator options",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/inventory-management/031.jpg",
+                "caption": "ID components to include",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/inventory-management/032.jpg",
+                "caption": "ID components selected",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/inventory-management/033.jpg",
+                "caption": "Dragging ID components into order",
+                "step": 4
+              },
+              {
+                "src": "assets/guides/inventory-management/034.jpg",
+                "caption": "Example Format and Save Changes",
+                "step": 4
+              }
+            ]
+          },
+          {
+            "title": "Give a group access to Inventory Management",
+            "steps": [
+              "Open <strong>Settings → Users and Permissions</strong> and click <strong>Add User Group</strong>.",
+              "Enter the group name, open the <strong>Users</strong> tab, click <strong>Add Users</strong>, pick users and click <strong>Submit</strong>.",
+              "Click <strong>Permissions</strong> on the group card and choose the rights under <strong>Inventory Management</strong>.",
+              "Click <strong>Save Changes</strong>."
+            ],
+            "images": [
+              {
+                "src": "assets/guides/inventory-management/035.jpg",
+                "caption": "Users and Permissions user group cards",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/inventory-management/036.jpg",
+                "caption": "Add User Group and Search by group name",
+                "step": 1
+              },
+              {
+                "src": "assets/guides/inventory-management/037.jpg",
+                "caption": "Group name entered",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/inventory-management/038.jpg",
+                "caption": "Users tab of a user group",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/inventory-management/039.jpg",
+                "caption": "Add Users button",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/inventory-management/040.jpg",
+                "caption": "Search Profiles list of users",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/inventory-management/041.jpg",
+                "caption": "Selected users and Submit",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/inventory-management/042.jpg",
+                "caption": "Delete icon that removes a user from the group",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/inventory-management/043.jpg",
+                "caption": "Permissions on the group card",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/inventory-management/044.jpg",
+                "caption": "Inventory Management permission rights",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/inventory-management/045.jpg",
+                "caption": "Permissions for modules, features and settings",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/inventory-management/046.jpg",
+                "caption": "Save Changes on the permissions page",
+                "step": 4
+              },
+              {
+                "src": "assets/guides/inventory-management/047.jpg",
+                "caption": "Edit icon that renames the group",
+                "step": 4
+              }
+            ]
+          },
+          {
+            "title": "Turn on unit conversions for a material",
+            "steps": [
+              "Open <strong>Settings → General</strong> and switch on <strong>UOM Conversions Required</strong>.",
+              "Under <strong>Material UOM Conversions</strong>, click <strong>Create</strong>.",
+              "Select the material, select at least two UOMs and enter the conversion factor between the source and target unit.",
+              "Click <strong>Submit</strong>."
+            ],
+            "note": "You cannot switch UOM Conversions Required off once it is in use.",
+            "images": [
+              {
+                "src": "assets/guides/inventory-management/055.jpg",
+                "caption": "Material UOM Conversions window",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/inventory-management/056.jpg",
+                "caption": "Material selected for a conversion",
+                "step": 2
+              },
+              {
+                "src": "assets/guides/inventory-management/057.jpg",
+                "caption": "UOMs selected for a conversion",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/inventory-management/058.jpg",
+                "caption": "Conversion Factor between source and target unit",
+                "step": 3
+              },
+              {
+                "src": "assets/guides/inventory-management/059.jpg",
+                "caption": "Submit on Material UOM Conversions",
+                "step": 3
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/guides/inventory-management/012.jpg",
+            "caption": "Inventory Management tile on Home"
+          },
+          {
+            "src": "assets/guides/inventory-management/013.jpg",
+            "caption": "Settings tabs on the left side"
+          },
+          {
+            "src": "assets/guides/inventory-management/048.jpg",
+            "caption": "General settings"
+          },
+          {
+            "src": "assets/guides/inventory-management/049.jpg",
+            "caption": "External Tickets toggle"
+          },
+          {
+            "src": "assets/guides/inventory-management/050.jpg",
+            "caption": "UOM Conversions Required toggle"
+          },
+          {
+            "src": "assets/guides/inventory-management/051.jpg",
+            "caption": "Print Settings button"
+          },
+          {
+            "src": "assets/guides/inventory-management/052.jpg",
+            "caption": "Print Settings window"
+          },
+          {
+            "src": "assets/guides/inventory-management/053.jpg",
+            "caption": "Print copy names added with Add Row"
+          },
+          {
+            "src": "assets/guides/inventory-management/054.jpg",
+            "caption": "Include Header option"
+          }
+        ]
+      },
+      {
+        "heading": "Earlier Version Tickets",
         "intro": "<p>Environments running an earlier version of Arena show these screens; Arena 2.0 uses the screens above. A project team raises a **Site Material Request**, the store ships materials with a **Material Issue Ticket**, and leftovers come back with a **Return Ticket**.</p>",
         "definitions": [
           {
@@ -37048,7 +37048,7 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Troubleshooting: Inventory Problems",
+        "heading": "Troubleshooting",
         "intro": "<p>Use this page when an Inventory Management screen does not let you do something. Most cases come from a setting made earlier or a rule on the form.</p>",
         "definitions": [],
         "procedures": [
@@ -37120,18 +37120,18 @@ const MODULES = [
       "Environments running an earlier version show <strong>Inventory Master</strong>, <strong>Site Material Request</strong>, <strong>Material Issue Ticket</strong> and <strong>Return Ticket</strong>, with <strong>Pickup</strong>, <strong>Ship</strong> and <strong>Return</strong> in <strong>Settings</strong>."
     ],
     "sections":[
-      "Who Does What",
-      "Settings: Fields, IDs, Permissions and General",
-      "Global Data Prerequisites: UOMs and Materials",
-      "Inventory Locations and Overview Map",
-      "Materials at a Location",
+      "Overview",
+      "UOMs & Materials",
+      "Inventory Locations",
+      "Materials",
       "External Orders",
       "Hauling Trucks",
       "External Tickets",
-      "Reports: Hauling, Client Portal and Reconciliation",
-      "Lists: Columns, Filters and Excel Export",
-      "Earlier Version: Site Material Requests, Issue Tickets and Return Tickets",
-      "Troubleshooting: Inventory Problems"
+      "Reports",
+      "List Tools",
+      "Settings",
+      "Earlier Version Tickets",
+      "Troubleshooting"
     ]
   },
   {
