@@ -1,6 +1,25 @@
 // ---- Flat intent-tagged QA items (for the offline chat engine) ----
 const QA_OPPORTUNITY = [
   {
+    "action": "define",
+    "object": "customer poc",
+    "scope": "module",
+    "section": "Opportunity Record",
+    "question": "What is a Customer POC on an opportunity?",
+    "answer": "POC stands for **Point of Contact**. The **Customer POC** is the named person at the customer (client) that you deal with on that opportunity. Pick it in the **Contact** section of the opportunity profile (**Opportunity Management → Opportunities**), next to the customer; if the person is not in the list, use **+ Create a Client POC**. The **Owner POC** and the **EPC / Engineer POC** work the same way for the owner (who owns and funds the asset) and for the engineer (who controls the design).",
+    "tags": [
+      "customer poc",
+      "client poc",
+      "what is a customer poc",
+      "what does customer poc mean",
+      "poc meaning",
+      "point of contact",
+      "owner poc",
+      "epc poc",
+      "what is poc in opportunity"
+    ]
+  },
+  {
     action: "view",
     object: "opportunities list",
     scope: "module",
@@ -4081,7 +4100,7 @@ const QA_GLOBALDATA = [
     section: "UOM & Phase Codes",
     question: "How do I add a Phase Code?",
     answer: "1. **Global Data → UOM, Phasecode & GL Codes → Phase Codes** tab → **Add**. A blank row opens at the top of the table.\n2. Type the Phase Code and Phase Code Description, and tick the **Cost Types** that apply (Material, Equipment, Labor, Unit Rate, Sub Contractor, BOQ's, Freight Charges, Fuel & Gas).\n3. Save the row.\n\nBulk create/update is also available via Excel Upload, which supports a **Create Mode** and an **Update Mode**. The new code appears in every project's Project Setup → Phase Codes list.",
-    tags: ["phase code","add phase code","cost type","cost type classification"]
+    tags: ["phase code","add phase code","cost type","cost type classification","create phase codes","create a phase code","create phase codes in global data","how to create phase codes","new phase code","add phase codes","phase codes global data"]
   },
   {
     action: "understand",
@@ -4978,6 +4997,402 @@ const QA_GLOBALDATA = [
 
 // ---- Additional flat intent-tagged QA items (new modules, offline chat engine) ----
 const QA_ACCOUNTBASICS = [
+  {
+    "action": "define",
+    "object": "poc",
+    "scope": "global",
+    "section": "Glossary",
+    "question": "What does POC mean?",
+    "answer": "POC stands for **Point of Contact**. The named person at an organisation (customer, owner, engineer) whom you deal with on a record. In Arena the POC is chosen next to the organisation, for example Customer POC and Owner POC on an opportunity.",
+    "tags": [
+      "poc",
+      "what does poc mean",
+      "what is poc",
+      "poc meaning",
+      "poc full form",
+      "poc stands for",
+      "point of contact",
+      "abbreviation poc"
+    ]
+  },
+  {
+    "action": "define",
+    "object": "epc",
+    "scope": "global",
+    "section": "Glossary",
+    "question": "What does EPC mean?",
+    "answer": "EPC stands for **Engineering, Procurement and Construction**. The contractor that designs, buys and builds a project. In Arena an opportunity can carry an EPC / Engineer and its POC.",
+    "tags": [
+      "epc",
+      "what does epc mean",
+      "what is epc",
+      "epc meaning",
+      "epc full form",
+      "epc stands for",
+      "engineering, procurement and construction",
+      "abbreviation epc"
+    ]
+  },
+  {
+    "action": "define",
+    "object": "lor",
+    "scope": "global",
+    "section": "Glossary",
+    "question": "What does LOR mean?",
+    "answer": "LOR stands for **Load Out Request**. A request to move equipment to a project or location. See Equipment Management → Requests.",
+    "tags": [
+      "lor",
+      "what does lor mean",
+      "what is lor",
+      "lor meaning",
+      "lor full form",
+      "lor stands for",
+      "load out request",
+      "abbreviation lor"
+    ]
+  },
+  {
+    "action": "define",
+    "object": "po",
+    "scope": "global",
+    "section": "Glossary",
+    "question": "What does PO mean?",
+    "answer": "PO stands for **Purchase Order**. The document that formally commits to buy from a vendor at an agreed price. See Procurement → Purchase Orders.",
+    "tags": [
+      "po",
+      "what does po mean",
+      "what is po",
+      "po meaning",
+      "po full form",
+      "po stands for",
+      "purchase order",
+      "abbreviation po"
+    ]
+  },
+  {
+    "action": "define",
+    "object": "rfq",
+    "scope": "global",
+    "section": "Glossary",
+    "question": "What does RFQ mean?",
+    "answer": "RFQ stands for **Request for Quotation**. A request sent to vendors asking them to quote a price. See Procurement and Tender Management.",
+    "tags": [
+      "rfq",
+      "what does rfq mean",
+      "what is rfq",
+      "rfq meaning",
+      "rfq full form",
+      "rfq stands for",
+      "request for quotation",
+      "abbreviation rfq"
+    ]
+  },
+  {
+    "action": "define",
+    "object": "req",
+    "scope": "global",
+    "section": "Glossary",
+    "question": "What does REQ mean?",
+    "answer": "REQ stands for **Requisition**. A request to buy materials, equipment, parts or services, raised before an RFQ or PO. See Procurement → REQ.",
+    "tags": [
+      "req",
+      "what does req mean",
+      "what is req",
+      "req meaning",
+      "req full form",
+      "req stands for",
+      "requisition",
+      "abbreviation req"
+    ]
+  },
+  {
+    "action": "define",
+    "object": "dr",
+    "scope": "global",
+    "section": "Glossary",
+    "question": "What does DR mean?",
+    "answer": "DR stands for **Delivery Receipt**. The record that goods from a purchase order were received. See Procurement → Delivery Receipts.",
+    "tags": [
+      "dr",
+      "what does dr mean",
+      "what is dr",
+      "dr meaning",
+      "dr full form",
+      "dr stands for",
+      "delivery receipt",
+      "abbreviation dr"
+    ]
+  },
+  {
+    "action": "define",
+    "object": "boq",
+    "scope": "global",
+    "section": "Glossary",
+    "question": "What does BOQ mean?",
+    "answer": "BOQ stands for **Bill of Quantities**. The itemised list of work and quantities used in tenders and work orders.",
+    "tags": [
+      "boq",
+      "what does boq mean",
+      "what is boq",
+      "boq meaning",
+      "boq full form",
+      "boq stands for",
+      "bill of quantities",
+      "abbreviation boq"
+    ]
+  },
+  {
+    "action": "define",
+    "object": "cbs",
+    "scope": "global",
+    "section": "Glossary",
+    "question": "What does CBS mean?",
+    "answer": "CBS stands for **Cost Breakdown Structure**. The structure used to break an estimate into cost groups. See Project Setup → Estimate.",
+    "tags": [
+      "cbs",
+      "what does cbs mean",
+      "what is cbs",
+      "cbs meaning",
+      "cbs full form",
+      "cbs stands for",
+      "cost breakdown structure",
+      "abbreviation cbs"
+    ]
+  },
+  {
+    "action": "define",
+    "object": "wbs",
+    "scope": "global",
+    "section": "Glossary",
+    "question": "What does WBS mean?",
+    "answer": "WBS stands for **Work Breakdown Structure**. The structure that breaks a project into work packages and activities.",
+    "tags": [
+      "wbs",
+      "what does wbs mean",
+      "what is wbs",
+      "wbs meaning",
+      "wbs full form",
+      "wbs stands for",
+      "work breakdown structure",
+      "abbreviation wbs"
+    ]
+  },
+  {
+    "action": "define",
+    "object": "ncr",
+    "scope": "global",
+    "section": "Glossary",
+    "question": "What does NCR mean?",
+    "answer": "NCR stands for **Non Conformance Report**. A report raised when work or equipment does not meet the required standard. See Equipment Management → Non Conformance Report.",
+    "tags": [
+      "ncr",
+      "what does ncr mean",
+      "what is ncr",
+      "ncr meaning",
+      "ncr full form",
+      "ncr stands for",
+      "non conformance report",
+      "abbreviation ncr"
+    ]
+  },
+  {
+    "action": "define",
+    "object": "rfi",
+    "scope": "global",
+    "section": "Glossary",
+    "question": "What does RFI mean?",
+    "answer": "RFI stands for **Request for Information**. A formal question raised to get a clarification from the design or client side. See Field Works → Progress → RFI.",
+    "tags": [
+      "rfi",
+      "what does rfi mean",
+      "what is rfi",
+      "rfi meaning",
+      "rfi full form",
+      "rfi stands for",
+      "request for information",
+      "abbreviation rfi"
+    ]
+  },
+  {
+    "action": "define",
+    "object": "wir",
+    "scope": "global",
+    "section": "Glossary",
+    "question": "What does WIR mean?",
+    "answer": "WIR stands for **Work Inspection Request**. A request to inspect completed work. See Field Works.",
+    "tags": [
+      "wir",
+      "what does wir mean",
+      "what is wir",
+      "wir meaning",
+      "wir full form",
+      "wir stands for",
+      "work inspection request",
+      "abbreviation wir"
+    ]
+  },
+  {
+    "action": "define",
+    "object": "dsi",
+    "scope": "global",
+    "section": "Glossary",
+    "question": "What does DSI mean?",
+    "answer": "DSI stands for **Daily Safety Issue**. A safety issue recorded on a day. See Field Works → Safety → Daily Safety Issues.",
+    "tags": [
+      "dsi",
+      "what does dsi mean",
+      "what is dsi",
+      "dsi meaning",
+      "dsi full form",
+      "dsi stands for",
+      "daily safety issue",
+      "abbreviation dsi"
+    ]
+  },
+  {
+    "action": "define",
+    "object": "awp",
+    "scope": "global",
+    "section": "Glossary",
+    "question": "What does AWP mean?",
+    "answer": "AWP stands for **Advanced Work Packaging**. A planning method that organises construction work into work packages. It is switched on in Global Data → Settings.",
+    "tags": [
+      "awp",
+      "what does awp mean",
+      "what is awp",
+      "awp meaning",
+      "awp full form",
+      "awp stands for",
+      "advanced work packaging",
+      "abbreviation awp"
+    ]
+  },
+  {
+    "action": "define",
+    "object": "tic",
+    "scope": "global",
+    "section": "Glossary",
+    "question": "What does TIC mean?",
+    "answer": "TIC stands for **Total Installed Cost**. The full cost of a project once installed. It is a value field on an opportunity.",
+    "tags": [
+      "tic",
+      "what does tic mean",
+      "what is tic",
+      "tic meaning",
+      "tic full form",
+      "tic stands for",
+      "total installed cost",
+      "abbreviation tic"
+    ]
+  },
+  {
+    "action": "define",
+    "object": "ocr",
+    "scope": "global",
+    "section": "Glossary",
+    "question": "What does OCR mean?",
+    "answer": "OCR stands for **Optical Character Recognition**. Reading text from a photo or document automatically, for example from a business card or a drawing.",
+    "tags": [
+      "ocr",
+      "what does ocr mean",
+      "what is ocr",
+      "ocr meaning",
+      "ocr full form",
+      "ocr stands for",
+      "optical character recognition",
+      "abbreviation ocr"
+    ]
+  },
+  {
+    "action": "define",
+    "object": "uom",
+    "scope": "global",
+    "section": "Glossary",
+    "question": "What does UOM mean?",
+    "answer": "UOM stands for **Unit of Measure**. The unit a quantity is counted in, such as metre, kilogram or hour. Managed in Global Data.",
+    "tags": [
+      "uom",
+      "what does uom mean",
+      "what is uom",
+      "uom meaning",
+      "uom full form",
+      "uom stands for",
+      "unit of measure",
+      "abbreviation uom"
+    ]
+  },
+  {
+    "action": "define",
+    "object": "gl code",
+    "scope": "global",
+    "section": "Glossary",
+    "question": "What does GL code mean?",
+    "answer": "GL code stands for **General Ledger code**. The accounting code a cost is posted to. Managed in Global Data.",
+    "tags": [
+      "gl code",
+      "what does gl code mean",
+      "what is gl code",
+      "gl code meaning",
+      "gl code full form",
+      "gl code stands for",
+      "general ledger code",
+      "abbreviation gl code"
+    ]
+  },
+  {
+    "action": "define",
+    "object": "pm",
+    "scope": "global",
+    "section": "Glossary",
+    "question": "What does PM mean?",
+    "answer": "PM stands for **Preventive Maintenance**. Maintenance scheduled in advance by calendar, hours or distance. In Equipment Management, see Maintenance → Preventive Maintenance.",
+    "tags": [
+      "pm",
+      "what does pm mean",
+      "what is pm",
+      "pm meaning",
+      "pm full form",
+      "pm stands for",
+      "preventive maintenance",
+      "abbreviation pm"
+    ]
+  },
+  {
+    "action": "define",
+    "object": "wo",
+    "scope": "global",
+    "section": "Glossary",
+    "question": "What does WO mean?",
+    "answer": "WO stands for **Work Order**. A record of work to be done and its cost. See the Work Order module.",
+    "tags": [
+      "wo",
+      "what does wo mean",
+      "what is wo",
+      "wo meaning",
+      "wo full form",
+      "wo stands for",
+      "work order",
+      "abbreviation wo"
+    ]
+  },
+  {
+    "action": "define",
+    "object": "bd",
+    "scope": "global",
+    "section": "Glossary",
+    "question": "What does BD mean?",
+    "answer": "BD stands for **Business Development**. The sales and pursuit side of the business. See Opportunity Management.",
+    "tags": [
+      "bd",
+      "what does bd mean",
+      "what is bd",
+      "bd meaning",
+      "bd full form",
+      "bd stands for",
+      "business development",
+      "abbreviation bd"
+    ]
+  },
   {
     action: "create",
     object: "new project",
@@ -10628,7 +11043,7 @@ const QA_WORKORDER = [
     section: "Work Orders",
     question: "How do I create a new work order?",
     answer: "Go to **Home → Work Order**, open the **Work Orders** tab and click **Create**. In the **Create Work Order Contract** window, choose the **Work Order Type** (for example Equipment), enter the **WO Description**, pick **Create By** (Inspection Issue or Equipment), choose the equipment, add the maintenance, cost and service details and click **Submit**. The work order appears on the list with its new ID. Some environments running an earlier version show only Name, Description and Type in this window.",
-    tags: ["new work order","add work order","work order contract","create contract","work order creation"]
+    tags: ["new work order","add work order","work order contract","create contract","work order creation","create work order","create a work order","create workorder","new work order","add a work order","how to create work order"]
   },
   {
     action: "view",
@@ -12620,12 +13035,12 @@ const QA_TENDERMANAGEMENT = [
   },
   {
     action: "create",
-    object: "create work order tender",
+    object: "tender work order",
     scope: "module",
     section: "Bid Comparison",
     question: "How do I create a work order from a tender?",
     answer: "From **Home**, open **Tender Management → Tenders** and open the tender. Open Negotiated Responses, click the bill and use Select Items to Create WO to choose which BOQ items go in. The awarded work order then shows under Awarded Work Order with Awarded To, Project Linked, Description and Created On.",
-    tags: ["create work order from tender","award tender","select items to create wo","awarded work order","tender winner work order"]
+    tags: ["create work order from tender","award tender","select items to create wo","awarded work order","tender winner work order","create a work order from a tender","tender work order","award tender work order"]
   },
   {
     action: "view",
@@ -24775,6 +25190,101 @@ const MODULES = [
             "note": "If you don't see the Support icon, or need a faster response, email support@inncircles.com directly with your company name and a description of the issue."
           }
         ]
+      },
+      {
+        "heading": "Glossary",
+        "intro": "<p>Short meanings of the abbreviations used across Arena and its documentation. Anyone reading the docs can use it; each entry says where to look in the product.</p>",
+        "definitions": [
+          {
+            "term": "POC – Point of Contact",
+            "definition": "The named person at an organisation (customer, owner, engineer) whom you deal with on a record. In Arena the POC is chosen next to the organisation, for example Customer POC and Owner POC on an opportunity."
+          },
+          {
+            "term": "EPC – Engineering, Procurement and Construction",
+            "definition": "The contractor that designs, buys and builds a project. In Arena an opportunity can carry an EPC / Engineer and its POC."
+          },
+          {
+            "term": "LOR – Load Out Request",
+            "definition": "A request to move equipment to a project or location. See Equipment Management → Requests."
+          },
+          {
+            "term": "PO – Purchase Order",
+            "definition": "The document that formally commits to buy from a vendor at an agreed price. See Procurement → Purchase Orders."
+          },
+          {
+            "term": "RFQ – Request for Quotation",
+            "definition": "A request sent to vendors asking them to quote a price. See Procurement and Tender Management."
+          },
+          {
+            "term": "REQ – Requisition",
+            "definition": "A request to buy materials, equipment, parts or services, raised before an RFQ or PO. See Procurement → REQ."
+          },
+          {
+            "term": "DR – Delivery Receipt",
+            "definition": "The record that goods from a purchase order were received. See Procurement → Delivery Receipts."
+          },
+          {
+            "term": "BOQ – Bill of Quantities",
+            "definition": "The itemised list of work and quantities used in tenders and work orders."
+          },
+          {
+            "term": "CBS – Cost Breakdown Structure",
+            "definition": "The structure used to break an estimate into cost groups. See Project Setup → Estimate."
+          },
+          {
+            "term": "WBS – Work Breakdown Structure",
+            "definition": "The structure that breaks a project into work packages and activities."
+          },
+          {
+            "term": "NCR – Non Conformance Report",
+            "definition": "A report raised when work or equipment does not meet the required standard. See Equipment Management → Non Conformance Report."
+          },
+          {
+            "term": "RFI – Request for Information",
+            "definition": "A formal question raised to get a clarification from the design or client side. See Field Works → Progress → RFI."
+          },
+          {
+            "term": "WIR – Work Inspection Request",
+            "definition": "A request to inspect completed work. See Field Works."
+          },
+          {
+            "term": "DSI – Daily Safety Issue",
+            "definition": "A safety issue recorded on a day. See Field Works → Safety → Daily Safety Issues."
+          },
+          {
+            "term": "AWP – Advanced Work Packaging",
+            "definition": "A planning method that organises construction work into work packages. It is switched on in Global Data → Settings."
+          },
+          {
+            "term": "TIC – Total Installed Cost",
+            "definition": "The full cost of a project once installed. It is a value field on an opportunity."
+          },
+          {
+            "term": "OCR – Optical Character Recognition",
+            "definition": "Reading text from a photo or document automatically, for example from a business card or a drawing."
+          },
+          {
+            "term": "UOM – Unit of Measure",
+            "definition": "The unit a quantity is counted in, such as metre, kilogram or hour. Managed in Global Data."
+          },
+          {
+            "term": "GL code – General Ledger code",
+            "definition": "The accounting code a cost is posted to. Managed in Global Data."
+          },
+          {
+            "term": "PM – Preventive Maintenance",
+            "definition": "Maintenance scheduled in advance by calendar, hours or distance. In Equipment Management, see Maintenance → Preventive Maintenance."
+          },
+          {
+            "term": "WO – Work Order",
+            "definition": "A record of work to be done and its cost. See the Work Order module."
+          },
+          {
+            "term": "BD – Business Development",
+            "definition": "The sales and pursuit side of the business. See Opportunity Management."
+          }
+        ],
+        "procedures": []
       }
     ],
     "name": "Getting Started",
@@ -24795,7 +25305,8 @@ const MODULES = [
       "User Registration",
       "Permission Groups",
       "Notifications",
-      "Support"
+      "Support",
+      "Glossary"
     ]
   },
   {

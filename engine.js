@@ -211,20 +211,34 @@ function scoreWithContext(entry, queryTokens, queryStems, context) {
 }
 
 const CONFIDENCE_FLOOR = 5;      // below this: no confident answer at all
-const AMBIGUITY_GAP = 2;         // if top two scores are this close, treat as ambiguous rather than guessing
+const AMBIGUITY_GAP = 1;         // if top two scores are this close, treat as ambiguous rather than guessing
 const CLARIFY_FLOOR = 2;         // below this even a "did you mean" suggestion isn't worth showing
 
 // Returns one of three shapes:
 //  { type: "answer", best, alternatives }              - confident single answer
 //  { type: "clarify", options }                         - multiple plausible matches, ask which one
 //  { type: "none", suggestions }                        - nothing confident; suggestions may be empty
+// Questions that ask for a meaning ("what is X", "what does X mean") should prefer explanations over how-to steps.
+const DEFINE_ACTIONS = new Set(["define", "explain", "understand", "describe"]);
+const DO_ACTIONS = new Set(["create", "add", "configure", "delete", "edit", "assign", "upload", "submit", "approve", "map", "register", "set", "enable"]);
+function intentAdjust(query, entry, score) {
+  if (score <= 0) return score;   // never turn a non-match into a match
+  const asksMeaning = /^\s*(what|whats|what's)\b|\b(meaning|define|definition|stands for|full form|explain)\b/i.test(query) && !/\bhow\b/i.test(query);
+  if (!asksMeaning) return entry.derived ? Math.max(0, score - 6) : score;   // glossary entries stay out of how-to questions
+  const a = String(entry.action || "").toLowerCase();
+  if (entry.derived) return score + 4;
+  if (DEFINE_ACTIONS.has(a)) return score + 4;
+  if (DO_ACTIONS.has(a)) return score * 0.6;
+  return score;
+}
+
 function matchQuery(KB, query, context) {
   const queryTokens = tokenize(query);
   const queryStems = stemSet(queryTokens);
   if (!queryTokens.length) return { type: "none", suggestions: [] };
 
   const scored = KB
-    .map(entry => ({ entry, score: scoreWithContext(entry, queryTokens, queryStems, context) }))
+    .map(entry => ({ entry, score: intentAdjust(query, entry, scoreWithContext(entry, queryTokens, queryStems, context)) }))
     .filter(x => x.score > 0)
     .sort((a, b) => b.score - a.score);
 
@@ -266,7 +280,7 @@ function retrieveTopEntries(KB, query, context, n) {
   if (!queryTokens.length) return [];
 
   const scored = KB
-    .map(entry => ({ entry, score: scoreWithContext(entry, queryTokens, queryStems, context) }))
+    .map(entry => ({ entry, score: intentAdjust(query, entry, scoreWithContext(entry, queryTokens, queryStems, context)) }))
     .filter(x => x.score >= CLARIFY_FLOOR)
     .sort((a, b) => b.score - a.score);
 
@@ -289,6 +303,34 @@ function buildKB(MODULES) {
         question: item.question,
         answer: item.answer,
         tags: item.tags || []
+      });
+    });
+  });
+  // Every documented term (the glossary lists on each module page) is also searchable as a "What is X?" entry.
+  const plain = h => String(h || "").replace(/<\/?strong>/g, "**").replace(/<br\s*\/?>/g, "\n").replace(/<\/p>\s*<p>/g, "\n\n").replace(/<[^>]+>/g, "").replace(/&amp;/g, "&").replace(/&gt;/g, ">").replace(/&lt;/g, "<").trim();
+  MODULES.forEach(mod => {
+    const first = (String(mod.overview || "").match(/<p>([\s\S]*?)<\/p>/) || [null, mod.overview || ""])[1];
+    const text = plain(first);
+    if (text.length > 40) {
+      kb.push({
+        id: `${mod.id}-overview`, moduleId: mod.id, moduleName: mod.name, moduleColor: mod.color,
+        action: "define", object: String(mod.name).toLowerCase(), scope: "module", section: (mod.narrative && mod.narrative[0] && mod.narrative[0].heading) || null,
+        question: "What is " + mod.name + "?", answer: text, tags: [String(mod.name).toLowerCase(), String(mod.alias || "").toLowerCase()].filter(Boolean), derived: true
+      });
+    }
+  });
+  MODULES.forEach(mod => {
+    (mod.narrative || []).forEach((sec, si) => {
+      (sec.definitions || []).forEach((d, di) => {
+        const term = plain(d.term).replace(/\*\*/g, "");
+        const answer = plain(d.definition);
+        if (!term || answer.length < 25) return;
+        kb.push({
+          id: `${mod.id}-def-${si}-${di}`,
+          moduleId: mod.id, moduleName: mod.name, moduleColor: mod.color,
+          action: "define", object: term.toLowerCase(), scope: "module", section: sec.heading,
+          question: "What is " + term + "?", answer, tags: [term.toLowerCase()], derived: true
+        });
       });
     });
   });
