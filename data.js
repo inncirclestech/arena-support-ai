@@ -4689,7 +4689,7 @@ const QA_ACCOUNTBASICS = [
     action: "create",
     object: "new project",
     scope: "global",
-    section: "Home Page",
+    section: "Home",
     question: "How do I create a new project?",
     answer: "Go to **Home → Projects** and click the orange **+ Create Project** button, top-left of the project grid (next to \"Upload Excel\"). In the dialog, fill in the three required fields — **Project Name**, **Project Number / ID**, and **Construction Type** — then click Submit. Everything else in the form (location, subsidiary, owner representative, currency, customer, project type, funding/implementing agency, and a project logo/display image) is optional and can be filled in later. The dialog closes, the new project appears immediately in the grid with status \"Created,\" and it's fully navigable right away — but it starts completely empty, so plan to follow up in **Project Setup** to build out the work breakdown, team, schedule, and forms before it's operationally useful.",
     tags: ["create project","new project","start a project","add project","create a new job","set up a project"]
@@ -4698,7 +4698,7 @@ const QA_ACCOUNTBASICS = [
     action: "understand",
     object: "create project required fields",
     scope: "global",
-    section: "Home Page",
+    section: "Home",
     question: "What information do I need to have ready before creating a new project?",
     answer: "Only three fields are required to create a project: **Project Name**, **Project Number / ID** (the short code shown on the project card, e.g. \"ST-01\"), and **Construction Type** (picked from the same list Global Data maintains). Everything else — location, subsidiary/business unit, owner representative, project manager, currency, customer, owner, construction cost estimate, project type, and funding/implementing agency — is optional at creation and can be added or edited afterward. There's no start date, end date, or duration field at creation time; scheduling is set up separately once the project exists.",
     tags: ["required fields","what do i need to create a project","project number","project id","construction type"]
@@ -4707,7 +4707,7 @@ const QA_ACCOUNTBASICS = [
     action: "understand",
     object: "what happens after creating a project",
     scope: "global",
-    section: "Home Page",
+    section: "Home",
     question: "What happens right after I create a new project — where does it take me?",
     answer: "Submitting the Create Project form returns you to the Projects grid, not into the new project — the new card just appears at the top with status \"Created.\" When you click into it, you land on **My Desk**, and since nothing has been configured yet, every section there (Actions, Work Logs, Punch List Items, Quality Logs, Safety) shows zero. The project is technically usable immediately — every module is reachable with no forced setup wizard — but it's functionally empty until someone works through **Project Setup** to define the work breakdown/plants, add the team, build a schedule, and configure phase codes and forms.",
     tags: ["after creating a project","new project empty","project setup next steps","what to do after create project"]
@@ -4716,7 +4716,7 @@ const QA_ACCOUNTBASICS = [
     action: "understand",
     object: "clone or template a project",
     scope: "global",
-    section: "Home Page",
+    section: "Home",
     question: "Can I create a new project by cloning or copying an existing one?",
     answer: "No — there's currently no clone-project or create-from-template option anywhere in Arena. The Create Project dialog is always a blank form, and the three-dot menu on an existing project's card only offers Edit and Delete, not Duplicate. Every project has to be created from scratch and then configured (work breakdown, phase codes, forms, templates) individually in Project Setup, even if it's similar to a project you've already built out.",
     tags: ["clone project","copy project","duplicate project","project template","create from template"]
@@ -4734,7 +4734,7 @@ const QA_ACCOUNTBASICS = [
     action: "view",
     object: "home page",
     scope: "global",
-    section: "Home Page",
+    section: "Home",
     question: "What shows up on the Arena Home page after I log in?",
     answer: "Arena's Home page is the first page a user sees after logging in (users with only \"Projects\" permission are taken to the Projects page instead). It shows a weather report in the top-left (once location access is allowed), a horizontal tab of all projects with progress percentages, and tiles for Time Management, Equipment Management, and Inventory Management based on your permissions.",
     tags: ["home page","landing page","first screen","dashboard","what is home","post-login screen"]
@@ -4743,7 +4743,7 @@ const QA_ACCOUNTBASICS = [
     action: "navigate",
     object: "project desk",
     scope: "project",
-    section: "Home Page",
+    section: "Home",
     question: "How do I get to a specific project's detail view from Home?",
     answer: "From **Home**, click on any project's progress card in the horizontal project tab. This navigates you to that project's Project Desk page for a more refined view of project insights.",
     tags: ["project desk","project navigation","progress card","project insights","click through"]
@@ -4752,7 +4752,7 @@ const QA_ACCOUNTBASICS = [
     action: "view",
     object: "module access",
     scope: "global",
-    section: "Home Page",
+    section: "Home",
     question: "Why can't I see Time Management or Equipment Management on my Home page?",
     answer: "Access to each Home page module (Time Management, Equipment Management, Inventory Management, Projects) depends on your assigned permissions. Contact your project or system administrator if a module you need is missing.",
     tags: ["missing module","permissions","access denied","module visibility","administrator contact"]
@@ -4842,7 +4842,7 @@ const QA_ACCOUNTBASICS = [
     action: "create",
     object: "user group",
     scope: "project",
-    section: "Permissions & Groups",
+    section: "Permission Groups",
     question: "How do I create a permission/user group for a project?",
     answer: "Open the project and go to **Users and Permissions → Groups Permission**, then click the **User Group** button. Enter a name for the group in the pop-up and confirm to create it as a new role card.",
     tags: ["user group","permission group","role creation","add role","project permissions"]
@@ -4851,7 +4851,7 @@ const QA_ACCOUNTBASICS = [
     action: "link",
     object: "user group",
     scope: "project",
-    section: "Permissions & Groups",
+    section: "Permission Groups",
     question: "How do I copy a user group's permissions to other projects?",
     answer: "Open the project and go to **Users and Permissions → Groups Permission**, then click **Copy User Groups to Projects**. A pop-up lets you select which projects should receive a copy of that user group's setup.",
     tags: ["copy permissions","duplicate user group","copy to projects","clone role"]
@@ -4860,7 +4860,7 @@ const QA_ACCOUNTBASICS = [
     action: "configure",
     object: "permission",
     scope: "project",
-    section: "Permissions & Groups",
+    section: "Permission Groups",
     question: "What permission levels can I assign to a role in Arena?",
     answer: "For each module, a role can be granted: Assign To (only the assigned user can view/create/edit/delete), View, Create, Edit, Delete, Download, Print, and Admin (master permission covering all of the above). Toggle \"Roll Back\" on the role card first, then set these per-module rights.",
     tags: ["permission levels","view create edit delete","admin rights","roll back toggle","access rights"]
@@ -4869,7 +4869,7 @@ const QA_ACCOUNTBASICS = [
     action: "assign",
     object: "user",
     scope: "project",
-    section: "Permissions & Groups",
+    section: "Permission Groups",
     question: "How do I assign users to a permission/role group?",
     answer: "Open the project and go to **Users and Permissions → Groups Permission**. On the group's card, click the \"Users\" button, which opens a list where you select which users belong to that role/permission group.",
     tags: ["assign users","add users to role","users button","role membership"]
@@ -4905,7 +4905,7 @@ const QA_ACCOUNTBASICS = [
     action: "configure",
     object: "company details",
     scope: "system",
-    section: "Company & Global Data Setup",
+    section: "Company Details",
     question: "Where do I set up my company's name, logo, and address in Arena?",
     answer: "Go to **Global Data → Company** (Company Details). Enter the company's name, logo, address, and contact information, then click \"Submit.\" This information auto-populates forms and other places across the application. Edit it later by returning to the same Company tab.",
     tags: ["company details","company setup","company logo","company address","company profile"]
@@ -4914,7 +4914,7 @@ const QA_ACCOUNTBASICS = [
     action: "configure",
     object: "global data",
     scope: "system",
-    section: "Company & Global Data Setup",
+    section: "Company Details",
     question: "What is the Global Data section used for?",
     answer: "Global Data is the setup space for construction-specific data — work areas, work packages, activity sequences, and BYO (Build Your Own) project forms — organized per Construction Type. Select a Construction Type from the dropdown first; all projects using that construction type will see the data entered here.",
     tags: ["global data","construction type","setup space","work areas","work packages","activity sequences"]
@@ -4923,7 +4923,7 @@ const QA_ACCOUNTBASICS = [
     action: "configure",
     object: "construction type data",
     scope: "system",
-    section: "Company & Global Data Setup",
+    section: "Company Details",
     question: "What order should I set up data in Global Data?",
     answer: "After selecting a Construction Type, follow: Step 1 Global Work Areas, Step 2 Global Work Packages, Step 3 Activity Sequence Templates.",
     tags: ["global data setup order","work areas","work packages","activity sequence templates","setup steps"]
@@ -4971,7 +4971,7 @@ const QA_CALENDAR = [
     action: "configure",
     object: "microsoft calendar integration",
     scope: "global",
-    section: "Connect Outlook so events sync",
+    section: "Outlook Connection",
     question: "How do I connect Arena to Outlook Calendar as an admin?",
     answer: "Go to Global Data → Marketplace, click \"Sign in with Microsoft\" to grant Outlook consent. After signing in with Microsoft credentials, on the Permissions Requested page check the box to consent on behalf of the organization — this lets all users access the integration without individually consenting.",
     tags: ["microsoft calendar integration","connect outlook","admin consent","marketplace","sign in with microsoft"]
@@ -4980,7 +4980,7 @@ const QA_CALENDAR = [
     action: "configure",
     object: "calendar consent",
     scope: "module",
-    section: "Connect Outlook so events sync",
+    section: "Outlook Connection",
     question: "How do I revoke or change the Microsoft account connected to Arena Calendar?",
     answer: "In Global Data → Marketplace (Microsoft integration), click \"Revoke Consent\", then sign in again with a different Microsoft account to grant new consent.",
     tags: ["revoke consent","change microsoft account","disconnect calendar","reconnect outlook"]
@@ -4989,7 +4989,7 @@ const QA_CALENDAR = [
     action: "configure",
     object: "user calendar consent",
     scope: "module",
-    section: "Connect Outlook so events sync",
+    section: "Outlook Connection",
     question: "How do I personally connect my Outlook calendar to Arena?",
     answer: "Click your avatar (top-right) → **Settings → Microsoft Calendar → Sign In with Microsoft**. Use the same email as your Arena login.",
     tags: ["user calendar consent","my profile settings","personal outlook connect","calendar consent"]
@@ -4998,7 +4998,7 @@ const QA_CALENDAR = [
     action: "create",
     object: "calendar event",
     scope: "module",
-    section: "View, create and filter events",
+    section: "Global Calendar",
     question: "How do I create an event in Arena Calendar?",
     answer: "Open **Home → Calendar**, click **Create Event**, fill **Title**, **Date**, **Time**, **Location**, pick a **Categorize** entry, add a description and click **Submit**. If **Consent Not Granted** appears, connect via avatar → **Settings → Microsoft Calendar** first. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["create event","calendar event","add event","configure categories"]
@@ -5007,7 +5007,7 @@ const QA_CALENDAR = [
     action: "edit",
     object: "calendar event",
     scope: "module",
-    section: "View, create and filter events",
+    section: "Global Calendar",
     question: "How do I edit or delete a calendar event?",
     answer: "From **Home**, open **Calendar**. Click the event in the month grid; its details open in the right-hand pane. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["edit event","delete event","calendar event","remove event"]
@@ -5016,7 +5016,7 @@ const QA_CALENDAR = [
     action: "link",
     object: "calendar event",
     scope: "module",
-    section: "View, create and filter events",
+    section: "Global Calendar",
     question: "Can I link a calendar event to a specific module?",
     answer: "The Create Event form on the Home Calendar has no module picker. Events made from a module screen, such as **Proposal Management → Calendar** or **Opportunity → Events**, belong to that module. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["link event to module","map event","module event filter","event mapping"]
@@ -5025,7 +5025,7 @@ const QA_CALENDAR = [
     action: "view",
     object: "synced outlook event",
     scope: "module",
-    section: "What shows on the calendar",
+    section: "Calendar Events",
     question: "Do Outlook calendar events show up in Arena?",
     answer: "Yes. Events created in your Outlook calendar are also synced to the Arena calendar automatically.",
     tags: ["outlook sync","synced events","calendar sync","outlook events in arena"]
@@ -5034,7 +5034,7 @@ const QA_CALENDAR = [
     action: "import",
     object: "outlook group",
     scope: "module",
-    section: "What shows on the calendar",
+    section: "Calendar Events",
     question: "How are imported Outlook groups shown in the Calendar?",
     answer: "Groups imported and mapped via Arena Communications → Import Groups are also displayed in Arena Calendar.",
     tags: ["import groups calendar","outlook groups calendar","group mapping","communications import"]
@@ -5043,7 +5043,7 @@ const QA_CALENDAR = [
     action: "configure",
     object: "calendar management permission",
     scope: "global",
-    section: "Who can use the admin Outlook connection",
+    section: "Calendar Permission",
     question: "What permission is needed for a user to access Admin Calendar Consent?",
     answer: "If a user hasn't granted consent individually, they can still use the admin consent granted in Global Data → Marketplace, but only if Admin Permission is enabled at Global Data → Users & Permissions → User Group → Permissions → General → Calendar Management.",
     tags: ["calendar management permission","admin permission","user group permissions","calendar access control"]
@@ -5052,7 +5052,7 @@ const QA_CALENDAR = [
     action: "explain",
     object: "calendar",
     scope: "module",
-    section: "View, create and filter events",
+    section: "Global Calendar",
     question: "What is on the Global Calendar screen?",
     answer: "**Create Event**, **Fetch Events** and **Filters** at the top; a mini month picker, the day's **Events** list and **My Calendars** on the left; the month grid in the middle; and an event detail pane on the right.",
     tags: ["global calendar","calendar screen","calendar buttons"]
@@ -5061,7 +5061,7 @@ const QA_CALENDAR = [
     action: "explain",
     object: "calendar",
     scope: "module",
-    section: "View, create and filter events",
+    section: "Global Calendar",
     question: "What fields are in the Create Event form on the Calendar?",
     answer: "**Title**, **Date*** , **Time***, **Location**, **Categorize**, **Event Description** and a calendar drop-down (**My Calendar** by default), then **Submit**.",
     tags: ["create event fields","event form","calendar event fields","what fields are in the create event form on the calendar","create event form fields","calendar create event fields"]
@@ -5070,7 +5070,7 @@ const QA_CALENDAR = [
     action: "explain",
     object: "calendar",
     scope: "module",
-    section: "View, create and filter events",
+    section: "Global Calendar",
     question: "Where does the Categorize list in Create Event come from?",
     answer: "From **Home**, open **Calendar** and click **Create Event**. It lists **My Calendar** plus group names set up for your company. Groups imported through Communications are documented as appearing here. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["categorize","category list","where categories come from","calendar groups","where does the categorize list come from","categorize list calendar"]
@@ -5079,7 +5079,7 @@ const QA_CALENDAR = [
     action: "explain",
     object: "calendar",
     scope: "module",
-    section: "View, create and filter events",
+    section: "Global Calendar",
     question: "What does the Filters button on the Calendar do?",
     answer: "It opens **Filter Categories**: pick categories (or **Select All**) and click **Submit**; **Clear & Apply** resets it.",
     tags: ["calendar filters","filter categories"]
@@ -5088,7 +5088,7 @@ const QA_CALENDAR = [
     action: "explain",
     object: "calendar",
     scope: "module",
-    section: "View, create and filter events",
+    section: "Global Calendar",
     question: "What does Fetch Events do?",
     answer: "It is the sync button next to **Create Event** and pulls events from your connected Outlook calendar. It needs calendar consent. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["fetch events","sync calendar","refresh events","what does fetch events do","fetch events button"]
@@ -5097,7 +5097,7 @@ const QA_CALENDAR = [
     action: "explain",
     object: "calendar",
     scope: "module",
-    section: "View, create and filter events",
+    section: "Global Calendar",
     question: "Why does Create Event or Filters say Consent Not Granted?",
     answer: "You have not connected a Microsoft calendar. Click **Ok**, then avatar → **Settings → Microsoft Calendar → Sign In with Microsoft**, or ask an admin to grant organisation consent in **Global Data → Marketplace → Microsoft Calendar**.",
     tags: ["calendar consent not granted","consent not granted calendar","why does create event say consent not granted","create event consent not granted","calendar create event consent"]
@@ -5106,7 +5106,7 @@ const QA_CALENDAR = [
     action: "explain",
     object: "calendar",
     scope: "module",
-    section: "What shows on the calendar",
+    section: "Calendar Events",
     question: "Which modules put events on the Calendar?",
     answer: "Events are created from **Proposal Management → Calendar**, the **Opportunity → Events** sub-tab and Tender bids, as well as directly on the Home **Calendar**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["modules events calendar","what feeds calendar","opportunity proposal events","which modules put events on the calendar","modules feed calendar events"]
@@ -5115,7 +5115,7 @@ const QA_CALENDAR = [
     action: "explain",
     object: "calendar",
     scope: "module",
-    section: "What shows on the calendar",
+    section: "Calendar Events",
     question: "Why is my event or Outlook meeting missing from the Calendar?",
     answer: "Check that calendar consent is given (**Settings → Microsoft Calendar**), that the consent email matches your Arena login, and use **Fetch Events**. Check **Filters** are not hiding the category. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["missing event","outlook event not showing","calendar empty"]
@@ -5124,7 +5124,7 @@ const QA_CALENDAR = [
     action: "explain",
     object: "calendar",
     scope: "module",
-    section: "What shows on the calendar",
+    section: "Calendar Events",
     question: "How is the Home Calendar different from My Calendar in a project?",
     answer: "The Home **Calendar** is the company-wide calendar with Outlook sync and events. **My Calendar** in a project shows scheduled safety forms and project forms for that project (see the My Calendar module).",
     tags: ["calendar vs my calendar","difference global calendar project calendar"]
@@ -5133,7 +5133,7 @@ const QA_CALENDAR = [
     action: "explain",
     object: "calendar",
     scope: "module",
-    section: "Who sets this up",
+    section: "Overview",
     question: "Where do Calendar events and consent come from?",
     answer: "Events come from your connected Outlook calendar and from events created in Arena. Consent comes from **Global Data → Marketplace → Microsoft Calendar** (organisation) or avatar → **Settings → Microsoft Calendar** (personal). For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["calendar data source","where events come from","marketplace microsoft calendar"]
@@ -5145,7 +5145,7 @@ const QA_COMMUNICATION = [
     action: "configure",
     object: "outlook consent",
     scope: "global",
-    section: "Connect Outlook so mail syncs",
+    section: "Outlook Connection",
     question: "How do I enable Outlook integration for Arena Communications?",
     answer: "An admin must grant Outlook consent in Global Data → Marketplace, and admin permissions for the communication module must be given to the user. Alternatively, an individual user can grant their own consent without admin consent via My Profile → Settings → Outlook Management Consent.",
     tags: ["outlook consent","enable communications","marketplace integration","admin consent","user consent"]
@@ -5154,7 +5154,7 @@ const QA_COMMUNICATION = [
     action: "submit",
     object: "email",
     scope: "module",
-    section: "Read, reply and send mail",
+    section: "Mail",
     question: "How do I send an email in Arena Communications?",
     answer: "Open a mail in **Home → Communication** and use reply, reply all or **Forward**, or open a draft; fill **To**, **Cc**, **BCC** and click **Send**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["compose mail","send email","arena communications","new mail"]
@@ -5163,7 +5163,7 @@ const QA_COMMUNICATION = [
     action: "filter",
     object: "email",
     scope: "module",
-    section: "Map mail to Arena records",
+    section: "Module Mapping",
     question: "How do I filter emails by module in Arena Communications?",
     answer: "From **Home**, open **Communication**. Use the ribbon at the top of Communications, which lists all modules, to filter mail by which module it's mapped to.",
     tags: ["filter mail by module","communications ribbon","module filter","mail filter"]
@@ -5172,7 +5172,7 @@ const QA_COMMUNICATION = [
     action: "view",
     object: "inbox",
     scope: "module",
-    section: "Read, reply and send mail",
+    section: "Mail",
     question: "What are the mail folders available in Arena Communications?",
     answer: "All Emails, Inbox, Sent, Drafts, Starred and Trash, each with a count. There is no Saved folder.",
     tags: ["inbox","sent","drafts","saved","trash","mail folders","sent emails","see sent emails","where are my sent emails","sent mail","mail folders in communications","communications folders","inbox sent drafts starred trash"]
@@ -5181,7 +5181,7 @@ const QA_COMMUNICATION = [
     action: "import",
     object: "outlook group",
     scope: "module",
-    section: "Map mail to Arena records",
+    section: "Module Mapping",
     question: "How do I import Outlook groups into Arena Communications?",
     answer: "From **Home**, open **Communication**. Use the \"Import Groups\" feature in Communications. It opens a pop-up showing your Outlook groups alongside a Module dropdown, so you can map each imported group to a module.",
     tags: ["import groups","outlook groups","import groups feature","map group to module"]
@@ -5190,7 +5190,7 @@ const QA_COMMUNICATION = [
     action: "link",
     object: "email",
     scope: "module",
-    section: "Map mail to Arena records",
+    section: "Module Mapping",
     question: "Can I link an email to a specific module record?",
     answer: "From **Home**, open **Communication**. Yes. Mails composed in Arena Communications can be mapped directly to different modules such as Opportunity, Proposal, and Bid Management.",
     tags: ["map email to module","link email","email mapping","module mail linking","map an email to a proposal","map email to proposal","map your email"]
@@ -5199,7 +5199,7 @@ const QA_COMMUNICATION = [
     action: "explain",
     object: "communications",
     scope: "module",
-    section: "Read, reply and send mail",
+    section: "Mail",
     question: "What do the Communications filters do?",
     answer: "The filter icon opens **Filters** with **From**, **To**, a **Date** range, **All / Mapped / Unmapped**, **Includes attachments**, **Clear** and **Apply**. Use **Unmapped** to find mail not yet linked to a record.",
     tags: ["communications filter","mapped unmapped","filter emails","includes attachments","communications filters","what do the communications filters do","filters communications"]
@@ -5208,7 +5208,7 @@ const QA_COMMUNICATION = [
     action: "explain",
     object: "communications",
     scope: "module",
-    section: "Read, reply and send mail",
+    section: "Mail",
     question: "How do I add or change my email signature in Communications?",
     answer: "From **Home**, open **Communication**. Click the gear icon (**Mail Settings**), use **Create New** under **Signature**, pick the default with the radio button and click **Save Changes**.",
     tags: ["email signature","mail settings","signature","change my email signature","how do I change my email signature","email signature communications","signature communications","add signature"]
@@ -5217,7 +5217,7 @@ const QA_COMMUNICATION = [
     action: "explain",
     object: "communications",
     scope: "module",
-    section: "Read, reply and send mail",
+    section: "Mail",
     question: "How do I reply to or forward an email in Communications?",
     answer: "Open the mail, then click reply or reply all, or open the more menu and choose **Forward**. Add **Cc** or **BCC** if needed and click **Send**.",
     tags: ["reply email","forward email","reply all"]
@@ -5226,7 +5226,7 @@ const QA_COMMUNICATION = [
     action: "explain",
     object: "communications",
     scope: "module",
-    section: "Read, reply and send mail",
+    section: "Mail",
     question: "Why is there no Compose button in Communications?",
     answer: "New mail starts from a reply, forward or draft, or from Proposal Management drafts such as **Email Submission Package**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["compose mail","new email","write email"]
@@ -5235,7 +5235,7 @@ const QA_COMMUNICATION = [
     action: "explain",
     object: "communications",
     scope: "module",
-    section: "Read, reply and send mail",
+    section: "Mail",
     question: "What do the icons above the Communications mail list do?",
     answer: "**Select All** ticks every mail; the next icons mark read and delete (to **Trash**); **Map your Email** ties ticked mail to a record. The star on each row adds it to **Starred**.",
     tags: ["mark read","star email","delete email","toolbar"]
@@ -5244,7 +5244,7 @@ const QA_COMMUNICATION = [
     action: "explain",
     object: "communications",
     scope: "module",
-    section: "Map mail to Arena records",
+    section: "Module Mapping",
     question: "What can I map an email to in Communications?",
     answer: "Click **Map your Email** and choose **Opportunities** (customer group, customer, point of contact, opportunity), **Tender Management** (a bid) or **Proposal** (proposal type and proposal).",
     tags: ["map email options","map to opportunity","map to proposal","map to bid","map an email to a proposal","how do I map an email to a proposal","map email to proposal","communications map email"]
@@ -5253,7 +5253,7 @@ const QA_COMMUNICATION = [
     action: "explain",
     object: "communications",
     scope: "module",
-    section: "Map mail to Arena records",
+    section: "Module Mapping",
     question: "Where do the lists in the Map your Email panel come from?",
     answer: "From **Home**, open **Communication** and look at the **Map your Email** panel. From the records already created in Opportunity (customers, points of contact, opportunities), Tender Management (bids) and Proposal Management (proposal types and proposals). For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["map email lists","customers poc","where lists come from"]
@@ -5262,7 +5262,7 @@ const QA_COMMUNICATION = [
     action: "explain",
     object: "communications",
     scope: "module",
-    section: "Map mail to Arena records",
+    section: "Module Mapping",
     question: "What are the chips in the Communications ribbon?",
     answer: "All, Opportunity, Proposal Management, Work Order, Request for Information and Transmittal. They filter the mailbox to mail mapped to that module.",
     tags: ["ribbon","module chips","filter by module"]
@@ -5271,7 +5271,7 @@ const QA_COMMUNICATION = [
     action: "explain",
     object: "communications",
     scope: "module",
-    section: "Map mail to Arena records",
+    section: "Module Mapping",
     question: "Why is the Import Group list empty or showing Consent Not Granted?",
     answer: "Outlook groups are read from your Outlook account, so you need Outlook consent first (admin in **Global Data → Marketplace**, or yourself in **My Profile → Settings → Outlook Management Consent**). Without it the warning appears and **Groups** shows 0.",
     tags: ["import group empty","consent not granted","outlook groups","import group consent not granted","why does import group say consent not granted","communications consent not granted"]
@@ -5280,7 +5280,7 @@ const QA_COMMUNICATION = [
     action: "explain",
     object: "communications",
     scope: "module",
-    section: "Who sets this up",
+    section: "Overview",
     question: "Where does the mail in Communications come from?",
     answer: "From the connected Microsoft Outlook mailbox of the signed-in user, so each user sees their own mail. Mail you map shows a module chip. The consent is set in **Global Data → Marketplace** or **My Profile → Settings**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["where mail comes from","outlook mailbox","sync"]
@@ -5289,7 +5289,7 @@ const QA_COMMUNICATION = [
     action: "explain",
     object: "communications",
     scope: "module",
-    section: "Map mail to Arena records",
+    section: "Module Mapping",
     question: "Where do mapped emails show up afterwards?",
     answer: "From **Home**, open **Communication**. In Communications the mail gets a green module chip with the record name and is found with the ribbon chips and the **Mapped** filter. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["mapped emails","where mapped emails go","notifications"]
@@ -5301,7 +5301,7 @@ const QA_MYDESK = [
     action: "explain",
     object: "my desk",
     scope: "module",
-    section: "My Desk",
+    section: "Overview",
     question: "What is My Desk and what does it show?",
     answer: "My Desk is the project landing page at **Desk → Actions**. It greets you by name and shows **Project Progress** cards, a plant selector, then **My Actions**, **Pending Actions**, **Recent Work Logs**, **Recent Punch List Items**, **Recent Quality Logs**, **Recent Daily Safety Issues** and **Recent Safety Logs**. All of it is read-only and pulled from Field Works.",
     tags: ["my desk","desk","dashboard","project home","landing page","what does my desk show"]
@@ -5310,7 +5310,7 @@ const QA_MYDESK = [
     action: "get",
     object: "my desk data source",
     scope: "module",
-    section: "My Desk",
+    section: "Overview",
     question: "Where does the data on My Desk come from?",
     answer: "From **Field Works**. Plants come from **Field Works → Tree Version** (built in **Project Setup → Works**); Recent Work Logs from **Progress → Submitted Work Logs**; Recent Punch List Items from **Quality → Punch Lists**; Recent Quality Logs from **Quality → Submitted Quality Logs**; Recent Daily Safety Issues from **Safety → Daily Safety Issues**; Recent Safety Logs from **Safety → Completed Safety**. My Actions and Pending Actions collect open issues, approvals and forms from the same cards.",
     tags: ["my desk data source","where does my desk data come from","my desk lineage","desk data comes from","source of my desk"]
@@ -5319,7 +5319,7 @@ const QA_MYDESK = [
     action: "explain",
     object: "plant selector",
     scope: "module",
-    section: "My Desk",
+    section: "Overview",
     question: "What does the plant dropdown on My Desk do?",
     answer: "It scopes everything under it: **My Actions**, **Pending Actions** and the five Recent panels show only the selected plant. The options are the project's **Tree Versions** from **Field Works** (13 on Arena Steel Plant - Phase 1). The plant you pick also carries into Field Works screens.",
     tags: ["plant selector","plant dropdown my desk","select plant desk","desk plant filter","tree version dropdown"]
@@ -5328,7 +5328,7 @@ const QA_MYDESK = [
     action: "troubleshoot",
     object: "my desk empty",
     scope: "module",
-    section: "My Desk",
+    section: "Overview",
     question: "Why is My Desk empty or showing No Data?",
     answer: "Usually the selected plant has nothing submitted. Pellet Plant showed work logs while **Coke Oven** showed **No Data** in every panel. Choose another plant in the plant selector. If the plant has activity but you see nothing, the work logs may not be submitted yet, or you may not have permission (check **Users and Permissions**).",
     tags: ["my desk empty","no data my desk","desk shows nothing","my desk blank","my desk not showing data"]
@@ -5337,7 +5337,7 @@ const QA_MYDESK = [
     action: "explain",
     object: "my desk read only",
     scope: "module",
-    section: "My Desk",
+    section: "Overview",
     question: "Can I create or edit things on My Desk?",
     answer: "Open the project and go to **My Desk**. No. My Desk only summarizes records. Open the item (or **See All >**) to go to the Field Works screen where you can act on it.",
     tags: ["edit my desk","create on my desk","my desk read only","act on my desk items"]
@@ -5346,7 +5346,7 @@ const QA_MYDESK = [
     action: "guide",
     object: "open my desk",
     scope: "module",
-    section: "My Desk",
+    section: "Overview",
     question: "How do I open My Desk and pick a plant?",
     answer: "Click **My Desk** in the project menu (it opens **Desk → Actions**), then choose the plant in the selector under the Project Progress cards. The accordions below reload for that plant.",
     tags: ["open my desk","how to use my desk","pick plant my desk","my desk steps"]
@@ -5526,7 +5526,7 @@ const QA_MYDESK = [
     action: "explain",
     object: "recent work logs",
     scope: "module",
-    section: "Recent Activity Panels",
+    section: "Recent Panels",
     question: "What does Recent Work Logs show on My Desk?",
     answer: "The latest submitted work logs for the selected plant, grouped by date, each line reading \"<user> has logged the work for <Entity | Super Location | Location | Work Package | Activity> | Percentage (from -> to) at <time> | Latitude | Longitude | Source\". **See All >** opens **Field Works → Progress → Submitted Work Logs**.",
     tags: ["recent work logs","latest work logs desk","work logs on my desk","see all work logs","submitted work logs desk"]
@@ -5535,7 +5535,7 @@ const QA_MYDESK = [
     action: "get",
     object: "recent work logs source",
     scope: "module",
-    section: "Recent Activity Panels",
+    section: "Recent Panels",
     question: "Where do Recent Work Logs come from?",
     answer: "From **Field Works → Progress → Submitted Work Logs** for the same plant. How logs look depends on **Project Settings → Work Logs Templates**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["recent work logs source","where recent work logs come from","recent work logs lineage","work logs desk source"]
@@ -5544,7 +5544,7 @@ const QA_MYDESK = [
     action: "explain",
     object: "recent punch list items",
     scope: "module",
-    section: "Recent Activity Panels",
+    section: "Recent Panels",
     question: "What are Recent Punch List Items?",
     answer: "The latest punch list items (issues raised because of quality failures) for the selected plant, from **Field Works → Quality → Punch Lists**. It shows No Data when that list has no items.",
     tags: ["recent punch list items","punch list on desk","punch list my desk","recent punch list"]
@@ -5553,7 +5553,7 @@ const QA_MYDESK = [
     action: "explain",
     object: "recent quality logs",
     scope: "module",
-    section: "Recent Activity Panels",
+    section: "Recent Panels",
     question: "What are Recent Quality Logs?",
     answer: "The latest submitted quality inspections for the selected plant, from **Field Works → Quality → Submitted Quality Logs**.",
     tags: ["recent quality logs","quality logs desk","quality on my desk","latest quality logs"]
@@ -5562,7 +5562,7 @@ const QA_MYDESK = [
     action: "explain",
     object: "recent daily safety issues",
     scope: "module",
-    section: "Recent Activity Panels",
+    section: "Recent Panels",
     question: "What are Recent Daily Safety Issues?",
     answer: "The latest safety issues raised in the selected plant, from **Field Works → Safety → Daily Safety Issues** (issues raised due to safety breaches or failures).",
     tags: ["recent daily safety issues","daily safety issues desk","safety issues my desk","safety breaches desk"]
@@ -5571,7 +5571,7 @@ const QA_MYDESK = [
     action: "explain",
     object: "recent safety logs",
     scope: "module",
-    section: "Recent Activity Panels",
+    section: "Recent Panels",
     question: "What are Recent Safety Logs?",
     answer: "The latest completed safety forms for the selected plant, from **Field Works → Safety → Completed Safety**.",
     tags: ["recent safety logs","safety logs desk","completed safety desk","safety on my desk"]
@@ -5580,7 +5580,7 @@ const QA_MYDESK = [
     action: "troubleshoot",
     object: "recent panel empty",
     scope: "module",
-    section: "Recent Activity Panels",
+    section: "Recent Panels",
     question: "Why is a Recent panel empty on My Desk?",
     answer: "Nothing has been submitted for the selected plant, or you are on a different plant than the one with activity. Pick another plant in the plant selector. Only submitted items show, so drafts and unsubmitted logs do not appear.",
     tags: ["recent panel empty","recent work logs empty","no recent logs","recent punch list empty","recent quality logs no data"]
@@ -5589,7 +5589,7 @@ const QA_MYDESK = [
     action: "configure",
     object: "my desk project settings",
     scope: "module",
-    section: "Project Settings That Control My Desk",
+    section: "Settings",
     question: "Can what appears on My Desk be configured?",
     answer: "Yes, two Project Settings pages. **My Desk** sets the order of the five Recent panels (**Recent Logs List**) and the dashboard graph order (**Dashboard List**). **My Desk Dashboards** enables or disables extra dashboards (**My Dashboard**, **Google Maps**, **Quality Dashboard**, **Delay Analysis Dashboard**, **Defect Analysis Dashboard**, **Strip Charts**). Actions and Pending Actions have no setting.",
     tags: ["configure my desk","my desk settings","project settings my desk","my desk dashboards","change my desk order"]
@@ -5598,7 +5598,7 @@ const QA_MYDESK = [
     action: "configure",
     object: "recent logs order",
     scope: "module",
-    section: "Project Settings That Control My Desk",
+    section: "Settings",
     question: "How do I change the order of the Recent panels on My Desk?",
     answer: "Open **Project Settings → My Desk**, drag rows in **Recent Logs List** (Recent Work Logs, Recent Punch Lists Items, Recent Quality Logs, Recent Daily Safety Issues, Recent Safety Logs) and click **Save Changes**.",
     tags: ["recent logs list","order recent panels","reorder my desk","my desk order setting"]
@@ -5607,7 +5607,7 @@ const QA_MYDESK = [
     action: "configure",
     object: "my desk dashboards toggle",
     scope: "module",
-    section: "Project Settings That Control My Desk",
+    section: "Settings",
     question: "How do I turn on more dashboards on My Desk?",
     answer: "In **Project Settings → My Desk Dashboards** tick the dashboards to enable: **My Dashboard**, **Google Maps**, **Quality Dashboard**, **Delay Analysis Dashboard**, **Defect Analysis Dashboard** or **Strip Charts**. Until a dashboard is ticked, the desk shows only the Actions tab; ticking one adds that dashboard to the desk.",
     tags: ["enable dashboards my desk","my desk dashboards settings","google maps dashboard desk","strip charts dashboard","enable disable dashboards"]
@@ -5616,7 +5616,7 @@ const QA_MYDESK = [
     action: "explain",
     object: "my desk dashboard list",
     scope: "module",
-    section: "Project Settings That Control My Desk",
+    section: "Settings",
     question: "What is the Dashboard List in My Desk settings?",
     answer: "A drag-to-reorder list of graphs: **Monitor Daily Progress**, **Monitor Forms Status**, **Monitor Forms Raised Daily**, **Monitor Issues Status** and **Monitor Issues Raised Daily**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["dashboard list my desk","monitor daily progress","monitor issues status","monitor forms status","desk graphs order"]
@@ -5625,7 +5625,7 @@ const QA_MYDESK = [
     action: "explain",
     object: "who sees my desk",
     scope: "module",
-    section: "Project Settings That Control My Desk",
+    section: "Settings",
     question: "Who can see My Desk and what do they see?",
     answer: "Anyone with access to the project. They see the selected plant's data and only what **Users and Permissions** lets them open. Two people on the same project can see different actions because assignments differ.",
     tags: ["who sees my desk","my desk permissions","my desk visibility","my desk access"]
@@ -5637,7 +5637,7 @@ const QA_MYCALENDAR = [
     action: "explain",
     object: "my calendar",
     scope: "module",
-    section: "My Calendar",
+    section: "Calendar Views",
     question: "What is My Calendar?",
     answer: "**My Calendar** (breadcrumb **Calendar Logs**) is the project's date view of scheduled safety forms and scheduled project forms. It has a **Select date** mini calendar on the left and a **Month | Day** calendar on the right. It is read-only.",
     tags: ["my calendar","calendar logs","project calendar","schedule view","what is my calendar"]
@@ -5646,7 +5646,7 @@ const QA_MYCALENDAR = [
     action: "get",
     object: "month and day view",
     scope: "module",
-    section: "My Calendar",
+    section: "Calendar Views",
     question: "How do I switch between Month and Day view?",
     answer: "Open the project and go to **My Calendar**. Use the **Month | Day** toggle on the main calendar. **Month** shows a 7-column grid (SUN to SAT); **Day** shows one day's items, or **No Work Scheduled For Today** when empty.",
     tags: ["month view","day view","calendar toggle","switch month day calendar"]
@@ -5655,7 +5655,7 @@ const QA_MYCALENDAR = [
     action: "get",
     object: "jump to date",
     scope: "module",
-    section: "My Calendar",
+    section: "Calendar Views",
     question: "How do I jump to a particular date on My Calendar?",
     answer: "Open the project and go to **My Calendar**. In **Select date**, use **Choose month and year** (year grid 2016 to 2039) or **Previous month** / **Next month**, then click the day. The main calendar follows.",
     tags: ["jump to date","date picker calendar","change month calendar","select date calendar"]
@@ -5664,7 +5664,7 @@ const QA_MYCALENDAR = [
     action: "explain",
     object: "calendar read only",
     scope: "module",
-    section: "My Calendar",
+    section: "Calendar Views",
     question: "Can I add an event directly on My Calendar?",
     answer: "No. It only displays schedules created elsewhere: **Project Setup → Safety → Setup Safety Calendar** and **Project Setup → Forms → Schedule Project Forms**.",
     tags: ["add event calendar","create event my calendar","calendar read only","add to calendar"]
@@ -5673,7 +5673,7 @@ const QA_MYCALENDAR = [
     action: "explain",
     object: "project vs home calendar",
     scope: "module",
-    section: "My Calendar",
+    section: "Calendar Views",
     question: "How is My Calendar different from the Calendar module on the Home page?",
     answer: "**My Calendar** is inside one project and shows that project's scheduled forms. The Home-level **Calendar** module is a separate, company-level screen. For a project's due safety forms use My Calendar.",
     tags: ["my calendar vs calendar","home calendar","project calendar vs home","calendar module difference"]
@@ -5682,7 +5682,7 @@ const QA_MYCALENDAR = [
     action: "explain",
     object: "calendar shared",
     scope: "module",
-    section: "My Calendar",
+    section: "Calendar Views",
     question: "Is My Calendar personal or shared across the project?",
     answer: "It is project-scoped: anyone with access to the project opens the same calendar. It shows the project's schedules, not a private agenda.",
     tags: ["personal calendar","shared calendar","who sees calendar","calendar visibility"]
@@ -5691,7 +5691,7 @@ const QA_MYCALENDAR = [
     action: "get",
     object: "calendar items source",
     scope: "module",
-    section: "What Appears on My Calendar",
+    section: "Calendar Items",
     question: "What appears on My Calendar and where does it come from?",
     answer: "Scheduled safety forms set up in **Project Setup → Safety → Setup Safety Calendar** and scheduled project forms set up in **Project Setup → Forms → Schedule Project Forms**. Users fill the safety ones in **Field Works → Safety → Safety Calendar**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["what appears on my calendar","calendar items source","where does calendar data come from","calendar lineage","scheduled items calendar"]
@@ -5700,7 +5700,7 @@ const QA_MYCALENDAR = [
     action: "troubleshoot",
     object: "calendar empty",
     scope: "module",
-    section: "What Appears on My Calendar",
+    section: "Calendar Items",
     question: "Why is My Calendar empty?",
     answer: "Nothing has been scheduled for the project. Create a category in **Project Setup → Safety → Setup Safety Calendar** (**Create Safety Calendar Category**) or set a schedule in **Project Setup → Forms → Schedule Project Forms**. On Arena Steel Plant - Phase 1 both are empty, so every month shows no items and Day view says **No Work Scheduled For Today**.",
     tags: ["calendar empty","my calendar empty","no work scheduled","nothing on calendar","calendar blank"]
@@ -5709,7 +5709,7 @@ const QA_MYCALENDAR = [
     action: "troubleshoot",
     object: "scheduled form missing",
     scope: "module",
-    section: "What Appears on My Calendar",
+    section: "Calendar Items",
     question: "A scheduled safety form or inspection is not showing on My Calendar. Why?",
     answer: "Check the category exists under **Setup Safety Calendar** with the right **Start Date**, **End Date** and **Recurrence Type**, that forms were added under **Add Forms**, and that users are assigned. For project forms, check **Schedule Project Forms** was submitted and the users appear in **Forms → Assign Users**.",
     tags: ["scheduled form missing","safety form not on calendar","scheduled project form not showing","calendar troubleshooting"]
@@ -5718,7 +5718,7 @@ const QA_MYCALENDAR = [
     action: "configure",
     object: "safety calendar category",
     scope: "module",
-    section: "What Appears on My Calendar",
+    section: "Calendar Items",
     question: "How do I create a recurring safety form schedule?",
     answer: "Open **Project Setup → Safety → Setup Safety Calendar**, click **Create Safety Calendar Category**, enter **Form Category Name**, **Recurrence Type** (Daily, Weekly or Custom), **Start Date**, **End Date**, **Time** and **Remind Before**, add forms under **Add Forms**, then **Submit**.",
     tags: ["create safety calendar","recurring safety form","safety calendar category","setup safety calendar","schedule safety forms"]
@@ -5727,7 +5727,7 @@ const QA_MYCALENDAR = [
     action: "explain",
     object: "create safety calendar fields",
     scope: "module",
-    section: "What Appears on My Calendar",
+    section: "Calendar Items",
     question: "What fields are in Create Safety Calendar Category?",
     answer: "**Form Category Name***, **Recurrence Type** (Daily, Weekly, Custom), **Start Date**, **End Date**, **Time** (hours, minutes, AM/PM), **Remind Before** (minutes, hours, days or weeks), and **Add Forms** with **Filter by Activities**, **Select All** and a table of **Activities** and **Form Name**.",
     tags: ["safety calendar fields","create safety calendar category fields","remind before","recurrence type daily weekly custom"]
@@ -5736,7 +5736,7 @@ const QA_MYCALENDAR = [
     action: "configure",
     object: "schedule project forms",
     scope: "module",
-    section: "What Appears on My Calendar",
+    section: "Calendar Items",
     question: "How do I schedule a recurring project form like an RFI?",
     answer: "Open **Project Setup → Forms → Schedule Project Forms**, pick the form type and plant, then complete **1 Prepare Schedule** (**Recurrence Type**, **Every**, weekdays, **Start Date**, **End Date**, **Time**) and **2 Assign User**, then **Submit**.",
     tags: ["schedule project forms","schedule rfi","recurring form schedule","schedule form type"]
@@ -5745,7 +5745,7 @@ const QA_MYCALENDAR = [
     action: "get",
     object: "where to fill scheduled safety form",
     scope: "module",
-    section: "What Appears on My Calendar",
+    section: "Calendar Items",
     question: "Where do users fill in a scheduled safety form?",
     answer: "In **Field Works → Safety → Safety Calendar**, which lists \"Safety forms for <date>\" with status chips **Not Ready**, **Ready**, **In Progress** and **Completed**. Finished ones go to **Approve Safety** and **Completed Safety**.",
     tags: ["fill scheduled safety form","safety calendar field works","complete scheduled safety","safety calendar statuses"]
@@ -5754,7 +5754,7 @@ const QA_MYCALENDAR = [
     action: "get",
     object: "calendar data goes",
     scope: "module",
-    section: "What Appears on My Calendar",
+    section: "Calendar Items",
     question: "Where do calendar items go after they are completed?",
     answer: "Open the project and go to **My Calendar**. Scheduled safety forms move through **Approve Safety** (**Not Ready**, **Ready to Approve**, **In Progress**, **Approved**) into **Completed Safety**, and show as **Recent Safety Logs** on **My Desk**.",
     tags: ["after calendar item completed","completed safety forms","approve safety","calendar data goes where"]
@@ -12933,7 +12933,7 @@ const QA_TIMEMANAGEMENT = [
     scope: "project",
     section: "My Timesheet",
     question: "How do I log my own work hours?",
-    answer: "From **Home**, open **Time Management → My Timesheet**, choose the Log Level Category (Company, Projects, Work Orders or GL Codes) and the Template, pick the date, click \"Add\", choose the project/work order/GL code and Phase Code, enter hours in the earning-code columns, then click \"Submit\" (or \"Save as Draft\" if incomplete). See \"Which Phase Codes a Timesheet Offers\" if a code is missing.",
+    answer: "From **Home**, open **Time Management → My Timesheet**, choose the Log Level Category (Company, Projects, Work Orders or GL Codes) and the Template, pick the date, click \"Add\", choose the project/work order/GL code and Phase Code, enter hours in the earning-code columns, then click \"Submit\" (or \"Save as Draft\" if incomplete). See \"Phase Codes\" if a code is missing.",
     tags: ["log hours","my timesheet","submit timesheet","enter hours"]
   },
   {
@@ -13129,7 +13129,7 @@ const QA_TIMEMANAGEMENT = [
     action: "view",
     object: "phase code",
     scope: "module",
-    section: "Which Phase Codes a Timesheet Offers",
+    section: "Phase Codes",
     question: "Why does my timesheet show only some phase codes?",
     answer: "It depends on what the row is charged to. A project shows only the phase codes ticked \"Timesheet Management\" in that project's **Project Setup → Phase Codes**. On a company row you see the codes ticked in Default Phase Codes plus your own Default Indirect Phase Code, not the full Global Data list. With no project on a crew row you see Indirect codes only. Work-order items and GL codes have no phase code. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["phase code dropdown","only some phase codes","timesheet phase codes","phase code list","missing phase code","company vs project phase codes"]
@@ -13138,7 +13138,7 @@ const QA_TIMEMANAGEMENT = [
     action: "view",
     object: "phase code",
     scope: "module",
-    section: "Which Phase Codes a Timesheet Offers",
+    section: "Phase Codes",
     question: "Does the Phase Code dropdown in a timesheet use Global Data or the project's mapped phase codes?",
     answer: "Both, depending on the row. Choose a project and it uses that project's mapped codes (**Project Setup → Phase Codes**, Timesheet Management box). Choose Company and it uses a company list built from Global Data phase codes with the Labor cost type, narrowed by your Default Phase Codes. All codes, types and cost types are defined in **Global Data → UOM**, Phasecode & GL Codes.",
     tags: ["phase code global data or project","company phase codes","project mapped phase codes","timesheet management checkbox","cost type filter"]
@@ -13147,7 +13147,7 @@ const QA_TIMEMANAGEMENT = [
     action: "view",
     object: "phase code",
     scope: "module",
-    section: "Which Phase Codes a Timesheet Offers",
+    section: "Phase Codes",
     question: "Why is the Phase Code dropdown empty for my project?",
     answer: "No phase code has the Timesheet Management box ticked in that project's **Project Setup → Phase Codes**. Ask the PM to tick the codes field staff may use (and check the Cost Type ticks under the gear icon → Settings). For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["phase code dropdown empty","no phase codes for project","timesheet management box","project phase codes not showing"]
@@ -13156,7 +13156,7 @@ const QA_TIMEMANAGEMENT = [
     action: "configure",
     object: "phase code",
     scope: "module",
-    section: "Which Phase Codes a Timesheet Offers",
+    section: "Phase Codes",
     question: "How do I make a project's phase codes appear in timesheets?",
     answer: "Open the project, go to **Project Setup → Phase Codes**, click the gear icon to choose the Cost Types for Timesheet Management, then tick the Timesheet Management box on each phase code field staff may charge. In Time Management choose that project and open Phase Code to check.",
     tags: ["map phase codes to project","timesheet management checkbox","enable phase codes for timesheets"]
@@ -13165,7 +13165,7 @@ const QA_TIMEMANAGEMENT = [
     action: "view",
     object: "phase code",
     scope: "module",
-    section: "Which Phase Codes a Timesheet Offers",
+    section: "Phase Codes",
     question: "What does the Cost Type setting do for timesheet phase codes?",
     answer: "On **Project Setup → Phase Codes** the gear icon opens Settings (\"Select the Cost Type for each category to display Phase Codes\"). Timesheet Management and Equipment Management each have their own Cost Type ticks (Material, Equipment, Labor, Unit Rate, Sub Contractor, BOQ's, Freight Charges, Fuel & Gas). In Arena Residential Project Timesheet Management has Material, Equipment and Labor ticked, and every ticked code carries those cost types.",
     tags: ["cost type phase codes","timesheet management cost type","phase code settings gear"]
@@ -13183,7 +13183,7 @@ const QA_TIMEMANAGEMENT = [
     action: "view",
     object: "phase code",
     scope: "module",
-    section: "Which Phase Codes a Timesheet Offers",
+    section: "Phase Codes",
     question: "Why do I see Indirect phase codes first in the timesheet?",
     answer: "With no project chosen the list offers Indirect codes only. On My Timesheet your own Default Indirect Phase Code from **Global Data → Users & Permissions → Global Rosters** is added at the top (System Admin: 10.2020 OVHD - Project Manager). For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.",
     tags: ["indirect phase codes","default indirect phase code","ovhd project manager"]
@@ -13471,7 +13471,7 @@ const QA_TIMEMANAGEMENT = [
     action: "view",
     object: "setup order",
     scope: "module",
-    section: "Who sets this up",
+    section: "Overview",
     question: "In what order should I set up Time Management?",
     answer: "Global Data first (Crews, Global Rosters, Earnings Codes, Work Orders, GL Codes), then Settings (workflow, assign workflow, timesheet mode, template), then each project (Timesheet Management ticks on Phase Codes and Project Crews), then Payroll Locking. After that Field Users can log.",
     tags: ["time management setup order","how do i set up time management","set up timesheets","set up time management"]
@@ -22984,7 +22984,7 @@ const MODULES = [
     "qaItems": QA_ACCOUNTBASICS,
     "narrative": [
       {
-        "heading": "Admin Role",
+        "heading": "Overview",
         "intro": "<p>Every construction company running Arena has to answer one question before anyone logs a single hour or submits an RFI: who gets to see what, and who is responsible for setting that up. That responsibility sits with the <strong>Super Admin / Global Admin</strong> — the account provisioned when the organization first gets access — and the work is entirely upfront, foundational configuration rather than day-to-day project activity. Before end users ever see the Home page's module tiles or start registering into projects, this admin has to register each user (under Global Data → Company → Users and Permissions), set up Company Details and the sequenced Global Data (Global Work Areas → Global Work Packages → Activity Sequence Templates) that projects will be built on, and create the user groups that determine which tiles and modules a given person can see at all.</p><p>Because Home's module tiles are permission-driven, the Super Admin is effectively responsible for what every user's first screen looks like: a user group configured without a right to Time Management, for example, means that tile simply never appears for anyone in that group — a foreman or field engineer won't see a module they were never granted, and won't know to ask for it by name. Getting Users and Permissions right early avoids a steady trickle of \"why can't I see X\" support requests later.</p><p>Notification scope is another Super Admin responsibility worth calling out here: since Global Notifications (company-wide) and project-level Notifications are configured separately and don't overlap in the interface, whoever is setting up a new company or project needs to know which scope a given alert belongs to rather than assuming one screen covers both.</p>",
         "definitions": [
           {
@@ -23027,7 +23027,7 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Home Page",
+        "heading": "Home",
         "intro": "<p>For every End User on a construction project — from a field engineer checking today's tasks to a project executive scanning portfolio health — the Home page is the first thing they see after logging in, and it's designed to orient rather than drop them into a menu. It surfaces a weather report in the top-left corner (once you allow location access), a horizontal tab of every project you have access to along with its progress percentage, and a set of module tiles — Time Management, Equipment Management, Inventory Management, and others — scoped to whatever permissions your account has been granted. If your account only has \"Projects\" permission, Arena skips Home entirely and takes you straight to the Projects page instead.</p><p>The Home page is also the jumping-off point into individual project detail. Clicking a project's progress card in the horizontal tab takes you to that project's Project Desk, which is where the more refined, project-specific insights live — useful for a PM/Module Manager who needs to move from a portfolio-wide glance into the details of the one job they're running today. Home itself is deliberately a wide-angle view — a snapshot across everything you're involved in — while Project Desk is where you zoom into one project at a time.</p><p>Because the tiles and modules shown on Home are permission-driven, not everyone sees the same Home page. If a tile you expect — Time Management or Equipment Management, for example — is missing, that's not a bug; it means your account hasn't been granted access to that module, and the fix is to contact your project or system administrator rather than to look for a hidden setting on your own account.</p>",
         "definitions": [
           {
@@ -23075,6 +23075,79 @@ const MODULES = [
           {
             "src": "assets/notion/home-page/001.jpg",
             "caption": "The Home page, with a weather report based on your location"
+          }
+        ]
+      },
+      {
+        "heading": "Company Details",
+        "intro": "<p>Before a construction company can run a single project in Arena, someone has to lay the company-wide groundwork everything else builds on — and that's exclusively <strong>Super Admin</strong> territory. Company Details covers the foundational, company-wide configuration that everything else in Arena is built on top of. Company Details, under Global Data, is where you record the company's name, logo, address, and contact information — a one-time setup task whose effects ripple everywhere, since this information auto-populates forms and appears in other places across the application rather than needing to be re-entered per document. It's also editable at any time by returning to the same Company tab, so a change in address or a rebrand doesn't mean reconfiguring anything downstream.</p><p>Global Data itself is broader than just company details — it's the general setup space for construction-specific data that needs to exist before projects can be run against it: work areas, work packages, activity sequences, and BYO (Build Your Own) project forms. Critically, this data is organized per Construction Type, which the admin selects from a dropdown before entering any data; everything configured under a given Construction Type becomes available to every project that uses that same type, which is what lets an organization standardize its operational scaffolding across many projects of the same kind — say, every mid-rise residential job — rather than configuring each project individually from scratch.</p><p>Because Global Work Areas, Global Work Packages, and Activity Sequence Templates build on each other, Arena expects them to be set up in a specific order: first Global Work Areas, then Global Work Packages, and finally Activity Sequence Templates. Following this sequence matters because later steps reference the structures created in earlier ones — trying to configure Activity Sequence Templates before Work Packages exist means it would have nothing to sequence.</p>",
+        "definitions": [
+          {
+            "term": "Company Details",
+            "definition": "The Global Data screen for entering the company's name, logo, address, and contact information. This data auto-populates forms and other places across Arena, and can be edited later from the same tab."
+          },
+          {
+            "term": "Global Data",
+            "definition": "The setup space for construction-specific data — work areas, work packages, activity sequences, and BYO (Build Your Own) project forms — organized per Construction Type. Data entered here is available to every project using the selected Construction Type."
+          },
+          {
+            "term": "Construction Type",
+            "definition": "A dropdown selection in Global Data that scopes which projects a given piece of setup data applies to. All projects sharing a Construction Type see the same Global Data configuration for it."
+          },
+          {
+            "term": "Global Work Areas / Global Work Packages / Activity Sequence Templates",
+            "definition": "The three ordered setup steps within a Construction Type in Global Data: Step 1 defines Global Work Areas, Step 2 defines Global Work Packages, and Step 3 defines Activity Sequence Templates, each building on the one before it."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Set up company name, logo, and address",
+            "steps": [
+              "Go to <strong>Global Data &gt; Company</strong> (Company Details).",
+              "Enter the company's name, logo, address, and contact information.",
+              "Click <strong>Submit</strong>."
+            ],
+            "note": "This information auto-populates forms and other places across Arena. Return to the same Company tab any time to edit it later.",
+            "images": [
+              {
+                "src": "assets/notion/company-details/001.jpg",
+                "caption": "Company Details with the company name, logo, address and contacts",
+                "step": 2
+              }
+            ]
+          },
+          {
+            "title": "Set up Global Data for a Construction Type",
+            "steps": [
+              "Go to <strong>Global Data</strong>.",
+              "Select a Construction Type from the dropdown.",
+              "Complete <strong>Step 1: Global Work Areas</strong>.",
+              "Complete <strong>Step 2: Global Work Packages</strong>.",
+              "Complete <strong>Step 3: Activity Sequence Templates</strong>."
+            ],
+            "note": "All projects using that Construction Type will see the data entered here — configure it once per Construction Type, not once per project.",
+            "images": [
+              {
+                "src": "assets/notion/global-data/001.jpg",
+                "caption": "Global Data construction-type setup, with the Construction Type drop-down",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/global-work-areas/001.jpg",
+                "caption": "Global Work Areas: the level types for a construction type",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/global-work-packages/001.jpg",
+                "caption": "Global Work Packages: editing or deleting a work package",
+                "step": 4
+              },
+              {
+                "src": "assets/notion/activity-sequence-templates/004.jpg",
+                "caption": "Create Activity Sequence Template for a location type",
+                "step": 5
+              }
+            ]
           }
         ]
       },
@@ -23223,7 +23296,7 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Permissions & Groups",
+        "heading": "Permission Groups",
         "intro": "<p>On a real construction project, not everyone should be able to do everything — a subcontractor's crew, a field engineer, and a project manager all need different levels of access to the same modules, and getting that wrong either blocks people from doing their jobs or exposes data and actions they shouldn't touch. Permissions in Arena are organized around roles, called user groups, rather than being assigned to individuals one setting at a time, and setting these up is <strong>Module Admin / Super Admin</strong> work: a user group is created for a project, given a name, and then configured with a specific set of rights per module — after which individual users are added to that group and inherit its permissions. This role-based approach is what makes permission management scalable: instead of configuring forty individual users, an administrator configures a handful of roles and assigns people to them.</p><p>Each module a role can touch supports a graduated set of rights: Assign To (which restricts visibility and action to only the specifically assigned user), View, Create, Edit, Delete, Download, Print, and an Admin right that acts as a master switch covering everything else. This granularity matters in construction workflows where, for example, a subcontractor's crew might need to view and create records in a module but should never be able to delete them, while a project manager needs full Admin rights across the board. Before setting these per-module rights, the role card requires toggling \"Roll Back\" first — a necessary first step in configuring any role's permissions.</p><p>Because many companies run structurally similar projects, Arena lets an admin copy an entire user group's configuration to other projects at once rather than rebuilding the same role from scratch every time a new project starts, which keeps permission structures consistent across a portfolio without repetitive manual setup.</p>",
         "definitions": [
           {
@@ -23391,79 +23464,6 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Company & Global Data Setup",
-        "intro": "<p>Before a construction company can run a single project in Arena, someone has to lay the company-wide groundwork everything else builds on — and that's exclusively <strong>Super Admin</strong> territory. Company & Global Data Setup covers the foundational, company-wide configuration that everything else in Arena is built on top of. Company Details, under Global Data, is where you record the company's name, logo, address, and contact information — a one-time setup task whose effects ripple everywhere, since this information auto-populates forms and appears in other places across the application rather than needing to be re-entered per document. It's also editable at any time by returning to the same Company tab, so a change in address or a rebrand doesn't mean reconfiguring anything downstream.</p><p>Global Data itself is broader than just company details — it's the general setup space for construction-specific data that needs to exist before projects can be run against it: work areas, work packages, activity sequences, and BYO (Build Your Own) project forms. Critically, this data is organized per Construction Type, which the admin selects from a dropdown before entering any data; everything configured under a given Construction Type becomes available to every project that uses that same type, which is what lets an organization standardize its operational scaffolding across many projects of the same kind — say, every mid-rise residential job — rather than configuring each project individually from scratch.</p><p>Because Global Work Areas, Global Work Packages, and Activity Sequence Templates build on each other, Arena expects them to be set up in a specific order: first Global Work Areas, then Global Work Packages, and finally Activity Sequence Templates. Following this sequence matters because later steps reference the structures created in earlier ones — trying to configure Activity Sequence Templates before Work Packages exist means it would have nothing to sequence.</p>",
-        "definitions": [
-          {
-            "term": "Company Details",
-            "definition": "The Global Data screen for entering the company's name, logo, address, and contact information. This data auto-populates forms and other places across Arena, and can be edited later from the same tab."
-          },
-          {
-            "term": "Global Data",
-            "definition": "The setup space for construction-specific data — work areas, work packages, activity sequences, and BYO (Build Your Own) project forms — organized per Construction Type. Data entered here is available to every project using the selected Construction Type."
-          },
-          {
-            "term": "Construction Type",
-            "definition": "A dropdown selection in Global Data that scopes which projects a given piece of setup data applies to. All projects sharing a Construction Type see the same Global Data configuration for it."
-          },
-          {
-            "term": "Global Work Areas / Global Work Packages / Activity Sequence Templates",
-            "definition": "The three ordered setup steps within a Construction Type in Global Data: Step 1 defines Global Work Areas, Step 2 defines Global Work Packages, and Step 3 defines Activity Sequence Templates, each building on the one before it."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Set up company name, logo, and address",
-            "steps": [
-              "Go to <strong>Global Data &gt; Company</strong> (Company Details).",
-              "Enter the company's name, logo, address, and contact information.",
-              "Click <strong>Submit</strong>."
-            ],
-            "note": "This information auto-populates forms and other places across Arena. Return to the same Company tab any time to edit it later.",
-            "images": [
-              {
-                "src": "assets/notion/company-details/001.jpg",
-                "caption": "Company Details with the company name, logo, address and contacts",
-                "step": 2
-              }
-            ]
-          },
-          {
-            "title": "Set up Global Data for a Construction Type",
-            "steps": [
-              "Go to <strong>Global Data</strong>.",
-              "Select a Construction Type from the dropdown.",
-              "Complete <strong>Step 1: Global Work Areas</strong>.",
-              "Complete <strong>Step 2: Global Work Packages</strong>.",
-              "Complete <strong>Step 3: Activity Sequence Templates</strong>."
-            ],
-            "note": "All projects using that Construction Type will see the data entered here — configure it once per Construction Type, not once per project.",
-            "images": [
-              {
-                "src": "assets/notion/global-data/001.jpg",
-                "caption": "Global Data construction-type setup, with the Construction Type drop-down",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/global-work-areas/001.jpg",
-                "caption": "Global Work Areas: the level types for a construction type",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/global-work-packages/001.jpg",
-                "caption": "Global Work Packages: editing or deleting a work package",
-                "step": 4
-              },
-              {
-                "src": "assets/notion/activity-sequence-templates/004.jpg",
-                "caption": "Create Activity Sequence Template for a location type",
-                "step": 5
-              }
-            ]
-          }
-        ]
-      },
-      {
         "heading": "Support",
         "intro": "<p>When something goes wrong in the middle of a workday — a field engineer can't submit a form, a project manager can't pull a report before a client meeting — every End User needs a fast way to get help without leaving Arena to hunt down a contact. Support is the built-in path for getting that help directly from within the application. It's positioned in the top-right of the navigation bar alongside Notifications and Downloads, which puts it within easy reach no matter what screen you're on — a deliberate placement, since support requests often come up in the middle of trying to complete some other task.</p><p>The in-app Support panel is meant for describing what you were trying to do and what went wrong, which gives the support team the context they need without a back-and-forth to establish basics. That said, Arena also provides a direct fallback: emailing support@inncircles.com with your company name and a description of the issue works if the Support icon isn't visible to you for some reason, or if you need a faster turnaround than the in-app panel typically provides.</p>",
         "definitions": [
@@ -23497,12 +23497,12 @@ const MODULES = [
       "Notifications and permission groups are configured per-project or globally, depending on scope."
     ],
     "sections": [
-      "Admin Role",
-      "Home Page",
+      "Overview",
+      "Home",
+      "Company Details",
       "User Registration",
-      "Permissions & Groups",
+      "Permission Groups",
       "Notifications",
-      "Company & Global Data Setup",
       "Support"
     ]
   },
@@ -23512,7 +23512,7 @@ const MODULES = [
     "qaItems": QA_CALENDAR,
     "narrative": [
       {
-        "heading": "Who sets this up",
+        "heading": "Overview",
         "intro": "<p>Admin Role is for the Super Admin or admin who connects Microsoft Outlook for the whole company and decides which user groups may rely on it. Everyone else only creates and views events.</p><p>Do it in <strong>Global Data → Marketplace → Microsoft Calendar</strong> (organisation-wide), and give user groups the <strong>Calendar Management</strong> permission. Individuals can also connect themselves from the avatar menu → <strong>Settings</strong>.</p>",
         "definitions": [
           {
@@ -23525,13 +23525,127 @@ const MODULES = [
           },
           {
             "term": "Where this data comes from",
-            "definition": "Calendar events come from the connected Microsoft Outlook calendar and from events created in Arena. The consent setting is in **Global Data → Marketplace** (organisation) or avatar → **Settings** (personal). The **Categorize** list is covered under **View, create and filter events**."
+            "definition": "Calendar events come from the connected Microsoft Outlook calendar and from events created in Arena. The consent setting is in **Global Data → Marketplace** (organisation) or avatar → **Settings** (personal). The **Categorize** list is covered under **Global Calendar**."
           }
         ],
         "procedures": []
       },
       {
-        "heading": "Connect Outlook so events sync",
+        "heading": "Global Calendar",
+        "intro": "<p>This is the Global Calendar screen where everyone views and creates events. Top-left: <strong>Create Event</strong> and <strong>Fetch Events</strong>; top-right: <strong>Filters</strong>.</p><p>The left side has a mini month picker, the <strong>Events</strong> list for the selected day and a <strong>My Calendars</strong> list; the middle is the month grid; the right pane says <strong>Please Select Event</strong> until you click an event.</p>",
+        "definitions": [
+          {
+            "term": "Global Calendar screen",
+            "definition": "Home → **Calendar**. Buttons: **Create Event**, **Fetch Events** (sync icon), **Filters**. Left: mini month picker, selected date, **Events (count)** for the day (shows **No Events** when empty) and **My Calendars**. Middle: month grid Sunday to Saturday with previous/next month arrows. Right: event detail pane."
+          },
+          {
+            "term": "Create Event fields",
+            "definition": "**Title**, **Date*** (dd-mm-yyyy, date picker), **Time*** (HH : MM and AM/PM), **Location**, **Categorize** (searchable drop-down), **Event Description** (text box with bold, italic, underline, strike, link, headings, lists and alignment), a calendar drop-down at the bottom (**My Calendar** by default) and **Submit**."
+          },
+          {
+            "term": "Categorize",
+            "definition": "A searchable list of where the event goes. **My Calendar** is ticked by default. **Where this comes from:** your own calendar plus the group names set up for your company; groups imported through **Communications → Import Group** also appear here."
+          },
+          {
+            "term": "Filters",
+            "definition": "Opens **Filter Categories** with a **Select Categories** drop-down, **Select All**, **Clear & Apply** and **Submit**. The category list was empty for the admin user without calendar consent."
+          },
+          {
+            "term": "Fetch Events",
+            "definition": "The sync button next to Create Event. It pulls events from the connected Outlook calendar."
+          },
+          {
+            "term": "Consent Not Granted warning",
+            "definition": "Create Event and Filters first show \"Consent Not Granted! Please provide consent. Note: Give consent in My Profile → Settings → Calendar consent.\" Click **Ok**, then connect through avatar → **Settings** → **Microsoft Calendar**."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Create a calendar event",
+            "steps": [
+              "Open **Home → Calendar** and click **Create Event** (if **Consent Not Granted** appears, click **Ok** and connect your calendar first).",
+              "Enter the **Title**, **Date**, **Time** and **Location**.",
+              "Pick a **Categorize** entry (for example **My Calendar**).",
+              "Write the **Event Description**, check the calendar drop-down at the bottom and click **Submit**."
+            ],
+            "note": "The Create Event form on this screen has no module picker. Events created from a module screen (Proposal Management → Calendar, Opportunity → Events) use the same form.",
+            "images": [
+              {
+                "src": "assets/notion/arena-calendar/006.jpg",
+                "caption": "The Category options, limited to the categories chosen in Configure Categories",
+                "step": 2
+              }
+            ]
+          },
+          {
+            "title": "Edit or delete a calendar event",
+            "steps": [
+              "Open the event you want to change directly from the Arena Calendar view.",
+              "Make your edits, or choose to delete the event, from within the open event."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/arena-calendar/009.jpg",
+                "caption": "Editing or deleting an event",
+                "step": 1
+              }
+            ]
+          },
+          {
+            "title": "Filter events by category",
+            "steps": [
+              "Click **Filters** (top-right).",
+              "In **Filter Categories**, open **Select Categories** and tick the ones you want, or **Select All**.",
+              "Click **Submit**; use **Clear & Apply** to reset."
+            ]
+          },
+          {
+            "title": "Fetch events from Outlook",
+            "steps": [
+              "Click **Fetch Events** next to Create Event.",
+              "Wait for the month grid to refresh, then pick a date to see its events."
+            ],
+            "note": "This screen isn't covered here yet."
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/arena-calendar/001.jpg",
+            "caption": "The Arena Calendar, which syncs with your Outlook calendar"
+          }
+        ]
+      },
+      {
+        "heading": "Calendar Events",
+        "intro": "<p>This section explains what appears on the calendar and where it comes from. It is for users who ask why an event is missing and for admins checking sync.</p><p>Events come from your connected Outlook calendar and from events created in Arena, including those made on module screens such as <strong>Proposal Management → Calendar</strong> and <strong>Opportunity → Events</strong>. A project's scheduled safety forms and project forms appear on that project's <strong>My Calendar</strong> instead.</p>",
+        "definitions": [
+          {
+            "term": "Outlook Sync",
+            "definition": "Events in a connected Outlook calendar are brought into Arena Calendar (the **Fetch Events** button and automatic sync). Requires Microsoft Calendar consent."
+          },
+          {
+            "term": "Imported Outlook Group",
+            "definition": "Groups imported with **Communications → Import Group** and mapped to a module; they also appear in Arena Calendar."
+          },
+          {
+            "term": "Module screens that create events",
+            "definition": "**Proposal Management → Calendar** (**Create Event**, **Filters**; same form), **Opportunity → Events** sub-tab (**Create Event**) and Tender bids. Each shows **Consent Not Granted** until calendar consent is given."
+          },
+          {
+            "term": "Project My Calendar",
+            "definition": "A different screen in the project menu for scheduled safety forms and project forms. See the **My Calendar** module."
+          }
+        ],
+        "procedures": [],
+        "images": [
+          {
+            "src": "assets/notion/arena-calendar/007.jpg",
+            "caption": "Import Groups: Outlook groups shown in the Arena Calendar as well"
+          }
+        ]
+      },
+      {
+        "heading": "Outlook Connection",
         "intro": "<p>This section is for anyone connecting Outlook so that Arena Calendar can sync with it. Until consent is given, <strong>Create Event</strong> and <strong>Filters</strong> show <strong>Consent Not Granted! Please provide consent</strong>.</p><p>Use the admin route (<strong>Global Data → Marketplace → Microsoft Calendar → Sign In with Microsoft</strong>) for everyone, or the personal route (avatar menu → <strong>Settings</strong> → <strong>Microsoft Calendar</strong>). The personal page warns that the consent Mail ID must match the logged-in user's Mail ID.</p>",
         "definitions": [
           {
@@ -23625,7 +23739,7 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Who can use the admin Outlook connection",
+        "heading": "Calendar Permission",
         "intro": "<p>This section is for admins who find a user cannot use the calendar even though the company connected Outlook. The usual fix is the user group's Calendar Management permission rather than the Microsoft connection.</p>",
         "definitions": [
           {
@@ -23651,120 +23765,6 @@ const MODULES = [
             ]
           }
         ]
-      },
-      {
-        "heading": "View, create and filter events",
-        "intro": "<p>This is the Global Calendar screen where everyone views and creates events. Top-left: <strong>Create Event</strong> and <strong>Fetch Events</strong>; top-right: <strong>Filters</strong>.</p><p>The left side has a mini month picker, the <strong>Events</strong> list for the selected day and a <strong>My Calendars</strong> list; the middle is the month grid; the right pane says <strong>Please Select Event</strong> until you click an event.</p>",
-        "definitions": [
-          {
-            "term": "Global Calendar screen",
-            "definition": "Home → **Calendar**. Buttons: **Create Event**, **Fetch Events** (sync icon), **Filters**. Left: mini month picker, selected date, **Events (count)** for the day (shows **No Events** when empty) and **My Calendars**. Middle: month grid Sunday to Saturday with previous/next month arrows. Right: event detail pane."
-          },
-          {
-            "term": "Create Event fields",
-            "definition": "**Title**, **Date*** (dd-mm-yyyy, date picker), **Time*** (HH : MM and AM/PM), **Location**, **Categorize** (searchable drop-down), **Event Description** (text box with bold, italic, underline, strike, link, headings, lists and alignment), a calendar drop-down at the bottom (**My Calendar** by default) and **Submit**."
-          },
-          {
-            "term": "Categorize",
-            "definition": "A searchable list of where the event goes. **My Calendar** is ticked by default. **Where this comes from:** your own calendar plus the group names set up for your company; groups imported through **Communications → Import Group** also appear here."
-          },
-          {
-            "term": "Filters",
-            "definition": "Opens **Filter Categories** with a **Select Categories** drop-down, **Select All**, **Clear & Apply** and **Submit**. The category list was empty for the admin user without calendar consent."
-          },
-          {
-            "term": "Fetch Events",
-            "definition": "The sync button next to Create Event. It pulls events from the connected Outlook calendar."
-          },
-          {
-            "term": "Consent Not Granted warning",
-            "definition": "Create Event and Filters first show \"Consent Not Granted! Please provide consent. Note: Give consent in My Profile → Settings → Calendar consent.\" Click **Ok**, then connect through avatar → **Settings** → **Microsoft Calendar**."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Create a calendar event",
-            "steps": [
-              "Open **Home → Calendar** and click **Create Event** (if **Consent Not Granted** appears, click **Ok** and connect your calendar first).",
-              "Enter the **Title**, **Date**, **Time** and **Location**.",
-              "Pick a **Categorize** entry (for example **My Calendar**).",
-              "Write the **Event Description**, check the calendar drop-down at the bottom and click **Submit**."
-            ],
-            "note": "The Create Event form on this screen has no module picker. Events created from a module screen (Proposal Management → Calendar, Opportunity → Events) use the same form.",
-            "images": [
-              {
-                "src": "assets/notion/arena-calendar/006.jpg",
-                "caption": "The Category options, limited to the categories chosen in Configure Categories",
-                "step": 2
-              }
-            ]
-          },
-          {
-            "title": "Edit or delete a calendar event",
-            "steps": [
-              "Open the event you want to change directly from the Arena Calendar view.",
-              "Make your edits, or choose to delete the event, from within the open event."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/arena-calendar/009.jpg",
-                "caption": "Editing or deleting an event",
-                "step": 1
-              }
-            ]
-          },
-          {
-            "title": "Filter events by category",
-            "steps": [
-              "Click **Filters** (top-right).",
-              "In **Filter Categories**, open **Select Categories** and tick the ones you want, or **Select All**.",
-              "Click **Submit**; use **Clear & Apply** to reset."
-            ]
-          },
-          {
-            "title": "Fetch events from Outlook",
-            "steps": [
-              "Click **Fetch Events** next to Create Event.",
-              "Wait for the month grid to refresh, then pick a date to see its events."
-            ],
-            "note": "This screen isn't covered here yet."
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/notion/arena-calendar/001.jpg",
-            "caption": "The Arena Calendar, which syncs with your Outlook calendar"
-          }
-        ]
-      },
-      {
-        "heading": "What shows on the calendar",
-        "intro": "<p>This section explains what appears on the calendar and where it comes from. It is for users who ask why an event is missing and for admins checking sync.</p><p>Events come from your connected Outlook calendar and from events created in Arena, including those made on module screens such as <strong>Proposal Management → Calendar</strong> and <strong>Opportunity → Events</strong>. A project's scheduled safety forms and project forms appear on that project's <strong>My Calendar</strong> instead.</p>",
-        "definitions": [
-          {
-            "term": "Outlook Sync",
-            "definition": "Events in a connected Outlook calendar are brought into Arena Calendar (the **Fetch Events** button and automatic sync). Requires Microsoft Calendar consent."
-          },
-          {
-            "term": "Imported Outlook Group",
-            "definition": "Groups imported with **Communications → Import Group** and mapped to a module; they also appear in Arena Calendar."
-          },
-          {
-            "term": "Module screens that create events",
-            "definition": "**Proposal Management → Calendar** (**Create Event**, **Filters**; same form), **Opportunity → Events** sub-tab (**Create Event**) and Tender bids. Each shows **Consent Not Granted** until calendar consent is given."
-          },
-          {
-            "term": "Project My Calendar",
-            "definition": "A different screen in the project menu for scheduled safety forms and project forms. See the **My Calendar** module."
-          }
-        ],
-        "procedures": [],
-        "images": [
-          {
-            "src": "assets/notion/arena-calendar/007.jpg",
-            "caption": "Import Groups: Outlook groups shown in the Arena Calendar as well"
-          }
-        ]
       }
     ],
     "name": "Calendar",
@@ -23778,11 +23778,11 @@ const MODULES = [
       "If <strong>Create Event</strong> or <strong>Filters</strong> shows <strong>Consent Not Granted</strong>, connect your calendar: avatar (top-right) → <strong>Settings</strong> → <strong>Microsoft Calendar</strong> → <strong>Sign In with Microsoft</strong>, or ask an admin to grant organisation consent in <strong>Global Data → Marketplace → Microsoft Calendar</strong>."
     ],
     "sections": [
-      "Who sets this up",
-      "Connect Outlook so events sync",
-      "Who can use the admin Outlook connection",
-      "View, create and filter events",
-      "What shows on the calendar"
+      "Overview",
+      "Global Calendar",
+      "Calendar Events",
+      "Outlook Connection",
+      "Calendar Permission"
     ]
   },
   {
@@ -23791,7 +23791,7 @@ const MODULES = [
     "qaItems": QA_COMMUNICATION,
     "narrative": [
       {
-        "heading": "Who sets this up",
+        "heading": "Overview",
         "intro": "<p>Admin Role is who connects Outlook for the organisation and gives users access to Communications. An admin grants Outlook consent in <strong>Global Data → Marketplace</strong> and adds the communication module permission to the user's group; a single user can instead grant their own consent from <strong>My Profile → Settings → Outlook Management Consent</strong>.</p><p>Communications and Calendar use the same Microsoft connection but have separate consent screens and permissions, so setting up one does not set up the other. Without personal consent, <strong>Import Group</strong> warns <strong>Consent Not Granted! Please provide consent</strong>.</p>",
         "definitions": [
           {
@@ -23810,64 +23810,7 @@ const MODULES = [
         "procedures": []
       },
       {
-        "heading": "Connect Outlook so mail syncs",
-        "intro": "<p>This section is for the admin or user who connects a mailbox so mail syncs into Arena. Nothing syncs and nothing can be sent from Arena until Outlook consent exists.</p><p>Use organisation-wide consent in <strong>Global Data → Marketplace</strong> together with the communication module permission, or a personal consent in <strong>My Profile → Settings → Outlook Management Consent</strong> to pilot with one team first.</p>",
-        "definitions": [
-          {
-            "term": "Outlook Consent (Communications)",
-            "definition": "Authorization that connects a mailbox to Arena Communications, either granted organization-wide by an admin in Global Data → Marketplace, or individually by a user in My Profile → Settings → Outlook Management Consent."
-          },
-          {
-            "term": "Admin Permission for Communication Module",
-            "definition": "A permission that, combined with admin-granted Outlook consent in Marketplace, allows a user to use Arena Communications without personally granting their own consent."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Enable Outlook integration for Arena Communications",
-            "steps": [
-              "As an admin, go to <strong>Global Data → Marketplace</strong> and grant Outlook consent for the organization.",
-              "Ensure the target user has the admin permission for the communication module assigned to their user group.",
-              "Alternatively, skip admin involvement entirely: have the individual user go to <strong>My Profile → Settings → Outlook Management Consent</strong> and grant their own consent directly."
-            ],
-            "note": "The individual consent path is useful for piloting Communications with a single user or team before committing to an organization-wide rollout.",
-            "images": [
-              {
-                "src": "assets/notion/arena-communications/001.jpg",
-                "caption": "Outlook consent in the Marketplace, with admin permission for the communication module",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/microsoft-outlook-integration-2/001.jpg",
-                "caption": "Microsoft Outlook in the Marketplace",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/microsoft-outlook-integration-2/004.jpg",
-                "caption": "Microsoft sign-in, then the Permissions Requested page",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/microsoft-outlook-integration-2/006.jpg",
-                "caption": "Consent granted, shown on the screen",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/arena-communications/002.jpg",
-                "caption": "Outlook Management Consent, for a user giving their own consent",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/arena-communications/003.jpg",
-                "caption": "The user consent sign-in",
-                "step": 3
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "heading": "Read, reply and send mail",
+        "heading": "Mail",
         "intro": "<p>This section is for anyone reading and answering project email without leaving Arena. The left side lists folders, the middle lists mail, and the right shows the open message.</p><p>Folders are <strong>All Emails</strong>, <strong>Inbox</strong>, <strong>Sent</strong>, <strong>Drafts</strong>, <strong>Starred</strong> and <strong>Trash</strong>, each with a count.</p>",
         "definitions": [
           {
@@ -23896,7 +23839,7 @@ const MODULES = [
           },
           {
             "term": "Where mail goes",
-            "definition": "Deleted mail goes to **Trash**. Mail you map shows a module chip in the list and is filtered by the ribbon at the top (see **Map mail to Arena records**)."
+            "definition": "Deleted mail goes to **Trash**. Mail you map shows a module chip in the list and is filtered by the ribbon at the top (see **Module Mapping**)."
           },
           {
             "term": "Starting a brand-new email",
@@ -23938,7 +23881,7 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Map mail to Arena records",
+        "heading": "Module Mapping",
         "intro": "<p>Mapping ties an email to an Opportunity, a Tender bid or a Proposal, so the mail stays with that record. Users mapping mail pick the module, then the record; the ribbon at the top then filters the mailbox by module.</p><p>Outlook groups can also be imported and mapped to a module with <strong>Import Group</strong>; groups mapped here also feed the Calendar module.</p>",
         "definitions": [
           {
@@ -24004,6 +23947,63 @@ const MODULES = [
             ]
           }
         ]
+      },
+      {
+        "heading": "Outlook Connection",
+        "intro": "<p>This section is for the admin or user who connects a mailbox so mail syncs into Arena. Nothing syncs and nothing can be sent from Arena until Outlook consent exists.</p><p>Use organisation-wide consent in <strong>Global Data → Marketplace</strong> together with the communication module permission, or a personal consent in <strong>My Profile → Settings → Outlook Management Consent</strong> to pilot with one team first.</p>",
+        "definitions": [
+          {
+            "term": "Outlook Consent (Communications)",
+            "definition": "Authorization that connects a mailbox to Arena Communications, either granted organization-wide by an admin in Global Data → Marketplace, or individually by a user in My Profile → Settings → Outlook Management Consent."
+          },
+          {
+            "term": "Admin Permission for Communication Module",
+            "definition": "A permission that, combined with admin-granted Outlook consent in Marketplace, allows a user to use Arena Communications without personally granting their own consent."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Enable Outlook integration for Arena Communications",
+            "steps": [
+              "As an admin, go to <strong>Global Data → Marketplace</strong> and grant Outlook consent for the organization.",
+              "Ensure the target user has the admin permission for the communication module assigned to their user group.",
+              "Alternatively, skip admin involvement entirely: have the individual user go to <strong>My Profile → Settings → Outlook Management Consent</strong> and grant their own consent directly."
+            ],
+            "note": "The individual consent path is useful for piloting Communications with a single user or team before committing to an organization-wide rollout.",
+            "images": [
+              {
+                "src": "assets/notion/arena-communications/001.jpg",
+                "caption": "Outlook consent in the Marketplace, with admin permission for the communication module",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/microsoft-outlook-integration-2/001.jpg",
+                "caption": "Microsoft Outlook in the Marketplace",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/microsoft-outlook-integration-2/004.jpg",
+                "caption": "Microsoft sign-in, then the Permissions Requested page",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/microsoft-outlook-integration-2/006.jpg",
+                "caption": "Consent granted, shown on the screen",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/arena-communications/002.jpg",
+                "caption": "Outlook Management Consent, for a user giving their own consent",
+                "step": 3
+              },
+              {
+                "src": "assets/notion/arena-communications/003.jpg",
+                "caption": "The user consent sign-in",
+                "step": 3
+              }
+            ]
+          }
+        ]
       }
     ],
     "name": "Communication",
@@ -24017,10 +24017,10 @@ const MODULES = [
       "If mail does not load or <strong>Import Group</strong> says <strong>Consent Not Granted</strong>, grant Outlook consent first (admin via Global Data → Marketplace, or yourself via My Profile → Settings → Outlook Management Consent)."
     ],
     "sections": [
-      "Who sets this up",
-      "Connect Outlook so mail syncs",
-      "Read, reply and send mail",
-      "Map mail to Arena records"
+      "Overview",
+      "Mail",
+      "Module Mapping",
+      "Outlook Connection"
     ]
   },
   {
@@ -24029,7 +24029,7 @@ const MODULES = [
     "qaItems": QA_MYDESK,
     "narrative": [
       {
-        "heading": "My Desk",
+        "heading": "Overview",
         "intro": "<p>My Desk is the first screen a user sees when opening a project. It shows how each plant is progressing, what is waiting on you, and the latest work, quality and safety activity. Everyone on the project uses it, from <strong>End Users</strong> to <strong>PMs</strong>.</p><p>Open it from the project menu: <strong>My Desk</strong> (route <code>#/desk</code>). The breadcrumb reads <strong>Desk &gt; Actions</strong> and the one tab is <strong>My Actions</strong>. The page greets you by name and date (for example \"Hello System Admin!\"), then shows <strong>Project Progress</strong>, a plant selector, and the accordions <strong>My Actions</strong>, <strong>Pending Actions</strong>, <strong>Recent Work Logs</strong>, <strong>Recent Punch List Items</strong>, <strong>Recent Quality Logs</strong>, <strong>Recent Daily Safety Issues</strong> and <strong>Recent Safety Logs</strong>.</p>",
         "definitions": [
           {
@@ -24177,7 +24177,7 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Recent Activity Panels",
+        "heading": "Recent Panels",
         "intro": "<p>The five Recent panels give a quick read on the latest progress, quality and safety activity in the selected plant. They are for <strong>PMs</strong>, site engineers and safety officers.</p><p>Each panel reads \"No Data\" when the plant has nothing to show. They always follow the plant selector, and each mirrors a Field Works list.</p>",
         "definitions": [
           {
@@ -24221,7 +24221,7 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Project Settings That Control My Desk",
+        "heading": "Settings",
         "intro": "<p>Two Project Settings pages decide how My Desk is arranged. The <strong>Module Admin</strong> or <strong>Project Manager</strong> changes them; end users cannot.</p><p>Open <strong>Project Settings</strong> and choose <strong>My Desk</strong> or <strong>My Desk Dashboards</strong> in the left menu.</p>",
         "definitions": [
           {
@@ -24266,12 +24266,12 @@ const MODULES = [
       "Change panel order in <strong>Project Settings → My Desk</strong>."
     ],
     "sections": [
-      "My Desk",
+      "Overview",
       "Project Progress",
       "My Actions",
       "Pending Actions",
-      "Recent Activity Panels",
-      "Project Settings That Control My Desk"
+      "Recent Panels",
+      "Settings"
     ]
   },
   {
@@ -24280,7 +24280,7 @@ const MODULES = [
     "qaItems": QA_MYCALENDAR,
     "narrative": [
       {
-        "heading": "My Calendar",
+        "heading": "Calendar Views",
         "intro": "<p>My Calendar is the project's date view of scheduled safety forms and scheduled project forms. PMs, safety officers and field leads use it to see what is due on a given day.</p><p>Open <strong>My Calendar</strong> in the project menu (route <code>#/calendar-logs</code>, breadcrumb <strong>Calendar Logs</strong>). A <strong>Select date</strong> mini calendar sits on the left; the main calendar sits on the right with a <strong>Month | Day</strong> toggle. It is read-only: you cannot add events here.</p>",
         "definitions": [
           {
@@ -24316,7 +24316,7 @@ const MODULES = [
         ]
       },
       {
-        "heading": "What Appears on My Calendar",
+        "heading": "Calendar Items",
         "intro": "<p>My Calendar only displays schedules that someone has set up in Project Setup, so a <strong>PM</strong> or <strong>Module Admin</strong> decides what shows. If it is empty, the setup has not been done.</p><p>The two sources verified are <strong>Project Setup → Safety → Setup Safety Calendar</strong> and <strong>Project Setup → Forms → Schedule Project Forms</strong>. Field users then fill the forms in <strong>Field Works</strong>.</p>",
         "definitions": [
           {
@@ -24361,8 +24361,8 @@ const MODULES = [
       "Create schedules in <strong>Project Setup → Safety → Setup Safety Calendar</strong> and <strong>Project Setup → Forms → Schedule Project Forms</strong>."
     ],
     "sections": [
-      "My Calendar",
-      "What Appears on My Calendar"
+      "Calendar Views",
+      "Calendar Items"
     ]
   },
   {
@@ -34208,7 +34208,7 @@ const MODULES = [
     "qaItems": QA_TIMEMANAGEMENT,
     "narrative": [
       {
-        "heading": "Who sets this up",
+        "heading": "Overview",
         "intro": "<p>Time Management turns the hours that people and crews work into approved timesheets, payroll exports and labor reports. A <strong>Module Admin</strong> (or <strong>Super Admin</strong>) sets the rules once; <strong>Field Users</strong> log hours, <strong>PMs</strong> and other approvers review them, and the results show up in Timesheet Logs, the Dashboard and the Data Summary.</p><p>From <strong>Home</strong>, click the <strong>Time Management</strong> tile. The tabs on the left are <strong>Dashboard</strong>, <strong>My Crew Timesheet</strong>, <strong>My Timesheet</strong>, <strong>Timesheet Logs</strong>, <strong>Issues</strong>, <strong>Timesheet Data Summary</strong>, <strong>Reconciliation</strong> and <strong>Settings</strong>. The module opens on My Crew Timesheet.</p>",
         "definitions": [
           {
@@ -34217,7 +34217,7 @@ const MODULES = [
           },
           {
             "term": "Where Time Management data comes from",
-            "definition": "**People:** the Roster drop-down lists the crew members first (tagged **Crew**), then everyone else in **Global Data → Users & Permissions → Global Rosters** (tagged **Global**). **Crews:** **Global Data → Crews** for Company and GL Codes logs; the project's **Project Setup → People → Project Crews** for Project logs. **Projects, work orders, GL codes:** the Projects list, **Global Data → Work Orders** and **Global Data → UOM, Phasecode & GL Codes → GL Codes**. **Phase codes:** see \"Which Phase Codes a Timesheet Offers\". **Earning columns (ST, OT...):** the template's earning codes, which come from **Global Data → Settings → Earnings Codes**. **Craft and Class:** the employee's Global Roster record. **Clock-in data:** **Inn Clock AI**, connected in **Global Data → Marketplace → Inn Clock Consent**."
+            "definition": "**People:** the Roster drop-down lists the crew members first (tagged **Crew**), then everyone else in **Global Data → Users & Permissions → Global Rosters** (tagged **Global**). **Crews:** **Global Data → Crews** for Company and GL Codes logs; the project's **Project Setup → People → Project Crews** for Project logs. **Projects, work orders, GL codes:** the Projects list, **Global Data → Work Orders** and **Global Data → UOM, Phasecode & GL Codes → GL Codes**. **Phase codes:** see \"Phase Codes\". **Earning columns (ST, OT...):** the template's earning codes, which come from **Global Data → Settings → Earnings Codes**. **Craft and Class:** the employee's Global Roster record. **Clock-in data:** **Inn Clock AI**, connected in **Global Data → Marketplace → Inn Clock Consent**."
           },
           {
             "term": "Where Time Management data goes",
@@ -34257,7 +34257,7 @@ const MODULES = [
             "steps": [
               "Note which drop-down looks wrong (Roster, Crew, Projects, Phase Code or Template) and which **Log Level Category** is chosen.",
               "Compare it with the source list named in \"Where Time Management data comes from\" (for example Global Data → Crews for a crew).",
-              "For a phase code, open \"Which Phase Codes a Timesheet Offers\" and follow the checks there.",
+              "For a phase code, open \"Phase Codes\" and follow the checks there.",
               "If the source list is right but the drop-down is not, check the project selected at the top and the Timesheet Mode of the person or crew."
             ]
           }
@@ -34319,7 +34319,7 @@ const MODULES = [
           },
           {
             "term": "Default Phase Codes",
-            "definition": "Opens **Set Default Phase Code**: a searchable, A-Z sortable tick list (\"D - code - description\" for Direct, \"I - ...\" for Indirect) with **Submit**. What you tick is the short list your Phase Code drop-down offers. With category Company the list held the company's labor codes; with category Projects it held only that project's mapped codes. See \"Which Phase Codes a Timesheet Offers\"."
+            "definition": "Opens **Set Default Phase Code**: a searchable, A-Z sortable tick list (\"D - code - description\" for Direct, \"I - ...\" for Indirect) with **Submit**. What you tick is the short list your Phase Code drop-down offers. With category Company the list held the company's labor codes; with category Projects it held only that project's mapped codes. See \"Phase Codes\"."
           },
           {
             "term": "Clone Log",
@@ -34346,7 +34346,7 @@ const MODULES = [
               "Choose **Log Level Category** (**Company**, **Projects**, **Work Orders** or **GL Codes**). For Projects or Work Orders a second drop-down appears for the project or work order. Confirm the **Select Template**.",
               "Pick the date (Daily) or a date range, depending on your mode.",
               "Click **Add** to insert a row.",
-              "Choose the **Company/Projects/Work Orders/GL Codes** value and the **Phase Code** (see \"Which Phase Codes a Timesheet Offers\"), then enter hours in the earning-code columns (for example **1 (ST)**, **2 (OT)**). **Craft** and **Class** fill in from your roster record.",
+              "Choose the **Company/Projects/Work Orders/GL Codes** value and the **Phase Code** (see \"Phase Codes\"), then enter hours in the earning-code columns (for example **1 (ST)**, **2 (OT)**). **Craft** and **Class** fill in from your roster record.",
               "Click **Submit** to send the log into the approval workflow, or **Save as Draft** if it is incomplete."
             ],
             "images": [
@@ -34820,7 +34820,7 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Which Phase Codes a Timesheet Offers",
+        "heading": "Phase Codes",
         "intro": "<p>This section explains why the <strong>Phase Code</strong> drop-down on a timesheet row shows some codes and not others. It matters to <strong>PMs</strong> (who map codes to their project), <strong>Module Admins</strong> and <strong>Field Users</strong> who cannot find a code.</p><p>The list depends on what the row is charged to: a project uses that project's mapped codes, Company uses a company list, and work-order items and GL codes use none. Everything below was checked in the live product.</p>",
         "definitions": [
           {
@@ -35282,6 +35282,143 @@ const MODULES = [
         ]
       },
       {
+        "heading": "Rosters & Crews",
+        "intro": "<p>Rosters and crews are the people that timesheets are logged against. A <strong>Super Admin</strong> keeps the company-wide lists in Global Data and a <strong>PM</strong> builds each project's team in Project Setup.</p><p>There are no roster tabs inside Time Management itself; its drop-downs read these lists.</p>",
+        "definitions": [
+          {
+            "term": "Crew (Global Data)",
+            "definition": "A company-wide crew in **Global Data → Crews** with Supervisors, Foremen and Rosters. Used for Company and GL Codes timesheets."
+          },
+          {
+            "term": "Project Crew",
+            "definition": "A crew in **Project Setup → People → Project Crews**, created there or copied with **Copy Crews from Global Data** (it lists the 18 Global Data crews), and shared with **Copy Crews to Projects**. Used for Project timesheets. It is empty for Arena Steel Plant - Phase 1."
+          },
+          {
+            "term": "System User (Roster)",
+            "definition": "A licensed user in **Global Data → Users & Permissions → Global Rosters**. A project roster adds them with **Add** under **Project Setup → People → Roster → System User**. Global Rosters hold Craft, Class and Default Indirect Phase Code that timesheets use."
+          },
+          {
+            "term": "Non-System User (Roster)",
+            "definition": "A temporary or subcontracted worker without a login, added with **Add** or **Get Users from Global Data** under **Roster → Non System User**."
+          },
+          {
+            "term": "Configurable Fields (Roster)",
+            "definition": "Custom columns for roster tables, added in **Global Data → Settings → Roster Settings** (Add Field with Required, Show on cards and a type)."
+          },
+          {
+            "term": "Where rosters and crews feed timesheets",
+            "definition": "The Roster drop-down of My Crew Timesheet lists the crew's members first and then all Global Rosters; the Crew drop-down lists Global Data crews or Project Crews by Log Level Category; the Settings pages for workflow and mode list Global Roster users (Home) or the project roster (Project Settings)."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Create a new crew (Global Data)",
+            "steps": [
+              "Go to <strong>Global Data &gt; Crews</strong>.",
+              "Click <strong>Create</strong>.",
+              "Enter the Crew Name.",
+              "Choose Supervisors and Foremen from their dropdowns.",
+              "Select Rosters (system and non-system users) for the crew.",
+              "Click <strong>Submit</strong>."
+            ],
+            "images": [
+              {
+                "src": "assets/notion/timesheet-crew/001.jpg",
+                "caption": "Company-level crews",
+                "step": 1
+              },
+              {
+                "src": "assets/notion/timesheet-crew/002.jpg",
+                "caption": "Create, with a crew name",
+                "step": 2
+              },
+              {
+                "src": "assets/notion/timesheet-crew/003.jpg",
+                "caption": "Selecting the users for the crew and clicking Submit",
+                "step": 5
+              }
+            ]
+          },
+          {
+            "title": "Add a crew to a specific project",
+            "steps": [
+              "Open **Project Setup → People → Project Crews**.",
+              "Click **Create Crew** to build one, or **Copy Crews from Global Data** to import existing crews."
+            ],
+            "note": "Use **Copy Crews to Projects** to copy a crew to other projects."
+          },
+          {
+            "title": "Add a system user to a project roster",
+            "steps": [
+              "Go to <strong>Project Setup &gt; Roster &gt; System User</strong>.",
+              "Click <strong>Add</strong>.",
+              "Select users from Global Data (<strong>Global Data &gt; Users &amp; Permissions &gt; Global Rosters</strong>) — selected users appear on the right side of the dialog.",
+              "Click <strong>Submit</strong>."
+            ]
+          },
+          {
+            "title": "Add a temporary (non-system) worker to a project",
+            "steps": [
+              "Go to <strong>Project Setup &gt; Roster &gt; Non System User</strong>.",
+              "Click <strong>Add</strong> to manually create one, or <strong>Get Users from Global Data</strong> to select existing non-system users.",
+              "Fill in the required fields and click <strong>Submit</strong>."
+            ]
+          },
+          {
+            "title": "Bulk upload or export rosters",
+            "steps": [
+              "On the Roster (System Users or Non-System Users) page, use <strong>Upload Excel</strong> to bulk-add roster records, or <strong>Download Excel</strong> to export the current roster list."
+            ]
+          },
+          {
+            "title": "Add custom fields to roster tables",
+            "steps": [
+              "Go to <strong>Global Settings &gt; Roster Settings</strong>.",
+              "Use <strong>Configurable Fields</strong> to add a custom column, choosing its field type (Attachment, Check box, Date, Label, Multi select, Paragraph, Roster, Scribble, Single select, Table, Text box, Time, Signature).",
+              "Click <strong>Save Changes</strong>."
+            ]
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/notion/timesheet-crew/004.jpg",
+            "caption": "Searching for people when building a crew"
+          },
+          {
+            "src": "assets/notion/timesheet-crew/005.jpg",
+            "caption": "Searching the list of crews"
+          },
+          {
+            "src": "assets/notion/roster-system-users/001.jpg",
+            "caption": "Rosters for system users"
+          },
+          {
+            "src": "assets/notion/roster-system-users/002.jpg",
+            "caption": "Roster cards with Edit and Delete"
+          },
+          {
+            "src": "assets/notion/roster-system-users/003.jpg",
+            "caption": "Upload Excel to add many rosters at once"
+          },
+          {
+            "src": "assets/notion/roster-system-users/005.jpg",
+            "caption": "Switching the roster between card and table view"
+          },
+          {
+            "src": "assets/notion/rosters-non-system-users/001.jpg",
+            "caption": "Add, to register a non-system user"
+          },
+          {
+            "src": "assets/notion/rosters-non-system-users/002.jpg",
+            "caption": "Non-system roster cards with Edit and Delete"
+          },
+          {
+            "src": "assets/notion/rosters-non-system-users/003.jpg",
+            "caption": "Non-system roster in card and table views"
+          }
+        ]
+      },
+      {
         "heading": "Settings",
         "intro": "<p>Settings is where a <strong>Module Admin</strong> builds the rules every timesheet follows: approval workflows, logging mode, earning codes, templates and payroll lock. Do this before Field Users log time; a crew cannot submit until its workflow and mode are in place.</p><p>The page has two groups. <strong>Timesheet Workflow</strong> has <strong>Create Workflow</strong> and <strong>Assign Workflow</strong>. <strong>Timesheet Settings</strong> has <strong>Timesheet Mode</strong>, <strong>Earnings Codes</strong>, <strong>Timesheet Template</strong>, <strong>Payroll Locking</strong>, <strong>Exclude Projects</strong> and <strong>Users And Permissions</strong>.</p>",
         "definitions": [
@@ -35523,143 +35660,6 @@ const MODULES = [
             "caption": "Deleting a template from its menu"
           }
         ]
-      },
-      {
-        "heading": "Rosters & Crews",
-        "intro": "<p>Rosters and crews are the people that timesheets are logged against. A <strong>Super Admin</strong> keeps the company-wide lists in Global Data and a <strong>PM</strong> builds each project's team in Project Setup.</p><p>There are no roster tabs inside Time Management itself; its drop-downs read these lists.</p>",
-        "definitions": [
-          {
-            "term": "Crew (Global Data)",
-            "definition": "A company-wide crew in **Global Data → Crews** with Supervisors, Foremen and Rosters. Used for Company and GL Codes timesheets."
-          },
-          {
-            "term": "Project Crew",
-            "definition": "A crew in **Project Setup → People → Project Crews**, created there or copied with **Copy Crews from Global Data** (it lists the 18 Global Data crews), and shared with **Copy Crews to Projects**. Used for Project timesheets. It is empty for Arena Steel Plant - Phase 1."
-          },
-          {
-            "term": "System User (Roster)",
-            "definition": "A licensed user in **Global Data → Users & Permissions → Global Rosters**. A project roster adds them with **Add** under **Project Setup → People → Roster → System User**. Global Rosters hold Craft, Class and Default Indirect Phase Code that timesheets use."
-          },
-          {
-            "term": "Non-System User (Roster)",
-            "definition": "A temporary or subcontracted worker without a login, added with **Add** or **Get Users from Global Data** under **Roster → Non System User**."
-          },
-          {
-            "term": "Configurable Fields (Roster)",
-            "definition": "Custom columns for roster tables, added in **Global Data → Settings → Roster Settings** (Add Field with Required, Show on cards and a type)."
-          },
-          {
-            "term": "Where rosters and crews feed timesheets",
-            "definition": "The Roster drop-down of My Crew Timesheet lists the crew's members first and then all Global Rosters; the Crew drop-down lists Global Data crews or Project Crews by Log Level Category; the Settings pages for workflow and mode list Global Roster users (Home) or the project roster (Project Settings)."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Create a new crew (Global Data)",
-            "steps": [
-              "Go to <strong>Global Data &gt; Crews</strong>.",
-              "Click <strong>Create</strong>.",
-              "Enter the Crew Name.",
-              "Choose Supervisors and Foremen from their dropdowns.",
-              "Select Rosters (system and non-system users) for the crew.",
-              "Click <strong>Submit</strong>."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/timesheet-crew/001.jpg",
-                "caption": "Company-level crews",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/timesheet-crew/002.jpg",
-                "caption": "Create, with a crew name",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/timesheet-crew/003.jpg",
-                "caption": "Selecting the users for the crew and clicking Submit",
-                "step": 5
-              }
-            ]
-          },
-          {
-            "title": "Add a crew to a specific project",
-            "steps": [
-              "Open **Project Setup → People → Project Crews**.",
-              "Click **Create Crew** to build one, or **Copy Crews from Global Data** to import existing crews."
-            ],
-            "note": "Use **Copy Crews to Projects** to copy a crew to other projects."
-          },
-          {
-            "title": "Add a system user to a project roster",
-            "steps": [
-              "Go to <strong>Project Setup &gt; Roster &gt; System User</strong>.",
-              "Click <strong>Add</strong>.",
-              "Select users from Global Data (<strong>Global Data &gt; Users &amp; Permissions &gt; Global Rosters</strong>) — selected users appear on the right side of the dialog.",
-              "Click <strong>Submit</strong>."
-            ]
-          },
-          {
-            "title": "Add a temporary (non-system) worker to a project",
-            "steps": [
-              "Go to <strong>Project Setup &gt; Roster &gt; Non System User</strong>.",
-              "Click <strong>Add</strong> to manually create one, or <strong>Get Users from Global Data</strong> to select existing non-system users.",
-              "Fill in the required fields and click <strong>Submit</strong>."
-            ]
-          },
-          {
-            "title": "Bulk upload or export rosters",
-            "steps": [
-              "On the Roster (System Users or Non-System Users) page, use <strong>Upload Excel</strong> to bulk-add roster records, or <strong>Download Excel</strong> to export the current roster list."
-            ]
-          },
-          {
-            "title": "Add custom fields to roster tables",
-            "steps": [
-              "Go to <strong>Global Settings &gt; Roster Settings</strong>.",
-              "Use <strong>Configurable Fields</strong> to add a custom column, choosing its field type (Attachment, Check box, Date, Label, Multi select, Paragraph, Roster, Scribble, Single select, Table, Text box, Time, Signature).",
-              "Click <strong>Save Changes</strong>."
-            ]
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/notion/timesheet-crew/004.jpg",
-            "caption": "Searching for people when building a crew"
-          },
-          {
-            "src": "assets/notion/timesheet-crew/005.jpg",
-            "caption": "Searching the list of crews"
-          },
-          {
-            "src": "assets/notion/roster-system-users/001.jpg",
-            "caption": "Rosters for system users"
-          },
-          {
-            "src": "assets/notion/roster-system-users/002.jpg",
-            "caption": "Roster cards with Edit and Delete"
-          },
-          {
-            "src": "assets/notion/roster-system-users/003.jpg",
-            "caption": "Upload Excel to add many rosters at once"
-          },
-          {
-            "src": "assets/notion/roster-system-users/005.jpg",
-            "caption": "Switching the roster between card and table view"
-          },
-          {
-            "src": "assets/notion/rosters-non-system-users/001.jpg",
-            "caption": "Add, to register a non-system user"
-          },
-          {
-            "src": "assets/notion/rosters-non-system-users/002.jpg",
-            "caption": "Non-system roster cards with Edit and Delete"
-          },
-          {
-            "src": "assets/notion/rosters-non-system-users/003.jpg",
-            "caption": "Non-system roster in card and table views"
-          }
-        ]
       }
     ],
     "name": "Time Management",
@@ -35673,17 +35673,17 @@ const MODULES = [
       "Use <strong>My Timesheet</strong> or <strong>My Crew Timesheet</strong> to log hours; approvers work from <strong>Timesheet Logs</strong>. Workflows, modes, earning codes and templates live under <strong>Settings</strong>; phase codes, rosters and crews come from <strong>Global Data</strong> and <strong>Project Setup</strong>."
     ],
     "sections": [
-      "Who sets this up",
+      "Overview",
       "Dashboard",
       "My Timesheet",
       "My Crew Timesheet",
-      "Which Phase Codes a Timesheet Offers",
+      "Phase Codes",
       "Timesheet Logs",
       "Timesheet Issues",
       "Timesheet Data Summary",
       "Reconciliation",
-      "Settings",
-      "Rosters & Crews"
+      "Rosters & Crews",
+      "Settings"
     ]
   },
   {
