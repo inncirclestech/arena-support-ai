@@ -223,6 +223,7 @@ const DEFINE_ACTIONS = new Set(["define", "explain", "understand", "describe"]);
 const DO_ACTIONS = new Set(["create", "add", "configure", "delete", "edit", "assign", "upload", "submit", "approve", "map", "register", "set", "enable"]);
 function intentAdjust(query, entry, score) {
   if (score <= 0) return score;   // never turn a non-match into a match
+  if (entry.proc) return Math.max(0, score - 3);   // documented guides fill gaps; authored answers win ties
   const asksMeaning = /^\s*(what|whats|what's)\b|\b(meaning|define|definition|stands for|full form|explain)\b/i.test(query) && !/\bhow\b/i.test(query);
   if (!asksMeaning) return entry.derived ? Math.max(0, score - 6) : score;   // glossary entries stay out of how-to questions
   const a = String(entry.action || "").toLowerCase();
@@ -308,6 +309,20 @@ function buildKB(MODULES) {
   });
   // Every documented term (the glossary lists on each module page) is also searchable as a "What is X?" entry.
   const plain = h => String(h || "").replace(/<\/?strong>/g, "**").replace(/<br\s*\/?>/g, "\n").replace(/<\/p>\s*<p>/g, "\n\n").replace(/<[^>]+>/g, "").replace(/&amp;/g, "&").replace(/&gt;/g, ">").replace(/&lt;/g, "<").trim();
+  MODULES.forEach(mod => {
+    (mod.narrative || []).forEach((sec, si) => {
+      (sec.procedures || []).forEach((p, pi) => {
+        const steps = (p.steps || []).map(st => plain(st)).filter(Boolean);
+        if (!p.title || steps.length < 2) return;
+        kb.push({
+          id: `${mod.id}-proc-${si}-${pi}`, moduleId: mod.id, moduleName: mod.name, moduleColor: mod.color,
+          action: String(p.title).split(/\s+/)[0].toLowerCase(), object: String(p.title).toLowerCase().replace(/[^a-z0-9 ]/g, " ").replace(/\s+/g, " ").trim(),
+          scope: "module", section: sec.heading, question: "How do I " + String(p.title).charAt(0).toLowerCase() + String(p.title).slice(1) + "?",
+          answer: steps.map((st, n) => (n + 1) + ". " + st).join("\n") + (p.note ? "\n\n" + plain(p.note) : ""), tags: [], proc: true
+        });
+      });
+    });
+  });
   MODULES.forEach(mod => {
     const first = (String(mod.overview || "").match(/<p>([\s\S]*?)<\/p>/) || [null, mod.overview || ""])[1];
     const text = plain(first);

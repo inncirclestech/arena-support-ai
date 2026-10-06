@@ -1013,6 +1013,18 @@
     .guide-foot { flex-direction: column; align-items: stretch; text-align: center; }
     .guide-ok { margin-left: 0; }
   }
+
+  /* ---------- Screenshots: stacked, large ---------- */
+  .doc-shots { display: flex; flex-direction: column; flex-wrap: nowrap; gap: 20px; margin: 16px 0 12px; }
+  .doc-shot { flex: none; width: 100%; max-width: 100%; }
+  .doc-shot-btn { border-radius: 12px; box-shadow: var(--shadow-md); }
+  .doc-shot-btn img { width: 100%; max-height: none; height: auto; }
+  .doc-shot figcaption { font-size: 13.5px; margin-top: 8px; color: var(--ink-soft); }
+
+  .doc-procedure { max-width: 940px; }
+  .doc-intro, .doc-module-overview { max-width: 76ch; }
+  .doc-section .doc-shots { max-width: 940px; }
+  .doc-shot-btn { cursor: zoom-in; }
 </style>
 
 <header class="topbar">
@@ -1098,8 +1110,8 @@
 </dialog>
 <button type="button" class="help-fab" id="help-fab" hidden><span class="help-fab-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>Need help? Ask AI</button>
 
-<script src="data.js?v=202610060105"></script>
-<script src="engine.js?v=202610060105"></script>
+<script src="data.js?v=202610061429"></script>
+<script src="engine.js?v=202610061429"></script>
 <script>
   // ---------- In-browser LLM (WebLLM) — the primary way questions get answered ----------
   // Auto-loads on page load (see aiLoadPromise below), not behind a toggle: this is what
@@ -1600,6 +1612,8 @@ Example of the style to use — if a note says "[Global Data → Users] Go to Gl
 
   const ICON_STEPS = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>`;
   const ICON_TERMS = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>`;
+  // Question lists are not shown on the documentation pages (the chatbot still uses them behind the scenes).
+  const SHOW_FAQ = false;
   const ICON_QA = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>`;
   const ICON_TASK = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>`;
   const ICON_CHEVRON = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 9l6 6 6-6"/></svg>`;
@@ -1706,7 +1720,7 @@ Example of the style to use — if a note says "[Global Data → Users] Go to Gl
 
   function renderBrowse(moduleId, opts) {
     const mod = MODULES.find(m => m.id === moduleId);
-    const items = mod.qaItems || [];
+    const items = SHOW_FAQ ? (mod.qaItems || []) : [];
     const { groups, order } = groupQaBySection(items);
     const hasNarrative = Array.isArray(mod.narrative) && mod.narrative.length > 0;
     const filter = (opts && opts.filter) || "";
@@ -1936,7 +1950,7 @@ Example of the style to use — if a note says "[Global Data → Users] Go to Gl
           idx.push({ type: "procedure", moduleId: mod.id, moduleName: mod.name, heading: sec.heading, term: p.title, text: p.title + " " + (p.steps||[]).map(stripTags).join(" ") });
         });
       });
-      (mod.qaItems || []).forEach(it => {
+      (SHOW_FAQ ? (mod.qaItems || []) : []).forEach(it => {
         idx.push({ type: "qa", moduleId: mod.id, moduleName: mod.name, heading: it.section || "General", term: it.question, text: it.question + " " + stripTags(it.answer) + " " + (it.tags||[]).join(" ") });
       });
     });
@@ -2002,7 +2016,7 @@ Example of the style to use — if a note says "[Global Data → Users] Go to Gl
     if (CONTENTS_MODEL) return CONTENTS_MODEL;
     CONTENTS_MODEL = MODULES.map(mod => {
       const hasNarrative = Array.isArray(mod.narrative) && mod.narrative.length > 0;
-      const { groups, order } = groupQaBySection(mod.qaItems || []);
+      const { groups, order } = groupQaBySection(SHOW_FAQ ? (mod.qaItems || []) : []);
       const headings = hasNarrative ? mod.narrative.map(s => s.heading) : order.slice();
       order.forEach(h => { if (!headings.includes(h)) headings.push(h); });
       const sections = headings.map((heading, i) => {
