@@ -1110,8 +1110,8 @@
 </dialog>
 <button type="button" class="help-fab" id="help-fab" hidden><span class="help-fab-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>Need help? Ask AI</button>
 
-<script src="data.js?v=202610061429"></script>
-<script src="engine.js?v=202610061429"></script>
+<script src="data.js?v=202610060907"></script>
+<script src="engine.js?v=202610060907"></script>
 <script>
   // ---------- In-browser LLM (WebLLM) — the primary way questions get answered ----------
   // Auto-loads on page load (see aiLoadPromise below), not behind a toggle: this is what
@@ -2295,9 +2295,15 @@ Example of the style to use — if a note says "[Global Data → Users] Go to Gl
     });
   }
   function queryGuard(q, result) {
+    // A run-together word was expanded as "phasecodes phase codes": count either the compound or its parts, not both.
     const rawTokens = tokenize(q);
-    const joined = new Set(rawTokens.slice(0, -1).map((t, i) => t + rawTokens[i + 1]));   // "phase"+"codes" = "phasecodes"
-    const stems = stemSet(rawTokens.filter(t => !joined.has(t))).filter(t => t.length > 2 && !GENERIC_WORDS.has(t));
+    const drop = new Set();
+    rawTokens.forEach((t, i) => {
+      if (i + 2 < rawTokens.length && rawTokens[i + 1] + rawTokens[i + 2] === t) {
+        if ((KB_DF[stem(t)] || 0) >= 3) { drop.add(i + 1); drop.add(i + 2); } else drop.add(i);
+      }
+    });
+    const stems = stemSet(rawTokens.filter((t, i) => !drop.has(i))).filter(t => t.length > 2 && !GENERIC_WORDS.has(t));
     const top = result.type === "answer" ? result.best
       : result.type === "clarify" ? ((result.options || [])[0] || null)
       : ((result.suggestions || [])[0] || null);
@@ -2631,7 +2637,9 @@ Example of the style to use — if a note says "[Global Data → Users] Go to Gl
       const guard = queryGuard(q, pre);
       // Words the documentation has never seen (e.g. another product's name) and no confident match:
       // say so plainly instead of letting the AI improvise.
-      const outOfScope = guard.foreign || guard.missingRare || pre.type === "none" ||
+      // Real-time topics the documentation can never answer (weather, news, scores) unless the question is about Arena integrations.
+      const liveInfo = /\b(weather|forecast|news|stock price|lottery|cricket score|football score|exchange rate)\b/i.test(rawQ) && !/\b(marketplace|integration|integrat|app|card)\b/i.test(rawQ);
+      const outOfScope = liveInfo || guard.foreign || guard.missingRare || pre.type === "none" ||
         (pre.type === "clarify" && guard.coverage < 0.34);
       if (outOfScope) {
         let general = null;
