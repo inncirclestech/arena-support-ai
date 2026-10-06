@@ -1127,8 +1127,8 @@
 </dialog>
 <button type="button" class="help-fab" id="help-fab" hidden><span class="help-fab-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>Need help? Ask AI</button>
 
-<script src="data.js?v=202610060944"></script>
-<script src="engine.js?v=202610060944"></script>
+<script src="data.js?v=202610060947"></script>
+<script src="engine.js?v=202610060947"></script>
 <script>
   // ---------- In-browser LLM (WebLLM) — the primary way questions get answered ----------
   // Auto-loads on page load (see aiLoadPromise below), not behind a toggle: this is what
@@ -2375,9 +2375,12 @@ Example of the style to use — if a note says "[Global Data → Users] Go to Gl
     const fig = img.closest && img.closest(".doc-shot");
     if (!fig || !img.naturalWidth) return;
     const w = img.naturalWidth, h = img.naturalHeight;
-    const portrait = h > w * 1.1;
+    const ratio = w / h;
+    const portrait = ratio < 0.9;            // phone screens
+    const squarish = ratio >= 0.9 && ratio <= 1.35;   // iPad / tablet screens
     fig.classList.toggle("shot-portrait", portrait);
-    fig.style.maxWidth = Math.min(w, portrait ? 380 : 1400) + "px";
+    fig.classList.toggle("shot-tablet", squarish);
+    fig.style.maxWidth = Math.min(w, portrait ? 340 : squarish ? 480 : 1400) + "px";
   }
   document.addEventListener("load", e => { if (e.target && e.target.tagName === "IMG") sizeShot(e.target); }, true);
   new MutationObserver(() => document.querySelectorAll(".doc-shot img").forEach(im => { if (im.complete) sizeShot(im); }))
