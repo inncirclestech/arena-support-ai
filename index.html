@@ -1025,6 +1025,23 @@
   .doc-intro, .doc-module-overview { max-width: 76ch; }
   .doc-section .doc-shots { max-width: 940px; }
   .doc-shot-btn { cursor: zoom-in; }
+
+  /* ---------- Layout pass: one column, full-width text, image size by type, compact Ask banner ---------- */
+  .doc-definitions { display: block; max-width: none; }
+  .doc-def-row { padding: 12px 0; }
+  .doc-intro, .doc-module-overview, .doc-procedure, .doc-callout, .doc-section .doc-shots { max-width: none; }
+  .doc-procedure-steps, .doc-def-row dd, .doc-def-row dt { max-width: none; }
+  .doc-shot { margin: 0; }
+  .doc-shot-btn { width: 100%; }
+  .doc-shot.shot-portrait .doc-shot-btn img { max-height: 620px; object-fit: contain; }
+
+  .ask-banner { max-width: none; padding: 10px 14px; gap: 12px; border-radius: 12px; margin: 0 0 18px; box-shadow: 0 6px 16px -12px rgba(232, 158, 31, 0.8); }
+  .ask-banner-icon { width: 32px; height: 32px; border-radius: 9px; }
+  .ask-banner-icon svg { width: 16px; height: 16px; }
+  .ask-banner-eyebrow { display: none; }
+  .ask-banner-title { font-size: 15px; }
+  .ask-banner-sub { font-size: 12.5px; }
+  .ask-banner-arrow { width: 28px; height: 28px; }
 </style>
 
 <header class="topbar">
@@ -1110,8 +1127,8 @@
 </dialog>
 <button type="button" class="help-fab" id="help-fab" hidden><span class="help-fab-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>Need help? Ask AI</button>
 
-<script src="data.js?v=202610060907"></script>
-<script src="engine.js?v=202610060907"></script>
+<script src="data.js?v=202610060944"></script>
+<script src="engine.js?v=202610060944"></script>
 <script>
   // ---------- In-browser LLM (WebLLM) — the primary way questions get answered ----------
   // Auto-loads on page load (see aiLoadPromise below), not behind a toggle: this is what
@@ -2351,6 +2368,20 @@ Example of the style to use — if a note says "[Global Data → Users] Go to Gl
     const words = x => String(x).split(/\s+/).length;
     return words(text) <= words(top.answer) * 1.35 + 20;
   }
+
+
+  // Screenshots: wide web screens use the full width; phone screens stay phone-sized; small images are never stretched.
+  function sizeShot(img) {
+    const fig = img.closest && img.closest(".doc-shot");
+    if (!fig || !img.naturalWidth) return;
+    const w = img.naturalWidth, h = img.naturalHeight;
+    const portrait = h > w * 1.1;
+    fig.classList.toggle("shot-portrait", portrait);
+    fig.style.maxWidth = Math.min(w, portrait ? 380 : 1400) + "px";
+  }
+  document.addEventListener("load", e => { if (e.target && e.target.tagName === "IMG") sizeShot(e.target); }, true);
+  new MutationObserver(() => document.querySelectorAll(".doc-shot img").forEach(im => { if (im.complete) sizeShot(im); }))
+    .observe(document.getElementById("main"), { childList: true, subtree: true });
 
   // ---------- Chat view ----------
   const AVATAR_AI = `<img src="assets/favicon.svg" alt="Arena AI" width="30" height="30">`;
