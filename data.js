@@ -26871,6 +26871,1008 @@ const MODULES = [
     "qaItems": QA_PROJECTSETUP,
     "narrative": [
       {
+        "heading": "Works",
+        "intro": "<p><strong>Works</strong> is the first tab of <strong>Project Setup</strong>. It lists the main parts of the project (for example a plant or a building block), and each one has its own structure of locations, activities and people. A card here opens that structure.</p>",
+        "images": [
+          {
+            "src": "assets/product/project-setup/001.jpg",
+            "caption": "The Works tab in Medium Cards view"
+          },
+          {
+            "src": "assets/product/project-setup/002.jpg",
+            "caption": "The Works tab in Table view"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Project tabs",
+            "definition": "The row at the top of Project Setup: **Works**, **Tasks**, **People**, **Estimate**, **Schedule**, **Phase Codes**, **Quality**, **Safety**, **Drawings**, **Documents**, **Workorder**, **Forms**, **BIM** and **GIS**. Click a name to open that tab."
+          },
+          {
+            "term": "Project details panel",
+            "definition": "The panel on the left shows the project picture and **Project Name**, **Projects Number/ID**, **Construction Type**, **Status**, **Projects Location**, **Owner Representative**, **CSE / PMC**, **Project Type**, **Funding Agency** and **Implementing Agency**. Click the round arrow at its top edge to fold the panel away and give the list more room."
+          },
+          {
+            "term": "Upload Excel and Download Excel",
+            "definition": "The two green buttons at the top left of the list. They bring works in from an Excel file and take them out to one."
+          },
+          {
+            "term": "View",
+            "definition": "Switches the list between **Large Cards**, **Medium Cards**, **Small Cards**, **Table** and **Tiles**. Your choice is remembered the next time you open the tab."
+          },
+          {
+            "term": "Assign Percentage",
+            "definition": "Opens **Tree Version Percentage** with one box per work. The boxes are the weight of each work in the whole project, and the heading shows the running total (for example 0%). The total must be 100% before **Submit** saves it.",
+            "images": [
+              {
+                "src": "assets/product/project-setup/003.jpg",
+                "caption": "Tree Version Percentage dialog"
+              }
+            ]
+          },
+          {
+            "term": "Create",
+            "definition": "Opens a small menu with **Create Tree Version** (build a work from scratch) and **Upload Tree Version Data** (build it from an Excel file)."
+          },
+          {
+            "term": "Last Updated At and refresh",
+            "definition": "Shows how long ago the list was loaded. The circular arrow button reloads it."
+          },
+          {
+            "term": "Work card",
+            "definition": "One card per work with its picture, **Description**, **Created By**, **Physical Progress** and **Financial Details**. Click the arrow at the bottom right of the card to open the work. **Know More** is a link at the bottom left of the card."
+          },
+          {
+            "term": "Card menu",
+            "definition": "The three dots on a card open **Edit**, **Delete**, **Naming Framework**, **Excel Upload** and **Upload Full Map**."
+          },
+          {
+            "term": "Naming Framework",
+            "definition": "Lets you rename the five levels of a work. The table lists **Activity Sequence 1** to **Activity Sequence 5** with the default names **Entity**, **Super Location**, **Location**, **Activity** and **Work Package**, a **Custom Name** box and a **Short Name** column. A custom name replaces the default word on the screens of this work.",
+            "images": [
+              {
+                "src": "assets/product/project-setup/035.jpg",
+                "caption": "Naming Framework dialog"
+              }
+            ]
+          },
+          {
+            "term": "Table view columns",
+            "definition": "**Profile**, **Name**, **Description**, **Created By**, **Entities** (the entities inside the work), **Physical Progress**, **Financial Details** and **Actions**. The action icons are **Edit**, **Delete** and **Naming Framework**. Click a work name to open it."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Create a work",
+            "steps": [
+              "Open **Project Setup** and stay on **Works**.",
+              "Click **Create** and choose **Create Tree Version**.",
+              "Type a **Name** (required). Add a **Description** if you want one.",
+              "Pick the **People** who belong to the work from the **Choose People** list.",
+              "Click **Add Custom Column** if the work needs an extra column: enter its **Name**, pick a **Type** and click **Submit**.",
+              "Click **Add** to save, or **Cancel** to leave without saving."
+            ],
+            "images": [
+              {
+                "src": "assets/product/project-setup/004.jpg",
+                "caption": "Create Tree Version form",
+                "step": "3"
+              }
+            ]
+          },
+          {
+            "title": "Create a work from Excel",
+            "steps": [
+              "Click **Create** and choose **Upload Tree Version Data**.",
+              "Fill in **Name**, **Description** and **People**.",
+              "Under **Select Type Of Sequence** choose **Global** (one sequence is shared by all locations) or **Local** (a separate sequence is made for each location with the work package in the sheet).",
+              "Click **Click here** to download the sample sheet, fill it in, then upload it under **Upload Excel**.",
+              "Click **Submit**."
+            ],
+            "images": [
+              {
+                "src": "assets/product/project-setup/005.jpg",
+                "caption": "Create Tree Version Data Through Excel dialog",
+                "step": "3"
+              }
+            ]
+          },
+          {
+            "title": "Split the project weight between works",
+            "steps": [
+              "Click **Assign Percentage**.",
+              "Enter a percentage next to each work.",
+              "Check that the heading shows 100%.",
+              "Click **Submit**."
+            ]
+          },
+          {
+            "title": "Rename the levels of a work",
+            "steps": [
+              "Click the three dots on the work card and choose **Naming Framework**.",
+              "Type your own word in the **Custom Name** box of each level you want to rename.",
+              "Save the dialog or close it with the x."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Entities",
+        "intro": "<p><strong>Entities</strong> is the first step of a work (level 1 of its structure). An entity is the biggest part inside the work, for example a unit or a building. Open a work from <strong>Works</strong> and click <strong>Entities</strong> in the step bar.</p>",
+        "images": [
+          {
+            "src": "assets/product/project-setup/036.jpg",
+            "caption": "The Entities step"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Step bar",
+            "definition": "The row of steps under the work name: **Entities**, **Super Locations**, **Locations**, **Custom Columns**, **Activities Sequence**, **People**, **Other Attributes (Qty | Hrs)**, **Measurement Methods** and **Comprehensive Layout**. Click a step to open it. The round arrow beside the work name goes back to **Works**."
+          },
+          {
+            "term": "Create",
+            "definition": "Adds a new entity."
+          },
+          {
+            "term": "Entities table",
+            "definition": "Columns **S.No**, **Name** and **Actions**. The pencil icon edits the entity and the red bin icon deletes it. The selected row is shown in orange."
+          }
+        ],
+        "procedures": []
+      },
+      {
+        "heading": "Super Locations",
+        "intro": "<p><strong>Super Locations</strong> is level 2 of a work. Each entity is split into super locations, for example a civil area or a piping area. Pick an entity on the left to see its super locations.</p>",
+        "images": [
+          {
+            "src": "assets/product/project-setup/037.jpg",
+            "caption": "The Super Locations step"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Entities list",
+            "definition": "The list on the left. The entity you click decides which super locations show on the right."
+          },
+          {
+            "term": "Create",
+            "definition": "Adds a super location under the selected entity."
+          },
+          {
+            "term": "Super Locations table",
+            "definition": "Columns **S.No**, **Name** and **Actions**, with **Edit** (pencil) and **Delete** (bin) for each row."
+          }
+        ],
+        "procedures": []
+      },
+      {
+        "heading": "Locations",
+        "intro": "<p><strong>Locations</strong> is level 3 of a work. Each super location holds locations, for example footings. Pick an entity and a super location to see them.</p>",
+        "images": [
+          {
+            "src": "assets/product/project-setup/038.jpg",
+            "caption": "The Locations step"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Entities and Super Locations lists",
+            "definition": "The two lists on the left. The entity and super location you select decide which locations show on the right."
+          },
+          {
+            "term": "Create",
+            "definition": "Adds a location under the selected super location."
+          },
+          {
+            "term": "Locations table",
+            "definition": "Columns **S.No**, **Name** and **Actions**. The icons are **Edit**, **Delete**, **Bar_code** and **Qr_code**."
+          },
+          {
+            "term": "Qr_code",
+            "definition": "Opens a QR code picture for that location."
+          }
+        ],
+        "procedures": []
+      },
+      {
+        "heading": "Custom Columns",
+        "intro": "<p><strong>Custom Columns</strong> shows every location of the work in one table and lets you add your own extra columns to it.</p>",
+        "images": [
+          {
+            "src": "assets/product/project-setup/012.jpg",
+            "caption": "The Custom Columns step"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Add Custom Column",
+            "definition": "Opens **Add Custom Column** with a **Name** box and a **Type** list (the default is **TEXT_BOX**). Click **Submit** to add the column or **Close** to leave."
+          },
+          {
+            "term": "Filters",
+            "definition": "Narrows the table to the rows that match the values you pick."
+          },
+          {
+            "term": "Search",
+            "definition": "Type to find rows in the table."
+          },
+          {
+            "term": "Paging",
+            "definition": "Shows the rows on the page, for example 1 to 20 of 133, with arrows to move between pages."
+          },
+          {
+            "term": "Export",
+            "definition": "Downloads the table."
+          },
+          {
+            "term": "Manage Columns",
+            "definition": "Opens a list of columns where you tick which ones to show and drag them to reorder."
+          },
+          {
+            "term": "Table columns",
+            "definition": "The first columns are **Entities**, **Super Locations**, **Super Locations Description**, **Locations Type**, **Locations** and **Locations Description**; your custom columns follow."
+          }
+        ],
+        "procedures": []
+      },
+      {
+        "heading": "Activities Sequence",
+        "intro": "<p><strong>Activities Sequence</strong> decides which activities and work packages each location uses and in which order they run. You pick a sequence template for a location here.</p>",
+        "images": [
+          {
+            "src": "assets/product/project-setup/010.jpg",
+            "caption": "The Activities Sequence step"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Entity tabs",
+            "definition": "The numbered tabs across the top (for example Piperack, Indurating Building) switch entity. Click **Local Work Packages** at the right end of the tabs to work with work packages that belong to one location only."
+          },
+          {
+            "term": "Super Location Types",
+            "definition": "The first column. Click a type to open its locations."
+          },
+          {
+            "term": "Locations",
+            "definition": "The second column lists the locations of the selected super location. A green **Mapped** tag means a sequence is already assigned to that location."
+          },
+          {
+            "term": "Choose Activity Sequences Template for",
+            "definition": "The right panel. Pick the template (shown with a round selector) that this location should follow."
+          },
+          {
+            "term": "Template table",
+            "definition": "Shows **Start Activities** (with **Activities**, **Work Packages** and **Work Packages Description**) and **Finish Activities**. The green drop-downs under Finish Activities say which activity comes before it."
+          },
+          {
+            "term": "Copy the same for Project",
+            "definition": "Applies the chosen sequence to all locations of the project."
+          },
+          {
+            "term": "Copy the same for",
+            "definition": "Applies the chosen sequence to other locations that you choose."
+          },
+          {
+            "term": "Cancel and Submit",
+            "definition": "**Submit** saves the sequence for the location. **Cancel** drops your changes."
+          }
+        ],
+        "procedures": []
+      },
+      {
+        "heading": "Work Package People",
+        "intro": "<p>The <strong>People</strong> step of a work decides who is responsible for and who approves each work package. Open a work from <strong>Works</strong>, then click <strong>People</strong> in the step bar. It is not the same as the <strong>People</strong> tab of Project Setup.</p>",
+        "images": [
+          {
+            "src": "assets/product/project-setup/011.jpg",
+            "caption": "The People step of a work"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Package tabs",
+            "definition": "**Progress Package Responsible**, **Progress Package Approval**, **Quality Package Responsible** and **Quality Package Approval**. Each tab holds its own list of people for the selected work package."
+          },
+          {
+            "term": "Upload Excel",
+            "definition": "Uploads an Excel sheet to assign people in bulk."
+          },
+          {
+            "term": "Entity tabs",
+            "definition": "The numbered tabs switch entity."
+          },
+          {
+            "term": "Super Location Types, Locations and Work Packages",
+            "definition": "Three columns to pick where you are working: first a super location type, then a location, then a work package such as **EXC-1 | Excavation for footing**."
+          },
+          {
+            "term": "Teams and Users",
+            "definition": "Two tabs on the right. **Teams** lists crews you can assign (it reads **No Teams Created** when there are none). **Users** lists people with a tick box, a **Select All** box and a search box."
+          },
+          {
+            "term": "Save Changes",
+            "definition": "Saves the ticked users for the selected work package."
+          },
+          {
+            "term": "Copy Users To",
+            "definition": "Copies the chosen users to other work packages."
+          }
+        ],
+        "procedures": []
+      },
+      {
+        "heading": "Other Attributes",
+        "intro": "<p><strong>Other Attributes (Qty | Hrs)</strong> holds the budgeted quantity and hours of the work, split by kind of effort. Open a work and click this step.</p>",
+        "images": [
+          {
+            "src": "assets/product/project-setup/009.jpg",
+            "caption": "The Other Attributes step"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Direct",
+            "definition": "Rows of work packages by location. Columns: **Entities**, **Super Locations**, **Super Locations Description**, **Locations Type**, **Locations**, **Locations Description**, **Work Packages**, **Budgeted Hours**, **Budgeted Quantity**, **Estimated Quantity**, **Changed Hours**, **Changed Quantity**, **Revised Budgeted Quantity**, **Revised Budgeted Hours**, **UOM**, **Phase Codes**, **Specifications**, **Planned Start Date**, **Planned End Date**, **Forecasted End Date**, **Client End Date**, **Skyline End Date**, **Schedule ID** and **Schedule ID Description**."
+          },
+          {
+            "term": "Indirect and Non Productive",
+            "definition": "Rows by phase code. Columns: **Phase Code**, **Phase Code Description**, **Phase Code Type**, **Budgeted Hours**, **Changed Hours**, **Revised Budgeted Hours**, **Schedule ID**, **Schedule ID Description**, **Detailed Phase Code**, **Detailed Phase Code Description** and **Inactive/Active**."
+          },
+          {
+            "term": "Change Order",
+            "definition": "Rows of work packages with their **UOM**, **Phase Codes**, **Budgeted**, **Changed** and **Revised** quantities and hours, **Schedule ID** and **Detailed Phase Code**."
+          },
+          {
+            "term": "Filters",
+            "definition": "Opens a form to narrow rows by **Entity**, **Super Location**, **Location Type**, **Location**, **Work Package**, hours, quantities and dates. **Clear all** empties it and **Save Filter** applies it."
+          },
+          {
+            "term": "Search, Export and Manage Columns",
+            "definition": "**Search** finds rows, **Export** downloads the table and **Manage Columns** opens **Column Options** (tick the columns) and **Column Arrangement** (drag to reorder), with **Reset to Default**, **Cancel** and **Apply**."
+          }
+        ],
+        "procedures": []
+      },
+      {
+        "heading": "Measurement Methods",
+        "intro": "<p><strong>Measurement Methods</strong> sets how much each activity counts towards a work package, for progress and for quality. The percentages of a work package add up to 100%.</p>",
+        "images": [
+          {
+            "src": "assets/product/project-setup/007.jpg",
+            "caption": "The Measurement Methods step"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Total Locations Mapped",
+            "definition": "Shows how many locations already have a sequence, for example 113 of 137."
+          },
+          {
+            "term": "Progress and Quality",
+            "definition": "Two tabs. Each has its own table of percentages. **Quality** shows **No Data Available** until quality percentages exist."
+          },
+          {
+            "term": "Export",
+            "definition": "Downloads the table."
+          },
+          {
+            "term": "Assign",
+            "definition": "Opens **Activity Percentage** with a box per activity. The heading shows the running total and the dialog says the total has to be 100% before changes can be saved.",
+            "images": [
+              {
+                "src": "assets/product/project-setup/008.jpg",
+                "caption": "Activity Percentage dialog"
+              }
+            ]
+          },
+          {
+            "term": "Reassign Local Percentage",
+            "definition": "Runs at once with no question and shows **Successfully Reassign to Local**. Use it only when you mean it."
+          },
+          {
+            "term": "Table columns",
+            "definition": "**Activities**, **Percentage %** and **View & Edit Work Packages Percentages**. The link icon (tooltip **View**) opens the work packages of that activity with their **Work Packages**, **Work Packages Description** and **Percentage**, and an **Assign** button."
+          }
+        ],
+        "procedures": []
+      },
+      {
+        "heading": "Comprehensive Layout",
+        "intro": "<p><strong>Comprehensive Layout</strong> is the last step of a work and shows the whole structure on one page: entities, super locations, locations and work packages.</p>",
+        "images": [
+          {
+            "src": "assets/product/project-setup/006.jpg",
+            "caption": "The Comprehensive Layout step"
+          },
+          {
+            "src": "assets/product/project-setup/013.jpg",
+            "caption": "Select Locations dialog"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Layout buttons",
+            "definition": "Three icons at the top right: grid (the default), **Tree View** and **Detailed View**. **Tree View** draws the project as a tree you can zoom with pinch or ctrl+scroll. **Detailed View** draws the work as a tree with a count on each node.",
+            "images": [
+              {
+                "src": "assets/product/project-setup/014.jpg",
+                "caption": "Tree View"
+              }
+            ]
+          },
+          {
+            "term": "Entity tabs and Add Entities",
+            "definition": "The numbered tabs switch entity. **Add Entities** adds one."
+          },
+          {
+            "term": "Super Locations Types",
+            "definition": "Lists the super locations of the entity. **Add Super Locations** opens **Select Super Locations Type**, where a counter per type says how many to add."
+          },
+          {
+            "term": "Location",
+            "definition": "Lists the locations of the selected super location, each with a **Mapped** tag when it has a sequence. **Create** opens **Select Locations for** with a counter and a **Name Format** such as Footing {idx}, where {idx} is the number of the location."
+          },
+          {
+            "term": "Location menu",
+            "definition": "The three dots on a location open **Edit**, **Delete**, **Description** and **Move**."
+          },
+          {
+            "term": "Work Packages",
+            "definition": "Lists the work packages of the selected location, for example **EXC-1 | Excavation for footing**. If a location has none the panel says to assign them in Activities Sequence."
+          },
+          {
+            "term": "Work Package details",
+            "definition": "Shows who the work package is assigned to."
+          }
+        ],
+        "procedures": []
+      },
+      {
+        "heading": "Tasks",
+        "intro": "<p><strong>Tasks</strong> is a Project Setup tab with three sub-tabs: <strong>Tasks</strong>, <strong>Communication</strong> and <strong>Workflow Issues</strong>. The first lists the tasks of the project.</p>",
+        "images": [
+          {
+            "src": "assets/product/project-setup/015.jpg",
+            "caption": "The Tasks tab"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Sub-tabs",
+            "definition": "**Tasks**, **Communication** (mail for the project) and **Workflow Issues** (problems found in workflows)."
+          },
+          {
+            "term": "Create",
+            "definition": "Starts a new task. With no tasks in the project the button does not open a form."
+          },
+          {
+            "term": "Manage Columns",
+            "definition": "Opens **Column Options** and **Column Arrangement** to pick and order the columns, with **Reset to Default**, **Cancel**, **Apply** and **Save**."
+          },
+          {
+            "term": "Filters",
+            "definition": "Narrows the task list."
+          },
+          {
+            "term": "Upload Excel and Download Excel",
+            "definition": "Upload tasks from an Excel sheet, or download the list."
+          },
+          {
+            "term": "View icons",
+            "definition": "Three icons switch the layout, including a card grid and a table."
+          },
+          {
+            "term": "Empty list",
+            "definition": "**No Data Available** shows when the project has no tasks."
+          }
+        ],
+        "procedures": []
+      },
+      {
+        "heading": "Task Communication",
+        "intro": "<p>The <strong>Communication</strong> sub-tab of <strong>Tasks</strong> is a mailbox for the project. You write and read mails here without leaving Arena.</p>",
+        "images": [
+          {
+            "src": "assets/product/project-setup/016.jpg",
+            "caption": "The Communication sub-tab"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Compose Mail",
+            "definition": "Opens **New Email** with **To**, **Cc** (and **BCC**), **Enter Subject**, a text box with bold, italic, underline, strike-through, link, headings, lists and alignment, and an attachment clip. **Save as Draft** keeps it and **Send** sends it. Closing the window saves a draft."
+          },
+          {
+            "term": "Search mail",
+            "definition": "Searches your mails."
+          },
+          {
+            "term": "Folders",
+            "definition": "**All Emails**, **Inbox**, **Sent**, **Drafts**, **Starred** and **Trash**. The count next to **Drafts** shows unsent drafts."
+          },
+          {
+            "term": "Gear icon",
+            "definition": "A gear button at the top right of the mail page."
+          }
+        ],
+        "procedures": []
+      },
+      {
+        "heading": "Workflow Issues",
+        "intro": "<p>The <strong>Workflow Issues</strong> sub-tab of <strong>Tasks</strong> lists workflow problems of the project. It reads <strong>There are no workflow issues</strong> when nothing is wrong.</p>",
+        "images": [],
+        "definitions": [
+          {
+            "term": "Download Excel",
+            "definition": "Downloads the list of issues."
+          },
+          {
+            "term": "View icons",
+            "definition": "Two icons switch between a card grid and a list."
+          }
+        ],
+        "procedures": []
+      },
+      {
+        "heading": "People",
+        "intro": "<p><strong>People</strong> is a Project Setup tab for the people who work on the project. It has three sub-tabs: <strong>Roster</strong>, <strong>Project Crews</strong> and <strong>Project Indirect Staff</strong>.</p>",
+        "images": [],
+        "definitions": [
+          {
+            "term": "Roster",
+            "definition": "The list of people on the project, split into **System User** and **Non System User**."
+          },
+          {
+            "term": "Project Crews",
+            "definition": "Named groups of people with a supervisor and a foreman."
+          },
+          {
+            "term": "Project Indirect Staff",
+            "definition": "A page where you tick which people count as indirect staff."
+          }
+        ],
+        "procedures": []
+      },
+      {
+        "heading": "Roster",
+        "intro": "<p>The <strong>Roster</strong> sub-tab lists the people on the project. <strong>System User</strong> people can sign in to Arena. <strong>Non System User</strong> people are only recorded, for example site workers.</p>",
+        "images": [
+          {
+            "src": "assets/product/project-setup/017.jpg",
+            "caption": "Edit User form"
+          },
+          {
+            "src": "assets/product/project-setup/018.jpg",
+            "caption": "Non System User list"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "System User and Non System User",
+            "definition": "Two tabs that split the roster by whether the person has an Arena login."
+          },
+          {
+            "term": "Add (System User)",
+            "definition": "Opens **Select Users for** the project. Tick people in the list on the left; they appear in the **Selected Users** table on the right. Click **Submit** to add them to the project."
+          },
+          {
+            "term": "Add (Non System User)",
+            "definition": "Opens **Create User** to create a person directly."
+          },
+          {
+            "term": "Get Users from Global Data",
+            "definition": "On **Non System User**, opens a list of people from Global Data. Tick the ones to bring into the project and click **Submit**."
+          },
+          {
+            "term": "Download Sample Excel, Upload Excel, Download Excel",
+            "definition": "On **Non System User**: get the blank sheet, upload a filled sheet, or download the current list."
+          },
+          {
+            "term": "Download Excel",
+            "definition": "On **System User**, downloads the roster."
+          },
+          {
+            "term": "Filters",
+            "definition": "Narrows the roster by **Group No.**, **Designation**, **Skills** and **Experience**."
+          },
+          {
+            "term": "View icons",
+            "definition": "Three icons: cards, **Table View** and **Tree View**. Table view shows **Profile**, **Employee ID**, **First Name**, **Last Name**, **Group No.**, **Email ID**, **Default Indirect PhaseCode**, **Address**, **Designation**, **Skills**, **Experience**, **Craft**, **Class**, **Contact No.**, **Labor**, **Role**, **Active Status**, **Configurable Field 1**, **Last Login** and **Actions**."
+          },
+          {
+            "term": "Person card",
+            "definition": "Shows a green **Active** or red **Inactive** tag, the picture or initials, the name and **Employee ID**. The three dots open **Edit** and **Delete**."
+          },
+          {
+            "term": "Edit User",
+            "definition": "Fields: **Employee ID**, **First Name**, **Last Name**, **Group No.**, **Email**, **Default Indirect PhaseCode**, **Address**, **Designation**, **Skills**, **Experience**, **Contact Number**, **Craft**, **Class**, **Labor**, **Role** and **Configurable Field 1**. **Employee ID**, **First Name** and **Last Name** are required."
+          },
+          {
+            "term": "Total Users",
+            "definition": "In table view, shows the number of people on the roster."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Add system users to the project",
+            "steps": [
+              "Open **Project Setup**, then **People**, then **Roster** and **System User**.",
+              "Click **Add**.",
+              "Tick the people in **Select Users for** the project; they are listed under **Selected Users**.",
+              "Click **Submit**."
+            ]
+          },
+          {
+            "title": "Create a non system user",
+            "steps": [
+              "Open **Roster** and the **Non System User** tab.",
+              "Click **Add**.",
+              "Fill in **Employee ID**, **First Name** and **Last Name**; add the other fields if you have them.",
+              "Click **Submit**, or **Cancel** to leave."
+            ],
+            "images": [
+              {
+                "src": "assets/product/project-setup/019.jpg",
+                "caption": "Create User form",
+                "step": "3"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Project Crews",
+        "intro": "<p><strong>Project Crews</strong> groups roster people into crews, each with a supervisor and a foreman.</p>",
+        "images": [
+          {
+            "src": "assets/product/project-setup/020.jpg",
+            "caption": "The Project Crews sub-tab"
+          },
+          {
+            "src": "assets/product/project-setup/021.jpg",
+            "caption": "Copy Crews from Global Data dialog"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Create Crew",
+            "definition": "Opens **Create Crew**. Enter the **Crew Name** (required), pick a **SUPERVISOR** and a **FOREMAN** from the lists, and tick the members. The right side has the tabs **Supervisor**, **Foreman** and **Rosters** with the people chosen for each. Click **Submit** to save."
+          },
+          {
+            "term": "Copy Crews from Global Data",
+            "definition": "Opens a list of crews from Global Data with **Select All** and a search. Tick the crews and click **Submit** to bring them into the project."
+          },
+          {
+            "term": "Copy Crews to Projects",
+            "definition": "Opens **Map Crews to Projects**. **Groups** lists this project crews and **Projects** lists the other projects with tick boxes. Click **Submit** to copy."
+          },
+          {
+            "term": "Search by crew name",
+            "definition": "Finds a crew by name."
+          },
+          {
+            "term": "Filters",
+            "definition": "Narrows the crews."
+          },
+          {
+            "term": "Empty list",
+            "definition": "A picture shows when the project has no crews yet."
+          }
+        ],
+        "procedures": []
+      },
+      {
+        "heading": "Project Indirect Staff",
+        "intro": "<p><strong>Project Indirect Staff</strong> lets you mark which roster people are indirect staff, chosen separately from the roster.</p>",
+        "images": [],
+        "definitions": [
+          {
+            "term": "Staff cards",
+            "definition": "One card per roster person with a tick box, the name, email and **ID**."
+          },
+          {
+            "term": "Submit",
+            "definition": "At the bottom right. Saves the people you ticked."
+          }
+        ],
+        "procedures": []
+      },
+      {
+        "heading": "Estimate",
+        "intro": "<p><strong>Estimate</strong> is the cost side of Project Setup. Its sub-tabs are <strong>Estimate</strong>, <strong>Resource Planning</strong> and <strong>Rate Card Template</strong>. The first lists the works; open one to see and create its estimates.</p>",
+        "images": [
+          {
+            "src": "assets/product/project-setup/022.jpg",
+            "caption": "The Estimate sub-tab"
+          },
+          {
+            "src": "assets/product/project-setup/023.jpg",
+            "caption": "Estimates of one work"
+          },
+          {
+            "src": "assets/product/project-setup/025.jpg",
+            "caption": "Estimate Settings in Project Settings"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Work cards",
+            "definition": "One card per work with its name, **Description** and **Created By**. Click a card to open the estimates of that work."
+          },
+          {
+            "term": "Create Estimate",
+            "definition": "Inside a work. Opens **Create Estimate Form**."
+          },
+          {
+            "term": "Search",
+            "definition": "Finds an estimate by name."
+          },
+          {
+            "term": "View icons",
+            "definition": "Switch between a card grid and a list."
+          },
+          {
+            "term": "Settings",
+            "definition": "Opens **Project Settings** on the **CBS** tab. There you pick a **Tree Version** and an **Estimate**, choose how the cost breakdown is built (for example **Entity > Phase Code** or **Activity > Work Package > Phase Code**, or **Customize CBS Level**) and click **Save Changes**. The other tabs are **Approval WorkFlow**, **Level of Detail** and **Estimate Type**."
+          },
+          {
+            "term": "Empty list",
+            "definition": "**No Data** shows when the work has no estimates."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Create an estimate",
+            "steps": [
+              "Open **Project Setup**, then **Estimate**, and click the card of a work.",
+              "Click **Create Estimate**.",
+              "Enter **Name** and **Description**, both required.",
+              "Choose the **Approval Workflow** and the **Cost Breakdown Structure** (both required).",
+              "Pick the templates you need: **Material Template**, **Equipment Template**, **Labor Template**, **Unit Rate Template**, **Sub Contractor Template**, **BOQ's Template**, **Freight Charges Template** and **Fuel & Gas Template**.",
+              "Click **Submit**."
+            ],
+            "images": [
+              {
+                "src": "assets/product/project-setup/024.jpg",
+                "caption": "Create Estimate Form",
+                "step": "2"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Resource Planning",
+        "intro": "<p><strong>Resource Planning</strong> is a grid for planning, week by week, which roster people and sub contractors are needed on the project.</p>",
+        "images": [],
+        "definitions": [
+          {
+            "term": "Date Range",
+            "definition": "Pick the start and end date. The grid shows one column per week, for example **Week 40 (1/10/2026 - 3/10/2026)**."
+          },
+          {
+            "term": "Roster/Sub Contractors",
+            "definition": "The first column lists each person or sub contractor, tagged **Roster** for roster people."
+          },
+          {
+            "term": "Planned",
+            "definition": "A tick box for each person and week. Tick it to plan that person for that week."
+          }
+        ],
+        "procedures": []
+      },
+      {
+        "heading": "Rate Card Template",
+        "intro": "<p><strong>Rate Card Template</strong> holds the rate cards the project uses for estimates. It has three tabs: <strong>Material</strong>, <strong>Equipment</strong> and <strong>Labor</strong>.</p>",
+        "images": [
+          {
+            "src": "assets/product/project-setup/026.jpg",
+            "caption": "The Rate Card Template sub-tab"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Material, Equipment and Labor",
+            "definition": "One tab per kind of resource. A tab with nothing added reads **No rate card templates found**."
+          },
+          {
+            "term": "Add Rate Card Template",
+            "definition": "Opens **Add Rate Card Template** with a **Select a template** list. Click **Add Template** to use the one you picked, or **Cancel**."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Add a rate card template",
+            "steps": [
+              "Open **Estimate**, then **Rate Card Template**.",
+              "Open the **Material**, **Equipment** or **Labor** tab.",
+              "Click **Add Rate Card Template**.",
+              "Pick a template in **Select a template**.",
+              "Click **Add Template**."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Schedule",
+        "intro": "<p><strong>Schedule</strong> lists the schedules of the project: one for each work plus <strong>Milestones</strong>. Create a new schedule or open one.</p>",
+        "images": [
+          {
+            "src": "assets/product/project-setup/027.jpg",
+            "caption": "The Schedule tab"
+          },
+          {
+            "src": "assets/product/project-setup/028.jpg",
+            "caption": "Create Schedule From menu"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Create New Schedule",
+            "definition": "Opens **Create Schedule From** with six choices: **Oracle P6 XML** (upload an Oracle Primavera P6 XML file), **Blank Template** (start the WBS from a blank template), **Scope** (take the WBS from scope items), **Oracle P6 Cloud** (sync data from P6 cloud), **Microsoft Project XML** (upload a Microsoft Project XML file) and **Level Schedule** (schedule the project level wise)."
+          },
+          {
+            "term": "Schedule cards",
+            "definition": "One card per schedule, named after the work, for example **Pellet Plant (1MTPA) - Schedule**. Click a card to open it."
+          },
+          {
+            "term": "Milestones",
+            "definition": "The first card. It opens the milestone weightages."
+          },
+          {
+            "term": "View icons",
+            "definition": "Switch between cards and a list."
+          }
+        ],
+        "procedures": []
+      },
+      {
+        "heading": "Schedule Gantt",
+        "intro": "<p>Opening a schedule card shows that schedule as a table and a Gantt chart. Grey bars are the planned dates and orange bars are the actual dates.</p>",
+        "images": [
+          {
+            "src": "assets/product/project-setup/029.jpg",
+            "caption": "A schedule in Full Gantt view"
+          },
+          {
+            "src": "assets/product/project-setup/030.jpg",
+            "caption": "Gantt View set to None"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Planned Date",
+            "definition": "Pick a start and end date. **Search** applies it and **Clear** removes it."
+          },
+          {
+            "term": "Time Period",
+            "definition": "**Day**, **Week**, **Month** or **Year** sets the width of the time scale on the chart."
+          },
+          {
+            "term": "Gantt View",
+            "definition": "**Full** shows the chart wide with only **Id** and **Activity Name**. **Half** adds date columns beside the chart. **None** hides the chart and shows only the table."
+          },
+          {
+            "term": "Table columns",
+            "definition": "**Id**, **Activity Name**, **Planned Start**, **Planned Finish**, **Estimated Duration (In Days)**, **Efforts (In Hrs)**, **Actual Start**, **Actual Finish**, **Percentage Complete** and **Work Package Type**."
+          },
+          {
+            "term": "Plus icon",
+            "definition": "The round plus beside a row opens the rows under it."
+          },
+          {
+            "term": "Back arrow",
+            "definition": "The round arrow beside the title returns to the list of schedules."
+          }
+        ],
+        "procedures": []
+      },
+      {
+        "heading": "Milestones",
+        "intro": "<p><strong>Milestones</strong> holds milestone weightages for the project, in two tabs: <strong>Fastrack</strong> and <strong>Contractual</strong>. It opens from the first card of the <strong>Schedule</strong> tab.</p>",
+        "images": [
+          {
+            "src": "assets/product/project-setup/031.jpg",
+            "caption": "The Milestones page"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Fastrack and Contractual",
+            "definition": "Two tabs with the same layout, one for each kind of milestone plan."
+          },
+          {
+            "term": "Table columns",
+            "definition": "**Name**, **Weightage**, **Planned Start Date**, **Planned End Date**, **Cumulative Planned**, **Cumulative Achieved** and **Actions**."
+          },
+          {
+            "term": "Add",
+            "definition": "Opens **Add Weightage**."
+          },
+          {
+            "term": "Save",
+            "definition": "Saves the table."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Add a milestone",
+            "steps": [
+              "Open **Schedule** and click the **Milestones** card.",
+              "Choose **Fastrack** or **Contractual**.",
+              "Click **Add**.",
+              "Enter **Name**, **Weightage**, **Start Date** and **End Date**; all four are required. **Cumulative Planned** fills in by itself.",
+              "Click **Submit**, then **Save** on the page."
+            ],
+            "images": [
+              {
+                "src": "assets/product/project-setup/032.jpg",
+                "caption": "Add Weightage dialog",
+                "step": "4"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Phase Codes",
+        "intro": "<p><strong>Phase Codes</strong> lists the cost codes of the project. You choose here which codes can be used in <strong>Timesheet Management</strong> and <strong>Equipment Management</strong>.</p>",
+        "images": [
+          {
+            "src": "assets/product/project-setup/033.jpg",
+            "caption": "The Phase Codes tab"
+          },
+          {
+            "src": "assets/product/project-setup/034.jpg",
+            "caption": "Phase Codes Settings dialog"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Search by ID or Name",
+            "definition": "Finds a phase code by its ID or name."
+          },
+          {
+            "term": "Paging",
+            "definition": "Shows the codes on the page, for example 1 to 50 of 963, with arrows to move between pages."
+          },
+          {
+            "term": "Phase Code",
+            "definition": "The code and its name. Click the arrow to sort."
+          },
+          {
+            "term": "Cost Types",
+            "definition": "The kinds of cost the code can carry, for example **Material**, **Equipment** or **Labor**."
+          },
+          {
+            "term": "Phase Code Type",
+            "definition": "For example **Direct**."
+          },
+          {
+            "term": "Timesheet Management and Equipment Management",
+            "definition": "A tick box for each code. A ticked code is available in that module."
+          },
+          {
+            "term": "Settings",
+            "definition": "Opens **Settings**, where you pick the **Cost Types** (**Material**, **Equipment**, **Labor**, **Unit Rate**, **Sub Contractor**, **BOQ's**, **Freight Charges**, **Fuel & Gas**, or **Select All**) for **Timesheet Management** and for **Equipment Management**. Click **Save** to keep them."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Choose which cost types show for a module",
+            "steps": [
+              "Open **Project Setup**, then **Phase Codes**.",
+              "Click **Settings**.",
+              "Click **Timesheet Management** or **Equipment Management**.",
+              "Tick the **Cost Types** you want.",
+              "Click **Save**."
+            ]
+          }
+        ]
+      },
+      {
         "heading": "Overview",
         "intro": "<p>Project Setup is where a <strong>PM</strong> or <strong>Module Admin</strong> builds a project's structure, people, budget, schedule, forms and document areas before field teams start work. Field Works, My Desk, My Calendar and Data Analytics all read what you set up here.</p><p>It has fourteen tabs: <strong>Works</strong>, <strong>Tasks</strong>, <strong>People</strong>, <strong>Estimate</strong>, <strong>Schedule</strong>, <strong>Phase Codes</strong>, <strong>Quality</strong>, <strong>Safety</strong>, <strong>Drawings</strong>, <strong>Documents</strong>, <strong>Workorder</strong>, <strong>Forms</strong>, <strong>BIM</strong> and <strong>GIS</strong>. Most lists and dropdowns are filled from Global Data, so if something is missing, check Global Data first.</p>",
         "definitions": [
@@ -26918,476 +27920,6 @@ const MODULES = [
           {
             "src": "assets/notion/how-to-create-projects/001.jpg",
             "caption": "The Projects list: click a project name to open it"
-          }
-        ]
-      },
-      {
-        "heading": "Works",
-        "intro": "<p>Works is where a <strong>PM</strong> or <strong>Module Admin</strong> builds the project's work structure: the plants (Tree Versions), their Entities, Super Locations, Locations and Work Packages. Everything else in Project Setup and Field Works is organized against this structure.</p><p>Open <strong>Project Setup → Works</strong>. The left panel shows the project identity; the right side shows one card per plant, with <strong>Upload Excel</strong>, <strong>Download Excel</strong>, <strong>View</strong>, <strong>Assign Percentage</strong> and <strong>Create</strong> on the toolbar. Click a plant's arrow to open its build screen.</p>",
-        "definitions": [
-          {
-            "term": "Project identity panel",
-            "definition": "The left panel: **Project Name**, **Projects Number/ID** (for example ST-01), **Construction Type**, **Status**, **Projects Location**, **Owner Representative**, **CSE / PMC**, **Project Type**, **Funding Agency** and **Implementing Agency**. **Where it comes from:** the values were entered on **Projects → Create Project**. Construction Type is chosen from **Global Data → Construction Types**, Status from **Global Data → Settings → Project Status**, and Project Type, Funding Agency and Implementing Agency from **Global Data → Settings → Project Form**. The panel is read-only here."
-          },
-          {
-            "term": "Plant (Tree Version) card",
-            "definition": "One card per plant: name, **Description**, **Created By**, **Physical Progress**, **Financial Details** (shown in company currency, for example ₹0.00), **Know More**, a three-dot menu and an arrow. Arena Steel Plant - Phase 1 has 13: Pellet Plant (1MTPA), Basic Oxygen Furnace (0.8 MTPA), Blast Furnace (0.6 MTPA), Coke Oven, Cold Rolling Mill, External Works, Hot Strip Mill, IBMD, Lime Dolomite Plant, Oxygen Plant, RMHS, Sinter Plant and Slab Caster. **Where this goes:** the same plants are the plant lists on **My Desk**, **Field Works → Tree Version**, **Estimate**, **Schedule**, **Quality**, and every plant selector in the project."
-          },
-          {
-            "term": "View",
-            "definition": "Switches the plant cards between **Large Cards**, **Medium Cards**, **Small Cards**, **Table** and **Tiles**."
-          },
-          {
-            "term": "Three-dot menu on a plant card",
-            "definition": "**Edit**, **Delete**, **Naming Framework**, **Excel Upload** and **Upload Full Map**. Naming Framework lets the plant use its own names for the structure levels (the company-wide defaults are in **Global Data → Settings → Naming Framework**). Delete removes the plant, so check with the PM first."
-          },
-          {
-            "term": "Know More",
-            "definition": "Opens a dialog titled with the plant name that lists its custom fields; it reads \"No custom fields configured.\" until custom columns are added."
-          },
-          {
-            "term": "Assign Percentage",
-            "definition": "Opens **Tree Version Percentage** with one **Percentage %** box per plant. The total must be 100% before **Submit** saves. These weights decide how much each plant counts toward overall project progress, which shows as **Total Work Completed** and the plant figures on **My Desk**."
-          },
-          {
-            "term": "Create (plant)",
-            "definition": "Offers two choices: **Create Tree Version** (\"Create Tree Version & all data from scratch\") and **Upload Tree Version Data** (\"through Excel\"). The Create form has **Name***, **Description**, **People** (**Choose People**; its list is the project roster: the same 35 people as **People → Roster**) and **Add Custom Column**, then **Add**."
-          },
-          {
-            "term": "Plant build screen",
-            "definition": "Click a plant's arrow to open it (title is the plant name, with a back chevron). Tabs: **Entities**, **Super Locations**, **Locations**, **Custom Columns**, **Activities Sequence**, **People**, **Other Attributes (Qty | Hrs)**, **Measurement Methods** and **Comprehensive Layout**; icons switch **Grid View**, **Tree View** and **Detailed View**. The structure reads Entity → Super Location → Location → Work Package → Activity; Field Works work logs quote it (for example \"Mixing Building | Civil Substructure | Footing | EXC-1 | Excavation\")."
-          },
-          {
-            "term": "Entities, Super Locations and Locations",
-            "definition": "On the plant screen, a numbered list of **Entities** (Pellet Plant: Piperack, Indurating Building, Mixing Building, ECR (Electrical Control Room), Balling Building, Kiln). **Add Entities** adds more; **Add Super Locations** opens \"Select Super Locations Type for <entity>\" with a counter (- 0 +) per type (AS Civil, AS Trestle Erection, AS Pipe Bridge erection, AS Piping for Piperack); **Create** under Locations opens \"Select Locations for <super location>\" with a counter per type (Footing) and a **Name Format** box using {{idx}} for the number. **Where the types come from:** the three tiers are defined in **Global Data → Construction Types → Global Work Areas** (**Entity Types**, **Super Location Types**, **Location Types**); Footing and Civil Substructure appear in both places."
-          },
-          {
-            "term": "Work Package",
-            "definition": "The smallest buildable unit under a Location, shown as a code and description (for example **EXC-1 Excavation for footing**, ARN-PC-01 PCC Laying). Selecting one opens **Work Package details**: **Assigned to** (people), **Status** (for example WORKLOG READY 0.00%), **Type** (PROGRESS), **Estimated Quantity**, **Actual Quantity**, **UOM** (Cum) and sections for everything logged against it: **Work Logs**, **Quality logs**, **Punch Lists**, **Restraints**, **SafetyForms**, **RFI**, **Change Order**, **Submittal**, **Meeting Minutes**, **Other Forms**, **Quick Apps**, **Drawing Items** and **Documents**. Work packages are created from **Global Data → Construction Types → Global Work Packages**, and the UOM comes from **Global Data → UOM**."
-          },
-          {
-            "term": "Custom Columns",
-            "definition": "A table of every location in the plant (133 on Pellet Plant) with **Entities**, **Super Locations**, **Super Locations Description**, **Locations Type**, **Locations**, **Locations Description** and **Entities Description**. **Add Custom Column** adds your own field (it then shows in **Know More** and Field Works), with **Filters**, search, **Export**, **Manage Columns** and **Save Layout**."
-          },
-          {
-            "term": "Activities Sequence",
-            "definition": "Per location, you choose an **Activity Sequences Template** (for example \"Piperack Footing WBS\" for Footing 1) which lists **Start Activities**, **Finish Activities** and a table **Activities | Work Packages | Work Packages Description** (Excavation → EXC-1, PCC → ARN-PC-01, Marking, Barbending...). Locations with a template show **Mapped**. Templates come from **Global Data → Construction Types → Activity Sequence Templates** (defined per Location Type, for example Footing)."
-          },
-          {
-            "term": "People (work structure)",
-            "definition": "Assign people to each work package under four headings: **Progress Package Responsible**, **Progress Package Approval**, **Quality Package Responsible** and **Quality Package Approval**, with **Teams** and **Users** lists and **Upload Excel**. The people are the project roster. **Where this goes:** these assignments decide who logs, who approves work logs, and who appears under **Assigned to** on the work package."
-          },
-          {
-            "term": "Other Attributes (Qty | Hrs)",
-            "definition": "Budget and dates per work package, in four tabs named after the phase code types: **Direct**, **Indirect**, **Non Productive** and **Change Order**. Columns: **Budgeted Hours**, **Budgeted Quantity**, **Estimated Quantity**, **Changed Hours**, **Changed Quantity**, **Revised Budgeted Quantity**, **Revised Budgeted Hours**, **UOM**, **Phase Codes**, **Specifications**, **Planned Start Date**, **Planned End Date**, **Forecasted End Date**, **Client End Date**, **Skyline End Date**, **Schedule ID** and **Schedule ID Description**. Phase Codes come from the 963 Global Data codes, and how they can be reused is set in **Project Settings → Phase Code Settings**."
-          },
-          {
-            "term": "Measurement Methods",
-            "definition": "Decides how much each activity counts toward a location's percentage. The page shows **Total Locations Mapped : 113 / 137**, separate **Progress** and **Quality** tabs, **Export**, **Assign** (\"Activity Percentage\" dialog: Activities | Percentage %, total must reach 100%), **Reassign Local Percentage** and **View & Edit Work Packages Percentages**. The resulting percentages drive the progress shown in Field Works and on **My Desk**. Global Data → Measurement Templates holds the quantity formulas (for example L x B x D x Nos)."
-          },
-          {
-            "term": "Comprehensive Layout",
-            "definition": "The same Entity / Super Location / Location / Work Package view as the first tab, for working through the whole structure in one place."
-          },
-          {
-            "term": "Upload Excel and Download Excel",
-            "definition": "Bulk-load or export the plant structure. The Excel upload on a plant card and the **Upload Tree Version Data** option use the same idea: prepare the structure offline and load it."
-          },
-          {
-            "term": "Level names differ by project",
-            "definition": "The levels are called **Entities**, **Super Locations** and **Locations** by default, but each plant can rename them (three-dot menu → **Naming Framework**; company defaults are in **Global Data → Settings → Naming Framework**). On **Warehouse Construction** the build screen tabs read **Level-1s**, **Level-2s** and **Commodities**, and Quality and Field Works use the same names (**Level-1**, **Level-2**, **Commodities**). When a guide says Entity, Super Location or Location, read your own project's names. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Add a new work package / plant",
-            "steps": [
-              "Go to **Project Setup → Works** and click **Create**.",
-              "Choose **Create Tree Version** to build from scratch, or **Upload Tree Version Data** to load an Excel file.",
-              "Enter **Name** and **Description**, pick **People**, and add any **Custom Column**, then click **Add**.",
-              "Open the new plant's arrow. Add **Entities**, then **Super Locations** and **Locations**, and map an Activity Sequence template to each location."
-            ]
-          },
-          {
-            "title": "Weight work packages for overall progress rollup",
-            "steps": [
-              "Go to **Project Setup → Works** and click **Assign Percentage**.",
-              "Enter a percentage for each plant. The heading shows the running total.",
-              "Adjust until the total is 100%, then click **Submit**."
-            ],
-            "note": "The dialog states the total must be 100% to save. Submit was not pressed in testing."
-          },
-          {
-            "title": "Assign people to a work package",
-            "steps": [
-              "Open the plant and go to its **People** tab.",
-              "Select the entity, super location, location and work package in the tree.",
-              "Choose the users or teams under **Progress Package Responsible**, **Progress Package Approval**, **Quality Package Responsible** or **Quality Package Approval**."
-            ]
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/notion/work-structure/001.jpg",
-            "caption": "Work Structure with each CWA as a tab, and its systems, tags and work packages below"
-          },
-          {
-            "src": "assets/notion/work-structure/002.jpg",
-            "caption": "Editing a CWA from its menu"
-          },
-          {
-            "src": "assets/notion/work-structure/003.jpg",
-            "caption": "Adding systems to a CWA"
-          },
-          {
-            "src": "assets/notion/work-structure/004.jpg",
-            "caption": "Adding tags to a system and editing a tag"
-          },
-          {
-            "src": "assets/notion/cwa-construction-work-area/001.jpg",
-            "caption": "The CWAS step, listing each CWA with edit and delete icons"
-          },
-          {
-            "src": "assets/notion/system/001.jpg",
-            "caption": "Systems, the second tier of the work structure"
-          },
-          {
-            "src": "assets/notion/tag/001.jpg",
-            "caption": "Tags, the third tier of the work structure"
-          },
-          {
-            "src": "assets/notion/table-view/001.jpg",
-            "caption": "Complete Structure: every CWA, system and tag on one page"
-          },
-          {
-            "src": "assets/notion/tree-view/001.jpg",
-            "caption": "Tree view: selecting a node shows the levels beneath it"
-          },
-          {
-            "src": "assets/notion/how-to-create-wbs-tree/001.jpg",
-            "caption": "Tree Versions: a project can hold several trees"
-          },
-          {
-            "src": "assets/notion/custom-columns/001.jpg",
-            "caption": "Custom Columns: adding a column with a name and type"
-          },
-          {
-            "src": "assets/notion/custom-columns/002.jpg",
-            "caption": "A new custom column with Edit and Delete options in its header"
-          },
-          {
-            "src": "assets/notion/activity-sequence/001.jpg",
-            "caption": "Assign Activity Sequence, listing the tags in the project"
-          },
-          {
-            "src": "assets/notion/activity-sequence/002.jpg",
-            "caption": "Add New Mappings, showing the sequences defined in Global Data"
-          },
-          {
-            "src": "assets/notion/activity-sequence/003.jpg",
-            "caption": "Choosing a sequence for a tag and submitting it"
-          },
-          {
-            "src": "assets/notion/other-attributes-qty-hrs/001.jpg",
-            "caption": "Other Attributes (Qty | Hrs): budget hours and quantity for each work package"
-          },
-          {
-            "src": "assets/notion/other-attributes-qty-hrs/002.jpg",
-            "caption": "Budget hours and quantity entered at system level"
-          },
-          {
-            "src": "assets/notion/other-attributes-qty-hrs/003.jpg",
-            "caption": "Project dates such as the client end date"
-          },
-          {
-            "src": "assets/notion/measurement-methods/001.jpg",
-            "caption": "Measurement Methods: Percentage Based or Effort Based completion"
-          },
-          {
-            "src": "assets/notion/measurement-methods/002.jpg",
-            "caption": "The Progress and Quality tabs of Measurement Methods"
-          },
-          {
-            "src": "assets/notion/measurement-methods/004.jpg",
-            "caption": "View & Edit Work Packages link for each activity"
-          }
-        ]
-      },
-      {
-        "heading": "Tasks",
-        "intro": "<p>Tasks is a general-purpose to-do tracker for the project team, separate from work logs and forms. A <strong>PM</strong> or <strong>Module Manager</strong> uses it to assign and follow up coordination work.</p><p>Open <strong>Project Setup → Tasks</strong>. It has three sub-tabs: <strong>Tasks</strong>, <strong>Communication</strong> and <strong>Workflow Issues</strong>. On this project <strong>Create</strong> and <strong>Filters</strong> show the warning \"Task Form is not configured in project settings\", so set up the form first.</p>",
-        "definitions": [
-          {
-            "term": "Tasks (sub-tab)",
-            "definition": "Toolbar: **Create**, **Manage Columns**, **Filters**, **Upload Excel**, **Download Excel**, and three views: **Grid View**, **Table View** and **Kanban View**. Empty here (\"No Data Available\")."
-          },
-          {
-            "term": "Task Form is not configured",
-            "definition": "Clicking **Create**, **Manage Columns** or **Filters** on an unconfigured project shows a Warning \"Task Form is not configured in project settings\" (**Ok**). The fields of a task come from **Project Settings → Configure Task Form** (tabs **Project Configuration** and **Global Configuration**, a **Status** switch, **Configurable Fields** with Required, Show on card and field type such as Text Box, **Add field**, **Save Changes**). No fields are configured on Arena Steel Plant - Phase 1 yet."
-          },
-          {
-            "term": "Communication",
-            "definition": "A project mailbox: **Compose Mail**, search, a **Settings** icon and folders **All Emails**, **Inbox**, **Sent**, **Drafts**, **Starred** and **Trash**. You don't have any mails at the moment\". Which mail service it uses (Gmail or Outlook) follows **Global Data → Settings → Mail Settings**, which has an **ARENA COMMUNICATIONS** row."
-          },
-          {
-            "term": "Workflow Issues (Tasks)",
-            "definition": "Shows problems raised by approval workflows on tasks, with **Download Excel** and **Grid View** / **Table View**."
-          },
-          {
-            "term": "Where this data goes",
-            "definition": "Task items belong to the project."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Create and manage a project task",
-            "steps": [
-              "Open **Project Settings → Configure Task Form** and add the fields you need, then **Save Changes**. Do this once per project.",
-              "Go to **Project Setup → Tasks → Tasks** and click **Create**; fill in the task.",
-              "Use **Manage Columns** and **Filters** to shape the list, and **Grid View**, **Table View** or **Kanban View** to change the layout.",
-              "Use **Upload Excel** / **Download Excel** for bulk changes. Use **Communication** for mail and **Workflow Issues** for approval problems."
-            ],
-            "note": "This screen isn't covered here yet."
-          }
-        ]
-      },
-      {
-        "heading": "People",
-        "intro": "<p>People is where a <strong>PM</strong> or <strong>Module Admin</strong> decides who works on this project, groups them into crews and marks indirect staff. It draws on the company directory in Global Data.</p><p>Open <strong>Project Setup → People</strong>. Sub-tabs: <strong>Roster</strong> (with <strong>System User</strong> and <strong>Non System User</strong>), <strong>Project Crews</strong> and <strong>Project Indirect Staff</strong>.</p>",
-        "definitions": [
-          {
-            "term": "Roster → System User",
-            "definition": "People with an Arena login. 35 cards on this project (name, **Employee ID**, **Active/Inactive** chip, three-dot menu **Edit** / **Delete**) with **Add**, **Download Excel**, **Filters** and views **Grid View**, **Table View**, **Tree View**. **Add** opens \"Select Users for <project>\" listing users from **Global Data → Users & Permissions → Global Rosters → System User** (for example Engineering Contractor - 1, System Admin, American Builders Inc.). **Where this goes:** this roster is the source of every people picker in the project: **My Desk → Pending Actions** (active users), **Forms → Assign Users**, the **People** field when you create a plant, work package assignments, Resource Planning rows and Create Crew."
-          },
-          {
-            "term": "Roster → Non System User",
-            "definition": "Field workers without a login. Buttons: **Add**, **Get Users from Global Data**, **Download Sample Excel**, **Upload Excel**, **Download Excel**, **Filters**. **Get Users from Global Data** lists the company's non-system roster people (labourers with IDs). **Add** opens **Create User**: **Employee ID***, **First Name***, **Last Name***, **Group No.**, **Email**, **Default Indirect PhaseCode**, **Address**, **Designation**, **Skills**, **Experience**, **Contact Number**, **Craft**, **Class**, **Labor**, **Role** and any configurable field, which mirror **Global Data → Settings → Roster Settings**. None on this project yet."
-          },
-          {
-            "term": "Project Crews",
-            "definition": "Empty on this project. Buttons: **Create Crew**, **Copy Crews from Global Data**, **Copy Crews to Projects**, search by crew name and **Filters**. **Create Crew** opens \"Select Crew Members\": **Crew Name***, **SUPERVISOR** and **FOREMAN** dropdowns, a searchable list of the project roster (with Select All), counters for Supervisor, Foreman and Rosters, and a **Selected Supervisors** table. **Copy Crews from Global Data** lists the company's 18 crews (**Global Data → Crews**). **Copy Crews to Projects** opens \"Map Crews to Projects\" with **Groups** and every company project."
-          },
-          {
-            "term": "Project Indirect Staff",
-            "definition": "A list of the project's system users (name, email, ID) with tick boxes and **Submit**. Tick the people whose work is overhead (management, admin, support) rather than field execution. Nobody is ticked on this project. Their time is treated as indirect in timesheets (see **Default Indirect PhaseCode** on the roster)."
-          },
-          {
-            "term": "Where the People data comes from",
-            "definition": "Everyone on this screen exists first in **Global Data → Users & Permissions**: system users under **User Accounts** and **Global Rosters → System User**, field workers under **Non System User**. Project People only chooses who joins this project. If a person is missing, add them in Global Data first."
-          },
-          {
-            "term": "Where the People data goes",
-            "definition": "Active project roster people appear in **My Desk → Pending Actions**, **Forms → Assign Users** (35 rows, same as the roster), work package **Assigned to**, **Estimate → Resource Planning** roster rows, crews used in **Time Management** and Field Works manpower logs."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Copy an existing company crew into this project",
-            "steps": [
-              "Go to **Project Setup → People → Project Crews** and click **Copy Crews from Global Data**.",
-              "In \"Select Crew for <project>\", tick the crews you want (or **Select All**).",
-              "Click **Submit**."
-            ],
-            "note": "Treat the copy as a snapshot and re-check after changing the company crew."
-          },
-          {
-            "title": "Build a new project-only crew",
-            "steps": [
-              "Go to **Project Setup → People → Project Crews** and click **Create Crew**.",
-              "Enter **Crew Name**, choose **SUPERVISOR** and **FOREMAN**, and tick crew members from the roster list.",
-              "Review the counters and the **Selected Supervisors** table, then click **Submit**."
-            ]
-          },
-          {
-            "title": "Assign indirect staff to the project",
-            "steps": [
-              "Go to **Project Setup → People → Project Indirect Staff**.",
-              "Tick the system users who are indirect (overhead) staff.",
-              "Click **Submit**."
-            ]
-          },
-          {
-            "title": "Add a person to the project roster",
-            "steps": [
-              "Go to **Project Setup → People → Roster → System User** and click **Add** (or open **Non System User** and click **Get Users from Global Data** or **Add**).",
-              "Tick the people in \"Select Users for <project>\" and submit.",
-              "If the person is not listed, add them in **Global Data → Users & Permissions** first."
-            ]
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/notion/people/001.jpg",
-            "caption": "COPY USERS TO and COPY TEAMS TO, to repeat a user assignment across work packages"
-          },
-          {
-            "src": "assets/notion/people/002.jpg",
-            "caption": "Approval: creating an approval workflow and assigning it"
-          }
-        ]
-      },
-      {
-        "heading": "Estimate",
-        "intro": "<p>Estimate is where a <strong>PM</strong> or <strong>Estimator</strong> builds the project budget plant by plant, plans weekly resources and picks the rate card templates used for pricing.</p><p>Open <strong>Project Setup → Estimate</strong>. Three sub-tabs: <strong>Estimate</strong>, <strong>Resource Planning</strong> and <strong>Rate Card Template</strong>. Cost types, templates, units and phase codes all come from Global Data.</p>",
-        "definitions": [
-          {
-            "term": "Estimate (sub-tab)",
-            "definition": "One card per plant (13, same as Works; Description and Created By). Open a plant to see its estimates: a **Create Estimate** button, search, **Settings** (opens **Project Settings → Cost Breakdown Structure**) and **Grid View** / **Table View**. None exist on Pellet Plant."
-          },
-          {
-            "term": "Create Estimate Form",
-            "definition": "Fields: **Name***, **Description***, **Approval Workflow*** (the list is empty until a workflow is created under **Project Settings → Cost Breakdown Structure → Approval WorkFlow**), **Cost Breakdown Structure*** (default **CUSTOM**), then one template picker per cost type: **Material Template**, **Equipment Template**, **Labor Template**, **Unit Rate Template**, **Sub Contractor Template**, **BOQ's Template**, **Freight Charges Template** and **Fuel & Gas Template**, then **Submit**. **Where these come from:** the eight cost types are **Global Data → Cost → Cost Type**; each picker lists the templates created for that type in Global Data (for example Material: test 1, Material Template, jn, TestTemplate, MT, Material Estimate Template; Equipment: test, Tree; Labor: s, Labor Template; choose **None** to skip)."
-          },
-          {
-            "term": "Cost Breakdown Structure (CBS) levels",
-            "definition": "Decides how the estimate is organized by phase code: Entity > Phase Code; Entity > Super Location > Phase Code; ... Entity > Super Location > Location > Activity > Work Package > Phase Code; Activity > Phase Code; Activity > Work Package > Phase Code; Work Package > Phase Code; or **CUSTOM**. The default per plant is set in **Project Settings → Cost Breakdown Structure → CBS** (choose the **Tree Version**, tick the level, **Customize CBS Level**, **Save Changes**). The phase codes are the 963 Global Data codes."
-          },
-          {
-            "term": "Project Settings → Cost Breakdown Structure",
-            "definition": "Four tabs: **CBS** (levels above), **Approval WorkFlow** (Create Approval Workflow, then create levels and add users; none yet), **Level of Detail** (**Phase Code** or **Phase Code - Cost Code**) and **Estimate Type** (**Lump Sump** or **Time & Material**). They set how every estimate in the project behaves."
-          },
-          {
-            "term": "Resource Planning",
-            "definition": "A weekly planning grid: a **Date Range** picker, week columns (for example Week 40 (1/10/2026 - 3/10/2026) to Week 44), and rows under **Roster/Sub Contractors** with a **Planned** cell per week. The **Roster** rows are the 35 project people (**People → Roster**); the **Sub** rows are company vendors and sub contractors from **Global Data → Vendors / Sub Contractors** (for example United Rentals, JJ Enterprise)."
-          },
-          {
-            "term": "Rate Card Template",
-            "definition": "Three tabs: **Material**, **Equipment**, **Labor**, each empty on this project (\"No rate card templates found...\"). **Add Rate Card Template** opens \"Select a template\" listing the Global Data templates (Material: Template 1, nam, na; Equipment: Template 1, test rate card; Labor: Template 1), then **Add Template**. So the project picks from the company templates built under **Global Data → Cost** rather than typing rates from scratch. Unit Rate, Sub Contractor, BOQ's, Freight Charges and Fuel & Gas have no rate card tab."
-          },
-          {
-            "term": "Units of measure",
-            "definition": "Quantities use the **Global Data → UOM, Phasecode & GL Codes** lists (51 UOMs in 9 groups with conversions). The work package shows **UOM** (for example Cum) from that list. A project-only unit was not found on these screens."
-          },
-          {
-            "term": "Where this data goes",
-            "definition": "Estimates feed **Cost Tracking** and the cost views in **Field Works → Cost** and **Data Analytics**; budgeted hours and quantities per work package sit in **Works → Other Attributes (Qty | Hrs)**."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Build a cost estimate for a work package",
-            "steps": [
-              "Open **Project Settings → Cost Breakdown Structure** and confirm the **CBS** level, **Level of Detail**, **Estimate Type** and an **Approval WorkFlow**.",
-              "Go to **Project Setup → Estimate → Estimate**, open the plant and click **Create Estimate**.",
-              "Enter **Name**, **Description**, choose the **Approval Workflow** and **Cost Breakdown Structure**, and pick a template per cost type (or **None**).",
-              "Click **Submit**, then open the estimate to add line items."
-            ],
-            "note": "This screen isn't covered here yet."
-          },
-          {
-            "title": "Add a rate card template to the project",
-            "steps": [
-              "Go to **Project Setup → Estimate → Rate Card Template** and pick **Material**, **Equipment** or **Labor**.",
-              "Click **Add Rate Card Template** and choose a template under **Select a template**.",
-              "Click **Add Template**."
-            ]
-          }
-        ]
-      },
-      {
-        "heading": "Schedule",
-        "intro": "<p>Schedule is where a <strong>PM</strong> or planner builds the project timeline: project milestones plus one Gantt schedule per plant. It answers when each part of the work should happen.</p><p>Open <strong>Project Setup → Schedule</strong>. <strong>Create New Schedule</strong> starts a schedule; the list shows <strong>Milestones</strong> and one \"<strong>&lt;Plant&gt; - Schedule</strong>\" card per plant, with <strong>Grid View</strong> and <strong>Table View</strong>.</p>",
-        "definitions": [
-          {
-            "term": "Create New Schedule",
-            "definition": "Opens \"Create Schedule From\" with six sources: **Oracle P6 XML** (upload a Primavera P6 XML file), **Blank Template** (create a WBS from a blank template), **Scope** (get the WBS from scope items), **Oracle P6 Cloud** (sync data from P6 cloud), **Microsoft Project XML** (upload a Microsoft Project file) and **Level Schedule** (schedule the project level by level)."
-          },
-          {
-            "term": "Milestones",
-            "definition": "Opens two tabs, **Fastrack** and **Contractual**, each with **Add** and **Save** and a table **Name | Weightage | Planned Start Date | Planned End Date | Cumulative Planned | Cumulative Achieved | Actions**. Empty on this project."
-          },
-          {
-            "term": "[Plant] - Schedule",
-            "definition": "One card per plant (13 here, same as Works). Opening one shows a Gantt screen (type DEFAULT_TREE_SCHEDULE) with a **Planned Date** range, **Clear**, **Search**, **Time Period** (**Day**, **Week**, **Month**, **Year**), **Gantt View** (**Full**, **Half**, **None**), a left table **Id | Activity Name** listing the plant's Entities (Pellet Plant: Piperack, Indurating Building, Mixing Building, ECR (Electrical Control Room), Balling Building, Kiln) and monthly bars for each: \"<Entity> (Planned)\" and \"<Entity> (Actual)\"."
-          },
-          {
-            "term": "Where the schedule comes from",
-            "definition": "The rows come from the plant's Entities built in **Works**; planned dates can be loaded from P6 or Microsoft Project or entered, and each work package can carry **Planned Start/End Date**, **Forecasted End Date**, **Client End Date**, **Skyline End Date** and **Schedule ID** in **Works → Other Attributes (Qty | Hrs)**. The \"(Actual)\" bars show actual progress; all are empty while progress is 0%."
-          },
-          {
-            "term": "Where the schedule goes",
-            "definition": "Schedule data feeds the planned-versus-actual views in **Data Analytics** and delay analysis. Milestones carry a **Weightage** toward overall completion."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Create a new schedule",
-            "steps": [
-              "Go to **Project Setup → Schedule** and click **Create New Schedule**.",
-              "In \"Create Schedule From\", choose the source: **Oracle P6 XML**, **Blank Template**, **Scope**, **Oracle P6 Cloud**, **Microsoft Project XML** or **Level Schedule**.",
-              "Follow the prompts (upload the file or pick the scope items) to build the schedule."
-            ]
-          },
-          {
-            "title": "Switch a Gantt schedule to a monthly view",
-            "steps": [
-              "Open a **<Plant> - Schedule** card.",
-              "Under **Time Period**, choose **Month** (or **Day**, **Week**, **Year**).",
-              "Use **Planned Date** to narrow the date range and **Search** to find an activity."
-            ]
-          },
-          {
-            "title": "Add a milestone",
-            "steps": [
-              "Go to **Project Setup → Schedule → Milestones** and pick **Fastrack** or **Contractual**.",
-              "Click **Add** and fill **Name**, **Weightage**, **Planned Start Date** and **Planned End Date**.",
-              "Click **Save**."
-            ]
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/notion/work-schedule/001.jpg",
-            "caption": "Work Schedule with filters and selectable columns"
-          },
-          {
-            "src": "assets/notion/work-schedule/002.jpg",
-            "caption": "Download P6 XML and the Gantt View toggle"
-          }
-        ]
-      },
-      {
-        "heading": "Phase Codes",
-        "intro": "<p>Phase Codes shows the company's phase code list and lets a <strong>PM</strong> or <strong>Module Admin</strong> mark which codes this project uses for timesheets and equipment logs. It is not a separate project-only list.</p><p>Open <strong>Project Setup → Phase Codes</strong>. The table has <strong>Phase Code</strong>, <strong>Cost Types</strong>, <strong>Phase Code Type</strong>, <strong>Timesheet Management</strong> and <strong>Equipment Management</strong>, with search, paging (963 codes here) and a <strong>Settings</strong> gear.</p>",
-        "definitions": [
-          {
-            "term": "Phase code list",
-            "definition": "963 codes, the same list as **Global Data → UOM, Phasecode & GL Codes → Phase Codes** and **Global Data → Cost → Cost Breakdown Structure → Phase Codes**. Examples: \"AA2 - Hardware\" (Material, Direct) and \"4A4 - UAT of base map Data and Data Publish\" (Material, Equipment, Labor, Direct). Types on the master list are Direct, Indirect, Non Productive and Change Order; Cost Types are the eight from **Global Data → Cost**."
-          },
-          {
-            "term": "Timesheet Management and Equipment Management (columns)",
-            "definition": "Two tick boxes per code. Ticking one is \"Phase Code mapping\": the code becomes available for that purpose on this project. **Timesheet Management** controls the Phase Code dropdown in **Time Management** timesheets when the log level is this project; **Equipment Management** does the same for equipment logs. Neither is ticked for any code on Arena Steel Plant - Phase 1."
-          },
-          {
-            "term": "Settings (gear)",
-            "definition": "Opens \"Select the Cost Type for each category to display Phase Codes\" with two categories, **Timesheet Management** and **Equipment Management**; expand one to tick **Cost Types** (**Select All**, Material, Equipment, Labor, Unit Rate, Sub Contractor, BOQ's, Freight Charges, Fuel & Gas) and **Save**. Only codes with a ticked cost type can be mapped for that category."
-          },
-          {
-            "term": "Project Settings → Phase Code Settings",
-            "definition": "A separate page with two options: **Unique phase code** (a code can be used on only 1 Work Package and Location) and **Multiple-Use Phase Code** (a code can be used across multiple Locations). Arena Steel Plant - Phase 1 uses **Unique phase code**. It controls how codes are assigned to work packages in **Works → Other Attributes (Qty | Hrs)**."
-          },
-          {
-            "term": "Company versus Project in timesheets",
-            "definition": "In **Time Management → My Timesheet**, choosing **Company** shows phase codes from the company list (the Default Phase Codes list there had 270 entries), while choosing this project shows only the codes you mapped here. So an empty mapping means no project phase codes to pick."
-          },
-          {
-            "term": "Where this data comes from and goes",
-            "definition": "**Comes from:** Global Data phase codes (you cannot add codes here). **Goes to:** Time Management timesheets, equipment logs, Works → Other Attributes (Phase Codes), Estimate (cost breakdown by phase code) and cost reports."
-          },
-          {
-            "term": "Where phase codes are used in Field Works",
-            "definition": "The project phase codes (963 on both Arena Steel Plant - Phase 1 and Elevated Corridor) feed **Field Works → Progress → Productivity Logs**: the **Set Phase Codes** dialog offers a project-specific subset, and logs and **Data Summary** show codes such as **1089-101 - Fabrication** (Direct, Material, Labor, Equipment cost types), which was confirmed in this list on Elevated Corridor. **Project Settings → Phase Code Settings** sets whether a code is Unique (one work package and location) or Multiple-Use. See **Field Works → Productivity Logs**."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Give field staff a clean, project-relevant phase code list in Time Management",
-            "steps": [
-              "Go to **Project Setup → Phase Codes** and click the **Settings** gear.",
-              "Expand **Timesheet Management**, tick the **Cost Types** to allow (for example Labor) and click **Save**.",
-              "Tick **Timesheet Management** for each phase code this project should use. A message confirms \"Phase Code mapping updated successfully\".",
-              "Ask field staff to choose this project (not **Company**) in **Time Management → My Timesheet** so the Phase Code dropdown shows only the mapped codes."
-            ]
           }
         ]
       },
@@ -28125,13 +28657,31 @@ const MODULES = [
       "Several tabs (People, Estimate, Quality, Safety, Drawings, Documents, Forms) have their own sub-tabs; Forms goes one level further with a three-level category → sub-area → form-type navigation."
     ],
     "sections": [
-      "Overview",
       "Works",
+      "Entities",
+      "Super Locations",
+      "Locations",
+      "Custom Columns",
+      "Activities Sequence",
+      "Work Package People",
+      "Other Attributes",
+      "Measurement Methods",
+      "Comprehensive Layout",
       "Tasks",
+      "Task Communication",
+      "Workflow Issues",
       "People",
+      "Roster",
+      "Project Crews",
+      "Project Indirect Staff",
       "Estimate",
+      "Resource Planning",
+      "Rate Card Template",
       "Schedule",
+      "Schedule Gantt",
+      "Milestones",
       "Phase Codes",
+      "Overview",
       "Quality",
       "Safety",
       "Drawings",
