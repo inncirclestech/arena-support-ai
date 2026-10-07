@@ -29071,626 +29071,1290 @@ const MODULES = [
     "qaItems": QA_FIELDWORKS,
     "narrative": [
       {
-        "heading": "Overview",
-        "intro": "<p>If Project Setup is where a construction business configures a project before anyone picks up a tool, <strong>Field Works</strong> is where the job actually gets executed and recorded. This is the module a foreman, field engineer, QA/QC inspector, or safety officer opens dozens of times in a working day, as opposed to Project Setup, which a <strong>PM or Module Admin</strong> visits mainly at kickoff and during reconfiguration. Everything here reads from configuration built elsewhere — a work package, form template, safety category, or approval workflow has to exist in Project Setup or Global Data before anyone can act on it in the field.</p><p>Field Works is organized as a top tab bar of five tabs: <strong>Tree Version</strong>, <strong>Safety</strong>, <strong>Drawing Management</strong>, <strong>Invoices</strong>, and <strong>Workorder</strong>. The bulk of daily activity happens under Tree Version, which mirrors the project's plant/work-package structure exactly as defined in Project Setup → Works. Clicking a plant card there opens a <strong>second-level tab bar scoped to that plant</strong> — Progress, Quick Apps, Quality, Project Forms, and Cost — so every log, inspection, form, and cost movement stays attached to the specific work package it belongs to. That scoping is what makes progress-versus-cost and quality-versus-plant reporting mean anything later.</p><p>The remaining four top tabs are project-wide rather than plant-scoped. Safety covers the project's safety forms, calendar, issues, and approvals. Drawing Management is a deliberately narrow issue queue for drawings that failed approval. Invoices carries work-order invoices and their workflow problems. Workorder is the execution-side tracking of work orders, distinct from the setup-side Workorder tab in Project Setup.</p>",
-        "definitions": [
-          {
-            "term": "Tree Version",
-            "definition": "The first and busiest top tab of Field Works — a grid of cards, one per work package or plant, each listing its child Entities. It mirrors the structure defined in Project Setup → Works."
-          },
-          {
-            "term": "Safety (top tab)",
-            "definition": "The project-wide safety execution tab, holding Safety Forms, Daily Safety Issues, Completed Safety, Safety Calendar, and Approve Safety."
-          },
-          {
-            "term": "Drawing Management (top tab)",
-            "definition": "A single-card tab holding Workflow Issues — the drawing workflow issues raised in the project when a drawing is rejected at any approval level."
-          },
-          {
-            "term": "Invoices (top tab)",
-            "definition": "A two-card tab holding Invoices (labelled \"Workorder Invoices\") and Workflow Issues for work-order-invoice workflow problems."
-          },
-          {
-            "term": "Workorder (top tab)",
-            "definition": "The execution-side work order tracking view, with search and a grid/list toggle — distinct from the setup-side Workorder tab in Project Setup where work orders are created."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Find the right Field Works screen",
-            "steps": [
-              "Open the project and go to **Field Works** in the left sidebar.",
-              "For day-to-day logging against a specific plant, stay on **Tree Version** and click that plant's card.",
-              "On the second-level tab bar, choose **Progress** for logs and forms, **Quality** for inspections, **Cost** for cost movements, **Project Forms** for project-specific custom forms, or **Quick Apps** for no-code mini workflows.",
-              "For safety work, drawing rejections, invoices, or work order tracking, use the **Safety**, **Drawing Management**, **Invoices**, or **Workorder** top tabs instead — these are project-wide, not plant-scoped."
-            ],
-            "note": "If a form, work package, or safety category you expect is missing, the cause is almost always upstream in Project Setup rather than in Field Works itself."
-          }
-        ]
-      },
-      {
         "heading": "Tree Version",
-        "intro": "<p><strong>Tree Version</strong> is the default landing tab of Field Works and the entry point for most field activity. It presents a grid of cards, one per work package or plant — Pellet Plant, Basic Oxygen Furnace, Blast Furnace, Coke Oven, Cold Rolling Mill, External Works, Hot Strip Mill, IBMD, Lime Dolomite Plant, Oxygen Plant, RMHS, Sinter Plant and so on, depending on the project — each listing the child Entities beneath it. This is the same set of work packages a <strong>PM or Module Admin</strong> defined in <strong>Project Setup → Works</strong>, which is exactly the point: field teams log against the same breakdown that the estimate, schedule, and cost structure were built around, so nothing has to be reconciled afterwards.</p><p>Clicking into a plant card is where the module opens up. A <strong>second-level tab bar scoped to that plant</strong> appears, with five tabs covering different slices of execution: <strong>Progress</strong> (the default, and by far the richest, with 18 cards), <strong>Quick Apps</strong>, <strong>Quality</strong>, <strong>Project Forms</strong> (shown in the breadcrumb as \"Custom Forms\"), and <strong>Cost</strong>. Each of these is documented in its own section below. For a foreman or field engineer, the practical habit is simple: pick your plant first, then pick the kind of work you are recording.</p>",
+        "intro": "<p>The <strong>Tree Version</strong> tab is the first tab of <strong>Field Works</strong>. It lists the plants of the project, one card each; click a card to open that plant's <strong>Progress</strong> cards.</p>",
+        "images": [
+          {
+            "src": "assets/product/field-works/201.jpg",
+            "caption": "Tree Version: one card per plant"
+          }
+        ],
         "definitions": [
           {
-            "term": "Progress (second-level tab)",
-            "definition": "The default plant-scoped tab, holding 18 cards covering work logs, productivity, RFIs, site photographs, ready works, meeting minutes, issues, resource logs, restraints, inventory, and procurement."
+            "term": "Top tabs",
+            "definition": "**Tree Version**, **Safety**, **Drawing Management**, **Invoices** and **Workorder**. Only **Tree Version** is tied to a plant; the others cover the whole project."
           },
           {
-            "term": "Quick Apps (second-level tab)",
-            "definition": "A two-card tab: Quick Apps, a no-code app builder for connecting screens and auto-populating data, and Issues, for issues raised from no-code app approval workflows."
-          },
-          {
-            "term": "Quality (second-level tab)",
-            "definition": "A five-card tab: Quality Level 1, Quality Level 2, Punch Lists (issues raised due to quality failure), Submitted Quality Logs, and Approve Quality Logs."
-          },
-          {
-            "term": "Project Forms (second-level tab)",
-            "definition": "The plant-scoped view of project-specific custom form types configured in Project Setup → Forms. Its breadcrumb label reads \"Custom Forms\"."
-          },
-          {
-            "term": "Cost (second-level tab)",
-            "definition": "A four-card tab: Transaction (purchase orders and other expenses), Change order (budget and contract adjustments), Transfer (reallocation of budget or cost between Cost Codes and Phase Codes), and Field Logs."
-          },
-          {
-            "term": "Entity",
-            "definition": "A child element listed beneath a work package/plant card on the Tree Version grid, representing the next level down in the project's work breakdown."
-          },
-          {
-            "term": "Where the plant cards come from",
-            "definition": "Each card is a **Tree Version** (a plant) built in **Project Setup → Works**. On Arena Steel Plant - Phase 1 the 13 cards (Pellet Plant (1MTPA), Basic Oxygen Furnace (0.8 MTPA), Blast Furnace (0.6 MTPA), Coke Oven, Cold Rolling Mill, External Works, Hot Strip Mill, IBMD, Lime Dolomite Plant, Oxygen Plant, RMHS, Sinter Plant, Slab Caster) match the plant list in Project Setup (Works, Estimate, Schedule) and in the **My Desk** plant selector, in the same order. The **Entities** listed on a card are the entities built in Works (Pellet Plant: Piperack, Indurating Building, Mixing Building, ECR (Electrical Control Room), Balling Building, Kiln; IBMD and RMHS have none yet, so their cards list nothing). The card shows the name, **Description** and **Created By**. Click it and the plant name appears as a chip in the header; that plant stays selected for every Field Works screen until you pick another."
-          },
-          {
-            "term": "Where plant data goes next",
-            "definition": "Everything logged inside a plant is stored against that plant's entity, super location, location and work package. It feeds the **My Desk** panels (Project Progress cards, Recent Work Logs, Recent Punch List Items, Recent Quality Logs), **Detailed Work Logs**, and the **Data Analytics & Insights** progress, quality and schedule dashboards. A plant with no entities has nothing to log against, so its Progress cards open but stay empty."
+            "term": "Plant card",
+            "definition": "Shows the plant name, its **Description**, **Created By** and the **Entities** inside it (for example Piperack or Kiln). The arrow on the right opens that plant."
           }
         ],
         "procedures": [
           {
-            "title": "Open a plant and start logging against it",
+            "title": "Open a plant",
             "steps": [
-              "Go to **Field Works → Tree Version**.",
-              "Locate the work package or plant card you are working on and review its listed Entities.",
-              "Click the card to open the plant-scoped second-level tab bar.",
-              "Choose **Progress**, **Quick Apps**, **Quality**, **Project Forms**, or **Cost** depending on what you are recording."
-            ],
-            "note": "The plant list here comes from Project Setup → Works. If a plant is missing, it needs adding on the setup side first — it cannot be created from Field Works."
+              "Open **Field Works**; the **Tree Version** tab is shown.",
+              "Click the arrow on the plant's card.",
+              "The plant opens on its **Work Logs** screen. Click **Progress** in the breadcrumb at the top to see all the Progress cards."
+            ]
           }
         ]
       },
       {
         "heading": "Progress",
-        "intro": "<p><strong>Progress</strong> is the default second-level tab on a plant and the busiest screen in the product for field staff: its 18 cards cover what work was completed, what hours and quantities went into it, what questions are outstanding, what resources were consumed, what is blocking progress, and what was photographed as evidence. A <strong>PM</strong> uses this tab to answer \"how is this plant actually going\" from real field data rather than an estimate.</p><p><strong>Work Logs</strong> and <strong>Productivity Logs</strong> are the two cards people most often mix up, so keep them separate: Work Logs records that a piece of physical work got done (its drill-down structure — Work Package to Location, Location to Work Package, Scheduled/WBS view, and so on — is set once per project in <strong>Project Settings → Work Logs Templates</strong>), while Productivity Logs records the hours and quantities an employee spent against a Phase Code, for productivity and cost reporting. A Work Log moves through <strong>Submitted Work Logs</strong> then <strong>Approve Work Logs</strong>; a Productivity Log moves through its own configurable <strong>Approval Workflow</strong>. Both ultimately roll into the plant's Progress % and into <strong>Detailed Work Logs</strong>, the full exportable table of every WBS log.</p>",
+        "intro": "<p>The <strong>Progress</strong> page of a plant is a set of cards, one for each kind of field record. The plant name is shown as an orange tag at the top. Click a card to open that screen.</p>",
+        "images": [
+          {
+            "src": "assets/product/field-works/202.jpg",
+            "caption": "The Progress cards of a plant"
+          }
+        ],
         "definitions": [
           {
             "term": "Work Logs",
-            "definition": "The card where a foreman or field engineer logs completion of physical work at each step of construction. The screen shows an **Entity** picker, status chips (Not yet started, Ready to work, In Progress, Completed), a logging-mode choice (**Single Log**, **Bulk Log - Work log**, **Bulk Log - Quantity**, **Bulk Log - Work Hours**) and a **Location Types** tree with a search box. On Arena Steel Plant - Phase 1 (Piperack) the tree shows **Media** and **Footing**; opening Footing lists its work packages (for example **EXC-1 | Excavation for footing**, **ARN-MA-1 | Marking for Footing**, **ARN-CO-1 | Concrete Laying for Footing**). Click a work package and the right side shows a grid of **Super Locations** (AS Civil) by series (Series 1 to 4) with one coloured cell per location (Footing 1 to Footing 4): grey is Not yet started, blue Ready to work, orange In Progress, green Completed. Click a cell to open the log form in Single Log mode. **Where this data comes from:** the Entity list, location types, super locations, locations and work packages are the structure built in **Project Setup → Works** (work packages are linked to a location type through the Activities Sequence template). The form shows Entity, Super Location, Location, Work Package, Work Package Description and **Estimated Quantity (Specific to this location)** (45 Cum for EXC-1 at Footing 1) as read-only values copied from Works. You enter **Work Completed**, **Actual Quantity (Specific to this location)**, **Worked On Date**, **Actual Hours (Optional)**, **Comments** and files, then **Submit**. The form also has **Follow Up Actions**, **See History**, **Raise a Restraint**, **Chat** and **Tagged Files**. In the bulk modes each location cell has a box (percentage, quantity or hours) with SuperLocation and From Location filters, **Clear**, and a **Log Work**, **Log Quantity** or **Log Hours** button. **Which setting changes it:** the drill-down shape follows **Project Settings → Work Logs Templates** (this project uses Work Package to Location Logging). **Where it goes next:** **Submitted Work Logs**, **Approve Work Logs**, **Detailed Work Logs**, the **Recent Work Logs** panel on **My Desk**, and the progress dashboards in **Data Analytics & Insights**."
+            "definition": "Log completion of the work at each step of construction."
           },
           {
             "term": "Submitted Work Logs",
-            "definition": "A day-by-day feed of every Work Log submitted from the field (for example \"Work Logs of 2nd April 2026\"). Each entry reads \"<user> has logged the work for <Entity> | <Super Location> | <Location> | <work package> | <activity> | Percentage - (0 -> 100) at <time> | Latitude | Longitude | Worked on Date | Source : Bulk Log\" and has a kebab menu. The page has two tabs, **Work Logs** and **Reconciliation** (a table of Entities, Super Locations, Locations Type, Locations, Activities, Work Packages, description, Percentage Complete, Estimated Quantities, Actual Quantity, User and Logged on, with Manage Columns), a status legend (Not Ready, Ready, In Progress, Completed, Rejected) and the buttons **Download Excel** and **Bulk Delete**. **Filters:** Filter by Range, Users, Type of log (Hours, Quantity, Percentage), Entities, Super Locations, Location Types, Locations, Activities, Work Packages and Status (Ready, In Progress, Completed, Not Ready, Rejected). **Where the filter lists come from:** Users are the project's system users (the same people as the Pending Actions list on My Desk and the Approvers list in Productivity Logs); Entities are the plant's entities; Super Locations, Location Types and Locations stay empty until you pick an Entity and then follow the Works tree; Activities are the activity names from **Global Data → Construction Types → Global Work Packages → Activities** that this project uses. **Where it goes next:** the same entries appear as **Recent Work Logs** on My Desk (top rows, with a See All link to this screen), then in **Approve Work Logs** and **Detailed Work Logs**."
+            "definition": "All submitted work logs of the project, shown date-wise."
           },
           {
             "term": "Approve Work Logs",
-            "definition": "The review screen for Work Logs, with two tabs: **Approve Work Logs** and **Summary**. The first tab has a **Bulk Approval** switch, **To Be Approved** and **All** buttons, filters for Users, Entities, Super Locations, Status and Date (Apply, Clear) and **Download Excel**. **All** lists one blue row per work package and date (for example \"Mixing Building | Civil Substructure | Footing | EXC-1 | 2nd April 2026\"); click a row and the right side shows **History**, **Tagged Files**, **Work Logs**, **Attachments** and **View Graph**, the work package description and the history lines (for example \"Percentage of work completed has been updated from 0 to 100\", by Ravi Ravi, status **COMPLETED**). On Arena Steel Plant - Phase 1 **To Be Approved** is empty because the bulk logs went straight to Completed, so nothing is waiting for approval. The **Summary** tab shows the date and a **Work Executed** table by Entity and Location Type: Total Locations, Completed Today, Cumulative Completed and % Complete. Total Locations comes from the locations built in **Project Setup → Works**; Completed counts come from the work logs. A rejected log goes back to the submitter. The Users list is the project's 32 system users and Entities are the plant's entities."
+            "definition": "All work logs that go through approval, shown date-wise."
           },
           {
             "term": "Productivity Logs",
-            "definition": "A separate card from Work Logs: it records the hours and quantities an employee spent against a **Phase Code**, for productivity and cost analysis, rather than the physical completion of a work package. It has six views: **Create**, **Logs**, **Data Summary**, **Issues**, **Approval Workflow** and **Reconciliation**. **Create** has two steps, **Step 1 Log Time** and **Step 2 Log Quantity**. You must first pick a date range (the app says \"Select date range to proceed\"), then **Create Log** offers **Add Employees**, **Add Crews**, **Clone Log** and **Import Log** (marked AI). The table has **Employee***, **Entities**, **Super Locations**, **Locations**, **Phase Code***, **Revised Budgeted Hours**, **JTD Hours**, **Remaining Hours**, one hours column per day of the range, and row actions (add employee, duplicate, copy, delete). The buttons are **Set Phase Codes**, **Save As Draft**, **Submit**, **Export** and **Manage Columns**. **Logs** is a list with a filter and an **All** chip; **Issues** shows form workflow issues (counters Total, Approved, Rejected, with Download Excel and Filters); **Approval Workflow** lists the approval levels (Level, Level Description, Approvers, Workflow Type; **Create Level** takes a Workflow Type of All must approve or Any one can approve, a Description and Approvers picked from the project users); **Reconciliation** has Create Log, a filter and **Configure Rules**. **Where this data comes from:** the Employee list is the project roster from **Project Setup → People** (shown as \"ID - name\", 35 entries including three System Admin rows); **Add Crews** lists the **Project Crews** from Project Setup → People (empty on this project, so the crew list is empty); Entities, Super Locations and Locations follow the Works tree; the Phase Code list holds only what you chose in **Set Phase Codes**. **Which setting changes it:** **Project Settings → Productivity Log Settings**. **Where it goes next:** approved logs feed Data Summary and the productivity and cost reporting. For every button and screen in detail, including Import Log (AI), Reconciliation rules and the Data Summary phase code views, see **Productivity Logs**."
-          },
-          {
-            "term": "Set Phase Codes",
-            "definition": "The step in the **Create** view of Productivity Logs where you choose which phase codes can be logged against. The dialog has a search box, an A-Z sort, and a list of codes written as \"23.001.003 (Project Manager)\" with a type chip (Indirect or Non Productive) and a tick box; ticked codes move to a table of **Phase Code** and **Phase Code Type** on the right, and **Submit** applies them. **Where the list comes from:** the project's phase codes (Global Data → UOM, Phasecode & GL Codes, copied to **Project Setup → Phase Codes**, 963 codes on Arena Steel Plant - Phase 1). The dialog offers 108 of them, 63 Indirect and 45 Non Productive, and no Direct or Change Order codes, while this project's **Productivity Log Settings → Logging Type** is set to **Create Productivity Logs By Locations**. The exact rule that narrows the list is not shown in the product. Until you tick codes here, the **Phase Code** dropdown in each log row shows only \"None\"."
-          },
-          {
-            "term": "Data Summary",
-            "definition": "Productivity Logs' reporting view. The top tabs are **Timesheets**, **Quantities** and **Labor Units**, and each has sub-tabs **People**, **Crew**, **Phase Codes** and **Locations Type**. A **Select range** box (default: the last seven days) sets the week; the grid shows **Employee**, **Total Hours** and one column per day, followed by a **Total Hours** figure and an Employee / Total Hours table. It is built only from productivity logs that have been submitted, so on a project with no productivity logs it shows **No Data Available**."
-          },
-          {
-            "term": "RFI",
-            "definition": "Short for Request for Inspection: the card for raising a Work Inspection Request (WIR) before covering up completed work or starting the next activity. The list shows Create, search, To Be Approved / Rejected / ALL counters, Upload Excel, Download Excel, Filters, and Delete All; each WIR shows who raised it and when, its description and quantity, who it is assigned to, and a Start button. The Create RFI form can attach Connected Drawings (linked straight from Drawing Management) and Connected Quality Folders alongside the location, activity, quantity, UOM, and inspection date/time. **Where this data comes from:** the list shows the project's requests under **To Be Approved (0)**, **Rejected (0)** and **ALL (3)**. The **Create RFI** form is the RFI template set in **Global Data → Forms** and assigned in **Project Setup → Forms → Assign Templates**, so its fields (Project Name, Project No., Title of RFI, Inspection First/Second/Third, Name of the Test, Reference Code, Methodology, Contractor's Signature, Map and configurable fields) can differ between companies. The top of the form is the company letterhead (address, phone and zip code). **Tree Versions** is the current plant, **Entity**, **Location Type**, **From Location**, **To Location**, **Activities** and **Work Packages** cascade down the Works tree, and **Connected Drawings** and **Connected Quality Folders** link to Project Setup → Drawings and Quality. **Who can raise it:** users given Create rights on RFI in **Project Setup → Forms → Assign Users**. **Where it goes:** approved RFIs appear in **Approve** queues (My Desk Approvals), RFI delays in Data Analytics, and an RFI can switch on work logging when **Worklogs enable by Certified RFIs** is chosen in Project Settings."
-          },
-          {
-            "term": "Issues",
-            "definition": "Two sub-tabs: Form Issues (problems raised on a form's own content — RFI, Submittals, Change Orders, Custom Forms — tracked Open → Rectified, with an Open/Rectified counter) and Form Workflow Issues (problems raised at a specific approval Level, listed with WFL Number, Level, raised date/time, raised by, image, chat, Assign To, and Due Date). **Where this data comes from:** Form Issues are raised from a form's own content and Form Workflow Issues are raised at an approval level of RFI, Submittal, Change Order, Delay Form or Custom Forms. The Form Issues tab shows **0 Issues Open** and **0 Issues Rectified** counters, Download Excel and Filters. Priorities and due hours are set in **Project Settings → Workflow Issues**. These same issues are counted in **My Actions → Issues → Form Issues** on My Desk."
+            "definition": "Log hours and quantities of the construction work to measure productivity."
           },
           {
             "term": "Site Photographs",
-            "definition": "Two tabs: Work Logs Site Photograph (photos attached to a specific Work Log) and Site Photograph, a standalone dated photo/video feed for the plant with Create a post, a people search, and date-range filters (ALL / THIS WEEK / LAST WEEK / LAST MONTH). Used for a general visual record that does not need a formal Work Log entry. **Where this data comes from:** the Work Logs Site Photograph tab shows photos attached to Work Logs (through the **Upload Files** control on the work log form) for the plant chosen in its **Tree Version** dropdown; it shows \"No work logs to display\" until a work log has a photo. The Site Photograph tab has **Create a post**, **Photo / video**, **Search by people** and **All** filters, a Tree Version dropdown and date filters ALL, THIS WEEK, LAST WEEK and LAST MONTH; it is empty until someone posts. Nothing here feeds approvals or analytics; it is a visual record for the plant."
+            "definition": "Post pictures and updates from the construction site and collaborate."
           },
           {
             "term": "Ready Works",
-            "definition": "A planning view, not a log-entry screen: the same Entity and status filters as Work Logs (Not yet started / Ready to work / In Progress / Completed), then Location Types with location counts, drilling into individual Locations. Shows a supervisor what is genuinely available to start next, based on status already recorded in Work Logs. **Where this data comes from:** the Entity dropdown and **Location Types** with their location counts come from **Project Setup → Works**; for Piperack the list shows **PB Mark No** (4 locations), **TS Mark No** (4), **Footing** (4) and **Media** (3), and picking a type lists its locations (PB 01 to PB 04). Statuses come from the Work Logs already submitted, so Ready to work turns to In Progress and Completed as work is logged."
+            "definition": "Status of all works for day-to-day planning: **Ready to Work**, **In-Progress**, **Completed**."
           },
           {
             "term": "Meeting Minutes",
-            "definition": "Two tabs, Meetings and Actions. The Create form pre-fills project details (Customer, Project Title, Manager, Project No.) then takes Meeting Title, Location, Date, the usual location/activity context, Connected Drawings, a Discussion field, and an Actions sub-table (Responsible, Due Date, Action) so decisions turn into assigned, dated follow-ups that stay visible in the card's own Actions tab across meetings. **Where this data comes from:** the **Create Form** dialog shows the company letterhead and General Information (Project Title and Project No. come from the project, for example Arena Steel Plant - Phase 1 and ST-01; Customer, Project Location and Manager stay blank unless filled), then Meeting Title, Location, Date, a **Tree Versions** dropdown (all 13 plants), Entity, Location Type, From/To Location, Activities, Work Packages and Connected Drawings. In the **Discussion** table (Discussion (Points), Actions, **Responsible**, Due Date) the Responsible dropdown is the whole project roster from **Project Setup → People** (35 entries shown as \"ID - name\"). Saved action rows appear in the card's **Actions** tab (\"Currently there are no actions recorded for Meeting Minutes\" until then). Who can create is set in Project Setup → Forms → Assign Users, and Meeting Minutes priorities come from Project Settings → Progress Forms."
+            "definition": "Create and update meeting minutes forms."
           },
           {
-            "term": "Equipment Logs",
-            "definition": "Logs equipment usage against a specific Work Order (not the WBS tree that Work Logs uses): pick a Work Order and date, then record Equipment / UOM / Quantity from the items available on that order. Feeds work-order cost and progress reporting rather than the plant's Progress %. **Where this data comes from:** **Create Equipment Log** opens a dialog with **Work Order** (dropdown), **Select Date** and an Equipment / UOM / Quantity table. The Work Order list holds the project's work orders from **Project Setup → Workorder** (the table fills with that order's items; with none selected it says \"No items found for the work order\"). On Arena Steel Plant - Phase 1 no work orders exist, so the dropdown is empty and no log can be created. Approval levels for these logs are set in **Project Setup → Forms → Approval Workflow** (Equipment Logs is on that form list). The list shows **No Data** until a log is saved."
+            "term": "Issues",
+            "definition": "Issues raised for RFI, Submittals, Change Orders and custom forms."
           },
           {
-            "term": "Material Logs",
-            "definition": "Logs material consumption against a specific Work Order, in the same pattern as Equipment Logs: Work Order, date, then Material / UOM / Quantity. **Where this data comes from:** same pattern as Equipment Logs: the Work Order dropdown is fed by **Project Setup → Workorder**, and the Material / UOM / Quantity rows come from the selected order. Approval levels are set in **Project Setup → Forms → Approval Workflow** (Material Logs is on that list)."
-          },
-          {
-            "term": "Manpower Logs",
-            "definition": "Logs labor headcount against a specific Work Order, in the same pattern as Equipment and Material Logs: Work Order, date, then Manpower / Quantity. Distinct from Labor Logs (below), which is tied to a schedule Activity rather than a Work Order, and from Productivity Logs, which tracks hours against a Phase Code. **Where this data comes from:** same pattern as Equipment Logs: the Work Order dropdown is fed by **Project Setup → Workorder**, and approval levels are set in **Project Setup → Forms → Approval Workflow** (Manpower Logs is on that list)."
+            "term": "Equipment Logs, Material Logs, Manpower Logs",
+            "definition": "Collections of all equipment, material and manpower logs in the project."
           },
           {
             "term": "Restraints",
-            "definition": "Records anything blocking progress on a work package — material shortage, access, a pending design — so it stays visible until closed. The Add Restraint form takes Tree Version, Entity, Super Location, Location, Work Package, Restraint Category, Detailed Description, Priority, an optional file, a Start/End Date, and an assignee. Restraints move through a three-stage loop tracked as Open / Rectified / Verified counters — one stage stricter than the Issues card's Open → Rectified. **Where this data comes from:** **Create Restraint** takes Tree Version* (13 plants), Entity*, Super Location* (for Piperack: AS Civil, AS Trestle Erection, AS Pipe Bridge erection, AS Piping), Location*, Work Package, **Restraint Category*** (Site & Technical Constraints, Seasonal/Weather Constraints, Safey constarints, Resource Constraints, Others, exactly the list in **Global Data → Settings → Hindrance Category**), Detailed Description*, **Priority*** (High, Medium, Low from **Project Settings → Punch Lists & Restraints → Restraints Priority**: High 4 hours, Medium 24 hours, Low 48 hours), Upload File, Start Date, End Date and **Assign to**. The card shows counters **0 Issues Open**, **0 Issues Rectified** and **0 Issues Verified** and a **Restraints Rectification** tab. Open restraints are counted in **My Actions → Issues → Restraints** on My Desk."
+            "definition": "Create restraints that may impact the progress of project work."
           },
           {
             "term": "Inventory Management",
-            "definition": "The card described in-product as a collection of pickup tickets: field teams raise a Site Material Request to pull material from stock, with a Requested By, Required Date, the usual location context, Logistics and Handling Instructions, and a line-item table of Materials/Quantity/UOM. Submitted requests go to approval; rejected ones move to the Rejected Site Material Requests tab. **Where this data comes from:** the card opens on **Site Material Requests** with a **Rejected Site Material Requests** tab, **Add**, **Add Custom Columns**, **Export**, Filters and Manage Columns. **Add** opens the **Site Material Request** form (route type pickup ticket): company letterhead, **Project*** (ST-01 - Arena Steel Plant - Phase 1), plant, Entity, Location Type, locations, Activities, Work Packages, **Order Date**, **Ship To**, **Requested By*** (32 project users shown as \"ID - name\"), **Required Date***, configurable fields (Required to execute which work, Logistics, Handling Instructions) and a Materials table (**Select Material**, Product Description, Quantity, UOM, Remarks) with **Submit for Approval**. The material and UOM lists are chosen in the table (their source was not visible without picking a row). For the inventory side of material, see the **Inventory Management** module."
+            "definition": "Collection of pickup tickets."
           },
           {
             "term": "Procurement",
-            "definition": "The card described in-product as a collection of requisitions: a Requisition list with Total Items, On-Site Contact, Requested by, RFQs Linked, and inline Approve / Reject / Assign actions, plus a Workflow Issues sub-tab for problems raised against the requisition's own approval workflow. This is the field-level entry point into wider purchasing — an approved requisition can have Requests for Quotation (RFQs) linked to it. **Where this data comes from:** the card opens on **Create Requisition** with a **Workflow Issues** tab. The table lists Requisition Form, Total Items, Project ID / Project Name, On-Site Contact, Requested by, RFQs Linked, Approve, Reject, Assign, Status, Tag and Actions, with Add Custom Column, Save Layout, Filters and Manage Columns; it shows \"No Data Available\" until a requisition is raised. These are the same requisitions managed in the **Procurement** module, so an approved requisition can have RFQs linked to it there."
+            "definition": "Collection of requisitions."
           },
           {
-            "term": "Labor Logs",
-            "definition": "Records which labor resources worked on a specific schedule Activity on a given date: Tree Version, Entity, Super Location, Activity, Actual Date, then Linked Resources and Additional Resources. Lighter-weight and activity-linked, unlike the Work-Order-linked Manpower Logs and the Phase-Code-linked Productivity Logs. **Where this data comes from:** **Create** opens the **Resource Log** dialog: Tree Version, **Entity** (6 on Pellet Plant), **Super Location** (for Piperack: AS Civil, AS Trestle Erection, AS Pipe Bridge erection, AS Piping), **Activity**, **Actual Date**, **Linked Resources**, **Additional Resources**, Clear All and Submit. Entity and Super Location follow the Works tree; the source of the Linked Resources list was not visible without an activity selected. The screen shows \"No Resource Logs Found\" until a log is saved."
-          },
-          {
-            "term": "Machinery Logs",
-            "definition": "The same Activity-linked resource log as Labor Logs, scoped to machinery instead of labor. Distinct from Equipment Logs, which logs equipment against a Work Order with quantity and UOM rather than against a schedule Activity — the product has two separate ways to track equipment, and it is easy to confuse the two by name. **Where this data comes from:** the same Resource Log dialog as Labor Logs (Entity, Super Location, Activity, Actual Date, Linked Resources, Additional Resources), scoped to machinery. The screen shows \"No Resource Logs Found\" until a log is saved."
+            "term": "Labor Logs, Machinery Logs",
+            "definition": "Collections of all labor logs and machinery logs."
           },
           {
             "term": "Detailed Work Logs",
-            "definition": "A single, exportable table of every work package at every location of the plant (697 rows on Pellet Plant, shown 50 at a time) with search, **Export**, **Filters**, **Manage Columns** and a saved layout. Columns: Entities, Super Locations, Locations Type, Locations, Work Packages, Work Package Description, UOM, Phase Codes Details, Revised Budgeted Quantity, Actual Quantity, WE Quantity, Revised Budgeted Hours, Actual Hours, Specifications, Schedule ID and description, Detailed Phase Code and description, Planned, Forecasted, Client, Skyline and Actual Start and End dates, and **Users** (the people assigned to that work package). **Where this data comes from:** the rows, quantities, hours, phase codes and dates are the work packages built and budgeted in **Project Setup → Works** (Other Attributes) and the schedule links in **Project Setup → Schedule**; the Users column is the work package assignment from Works → People. Actual Quantity and Actual Hours are filled by work logs that record quantity or hours; a work log recorded as a percentage does not add quantity, so a 100% log can sit beside an Actual Quantity of 0. The table is read-only: use it to check or export the whole picture."
-          },
-          {
-            "term": "Work Logs and the Project Settings that shape them",
-            "definition": "Five project settings change what Progress and Quality show. **Work Logs Templates** chooses the drill-down for Work Logs (seven options; it can be set for the whole project or per Tree Version). **Quality Work Logs Templates** does the same for Quality (two options). **Project Work Measurement** decides how completion % is measured: **Percentage Based** (the activity's percentage weightage, selected on Arena Steel Plant - Phase 1) or **Effort Based** (man hours). **Dashboard Percentages** decides how dashboard percentages are calculated: **Worklogs** only (selected here), **Workorder and worklogs**, **P6, Workorder and Worklogs** (planned from P6) or **Milestone, Workorder and Worklogs** (planned from milestones), plus an **RFI** view. **Productivity Log Settings** controls Productivity Logs (see that card). Changing any of them changes how the same logs are shown or counted; it does not delete data. For how the screen differs under each of the seven Work Logs templates, see **Work Logs**."
-          },
-          {
-            "term": "Productivity Log Settings (Project Settings)",
-            "definition": "A project setting with three tabs. **Logging Type** has two options: **Create Productivity Logs By Phase Code** or **Create Productivity Logs By Locations** (selected on Arena Steel Plant - Phase 1). **Timesheets** lists the standard fields of the timesheet log: Employee, Phase Code, Entity, Super Location, Location, Craft, Class, Revised Budgeted Hours, JTD Hours and Remaining Hours, each with Required, Show on cards and a field-type choice, plus **Add Field** for your own fields. **Quantity** lists Phase Code, Entity, Super Location, Location, Time Sheet Hours, Revised Budgeted Quantity, JTD Quantity and Remaining Quantity, also with **Add Field**. Save Changes applies it. The fields you tick here decide which columns appear in **Productivity Logs → Create**."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Create a productivity log",
-            "steps": [
-              "Go to Field Works → Tree Version → [Plant] → Progress → Productivity Logs → Create.",
-              "Pick the date range at the top (without it Create Log shows \"Select date range to proceed\").",
-              "Click Set Phase Codes, tick the codes to log against, and click Submit.",
-              "Click Create Log, then choose Add Employees (one row per person), Add Crews (one row per member of a crew), Clone Log (copy an earlier log) or Import Log (AI).",
-              "In each row pick the Employee, Entity, Super Location, Location and Phase Code, then type hours in the day columns. Complete Step 1 Log Time, move to Step 2 Log Quantity, then click Save As Draft or Submit."
-            ],
-            "note": "Whether logs are created by Phase Code or by Locations is set in Project Settings → Productivity Log Settings → Logging Type. If Add Crews shows an empty crew list, no crews exist yet in Project Setup → People → Project Crews."
-          },
-          {
-            "title": "Review, approve, or reject productivity logs",
-            "steps": [
-              "Open the **Productivity Logs** card and go to its **Logs** view.",
-              "For Direct and Change Order phase codes, act from the **Quantities** tab; for Indirect and Non-Productive phase codes, act from the **Timesheets** tab.",
-              "Use **Download Excel** to export, or the kebab menu to delete a log."
-            ],
-            "note": "Regular field users see only their own logs, without Approve/Reject buttons. Rejected logs automatically appear in the card's Issues view with the approver's comments."
-          },
-          {
-            "title": "Raise an RFI from the field",
-            "steps": [
-              "Go to **Field Works → Tree Version → [Plant] → Progress → RFI**.",
-              "Click **Create** and fill in the RFI form.",
-              "Click **Save As Draft** to hold it, or **Submit For Approval** if an approval workflow is configured.",
-              "Once live, use **Follow Up Actions** for connected forms, drawings, issues, or tree elements, **See History** for the audit trail, and **Chat** for notes, images, and video."
-            ],
-            "note": "Drafts are visibly tagged \"Draft\"; a submitted RFI gets a permanent auto-generated ID and exposes Approve/Reject buttons to its assigned approvers.",
-            "images": [
-              {
-                "src": "assets/notion/request-for-information/001.jpg",
-                "caption": "Create button and the RFI form",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/request-for-information/002.jpg",
-                "caption": "A draft RFI carrying the Draft label",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/rfis-request-for-information/001.jpg",
-                "caption": "An RFI log with Approve and Reject buttons for an approver",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/rfis-request-for-information/002.jpg",
-                "caption": "An RFI log after it has been approved or rejected",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/request-for-information/003.jpg",
-                "caption": "Filters and the Chat option on an RFI card",
-                "step": 4
-              },
-              {
-                "src": "assets/notion/rfis-request-for-information/003.jpg",
-                "caption": "Assign To, Due Date and Chat on an RFI log",
-                "step": 4
-              }
-            ]
-          },
-          {
-            "title": "Record meeting minutes and track the resulting actions",
-            "steps": [
-              "Open the **Meeting Minutes** card and go to its **Forms** tab.",
-              "Click **Create**, fill in the meeting details, then click **Save As Draft** or **Submit**.",
-              "Use the **Actions** tab — within one meeting or across all meetings — to track each action item's status, assignee(s), and due date.",
-              "Use Download, Share, Print, and the built-in chat to collaborate on the minutes."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/meeting-minutes/001.jpg",
-                "caption": "The Create button opening a new meeting form; drafts carry a DRAFT tag",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/meeting-minutes/003.jpg",
-                "caption": "The Actions tab listing every action item",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/meeting-minutes/002.jpg",
-                "caption": "The Form and Actions options inside a meeting",
-                "step": 4
-              }
-            ]
-          },
-          {
-            "title": "Raise and close out a restraint",
-            "steps": [
-              "Open the **Restraints** card under Progress and click **Add Restraint**.",
-              "Fill in Tree Version, Entity, Super Location, Location, Work Package, Restraint Category, Detailed Description, and Priority, and optionally attach a file.",
-              "Set a Start Date/End Date and Assign to the person who will clear it, then Submit.",
-              "Work the item through its **Open / Rectified / Verified** stages, using the **Restraints Rectification** tab to record how each was fixed.",
-              "Use filters and **Download Excel** to report on open restraints."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/restraints/001.jpg",
-                "caption": "The Restraints card with the Add Restraint button",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/restraints/002.jpg",
-                "caption": "The restraint form with its fields",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/restraint-rectification/001.jpg",
-                "caption": "Restraint Rectification, listing how restraints are to be fixed",
-                "step": 4
-              },
-              {
-                "src": "assets/notion/restraint-rectification/002.jpg",
-                "caption": "Guidance text shown on a restraint for users to follow",
-                "step": 4
-              },
-              {
-                "src": "assets/notion/restraints/003.jpg",
-                "caption": "Filters and the table and card views for restraints",
-                "step": 5
-              }
-            ]
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/notion/site-posts/001.jpg",
-            "caption": "Create a Post, which shows to every user on the project"
-          },
-          {
-            "src": "assets/notion/site-posts/002.jpg",
-            "caption": "Likes and comments on a site post"
-          },
-          {
-            "src": "assets/notion/issues-form-issues/001.jpg",
-            "caption": "Issues raised from forms: search by ID or status"
-          },
-          {
-            "src": "assets/notion/issues-form-issues/002.jpg",
-            "caption": "Download Excel and Filters for form issues"
-          },
-          {
-            "src": "assets/notion/issues-form-issues/003.jpg",
-            "caption": "Form issues in table and card views"
-          },
-          {
-            "src": "assets/notion/issues-form-workflow-issues/001.jpg",
-            "caption": "Form Workflow Issues: open and closed approval issues"
-          },
-          {
-            "src": "assets/notion/issues-form-workflow-issues/002.jpg",
-            "caption": "Download Excel and Filters for workflow issues"
-          },
-          {
-            "src": "assets/notion/issues-form-workflow-issues/003.jpg",
-            "caption": "Form workflow issues in table and card views"
-          },
-          {
-            "src": "assets/notion/submitted-work-logs/001.jpg",
-            "caption": "Submitted Work Logs: every work log recorded on the plant"
-          },
-          {
-            "src": "assets/notion/submitted-work-logs/002.jpg",
-            "caption": "Choosing a time range for submitted work logs"
-          },
-          {
-            "src": "assets/notion/submitted-work-logs/003.jpg",
-            "caption": "The Users filter on submitted work logs"
-          },
-          {
-            "src": "assets/notion/work-package-to-tag-view/001.jpg",
-            "caption": "Work Package to Tag view with work packages listed on the left"
-          },
-          {
-            "src": "assets/notion/work-package-to-tag-view/002.jpg",
-            "caption": "Logging work completion, quantity, hours and dates for a tag"
-          },
-          {
-            "src": "assets/notion/work-package-to-tag-view/003.jpg",
-            "caption": "The Work Completed checkbox and percentage field"
-          },
-          {
-            "src": "assets/notion/work-package-to-tag-view/004.jpg",
-            "caption": "Selecting several items for bulk logging"
-          },
-          {
-            "src": "assets/notion/work-package-to-tag-view/005.jpg",
-            "caption": "Entering a quantity for bulk logging"
-          },
-          {
-            "src": "assets/notion/work-package-to-tag-view/006.jpg",
-            "caption": "Logging hours in bulk"
-          },
-          {
-            "src": "assets/notion/system-to-tag-view/001.jpg",
-            "caption": "System to Tag view with CWAs along the top and Ready and All buttons"
-          },
-          {
-            "src": "assets/notion/system-to-tag-view/002.jpg",
-            "caption": "Selecting a tag to see its work packages and statuses"
-          },
-          {
-            "src": "assets/notion/worklogs-in-scheduled-view/001.jpg",
-            "caption": "Scheduled view listing the project tree in order"
-          },
-          {
-            "src": "assets/notion/worklogs-in-scheduled-view/002.jpg",
-            "caption": "Filters and column options in the scheduled view"
-          },
-          {
-            "src": "assets/notion/worklogs-in-scheduled-view/003.jpg",
-            "caption": "Logging work on Ready and In Progress entries"
-          },
-          {
-            "src": "assets/notion/worklogs-in-scheduled-view/004.jpg",
-            "caption": "Logging progress as a percentage with a radio button or slider"
-          },
-          {
-            "src": "assets/notion/worklogs-in-scheduled-view/005.jpg",
-            "caption": "Selecting entries and using Log Work for bulk logging"
+            "definition": "A comprehensive table view of all WBS work logs."
           }
         ]
       },
       {
         "heading": "Work Logs",
-        "intro": "<p>Work Logs is one card with several possible layouts. <strong>Project Settings → Work Logs Templates</strong> chooses the layout for the project, and the <strong>gear</strong> beside each option decides what the log form asks for. A <strong>Module Admin</strong> or <strong>PM</strong> sets this once; <strong>Field Users</strong> then log work with whichever layout the project uses.</p><p>Seven templates exist. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com.</p>",
+        "intro": "<p><strong>Work Logs</strong> is where site teams record how much of each work package is done at each location. The screen layout follows the logging level chosen in Project Settings.</p>",
+        "images": [
+          {
+            "src": "assets/product/field-works/203.jpg",
+            "caption": "Work Logs in Single Log mode"
+          },
+          {
+            "src": "assets/product/field-works/204.jpg",
+            "caption": "The work log form of one location"
+          }
+        ],
         "definitions": [
           {
-            "term": "Which template does my project use?",
-            "definition": "Open **Project Settings → Work Logs Templates**. The ticked option under **Work Log Reference – At what level do you want to log works?** is the layout. The **Project / Tree Version** switch at the top lets the setting apply to the whole project or to one Tree Version. The seven options, in page order: **Work Package to Location Logging**, **Location to Work Package Logging**, **Location to Work Package bulk logging**, **Super Location to Location Logging**, **Worklogs in Scheduled View**, **Quantity Work Logging**, **Worklogs enable by Certified RFIs**."
+            "term": "Entity",
+            "definition": "Drop-down (with search) of the entities of the plant, such as Piperack or a building. The grid shows the selected entity."
           },
           {
-            "term": "Which projects use which template",
-            "definition": "Each project uses the logging layout chosen in its settings: **Work Package to Location Logging**, **Location to Work Package Logging** or **Super Location to Location Logging**. Check **Project Settings** to see which one your project uses."
+            "term": "Status colours",
+            "definition": "The legend at the top right: grey **Not yet started**, blue **Ready to work**, orange **In Progress**, green **Completed**. Each cell of the grid is coloured by its status."
           },
           {
-            "term": "The three live templates side by side",
-            "definition": "**Starts with:** Work Package to Location = a tree of **Location Types** and their work packages on the left; Location to Work Package = **Level 2 Types** on the left (each opens to its super location); Super Location to Location = no left tree, one panel per super location.\n**Grid:** Work Package to Location = pick a work package, then a grid of super locations by series with one coloured cell per location; Location to Work Package = a matrix with locations as rows and work packages as columns; Super Location to Location = blue location tiles grouped under each super location, and the work packages appear in a pane on the right after you click a tile.\n**Logging modes:** **Single Log**, **Bulk Log - Work log**, **Bulk Log - Quantity** and **Bulk Log - Work Hours** appear for the first two. The Super Location layout showed no mode choice, only single logs.\n**Filters:** Location to Work Package has **Location Type**, **Level 3** and **Work Package** drop-downs; Work Package to Location has **SuperLocation** and **From Location** filters in the bulk modes; the Super Location layout has **Ready / Delayed / Completed / All** chips and **Search Location**. All three have a **Filters** button.\n**All three:** an **Entity** picker, a colour legend (Not yet started grey, Ready to work blue, In Progress orange, Completed green), **Upload Excel**, **Download Excel**, and the same log form behind each cell."
+            "term": "Single Log",
+            "definition": "Opens one location at a time. Click a cell to open its log form."
           },
           {
-            "term": "Work Package to Location Logging",
-            "definition": "Pick the work, then see its locations. You choose a location type and a work package on the left; the right shows every super location and location with a coloured status cell. Click a cell to open the log form. Selected on Arena Steel Plant - Phase 1 (Piperack: **Media**, **Footing**; work packages such as **EXC-1 | Excavation for footing**). The page describes it as \"Displays status of Locations w.r.t each Work Package\"."
+            "term": "Bulk Log - Work log",
+            "definition": "Adds a tick box to each super location and cell and a percentage box in each cell, so you can log progress for many locations together with the **LOG WORK** button. **SuperLocation** and **From Location** drop-downs and **Clear** narrow the grid."
           },
           {
-            "term": "Location to Work Package Logging",
-            "definition": "Pick the place, then see all the work in it. On **Arena Residential Project** (Tree Version **Tower Spire**, entity **Tower**) the left list **Level 2 Types (3)** shows **Ground Floor**, **Floor** and **Basements**; the right shows a matrix with locations (G01, G02, Corridor 1 and so on) as rows and work packages (TW-Barbending-1 | Wall barbending - Mivan and so on) as columns. A cell shows the work package code and a chevron, and \"-\" where that work package is not mapped to the location. The page describes it as \"Displays status of Work Packages mapped to each Location in each Super Location\"."
+            "term": "Bulk Log - Quantity",
+            "definition": "Same bulk grid; the button becomes **LOG QUANTITY** and you log quantities."
           },
           {
-            "term": "Super Location to Location Logging",
-            "definition": "Pick a super location, then a location, then the work. On **City Development Project** (Tree Version **Package 8**) each super location is a panel (for example **J-119 to J-133**, **Locations : 6**) with blue tiles for its locations. Click a tile and the pane on the right heads \"J-119 to J-133 | Manhole | J-120\" and lists the work packages mapped to that location (for example **Item - 519 | Cable Protection/ Covering in Trench ...**), each with an arrow that opens the log form. The page describes it as \"Displays Locations present in each Super Location in a structured approach\"."
+            "term": "Bulk Log - Work Hours",
+            "definition": "Same bulk grid; the button becomes **LOG HOURS** and you log hours worked."
           },
           {
-            "term": "Location to Work Package bulk logging",
-            "definition": "The settings page says: \"Displays status of Work Packages mapped to each of Location using multiple filters. Raising Restraints against multiple Locations\". The bulk modes you do see on the first two layouts are described under **Bulk logging** below. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
+            "term": "Location Types",
+            "definition": "Left list with a search box. Each group (for example **Media**, **Footing**) holds work packages such as an excavation or piping erection package. Click a package to show its locations in the grid, with super locations as rows and series as columns."
           },
           {
-            "term": "Worklogs in Scheduled View",
-            "definition": "The settings page says \"Presents the Tree Version in WBS form\" (a work breakdown structure). Its gear opens **Advance Settings** with **Slider** or **Radio Buttons**, an **Interval** value (20 by default) and a **Preview** slider, with **Close** and **Save**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
-          },
-          {
-            "term": "Quantity Work Logging",
-            "definition": "The settings page says \"Presents the Tree Version in WBS form\". Its gear opens **Advanced Settings** with **Day**, **Week** and **Month** choices and a **Submit** button. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
-          },
-          {
-            "term": "Worklogs enable by Certified RFIs",
-            "definition": "The settings page says \"Worklogs will get enabled for the locations for which RFIs are certified\". Its gear opens the same **Advanced Settings** as Work Package to Location Logging. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
-          },
-          {
-            "term": "The gear: Advanced Settings",
-            "definition": "Each template has a gear that opens **Advanced Settings** (view only unless you save). **Checkbox** = the user ticks a box to mark the work completed; **Text Box** = the user types the percentage completed; **Advanced Settings (interval)** = work is logged by interval. **Actual Start & End Dates** adds **Actual Start Date** and **Actual Finish Date** to the form. With Checkbox, **Required Fields** (**Percentage**, **Quantity**, **Hours**, **Comments**) can be made mandatory. With Text Box, **Interval Quantity Logging** (**Quantity** or **Measurement**) is available. **Select to enable an Auto Log option?** lets one value that is logged by hand (**Percentage**, **Quantity** or **Hours**) fill in the other two. Seen live: **Arena Steel Plant - Phase 1** all defaults; **Arena Residential Project** Text Box with Actual Start & End Dates, Interval Quantity Logging and Auto Log (Quantity), so its form shows **Cumulated Quantity** and a **CUMULATIVE QUANTITY** history table; **City Development Project** Text Box with Actual Start & End Dates and Auto Log (Percentage), so **Work Completed** is typed and **Actual Quantity** and **Actual Hours** are greyed."
-          },
-          {
-            "term": "The log form (all templates)",
-            "definition": "Opens from a cell or arrow with the work package and location as the title (for example **TW-Barbending-1 | G01**). Header buttons: **See History**, **Raise a Restraint**, **Chat**, **Tagged Files** (and **Follow Up Actions** on some). Read-only block: **Entity**, **Super Location**, **Location**, **Work Package**, **Work Package Description**, **Estimated Quantity (Specific to this location)** (shows \"Not provided to this specific location\" when none). You enter **Work Completed** (% or tick), **Actual Quantity (Specific to this location)**, **Worked On Date**, **Actual Hours (Optional)**, optional **Actual Start Date** / **Actual Finish Date**, **Comments** and **Upload Files**, then **Submit**."
-          },
-          {
-            "term": "Bulk logging",
-            "definition": "On the Work Package to Location and Location to Work Package layouts, choose **Bulk Log - Work log** to see a grid with **Select All**, a tick box per row and a percentage box per cell (100 by default on completed cells); **Bulk Log - Quantity** and **Bulk Log - Work Hours** do the same for quantities and hours. The **Work Package** drop-down is a multi-select with search and **Select All**. **Clear all** resets, and **LOG WORK** (or Log Quantity / Log Hours) submits the ticked cells. The grid stays empty until you pick work packages."
-          },
-          {
-            "term": "Where this data comes from",
-            "definition": "Entities, super locations, locations and work packages are the structure built in **Project Setup → Works**; the work packages offered per location come from the mapping there. The **Filters** button opens **Custom Columns Filter**, which lists the custom location columns of the project (on Arena Residential Project: **TEST DATE** and **Type of Flat**). The Progress tab shows more cards on projects that have extra forms switched on (Arena Residential Project showed 22 cards, including Submittals, Change Orders, Delay Forms and Transmittals; Arena Steel Plant - Phase 1 shows 18)."
-          },
-          {
-            "term": "Where Work Logs go next",
-            "definition": "Whatever the template, a submitted log goes to **Submitted Work Logs**, then **Approve Work Logs**, then **Detailed Work Logs** and the progress dashboards in **Data Analytics & Insights**. The template changes how you find the work and what the form asks, not where the data ends up."
+            "term": "Work log form",
+            "definition": "Opens when you click a cell. It shows **Entity**, **Super Location**, **Location**, **Work Package**, **Work Package Description** and **Estimated Quantity**. You enter **Work Completed** (tick box), **Actual Quantity**, **Worked On Date**, **Actual Hours (Optional)**, **Comments** and **Upload Files**, then **Submit**. Buttons above the form: **Follow Up Actions**, **See History**, **Raise a Restraint**, **Chat**, **Tagged Files**."
           }
         ],
         "procedures": [
           {
-            "title": "Find out which Work Logs template your project uses",
+            "title": "Log work for one location",
             "steps": [
-              "Open **Project Settings → Work Logs Templates**.",
-              "Read which option under **Work Log Reference** is ticked. Use the **Project / Tree Version** switch to see whether one Tree Version differs.",
-              "Open the gear beside the ticked option to see how the form behaves (Text Box or Checkbox, dates, auto log). Close it without saving.",
-              "If nothing is ticked or the layout looks wrong, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
-            ]
-          },
-          {
-            "title": "Log work with Work Package to Location Logging",
-            "steps": [
-              "Open **Field Works → Tree Version**, choose the plant, then **Progress → Work Logs**.",
-              "Pick the **Entity** and a **Location Type**, then click a work package.",
-              "Click the coloured cell for the location. Grey is not yet started, blue ready, orange in progress, green completed.",
-              "Fill in **Work Completed**, **Actual Quantity**, **Worked On Date**, hours and comments, add files, then click **Submit**."
-            ]
-          },
-          {
-            "title": "Log work with Location to Work Package Logging",
-            "steps": [
-              "Open **Progress → Work Logs** and pick the **Entity**.",
-              "Choose a group under **Level 2 Types** and open its location group. Use **Location Type**, **Level 3** and **Work Package** to narrow the matrix.",
-              "Find the row (location) and column (work package) and click the cell.",
-              "Enter the values the form asks for (percentage or quantity, depending on the gear settings) and click **Submit**. The **CUMULATIVE QUANTITY** table shows earlier entries for that location."
-            ]
-          },
-          {
-            "title": "Log work with Super Location to Location Logging",
-            "steps": [
-              "Open **Progress → Work Logs** and pick the **Entity**.",
-              "Optionally click **Ready**, **Delayed**, **Completed** or **All**, or type in **Search Location**.",
-              "Click the location tile inside its super location panel.",
-              "In the pane on the right, click the arrow beside the work package.",
-              "Enter **Work Completed** and the other fields, then click **Submit**."
-            ]
-          },
-          {
-            "title": "Log several locations at once (bulk)",
-            "steps": [
-              "On a layout that shows the mode choice, select **Bulk Log - Work log**, **Bulk Log - Quantity** or **Bulk Log - Work Hours**.",
-              "Open the **Work Package** drop-down and tick the work packages you want.",
-              "Tick the locations, or **Select All**, and adjust the values in the cells.",
-              "Click **LOG WORK** (or the quantity / hours button). Use **Clear all** to start again."
+              "Open the plant, then **Work Logs**, and keep **Single Log** selected.",
+              "Pick the **Entity** and open a group under **Location Types**.",
+              "Click the package, then click the location cell in the grid.",
+              "Enter **Actual Quantity**, **Worked On Date** and optional **Actual Hours** and **Comments**; tick **Work Completed** if the location is finished.",
+              "Click **Submit**."
             ]
           }
         ]
       },
       {
-        "heading": "Productivity Logs",
-        "intro": "<p>Productivity Logs records the hours and quantities people spent against a phase code, so a <strong>PM</strong> or <strong>Cost Controller</strong> can measure productivity and cost. A <strong>Field User</strong>, foreman or timekeeper creates the log, an <strong>Approver</strong> named in the card's <strong>Approval Workflow</strong> signs it off, and the numbers show in <strong>Data Summary</strong>.</p><p>It is not the same as <strong>Work Logs</strong>: Work Logs says a piece of physical work is done at a location; Productivity Logs says who spent how many hours (and what quantity) under which phase code. Open <strong>Field Works → Tree Version → [plant] → Progress → Productivity Logs</strong>. The card has six tabs: <strong>Create</strong>, <strong>Logs</strong>, <strong>Data Summary</strong>, <strong>Issues</strong>, <strong>Approval Workflow</strong>, <strong>Reconciliation</strong>.</p>",
+        "heading": "Work Log Layout Settings",
+        "intro": "<p>Which layout <strong>Work Logs</strong> shows is chosen in <strong>Project Settings</strong> then <strong>Work Logs Templates</strong>, on the <strong>Work Log Settings</strong> page.</p>",
+        "images": [
+          {
+            "src": "assets/product/field-works/205.jpg",
+            "caption": "Work Log Settings with the layout options"
+          }
+        ],
         "definitions": [
           {
-            "term": "Create: Step 1 Log Time",
-            "definition": "Choose a date range in the **Start date / End date** boxes (dates are written month-day-year, for example 10-01-2026), then click **Create Log** to add rows. Each row has **Employee***, **Entities**, **Super Locations**, **Locations**, **Phase Code***, **Revised Budgeted Hours**, **JTD Hours**, **Remaining Hours** and **Actions** (add employee, duplicate, copy, delete). A running **Total Hours** shows above the grid. Buttons: **Set Phase Codes**, **Save As Draft**, **Submit**, **Export**, **Manage Columns** (with a save icon for the layout)."
+            "term": "Project / Tree Version switch",
+            "definition": "Chooses whether the setting applies to the whole project or to a tree version."
           },
           {
-            "term": "Create: Step 2 Log Quantity",
-            "definition": "The second step has no **Create Log** button. Its grid shows **Entities**, **Super Locations**, **Locations**, **Phase Code**, **Detailed Phase Code**, **Detailed Phase Code Description**, **Time Sheet Hours**, **Revised Budgeted Quantity**, **JTD Quantity**, **Remaining Quantity**, **Activity 100% Complete** and **Actions**, with **Save As Draft**, **Submit** and **Back**. The saved logs show these same columns on the **Quantities** tab of a log."
+            "term": "Work Log Reference",
+            "definition": "\"At what level do you want to log works?\" One layout is selected, with a preview on the right. Options: **Work Package to Location Logging** (status of locations for each work package), **Location to Work Package Logging** (work packages mapped to each location in each super location), **Location to Work Package bulk logging** (several locations at once with filters, and restraints against many locations), **Super Location to Location Logging** (locations inside each super location; clicking a location shows its work packages), **Worklogs in Scheduled View** and **Quantity Work Logging** (the tree version in WBS form) and **Worklogs enable by Certified RFIs** (logging opens only for locations whose RFIs are certified). Each option has a gear icon for its own settings."
           },
           {
-            "term": "Create Log menu",
-            "definition": "**Add Employees** adds a row for one person. **Add Crews** opens **Select the members from the Crew** with a **Crew Name*** drop-down and **Submit**. **Clone Log** opens a list of existing productivity logs (with a filter and an **All** chip) so you can copy one. **Import Log** (marked AI) pulls clock-in data. All of them need the date range first."
+            "term": "Save Changes",
+            "definition": "Saves the chosen layout."
+          }
+        ]
+      },
+      {
+        "heading": "Submitted Work Logs",
+        "intro": "<p><strong>Submitted Work Logs</strong> lists every work log submitted in the plant, grouped by date, newest first. It has two tabs: <strong>Work Logs</strong> and <strong>Reconciliation</strong>.</p>",
+        "images": [
+          {
+            "src": "assets/product/field-works/206.jpg",
+            "caption": "Submitted Work Logs"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Work Logs entries",
+            "definition": "Each entry reads who logged which work, the location path, the percentage change, the time, the latitude and longitude, the **Worked on Date** and the **Source** (for example Bulk Log). A coloured bar on the left shows the status."
           },
           {
-            "term": "Employees and crews: where the lists come from",
-            "definition": "The **Employee** drop-down lists \"ID - name\" entries (34 plus **None** on Arena Steel Plant - Phase 1, including three **System Admin** rows) and matches the project people list. **Add Crews** lists the project's crews; on Arena Steel Plant - Phase 1 the **Select Crew** list is empty because no crews are set up for the project. **Entities** lists the plant's entities (Piperack, Indurating Building, Mixing Building, ECR (Electrical Control Room), Balling Building, Kiln); **Super Locations** and **Locations** follow the Works tree. Set crews and people up in **Project Setup → People**."
+            "term": "Status legend",
+            "definition": "**Not Ready**, **Ready**, **In Progress**, **Completed**, **Rejected**."
           },
           {
-            "term": "Phase codes: where they come from",
-            "definition": "The **Phase Code** drop-down shows only **None** until you click **Set Phase Codes** and tick codes. The dialog (search, A-Z sort, a type chip on each code, **Submit**) offers the project's phase codes, and its content differs by project: Arena Steel Plant - Phase 1 offered 108 (63 Indirect, 45 Non Productive, no Direct), Elevated Corridor offered 278 (218 Indirect, 45 Non Productive, 15 Direct). The project's **Productivity Log Settings → Logging Type** was **By Locations** on both. The exact rule that narrows the list is not shown in the product. **Project Settings → Phase Code Settings** chooses whether a phase code is **Unique** (one work package and location) or **Multiple-Use** (several locations). For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
+            "term": "Filters",
+            "definition": "**Filter by Range** (start and end date), **Users**, **Type of log**, **Entities**, **Super Locations**, **Location Types**, **Locations**, **Activities**, **Work Packages** and **Status**. **Apply** filters the list, **Clear** resets it."
           },
           {
-            "term": "Logs tab and log detail",
-            "definition": "The **Logs** tab lists each log as a card: **Log ID**, a status chip, **From Date**, **To Date**, **Total Hours**, **Employees**, **Approval Status** and **Created By**, with a **Filters** button (**Log IDs**, **Created By**, **Filter By Date**, **Employees**, **Crew**, **Phase Codes**, **Approval Status** = Approved, Rejected, Ready, In Progress, Draft) and an **All** chip. Click a card to open the detail: tabs **Timesheets** and **Quantities**, a history icon (the **Track** dialog shows who created it and when), **download**, **share**, **print**, **Download Excel** and full screen. **Timesheets** columns: **Employee**, **Entities**, **Super Locations**, **Locations**, **Phase Code**, **Craft**, **Class**, **Earning Code**, **Shift**, **Detailed Phase Code** (and description), **Revised Budgeted Hours**, **JTD Hours**, **Remaining Hours**, **Approved Hours**, **Unapproved Hours**, **Projected JTD Hours**, then one column per day. Seen on **Elevated Corridor** (18 logs)."
+            "term": "Download Excel",
+            "definition": "Downloads the list as an Excel file."
           },
           {
-            "term": "Approval and rejection",
-            "definition": "The approval path is built under **Approval Workflow → Create Level** (see the procedure below). On Elevated Corridor no levels exist (**No Data Available**), and all 18 logs show **Approved** with **Approval Status 0/0**. A rejected log becomes an item in **Issues**. Logs can be deleted from the card menu on some logs (the menu showed only **Delete**). For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
+            "term": "Bulk Delete and Bulk Delete with Filters",
+            "definition": "Delete several logs at once."
+          },
+          {
+            "term": "Row menu (three dots)",
+            "definition": "Holds only **Delete** for that log."
+          },
+          {
+            "term": "Reconciliation tab",
+            "definition": "A table with the columns **Entities**, **Super Locations**, **Locations Type**, **Locations**, **Activities**, **Work Packages**, description, **Percentage Complete**, **Estimated Quantities**, **Actual Quantity**, **User** and **Logged on**. Every column has a filter and sort arrow. **Manage Columns** opens a dialog to tick which columns show and drag them into order, with **Reset to Default**, **Cancel** and **Apply**."
+          }
+        ]
+      },
+      {
+        "heading": "Approve Work Logs",
+        "intro": "<p><strong>Approve Work Logs</strong> lists the work logs waiting for approval in the plant, and has a <strong>Summary</strong> tab with the day's totals.</p>",
+        "images": [
+          {
+            "src": "assets/product/field-works/207.jpg",
+            "caption": "Approve Work Logs"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Bulk Approval",
+            "definition": "Switch that lets you select many logs and approve them together."
+          },
+          {
+            "term": "To Be Approved / All",
+            "definition": "**To Be Approved** shows only logs waiting for you; **All** shows every log in the approval flow."
+          },
+          {
+            "term": "Users, Entities, Super Locations, Date",
+            "definition": "Filters; **Apply** runs them and **Clear** resets them."
+          },
+          {
+            "term": "Download Excel",
+            "definition": "Downloads the list."
+          },
+          {
+            "term": "Summary tab",
+            "definition": "Pick a date at the top right. **Work Executed** shows, per entity and location type, the **Total Locations**, **Completed Today**, **Cumulative Completed** and **% Complete**. **Quantity Executed** shows, per activity and work package, **% Complete**, **Estimated Quantity**, **Executed Today**, **Cumulative Completed** and **Balanced Quantity**."
+          }
+        ]
+      },
+      {
+        "heading": "Productivity Logs",
+        "intro": "<p><strong>Productivity Logs</strong> records the hours people worked and the quantities they produced, per phase code, so the project can measure productivity. It has six tabs.</p>",
+        "images": [
+          {
+            "src": "assets/product/field-works/208.jpg",
+            "caption": "Productivity Logs, Create tab (Step 1 Log Time)"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Create",
+            "definition": "Two steps: **Step 1 Log Time** and **Step 2 Log Quantity**. Choose a date range first; if you click a step before that, the message \"Select date range to proceed\" appears. **Create Log** adds a row. The table columns are **Employee** and **Phase Code** (both required, marked with a star), **Entities**, **Super Locations**, **Locations**, **Revised Budgeted** hours, **JTD Hours** and **Remaining Hours**. **Total Hours** at the top adds up the rows. **Set Phase Codes**, **Save As Draft** and **Submit** act on the log; **Export** and **Manage Columns** work on the table."
+          },
+          {
+            "term": "Logs",
+            "definition": "Left list of saved productivity logs with an **All** button and a filter icon. The filter has **Log IDs**, **Created By**, **Filter By Date**, **Employees**, **Crew**, **Phase Codes** and **Approval Status**, with **Apply**, **Clear** and **Cancel**. Click a log to see it on the right."
           },
           {
             "term": "Data Summary",
-            "definition": "The reporting view. Top tabs **Timesheets**, **Quantities**, **Labor Units**; sub-tabs **People**, **Crew**, **Phase Codes**, **Locations Type**. The **Phase Codes** sub-tab adds **Direct**, **Indirect**, **Non Productive** and **Change Order** chips and columns **Phase Code**, **Phase Code Description**, **Total Hours** and a column per day; on the Quantities tab direct codes show with a \"D - \" prefix. The range defaults to the last seven days (so older logs look empty); pick the dates in **Select range**. On Elevated Corridor, 01-08-2025 to 01-14-2025 showed 320 hours across 15 people, 186 of them on Direct codes (for example **1089-101 Fabrication**, 95 hours). **Download Excel** exports it."
+            "definition": "Totals for a date range chosen at the top right. **Timesheets** shows hours per **People**, **Crew**, **Phase Codes** or **Locations Type**, day by day, with a **Total Hours** figure. **Quantities** shows **Total Quantities** per phase code. **Labor Units** compares, per phase code and per location type, **Actual** and **Estimated** total hours, total quantities and labor units."
           },
           {
-            "term": "Reconciliation and Configure Rules",
-            "definition": "**Reconciliation → Create Log** opens a **Reconcile** dialog with **Hours** or **Quantity**, a **Date Range** (default the last seven days), **Cancel** and **Submit**. **Configure Rules** opens **Rules**: click **Add**, choose a **Condition** (Greater than, Greater than or Equal to, Less than, Less than or Equal to, Is Equal To, Is not Equal to, Is Between, Is not Between), a **Start Value**, an **End Value** and a **Color**, then **Submit**. Rules colour the reconciled figures. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
+            "term": "Issues",
+            "definition": "Productivity log workflow issues. A counter shows **Total Issues**, **Issues Approved** and **Issues Rejected**; there is a search by ID or status, **Download Excel**, **Filters** and a cards or list switch."
           },
           {
-            "term": "Import Log (AI)",
-            "definition": "Fetches clock-in data into the draft. It works only for past dates: choosing today or a future date shows \"Logs for the current and future dates cannot be fetched\". With a past range it showed \"Please provide consent in Marketplace.\", so it needs the clock-in consent that Time Management also uses (**Global Data → Marketplace → Inn Clock Consent**). For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
+            "term": "Approval Workflow",
+            "definition": "Table of approval levels with **Level**, **Level Description**, **Approvers**, **Workflow Type** and **Actions**. **+ Create Level** adds a level."
           },
           {
-            "term": "Where Productivity Logs data comes from and goes",
-            "definition": "**From:** the project people and crews (**Project Setup → People**), phase codes (**Project Setup → Phase Codes**, narrowed in **Set Phase Codes**), the Works tree for entities and locations, and the project settings **Productivity Log Settings** (By Phase Code or By Locations; the fields on **Timesheets** and **Quantity**) and **Phase Code Settings**. **To:** **Logs**, **Data Summary**, the **Issues** list when rejected, and **Payroll Locking** in **Time Management** (which also covers productivity logs). The budgeted, JTD and remaining columns are shown against each phase code."
+            "term": "Reconciliation",
+            "definition": "Compares logged values against rules. **Configure Rules** opens a **Rules** dialog where you **Add** rows made of **Condition**, **Start Value**, **End Value** and **Color**, then **Submit**. **Create Log** and a filter icon are on the same page."
           }
         ],
         "procedures": [
           {
-            "title": "Create a productivity log for employees",
+            "title": "Log time for people",
             "steps": [
-              "Open **Productivity Logs → Create** for the plant.",
-              "Enter the **Start date** and **End date**.",
-              "Click **Set Phase Codes**, tick the codes you may use and click **Submit**.",
-              "Click **Create Log → Add Employees**, then choose the **Employee**, **Entities**, **Super Locations**, **Locations** and **Phase Code**, and type the hours for each day.",
-              "Go to **Step 2 Log Quantity** if you also record quantities, then click **Save As Draft** or **Submit**."
-            ]
-          },
-          {
-            "title": "Create a log for a crew",
-            "steps": [
-              "Pick the date range and click **Create Log → Add Crews**.",
-              "Choose the **Crew Name** and click **Submit**.",
-              "Set the phase code and hours and click **Submit**. If **Select Crew** is empty, add project crews in **Project Setup → People** first."
-            ]
-          },
-          {
-            "title": "Import hours from the clock-in system",
-            "steps": [
-              "Pick a date range that ends before today.",
-              "Click **Create Log → Import Log**.",
-              "If you see \"Please provide consent in Marketplace\", ask a **Module Admin** to give consent in **Global Data → Marketplace**, or raise a Support ticket."
-            ]
-          },
-          {
-            "title": "Copy an earlier log",
-            "steps": [
-              "Pick the new date range and click **Create Log → Clone Log**.",
-              "Select the log you want to copy and click **Submit**, then edit and submit it."
-            ]
-          },
-          {
-            "title": "Look up an old log and its totals",
-            "steps": [
-              "Open the **Logs** tab, use **Filters** (for example **Filter By Date**) and click the log card.",
-              "Switch between **Timesheets** and **Quantities** and use **Download Excel** to export.",
-              "For totals, open **Data Summary** and set **Select range** to the same dates."
-            ]
-          },
-          {
-            "title": "Set up reconciliation colour rules",
-            "steps": [
-              "Open **Reconciliation** and click **Configure Rules**.",
-              "Click **Add**, pick a **Condition**, enter the **Start Value** (and **End Value** for Between), choose a **Color**.",
-              "Click **Submit**. For anything the screen does not explain, raise a ticket with Arena Support."
+              "Open the plant, then **Productivity Logs**; the **Create** tab opens on **Step 1 Log Time**.",
+              "Pick the date range.",
+              "Click **Create Log** and fill **Employee** and **Phase Code** in the row.",
+              "Click **Save As Draft** to keep it, or **Submit** to send it for approval.",
+              "Move to **Step 2 Log Quantity** to enter the quantities."
             ]
           }
         ]
+      },
+      {
+        "heading": "Site Photographs",
+        "intro": "<p><strong>Site Photographs</strong> shows the pictures attached to work logs and lets the team post site photos and updates, like a feed. It has two tabs.</p>",
+        "images": [
+          {
+            "src": "assets/product/field-works/210.jpg",
+            "caption": "Work Logs Site Photograph tab"
+          },
+          {
+            "src": "assets/product/field-works/211.jpg",
+            "caption": "Site Photograph tab (post feed)"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Work Logs Site Photograph",
+            "definition": "Photos that came with work logs. **Tree Version** picks the plant; **No work logs to display** shows when none have photos. **Filters** opens a dialog: **Select Range** (dates, or **ALL**, **THIS WEEK**, **LAST WEEK**, **LAST MONTH**), **Entity**, **Super Location**, **Location Type**, **Location** and **Work Package**, with **Clear all** and **Save Filter**."
+          },
+          {
+            "term": "Site Photograph",
+            "definition": "The post feed. Type in **Create a post** (or use **Photo / video**) to add a post. **Search by people** on the left narrows the feed to one author; **Filters** on the right narrows it by date range (**ALL**, **THIS WEEK**, **LAST WEEK**, **LAST MONTH**). **Tree Version** picks the plant."
+          }
+        ]
+      },
+      {
+        "heading": "Ready Works",
+        "intro": "<p><strong>Ready Works</strong> shows, for each entity, which locations are ready for work and the state of every work package in them, so supervisors can plan the day.</p>",
+        "images": [
+          {
+            "src": "assets/product/field-works/214.jpg",
+            "caption": "Ready Works: location types and locations"
+          },
+          {
+            "src": "assets/product/field-works/215.jpg",
+            "caption": "A location opened, with the legend"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Entity",
+            "definition": "Drop-down that picks the entity to look at."
+          },
+          {
+            "term": "Location Types",
+            "definition": "Left panel. Each row is a location type with its number of locations (for example **Locations : 4**). Click one to list its locations on the right."
+          },
+          {
+            "term": "Locations",
+            "definition": "Right panel. Click a location to see its work packages in sequence. If no sequence is set up for it, the panel says **No Sequence type mapped**."
+          },
+          {
+            "term": "Legend",
+            "definition": "Work package colours: **Completed**, **Under Progress**, **Issue Raised**, **Parallel Work Packages**, **Not Ready**, **Started**, **Ready**. The strip at the top right (**Not yet started**, **Ready to work**, **In Progress**, **Completed**) colours the grid by status."
+          },
+          {
+            "term": "Restraints",
+            "definition": "Button at the top right of an opened location, for restraints that affect it."
+          }
+        ]
+      },
+      {
+        "heading": "Meeting Minutes",
+        "intro": "<p><strong>Meeting Minutes</strong> keeps a record of site meetings, the points discussed and the actions that came out of them. It has two tabs: <strong>Meetings</strong> and <strong>Actions</strong>.</p>",
+        "images": [
+          {
+            "src": "assets/product/field-works/212.jpg",
+            "caption": "Meetings tab"
+          },
+          {
+            "src": "assets/product/field-works/213.jpg",
+            "caption": "Create Form for a meeting"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Meetings",
+            "definition": "List of meeting minutes logs. When empty it reads \"Please click CREATE to create a Meeting Minutes log\"."
+          },
+          {
+            "term": "Create",
+            "definition": "Opens the **Meeting Minutes** form."
+          },
+          {
+            "term": "Delete All",
+            "definition": "Deletes all meeting logs; do not use it unless you mean to."
+          },
+          {
+            "term": "Actions",
+            "definition": "Second tab; lists the actions assigned in meetings."
+          },
+          {
+            "term": "Meeting Minutes form",
+            "definition": "Header shows the company address, phone and the project title and number. Fields: **Meeting Title** and **Location** and **Date** (required), **Tree Versions**, **Entity**, **Location Type**, **Work Packages**, **Connected Drawings** (**Connect** button) and a required **Discussion** table with the columns **Discussion(Points)**, **Actions**, **Responsible**, **Due Date**. **Add Row** adds a discussion line. Further sections (starting with **Section Name1**) can be expanded. The upload icon attaches files."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Record a meeting",
+            "steps": [
+              "Open **Meeting Minutes** and click **+ Create**.",
+              "Fill **Meeting Title**, **Location** and **Date**.",
+              "Optionally pick **Tree Versions**, **Entity**, **Location Type** and **Work Packages**.",
+              "In **Discussion**, click **Add Row** and enter the point, the action, who is **Responsible** and the **Due Date**.",
+              "Click **Save as Draft** to keep it for later, or **Submit**."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Progress Issues",
+        "intro": "<p>The <strong>Issues</strong> card of a plant lists issues raised from forms such as RFI, Submittals, Change Orders and custom forms. It has two tabs: <strong>Form Issues</strong> and <strong>Form Workflow Issues</strong>.</p>",
+        "images": [
+          {
+            "src": "assets/product/field-works/216.jpg",
+            "caption": "Filters on Form Issues"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Form Issues",
+            "definition": "Cards (or a list) of issues raised on forms. A counter shows **Issues Open** and **Issues Rectified**. **Search by ID/Status** narrows the list; **Download Excel** exports it; the two icons at the far right switch between card view and list view. When there are none it reads **No Form Issues found**."
+          },
+          {
+            "term": "Filters",
+            "definition": "Dialog with two tick boxes, **Assigned to me** and **Past Due Date**, and the fields **Due Date**, **Raised On**, **Raised By**, **Status**, **Form Type**, **Rectified By**, **Assignee** and **Log ID**. **Apply** filters, **Clear all** resets."
+          },
+          {
+            "term": "Form Workflow Issues",
+            "definition": "Table of workflow issues with the columns **WFL Number**, **Level**, **Raised on Date**, **Raised on Time**, **Raised by**, **Image** and **Chat**. It has the same search, **Download Excel**, **Filters** and view switch."
+          }
+        ]
+      },
+      {
+        "heading": "Equipment Logs",
+        "intro": "<p><strong>Equipment Logs</strong> lists the equipment usage logged against the work orders of the project. It works like Material Logs.</p>",
+        "images": [],
+        "definitions": [
+          {
+            "term": "Create",
+            "definition": "Opens **Create Equipment Log**: pick a **Work Order** and a **Select Date**; the table shows **Equipment**, **UOM** and **Quantity** for that work order."
+          },
+          {
+            "term": "Download Excel and view icons",
+            "definition": "Export the logs; switch between card and list view."
+          }
+        ]
+      },
+      {
+        "heading": "Material Logs",
+        "intro": "<p><strong>Material Logs</strong> lists the material usage logged against the work orders of the project.</p>",
+        "images": [
+          {
+            "src": "assets/product/field-works/217.jpg",
+            "caption": "Material Logs"
+          },
+          {
+            "src": "assets/product/field-works/218.jpg",
+            "caption": "Create Material Log dialog"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Create",
+            "definition": "Opens **Create Material Log**: pick a **Work Order**, a **Select Date**, and the table lists the work order's **Material**, **UOM** and **Quantity** to log. If the work order has no items it says **No items found for the work order**."
+          },
+          {
+            "term": "Download Excel",
+            "definition": "Exports the logs."
+          },
+          {
+            "term": "View icons",
+            "definition": "Switch between card view and list view. With no logs the page says **No Data**."
+          }
+        ]
+      },
+      {
+        "heading": "Manpower Logs",
+        "intro": "<p><strong>Manpower Logs</strong> lists the manpower logged against the work orders of the project. It works like Material Logs.</p>",
+        "images": [],
+        "definitions": [
+          {
+            "term": "Create",
+            "definition": "Opens **Create Manpower Log**: pick a **Work Order** and a **Select Date**; the table shows **Manpower** and **Quantity** for that work order."
+          },
+          {
+            "term": "Download Excel and view icons",
+            "definition": "Export the logs; switch between card and list view."
+          }
+        ]
+      },
+      {
+        "heading": "Restraints",
+        "intro": "<p><strong>Restraints</strong> records anything that blocks or slows the work, for example a missing approval or access. It has two tabs: <strong>Restraints</strong> and <strong>Restraints Rectification</strong>.</p>",
+        "images": [
+          {
+            "src": "assets/product/field-works/219.jpg",
+            "caption": "Restraints list"
+          },
+          {
+            "src": "assets/product/field-works/220.jpg",
+            "caption": "Create Restraint form"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Counters",
+            "definition": "**Issues Open**, **Issues Rectified** and **Issues Verified** show how many restraints are in each state."
+          },
+          {
+            "term": "Search by ID/Status",
+            "definition": "Narrows the list by restraint ID or status."
+          },
+          {
+            "term": "Filters",
+            "definition": "**Select Priority**, **Assigned to me**, **Past Due Date**, **Due Date**, **Raised On**, **Raised By**, **Status**, **Rectified By**, **Verified By** and **Assignee**; **Apply** and **Clear all**."
+          },
+          {
+            "term": "Download Excel and view icons",
+            "definition": "Export the list; switch between card and list view."
+          },
+          {
+            "term": "Add Restraint",
+            "definition": "Opens **Create Restraint**. Required fields: **Tree Version**, **Entity**, **Super Location**, **Location**, **Restraint Category**, **Detailed Description**, **Priority**. Optional: **Work Package**, **Upload File**, **Start Date**, **End Date**, **Assign to**. **Submit** saves it."
+          },
+          {
+            "term": "Restraints Rectification",
+            "definition": "Second tab with a **Download Excel** button; it lists restraints that have been rectified (empty here: \"There is no data to display\")."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Raise a restraint",
+            "steps": [
+              "Open **Restraints** and click **Add Restraint**.",
+              "Choose **Entity**, **Super Location** and **Location**; optionally a **Work Package**.",
+              "Choose **Restraint Category** and **Priority** and describe the problem in **Detailed Description**.",
+              "Set **Start Date**, **End Date** and **Assign to** if you know them.",
+              "Click **Submit**."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Inventory Management",
+        "intro": "<p>The <strong>Inventory Management</strong> card of a plant holds the site material requests (pickup tickets): requests from the site for material to be sent or moved. It has two tabs: <strong>Site Material Requests</strong> and <strong>Rejected Site Material Requests</strong>.</p>",
+        "images": [
+          {
+            "src": "assets/product/field-works/221.jpg",
+            "caption": "Site Material Requests"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Add",
+            "definition": "Opens the **Site Material Request** form (see the procedure below)."
+          },
+          {
+            "term": "Search by ID",
+            "definition": "Finds a request by its ID."
+          },
+          {
+            "term": "Add Custom Columns",
+            "definition": "Opens a small dialog with **Name** and **Type** to add your own column to the list; **Submit** adds it and **Close** cancels."
+          },
+          {
+            "term": "Export",
+            "definition": "Exports the list."
+          },
+          {
+            "term": "Filters",
+            "definition": "**Site Material ID**, **Status**, **Project**, **Select Range** (dates). **Apply** filters, **Clear All** resets and **Save Filters** keeps the choice."
+          },
+          {
+            "term": "View icons",
+            "definition": "Switch between list and card view; the disk icon at the far right saves the layout."
+          },
+          {
+            "term": "Rejected Site Material Requests",
+            "definition": "Same list, showing only the requests that were rejected."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Raise a site material request",
+            "steps": [
+              "Open **Inventory Management** and click **Add**.",
+              "Check **Project** and pick **Tree Versions**, **Entity**, **Location Type**, **From Location**, **To Location**, **Activities** and **Work Packages** as needed.",
+              "Fill **Requested By** and **Required Date** (both required), plus **Order Date**, **Ship To**, **Required to execute which work**, **Logistics**, **Handling Instructions** and **Work** if relevant.",
+              "Under **Materials**, click **Add Material** and choose the material, **Quantity**, **UOM** and **Remarks** for each line.",
+              "Click **Submit for Approval**."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Procurement",
+        "intro": "<p>The <strong>Procurement</strong> card of a plant opens the <strong>Requisition Form</strong> list, where the site raises requisitions for equipment, material, parts or delivery. It has two tabs: <strong>Create Requisition</strong> and <strong>Workflow Issues</strong>.</p>",
+        "images": [
+          {
+            "src": "assets/product/field-works/222.jpg",
+            "caption": "Requisition Form list"
+          },
+          {
+            "src": "assets/product/field-works/223.jpg",
+            "caption": "Create Requisition menu"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "+ Requisition",
+            "definition": "Opens the **Create Requisition** menu with four kinds: **Equipment**, **Material**, **Equipment Part** and **Delivery Service**."
+          },
+          {
+            "term": "Add Custom Column and Save Layout",
+            "definition": "Add your own column to the table; keep the current column layout."
+          },
+          {
+            "term": "Filters, Manage Columns and view icons",
+            "definition": "Narrow the list, choose which columns show, and switch between list and card view."
+          },
+          {
+            "term": "Table columns",
+            "definition": "**Requisition Form**, **Total Items**, **Project ID / Project Name**, **On-Site Contact**, **Requested by**, **RFQs Linked**, **Approve**, **Reject**, **Assign**, **Status**, **Tag** and **Actions**."
+          },
+          {
+            "term": "Workflow Issues",
+            "definition": "Second tab; lists workflow issues raised on requisitions."
+          }
+        ]
+      },
+      {
+        "heading": "Labor Logs",
+        "intro": "<p><strong>Labor Logs</strong> lists the resource logs that record the labor used on an activity. It sits under <strong>Resource Logs</strong> together with Machinery Logs.</p>",
+        "images": [
+          {
+            "src": "assets/product/field-works/224.jpg",
+            "caption": "Labor Logs"
+          },
+          {
+            "src": "assets/product/field-works/225.jpg",
+            "caption": "Resource Log form"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Search by Log ID",
+            "definition": "Finds a log by its ID. With no logs the page says **No Resource Logs Found**."
+          },
+          {
+            "term": "Filters and view icons",
+            "definition": "Filter the list; switch between card and list view."
+          },
+          {
+            "term": "Create",
+            "definition": "Opens the **Resource Log** form: **Tree Version** (fixed to the plant), **Entity**, **Super Location**, **Activity**, **Actual Date**, then **Linked Resources** (resources already linked to the activity) and **Additional Resources** (search and add others). **Clear All** empties the form and **Submit** saves the log."
+          }
+        ]
+      },
+      {
+        "heading": "Machinery Logs",
+        "intro": "<p><strong>Machinery Logs</strong> lists the resource logs that record machinery used on an activity. It has the same screen as Labor Logs.</p>",
+        "images": [],
+        "definitions": [
+          {
+            "term": "Create and search",
+            "definition": "**Create** opens the **Resource Log** form; the search box finds a log by ID."
+          },
+          {
+            "term": "Filters",
+            "definition": "**Log Id**, **Raised On**, **Actual Date**, **Raised By**, **Entity**, **Superlocation**, **Activity**; **Apply** and **Clear all**."
+          },
+          {
+            "term": "View icons",
+            "definition": "Switch between card and list view."
+          }
+        ]
+      },
+      {
+        "heading": "Detailed Work Logs",
+        "intro": "<p><strong>Detailed Work Logs</strong> is one big table of every work package of the plant with its budget, actual quantity, hours, dates and users. It is for reading and exporting; you do not log work here.</p>",
+        "images": [
+          {
+            "src": "assets/product/field-works/226.jpg",
+            "caption": "Detailed Work Logs table"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Search and paging",
+            "definition": "The search box filters the rows. The counter (for example **1 to 50 of 697**) and the arrows page through the rows."
+          },
+          {
+            "term": "Export, Filters, Manage Columns",
+            "definition": "**Export** downloads the table; **Filters** narrows it; **Manage Columns** chooses which columns show. The disk icon saves the layout."
+          },
+          {
+            "term": "Location columns",
+            "definition": "**Entities**, **Super Locations**, **Locations Type**, **Locations**, **Work Packages**, **Work Package Description** and **UOM** say which work the row is about."
+          },
+          {
+            "term": "Quantity and hours columns",
+            "definition": "**Phase Codes Details**, **Revised Budgeted Quantity**, **Actual Quantity**, **WE Quantity**, **Revised Budgeted Hours** and **Actual Hours** compare the budget with what was logged."
+          },
+          {
+            "term": "Schedule columns",
+            "definition": "**Specifications**, **Schedule ID**, **Schedule ID Description**, **Detailed Phase Code** and its description, then **Planned Start Date**, **Planned End Date**, **Forecasted End Date**, **Client End Date**, **Skyline End Date**, **Actual Start Date** and **Actual End Date**."
+          },
+          {
+            "term": "Users",
+            "definition": "The people who logged against the row."
+          },
+          {
+            "term": "Column header icons",
+            "definition": "Each header has a filter icon and a sort arrow."
+          }
+        ]
+      },
+      {
+        "heading": "Safety",
+        "intro": "<p>The <strong>Safety</strong> tab of Field Works is the starting page for the project's safety forms, safety issues and their approval. It shows five cards; click a card to open that screen.</p>",
+        "images": [
+          {
+            "src": "assets/product/field-works/101.jpg",
+            "caption": "The Safety tab with its five cards"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Top tabs",
+            "definition": "**Tree Version**, **Safety**, **Drawing Management**, **Invoices** and **Workorder** are the Field Works tabs. **Safety**, **Drawing Management**, **Invoices** and **Workorder** cover the whole project; **Tree Version** lists the plants and opens the work inside each plant."
+          },
+          {
+            "term": "Safety Forms",
+            "definition": "Card described as \"To log event based project Safeties forms\". Opens the list of safety forms that were logged for an event."
+          },
+          {
+            "term": "Daily Safety Issues",
+            "definition": "Card for issues raised because of safety breaches or failures. Opens a page with the tabs **Daily Safety Issues**, **Observations** and **Safety Workflow Issues**."
+          },
+          {
+            "term": "Completed Safety",
+            "definition": "Card for the collection of all completed safety forms in the project, shown by calendar date."
+          },
+          {
+            "term": "Safety Calendar",
+            "definition": "Card described as \"To log scheduled Safeties forms\". Opens a calendar of the safety forms planned for each day."
+          },
+          {
+            "term": "Approve Safety",
+            "definition": "Card to view and act on approval requests for safety forms."
+          }
+        ],
+        "procedures": []
+      },
+      {
+        "heading": "Safety Forms",
+        "intro": "<p>The <strong>Safety Forms</strong> screen lists the event-based safety forms logged in the project. The count in the heading, for example <strong>Safety Forms (0)</strong>, is the number of forms available.</p>",
+        "images": [
+          {
+            "src": "assets/product/field-works/102.jpg",
+            "caption": "The Safety Forms screen"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Safety Forms (n) list",
+            "definition": "The left column lists the safety form types set up for the project, with a **Search** box to find one by name. Selecting a form type shows its logs on the right."
+          },
+          {
+            "term": "Search by ID/User",
+            "definition": "Narrows the logs on the right by log ID or by the user who raised them."
+          },
+          {
+            "term": "No Logs Available",
+            "definition": "Shown on the right when nothing has been logged yet for the selected form."
+          },
+          {
+            "term": "Filters",
+            "definition": "Opens a dialog with four filters: **Raised Date** (a start and end date), **Raised By**, **Log ID** and **Status**. **Apply** narrows the list; **Clear all** removes the filters.",
+            "images": [
+              {
+                "src": "assets/product/field-works/103.jpg",
+                "caption": "The Safety Forms Filters dialog"
+              }
+            ]
+          },
+          {
+            "term": "Status",
+            "definition": "The **Status** filter offers **Saved as draft**, **In Progress with issues**, **In Progress**, **Completed**, **Submitted for approval**, **Approval workflow in progress**, **Approved** and **Rejected**. Pick one or more to see only logs in those states."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Find a safety log",
+            "steps": [
+              "Open **Field Works**, click the **Safety** tab and then the **Safety Forms** card.",
+              "Select a form type in the list on the left.",
+              "Click **Filters**, choose the **Raised Date**, **Raised By**, **Log ID** or **Status** you need and click **Apply**."
+            ],
+            "images": [
+              {
+                "src": "assets/product/field-works/103.jpg",
+                "caption": "The Filters dialog",
+                "step": 2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Daily Safety Issues",
+        "intro": "<p>The <strong>Daily Safety Issues</strong> screen collects issues raised because of safety breaches or failures. It has three tabs: <strong>Daily Safety Issues</strong>, <strong>Observations</strong> and <strong>Safety Workflow Issues</strong>.</p>",
+        "images": [
+          {
+            "src": "assets/product/field-works/106.jpg",
+            "caption": "The Daily Safety Issues tab with no issues yet"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Search by ID/Status",
+            "definition": "Type an issue ID or a status to narrow the list."
+          },
+          {
+            "term": "Issue counters",
+            "definition": "Three counters beside the search box: **Total Issues**, **Issues Raised** and **Issues Rectified**."
+          },
+          {
+            "term": "Follow Up Actions",
+            "definition": "Opens a small menu with **Follow Up Forms**, **Follow Up Issues** and **Follow Up Setup**. **Follow Up Forms** lists form types such as **RFI**, **Submittal**, **Change Order**, **Meeting Minutes**, **Other Forms**, **Quick Apps** and **Safety Forms**; **Follow Up Issues** lists **Restraints** and **Safety Observations**."
+          },
+          {
+            "term": "Download Excel",
+            "definition": "Downloads the issues in the list as an Excel file."
+          },
+          {
+            "term": "Filters",
+            "definition": "Opens a dialog with **Issue Type**, **Priority**, a **Past Due Date** tick box, **Due Date**, **Raised on**, **Assignee**, **Issue Number**, **Raised By**, **Rectified By** and **Status**. The **Status** filter offers **RAISED** and **RECTIFIED**.",
+            "images": [
+              {
+                "src": "assets/product/field-works/107.jpg",
+                "caption": "The Daily Safety Issues Filters dialog"
+              }
+            ]
+          },
+          {
+            "term": "Grid and list view",
+            "definition": "The two icons at the right switch the issues between cards (grid) and a table (list)."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Find overdue safety issues",
+            "steps": [
+              "Open **Field Works**, click the **Safety** tab and then **Daily Safety Issues**.",
+              "Click **Filters**.",
+              "Tick **Past Due Date** and click **Apply**."
+            ],
+            "images": [
+              {
+                "src": "assets/product/field-works/107.jpg",
+                "caption": "The Filters dialog",
+                "step": 2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Observations",
+        "intro": "<p>The <strong>Observations</strong> tab of Daily Safety Issues holds safety observations that site staff record, each with a priority and attachments.</p>",
+        "images": [
+          {
+            "src": "assets/product/field-works/105.jpg",
+            "caption": "The Observations tab"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Search, counters, Download Excel, Filters",
+            "definition": "Work as on the **Daily Safety Issues** tab: search by ID or status, counts of **Total Issues**, **Issues Raised** and **Issues Rectified**, an Excel download and a filter dialog."
+          },
+          {
+            "term": "Add Observation",
+            "definition": "Opens the **Create Observation** form.",
+            "images": [
+              {
+                "src": "assets/product/field-works/104.jpg",
+                "caption": "The Create Observation form"
+              }
+            ]
+          },
+          {
+            "term": "Create Observation form",
+            "definition": "Shows who created it and today's date, then these fields: **Project Location**, **Supervisor** and **Observation** (all required), **Priority** (required; **High**, **Medium** or **Low**) and an **Attachments** section with **Upload File**. **Submit** saves the observation."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Record an observation",
+            "steps": [
+              "Open **Field Works**, click **Safety**, open **Daily Safety Issues** and click the **Observations** tab.",
+              "Click **Add Observation**.",
+              "Fill in **Project Location**, **Supervisor**, **Observation** and **Priority**.",
+              "Under **Attachments**, click **Upload File** to add a photo or document if you need to.",
+              "Click **Submit**."
+            ],
+            "images": [
+              {
+                "src": "assets/product/field-works/104.jpg",
+                "caption": "The Create Observation form",
+                "step": 3
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Safety Workflow Issues",
+        "intro": "<p>The <strong>Safety Workflow Issues</strong> tab lists issues raised in the approval process when a user rejects a Quality or Safety Form.</p>",
+        "images": [],
+        "definitions": [
+          {
+            "term": "Search by ID",
+            "definition": "Finds a workflow issue by its ID."
+          },
+          {
+            "term": "Download Excel",
+            "definition": "Downloads the listed issues as an Excel file."
+          },
+          {
+            "term": "Filters",
+            "definition": "Opens a filter dialog for the list."
+          },
+          {
+            "term": "Grid and list view",
+            "definition": "Switches between cards and a table."
+          },
+          {
+            "term": "No Safety Workflow Issues found",
+            "definition": "Shown when no safety form has been rejected."
+          }
+        ],
+        "procedures": []
+      },
+      {
+        "heading": "Completed Safety",
+        "intro": "<p>The <strong>Completed Safety</strong> screen (titled <strong>Completed Safety Forms</strong>) shows every completed safety form in the project by calendar date.</p>",
+        "images": [
+          {
+            "src": "assets/product/field-works/108.jpg",
+            "caption": "The Completed Safety Forms screen"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Users",
+            "definition": "A multi-select list of users. The logs shown belong to the selected users."
+          },
+          {
+            "term": "Download Excel",
+            "definition": "Downloads the completed logs as an Excel file."
+          },
+          {
+            "term": "Grid View and List view",
+            "definition": "The two icons at the top right switch how the logs are laid out."
+          },
+          {
+            "term": "Filter by Range",
+            "definition": "Pick a start and end date to show only logs completed in that range."
+          },
+          {
+            "term": "Calendar",
+            "definition": "A month calendar below the range filter, with arrows to change month; today is circled. Pick a day to see that day's logs on the right."
+          },
+          {
+            "term": "No Logs Present",
+            "definition": "Shown on the right when there are no completed logs for the chosen dates."
+          }
+        ],
+        "procedures": []
+      },
+      {
+        "heading": "Safety Calendar",
+        "intro": "<p>The <strong>Safety Calendar</strong> screen shows the scheduled safety forms for the project day by day, so supervisors can see what is due and how far each one has got.</p>",
+        "images": [
+          {
+            "src": "assets/product/field-works/109.jpg",
+            "caption": "The Safety Calendar"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Status colours",
+            "definition": "A legend at the top right: grey is **Not Ready**, blue is **Ready**, orange is **In Progress** and green is **Completed**."
+          },
+          {
+            "term": "Select date",
+            "definition": "A month calendar with arrows to change month. Today is highlighted in orange. Click a date to load that day."
+          },
+          {
+            "term": "Safety forms for a date",
+            "definition": "The panel on the right is headed with the chosen date, for example \"Safety forms for Wed Oct 07 2026\", and lists the forms scheduled for it. It says **No Data** when none are scheduled."
+          }
+        ],
+        "procedures": []
+      },
+      {
+        "heading": "Approve Safety",
+        "intro": "<p>The <strong>Approve Safety</strong> screen (titled <strong>Approve Safety Logs</strong>) lists safety logs that are waiting for approval so an approver can act on them.</p>",
+        "images": [
+          {
+            "src": "assets/product/field-works/110.jpg",
+            "caption": "The Approve Safety Logs screen"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Status colours",
+            "definition": "Legend at the top right: grey is **Not Ready**, blue is **Ready to Approve**, orange is **In Progress** and green is **Approved**."
+          },
+          {
+            "term": "Filter by Range",
+            "definition": "Start and end date; only logs in that range are listed."
+          },
+          {
+            "term": "Filter by Date",
+            "definition": "A month calendar to pick one day, with **All**, **This Week** and **Last Week** buttons for quick ranges."
+          },
+          {
+            "term": "No Logs Present",
+            "definition": "Shown on the right when no safety log is waiting."
+          }
+        ],
+        "procedures": []
+      },
+      {
+        "heading": "Drawing Management",
+        "intro": "<p>The <strong>Drawing Management</strong> tab of Field Works holds one card for the project's drawing issues.</p>",
+        "images": [
+          {
+            "src": "assets/product/field-works/111.jpg",
+            "caption": "The Drawing Management tab"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Workflow Issues",
+            "definition": "Card described as \"Collection of all Drawing Workflow Issues in the project\". Opens the **Drawing Workflow Issues** screen."
+          }
+        ],
+        "procedures": []
+      },
+      {
+        "heading": "Drawing Workflow Issues",
+        "intro": "<p>The <strong>Drawing Workflow Issues</strong> screen lists the workflow issues raised on drawings, one plant at a time.</p>",
+        "images": [
+          {
+            "src": "assets/product/field-works/112.jpg",
+            "caption": "The Drawing Workflow Issues screen"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Tree Version",
+            "definition": "A drop-down of the project's plants (for example **Pellet Plant (1MTPA)**, **Blast Furnace (0.6 MTPA)** and **Slab Caster**). The list shows the issues of the plant you pick."
+          },
+          {
+            "term": "Search by ID",
+            "definition": "Finds an issue by its ID."
+          },
+          {
+            "term": "Download Excel",
+            "definition": "Downloads the listed issues as an Excel file."
+          },
+          {
+            "term": "Filters",
+            "definition": "Opens a dialog with **Raised On** (date) and **Raised By**; **Apply** narrows the list, **Clear all** resets it.",
+            "images": [
+              {
+                "src": "assets/product/field-works/113.jpg",
+                "caption": "The Drawing Workflow Issues Filters dialog"
+              }
+            ]
+          },
+          {
+            "term": "Grid and list view",
+            "definition": "Switches between cards and a table."
+          },
+          {
+            "term": "No Drawing WorkFlow Issues found",
+            "definition": "Shown when the chosen plant has no issues."
+          }
+        ],
+        "procedures": []
+      },
+      {
+        "heading": "Invoices",
+        "intro": "<p>The <strong>Invoices</strong> tab of Field Works has two cards for the project's work order invoices.</p>",
+        "images": [
+          {
+            "src": "assets/product/field-works/114.jpg",
+            "caption": "The Invoices tab"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Invoices",
+            "definition": "Card described as \"Workorder Invoices\". Opens the **Work Order Invoice** screen, with the tabs **Invoices** and **Summary**."
+          },
+          {
+            "term": "Workflow Issues",
+            "definition": "Card for all work order invoice workflow issues in the project. Opens **Invoice Workflow Issues**."
+          }
+        ],
+        "procedures": []
+      },
+      {
+        "heading": "Work Order Invoice",
+        "intro": "<p>The <strong>Work Order Invoice</strong> screen lists the invoices that contractors submit against work orders, with the amounts billed, recovered and still pending.</p>",
+        "images": [
+          {
+            "src": "assets/product/field-works/115.jpg",
+            "caption": "The Work Order Invoice list"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Invoices tab",
+            "definition": "The list of invoices, one row each."
+          },
+          {
+            "term": "Create",
+            "definition": "Opens the **Create Invoice** form.",
+            "images": [
+              {
+                "src": "assets/product/field-works/116.jpg",
+                "caption": "The Create Invoice form"
+              }
+            ]
+          },
+          {
+            "term": "Search by ID or Name",
+            "definition": "Finds an invoice by its number or name."
+          },
+          {
+            "term": "Columns",
+            "definition": "**Invoice Number**, **Date of Submission**, **Submitted by**, **Contractor**, **Invoice Base Amount**, **Number of Payments**, **Amount Paid**, **Advance Amount Recovery**, **Retention Amount**, **Taxes Amount**, **Discount Amount**, **Contractor Fee**, **Contingency Fee**, **Fixed Fee**, **Award Fee**, **Incentives**, **Total Labor cost**, **Total Material cost**, **Invoice Total Amount** and **Pending Amount**. The small funnel beside each heading filters that column."
+          },
+          {
+            "term": "Filters",
+            "definition": "Opens the **Filter** dialog. **Status** tick boxes: **Raised**, **Payments in progress** and **Done**. Other filters: **Submitted By**, **Date of submission**, **Invoice Total Amount** (**Greater than** and **Less than** a rupee value), **Actuals Derived From** (**Work Logs**, **RFIs** or **Service Entry Sheets**) and **Contractor**. **Submit** applies them; **Clear** resets.",
+            "images": [
+              {
+                "src": "assets/product/field-works/117.jpg",
+                "caption": "The Filter dialog"
+              }
+            ]
+          },
+          {
+            "term": "Manage Columns",
+            "definition": "Opens a dialog to choose and arrange the columns. Tick a column under **Column Options** (for example **Actuals Derived From**, which is off by default) and drag it in **Column Arrangement**. **Reset to Default** restores the standard set; **Apply** keeps the changes.",
+            "images": [
+              {
+                "src": "assets/product/field-works/118.jpg",
+                "caption": "The Manage Columns dialog"
+              }
+            ]
+          },
+          {
+            "term": "List and grid view, save icon",
+            "definition": "The icons at the right switch between a table and cards; the disk icon saves the current view setup."
+          },
+          {
+            "term": "Summary tab",
+            "definition": "One row per contract with the totals **Invoice**, **Payments**, **Invoiced Amounts**, **Discounts**, **Advance Recovery**, **Retentions**, **Taxes**, **Contractor Fee**, **Contingency Fee**, **Labor Cost**, **Material Cost**, **Additional Cost**, **Fixed Fee**, **Award Fee** and **Incentives**.",
+            "images": [
+              {
+                "src": "assets/product/field-works/119.jpg",
+                "caption": "The Summary tab"
+              }
+            ]
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Create an invoice",
+            "steps": [
+              "Open **Field Works**, click the **Invoices** tab and the **Invoices** card.",
+              "Click **Create**.",
+              "Type the **Invoice Number** and check the **Date of Submission**, which starts as today.",
+              "Choose the **Type**: **Advance Amount** or **Work Completion**.",
+              "Choose the **Workorder** the invoice is for and fill any **Configurable Field**.",
+              "Click **Submit**."
+            ],
+            "images": [
+              {
+                "src": "assets/product/field-works/116.jpg",
+                "caption": "The Create Invoice form",
+                "step": 3
+              }
+            ]
+          },
+          {
+            "title": "Choose which columns the list shows",
+            "steps": [
+              "Click **Manage Columns**.",
+              "Tick or untick columns under **Column Options**, and drag them in **Column Arrangement** to reorder.",
+              "Click **Apply**."
+            ],
+            "images": [
+              {
+                "src": "assets/product/field-works/118.jpg",
+                "caption": "The Manage Columns dialog",
+                "step": 2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Invoice Workflow Issues",
+        "intro": "<p>The <strong>Invoice Workflow Issues</strong> screen lists issues raised on work order invoices during their approval workflow.</p>",
+        "images": [
+          {
+            "src": "assets/product/field-works/120.jpg",
+            "caption": "The Invoice Workflow Issues screen"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Download Excel",
+            "definition": "Downloads the listed issues as an Excel file."
+          },
+          {
+            "term": "Filters",
+            "definition": "Opens a filter dialog for the table."
+          },
+          {
+            "term": "Grid and list view",
+            "definition": "Switches between cards and a table."
+          },
+          {
+            "term": "Columns",
+            "definition": "**WFL Number**, **Level**, **Raised on Date**, **Raised on Time**, **Raised by**, **Image**, **Chat**, **Assign To** and **Due Date**."
+          }
+        ],
+        "procedures": []
+      },
+      {
+        "heading": "Workorder",
+        "intro": "<p>The <strong>Workorder</strong> tab of Field Works lists the work orders of the project that are linked to its plants.</p>",
+        "images": [
+          {
+            "src": "assets/product/field-works/121.jpg",
+            "caption": "The Workorder tab in card view"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Search Workorders",
+            "definition": "Finds a work order by name."
+          },
+          {
+            "term": "Table View and card view",
+            "definition": "The two icons at the right switch between a table and cards."
+          },
+          {
+            "term": "Table columns",
+            "definition": "**Workorder Name**, **Contractor**, **Description**, **Approval Status**, **Template Type**, **Contract Type** and **Tree Versions**. The funnel beside each heading filters that column.",
+            "images": [
+              {
+                "src": "assets/product/field-works/122.jpg",
+                "caption": "The Workorder table view"
+              }
+            ]
+          },
+          {
+            "term": "No Data",
+            "definition": "Shown when no work order exists for the project."
+          }
+        ],
+        "procedures": []
       },
       {
         "heading": "Quick Apps",
@@ -30260,571 +30924,42 @@ const MODULES = [
         "procedures": []
       },
       {
-        "heading": "Safety",
-        "intro": "<p>The <strong>Safety</strong> tab of Field Works is the starting page for the project's safety forms, safety issues and their approval. It shows five cards; click a card to open that screen.</p>",
-        "images": [
-          {
-            "src": "assets/product/field-works/101.jpg",
-            "caption": "The Safety tab with its five cards"
-          }
-        ],
-        "definitions": [
-          {
-            "term": "Top tabs",
-            "definition": "**Tree Version**, **Safety**, **Drawing Management**, **Invoices** and **Workorder** are the Field Works tabs. **Safety**, **Drawing Management**, **Invoices** and **Workorder** cover the whole project; **Tree Version** lists the plants and opens the work inside each plant."
-          },
-          {
-            "term": "Safety Forms",
-            "definition": "Card described as \"To log event based project Safeties forms\". Opens the list of safety forms that were logged for an event."
-          },
-          {
-            "term": "Daily Safety Issues",
-            "definition": "Card for issues raised because of safety breaches or failures. Opens a page with the tabs **Daily Safety Issues**, **Observations** and **Safety Workflow Issues**."
-          },
-          {
-            "term": "Completed Safety",
-            "definition": "Card for the collection of all completed safety forms in the project, shown by calendar date."
-          },
-          {
-            "term": "Safety Calendar",
-            "definition": "Card described as \"To log scheduled Safeties forms\". Opens a calendar of the safety forms planned for each day."
-          },
-          {
-            "term": "Approve Safety",
-            "definition": "Card to view and act on approval requests for safety forms."
-          }
-        ],
-        "procedures": []
-      },
-      {
-        "heading": "Safety Forms",
-        "intro": "<p>The <strong>Safety Forms</strong> screen lists the event-based safety forms logged in the project. The count in the heading, for example <strong>Safety Forms (0)</strong>, is the number of forms available.</p>",
-        "images": [
-          {
-            "src": "assets/product/field-works/102.jpg",
-            "caption": "The Safety Forms screen"
-          }
-        ],
-        "definitions": [
-          {
-            "term": "Safety Forms (n) list",
-            "definition": "The left column lists the safety form types set up for the project, with a **Search** box to find one by name. Selecting a form type shows its logs on the right."
-          },
-          {
-            "term": "Search by ID/User",
-            "definition": "Narrows the logs on the right by log ID or by the user who raised them."
-          },
-          {
-            "term": "No Logs Available",
-            "definition": "Shown on the right when nothing has been logged yet for the selected form."
-          },
-          {
-            "term": "Filters",
-            "definition": "Opens a dialog with four filters: **Raised Date** (a start and end date), **Raised By**, **Log ID** and **Status**. **Apply** narrows the list; **Clear all** removes the filters.",
-            "images": [
-              {
-                "src": "assets/product/field-works/103.jpg",
-                "caption": "The Safety Forms Filters dialog"
-              }
-            ]
-          },
-          {
-            "term": "Status",
-            "definition": "The **Status** filter offers **Saved as draft**, **In Progress with issues**, **In Progress**, **Completed**, **Submitted for approval**, **Approval workflow in progress**, **Approved** and **Rejected**. Pick one or more to see only logs in those states."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Find a safety log",
-            "steps": [
-              "Open **Field Works**, click the **Safety** tab and then the **Safety Forms** card.",
-              "Select a form type in the list on the left.",
-              "Click **Filters**, choose the **Raised Date**, **Raised By**, **Log ID** or **Status** you need and click **Apply**."
-            ],
-            "images": [
-              {
-                "src": "assets/product/field-works/103.jpg",
-                "caption": "The Filters dialog",
-                "step": 2
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "heading": "Daily Safety Issues",
-        "intro": "<p>The <strong>Daily Safety Issues</strong> screen collects issues raised because of safety breaches or failures. It has three tabs: <strong>Daily Safety Issues</strong>, <strong>Observations</strong> and <strong>Safety Workflow Issues</strong>.</p>",
-        "images": [
-          {
-            "src": "assets/product/field-works/106.jpg",
-            "caption": "The Daily Safety Issues tab with no issues yet"
-          }
-        ],
-        "definitions": [
-          {
-            "term": "Search by ID/Status",
-            "definition": "Type an issue ID or a status to narrow the list."
-          },
-          {
-            "term": "Issue counters",
-            "definition": "Three counters beside the search box: **Total Issues**, **Issues Raised** and **Issues Rectified**."
-          },
-          {
-            "term": "Follow Up Actions",
-            "definition": "Opens a small menu with **Follow Up Forms**, **Follow Up Issues** and **Follow Up Setup**. **Follow Up Forms** lists form types such as **RFI**, **Submittal**, **Change Order**, **Meeting Minutes**, **Other Forms**, **Quick Apps** and **Safety Forms**; **Follow Up Issues** lists **Restraints** and **Safety Observations**."
-          },
-          {
-            "term": "Download Excel",
-            "definition": "Downloads the issues in the list as an Excel file."
-          },
-          {
-            "term": "Filters",
-            "definition": "Opens a dialog with **Issue Type**, **Priority**, a **Past Due Date** tick box, **Due Date**, **Raised on**, **Assignee**, **Issue Number**, **Raised By**, **Rectified By** and **Status**. The **Status** filter offers **RAISED** and **RECTIFIED**.",
-            "images": [
-              {
-                "src": "assets/product/field-works/107.jpg",
-                "caption": "The Daily Safety Issues Filters dialog"
-              }
-            ]
-          },
-          {
-            "term": "Grid and list view",
-            "definition": "The two icons at the right switch the issues between cards (grid) and a table (list)."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Find overdue safety issues",
-            "steps": [
-              "Open **Field Works**, click the **Safety** tab and then **Daily Safety Issues**.",
-              "Click **Filters**.",
-              "Tick **Past Due Date** and click **Apply**."
-            ],
-            "images": [
-              {
-                "src": "assets/product/field-works/107.jpg",
-                "caption": "The Filters dialog",
-                "step": 2
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "heading": "Observations",
-        "intro": "<p>The <strong>Observations</strong> tab of Daily Safety Issues holds safety observations that site staff record, each with a priority and attachments.</p>",
-        "images": [
-          {
-            "src": "assets/product/field-works/105.jpg",
-            "caption": "The Observations tab"
-          }
-        ],
-        "definitions": [
-          {
-            "term": "Search, counters, Download Excel, Filters",
-            "definition": "Work as on the **Daily Safety Issues** tab: search by ID or status, counts of **Total Issues**, **Issues Raised** and **Issues Rectified**, an Excel download and a filter dialog."
-          },
-          {
-            "term": "Add Observation",
-            "definition": "Opens the **Create Observation** form.",
-            "images": [
-              {
-                "src": "assets/product/field-works/104.jpg",
-                "caption": "The Create Observation form"
-              }
-            ]
-          },
-          {
-            "term": "Create Observation form",
-            "definition": "Shows who created it and today's date, then these fields: **Project Location**, **Supervisor** and **Observation** (all required), **Priority** (required; **High**, **Medium** or **Low**) and an **Attachments** section with **Upload File**. **Submit** saves the observation."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Record an observation",
-            "steps": [
-              "Open **Field Works**, click **Safety**, open **Daily Safety Issues** and click the **Observations** tab.",
-              "Click **Add Observation**.",
-              "Fill in **Project Location**, **Supervisor**, **Observation** and **Priority**.",
-              "Under **Attachments**, click **Upload File** to add a photo or document if you need to.",
-              "Click **Submit**."
-            ],
-            "images": [
-              {
-                "src": "assets/product/field-works/104.jpg",
-                "caption": "The Create Observation form",
-                "step": 3
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "heading": "Safety Workflow Issues",
-        "intro": "<p>The <strong>Safety Workflow Issues</strong> tab lists issues raised in the approval process when a user rejects a Quality or Safety Form.</p>",
-        "images": [],
-        "definitions": [
-          {
-            "term": "Search by ID",
-            "definition": "Finds a workflow issue by its ID."
-          },
-          {
-            "term": "Download Excel",
-            "definition": "Downloads the listed issues as an Excel file."
-          },
-          {
-            "term": "Filters",
-            "definition": "Opens a filter dialog for the list."
-          },
-          {
-            "term": "Grid and list view",
-            "definition": "Switches between cards and a table."
-          },
-          {
-            "term": "No Safety Workflow Issues found",
-            "definition": "Shown when no safety form has been rejected."
-          }
-        ],
-        "procedures": []
-      },
-      {
-        "heading": "Completed Safety",
-        "intro": "<p>The <strong>Completed Safety</strong> screen (titled <strong>Completed Safety Forms</strong>) shows every completed safety form in the project by calendar date.</p>",
-        "images": [
-          {
-            "src": "assets/product/field-works/108.jpg",
-            "caption": "The Completed Safety Forms screen"
-          }
-        ],
-        "definitions": [
-          {
-            "term": "Users",
-            "definition": "A multi-select list of users. The logs shown belong to the selected users."
-          },
-          {
-            "term": "Download Excel",
-            "definition": "Downloads the completed logs as an Excel file."
-          },
-          {
-            "term": "Grid View and List view",
-            "definition": "The two icons at the top right switch how the logs are laid out."
-          },
-          {
-            "term": "Filter by Range",
-            "definition": "Pick a start and end date to show only logs completed in that range."
-          },
-          {
-            "term": "Calendar",
-            "definition": "A month calendar below the range filter, with arrows to change month; today is circled. Pick a day to see that day's logs on the right."
-          },
-          {
-            "term": "No Logs Present",
-            "definition": "Shown on the right when there are no completed logs for the chosen dates."
-          }
-        ],
-        "procedures": []
-      },
-      {
-        "heading": "Safety Calendar",
-        "intro": "<p>The <strong>Safety Calendar</strong> screen shows the scheduled safety forms for the project day by day, so supervisors can see what is due and how far each one has got.</p>",
-        "images": [
-          {
-            "src": "assets/product/field-works/109.jpg",
-            "caption": "The Safety Calendar"
-          }
-        ],
-        "definitions": [
-          {
-            "term": "Status colours",
-            "definition": "A legend at the top right: grey is **Not Ready**, blue is **Ready**, orange is **In Progress** and green is **Completed**."
-          },
-          {
-            "term": "Select date",
-            "definition": "A month calendar with arrows to change month. Today is highlighted in orange. Click a date to load that day."
-          },
-          {
-            "term": "Safety forms for a date",
-            "definition": "The panel on the right is headed with the chosen date, for example \"Safety forms for Wed Oct 07 2026\", and lists the forms scheduled for it. It says **No Data** when none are scheduled."
-          }
-        ],
-        "procedures": []
-      },
-      {
-        "heading": "Approve Safety",
-        "intro": "<p>The <strong>Approve Safety</strong> screen (titled <strong>Approve Safety Logs</strong>) lists safety logs that are waiting for approval so an approver can act on them.</p>",
-        "images": [
-          {
-            "src": "assets/product/field-works/110.jpg",
-            "caption": "The Approve Safety Logs screen"
-          }
-        ],
-        "definitions": [
-          {
-            "term": "Status colours",
-            "definition": "Legend at the top right: grey is **Not Ready**, blue is **Ready to Approve**, orange is **In Progress** and green is **Approved**."
-          },
-          {
-            "term": "Filter by Range",
-            "definition": "Start and end date; only logs in that range are listed."
-          },
-          {
-            "term": "Filter by Date",
-            "definition": "A month calendar to pick one day, with **All**, **This Week** and **Last Week** buttons for quick ranges."
-          },
-          {
-            "term": "No Logs Present",
-            "definition": "Shown on the right when no safety log is waiting."
-          }
-        ],
-        "procedures": []
-      },
-      {
-        "heading": "Drawing Management",
-        "intro": "<p>The <strong>Drawing Management</strong> tab of Field Works holds one card for the project's drawing issues.</p>",
-        "images": [
-          {
-            "src": "assets/product/field-works/111.jpg",
-            "caption": "The Drawing Management tab"
-          }
-        ],
-        "definitions": [
-          {
-            "term": "Workflow Issues",
-            "definition": "Card described as \"Collection of all Drawing Workflow Issues in the project\". Opens the **Drawing Workflow Issues** screen."
-          }
-        ],
-        "procedures": []
-      },
-      {
-        "heading": "Drawing Workflow Issues",
-        "intro": "<p>The <strong>Drawing Workflow Issues</strong> screen lists the workflow issues raised on drawings, one plant at a time.</p>",
-        "images": [
-          {
-            "src": "assets/product/field-works/112.jpg",
-            "caption": "The Drawing Workflow Issues screen"
-          }
-        ],
+        "heading": "Overview",
+        "intro": "<p>If Project Setup is where a construction business configures a project before anyone picks up a tool, <strong>Field Works</strong> is where the job actually gets executed and recorded. This is the module a foreman, field engineer, QA/QC inspector, or safety officer opens dozens of times in a working day, as opposed to Project Setup, which a <strong>PM or Module Admin</strong> visits mainly at kickoff and during reconfiguration. Everything here reads from configuration built elsewhere — a work package, form template, safety category, or approval workflow has to exist in Project Setup or Global Data before anyone can act on it in the field.</p><p>Field Works is organized as a top tab bar of five tabs: <strong>Tree Version</strong>, <strong>Safety</strong>, <strong>Drawing Management</strong>, <strong>Invoices</strong>, and <strong>Workorder</strong>. The bulk of daily activity happens under Tree Version, which mirrors the project's plant/work-package structure exactly as defined in Project Setup → Works. Clicking a plant card there opens a <strong>second-level tab bar scoped to that plant</strong> — Progress, Quick Apps, Quality, Project Forms, and Cost — so every log, inspection, form, and cost movement stays attached to the specific work package it belongs to. That scoping is what makes progress-versus-cost and quality-versus-plant reporting mean anything later.</p><p>The remaining four top tabs are project-wide rather than plant-scoped. Safety covers the project's safety forms, calendar, issues, and approvals. Drawing Management is a deliberately narrow issue queue for drawings that failed approval. Invoices carries work-order invoices and their workflow problems. Workorder is the execution-side tracking of work orders, distinct from the setup-side Workorder tab in Project Setup.</p>",
         "definitions": [
           {
             "term": "Tree Version",
-            "definition": "A drop-down of the project's plants (for example **Pellet Plant (1MTPA)**, **Blast Furnace (0.6 MTPA)** and **Slab Caster**). The list shows the issues of the plant you pick."
+            "definition": "The first and busiest top tab of Field Works — a grid of cards, one per work package or plant, each listing its child Entities. It mirrors the structure defined in Project Setup → Works."
           },
           {
-            "term": "Search by ID",
-            "definition": "Finds an issue by its ID."
+            "term": "Safety (top tab)",
+            "definition": "The project-wide safety execution tab, holding Safety Forms, Daily Safety Issues, Completed Safety, Safety Calendar, and Approve Safety."
           },
           {
-            "term": "Download Excel",
-            "definition": "Downloads the listed issues as an Excel file."
+            "term": "Drawing Management (top tab)",
+            "definition": "A single-card tab holding Workflow Issues — the drawing workflow issues raised in the project when a drawing is rejected at any approval level."
           },
           {
-            "term": "Filters",
-            "definition": "Opens a dialog with **Raised On** (date) and **Raised By**; **Apply** narrows the list, **Clear all** resets it.",
-            "images": [
-              {
-                "src": "assets/product/field-works/113.jpg",
-                "caption": "The Drawing Workflow Issues Filters dialog"
-              }
-            ]
+            "term": "Invoices (top tab)",
+            "definition": "A two-card tab holding Invoices (labelled \"Workorder Invoices\") and Workflow Issues for work-order-invoice workflow problems."
           },
           {
-            "term": "Grid and list view",
-            "definition": "Switches between cards and a table."
-          },
-          {
-            "term": "No Drawing WorkFlow Issues found",
-            "definition": "Shown when the chosen plant has no issues."
-          }
-        ],
-        "procedures": []
-      },
-      {
-        "heading": "Invoices",
-        "intro": "<p>The <strong>Invoices</strong> tab of Field Works has two cards for the project's work order invoices.</p>",
-        "images": [
-          {
-            "src": "assets/product/field-works/114.jpg",
-            "caption": "The Invoices tab"
-          }
-        ],
-        "definitions": [
-          {
-            "term": "Invoices",
-            "definition": "Card described as \"Workorder Invoices\". Opens the **Work Order Invoice** screen, with the tabs **Invoices** and **Summary**."
-          },
-          {
-            "term": "Workflow Issues",
-            "definition": "Card for all work order invoice workflow issues in the project. Opens **Invoice Workflow Issues**."
-          }
-        ],
-        "procedures": []
-      },
-      {
-        "heading": "Work Order Invoice",
-        "intro": "<p>The <strong>Work Order Invoice</strong> screen lists the invoices that contractors submit against work orders, with the amounts billed, recovered and still pending.</p>",
-        "images": [
-          {
-            "src": "assets/product/field-works/115.jpg",
-            "caption": "The Work Order Invoice list"
-          }
-        ],
-        "definitions": [
-          {
-            "term": "Invoices tab",
-            "definition": "The list of invoices, one row each."
-          },
-          {
-            "term": "Create",
-            "definition": "Opens the **Create Invoice** form.",
-            "images": [
-              {
-                "src": "assets/product/field-works/116.jpg",
-                "caption": "The Create Invoice form"
-              }
-            ]
-          },
-          {
-            "term": "Search by ID or Name",
-            "definition": "Finds an invoice by its number or name."
-          },
-          {
-            "term": "Columns",
-            "definition": "**Invoice Number**, **Date of Submission**, **Submitted by**, **Contractor**, **Invoice Base Amount**, **Number of Payments**, **Amount Paid**, **Advance Amount Recovery**, **Retention Amount**, **Taxes Amount**, **Discount Amount**, **Contractor Fee**, **Contingency Fee**, **Fixed Fee**, **Award Fee**, **Incentives**, **Total Labor cost**, **Total Material cost**, **Invoice Total Amount** and **Pending Amount**. The small funnel beside each heading filters that column."
-          },
-          {
-            "term": "Filters",
-            "definition": "Opens the **Filter** dialog. **Status** tick boxes: **Raised**, **Payments in progress** and **Done**. Other filters: **Submitted By**, **Date of submission**, **Invoice Total Amount** (**Greater than** and **Less than** a rupee value), **Actuals Derived From** (**Work Logs**, **RFIs** or **Service Entry Sheets**) and **Contractor**. **Submit** applies them; **Clear** resets.",
-            "images": [
-              {
-                "src": "assets/product/field-works/117.jpg",
-                "caption": "The Filter dialog"
-              }
-            ]
-          },
-          {
-            "term": "Manage Columns",
-            "definition": "Opens a dialog to choose and arrange the columns. Tick a column under **Column Options** (for example **Actuals Derived From**, which is off by default) and drag it in **Column Arrangement**. **Reset to Default** restores the standard set; **Apply** keeps the changes.",
-            "images": [
-              {
-                "src": "assets/product/field-works/118.jpg",
-                "caption": "The Manage Columns dialog"
-              }
-            ]
-          },
-          {
-            "term": "List and grid view, save icon",
-            "definition": "The icons at the right switch between a table and cards; the disk icon saves the current view setup."
-          },
-          {
-            "term": "Summary tab",
-            "definition": "One row per contract with the totals **Invoice**, **Payments**, **Invoiced Amounts**, **Discounts**, **Advance Recovery**, **Retentions**, **Taxes**, **Contractor Fee**, **Contingency Fee**, **Labor Cost**, **Material Cost**, **Additional Cost**, **Fixed Fee**, **Award Fee** and **Incentives**.",
-            "images": [
-              {
-                "src": "assets/product/field-works/119.jpg",
-                "caption": "The Summary tab"
-              }
-            ]
+            "term": "Workorder (top tab)",
+            "definition": "The execution-side work order tracking view, with search and a grid/list toggle — distinct from the setup-side Workorder tab in Project Setup where work orders are created."
           }
         ],
         "procedures": [
           {
-            "title": "Create an invoice",
+            "title": "Find the right Field Works screen",
             "steps": [
-              "Open **Field Works**, click the **Invoices** tab and the **Invoices** card.",
-              "Click **Create**.",
-              "Type the **Invoice Number** and check the **Date of Submission**, which starts as today.",
-              "Choose the **Type**: **Advance Amount** or **Work Completion**.",
-              "Choose the **Workorder** the invoice is for and fill any **Configurable Field**.",
-              "Click **Submit**."
+              "Open the project and go to **Field Works** in the left sidebar.",
+              "For day-to-day logging against a specific plant, stay on **Tree Version** and click that plant's card.",
+              "On the second-level tab bar, choose **Progress** for logs and forms, **Quality** for inspections, **Cost** for cost movements, **Project Forms** for project-specific custom forms, or **Quick Apps** for no-code mini workflows.",
+              "For safety work, drawing rejections, invoices, or work order tracking, use the **Safety**, **Drawing Management**, **Invoices**, or **Workorder** top tabs instead — these are project-wide, not plant-scoped."
             ],
-            "images": [
-              {
-                "src": "assets/product/field-works/116.jpg",
-                "caption": "The Create Invoice form",
-                "step": 3
-              }
-            ]
-          },
-          {
-            "title": "Choose which columns the list shows",
-            "steps": [
-              "Click **Manage Columns**.",
-              "Tick or untick columns under **Column Options**, and drag them in **Column Arrangement** to reorder.",
-              "Click **Apply**."
-            ],
-            "images": [
-              {
-                "src": "assets/product/field-works/118.jpg",
-                "caption": "The Manage Columns dialog",
-                "step": 2
-              }
-            ]
+            "note": "If a form, work package, or safety category you expect is missing, the cause is almost always upstream in Project Setup rather than in Field Works itself."
           }
         ]
-      },
-      {
-        "heading": "Invoice Workflow Issues",
-        "intro": "<p>The <strong>Invoice Workflow Issues</strong> screen lists issues raised on work order invoices during their approval workflow.</p>",
-        "images": [
-          {
-            "src": "assets/product/field-works/120.jpg",
-            "caption": "The Invoice Workflow Issues screen"
-          }
-        ],
-        "definitions": [
-          {
-            "term": "Download Excel",
-            "definition": "Downloads the listed issues as an Excel file."
-          },
-          {
-            "term": "Filters",
-            "definition": "Opens a filter dialog for the table."
-          },
-          {
-            "term": "Grid and list view",
-            "definition": "Switches between cards and a table."
-          },
-          {
-            "term": "Columns",
-            "definition": "**WFL Number**, **Level**, **Raised on Date**, **Raised on Time**, **Raised by**, **Image**, **Chat**, **Assign To** and **Due Date**."
-          }
-        ],
-        "procedures": []
-      },
-      {
-        "heading": "Workorder",
-        "intro": "<p>The <strong>Workorder</strong> tab of Field Works lists the work orders of the project that are linked to its plants.</p>",
-        "images": [
-          {
-            "src": "assets/product/field-works/121.jpg",
-            "caption": "The Workorder tab in card view"
-          }
-        ],
-        "definitions": [
-          {
-            "term": "Search Workorders",
-            "definition": "Finds a work order by name."
-          },
-          {
-            "term": "Table View and card view",
-            "definition": "The two icons at the right switch between a table and cards."
-          },
-          {
-            "term": "Table columns",
-            "definition": "**Workorder Name**, **Contractor**, **Description**, **Approval Status**, **Template Type**, **Contract Type** and **Tree Versions**. The funnel beside each heading filters that column.",
-            "images": [
-              {
-                "src": "assets/product/field-works/122.jpg",
-                "caption": "The Workorder table view"
-              }
-            ]
-          },
-          {
-            "term": "No Data",
-            "definition": "Shown when no work order exists for the project."
-          }
-        ],
-        "procedures": []
       }
     ],
     "name": "Field Works",
@@ -30839,11 +30974,40 @@ const MODULES = [
       "Click a plant card on <strong>Tree Version</strong> to open its second-level tabs: Progress, Quick Apps, Quality, Project Forms, and Cost."
     ],
     "sections": [
-      "Overview",
       "Tree Version",
       "Progress",
       "Work Logs",
+      "Work Log Layout Settings",
+      "Submitted Work Logs",
+      "Approve Work Logs",
       "Productivity Logs",
+      "Site Photographs",
+      "Ready Works",
+      "Meeting Minutes",
+      "Progress Issues",
+      "Equipment Logs",
+      "Material Logs",
+      "Manpower Logs",
+      "Restraints",
+      "Inventory Management",
+      "Procurement",
+      "Labor Logs",
+      "Machinery Logs",
+      "Detailed Work Logs",
+      "Safety",
+      "Safety Forms",
+      "Daily Safety Issues",
+      "Observations",
+      "Safety Workflow Issues",
+      "Completed Safety",
+      "Safety Calendar",
+      "Approve Safety",
+      "Drawing Management",
+      "Drawing Workflow Issues",
+      "Invoices",
+      "Work Order Invoice",
+      "Invoice Workflow Issues",
+      "Workorder",
       "Quick Apps",
       "Form Issues",
       "Form Workflow Issues",
@@ -30861,20 +31025,7 @@ const MODULES = [
       "Change Orders",
       "Transfer",
       "Field Logs",
-      "Safety",
-      "Safety Forms",
-      "Daily Safety Issues",
-      "Observations",
-      "Safety Workflow Issues",
-      "Completed Safety",
-      "Safety Calendar",
-      "Approve Safety",
-      "Drawing Management",
-      "Drawing Workflow Issues",
-      "Invoices",
-      "Work Order Invoice",
-      "Invoice Workflow Issues",
-      "Workorder"
+      "Overview"
     ]
   },
   {
