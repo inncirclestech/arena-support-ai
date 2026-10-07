@@ -26668,226 +26668,117 @@ const MODULES = [
     "qaItems": QA_MYDESK,
     "narrative": [
       {
-        "heading": "Overview",
-        "intro": "<p>My Desk is the first screen a user sees when opening a project. It shows how each plant is progressing, what is waiting on you, and the latest work, quality and safety activity. Everyone on the project uses it, from <strong>End Users</strong> to <strong>PMs</strong>.</p><p>Open it from the project menu: <strong>My Desk</strong> (route <code>#/desk</code>). The breadcrumb reads <strong>Desk &gt; Actions</strong> and the one tab is <strong>My Actions</strong>. The page greets you by name and date (for example \"Hello System Admin!\"), then shows <strong>Project Progress</strong>, a plant selector, and the accordions <strong>My Actions</strong>, <strong>Pending Actions</strong>, <strong>Recent Work Logs</strong>, <strong>Recent Punch List Items</strong>, <strong>Recent Quality Logs</strong>, <strong>Recent Daily Safety Issues</strong> and <strong>Recent Safety Logs</strong>.</p>",
-        "definitions": [
+        "heading": "My Desk",
+        "intro": "<p><strong>My Desk</strong> is the first screen you land on when you open a project. It greets you by name and today's date, shows how much work is complete on each part of the project, and lists what is waiting for you or for your team.</p>",
+        "images": [
           {
-            "term": "My Desk does not store data",
-            "definition": "Every panel is a read-only summary of records that live in **Field Works** (and the setup in **Project Setup**). You cannot add or edit anything on My Desk itself; click through to the source screen to act."
-          },
-          {
-            "term": "Plant selector",
-            "definition": "The dropdown under the Project Progress cards (it opens on the first plant, for example **Pellet Plant (1MTPA)**). It scopes everything below it: My Actions, Pending Actions and all five Recent panels show only that plant. Its options are the **Tree Versions** you see in **Field Works**: on Arena Steel Plant - Phase 1 they are 13 plants in the same order (Pellet Plant (1MTPA), Basic Oxygen Furnace (0.8 MTPA), Blast Furnace (0.6 MTPA), Coke Oven, Cold Rolling Mill, External Works, Hot Strip Mill, IBMD, Lime Dolomite Plant, Oxygen Plant, RMHS, Sinter Plant, Slab Caster)."
-          },
-          {
-            "term": "Where this data comes from",
-            "definition": "Plants come from **Field Works → Tree Version** (built in **Project Setup → Works**). Progress cards are that plant's Entities. **Recent Work Logs** come from **Field Works → Progress → Submitted Work Logs**, **Recent Punch List Items** from **Quality → Punch Lists**, **Recent Quality Logs** from **Quality → Submitted Quality Logs**, **Recent Daily Safety Issues** from **Safety → Daily Safety Issues**, and **Recent Safety Logs** from **Safety → Completed Safety**. **My Actions** and **Pending Actions** collect open issues, approvals and forms from those same Field Works cards."
-          },
-          {
-            "term": "Where this data goes",
-            "definition": "Nowhere else. My Desk is an entry point: its links take you into Field Works. The figures you see on **Data Analytics** dashboards come from the same Field Works records, not from My Desk."
-          },
-          {
-            "term": "Plant context is shared",
-            "definition": "The plant you pick on My Desk carries into Field Works: after choosing **Coke Oven** on My Desk, **Field Works → Progress → Submitted Work Logs** opened showing **Coke Oven**. If a Field Works screen looks empty, check which plant is selected."
-          },
-          {
-            "term": "What the viewer sees",
-            "definition": "Only what the signed-in user has permission to see, in the plants of the project. Project Settings change the order of the Recent panels and whether extra dashboards appear (see **Project Settings That Control My Desk**)."
+            "src": "assets/product/my-desk/001.jpg",
+            "caption": "My Desk with the Project Progress cards and the action panels"
           }
         ],
-        "procedures": [
-          {
-            "title": "Open My Desk and choose a plant",
-            "steps": [
-              "Open the project and click **My Desk** in the project menu. The page opens at **Desk → Actions**.",
-              "Read the greeting and the **Project Progress** row to see every plant at a glance.",
-              "Choose a plant in the selector below the cards. My Actions, Pending Actions and the Recent panels reload for that plant.",
-              "Expand a panel to read it. Click an item, or **See All >** on Recent Work Logs, to open the full Field Works screen."
-            ]
-          }
-        ]
-      },
-      {
-        "heading": "Project Progress",
-        "intro": "<p>The Project Progress row shows one card for each Entity in the project, so a manager can see which plant areas are moving. The <strong>PM</strong>, <strong>Super Admin</strong> and executives use it most.</p><p>It opens with <strong>Total Work Completed</strong> (for example 0%), <strong>Last Updated At</strong>, a <strong>refresh</strong> button and an <strong>ALL</strong> dropdown that filters the cards by plant.</p>",
         "definitions": [
           {
-            "term": "Progress card",
-            "definition": "One card per Entity of a plant. The bold title is the Entity (for example **Piperack**, **Mixing Building**, **ECR (Electrical Control Room)**, **Main Shop**, **Road & Drainage**); the line under it is the plant (for example **Pellet Plant (1MTPA)**). Each card has a **Progress** bar and a percentage. Click a card to open that area in Field Works. On Arena Steel Plant - Phase 1 there are 45 cards and every one reads 0%."
+            "term": "Hello and date",
+            "definition": "Your name and today's date at the top of the page, with the **My Actions** tab under the breadcrumb **Desk > Actions**."
           },
           {
-            "term": "ALL plant filter",
-            "definition": "Shows every plant's cards by default. Choose one plant to see only its Entities. The options are the 13 Tree Versions of the project."
+            "term": "Project Progress",
+            "definition": "A row of cards, one for each part of the project (for example a building or a road). Each card shows the part's name, the plant it belongs to, and a **Progress** percentage with a bar. Scroll the row sideways to see all cards."
           },
           {
-            "term": "Total Work Completed and Last Updated At",
-            "definition": "The headline percentage and the time the figures were last calculated (\"a few seconds ago\" right after opening). The **refresh** button (tooltip **Refresh**) reloads the numbers."
+            "term": "Total Work Completed",
+            "definition": "The overall percentage of work completed across the cards currently shown."
           },
           {
-            "term": "Where the cards come from",
-            "definition": "Plants and Entities are the **Tree Versions** and Entities defined in **Project Setup → Works** and shown on **Field Works → Tree Version** (for example **Pellet Plant (1MTPA)** lists Piperack, Indurating Building, Mixing Building, ECR (Electrical Control Room), Balling Building, Kiln). A plant with no Entities has no card. Progress weights come from **Project Setup → Works → Assign Percentage**. The Tree Versions themselves are built from the **Construction Type** set in **Global Data** when the project was created."
-          }
-        ],
-        "procedures": [
+            "term": "Last Updated At",
+            "definition": "How long ago the progress numbers were last calculated, for example \"5 hours ago\". The numbers do not change live; they change when they are recalculated."
+          },
           {
-            "title": "Check progress for one plant",
-            "steps": [
-              "Open **My Desk**.",
-              "Open the **ALL** dropdown above the cards and choose the plant.",
-              "Read each Entity card: name, plant, progress bar and percentage.",
-              "Click **refresh** if **Last Updated At** looks old."
+            "term": "Refresh",
+            "definition": "The circular arrow next to **Last Updated At**. Click it to recalculate the progress now; the text changes to \"a few seconds ago\"."
+          },
+          {
+            "term": "Plant filter (top)",
+            "definition": "The drop-down on the right of **Project Progress**. It starts on **ALL**. It has a search box and one entry for each plant or section of the project (for example **Pellet Plant (1MTPA)** or **Coke Oven**). Pick one and the cards, and **Total Work Completed**, show only that plant's parts."
+          },
+          {
+            "term": "Plant drop-down (above the panels)",
+            "definition": "A second drop-down just above **My Actions**. It has no **ALL** choice: you always pick one plant, and the **Recent Work Logs**, **Recent Punch List Items**, **Recent Quality Logs**, **Recent Daily Safety Issues** and **Recent Safety Logs** panels show items for that plant only."
+          },
+          {
+            "term": "My Actions",
+            "definition": "A panel with a count in brackets. Open it to see three sub-panels, **Issues**, **Approvals** and **Forms**, each with its own count. They list the items that are assigned to you and need your action.",
+            "images": [
+              {
+                "src": "assets/product/my-desk/002.jpg",
+                "caption": "My Actions opened"
+              }
             ]
-          }
-        ]
-      },
-      {
-        "heading": "My Actions",
-        "intro": "<p>My Actions is the list of things waiting for the signed-in user in the selected plant. Field users, reviewers and approvers open it each morning to see what needs a response.</p><p>The accordion header shows a total, for example <strong>My Actions (0)</strong>, and a <strong>calendar</strong> icon (tooltip <strong>Schedule Actions</strong>). Inside are three groups, each with its own count: <strong>Issues</strong>, <strong>Approvals</strong> and <strong>Forms</strong>.</p>",
-        "definitions": [
-          {
-            "term": "Issues (My Actions)",
-            "definition": "Eleven rows, each with a count and an arrow that opens the source list: **Punch List**, **Restraints**, **Form Issues**, **Customer Issues**, **Drawing Workflow Issues**, **Form Workflow Issues**, **Safety Issue**, **Safety Observations**, **Safety Workflow Issues**, **Quick Apps Form Issues** and **Quick Apps Workflow Issues**."
           },
           {
-            "term": "Approvals (My Actions)",
-            "definition": "Five rows: **Quality Logs**, **Safety Logs**, **RFIs**, **Productivity logs** and **Quick Apps**. These are records sent for approval that are waiting on you."
+            "term": "Calendar icon (My Actions)",
+            "definition": "The small calendar beside **My Actions**. It opens a page with a date box, an **Issues** section, a **Forms** section and a **Submit** button, for the date you choose."
           },
           {
-            "term": "Forms (My Actions)",
-            "definition": "Three rows: **RFI**, **Meeting minutes** and **Quick Apps**. These are forms assigned to you to fill in or complete."
-          },
-          {
-            "term": "Where each row comes from",
-            "definition": "Punch List = **Field Works → Quality → Punch Lists** (tabs Punch List and Quality Workflow Issues). Restraints = **Progress → Restraints**. Form Issues = **Progress → Issues** (\"Issue raised for RFI, Submittals, Change Orders and Custom Forms\"). Safety Issue, Safety Observations and Safety Workflow Issues = the three tabs of **Safety → Daily Safety Issues**. Approvals rows = the matching approval screens (**Approve Quality Logs**, **Approve Safety**, **RFI**, **Productivity Logs**). Forms rows = the RFI and Meeting Minutes cards. Customer Issues and the Quick Apps rows come from the matching Field Works forms and **Quick Apps**."
-          },
-          {
-            "term": "What controls who gets an action",
-            "definition": "Approval steps come from the workflows you build in **Project Setup** (Quality, Safety, Drawings and **Forms → Approval Workflow**). Who may see a form or issue comes from **Project Setup → Forms → Assign Users** and from **Users and Permissions**. If nobody is assigned a step, nothing lands here."
-          },
-          {
-            "term": "Schedule Actions",
-            "definition": "The calendar icon opens the **Schedule Actions** screen (route <code>#/desk/schedule-actions</code>) with **Issues** and **Forms** and a **Submit** button."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Work through your actions",
-            "steps": [
-              "Open **My Desk** and pick the plant in the plant selector.",
-              "Expand **My Actions**. Look at the counts on **Issues**, **Approvals** and **Forms**.",
-              "Expand a group, then click the row with a non-zero count (the arrow opens the source list in Field Works).",
-              "Respond there: fix the issue, approve or reject the record, or complete the form. The count drops when it is closed."
+            "term": "Pending Actions",
+            "definition": "A panel with a count. It shows the same **Issues**, **Approvals** and **Forms** sub-panels, but for other people's actions instead of yours, so a manager can see what is stuck.",
+            "images": [
+              {
+                "src": "assets/product/my-desk/003.jpg",
+                "caption": "Pending Actions opened"
+              }
             ]
-          }
-        ]
-      },
-      {
-        "heading": "Pending Actions",
-        "intro": "<p>Pending Actions shows what is still open for a chosen person or role, so a <strong>PM</strong> can chase late items. It sits under My Actions and has the same Issues, Approvals and Forms groups.</p><p>At the top is a <strong>Roles / Users</strong> switch and a dropdown.</p>",
-        "definitions": [
-          {
-            "term": "Roles / Users switch and dropdown",
-            "definition": "Choose whose pending work to view. In **Users** mode the dropdown lists the project's active system users (same people as **Project Setup → People → Roster → System User**)."
           },
           {
-            "term": "Users list source",
-            "definition": "The 32 names match the active **System User** cards of **Project Setup → People → Roster**: the roster has 35 cards, and the dropdown leaves out the inactive one (for example \"Mohd Zubairdfgewhr Uddindssgrf\") and repeats of the same name (the three **System Admin** cards appear once). People come into the roster from **Global Data → Users & Permissions → Global Rosters**."
+            "term": "Roles / Users switch",
+            "definition": "Inside **Pending Actions**, the switch on the left. With **Users** selected, the drop-down on the right lists individual people; with **Roles** selected, it lists user groups (for example **Field Users**), and you can tick several or use **Select All**. The **Issues**, **Approvals** and **Forms** counts follow your selection."
           },
-          {
-            "term": "Extra groups in Pending Actions",
-            "definition": "Compared with My Actions it adds **Submittals** and **Change Orders** under Approvals, and **Submittal** and **Change Order** under Forms. Issues has the same eleven rows."
-          },
-          {
-            "term": "My Actions versus Pending Actions",
-            "definition": "**My Actions** is for the signed-in user. **Pending Actions** lets you look at another user or role and shows more form types (Submittals and Change Orders). Both follow the plant selector."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "See what is pending for a teammate",
-            "steps": [
-              "Open **My Desk** and choose the plant.",
-              "Expand **Pending Actions**.",
-              "Pick the person in the dropdown (or switch to **Roles**).",
-              "Expand **Issues**, **Approvals** and **Forms** and open the rows with counts to see what is stuck."
-            ]
-          }
-        ]
-      },
-      {
-        "heading": "Recent Panels",
-        "intro": "<p>The five Recent panels give a quick read on the latest progress, quality and safety activity in the selected plant. They are for <strong>PMs</strong>, site engineers and safety officers.</p><p>Each panel reads \"No Data\" when the plant has nothing to show. They always follow the plant selector, and each mirrors a Field Works list.</p>",
-        "definitions": [
           {
             "term": "Recent Work Logs",
-            "definition": "The latest submitted work logs, grouped by date (\"Work Logs of 2nd April 2026\") in the form \"Ravi Ravi has logged the work for Mixing Building | Civil Substructure | Footing | EXC-1 | Excavation | Percentage - (0.000 -> 100.000) at 2:59 PM | Latitude | Longitude | Source : Bulk Log\". **See All >** opens **Field Works → Progress → Submitted Work Logs**. Only **submitted** logs show; drafts do not."
+            "definition": "Lists the latest work logs for the chosen plant, grouped by date (\"Work Logs of 2nd April 2026\"). Each line says who logged the work, which part and task, the percentage change (for example 0 to 100), the time, the location and the source (for example **Bulk Log**). Click a line to open **Field Works > Progress > Submitted Work Log** for that plant."
           },
           {
             "term": "Recent Punch List Items",
-            "definition": "Latest punch list items raised for the plant, from **Field Works → Quality → Punch Lists**."
+            "definition": "Lists the latest punch list items for the chosen plant. It shows **No Data** when there are none."
           },
           {
             "term": "Recent Quality Logs",
-            "definition": "Latest submitted quality inspections from **Field Works → Quality → Submitted Quality Logs** (shown calendar-wise there; \"No Logs Present\" on Pellet Plant, matching No Data)."
+            "definition": "Lists the latest quality logs for the chosen plant. It shows **No Data** when there are none."
           },
           {
             "term": "Recent Daily Safety Issues",
-            "definition": "Latest items from **Field Works → Safety → Daily Safety Issues** (\"Issues raised due to Safeties breaches/failures\"; 0 Total Issues on Pellet Plant, matching No Data)."
+            "definition": "Lists the latest daily safety issues for the chosen plant. It shows **No Data** when there are none."
           },
           {
             "term": "Recent Safety Logs",
-            "definition": "Latest completed safety forms from **Field Works → Safety → Completed Safety** (\"Collection of all completed Safeties in the project displayed calendar wise\")."
-          },
-          {
-            "term": "Why a Recent panel is empty",
-            "definition": "Nothing has been submitted for the selected plant, or you are looking at a different plant from the one with activity. Choose another plant in the selector; for example Pellet Plant showed work logs while **Coke Oven** showed No Data in every panel."
-          },
-          {
-            "term": "How work logs get here",
-            "definition": "Field users submit work logs in **Field Works → Progress → Work Logs**; how those screens look depends on **Project Settings → Work Logs Templates**. Once submitted (and approved, where an approval workflow is on), they appear on Submitted Work Logs and in Recent Work Logs."
+            "definition": "Lists the latest safety logs for the chosen plant. It shows **No Data** when there are none."
           }
         ],
         "procedures": [
           {
-            "title": "Find the latest work for a plant",
+            "title": "See progress for one plant",
             "steps": [
-              "Open **My Desk** and choose the plant.",
-              "Expand **Recent Work Logs**.",
-              "Click **See All >** to open the full **Submitted Work Logs** list with filters."
+              "Open the project. **My Desk** opens first; or click **My Desk** in the left menu.",
+              "Click the drop-down on the right of **Project Progress** (it shows **ALL**).",
+              "Pick a plant, for example **Coke Oven**. The cards and **Total Work Completed** now show only that plant.",
+              "Click **Refresh** if you want the numbers recalculated first."
             ]
-          }
-        ]
-      },
-      {
-        "heading": "Settings",
-        "intro": "<p>Two Project Settings pages decide how My Desk is arranged. The <strong>Module Admin</strong> or <strong>Project Manager</strong> changes them; end users cannot.</p><p>Open <strong>Project Settings</strong> and choose <strong>My Desk</strong> or <strong>My Desk Dashboards</strong> in the left menu.</p>",
-        "definitions": [
-          {
-            "term": "Project Settings → My Desk",
-            "definition": "Has a **Save Changes** button and two drag-and-drop lists. **Recent Logs List** (drag the handle to change order) holds **1 Recent Work Logs, 2 Recent Punch Lists Items, 3 Recent Quality Logs, 4 Recent Daily Safety Issues, 5 Recent Safety Logs**: the five Recent panels on My Desk, in the same order. **Dashboard List** holds **Monitor Daily Progress, Monitor Forms Status, Monitor Forms Raised Daily, Monitor Issues Status, Monitor Issues Raised Daily**, the order of the dashboard graphs."
           },
           {
-            "term": "Project Settings → My Desk Dashboards",
-            "definition": "Titled **Enable/ Disable dashboards**, with one checkbox each for **My Dashboard**, **Google Maps**, **Quality Dashboard**, **Delay Analysis Dashboard**, **Defect Analysis Dashboard** and **Strip Charts**. With none ticked, the desk shows only the **Actions** tab; ticking one adds that dashboard to the desk."
-          },
-          {
-            "term": "No settings for Actions and Pending Actions",
-            "definition": "Neither accordion has a Project Setting of its own. What appears there follows the plant selector, the user's permissions and the workflows and assignments built in **Project Setup**."
-          },
-          {
-            "term": "Who sees My Desk",
-            "definition": "Anyone with access to the project. **Users and Permissions** decides what each person may open from it."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Change the order of the Recent panels",
+            "title": "Check what is pending for a role",
             "steps": [
-              "Open **Project Settings → My Desk**.",
-              "In **Recent Logs List**, drag a row by its handle to a new position.",
-              "Click **Save Changes**.",
-              "Open **My Desk** and check the new order."
+              "On **My Desk**, click **Pending Actions** to open it.",
+              "Click the **Roles / Users** switch until **Roles** is selected.",
+              "Open the drop-down on the right and tick one or more groups.",
+              "Open **Issues**, **Approvals** or **Forms** to see the items."
+            ]
+          },
+          {
+            "title": "Open a recent work log",
+            "steps": [
+              "Pick the plant in the drop-down above **My Actions**.",
+              "Click **Recent Work Logs** to open it.",
+              "Click the line you want. The **Submitted Work Log** page for that plant opens in **Field Works**."
             ]
           }
         ]
@@ -26905,12 +26796,7 @@ const MODULES = [
       "Change panel order in <strong>Project Settings → My Desk</strong>."
     ],
     "sections": [
-      "Overview",
-      "Project Progress",
-      "My Actions",
-      "Pending Actions",
-      "Recent Panels",
-      "Settings"
+      "My Desk"
     ]
   },
   {
@@ -26919,70 +26805,46 @@ const MODULES = [
     "qaItems": QA_MYCALENDAR,
     "narrative": [
       {
-        "heading": "Calendar Views",
-        "intro": "<p>My Calendar is the project's date view of scheduled safety forms and scheduled project forms. PMs, safety officers and field leads use it to see what is due on a given day.</p><p>Open <strong>My Calendar</strong> in the project menu (route <code>#/calendar-logs</code>, breadcrumb <strong>Calendar Logs</strong>). A <strong>Select date</strong> mini calendar sits on the left; the main calendar sits on the right with a <strong>Month | Day</strong> toggle. It is read-only: you cannot add events here.</p>",
-        "definitions": [
+        "heading": "My Calendar",
+        "intro": "<p><strong>My Calendar</strong> (breadcrumb <strong>Calendar Logs</strong>) shows a month grid and a day view, so you can look at any date and see the work scheduled for it.</p>",
+        "images": [
           {
-            "term": "Select date (mini date-picker)",
-            "definition": "The small calendar on the left. **Choose month and year** opens a year grid (2016 to 2039); **Previous month** and **Next month** move one month; click a day to select it. The main calendar follows the month you choose."
-          },
-          {
-            "term": "Month view",
-            "definition": "A 7-column grid (**SUN, MON, TUES, WED, THURS, FRI, SAT**) with the day numbers of the month. Scheduled items appear against their date."
-          },
-          {
-            "term": "Day view",
-            "definition": "Switch with the **Day** toggle. Shows the items for one day, or the message **No Work Scheduled For Today** with a calendar icon when there are none."
-          },
-          {
-            "term": "Project scope",
-            "definition": "The calendar shows only the project you are in (here **Arena Steel Plant - Phase 1**). It is separate from the company-level **Calendar** module on the Home page."
-          },
-          {
-            "term": "When the calendar looks empty",
-            "definition": "A month or Day view with nothing in it (Day view says **No Work Scheduled For Today**) means no safety calendar or scheduled form has been set up for the project yet. See **What Appears on My Calendar**."
+            "src": "assets/product/my-calendar/001.jpg",
+            "caption": "My Calendar in Month view"
           }
         ],
-        "procedures": [
+        "definitions": [
           {
-            "title": "Find what is scheduled on a given day",
-            "steps": [
-              "Open **My Calendar** from the project menu.",
-              "Use **Select date** (**Choose month and year**, **Previous month**, **Next month**) to reach the month, then click the day.",
-              "Stay in **Month** view for the whole month, or click **Day** to see that day's items."
+            "term": "Select date",
+            "definition": "The small calendar on the left. The month and year (for example **10 2026**) sit under the title, with **<** and **>** arrows to go to the previous or next month. Today is circled. Click a date to open that day."
+          },
+          {
+            "term": "Month",
+            "definition": "Shows the whole month in a grid with columns **SUN** to **SAT**. Each day cell lists the work scheduled on that date; a cell stays empty when nothing is scheduled."
+          },
+          {
+            "term": "Day",
+            "definition": "Shows one date. When nothing is scheduled the page says **No Work Scheduled For Today**. Clicking a date in the small calendar switches to **Day** automatically.",
+            "images": [
+              {
+                "src": "assets/product/my-calendar/002.jpg",
+                "caption": "Day view for a date with no scheduled work"
+              }
             ]
-          }
-        ]
-      },
-      {
-        "heading": "Calendar Items",
-        "intro": "<p>My Calendar only displays schedules that someone has set up in Project Setup, so a <strong>PM</strong> or <strong>Module Admin</strong> decides what shows. If it is empty, the setup has not been done.</p><p>The two sources verified are <strong>Project Setup → Safety → Setup Safety Calendar</strong> and <strong>Project Setup → Forms → Schedule Project Forms</strong>. Field users then fill the forms in <strong>Field Works</strong>.</p>",
-        "definitions": [
-          {
-            "term": "Setup Safety Calendar",
-            "definition": "Project Setup → Safety → **Setup Safety Calendar**. Click **Create Safety Calendar Category** to open **Create Safety Calendar Category** with **Form Category Name***, **Recurrence Type** (**Daily**, **Weekly** or **Custom**), **Start Date**, **End Date**, **Time** (with AM/PM), **Remind Before** (a number of minutes, hours, days or weeks) and **Add Forms** (filter by Activities, then pick the activity forms). This project has no categories yet, which is why nothing is scheduled."
           },
           {
-            "term": "Schedule Project Forms",
-            "definition": "Project Setup → Forms → **Schedule Project Forms**, for a form type (for example **RFI**, **Submittal**, **Change Order**) on a plant. Two steps: **1 Prepare Schedule** (**Recurrence Type**, **Every**, weekdays, **Start Date**, **End Date**, **Time**) and **2 Assign User**."
-          },
-          {
-            "term": "Where users fill scheduled safety forms",
-            "definition": "**Field Works → Safety → Safety Calendar** (\"To log scheduled Safeties forms\") has status chips **Not Ready**, **Ready**, **In Progress**, **Completed**, a date picker and a list headed \"Safety forms for <date>\". Completed forms then show under **Completed Safety**. Event-based forms (not scheduled) are under **Safety Forms** instead and do not come from this calendar."
-          },
-          {
-            "term": "Where this data goes",
-            "definition": "Scheduled safety forms move from the calendar to **Approve Safety** (statuses **Not Ready**, **Ready to Approve**, **In Progress**, **Approved**) and **Completed Safety**, and feed **Recent Safety Logs** on **My Desk**. Schedules from **Schedule Project Forms** need users in **Forms → Assign Users**: that list has the same 35 people as **Project Setup → People → Roster → System User**."
+            "term": "Calendar icon (Day view)",
+            "definition": "Appears at the top right of **Day** view. It opens the **My Desk** actions page for the selected date, with an **Issues** section, a **Forms** section and a **Submit** button."
           }
         ],
         "procedures": [
           {
-            "title": "Make a recurring safety form show on the calendar",
+            "title": "Look at a particular day",
             "steps": [
-              "Open **Project Setup → Safety → Setup Safety Calendar** and click **Create Safety Calendar Category**.",
-              "Enter the **Form Category Name**, choose **Recurrence Type**, the dates, time and **Remind Before**.",
-              "Under **Add Forms**, filter by activities and select the forms; then add the users who must complete them.",
-              "Click **Submit**. The forms appear on **My Calendar** and in **Field Works → Safety → Safety Calendar** on their dates."
+              "Click **My Calendar** in the left menu.",
+              "Use the **<** and **>** arrows above the small calendar to reach the month.",
+              "Click the date. The view switches to **Day** and shows the work scheduled for it.",
+              "Click **Month** to go back to the grid."
             ]
           }
         ]
@@ -27000,8 +26862,7 @@ const MODULES = [
       "Create schedules in <strong>Project Setup → Safety → Setup Safety Calendar</strong> and <strong>Project Setup → Forms → Schedule Project Forms</strong>."
     ],
     "sections": [
-      "Calendar Views",
-      "Calendar Items"
+      "My Calendar"
     ]
   },
   {
@@ -29909,60 +29770,22 @@ const MODULES = [
     "qaItems": QA_FOLLOWUPACTIONS,
     "narrative": [
       {
-        "heading": "Overview",
-        "intro": "<p>The page has no setup of its own, so its content depends on the modules that feed it. This section says what was verified about where items could come from, and what was not.</p><p>Unlike the other project screens, **Follow Up Actions** has no row in the permission tree of **Users and Permissions**, so no separate permission controls it. Because it is empty here, ask your Arena administrator which modules raise items on your account before relying on it as a tracker.</p>",
-        "definitions": [
+        "heading": "Follow Up Actions",
+        "intro": "<p><strong>Follow Up Actions</strong> is a list of follow-up items in the project. When there are none, the page says <strong>There are no Follow Up Actions</strong>.</p>",
+        "images": [
           {
-            "term": "Where the buttons are",
-            "definition": "The **Follow Up Actions** button on an RFI form and the one on **Daily Safety Issues** both open **Follow Up Actions** in the project menu. So the page is the shared destination of those buttons, not a separate list per module."
-          },
-          {
-            "term": "Likely feeders",
-            "definition": "The **Meeting Minutes** form has an **Actions** table (Responsible, Due Date, Action) and **Field Works → Progress → Meeting Minutes** has an **Actions** tab (\"Currently there are no actions recorded for Meeting Minutes\")."
-          },
-          {
-            "term": "Not the same as My Desk",
-            "definition": "**My Desk → My Actions** and **Pending Actions** list work assigned to you (issues, approvals, forms) from the project's live workflows. **Follow Up Actions** is its own project page with its own list."
+            "src": "assets/product/follow-up-actions/001.jpg",
+            "caption": "The Follow Up Actions screen"
           }
         ],
-        "procedures": [
-          {
-            "title": "Find out why Follow Up Actions is empty",
-            "steps": [
-              "Open **Follow Up Actions** and confirm the page says \"There are no Follow Up Actions\".",
-              "Open **Field Works → Progress → Meeting Minutes → Actions** and check whether any actions are recorded.",
-              "Open the record you expected an item for (for example an RFI) and click its **Follow Up Actions** button to confirm it opens the same page.",
-              "If you expected items, raise it with your Arena administrator; the product does not show a setting for this page."
-            ]
-          }
-        ]
-      },
-      {
-        "heading": "Follow Up Actions",
-        "intro": "<p>Follow Up Actions is where a PM or Module Manager looks for items that need chasing across the project. The page is deliberately simple: a **Follow Up Actions** title, a **Search** box and a list.</p><p>It has no columns, tabs, filters or Create button, so you cannot add an item here. An empty page reads \"There are no Follow Up Actions\".</p>",
         "definitions": [
-          {
-            "term": "Follow Up Actions page",
-            "definition": "A single page at **Follow Up Actions** in the project menu: a title, a **Search** box and a card list. With nothing to show it says \"There are no Follow Up Actions\". It has no Create, Edit or Delete buttons."
-          },
-          {
-            "term": "Follow Up Actions buttons",
-            "definition": "Buttons labelled **Follow Up Actions** sit on **Field Works → Progress → RFI** (inside an open RFI form, next to the **Form** and **Communication** tabs) and on **Field Works → Safety → Daily Safety Issues** (beside **Download Excel** and **Filters**). The work log detail screen has the same button. Both buttons tested open this project page and carry no record number in the address, and the page was empty either way."
-          },
           {
             "term": "Search",
-            "definition": "The search box above the list filters the entries."
-          }
-        ],
-        "procedures": [
+            "definition": "A search box under the page title. Type to narrow the list of follow-up actions."
+          },
           {
-            "title": "Check for outstanding follow-ups",
-            "steps": [
-              "Go to **Follow Up Actions** in the project menu, or click **Follow Up Actions** on an RFI form or on Daily Safety Issues.",
-              "Type in **Search** to look for a specific item.",
-              "If the page says \"There are no Follow Up Actions\", nothing has been raised on this project."
-            ],
-            "note": "The page only lists items. To act on a record, open it in its own module (Field Works → RFI, Daily Safety Issues and so on)."
+            "term": "Follow-up list",
+            "definition": "The large panel below the search box. It lists the follow-up actions of the project, and shows **There are no Follow Up Actions** while the list is empty."
           }
         ]
       }
@@ -29977,7 +29800,6 @@ const MODULES = [
       "Open a <strong>Project</strong>, then go to <strong>Follow Up Actions</strong>."
     ],
     "sections": [
-      "Overview",
       "Follow Up Actions"
     ]
   },
@@ -29988,54 +29810,50 @@ const MODULES = [
     "narrative": [
       {
         "heading": "Event Groups",
-        "intro": "<p>Event Groups is where a PM or Module Admin decides who receives which events: a group pairs a set of events with a set of users. It has two buttons, **Add Event Groups** and **Get Standard Event Groups**.</p><p>On a project with no groups yet the list is empty. **Add Event Groups** opens **Add Event Group** with one required field, **Name**, and **Cancel** / **Add**. The 32 groups of events on the **Events** tab are the system's own and are the same in **Global Data → Notifications**.</p>",
+        "intro": "<p>The <strong>Notifications</strong> menu opens the <strong>Notification Schema</strong> of the project, which sets which messages the project sends. It has four tabs: <strong>Event Groups</strong>, <strong>Events</strong>, <strong>Reminders</strong> and <strong>Alerts</strong>. <strong>Event Groups</strong> is the first tab.</p>",
+        "images": [
+          {
+            "src": "assets/product/project-notifications/001.jpg",
+            "caption": "The Event Groups tab"
+          }
+        ],
         "definitions": [
           {
-            "term": "Event Group",
-            "definition": "A named bundle that pairs events with people. **Add Event Group** asks only for a **Name***. According to Arena's setup guide, each group then has a **Notifications** button to choose which events belong to it and a **Users** button to choose who receives them, and only the users mapped to a group are notified for its events."
+            "term": "Tabs",
+            "definition": "**Event Groups**, **Events**, **Reminders** and **Alerts** across the top. The breadcrumb reads **Notification Schema > Groups** here."
+          },
+          {
+            "term": "+ Add Event Groups",
+            "definition": "Opens the **Add Event Group** dialog with one required field, **Name**, and **Cancel** and **Add** buttons.",
+            "images": [
+              {
+                "src": "assets/product/project-notifications/002.jpg",
+                "caption": "The Add Event Group dialog"
+              }
+            ]
           },
           {
             "term": "Get Standard Event Groups",
-            "definition": "Button that creates Arena's standard groups in one go. Per the guide, run it only when no groups exist: running it again overwrites groups with the same name, and the screen warns first."
+            "definition": "Asks **Are you sure you want to continue?** with **No** and **Yes**. **No** closes the question. Use this when the list is empty and you want Arena's standard event groups instead of typing your own."
           },
           {
-            "term": "Where this comes from",
-            "definition": "The **Event Groups** tab and **Events** tab here have the same buttons as **Global Data → Notifications**, and the **Events** list is identical (32 groups, 257 events, same order and same message wording), so the project starts from the system-wide list."
+            "term": "Event group list",
+            "definition": "The large panel below the buttons. It lists the event groups of the project and is empty until you add or load some."
           }
         ],
         "procedures": [
           {
-            "title": "Set up event groups for a project's notification schema",
+            "title": "Add an event group",
             "steps": [
-              "Open the project and go to **Notifications** (the **Notification Schema** screen) and stay on **Event Groups**.",
-              "Click **Get Standard Event Groups** to create Arena's standard groups (best when no groups exist yet), or click **Add Event Groups**, type a **Name** and click **Add**.",
-              "On the group, use **Notifications** to choose its events and **Users** to choose who receives them.",
-              "Go to **Events** to review what each event sends."
+              "Click **Notifications** in the left menu. **Event Groups** opens first.",
+              "Click **+ Add Event Groups**.",
+              "Type the **Name** (required).",
+              "Click **Add**. Click **Cancel** to close the dialog without adding."
             ],
             "images": [
               {
-                "src": "assets/notion/notifications/005.jpg",
-                "caption": "The Event Groups tab",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/notifications/006.jpg",
-                "caption": "Event groups in the project; Get Standard Event Groups creates the defaults",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/notifications/008.jpg",
-                "caption": "The warning shown when standard event groups already exist",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/notifications/009.jpg",
-                "caption": "Add Event Group, with a name for the new group",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/notifications/010.jpg",
-                "caption": "The three-dot menu for editing an event group",
+                "src": "assets/product/project-notifications/002.jpg",
+                "caption": "The Add Event Group dialog",
                 "step": 3
               }
             ]
@@ -30044,190 +29862,33 @@ const MODULES = [
       },
       {
         "heading": "Events",
-        "intro": "<p>Events is the project's list of every system event Arena can notify about, with a message template for each channel. A PM or Module Admin edits the wording of what goes out by **Mail**, **Web** and **Mobile**.</p><p>The tab has a **Reset to Standard** button and a table with **Events**, **Mail**, **Web** and **Mobile** columns. There are 32 expandable groups and 257 events. Each event has three icons, one per channel, and clicking an icon opens that channel's message template. The tab sets what a message says; who receives it is set in **Event Groups**.</p>",
-        "definitions": [
+        "intro": "<p>The <strong>Events</strong> tab lists every event that can send a notification and shows, for each one, whether it goes by mail, on the web or to the mobile app. Events are grouped by the part of Arena they come from.</p>",
+        "images": [
           {
-            "term": "Events table",
-            "definition": "32 groups you expand to see their events, each row ending in a **Mail** icon, a **Web** icon (a desktop symbol) and a **Mobile** icon. The icons look the same on every event; they open message templates, they are not toggles."
-          },
-          {
-            "term": "Configure Mail Template",
-            "definition": "Opens from the mail icon. Fields: **Name**, **Subject for Mail**, **Message**, and **Call To Actions** (**Button Name**, **Action Value**, **Button Color**, **Validity(in mins)**, **Add**, with a table of the buttons added). Defaults seen: button color #fab133 and validity 1440 minutes (24 hours). Buttons **Cancel** and **Save Changes**. Example: for **Timesheet Updated** the message is \"TimeSheet {{timeSheetId}} has been updated by {{user}}  Click here to view it\"."
-          },
-          {
-            "term": "Configure Web Template and Configure Mobile Template",
-            "definition": "Open from the web and mobile icons. Fields: **Name**, **Title for Web Notification** (or **Title for Mobile Notification**) and **Message**, with **Cancel** and **Save Changes**. The wording is the same as the mail message without the \"Click here\" text."
-          },
-          {
-            "term": "Placeholders",
-            "definition": "Messages use values in double braces that Arena fills in when the event happens, such as {{user}}, {{logId}}, {{createdAt}}, {{drawingName}} or {{timeSheetId}}. For example **RFI Created**: \"RFI {{logId}} has been created by {{user}} on {{createdAt}}\". Keep the braces when you edit the wording."
-          },
-          {
-            "term": "Reset to Standard",
-            "definition": "Button at the top of the tab that restores Arena's standard messages after edits; the screen warns before the messages are reset."
-          },
-          {
-            "term": "Where this comes from",
-            "definition": "The list of 32 groups, 257 events and their wording is identical to **Global Data → Notifications → Events**; the mail templates for **RFI Created** and **DSI Raised** read the same in both places. So the project starts from the system-wide template set."
-          },
-          {
-            "term": "Who receives these messages",
-            "definition": "Set through **Event Groups** (the **Users** button on a group), not on this tab: the **Events** tab has no recipient column and no on/off switch, only the message templates. For **Reminders** and **Alerts** you choose people in the **Assign People** step. People can also switch their own notifications on or off in the user menu (see **Your own notification settings** in Reminders)."
-          },
-          {
-            "term": "AWP",
-            "definition": "3 events, for example IWP Assigned, Schedule IWP, IWP Status Change. By name this belongs to Advanced Work Packaging (IWP)."
-          },
-          {
-            "term": "Change Orders",
-            "definition": "13 events, for example Change Order Created, Approved, Rejected, Submitted For Approval, Chat New Comment. By name this belongs to Change Orders form in Field Works → Progress."
-          },
-          {
-            "term": "Cost Change order",
-            "definition": "7 events, for example Cost Change Order Created, Submitted for Approval, Approved, Rejected. By name this belongs to Field Works → Cost."
-          },
-          {
-            "term": "Cost Transfers",
-            "definition": "5 events, for example Transfers Created, Updated, Submitted for Approval, Approved, Rejected. By name this belongs to Field Works → Cost."
-          },
-          {
-            "term": "Custom Forms",
-            "definition": "16 events, for example Other Form Created, Approved, Rejected, Status SLA Crossed; Work Package Approved, Rejected. By name this belongs to Project forms (Field Works → Project Forms)."
-          },
-          {
-            "term": "Data Analytics",
-            "definition": "1 event, for example Data Table Shared. By name this belongs to Data Analytics → Configurable Analytics."
-          },
-          {
-            "term": "Document Management",
-            "definition": "17 events, for example Document Added, Edited, Approved, Rejected, Shared; Document Folder Created. By name this belongs to Project Setup → Documents."
-          },
-          {
-            "term": "Drawing Management",
-            "definition": "20 events, for example Drawing Package Created, Drawing Created, Approved, Rejected, Shared, Comment Added, Revision Uploaded. By name this belongs to Project Setup → Drawings."
-          },
-          {
-            "term": "Estimate",
-            "definition": "4 events, for example Estimate Created, Revision Created, Approved, Rejected. By name this belongs to Project Setup → Estimate."
-          },
-          {
-            "term": "Form Issues",
-            "definition": "5 events, for example Form Issue Raised, Assigned, Rectified, Deleted, Chat New Comment. By name this belongs to Workflow issues on forms."
-          },
-          {
-            "term": "Form Sharing",
-            "definition": "1 event, for example Form Received. By name this belongs to Forms shared between users."
-          },
-          {
-            "term": "Meeting Minutes",
-            "definition": "7 events, for example Meeting Minutes Form Created, Updated, Deleted; Action Item Assigned, Deleted, Status Updated. By name this belongs to Field Works → Progress → Meeting Minutes."
-          },
-          {
-            "term": "Progress",
-            "definition": "18 events, for example Workpackage Ready, Logged, Complete; Quantity Approved, Rejected; Productivity Log Created, Approved, Rejected. By name this belongs to Field Works → Progress (Work Logs, Productivity Logs)."
-          },
-          {
-            "term": "Project Safety Forms",
-            "definition": "13 events, for example Project Safety Form Assigned, Logged, Submitted For Approval, Approved, Rejected; Safety Log Approval Request. By name this belongs to Field Works → Safety → Safety Forms."
-          },
-          {
-            "term": "Punch Lists",
-            "definition": "5 events, for example PNL Raised, Assigned, Rectified, QC Verified, Chat New Comment. By name this belongs to Field Works → Quality → Punch Lists."
-          },
-          {
-            "term": "Quality Forms",
-            "definition": "11 events, for example Quality Workpackage Level1 Ready, Logged, Complete; Level2 Ready, Logged, Complete; Form Rejected. By name this belongs to Field Works → Quality."
-          },
-          {
-            "term": "Quantity Tracksheet",
-            "definition": "4 events, for example Updated, Sent For Approval, Approved, Rejected. By name this belongs to Quantity tracksheet approvals."
-          },
-          {
-            "term": "Quick Apps",
-            "definition": "7 events, for example Quick App Created, Deleted; Screen Submitted For Approval, Approved, Rejected. By name this belongs to Field Works → Quick Apps."
-          },
-          {
-            "term": "RFIS",
-            "definition": "14 events, for example RFI Created, Updated, Assigned, Submitted For Approval, Approved, Rejected, Chat New Comment. By name this belongs to Field Works → Progress → RFI."
-          },
-          {
-            "term": "Request For Informations",
-            "definition": "13 events, for example RFI Sent, Reassigned, Due Date Reminder, RFI Overdue, Response Submitted, Reopened, Closed, Voided, Priority Escalation. By name this belongs to A second RFI event set."
-          },
-          {
-            "term": "Restraints",
-            "definition": "6 events, for example Restraint Raised, Assigned, Rectified, Verified, Rectification Updated. By name this belongs to Field Works → Progress → Restraints."
-          },
-          {
-            "term": "Safety Issues",
-            "definition": "5 events, for example DSI Raised, Assigned, Rectified, Deleted, Chat New Comment. By name this belongs to Field Works → Safety → Daily Safety Issues."
-          },
-          {
-            "term": "Safety Observations",
-            "definition": "7 events, for example Safety Observation Raised, Assigned, Rectified, Due Date Reminder, Overdue. By name this belongs to Field Works → Safety → Observations."
-          },
-          {
-            "term": "Scheduled Safety Forms",
-            "definition": "10 events, for example Scheduled Safety Form Reminder, Assigned, Logged, Submitted For Approval, Approved, Rejected. By name this belongs to Safety Calendar (Field Works → Safety)."
-          },
-          {
-            "term": "Site Posts",
-            "definition": "1 event, for example Site Post Chat New Comment. By name this belongs to Site posts."
-          },
-          {
-            "term": "Submittals",
-            "definition": "13 events, for example Submittal Created, Updated, Assigned, Approved, Rejected, Chat New Comment. By name this belongs to Submittals form in Field Works → Progress."
-          },
-          {
-            "term": "Task",
-            "definition": "8 events, for example New Task Created, Task Updated, Task Assigned, New Message In Task Chat; Requisition Form Ready For Approval, Approved, Rejected. By name this belongs to Project Setup → Tasks."
-          },
-          {
-            "term": "Timesheet",
-            "definition": "4 events, for example Timesheet Updated, Sent For Approval, Approved, Rejected. By name this belongs to Timesheets (Time Management)."
-          },
-          {
-            "term": "Transmittals",
-            "definition": "6 events, for example Transmittal Sent, Acknowledged, Ready For Approval, Approved, Rejected. By name this belongs to Transmittals."
-          },
-          {
-            "term": "Tree Version",
-            "definition": "3 events, for example Tree Version Created, Updated, Deleted. By name this belongs to Project Setup → Works."
-          },
-          {
-            "term": "Work Order Invoice Payment",
-            "definition": "7 events, for example Created, Updated, Submitted For Approval, Ready for Approval, Approved, Rejected, Deleted. By name this belongs to Field Works → Invoices."
-          },
-          {
-            "term": "Workflow Issues",
-            "definition": "3 events, for example Workflow Issue Assigned, Raised, Chat New Comment. By name this belongs to Workflow issues on approval workflows."
+            "src": "assets/product/project-notifications/003.jpg",
+            "caption": "The Events tab with its groups collapsed"
           }
         ],
-        "procedures": [
+        "definitions": [
           {
-            "title": "Configure notification channels for a system event",
-            "steps": [
-              "Go to **Notifications → Events**.",
-              "Click the group (for example **RFIS**) to expand it and find the event (for example **RFI Created**).",
-              "Click the **Mail**, **Web** or **Mobile** icon on that row to open its template.",
-              "Edit the title or subject and the **Message**, keeping the {{placeholders}}; for mail, add any **Call To Actions** button.",
-              "Click **Save Changes**, or **Cancel** to leave it as it was. **Reset to Standard** on the tab restores the standard messages."
-            ],
+            "term": "Reset to Standard",
+            "definition": "The red-outlined button at the top left. The name tells you its job: it returns the events to Arena's standard settings."
+          },
+          {
+            "term": "Columns",
+            "definition": "**Events** holds the names; **Mail**, **Web** and **Mobile** are the three ways a notification can be delivered. Each event row has a mail, a screen and a phone icon, one under each column."
+          },
+          {
+            "term": "Event groups",
+            "definition": "Each name with a **+** in front can be opened: **AWP**, **Change Orders**, **Cost Change order**, **Cost Transfers**, **Custom Forms**, **Data Analytics**, **Document Management**, **Drawing Management**, **Estimate**, **Form Issues**, **Form Sharing**, **Meeting Minutes**, **Progress**, **Project Safety Forms**, **Punch Lists**, **Quality Forms**, **Quantity Tracksheet**, **Quick Apps**, **RFIS**, **Request For Informations**, **Restraints**, **Safety Issues**, **Safety Observations**, **Scheduled Safety Forms**, **Site Posts**, **Submittals**, **Task**, **Timesheet**, **Transmittals**, **Tree Version**, **Work Order Invoice Payment** and **Workflow Issues**."
+          },
+          {
+            "term": "Event rows",
+            "definition": "Opening a group (the **+** turns into **-**) lists its events. For example **Progress** holds **Workpackage Ready**, **Workpackage Logged**, **Workpackage Log Deleted**, **Workpackage Complete**, **Workpackage Quantity Approved**, **Workpackage Quantity Ready For Approval**, **Workpackage Quantity Rejected** and **Workpackage Quantity Updated**.",
             "images": [
               {
-                "src": "assets/notion/notifications/001.jpg",
-                "caption": "The Events tab",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/notifications/002.jpg",
-                "caption": "Email, Web and Mobile icons on each event, each opening a message template",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/notifications/004.jpg",
-                "caption": "The warning shown before messages are reset",
-                "step": 4
+                "src": "assets/product/project-notifications/004.jpg",
+                "caption": "The Progress group opened"
               }
             ]
           }
@@ -30235,60 +29896,152 @@ const MODULES = [
       },
       {
         "heading": "Reminders",
-        "intro": "<p>Reminders send a message on a schedule about a Work Log or a Task. A PM or Module Admin creates them so that people are nudged without waiting for an event.</p><p>The tab has a **Create Reminder** button and a search box, and the list is empty on Arena Steel Plant - Phase 1. **Create Reminder** is a three-step form: **Configure Reminder**, **Assign People** and **Preview**.</p>",
+        "intro": "<p>The <strong>Reminders</strong> tab holds scheduled messages that go out to chosen people on a repeating timetable for a module of the project.</p>",
+        "images": [
+          {
+            "src": "assets/product/project-notifications/005.jpg",
+            "caption": "The Reminders tab"
+          }
+        ],
         "definitions": [
           {
-            "term": "Reminder",
-            "definition": "A scheduled message. Step 1, **Configure Reminder**, asks for **Link Module*** (**Work Log** or **Task**), **Tree Version*** (the plant), **Reminder Name***, **Reminder Message***, **Recurrence Type*** (**Daily**, **Weekly**, **Monthly** or **Custom**), **Remind me at*** (time), **Start Date***, **End Date***, the days of the week (**Sunday** to **Saturday**) and the channels **Web**, **Email** and **Mobile**. **Next** checks required fields (\"This field can't be empty\"). Steps 2 and 3 were not reachable without entering data."
+            "term": "+ Create Reminder",
+            "definition": "Opens the three-step **Create Reminder** wizard: **Configure Reminder**, **Assign People** and **Preview**.",
+            "images": [
+              {
+                "src": "assets/product/project-notifications/006.jpg",
+                "caption": "Step 1 of Create Reminder"
+              }
+            ]
           },
           {
-            "term": "Where the Tree Version list comes from",
-            "definition": "It lists the 13 plants of the project: Pellet Plant (1MTPA), Basic Oxygen Furnace (0.8 MTPA), Blast Furnace (0.6 MTPA), Coke Oven, Cold Rolling Mill, External Works, Hot Strip Mill, IBMD, Lime Dolomite Plant, Oxygen Plant, RMHS, Sinter Plant and Slab Caster, the same tree versions as **Project Setup → Works** and the plant selector in **Field Works**."
+            "term": "Search by name",
+            "definition": "Type a reminder's name to narrow the list below."
           },
           {
-            "term": "Your own notification settings",
-            "definition": "Each person has **Notifications** in the user menu at the top right (next to **My profile**, **Reset Password**, **Favorite Screens**, **Set a Status** and **Settings**). It opens **User Specific - Notifications**: an **Enable Notifications** switch, then a table of **Mail**, **Web** and **Mobile** switches by group and event. Groups such as **Cost Change order** (one event, **Cost Change Order Ready For Approval**) and **Document Management** (17 events) can be listed here."
+            "term": "Link Module",
+            "definition": "Required. The part of Arena the reminder belongs to. The choices are **Work Log** and **Task**."
+          },
+          {
+            "term": "Tree Version",
+            "definition": "Required. Which work structure the reminder applies to. The list shows the plants of the project (for example **Pellet Plant (1MTPA)**, **Coke Oven**, **Sinter Plant**)."
+          },
+          {
+            "term": "Reminder Name and Reminder Message",
+            "definition": "Both required. The name identifies the reminder in the list; the message is the text people receive."
+          },
+          {
+            "term": "Recurrence Type",
+            "definition": "Required. How often the reminder repeats: **Daily**, **Weekly**, **Monthly** or **Custom**. **Weekly** adds the days **Sunday** to **Saturday** to choose from."
+          },
+          {
+            "term": "Remind me at",
+            "definition": "Required. The time of day the reminder is sent; click the clock to pick it."
+          },
+          {
+            "term": "Start Date and End Date",
+            "definition": "Required. The period in which the reminder is active."
+          },
+          {
+            "term": "Web, Email, Mobile",
+            "definition": "Tick the ways the reminder is delivered: on the web, by email, or on the mobile app."
+          },
+          {
+            "term": "Next",
+            "definition": "Moves to **Assign People** (who receives the reminder) and then **Preview**. **Cancel** closes the wizard without saving."
           }
         ],
         "procedures": [
           {
-            "title": "Create a reminder",
+            "title": "Start a reminder",
             "steps": [
-              "Go to **Notifications → Reminders** and use the search box to check a similar reminder does not exist.",
-              "Click **Create Reminder**.",
-              "In **Configure Reminder**, choose **Link Module** and **Tree Version**, then enter the **Reminder Name** and **Reminder Message**.",
-              "Choose the **Recurrence Type**, **Remind me at** time, **Start Date**, **End Date** and the channels (**Web**, **Email**, **Mobile**).",
-              "Click **Next**, choose the people in **Assign People**, check the **Preview**, and confirm."
+              "Open **Notifications** and click the **Reminders** tab.",
+              "Click **+ Create Reminder**.",
+              "Choose **Link Module** and **Tree Version**.",
+              "Type the **Reminder Name** and **Reminder Message**.",
+              "Choose the **Recurrence Type**, the **Remind me at** time, and the **Start Date** and **End Date**.",
+              "Tick **Web**, **Email** and/or **Mobile**, then click **Next** to assign people and preview."
+            ],
+            "images": [
+              {
+                "src": "assets/product/project-notifications/006.jpg",
+                "caption": "Step 1 of Create Reminder",
+                "step": 3
+              }
             ]
           }
         ]
       },
       {
         "heading": "Alerts",
-        "intro": "<p>Alerts send a message about the status of a Task, repeating until it is dealt with. A PM or Module Admin creates them for the tasks that must not slip.</p><p>The tab has a **Create Alert** button and a search box, and the list is empty on Arena Steel Plant - Phase 1. **Create Alert** is a three-step form: **Configure Alert**, **Assign People** and **Preview**.</p>",
+        "intro": "<p>The <strong>Alerts</strong> tab holds automatic warnings that repeat while a condition stays true, for example a task that has passed its due date and is still open.</p>",
+        "images": [
+          {
+            "src": "assets/product/project-notifications/007.jpg",
+            "caption": "The Alerts tab"
+          }
+        ],
         "definitions": [
           {
-            "term": "Alert",
-            "definition": "A status-based message. Step 1, **Configure Alert**, asks for **Link Module*** (only **Task** is offered), **Alert Type*** (**Drive By Initial Status** or **Drive By Final Status**), **Alert Name***, **Alert Message***, **Frequency of alert*** (a number, with a unit of **days** or **hours**), **Remind me at*** (time) and the channels **Web**, **Email** and **Mobile**. Steps 2 and 3 (**Assign People**, **Preview**) were not reachable without entering data."
+            "term": "+ Create Alert",
+            "definition": "Opens the three-step **Create Alert** wizard: **Configure Alert**, **Assign People** and **Preview**.",
+            "images": [
+              {
+                "src": "assets/product/project-notifications/008.jpg",
+                "caption": "Step 1 of Create Alert"
+              }
+            ]
           },
           {
-            "term": "Alert versus Reminder",
-            "definition": "A **Reminder** is date-based and can link to a **Work Log** or a **Task**, with **Recurrence Type**, **Start Date** and **End Date**. An **Alert** only links to a **Task**, is tied to the task's initial or final status, and repeats at a frequency in days or hours. Both are configured here and neither is an **Events** template."
+            "term": "Search by name",
+            "definition": "Type an alert's name to narrow the list below."
           },
           {
-            "term": "Where this connects",
-            "definition": "The linked module is the project's **Tasks** (see **Project Setup → Tasks**); people are chosen in **Assign People**."
+            "term": "Link Module",
+            "definition": "Required. The part of Arena the alert watches. The choice is **Task**."
+          },
+          {
+            "term": "Alert Type",
+            "definition": "Required. The condition that triggers the alert: **Drive By Initial Status** or **Drive By Final Status**."
+          },
+          {
+            "term": "Alert Name and Alert Message",
+            "definition": "Both required. Once you pick an **Alert Type** they are filled with text you can edit. The message can hold the placeholders {Task ID}, {Status} and {Assignee}, which are replaced with the real task's details when the alert is sent."
+          },
+          {
+            "term": "Frequency of alert",
+            "definition": "Required. A number and a unit (for example **days**): how often the alert is repeated."
+          },
+          {
+            "term": "Remind me at",
+            "definition": "Required. The time of day the alert is sent."
+          },
+          {
+            "term": "Web, Email, Mobile",
+            "definition": "Tick the ways the alert is delivered."
+          },
+          {
+            "term": "Next",
+            "definition": "Moves to **Assign People** and then **Preview**. **Cancel** closes the wizard without saving."
           }
         ],
         "procedures": [
           {
-            "title": "Create an alert",
+            "title": "Start an alert",
             "steps": [
-              "Go to **Notifications → Alerts** and search for a similar alert.",
-              "Click **Create Alert**.",
-              "Choose **Link Module** (**Task**) and an **Alert Type**, then enter the **Alert Name** and **Alert Message**.",
-              "Set the **Frequency of alert** (days or hours), **Remind me at** time and channels.",
-              "Click **Next**, choose people in **Assign People**, check the **Preview**, and confirm."
+              "Open **Notifications** and click the **Alerts** tab.",
+              "Click **+ Create Alert**.",
+              "Choose **Link Module** and **Alert Type**. The name and message fill in.",
+              "Edit the **Alert Name** and **Alert Message** if you want.",
+              "Enter the **Frequency of alert** and the **Remind me at** time.",
+              "Tick **Web**, **Email** and/or **Mobile**, then click **Next** to assign people and preview."
+            ],
+            "images": [
+              {
+                "src": "assets/product/project-notifications/008.jpg",
+                "caption": "Step 1 of Create Alert",
+                "step": 3
+              }
             ]
           }
         ]
