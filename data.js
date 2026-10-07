@@ -27873,6 +27873,1088 @@ const MODULES = [
         ]
       },
       {
+        "heading": "Quality",
+        "intro": "<p>The <strong>Quality</strong> tab of <strong>Project Setup</strong> is where you organise quality files in <strong>folders</strong> and map each folder to locations and work packages of the project. It has two sub-tabs: <strong>Quality And Documents</strong> (opens first) and <strong>Uploaded Files</strong>.</p>",
+        "images": [
+          {
+            "src": "assets/product/project-setup/101.jpg",
+            "caption": "The Quality tab, Quality And Documents sub-tab"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Quality And Documents",
+            "definition": "The sub-tab for building the folder list on the left and filling each folder on the right."
+          },
+          {
+            "term": "+ Create Folder",
+            "definition": "Opens the **Create Folder** dialog, which has one field, **Name**, and the buttons **Close** and **Submit**."
+          },
+          {
+            "term": "Search and filter icon",
+            "definition": "The search box above the folder list narrows the folders by name. The funnel icon next to it opens the filter for the list."
+          },
+          {
+            "term": "Folders (n)",
+            "definition": "The count of folders in the project, followed by one card per folder. A card shows the folder name and the form counters **Total Forms**, **Not Ready Forms**, **Ready Forms**, **In Progress Forms** and **Completed Forms**. The arrow on the card opens the folder; the drag handle on its left lets you move the card to change the order."
+          },
+          {
+            "term": "Folder menu (three dots)",
+            "definition": "On a folder card, opens **Edit**, **Print**, **Share** and **Delete**."
+          },
+          {
+            "term": "Folder Items",
+            "definition": "Right-hand tab that lists the items mapped to the selected folder. It shows **No Items Mapped to this Folder** until you map something.",
+            "images": [
+              {
+                "src": "assets/product/project-setup/102.jpg",
+                "caption": "The Create Folder dialog"
+              }
+            ]
+          },
+          {
+            "term": "Map Work Packages",
+            "definition": "Opens the **Map Folder Items** dialog. On the left you narrow down a place with **Tree Version**, **Entity**, **Super Location**, **Location Types** and **Location**; the **Work Packages** box below lists the work packages that can still be mapped there. The right side, **Selected Folder Items**, shows what is mapped to the folder (it says **There are no mapped Locations** when empty).",
+            "images": [
+              {
+                "src": "assets/product/project-setup/103.jpg",
+                "caption": "The Map Folder Items dialog"
+              }
+            ]
+          },
+          {
+            "term": "Documents",
+            "definition": "Right-hand tab for the folder's own file structure. It shows the path (for example **Folder 1 /**), the button **+ Create Sub Folder** and the message **No sub folders in this folder** until you add one."
+          },
+          {
+            "term": "Photos",
+            "definition": "Right-hand tab with the button **+ Add File** and a table with the columns **Image**, **Added By**, **Added On** and **Action**."
+          },
+          {
+            "term": "Linked Forms",
+            "definition": "Right-hand tab that lists the forms linked to the folder, grouped by form type (for example **RFI**). It shows **No forms are linked to this folder** when nothing is linked."
+          },
+          {
+            "term": "Upload Excel",
+            "definition": "Opens **Upload Quality and Documents**: click the cloud area to pick files and upload them. The dialog notes that the upload can take a while and you can switch to other tabs; once the files are uploaded you can mention their file names in the Excel format to put the matching documents into quality folders. **Upload Status** at the bottom shows progress.",
+            "images": [
+              {
+                "src": "assets/product/project-setup/104.jpg",
+                "caption": "The Upload Quality and Documents dialog"
+              }
+            ]
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Create a quality folder",
+            "steps": [
+              "Open the project, click **Project Setup** and open the **Quality** tab.",
+              "On **Quality And Documents**, click **+ Create Folder**.",
+              "Type the folder name in **Name**.",
+              "Click **Submit**. The folder card appears under **Folders**. Click **Close** to leave without creating it."
+            ],
+            "images": [
+              {
+                "src": "assets/product/project-setup/102.jpg",
+                "caption": "The Create Folder dialog",
+                "step": 3
+              }
+            ]
+          },
+          {
+            "title": "Map work packages to a folder",
+            "steps": [
+              "On **Quality And Documents**, click a folder card.",
+              "On the **Folder Items** tab, click **Map Work Packages**.",
+              "Pick **Tree Version**, then **Entity**, **Super Location**, **Location Types** and **Location**.",
+              "Select the work packages listed under **Work Packages**; they appear under **Selected Folder Items**."
+            ],
+            "images": [
+              {
+                "src": "assets/product/project-setup/103.jpg",
+                "caption": "The Map Folder Items dialog",
+                "step": 3
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Quality Uploaded Files",
+        "intro": "<p><strong>Uploaded Files</strong> is the second sub-tab of <strong>Quality</strong>. It lists the folders and documents that were uploaded for the project's quality records.</p>",
+        "definitions": [
+          {
+            "term": "Uploaded Files",
+            "definition": "Shows the uploaded folders and documents. When nothing has been uploaded the page says **No folders or documents**. Files get here through **Upload Excel** on the **Quality And Documents** sub-tab."
+          }
+        ]
+      },
+      {
+        "heading": "Safety",
+        "intro": "<p>The <strong>Safety</strong> tab sets up safety forms for the project. It has five sub-tabs: <strong>Setup Project Safety Forms</strong>, <strong>Create Workflow</strong>, <strong>Assign Workflow</strong>, <strong>Setup Safety Calendar</strong> and <strong>Safety And Documents</strong>. This section covers the first one, which opens by default.</p>",
+        "images": [
+          {
+            "src": "assets/product/project-setup/105.jpg",
+            "caption": "Setup Project Safety Forms"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Create Safety Form Category",
+            "definition": "Opens the **Create Safety Form Category** dialog, where you group safety forms under a category. Created categories are listed in the panel under the button."
+          },
+          {
+            "term": "Instructions",
+            "definition": "The right-hand panel states the three steps: click **Create Safety Form Category**, fill in the details and add the form, then add users to each form (use copy to apply the same set of users to several forms)."
+          },
+          {
+            "term": "Form Category Name",
+            "definition": "Required field in the dialog: the name of the category.",
+            "images": [
+              {
+                "src": "assets/product/project-setup/106.jpg",
+                "caption": "The Create Safety Form Category dialog"
+              }
+            ]
+          },
+          {
+            "term": "Add Forms",
+            "definition": "Box in the dialog. **Filter by Activities** narrows the forms by activity and **Select All** ticks every form shown."
+          },
+          {
+            "term": "Safety Packages",
+            "definition": "Table on the right of the dialog with the columns **S.No**, **Activities** and **Form Name**. It lists the forms you have added to the category and says **No Data Available** until you add some."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Create a safety form category",
+            "steps": [
+              "Open **Project Setup**, then **Safety**. The **Setup Project Safety Forms** sub-tab opens.",
+              "Click **Create Safety Form Category**.",
+              "Type a name in **Form Category Name**.",
+              "Under **Add Forms**, choose an activity in **Filter by Activities** and tick the forms to include (or **Select All**). They appear in **Safety Packages**.",
+              "Click **Submit**. Click **Cancel** to close without saving."
+            ],
+            "images": [
+              {
+                "src": "assets/product/project-setup/106.jpg",
+                "caption": "The Create Safety Form Category dialog",
+                "step": 3
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Safety Create Workflow",
+        "intro": "<p><strong>Create Workflow</strong> is the second sub-tab of <strong>Safety</strong>. You create an approval workflow here and then give it levels and approvers.</p>",
+        "images": [
+          {
+            "src": "assets/product/project-setup/107.jpg",
+            "caption": "Safety, Create Workflow sub-tab"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Create Approval Workflow",
+            "definition": "Opens the **Create Safety Approval Workflow** dialog with one required field, **Workflow Name**, and the buttons **Cancel** and **Submit**. Created workflows are listed under the button.",
+            "images": [
+              {
+                "src": "assets/product/project-setup/108.jpg",
+                "caption": "The Create Safety Approval Workflow dialog"
+              }
+            ]
+          },
+          {
+            "term": "Instructions",
+            "definition": "The right-hand panel states the steps: click **Create Approval Workflow**, create workflow levels, add users to each level."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Create a safety approval workflow",
+            "steps": [
+              "Open **Project Setup**, **Safety**, then **Create Workflow**.",
+              "Click **Create Approval Workflow**.",
+              "Type a name in **Workflow Name**.",
+              "Click **Submit**. The workflow appears in the list on the left; select it to add levels and approvers."
+            ],
+            "images": [
+              {
+                "src": "assets/product/project-setup/108.jpg",
+                "caption": "The Create Safety Approval Workflow dialog",
+                "step": 3
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Assign Workflow",
+        "intro": "<p><strong>Assign Workflow</strong> is the third sub-tab of <strong>Safety</strong>. It connects a safety approval workflow to the project's safety activities and work packages.</p>",
+        "images": [
+          {
+            "src": "assets/product/project-setup/109.jpg",
+            "caption": "Safety, Assign Workflow sub-tab"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Safety Activities",
+            "definition": "Left column listing the safety activities of the project."
+          },
+          {
+            "term": "Work Package",
+            "definition": "Middle column. It lists the work packages under the activity you select, and says **There is no Work Package under respective Activity** when there are none."
+          },
+          {
+            "term": "Assign Approval Workflow",
+            "definition": "Right column where the workflow is picked for the selected work package. The **Clear** button at its top right resets the selection."
+          }
+        ]
+      },
+      {
+        "heading": "Setup Safety Calendar",
+        "intro": "<p><strong>Setup Safety Calendar</strong> is the fourth sub-tab of <strong>Safety</strong>. It creates safety calendar categories: groups of safety forms that repeat on a schedule, with a reminder before each due time.</p>",
+        "images": [
+          {
+            "src": "assets/product/project-setup/110.jpg",
+            "caption": "Setup Safety Calendar"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Create Safety Calendar Category",
+            "definition": "Opens the **Create Safety Calendar Category** dialog. Created categories are listed under the button."
+          },
+          {
+            "term": "Form Category Name",
+            "definition": "Required name of the calendar category."
+          },
+          {
+            "term": "Recurrence Type",
+            "definition": "How often the forms repeat: **Daily**, **Weekly** or **Custom**."
+          },
+          {
+            "term": "Start Date and End Date",
+            "definition": "The period during which the schedule runs."
+          },
+          {
+            "term": "Time",
+            "definition": "The time of day for the schedule (hour, minute, AM/PM)."
+          },
+          {
+            "term": "Remind Before",
+            "definition": "A number plus a unit (for example **minutes**) that sets how long before the scheduled time a reminder goes out."
+          },
+          {
+            "term": "Add Forms",
+            "definition": "**Filter by Activities** and **Select All** pick the forms for the category. The chosen forms appear under **Selected Packages** (columns **S.No**, **Activities**, **Form Name**).",
+            "images": [
+              {
+                "src": "assets/product/project-setup/111.jpg",
+                "caption": "The Create Safety Calendar Category dialog"
+              }
+            ]
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Create a safety calendar category",
+            "steps": [
+              "Open **Project Setup**, **Safety**, then **Setup Safety Calendar**.",
+              "Click **Create Safety Calendar Category**.",
+              "Enter **Form Category Name** and choose **Recurrence Type**.",
+              "Set **Start Date**, **End Date**, **Time** and **Remind Before**.",
+              "Under **Add Forms**, filter by activity and tick the forms.",
+              "Click **Submit**. **Cancel** closes the dialog without saving."
+            ],
+            "images": [
+              {
+                "src": "assets/product/project-setup/111.jpg",
+                "caption": "The Create Safety Calendar Category dialog",
+                "step": 3
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Safety And Documents",
+        "intro": "<p><strong>Safety And Documents</strong> is the fifth sub-tab of <strong>Safety</strong>. It holds folders for safety documents.</p>",
+        "images": [
+          {
+            "src": "assets/product/project-setup/112.jpg",
+            "caption": "Safety And Documents"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Create folder",
+            "definition": "Type a folder name in the box at the top right and click the orange **+** to create the folder. Until then the page says **No folders have been created yet**."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Create a safety documents folder",
+            "steps": [
+              "Open **Project Setup**, **Safety**, then **Safety And Documents**.",
+              "Type a name in the **Create folder** box.",
+              "Click the orange **+** next to it."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Create Approval Workflow",
+        "intro": "<p>The <strong>Drawings</strong> tab has five sub-tabs: <strong>Create Approval Workflow</strong> (opens first), <strong>Drawing Training</strong>, <strong>Drawing Packages</strong>, <strong>Drawing Register</strong> and <strong>Drawing Master</strong>. <strong>Create Approval Workflow</strong> defines who must approve drawings, level by level.</p>",
+        "images": [
+          {
+            "src": "assets/product/project-setup/113.jpg",
+            "caption": "Drawings, Create Approval Workflow"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Create Approval Workflow button",
+            "definition": "Opens **Create Workflow** with one field, **Create Workflow** (the name), and **Cancel** / **Submit**."
+          },
+          {
+            "term": "Workflow list",
+            "definition": "One entry per workflow on the left. The selected one shows a pencil (edit) and a red bin (delete)."
+          },
+          {
+            "term": "+ Create Level",
+            "definition": "Opens the **Approval Workflow** dialog for the selected workflow. There you choose **Workflow Type** (**All must approve** or **Any one can approve**), the switch **Require security key authentication for approval**, a **Description**, and the approvers under **Select Approver** (a searchable list of users with check boxes)."
+          },
+          {
+            "term": "Levels table",
+            "definition": "Columns **Level**, **Level Description**, **Approvers**, **Workflow Type** and **Actions** (edit and delete for each level). A drawing goes through the levels in order."
+          },
+          {
+            "term": "Workflow tree icon",
+            "definition": "The icon at the top right of the table opens **Workflow Tree View**: a diagram that runs from **Submit for Approval** through each level (with **Approve** between them) to **Approved**."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Create a drawing approval workflow with levels",
+            "steps": [
+              "Open **Project Setup**, **Drawings**. **Create Approval Workflow** opens.",
+              "Click **Create Approval Workflow**, type the name and click **Submit**.",
+              "Select the new workflow, then click **+ Create Level**.",
+              "Choose **Workflow Type**, add a **Description** and tick the approvers.",
+              "Click **Submit**. Repeat for each further level.",
+              "Click the workflow tree icon to check the order of levels."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Drawing Training",
+        "intro": "<p><strong>Drawing Training</strong> holds training templates that teach Arena where the details (such as title or consultant) sit on a drawing sheet, so they can be read from uploaded PDFs.</p>",
+        "images": [
+          {
+            "src": "assets/product/project-setup/114.jpg",
+            "caption": "Drawing Training templates"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Create Training Template",
+            "definition": "Opens **Create Training Template** with **Training Template Name**, **Training Template Description**, **Cancel** and **Submit**.",
+            "images": [
+              {
+                "src": "assets/product/project-setup/115.jpg",
+                "caption": "The Create Training Template dialog"
+              }
+            ]
+          },
+          {
+            "term": "Template cards",
+            "definition": "One card per template (for example **Wall**, **Elevation**, **Sections**). The three-dot menu on a card has **Edit** and **Delete**. Click the card to open its four steps."
+          },
+          {
+            "term": "Step 1: Upload Sample Drawing",
+            "definition": "**Upload** puts a sample drawing on the canvas; **Clear Image** removes it.",
+            "images": [
+              {
+                "src": "assets/product/project-setup/116.jpg",
+                "caption": "Step 1 of a training template"
+              }
+            ]
+          },
+          {
+            "term": "Step 2: Create Labels",
+            "definition": "Defines the labels to read from the drawing. It asks you to complete Step 1 first."
+          },
+          {
+            "term": "Step 3: OCR Training",
+            "definition": "Lists the template's labels (for example **LEAD CONSULTANT**, **DRAWING TITLE**, **MEPF ENGINEER**). Select a label and mark its position on the drawing with **Horizontal Mark Position** or **Vertical Mark Position**, then click **Save Changes**."
+          },
+          {
+            "term": "Step 4: Preview Table",
+            "definition": "Shows a preview of the table that appears in the drawing logs: **Drawing Name**, **Drawing Page**, the template's labels, **Uploaded Date**, **Uploaded By**, **Approve/Reject** and **Actions**. The table created here is used to record and track the details of each drawing.",
+            "images": [
+              {
+                "src": "assets/product/project-setup/117.jpg",
+                "caption": "Step 4, the preview table"
+              }
+            ]
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Create a training template",
+            "steps": [
+              "Open **Project Setup**, **Drawings**, **Drawing Training**.",
+              "Click **Create Training Template**.",
+              "Enter **Training Template Name** and **Training Template Description**.",
+              "Click **Submit**. Open the new card and work through Steps 1 to 4."
+            ],
+            "images": [
+              {
+                "src": "assets/product/project-setup/115.jpg",
+                "caption": "The Create Training Template dialog",
+                "step": 3
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Drawing Packages",
+        "intro": "<p><strong>Drawing Packages</strong> lists the project's tree items (for example plants and work areas) as cards. Open a card to organise drawings into packages and submittals.</p>",
+        "images": [
+          {
+            "src": "assets/product/project-setup/118.jpg",
+            "caption": "Drawing Packages"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Download Excel",
+            "definition": "Button at the top right of the card list that downloads the packages as an Excel file."
+          },
+          {
+            "term": "Package cards",
+            "definition": "One card per tree item, showing its name, **Description** and **Created By**. The arrow opens the item."
+          },
+          {
+            "term": "Package list",
+            "definition": "Inside an item, the left list shows its drawing packages (for example **Walls**), each with a three-dot menu. **Create Drawing Package** at the top adds one.",
+            "images": [
+              {
+                "src": "assets/product/project-setup/119.jpg",
+                "caption": "Inside a tree item: packages and submittals"
+              }
+            ]
+          },
+          {
+            "term": "Create Drawing Package",
+            "definition": "Dialog with **Package Name**, **Work Division**, **Team Users** and **Drawing Training Template** (all required) and **Approval Workflow**. It connects the package to the template that reads its drawings and to the workflow that approves them.",
+            "images": [
+              {
+                "src": "assets/product/project-setup/120.jpg",
+                "caption": "The Create Drawing Package dialog"
+              }
+            ]
+          },
+          {
+            "term": "Submittal cards",
+            "definition": "Each card shows the submittal name, its **Description**, **Approved Drawing Items** (for example 0/1) and **Resolved Comments**. Its three-dot menu has **Edit**, **Delete** and **Download**. Click the card to open its drawing log."
+          },
+          {
+            "term": "New Submittal",
+            "definition": "Opens a three-step form: **Drawing Package Submittal Form** (a **Description** and the form sections), **Upload Drawings**, then **Review & Edit**.",
+            "images": [
+              {
+                "src": "assets/product/project-setup/121.jpg",
+                "caption": "The New Submittal form"
+              }
+            ]
+          },
+          {
+            "term": "Drawing log of a submittal",
+            "definition": "A table with a **Search Drawings** box and the columns **Drawing Name**, **Drawing Page**, **Status** (**Created** or **Completed**), the template's labels (for example **Lead Consultant**, **Drawing Title**, **MEPF Engineer**), **Uploaded Date**, **Uploaded By**, **Approval Workflow Level**, **Approve/Reject**, **See History**, **See Revisions** and **Actions**. **Manage Columns** chooses and orders the columns (**Reset to Default**, **Cancel**, **Apply**).",
+            "images": [
+              {
+                "src": "assets/product/project-setup/122.jpg",
+                "caption": "A submittal's drawing log"
+              },
+              {
+                "src": "assets/product/project-setup/125.jpg",
+                "caption": "Manage Columns"
+              }
+            ]
+          },
+          {
+            "term": "Create Revision",
+            "definition": "Choose a PDF file, pick the drawing page to be revised, then click **Replace** (swap the old page for the new file) or **Append**. **Do Not Change** keeps the page as it is.",
+            "images": [
+              {
+                "src": "assets/product/project-setup/123.jpg",
+                "caption": "The Create Revision dialog"
+              }
+            ]
+          },
+          {
+            "term": "Publish Comments",
+            "definition": "Lists the comment threads on the submittal's drawings (**Drawing Name**, **Drawing Page**, **Drawing Revision**, **Thread Created By**, **Comment**, **Assigned To**, **Published On**, **Status**). Tick the comments to release and click **Publish**; **Download Excel** exports the list."
+          },
+          {
+            "term": "Edit Bulk Drawings",
+            "definition": "Tick drawings under **Select Drawings** (or **Select All**) and type values for the labels (**Lead Consultant**, **Drawing Title**, **MEPF Engineer**) to set them on all ticked drawings at once. **Submit** saves.",
+            "images": [
+              {
+                "src": "assets/product/project-setup/124.jpg",
+                "caption": "The Edit Bulk Drawing dialog"
+              }
+            ]
+          },
+          {
+            "term": "Row actions",
+            "definition": "At the end of each drawing row the icons are **Revision**, **Compare**, **Download**, **Print**, **Share**, **Edit**, **Link** and **Delete**."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Create a drawing package",
+            "steps": [
+              "Open **Project Setup**, **Drawings**, **Drawing Packages**, then click a tree item card.",
+              "Click **Create Drawing Package**.",
+              "Enter **Package Name** and choose **Work Division**, **Team Users** and **Drawing Training Template**.",
+              "Optionally choose an **Approval Workflow**.",
+              "Click **Submit**."
+            ],
+            "images": [
+              {
+                "src": "assets/product/project-setup/120.jpg",
+                "caption": "The Create Drawing Package dialog",
+                "step": 3
+              }
+            ]
+          },
+          {
+            "title": "Add a submittal",
+            "steps": [
+              "Open a drawing package and click **New Submittal**.",
+              "On **Drawing Package Submittal Form**, enter the **Description** and fill the form fields, then click **Next**.",
+              "On **Upload Drawings**, add the drawing files.",
+              "On **Review & Edit**, check the values read from the drawings and finish."
+            ],
+            "images": [
+              {
+                "src": "assets/product/project-setup/121.jpg",
+                "caption": "The New Submittal form",
+                "step": 2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Drawing Register",
+        "intro": "<p><strong>Drawing Register</strong> is the planned list of drawings for each tree item: what is due, when, and where it applies. It opens as cards for each tree item, like <strong>Drawing Packages</strong>.</p>",
+        "images": [
+          {
+            "src": "assets/product/project-setup/126.jpg",
+            "caption": "Drawing Register, tree item cards"
+          },
+          {
+            "src": "assets/product/project-setup/127.jpg",
+            "caption": "The register of one tree item"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Tree item cards",
+            "definition": "One card per tree item with its name, **Description** and **Created By**. Click one to open its register."
+          },
+          {
+            "term": "Register table",
+            "definition": "Columns **Drawing Register Id**, **Drawing Id**, **Drawing Name**, **Status**, **Due Date**, **Received Date**, **Locations**, **Network**, **Drawing Types**, **Sheets**, **Drawing Status**, **Remarks** and **Actions**. It shows **No Data Available** until drawings are added."
+          },
+          {
+            "term": "Create",
+            "definition": "Opens **Create Drawing Register**: **Connected Drawings** and **Connected Documents** (each with a **Connect** button), **Drawing Id** and **Drawing Name** (required), **Received Date**, **Locations**, **Network**, **Drawing Types**, **Sheets**, **Drawing Status**, **Remarks**, **Status**, **Start** and **Due Date**.",
+            "images": [
+              {
+                "src": "assets/product/project-setup/128.jpg",
+                "caption": "The Create Drawing Register dialog"
+              }
+            ]
+          },
+          {
+            "term": "Map P6 Schedule",
+            "definition": "Opens **Map P6 Schedule**, which lists the P6 schedules available to link to the register (**No Schedules Available** when none exist). **Clear** and **Submit** sit at the bottom."
+          },
+          {
+            "term": "Export",
+            "definition": "Exports the register."
+          },
+          {
+            "term": "Filters",
+            "definition": "Opens **Filters**: **Past Due Date** (check box) and drop-downs or date fields for **Drawing Id**, **Drawing Name**, **Status**, **Due Date**, **Received Date**, **Locations**, **Network**, **Drawing Types**, **Sheets** and **Drawing Status**.",
+            "images": [
+              {
+                "src": "assets/product/project-setup/129.jpg",
+                "caption": "The Filters dialog"
+              }
+            ]
+          },
+          {
+            "term": "Manage Columns",
+            "definition": "Chooses which columns show and in what order."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Add a drawing to the register",
+            "steps": [
+              "Open **Project Setup**, **Drawings**, **Drawing Register** and click a tree item card.",
+              "Click **Create**.",
+              "Enter **Drawing Id** and **Drawing Name**; both are required.",
+              "Fill in dates, **Locations**, **Drawing Types** and the other fields you need.",
+              "Click **Submit**."
+            ],
+            "images": [
+              {
+                "src": "assets/product/project-setup/128.jpg",
+                "caption": "The Create Drawing Register dialog",
+                "step": 3
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Drawing Master",
+        "intro": "<p><strong>Drawing Master</strong> is one table of every drawing submitted through <strong>Drawing Packages</strong>, across all tree items, packages and submittals.</p>",
+        "images": [
+          {
+            "src": "assets/product/project-setup/130.jpg",
+            "caption": "Drawing Master"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Search by Drawing Name",
+            "definition": "Narrows the table to drawings whose name matches."
+          },
+          {
+            "term": "Table",
+            "definition": "Columns **Tree**, **Category** (the drawing package), **Linked Form** (the submittal), **Drawing Name**, **Drawing Page**, **Status**, **Uploaded Date**, **Uploaded By**, **Approval Workflow Level**, **Approve/Reject** (buttons **Approve** and **Reject**), **See History**, **See Revisions** and **Actions** (print, edit, delete)."
+          },
+          {
+            "term": "Filters",
+            "definition": "Opens **Filters** with **Tree**, **Drawing Package**, **Submittal Name** and **Status**, and the buttons **Save Filters**, **Clear Filters** and **Submit**."
+          },
+          {
+            "term": "Manage Columns",
+            "definition": "Chooses which columns show and in what order."
+          }
+        ]
+      },
+      {
+        "heading": "Documents",
+        "intro": "<p>The <strong>Documents</strong> tab keeps the project's working documents in team folders. It has two sub-tabs: <strong>My Files</strong> and <strong>Shared With Me</strong>.</p>",
+        "images": [
+          {
+            "src": "assets/product/project-setup/131.jpg",
+            "caption": "Documents, My Files"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Create Team",
+            "definition": "Opens **Create Team** (\"Create a team like quality, progress, safety etc\"). Fields: **Name your documents folder?**, **Select the team who will be working on these documents** and **Select the Admins for document folder**, all required.",
+            "images": [
+              {
+                "src": "assets/product/project-setup/132.jpg",
+                "caption": "The Create Team dialog"
+              }
+            ]
+          },
+          {
+            "term": "Team list",
+            "definition": "The left column lists the teams you can open, each with its creator."
+          },
+          {
+            "term": "Folders & Documents",
+            "definition": "The selected team's content, with the columns **Folders & Documents**, **Last Modified**, **Added On** and **Actions**. A path above the table (for example team, then folder) lets you step back, and **Search** narrows the rows."
+          },
+          {
+            "term": "Working Documents and Documents to Approve",
+            "definition": "Inside a folder two tabs appear. **Working Documents** is the live file list; **Documents to Approve** is the list waiting for approval.",
+            "images": [
+              {
+                "src": "assets/product/project-setup/133.jpg",
+                "caption": "Inside a team folder"
+              }
+            ]
+          },
+          {
+            "term": "Upload Document",
+            "definition": "Opens **Upload Files**; click **Upload Files** to choose files from your computer."
+          },
+          {
+            "term": "Create Document",
+            "definition": "Opens **Create Document** with **Name**, **Type** (**Text file (txt)**, **Power point (ppt)**, **Spreadsheet (xlsx)**, **Word document (docx)**) and **Template** (starts as **Blank Document**), then **Create file**.",
+            "images": [
+              {
+                "src": "assets/product/project-setup/134.jpg",
+                "caption": "The Create Document dialog"
+              }
+            ]
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Create a team folder",
+            "steps": [
+              "Open **Project Setup**, **Documents**, **My Files**.",
+              "Click **Create Team**.",
+              "Type the folder name, choose the team that will work on the documents and the admins.",
+              "Click **Submit**."
+            ],
+            "images": [
+              {
+                "src": "assets/product/project-setup/132.jpg",
+                "caption": "The Create Team dialog",
+                "step": 3
+              }
+            ]
+          },
+          {
+            "title": "Create a document",
+            "steps": [
+              "Open a team and then a folder.",
+              "Click **Create Document**.",
+              "Enter **Name**, pick the **Type** and a **Template**.",
+              "Click **Create file**."
+            ],
+            "images": [
+              {
+                "src": "assets/product/project-setup/134.jpg",
+                "caption": "The Create Document dialog",
+                "step": 3
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Shared With Me",
+        "intro": "<p><strong>Shared With Me</strong> is the second sub-tab of <strong>Documents</strong>. It lists folders and documents that other users have shared with you.</p>",
+        "definitions": [
+          {
+            "term": "Shared with me",
+            "definition": "A path and a **Search** box above the list of shared folders and documents. It says **No folders or documents in this Page** when nothing has been shared with you."
+          }
+        ]
+      },
+      {
+        "heading": "Workorder",
+        "intro": "<p>The <strong>Workorder</strong> tab is where a project's work orders are created and listed.</p>",
+        "images": [
+          {
+            "src": "assets/product/project-setup/135.jpg",
+            "caption": "The Workorder tab"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Create",
+            "definition": "Opens a small **Create Workorder** menu with **Tree Version** and **Workorder Type**. Both open the same **Create Workorder** form.",
+            "images": [
+              {
+                "src": "assets/product/project-setup/136.jpg",
+                "caption": "The Create Workorder menu"
+              }
+            ]
+          },
+          {
+            "term": "Create Workorder form",
+            "definition": "Fields: **Workorder Number** (pre-filled), **Workorder Name** (required), **Workorder Description**, **Select Contractor** (required), **Actuals Derived From** (required: **Work Logs**, **RFIs** or **Service Entry Sheets**), **Tree Version** (required), **Start Date**, **End Date**, **Retention Percentage**, **Performance Bank Guarantee**, **Select Contact Person**, **Upload Workorder Images**, **Upload Workorder Files** and a configurable field. **Submit** creates the work order.",
+            "images": [
+              {
+                "src": "assets/product/project-setup/137.jpg",
+                "caption": "The Create Workorder form"
+              }
+            ]
+          },
+          {
+            "term": "Filters",
+            "definition": "Opens **Filters** with **Actuals Derived From**; **Apply** narrows the list and **Clear All** resets it."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Create a work order",
+            "steps": [
+              "Open **Project Setup** and the **Workorder** tab.",
+              "Click **Create** and choose **Tree Version**.",
+              "Enter **Workorder Name**, choose the **Contractor**, **Actuals Derived From** and **Tree Version**.",
+              "Add dates, **Retention Percentage**, **Performance Bank Guarantee**, contact person, images and files if needed.",
+              "Click **Submit**."
+            ],
+            "images": [
+              {
+                "src": "assets/product/project-setup/137.jpg",
+                "caption": "The Create Workorder form",
+                "step": 3
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Forms",
+        "intro": "<p>The <strong>Forms</strong> tab controls, for each form type, which users may work with each form, how forms are approved, how often they are scheduled and which template they use. A row of form-type tabs runs along the top, and every type has the same sub-tabs: <strong>Assign Users</strong>, <strong>Approval Workflow</strong>, <strong>Schedule Project Forms</strong> and <strong>Assign Templates</strong>. This section covers the type tabs and <strong>Assign Users</strong>.</p>",
+        "images": [
+          {
+            "src": "assets/product/project-setup/141.jpg",
+            "caption": "Forms, Workorder form type, Assign Users"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Form-type tabs",
+            "definition": "**Construction Forms** (opens first), **Workorder**, **Project Forms**, **Laboratory Test Results**, **Field Test Results**, **Correspondence Details**, **Contractor Onboarding**, **Test Reports**, **Procurement Forms**, **Checklists** and more to the right (the row scrolls). Each tab lists the forms of that type."
+          },
+          {
+            "term": "Forms (n)",
+            "definition": "Left list with the number of forms of the selected type and a search box. **Construction Forms** holds **RFI**, **Submittal**, **Change Order**, **Delay Form**, **Request for Information** and **Transmittal**; **Workorder** holds forms such as **SERVICE ENTRY SHEET**, **INDENT** and **EQUIPMENT LOGS**."
+          },
+          {
+            "term": "Assign Users",
+            "definition": "Select a form, then pick the tree item from the drop-down at the top right. The table lists users with the columns **S.No** and **User** and the check box columns **View**, **Create**, **Edit** and **Delete**; the box in a column header ticks the whole column. Click **Submit** to save the permissions."
+          },
+          {
+            "term": "Copy Users",
+            "definition": "On the **Project Forms** and other custom form types, **Copy Users** copies the user permissions from one form to others."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Give users access to a form",
+            "steps": [
+              "Open **Project Setup**, **Forms** and choose the form-type tab.",
+              "On **Assign Users**, click the form in the left list.",
+              "Choose the tree item in the drop-down.",
+              "Tick **View**, **Create**, **Edit** or **Delete** for each user.",
+              "Click **Submit**."
+            ],
+            "images": [
+              {
+                "src": "assets/product/project-setup/141.jpg",
+                "caption": "Assign Users for a form type",
+                "step": 2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Forms Approval Workflow",
+        "intro": "<p><strong>Approval Workflow</strong> is the second sub-tab of every form type under <strong>Forms</strong>. It defines the approval levels each form goes through.</p>",
+        "images": [
+          {
+            "src": "assets/product/project-setup/138.jpg",
+            "caption": "Forms, Approval Workflow"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Form list",
+            "definition": "The left list shows every form of the type (for **Construction Forms**: **RFI**, **Submittal**, **Change Order**, **Delay Form**, **LOR Internal**, **Equipment Logs**, **Material Logs**, **Manpower Logs**, **Invoices**, **Workorder**, **Cost Transaction Logs**, **Variation Order**, **Cost Change Orders**, **Cost Transfers**, **Field Cost Logs**, **Schedule**). Select a form to see its levels."
+          },
+          {
+            "term": "Tree item drop-down",
+            "definition": "At the top right of the levels table: choose the tree item the workflow applies to. The icon next to it shows the workflow diagram."
+          },
+          {
+            "term": "+ Create Level",
+            "definition": "Opens **Approval Workflow**: **Workflow Type** (**All must approve** or **Any one can approve**), **Timeline** (a number and **days** or **weeks**), **Description** and **Select Approvers**."
+          },
+          {
+            "term": "Levels table",
+            "definition": "Columns **Level**, **Level Description**, **Approvers**, **Workflow Type**, **SLS configured**, **Timeline Mandatory** and **Actions**."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Add an approval level to a form",
+            "steps": [
+              "Open **Project Setup**, **Forms**, the form-type tab, then **Approval Workflow**.",
+              "Click the form in the left list and choose the tree item.",
+              "Click **Create Level**.",
+              "Choose **Workflow Type**, set **Timeline** and **Description**, and tick the approvers.",
+              "Click **Submit**."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Schedule Project Forms",
+        "intro": "<p><strong>Schedule Project Forms</strong> makes a form repeat on a timetable. It has two steps, <strong>Prepare Schedule</strong> and <strong>Assign User</strong>.</p>",
+        "images": [
+          {
+            "src": "assets/product/project-setup/139.jpg",
+            "caption": "Schedule Project Forms, Prepare Schedule"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Forms",
+            "definition": "Left list of the forms that can be scheduled for the selected form type."
+          },
+          {
+            "term": "Prepare Schedule",
+            "definition": "**Recurrence Type** (for example **Weekly**), **Every** (the days of the week, with **Select All**), **Start Date**, **End Date** and **Time**. **Submit** saves the schedule."
+          },
+          {
+            "term": "Assign User",
+            "definition": "Second step, where the users who must fill the scheduled form are chosen."
+          }
+        ]
+      },
+      {
+        "heading": "Assign Templates",
+        "intro": "<p><strong>Assign Templates</strong> chooses which template each form uses on the project.</p>",
+        "images": [
+          {
+            "src": "assets/product/project-setup/140.jpg",
+            "caption": "Assign Templates"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Forms (n)",
+            "definition": "Left list with a search box and the forms of the type (for example **RFI**, **REQUEST FOR INFORMATION**, **TRANSMITTAL**, **SUBMITTALS**, **CHANGE ORDER**, **MEETING MINUTES**, **DELAY FORMS**, **INVOICES**)."
+          },
+          {
+            "term": "Template cards",
+            "definition": "One card per available template with a round selector. The selected card is the template used for the form on the chosen tree item. A card marked **Configuration not present** has no configuration yet."
+          },
+          {
+            "term": "Tree item, Submit and Clear",
+            "definition": "The drop-down at the top right picks the tree item. **Submit** saves the choice and **Clear** removes it."
+          }
+        ]
+      },
+      {
+        "heading": "BIM",
+        "intro": "<p>The <strong>BIM</strong> tab holds the project's building information models. Each model is a card; opening one shows it in a 3D viewer and lets you link its elements to the project tree.</p>",
+        "images": [
+          {
+            "src": "assets/product/project-setup/142.jpg",
+            "caption": "The BIM tab"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Create BIM",
+            "definition": "Opens **Create BIM** with a required **Name**, an upload button and a progress bar. **Submit** adds the model.",
+            "images": [
+              {
+                "src": "assets/product/project-setup/143.jpg",
+                "caption": "The Create BIM dialog"
+              }
+            ]
+          },
+          {
+            "term": "Model card",
+            "definition": "Shows the model name, an **x** to remove it and an arrow to open it."
+          },
+          {
+            "term": "Forge View",
+            "definition": "The 3D viewer (powered by Autodesk). The toolbar at the bottom has orbit, pan, zoom, walk and camera tools, a measure tool (distance, angle, spot coordinate), section and explode tools, the model structure tree, properties, settings and full screen.",
+            "images": [
+              {
+                "src": "assets/product/project-setup/144.jpg",
+                "caption": "The Forge View of a model"
+              }
+            ]
+          },
+          {
+            "term": "BIM Connector",
+            "definition": "A table of the model with the columns **Id**, **Name** and **BIM Connector**, plus **Upload Excel**. A model that is not linked shows the link **Yet to be Mapped**; clicking it opens **BIM Connector** with **Tree Version**, **Entity**, **Super Location** and **Location**, and **Save** links the model to that place.",
+            "images": [
+              {
+                "src": "assets/product/project-setup/145.jpg",
+                "caption": "The BIM Connector sub-tab"
+              },
+              {
+                "src": "assets/product/project-setup/146.jpg",
+                "caption": "The BIM Connector dialog"
+              }
+            ]
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Add a model",
+            "steps": [
+              "Open **Project Setup** and the **BIM** tab.",
+              "Click **Create BIM**.",
+              "Type the model name in **Name** and upload the model file.",
+              "Click **Submit**."
+            ],
+            "images": [
+              {
+                "src": "assets/product/project-setup/143.jpg",
+                "caption": "The Create BIM dialog",
+                "step": 3
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "GIS",
+        "intro": "<p>The <strong>GIS</strong> tab keeps the project's map and geospatial documents.</p>",
+        "images": [
+          {
+            "src": "assets/product/project-setup/147.jpg",
+            "caption": "The GIS tab"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Upload GIS Document",
+            "definition": "Opens **Upload GIS Document** with a required **Name**, an upload button and a progress bar. **Submit** adds the document. Until one is added the page says **There are no GIS Documents**.",
+            "images": [
+              {
+                "src": "assets/product/project-setup/148.jpg",
+                "caption": "The Upload GIS Document dialog"
+              }
+            ]
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Upload a GIS document",
+            "steps": [
+              "Open **Project Setup** and the **GIS** tab.",
+              "Click **Upload GIS Document**.",
+              "Type a **Name** and upload the file.",
+              "Click **Submit**."
+            ],
+            "images": [
+              {
+                "src": "assets/product/project-setup/148.jpg",
+                "caption": "The Upload GIS Document dialog",
+                "step": 3
+              }
+            ]
+          }
+        ]
+      },
+      {
         "heading": "Overview",
         "intro": "<p>Project Setup is where a <strong>PM</strong> or <strong>Module Admin</strong> builds a project's structure, people, budget, schedule, forms and document areas before field teams start work. Field Works, My Desk, My Calendar and Data Analytics all read what you set up here.</p><p>It has fourteen tabs: <strong>Works</strong>, <strong>Tasks</strong>, <strong>People</strong>, <strong>Estimate</strong>, <strong>Schedule</strong>, <strong>Phase Codes</strong>, <strong>Quality</strong>, <strong>Safety</strong>, <strong>Drawings</strong>, <strong>Documents</strong>, <strong>Workorder</strong>, <strong>Forms</strong>, <strong>BIM</strong> and <strong>GIS</strong>. Most lists and dropdowns are filled from Global Data, so if something is missing, check Global Data first.</p>",
         "definitions": [
@@ -27922,728 +29004,6 @@ const MODULES = [
             "caption": "The Projects list: click a project name to open it"
           }
         ]
-      },
-      {
-        "heading": "Quality",
-        "intro": "<p>Quality is where a <strong>PM</strong>, <strong>Module Admin</strong> or QA/QC lead sets up folders that group quality forms, documents and photos against the work structure. It gives one place to see how many quality forms are still open.</p><p>Open <strong>Project Setup → Quality</strong>. Two sub-tabs: <strong>Quality And Documents</strong> and <strong>Uploaded Files</strong>. Click <strong>Create Folder</strong> to add a folder; each folder shows form counts by status.</p>",
-        "definitions": [
-          {
-            "term": "Quality And Documents",
-            "definition": "A list of folders (**Folders (1)** on this project: \"Folder 1\"), each with a drag handle, a three-dot menu (**Edit**, **Print**, **Share**, **Delete**) and five counters: **Total Forms**, **Not Ready Forms**, **Ready Forms**, **In Progress Forms** and **Completed Forms**. Search and a **Filter Folders** icon narrow the list. **Create Folder** asks only for a **Name** (then **Submit**). On **Warehouse Construction** there are three folders: **Quality Folder 1** (4 forms, all completed), **Quality Folder 2** and **Test Package** (13 forms: 2 in progress, 11 completed)."
-          },
-          {
-            "term": "Folder Items",
-            "definition": "The right side of a selected folder has three tabs: **Documents** (create sub folders and add files), **Photos** (**Add File**; table **Image | Added By | Added On | Action**) and **Linked Forms** (forms linked to the folder, grouped by form type such as **RFI**; \"No forms are linked to this folder\" until work packages are mapped). **Upload Excel** loads items in bulk."
-          },
-          {
-            "term": "Map Work Packages",
-            "definition": "Opens \"Map Folder Items\" with pickers **Tree Version**, **Entity**, **Super Location**, **Location Types**, **Location** and **Work Packages**, and a **Selected Folder Items** list. Mapping ties the folder to parts of the work structure built in **Project Setup → Works**, so quality forms raised for those work packages appear in the folder's counts. Work packages already mapped disappear from the list (\"No data or all Work Packages are mapped\")."
-          },
-          {
-            "term": "Uploaded Files",
-            "definition": "A separate file store outside the folder structure. It shows \"No folders or documents\" on this project."
-          },
-          {
-            "term": "Where the quality forms come from",
-            "definition": "The forms counted here are the quality forms raised in **Field Works → Quality** (**Quality Level 1**, **Quality Level 2**, **Punch Lists**, **Submitted Quality Logs**, **Approve Quality Logs**). Their templates come from **Global Data → Construction Types → Quality Forms**, and how quality work logs look depends on **Project Settings → Quality Work Logs Templates**."
-          },
-          {
-            "term": "Where this goes",
-            "definition": "Folder counts roll up what Field Works users submit. Submitted quality logs also show as **Recent Quality Logs** on **My Desk**, and punch list items as **Recent Punch List Items**."
-          },
-          {
-            "term": "Quality approval workflow",
-            "definition": "In **Field Works → Quality**, a Level 2 form shows **Workflow Comments and Attachments** for **Level 1** and **Level 2** and a **Submit For Approval** button, and **Approve Quality Logs** lists what is waiting. Who responds and approves is assigned per work package in **Works → [plant] → People** (**Quality Package Responsible** and **Quality Package Approval**). How these assignments combine with the approval levels on the form was not shown on screen. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
-          },
-          {
-            "term": "Folders are the \"Loop\" in Data Analytics",
-            "definition": "The product calls a quality folder a **Loop** in **Data Analytics & Insights → Quality Progress**. **Project Drill Down → Loop Progress** lists the folders (on Warehouse Construction: **Warehouse | Loop** shows **Test Package 75%**), then the folder's **Commodities**, **Work Packages** (for example **MOORE - QP - 004 100%**, **MOORE - QP - 008 0%**) and **Punch Lists**. The left menu item **Quality And Documents** shows the folders as tiles by status (**Not yet started**, **Started**, **Ready to work**, **In Progress**, **Completed**). On Arena Steel Plant - Phase 1 both are empty (\"Piperack | Loop – No Data\") because no work package is mapped to a folder. Construction Progress and Safety Analytics have the same **Loop Progress** tab. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
-          },
-          {
-            "term": "What the mapped items table shows",
-            "definition": "After **Map Work Packages**, a folder lists its items in a table: **S.No**, **Tree Versions**, the structure levels under your project's names (**Level-1s**, **Level-2s**, **Commodities Type**, **Commodities** on Warehouse Construction), **Work Packages** (for example **MOORE - QP - 008**), **Punchlists** and a print action. Quality Level 1 and Level 2 in Field Works offer only the work packages mapped here."
-          },
-          {
-            "term": "Folder Documents, Photos and Linked Forms (seen with data)",
-            "definition": "**Documents** shows the folder path (for example \"Quality Folder 1/\"), **Create Sub Folder**, and a table **Sub Folders | Last Modified | Added On | Action** (edit, print, delete); examples are **Quality Reference drawings** and **Quality Drawings**. **Photos** has **Add File** and **Image | Added By | Added On | Action** (edit, delete). **Linked Forms** groups forms by type (**RFI**) and says \"No forms are linked to this folder\" when none exist. **Where this goes:** when an inspector opens a quality form in Field Works, the **Hide Tagged Documents** panel shows \"Tagged documents for <commodity>\" from the folder's Documents."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Create a quality folder and map it to work packages",
-            "steps": [
-              "Go to **Project Setup → Quality → Quality And Documents** and click **Create Folder**. Enter a **Name** and click **Submit**.",
-              "Select the folder and click **Map Work Packages**.",
-              "Pick the **Tree Version**, **Entity**, **Super Location**, **Location Types**, **Location** and the **Work Packages** to map, then click **Submit**.",
-              "Use the **Documents**, **Photos** and **Linked Forms** tabs to add supporting files and check the linked forms."
-            ]
-          },
-          {
-            "title": "Choose who responds to and approves quality work",
-            "steps": [
-              "Open **Project Setup → Works** and click the plant's arrow.",
-              "Open the **People** tab and select **Quality Package Responsible** or **Quality Package Approval**.",
-              "Pick the work package, then tick the **Teams** or **Users** to assign.",
-              "For approval levels that this page does not explain, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
-            ]
-          }
-        ]
-      },
-      {
-        "heading": "Safety",
-        "intro": "<p>Safety is where a <strong>PM</strong> or <strong>Safety Officer</strong> sets up the safety forms, approval workflows and recurring safety schedule that field users then fill in. It is the setup side of <strong>Field Works → Safety</strong>.</p><p>Open <strong>Project Setup → Safety</strong>. Five sub-tabs: <strong>Setup Project Safety Forms</strong>, <strong>Create Workflow</strong>, <strong>Assign Workflow</strong>, <strong>Setup Safety Calendar</strong> and <strong>Safety And Documents</strong>. All five are empty on Arena Steel Plant - Phase 1.</p>",
-        "definitions": [
-          {
-            "term": "Setup Project Safety Forms",
-            "definition": "For unscheduled, event-based safety forms. **Create Safety Form Category** opens a dialog: **Form Category Name***, then **Add Forms** with **Filter by Activities**, **Select All** and a **Safety Packages** table (**S.No | Activities | Form Name**). On this project the list is empty (\"No Data Available\") and the Activities filter has no options, because no safety forms are mapped to activities. The page instructions say: create the category, fill details and add forms, then add users to each form (use copy to apply the same users to several forms). **Seen with data (Warehouse Construction):** the left list shows categories (**Safety form 1** to **Safety Form 4**; three-dot menu **Edit** / **Delete**) and the right table **Safety forms | People Assigned | Actions** lists each form with its people (for example **MOORE - SP - 001**: American Builders Inc., Star-Spangled Builders, Engineering Contractor - 1, System Admin) and **copy** / **delete**. The **Filter by Activities** list offered **General Conditions**. Arena Residential Project and Elevated Corridor also have categories (JSA's, Tool Box Talks, Safety Form 1, Safety, Equipment Check, Environmental Safety Concerns)."
-          },
-          {
-            "term": "Create Workflow (Safety)",
-            "definition": "**Create Approval Workflow** opens \"Create Safety Approval Workflow\" with **Workflow Name***. Then create levels and add users to each level: levels offer **All must approve** or **Any one can approve**, with approvers chosen from the project roster (**People → Roster**). **Seen with data:** the workflow **Safety approval** has **Level 1** (Engineering Contractor - 1, System Admin) and **Level 2** (System Admin, American Builders Inc.), both **Any one can approve**; the levels table has **Level | Level Description | Approvers | Workflow Type | SLS configured | Timeline Mandatory | Actions** (edit, delete)."
-          },
-          {
-            "term": "Assign Workflow",
-            "definition": "Attaches an approval workflow to a safety activity and work package. The screen has **Safety Activities** on the left, the **Work Package** list (\"There are no Work Package under respective Activity.\") and **Assign Approval Workflow** / **Clear**. Empty until safety activities exist. **Seen with data:** the **Safety Activities** list (General Conditions, Sitework, Deep Foundations, Site Demo, Concrete, Masonry, Metals, Wood & Plastics - Millwork / Rough Carp, Thermal & Moisture Protection) opens the work packages of the selected activity (for example **MOORE - SP - 001 | Field Supervision**), a workflow drop-down (**Safety approval**), **Save Changes** and **Copy Safety Approval Workflow To**. In Field Works the approval column of a safety form reads **Approval Work Flow: 2/2** when both levels have approved."
-          },
-          {
-            "term": "Setup Safety Calendar",
-            "definition": "For recurring safety forms. **Create Safety Calendar Category** has **Form Category Name***, **Recurrence Type** (**Daily**, **Weekly**, **Custom**), **Start Date**, **End Date**, **Time**, **Remind Before** (minutes, hours, days or weeks) and **Add Forms**. Scheduled forms show on **My Calendar** and in **Field Works → Safety → Safety Calendar**. **Seen with data:** the category **Safety Calendar** ran daily from 02-19-2024 to 04-19-2024 at 10:00 AM, with the form **Safety** assigned to System Admin."
-          },
-          {
-            "term": "Safety And Documents",
-            "definition": "A folder store for safety files: \"Create new folder to add documents\"; none exist yet. Enter a name and click the plus to create a folder. On Warehouse Construction there is a folder **Safety Instructions** with **edit**, **share**, **print** and **delete** actions."
-          },
-          {
-            "term": "Where the safety forms come from",
-            "definition": "Safety forms and their activities come from **Global Data → Construction Types → Global Work Packages → Safety Forms**, mapped to activities for the project's construction type. If the **Filter by Activities** list is empty, no safety forms are mapped for this construction type."
-          },
-          {
-            "term": "Where this goes",
-            "definition": "Field users fill forms in **Field Works → Safety**: **Safety Forms** (event based), **Safety Calendar** (scheduled), then approvals in **Approve Safety** and results in **Completed Safety**. Safety issues raised go to **Daily Safety Issues**. The latest items show on **My Desk** as **Recent Daily Safety Issues** and **Recent Safety Logs**, and tasks waiting on you under **My Actions**."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Set up and assign a safety approval workflow",
-            "steps": [
-              "Go to <strong>Project Setup → Safety → Create Workflow</strong> and build the approval levels and approvers.",
-              "Go to <strong>Project Setup → Safety → Assign Workflow</strong>, select the relevant safety division/package, and attach the workflow."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/create-safety-approval-workflow/001.jpg",
-                "caption": "Create Workflow and Create Level for a safety approval workflow",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/assign-safety-approval-workflow/001.jpg",
-                "caption": "Assign Workflow: choosing a safety division and package, then Submit",
-                "step": 2
-              }
-            ]
-          },
-          {
-            "title": "Make a safety form visible to field users",
-            "steps": [
-              "Create the form category under <strong>Setup Project Safety Forms</strong> (ad-hoc) or <strong>Setup Safety Calendar</strong> (recurring).",
-              "Explicitly assign the form to the users who should complete it."
-            ],
-            "note": "An unassigned form will not appear to end users in Field Works, even after the category is created.",
-            "images": [
-              {
-                "src": "assets/notion/setup-project-safety-forms/001.jpg",
-                "caption": "Create Safety Form Category under Setup Project Safety Forms",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/setup-safety-calendar-forms/001.jpg",
-                "caption": "Create Safety Calendar Category with start date, end date and recurrence",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/setup-project-safety-forms/002.jpg",
-                "caption": "Assigning users to a safety form, and copying the assignments to other forms",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/setup-safety-calendar-forms/002.jpg",
-                "caption": "Click to make assignments on a scheduled safety form",
-                "step": 2
-              }
-            ]
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/notion/safety-documents/001.jpg",
-            "caption": "Safety And Documents: creating folders and adding files"
-          }
-        ]
-      },
-      {
-        "heading": "Drawings",
-        "intro": "<p>Drawings is where a <strong>PM</strong> or <strong>Module Admin</strong> sets up drawing approval chains, training templates for automatic labels, packages, the register and the master list. Field users then view and raise forms on drawings in <strong>Field Works → Drawing Management</strong>.</p><p>Open <strong>Project Setup → Drawings</strong>. Five sub-tabs: <strong>Create Approval Workflow</strong>, <strong>Drawing Training</strong>, <strong>Drawing Packages</strong>, <strong>Drawing Register</strong> and <strong>Drawing Master</strong>.</p>",
-        "definitions": [
-          {
-            "term": "Create Approval Workflow (Drawings)",
-            "definition": "Named workflows (\"Drawing Approval Workflow-1\", \"Drawing Approval Workflow 2\") with edit, delete and **Open Workflow Graph View**. A selected workflow lists levels in a table **Level | Level Description | Approvers | Workflow Type | Actions** (for example Level 1: Siddharth Deore, Ravi Ravi, Muhammadhu Muhaidheen and others, \"Any one can approve\"). **Create Level** opens **Workflow Type** (**All must approve** or **Any one can approve**), **Security Key Requirement** (\"Require security key authentication for approval\"), **Description** and **Select Approver** (search over the project roster people, with email). **Where it goes:** the workflow is chosen when you create a drawing package; approvers then act on drawings under **Approve/Reject**."
-          },
-          {
-            "term": "Drawing Training",
-            "definition": "Templates that teach Arena to read drawing labels by OCR. **Create Training Template** adds one (each template has a three-dot menu). A template has four steps: **Upload Sample Drawing**, **Create Labels**, **OCR Training** and **Preview Table**. Labels become columns on drawings (for example **Lead Consultant**, **Drawing Title**, **MEPF Engineer** on drawings made with Wall). **Where it goes:** the template is required when creating a drawing package."
-          },
-          {
-            "term": "Drawing Packages",
-            "definition": "One card per plant (13 here, the same Tree Versions as Works; **Download Excel** at the top). Open a plant to see its packages (for example **Walls**), **Create Drawing Package** and **New Submittal**; a submittal card shows **Description**, **Approved Drawing Items** (0/1) and **Resolved Comments** (0/1)."
-          },
-          {
-            "term": "Create Drawing Package",
-            "definition": "Dialog \"Create drawing management category by selecting a drawing training template\": **Package Name***, **Work Division*** (activities such as Excavation, Marking, Concreting, Shuttering, Barbending... from **Global Data** activities), **Team Users*** (the 32 active roster users, same list as My Desk Pending Actions), **Drawing Training Template*** (Wall, Elevation, Sections) and **Approval Workflow** (the workflows above)."
-          },
-          {
-            "term": "Submittal and drawing table",
-            "definition": "Inside a package, a submittal shows the path (\"Walls/\"), buttons **Create Revision**, **Publish Comments** and **Edit Bulk Drawings**, views **Table**, **Grid** and **Kanban**, **Manage Columns** and **Save Layout**. Columns: **Drawing Name**, **Drawing Page**, **Status**, the template labels, **Uploaded Date**, **Uploaded By**, **Approval Workflow Level**, **Approve/Reject**, **See History**, **See Revisions** and **Actions** (compare, download, print, share, edit, link, delete)."
-          },
-          {
-            "term": "Drawing Register",
-            "definition": "Plant cards open a per-plant register: **Create**, **Map P6 Schedule**, **Export**, **Filters**, **Manage Columns**, **Table / Grid / Kanban**. Columns: **Drawing Register Id**, **Drawing Id**, **Drawing Name**, **Status**, **Due Date**, **Received Date**, **Locations**, **Network**, **Drawing Types**, **Sheets**, **Drawing Status**, **Remarks**, **Actions**. **Create** opens the form with **Connected Drawings** and **Connected Documents** (**Connect**), **Drawing Id***, **Drawing Name***, **Received Date**, **Locations**, **Network**, **Drawing Types**, **Sheets**, **Drawing Status**, **Remarks**, **Status**, **Start**, **Due Date**. **Drawing Status** values come from **Project Settings → Drawing Status** (**Created**, **Completed**, **Add Status**)."
-          },
-          {
-            "term": "Drawing Master",
-            "definition": "One list of every drawing in the project across all plants: **Tree**, **Category**, **Linked Form**, **Drawing Name**, **Drawing Page**, **Status**, **Uploaded Date**, **Uploaded By**, **Approval Workflow Level**, **Approve** / **Reject** buttons, **See History**, **See Revisions** and **Actions**. Approvers can act here without opening each package."
-          },
-          {
-            "term": "Where this data comes from and goes",
-            "definition": "**Comes from:** plants from Works; activities from Global Data; people from **People → Roster**; register form fields and templates from **Global Data → Forms → Drawing Management Forms** (**Drawing Package Submittal**, **Drawing Register**). **Goes to:** **Field Works → Drawing Management**, forms raised on drawings (visible on the Field Works cards and in **My Actions → Workflow Issues**), and the work package **Drawing Items** section in Works."
-          },
-          {
-            "term": "Revisions, history and comments (seen live)",
-            "definition": "**Create Revision** opens \"Select Drawing Page to be revised\" with **Do Not Change**, **Append** and **Replace** for each page. **See History** opens a **Track** dialog with one line per step, for example \"Drawing has been approved at level 1\", the date, time and the approver (Ravi Ravi), marked **Approved**. **See Revisions** opens a page listing each revision (\"Revision 0 - Latest Revision\", **Revised By**, **Revised On**). **Publish Comments** lists the comment threads on the submittal (**Drawing Name**, **Drawing Page**, **Drawing Revision**, **Thread Creator**, **Comment**, **Assigned To**, **Published On**, **Status**) with **Download Excel** and **Publish**. **Edit Bulk Drawings** lets you pick drawings (**Select All**) and edit their label data together."
-          },
-          {
-            "term": "Drawing viewer and markup tools",
-            "definition": "Click a **Drawing Page** link to open the viewer: the file name, a **Drawing Revision** selector (**Latest Revision**), a **Default Layer** drop-down, page arrows (**Page 1/1**), **Threads** (show comment threads), **share** and the markup icon. The markup toolbar offers **Select**, **Pen**, **Frame**, **Waved Frame**, **Circle**, **Drop** (with a **Colour** choice), **Text**, **Line**, **Comment**, **Zoom In**, **Zoom Out**, **Capture**, **Undo**, **Redo** and **Save**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
-          },
-          {
-            "term": "Link a drawing to the work structure",
-            "definition": "The **link** action in the drawing row opens **Link** with **Link to tree** (**Entity**, **Super Location**, **Location Types**, **Location**, **Work Packages**) and **Link to Quality And Documents**, plus lists **Selected Locations** and **Selected Documents** and **Submit**. A linked drawing then shows against that location or work package (the **Drawing Items** section of the work package in **Works**) and can be reached from quality documents."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Create a multi-level drawing approval workflow",
-            "steps": [
-              "Go to <strong>Project Setup → Drawings → Create Approval Workflow</strong>.",
-              "Name the workflow (e.g. \"Drawing Approval Workflow-1\").",
-              "Add levels (Level 1, Level 2, ...), each with its own approvers and approval type such as \"Any one can approve\"."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/create-drawing-approval-workflow/001.jpg",
-                "caption": "Create Approval Workflow for drawings",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/create-drawing-approval-workflow/002.jpg",
-                "caption": "Create Level: choosing the level type and approvers",
-                "step": 3
-              }
-            ]
-          },
-          {
-            "title": "Create a drawing package and upload drawings",
-            "steps": [
-              "Go to **Project Setup → Drawings → Drawing Packages** to see the existing drawing packages.",
-              "Click **Create Drawing Package**, enter the package details and the training template, then click **Submit**. Use the three-dot menu on a package card to edit or delete it.",
-              "Open the package and click **Upload Drawing** to add one or more PDF or image files.",
-              "Choose **Auto Label Upload** to read the labels from the drawings, or **Write Label Manually** to type them in. Both lead to **Review & Edit**.",
-              "Use **Review & Submit** for each drawing, or **Submit All** to upload them in one go. The uploaded drawings appear in a table.",
-              "Click the link in the **Drawing Page** column to open a drawing."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/drawing-packages/001.jpg",
-                "caption": "The Drawing Packages screen",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/drawing-packages/002.jpg",
-                "caption": "Create Drawing Package form",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/drawing-packages/003.jpg",
-                "caption": "Editing or deleting a package from its three-dot menu",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/drawing-packages/004.jpg",
-                "caption": "Upload Drawing for a package",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/drawing-packages/005.jpg",
-                "caption": "Auto Label Upload and Write Label Manually",
-                "step": 4
-              },
-              {
-                "src": "assets/notion/drawing-packages/006.jpg",
-                "caption": "Uploaded drawings table with the Drawing Page link",
-                "step": 5
-              },
-              {
-                "src": "assets/notion/drawing-packages/007.jpg",
-                "caption": "A drawing opened on the drawing page",
-                "step": 6
-              }
-            ]
-          },
-          {
-            "title": "Annotate, link and share a drawing",
-            "steps": [
-              "Open a drawing and click **Edit Drawing** to use the annotation tools, then click **Save Changes**. The **Select Users** drop-down shows the mark-ups made by the users you choose.",
-              "To raise a form against the drawing, pick the **Drop** tool, place it on the drawing and select the form. Fill in the form and **Submit** the form and drawing.",
-              "Use **Edit Bulk Drawings** to change labels and approval workflows for many drawings at once.",
-              "Check the **Drawing Workflow** and **Level** columns for a drawing's approval status, and click **See History** to view its history.",
-              "Click the **Revisions** icon to compare revisions of a drawing; minor and major changes show in different colours.",
-              "Click **Share**, select the users, choose the email service and send the file.",
-              "Click **Edit** to change the drawing's information.",
-              "Click **Link**, choose the **Entity**, **Super Location**, **Location** and **Work Packages** (and, if needed, quality documents), then **Submit**, so the drawing shows against those parts of the work structure.",
-              "Switch to the grid view to **Approve** or **Reject** drawings on the cards."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/drawing-packages/008.jpg",
-                "caption": "Edit Drawing with the annotation tools",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/drawing-packages/009.jpg",
-                "caption": "The Drop tool placing a form on the drawing",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/drawing-packages/010.jpg",
-                "caption": "A form opened in place on the drawing",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/drawing-packages/011.jpg",
-                "caption": "Edit Bulk Drawings",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/drawing-packages/012.jpg",
-                "caption": "Changing labels and approval workflows for many drawings at once",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/drawing-packages/013.jpg",
-                "caption": "Drawing Workflow, Level and See History columns",
-                "step": 4
-              },
-              {
-                "src": "assets/notion/drawing-packages/014.jpg",
-                "caption": "Revision compare screen with colour-coded changes",
-                "step": 5
-              },
-              {
-                "src": "assets/notion/drawing-packages/015.jpg",
-                "caption": "Sharing a drawing with selected users",
-                "step": 6
-              },
-              {
-                "src": "assets/notion/drawing-packages/016.jpg",
-                "caption": "Editing a drawing's information",
-                "step": 7
-              },
-              {
-                "src": "assets/notion/drawing-packages/017.jpg",
-                "caption": "Link: mapping a drawing to the work structure (this older screenshot names CWA, System and Tag; the current product shows Entity, Super Location, Location and Work Package)",
-                "step": 8
-              },
-              {
-                "src": "assets/notion/drawing-packages/018.jpg",
-                "caption": "Grid view with Approve and Reject on each card",
-                "step": 9
-              }
-            ]
-          },
-          {
-            "title": "Submit drawings as a package submittal",
-            "steps": [
-              "Open a drawing package and click **New Submittal**.",
-              "In the dialog, complete **Drawing Package Submittal Form**: enter the details, attach the files and click **Submit**.",
-              "Click **Upload Drawings** and add your PDF drawings.",
-              "Choose **Auto Label Upload** or **Write Label Manually** to move on to **Review & Edit**.",
-              "Use **Review & Submit** for each drawing, or **Submit All**.",
-              "Open a drawing from the **Drawing Page** column. Click **Comments** for the annotation tools, use **Comment** to add a note at a point on the drawing, and turn **Threads** on to show where comments sit.",
-              "Use **Create Revision** to upload a revised drawing, **Review Comments** to read the comments, and **Compare** to see the old and revised drawings side by side."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/drawing-logs/004.jpg",
-                "caption": "New Submittal in a drawing package",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/drawing-logs/005.jpg",
-                "caption": "The submittal dialog: Drawing Package Submittal Form, Upload Drawings and Review & Edit",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/drawing-logs/006.jpg",
-                "caption": "Drawing Package Submittal Form",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/drawing-logs/007.jpg",
-                "caption": "Upload Drawings for the submittal",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/drawing-logs/008.jpg",
-                "caption": "Auto Label Upload and Write Label Manually",
-                "step": 4
-              },
-              {
-                "src": "assets/notion/drawing-logs/009.jpg",
-                "caption": "Uploaded drawings table with the Drawing Page link",
-                "step": 5
-              },
-              {
-                "src": "assets/notion/drawing-logs/011.jpg",
-                "caption": "Comments mode with the annotation tools",
-                "step": 6
-              },
-              {
-                "src": "assets/notion/drawing-logs/013.jpg",
-                "caption": "Adding a comment at a point on the drawing",
-                "step": 6
-              },
-              {
-                "src": "assets/notion/drawing-logs/014.jpg",
-                "caption": "The Threads toggle showing where comments sit",
-                "step": 6
-              },
-              {
-                "src": "assets/notion/drawing-logs/016.jpg",
-                "caption": "Create Revision to upload a revised drawing",
-                "step": 7
-              },
-              {
-                "src": "assets/notion/drawing-logs/018.jpg",
-                "caption": "Review Comments",
-                "step": 7
-              },
-              {
-                "src": "assets/notion/drawing-logs/024.jpg",
-                "caption": "Compare: the existing and revised drawings",
-                "step": 7
-              }
-            ]
-          },
-          {
-            "title": "Train a drawing template for automatic labels",
-            "steps": [
-              "Go to **Project Setup → Drawings → Drawing Training**, which lists the existing training templates.",
-              "Click **Create Training Template**, enter a name and description, and click **Submit**. Use the three-dot menu on a template card to edit or delete it.",
-              "Open a template. In step 1, **Upload Sample Drawing**, upload a PDF or image with **Upload**.",
-              "In step 2, **Create Labels**, click **Create Label** to add a drawing-specific label, then enter its name and **Field Type**. Click **Save Changes**.",
-              "In step 3, **OCR Training**, select each label, mark its position on the drawing (horizontal or vertical) and click **Save Changes**. Drawings uploaded with this template then have those labels read automatically.",
-              "In step 4, **Preview Table**, check the table of labels for the drawing."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/drawing-training/001.jpg",
-                "caption": "The Drawing Training screen",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/drawing-training/002.jpg",
-                "caption": "Create Training Template",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/drawing-training/003.jpg",
-                "caption": "Editing or deleting a template from its three-dot menu",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/drawing-training/004.jpg",
-                "caption": "Step 1: Upload Sample Drawing",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/drawing-training/005.jpg",
-                "caption": "Step 2: Create Labels",
-                "step": 4
-              },
-              {
-                "src": "assets/notion/drawing-training/006.jpg",
-                "caption": "A new label with its name and Field Type",
-                "step": 4
-              },
-              {
-                "src": "assets/notion/drawing-training/007.jpg",
-                "caption": "Step 3: OCR Training, marking each label's position",
-                "step": 5
-              },
-              {
-                "src": "assets/notion/drawing-training/008.jpg",
-                "caption": "Step 4: Preview Table",
-                "step": 6
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "heading": "Documents",
-        "intro": "<p>Documents is the project's shared file area where a <strong>PM</strong> or <strong>Module Admin</strong> creates teams and folders and sends documents for approval. It is separate from the <strong>Document Repository</strong> module and from the Quality and Safety document stores.</p><p>Open <strong>Project Setup → Documents</strong>. Sub-tabs: <strong>My Files</strong> and <strong>Shared With Me</strong>; <strong>Create Team</strong> starts a new team folder.</p>",
-        "definitions": [
-          {
-            "term": "My Files",
-            "definition": "A list of teams on the left (for example **Basic Oxygen Furnace**, \"Created by: Ravi Ravi\") and a folder browser on the right with breadcrumbs, search and a table **Folders & Documents | Last Modified | Added On | Actions**. Inside a folder, **Upload Document** and **Create Document** appear, with tabs **Working Documents** and **Documents to Approve**."
-          },
-          {
-            "term": "Create Team",
-            "definition": "Dialog \"Create a team like quality, progress, safety etc\": **Name your documents folder?***, **Select the team who will be working on these documents*** and **Select the Admins for document folder***, then **Submit**. The people lists come from the project roster."
-          },
-          {
-            "term": "Folder structure from Global Data",
-            "definition": "The team folder **FEL - 1** contains **Instrumentation**, **Structural**, **Mechanical**, **Civil**, **Architectural** and **Process Controls**, the same six folders as the **FEL - 1** structure template in **Global Data → Document Management → Structure Template**. So structure templates are the source of a team's starting folders."
-          },
-          {
-            "term": "Create Document",
-            "definition": "Dialog with **Name**, **Type** (**Text file (txt)**, **Power point (ppt)**, **Spreadsheet (xlsx)**, **Word document (docx)**) and **Template** (**Blank Document** or a template), then **Create file**. Types and templates come from **Global Data → Document Management → Document Template** (Word, Excel, PPT, Text)."
-          },
-          {
-            "term": "Shared With Me",
-            "definition": "Documents and folders other people shared with you. Empty on this project (\"No folders or documents in this Page\")."
-          },
-          {
-            "term": "Documents to Approve",
-            "definition": "Approvers see documents sent to them here. Empty on this project."
-          },
-          {
-            "term": "How this differs from other document areas",
-            "definition": "**Project Setup → Documents** is the live working area. **Quality → Quality And Documents** and **Safety → Safety And Documents** hold discipline-specific files. **Document Repository** is the read-only archive across the project."
-          },
-          {
-            "term": "Import Template (from Global Data)",
-            "definition": "In **Project Setup → Documents**, **Import Template** opens **Global Templates** with a drop-down and **Import**. The list is the **Structure Template** list in **Global Data → Document Management**, so a new template must be created there first. Other buttons seen on the page: **Create Team**, **New Folder**, **Sync Team**; the tabs are **My Files** and **Shared With Me**."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Set up a folder/team structure for project documents",
-            "steps": [
-              "Go to <strong>Project Setup → Documents</strong>.",
-              "Click <strong>Create Team</strong>.",
-              "Build out folders (e.g. per plant) and sub-folders as needed, uploading files into each."
-            ],
-            "note": "This is distinct from the read-only, cross-category Document Repository module, and from the specialized Quality & Documents area inside the Quality tab.",
-            "images": [
-              {
-                "src": "assets/notion/documents/001.jpg",
-                "caption": "Create Team for project documents",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/documents/002.jpg",
-                "caption": "New folder inside a team, with import template and sync team",
-                "step": 3
-              }
-            ]
-          },
-          {
-            "title": "Tag, route and approve a project document",
-            "steps": [
-              "Open a folder inside your team. Use **Tag** on a document to link it to the project tree.",
-              "Use **Workflow** to set permissions such as view, edit and approval levels. **COPY SAME WORKFLOW FOR** and **COPY WORKFLOW FOR** reuse a workflow across documents.",
-              "Use **History** to view the history of the document.",
-              "Use **Send to approval** to send the document to its approvers.",
-              "Approvers open **Documents to approve** to approve or reject the documents waiting for them."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/documents/003.jpg",
-                "caption": "Tag: linking a document to the project tree",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/documents/004.jpg",
-                "caption": "Workflow: permissions and approval levels for a document",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/documents/005.jpg",
-                "caption": "History of a document",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/documents/006.jpg",
-                "caption": "Send to approval",
-                "step": 4
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "heading": "Workorder",
-        "intro": "<p>Workorder is where a <strong>PM</strong> or <strong>Module Admin</strong> creates work orders for contractors and vendors on this project. Progress and invoices are then tracked in <strong>Field Works → Workorder</strong>.</p><p>Open <strong>Project Setup → Workorder</strong>. The toolbar has <strong>Create</strong> and <strong>Filters</strong>. No work orders exist on Arena Steel Plant - Phase 1, so the list is empty.</p>",
-        "definitions": [
-          {
-            "term": "Create (Workorder)",
-            "definition": "Shows two starting cards, **Tree Version** and **Workorder Type**, then opens **Create Workorder**. Fields: **Workorder Number**, **Workorder Name***, **Workorder Description**, **Select Contractor***, **Actuals Derived From***, **Tree Version***, **Start Date**, **End Date**, **Retention Percentage**, **Performance Bank Guarantee**, **Select Contact Person**, **Upload Workorder Images**, **Upload Workorder Files** and any configurable fields (this project shows two extra fields), then **Submit**. Starting from **Workorder Type** adds **Workorder Type***."
-          },
-          {
-            "term": "Where the Create Workorder options come from",
-            "definition": "**Select Contractor** lists the company vendors and sub contractors from **Global Data → Vendors / Sub Contractors** (37 entries, for example United_Rentals, JJ, NRK_Industries). **Actuals Derived From** offers **Work Logs**, **RFIs** and **Service Entry Sheets**: what the work order measures progress against. **Tree Version** lists the 13 plants from **Works**. **Select Contact Person** lists the project roster (**People**). **Workorder Type** offers **Lump Sum**, **Unit Rate**, **Guaranteed Maximum Price**, **Cost-Plus** and **Time & Material**."
-          },
-          {
-            "term": "Setup versus execution",
-            "definition": "This tab defines the work order. Day-to-day status, timesheets and invoices live in the **Work Order** module (Home) and **Field Works → Workorder** and **Invoices**. **Global Data → Work Order Management** is the same module and data as Home → Work Order, and **Global Data → Forms → Workorder Forms** (Workorders, Service Entry Sheet, Indent) holds the form templates."
-          },
-          {
-            "term": "Where this data goes",
-            "definition": "Work orders appear in the **Work Order** module and **Field Works → Workorder**. The **Forms → Workorder** category here controls who can view, create or approve **SERVICE ENTRY SHEET**, **INDENT**, **EQUIPMENT LOGS**, **MATERIAL LOGS** and **MANPOWER LOGS** for the project."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Create a work order",
-            "steps": [
-              "Go to **Project Setup → Workorder** and click **Create**.",
-              "Choose the starting card (**Tree Version** or **Workorder Type**).",
-              "Fill in **Workorder Name**, **Select Contractor**, **Actuals Derived From** and **Tree Version**, plus the dates, retention, guarantee and contact person.",
-              "Upload images or files if needed and click **Submit**."
-            ]
-          }
-        ]
-      },
-      {
-        "heading": "Forms",
-        "intro": "<p>Forms is where a <strong>Module Admin</strong> decides, for every form type and every plant, who may use it, how it is approved, when it repeats and which template it uses. Field users then see those forms in <strong>Field Works</strong>.</p><p>Open <strong>Project Setup → Forms</strong>. A row of categories runs across the top (<strong>Construction Forms</strong>, <strong>Workorder</strong>, <strong>Project Forms</strong> and your project form categories); each category lists its form types on the left and has tabs such as <strong>Assign Users</strong>, <strong>Approval Workflow</strong>, <strong>Schedule Project Forms</strong> and <strong>Assign Templates</strong>.</p>",
-        "definitions": [
-          {
-            "term": "Level 1: Form Category",
-            "definition": "The top row: **Construction Forms**, **Workorder**, **Project Forms**, then the Project Form categories defined in **Global Data → Forms → Project Forms**: Laboratory Test Results, Field Test Results, Correspondence Details, Contractor Onboarding, Test Reports, Procurement Forms, Checklists, Estimate Quantity, Equipment Productivity Planner, Cypark, test, Site Inspection, Quality, Permit to work, Near Miss, Observations, Non Conformance, Inspections, Process 1, Material Inspection Request, NON CONFORMANCE REPORT and MATERIAL APPROVAL SHEET. The names match the Global Data list exactly."
-          },
-          {
-            "term": "Level 3: Form Type (left list)",
-            "definition": "**Construction Forms** (6): RFI, Submittal, Change Order, Delay Form, Request for Information, Transmittal. **Workorder** (7): SERVICE ENTRY SHEET, INDENT, INDENT PLANNING APPROVAL, INDENT STORE APPROVAL, EQUIPMENT LOGS, MATERIAL LOGS, MANPOWER LOGS. A Project Form category lists its own forms (for example Laboratory Test Results has Inspection of Wet Mix Macadam (WMM), BORROW AREA / Cutting Soil, Inspection of OGL, Stripping value of Aggregate and Gradation)."
-          },
-          {
-            "term": "Level 2: Assign Users",
-            "definition": "Pick the form type and plant (selector at top, for example **Pellet Plant (1MTPA)**); a grid lists the 35 project roster people with tick boxes **View**, **Create**, **Edit** and **Delete**. Click **Submit** to save. Project Form categories also have **Copy Users** to reuse one form's users on others."
-          },
-          {
-            "term": "Level 2: Approval Workflow",
-            "definition": "Choose the form type (RFI, Submittal, Change Order, Delay Form, LOR Internal, Equipment Logs, Material Logs, Manpower Logs, Invoices, Workorder, Cost Transaction Logs, Variation Order, Cost Change Orders, Cost Transfers, Field Cost Logs, Schedule) and plant, then **Create Level**. The table shows **Level**, **Level Description**, **Approvers**, **Workflow Type**, **SLS configured**, **Timeline Mandatory** and **Actions**. RFI on Pellet Plant has no levels yet (\"No Data Available\"). Approvers come from the project roster."
-          },
-          {
-            "term": "Level 2: Schedule Project Forms",
-            "definition": "For repeating forms: **1 Prepare Schedule** (**Recurrence Type** such as Weekly, **Every**, weekdays, **Start Date**, **End Date**, **Time**) and **2 Assign User**, then **Submit**. Available for Construction Forms and Project Form categories (not Workorder). Scheduled forms show on **My Calendar**."
-          },
-          {
-            "term": "Level 2: Assign Templates",
-            "definition": "Choose which template a form type uses on each plant, then **Submit** (or **Clear**). Forms (8): RFI, REQUEST FOR INFORMATION, TRANSMITTAL, SUBMITTALS, CHANGE ORDER, MEETING MINUTES, DELAY FORMS, INVOICES. For RFI the choices are Standard, General, Consultants Advisory Form, Valigonda to Thorrur, RFI, rttest (Configuration not present), Neelamangala - Tumukur RFI and 0123, exactly the RFI templates in **Global Data → Forms → Construction Forms → RFI**."
-          },
-          {
-            "term": "Where this data comes from",
-            "definition": "Form categories, form types and templates come from **Global Data → Forms** (Construction Forms, Workorder Forms, Project Forms). People come from **People → Roster**; plants from **Works**. Workflow approvers come from the same roster."
-          },
-          {
-            "term": "Where this data goes",
-            "definition": "Field Works shows a form only to users with **View** (and lets them raise it with **Create**): **Progress** cards (RFI, Meeting Minutes, Issues), **Quality**, **Safety** and **Project Forms**. Approval levels create items in **My Desk → My Actions → Approvals**; scheduled forms show on **My Calendar**; issues raised show under **Issues**."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Set per-plant permissions for a form type",
-            "steps": [
-              "Go to **Project Setup → Forms** and pick a category in the top row (for example **Construction Forms**).",
-              "In the left list choose the form type (for example **RFI**) and open **Assign Users**.",
-              "Choose the plant in the selector, then tick **View**, **Create**, **Edit** and **Delete** for each user.",
-              "Click **Submit**. Repeat for other plants; use **Copy Users** (Project Forms) to reuse users."
-            ],
-            "note": "Submit was not pressed in testing."
-          },
-          {
-            "title": "Configure a form type's approval chain, schedule, and template",
-            "steps": [
-              "From the same category and form type, open <strong>Approval Workflow</strong> to define the levels and approvers a submission routes through.",
-              "Open <strong>Schedule Project Forms</strong> if this form type should trigger on a recurring basis.",
-              "Open <strong>Assign Templates</strong> to attach the template variant(s) the form type should use."
-            ],
-            "note": "All of this is setup configuration done before end users see the form — it doesn't itself create a form submission.",
-            "images": [
-              {
-                "src": "assets/notion/create-approval-workflow-for-project-forms/001.jpg",
-                "caption": "Forms approval workflow: Create Level with the level type and approvers",
-                "step": 1
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "heading": "BIM",
-        "intro": "<p>BIM is the project's home for 3D models. A <strong>PM</strong> or <strong>Module Admin</strong> creates a model entry and team members open it in a built-in 3D viewer.</p><p>Open <strong>Project Setup → BIM</strong>. <strong>Create BIM</strong> asks for a <strong>Name</strong>; existing models show as cards (for example <strong>Warehouse</strong>) with an arrow to open and an <strong>x</strong> to remove.</p>",
-        "definitions": [
-          {
-            "term": "Create BIM",
-            "definition": "Dialog with **Name*** and **Submit**. Upload of the model file happens from the model entry."
-          },
-          {
-            "term": "3D viewer",
-            "definition": "Opening a model loads a viewer with two tabs, **Forge View** and **BIM Connector**, and shows \"Downloading / Loading / Rendering / Optimising\" while it prepares. Tools include Orbit, Pan, Zoom, First Person, **Fit to View**, **Measure** (distance, angle, spot coordinate, calibrate, unit and precision), **Section Analysis** (X, Y, Z planes and box), **Explode Model**, **Model Browser**, **Properties**, **Settings** and **Full Screen**."
-          },
-          {
-            "term": "Work Status and Planned Vs Actual",
-            "definition": "The viewer has **Work Status**, **Planned Vs Actual**, **Actual Dates**, **Planned Dates**, a **Planned and Actual Dates Filter**, **Simulation** and **Go to Detailed View**. The Work Status filter shows chips such as **WORK YET TO START (2)**, **WORK IN PROGRESS (0)** and **WORK COMPLETED (2)** with **Apply** and **Clear**, so model elements are coloured by work progress."
-          },
-          {
-            "term": "Where this data goes",
-            "definition": "The model status follows the progress recorded in **Field Works**. BIM sits beside **Drawings** as the 3D reference for the same work structure."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Add a BIM model to the project",
-            "steps": [
-              "Go to **Project Setup → BIM** and click **Create BIM**.",
-              "Enter the **Name** and click **Submit**.",
-              "Open the new model card to load it in the viewer."
-            ]
-          }
-        ]
-      },
-      {
-        "heading": "GIS",
-        "intro": "<p>GIS stores map and survey documents for the project. A <strong>PM</strong> or <strong>Module Admin</strong> uploads them so the team has one place for geospatial reference.</p><p>Open <strong>Project Setup → GIS</strong> and click <strong>Upload GIS Document</strong> (a dialog asks for a <strong>Name</strong>, then <strong>Submit</strong>).</p>",
-        "definitions": [
-          {
-            "term": "Upload GIS Document",
-            "definition": "Dialog with **Name*** and **Submit**. Documents then list on the tab."
-          },
-          {
-            "term": "Where this data comes from and goes",
-            "definition": "GIS files are uploaded here by the project team; nothing is fed from Global Data. Other setup tabs (Drawings for 2D, BIM for 3D) cover the rest of the project's reference material. The Google Maps integration in **Global Data → Marketplace** and the location options in **Project Settings** are separate from this tab."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Upload a GIS/map document",
-            "steps": [
-              "Go to **Project Setup → GIS** and click **Upload GIS Document**.",
-              "Enter the **Name** and upload the file, then click **Submit**."
-            ]
-          }
-        ]
       }
     ],
     "name": "Project Setup",
@@ -28681,15 +29041,28 @@ const MODULES = [
       "Schedule Gantt",
       "Milestones",
       "Phase Codes",
-      "Overview",
       "Quality",
+      "Quality Uploaded Files",
       "Safety",
-      "Drawings",
+      "Safety Create Workflow",
+      "Assign Workflow",
+      "Setup Safety Calendar",
+      "Safety And Documents",
+      "Create Approval Workflow",
+      "Drawing Training",
+      "Drawing Packages",
+      "Drawing Register",
+      "Drawing Master",
       "Documents",
+      "Shared With Me",
       "Workorder",
       "Forms",
+      "Forms Approval Workflow",
+      "Schedule Project Forms",
+      "Assign Templates",
       "BIM",
-      "GIS"
+      "GIS",
+      "Overview"
     ]
   },
   {
@@ -30770,108 +31143,89 @@ const MODULES = [
     "qaItems": QA_DOCUMENTREPOSITORY,
     "narrative": [
       {
-        "heading": "Overview",
-        "intro": "<p>Document Repository has no settings or upload button, so what appears here depends only on the module that produces each record. This section maps each category to its source and says what was seen on Arena Steel Plant - Phase 1.</p><p>Access is controlled by the **Document Management Repository** row in **Users and Permissions** (boxes **View**, **Download** and **Print**). Record quality, such as clear names and descriptions, is decided in the source modules.</p>",
-        "definitions": [
+        "heading": "Document Repository",
+        "intro": "<p>The <strong>Document Repository</strong> keeps the documents that the project's forms and logs have produced, filed in folders by type, so you can find, download, print or trace them in one place.</p>",
+        "images": [
           {
-            "term": "RFI",
-            "definition": "**Where it comes from:** **Field Works → Progress → RFI**. The records here are the same RFIs listed in Field Works, and their cards still show the workflow control (**Start**, **Assign To**), so they are archived without waiting for approval. The same RFIs feed the **RFI Log** in **Data Analytics → Standard Reports → Weekly Progress Report**."
-          },
-          {
-            "term": "Meeting Minutes",
-            "definition": "**Where it comes from:** **Field Works → Progress → Meeting Minutes**. Empty here and empty in Field Works (its list says to click Create)."
-          },
-          {
-            "term": "Other Forms",
-            "definition": "**Where it comes from:** the project forms in **Field Works → Project Forms**, whose form types are set up in **Global Data → Forms** and **Project Setup → Forms**. Its sub-categories are form categories. Empty here, and no Internal LOR has been created."
-          },
-          {
-            "term": "Qualities Level 1 and Qualities Level 2",
-            "definition": "**Where it comes from:** the quality logs submitted in **Field Works → Quality** (Level 1 and Level 2 follow the quality folder levels from **Project Setup → Quality**). Both are empty here; **Submitted Quality Logs** says \"No Logs Present\"."
-          },
-          {
-            "term": "Safety Scheduled Forms and Safety Forms",
-            "definition": "**Where it comes from:** the safety records in **Field Works → Safety** (scheduled forms follow the **Safety Calendar** schedules from **Project Setup → Safety**; the other forms are the Daily Safety Issues and Observations)."
-          },
-          {
-            "term": "Drawings",
-            "definition": "**Where it comes from:** **Project Setup → Drawings**. Its sub-category is the drawing package category: A category can be empty even when **Drawing Master** lists a drawing there with status Created, so a drawing does not reach the archive just by being uploaded."
-          },
-          {
-            "term": "Workorders and Invoices",
-            "definition": "**Where it comes from:** work orders from **Project Setup → Workorder** and **Field Works → Workorder**, and invoices from **Field Works → Invoices**."
-          },
-          {
-            "term": "Daily Progress Reports and Weekly Progress Reports",
-            "definition": "**Where it comes from:** **Data Analytics → Standard Reports**. Both folders are empty; the report screens show live data and the **Weekly Progress Report** has **Download Pdf**, but nothing on them was seen to save a copy into the archive."
-          },
-          {
-            "term": "Downstream archive",
-            "definition": "The repository only reads. To correct or add a record, go to the module that produced it; the change then shows in the archive."
-          },
-          {
-            "term": "Document Management Repository permission",
-            "definition": "The permission row that controls this screen, in **Users and Permissions → Groups Permission**. It has three boxes: **View**, **Download** and **Print**, matching the **Download File** and **Print File** icons. Records are only archived by the source modules; this permission does not let anyone change them."
+            "src": "assets/product/document-repository/001.jpg",
+            "caption": "Document Repository with the RFI folder open"
           }
         ],
-        "procedures": [
-          {
-            "title": "Trace a missing record",
-            "steps": [
-              "Open **Document Repository** and select the category; confirm the table is empty and the date range is not narrowing it.",
-              "Open the source module listed under Overview (for example **Field Works → Progress → RFI** for RFIs).",
-              "Check that the record exists there and has moved past draft (submitted or approved, as the module requires).",
-              "Return to the archive and reopen the category."
-            ]
-          }
-        ]
-      },
-      {
-        "heading": "Records",
-        "intro": "<p>Document Repository is where a PM, Module Manager or auditor finds a record again without opening the module that produced it. Pick a category on the left and the table on the right lists its records.</p><p>The table has **Tree Version** (the plant), **Name**, **Description** and **Added On**, then an **Actions** column with four icons: **Download File**, **Print File**, **Access Logs** and **Email Threads**. The right pane has its own search box and a **Start date** to **End date** range; the left pane has a separate search box for the category list. Until you choose a category it says \"There is no data in this folder\". On Arena Steel Plant - Phase 1 only **RFI** has records (three); every other category is empty.</p>",
         "definitions": [
           {
-            "term": "Categories (left pane)",
-            "definition": "Twelve, in this order: **RFI**, **Meeting Minutes**, **Other Forms**, **Qualities Level 1**, **Qualities Level 2**, **Safety Scheduled Forms**, **Safety Forms**, **Drawings**, **Workorders**, **Invoices**, **Daily Progress Reports** and **Weekly Progress Reports**. **Other Forms**, **Safety Scheduled Forms**, **Safety Forms**, **Drawings**, **Workorders** and **Invoices** are expandable and open into sub-categories when the project has any; on Arena Steel Plant - Phase 1 only **Drawings** has one (**Walls**). The chevron at the top collapses the left pane."
+            "term": "Folder list (left)",
+            "definition": "One button per folder: **RFI**, **Meeting Minutes**, **Other Forms**, **Qualities Level 1**, **Qualities Level 2**, **Safety Scheduled Forms**, **Safety Forms**, **Drawings**, **Workorders**, **Invoices**, **Daily Progress Reports** and **Weekly Progress Reports**. The open folder is outlined in orange and shows a right arrow."
           },
           {
-            "term": "Table columns",
-            "definition": "**Tree Version** (the plant the record belongs to, for example Pellet Plant (1MTPA)), **Name** (the record's own number, for example WIR - 1), **Description** (blank for the RFIs) and **Added On** (date and time). Newest first on the RFI list."
+            "term": "Folders with a down arrow",
+            "definition": "**Other Forms**, **Safety Scheduled Forms**, **Safety Forms**, **Drawings**, **Workorders** and **Invoices** hold sub-folders. Click the folder to expand it and click it again to fold it. A sub-folder (for example **Walls** under **Drawings**) is opened like any other folder."
           },
           {
-            "term": "Download File and Print File",
-            "definition": "Icons on each row that download the record as a file or print it."
+            "term": "Search (folders)",
+            "definition": "The search box above the folder list finds a folder by name."
+          },
+          {
+            "term": "Search (documents)",
+            "definition": "The search box above the table finds a document in the open folder."
+          },
+          {
+            "term": "Start date - End date",
+            "definition": "A date-range box with a calendar icon at the top right. Pick a range to show only documents added in those dates."
+          },
+          {
+            "term": "Document table",
+            "definition": "Columns: **Tree Version** (the project tree the document belongs to), **Name** (the document's own name, such as a work inspection request number), **Description**, **Added On** (date and time it was filed) and **Actions**."
+          },
+          {
+            "term": "There is no data in this folder",
+            "definition": "Shown in the right panel when the folder you opened holds no documents."
+          },
+          {
+            "term": "Download File",
+            "definition": "First icon in **Actions**. Downloads the document."
+          },
+          {
+            "term": "Print File",
+            "definition": "Second icon in **Actions**. Prints the document."
           },
           {
             "term": "Access Logs",
-            "definition": "The history icon. It opens an **Access Logs** dialog listing who opened the record: **S.No.**, **Name**, **Accessed On**, **User IP**, **Operating System** and **Browser**."
+            "definition": "Third icon (clock with arrow) in **Actions**. Opens an **Access Logs** window with the columns **S.No.**, **Name**, **Accessed On**, **User IP**, **Operating System** and **Browser**, listing who opened the document. It reads **No Data Available** if nobody has.",
+            "images": [
+              {
+                "src": "assets/product/document-repository/002.jpg",
+                "caption": "The Access Logs window"
+              }
+            ]
           },
           {
             "term": "Email Threads",
-            "definition": "The email icon. It opens an **Email Threads** dialog that lists email conversations tied to the record. The dialog is a view of conversations, not a send form."
-          },
-          {
-            "term": "Tree Version",
-            "definition": "The column naming the plant the record belongs to. It is the same plant list as **Project Setup → Works** and the plant selector in **Field Works**."
+            "definition": "Fourth icon (envelope) in **Actions**. Opens an **Email Threads** window with the email conversations about the document, or **No Conversation has been started**."
           }
         ],
         "procedures": [
           {
-            "title": "Find a record",
+            "title": "Find a document",
             "steps": [
-              "Go to **Document Repository**.",
-              "Click a category in the left pane; expand it first if it has an arrow (for example **Drawings**).",
-              "Optionally set **Start date** and **End date** or type in the right-hand search box.",
-              "Read the row, or use the icons in **Actions**."
-            ],
-            "note": "If the table says \"There is no data in this folder\", nothing from the source module has reached the archive yet. See the Overview section."
+              "Open **Document Repository** in the project menu.",
+              "Click the folder that matches the document type; click a folder with a down arrow first to see its sub-folders.",
+              "Type in the table **Search**, or pick a **Start date - End date** range.",
+              "Use the icons under **Actions** to download, print or check the access of the document."
+            ]
           },
           {
-            "title": "See who opened a record or follow its email thread",
+            "title": "See who has opened a document",
             "steps": [
-              "Select the category and find the record.",
-              "Click the history icon (**Access Logs**) to see who accessed it, from which IP address, operating system and browser.",
-              "Click the email icon (**Email Threads**) to see conversations about the record."
+              "Open the folder that holds the document.",
+              "Click the **Access Logs** icon on its row.",
+              "Read the window, then click the cross at the top right to close it."
+            ],
+            "images": [
+              {
+                "src": "assets/product/document-repository/002.jpg",
+                "caption": "Access Logs",
+                "step": 2
+              }
             ]
           }
         ]
@@ -30888,8 +31242,7 @@ const MODULES = [
       "Select a category (or sub-category) in the left pane to filter the record table on the right."
     ],
     "sections": [
-      "Overview",
-      "Records"
+      "Document Repository"
     ]
   },
   {
@@ -31199,76 +31552,200 @@ const MODULES = [
     "narrative": [
       {
         "heading": "Groups Permission",
-        "intro": "<p>Groups Permission is where a PM or Module Admin creates access groups for the project, sets what each group can do, and chooses who is in it. Each group is a card with a **Permissions** button and a **Users** button.</p><p>The tab has **Add User Group**, **Fetch Templates** and a search box. On Arena Steel Plant - Phase 1 there are two groups: **PROJECT POC ADMIN** (31 users, 827 permission boxes granted) and **Field Users** (no users, nothing granted).</p>",
+        "intro": "<p><strong>Groups Permission</strong> is the first tab of <strong>Users and Permissions</strong> in the project menu. It lists the user groups of this project; each group has a set of permissions and a list of users, and the users get whatever their groups allow.</p>",
+        "images": [
+          {
+            "src": "assets/product/users-and-permissions/001.jpg",
+            "caption": "Groups Permission tab with two group cards"
+          }
+        ],
         "definitions": [
           {
+            "term": "Breadcrumb",
+            "definition": "Shows **Permission Schema > Users Groups**. The round back arrow on the left returns to the previous page."
+          },
+          {
+            "term": "Tabs",
+            "definition": "**Groups Permission** (this screen) and **User Permission**, which shows the access of one user at a time."
+          },
+          {
+            "term": "+ Add User Group",
+            "definition": "Opens an empty group page with an **Enter Group Name** box and the full permission table, so you can build a new group."
+          },
+          {
+            "term": "+ Fetch Templates",
+            "definition": "Opens **Fetch Standard Templates**, a checklist of ready-made groups (for example **Field Users**, **Operations Team**, **Quality Admins**, **IT Admin**, **Project Safety Coordinator**, **Project Quality Coordinator**, **PROJECT POC ADMIN**) with a **Select All** box. Tick the ones you want and click **Submit** to add them to this project with their standard permissions.",
+            "images": [
+              {
+                "src": "assets/product/users-and-permissions/004.jpg",
+                "caption": "The Fetch Standard Templates dialog"
+              }
+            ]
+          },
+          {
+            "term": "Search by group name",
+            "definition": "Type part of a group name and the cards narrow to the matching groups."
+          },
+          {
             "term": "Group card",
-            "definition": "Shows the group name, a link icon with the name of the template or global group it was linked to, a type chip (**Restricted Users** on both groups here), a three-dot menu (**Edit**, **Delete**, **Copy**) and the buttons **Permissions** and **Users**. **Edit** opens the group page with its name and description, the **Permissions** and **Users** tabs and **Save Changes**."
+            "definition": "One card per group, with the group name, a **Restricted Users** tag, and the two buttons **Permissions** and **Users**."
           },
           {
-            "term": "Permissions (the permission tree)",
-            "definition": "A table with **View**, **Create**, **Edit**, **Delete**, **Admin**, **Download**, **Print**, **Assign To** and **Roll Back** columns and a tree of rows you expand with the plus sign (419 rows). A box appears only where that kind of permission applies. The ten top rows are **My Desk**, **Project Setup**, **Notifications**, **Owners**, **Project Settings**, **Field Works**, **Permissions**, **My Calendar**, **Data Analytics & Insights** and **Document Management Repository**, which match the project menu. There is no row for **Follow Up Actions**."
+            "term": "Permissions button",
+            "definition": "Opens the group page on its **Permissions** tab, where you tick what the group may do."
           },
           {
-            "term": "How a permission row maps to a screen",
-            "definition": "Rows follow the screens. Under **Field Works** there is a row for each card (for example **Work Logs** with **Project Worklogs**, **Submitted Work Logs**, **Approve Work Logs** and **Detailed Work Logs**; **Construction Forms** with **Project Construction Forms**, **RFI Quantity** and **RFI Upload Excel**; **Cost** with **Transactions**, **Change Order** and **Transfers**; **Quality Level 1**, **Quality Level 2**, **Punch Lists**, **Restraints**, **Daily Safety Issues**, **Meeting Minutes**, **Workorder Invoices** and more). Under **Project Setup** there is a row for each setup area (**Project Works**, **Roster**, **PhaseCode**, **Estimate**, **Tasks**, **Drawing Register**, **Drawing Master**, **Forms**, **Workorder**, **Document Management** and others). **Notifications** has **Project Notification Schema**, **Owners** has **Project Owners**, **My Calendar** has **Calendar**, **Data Analytics & Insights** has **Configurable Analytics**, **Standard Analytics** and **Standard Reports**, and **Permissions** has **Group Permission** and **User Permissions**."
+            "term": "Users button",
+            "definition": "Opens the group page on its **Users** tab, which lists the people in the group."
           },
           {
-            "term": "Document Management Repository permission",
-            "definition": "The row for **Document Repository** has only three boxes, **View**, **Download** and **Print**, which match the Download File and Print File icons on the repository table."
-          },
-          {
-            "term": "Users tab of a group",
-            "definition": "Lists the group's members with **S.No.**, **Profile Photo**, **Name**, **Roster ID**, **Email ID**, **Username**, **Groups** and **Actions** (delete), with **Add Users**, search, paging and **Manage Columns**. **PROJECT POC ADMIN** lists 31 users (one marked Inactive); **Field Users** says \"No Data Available\"."
-          },
-          {
-            "term": "Where the Add Users list comes from",
-            "definition": "The **Add Users** dialog lists the project's people who are not yet in the group. For **PROJECT POC ADMIN** it offered only two: Chandra Shekar (DIR001) and System Admin (001). Together with the 31 members that is 33, the system users on **Project Setup → People → Roster**, whose source is **Global Data → Users & Permissions → Global Rosters**. So a person must be a project roster system user before they can be put in a group."
-          },
-          {
-            "term": "Fetch Templates",
-            "definition": "Opens **Fetch Standard Templates** with a **Select All** option and seven standard templates: **Field Users**, **Operations Team**, **Quality Admins**, **IT Admin**, **Project Safety Coordinator**, **Project Quality Coordinator** and **PROJECT POC ADMIN**, with **Cancel** and **Submit**. Only **PROJECT POC ADMIN** also exists in **Global Data → Users & Permissions → Global Permission** (31 global groups such as Super Admin, Project Manager, Foreman and Supervisior); the other six are Arena standard templates, so the template list is not simply the Global Data group list."
-          },
-          {
-            "term": "Add User Group",
-            "definition": "Opens a new group page with a name, a description, the **Permissions** and **Users** tabs and **Save Changes**, so a group can be built from scratch instead of from a template."
-          },
-          {
-            "term": "Group type chip",
-            "definition": "The chip on each card (for example **Restricted Users**)."
+            "term": "Three-dot menu",
+            "definition": "At the top right of each card. **Edit** opens the group page, **Delete** removes the group, and **Copy** makes a copy of the group to use as a starting point."
           }
         ],
         "procedures": [
           {
-            "title": "Create a new permission group for a project",
+            "title": "Add standard groups to the project",
             "steps": [
-              "Go to **Users and Permissions → Groups Permission**.",
-              "Click **Fetch Templates**, tick the standard templates you want and click **Submit**, or click **Add User Group** and enter a name and description.",
-              "Click **Permissions** on the group and tick the boxes it needs (use the plus sign to open each module); use the **Roll Back** column only where that right is needed.",
-              "Click **Save Changes**.",
-              "Click **Users**, then **Add Users**, tick the people and click **Submit**."
+              "Open **Users and Permissions** in the project menu.",
+              "Click **+ Fetch Templates**.",
+              "Tick the groups you want, or **Select All**.",
+              "Click **Submit**. Click **Cancel** to close the dialog without adding anything."
             ],
-            "note": "Only people already on the project roster appear in Add Users.",
             "images": [
               {
-                "src": "assets/notion/permissions/002.jpg",
-                "caption": "User Group, to add a named group",
+                "src": "assets/product/users-and-permissions/004.jpg",
+                "caption": "Choosing standard groups",
+                "step": 3
+              }
+            ]
+          },
+          {
+            "title": "Create your own group",
+            "steps": [
+              "Click **+ Add User Group**.",
+              "Type the name in **Enter Group Name**.",
+              "On the **Permissions** tab, open the sections you need and tick the boxes (see the next section).",
+              "Click **Save Changes**, then use the **Users** tab to add people."
+            ]
+          },
+          {
+            "title": "Open a group to change it",
+            "steps": [
+              "Click **Permissions** or **Users** on the group card, or choose **Edit** in its three-dot menu.",
+              "Make the change on the group page and click **Save Changes**."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Group Permissions Tab",
+        "intro": "<p>Opening a group shows its name at the top and two tabs, <strong>Permissions</strong> and <strong>Users</strong>. The <strong>Permissions</strong> tab is a table of every part of the project and what the group may do in it.</p>",
+        "images": [
+          {
+            "src": "assets/product/users-and-permissions/002.jpg",
+            "caption": "The Permissions tab of a group"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Group name",
+            "definition": "The name sits above the tabs. Click the pencil next to it to rename the group."
+          },
+          {
+            "term": "Search by Permission",
+            "definition": "Type a word to find a section or row in the table."
+          },
+          {
+            "term": "Action columns",
+            "definition": "**View**, **Create**, **Edit**, **Delete**, **Admin**, **Download**, **Print**, **Assign To** and **Roll Back**. A ticked box means the group has that action on that row. Greyed columns are not available for that row."
+          },
+          {
+            "term": "Sections (+ / -)",
+            "definition": "The main sections are **My Desk**, **Project Setup**, **Notifications**, **Owners**, **Project Settings**, **Field Works**, **Permissions**, **My Calendar**, **Data Analytics & Insights** and **Document Management Repository**. Click the plus to open a section and the minus to close it. Most sections start with a **Master Permission** row that applies to everything under it."
+          },
+          {
+            "term": "My Desk rows",
+            "definition": "**Master Permission**, **Dashboard**, **Actions**, **Pending Actions** and **Dashboard Namingframework**."
+          },
+          {
+            "term": "Project Setup rows",
+            "definition": "One row per setup area, such as **BIM**, **Document Management**, **Drawing Register**, **Drawing Master**, **Estimate**, **Forms**, **PhaseCode**, **Productivity Setup**, **Roster**, **Tasks**, **Work Schedule** and **Workorder**. Each can be opened with its plus for finer rows."
+          },
+          {
+            "term": "Other sections",
+            "definition": "**Owners** has **Project Owners**; **Notifications** has **Project Notification Schema**; **Project Settings** has **Project Settings**, **Project Phase Code Settings**, **Custom Resources Settings**, **Cost** and **Show Only User Preferences Setting's Tab**; **Permissions** has **Group Permission** and **User Permissions**; **My Calendar** has **Calendar**; **Data Analytics & Insights** has **Standard Analytics**, **Configurable Analytics** and **Standard Reports**; **Document Management Repository** has one row of the same name. **Field Works** has a row for each log, form and tracker in Field Works (for example **Work Logs**, **Manpower Logs**, **Punch Lists**, **Time Management**, **Procurement**)."
+          },
+          {
+            "term": "Save Changes",
+            "definition": "At the bottom right. Saves the ticks you made; nothing changes for the group until you click it."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Change what a group can do",
+            "steps": [
+              "Open the group from **Groups Permission** and stay on the **Permissions** tab.",
+              "Click the plus next to a section to open it. Use **Search by Permission** to jump to a row.",
+              "Tick or untick **View**, **Create**, **Edit**, **Delete** and the other boxes on the row, or on **Master Permission** to cover the whole section.",
+              "Click **Save Changes**."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Group Users",
+        "intro": "<p>The <strong>Users</strong> tab of a group lists the people who belong to it. Everyone here gets the permissions set on the group's <strong>Permissions</strong> tab.</p>",
+        "images": [
+          {
+            "src": "assets/product/users-and-permissions/003.jpg",
+            "caption": "Manage Columns dialog on the group's Users tab"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "+ Add Users",
+            "definition": "Opens **Add Users**: a **Search Profiles** box and a checklist of project users who are not yet in this group, with **Select All**. Tick people and click **Submit**; **Cancel** closes it."
+          },
+          {
+            "term": "Search Profiles",
+            "definition": "Type a name to narrow the table of group members."
+          },
+          {
+            "term": "Table columns",
+            "definition": "**S.No.**, **Profile Photo**, **Name**, **Roster ID** (a green tick means the user is linked to the roster), **Email ID**, **Username**, **Groups** (how many groups the user is in) and **Actions** (a red bin icon on each row)."
+          },
+          {
+            "term": "Paging (1 to 31 of 31)",
+            "definition": "Shows which rows you are looking at and the total, with arrows to move between pages."
+          },
+          {
+            "term": "Manage Columns",
+            "definition": "Opens a dialog with **Column Options** (tick the columns to show, or **Select All**, with a search box) and **Column Arrangement** (drag to reorder, or click the cross to remove). **Apply** keeps it, **Reset to Default** restores the original, **Cancel** closes it. The small disk icon next to it saves the layout."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Add users to a group",
+            "steps": [
+              "Open the group and click the **Users** tab.",
+              "Click **+ Add Users**.",
+              "Tick the people to add, or **Select All**.",
+              "Click **Submit**."
+            ]
+          },
+          {
+            "title": "Choose which columns the table shows",
+            "steps": [
+              "Click **Manage Columns**.",
+              "Tick or untick columns under **Column Options** and drag them in **Column Arrangement**.",
+              "Click **Apply**."
+            ],
+            "images": [
+              {
+                "src": "assets/product/users-and-permissions/003.jpg",
+                "caption": "Manage Columns",
                 "step": 2
-              },
-              {
-                "src": "assets/notion/permissions/005.jpg",
-                "caption": "The Permissions button on a group",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/permissions/006.jpg",
-                "caption": "Roll Back on, then the rights for each module",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/permissions/007.jpg",
-                "caption": "The Users button, to add members to the group",
-                "step": 4
               }
             ]
           }
@@ -31276,42 +31753,32 @@ const MODULES = [
       },
       {
         "heading": "User Permission",
-        "intro": "<p>User Permission is where a PM or Module Admin checks one person's access. Pick a user in the list on the left and the panel on the right shows **Basic Details**, **Groups** and **Permissions**.</p><p>The list has 32 people, each with name and email, and a search box. They are the project's active system users; the inactive user who still sits in **PROJECT POC ADMIN** is not listed.</p>",
+        "intro": "<p>The <strong>User Permission</strong> tab shows the access of one person at a time: who they are, which groups they are in and the permissions that result.</p>",
         "definitions": [
           {
+            "term": "Users list",
+            "definition": "On the left, every user of the project with name and email, and a **Search Profiles** box. Click a person to load them on the right. The round arrow beside the list collapses it."
+          },
+          {
             "term": "Basic Details",
-            "definition": "**Profile Photo**, **Name**, **Employee ID**, **Email Address**, **Username** and **No. of Groups**. For example Dipanjan Kundu: Employee ID 2900, username Dipanjan_Kundu, 1 group. The values come from the person's Global Data user and roster record."
+            "definition": "Click to open: **Profile Photo**, **Name**, **Employee ID**, **Email Address**, **Username** and **No. of Groups**."
           },
           {
             "term": "Groups",
-            "definition": "One card per group the person is in (Dipanjan Kundu: **PROJECT POC ADMIN**). A person in no group shows \"No Groups were assigned\"."
+            "definition": "Click to open: the names of the groups this user belongs to."
           },
           {
             "term": "Permissions",
-            "definition": "The same permission tree as a group, for this person. Boxes granted through their groups are ticked and locked (Dipanjan Kundu shows 827, exactly what **PROJECT POC ADMIN** grants); the other boxes are unticked and can be changed here, with **Save Changes**. So a person's access is the sum of their groups plus anything added for them personally."
-          },
-          {
-            "term": "Where users come from",
-            "definition": "Accounts and roster entries are created in **Global Data → Users & Permissions** (**User Accounts** and **Global Rosters**). A person reaches this project through **Project Setup → People → Roster**; only roster system users can then be added to groups here. Adding someone to the roster does not give them any access until they are in a group."
+            "definition": "Click to open: the same permission table as a group (**View**, **Create**, **Edit**, **Delete**, **Admin**, **Download**, **Print**, **Assign To**, **Roll Back**) with the sections collapsed, showing what this user ends up with."
           }
         ],
         "procedures": [
           {
-            "title": "Look up what a specific user can access on a project",
+            "title": "Check what a user can do",
             "steps": [
-              "Go to **Users and Permissions** and open **User Permission**.",
-              "Search or pick the person in the list on the left.",
-              "Read **Basic Details**, then **Groups** to see which groups give them access.",
-              "Open **Permissions**, expand a module with the plus sign and read which boxes are ticked (ticked and locked = from a group)."
-            ]
-          },
-          {
-            "title": "Find out why someone cannot open a screen",
-            "steps": [
-              "Open **User Permission** and select the person.",
-              "In **Groups**, check they are in a group; if it says \"No Groups were assigned\", add them in **Groups Permission → Users → Add Users**.",
-              "In **Permissions**, find the row for the screen (for example **Field Works → Work Logs**) and check **View**.",
-              "If the person is not in the list, add them to the project roster first in **Project Setup → People**."
+              "Open **Users and Permissions** and click **User Permission**.",
+              "Find the person with **Search Profiles** and click them.",
+              "Open **Groups** to see their groups and **Permissions** to see their access."
             ]
           }
         ]
@@ -31329,6 +31796,8 @@ const MODULES = [
     ],
     "sections": [
       "Groups Permission",
+      "Group Permissions Tab",
+      "Group Users",
       "User Permission"
     ]
   },
@@ -31339,88 +31808,89 @@ const MODULES = [
     "narrative": [
       {
         "heading": "Owners",
-        "intro": "<p>Owners is where a PM or Module Admin registers the client or developer-side people who should follow the project. It has a **Register Owner** button, a search box and the list of owners already registered.</p><p>Each owner is a person, not a company: the form asks for an **Owner ID**, first and last name, a **Username**, an **Email** and signature **Initials**. The companies behind them live in **Global Data → Owners**. On Arena Steel Plant - Phase 1 the list is empty.</p>",
+        "intro": "<p><strong>Owners</strong> is where the client or owner side of a project is registered. Each owner added here becomes a person of the project, so approved documents can carry their signature.</p>",
+        "images": [
+          {
+            "src": "assets/product/owners/001.jpg",
+            "caption": "The Owners screen (no owner registered yet)"
+          }
+        ],
         "definitions": [
           {
+            "term": "Owners list",
+            "definition": "The large panel under the toolbar lists the owners registered for this project. It is empty until the first owner is registered."
+          },
+          {
             "term": "Register Owner",
-            "definition": "Opens **Provide Owners Details**: **Upload Photo**; **Owner ID***, **First Name***, **Last Name***, **Username***, **Phone Number** (country code, number and extension; the code defaults to +91 (India)), **Email***, and **Sign Label** with **Initials*** (the name that represents the owner's signature and is shown when documents are approved). Buttons: **Close**, **Notify User** (inactive until the form is valid) and **Submit**."
+            "definition": "Opens the **Provide Owners Details** form to add an owner to this project."
           },
           {
             "term": "Search",
-            "definition": "The box above the list finds a registered owner by name or ID; with an empty list there is nothing to search."
-          },
-          {
-            "term": "Project owner versus Global Data owner",
-            "definition": "A **Global Data → Owners** record is an organisation (**Owner Name**, addresses, tax codes, linked locations) that you pick in the **Owner** dropdown when a project is created. A record here is an individual person registered on this project. The two lists are separate: this project has no owner selected (its **Owner Representative** is blank on **Project Setup → Works**) and no registered owner people."
-          },
-          {
-            "term": "Permission",
-            "definition": "The **Owners → Project Owners** row in **Users and Permissions** has **View**, **Create**, **Edit** and **Delete** boxes; it decides who can see and register owners."
+            "definition": "Type to narrow the owners list."
           }
         ],
         "procedures": [
           {
-            "title": "Register a new project owner",
+            "title": "Register an owner",
             "steps": [
-              "Go to **Owners** and click **Register Owner**.",
-              "In **Provide Owners Details** enter **Owner ID**, **First Name**, **Last Name**, **Username**, **Email** and **Initials**; add a photo and phone number if you have them.",
-              "Click **Submit** (or **Notify User** once it becomes active) to create the owner."
+              "Open **Owners** in the project menu and click **Register Owner**.",
+              "Optionally click **Upload Photo** to add a picture.",
+              "Fill in **Owner ID**, **First Name**, **Last Name**, **Username** and **Email**. These are required (red star).",
+              "Optionally enter the **Phone Number**: pick the country code, then the number or landline, then the extension.",
+              "Choose a **Sign Label** and fill in what it asks for (see **Provide Owners Details**).",
+              "Click **Submit**. **Close** leaves without saving."
             ],
             "images": [
               {
-                "src": "assets/notion/lead-management-owners/001.jpg",
-                "caption": "Register Owner, which opens the owner dialog",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/lead-management-owners/007.jpg",
-                "caption": "Preview, then Submit to create the owner",
+                "src": "assets/product/owners/002.jpg",
+                "caption": "The Provide Owners Details form",
                 "step": 3
-              }
-            ]
-          },
-          {
-            "title": "Find an already-registered owner",
-            "steps": [
-              "Go to **Owners**.",
-              "Type in the search box above the list to find the owner by ID or name."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/lead-management-owners/009.jpg",
-                "caption": "Search, by owner ID or name",
-                "step": 2
               }
             ]
           }
         ]
       },
       {
-        "heading": "Owner Dashboard",
-        "intro": "<p>Registering owners is a PM or Module Admin task. This section covers who can do it and which project settings decide what owners see.</p><p>The **Owner Dashboard** page in **Project Settings** lists the **Standard Analytics** dashboards you can show to owners, each as a checkbox. On Arena Steel Plant - Phase 1 every box is unticked.</p>",
-        "definitions": [
+        "heading": "Provide Owners Details",
+        "intro": "<p>The <strong>Provide Owners Details</strong> form opens when you click <strong>Register Owner</strong>. It collects the owner's identity and how their signature appears on approved documents.</p>",
+        "images": [
           {
-            "term": "Owner Dashboard (Project Settings)",
-            "definition": "A page titled **Owner Dashboard** (\"All related settings for owners to view key Project insights\") with two tabs, **Standard Analytics** and **Standard Reports**. Under **Standard Analytics** you pick a dashboard, then tick the views to show: **Construction Progress** (Project Activity Analysis, Project Drill Down, Project Elements, Work Packages, Locations Type, Locations Type Grids, Work Packages Grids, Quality And Documents, Qualities Dashboard, Work Milestones), **Quality Progress** (Project Drill Down, Project Elements, Work Packages, Locations Type, Quality Status, Locations Type Grids, Work Packages Grids, Quality And Documents, Work Milestones), **Cost** (Cost Plan Forecast, Cost Activity) and **Contractors Performance** (Contractor Performance). **Standard Reports** lists nothing."
-          },
-          {
-            "term": "Where the Owner Dashboard options come from",
-            "definition": "The options are the left-menu views of **Data Analytics & Insights → Standard Analytics** (Construction Progress, Quality Progress, Cost, Contractors Performance), under the same names. Ticking one is how a view is offered to owners, so owners see the same dashboards you see, limited to what is ticked. How an owner signs in and opens the dashboard was not visible without a registered owner."
-          },
-          {
-            "term": "Where owner details show up",
-            "definition": "The **Initials** entered at registration are what appear as the owner's signature when documents are approved. The project's own owner-side fields (**Owner Representative**, **CSE / PMC**, **Project Type**, **Funding Agency**, **Implementing Agency**) are on **Project Setup → Works**, and **Project Type** and **Funding Agency** options come from **Global Data → Settings → Project Form**."
+            "src": "assets/product/owners/002.jpg",
+            "caption": "The Provide Owners Details form"
           }
         ],
-        "procedures": [
+        "definitions": [
           {
-            "title": "Choose what owners can see",
-            "steps": [
-              "Go to **Project Settings → Owner Dashboard**.",
-              "Open **Standard Analytics** and pick a dashboard (**Construction Progress**, **Quality Progress**, **Cost** or **Contractors Performance**).",
-              "Tick the views owners should see.",
-              "Register the owner in **Owners → Register Owner** if they are not yet on the project."
-            ]
+            "term": "Upload Photo",
+            "definition": "Round camera button at the top to add the owner's picture."
+          },
+          {
+            "term": "Owner ID*",
+            "definition": "The identifier you give this owner. Required."
+          },
+          {
+            "term": "First Name* / Last Name*",
+            "definition": "The owner's name. Both required."
+          },
+          {
+            "term": "Username*",
+            "definition": "The name the owner is known by in Arena. Required."
+          },
+          {
+            "term": "Phone Number",
+            "definition": "Three boxes: a country code list (starts at **+91 (India)**), the phone or landline number, and an extension."
+          },
+          {
+            "term": "Email*",
+            "definition": "The owner's email address. Required."
+          },
+          {
+            "term": "Sign Label",
+            "definition": "Chooses how the owner's signature is shown on approved documents. **Initials** lets you type initials or a name, and shows it as the signature. **Sign** lets you draw and save a signature. **Upload** lets you upload a scanned signature image."
+          },
+          {
+            "term": "Initials*",
+            "definition": "Shown when **Sign Label** is **Initials**. Enter the name or initials that stand for the owner's digital signature; they are displayed when documents are approved."
           }
         ]
       }
@@ -31437,7 +31907,7 @@ const MODULES = [
     ],
     "sections": [
       "Owners",
-      "Owner Dashboard"
+      "Provide Owners Details"
     ]
   },
   {
