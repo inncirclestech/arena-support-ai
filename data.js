@@ -38844,1455 +38844,727 @@ const MODULES = [
     "narrative": [
       {
         "heading": "Overview",
-        "intro": "<p>Time Management turns the hours that people and crews work into approved timesheets, payroll exports and labor reports. A <strong>Module Admin</strong> (or <strong>Super Admin</strong>) sets the rules once; <strong>Field Users</strong> log hours, <strong>PMs</strong> and other approvers review them, and the results show up in Timesheet Logs, the Dashboard and the Data Summary.</p><p>From <strong>Home</strong>, click the <strong>Time Management</strong> tile. The tabs on the left are <strong>Dashboard</strong>, <strong>My Crew Timesheet</strong>, <strong>My Timesheet</strong>, <strong>Timesheet Logs</strong>, <strong>Issues</strong>, <strong>Timesheet Data Summary</strong>, <strong>Reconciliation</strong> and <strong>Settings</strong>. The module opens on My Crew Timesheet.</p>",
+        "intro": "<p><strong>Time Management</strong> is where people record the hours they work, send those hours for approval, and review them by person, crew, phase code, project or work order. From <strong>Home</strong>, open the <strong>Time Management</strong> tile; you land on <strong>My Crew Timesheet</strong>.</p>",
         "definitions": [
           {
-            "term": "Who does what",
-            "definition": "**Module Admin / Super Admin** builds workflows, modes, earning codes and templates in **Settings** and keeps the master lists in **Global Data**. **PM / Module Manager** maps phase codes and crews to their project in **Project Setup** and **Project Settings**. **Field User** (foreman, engineer, crew member) logs hours. **Approver** (named in the workflow) approves or rejects. Reconcilers check logs against gate data."
+            "term": "Who uses it",
+            "definition": "Anyone who logs time uses **My Timesheet**; supervisors and foremen who log for a crew use **My Crew Timesheet**. Approvers are the users or roles placed on levels of an approval workflow under **Settings**. Access is controlled by user groups under **Settings**, **Timesheet Settings**, **Users And Permissions**, where each screen has View, Create, Edit, Delete and other switches."
           },
           {
-            "term": "Where Time Management data comes from",
-            "definition": "**People:** the Roster drop-down lists the crew members first (tagged **Crew**), then everyone else in **Global Data → Users & Permissions → Global Rosters** (tagged **Global**). **Crews:** **Global Data → Crews** for Company and GL Codes logs; the project's **Project Setup → People → Project Crews** for Project logs. **Projects, work orders, GL codes:** the Projects list, **Global Data → Work Orders** and **Global Data → UOM, Phasecode & GL Codes → GL Codes**. **Phase codes:** see \"Phase Codes\". **Earning columns (ST, OT...):** the template's earning codes, which come from **Global Data → Settings → Earnings Codes**. **Craft and Class:** the employee's Global Roster record. **Clock-in data:** **Inn Clock AI**, connected in **Global Data → Marketplace → Inn Clock Consent**."
+            "term": "Before you start",
+            "definition": "Under **Settings** set up: a **Timesheet Mode** (Daily, Weekly by day or Weekly) for each user and crew, the **Earnings Codes** (for example regular pay and over time pay), at least one **Timesheet Template**, and an approval workflow assigned in **Timesheet Workflow**. Phase codes come from the project setup. Without a mode, **My Crew Timesheet** shows the message that a shift type must be selected in settings."
           },
           {
-            "term": "Where Time Management data goes",
-            "definition": "Submitted logs go through the approval workflow set in **Settings → Timesheet Workflow**. Rejected logs raise an item in **Issues**. Logs then feed the **Dashboard** (Total Hours Worked, Total Labor Cost), the **Timesheet Data Summary** (Submitted or Approved toggle) and the payroll **Export** formats on **Timesheet Logs**. **Payroll Locking** closes a pay period; it also applies to **Field Works** productivity logs. The **Work Order** module has its own Timesheets tabs that use the same screens."
-          },
-          {
-            "term": "Timesheet Workflow",
-            "definition": "The approval path for timesheets. You create the levels under **Settings → Timesheet Workflow → Create Workflow** and give it to people or crews under **Assign Workflow**. A crew cannot submit until a workflow is assigned."
-          },
-          {
-            "term": "Timesheet Mode",
-            "definition": "How often a person or crew logs time: **Daily**, **Weekly by day** or **Weekly**. It also decides which templates they can pick."
-          },
-          {
-            "term": "Earning Code",
-            "definition": "A pay category (for example 1 Regular pay, 2 Over Time pay, 31 PerDIEM) with a Data Type of **HOURS** or **AMOUNT** and flags for **Payroll**, **Project** and **Split Header**. The list is shared with **Global Data → Settings → Earnings Codes**."
-          },
-          {
-            "term": "Payroll Locking",
-            "definition": "A cut-off that stops edits once a pay period closes: **Daily**, **Weekly** or **Monthly** (Start of The Month, End of The Month or Custom), with a **Time** and a **Buffer Time (In Days)**. The page says it applies to time management and productivity logs."
+            "term": "The screens",
+            "definition": "**Dashboard** shows total hours and cost for a date range. **My Crew Timesheet** is where a supervisor logs hours for a crew. **My Timesheet** is where you log your own hours. **Timesheet Logs** lists saved and submitted timesheets. **Issues** lists issues raised on timesheets. **Timesheet Data Summary** totals hours and cost by person, crew, phase code, project, work order, earnings code or GL code. **Reconciliation** compares timesheet hours with gate in and gate out logs. **Settings** holds workflows, modes, earnings codes, templates, payroll locking, excluded projects and permissions."
           }
         ],
         "procedures": [
           {
-            "title": "Set Time Management up in the right order",
+            "title": "How the pieces fit",
             "steps": [
-              "In **Global Data**, check that **Crews**, **Global Rosters** (with Craft, Class and Default Indirect Phase Code), **Earnings Codes**, **Work Orders** and **GL Codes** exist.",
-              "In **Time Management → Settings → Timesheet Workflow**, create an approval workflow and assign it to users and crews.",
-              "In **Settings → Timesheet Settings → Timesheet Mode**, set Daily, Weekly by day or Weekly for each user and crew.",
-              "In **Settings → Timesheet Template**, check the template has the earning codes you need.",
-              "In each project, tick **Timesheet Management** on the phase codes field staff may use (**Project Setup → Phase Codes**) and add the project's crews (**Project Setup → People → Project Crews**).",
-              "Set **Payroll Locking**, then ask Field Users to log hours."
-            ]
-          },
-          {
-            "title": "Trace where a timesheet drop-down value comes from",
-            "steps": [
-              "Note which drop-down looks wrong (Roster, Crew, Projects, Phase Code or Template) and which **Log Level Category** is chosen.",
-              "Compare it with the source list named in \"Where Time Management data comes from\" (for example Global Data → Crews for a crew).",
-              "For a phase code, open \"Phase Codes\" and follow the checks there.",
-              "If the source list is right but the drop-down is not, check the project selected at the top and the Timesheet Mode of the person or crew."
+              "Open **Settings**, **Timesheet Settings** and set the **Timesheet Mode**, **Earnings Codes** and **Timesheet Template**.",
+              "Open **Settings**, **Timesheet Workflow**, create an approval workflow with levels, then assign it to users or crews in **Assign Workflow**.",
+              "Open **My Timesheet** (or **My Crew Timesheet**), add rows with a phase code and enter the hours.",
+              "Click **Save as Draft** to keep working, or **Submit** to send the log for approval.",
+              "Follow submitted logs in **Timesheet Logs** and any problems in **Issues**.",
+              "Review totals in **Dashboard** and **Timesheet Data Summary**.",
+              "Compare the hours with gate logs in **Reconciliation**."
             ]
           }
         ]
       },
       {
         "heading": "Dashboard",
-        "intro": "<p>The Dashboard shows how many hours were worked and what labor cost, so a <strong>PM</strong> or <strong>Module Admin</strong> can check a period at a glance. It is read-only.</p><p>Choose a <strong>Select Date Range</strong> and one or more entries in the <strong>Company/Projects/WO/GL Accounts</strong> drop-down. The cards <strong>Total Hours Worked</strong> and <strong>Total Labor Cost</strong>, the charts <strong>Hours by Earning Code</strong> and <strong>Cost by Earning Code</strong>, and a <strong>Detailed Breakdown</strong> table then fill in.</p>",
+        "intro": "<p>The <strong>Dashboard</strong> tab summarises the hours and labor cost recorded in timesheets for a date range, and breaks them down by project, phase code, labor code, craft and class.</p>",
+        "images": [
+          {
+            "src": "assets/product/time-management/001.jpg",
+            "caption": "The Dashboard tab"
+          }
+        ],
         "definitions": [
           {
-            "term": "Company/Projects/WO/GL Accounts filter",
-            "definition": "A multi-select with search and **Select All**. Its options are **Company**, then every project as \"code - name\", then the work-order items and GL codes that timesheet rows can use (**Equipment - Item 1**, **Service - Item 1**, **test - Test** and so on). It is the same set of choices as the Projects/Work Orders/GL Codes drop-down on a timesheet row."
+            "term": "Select Date Range",
+            "definition": "Picks the start and end date. It opens on the current week. Every card and the table below follow this range."
           },
           {
-            "term": "Hours View and Amount View",
-            "definition": "The two icons above the **Detailed Breakdown** table. **Hours View** shows hours; **Amount View** shows cost and renames the table \"Cost View\" with a **Total** column in rupees. **Manage Columns** and **Save Layout** change which columns you see."
+            "term": "Total Hours Worked",
+            "definition": "Sum of hours logged in the range, shown in hours (for example 0.00 H)."
           },
           {
-            "term": "Detailed Breakdown columns",
-            "definition": "**Project**, **Phase Code - Description**, **Labor Code - Description**, **Craft**, **Class** and **Total (HRS+amount)**. Phase code, craft and class come from what was entered on each timesheet row; the labor code is the earning code."
+            "term": "Total Labor Cost",
+            "definition": "Sum of the cost of those hours, shown in rupees."
           },
           {
-            "term": "Where this data comes from",
-            "definition": "Hours logged on **My Timesheet** and **My Crew Timesheet**. The **Timesheet Data Summary** has an explicit Submitted/Approved toggle."
+            "term": "Hours by Earning Code",
+            "definition": "Splits the total hours by earnings code, such as regular pay or over time pay. It shows **No data** when nothing is logged in the range."
+          },
+          {
+            "term": "Cost by Earning Code",
+            "definition": "The same split, in cost instead of hours."
+          },
+          {
+            "term": "Company/Projects/WO/GL Accounts",
+            "definition": "A multi-select list with **Select All**, **Company** and each project. Tick the ones you want to include in the charts and table."
+          },
+          {
+            "term": "Hours and dollar buttons",
+            "definition": "The clock button shows the table in hours; the **$** button shows it in cost. The heading changes to **Detailed Breakdown - Hours View** or the cost version."
+          },
+          {
+            "term": "Detailed Breakdown",
+            "definition": "A table with the columns **Project**, **Phase Code - Description**, **Labor Code - Description**, **Craft**, **Class** and **Total (HRS+₹)**, with a **Total** row on top."
+          },
+          {
+            "term": "Manage Columns",
+            "definition": "Opens a dialog to choose which of the five columns show and to drag them into a new order. **Reset to Default** restores the original set; **Apply** keeps your choice.",
+            "images": [
+              {
+                "src": "assets/product/time-management/003.jpg",
+                "caption": "The Manage Columns dialog"
+              }
+            ]
           }
         ],
         "procedures": [
           {
-            "title": "Check hours and labor cost for a period",
+            "title": "Change the columns of the breakdown table",
             "steps": [
-              "Open **Time Management → Dashboard**.",
-              "Pick a **Select Date Range**.",
-              "Open **Company/Projects/WO/GL Accounts** and choose what to include.",
-              "Read **Total Hours Worked**, **Total Labor Cost** and the two earning-code charts.",
-              "Use **Hours View** or **Amount View** to switch the **Detailed Breakdown** between hours and cost."
-            ]
-          }
-        ]
-      },
-      {
-        "heading": "My Timesheet",
-        "intro": "<p>My Timesheet is where one person logs their own hours against a project, work order or GL code. <strong>Field Users</strong> and anyone who logs time for themselves use it; the <strong>Timesheet Mode</strong> and the approval workflow come from <strong>Settings</strong>.</p><p>The top shows <strong>Select Log Level Category</strong>, <strong>Select Template</strong>, <strong>Manage Columns</strong> and <strong>Notes</strong>, then \"Created by\" and \"Timesheet Mode: Daily\", the date and the buttons <strong>Add</strong>, <strong>Clone Log</strong>, <strong>Default Phase Codes</strong>, <strong>Show Data Summary</strong>, <strong>Import From Innclock AI</strong>, <strong>Save as Draft</strong> and <strong>Submit</strong>.</p>",
-        "definitions": [
-          {
-            "term": "Log Level Category",
-            "definition": "**Company**, **Projects**, **Work Orders** or **GL Codes**. It decides what the hours are charged to and where the phase codes come from. With **Company** each row has a **Company/Projects/Work Orders/GL Codes** drop-down. With **Projects** a project drop-down appears at the top (it opens on the first project) and every new row is fixed to that project; the column is then called **Projects**. A GL code or work-order item row has no phase code."
-          },
-          {
-            "term": "Timesheet Mode and template",
-            "definition": "The mode (**Daily**, **Weekly By Day** or **Weekly**) is the one assigned to you in **Settings → Timesheet Mode** (or **Project Settings → Time Management → Assign Mode**). The **Select Template** list depends on the mode: Daily and Weekly By Day show their own templates, and a weekly user sees the weekly templates. The templates are built in **Settings → Timesheet Template**."
-          },
-          {
-            "term": "Craft and Class",
-            "definition": "Filled in automatically from your record in **Global Data → Users & Permissions → Global Rosters**."
-          },
-          {
-            "term": "Earning-code columns",
-            "definition": "The columns after Class (for example **1 (ST)**, **2 (OT)**, **3**) are the earning codes added to the chosen template. In the **Crew Timesheet** template they are 1 Regular pay, 2 Over Time pay and 3 Double pay; the codes themselves are the **Global Data → Settings → Earnings Codes**."
-          },
-          {
-            "term": "Default Phase Codes",
-            "definition": "Opens **Set Default Phase Code**: a searchable, A-Z sortable tick list (\"D - code - description\" for Direct, \"I - ...\" for Indirect) with **Submit**. What you tick is the short list your Phase Code drop-down offers. With category Company the list held the company's labor codes; with category Projects it held only that project's mapped codes. See \"Phase Codes\"."
-          },
-          {
-            "term": "Clone Log",
-            "definition": "Opens a list of your earlier logs, grouped by date (for example \"Timesheet Logs of 2nd February, 2026 (2)\", each marked **Draft**), with a preview that shows Created by, Mode, Template, Log Level Category and **Ball in Court**. Pick one and **Submit** to copy it into the current log; you are asked whether to append to existing data."
-          },
-          {
-            "term": "Import From Innclock AI",
-            "definition": "Pulls clock-in and clock-out records for the chosen date from **Inn Clock AI** into the log. It needs the organisation to have given consent in **Global Data → Marketplace → Inn Clock Consent**. For today or a future date it shows \"Logs for the current and future dates cannot be fetched\", so pick a past date."
-          },
-          {
-            "term": "Draft versus Submit",
-            "definition": "**Save as Draft** keeps an incomplete log (an Employee is always needed). **Submit** sends it to the first level of your approval workflow. Leaving the screen with unsaved rows asks \"Changes not saved - You have unsaved changes. Press Ok to proceed anyway.\""
-          },
-          {
-            "term": "Where this data goes",
-            "definition": "Submitted logs appear in **Timesheet Logs → My Timesheet Logs** and in the **Timesheet Data Summary**; approvers act on them there. Rejections raise an item in **Issues**."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Log your own work hours",
-            "steps": [
-              "Open **My Timesheet**. A message such as \"Timesheet Mode: Daily\" shows how you log.",
-              "Choose **Log Level Category** (**Company**, **Projects**, **Work Orders** or **GL Codes**). For Projects or Work Orders a second drop-down appears for the project or work order. Confirm the **Select Template**.",
-              "Pick the date (Daily) or a date range, depending on your mode.",
-              "Click **Add** to insert a row.",
-              "Choose the **Company/Projects/Work Orders/GL Codes** value and the **Phase Code** (see \"Phase Codes\"), then enter hours in the earning-code columns (for example **1 (ST)**, **2 (OT)**). **Craft** and **Class** fill in from your roster record.",
-              "Click **Submit** to send the log into the approval workflow, or **Save as Draft** if it is incomplete."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/my-timesheet/001.jpg",
-                "caption": "Timesheet Mode under Timesheet Settings, which must be set before logging",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/my-timesheet/002.jpg",
-                "caption": "Timesheet Workflow, where a workflow is created and assigned before logging",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/my-timesheet/003.jpg",
-                "caption": "The Company, Projects, Work Orders and GL Codes drop-downs for the hours to log",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/my-timesheet/004.jpg",
-                "caption": "Log Level Category set to Company, with a template to choose",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/my-timesheet/005.jpg",
-                "caption": "Log Level Category set to Project, with a project drop-down",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/my-timesheet/006.jpg",
-                "caption": "Log Level Category set to Work Order, with a work order drop-down",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/my-timesheet/007.jpg",
-                "caption": "Log Level Category set to GL Codes, with a template to choose",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/my-timesheet/008.jpg",
-                "caption": "My Timesheet showing the logging mode you are subscribed to",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/my-timesheet/009.jpg",
-                "caption": "The template filled in from the default set in Settings",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/my-timesheet/010.jpg",
-                "caption": "Date Range, which depends on the logging mode",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/my-timesheet/015.jpg",
-                "caption": "Add, which inserts a new row in the table",
-                "step": 4
-              },
-              {
-                "src": "assets/notion/my-timesheet/011.jpg",
-                "caption": "Default Phase Code",
-                "step": 5
-              },
-              {
-                "src": "assets/notion/my-timesheet/012.jpg",
-                "caption": "The default list of phase codes",
-                "step": 5
-              },
-              {
-                "src": "assets/notion/my-timesheet/013.jpg",
-                "caption": "Company level: phase codes from the Global Data list, narrowed by your Default Phase Codes",
-                "step": 5
-              },
-              {
-                "src": "assets/notion/my-timesheet/014.jpg",
-                "caption": "Project level: only the phase codes mapped in Project Setup",
-                "step": 5
-              },
-              {
-                "src": "assets/notion/my-timesheet/016.jpg",
-                "caption": "Company level: choosing projects, work orders or GL codes in a row",
-                "step": 5
-              },
-              {
-                "src": "assets/notion/my-timesheet/017.jpg",
-                "caption": "Project level: the column becomes Projects and fills in automatically",
-                "step": 5
-              },
-              {
-                "src": "assets/notion/my-timesheet/018.jpg",
-                "caption": "Work Order level: the column becomes Work Order Items",
-                "step": 5
-              },
-              {
-                "src": "assets/notion/my-timesheet/019.jpg",
-                "caption": "GL Code level: the phase code column becomes GL Codes",
-                "step": 5
-              },
-              {
-                "src": "assets/notion/my-timesheet/020.jpg",
-                "caption": "Daily and Weekly by Day: a separate column for the phase code",
-                "step": 5
-              },
-              {
-                "src": "assets/notion/my-timesheet/021.jpg",
-                "caption": "Weekly: phase codes sit in the header",
-                "step": 5
-              },
-              {
-                "src": "assets/notion/my-timesheet/022.jpg",
-                "caption": "Earning codes in a separate column when the template is set to Column",
-                "step": 5
-              },
-              {
-                "src": "assets/notion/my-timesheet/023.jpg",
-                "caption": "Earning codes under split time headers",
-                "step": 5
-              },
-              {
-                "src": "assets/notion/my-timesheet/025.jpg",
-                "caption": "Logging hours or amounts for the employee",
-                "step": 5
-              },
-              {
-                "src": "assets/notion/my-timesheet/038.jpg",
-                "caption": "Save as Draft",
-                "step": 6
-              },
-              {
-                "src": "assets/notion/my-timesheet/039.jpg",
-                "caption": "The summary by earning code when saving as a draft",
-                "step": 6
-              },
-              {
-                "src": "assets/notion/my-timesheet/040.jpg",
-                "caption": "Submit for Approval",
-                "step": 6
-              },
-              {
-                "src": "assets/notion/my-timesheet/041.jpg",
-                "caption": "The summary by earning code when submitting for approval",
-                "step": 6
-              }
-            ]
-          },
-          {
-            "title": "Import clock-in data from Inn Clock AI",
-            "steps": [
-              "Ask your **Super Admin** to confirm that **Global Data → Marketplace → Inn Clock Consent** is connected.",
-              "Open **My Timesheet** and choose a date in the past.",
-              "Click **Import From Innclock AI**.",
-              "Check the imported hours, then **Submit** or **Save as Draft**."
-            ]
-          },
-          {
-            "title": "Use the timesheet row tools",
-            "steps": [
-              "Click **Copy by Phase Codes**, choose one or more phase codes and copy the log to them.",
-              "Click **Duplicate** to create a new log that replicates the previous one, then change what you need.",
-              "Click **Comments** to open **Add Comments**, type your comment and click **Submit**.",
-              "Click **Notes** to add extra details about the logged hours.",
-              "Click **Delete** to remove the whole row.",
-              "Click **Clone Log** to copy an earlier log, or append it to the current log. When you submit, choose **Yes** to append the data to the existing data.",
-              "Click **Show Data Summary** to see data from previous logs for the selected date range and timesheet mode."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/my-timesheet/026.jpg",
-                "caption": "Copy by Phase Codes",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/my-timesheet/027.jpg",
-                "caption": "Choosing the phase codes to copy the log to",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/my-timesheet/028.jpg",
-                "caption": "Duplicate",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/my-timesheet/029.jpg",
-                "caption": "A duplicated log, ready to edit",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/my-timesheet/030.jpg",
-                "caption": "Comments",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/my-timesheet/031.jpg",
-                "caption": "The Add Comments dialog",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/my-timesheet/033.jpg",
-                "caption": "Notes",
-                "step": 4
-              },
-              {
-                "src": "assets/notion/my-timesheet/034.jpg",
-                "caption": "The Notes dialog",
-                "step": 4
-              },
-              {
-                "src": "assets/notion/my-timesheet/032.jpg",
-                "caption": "Delete, which removes the whole row",
-                "step": 5
-              },
-              {
-                "src": "assets/notion/my-timesheet/035.jpg",
-                "caption": "Clone Log",
-                "step": 6
-              },
-              {
-                "src": "assets/notion/my-timesheet/036.jpg",
-                "caption": "Previous logs listed in the Clone Log dialog",
-                "step": 6
-              },
-              {
-                "src": "assets/notion/my-timesheet/037.jpg",
-                "caption": "The prompt asking whether to append the data to existing data",
-                "step": 6
-              },
-              {
-                "src": "assets/notion/my-timesheet/042.jpg",
-                "caption": "Show Data Summary: data from previous logs for the date range",
-                "step": 7
-              }
+              "Open **Dashboard** and scroll to **Detailed Breakdown**.",
+              "Click **Manage Columns**.",
+              "Untick the columns you do not want, or drag a column in **Column Arrangement** to move it.",
+              "Click **Apply**."
             ]
           }
         ]
       },
       {
         "heading": "My Crew Timesheet",
-        "intro": "<p>My Crew Timesheet is where a foreman, supervisor or <strong>Field User</strong> logs the hours of a whole crew in one go. It is the landing page of Time Management.</p><p>You choose the <strong>Log Level Category</strong>, the <strong>Crew</strong> and the <strong>Template</strong>; the crew's <strong>Timesheet Mode</strong> then appears (for example \"Timesheet Mode: Daily\"). Each row is one employee, one project, work order or GL code, one phase code and the hours per earning code.</p>",
-        "definitions": [
+        "intro": "<p>The <strong>My Crew Timesheet</strong> tab is where a supervisor logs the hours of a whole crew on one timesheet. It is the tab you land on when you open <strong>Time Management</strong>.</p>",
+        "images": [
           {
-            "term": "Where the Crew list comes from",
-            "definition": "It depends on **Log Level Category**. **Company** and **GL Codes** list the crews of **Global Data → Crews**. **Projects** shows a project drop-down and lists only that project's **Project Crews** (**Project Setup → People → Project Crews**). **Work Orders** shows a work-order drop-down and lists the crews assigned to it. When the chosen project or work order has no crew the screen says \"Please create a Crew in order to continue\"."
-          },
-          {
-            "term": "Where the Roster list comes from",
-            "definition": "Each row's **Roster** drop-down lists the crew's members first, tagged **Crew**, then every other person from **Global Data → Users & Permissions → Global Rosters**, tagged **Global**, as \"ID - Name\" with a search box. For **Daily crew** the first 100 entries are its 100 rosters, matching the crew card in Global Data (2 Supervisors, 1 Foreman, 100 rosters). You can therefore log someone who is not in the crew."
-          },
-          {
-            "term": "Where the Mode and Template come from",
-            "definition": "The mode shown is the one saved for that crew in **Settings → Timesheet Mode** (**Daily crew** shows Daily, **Weekly crew** shows Weekly, **Weekly by day crew** shows Weekly By Day). The template list follows the mode: Daily and Weekly By Day offer 8 templates, Weekly offers 5 (CS Tech Weekly Template, Moore Template 1, Weekly, Weekly Template, Weekly Test Template)."
-          },
-          {
-            "term": "Grid columns",
-            "definition": "**Roster**, **Projects/Work Orders/GL Codes**, **Phase Code**, **Craft**, **Class**, the earning-code columns (**1 (ST)**, **2 (OT)**, **3**), **Total Hours** and **Actions**, with a **Total (Row level)** footer. Row actions: **Copy by Employee**, **Duplicate**, **Copy by Phase Codes**, **Notes** and **Delete**. A GL code or work-order item removes the phase code and the Duplicate icon."
-          },
-          {
-            "term": "Buttons above the grid",
-            "definition": "**Add**, **Clone Log**, **Default Phase Code**, **Show Data Summary**, **Import From Innclock AI**, **Save as Draft** and **Submit for Approval** work as on My Timesheet. **Per Diem Amount** appears for Weekly templates."
-          },
-          {
-            "term": "Where this data goes",
-            "definition": "Submitted crew logs appear under **Timesheet Logs → My Crew Timesheet Logs** for the approvers of the crew's workflow, then in the Data Summary (Crew and People tabs) and the exports."
+            "src": "assets/product/time-management/002.jpg",
+            "caption": "The My Crew Timesheet tab"
           }
         ],
-        "procedures": [
+        "definitions": [
           {
-            "title": "Log hours for an entire crew",
-            "steps": [
-              "Open **My Crew Timesheet**.",
-              "Choose **Log Level Category** (**Company**, **Projects**, **Work Orders** or **GL Codes**), then the project or work order if asked, then **Select Crew**.",
-              "Confirm **Select Template**. A line such as \"Timesheet Mode: Daily\" shows how this crew logs. Pick the date or range.",
-              "Click **Add** to add a row for an employee.",
-              "Choose the **Roster**, the **Projects/Work Orders/GL Codes** value and the **Phase Code**, then enter hours in each earning-code column. **Craft** and **Class** fill in from the employee.",
-              "Click **Submit for Approval**, or **Save as Draft** if the log is incomplete."
-            ],
-            "note": "A crew needs a Timesheet Mode and an approval workflow before it can submit. Without a mode the screen says \"Select Shift type in settings in order to create timesheet Log. To assign Shift, go to Timesheet Settings\".",
-            "images": [
-              {
-                "src": "assets/notion/my-crew-timesheet/001.jpg",
-                "caption": "The Company, Project, Work Order, GL Codes and Crew drop-downs",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet/002.jpg",
-                "caption": "Log Level Category set to Company: choose a crew and template",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet/006.jpg",
-                "caption": "My Crew Timesheet showing the logging mode of the crew",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet/007.jpg",
-                "caption": "Company level: crews come from Global Data Crews",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet/008.jpg",
-                "caption": "Project level: crews created in or added to the selected project",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet/009.jpg",
-                "caption": "Work Order level: only crews assigned to the selected work order",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet/010.jpg",
-                "caption": "GL Codes level: crews come from Global Data Crews",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet/011.jpg",
-                "caption": "The template filled in from the default set in Settings",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet/015.jpg",
-                "caption": "Date Range for the crew timesheet",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet/020.jpg",
-                "caption": "Add, which inserts a new row in the table",
-                "step": 4
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet/016.jpg",
-                "caption": "Default Phase Code",
-                "step": 5
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet/021.jpg",
-                "caption": "Roster or Employee drop-down, with Crew and Global labels",
-                "step": 5
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet/022.jpg",
-                "caption": "Craft and Class, filled in from the employee",
-                "step": 5
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet/032.jpg",
-                "caption": "Logging hours or amounts for each employee",
-                "step": 5
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet/047.jpg",
-                "caption": "Save as Draft",
-                "step": 6
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet/048.jpg",
-                "caption": "The summary for each employee when saving as a draft",
-                "step": 6
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet/049.jpg",
-                "caption": "Submit for Approval",
-                "step": 6
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet/050.jpg",
-                "caption": "The summary for each employee when submitting for approval",
-                "step": 6
-              }
-            ]
+            "term": "Select Log level Category",
+            "definition": "Chooses what the hours are booked against; it starts on **Company**."
           },
           {
-            "title": "Use the crew timesheet row tools",
-            "steps": [
-              "In Weekly mode, click **Per Diem Amount** at the top right to enter amounts for direct and indirect time.",
-              "Click **Copy by Employee**, choose the employees and copy the log to them.",
-              "Click **Copy by Phase Codes**, choose one or more phase codes and copy the log to them.",
-              "Click **Duplicate** to create a new log that replicates the previous one, then change what you need.",
-              "Click **Comments** to open **Add Comments**, type your comment and click **Submit**.",
-              "Click **Notes** to add extra details about the logged hours.",
-              "Click **Delete** to remove the whole row.",
-              "Click **Clone Log** to copy an earlier log, or append it to the current log. When you submit, choose **Yes** to append the data to the existing data.",
-              "Click **Show Data Summary** to see data from previous logs for the selected date range and timesheet mode."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/my-crew-timesheet/013.jpg",
-                "caption": "Per Diem Amount button for Weekly templates",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet/014.jpg",
-                "caption": "Entering per diem amounts",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet/033.jpg",
-                "caption": "Copy by Employee",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet/034.jpg",
-                "caption": "Choosing the employees to copy the log to",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet/035.jpg",
-                "caption": "Copy by Phase Codes",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet/036.jpg",
-                "caption": "Choosing the phase codes to copy the log to",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet/037.jpg",
-                "caption": "Duplicate",
-                "step": 4
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet/038.jpg",
-                "caption": "A duplicated log, ready to edit",
-                "step": 4
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet/039.jpg",
-                "caption": "Comments",
-                "step": 5
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet/040.jpg",
-                "caption": "The Add Comments dialog",
-                "step": 5
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet/042.jpg",
-                "caption": "Notes",
-                "step": 6
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet/043.jpg",
-                "caption": "The Notes dialog",
-                "step": 6
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet/041.jpg",
-                "caption": "Delete, which removes the whole row",
-                "step": 7
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet/044.jpg",
-                "caption": "Clone Log",
-                "step": 8
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet/045.jpg",
-                "caption": "Previous logs listed in the Clone Log dialog",
-                "step": 8
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet/046.jpg",
-                "caption": "The prompt asking whether to append the data to existing data",
-                "step": 8
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet/051.jpg",
-                "caption": "Show Data Summary: data from previous logs for the date range",
-                "step": 9
-              }
-            ]
+            "term": "Crew",
+            "definition": "Chooses the crew you are logging for. Only crews you can log for appear."
+          },
+          {
+            "term": "Select Template",
+            "definition": "Chooses the timesheet template, for example **Crew Timesheet**. The template decides which columns and earnings codes the log has."
+          },
+          {
+            "term": "Notes",
+            "definition": "Opens a side panel to write a note for the day."
+          },
+          {
+            "term": "Timesheet Settings link",
+            "definition": "When the crew has no shift type, the page shows a message and an orange **Timesheet Settings** link. Set the mode there first (see **Timesheet Mode**); the log grid appears after that."
           }
         ]
       },
       {
-        "heading": "Phase Codes",
-        "intro": "<p>This section explains why the <strong>Phase Code</strong> drop-down on a timesheet row shows some codes and not others. It matters to <strong>PMs</strong> (who map codes to their project), <strong>Module Admins</strong> and <strong>Field Users</strong> who cannot find a code.</p><p>The list depends on what the row is charged to: a project uses that project's mapped codes, Company uses a company list, and work-order items and GL codes use none. Everything below was checked in the live product.</p>",
+        "heading": "My Timesheet",
+        "intro": "<p>The <strong>My Timesheet</strong> tab is where you log your own hours for a day or a week, then save them as a draft or submit them for approval.</p>",
+        "images": [
+          {
+            "src": "assets/product/time-management/004.jpg",
+            "caption": "My Timesheet after clicking Add (a new empty row)"
+          }
+        ],
         "definitions": [
           {
-            "term": "Project chosen: the project's mapped codes",
-            "definition": "The drop-down shows the phase codes whose **Timesheet Management** box is ticked in that project's **Project Setup → Phase Codes**."
+            "term": "Select Log Level Category",
+            "definition": "Chooses what each row is booked against: **Company**, **Project**, **Work Orders** or **GL Codes**."
           },
           {
-            "term": "Project with nothing ticked: an empty list",
-            "definition": "The other 44 projects, including **Arena Steel Plant - Phase 1 (ST-01)**, offer no phase codes at all: the drop-down does not open. This is not a fault; the PM has not ticked any **Timesheet Management** boxes yet."
+            "term": "Select Template",
+            "definition": "Chooses the timesheet template. It sets the columns and the hour types in the grid."
           },
           {
-            "term": "Cost Type setting on the Phase Codes screen",
-            "definition": "The gear icon on **Project Setup → Phase Codes** opens **Settings** (\"Select the Cost Type for each category to display Phase Codes\"). **Timesheet Management** and **Equipment Management** each have their own Cost Type ticks (Material, Equipment, Labor, Unit Rate, Sub Contractor, BOQ's, Freight Charges, Fuel & Gas). In Arena Residential Project, Timesheet Management has Material, Equipment and Labor ticked. The 13 ticked codes all have those cost types."
+            "term": "Created by and Timesheet Mode",
+            "definition": "A line under the filters shows who is logging and the mode (for example **Daily**) that was set for you in **Timesheet Mode**."
           },
           {
-            "term": "Company chosen: a company list",
-            "definition": "With **Company**, the drop-down offers Direct and Indirect codes that have the **Labor** cost type, not the full Global Data list. The list is exactly the codes ticked in **Default Phase Codes** plus the employee's own **Default Indirect Phase Code** from Global Rosters, shown first."
+            "term": "Date",
+            "definition": "The day of the log. The grid column header shows the weekday and date."
           },
           {
-            "term": "No project chosen on a crew row",
-            "definition": "On **My Crew Timesheet** a row with nothing selected offers only Indirect codes. Direct, Non Productive and Change Order codes never appear without a project."
+            "term": "Add",
+            "definition": "Adds an empty row to the grid."
           },
           {
-            "term": "Default Phase Codes narrow the list",
-            "definition": "On **My Timesheet** with category Projects and Arena Residential Project, **Default Phase Codes** listed the project's 13 codes with 5 ticked (Excavation, Backfilling, Shuttering, Barbending, Concreting), and the row's drop-down offered only those 5. Searching for Plastering found nothing. So ticking fewer codes there makes your list shorter without changing Project Setup."
+            "term": "Clone Log",
+            "definition": "Opens a dialog that lists earlier logs by date, with a preview on the right and a **View By** list. Pick a log and click **Submit** to copy its rows into the log you are working on.",
+            "images": [
+              {
+                "src": "assets/product/time-management/006.jpg",
+                "caption": "The Clone Log dialog"
+              }
+            ]
           },
           {
-            "term": "Work-order items and GL codes",
-            "definition": "When a row is charged to a work-order item (for example **Equipment - Item 1**) or a GL code (**test - Test**), the phase code cell is blank and not used."
+            "term": "Default Phase Codes",
+            "definition": "Opens **Set Default Phase Code**. The list on the left has a tick box per phase code with a search and an A-Z sort; the table on the right shows the ticked codes and whether each is **Direct** or **Indirect**. **Submit** saves your default list.",
+            "images": [
+              {
+                "src": "assets/product/time-management/005.jpg",
+                "caption": "The Set Default Phase Code dialog"
+              }
+            ]
           },
           {
-            "term": "Where the codes themselves come from",
-            "definition": "Every code, its description, its **Phase Code Type** (Direct, Indirect, Non Productive, Change Order) and its **Cost Types** are defined once in **Global Data → UOM, Phasecode & GL Codes → Phase Codes**. Project Setup shows the same list and adds the two tick boxes."
+            "term": "Show Data Summary",
+            "definition": "A switch beside the buttons that turns the data summary on or off for the log."
+          },
+          {
+            "term": "Import From Innclock AI",
+            "definition": "Brings hours in from Innclock AI instead of typing them."
+          },
+          {
+            "term": "Save as Draft",
+            "definition": "Saves the log without sending it. It stays editable and appears in **Timesheet Logs** with the **Draft** tag."
+          },
+          {
+            "term": "Submit",
+            "definition": "Sends the log into the approval workflow assigned to you."
+          },
+          {
+            "term": "Manage Columns and Notes",
+            "definition": "**Manage Columns** chooses which columns the grid shows. **Notes** opens a panel with a text box for the day."
+          },
+          {
+            "term": "Grid columns",
+            "definition": "**Company/Projects/Work Orders/GL Codes** picks the target (a dropdown). **Phase Code** is required. **Craft** and **Class** fill in from the phase code. Then come the hour cells, one per earnings code in the template (here **1 (ST)**, **2 (OT)** and **3**), under the day heading. **Total (Row level)** adds up each earnings code and **Total Hours** adds up the row."
+          },
+          {
+            "term": "Row actions",
+            "definition": "The **Actions** column holds four icons: **Copy By Phase Code**, a row copy icon, a note icon for that row, and delete."
           }
         ],
         "procedures": [
           {
-            "title": "Make a project's phase codes appear in timesheets",
+            "title": "Log your hours for a day",
             "steps": [
-              "Open the project and go to **Project Setup → Phase Codes**.",
-              "Click the gear icon (**Settings**) and tick the Cost Types you want under **Timesheet Management**, then **Save**.",
-              "Tick the **Timesheet Management** box on each phase code field staff may charge hours to.",
-              "In **Time Management**, choose Log Level Category **Projects** (or pick the project on a crew row) and open **Phase Code** to confirm the codes appear."
-            ],
-            "note": "Field Users can then shorten their own list with **Default Phase Codes** on My Timesheet."
+              "Open **My Timesheet** and check **Select Log Level Category**, **Select Template** and **Date**.",
+              "Click **Add** to get a new row.",
+              "Pick the company, project, work order or GL code in the first column, then pick the **Phase Code**.",
+              "Type the hours in the cells under each earnings code.",
+              "Click **Save as Draft** to keep it, or **Submit** to send it for approval."
+            ]
           },
           {
-            "title": "Find out why a phase code is missing",
+            "title": "Copy an earlier log",
             "steps": [
-              "Check what the row is charged to: project, Company, work-order item or GL code.",
-              "For a project, open that project's **Project Setup → Phase Codes** and check the **Timesheet Management** box of the code.",
-              "For Company or after choosing a project on My Timesheet, open **Default Phase Codes** and check the code is ticked.",
-              "If the code is not in the list at all, check its Phase Code Type (Direct or Indirect only) and that **Labor** is in its Cost Types in **Global Data → UOM, Phasecode & GL Codes**."
+              "Open **My Timesheet** and click **Clone Log**.",
+              "Select a log in the list on the left; check it in the preview.",
+              "Click **Submit** in the dialog."
             ]
           }
         ]
       },
       {
         "heading": "Timesheet Logs",
-        "intro": "<p>Timesheet Logs is where submitted timesheets are reviewed, approved, rejected, filtered and exported. <strong>Approvers</strong> named in the workflow, <strong>PMs</strong> and <strong>Module Admins</strong> use it; payroll uses its exports.</p><p>There are two tabs: <strong>My Crew Timesheet Logs</strong> and <strong>My Timesheet Logs</strong>. Each shows \"Total Logs\", a filter icon and the <strong>Export</strong> menu, and reads \"There are no time sheet logs for the selected Range and filters\" when nothing matches. A log moves from Draft to Submitted for Approval, Workflow in Progress, Completed or Rejected.</p>",
+        "intro": "<p>The <strong>Timesheet Logs</strong> tab lists every saved and submitted timesheet, with one sub-tab for crew timesheets and one for your own.</p>",
+        "images": [
+          {
+            "src": "assets/product/time-management/009.jpg",
+            "caption": "My Timesheet Logs with a log opened on the right"
+          }
+        ],
         "definitions": [
           {
-            "term": "My Timesheet Logs and My Crew Timesheet Logs",
-            "definition": "The same list in two views: logs entered on **My Timesheet** and logs entered on **My Crew Timesheet**. Approve and Reject appear only for people named as approvers in the log's workflow."
+            "term": "My Crew Timesheet Logs",
+            "definition": "Logs made through **My Crew Timesheet**. It shows **Total Logs**, a filter button and an **Export** button. With no logs it shows **There are no time sheet logs for the selected Range and filters**.",
+            "images": [
+              {
+                "src": "assets/product/time-management/007.jpg",
+                "caption": "My Crew Timesheet Logs"
+              }
+            ]
+          },
+          {
+            "term": "My Timesheet Logs",
+            "definition": "Logs made through **My Timesheet**. Logs are grouped by date under headings such as **Timesheet Logs of** a date. Each card shows its status tag (for example **Draft**), who submitted it, and has a pencil to edit, a bin to delete and an arrow to open it. **Download Excel** next to **Total Logs** exports the list."
+          },
+          {
+            "term": "Log detail",
+            "definition": "Click a card to see the log on the right: its date, who created it, **Mode**, **Template**, **Log Level Category** and **Ball in Court** (who has to act next), then the rows and a **Notes** panel. **View By** switches between **All**, **Summary** and **Phase Code**."
+          },
+          {
+            "term": "Three-dot menu",
+            "definition": "On an opened log: **See History**, **Download Pdf**, **Print PDF**, **Share PDF** and **Download Excel**.",
+            "images": [
+              {
+                "src": "assets/product/time-management/010.jpg",
+                "caption": "The log menu"
+              }
+            ]
           },
           {
             "term": "Filters",
-            "definition": "**Log Level Category** (All, Company, Projects, Work Orders, GL Codes), **Log Level** (the projects and work orders), **Crew** (the Global Data crews), **Logged By** (users), **Mode** (All, Daily, Weekly By Day, Weekly), **Status** (All, Draft, Completed, Submitted For Approval, Workflow In Progress, Rejected) and **Date Range**; buttons **Clear All**, **Reset**, **Apply**, **Save Filters**."
+            "definition": "The filter button opens a dialog with **Log Level Category**, **Log Level**, **Crew**, **Logged By**, **Mode** (**All**, **Daily**, **Weekly By Day**, **Weekly**), **Status** (**All**, **Draft**, **Completed**, **Submitted For Approval**, **Workflow In Progress**, **Rejected**) and **Date Range**. Use **Apply** to filter, **Clear All** or **Reset** to start over, and **Save Filters** to keep them.",
+            "images": [
+              {
+                "src": "assets/product/time-management/008.jpg",
+                "caption": "The Filters dialog"
+              }
+            ]
           },
           {
-            "term": "Export formats",
-            "definition": "Seven formats in the **Export** menu: VP Excel, VP CSV File, Dynamics 365 Excel, Quick Books, SAP, ComputerEase and Project Wise Excel. They carry approved hours with the earning codes to the payroll or accounting system."
-          },
-          {
-            "term": "Draft",
-            "definition": "A log saved without all mandatory fields (Employee is always needed). Not yet in approval."
-          },
-          {
-            "term": "Submitted for Approval",
-            "definition": "Sent into the workflow, not yet acted on."
-          },
-          {
-            "term": "Workflow in Progress",
-            "definition": "Approved at one level, waiting at another."
-          },
-          {
-            "term": "Completed",
-            "definition": "Approved at every level. A completed log is locked and can no longer be edited."
-          },
-          {
-            "term": "Rejected",
-            "definition": "Declined by an approver. This creates an entry in **Issues** so the submitter can fix and resubmit."
-          },
-          {
-            "term": "Where this data comes from and goes",
-            "definition": "Logs come from My Timesheet and My Crew Timesheet; the approvers and levels come from **Settings → Timesheet Workflow**. Approved hours flow to the **Timesheet Data Summary** and the exports; **Payroll Locking** stops edits after the cut-off."
+            "term": "Export",
+            "definition": "The **Export** button at the top right exports the logs; it is greyed out until a log is open."
           }
         ],
         "procedures": [
           {
-            "title": "Approve or reject a submitted timesheet",
+            "title": "Find a submitted log",
             "steps": [
-              "Go to <strong>My Timesheet Logs</strong> (or <strong>My Crew Timesheet Logs</strong>).",
-              "Select the submitted log you want to review.",
-              "Click <strong>Approve</strong> or <strong>Reject</strong>, optionally adding comments."
-            ],
-            "note": "The Approve and Reject buttons only appear for users designated as approvers in the Approval Workflow — they are not visible to everyone.",
-            "images": [
-              {
-                "src": "assets/notion/my-crew-timesheet-logs/001.jpg",
-                "caption": "My Crew Timesheet Logs: submitted timesheets, most recent first",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet-logs/002.jpg",
-                "caption": "Logs grouped by date range",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet-logs/026.jpg",
-                "caption": "An approver selecting a timesheet to approve or reject, with comments",
-                "step": 3
-              }
+              "Open **Timesheet Logs** and choose **My Crew Timesheet Logs** or **My Timesheet Logs**.",
+              "Click the filter button, set **Status** and **Date Range**, and click **Apply**.",
+              "Click the log card to open it on the right."
             ]
-          },
-          {
-            "title": "Filter timesheet logs",
-            "steps": [
-              "In **My Timesheet Logs** or **My Crew Timesheet Logs**, click the filter icon to open **Filters**.",
-              "Narrow results by **Log Level Category**, **Log Level**, **Crew**, **Logged By**, **Mode**, **Status** and **Date Range**.",
-              "Click **Apply**. Click **Save Filters** to keep the set, **Reset** to revert or **Clear All** to empty it."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/my-crew-timesheet-logs/003.jpg",
-                "caption": "Filters on the logs list",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet-logs/005.jpg",
-                "caption": "The Log Level filter changes name with the Log Level Category",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet-logs/009.jpg",
-                "caption": "Crew filter",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet-logs/010.jpg",
-                "caption": "Logged By filter",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet-logs/011.jpg",
-                "caption": "Mode filter: Daily, Weekly by Day or Weekly",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet-logs/012.jpg",
-                "caption": "Status filter",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet-logs/013.jpg",
-                "caption": "Date range filter",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet-logs/017.jpg",
-                "caption": "Save filters",
-                "step": 3
-              }
-            ],
-            "note": "The Mode filter opened on **Weekly By Day**, so Daily logs can be hidden until you choose **All**."
-          },
-          {
-            "title": "Export timesheet logs",
-            "steps": [
-              "From **Timesheet Logs**, open the **Export** menu.",
-              "The menu lists **Download VP Excel**, **Download VP CSV File**, **Download Dynamics 365 Excel**, **Download Quick Books**, **Download SAP**, **Download ComputerEase** and **Download Project Wise Excel**.",
-              "Choose a format and select the date range, log level, crews or users, mode and earning codes, then download."
-            ],
-            "note": "Only Admin users have access to Export. The guide screenshots show VP Excel, VP CSV, QuickBooks and SAP.",
-            "images": [
-              {
-                "src": "assets/notion/my-crew-timesheet-logs/037.jpg",
-                "caption": "The Export option",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet-logs/038.jpg",
-                "caption": "Download VP Excel: choosing date range, log level, crews, users, mode and earning codes",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet-logs/039.jpg",
-                "caption": "Download VP CSV file",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet-logs/040.jpg",
-                "caption": "Download QuickBooks",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet-logs/041.jpg",
-                "caption": "Download SAP",
-                "step": 3
-              }
-            ]
-          },
-          {
-            "title": "See history, print or share a timesheet log",
-            "steps": [
-              "Open the menu at the top right corner of the log.",
-              "Choose **See History** to see the log being created, updated and approved, each action recorded.",
-              "Choose **Download PDF** to download the log as a PDF.",
-              "Choose **Print PDF** to print the log directly.",
-              "Choose **Share PDF** to send the log as a PDF to other registered users.",
-              "Choose **Download Excel** to download the data as an Excel file."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/my-crew-timesheet-logs/027.jpg",
-                "caption": "The menu at the top right of a log",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet-logs/028.jpg",
-                "caption": "See History",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet-logs/029.jpg",
-                "caption": "Download PDF",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet-logs/030.jpg",
-                "caption": "Print PDF",
-                "step": 4
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet-logs/031.jpg",
-                "caption": "Share PDF",
-                "step": 5
-              },
-              {
-                "src": "assets/notion/my-crew-timesheet-logs/032.jpg",
-                "caption": "Download Excel",
-                "step": 6
-              }
-            ]
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/notion/my-crew-timesheet-logs/018.jpg",
-            "caption": "Download Excel for the logs, with each timesheet on its own sheet"
-          },
-          {
-            "src": "assets/notion/my-crew-timesheet-logs/020.jpg",
-            "caption": "Edit and Delete for the supervisor, foreman or admin who logged the timesheet"
-          },
-          {
-            "src": "assets/notion/my-crew-timesheet-logs/021.jpg",
-            "caption": "Draft: a log saved with incomplete data"
-          },
-          {
-            "src": "assets/notion/my-crew-timesheet-logs/022.jpg",
-            "caption": "Submitted for Approval"
-          },
-          {
-            "src": "assets/notion/my-crew-timesheet-logs/023.jpg",
-            "caption": "Workflow in Progress: approved at one level, waiting at the next"
-          },
-          {
-            "src": "assets/notion/my-crew-timesheet-logs/024.jpg",
-            "caption": "Completed: approved at every level"
-          },
-          {
-            "src": "assets/notion/my-crew-timesheet-logs/025.jpg",
-            "caption": "Rejected: turned down by an approver"
-          },
-          {
-            "src": "assets/notion/my-crew-timesheet-logs/033.jpg",
-            "caption": "View By inside a log"
-          },
-          {
-            "src": "assets/notion/my-crew-timesheet-logs/034.jpg",
-            "caption": "Summary view: total hours and amounts for each employee"
-          },
-          {
-            "src": "assets/notion/my-crew-timesheet-logs/035.jpg",
-            "caption": "Phase codes view: hours for each phase code"
-          },
-          {
-            "src": "assets/notion/my-crew-timesheet-logs/036.jpg",
-            "caption": "All view: the entire log"
           }
         ]
       },
       {
-        "heading": "Timesheet Issues",
-        "intro": "<p>Timesheet Issues turns a rejected timesheet into a tracked item so it gets fixed. The submitter, a supervisor or a <strong>PM</strong> works from it until the log is corrected and resubmitted.</p><p>The <strong>Issues</strong> tab shows the counters <strong>Total Issues</strong>, <strong>Issues Approved</strong> and <strong>Issues Rejected</strong>, a <strong>Filters</strong> button (Log ID, Raised On, Raised By), a Grid View / Table View switch and a table with <strong>TSI Number</strong>, <strong>Level</strong>, <strong>Raised on Date</strong>, <strong>Raised on Time</strong>, <strong>Raised by</strong>, <strong>Image</strong>, <strong>Assign To</strong>, <strong>Due Date</strong>, <strong>Chat</strong>, <strong>Comments</strong> and <strong>See History</strong>.</p>",
-        "definitions": [
+        "heading": "Issues",
+        "intro": "<p>The <strong>Issues</strong> tab lists issues raised on timesheets, so the person who owns the hours can fix them and the approver can follow up.</p>",
+        "images": [
           {
-            "term": "Timesheet Issue",
-            "definition": "An item created automatically when an approver rejects a log. It carries the approver's comments and any attached image, can be given an **Assign To** person and a **Due Date**, and stays open until the timesheet is corrected and resubmitted."
-          },
-          {
-            "term": "Where this data comes from and goes",
-            "definition": "Items are raised by **Reject** on **Timesheet Logs**; the rejecting person is the approver set in **Settings → Timesheet Workflow**. The Raised By filter lists the users. After correction the log goes back through the approval levels."
+            "src": "assets/product/time-management/011.jpg",
+            "caption": "The Issues tab"
           }
         ],
-        "procedures": [
+        "definitions": [
           {
-            "title": "Resolve a rejected timesheet",
-            "steps": [
-              "Open the entry in <strong>Timesheet Issues</strong> to review the approver's comments and any supporting information.",
-              "Use <strong>Assign To</strong> to delegate the correction if needed.",
-              "Set a <strong>Due Date</strong> to keep the correction on schedule.",
-              "Correct the underlying timesheet and resubmit it for approval."
+            "term": "Counters",
+            "definition": "Three pills at the top show **Total Issues**, **Issues Approved** and **Issues Rejected**."
+          },
+          {
+            "term": "Filters",
+            "definition": "Opens a dialog with **Log ID**, **Raised On** and **Raised By**. **Apply** filters; **Clear all** resets.",
+            "images": [
+              {
+                "src": "assets/product/time-management/012.jpg",
+                "caption": "The Issues Filters dialog"
+              }
             ]
+          },
+          {
+            "term": "Grid and list view",
+            "definition": "Two icons beside **Filters** switch between a card grid and a table list."
+          },
+          {
+            "term": "Table columns",
+            "definition": "**TSI Number**, **Level**, **Raised on Date**, **Raised on Time**, **Raised by**, **Image**, **Assign To**, **Due Date**, **Chat**, **Comments** and **See History**."
           }
         ]
       },
       {
         "heading": "Timesheet Data Summary",
-        "intro": "<p>The Timesheet Data Summary rolls logged hours up by person, crew, phase code, project, work order, earning code or GL code, so a <strong>PM</strong>, <strong>Module Admin</strong> or cost accountant can see totals without opening each log.</p><p>It has eight tabs: <strong>People</strong>, <strong>Crew</strong>, <strong>Phase Code</strong>, <strong>Project</strong>, <strong>Work Order</strong>, <strong>Earnings Code</strong>, <strong>GL Code</strong> and <strong>Detailed View</strong>. Each has <strong>Daily &amp; Weekly by Day</strong> and <strong>Weekly</strong> sub-tabs, a date range, a log level, an <strong>Amount / Hours</strong> toggle, a <strong>Submitted / Approved</strong> toggle and a <strong>Color Configuration</strong> icon.</p>",
-        "definitions": [
+        "intro": "<p>The <strong>Timesheet Data Summary</strong> tab totals logged hours and cost and lets you slice them by a chosen grouping.</p>",
+        "images": [
           {
-            "term": "Daily & Weekly by Day columns",
-            "definition": "The first column (Roster, Crew, Phase Code and Description, Project, Work Order or GL Code) then **Monday** to **Sunday** with their dates (for the current week 9-28-2026 to 10-4-2026) and **Total Hours**."
-          },
-          {
-            "term": "Weekly columns",
-            "definition": "The first column, then **Payroll Hours** and **Project Hours**. These follow the **Payroll** and **Project** flags of each earning code in **Settings → Earnings Codes**."
-          },
-          {
-            "term": "Submitted and Approved toggle",
-            "definition": "Submitted counts logs sent for approval, including ones still waiting; Approved counts only logs approved at every level. Use Approved for payroll or client cost reports."
-          },
-          {
-            "term": "Color Configuration",
-            "definition": "Opens **Configure Colors** with **Hours** and **Amount** tabs and an **Add** button for rules \"Format cells if...\" (Earning Code, Condition, Start Value, End Value, Color). It colours cells that meet a rule."
-          },
-          {
-            "term": "Where this data comes from",
-            "definition": "Hours come from submitted and approved logs; names come from Global Rosters, crews from Global Data or Project Crews, phase codes from Global Data."
+            "src": "assets/product/time-management/013.jpg",
+            "caption": "Timesheet Data Summary, Detailed View"
           }
         ],
-        "procedures": [
+        "definitions": [
           {
-            "title": "View logged hours by project, crew, or phase code",
-            "steps": [
-              "Open **Timesheet Data Summary**.",
-              "Switch between the tabs **People**, **Crew**, **Phase Code**, **Project**, **Work Order**, **Earnings Code**, **GL Code** and **Detailed View**.",
-              "Choose **Daily & Weekly by Day** or **Weekly**, then a date range and a log level.",
-              "Toggle **Submitted** or **Approved** to choose which logs to count, and **Hours** or **Amount**.",
-              "Download the results to Excel if the button is shown."
-            ],
+            "term": "Grouping tabs",
+            "definition": "The top row of tabs is **People**, **Crew**, **Phase Code**, **Project**, **Work Order**, **Earnings Code**, **GL Code** and **Detailed View**. The one you pick sets what each row of the table stands for."
+          },
+          {
+            "term": "Daily & Weekly by Day and Weekly",
+            "definition": "Two sub-tabs under the grouping tabs. **Daily & Weekly by Day** shows one column per day of the week (Monday to Sunday). **Weekly** shows one column per week."
+          },
+          {
+            "term": "Select Date Range",
+            "definition": "Sets the period. In **Detailed View** it starts on the current week."
+          },
+          {
+            "term": "Select Log Level",
+            "definition": "Narrows the table to a log level; the default is **All Log Levels**."
+          },
+          {
+            "term": "Amount and Hours switch",
+            "definition": "Switches the table between cost (**Amount**) and hours (**Hours**)."
+          },
+          {
+            "term": "Submitted and Approved switch",
+            "definition": "Chooses whether the figures count submitted timesheets or approved ones."
+          },
+          {
+            "term": "Color fill button",
+            "definition": "Opens **Configure Colors** with a **Hours** and an **Amount** tab. **Add** creates a rule under **Format cells if...** with a **Condition**, **Start Value**, **End Value** and **Color**, so cells that meet the rule are painted that color. **Submit** saves the rules.",
             "images": [
               {
-                "src": "assets/notion/timesheet-data-summary/002.jpg",
-                "caption": "Expanding an employee row to see their phase codes",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/timesheet-data-summary/003.jpg",
-                "caption": "Phase codes for the selected employee",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/timesheet-data-summary/001.jpg",
-                "caption": "Timesheet Data Summary with a date range filter",
-                "step": 3
+                "src": "assets/product/time-management/014.jpg",
+                "caption": "The Configure Colors dialog"
               }
             ]
+          },
+          {
+            "term": "Detailed View table",
+            "definition": "Columns are **Actions**, **Roster** (the person) and one column per day or week. Under it, **Total Hours** shows a second table with **Roster**, **Payroll Hours** and **Project Hours**."
           }
         ]
       },
       {
         "heading": "Reconciliation",
-        "intro": "<p>Reconciliation checks submitted hours against an independent record, such as gate or clock-in data, before they are paid or billed. <strong>PMs</strong>, reconcilers and <strong>Module Admins</strong> use it.</p><p>There are two tabs, <strong>Timesheets</strong> and <strong>Gate Logs</strong>, each with <strong>Weekly</strong> and <strong>Daily & Weekly by Day</strong> sub-tabs and a <strong>Color Configuration</strong> icon.</p>",
+        "intro": "<p>The <strong>Reconciliation</strong> tab checks hours that people entered in timesheets against other records. Its two sub-tabs are <strong>Timesheets</strong> and <strong>Gate Logs</strong>.</p>",
+        "images": [
+          {
+            "src": "assets/product/time-management/015.jpg",
+            "caption": "Reconciliation, Timesheets sub-tab"
+          }
+        ],
         "definitions": [
           {
-            "term": "Timesheets tab",
-            "definition": "Has a **Create Log** button and a **Timesheet Logs** list (filter All, date range). **Create Log** opens a dialog with a date range and a grid of Date, Roster, Total Hours and Total Amount (each column filterable) and **Submit**. The source is the logs entered on My Timesheet and My Crew Timesheet."
+            "term": "Weekly and Daily & Weekly by Day",
+            "definition": "On both sub-tabs, choose whether the logs are listed per week or per day."
           },
           {
-            "term": "Gate Logs tab",
-            "definition": "Has **Upload Logs** and a **Reconciliation Logs** list (filter All, date range, **Filters** by Log IDs, Created By and Rosters). Uploaded rows are validated against Employee IDs, which come from **Global Rosters**, and grouped into batches."
+            "term": "Timesheets",
+            "definition": "Shows the **Timesheet Logs** list with an **All** button and a date range. **+ Create Log** opens the **Create log** dialog: choose a date range and the table lists **Date**, **Roster**, **Total Hours** and **Total Amount** (each column has a filter); **Submit** creates the log.",
+            "images": [
+              {
+                "src": "assets/product/time-management/016.jpg",
+                "caption": "The Create log dialog"
+              }
+            ]
+          },
+          {
+            "term": "Gate Logs",
+            "definition": "Shows **Reconciliation Logs** built from gate in and gate out times, with an **All** button, a date range and **Filters** (**Log IDs**, **Created By**, **Rosters**).",
+            "images": [
+              {
+                "src": "assets/product/time-management/017.jpg",
+                "caption": "Reconciliation, Gate Logs sub-tab"
+              }
+            ]
+          },
+          {
+            "term": "Upload Logs",
+            "definition": "On **Gate Logs**, opens **Upload Excel**. Download the template with **Click here**, fill it with gate in and gate out times in 24 hour format and dates as MM-DD-YYYY (maximum 24 hours), then **Upload** and **Submit**.",
+            "images": [
+              {
+                "src": "assets/product/time-management/018.jpg",
+                "caption": "The Upload Excel dialog"
+              }
+            ]
           },
           {
             "term": "Color Configuration",
-            "definition": "**Configure Colors**: tabs Hours and Amount, **Add**, \"Format cells if...\" with Earning Code, Condition, Start Value, End Value and Color. The Earning Code list comes from **Global Data → Settings → Earnings Codes**."
-          },
-          {
-            "term": "Where this data comes from and goes",
-            "definition": "Gate data comes from the Excel template the site uploads (or a clock system). For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
+            "definition": "Opens the same color rules dialog as in **Timesheet Data Summary**, to paint cells by hour or amount ranges."
           }
         ],
         "procedures": [
           {
-            "title": "Manually reconcile timesheet data",
+            "title": "Upload gate logs",
             "steps": [
-              "Open **Reconciliation** and choose the **Timesheets** tab.",
-              "Choose **Weekly** or **Daily & Weekly by Day**.",
-              "Click **Create Log** and select a date range to view submitted logs (columns Date, Roster, Total Hours, Total Amount).",
-              "Click the **Phase code** button for an employee to reconcile that entry manually."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/timesheet-reconciliation-timesheet/001.jpg",
-                "caption": "Reconciliation, Timesheet tab",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/timesheet-reconciliation-timesheet/002.jpg",
-                "caption": "Create Log with a date range to see submitted logs",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/timesheet-reconciliation-timesheet/003.jpg",
-                "caption": "Phase code button on an employee, for manual reconciliation",
-                "step": 4
-              }
+              "Open **Reconciliation** and click **Gate Logs**.",
+              "Click **Upload Logs**.",
+              "Click **Click here** to download the template and fill it in.",
+              "Click **Upload**, choose the file, then click **Submit**."
             ]
-          },
-          {
-            "title": "Reconcile using uploaded gate/access logs",
-            "steps": [
-              "Open **Reconciliation** and choose the **Gate Logs** tab.",
-              "Choose **Weekly** or **Daily & Weekly by Day**.",
-              "Click **Upload Logs**, download the template with **Click here to download template**, fill it in, then **Upload** and **Submit**."
-            ],
-            "note": "Enter Gate In and Gate Out in 24 hours format and the date as MM-DD-YYYY. The maximum is 24 hours.",
-            "images": [
-              {
-                "src": "assets/notion/timesheet-reconciliation-gate-logs/002.jpg",
-                "caption": "Choosing Daily & Weekly by Day or Weekly mode",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/timesheet-reconciliation-gate-logs/003.jpg",
-                "caption": "Upload Logs, with a template to download",
-                "step": 3
-              }
-            ]
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/notion/timesheet-reconciliation-gate-logs/004.jpg",
-            "caption": "Batches created for organized reconciliation"
           }
         ]
       },
       {
-        "heading": "Rosters & Crews",
-        "intro": "<p>Rosters and crews are the people that timesheets are logged against. A <strong>Super Admin</strong> keeps the company-wide lists in Global Data and a <strong>PM</strong> builds each project's team in Project Setup.</p><p>There are no roster tabs inside Time Management itself; its drop-downs read these lists.</p>",
-        "definitions": [
-          {
-            "term": "Crew (Global Data)",
-            "definition": "A company-wide crew in **Global Data → Crews** with Supervisors, Foremen and Rosters. Used for Company and GL Codes timesheets."
-          },
-          {
-            "term": "Project Crew",
-            "definition": "A crew in **Project Setup → People → Project Crews**, created there or copied with **Copy Crews from Global Data** (it lists the 18 Global Data crews), and shared with **Copy Crews to Projects**. Used for Project timesheets. It is empty for Arena Steel Plant - Phase 1."
-          },
-          {
-            "term": "System User (Roster)",
-            "definition": "A licensed user in **Global Data → Users & Permissions → Global Rosters**. A project roster adds them with **Add** under **Project Setup → People → Roster → System User**. Global Rosters hold Craft, Class and Default Indirect Phase Code that timesheets use."
-          },
-          {
-            "term": "Non-System User (Roster)",
-            "definition": "A temporary or subcontracted worker without a login, added with **Add** or **Get Users from Global Data** under **Roster → Non System User**."
-          },
-          {
-            "term": "Configurable Fields (Roster)",
-            "definition": "Custom columns for roster tables, added in **Global Data → Settings → Roster Settings** (Add Field with Required, Show on cards and a type)."
-          },
-          {
-            "term": "Where rosters and crews feed timesheets",
-            "definition": "The Roster drop-down of My Crew Timesheet lists the crew's members first and then all Global Rosters; the Crew drop-down lists Global Data crews or Project Crews by Log Level Category; the Settings pages for workflow and mode list Global Roster users (Home) or the project roster (Project Settings)."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Create a new crew (Global Data)",
-            "steps": [
-              "Go to <strong>Global Data &gt; Crews</strong>.",
-              "Click <strong>Create</strong>.",
-              "Enter the Crew Name.",
-              "Choose Supervisors and Foremen from their dropdowns.",
-              "Select Rosters (system and non-system users) for the crew.",
-              "Click <strong>Submit</strong>."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/timesheet-crew/001.jpg",
-                "caption": "Company-level crews",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/timesheet-crew/002.jpg",
-                "caption": "Create, with a crew name",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/timesheet-crew/003.jpg",
-                "caption": "Selecting the users for the crew and clicking Submit",
-                "step": 5
-              }
-            ]
-          },
-          {
-            "title": "Add a crew to a specific project",
-            "steps": [
-              "Open **Project Setup → People → Project Crews**.",
-              "Click **Create Crew** to build one, or **Copy Crews from Global Data** to import existing crews."
-            ],
-            "note": "Use **Copy Crews to Projects** to copy a crew to other projects."
-          },
-          {
-            "title": "Add a system user to a project roster",
-            "steps": [
-              "Go to <strong>Project Setup &gt; Roster &gt; System User</strong>.",
-              "Click <strong>Add</strong>.",
-              "Select users from Global Data (<strong>Global Data &gt; Users &amp; Permissions &gt; Global Rosters</strong>) — selected users appear on the right side of the dialog.",
-              "Click <strong>Submit</strong>."
-            ]
-          },
-          {
-            "title": "Add a temporary (non-system) worker to a project",
-            "steps": [
-              "Go to <strong>Project Setup &gt; Roster &gt; Non System User</strong>.",
-              "Click <strong>Add</strong> to manually create one, or <strong>Get Users from Global Data</strong> to select existing non-system users.",
-              "Fill in the required fields and click <strong>Submit</strong>."
-            ]
-          },
-          {
-            "title": "Bulk upload or export rosters",
-            "steps": [
-              "On the Roster (System Users or Non-System Users) page, use <strong>Upload Excel</strong> to bulk-add roster records, or <strong>Download Excel</strong> to export the current roster list."
-            ]
-          },
-          {
-            "title": "Add custom fields to roster tables",
-            "steps": [
-              "Go to <strong>Global Settings &gt; Roster Settings</strong>.",
-              "Use <strong>Configurable Fields</strong> to add a custom column, choosing its field type (Attachment, Check box, Date, Label, Multi select, Paragraph, Roster, Scribble, Single select, Table, Text box, Time, Signature).",
-              "Click <strong>Save Changes</strong>."
-            ]
-          }
-        ],
+        "heading": "Timesheet Workflow",
+        "intro": "<p><strong>Timesheet Workflow</strong> is the first page of <strong>Settings</strong> (the gear at the top right of Time Management). It defines who approves timesheets and who each approval flow applies to.</p>",
         "images": [
           {
-            "src": "assets/notion/timesheet-crew/004.jpg",
-            "caption": "Searching for people when building a crew"
-          },
-          {
-            "src": "assets/notion/timesheet-crew/005.jpg",
-            "caption": "Searching the list of crews"
-          },
-          {
-            "src": "assets/notion/roster-system-users/001.jpg",
-            "caption": "Rosters for system users"
-          },
-          {
-            "src": "assets/notion/roster-system-users/002.jpg",
-            "caption": "Roster cards with Edit and Delete"
-          },
-          {
-            "src": "assets/notion/roster-system-users/003.jpg",
-            "caption": "Upload Excel to add many rosters at once"
-          },
-          {
-            "src": "assets/notion/roster-system-users/005.jpg",
-            "caption": "Switching the roster between card and table view"
-          },
-          {
-            "src": "assets/notion/rosters-non-system-users/001.jpg",
-            "caption": "Add, to register a non-system user"
-          },
-          {
-            "src": "assets/notion/rosters-non-system-users/002.jpg",
-            "caption": "Non-system roster cards with Edit and Delete"
-          },
-          {
-            "src": "assets/notion/rosters-non-system-users/003.jpg",
-            "caption": "Non-system roster in card and table views"
+            "src": "assets/product/time-management/020.jpg",
+            "caption": "Create Workflow, with a workflow selected"
           }
-        ]
-      },
-      {
-        "heading": "Settings",
-        "intro": "<p>Settings is where a <strong>Module Admin</strong> builds the rules every timesheet follows: approval workflows, logging mode, earning codes, templates and payroll lock. Do this before Field Users log time; a crew cannot submit until its workflow and mode are in place.</p><p>The page has two groups. <strong>Timesheet Workflow</strong> has <strong>Create Workflow</strong> and <strong>Assign Workflow</strong>. <strong>Timesheet Settings</strong> has <strong>Timesheet Mode</strong>, <strong>Earnings Codes</strong>, <strong>Timesheet Template</strong>, <strong>Payroll Locking</strong>, <strong>Exclude Projects</strong> and <strong>Users And Permissions</strong>.</p>",
+        ],
         "definitions": [
           {
             "term": "Create Workflow",
-            "definition": "Lists the workflows. A selected workflow shows **Create Level**, a flow-chart icon and a table of Level, Level Description, Approvers, Workflow Type and Actions (edit, delete). Example: Timesheet Approval Workflow has two levels, each \"Any one can approve\". Approvers are picked from the Global Roster system users."
+            "definition": "The left list holds your approval workflows. **Create Approval Workflow** asks for a **Workflow Name** and **Submit** adds it. The page tells you the three steps: create the workflow, create levels, add users to each level."
+          },
+          {
+            "term": "Create Level",
+            "definition": "With a workflow selected, **Create Level** opens **Add Level to Workflow**: choose **Users** or **Roles** as the level, **All must approve** or **Any one can approve** as the **Workflow Type**, add a **Description**, and tick the approvers in **Select Approver**.",
+            "images": [
+              {
+                "src": "assets/product/time-management/021.jpg",
+                "caption": "The Add Level to Workflow dialog"
+              }
+            ]
+          },
+          {
+            "term": "Levels table",
+            "definition": "Columns **Level**, **Level Description**, **Approvers**, **Workflow Type** and **Actions** (edit and delete). A log goes through the levels in order."
           },
           {
             "term": "Assign Workflow",
-            "definition": "Tabs **Users** and **Crews**; **Assign Approval Workflow**, **Clear**, **Save Changes**, **Copy Approval Workflow To**. The Users list is the Global Roster system users (the same order as the Add dialog in Project Setup). The Crews tab listed 4 crews while Arena Residential Project was open and none while Arena Steel Plant - Phase 1 was open: crews follow the active project."
-          },
-          {
-            "term": "Timesheet Mode",
-            "definition": "Tabs **My Timesheet** and **My Crew Timesheet**, a list of people or crews, and the choices **Daily** (regular basis), **Weekly by day** and **Weekly**. In Arena Steel Plant - Phase 1 the crew tab says \"There are no Crews. To create go to Timesheet crew\". The mode decides which templates the user sees."
-          },
-          {
-            "term": "Earnings Codes",
-            "definition": "Columns Code, Description, Shortname, VP Code*, Data Type, Payroll, Project, Split Header, Actions. It shows the same codes as **Global Data → Settings → Earnings Codes** (for example 1 Regular pay ST, 2 Over Time pay OT, 31 PerDIEM AMOUNT). **Payroll** and **Project** feed the Payroll Hours and Project Hours columns of the Data Summary; **Split Header** places the code under Phase Codes in weekly templates."
-          },
-          {
-            "term": "Timesheet Template",
-            "definition": "The templates (for example Crew Timesheet, Weekly (Standard), Hourly Field Timesheet, Regular Timesheet). The editor shows **Standard Fields** (Crew Timesheet: Roster, Company/Project, Phase Code, Phase Code Description; Weekly (Standard): Roster Name, Craft, Roster Number, Phase Codes, Per Diem Days), **Configurable Fields** and **Earnings Codes**. The timesheet screens list only the templates that match the user's mode (8 for Daily and Weekly By Day, 5 for Weekly)."
-          },
-          {
-            "term": "Payroll Locking",
-            "definition": "See the Who sets this up section. It \"applies to time management and productivity logs\", so it also closes Field Works productivity logs."
-          },
-          {
-            "term": "Exclude Projects",
-            "definition": "Choose projects to leave out of the global timesheet configuration."
-          },
-          {
-            "term": "Users And Permissions",
-            "definition": "Time Management's own permission groups: **Add User Group**."
-          },
-          {
-            "term": "Project-level settings",
-            "definition": "Each project also has **Project Settings → Time Management** with **Create Workflow**, **Assign Workflow** and **Assign Mode** for that project's roster and crews (\"Change the crew settings according to the Home Time Management requirement\"). Its user list is the project roster; the Home Settings list is the whole Global Roster."
+            "definition": "Pick **Users** or **Crews** on the left, then choose one of the workflows on the right (the radio button) and click **Save Changes**. **Clear** removes the choice. **Copy Approval Workflow To** applies the same workflow to other users.",
+            "images": [
+              {
+                "src": "assets/product/time-management/022.jpg",
+                "caption": "Assign Workflow"
+              }
+            ]
           }
         ],
         "procedures": [
           {
-            "title": "Create an approval workflow for timesheets",
+            "title": "Set up an approval workflow",
             "steps": [
-              "Open **Settings → Timesheet Workflow → Create Workflow**.",
-              "Click **Create Approval Workflow** and name it.",
-              "Click **Create Level** (the dialog is **Add Level to Workflow**), choose **Users** or **Roles**, pick the approvers and add a Description.",
-              "Choose **All must approve** or **Any one can approve** for the level, then **Submit**."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/timesheet-workflow/001.jpg",
-                "caption": "Timesheet Workflow under Settings",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/timesheet-create-workflow/001.jpg",
-                "caption": "Create Approval Workflow, to create a workflow",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/timesheet-workflow/003.jpg",
-                "caption": "Several workflows for different approval processes",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/timesheet-create-workflow/002.jpg",
-                "caption": "The Description tab for a level",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/timesheet-create-workflow/003.jpg",
-                "caption": "Edit and Delete icons beside each level",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/timesheet-workflow/004.jpg",
-                "caption": "A workflow with more than one approval level",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/timesheet-workflow/006.jpg",
-                "caption": "Add Role, for choosing a role such as Foreman or Supervisor",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/timesheet-create-workflow/006.jpg",
-                "caption": "Tree view of the workflow as a flow chart",
-                "step": 4
-              },
-              {
-                "src": "assets/notion/timesheet-workflow/005.jpg",
-                "caption": "Choosing All must approve or Anyone can approve for a level",
-                "step": 4
-              }
-            ]
-          },
-          {
-            "title": "Assign an approval workflow to a user or crew",
-            "steps": [
-              "Open **Settings → Timesheet Workflow → Assign Workflow**.",
-              "Choose the **Users** or **Crews** tab and select the person or crew.",
-              "Pick the workflow under **Assign Approval Workflow**.",
-              "Click **Save Changes**. **Clear** removes the workflow."
-            ],
-            "note": "Use **Copy Approval Workflow To** to give the same workflow to several users or crews.",
-            "images": [
-              {
-                "src": "assets/notion/timesheet-assign-workflow/001.jpg",
-                "caption": "Assign Workflow: choosing a user or crew and a workflow",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/timesheet-workflow/007.jpg",
-                "caption": "Save Changes, to assign the workflow to the selected user or crew",
-                "step": 4
-              },
-              {
-                "src": "assets/notion/timesheet-assign-workflow/002.jpg",
-                "caption": "Clear, to reset the selection and detach the workflow",
-                "step": 4
-              }
-            ]
-          },
-          {
-            "title": "Set the timesheet logging mode",
-            "steps": [
-              "Open **Settings → Timesheet Settings → Timesheet Mode**.",
-              "Choose the **My Timesheet** or **My Crew Timesheet** tab, select the person or crew, and pick **Daily**, **Weekly by day** or **Weekly**.",
-              "Check the default template for that mode.",
-              "Click **Save Changes**."
-            ],
-            "note": "Use **Copy To** to apply the same mode to others. The crew list on this page shows the crews of the project you are working in.",
-            "images": [
-              {
-                "src": "assets/notion/timesheet-settings/002.jpg",
-                "caption": "Timesheet Mode: Daily, Weekly by Day or Weekly, with a default template",
-                "step": 2
-              }
-            ]
-          },
-          {
-            "title": "Create earning codes for payroll",
-            "steps": [
-              "Go to <strong>Timesheet Settings &gt; Earning Codes</strong>.",
-              "Click <strong>Add</strong> to insert a row.",
-              "Enter the Code, Description, and Short Name.",
-              "Set the Data Type to Hours or Amount.",
-              "Choose whether the code counts toward Payroll Hours and/or Project Hours."
-            ],
-            "note": "Enable <strong>Split Headers</strong> to have the code appear under Phase Codes in weekly templates instead of as its own column.",
-            "images": [
-              {
-                "src": "assets/notion/timesheet-settings/003.jpg",
-                "caption": "Earning Codes: several codes, then Save Changes",
-                "step": 1
-              }
-            ]
-          },
-          {
-            "title": "Build a custom timesheet template",
-            "steps": [
-              "Open **Settings → Timesheet Settings → Timesheet Template**.",
-              "Click **Create**, or click an existing template (its menu offers **Edit** and **Delete**).",
-              "Under **Configurable Fields** click **Add field**, name it and choose a type (**Form**, **Multi Select**, **Roster**, **Single Select**, **Text Box** or **Time**).",
-              "Under **Earnings Codes** choose **Column** or **Split Time Headers**, and **Add Earnings Codes** from the list.",
-              "Click **Save Changes**."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/timesheet-settings/004.jpg",
-                "caption": "Create, for a new timesheet template",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/timesheet-settings/005.jpg",
-                "caption": "Add Field, for a configurable field with its type",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/timesheet-settings/006.jpg",
-                "caption": "Adding more configurable fields",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/timesheet-settings/007.jpg",
-                "caption": "Copy Field, to create a similar field",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/timesheet-settings/008.jpg",
-                "caption": "Delete Field",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/timesheet-settings/009.jpg",
-                "caption": "A time header type for each time header",
-                "step": 4
-              },
-              {
-                "src": "assets/notion/timesheet-settings/010.jpg",
-                "caption": "Save Changes for the template",
-                "step": 5
-              }
-            ]
-          },
-          {
-            "title": "Lock payroll periods",
-            "steps": [
-              "Open **Settings → Timesheet Settings → Payroll Locking**.",
-              "Choose **Daily**, **Weekly** or **Monthly** under \"Select the option on which payroll happens\".",
-              "For Monthly choose **Start of The Month**, **End of The Month** or **Custom**; set the **Time** and the **Buffer Time (In Days)**, then **Save Changes**."
-            ],
-            "note": "Once a period locks, timesheet data within it can no longer be edited — make sure corrections are made before the lock takes effect.",
-            "images": [
-              {
-                "src": "assets/notion/timesheet-settings/013.jpg",
-                "caption": "Payroll Locking: Daily, Weekly or Monthly",
-                "step": 2
-              }
+              "Open **Settings**, then **Timesheet Workflow**, **Create Workflow**.",
+              "Click **Create Approval Workflow**, type the **Workflow Name** and click **Submit**.",
+              "Click **Create Level**, choose **Users** or **Roles**, choose the **Workflow Type**, tick the approvers and click **Submit**.",
+              "Repeat for each level.",
+              "Open **Assign Workflow**, pick a user or crew, select the workflow and click **Save Changes**."
             ]
           }
-        ],
+        ]
+      },
+      {
+        "heading": "Timesheet Mode",
+        "intro": "<p><strong>Timesheet Mode</strong> sets how often a person or crew logs time and when reminders go out. It is the first item under <strong>Timesheet Settings</strong>.</p>",
         "images": [
           {
-            "src": "assets/notion/timesheet-workflow/002.jpg",
-            "caption": "Approval workflows can be set up to suit your organization"
+            "src": "assets/product/time-management/023.jpg",
+            "caption": "Timesheet Mode for My Timesheet"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "My Timesheet and My Crew Timesheet tabs",
+            "definition": "**My Timesheet** lists users on the left; **My Crew Timesheet** lists crews. Search finds one. Click a name to edit its settings on the right."
           },
           {
-            "src": "assets/notion/timesheet-settings/001.jpg",
-            "caption": "Timesheet Settings"
+            "term": "Timesheet Mode",
+            "definition": "**Daily** creates a timesheet on a regular daily basis, **Weekly by day** creates one per week with a column per day, **Weekly** creates one per week."
           },
           {
-            "src": "assets/notion/timesheet-settings/011.jpg",
-            "caption": "Searching the timesheet templates"
+            "term": "Select Default Template",
+            "definition": "The template this user or crew starts with."
           },
           {
-            "src": "assets/notion/timesheet-settings/012.jpg",
-            "caption": "Deleting a template from its menu"
+            "term": "Send reminder on",
+            "definition": "Tick the weekdays (or **Select All**) on which a reminder to fill the timesheet is sent, then set the **Time** with the clock."
+          },
+          {
+            "term": "Also notify to",
+            "definition": "**Add** a person or role (for example a foreman or supervisor) who is also reminded."
+          },
+          {
+            "term": "Copy To",
+            "definition": "Copies these settings to other users or crews."
+          },
+          {
+            "term": "Save Changes",
+            "definition": "Saves the settings for the selected user or crew."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Set a user's timesheet mode",
+            "steps": [
+              "Open **Settings**, **Timesheet Settings**, **Timesheet Mode**.",
+              "Click a user (or switch to **My Crew Timesheet** and click a crew).",
+              "Select **Daily**, **Weekly by day** or **Weekly**, and choose the default template.",
+              "Tick the reminder days and set the time.",
+              "Click **Save Changes**."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Earnings Codes",
+        "intro": "<p><strong>Earnings Codes</strong> is the list of pay types that hours can be logged under, for example regular pay, over time pay, holiday or per diem.</p>",
+        "images": [
+          {
+            "src": "assets/product/time-management/024.jpg",
+            "caption": "The Earnings Codes list"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Add",
+            "definition": "Adds a new earnings code row."
+          },
+          {
+            "term": "Table columns",
+            "definition": "**Code**, **Description**, **Shortname** (for example ST for regular and OT for over time), **VP Code** (required; the code sent to the payroll system), **Data Type**, **Payroll**, **Project**, **Split Header** and **Actions**."
+          },
+          {
+            "term": "Data Type",
+            "definition": "**HOURS** for codes you enter as hours, **AMOUNT** for money values such as a per diem."
+          },
+          {
+            "term": "Payroll and Project",
+            "definition": "Two tick boxes per code that mark whether the code is used for payroll and for projects. Codes with a box unticked show an empty box (for example the code NS has no Payroll tick and ST has no Project tick)."
+          },
+          {
+            "term": "Split Header",
+            "definition": "A third tick box per code; it is ticked for most codes."
+          },
+          {
+            "term": "Actions",
+            "definition": "A colored dot and a delete icon on each row."
+          }
+        ]
+      },
+      {
+        "heading": "Timesheet Template",
+        "intro": "<p><strong>Timesheet Template</strong> holds the layouts that decide which fields and earnings codes a timesheet has.</p>",
+        "images": [
+          {
+            "src": "assets/product/time-management/025.jpg",
+            "caption": "The Timesheet Template list"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Template cards",
+            "definition": "One card per template with a daily or weekly icon, its name and a three-dot menu. Click a card to open its editor. **Search** finds a template by name."
+          },
+          {
+            "term": "Create",
+            "definition": "Opens **Create Timesheet Template** with two choices: **Create Daily/Weekly by Day Template** and **Create Weekly Template**. Both ask for a **Timesheet Template Name** first.",
+            "images": [
+              {
+                "src": "assets/product/time-management/026.jpg",
+                "caption": "The Create Timesheet Template choices"
+              }
+            ]
+          },
+          {
+            "term": "Template editor",
+            "definition": "Shows **Standard Fields** that every template has (**Roster**, **Company/Project**, **Phase Code**, **Phase Code Description**), **Configurable Fields** and **Earnings Codes**. **Save Changes** stores it.",
+            "images": [
+              {
+                "src": "assets/product/time-management/027.jpg",
+                "caption": "The template editor"
+              }
+            ]
+          },
+          {
+            "term": "Add field",
+            "definition": "Adds a configurable field with a name and a type: **Form**, **Multi Select**, **Roster**, **Single Select**, **Text Box** or **Time**. Options can be added for the select types, a copy icon duplicates the field and the bin removes it."
+          },
+          {
+            "term": "Add Earnings Codes",
+            "definition": "Opens **Select Earnings Codes**, a list of the codes from **Earnings Codes** with their data type and the Payroll, Project and Split Header flags. Tick the ones this template uses and **Submit**. The chosen codes appear in the table with **Code**, **Description**, **Short Name**, **Type** and **Summary**.",
+            "images": [
+              {
+                "src": "assets/product/time-management/028.jpg",
+                "caption": "The Select Earnings Codes dialog"
+              }
+            ]
+          },
+          {
+            "term": "Split Time Headers",
+            "definition": "A **Column** switch in the editor, next to the label **Split Time Headers**."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Create a template",
+            "steps": [
+              "Open **Settings**, **Timesheet Settings**, **Timesheet Template** and click **Create**.",
+              "Choose **Create Daily/Weekly by Day Template** or **Create Weekly Template**.",
+              "Type the **Timesheet Template Name** and click **Submit**.",
+              "Click **Add Earnings Codes**, tick the codes and click **Submit**.",
+              "Use **Add field** for extra fields, then click **Save Changes**."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Payroll Locking",
+        "intro": "<p><strong>Payroll Locking</strong> chooses how often timesheet periods are locked for time management and productivity logs, as the page itself states.</p>",
+        "images": [
+          {
+            "src": "assets/product/time-management/029.jpg",
+            "caption": "Payroll Locking"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Daily, Weekly, Monthly",
+            "definition": "Three radio buttons for the locking period. Pick one and click **Save Changes**."
+          }
+        ]
+      },
+      {
+        "heading": "Exclude Projects",
+        "intro": "<p><strong>Exclude Projects</strong> lists the projects that you want left out of the global timesheet configuration.</p>",
+        "images": [
+          {
+            "src": "assets/product/time-management/030.jpg",
+            "caption": "Exclude Projects"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Project list",
+            "definition": "Shows the projects you can exclude; here it says **No Available Projects**. The page text says to select the projects that need to be excluded from the global timesheet configuration."
+          },
+          {
+            "term": "Filter",
+            "definition": "The filter icon beside the heading narrows the project list."
+          }
+        ]
+      },
+      {
+        "heading": "Users And Permissions",
+        "intro": "<p><strong>Users And Permissions</strong> creates user groups and sets what each group can do in Time Management.</p>",
+        "images": [
+          {
+            "src": "assets/product/time-management/031.jpg",
+            "caption": "Users And Permissions with no groups yet"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Add User Group",
+            "definition": "Opens a group page with **Enter Group Name** and two tabs, **Permissions** and **Users**. **Save Changes** stores the group."
+          },
+          {
+            "term": "Search by group name",
+            "definition": "Finds an existing user group."
+          },
+          {
+            "term": "Permissions matrix",
+            "definition": "A tree under **Time Management** with rows for **Settings** (**TimeSheet Mode**, **Earnings Codes**, **TimeSheet Templates**, **Payroll Locking**, **Exclude Projects**, **Innclock AI**, **Create Workflow**, **Assign Workflow**), **TimeSheet Fields**, **My Crew TimeSheet**, **Reconciliation** (**Gate Logs**, **Timesheets**), **My TimeSheet**, **Timesheet Issues**, **Timesheet Data Summary**, **Timesheet Dashboard** and **Import Data**. Columns are **View**, **Create**, **Edit**, **Delete**, **Admin**, **Download**, **Print**, **Assign To** and **Roll Back**; tick the ones the group gets. **Master Permission** ticks a whole branch.",
+            "images": [
+              {
+                "src": "assets/product/time-management/032.jpg",
+                "caption": "The group page with the permission matrix"
+              }
+            ]
+          },
+          {
+            "term": "Users tab",
+            "definition": "Chooses which users belong to the group."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Create a user group",
+            "steps": [
+              "Open **Settings**, **Timesheet Settings**, **Users And Permissions** and click **Add User Group**.",
+              "Type the group name.",
+              "In **Permissions**, tick the actions the group may do on each row.",
+              "Open **Users** and add the members.",
+              "Click **Save Changes**."
+            ]
           }
         ]
       }
@@ -40310,15 +39582,19 @@ const MODULES = [
     "sections": [
       "Overview",
       "Dashboard",
-      "My Timesheet",
       "My Crew Timesheet",
-      "Phase Codes",
+      "My Timesheet",
       "Timesheet Logs",
-      "Timesheet Issues",
+      "Issues",
       "Timesheet Data Summary",
       "Reconciliation",
-      "Rosters & Crews",
-      "Settings"
+      "Timesheet Workflow",
+      "Timesheet Mode",
+      "Earnings Codes",
+      "Timesheet Template",
+      "Payroll Locking",
+      "Exclude Projects",
+      "Users And Permissions"
     ]
   },
   {
@@ -40328,1413 +39604,532 @@ const MODULES = [
     "narrative": [
       {
         "heading": "Overview",
-        "intro": "<p>The <strong>Inventory Administrator</strong> (a System Administrator or inventory admin) sets up Inventory Locations, hauling trucks, ID formats, user groups and LOR approval workflows before anyone moves stock. A <strong>Global Data Administrator</strong> sets up the units and materials first.</p><p>Four more roles work from that setup: the <strong>Inventory Manager</strong> (store or yard in-charge) keeps stock and limits, the <strong>Order Creator</strong> raises External Orders, the <strong>Ticket Creator</strong> (dispatcher or weighbridge operator) records each load shipped, and the <strong>Report User</strong> (operations manager or PM) reviews the reports.</p>",
+        "intro": "<p><strong>Inventory Management</strong> keeps the stock of materials at each inventory location, takes requests for materials from sites, and records the materials issued out and returned back. From <strong>Home</strong>, open the <strong>Inventory Management</strong> tile.</p>",
         "definitions": [
           {
-            "term": "Inventory Location",
-            "definition": "A store, yard or stockpile that holds materials, their quantities and their stock limits, and is marked on the map with a geofence. Only active locations can be used when creating tickets."
-          },
-          {
-            "term": "Roles in Inventory Management",
-            "definition": "Global Data Administrator: UOMs, UOM groups and materials. Inventory Administrator: settings, ID settings, user groups, Inventory Locations and Hauling Trucks. Inventory Manager: monitors locations and keeps materials, quantities and stock limits. Order Creator: creates and manages External Orders. Ticket Creator: creates an External Ticket for each load shipped. Report User: reviews the Hauling Report and Client Portal report and records Material Reconciliation. Access for each role comes from user groups and their permissions."
-          },
-          {
-            "term": "Setup order",
-            "definition": "Set up in this order: UOMs and UOM groups, materials, Inventory Management Settings (fields, ID settings, groups and permissions, General), Inventory Locations with geofences, Hauling Trucks, materials and quantities at each location. Only then create External Orders and External Tickets."
+            "term": "Who uses it",
+            "definition": "Store and yard staff keep **Inventory Master** up to date. Site people raise a **Site Material Request**. Whoever ships the material fills the **Material Issue Ticket** and signs as **Shipped By**; the receiver signs as **Received By**. Access is given through user groups under **Settings**, **Users And Permissions**, where each screen (**Pickup Ticket**, **Ship Ticket**, **Return Ticket**, **Inventory Master**, **Overview**, **Hauling Trucks**, **Reports** and the settings pages) has View, Create, Edit, Delete and other switches."
           },
           {
             "term": "Before you start",
-            "definition": "Check that the UOMs and materials exist in Global Data, that the Inventory Management Settings are done (including ID Settings), that the Business Units, Projects and Customers you need exist, and that users are in user groups with the right permissions."
+            "definition": "The **Add** form of a location picks a material from a list, so materials and units (UOM) must already exist in Global Data. Create at least one inventory location in **Inventory Master**. Set up the approval level in **Settings**, **Work Flow**, and the ticket ID format in **Settings**, **ID Settings**."
           },
           {
-            "term": "Setup and creation flow",
-            "definition": "Steps 1 to 6 are one-time setup, then steps 7 to 9 repeat. (1) The Global Data Administrator adds UOMs and UOM groups under **Global Data → Company → UOM, Phasecodes and GL codes**. (2) The Global Data Administrator adds materials under **Global Data → Company → Cost → Material**. (3) The Inventory Administrator completes **Settings**: fields, ID settings, user groups and permissions, General. (4) The Inventory Administrator creates Inventory Locations with geofences on the **Inventory** tab. (5) The Inventory Administrator adds trucks under **Hauling Trucks**. (6) The Inventory Manager adds materials and quantities at each location. (7) The Order Creator creates External Orders under **Orders → External Orders**. (8) The Ticket Creator creates an External Ticket for each load under **Tickets → External Tickets**. (9) The Report User reviews the Hauling Report and Client Portal report and records Material Reconciliation under **Reports**."
-          },
-          {
-            "term": "Global Data Administrator: what you do",
-            "definition": "System Administrator or Cost Controller. You add the UOMs, UOM groups with conversion factors, and the materials (code, name, UOM, size and specifications, unit price) in Global Data. Inventory Management then lets people pick these materials and units."
-          },
-          {
-            "term": "Inventory Administrator: what you do",
-            "definition": "System Administrator or Inventory Admin. You complete **Settings** (order and ticket fields, ID Settings, Users and Permissions, General including UOM conversions and print copies), create Inventory Locations with geofences, add Hauling Trucks and mark trucks as blacklisted when needed. Do the ID Settings before the first ticket, because they lock afterwards."
-          },
-          {
-            "term": "Inventory Manager: what you do",
-            "definition": "Store or Yard In-charge. You watch the locations on the **Overview** map, add materials to each location with **Quantity**, **Minimum Required Quantity** and **Maximum Quantity**, top up stock with **Add Quantity**, and check the red flag and **Low Stock Items** for materials that need restocking."
-          },
-          {
-            "term": "Order Creator: what you do",
-            "definition": "Order Coordinator. You raise External Orders under **Orders → External Orders** for a Customer or a Project, add the materials with price, tax and quantity, and submit. The order shows as RAISED and becomes available on External Tickets. You can view or delete orders and update material details."
-          },
-          {
-            "term": "Ticket Creator: what you do",
-            "definition": "Dispatcher or Weighbridge Operator. For each load shipped, you open **Tickets → External Tickets**, click **+ Add**, choose the Hauling Vehicle, Order Number, Site Name, Product and UOM, enter the Gross or Net value, check the details on the right and click **Create**. You can set a ticket to Valid or Voided."
-          },
-          {
-            "term": "Report User: what you do",
-            "definition": "Operations Manager or Project Manager. You review the **Hauling Report** (every load moved), the **Client Portal** report (how much of each order is delivered) and record **Material Reconciliation** when a surveyed stockpile differs from the stock in Arena."
-          },
-          {
-            "term": "Earlier-version screens",
-            "definition": "Some environments running an earlier version show different screens: an **Inventory Master** list, **Site Material Request** (earlier called Pick Up Ticket), **Material Issue Ticket** (earlier called Ship Ticket) and **Return Ticket** tabs, and no Overview map, Orders, Hauling Trucks, External Tickets or Reports tabs. Load Out Requests for equipment are under Equipment Management → Load Out Request, not here."
-          },
-          {
-            "term": "Where this data comes from and where it goes",
-            "definition": "Inventory Management reads its master lists from other places and passes its results on. **In:** UOMs, UOM groups and materials come from **Global Data → Company → UOM, Phasecodes and GL codes** and **Global Data → Company → Cost → Material**; customers come from Global Data (through its approval workflow if one is on); projects and Business Units come from the organisation's existing projects and Business Units; users (Inventory manager, Requested By, group members) come from the users in Arena; stock also arrives from **Procurement** when a purchase order is confirmed by a Delivery Receipt. **Out:** External Tickets feed the **Hauling Report** and **Client Portal** report and the delivered and remaining quantities on each External Order; stock held at a location feeds **Material Reconciliation**, the low-stock flag and the **Overview** map; the **Inventory Management** card in **Field Works → Progress** lets site users raise Site Material Requests against the same locations. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
+            "term": "The screens",
+            "definition": "**Inventory Master** lists the inventory locations and the materials and quantities held at each. **Site Material Request** is where sites ask for materials; rejected ones are on their own sub-tab. **Material Issue Ticket** records materials shipped out of a location against a request. **Return Ticket** records materials sent back to a location. **Settings** configures the fields of each ticket, user groups, approval levels, ID formats and printing."
           }
         ],
         "procedures": [
           {
-            "title": "Set up Inventory Management for the first time",
+            "title": "How the pieces fit",
             "steps": [
-              "In Global Data, add the UOMs and UOM groups, then the materials.",
-              "Open <strong>Home → Inventory Management → Settings</strong> and set the External Orders and Tickets fields, <strong>ID Settings</strong>, <strong>Users and Permissions</strong> and <strong>General</strong>.",
-              "On the <strong>Inventory</strong> tab, create the Inventory Locations with geofences.",
-              "Open <strong>Hauling Trucks</strong> and add the trucks.",
-              "Open each location and add its materials with quantities and minimum and maximum limits.",
-              "Tell Order Creators and Ticket Creators they can now create External Orders and External Tickets."
-            ],
-            "note": "Do not create tickets until ID Settings are final."
-          }
-        ]
-      },
-      {
-        "heading": "UOMs & Materials",
-        "intro": "<p>A Global Data Administrator sets up the units of measurement and the materials once, and Inventory Management then uses them. Do this before anything else, because locations, orders and tickets all pick materials and UOMs from here.</p>",
-        "definitions": [
-          {
-            "term": "UOMs and UOM Groups",
-            "definition": "In **Global Data → Company → UOM, Phasecodes and GL codes**, the **UOMs** tab holds the units (**Add UOM**, enter the name, **Submit**). **UOM Groups** holds conversions: **Add UOM Group**, name the group, choose the UOMs and enter the **Conversion Factor**. The **UOM Conversions** tab only shows the resulting conversions. Conversions apply only when UOMs are chosen while creating materials."
-          },
-          {
-            "term": "Materials (Global Data)",
-            "definition": "In **Global Data → Company → Cost**, choose **Material** under Cost Type, select or create a rate card under Material Code, and click **Add Material**. Enter **Material Code** (unique), **Material Name**, **UOM**, **Size and Specifications** and **Unit Price**, then **Submit**."
-          },
-          {
-            "term": "Where this data comes from: material and UOM lists",
-            "definition": "The **Material** dropdown when you add stock to a location lists the materials from **Global Data → Company → Cost → Material** (the rate card you chose), shown as Material Name with its Material Cost Code (checked live: for example Granular Material (10003013) and material123 (m1) appear in both places). The **UOM** lists on locations, orders and tickets come from the material's UOM and the UOM conversions in **UOM, Phasecodes and GL codes**; on a ticket the UOM dropdown shows the product's global UOM plus its conversion UOMs. Conversions only apply when **UOM Conversions Required** is on under **Settings → General**."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Add a UOM group with conversions",
-            "steps": [
-              "Go to <strong>Global Data → Company → UOM, Phasecodes and GL codes</strong>.",
-              "On the <strong>UOMs</strong> tab, click <strong>Add UOM</strong> for any missing unit and <strong>Submit</strong>.",
-              "Open <strong>UOM Groups</strong> and click <strong>Add UOM Group</strong>.",
-              "Enter the group name, choose the UOMs and the <strong>Conversion Factor</strong>, and click <strong>Submit</strong>."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/inventory-management/001.jpg",
-                "caption": "UOM, Phasecodes and GL codes in Global Data",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/inventory-management/002.jpg",
-                "caption": "Add UOM on the UOMs tab",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/inventory-management/003.jpg",
-                "caption": "UOM name entered",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/inventory-management/004.jpg",
-                "caption": "Add UOM Group on the UOM Groups tab",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/inventory-management/005.jpg",
-                "caption": "UOM group name, UOMs and Conversion Factor",
-                "step": 4
-              },
-              {
-                "src": "assets/guides/inventory-management/006.jpg",
-                "caption": "UOM Conversions tab",
-                "step": 4
-              }
-            ]
-          },
-          {
-            "title": "Add a material to Global Data",
-            "steps": [
-              "Go to <strong>Global Data → Company → Cost</strong> and click <strong>Material</strong> under Cost Type.",
-              "Select a rate card, or create a rate card template, under Material Code.",
-              "Click <strong>Add Material</strong> and enter the code, name, UOM, size and specifications and unit price.",
-              "Click <strong>Submit</strong>."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/inventory-management/007.jpg",
-                "caption": "Cost settings in Global Data",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/inventory-management/008.jpg",
-                "caption": "Material under Cost Type",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/inventory-management/009.jpg",
-                "caption": "Rate card under Material Code",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/inventory-management/010.jpg",
-                "caption": "Add Material button",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/inventory-management/011.jpg",
-                "caption": "Material details form",
-                "step": 3
-              }
+              "Open **Inventory Master** and make sure the location has the materials and quantities.",
+              "Open **Site Material Request**, click **Add**, fill the form and click **Submit for Approval**.",
+              "When the request is approved, open **Material Issue Ticket** and click **Add**.",
+              "Pick the **Site Material Request**, choose **Ship Material From**, enter **Ship Now** for each material, sign and click **Submit**.",
+              "The receiver signs the same ticket as **Received By**.",
+              "If material comes back, open **Return Ticket**, click **Add**, pick the request, choose **Return Material To** and enter **Return Now**."
             ]
           }
         ]
       },
       {
-        "heading": "Inventory Locations",
-        "intro": "<p>An <strong>Inventory Location</strong> is a store, yard or stockpile that holds materials, and it is marked on a map with a geofence. The Inventory Administrator creates locations, and Inventory Managers watch them on the <strong>Overview</strong> map. Only active locations can be used on ship tickets.</p>",
-        "definitions":[
-          {
-            "term": "Create Inventory Location fields",
-            "definition": "**Location Name**, **Location ID** (unique), **Location Type**, **Inventory manager** (one or more users), **Business Unit**, **Project** (if it applies), the **Active** toggle and the **Geofence**."
-          },
-          {
-            "term": "Geofence",
-            "definition": "The boundary of the location on the map, made of at least three points. In **Add Geofences**, check the **Geofence Name** and **Geofence Code** (city, state and country fill in from the points), then either search an address and click the exact point, or click points straight on the map. **Undo Last Point** removes one point and **Clear All** removes them all. The geofence saves only when the location is created."
-          },
-          {
-            "term": "Overview map",
-            "definition": "The default tab of Inventory Management. It shows every location on a map with its geofence in yellow. Click a geofence to see the location name and the materials with quantities, and click the link at the top to open the location. Switch between **Map** and **Satellite**, use the filter icon to search by name or code or filter by city, state or country, go full screen, or use Street View with the Pegman icon."
-          },
-          {
-            "term": "Inventory Locations list",
-            "definition": "Search by name, check the geofence icon, flip the **Active** toggle, or use the edit icon in Actions. **Filters** narrow by Business Units, Project, Material and Active or Inactive. See the Lists section for columns, layouts and Excel."
-          },
-          {
-            "term": "Where this data comes from: location fields",
-            "definition": "**Inventory manager** lists Arena users. **Business Unit** and **Project** list your organisation's Business Units and projects. **Location Type** is a fixed list. Locations then feed the Site, Ship Material From and Inventory pickers on orders, tickets and Material Reconciliation, and the **Overview** map; only **Active** locations can be used on tickets."
-          },
-          {
-            "term": "Earlier version: Inventory Master (Locations list)",
-            "definition": "In earlier-version environments, **Inventory Management → Inventory Master** opens the list of locations as cards, each with a **more_vert** actions menu. The list has **Add Location**, search, **Export**, **Filters**, **Manage Columns** and saved views."
-          },
-          {
-            "term": "Earlier version: required fields on Create Inventory Location",
-            "definition": "**Location Name**, **Location ID** and **Inventory manager** are required. **Location Type**, **Business Unit**, **Project** and the **Active** toggle are optional."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Create an Inventory Location",
-            "steps": [
-              "Open the <strong>Inventory</strong> tab and click <strong>Add Location</strong>.",
-              "Enter the <strong>Location Name</strong>, <strong>Location ID</strong>, <strong>Location Type</strong>, <strong>Inventory manager</strong>, <strong>Business Unit</strong> and <strong>Project</strong>.",
-              "Turn on <strong>Active</strong>.",
-              "Click <strong>Add Geofences</strong>, place at least three points and click <strong>Add Geofence</strong>.",
-              "Click <strong>Create</strong>."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/inventory-management/060.jpg",
-                "caption": "Add Location on the Inventory tab",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/inventory-management/061.jpg",
-                "caption": "Create Inventory Location dialog",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/inventory-management/062.jpg",
-                "caption": "Inventory Location details",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/inventory-management/063.jpg",
-                "caption": "Active toggle",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/inventory-management/064.jpg",
-                "caption": "Add Geofences button",
-                "step": 4
-              },
-              {
-                "src": "assets/guides/inventory-management/065.jpg",
-                "caption": "Create button",
-                "step": 5
-              }
-            ]
-          },
-          {
-            "title": "Find a location on the Overview map",
-            "steps": [
-              "Open <strong>Inventory Management</strong>. The <strong>Overview</strong> tab shows the map.",
-              "Use the filter icon to search by name or code, or filter by city, state or country, then click <strong>Apply</strong>.",
-              "Click the yellow geofence to see its materials, and click the link at the top to open the location."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/inventory-management/093.jpg",
-                "caption": "Overview tab with the map",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/inventory-management/094.jpg",
-                "caption": "Geofences highlighted in yellow",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/inventory-management/095.jpg",
-                "caption": "Location details with the materials held",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/inventory-management/096.jpg",
-                "caption": "Link that opens the Inventory Location",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/inventory-management/097.jpg",
-                "caption": "Map and Satellite views",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/inventory-management/098.jpg",
-                "caption": "Filter icon on the map",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/inventory-management/099.jpg",
-                "caption": "Apply and Save filters on the map",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/inventory-management/100.jpg",
-                "caption": "Full-screen map",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/inventory-management/101.jpg",
-                "caption": "Map controls",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/inventory-management/102.jpg",
-                "caption": "Street View with the Pegman icon",
-                "step": 3
-              }
-            ]
-          },
-          {
-            "title": "Bulk upload Inventory Locations from Excel",
-            "steps": [
-              "On the <strong>Inventory</strong> tab, click <strong>Export → Upload Excel</strong> to get the sample format.",
-              "Click the hyperlink to download the Excel file.",
-              "Fill in the details as the instructions say, and save the file.",
-              "Upload the completed file."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/inventory-management/089.jpg",
-                "caption": "Sample Excel download link",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/inventory-management/090.jpg",
-                "caption": "Sample Excel file",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/inventory-management/091.jpg",
-                "caption": "Upload the completed file",
-                "step": 4
-              },
-              {
-                "src": "assets/guides/inventory-management/092.jpg",
-                "caption": "Completed file uploaded",
-                "step": 4
-              }
-            ]
-          },
-          {
-            "title": "Filter and save views of Inventory Locations",
-            "steps": [
-              "Click <strong>Filters</strong> on the <strong>Inventory</strong> tab and choose Business Units, Project, Material or Active / Inactive.",
-              "Click <strong>Apply</strong>. Click <strong>Save filters</strong> to keep the selection, or <strong>Clear all</strong>.",
-              "Use <strong>Manage Columns</strong> and the <strong>Save layout</strong> icon to keep your column layout."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/inventory-management/080.jpg",
-                "caption": "Filters on the Inventory Locations list",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/inventory-management/081.jpg",
-                "caption": "Filter values and Apply",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/inventory-management/082.jpg",
-                "caption": "Save filters and Clear all",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/inventory-management/083.jpg",
-                "caption": "Manage Columns",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/inventory-management/084.jpg",
-                "caption": "Columns shown, hidden or reordered",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/inventory-management/085.jpg",
-                "caption": "Save layout icon",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/inventory-management/086.jpg",
-                "caption": "Multiple layouts icon",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/inventory-management/087.jpg",
-                "caption": "List view",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/inventory-management/088.jpg",
-                "caption": "Grid view",
-                "step": 3
-              }
-            ]
-          },
-          {
-            "title": "Add a geofence to a location",
-            "steps": [
-              "In <strong>Create Inventory Location</strong>, click <strong>Add Geofences</strong>.",
-              "On the <strong>Details</strong> tab, check the <strong>Geofence Name</strong> and <strong>Geofence Code</strong>. City, state and country fill in from the points.",
-              "Search the address, city, state and postal code and click the exact point, or drag the map and click to place points.",
-              "Place at least three points. Use <strong>Undo Last Point</strong> or <strong>Clear All</strong> to correct them.",
-              "Click <strong>Add Geofence</strong>, then click <strong>Create</strong> on the location."
-            ],
-            "note": "The geofence is saved only when the Inventory Location is created.",
-            "images": [
-              {
-                "src": "assets/guides/inventory-management/066.jpg",
-                "caption": "Geofence window",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/inventory-management/067.jpg",
-                "caption": "Geofence Name and Geofence Code on the Details tab",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/inventory-management/068.jpg",
-                "caption": "Searching for an address on the map",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/inventory-management/069.jpg",
-                "caption": "Point placed on the map with its coordinates",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/inventory-management/070.jpg",
-                "caption": "Dragging the map to the location",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/inventory-management/071.jpg",
-                "caption": "Clicking the map to add a point",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/inventory-management/073.jpg",
-                "caption": "Undo Last Point and Clear All",
-                "step": 4
-              },
-              {
-                "src": "assets/guides/inventory-management/074.jpg",
-                "caption": "Add Geofence button",
-                "step": 4
-              },
-              {
-                "src": "assets/guides/inventory-management/075.jpg",
-                "caption": "Clear all button",
-                "step": 4
-              }
-            ]
-          }
-        ],
+        "heading": "Locations Map",
+        "intro": "<p>The page you land on when you open <strong>Inventory Management</strong> is meant to show your inventory locations on a map. A filter button narrows which locations appear.</p>",
         "images": [
           {
-            "src": "assets/guides/inventory-management/076.jpg",
-            "caption": "Search on the Inventory Locations list"
-          },
-          {
-            "src": "assets/guides/inventory-management/077.jpg",
-            "caption": "Geofence icon on a location"
-          },
-          {
-            "src": "assets/guides/inventory-management/078.jpg",
-            "caption": "Active toggle on the list"
-          },
-          {
-            "src": "assets/guides/inventory-management/079.jpg",
-            "caption": "Edit icon under Actions"
-          }
-        ]
-      },
-      {
-        "heading": "Materials",
-        "intro": "<p>Each Inventory Location has its own list of materials with quantities and stock limits. The Inventory Manager adds materials, sets minimum and maximum quantities, and tops up stock. A red flag marks any material that has fallen below its minimum.</p>",
-        "definitions":[
-          {
-            "term": "Add material fields",
-            "definition": "**Material** (from the materials in Global Data), **Quantity** (held now), **Minimum Required Quantity** (below this the material shows as low stock), **Maximum Quantity**, **UOM** and an optional **Icon**. Minimum and maximum must be greater than 0."
-          },
-          {
-            "term": "Low stock flag and history",
-            "definition": "A red flag beside a material means it is low at this location, and **Low Stock Items** lists all of them. **See History** shows the history of a material at the location. **Add Custom Column** adds your own column to the table."
-          },
-          {
-            "term": "Where this data comes from and where it goes",
-            "definition": "Quantities come from three places: what the Inventory Manager enters with **+ Add** and **Add Quantity**, bulk **Upload Excel**, and stock received through **Procurement** when a Delivery Receipt confirms a purchase order. **See History** records each change. The quantity at a location feeds the low-stock flag and **Low Stock Items**, **Stock Available** on tickets, the **Overview** map and **Current Available** in **Material Reconciliation**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
-          },
-          {
-            "term": "Earlier version: materials at a location",
-            "definition": "Opening a location from **Inventory Master** shows **Add**, **Add Custom Column**, **Low Stock Items**, **Add Quantity**, **Export** and **Manage Columns**. Columns: **Image**, **Material Name**, **Quantity**, **Minimum Required Quantity**, **Maximum Quantity**, **UOM**, **Size & Specifications**, **See History** and **Actions** (edit, delete)."
+            "src": "assets/product/inventory-management/001.jpg",
+            "caption": "The landing page with the filter panel open (the map did not load here)"
           }
         ],
-        "procedures": [
-          {
-            "title": "Add a material to a location",
-            "steps": [
-              "Click the Inventory Location to open it and click <strong>+ Add</strong>.",
-              "Choose the <strong>Material</strong> and enter the <strong>Quantity</strong>, <strong>Minimum Required Quantity</strong>, <strong>Maximum Quantity</strong> and <strong>UOM</strong>.",
-              "Click <strong>Submit</strong>. Repeat for other materials."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/inventory-management/103.jpg",
-                "caption": "Inventory Location page",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/inventory-management/104.jpg",
-                "caption": "+ Add button for a material",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/inventory-management/105.jpg",
-                "caption": "Material details form",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/inventory-management/106.jpg",
-                "caption": "Submit on the material form",
-                "step": 3
-              }
-            ]
-          },
-          {
-            "title": "Add quantity to a material",
-            "steps": [
-              "Open the location and click <strong>Add Quantity</strong>.",
-              "Choose the material. Its current details show.",
-              "Enter the extra quantity and click <strong>Submit</strong>."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/inventory-management/120.jpg",
-                "caption": "Add Quantity button",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/inventory-management/121.jpg",
-                "caption": "Material dropdown with its current details",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/inventory-management/122.jpg",
-                "caption": "Additional quantity and Submit",
-                "step": 3
-              }
-            ]
-          },
-          {
-            "title": "Bulk create or update materials at a location",
-            "steps": [
-              "Open the location and click <strong>Export → Upload Excel</strong>.",
-              "Choose <strong>Create</strong> or <strong>Update</strong>, then download the sample file.",
-              "Fill it in, save it and upload it."
-            ],
-            "note": "Use **Export → Download** to save the current records to Excel.",
-            "images": [
-              {
-                "src": "assets/guides/inventory-management/115.jpg",
-                "caption": "Export, Upload Excel and the sample format",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/inventory-management/116.jpg",
-                "caption": "Filling in the Excel file",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/inventory-management/117.jpg",
-                "caption": "Excel file with material details",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/inventory-management/118.jpg",
-                "caption": "Uploading the completed file",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/inventory-management/119.jpg",
-                "caption": "Export, Download Excel",
-                "step": 2
-              }
-            ]
-          },
-          {
-            "title": "Check the history of a material or find low stock",
-            "steps": [
-              "Open the Inventory Location.",
-              "Look for a red flag beside a material, or click <strong>Low Stock Items</strong> to list every material below its minimum.",
-              "Click <strong>See History</strong> to view the history of a material at the location.",
-              "Use <strong>Add Custom Column</strong> or <strong>Manage Columns</strong> to change what the table shows."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/inventory-management/108.jpg",
-                "caption": "See History for a material",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/inventory-management/109.jpg",
-                "caption": "Red flag on a low-stock material",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/inventory-management/110.jpg",
-                "caption": "Low Stock Items button",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/inventory-management/111.jpg",
-                "caption": "Low Stock Items list",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/inventory-management/112.jpg",
-                "caption": "Search for a material",
-                "step": 3
-              }
-            ]
-          },
-          {
-            "title": "Edit or delete a material at a location",
-            "steps": [
-              "Open the Inventory Location and find the material.",
-              "Click the edit icon under <strong>Actions</strong> to change it, or the delete icon to remove it."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/inventory-management/107.jpg",
-                "caption": "Edit and Delete icons under Actions",
-                "step": 2
-              }
-            ]
-          },
-          {
-            "title": "Add a custom column to the materials list",
-            "steps": [
-              "Open the Inventory Location.",
-              "Click <strong>Add Custom Column</strong>.",
-              "Choose the field type and enter the column name.",
-              "Use <strong>Manage Columns</strong> to show, hide or reorder it."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/inventory-management/113.jpg",
-                "caption": "Add Custom Column button",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/inventory-management/114.jpg",
-                "caption": "Manage Columns on the materials list",
-                "step": 4
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "heading": "External Orders",
-        "intro": "<p>An <strong>External Order</strong> lists the materials to be supplied to a customer or a project. The Order Creator raises it from <strong>Orders → External Orders</strong>, and it then becomes available for External Tickets. New orders show the status <strong>RAISED</strong>.</p>",
         "definitions": [
           {
-            "term": "External Orders list",
-            "definition": "Search by Ticket Number. Columns include **Status**, **Order Date**, **Customers**, **Project**, **Materials** and **Actions** (view or delete). Click an order to view it and update material details. **Filters** narrow by Customer, Status, Ticket Number, Locations, Projects and Ordered Date Range."
+            "term": "Filter button",
+            "definition": "The sliders icon at the top right opens a panel with **Search by Geofence Name or Code**, **City**, **State** and **Country**. **Apply** filters the map, **Clear All** resets and **Save Filters** keeps the choice."
           },
           {
-            "term": "External Order fields",
-            "definition": "**Order Date**, **Order Description**, **Type** (Customer or Project), **Customer** (with **Add Customer**), phone number (automatic), **Location** (with **Add Location**), **Project**, **Customer Reference Number**, address, city, state and zip (automatic for a customer), **Requested By**, then for each material the **Material**, **UOM**, **Price**, **Tax (%)** and **Quantity**."
-          },
-          {
-            "term": "External Order status",
-            "definition": "A new External Order shows the status **RAISED** and is available for selection while creating External Tickets. Delivery progress against the order is then tracked in **Reports → Client Portal**."
-          },
-          {
-            "term": "Where this data comes from and where it goes",
-            "definition": "On an External Order, **Customer** comes from the customers in Global Data (Add Customer is hidden when customer creation has an approval workflow there), **Location** lists that customer's locations, and **Phone Number**, **Address**, **City**, **State** and **Zip Code** fill in from the customer and location. **Project** lists projects, **Requested By** lists users, and **Material** and **UOM** come from the Global Data materials. A submitted order (status RAISED) appears in the **Order Number** list on External Tickets, and its delivered quantity grows as tickets are created."
+            "term": "Map message",
+            "definition": "When Google Maps does not load, the page shows **Sorry! Something went wrong** and the map area stays empty. The tabs above still work."
           }
-        ],
-        "procedures": [
-          {
-            "title": "Create an External Order for a customer",
-            "steps": [
-              "Open <strong>Orders → External Orders</strong> and click <strong>+ Add</strong>.",
-              "Set <strong>Type</strong> to <strong>Customer</strong> and fill in the order details.",
-              "If you need a delivery point on the map, click <strong>Add Geofence</strong>, choose to update the existing geofence or create a new one, place at least three points and click <strong>Done</strong>.",
-              "Click <strong>Add Material</strong> for each material (the delete icon removes a line).",
-              "Click <strong>Submit</strong>."
-            ],
-            "note": "If customer creation has an approval workflow in Global Data, **Add Customer** is not available. The geofence saves only when the order is submitted, and then appears on the Overview map.",
-            "images": [
-              {
-                "src": "assets/guides/inventory-management/139.jpg",
-                "caption": "External Orders form opened with + Add",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/inventory-management/140.jpg",
-                "caption": "Type set to Customer",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/inventory-management/141.jpg",
-                "caption": "Add Geofence for the delivery location",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/inventory-management/142.jpg",
-                "caption": "Update the existing geofence or create a new one",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/inventory-management/143.jpg",
-                "caption": "Geofence points on the map with Done",
-                "step": 3
-              }
-            ]
-          },
-          {
-            "title": "Create an External Order for a project",
-            "steps": [
-              "Click <strong>+ Add</strong> and set <strong>Type</strong> to <strong>Project</strong>.",
-              "Choose the <strong>Project</strong> and fill in the other details.",
-              "Click <strong>Add Material</strong> for each material and click <strong>Submit</strong>."
-            ]
-          },
-          {
-            "title": "Bulk upload External Orders from Excel",
-            "steps": [
-              "On <strong>Orders → External Orders</strong>, click <strong>Export → Upload Excel</strong> and download the sample format.",
-              "Fill in the file as the instructions say and save it.",
-              "Upload the completed file. Use <strong>Export → Download</strong> to save the current orders."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/inventory-management/135.jpg",
-                "caption": "Export, Upload Excel and the sample format",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/inventory-management/136.jpg",
-                "caption": "Filling in the order Excel file",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/inventory-management/137.jpg",
-                "caption": "Uploading the completed order file",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/inventory-management/138.jpg",
-                "caption": "Export, Download Excel for orders",
-                "step": 3
-              }
-            ]
-          }
-        ],
+        ]
+      },
+      {
+        "heading": "Inventory Master",
+        "intro": "<p><strong>Inventory Master</strong> lists your inventory locations. Open one to see the materials held there, their quantities and their minimum and maximum limits.</p>",
         "images": [
           {
-            "src": "assets/guides/inventory-management/123.jpg",
-            "caption": "Orders tab"
-          },
-          {
-            "src": "assets/guides/inventory-management/124.jpg",
-            "caption": "External Orders list"
-          },
-          {
-            "src": "assets/guides/inventory-management/125.jpg",
-            "caption": "Search by Ticket Number"
-          },
-          {
-            "src": "assets/guides/inventory-management/126.jpg",
-            "caption": "Order list columns"
-          },
-          {
-            "src": "assets/guides/inventory-management/127.jpg",
-            "caption": "View and Delete icons under Actions"
-          },
-          {
-            "src": "assets/guides/inventory-management/128.jpg",
-            "caption": "Order details"
-          },
-          {
-            "src": "assets/guides/inventory-management/129.jpg",
-            "caption": "Filters on External Orders"
-          },
-          {
-            "src": "assets/guides/inventory-management/130.jpg",
-            "caption": "Filter values selected"
-          },
-          {
-            "src": "assets/guides/inventory-management/131.jpg",
-            "caption": "Apply and Save filters"
-          },
-          {
-            "src": "assets/guides/inventory-management/132.jpg",
-            "caption": "Manage Columns on External Orders"
-          },
-          {
-            "src": "assets/guides/inventory-management/133.jpg",
-            "caption": "List view of External Orders"
-          },
-          {
-            "src": "assets/guides/inventory-management/134.jpg",
-            "caption": "Grid view of External Orders"
-          }
-        ]
-      },
-      {
-        "heading": "Hauling Trucks",
-        "intro": "<p>The <strong>Hauling Trucks</strong> page lists the trucks used on External Tickets, with their weights, measurements and permits. The Inventory Administrator adds trucks, and the Ticket Creator picks them when recording a load.</p>",
-        "definitions": [
-          {
-            "term": "Hauling Trucks list",
-            "definition": "Search by Trucking Company. Columns include **Trucking Company**, **License Plate**, **VIN**, **Manufactured Year**, **Make**, **Driver**, **Truck**, **Five-S test Number**, **Tare Weight**, **Tare Weight UOM**, **Tag**, **Max Weight** and **Adj Max Weight**. In Actions, **Mark as Blacklist** stops a truck being used, and the edit and delete icons change or remove it."
-          },
-          {
-            "term": "Add Hauling Truck fields",
-            "definition": "Required: **Trucking Company**, **License Plate**, **Truck**, **Five-S test Number**, and **Tare Weight** with its UOM. Optional: **VIN**, year, make, driver, **Tag**, **Max Weight**, **Adj Max Weight**, bed and dog house measurements, **Aprx CY**, **Measured CY**, **Freight Rate**, **Insurance** with its date, **Overweight Permit** and **Bedliner**."
-          },
-          {
-            "term": "Where this data comes from and where it goes",
-            "definition": "Truck details are typed in on the Add Hauling Truck form (**Tare Weight UOM** is picked from the UOM list). The truck is then available in **Hauling Vehicle** on External Tickets, and its Trucking Company, Five-S test Number and Tag show in the **Hauling Report**. A truck marked **Blacklist** can no longer be used."
+            "src": "assets/product/inventory-management/002.jpg",
+            "caption": "Inventory Master, card view of locations"
           }
         ],
-        "procedures": [
-          {
-            "title": "Add a hauling truck",
-            "steps": [
-              "Open <strong>Inventory Management → Hauling Trucks</strong> and click <strong>+ Add</strong>.",
-              "Fill in the required fields and any optional ones.",
-              "Click <strong>Add</strong>."
-            ],
-            "note": "The truck is then available when creating External Tickets."
-          },
-          {
-            "title": "Stop a truck being used",
-            "steps": [
-              "Find the truck in the <strong>Hauling Trucks</strong> list.",
-              "Under <strong>Actions</strong>, click <strong>Mark as Blacklist</strong>."
-            ]
-          }
-        ]
-      },
-      {
-        "heading": "External Tickets",
-        "intro": "<p>An <strong>External Ticket</strong> records one load shipped against an External Order: the truck, the site, the product and the weight. The Ticket Creator, usually a dispatcher or weighbridge operator, creates one for every load. Once created, the Gross value cannot be changed.</p>",
         "definitions": [
           {
-            "term": "External Tickets list",
-            "definition": "Search by Ship Ticket Number. Columns include **Inventory Location**, **Customer**, **Project**, **Trucking Company**, **Vehicle Plate**, **Product** and **Gross Units**. The **Status** dropdown sets a ticket to **Valid** or **Voided**. **Filters** narrow by Inventory Locations, Hauling Trucks, Projects, Customer, Order Number and Delivered Date Range."
-          },
-          {
-            "term": "External Ship Ticket Form fields",
-            "definition": "**Hauling Vehicle**, **Order Number** (the External Order), **Site Name** (shown from the materials in the order), **Product** (shown from the site), **UOM**, **Gross / Net** (enter one and the other is calculated), **Date and Time** (automatic, editable), **Notes**, and **Status** with **Status Notes**."
-          },
-          {
-            "term": "Ticket rules",
-            "definition": "A ticket is created only if the truck's Tare Weight UOM is one of the product's UOMs. The Net weight cannot be more than the ordered weight or the remaining weight. For a project order, the form also shows an **Overweight Check** of Passed or Failed."
-          },
-          {
-            "term": "Ticket details panel",
-            "definition": "The right side of the form is read-only. For a customer order it shows Customer Name, Site Address, Trucking Company, Max Weight, Adjusted Max Weight, Tare, Net Ordered Weight, Stock Available, Order Total Weight (in stock UOM and as ordered), Shipped Quantity and Order Description. A project order shows Project and Location in place of the customer details."
-          },
-          {
-            "term": "External Ticket loop",
-            "definition": "The Order Creator raises the External Order. The Ticket Creator records each load against it as a ticket. The tickets feed the **Hauling Report** (what moved, which truck) and the **Client Portal** report (Delivered against Units, Remaining and Fulfillment Progress). The Inventory Manager sees stock at the site change in the location."
-          },
-          {
-            "term": "Where this data comes from and where it goes",
-            "definition": "**Hauling Vehicle** lists the trucks from **Hauling Trucks**. **Order Number** lists the External Orders raised in **External Orders**. **Site Name** is limited to the sites that hold the materials of the selected order, **Product** to the products at that site, and **UOM** to the product's UOMs (global plus conversions). The right-hand panel (Stock Available, Net Ordered Weight, Shipped Quantity) is read from the order and the location. A saved ticket feeds the **Hauling Report**, the **Client Portal** report and the **Ship Tickets** page of its order. Whether a ticket reduces the stock held at the location is not stated in the guide. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Create an External Ticket for a load",
-            "steps": [
-              "Open <strong>Tickets → External Tickets</strong> and click <strong>+ Add</strong>.",
-              "Choose the <strong>Hauling Vehicle</strong> and the <strong>Order Number</strong>.",
-              "Choose the <strong>Site Name</strong>, <strong>Product</strong> and <strong>UOM</strong>, then enter the <strong>Gross</strong> or <strong>Net</strong> value.",
-              "Check the details on the right side of the form.",
-              "Click <strong>Create</strong> and confirm."
-            ],
-            "note": "The Gross value cannot be changed after the ticket is created, so check it first."
-          },
-          {
-            "title": "Void an External Ticket",
-            "steps": [
-              "Find the ticket in the <strong>External Tickets</strong> list.",
-              "Set <strong>Status</strong> to <strong>Voided</strong>, or open the ticket and update <strong>Status</strong> and <strong>Status Notes</strong>."
-            ]
-          }
-        ]
-      },
-      {
-        "heading": "Reports",
-        "intro": "<p>The <strong>Reports</strong> tab has three reports for the Report User (an operations manager or PM): the <strong>Hauling Report</strong> for every load moved, the <strong>Client Portal</strong> for order delivery progress, and <strong>Material Reconciliation</strong> for matching surveyed stock to Arena.</p>",
-        "definitions": [
-          {
-            "term": "Hauling Report",
-            "definition": "Every ticket in date and time order, showing the trucker, Five-S test Number, tag, site, material, customer or project, order and net quantity. The column headers show the ticket count, trucker count and net total. Use **Search by Tickets**, **Filters** and **Export**. The export also has **Gross**, **Time In**, **Time Out** and **Delivery Time (Hours)**."
-          },
-          {
-            "term": "Client Portal report",
-            "definition": "Each order with its customer or project, product, ordered units, delivered quantity, UOM and a progress bar. Search by Pickup Ticket, open an order to see its **Ship Tickets** page, and use **Export** for the ticket list."
-          },
-          {
-            "term": "Ship Tickets page",
-            "definition": "One order and one material, with KPIs: **Ordered Qty**, **Delivered**, **Remaining** (ordered minus delivered), **Total Loads** (one per ticket), **Avg Load Size** (delivered divided by loads) and **Fulfillment Progress** (delivered divided by ordered). The ticket list shows Tickets, Site, Gross (Net Weight), Date, Time and Hauling Truck."
-          },
-          {
-            "term": "Material Reconciliation",
-            "definition": "Compares the surveyed stockpile (**Propeller**) with the **Current Available** quantity in Arena for a material at a location. Each entry shows **Delta** (surveyed minus current) and **Delta %**, plus the date, time and creator. A gain shows green and a loss shows red."
-          },
-          {
-            "term": "Who uses which report",
-            "definition": "The Report User (Operations Manager or Project Manager) uses all three. The Hauling Report answers what moved, by which truck and when. The Client Portal answers how much of each order is delivered. Material Reconciliation answers whether the stock in Arena matches the surveyed stockpile."
-          },
-          {
-            "term": "Where this data comes from",
-            "definition": "**Hauling Report** is built from External Tickets; **Client Portal** compares each External Order's ordered quantity with the quantity delivered on its tickets; **Material Reconciliation** takes **Current Available** from the Inventory Location and compares it with the surveyed quantity you enter. Its **Inventory** and **Material** pickers list your Inventory Locations and materials."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Run the Hauling Report",
-            "steps": [
-              "Open <strong>Inventory Management → Reports</strong> and click <strong>Hauling Report</strong>.",
-              "Search by ticket or use <strong>Filters</strong>.",
-              "Check the ticket count, trucker count and net total, then click <strong>Export</strong>."
+            "term": "Add Location",
+            "definition": "Opens **Create Inventory Location**: **Location Name** and **Location ID** (both required), **Location Type** (**SHOP** or **LOCATION**), **Inventory manager** (required), **Business Unit**, **Project** and an **Active** switch. **Create** saves it.",
+            "images": [
+              {
+                "src": "assets/product/inventory-management/003.jpg",
+                "caption": "The Create Inventory Location dialog"
+              }
             ]
           },
           {
-            "title": "Check order delivery progress",
-            "steps": [
-              "Open <strong>Reports → Client Portal</strong>.",
-              "Read <strong>Units</strong>, <strong>Delivered</strong> and <strong>Progress</strong> for each order.",
-              "Open an order to see the <strong>Ship Tickets</strong> page, and click <strong>Export</strong> for the ticket list."
-            ]
+            "term": "Search",
+            "definition": "Finds a location by name. The counter beside it shows how many locations there are, for example 1 to 7 of 7."
           },
           {
-            "title": "Reconcile a stockpile survey",
-            "steps": [
-              "Open <strong>Reports → Material Reconciliation</strong> and click <strong>Create</strong>.",
-              "Choose the <strong>Inventory</strong> location, <strong>Date</strong> and <strong>Material</strong>, and enter the <strong>Surveyed Stockpile (Propeller)</strong>.",
-              "Check the <strong>Delta</strong> shown below the form and click <strong>Save</strong>."
-            ]
-          }
-        ]
-      },
-      {
-        "heading": "List Tools",
-        "intro": "<p>Every list in Inventory Management (locations, materials, External Orders, Hauling Trucks and External Tickets) shares the same controls for columns, filters, views and Excel. Use them to see only what you need and to load or download records in bulk.</p>",
-        "definitions": [
-          {
-            "term": "Manage Columns and views",
-            "definition": "Click **Manage Columns** to show, hide or reorder columns, the **Save layout** icon to keep the layout, and the **Multiple layouts** icon for a user-specific layout. The list or grid icon switches the view."
+            "term": "Export",
+            "definition": "Exports the list of locations."
           },
           {
             "term": "Filters",
-            "definition": "Click **Filters**, pick values and click **Apply**. **Save filters** keeps the selection and **Clear all** resets it."
+            "definition": "Opens filters for the list."
           },
           {
-            "term": "Export: Upload and Download Excel",
-            "definition": "**Export → Upload Excel** gives a sample file to fill in and upload for bulk records. **Export → Download** saves the current records to Excel."
+            "term": "List and card view",
+            "definition": "Two icons switch between a table and cards. The save icon beside them remembers the view."
+          },
+          {
+            "term": "Location card",
+            "definition": "Shows the location name. Click the card to open its materials. The three-dot menu has **Edit**, which reopens the location form."
           }
         ],
         "procedures": [
           {
-            "title": "Bulk upload records from Excel",
+            "title": "Create an inventory location",
             "steps": [
-              "Click <strong>Export → Upload Excel</strong> on the list.",
-              "Download the sample file from the link and fill it in following its instructions.",
-              "Save the file and upload it."
+              "Open **Inventory Master** and click **Add Location**.",
+              "Type the **Location Name** and **Location ID**.",
+              "Choose the **Location Type** and the **Inventory manager**.",
+              "Optionally choose a **Business Unit** and **Project**; leave **Active** on.",
+              "Click **Create**."
             ]
           }
         ]
       },
       {
-        "heading": "Settings",
-        "intro": "<p>The Inventory Administrator uses <strong>Inventory Management → Settings</strong> to decide which fields orders and tickets carry, how their IDs are numbered, who can do what, and how units convert. Do this before creating any records.</p><p>The left side of Settings lists <strong>External Orders</strong>, <strong>Tickets</strong>, <strong>ID Settings</strong>, <strong>Users and Permissions</strong> and <strong>General</strong>. Complete <strong>ID Settings</strong> before the first ticket, because they lock once a ticket exists.</p>",
-        "definitions":[
-          {
-            "term": "External Orders and Tickets fields",
-            "definition": "On the **External Orders** and **Tickets** tabs, review the standard fields and click **Add field** for configurable ones. Pick a type in **Choose type**, name the field, and switch **Required**, **Show on Card** and **Unique** on or off. Actions add, duplicate or delete a field, and the drag icon reorders them. Click **Save Changes**."
-          },
-          {
-            "term": "ID Settings (orders and tickets)",
-            "definition": "Choose the **External Orders** or **External Tickets** sub-tab, pick **System Default** or **Custom**, choose the **ID Separator** (**/**, **-** or **None**), pick components (Serial No./ID, Year, Customer Reference Number, Customer/Project ID, custom text) and drag them into order. **Example Format** shows the result. Once a ticket is created, the ID settings lock."
-          },
-          {
-            "term": "Users and Permissions (Inventory Management)",
-            "definition": "User groups show as cards. **Add User Group**, then on the **Users** tab click **Add Users** (search by name, Roster ID, email or username) and **Submit**. Click **Permissions** on the card and, under **Inventory Management**, choose View, Create, Edit, Delete, Admin, Download, Print, Assign To and Roll Back for each item, then **Save Changes**. The edit icon renames the group."
-          },
-          {
-            "term": "General settings",
-            "definition": "Keep **External Tickets** on to use tickets. Turn on **UOM Conversions Required** if quantities must convert between units; once it is on and in use it cannot be turned off. **Print Settings** lets you add a row for each print copy (for example office copy, operator copy, customer copy) and choose **Include Header**. **Material UOM Conversions → Create** sets a factor between at least two UOMs for one material."
-          },
-          {
-            "term": "Earlier version: ID Settings tabs",
-            "definition": "In earlier-version environments, **Settings → ID Settings** has the tabs **Site Material Requests**, **External Site Material Requests**, **Material Issue Tickets**, **External Material Issue Tickets** and **Return Tickets**. On each, pick **System Default** or **Custom** ID format; **Example Format** shows the result."
-          },
-          {
-            "term": "Earlier version: General settings and Print Settings",
-            "definition": "**Settings → General** has **External Tickets**, **UOM Conversions Required** and **Print Settings**. In **Print Settings**, use **Add Row Name** to name each printed copy and **Include Header** to print the header."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Add a field to External Orders or Tickets",
-            "steps": [
-              "Open <strong>Inventory Management → Settings</strong> and choose the <strong>External Orders</strong> or <strong>Tickets</strong> tab.",
-              "Click <strong>Add field</strong>, pick the type in <strong>Choose type</strong> and enter the field name.",
-              "Set the <strong>Required</strong>, <strong>Show on Card</strong> and <strong>Unique</strong> toggles.",
-              "Drag the field into position and click <strong>Save Changes</strong>."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/inventory-management/014.jpg",
-                "caption": "External Orders Standard Fields",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/inventory-management/015.jpg",
-                "caption": "Add field on External Orders",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/inventory-management/021.jpg",
-                "caption": "Tickets Standard Fields",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/inventory-management/022.jpg",
-                "caption": "Add field on Tickets",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/inventory-management/016.jpg",
-                "caption": "Choose type and field name",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/inventory-management/023.jpg",
-                "caption": "Choose type and field name for a ticket field",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/inventory-management/017.jpg",
-                "caption": "Required, Show on Card and Unique toggles",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/inventory-management/018.jpg",
-                "caption": "Field Actions menu",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/inventory-management/024.jpg",
-                "caption": "Required, Show on Card and Unique toggles for a ticket field",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/inventory-management/025.jpg",
-                "caption": "Field Actions menu on Tickets",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/inventory-management/019.jpg",
-                "caption": "Field Name and drag icon",
-                "step": 4
-              },
-              {
-                "src": "assets/guides/inventory-management/020.jpg",
-                "caption": "Save Changes on External Orders fields",
-                "step": 4
-              },
-              {
-                "src": "assets/guides/inventory-management/026.jpg",
-                "caption": "Field Name and drag icon on Tickets",
-                "step": 4
-              },
-              {
-                "src": "assets/guides/inventory-management/027.jpg",
-                "caption": "Save Changes on Tickets fields",
-                "step": 4
-              }
-            ]
-          },
-          {
-            "title": "Set the ID format for orders and tickets",
-            "steps": [
-              "Open <strong>Settings → ID Settings</strong> and choose <strong>External Orders</strong> or <strong>External Tickets</strong>.",
-              "Choose <strong>System Default</strong> or <strong>Custom</strong>, then the <strong>ID Separator</strong>.",
-              "Select the components and drag them into order. Check the <strong>Example Format</strong>.",
-              "Click <strong>Save Changes</strong>."
-            ],
-            "note": "Do this before the first ticket is created, because the settings lock after that.",
-            "images": [
-              {
-                "src": "assets/guides/inventory-management/028.jpg",
-                "caption": "ID Settings sub-tabs",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/inventory-management/029.jpg",
-                "caption": "External Tickets ID Settings",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/inventory-management/030.jpg",
-                "caption": "ID Separator options",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/inventory-management/031.jpg",
-                "caption": "ID components to include",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/inventory-management/032.jpg",
-                "caption": "ID components selected",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/inventory-management/033.jpg",
-                "caption": "Dragging ID components into order",
-                "step": 4
-              },
-              {
-                "src": "assets/guides/inventory-management/034.jpg",
-                "caption": "Example Format and Save Changes",
-                "step": 4
-              }
-            ]
-          },
-          {
-            "title": "Give a group access to Inventory Management",
-            "steps": [
-              "Open <strong>Settings → Users and Permissions</strong> and click <strong>Add User Group</strong>.",
-              "Enter the group name, open the <strong>Users</strong> tab, click <strong>Add Users</strong>, pick users and click <strong>Submit</strong>.",
-              "Click <strong>Permissions</strong> on the group card and choose the rights under <strong>Inventory Management</strong>.",
-              "Click <strong>Save Changes</strong>."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/inventory-management/035.jpg",
-                "caption": "Users and Permissions user group cards",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/inventory-management/036.jpg",
-                "caption": "Add User Group and Search by group name",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/inventory-management/037.jpg",
-                "caption": "Group name entered",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/inventory-management/038.jpg",
-                "caption": "Users tab of a user group",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/inventory-management/039.jpg",
-                "caption": "Add Users button",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/inventory-management/040.jpg",
-                "caption": "Search Profiles list of users",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/inventory-management/041.jpg",
-                "caption": "Selected users and Submit",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/inventory-management/042.jpg",
-                "caption": "Delete icon that removes a user from the group",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/inventory-management/043.jpg",
-                "caption": "Permissions on the group card",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/inventory-management/044.jpg",
-                "caption": "Inventory Management permission rights",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/inventory-management/045.jpg",
-                "caption": "Permissions for modules, features and settings",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/inventory-management/046.jpg",
-                "caption": "Save Changes on the permissions page",
-                "step": 4
-              },
-              {
-                "src": "assets/guides/inventory-management/047.jpg",
-                "caption": "Edit icon that renames the group",
-                "step": 4
-              }
-            ]
-          },
-          {
-            "title": "Turn on unit conversions for a material",
-            "steps": [
-              "Open <strong>Settings → General</strong> and switch on <strong>UOM Conversions Required</strong>.",
-              "Under <strong>Material UOM Conversions</strong>, click <strong>Create</strong>.",
-              "Select the material, select at least two UOMs and enter the conversion factor between the source and target unit.",
-              "Click <strong>Submit</strong>."
-            ],
-            "note": "You cannot switch UOM Conversions Required off once it is in use.",
-            "images": [
-              {
-                "src": "assets/guides/inventory-management/055.jpg",
-                "caption": "Material UOM Conversions window",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/inventory-management/056.jpg",
-                "caption": "Material selected for a conversion",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/inventory-management/057.jpg",
-                "caption": "UOMs selected for a conversion",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/inventory-management/058.jpg",
-                "caption": "Conversion Factor between source and target unit",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/inventory-management/059.jpg",
-                "caption": "Submit on Material UOM Conversions",
-                "step": 3
-              }
-            ]
-          }
-        ],
+        "heading": "Inventory Location",
+        "intro": "<p>Opening a location from <strong>Inventory Master</strong> shows the materials held there as a table, with the stock level of each.</p>",
         "images": [
           {
-            "src": "assets/guides/inventory-management/012.jpg",
-            "caption": "Inventory Management tile on Home"
-          },
-          {
-            "src": "assets/guides/inventory-management/013.jpg",
-            "caption": "Settings tabs on the left side"
-          },
-          {
-            "src": "assets/guides/inventory-management/048.jpg",
-            "caption": "General settings"
-          },
-          {
-            "src": "assets/guides/inventory-management/049.jpg",
-            "caption": "External Tickets toggle"
-          },
-          {
-            "src": "assets/guides/inventory-management/050.jpg",
-            "caption": "UOM Conversions Required toggle"
-          },
-          {
-            "src": "assets/guides/inventory-management/051.jpg",
-            "caption": "Print Settings button"
-          },
-          {
-            "src": "assets/guides/inventory-management/052.jpg",
-            "caption": "Print Settings window"
-          },
-          {
-            "src": "assets/guides/inventory-management/053.jpg",
-            "caption": "Print copy names added with Add Row"
-          },
-          {
-            "src": "assets/guides/inventory-management/054.jpg",
-            "caption": "Include Header option"
+            "src": "assets/product/inventory-management/004.jpg",
+            "caption": "The materials of one inventory location"
           }
-        ]
-      },
-      {
-        "heading": "Earlier Version Tickets",
-        "intro": "<p>Environments running an earlier version of Arena show these screens; Arena 2.0 uses the screens above. A project team raises a **Site Material Request**, the store ships materials with a **Material Issue Ticket**, and leftovers come back with a **Return Ticket**.</p>",
+        ],
         "definitions": [
           {
-            "term": "Site Material Request list",
-            "definition": "From **Home**, open **Inventory Management → Site Material Request**. Each request shows as a card with its status, **Raised on**, **Raised by**, number, **Materials** and **Required Date**. Buttons: **Add**, **Add Custom Columns**, **Export**, **Filters** and **Manage Columns**."
+            "term": "Table columns",
+            "definition": "**Image**, **Material Name**, **Quantity** (current stock), **Minimum Required Quantity**, **Maximum Quantity**, **UOM**, **Size & Specifications**, **See History** and **Actions**."
           },
           {
-            "term": "Rejected Site Material Requests",
-            "definition": "The **Rejected Pickup Tickets** sub-tab of **Site Material Request** lists requests that were rejected."
+            "term": "See History",
+            "definition": "Opens **Transaction History** for that material: each line says how many units were received, from which vendor, through which purchase order, confirmed by which delivery receipt, and the date and user.",
+            "images": [
+              {
+                "src": "assets/product/inventory-management/007.jpg",
+                "caption": "Transaction History of a material"
+              }
+            ]
           },
           {
-            "term": "Site Material Request form",
-            "definition": "Click **Add**. The fields are **Project**, **Order Date**, **Ship To**, **Requested By** and **Required Date** (Project, Requested By and Required Date are required), plus fields your administrator configured, such as **Required to execute which work**, **Logistics**, **Handling Instructions** and **Work**. The **Materials** table has **Product Description**, **Quantity**, **UOM** and **Remarks**, and **Add Custom Column** adds a column. Click **Submit for Approval** to send it."
+            "term": "Actions",
+            "definition": "The pencil opens **Update Min-Max Quantities** for that row (**Material** shown, **Minimum Required Quantity** and **Maximum Quantity** to change, plus an **App Icon** upload). The bin deletes the row.",
+            "images": [
+              {
+                "src": "assets/product/inventory-management/009.jpg",
+                "caption": "The Update Min-Max Quantities dialog"
+              }
+            ]
           },
           {
-            "term": "Site Material Request: open an existing request",
-            "definition": "Opening a raised request shows the same form with a **Stock** column, **Add Row**, an **Approvals** panel where each approval level can approve with a comment, and a **more_vert** menu."
+            "term": "Add",
+            "definition": "Adds a material to this location. The form has **Material**, **Quantity**, **Minimum Required Quantity**, **Maximum Quantity** (all required), **Unit of Measurement (UOM)** and an **App Icon** upload; **Submit** saves.",
+            "images": [
+              {
+                "src": "assets/product/inventory-management/005.jpg",
+                "caption": "The Add material dialog"
+              }
+            ]
           },
           {
-            "term": "Material Issue Ticket list",
-            "definition": "Open **Inventory Management → Material Issue Ticket** (labelled **Internal Material Issue Ticket**). Cards show the status (**Shipped** or **Delivered**), **Shipped From** and **Raised on**. Buttons: **Add**, **Export** and **Filters**."
+            "term": "Add Quantity",
+            "definition": "Adds stock to a material already here. Choose the **Material**; the form shows the **Current Quantity**, asks for the **Additional Quantity**, and shows the **Unit of Measurement (UOM)** and **Inventory Location**. **Submit** adds it.",
+            "images": [
+              {
+                "src": "assets/product/inventory-management/006.jpg",
+                "caption": "The Add Quantity dialog"
+              }
+            ]
           },
           {
-            "term": "Material Issue Ticket form",
-            "definition": "Click **Add**. Fields: **Site Material Request** (required), **Project**, **Ship Material From** (required), **Time In** and **Time Out**, and **Shipping Agent Name** and **Contact** under details of the shipping vehicle. The **Materials** table has **Stock**, **Ordered**, **Shipped Already** and **Ship Now**. **Shipped By** (signature) and **Date** are required."
+            "term": "Low Stock Items",
+            "definition": "A toggle button that limits the table to materials whose quantity is under the minimum. When nothing is low the table shows **No Data Available**. Click again to go back to all materials."
           },
           {
-            "term": "Return Ticket list and form",
-            "definition": "Open **Inventory Management → Return Ticket**; buttons are **Add**, **Export**, **Filters** and **Manage Columns**. In the form, **Site Material Request** and **Return Material To** are required, with configurable fields such as **Reason for returning materials** and **Material Condition**. The **Materials** table has **Ordered**, **Delivered**, **Returned Already** and **Return Now**, followed by a signature and a required **Date**."
+            "term": "Search by Material Name",
+            "definition": "Narrows the table to matching materials."
           },
           {
-            "term": "Settings → Pickup (Site Material Request)",
-            "definition": "Open **Inventory Management → Settings → Pickup**. It shows **Connected Services** (**Active**, **Inactive**, **Old**, **New**), a **Ship To Text Box / Ship To Location** toggle, and the **Standard Fields** (**Id**, **Status**, **Project Name**, **Requested by**, **Required date**, **Materials**). **Add field** creates a custom field; each can be **Required**, **Show on card**, **Unique** and has a type. Click **Save Changes**."
+            "term": "Add Custom Column",
+            "definition": "Opens a dialog with **Name** and **Type** (**Text Box**, **Single Select**, **Multi Select** or **Date**) to add your own column to the table.",
+            "images": [
+              {
+                "src": "assets/product/inventory-management/008.jpg",
+                "caption": "The Add Custom Column dialog"
+              }
+            ]
           },
           {
-            "term": "Settings → Ship (Material Issue Ticket)",
-            "definition": "**Standard Fields**: **Id**, **Status**, **SMR Id**, **Project**, **Shipped by**, **Shipped date**, **Materials Shipped**, **Received by** and **Received date**. **Add field** adds custom fields."
-          },
-          {
-            "term": "Settings → Return",
-            "definition": "**Standard Fields** are the same as Ship, with **Materials Returned**. **Material Condition** options are **Seal opened**, **Partially used**, **Leftovers** and **Unused**."
-          },
-          {
-            "term": "Where this data comes from and goes",
-            "definition": "The **Project** and **Materials** you choose come from the project and the materials set up in Global Data. A **Material Issue Ticket** and a **Return Ticket** are raised against a **Site Material Request**. Stock quantities are those at the Inventory Location in **Inventory Master**."
+            "term": "Export and Manage Columns",
+            "definition": "**Export** downloads the table. **Manage Columns** chooses which columns show. The save icon keeps your column choice."
           }
         ],
         "procedures": [
           {
-            "title": "Raise a Site Material Request",
+            "title": "Add stock to a material",
             "steps": [
-              "From **Home**, open **Inventory Management → Site Material Request** and click **Add**.",
-              "Choose the **Project**, set the **Required Date** and **Requested By**, and fill any configured fields.",
-              "Add the materials with **Quantity**, **UOM** and **Remarks**.",
-              "Click **Submit for Approval**. Approvers review it in the **Approvals** panel."
-            ],
-            "note": "For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
+              "Open **Inventory Master** and click the location.",
+              "Click **Add Quantity**.",
+              "Choose the **Material**.",
+              "Type the **Additional Quantity**.",
+              "Click **Submit**."
+            ]
           },
+          {
+            "title": "Set minimum and maximum limits",
+            "steps": [
+              "Open the location and find the material row.",
+              "Click the pencil in **Actions**.",
+              "Type the **Minimum Required Quantity** and **Maximum Quantity**.",
+              "Click **Submit**."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Site Material Request",
+        "intro": "<p><strong>Site Material Request</strong> is where a site asks for materials. Each request has a number, the materials wanted and the date they are needed.</p>",
+        "images": [
+          {
+            "src": "assets/product/inventory-management/010.jpg",
+            "caption": "Site Material Request list"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Sub-tabs",
+            "definition": "**Site Material Requests** holds the normal list; **Rejected Site Material Requests** holds the ones that were rejected, with a **Rejected** tag.",
+            "images": [
+              {
+                "src": "assets/product/inventory-management/014.jpg",
+                "caption": "Rejected Site Material Requests"
+              }
+            ]
+          },
+          {
+            "term": "Request card",
+            "definition": "A status tag (for example **Completed**), who raised it and when, the request number, **Materials** and **Required Date**. Click the card to open the request. The three-dot menu holds more actions."
+          },
+          {
+            "term": "Search by ID",
+            "definition": "Finds a request by its number."
+          },
+          {
+            "term": "Filters",
+            "definition": "Opens a dialog with **Site Material ID**, **Status**, **Project** and **Select Range** (date range), with **Apply**, **Clear All** and **Save Filters**.",
+            "images": [
+              {
+                "src": "assets/product/inventory-management/015.jpg",
+                "caption": "The Filters dialog"
+              }
+            ]
+          },
+          {
+            "term": "Add Custom Columns",
+            "definition": "Adds your own column to the list."
+          },
+          {
+            "term": "Export",
+            "definition": "Offers **Download Excel** for the list."
+          },
+          {
+            "term": "List and card view",
+            "definition": "Two icons switch between a table and cards."
+          },
+          {
+            "term": "Add",
+            "definition": "Opens the **Site Material Request** form. At the top are the company address and the date the form was created. Fields: **Project** (required), **Order Date**, **Ship To**, **Requested By** (required) and **Required Date** (required). Then the configurable fields from **Settings** (**Required to execute which work**, **Logistics**, **Handling Instructions**, **Work**). The **Materials** table has **Product Description**, **Quantity**, **UOM** and **Remarks**, **Add Material** adds a line and the bin removes one. **Submit for Approval** sends it.",
+            "images": [
+              {
+                "src": "assets/product/inventory-management/011.jpg",
+                "caption": "The new request form"
+              },
+              {
+                "src": "assets/product/inventory-management/012.jpg",
+                "caption": "The Materials table of the form"
+              }
+            ]
+          },
+          {
+            "term": "Open request menu",
+            "definition": "On an opened request, the three-dot menu gives **Download**, **Share**, **Print** and **See History**.",
+            "images": [
+              {
+                "src": "assets/product/inventory-management/013.jpg",
+                "caption": "The request menu"
+              }
+            ]
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Raise a site material request",
+            "steps": [
+              "Open **Site Material Request** and click **Add**.",
+              "Choose the **Project**, **Requested By** and **Required Date**.",
+              "Fill the configurable fields you need.",
+              "In **Materials**, pick each **Product Description**, enter the **Quantity** and **Remarks**; click **Add Material** for more lines.",
+              "Click **Submit for Approval**."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Material Issue Ticket",
+        "intro": "<p><strong>Material Issue Ticket</strong> records materials leaving an inventory location against a site material request. The only sub-tab is <strong>Internal Material Issue Ticket</strong>.</p>",
+        "images": [
+          {
+            "src": "assets/product/inventory-management/016.jpg",
+            "caption": "Material Issue Ticket list"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Ticket card",
+            "definition": "A status tag (**Shipped** or **Delivered**), who raised it and when, the ticket number, **Materials**, **Required Date** and **Shipped From** (the location). Click to open it."
+          },
+          {
+            "term": "Search, Export, Filters and views",
+            "definition": "**Search by ID** finds a ticket, **Export** exports the list, **Filters** narrows it, and two icons switch between table and cards."
+          },
+          {
+            "term": "Add",
+            "definition": "Opens the **Material Issue Ticket** form. **Site Material Request** (required) is picked from a list, and **Project**, **Order Date**, **Ship To**, **Requested By** and **Required Date** fill in from it. Then **Ship Material From** (required, the location), **Time In** and **Time Out**, and the configurable fields **Details of Shipping Vehicle**, **Shipping Agent Name** and **Shipping Agent Contact**. The **Materials** table has **Product Description**, **UOM**, **Stock**, **Ordered**, **Shipped Already** and **Ship Now**. At the bottom, **Shipped By (Signature)** and **Date** are required. **Submit** saves it.",
+            "images": [
+              {
+                "src": "assets/product/inventory-management/017.jpg",
+                "caption": "The new Material Issue Ticket form"
+              }
+            ]
+          },
+          {
+            "term": "Opened ticket",
+            "definition": "A ticket that was shipped shows the chosen request, the location and the quantities, and adds **Received By (Signature)** and **Date** for the person who receives the goods.",
+            "images": [
+              {
+                "src": "assets/product/inventory-management/018.jpg",
+                "caption": "An existing Material Issue Ticket"
+              }
+            ]
+          }
+        ],
+        "procedures": [
           {
             "title": "Issue materials against a request",
             "steps": [
-              "Open **Inventory Management → Material Issue Ticket** and click **Add**.",
-              "Choose the **Site Material Request** and **Ship Material From**.",
-              "Enter **Ship Now** quantities, the shipping agent details, then sign as **Shipped By** and set the **Date**."
+              "Open **Material Issue Ticket** and click **Add**.",
+              "Pick the **Site Material Request**; the project and requester fill in.",
+              "Choose **Ship Material From**.",
+              "In **Materials**, enter **Ship Now** for each line (compare it with **Stock** and **Ordered**).",
+              "Fill the vehicle and agent fields, sign under **Shipped By (Signature)**.",
+              "Click **Submit**."
             ]
           }
         ]
       },
       {
-        "heading": "Troubleshooting",
-        "intro": "<p>Use this page when an Inventory Management screen does not let you do something. Most cases come from a setting made earlier or a rule on the form.</p>",
-        "definitions": [],
+        "heading": "Return Ticket",
+        "intro": "<p><strong>Return Ticket</strong> records materials coming back from a site into an inventory location.</p>",
+        "images": [
+          {
+            "src": "assets/product/inventory-management/019.jpg",
+            "caption": "Return Ticket list (no tickets yet)"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "List controls",
+            "definition": "**Add**, **Search by ID**, **Export**, **Filters** and the table and card icons work as in **Material Issue Ticket**. With no returns the list says **No Data**."
+          },
+          {
+            "term": "Add",
+            "definition": "Opens the **Return Ticket** form: **Site Material Request** (required) fills in the project, order date, ship to, requester and required date. **Return Material To** (required) is the location the goods go back to. The configurable fields are **Reason for returning materials** and **Material Condition**. The **Materials** table has **Product Description**, **UOM**, **Ordered**, **Delivered**, **Returned Already** and **Return Now**. **Shipped By (Signature)** and **Date** are required, then **Submit**.",
+            "images": [
+              {
+                "src": "assets/product/inventory-management/020.jpg",
+                "caption": "The new Return Ticket form"
+              }
+            ]
+          }
+        ],
         "procedures": [
           {
-            "title": "I cannot change the ID format",
+            "title": "Return materials to a location",
             "steps": [
-              "Open <strong>Settings → ID Settings</strong>.",
-              "Once a ticket has been created under these settings, the ID settings are locked. Set them before the first ticket in future set-ups."
+              "Open **Return Ticket** and click **Add**.",
+              "Pick the **Site Material Request**.",
+              "Choose **Return Material To**.",
+              "Fill **Reason for returning materials** and **Material Condition**.",
+              "Enter **Return Now** for each material, sign and click **Submit**."
             ]
+          }
+        ]
+      },
+      {
+        "heading": "Ticket Fields",
+        "intro": "<p>Under <strong>Settings</strong>, the ticket pages (<strong>Pickup</strong> for site material requests, <strong>Ship</strong> for material issue tickets and <strong>Return</strong>) decide which extra fields each ticket form has.</p>",
+        "images": [
+          {
+            "src": "assets/product/inventory-management/021.jpg",
+            "caption": "Site Material Request settings"
           },
           {
-            "title": "A location does not appear when creating a ticket",
+            "src": "assets/product/inventory-management/022.jpg",
+            "caption": "Return Ticket settings"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Standard Fields",
+            "definition": "A numbered strip of fields every ticket always has. For site material requests: **Site Material Requests Id**, **Status**, **Project Name**, **Requested by**, **Required date** and **Materials**. For issue tickets: **Material Issue Tickets Id**, **Status**, **Site Material Requests Id**, **Project Name**, **Shipped by**, **Shipped date**, **Materials Shipped**, **Received by** and **Received date**. Return tickets are the same with **Materials Returned**."
+          },
+          {
+            "term": "Configurable fields",
+            "definition": "Fields your company adds. In this system a site material request has **Required to execute which work** (text box), **Logistics** (single select with the options **Will be picked by Project team** and **Can be delivered by HO**), **Handling Instructions** (paragraph) and **Work** (work order). An issue ticket has **Details of Shipping Vehicle**, **Shipping Agent Name** and **Shipping Agent Contact**. A return ticket has **Reason for returning materials** and **Material Condition** (single select with **Seal opened**, **Partially used**, **Leftovers** and **Unused**)."
+          },
+          {
+            "term": "Switches on a field",
+            "definition": "Each field has the switches **Required**, **Show on card** and **Unique**, and select fields also have **Show as badge**. **CHOOSE TYPE** sets the kind of field, and the icons beside it add a field, copy it or delete it. Drag the dotted handle to reorder."
+          },
+          {
+            "term": "Add field and Save Changes",
+            "definition": "**Add field** adds a new configurable field at the bottom; **Save Changes** stores the page."
+          },
+          {
+            "term": "Site material request switches",
+            "definition": "The top of the **Pickup** page has switches for **Connected Services Inactive** or **Active**, **Connected Services Old** or **New**, and **Ship To Text Box** or **Ship To Location**."
+          }
+        ]
+      },
+      {
+        "heading": "Users And Permissions",
+        "intro": "<p><strong>Users And Permissions</strong> under <strong>Settings</strong> creates user groups and sets what each group can do in Inventory Management.</p>",
+        "images": [
+          {
+            "src": "assets/product/inventory-management/023.jpg",
+            "caption": "User groups"
+          },
+          {
+            "src": "assets/product/inventory-management/024.jpg",
+            "caption": "The permission matrix of a group"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Add User Group",
+            "definition": "Creates a new group. **Search by group name** finds an existing one."
+          },
+          {
+            "term": "Group card",
+            "definition": "Shows the group name with two buttons, **Permissions** and **Users**, and a three-dot menu."
+          },
+          {
+            "term": "Permissions tab",
+            "definition": "A tree under **Inventory Management** with **Master Permission** and rows for **Pickup Ticket** (**Pickup Ticket**, **External Pickup Ticket**), **Settings** (**Pickup Ticket Form**, **Ship Ticket Form**, **Return Ticket Form**, **Approval Workflow**, **ID Settings**, **General**), **Ship Ticket** (**Ship Ticket**, **External Ship Ticket**), **Inventory Master**, **Return Ticket**, **Overview**, **Hauling Trucks** and **Reports**. Columns are **View**, **Create**, **Edit**, **Delete**, **Admin**, **Download**, **Print**, **Assign To** and **Roll Back**. Use **Search by Permission** to find a row and **Save Changes** to store."
+          },
+          {
+            "term": "Users tab",
+            "definition": "Chooses which users belong to the group."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Give a group access",
             "steps": [
-              "Open the <strong>Inventory</strong> tab and check the <strong>Active</strong> toggle for the location.",
-              "Only active Inventory Locations can be used while creating tickets."
+              "Open **Settings**, **Users And Permissions** and click **Permissions** on the group.",
+              "Tick the actions for each row.",
+              "Click **Save Changes**.",
+              "Click **Users** on the group card to add members."
             ]
+          }
+        ]
+      },
+      {
+        "heading": "Work Flow",
+        "intro": "<p><strong>Work Flow</strong> under <strong>Settings</strong> sets who must approve tickets. It currently has one tab, <strong>Pickup Ticket</strong>.</p>",
+        "images": [
+          {
+            "src": "assets/product/inventory-management/028.jpg",
+            "caption": "The Pickup Ticket work flow"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Create Level",
+            "definition": "Adds an approval level to the flow."
           },
           {
-            "title": "A material or UOM is missing when adding to a location",
-            "steps": [
-              "Materials and UOMs are fetched from <strong>Global Data → Company → Cost → Material</strong>. Ask the Global Data Administrator to add them.",
-              "Enter a Minimum Required Quantity and Maximum Quantity greater than 0."
-            ]
+            "term": "Levels table",
+            "definition": "Columns **Level**, **Level Description**, **Approvers** (who approves), **Workflow Type** (for example **All must approve**) and **Actions** (edit and delete)."
+          }
+        ]
+      },
+      {
+        "heading": "ID Settings",
+        "intro": "<p><strong>ID Settings</strong> under <strong>Settings</strong> chooses how the numbers of tickets are written.</p>",
+        "images": [
+          {
+            "src": "assets/product/inventory-management/025.jpg",
+            "caption": "ID Settings with Custom selected"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Tabs",
+            "definition": "One tab each for **Site Material Requests**, **External Site Material Requests**, **Material Issue Tickets**, **External Material Issue Tickets** and **Return Tickets**."
           },
           {
-            "title": "I cannot turn off UOM Conversions Required",
-            "steps": [
-              "Once <strong>UOM Conversions Required</strong> under <strong>Settings → General</strong> is on and in use, it cannot be turned off."
-            ]
+            "term": "System Default and Custom",
+            "definition": "Choose **System Default** for a plain number, or **Custom** to build your own format. **Example Format** shows the result."
           },
           {
-            "title": "Add Customer is missing on an External Order",
-            "steps": [
-              "If customer creation has an approval workflow in Global Data, the <strong>Add Customer</strong> option is not shown.",
-              "Ask a Global Data Administrator to add the customer through the approval workflow first."
-            ]
+            "term": "Custom format",
+            "definition": "Pick an **ID Separator** (**/**, **-** or **None**), then tick the parts to include and drag them into order: **Serial No./ID** (always on), **Date**, **Month**, **Year**, **Created By Initials First Name**, **Created By Initials Last Name** and more. **Save Changes** stores it."
+          }
+        ]
+      },
+      {
+        "heading": "General",
+        "intro": "<p><strong>General</strong> under <strong>Settings</strong> holds module-wide switches and the print layout.</p>",
+        "images": [
+          {
+            "src": "assets/product/inventory-management/026.jpg",
+            "caption": "General settings"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "External Tickets",
+            "definition": "A switch beside **UOM Conversions Required**, off in this system. The permission list and **ID Settings** have **External** versions of site material requests and issue tickets, which this switch relates to."
           },
           {
-            "title": "An External Ticket cannot be created",
-            "steps": [
-              "Check that the truck's <strong>Tare Weight UOM</strong> is one of the product's UOMs.",
-              "Check that the <strong>Net</strong> weight is not more than the ordered or remaining weight.",
-              "Check that the truck has not been marked as blacklisted."
-            ],
-            "note": "The Gross value cannot be changed once the ticket is created, so check it before you confirm."
-          },
-          {
-            "title": "A geofence did not save",
-            "steps": [
-              "A geofence needs at least three points.",
-              "It is saved only when the Inventory Location is created, or when a customer External Order is submitted."
+            "term": "Print Settings",
+            "definition": "Opens **Print Settings**: **Add Row** adds a line with **SL.No**, **Name** and **Actions**, and **Include Header** adds the header to the printout. **Submit** saves, **Cancel** closes.",
+            "images": [
+              {
+                "src": "assets/product/inventory-management/027.jpg",
+                "caption": "The Print Settings dialog"
+              }
             ]
           }
         ]
@@ -41746,7 +40141,7 @@ const MODULES = [
     "tagline": "Keep stock at geofenced locations, raise External Orders, record each load on External Tickets and review the reports.",
     "color": "#7a2f3f",
     "overview": "<p><strong>Inventory Management</strong> keeps the material stock held at each <strong>Inventory Location</strong>, lets you raise <strong>External Orders</strong> for customers and projects, records each load shipped as an <strong>External Ticket</strong> against a <strong>Hauling Truck</strong>, and gives you reports on material movement and stock.</p><p>The tabs are <strong>Overview</strong> (a map of every location with its geofence), <strong>Inventory</strong> (locations and the materials at each), <strong>Orders</strong>, <strong>Hauling Trucks</strong>, <strong>Tickets</strong>, <strong>Reports</strong> and <strong>Settings</strong>. UOMs and materials are set up first in Global Data.</p>",
-    "navigation":[
+    "navigation": [
       "From <strong>Home</strong>, click the <strong>Inventory Management</strong> tile. The <strong>Overview</strong> tab opens first and shows the map.",
       "Open <strong>Inventory</strong> to create Inventory Locations and to manage the materials and quantities at each one.",
       "Open <strong>Orders → External Orders</strong> to raise orders for customers or projects, <strong>Hauling Trucks</strong> to add trucks, and <strong>Tickets → External Tickets</strong> to record each load.",
@@ -41754,19 +40149,19 @@ const MODULES = [
       "Open <strong>Settings</strong> for <strong>External Orders</strong> and <strong>Tickets</strong> fields, <strong>ID Settings</strong>, <strong>Users and Permissions</strong> and <strong>General</strong>.",
       "Environments running an earlier version show <strong>Inventory Master</strong>, <strong>Site Material Request</strong>, <strong>Material Issue Ticket</strong> and <strong>Return Ticket</strong>, with <strong>Pickup</strong>, <strong>Ship</strong> and <strong>Return</strong> in <strong>Settings</strong>."
     ],
-    "sections":[
+    "sections": [
       "Overview",
-      "UOMs & Materials",
-      "Inventory Locations",
-      "Materials",
-      "External Orders",
-      "Hauling Trucks",
-      "External Tickets",
-      "Reports",
-      "List Tools",
-      "Settings",
-      "Earlier Version Tickets",
-      "Troubleshooting"
+      "Locations Map",
+      "Inventory Master",
+      "Inventory Location",
+      "Site Material Request",
+      "Material Issue Ticket",
+      "Return Ticket",
+      "Ticket Fields",
+      "Users And Permissions",
+      "Work Flow",
+      "ID Settings",
+      "General"
     ]
   },
   {
