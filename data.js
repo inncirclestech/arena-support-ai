@@ -24786,6 +24786,112 @@ const MODULES = [
         ]
       },
       {
+        "heading": "Projects",
+        "intro": "<p>The <strong>Projects</strong> screen lists every project you can open. Click a project to go inside it, or create a new one from here.</p>",
+        "images": [
+          {
+            "src": "assets/product/projects/001.jpg",
+            "caption": "The Projects screen (Medium Cards view)"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Top bar",
+            "definition": "**Dashboard**, **Home**, **Projects** and **Global Data** open the main pages of Arena; the page you are on is circled. The headset icon opens **Support**, the **?** icon opens **Help**, and your name opens your account menu."
+          },
+          {
+            "term": "+ Create Project",
+            "definition": "Opens the **Create Project** dialog to add a new project."
+          },
+          {
+            "term": "Upload Excel",
+            "definition": "Opens a dialog where you download the sample sheet, fill it in and **Upload** it."
+          },
+          {
+            "term": "Search by ID/Name",
+            "definition": "Type part of a project's ID or name and the list narrows to the matching projects."
+          },
+          {
+            "term": "Project card",
+            "definition": "One card per project, with its picture, a status tag (for example **Created** or **Work in progress**), the project ID and the name. Click a card to open that project; you land on its **My Desk**."
+          },
+          {
+            "term": "Gear menu",
+            "definition": "At the top right of the list. It holds **Filters**, **View**, **Project User Groups**, **Rearrange Projects** and Excel reports: **Projects Report**, **Overdue Drawing Registers**, **Drawing Registers**, **RFI MIS Report**, **E&S MIS Report**, **Worklogs MIS Report** and **E&S Assigned Users**.",
+            "images": [
+              {
+                "src": "assets/product/projects/002.jpg",
+                "caption": "The gear menu"
+              }
+            ]
+          },
+          {
+            "term": "Filters",
+            "definition": "Shows a list of all projects with a **Select All** box and a search. Untick the projects you do not want to see on this screen."
+          },
+          {
+            "term": "Views",
+            "definition": "**View** lets you show the projects as **Large Cards**, **Medium Cards**, **Small Cards**, a **Table**, **Tiles** or a **Kanban** board."
+          },
+          {
+            "term": "Rearrange Projects",
+            "definition": "Opens a list of your projects (name and project number) so you can change the order in which they appear."
+          },
+          {
+            "term": "Project User Groups",
+            "definition": "Opens the user groups page for projects."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Create a project",
+            "steps": [
+              "Open **Projects** and click **+ Create Project**.",
+              "Fill in **Project Name**, **Project Number / ID** and **Construction Type**. These three are required (marked with a red star).",
+              "Fill in the optional details if you have them: **Project Location**, **Subsidiary**, **Owner Representative** and more. At the top you can also upload a **Project Display Image** and a **Project Logo**.",
+              "Click **Submit**. The new project appears in the list. Click **Cancel** to close the dialog without creating anything."
+            ],
+            "images": [
+              {
+                "src": "assets/product/projects/004.jpg",
+                "caption": "The Create Project dialog",
+                "step": 2
+              }
+            ]
+          },
+          {
+            "title": "Change how projects are shown",
+            "steps": [
+              "Click the gear at the top right and choose **View**.",
+              "Pick **Large Cards**, **Medium Cards**, **Small Cards**, **Table**, **Tiles** or **Kanban**.",
+              "Click **Save View** to keep it, or **Cancel** to leave things as they were."
+            ],
+            "images": [
+              {
+                "src": "assets/product/projects/003.jpg",
+                "caption": "The Select View dialog",
+                "step": 2
+              }
+            ]
+          },
+          {
+            "title": "Find a project",
+            "steps": [
+              "Type the project's ID or name in **Search by ID/Name**.",
+              "Click the project card to open it."
+            ]
+          },
+          {
+            "title": "Add several projects from Excel",
+            "steps": [
+              "Click **Upload Excel**.",
+              "Click the link to download the sample sheet, and fill it in.",
+              "Click **Upload** and choose your file."
+            ]
+          }
+        ]
+      },
+      {
         "heading": "Company Details",
         "intro": "<p>Before a construction company can run a single project in Arena, someone has to lay the company-wide groundwork everything else builds on — and that's exclusively <strong>Super Admin</strong> territory. Company Details covers the foundational, company-wide configuration that everything else in Arena is built on top of. Company Details, under Global Data, is where you record the company's name, logo, address, and contact information — a one-time setup task whose effects ripple everywhere, since this information auto-populates forms and appears in other places across the application rather than needing to be re-entered per document. It's also editable at any time by returning to the same Company tab, so a change in address or a rebrand doesn't mean reconfiguring anything downstream.</p><p>Global Data itself is broader than just company details — it's the general setup space for construction-specific data that needs to exist before projects can be run against it: work areas, work packages, activity sequences, and BYO (Build Your Own) project forms. Critically, this data is organized per Construction Type, which the admin selects from a dropdown before entering any data; everything configured under a given Construction Type becomes available to every project that uses that same type, which is what lets an organization standardize its operational scaffolding across many projects of the same kind — say, every mid-rise residential job — rather than configuring each project individually from scratch.</p><p>Because Global Work Areas, Global Work Packages, and Activity Sequence Templates build on each other, Arena expects them to be set up in a specific order: first Global Work Areas, then Global Work Packages, and finally Activity Sequence Templates. Following this sequence matters because later steps reference the structures created in earlier ones — trying to configure Activity Sequence Templates before Work Packages exist means it would have nothing to sequence.</p>",
         "definitions": [
@@ -25301,6 +25407,7 @@ const MODULES = [
     "sections": [
       "Overview",
       "Home",
+      "Projects",
       "Company Details",
       "User Registration",
       "Permission Groups",

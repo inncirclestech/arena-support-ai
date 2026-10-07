@@ -1127,8 +1127,8 @@
 </dialog>
 <button type="button" class="help-fab" id="help-fab" hidden><span class="help-fab-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>Need help? Ask AI</button>
 
-<script src="data.js?v=202610060947"></script>
-<script src="engine.js?v=202610060947"></script>
+<script src="data.js?v=202610071733"></script>
+<script src="engine.js?v=202610071733"></script>
 <script>
   // ---------- In-browser LLM (WebLLM) — the primary way questions get answered ----------
   // Auto-loads on page load (see aiLoadPromise below), not behind a toggle: this is what
@@ -1648,16 +1648,16 @@ Example of the style to use — if a note says "[Global Data → Users] Go to Gl
 
   function renderDefinitionsHtml(defs, collapseId, sectionSlug) {
     if (!defs || !defs.length) return "";
-    const shouldCollapse = defs.length > 3;
+    const shouldCollapse = defs.length > 40;   // screen items are the documentation: show them
     const ids = anchorIds("def", sectionSlug, defs.map(d => d.term));
     const rows = `<dl class="doc-definitions"${shouldCollapse ? ` id="${collapseId}" hidden` : ""}>${defs.map((d, i) => `
       <div class="doc-def-row" id="${ids[i]}" tabindex="-1">
         <dt>${escapeHtml(d.term)}</dt>
-        <dd>${renderAnswerHtml(d.definition)}</dd>
+        <dd>${renderAnswerHtml(d.definition)}${renderShotsHtml(d.images)}</dd>
       </div>
     `).join("")}</dl>`;
     if (!shouldCollapse) return rows;
-    return `<button type="button" class="doc-terms-toggle" aria-expanded="false" aria-controls="${collapseId}">${ICON_CHEVRON} Show ${defs.length} terms</button>${rows}`;
+    return `<button type="button" class="doc-terms-toggle" aria-expanded="false" aria-controls="${collapseId}">${ICON_CHEVRON} Show all ${defs.length} items</button>${rows}`;
   }
 
   // Screenshots: [{src, caption, step?}]. Thumbnails load lazily and open full size on click.
@@ -1819,8 +1819,8 @@ Example of the style to use — if a note says "[Global Data → Users] Go to Gl
               const termCount = narr && narr.definitions ? narr.definitions.length : 0;
               const qaCount = qaItems.length;
               const metaParts = [];
-              if (stepCount) metaParts.push(`${stepCount} step${stepCount===1?'':'s'}`);
-              if (termCount) metaParts.push(`${termCount} term${termCount===1?'':'s'}`);
+              if (termCount) metaParts.push(`${termCount} item${termCount===1?'':'s'} on this screen`);
+              if (stepCount) metaParts.push(`${stepCount} how-to${stepCount===1?'':'s'}`);
               if (qaCount) metaParts.push(`${qaCount} question${qaCount===1?'':'s'}`);
               const slug = slugify(heading);
               return `
@@ -1835,16 +1835,16 @@ Example of the style to use — if a note says "[Global Data → Users] Go to Gl
                 ${narr && narr.intro ? renderIntroHtml(narr.intro) : ""}
                 ${narr && narr.images ? renderShotsHtml(narr.images) : ""}
 
-                ${stepCount ? `
-                <div class="doc-subblock">
-                  <h3 class="doc-subheading">${ICON_STEPS} Steps</h3>
-                  ${renderProceduresHtml(narr.procedures, slug)}
-                </div>` : ""}
-
                 ${termCount ? `
                 <div class="doc-subblock">
-                  <h3 class="doc-subheading">${ICON_TERMS} Terms to know</h3>
+                  <h3 class="doc-subheading">${ICON_TERMS} On this screen</h3>
                   ${renderDefinitionsHtml(narr.definitions, `terms-${slug}`, slug)}
+                </div>` : ""}
+
+                ${stepCount ? `
+                <div class="doc-subblock">
+                  <h3 class="doc-subheading">${ICON_STEPS} How to</h3>
+                  ${renderProceduresHtml(narr.procedures, slug)}
                 </div>` : ""}
 
                 ${qaCount ? `
