@@ -23526,571 +23526,935 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Work Order Management",
-        "intro": "<p>This tile is the Global Data entrance to the same Work Order module you see under <strong>Home → Work Order</strong>. The Super Admin or Work Order Admin uses it to set up work order types, approvals and access.</p><p><strong>Where this data goes:</strong> the work orders listed here are the same records as in Home → Work Order; this view shows fewer columns. The full field, tab and settings detail is in the Work Order module section.</p>",
+        "heading": "Customer Settings",
+        "intro": "<p>The <strong>Settings</strong> button on <strong>Opportunity Customers</strong> opens <strong>Customer Settings</strong>. A menu on the left has three pages: <strong>Customer</strong>, <strong>Contact</strong> and <strong>Approval Workflow</strong>.</p>",
+        "images": [
+          {
+            "src": "assets/product/global-data/058.jpg",
+            "caption": "Customer Settings"
+          }
+        ],
         "definitions": [
           {
-            "term": "Work Order Type",
-            "definition": "The kind of work order: the **Work Order Type** column shows **Service**, **Equipment** and **Material**. Types are managed in **Settings → Work Order Types**."
+            "term": "Customer",
+            "definition": "\"Change the Customer settings according to the requirement.\" **Table Standard Fields** lists the 13 built-in fields (Customer ID, Customer Name, Short Name, Alias Name, Primary Address, Mailing Address, Billing Address, Email Address, Phone Number, Fax Number, URL, Tax Codes, Locations). **Tier** is a field with its own options: **Add option** adds a value, with switches for **Required** and **Show on cards** and a selection type (**Single Select**). **Configurable Fields** holds your own extra fields: **Add Field**, then a name, a type (for example **Text Box**), **Required** and **Show on cards**. **Save Changes** stores the page."
           },
           {
-            "term": "Work Order Contract",
-            "definition": "A work order record. The Global Data screen (**Global Data → Work Order Management**) has the tabs **Work Orders**, **Workflow Issues**, **Reports** and **Settings**; the list has **Create**, search, pager, **Export**, **Filters**, **Manage Columns** and table/grid/board icons, with columns **ID**, **Description**, **Work Order Status**, **Work Order Type**, **Created Date**, **Created By**, **Notes**, **Due Date**, **Assign To** and **Actions** (history, delete)."
+            "term": "Contact",
+            "definition": "Same layout for contacts. **Table Standard Fields** are Contact ID, Salutation, First Name, Middle Name, Last Name, Suffix, Primary Mail Address, Secondary Mail Address, Primary Phone Number, Work Phone Number, Primary Address, Secondary Address, Services Provided and Personal Website, followed by **Configurable Fields**."
           },
           {
-            "term": "Work Order Status",
-            "definition": "The **Work Order Status** column in the list and the **Status** page under Settings."
-          },
-          {
-            "term": "Item Details / Create Items",
-            "definition": "The items of work inside a work order. Open a work order from the list to add them; see the Work Order module section for the item form."
-          },
-          {
-            "term": "Users and Permissions (Work Order Management)",
-            "definition": "The last page in the Work Order **Settings** menu. The full menu is **Work Order Types**, **Maintenance Types**, **Invoices**, **Approval Workflow**, **Status**, **Priority**, **Configuration** and **Users and Permissions**, with a search box. It is the same Settings screen as in Home → Work Order."
-          },
-          {
-            "term": "Where work order data comes from and goes",
-            "definition": "Global Data → Work Order Management and **Home → Work Order** are two doors to the same module and the same records. Home → Work Order shows extra columns (for example Assigned Project/Location, Equipment, Maintenance Type, Project, Phase Code, Priority, Technician, Vendor). Settings made here apply in both places."
+            "term": "Approval Workflow",
+            "definition": "Sets who approves a new customer. **Create Level** adds a level; the table shows **Level**, **Level Description**, **Approvers**, **Workflow Type** and **Actions**, and is empty until a level is created."
           }
         ],
         "procedures": [
           {
-            "title": "Create a Work Order Type",
+            "title": "Add your own customer field",
             "steps": [
-              "Go to <strong>Global Data → Work Order Management</strong> → <strong>Settings</strong> (gear icon) → <strong>Work Order Types</strong>.",
-              "Click <strong>+ Work Order Type</strong> and fill in the details, then save. See the Work Order module section for tabs, forms and ID format."
+              "Open **Customer → Settings → Customer** and click **Add Field**.",
+              "Name the field and choose its type.",
+              "Switch **Required** or **Show on cards** on if needed.",
+              "Click **Save Changes**."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Contacts",
+        "intro": "<p><strong>Contacts</strong> is the second tab of <strong>Opportunity Customers</strong> (breadcrumb <strong>Contact Directory</strong>). It lists the people at customers and owners. The sub-tabs are <strong>Contacts</strong> and <strong>Customer Contacts</strong>.</p>",
+        "images": [
+          {
+            "src": "assets/product/global-data/057.jpg",
+            "caption": "The Contacts sub-tab"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Contacts",
+            "definition": "The directory of all contacts, with a **Customer / Owner** column that says which kind of company each contact belongs to and the **Customer / Owner Name**. It has **Search**, **Filters** and **Manage Columns**, . Columns: **Contact ID**, **Salutation**, **First Name**, **Middle Name**, **Last Name**, **Suffix**, **Job Title**, **Primary Email**, **Secondary Email**, **Primary Phone Number**, **Work Phone Number**, the primary and secondary address parts, **Services Provided** and **Personal Website**."
+          },
+          {
+            "term": "Customer Contacts",
+            "definition": "Only the contacts of customers. Adds a **Create Contact** button with a menu of **Create Contact** and **OCR**, and an **Actions** column."
+          },
+          {
+            "term": "Create Contact form",
+            "definition": "A three-step dialog, **Basic Details**, **Address** and **Preview**. It starts with **Customers** (required): the customer the contact belongs to. **Basic Details** has **Salutation**, **First Name** (required), **Middle Name**, **Last Name**, **Suffix**, **Job Title**, **Primary Phone Number**, **Work Phone Number**, **Primary Email Address**, **Secondary Email Address**, **Service Provided** and **Personal Website**."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Add a contact to a customer",
+            "steps": [
+              "Open **Contacts → Customer Contacts** and click **Create Contact**, then choose **Create Contact**.",
+              "Choose the **Customers** it belongs to and fill in **First Name** and the other details.",
+              "Click **Next** and fill in the **Address**, then check the **Preview** and save."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Customers",
+        "intro": "<p>The <strong>Customer</strong> tile opens <strong>Opportunity Customers</strong>, the company's list of customers. Two tabs sit at the top, <strong>Customers</strong> and <strong>Contacts</strong>, with a <strong>Settings</strong> button at the right. The <strong>Customers</strong> tab has the sub-tabs <strong>Active Customers</strong> and <strong>Rejected</strong>.</p>",
+        "images": [
+          {
+            "src": "assets/product/global-data/054.jpg",
+            "caption": "The Customers tab in card view"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Create Customer",
+            "definition": "A button that opens a small menu: **Create Customer** and **POC OCR**. **Create Customer** opens a three-step form, **Basic Details**, **Locations & Tax Codes** and **Preview**.",
+            "images": [
+              {
+                "src": "assets/product/global-data/055.jpg",
+                "caption": "Step 1 of the Create Customer form"
+              }
             ]
           },
           {
-            "title": "Create a Work Order Contract template",
+            "term": "Basic Details step",
+            "definition": "**Customer Name** (required), **Short Name**, **Alias Name**, **Phone Number**, **Email**, **Fax Number**, **Url**, **Group** and three address blocks: **Primary Address**, **Mailing Address** and **Billing Address** (each of the last two has **Same as Primary address**)."
+          },
+          {
+            "term": "Merge Duplicates",
+            "definition": "Opens a two-step dialog, **Select Duplicates** (search by ID, name or email and tick the repeated customers) and **Select Primary & Destination**."
+          },
+          {
+            "term": "Add Groups",
+            "definition": "Opens **Groups**: a table of **Group Name**, **Group Description** and **Actions** (delete). **Add Row** adds a group and **Submit** saves. Groups can be chosen in the **Group** field of a customer and show in the **Groups** column.",
+            "images": [
+              {
+                "src": "assets/product/global-data/056.jpg",
+                "caption": "The Groups dialog"
+              }
+            ]
+          },
+          {
+            "term": "Search by ID and Name",
+            "definition": "Narrows the list."
+          },
+          {
+            "term": "Export",
+            "definition": "Downloads the customers."
+          },
+          {
+            "term": "Filters",
+            "definition": "Opens a dialog with **ID**, **Name**, **Created Date** and **Approval Status**. **Submit** applies and **Clear & Apply** resets."
+          },
+          {
+            "term": "Manage Columns",
+            "definition": "Chooses and orders the columns. Besides the defaults (**Customer ID**, **Customer Name**, **Groups**, **Notes**, **Actions**) you can add **Short Name**, **Alias Name**, the primary, mailing and billing address parts, **Email Address**, **Phone Number**, **Fax Number**, **URL**, **Locations**, **Tax Codes**, **Type**, **Tier**, **Status**, **Approve** and **Reject**."
+          },
+          {
+            "term": "Card and list views",
+            "definition": "Two icons switch between cards and a table. A card shows the **Customer ID**, **Customer Name**, **Customer Email** and an approval badge (for example **Approved**), with a three-dot menu."
+          },
+          {
+            "term": "List actions",
+            "definition": "**See History**, **Edit** and **Delete** on each row; each row also has a **Notes** button."
+          },
+          {
+            "term": "Rejected",
+            "definition": "The customers that were rejected in approval. It has **Search by ID and Name** and **Manage Columns**, and is empty when none were rejected."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Create a customer",
             "steps": [
-              "Go to <strong>Global Data → Work Order Management</strong> and click <strong>Create</strong> on the <strong>Work Orders</strong> tab.",
-              "Enter the name and description, and choose the <strong>Work Order Type</strong>.",
-              "Submit, then open the new record to configure its Profile fields, add Items via <strong>Create Items</strong>, and configure Expense forms under the <strong>Expense</strong> tab."
-            ],
-            "note": "The full create form is described in the Work Order module section."
+              "Open **Global Data → Customer** and click **Create Customer**, then choose **Create Customer**.",
+              "On **Basic Details** enter the **Customer Name** and the other details, then click **Next**.",
+              "On **Locations & Tax Codes** add the customer's locations and tax codes, then click **Next**.",
+              "Check the **Preview** and save."
+            ]
+          },
+          {
+            "title": "Add a customer group",
+            "steps": [
+              "Click **Add Groups**.",
+              "Click **Add Row** and enter the **Group Name** and **Group Description**.",
+              "Click **Submit**."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "GL Codes",
+        "intro": "<p><strong>GL Codes</strong> lists general-ledger codes. Like <strong>Phase Codes</strong> it is edited in place.</p>",
+        "images": [
+          {
+            "src": "assets/product/global-data/033.jpg",
+            "caption": "The GL Codes tab"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Add",
+            "definition": "Adds a row to the table."
+          },
+          {
+            "term": "Search and pager",
+            "definition": "The search box narrows the table; the pager shows the rows on screen and the total."
+          },
+          {
+            "term": "Code and Description",
+            "definition": "Text boxes typed into directly. A filter icon in each column heading opens a hide-column menu."
+          },
+          {
+            "term": "Actions",
+            "definition": "A red bin deletes the row."
+          }
+        ]
+      },
+      {
+        "heading": "Repair Types",
+        "intro": "<p><strong>Repair Types</strong> is the list of kinds of repair the company records. It is empty until you add some.</p>",
+        "images": [
+          {
+            "src": "assets/product/global-data/032.jpg",
+            "caption": "The Repair Types tab"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Add",
+            "definition": "Adds a row to the table."
+          },
+          {
+            "term": "Save Changes",
+            "definition": "The orange button at the top right stores the rows."
+          },
+          {
+            "term": "Columns",
+            "definition": "**S.No.**, **Repair Type**, **Description** and **Actions**."
+          }
+        ]
+      },
+      {
+        "heading": "Phase Codes",
+        "intro": "<p><strong>Phase Codes</strong> is the company's list of phase codes (cost codes) used to classify work and cost. The table is edited in place.</p>",
+        "images": [
+          {
+            "src": "assets/product/global-data/031.jpg",
+            "caption": "The Phase Codes tab"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Add",
+            "definition": "Puts an empty row at the top of the table. Type the **Phase Code** and **Phase Code Description** and choose **Cost Types**. Leaving the page with unsaved changes shows **Changes not saved** with **Cancel** and **Ok**."
+          },
+          {
+            "term": "Search",
+            "definition": "Narrows the table."
+          },
+          {
+            "term": "Pager (1 to 50) of 963",
+            "definition": "Shows the rows on screen and the total; the arrows move between pages."
+          },
+          {
+            "term": "Export",
+            "definition": "Downloads the phase codes."
+          },
+          {
+            "term": "Phase Code, Phase Code Description",
+            "definition": "Text boxes you type into directly."
+          },
+          {
+            "term": "Phase Code Type",
+            "definition": "Shows the type of the code, for example **Direct**."
+          },
+          {
+            "term": "Cost Types",
+            "definition": "A drop-down per row. The choices are **Material**, **Equipment** and **Labor**, and a code can have more than one."
+          },
+          {
+            "term": "Column filter icon",
+            "definition": "The icon in a column heading opens \"Select a column to hide it\": tick boxes for **S.No.**, **Phase Code**, **Phase Code Description**, **Phase Code Type** and **Cost Types**, with a **Column Name** search."
+          },
+          {
+            "term": "Actions",
+            "definition": "A red bin deletes the row."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Add a phase code",
+            "steps": [
+              "Open **Productivity → Phase Codes** and click **Add**.",
+              "In the new top row enter the **Phase Code** and **Phase Code Description**.",
+              "Choose the **Cost Types**."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "UOM Conversions",
+        "intro": "<p><strong>UOM Conversions</strong> is a read-only table of the factors used to convert one unit into another.</p>",
+        "images": [
+          {
+            "src": "assets/product/global-data/030.jpg",
+            "caption": "The UOM Conversions sub-tab"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Source, Conversion Factor, Target",
+            "definition": "One row per pair: one **Source** unit equals the **Conversion Factor** of the **Target** unit. For example, 1 Kg is 2.2 Lbs and 1 Tonne is 1000 Kg. This tab has no add or edit button."
+          }
+        ]
+      },
+      {
+        "heading": "UOM Groups",
+        "intro": "<p><strong>UOM Groups</strong> collects units of the same kind (for example Length or Weight) so that quantities can be converted between the units in a group.</p>",
+        "images": [
+          {
+            "src": "assets/product/global-data/029.jpg",
+            "caption": "The UOM Groups dialog"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Add UOM Group",
+            "definition": "Opens **UOM Groups** with **UOM Group Name** and **UOMs** (both required; the drop-down takes several units). Below them is a table of **Source**, **Conversion Factor** and **Target** for the chosen units. **Submit** saves."
+          },
+          {
+            "term": "Group and Uoms",
+            "definition": "The group name and the units in it, for example Length with Rm, LF, km, metre and Ls."
+          },
+          {
+            "term": "Actions",
+            "definition": "A pencil edits the group and a red bin deletes it."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Create a UOM group",
+            "steps": [
+              "Open **UOMs → UOM Groups** and click **Add UOM Group**.",
+              "Enter the **UOM Group Name**.",
+              "Choose the **UOMs** that belong to it.",
+              "Click **Submit**."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "UOMs",
+        "intro": "<p>The <strong>UOM, Phasecode &amp; GL Codes</strong> tile opens <strong>Global Data → Productivity</strong>. Its tabs are <strong>UOMs</strong>, <strong>Phase Codes</strong>, <strong>Repair Types</strong> and <strong>GL Codes</strong>. <strong>UOMs</strong> is the list of units of measurement the company uses; it has the sub-tabs <strong>UOMs</strong>, <strong>UOM Groups</strong> and <strong>UOM Conversions</strong>.</p>",
+        "images": [
+          {
+            "src": "assets/product/global-data/027.jpg",
+            "caption": "The UOMs sub-tab"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Add UOM",
+            "definition": "Opens **Create Unit of Measurement** with one field, **UOM Name**. **Submit** saves.",
+            "images": [
+              {
+                "src": "assets/product/global-data/028.jpg",
+                "caption": "The Create Unit of Measurement dialog"
+              }
+            ]
+          },
+          {
+            "term": "S.No and Unit of Measurement",
+            "definition": "The row number and the unit's name (for example Kg, Cum, Sqm, Hour, Lot)."
+          },
+          {
+            "term": "Actions",
+            "definition": "A pencil edits the unit and a red bin deletes it."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Add a unit of measurement",
+            "steps": [
+              "Open **Global Data → UOM, Phasecode & GL Codes**; the **UOMs** tab is open.",
+              "Click **Add UOM**.",
+              "Enter the **UOM Name**.",
+              "Click **Submit**."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Crews",
+        "intro": "<p><strong>Crews</strong> is its own tile in Global Data. It lists the company's crews as cards, each with the number of supervisors, foremen and crew rosters in it.</p>",
+        "images": [
+          {
+            "src": "assets/product/global-data/059.jpg",
+            "caption": "The crew cards"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Create",
+            "definition": "Opens **Create Crew**. On the left: **Crew Name** (required), **SUPERVISOR** and **FOREMAN** drop-downs, a search box and a list of roster people to tick, with **Select All**. On the right three tabs, **Supervisor**, **Foreman** and **Rosters**, each with a count and a table of the people chosen. **Submit** saves."
+          },
+          {
+            "term": "Search",
+            "definition": "Narrows the cards by crew name."
+          },
+          {
+            "term": "Crew card",
+            "definition": "Shows **Total SUPERVISORS**, **Total FOREMEN** and **Total Crew Rosters** (some cards show only **Total Crew Rosters**). The three-dot menu has **Edit** and **Delete**."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Create a crew",
+            "steps": [
+              "Open **Global Data → Crews** and click **Create**.",
+              "Enter the **Crew Name**.",
+              "Tick the people to include; use the **Supervisor**, **Foreman** and **Rosters** tabs to check who is selected.",
+              "Click **Submit**."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "User Permission",
+        "intro": "<p><strong>User Permission</strong> shows the access of one user at a time: pick a user in the list on the left and read the details on the right.</p>",
+        "images": [
+          {
+            "src": "assets/product/global-data/053.jpg",
+            "caption": "User Permission: the three sections for the selected user"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Users list",
+            "definition": "All users with a **Search Profiles** box. Click a user to show their details; the small arrow button folds the list away."
+          },
+          {
+            "term": "Basic Details",
+            "definition": "**Profile Photo**, **Name**, **Employee ID**, **Email Address**, **Username** and **No. of Groups**."
+          },
+          {
+            "term": "Groups",
+            "definition": "One tile for each group the user belongs to, with the group name."
+          },
+          {
+            "term": "Permissions",
+            "definition": "The same permission table as in a group (**View**, **Create**, **Edit**, **Delete**, **Admin View**, **Admin**, **Download**, **Print**, **Assign To**, **Roll Back**), with **Search by Permission** and **Save Changes**."
+          }
+        ]
+      },
+      {
+        "heading": "Global Permission",
+        "intro": "<p><strong>Global Permission</strong> holds the company's user groups. A group is a named set of permissions; every user placed in the group gets them. Each group is a card.</p>",
+        "images": [
+          {
+            "src": "assets/product/global-data/051.jpg",
+            "caption": "User group cards in Global Permission"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Add User Group",
+            "definition": "Starts a new group. Give it a name, then set its permissions and add users."
+          },
+          {
+            "term": "Fetch Templates",
+            "definition": "Creates the standard admin groups (Super Admin, Opportunity Admin, Proposal Management Admin, Bid Management Admin, Procurement Admin, Inventory Management Admin, Time Management Admin, Work Order Admin, Expense Tracker Admin, Cost Tracking Admin, All Home Modules Admin, All Home Modules View Admin and Global Data Admin). Groups that already exist are skipped, and a warning lists \"User Group … already exists\" for each."
+          },
+          {
+            "term": "Search by group name",
+            "definition": "Narrows the cards."
+          },
+          {
+            "term": "Group card",
+            "definition": "Shows the group name with **Permissions** and **Users** buttons. The three-dot menu has **Edit**, **Delete** and **Copy**."
+          },
+          {
+            "term": "Permissions",
+            "definition": "Opens the group with its **Permissions** tab: a tree of areas (**Global**, **Company**, **Construction Type**, **Home**, **Projects**, **General**, **Sub Contractor Management Settings**, **Fabrication**, **Enterprise Dashboard**, **Opportunity Management**, **Work Order Management**, **Asset Management**, **Bid Management**, **Cost Tracking**, **Expense Tracker**, **Inventory Management**, **Procurement**, **Proposal Management**, **Time Management**), each opened with the plus sign. The columns are **View**, **Create**, **Edit**, **Delete**, **Admin View**, **Admin**, **Download**, **Print**, **Assign To** and **Roll Back**. **Search by Permission** finds a row and **Save Changes** stores the ticks. The pencil beside the group name renames it.",
+            "images": [
+              {
+                "src": "assets/product/global-data/052.jpg",
+                "caption": "The permission table of a user group"
+              }
+            ]
+          },
+          {
+            "term": "Users",
+            "definition": "Opens the group's **Users** tab: **Add Users**, a search box, **Manage Columns** and a table of **S.No.**, **Profile Photo**, **Name**, **Roster ID**, **Email ID**, **Username**, **Groups** (how many groups the user is in) and **Actions** (delete, which removes the user from this group)."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Give a group its permissions",
+            "steps": [
+              "Open **Global Permission** and click **Permissions** on the group's card.",
+              "Open an area with the plus sign and tick the columns (**View**, **Create**, **Edit** and so on) for each row.",
+              "Click **Save Changes**."
+            ]
+          },
+          {
+            "title": "Put users in a group",
+            "steps": [
+              "Click **Users** on the group's card.",
+              "Click **Add Users** and choose the users."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Global Rosters",
+        "intro": "<p><strong>Global Rosters</strong> is the company-wide list of people who can be assigned to work, whether or not they sign in. It has three sub-tabs: <strong>System User</strong>, <strong>Non System User</strong> and <strong>Non System Inactive User</strong>.</p>",
+        "images": [
+          {
+            "src": "assets/product/global-data/047.jpg",
+            "caption": "Global Rosters: System User toolbar and columns"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "System User",
+            "definition": "Roster entries of people who have a user account. Toolbar: **Add Role**, **Search Profiles**, pager, **More**, **Manage Columns** and the list or card view icons. Columns: **Profile**, **Roster ID**, **First Name**, **Last Name**, **Group No.**, **Last Login**, **Email ID**, **Default Indirect Phase Code**, **Address**, **Designation**, **Skills**, **Experience**, **Craft**, **Class**, **Contact No.**, **Vendor Number**, **Labor**, **Role** and **Actions**.",
+            "images": [
+              {
+                "src": "assets/product/global-data/049.jpg",
+                "caption": "The Non System User sub-tab"
+              }
+            ]
+          },
+          {
+            "term": "Add Role",
+            "definition": "Opens **Role Types**: a table of **S. No.**, **Role** and **Custom Name** listing the roles (Foreman, Supervisor, Estimator, BD and any you added). **Add Row** adds a role of your own, with a red bin to delete it; **Submit** saves.",
+            "images": [
+              {
+                "src": "assets/product/global-data/048.jpg",
+                "caption": "The Role Types dialog"
+              }
+            ]
+          },
+          {
+            "term": "More",
+            "definition": "A menu with **Download Excel**, **Upload Excel** and **Import from Azure**."
+          },
+          {
+            "term": "Non System User",
+            "definition": "People on the roster who have no sign-in. Extra buttons: **Add Non System Roster**, **Export All Users**, and a tick box on each row. Each row's actions are **Notes**, **Create User Login** (gives the person a sign-in), **Edit** and **Delete**."
+          },
+          {
+            "term": "Add Non System Roster",
+            "definition": "Opens **Create Roster**: **Roster ID**, **First Name** and **Last Name** (required), **Email**, **Default Indirect Phase Code**, **Vendor Number**, **Business Unit**, **Group No.**, **Address**, **Designation**, **Skills**, **Experience**, **Craft**, **Class**, **Labor**, **Rate Card Template**, **Role** and **Contact Number**.",
+            "images": [
+              {
+                "src": "assets/product/global-data/050.jpg",
+                "caption": "The Create Roster form"
+              }
+            ]
+          },
+          {
+            "term": "Non System Inactive User",
+            "definition": "The same table for non-system roster entries that have been made inactive. It is empty when none have."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Add a person to the roster",
+            "steps": [
+              "Open **Global Rosters → Non System User** and click **Add Non System Roster**.",
+              "Fill in **Roster ID**, **First Name** and **Last Name**, and any other fields.",
+              "Click **Submit**."
+            ]
+          },
+          {
+            "title": "Give a roster person a sign-in",
+            "steps": [
+              "Open **Global Rosters → Non System User**.",
+              "Click **Create User Login** in the person's **Actions**."
+            ]
+          },
+          {
+            "title": "Add a custom role",
+            "steps": [
+              "On **System User** click **Add Role**.",
+              "Click **Add Row** and enter the **Role** and its **Custom Name**.",
+              "Click **Submit**."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "User Accounts",
+        "intro": "<p><strong>User Accounts</strong> is the first tab of <strong>Users &amp; Permissions</strong> in Global Data. It lists everyone who can sign in to the company's Arena account. The tab bar also holds <strong>Global Rosters</strong>, <strong>Global Permission</strong> and <strong>User Permission</strong>; under <strong>User Accounts</strong> the sub-tabs are <strong>Active Users</strong> and <strong>Inactive Users</strong>.</p>",
+        "images": [
+          {
+            "src": "assets/product/global-data/045.jpg",
+            "caption": "User Accounts: sub-tabs, toolbar and column headings"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Active Users",
+            "definition": "Users who can sign in. The toolbar has **Register User**, **Search Profiles**, a pager, **Export**, **Manage Columns**, list and card view icons and a save-view disk icon. Columns: **Profile**, **Created From**, **Employee ID**, **First Name**, **Last Name**, **Last Login**, **User Name**, **Contact No.**, **Email ID**, **Vendor Number** and **Actions**. **Last Login** reads \"Haven't Logged in a while.\" for users who have not signed in."
+          },
+          {
+            "term": "Register User",
+            "definition": "Opens **User Registration**. Required (red star): **Employee ID**, **First Name**, **Last Name**, **Username**, **Email**, **Password**, **Confirm Password** and **Initials**. Also on the form: **Upload Profile Picture**, **Phone Number** (country code, number, extension), **Vendor Number**, **Select Sign Label** (the **Initials** that appear as the signature on approved documents) and **Enable Security Key Authentication** (sign in with a fingerprint, face ID or hardware key). The password is only temporary: the user sets the final one. **Notify User** is greyed out on an empty form; **Submit** saves.",
+            "images": [
+              {
+                "src": "assets/product/global-data/046.jpg",
+                "caption": "The User Registration form"
+              }
+            ]
+          },
+          {
+            "term": "Row actions (Active Users)",
+            "definition": "**Edit**, **Delete** and a star icon whose tooltip reads **Favortie**."
+          },
+          {
+            "term": "Inactive Users",
+            "definition": "Users who have been deactivated. Same columns as **Active Users** plus **Deactivated on**; there is no **Register User** or **Export**. The action icon on a row asks \"Are you sure you want to activate …?\" and **Yes** makes the user active again."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Register a user",
+            "steps": [
+              "Open **Global Data → Users & Permissions**, stay on **User Accounts → Active Users** and click **Register User**.",
+              "Fill in **Employee ID**, **First Name**, **Last Name**, **Username**, **Email**, **Password**, **Confirm Password** and **Initials**.",
+              "Click **Submit**."
+            ]
+          },
+          {
+            "title": "Reactivate a user",
+            "steps": [
+              "Open **User Accounts → Inactive Users**.",
+              "Click the activate icon in the **Actions** column of the user.",
+              "Click **Yes**."
+            ]
           }
         ]
       },
       {
         "heading": "Construction Types",
-        "intro": "<p>Use this section to keep the list of project categories and to build the work breakdown for each one. Each project then shows its Construction Type in the Project Setup header. The Super Admin sets it up, often with a senior estimating or operations lead.</p><p><strong>Where this data goes:</strong> the <strong>Construction Type</strong> dropdown on <strong>Projects → Create Project</strong> lists exactly the types on this screen, in the same order, with the <strong>Set as Default</strong> type pre-selected.</p>",
+        "intro": "<p><strong>Construction Types</strong> is the company-wide list of kinds of construction (for example residential, roads or infrastructure). Each type carries its own location types, work packages, quality and safety forms and activity sequence template, which is what the **Copy** button duplicates.</p>",
+        "images": [
+          {
+            "src": "assets/product/global-data/034.jpg",
+            "caption": "The Construction Types list"
+          }
+        ],
         "definitions": [
           {
-            "term": "Construction Types (tile)",
-            "definition": "The master list of project categories. The screen (**Global Data → Construction Types**) has **Create** and **Copy** buttons and a table with a drag handle, **S.No**, **Types of Construction**, **Set as Default** (a radio button) and **Actions** (edit, delete). A type cannot be edited or deleted once projects use it."
+            "term": "Copy",
+            "definition": "Opens **Copy Construction Type**. Pick a **Source ConstructionType** and a **Destination ConstructionType**, switch on the features to copy and click **Submit**.",
+            "images": [
+              {
+                "src": "assets/product/global-data/035.jpg",
+                "caption": "The Copy Construction Type dialog"
+              }
+            ]
           },
           {
-            "term": "Construction Type (pipeline tab)",
-            "definition": "A separate top-level tab (next to \"Company\") presenting a 10-step configuration pipeline for building the full work-breakdown-structure library for a selected Construction Type."
+            "term": "Features to copy",
+            "definition": "Each row has a switch under **Select**. **Entity Types** opens into **Super Location Types** and then **Location Types**. **Activity** opens into **Work Package** and then **Quality Forms** and **Safety Forms**. The other two rows are **Map WP to Location type** and **Activity Sequence template**."
           },
           {
-            "term": "Global Work Areas",
-            "definition": "Step 1 of the pipeline: the physical/organizational location hierarchy of a project site as a three-tier nested structure (Tier 1 → Tier 2 → Tier 3, e.g. Tower → Floor → Room), configured via Entity Types, Super Location Types, and Location Types sub-tabs."
+            "term": "Create",
+            "definition": "Opens **Create Construction Type** with one required field, **Name**. **Add** saves it."
           },
           {
-            "term": "Global Work Packages",
-            "definition": "Step 2 of the pipeline: the library of work content. Its sub-cards are **Activities** (major areas of work), **Work Packages** (the library of construction works), **Progress Forms**, **Quality Forms** (level-1 and level-2 inspections) and **Safety Forms**, all scoped to the selected Construction Type."
+            "term": "S.No and Types of Construction",
+            "definition": "The row number and the name of the type. The grid icon at the left of the number is a drag handle for changing the order of rows."
           },
           {
-            "term": "Activity Sequence Templates",
-            "definition": "Step 3 of the pipeline. Two sub-cards: **Map Work Packages to Work Location Types** (which work happens at each type of location) and **Create Activity Sequence Templates** (the order and dependencies of Work Packages). The pipeline page has a dropdown for the Construction Type it configures."
+            "term": "Set as Default",
+            "definition": "A radio button on each row. Marks one type as the default; only one can be chosen."
           },
           {
-            "term": "Material and Labor Estimation Templates",
-            "definition": "Step 4 of the pipeline: four mapping cards — Map Materials to Activity, Map Labor to Activity, Map Materials to Work Package, Map Labor to Work Package — used for cost/productivity estimation."
+            "term": "Edit",
+            "definition": "The pencil opens **Edit Construction Type**, showing the **Previous Name** and a required **New Name**."
           },
           {
-            "term": "Naming Framework (Construction Type)",
-            "definition": "Step 5 of the pipeline: a table of Activity Sequence Level rows (Tree Version, Entity, Super Location, Location, Activity, Work Package, Sub Activity, and more) with editable Custom Name and Short Name columns; changes relabel that concept everywhere in the app for this construction type."
-          },
-          {
-            "term": "P6 Activity Codes",
-            "definition": "Step 6 of the pipeline: Primavera P6 activity codes used to categorize/classify project activities for schedule interoperability with P6."
-          },
-          {
-            "term": "Data Migration (Construction Type)",
-            "definition": "Step 7 of the pipeline: bulk-loads historical/master data from Excel into the construction type's structures (Master Data, Global Work Packages, Locations Type Work Packages, Global Sequence Model, etc.), appending to existing data rather than overwriting it."
-          },
-          {
-            "term": "Metadata (Construction Type)",
-            "definition": "Step 8 of the pipeline: custom Metadata fields added globally to extend the standard data model."
-          },
-          {
-            "term": "Work Package Linked Forms",
-            "definition": "Step 9 of the pipeline: associates specific forms (Progress/Quality/Safety/etc.) with individual Work Packages so the correct form appears when work is logged in the field."
-          },
-          {
-            "term": "Work Package Measurement Template Linking",
-            "definition": "Step 10 of the pipeline: links a Measurement Template to a Work Package so quantity take-off math is automatically available when recording progress against it."
-          },
-          {
-            "term": "Copy Construction Type",
-            "definition": "The **Copy** button opens **Copy Construction Type** with **Source ConstructionType**, **Destination ConstructionType** and a **Features** list of switches: **Entity Types** (with **Super Location Types** and **Location Types**), **Activity** (with **Work Package**, **Quality Forms**, **Safety Forms**), **Map WP to Location type** and **Activity Sequence template**. Switch on what you want to clone, then **Submit**. This saves rebuilding a similar type from scratch."
-          },
-          {
-            "term": "Where construction type data comes from and goes",
-            "definition": "**Comes from:** **Create** (new type), **Copy** (clone an existing type's setup) and the ten-step pipeline on the **Construction Type** tab. **Goes to:** the **Construction Type** dropdown on **Create Project** (same 56 names, default pre-selected) and the Construction Type shown in the **Project Setup** header (for example \"Arena Steel Plant - Phase 1\" shows \"Arena Integrated Steel Plant\"). The work areas, work packages, forms and templates you configure for a type are what projects of that type start from."
-          },
-          {
-            "term": "Quality Forms and Safety Forms feed Field Works",
-            "definition": "**Global Data → Construction Types → Step 2 Global Work Packages → Quality Forms** has **Quality Level 1** and **Quality Level 2** tabs, **Copy Form**, **Delete Form** and a **Work Packages** list grouped by activity (for the Moore Industries type: **General Conditions** with **MOORE - QP - 001** to **008** and **013**). Each form is built in four steps: **Create Inspection Items**, **Build Form**, **Setup Trigger Points**, **Preview Form**. **Safety Forms** (**MOORE - SP - 001** to **004**) has five steps (**Create Inspection Items**, **Inspection Items Response**, **Build Form**, **Setup Trigger Points**, **Preview Form**). **Where this goes:** the QP work packages are the ones that appear in **Field Works → Quality → Quality Level 1 / 2** (and in **Project Setup → Quality** folder mappings) on Warehouse Construction; the SP work packages and the **General Conditions** activity are what **Project Setup → Safety** offers in **Filter by Activities** and **Assign Workflow**, and what **Field Works → Safety** forms are built from. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
+            "term": "Delete",
+            "definition": "The red bin deletes the type."
           }
         ],
         "procedures": [
           {
-            "title": "Configure which construction categories are available when creating a project",
+            "title": "Add a construction type",
             "steps": [
-              "Go to <strong>Global Data → Construction Types</strong> tile.",
-              "Click <strong>Create</strong> to add a new type, or <strong>Copy</strong> to clone an existing type's setup (choose Source, Destination and the features to copy).",
-              "Tick the <strong>Set as Default</strong> radio button on the type you want pre-selected on Create Project."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/construction-types/001.jpg",
-                "caption": "Create a construction type; created types appear in a table",
-                "step": 2
-              }
-            ],
-            "note": "Changes show in the Create Project dropdown the next time the form is opened."
-          },
-          {
-            "title": "Bulk-load historical data into a Construction Type",
-            "steps": [
-              "Go to <strong>Global Data → Construction Type</strong> tab → <strong>Step 7 (Data Migration)</strong>.",
-              "For each section (Master Data, Global Work Packages, Locations Type Work Packages, Global Sequence Model, etc.), click the <strong>Template</strong> link to download the correctly-formatted Excel file.",
-              "Fill it in and drag it into the upload zone."
-            ],
-            "note": "Existing data is preserved — new rows are appended, not overwritten.",
-            "images": [
-              {
-                "src": "assets/notion/data-migration/001.jpg",
-                "caption": "Data Migration: the upload spaces for each kind of data",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/data-migration/002.jpg",
-                "caption": "Master Data and Global Work Areas upload",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/data-migration/003.jpg",
-                "caption": "Global Work Packages upload",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/data-migration/004.jpg",
-                "caption": "Location Type Work Package mapping upload",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/data-migration/005.jpg",
-                "caption": "Global Sequence Model upload, and P6 project upload",
-                "step": 2
-              }
+              "Open **Global Data → Construction Types** and click **Create**.",
+              "Enter the **Name**.",
+              "Click **Add**."
             ]
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/notion/global-data/001.jpg",
-            "caption": "Global Data construction-type setup: choose the construction type from the drop-down"
           },
           {
-            "src": "assets/notion/global-work-areas/001.jpg",
-            "caption": "Global Work Areas: the three level types for a construction type"
+            "title": "Rename a construction type",
+            "steps": [
+              "Click the pencil on its row.",
+              "Enter the **New Name**.",
+              "Click **Submit**."
+            ]
           },
           {
-            "src": "assets/notion/global-work-areas/002.jpg",
-            "caption": "Editing or deleting a work area type"
-          },
-          {
-            "src": "assets/notion/global-work-packages/001.jpg",
-            "caption": "Global Work Packages: editing or deleting a work package from its three-dot menu"
-          },
-          {
-            "src": "assets/notion/global-activities/001.jpg",
-            "caption": "Global Activities: editing or deleting an activity from its three-dot menu"
-          },
-          {
-            "src": "assets/notion/activity-sequence-templates/001.jpg",
-            "caption": "Map Work Packages to Location Types: choosing a location type and adding work packages"
-          },
-          {
-            "src": "assets/notion/activity-sequence-templates/002.jpg",
-            "caption": "Deleting a mapped work package"
-          },
-          {
-            "src": "assets/notion/activity-sequence-templates/003.jpg",
-            "caption": "The work package count for the selected location type"
-          },
-          {
-            "src": "assets/notion/activity-sequence-templates/004.jpg",
-            "caption": "Create Activity Sequence Template for a location type"
-          },
-          {
-            "src": "assets/notion/activity-sequence-templates/006.jpg",
-            "caption": "Pause and Play switch for an activity sequence template"
-          },
-          {
-            "src": "assets/notion/mappings-map-labor-to-activities/001.jpg",
-            "caption": "Map Labor to Activities tab"
-          },
-          {
-            "src": "assets/notion/mappings-map-labor-to-activities/003.jpg",
-            "caption": "Selecting roles to map to an activity"
-          },
-          {
-            "src": "assets/notion/mappings-map-materials-to-activities/001.jpg",
-            "caption": "Map Materials to Activities tab"
-          },
-          {
-            "src": "assets/notion/mappings-map-materials-to-activities/002.jpg",
-            "caption": "Work divisions on the left and the materials mapped to a selected activity on the right"
-          },
-          {
-            "src": "assets/notion/mappings-map-materials-to-activities/003.jpg",
-            "caption": "Map Material with a multi-select list of materials"
-          },
-          {
-            "src": "assets/notion/mappings-map-materials-to-activities/004.jpg",
-            "caption": "Selecting materials to map to an activity"
-          },
-          {
-            "src": "assets/notion/naming-framework/001.jpg",
-            "caption": "Naming Framework table with a default name and a custom name for each level"
-          },
-          {
-            "src": "assets/notion/activity-codes/001.jpg",
-            "caption": "Activity Codes imported from P6 projects, with Activity Code Type to add a new one"
+            "title": "Copy setup from one type to another",
+            "steps": [
+              "Click **Copy**.",
+              "Choose the **Source ConstructionType** and the **Destination ConstructionType**.",
+              "Switch on the features to copy; open a row with the plus sign to choose its sub-items.",
+              "Click **Submit**."
+            ]
           }
         ]
       },
       {
-        "heading": "Users & Permissions",
-        "intro": "<p>Use this section to register people, sort them into permission groups, keep the company roster and build crews. The Super Admin does this work, often with help from a Global Data Admin.</p><p><strong>Where this data goes:</strong> <strong>Projects → Project Setup → People → Add</strong> offers the people on the Global Rosters, <strong>Project Crews → Copy Crews from Global Data</strong> offers the crews built here, and roster roles (Supervisor, Foreman) feed the Crew dropdowns. Approver and user lists in other modules draw on the same people.</p>",
+        "heading": "Work Order Settings",
+        "intro": "<p>The <strong>Settings</strong> button on the <strong>Work Order Management</strong> screen opens <strong>Work Order Contract → Settings</strong>. A menu on the left lists eight pages: <strong>Work Order Types</strong>, <strong>Maintenance Types</strong>, <strong>Invoices</strong>, <strong>Approval Workflow</strong>, <strong>Status</strong>, <strong>Priority</strong>, <strong>Configuration</strong> and <strong>Users and Permissions</strong>. A search box above the menu finds a page.</p>",
+        "images": [
+          {
+            "src": "assets/product/global-data/041.jpg",
+            "caption": "The Status page of Work Order Settings"
+          }
+        ],
         "definitions": [
           {
-            "term": "User Accounts (Active / Inactive)",
-            "definition": "The login-level user list under **Global Data → Users & Permissions → User Accounts**, with sub-tabs **Active Users** and **Inactive Users**. Columns: **Profile**, **Created From** (ARENA for people added in Arena), **Employee ID**, **First Name**, **Last Name**, **Last Login**, **User Name**, **Contact No.**, **Email ID**, **Vendor Number** and **Actions** (edit, delete, star). Inactive Users adds **Deactivated on**. Toolbar: **Register User**, search, pager, **Export**, **Manage Columns**, list/grid icons, save layout. Deleting moves a user to Inactive Users; nothing is erased."
+            "term": "Work Order Types",
+            "definition": "Click **+ Work Order Type** to open **Create Work Order Type** with **Name** (required) and **Description**. The types you save are the ones offered in **Work Order Type** when a work order is created."
           },
           {
-            "term": "Signature field (user registration)",
-            "definition": "A field on the user-registration form supporting three input modes: Initials, Sign (a scribble pad), or Upload."
+            "term": "Maintenance Types",
+            "definition": "A table of **Sequence No**, **Name** and **Actions**. **+ Add** adds a maintenance type, which work orders then use in the **Maintenance Type** field and filter."
           },
           {
-            "term": "Global Rosters",
-            "definition": "The people list used for timesheets, crews and project teams. Sub-tabs: **System User**, **Non System User** (no login) and **Non System Inactive User**. Columns: **Profile**, **Roster ID**, **First Name**, **Last Name**, **Group No.**, **Last Login**, **Email ID**, **Default Indirect Phase Code**, **Address**, **Designation**, **Skills**, **Experience**, **Craft**, **Class**, **Contact No.**, **Vendor Number**, **Labor**, **Role** and **Actions**. System rows have notes, edit and remove-person icons; Non System rows have notes, a login icon, edit and delete. Buttons: **Add Role** (both), **Add Non System Roster** and **Export All Users** (Non System), search, **More** and **Manage Columns**."
+            "term": "Invoices",
+            "definition": "Holds an **Approval Workflow** tab for work order invoices. **Create Level** opens **Approval Workflow** with a **Workflow Type** (**All must approve** or **Any one can approve**), a **Description** and a **Select Approvers** list with search and **Select All**. Saved levels appear in a table of **Level**, **Level Description**, **Approvers**, **Workflow Type** and **Actions**."
           },
           {
-            "term": "Non-system user",
-            "definition": "A worker tracked in the Global Roster (for timesheets, crew assignment, etc.) who does not have a full Arena login."
+            "term": "Approval Workflow",
+            "definition": "A list of work order types with a **Search By Name** box. It shows \"Oops! No Results Found\" while no work order types exist."
           },
           {
-            "term": "Global Permission",
-            "definition": "Group-level access control: named permission groups (e.g. Super Admin, Global Data Admin, Foreman, Supervisor, Project Manager) each configured with Permissions and Users."
+            "term": "Status",
+            "definition": "\"Configure Statuses for Work Orders\". Lists **To be Assigned**, **Pending**, **In Progress**, **Waiting for Quote**, **Waiting for Parts**, **On Hold**, **Waiting for Completed**, **Completed** and **Cancelled**. These are the statuses in the **Work Order Status** field and the columns of **Kanban View**. **Add Status** opens **Add New Status** with a required **Name**."
           },
           {
-            "term": "Fetch Templates",
-            "definition": "An action on Global Permission that imports Arena's standard prebuilt permission groups."
+            "term": "Priority",
+            "definition": "\"Configure Priority levels and sequence for Work Orders\". A table of **Priority**, **Due Hours** and **Actions**. **Add Priority** opens **Create Work Order Priority** with **Priority** and **Due Hours**, both required.",
+            "images": [
+              {
+                "src": "assets/product/global-data/042.jpg",
+                "caption": "The Create Work Order Priority dialog"
+              }
+            ]
           },
           {
-            "term": "User Permission",
-            "definition": "A read-only screen that shows one selected user's Basic Details, Group memberships, and the full, non-editable union of permissions those groups grant them — used to audit what a specific person can actually do, not to grant them anything directly."
+            "term": "Configuration",
+            "definition": "\"Configure work order behaviour\". One field, **Reopen Window (days)**, currently 30, with a **Save** button."
           },
           {
-            "term": "Crew",
-            "definition": "A named work group built from roster people, with its Supervisors and Foremen. The **Crews** screen (**Global Data → Crews**) shows one card per crew with **Total SUPERVISORS**, **Total FOREMEN** and **Total Crew Rosters**, a search box and **Create**. The **Create Crew** dialog has **Crew Name**, a **SUPERVISOR** dropdown, a **FOREMAN** dropdown, a search box, **Select All** and a people list on the left; on the right the **Supervisor**, **Foreman** and **Rosters** tabs count and list your picks. Who uses it: the Super Admin builds crews; a Project Manager or Time Management Lead copies them into a project. **Where crews are used in Field Works:** after **Copy Crews from Global Data** in **Project Setup → People → Project Crews** (Elevated Corridor shows 20 crew cards), the same crew names appear in **Productivity Logs → Create Log → Add Crews** (19 distinct names listed) and in the **Crew** filter of the Productivity Logs list. A crew that was never copied to the project does not appear there."
-          },
-          {
-            "term": "Roster Role (Supervisor / Foreman)",
-            "definition": "The **Role** column on Global Rosters (for example **FOREMAN**, **SUPERVISOR**, Estimator). **Add Role** assigns a role to ticked rows. The **SUPERVISOR** and **FOREMAN** dropdowns in the Create Crew dialog list people who hold those roles, so give a person the role here before choosing them for a crew."
-          },
-          {
-            "term": "Where user, roster and crew data comes from and goes",
-            "definition": "**Comes from:** **Register User** (one at a time), **Export → Upload Excel** on Active Users, **Add Non System Roster** for people without a login, or a sync from Viewpoint through Staged Tables. **Goes to:** **Project Setup → People → Roster → Add** (the dialog \"Select Users for <project>\" lists the same people, in the same order as Global Rosters System User), **Project Crews → Copy Crews from Global Data** (lists all 18 global crews), the crew Supervisor/Foreman dropdowns (from roster roles), and project settings such as **Forms → Assign Users**, which list the project team. If a person is missing in a project, check that they are active on Global Rosters first."
+            "term": "Users and Permissions",
+            "definition": "A list of user groups for work orders with **Add User Group** and **Search by group name**. A group has a name, a **Permissions** tab and a **Users** tab. **Permissions** is a table of the work order functions (Settings, Invoices, Work Order Types and others) against **View**, **Create**, **Edit**, **Delete**, **Admin**, **Download**, **Print**, **Assign To** and **Roll Back**; **Save Changes** stores it.",
+            "images": [
+              {
+                "src": "assets/product/global-data/043.jpg",
+                "caption": "A new work order user group with its permission table"
+              }
+            ]
           }
         ],
         "procedures": [
           {
-            "title": "Register a new user or employee",
+            "title": "Add a work order type",
             "steps": [
-              "Go to <strong>Global Data → Users & Permissions</strong> → <strong>User Accounts</strong> → <strong>Active Users</strong> tab.",
-              "Click <strong>Register User</strong>. Optionally upload a profile picture, then fill Employee ID, First Name, Last Name, Username, Phone Number (with country code and optional extension), and Email.",
-              "Optionally fill Vendor Number if this login should be linked to a Vendor record.",
-              "Enter a temporary Password and Confirm Password — the user sets their own final password afterward.",
-              "Choose a <strong>Select Sign Label</strong> and fill Initials (used as their digital signature label on approved documents); optionally toggle <strong>Enable Security Key Authentication</strong> for fingerprint/face ID/hardware-key login.",
-              "Click <strong>Submit</strong>. Use <strong>Notify User</strong> to email them their login/setup instructions."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/global-users-permissions-users/001.jpg",
-                "caption": "The Users and Permissions tab under Company",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/global-users-permissions-users/002.jpg",
-                "caption": "The user registration form",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/global-users-permissions-users/003.jpg",
-                "caption": "Notify User, to email the new user",
-                "step": 6
-              }
+              "On the **Work Order Management** screen click **Settings**, then **Work Order Types**.",
+              "Click **+ Work Order Type**.",
+              "Enter the **Name** and an optional **Description**.",
+              "Click **Submit**."
             ]
           },
           {
-            "title": "Bulk-import users via Excel",
+            "title": "Add a status",
             "steps": [
-              "Go to <strong>Users & Permissions → Active Users</strong> tab.",
-              "Click the <strong>Export</strong> button (top right) to open its menu, choose <strong>Download Sample</strong>, and fill in one row per user (use correct country codes for phone numbers).",
-              "Reopen <strong>Export</strong> and choose <strong>Upload Excel</strong>, then select the completed file."
-            ],
-            "note": "Arena creates the accounts and emails each new user automatically. The Active Users table also shows a Vendor Number column, since a user account can be linked to a Vendor record.",
-            "images": [
-              {
-                "src": "assets/notion/global-users-permissions-users/004.jpg",
-                "caption": "Downloaded Excel template for bulk registration",
-                "step": 2
-              }
+              "Open **Settings → Status** and click **Add Status**.",
+              "Enter the **Name**.",
+              "Click **Submit**."
             ]
           },
           {
-            "title": "Set up permissions for a group of users",
+            "title": "Add a priority",
             "steps": [
-              "Go to <strong>Global Data → Users & Permissions</strong> → <strong>Global Permission</strong> tab.",
-              "Click <strong>Add User Group</strong>, name it, then click its <strong>Permissions</strong> button and select the allowed modules/actions.",
-              "Click its <strong>Users</strong> button to add members — they inherit the group's permissions.",
-              "Optionally use <strong>Fetch Templates</strong> to start from one of Arena's standard permission templates (e.g. Super Admin)."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/permissions/002.jpg",
-                "caption": "User Group, to add a named group",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/permissions/005.jpg",
-                "caption": "Permissions button on a group, showing the available permissions",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/permissions/006.jpg",
-                "caption": "Permission rights by module for a user group",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/permissions/007.jpg",
-                "caption": "Users button, to add members to the group",
-                "step": 3
-              }
+              "Open **Settings → Priority** and click **Add Priority**.",
+              "Enter the **Priority** and the **Due Hours**.",
+              "Click **Save**."
             ]
           },
           {
-            "title": "Add a non-system (temporary) worker to the global roster",
+            "title": "Create an approval level for invoices",
             "steps": [
-              "Go to <strong>Users & Permissions</strong> → <strong>Global Rosters</strong> → <strong>Non System User</strong> → <strong>Add Non System Roster</strong>.",
-              "Fill in worker details (name, designation, skills, experience, group number, etc.) and click Submit.",
-              "Use <strong>Export All Users</strong> to download the full roster, or <strong>Add Role</strong> to assign a role to selected rosters."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/rosters-non-system-users/001.jpg",
-                "caption": "Add, to register a non-system user",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/rosters-non-system-users/002.jpg",
-                "caption": "Non-system roster cards with Edit and Delete",
-                "step": 3
-              }
+              "Open **Settings → Invoices** and click **Create Level**.",
+              "Choose **All must approve** or **Any one can approve**, and enter a **Description**.",
+              "Tick the approvers under **Select Approvers**.",
+              "Click **Submit**."
             ]
-          },
-          {
-            "title": "Create a crew",
-            "steps": [
-              "Go to <strong>Global Data → Crews</strong> tile → <strong>Create</strong>.",
-              "Enter the Crew Name.",
-              "Open the <strong>SUPERVISOR</strong> dropdown and pick the supervisors, then the <strong>FOREMAN</strong> dropdown for the foremen. These list rosters that hold those roles in Global Rosters.",
-              "Tick the people who belong to the crew in the list on the left (system and non-system rosters). Use <strong>Select All</strong> or the search box if needed. The <strong>Supervisor</strong>, <strong>Foreman</strong> and <strong>Rosters</strong> tabs on the right show your picks.",
-              "Click <strong>Submit</strong>."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/timesheet-crew/001.jpg",
-                "caption": "Company-level crews",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/timesheet-crew/002.jpg",
-                "caption": "Create, with a crew name",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/timesheet-crew/003.jpg",
-                "caption": "Selecting the users for the crew and clicking Submit",
-                "step": 4
-              }
-            ],
-            "note": "To use the crew on a project, open Project Setup → People → Project Crews and click Copy Crews from Global Data."
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/notion/rosters-non-system-users/003.jpg",
-            "caption": "Non-system roster in card and table views"
-          },
-          {
-            "src": "assets/notion/roster-system-users/001.jpg",
-            "caption": "Rosters for system users"
-          },
-          {
-            "src": "assets/notion/roster-system-users/002.jpg",
-            "caption": "Roster cards with Edit and Delete"
-          },
-          {
-            "src": "assets/notion/roster-system-users/003.jpg",
-            "caption": "Upload Excel to add many rosters at once"
-          },
-          {
-            "src": "assets/notion/roster-system-users/005.jpg",
-            "caption": "Switching the roster between card and table view"
-          },
-          {
-            "src": "assets/notion/timesheet-crew/004.jpg",
-            "caption": "Searching for people when building a crew"
-          },
-          {
-            "src": "assets/notion/timesheet-crew/005.jpg",
-            "caption": "Searching the list of crews"
-          },
-          {
-            "src": "assets/notion/global-users-permissions-users/006.jpg",
-            "caption": "Registered users as cards, with a three-dot menu on each"
-          },
-          {
-            "src": "assets/notion/global-users-permissions-users/007.jpg",
-            "caption": "Grid view and table view for users"
-          },
-          {
-            "src": "assets/notion/users-permissions-inactive-users/001.jpg",
-            "caption": "Inactive Users: accounts removed from the active list but kept here"
-          },
-          {
-            "src": "assets/notion/users-permissions-inactive-users/002.jpg",
-            "caption": "Manage Columns on the inactive users list"
-          },
-          {
-            "src": "assets/notion/users-permissions-inactive-users/003.jpg",
-            "caption": "Save Layout keeps your chosen view"
-          },
-          {
-            "src": "assets/notion/users-permissions-inactive-users/004.jpg",
-            "caption": "Activate, to make an inactive user active again"
-          },
-          {
-            "src": "assets/notion/global-users-permissions-groups/001.jpg",
-            "caption": "Groups"
-          },
-          {
-            "src": "assets/notion/global-users-permissions-role-groups/001.jpg",
-            "caption": "Role-Groups"
-          },
-          {
-            "src": "assets/notion/global-users-permissions-permissions/001.jpg",
-            "caption": "The read-only dictionary of every permission in the system"
-          },
-          {
-            "src": "assets/notion/permissions/001.jpg",
-            "caption": "User groups shown as cards"
           }
         ]
       },
       {
-        "heading": "UOM & Phase Codes",
-        "intro": "<p>Use this section to keep the shared lists for units of measure, phase codes, repair types and GL codes. The Super Admin maintains them, and projects and cost screens read from them.</p><p><strong>Where this data goes:</strong> the <strong>Phase Codes</strong> list is the same list that <strong>Project Setup → Phase Codes</strong> and <strong>Cost → Cost Breakdown Structure → Phase Codes</strong> show. Timesheets offer Direct and Indirect phase codes that carry the Labor cost type. UOM and UOM Group values appear on vendor rate cards, bid templates and cost lists.</p>",
-        "definitions": [
+        "heading": "Work Order Reports",
+        "intro": "<p><strong>Reports</strong> is the third tab of <strong>Work Order Management</strong>. It shows one report card.</p>",
+        "images": [
           {
-            "term": "UOM (Unit of Measure)",
-            "definition": "One unit name, for example **Kg**, **Cum**, **Sqm**, **each**, **Nos.**. The screen title is **Productivity** and its four tabs are **UOMs**, **Phase Codes**, **Repair Types** and **GL Codes**. The **UOMs** sub-tab has **Add UOM** and a table with **S.No**, **Unit of Measurement** and **Actions** (edit, delete)."
-          },
-          {
-            "term": "UOM Group",
-            "definition": "A category that holds compatible units. **UOM Groups** has **Add UOM Group** and a table with **Group**, **Uoms** and **Actions**. The UOM Group and UOM columns on vendor rate cards and Bid Templates use these values. Examples: **Area** (Sqm, Square Feet, Hectare), **Length** (Rm, LF, km, metre), **Mass** (Kg, Lbs), **Time** (Month, Day) and **Volume** (Cum, Litres)."
-          },
-          {
-            "term": "UOM Conversions",
-            "definition": "A table with **Source**, **Conversion Factor** and **Target**, for example Kg × 2.2 = Lbs, Cum × 1000 = Litres, Month × 30 = Day, each × 1 = Nos.. It lists the conversions between units of the same group."
-          },
-          {
-            "term": "Phase Code",
-            "definition": "A cost and activity code. The **Phase Codes** tab has **Add**, a search box, the pager, **Export** (Download and Upload) and a table with **S.No.**, **Phase Code**, **Phase Code Description**, **Phase Code Type**, **Cost Types** and **Actions**. **Cost Types** is a multi-select with **Material**, **Equipment**, **Labor**, **Unit Rate**, **Sub Contractor**, **BOQ's**, **Freight Charges** and **Fuel & Gas** (the same eight as **Global Data → Cost**). **Add** inserts a blank row at the top of the table rather than opening a pop-up."
-          },
-          {
-            "term": "Repair Type",
-            "definition": "A simple list of **Repair Type** and **Description**. The tab has **Add**, **Save Changes** and a table with **S.No.**, **Repair Type**, **Description** and **Actions**."
-          },
-          {
-            "term": "GL Code",
-            "definition": "A simple list of accounting codes. The tab has **Add**, a search box and a table with **S.No.**, **Code**, **Description** and **Actions**."
-          },
-          {
-            "term": "Where phase code data comes from and goes",
-            "definition": "**Comes from:** **Add** on the Phase Codes tab, Excel through **Export → Upload**, or a sync from Viewpoint through Staged Tables (**Phase Codes**). **Goes to:** (1) **Project Setup → Phase Codes** for every project, with **Timesheet Management** and **Equipment Management** tick boxes and a **Settings** button (\"Select the Cost Type for each category to display Phase Codes\": Material, Equipment, Labor, Unit Rate, Sub Contractor, BOQ's, Freight Charges, Fuel & Gas). (2) **Global Data → Cost → Cost Breakdown Structure → Phase Codes**, which is the same table. (3) **Time Management → My Timesheet → Default Phase Codes**, which lists Direct (D) and Indirect (I) phase codes with Labor in their Cost Types, shown as \"D - 01.001.0001 - Excavation\"; Non Productive and Change Order codes are not offered. Global Rosters also carry a **Default Indirect Phase Code** per person. (4) **Field Works → Progress → Productivity Logs**: the **Set Phase Codes** dialog offers a project-specific subset of the project list, and **Data Summary → Phase Codes** groups the logged hours by the phase code types **Direct**, **Indirect**, **Non Productive** and **Change Order**. A code such as **1089-101 - Fabrication** (Direct) appears in both the Project Setup list and the logs."
-          },
-          {
-            "term": "Where UOMs are used in Field Works",
-            "definition": "**Global Data → Productivity → UOMs** (for example Kg, Lbs, Cum, Litres, Sqm) supplies the **UOM** of a work package, so **Estimated Quantity 45** with **UOM Cum** on a work package in **Project Setup → Works** comes from this list. A missing unit has to be added here first. Work logs then record **Actual Quantity** in that unit."
+            "src": "assets/product/global-data/044.jpg",
+            "caption": "The Asset Breakdown Report"
           }
         ],
-        "procedures": [
+        "definitions": [
           {
-            "title": "Add a new unit of measure and group it",
-            "steps": [
-              "Go to <strong>Global Data → UOM, Phasecode & GL Codes</strong> tile → <strong>UOMs</strong> tab.",
-              "Click <strong>Add UOM</strong>, type the unit name (for example \"Tonne\"), and save.",
-              "To group it, open the <strong>UOM Groups</strong> sub-tab and add it to (or create) a group with <strong>Add UOM Group</strong>."
-            ],
-            "note": "Conversions between units of a group are listed on the UOM Conversions sub-tab (Source, Conversion Factor, Target).",
+            "term": "Asset Breakdown Report",
+            "definition": "Click the card to open a table of equipment that is down. Columns: **Asset ID**, **Status**, **Make**, **Model**, **Category**, **Assigned Project/Location**, **Down Date**, **Estimated Back in Service**, **Vendor**, **Notes**, **Cost/Estimate**, **Warranty** and **Responsible Party**. Each column heading carries a filter icon."
+          },
+          {
+            "term": "Search",
+            "definition": "The box at the top left finds a row by work order or asset ID."
+          },
+          {
+            "term": "Export, Filters, Manage Columns",
+            "definition": "**Export** downloads the table, **Filters** narrows it and **Manage Columns** chooses and orders the columns, as on the **Work Orders** tab. The back arrow beside the title returns to the report cards."
+          }
+        ]
+      },
+      {
+        "heading": "Workflow Issues",
+        "intro": "<p><strong>Workflow Issues</strong> is the second tab of <strong>Work Order Management</strong>. It lists the issues raised against work orders during their approval, and counts them at the top.</p>",
+        "definitions": [
+          {
+            "term": "Counters",
+            "definition": "**Total Issues**, **Issues Approved** (green) and **Issues Rejected** (red) at the top left count the issues in the list."
+          },
+          {
+            "term": "Search by ID",
+            "definition": "Type an issue ID to narrow the list."
+          },
+          {
+            "term": "Filters",
+            "definition": "A **Filters** button at the right of the toolbar."
+          },
+          {
+            "term": "List and card views",
+            "definition": "Two icons at the top right switch between a table and cards."
+          },
+          {
+            "term": "Columns",
+            "definition": "Issue Number, Work Order Number, Level, Raised on Date, Raised on Time, Raised by, Image, Comments, Assign To and Due Date."
+          }
+        ]
+      },
+      {
+        "heading": "Work Orders",
+        "intro": "<p><strong>Work Orders</strong> is the first tab of <strong>Work Order Management</strong> (breadcrumb <strong>Global Data → Work Order</strong>). It lists every work order of the company. The tab bar also holds <strong>Workflow Issues</strong> and <strong>Reports</strong>, and the <strong>Settings</strong> button at the top right opens the work order setup.</p>",
+        "images": [
+          {
+            "src": "assets/product/global-data/036.jpg",
+            "caption": "The Work Orders tab in list view"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Create",
+            "definition": "Opens **Create Work Order Contract**: **Work Order Type** (required, picked from the types set up in Settings), **BASIC INFORMATION** (**WO Description**, **Work Order Status**, **Created Date**, **Created By**, **Notes**) and **PRIORITY** (**Due Date**). **Submit** saves.",
             "images": [
               {
-                "src": "assets/notion/units-of-measurement-uoms/001.jpg",
-                "caption": "The UOMs tab",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/units-of-measurement-uoms/002.jpg",
-                "caption": "Add UOM",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/units-of-measurement-uoms/003.jpg",
-                "caption": "Added UOMs in a table with edit and delete options",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/uom-groups/002.jpg",
-                "caption": "Add UOM Group: a name and the units to group together",
-                "step": 3
+                "src": "assets/product/global-data/037.jpg",
+                "caption": "The Create Work Order Contract form"
               }
             ]
           },
           {
-            "title": "Add a Phase Code",
-            "steps": [
-              "Go to <strong>Global Data → UOM, Phasecode &amp; GL Codes</strong> → <strong>Phase Codes</strong> tab and click <strong>Add</strong>. A blank row opens at the top of the table.",
-              "Type the <strong>Phase Code</strong> and its <strong>Phase Code Description</strong>, and tick the <strong>Cost Types</strong> that apply (Material, Equipment, Labor, Unit Rate, Sub Contractor, BOQ's, Freight Charges, Fuel &amp; Gas).",
-              "Save the row. The code then shows in every project's <strong>Project Setup → Phase Codes</strong> list."
-            ],
-            "note": "Bulk create/update is also available via Excel Upload, which supports a Create Mode and an Update Mode."
+            "term": "Search by ID",
+            "definition": "Type a work order ID to narrow the list."
+          },
+          {
+            "term": "Pager (1 to 7) of 7",
+            "definition": "Shows which rows are on screen and the total, with arrows to move between pages."
+          },
+          {
+            "term": "Export",
+            "definition": "Downloads the work orders shown."
+          },
+          {
+            "term": "Filters",
+            "definition": "Opens a **Filters** dialog with **Work Order Status**, **Created By**, **Equipment Number**, **Equipment Status**, **Maintenance Type**, **Operational Status**, **Assigned Project/Location**, **Service Type**, **Priority** and **Business Unit**. **Apply** filters the list, **Clear All** resets it and **Save Filters** stores the selection.",
+            "images": [
+              {
+                "src": "assets/product/global-data/038.jpg",
+                "caption": "The Filters dialog"
+              }
+            ]
+          },
+          {
+            "term": "Manage Columns",
+            "definition": "Opens a dialog with **Column Options** (tick boxes with **Select All** and a search) on the left and **Column Arrangement** on the right, where you drag columns into the order you want or remove them. **Reset to Default** restores the standard columns."
+          },
+          {
+            "term": "View buttons",
+            "definition": "Three icons switch between list view, **Grid View** (cards) and **Kanban View**."
+          },
+          {
+            "term": "List columns",
+            "definition": "ID, Description, Work Order Status, Work Order Type, Assigned Project/Location, Created Date, Created By, Equipment, Equipment Issue Linked, Maintenance Type, Project, Phase Code, Complaint, Cause, Correction, Notes, Priority, Equipment Status, Due Date, Service Location, Technician, Vendor, Vendor Contact, Vendor PO Number and Assign To. The last column holds the row actions: an **Assign To** drop-down, **See History** (history of the work order) and delete."
+          },
+          {
+            "term": "Grid View",
+            "definition": "One card per work order with its ID, description, **Work Order Type**, status badge and an **Assign To** drop-down. The three-dot menu on a card has **See History**.",
+            "images": [
+              {
+                "src": "assets/product/global-data/039.jpg",
+                "caption": "Grid View"
+              }
+            ]
+          },
+          {
+            "term": "Kanban View",
+            "definition": "One column per status, with the number of work orders in each: **Unassigned** (work orders with no status yet), **To be Assigned**, **Pending**, **In Progress**, **Waiting for Quote**, **Waiting for Parts**, **On Hold**, **Waiting for Completed**, **Completed** and **Cancelled**. The statuses come from **Settings → Status**.",
+            "images": [
+              {
+                "src": "assets/product/global-data/040.jpg",
+                "caption": "Kanban View"
+              }
+            ]
+          },
+          {
+            "term": "Settings",
+            "definition": "Opens the work order setup (see **Work Order Settings**)."
           }
         ],
-        "images": [
+        "procedures": [
           {
-            "src": "assets/notion/uom-conversions/002.jpg",
-            "caption": "Conversions come from the UOM Groups you set up"
+            "title": "Create a work order",
+            "steps": [
+              "Open **Global Data → Work Order Management** and click **Create**.",
+              "Choose the **Work Order Type**. The list shows the types defined under **Settings → Work Order Types**.",
+              "Fill in **WO Description**, **Work Order Status**, **Created Date**, **Created By**, **Notes** and the **Due Date**.",
+              "Click **Submit**."
+            ]
+          },
+          {
+            "title": "Find work orders",
+            "steps": [
+              "Type an ID in **Search by ID**, or click **Filters**.",
+              "Choose the values to narrow by and click **Apply**.",
+              "Click **Save Filters** to keep them, or **Clear All** to start again."
+            ]
+          },
+          {
+            "title": "Change which columns show",
+            "steps": [
+              "Click **Manage Columns**.",
+              "Tick or untick columns under **Column Options**, and drag them in **Column Arrangement**.",
+              "Click **Apply**. **Reset to Default** restores the standard set."
+            ]
           }
         ]
       },
@@ -24927,60 +25291,6 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Customer",
-        "intro": "<p>Use this section to keep the customer list, its contacts and the approval steps customer records go through. A Global Admin or the Opportunity Management admin maintains it.</p><p><strong>Where this data goes:</strong> the <strong>Customer</strong> dropdown on <strong>Projects → Create Project</strong> lists exactly the customers on this screen, and opportunities use the same customers.</p>",
-        "definitions": [
-          {
-            "term": "Customer (Standard/Configurable Fields)",
-            "definition": "The **Customers** tab (**Global Data → Customer**; the page heading says \"Lead Customers\") has sub-tabs **Active Customers** and **Rejected**, and the buttons **Create Customer**, **Merge Duplicates**, **Add Groups**, search, **Export**, **Filters**, list/grid icons and a save-layout icon. Each customer is a card with an **Approved** chip, **Customer ID**, **Customer Name** and **Customer Email**. The fields on a customer are set under **Settings → Customer**: standard fields **Customer ID**, **Customer Name**, **Short Name**, **Alias Name**, **Primary**, **Mailing** and **Billing Address**, **Email Address**, **Phone Number**, **Fax Number**, **URL**, **Tax Codes** and **Locations**, plus your own via **Add Field**."
-          },
-          {
-            "term": "Contact",
-            "definition": "The **Contacts** tab lists people at customers and owners. Columns include **Customer / Owner**, **Customer / Owner Name**, **Contact ID**, **Salutation**, **First Name**, **Middle Name**, **Last Name**, **Suffix**, **Job Title**, **Primary Email**, **Secondary Email**, **Primary Phone Number**, **Work Phone Number**, primary and secondary address lines, country, state, city and zip, **Services Provided** and **Personal Website**. The **Settings** menu also has a **Contact** page for contact fields."
-          },
-          {
-            "term": "Approval Workflow (Customer)",
-            "definition": "The third page of **Customer → Settings** (left menu: **Customer**, **Contact**, **Approval Workflow**). A table of approval levels (**Level**, **Level Description**, **Approvers**, **Workflow Type**) defines the sign-off chain a new customer goes through."
-          },
-          {
-            "term": "Where customer data comes from and goes",
-            "definition": "**Comes from:** **Create Customer**, or a sync from Viewpoint through Staged Tables (**Customers**). **Goes to:** the **Customer** dropdown on **Create Project** and, per the Opportunity Management section, to opportunities. The status chip on each card (**Approved**) and the **Rejected** sub-tab show where a customer stands in the approval workflow."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Add an approval level for customer records",
-            "steps": [
-              "Go to <strong>Global Data → Customer</strong> tile → <strong>Approval Workflow</strong> tab → <strong>Create Level</strong>.",
-              "Name/describe the level, assign Approvers, and choose the Workflow Type.",
-              "Save — subsequent opportunity/customer approvals will route through this chain in order."
-            ]
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/notion/customers/001.jpg",
-            "caption": "Add Field, for a new customer field"
-          },
-          {
-            "src": "assets/notion/customers/003.jpg",
-            "caption": "Choose Type, for the kind of input"
-          },
-          {
-            "src": "assets/notion/customers/004.jpg",
-            "caption": "Required toggle on a customer field"
-          },
-          {
-            "src": "assets/notion/customers/005.jpg",
-            "caption": "Show on cards toggle on a customer field"
-          },
-          {
-            "src": "assets/notion/customers/006.jpg",
-            "caption": "Save Changes, to keep the new customer fields"
-          }
-        ]
-      },
-      {
         "heading": "Compliance Hub",
         "intro": "<p>Use the Compliance Hub to define the compliance items the company must hold (licences, certificates, insurance) and track the company's actual status against them. A Super Admin or compliance lead maintains it.</p><p><strong>Where this data goes:</strong> requirements defined in the <strong>Compliance Directory</strong> are tracked under <strong>My Company Compliance</strong>, and the expiry warning period is set under <strong>Settings</strong>.</p>",
         "definitions": [
@@ -25076,16 +25386,30 @@ const MODULES = [
       "Ratings Form",
       "Sub Contractors",
       "Business Units",
-      "Work Order Management",
+      "Customer Settings",
+      "Contacts",
+      "Customers",
+      "GL Codes",
+      "Repair Types",
+      "Phase Codes",
+      "UOM Conversions",
+      "UOM Groups",
+      "UOMs",
+      "Crews",
+      "User Permission",
+      "Global Permission",
+      "Global Rosters",
+      "User Accounts",
       "Construction Types",
-      "Users & Permissions",
-      "UOM & Phase Codes",
+      "Work Order Settings",
+      "Work Order Reports",
+      "Workflow Issues",
+      "Work Orders",
       "Settings",
       "Forms",
       "Notifications",
       "Marketplace",
       "Cost & Bid Templates",
-      "Customer",
       "Compliance Hub",
       "Measurement Templates"
     ]
