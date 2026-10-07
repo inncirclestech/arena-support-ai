@@ -31034,238 +31034,372 @@ const MODULES = [
     "qaItems": QA_DATAANALYTICS,
     "narrative": [
       {
-        "heading": "Overview",
-        "intro": "<p>Data Analytics & Insights turns what the field logs into dashboards, charts and reports. PMs, commercial managers and Module Admins use it; nothing is entered here.</p><p>It has three tabs: **Standard Analytics** (18 pre-built dashboards), **Configurable Analytics** (9 self-serve cards) and **Standard Reports**. Every screen is a downstream view of **Field Works** logs and **Project Setup** data for one plant (Tree Version) at a time, so an empty dashboard almost always means nothing has been logged or mapped yet. Dashboards show a saved snapshot: click the refresh icon next to **Last Updated At** to reload it.</p>",
-        "definitions": [
+        "heading": "Standard Analytics",
+        "intro": "<p><strong>Standard Analytics</strong> is the first tab of <strong>Data Analytics & Insights</strong> in the project menu. It is a grid of ready-made analytics cards for the open project; click a card to open its charts and tables. Everything is read-only, and most pages are driven by a <strong>Tree Version</strong> picker.</p>",
+        "images": [
           {
-            "term": "Standard Analytics",
-            "definition": "The default tab, holding 18 pre-built dashboard cards covering progress, schedule, cost, resources, collaboration, quality, safety, contractor performance and management reporting."
-          },
-          {
-            "term": "Configurable Analytics",
-            "definition": "The self-serve tab, holding 9 cards for data classification and trends, configurable and counting tables, custom chart and report builders, Excel, Power BI, and stored personal reports."
-          },
-          {
-            "term": "Standard Reports",
-            "definition": "The tab holding canned printable reports, with Reports and Other Reports sub-tabs and the Daily Progress Report and Weekly Progress Report cards."
-          },
-          {
-            "term": "Where analytics data comes from",
-            "definition": "Plants, entities, super locations, locations and work packages come from **Project Setup → Works**, and planned dates and budgets from Works (Other Attributes) and **Project Setup → Schedule**. Actuals come from **Field Works**: **Work Logs** feed Construction Progress, Schedule and Work Summary; **Productivity Logs** feed Productivity Reports; **Equipment, Material and Manpower Logs** feed Equipment / Material / Manpower; **RFI**, Submittals and Change Orders feed Collaboration Items and RFI Approval Delays; **Quality** logs, punch lists and restraints feed Quality Progress; **Safety** forms feed Safety Analytics; **Cost** entries against the **Project Setup → Estimate** feed Cost and Cost Dashboards and Reports; work orders and invoices feed Workorders, DPR report, Contractors Performance and Amount Invoiced vs Amount Paid. Settings that change the numbers: **Project Settings → Dashboard Percentages** (Worklogs only, Workorder and worklogs, P6, or Milestone based), **Project Work Measurement** (Percentage Based or Effort Based) and **Productivity Log Settings**."
-          },
-          {
-            "term": "Plant selector and refresh",
-            "definition": "Most dashboards open with a **Tree Version** selector that lists the project's plants (13 on Arena Steel Plant - Phase 1, the same list as Field Works, Project Setup and My Desk) and many have an **Entity** selector, **From / To** dates and Filters. Figures are a saved snapshot: **Last Updated At** shows its age and the **refresh** icon recalculates it. For example, after choosing the ECR (Electrical Control Room) entity in Construction Progress → Work Summary the table kept showing the previous entity until refresh was clicked, then showed 24 locations with 1 completed, the same as the Field Works → Approve Work Logs Summary."
-          },
-          {
-            "term": "Why some dashboards may show no data",
-            "definition": "A dashboard shows ₹0 or No Data until the records behind it exist: cost figures need an estimate in Project Setup, work order and invoice dashboards need work orders and invoices, Productivity Reports need productivity logs, and Quality Progress and Safety Analytics need quality or safety forms."
+            "src": "assets/product/data-analytics/101.jpg",
+            "caption": "Standard Analytics cards"
           }
         ],
-        "procedures": [
+        "definitions": [
           {
-            "title": "Decide which analytics tab to use",
-            "steps": [
-              "Open the project and go to **Data Analytics & Insights**.",
-              "Start on **Standard Analytics** and look for a pre-built dashboard that answers your question.",
-              "If nothing pre-built fits, move to **Configurable Analytics** to build your own chart, report, or data table, or to export to Excel or Power BI.",
-              "For routine printable progress reporting, go to **Standard Reports**."
-            ],
-            "note": "If a dashboard looks empty, check whether the underlying activity is actually being logged in Field Works before treating it as a reporting problem."
+            "term": "Tabs",
+            "definition": "**Standard Analytics**, **Configurable Analytics** and **Standard Reports** sit at the top. The back arrow beside the heading returns to the previous page."
+          },
+          {
+            "term": "Construction Progress",
+            "definition": "Opens progress analysis of the construction work down to the granular level. It has its own row of tabs, described in the **Construction Progress** section."
+          },
+          {
+            "term": "Schedule",
+            "definition": "Opens burn down and burn up charts that compare actual, client, skyline, forecast and planned end dates. See the **Schedule Analytics** section."
+          },
+          {
+            "term": "Cost",
+            "definition": "Opens cost charts split into **Payables** and **Receivables**. See the **Cost Analytics** section."
+          },
+          {
+            "term": "Equipment / Material / Manpower",
+            "definition": "Opens the **Planned vs Actual Productivity** page, with a tab each for **Equipment**, **Material** and **Man Power**."
+          },
+          {
+            "term": "Collaboration Items",
+            "definition": "Opens a chart of **Construction Forms**, to show where collaboration forms are waiting."
+          },
+          {
+            "term": "Quality Progress",
+            "definition": "Opens the same set of progress tabs as Construction Progress, but measured on quality items. It adds a **Quality Workflow Issue**, **PunchList** and **Restraint** filter row."
+          },
+          {
+            "term": "Safety Analytics",
+            "definition": "Opens the same set of progress tabs, measured on safety items."
+          },
+          {
+            "term": "Contractors Performance",
+            "definition": "Opens a **Contractor Performance** chart."
+          },
+          {
+            "term": "Activities & Work Packages Progress",
+            "definition": "Opens a **Cumulative Plan vs Actual** chart whose actuals come from approved RFIs. Switch between **Project**, **Work Package** and **Activity**, and between **Day**, **Week**, **Month** and **Year**. A fullscreen button and a refresh button sit above the chart, with a **Last Updated At** time."
+          },
+          {
+            "term": "Productivity Reports",
+            "definition": "Opens the productivity report pages. See the **Productivity Reports** section."
+          },
+          {
+            "term": "Amount Invoiced vs Amount Paid",
+            "definition": "Opens a month-wise chart of **Invoiced and Paid amount Vs Time** with a download icon. It shows **Oops! No Data Found** until invoices exist."
+          },
+          {
+            "term": "Sync",
+            "definition": "Card described as syncing project data to Excel. It runs a job, so it is not opened here."
+          },
+          {
+            "term": "Progress Forecast Report",
+            "definition": "Opens a table of activities against planned and forecast dates. See the **Progress Forecast Report** section."
+          },
+          {
+            "term": "DPR report",
+            "definition": "Opens the workorder daily progress report. See the **DPR Report** section."
+          },
+          {
+            "term": "Cost Dashboards and Reports",
+            "definition": "Opens the **Cost Dashboard** and **Cost Report** pages. See the **Cost Dashboards and Reports** section."
+          },
+          {
+            "term": "Workorders",
+            "definition": "Opens charts on workorders: **Variation Orders**, **Invoice Status**, **Time Vs Workorder**, **Cost - Quantity Vs Workorder** and **Invoiced and Paid amount Vs Time**. Each chart has a download icon, and most have a **Workorders** selector."
+          },
+          {
+            "term": "RFI Approval Delays",
+            "definition": "Opens a table of pending RFI approvals with **Total Planned**, **Total Actual**, **Level Desc** and **Responsible (Contact no)** columns, so you can see which approvals are holding up work."
+          },
+          {
+            "term": "Work Summary - MIS Report",
+            "definition": "Opens an **MIS Summary Report** table. Each row (starting with the project, expandable with the plus sign) shows **Physical Target**, **Work Complete** and **Variance**, each as a percentage and a count or length."
           }
         ]
       },
       {
-        "heading": "Standard Analytics",
-        "intro": "<p>Standard Analytics holds 18 pre-built dashboards, each aimed at a question projects ask again and again. PMs, commercial managers and safety and quality leads open it to see how a plant is doing without building a report.</p><p>The cards fall into themes: physical progress and time (Construction Progress, Schedule, Activities & Work Packages Progress, Progress Forecast Report, Work Summary - MIS Report), commercial (Cost, Cost Dashboards and Reports, Amount Invoiced vs Amount Paid, Workorders, DPR report, Contractors Performance), resources (Equipment / Material / Manpower, Productivity Reports), approvals and quality (Collaboration Items, RFI Approval Delays, Quality Progress, Safety Analytics) and **Sync**. Each card below says what it shows, its filters, which Field Works or Project Setup data feeds it, and what keeps it empty.</p>",
-        "definitions": [
+        "heading": "Construction Progress",
+        "intro": "<p>The <strong>Construction Progress</strong> card opens a set of tabs that analyse work done against plan, by activity, location, work package and system. It is where site and planning teams check how far each part of the plant has progressed.</p>",
+        "images": [
           {
-            "term": "Construction Progress",
-            "definition": "The main physical progress dashboard, with a left menu of ten views. **Activity Analysis** is a matrix of super location types (AS Civil, AS Pipe Bridge erection, AS Trestle Erection, AS Piping) against activities, coloured by status (Not yet started, Ready to work, In Progress, Completed, Issue Raised), with an Activity or Work Package toggle and an Entity filter. **Project Drill Down** has eight tabs: **Overall Progress** (graph), **Detailed View** (entity cards, then super locations, locations and work packages with Actual % and Planned %, and Work Packages, Drawings and Issues tabs), **Work Summary** (location types with Locations, Total Completed and % Completed, an Activities checklist of all 27 Global Data activities, Manage Columns and Custom Column), **System Progress**, **Loop Progress**, **People** (Work Completed vs Remaining, Issues Open vs Closed per user), **Earned Hours** and **Quantity** (actual against total quantity by work package). **Project Elements** picks work packages to focus on; **Work Package** and **Location Type** show percentage bar charts (vertical or horizontal) with a filter panel (Entities, Super Locations, Locations Type, Quality And Documents; Apply Filter, Clear Filter, Save Filter); **Location Type Grids**, **Work Package Grids** and **Quality And Documents** show status-coloured grids of every location (Piperack has 15); **Quality Dashboard** shows six punch list and quality form panels; **Work Milestones** shows a super location by activity timeline. **Where this data comes from:** the structure is **Project Setup → Works**; completion comes from **Field Works → Progress → Work Logs**, measured as set in **Project Settings → Project Work Measurement** and **Dashboard Percentages**. On Arena Steel Plant - Phase 1 every percentage shows 0% (Total Work Completed: 0%) although one ECR Footing location is completed, so check the weightages in Project Setup → Works → Measurement Methods if percentages stay at zero."
+            "src": "assets/product/data-analytics/104.jpg",
+            "caption": "Activity Analysis tab"
           },
           {
-            "term": "Schedule",
-            "definition": "The time-performance dashboard. It has a Tree Version selector, From and To date pickers, Filters and a progress S-curve (with the plant's entities and a Last Updated At refresh), plus panels for **Quality And Documents Burn Down** and **Burn Up** (series Actual End Date, Client End Date, Skyline End Date, Forecast End Date and Planned End Date), **Quality And Documents Status**, **Count vs Client End Date**, **Sold vs Actual End Date** and **Count vs Forecast End Date**. **Where this data comes from:** the Planned, Forecasted, Client, Skyline and Actual end dates are the date columns of **Project Setup → Works** (Other Attributes) and **Project Setup → Schedule** (the same columns appear in Field Works → Detailed Work Logs); actuals follow Work Logs. Without dates in Works and Schedule the charts stay blank."
-          },
-          {
-            "term": "Cost",
-            "definition": "The cost dashboard, with **Payables** and **Receivables** tabs. Payables has a left menu: **Cost Activity**; **Cost by Cost Types** (Total Estimate Cost and Total Actual Cost, with Labor, Material and Equipment sections each listing estimated costs by name, code, sub total, contingencies and total, beside actual costs); **Cost by Month** (bar or line graphs of Monthly Breakdown, Committed Cost, Projected Cost, Direct Monthly Costs and the cumulative planned, direct, committed and projected series); **Payments by Month** (invoiced and paid amount against time); **Cost Analytics** (tabs Cost Analytics Inputs, Cost Analytics Summary and Control Budget; an Earned Value Analysis table by phase code with change orders raised and approved, committed and actual cost, cost and schedule variance, CPI, SPI, EAC, ETC, invoiced amount and forecast); and **Cost Graphs** (Cost History and Project Change History). Receivables has **Cost Plan Forecast**, **Monthly Payment Collection** and **Payment Milestones**. **Where this data comes from:** estimate lines come from **Project Setup → Estimate** (built from Global Data cost types), actuals from **Field Works → Cost** (Transaction, Change order, Transfer, Field Logs, which need an approved estimate) and invoices from **Field Works → Invoices**. On Arena Steel Plant - Phase 1 all figures are ₹0 or No Data because no estimate exists."
-          },
-          {
-            "term": "Equipment/Material/Manpower",
-            "definition": "A \"Planned vs Actual Productivity\" dashboard with three tabs, **Equipment**, **Material** and **Man Power**, each with a Tree Version selector, a fullscreen view, a chart/table toggle, an **Actual Logs** panel (for example \"Equipment Actual Logs\") and a **Total Plan and Actual** panel. **Where this data comes from:** the actuals are the quantities logged in **Field Works → Progress → Equipment Logs, Material Logs and Manpower Logs** against work orders from **Project Setup → Workorder**. It shows \"No Data available\" on Arena Steel Plant - Phase 1 because no work orders or resource logs exist."
-          },
-          {
-            "term": "Collaboration Items",
-            "definition": "A single **Construction Forms** tab with a **Table View** and a **Bar Chart View**. The table counts forms by status, **Created**, **Waiting for approval**, **Approved** and **Rejected**, for RFIs, Submittals and Change Orders. **Where this data comes from:** the RFI, Submittal and Change Order forms raised in **Field Works → Progress**; on Arena Steel Plant - Phase 1 the table shows RFIs Created 3, the three WIRs in the RFI card, and zeros elsewhere. Open it to see where forms are stuck waiting for approval."
-          },
-          {
-            "term": "Quality Progress",
-            "definition": "The quality dashboard, built like Construction Progress but for quality. The left menu has **Project Drill Down**, **Project Elements**, **Work Package**, **Location Type**, **Location Type Grids**, **Work Package Grids**, **Quality And Documents**, **Quality Dashboard** and **Work Milestones**. Project Drill Down has **Detailed View**, **System Progress**, **Loop Progress**, **People**, and three issue tabs, **Quality Workflow Issue**, **PunchList** and **Restraint**, each with Entity, Super Location and Users filters and counters (for example Total Punch Lists with RAISED, RECTIFIED and QC_VERIFIED; Total Restraints; Total Quality Workflow Issues with APPROVED and REJECTED). **Where this data comes from:** quality logs submitted in **Field Works → Quality** against work packages mapped to quality folders in **Project Setup → Quality**, plus **Punch Lists** and **Restraints** from Field Works. It shows No Data on Arena Steel Plant - Phase 1 because Folder 1 has no mapped work packages and no punch lists or restraints exist."
-          },
-          {
-            "term": "Safety Analytics",
-            "definition": "The safety dashboard, laid out like Construction Progress: **Project Drill Down** (Detailed View, System Progress, Loop Progress, People, Earned Hours, Quantity), Project Elements, Work Package, Location Type, Location Type Grids, Work Package Grids and the grid and dashboard views. The Detailed View lists entities then super locations, locations and work packages with Actual % and Planned %. **Where this data comes from:** safety forms and issues recorded in **Field Works → Safety** for work packages that have safety forms mapped in **Project Setup → Safety**. It shows No Data on Arena Steel Plant - Phase 1 because no safety form category is set up."
-          },
-          {
-            "term": "Contractors Performance",
-            "definition": "A \"Contractor Performance\" table (with a bar chart view) that scores each contractor by **Productivity**, **Timelines** and **Quality**. **Where this data comes from:** the contractors on the project's work orders (**Project Setup → Workorder**; contractor names come from **Global Data → Vendors / Sub Contractors**). It shows \"No Data Available\" on Arena Steel Plant - Phase 1 because no work orders exist."
-          },
-          {
-            "term": "Activities & Work Packages Progress",
-            "definition": "A **Cumulative Plan vs Actual** chart with a Project, Work Package or Activity toggle and a Time Period of Day, Week, Month or Year, plus a Tree Version selector, fullscreen and refresh. The card says the actuals are derived from RFI. **Where this data comes from:** plan from the work package dates and budgets in **Project Setup → Works**; actuals from the RFI-based progress in **Field Works → Progress → RFI**."
-          },
-          {
-            "term": "Productivity Reports",
-            "definition": "The productivity dashboard, with five tabs. **Detail Productivity Report** (toggle Direct or Change Order; Tree Version, From Date and To Date, Filters, Download Excel, Manage Columns) lists each work package and phase code with groups of columns: **Budget** (Budgeted, Change and Revised Budgeted Hours and Quantity), **Weekly** (the current week, for example 09-28-2026 to 10-04-2026), **Job To Date**, **Percent** (% Spent, % Installed, Weighted %, Weekly % Gain, Unit % Complete), **Labor Unit**, **Work Factor**, **Earned Hours** and **Forecast Information** (Hours Remaining In Budget, Hours Left To Earn, Hours To Complete, Hours At Completion, Hours Over / Under, Average MNLD). **Indirect and Non Productive Staff** lists indirect and non-productive phase codes with Budgeted, Weekly and JTD Hours and % Spent. **Productivity Report Summary** groups the same by phase code with hours, quantity and % spent for each day of the week. **Efforts Dashboard** has the productivity factor (PF) by day, activity, foreman, supervisor and entity (filters: Phase Code of Direct, Change Order, Indirect or Non Productive, and dates). **Quantity Dashboard** shows % Complete by location type, super location type and activity for Direct and Change Order codes. **Where this data comes from:** budgets, phase codes, schedule IDs and quantities are the work package attributes in **Project Setup → Works** and the phase codes in **Project Setup → Phase Codes**; weekly and JTD hours come from **Field Works → Progress → Productivity Logs**. Everything is 0 on Arena Steel Plant - Phase 1 because no productivity logs exist."
-          },
-          {
-            "term": "Amount Invoiced vs Amount Paid",
-            "definition": "A month-wise \"Invoiced and Paid amount Vs Time\" chart with a Tree Version selector and a download icon. **Where this data comes from:** invoices raised in **Field Works → Invoices** against work orders, and their payments. It shows \"Oops! No Data Found\" on Arena Steel Plant - Phase 1 because no invoices exist. The same chart appears under Cost → Payments by Month and in Workorders."
-          },
-          {
-            "term": "Sync",
-            "definition": "A card that lists datasets with an action column; it currently has one dataset, **Project Data**, with a **SYNC** button that pushes the project's data to Excel (the Excel and Power BI routes are described under Configurable Analytics)."
-          },
-          {
-            "term": "Progress Forecast Report",
-            "definition": "A forward-looking grid for one Entity and Super Location Type: Tree Version, Entity, Super Location Type, Activities, **No. of weeks** (default 1 Week), an Activity or Work Package toggle, a schedule or percentage toggle and a legend of Completed, Forecasted dates and Ongoing. Columns are activities (Excavation, Marking, Concreting, Shuttering, Barbending, Deshuttering, PCC) each with Planned Start Date and Planned End Date, one row per super location (AS Civil showed a start of 03-06-2026). **Where this data comes from:** the planned dates in **Project Setup → Works** and **Schedule**, and progress from **Field Works → Work Logs**."
-          },
-          {
-            "term": "DPR report",
-            "definition": "A work-order daily progress report (the card says \"View workorder dpr reports\"): pick a work order in **Select Workorder** and the table shows, for today's date (for example 01 Oct 2026), each Activity with Estimated Quantity, UOM, Executed Quantity, Balance Quantity To Be Executed, Planned For Current Month, Executed In Current Month, Planned For Today and Executed Today, with Export, Filters and Manage Columns. **Where this data comes from:** the work order's items from **Project Setup → Workorder** ; the Create Workorder form has an **Actuals Derived From** choice (Work Logs, RFIs or Service Entry Sheets) that decides where its executed quantities come from. It is empty on Arena Steel Plant - Phase 1 because there are no work orders. It is not the same as the Daily Progress Report on the Standard Reports tab."
-          },
-          {
-            "term": "Cost Dashboards and Reports",
-            "definition": "A **Cost Dashboard** and a **Cost Report**, each with a **Lumpsum** view (the project estimate type is set in **Project Settings → Cost Breakdown Structure**). The dashboard shows the project name, Project ID, Customer, Actual Progress, Budget Cost, Approved Changed Orders, Revised Budget, Actual Cost To Date, Forecast At Completion, Cost Performance Index (Over Budget), Schedule Performance Index (Behind Schedule), Profit Variance, charts and a **Change Order Status** table (ID, Description, Value, Status). The **Cost Report** is a \"Lump Sum Project Cost Tracking Report\": project details (Client, Project Manager, Contract Type, Contract Value, Est. Completion), Budget Cost, Revised Budget, Total Committed To Date, Total Actuals To Date, Forecast At Completion, a Material, Equipment, Labor and Subcontractors table of budget, committed, actual and forecast cost, Commitments & Change Orders and a Forecast Analysis. **Where this data comes from:** **Project Setup → Estimate** for budget, **Field Works → Cost** for actuals and change orders, and the project profile (Customer, Project Manager, contract details) which show N/A when not filled. All values are ₹0 on Arena Steel Plant - Phase 1."
-          },
-          {
-            "term": "Workorders",
-            "definition": "A work order dashboard with panels **Variation Orders** (total value, filter, download), **Invoice Status**, **Time Vs Workorder**, **Cost - Quantity Vs Workorder** (Type: Cost V/s Workorder) and **Invoiced and Paid amount Vs Time**, each with a **select Workorders** dropdown. **Where this data comes from:** work orders from **Project Setup → Workorder** and invoices from **Field Works → Invoices**. It shows \"Oops! No Data Found\" on Arena Steel Plant - Phase 1 because there are none."
-          },
-          {
-            "term": "RFI Approval Delays",
-            "definition": "A table of pending RFI approvals for the plant selected in Tree Version: \"<plant> TOTAL\" and \"<plant> DUE AT\" with Total Planned, Total Actual, **Level Desc** and **Responsible (Contact no)**. **Where this data comes from:** pending RFI approvals from **Field Works → Progress → RFI**, with levels and approvers from **Project Setup → Forms → Approval Workflow**. It shows No Data Available on Arena Steel Plant - Phase 1, where the RFI card lists three RFIs and none under To Be Approved."
-          },
-          {
-            "term": "Work Summary - MIS Report",
-            "definition": "A management summary table, \"MIS Summary Report\", with a plus/minus tree: Description, **Physical Target**, **Work Complete** and **Variance**, each as Percentage and Count/Length. The tree runs project, plant, then the plant's location types (Footing, Plinth Beam, Brick Wall, ECR Footing, Cable Laying and so on). **Where this data comes from:** the plant and location type structure in **Project Setup → Works**, targets from the schedule and Works, completion from **Field Works → Work Logs**."
+            "src": "assets/product/data-analytics/103.jpg",
+            "caption": "Project Drill Down, Overall Progress"
           }
         ],
-        "procedures": [
+        "definitions": [
           {
-            "title": "Open a pre-built dashboard",
-            "steps": [
-              "Open the project and go to Data Analytics & Insights; Standard Analytics is the default tab.",
-              "Pick the card matching your question, for example Construction Progress for physical completion, Cost for budget against actual, or RFI Approval Delays for approval bottlenecks.",
-              "Choose the plant in Tree Version (and Entity, dates or work order where offered).",
-              "If the numbers look old, click the refresh icon next to Last Updated At.",
-              "Use the chart/table toggle, Filters, Download Excel or the download icon on a panel to take the data out."
-            ],
-            "note": "Use Sync if you need the project's data pushed out to Excel rather than viewed on screen."
+            "term": "Top tabs",
+            "definition": "**Activity Analysis**, **Project Drill Down**, **Project Elements**, **Work Package**, **Location Type**, **Location Type Grids**, **Work Package Grids**, **Quality And Documents**, **Quality Dashboard** and **Work Milestones**."
           },
           {
-            "title": "Trace a dashboard figure back to its source",
-            "steps": [
-              "Note the plant, entity and the figure on the dashboard (for example ECR Footing, 3 locations, 1 completed).",
-              "Open the matching Field Works screen for the same plant (here Progress → Approve Work Logs → Summary) and compare the totals.",
-              "If they differ, click refresh on the dashboard first, then check the setup in Project Setup → Works.",
-              "For cost figures, check the estimate in Project Setup → Estimate and the entries in Field Works → Cost."
-            ]
+            "term": "Activity Analysis",
+            "definition": "A stacked bar per activity (for example **Excavation**, **Concreting**, **Erection**), each bar split by super location type. Colour shows status: **Not yet started**, **Ready to work**, **In Progress**, **Completed**, **Issue Raised**. Filters: **Activity / Work Package** switch (with a settings gear), **Activities**, **Entity** and **Tree Version**. A fullscreen button sits at the top right."
+          },
+          {
+            "term": "Project Drill Down",
+            "definition": "Has its own sub-tabs: **Overall Progress**, **Detailed View**, **Work Summary**, **System Progress**, **Loop Progress**, **People**, **Earned Hours** and **Quantity**."
+          },
+          {
+            "term": "Overall Progress",
+            "definition": "A line chart of **Cumulative Planned %** against **Cumulative Actual %**. Filters: **Tree Version**, **Entities** (multi-select) and a date range; a refresh button reloads the data and shows **Last Updated At**."
+          },
+          {
+            "term": "Detailed View",
+            "definition": "Lists the entities (for example buildings) with **Actual %** and **Planned %**, and a legend of **In Progress**, **OverDue** and **Completed**. Select an entity to see its **Super Locations**, then **Locations**, then **Work Packages**, **Drawings** and **Issues**, each with a percentage."
+          },
+          {
+            "term": "Work Summary",
+            "definition": "A chart of work by activity with filters **Tree Version**, **Entity** and a multi-select **Activities** list (**Select All**), plus a **Location Type** and **Work** toggle."
+          },
+          {
+            "term": "System Progress",
+            "definition": "**Total Work Completed** and **Project Progress** per entity, then super locations and work packages with their percentages."
+          },
+          {
+            "term": "Loop Progress",
+            "definition": "Same layout as System Progress but for loops; shows **No Data** until loops are set up."
+          },
+          {
+            "term": "People",
+            "definition": "Per person charts: **Work Completed vs Remaining** and **Issues Open vs Closed**. Filters: **Tree Version** and **Entity**."
+          },
+          {
+            "term": "Earned Hours",
+            "definition": "Earned hours by super location and work package for the chosen **Tree Version**."
+          },
+          {
+            "term": "Quantity",
+            "definition": "**Actual Quantity** against **Total Quantity** for a chosen work package and super location."
+          }
+        ]
+      },
+      {
+        "heading": "Schedule Analytics",
+        "intro": "<p>The <strong>Schedule</strong> card compares how many items are due against how many have finished over time, using five date types.</p>",
+        "images": [
+          {
+            "src": "assets/product/data-analytics/107.jpg",
+            "caption": "Schedule analytics: burn down"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Tree Version",
+            "definition": "Picks which project tree the charts use."
+          },
+          {
+            "term": "From and To",
+            "definition": "Date range of each chart. A **Filters** button beside it narrows the items counted."
+          },
+          {
+            "term": "Burn Down",
+            "definition": "Charts of items remaining over time, with lines for **Actual End Date**, **Client End Date**, **Skyline End Date**, **Forecast End Date** and **Planned End Date**. Extra charts compare counts against the client, actual and forecast end dates. Each chart has a download icon."
+          },
+          {
+            "term": "Burn Up",
+            "definition": "The same five end dates plotted as work accumulating over time."
+          },
+          {
+            "term": "Progress S",
+            "definition": "An S-curve of progress with **Tree Version**, **Entities** and a refresh button."
+          }
+        ]
+      },
+      {
+        "heading": "Cost Analytics",
+        "intro": "<p>The <strong>Cost</strong> card opens cost charts for the chosen tree version, split into money going out (<strong>Payables</strong>) and money coming in (<strong>Receivables</strong>).</p>",
+        "images": [
+          {
+            "src": "assets/product/data-analytics/108.jpg",
+            "caption": "Cost, Payables, Cost Activity"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Payables and Receivables",
+            "definition": "The two top tabs. A plant name tag next to the breadcrumb shows which tree is analysed."
+          },
+          {
+            "term": "Cost Activity",
+            "definition": "Chart of cost per activity with series **Total Estimate**, **Actual Cost**, **Committed Cost**, **Projected Cost** and **Forecast to Complete**. Use the arrows above the chart to see more series. A table and a chart icon at the top right switch the view; **Tree Version** picks the tree."
+          },
+          {
+            "term": "Other tabs",
+            "definition": "**Cost by Cost Types**, **Cost by Month**, **Payments by Month**, **Cost Analytics** and **Cost Graphs** sit beside Cost Activity."
+          }
+        ]
+      },
+      {
+        "heading": "Productivity Reports",
+        "intro": "<p>The <strong>Productivity Reports</strong> card opens labour productivity reports for a date range, with a table that can be exported to Excel.</p>",
+        "images": [
+          {
+            "src": "assets/product/data-analytics/106.jpg",
+            "caption": "Detail Productivity Report"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Tabs",
+            "definition": "**Detail Productivity Report**, **Indirect and Non Productive Staff**, **Productivity Report Summary**, **Efforts Dashboard** and **Quantity Dashboard**."
+          },
+          {
+            "term": "Tree Version, From Date, To Date",
+            "definition": "Choose the tree and the period; the default period is the current week."
+          },
+          {
+            "term": "Filters",
+            "definition": "Opens filters that narrow the rows."
+          },
+          {
+            "term": "Download Excel",
+            "definition": "Downloads the table as an Excel file."
+          },
+          {
+            "term": "Direct and Change Order",
+            "definition": "Switch between the base work and change-order work."
+          },
+          {
+            "term": "Manage Columns",
+            "definition": "Choose which columns show; the save icon beside it stores your choice."
+          },
+          {
+            "term": "Columns",
+            "definition": "Budget, weekly and **Job To Date** values for **Budgeted Hours**, **Change Hours**, **Revised Budgeted Hours**, quantities, **Percent**, **Labor Unit**, **Work Factor**, **Earned Hours** and forecast information, by entity, location, work package, schedule and phase code. **Total Revised Hours** is shown under the table."
+          }
+        ]
+      },
+      {
+        "heading": "Progress Forecast Report",
+        "intro": "<p>The <strong>Progress Forecast Report</strong> lists activities for one entity and super location type with their planned start and end dates and forecast dates.</p>",
+        "definitions": [
+          {
+            "term": "Filters",
+            "definition": "**Tree Version**, **Entity**, **Super Location Type**, **Activities** and **No. of weeks** (for example 1 Week)."
+          },
+          {
+            "term": "Table",
+            "definition": "One column group per activity (for example **Excavation**, **Concreting**), each with **Planned Start Date** and **Planned End Date**, for every super location, grouped under **Completed**, **Forecasted dates** and **Ongoing**."
+          }
+        ]
+      },
+      {
+        "heading": "DPR Report",
+        "intro": "<p>The <strong>DPR report</strong> shows the daily progress of one workorder. Pick a workorder to fill the table; the title shows the report date.</p>",
+        "definitions": [
+          {
+            "term": "Select Workorder",
+            "definition": "Chooses the workorder; the table stays empty until you pick one."
+          },
+          {
+            "term": "Export, Filters, Manage Columns",
+            "definition": "**Export** downloads the table; **Filters** narrows rows; **Manage Columns** chooses columns."
+          },
+          {
+            "term": "Columns",
+            "definition": "**Activity**, **Estimated Quantity**, **UOM**, **Executed Quantity**, **Balance Quantity To Be Executed**, **Planned For Current Month**, **Executed In Current Month**, **Planned For Today** and **Executed Today**."
+          }
+        ]
+      },
+      {
+        "heading": "Cost Dashboards and Reports",
+        "intro": "<p>The <strong>Cost Dashboards and Reports</strong> card opens a cost dashboard and a cost report for the project.</p>",
+        "definitions": [
+          {
+            "term": "Cost Dashboard and Cost Report",
+            "definition": "Two tabs, with a **Lumpsum** view inside. A plant name tag shows the tree used."
+          },
+          {
+            "term": "Summary tiles",
+            "definition": "**Project ID**, **Customer**, **Actual Progress**, **Budget Cost**, **Approved Changed Orders**, **Revised Budget**, **Actual Cost To Date**, **Forecast At Completion**, **Cost Performance Index** (marked **Over Budget** when cost runs above plan), **Schedule Performance Index** (marked **Behind Schedule**) and **Profit Variance**."
+          },
+          {
+            "term": "Charts and Change Order Status",
+            "definition": "Each chart has a download icon and a zoom icon. **Change Order Status** lists change orders by **ID**, **Description**, **Value** and **Status**."
           }
         ]
       },
       {
         "heading": "Configurable Analytics",
-        "intro": "<p>Configurable Analytics is the self-serve half of the module: nine cards to classify project data, build your own tables, charts and reports, and move data to and from Excel and Power BI. PMs, analysts and Module Admins use it when no pre-built dashboard fits.</p><p>**Data Classification** works on live project data straight away. The builder cards (**Data Trends**, **Counting Tables**, **Configure Data Tables**, **Build your own Charts**, **Build your own Reports**) start empty: each shows an empty state with a **Create** button. **Excel** moves tree, people and quality data in and out, **Power BI** is an embedded view, and **Reports** keeps files.</p>",
+        "intro": "<p><strong>Configurable Analytics</strong> is the second tab. It holds tools you set up yourself, plus data classification charts, Excel upload and download, and Power BI.</p>",
         "definitions": [
           {
             "term": "Data Classification",
-            "definition": "Live status counts of the plant's structure, with four tabs and an **Entity** filter. **Locations** (table with Locations Type, Locations, Not Yet Ready, Ready, In Progress, Completed; Piperack shows Footing 4 all Ready, Media 3, PB Mark No 4, TS Mark No 4). **Work Packages** (filter by Entity and Super Location; each work package with its number of locations in each status, for example ARN- BA-01 | Barbending for Footing: 4 locations, 1 Not Yet Ready, 3 Ready). **Quality And Documents** (folders against the same statuses). **Issues** (punch lists by Priority: Raised, Rectified, QC Verified, Pending Issues). Each tab can be shown as a table, a pie chart or a bar chart. **Where this data comes from:** the structure is **Project Setup → Works**; the statuses are the same ones you see in **Field Works → Progress → Work Logs** and **Ready Works** (the four Footing locations are Ready to work there too). Quality And Documents and Issues are empty on Arena Steel Plant - Phase 1 because no folders are mapped and no punch lists exist."
-          },
-          {
-            "term": "Data Trends",
-            "definition": "A list of the trends you have created to follow project attributes over time. It starts empty with the message to click **Create**; the **Create Data Trend** dialog asks for a **Data Trend Name*** and a **Data Trend Description**, then **Submit**."
-          },
-          {
-            "term": "Counting Tables",
-            "definition": "A list of count tables you configure to show how many of something exist for various project attributes. It starts empty with the message to click **Create**; the **Create Table** dialog asks for a **Name** and a **Description**, then **Submit**. Nothing was created in testing, so the attribute choices are not documented."
-          },
-          {
-            "term": "Configure Data Tables",
-            "definition": "A list of custom data tables you configure from various project attributes. It starts empty with the message to click **Create**; the **Create Table** dialog asks for a **Name** and a **Description**, then **Submit**. Use it when the fixed tables in the dashboards do not combine the columns you need. Nothing was created in testing, so the attribute choices are not documented."
-          },
-          {
-            "term": "Build your own Charts",
-            "definition": "The chart builder, titled **Inn BI** on screen. It starts with \"Reports are not configured. Click 'Create Report' to create new Inn BI Reports\"; **Create Report** asks for a **Report Name** and Submit. Nothing was created in testing, so the builder itself is not documented."
-          },
-          {
-            "term": "Build your own Reports",
-            "definition": "The report builder, titled **Reports Builder**, with two tabs: **Reports** (your report definitions) and **Generated Reports** (output, with Filters: Select Report, a date range, and ALL, This Week, Last Week or Last Month). It starts with \"Reports are not configured. Click 'Create' to create new Reports\"; **Create** asks for a **Report Builder Name**. **Generated Reports** shows \"No Data Present.\" until a report has been run."
-          },
-          {
-            "term": "Excel",
-            "definition": "The route for moving structured data in and out as spreadsheets, with two tabs. **Uploads** has **People Assignments** (download the template, fill it and upload; the data is appended to what already exists), **Quality And Documents** (upload the files first, then list their file names in the Excel to attach them to quality folders; large uploads can take a while and you can leave the page), an **Upload Status** list, **Tree Data** (template download, a **Create Mode** checkbox and an upload box; the page says the application is populated with the uploaded data in the corresponding spaces) and **Reference Data**. **Downloads** has **DOWNLOAD ALL** and one file per sheet: **Tree.xlsx**, **WorkLogs.xlsx**, **Punch Lists.xlsx**, **Quality Restraints.xlsx**, **Daily Safety Issues.xlsx**, **Observations.xlsx** and **Construction & Project forms.xlsx**. **Where this data comes from and goes:** the downloads are the Works tree and the Field Works logs, issues and forms; the uploads fill the matching Project Setup areas (the tree, people assignments and quality documents). Take care: uploads append to existing data."
-          },
-          {
-            "term": "Power BI",
-            "definition": "A card for viewing project insights from **Power BI**. The page opens with no report on Arena Steel Plant - Phase 1 (nothing embedded), so it appears to need a report connected first; what connects it was not found in the product. This is separate from the Power BI view type that can be chosen for the home dashboard in Global Data → Settings → Enterprise Dashboard."
-          },
-          {
-            "term": "Reports (Configurable Analytics)",
-            "definition": "A list of stored files with an **Add File** button; it shows \"No data\" until files are added. It is separate from the **Document Repository**."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Build and keep a custom view",
-            "steps": [
-              "Go to Data Analytics & Insights → Configurable Analytics.",
-              "Use Data Classification to see the live status of locations, work packages, quality folders and punch lists for a plant.",
-              "For your own view, open Configure Data Tables, Counting Tables, Data Trends, Build your own Charts or Build your own Reports and click Create (or Create Report).",
-              "Name it, click Submit, and build the view; use Generated Reports to find the output of a report you ran.",
-              "Use the Reports card to store files you want to keep with the project."
+            "definition": "Opens charts that count items by status: tabs **Locations**, **Work Packages**, **Quality And Documents** and **Issues**. Pick an **Entity**; the icons switch between table, pie and bar views. The legend shows **Not Yet Ready**, **Ready**, **In Progress** and **Completed**; a download icon exports the chart.",
+            "images": [
+              {
+                "src": "assets/product/data-analytics/109.jpg",
+                "caption": "Data Classification, Locations bar chart"
+              }
             ]
           },
           {
-            "title": "Take project data into Excel or Power BI",
-            "steps": [
-              "Go to Data Analytics & Insights → Configurable Analytics → Excel → Downloads.",
-              "Click DOWNLOAD ALL, or the download icon beside Tree.xlsx, WorkLogs.xlsx, Punch Lists.xlsx, Quality Restraints.xlsx, Daily Safety Issues.xlsx, Observations.xlsx or Construction & Project forms.xlsx.",
-              "To load data in, open the Uploads tab, download the template, fill it in and use the upload box for People Assignments or Tree Data (uploads append to existing data).",
-              "For Power BI, open the Power BI card; it shows a report only when one has been connected for the project."
-            ],
-            "note": "For pushing the project's data out as a whole, the Sync card on Standard Analytics is the other route."
+            "term": "Data Trends",
+            "definition": "Lists the trends you have created. **Create** adds a trend on a project attribute to measure work over time."
+          },
+          {
+            "term": "Counting Tables",
+            "definition": "**Create** sets up a table of counts for chosen project attributes."
+          },
+          {
+            "term": "Configure Data Tables",
+            "definition": "**Create** sets up a custom data table by combining project attributes."
+          },
+          {
+            "term": "Build your own Charts",
+            "definition": "Opens **Inn BI**. **Create Report** builds your own charts and dashboards."
+          },
+          {
+            "term": "Build your own Reports",
+            "definition": "Opens **Reports Builder** with **Reports** and **Generated Reports**. **Create** starts a new report."
+          },
+          {
+            "term": "Excel",
+            "definition": "Opens **Uploads** and **Downloads**. Uploads has a section for **People Assignments**: download the template, fill it in and upload it; uploaded rows are appended to existing data. Downloads gives standard report downloads."
+          },
+          {
+            "term": "Power BI",
+            "definition": "Opens a page for Power BI reports connected to the project."
+          },
+          {
+            "term": "Reports",
+            "definition": "A personal store; **Add File** uploads a report file."
           }
         ]
       },
       {
         "heading": "Standard Reports",
-        "intro": "<p>Standard Reports holds the two routine reports a project is expected to produce, the Daily Progress Report and the Weekly Progress Report, plus a set of summary reports under Other Reports. PMs, site managers and clients read them; they are built from Field Works logs and Project Setup data.</p><p>Reports show the current date when opened. The Weekly Progress Report has **Edit Mode** and **Download Pdf**; the Daily Progress Report is a read-only page.</p>",
-        "definitions": [
+        "intro": "<p><strong>Standard Reports</strong> is the third tab. It has two sub-tabs, <strong>Reports</strong> and <strong>Other Reports</strong>.</p>",
+        "images": [
           {
-            "term": "Reports / Other Reports",
-            "definition": "The two sub-tabs of Standard Reports. **Reports** holds the **Daily Progress Report** and **Weekly Progress Report** cards. **Other Reports** has a left menu of **Scope** (\"Progress summary report\"), **Cost** (\"Cost - Estimated cost vs actual cost Report\", with Labor, Material and Equipment views), **Schedule** (\"Schedule summary report\"), **Quality** (\"Quality - Issues Raised vs Issues Closed\", bar or pie chart) and **Safety** (\"Safety - Issues Raised vs Issues Closed\", **Safety Calendar Logged Vs Total** and **Total Safety Forms Logged**, each with a Select range). Each opens with a company letterhead (address, phone, zip code) and charts built from the same data as the matching dashboards."
+            "src": "assets/product/data-analytics/102.jpg",
+            "caption": "Standard Reports"
           },
           {
+            "src": "assets/product/data-analytics/105.jpg",
+            "caption": "Weekly Progress Report"
+          }
+        ],
+        "definitions": [
+          {
             "term": "Daily Progress Report",
-            "definition": "A read-only snapshot titled \"Daily Progress Report | <project> - <today's date>\". For each plant it shows **Physical Progress of the Day**, **Cumulative Physical Progress**, **Cost of the Day** and **Cumulative Cost**, then a **Work Executed** table by Entity and Location Type with **Total Locations**, **Completed Today**, **Cumulative Completed** and **% Complete**. Plants with no locations built say \"Package has not yet started\". **Where this data comes from:** the structure from **Project Setup → Works** and completion from **Field Works → Progress → Work Logs**: ECR Footing shows 3 locations and 1 cumulative completed, the same as the Approve Work Logs Summary in Field Works. Cost of the Day and Cumulative Cost are ₹0.00 on Arena Steel Plant - Phase 1 (no cost entries). No date picker or download button is shown."
+            "definition": "A page for today's date showing **Physical Progress of the Day**, **Cumulative Physical Progress**, **Cost of the Day** and **Cumulative Cost**, then a **Work Executed** table by entity and location type with **Total Locations**, **Completed Today**, **Cumulative Completed** and **% Complete**."
           },
           {
             "term": "Weekly Progress Report",
-            "definition": "A report page with **Edit Mode** and **Download Pdf**. It starts with Project, Project Number and Date, then **Schedule/Plan Information** (crew size, estimated original plan), **Job Problems & Issues (INTERNAL USE ONLY)**, the **Construction Project Punch List** (Item, Area, Description, Priority, Responsible, Due Date, Completion Status), **Weekly Project Status** for the period ending this week (**ManPower** hours spent this period and to date: direct, indirect, delay and subcontractor; planned against actual full-time-equivalent headcount; **Percent Complete To Date** planned and actual; Safety counts; Meeting Topics; Work Accomplished in the Past Week; Work Scheduled for this Week and next Week; Problems / Concerns / Action Items; Prior Week's Notes from Client Meeting), an **RFI Log**, a **Change Order Log** with a summary of Pending, Approved, Denied and N/A amounts, a **Project Delays Log**, and week-by-week Planned and Actual charts and hours. **Where this data comes from:** the RFI Log lists the RFIs raised in **Field Works → Progress → RFI**; the punch list, manpower, safety and change order sections come from the matching Field Works cards (Quality → Punch Lists, Productivity Logs, Safety and Cost → Change order). Free-text parts (meeting topics, work scheduled) are filled in **Edit Mode**. Planned crew size matches the project roster."
-          }
-        ],
-        "procedures": [
+            "definition": "A printable report with project name, number and date, **Schedule/Plan Information**, **Job Problems & Issues**, **Construction Project Punch List** and **Weekly Project Status** (manpower spent this period and to date). **Edit Mode** lets you type into the report; **Download Pdf** saves it."
+          },
           {
-            "title": "Produce a routine progress report",
-            "steps": [
-              "Go to Data Analytics & Insights → Standard Reports.",
-              "On Reports, open Daily Progress Report for today's snapshot by plant, or Weekly Progress Report for the week.",
-              "On the Weekly report click Edit Mode to type the meeting topics, work accomplished and work scheduled, then click Download Pdf to share it.",
-              "For a one-topic summary (scope, cost, schedule, quality or safety) use the Other Reports sub-tab."
-            ],
-            "note": "This screen isn't covered here yet."
+            "term": "Other Reports",
+            "definition": "Tabs **Scope** (progress summary with a date range and a planned against actual line), **Cost** (with **Labor**, **Material** and **Equipment** and an estimated against actual cost report), **Schedule** (schedule summary), **Quality** (issues raised against issues closed, bar or pie) and **Safety** (issues raised against closed, **Safety Calendar Logged Vs Total** and **Total Safety Forms Logged** by date range)."
           }
         ]
       }
@@ -31282,8 +31416,14 @@ const MODULES = [
       "<strong>Standard Reports</strong> has its own <strong>Reports</strong> and <strong>Other Reports</strong> sub-tabs."
     ],
     "sections": [
-      "Overview",
       "Standard Analytics",
+      "Construction Progress",
+      "Schedule Analytics",
+      "Cost Analytics",
+      "Productivity Reports",
+      "Progress Forecast Report",
+      "DPR Report",
+      "Cost Dashboards and Reports",
       "Configurable Analytics",
       "Standard Reports"
     ]
@@ -32067,277 +32207,596 @@ const MODULES = [
     "qaItems": QA_PROJECTSETTINGS,
     "narrative": [
       {
-        "heading": "Overview",
-        "intro": "<p><strong>Project Settings</strong> is where a <strong>Module Admin / PM</strong> adjusts how Arena behaves for one project: a searchable list of 40 categories on the left and the panel for the selected category on the right. <strong>Look &amp; Feel</strong> opens first. Field users do not need it; it shapes what their daily screens look like.</p><p>Global Data holds the company-wide lists and templates (vendors, crews, phase codes, form templates, quick apps). Project Settings holds the choices that apply to this project only. Four pages exist in both places under the same name (<strong>Date Format</strong>, <strong>Request for Information</strong>, <strong>Transmittals Submitted Type</strong>, <strong>Market Type</strong>), so check both when a project behaves differently from another. Each category below says which screen it changes and where its options come from.</p>",
-        "definitions": [
+        "heading": "Project Settings",
+        "intro": "<p><strong>Project Settings</strong> is the last item in the project's left menu. A list of settings categories with a <strong>Search</strong> box sits on the left; click a category to open its options on the right. Changes only take effect when you click <strong>Save Changes</strong> (categories that have that button).</p>",
+        "images": [
           {
-            "term": "Settings category rail",
-            "definition": "The searchable left-hand list of <strong>40</strong> categories (39 plus <strong>Vista Progress</strong> at the end). Selecting one opens its panel on the right. Each category has its own page address, and the project must be selected first: if you jump to a page from another module and see \"Select a project to continue\", pick the project again."
-          },
-          {
-            "term": "Who changes it",
-            "definition": "A <strong>Module Admin / PM</strong> with admin rights. Panels with a <strong>Save Changes</strong> button save when you click it; the list panels (priorities, categories, drawing statuses, custom resources) save per row with <strong>Add</strong>, edit and delete."
-          },
-          {
-            "term": "Project Settings and Global Data",
-            "definition": "Global Data defines the lists and templates; Project Settings picks and tunes them for one project. Same-name pairs: <strong>Date Format</strong>, <strong>Request for Information</strong> (Categories and Priorities tabs in both, both empty), <strong>Transmittals Submitted Type</strong> and <strong>Market Type</strong> (both empty in both places). <strong>Forms</strong> in Project Settings is only a colour choice and is not the Global Data Forms templates. <strong>Quick Apps</strong> here chooses who can use the apps built in Global Data."
-          },
-          {
-            "term": "Which screen each category changes",
-            "definition": "<strong>Field Works → Progress:</strong> Work Logs Templates, Project Work Measurement, Productivity Log Settings, Progress Forms, Workflow Issues. <strong>Field Works → Quality / Safety:</strong> Quality Work Logs Templates, Quality Logs, Punch Lists &amp; Restraints, Daily Safety Issues &amp; Observations. <strong>Field Works → Quick Apps:</strong> Quick Apps. <strong>My Desk:</strong> My Desk, My Desk Dashboards. <strong>Data Analytics &amp; Insights:</strong> Dashboard Percentages, Owner Dashboard, Resource Data Source. <strong>Project Setup:</strong> Phase Code Settings (Works), Configure Task Form (Tasks), Cost Breakdown Structure (Estimate), Drawing Status and Configure Drawing Register Form (Drawings), Project Setup View. <strong>Time Management:</strong> Time Management. <strong>Procurement:</strong> Procurement Workflow Settings. <strong>Form numbering:</strong> Configure Form Id Type."
-          },
-          {
-            "term": "Where the dropdowns inside Project Settings come from",
-            "definition": "Every <strong>Tree Version</strong> dropdown (Work Logs Templates, User Preferences, Drawing Register Form, Cost Breakdown Structure, Tree Versions Custom Work Packages Name, Quick Apps) lists the 13 plants of <strong>Field Works → Tree Version</strong>, which are built in <strong>Project Setup → Works</strong>. People lists (Time Management Assign Workflow) are the project roster from <strong>Global Data → Users &amp; Permissions</strong>. Status, priority and category lists are the project's own and start empty or with the defaults shown below."
-          },
-          {
-            "term": "Search and save behaviour",
-            "definition": "Type in the search box to filter the 40 names. Changes on a panel are not kept until you save it, and a few pages (<strong>Vista Progress</strong>, the lists) have no Save Changes button."
+            "src": "assets/product/project-settings/001.jpg",
+            "caption": "Project Settings, Look & Feel"
           }
         ],
-        "procedures": [
+        "definitions": [
           {
-            "title": "Find and change a project setting (using Look & Feel as an example)",
-            "steps": [
-              "Open the project and go to <strong>Project Settings</strong>.",
-              "Use the search box above the category list, for example type \"Look\".",
-              "Select the category in the left-hand list to open its panel.",
-              "Make the change: for <strong>Look &amp; Feel</strong>, choose <strong>LIGHT</strong> or <strong>DARK</strong> (Light on Arena Steel Plant - Phase 1).",
-              "Click <strong>Save Changes</strong>."
-            ],
-            "note": "The same search, select, edit and save pattern applies to every category, even though each panel has different fields.",
-            "images": [
-              {
-                "src": "assets/notion/project-settings-look-feel/001.jpg",
-                "caption": "Look & Feel: Light or Dark mode, applied across the application on this device",
-                "step": 4
-              }
-            ]
+            "term": "Search",
+            "definition": "Type part of a category name to narrow the list on the left."
           },
           {
-            "title": "Find out why a screen behaves differently in this project",
-            "steps": [
-              "Note the screen (for example Field Works → Progress → Work Logs, or My Desk).",
-              "Look up that screen in <strong>Which screen each category changes</strong> above and open the matching Project Settings category.",
-              "Compare the selected option with another project.",
-              "If the category has a Global Data twin (Date Format, Request for Information, Transmittals Submitted Type, Market Type), open the Global Data page too."
-            ]
+            "term": "Category list",
+            "definition": "In order: **Look & Feel**, **Forms**, **Work Logs Templates**, **Quality Work Logs Templates**, **Project Work Measurement**, **Quality Logs**, **Punch Lists & Restraints**, **Daily Safety Issues & Observations**, **Time Management**, **googlemaps**, **Project Setup View**, **Quick Apps**, **Owner Dashboard**, **My Desk**, **Progress Forms**, **Projects Forms**, **Workflow Issues**, **Project Driven**, **User Preferences**, **Define Location**, **Drawing Status**, **Productivity Log Settings**, **Dashboard Percentages**, **My Desk Dashboards**, **Phase Code Settings**, **Tree Versions Custom Work Packages Name**, **Project Date Format**, **Configure Task Form**, **Configure Form Id Type**, **Procurement Workflow Settings**, **Cost Breakdown Structure**, **Configure Drawing Register Form**, **Variation Order Form**, **Custom Resources**, **Resource Data Source**, **Terms and Conditions**, **Request for Information**, **Transmittals Submitted Type**, **Market Type** and **Vista Progress**."
+          },
+          {
+            "term": "Save Changes",
+            "definition": "Saves the options on the open category for this project only. Categories that list records (priorities, categories, levels) save through their own add, edit and delete icons instead."
           }
         ]
       },
       {
-        "heading": "Forms & Templates",
-        "intro": "<p>This group covers the settings that shape how the project looks and how logs, quality checks and issues are structured before the field team uses them. A <strong>Module Admin / PM</strong> sets them early, because changing a template after logging has started makes old and new records harder to compare.</p>",
+        "heading": "Look and Feel",
+        "intro": "<p><strong>Look & Feel</strong> sets how the app looks for this project.</p>",
         "definitions": [
           {
-            "term": "Look & Feel",
-            "definition": "Sets the project's <strong>LIGHT</strong> or <strong>DARK</strong> appearance (\"How do you want the app to appear?\"), then <strong>Save Changes</strong>. <strong>LIGHT</strong> is selected on Arena Steel Plant - Phase 1 and the page is the default when Project Settings opens. It changes the look only, not any data."
-          },
-          {
-            "term": "Forms",
-            "definition": "A colour picker: \"In which color would you like forms to appear?\" with <strong>BLUE</strong>, <strong>DARK BLUE</strong>, <strong>PURPLE</strong>, <strong>YELLOW</strong> and <strong>GREY</strong> (<strong>YELLOW</strong> on Arena Steel Plant - Phase 1), then <strong>Save Changes</strong>. It is only a colour. The form templates themselves are in <strong>Global Data → Forms</strong> and are assigned in <strong>Project Setup → Forms</strong>."
-          },
-          {
-            "term": "Work Logs Templates",
-            "definition": "Sets which of 7 logging structures the <strong>Field Works → Progress → Work Logs</strong> screen uses for this project, under \"Work Log Reference — At what level do you want to log works?\": <strong>Work Package to Location Logging</strong>, <strong>Location to Work Package Logging</strong> (the reverse: pick a Location, see its Work Packages, grouped by Super Location), <strong>Location to Work Package bulk logging</strong> (the same but with multiple filters, for logging or raising Restraints against several Locations at once), <strong>Super Location to Location Logging</strong>, <strong>Worklogs in Scheduled View</strong> and <strong>Quantity Work Logging</strong> (both present the Tree Version as a WBS/schedule instead of a location tree), and <strong>Worklogs enable by Certified RFIs</strong> (a location only becomes loggable once its RFI is certified). Each option shows a live preview before Save Changes. This is why the Work Logs screen can look structurally different from one project to the next — it is a per-project setting, not a different product version. **Where it takes effect:** the page has **Project** and **Tree Version** selectors, so the choice can apply to the whole project or to one plant, and a gear beside each option. With **Work Package to Location Logging**, **Field Works → Progress → Work Logs** shows a Location Types tree with each work package opening a grid of super locations and locations. The same screen feeds Submitted Work Logs, Approve Work Logs, Detailed Work Logs, **My Desk → Recent Work Logs** and the progress dashboards in Data Analytics. The gear beside each option opens **Advanced Settings** (Checkbox, Text Box or interval entry; Actual Start & End Dates; Required Fields; Interval Quantity Logging; Auto Log), which decides what the log form asks for. Full detail is in **Field Works → Work Logs**."
-          },
-          {
-            "term": "Quality Work Logs Templates",
-            "definition": "The same idea as Work Logs Templates, applied to <strong>Field Works → Quality</strong> instead — but with only 2 of the 7 options available: <strong>Work Package to Location Logging</strong> and <strong>Super Location to Location Logging</strong>. Whichever is selected controls how an inspector finds what is ready to inspect on the Quality tab. This page has no Project / Tree Version switch and no gear. See **Field Works → Quality Logs Under Each Template**."
-          },
-          {
-            "term": "Project Work Measurement",
-            "definition": "Titled \"Progress And Quality Work Measurements Settings\": **How do you want to measure the Activity completion percentage?** with two options, **Percentage Based** (directly includes the percentage weightage of the activity; selected on Arena Steel Plant - Phase 1) and **Effort Based** (includes the man hours required for the activity). It changes how completion % is worked out for the progress and quality screens in **Field Works** and the dashboards in **Data Analytics & Insights**. Save Changes applies it."
-          },
-          {
-            "term": "Quality Logs",
-            "definition": "**Levels:** the question **\"Do you want to skip level 1?\"** with Yes or No (No on Arena Steel Plant - Phase 1). With No, **Field Works → Quality → Quality Level 2** only opens for a work package once its Level 1 is approved; with Yes, Level 1 can be skipped. Save Changes applies it."
-          },
-          {
-            "term": "Punch Lists & Restraints",
-            "definition": "Three lists on one page, each with an <strong>Add</strong> button and per-row edit and delete. <strong>Punch Lists Category</strong> (S.No, Category, Actions; none defined on Arena Steel Plant - Phase 1), <strong>Punch Lists Priority</strong> and <strong>Restraints Priority</strong> (High 4, Medium 24, Low 48; the number is the due hours). <strong>Where it goes:</strong> the Priority and Category choices on <strong>Field Works → Quality → Punch Lists</strong> and the Priority choice on <strong>Field Works → Progress → Restraints</strong>. <strong>Restraint categories do not come from here:</strong> they come from <strong>Global Data → Settings → Hindrance Category</strong> (the five global categories)."
-          },
-          {
-            "term": "Daily Safety Issues & Observations",
-            "definition": "Two priority lists with Add Priority and per-row edit and delete: **Daily Safety Issues Priority** and **Observations Priority** (High 4 hours, Medium 24, Low 48 on Arena Steel Plant - Phase 1). They set the priority choices and due hours on **Field Works → Safety → Daily Safety Issues**."
+            "term": "Appearance",
+            "definition": "Choose **LIGHT** or **DARK**. Each option shows a preview of the app in that theme."
           }
-        ],
-        "procedures": [],
+        ]
+      },
+      {
+        "heading": "Forms Settings",
+        "intro": "<p><strong>Forms</strong> sets the colour of forms in this project.</p>",
+        "definitions": [
+          {
+            "term": "Appearance",
+            "definition": "**In which color would you like forms to appear?** Pick a colour from **Select a color**; the current choice is **YELLOW**."
+          }
+        ]
+      },
+      {
+        "heading": "Work Logs Templates",
+        "intro": "<p><strong>Work Log Settings</strong> decides how users log work in <strong>Work Logs</strong>: which screen layout opens and what each row represents.</p>",
         "images": [
           {
-            "src": "assets/notion/project-settings-forms/001.jpg",
-            "caption": "Forms: choosing the brand colour applied across all forms"
+            "src": "assets/product/project-settings/002.jpg",
+            "caption": "Work Log Settings"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Project and Tree Version",
+            "definition": "A switch at the top chooses whether the setting applies to the whole project or to one tree version."
           },
           {
-            "src": "assets/notion/project-settings-quality-logs/001.jpg",
-            "caption": "Quality Logs: using one level of quality inspection or two"
+            "term": "Work Log Reference",
+            "definition": "**At what level do you want to log works?** Choose one layout with its radio button; the right side previews it. The gear beside each option opens that layout's own settings."
           },
           {
-            "src": "assets/notion/project-settings-quality-work-logs/001.jpg",
-            "caption": "Quality Work Logs Templates: the Settings icon on a template shows its detailed settings"
+            "term": "Work Package to Location Logging",
+            "definition": "Shows the status of locations for each work package."
           },
           {
-            "src": "assets/notion/project-settings-punch-lists-restraints/001.jpg",
-            "caption": "Punch Lists & Restraints: where priority levels are defined"
+            "term": "Location to Work Package Logging",
+            "definition": "Shows the work packages mapped to each location, within each super location."
           },
           {
-            "src": "assets/notion/project-settings-punch-lists-restraints/002.jpg",
-            "caption": "Add Priority: a name and the due hours for resolving the issue"
+            "term": "Location to Work Package bulk logging",
+            "definition": "Shows work packages mapped to each location with multiple filters, and lets you raise restraints against many locations at once."
           },
           {
-            "src": "assets/notion/project-settings-safety-issues/001.jpg",
-            "caption": "Safety Issues: where priority levels for safety issues and concerns are defined"
+            "term": "Super Location to Location Logging",
+            "definition": "Lists the locations of each super location; clicking a location shows its mapped work packages."
+          },
+          {
+            "term": "Worklogs in Scheduled View",
+            "definition": "Shows the tree version in WBS form."
+          },
+          {
+            "term": "Quantity Work Logging",
+            "definition": "Logs by quantity, presented in WBS form."
+          },
+          {
+            "term": "Worklogs enable by Certified RFIs",
+            "definition": "Work logs open only for locations whose RFIs are certified."
+          }
+        ]
+      },
+      {
+        "heading": "Quality Work Logs Templates",
+        "intro": "<p><strong>Quality Work Log Settings</strong> does the same for quality logging.</p>",
+        "definitions": [
+          {
+            "term": "Quality Work Log Reference",
+            "definition": "**At what level do you want to log works?** Choose **Work Package to Location Logging** (status of locations for each work package) or **Super Location to Location Logging** (locations of each super location, then their work packages). A preview of the chosen screen is shown."
+          }
+        ]
+      },
+      {
+        "heading": "Project Work Measurement",
+        "intro": "<p><strong>Progress And Quality Work Measurements Settings</strong> sets how an activity's completion percentage is measured.</p>",
+        "definitions": [
+          {
+            "term": "Select Measurement",
+            "definition": "**Percentage Based** uses the percentage weightage given directly to the activity. **Effort Based** uses the man hours needed for the activity."
+          }
+        ]
+      },
+      {
+        "heading": "Quality Logs Settings",
+        "intro": "<p><strong>Quality Logs</strong> holds the settings used when quality logs are generated.</p>",
+        "definitions": [
+          {
+            "term": "Levels",
+            "definition": "**Do you want to skip level 1?** Choose **Yes** or **No**."
+          }
+        ]
+      },
+      {
+        "heading": "Punch Lists and Restraints",
+        "intro": "<p>This screen defines the categories and priorities used by <strong>Punch Lists</strong> and <strong>Restraints</strong>.</p>",
+        "images": [
+          {
+            "src": "assets/product/project-settings/003.jpg",
+            "caption": "Punch Lists & Restraints settings"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Punch Lists Category",
+            "definition": "A table of **S.No**, **Category** and **Actions**. **Add Category** adds a category level for punch lists."
+          },
+          {
+            "term": "Punch Lists Priority",
+            "definition": "A table of **Priority**, **Due Hours** and **Actions**. **Add Priority** adds a level; the edit and delete icons change or remove one. The project starts with High (4 hours), Medium (24) and Low (48). The drag handle sets the sequence."
+          },
+          {
+            "term": "Restraints Priority",
+            "definition": "The same table for restraints, with its own **Add Priority** button."
+          }
+        ]
+      },
+      {
+        "heading": "Daily Safety Issues and Observations",
+        "intro": "<p>This screen sets priorities for safety issues and observations.</p>",
+        "definitions": [
+          {
+            "term": "Daily Safety Issues Priority",
+            "definition": "Table of **Priority**, **Due Hours** and **Actions** with **Add Priority**. Defaults are High (4 hours), Medium (24) and Low (48)."
+          },
+          {
+            "term": "Observations Priority",
+            "definition": "The same table for observations, with its own **Add Priority** button."
           }
         ]
       },
       {
         "heading": "Time Management Settings",
-        "intro": "<p>This group covers timesheet approvals, maps, the Project Setup layout, form priorities, which plant each user opens, and the dashboards and percentages that Data Analytics and My Desk use. A <strong>Module Admin / PM</strong> sets them once and revisits them when the way of working changes.</p>",
+        "intro": "<p><strong>Time Management</strong> sets the approval workflow and logging mode for timesheets in Home, Time Management.</p>",
         "definitions": [
           {
-            "term": "Time Management",
-            "definition": "Titled \"Change the crew settings according to the Home Time Management requirement\". Three tabs. <strong>Create Workflow</strong>: <strong>Create Approval Workflow</strong> opens <strong>Create Timesheet Workflow</strong> (Workflow Name, Submit); the table lists Level, Level Description, Approvers, Workflow Type, Actions (empty on Arena Steel Plant - Phase 1). <strong>Assign Workflow</strong>: a <strong>Users</strong> / <strong>Crews</strong> switch with search, then <strong>Assign Approval Workflow</strong>, <strong>Clear</strong>, <strong>Save Changes</strong> and <strong>Copy Approval Workflow To</strong>; it says \"There is no approval workflow present to assign\" until one is created. <strong>Assign Mode</strong>: sub-tabs <strong>My Timesheet</strong> and <strong>My Crew Timesheet</strong> (\"Change the timesheet logging settings as per your requirements\") with <strong>Timesheet Mode</strong> <strong>Daily</strong>, <strong>Weekly by day</strong> or <strong>Weekly</strong>, plus <strong>Copy To</strong> and <strong>Save Changes</strong>; none is ticked here. <strong>Where the data comes from:</strong> the Users list is the project roster (32 people, the same as Project Setup → People and Global Data → Users &amp; Permissions); the Crews list says \"To create go to Timesheet crew\" and is empty. <strong>Where it goes:</strong> the timesheets of <strong>Home → Time Management</strong>."
+            "term": "Create Workflow",
+            "definition": "**Create Approval Workflow** starts a workflow. The table lists **Level**, **Level Description**, **Approvers**, **Workflow Type** and **Actions**."
           },
           {
-            "term": "googlemaps",
-            "definition": "\"Settings and Configuration for googlemaps Integration\". <strong>googlemaps Pin Category</strong> lists the pin types <strong>Created</strong>, <strong>Rejected</strong>, <strong>Approved</strong> and <strong>Worklogs History</strong> (each with a Description) and <strong>Add Category</strong> opens <strong>Create Category</strong> (Category Name, Category Color, Category Description, Upload Category Icon). <strong>googlemaps Enabled Modules</strong> has <strong>Tree</strong> and <strong>Task Management</strong> tick boxes (both unticked here). Then <strong>Default Center Latitude</strong>, <strong>Default Center Longitude</strong> and <strong>Default Zoom Level</strong> (empty here) and <strong>Save Changes</strong>. The matching app is the Google Maps card in <strong>Global Data → Marketplace</strong>, and <strong>My Desk Dashboards</strong> has its own <strong>Google Maps</strong> tick box."
+            "term": "Assign Workflow",
+            "definition": "Has **Users** and **Crews** tabs with a search box; choose who the workflow applies to."
           },
           {
-            "term": "Project Setup View",
-            "definition": "Titled \"UI options to view Project Setup screen\": <strong>Appearance - How do you want the Project setup to appear?</strong> with <strong>Template 1</strong> (selected on Arena Steel Plant - Phase 1) or <strong>Template 2</strong>. It changes the layout of the <strong>Project Setup</strong> screen only (Template 1 is the left-hand list of Works, Tasks, People, Estimate and so on)."
+            "term": "Assign Mode",
+            "definition": "Has **My Timesheet** and **My Crew Timesheet** tabs and a user list with search, to change the timesheet logging settings per user."
+          }
+        ]
+      },
+      {
+        "heading": "googlemaps",
+        "intro": "<p><strong>googlemaps Settings</strong> configures the map integration.</p>",
+        "definitions": [
+          {
+            "term": "googlemaps Pin Category",
+            "definition": "Lists map pin categories (for example **Created**, **Approved**, **Rejected** and **Worklogs History**), each with a description. **Add Category** adds one."
           },
           {
-            "term": "Quick Apps",
-            "definition": "Configures the lightweight custom mini-workflows (Quick Apps) available on this project. **What is on the page:** a **Tree Versions** dropdown, the list of Quick Apps built in **Global Data → Quick Apps** (Bid or Estimate Log, Subcontractor Bid Proposal, Observation Report, Non-Conformance Report, Completion Notice, Initial Material Receiving, Storage Inspections, Stored Equipment Maintenance, Variance Request, Initial Electrical Equipment Receiving, Cable Receiving Insulation Resistance, Equipment Productivity Planner, plus Proposal Update, Proposal Close-Out and New Proposal), a **Team** table (Name, Edit & View, View) and a **Workflow** table (approval levels and approvers), with Save Changes. Both tables are empty on Arena Steel Plant - Phase 1, and the Field Works Quick Apps card shows \"Please configure Quick Apps in global\"."
+            "term": "googlemaps Enabled Modules",
+            "definition": "Choose which modules show on the map: **Tree** and **Task Management**."
           },
           {
-            "term": "Owner Dashboard",
-            "definition": "Lists the **Standard Analytics** views you can offer owners, as tick boxes: **Construction Progress** (10 views, Project Activity Analysis to Work Milestones), **Quality Progress** (9), **Cost** (Cost Plan Forecast, Cost Activity) and **Contractors Performance** (Contractor Performance); **Standard Reports** lists nothing. All boxes are unticked on Arena Steel Plant - Phase 1. **Where it comes from:** the options are the views of **Data Analytics & Insights → Standard Analytics**. **Who it is for:** the people registered under **Owners → Register Owner**."
-          },
+            "term": "Default Center Latitude, Default Center Longitude, Default Zoom Level",
+            "definition": "Where the map opens and how far it is zoomed in."
+          }
+        ]
+      },
+      {
+        "heading": "Project Setup View",
+        "intro": "<p>This setting picks the layout of the <strong>Project Setup</strong> screens.</p>",
+        "definitions": [
           {
-            "term": "My Desk",
-            "definition": "Sets the order of the five Recent panels on **My Desk**: **Recent Logs List** (1 Recent Work Logs, 2 Recent Punch Lists Items, 3 Recent Quality Logs, 4 Recent Daily Safety Issues, 5 Recent Safety Logs; drag to reorder) and **Dashboard List** (Monitor Daily Progress, Monitor Forms Status, Monitor Forms Raised Daily, Monitor Issues Status, Monitor Issues Raised Daily), then **Save Changes**. **Where it goes:** the **My Desk** screen in the project menu."
-          },
+            "term": "Appearance",
+            "definition": "**How do you want the Project setup to appear?** Choose **Template 1** or **Template 2**."
+          }
+        ]
+      },
+      {
+        "heading": "Quick Apps Settings",
+        "intro": "<p><strong>Quick Apps</strong> sets who can use each Quick App form in this project and who approves it.</p>",
+        "images": [
           {
-            "term": "Progress Forms",
-            "definition": "\"Settings needed for Progress Forms: RFI, Change Order, Submittals, Delay Forms and Meetings Minutes\": one tab per form (<strong>RFI</strong>, <strong>Change Orders</strong>, <strong>Submittals</strong>, <strong>Delay Forms</strong>, <strong>Meeting Minutes</strong>), each with <strong>Add Priority</strong> (\"Configure priority levels and sequence\"; Priority, Due Hours, Actions). These are priority levels for the progress forms of **Field Works → Progress**."
-          },
-          {
-            "term": "Projects Forms",
-            "definition": "Titled \"Settings needed for Project Forms\": a single <strong>Add Priority</strong> list (\"Configure priority levels and sequence for Project Forms\"; Priority, Due Hours, Actions), empty here. The forms it refers to are the Project Forms built in <strong>Global Data → Forms → Project Forms</strong> and used on <strong>Field Works → Project Forms</strong>."
-          },
-          {
-            "term": "Workflow Issues",
-            "definition": "\"Settings needed for Workflow Issues\": top tabs **Progress**, **Quality**, **Safety**, **Custom Forms**, **Quick Apps**, **Drawing Management** and **Task Forms**, with sub-tabs such as RFI, Submittal, Change Order, Delay Form, Time Sheet, Request for Information and Transmittal, each with **Add Priority** (Priority and Due Hours). Nothing is defined on Arena Steel Plant - Phase 1. These priorities and due hours apply to the workflow issues listed in **Field Works** (Issues, Quality Workflow Issues, Drawing Management, Invoices) and in **My Desk → My Actions**."
-          },
-          {
-            "term": "Project Driven",
-            "definition": "Titled \"Project Driven Settings\": \"Entire project field work will be driven by the below selected settings\". Options: <strong>Tree Version</strong> (selected) with <strong>Drive progress through WorkLogs</strong> (selected) or <strong>Drive progress through Checklists</strong>, and <strong>Schedule</strong>; <strong>Save Changes</strong>. It chooses what drives progress in Field Works."
-          },
-          {
-            "term": "User Preferences",
-            "definition": "Four <strong>Tree Version</strong> dropdowns, each with <strong>Clear</strong>: \"Select a Tree Version for web view\", \"for mobile view\", \"for Work Logs\" and \"for Productivity Logs\"; <strong>Save Changes</strong>. None is selected on Arena Steel Plant - Phase 1. The choices are the 13 plants of <strong>Field Works → Tree Version</strong> (Pellet Plant (1MTPA) to Slab Caster). Use it to point each screen at one plant."
-          },
-          {
-            "term": "Define Location",
-            "definition": "Titled \"Location Defined By\": <strong>Individual</strong> or <strong>From-To</strong>, then <strong>Save Changes</strong>; neither is selected on Arena Steel Plant - Phase 1. It sets how locations are described."
-          },
-          {
-            "term": "Drawing Status",
-            "definition": "**Drawing Status Configuration**: the list of drawing status values (**Created**, **Completed**, plus **Add Status**). **Where it goes:** the **Drawing Status** field in **Project Setup → Drawings → Drawing Register**."
-          },
-          {
-            "term": "Productivity Log Settings",
-            "definition": "Three tabs. **Logging Type**: **Create Productivity Logs By Phase Code** or **Create Productivity Logs By Locations** (By Locations on Arena Steel Plant - Phase 1). **Timesheets**: the standard fields of the time log (Employee, Phase Code, Entity, Super Location, Location, Craft, Class, Revised Budgeted Hours, JTD Hours, Remaining Hours) each with Required, Show on cards and a field type, plus **Add Field**. **Quantity**: Phase Code, Entity, Super Location, Location, Time Sheet Hours, Revised Budgeted Quantity, JTD Quantity, Remaining Quantity, plus **Add Field**. It decides the columns and mode of **Field Works → Progress → Productivity Logs → Create**."
-          },
-          {
-            "term": "Dashboard Percentages",
-            "definition": "Titled \"Dashboard Percentage Settings\": **Select View** with **Worklogs** (percentages based on worklogs logged; selected on Arena Steel Plant - Phase 1), **Workorder and worklogs**, **P6, Workorder and Worklogs** (planned percentages from P6, actual from workorder and worklogs) and **Milestone, Workorder and Worklogs** (planned from milestones, actual from workorder and worklogs), plus an **RFI** view. It decides where the planned and actual percentages shown on **Data Analytics & Insights** dashboards come from."
-          },
-          {
-            "term": "My Desk Dashboards",
-            "definition": "Titled **Enable/ Disable dashboards**, with checkboxes for **My Dashboard**, **Google Maps**, **Quality Dashboard**, **Delay Analysis Dashboard**, **Defect Analysis Dashboard** and **Strip Charts**. All six are unticked on Arena Steel Plant - Phase 1, where My Desk shows only the **Actions** tab. **Where it goes:** the **My Desk** screen."
+            "src": "assets/product/project-settings/006.jpg",
+            "caption": "Quick Apps settings"
           }
         ],
-        "procedures": []
+        "definitions": [
+          {
+            "term": "Tree Versions",
+            "definition": "Picks the tree version the settings apply to."
+          },
+          {
+            "term": "App list",
+            "definition": "One card per Quick App, such as **Bid or Estimate Log**, **Observation Report**, **Non-Conformance Report**, **Completion Notice**, **Initial Material Receiving**, **Storage Inspections**, **Stored Equipment Maintenance**, **Variance Request** and **Equipment Productivity Planner**. Apps with sub-forms open a second column (for example proposal forms)."
+          },
+          {
+            "term": "Team",
+            "definition": "**Add** puts a person in the team for the selected app: tick which category the member belongs to. The table shows **Name**, **Edit & View**, **View** and **Actions**."
+          },
+          {
+            "term": "Workflow",
+            "definition": "**Create Level** adds an approval level; the table lists **Level**, **Level Description**, **Approvers**, **Workflow Type** and **Actions**."
+          }
+        ]
+      },
+      {
+        "heading": "Owner Dashboard",
+        "intro": "<p><strong>Owner Dashboard</strong> lists the analytics available on the owner dashboard.</p>",
+        "definitions": [
+          {
+            "term": "Standard Analytics",
+            "definition": "Lists the **Construction Progress**, **Quality Progress**, **Cost** and **Contractors Performance** analytics."
+          },
+          {
+            "term": "Overall Graph and tabs",
+            "definition": "Lists the **Construction Progress** views: **Project Activity Analysis**, **Project Drill Down**, **Project Elements**, **Work Packages**, **Locations Type**, **Locations Type Grids**, **Work Packages Grids**, **Quality And Documents**, **Qualities Dashboard** and **Work Milestones**."
+          }
+        ]
+      },
+      {
+        "heading": "My Desk Settings",
+        "intro": "<p><strong>My Desk</strong> sets the order of panels on the <strong>My Desk</strong> page.</p>",
+        "definitions": [
+          {
+            "term": "Recent Logs List",
+            "definition": "Drag to reorder: **Recent Work Logs**, **Recent Punch Lists Items**, **Recent Quality Logs**, **Recent Daily Safety Issues**, **Recent Safety Logs**. The order shown here is the order on My Desk."
+          },
+          {
+            "term": "Dashboard List",
+            "definition": "Drag to reorder the dashboards **Monitor Daily Progress**, **Monitor Forms Status**, **Monitor Forms Raised Daily**, **Monitor Issues Status** and **Monitor Issues Raised Daily**."
+          }
+        ]
+      },
+      {
+        "heading": "Progress Forms Settings",
+        "intro": "<p><strong>Progress Forms</strong> sets priorities for progress forms.</p>",
+        "definitions": [
+          {
+            "term": "Form tabs",
+            "definition": "**RFI**, **Change Orders**, **Submittals**, **Delay Forms** and **Meeting Minutes**. Each tab has its own priority list."
+          },
+          {
+            "term": "Add Priority",
+            "definition": "Adds a priority level with **Priority** and **Due Hours**. The table starts empty."
+          }
+        ]
+      },
+      {
+        "heading": "Projects Forms Settings",
+        "intro": "<p><strong>Projects Forms</strong> sets priorities for project forms.</p>",
+        "definitions": [
+          {
+            "term": "Add Priority",
+            "definition": "Adds a priority level with **Priority** and **Due Hours** and sets their sequence. The table starts empty."
+          }
+        ]
+      },
+      {
+        "heading": "Workflow Issues Settings",
+        "intro": "<p><strong>Workflow Issues</strong> sets priorities for issues raised when a workflow is stuck.</p>",
+        "definitions": [
+          {
+            "term": "Module tabs",
+            "definition": "**Progress**, **Quality**, **Safety**, **Custom Forms**, **Quick Apps**, **Drawing Management**, **Task Forms**; and under them **RFI**, **Submittal**, **Change Order**, **Delay Form**, **Time Sheet**, **Request for Information** and **Transmittal**."
+          },
+          {
+            "term": "Add Priority",
+            "definition": "Adds a priority with **Priority** and **Due Hours** for the chosen form. The table starts empty."
+          }
+        ]
+      },
+      {
+        "heading": "Project Driven",
+        "intro": "<p><strong>Project Driven Settings</strong> decides what drives progress for all field work in the project.</p>",
+        "definitions": [
+          {
+            "term": "Tree Version",
+            "definition": "Picks the tree version."
+          },
+          {
+            "term": "Options",
+            "definition": "**Drive progress through WorkLogs**, **Drive progress through Checklists** and **Schedule**."
+          }
+        ]
+      },
+      {
+        "heading": "User Preferences",
+        "intro": "<p><strong>User Preferences</strong> sets which tree version opens by default.</p>",
+        "definitions": [
+          {
+            "term": "Tree version pickers",
+            "definition": "Separate selects for **web view**, **mobile view**, **Work Logs** and **Productivity Logs**. **Clear** empties a choice."
+          }
+        ]
+      },
+      {
+        "heading": "Define Location",
+        "intro": "<p><strong>Location Defined By</strong> sets how locations are defined for the project.</p>",
+        "definitions": [
+          {
+            "term": "Options",
+            "definition": "**Individual** or **From-To**."
+          }
+        ]
+      },
+      {
+        "heading": "Drawing Status",
+        "intro": "<p><strong>Drawing Status Configuration</strong> lists the statuses a drawing can have.</p>",
+        "definitions": [
+          {
+            "term": "Status list",
+            "definition": "Shows statuses such as **Created** and **Completed**, each with an edit icon. **Add Status** adds a new one."
+          }
+        ]
+      },
+      {
+        "heading": "Productivity Log Settings",
+        "intro": "<p><strong>Productivity Log Settings</strong> controls how productivity is logged.</p>",
+        "definitions": [
+          {
+            "term": "Logging Type",
+            "definition": "**Timesheets** or **Quantity**."
+          },
+          {
+            "term": "Create Productivity Logs By Phase Code and By Locations",
+            "definition": "Choose what each productivity log is created against."
+          }
+        ]
+      },
+      {
+        "heading": "Dashboard Percentages",
+        "intro": "<p><strong>Dashboard Percentage Settings</strong> decides where the progress percentages on dashboards come from.</p>",
+        "images": [
+          {
+            "src": "assets/product/project-settings/004.jpg",
+            "caption": "Dashboard Percentage Settings"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Worklogs",
+            "definition": "Percentages come from logged work logs."
+          },
+          {
+            "term": "Workorder and worklogs",
+            "definition": "Percentages come from workorders and logged work logs."
+          },
+          {
+            "term": "P6 Workorder and Worklogs",
+            "definition": "Planned percentages come from P6; actual percentages come from workorders and work logs."
+          },
+          {
+            "term": "Milestone Workorder and Worklogs",
+            "definition": "Planned percentages come from milestones; actual percentages come from workorders and work logs."
+          },
+          {
+            "term": "RFI",
+            "definition": "Percentages come from RFIs."
+          }
+        ]
+      },
+      {
+        "heading": "My Desk Dashboards",
+        "intro": "<p>This screen turns My Desk dashboards on or off with check boxes.</p>",
+        "images": [
+          {
+            "src": "assets/product/project-settings/008.jpg",
+            "caption": "My Desk Dashboards"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Dashboards",
+            "definition": "**My Dashboard**, **Google Maps**, **Quality Dashboard**, **Delay Analysis Dashboard**, **Defect Analysis Dashboard** and **Strip Charts**. Ticked dashboards are enabled."
+          }
+        ]
       },
       {
         "heading": "Phase Code Settings",
-        "intro": "<p>This group covers phase-code rules, naming, date format, form numbering, procurement approvals, the cost structure and resources. A <strong>PM / Module Admin</strong> settles them early, because they are hard to change once cost and procurement records exist.</p>",
+        "intro": "<p>This setting controls how phase codes may be reused.</p>",
         "definitions": [
           {
-            "term": "Phase Code Settings",
-            "definition": "Two options: **Unique phase code** (a code can be used on only 1 Work Package and Location) or **Multiple-Use Phase Code** (a code can be used across multiple Locations). Arena Steel Plant - Phase 1 uses Unique. **Where it goes:** how phase codes are assigned to work packages in **Project Setup → Works → Other Attributes (Qty | Hrs)**. (The cost-type and timesheet mapping of phase codes is on **Project Setup → Phase Codes**.)"
-          },
-          {
-            "term": "Tree Versions Custom Work Packages Name",
-            "definition": "A <strong>Tree Version</strong> dropdown (13 plants) above a table: <strong>S.No.</strong>, <strong>Activities</strong>, <strong>Work Packages Name</strong>, <strong>Work Packages Description</strong> and <strong>Custom Name</strong>, with <strong>Save Changes</strong>. Pellet Plant (1MTPA) lists 96 work packages (Excavation EXC-1, Marking ARN-MA-1, Concreting ARN-CO-1 and so on) and each Custom Name starts equal to the work package name. <strong>Where the data comes from:</strong> the work packages built in <strong>Project Setup → Works</strong>."
-          },
-          {
-            "term": "Project Date Format",
-            "definition": "Titled \"Settings needed to configure date format\": <strong>MM-DD-YYYY</strong> (selected on Arena Steel Plant - Phase 1) or <strong>DD-MM-YYYY</strong>, then <strong>Save Changes</strong>. <strong>Global Data → Settings → Global Date Format</strong> offers the same two choices (also MM-DD-YYYY here). Not every screen follows it: Field Works RFI writes dates out in words (\"31st March 2026\") and <strong>Project Setup → Estimate → Resource Planning</strong> prints week ranges as 4/10/2026 - 10/10/2026 (day/month/year)."
-          },
-          {
-            "term": "Configure Task Form",
-            "definition": "Defines the fields of the task form: tabs <strong>Project Configuration</strong> and <strong>Global Configuration</strong> (both show one empty template row, \"Configurable Field 1\"), a <strong>Status</strong> switch (<strong>Inactive</strong> / <strong>Active</strong>), <strong>Configurable Fields</strong> (<strong>Required</strong>, <strong>Show on card</strong>, field type such as Text Box, <strong>Add field</strong>) and <strong>Save Changes</strong>. Until it is configured, <strong>Project Setup → Tasks → Create</strong> shows \"Task Form is not configured in project settings\"."
-          },
-          {
-            "term": "Configure Form Id Type",
-            "definition": "Titled \"Configure Form ID Type\": \"log Ids of form will be created based on the option selected here\". A search box and a table of <strong>Form Title</strong> with two choices per form, <strong>Project Based</strong> or <strong>Tree Based</strong>, then <strong>Save Changes</strong>. The table has 149 forms: RFI, REQUEST-FOR-INFORMATION, CHANGE-ORDER, SUBMITTAL, DELAY-FORMS, MEETING-MINUTES, then the Quick Apps and Project Forms built in Global Data (Observation Report, Non-Conformance Report, Contractor Onboarding, Estimate Quantity and many more). All 149 are <strong>Project Based</strong> on Arena Steel Plant - Phase 1, and Field Works RFIs are numbered <strong>WIR 1</strong>, <strong>WIR 2</strong>, <strong>WIR 3</strong> in one running series."
-          },
-          {
-            "term": "Procurement Workflow Settings",
-            "definition": "The approval chain for procurement requests. Under <strong>Requisition Form (REQ)</strong> there is one tab per type: <strong>Equipment Rental</strong>, <strong>Equipment Purchased</strong>, <strong>Material</strong>, <strong>Equipment Part Rental</strong>, <strong>Equipment Part Purchased</strong> and <strong>Delivery Service</strong>. <strong>Create Approval WorkFlow</strong> opens <strong>Create Workflow</strong> (a name, Cancel, Submit). The page instructions are: 1. Click Create Approval Workflow, 2. Create workflow levels, 3. Add users to each level. Nothing is defined here yet. <strong>Where it goes:</strong> the requisitions raised in <strong>Home → Procurement</strong>. Global Data → Settings → Procurement Settings has a separate <strong>Global Level / Project Level</strong> pair of tabs."
-          },
-          {
-            "term": "Cost Breakdown Structure",
-            "definition": "Four tabs: **CBS** (choose a Tree Version and the phase-code level for estimates, such as Entity > Super Location > Location > Activity > Work Package > Phase Code, or **Customize CBS Level**), **Approval WorkFlow** (create the approval chain for cost estimates), **Level of Detail** (**Phase Code** or **Phase Code - Cost Code**) and **Estimate Type** (**Lump Sump** or **Time & Material**). **Where it goes:** **Project Setup → Estimate → Create Estimate** (CBS and Approval Workflow fields)."
-          },
-          {
-            "term": "Custom Resources",
-            "definition": "Two tabs, <strong>Labor</strong> and <strong>Machinery</strong>, each with <strong>Create</strong> (a \"Custom Resource Name\" dialog; titled <strong>Create Labor</strong> on the Labor tab) and a list of Resource Names with Actions. Use it for resources that are not in the standard lists."
-          },
-          {
-            "term": "Resource Data Source",
-            "definition": "Titled \"Resources planned and actual data will be shown on dashboard according to the selected settings\": <strong>P6</strong> (selected on Arena Steel Plant - Phase 1) or <strong>Work Order</strong>, then <strong>Save Changes</strong>. It decides where the planned and actual resource figures on the Data Analytics &amp; Insights dashboards come from, the same idea as <strong>Dashboard Percentages</strong> for percentages."
+            "term": "Options",
+            "definition": "**Unique phase code** can be used across only one work package and location. **Multiple-Use Phase Code** can be used across multiple locations."
           }
-        ],
-        "procedures": []
+        ]
       },
       {
-        "heading": "Drawing Register",
-        "intro": "<p>This group covers the drawing register form, the work order terms, the numbering and category lists for RFIs and transmittals, market types and the Vista Progress log. A <strong>Module Admin / PM</strong> sets most of them once, early in the project.</p>",
+        "heading": "Tree Versions Custom Work Packages Name",
+        "intro": "<p>This screen lets you give each work package a custom name for a tree version.</p>",
         "definitions": [
           {
-            "term": "Configure Drawing Register Form",
-            "definition": "Titled \"Configure Drawing Register Form\" with <strong>Project Level</strong> and <strong>Tree Version</strong> selectors, a <strong>Status Configuration</strong> (<strong>Assign To Inactive</strong> / <strong>Assign To Active</strong>), the <strong>Standard Fields</strong> <strong>Drawing Id</strong> and <strong>Drawing Name</strong> (both Required, text), and seven <strong>Configurable Fields</strong>: <strong>Received Date</strong>, <strong>Locations</strong>, <strong>Network</strong>, <strong>Drawing Types</strong>, <strong>Sheets</strong>, <strong>Drawing Status</strong> and <strong>Remarks</strong> (each with <strong>Required</strong> and <strong>Show on card</strong> switches, off here, and a field type, Text Box), plus <strong>Add field</strong> and <strong>Save Changes</strong>. <strong>Where it goes:</strong> these are exactly the fields of <strong>Project Setup → Drawings → Drawing Register → Create</strong> (the Drawing Status values come from <strong>Drawing Status</strong> in this list)."
+            "term": "Tree version picker",
+            "definition": "Choose the tree version at the top."
           },
           {
-            "term": "Variation Order Form",
-            "definition": "Titled \"Variation Order Form\": <strong>Configurable Fields</strong> with one empty template row (\"Configurable Field 1\", Required, field type Text Box, copy and delete icons), <strong>Add field</strong> and <strong>Save Changes</strong>. No fields are defined on Arena Steel Plant - Phase 1. Variation Order is also one of the forms in the <strong>Project Setup → Forms → Approval Workflow</strong> form list, which is where its approval levels are created."
-          },
+            "term": "Table",
+            "definition": "**S.No.**, **Activities**, **Work Packages Name**, **Work Packages Description** and an editable **Custom Name**."
+          }
+        ]
+      },
+      {
+        "heading": "Project Date Format",
+        "intro": "<p>This setting picks how dates are written in the project.</p>",
+        "definitions": [
           {
-            "term": "Terms and Conditions",
-            "definition": "A <strong>Save Changes</strong> page holding a list of text blocks (each type <strong>Label</strong>, with copy, add and delete icons) and <strong>Add field</strong> to add another. The clauses run from \"1. PRICES &amp; QUANTITY\" and \"2. PAYMENT TERMS\" to \"24. Dispute Resolution\", \"25. Damages for non-completion\" and \"26. BILLING ADDRESS\". The wording is written as work order terms (it refers to \"this Work Order\")."
-          },
+            "term": "Select date format",
+            "definition": "**MM-DD-YYYY** or **DD-MM-YYYY**."
+          }
+        ]
+      },
+      {
+        "heading": "Configure Task Form",
+        "intro": "<p><strong>Configure Task Form</strong> adds your own fields to the task form.</p>",
+        "images": [
           {
-            "term": "Request for Information",
-            "definition": "Two tabs: <strong>Categories</strong> (<strong>Create</strong> opens <strong>Create Category</strong> with a Category Name; Category and Actions columns) and <strong>Priorities</strong> (Priority, Due Days, Due Hours, Escalation Users). Both are empty on Arena Steel Plant - Phase 1 and Global Data → Settings → Request for Information is identical and also empty. It is for the <strong>Request for Information</strong> form (the one beside Submittal and Change Order in Project Setup → Forms), not for the Request for Inspection RFI logged in Field Works → Progress."
-          },
-          {
-            "term": "Transmittals Submitted Type",
-            "definition": "<strong>Create</strong> opens <strong>Create Submitted Type</strong> (Submitted Type Name); the list shows Submitted Type and Actions and is empty on Arena Steel Plant - Phase 1. Global Data → Settings has the same page, also empty. It supplies the submitted-type choices for the <strong>Transmittal</strong> form."
-          },
-          {
-            "term": "Market Type",
-            "definition": "Two lists: <strong>Create Market Type</strong> (\"Please enter the name of Market Type to create\") and <strong>Create Sub-Market Type</strong>; both say \"No ... Found\" on Arena Steel Plant - Phase 1, and the same page exists in Global Data → Settings. The <strong>Create Project</strong> form has no Market Type field. Home → Opportunity Management has a Market Type field on Create Opportunity."
-          },
-          {
-            "term": "Vista Progress",
-            "definition": "The last category, titled <strong>Vista Progress Batch Entries</strong>: a read-only table with a search box and <strong>Manage Columns</strong>, with the columns <strong>S.No.</strong>, <strong>Phase</strong>, <strong>Actual Date</strong>, <strong>Cost Type</strong>, <strong>Actual Units</strong>, <strong>Sync Status</strong>, <strong>Sync Error</strong> and <strong>Synced At</strong>. It is empty on Arena Steel Plant - Phase 1 and has no Save button or Create. Use it to check whether progress entries have synced to an outside system."
+            "src": "assets/product/project-settings/007.jpg",
+            "caption": "Configure Task Form"
           }
         ],
-        "procedures": []
+        "definitions": [
+          {
+            "term": "Project Configuration and Global Configuration",
+            "definition": "A switch chooses whether the fields apply to this project or come from global configuration. **Status Inactive / Status Active** turns the custom fields off or on."
+          },
+          {
+            "term": "Configurable Fields",
+            "definition": "Each field has a name box, a **CHOOSE TYPE** select (for example **Text Box**), a **Required** switch, a **Show on card** switch, a drag handle for order, and icons to add, copy or delete. **Add field** adds a new field."
+          }
+        ]
+      },
+      {
+        "heading": "Configure Form Id Type",
+        "intro": "<p>This screen decides how the ID of each form log is built.</p>",
+        "definitions": [
+          {
+            "term": "Table",
+            "definition": "One row per form, such as **RFI**, **CHANGE-ORDER**, **SUBMITTAL**, **Observation Report** and **Non-Conformance Report**, with a **Project Based** or **Tree Based** choice. A search box finds a form."
+          }
+        ]
+      },
+      {
+        "heading": "Procurement Workflow Settings",
+        "intro": "<p>This screen sets the approval workflow for requisition forms.</p>",
+        "definitions": [
+          {
+            "term": "Requisition Form (REQ) types",
+            "definition": "**Equipment Rental**, **Equipment Purchased**, **Material**, **Equipment Part Rental**, **Equipment Part Purchased** and **Delivery Service**."
+          },
+          {
+            "term": "Create Approval WorkFlow",
+            "definition": "Opens the steps: create workflow levels, then add users to each level."
+          }
+        ]
+      },
+      {
+        "heading": "Cost Breakdown Structure",
+        "intro": "<p><strong>CBS</strong> sets how project cost is structured, with four tabs.</p>",
+        "images": [
+          {
+            "src": "assets/product/project-settings/005.jpg",
+            "caption": "Cost Breakdown Structure"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "CBS",
+            "definition": "Pick a **Tree Version** and an **Estimate**, then choose the structure used to view phase codes: **Entity > Phase Code**, **Entity > Super Location > Phase Code**, down to **Entity > Super Location > Location > Activity > Work Package > Phase Code**, **Activity > Phase Code**, **Activity > Work Package > Phase Code**, **Work Package > Phase Code** or **Customize CBS Level**."
+          },
+          {
+            "term": "Approval WorkFlow",
+            "definition": "**Create Approval WorkFlow** sets who approves cost estimates."
+          },
+          {
+            "term": "Level of Detail",
+            "definition": "Choose **Phase Code** or **Phase Code - Cost Code**."
+          },
+          {
+            "term": "Estimate Type",
+            "definition": "Choose **Lump Sump** or **Time & Material**."
+          }
+        ]
+      },
+      {
+        "heading": "Variation Order Form",
+        "intro": "<p>This screen adds your own fields to the variation order form.</p>",
+        "definitions": [
+          {
+            "term": "Configurable Fields",
+            "definition": "Each field has a **Required** switch, a **CHOOSE TYPE** select (for example **Text Box**), and icons to add, copy and delete. **Add field** adds one."
+          }
+        ]
+      },
+      {
+        "heading": "Custom Resources",
+        "intro": "<p>This screen lists custom resource names, split into Labor and Machinery.</p>",
+        "definitions": [
+          {
+            "term": "Labor and Machinery",
+            "definition": "Two tabs. **Create** adds a name; the table shows **Resource Names** and **Actions**."
+          }
+        ]
+      },
+      {
+        "heading": "Resource Data Source",
+        "intro": "<p>This setting decides where planned and actual resource data on the dashboard comes from.</p>",
+        "definitions": [
+          {
+            "term": "Options",
+            "definition": "**P6** or **Work Order**."
+          }
+        ]
+      },
+      {
+        "heading": "Terms and Conditions",
+        "intro": "<p>This screen holds a numbered list of terms (for example prices and quantity, payment terms) that you can edit and reorder.</p>",
+        "definitions": [
+          {
+            "term": "Terms list",
+            "definition": "Each term has a heading and text; drag to reorder. Fields have a type such as **Label**, and icons to add, copy or delete."
+          }
+        ]
+      },
+      {
+        "heading": "Request for Information",
+        "intro": "<p>This screen lists the categories and priorities used by RFIs.</p>",
+        "definitions": [
+          {
+            "term": "Categories and Priorities",
+            "definition": "Two tabs. **Create** adds an entry; the table shows **Category** and **Actions**."
+          }
+        ]
+      },
+      {
+        "heading": "Transmittals Submitted Type",
+        "intro": "<p>This screen lists the submitted types offered on transmittals.</p>",
+        "definitions": [
+          {
+            "term": "Create",
+            "definition": "Adds a **Submitted Type**; the table shows **Submitted Type** and **Actions**."
+          }
+        ]
+      },
+      {
+        "heading": "Market Type",
+        "intro": "<p>This screen defines market types and their sub-types.</p>",
+        "definitions": [
+          {
+            "term": "Create Market Type and Create Sub-Market Type",
+            "definition": "Add a market type, or a sub-market type under it. Each list shows its own entries."
+          }
+        ]
+      },
+      {
+        "heading": "Vista Progress",
+        "intro": "<p><strong>Vista Progress Batch Entries</strong> lists progress entries sent to Vista.</p>",
+        "definitions": [
+          {
+            "term": "Table",
+            "definition": "Columns **S.No.**, **Phase**, **Actual Date**, **Cost Type**, **Actual Units**, **Sync Status**, **Sync Error** and **Synced At**, each with a filter icon. **Search** and **Manage Columns** sit above."
+          }
+        ]
       }
     ],
     "name": "Project Settings",
@@ -32351,11 +32810,46 @@ const MODULES = [
       "Use the search box or scroll the left-hand category list, then edit the selected category's panel on the right."
     ],
     "sections": [
-      "Overview",
-      "Forms & Templates",
+      "Project Settings",
+      "Look and Feel",
+      "Forms Settings",
+      "Work Logs Templates",
+      "Quality Work Logs Templates",
+      "Project Work Measurement",
+      "Quality Logs Settings",
+      "Punch Lists and Restraints",
+      "Daily Safety Issues and Observations",
       "Time Management Settings",
+      "googlemaps",
+      "Project Setup View",
+      "Quick Apps Settings",
+      "Owner Dashboard",
+      "My Desk Settings",
+      "Progress Forms Settings",
+      "Projects Forms Settings",
+      "Workflow Issues Settings",
+      "Project Driven",
+      "User Preferences",
+      "Define Location",
+      "Drawing Status",
+      "Productivity Log Settings",
+      "Dashboard Percentages",
+      "My Desk Dashboards",
       "Phase Code Settings",
-      "Drawing Register"
+      "Tree Versions Custom Work Packages Name",
+      "Project Date Format",
+      "Configure Task Form",
+      "Configure Form Id Type",
+      "Procurement Workflow Settings",
+      "Cost Breakdown Structure",
+      "Variation Order Form",
+      "Custom Resources",
+      "Resource Data Source",
+      "Terms and Conditions",
+      "Request for Information",
+      "Transmittals Submitted Type",
+      "Market Type",
+      "Vista Progress"
     ]
   },
   {
