@@ -22767,221 +22767,429 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Company",
-        "intro": "<p>Use this section to record the company's own profile, its subsidiaries and its business units. The Super Admin sets it up once when the account is created.</p><p><strong>Where this data goes:</strong> the profile is the company's own record and the lists sit under Global Data → Company and Global Data → Business Units. The Create Project form has a <strong>Business Unit</strong> dropdown fed by the Business Units list, so add business units here first.</p>",
+        "heading": "Company Details",
+        "intro": "<p><strong>Company Details</strong> is the first tab of the <strong>Company</strong> tile in Global Data. It holds your company's own profile: name, ID, address, contact person, tax numbers and single sign-on providers. The tile's other tab is <strong>Subsidiary</strong>.</p>",
+        "images": [
+          {
+            "src": "assets/product/global-data/001.jpg",
+            "caption": "The Company Details tab"
+          }
+        ],
         "definitions": [
           {
-            "term": "Company Details",
-            "definition": "The tab holding the company's core profile. Required fields are **Company Name**, **Company ID**, **Street Address**, **City**, **State**, **State Zip Code**, **Contact Person**, **Contact Person Phone Number** (country code, number and extension), **Contact Person Email**, **Company Email** and **Company Phone Number**. **PAN Number** and **GST IN** are optional. **Upload Company Logo** sets the logo, **Add SSO Provider** under **SSO Clients** connects a single sign-on provider, and **Submit** saves the tab. The Company tile opens on this tab; **Subsidiary** is the second tab."
+            "term": "Upload Company Logo",
+            "definition": "The round logo at the top, with the link **Upload Company Logo** under it, sets the picture that represents your company."
+          },
+          {
+            "term": "Company Name and Company ID",
+            "definition": "The company's name and its ID. Both are required (red star)."
+          },
+          {
+            "term": "Street Address, City, State, State Zip Code",
+            "definition": "The company's postal address. All four are required."
+          },
+          {
+            "term": "Contact Person",
+            "definition": "The person to reach at the company. Required, together with **Contact Person Phone Number** (country code, number and an optional extension) and **Contact Person Email**."
+          },
+          {
+            "term": "Company Email and Company Phone Number",
+            "definition": "The company's general email address and phone number (country code, number, optional extension). Both are required."
+          },
+          {
+            "term": "PAN Number and GST IN",
+            "definition": "Optional tax registration numbers of the company."
           },
           {
             "term": "SSO Clients",
-            "definition": "A section within Company Details for configuring enterprise single sign-on providers via Add SSO Provider."
+            "definition": "Lists single sign-on providers for the company. Each row has a **Provider name** and an **AppKey** (both required) and a red delete icon. **Add SSO Provider** adds another row.",
+            "images": [
+              {
+                "src": "assets/product/global-data/002.jpg",
+                "caption": "SSO Clients at the bottom of Company Details"
+              }
+            ]
           },
           {
-            "term": "Subsidiary",
-            "definition": "A separate company profile kept under the parent company. The **Subsidiary** tab has **Create Subsidiary**, a search box and list/grid icons. The **Create Subsidiary** dialog asks for **Upload Subsidiary Logo**, **Subsidiary Name**, **Subsidiary ID**, **Street Address**, **City**, **State** and **State Zip Code** (all required), then **Contact Person**, **Contact Person Phone Number**, **Contact Person Email**, **Subsidiary Email**, **Subsidiary Phone Number**, **PAN Number** and **GST IN** (optional), and **Submit**. Unlike the company profile, the contact fields are optional here."
-          },
-          {
-            "term": "Business Unit",
-            "definition": "A simple record made of a numeric **Code**, a **Description** and an optional colour tag. The **Business Unit** screen (its own tile, **Global Data → Business Units**) is a table with **Serial Number**, **Code**, **Description** and **Actions**, and an **Add** button that opens an inline row instead of a pop-up. Who uses it: the Super Admin maintains the list. The Create Project form has a **Business Unit** dropdown fed by this list."
+            "term": "Submit",
+            "definition": "Saves everything on the tab."
           }
         ],
         "procedures": [
           {
             "title": "Update the company profile",
             "steps": [
-              "Go to <strong>Global Data → Company</strong> tile. It opens on the <strong>Company Details</strong> tab.",
-              "Click <strong>Upload Company Logo</strong> to set the brand logo used across generated documents.",
-              "Fill in or update the required fields: <strong>Company Name</strong>, <strong>Company ID</strong>, <strong>Street Address</strong>, <strong>City</strong>, <strong>State</strong>, <strong>State Zip Code</strong>, <strong>Contact Person</strong> with phone and email, <strong>Company Email</strong> and <strong>Company Phone Number</strong>. <strong>PAN Number</strong> and <strong>GST IN</strong> are optional.",
-              "To configure SSO, click <strong>Add SSO Provider</strong> under SSO Clients and complete the provider's setup.",
-              "Click <strong>Submit</strong> to save."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/company-details/001.jpg",
-                "caption": "Company Details with the company name, logo, address and contacts",
-                "step": 3
-              }
-            ],
-            "note": "Nothing is saved until you click Submit."
-          },
-          {
-            "title": "Add a business unit",
-            "steps": [
-              "Go to <strong>Global Data → Business Units</strong> and click <strong>Add</strong>. A new row opens directly in the table (not a pop-up).",
-              "Enter a numeric Code and a Description in the new row.",
-              "Optionally pick a color from the swatch next to the row, used to tag/color-code the business unit.",
-              "Click the row's save/check action to confirm (or the delete icon to discard it before saving)."
+              "Open **Global Data** and click the **Company** tile. The **Company Details** tab opens.",
+              "Change the fields you need. The fields marked with a red star must stay filled.",
+              "To change the logo, click **Upload Company Logo** and choose a picture.",
+              "Click **Submit**."
             ]
           },
           {
+            "title": "Add a single sign-on provider",
+            "steps": [
+              "On **Company Details**, scroll down to **SSO Clients**.",
+              "Click **Add SSO Provider** to get a new row, if no empty row is shown.",
+              "Enter the **Provider name** and the **AppKey**.",
+              "Click **Submit**. Use the red delete icon at the end of a row to remove that provider."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Subsidiary",
+        "intro": "<p>The <strong>Subsidiary</strong> tab, next to <strong>Company Details</strong>, keeps a separate profile for each subsidiary company that sits under your company.</p>",
+        "images": [
+          {
+            "src": "assets/product/global-data/004.jpg",
+            "caption": "The Subsidiary tab with no subsidiaries yet"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "+ Create Subsidiary",
+            "definition": "Opens the **Create Subsidiary** dialog.",
+            "images": [
+              {
+                "src": "assets/product/global-data/003.jpg",
+                "caption": "The Create Subsidiary dialog"
+              }
+            ]
+          },
+          {
+            "term": "Search Profiles",
+            "definition": "Type to narrow the list to matching subsidiary profiles."
+          },
+          {
+            "term": "List and grid icons",
+            "definition": "At the top right. They switch the subsidiaries between a list and a grid of cards. **No Data** is shown when no subsidiary exists."
+          },
+          {
+            "term": "Create Subsidiary dialog",
+            "definition": "Fields: **Upload Subsidiary Logo**, **Subsidiary Name**, **Subsidiary ID**, **Street Address**, **City**, **State** and **State Zip Code** (all required), then **Contact Person**, **Contact Person Phone Number**, **Contact Person Email**, **Subsidiary Email**, **Subsidiary Phone Number**, **PAN Number** and **GST IN** (optional). **Submit** saves."
+          }
+        ],
+        "procedures": [
+          {
             "title": "Create a subsidiary",
             "steps": [
-              "Go to <strong>Global Data → Company</strong> tile and open the <strong>Subsidiary</strong> tab.",
-              "Click <strong>Create Subsidiary</strong>.",
-              "Fill in <strong>Subsidiary Name</strong>, <strong>Subsidiary ID</strong>, <strong>Street Address</strong>, <strong>City</strong>, <strong>State</strong> and <strong>State Zip Code</strong>. Add the contact, email, phone, <strong>PAN Number</strong> and <strong>GST IN</strong> if you have them, and upload a logo if you want one.",
-              "Click <strong>Submit</strong>."
+              "Open **Global Data → Company** and click the **Subsidiary** tab.",
+              "Click **+ Create Subsidiary**.",
+              "Fill in the required fields (red star): **Subsidiary Name**, **Subsidiary ID**, **Street Address**, **City**, **State**, **State Zip Code**. Add the contact and tax details if you have them, and a logo with **Upload Subsidiary Logo**.",
+              "Click **Submit**. Close the dialog with the **×** to leave without saving."
+            ],
+            "images": [
+              {
+                "src": "assets/product/global-data/003.jpg",
+                "caption": "The Create Subsidiary dialog",
+                "step": 3
+              }
             ]
           }
         ]
       },
       {
         "heading": "Owners",
-        "intro": "<p>Use Owners to keep one master record for each client who commissions your projects. The Super Admin maintains the list, and project creators pick from it.</p><p><strong>Where this data goes:</strong> the <strong>Owner</strong> dropdown on <strong>Projects → Create Project</strong> shows exactly the owners on this screen. Each owner can be linked to company <strong>Locations</strong> and <strong>Tax Codes</strong>, and owner contacts show up under <strong>Customer → Contacts</strong>.</p>",
+        "intro": "<p><strong>Owners</strong> is the company-wide list of owners (the clients who commission your projects). Each owner is a card, or a table row, with its contact details, addresses, linked locations and tax codes.</p>",
+        "images": [
+          {
+            "src": "assets/product/global-data/006.jpg",
+            "caption": "The Owners screen in card view"
+          }
+        ],
         "definitions": [
           {
-            "term": "Owner",
-            "definition": "The client entity that commissions a project. The **Owners** screen shows one card per owner with **Owner ID**, **Owner Name** and **Owner Email**. The toolbar has **Create Owner**, **Settings**, a search box (by ID and name), the pager, **Export**, **Filters**, list and grid icons and a save-layout icon. The ⋮ menu on a card gives **Edit** and **Delete**. Edit opens the same wizard titled **Update Owner**, with an extra editable **Owner Id** field."
+            "term": "Create Owner",
+            "definition": "Opens a small menu with **Create Owner** and **POC OCR**. **Create Owner** starts the three-step **Create Owner** wizard.",
+            "images": [
+              {
+                "src": "assets/product/global-data/013.jpg",
+                "caption": "The Create Owner menu"
+              }
+            ]
           },
           {
-            "term": "Create Owner (split button)",
-            "definition": "The top-left button. Its menu offers **Create Owner** (the three-step wizard) and **POC OCR** (OCR-assisted intake of owner details from a document)."
+            "term": "Settings",
+            "definition": "Opens **Owner Settings**: \"Divide Owner into how many levels\". Tick **Level 1 (Owner)**, **Level 2 ( Category > Owner)** or **Level 3 (Category > SubCategory > Owner)** to choose how owners are grouped.",
+            "images": [
+              {
+                "src": "assets/product/global-data/010.jpg",
+                "caption": "Owner Settings"
+              }
+            ]
           },
           {
-            "term": "Owner Settings / hierarchy levels",
-            "definition": "The **Settings** button on the Owners screen opens **Owner Settings**: \"Divide Owner into how many levels\". Choose **Level 1 (Owner)**, **Level 2 (Category > Owner)** or **Level 3 (Category > SubCategory > Owner)**. Decide early, because moving to a deeper level later means recategorising the owners you already have. The form fields themselves are set in **Global Data → Settings → Owner** (sub-tabs **Form** and **Owner POC**; standard fields Owner ID, Owner Name, Short Name, Alias Name, Primary, Mailing and Billing Address, Email Address, Phone Number, Fax Number, URL, Tax Codes and Locations, plus **Add Field** for your own)."
+            "term": "Search by ID and Name",
+            "definition": "Type part of an owner's ID or name to narrow the list."
+          },
+          {
+            "term": "Pager",
+            "definition": "Shows how many owners are listed, for example (1 to 3) of 3, with previous and next arrows."
+          },
+          {
+            "term": "Export",
+            "definition": "Button next to the pager that exports the owner list."
+          },
+          {
+            "term": "Filters",
+            "definition": "Opens a dialog with **ID** and **Name** (both searchable dropdowns) and a **Created Date** range. **Submit** applies the filter, **Clear & Apply** removes it.",
+            "images": [
+              {
+                "src": "assets/product/global-data/011.jpg",
+                "caption": "The Filters dialog"
+              }
+            ]
+          },
+          {
+            "term": "List and card icons",
+            "definition": "Switch between the card view and a table view."
+          },
+          {
+            "term": "Owner card",
+            "definition": "Shows **Owner ID**, **Owner Name** and **Owner Email**. The three-dot menu has **Edit** and **Delete**."
+          },
+          {
+            "term": "Table view columns",
+            "definition": "**Owner ID**, **Owner Name**, **Short Name**, **Alias Name**, the Primary, Mailing and Billing address parts (Line 1, Line 2, Country, State, City, Zip Code), **Email Address**, **Phone Number**, **Fax Number**, **URL**, **Locations**, **Tax Codes** and **Actions**."
+          },
+          {
+            "term": "Manage Columns",
+            "definition": "Shown in table view. Tick the columns you want under **Column Options** (or **Select All**) and arrange them under **Column Arrangement** by dragging; the **×** removes a column. **Apply** keeps the choice, **Reset to Default** restores the original columns.",
+            "images": [
+              {
+                "src": "assets/product/global-data/012.jpg",
+                "caption": "Manage Columns"
+              }
+            ]
+          },
+          {
+            "term": "Create Owner wizard, step 1 Basic Details",
+            "definition": "**Owner Name** is required. Then **Short Name**, **Alias Name**, **Phone Number** (country code, number, extension), **Email**, **Fax Number** and **Url**. Below are the collapsible **Primary Address** (**Address Line 1**, **Address Line 2**, **Country**, **City**, **State**, **Zip Code**), **Mailing Address** and **Billing Address**; the last two each have a **Same as Primary address** box. **Next** stays on this step until **Owner Name** is filled.",
+            "images": [
+              {
+                "src": "assets/product/global-data/007.jpg",
+                "caption": "Create Owner, Basic Details"
+              }
+            ]
+          },
+          {
+            "term": "Wizard step 2 Locations & Tax Codes",
+            "definition": "The **Location** section has **Link Locations** and a table of **Location Name**, **State**, **Default** and **Actions**. The **Tax Codes** section has **Add Tax Codes** and a table of **Tax Group**, **Tax Class**, **Tax Code** and **Actions**.",
+            "images": [
+              {
+                "src": "assets/product/global-data/008.jpg",
+                "caption": "Create Owner, Locations & Tax Codes"
+              }
+            ]
           },
           {
             "term": "Link Locations",
-            "definition": "Step 2 of the wizard. The **Location** section has a **Link Locations** button and a table with **Location Name**, **State**, **Default** (radio button) and **Actions** (delete). **Link Locations** opens a picker with a search box, **SELECT ALL**, and the company locations from **Global Data → Locations**. The **Tax Codes** section below has **Add Tax Codes** and a table with **Tax Group**, **Tax Class** and **Tax Code** dropdowns filled from **Tax Configuration**."
+            "definition": "Opens a list of the locations from **Global Data → Locations** with a search box, **SELECT ALL**, and a tick box per row (**Location Name**, **State**). **Submit** adds the ticked locations to the owner.",
+            "images": [
+              {
+                "src": "assets/product/global-data/009.jpg",
+                "caption": "The Link Locations picker"
+              }
+            ]
           },
           {
-            "term": "Where owner data comes from and goes",
-            "definition": "**Comes from:** manual entry in the wizard, or an Excel file through **Export → Upload**. Locations and Tax Codes inside the wizard come from **Locations** and **Tax Configuration**. **Goes to:** the **Owner** dropdown on **Create Project**, and owner contacts in **Customer → Contacts**. If a new owner does not show in Create Project, check that it was submitted and reopen the form."
+            "term": "Wizard step 3 Preview",
+            "definition": "A read-only copy of what you entered, with **Submit** to save the owner."
+          },
+          {
+            "term": "Edit an owner",
+            "definition": "**Edit** in the card menu opens the same wizard titled **Update Owner**. It also shows the **Owner Id**, greyed out and not editable."
           }
         ],
         "procedures": [
           {
-            "title": "Create a new Owner record",
+            "title": "Create an owner",
             "steps": [
-              "Go to <strong>Global Data → Owners</strong> tile → <strong>Create Owner</strong> (split button) → <strong>Create Owner</strong>.",
-              "<strong>Step 1 – Basic Details:</strong> enter <strong>Owner Name</strong> (the only required field), then <strong>Short Name</strong>, <strong>Alias Name</strong>, <strong>Phone Number</strong> (country code, number, extension), <strong>Email</strong>, <strong>Fax Number</strong> and <strong>Url</strong>. Fill <strong>Primary Address</strong>, <strong>Mailing Address</strong> and <strong>Billing Address</strong> (Address Line 1 and 2, Country, City, State, Zip Code); tick <strong>Same as Primary address</strong> to copy it.",
-              "<strong>Step 2 – Locations &amp; Tax Codes:</strong> click <strong>Link Locations</strong> and tick the company locations that apply, then mark one as <strong>Default</strong>. Click <strong>Add Tax Codes</strong> to attach a <strong>Tax Group</strong>, <strong>Tax Class</strong> and <strong>Tax Code</strong>.",
-              "<strong>Step 3 – Preview:</strong> review all entered data.",
-              "Click <strong>Submit</strong> to create the Owner."
+              "Open **Global Data → Owners** and click **Create Owner**, then choose **Create Owner**.",
+              "On **Basic Details**, enter the **Owner Name** and any contact and address details, then click **Next**.",
+              "On **Locations & Tax Codes**, click **Link Locations**, tick the locations, click **Submit**, and use **Add Tax Codes** for tax codes. Click **Next**.",
+              "Check the **Preview** and click **Submit**. **Cancel** closes the wizard without saving."
             ],
-            "note": "To bulk-create Owners, use Export, which offers Download and Upload. Owners you create appear in the Owner dropdown on Create Project.",
             "images": [
               {
-                "src": "assets/notion/global-data-owners-creation/001.jpg",
-                "caption": "The Owners screen",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/global-data-owners-creation/003.jpg",
-                "caption": "Register Owner",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/global-data-owners-creation/004.jpg",
-                "caption": "Step 1: basic details and addresses",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/global-data-owners-creation/005.jpg",
-                "caption": "Step 2: Link Locations and Add Tax Codes",
+                "src": "assets/product/global-data/009.jpg",
+                "caption": "Choosing locations for the owner",
                 "step": 3
-              },
-              {
-                "src": "assets/notion/global-data-owners-creation/006.jpg",
-                "caption": "Step 3: preview of the owner",
-                "step": 4
               }
             ]
           },
           {
-            "title": "Configure Owner hierarchy levels",
+            "title": "Change an owner",
             "steps": [
-              "On the Owners tile, click the <strong>Settings</strong> gear icon (top right).",
-              "In \"Owner Settings,\" choose Level 1, Level 2, or Level 3 depending on how granular owner categorization should be company-wide."
+              "Open **Global Data → Owners**.",
+              "Click the three dots on the owner's card and choose **Edit**.",
+              "Change the details in the **Update Owner** wizard, going through **Next** to the **Preview**.",
+              "Click **Submit**."
+            ]
+          },
+          {
+            "title": "Choose how many levels owners are grouped in",
+            "steps": [
+              "Click **Settings** at the top right of **Owners**.",
+              "Tick **Level 1 (Owner)**, **Level 2 ( Category > Owner)** or **Level 3 (Category > SubCategory > Owner)**."
             ],
             "images": [
               {
-                "src": "assets/notion/global-data-owners-creation/002.jpg",
-                "caption": "Owner Settings, for dividing owners into levels",
+                "src": "assets/product/global-data/010.jpg",
+                "caption": "Owner Settings",
                 "step": 2
               }
             ]
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/notion/global-data-owners-creation/007.jpg",
-            "caption": "Export, to download or upload owners in Excel"
           },
           {
-            "src": "assets/notion/global-data-owners-creation/008.jpg",
-            "caption": "Filters and Save Layout on the owners list"
+            "title": "Show other columns in the table",
+            "steps": [
+              "Click the list icon to switch to the table view.",
+              "Click **Manage Columns**.",
+              "Tick or untick columns and drag them into the order you want.",
+              "Click **Apply**."
+            ]
           }
         ]
       },
       {
         "heading": "Locations",
-        "intro": "<p>Use this section to keep the company's list of places and its tax set-up. The Super Admin maintains both, and other screens pick from them.</p><p><strong>Where this data goes:</strong> company locations are offered in <strong>Owners → Link Locations</strong>, and tax codes (Tax Group, Tax Class, Tax Code) are attached to locations and owners. The <strong>Project Location</strong> box on Create Project is plain text, not a dropdown of these locations.</p>",
+        "intro": "<p><strong>Locations</strong> is the company's list of places (for example offices or sites), each with an address and the tax codes that apply there. Owners can be linked to these locations.</p>",
+        "images": [
+          {
+            "src": "assets/product/global-data/014.jpg",
+            "caption": "The Locations table"
+          }
+        ],
         "definitions": [
           {
-            "term": "Location",
-            "definition": "A registered company place (older guides call it a Delivery Location). The **Locations** screen (**Global Data → Locations**) has **Create**, a search box, the pager, **Export** (**Download Excel**, **Upload Excel**), **Filters**, **Manage Columns** and a save-layout icon. Columns: **Location ID**, **Location Name**, **Address**, **Zip Code**, **City**, **State** and **Actions** (edit, delete). The **Add Location** dialog asks for **Location Name**, **Address**, **Zip Code**, **City** and **State**, plus a **Tax Codes** table (**Add** → **Tax Group**, **Tax Class**, **Tax Code**)."
+            "term": "Create",
+            "definition": "Opens the **Add Location** dialog.",
+            "images": [
+              {
+                "src": "assets/product/global-data/015.jpg",
+                "caption": "The Add Location dialog"
+              }
+            ]
           },
           {
-            "term": "Tax Group",
-            "definition": "The top level of the tax tree on **Tax Configuration**. Groups appear as accordions in the left panel (for example **Tax**, **GST 111**, **GST 18**). **Add Tax Group** asks for one field, **Group**. The ⋮ menu on a group has **Add**, **Edit** and **Delete**."
+            "term": "Search",
+            "definition": "Type to narrow the table to matching locations."
           },
           {
-            "term": "Tax Code",
-            "definition": "The bottom level: a **Tax Code** name with a **Tax Percentage** (for example CGST -1 at 5, ITC at 1, Freight at 5). **Add Tax Code** asks for those two fields; each row has edit and delete icons; **Upload Excel** and **Download Excel** load or export codes in bulk. Locations and owners show the full path as three dropdowns: **Tax Group**, **Tax Class**, **Tax Code**."
+            "term": "Pager",
+            "definition": "Shows how many locations are listed, for example (1 to 8) of 8, with previous and next arrows."
           },
           {
-            "term": "Tax Class",
-            "definition": "The middle level. A group opens into its classes (for example **Tax → CGST**). Selecting a class shows its tax codes in the table on the right."
+            "term": "Export",
+            "definition": "Opens a menu with **Download Excel** and **Upload Excel**, to take the locations out to a spreadsheet or load many at once."
           },
           {
-            "term": "Where location and tax data comes from and goes",
-            "definition": "**Comes from:** manual entry on each screen, or Excel upload (Locations: **Export → Upload Excel**; Tax Configuration: **Upload Excel**). **Goes to:** **Owners → Link Locations** and the **Tax Codes** tables on Locations and Owners, which are filled from Tax Configuration. To make a new tax code usable, add it under its group and class in Tax Configuration first."
+            "term": "Filters",
+            "definition": "Opens a dialog with searchable dropdowns for **Location ID**, **Location Name**, **Address**, **Zip Code**, **City** and **State**. **Submit** applies, **Clear All** removes the filter.",
+            "images": [
+              {
+                "src": "assets/product/global-data/016.jpg",
+                "caption": "The Filters dialog"
+              }
+            ]
+          },
+          {
+            "term": "Manage Columns",
+            "definition": "Choose which of the columns show and in what order, the same way as on **Owners**."
+          },
+          {
+            "term": "Table columns",
+            "definition": "**Location ID**, **Location Name**, **Address**, **Zip Code**, **City**, **State** and **Actions**. The pencil icon in **Actions** edits the location (the dialog is titled **Edit Location** with its ID); the red bin deletes it."
+          },
+          {
+            "term": "Add Location dialog",
+            "definition": "**Location Name** and **Address** are required; **Zip Code**, **City** and **State** are optional. Under **Tax Codes** (required) click **Add** to get a row with three dropdowns, **Tax Group**, **Tax Class** and **Tax Code**, filled from **Tax Configuration**; a row's delete icon removes it. **Submit** saves."
           }
         ],
         "procedures": [
           {
-            "title": "Add a new company delivery location",
+            "title": "Add a location",
             "steps": [
-              "Go to <strong>Global Data → Locations</strong> tile → <strong>Create</strong>.",
-              "In the <strong>Add Location</strong> dialog, fill in <strong>Location Name</strong>, <strong>Address</strong>, <strong>Zip Code</strong>, <strong>City</strong> and <strong>State</strong>.",
-              "Under <strong>Tax Codes</strong>, click <strong>Add</strong> to attach a <strong>Tax Group</strong>, <strong>Tax Class</strong> and <strong>Tax Code</strong> from Tax Configuration.",
-              "Click <strong>Submit</strong>."
+              "Open **Global Data → Locations** and click **Create**.",
+              "Enter the **Location Name** and **Address**, and the **Zip Code**, **City** and **State** if you have them.",
+              "Under **Tax Codes**, click **Add** and pick the **Tax Group**, **Tax Class** and **Tax Code**. Add more rows if needed.",
+              "Click **Submit**."
             ],
-            "note": "New locations appear in the Link Locations picker of the Create Owner wizard. For bulk setup use Export → Upload Excel on this screen.",
             "images": [
               {
-                "src": "assets/notion/global-data-delivery-locations/001.jpg",
-                "caption": "The Locations screen",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/global-data-delivery-locations/002.jpg",
-                "caption": "Add Location, for setting up delivery locations",
+                "src": "assets/product/global-data/015.jpg",
+                "caption": "The Add Location dialog",
                 "step": 2
               }
             ]
           },
           {
-            "title": "Set up tax groups and tax codes",
+            "title": "Edit or delete a location",
             "steps": [
-              "Go to <strong>Global Data → Tax Configuration</strong> → <strong>Add Tax Group</strong>, enter the <strong>Group</strong> name and click <strong>Submit</strong>.",
-              "Open the group in the left panel and select its class (for example <strong>Tax → CGST</strong>). The table on the right lists that class's Tax Codes.",
-              "Click <strong>Add Tax Code</strong>, enter the <strong>Tax Code</strong> and <strong>Tax Percentage</strong>, and click <strong>Submit</strong>. Repeat for each code (for example CGST, SGST, ITC, Freight).",
-              "Use <strong>Upload Excel</strong> / <strong>Download Excel</strong> to bulk manage tax codes."
+              "Open **Global Data → Locations**.",
+              "In **Actions**, click the pencil to edit or the red bin to delete.",
+              "In **Edit Location**, change the fields or tax code rows and click **Submit**."
+            ]
+          },
+          {
+            "title": "Load locations from Excel",
+            "steps": [
+              "Click **Export** and choose **Upload Excel** (or **Download Excel** to get the current list)."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Tax Configuration",
+        "intro": "<p><strong>Tax Configuration</strong> defines the tax codes used on locations and owners. Codes are organised as <strong>Tax Group</strong> then <strong>Tax Class</strong> then <strong>Tax Code</strong>, and each code has a percentage.</p>",
+        "images": [
+          {
+            "src": "assets/product/global-data/017.jpg",
+            "caption": "The Tax Configuration screen"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Add Tax Group",
+            "definition": "Opens a dialog with one required field, **Group**, to create a new tax group."
+          },
+          {
+            "term": "Group list (left panel)",
+            "definition": "One box per tax group, which expands to show its tax classes. The three-dot menu on a group has **Add**, **Edit** and **Delete**; **Add** opens **Add Tax Class** with one required field, **Class**."
+          },
+          {
+            "term": "Add Tax Code",
+            "definition": "Opens a dialog with **Tax Code** and **Tax Percentage** (both required; the percentage starts at 0).",
+            "images": [
+              {
+                "src": "assets/product/global-data/018.jpg",
+                "caption": "The Add Tax Code dialog"
+              }
+            ]
+          },
+          {
+            "term": "Tax code table",
+            "definition": "Columns **Tax Code**, **Tax Percentage** and **Actions** (pencil to edit, red bin to delete). The two column headers have a filter icon."
+          },
+          {
+            "term": "Upload Excel and Download Excel",
+            "definition": "Green buttons at the top right to load tax codes from a spreadsheet or download the current ones."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Add a tax group, class and code",
+            "steps": [
+              "Open **Global Data → Tax Configuration** and click **Add Tax Group**. Enter the **Group** and click **Submit**.",
+              "Click the three dots on the group, choose **Add**, enter the **Class** and click **Submit**.",
+              "Click **Add Tax Code**, enter the **Tax Code** and **Tax Percentage**, and click **Submit**."
             ],
             "images": [
               {
-                "src": "assets/notion/tax-configuration/001.jpg",
-                "caption": "Tax Configuration screen",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/tax-configuration/002.jpg",
-                "caption": "A tax group with its tax codes",
-                "step": 2
+                "src": "assets/product/global-data/018.jpg",
+                "caption": "The Add Tax Code dialog",
+                "step": 3
               }
             ]
           }
@@ -22989,140 +23197,331 @@ const MODULES = [
       },
       {
         "heading": "Vendors",
-        "intro": "<p>Use this section to keep one company-wide list of vendors and subcontractors. The Super Admin or procurement admin maintains it, and every project shares it.</p><p><strong>Where this data goes:</strong> Procurement's <strong>RFQ</strong> wizard picks vendors from the vendor categories and groups defined here, and the Procurement dashboard's <strong>Vendor Performance Summary</strong> lists the same vendors. A vendor's <strong>Rate Card</strong> rows come from the Material and Equipment lists under <strong>Cost</strong>.</p>",
+        "intro": "<p><strong>Vendors</strong> is the company-wide list of suppliers. Vendors are filed under categories on the left, shown as cards on the right, and each can be marked <strong>Preferred</strong> or <strong>Blocked</strong>. The screen has two tabs, <strong>Vendors</strong> and <strong>Ratings Form</strong>.</p>",
+        "images": [
+          {
+            "src": "assets/product/global-data/019.png",
+            "caption": "The category panel and the toolbar of the Vendors tab"
+          }
+        ],
         "definitions": [
           {
-            "term": "Vendor",
-            "definition": "An external supplier. Each vendor is a card with photo, name, vendor ID and two switches, **Preferred** and **Blocked**. The ⋮ menu gives **Edit** and **Delete**. The **Vendors** screen (tabs **Vendors** and **Ratings Form**) has a left panel with **Create Category** and the category tree (categories with sub-categories), and a toolbar with **Restore Vendors**, **Register Vendor**, a search box, **Add Groups**, **Download Excel**, **Upload Vendors** and **Settings**."
+            "term": "Create Category",
+            "definition": "Opens **Add Category** with one required field, **Category**. New categories appear in the left panel."
           },
           {
-            "term": "Vendor categories",
-            "definition": "A left-panel hierarchy (e.g. Equipment Vendors, Material Vendors, Cement Vendors, General, Eco category) for organizing vendors, expandable into sub-categories via Create Category."
-          },
-          {
-            "term": "Rate Card",
-            "definition": "A vendor's prices, on the vendor's **Rate Card** tab. **Materials** columns: **Material Cost Code**, **Material Name**, **UOM Group**, **UOM**, **Type**, **Rate**. **Equipment** columns: **Equipment Cost Code**, **Equipment Name**, **Type**, **Group**, **UOM Group**, **UOM**, and **Daily**, **Weekly**, **Monthly** rates. **Upload Logs** bulk-loads rates from an Excel template. **Where the rows come from:** the same material and equipment items (for example Cement Bag, Sand, HandSaw, Hammer) that are listed under **Global Data → Cost → Material** and **Equipment**, with UOM Group and UOM from the UOM lists. Add an item there first to price it here."
-          },
-          {
-            "term": "Ratings Form",
-            "definition": "A form-builder for vendor evaluation, combining a Standard field (\"Vendor Rating\") with Custom fields (e.g. Safety, Quality), each configurable with a weight/value, Required toggle, Show on card toggle, and field type."
-          },
-          {
-            "term": "Sub Contractor",
-            "definition": "A subcontracted trade company, kept in its own list (**Global Data → Sub Contractors**) separate from Vendors. The **Create Sub Contractor** dialog asks for **Upload Photo**, **Sub Contractor ID**, **First Name**, **Last Name**, **User Name**, **Phone Number**, **Company Name**, **Email Address**, **Subcontractor Specialists**, **Website**, **Location**, **Experience**, **License Number**, **License Document**, **Insurance Document** and **Resume** (three uploads), **Linked SubContractor Groups**, then a **CERTIFICATIONS** section of upload fields. The screen has **Register Sub Contractor**, a search box, **Add Groups**, grid/list icons, and one card per subcontractor."
-          },
-          {
-            "term": "Sub Contractor Settings (compliance fields)",
-            "definition": "Set in **Global Data → Settings → Sub Contractor Settings** (standard fields plus **Add Field**). The fields you add there become the upload fields in the **CERTIFICATIONS** section of **Create Sub Contractor**. Add a field in Settings and it appears in the dialog. For example, you can add upload fields for licences or certifications such as ISO 9001 or ISO 45001."
-          },
-          {
-            "term": "Owner-style Settings hierarchy",
-            "definition": "The **Settings** button on the Vendors screen opens **Vendor Settings**: \"Divide Vendor into how many levels\" with **Level 1 (Vendor)**, **Level 2 (Category > Vendor)** and **Level 3 (Category > SubCategory > Vendor)**. It works the same way as Owner Settings. The Procurement RFQ wizard asks for **Vendor Category**, **Vendor Sub Category** and **Category Groups**, so vendors need a category to be found there."
-          },
-          {
-            "term": "Preferred / Blocked (vendor status)",
-            "definition": "Two switches on every vendor card, and two check boxes under **Additional Information** on the vendor's **Profile** tab. **Preferred** marks a favoured supplier. **Blocked** is meant to stop a vendor being used."
-          },
-          {
-            "term": "Additional Information (vendor profile)",
-            "definition": "Extra fields under **Additional Information** on a vendor's **Profile** tab: **Vendor Type**, **Vendor Business Size**, **Vendor Minority**, **Notes**, **Warning**, **Extra Copy**, **Sent By**, **Freight Terms**, **GST IN**, **Linked Vendor Groups**, **Domestic**, **Preferred** and **Blocked**. The contact table above it has **Contact Name**, **Contact Number**, **Address**, **Vendor**, **Vendor Title**, **fax**, **Cell**, **Vendor Parish**, **email1**, **email2**, **Req Type**, **PhaseCode**, **Default** and **Actions**. **Add** opens a contact dialog (**Username**, **Phone Number**, **Email**, **Select Sign Label**, **Initials**)."
-          },
-          {
-            "term": "Vendor Groups",
-            "definition": "Opened with **Add Groups**: the **Vendors Groups** dialog has **Group Name**, **Group Description** and **Actions**, with **Add Row**, **Cancel** and **Submit**. Groups are what you pick in a vendor's **Linked Vendor Groups** field and in the **Category Groups** dropdown of the Procurement RFQ wizard."
+            "term": "Category list (left panel)",
+            "definition": "One box per category, which expands to its sub-categories. The three-dot menu has **Add** (a sub-category), **Edit** and **Delete**."
           },
           {
             "term": "Restore Vendors",
-            "definition": "Deleting a vendor is reversible. **Restore Vendors** opens a list of deleted vendors (**Vendor**, **First Name**, **Actions**) with check boxes and a **Submit** button that brings the ticked vendors back."
+            "definition": "Opens a table with **Vendor**, **First Name** and **Actions** and a select-all tick box, to bring back vendors that were deleted. **Submit** restores the ticked ones."
           },
           {
-            "term": "Where vendor data comes from and goes",
-            "definition": "**Comes from:** **Register Vendor** (one at a time), **Upload Vendors** (Excel), or a sync from Viewpoint through Staged Tables. **Goes to:** the Procurement **RFQ** wizard (step 3, Identify Vendors: Vendor Category, Vendor Sub Category, Category Groups, **Add Vendors**), the Procurement dashboard's **Vendor Performance Summary**, and the vendor picker in Direct Purchase Orders (step **Select Vendor**). A new vendor only appears in an RFQ when it has a category and a group that you select there; RFQ's **Register Vendors** button adds to this same list."
+            "term": "Register Vendor",
+            "definition": "Opens the **Vendor Registration** form."
+          },
+          {
+            "term": "Search",
+            "definition": "Type to narrow the vendor cards."
+          },
+          {
+            "term": "Add Groups",
+            "definition": "Opens **Vendors Groups**: a table of **Group Name**, **Group Description** and **Actions** (delete). **Add Row** adds a group, **Submit** saves. Groups can then be chosen in the **Linked Vendor Groups** field of a vendor.",
+            "images": [
+              {
+                "src": "assets/product/global-data/022.png",
+                "caption": "The Vendors Groups dialog"
+              }
+            ]
+          },
+          {
+            "term": "Download Excel and Upload Vendors",
+            "definition": "Green buttons. **Download Excel** exports the vendors; **Upload Vendors** loads vendors from a spreadsheet."
+          },
+          {
+            "term": "Settings",
+            "definition": "Opens **Vendor Settings**: \"Divide Vendor into how many levels\", with **Level 1 (Vendor)**, **Level 2 ( Category > Vendor)** and **Level 3 (Category > SubCategory > Vendor)**."
+          },
+          {
+            "term": "Vendor card",
+            "definition": "Shows the vendor's picture, name and vendor ID, and two switches: **Preferred** and **Blocked**. The three-dot menu has **Edit** and **Delete**. **Edit** opens the vendor's page with the **Profile** and **Rate Card** tabs."
+          },
+          {
+            "term": "Vendor Registration form",
+            "definition": "Required (red star): **Vendor ID**, **Company Name**, **First Name**, **Last Name**, **Username**, **Phone Number**, **Email** and **Initials**. Also on the form: **Upload Profile Picture**; a contact table; **Select Sign Label** and **Enable Security Key Authentication** (a switch to sign with a fingerprint, face ID or hardware key); and the optional **Vendor Title**, **Address**, **Licence Number**, **Fax**, **Scope**, **Website**, **Additional Information**, **Vendor Type**, **Vendor Business Size**, **Vendor Minority**, **Notes**, **Warning**, **Extra Copy**, **Sent By**, **Freight Terms**, **Linked Vendor Groups** and **GST IN**.",
+            "images": [
+              {
+                "src": "assets/product/global-data/020.png",
+                "caption": "The top of the Vendor Registration form"
+              },
+              {
+                "src": "assets/product/global-data/021.png",
+                "caption": "Sign label, security key and further fields"
+              }
+            ]
+          },
+          {
+            "term": "Contact table",
+            "definition": "In the form, **Add** puts a row in a table with the columns **Contact Name**, **Contact Number**, **Address**, **Vendor**, **Vendor Title**, **fax**, **Cell**, **Vendor Parish**, **email1**, **email2**, **Req Type**, **PhaseCode**, **Default** and **Actions**. Use it for the vendor's contact people."
           }
         ],
         "procedures": [
           {
-            "title": "Add a new vendor",
+            "title": "Register a vendor",
             "steps": [
-              "Go to <strong>Global Data → Vendors</strong> tile → <strong>Register Vendor</strong>.",
-              "Upload a profile picture (optional), then fill <strong>Vendor ID</strong>, <strong>Company Name</strong>, <strong>First Name</strong> and <strong>Last Name</strong>. Company Name, First Name and Last Name are marked as required.",
-              "Click <strong>Add</strong> in the contact table to add one or more contact persons with their details.",
-              "Fill <strong>Username</strong>, <strong>Phone Number</strong> (with country code) and <strong>Email</strong>; these three are required.",
-              "Choose a <strong>Select Sign Label</strong> (e.g. Initials) and fill Initials* — used as the digital signature label on approved documents; optionally toggle <strong>Enable Security Key Authentication</strong>.",
-              "Optionally fill <strong>Vendor Title</strong>, <strong>Address</strong>, <strong>Licence Number</strong>, <strong>Fax</strong>, <strong>Scope</strong> and <strong>Website</strong>.",
-              "Under <strong>Additional Information</strong>, optionally set Vendor Type, Vendor Business Size, Vendor Minority, Notes, Warning, Extra Copy, Sent By, Freight Terms, GST IN, and Linked Vendor Groups, and check <strong>Domestic</strong>, <strong>Preferred</strong>, and/or <strong>Blocked</strong> as they apply.",
-              "Click <strong>Submit</strong>. Use <strong>Upload Vendors</strong> (next to Download Excel) on the main Vendors screen to bulk-register vendors from an Excel template instead."
+              "Open **Global Data → Vendors** and click **Register Vendor**.",
+              "Fill in **Vendor ID**, **Company Name**, **First Name** and **Last Name**.",
+              "Add contact people with **Add** in the contact table if needed.",
+              "Fill in **Username**, **Phone Number**, **Email** and **Initials**, and any optional fields.",
+              "Click **Submit**. **Cancel** closes the form without saving."
             ],
             "images": [
               {
-                "src": "assets/notion/global-data-vendor-creation/003.jpg",
-                "caption": "Register Vendor",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/global-data-vendor-creation/004.jpg",
-                "caption": "A vendor profile where contact details are added",
-                "step": 3
-              }
-            ],
-            "note": "Put the vendor in a category (left panel) and link it to a vendor group so it can be found in the Procurement RFQ wizard."
-          },
-          {
-            "title": "Set up a vendor's rate card",
-            "steps": [
-              "Open the vendor's card from the <strong>Vendors</strong> tile.",
-              "Go to the <strong>Rate Card</strong> tab and choose <strong>Materials</strong> or <strong>Equipment</strong>. The rows listed are the company's material or equipment items from <strong>Global Data → Cost</strong>.",
-              "Click <strong>Upload Logs</strong>, download the Excel template, fill in Daily/Weekly/Monthly rates per item, and upload the completed file — or edit the <strong>Rate</strong> field inline per row."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/global-data-vendors-rate-card/002.jpg",
-                "caption": "Downloading the Excel template from the dialog",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/global-data-vendors-rate-card/003.jpg",
-                "caption": "Uploading the filled template to update Daily, Weekly and Monthly rates",
-                "step": 3
+                "src": "assets/product/global-data/020.png",
+                "caption": "The Vendor Registration form",
+                "step": 2
               }
             ]
           },
           {
-            "title": "Configure the vendor rating form",
+            "title": "Add a vendor category",
             "steps": [
-              "Go to the <strong>Vendors</strong> tile → <strong>Ratings Form</strong> tab.",
-              "Click <strong>Add field</strong> to add a new custom rating criterion (for example \"Safety\").",
-              "Switch <strong>Required</strong> and/or <strong>Show on card</strong> on as needed, and choose the type with <strong>CHOOSE TYPE</strong> (for example Rating).",
-              "Click <strong>Save Changes</strong>."
-            ],
-            "note": "The form has a Standard section (with Reset) and a Custom section. The same form applies to every vendor."
-          },
-          {
-            "title": "Register a subcontractor",
-            "steps": [
-              "Go to <strong>Global Data → Sub Contractors</strong> tile → <strong>Register Sub Contractor</strong>.",
-              "Fill in the <strong>Create Sub Contractor</strong> dialog: ID, name, user name, phone, company name, email, specialists, website, location, experience, licence number, the licence, insurance and resume uploads, and <strong>Linked SubContractor Groups</strong>.",
-              "Upload any files in the <strong>CERTIFICATIONS</strong> section, then click <strong>Submit</strong>.",
-              "Use <strong>Add Groups</strong> on the list screen to organise subcontractors into groups."
+              "Click **Create Category**, enter the **Category** and click **Submit**.",
+              "To add a sub-category, click the three dots on the category and choose **Add**."
             ]
           },
           {
-            "title": "Track vendor/subcontractor certifications (ISO, safety licenses)",
+            "title": "Mark a vendor Preferred or Blocked",
             "steps": [
-              "Go to <strong>Global Data → Settings → Sub Contractor Settings</strong> and use <strong>Add Field</strong> to define each certification (for example ISO 9001) as an <strong>Attachment</strong> field. Tick <strong>Required</strong> if it must be uploaded.",
-              "Open <strong>Global Data → Sub Contractors → Register Sub Contractor</strong>: the fields you added show under <strong>CERTIFICATIONS</strong>, ready for uploads.",
-              "For company-wide compliance items, use <strong>Global Data → Compliance Hub → Compliance Directory → Create</strong>, then track status under <strong>My Company Compliance</strong>."
+              "Find the vendor's card.",
+              "Switch **Preferred** or **Blocked** on or off."
+            ]
+          },
+          {
+            "title": "Create a vendor group",
+            "steps": [
+              "Click **Add Groups**.",
+              "Click **Add Row** and enter the **Group Name** and **Group Description**.",
+              "Click **Submit**."
+            ]
+          },
+          {
+            "title": "Bring back a deleted vendor",
+            "steps": [
+              "Click **Restore Vendors**.",
+              "Tick the vendor in the table.",
+              "Click **Submit**."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Rate Card",
+        "intro": "<p>The <strong>Rate Card</strong> tab sits on a vendor's own page (open it with <strong>Edit</strong> on the vendor card, next to the <strong>Profile</strong> tab). It lists the materials and equipment, and the rate this vendor charges for each.</p>",
+        "images": [
+          {
+            "src": "assets/product/global-data/023.jpg",
+            "caption": "The Materials rate card of a vendor"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Profile",
+            "definition": "The first tab of the vendor page: the same fields as **Vendor Registration**, filled in, with **Submit** to save changes."
+          },
+          {
+            "term": "Materials",
+            "definition": "Columns **S.No.**, **Material Cost Code**, **Material Name**, **UOM Group**, **UOM**, **Type** and **Rate**. Type the vendor's price for the material in the **Rate** box (shown in rupees)."
+          },
+          {
+            "term": "Equipment",
+            "definition": "Columns **S.No.**, **Equipment Cost Code**, **Equipment Name**, **Type**, **Group**, **UOM Group**, **UOM**, and the rates **Daily**, **Weekly** and **Monthly**."
+          },
+          {
+            "term": "Upload Logs",
+            "definition": "Opens **Upload Excel**: **Click here** downloads the template, **Upload** sends your filled-in file, **Cancel** closes the dialog.",
+            "images": [
+              {
+                "src": "assets/product/global-data/024.jpg",
+                "caption": "The Upload Excel dialog"
+              }
             ]
           }
         ],
-        "images": [
+        "procedures": [
           {
-            "src": "assets/notion/global-data-vendor-creation/001.jpg",
-            "caption": "Vendors: categories on the left and vendor profiles"
+            "title": "Open a vendor's rate card",
+            "steps": [
+              "Open **Global Data → Vendors**.",
+              "Click the three dots on the vendor's card and choose **Edit**.",
+              "Click the **Rate Card** tab, then **Materials** or **Equipment**."
+            ]
           },
           {
-            "src": "assets/notion/global-data-vendor-creation/002.jpg",
-            "caption": "Vendor settings for up to three levels of categories"
+            "title": "Load rates from Excel",
+            "steps": [
+              "On the **Rate Card** tab, click **Upload Logs**.",
+              "Click **Click here** to download the template and fill it in.",
+              "Click **Upload** and choose your file."
+            ],
+            "images": [
+              {
+                "src": "assets/product/global-data/024.jpg",
+                "caption": "The Upload Excel dialog",
+                "step": 2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Ratings Form",
+        "intro": "<p>The <strong>Ratings Form</strong> tab on the Vendors screen sets up the rating fields used to score vendors: one standard <strong>Vendor Rating</strong> plus your own custom fields.</p>",
+        "images": [
+          {
+            "src": "assets/product/global-data/025.jpg",
+            "caption": "The Ratings Form tab"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Save Changes",
+            "definition": "Saves the form at the top right."
+          },
+          {
+            "term": "Standard",
+            "definition": "The built-in **Vendor Rating** field with a number box (5 here) and a **Reset** button."
+          },
+          {
+            "term": "Custom",
+            "definition": "Your own rating fields, for example **Safety** and **Quality**, each with a number box (10 here). Drag the dotted handle at the left to reorder."
+          },
+          {
+            "term": "Required",
+            "definition": "Switch on a custom field. When on, the field must be filled in."
+          },
+          {
+            "term": "Show on card",
+            "definition": "Switch on a custom field. When on, the field is shown on the vendor card."
+          },
+          {
+            "term": "Choose Type",
+            "definition": "Dropdown of the field's type, set to **Rating** here. The list also offers types such as Number, Paragraph, Picture, Progress Bar and Radio."
+          },
+          {
+            "term": "Field icons",
+            "definition": "Next to the type: the circle with a plus adds a field, the copy icon duplicates the field, the red bin deletes it."
+          },
+          {
+            "term": "Add field",
+            "definition": "Button at the bottom of the form that adds a new custom field."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Add a rating field",
+            "steps": [
+              "Open **Global Data → Vendors** and click the **Ratings Form** tab.",
+              "Click **Add field** under **Custom**.",
+              "Name the field, set its **Choose Type**, and set **Required** and **Show on card** as you need.",
+              "Click **Save Changes**."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Sub Contractors",
+        "intro": "<p><strong>Sub Contractors</strong> (its own tile in Global Data) is a separate list from Vendors, for companies that carry out subcontracted work. Each is a card with a picture, name and ID.</p>",
+        "images": [
+          {
+            "src": "assets/product/global-data/026.png",
+            "caption": "The Create Sub Contractor dialog"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Register Sub Contractor",
+            "definition": "Opens the **Create Sub Contractor** dialog."
+          },
+          {
+            "term": "Search by ID/Name",
+            "definition": "Type to narrow the list."
+          },
+          {
+            "term": "Add Groups",
+            "definition": "Opens the dialog for subcontractor groups, which can then be picked in **Linked SubContractor Groups**."
+          },
+          {
+            "term": "Card and list icons",
+            "definition": "At the top right. They switch the subcontractors between cards and a list."
+          },
+          {
+            "term": "Sub contractor card",
+            "definition": "Shows the picture, name and ID. The three-dot menu has **Edit** and **Delete**."
+          },
+          {
+            "term": "Create Sub Contractor dialog",
+            "definition": "Required (red star): **Sub Contractor ID**, **First Name**, **Last Name**, **User Name**, **Phone Number**, **Company Name**, **Email Address**, **Subcontractor Specialists**, **Website**, **Location**, **Experience**, **License Number** and **License Document**. Optional: **Upload Photo**, **Insurance Document**, **Resume** and **Linked SubContractor Groups**."
+          },
+          {
+            "term": "CERTIFICATIONS",
+            "definition": "A list of certificates, each with **Choose files to upload**: CIDB Certification, Malaysian Green Building Index (GBI) Certification, MOF License, SPKK, ISO 9001, ISO 45001, ISO 14001, SHASSIC and the Electrical Contractor License (Suruhanjaya Tenaga). The first five are marked required."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Register a subcontractor",
+            "steps": [
+              "Open **Global Data → Sub Contractors** and click **Register Sub Contractor**.",
+              "Fill in the required fields, and upload the **License Document**.",
+              "Upload the required certificates under **CERTIFICATIONS**.",
+              "Click **Submit**."
+            ],
+            "images": [
+              {
+                "src": "assets/product/global-data/026.png",
+                "caption": "The Create Sub Contractor dialog",
+                "step": 2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Business Units",
+        "intro": "<p><strong>Business Units</strong> (its own tile in Global Data) is the list of business units of your company, each with a code and a description.</p>",
+        "images": [
+          {
+            "src": "assets/product/global-data/005.jpg",
+            "caption": "Business Unit with a new row being added"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Add",
+            "definition": "Adds an empty row to the table. The row is edited in place; no dialog opens."
+          },
+          {
+            "term": "Table columns",
+            "definition": "**Serial Number**, **Code**, **Description** and **Actions**. **No Data Available** is shown while the list is empty."
+          },
+          {
+            "term": "Code and Description",
+            "definition": "In a new row, **Code** is a box to type into; **Description** starts as N/A."
+          },
+          {
+            "term": "Actions",
+            "definition": "A red bin deletes the row; a coloured dot sits next to it."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Add a business unit",
+            "steps": [
+              "Open **Global Data → Business Units** and click **Add**.",
+              "Type the **Code** and the **Description** in the new row."
+            ]
           }
         ]
       },
@@ -24667,10 +25066,16 @@ const MODULES = [
     ],
     "sections": [
       "Overview",
-      "Company",
+      "Company Details",
+      "Subsidiary",
       "Owners",
       "Locations",
+      "Tax Configuration",
       "Vendors",
+      "Rate Card",
+      "Ratings Form",
+      "Sub Contractors",
+      "Business Units",
       "Work Order Management",
       "Construction Types",
       "Users & Permissions",
