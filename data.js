@@ -34310,170 +34310,515 @@ const MODULES = [
     "narrative": [
       {
         "heading": "My Dashboard",
-        "intro": "<p>My Dashboard gives a finance lead or <strong>Module Manager</strong> a quick read on company spend: how much has been claimed, approved, rejected, and what is still waiting. The headline <strong>Total Forms</strong> card and four KPI cards (<strong>Expenses Created</strong>, <strong>Expenses Approved</strong>, <strong>Expenses Rejected</strong>, <strong>Expenses In Progress</strong>) each show an amount and a form count, for the time range you pick: Daily, Weekly, Monthly, Yearly or All.</p><p>Below them, charts break spend down by expense category and by submitter, and the <strong>Forms Exceeding Threshold</strong> list flags claims above the limit set for their category. That list is where most reviewers start the day.</p>",
+        "intro": "<p>The <strong>My Dashboard</strong> tab of Expense Tracker summarises expense forms in totals and charts. Anyone who files or approves expenses uses it to see how much has been created, approved, rejected or is still moving through approval.</p>",
+        "images": [
+          {
+            "src": "assets/product/expense-tracker/002.jpg",
+            "caption": "My Dashboard"
+          }
+        ],
         "definitions": [
           {
+            "term": "Total Forms",
+            "definition": "The number of expense forms in the chosen time range, with a green note showing how many forms and how much money were added yesterday."
+          },
+          {
+            "term": "Daily, Weekly, Monthly, Yearly, All",
+            "definition": "Switch the time range used by the four tiles under Total Forms."
+          },
+          {
+            "term": "Expenses Created",
+            "definition": "Tile with the total amount and the number of forms created in the time range."
+          },
+          {
+            "term": "Expenses Approved",
+            "definition": "Tile with the total amount and the number of forms that finished approval in the time range."
+          },
+          {
+            "term": "Expenses Rejected",
+            "definition": "Tile with the total amount and the number of forms rejected in the time range."
+          },
+          {
             "term": "Expenses In Progress",
-            "definition": "Forms submitted but not fully approved. It combines Ready for Approval and In Progress."
+            "definition": "Tile with the total amount and the number of forms still waiting for approval in the time range."
+          },
+          {
+            "term": "Spending Breakdown with Expense Types",
+            "definition": "Bar chart of the amount spent per expense type. The drop-down above it picks which expense types to include, the date box limits the chart to a period, and the download icon saves the chart."
+          },
+          {
+            "term": "Threshold-Breaking Expense Types",
+            "definition": "Bar chart that puts the number of forms (red) next to the threshold (purple) for each expense type, so you can see which types exceed their threshold. It has the same expense type drop-down, date box and download icon."
+          },
+          {
+            "term": "Expenses by Individuals",
+            "definition": "Bar chart of the total amount (bars) and the number of forms (line) for each person. The drop-down above it picks the people, the date box limits the period, and the download icon saves the chart."
           },
           {
             "term": "Forms Exceeding Threshold",
-            "definition": "A list on My Dashboard of forms (ID, period, amount) whose expense-type totals are above the threshold shown for that category on the form, for example **Indirect Expenses (Threshold: ₹0.00)**. **See All** opens the full list. Where an expense type's threshold is set was not found: the **Create / Update Expense Type** dialog only asks for a **Name*** and **Description**."
+            "definition": "List of forms with their ID, period and amount whose total is over a threshold. **See All** opens the full list."
+          },
+          {
+            "term": "Set as default tab",
+            "definition": "The three dots next to the **My Dashboard** tab hold this option, which makes the tab you are on the one Expense Tracker opens first."
           }
         ],
         "procedures": []
       },
       {
         "heading": "Expense Forms",
-        "intro": "<p>Expense Forms is where site staff, engineers and office employees (<strong>End Users</strong>) claim back what they spent on the job, such as travel, hotels and meals, so the costs are recorded against the right category instead of arriving as loose receipts. It opens on the list of forms as cards or a table, with status chips across the top: Ready for Approval, In Progress, Approved and Rejected.</p><p>A form is built from a template set up by the <strong>Module Admin</strong>. The submitter adds one section per <strong>Expense Type</strong> (line items with receipts), fills in the template's Details grids, and picks an approval workflow. Approvers then approve or reject level by level, straight from the list. Each approval is recorded as a digital signature, and <strong>See History</strong> shows the full trail.</p>",
+        "intro": "<p>The <strong>Expense Forms</strong> tab lists every expense form, shows its status, and is where you create a new form or approve and reject forms. People who raise expenses and the approvers in the approval workflow both work here.</p>",
+        "images": [
+          {
+            "src": "assets/product/expense-tracker/001.jpg",
+            "caption": "The Expense Forms tab in card view"
+          }
+        ],
         "definitions": [
           {
-            "term": "Workflow Level",
-            "definition": "How far a form has got through approval, shown as approved levels out of total levels, e.g. 1/2."
+            "term": "Form template drop-down",
+            "definition": "At the top left. Picks which expense form template the list and the **Create** button use (for example the Travel and Business Expense Report). Templates are set up in **Settings → Expense Form**."
           },
           {
-            "term": "Expense Type section",
-            "definition": "A block of dated line items for one category (for example **Indirect Expenses**), with a heading that shows the category's threshold, a **Delete Expense Type** link, and a table with **S.No**, **Date***, **Description**, **Attachments/Missing Receipts**, **Total*** and **Actions**. The section footer shows the section total, and an **add** button adds a row. Row actions: **Map** (links the line to an Opportunity or Proposal), **Attachments**, **Clone Row** and **Delete**."
+            "term": "Create",
+            "definition": "Opens a blank expense form of the template shown in the drop-down."
           },
           {
-            "term": "Details grids",
-            "definition": "Template-driven tables such as Travel Details, Accommodation Details, Meal and Miscellaneous Expenses, and Total Expense Summary."
+            "term": "Status chips",
+            "definition": "The coloured chips under the toolbar count the forms by status: **Ready for Approval**, **In Progress**, **Approved** and **Rejected**."
           },
           {
-            "term": "Map (Linking)",
-            "definition": "The **Map** icon on an expense line opens a **Linking** dialog with a **Modules** drop-down offering **Opportunity** and **Proposals**. Choosing **Opportunity** shows a **Search for Opportunities** box, then **Submit**, so a cost can be tied to the opportunity it was spent on. The Opportunities come from the Opportunity module."
+            "term": "Expense form card",
+            "definition": "One card per form. It shows a status tag, the form ID, the **Name** of the person who raised it, the **Period** it covers, the **Total Amount**, the **Workflow Level** (for example 1/2 means level 1 of 2 approval levels has signed) and when it was last modified. The arrow at the bottom right opens the form."
           },
           {
-            "term": "Where this data comes from",
-            "definition": "**Name**: Arena users, defaulting to you, so a claim can be raised for someone else if your group has **Expense Form - User Name** edit permission. **Header block** (Address, Phone, Zip Code): the company details in **Global Data → Company**. **Select Expense Type**: the eleven types in **Settings → Expense Type** (Capital, Direct, Financial, Fixed, Indirect, Miscellaneous, Non-Operating, Operating, Personal Expenses, Phase Code and Variable Expenses). **Details grids and extra fields**: the form template chosen in **Settings → Expense Form**. **Select Approval Workflow**: the named workflows in **Settings → Approval WorkFlow**. **Form ID and Invoice ID**: the numbering in **Settings → ID Settings**. The Expense Forms list is the same whichever project you have open; it is not filtered by project."
+            "term": "Approve and Reject",
+            "definition": "Buttons shown on a card that is waiting for your approval. **Approve** moves the form to the next workflow level, or to **Approved** at the last level. **Reject** sends it back."
           },
           {
-            "term": "Unsaved changes prompt",
-            "definition": "Leaving a form you have edited shows \"You have unsaved changes. Would you like to save before proceeding?\" with **Cancel**, **Don't Save** and **Save As Draft**."
+            "term": "Card menu",
+            "definition": "The three dots on a card open **See History**, which lists each step of the form with date and time, and **Delete**."
           },
           {
-            "term": "Download, Share and Print",
-            "definition": "On an existing form, the top-right buttons **Download**, **Share** and **Print** produce or send a copy of the form. The list toolbar has **Export** (the list), **Filters**, a list/card switch and a save-view button; in table view **Manage Columns** chooses the columns (**Expense ID**, **Workflow Level**, **Name**, **Period**, **Total Amount**, **Status**, **Actions**), and each row has **history** and **delete** icons."
+            "term": "Pagination and Export",
+            "definition": "(1 to 7) of 7 shows which forms are on the page, with arrows to move between pages. **Export** downloads the list."
+          },
+          {
+            "term": "Filters",
+            "definition": "Opens a dialog with **Name**, **Period**, **Total Range** (a minimum and maximum amount), **Status**, **Expense Form Template** and **Expense Type**. **Submit** applies them, **Clear Filters** removes them and **Save Filters** keeps them for next time."
+          },
+          {
+            "term": "View buttons",
+            "definition": "Switch between a list (table) and cards. The save icon next to them keeps the chosen view."
+          },
+          {
+            "term": "Settings",
+            "definition": "The button at the top right of every tab opens Expense Tracker **Settings**."
           }
         ],
         "procedures": [
           {
-            "title": "Submit an expense claim",
+            "title": "Create an expense form",
             "steps": [
-              "Go to <strong>Expense Tracker → Expense Forms</strong> and click <strong>+ Create</strong>.",
-              "Check <strong>Name*</strong> and set the <strong>Period*</strong> from and to dates.",
-              "Choose a category in <strong>Select Expense Type</strong>, click <strong>+ Add Expense Type</strong>, and add a row per expense with its Date, Description, Total and receipt.",
-              "Fill in the Details grids that apply and check the <strong>Total Expense Summary</strong>.",
-              "Pick the <strong>Approval Workflow</strong> and click <strong>Submit For Approval</strong> (or <strong>Save as Draft</strong>)."
+              "Open **Expense Forms**, choose the template in the drop-down and click **Create**.",
+              "Check **Name** (it starts with your own name) and pick the **Period** with the two date boxes. The period must be set before expenses can be added.",
+              "Choose an expense type in **Select Expense Type** and click **Add Expense Type**, then fill in the rows for it.",
+              "Open **Details** to fill in the template tables, for example the travel, accommodation and meal tables of the travel report. Use the plus icon under a table to add a row and the bin icon to remove one.",
+              "Pick an **Approval Workflow** at the bottom, then click **Save as Draft** to keep working later or **Submit For Approval** to send it to the first approver."
+            ],
+            "images": [
+              {
+                "src": "assets/product/expense-tracker/007.jpg",
+                "caption": "A new form, before a period is chosen",
+                "step": 2
+              },
+              {
+                "src": "assets/product/expense-tracker/008.jpg",
+                "caption": "The template tables under Details",
+                "step": 4
+              }
             ]
           },
           {
-            "title": "Approve or reject a form",
+            "title": "Open and review a form",
             "steps": [
-              "Open <strong>Expense Forms</strong>. Forms waiting on your level show <strong>Approve</strong> and <strong>Reject</strong> buttons.",
-              "Click <strong>Approve</strong> to sign off your level, or <strong>Reject</strong> and enter the reason.",
-              "Use <strong>See History</strong> from the form's menu to check who approved each level and when."
+              "Open **Expense Forms** and click the arrow on a card.",
+              "Read the form: the header shows the form title with its number, **Invoice ID**, **Name** and **Period**. Each expense type has its own table with **Date**, **Description**, **Attachments/Missing Receipts** (click **View**) and **Total**.",
+              "Click **Download**, **Share** or **Print** at the top right to get a copy of the form.",
+              "To link a line to a record in another module, click the link icon in its **Actions** column. A **Linking** dialog opens where you choose a module and click **Submit**; click **Cancel** to close it without linking."
             ],
-            "note": "A rejection raises an Issue and resets the workflow, so the submitter fixes the form and submits it again."
+            "images": [
+              {
+                "src": "assets/product/expense-tracker/009.jpg",
+                "caption": "An approved form"
+              }
+            ]
+          },
+          {
+            "title": "Check the history of a form",
+            "steps": [
+              "Open **Expense Forms** and click the three dots on the card.",
+              "Click **See History** to see each step with who did it, the date and the time."
+            ]
           }
         ]
       },
       {
         "heading": "Processed Forms",
-        "intro": "<p>Processed Forms is the hand-off from approvals to accounting, usually run by finance or a <strong>Module Manager</strong>. <strong>Approved Items</strong> lists fully approved forms that haven't been exported yet. Select them and click <strong>Convert to Batch</strong> to group them into a batch.</p><p><strong>Batch Items</strong> lists each batch with its generated date, total amount and item count, ready to download as a CSV in accounts-payable import format (AP header and AP line fields: Vendor, Invoice ID, Job, Phase, General Ledger Account, Cost Code, Work Order and more). That layout matches Trimble Viewpoint's (Vista's) AP batch import, so approved expenses go into accounting without being keyed in again. Use <strong>CSV Download Filters</strong> to choose which fields go into the file.</p>",
+        "intro": "<p>The <strong>Processed Forms</strong> tab holds forms that have finished approval. Finance users collect approved lines here and group them into batches for payment or export.</p>",
+        "images": [
+          {
+            "src": "assets/product/expense-tracker/003.jpg",
+            "caption": "Approved Items with one form expanded"
+          }
+        ],
         "definitions": [
           {
             "term": "Approved Items",
-            "definition": "Fully approved expense forms that haven't been batched yet."
+            "definition": "Sub-tab listing approved forms as rows with a tick box, the form name, who raised it and its period. Click the arrow at the right of a row to open its lines."
+          },
+          {
+            "term": "Expanded form",
+            "definition": "Shows each expense type as a table with **Date**, **Description**, **Attachments** (**View**), **Receipt** (**Form** opens the source form), **Total** and **Batch Name** (empty until the line is in a batch), with the total of the type and the **Total Expense** of the form below."
+          },
+          {
+            "term": "Row menu",
+            "definition": "The three dots on a form row give **See History** (the approval steps with date and time), **Download** and **Print**."
+          },
+          {
+            "term": "Convert to Batch",
+            "definition": "Groups the lines you have ticked into a batch. Tick the lines first; the batch then appears under **Batch Items**."
+          },
+          {
+            "term": "Date range",
+            "definition": "The Start date - End date box narrows the forms to a period."
+          },
+          {
+            "term": "Filters",
+            "definition": "Opens a dialog with **Period**, **Total Range**, **Expense ID**, **Expense Type** and **Created By**. **Submit** applies them, **Clear Filters** removes them and **Save Filters** keeps them.",
+            "images": [
+              {
+                "src": "assets/product/expense-tracker/004.jpg",
+                "caption": "The Filters dialog"
+              }
+            ]
           },
           {
             "term": "Batch Items",
-            "definition": "Groups of approved forms converted into one exportable accounts-payable batch."
+            "definition": "Sub-tab with a table of batches: **Name**, **Generated Date**, **Total Amount**, **Number of List Items** and **Actions** (a download icon for that batch). The header icons filter each column.",
+            "images": [
+              {
+                "src": "assets/product/expense-tracker/005.jpg",
+                "caption": "Batch Items"
+              }
+            ]
           },
           {
-            "term": "APHB / APLB fields",
-            "definition": "The AP header batch and AP line batch columns in the CSV export, chosen in CSV Download Filters."
+            "term": "Manage Columns",
+            "definition": "On **Batch Items**. Opens a dialog with tick boxes for each column and a **Column Arrangement** list you can drag to reorder. **Reset to Default**, **Cancel** and **Apply** close it."
           },
           {
-            "term": "Where processed form data comes from and goes",
-            "definition": "**Comes from:** forms that reached **Approved** (all levels signed) and are not yet in a batch. **Goes to:** **Batch Items**, one row per batch (**Name**, **Generated Date**, **Total Amount**, **Number of List Items**, download icon), and then to the CSV you upload to accounting. The **CSV Download Filters** columns (APHB: Company, Month, Form created date, Invoice Date, Vendor, AP Reference, Invoice ID, Description, Invoice Total, Attachment File; APLB: Date of expense, AP Line, Line Type, Description, Gross amount, Job, Phase, General Ledger Account, Equipment, Cost Code, Work Order, Work Order Item, RecKey, Detail Record Key) choose what the file contains. How Job, Phase, GL Account and Cost Code get filled for an expense line was not found on the form; check the downloaded file before importing."
+            "term": "List and card view",
+            "definition": "The two icons next to **Manage Columns** switch the batch table between list and card view; the save icon keeps the choice."
           }
         ],
         "procedures": [
           {
-            "title": "Export approved expenses to accounting",
+            "title": "Make a batch of approved lines",
             "steps": [
-              "Go to <strong>Expense Tracker → Processed Forms → Approved Items</strong>.",
-              "Tick the approved forms to include and click <strong>Convert to Batch</strong>.",
-              "Optionally open <strong>CSV Download Filters</strong> to choose the AP header and line fields.",
-              "Open <strong>Batch Items</strong> and download the batch CSV for your accounting system."
+              "Open **Processed Forms** and stay on **Approved Items**.",
+              "Click the arrow on a form row to open its lines.",
+              "Tick the lines to include.",
+              "Click **Convert to Batch**. The batch shows under **Batch Items**."
             ]
           }
         ]
       },
       {
         "heading": "Issues",
-        "intro": "<p>An Issue is raised automatically whenever an approver rejects an expense form. It captures the form ID, the level it was rejected at, who raised it and when, and the approver's comment, so the reason for the rejection doesn't get lost in email.</p><p>Each Issue can be given an owner (<strong>Assign To</strong>), a <strong>Due Date</strong> and a <strong>Chat</strong> thread for back-and-forth with the submitter. The summary strip shows Total Issues, Issues Closed and Issues Rejected. The fix itself happens on the form: the submitter corrects it and submits it again, which restarts approval from level 1.</p>",
+        "intro": "<p>The <strong>Issues</strong> tab lists issues that approvers raised on expense forms. It shows who raised each issue, on which form, who it is assigned to and whether it is closed.</p>",
+        "images": [
+          {
+            "src": "assets/product/expense-tracker/006.jpg",
+            "caption": "The Issues tab"
+          }
+        ],
         "definitions": [
           {
-            "term": "Issue",
-            "definition": "An automatic record of a rejection, with the approver's comment, level, assignee, due date and chat."
+            "term": "Issue counts",
+            "definition": "At the top left: total issues, how many are closed and how many were rejected."
           },
           {
-            "term": "Where issue data comes from",
-            "definition": "An issue is created by the system when an approver rejects a form at a level: the **ID** is the expense form ID, the **Level** is where it was rejected and **Comments** is the rejection reason the approver typed. **Assign To** lists users and **Due Date** is a date you set; **Chat** and **See History** track the conversation and the steps (created, rejected, issue raised, \"Approval workflow has been set to initial\")."
+            "term": "Search By Issue No.",
+            "definition": "Type an issue number to find it."
+          },
+          {
+            "term": "Filters",
+            "definition": "Opens a dialog with **Log ID**, **Raised On** and **Raised By**; **Clear & Apply** and **Apply** at the bottom."
+          },
+          {
+            "term": "Export",
+            "definition": "Downloads the issues list."
+          },
+          {
+            "term": "Table columns",
+            "definition": "**Issue No.**, **ID** (the expense form), **Level** (the workflow level at which the issue was raised), **Raised on Date**, **Raised on Time**, **Raised by**, **Image**, **Comments** (the reason given), **Assign To** (a drop-down to pick who handles it), **Due Date**, **Chat** and **See History**."
+          },
+          {
+            "term": "Chat and See History",
+            "definition": "Icons at the end of each row. **Chat** opens a conversation about the issue and **See History** lists its steps."
+          },
+          {
+            "term": "List and card view",
+            "definition": "The two icons at the top right switch between a table and cards."
           }
         ],
         "procedures": []
       },
       {
-        "heading": "Settings",
-        "intro": "<p>Everything about how expenses work is set in the module's own <strong>Settings</strong> (gear icon in Expense Tracker), not in Global Data. This is <strong>Module Admin</strong> work, usually done once by finance: which categories exist, what the form looks like, who approves at each level, how IDs are numbered, and who may do what.</p>",
+        "heading": "Expense Form Settings",
+        "intro": "<p>The <strong>Expense Form</strong> page of Expense Tracker <strong>Settings</strong> holds the expense form templates. Open it with the <strong>Settings</strong> button at the top right of any tab. The left menu lists all settings pages: <strong>Expense Form</strong>, <strong>Expense Type</strong>, <strong>Approval WorkFlow</strong>, <strong>ID Settings</strong> and <strong>Users and Permissions</strong>.</p>",
+        "images": [
+          {
+            "src": "assets/product/expense-tracker/010.jpg",
+            "caption": "Expense Form templates in Settings"
+          }
+        ],
         "definitions": [
           {
-            "term": "Expense Form",
-            "definition": "The template library (e.g. Travel and Business Expense Report, Project Expense Tracking Form, General Expense Reimbursement Form). Use Create Template or Edit."
+            "term": "Template cards",
+            "definition": "One card per template, with its name and description. The filled radio button marks the template that **Create** on **Expense Forms** uses by default."
           },
           {
-            "term": "Expense Type",
-            "definition": "The category master shown in Select Expense Type and the dashboard filters. Use Create Expense Type (Name, Description)."
+            "term": "Create Template",
+            "definition": "Opens a dialog with **Expense Form Name** (required) and **Expense Form Description** (with bold, italic, underline, link, heading and list formatting). **Submit** adds the template, **Cancel** closes it.",
+            "images": [
+              {
+                "src": "assets/product/expense-tracker/011.jpg",
+                "caption": "The Create Template dialog"
+              }
+            ]
           },
           {
-            "term": "Approval WorkFlow",
-            "definition": "Named workflows made of ordered levels. Each level has approvers and a type: All must approve, or Any one can approve."
+            "term": "Search by Name",
+            "definition": "Narrows the template cards by name."
           },
           {
-            "term": "ID Settings",
-            "definition": "System Default or Custom numbering for Expense Form IDs and Invoice IDs."
+            "term": "Template menu",
+            "definition": "The three dots on a card give **Edit**, which opens **Update Template** with the name and description, and **Delete**."
           },
           {
-            "term": "Users and Permissions",
-            "definition": "User groups with a View, Create, Edit, Delete, Admin, Download and Print matrix. Includes whether a user may file on someone else's behalf (Expense Form - User Name)."
+            "term": "Collapse arrow",
+            "definition": "The round arrow between the left menu and the page hides or shows the left menu."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Add an expense form template",
+            "steps": [
+              "Open **Settings** and choose **Expense Form**.",
+              "Click **Create Template**.",
+              "Enter the **Expense Form Name** and, if you wish, a description.",
+              "Click **Submit**. Click **Cancel** to close without adding."
+            ],
+            "images": [
+              {
+                "src": "assets/product/expense-tracker/011.jpg",
+                "caption": "Create Template",
+                "step": 3
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Expense Type",
+        "intro": "<p>The <strong>Expense Type</strong> page of Settings holds the categories that expense lines are filed under, such as Capital Expenses or Travel. The types you define here are the ones offered in <strong>Select Expense Type</strong> on an expense form and in the dashboard charts.</p>",
+        "images": [
+          {
+            "src": "assets/product/expense-tracker/012.jpg",
+            "caption": "Expense Types in Settings"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Expense type cards",
+            "definition": "One card per type with its name and description. The page lists Capital Expenses, Direct Expenses, Financial Expenses, Fixed Expenses, Indirect Expenses, Miscellaneous Expenses, Non-Operating Expenses, Operating Expenses, Personal Expenses, Phase Code and Variable Expenses."
           },
           {
-            "term": "Where settings lists come from",
-            "definition": "**Expense Type** feeds the type drop-down on forms and the dashboard filters. **Approval WorkFlow → Create Level → Select Approvers** lists all users with **Select All**. **Expense Form** templates decide the fields and grids on the form. **ID Settings → Custom** offers **Created By Initials First Name**, **Created By Initials Last Name**, **Created By Employee ID**, **Date**, **Month**, **Year** and **Serial No./ID**, with an **ID Separator** of /, - or None and a live **Example Format**. **Users and Permissions** groups control who sees each screen."
+            "term": "Create Expense Type",
+            "definition": "Opens a dialog with **Name** (required) and **Description**. **Submit** adds the type, **Cancel** closes it."
           },
           {
-            "term": "Template editor",
-            "definition": "Opening a template in **Settings → Expense Form** shows **Show Header for Form** and **Show Header for PDF**, the header fields (Address, Zip Code, City, State, PhoneNo), **Table Standard Fields → Basic Details** (Name and Period, with **Add field**), a **Form Description**, and **Configurable Fields** in sections (**Add field**, **Add section**; each field has **Required**, **CHOOSE TYPE** and copy/delete). **Create Template** asks for an **Expense Form Name*** and **Expense Form Description**. Click **Save Changes** to keep edits."
+            "term": "Search by Name",
+            "definition": "Narrows the cards by name."
+          },
+          {
+            "term": "Card menu",
+            "definition": "The three dots on a card give **Edit** and **Delete**."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Add an expense type",
+            "steps": [
+              "Open **Settings** and choose **Expense Type**.",
+              "Click **Create Expense Type**.",
+              "Enter the **Name** and, if you wish, a **Description**.",
+              "Click **Submit**."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Approval WorkFlow",
+        "intro": "<p>The <strong>Approval WorkFlow</strong> page of Settings defines who must approve an expense form, level by level. A form you submit follows the workflow you choose at the bottom of the form.</p>",
+        "images": [
+          {
+            "src": "assets/product/expense-tracker/013.jpg",
+            "caption": "An approval workflow with two levels"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Workflow list",
+            "definition": "The column next to the left menu lists the workflows. Click one to see its levels. **Search By Name** narrows the list and the three dots on a workflow give **Edit** and **Delete**."
+          },
+          {
+            "term": "Create Approval Workflow",
+            "definition": "Opens a dialog asking for **Enter Workflow Name**. **Submit** adds it, **Cancel** closes it."
+          },
+          {
+            "term": "Levels table",
+            "definition": "**Level**, **Level Description**, **Approvers**, **Workflow Type** and **Actions** (a pencil to edit and a bin to delete the level)."
+          },
+          {
+            "term": "Create Level",
+            "definition": "Opens an **Approval Workflow** dialog: choose **Workflow Type**, type a **Description**, tick the approvers under **Select Approvers** (search or **Select All**) and click **Submit**."
+          },
+          {
+            "term": "Workflow Type",
+            "definition": "**All must approve** needs every approver of the level to sign. **Any one can approve** lets the first approver who signs pass the form to the next level."
+          },
+          {
+            "term": "Workflow Tree View",
+            "definition": "The tree icon above the table shows a diagram of the workflow: Submit for Approval, each level with its approvers, **Approve** arrows down to **Approved** and **Reject** arrows back to the start.",
+            "images": [
+              {
+                "src": "assets/product/expense-tracker/014.jpg",
+                "caption": "The Workflow Tree View"
+              }
+            ]
           }
         ],
         "procedures": [
           {
             "title": "Set up an approval workflow",
             "steps": [
-              "Go to <strong>Expense Tracker → Settings → Approval WorkFlow</strong>.",
-              "Click <strong>+ Create Approval Workflow</strong>, or open an existing workflow.",
-              "Click <strong>+ Create Level</strong>, choose <strong>All must approve</strong> or <strong>Any one can approve</strong>, add a description, select the approvers and click <strong>Submit</strong>.",
-              "Repeat for each level. Levels are approved in order."
+              "Open **Settings** and choose **Approval WorkFlow**.",
+              "Click **Create Approval Workflow**, enter a name and click **Submit**.",
+              "Select the workflow and click **Create Level**.",
+              "Pick the **Workflow Type**, tick the approvers and click **Submit**.",
+              "Repeat **Create Level** for every extra level, then check the result with the tree icon."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "ID Settings",
+        "intro": "<p>The <strong>ID Settings</strong> page of Settings decides how expense form numbers and invoice numbers are built.</p>",
+        "images": [
+          {
+            "src": "assets/product/expense-tracker/015.jpg",
+            "caption": "ID Settings with System Default selected"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Expense Form ID settings",
+            "definition": "Tab for the number of an expense form. **System Default** uses the plain running number; **Custom** lets you build the number."
+          },
+          {
+            "term": "Invoice ID settings",
+            "definition": "Tab for invoice numbers. It adds the choice **After Creation** or **After Approval**, which decides when the invoice number is given, and the switch **Set Standard to Templates**."
+          },
+          {
+            "term": "Custom format",
+            "definition": "Under **Custom** you see an **Example Format**, an **ID Separator** (**/**, **-** or **None**) and a drag-to-reorder list of parts to tick: **Created By Initials First Name**, **Created By Initials Last Name**, **Created By Employee ID**, **Date**, **Month**, **Year** and **Serial No./ID**. The serial number is always included.",
+            "images": [
+              {
+                "src": "assets/product/expense-tracker/016.jpg",
+                "caption": "Custom ID format"
+              }
             ]
           },
           {
-            "title": "Add an expense category",
+            "term": "Submit",
+            "definition": "Saves the choice. Leaving the page without it keeps the previous setting."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Build a custom expense form ID",
             "steps": [
-              "Go to <strong>Expense Tracker → Settings → Expense Type</strong>.",
-              "Click <strong>+ Create Expense Type</strong>, enter a <strong>Name*</strong> and optional description, and click <strong>Submit</strong>."
+              "Open **Settings** and choose **ID Settings**.",
+              "Stay on **Expense Form ID settings** and select **Custom**.",
+              "Pick an **ID Separator**.",
+              "Tick the parts to include and drag them into the order you want; **Example Format** shows the result.",
+              "Click **Submit**."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Users and Permissions",
+        "intro": "<p>The <strong>Users and Permissions</strong> page of Settings controls what each user group may do in Expense Tracker. Every user in a group gets the group's permissions.</p>",
+        "images": [
+          {
+            "src": "assets/product/expense-tracker/017.jpg",
+            "caption": "User groups"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "User group card",
+            "definition": "One card per group, for example **Expense Admin Group**, with a **Permissions** button and a **Users** button. The three dots on the card open more options."
+          },
+          {
+            "term": "Add User Group",
+            "definition": "Adds a new group."
+          },
+          {
+            "term": "Search by group name",
+            "definition": "Narrows the cards by name."
+          },
+          {
+            "term": "Permissions",
+            "definition": "Opens a grid with the groups' rights. Rows are **Expense Tracker**, **Expense Tracker Fields** (**Processed Forms** with **Approved Forms**, **Batch Forms** and **Issues**, **Expense Forms**, **Expense Form - User Name** and **Reports**) and **Settings** (**Approval Workflow**, **Expense Form**, **Expense Type**, **Expense Form ID Settings**, **Invoice ID Settings**). Columns are **View**, **Create**, **Edit**, **Delete**, **Admin**, **Download**, **Print**, **Assign To** and **Roll Back**; tick the ones the group should have and click **Save Changes**.",
+            "images": [
+              {
+                "src": "assets/product/expense-tracker/018.jpg",
+                "caption": "The permission grid of a group"
+              }
+            ]
+          },
+          {
+            "term": "Users",
+            "definition": "Tab next to **Permissions** that lists the members of the group."
+          },
+          {
+            "term": "Edit group name",
+            "definition": "The pencil next to the group name renames the group."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Change what a group can do",
+            "steps": [
+              "Open **Settings** and choose **Users and Permissions**.",
+              "Click **Permissions** on the group's card.",
+              "Tick or untick the boxes for each row and action.",
+              "Click **Save Changes**."
             ]
           }
         ]
@@ -34494,7 +34839,11 @@ const MODULES = [
       "Expense Forms",
       "Processed Forms",
       "Issues",
-      "Settings"
+      "Expense Form Settings",
+      "Expense Type",
+      "Approval WorkFlow",
+      "ID Settings",
+      "Users and Permissions"
     ]
   },
   {
@@ -38514,252 +38863,768 @@ const MODULES = [
     "narrative": [
       {
         "heading": "Dashboard",
-        "intro": "<p>The Dashboard gives a finance lead or executive a company-wide read on capital spending: how much budget is allocated, how many CIPs (Capital Improvement Plans) are moving through the pipeline, and how budgeted amounts compare with what has actually been allocated and spent. It opens with three KPI cards — <strong>Budget Allocated</strong>, <strong>CIP Status</strong>, and <strong>CIP Budgeted, Allocated &amp; Actual</strong> — followed by a <strong>Budget</strong> section and a <strong>CIP</strong> section of charts.</p><p>The Budget charts (<strong>Budget Distribution</strong>, <strong>Budget Analysis</strong>) break spend down by department. The CIP charts (<strong>CIP Criteria Weightage</strong>, <strong>CIP vs Overall CIP Score</strong>, <strong>Budget vs CIP</strong>, and a <strong>CIP Status</strong> table with From/To Year filters) show how individual capital projects are scored and are progressing against budget.</p>",
+        "intro": "<p>The <strong>Dashboard</strong> tab of Capital Management gives a summary of budgets and capital improvement projects (CIPs) in totals and charts. Open it from <strong>Home</strong> by choosing <strong>Capital Management</strong>.</p>",
+        "images": [
+          {
+            "src": "assets/product/capital-management/001.jpg",
+            "caption": "The Capital Management Dashboard"
+          }
+        ],
         "definitions": [
           {
             "term": "Budget Allocated",
-            "definition": "The total amount across all budgets created in Budget Planning, shown with the number of budgets."
+            "definition": "Tile with the total amount of all budgets and the number of budgets behind it."
           },
           {
-            "term": "CIP Status (KPI)",
-            "definition": "A count of all CIPs grouped into Approved and In Progress."
+            "term": "CIP Status",
+            "definition": "Tile with the total number of CIPs, split into **Approved** and **In Progress**."
           },
           {
             "term": "CIP Budgeted, Allocated & Actual",
-            "definition": "The company-wide totals of CIP Cost Estimates (Budgeted), Fund Allocations (Allocated), and the Actual tab (Actual)."
+            "definition": "Tile with the total CIP amount, split into **Budgeted** (estimated cost), **In Allocated** (funds assigned to CIPs) and **Actual** (money spent so far)."
           },
           {
             "term": "Budget Distribution",
-            "definition": "A chart of how the total budget is split across budget functions (departments), with a drop-down to show it as **Percentage** (default) or **Amount**. **Where it comes from:** the budgets in **Budget Planning**, grouped by their Budget Function."
+            "definition": "Doughnut chart that shares the budget between organization units such as a department. The drop-down above it switches the labels between percentages and amounts."
           },
           {
             "term": "Budget Analysis",
-            "definition": "A chart for one budget at a time. **Select Budget Name** lists the budgets from Budget Planning (for example Director's Office, Technology, Commercial Development, Finance & Administration)."
+            "definition": "Bar chart of budget allocations. Use **Select Budget Name** to choose which budget to show."
           },
           {
-            "term": "CIP Criteria Weightage / CIP vs Overall CIP Score / Budget vs CIP",
-            "definition": "Three charts, each with a **Select CIPs** drop-down listing the CIPs (for example IAH CARGO EXPANSION). **CIP Criteria Weightage** shows the CIP's score on each **CIP Objective**, **CIP vs Overall CIP Score** compares CIPs by total score, and **Budget vs CIP** compares **Estimated**, **Allocated** and **Consumed** amounts per CIP. **Where they come from:** the star ratings on each CIP's **CIP Score** tab (weighted by the Objectives in Settings → CIP Objectives), and the **Cost Estimate**, **Fund Allocations** and **Actual** amounts. Each chart has **download** and **zoom_out_map** (expand) buttons."
+            "term": "CIP Criteria Weightage",
+            "definition": "Bar chart of how each scoring criterion weighs for the CIPs you pick in **Select CIPs**."
           },
           {
-            "term": "CIP Status (table)",
-            "definition": "A table of CIPs with a status filter (**Ready**, **Not Ready**, **In Progress**, **Completed**, **Rejected**; **Ready** is the default) and **From Year** / **To Year** pickers. Columns: **CIP ID**, **CIP Name**, **Description**, **Financial Year Due**, **Approval Deadline**. It shows \"No Data Available\" when no CIP has the chosen status. The CIP Status KPI card at the top counts the same CIPs as **Approved** and **In Progress**."
+            "term": "CIP vs Overall CIP Score",
+            "definition": "Bar chart of the overall assessment score of the CIPs you pick in **Select CIPs**."
           },
           {
-            "term": "Where dashboard numbers come from",
-            "definition": "**Budget Allocated** adds up the budgets in **Budget Planning**. **CIP Budgeted** is the total of every CIP's **Cost Estimate**, **In Allocated** (the card's label) is the total of **Fund Allocations**, and **Actual** is the total of the **Actual** tabs. There is no company-wide year or department filter on the dashboard; each chart has its own drop-down."
+            "term": "Budget vs CIP",
+            "definition": "Bar chart that compares **Estimated**, **Allocated** and **Consumed** amounts for the CIPs you pick in **Select CIPs**."
+          },
+          {
+            "term": "CIP Status table",
+            "definition": "Table with **CIP ID**, **CIP Name**, **Description**, **Financial Year Due** and **Approval Deadline**. The status drop-down (for example **Ready**) and **From Year** and **To Year** narrow the rows."
+          },
+          {
+            "term": "Download and full screen icons",
+            "definition": "Each chart has a download icon that saves it and an expand icon that opens it full screen."
           }
         ],
         "procedures": []
       },
       {
-        "heading": "Budget Planning",
-        "intro": "<p>Budget Planning is where a department or finance user plans how much a department can spend over a set of years, before any individual capital project is created. It opens on <strong>Budgets</strong>, a card grid (not a table); a second sub-tab, <strong>Workflow Issues</strong>, tracks anything raised against a budget during approval.</p><p>Because Capital Management always reopens on the Dashboard when the page is reloaded or a link is opened directly, use the <strong>Budget Planning</strong> tab at the top of the screen to get here rather than a bookmarked link.</p>",
+        "heading": "Budgets",
+        "intro": "<p>The <strong>Budgets</strong> tab under <strong>Budget Planning</strong> lists the budget plans as cards. Use it to add a budget for a budget function and its budget items over a range of years.</p>",
+        "images": [
+          {
+            "src": "assets/product/capital-management/002.jpg",
+            "caption": "Budgets as cards"
+          }
+        ],
         "definitions": [
           {
-            "term": "Budget Function",
-            "definition": "The department or business unit a budget belongs to (e.g. Technology, Finance & Administration). Set up in Settings."
+            "term": "Budget Planning tabs",
+            "definition": "**Budgets** shows the budget cards. **Workflow Issues** lists issues raised during budget approval."
           },
           {
-            "term": "Department (Organization Structure)",
-            "definition": "The organizational unit a budget is planned under, picked from a cascading hierarchy (e.g. Aviation > HAS > Technology)."
-          },
-          {
-            "term": "Budget Item",
-            "definition": "A capital program a budget funds; a budget can list several. Set up in Settings."
-          },
-          {
-            "term": "Budget Planning Form",
-            "definition": "The page opened by clicking a budget card, where amounts are entered per Budget Item per year and the budget is submitted for approval."
-          },
-          {
-            "term": "Where the Add Budget lists come from",
-            "definition": "The **Add Budget Plan** dialog has five fields. **Budget Functions***: the 12 entries in **Settings → Budget Functions**. **Department***: the first level of **Settings → Organization Structure** (1/Aviation); lower levels open as you pick, and the budget card shows the level you chose (for example 280006 / Technology). **Budget Items***: the 7 items in **Settings → Budget Items**, with **Select All**. **From year*** and **To year***: year pickers; they set the year columns on the Budget Planning Form. No amounts are entered in this dialog."
+            "term": "Add Budget",
+            "definition": "Opens the **Add Budget Plan** dialog."
           },
           {
             "term": "Budget card",
-            "definition": "Each budget is a card with a status chip, a ⋮ menu (**Edit**, **Delete**), the budget name, **Budget Function**, **Organization Structure**, **Budget Item** list, **From Year** and **To Year**. Click the card to open its Budget Planning Form. **Edit** opens **Edit Budget Plan** with the same five fields and an **Update** button."
+            "definition": "Shows a status tag (**Ready** or **Completed**), the budget name, **Budget Function**, **Organization Structure**, the **Budget Item** list with item codes, and **From Year** and **To Year**."
           },
           {
-            "term": "Budget Planning Form (fields)",
-            "definition": "The form shows the budget name, **Budget Function Code** and **Budget Function Name**, **+ Add Budget Item**, and a grid with one row per Budget Item and one column per year (for example 2025 (₹) and 2026 (₹)) plus **Total (₹)**, with a totals row. Below it are the extra fields built in **Settings → Budget Forms** (for example **Fund Name**, **Business Area**, **Fund No./Bus. Area No.** and an **FTEs** table by division). **Submit For Approval** sends it to the approvers in **Settings → Approval Workflow**; approvers see Approve and Reject."
+            "term": "Card menu",
+            "definition": "The three dots on a card give **Edit** and **Delete**."
           },
           {
-            "term": "Workflow Issues (Budget Planning)",
-            "definition": "The second sub-tab. Counters **Total Issues**, **Issues Approved** and **Issues Rejected**; a **Filters** button and a grid/list switch; columns **WFL Number**, **Level**, **Raised on Date**, **Raised on Time**, **Raised by**, **Image**, **Comments**, **Assign To**, **Due Date**, **Chat** and **See History**. It logs problems raised against a budget's approval chain. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
-          },
-          {
-            "term": "Where budget data goes",
-            "definition": "Budget totals feed **Budget Allocated**, **Budget Distribution** and **Budget Analysis** on the Dashboard. A budget is not linked to a CIP by a picker: the connection is the shared budget function and organisation level, and the **Source of Fund** you choose when allocating a CIP's cost."
+            "term": "Settings",
+            "definition": "Opens **Budget Planning Settings**, where the lists used on this form are kept."
           }
         ],
         "procedures": [
           {
-            "title": "Plan a department budget",
+            "title": "Add a budget",
             "steps": [
-              "Go to <strong>Capital Management → Budget Planning</strong> and click <strong>+ Add Budget</strong>.",
-              "Pick <strong>Budget Functions*</strong>, <strong>Department*</strong>, and one or more <strong>Budget Items*</strong>.",
-              "Set <strong>From year*</strong> and <strong>To year*</strong>, then click <strong>Submit</strong>.",
-              "Open the new budget card and enter an amount for each Budget Item and year in the <strong>Budget Planning Form</strong>.",
-              "Click <strong>Submit For Approval</strong> when the numbers are ready."
+              "Open **Budget Planning** and click **Add Budget**.",
+              "Choose the **Budget Functions** and the **Department** (the organization level).",
+              "Choose one or more **Budget Items**.",
+              "Pick **From year** and **To year**. All five fields are required.",
+              "Click **Submit**."
             ],
-            "note": "The Budget Planning Form also has extra fields your company can configure, such as Fund Name and an FTEs table."
+            "images": [
+              {
+                "src": "assets/product/capital-management/003.jpg",
+                "caption": "The Add Budget Plan dialog",
+                "step": 2
+              }
+            ]
           }
         ]
       },
       {
-        "heading": "CIP",
-        "intro": "<p>CIP is where individual capital projects — Capital Improvement Plans — are created, costed, scored and funded. A CIP is a standalone budgeting record: it is not linked to a Project in the <strong>Projects</strong> module, even though it reuses familiar building blocks like Teams, Documents and Checklists. It opens on <strong>CIPs</strong> (a card grid) with four more sub-tabs: <strong>Fund Allocations</strong>, <strong>CIP Actuals &amp; Forecast</strong>, <strong>CIP Assesments</strong>, and <strong>Workflow Issues</strong>.</p><p>A Module Manager or department user creates the CIP and works through its record tabs (Profile, Teams, Documents, Communications, Checklists, Cost Estimate, Actual, CIP Score) to build it out; a reviewer then scores and approves it before funds are allocated against it.</p>",
+        "heading": "Budget Workflow Issues",
+        "intro": "<p>The <strong>Workflow Issues</strong> tab under <strong>Budget Planning</strong> lists issues that approvers raised while a budget moved through its approval workflow.</p>",
+        "images": [
+          {
+            "src": "assets/product/capital-management/004.jpg",
+            "caption": "Workflow Issues"
+          }
+        ],
         "definitions": [
           {
-            "term": "CIP",
-            "definition": "Capital Improvement Plan — a single capital project record with its own ID, description, cost estimate, scoring and funding. Not linked to a Projects-module project."
+            "term": "Issue counts",
+            "definition": "Counters for **Total Issues**, **Issues Approved** and **Issues Rejected**."
           },
           {
-            "term": "CIP Score",
-            "definition": "A record tab where a reviewer rates the CIP on 1 to 5 stars for each question under each **CIP Objective**. Each objective shows a score out of its weightage. The scores are compared on **CIP Assesments** and the dashboard charts."
+            "term": "Filters",
+            "definition": "Narrows the issues."
           },
           {
-            "term": "CIP Assesments",
-            "definition": "A table comparing every CIP's objective scores side by side, with an Approve/Reject column — the step where competing CIPs are ranked."
+            "term": "Table and card icons",
+            "definition": "Switch between a table and cards."
           },
           {
-            "term": "Fund Allocations",
-            "definition": "Splits an approved CIP's Cost Estimate lines across one or more Budget Funds (funding sources), by year."
+            "term": "Table columns",
+            "definition": "**WFL Number**, **Level**, **Raised on Date**, **Raised on Time**, **Raised by**, **Image**, **Comments**, **Assign To**, **Due Date**, **Chat** and **See History**."
+          }
+        ],
+        "procedures": []
+      },
+      {
+        "heading": "Budget Functions",
+        "intro": "<p>The <strong>Budget Functions</strong> page of <strong>Budget Planning Settings</strong> keeps the list of budget functions (for example Technology or Infrastructure) that a budget is planned under. Open it with the <strong>Settings</strong> button on <strong>Budget Planning</strong>.</p>",
+        "images": [
+          {
+            "src": "assets/product/capital-management/005.jpg",
+            "caption": "Budget Functions"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Settings menu",
+            "definition": "The left menu lists the settings pages: **Budget Functions**, **Budget Items**, **Budget Funds**, **Budget Forms**, **Organization Structure** and **Approval Workflow**."
           },
           {
-            "term": "CIP Actuals & Forecast",
-            "definition": "A read-only, company-wide roll-up of Estimated vs Actual amounts per CIP, per cost category, per year."
+            "term": "Table",
+            "definition": "**Budget Function Code**, **Budget Function Name** and **Actions** (a pencil to edit and a bin to delete)."
+          },
+          {
+            "term": "Create",
+            "definition": "Opens **Create Budget Functions** with **Budget Functions Code** and **Budget Functions Name** (both required) and **Submit**."
+          },
+          {
+            "term": "Search",
+            "definition": "Narrows the table by what you type."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Add a budget function",
+            "steps": [
+              "Open **Budget Planning**, click **Settings** and stay on **Budget Functions**.",
+              "Click **Create**.",
+              "Enter the **Budget Functions Code** and **Budget Functions Name**.",
+              "Click **Submit**."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Budget Items",
+        "intro": "<p>The <strong>Budget Items</strong> page of <strong>Budget Planning Settings</strong> lists the items (for example a named improvement program) that a budget can cover.</p>",
+        "images": [
+          {
+            "src": "assets/product/capital-management/006.jpg",
+            "caption": "Budget Items"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Table",
+            "definition": "**Budget Item Code**, **Budget Item Name** and **Actions** (edit and delete)."
+          },
+          {
+            "term": "Create",
+            "definition": "Adds a new item with a code and a name."
+          },
+          {
+            "term": "Search",
+            "definition": "Narrows the table by what you type."
+          }
+        ],
+        "procedures": []
+      },
+      {
+        "heading": "Budget Funds",
+        "intro": "<p>The <strong>Budget Funds</strong> page of <strong>Budget Planning Settings</strong> lists the funds (sources of money) that budgets draw from.</p>",
+        "images": [
+          {
+            "src": "assets/product/capital-management/007.jpg",
+            "caption": "Budget Funds"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Table",
+            "definition": "**Budget Fund Code**, **Budget Fund Name** and **Actions** (edit and delete)."
+          },
+          {
+            "term": "Create",
+            "definition": "Adds a new fund with a code and a name."
+          },
+          {
+            "term": "Search",
+            "definition": "Narrows the table by what you type."
+          }
+        ],
+        "procedures": []
+      },
+      {
+        "heading": "Budget Forms",
+        "intro": "<p>The <strong>Budget Forms</strong> page of <strong>Budget Planning Settings</strong> is a form builder. It defines the extra fields asked for on a budget, such as Fund Name, Business Area, Fund No./Bus. Area No. and an FTEs table.</p>",
+        "images": [
+          {
+            "src": "assets/product/capital-management/008.jpg",
+            "caption": "Configurable fields of the budget form"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Configurable Fields",
+            "definition": "One block per field, in the order they appear on the form. Drag the grip at the left of a block to reorder it."
+          },
+          {
+            "term": "Choose Type",
+            "definition": "Sets the field type of a block, for example **Text Box** or **Table**."
+          },
+          {
+            "term": "Required",
+            "definition": "Switch that makes the field mandatory."
+          },
+          {
+            "term": "Show on card",
+            "definition": "Switch that shows the field on the budget card in **Budgets**."
+          },
+          {
+            "term": "Add, copy and delete icons",
+            "definition": "The plus icon adds a field after this one, the copy icon duplicates it and the bin removes it."
+          },
+          {
+            "term": "Table field",
+            "definition": "A **Table** block has **Rows** and **Columns** boxes, **Add Column** and **Add Row** buttons. Each column has its own type menu, and the **Actions** column adds or removes rows."
+          },
+          {
+            "term": "Add field and Save Changes",
+            "definition": "**Add field** at the end of the list adds a new block. **Save Changes** at the top keeps your edits."
+          }
+        ],
+        "procedures": []
+      },
+      {
+        "heading": "Organization Structure",
+        "intro": "<p>The <strong>Organization Structure</strong> page of <strong>Budget Planning Settings</strong> defines the levels of your organization (for example Department, then a unit under it) and the units at each level. The budget form and the CIP form use these units.</p>",
+        "images": [
+          {
+            "src": "assets/product/capital-management/009.jpg",
+            "caption": "Organization levels and their units"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Level tabs",
+            "definition": "One tab per level, for example **Department** and the level below it. Each shows a table with **Code**, **Name** and **Actions** (edit and delete)."
+          },
+          {
+            "term": "Parent list",
+            "definition": "On a lower level the left list shows the units of the level above (**Code | Name**). Select one to see the units that sit under it."
+          },
+          {
+            "term": "Create Level",
+            "definition": "Opens a dialog with **Level Name** and **Submit** to add a new level."
+          },
+          {
+            "term": "Add Row",
+            "definition": "Opens **Create Level Node** with **Code** and **Name** (both required) and **Save**, to add a unit to the selected level."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Add a unit to a level",
+            "steps": [
+              "Open **Budget Planning**, click **Settings** and choose **Organization Structure**.",
+              "Select the level tab. On a lower level, select the parent unit first.",
+              "Click **Add Row**.",
+              "Enter the **Code** and **Name** and click **Save**."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Budget Approval Workflow",
+        "intro": "<p>The <strong>Approval Workflow</strong> page of <strong>Budget Planning Settings</strong> sets who approves a budget, level by level.</p>",
+        "images": [
+          {
+            "src": "assets/product/capital-management/010.jpg",
+            "caption": "Approval levels for budgets"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Levels table",
+            "definition": "**Level**, **Level Description**, **Approvers**, **Workflow Type** and **Actions** (edit and delete). The small grid icon at the start of a row marks the level."
+          },
+          {
+            "term": "Workflow Type",
+            "definition": "**Any one can approve** means one approver of the level is enough. **All must approve** means every approver of the level must sign."
+          },
+          {
+            "term": "Create Level",
+            "definition": "Adds an approval level."
+          },
+          {
+            "term": "Workflow diagram icon",
+            "definition": "The tree icon at the top right shows the workflow as a diagram."
+          }
+        ],
+        "procedures": []
+      },
+      {
+        "heading": "CIPs",
+        "intro": "<p>The <strong>CIPs</strong> tab under <strong>CIP</strong> lists capital improvement projects as cards. Open a card to work on its profile, team, documents, mails, checklists, cost estimate, actuals and score.</p>",
+        "images": [
+          {
+            "src": "assets/product/capital-management/011.jpg",
+            "caption": "CIP cards"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "CIP tabs",
+            "definition": "**CIPs**, **Fund Allocations**, **CIP Actuals & Forecast**, **CIP Assesments** and **Workflow Issues**."
+          },
+          {
+            "term": "Create CIP",
+            "definition": "Opens the **Create CIP** dialog."
+          },
+          {
+            "term": "Search",
+            "definition": "Finds a CIP by what you type."
           },
           {
             "term": "CIP card",
-            "definition": "Each CIP is a card with a status chip, a ⋮ menu (**Edit**, **Delete**), **CIP ID**, **CIP Name**, **Description**, **Organization**, **From Year** and **To Year**."
+            "definition": "Shows a status tag (for example **Completed**), the **CIP ID**, **CIP Name**, **Description**, **Organization**, **From Year** and **To Year**. Click a card to open the CIP."
           },
           {
-            "term": "Create CIP dialog",
-            "definition": "Fields: **Department*** (cascading levels from Settings → Organization Structure), **CIP ID*** (typed in, not numbered by Arena), **CIP Name***, **CIP Description***, the optional profile fields built in **Settings → CIP Profile** (for example **Location**, **Key Map**, **Category** or **Project Justification**), and **From Year*** and **To Year***. There is no project or budget picker."
-          },
-          {
-            "term": "CIP record tabs",
-            "definition": "Click a CIP card to open its record: **CIP Profile** (editable fields; header has the status chip and **Submit**), **Teams** (sub-tabs **Users** and **Crews**, **+ Add User**), **Documents** (**+ New Folder**, **Upload Documents**, default folders Mail Attachments and Checklists), **Communications** (mail: Compose Mail, All Emails, Inbox, Sent, Drafts, Starred, Trash), **Checklists** (**+ Create Form** from the templates in Settings → Checklists), **Cost Estimate**, **Actual** and **CIP Score**."
-          },
-          {
-            "term": "Cost Estimate and Actual",
-            "definition": "**Cost Estimate** is a grid with **+ Add Item** and **Save**: each row has an **Estimate Category** and an **Estimation Item** drop-down, an amount for each year of the CIP (for example 2025 (₹), 2026 (₹)), a **Total (₹)** and delete. **Where the lists come from:** **Settings → CIP Category** (the category list showed **Aviation Facilities**; its items are Planning, Acquisition-Land, Design, Construction, Equipment Acquisition, Salary Recovery and Other). The **Actual** tab has the same grid without Add, so you enter actual spend against the estimate lines and **Save**."
-          },
-          {
-            "term": "CIP Score ratings",
-            "definition": "The **CIP Score** tab lists each **CIP Objective** with a heading **Score : x / 20** and four or five questions, each answered with 1 to 5 stars. **Submit** saves the ratings. The objectives and their weightage come from **Settings → CIP Objectives**; the scores feed **CIP Assesments** and the dashboard score charts."
-          },
-          {
-            "term": "Fund Allocations (screens)",
-            "definition": "A card grid of CIPs. Click one to see a table of its Cost Estimate lines (**Estimate Category**, **Estimate item**, **Source of Fund**, **Allocate Schedule**). **Source of Fund** is a multi-select of the funds in **Settings → Budget Funds**. **Allocate** opens a screen with an **Estimated** grid and a **Fund Allocation** grid by year, and **Submit**."
-          },
-          {
-            "term": "CIP Actuals & Forecast / CIP Assesments / Workflow Issues (CIP)",
-            "definition": "**CIP Actuals & Forecast**: one block per CIP with a search, showing the estimation category and item and, for each year, an **Estimated** and an **Actual** column (read-only). **CIP Assesments**: a table with a column per CIP Objective holding each CIP's score out of 20, plus an **Approve/Reject** column. **Workflow Issues**: counters and a table like Budget Planning's, with **CIP ID** in place of WFL Number."
-          },
-          {
-            "term": "Where CIP data comes from and goes",
-            "definition": "**Comes from:** Settings → Organization Structure (Department), Settings → CIP Profile (extra fields), Settings → CIP Category (cost categories and items), Settings → CIP Objectives (scoring), Settings → Budget Funds (Source of Fund), Settings → Checklists (checklist templates) and the approvers in the CIP approval workflow. **Goes to:** the Dashboard (CIP Status, Budgeted, Allocated, Actual, score charts, Budget vs CIP). A CIP is not linked to a Projects-module project, a budget or the Cost modules."
+            "term": "Settings",
+            "definition": "Opens **CIP Settings**."
           }
         ],
         "procedures": [
           {
-            "title": "Create and score a CIP",
+            "title": "Create a CIP",
             "steps": [
-              "Go to <strong>Capital Management → CIP</strong> and click <strong>+ Create CIP</strong>.",
-              "Pick the <strong>Department*</strong>, enter <strong>CIP ID*</strong>, <strong>CIP Name*</strong> and <strong>CIP Description*</strong>, fill in any configured profile fields, set <strong>From Year*</strong>/<strong>To Year*</strong>, and click <strong>Create</strong>.",
-              "Open the CIP and add its <strong>Cost Estimate</strong> lines, <strong>Teams</strong>, <strong>Documents</strong> and <strong>Checklists</strong>.",
-              "Answer the questions on the <strong>CIP Score</strong> tab, grouped by CIP Objective.",
-              "Compare and approve or reject CIPs on <strong>CIP → CIP Assesments</strong>."
-            ]
-          },
-          {
-            "title": "Split a CIP's cost across funding sources",
-            "steps": [
-              "Go to <strong>CIP → Fund Allocations</strong> and open an approved CIP.",
-              "Click <strong>Allocate</strong> next to a Cost Estimate line.",
-              "Pick one or more <strong>Source of Fund</strong> entries and enter the split by year.",
-              "Click <strong>Submit</strong>."
-            ]
-          },
-          {
-            "title": "Record actual spend",
-            "steps": [
-              "Open the CIP and go to its <strong>Actual</strong> tab.",
-              "Enter the amount spent against each Cost Estimate line, per year.",
-              "Click <strong>Save</strong>."
-            ]
-          },
-          {
-            "title": "Rate a CIP against the objectives",
-            "steps": [
-              "Open the CIP record and go to the **CIP Score** tab.",
-              "Under each objective, click 1 to 5 stars for every question.",
-              "Check the **Score : x / 20** heading on each objective.",
-              "Click **Submit**.",
-              "Compare all CIPs on **CIP → CIP Assesments**."
+              "Open **CIP** and click **Create CIP**.",
+              "Choose the **Department** in **Select Organization Level**.",
+              "Enter the **CIP ID**, **CIP Name** and **CIP Description**. These are required.",
+              "Fill in the extra fields further down the dialog, such as location, zip codes, category and sub-category. Which fields appear is set in **CIP Settings → CIP Profile**.",
+              "Click **Create**."
             ],
-            "note": "The scoring questions and weightage are set in Settings → CIP Objectives."
+            "images": [
+              {
+                "src": "assets/product/capital-management/012.jpg",
+                "caption": "The Create CIP dialog",
+                "step": 2
+              }
+            ]
           }
         ]
       },
       {
-        "heading": "Settings",
-        "intro": "<p>Settings (the gear icon, shown on the Budget Planning and CIP tabs, not on Dashboard) is where a <strong>Module Admin</strong> configures everything a budget or CIP is built from. It is context-sensitive: opening it from Budget Planning goes to Budget Planning Settings; opening it from CIP goes to CIP Settings.</p>",
+        "heading": "CIP Profile",
+        "intro": "<p>The <strong>CIP Profile</strong> tab is the first tab inside a CIP. It shows the CIP ID, name, description and the extra fields set up in <strong>CIP Settings</strong>. The tabs of a CIP are <strong>CIP Profile</strong>, <strong>Teams</strong>, <strong>Documents</strong>, <strong>Communications</strong>, <strong>Checklists</strong>, <strong>Cost Estimate</strong>, <strong>Actual</strong> and <strong>CIP Score</strong>.</p>",
+        "images": [
+          {
+            "src": "assets/product/capital-management/013.jpg",
+            "caption": "CIP Profile"
+          }
+        ],
         "definitions": [
           {
-            "term": "Budget Functions / Budget Items / Budget Funds",
-            "definition": "Master lists (each its own screen under Budget Planning Settings) for departments, capital programs, and funding sources."
+            "term": "Header",
+            "definition": "The CIP number with its status tag, and a **Submit** button that saves the profile."
           },
           {
-            "term": "Organization Structure",
-            "definition": "The Department hierarchy used by both budgets and CIPs, built as levels with codes and names."
+            "term": "CIP Profile and Name",
+            "definition": "The CIP ID and the CIP name, both required."
           },
           {
-            "term": "Budget Forms",
-            "definition": "A form builder that adds extra fields (text boxes, tables) to the Budget Planning Form."
+            "term": "Description",
+            "definition": "A text box with formatting (bold, italic, underline, link, headings, lists)."
           },
           {
-            "term": "CIP Profile / CIP Category / CIP Objectives",
-            "definition": "CIP Settings screens: the extra fields on a CIP, the Estimate Categories/Items used for costing, and the weighted Objectives used for CIP Score."
+            "term": "Extra fields",
+            "definition": "Fields such as **Location** and **Served**, defined in **CIP Settings → CIP Profile**."
+          }
+        ],
+        "procedures": []
+      },
+      {
+        "heading": "CIP Teams",
+        "intro": "<p>The <strong>Teams</strong> tab of a CIP lists the people and crews working on that CIP.</p>",
+        "images": [],
+        "definitions": [
+          {
+            "term": "Users and Crews",
+            "definition": "Two sub-tabs. **Users** lists people added to the CIP; **Crews** lists crews."
           },
           {
-            "term": "Approval Workflow",
-            "definition": "Ordered approval levels (Any one can approve / All must approve) — one workflow for budgets, a separate one for CIPs."
+            "term": "Add User",
+            "definition": "Adds people to the CIP. The tab shows **No Users selected** until you do."
+          }
+        ],
+        "procedures": []
+      },
+      {
+        "heading": "CIP Documents",
+        "intro": "<p>The <strong>Documents</strong> tab of a CIP stores files for that CIP in folders.</p>",
+        "images": [],
+        "definitions": [
+          {
+            "term": "Folders and Documents",
+            "definition": "A list with **Items**, **Last Modified**, **Added On** and **Actions** for each folder. It starts with the folders **Mail Attachments** and **Checklists**."
           },
           {
-            "term": "Budget Planning Settings screens",
-            "definition": "Opened from the **Settings** button on Budget Planning: **Budget Functions** (code and name; label comes from the naming framework so a company can rename it), **Budget Items** (code and name), **Budget Funds** (code and name; used as Source of Fund), **Budget Forms** (form builder for the Budget Planning Form: fields with drag handle, **Required**, **Show on card**, type such as Text Box or Table), **Organization Structure** (**+ Create Level**, **+ Add Row**; levels such as Department and HAS) and **Approval Workflow**."
+            "term": "New Folder and Upload Documents",
+            "definition": "**New Folder** creates a folder; **Upload Documents** adds files."
+          }
+        ],
+        "procedures": []
+      },
+      {
+        "heading": "CIP Communications",
+        "intro": "<p>The <strong>Communications</strong> tab of a CIP is a mailbox for mails about that CIP.</p>",
+        "images": [],
+        "definitions": [
+          {
+            "term": "Mail folders",
+            "definition": "**All Emails**, **Inbox**, **Sent**, **Drafts**, **Starred** and **Trash**."
           },
           {
-            "term": "CIP Settings screens",
-            "definition": "Opened from the **Settings** button on CIP: **CIP Profile** (standard fields Cip ID, Cip Name, Description plus 13 configurable fields), **CIP Category** (**Estimate Categories** and **Estimate Items** tabs), **CIP Objectives** (each with a **Weightage**, **+ Add Objective**, **Save Objectives**), **Checklists** (**+ Create CheckList**, form templates) and **Approval Workflow**."
+            "term": "Compose Mail",
+            "definition": "Opens a new mail."
           },
           {
-            "term": "Where Settings lists feed",
-            "definition": "Budget Functions, Budget Items and Organization Structure feed **Add Budget**. Organization Structure also feeds **Create CIP**. Budget Funds feed **Source of Fund**. CIP Category feeds **Cost Estimate**, **Actual** and **Fund Allocations**. CIP Objectives feed **CIP Score**, **CIP Assesments** and the dashboard charts. CIP Profile and Budget Forms add the extra fields to the CIP and Budget Planning forms. There is no Capital Management screen in Global Data; amounts show in ₹ and the Budget Functions label can be renamed in Global Data → Settings → Naming Framework."
+            "term": "Search mail",
+            "definition": "Finds a mail by what you type."
+          }
+        ],
+        "procedures": []
+      },
+      {
+        "heading": "CIP Checklists",
+        "intro": "<p>The <strong>Checklists</strong> tab of a CIP lists the checklist forms filled in for that CIP.</p>",
+        "images": [],
+        "definitions": [
+          {
+            "term": "Create Form",
+            "definition": "Starts a checklist form for the CIP."
+          },
+          {
+            "term": "Search",
+            "definition": "Finds a checklist by what you type. The list shows **No Data** until a form exists."
+          }
+        ],
+        "procedures": []
+      },
+      {
+        "heading": "CIP Cost Estimate",
+        "intro": "<p>The <strong>Cost Estimate</strong> tab of a CIP records the planned cost of the CIP for each year between its <strong>From Year</strong> and <strong>To Year</strong>.</p>",
+        "images": [
+          {
+            "src": "assets/product/capital-management/014.jpg",
+            "caption": "Cost Estimate"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Table",
+            "definition": "**Estimate Category**, **Estimation Item**, one column per year (for example **2025 (₹)** and **2026 (₹)**), **Total (₹)** and **Actions**."
+          },
+          {
+            "term": "Add Item",
+            "definition": "Adds a row. Choose the **Estimate Category** and **Estimation Item** (both come from **CIP Settings → CIP Category**), type the amount for each year, and the row and the footer **Total** add up."
+          },
+          {
+            "term": "Row bin icon",
+            "definition": "Removes the row."
+          },
+          {
+            "term": "Save",
+            "definition": "Keeps the estimate."
           }
         ],
         "procedures": [
           {
-            "title": "Set up approval for budgets or CIPs",
+            "title": "Estimate the cost of a CIP",
             "steps": [
-              "Go to <strong>Settings → Approval Workflow</strong> (from Budget Planning) or <strong>Settings → CIP Approval Workflow</strong> (from CIP).",
-              "Click <strong>+ Create Level</strong>.",
-              "Choose <strong>Any one can approve</strong> or <strong>All must approve</strong>, add a description, and pick the approvers.",
-              "Repeat for each level; levels run in order."
-            ]
-          },
-          {
-            "title": "Set up the master data before planning",
-            "steps": [
-              "Go to <strong>Settings → Budget Functions</strong>, <strong>Budget Items</strong> and <strong>Budget Funds</strong> and add entries for each.",
-              "Go to <strong>Settings → Organization Structure</strong> and build the Department hierarchy.",
-              "From the CIP side, go to <strong>Settings → CIP Category</strong> and add Estimate Categories and Items, and <strong>Settings → CIP Objectives</strong> to set scoring objectives and weightings."
+              "Open the CIP and choose **Cost Estimate**.",
+              "Click **Add Item**.",
+              "Select the **Estimate Category** and **Estimation Item**.",
+              "Type the amount for each year.",
+              "Click **Save**."
             ]
           }
         ]
+      },
+      {
+        "heading": "CIP Actual",
+        "intro": "<p>The <strong>Actual</strong> tab of a CIP records the money actually spent, laid out like the cost estimate.</p>",
+        "images": [],
+        "definitions": [
+          {
+            "term": "Table",
+            "definition": "**Estimate Category**, **Estimation Item**, one column per year and **Total**. It lists the same rows as the cost estimate, with **No Data Available** until an estimate exists."
+          },
+          {
+            "term": "Save",
+            "definition": "Keeps the actual amounts."
+          }
+        ],
+        "procedures": []
+      },
+      {
+        "heading": "CIP Score",
+        "intro": "<p>The <strong>CIP Score</strong> tab of a CIP is a questionnaire that rates the CIP against five objectives. The scores feed the <strong>CIP Assesments</strong> tab and the dashboard charts.</p>",
+        "images": [
+          {
+            "src": "assets/product/capital-management/015.jpg",
+            "caption": "CIP Score with star ratings"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Objectives",
+            "definition": "**Infrastructure Improvement**, **Economic Development**, **Public Safety**, **Environmental Sustainability** and **Community Development**. Each shows a score out of 20 and opens to its questions."
+          },
+          {
+            "term": "Questions and stars",
+            "definition": "Each question is rated with one to five stars. Four questions at five stars give the 20 points of an objective."
+          },
+          {
+            "term": "Submit",
+            "definition": "Saves the ratings."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Score a CIP",
+            "steps": [
+              "Open the CIP and choose **CIP Score**.",
+              "Open an objective and click the stars for each question.",
+              "Repeat for the other objectives.",
+              "Click **Submit**."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Fund Allocations",
+        "intro": "<p>The <strong>Fund Allocations</strong> tab under <strong>CIP</strong> is where you assign funds to the estimate lines of a CIP.</p>",
+        "images": [
+          {
+            "src": "assets/product/capital-management/016.jpg",
+            "caption": "Pick a CIP to allocate funds"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "CIP cards",
+            "definition": "One card per CIP. Click a card to open its allocation page. **Search** narrows the cards."
+          },
+          {
+            "term": "Allocation table",
+            "definition": "Opens with the CIP number and status and a table with **Estimate Category**, **Estimate Item**, **Source of Fund** and **Allocate Schedule**. It lists the lines from the CIP's cost estimate and shows **No Data Available** when the CIP has none."
+          }
+        ],
+        "procedures": []
+      },
+      {
+        "heading": "CIP Actuals and Forecast",
+        "intro": "<p>The <strong>CIP Actuals &amp; Forecast</strong> tab under <strong>CIP</strong> compares the estimated and actual amounts of every CIP year by year.</p>",
+        "images": [
+          {
+            "src": "assets/product/capital-management/017.jpg",
+            "caption": "CIP Actuals and Forecast"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "CIP blocks",
+            "definition": "One collapsible block per CIP, titled with its ID and name. The search box at the top finds a CIP."
+          },
+          {
+            "term": "Table",
+            "definition": "**CIP**, **Estimation Category**, **Estimation Item**, then an **Estimated** and an **Actual** column for each year. Scroll right to see later years. A search box above each table finds a row."
+          }
+        ],
+        "procedures": []
+      },
+      {
+        "heading": "CIP Assesments",
+        "intro": "<p>The <strong>CIP Assesments</strong> tab under <strong>CIP</strong> ranks all CIPs by their scores in one table, so approvers can compare projects.</p>",
+        "images": [],
+        "definitions": [
+          {
+            "term": "Table",
+            "definition": "**S. No.**, **CIP**, **Approve/Reject** and one column per objective: **Infrastructure Improvement**, **Economic Development**, **Public Safety**, **Environmental Sustainability** and **Community Development**. Each score is out of 20 and comes from the **CIP Score** tab of that CIP."
+          }
+        ],
+        "procedures": []
+      },
+      {
+        "heading": "CIP Workflow Issues",
+        "intro": "<p>The <strong>Workflow Issues</strong> tab under <strong>CIP</strong> lists issues raised while CIPs moved through approval.</p>",
+        "images": [
+          {
+            "src": "assets/product/capital-management/018.jpg",
+            "caption": "CIP Workflow Issues"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Issue counts",
+            "definition": "Counters for **Total Issues**, **Issues Approved** and **Issues Rejected**."
+          },
+          {
+            "term": "Filters",
+            "definition": "Narrows the issues."
+          },
+          {
+            "term": "Table and card icons",
+            "definition": "Switch between a table and cards."
+          },
+          {
+            "term": "Table columns",
+            "definition": "**CIP ID**, **Level**, **Raised on Date**, **Raised on Time**, **Raised by**, **Image**, **Comments**, **Assign To**, **Due Date**, **Chat** and **See History**."
+          }
+        ],
+        "procedures": []
+      },
+      {
+        "heading": "CIP Profile Settings",
+        "intro": "<p>The <strong>CIP Profile</strong> page of <strong>CIP Settings</strong> is a form builder for the profile of a CIP. Open <strong>CIP Settings</strong> with the <strong>Settings</strong> button on any <strong>CIP</strong> tab. Its left menu lists <strong>CIP Profile</strong>, <strong>CIP Category</strong>, <strong>CIP Objectives</strong>, <strong>Checklists</strong> and <strong>Approval Workflow</strong>.</p>",
+        "images": [
+          {
+            "src": "assets/product/capital-management/019.jpg",
+            "caption": "CIP Profile settings"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Standard Fields",
+            "definition": "**Cip ID**, **Cip Name** and **Description**. These are always on the CIP form."
+          },
+          {
+            "term": "Configurable Fields",
+            "definition": "Extra fields such as **Location** and **Served**. Each block has a **Choose Type** menu (for example **Text Box**), the switches **Required** and **Show on card**, a grip to reorder, and add, copy and delete icons."
+          },
+          {
+            "term": "Add field and Save Changes",
+            "definition": "**Add field** adds a block at the end. **Save Changes** keeps your edits."
+          }
+        ],
+        "procedures": []
+      },
+      {
+        "heading": "CIP Category",
+        "intro": "<p>The <strong>CIP Category</strong> page of <strong>CIP Settings</strong> defines the cost categories and cost items that a CIP estimate is built from.</p>",
+        "images": [
+          {
+            "src": "assets/product/capital-management/020.jpg",
+            "caption": "Estimate Categories"
+          },
+          {
+            "src": "assets/product/capital-management/021.jpg",
+            "caption": "Estimate Items of a category"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Estimate Categories",
+            "definition": "First step. A table of categories with **Actions** (edit and delete). **Create Categories** adds one."
+          },
+          {
+            "term": "Estimate Items",
+            "definition": "Second step. Select a category on the left and its items appear on the right (for example Planning, Design, Construction, Equipment Acquisition and Other). **Create Items** adds an item to the selected category."
+          }
+        ],
+        "procedures": []
+      },
+      {
+        "heading": "CIP Objectives",
+        "intro": "<p>The <strong>CIP Objectives</strong> page of <strong>CIP Settings</strong> sets the objectives that every CIP is scored against on its <strong>CIP Score</strong> tab.</p>",
+        "images": [
+          {
+            "src": "assets/product/capital-management/022.jpg",
+            "caption": "CIP Objectives"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Objective rows",
+            "definition": "One row per objective with its **Weightage** (the points out of the total score, 20 for each of the five). The pencil edits it, the bin deletes it and the arrow opens its questions."
+          },
+          {
+            "term": "Add Objective",
+            "definition": "Adds an objective."
+          },
+          {
+            "term": "Save Objectives",
+            "definition": "Keeps changes made on this page."
+          }
+        ],
+        "procedures": []
+      },
+      {
+        "heading": "CIP Checklists Settings",
+        "intro": "<p>The <strong>Checklists</strong> page of <strong>CIP Settings</strong> holds the checklist templates that people fill in on the <strong>Checklists</strong> tab of a CIP.</p>",
+        "images": [
+          {
+            "src": "assets/product/capital-management/023.jpg",
+            "caption": "Checklist templates"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Create CheckList",
+            "definition": "Adds a checklist template."
+          },
+          {
+            "term": "Template card",
+            "definition": "Shows the checklist name, **Description**, **Created By** and **Created On**. The three dots open the card menu."
+          }
+        ],
+        "procedures": []
+      },
+      {
+        "heading": "CIP Approval Workflow",
+        "intro": "<p>The <strong>Approval Workflow</strong> page of <strong>CIP Settings</strong> sets who approves a CIP, level by level.</p>",
+        "images": [],
+        "definitions": [
+          {
+            "term": "Levels table",
+            "definition": "**Level**, **Level Description**, **Approvers**, **Workflow Type**, **SLS configured**, **Timeline Mandatory** and **Actions**."
+          },
+          {
+            "term": "Create Level",
+            "definition": "Adds an approval level."
+          }
+        ],
+        "procedures": []
       }
     ],
     "name": "Capital Management",
@@ -38775,9 +39640,32 @@ const MODULES = [
     ],
     "sections": [
       "Dashboard",
-      "Budget Planning",
-      "CIP",
-      "Settings"
+      "Budgets",
+      "Budget Workflow Issues",
+      "Budget Functions",
+      "Budget Items",
+      "Budget Funds",
+      "Budget Forms",
+      "Organization Structure",
+      "Budget Approval Workflow",
+      "CIPs",
+      "CIP Profile",
+      "CIP Teams",
+      "CIP Documents",
+      "CIP Communications",
+      "CIP Checklists",
+      "CIP Cost Estimate",
+      "CIP Actual",
+      "CIP Score",
+      "Fund Allocations",
+      "CIP Actuals and Forecast",
+      "CIP Assesments",
+      "CIP Workflow Issues",
+      "CIP Profile Settings",
+      "CIP Category",
+      "CIP Objectives",
+      "CIP Checklists Settings",
+      "CIP Approval Workflow"
     ]
   }
 ];
