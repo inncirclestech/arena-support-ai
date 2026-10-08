@@ -22283,27 +22283,23 @@ const MODULES = [
     "narrative": [
       {
         "heading": "Overview",
-        "intro": "<p>Global Data is the company-wide master data of Arena. The Super Admin (Global Admin) sets it up once; Projects and the Home modules then read from it instead of keeping their own lists.</p><p>Every tile follows the same path: data comes in by hand (Add, Create, Register), by Excel (Export → Upload), or by sync from Viewpoint (Staged Tables), and then shows up in project dropdowns and module pickers. The definitions below map each tile to the screens that use it.</p>",
+        "intro": "<p>Global Data is the company-wide master data of Arena: the lists that every project and Home module reads from instead of keeping its own. Click <strong>Global Data</strong> in the top navigation bar, then click a tile on the <strong>Company</strong> tab.</p>",
         "definitions": [
           {
-            "term": "Global Data",
-            "definition": "Arena's company-wide administration hub, covering company identity, users and permissions, reference data (locations, tax, vendors, UOM, construction types), and per-module admin configuration that every project inherits from."
+            "term": "The screens",
+            "definition": "Tiles of the **Company** tab and what each holds:\n- **Company**: your company profile (**Company Details**) and its **Subsidiary** profiles.\n- **Owners**, **Locations**, **Tax Configuration**: the clients who commission projects, the places they are linked to, and the tax codes (Tax Group, Tax Class, Tax Code) used on both.\n- **Vendors** (with **Rate Card** and **Ratings Form**) and **Sub Contractors**: suppliers and subcontracting companies, kept as separate lists.\n- **Business Units** and **Customer**: the business units, and the customers and contacts (**Opportunity Customers**).\n- **Users & Permissions**: **User Accounts**, **Global Rosters**, **Global Permission** and **User Permission**.\n- **Crews**: crews with their supervisors, foremen and rosters.\n- **UOM, Phasecode & GL Codes**: **UOMs** (with **UOM Groups** and **UOM Conversions**), **Phase Codes**, **Repair Types** and **GL Codes**.\n- **Construction Types**: kinds of construction, each with its own location types, work packages, forms and activity sequence template.\n- **Work Order Management**: **Work Orders**, **Workflow Issues**, **Reports** and **Settings** for the whole company.\n- **Settings**, **Forms**, **Notifications**, **Marketplace**, **Cost & Bid Templates**, **Compliance Hub** and **Measurement Templates**: company-wide options, templates and integrations."
           },
           {
-            "term": "Suggested setup order",
-            "definition": "Company Details and Business Units first, then Users & Permissions (so the right people can configure the rest), then Locations, Tax Configuration, Vendors & Sub Contractors, UOM, Phase Codes & GL Codes and Construction Types. After that set up Work Order Management, Cost and Bid Templates, Customer, Settings, Forms, Notifications, Marketplace, Compliance Hub, Measurement Templates and Owners. See the Admin Setup Guide module for the full checklist."
+            "term": "Before you start",
+            "definition": "Use the **Super Admin** (Global Admin) account: it sets Global Data up once. Add **Company Details** and **Business Units** first, then **Users & Permissions**, so the right people can configure the rest."
           },
           {
-            "term": "How data gets into Global Data",
-            "definition": "Three ways. **Manual:** **Add**, **Create**, **Register** buttons (Owners, Locations, Vendors, Users, Crews, Phase Codes and so on). **Excel:** the **Export** split button or **Download Excel / Upload Excel** on Owners, Locations, Users, Phase Codes, Tax Configuration, Bid Templates (**Download Sample Excel**) and **Upload Vendors**; Construction Type Step 7 (Data Migration) loads work breakdown data by Excel. **Sync:** **Staged Tables → View Point** pulls Users, Projects, Crews, Phase Codes, Customers, Vendors, Owners, GL Codes and Work Orders from Viewpoint; **Soft Tech** pulls Work Orders and BOQ."
+            "term": "Who uses it",
+            "definition": "The **Super Admin** (Global Admin) sets up the lists. **Global Permission** holds the company's user groups, and every user placed in a group gets the group's permissions. **User Permission** shows one user's resulting access."
           },
           {
-            "term": "Where Global Data shows up (verified links)",
-            "definition": "Each Global Data list feeds these places:\n- **Owners** → Create Project **Owner** dropdown; **Locations** → Owners → Link Locations; **Tax Configuration** → Tax Codes on Locations and Owners.\n- **Construction Types** → Create Project **Construction Type** dropdown (default pre-selected).\n- **Customer** → Create Project **Customer** dropdown.\n- **Settings → Project Form** → Create Project **Project Type**, **Funding Agency**, **Implementing Agency**.\n- **Users / Global Rosters** → Project Setup → People → Add; **Crews** → People → Project Crews → Copy Crews from Global Data.\n- **Phase Codes** → Project Setup → Phase Codes and timesheet Default Phase Codes (Direct and Indirect Labor codes).\n- **Vendors** → Procurement RFQ (Vendor Category, Sub Category, Category Groups) and dashboard vendor list; **Cost Material/Equipment** → vendor Rate Card rows; **Earnings Codes** → Cost Labor rate columns.\n- **Forms** → Project Setup → Forms (Assign Templates, form types); **Hindrance Category** → Field Works Restraint Category; **Sub Contractor Settings** → Sub Contractor CERTIFICATIONS.\n- **Notifications** → Project Notifications ; **Work Order Management** → same module as Home → Work Order."
-          },
-          {
-            "term": "Why a new Global Data entry may not show up",
-            "definition": "Usual reasons: it was not submitted or saved; it sits in a different category, group or level than the screen filters by (for example RFQ vendors need a category and a group); the screen copies data into the project instead of linking (crews are copied with **Copy Crews from Global Data**); the person or item is inactive; or the page needs reopening. Check the source list in Global Data first, then the consuming screen."
+            "term": "Where the lists show up",
+            "definition": "Each list feeds a dropdown or picker elsewhere:\n- **Owners**, **Construction Types** and **Customer** fill the **Owner**, **Construction Type** and **Customer** dropdowns on **Create Project**.\n- **Locations** and **Tax Configuration** feed **Owners** (link locations, tax codes).\n- **Users** and **Global Rosters** feed **Project Setup → People → Add**; **Crews** are copied with **Copy Crews from Global Data**.\n- **Phase Codes** feed **Project Setup → Phase Codes**.\n- **Vendors** feed Procurement RFQ vendor pickers; **Cost** Material and Equipment lists are the rows of each vendor's **Rate Card**.\n- **Forms** feed **Project Setup → Forms → Assign Templates**; **Notifications** is the starting point for each project's Notifications screen."
           }
         ],
         "procedures": [
@@ -22311,7 +22307,7 @@ const MODULES = [
             "title": "Find where a dropdown gets its values",
             "steps": [
               "Open the dropdown (for example <strong>Owner</strong> on <strong>Projects → Create Project</strong>) and note its values.",
-              "Open the matching tile in <strong>Global Data</strong> (Owners, Customer, Construction Types, Settings → Project Form and so on) using the map in this section.",
+              "Open the matching tile in <strong>Global Data</strong> (<strong>Owners</strong>, <strong>Customer</strong>, <strong>Construction Types</strong>, <strong>Settings → Project Form</strong> and so on).",
               "Compare the two lists. If an entry is missing, add it in Global Data, then reopen the dropdown."
             ]
           }
@@ -26248,6 +26244,29 @@ const MODULES = [
     "qaItems": QA_MYDESK,
     "narrative": [
       {
+        "heading": "Overview",
+        "intro": "<p><strong>My Desk</strong> is the first screen you land on when you open a project: it shows how much work is complete on each part of the project and lists what is waiting for you or for your team.</p>",
+        "definitions": [
+          {
+            "term": "The screens",
+            "definition": "One page, top to bottom:\n- **Project Progress**: one card per part of the project with a **Progress** percentage, plus **Total Work Completed**. A plant filter narrows the cards.\n- **My Actions**: the **Issues**, **Approvals** and **Forms** assigned to you.\n- **Pending Actions**: the same three sub-panels for other people, picked by **Users** or **Roles**.\n- **Recent Work Logs**, **Recent Punch List Items**, **Recent Quality Logs**, **Recent Daily Safety Issues** and **Recent Safety Logs**: the latest items of the plant you pick in the drop-down above the panels."
+          },
+          {
+            "term": "Before you start",
+            "definition": "The plants and parts shown come from the project's works. Progress is a stored figure: **Last Updated At** shows when it was last calculated, and the **Refresh** arrow recalculates it."
+          },
+          {
+            "term": "Who uses it",
+            "definition": "**My Actions** lists the items assigned to you. **Pending Actions** lets a manager look at other people's work: **Users** lists individual people, **Roles** lists user groups such as **Field Users**."
+          },
+          {
+            "term": "What you can change",
+            "definition": "**Project Settings → My Desk** sets the order of the five **Recent** panels and of the dashboards. **Project Settings → My Desk Dashboards** turns dashboards on or off."
+          }
+        ],
+        "procedures": []
+      },
+      {
         "heading": "My Desk",
         "intro": "<p><strong>My Desk</strong> is the first screen you land on when you open a project. It greets you by name and today's date, shows how much work is complete on each part of the project, and lists what is waiting for you or for your team.</p>",
         "images": [
@@ -26376,6 +26395,7 @@ const MODULES = [
       "Change panel order in <strong>Project Settings → My Desk</strong>."
     ],
     "sections": [
+      "Overview",
       "My Desk"
     ]
   },
@@ -26384,6 +26404,21 @@ const MODULES = [
     "category": "projects",
     "qaItems": QA_MYCALENDAR,
     "narrative": [
+      {
+        "heading": "Overview",
+        "intro": "<p><strong>My Calendar</strong> (breadcrumb <strong>Calendar Logs</strong>) is the project's date view: it shows the work scheduled on each date. Open the project, then click <strong>My Calendar</strong>.</p>",
+        "definitions": [
+          {
+            "term": "The screens",
+            "definition": "One page with two views:\n- **Month**: a grid from **SUN** to **SAT**; each day lists the work scheduled on it.\n- **Day**: one date, with **No Work Scheduled For Today** when nothing is due. The calendar icon at the top right opens the **My Desk** actions page for that date.\n- **Select date**: the small calendar on the left; clicking a date switches to **Day**."
+          },
+          {
+            "term": "Before you start",
+            "definition": "A date shows work only after a schedule exists. Schedules are created in **Project Setup → Safety → Setup Safety Calendar** and **Project Setup → Forms → Schedule Project Forms**."
+          }
+        ],
+        "procedures": []
+      },
       {
         "heading": "My Calendar",
         "intro": "<p><strong>My Calendar</strong> (breadcrumb <strong>Calendar Logs</strong>) shows a month grid and a day view, so you can look at any date and see the work scheduled for it.</p>",
@@ -26442,6 +26477,7 @@ const MODULES = [
       "Create schedules in <strong>Project Setup → Safety → Setup Safety Calendar</strong> and <strong>Project Setup → Forms → Schedule Project Forms</strong>."
     ],
     "sections": [
+      "Overview",
       "My Calendar"
     ]
   },
@@ -26450,6 +26486,38 @@ const MODULES = [
     "category": "projects",
     "qaItems": QA_PROJECTSETUP,
     "narrative": [
+      {
+        "heading": "Overview",
+        "intro": "<p><strong>Project Setup</strong> is where a project's structure, people, cost, schedule, forms, safety and quality set-up and document areas are built; the screens you use daily read this configuration. Open the project, then click <strong>Project Setup</strong>.</p>",
+        "definitions": [
+          {
+            "term": "The screens",
+            "definition": "Tabs in order:\n- **Works**: the main parts of the project (a plant or building block). Open one to build its structure step by step: **Entities**, **Super Locations**, **Locations**, **Custom Columns**, **Activities Sequence**, **People**, **Other Attributes (Qty | Hrs)**, **Measurement Methods**, **Comprehensive Layout**.\n- **Tasks**: the project's tasks, with a project mailbox (**Communication**) and **Workflow Issues**.\n- **People**: **Roster**, **Project Crews** and **Project Indirect Staff**.\n- **Estimate**: estimates per work, **Resource Planning** (weekly people and sub contractors) and **Rate Card Template** (Material, Equipment, Labor).\n- **Schedule**: one schedule per work plus **Milestones**, shown as a table and a Gantt chart.\n- **Phase Codes**: the cost codes of the project; tick which ones **Timesheet Management** and **Equipment Management** may use.\n- **Quality** and **Safety**: folders, forms, approval workflows and the safety calendar.\n- **Drawings**: approval workflow, **Drawing Training**, **Drawing Packages**, **Drawing Register** and **Drawing Master**.\n- **Documents**: team folders (**My Files**, **Shared With Me**).\n- **Workorder**: where the project's work orders are created and listed.\n- **Forms**: per form type, who may use each form, its approval workflow, its schedule and its template.\n- **BIM** and **GIS**: 3D models linked to the project tree, and map documents."
+          },
+          {
+            "term": "Before you start",
+            "definition": "Most lists are filled from Global Data: **Global Rosters** and **Crews** for **People**, **Phase Codes** for **Phase Codes**, Forms templates for **Assign Templates**. If an entry is missing, check Global Data first."
+          },
+          {
+            "term": "Who sets access",
+            "definition": "**Work Package People** decides who is responsible for and who approves each work package. **Forms → Assign Users** gives each user **View**, **Create**, **Edit** and **Delete** on each form."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Build a project from the top",
+            "steps": [
+              "Open <strong>Works</strong> and create a work, then click <strong>Assign Percentage</strong> so the weights of the works total 100%.",
+              "Open the work and fill its steps from <strong>Entities</strong> to <strong>Comprehensive Layout</strong>.",
+              "Open <strong>People</strong> and add roster people and crews.",
+              "Open <strong>Phase Codes</strong> and tick the codes for <strong>Timesheet Management</strong> and <strong>Equipment Management</strong>.",
+              "Open <strong>Forms</strong> and assign users, approval workflows and templates.",
+              "Open <strong>Estimate</strong> and <strong>Schedule</strong> to add cost and dates.",
+              "Open <strong>Workorder</strong> to create work orders."
+            ]
+          }
+        ]
+      },
       {
         "heading": "Works",
         "intro": "<p><strong>Works</strong> is the first tab of <strong>Project Setup</strong>. It lists the main parts of the project (for example a plant or a building block), and each one has its own structure of locations, activities and people. A card here opens that structure.</p>",
@@ -28533,57 +28601,6 @@ const MODULES = [
             ]
           }
         ]
-      },
-      {
-        "heading": "Overview",
-        "intro": "<p>Project Setup is where a <strong>PM</strong> or <strong>Module Admin</strong> builds a project's structure, people, budget, schedule, forms and document areas before field teams start work. Field Works, My Desk, My Calendar and Data Analytics all read what you set up here.</p><p>It has fourteen tabs: <strong>Works</strong>, <strong>Tasks</strong>, <strong>People</strong>, <strong>Estimate</strong>, <strong>Schedule</strong>, <strong>Phase Codes</strong>, <strong>Quality</strong>, <strong>Safety</strong>, <strong>Drawings</strong>, <strong>Documents</strong>, <strong>Workorder</strong>, <strong>Forms</strong>, <strong>BIM</strong> and <strong>GIS</strong>. Most lists and dropdowns are filled from Global Data, so if something is missing, check Global Data first.</p>",
-        "definitions": [
-          {
-            "term": "Project Setup tab bar",
-            "definition": "The 14 tabs in order: Works, Tasks, People, Estimate, Schedule, Phase Codes, Quality, Safety, Drawings, Documents, Workorder, Forms, BIM, GIS. Routes start with #/project-setup/."
-          },
-          {
-            "term": "Setup versus execution",
-            "definition": "Project Setup defines structure, people, budget, schedule, templates and workflows; **Field Works** is where teams log real work against them. Almost anything missing in the field is missing here first."
-          },
-          {
-            "term": "Global Data relationship",
-            "definition": "Global Data holds the company master data; Project Setup chooses from it or copies it. It does not keep a separate copy of most lists. The map below shows which Global Data list feeds which tab."
-          },
-          {
-            "term": "Lineage map: what comes from Global Data",
-            "definition": "**Works**: Construction Type, Status, Project/Funding/Implementing Agency (Settings) on the identity panel; Entity, Super Location and Location types, Work Packages, Activity Sequence templates (Construction Types). **People**: Global Rosters (system and non system) and Crews. **Estimate**: Cost types and their templates (Cost), UOM, Phase Codes, Vendors and Sub Contractors (Resource Planning). **Phase Codes**: the 963 UOM, Phasecode & GL Codes list. **Quality, Safety**: Quality Forms and Safety Forms (Construction Types). **Drawings**: Activities, Drawing Management Forms. **Documents**: Structure Template and Document Template (Document Management). **Workorder**: Vendors and Sub Contractors, Workorder Forms. **Forms**: Forms templates and categories."
-          },
-          {
-            "term": "Lineage map: what each tab feeds",
-            "definition": "**Works** feeds the plants on My Desk, every Field Works plant list, Estimate, Schedule, Drawings and the plant selectors. **People** feeds every user picker (Forms Assign Users, workflow approvers, Drawing package team, Pending Actions, Create Crew). **Phase Codes** feeds Time Management and equipment logs. **Forms**, **Safety** and **Quality** feed what field users see in Field Works and My Desk Actions. **Safety Calendar** and **Schedule Project Forms** feed My Calendar. **Estimate** and **Schedule** feed cost and planned-versus-actual views in Data Analytics."
-          },
-          {
-            "term": "Project Settings that change these tabs",
-            "definition": "**Phase Code Settings** (Unique or Multiple-Use codes), **Configure Task Form** (Tasks), **Cost Breakdown Structure** (Estimate: CBS level, Level of Detail, Estimate Type, approval workflow), **Drawing Status** (Drawing Register), **Work Logs Templates** and **Quality Work Logs Templates** (how work logs look in Field Works), **My Desk** and **My Desk Dashboards** (My Desk). See the **Project Settings** module."
-          },
-          {
-            "term": "Suggested setup order",
-            "definition": "1) Works (plants, entities, locations, work packages, Assign Percentage). 2) People (roster, crews). 3) Phase Codes mapping and Project Settings. 4) Forms (users, approval, templates) and Quality/Safety folders, workflows and calendar. 5) Drawings and Documents. 6) Estimate and Schedule. 7) Workorder, BIM, GIS as needed."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Trace why something is missing from a Project Setup list",
-            "steps": [
-              "Note which dropdown or list is missing the item (for example Vendors in Create Workorder, Phase Codes, Forms templates).",
-              "Use the **Lineage map** to find the Global Data list that feeds it, open that list and confirm the item exists and is active.",
-              "If the list copies from Global Data (for example Crews), use the copy button again; if it links (Phase Codes), reopen the screen.",
-              "If it exists but still does not show, check the Project Settings page for that tab and the user's permissions."
-            ]
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/notion/how-to-create-projects/001.jpg",
-            "caption": "The Projects list: click a project name to open it"
-          }
-        ]
       }
     ],
     "name": "Project Setup",
@@ -28597,6 +28614,7 @@ const MODULES = [
       "Several tabs (People, Estimate, Quality, Safety, Drawings, Documents, Forms) have their own sub-tabs; Forms goes one level further with a three-level category → sub-area → form-type navigation."
     ],
     "sections": [
+      "Overview",
       "Works",
       "Entities",
       "Super Locations",
@@ -28641,8 +28659,7 @@ const MODULES = [
       "Schedule Project Forms",
       "Assign Templates",
       "BIM",
-      "GIS",
-      "Overview"
+      "GIS"
     ]
   },
   {
@@ -28650,6 +28667,37 @@ const MODULES = [
     "category": "projects",
     "qaItems": QA_FIELDWORKS,
     "narrative": [
+      {
+        "heading": "Overview",
+        "intro": "<p><strong>Field Works</strong> is where site work is logged: progress, quality, safety, cost, drawings, invoices and work orders. Open the project, then click <strong>Field Works</strong> in the left menu.</p>",
+        "definitions": [
+          {
+            "term": "The screens",
+            "definition": "Top tabs:\n- **Tree Version**: one card per plant. Open a plant to get its own tabs: **Progress**, **Quick Apps**, **Quality**, **Project Forms** and **Cost**.\n- **Safety**: **Safety Forms**, **Daily Safety Issues**, **Completed Safety**, **Safety Calendar** and **Approve Safety**.\n- **Drawing Management**: drawing workflow issues.\n- **Invoices**: **Work Order Invoice** and **Invoice Workflow Issues**.\n- **Workorder**: the work orders linked to the project's plants.\nInside a plant: **Progress** holds **Work Logs**, **Submitted Work Logs**, **Approve Work Logs**, **Productivity Logs**, **Site Photographs**, **Ready Works**, **Meeting Minutes**, **Issues**, **Restraints** and more; **Quality** holds **Quality Level 1**, **Quality Level 2**, **Punch Lists**, **Submitted Quality Logs** and **Approve Quality Logs**; **Cost** holds **Transaction**, **Change Orders**, **Transfer** and **Field Logs**."
+          },
+          {
+            "term": "Before you start",
+            "definition": "Plants come from **Project Setup → Works**. The **Work Logs** layout is chosen in **Project Settings → Work Logs Templates**. The **Cost** screens show **No active estimate found** until the plant has an active, approved estimate."
+          },
+          {
+            "term": "Who uses it",
+            "definition": "Site staff log on the **Work Logs**, **Quality** and **Safety** screens. Approvers use **Approve Work Logs**, **Approve Quality Logs** and **Approve Safety**, which list what is waiting for them. **Punch Lists** can be filtered to the items assigned to you."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "How a work log moves through Field Works",
+            "steps": [
+              "Build the plant in <strong>Project Setup → Works</strong>.",
+              "Open <strong>Field Works → Tree Version</strong> and click the plant.",
+              "Open <strong>Progress → Work Logs</strong> and log the completion of the work package at a location.",
+              "Check it under <strong>Submitted Work Logs</strong>, grouped by date.",
+              "An approver opens <strong>Approve Work Logs</strong> and acts on the waiting logs.",
+              "Use <strong>Quality → Punch Lists</strong> for quality failures that must be rectified, and <strong>Detailed Work Logs</strong> to read all work packages in one table."
+            ]
+          }
+        ]
+      },
       {
         "heading": "Tree Version",
         "intro": "<p>The <strong>Tree Version</strong> tab is the first tab of <strong>Field Works</strong>. It lists the plants of the project, one card each; click a card to open that plant's <strong>Progress</strong> cards.</p>",
@@ -30502,44 +30550,6 @@ const MODULES = [
           }
         ],
         "procedures": []
-      },
-      {
-        "heading": "Overview",
-        "intro": "<p>If Project Setup is where a construction business configures a project before anyone picks up a tool, <strong>Field Works</strong> is where the job actually gets executed and recorded. This is the module a foreman, field engineer, QA/QC inspector, or safety officer opens dozens of times in a working day, as opposed to Project Setup, which a <strong>PM or Module Admin</strong> visits mainly at kickoff and during reconfiguration. Everything here reads from configuration built elsewhere — a work package, form template, safety category, or approval workflow has to exist in Project Setup or Global Data before anyone can act on it in the field.</p><p>Field Works is organized as a top tab bar of five tabs: <strong>Tree Version</strong>, <strong>Safety</strong>, <strong>Drawing Management</strong>, <strong>Invoices</strong>, and <strong>Workorder</strong>. The bulk of daily activity happens under Tree Version, which mirrors the project's plant/work-package structure exactly as defined in Project Setup → Works. Clicking a plant card there opens a <strong>second-level tab bar scoped to that plant</strong> — Progress, Quick Apps, Quality, Project Forms, and Cost — so every log, inspection, form, and cost movement stays attached to the specific work package it belongs to. That scoping is what makes progress-versus-cost and quality-versus-plant reporting mean anything later.</p><p>The remaining four top tabs are project-wide rather than plant-scoped. Safety covers the project's safety forms, calendar, issues, and approvals. Drawing Management is a deliberately narrow issue queue for drawings that failed approval. Invoices carries work-order invoices and their workflow problems. Workorder is the execution-side tracking of work orders, distinct from the setup-side Workorder tab in Project Setup.</p>",
-        "definitions": [
-          {
-            "term": "Tree Version",
-            "definition": "The first and busiest top tab of Field Works — a grid of cards, one per work package or plant, each listing its child Entities. It mirrors the structure defined in Project Setup → Works."
-          },
-          {
-            "term": "Safety (top tab)",
-            "definition": "The project-wide safety execution tab, holding Safety Forms, Daily Safety Issues, Completed Safety, Safety Calendar, and Approve Safety."
-          },
-          {
-            "term": "Drawing Management (top tab)",
-            "definition": "A single-card tab holding Workflow Issues — the drawing workflow issues raised in the project when a drawing is rejected at any approval level."
-          },
-          {
-            "term": "Invoices (top tab)",
-            "definition": "A two-card tab holding Invoices (labelled \"Workorder Invoices\") and Workflow Issues for work-order-invoice workflow problems."
-          },
-          {
-            "term": "Workorder (top tab)",
-            "definition": "The execution-side work order tracking view, with search and a grid/list toggle — distinct from the setup-side Workorder tab in Project Setup where work orders are created."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Find the right Field Works screen",
-            "steps": [
-              "Open the project and go to **Field Works** in the left sidebar.",
-              "For day-to-day logging against a specific plant, stay on **Tree Version** and click that plant's card.",
-              "On the second-level tab bar, choose **Progress** for logs and forms, **Quality** for inspections, **Cost** for cost movements, **Project Forms** for project-specific custom forms, or **Quick Apps** for no-code mini workflows.",
-              "For safety work, drawing rejections, invoices, or work order tracking, use the **Safety**, **Drawing Management**, **Invoices**, or **Workorder** top tabs instead — these are project-wide, not plant-scoped."
-            ],
-            "note": "If a form, work package, or safety category you expect is missing, the cause is almost always upstream in Project Setup rather than in Field Works itself."
-          }
-        ]
       }
     ],
     "name": "Field Works",
@@ -30554,6 +30564,7 @@ const MODULES = [
       "Click a plant card on <strong>Tree Version</strong> to open its second-level tabs: Progress, Quick Apps, Quality, Project Forms, and Cost."
     ],
     "sections": [
+      "Overview",
       "Tree Version",
       "Progress",
       "Work Logs",
@@ -30604,8 +30615,7 @@ const MODULES = [
       "Transaction",
       "Change Orders",
       "Transfer",
-      "Field Logs",
-      "Overview"
+      "Field Logs"
     ]
   },
   {
@@ -30613,6 +30623,21 @@ const MODULES = [
     "category": "projects",
     "qaItems": QA_DATAANALYTICS,
     "narrative": [
+      {
+        "heading": "Overview",
+        "intro": "<p><strong>Data Analytics & Insights</strong> shows read-only charts, tables and reports on the project's progress, schedule, cost, quality and safety. Open the project, then click <strong>Data Analytics & Insights</strong>.</p>",
+        "definitions": [
+          {
+            "term": "The screens",
+            "definition": "Three tabs:\n- **Standard Analytics**: a grid of ready-made cards, for example **Construction Progress**, **Schedule**, **Cost**, **Quality Progress**, **Safety Analytics**, **Productivity Reports**, **Workorders**, **RFI Approval Delays** and **Work Summary - MIS Report**. Most pages use a **Tree Version** picker.\n- **Configurable Analytics**: tools you set up yourself (**Data Trends**, **Counting Tables**, **Configure Data Tables**, **Build your own Charts**, **Build your own Reports**), plus **Data Classification**, **Excel** upload and download, and **Power BI**.\n- **Standard Reports**: **Reports** (**Daily Progress Report**, **Weekly Progress Report**) and **Other Reports** (**Scope**, **Cost**, **Schedule**, **Quality**, **Safety**)."
+          },
+          {
+            "term": "Before you start",
+            "definition": "The charts read what the project has recorded. **Cost** and **Amount Invoiced vs Amount Paid** show **No Data** until estimates and invoices exist. **Loop Progress** is empty until loops are set up. **DPR Report** stays empty until you choose a workorder."
+          }
+        ],
+        "procedures": []
+      },
       {
         "heading": "Standard Analytics",
         "intro": "<p><strong>Standard Analytics</strong> is the first tab of <strong>Data Analytics & Insights</strong> in the project menu. It is a grid of ready-made analytics cards for the open project; click a card to open its charts and tables. Everything is read-only, and most pages are driven by a <strong>Tree Version</strong> picker.</p>",
@@ -30996,6 +31021,7 @@ const MODULES = [
       "<strong>Standard Reports</strong> has its own <strong>Reports</strong> and <strong>Other Reports</strong> sub-tabs."
     ],
     "sections": [
+      "Overview",
       "Standard Analytics",
       "Construction Progress",
       "Schedule Analytics",
@@ -31013,6 +31039,25 @@ const MODULES = [
     "category": "projects",
     "qaItems": QA_DOCUMENTREPOSITORY,
     "narrative": [
+      {
+        "heading": "Overview",
+        "intro": "<p>The <strong>Document Repository</strong> keeps the documents that the project's forms and logs have produced, filed in folders by type. Open the project, then click <strong>Document Repository</strong>.</p>",
+        "definitions": [
+          {
+            "term": "The screens",
+            "definition": "One page. The left list holds the folders: **RFI**, **Meeting Minutes**, **Other Forms**, **Qualities Level 1**, **Qualities Level 2**, **Safety Scheduled Forms**, **Safety Forms**, **Drawings**, **Workorders**, **Invoices**, **Daily Progress Reports** and **Weekly Progress Reports**. The right table lists the open folder's documents by **Tree Version**, **Name**, **Description** and **Added On**."
+          },
+          {
+            "term": "Before you start",
+            "definition": "Folders fill as forms and logs produce documents; a folder with none says **There is no data in this folder**."
+          },
+          {
+            "term": "What you can do with a document",
+            "definition": "**Download File**, **Print File**, **Access Logs** (who opened it, when, from which IP, system and browser) and **Email Threads** (the email conversation about it)."
+          }
+        ],
+        "procedures": []
+      },
       {
         "heading": "Document Repository",
         "intro": "<p>The <strong>Document Repository</strong> keeps the documents that the project's forms and logs have produced, filed in folders by type, so you can find, download, print or trace them in one place.</p>",
@@ -31113,6 +31158,7 @@ const MODULES = [
       "Select a category (or sub-category) in the left pane to filter the record table on the right."
     ],
     "sections": [
+      "Overview",
       "Document Repository"
     ]
   },
@@ -31121,6 +31167,21 @@ const MODULES = [
     "category": "projects",
     "qaItems": QA_FOLLOWUPACTIONS,
     "narrative": [
+      {
+        "heading": "Overview",
+        "intro": "<p><strong>Follow Up Actions</strong> is a project page that lists follow-up items. Open the project, then click <strong>Follow Up Actions</strong>.</p>",
+        "definitions": [
+          {
+            "term": "The screens",
+            "definition": "One page: a **Search** box that narrows the list, and the follow-up list below it. It reads **There are no Follow Up Actions** while the list is empty."
+          },
+          {
+            "term": "Before you start",
+            "definition": "Nothing on this page creates an item: it has no create button. The **Follow Up Actions** buttons on RFI forms and on **Daily Safety Issues** open it."
+          }
+        ],
+        "procedures": []
+      },
       {
         "heading": "Follow Up Actions",
         "intro": "<p><strong>Follow Up Actions</strong> is a list of follow-up items in the project. When there are none, the page says <strong>There are no Follow Up Actions</strong>.</p>",
@@ -31152,6 +31213,7 @@ const MODULES = [
       "Open a <strong>Project</strong>, then go to <strong>Follow Up Actions</strong>."
     ],
     "sections": [
+      "Overview",
       "Follow Up Actions"
     ]
   },
@@ -31160,6 +31222,21 @@ const MODULES = [
     "category": "projects",
     "qaItems": QA_PROJECTNOTIFICATIONS,
     "narrative": [
+      {
+        "heading": "Overview",
+        "intro": "<p>The project's <strong>Notifications</strong> menu opens its Notification Schema, which decides which messages the project sends and when. Open the project, then click <strong>Notifications</strong>.</p>",
+        "definitions": [
+          {
+            "term": "The screens",
+            "definition": "Four tabs:\n- **Event Groups**: the groups of events of this project. **+ Add Event Groups** adds a group by **Name**; **Get Standard Event Groups** loads the standard ones.\n- **Events**: every event that can send a notification, with a tick for each way it is delivered: **Mail**, **Web** or **Mobile**. **Reset to Standard** restores the standard choices.\n- **Reminders**: scheduled messages to chosen people on a repeating timetable for a module. **+ Create Reminder** opens a three-step wizard: **Configure Reminder**, **Assign People**, **Preview**.\n- **Alerts**: automatic warnings that repeat while a condition stays true, for example a task that is past due and still open. **+ Create Alert** opens a three-step wizard: **Configure Alert**, **Assign People**, **Preview**."
+          },
+          {
+            "term": "Before you start",
+            "definition": "**Global Data → Notifications** is the company-wide starting point: each project has its own copy with the same event groups, which you then adjust. A reminder or alert needs a **Link Module** and a **Tree Version**; the delivery choices are **Web**, **Email** and **Mobile**."
+          }
+        ],
+        "procedures": []
+      },
       {
         "heading": "Event Groups",
         "intro": "<p>The <strong>Notifications</strong> menu opens the <strong>Notification Schema</strong> of the project, which sets which messages the project sends. It has four tabs: <strong>Event Groups</strong>, <strong>Events</strong>, <strong>Reminders</strong> and <strong>Alerts</strong>. <strong>Event Groups</strong> is the first tab.</p>",
@@ -31410,6 +31487,7 @@ const MODULES = [
       "Use the tab bar to switch between <strong>Event Groups</strong>, <strong>Events</strong>, <strong>Reminders</strong>, and <strong>Alerts</strong>."
     ],
     "sections": [
+      "Overview",
       "Event Groups",
       "Events",
       "Reminders",
@@ -31421,6 +31499,36 @@ const MODULES = [
     "category": "projects",
     "qaItems": QA_USERSANDPERMISSIONS,
     "narrative": [
+      {
+        "heading": "Overview",
+        "intro": "<p><strong>Users and Permissions</strong> controls who can do what in the project: users get the permissions of the groups they belong to. Open the project, then click its permission section (<strong>Permission Schema</strong>).</p>",
+        "definitions": [
+          {
+            "term": "The screens",
+            "definition": "Two tabs:\n- **Groups Permission**: one card per user group, with **Permissions** and **Users** buttons. **+ Add User Group** builds a new group; **+ Fetch Templates** adds ready-made groups. The three-dot menu has **Edit**, **Delete** and **Copy**.\n- Inside a group, **Permissions** is a table of project sections with **View**, **Create**, **Edit**, **Delete**, **Admin**, **Download**, **Print**, **Assign To** and **Roll Back** columns; **Users** lists the members and has **+ Add Users**.\n- **User Permission**: pick one person to see **Basic Details**, their **Groups** and the **Permissions** they end up with."
+          },
+          {
+            "term": "Before you start",
+            "definition": "**+ Fetch Templates** offers standard groups such as **Field Users**, **Operations Team**, **Quality Admins**, **IT Admin**, **Project Safety Coordinator**, **Project Quality Coordinator** and **PROJECT POC ADMIN**. **+ Add Users** lists project users who are not yet in the group."
+          },
+          {
+            "term": "Who uses it",
+            "definition": "Access to this screen is itself a permission: the permission table has **Group Permission** and **User Permissions** rows under **Permissions**. A group card can carry a **Restricted Users** tag."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Give people access to the project",
+            "steps": [
+              "Open <strong>Groups Permission</strong> and click <strong>+ Add User Group</strong>, or <strong>+ Fetch Templates</strong> for a standard group.",
+              "Open the group's <strong>Permissions</strong> tab and tick the actions it needs.",
+              "Click <strong>Save Changes</strong>.",
+              "Open the <strong>Users</strong> tab, click <strong>+ Add Users</strong>, tick people and click <strong>Submit</strong>.",
+              "Open <strong>User Permission</strong> and pick a person to check the access they end up with."
+            ]
+          }
+        ]
+      },
       {
         "heading": "Groups Permission",
         "intro": "<p><strong>Groups Permission</strong> is the first tab of <strong>Users and Permissions</strong> in the project menu. It lists the user groups of this project; each group has a set of permissions and a list of users, and the users get whatever their groups allow.</p>",
@@ -31666,6 +31774,7 @@ const MODULES = [
       "Use the tab bar to switch between <strong>Groups Permission</strong> and <strong>User Permission</strong>."
     ],
     "sections": [
+      "Overview",
       "Groups Permission",
       "Group Permissions Tab",
       "Group Users",
@@ -31677,6 +31786,21 @@ const MODULES = [
     "category": "projects",
     "qaItems": QA_OWNERS,
     "narrative": [
+      {
+        "heading": "Overview",
+        "intro": "<p><strong>Owners</strong> is where the client or owner side of a project is registered. Open the project, then click <strong>Owners</strong>.</p>",
+        "definitions": [
+          {
+            "term": "The screens",
+            "definition": "One page: a **Search** box, a **Register Owner** button and the list of owners of this project. **Register Owner** opens **Provide Owners Details**, with **Owner ID**, **First Name**, **Last Name**, **Username**, **Email** and **Sign Label** (**Initials**, **Sign** or **Upload**)."
+          },
+          {
+            "term": "Before you start",
+            "definition": "The list is empty until the first owner is registered. Each owner added becomes a person of the project, so approved documents can carry their signature. **Project Settings → Owner Dashboard** lists the analytics available on the owner dashboard."
+          }
+        ],
+        "procedures": []
+      },
       {
         "heading": "Owners",
         "intro": "<p><strong>Owners</strong> is where the client or owner side of a project is registered. Each owner added here becomes a person of the project, so approved documents can carry their signature.</p>",
@@ -31777,6 +31901,7 @@ const MODULES = [
       "Use <strong>Register Owner</strong> to add a new stakeholder, or the search box to find an existing one."
     ],
     "sections": [
+      "Overview",
       "Owners",
       "Provide Owners Details"
     ]
@@ -31786,6 +31911,25 @@ const MODULES = [
     "category": "projects",
     "qaItems": QA_PROJECTSETTINGS,
     "narrative": [
+      {
+        "heading": "Overview",
+        "intro": "<p><strong>Project Settings</strong> sets how this project looks and behaves. It is the last item in the project's left menu; pick a category on the left and edit its options on the right.</p>",
+        "definitions": [
+          {
+            "term": "The screens",
+            "definition": "Categories on the left (use **Search** to find one):\n- **Look & Feel**, **Forms**, **Project Setup View**, **Project Date Format**: appearance and date format.\n- **Work Logs Templates**, **Quality Work Logs Templates**, **Project Work Measurement**, **Quality Logs**, **Productivity Log Settings**, **Project Driven**, **Dashboard Percentages**: how work, quality and productivity are logged and measured.\n- **Punch Lists & Restraints**, **Daily Safety Issues & Observations**, **Progress Forms**, **Projects Forms**, **Workflow Issues**, **Request for Information**: priorities (with due hours) and categories.\n- **Time Management**, **Procurement Workflow Settings**, **Quick Apps**, **Cost Breakdown Structure**: approval workflows and who may use what.\n- **My Desk**, **My Desk Dashboards**, **Owner Dashboard**, **User Preferences**: which panels and dashboards show and which tree version opens.\n- **Phase Code Settings**, **Define Location**, **Drawing Status**, **Tree Versions Custom Work Packages Name**, **Configure Task Form**, **Configure Form Id Type**, **Variation Order Form**, **Custom Resources**, **Resource Data Source**, **Terms and Conditions**, **Transmittals Submitted Type**, **Market Type**, **googlemaps**, **Vista Progress**: reference lists and field options."
+          },
+          {
+            "term": "Before you start",
+            "definition": "Settings apply to this project only. Click **Save Changes** to apply an option; categories that list records (priorities, categories, levels) save through their own add, edit and delete icons."
+          },
+          {
+            "term": "What each setting changes",
+            "definition": "Examples: **Work Logs Templates** decides which layout **Field Works → Work Logs** opens. **Time Management** sets the approval workflow for timesheets in Home, Time Management. **My Desk** sets the order of the panels on **My Desk**. **Phase Code Settings** decides whether a phase code is unique to one work package and location or reusable."
+          }
+        ],
+        "procedures": []
+      },
       {
         "heading": "Project Settings",
         "intro": "<p><strong>Project Settings</strong> is the last item in the project's left menu. A list of settings categories with a <strong>Search</strong> box sits on the left; click a category to open its options on the right. Changes only take effect when you click <strong>Save Changes</strong> (categories that have that button).</p>",
@@ -32390,6 +32534,7 @@ const MODULES = [
       "Use the search box or scroll the left-hand category list, then edit the selected category's panel on the right."
     ],
     "sections": [
+      "Overview",
       "Project Settings",
       "Look and Feel",
       "Forms Settings",
