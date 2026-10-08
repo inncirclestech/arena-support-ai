@@ -16132,1194 +16132,1292 @@ const MODULES = [
     "qaItems": QA_OPPORTUNITY,
     "narrative": [
       {
-        "heading": "Overview",
-        "intro": "<p>This section is for anyone who wants to know who does what in Opportunity Management: BD users log and work the pursuits, team members help on them, leads oversee them, and Sales Ops keeps the master data and setup in order. Each role works on the same opportunity record.</p><p>Access comes from user groups under <strong>Settings → Users and Permissions</strong> (the BD group and the Admin group). To see every opportunity in the organisation, a user needs the <strong>Admin View</strong> permission under Global Data.</p>",
-        "definitions": [
+        "heading": "My Dashboard",
+        "intro": "<p><strong>My Dashboard</strong> is the first tab of Opportunity Management. It sums up your opportunities in tiles and lists, so you can see the pipeline, your tasks and what is due without opening each opportunity.</p>",
+        "images": [
           {
-            "term": "Opportunity flow at a glance",
-            "definition": "A BD user logs a lead with the short Create form, then opens the lead and completes its profile: classification, value, dates and contacts. The BD user sets milestone dates and changes the Stage, at which point the system marks every field the setup requires with a red asterisk. The opportunity then advances through its stages and statuses until it closes, and each outcome stays on the record. Leadership follows the pipeline on **My Dashboard**, **Reports** and **Analytics**. Sales Ops keeps customers, locations, account assignments and templates ready so BD users are not blocked."
-          },
-          {
-            "term": "BD user: what you do",
-            "definition": "Business Development rep, estimator or account manager. You click **+ Create** to log a lead, open it to complete the profile (**Details**, **Status & Value**, **Timeline & Activity**, **Contact**), set the Milestone Template and target dates, log calls, mails, meetings, tasks and notes on **Clients Interactions**, add proposals and pursuit expenses, and move the Stage and Status as the pursuit advances. If a customer, location or contact is missing, you ask Sales Ops in the opportunity's **Comments** tab. Your **My Dashboard** shows your own pipeline."
-          },
-          {
-            "term": "Team member: what you do",
-            "definition": "Anyone added on the opportunity's **Teams** tab. Team members can edit the opportunity's fields and add information, and use the **Comments** tab as the internal chat for that deal."
-          },
-          {
-            "term": "BD Rep, Corporate Lead and Executive Lead: what you do",
-            "definition": "These are the people named on an opportunity's **Contact** section: the BD Rep drives the pursuit (some environments call this role Site Representative), the Corporate Lead gives business oversight, and the Executive Lead holds final approval authority. They can be picked by hand, or fill in automatically when the customer, location and market match a row in **Account Assignment**."
-          },
-          {
-            "term": "Sales Ops (Module Manager): what you do",
-            "definition": "You keep the module ready for BD users. Under **Settings** you manage **Stages & Statuses Configuration**, the **Opportunities Form** (Required by stage, Hide, Show At Creation), **ID Settings**, Opportunity Types and **Milestone Templates**, the Business Development name pool, expense categories with their approval routing, proposal statuses and **Users and Permissions**. On the module you keep **Account Assignment** up to date. In Global Data you create **Locations** (named Client - City), approve new customers and maintain the **Compliance Hub**. You also answer BD requests posted in an opportunity's **Comments**."
-          },
-          {
-            "term": "Leadership: what you do",
-            "definition": "Sales Directors and executives read the pipeline rather than enter it: **Analytics** (Market & Operations, Executive Summary, Pipeline by BU, Pipeline Intelligence) and **Reports** (Forecast, Opportunity Aging, Outcome Analysis, Customer Win Rate, Pipeline Report, Huddle Report, Pipeline Gantt View). With the **Admin View** permission they also see every opportunity on the dashboard."
+            "src": "assets/product/opportunity/101.jpg",
+            "caption": "My Dashboard"
           }
         ],
-        "procedures": [
-          {
-            "title": "Take a lead from first log to qualified opportunity (BD user)",
-            "steps": [
-              "Click <strong>+ Create</strong> on the <strong>Opportunities</strong> tab, enter the Opportunity Name and the other required fields, and click <strong>Submit</strong>.",
-              "Open the lead and complete the profile in the four sections.",
-              "Choose the <strong>Milestone Template</strong>, open the <strong>Milestones</strong> tab and enter target dates.",
-              "Change <strong>Stage</strong>. Fill in every field marked with a red asterisk, then click <strong>Save Changes</strong>.",
-              "Keep Status, Stage and interactions up to date as the pursuit advances."
-            ],
-            "note": "The fields the system requires at each stage are set by Sales Ops in Settings → Opportunities Form."
-          },
-          {
-            "title": "Get Opportunity Management ready for BD users (Sales Ops)",
-            "steps": [
-              "Open <strong>Settings</strong> and set up <strong>Stages & Statuses Configuration</strong> and the <strong>Opportunities Form</strong>.",
-              "Set <strong>ID Settings</strong>, Opportunity Types and <strong>Milestone Templates</strong>.",
-              "Add users to the BD group and the Admin group under <strong>Users and Permissions</strong>.",
-              "In Global Data, create <strong>Locations</strong>, then map each one in <strong>Account Assignment</strong> with its BD Rep, Corporate Lead, Executive Lead and Tier.",
-              "Approve new customer requests, and check the opportunity <strong>Comments</strong> for BD requests."
-            ]
-          }
-        ]
-      },
-      {
-        "heading": "Dashboard",
-        "intro": "<p>A BD Manager or Sales Director needs a same-day answer to \"how healthy is our pipeline right now\" — without digging through spreadsheets or asking each rep individually for a status update. </p><p>My Dashboard is the landing screen for Opportunity Management (labeled Leads Management inside a Project) — the personal, KPI-driven home page a <strong>BD End User</strong> sees the moment they open the module. Rather than dropping you straight into a raw list of records, Arena surfaces the handful of numbers and lists that matter most for managing a pipeline day to day: how many pursuits you're carrying, how much they're collectively worth, which ones need attention because they've gone quiet, and which ones are coming due.</p>\n    <p>The dashboard exists to answer a simple recurring question — \"what does my pipeline look like right now, and what needs my attention today?\" — without requiring you to build a filtered view of the Opportunities list yourself. Every KPI card is clickable or linked to the underlying data, so the dashboard functions as a jumping-off point into the rest of the module as much as a summary of it.</p>\n    <p>Because staleness and due dates are time-sensitive, several of the dashboard's cards are driven by configuration set elsewhere in the module (specifically under Settings), which means the dashboard's behavior changes depending on how an administrator has tuned thresholds for your organization. Understanding those underlying settings — covered in the Settings section — helps you interpret what the dashboard is telling you.</p><p>Because the dashboard is personal by default, a <strong>BD Manager</strong> typically also relies on the company-wide Analytics tab (see below) for a rolled-up view across the whole team, rather than trying to read every individual rep's My Dashboard separately.</p>",
         "definitions": [
           {
-            "term": "My Dashboard",
-            "definition": "The personal, KPI-driven landing tab of Opportunity Management, opened by default when you enter the module. It shows totals, value, staleness, pipeline funnel shape, your tasks, recent activity, and upcoming due dates in one place, with a Daily/Weekly/Monthly toggle that re-bases every KPI card to that time window."
+            "term": "Total Opportunities",
+            "definition": "The count of opportunities, with the **Total** value of all of them next to it and the percentage change since the last period."
           },
           {
-            "term": "Total Opportunities",
-            "definition": "A KPI card showing the count of opportunities you're tracking plus their combined Total Value (₹), along with a trend indicator comparing today's numbers to yesterday's."
+            "term": "Daily, Weekly, Monthly",
+            "definition": "Switch the period the tiles compare against. The change line under each tile reads **No Change from yesterday**, **from last week** or **from last month** to match."
           },
           {
             "term": "Total Opportunity Value",
-            "definition": "The sum of the Opportunity Value field across every opportunity record in view — a raw, unweighted total of everything in the pipeline."
+            "definition": "The combined value of the opportunities, in rupees."
           },
           {
             "term": "Weighted Opportunity Value",
-            "definition": "The sum of opportunity values weighted by win-probability, rather than a raw total. Because not every opportunity in the pipeline is equally likely to close, this KPI gives a probability-adjusted view of how much pipeline value you can realistically expect to convert — a more honest forecasting number than Total Opportunity Value alone."
-          },
-          {
-            "term": "Stale Opportunity",
-            "definition": "An opportunity that has crossed the configurable Stale Threshold — a number of days of inactivity defined in Settings → Opportunities Form → Stale Threshold. The dashboard's Stale Opportunities KPI counts how many records currently exceed that threshold, giving you an early warning list of pursuits that risk going cold from neglect."
+            "definition": "The combined weighted value of the opportunities, in rupees."
           },
           {
             "term": "Due This Week",
-            "definition": "A KPI card counting opportunities whose Due Date falls within the current week, helping you triage what needs action in the near term rather than scanning the full list for due dates manually."
+            "definition": "How many opportunities have a due date in the current week."
+          },
+          {
+            "term": "Stale Opportunities",
+            "definition": "How many opportunities are flagged as stale."
           },
           {
             "term": "Opportunity Funnel",
-            "definition": "A chart on the dashboard visualizing opportunity counts and value broken down by pipeline Stage, giving you an at-a-glance read on where the bulk of your pipeline currently sits (e.g., heavily weighted toward Lead vs. further along in Proposal)."
+            "definition": "A chart of the opportunities by stage."
           },
           {
-            "term": "Top 10 Opportunities",
-            "definition": "A dashboard widget ranking your ten highest-value opportunities, with its own dedicated + Create Opportunity shortcut so you can add a new high-priority pursuit without leaving the dashboard."
-          },
-          {
-            "term": "Upcoming Opportunity Due Date",
-            "definition": "A dashboard list surfacing opportunities that are nearing their due date, distinct from the Due This Week KPI card in that it shows the actual list of upcoming records rather than just a count, and also carries its own + Create shortcut."
-          },
-          {
-            "term": "Whose pipeline you see",
-            "definition": "My Dashboard shows your own pipeline. To see every opportunity in the organisation, a user needs the **Admin View** permission enabled under Global Data."
-          },
-          {
-            "term": "Top cards and the period toggle",
-            "definition": "The top of **My Dashboard** shows four cards: **Total Opportunity Value**, **Weighted Opportunity Value**, **Due This Week** and **Stale Opportunities**. Use the **Daily / Weekly / Monthly** toggle to change the period. Below them are the **Opportunity Funnel** (value by stage, so you see where the money sits) and the **Task** panel with **+ Create Task**."
+            "term": "Task",
+            "definition": "Your opportunity tasks. **+ Create Task** opens the **Tasks** page; it shows **No Task Created** when you have none."
           },
           {
             "term": "Recent Activity",
-            "definition": "A feed of the latest calls, mails, meetings and events across your opportunities. It shows whether a pursuit is being worked or going cold."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Reading pipeline health at a glance",
-            "steps": [
-              "Open <strong>Opportunity Management</strong> (or <strong>Leads Management</strong> inside a Project) — it opens directly on <strong>My Dashboard</strong>.",
-              "Use the <strong>Daily / Weekly / Monthly</strong> toggle at the top of the dashboard to re-base every KPI card to the time window you care about.",
-              "Scan the <strong>Total Opportunities</strong>, <strong>Total Opportunity Value</strong>, <strong>Weighted Opportunity Value</strong>, <strong>Due This Week</strong>, and <strong>Stale Opportunities</strong> cards for a top-line read on volume, value, urgency, and pipeline hygiene.",
-              "Check the <strong>Opportunity Funnel</strong> chart to see how your pipeline is distributed across Stages."
-            ]
+            "definition": "The latest changes made on opportunities."
           },
           {
-            "title": "Finding opportunities that are overdue or coming due soon",
-            "steps": [
-              "On <strong>My Dashboard</strong>, check the <strong>Due This Week</strong> KPI card for a quick count.",
-              "Scroll to the <strong>Upcoming Opportunity Due Date</strong> list to see the actual records approaching their due date.",
-              "Alternatively, go to the main <strong>Opportunities</strong> list and filter by <strong>Due Date</strong> for a fully customizable date range instead of the dashboard's fixed \"this week\" window."
-            ]
+            "term": "Top 10 Opportunities",
+            "definition": "A short list showing each opportunity's ID, name, stage and value. **+ Create Opportunity** adds one and **See All** opens the full **Opportunities** list."
           },
           {
-            "title": "Finding your highest-value opportunities",
-            "steps": [
-              "On <strong>My Dashboard</strong>, locate the <strong>Top 10 Opportunities</strong> widget.",
-              "Review the ranked list, sorted by opportunity value from highest to lowest.",
-              "Use the widget's own <strong>+ Create Opportunity</strong> shortcut if you want to add a new high-value pursuit directly from this view."
-            ]
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/guides/opportunity/001.jpg",
-            "caption": "My Dashboard cards and Opportunity Funnel"
-          },
-          {
-            "src": "assets/guides/opportunity/002.jpg",
-            "caption": "Task panel with + Create Task"
+            "term": "Upcoming Opportunity Due Date",
+            "definition": "Opportunities coming up for their due date, with a **+ Create** shortcut. It shows **No Opportunities Due** when none are near."
           }
         ]
       },
       {
         "heading": "Opportunities",
-        "intro": "<p>The <strong>Opportunities</strong> screen is where Business Development users log, filter and work every pursuit, and where managers see the whole team's book of work. Click <strong>+ Create</strong> to log a lead, open a lead to complete its profile, and move it through the stages (Lead → Opportunity → Proposal → Inquiry → Bidding → Closed).</p><p>Switch between Table, Grid, Kanban and Parent Kanban with the view icons, click a coloured stage chip to filter to one stage, and use <strong>Search</strong>, <strong>Filters</strong>, <strong>Manage Columns</strong> and <strong>Export</strong> to build your own views. <strong>Filters</strong> decides which rows appear; <strong>Manage Columns</strong> decides which fields show.</p>",
+        "intro": "<p>The <strong>Opportunities</strong> tab lists every opportunity (lead) your company is tracking, from first lead to closed. Sales and business-development users create opportunities here and open one to work on it.</p>",
+        "images": [
+          {
+            "src": "assets/product/opportunity/102.jpg",
+            "caption": "The Opportunities list"
+          }
+        ],
         "definitions": [
           {
-            "term": "Stage",
-            "definition": "The current phase of an opportunity in the pipeline: Lead → Opportunity → Proposal → Inquiry → Bidding → Closed by default, configurable under **Settings → Stages & Statuses Configuration**. Every new lead starts in **Lead**, and you advance it in order by dragging the card on the Kanban board or changing **Stage** on the profile."
+            "term": "Stage chip (for example 1 Lead)",
+            "definition": "Under the toolbar, one grey chip per stage shows how many opportunities are in that stage. The stages are **Lead**, **Proposal** and **Closed**."
           },
           {
-            "term": "Status",
-            "definition": "The status within the current stage, for example **New Lead** for a lead, **Active** or **On Hold** for an Opportunity, or **Won**, **Lost**, **No Bid** and **Cancelled** inside the Closed stage. Options come from the statuses configured for the stage; if a stage has none, the dropdown is empty and the record cannot be saved."
+            "term": "+ Create",
+            "definition": "Opens the **Create Opportunity** dialog."
           },
           {
-            "term": "Table View",
-            "definition": "The default Opportunities layout, also called the **Pipeline Report**: one row per opportunity in a spreadsheet format. Click a column header arrow to sort. Use **Search**, **Filters**, **Manage Columns** and **Export** to build your own views and download tailored reports."
-          },
-          {
-            "term": "Grid View",
-            "definition": "A card-based layout for browsing opportunities, an alternative to the dense Table View for users who prefer a visual, scannable format over a spreadsheet grid."
-          },
-          {
-            "term": "Kanban View",
-            "definition": "A board with one column per stage. Each column shows the stage's **Opportunity Value** and **Forecasted (weighted) Value** and a card for each opportunity. **Parent Kanban** groups the columns by main stage and shows only top-level (parent) opportunities."
-          },
-          {
-            "term": "Manage Columns",
-            "definition": "The toolbar control (next to the view icons) that exposes the module's full data model, 45+ fields, in two panes: **Column Options** (a searchable checkbox list) and **Column Arrangement** (drag to reorder, × to remove). **Reset to Default** restores the original set; **Apply** commits your changes. Sales Ops can save the default layout for everyone. Some environments show it only in Table View."
-          },
-          {
-            "term": "Filters vs. Manage Columns",
-            "definition": "Two related but distinct controls that are easy to confuse. Filters determines which records/rows are shown, based on field criteria (for example, only opportunities above a certain value). Manage Columns determines which fields/columns are visible and in what order, without changing which records appear at all."
+            "term": "Search",
+            "definition": "Type part of a name or ID to narrow the list."
           },
           {
             "term": "Export",
-            "definition": "The toolbar button next to Filters that downloads the current Opportunities list (respecting whatever Filters and Manage Columns are currently applied) for use outside Arena — for a leadership report or a CRM import elsewhere."
+            "definition": "Exports the list."
           },
           {
-            "term": "Opportunity Value",
-            "definition": "The raw dollar (or configured currency) value of the pursuit — the base figure that feeds Total Opportunity Value on the dashboard and the various weighted-value calculations."
+            "term": "Filters",
+            "definition": "Opens a panel that narrows the list by **Name**, **ID**, **Stage**, **Status**, **Created By**, **Created Date**, **Due Date**, **Customer Groups**, **Customers**, the contacts, **Owner**, **EPC / Engineer**, **Contracting Entity**, **Project Locations**, **Assign To**, **Business Development**, **Business Unit**, **Opportunity Type**, **Project Type**, **Market Type**, **Sub Market Type** and an **Opportunity Value** range. **Save Filters** keeps a combination, **Clear Filters** resets it and **Submit** applies it.",
+            "images": [
+              {
+                "src": "assets/product/opportunity/115.jpg",
+                "caption": "The Filters panel"
+              }
+            ]
           },
           {
-            "term": "Go % / Get %",
-            "definition": "Two separate percentages on the profile. **Go %** is the likelihood that the project will reach FID (the likelihood to pursue). **Get %** is the likelihood of winning it against competition. Together with Opportunity Value they give **Weighted Value = Opportunity Value × Go % × Get %**. The Forecast Report shows Go % and Get % weighted values."
+            "term": "Manage Columns",
+            "definition": "Choose which columns show and their order. The columns available are **Opportunity ID**, **Opportunity Name**, **Description**, **Created By**, **Customer**, **Customer POC**, **Owner**, **Owner POC**, **Project Locations**, **Due Date**, **Opportunity Value**, **Competitors** and **Assign To**."
           },
           {
-            "term": "Win Probability (%)",
-            "definition": "The likelihood of winning the deal. Stage configuration sets a **Default Win Probability (%)** per stage, and a parent opportunity shows the **Average Win Probability %** of its children. The profile itself uses Go % and Get %, plus the AI probability below."
+            "term": "Layers icon",
+            "definition": "Opens a menu of saved column layouts. **Default** is the standard layout and **Configure Layout** lets you build your own."
           },
           {
-            "term": "AI Probability",
-            "definition": "A system-calculated probability, filled in automatically once there is enough data in the system. It sits beside your own Go % and Get % figures."
+            "term": "List, Card and Kanban view",
+            "definition": "The three icons at the right switch between a table, cards and a Kanban board. The disk icon saves the view you picked.",
+            "images": [
+              {
+                "src": "assets/product/opportunity/116.jpg",
+                "caption": "Kanban view with one column per stage"
+              }
+            ]
           },
           {
-            "term": "Manual % / AI % toggle",
-            "definition": "A toggle on the profile that chooses whether the weighted value uses your **Go % and Get %** figures (Manual %) or the **AI Probability** (AI %). **AI Weighted Value** is the weighted value worked out from the AI figure."
+            "term": "Kanban view",
+            "definition": "One column per stage (**Lead**, **Proposal**, **Closed**). Each column header shows how many opportunities it holds, their **Opportunity Value** and **Forecasted Value**. Each card shows the **ID**, **Status**, **Days in Stage**, **Opportunity Value**, **Follow Up Date** and **POC**, and an **Assign To** list to change who owns it."
           },
           {
-            "term": "Weighted Value",
-            "definition": "Calculated automatically as **Opportunity Value × Go % × Get %**. It feeds the overall weighted pipeline: the Weighted Opportunity Value on **My Dashboard**, the Forecasted Value on each Kanban column and the forecast reports."
+            "term": "Card view",
+            "definition": "The same card as in Kanban, one per opportunity, with its stage as a tag at the top.",
+            "images": [
+              {
+                "src": "assets/product/opportunity/117.jpg",
+                "caption": "Card view"
+              }
+            ]
           },
           {
-            "term": "Opportunity Age",
-            "definition": "A tracked field, measured in days, representing how long the opportunity record has existed since creation. Shown in Manage Columns and in the Pipeline Report as \"Opportunity Age (In Days).\""
+            "term": "Opportunity ID",
+            "definition": "Click the ID to open the opportunity record."
           },
           {
-            "term": "Last Interaction",
-            "definition": "The date of the most recent recorded activity on the opportunity. It's the reference point that Inactivity (In Days) counts forward from."
+            "term": "Opportunity Name",
+            "definition": "The name is an editable box inside the table."
           },
           {
-            "term": "Inactivity (In Days)",
-            "definition": "The number of days elapsed since an opportunity's Last Interaction. This field feeds the Stale Threshold logic that determines whether an opportunity is flagged as stale on the dashboard."
-          },
-          {
-            "term": "Days in Current Stage",
-            "definition": "A field (visible in the Opportunity Aging Report and Pipeline Report) tracking how long an opportunity has remained in its current Stage — used to gauge pipeline velocity and spot deals that are stalling at a particular phase."
-          },
-          {
-            "term": "Stage Threshold",
-            "definition": "A per-Stage setting (Stage Threshold (In Days), configured in Settings → Stages & Statuses Configuration) that drives the \"Stage Threshold Notification\" column, flagging opportunities that have lingered in a specific stage longer than expected. This is distinct from Stale Threshold, which applies module-wide based on overall inactivity rather than per-stage dwell time — Stage Threshold operates at the stage scope, Stale Threshold at the whole-opportunity scope."
-          },
-          {
-            "term": "BD Rep / Corporate Lead / Executive Lead",
-            "definition": "Three searchable people-picker roles assignable on both Create Opportunity and in Account Assignment, representing three levels of the responsibility chain for a customer account: an on-the-ground BD Rep, a Corporate Lead, and an Executive Lead. When a matching Customer/Market Type combination already exists in Account Assignment, these fields auto-populate rather than requiring manual entry."
-          },
-          {
-            "term": "Market Type / Sub Market Type",
-            "definition": "Market Type is the top-level segment an opportunity or Account Assignment record belongs to (e.g., Highway, Residential, Infrastructure, Interiors). Sub Market Type is a more granular classification nested underneath it, tracked as its own field/column."
-          },
-          {
-            "term": "Parent / Child / Standalone",
-            "definition": "A relationship flag on the full Opportunity record that lets opportunities be organized hierarchically — for example, a master pursuit with several sub-opportunities beneath it. The record also tracks Child Count and Active Child Count. Child opportunities get their own ID format, configured separately under Settings → ID Settings → Child ID Settings."
-          },
-          {
-            "term": "Qualifying a lead",
-            "definition": "A new record starts in **Lead**. To move it into the live pipeline, change **Stage** from Lead to **Opportunity** on the profile. Red asterisks appear beside every field the setup requires, and the record will not save until they are filled. In the standard configuration this means Description, Opportunity Type, Market Type, TIC, Opportunity Value, Go %, Get %, Client, Client POC, Owner, Owner POC, Location, Competitors, BD Rep and milestone Target Dates. Sales Ops can tune the set under **Settings → Opportunities Form**."
-          },
-          {
-            "term": "Parent opportunity totals",
-            "definition": "A parent shows **Total Value**, **Total TIC**, **Weighted Value**, **Average Win Probability %**, **Child Count** and **Active Child Count**, with its own **Child** and **Milestones** tabs. Customer and contacts roll up from the children, and milestones can be tracked at parent and child level. Parent IDs use the format YY/parent BU code/ID, and child IDs use YY-BU-ID."
-          },
-          {
-            "term": "Opportunity profile: Details",
-            "definition": "Click a lead to open its full profile, laid out in the same four sections as the Create window. **Details** holds identity and classification: Opportunity ID (generated, read only, for example 26-23-12 as year-business unit-serial), Opportunity Name, Created By (automatic), Project Type, Business Unit (chosen at creation, then read only), Opportunity Type (New Build or Existing Facility), Milestone Template (only the templates mapped to the chosen type are shown) and Market Type / Sub Market Type. Opportunity Type is set on the profile, not on the Create window."
-          },
-          {
-            "term": "Opportunity profile: Status & Value",
-            "definition": "**Status & Value** holds where the opportunity is and the numbers behind it: Stage and Status, TIC (Total Installed Cost: engineering, procurement and construction), Opportunity Value (the amount you could be awarded), Go % and Get %, AI Probability (calculated once the system has enough data), Weighted Value (calculated automatically) and the Manual % / AI % toggle that picks which probability the weighted value uses."
-          },
-          {
-            "term": "Opportunity profile: Timeline & Activity",
-            "definition": "**Timeline & Activity** holds Created Date (read only), Due Date (your expected close date), Follow Up Date / Time (set these for automatic reminders), Opportunity Age in days, Last Interaction, and the Stage / Inactive Threshold Notification that alerts you when an opportunity sits too long without new information."
-          },
-          {
-            "term": "Opportunity profile: Contact",
-            "definition": "**Contact** holds the customer and its POC (use + Create a Client or + Create a Client POC if new), Owner and Owner POC (who owns and funds the asset), EPC / Engineer and POC (who controls design and technical approvals), Contracting Entity and POC (who signs the contract), Location (only locations mapped to the chosen customer are shown), Competitors (used later in win and loss analytics), and the BD Rep, Corporate Lead and Executive Lead, which can fill in from Account Assignment."
-          },
-          {
-            "term": "Parent Kanban view",
-            "definition": "A board layout of Kanban columns grouped by main stage. Each column shows the total stage value and cards only for top-level (parent) opportunities, so related child opportunities do not clutter the board."
-          },
-          {
-            "term": "Stage chips",
-            "definition": "The coloured stage chips at the top left of the Opportunities screen show a count for each stage. Click a chip to filter the screen to that stage. Search, Filters, Manage Columns, Export and the sort arrow on a column header work with every view."
-          },
-          {
-            "term": "Where this data comes from: Create Opportunity and the profile",
-            "definition": "Each list on an opportunity is fed by a master list kept elsewhere, so a missing value is fixed at its source, not on the opportunity. **Client** (and Client Group) comes from the approved customers under the **Customers** shortcut; a newly created customer goes to Sales Ops for approval and cannot be picked until approved. **Location** shows only the locations mapped to the chosen client in **Account Assignment** (the locations themselves are created under **Global Data → Locations**). **Market Type / Sub Market Type** are mapped to the client in **Account Assignment**. **BD Rep, Corporate Lead and Executive Lead** are picked from users and can auto-fill from the matching **Account Assignment** row. **Owner, EPC / Engineer and Contracting Entity** and their POCs come from the Owners and Contacts records. **Competitors** come from the **Competitors** shortcut. **Business Unit**, **Opportunity Type**, **Milestone Template**, **Stage / Status** and the **Business Development** name pool come from **Settings**. Your own pipeline is what you see unless you have the **Admin View** permission under Global Data."
-          },
-          {
-            "term": "Where this data goes",
-            "definition": "An opportunity feeds the **Dashboard** cards, funnel and Top 10, the **Reports** tiles (Forecast, Opportunity Aging, Outcome Analysis, Client Win Rate, Pipeline Report, Huddle Report, Pipeline Gantt View, Account Assignment Report) and the **Analytics** tabs. Milestone target dates feed the **Pipeline Gantt View**. **Due Date** and follow-up dates show on the module **Calendar**. Calls, mails, meetings, tasks and notes you log on the linked client contact are kept on the opportunity and in **Clients Interactions**. Proposals, compliance and expenses sit on the same record as tabs."
-          },
-          {
-            "term": "Why a dropdown is empty or missing a value",
-            "definition": "Opportunity dropdowns only show what is already set up. If a client, location, market, competitor or contact is missing, add or approve it at its source (Customers, Account Assignment, Global Data → Locations, Competitors, Contacts Directory) or ask Sales Ops in the opportunity **Comments** tab. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
+            "term": "Row actions",
+            "definition": "Each row has **History** (the change log), a copy icon (**Clone**, which makes a duplicate) and a delete icon. The **Assign To** list on the row changes the owner of the opportunity."
           }
         ],
         "procedures": [
           {
-            "title": "Creating a new opportunity",
+            "title": "Create an opportunity",
             "steps": [
-              "Go to <strong>Opportunity Management → Opportunities</strong> (or <strong>Leads Management → Leads</strong> inside a Project).",
-              "Click <strong>+ Create</strong>. The <strong>Create Opportunity</strong> window opens with four sections: <strong>Details</strong>, <strong>Status & Value</strong>, <strong>Timeline & Activity</strong> and <strong>Contact</strong>.",
-              "In <strong>Details</strong>, type the <strong>Opportunity Name</strong> following your organisation's naming convention and select the <strong>Business Unit</strong>.",
-              "Leave <strong>Stage</strong> as <strong>Lead</strong>, <strong>Status</strong> as <strong>New Lead</strong> and <strong>Created Date</strong> as today. They are pre-filled.",
-              "Select the <strong>Client Group</strong> and the <strong>Client</strong>, or add a new client if needed.",
-              "Click <strong>Submit</strong>. The lead lands on the board under <strong>Lead</strong>."
+              "Open **Opportunities** and click **+ Create**.",
+              "Type the **Opportunity Name** (required) and pick a **Market Type** if you know it.",
+              "Check **Stage** and **Status**. A new opportunity starts as **Lead** and **Open**.",
+              "In **Contact**, pick **Customer Groups**, **Site Representative**, **Corporate Lead** and **Executive Lead** if you know them.",
+              "Click **Submit**. Click **Cancel** to close without creating anything.",
+              "Click the new opportunity's ID to fill in the rest on its **Opportunity Profile**."
             ],
-            "note": "Only four things are required to save a lead: **Opportunity Name**, **Business Unit**, **Status** and **Created Date**. Everything else can wait: open the lead later to fill in the rest. If Submit fails with \"Status is required\", the Lead stage has no statuses configured under Settings → Stages & Statuses Configuration.",
             "images": [
               {
-                "src": "assets/guides/opportunity/007.jpg",
-                "caption": "Create Opportunity window with its four sections",
+                "src": "assets/product/opportunity/114.jpg",
+                "caption": "The Create Opportunity dialog",
                 "step": 2
               }
             ]
           },
           {
-            "title": "Editing fields not present on the Create dialog",
+            "title": "Show opportunities as a Kanban board",
             "steps": [
-              "Create the opportunity first with the Create Opportunity window (only Opportunity Name, Business Unit, Status and Created Date are required).",
-              "Open the saved record's detail/edit view.",
-              "Fill in the remaining fields there — Description, Project Types, Business Development, Business Unit, Opportunity Type, Milestone Template, Sub Market Type, TIC, Opportunity Value, Owner, Owner POC, Customer, Tier, EPC/Engineer, Contracting Entity, Project Locations, Competitors, Assign To, and others — all of which exist on the full record and are visible via Manage Columns and the Pipeline Report, but are simply not exposed on the initial Create dialog."
+              "Open **Opportunities**.",
+              "Click the third icon at the right of the toolbar (**Kanban View**).",
+              "Click the first icon to return to the table. Click the disk icon to save the view you want."
             ]
-          },
-          {
-            "title": "Editing or deleting an opportunity",
-            "steps": [
-              "Open the row's <strong>Actions</strong> menu on the Opportunities list.",
-              "Choose <strong>Edit</strong> to open the record in an editable form, or <strong>Delete</strong> to remove it.",
-              "This is the same row-action pattern (History / Edit / Delete / Notes) used consistently across Customers, Owners, and Competitors, so the behavior should feel familiar once you've used any of those other master lists."
-            ]
-          },
-          {
-            "title": "Switching between Table, Grid, and Kanban view",
-            "steps": [
-              "Use the view-mode toggle in the Opportunities toolbar to switch between <strong>Table</strong>, <strong>Grid</strong>, and <strong>Kanban</strong>.",
-              "In <strong>Kanban View</strong>, review each Stage's column header for the opportunity count and its combined Opportunity Value / Forecasted Value totals."
-            ],
-            "note": "Some environments show Manage Columns only in Table View. If you do not see the button, switch back to Table View.",
-            "images": [
-              {
-                "src": "assets/guides/opportunity/003.jpg",
-                "caption": "Table view, the Pipeline Report",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/opportunity/004.jpg",
-                "caption": "Grid view of opportunities",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/opportunity/005.jpg",
-                "caption": "Kanban view with value by stage",
-                "step": 2
-              }
-            ]
-          },
-          {
-            "title": "Customizing and rearranging table columns",
-            "steps": [
-              "Click <strong>Manage Columns</strong> in the Table View toolbar.",
-              "In <strong>Column Options</strong>, use the searchable checkbox list to turn fields on or off.",
-              "In <strong>Column Arrangement</strong>, drag a column by its handle to reorder it, or click the × next to a column to remove it.",
-              "Click <strong>Apply</strong> to commit your changes, or <strong>Reset to Default</strong> to restore the original column set."
-            ]
-          },
-          {
-            "title": "Saving your current view for later",
-            "steps": [
-              "Configure your desired filters, visible columns, and layout (Table/Grid/Kanban).",
-              "Click the <strong>save</strong> icon in the Opportunities toolbar — this persists the filter, column, and layout configuration together as a single saved view."
-            ]
-          },
-          {
-            "title": "Qualify a lead into the pipeline",
-            "steps": [
-              "Open the lead and set the <strong>Milestone Template</strong>, then the target dates on the <strong>Milestones</strong> tab.",
-              "Change <strong>Stage</strong> from <strong>Lead</strong> to the next stage.",
-              "Fill in every field marked with a red asterisk.",
-              "Click <strong>Save Changes</strong>. <strong>Weighted Value</strong> calculates automatically."
-            ],
-            "note": "Which fields are required at each stage is set by the administrator under Settings → Opportunities Form."
-          },
-          {
-            "title": "Group related opportunities under a parent",
-            "steps": [
-              "For an existing facility, log the first opportunity as a normal child. When a second related one appears, open either and click <strong>Create Parent</strong>, then give the parent a <strong>Name</strong>, <strong>Stage</strong>, <strong>Status</strong> and <strong>Due Date</strong>.",
-              "Open the <strong>Child</strong> tab on the parent and click <strong>Link Parent</strong> from other opportunities to add more children. A child in a new business unit is logged like any new opportunity.",
-              "For a new build with unknown scope, log it under the placeholder business unit your administrator set up, and keep updating its value as one opportunity.",
-              "When the scope breaks into packages, reduce the placeholder value to $1, click <strong>Create Parent</strong>, and then log a child for each business unit (for example Civil, Mechanical)."
-            ],
-            "note": "The real dollars then sit on the business unit children, and the parent adds them up. This needs Parent Mode to be turned on in Settings.",
-            "images": [
-              {
-                "src": "assets/guides/opportunity/018.jpg",
-                "caption": "Parent opportunity with its Child tab",
-                "step": 4
-              },
-              {
-                "src": "assets/guides/opportunity/019.jpg",
-                "caption": "Business unit children under a parent",
-                "step": 4
-              }
-            ]
-          },
-          {
-            "title": "Complete the opportunity profile",
-            "steps": [
-              "Click the lead on the <strong>Opportunities</strong> tab to open its profile.",
-              "In <strong>Details</strong>, set the Project Type, Opportunity Type, Milestone Template and Market Type / Sub Market Type.",
-              "In <strong>Status & Value</strong>, enter TIC, Opportunity Value, Go % and Get %. Weighted Value calculates automatically.",
-              "In <strong>Timeline & Activity</strong>, set the Due Date and any Follow Up Date / Time.",
-              "In <strong>Contact</strong>, choose the Client and Client POC, the Owner and POC, EPC / Engineer, Contracting Entity, Location, Competitors and the team (BD Rep, Corporate Lead, Executive Lead).",
-              "Click <strong>Save Changes</strong>."
-            ],
-            "note": "If a customer, location or contact is not listed, post the request in the Comments tab. Creating a new customer sends an approval request to Sales Ops.",
-            "images": [
-              {
-                "src": "assets/guides/opportunity/008.jpg",
-                "caption": "Opportunity profile with Details, Status & Value, Timeline & Activity and Contact",
-                "step": 1
-              }
-            ]
-          },
-          {
-            "title": "Clone an opportunity",
-            "steps": [
-              "Open the three-dot menu on an opportunity. It shows **History**, **Edit**, **Clone** and **Delete**.",
-              "Click **Clone** and tick the fields you want to copy to the new opportunity.",
-              "Click **Submit** to create the new opportunity with the selected details."
-            ]
-          },
-          {
-            "title": "Filter the opportunities list",
-            "steps": [
-              "Click **Filters** and pick the fields to filter by: Opportunity Name, ID, Status, Created By, Created Date, Due Date, Groups, Customers, Customer POC, Owner, Owner POC, Locations or Assign To.",
-              "Click **Submit** to apply the filters, **Save Filters** to keep them or **Clear Filters** to remove them."
-            ]
-          },
-          {
-            "title": "Create or update opportunities from Excel",
-            "steps": [
-              "Click **Export** and choose **Create** mode to add new opportunities.",
-              "Download the **Create** Excel from the link. It lists every opportunity field and marks the mandatory ones.",
-              "Fill in the details and click **Upload**.",
-              "To change existing opportunities, choose **Update** mode and download the **Update** Excel. **Opportunity ID** is the only mandatory field.",
-              "Fill in the fields to change and click **Upload**."
-            ]
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/guides/opportunity/006.jpg",
-            "caption": "Stage chips with counts"
           }
         ]
       },
       {
-        "heading": "Opportunity Record",
-        "intro": "<p>Each opportunity opens as a full record with tabs beyond the profile. The BD user or team member working the pursuit uses them to plan dates, share the work, track proposals, check bid readiness and record what the pursuit costs. They sit on the same record so the whole history stays together.</p>",
+        "heading": "Opportunity Profile",
+        "intro": "<p>The <strong>Opportunity Profile</strong> is the main tab of an opportunity record. It holds every detail of the opportunity in four columns: <strong>Details</strong>, <strong>Status &amp; Value</strong>, <strong>Timeline &amp; Activity</strong> and <strong>Contact</strong>. Open it by clicking an ID in the <strong>Opportunities</strong> list.</p>",
+        "images": [
+          {
+            "src": "assets/product/opportunity/119.jpg",
+            "caption": "The Opportunity Profile tab"
+          }
+        ],
         "definitions": [
           {
-            "term": "Milestones tab",
-            "definition": "Dates across the life of the opportunity. Once you choose a **Milestone Template** on the profile, the tab shows one row per milestone with **Icon**, **Milestone**, **Target Date**, **Actual** dates and **Notes**. Remove a milestone that does not apply, or add one from the master list. Each opportunity type shows only the templates mapped to it. The dates feed the **Pipeline Gantt View**, and the standard setup needs at least approximate target dates before a lead is qualified."
+            "term": "Record tabs",
+            "definition": "Across the top of the record: **Opportunity Profile**, **Milestones**, **Proposals**, **Teams**, **Customers Interactions**, **Task**, **Comments**, **Compliance Tracker**, **Documents** and **Expenses**. The number at the top left is the opportunity ID."
           },
           {
-            "term": "Teams tab",
-            "definition": "Add team members to the opportunity so they can edit its fields and add information."
+            "term": "History",
+            "definition": "The button at the top right opens the change log of this opportunity."
           },
           {
-            "term": "Clients Interactions tab",
-            "definition": "Turns on once a customer and a customer contact are added on the opportunity. Log calls, mails, meetings, tasks, comments and notes here. The **Comments** tab works as an internal team chat for that one opportunity."
+            "term": "Details",
+            "definition": "**Opportunity ID** (fixed), **Opportunity Name** (required), **Description**, **Created By** (fixed), **Project Type**, **Business Development**, **Business Unit**, **Opportunity Type**, **Milestone Template**, **Market Type** and **Sub Market Type**. The **Milestone Template** you choose decides the rows on the **Milestones** tab."
           },
           {
-            "term": "Documents tab",
-            "definition": "Files attached here go to the shared document storage chosen for your organisation in Opportunities Form → Settings (AWS S3 or SharePoint). The guide describes these documents being held on the organisation's SharePoint site rather than local drives."
+            "term": "Status & Value",
+            "definition": "**Stage** (**Lead**, **Proposal** or **Closed**) and **Status** are required. The money fields are **TIC**, **Opportunity Value**, **Go %**, **Get %**, **Win Probability (%)** (required), **AI Probability (%)**, **Weighted Value** and **AI Weighted Value**. **Proposals**, **Tenders** and **Required Compliances** link this opportunity to those records."
           },
           {
-            "term": "Proposals tab",
-            "definition": "Lists the proposals raised against the opportunity, one row each. Click **+ Create**, enter the details and move the status on as the proposal goes from draft to submitted."
+            "term": "Timeline & Activity",
+            "definition": "**Created Date** and **Due Date** (both required), **Follow Up Date** and **Follow Up Time**, **Opportunity Age (In Days)**, **Days in Current Stage**, **Last Interaction** and **Inactivity (In Days)**. The **Stage Threshold Notification** and **Inactive Threshold Notification** switches turn on alerts when the opportunity stays too long in a stage or has no interaction."
           },
           {
-            "term": "Compliance Tracker tab",
-            "definition": "Lists the compliance requirements selected for the opportunity and checks them against what your company holds. Four cards head the screen: **Compliant**, **Missing / Incomplete / Expired**, **Expiring Soon** and **Readiness Score** (what is available against the total selected). The table shows each requirement with its ID, name, description, category, renewal frequency, required evidence and source. The records themselves live under **Global Data → Compliance Hub**, so a missing or expired item is fixed there, not on the opportunity."
+            "term": "Contact",
+            "definition": "**Customer Groups**, **Customer** (required) and **Customer POC** (required), **Owner** and **Owner POC**, **EPC / Engineer** and its POC, **Contracting Entity** and its POC, **Project Locations**, **Competitors**, **Site Representative**, **Corporate Lead** and **Executive Lead**. **+ Create a Customer** and **+ Create an Owner** add new ones without leaving the page."
           },
           {
-            "term": "Expenses tab",
-            "definition": "What the pursuit costs: travel, proposal production, third-party studies, bid bonds. Approved lines add up to a total on the opportunity, so the cost of pursuit can be read against the outcome. The expense categories and approval routing are set up in Settings."
+            "term": "Attachments",
+            "definition": "**Upload** at the bottom left attaches a file to the opportunity."
           },
           {
-            "term": "Stale and inactive alerts",
-            "definition": "On the **Timeline & Activity** section, the **Stage / Inactive Threshold Notification** warns you when an opportunity sits too long with no updated information. The thresholds come from **Settings**, and stale opportunities count on **My Dashboard**."
+            "term": "Assign To",
+            "definition": "At the bottom, picks the user who owns the opportunity."
           },
           {
-            "term": "Where this data comes from: record tabs",
-            "definition": "**Teams** lists the users created in Global Data (and Crews); only added members can edit the opportunity. **Compliance Tracker** compares the requirements selected for the opportunity with what your company holds in **My Company Compliance**; the records are kept under **Global Data → Compliance Hub**, so fix a missing or expired item there. **Expenses** use the expense categories and approver set under **Settings → Expense**; approved lines add up to a total on the opportunity. **Documents** are stored in the AWS S3 or SharePoint location chosen under **Settings → Opportunities Form → Settings**. **Milestones** come from the Milestone Template chosen on the profile (templates are maintained in **Settings**), and can also be added from the master list."
+            "term": "Save Changes",
+            "definition": "Saves the profile. If a required field is empty, a **Please fill all required fields** warning appears when you try to leave the profile."
           }
         ],
         "procedures": [
           {
-            "title": "Set milestone dates on an opportunity",
+            "title": "Update an opportunity",
             "steps": [
-              "Open the opportunity and choose the <strong>Milestone Template</strong> on the profile.",
-              "Open the <strong>Milestones</strong> tab.",
-              "Remove any milestone that does not apply, or add one from the master list.",
-              "Enter a <strong>Target Date</strong> for each milestone and add <strong>Notes</strong>."
-            ],
-            "note": "Opportunity Type and Milestone Templates are maintained by Sales Ops in Settings.",
-            "images": [
-              {
-                "src": "assets/guides/opportunity/009.jpg",
-                "caption": "Milestones tab with Target Date and Notes",
-                "step": 4
-              }
+              "Open the opportunity from **Opportunities**.",
+              "On **Opportunity Profile**, fill in the required fields: **Opportunity Name**, **Stage**, **Status**, **Win Probability (%)**, **Due Date**, **Customer** and **Customer POC**.",
+              "Add the **Opportunity Value** and other details you know.",
+              "Pick the user in **Assign To** if the owner changes.",
+              "Click **Save Changes**."
             ]
+          }
+        ]
+      },
+      {
+        "heading": "Milestones",
+        "intro": "<p>The <strong>Milestones</strong> tab of an opportunity lists the milestones to reach on the way to winning it. Its rows come from the <strong>Milestone Template</strong> chosen on the <strong>Opportunity Profile</strong>.</p>",
+        "images": [
+          {
+            "src": "assets/product/opportunity/120.jpg",
+            "caption": "The Milestones tab"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Columns",
+            "definition": "**Serial Number**, **Icon**, **Milestone**, **Target Date**, **Actual Date**, **Status**, **Assign To**, **Notes** and **Actions**. Most column headers have a filter icon."
           },
           {
-            "title": "Record a pursuit expense",
-            "steps": [
-              "Open the opportunity and click the <strong>Expenses</strong> tab, then <strong>+ Create</strong>.",
-              "Select the expense category, enter the date, amount and description, and attach the receipt.",
-              "Click <strong>Submit</strong>. The expense goes to the configured approver."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/opportunity/014.jpg",
-                "caption": "Expenses tab",
-                "step": 2
-              }
-            ]
+            "term": "Manage Columns",
+            "definition": "Choose which columns show. The disk icon saves the layout."
+          }
+        ]
+      },
+      {
+        "heading": "Opportunity Proposals",
+        "intro": "<p>The <strong>Proposals</strong> tab of an opportunity lists the proposals linked to it and lets you start a new one. The proposal then continues in <strong>Proposal Management</strong>.</p>",
+        "images": [
+          {
+            "src": "assets/product/opportunity/121.jpg",
+            "caption": "The Proposals tab of an opportunity"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Linked Proposals",
+            "definition": "A table with **Proposal ID**, **Proposal Name**, **Status**, **Bid Type**, **Submission Due**, **Date Submitted** and **Proposal Value**."
           },
           {
-            "title": "Check bid readiness on an opportunity",
+            "term": "+ Create",
+            "definition": "Opens the **Create Proposal** dialog."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Create a proposal from an opportunity",
             "steps": [
-              "Open the opportunity and click the <strong>Compliance Tracker</strong> tab.",
-              "Read the four cards, especially <strong>Readiness Score</strong>.",
-              "For any missing or expired item, fix the record under <strong>Global Data → Compliance Hub</strong>."
+              "Open the opportunity and click the **Proposals** tab.",
+              "Click **+ Create**.",
+              "Type the **Proposal Name** and pick the **Proposal Type** (both required).",
+              "Tick **Does a Bid folder need to be created by the Project Services Admin?** if you want a bid folder made.",
+              "Click **Submit**. Click **Cancel** to close without creating anything."
             ],
             "images": [
               {
-                "src": "assets/guides/opportunity/013.jpg",
-                "caption": "Compliance Tracker with Readiness Score",
+                "src": "assets/product/opportunity/122.jpg",
+                "caption": "The Create Proposal dialog",
                 "step": 3
               }
             ]
-          },
-          {
-            "title": "Ask Sales Ops to add a missing customer, location or contact",
-            "steps": [
-              "Open the opportunity and click the <strong>Comments</strong> tab.",
-              "Post a message to Sales Ops saying what you need.",
-              "Continue on the same record once Sales Ops adds it and you get a notification."
-            ]
-          },
-          {
-            "title": "Add users or crews to an opportunity team",
-            "steps": [
-              "Open the opportunity and click the **Teams** tab, which holds both **Users** and **Crews**.",
-              "Click **Add User**. The dialog lists the users created in Global Data. Search by name, tick the users and click **Submit**.",
-              "Click **Add Crew**. The dialog lists the crews from Global Data → Crews. Search, tick the crews and click **Submit**.",
-              "To remove a user or crew, open the three-dot menu on its card and click **Delete**."
-            ]
-          },
-          {
-            "title": "Add a task on an opportunity",
-            "steps": [
-              "Open the opportunity and click the **Task** tab.",
-              "Click **Add Task**, fill in the task details and click **Create**.",
-              "Open the three-dot menu to **Edit**, **Map** or **Delete** the task. **Map** links it to a customer group, customer and customer POC.",
-              "Use **Assign to** to give the task to rosters, and tick the checkbox on the card when it is done."
-            ]
-          },
-          {
-            "title": "Store documents on an opportunity",
-            "steps": [
-              "Open the opportunity and click the **Documents** tab. **Chat Documents** holds files sent through chat and **Mail Documents** holds files exchanged by email.",
-              "Click **New Folder**, enter a name and click **Submit**.",
-              "Click **Add File** to upload documents into the folder."
-            ]
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/guides/opportunity/011.jpg",
-            "caption": "Documents tab"
-          },
-          {
-            "src": "assets/guides/opportunity/012.jpg",
-            "caption": "Proposals tab"
           }
         ]
       },
       {
-        "heading": "Clients Interactions",
-        "intro": "<p>Winning construction work is a relationship business as much as a bidding one — a GC or subcontractor rarely wins a job cold, they win it because someone on the BD team has been building trust with the owner's or GC's decision-makers over months or years of calls, site visits, and proposals. Clients Interactions is where a <strong>BD rep or Account Manager (End User)</strong> keeps that relationship history somewhere other than their own memory or inbox, so the relationship survives even if that individual changes roles or leaves the account.</p><p>Clients Interactions is Arena's lightweight CRM layer inside Opportunity Management — the place where you log and review every touchpoint your team has with a customer's contacts, from phone calls to meetings to freeform notes. Where the Opportunities list tracks the deal itself, Clients Interactions tracks the relationship: the ongoing conversation history that supports and informs the pursuit.</p> <p>The screen is organized as a drill-down: you start at a company-level list, click into a specific customer to see its contacts, and click into a specific contact to open a full interaction workspace with dedicated sub-tabs for each interaction type (calls, mail, events, meetings, tasks, comments, notes, and history). This structure mirrors how relationship-building actually works in construction business development — you're rarely interacting with \"a customer\" in the abstract, you're building a relationship with named individuals at that customer.</p> <p>A few of the sub-tabs (Events, Meetings, Task, Comments) integrate directly with your connected calendar (Microsoft), which means they require an explicit consent grant before they'll function — a one-time setup step covered below. If you hit a \"Consent Not Granted\" message, that's the fix.</p>",
+        "heading": "Teams",
+        "intro": "<p>The <strong>Teams</strong> tab of an opportunity shows who works on it, as individual users or as crews.</p>",
+        "images": [
+          {
+            "src": "assets/product/opportunity/123.jpg",
+            "caption": "The Teams tab (Users)"
+          }
+        ],
         "definitions": [
           {
-            "term": "Clients Interactions",
-            "definition": "The CRM-style module tab where you browse customer companies, drill into their individual contacts, and log or review every interaction with those contacts. It sits at Opportunities Management → Clients Interactions."
+            "term": "Users",
+            "definition": "Cards of the people on this opportunity with their email and phone. A search box finds a person by name or ID."
           },
           {
-            "term": "Notes button (customer row)",
-            "definition": "A Notes cell/button on each customer's top-level row that opens a \"Customer Form Chat\" side panel — a running notes/chat log tied to the customer as a whole (the company), not to any individual contact. This is distinct from the Notes sub-tab inside a specific contact's interaction workspace."
+            "term": "Crews",
+            "definition": "Groups of people added together. It shows **No Crews selected** until you add one with **Add Crew**."
           },
           {
-            "term": "Call Logs",
-            "definition": "A sub-tab in the contact interaction workspace for recording phone calls, capturing Call Type, Date, Time, Summary, Tag, and Attachments, with its own + Create button."
-          },
-          {
-            "term": "Mails",
-            "definition": "A sub-tab providing an embedded email client (Inbox, Sent, Drafts, Starred, Trash, plus Move and Import Group actions) scoped to that contact."
-          },
-          {
-            "term": "Calendar consent",
-            "definition": "A required authorization linking your connected calendar (Microsoft) to Arena, granted at My Profile → Settings → Calendar consent. Without it, the Events, Meetings, Task, and Comments sub-tabs on a contact's interaction workspace will show a \"Consent Not Granted\" message instead of functioning."
-          },
-          {
-            "term": "Notes (contact sub-tab)",
-            "definition": "A rich note editor inside a contact's interaction workspace, supporting file attachments, for freeform written notes about that specific individual."
-          },
-          {
-            "term": "See History",
-            "definition": "A sub-tab in the contact interaction workspace showing a full audit/activity history for that contact — displaying \"No history available\" when there's nothing logged yet."
-          },
-          {
-            "term": "Contact card",
-            "definition": "The view you land on after clicking a specific contact under a customer. It surfaces the Contact ID, Primary Phone, and Primary Email for that individual, in addition to exposing the interaction sub-tabs."
-          },
-          {
-            "term": "Opportunity scope (General / a specific Opportunity)",
-            "definition": "A dropdown at the top of a contact's interaction workspace, defaulted to General. Switching it to a specific Opportunity scopes every sub-tab — Call Logs, Mails, Events, Meetings, Task, Comments, Notes — to interactions logged against that deal specifically, letting a rep keep a contact's overall relationship history (General) separate from the conversation trail tied to one active pursuit."
-          },
-          {
-            "term": "Where this data comes from",
-            "definition": "The customer and contact lists come from the **Customers** shortcut and **Contacts Directory**; customers can arrive by manual entry, ZoomInfo import or a business-card photo (OCR). Interactions you log (calls, mails, meetings, tasks, comments, notes) are stored against the contact, and against one opportunity when you pick it in the **Opportunity** scope dropdown (default General). Events, Meetings, Task and Comments need Calendar consent from your Microsoft calendar. Logged items feed **See History**, the interactions summary and the **Customer Relation** score set up under **Settings**, and show on the module **Calendar**. Mails you map through **Map your Email** attach to the opportunity chosen there. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
+            "term": "Add User",
+            "definition": "Opens **Add Users**, a searchable list with a tick box per person and **Select All**. Click **Submit** to add the ticked people, or **Cancel**.",
+            "images": [
+              {
+                "src": "assets/product/opportunity/124.jpg",
+                "caption": "The Add Users dialog"
+              }
+            ]
           }
         ],
         "procedures": [
           {
-            "title": "Viewing a customer's interaction history",
+            "title": "Add people to an opportunity",
             "steps": [
-              "Go to <strong>Opportunities Management → Clients Interactions</strong>.",
-              "Click a row's <strong>Customer Name</strong> to open its list of contacts.",
-              "Click a specific <strong>Contact</strong> card to open that person's interaction workspace.",
-              "Use the sub-tabs — <strong>Call Logs, Mails, Events, Meetings, Task, Comments, Notes, See History</strong> — to view or log that particular type of interaction."
+              "Open the opportunity and click the **Teams** tab.",
+              "On **Users**, click **Add User**.",
+              "Tick the people you want, or search by name first.",
+              "Click **Submit**."
             ]
+          }
+        ]
+      },
+      {
+        "heading": "Opportunity Tasks",
+        "intro": "<p>The <strong>Task</strong> tab of an opportunity lists the tasks planned for it, such as a call or a site visit.</p>",
+        "definitions": [
+          {
+            "term": "Add Task",
+            "definition": "Adds a task to this opportunity."
           },
           {
-            "title": "Logging a call with a customer contact",
-            "steps": [
-              "Open the contact's interaction workspace.",
-              "Go to the <strong>Call Logs</strong> sub-tab.",
-              "Click <strong>+ Create</strong> and fill in Call Type, Date, Time, Summary, Tag, and any Attachments."
-            ]
+            "term": "Search By Name",
+            "definition": "Narrows the tasks by name."
           },
           {
-            "title": "Writing a note on a customer contact",
-            "steps": [
-              "Open the contact's interaction workspace.",
-              "Go to the <strong>Notes</strong> sub-tab.",
-              "Type your note into the rich text editor, optionally attaching a file, then save."
-            ]
+            "term": "Columns",
+            "definition": "**Name**, **Description**, **Created By**, **Date**, **Time**, **Mark Completed**, **Assign To** and **Actions**. It shows **No Data Available** until a task exists."
           },
           {
-            "title": "Granting calendar consent to unlock Events, Meetings, Task, and Comments",
-            "steps": [
-              "Go to <strong>My Profile → Settings → Calendar consent</strong>.",
-              "Grant consent for your connected calendar (Microsoft).",
-              "Return to the contact's interaction workspace — the Events, Meetings, Task, and Comments sub-tabs should now function normally."
-            ],
-            "note": "If you see a \"Consent Not Granted\" message on any of these four sub-tabs, this is always the fix — there is no per-tab consent, it's a single grant that unlocks all four."
+            "term": "List and Card view",
+            "definition": "Two icons at the right switch between a table and cards; **Manage Columns** picks the columns."
+          }
+        ]
+      },
+      {
+        "heading": "Comments",
+        "intro": "<p>The <strong>Comments</strong> tab is the discussion thread of one opportunity.</p>",
+        "images": [
+          {
+            "src": "assets/product/opportunity/125.jpg",
+            "caption": "The Comments tab"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Message box",
+            "definition": "A text editor at the bottom with bold, italic, underline, strike-through, link, heading, numbered list, bullet list and alignment buttons. Click the orange arrow to post the message."
           },
           {
-            "title": "Finding a customer's phone number and email",
-            "steps": [
-              "Drill into <strong>Clients Interactions → [Customer Name] → [Contact]</strong> — the Contact card shows Contact ID, Primary Phone, and Primary Email.",
-              "Alternatively, check the <strong>Contacts Directory</strong> (a Sidebar Shortcut), which also stores Primary/Secondary Email and Phone Number fields for the same contact."
-            ]
+            "term": "Upload icon",
+            "definition": "The purple cloud icon at the left of the message box attaches a file to the message."
           },
           {
-            "title": "Send and map an email from a contact",
-            "steps": [
-              "Open the contact and go to its mail tab. **Inbox** holds received mail and **Sent** holds mail you sent.",
-              "Click **Compose Mail**, fill in **To**, **CC** and **Message**, then click **Send** or **Save as Draft**.",
-              "To link an email to an opportunity, choose **Modules** under **Map your Email**.",
-              "Use **Reply**, **Reply All**, **Forward**, **Star** and **Print** as needed."
-            ]
+            "term": "Opportunity Stage and Opportunity Status",
+            "definition": "Two lists at the right that show the stage and status of the opportunity while you chat."
           },
           {
-            "title": "Add an event, meeting or task for a contact",
-            "steps": [
-              "On the contact, open **Events** and click **Add Event**. Choose the group and click **Submit**.",
-              "Open **Meetings** and click **Create Meeting**. Fill in the required fields and click **Submit**.",
-              "Open **Task** and click **Add Task**. Fill in the fields and click **Create**.",
-              "Use **Move** to move an event or task from General to a specific opportunity."
+            "term": "Search by People",
+            "definition": "A search box at the right to find a person."
+          }
+        ]
+      },
+      {
+        "heading": "Compliance Tracker",
+        "intro": "<p>The <strong>Compliance Tracker</strong> tab of an opportunity lists the compliance items the opportunity needs (permits, insurance and similar) and whether each one is in order.</p>",
+        "images": [
+          {
+            "src": "assets/product/opportunity/126.jpg",
+            "caption": "The Compliance Tracker tab"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Compliant, Missing / Incomplete / Expired, Expiring Soon, Readiness Score",
+            "definition": "Four summary tiles at the top, one per heading: how many items are compliant, how many are missing, incomplete or expired, how many expire soon, and a readiness score."
+          },
+          {
+            "term": "Search by ID or Name",
+            "definition": "Finds a compliance item."
+          },
+          {
+            "term": "Columns",
+            "definition": "**Compliance ID**, **Compliance Name**, **Compliance Description**, **Category / Type**, **Renewal Frequency**, **Renewal Period**, **Required Evidence**, **Sources**, **Status**, **Created By** and **Created Date**. **Manage Columns** chooses which show."
+          },
+          {
+            "term": "Required Compliances",
+            "definition": "The **Opportunity Profile** has a **Required Compliances** field that links compliance items to the opportunity."
+          }
+        ]
+      },
+      {
+        "heading": "Opportunity Documents",
+        "intro": "<p>The <strong>Documents</strong> tab of an opportunity is its file area, organised in folders.</p>",
+        "images": [
+          {
+            "src": "assets/product/opportunity/127.jpg",
+            "caption": "The Documents tab"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Folders",
+            "definition": "Four folders exist from the start: **Chat Attachments**, **Mail Attachments**, **Notes Attachments** and **Proposals**. The columns are **Folders & Documents**, **Last Modified**, **Added On** and **Actions**."
+          },
+          {
+            "term": "+ New Folder",
+            "definition": "Creates a folder of your own."
+          },
+          {
+            "term": "+ Add File",
+            "definition": "Uploads a file into the folder you are in."
+          }
+        ]
+      },
+      {
+        "heading": "Opportunity Expenses",
+        "intro": "<p>The <strong>Expenses</strong> tab of an opportunity records the money spent while pursuing it, with an approval step.</p>",
+        "images": [
+          {
+            "src": "assets/product/opportunity/128.jpg",
+            "caption": "The Expenses tab"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Expense and Workflow Issues",
+            "definition": "Two sub-tabs. **Expense** lists the expense requests; **Workflow Issues** is the second sub-tab beside it."
+          },
+          {
+            "term": "+ Create",
+            "definition": "Opens the **Create Expense** dialog."
+          },
+          {
+            "term": "List and Card view",
+            "definition": "Two icons switch how the expenses are shown. A search box finds an expense."
+          },
+          {
+            "term": "Create Expense",
+            "definition": "A dialog with a table: **Expense Type** and **Item Name** (both required), **Quantity**, **Unit Price**, **Amount**, **Comments** and **Actions**. **Add Expense** adds a row. **Submit For Approval** sends it and **Cancel** closes it.",
+            "images": [
+              {
+                "src": "assets/product/opportunity/129.jpg",
+                "caption": "The Create Expense dialog"
+              }
             ]
           }
         ],
+        "procedures": [
+          {
+            "title": "Request an expense",
+            "steps": [
+              "Open the opportunity and click the **Expenses** tab.",
+              "Click **+ Create**.",
+              "Click **Add Expense** and choose the **Expense Type** and **Item Name**.",
+              "Enter **Quantity** and **Unit Price**; the **Amount** follows. Add a **Comments** note if needed.",
+              "Click **Submit For Approval**. The approvers are set in **Expense Settings**."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Customers Interactions",
+        "intro": "<p><strong>Customers Interactions</strong> lists every customer with the groups it belongs to and a <strong>Notes</strong> button, so the sales team can keep a running conversation about each customer.</p>",
         "images": [
           {
-            "src": "assets/guides/opportunity/010.jpg",
-            "caption": "Clients Interactions tab on an opportunity"
+            "src": "assets/product/opportunity/156.jpg",
+            "caption": "The Customers Interactions list"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Search by ID and Name",
+            "definition": "Finds a customer."
+          },
+          {
+            "term": "Filters",
+            "definition": "Opens a panel to narrow the list."
+          },
+          {
+            "term": "Manage Columns",
+            "definition": "Chooses which columns show. The disk icon saves the layout."
+          },
+          {
+            "term": "List and Card view",
+            "definition": "Two icons switch between a table and cards."
+          },
+          {
+            "term": "Columns",
+            "definition": "**Customer ID**, **Customer Name**, **Groups** (the customer groups from **Customers**, for example Highway or Residential) and **Notes**."
+          },
+          {
+            "term": "Notes",
+            "definition": "Opens **Customer Form Chat**, a thread for that customer with a search box, a message editor and an upload icon.",
+            "images": [
+              {
+                "src": "assets/product/opportunity/157.jpg",
+                "caption": "The Customer Form Chat dialog"
+              }
+            ]
           }
         ]
       },
       {
         "heading": "Analytics",
-        "intro": "<p>Where a BD rep's My Dashboard answers \"how is my book of work doing,\" a <strong>Sales Director, VP of Business Development, or company executive</strong> needs a different question answered: how is the whole pipeline performing across business units, regions, and forecast scenarios. Analytics exists for that leadership audience, and its four dashboards are built to be shared upward and across the organization rather than used as a personal daily tool the way My Dashboard is.</p><p>Analytics is the business-intelligence layer of Opportunity Management — four dedicated dashboards that go beyond the personal, single-user view of My Dashboard to give leadership and operations a company-wide read on pipeline performance. Where My Dashboard answers \"what does my pipeline look like,\" Analytics answers broader questions: which business units are converting best, how the pipeline breaks down geographically, and how forecast scenarios compare against reality.</p>\n    <p>Every Analytics sub-tab follows the same interaction pattern — a Filters button to narrow the underlying data set and a Share icon to distribute the dashboard to other stakeholders — which keeps the four dashboards consistent to navigate even though their content differs substantially. This consistency matters because Analytics is typically consumed by people who move quickly between the four views looking for different cuts of the same underlying pipeline data.</p>\n    <p>The four sub-tabs are: <strong>Market & Operations</strong> (project-type and geographic distribution, cycle times, compliance tracking), <strong>Executive Summary</strong> (leadership-facing KPIs and win-rate performance), <strong>Pipeline by BU</strong> (a breakdown by Business Unit), and <strong>Pipeline Intelligence</strong> (AI-driven forecasting views). Together they give every level of the organization — from an individual rep checking a compliance deadline to an executive reviewing quarterly forecasts — a dashboard suited to their vantage point.</p>",
+        "intro": "<p><strong>Analytics</strong> shows dashboards built from the opportunity data. It has four tabs: <strong>Market &amp; Operations</strong>, <strong>Executive Summary</strong>, <strong>Pipeline by BU</strong> and <strong>Pipeline Intelligence</strong>. Each tab has a <strong>Filters</strong> button and a share icon at the top right.</p>",
+        "images": [
+          {
+            "src": "assets/product/opportunity/147.jpg",
+            "caption": "Analytics, Market & Operations tab"
+          }
+        ],
         "definitions": [
           {
+            "term": "Filters",
+            "definition": "Opens a panel that narrows every chart on the tab by **Opportunity Type**, **Project Type**, **Business Unit**, **Site Representative**, **Customer** and its POC, **EPC / Engineer** and its POC, **Contracting Entity** and its POC, and more. **Submit** applies and **Clear Filters** resets."
+          },
+          {
             "term": "Market & Operations",
-            "definition": "An Analytics sub-tab covering Opportunity Project Type (with a Count/Dollar toggle), Geographic Distribution, the Proposal Cycle Time Distribution chart, and the Permit & Insurance Expiry Tracker table."
+            "definition": "Charts of **Opportunity Project Type** (switch between **Count** and **Dollar Value**), **Opportunity Geographic Distribution** and **Proposal Cycle Time Distribution**, and a table **Permit & Insurance Expiry Tracker** with **Compliance Name**, **Associated Opportunity**, **Days to Expire**, **Expiry Date** and **Responsible Person**."
           },
           {
             "term": "Executive Summary",
-            "definition": "The leadership-facing Analytics dashboard, built around five headline KPI cards — Total Opportunity Value, Weighted Forecasted Value, Weighted Forecast This Quarter, Overall Win Rate (%), and Average Deal Size — plus a Scenario Forecast Comparison chart, an Opportunity by Stage Value breakdown, a Top Customers Performance table (Opportunity Value, Win Rate %, Average Cycle Days per customer), a Team Performance Leadership table (per BD rep: Total Opportunities Created, Opportunity Value, Win Rate %, Average Deal Size, TIC), an Opportunity by Project Type chart, an Opportunity by Business Development chart, and its own copy of the Permit & Insurance Expiry Tracker."
+            "definition": "Five tiles: **Total Opportunity Value**, **Weighted Forecasted Value**, **Weighted Forecast This Quarter**, **Overall Win Rate (%)** and **Average Deal Size**. Below them: **Scenario Forecast Comparison** (by **Month** or **Quarter**), **Opportunity by Stage Value**, **Top Customers Performance** (value, win rate and average cycle days per customer), **Team Performance Leadership** (opportunities created, value, win rate, average deal size and TIC per user), **Opportunity by Project Type**, **Opportunity by Business Development** and the expiry tracker.",
+            "images": [
+              {
+                "src": "assets/product/opportunity/148.jpg",
+                "caption": "Executive Summary"
+              }
+            ]
           },
           {
             "term": "Pipeline by BU",
-            "definition": "An Analytics sub-tab that breaks the pipeline down by Business Unit. It includes summary stats (Total Opportunities, Top BU by Volume, Highest Win Rate), several charts (Opportunity Count by BU, Opportunity Value by BU, Pipeline Forecast by BU, Opportunities by BU and Region, Opportunity Stage Mix), and the BU Performance Matrix table (Business Unit, Lead, Proposal, Closed, Total, Win Rate)."
+            "definition": "Has four sub-tabs: **Opportunity Count by BU**, **Opportunity Value by BU**, **Pipeline Forecast by BU** and **Opportunities by BU and Region**. The count sub-tab shows **Total Opportunities**, **Top BU by Volume** and **Highest Win Rate** tiles, an **Opportunity Stage Mix** chart and a **BU Performance Matrix** with one row per business unit and columns **Lead**, **Proposal**, **Closed**, **Total** and **Win Rate**."
           },
           {
             "term": "Pipeline Intelligence",
-            "definition": "An Analytics sub-tab built around AI-driven views: the Opportunity Distribution Heatmap, a Scenario Forecast Comparison (Month/Quarter toggle), Opportunity Dynamics by Month, and BD Opportunity Load."
-          },
-          {
-            "term": "Permit & Insurance Expiry Tracker",
-            "definition": "A compliance-tracking table appearing on both the Market & Operations and Executive Summary tabs, surfacing upcoming permit and insurance expirations so they don't lapse unnoticed."
-          },
-          {
-            "term": "Proposal Cycle Time Distribution",
-            "definition": "A chart on the Market & Operations tab showing which stage of the proposal cycle time distribution an opportunity's turnaround falls into — useful for identifying whether deals are moving through the proposal process at a healthy pace."
-          },
-          {
-            "term": "BU Performance Matrix",
-            "definition": "A table on the Pipeline by BU tab cross-referencing each Business Unit against its Lead, Proposal, Closed, and Total counts plus Win Rate — a compact way to compare business unit performance side by side."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Reviewing leadership-facing pipeline KPIs",
-            "steps": [
-              "Go to <strong>Opportunities Management → Analytics → Executive Summary</strong>.",
-              "Review the five headline KPI cards: <strong>Total Opportunity Value, Weighted Forecasted Value, Weighted Forecast This Quarter, Overall Win Rate (%),</strong> and <strong>Average Deal Size</strong>.",
-              "Check the <strong>Scenario Forecast Comparison</strong> chart and <strong>Opportunity by Stage Value</strong> breakdown for deeper context.",
-              "Review the <strong>Top Customers Performance</strong> and <strong>Team Performance Leadership</strong> tables to see who and what is driving results."
+            "definition": "**Opportunity Distribution Heatmap** counts opportunities by win-probability band (the bands run from 0-20 percent up to 100 percent) against value band (up to 1M, 1-5M, 5-10M, 10-15M, over 15M). Beside it are **Scenario Forecast Comparison**, **Opportunity Dynamics by Month** and **BD Opportunity Load**.",
+            "images": [
+              {
+                "src": "assets/product/opportunity/149.jpg",
+                "caption": "Pipeline Intelligence"
+              }
             ]
           },
           {
-            "title": "Filtering or sharing any Analytics dashboard",
-            "steps": [
-              "Open the desired Analytics sub-tab (Market & Operations, Executive Summary, Pipeline by BU, or Pipeline Intelligence).",
-              "Click <strong>Filters</strong> to narrow the data shown on that dashboard.",
-              "Click the <strong>share</strong> icon to distribute the dashboard to other stakeholders."
-            ]
-          },
-          {
-            "title": "Tracking permit and insurance expirations",
-            "steps": [
-              "Go to either the <strong>Market & Operations</strong> or <strong>Executive Summary</strong> Analytics tab.",
-              "Locate the <strong>Permit & Insurance Expiry Tracker</strong> table on that dashboard.",
-              "Review upcoming expirations to stay ahead of compliance lapses."
-            ]
-          },
-          {
-            "title": "Checking proposal cycle time performance",
-            "steps": [
-              "Go to <strong>Analytics → Market & Operations</strong>.",
-              "Locate the <strong>Proposal Cycle Time Distribution</strong> chart to see which stage an opportunity's proposal cycle time falls into."
-            ]
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/guides/opportunity/016.jpg",
-            "caption": "Analytics sub-tabs"
+            "term": "No Dashboard",
+            "definition": "A chart that has no data yet shows **No Dashboard** with the line **Start building your dashboard**."
           }
         ]
       },
       {
         "heading": "Reports",
-        "intro": "<p>Not every audience wants a chart — a controller preparing a board deck, a BD Manager running a Monday pipeline huddle, or an executive doing a win/loss retrospective often just needs the underlying numbers in a clean, exportable format. Reports serves that need for <strong>BD Managers and leadership End Users</strong> who want to pull a defined data set out of Arena rather than interact with it inside the product.</p><p>Reports is the module's library of pre-built, exportable reports — a step beyond Analytics' visual dashboards, aimed at users who need structured, filterable, downloadable data rather than charts. Where Analytics is for reading trends visually, Reports is for extracting a defined data set to share, archive, or feed into another process (a spreadsheet, a leadership deck, a compliance file).</p>\n    <p>Every report in this section shares a consistent toolbar pattern — Search, Sort By, Export, Filters, and Manage Columns — the same pattern used on the main Opportunities list, so once you know how to customize columns there, you already know how to do it here. This consistency is deliberate: reports are essentially pre-filtered, purpose-built views over the same underlying opportunity data model that Opportunities and Analytics also draw from.</p>\n    <p>The module ships seven reports, each suited to a different question: Forecast Report (value and probability modeling), Opportunity Aging Report (staleness and velocity), Outcome Analysis Report (closed-deal retrospectives), Customer Win Rate Report (win rate by customer), Pipeline Report (the single most complete export of the data model), Huddle Report (a BD-representative-scoped snapshot for team meetings), and Pipeline Gantt View (a visual project timeline). Two of these — Huddle Report and Pipeline Gantt View — deviate slightly from the standard pattern by requiring you to set parameters and click Generate rather than simply exporting.</p>",
+        "intro": "<p><strong>Reports</strong> is a page of seven tiles. Click a tile to open that report. Every report except <strong>Huddle Report</strong> and <strong>Pipeline Gantt View</strong> is a table with a back arrow, search, <strong>Sort By</strong>, <strong>Export</strong>, <strong>Filters</strong> and <strong>Manage Columns</strong>.</p>",
+        "images": [
+          {
+            "src": "assets/product/opportunity/150.jpg",
+            "caption": "The Reports page"
+          }
+        ],
         "definitions": [
           {
             "term": "Forecast Report",
-            "definition": "A report covering opportunity value, the various probability measures (Stage/AI/Manual), weighted values, and Go%/Get% — the report to use when you need the full probability-and-value picture for forecasting purposes."
+            "definition": "Weighted forecast per opportunity. See the **Forecast Report** section."
           },
           {
             "term": "Opportunity Aging Report",
-            "definition": "A report narrowly focused on staleness and velocity metrics: Days In Current Stage, Days Since Last Activity, Stale Flag, and Aging Status. It's the report to reach for when the question is specifically about how long opportunities have been sitting idle, rather than their financials."
+            "definition": "How long each opportunity has been in its stage. See the **Opportunity Aging Report** section."
           },
           {
             "term": "Outcome Analysis Report",
-            "definition": "A report covering closed date, sales cycle length, and project type — useful for retrospective analysis of deals that have already closed, won or lost."
+            "definition": "Closed opportunities and how they ended."
           },
           {
             "term": "Customer Win Rate Report",
-            "definition": "A report showing deals won and lost, win rate percentage, and average cycle days, broken down by customer."
+            "definition": "Win rate per customer."
           },
           {
             "term": "Pipeline Report",
-            "definition": "The single most complete report in the module — it covers nearly every field on the Opportunity record, including identifiers, financials, dates, contacts, and parent/child hierarchy. Unlike the Opportunity Aging Report, which is scoped narrowly to staleness metrics, the Pipeline Report is the report to use when you need the fullest possible export of opportunity data."
+            "definition": "Every opportunity field in one wide table."
           },
           {
             "term": "Huddle Report",
-            "definition": "A report scoped to a specific BD Representative and Date Range, generated on demand via a Generate button rather than the standard Export flow — designed to produce a downloadable snapshot suited to a team huddle or standup meeting."
+            "definition": "A report generated for one BD representative over a date range."
           },
           {
             "term": "Pipeline Gantt View",
-            "definition": "A Gantt-chart timeline visualization of opportunities, with a granularity toggle (Daily / Weekly / Monthly / Quarterly / Yearly) and a date-range picker, alongside Filters and download/save icons — the report to use when you need to see pursuits laid out against a timeline rather than as tabular data."
-          },
-          {
-            "term": "Account Assignment Report",
-            "definition": "The company guide lists an **Account Assignment Report** among the tiles on the **Reports** tab, next to Forecast, Opportunity Aging, Outcome Analysis, Client Win Rate, Pipeline Report, Huddle Report and Pipeline Gantt View. It shows who is assigned to each customer account. The maintenance screen itself is the **Account Assignment** tab."
+            "definition": "A timeline of opportunities."
           }
-        ],
-        "procedures": [
-          {
-            "title": "Running a standard report",
-            "steps": [
-              "Go to <strong>Opportunities Management → Reports</strong>.",
-              "Click the report's name (for example, <strong>Forecast Report</strong>).",
-              "Use <strong>Filters</strong> or <strong>Sort By</strong> to narrow the data, then click <strong>Export</strong>.",
-              "Use the back arrow next to the report title to return to the reports list."
-            ],
-            "note": "Huddle Report and Pipeline Gantt View don't follow this exact pattern — instead of Export, you set parameters and click Generate. See the dedicated procedure for Huddle Report below."
-          },
-          {
-            "title": "Customizing which columns appear in a report",
-            "steps": [
-              "Open the desired report.",
-              "Click <strong>Manage Columns</strong> — the same control used on the main Opportunities list — to add, remove, or reorder columns."
-            ]
-          },
-          {
-            "title": "Generating the Huddle Report",
-            "steps": [
-              "Go to <strong>Reports → Huddle Report</strong>.",
-              "Select a <strong>BD Representative</strong> and a <strong>Date Range</strong>.",
-              "Optionally use <strong>Save Filters</strong> or <strong>Clear Filters</strong>.",
-              "Click <strong>Generate</strong> to produce a downloadable report."
-            ]
-          },
-          {
-            "title": "Finding customer win rate",
-            "steps": [
-              "Go to <strong>Reports → Customer Win Rate Report</strong> for a dedicated report on this metric.",
-              "Alternatively, check the <strong>Top Customers Performance</strong> table on the <strong>Executive Summary</strong> Analytics tab for the same information presented alongside other executive KPIs."
-            ]
-          }
-        ],
+        ]
+      },
+      {
+        "heading": "Forecast Report",
+        "intro": "<p>The <strong>Forecast Report</strong> lists each opportunity with its value and the weighted values calculated from its probabilities. Open it from <strong>Reports</strong>.</p>",
         "images": [
           {
-            "src": "assets/guides/opportunity/015.jpg",
-            "caption": "Report tiles on the Reports tab"
+            "src": "assets/product/opportunity/151.jpg",
+            "caption": "The Forecast Report"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Columns",
+            "definition": "**Opportunity**, **Customer**, **Stage**, **Opportunity Value**, **Stage Probability %**, **AI Probability %**, **Manual Probability %**, **Go %**, **Get %**, **Stage Weighted Value**, **Weighted Value (AI)**, **Weighted Value Manual**, **Go% Weighted Value**, **Get% Weighted Value**, **Created By** and **Created Date**."
+          },
+          {
+            "term": "Toolbar",
+            "definition": "Search, **Sort By** with an ascending/descending arrow, **Export**, **Filters**, **Manage Columns**, a layers menu for saved layouts and a disk icon to save the layout."
+          }
+        ]
+      },
+      {
+        "heading": "Opportunity Aging Report",
+        "intro": "<p>The <strong>Opportunity Aging Report</strong> shows how long every opportunity has sat in its stage and since its last activity. Open it from <strong>Reports</strong>.</p>",
+        "definitions": [
+          {
+            "term": "Columns",
+            "definition": "**Opportunity**, **Customer**, **Stage**, **Created By**, **Opportunity Value**, **Days In Current Stage**, **Days Since Last Activity**, **Created Date**, **Stage Entry Date**, **Last Activity Date**, **Stale Flag** (a flag icon on stale rows) and **Aging Status** (for example **Breach**)."
+          }
+        ]
+      },
+      {
+        "heading": "Outcome Analysis Report",
+        "intro": "<p>The <strong>Outcome Analysis Report</strong> lists closed opportunities with how long the sale took. Open it from <strong>Reports</strong>.</p>",
+        "definitions": [
+          {
+            "term": "Columns",
+            "definition": "**Opportunity**, **Customer**, **Created By**, **Stage**, **Status**, **Opportunities Value**, **Closed Date**, **Business Development**, **Project Type** and **Sales Cycle**."
+          }
+        ]
+      },
+      {
+        "heading": "Customer Win Rate Report",
+        "intro": "<p>The <strong>Customer Win Rate Report</strong> shows how often each customer's opportunities were won. Open it from <strong>Reports</strong>.</p>",
+        "definitions": [
+          {
+            "term": "Columns",
+            "definition": "**Customer**, **Customer POC**, **No. of Opportunities**, **No. of Deals Won**, **Total Opportunities Value**, **Won Value**, **Lost Value**, **Avg Deal Size**, **Win Rate (%)** and **Average Sales Cycle (Days)**."
+          }
+        ]
+      },
+      {
+        "heading": "Pipeline Report",
+        "intro": "<p>The <strong>Pipeline Report</strong> is the widest report: one row per opportunity with almost every field of the <strong>Opportunity Profile</strong>. Open it from <strong>Reports</strong>.</p>",
+        "definitions": [
+          {
+            "term": "Parent and child columns",
+            "definition": "**Parent / Child / Standalone** says how the opportunity relates to others, and **Child Count** and **Active Child Count** count its child opportunities."
+          },
+          {
+            "term": "Profile columns",
+            "definition": "**Opportunity ID**, name, **Stage**, **Status**, values, probabilities (**Go %**, **Get %**, **Win Probability (%)**, **AI Probability (%)** and a **Manual/AI** marker), dates, **Customer**, **Tier**, **Owner**, **EPC / Engineer**, **Contracting Entity**, **Locations**, **Competitors** and the leads. **Manage Columns** trims what you see."
+          }
+        ]
+      },
+      {
+        "heading": "Huddle Report",
+        "intro": "<p>The <strong>Huddle Report</strong> prepares a review for one business-development representative over a period.</p>",
+        "images": [
+          {
+            "src": "assets/product/opportunity/152.jpg",
+            "caption": "The Huddle Report"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "BD Representative",
+            "definition": "Pick the representative."
+          },
+          {
+            "term": "DATE RANGE",
+            "definition": "Pick a start and end date."
+          },
+          {
+            "term": "Generate",
+            "definition": "Builds the report once both are chosen. Until then the page says **No Report Generated**."
+          },
+          {
+            "term": "Save Filters and Clear Filters",
+            "definition": "Keep or reset the chosen representative and dates. The download icon saves the report."
+          }
+        ]
+      },
+      {
+        "heading": "Pipeline Gantt View",
+        "intro": "<p>The <strong>Pipeline Gantt View</strong> draws each opportunity as a bar on a calendar so you can see when the pipeline is due.</p>",
+        "images": [
+          {
+            "src": "assets/product/opportunity/153.jpg",
+            "caption": "The Pipeline Gantt View"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Opportunity / Value / Stage",
+            "definition": "The left column names each opportunity with its total value and its stage and status tags."
+          },
+          {
+            "term": "Daily, Weekly, Monthly, Quarterly, Yearly",
+            "definition": "Pick how the time scale is divided."
+          },
+          {
+            "term": "Date range",
+            "definition": "The box at the top sets the period shown (the year by default)."
+          },
+          {
+            "term": "Filters",
+            "definition": "Narrows which opportunities are drawn. The download icon saves the chart and the disk icon saves the view."
           }
         ]
       },
       {
         "heading": "Account Assignment",
-        "intro": "<p>On any account of size, more than one person at your company touches the relationship — a site-level contact, a corporate-level relationship owner, and an executive sponsor who steps in for the highest-stakes conversations. Account Assignment exists so a <strong>BD Manager (Module Manager)</strong> can define that ownership structure once per account rather than leaving it to individual BD reps to remember or re-explain on every new pursuit.</p><p>Account Assignment is the registry that connects a customer account to the internal people responsible for it. Rather than manually re-entering who the BD Rep, Corporate Lead, and Executive Lead are every time you create an opportunity for a given customer, Account Assignment lets you define that responsibility chain once, per Customer and Market Type combination, and have it auto-populate everywhere else in the module that needs it.</p>\n    <p>This distinction matters because it's easy to confuse Account Assignment with the Contacts Directory, but the two serve opposite purposes: Account Assignment is about internal ownership — who on your team owns this relationship — while the Contacts Directory is the external people directory of actual contacts at the customer's or owner's organization. One tracks \"who at our company is responsible,\" the other tracks \"who at their company do we talk to.\"</p>\n    <p>Because the assignment is keyed on Customer plus Market Type (and further refined by Sub Market Type and Tier), a single customer can have different responsibility chains for different market segments — reflecting how larger accounts are often split across multiple business lines internally.</p>",
+        "intro": "<p><strong>Account Assignment</strong> records which sales people look after which customer, by market. It lets the company decide who owns an account before opportunities are created.</p>",
+        "images": [
+          {
+            "src": "assets/product/opportunity/154.jpg",
+            "caption": "The Account Assignment list"
+          }
+        ],
         "definitions": [
           {
-            "term": "Account Assignment",
-            "definition": "The registry mapping a Customer account to internally responsible personnel — BD Rep, Corporate Lead, and Executive Lead — by market segment and location. It represents internal ownership of the customer relationship, and its columns include Customer Name, Location, State, City, Market/Sub Market Type, BD Rep, Corporate Lead, Executive Lead, Tier, and Actions."
+            "term": "+ Add",
+            "definition": "Opens the **Add Account Assignment** dialog."
           },
           {
-            "term": "Account Assignment vs. Contacts Directory",
-            "definition": "Account Assignment maps a Customer account to internal responsible personnel by market segment — it's about internal ownership. The Contacts Directory is the external people directory, listing actual contacts at Customer and Owner organizations. Don't confuse the two: Account Assignment answers \"who on our team owns this,\" the Contacts Directory answers \"who do we talk to over there.\""
-          },
-          {
-            "term": "Auto-fill on Create Opportunity",
-            "definition": "When a matching Account Assignment record already exists for a given Customer/Market Type combination, the BD Rep, Corporate Lead, and Executive Lead fields on the Create Opportunity dialog are pre-populated automatically from that record, saving you from re-entering the same assignment on every new opportunity for that customer."
-          },
-          {
-            "term": "Where this data comes from",
-            "definition": "Each row picks its **Customer Name** from the approved customers on the **Customers** shortcut (checked live: the list is exactly that customer list). Location is a location created under **Global Data → Locations** for that customer, and BD Rep, Corporate Lead and Executive Lead come from users. The rows then go to the **Create Opportunity** form, which uses a matching row to fill the three leads and to limit the Location, Market Type and Sub Market Type choices, and to the **Account Assignment Report** under **Reports**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
+            "term": "Search, Export, Manage Columns",
+            "definition": "Find a row, export the list and choose the columns. The columns are **Customer Name**, **Location**, **State**, **City**, **Market Type**, **Sub Market Type** and more to the right."
           }
         ],
         "procedures": [
           {
-            "title": "Assigning a customer account to a responsibility chain",
+            "title": "Assign an account",
             "steps": [
-              "Go to <strong>Opportunities Management → Account Assignment</strong>.",
-              "Click <strong>+ Add</strong>.",
-              "Search for and select the <strong>Customer Name</strong>.",
-              "Choose <strong>Market Type</strong>, <strong>Sub Market Type</strong>, and <strong>Tier</strong>.",
-              "Pick the <strong>BD Rep</strong>, <strong>Corporate Lead</strong>, and <strong>Executive Lead</strong>.",
-              "Click <strong>Submit</strong>."
+              "Open **Account Assignment** and click **+ Add**.",
+              "Pick the **Customer Name** (required).",
+              "Pick the **Market Type** (required) and the **Sub Market Type**, and type a **Tier** if you use tiers.",
+              "Pick the **Site Representative** (required), the **Corporate Lead** and the **Executive Lead**.",
+              "Click **Submit**. Click **Cancel** to close without saving."
             ],
             "images": [
               {
-                "src": "assets/guides/opportunity/051.jpg",
-                "caption": "Account Assignment mapping",
-                "step": 4
+                "src": "assets/product/opportunity/155.jpg",
+                "caption": "The Add Account Assignment dialog",
+                "step": "Step 2"
               }
             ]
           }
         ]
       },
       {
-        "heading": "Toolbar Shortcuts",
-        "intro": "<p>A pursuit never exists in isolation from the people and companies around it — every opportunity needs a named customer, every customer has real contacts, and every competitive deal has known competitors to track. These shortcuts keep that supporting master data one click away for the <strong>BD End User</strong> building or updating an opportunity, while giving a <strong>BD Manager or Opportunity Management Admin</strong> a central place to keep the underlying Customers, Owners, and Competitors lists clean as the company's book of business grows.</p><p>Alongside the module's main tabs, Arena surfaces a row of icon shortcuts — Task, Calendar, Contacts Directory, Customers, Owners, Competitors, and Settings — that give you quick access to supporting master data and personal productivity tools without navigating away from wherever you are in the module. These shortcuts exist because opportunities don't live in isolation: a pursuit needs a customer, a customer needs contacts, deals have competitors, and work needs to be tracked as tasks and scheduled on a calendar. Rather than burying this supporting data several clicks deep, Arena keeps it one click away at all times.</p>\n    <p>Several of these shortcuts maintain master lists that are shared and reused across the module — Customers, Owners, and Competitors, in particular, are foundational reference data that opportunities, Account Assignment, and Clients Interactions all draw from. Understanding the distinctions between related concepts here (Customer vs. Owner, Customer vs. Contact, Contacts Directory vs. Clients Interactions) will help you avoid duplicate or misplaced records as your data grows.</p>\n    <p>The Customers shortcut in particular carries the richest functionality of the group: a full multi-step creation wizard, OCR-based contact scanning, duplicate merging, and the ability to convert a customer into an Owner record — reflecting how central customer data is to the rest of the module.</p>",
+        "heading": "Tasks",
+        "intro": "<p>The <strong>Tasks</strong> page is the first toolbar icon at the top right of Opportunity Management. It lists the tasks of all opportunities in one place.</p>",
+        "images": [
+          {
+            "src": "assets/product/opportunity/103.jpg",
+            "caption": "The Tasks page"
+          }
+        ],
         "definitions": [
           {
-            "term": "Task shortcut",
-            "definition": "Opens the module's task list, where every task is always linked to a specific Opportunity. The Add Task form requires Name and Date, with optional Description, Time, and a required Opportunity link."
+            "term": "+ Add Task",
+            "definition": "Opens the **Add Task** form.",
+            "images": [
+              {
+                "src": "assets/product/opportunity/104.jpg",
+                "caption": "The Add Task form"
+              }
+            ]
           },
           {
-            "term": "Calendar shortcut",
-            "definition": "Opens a full month-view calendar of module-related events — opportunity due dates, meetings, and follow-ups — with a mini date-picker, a My Calendars panel, and a daily Events list for the selected day. Like the Events/Meetings/Task/Comments sub-tabs in Clients Interactions, this requires Calendar consent to function."
+            "term": "Search By Name",
+            "definition": "Narrows the tasks by name."
           },
           {
-            "term": "Contacts Directory",
-            "definition": "The master people directory for the entire module — every Customer contact and Owner contact in one place, organized into Contacts (all), Customer Contacts, and Owner Contacts sub-tabs. Each contact record tracks Customer/Owner type and name, Contact ID, Salutation, First/Middle/Last Name, Suffix, Job Title, Primary and Secondary Email, Primary and Work Phone Number, Primary and Secondary Address (Line 1/2, Country, State, City, Zip), Services Provided, and Personal Website."
+            "term": "List and Card view",
+            "definition": "Two icons switch between a table and cards; the disk icon saves the view."
           },
           {
-            "term": "Contacts Directory vs. Clients Interactions",
-            "definition": "The Contacts Directory is the master contact list — every person tied to a Customer or Owner, in one searchable place. Clients Interactions is where you drill into a specific customer and log or review interactions (calls, mail, meetings, notes) with those contacts. Think of the Directory as the list of people, and Clients Interactions as the activity log built on top of that list."
-          },
-          {
-            "term": "Customers shortcut",
-            "definition": "Opens the master list of customer accounts/companies that can be linked to opportunities. Includes Create Customer (a 3-step wizard), POC OCR (business-card scanning), Merge Duplicates, and Convert Customers to Owners."
-          },
-          {
-            "term": "POC OCR",
-            "definition": "An option on the Create Customer split button that lets you scan a business card or document to auto-populate a contact's details, rather than typing them in manually."
-          },
-          {
-            "term": "Owners shortcut",
-            "definition": "Opens the master list of project Owner organizations — the client entities that own or commission a construction project. It has its own Create Owner action plus a dedicated Settings shortcut, alongside the usual Search, Export, and Filters."
-          },
-          {
-            "term": "Customer vs. Owner",
-            "definition": "A Customer is a customer account/company that can be linked to Opportunities. An Owner is the project Owner organization — the client entity that owns or commissions a project. The two lists can overlap (a Customer can be migrated into an Owner via Convert Customers to Owners), but they are tracked as separate master lists with separate purposes."
-          },
-          {
-            "term": "Customer vs. Contact",
-            "definition": "A Customer is the company or account-level record. A Contact is an individual person associated with that Customer (or an Owner), tracked in the Contacts Directory and accessible through Clients Interactions. A single Customer can — and typically does — have multiple Contacts."
-          },
-          {
-            "term": "Competitors shortcut",
-            "definition": "Opens the master list of competing firms tracked against your opportunities. The Create Competitor form requires a Competitor Name and a Competitor Type (Direct, Indirect, or Replacement Competitor), with an optional Description. Once created, competitors populate the searchable Competitors field/column on Opportunities."
-          },
-          {
-            "term": "Merge Duplicates",
-            "definition": "A button in the Customers toolbar for consolidating two duplicate customer records into one, cleaning up cases where the same company was accidentally entered more than once."
-          },
-          {
-            "term": "Convert Customers to Owners",
-            "definition": "A button in the Customers toolbar that migrates a Customer record into an Owner record — the mechanism by which the otherwise-separate Customer and Owner lists can overlap."
-          },
-          {
-            "term": "Add Groups",
-            "definition": "A button in the Customers toolbar for organizing multiple customer records together into a group, useful for managing related accounts (such as different divisions of the same parent company) collectively."
-          },
-          {
-            "term": "New customer approval",
-            "definition": "A customer created by a BD user goes to Sales Ops (the Module Manager) for approval before anyone can use it on an opportunity. On mobile, turned-down customers are listed under **Rejected**. If a customer, location or contact you need is not in the system yet, post the request in the opportunity's **Comments** tab and Sales Ops adds it."
-          },
-          {
-            "term": "Locations for customers",
-            "definition": "A location is named **Customer - City** (for example Northstar Energy - Baton Rouge), created under **Global Data → Locations → + Create**, then mapped in **Account Assignment** so BD users can pick it on an opportunity. You see only the locations mapped to the selected customer."
-          },
-          {
-            "term": "ZoomInfo import and business card scan (OCR)",
-            "definition": "Clients and contacts can be imported from **ZoomInfo** instead of typed in, and a point of contact can be created from a photograph of a business card (**OCR**, also available in the **Arena Onsite** app). New clients still go through the approval workflow before anyone can use them."
-          },
-          {
-            "term": "Customer Relation score",
-            "definition": "Relationship strength is scored from the calls, mails, meetings and notes logged against each point of contact, and shown in the **Summary** of **Clients Interactions**. The look-back window and response time behind it are set under **Settings → Customer Relation**."
+            "term": "Add Task form",
+            "definition": "**Name** (required), **Description**, **Date** (required, starts on today), **Time** and **Opportunity** (required, searchable list of opportunities). **Create** saves it and **Cancel** closes it."
           }
         ],
         "procedures": [
           {
-            "title": "Creating a task linked to an opportunity",
+            "title": "Add a task",
             "steps": [
-              "Open the <strong>Task</strong> shortcut icon in the module's tab bar.",
-              "Click <strong>+ Add Task</strong>.",
-              "Fill in <strong>Name</strong> and <strong>Date</strong> (both required), and optionally add a Description and Time.",
-              "Search for and link the required <strong>Opportunity</strong>.",
-              "Click <strong>Create</strong> (or Cancel to discard)."
+              "Click the first toolbar icon (**Tasks**) and click **+ Add Task**.",
+              "Type the **Name**.",
+              "Set the **Date** and **Time**.",
+              "Pick the **Opportunity** the task belongs to.",
+              "Click **Create**."
             ]
+          }
+        ]
+      },
+      {
+        "heading": "Calendar",
+        "intro": "<p>The <strong>Calendar</strong> page is the second toolbar icon. It shows events month by month, with a mini calendar and an <strong>Events</strong> list for the chosen day on the left.</p>",
+        "images": [
+          {
+            "src": "assets/product/opportunity/105.jpg",
+            "caption": "The Calendar page"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Calendar consent",
+            "definition": "If you have not allowed calendar access, a warning says **Consent Not Granted** and tells you to give consent in **My Profile**, **Settings**, **Calendar consent**. Click **Ok** to close it."
           },
           {
-            "title": "Viewing all module-related events on a calendar",
-            "steps": [
-              "Open the <strong>Calendar</strong> shortcut icon.",
-              "Browse the month-view calendar of opportunity due dates, meetings, and follow-ups.",
-              "Use the mini date-picker and My Calendars panel to navigate, and check the daily Events list for a selected day's schedule."
-            ],
-            "note": "Like the Events, Meetings, Task, and Comments sub-tabs elsewhere in the module, this shortcut needs Calendar consent (My Profile → Settings → Calendar consent) to fully function."
+            "term": "Month grid and arrows",
+            "definition": "Arrows beside the month name move to the previous or next month; today's date is circled."
           },
           {
-            "title": "Creating a new customer",
-            "steps": [
-              "Open the <strong>Customers</strong> shortcut and click <strong>Create Customer</strong>.",
-              "Step 1 — <strong>Basic Details</strong>: enter Customer Name (required), plus optional Short Name, Alias Name, Phone Number, Email, Fax Number, Url, Group, and Primary/Mailing/Billing Address (use the \"Same as Primary address\" shortcut to save time on Mailing/Billing).",
-              "Step 2 — <strong>Locations & Tax Codes</strong>: complete this step as applicable.",
-              "Step 3 — <strong>Preview</strong>: review the entered data, then submit."
-            ]
+            "term": "Events and My Calendars",
+            "definition": "The left list shows the chosen day's events and, below, your calendars."
           },
           {
-            "title": "Editing, deleting, or viewing a customer's history",
-            "steps": [
-              "Open the customer card's three-dot menu.",
-              "Choose <strong>Edit</strong> to open the record in an editable form, <strong>Delete</strong> to remove it, or <strong>History</strong> to view its audit/change history."
-            ]
+            "term": "Filters",
+            "definition": "Opens **Filter Categories**: tick event categories (or **Select All**) and click **Submit**, or **Clear & Apply** to reset."
           },
           {
-            "title": "Merging duplicate customer records",
-            "steps": [
-              "Click <strong>Merge Duplicates</strong> in the Customers toolbar.",
-              "Follow the prompts to identify and consolidate the duplicate records."
-            ]
+            "term": "Create Event",
+            "definition": "Opens a form with **Title**, **Date** (required), **Time** (required), **Location**, **Categorize**, an **Event Description** editor and a calendar list, then **Submit**."
+          }
+        ]
+      },
+      {
+        "heading": "Contacts",
+        "intro": "<p>The <strong>Contacts</strong> page is the third toolbar icon. It is the <strong>Contact Directory</strong>: every person you deal with at customers and owners. It has three tabs: <strong>Contacts</strong>, <strong>Customer Contacts</strong> and <strong>Owner Contacts</strong>.</p>",
+        "images": [
+          {
+            "src": "assets/product/opportunity/106.jpg",
+            "caption": "The Contacts directory"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Contacts tab",
+            "definition": "All customer and owner contacts together. The first column **Customer / Owner** says which kind each row is, followed by the company name."
           },
           {
-            "title": "Converting a customer to an owner, or grouping customers",
-            "steps": [
-              "In the Customers toolbar, click <strong>Convert Customers to Owners</strong> to migrate a customer record into the Owners list.",
-              "Or click <strong>Add Groups</strong> to organize multiple customer records together into a group."
-            ]
+            "term": "Columns",
+            "definition": "**Contact ID**, **Salutation**, **First Name**, **Middle Name**, **Last Name**, **Suffix**, **Job Title**, emails, phone numbers, primary and secondary addresses, **Services Provided** and **Personal Website**."
           },
           {
-            "title": "Creating a new Owner",
-            "steps": [
-              "Open the <strong>Owners</strong> shortcut and click <strong>Create Owner</strong>.",
-              "Complete the creation form and submit.",
-              "To edit or delete an existing Owner later, use the same three-dot menu pattern as Customers and Competitors."
-            ]
+            "term": "Search, Filters, Manage Columns",
+            "definition": "Search finds a contact. **Filters** narrows by **Customers** and **Owners**. **Manage Columns** picks the columns."
           },
           {
-            "title": "Adding a competitor",
-            "steps": [
-              "Open the <strong>Competitors</strong> shortcut and click <strong>Create Competitor</strong>.",
-              "Enter the <strong>Competitor Name</strong> (required).",
-              "Select the <strong>Competitor Type</strong> (required — Direct, Indirect, or Replacement Competitor).",
-              "Optionally add a Description.",
-              "Click <strong>Submit</strong> (or Cancel to discard)."
-            ]
-          },
-          {
-            "title": "Create or update customers from Excel",
-            "steps": [
-              "Use the upload option on the Customers screen. Choose **Create** to add customers from an Excel sheet, or **Update** to edit existing ones.",
-              "Download the template, fill it in and upload it. **Download** exports the list of customers."
-            ]
-          },
-          {
-            "title": "Add a contact to a customer",
-            "steps": [
-              "Open the customer and click **Create Contact**.",
-              "Fill in the contact details, such as **Secondary E-Mail Address** and **Zip Code**, preview them and click **Submit**.",
-              "To fill in the details from an image, click **OCR** and choose the image.",
-              "Choose **Default** to make the new contact the customer's default point of contact.",
-              "Use **Copy Contacts to Customers** to copy contacts from one customer to others."
+            "term": "Customer Contacts tab",
+            "definition": "Only customer contacts, with a **+ Create Contact** button, search by ID and name, sortable column headers and edit and delete icons per row.",
+            "images": [
+              {
+                "src": "assets/product/opportunity/107.jpg",
+                "caption": "The Customer Contacts tab"
+              }
             ]
           }
         ],
+        "procedures": [
+          {
+            "title": "Create a customer contact",
+            "steps": [
+              "Open **Contacts**, then the **Customer Contacts** tab.",
+              "Click **+ Create Contact**, then **Create Contact** (the other choice, **OCR**, reads a business card).",
+              "Pick the **Customers** company at the top.",
+              "On **Basic Details** enter the **First Name** (required) and optional salutation, name parts, **Job Title** and phone numbers, then click **Next**.",
+              "Fill **Address**, click **Next** to review in **Preview**, then submit. **Cancel** closes the form."
+            ],
+            "images": [
+              {
+                "src": "assets/product/opportunity/108.jpg",
+                "caption": "The Create a Contact form",
+                "step": "Step 4"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Customers",
+        "intro": "<p>The <strong>Customers</strong> page is the fourth toolbar icon. It holds the companies that buy from you. Each <strong>Active Customers</strong> card has an approval tag such as <strong>Approved</strong>.</p>",
         "images": [
           {
-            "src": "assets/guides/opportunity/017.jpg",
-            "caption": "Toolbar with Tasks, Calendar, Contacts, Customers, Owners, Competitors and Settings"
+            "src": "assets/product/opportunity/109.jpg",
+            "caption": "The Customers page"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Active Customers and Rejected",
+            "definition": "Two tabs. **Active Customers** shows the approved list; **Rejected** is a table of customers that were turned down."
+          },
+          {
+            "term": "Customer card",
+            "definition": "Shows the **Customer ID**, **Customer Name** and **Customer Email**. The three-dot menu has **History**, **Edit**, **Delete** and **Notes**."
+          },
+          {
+            "term": "Merge Duplicates, Convert Customers to Owners",
+            "definition": "Two action buttons for cleaning the list and for turning a customer into an owner."
+          },
+          {
+            "term": "Add Groups",
+            "definition": "Opens the **Groups** table with **Group Name** and **Group Description** (for example Highway, Residential, Infrastructure, Interiors), **Add Row**, **Submit** and **Cancel**. The groups feed the **Group** field of a customer and the **Customer Groups** field of an opportunity."
+          },
+          {
+            "term": "Filters",
+            "definition": "Narrows the cards by **ID**, **Name**, **Created Date** and **Approval Status**."
+          },
+          {
+            "term": "Search, Export and views",
+            "definition": "Search by ID and name, **Export**, and list and card icons."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Create a customer",
+            "steps": [
+              "Open **Customers** and click **Create Customer**, then **Create Customer** (**POC OCR** is the other choice).",
+              "On **Basic Details** type the **Customer Name** (required). Add **Short Name**, **Alias Name**, **Phone Number**, **Email**, **Fax Number**, **Url** and **Group** if you have them.",
+              "Open the **Primary Address** section to add the address, then click **Next**.",
+              "Fill **Locations & Tax Codes**, click **Next** to check the **Preview**, then submit. **Cancel** closes the form."
+            ],
+            "images": [
+              {
+                "src": "assets/product/opportunity/110.jpg",
+                "caption": "The Create Customer form",
+                "step": "Step 2"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Owners",
+        "intro": "<p>The <strong>Owners</strong> page is the fifth toolbar icon. It lists the project owners (the end clients) as cards with <strong>Owner ID</strong>, <strong>Owner Name</strong> and <strong>Owner Email</strong>.</p>",
+        "images": [
+          {
+            "src": "assets/product/opportunity/111.jpg",
+            "caption": "The Owners page"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Create Owner",
+            "definition": "**Create Owner** opens a menu with **Create Owner** and **OCR**, like customers."
+          },
+          {
+            "term": "Search, Export, Filters and views",
+            "definition": "Search by ID and name, **Export**, **Filters** and list or card icons."
+          },
+          {
+            "term": "Settings",
+            "definition": "Opens **Owner Settings**, where you divide owners into levels: **Level 1 (Owner)** is always on, **Level 2 (Category + Owner)** and **Level 3 (Category + SubCategory + Owner)** add groups above the owner."
+          }
+        ]
+      },
+      {
+        "heading": "Competitors",
+        "intro": "<p>The <strong>Competitors</strong> page is the sixth toolbar icon. It lists the rival companies you bid against. Each card shows the <strong>Competitor Name</strong> and <strong>Competitor Type</strong> (for example direct, indirect or replacement competitor).</p>",
+        "images": [
+          {
+            "src": "assets/product/opportunity/112.jpg",
+            "caption": "The Competitors page"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "+ Create Competitor",
+            "definition": "Opens a form with **Competitor Name** (required), **Competitor Type** (required) and **Description**. **Submit** saves and **Cancel** closes.",
+            "images": [
+              {
+                "src": "assets/product/opportunity/113.jpg",
+                "caption": "The Create Competitor dialog"
+              }
+            ]
+          },
+          {
+            "term": "Search and Export",
+            "definition": "Search by name and export the list. Two icons switch between list and cards."
+          },
+          {
+            "term": "Competitors field",
+            "definition": "The competitors created here are the ones you can pick in the **Competitors** field of an opportunity."
           }
         ]
       },
       {
         "heading": "Settings",
-        "intro": "<p><strong>Settings</strong> (the gear icon on the module toolbar) is where Sales Ops or an administrator configures the pipeline, the form fields, the ID format and who can use the module. End users rarely open it, but a gap here can stop the whole team logging leads.</p><p>Settings has these areas: <strong>Competitor Form</strong>, <strong>Stages & Statuses Configuration</strong>, <strong>Opportunities Form</strong>, <strong>Expense</strong>, <strong>ID Settings</strong>, <strong>Business Development</strong>, <strong>Project Types</strong>, <strong>Opportunity Type</strong>, <strong>Milestone Templates</strong>, <strong>Customer Relation</strong> and <strong>Users and Permissions</strong>. Most \"why can't I do X\" questions trace back to a gap in <strong>Stages & Statuses Configuration</strong> or <strong>Opportunities Form</strong>.</p>",
-        "definitions":[
+        "intro": "<p>The gear icon (last toolbar icon) opens the <strong>Settings</strong> of Opportunity Management. A list at the left holds eleven pages: <strong>Competitor Form</strong>, <strong>Stages &amp; Statuses Configuration</strong>, <strong>Opportunities Form</strong>, <strong>Expense</strong>, <strong>ID Settings</strong>, <strong>Business Development</strong>, <strong>Project Types</strong>, <strong>Customer Relation</strong>, <strong>Opportunity Type</strong>, <strong>Milestone Templates</strong> and <strong>Users and Permissions</strong>. The arrow button at the top of the list folds it away.</p>",
+        "images": [
           {
-            "term": "Stages & Statuses Configuration",
-            "definition": "The screen that defines the pipeline: the stages (Lead → Opportunity → Proposal → Inquiry → Bidding → Closed by default) and, within each stage, the allowed statuses. By default Opportunity has Active and On Hold; Proposal has Active, In Progress, Under Review and In Review; Inquiry has Received Inquiry, Submitted and Awaiting Client Response; Bidding has RFP Receipt, RFP Submitted, Clarification, Best & Final and Awaiting Decision; Closed has Won, Lost, No Bid and Cancelled. Per stage you set a name, a color, a Default Win Probability (%), a Stage Threshold (Days) and the allowed statuses. Each Closed status carries its own outcome label, which the Outcome Analysis and Client Win Rate reports read to tell wins from other closures. **Reorder Stages** and **Add Stages** restructure the pipeline. Closed stays one stage, so win and loss analytics stay clean."
+            "src": "assets/product/opportunity/130.jpg",
+            "caption": "Settings, Competitor Form page"
+          }
+        ]
+      },
+      {
+        "heading": "Competitor Form",
+        "intro": "<p><strong>Competitor Form</strong> decides which fields a competitor has.</p>",
+        "definitions": [
+          {
+            "term": "Table Standard Fields",
+            "definition": "The three fixed fields: **Competitor Name**, **Competitor Type** and **Description**."
           },
           {
-            "term": "Opportunities Form",
-            "definition": "Controls the Create Opportunity form and what each stage requires, in four sub-tabs: **Standard Fields**, **Configurable Fields**, **Stale Threshold** (days without activity before an opportunity counts as stale) and **Settings**. For each field you set **Required** (and the stage it applies to), **Hide** and **Show At Creation**. This is what produces the red asterisks when a lead is qualified, and what keeps the create form short."
-          },
+            "term": "Configurable Fields",
+            "definition": "**Add Field** adds a field of your own. Name it, choose the type from the list (for example **Text Box**), switch **Required** on if it must be filled, and delete it with the bin icon. **Save Changes** keeps the form."
+          }
+        ]
+      },
+      {
+        "heading": "Stages and Statuses Configuration",
+        "intro": "<p>This page sets up the stages an opportunity moves through and the statuses allowed in each stage.</p>",
+        "images": [
           {
-            "term": "Opportunities Form → Settings",
-            "definition": "A sub-tab of **Opportunities Form** with four settings. **Parent Mode** turns on parent and child opportunities. **AutoFill Customer Details** fills the client fields once a client is picked. **Document Management** chooses AWS S3 or SharePoint as the storage for opportunity attachments (the guide describes documents held on the organisation's SharePoint site); it locks once any opportunity or proposal exists. The **Weighted Value Formula** shows how weighted value is worked out: Opportunity Value × Go % × Get %."
-          },
-          {
-            "term": "Expense",
-            "definition": "The settings area for tracking pursuit-related spend, with two sub-tabs: Form (Standard Fields — S.No, Expense Type, Item Name, Quantity, Unit Price, Amount, Comments — plus Configurable Fields) and Approval Workflow."
-          },
-          {
-            "term": "ID Settings",
-            "definition": "The screen controlling the auto-generated Opportunity ID format. You choose an ID Separator (/, -, or None) and compose the ID from Business Unit, Year, and Serial No./ID components. Child ID Settings configures the ID format for child opportunities separately from top-level ones."
-          },
-          {
-            "term": "Business Development",
-            "definition": "A maintained catalog of BD codes and representatives, tracked with Serial Number, VP Business Unit, Description, and Actions columns."
-          },
-          {
-            "term": "Project Types",
-            "definition": "A maintained catalog of the project/work-type classifications used elsewhere in the module, tracked by category (such as FIELD or SHOP), material, and status flags."
-          },
-          {
-            "term": "Opportunity Type",
-            "definition": "A simple maintained list (Serial Number, Opportunity Type, Actions) — empty by default until an administrator populates it."
-          },
-          {
-            "term": "Milestone Templates",
-            "definition": "A settings area with two sub-tabs, Milestone Templates and Master Milestones, each with its own Create button — empty by default until entries are added."
-          },
-          {
-            "term": "Customer Relation",
-            "definition": "The screen configuring a Look Back Window (In Days) and an SLA (In Hours), both used for customer-relationship and response-time tracking."
-          },
-          {
-            "term": "Users and Permissions",
-            "definition": "The access-control screen for the module. Existing User Groups (for example, Opportunity Manager or Opportunity Estimator) are managed via a three-dot menu offering Permissions and Users management, and Add User Group creates a new group along with its Permissions and Users."
-          },
-          {
-            "term": "Sales Ops shared settings",
-            "definition": "Sales Ops also maintains **Opportunity Type** (New Build, Existing Facility), **Milestone Templates**, **Business Development** (the BD name pool), **Manage Columns** (Sales Ops can save the default layout for everyone) and **Users and Permissions** (the BD group and the Admin group). Proposal statuses, the compliance requirement directory (under Global Data) and the expense categories with their approval routing are maintained here too."
-          },
-          {
-            "term": "Which setting feeds which list",
-            "definition": "**Stages & Statuses Configuration** feeds the Stage and Status dropdowns and the stage chips. **Opportunities Form** decides which fields are required, hidden or shown at creation. **Opportunity Type** and **Milestone Templates** feed the Details section and the Milestones tab. **Business Development** feeds the BD name pool. **Expense** feeds the Expenses tab categories and approver. **ID Settings** builds the Opportunity ID. **Customer Relation** feeds the score on the interactions summary. **Competitor Form** shapes the Competitors shortcut. **Users and Permissions** decides who can open the module. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
-          },
-          {
-            "term": "Competitor Form",
-            "definition": "From **Home**, open **Opportunity Management**, click **Settings** (gear) and choose **Competitor Form**. The **Standard Fields** are **Competitor Name**, **Type** and **Description**. Click **Add Field** to add your own field to the **Create Competitor** form."
-          },
-          {
-            "term": "Owner Settings",
-            "definition": "Open **Owners** from the icon toolbar. Next to **Create Owner** and **Export** is a **Settings** button that opens the settings for the owner form. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
+            "src": "assets/product/opportunity/131.jpg",
+            "caption": "Stages & Statuses Configuration"
           }
         ],
-        "procedures": [
+        "definitions": [
           {
-            "title": "Fixing \"Status is required\" errors when creating an opportunity",
-            "steps": [
-              "Go to <strong>Settings → Stages & Statuses Configuration</strong>.",
-              "Select the <strong>Lead</strong> stage (or whichever stage is affected).",
-              "Add at least one Status under that stage's Allowed Statuses (for the Lead stage, New Lead).",
-              "Return to Create Opportunity — the Status dropdown should now be populated."
-            ],
-            "note": "This is the single most common blocker preventing new opportunities from being created: the Status dropdown is driven entirely by whatever Statuses are configured for the opportunity's current Stage, and if a Stage has none configured, the dropdown is empty and the Create Opportunity dialog cannot be submitted."
+            "term": "Stages",
+            "definition": "**Lead**, **Proposal** and **Closed**. Each has a **Stage Name**, a **Default Win Probability (%)** and a **Stage Threshold (In Days)**, the number of days an opportunity may stay in that stage."
           },
           {
-            "title": "Adding a whole new Stage or reordering the pipeline",
-            "steps": [
-              "Go to <strong>Settings → Stages & Statuses Configuration</strong>.",
-              "Click <strong>Add Stages</strong> to add a new pipeline stage, or <strong>Reorder Stages</strong> to change the order of existing stages."
-            ]
+            "term": "Allowed Statuses in this stage",
+            "definition": "Statuses the opportunity can take in that stage. **Lead** allows **Open**. **Proposal** starts with **Start** and also has **Successful**, **Pending**, **Cancelled**, **No Bid** and more. **Closed** has **Won** (marked **Success**), **Lost** (**Failure**), **Cancelled** and **No Bid**. **Add Status** adds one and the bin icon removes one."
           },
           {
-            "title": "Setting the Stale Threshold",
-            "steps": [
-              "Go to <strong>Settings → Opportunities Form</strong>.",
-              "Set the <strong>Stale Threshold</strong> field to the number of days of inactivity after which an opportunity should be flagged stale.",
-              "This value immediately feeds the dashboard's Stale Opportunities KPI."
-            ]
+            "term": "Add Stages",
+            "definition": "Type a **Stage Name**, **Default Win Probability (%)** and **Stage Threshold (In Days)** (all required) and click **Add**."
           },
           {
-            "title": "Adding a custom field to the Create Opportunity form",
-            "steps": [
-              "Go to <strong>Settings → Opportunities Form → Configurable Fields</strong>.",
-              "Add the custom field there.",
-              "Reference the <strong>Standard Fields</strong> tab in the same section if you need to check what's already built in before adding a duplicate custom field."
-            ]
-          },
+            "term": "Reorder Stages and Save Changes",
+            "definition": "**Reorder Stages** changes the order; **Save Changes** keeps your edits."
+          }
+        ]
+      },
+      {
+        "heading": "Opportunities Form",
+        "intro": "<p><strong>Opportunities Form</strong> controls the opportunity record. It has four tabs: <strong>Standard Fields</strong>, <strong>Configurable Fields</strong>, <strong>Stale Threshold</strong> and <strong>Settings</strong>.</p>",
+        "images": [
           {
-            "title": "Configuring the Opportunity ID format",
-            "steps": [
-              "Go to <strong>Settings → ID Settings</strong>.",
-              "Choose an ID Separator (<code>/</code>, <code>-</code>, or None).",
-              "Compose the ID from Business Unit, Year, and Serial No./ID components.",
-              "Configure <strong>Child ID Settings</strong> separately if your organization uses parent/child opportunity hierarchies."
-            ],
+            "src": "assets/product/opportunity/132.jpg",
+            "caption": "The Opportunities Form tabs"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Standard Fields",
+            "definition": "Two collapsible blocks, **Standard Fields** and **Milestone Fields**. Fields are grouped (**Details**, **Status & Values** and so on). Each field row has three switches: **Required** (must be filled), **Hide** (remove it from the form) and **Show At Creation** (ask for it in the **Create Opportunity** dialog). The first two fields, ID and name, are locked on.",
             "images": [
               {
-                "src": "assets/guides/opportunity/050.jpg",
-                "caption": "ID Settings for child and parent IDs",
-                "step": 3
+                "src": "assets/product/opportunity/133.jpg",
+                "caption": "Standard Fields with the Required, Hide and Show At Creation switches"
               }
             ]
           },
           {
-            "title": "Managing user access to Opportunity Management",
-            "steps": [
-              "Go to <strong>Settings → Users and Permissions</strong>.",
-              "To modify an existing group (e.g. Opportunity Manager, Opportunity Estimator), use its three-dot menu to manage Permissions and Users.",
-              "To create a new group, click <strong>Add User Group</strong> and configure its Permissions and Users."
+            "term": "Configurable Fields",
+            "definition": "**Add section** builds a block of your own fields for the opportunity."
+          },
+          {
+            "term": "Stale Threshold",
+            "definition": "The number of days (shown in **Days**) after which an opportunity counts as stale. **Save Changes** keeps it.",
+            "images": [
+              {
+                "src": "assets/product/opportunity/135.jpg",
+                "caption": "Stale Threshold"
+              }
             ]
           },
           {
-            "title": "Turn on parent/child opportunities or change the Weighted Value formula",
-            "steps": [
-              "Go to <strong>Settings → Opportunities Form → Settings</strong>.",
-              "Toggle <strong>Parent Mode</strong> on to let opportunities be created as Parent, Child, or Standalone.",
-              "Toggle <strong>AutoFill Customer Details</strong> on so picking a Customer on Create Opportunity fills in its related fields automatically.",
-              "Check the Weighted Value Formula (Opportunity Value × Go % × Get %) to see how the dashboard's Weighted Opportunity Value is calculated."
-            ],
-            "note": "Document Management (AWS S3 or SharePoint) is also set on this sub-tab, but it locks permanently as soon as any Opportunity or Proposal exists — decide it before the module goes live."
+            "term": "Settings tab",
+            "definition": "Four blocks, each with its own **Save Changes**: **Parent Mode** (switch to allow parent and child opportunities), **AutoFill Customer Details** (switch), **Document Management** (**AWS S3** or **Share point**; locked with the note that it cannot change once opportunities or proposals exist) and **Weighted Value Formula** (the **Lead Value** list, set to **Win Probability (%)**).",
+            "images": [
+              {
+                "src": "assets/product/opportunity/134.jpg",
+                "caption": "The Settings tab"
+              }
+            ]
           }
-        ],
+        ]
+      },
+      {
+        "heading": "Expense Settings",
+        "intro": "<p><strong>Expense</strong> settings shape the opportunity expense form and its approval.</p>",
         "images": [
           {
-            "src": "assets/guides/opportunity/049.jpg",
-            "caption": "Opportunities Form settings for Required, Hide and Show At Creation"
+            "src": "assets/product/opportunity/136.jpg",
+            "caption": "Expense settings, Form tab"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Form tab",
+            "definition": "**Table Standard Fields** are fixed: **S.No**, **Expense Type**, **Item Name**, **Quantity**, **Unit Price**, **Amount** and **Comments**. **Add Field** adds a configurable field with **Required** and **Show on cards** switches and a type list."
+          },
+          {
+            "term": "Approval Workflow tab",
+            "definition": "A table of approval levels with **Level**, **Level Description**, **Approvers**, **Workflow Type** and **Actions** (edit and delete).",
+            "images": [
+              {
+                "src": "assets/product/opportunity/137.jpg",
+                "caption": "The Approval Workflow tab"
+              }
+            ]
+          },
+          {
+            "term": "Create Level",
+            "definition": "Opens **Workflow**: choose **All must approve** or **Any one can approve**, type a **Description**, tick the **Approver(s)** (with search and **Select All**) and click **Submit**. **Cancel** closes it.",
+            "images": [
+              {
+                "src": "assets/product/opportunity/138.jpg",
+                "caption": "The Workflow dialog"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "ID Settings",
+        "intro": "<p><strong>ID Settings</strong> sets how child opportunity IDs are written.</p>",
+        "images": [
+          {
+            "src": "assets/product/opportunity/139.jpg",
+            "caption": "ID Settings"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Example Format",
+            "definition": "Shows how the ID will look with your choices."
+          },
+          {
+            "term": "ID Separator",
+            "definition": "Choose the character between the parts (a slash, a dash or none)."
+          },
+          {
+            "term": "Parts",
+            "definition": "Tick **Business Unit**, **Year** and **Serial No./ID** (always on) to include them, drag the handles to reorder, and use the empty last row to add fixed text."
+          }
+        ]
+      },
+      {
+        "heading": "Business Development",
+        "intro": "<p>The <strong>Business Development</strong> settings page lists the names that can be chosen in the <strong>Business Development</strong> field of an opportunity.</p>",
+        "images": [
+          {
+            "src": "assets/product/opportunity/140.jpg",
+            "caption": "Business Development settings"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Table",
+            "definition": "**Serial Number**, **VP Business Unit** (the name), **Description** and **Actions** with a delete icon. Names and descriptions are editable in the table."
+          },
+          {
+            "term": "+ Add",
+            "definition": "Adds a new row."
+          }
+        ]
+      },
+      {
+        "heading": "Project Types",
+        "intro": "<p>The <strong>Project Types</strong> settings page lists the project types offered in the <strong>Project Type</strong> field of an opportunity.</p>",
+        "images": [
+          {
+            "src": "assets/product/opportunity/141.jpg",
+            "caption": "Project Types settings"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Table",
+            "definition": "**Serial Number**, **Project Type Code**, **Description**, a list for field, shop or sales work, **Material**, a list for new, repair or other work, and **Actions** with a delete icon."
+          },
+          {
+            "term": "+ Add and Upload Excel",
+            "definition": "**+ Add** adds a row; **Upload Excel** loads many at once."
+          }
+        ]
+      },
+      {
+        "heading": "Customer Relation",
+        "intro": "<p><strong>Customer Relation</strong> sets the timing rules for customer follow-up.</p>",
+        "images": [
+          {
+            "src": "assets/product/opportunity/142.jpg",
+            "caption": "Customer Relation settings"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Look Back Window (In Days)",
+            "definition": "A number of days. It is set to 60 here."
+          },
+          {
+            "term": "SLA (In Hours)",
+            "definition": "A number of hours. It is set to 48 here. Its tip says users can set a custom SLA."
+          },
+          {
+            "term": "Save Changes",
+            "definition": "Keeps both values."
+          }
+        ]
+      },
+      {
+        "heading": "Opportunity Type",
+        "intro": "<p>The <strong>Opportunity Type</strong> settings page lists the types that appear in the <strong>Opportunity Type</strong> field of an opportunity.</p>",
+        "definitions": [
+          {
+            "term": "Table",
+            "definition": "**Serial Number**, **Opportunity Type** and **Actions**. **+ Add** adds a type."
+          }
+        ]
+      },
+      {
+        "heading": "Milestone Templates",
+        "intro": "<p><strong>Milestone Templates</strong> defines the milestone lists you can choose in the <strong>Milestone Template</strong> field of an opportunity. It has two tabs: <strong>Milestone Templates</strong> and <strong>Master Milestones</strong>.</p>",
+        "images": [
+          {
+            "src": "assets/product/opportunity/143.jpg",
+            "caption": "Milestone Templates"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Milestone Templates tab",
+            "definition": "**+ Create** opens **Create Milestone Template** with a **Milestone Name** (required) and an **Opportunity Type** (required). A search box finds a template.",
+            "images": [
+              {
+                "src": "assets/product/opportunity/144.jpg",
+                "caption": "The Create Milestone Template dialog"
+              }
+            ]
+          },
+          {
+            "term": "Master Milestones tab",
+            "definition": "The library of single milestones, with **Serial Number**, **Icon**, **Name** and **Actions**. **Add** creates one."
+          }
+        ]
+      },
+      {
+        "heading": "Users and Permissions",
+        "intro": "<p><strong>Users and Permissions</strong> lists the user groups of Opportunity Management and what each group may do.</p>",
+        "images": [
+          {
+            "src": "assets/product/opportunity/145.jpg",
+            "caption": "User groups"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "User group cards",
+            "definition": "One card per group, here **opportunity**, **Opportunity Manager** and **Opportunity Estimator**. Each has **Permissions** and **Users** buttons and a three-dot menu."
+          },
+          {
+            "term": "Add User Group and search",
+            "definition": "**Add User Group** creates a group; the search box finds one by name."
+          },
+          {
+            "term": "Permissions",
+            "definition": "Opens the group with **Permissions** and **Users** tabs. The permissions table is a tree (**Opportunity Management**, then **Analytics** and so on) with tick boxes for **View**, **Create**, **Edit**, **Delete**, **Admin**, **Download**, **Print**, **Assign To** and **Roll Back**. A search box finds a permission and **Save Changes** keeps the ticks.",
+            "images": [
+              {
+                "src": "assets/product/opportunity/146.jpg",
+                "caption": "The permissions table of a group"
+              }
+            ]
           }
         ]
       },
@@ -17526,45 +17624,6 @@ const MODULES = [
             "caption": "Creating a contact manually"
           }
         ]
-      },
-      {
-        "heading": "Troubleshooting",
-        "intro": "<p>New users of the module — whether a <strong>BD End User</strong> logging their first pursuit or a <strong>Project Manager</strong> encountering Leads Management for the first time inside one of their construction projects — tend to hit the same handful of points of confusion early on. This section exists to clear those up quickly.</p><p>This section collects the conceptual clarifications that don't belong to any single screen but come up repeatedly as users get oriented in Opportunity Management — most notably, the module's dual identity as both \"Opportunities Management\" and \"Leads Management.\" Understanding these naming and scoping questions early prevents confusion later, especially for users who move between the company-wide Home view and individual construction Projects.</p>\n    <p>The recurring theme across this section is that several apparent differences in the product are purely contextual or terminological rather than functional: Opportunities and Leads are the same records under different labels, and a blocked Create Opportunity form is almost always traceable back to the same root cause (a missing Status configuration) rather than a new, distinct problem. Keeping these clarifications in mind will help you troubleshoot faster and avoid treating cosmetic differences as functional ones.</p>",
-        "definitions": [
-          {
-            "term": "Opportunities Management vs. Leads Management",
-            "definition": "A per-context terminology setting, not two different modules. When opened from Home with no project selected, the module is labeled Opportunities Management with an Opportunities tab. When opened while a construction Project is in context, it's labeled Leads Management with a Leads tab and a project badge next to the Arena logo. The screens, fields, and functionality are identical either way — only the label changes."
-          },
-          {
-            "term": "Module scope",
-            "definition": "Opportunity Management is not tied to any single construction project — it is company-wide. It covers a personal dashboard, the opportunity list/board, a customer-interaction CRM log, analytics, reports, and account assignment across the entire business, regardless of which context (Home or a specific Project) you happened to open it from."
-          },
-          {
-            "term": "Opportunities vs. Leads (terminology)",
-            "definition": "There is no functional difference. \"Opportunity\" and \"Lead\" are two labels for the same underlying module and the same records, chosen based on where you opened it from: Opportunities from Home with no project selected, Leads with a construction Project in context."
-          },
-          {
-            "term": "Client, Customer and BD Rep wording",
-            "definition": "This guide uses **Client**, **Clients Interactions** and **BD Rep**. Some screens or environments say **Customer**, **Customers Interactions** and **Site Representative** for the same things. The **Customers** shortcut in the toolbar and **Global Data → Customers** keep their own names."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Diagnosing a blocked Create Opportunity form",
-            "steps": [
-              "Check whether the required <strong>Status</strong> field is empty — this is almost always the actual blocker.",
-              "If Status is empty, go to <strong>Settings → Stages & Statuses Configuration</strong> and confirm the current Stage (usually Lead) has at least one Status configured.",
-              "Remember that the Contact section fields (Client Group, BD Rep, Corporate Lead, Executive Lead) are all optional — they are not what's preventing submission, even if they appear unfilled."
-            ]
-          },
-          {
-            "title": "Populating empty catalog lists",
-            "steps": [
-              "If <strong>Settings → Opportunity Type</strong> or <strong>Settings → Milestone Templates</strong> appear empty, this is expected default behavior, not an error — no entries have been added yet.",
-              "An administrator should add entries manually: directly for Opportunity Type, or via the <strong>Create</strong> button for Milestone Templates (under either the Milestone Templates or Master Milestones sub-tab)."
-            ]
-          }
-        ]
       }
     ],
     "name": "Opportunity Management",
@@ -17579,19 +17638,48 @@ const MODULES = [
       "The icon toolbar at the top right has <strong>Tasks</strong>, <strong>Calendar</strong>, <strong>Contacts</strong>, <strong>Customers</strong>, <strong>Owners</strong>, <strong>Competitors</strong> and <strong>Settings</strong> (the gear).",
       "The <strong>Arena Onsite</strong> mobile app mirrors the core flows for the field."
     ],
-    "sections":[
-      "Overview",
-      "Dashboard",
+    "sections": [
+      "My Dashboard",
       "Opportunities",
-      "Opportunity Record",
-      "Clients Interactions",
+      "Opportunity Profile",
+      "Milestones",
+      "Opportunity Proposals",
+      "Teams",
+      "Opportunity Tasks",
+      "Comments",
+      "Compliance Tracker",
+      "Opportunity Documents",
+      "Opportunity Expenses",
+      "Customers Interactions",
       "Analytics",
       "Reports",
+      "Forecast Report",
+      "Opportunity Aging Report",
+      "Outcome Analysis Report",
+      "Customer Win Rate Report",
+      "Pipeline Report",
+      "Huddle Report",
+      "Pipeline Gantt View",
       "Account Assignment",
-      "Toolbar Shortcuts",
+      "Tasks",
+      "Calendar",
+      "Contacts",
+      "Customers",
+      "Owners",
+      "Competitors",
       "Settings",
-      "Mobile App",
-      "Troubleshooting"
+      "Competitor Form",
+      "Stages and Statuses Configuration",
+      "Opportunities Form",
+      "Expense Settings",
+      "ID Settings",
+      "Business Development",
+      "Project Types",
+      "Customer Relation",
+      "Opportunity Type",
+      "Milestone Templates",
+      "Users and Permissions",
+      "Mobile App"
     ]
   },
   {
@@ -34386,1509 +34474,795 @@ const MODULES = [
     "qaItems": QA_PROPOSALMANAGEMENT,
     "narrative": [
       {
-        "heading": "Overview",
-        "intro": "<p>Proposal Management tracks each bid from first enquiry to submitted package. A <strong>Module Admin</strong> sets up the shared lists and approval workflows once; <strong>Estimators</strong> and <strong>PMs</strong> then create proposals, <strong>approvers</strong> sign them off, and results show up in the Dashboard and Analytics.</p><p>From <strong>Home</strong>, click the <strong>Proposal Management</strong> tile. The tabs are <strong>My Dashboard</strong>, <strong>Proposals</strong>, <strong>Analytics</strong>, <strong>Issues</strong>, <strong>Push Datasets</strong>, <strong>Calendar</strong>, <strong>To Do List</strong> and the <strong>Settings</strong> gear. The module opens on Proposals.</p>",
-        "definitions": [
+        "heading": "My Dashboard",
+        "intro": "<p><strong>My Dashboard</strong> is the first tab of Proposal Management. It totals the proposals, shows how many are won or lost, and lists what needs your attention: approvals, forms, issues and to-dos.</p>",
+        "images": [
           {
-            "term": "Who does what",
-            "definition": "**Module Admin / Super Admin** builds everything in **Settings** (proposal types, bid types, codes, statuses, approval workflow, ID format, permissions) and keeps Customers, Owners and Locations in **Global Data**. **Estimator / Field User** creates proposals and fills their Profile. **PM / Module Manager** reviews. **Approver** (named in the workflow) approves or rejects. **Super Admin** connects Calendar and Outlook consent."
-          },
-          {
-            "term": "Where Proposal Management data comes from",
-            "definition": "Customers, customer POCs, Owners and the Site Name / Job Site locations come from **Global Data** (Customers, Owners, Locations). Opportunity comes from **Opportunity Management**. Projects, Company Contact, Estimators, Teams and Assign To come from the company's users in **Global Data → Users & Permissions → Global Rosters**; crews come from **Global Data → Crews**. Proposal Type, Bid Type, Project Type, Business Development Code, Department Code, Delivery Method and Status come from **Proposal Management → Settings**. See \"Where Proposal Fields Come From\"."
-          },
-          {
-            "term": "Where Proposal Management data goes",
-            "definition": "Proposals feed **My Dashboard** and **Analytics**. A proposal's **Bid** tab creates tenders in **Tender Management**. Calendar events and follow-up reminders depend on calendar consent (**Global Data → Marketplace**). A won proposal can create a project (Project Name and Project Number on the Profile). Submission package emails are kept in the proposal's Communication tab."
-          },
-          {
-            "term": "Status Configuration",
-            "definition": "Settings screen for the status names and colours used on proposals (Proposal tab) and submission packages (Submission Package tab). Standard first and last statuses are fixed; the last-level statuses can be marked Success or Failure for win/loss analytics."
-          },
-          {
-            "term": "Approval Workflow (proposal)",
-            "definition": "The company-wide chain of approval levels every proposal goes through (all must approve / any one can approve)."
-          },
-          {
-            "term": "Setup Approval Workflow (Submission Packages)",
-            "definition": "A separate set of levels for submission packages, set under the **Submission Packages** tab of a proposal."
+            "src": "assets/product/proposal-management/001.jpg",
+            "caption": "My Dashboard"
           }
         ],
-        "procedures": [
-          {
-            "title": "Set Proposal Management up in the right order",
-            "steps": [
-              "In **Global Data**, check **Customers** (with contacts), **Owners**, **Locations** and **Crews**, and that people appear in **Users & Permissions → Global Rosters** (Estimators have the Estimator role).",
-              "Open **Proposal Management → Settings → Proposal** and create the **Proposal Types** (and their form sections on the **Proposal Form** tab); set the **Settings** tab (Document Management).",
-              "Fill the lists: **Bid Types**, **Project Types**, **Department Codes**, **Business Development**, **Delivery Method** and **Status**.",
-              "Set **Approval Workflow**, **ID Settings** and **Users and Permissions**; add **Checklists** and **Submittals** templates.",
-              "Ask each person to give calendar consent if they use Calendar or Dashboard events (My Profile → Settings).",
-              "Estimators can now create proposals."
-            ]
-          },
-          {
-            "title": "Trace where a proposal drop-down value comes from",
-            "steps": [
-              "Open the proposal (click its name) and find the field on the **Profile**.",
-              "Look up the field in \"Where Proposal Fields Come From\" to see its source screen.",
-              "If a value is missing, add it at the source (for example a new customer in Global Data → Customers) and reopen the proposal."
-            ]
-          }
-        ]
-      },
-      {
-        "heading": "My Dashboard",
-        "intro": "<p>My Dashboard answers \"where do proposals stand right now\" without opening each one. <strong>Estimators</strong>, <strong>PMs</strong> and managers use it as their home screen.</p><p>Cards show <strong>Total Proposals</strong>, <strong>Proposals Created</strong>, <strong>Completed Proposals</strong>, <strong>Lost Proposals</strong> and <strong>In Progress Proposals</strong> (each with a count, a rupee amount and a Daily / Weekly / Monthly / Yearly trend). Below are three success-rate graphs, <strong>Calendar Events</strong>, <strong>Issues</strong>, <strong>Forms</strong>, <strong>Approvals</strong>, a <strong>Proposals</strong> list, a <strong>To Do List</strong> and <strong>Proposal Deadline</strong>.</p>",
         "definitions": [
           {
-            "term": "Total Proposals and the status cards",
-            "definition": "They count the proposals by **Status** (Settings → Status). The Proposals tab listed 13 while the Dashboard counted 15, so the Dashboard may include proposals not shown in the list."
+            "term": "Total Proposals",
+            "definition": "The count of proposals with their **Total** value in rupees and the percentage change since the last period. **DAILY**, **WEEKLY**, **MONTHLY** and **YEARLY** pick the comparison period."
           },
           {
-            "term": "Estimate Success Rate and Success Rate graphs",
-            "definition": "Three graphs, each with a **Proposal Types** filter (Cost Plus, Roofing proposal, Fabrication; the types in Settings) and a date range: **Estimate Success Rate**, **Success Rate (Qty of Proposals)** and **Success Rate (Currency value)**. They match the Analytics cards of the same name."
+            "term": "Proposals Created",
+            "definition": "Count and amount of proposals created in the chosen period."
+          },
+          {
+            "term": "Completed Proposals",
+            "definition": "Count and amount of proposals that reached the **Completed** status."
+          },
+          {
+            "term": "Lost Proposals",
+            "definition": "Count and amount of proposals that reached the **Lost** status."
+          },
+          {
+            "term": "In Progress Proposals",
+            "definition": "Count and amount of proposals still open."
+          },
+          {
+            "term": "Estimate Success Rate",
+            "definition": "A bar chart of proposals grouped by value band (up to ₹250 K, ₹250 K to ₹500 K, ₹500 K to ₹750 K, ₹750 K to ₹1.00 M and over ₹1.00 M). **Proposal Types** and **Select Date Range** narrow it. The charts **Success Rate (Qty of Proposals)** and **Success Rate (Currency value)** sit beside it."
           },
           {
             "term": "Calendar Events",
-            "definition": "Shows \"Consent Not Granted! Please provide consent\" until the user gives Outlook consent (My Profile → Settings → Outlook management consent). **See All** opens the **Calendar** tab."
+            "definition": "Your upcoming events. If calendar access is not allowed it says **Consent Not Granted** and points to **My Profile**, **Settings**. **See All** opens the **Calendar**."
           },
           {
-            "term": "Issues, Forms and Approvals",
-            "definition": "**Issues** counts Proposal Workflow Issues and Submission Package Workflow Issues. **Forms (6)** counts checklists by template: **Legal Review (2)**, **Safety (3)**, **Quality (1)**, the templates in Settings → Checklists. **Approvals (17)** counts **Proposal Approvals (15)** and **Submission Package Approvals (2)** waiting for the signed-in user."
+            "term": "Issues",
+            "definition": "Counts of **Proposal Workflow Issues** and **Submission Package Workflow Issues**."
           },
           {
-            "term": "To Do List and Proposal Deadline panels",
-            "definition": "The To Do List panel shows recent items from the **To Do List** tab with **Create To Do List**. **Proposal Deadline** lists proposals approaching their Due Date (\"All set! no deadlines to catch\" when none)."
+            "term": "Forms",
+            "definition": "Counts of checklist forms filled in by type: **Quality**, **Legal Review** and **Safety**."
           },
           {
-            "term": "Who sees what",
-            "definition": "Per the guide, data is scoped to the signed-in user unless they are a system admin, who sees the whole module."
-          }
-        ],
-        "procedures": [
+            "term": "Approvals",
+            "definition": "How many items wait for approval, split into **Proposal Approvals** and **Submission Package Approvals**."
+          },
           {
-            "title": "View the Proposal Management dashboard",
-            "steps": [
-              "Open **Proposal Management → My Dashboard**.",
-              "Read the status cards, the three success-rate graphs (filter by **Proposal Types** and date range), **Calendar Events**, **Issues**, **Forms**, **Approvals**, the **Proposals** list, the **To Do List** and **Proposal Deadline**."
-            ],
-            "note": "Counts follow the statuses, proposal types and checklist templates you set in Settings.",
-            "images": [
-              {
-                "src": "assets/notion/proposal-management-dashboard/001.jpg",
-                "caption": "My Dashboard in Proposal Management",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/proposal-management-dashboard/002.jpg",
-                "caption": "Total Proposals by status",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/proposal-management-dashboard/003.jpg",
-                "caption": "The Estimate Success Rate graph",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/proposal-management-dashboard/004.jpg",
-                "caption": "Calendar Events, with Create Event",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/proposal-management-dashboard/005.jpg",
-                "caption": "Recent proposals with the total count",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/proposal-management-dashboard/006.jpg",
-                "caption": "Proposal Deadlines, based on proposal due dates",
-                "step": 2
-              }
-            ]
+            "term": "Proposals",
+            "definition": "A short list of recent proposals by ID."
+          },
+          {
+            "term": "To Do List",
+            "definition": "Your to-dos with their date, creator and a **Create To Do List** button. **See All** opens the **To Do List** page."
+          },
+          {
+            "term": "Proposal Deadline",
+            "definition": "Upcoming submission deadlines. It says **All set! no deadlines to catch** when none are near."
           }
         ]
       },
       {
         "heading": "Proposals",
-        "intro": "<p>The Proposals tab lists every proposal and is where an <strong>Estimator</strong> creates, opens, copies and tracks them. <strong>Approvers</strong> approve or reject from the same list.</p><p>A status legend sits above the list. The toolbar has <strong>Create</strong>, search, <strong>Export</strong>, <strong>Filters</strong>, <strong>Manage Columns</strong> and Table / Grid / Kanban views. Click a proposal name to open its Profile.</p>",
+        "intro": "<p>The <strong>Proposals</strong> tab lists every proposal. Bid managers and estimators create proposals here and open one to work on it.</p>",
+        "images": [
+          {
+            "src": "assets/product/proposal-management/002.jpg",
+            "caption": "The Proposals list"
+          }
+        ],
         "definitions": [
           {
-            "term": "Proposal",
-            "definition": "The record that tracks one piece of business-development work from creation through approval, submission and result. Opening it shows the tabs **Profile**, **Teams**, **Documents**, **Communication**, **Checklists**, **Bid**, **Submittals**, **Submission Packages**, plus **Comments** and **History**."
+            "term": "Status chips",
+            "definition": "Under the toolbar, one coloured chip per status shows how many proposals have it: **Start**, **Successful**, **Cancelled**, **No Bid**, **N/A**, **Completed**, plus a grey **Unassigned** chip."
           },
           {
-            "term": "Opportunity",
-            "definition": "The upstream record from **Opportunity Management**, chosen in the Profile's **Opportunity** drop-down."
+            "term": "+ Create",
+            "definition": "Opens the **Create Proposal** dialog.",
+            "images": [
+              {
+                "src": "assets/product/proposal-management/013.jpg",
+                "caption": "The Create Proposal dialog"
+              }
+            ]
           },
           {
-            "term": "Proposal ID",
-            "definition": "Created automatically in the format set in **Settings → ID Settings**. The edit dialog shows it but the ID is not a field you type when creating."
+            "term": "Search",
+            "definition": "Finds a proposal."
           },
           {
-            "term": "Business Development Code",
-            "definition": "A classification field captured on a proposal, used for business-development tracking/reporting."
+            "term": "Export",
+            "definition": "Exports the list."
           },
           {
-            "term": "See History",
-            "definition": "A log of created, edited, updated, and approval-workflow status changes for a proposal, viewed from its Actions menu."
+            "term": "Filters",
+            "definition": "Opens a panel with a search box and filters for **Proposal ID**, **Status**, **Proposal Type**, **Opportunity**, **Bid Type**, **Project Type**, **Company Contact** and more. **Apply** runs them, **Save Filters** keeps the set and **Clear All** resets.",
+            "images": [
+              {
+                "src": "assets/product/proposal-management/014.jpg",
+                "caption": "The Filters panel"
+              }
+            ]
           },
           {
-            "term": "Follow Up",
-            "definition": "Sends reminder emails to the customer once or on a Daily, Weekly or Monthly schedule. The proposal also holds a Follow Up Reminder date and time, **Notify Before** (hours) and **Notify To** users."
+            "term": "Manage Columns and layers menu",
+            "definition": "Choose which columns show. The layers icon lists saved layouts. The disk icon saves the view."
           },
           {
-            "term": "Teams tab",
-            "definition": "Tabs **Users** and **Crews**. **Add User** lists the company's system users; **Add Crew** lists the crews of Global Data → Crews with member counts. Each member has a three-dot menu to remove them."
+            "term": "List, Card and Kanban view",
+            "definition": "Three icons switch how proposals are shown."
           },
           {
-            "term": "Documents tab (proposal)",
-            "definition": "Auto folders **Comments Attachments**, **Mail Attachments**, **Checklists**, **Submittals**, **Submission Packages** and **Bids**, plus **New Folder** and **Upload Documents**. Columns: Folders & Documents, Items, Last Modified, Added On, Actions. Where files are kept (AWS S3 or SharePoint) comes from **Settings → Proposal → Settings → Document Management**."
+            "term": "Kanban view",
+            "definition": "One column per status (**Start**, **Successful**, **Pending**, **Cancelled** and so on) with the number of proposals in it. Each card shows **Name**, **Description**, **Type**, **Opportunity**, **Creation Date**, **Created By** and **Workflow Level**.",
+            "images": [
+              {
+                "src": "assets/product/proposal-management/015.jpg",
+                "caption": "Kanban view by status"
+              }
+            ]
           },
           {
-            "term": "Communication tab (proposal)",
-            "definition": "A mail client for the proposal: **All Emails**, **Inbox**, **Sent**, **Drafts**, **Starred**, **Trash**, **Import Group** and **Groups**. Whether it uses Gmail or Outlook follows **Global Data → Settings → Mail Settings** (row PROPOSAL MANAGEMENT)."
-          },
-          {
-            "term": "Calendar (Proposal Management)",
-            "definition": "A calendar for proposal-related events (e.g. deadlines), which can sync with Outlook once connected via Global Data → Marketplace."
-          },
-          {
-            "term": "Create Proposal dialog",
-            "definition": "Only three inputs: **Proposal Name**, **Proposal Type** (the types in Settings) and a tick box \"Does a Bid folder need to be created by the Project Services Admin?\". Click **Submit for Approval** to create it. All other details are filled on the Profile."
-          },
-          {
-            "term": "List columns",
-            "definition": "34 columns: Proposal ID, Proposal Name, Description, Opportunity, Proposal Type, Bid Type, Project Type, Inquiry Number, Company Contact, Delivery Method, Business Development Code, Department Code, Customers, Site Name, Job Site, Estimators, Creation Date, Project Value Estimated, Due Date, Submitted Date, Project Value Submitted, Anticipated Award Date, Follow Up Reminder, Result Date, Contract Amount, Projected Cost, Chance of Success, Workflow Level, Follow Up, Recent Comments, Approve, Reject, Assign To and Actions. **Manage Columns** hides or arranges them."
-          },
-          {
-            "term": "Row actions",
-            "definition": "**history** (See History), **copy** (Duplicate, with a choice of what to include), **edit** (Edit Proposal dialog with Proposal ID, Proposal Name, Proposal Type and the Bid folder tick) and **delete**. **Follow Up** opens the reminder-email feature. **Approve** and **Reject** show only for people in the proposal's approval workflow."
+            "term": "Columns",
+            "definition": "**Proposal ID**, **Proposal Name**, **Description**, **Opportunity**, **Proposal Type**, **Bid Type**, **Project Type**, **Inquiry Number**, **Company Contact**, **Delivery Method**, **Business Development Code**, **Department Code**, **Customers**, **Site Name**, **Job Site**, **Estimators**, **Creation Date**, **Project Value Estimated**, **Due Date**, **Submitted Date**, **Project Value Submitted**, **Anticipated Award Date**, **Follow Up Reminder**, **Result Date**, **Contract Amount**, **Projected Cost**, **Chance of Success**, **Workflow Level**, **Follow Up**, **Recent Comments**, **Approve**, **Reject**, **Assign To** and **Actions**."
           },
           {
             "term": "Workflow Level",
-            "definition": "Shows how many approval levels are done, for example 1/1 or 0/1. The levels come from **Settings → Approval Workflow**."
+            "definition": "Shows where the proposal is in its approval levels, for example **1/1**. **Approve** and **Reject** act on it for the approver."
           },
           {
-            "term": "Where this data comes from and goes",
-            "definition": "Types, statuses, codes and delivery methods come from **Settings**; customers, owners and locations from **Global Data**; the Opportunity from **Opportunity Management** (see \"Proposal Fields\"). Proposals feed **My Dashboard**, **Analytics** and the **Weekly Report**."
+            "term": "Row actions",
+            "definition": "**History** (change log), a copy icon, **Edit** and **Delete**. **Assign To** lists the people the proposal is assigned to."
           },
           {
-            "term": "Comments",
-            "definition": "A side panel titled \"Proposal ID-11 Comments\" with search and attachments. The latest comments show in the **Recent Comments** column."
+            "term": "Calendar, To Do List and Settings",
+            "definition": "The three buttons at the top right of every Proposal Management page open the **Calendar**, the **To Do List** and **Settings**."
           }
         ],
         "procedures": [
           {
-            "title": "Create a new proposal",
+            "title": "Create a proposal",
             "steps": [
-              "Open **Proposal Management → Proposals** and click **Create**.",
-              "In **Create Proposal**, enter the **Proposal Name**, choose the **Proposal Type**, and tick the Bid folder box if the Project Services Admin should create a Bid folder.",
-              "Click **Submit for Approval**. The proposal appears in the list with its automatic ID and enters the approval workflow.",
-              "Click the proposal name to open its **Profile** and fill in Opportunity, Bid Type, Project Type, customers, site, dates and values, then **Save Changes**."
-            ],
-            "note": "The Proposal ID is created from the format in Settings → ID Settings.",
-            "images": [
-              {
-                "src": "assets/notion/proposal-management-proposals/001.jpg",
-                "caption": "Create: the pop-up for a new proposal",
-                "step": 2
-              }
+              "Open **Proposals** and click **+ Create**.",
+              "Type the **Proposal Name** and pick the **Proposal Type** (both required).",
+              "Tick **Does a Bid folder need to be created by the Project Services Admin?** if a bid folder is needed.",
+              "Click **Submit**. Click **Cancel** to close without creating anything.",
+              "Open the new proposal to complete its **Profile**."
             ]
-          },
-          {
-            "title": "Edit or delete a proposal",
-            "steps": [
-              "In **Proposal Management → Proposals**, use the icons in the **Actions** column.",
-              "Click **edit** to change the Proposal Name or Proposal Type in the **Edit Proposal** dialog (other details are edited on the Profile).",
-              "Click **delete** to permanently remove the proposal."
-            ]
-          },
-          {
-            "title": "View a proposal's change history",
-            "steps": [
-              "In **Proposal Management → Proposals**, click the **history** icon in the Actions column (or the **History** tab on the Profile).",
-              "Read the log of created, edited and updated entries and approval-workflow status changes."
-            ]
-          },
-          {
-            "title": "Bulk create or update proposals via Excel",
-            "steps": [
-              "In <strong>Proposal Management → Proposals</strong>, click <strong>Export</strong>.",
-              "Use <strong>Download Excel</strong> to export current proposal data (the sheet is named by Proposal Type).",
-              "Use <strong>Upload Excel</strong> with the provided sample template to create or update proposals in bulk."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/proposal-management-proposals/003.jpg",
-                "caption": "Export, for downloading, uploading and updating proposals",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/proposal-management-proposals/004.jpg",
-                "caption": "Upload Excel, with a sample template for creating or updating proposals",
-                "step": 3
-              }
-            ]
-          },
-          {
-            "title": "Search or filter the proposals list",
-            "steps": [
-              "Use <strong>Search</strong> to find proposals by Proposal Name or Proposal ID.",
-              "Click <strong>Filters</strong> to open criteria for narrowing the list.",
-              "Use <strong>Manage Columns</strong> to choose and arrange visible columns."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/proposal-management-proposals/005.jpg",
-                "caption": "Filters: choosing the data to show",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/proposal-management-proposals/006.jpg",
-                "caption": "Manage Columns: choosing and arranging columns",
-                "step": 3
-              }
-            ]
-          },
-          {
-            "title": "Send follow-up reminder emails to a customer",
-            "steps": [
-              "Open the proposal and use the <strong>Follow Up</strong> feature.",
-              "Set a <strong>Recurrence Type</strong> — Daily, Weekly, Monthly, or None — to schedule repeated reminders, or send a one-time email."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/proposal-management-proposals/013.jpg",
-                "caption": "Follow Up: reminder emails to customers, with a recurrence type",
-                "step": 1
-              }
-            ]
-          },
-          {
-            "title": "Add users or crews to a proposal team",
-            "steps": [
-              "In the proposal's **Teams** tab, click **Add User** to pick people from the company roster, or switch to **Crews** and click **Add Crew** to pick a Global Data crew.",
-              "Use the three-dot menu on a member and choose **Delete** to remove them."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/proposal-management-proposals-teams/001.jpg",
-                "caption": "Add User: choosing from the global roster",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/proposal-management-proposals-teams/002.jpg",
-                "caption": "Add Crew: choosing from the crews in Global Data",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/proposal-management-proposals-teams/003.jpg",
-                "caption": "Delete, in the three-dot menu, to remove a member",
-                "step": 2
-              }
-            ]
-          },
-          {
-            "title": "Comment on a proposal and pin it to a report",
-            "steps": [
-              "In the proposal Profile, click <strong>Comments</strong> to add comments and attachments.",
-              "Use the comment menu to <strong>Edit</strong> or <strong>Delete</strong> your own comment.",
-              "Use <strong>Add to Report</strong> to pin a comment for inclusion in the weekly report."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/proposal-management-proposals-profile/007.jpg",
-                "caption": "Comments on a proposal, with like and search",
-                "step": 1
-              }
-            ]
-          },
-          {
-            "title": "Send an email to a client from a proposal",
-            "steps": [
-              "In the proposal's <strong>Communication</strong> tab, click <strong>Compose Mail</strong>.",
-              "Fill in To, CC, BCC, Subject, Message, and any attachments, then send."
-            ],
-            "note": "Sent submission-package emails are also stored here, organized into Inbox, Sent, Drafts, Starred, and Trash."
-          },
-          {
-            "title": "Add a customer, contact, owner or site from a proposal",
-            "steps": [
-              "Open the proposal **Profile** and find **Customers**, **POCs**, **Owners** or **Site Name**.",
-              "Click **Create a Customer**, **Create a Customer POC**, **Create an Owner** or **Create a Site** under the field to add one without leaving the proposal.",
-              "Save the new entry, then select it in the drop-down."
-            ],
-            "note": "The new entry is a record of Global Data (Customers, Owners, Locations), so it appears in those lists too."
           }
-        ],
+        ]
+      },
+      {
+        "heading": "Proposal Profile",
+        "intro": "<p>The <strong>Profile</strong> tab is the main tab of a proposal record. Open it by clicking a proposal name in the <strong>Proposals</strong> list. It has the tabs <strong>Profile</strong>, <strong>Teams</strong>, <strong>Documents</strong>, <strong>Communication</strong>, <strong>Checklists</strong>, <strong>Bid</strong>, <strong>Submittals</strong> and <strong>Submission Packages</strong>.</p>",
         "images": [
           {
-            "src": "assets/notion/proposal-management-proposals/002.jpg",
-            "caption": "Status Legend: the number of proposals in each status"
+            "src": "assets/product/proposal-management/003.jpg",
+            "caption": "The Profile tab of a proposal"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Comments and History",
+            "definition": "Two buttons at the top right: **Comments** opens the discussion of this proposal and **History** its change log."
           },
           {
-            "src": "assets/notion/proposal-management-proposals/007.jpg",
-            "caption": "Grid, Table and Kanban views, with Save Layout"
+            "term": "Details",
+            "definition": "**Proposal ID** (fixed), **Proposal Name**, **Proposal Type**, **Opportunity** (links the proposal to an opportunity), **Bid Type**, **Project Type** (with the field or shop type, material and new or repair that the project type carries), **Description**, **Projects** (with **Create a Project**), **Inquiry Number** and **Company Contact**."
           },
           {
-            "src": "assets/notion/proposal-management-proposals/008.jpg",
-            "caption": "Duplicate, to copy an existing proposal"
+            "term": "Project Location",
+            "definition": "**Business Development Code**, **Department Code**, **Customers** (with **Create a Customer**), **POCs** (**Create a Customer POC**), **Owners** (**Create an Owner**), **Site Name** (with city and state; **Create a Site**), **Job Site** and **Estimators**."
           },
           {
-            "src": "assets/notion/proposal-management-proposals/009.jpg",
-            "caption": "Choosing what to include in the duplicated proposal"
+            "term": "Dates & Values",
+            "definition": "**Creation Date**, **Project Value Estimated**, **Due Date**, **Submitted Date**, **Project Value Submitted**, **Status**, **Delivery Method**, **Anticipated Award Date**, **Follow Up Reminder Date** and **Time**, **Result Date**, **Contract Amount** and **Projected Cost**."
           },
           {
-            "src": "assets/notion/proposal-management-proposals/010.jpg",
-            "caption": "Approve and Reject, shown only to people in the approval workflow"
+            "term": "Configurable sections",
+            "definition": "Extra blocks your company defined in **Settings**, for example **Notes** and **Attachments** (choose files to upload)."
           },
           {
-            "src": "assets/notion/proposal-management-proposals/011.jpg",
-            "caption": "Recent Comments: the latest three comments on a proposal"
+            "term": "Assign To",
+            "definition": "At the bottom, picks the people the proposal is assigned to."
           },
           {
-            "src": "assets/notion/proposal-management-proposals/012.jpg",
-            "caption": "Chance of Success, based on the selected customers"
-          },
-          {
-            "src": "assets/notion/proposal-management-proposals-profile/001.jpg",
-            "caption": "Project Name and Project Number, created when a proposal is won"
-          },
-          {
-            "src": "assets/notion/proposal-management-proposals-profile/002.jpg",
-            "caption": "Estimators, chosen from the global roster"
-          },
-          {
-            "src": "assets/notion/proposal-management-proposals-profile/003.jpg",
-            "caption": "Projected Amount"
-          },
-          {
-            "src": "assets/notion/proposal-management-proposals-profile/004.jpg",
-            "caption": "Status, which is configured in settings"
-          },
-          {
-            "src": "assets/notion/proposal-management-proposals-profile/005.jpg",
-            "caption": "A configurable section, with fields set in Proposal Types"
-          },
-          {
-            "src": "assets/notion/proposal-management-proposals-profile/006.jpg",
-            "caption": "Assign To, to give people from the global roster access"
-          },
-          {
-            "src": "assets/notion/proposal-management-proposals-profile/008.jpg",
-            "caption": "History: changes, approvals and edits to the proposal"
-          },
-          {
-            "src": "assets/notion/proposal-management-proposals-teams/004.jpg",
-            "caption": "Searching for people or teams"
-          },
-          {
-            "src": "assets/notion/proposal-management-proposals-communication/001.jpg",
-            "caption": "Communication: mail sent from the proposal, including submission package emails"
-          },
-          {
-            "src": "assets/notion/proposal-management-proposals-communication/002.jpg",
-            "caption": "Map, to link one proposal to another"
-          },
-          {
-            "src": "assets/notion/proposal-management-proposals-communication/003.jpg",
-            "caption": "Import Groups, to bring in Outlook groups"
-          },
-          {
-            "src": "assets/notion/proposal-management-proposals-communication/004.jpg",
-            "caption": "Adding an automatic signature to outgoing mail"
-          },
-          {
-            "src": "assets/notion/proposal-management-proposals-documents/001.jpg",
-            "caption": "Documents: folders for the proposal's files"
-          },
-          {
-            "src": "assets/notion/proposal-management-proposals-documents/002.jpg",
-            "caption": "New Folder, for additional documents"
-          },
-          {
-            "src": "assets/notion/proposal-management-proposals-documents/003.jpg",
-            "caption": "Upload Documents into a folder"
-          },
-          {
-            "src": "assets/notion/proposal-management-proposals-documents/004.jpg",
-            "caption": "Download, to get the files in a folder"
-          },
-          {
-            "src": "assets/notion/proposal-management-proposals-status-comments/001.jpg",
-            "caption": "Status and Comments: update the status and see linked documents and assigned users"
-          },
-          {
-            "src": "assets/notion/proposal-management-proposals-status-comments/002.jpg",
-            "caption": "Changing the status on the Proposal Status tab"
-          },
-          {
-            "src": "assets/notion/proposal-management-proposals-status-comments/003.jpg",
-            "caption": "Search People, to find comments by a person"
+            "term": "Save Changes",
+            "definition": "Saves the profile."
           }
         ]
       },
       {
-        "heading": "Proposal Fields",
-        "intro": "<p>Every drop-down on a proposal Profile reads a list kept somewhere else. This section names that source so a <strong>Module Admin</strong> or <strong>Estimator</strong> knows where to add a missing value.</p><p>Open a proposal (click its name) to see the Profile. Each drop-down below matches its source list.</p>",
+        "heading": "Teams",
+        "intro": "<p>The <strong>Teams</strong> tab of a proposal shows the people on it as cards with their email, phone and ID.</p>",
         "definitions": [
           {
-            "term": "Proposal Type",
-            "definition": "Settings → Proposal → **Proposal Types**. The same list is in the Create Proposal dialog and the Dashboard and Analytics filters. Each type shares the **Proposal Form**; the extra sections at the bottom of the Profile (\"Section Name1\", configurable fields) come from the **Proposal Form** tab."
+            "term": "Users and Crews",
+            "definition": "Two sub-tabs. **Users** lists people; **Crews** lists groups."
           },
           {
-            "term": "Opportunity",
-            "definition": "**Opportunity Management → Opportunities**."
+            "term": "Add User",
+            "definition": "Opens a picker to add people."
           },
           {
-            "term": "Bid Type",
-            "definition": "Settings → **Bid Types** (Build-Own-Transfer Bid Type, General Bid Type, Speciality Items Bid Type). Do not confuse it with the Open / Selective Bidding choice used when creating a tender."
-          },
-          {
-            "term": "Project Type",
-            "definition": "Settings → **Project Types**. Each code carries Field/Shop, Material and New/Repair, which the Profile then shows (for S-PipingSS: Field/Shop SHOP, Material SS, New/Repair NEW)."
-          },
-          {
-            "term": "Projects",
-            "definition": "The company's projects, \"code - name\", plus **Create a Project**."
-          },
-          {
-            "term": "Company Contact and Estimators",
-            "definition": "**Company Contact** lists the company's users. **Estimators** lists only people with the Estimator role (3: Randazzo Lou, System Admin, Engineering Contractor - 1); the role is set in **Global Data → Users & Permissions → Global Rosters**."
-          },
-          {
-            "term": "Business Development Code",
-            "definition": "Settings → **Business Development**, each with a description."
-          },
-          {
-            "term": "Department Code",
-            "definition": "Settings → **Department Codes**. Each has a code, description, group and business unit; the drop-down shows \"code - description\", for example \"0402 - Tanks West-BEA\"."
-          },
-          {
-            "term": "Customers and POCs",
-            "definition": "**Global Data → Customers** and their contacts (POCs). Adding one from the proposal also adds it to Global Data. The Weekly Report shows the customer's location (for example Delaware City, Delaware)."
-          },
-          {
-            "term": "Owners",
-            "definition": "**Global Data → Owners**."
-          },
-          {
-            "term": "Site Name and Job Site",
-            "definition": "**Global Data → Locations**, plus None. Choosing a site fills City and State."
-          },
-          {
-            "term": "Delivery Method",
-            "definition": "Settings → **Delivery Method**, plus None."
-          },
-          {
-            "term": "Status",
-            "definition": "Settings → **Status** (Proposal tab). Start is the first standard status; Completed and Lost are the standard last-level statuses that carry the success or failure flag. Each status has a colour used on the list."
-          },
-          {
-            "term": "Assign To and Notify To",
-            "definition": "**Assign To** lists the system users of Global Rosters; **Notify To** lists the people chosen for the reminder."
-          },
-          {
-            "term": "Money fields",
-            "definition": "**Project Value Estimated**, **Project Value Submitted**, **Contract Amount** and **Projected Cost** are typed in rupees. **Chance of Success** is calculated from the selected customers' results; **Projected Cost** and **Contract Amount** feed Profit Over Time in Analytics."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Add a missing value to a proposal drop-down",
-            "steps": [
-              "Find the field in the definitions above to see where its list lives.",
-              "Add the value at that source: Global Data for customers, owners and locations; Proposal Management → Settings for types, codes, statuses and delivery methods; Opportunity Management for opportunities.",
-              "Reopen the proposal and pick the new value."
-            ]
+            "term": "Search By Name/ID",
+            "definition": "Finds a person on the team."
           }
         ]
       },
       {
-        "heading": "Bid",
-        "intro": "<p>The Bid tab of a proposal lists the tenders raised for that proposal and lets an <strong>Estimator</strong> or <strong>PM</strong> start a new one. Tenders themselves are run in <strong>Tender Management</strong>.</p><p>The tab shows <strong>Add Tender</strong>, search, <strong>Filters</strong>, <strong>Manage Columns</strong>, table / grid views, <strong>Show as Graph</strong> and a table with <strong>Tender Name</strong>, <strong>Tender ID</strong>, <strong>Description</strong>, <strong>Proposal Linked</strong>, <strong>Bid Type</strong>, <strong>Status</strong>, <strong>Approve</strong>, <strong>Reject</strong>, <strong>Approval Status</strong> and <strong>Actions</strong>.</p>",
-        "definitions": [
-          {
-            "term": "Tender (Bid)",
-            "definition": "A costed offer or tender linked to a proposal. **Add Tender** opens **Create Tender** with **Tender Name***, **Description**, **Select Proposal** (the current proposal is preselected, for example \"11 - Roofing proposal - 004\") and **Select Bid Type***: **Open Bidding**, **Selective Bidding** or **Selective Bidding - No Prequalification**. Click **Submit for Approval**."
-          },
-          {
-            "term": "Two different Bid Types",
-            "definition": "The **Bid Type** on a proposal Profile comes from Settings → Bid Types. The Open / Selective Bidding choice when creating a tender is the tender's own bidding type, used by **Tender Management**."
-          },
-          {
-            "term": "Where this data comes from and goes",
-            "definition": "The tender is created in **Tender Management** and linked back here through **Proposal Linked**. Its status values (In-Progress, Draft, Under Review, Reopened, Shortlisted, Awarded, Rejected, Pre Qualification, Completed) are the tender statuses in Status Configuration. Files appear in the proposal's **Documents → Bids** folder."
-          },
-          {
-            "term": "Bid Management permissions",
-            "definition": "Per the guide, the Bid tab needs the matching permission to be used on a proposal."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Create a tender from a proposal",
-            "steps": [
-              "Open the proposal and click the **Bid** tab.",
-              "Click **Add Tender**.",
-              "In **Create Tender**, enter the **Tender Name**, an optional **Description**, check the **Select Proposal** value, and choose **Open Bidding**, **Selective Bidding** or **Selective Bidding - No Prequalification**.",
-              "Click **Submit for Approval**. The tender then appears in the Bid tab and in Tender Management."
-            ]
-          },
-          {
-            "title": "Switch the Bid tab layout",
-            "steps": [
-              "Choose the table or grid icon.",
-              "Click **Save Layout** to keep the choice, or **Show as Graph** to see the tenders as a chart."
-            ]
-          }
-        ]
-      },
-      {
-        "heading": "Submission Packages",
-        "intro": "<p>A <strong>Submission Package</strong> is the final, client-facing bundle that gets sent once a proposal is ready to go out the door. Rather than manually gathering documents, checklists, submittals, and attachments scattered across the various proposal tabs, the submission package flow pulls everything into one page and lets you choose exactly how it reaches the client — by email, physically mailed, or through a client portal. Because a submission package is often the single most important deliverable in the whole proposal process, it gets its own approval workflow, its own rejection-handling path, and its own status/history tracking, separate from the proposal's own approval chain.</p><p>When something goes wrong with a submission package — most commonly, it's rejected during its own approval workflow — Arena doesn't just mark it failed and stop. It creates a tracked entry in Workflow Issues, which can be assigned to a specific person with a due date, ensuring the block gets resolved rather than the package silently stalling.</p>",
-        "definitions": [
-          {
-            "term": "Submission Package",
-            "definition": "The consolidated, client-facing deliverable assembled from a proposal's Profile, Documents, Checklists, Submittals, and Attachments, sent via Email to Client, Physical mail, or Client Portal."
-          },
-          {
-            "term": "Setup Approval Workflow (Submission Packages)",
-            "definition": "The Settings screen where approval levels for submission packages are configured, each assigned a workflow type (all must approve / any one can approve) and a level description."
-          },
-          {
-            "term": "Workflow Issues (Submission Packages)",
-            "definition": "A tracked entry created automatically when a submission package is rejected in its approval workflow; the package cannot move forward until the linked issue is resolved."
-          },
-          {
-            "term": "Submission Package Logs",
-            "definition": "The tab listing sent submission packages, where each row's menu offers Download, History, Status, and Delete."
-          },
-          {
-            "term": "Tab layout",
-            "definition": "Sub-tabs **Logs**, **Setup Approval Workflow** and **Workflow Issue**. **Create Submission Package** opens a page with the steps **Profile, Documents, Checklists, Submittals, Attachments, Profile** and **Cancel** / **Submit**. A log card shows, for example, \"SP 1, Created By: System Admin, Created Date: 09-17-2024\" and a status picker."
-          },
-          {
-            "term": "Where this data comes from and goes",
-            "definition": "The package is assembled from the same proposal's Profile, Documents, Checklists, Submittals and Attachments. Its statuses (Start, Submitted, Completed) come from **Settings → Status → Submission Package**. Approval levels are the ones set under **Setup Approval Workflow**. Rejections become **Workflow Issue** entries and count on **My Dashboard** (Submission Package Workflow Issues, Submission Package Approvals)."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Create a proposal submission package",
-            "steps": [
-              "On the proposal, click <strong>Create Submission Package</strong>.",
-              "On the page that opens, pull in data from the proposal's previous tabs: Profile, Documents, Checklists, Submittals, and Attachments.",
-              "Choose how to send it: <strong>Email to Client</strong>, <strong>Physical</strong> (mail), or <strong>Client Portal</strong>."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/proposal-management-proposals-submission-packages-logs/001.jpg",
-                "caption": "Create Submission Package, pulling in data from the earlier tabs",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/proposal-management-proposals-submission-packages-logs/002.jpg",
-                "caption": "Choosing what to add and how to send the package",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/proposal-management-proposals-submission-packages-logs/003.jpg",
-                "caption": "Client Portal, to send the package through the client's website",
-                "step": 3
-              }
-            ]
-          },
-          {
-            "title": "Set up an approval workflow for submission packages",
-            "steps": [
-              "Go to <strong>Proposal Management → Settings → Submission Packages → Setup Approval Workflow</strong>.",
-              "Click <strong>Create Level</strong> to choose approvers and assign the workflow type (all must approve / any one can approve), plus a level description.",
-              "Use Edit or Delete in Actions to manage existing levels."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/proposal-management-proposals-submission-packages-setup/001.jpg",
-                "caption": "Create Level: approvers, workflow type and a level description",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/proposal-management-proposals-submission-packages-setup/002.jpg",
-                "caption": "Delete, to remove a level",
-                "step": 3
-              }
-            ]
-          },
-          {
-            "title": "Resolve a rejected submission package",
-            "steps": [
-              "Open <strong>Workflow Issues</strong> to find the rejected submission package log.",
-              "Use <strong>Assign To</strong> to assign the issue to a user with a due date.",
-              "Click <strong>Resolve</strong> once the underlying problem is fixed."
-            ],
-            "note": "A rejected submission package cannot move forward until its linked issue is resolved.",
-            "images": [
-              {
-                "src": "assets/notion/proposal-management-proposals-submission-packages-workf/001.jpg",
-                "caption": "Search, to find a workflow issue",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/proposal-management-proposals-submission-packages-workf/003.jpg",
-                "caption": "Assign To, with a due date, and Resolve once fixed",
-                "step": 2
-              }
-            ]
-          },
-          {
-            "title": "Check the status and history of a sent submission package",
-            "steps": [
-              "Go to the <strong>Submission Packages Logs</strong> tab.",
-              "Use the row menu: <strong>Download</strong> to retrieve the package, <strong>History</strong> to see creation and approval status history, <strong>Status</strong> to view/set the configured status, and <strong>Delete</strong> to remove the package."
-            ]
-          }
-        ],
+        "heading": "Documents",
+        "intro": "<p>The <strong>Documents</strong> tab of a proposal is its file area.</p>",
         "images": [
           {
-            "src": "assets/notion/proposal-management-proposals-submission-packages-logs/004.jpg",
-            "caption": "Search, to find a submission package in the logs"
+            "src": "assets/product/proposal-management/004.jpg",
+            "caption": "The Documents tab of a proposal"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Folders",
+            "definition": "Six folders exist from the start: **Comments Attachments**, **Mail Attachments**, **Checklists**, **Submittals**, **Submission Packages** and **Bids**. Each row shows how many items it holds. The columns are **Folders & Documents**, **Items**, **Last Modified**, **Added On** and **Actions**."
           },
           {
-            "src": "assets/notion/proposal-management-proposals-submission-packages-workf/002.jpg",
-            "caption": "Grid and Table views for workflow issues, with Save Layout"
+            "term": "+ New Folder",
+            "definition": "Creates a folder."
+          },
+          {
+            "term": "Upload Documents",
+            "definition": "Uploads files into the folder you are in."
           }
         ]
       },
       {
-        "heading": "Submittals",
-        "intro": "<p>Within Proposal Management, a Submittal is a formal letter attached to a proposal — for example, a budgetary letter — used to communicate specific information to the client as part of the proposal process. Rather than drafting each of these from a blank page, the feature is built around reuse: submittal letters can be authored fresh in Google Docs, or pulled in as a pre-built template from Proposal Settings and auto-filled with data straight from the proposal's own profile, cutting out repetitive manual entry.</p>",
-        "definitions": [
-          {
-            "term": "Submittal (proposal)",
-            "definition": "A formal letter (e.g. a budgetary letter) attached to a proposal, either drafted fresh or imported from a configured template."
-          },
-          {
-            "term": "Auto Fill Fields",
-            "definition": "An option, available when importing a submittal template from Global Data, that automatically populates submittal keys using data from the proposal profile."
-          },
-          {
-            "term": "Submittal tab layout",
-            "definition": "Sub-tabs **Letter** and **Budgetary Letter**, a **Create** button and search. **Create** opens **Create Submittal Letter** with **Create new letter** or **Import From Global Data**."
-          },
-          {
-            "term": "Where this data comes from and goes",
-            "definition": "Imported letters come from the **Submittals** templates in Settings. Filled letters are filed in the proposal's **Documents → Submittals** folder and can be added to a submission package."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Add a submittal letter to a proposal",
-            "steps": [
-              "In the proposal's <strong>Submittals</strong> tab, click <strong>Create</strong>.",
-              "Choose <strong>Create New Letter</strong> to draft a new template in Google Docs, or <strong>Import From Global Data</strong> to reuse a configured template from Proposal Settings.",
-              "If importing, optionally enable <strong>Auto Fill Fields</strong> to populate submittal keys from the proposal profile."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/proposal-management-proposals-submittals-letter/001.jpg",
-                "caption": "Import from Global Data, with Auto Fill Fields",
-                "step": 3
-              }
-            ]
-          }
-        ],
+        "heading": "Communication",
+        "intro": "<p>The <strong>Communication</strong> tab is a mailbox for the proposal, so emails about it stay with it.</p>",
         "images": [
           {
-            "src": "assets/notion/proposal-management-proposals-submittals-letter/002.jpg",
-            "caption": "Search, to find submittals"
+            "src": "assets/product/proposal-management/005.jpg",
+            "caption": "The Communication tab"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Folders",
+            "definition": "**All Emails**, **Inbox**, **Sent**, **Drafts**, **Starred** and **Trash**. It says **Oops! You don't have any mails at the moment** when a folder is empty."
           },
           {
-            "src": "assets/notion/proposal-management-proposals-submittals-letter/003.jpg",
-            "caption": "Deleting a submittal, with a confirmation pop-up"
+            "term": "Search mail",
+            "definition": "Finds a message."
+          },
+          {
+            "term": "Groups",
+            "definition": "Opens the mail groups list. **Import Group** is above it."
+          },
+          {
+            "term": "Gear icon",
+            "definition": "A gear icon at the top right of the mail area."
           }
         ]
       },
       {
         "heading": "Checklists",
-        "intro": "<p>Checklists give a proposal a structured way to confirm that required steps or quality criteria have been met before moving forward — the same kind of gating mechanism used elsewhere in Arena for quality inspections, applied here to the business-development process. Rather than being freeform, every checklist a proposal can use is built from a template configured centrally in Settings, ensuring the same checklist means the same thing across every proposal in the company. Once filled in, a checklist doesn't just sit inside its own tab — it's automatically filed into the proposal's Documents tab as a folder, keeping everything discoverable from one place.</p>",
-        "definitions": [
-          {
-            "term": "Checklist (proposal)",
-            "definition": "A form, built from a template configured in Proposal Settings → Checklists, filled out and submitted against a specific proposal."
-          },
-          {
-            "term": "Checklist tabs",
-            "definition": "The tab names across the top are the checklist templates in Settings → Checklists: **Safety**, **Legal Review** and **Quality**. **Create Form** opens the template form (for Safety: address, phone, zip code, questions such as Trenching/Excavation and Underground Piping with Yes/No, and Comments / Safety Response), with **Cancel** and **Submit**. Each saved form is a card such as \"ID 5, Created By System Admin, Created On 09-17-2024\"."
-          },
-          {
-            "term": "Where this data comes from and goes",
-            "definition": "Templates come from **Settings → Checklists**. Submitted forms are filed in **Documents → Checklists** and counted on the **My Dashboard → Forms** panel (Legal Review, Safety, Quality) and in submission packages."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Add a checklist to a proposal",
-            "steps": [
-              "In the proposal's <strong>Checklists</strong> tab, click <strong>Create Form</strong>.",
-              "Choose from the forms configured in Proposal Settings → Checklists.",
-              "Fill in the fields and click <strong>Submit</strong>."
-            ],
-            "note": "Created forms are stored automatically in the Documents tab as a folder.",
-            "images": [
-              {
-                "src": "assets/notion/proposal-management-proposals-checklists/001.jpg",
-                "caption": "Checklists: forms for quality, safety and legal checks",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/proposal-management-proposals-checklists/002.jpg",
-                "caption": "Create Form, choosing from the forms set up in settings",
-                "step": 2
-              }
-            ]
-          }
-        ],
+        "intro": "<p>The <strong>Checklists</strong> tab of a proposal holds the forms filled in for it. It has three sub-tabs: <strong>Safety</strong>, <strong>Legal Review</strong> and <strong>Quality</strong>.</p>",
         "images": [
           {
-            "src": "assets/notion/proposal-management-proposals-checklists/003.jpg",
-            "caption": "Deleting a checklist on a proposal"
+            "src": "assets/product/proposal-management/006.jpg",
+            "caption": "The Checklists tab"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Form cards",
+            "definition": "Each card is a filled form with its ID, **Created By** and **Created On**. The three-dot menu has actions on the card."
+          },
+          {
+            "term": "Create Form",
+            "definition": "Opens the checklist form of that sub-tab to fill in. It shows the company details at the top, then sections of questions (for Safety, for example, trenching and excavation) with **Yes** and **No** boxes. **Expand All** and **Collapse All** open or fold the sections; **Submit** saves and **Cancel** closes.",
+            "images": [
+              {
+                "src": "assets/product/proposal-management/007.jpg",
+                "caption": "A checklist form"
+              }
+            ]
+          },
+          {
+            "term": "Search",
+            "definition": "Finds a form."
           }
         ]
       },
       {
-        "heading": "Calendar",
-        "intro": "<p>The Calendar tab holds proposal events such as deadlines and meetings, for <strong>Estimators</strong> and <strong>PMs</strong>. It needs calendar consent from each user before events can be created.</p><p>It shows <strong>Create Event</strong>, <strong>Filters</strong>, a month grid, the events of the selected day and <strong>My Calendars</strong>.</p>",
-        "definitions": [
-          {
-            "term": "Calendar consent",
-            "definition": "Clicking **Create Event** without consent shows \"Consent Not Granted! Please provide consent. Note: Give consent in My Profile → Settings → Calendar consent.\" The Dashboard's Calendar Events panel asks for Outlook consent in the same way. The Outlook link is set up under **Global Data → Marketplace** (Microsoft Outlook, Microsoft Calendar)."
-          },
-          {
-            "term": "Where this data comes from and goes",
-            "definition": "Events can be linked to an Opportunity, Proposal or Bid (see the screenshots) and sync with Outlook once consent is given. They show in **My Dashboard → Calendar Events**."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Create a calendar event for a proposal deadline",
-            "steps": [
-              "Open **Proposal Management → Calendar** and click **Create Event**. If a consent message appears, give consent first in My Profile → Settings.",
-              "Enter the Title, Date, Time, Category and Description."
-            ],
-            "note": "Events created here are automatically linked to the Proposal module and can sync with Outlook via Global Data → Marketplace → Microsoft Outlook."
-          }
-        ],
+        "heading": "Bid",
+        "intro": "<p>The <strong>Bid</strong> tab lists the tenders linked to a proposal.</p>",
         "images": [
           {
-            "src": "assets/notion/proposal-management-calendar/001.jpg",
-            "caption": "The Proposal Calendar, which can sync with Outlook Calendar"
+            "src": "assets/product/proposal-management/008.jpg",
+            "caption": "The Bid tab"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Add Tender",
+            "definition": "Adds a tender to the proposal."
           },
           {
-            "src": "assets/notion/proposal-management-calendar/009.jpg",
-            "caption": "Filters, to show events from one category"
+            "term": "Show as Graph",
+            "definition": "Shows the tenders as a graph."
           },
           {
-            "src": "assets/notion/proposal-management-calendar/010.jpg",
-            "caption": "Linking an event to Opportunity, Proposal or Bid Management"
+            "term": "Search by ID or Name, Filters, Manage Columns",
+            "definition": "Find tenders, narrow them and choose columns. List and card icons switch the view."
           },
           {
-            "src": "assets/notion/proposal-management-calendar/011.jpg",
-            "caption": "Editing an event's title, date, time and description"
-          },
-          {
-            "src": "assets/notion/proposal-management-calendar/012.jpg",
-            "caption": "Deleting an event from the calendar"
+            "term": "Columns",
+            "definition": "**Tender Name**, **Tender ID**, **Description**, **Proposal Linked**, **Bid Type**, **Status**, **Approve**, **Reject**, **Approval Status** and **Actions**. It shows **No Data Available** when there are none."
           }
         ]
       },
       {
-        "heading": "To Do List",
-        "intro": "<p>To Do gives proposal teams a lightweight task-tracking layer scoped specifically to Proposal Management work, so action items related to a proposal don't have to be tracked in a separate tool. Tasks can be assigned to a specific person and carry a date and time, and completing one is as simple as a single click — keeping the mechanics minimal so the feature gets used rather than avoided.</p>",
+        "heading": "Submittals",
+        "intro": "<p>The <strong>Submittals</strong> tab holds the letters sent with a proposal. It has two sub-tabs: <strong>Letter</strong> and <strong>Budgetary Letter</strong>.</p>",
+        "images": [
+          {
+            "src": "assets/product/proposal-management/009.jpg",
+            "caption": "The Submittals tab"
+          }
+        ],
         "definitions": [
           {
-            "term": "To Do List",
-            "definition": "A task list within Proposal Management, with items carrying a Title, Description, Date, Time, and an assignable owner."
+            "term": "Letter cards",
+            "definition": "Each card shows the letter name, **Created Date** and **Created By**. The three-dot menu has **Edit**, **Preview**, **Download** and **Delete**."
           },
           {
-            "term": "To Do List tab layout",
-            "definition": "**Create To Do List**, search, table / grid views and **Save Layout**. Each card shows the title, description, date, time, the creator and **Assign To** (for example \"Drawings Verification, 13th June 2024, 12:33 PM, Assign To System Admin\")."
+            "term": "Create",
+            "definition": "Opens **Create Submittal Letter** with two choices, **Create new letter** or **Import From Global Data**, then **Submit** or **Cancel**."
           },
           {
-            "term": "Create To Do dialog",
-            "definition": "Fields **Title***, **Description**, **Date**, **Time** (hours, minutes, AM / PM), **Cancel** and **Submit**. The assignee is set afterwards from the item's menu or card; Assign To lists the system users from Global Data."
+            "term": "Search",
+            "definition": "Finds a letter."
+          }
+        ]
+      },
+      {
+        "heading": "Submission Packages",
+        "intro": "<p>The <strong>Submission Packages</strong> tab bundles the proposal's profile, documents, checklists, submittals and attachments into one package that goes through approval. It has three sub-tabs: <strong>Logs</strong>, <strong>Setup Approval Workflow</strong> and <strong>Workflow Issue</strong>.</p>",
+        "images": [
+          {
+            "src": "assets/product/proposal-management/010.jpg",
+            "caption": "Submission Packages, Logs"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Logs",
+            "definition": "Cards of the packages made so far. Each shows **Created By**, **Created Date** and a **Select Status** list (for example **Submitted**). **Create Submission Package** opens the package builder; a search box finds a package."
           },
           {
-            "term": "Where this data comes from and goes",
-            "definition": "Users come from Global Rosters. The items appear in the **To Do List** panel of **My Dashboard**."
+            "term": "Create Submission Package",
+            "definition": "A three-pane screen. On the left pick a group: **Profile**, **Documents**, **Checklists**, **Submittals** or **Attachments**. In the middle tick the items to include. The right pane previews them. **Submit for Approval** sends the package and **Cancel** closes the builder.",
+            "images": [
+              {
+                "src": "assets/product/proposal-management/012.jpg",
+                "caption": "The submission package builder"
+              }
+            ]
+          },
+          {
+            "term": "Setup Approval Workflow",
+            "definition": "A table of approval levels with **Level**, **Level Description**, **Approvers**, **Workflow Type** (for example **Any one can approve**) and **Actions** (edit and delete). **Create Level** adds one.",
+            "images": [
+              {
+                "src": "assets/product/proposal-management/011.jpg",
+                "caption": "Setup Approval Workflow"
+              }
+            ]
+          },
+          {
+            "term": "Workflow Issue",
+            "definition": "Issues raised against the package workflow, with a search box and list and card icons."
           }
         ],
         "procedures": [
           {
-            "title": "Create a to-do task for a proposal",
+            "title": "Send a submission package for approval",
             "steps": [
-              "Go to <strong>Proposal Management → To Do</strong> and click <strong>Create To Do List</strong>.",
-              "Fill in Title, Description, Date, and Time, then submit.",
-              "Use <strong>Assign To</strong> to assign the task to a user.",
-              "Click the double-tick icon to mark a task complete."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/proposal-management-to-do/001.jpg",
-                "caption": "The To Do list, with Create To Do List",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/proposal-management-to-do/009.jpg",
-                "caption": "Assign To, listing the system users from Global Data",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/proposal-management-to-do/011.jpg",
-                "caption": "The double tick, which changes a to-do item's status",
-                "step": 4
-              }
+              "Open the proposal, click **Submission Packages** and stay on **Logs**.",
+              "Click **Create Submission Package**.",
+              "Pick each group on the left (**Profile**, **Documents**, **Checklists**, **Submittals**, **Attachments**) and tick the items to include.",
+              "Check the right pane.",
+              "Click **Submit for Approval**."
             ]
           }
-        ],
+        ]
+      },
+      {
+        "heading": "Analytics",
+        "intro": "<p>The <strong>Analytics</strong> tab opens <strong>Analytics &amp; Reports</strong>, a page of eight tiles. Click a tile to open that chart or report.</p>",
         "images": [
           {
-            "src": "assets/notion/proposal-management-to-do/002.jpg",
-            "caption": "Search, to find a to-do item"
+            "src": "assets/product/proposal-management/016.jpg",
+            "caption": "Analytics & Reports"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Proposal Success Rate",
+            "definition": "Two pie charts, **Success Rate (Qty of Proposals)** and **Success Rate (Currency value)**, split by status. **Proposal Types** narrows them; each has download and full-screen icons.",
+            "images": [
+              {
+                "src": "assets/product/proposal-management/017.jpg",
+                "caption": "Proposal Success Rate"
+              }
+            ]
           },
           {
-            "src": "assets/notion/proposal-management-to-do/003.jpg",
-            "caption": "Manage Columns for the table view"
+            "term": "Estimate Success Rate",
+            "definition": "Success rate of estimates across proposal types. **Proposal Types** and **Select Date Range** narrow it."
           },
           {
-            "src": "assets/notion/proposal-management-to-do/004.jpg",
-            "caption": "Grid and Table views, with Save Layout"
+            "term": "Types of Proposals",
+            "definition": "Compares the success rate of bid types by number and by value of bids."
           },
           {
-            "src": "assets/notion/proposal-management-to-do/005.jpg",
-            "caption": "Editing or deleting a to-do item from its three-dot menu in Grid view"
+            "term": "Success & Estimate Over Time",
+            "definition": "Two charts, **Success Over Time** and **Estimate Over Time**, filtered by **Proposal Status** and **Proposal Types**."
           },
           {
-            "src": "assets/notion/proposal-management-to-do/008.jpg",
-            "caption": "Filters and hide options for columns"
+            "term": "Profit over time",
+            "definition": "Charts **Profit Over Time** and **Estimating Cost and Profit Over Time**."
           },
           {
-            "src": "assets/notion/proposal-management-to-do/010.jpg",
-            "caption": "Edit and delete in the Actions column"
+            "term": "Weekly Report",
+            "definition": "Opens the **Weekly Report** screen."
+          },
+          {
+            "term": "Report",
+            "definition": "A page that gathers all the analytics charts (**Success Rate**, **Estimate Success Rate**, **Types of Proposals**, **Success Over Time**, **Estimate Over Time**, **Profit Over Time**) with a **Filter** and a **Download PDF** button."
+          },
+          {
+            "term": "Best and Worst Customers",
+            "definition": "**Customer Rankings** ranks customers by a **Criteria** and a **Threshold**, for the **Proposal Types** you choose; it says **No data** when nothing matches."
+          }
+        ]
+      },
+      {
+        "heading": "Weekly Report",
+        "intro": "<p>The <strong>Weekly Report</strong> is a printable snapshot of proposal progress. Open it from <strong>Analytics</strong>, then <strong>Weekly Report</strong>.</p>",
+        "images": [
+          {
+            "src": "assets/product/proposal-management/018.jpg",
+            "caption": "The Weekly Report"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Sub-tabs",
+            "definition": "**Weekly Report**, **Estimators Work Schedule Report** and **Follow Up Report**."
+          },
+          {
+            "term": "Total of Pending/Expected Estimates",
+            "definition": "The sum of the estimates still pending, shown above the table."
+          },
+          {
+            "term": "Date range",
+            "definition": "The box beside it sets the week the report covers."
+          },
+          {
+            "term": "Toolbar icons",
+            "definition": "Comment, download, share, print and settings."
+          },
+          {
+            "term": "Table",
+            "definition": "Proposals grouped under **Active** and **Completed**, then by proposal type. Columns include **Proposal No.**, **Status**, **Site**, **Customer**, **Department Code**, **Location**, **Bid Type**, **Proposal Name**, **Proposal Estimated**, **Proposal Actual Value**, **Due Date**, **Submitted Date**, **Estimators**, **Days Since** and **Comments**."
           }
         ]
       },
       {
         "heading": "Issues",
-        "intro": "<p>The Issues tab exists specifically for the moment a proposal's approval gets rejected. Rather than the rejection simply reverting the proposal to an editable state with no further record, Arena logs it as a distinct, trackable issue — preserving why it was rejected and by whom, and blocking the proposal from proceeding until the issue is explicitly resolved. This mirrors the same rejection-to-issue pattern used for forms, quality, and safety elsewhere in Arena, applied here to the proposal approval chain itself.</p>",
-        "definitions": [
-          {
-            "term": "Proposal Issue",
-            "definition": "A record created automatically when a proposal is rejected by an approver; the proposal cannot proceed until the issue is resolved."
-          },
-          {
-            "term": "Issues tab layout",
-            "definition": "Search, counters (Total Issues, Issues Approved, Issues Rejected), **Filters** (Log ID, Raised On, Raised By) and grid / table views. Each card shows \"Raised on 12th June 2024, at 06:46 pm by System Admin, Level 1\", the **PI No.** (for example PI No. 3), the **Proposal ID** (8), Comments, the word Rejected and **Assign To**."
-          },
-          {
-            "term": "Where this data comes from and goes",
-            "definition": "An issue is created when an approver rejects a proposal at a level of the **Settings → Approval Workflow**. It is counted on **My Dashboard → Issues** (Proposal Workflow Issues). Submission package rejections are listed separately under the **Submission Packages → Workflow Issue** tab."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Track and resolve a proposal approval rejection",
-            "steps": [
-              "Open the proposal's <strong>Issues</strong> tab to see any rejection-generated issues.",
-              "Use <strong>Search</strong> (by Issue ID) or <strong>Filters</strong> (Log ID, Raised On, Raised By) to find a specific issue.",
-              "Use <strong>Assign To</strong> to route the issue to a user for resolution."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/proposal-management-issues/002.jpg",
-                "caption": "The status bar: issues raised, approved and rejected",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/proposal-management-issues/001.jpg",
-                "caption": "Search by Issue ID",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/proposal-management-issues/003.jpg",
-                "caption": "Filters: Log ID, Raised On and more",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/proposal-management-issues/005.jpg",
-                "caption": "Assign To, with a date",
-                "step": 3
-              }
-            ]
-          }
-        ],
+        "intro": "<p>The <strong>Issues</strong> tab lists the proposal issues raised, such as a rejection, as cards.</p>",
         "images": [
           {
-            "src": "assets/notion/proposal-management-issues/004.jpg",
-            "caption": "Grid and Table views for issues"
+            "src": "assets/product/proposal-management/019.jpg",
+            "caption": "The Issues tab"
           }
-        ]
-      },
-      {
-        "heading": "Analytics & Reports",
-        "intro": "<p>Analytics turns proposal records into charts and reports for leadership: success rates, volume by type, profit and customer rankings. <strong>PMs</strong> and managers use it; each card can be downloaded or shown full screen.</p><p>The tab has eight cards: <strong>Proposal Success Rate</strong>, <strong>Estimate Success Rate</strong>, <strong>Types of Proposals</strong>, <strong>Success & Estimate Over Time</strong>, <strong>Profit over time</strong>, <strong>Weekly Report</strong>, <strong>Report</strong> and <strong>Best and Worst Customers</strong>.</p>",
+        ],
         "definitions": [
           {
-            "term": "Proposal Success Rate report",
-            "definition": "Two pie charts — \"Success Rate (Qty of Proposals)\" by status count, and \"Success Rate (Currency Value)\" by submitted amount — filterable by Proposal Type, with legend items toggling status visibility."
+            "term": "Totals",
+            "definition": "Three counts at the top: **Total Issues**, **Issues Approved** and **Issues Rejected**."
           },
           {
-            "term": "Types of Proposals report",
-            "definition": "Two bar graphs showing quantity of proposals and amount submitted, broken down by bid type within each proposal type, adjustable by date range and downloadable in Excel, PDF, PPT, or JPEG."
+            "term": "Search by ID",
+            "definition": "Finds an issue."
           },
           {
-            "term": "The eight analytics cards",
-            "definition": "**Proposal Success Rate** (Qty and Currency value pies), **Estimate Success Rate**, **Types of Proposals**, **Success & Estimate Over Time** (Success Over Time with a Proposal Status filter; Estimate Over Time), **Profit over time** (Estimating Cost and Profit Over Time), **Weekly Report** (sub-tabs Estimators Work Schedule Report, Follow Up Report, Weekly Report), **Report** (every chart in one page with **Download PDF** and **Filter**) and **Best and Worst Customers** (Customer Rankings by Criteria, Customer and Threshold, filtered by Proposal Types)."
+            "term": "Issue card",
+            "definition": "Shows who raised it and when, the **PI No.**, the **Proposal ID** and **Comments**, plus an **Assign To** list and a date. The three-dot menu has **See History**."
           },
           {
-            "term": "Weekly Report columns",
-            "definition": "Proposal No., Status, Site, Customer, Department Code, Location, Bid Type, Proposal Name, Proposal Estimated, Proposal Actual Value, Due Date, Submitted Date, Estimators, Days Since and Comments, with a total such as \"Total of Pending/Expected Estimates: Rs. 5,20,000\" and chat, download, share, print and settings icons. Comments pinned with **Add to Report** appear here."
-          },
-          {
-            "term": "Where this data comes from",
-            "definition": "Every chart reads the proposals: Status and Proposal Type from Settings, Customer and Location from Global Data, estimated and submitted values, Contract Amount and Projected Cost from the Profile. The Proposal Type filters list the types in Settings."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "View the success rate of proposals",
-            "steps": [
-              "Open the <strong>Proposal Success Rate</strong> report.",
-              "Use the Proposal Type dropdown to filter.",
-              "Click legend items on either pie chart to toggle specific statuses on or off."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/proposal-success-rate/001.jpg",
-                "caption": "Success Rate by quantity of proposals, as a pie chart",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/proposal-success-rate/002.jpg",
-                "caption": "Success Rate by currency value, as a pie chart",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/proposal-success-rate/003.jpg",
-                "caption": "The Proposal Type drop-down",
-                "step": 2
-              }
-            ]
-          },
-          {
-            "title": "View proposal quantity and value by bid type",
-            "steps": [
-              "Open the <strong>Types of Proposals</strong> report.",
-              "Adjust the date range as needed.",
-              "Download the report in Excel, PDF, PPT, or JPEG."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/types-of-proposals/001.jpg",
-                "caption": "Types of Proposals versus quantity",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/types-of-proposals/002.jpg",
-                "caption": "Types of Proposals versus amount",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/types-of-proposals/003.jpg",
-                "caption": "Adjusting the date range; legend items turn bars on and off",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/types-of-proposals/004.jpg",
-                "caption": "Download and Full Screen for the bar graph",
-                "step": 3
-              }
-            ]
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/notion/proposal-success-rate/004.jpg",
-            "caption": "Download and Full Screen for each pie chart"
-          },
-          {
-            "src": "assets/notion/estimate-success-rate/001.jpg",
-            "caption": "Estimate Success Rate: the number of proposals in each status"
-          },
-          {
-            "src": "assets/notion/estimate-success-rate/002.jpg",
-            "caption": "Choosing proposal types and a date range"
-          },
-          {
-            "src": "assets/notion/estimate-success-rate/003.jpg",
-            "caption": "Download and Full Screen for the bar graph"
-          },
-          {
-            "src": "assets/notion/success-estimate-over-time/001.jpg",
-            "caption": "Success Over Time: submitted project amount by date for each year"
-          },
-          {
-            "src": "assets/notion/success-estimate-over-time/002.jpg",
-            "caption": "Estimate Over Time: estimated project amount by date for each year"
-          },
-          {
-            "src": "assets/notion/success-estimate-over-time/003.jpg",
-            "caption": "Filtering by proposal type and status"
-          },
-          {
-            "src": "assets/notion/success-estimate-over-time/005.jpg",
-            "caption": "Legend items turn data on and off"
-          },
-          {
-            "src": "assets/notion/profit-over-time/001.jpg",
-            "caption": "Profit Over Time: contract amount minus projected cost, by year"
-          },
-          {
-            "src": "assets/notion/profit-over-time/002.jpg",
-            "caption": "Estimating Cost and Profit Over Time"
-          },
-          {
-            "src": "assets/notion/best-and-worst-clients/001.jpg",
-            "caption": "Best and Worst Clients, by customer or customer location, with a threshold value"
-          },
-          {
-            "src": "assets/notion/weekly-report/001.jpg",
-            "caption": "Weekly Report: proposal progress for the week by proposal type"
-          },
-          {
-            "src": "assets/notion/weekly-report/002.jpg",
-            "caption": "Date range, comments, download, share and print"
-          },
-          {
-            "src": "assets/notion/weekly-report/003.jpg",
-            "caption": "Layout Settings: page size and page header"
-          },
-          {
-            "src": "assets/notion/estimator-work-schedule-report/001.jpg",
-            "caption": "Estimator Work Schedule: proposal IDs, people, sites and months"
-          },
-          {
-            "src": "assets/notion/follow-up-report/001.jpg",
-            "caption": "Follow-Up Report: actions taken after an event or meeting"
-          },
-          {
-            "src": "assets/notion/follow-up-report/002.jpg",
-            "caption": "Export, to download the report as Excel or PDF"
-          },
-          {
-            "src": "assets/notion/report/001.jpg",
-            "caption": "The Report: a summary of all the analytics"
-          },
-          {
-            "src": "assets/notion/report/002.jpg",
-            "caption": "Choosing the date range and downloading the PDF"
+            "term": "Filters and views",
+            "definition": "**Filters** narrows the cards; two icons switch between cards and a list."
           }
         ]
       },
       {
         "heading": "Push Datasets",
-        "intro": "<p>Push Datasets lists the proposal datasets that can be synced with a reporting tool, for <strong>Module Admins</strong>. Each row has a <strong>SYNC</strong> button.</p><p>The table has <strong>Dataset Name</strong> and <strong>Actions</strong> with four rows: <strong>Standard Proposal Data</strong>, <strong>Proposal Comments Data</strong>, <strong>Customers Data</strong> and <strong>Customers POC Data</strong>.</p>",
-        "definitions": [
+        "intro": "<p>The <strong>Push Datasets</strong> tab lists four datasets, each with a **SYNC** button.</p>",
+        "images": [
           {
-            "term": "SYNC",
-            "definition": "Refreshes that dataset. The datasets mirror proposals, their comments, customers and customer contacts, which come from this module and Global Data. Click **SYNC** on a dataset after the underlying records change."
+            "src": "assets/product/proposal-management/020.jpg",
+            "caption": "The Push Datasets tab"
           }
         ],
-        "procedures": []
-      },
-      {
-        "heading": "Settings",
-        "intro": "<p>Proposal Management Settings holds the shared lists and rules every proposal draws on. A <strong>Module Admin</strong> sets it up once so reporting, filtering and numbering stay consistent across proposals.</p><p>Open the gear icon of the module. The menu is <strong>Proposal</strong> (tabs <strong>Proposal Form</strong>, <strong>Proposal Types</strong>, <strong>Settings</strong>), <strong>Bid Types</strong>, <strong>Department Codes</strong>, <strong>Business Development</strong>, <strong>Project Types</strong>, <strong>Checklists</strong>, <strong>Submittals</strong>, <strong>Status</strong>, <strong>Approval Workflow</strong>, <strong>ID Settings</strong>, <strong>Delivery Method</strong> and <strong>Users and Permissions</strong>. These pages are inside Proposal Management; there is no Proposal Management tile in Global Data.</p>",
         "definitions": [
           {
-            "term": "Proposal Type",
-            "definition": "A configurable category with its own Profile sections, created in Settings → Proposal → **Proposal Types**."
+            "term": "Datasets",
+            "definition": "**Standard Proposal Data**, **Proposal Comments Data**, **Customers Data** and **Customers POC Data**."
           },
           {
-            "term": "Bid Type",
-            "definition": "A configurable category for bids, defined with a Name, Description, and Estimate Type."
+            "term": "SYNC",
+            "definition": "One button per dataset row."
+          }
+        ]
+      },
+      {
+        "heading": "Calendar",
+        "intro": "<p>The <strong>Calendar</strong> button at the top right opens the month calendar of Proposal Management, with a mini calendar and an <strong>Events</strong> list on the left.</p>",
+        "images": [
+          {
+            "src": "assets/product/proposal-management/021.jpg",
+            "caption": "The Calendar"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Create Event",
+            "definition": "Opens a form with **Title**, **Date**, **Time**, **Location**, **Categorize** and an **Event Description**, then **Submit**."
           },
           {
-            "term": "Delivery Method",
-            "definition": "A configurable list of ways a proposal is submitted or sent, managed under Settings → Delivery Method."
+            "term": "Filters",
+            "definition": "Opens **Filter Categories** to show only some event categories."
           },
           {
-            "term": "Status Configuration",
-            "definition": "Has status lists for **Proposal** (Start, Successful, Pending, Cancelled, No Bid, N/A, Completed, Lost), **Submission Package** (Start, Submitted, Completed) and tenders (In-Progress, Draft, Under Review, Reopened, Shortlisted, Awarded, Rejected, Pre Qualification, Completed). The first and last standard statuses are fixed; the last-level ones carry the Success / Failure flag."
+            "term": "Calendar consent",
+            "definition": "If calendar access is not allowed, a **Consent Not Granted** warning asks you to give consent in **My Profile**, **Settings**, **Calendar consent**."
+          }
+        ]
+      },
+      {
+        "heading": "To Do List",
+        "intro": "<p>The <strong>To Do List</strong> button at the top right opens your to-dos for proposals as cards.</p>",
+        "images": [
+          {
+            "src": "assets/product/proposal-management/022.jpg",
+            "caption": "The To Do List"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Card",
+            "definition": "Shows the title, description, date, creator, time and an **Assign To** list. A tick mark at the right shows if it is done. The three-dot menu holds the card actions."
           },
           {
-            "term": "Approval Workflow (proposal, global)",
-            "definition": "The company-wide chain of approval levels (all must approve / any one can approve) that every proposal is routed through, viewable as a tree diagram via Open Workflow Graph View."
+            "term": "Create To Do List",
+            "definition": "Opens a form with **Title** (required), **Description**, **Date** and **Time**, then **Submit** or **Cancel**.",
+            "images": [
+              {
+                "src": "assets/product/proposal-management/023.jpg",
+                "caption": "The Create To Do List form"
+              }
+            ]
           },
           {
-            "term": "ID Settings",
-            "definition": "Configuration for automatic ID generation on Proposals and Submission Packages, either System Default or a Custom format built from separator, serial number, date, month, and year — set independently per record type."
-          },
-          {
-            "term": "Users and Permissions (Proposal Management)",
-            "definition": "The screen for creating user groups scoped to Proposal Management, assigning permissions to each group, and adding members."
-          },
-          {
-            "term": "Project Type (Proposal Management)",
-            "definition": "A code with a description and three classifications: Field/Shop, Material and New/Repair. The Profile's Project Type drop-down lists these codes."
-          },
-          {
-            "term": "Checklist template (settings)",
-            "definition": "A reusable checklist form defined in Proposal Management → Settings → Checklists, built with configurable fields and previewable before saving."
-          },
-          {
-            "term": "Submittal template (settings)",
-            "definition": "A reusable submittal document defined in Proposal Management → Settings → Submittals, either name-only or built from an uploaded Word document with merge keys."
-          },
-          {
-            "term": "Proposal (Proposal Form, Proposal Types, Settings tabs)",
-            "definition": "**Proposal Form** holds the Standard Fields and the Configurable Fields of the proposal Profile (Section 1 with fields such as \"Configurable Field\", each with Required, field type and add / copy / delete icons) and **Save Changes**. **Proposal Types** has **Proposal Type** (add) and one card per type with Description, Created By and Created Date (Fabrication, Roofing proposal, Cost Plus). **Settings** has **Document Management**: **AWS S3** or **Share point**; it cannot be changed once proposals or Opportunities exist."
-          },
-          {
-            "term": "Where each list is used",
-            "definition": "Proposal Types: Create Proposal and Dashboard filters. Bid Types, Project Types, Business Development, Department Codes and Delivery Method: the matching Profile drop-downs. Status: the Status field and chart filters. Approval Workflow: the Workflow Level and Approve / Reject. ID Settings: the Proposal ID. Checklists and Submittals: the Checklists and Submittals tabs of each proposal. See \"Where Proposal Fields Come From\"."
-          },
-          {
-            "term": "Department Code and Business Development Code",
-            "definition": "Department Codes have a code, description, group and business unit. Business Development Codes have a code and description. Both feed the Profile drop-downs and the Weekly Report."
+            "term": "Search by name and views",
+            "definition": "Search finds a to-do; two icons switch between list and cards."
           }
         ],
         "procedures": [
           {
-            "title": "Create a reusable submittal template",
+            "title": "Add a to-do",
             "steps": [
-              "Go to <strong>Proposal Management → Settings → Submittals</strong> and click <strong>Create Template</strong>.",
-              "Choose <strong>Create Submittal Template</strong> (name only) or <strong>Upload Submittal Template</strong> (upload a Word document).",
-              "Configure merge keys using double curly braces, e.g. <code>{{ }}</code> format.",
-              "Use <strong>Sync</strong> from the kebab menu to update keys after making edits."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/proposal-management-global-submittals/001.jpg",
-                "caption": "Create Template: a new template or an uploaded one",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/proposal-management-global-submittals/002.jpg",
-                "caption": "Create Submittal Template, entering the template name",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/proposal-management-global-submittals/003.jpg",
-                "caption": "Upload Submittal Template, with a name and a file",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/proposal-management-global-submittals/004.jpg",
-                "caption": "Sync, in the three-dot menu, to update the keys",
-                "step": 4
-              },
-              {
-                "src": "assets/notion/submittals-proposal-management-settings/007.jpg",
-                "caption": "Synced keys, each matched to an item from Arena, then Save",
-                "step": 4
-              }
-            ]
-          },
-          {
-            "title": "Create a new checklist template for proposals",
-            "steps": [
-              "Go to <strong>Proposal Management → Settings → Checklists</strong> and click <strong>Create Checklist</strong>.",
-              "Name it, then click into the checklist to configure its form fields.",
-              "Use <strong>Preview Form</strong> to review, then click <strong>Save Changes</strong>."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/proposal-management-global-checklists/001.jpg",
-                "caption": "Create Checklist: a form name and description",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/checklists-proposal-management-settings/002.jpg",
-                "caption": "The checklist form being configured, with Preview Form",
-                "step": 2
-              }
-            ]
-          },
-          {
-            "title": "Set up a new proposal type",
-            "steps": [
-              "Go to **Proposal Management → Settings → Proposal → Proposal Types**.",
-              "Click **Proposal Type** and enter the Proposal Type Name and Description.",
-              "Open the **Proposal Form** tab to add and configure form sections and fields, then click **Save Changes**."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/proposal-management-global-proposal-types/001.jpg",
-                "caption": "Proposal Type: a name and description for the new type",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/proposal-types-proposal-management-settings/003.jpg",
-                "caption": "The form for a proposal type, where sections and fields are configured",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/proposal-types-proposal-management-settings/004.jpg",
-                "caption": "Choose Type, for the kind of field",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/proposal-types-proposal-management-settings/005.jpg",
-                "caption": "Save Changes, to save the completed form",
-                "step": 3
-              }
-            ]
-          },
-          {
-            "title": "Create a bid type",
-            "steps": [
-              "Go to <strong>Proposal Management → Settings → Bid Types</strong>.",
-              "Click <strong>Bid Type</strong> and enter a Name, Description, and Estimate Type, then submit."
-            ]
-          },
-          {
-            "title": "Configure delivery methods",
-            "steps": [
-              "Go to <strong>Proposal Management → Settings → Delivery Method</strong>.",
-              "Click <strong>Add</strong> to create a new delivery-method row, or <strong>Delete</strong> to remove one."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/delivery-method-proposal-management-settings/001.jpg",
-                "caption": "Delivery Method: adding and deleting methods",
-                "step": 2
-              }
-            ]
-          },
-          {
-            "title": "Configure custom statuses for proposals and submission packages",
-            "steps": [
-              "Go to **Proposal Management → Settings → Status**.",
-              "Click **Add Status** to enter a status name and color, choosing whether it applies to the Proposal tab or Submission Package tab.",
-              "Use **Edit** to mark a last-level standard status as \"Success\" or \"Failure\"."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/proposal-management-global-status-configuration/001.jpg",
-                "caption": "Status Configuration for the Proposal tab, each status with its own colour",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/proposal-management-global-status-configuration/002.jpg",
-                "caption": "Add Status for a proposal: a name and colour",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/proposal-management-global-status-configuration/006.jpg",
-                "caption": "Add Status for a submission package",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/status-configuration-proposal-management-settings/003.jpg",
-                "caption": "Edit on a standard status, to mark it Success or Failure",
-                "step": 3
-              }
-            ]
-          },
-          {
-            "title": "Set up the company-wide approval workflow for proposals",
-            "steps": [
-              "Go to **Proposal Management → Settings → Approval Workflow**.",
-              "Click **Create Level** to select approvers and the workflow type (all must approve, or any one can approve).",
-              "Create multiple levels as needed, and use **Open Workflow Graph View** to see the workflow as a tree diagram."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/proposal-management-global-approval-workflow/001.jpg",
-                "caption": "Create Level: choosing approvers from the global rosters and the workflow type",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/proposal-management-global-approval-workflow/002.jpg",
-                "caption": "Open Workflow Graph View: the workflow as a tree",
-                "step": 3
-              }
-            ]
-          },
-          {
-            "title": "Configure automatic ID generation for proposals",
-            "steps": [
-              "Go to <strong>Proposal Management → Settings → ID Settings</strong>.",
-              "Choose <strong>System Default</strong> for automatic IDs, or <strong>Custom</strong> to configure separator, serial number, date, month, and year fields.",
-              "Click <strong>Save Changes</strong>."
-            ],
-            "note": "Separate ID settings exist for Proposal and Submission Package records.",
-            "images": [
-              {
-                "src": "assets/notion/proposal-management-global-id-settings/001.jpg",
-                "caption": "ID Settings: the ID shown on the proposal card",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/proposal-management-global-id-settings/002.jpg",
-                "caption": "Custom ID: separator, serial number, date, month and year",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/id-settings-proposal-management-settings/001.jpg",
-                "caption": "Save Changes to apply the ID settings",
-                "step": 3
-              }
-            ]
-          },
-          {
-            "title": "Manage user groups and permissions for Proposal Management",
-            "steps": [
-              "Go to <strong>Proposal Management → Settings → Users and Permissions</strong>.",
-              "Click <strong>Add User Group</strong> to name the group and select its permissions.",
-              "Click <strong>Add Users</strong> to assign members to the group.",
-              "Use the kebab menu to Edit or Delete a group."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/users-and-permissions-proposal-management-settings/001.jpg",
-                "caption": "Users and Permissions in Proposal Management settings",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/users-and-permissions-proposal-management-settings/002.jpg",
-                "caption": "Add User Group: a group name and its permissions",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/users-and-permissions-proposal-management-settings/003.jpg",
-                "caption": "Add Users to the group",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/users-and-permissions-proposal-management-settings/004.jpg",
-                "caption": "The users added to the group",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/proposal-types-proposal-management-settings/041.jpg",
-                "caption": "Deleting a user group",
-                "step": 4
-              }
-            ]
-          },
-          {
-            "title": "Categorize project types in Proposal Management settings",
-            "steps": [
-              "Open the Project Types settings screen and click <strong>Add</strong> to add a row.",
-              "Edit fields directly, using the dropdowns for Field/Shop and New/Repair, and entering the Material classification.",
-              "Use <strong>Upload Excel</strong> to bulk create or update project types."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/proposal-management-global-project-types/001.jpg",
-                "caption": "Add, which adds a new row to the list",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/proposal-management-global-project-types/002.jpg",
-                "caption": "Editing a project type directly, with drop-downs for Field/Shop and New/Repair",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/project-types-proposal-management-settings/006.jpg",
-                "caption": "Upload Excel, with a template to download",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/project-types-proposal-management-settings/007.jpg",
-                "caption": "Uploading the filled project types file",
-                "step": 3
-              }
+              "Click **To Do List** at the top right and click **Create To Do List**.",
+              "Type the **Title**.",
+              "Add a **Description**, a **Date** and a **Time** if needed.",
+              "Click **Submit**."
             ]
           }
-        ],
+        ]
+      },
+      {
+        "heading": "Settings",
+        "intro": "<p>The <strong>Settings</strong> button at the top right opens the settings of Proposal Management. A list at the left holds twelve pages with a search box on top: <strong>Proposal</strong>, <strong>Bid Types</strong>, <strong>Department Codes</strong>, <strong>Business Development</strong>, <strong>Project Types</strong>, <strong>Checklists</strong>, <strong>Submittals</strong>, <strong>Status</strong>, <strong>Approval Workflow</strong>, <strong>ID Settings</strong>, <strong>Delivery Method</strong> and <strong>Users and Permissions</strong>.</p>"
+      },
+      {
+        "heading": "Proposal Settings",
+        "intro": "<p>The <strong>Proposal</strong> settings page controls the proposal record. It has three tabs: <strong>Proposal Form</strong>, <strong>Proposal Types</strong> and <strong>Settings</strong>.</p>",
         "images": [
           {
-            "src": "assets/notion/submittals-proposal-management-settings/004.jpg",
-            "caption": "The three-dot menu: preview, download, sync, edit and delete"
+            "src": "assets/product/proposal-management/024.jpg",
+            "caption": "Proposal Form settings"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Proposal Form",
+            "definition": "Two collapsible blocks. **Standard Fields** lists each field with three switches: **Required**, **Hide** and **Show At Creation** (ask for it in **Create Proposal**). The first three fields (ID, name and type) are locked on. **Configurable Fields** holds your own sections (for example **Section Name1**) with fields you add using **Add field**, each with a **Required** switch and a type list (for example **Text Box**). **Save Changes** keeps the form."
           },
           {
-            "src": "assets/notion/proposal-management-global-checklists/002.jpg",
-            "caption": "Editing a checklist's name and description"
+            "term": "Proposal Types",
+            "definition": "Cards for each type (here **Fabrication**, **Roofing proposal** and **Cost Plus**) with description, creator and date. **+ Proposal Type** adds one.",
+            "images": [
+              {
+                "src": "assets/product/proposal-management/025.jpg",
+                "caption": "Proposal Types"
+              }
+            ]
           },
           {
-            "src": "assets/notion/proposal-management-global-checklists/004.jpg",
-            "caption": "Deleting a checklist, with a warning"
+            "term": "Settings tab",
+            "definition": "**Document Management** is **AWS S3** or **Share point**. It is locked with a note once proposals or opportunities exist."
+          }
+        ]
+      },
+      {
+        "heading": "Bid Types",
+        "intro": "<p>The <strong>Bid Types</strong> settings page lists the bid types you can choose on a proposal.</p>",
+        "images": [
+          {
+            "src": "assets/product/proposal-management/026.jpg",
+            "caption": "Bid Types settings"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Table",
+            "definition": "**S.No.**, **Name**, **Description**, **Estimate Type** (for example **Detailed** or **Budgeted**) and **Actions** with a delete icon."
           },
           {
-            "src": "assets/notion/proposal-management-global-proposal-types/003.jpg",
-            "caption": "Editing a proposal type from its three-dot menu"
+            "term": "+ Bid Type",
+            "definition": "Adds a row."
+          }
+        ]
+      },
+      {
+        "heading": "Department Codes",
+        "intro": "<p>The <strong>Department Codes</strong> settings page lists the codes chosen in the <strong>Department Code</strong> field of a proposal.</p>",
+        "definitions": [
+          {
+            "term": "Table",
+            "definition": "**Serial Number**, **Department Code**, **Description**, **VP Business Unit**, **Group** and **Actions** with a delete icon. **Add** adds a row."
+          }
+        ]
+      },
+      {
+        "heading": "Business Development",
+        "intro": "<p>The <strong>Business Development</strong> settings page lists the codes chosen in the <strong>Business Development Code</strong> field of a proposal.</p>",
+        "definitions": [
+          {
+            "term": "Table",
+            "definition": "**Serial Number**, **VP Business Unit**, **Description** and **Actions** with a delete icon. **Add** adds a row."
+          }
+        ]
+      },
+      {
+        "heading": "Project Types",
+        "intro": "<p>The <strong>Project Types</strong> settings page lists the project types chosen on a proposal.</p>",
+        "definitions": [
+          {
+            "term": "Table",
+            "definition": "**Serial Number**, **Project Type Code**, **Description**, **Field/Shop/Sales/Third Party**, **Material**, **New/Repair/Other** and **Actions**. **Add** adds a row and **Upload Excel** loads many at once."
+          }
+        ]
+      },
+      {
+        "heading": "Checklist Settings",
+        "intro": "<p>The <strong>Checklists</strong> settings page holds the form templates used on the <strong>Checklists</strong> tab of a proposal.</p>",
+        "images": [
+          {
+            "src": "assets/product/proposal-management/027.jpg",
+            "caption": "Checklists settings"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Template cards",
+            "definition": "**Safety**, **Legal Review** and **Quality**, each with description, creator and date."
           },
           {
-            "src": "assets/notion/proposal-management-global-proposal-types/005.jpg",
-            "caption": "Deleting a proposal type, with a warning"
+            "term": "Create CheckList",
+            "definition": "Adds a template."
           },
           {
-            "src": "assets/notion/proposal-management-global-status-configuration/003.jpg",
-            "caption": "Editing a status's name and colour"
+            "term": "Open a card",
+            "definition": "Opens the form builder with two steps, **Form** and **Preview Form**. Set the **Form Title**, then add sections and fields. Each field has **Yes** and **No** options, a **Required** switch and a **Choose type** list; icons add, copy and delete a field. **Add field** and **Add section** extend the form and **Save Changes** keeps it."
+          }
+        ]
+      },
+      {
+        "heading": "Submittal Templates",
+        "intro": "<p>The <strong>Submittals</strong> settings page holds the letter templates used on the <strong>Submittals</strong> tab of a proposal.</p>",
+        "definitions": [
+          {
+            "term": "Template cards",
+            "definition": "Each card shows the name, description, creator and date (for example **Letter**, **Scope of Work Template** and **Submittal Template**). The three-dot menu holds the card actions."
           },
           {
-            "src": "assets/notion/proposal-management-global-status-configuration/004.jpg",
-            "caption": "Deleting a status"
+            "term": "Create Template",
+            "definition": "Adds a template."
+          }
+        ]
+      },
+      {
+        "heading": "Status",
+        "intro": "<p>The <strong>Status</strong> settings page sets the statuses a proposal can have and their colours. It has two tabs: <strong>Proposal</strong> and <strong>Submission Package</strong>.</p>",
+        "images": [
+          {
+            "src": "assets/product/proposal-management/028.jpg",
+            "caption": "Status Configuration"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Start and end statuses",
+            "definition": "**Start** is always first and **Completed** and **Lost** are always last. They can be renamed or recoloured with the pencil icon but not deleted or moved."
           },
           {
-            "src": "assets/notion/proposal-management-global-status-configuration/005.jpg",
-            "caption": "Status Configuration for the Submission tab"
+            "term": "Middle statuses",
+            "definition": "**Successful**, **Pending**, **Cancelled**, **No Bid** and **N/A**. Drag the handle to reorder, click the colour dot or the pencil to change the colour or name and the bin to delete. **Add Status** adds another."
+          }
+        ]
+      },
+      {
+        "heading": "Approval Workflow",
+        "intro": "<p>The <strong>Approval Workflow</strong> settings page sets who must approve a proposal, level by level.</p>",
+        "images": [
+          {
+            "src": "assets/product/proposal-management/029.jpg",
+            "caption": "Approval Workflow settings"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Table",
+            "definition": "**Level**, **Level Description**, **Approvers**, **Workflow Type** (for example **Any one can approve**) and **Actions** (edit and delete)."
           },
           {
-            "src": "assets/notion/proposal-management-global-approval-workflow/003.jpg",
-            "caption": "Editing a level's description, approvers and workflow type"
+            "term": "Create Level",
+            "definition": "Adds a level."
           },
           {
-            "src": "assets/notion/proposal-management-global-approval-workflow/004.jpg",
-            "caption": "Deleting a level, with a warning"
+            "term": "Diagram icon",
+            "definition": "The icon at the top right shows the levels as a diagram."
+          }
+        ]
+      },
+      {
+        "heading": "ID Settings",
+        "intro": "<p>The <strong>ID Settings</strong> page sets how proposal IDs are numbered. It has two tabs, <strong>Proposal</strong> and <strong>Submission Package</strong>.</p>",
+        "definitions": [
+          {
+            "term": "System Default and Custom",
+            "definition": "Choose the default numbering or a custom format. **Save Changes** keeps the choice."
+          }
+        ]
+      },
+      {
+        "heading": "Delivery Method",
+        "intro": "<p>The <strong>Delivery Method</strong> settings page lists the ways a proposal can be delivered, chosen in the <strong>Delivery Method</strong> field of a proposal.</p>",
+        "definitions": [
+          {
+            "term": "Table",
+            "definition": "**Serial Number**, **Delivery Method** and **Actions** with a delete icon. The list starts with **Website**, **Hard Copy**, **Auction**, **Letters**, **Manually**, **Phone** and **Email**. **Add** adds a row."
+          }
+        ]
+      },
+      {
+        "heading": "Users and Permissions",
+        "intro": "<p>The <strong>Users and Permissions</strong> page lists the user groups of Proposal Management and what each may do.</p>",
+        "definitions": [
+          {
+            "term": "User group cards",
+            "definition": "Here **Proposal**, **Proposal Team** and **Proposal Manager**. Each has **Permissions** and **Users** buttons and a three-dot menu."
           },
           {
-            "src": "assets/notion/id-settings-proposal-management-settings/002.jpg",
-            "caption": "ID settings for submission packages: System Default or Custom"
-          },
-          {
-            "src": "assets/notion/proposal-management-global-project-types/005.jpg",
-            "caption": "Deleting a project type from the Actions menu"
-          },
-          {
-            "src": "assets/notion/proposal-management-global-business-development-codes/001.jpg",
-            "caption": "Business Development Codes: Add creates a new row"
-          },
-          {
-            "src": "assets/notion/proposal-management-global-business-development-codes/002.jpg",
-            "caption": "Editing a business development code in the list"
-          },
-          {
-            "src": "assets/notion/proposal-management-global-business-development-codes/004.jpg",
-            "caption": "Deleting a code from the Actions menu"
-          },
-          {
-            "src": "assets/notion/department-codes-proposal-management-settings/001.jpg",
-            "caption": "Department Codes: Add creates a new row"
-          },
-          {
-            "src": "assets/notion/department-codes-proposal-management-settings/002.jpg",
-            "caption": "Editing a department code in the list"
-          },
-          {
-            "src": "assets/notion/department-codes-proposal-management-settings/003.jpg",
-            "caption": "Deleting a code from the Actions menu"
-          },
-          {
-            "src": "assets/notion/proposal-navigation-proposal-management-settings/001.jpg",
-            "caption": "Proposal navigation: open Proposal Management on the Dashboard or on Proposals"
+            "term": "Add User Group and search",
+            "definition": "Adds a group; the search box finds one by name."
           }
         ]
       }
@@ -35904,20 +35278,35 @@ const MODULES = [
       "Open a proposal to reach its Bid, Submission Package, Submittals, Checklists, Teams, Documents, Communication, and Calendar tabs."
     ],
     "sections": [
-      "Overview",
       "My Dashboard",
       "Proposals",
-      "Proposal Fields",
-      "Bid",
-      "Submission Packages",
-      "Submittals",
+      "Proposal Profile",
+      "Teams",
+      "Documents",
+      "Communication",
       "Checklists",
+      "Bid",
+      "Submittals",
+      "Submission Packages",
+      "Analytics",
+      "Weekly Report",
+      "Issues",
+      "Push Datasets",
       "Calendar",
       "To Do List",
-      "Issues",
-      "Analytics & Reports",
-      "Push Datasets",
-      "Settings"
+      "Settings",
+      "Proposal Settings",
+      "Bid Types",
+      "Department Codes",
+      "Business Development",
+      "Project Types",
+      "Checklist Settings",
+      "Submittal Templates",
+      "Status",
+      "Approval Workflow",
+      "ID Settings",
+      "Delivery Method",
+      "Users and Permissions"
     ]
   },
   {
