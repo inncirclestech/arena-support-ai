@@ -193,6 +193,23 @@ function correctTypos(KB, q) {
   });
 }
 
+// Chat shorthand and everyday synonyms -> the words the documentation uses (generic, appended to the query).
+const SHORTHAND = { hw: "how", wat: "what", wht: "what", abt: "about", pls: "please", plz: "please", u: "user", usr: "user", proj: "project" };
+const SYNONYMS = [
+  [/\b(visual(ly)?|look and feel|appearance|theme)\b/i, "layout template"],
+  [/\bassign(ing|ed)?\b/i, "add select"],
+  [/\b(remove|get rid of)\b/i, "delete"],
+  [/\b(modify|alter)\b/i, "edit change"],
+  [/\b(make|build|new)\b/i, "create add"]
+];
+function prepareQuery(KB, raw) {
+  let q = String(raw || "").replace(/[A-Za-z]+/g, w => SHORTHAND[w.toLowerCase()] || w);
+  const extra = [];
+  SYNONYMS.forEach(([re, add]) => { if (re.test(q)) extra.push(add); });
+  q = correctTypos(KB, q);
+  return extra.length ? q + " " + extra.join(" ") : q;
+}
+
 const LIVE_INFO_RE = /\b(weather|weather forecast|news|stock price|lottery|cricket score|football score|exchange rate|temperature outside|what time is it|sports)\b/i;
 function isLiveInfo(raw) {
   return LIVE_INFO_RE.test(raw) && !/\b(marketplace|integration|integrat|app|card)\b/i.test(raw);
@@ -283,7 +300,7 @@ const THRESH = {
 //   { type: "answer", best, also, hits }  |  { type: "none", reason, hits }
 function plan(KB, raw, ctx, qvec, vecs) {
   const ix = getIndex(KB);
-  const q = correctTypos(KB, raw);
+  const q = prepareQuery(KB, raw);
   if (isLiveInfo(raw)) return { type: "none", reason: "live", q, hits: [] };
   if (isOffTopic(raw)) return { type: "none", reason: "offtopic", q, hits: [] };
   const r = rank(KB, q, qvec, vecs, ctx);
@@ -367,4 +384,4 @@ const ArenaSemantic = (function () {
   return { init, embed, progress: () => progress, vecs: () => vecs, state: () => state, detail: () => detail, onChange: f => listeners.push(f) };
 })();
 
-if (typeof module !== "undefined") module.exports = { isKnowledgeQuestion, isOffTopic, isLiveInfo, buildKB, kbHash, plan, rank, composeAnswer, correctTypos, tokenize, stem };
+if (typeof module !== "undefined") module.exports = { prepareQuery, isKnowledgeQuestion, isOffTopic, isLiveInfo, buildKB, kbHash, plan, rank, composeAnswer, correctTypos, tokenize, stem };

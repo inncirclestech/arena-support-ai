@@ -4,7 +4,7 @@ import fs from 'fs'; import vm from 'vm'; import path from 'path'; import { file
 const here = path.dirname(fileURLToPath(import.meta.url)); const root = path.resolve(here, '../../');
 const lexOnly = process.argv.includes('--lex'), verbose = process.argv.includes('-v');
 const ctx = {}; vm.createContext(ctx);
-new vm.Script(fs.readFileSync(process.env.DATA || path.join(root, 'data.js'), 'utf8') + '\n' + fs.readFileSync(path.join(root, 'engine.js'), 'utf8') + '\nglobalThis.KB=buildKB(MODULES);globalThis.plan=plan;globalThis.correctTypos=correctTypos;globalThis.SEM_PREFIX=SEM_PREFIX;globalThis.isKnowledgeQuestion=isKnowledgeQuestion;').runInContext(ctx);
+new vm.Script(fs.readFileSync(process.env.DATA || path.join(root, 'data.js'), 'utf8') + '\n' + fs.readFileSync(path.join(root, 'engine.js'), 'utf8') + '\nglobalThis.KB=buildKB(MODULES);globalThis.plan=plan;globalThis.correctTypos=correctTypos;globalThis.prepareQuery=prepareQuery;globalThis.SEM_PREFIX=SEM_PREFIX;globalThis.isKnowledgeQuestion=isKnowledgeQuestion;').runInContext(ctx);
 const KB = ctx.KB;
 const meta = JSON.parse(fs.readFileSync(path.join(process.env.OUT || path.join(root, 'assets/kb'), 'meta.json')));
 const buf = fs.readFileSync(path.join(process.env.OUT || path.join(root, 'assets/kb'), 'vecs.i8'));
@@ -15,7 +15,7 @@ const sectKey = e => e.moduleId + ':' + e.section;
 let n = 0, t1 = 0, t3 = 0, dec = 0, decOk = 0, decWrong = [], fails = [], falseDecl = [];
 for (const t of T) {
   let qv = null;
-  if (ex) { const q = ctx.correctTypos(KB, t.q); const o = await ex(ctx.SEM_PREFIX + q, { pooling: 'cls', normalize: true }); qv = Float32Array.from(o.data); }
+  if (ex) { const q = ctx.prepareQuery(KB, t.q); const o = await ex(ctx.SEM_PREFIX + q, { pooling: 'cls', normalize: true }); qv = Float32Array.from(o.data); }
   const p = ctx.plan(KB, t.q, null, qv, lexOnly ? null : vecs);
   if (process.env.CAL) { const i = p.type === 'answer' ? p : p.info || {}; const lx = i.lex || {}; console.log('CAL', t.decline ? 'DECL' : t.any ? 'ANY ' : 'ANS ', p.type === 'answer' ? 'A' : 'N', (i.cos||0).toFixed(3), (i.score||0).toFixed(3), (lx.ttl||0).toFixed(2), (lx.key||0).toFixed(2), (lx.txt||0).toFixed(2), t.q); }
   if (t.decline) { dec++; if (p.type === 'none') decOk++; else decWrong.push([t.q, p.best.where, p.score.toFixed(3)]); continue; }

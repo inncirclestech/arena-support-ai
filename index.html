@@ -1127,8 +1127,8 @@
 </dialog>
 <button type="button" class="help-fab" id="help-fab" hidden><span class="help-fab-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>Need help? Ask AI</button>
 
-<script src="data.js?v=202610081500"></script>
-<script src="engine.js?v=202610081500"></script>
+<script src="data.js?v=202610081620"></script>
+<script src="engine.js?v=202610081620"></script>
 <script>
   // ---------- In-browser LLM (WebLLM) — the primary way questions get answered ----------
   // Auto-loads on page load (see aiLoadPromise below), not behind a toggle: this is what
@@ -2518,7 +2518,7 @@ Example of the style to use — if a note says "[Global Data → Users] Go to Gl
         chatHistory.push({ role: "user", content: q });
         paintLog();
         const rawQ = q;
-        const qvec = await ArenaSemantic.embed(correctTypos(KB, rawQ));
+        const qvec = await ArenaSemantic.embed(prepareQuery(KB, rawQ));
         const p = plan(KB, rawQ, lastMatchedContext, qvec, ArenaSemantic.vecs());
         if (p.type === "answer") {
           chatHistory.push({ role: "assistant", content: composeAnswer(p.best, p.also), sourceModule: p.best.moduleId, sourceModuleName: p.best.moduleName });
