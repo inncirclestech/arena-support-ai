@@ -16132,6 +16132,38 @@ const MODULES = [
     "qaItems": QA_OPPORTUNITY,
     "narrative": [
       {
+        "heading": "Overview",
+        "intro": "<p>**Opportunity Management** tracks every sales opportunity from first lead to closed, with its customer, value, tasks, documents and linked proposals. Open **Opportunity Management**; the first tab is **My Dashboard**.</p>",
+        "definitions": [
+          {
+            "term": "Who uses it",
+            "definition": "Sales and business-development users create opportunities and open one to work on it. Each opportunity has a **Teams** tab of users and crews and an **Assign To** owner. The user groups under **Settings**, **Users and Permissions** include **opportunity**, **Opportunity Manager** and **Opportunity Estimator**. BD users can also work from the **Arena Onsite** mobile app."
+          },
+          {
+            "term": "Before you start",
+            "definition": "Under **Settings**, set up the lists that feed the opportunity form: **Stages & Statuses Configuration**, **Business Development**, **Project Types**, **Opportunity Type** and **Milestone Templates**. Customers, owners and contacts live in the toolbar pages **Customers**, **Owners** and **Contacts**. The **Milestone Template** you choose on an opportunity decides the rows of its **Milestones** tab."
+          },
+          {
+            "term": "The screens",
+            "definition": "**My Dashboard** shows the pipeline, your tasks and what is due in tiles and lists. **Opportunities** lists every opportunity as a table, cards or a kanban board by stage. **Customers Interactions** lists every customer with a notes thread. **Analytics** has four dashboards: Market & Operations, Executive Summary, Pipeline by BU and Pipeline Intelligence. **Reports** has seven tiles: Forecast, Opportunity Aging, Outcome Analysis, Customer Win Rate, Pipeline, Huddle and Pipeline Gantt View. **Account Assignment** records which sales people look after which customer, by market. The toolbar icons at the top right open **Tasks**, **Calendar**, **Contacts**, **Customers**, **Owners**, **Competitors** and **Settings**. Inside an opportunity the tabs are **Opportunity Profile**, **Milestones**, **Proposals**, **Teams**, **Customers Interactions**, **Task**, **Comments**, **Compliance Tracker**, **Documents** and **Expenses**."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "How the screens fit together",
+            "steps": [
+              "In **Settings**, set up stages, types and milestone templates.",
+              "Add the customer and contacts on the **Customers** and **Contacts** pages.",
+              "On **Opportunities**, click **+ Create** and fill the form.",
+              "Work the opportunity: set its profile, team, tasks, documents and compliance items.",
+              "On the **Proposals** tab, click **+ Create**; the proposal then continues in Proposal Management.",
+              "Move the opportunity through its stages: **Lead**, **Proposal** and **Closed**.",
+              "Follow the pipeline in **My Dashboard**, **Analytics** and **Reports**."
+            ]
+          }
+        ]
+      },
+      {
         "heading": "My Dashboard",
         "intro": "<p><strong>My Dashboard</strong> is the first tab of Opportunity Management. It sums up your opportunities in tiles and lists, so you can see the pipeline, your tasks and what is due without opening each opportunity.</p>",
         "images": [
@@ -17639,6 +17671,7 @@ const MODULES = [
       "The <strong>Arena Onsite</strong> mobile app mirrors the core flows for the field."
     ],
     "sections": [
+      "Overview",
       "My Dashboard",
       "Opportunities",
       "Opportunity Profile",
@@ -17687,6 +17720,38 @@ const MODULES = [
     "category": "home",
     "qaItems": QA_EQUIPMENT,
     "narrative": [
+      {
+        "heading": "Overview",
+        "intro": "<p>**Equipment Management** registers the company's equipment and accessories, shows where they are, moves them to projects, logs their hours and plans their maintenance. Open **Equipment Management**; the first screen is **Fleet Map**.</p>",
+        "definitions": [
+          {
+            "term": "Who uses it",
+            "definition": "Equipment Master Users keep identity and location current on each equipment profile, and the Equipment Accountant keeps purchase, warranty, insurance and depreciation details. A Global Data Administrator sets up cost codes, categories, rate card templates and the telematics provider. An Equipment Administrator links categories in **Settings** and maps telematics devices. Requesters raise allocation requests, Approvers decide them, and the Equipment Coordinator assigns equipment. A Fleet Administrator keeps vehicles and drivers, and the Hauling Coordinator and Hauling Approver run hauls. What each user group may do is set under **Settings**, **Users and Permissions**."
+          },
+          {
+            "term": "Before you start",
+            "definition": "Create the equipment cost codes, categories, subcategories and rate card templates in Global Data. Then add each category in **Settings**, **Equipment Setup** (or **Accessory Setup**), and set up the **Fuel Types**. Business Units must be mapped to an Inventory Location. Only equipment configured this way appears in the dropdowns when records are created."
+          },
+          {
+            "term": "The screens",
+            "definition": "**Overview** switches between **Fleet Map**, which plots equipment on a Google map, and **Geofencing**, which lists named locations drawn on the map. **Equipment** holds **Equipment Master**, **Accessory Master** and **3rd Party Rental** (equipment rented from outside vendors). **Operations** has the **Allocation Lifecycle** board that follows each request from approval to closing, and **Workflow Issues**. **Hauling** has **Internal Hauling**, **Fleet & Schedule** and **External Hauling**. **Utilization** has **Add Utilization Log**, **Utilization Logs**, **Utilization Summary**, **Issues** and **Auto Log Utilization**. **Maintenance** has **Field Inspections**, **Parts PO**, **Preventive Maintenance** and **Maintenance Calendar**. **Inspection Checklists Issues** follows failed inspection items until they are rectified. **Reports** has six report tiles. **Settings** holds forms, approval workflows, setup lists, statuses, billing rules, thresholds and permissions."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "How the screens fit together",
+            "steps": [
+              "Set up cost codes, categories and rate cards in Global Data, then the categories in **Settings**, **Equipment Setup**.",
+              "Register the equipment in **Equipment Master**; map its telematics device if it has one.",
+              "A Requester raises a request on **Operations**, and an Approver approves it.",
+              "The Equipment Coordinator assigns equipment; the card moves across the **Allocation Lifecycle** board, with a haul in **Hauling** when the company moves it.",
+              "Log daily hours in **Utilization**, then read them in **Utilization Summary**.",
+              "Plan and track upkeep in **Maintenance**.",
+              "Report on the results in **Reports**."
+            ]
+          }
+        ]
+      },
       {
         "heading": "Fleet Map",
         "intro": "<p>The <strong>Fleet Map</strong> is the first screen of Equipment Management. It plots your equipment on a Google map so you can see where each machine is. Your company may see Asset instead of Equipment (Global Data → Settings → Naming Framework).</p>",
@@ -22228,6 +22293,7 @@ const MODULES = [
       "<strong>Settings</strong> also holds <strong>Maintenance Config</strong>, <strong>Billing Rules</strong>, <strong>Disposal Methods</strong>, <strong>Notification Thresholds</strong> and <strong>Equipment Due Assignment Days</strong>. Your company may see <strong>Asset</strong> instead of <strong>Equipment</strong> (<strong>Global Data → Settings → Naming Framework</strong>)."
     ],
     "sections": [
+      "Overview",
       "Fleet Map",
       "Geofencing",
       "Equipment Master",
@@ -25698,6 +25764,32 @@ const MODULES = [
     "qaItems": QA_CALENDAR,
     "narrative": [
       {
+        "heading": "Overview",
+        "intro": "<p>The **Global Calendar** shows your events on a month grid, and you create events and reminders there. The screen is built to bring in events from your Outlook calendar. From Home, open the **Calendar** tile.</p>",
+        "definitions": [
+          {
+            "term": "Before you start",
+            "definition": "Calendar consent must be on for your account. If it is off, a **Consent Not Granted** warning tells you to give consent in **My Profile**, then **Settings**, then **Calendar consent**."
+          },
+          {
+            "term": "The screens",
+            "definition": "**Global Calendar** is the month grid with a date picker, the **Events** list for the selected date and **My Calendars** on the left. **Fetch Events** synchronises with your Outlook calendar and acts straight away. **Create Event** is the dialog opened by **+ Create Event**; it takes a title, date, time, location, category, description and the calendar the event goes into. **Filter Categories** opens from **Filters** and limits the grid to events with the categories you pick."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "How the screens fit together",
+            "steps": [
+              "Open **Calendar** and click **Ok** if the consent warning appears.",
+              "Click **+ Create Event**, fill the form, choose the calendar and click **Submit**.",
+              "Click a date to see its events in the **Events** list.",
+              "Click an event in the grid to read it.",
+              "Use **Filters** to show only some categories."
+            ]
+          }
+        ]
+      },
+      {
         "heading": "Global Calendar",
         "intro": "<p>The <strong>Global Calendar</strong> shows your events on a month grid, with a small date picker and your calendar list on the left. You create events and reminders here, and the screen is built to bring in events from your Outlook calendar. Open it from <strong>Home</strong> with the <strong>Calendar</strong> tile.</p>",
         "images": [
@@ -25893,6 +25985,7 @@ const MODULES = [
       "If <strong>Create Event</strong> or <strong>Filters</strong> shows <strong>Consent Not Granted</strong>, connect your calendar: avatar (top-right) → <strong>Settings</strong> → <strong>Microsoft Calendar</strong> → <strong>Sign In with Microsoft</strong>, or ask an admin to grant organisation consent in <strong>Global Data → Marketplace → Microsoft Calendar</strong>."
     ],
     "sections": [
+      "Overview",
       "Global Calendar",
       "Create Event",
       "Filter Categories"
@@ -25903,6 +25996,32 @@ const MODULES = [
     "category": "home",
     "qaItems": QA_COMMUNICATION,
     "narrative": [
+      {
+        "heading": "Overview",
+        "intro": "<p>**Communication** is the mailbox inside Arena: it lists the emails connected to your account, sorts them into folders, and lets you link an email to an Opportunity, a Tender bid or a Proposal. From Home, open the **Communication** tile, or click the chat icon in the top bar.</p>",
+        "definitions": [
+          {
+            "term": "The screens",
+            "definition": "**Communications** is the email list with the folders **All Emails**, **Inbox**, **Sent**, **Drafts**, **Starred** and **Trash**, and the module tabs **All**, **Opportunity**, **Proposal Management**, **Work Order**, **Request for Information** and **Transmittal**. **Filters** narrows the list by sender, recipient, date, mapped or unmapped, and attachments. **Mail Settings** (the gear icon) holds your signatures. **Map your Email** links ticked emails to a record. **Email view** opens the email beside the list so you can reply, forward, print or delete it."
+          },
+          {
+            "term": "Before you start",
+            "definition": "Tick the emails first: **Map your Email** stays greyed out until something is ticked. You can link emails to an **Opportunities** record (choose the customer group, customer and POC first), a **Tender Management** bid or a **Proposal** (choose the proposal type first)."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "How the screens fit together",
+            "steps": [
+              "Open **Communications** and find the email, using the folders, search or **Filters**.",
+              "Tick one or more emails and click **Map your Email**.",
+              "Choose the module and the record, then click **Submit**.",
+              "The email now shows a green module tag and a record tag.",
+              "Open that module's tab to see only the emails linked to that kind of record."
+            ]
+          }
+        ]
+      },
       {
         "heading": "Communications",
         "intro": "<p>The <strong>Communications</strong> screen is the mailbox inside Arena. It lists the emails connected to your account, sorts them into folders, and lets you link an email to an Opportunity, a Tender bid or a Proposal so the conversation stays with that record. Open it from <strong>Home</strong> with the <strong>Communication</strong> tile, or with the chat icon in the top bar.</p>",
@@ -26231,6 +26350,7 @@ const MODULES = [
       "If mail does not load or <strong>Import Group</strong> says <strong>Consent Not Granted</strong>, grant Outlook consent first (admin via Global Data → Marketplace, or yourself via My Profile → Settings → Outlook Management Consent)."
     ],
     "sections": [
+      "Overview",
       "Communications",
       "Filters",
       "Mail Settings",
@@ -32583,6 +32703,30 @@ const MODULES = [
     "qaItems": QA_COSTTRACKING,
     "narrative": [
       {
+        "heading": "Overview",
+        "intro": "<p>**Cost Tracking** reports estimated and actual cost for your projects across the company. From Home, open the **Cost Tracking** tile (the page title is **Company Reports**).</p>",
+        "definitions": [
+          {
+            "term": "Before you start",
+            "definition": "Every project starts ticked in the **Projects** drop-down of the dashboard. Untick the ones you do not want in the report."
+          },
+          {
+            "term": "The screens",
+            "definition": "**Cost Control Dashboard** shows total contract value, forecasted value (EAC), portfolio profit margin, margin erosion, over budget projects and a project performance table with CPI and SPI. **Cost by Projects** shows, for every project, the estimated cost and the actual cost. **Cost by Cost Types** lists estimated and actual cost line by line, grouped into Labor, Material and Equipment."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "How the screens fit together",
+            "steps": [
+              "Open **Cost Control Dashboard** to see portfolio performance and which projects are **Over Budget**.",
+              "Open **Cost by Projects** to compare estimated and actual cost for each project.",
+              "Open **Cost by Cost Types** to see the same cost line by line for Labor, Material and Equipment."
+            ]
+          }
+        ]
+      },
+      {
         "heading": "Cost Control Dashboard",
         "intro": "<p>The <strong>Cost Control Dashboard</strong> is the first tab of Cost Tracking (the page title is <strong>Company Reports</strong>). It shows company-wide project portfolio performance and financial health for the projects you pick.</p>",
         "images": [
@@ -32741,6 +32885,7 @@ const MODULES = [
       "Use the links <strong>Cost Control Dashboard</strong>, <strong>Cost by Projects</strong> and <strong>Cost by Cost Types</strong> at the top to switch screens."
     ],
     "sections": [
+      "Overview",
       "Cost Control Dashboard",
       "Cost by Projects",
       "Cost by Cost Types"
@@ -33142,6 +33287,42 @@ const MODULES = [
     "category": "home",
     "qaItems": QA_WORKORDER,
     "narrative": [
+      {
+        "heading": "Overview",
+        "intro": "<p>**Work Order Contract** lists every work order with its type and status, and each work order collects its items, team, hours, equipment, materials, costs and invoices in one record. Open **Work Order Contract**; the first screen is the **Work Orders** list.</p>",
+        "definitions": [
+          {
+            "term": "Who uses it",
+            "definition": "Each work order has an **Assign To** owner, a **Mechanic** on its items and a **Team** of users and crews. Approvers are set per work order type under **Settings**, **Approval Workflow**, and for vendor invoices under **Settings**, **Invoices**. What each user group may do is set under **Settings**, **Users and Permissions**."
+          },
+          {
+            "term": "Before you start",
+            "definition": "Under **Settings**, create the **Work Order Types** you will choose when creating a work order. Also review the **Maintenance Types**, the **Status** list that feeds the **Work Order Status** dropdown, the **Priority** levels and the approval levels for each type."
+          },
+          {
+            "term": "The screens",
+            "definition": "**Work Orders** lists the work orders as a table, grid or kanban board and is where you create one. **Workflow Issues** lists issues raised while work orders move through approval. **Reports** holds the module reports, for example the Asset Breakdown Report. **Settings** (the gear at the top right) holds types, maintenance types, invoice approval, approval workflow, statuses, priorities, the reopen window and permissions."
+          },
+          {
+            "term": "Inside a work order",
+            "definition": "The tabs across the top are **Profile**, **Items**, **Team**, **Timesheets**, **Equipment**, **Inventory**, **Procurement**, **Expense**, **Schedule**, **Communication**, **Documents**, **Drawings**, **Cost**, **Parts** and **Invoices**. **Profile** holds the basic details and owner. **Items** lists the individual jobs. **Team** lists the people and crews. **Timesheets** records hours and labor cost. **Equipment** lists equipment requests. **Inventory** holds site material requests. **Procurement** lists linked requisitions. **Expense** records costs paid. **Schedule** gives each item dates and people. **Cost** adds up parts, labor, external or vendor and other cost. **Invoices** holds vendor invoices and their approval."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "How the screens fit together",
+            "steps": [
+              "In **Settings**, set up the work order types, statuses, priorities and approval levels.",
+              "On **Work Orders**, click **+ Create**, pick the **Work Order Type**, fill the form and click **Submit**.",
+              "Open the work order and use **Profile** to set the status, dates and **Assign To** owner.",
+              "Add the jobs on **Items** and the people on **Team**.",
+              "Request equipment, site materials and purchases from the **Equipment**, **Inventory** and **Procurement** tabs.",
+              "Log hours on **Timesheets** and add vendor invoices on **Invoices**.",
+              "Read the totals on **Cost**; approved invoices count under **External / Vendor**."
+            ]
+          }
+        ]
+      },
       {
         "heading": "Work Orders",
         "intro": "<p>The <strong>Work Orders</strong> screen is the first page of <strong>Work Order Contract</strong>. It lists every work order, shows its type and status, and is where you create a new one or open one to work on.</p>",
@@ -34185,6 +34366,7 @@ const MODULES = [
       "Open the <strong>Reports</strong> tab for the <strong>Equipment Breakdown Report</strong>."
     ],
     "sections": [
+      "Overview",
       "Work Orders",
       "Profile",
       "Items",
@@ -34218,6 +34400,38 @@ const MODULES = [
     "category": "home",
     "qaItems": QA_EXPENSETRACKER,
     "narrative": [
+      {
+        "heading": "Overview",
+        "intro": "<p>**Expense Tracker** collects expense forms, sends them through approval, and groups approved lines into batches for payment or export. Open **Expense Tracker**; the first tab is **My Dashboard**.</p>",
+        "definitions": [
+          {
+            "term": "Who uses it",
+            "definition": "People who raise expenses create forms on **Expense Forms**. Approvers named in the approval workflow approve or reject forms there. Finance users collect approved lines on **Processed Forms** and group them into batches. What each user group may do is set under **Settings**, **Users and Permissions**."
+          },
+          {
+            "term": "Before you start",
+            "definition": "Under **Settings**, create at least one expense form template in **Expense Form** and the categories in **Expense Type**. Set up an **Approval WorkFlow** with levels and approvers, because a form is submitted to the workflow you pick at the bottom of it. **ID Settings** decides how expense form and invoice numbers are built."
+          },
+          {
+            "term": "The screens",
+            "definition": "**My Dashboard** totals the forms created, approved, rejected and in progress, with charts by expense type and by individual. **Expense Forms** lists every form with its status and is where you create, approve and reject forms. **Processed Forms** holds forms that finished approval and the batches made from them. **Issues** lists issues approvers raised on forms. **Settings** holds **Expense Form**, **Expense Type**, **Approval WorkFlow**, **ID Settings** and **Users and Permissions**."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "How the screens fit together",
+            "steps": [
+              "In **Settings**, set up the form template, expense types and approval workflow.",
+              "On **Expense Forms**, choose the template and click **Create**.",
+              "Fill in the form, pick an **Approval WorkFlow**, then click **Submit For Approval**.",
+              "Approvers click **Approve** or **Reject** on the form.",
+              "On **Processed Forms**, tick the approved lines and click **Convert to Batch**.",
+              "Download the batch from **Batch Items**.",
+              "Watch the totals on **My Dashboard** and any problems in **Issues**."
+            ]
+          }
+        ]
+      },
       {
         "heading": "My Dashboard",
         "intro": "<p>The <strong>My Dashboard</strong> tab of Expense Tracker summarises expense forms in totals and charts. Anyone who files or approves expenses uses it to see how much has been created, approved, rejected or is still moving through approval.</p>",
@@ -34745,6 +34959,7 @@ const MODULES = [
       "It opens on <strong>Expense Forms</strong>. The left menu has My Dashboard, Expense Forms, Processed Forms, Issues and Settings."
     ],
     "sections": [
+      "Overview",
       "My Dashboard",
       "Expense Forms",
       "Processed Forms",
@@ -34761,6 +34976,38 @@ const MODULES = [
     "category": "home",
     "qaItems": QA_PROPOSALMANAGEMENT,
     "narrative": [
+      {
+        "heading": "Overview",
+        "intro": "<p>**Proposal Management** holds every proposal with its team, documents, mail, checklists, linked tenders, submittals and submission packages. Open **Proposal Management**; the first tab is **My Dashboard**.</p>",
+        "definitions": [
+          {
+            "term": "Who uses it",
+            "definition": "Bid managers and estimators create proposals and open one to work on it. Each proposal has a **Teams** tab of users and crews and an **Assign To** owner. Approvers are set level by level under **Settings**, **Approval Workflow**. What each user group may do is set under **Settings**, **Users and Permissions**."
+          },
+          {
+            "term": "Before you start",
+            "definition": "Under **Settings**, set up the lists a proposal draws on: **Bid Types**, **Department Codes**, **Business Development**, **Project Types**, **Delivery Method** and **Status**. Add the checklist templates in **Checklists** and the letter templates in **Submittals**. Set the approval levels in **Approval Workflow** and the number format in **ID Settings**."
+          },
+          {
+            "term": "The screens",
+            "definition": "**My Dashboard** totals the proposals, shows how many are won or lost, and lists approvals, forms, issues and to-dos that need you. **Proposals** lists every proposal as a table, cards or a kanban board and is where you create one. **Analytics** opens eight tiles of charts and reports, including the Weekly Report. **Issues** lists proposal issues such as a rejection. **Push Datasets** lists four datasets, each with a **SYNC** button. The buttons at the top right open the **Calendar**, the **To Do List** and **Settings**. Inside a proposal the tabs are **Profile**, **Teams**, **Documents**, **Communication**, **Checklists**, **Bid**, **Submittals** and **Submission Packages**."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "How the screens fit together",
+            "steps": [
+              "Create the proposal with **+ Create** on **Proposals**, or from the **Proposals** tab of an opportunity.",
+              "Fill the **Profile** and add the people on **Teams**.",
+              "Keep files in **Documents** and emails in **Communication**.",
+              "Fill the **Checklists** forms and create the letters in **Submittals**.",
+              "On **Bid**, link the tenders that belong to the proposal.",
+              "On **Submission Packages**, click **Create Submission Package** and send it for approval.",
+              "Track the results in **My Dashboard** and **Analytics**."
+            ]
+          }
+        ]
+      },
       {
         "heading": "My Dashboard",
         "intro": "<p><strong>My Dashboard</strong> is the first tab of Proposal Management. It totals the proposals, shows how many are won or lost, and lists what needs your attention: approvals, forms, issues and to-dos.</p>",
@@ -35566,6 +35813,7 @@ const MODULES = [
       "Open a proposal to reach its Bid, Submission Package, Submittals, Checklists, Teams, Documents, Communication, and Calendar tabs."
     ],
     "sections": [
+      "Overview",
       "My Dashboard",
       "Proposals",
       "Proposal Profile",
@@ -35602,6 +35850,38 @@ const MODULES = [
     "category": "home",
     "qaItems": QA_TENDERMANAGEMENT,
     "narrative": [
+      {
+        "heading": "Overview",
+        "intro": "<p>**Tender Management** records each tender with its dates, pre-qualification, scope of work, bids and submission package, and tracks results in reports. Open **Tender Management**; the first tab is **Tenders**.</p>",
+        "definitions": [
+          {
+            "term": "Who uses it",
+            "definition": "Each tender has a **Teams** tab of users and crews and an **Assign To** owner. Approvers are set under **Settings**, **Approval Workflow**, which has separate tabs for **Bid**, **Pre Qualification** and **Technical Package**. The submission package of a tender has its own approval levels. User groups are created under **Settings**, **Users and Permissions**; a new site shows no groups yet."
+          },
+          {
+            "term": "Before you start",
+            "definition": "Under **Settings**, create the **Bid Type** cards you choose from when adding a tender. Also set up the **Status Configuration** and the **Approval Workflow**. Add the templates a tender uses: **Scope of Work**, **Agreement**, **Pre Qualification Template** and **Technical Package Template**. **Bid Templates** is the master list of work items for a bill of quantities."
+          },
+          {
+            "term": "The screens",
+            "definition": "**Tenders** lists every tender with its bid type, status and approval status. **Bid** lists tenders that have received bids so you can compare them. **Analytics & Reports** is a menu of five reports: Bid Awarded Rate, Estimate Awarded Rate, Types of Bids, Success & Estimate Over Time and Weekly Report. **Issues** lists issues raised on tender submissions. **Settings** (top right) holds the templates, statuses, approval workflow and permissions. A tender record opens with four cards: **Tender Event Schedule**, **Pre-Qualification**, **Tender Details** and **Addendum**. **Tender Details** opens **Tender Setup** with the tabs **Profile**, **Teams**, **Status & Comments**, **Documents**, **Communication**, **Scope of Work** and **Submission Package**."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "How the screens fit together",
+            "steps": [
+              "On **Tenders**, click **+ Add Tender** and fill in the form.",
+              "Open the tender and set the 14 dates on **Tender Event Schedule**.",
+              "On **Pre-Qualification**, choose a template and send it to tenderers.",
+              "In **Tender Details**, complete **Profile**, **Teams**, **Documents** and **Scope of Work**.",
+              "Collect what qualified contractors submit on **Submission Package** and approve it.",
+              "List any changes on **Addendum**.",
+              "Compare bids on **Bid** and read the results in **Analytics & Reports**."
+            ]
+          }
+        ]
+      },
       {
         "heading": "Tenders",
         "intro": "<p>The <strong>Tenders</strong> screen is the first tab of Tender Management. It lists every tender with its type, status and approval status. Click a tender name to open that tender.</p>",
@@ -36610,6 +36890,7 @@ const MODULES = [
       "Click a tender name to open its cards: <strong>Tender Event Schedule</strong>, <strong>Pre-Qualification</strong>, <strong>Tender Details</strong> and <strong>Addendum</strong>."
     ],
     "sections": [
+      "Overview",
       "Tenders",
       "Tender Record",
       "Tender Event Schedule",
@@ -36648,6 +36929,38 @@ const MODULES = [
     "category": "home",
     "qaItems": QA_PROCUREMENT,
     "narrative": [
+      {
+        "heading": "Overview",
+        "intro": "<p>**Procurement** takes a project's request for equipment, material, equipment parts or a delivery service through quotation, purchase order, delivery receipt and invoice. From Home, open the **Procurement** tile; the first tab is the **Dashboard**.</p>",
+        "definitions": [
+          {
+            "term": "Who uses it",
+            "definition": "Site and office users raise requisitions. Approvers decide requisitions, purchase orders, invoices and pickup requests at the levels set in **Settings**, **Approval Workflow**. Every document has an **Assign** user, and **Default Assign To** in **Settings** lists the default assignees for each document type. What each user group may do is set under **Settings**, **Users and Permissions**."
+          },
+          {
+            "term": "Before you start",
+            "definition": "Under **Settings**, set the approval levels for each document and item type in **Approval Workflow**, and the number format in **ID Settings**. Set the **Default Point Of Contact** in **RFQ Settings**. The form pages decide which fields the requisition, purchase order, delivery receipt, invoice and pickup request forms carry."
+          },
+          {
+            "term": "The screens",
+            "definition": "**Dashboard** shows total spend, budget variance, average lead time, quality issue rate and a vendor performance summary for the projects you pick. **Requisition Form** lists requisitions and is where you raise them. **RFQ** holds requests for quotation sent to vendors. **Vendor Responses** is where vendor prices are entered and compared and the winning vendor is chosen. **Purchase Orders** lists orders raised from RFQs, with **Direct Purchase Order** for orders raised straight from a requisition. **Delivery Receipts** records what a vendor delivered, with **Inspection Issues**. **Invoice** holds vendor invoices raised against purchase orders. **Pickup Request** handles collecting rented equipment from a site. **Purchase Order Master** shows every order with its invoiced amount and balance. **Document** is the file area and **Communication** the mailbox of the module. **Settings** holds approval workflows, forms, issue priorities, ID formats, defaults and permissions."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "How the screens fit together",
+            "steps": [
+              "On **Requisition Form**, click **+ Requisition**, choose the item type and submit the form.",
+              "Once approved, either create an RFQ from it on **RFQ**, or raise a **Direct Purchase Order**.",
+              "On **Vendor Responses**, enter each vendor's prices, compare them and select a vendor.",
+              "On **Purchase Orders**, click **+ Purchase Orders** and tick the RFQ to raise its order.",
+              "On **Delivery Receipts**, record what arrived against the purchase order.",
+              "On **Invoice**, create the vendor invoice against the purchase order and approve it.",
+              "Use **Pickup Request** to collect rented equipment, and **Purchase Order Master** to see what is still to be invoiced."
+            ]
+          }
+        ]
+      },
       {
         "heading": "Dashboard",
         "intro": "<p>The <strong>Dashboard</strong> tab of Procurement is the <strong>Procurement Analytics Dashboard</strong>. It shows four totals for the projects you pick and ranks every vendor by how well their orders went.</p>",
@@ -37806,6 +38119,7 @@ const MODULES = [
       "Second-level tabs include REQ, RFQ, Vendor Responses, Purchase Order, Direct Purchase Order, Purchase Order Master, Delivery Receipts, Invoices, Pickup Request, and Communications."
     ],
     "sections": [
+      "Overview",
       "Dashboard",
       "Requisition Form",
       "Requisition Workflow Issues",
@@ -37844,32 +38158,32 @@ const MODULES = [
     "narrative": [
       {
         "heading": "Overview",
-        "intro": "<p><strong>Time Management</strong> is where people record the hours they work, send those hours for approval, and review them by person, crew, phase code, project or work order. From <strong>Home</strong>, open the <strong>Time Management</strong> tile; you land on <strong>My Crew Timesheet</strong>.</p>",
+        "intro": "<p>**Time Management** is where people record the hours they work, send those hours for approval, and review them by person, crew, phase code, project or work order. From Home, open the **Time Management** tile; you land on **My Crew Timesheet**.</p>",
         "definitions": [
           {
             "term": "Who uses it",
-            "definition": "Anyone who logs time uses **My Timesheet**; supervisors and foremen who log for a crew use **My Crew Timesheet**. Approvers are the users or roles placed on levels of an approval workflow under **Settings**. Access is controlled by user groups under **Settings**, **Timesheet Settings**, **Users And Permissions**, where each screen has View, Create, Edit, Delete and other switches."
+            "definition": "Anyone who logs time uses **My Timesheet**. Supervisors who log hours for a crew use **My Crew Timesheet**. Approvers are the users or roles placed on the levels of an approval workflow under **Settings**, **Timesheet Workflow**. What each user group may do is set under **Settings**, **Timesheet Settings**, **Users And Permissions**."
           },
           {
             "term": "Before you start",
-            "definition": "Under **Settings** set up: a **Timesheet Mode** (Daily, Weekly by day or Weekly) for each user and crew, the **Earnings Codes** (for example regular pay and over time pay), at least one **Timesheet Template**, and an approval workflow assigned in **Timesheet Workflow**. Phase codes come from the project setup. Without a mode, **My Crew Timesheet** shows the message that a shift type must be selected in settings."
+            "definition": "Under **Settings** set a **Timesheet Mode** (Daily, Weekly by day or Weekly) for each user and crew, the **Earnings Codes**, at least one **Timesheet Template** and an approval workflow assigned in **Timesheet Workflow**. Without a mode, **My Crew Timesheet** shows a message and a **Timesheet Settings** link instead of the log grid."
           },
           {
             "term": "The screens",
-            "definition": "**Dashboard** shows total hours and cost for a date range. **My Crew Timesheet** is where a supervisor logs hours for a crew. **My Timesheet** is where you log your own hours. **Timesheet Logs** lists saved and submitted timesheets. **Issues** lists issues raised on timesheets. **Timesheet Data Summary** totals hours and cost by person, crew, phase code, project, work order, earnings code or GL code. **Reconciliation** compares timesheet hours with gate in and gate out logs. **Settings** holds workflows, modes, earnings codes, templates, payroll locking, excluded projects and permissions."
+            "definition": "**Dashboard** totals hours and labor cost for a date range. **My Crew Timesheet** is where a supervisor logs the hours of a whole crew. **My Timesheet** is where you log your own hours and save them as a draft or submit them. **Timesheet Logs** lists saved and submitted timesheets. **Issues** lists issues raised on timesheets. **Timesheet Data Summary** totals hours and cost by people, crew, phase code, project, work order, earnings code or GL code. **Reconciliation** checks timesheet hours against other records, including uploaded gate in and gate out logs. **Settings** holds the approval workflow, modes, earnings codes, templates, payroll locking, excluded projects and permissions."
           }
         ],
         "procedures": [
           {
-            "title": "How the pieces fit",
+            "title": "How the screens fit together",
             "steps": [
-              "Open **Settings**, **Timesheet Settings** and set the **Timesheet Mode**, **Earnings Codes** and **Timesheet Template**.",
-              "Open **Settings**, **Timesheet Workflow**, create an approval workflow with levels, then assign it to users or crews in **Assign Workflow**.",
-              "Open **My Timesheet** (or **My Crew Timesheet**), add rows with a phase code and enter the hours.",
-              "Click **Save as Draft** to keep working, or **Submit** to send the log for approval.",
-              "Follow submitted logs in **Timesheet Logs** and any problems in **Issues**.",
+              "Open **Settings** and set the **Timesheet Mode**, **Earnings Codes** and **Timesheet Template**.",
+              "In **Timesheet Workflow**, create an approval workflow with levels and assign it to users or crews.",
+              "Open **My Timesheet** (or **My Crew Timesheet**) and enter hours against a phase code.",
+              "Click **Save as Draft** to keep working, or **Submit** to send the log into the approval workflow.",
+              "Follow submitted logs in **Timesheet Logs** and problems in **Issues**.",
               "Review totals in **Dashboard** and **Timesheet Data Summary**.",
-              "Compare the hours with gate logs in **Reconciliation**."
+              "Compare hours with gate logs in **Reconciliation**."
             ]
           }
         ]
@@ -38604,31 +38918,31 @@ const MODULES = [
     "narrative": [
       {
         "heading": "Overview",
-        "intro": "<p><strong>Inventory Management</strong> keeps the stock of materials at each inventory location, takes requests for materials from sites, and records the materials issued out and returned back. From <strong>Home</strong>, open the <strong>Inventory Management</strong> tile.</p>",
+        "intro": "<p>**Inventory Management** keeps the stock of materials at each inventory location, takes requests for materials from sites, and records materials issued out and returned. From Home, open the **Inventory Management** tile; you land on **Locations Map**.</p>",
         "definitions": [
           {
             "term": "Who uses it",
-            "definition": "Store and yard staff keep **Inventory Master** up to date. Site people raise a **Site Material Request**. Whoever ships the material fills the **Material Issue Ticket** and signs as **Shipped By**; the receiver signs as **Received By**. Access is given through user groups under **Settings**, **Users And Permissions**, where each screen (**Pickup Ticket**, **Ship Ticket**, **Return Ticket**, **Inventory Master**, **Overview**, **Hauling Trucks**, **Reports** and the settings pages) has View, Create, Edit, Delete and other switches."
+            "definition": "The person who ships material fills the **Material Issue Ticket** and signs as **Shipped By**. The person who receives it signs the same ticket as **Received By**. What each user group may do is set under **Settings**, **Users And Permissions**, where every screen has switches such as **View**, **Create**, **Edit**, **Delete**, **Download** and **Print**."
           },
           {
             "term": "Before you start",
-            "definition": "The **Add** form of a location picks a material from a list, so materials and units (UOM) must already exist in Global Data. Create at least one inventory location in **Inventory Master**. Set up the approval level in **Settings**, **Work Flow**, and the ticket ID format in **Settings**, **ID Settings**."
+            "definition": "Create at least one inventory location in **Inventory Master**, then add its materials with a minimum and maximum quantity. Under **Settings**, set the approval level in **Work Flow**, the ticket number format in **ID Settings** and the extra fields of each ticket form."
           },
           {
             "term": "The screens",
-            "definition": "**Inventory Master** lists the inventory locations and the materials and quantities held at each. **Site Material Request** is where sites ask for materials; rejected ones are on their own sub-tab. **Material Issue Ticket** records materials shipped out of a location against a request. **Return Ticket** records materials sent back to a location. **Settings** configures the fields of each ticket, user groups, approval levels, ID formats and printing."
+            "definition": "**Locations Map** is meant to show your inventory locations on a map. **Inventory Master** lists the inventory locations; open one to see its materials, quantities and limits. **Site Material Request** is where a site asks for materials; rejected requests have their own sub-tab. **Material Issue Ticket** records materials leaving a location against a request. **Return Ticket** records materials coming back into a location. **Settings** holds ticket fields, user groups, approval levels, ID formats and print layout."
           }
         ],
         "procedures": [
           {
-            "title": "How the pieces fit",
+            "title": "How the screens fit together",
             "steps": [
-              "Open **Inventory Master** and make sure the location has the materials and quantities.",
+              "Open **Inventory Master** and check that the location holds the materials and quantities.",
               "Open **Site Material Request**, click **Add**, fill the form and click **Submit for Approval**.",
-              "When the request is approved, open **Material Issue Ticket** and click **Add**.",
-              "Pick the **Site Material Request**, choose **Ship Material From**, enter **Ship Now** for each material, sign and click **Submit**.",
-              "The receiver signs the same ticket as **Received By**.",
-              "If material comes back, open **Return Ticket**, click **Add**, pick the request, choose **Return Material To** and enter **Return Now**."
+              "Open **Material Issue Ticket** and click **Add**.",
+              "Choose the **Site Material Request** and **Ship Material From**, enter **Ship Now** for each material, sign under **Shipped By** and click **Submit**.",
+              "The receiver signs the ticket under **Received By**.",
+              "If material comes back, open **Return Ticket**, click **Add**, choose **Return Material To** and enter **Return Now** for each material."
             ]
           }
         ]
@@ -39169,6 +39483,38 @@ const MODULES = [
     "category": "home",
     "qaItems": QA_CAPITALMANAGEMENT,
     "narrative": [
+      {
+        "heading": "Overview",
+        "intro": "<p>**Capital Management** plans budgets and capital improvement projects (CIPs), scores each CIP, allocates funds to it and compares estimated with actual cost. From Home, open the **Capital Management** tile; the first tab is **Dashboard**.</p>",
+        "definitions": [
+          {
+            "term": "Who uses it",
+            "definition": "Budgets and CIPs go through approval at the levels set in their **Approval Workflow** settings pages. Each CIP has a **Teams** tab of users and crews. Approvers compare projects on the **CIP Assesments** tab."
+          },
+          {
+            "term": "Before you start",
+            "definition": "In **Budget Planning**, **Settings**, add the **Budget Functions**, **Budget Items**, **Budget Funds**, the extra fields in **Budget Forms**, the **Organization Structure** levels and units, and the **Approval Workflow**. In **CIP Settings**, set the **CIP Profile** fields, the **CIP Category** estimate categories and items, the **CIP Objectives**, the **Checklists** and the **Approval Workflow**."
+          },
+          {
+            "term": "The screens",
+            "definition": "**Dashboard** summarises budgets and CIPs in totals and charts. **Budget Planning** has **Budgets**, which lists budget plans as cards, and **Workflow Issues** for approval issues. **CIP** has **CIPs** (the project cards), **Fund Allocations** (assign funds to estimate lines), **CIP Actuals & Forecast** (estimated against actual by year), **CIP Assesments** (all CIPs ranked by score) and **Workflow Issues**. Inside a CIP the tabs are **CIP Profile**, **Teams**, **Documents**, **Communications**, **Checklists**, **Cost Estimate**, **Actual** and **CIP Score**."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "How the screens fit together",
+            "steps": [
+              "In **Budget Planning**, click **Add Budget**, choose the function, department, items and years.",
+              "In **CIP**, click **Create CIP** and fill the profile.",
+              "On the **Cost Estimate** tab, enter the planned cost for each year.",
+              "On **CIP Score**, rate the CIP against the five objectives.",
+              "On **Fund Allocations**, assign funds to its estimate lines.",
+              "Record real spending on the **Actual** tab.",
+              "Compare years in **CIP Actuals & Forecast**, rank projects in **CIP Assesments** and read the **Dashboard**."
+            ]
+          }
+        ]
+      },
       {
         "heading": "Dashboard",
         "intro": "<p>The <strong>Dashboard</strong> tab of Capital Management gives a summary of budgets and capital improvement projects (CIPs) in totals and charts. Open it from <strong>Home</strong> by choosing <strong>Capital Management</strong>.</p>",
@@ -39947,6 +40293,7 @@ const MODULES = [
       "Reloading the page, or opening a Budget Planning or CIP link directly, lands back on Dashboard — click the tab again to return."
     ],
     "sections": [
+      "Overview",
       "Dashboard",
       "Budgets",
       "Budget Workflow Issues",
