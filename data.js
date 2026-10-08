@@ -25076,58 +25076,6 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Home",
-        "intro": "<p>For every End User on a construction project — from a field engineer checking today's tasks to a project executive scanning portfolio health — the Home page is the first thing they see after logging in, and it's designed to orient rather than drop them into a menu. It surfaces a weather report in the top-left corner (once you allow location access), a horizontal tab of every project you have access to along with its progress percentage, and a set of module tiles — Time Management, Equipment Management, Inventory Management, and others — scoped to whatever permissions your account has been granted. If your account only has \"Projects\" permission, Arena skips Home entirely and takes you straight to the Projects page instead.</p><p>The Home page is also the jumping-off point into individual project detail. Clicking a project's progress card in the horizontal tab takes you to that project's Project Desk, which is where the more refined, project-specific insights live — useful for a PM/Module Manager who needs to move from a portfolio-wide glance into the details of the one job they're running today. Home itself is deliberately a wide-angle view — a snapshot across everything you're involved in — while Project Desk is where you zoom into one project at a time.</p><p>Because the tiles and modules shown on Home are permission-driven, not everyone sees the same Home page. If a tile you expect — Time Management or Equipment Management, for example — is missing, that's not a bug; it means your account hasn't been granted access to that module, and the fix is to contact your project or system administrator rather than to look for a hidden setting on your own account.</p>",
-        "definitions": [
-          {
-            "term": "Home Page",
-            "definition": "The landing screen shown immediately after login, displaying a weather report, a horizontal tab of accessible projects with progress percentages, and permission-based module tiles (Time Management, Equipment Management, Inventory Management, Projects). Users with only \"Projects\" permission are routed to the Projects page instead of Home."
-          },
-          {
-            "term": "Project Desk",
-            "definition": "The detailed, project-specific view reached by clicking a project's progress card from the Home page's horizontal project tab."
-          },
-          {
-            "term": "Module tile",
-            "definition": "A clickable panel on the Home page representing a module (e.g. Time Management, Equipment Management, Inventory Management). Visibility of each tile depends on the permissions assigned to your account."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Create a new project",
-            "steps": [
-              "Go to <strong>Home → Projects</strong> and click the orange <strong>+ Create Project</strong> button, top-left of the project grid.",
-              "Fill in the three required fields: <strong>Project Name</strong>, <strong>Project Number / ID</strong>, and <strong>Construction Type</strong>.",
-              "Optionally fill in Project Location, Subsidiary, Owner Representative, Project Manager / Consultant, Currency, Opportunity, Customer, Business Unit, Customer Locations, Owner, Construction Cost Estimate, Project Type, Funding Agency, and Implementing Agency — all of these can also be added or changed later.",
-              "Click Submit. The dialog closes and the new project appears immediately in the Projects grid with status \"Created.\""
-            ],
-            "note": "There's no clone-project or create-from-template option — every project starts as a blank form. There's also no start/end date field here; scheduling is configured later, once the project exists. After creation the project is immediately navigable but functionally empty — plan to go into Project Setup next to build out the work breakdown, team, schedule, and forms."
-          },
-          {
-            "title": "Navigate to a project's detail view from Home",
-            "steps": [
-              "On the Home page, locate the project in the horizontal project tab.",
-              "Click on that project's progress card.",
-              "You are taken to that project's <strong>Project Desk</strong> for a more refined view of project insights."
-            ]
-          },
-          {
-            "title": "Resolve a missing module tile",
-            "steps": [
-              "Check which tiles currently appear on your Home page (Time Management, Equipment Management, Inventory Management, Projects).",
-              "If a module you need is missing, contact your project or system administrator to request access."
-            ],
-            "note": "Module visibility on Home is entirely permission-driven — there is no user-side setting to reveal a hidden module tile."
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/notion/home-page/001.jpg",
-            "caption": "The Home page, with a weather report based on your location"
-          }
-        ]
-      },
-      {
         "heading": "Projects",
         "intro": "<p>The <strong>Projects</strong> screen lists every project you can open. Click a project to go inside it, or create a new one from here.</p>",
         "images": [
@@ -25234,408 +25182,368 @@ const MODULES = [
         ]
       },
       {
-        "heading": "Company Details",
-        "intro": "<p>Before a construction company can run a single project in Arena, someone has to lay the company-wide groundwork everything else builds on — and that's exclusively <strong>Super Admin</strong> territory. Company Details covers the foundational, company-wide configuration that everything else in Arena is built on top of. Company Details, under Global Data, is where you record the company's name, logo, address, and contact information — a one-time setup task whose effects ripple everywhere, since this information auto-populates forms and appears in other places across the application rather than needing to be re-entered per document. It's also editable at any time by returning to the same Company tab, so a change in address or a rebrand doesn't mean reconfiguring anything downstream.</p><p>Global Data itself is broader than just company details — it's the general setup space for construction-specific data that needs to exist before projects can be run against it: work areas, work packages, activity sequences, and BYO (Build Your Own) project forms. Critically, this data is organized per Construction Type, which the admin selects from a dropdown before entering any data; everything configured under a given Construction Type becomes available to every project that uses that same type, which is what lets an organization standardize its operational scaffolding across many projects of the same kind — say, every mid-rise residential job — rather than configuring each project individually from scratch.</p><p>Because Global Work Areas, Global Work Packages, and Activity Sequence Templates build on each other, Arena expects them to be set up in a specific order: first Global Work Areas, then Global Work Packages, and finally Activity Sequence Templates. Following this sequence matters because later steps reference the structures created in earlier ones — trying to configure Activity Sequence Templates before Work Packages exist means it would have nothing to sequence.</p>",
+        "heading": "Home",
+        "intro": "<p>The <strong>Home</strong> page is the launcher for every Arena module. It shows one tile per module you can use; click a tile to open that module.</p>",
+        "images": [
+          {
+            "src": "assets/product/account-basics/001.jpg",
+            "caption": "The Home page with module tiles"
+          }
+        ],
         "definitions": [
           {
-            "term": "Company Details",
-            "definition": "The Global Data screen for entering the company's name, logo, address, and contact information. This data auto-populates forms and other places across Arena, and can be edited later from the same tab."
+            "term": "Module tile",
+            "definition": "A card with an icon, the module name and a one-line description. Click it to open the module. Home has no project strip or widgets: it only holds tiles."
+          },
+          {
+            "term": "Projects",
+            "definition": "Set up and deliver construction projects."
+          },
+          {
+            "term": "Opportunity Management",
+            "definition": "Identify opportunities and build relationships with customers."
+          },
+          {
+            "term": "Proposal Management",
+            "definition": "Plan the timeline, estimating, submittals and proposal submission."
+          },
+          {
+            "term": "Tender Management",
+            "definition": "Create tenders, compare bids and manage tendering."
+          },
+          {
+            "term": "Procurement",
+            "definition": "Manage procurement from requisition to purchase order."
+          },
+          {
+            "term": "Inventory Management",
+            "definition": "Order, store and manage the flow of material inventory."
+          },
+          {
+            "term": "Asset Management",
+            "definition": "Identify, monitor and maintain the different types of asset."
+          },
+          {
+            "term": "Time Management",
+            "definition": "Create, monitor and analyze the time of rosters and crews."
+          },
+          {
+            "term": "Work Order",
+            "definition": "Manage and track the contractual side of work orders and agreements."
+          },
+          {
+            "term": "Expense Tracker",
+            "definition": "Company and project expense management and tracking."
+          },
+          {
+            "term": "Cost Tracking",
+            "definition": "Compare estimated costs with actual costs for projects, phase codes and cost types."
+          },
+          {
+            "term": "Communication",
+            "definition": "Assign emails to modules and sync them with Outlook and back."
+          },
+          {
+            "term": "Calendar",
+            "definition": "Create events and reminders, sync the calendar with the Outlook calendar and map events to modules."
+          },
+          {
+            "term": "Capital Management",
+            "definition": "Create, monitor and manage budgets."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Open a module",
+            "steps": [
+              "Click **Home** in the top bar.",
+              "Click the tile of the module you want."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Top Bar",
+        "intro": "<p>The <strong>Top Bar</strong> runs across the top of every Arena screen. It holds the main page links, the messaging, support, help, downloads and notification icons, and your account menu.</p>",
+        "images": [
+          {
+            "src": "assets/product/account-basics/006.jpg",
+            "caption": "The top bar with the account menu open"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Dashboard",
+            "definition": "Opens the company dashboard page. If your account has no access to it, a **Warning** dialog says **Request failed with status code 403**; click **Ok** to close it."
+          },
+          {
+            "term": "Home",
+            "definition": "Opens the **Home** page with the module tiles."
+          },
+          {
+            "term": "Projects",
+            "definition": "Opens the **Projects** list."
           },
           {
             "term": "Global Data",
-            "definition": "The setup space for construction-specific data — work areas, work packages, activity sequences, and BYO (Build Your Own) project forms — organized per Construction Type. Data entered here is available to every project using the selected Construction Type."
+            "definition": "Opens the Global Data setup area for company-wide lists."
           },
           {
-            "term": "Construction Type",
-            "definition": "A dropdown selection in Global Data that scopes which projects a given piece of setup data applies to. All projects sharing a Construction Type see the same Global Data configuration for it."
+            "term": "Speech bubble icon",
+            "definition": "Opens the **Messaging** panel. Click it again, or the arrow on the panel, to fold the panel down to a small bar at the bottom right."
           },
           {
-            "term": "Global Work Areas / Global Work Packages / Activity Sequence Templates",
-            "definition": "The three ordered setup steps within a Construction Type in Global Data: Step 1 defines Global Work Areas, Step 2 defines Global Work Packages, and Step 3 defines Activity Sequence Templates, each building on the one before it."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Set up company name, logo, and address",
-            "steps": [
-              "Go to <strong>Global Data &gt; Company</strong> (Company Details).",
-              "Enter the company's name, logo, address, and contact information.",
-              "Click <strong>Submit</strong>."
-            ],
-            "note": "This information auto-populates forms and other places across Arena. Return to the same Company tab any time to edit it later.",
-            "images": [
-              {
-                "src": "assets/notion/company-details/001.jpg",
-                "caption": "Company Details with the company name, logo, address and contacts",
-                "step": 2
-              }
-            ]
+            "term": "Headset icon",
+            "definition": "Opens the **Support** page."
           },
           {
-            "title": "Set up Global Data for a Construction Type",
-            "steps": [
-              "Go to <strong>Global Data</strong>.",
-              "Select a Construction Type from the dropdown.",
-              "Complete <strong>Step 1: Global Work Areas</strong>.",
-              "Complete <strong>Step 2: Global Work Packages</strong>.",
-              "Complete <strong>Step 3: Activity Sequence Templates</strong>."
-            ],
-            "note": "All projects using that Construction Type will see the data entered here — configure it once per Construction Type, not once per project.",
-            "images": [
-              {
-                "src": "assets/notion/global-data/001.jpg",
-                "caption": "Global Data construction-type setup, with the Construction Type drop-down",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/global-work-areas/001.jpg",
-                "caption": "Global Work Areas: the level types for a construction type",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/global-work-packages/001.jpg",
-                "caption": "Global Work Packages: editing or deleting a work package",
-                "step": 4
-              },
-              {
-                "src": "assets/notion/activity-sequence-templates/004.jpg",
-                "caption": "Create Activity Sequence Template for a location type",
-                "step": 5
-              }
-            ]
+            "term": "? icon",
+            "definition": "The **Help** icon. It opens the Arena help documentation in a new browser tab. It stays grey while you are on the Support page."
+          },
+          {
+            "term": "Cloud icon",
+            "definition": "Opens the **Downloads** dialog. It lists your downloads; when there are none it shows **No Data**. Close it with the **×**."
+          },
+          {
+            "term": "Bell icon",
+            "definition": "Opens the **Notifications** list of your reminders."
+          },
+          {
+            "term": "Your name",
+            "definition": "Opens the account menu: **My profile**, **Reset Password**, **Notifications**, **Favorite Screens**, **Set a Status**, **Settings** and **Logout**. The business unit you work in is shown at the top of the menu."
           }
         ]
       },
       {
-        "heading": "User Registration",
-        "intro": "<p>Getting the right people into Arena — with the right credentials and the right way to sign documents — is squarely a <strong>Super Admin</strong> responsibility, and it matters more than it might first appear: a construction company's ability to trust the paper trail behind an RFI, a change order, or a safety form depends on knowing exactly who created and signed it. User Registration is how new people are brought into Arena as system users — it's an administrative process of creating an account, not something an end user does for themselves by signing up. Registration happens centrally, under Global Data's Company section, in the Users and Permissions tab, which reflects that user creation in Arena is an administrative act tied to a company's account roster rather than an open self-registration flow.</p><p>Registering a user is more than just capturing a name and email. The registration form also captures how that person will sign documents electronically going forward — by typing initials, drawing a signature on a scribble pad, or uploading an existing signature image — because signatures are used elsewhere in Arena wherever a form or approval needs to be signed off, whether that's a foreman confirming a productivity log or a project director approving a change order. Getting this set correctly at registration time avoids having to configure it separately later.</p><p>Once a user is registered, they don't already have a password — Arena emails them a welcome registration link (either automatically on submission, or triggered manually by the admin via \"Notify User\") that they use to set their own password for the first time. This same \"Notify User\" mechanism doubles as the path for resending a password reset to an existing user: rather than a separate self-service \"forgot password\" flow, the admin resending the registration email is how an existing user's password gets reset in practice.</p><p>For companies onboarding many people at once — a general contractor mobilizing a new job site, for instance — Arena supports bulk registration via an Excel template — download the sample, fill it in, and upload it — with every user created this way automatically receiving the same welcome registration email as someone registered individually. And because a user roster naturally grows and changes as crews rotate between jobs, Arena provides search, export, and edit/delete tools scoped to Active Users, while deleted users move to an Inactive Users list rather than being permanently erased — preserving history while cutting off login access.</p>",
-        "definitions": [
-          {
-            "term": "Users and Permissions",
-            "definition": "The tab under Global Data's Company section where users are registered, edited, searched, exported, and where permission groups are ultimately tied back to."
-          },
-          {
-            "term": "Signature (registration)",
-            "definition": "A field on the user registration form with three setup methods: \"Initials\" (typed), \"Sign\" (a scribble/drawing pad), or \"Upload\" (an image file of an existing signature)."
-          },
-          {
-            "term": "Notify User",
-            "definition": "An action on a registered user's card that emails them a welcome registration link. Used both to trigger the very first password setup for a new user, and to resend that same link as a de facto password reset for an existing user."
-          },
-          {
-            "term": "Active Users",
-            "definition": "The list of user accounts that are created and currently able to log in to Arena. This is where registration, search, export, and edit/delete actions are performed."
-          },
-          {
-            "term": "Inactive Users",
-            "definition": "The list of user accounts that have been deleted/deactivated from Active Users. Inactive accounts no longer have login access, but their record is preserved rather than permanently deleted."
-          },
-          {
-            "term": "Bulk registration (Excel)",
-            "definition": "A method of registering many users at once by downloading a sample Excel template from Active Users, filling it in, and uploading it. All users created this way automatically receive welcome registration emails."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Register a new user",
-            "steps": [
-              "Go to <strong>Global Data &gt; Company &gt; Users and Permissions</strong>.",
-              "Click <strong>Register User</strong>.",
-              "Fill in the required fields: name, email, contact number with country code, etc.",
-              "Set a signature method: <strong>Initials</strong>, <strong>Sign</strong> (scribble pad), or <strong>Upload</strong> (signature image).",
-              "Click <strong>Submit</strong> to create the user card."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/global-users-permissions-users/001.jpg",
-                "caption": "The Users and Permissions tab under Company",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/global-users-permissions-users/002.jpg",
-                "caption": "The user registration form",
-                "step": 3
-              }
-            ]
-          },
-          {
-            "title": "Let a new user set their password",
-            "steps": [
-              "After registering the user, click <strong>Notify User</strong> (or rely on the system's auto-send on submit).",
-              "The user receives a welcome registration email.",
-              "The user follows the link in that email to set their own password."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/global-users-permissions-users/003.jpg",
-                "caption": "Notify User, to email the new user",
-                "step": 1
-              }
-            ]
-          },
-          {
-            "title": "Resend a password-reset email to an existing user",
-            "steps": [
-              "Go to <strong>Users &amp; Permissions &gt; Active Users</strong>.",
-              "Find the user's row/card.",
-              "Use the <strong>Notify User</strong> option to resend the registration email, which the user can use to reset their password."
-            ]
-          },
-          {
-            "title": "Register many users at once",
-            "steps": [
-              "Go to <strong>Users &amp; Permissions &gt; Active Users</strong>.",
-              "Click <strong>Download Sample</strong> to get the Excel template.",
-              "Fill in the template with each user's details.",
-              "Click <strong>Upload Excel</strong> to bulk-create the users."
-            ],
-            "note": "All users created this way automatically receive welcome registration emails.",
-            "images": [
-              {
-                "src": "assets/notion/global-users-permissions-users/004.jpg",
-                "caption": "The downloaded Excel template, filled in with each user's details",
-                "step": 3
-              }
-            ]
-          },
-          {
-            "title": "Edit or delete a registered user",
-            "steps": [
-              "In <strong>Users &amp; Permissions &gt; Active Users</strong>, locate the user's card or table row.",
-              "Use the kebab (3-dot) menu, or the Action column's edit/delete icons."
-            ],
-            "note": "Deleting a user moves their account to Inactive Users rather than permanently removing it.",
-            "images": [
-              {
-                "src": "assets/notion/global-users-permissions-users/006.jpg",
-                "caption": "Registered users as cards, with a three-dot menu on each",
-                "step": 1
-              }
-            ]
-          },
-          {
-            "title": "Find a specific user",
-            "steps": [
-              "In <strong>Users &amp; Permissions &gt; Active Users</strong>, use the Search bar next to the Register User button.",
-              "Search by first name, last name, employee ID, contact number, or email."
-            ]
-          },
-          {
-            "title": "Download a list of all registered users",
-            "steps": [
-              "In <strong>Users &amp; Permissions &gt; Active Users</strong>, click <strong>Export</strong> or <strong>Download Excel</strong>."
-            ]
-          }
-        ],
+        "heading": "Messaging",
+        "intro": "<p>The <strong>Messaging</strong> panel is Arena's built-in chat. Open it from the speech bubble icon in the top bar to talk to other Arena users without leaving the page.</p>",
         "images": [
           {
-            "src": "assets/notion/global-users-permissions-users/007.jpg",
-            "caption": "Grid view and table view for users"
-          },
-          {
-            "src": "assets/notion/users-permissions-inactive-users/001.jpg",
-            "caption": "Inactive Users: accounts removed from the active list but kept here"
-          },
-          {
-            "src": "assets/notion/users-permissions-inactive-users/002.jpg",
-            "caption": "Manage Columns on the inactive users list"
-          },
-          {
-            "src": "assets/notion/users-permissions-inactive-users/003.jpg",
-            "caption": "Save Layout keeps your chosen view"
-          },
-          {
-            "src": "assets/notion/users-permissions-inactive-users/004.jpg",
-            "caption": "Activate, to make an inactive user active again"
+            "src": "assets/product/account-basics/004.jpg",
+            "caption": "The Messaging panel"
           }
-        ]
-      },
-      {
-        "heading": "Permission Groups",
-        "intro": "<p>On a real construction project, not everyone should be able to do everything — a subcontractor's crew, a field engineer, and a project manager all need different levels of access to the same modules, and getting that wrong either blocks people from doing their jobs or exposes data and actions they shouldn't touch. Permissions in Arena are organized around roles, called user groups, rather than being assigned to individuals one setting at a time, and setting these up is <strong>Module Admin / Super Admin</strong> work: a user group is created for a project, given a name, and then configured with a specific set of rights per module — after which individual users are added to that group and inherit its permissions. This role-based approach is what makes permission management scalable: instead of configuring forty individual users, an administrator configures a handful of roles and assigns people to them.</p><p>Each module a role can touch supports a graduated set of rights: Assign To (which restricts visibility and action to only the specifically assigned user), View, Create, Edit, Delete, Download, Print, and an Admin right that acts as a master switch covering everything else. This granularity matters in construction workflows where, for example, a subcontractor's crew might need to view and create records in a module but should never be able to delete them, while a project manager needs full Admin rights across the board. Before setting these per-module rights, the role card requires toggling \"Roll Back\" first — a necessary first step in configuring any role's permissions.</p><p>Because many companies run structurally similar projects, Arena lets an admin copy an entire user group's configuration to other projects at once rather than rebuilding the same role from scratch every time a new project starts, which keeps permission structures consistent across a portfolio without repetitive manual setup.</p>",
+        ],
         "definitions": [
           {
-            "term": "User Group",
-            "definition": "A named role created on a project's Permissions screen, to which per-module rights are assigned and to which individual users are then added."
+            "term": "Search users",
+            "definition": "Type a name to narrow the list to matching users."
           },
           {
-            "term": "Roll Back toggle",
-            "definition": "A toggle on a role card that must be enabled before per-module permission rights can be configured for that role."
+            "term": "Conversation list",
+            "definition": "One row per user. Rows you have written to show the last message and its date at the top; users you have not written to show **No messages**."
           },
           {
-            "term": "Assign To (permission)",
-            "definition": "A permission level restricting view, create, edit, and delete rights on a module to only the user(s) specifically assigned to that record."
-          },
-          {
-            "term": "Admin (permission)",
-            "definition": "A master permission level for a module that covers View, Create, Edit, Delete, Download, and Print all at once."
-          },
-          {
-            "term": "Copy User Groups to Projects",
-            "definition": "An action on the Permissions screen that copies a user group's full configuration to one or more other selected projects, avoiding the need to rebuild the same role manually on each project."
+            "term": "Fold arrow",
+            "definition": "The arrow in the panel's title bar folds the panel into a small **Messaging** bar at the bottom right. Click the bar to open it again."
           }
         ],
         "procedures": [
           {
-            "title": "Create a permission/user group for a project",
+            "title": "Start or continue a chat",
             "steps": [
-              "Go to the project's <strong>Permissions</strong> screen.",
-              "Click the <strong>User Group</strong> button.",
-              "Enter a name for the group in the pop-up.",
-              "Confirm to create it as a new role card."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/permissions/002.jpg",
-                "caption": "User Group, to name a new group",
-                "step": 3
-              }
-            ]
-          },
-          {
-            "title": "Configure permission levels for a role",
-            "steps": [
-              "On the role's card, toggle <strong>Roll Back</strong> first.",
-              "For each module, set the desired rights: Assign To, View, Create, Edit, Delete, Download, Print, or Admin."
-            ],
-            "note": "Admin is a master permission covering all of the other rights for that module.",
-            "images": [
-              {
-                "src": "assets/notion/permissions/005.jpg",
-                "caption": "The Permissions button on a role",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/permissions/006.jpg",
-                "caption": "Roll Back on, then the rights for each module",
-                "step": 2
-              }
-            ]
-          },
-          {
-            "title": "Assign users to a permission/role group",
-            "steps": [
-              "On the role's card in the Permissions screen, click the <strong>Users</strong> button.",
-              "Select which users belong to that role/permission group."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/permissions/007.jpg",
-                "caption": "The Users button, to choose who is in the role",
-                "step": 2
-              }
-            ]
-          },
-          {
-            "title": "Copy a user group's permissions to other projects",
-            "steps": [
-              "On the Permissions screen, click <strong>Copy User Groups to Projects</strong>.",
-              "In the pop-up, select which projects should receive a copy of that user group's setup."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/permissions/003.jpg",
-                "caption": "Copy User Groups to Projects, with a pop-up to choose the projects",
-                "step": 2
-              }
-            ]
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/notion/permissions/001.jpg",
-            "caption": "The Permissions screen, with every role as a card"
-          }
-        ]
-      },
-      {
-        "heading": "Notifications",
-        "intro": "<p>On a fast-moving construction project, the difference between catching a problem early and finding out about it days later often comes down to who got notified, and how. Notifications control how Arena alerts users when something relevant happens — a submission, an approval, a status change — and Arena splits this configuration into two distinct scopes: project-level and global. Project-level Notifications, configured within a specific project's settings (typically by a <strong>PM / Module Manager</strong> running that job), govern alerts for events happening inside that project only. Global Notifications, configured under Global Data by a <strong>Super Admin</strong>, govern company-wide alerts instead. These two scopes are kept separate on purpose and don't overlap in the interface: project-level notifications you configure will not show up in the Global Notifications screen, so if you're looking for a specific alert setting, you need to know which scope it actually belongs to.</p><p>Within a project's Notifications area, the Events tab is where the real granularity lives — each trackable event can be independently toggled for delivery via Email, Web, and/or Mobile, and the wording of the notification itself can be customized rather than left as a generic system message. For companies with a lot of distinct events, Notifications also supports Event Groups, which bundle related events together; rather than building groups from scratch, Arena offers a one-click option to auto-create its own default set of standard event groups as a starting point.</p>",
-        "definitions": [
-          {
-            "term": "Project Notifications",
-            "definition": "Notification configuration scoped to a single project, found under that project's settings, controlling alerts for events specific to it."
-          },
-          {
-            "term": "Global Notifications",
-            "definition": "Notification configuration scoped to the entire company, found under Global Data. Project-level notifications do not appear here — the two scopes are kept separate."
-          },
-          {
-            "term": "Events tab (Notifications)",
-            "definition": "The tab within a project's Notifications screen where individual events can be toggled for Email, Web, and/or Mobile delivery, and where the notification's message wording can be customized via the message icon."
-          },
-          {
-            "term": "Event Group",
-            "definition": "A named grouping of related notification events, created manually via \"Add Event Group\" or generated automatically using \"Get Standard Event Groups\" to apply Arena's default groupings."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Set up which notifications users receive for a project",
-            "steps": [
-              "Go to the project's <strong>Notifications</strong> screen.",
-              "Select the <strong>Events</strong> tab.",
-              "Toggle the Email, Web, and/or Mobile icon on each event to control how that notification is delivered.",
-              "Click the message icon on an event to customize its wording."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/notifications/001.jpg",
-                "caption": "The Events tab",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/notifications/002.jpg",
-                "caption": "Email, Web and Mobile icons on each event",
-                "step": 3
-              }
-            ]
-          },
-          {
-            "title": "Create a new notification event group",
-            "steps": [
-              "Go to <strong>Notifications &gt; Event Groups</strong>.",
-              "Click <strong>Add Event Group</strong> and enter a name in the pop-up.",
-              "Alternatively, click <strong>Get Standard Event Groups</strong> to auto-create Arena's default event groups."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/notifications/005.jpg",
-                "caption": "The Event Groups tab",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/notifications/009.jpg",
-                "caption": "Add Event Group, with a name for the new group",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/notifications/006.jpg",
-                "caption": "Get Standard Event Groups, to create the default groups",
-                "step": 3
-              }
+              "Click the speech bubble icon in the top bar.",
+              "Type a name in **Search users**, or pick a user from the list.",
+              "Write your message in the conversation that opens."
             ]
           }
         ]
       },
       {
         "heading": "Support",
-        "intro": "<p>When something goes wrong in the middle of a workday — a field engineer can't submit a form, a project manager can't pull a report before a client meeting — every End User needs a fast way to get help without leaving Arena to hunt down a contact. Support is the built-in path for getting that help directly from within the application. It's positioned in the top-right of the navigation bar alongside Notifications and Downloads, which puts it within easy reach no matter what screen you're on — a deliberate placement, since support requests often come up in the middle of trying to complete some other task.</p><p>The in-app Support panel is meant for describing what you were trying to do and what went wrong, which gives the support team the context they need without a back-and-forth to establish basics. That said, Arena also provides a direct fallback: emailing support@inncircles.com with your company name and a description of the issue works if the Support icon isn't visible to you for some reason, or if you need a faster turnaround than the in-app panel typically provides.</p>",
+        "intro": "<p>The <strong>Support</strong> page lists how to reach the Arena support team and where to find training. Open it from the headset icon in the top bar.</p>",
+        "images": [
+          {
+            "src": "assets/product/account-basics/002.jpg",
+            "caption": "The Support Model tab"
+          },
+          {
+            "src": "assets/product/account-basics/003.jpg",
+            "caption": "The Training Model tab"
+          }
+        ],
         "definitions": [
           {
-            "term": "Support panel",
-            "definition": "An in-app panel opened via the headset icon in the top-right of the navigation bar (next to Notifications and Downloads), used to describe an issue and submit it directly to support."
+            "term": "Support Model",
+            "definition": "The first tab. It shows the ways to get help."
+          },
+          {
+            "term": "Ticket System",
+            "definition": "A link, **Click here to raise an issue**, that opens the support ticket portal in a new page."
+          },
+          {
+            "term": "Email",
+            "definition": "The support email address."
+          },
+          {
+            "term": "Contact",
+            "definition": "Phone numbers for support in the USA and in India."
+          },
+          {
+            "term": "Support",
+            "definition": "The customer success contacts, each with a name and email: the customer success representative for the USA and the customer success contacts for configuration and data."
+          },
+          {
+            "term": "Training Model",
+            "definition": "The second tab. It has three cards, each with a **Click here to view** link."
+          },
+          {
+            "term": "Documentation",
+            "definition": "Link to the product documentation."
+          },
+          {
+            "term": "Online Sessions",
+            "definition": "Link to the portal where you request an online training session."
+          },
+          {
+            "term": "In Person Sessions",
+            "definition": "Link to the portal where you request an in person training session."
+          }
+        ]
+      },
+      {
+        "heading": "Notifications",
+        "intro": "<p>The <strong>Notifications</strong> dialog lists the reminders Arena has created for you, newest first. Open it with the bell icon in the top bar or with <strong>Notifications</strong> in the account menu.</p>",
+        "images": [
+          {
+            "src": "assets/product/account-basics/005.jpg",
+            "caption": "The Notifications dialog"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Notification card",
+            "definition": "Shows a title, a detail line and **Created At** with the date and time. The titles seen are **My TimeSheet Reminder**, with the **User** it is for, and **My Crew TimeSheet Reminder**, with the **Crew** it is for."
+          },
+          {
+            "term": "× (close)",
+            "definition": "Closes the dialog."
+          }
+        ]
+      },
+      {
+        "heading": "Account Menu",
+        "intro": "<p>The <strong>Account Menu</strong> opens when you click your name at the right end of the top bar. The business unit you work in is shown at the top of the menu.</p>",
+        "images": [
+          {
+            "src": "assets/product/account-basics/006.jpg",
+            "caption": "The account menu"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "My profile",
+            "definition": "Opens your **Profile** dialog (see **My Profile**)."
+          },
+          {
+            "term": "Reset Password",
+            "definition": "Opens the **Change your secret key** dialog with **Old Password**, **New Password** and **Confirm Password** (each with a show/hide eye) and **Cancel** and **Submit** buttons."
+          },
+          {
+            "term": "Notifications",
+            "definition": "Opens the **Notifications** dialog."
+          },
+          {
+            "term": "Favorite Screens",
+            "definition": "Opens **User Favorite Screens**: a list of screens, written as module, section and screen (for example Field Works, Project Forms), each with an **Is Favorite** tick box."
+          },
+          {
+            "term": "Set a Status",
+            "definition": "Opens a side list to show your availability to other users: **Available**, **Busy**, **Do not disturb**, **Be right back**, **Appear offline** or **Out of office**. A second list sets how long the status lasts: **1 minute**, **30 minutes**, **1 hour**, **2 hours**, **Today**, **This week** or **Custom**. The coloured mark on your avatar shows your status."
+          },
+          {
+            "term": "Settings",
+            "definition": "Opens the **Settings** dialog with your Microsoft connections (see **Settings**)."
+          },
+          {
+            "term": "Logout",
+            "definition": "Signs you out of Arena."
+          }
+        ]
+      },
+      {
+        "heading": "My Profile",
+        "intro": "<p>The <strong>Profile</strong> dialog holds your own account details. Open it from <strong>My profile</strong> in the account menu.</p>",
+        "images": [
+          {
+            "src": "assets/product/account-basics/007.jpg",
+            "caption": "The Profile dialog"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Upload Photo",
+            "definition": "The round picture at the top. Click it to add your photo."
+          },
+          {
+            "term": "Title, First Name, Last Name",
+            "definition": "Your title (for example **Mr.**) and name. All three are required."
+          },
+          {
+            "term": "Username",
+            "definition": "The name you sign in with. Required."
+          },
+          {
+            "term": "Phone Number",
+            "definition": "A country code, the number and an optional extension."
+          },
+          {
+            "term": "Email",
+            "definition": "Your email address. Required."
+          },
+          {
+            "term": "Outlook Email",
+            "definition": "The Outlook address linked to your account."
+          },
+          {
+            "term": "Sign Label",
+            "definition": "A list to pick the label for your signature."
+          },
+          {
+            "term": "Sign",
+            "definition": "Upload a scan of your signature. It is shown on documents when you approve them."
+          },
+          {
+            "term": "Cancel / Save Changes",
+            "definition": "**Cancel** closes the dialog without changes; **Save Changes** stores what you entered."
           }
         ],
         "procedures": [
           {
-            "title": "Raise a support ticket",
+            "title": "Update your profile",
             "steps": [
-              "Click the <strong>Support</strong> icon (headset icon, top-right of the navigation bar next to Notifications and Downloads).",
-              "Describe what you were trying to do.",
-              "Submit the ticket."
-            ],
-            "note": "If you don't see the Support icon, or need a faster response, email support@inncircles.com directly with your company name and a description of the issue."
+              "Click your name in the top bar and choose **My profile**.",
+              "Change the fields you need, for example **Phone Number** or **Email**.",
+              "To add a signature, use **Sign** to upload your scanned signature.",
+              "Click **Save Changes**. Click **Cancel** to leave without saving."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Settings",
+        "intro": "<p>The <strong>Settings</strong> dialog connects your Arena account to Microsoft services. Open it from <strong>Settings</strong> in the account menu.</p>",
+        "images": [
+          {
+            "src": "assets/product/account-basics/008.jpg",
+            "caption": "The Settings dialog, OneDrive Integration"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "OneDrive Integration",
+            "definition": "**Connect Your Microsoft Account for Document Management.** Shows **Revoke Consent** and a **GRANTED** tag with the connected Microsoft account once consent is given."
+          },
+          {
+            "term": "Microsoft Outlook Integration",
+            "definition": "**Connect Your Microsoft Account for Outlook.** Use **Sign In with Microsoft** to link your mailbox."
+          },
+          {
+            "term": "Microsoft Calendar",
+            "definition": "**Connect Your Microsoft Account for Calendar.** Use **Sign In with Microsoft**. The consent email must match the email of the Arena user who is logged in."
+          },
+          {
+            "term": "SharePoint Integration",
+            "definition": "Use **Sign In with Microsoft** to link SharePoint."
           }
         ]
       },
@@ -25748,13 +25656,15 @@ const MODULES = [
     ],
     "sections": [
       "Overview",
-      "Home",
       "Projects",
-      "Company Details",
-      "User Registration",
-      "Permission Groups",
-      "Notifications",
+      "Home",
+      "Top Bar",
+      "Messaging",
       "Support",
+      "Notifications",
+      "Account Menu",
+      "My Profile",
+      "Settings",
       "Glossary"
     ]
   },
