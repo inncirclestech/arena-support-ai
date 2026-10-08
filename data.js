@@ -17600,607 +17600,197 @@ const MODULES = [
     "qaItems": QA_EQUIPMENT,
     "narrative": [
       {
-        "heading": "Overview",
-        "intro": "<p>Equipment Management gives the company one record of every piece of equipment and accessory, where it is, and what condition it is in. This section shows who sets it up and who does what: administrators configure master data and settings, coordinators maintain records and run allocations, and inspectors, dispatchers, approvers and site staff move each request along.</p><p>Set up in this order: cost codes, categories and rate cards in Global Data; Equipment Setup and Accessory Setup in Settings; equipment records; then the approval workflows, inspection checklists and thresholds that drive the allocation lifecycle.</p>",
+        "heading": "Fleet Map",
+        "intro": "<p>The <strong>Fleet Map</strong> is the first screen of Equipment Management. It plots your equipment on a Google map so you can see where each machine is. Your company may see Asset instead of Equipment (Global Data → Settings → Naming Framework).</p>",
+        "images": [
+          {
+            "src": "assets/product/equipment/001.jpg",
+            "caption": "The Fleet Map screen (the map area shows an error when Google Maps cannot load)"
+          }
+        ],
         "definitions": [
           {
-            "term": "Flow at a glance",
-            "definition": "Master data comes first: the Global Data Administrator creates cost codes, categories and rate card templates, and the Equipment Management Administrator adds them to **Equipment Setup** or **Accessory Setup**. The Equipment Master User then registers each equipment with **Add Equipment**. A Requester raises an allocation request in **Operations**, an Approver approves it, and the Equipment Coordinator assigns a piece of equipment by **Self Pickup** or **Company Logistics** (which creates a haul in **Hauling**). The equipment is inspected, dispatched, confirmed **On-Rent**, extended or taken off rent, picked up, inspected again and closed. Telematics readings, geofences and the **Fleet Map** show where every equipment is."
+            "term": "Top tabs",
+            "definition": "**Overview**, **Equipment**, **Operations**, **Hauling**, **Utilization**, **Maintenance**, **Inspection Checklists Issues** and **Reports** are the main areas of the module. **Settings** at the top right opens the module settings. Under **Overview** you switch between **Fleet Map** and **Geofencing**."
           },
           {
-            "term": "Roles: master data and profile",
-            "definition": "Global Data Administrator (System Administrator or Cost Controller): equipment cost codes, categories and subcategories, rate card templates, and the telematics provider. Equipment Management Administrator (Equipment Admin or IT Administrator): Equipment Setup and Accessory Setup, fuel types, inspection checklists, approval workflows, statuses and thresholds. Equipment Master User (Equipment Coordinator or Equipment Executive): creates and maintains records, status, location and image. Inventory In-charge (Yard In-charge or Store Keeper): inventory locations. Equipment Accountant (Finance Executive): purchase, warranty, insurance and depreciation panels. Equipment Manager or Fleet Manager: reviews profiles, telematics readings and geofences."
+            "term": "Map area",
+            "definition": "Shows the equipment on Google Maps. If Google Maps cannot load, the area shows **Sorry! Something went wrong** and no equipment is plotted."
           },
           {
-            "term": "Roles: allocation requests",
-            "definition": "Requester (Site Engineer, Project Coordinator or Foreman): raises the request. Approver (Equipment Manager or Operations Manager): approves or rejects at each configured level. Equipment Coordinator (Yard In-charge, Allocator or Dispatcher): assigns the equipment and later processes the approved off-rent. Pre-Dispatch Inspector and Post-Rent Inspector (Mechanic, Workshop Supervisor or QA Inspector): complete the checklists. Dispatch Assignee (Yard Supervisor): enters dispatch and on-rent dates. Site Custodian (Site Engineer or Foreman): confirms On-Rent and raises off-rent or extension. Off-Rent Approver (Equipment Manager or Operations Manager): decides those requests. Pickup Assignee (Yard Supervisor or Logistics staff): records the return date. The Collecting Representative on Self Pickup only collects the equipment and needs no system action."
+            "term": "Filters button",
+            "definition": "The slider icon at the top right of the map opens the filter panel."
           },
           {
-            "term": "Roles: hauling, telematics and geofences",
-            "definition": "Fleet Administrator (Transport Admin): vehicles and drivers. Hauling Coordinator (Logistics or Transport Coordinator): moves each haul through its stages and closes it. Hauling Approver (Operations Manager or Cost Controller): approves hauls. Driver: physically moves the equipment, with status recorded by the Hauling Coordinator. Receiving Representative: confirms receipt and Condition on Arrival. Equipment Administrator: maps telematics devices. Fleet Monitor (Equipment Manager or Site Supervisor): watches live data, history and the Fleet Map. Maintenance Planner: reviews and transfers readings. Geofence Administrator (Equipment Admin or Site Administrator): creates and activates geofences."
+            "term": "Search by Equipment ID, Description",
+            "definition": "Type part of an asset's ID or description in the filter panel to find it on the map."
           },
           {
-            "term": "Setup order for allocation, hauling and telematics",
-            "definition": "Do this before the first request. (1) In Global Data, create cost codes, categories and rate card templates. (2) In Settings, set up Equipment Setup and Accessory Setup, including fuel types. (3) Build an Inspection Checklist and link it to each category. (4) Create approval workflows for Equipment Request, Hauling Request and Off-Rent / Extension Request, and mark one of each Set as Default. (5) Check Equipment/Accessory Status and set the Utility Threshold, then set the Request Priority Threshold. (6) Add vehicles and drivers under Hauling → Fleet and Schedule. (7) Connect the telematics provider in Global Data, then map devices. (8) Create and activate geofences. (9) Register the equipment."
+            "term": "Geofences",
+            "definition": "Switch in the filter panel for the geofence layer, the areas you drew under **Geofencing**."
           },
           {
-            "term": "Users and Permissions (Equipment Management)",
-            "definition": "Under Settings, the administrator creates user groups for the module and adds users to them. A user can see a tab or take an action only if the group has that permission."
+            "term": "Clusters",
+            "definition": "Switch in the filter panel that groups nearby assets into one marker."
+          },
+          {
+            "term": "Only Running Equipment",
+            "definition": "Switch in the filter panel that limits the map to assets that are running."
+          },
+          {
+            "term": "Not Reported in Last 72 Hours",
+            "definition": "Switch in the filter panel that limits the map to assets that have sent no location report in the last 72 hours."
+          },
+          {
+            "term": "Status, Category, Business Unit, Make, Model",
+            "definition": "Dropdowns in the filter panel. Pick values to show only assets with that status, category, business unit, make or model."
+          },
+          {
+            "term": "Clear All, Apply, Save Filters",
+            "definition": "**Clear All** empties the filters, **Apply** applies them to the map, and **Save Filters** keeps your selection for next time."
           }
         ],
         "procedures": [
           {
-            "title": "Create a module-scoped permission group for Equipment Management",
+            "title": "Filter the fleet on the map",
             "steps": [
-              "Go to <strong>Settings → Users and Permissions</strong>.",
-              "Add a new group (or edit an existing one, such as an \"Equipment Management\" group) and configure its Permissions.",
-              "Use the group's Users control to assign the people who should have this module's access."
+              "Open **Overview** and click **Fleet Map**.",
+              "Click the filter icon at the top right of the map.",
+              "Type in the search box, switch on any of **Only Running Equipment** or **Not Reported in Last 72 Hours**, or pick **Status**, **Category**, **Business Unit**, **Make** or **Model**.",
+              "Click **Apply**. Click **Save Filters** to keep the selection."
             ]
-          },
-          {
-            "title": "Prepare Equipment Management for allocation requests (System Administrator)",
-            "steps": [
-              "In Global Data → Cost, create the equipment cost codes, categories and rate card templates.",
-              "In the module <strong>Settings</strong>, open <strong>Equipment Setup</strong> and <strong>Accessory Setup</strong> and add each category with its cost code, rate card, checklist, depreciation method and useful life.",
-              "Open <strong>Equipment Forms → Inspection Checklist</strong>, build the form, and link it in Equipment Setup.",
-              "Open <strong>Approval Workflow</strong> and create workflows for Equipment Request, Hauling Request and Off-Rent / Extension Request. Mark one of each <strong>Set as Default</strong>.",
-              "Open <strong>Equipment/Accessory Status</strong> to set the Utility Threshold for Off Rent, and <strong>Request Priority Threshold</strong> to set the number of days.",
-              "Under <strong>Hauling → Fleet and Schedule</strong>, add vehicles and drivers."
-            ],
-            "note": "Only the workflow marked as Default is applied automatically, so each of the three workflow types needs one."
           }
         ]
       },
       {
-        "heading": "Fleet Map",
-        "intro": "<p><strong> </strong> A <strong>geofence</strong> is a boundary drawn around a work location. A Geofence Administrator creates and activates geofences on the <strong>Overview → Geofencing</strong> tab, and a Fleet Monitor uses the <strong>Fleet Map</strong> to see active geofences and the equipment reporting inside them.</p>",
+        "heading": "Geofencing",
+        "intro": "<p><strong>Geofencing</strong> lists the named locations (for example a yard, a site or a workshop) that you have drawn as areas on the map. Equipment that reports its position can then be tied to these areas.</p>",
+        "images": [
+          {
+            "src": "assets/product/equipment/002.jpg",
+            "caption": "The Geofencing list"
+          }
+        ],
         "definitions": [
           {
-            "term": "Geofencing tab",
-            "definition": "Click **Add Location** and enter **Location Type**, **Name**, **Description** and **Code** (all required), plus optional address, **Start Date**, **End Date** and point-of-contact name, phone and email. The **Inventory / Project** toggle chooses which work locations you can pick; an inventory geofence links to its inventory location automatically. The list has **Active** toggles, **Export** (Sample Excel, Upload Excel, Download Excel), **Manage Columns** and **Filters** (Name, Code, City, State, Country, Pincode, Active or Inactive)."
+            "term": "+ Add Location",
+            "definition": "Opens the **Geofence View** page to create a new geofence."
           },
           {
-            "term": "Setting coordinates",
-            "definition": "You need at least three points (three make a triangle, more make larger shapes). Use **Search Location** then click the exact point, or **Add Coordinates** to type latitude and longitude, or drag and select on the map. City, state and country fill in from map points. Remove one point with the minus icon, or use **Clear All Coordinates**. **Upload KML** imports an existing boundary."
+            "term": "Search by Name / Code",
+            "definition": "Type part of a location name or code to narrow the list."
           },
           {
-            "term": "Fleet Map",
-            "definition": "Shows equipment reporting through telematics. Active geofences show as yellow regions, numbered highlights are clusters, and blue arrows are individual mapped devices once you zoom in. Switch **Map** or **Satellite**, use the Pegman for Street View, and search by **Equipment ID**, **Description** or telematics device serial number."
+            "term": "Export",
+            "definition": "Downloads the list."
           },
           {
-            "term": "Fleet Map filters",
-            "definition": "Map options: **Geofences**, **Clusters**, **Only Running Equipment** and **Not Reported in Last 72 Hours**. Equipment filters: **Status**, **Category**, **Business Unit**, **Make** and **Model**. Use **Apply**, **Clear** and **Save Filter**."
+            "term": "Filters",
+            "definition": "Narrows the list."
           },
           {
-            "term": "Roles for geofences and the Fleet Map",
-            "definition": "Geofence Administrator (Equipment Admin or Site Administrator): creates geofences, sets coordinates, activates them and maintains the list. Inventory In-charge: confirms that inventory geofences match the right inventory location. Fleet Monitor (Equipment Manager or Operations Manager): uses the Fleet Map. Equipment Administrator: maps telematics devices so equipment appear on the map."
+            "term": "Manage Columns",
+            "definition": "Choose which columns show. Available columns: **Name**, **Code**, **Description**, **Location Type**, **Work Location**, **Active**, **Address**, **Contact Name**, **Contact Phone**, **Contact Email**, **Start Date**, **End Date** and **Actions**."
           },
           {
-            "term": "Geofence flow",
-            "definition": "(1) The Geofence Administrator opens **Overview → Geofencing** and clicks **Add Location**. (2) Switches the Inventory or Project toggle and selects the work location. (3) Sets at least three coordinates. (4) Clicks **Save Geofence**. (5) Switches **Active** on. (6) The Fleet Monitor finds the geofence and the equipment inside it on **Overview → Fleet Map**."
-          },
-          {
-            "term": "Geofence location fields",
-            "definition": "Required: Location Type, Name, Description, Code and the Inventory / Project toggle. Optional: Street Address, City, State, Postal Code, Country (city, state and country fill in from map points), Start Date, End Date, POC Name, POC Phone and POC Email. For inventory locations the geofence links to the inventory location automatically."
-          },
-          {
-            "term": "Ways to set geofence coordinates",
-            "definition": "Three methods that can be combined. Method 1, Search Location: enter address, city, state and postal code, click Search, then click the exact point. Method 2, Add Coordinates: type latitude and longitude. Method 3: drag and select on the map. Fewer than three points cannot be saved. Three make a triangle and four or more make larger shapes. Delete one point with the minus icon and confirm, or use Clear All Coordinates. Upload KML imports an existing boundary."
-          },
-          {
-            "term": "Fleet Map status filter",
-            "definition": "In the equipment detail filters, Status lists Available, Allocated, In Transit, On-Rent, In Maintenance, Out of Service, Off-Rent, Inactive, Yard Only, Unavailable and Dispose Initiated. Category, Business Unit, Make and Model can also be filtered. Apply shows the result, Clear removes the filters and Save Filter keeps them for next time."
+            "term": "Upload KML",
+            "definition": "Uploads a KML file (a map file from Google Earth or similar) to create geofences from it."
           }
         ],
         "procedures": [
           {
-            "title": "Create and activate a geofence",
+            "title": "Add a geofence",
             "steps": [
-              "Open <strong>Equipment Management → Overview → Geofencing</strong> and click <strong>Add Location</strong>.",
-              "Enter the location details and set the <strong>Inventory / Project</strong> toggle and work location.",
-              "Set at least three coordinates.",
-              "Click <strong>Save Geofence</strong>, go back to the <strong>Geofencing</strong> tab and switch the <strong>Active</strong> toggle on."
-            ],
-            "note": "Only active geofences show on the Fleet Map.",
-            "images": [
-              {
-                "src": "assets/guides/equipment/404.jpg",
-                "caption": "Equipment Management Overview",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/405.jpg",
-                "caption": "Geofencing tab",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/406.jpg",
-                "caption": "Add Location on the Geofencing tab",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/407.jpg",
-                "caption": "Location Type, Name, Description and Code",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/408.jpg",
-                "caption": "Inventory or Project toggle",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/409.jpg",
-                "caption": "Location details reference",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/410.jpg",
-                "caption": "Search Location bar",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/equipment/411.jpg",
-                "caption": "Map moved to the searched location",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/equipment/412.jpg",
-                "caption": "Point placed on the map with its coordinates",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/equipment/413.jpg",
-                "caption": "Add Coordinates button",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/equipment/414.jpg",
-                "caption": "Latitude and longitude entered",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/equipment/415.jpg",
-                "caption": "Coordinates selected on the map",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/equipment/416.jpg",
-                "caption": "City, State and Country filled in",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/equipment/417.jpg",
-                "caption": "Delete a single coordinate",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/equipment/418.jpg",
-                "caption": "Clear All Coordinates",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/equipment/419.jpg",
-                "caption": "Save Geofence",
-                "step": 4
-              },
-              {
-                "src": "assets/guides/equipment/420.jpg",
-                "caption": "New geofence in the Geofencing table",
-                "step": 4
-              },
-              {
-                "src": "assets/guides/equipment/421.jpg",
-                "caption": "Active toggle",
-                "step": 4
-              }
-            ]
-          },
-          {
-            "title": "Find a piece of equipment on the Fleet Map",
-            "steps": [
-              "Open <strong>Overview → Fleet Map</strong>.",
-              "Click <strong>Filters</strong> and search by Equipment ID, description or device serial number, or set the map and equipment filters.",
-              "Zoom in past the clusters and click the blue marker."
-            ],
-            "note": "A piece of equipment shows only if a telematics device is mapped to it.",
-            "images": [
-              {
-                "src": "assets/guides/equipment/426.jpg",
-                "caption": "Fleet Map under Overview",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/427.jpg",
-                "caption": "Map and Satellite views",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/428.jpg",
-                "caption": "Map controls",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/433.jpg",
-                "caption": "Filters on the Fleet Map",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/434.jpg",
-                "caption": "Telematics device serial number search",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/435.jpg",
-                "caption": "Not reported in the last 72 hours filter",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/436.jpg",
-                "caption": "Equipment model filter",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/437.jpg",
-                "caption": "Save Filters",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/429.jpg",
-                "caption": "Active geofences highlighted in yellow",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/equipment/430.jpg",
-                "caption": "Clusters of telematics devices",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/equipment/431.jpg",
-                "caption": "Individual equipment markers",
-                "step": 3
-              }
-            ]
-          },
-          {
-            "title": "Import a geofence boundary from a KML file",
-            "steps": [
-              "Open <strong>Overview → Geofencing</strong> and click <strong>Add Location</strong>.",
-              "Enter the location details and choose the Inventory or Project location.",
-              "Click <strong>Upload KML</strong> and select the file.",
-              "Click <strong>Save Geofence</strong> and switch <strong>Active</strong> on."
+              "Open **Overview** and click **Geofencing**, then **+ Add Location**.",
+              "In **Search Location** type an address, city, state or postal code and click **Search** to move the map there. **Reset** clears the search.",
+              "In **Location Details** fill **Location Type**, **Name** and **Code** (required), and optionally **Description**, address, **Start Date**, **End Date**, **POC Name**, **Phone** and **Email**.",
+              "Under **Assign Location** choose **Inventory** or **Project**, then pick the inventory location or project.",
+              "Under **Coordinates** click **+ Add Coordinate** for each corner of the area. **Clear All Coordinates** removes them.",
+              "Click **Save Geofence**."
             ],
             "images": [
               {
-                "src": "assets/guides/equipment/422.jpg",
-                "caption": "Upload KML for an existing boundary",
-                "step": 3
+                "src": "assets/product/equipment/003.jpg",
+                "caption": "The Geofence View page",
+                "step": 2
               }
             ]
-          },
-          {
-            "title": "Bulk upload or filter geofences",
-            "steps": [
-              "On the Geofencing tab, click <strong>Export → Upload Excel</strong>, then <strong>Sample Excel</strong>, fill in the template and upload it. <strong>Download Excel</strong> exports the current geofences.",
-              "Click <strong>Filters</strong> and choose Name, Code, City, State, Country, Pincode or Active / Inactive, then click <strong>Submit</strong> (or <strong>Clear</strong>).",
-              "Use <strong>Manage Columns</strong> to choose and arrange columns."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/equipment/423.jpg",
-                "caption": "Upload Excel and Sample Excel for geofences",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/424.jpg",
-                "caption": "Sample geofence Excel template",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/425.jpg",
-                "caption": "Download Excel for geofences",
-                "step": 1
-              }
-            ]
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/guides/equipment/432.jpg",
-            "caption": "Street View with the Pegman icon"
           }
         ]
       },
       {
         "heading": "Equipment Master",
-        "intro": "<p>The **Equipment Master** and **Accessory Master** (Equipment Management → Equipment) list every piece of equipment and accessory in the organization. Equipment Master Users use them to create and update records, monitor statuses and run actions such as Request Haul.</p><p>Only equipment set up in **Settings → Equipment Setup** (or **Accessory Setup**) can be registered. The top of the page groups records by status; click a status to see only those records. Open a record to see its profile.</p>",
+        "intro": "<p>The <strong>Equipment Master</strong> is the register of every machine (Equipment) the company owns or uses. Each row is one asset with its ID, category, status and current location. Equipment managers add assets here before they can be used in logs, allocations or maintenance.</p>",
+        "images": [
+          {
+            "src": "assets/product/equipment/004.jpg",
+            "caption": "The Equipment Master list"
+          }
+        ],
         "definitions": [
           {
-            "term": "Where this data comes from (Equipment Master lists)",
-            "definition": "The **Equipment** (or **Accessory**) dropdown lists only items configured in **Settings → Equipment Setup** (or **Accessory Setup**); those entries use the codes created in **Global Data → Cost → Equipment**. **Category** and **Sub-category** fill in automatically from the chosen equipment. **Fuel Type** comes from **Settings → Equipment Setup → Fuel Type**. The **Location** dropdown depends on the Inventory or Project toggle: Inventory locations come from **Inventory Locations** (the Business Unit must be mapped to the inventory location in Inventory Management), and Project locations come from your projects. Rates default from the category's **Rate Card Template** (Global Data) and can be overridden before you confirm. Live readings (Engine Hours, GPS Fix Time, Message Time, geofence and map) come from the telematics device mapped to the equipment. On a request, **Work Location** lists only projects where you are added under **Project Setup → People**. Where the data goes: the equipment record feeds the Allocation Lifecycle, hauling, work orders and maintenance history. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
+            "term": "Sub tabs",
+            "definition": "**Equipment Master**, **Accessory Master** and **3rd Party Rental** sit under the **Equipment** tab."
           },
           {
-            "term": "Equipment Master / Accessory Master",
-            "definition": "The page that lists all equipment records (or accessory records) with their status, business unit and location. From it you create records with **Add Equipment**, filter and sort, switch between Grid and Table views, and open a record's profile."
+            "term": "+ Add Equipment",
+            "definition": "Opens the **Add Equipment** dialog to register one asset."
           },
           {
-            "term": "Status groupings",
-            "definition": "The top of the page shows equipment grouped by current status. Click a status to show only the equipment in it."
+            "term": "+ Add Custom Column",
+            "definition": "Adds your own field to every asset. You give a **Name** and a **Type**: **TEXT_BOX**, **NUMBER**, **SINGLE_SELECT**, **MULTI_SELECT** or **DATE**."
           },
           {
-            "term": "Equipment statuses: manual and system-driven",
-            "definition": "Some statuses you set yourself: **Available**, **Out of Service**, **Inactive**, **Dispose Initiated**, **Yard Only** and **Unavailable**. Others are set by the system from operations and hauling: **Allocated**, **In Transit**, **On Rent**, **Off Rent** and **In Maintenance**. System-driven statuses show in the Status dropdown but cannot be picked. To reach them, process the matching operation in **Equipment Management → Operations**; **In Maintenance** comes from a Work Order."
+            "term": "Search",
+            "definition": "Type to find assets in the list."
           },
           {
-            "term": "Add Equipment fields",
-            "definition": "**Equipment ID** (unique across the organization), **Equipment** (from the configured list), **Description**, **Status** (manual statuses only), **Business Unit**, **Location** (choose Inventory or Project, then the location), **Make**, **Model**, **Purchase Date**, **Year of Manufacture**, **Serial Number**, **VIN Number**, **License Plate**, **Engine Hours**, **Fuel Tank Capacity**, **Fuel Type** (set under Settings → Equipment Setup), **Production Category** (Production or Non-Production) and **Upload Images**."
+            "term": "Export",
+            "definition": "Downloads the list."
           },
           {
             "term": "Filters",
-            "definition": "Filter by **Equipment ID**, **Equipment**, **Status**, **Category**, **Business Unit**, **Make** and **Model**. Extra switches: **Equipment with Telematics**, **Only Running Equipment** and **Not Reported in Last 72 Hours**. **Submit** applies the filter; **Clear** removes it. Use **Save Filters** to keep a filter."
+            "definition": "Opens the **Filters** dialog. Dropdowns: **Equipment ID**, **Equipment**, **Status**, **Category**, **Business Unit**, **Make**, **Model**. Switches: **Equipment with Telematics**, **Equipment without Telematics**, **Only Running Equipment**, **Not Reported in Last 72 Hours**. **Clear All**, **Apply** and **Save Filters** work as on the Fleet Map.",
+            "images": [
+              {
+                "src": "assets/product/equipment/006.jpg",
+                "caption": "The Filters dialog"
+              }
+            ]
           },
           {
-            "term": "Table View actions",
-            "definition": "**View** (read-only details), **QR Code** (scan or download the equipment's QR code), **Edit**, **Delete** and **History** (status changes, updates and other actions over time)."
+            "term": "Manage Columns",
+            "definition": "Pick the columns to show on the left and drag them into order on the right. **Reset to Default** restores the standard columns. The list has the columns shown by default (**Equipment**, **Equipment Description**, **Equipment ID**, **Assigned Location**, **Actions**) plus **Category**, **Sub Category**, **Business Unit**, **Status**, **Make**, **Model**, **Year of Manufacture**, **Serial Number**, **Telematics Serial Number**, **Telematics Source**, **VIN**, **License Plate**, **Engine Hours (Acquisition)**, **Fuel Tank Capacity**, **Fuel Type**, **Production Category**, **Billed**, **Purchase Date**, **Telematics Linked**, **Message Time**, **GPS Fix Time**, **Engine Hours**, **Geofence** and **Geofence Address**."
           },
           {
-            "term": "Grid View actions",
-            "definition": "**Edit** (pencil icon), **Delete** (subject to permissions and business rules) and **Request Haul**, which opens a dialog to create a haul between inventory and project locations, or between projects."
+            "term": "Layers icon",
+            "definition": "Opens a menu to choose a saved layout of the list: **Default** or **Configure Layout**."
           },
           {
-            "term": "Custom columns and Manage Columns",
-            "definition": "**Add Custom Column** adds a column of type Text, Single Select, Multi-select, Date or Formulae. **Manage Columns** lets you pick columns under Column Options and drag or delete them under Column Arrangement. **Save Layout** keeps the layout for your next visit."
+            "term": "List and grid icons",
+            "definition": "Switch between the table view and a card (grid) view."
           },
           {
             "term": "Inventory Locations",
-            "definition": "The Inventory Locations list holds the equipment inventories the organization owns. Use **Add Location** to add a **Location ID**, **Location Name** and **Location Type**; use Actions to edit or delete one. Map the Business Unit to its Inventory Location in Inventory Management first."
-          },
-          {
-            "term": "Export: Upload Excel and Download Excel",
-            "definition": "**Upload Excel** (click **Sample Excel** for the template, fill it in and upload) creates or updates equipment records in bulk. **Download Excel** exports the current records."
-          },
-          {
-            "term": "Equipment Log",
-            "definition": "The complete audit trail for a single equipment item, opened via the history icon on its row. It lists every request, check-in, check-out, shipment, and shop-in event involving that item, along with who performed each action and when."
-          },
-          {
-            "term": "Maintenance Records icon",
-            "definition": "A row-level icon in the Equipment Master that opens that item's maintenance history. It only appears for equipment that have scheduled maintenance configured — items without a maintenance package won't show this icon. The same information is also visible in the grid's Maintenance Records column."
-          },
-          {
-            "term": "Earlier-version screens",
-            "definition": "Some environments running an earlier version show the name **Equipment Master** with sub-tabs **Company Owned Equipment**, **Company Owned Accessory** and **3rd Party Equipment**, a **+ Equipment** button whose form asks for Equipment Name, Equipment ID, Equipment Description, Replacement Value and Current Location, and status chips such as **Ready to Rent**, **On Rent - Project**, **Pending Shipment**, **On Rent - Customer** and **Checked In**. The steps on this page describe the Arena 2.0 Equipment Master."
+            "definition": "Opens a dialog with the inventory locations assets can be placed in. See **Inventory Locations**."
           }
         ],
         "procedures": [
           {
-            "title": "Add an equipment record",
+            "title": "Add an asset",
             "steps": [
-              "Open <strong>Equipment Management → Equipment → Equipment Master</strong> and click <strong>Add Equipment</strong>. The Add Equipment dialog opens.",
-              "Enter the <strong>Equipment ID</strong>, choose the <strong>Equipment</strong> and type a <strong>Description</strong>.",
-              "Choose the initial <strong>Status</strong> (only manual statuses are offered), the <strong>Business Unit</strong> and the <strong>Location</strong> (Inventory or Project first, then the location).",
-              "Enter the make, model, purchase date, year of manufacture, serial number, VIN, license plate, engine hours, fuel tank capacity and fuel type, and choose the production category.",
-              "Upload images if you have them, then click <strong>Submit</strong>."
-            ],
-            "note": "The new equipment appears in the Equipment Master with the status you chose. The Equipment ID must be unique, and the equipment must already be set up under Settings → Equipment Setup.",
-            "images": [
-              {
-                "src": "assets/guides/equipment/030.jpg",
-                "caption": "Add Equipment button",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/031.jpg",
-                "caption": "Add Equipment dialog",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/034.jpg",
-                "caption": "Location type and location dropdowns",
-                "step": 4
-              },
-              {
-                "src": "assets/guides/equipment/035.jpg",
-                "caption": "Fuel Type and Location fields",
-                "step": 4
-              },
-              {
-                "src": "assets/guides/equipment/032.jpg",
-                "caption": "Submit on the Add Equipment dialog",
-                "step": 5
-              },
-              {
-                "src": "assets/guides/equipment/033.jpg",
-                "caption": "New equipment in the Equipment Master",
-                "step": 5
-              }
-            ]
-          },
-          {
-            "title": "Add an accessory record",
-            "steps": [
-              "Open <strong>Equipment Management → Equipment → Accessory Master</strong> and click <strong>Add Accessory</strong>.",
-              "Choose the accessory (only accessories set up under <strong>Settings → Accessory Setup</strong> are listed) and complete the same details as for equipment.",
-              "Click <strong>Submit</strong>."
-            ]
-          },
-          {
-            "title": "Edit, view or delete a record",
-            "steps": [
-              "In Table View, use the row actions: <strong>View</strong> for read-only details, <strong>Edit</strong> to change a record, <strong>Delete</strong> to remove it.",
-              "In Grid View, use the pencil icon to edit or the delete icon to remove a record.",
-              "Click <strong>History</strong> to see its status changes and updates over time."
-            ],
-            "note": "Delete is subject to your permissions and business rules. A record that is in use on an allocation cannot be removed.",
-            "images": [
-              {
-                "src": "assets/guides/equipment/052.jpg",
-                "caption": "Table View with the History action",
-                "step": 3
-              }
-            ]
-          },
-          {
-            "title": "Open the equipment profile or its QR code",
-            "steps": [
-              "In the Equipment Master, click the equipment.",
-              "Its <strong>Overview</strong> opens with the five detail panels.",
-              "In Table View, click <strong>QR Code</strong> on the row to scan or download the equipment's QR code."
-            ]
-          },
-          {
-            "title": "Filter the equipment list",
-            "steps": [
-              "Click <strong>Filters</strong>.",
-              "Choose values for Equipment ID, Equipment, Status, Category, Business Unit, Make and Model.",
-              "Switch on <strong>Equipment with Telematics</strong>, <strong>Only Running Equipment</strong> or <strong>Not Reported in Last 72 Hours</strong> if you need them.",
-              "Click <strong>Submit</strong> to apply, or <strong>Clear</strong> to show all equipment."
+              "Open **Equipment** and click **+ Add Equipment**.",
+              "Fill **Equipment ID**, **Equipment**, **Status**, **Business Unit** and **Assigned Location** (required). For the location, pick **Inventory** or **Project** with the switch, then choose it.",
+              "Fill any of **Description**, **Make**, **Model**, **Purchase Date**, **Year of Manufacture**, **Serial Number**, **VIN**, **License Plate**, **Engine Hours (Acquisition)**, **Fuel Tank Capacity**, **Fuel Type**, **Production Category** and **Billed**. **Upload Images** attaches photos.",
+              "Click **Submit**. Click **Cancel** to close without saving."
             ],
             "images": [
               {
-                "src": "assets/guides/equipment/047.jpg",
-                "caption": "Filters on the Equipment Master",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/048.jpg",
-                "caption": "Filter values",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/049.jpg",
-                "caption": "Sort arrow",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/050.jpg",
-                "caption": "Equipment with Telematics, Only Running Equipment and Not Reported in Last 72 Hours",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/equipment/051.jpg",
-                "caption": "Submit and Clear on Filters",
-                "step": 4
-              }
-            ]
-          },
-          {
-            "title": "Change views, columns and layout",
-            "steps": [
-              "Use the view option in the top right corner to switch between <strong>Grid View</strong> and <strong>Table View</strong>.",
-              "Click <strong>Manage Columns</strong>, select or deselect Column Options and drag or delete columns under Column Arrangement.",
-              "Click <strong>Add Custom Column</strong>, enter the name, choose the type and confirm.",
-              "Click <strong>Save Layout</strong> to keep the view."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/equipment/038.jpg",
-                "caption": "Manage Columns",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/039.jpg",
-                "caption": "Column Options",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/040.jpg",
-                "caption": "Column Arrangement",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/036.jpg",
-                "caption": "Add Custom Column on the Equipment Master",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/equipment/037.jpg",
-                "caption": "Custom column name and type",
-                "step": 3
-              }
-            ]
-          },
-          {
-            "title": "Request a haul from the Equipment Master",
-            "steps": [
-              "Switch to <strong>Grid View</strong>.",
-              "Click <strong>Request Haul</strong> on the equipment.",
-              "Complete the dialog and submit it. It is processed through the hauling workflow."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/equipment/053.jpg",
-                "caption": "Grid View with Request Haul",
+                "src": "assets/product/equipment/005.jpg",
+                "caption": "The Add Equipment dialog",
                 "step": 2
               }
             ]
-          },
-          {
-            "title": "Add an inventory location",
-            "steps": [
-              "Click <strong>Inventory Locations</strong>.",
-              "Click <strong>Add Location</strong>.",
-              "Enter the <strong>Location ID</strong>, <strong>Location Name</strong> and <strong>Location Type</strong>.",
-              "Click <strong>Submit</strong>. Use Actions to edit or delete a location."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/equipment/041.jpg",
-                "caption": "Inventory Locations button",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/042.jpg",
-                "caption": "Add Location button",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/043.jpg",
-                "caption": "Location ID, Location Name and Location Type",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/equipment/044.jpg",
-                "caption": "Edit and Delete under Actions",
-                "step": 4
-              },
-              {
-                "src": "assets/guides/equipment/045.jpg",
-                "caption": "Submit on the location",
-                "step": 4
-              }
-            ]
-          },
-          {
-            "title": "Bulk upload or download equipment records",
-            "steps": [
-              "Click <strong>Export</strong>.",
-              "For <strong>Upload Excel</strong>, click <strong>Sample Excel</strong> to download the template, fill it in, save it and upload it to create or update records.",
-              "For <strong>Download Excel</strong>, click it to export the current records."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/equipment/046.jpg",
-                "caption": "Export and Download Excel",
-                "step": 3
-              }
-            ]
-          },
-          {
-            "title": "Check an equipment item's history or maintenance records",
-            "steps": [
-              "Click <strong>History</strong> on the item's row to see its status changes and other actions.",
-              "Open the Maintenance Records icon on the row (shown only for equipment with scheduled maintenance) or use the Maintenance Records column."
-            ]
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/guides/equipment/028.jpg",
-            "caption": "Equipment Master page"
-          },
-          {
-            "src": "assets/guides/equipment/029.jpg",
-            "caption": "Status groupings at the top of the page"
           }
         ]
       },
@@ -18501,6 +18091,111 @@ const MODULES = [
         ]
       },
       {
+        "heading": "Accessory Master",
+        "intro": "<p>The <strong>Accessory Master</strong> is the register of accessories: attachments and add-ons such as buckets, trackers or tools that are tracked on their own and can be linked to an asset.</p>",
+        "images": [
+          {
+            "src": "assets/product/equipment/008.jpg",
+            "caption": "The Accessory Master list"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "+ Add Accessory",
+            "definition": "Opens the **Add Accessory** dialog."
+          },
+          {
+            "term": "+ Add Custom Column",
+            "definition": "Adds your own field to every accessory (types **TEXT_BOX**, **NUMBER**, **SINGLE_SELECT**, **MULTI_SELECT**, **DATE**)."
+          },
+          {
+            "term": "Search, Export, Filters, Manage Columns, layers icon, list and grid icons, Inventory Locations",
+            "definition": "Work as on the **Equipment Master**."
+          },
+          {
+            "term": "Columns",
+            "definition": "Besides the asset-style columns (**Accessory ID**, **Accessory**, **Accessory Description**, **Category**, **Sub Category**, **Business Unit**, **Status**, **Make**, **Model**, **Assigned Location** and the telematics columns), the list has accessory-only columns: **Linked Equipment**, **Replacement Value**, **Bar Code**, **Mac Address**, **IMEI** and **Contract End Date**."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Add an accessory",
+            "steps": [
+              "Open **Equipment**, then **Accessory Master**, and click **+ Add Accessory**.",
+              "Fill **Accessory ID**, **Accessory**, **Status**, **Business Unit** and **Assigned Location** (required).",
+              "Optionally pick the **Linked Equipment** the accessory belongs to, and fill **Replacement Value**, **Bar Code No**, **MAC Address**, **IMEI** and **Contract End Date**. **Upload Images** and **Upload Files** attach pictures and documents.",
+              "Click **Submit**. Click **Cancel** to close without saving."
+            ],
+            "images": [
+              {
+                "src": "assets/product/equipment/009.jpg",
+                "caption": "The Add Accessory dialog",
+                "step": 2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Inventory Locations",
+        "intro": "<p><strong>Inventory Locations</strong> is the list of storage places (yards, shops, stores) where equipment can be kept when it is not on a project. It opens as a dialog from the <strong>Inventory Locations</strong> button on the Equipment Master and Accessory Master.</p>",
+        "images": [
+          {
+            "src": "assets/product/equipment/007.jpg",
+            "caption": "The Inventory Locations dialog"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Location ID, Location Name, Type",
+            "definition": "The code, name and kind of each location. **Type** is for example **LOCATION** or **SHOP**."
+          },
+          {
+            "term": "Actions",
+            "definition": "A pencil edits a row and a red bin deletes it."
+          },
+          {
+            "term": "Add Location",
+            "definition": "Adds an empty row at the bottom where you type the **Location ID**, **Location Name** and choose the **Type**."
+          },
+          {
+            "term": "Submit",
+            "definition": "Saves the list. Close the dialog with the cross to leave without saving."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Add an inventory location",
+            "steps": [
+              "Click **Inventory Locations** on the Equipment Master.",
+              "Click **Add Location**.",
+              "Fill **Location ID** and **Location Name** and choose the **Type** in the new row.",
+              "Click **Submit**."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "3rd Party Rental",
+        "intro": "<p><strong>3rd Party Rental</strong> lists equipment that you rent from outside vendors rather than own. It shows the request, purchase order, vendor, rent period and rates for each rented asset. It has no add button; each row carries the request (REQ ID) and purchase order (PO ID) it came from.</p>",
+        "images": [
+          {
+            "src": "assets/product/equipment/010.jpg",
+            "caption": "The 3rd Party Rental list"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Search, Export, Filters, Manage Columns, layers icon, list and grid icons",
+            "definition": "Work as on the **Equipment Master**."
+          },
+          {
+            "term": "Rental columns",
+            "definition": "**REQ ID** and **PO ID** point to the request and purchase order. **Vendor** and **Assigned Project** show who supplied it and where it works. **Delivered Date**, **Length of Rent (Days)** and **Days in Rent** show the rent period. **Billing Rule** with **Hourly Rate**, **Daily Rate**, **Weekly Rate**, **Monthly Rate**, **Freight Cost**, **Replacement Value**, **PO Value** and **Total Cost YTD** show the cost terms. **Phase Codes** shows the cost codes it is charged to."
+          }
+        ]
+      },
+      {
         "heading": "Master Data",
         "intro": "<p><strong> </strong> Before anyone registers a piece of equipment, a <strong>Global Data Administrator</strong> sets up equipment cost codes, categories and rate card templates, and an <strong>Equipment Management Administrator</strong> links them to the equipment in <strong>Settings</strong>. Only equipment configured this way appear in the dropdowns when records are created.</p>",
         "definitions": [
@@ -18742,25 +18437,6 @@ const MODULES = [
             "caption": "Equipment Setup and Accessory Setup in Settings"
           }
         ]
-      },
-      {
-        "heading": "3rd Party Rental",
-        "intro": "<p>Use **3rd Party Rental** and **External Hauling** to see equipment you rent in from vendors and hauls done by outside companies. Equipment coordinators and cost controllers use these lists to track dates, rates and costs. Your company may see **Asset** instead of **Equipment** (**Global Data → Settings → Naming Framework**).</p>",
-        "definitions": [
-          {
-            "term": "3rd Party Rental",
-            "definition": "From **Home**, open **Equipment Management → Equipment → 3rd Party Rental**. The list of rented-in equipment shows **REQ ID**, **PO ID**, **Vendor**, **Delivered Date**, **Length of Rent**, **Days in Rent**, **Billing Rule**, **Hourly Rate**, **Daily Rate**, **Weekly Rate**, **Monthly Rate**, **Freight Cost**, **PO Value**, **Total Cost YTD** and **Phase Codes**."
-          },
-          {
-            "term": "External Hauling",
-            "definition": "From **Home**, open **Equipment Management → Hauling → External Hauling**. The list shows **Allocation Id**, **REQ ID**, **PO ID**, **Vendor**, **Cost**, **Price**, **Escort Cost**, **Permit Cost**, **Service Company**, **Service Type**, **Pick Up Address**, **Dimensions**, **Weight**, **Received By**, **Delivered Date** and **Stage**."
-          },
-          {
-            "term": "Where this data goes",
-            "definition": "The **3rd Party Rental Activity & Spend Report** and **Hauling Cost Log** are in **Reports**. The **Billing Rule** column follows **Settings → Billing Rules**."
-          }
-        ],
-        "procedures": []
       },
       {
         "heading": "Telematics",
@@ -19370,6 +19046,63 @@ const MODULES = [
                 "src": "assets/guides/equipment/138.jpg",
                 "caption": "Rejected request in Workflow Issues",
                 "step": 4
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Allocation Lifecycle",
+        "intro": "<p><strong>Allocation Lifecycle</strong> follows every request to move equipment to a project, from the first request to the day the equipment comes back and the request is closed. Project teams raise requests here and equipment managers move them forward.</p>",
+        "images": [
+          {
+            "src": "assets/product/equipment/011.jpg",
+            "caption": "The Allocation Lifecycle board"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Board columns",
+            "definition": "One column per stage, each with a count of requests in it: **Request**, **Assign**, **Inspection (Pre-Dispatch)**, **Ready for Dispatch**, **In Transit (Outbound)**, **On Rent**, **Off-Rent / Extension**, **In Transit (Return)**, **Pickup**, **Inspection (Post-Rent)** and **Closed**. A request sits in the column of the stage it has reached."
+          },
+          {
+            "term": "+ New Request",
+            "definition": "Opens the **Request Form** to ask for equipment or accessories."
+          },
+          {
+            "term": "Search",
+            "definition": "Type to find a request."
+          },
+          {
+            "term": "Filters",
+            "definition": "Narrows the requests by **Business Unit**, **Assigned Project**, **Equipment Type**, **Rental Type** and **Planned Return Date**. **Clear All**, **Apply** and **Save Filters** are at the bottom."
+          },
+          {
+            "term": "Board and table icons",
+            "definition": "The two icons at the top right switch between the stage board and a table. The table has a stage dropdown (starting at **Request**) to pick which stage to list, a **Manage Columns** button, and the columns **Request ID**, **Equipment/ Accessory Name**, **Business Unit**, **Priority**, **Assigned Project**, **Pickup Preference** and **Actions**.",
+            "images": [
+              {
+                "src": "assets/product/equipment/013.jpg",
+                "caption": "The table view with the stage dropdown"
+              }
+            ]
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Raise a request for equipment",
+            "steps": [
+              "Open **Operations** and click **+ New Request**.",
+              "In the **Request Form**, search for equipment or accessories in **Available Equipment / Accessory** or in the search box above the table, and add them. For each one fill **Quantity**, **Requested By**, **Required Date**, **Planned Return Date** and, if you know it, **Estimated Hours**.",
+              "Choose **Business Unit**, **Priority** and **Assigned Project** (required).",
+              "Optionally choose a **Pickup Preference** (**Self Pickup**, **Company Logistics**, **Third Party Haul** or **External Delivery Service**), type **Notes** and attach a file with the upload button.",
+              "Click **Submit**."
+            ],
+            "images": [
+              {
+                "src": "assets/product/equipment/012.jpg",
+                "caption": "The Request Form",
+                "step": 2
               }
             ]
           }
@@ -20322,6 +20055,166 @@ const MODULES = [
         ]
       },
       {
+        "heading": "Workflow Issues",
+        "intro": "<p><strong>Workflow Issues</strong> under Operations lists the approval issues raised on allocation requests, so you can see which ones are open, approved or rejected.</p>",
+        "images": [
+          {
+            "src": "assets/product/equipment/014.jpg",
+            "caption": "The Workflow Issues list under Operations"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "0 Total Issues, 0 Issues Approved, 0 Issues Rejected",
+            "definition": "Three counters at the top that show how many issues exist and how many were approved or rejected."
+          },
+          {
+            "term": "Download Excel",
+            "definition": "Downloads the issue list as an Excel file."
+          },
+          {
+            "term": "Filters",
+            "definition": "Narrows the list by **Log ID**, **Raised On** and **Raised By**."
+          },
+          {
+            "term": "Card and table icons",
+            "definition": "Switch between a card view and the table."
+          },
+          {
+            "term": "Columns",
+            "definition": "**Request Number**, **Level**, **Raised on Date**, **Raised on Time**, **Raised by**, **Image**, **Assign To**, **Due Date**, **Comments**, **Chat** and **See History**."
+          }
+        ]
+      },
+      {
+        "heading": "Internal Hauling",
+        "intro": "<p><strong>Internal Hauling</strong> tracks moves of equipment with the company's own vehicles and drivers, for example between a yard and a project. Each haul request moves across a board from request to delivery.</p>",
+        "images": [
+          {
+            "src": "assets/product/equipment/015.jpg",
+            "caption": "The Internal Hauling board"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Sub tabs",
+            "definition": "**Internal Hauling**, **Fleet & Schedule** and **External Hauling** sit under the **Hauling** tab."
+          },
+          {
+            "term": "Board columns",
+            "definition": "**Requests**, **Approved**, **Schedule Pending**, **Scheduled**, **Picked Up**, **In Transit**, **Delivered** and **Closed**, each with a count."
+          },
+          {
+            "term": "+ New Request",
+            "definition": "Opens the **New Haul Request** dialog."
+          },
+          {
+            "term": "Board and table icons",
+            "definition": "Switch between the stage board and a table."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Raise a haul request",
+            "steps": [
+              "Open **Hauling** and click **+ New Request**.",
+              "Choose the **Type**: **Equipment**, **Accessory** or **Miscellaneous**. For an asset or accessory pick it in **Equipment**; for miscellaneous items describe them in **Miscellaneous Description**.",
+              "Pick the **Original Location** and the **Destination Location**. Use the **Inventory / Project** switch beside each to choose a store or a project.",
+              "Pick the **Request Date** and type the **Estimated Cost**. Optionally add **Escort Cost**, **Permit Cost** and a **Phase Code**.",
+              "Click **Save**."
+            ],
+            "images": [
+              {
+                "src": "assets/product/equipment/016.jpg",
+                "caption": "The New Haul Request dialog",
+                "step": 2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Fleet & Schedule",
+        "intro": "<p><strong>Fleet &amp; Schedule</strong> keeps the list of the company's own transport vehicles and drivers that internal hauls use, with the current status of each.</p>",
+        "images": [
+          {
+            "src": "assets/product/equipment/017.jpg",
+            "caption": "The Company Transport Fleet page"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Vehicle list",
+            "definition": "Table on the left with **ID**, **Description**, **Status** and **Actions** for each hauling vehicle."
+          },
+          {
+            "term": "Driver list",
+            "definition": "Table on the right with **Driver**, **Vehicle**, **Status** and **Actions**, showing which vehicle each driver is assigned to."
+          },
+          {
+            "term": "Add Vehicle",
+            "definition": "Opens a dialog with **Vehicle ID**, **Description** and **Status** (all required). Status choices are **Available**, **In Use**, **Maintenance** and **Out of Service**."
+          },
+          {
+            "term": "Add Driver",
+            "definition": "Opens a dialog to pick the **Driver**, optionally the **Vehicle** and set the **Status**."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Add a vehicle",
+            "steps": [
+              "Open **Hauling**, then **Fleet & Schedule**, and click **Add Vehicle**.",
+              "Type the **Vehicle ID** and **Description**, and choose the **Status**.",
+              "Click **Add Vehicle**."
+            ],
+            "images": [
+              {
+                "src": "assets/product/equipment/018.jpg",
+                "caption": "The Add Vehicle dialog",
+                "step": 2
+              }
+            ]
+          },
+          {
+            "title": "Add a driver",
+            "steps": [
+              "Click **Add Driver**.",
+              "Search and pick the **Driver**, optionally the **Vehicle**, and set the **Status**.",
+              "Click **Add Driver**."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "External Hauling",
+        "intro": "<p><strong>External Hauling</strong> lists equipment moves done by outside transport companies, with the request, purchase order, vendor, charges and delivery details of each haul. It has no add button; rows appear here from the requests and orders.</p>",
+        "images": [
+          {
+            "src": "assets/product/equipment/019.jpg",
+            "caption": "The External Hauling list"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Search, Filters, Manage Columns",
+            "definition": "Search the list, narrow it with **Filters** and choose columns with **Manage Columns**."
+          },
+          {
+            "term": "Identity columns",
+            "definition": "**Allocation Id**, **Equipment ID**, **Equipment Description**, **REQ ID** and **PO ID** point to the equipment and to the request and purchase order behind the haul."
+          },
+          {
+            "term": "Cost columns",
+            "definition": "**Vendor**, **Cost**, **Price**, **Escort Cost** and **Permit Cost**."
+          },
+          {
+            "term": "Haul details",
+            "definition": "**Service Company**, **Service Type**, **Pick Up Address**, **Assigned Project**, **Date Needed**, **Dimensions (L x W x H)**, **Weight**, **Received By**, **Delivered Date** and **Stage**."
+          }
+        ]
+      },
+      {
         "heading": "Hauling",
         "intro": "<p><strong>Company Logistics</strong> is used when the company arranges transport with its own vehicle and driver. It creates an outbound haul from inventory to the project and, after off-rent, a return haul back to inventory, both managed in <strong>Equipment Management → Hauling</strong>.</p><p>A Fleet Administrator keeps vehicles and drivers current, the Hauling Coordinator moves each haul through its stages and closes it with final costs, and the Hauling Approver approves or rejects requests. The allocation request on the Operations board shows a <strong>Haul Initiated</strong> tag while a haul is open.</p>",
         "definitions": [
@@ -21036,1647 +20929,1196 @@ const MODULES = [
       },
       {
         "heading": "Add Utilization Log",
-        "intro": "<p>Use the Utilization screens to record how many hours each piece of equipment worked, sat idle and could be billed on a project each day. Field users and equipment coordinators fill in the daily log and submit it for approval; **Auto Log Utilization** fills hours for a date range for you. Your company may see **Asset** instead of **Equipment** (**Global Data → Settings → Naming Framework**).</p>",
+        "intro": "<p><strong>Add Utilization Log</strong> is where the hours worked by each machine on a day are entered against a project and phase code. Operators and site supervisors fill it day by day and then submit it for approval.</p>",
+        "images": [
+          {
+            "src": "assets/product/equipment/020.jpg",
+            "caption": "The Add Utilization Log screen"
+          }
+        ],
         "definitions": [
           {
-            "term": "Add Utilization Log",
-            "definition": "From **Home**, open **Equipment Management → Utilization → Add Utilization Log**. The screen is a daily log grid with the columns **Equipment**, **Assigned Project**, **Phase Code**, **Billing Hours**, **Total Hours**, **Work Hours**, **Idle Hours**, **Idle %** and **Fuel**."
+            "term": "Sub tabs",
+            "definition": "**Add Utilization Log**, **Utilization Logs**, **Utilization Summary**, **Issues** and **Auto Log Utilization** sit under the **Utilization** tab."
           },
           {
-            "term": "Buttons on Add Utilization Log",
-            "definition": "**Add**, **Clone Log**, **Import from Equipment Master**, **Save as Draft**, **Submit** and **Telematics**. **Import from Equipment Master** brings equipment in from the **Equipment Master**; **Save as Draft** keeps the log without sending it; **Submit** sends it for approval."
+            "term": "Select Log Level Category",
+            "definition": "Chooses what the log belongs to. The only choice is **Assigned Project**."
           },
           {
-            "term": "Idle %",
-            "definition": "The **Idle %** column sits beside **Idle Hours** and **Work Hours** in each log row. The company-wide idle percentage limit is set in **Settings → Equipment Due Assignment Days → Utilization Idle Percentage %**."
+            "term": "Assigned Project",
+            "definition": "The project the hours are logged against. Pick it before you can add rows; clicking **Add** without a project shows **Please select a project.**"
           },
           {
-            "term": "Auto Log Utilization",
-            "definition": "Open **Equipment Management → Utilization → Auto Log Utilization** and click **Create** to set up an automatic log. The list shows **Equipment ID**, **Project**, **Phase Code**, **From Date**, **To Date**, **Work Hours** and **Idle Hours**."
+            "term": "Date",
+            "definition": "The day you are logging. It starts on today's date."
           },
           {
-            "term": "Where this data comes from and goes",
-            "definition": "The equipment in a log come from the **Equipment Master**. Submitted logs appear in **Utilization Logs** and **Utilization Summary**, are checked through the approval levels set in **Settings → Approval Workflow → Utilization Logs**, and the **Equipment Utilization Report** and **Equipment Billing Worksheet** are in **Reports**."
+            "term": "Add",
+            "definition": "Adds an empty row for the chosen project."
+          },
+          {
+            "term": "Clone Log",
+            "definition": "Button next to **Add** for copying an existing log into the sheet."
+          },
+          {
+            "term": "Manage Columns",
+            "definition": "Chooses which columns the sheet shows."
+          },
+          {
+            "term": "Import from Equipment Master",
+            "definition": "Button for bringing assets from the **Equipment Master** into the sheet."
+          },
+          {
+            "term": "Save as Draft and Submit",
+            "definition": "**Save as Draft** keeps the sheet for later and turns on once you pick a project. **Submit** sends the log; it stays grey until the sheet is ready."
+          },
+          {
+            "term": "Row columns",
+            "definition": "**Equipment/ Accessory** (required), **Type**, **Assigned Project** (required), **Phase Code** (required), **Description** and **Billing Hours**. The **Telematics** group (**Total Hours**, **Work Hours**, **Idle Hours**, **Idle Percentage (%)**, **Fuel Used**) shows what the machine's tracker reported, and the manual group beside it holds the hours you enter, with **Fuel**. **Actions** has icons to add a row under it, copy it and delete it.",
+            "images": [
+              {
+                "src": "assets/product/equipment/021.jpg",
+                "caption": "A new row after clicking Add"
+              }
+            ]
           }
         ],
         "procedures": [
           {
-            "title": "Add a daily utilization log",
+            "title": "Log a day's utilization",
             "steps": [
-              "From **Home**, open **Equipment Management → Utilization → Add Utilization Log**.",
-              "Click **Import from Equipment Master** or **Add** to list the equipment.",
-              "For each row choose the **Assigned Project** and **Phase Code**, then enter the **Work Hours**, **Idle Hours**, **Billing Hours** and **Fuel**.",
-              "Click **Save as Draft** to keep working later, or **Submit** to send the log for approval."
-            ],
-            "note": "To copy an earlier log, use **Clone Log**."
-          },
-          {
-            "title": "Set up Auto Log Utilization",
-            "steps": [
-              "Open **Equipment Management → Utilization → Auto Log Utilization** and click **Create**.",
-              "Enter the **Equipment ID**, **Project**, **Phase Code**, **From Date**, **To Date**, **Work Hours** and **Idle Hours**.",
-              "Confirm the entry. It then shows in the **Auto Log Utilization** list."
-            ],
-            "note": "For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
+              "Open **Utilization** and stay on **Add Utilization Log**.",
+              "Choose the **Assigned Project** and the **Date**.",
+              "Click **Add**, pick the **Equipment/ Accessory** and its **Phase Code**, and enter the hours.",
+              "Click **Save as Draft** to continue later, or **Submit** to send it."
+            ]
           }
         ]
       },
       {
         "heading": "Utilization Logs",
-        "intro": "<p>Use **Utilization Logs**, **Utilization Summary** and **Issues** to review what was logged, total it by project and date, and follow up on logs with approval problems. Equipment managers and project managers use them after field users submit their daily logs.</p>",
+        "intro": "<p><strong>Utilization Logs</strong> lists the logs that have been submitted. Select a log on the left to read its details on the right.</p>",
+        "images": [
+          {
+            "src": "assets/product/equipment/022.jpg",
+            "caption": "The Utilization Logs screen with no logs"
+          }
+        ],
         "definitions": [
           {
-            "term": "Utilization Logs",
-            "definition": "Open **Equipment Management → Utilization → Utilization Logs**. The screen lists the logs with a detail pane beside the list."
+            "term": "Total Logs",
+            "definition": "Count of logs in the list."
           },
           {
-            "term": "Utilization Summary",
-            "definition": "Open **Equipment Management → Utilization → Utilization Summary**. Choose a date range and a log level (project) filter to see a summary of utilization."
+            "term": "Filter icon",
+            "definition": "Opens **Filters** with **Assigned Project**, **Logged By** and **Date Range**, plus **Clear All**, **Apply** and **Save Filters**."
           },
           {
-            "term": "Utilization Issues",
-            "definition": "Open **Equipment Management → Utilization → Issues**. The list shows **Util Number**, **Level**, **Raised by**, **Assign To** and **Due Date**, with counts of **Approved** and **Rejected**. Use **Download Excel** to export the list."
+            "term": "Log list and detail pane",
+            "definition": "The left column lists the logs. The right side says **Select a log to view details** until you click one."
+          }
+        ]
+      },
+      {
+        "heading": "Utilization Summary",
+        "intro": "<p><strong>Utilization Summary</strong> shows the hours logged for each machine for every day of a week, so you can compare machines and see total hours at a glance.</p>",
+        "images": [
+          {
+            "src": "assets/product/equipment/023.jpg",
+            "caption": "The Utilization Summary screen"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Select Date Range",
+            "definition": "The week shown. It starts on the current week, Monday to Sunday."
           },
           {
-            "term": "Utilization Logs approval workflow",
-            "definition": "In **Settings → Approval Workflow** the **Utilization Logs** tab sets the approval for submitted logs. The other tabs are **Asset Requests** (equipment requests), **Hauling Request** and **Off Rent / Extension Request**."
+            "term": "Select Log Level",
+            "definition": "Pick the project whose logs you want to see. The list has all your projects."
+          },
+          {
+            "term": "Submitted / Approved switch",
+            "definition": "Switches between logs that are only submitted and logs that are approved."
+          },
+          {
+            "term": "Download Excel",
+            "definition": "Downloads the summary as an Excel file."
+          },
+          {
+            "term": "Weekly grid",
+            "definition": "One row per **Equipment / Accessory** with a column for each day and an **Actions** column."
+          },
+          {
+            "term": "Total Hours",
+            "definition": "Below the grid, the combined hours for the week and a small table of **Total Hours** per **Equipment / Accessory**."
+          }
+        ]
+      },
+      {
+        "heading": "Issues",
+        "intro": "<p><strong>Issues</strong> under Utilization lists the approval issues raised on utilization logs, with their level, who raised them and who they are assigned to.</p>",
+        "images": [
+          {
+            "src": "assets/product/equipment/024.jpg",
+            "caption": "The Issues list under Utilization"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "0 Total Issues, 0 Issues Approved, 0 Issues Rejected",
+            "definition": "Counters for all issues, approved issues and rejected issues."
+          },
+          {
+            "term": "Download Excel, Filters, card and table icons",
+            "definition": "**Download Excel** exports the list, **Filters** narrows it and the two icons switch between cards and the table."
+          },
+          {
+            "term": "Columns",
+            "definition": "**Util Number**, **Level**, **Raised on Date**, **Raised on Time**, **Raised by**, **Image**, **Assign To**, **Due Date**, **Comments**, **Chat** and **See History**."
+          }
+        ]
+      },
+      {
+        "heading": "Auto Log Utilization",
+        "intro": "<p><strong>Auto Log Utilization</strong> holds rules that log hours for a machine automatically between two dates, so nobody has to type the same hours every day.</p>",
+        "images": [
+          {
+            "src": "assets/product/equipment/025.jpg",
+            "caption": "The Auto Log Utilization list"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Create",
+            "definition": "Opens **Create Auto Log Utilization Rule**."
+          },
+          {
+            "term": "Search",
+            "definition": "Search by asset, project or phase code."
+          },
+          {
+            "term": "Export, Filters, Manage Columns",
+            "definition": "Download the list, narrow it and choose columns."
+          },
+          {
+            "term": "Columns",
+            "definition": "**Equipment ID**, **Assigned Project ID - Name**, **Phase Code**, **From Date**, **To Date**, **Work Hours**, **Idle Hours** and **Actions**."
           }
         ],
         "procedures": [
           {
-            "title": "Check utilization for a period",
+            "title": "Create an auto log rule",
             "steps": [
-              "Open **Equipment Management → Utilization → Utilization Summary**.",
-              "Choose the date range.",
-              "Choose the log level (project) filter to see the summary for that project."
+              "Open **Utilization**, then **Auto Log Utilization**, and click **Create**.",
+              "Pick the **Equipment ID** and the **Assigned Project**.",
+              "Set **From Date** and **To Date**. Then **Phase Code** becomes selectable.",
+              "Type the **Work Hours** and **Idle Hours** (both required) for the rule.",
+              "Click **Submit**."
             ],
-            "note": "For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
+            "images": [
+              {
+                "src": "assets/product/equipment/026.jpg",
+                "caption": "The Create Auto Log Utilization Rule dialog",
+                "step": 2
+              }
+            ]
           }
         ]
       },
       {
         "heading": "Field Inspections",
-        "intro": "<p>Use **Field Inspections** to record the condition of equipment or an accessory on site against an **Inspection Checklist**. Field Inspectors and Operators (equipment operator, site supervisor, safety officer) create and fill the inspection; when an item fails, they record an issue with a **Priority**, an **Observation** and a photo, and the inspection moves to **In Progress with issues**.</p><p>A Maintenance Supervisor (plant manager, equipment manager) reviews inspections with issues in **Equipment Issues**. Before logging an inspection, make sure the equipment or accessory exists in the Equipment Master and its category has a checklist linked in **Settings → Equipment Setup / Accessory Setup**; otherwise no **Inspection Type** is available. All equipment and accessories appear in the **New Inspection** window, whatever their Equipment Status.</p>",
+        "intro": "<p><strong>Field Inspections</strong> lists the inspections of equipment and accessories done on site against an inspection checklist. Equipment managers create an inspection and assign it to an inspector, who fills in the checklist.</p>",
+        "images": [
+          {
+            "src": "assets/product/equipment/027.jpg",
+            "caption": "The Field Inspections list"
+          }
+        ],
         "definitions": [
           {
-            "term": "Who does this",
-            "definition": "**Field Inspector / Operator** creates and fills the inspection and records issues. **Maintenance Supervisor** reviews inspections with issues and raises Work Orders. **Equipment Management Administrator** builds the checklists and links them to categories."
+            "term": "Sub tabs",
+            "definition": "**Field Inspections**, **Parts PO**, **Preventive Maintenance** and **Maintenance Calendar** sit under the **Maintenance** tab."
           },
           {
-            "term": "Field Inspections list",
-            "definition": "From **Home**, open **Equipment Management → Maintenance → Field Inspections**. The list shows the **ID**, **Equipment / Accessory**, **Status** and **Date** of each inspection (it may also show **Type**, **Inspector** and **Priority**). Use **Manage Columns** to show, hide or reorder columns and the **Save layout** icon to keep the layout. Type an ID in **Search by ID** to find an inspection."
+            "term": "+ New Inspection",
+            "definition": "Opens the **New Inspection** dialog."
           },
           {
-            "term": "New Inspection",
-            "definition": "The button that opens the **New Inspection** window. Fields: the **Equipment / Accessory** toggle, the **Equipment** (or **Accessory**) dropdown, and the **Inspection Type**."
+            "term": "Search by ID",
+            "definition": "Type an inspection ID to find it."
           },
           {
-            "term": "Inspection Type",
-            "definition": "The checklist used for the inspection. The list loads only after the equipment is selected and shows the checklists linked to its category in Settings → Equipment Setup / Accessory Setup."
+            "term": "Manage Columns",
+            "definition": "Chooses the columns shown."
           },
           {
-            "term": "Priority (issue)",
-            "definition": "The priority of the issue recorded against a failed item, for example Medium. Chosen from a dropdown."
-          },
-          {
-            "term": "Observation (issue)",
-            "definition": "The details of the issue. The text editor supports bold, italics, links, headings and lists."
-          },
-          {
-            "term": "Upload Image (issue)",
-            "definition": "A photo of the issue. Mandatory. Click the **Edit** icon on the uploaded image to replace it."
-          },
-          {
-            "term": "Status: Form ready",
-            "definition": "The inspection is created and the form is ready to be filled."
-          },
-          {
-            "term": "Status: In Progress with issues",
-            "definition": "The inspection has one or more items with a failed response and a recorded issue."
-          },
-          {
-            "term": "Status: Completed",
-            "definition": "The inspection is submitted with no open issues."
-          },
-          {
-            "term": "Where this data comes from and goes",
-            "definition": "The **Inspection Type** list comes from the checklist linked to the equipment's category in **Settings → Equipment Setup / Accessory Setup**, built in **Equipment Management Forms → Inspection Checklists**. Each issue recorded here is created as a record in **Equipment Management → Equipment Issues**, where a Work Order can be raised."
-          },
-          {
-            "term": "Equipment Photos tab",
-            "definition": "A dedicated tab (on-screen name \"Equipment Photos\"; the underlying route and older docs call it Equipment Photos) for managing photographic documentation of equipment. Select an item from the left-hand list of Equipment/Accessories, click Add, then Upload File to attach one or more images, optionally annotate them with the built-in markup tools, and Save. Each photo carries a Label, Description, and \"Raised on [date] by [user]\" attribution, plus a kebab menu."
-          },
-          {
-            "term": "Trigger point",
-            "definition": "A response marked **Raise Issue when the field is updated** under **Setup Trigger Points** in the form builder. When the field user selects that response (for example **No**) on an inspection item, an **Issue** panel opens under the item and the issue is logged to **Equipment Issues** without a separate manual step."
+            "term": "Columns",
+            "definition": "**ID**, **Equipment / Accessory**, **Type** (the inspection type), **Status**, **Inspector**, **Date**, **Priority** and **Actions**."
           }
         ],
         "procedures": [
           {
-            "title": "Open the Field Inspections page",
+            "title": "Create an inspection",
             "steps": [
-              "Go to **Equipment Management → Maintenance**.",
-              "Click the **Field Inspections** sub-tab. The inspections are listed with the **ID**, **Equipment / Accessory**, **Status** and **Date**.",
-              "Click **Manage Columns** to show, hide or reorder the columns of the list.",
-              "Click the **Save layout** icon next to **Manage Columns** to save the layout.",
-              "Type an ID in **Search by ID** to find an inspection.",
-              "Click the **View** (eye) icon under **Actions** to open an inspection."
+              "Open **Maintenance** and click **+ New Inspection**.",
+              "Use the **Equipment / Accessory** switch, then pick the equipment in **Select Equipment**.",
+              "Pick the **Inspection Type**. The list loads after you pick the equipment and shows the checklists linked to that equipment's category.",
+              "Pick **Assign To** (the inspector), an optional **Due Date** and the **Priority** (**Low**, **Medium** or **High**).",
+              "Click **Create Inspection**. **Cancel** closes the dialog."
             ],
             "images": [
               {
-                "src": "assets/guides/equipment/545.png",
-                "caption": "Go to Equipment Management → Maintenance.",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/546.png",
-                "caption": "Click the Field Inspections sub-tab. The inspections are listed with the ID,…",
+                "src": "assets/product/equipment/028.jpg",
+                "caption": "The New Inspection dialog",
                 "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/547.png",
-                "caption": "Click Manage Columns to show, hide or reorder the columns of the list.",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/equipment/548.png",
-                "caption": "Click the Save layout icon next to Manage Columns to save the layout.",
-                "step": 4
-              },
-              {
-                "src": "assets/guides/equipment/549.png",
-                "caption": "Type an ID in Search by ID to find an inspection.",
-                "step": 5
-              },
-              {
-                "src": "assets/guides/equipment/550.png",
-                "caption": "Click the View (eye) icon under Actions to open an inspection.",
-                "step": 6
               }
-            ]
-          },
-          {
-            "title": "Create a field inspection",
-            "steps": [
-              "Click **New Inspection**. The **New Inspection** window opens.",
-              "Use the **Equipment / Accessory** toggle to choose whether the inspection is for an equipment or an accessory.",
-              "Select the **Equipment** (or **Accessory**) from the dropdown.",
-              "Select the **Inspection Type**. The list loads only after the equipment is selected and shows the checklists linked to its category.",
-              "Click **Create Inspection**. The inspection is added to the list with the status **Form ready**."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/equipment/551.png",
-                "caption": "Click New Inspection. The New Inspection window opens.",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/552.png",
-                "caption": "Use the Equipment / Accessory toggle to choose whether the inspection is for…",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/553.png",
-                "caption": "Select the Equipment (or Accessory) from the dropdown.",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/equipment/554.png",
-                "caption": "Select the Inspection Type. The list loads only after the equipment is…",
-                "step": 4
-              },
-              {
-                "src": "assets/guides/equipment/555.png",
-                "caption": "Click Create Inspection. The inspection is added to the list with the status…",
-                "step": 5
-              },
-              {
-                "src": "assets/guides/equipment/556.png",
-                "caption": "Click Create Inspection. The inspection is added to the list with the status…",
-                "step": 5
-              }
-            ],
-            "note": "Field inspections can be done only for equipment and accessories added in their Master list. If no **Inspection Type** appears, link a checklist to the category in **Settings → Equipment Setup / Accessory Setup**."
-          },
-          {
-            "title": "Fill the inspection form",
-            "steps": [
-              "Click the **View** icon under the **Actions** column. The inspection form opens.",
-              "Complete the required fields in the form. Under **Inspection Items**, select the response for each item, for example **Yes** or **No**.",
-              "For a failed item, record the issue as described in \"Record an issue during an inspection\".",
-              "Click **Submit**, or click **Close** to exit without submitting."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/equipment/557.png",
-                "caption": "Click the View icon under the Actions column. The inspection form opens.",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/558.png",
-                "caption": "Complete the required fields in the form. Under Inspection Items, select the…",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/559.png",
-                "caption": "Click Submit, or click Close to exit without submitting.",
-                "step": 4
-              }
-            ],
-            "note": "Use the **Print** icon at the top right of the inspection form to print the inspection."
-          },
-          {
-            "title": "Record an issue during an inspection",
-            "steps": [
-              "Under **Inspection Items**, select **No** (the failed response) for the item. The **Issue for \"<item name>\"** panel opens under the item.",
-              "Select the **Priority** of the issue from the dropdown. Enter the **Observation** describing the issue.",
-              "Click the upload icon next to **Upload Image** and upload a photo of the issue.",
-              "Click the **Edit** icon on the uploaded image to replace it, if required. Repeat for each failed item.",
-              "Click **Submit**. The inspection status changes to **In Progress with issues**, and an issue is created for each failed item in **Equipment Management → Equipment Issues**."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/equipment/560.png",
-                "caption": "Under Inspection Items, select No (the failed response) for the item. The…",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/561.png",
-                "caption": "Select the Priority of the issue from the dropdown. Enter the Observation…",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/562.png",
-                "caption": "Click the upload icon next to Upload Image and upload a photo of the issue.",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/equipment/563.png",
-                "caption": "Click the Edit icon on the uploaded image to replace it, if required. Repeat…",
-                "step": 4
-              },
-              {
-                "src": "assets/guides/equipment/564.png",
-                "caption": "Click Submit. The inspection status changes to In Progress with issues, and…",
-                "step": 5
-              },
-              {
-                "src": "assets/guides/equipment/565.png",
-                "caption": "Click Submit. The inspection status changes to In Progress with issues, and…",
-                "step": 5
-              }
-            ],
-            "note": "Each issue recorded here is created as a record in the **Equipment Issues** tab."
-          },
-          {
-            "title": "Uploading equipment photos",
-            "steps": [
-              "Go to <strong>Field Inspections → Equipment Photos</strong>.",
-              "Select the equipment or accessory from the left-hand list.",
-              "Click <strong>Add</strong>, then Upload File to select one or more images.",
-              "Optionally annotate using the built-in markup tools, then click <strong>Save</strong>."
-            ]
-          },
-          {
-            "title": "Viewing, annotating, or deleting an equipment photo",
-            "steps": [
-              "Click \"Click to View\" on a photo to open the viewer, which supports next/previous navigation.",
-              "Use the annotation tools below the image to mark it up, then click <strong>Save</strong> to persist the markup.",
-              "Use the kebab (⋮) menu in the viewer to <strong>Delete</strong> the photo."
             ]
           }
         ]
       },
       {
-        "heading": "Equipment Issues",
-        "intro": "<p>Use **Equipment Issues** to see every issue raised from field inspections, with the equipment, inspection item, priority and status, and to get each one repaired and closed. Field inspectors raise the issues; the Maintenance Supervisor (plant manager, equipment manager) reviews them, creates Work Orders where repair is needed and rectifies them.</p><p>The header counters (**Total**, **Open**, **Rectified**) give a quick health check on outstanding equipment problems. Equipment Issues are raised from a failed check; Non Conformance Reports, covered in the next section, are created by hand.</p>",
+        "heading": "Parts PO",
+        "intro": "<p><strong>Parts PO</strong> (shown as Parts &amp; PO on the page title) is the list of spare parts used for maintenance, with their category, manufacturer, unit cost and stock.</p>",
+        "images": [
+          {
+            "src": "assets/product/equipment/029.jpg",
+            "caption": "The Parts PO list"
+          }
+        ],
         "definitions": [
           {
-            "term": "Who does this",
-            "definition": "**Field Inspector / Operator** raises issues during an inspection. **Maintenance Supervisor** reviews them, creates Work Orders and rectifies them."
+            "term": "Search by part, description",
+            "definition": "Type to find a part."
           },
           {
-            "term": "Equipment Issues list",
-            "definition": "From **Home**, open **Equipment Management → Equipment Issues**. The list shows the issues raised from field inspections with the equipment, inspection item, priority and status. It also has columns such as **Observation**, **Raised by**, **Image**, **Work Order**, **Chat**, **Assign To** and **Due Date**. Click the **View** icon under **Actions** to see the details, including the **Observation** and the uploaded image."
+            "term": "All Categories",
+            "definition": "Dropdown that shows only the parts of one category."
           },
           {
-            "term": "Create Work order (hyperlink)",
-            "definition": "The **Create Work order** link under the **Work order** column of an issue. Click it to create a Work Order for the issue where repair is needed."
+            "term": "Add Part",
+            "definition": "Opens the **Add Part** dialog."
           },
           {
-            "term": "Rectify",
-            "definition": "The **Rectify** link under the **Status** column. Click it to resolve the equipment issue. If the issue is rectified through a Work Order, closing the Work Order completes the rectification of the linked issue."
+            "term": "Manage Columns",
+            "definition": "Chooses the columns shown."
           },
           {
-            "term": "Where this data comes from and goes",
-            "definition": "Issues come from failed items on field inspections (see **Field Inspections**); a Work Order raised from an issue goes to the Work Order module, and closing it rectifies the issue."
-          },
-          {
-            "term": "Inspection Checklists Issues screen",
-            "definition": "From **Home**, open **Equipment Management → Inspection Checklists Issues**. The header shows **Total**, **Open** and **Rectified** counts. The list shows **Equipment Issues Number**, **Priority**, **Observation**, **Source**, **Form**, **Raised by**, **Rectified by**, **Image**, **Work Order**, **Assign To** and **Due Date**."
-          },
-          {
-            "term": "Equipment Issue vs. Non-Conformance Report",
-            "definition": "Equipment Issues are typically raised automatically from a failed trigger-point check during a maintenance form, inspection, or an allocation inspection. NCRs, by contrast, are created manually (via + Add on the Non Conformance Report tab) to formally document a non-conformance event. Both default to a table view with header counters, Rectify workflow, Chat, Assign To/Due Date fields, and a Create Work Order option, but they remain separate, independently tracked record types with different columns (Equipment Issues: Form/Stage/Observation; NCR: Equipment/Location/Description)."
-          },
-          {
-            "term": "Header counters",
-            "definition": "Summary totals shown at the top of the Equipment Issues (and NCR) tab, e.g. \"42 Total Issues | 28 Open Issues | 14 Issues Rectified\" — a quick health check on outstanding equipment problems without opening individual records."
+            "term": "Columns",
+            "definition": "**Part**, **Description**, **Category**, **Manufacturer**, **Unit Cost**, **Stock** and **Actions**."
           }
         ],
         "procedures": [
           {
-            "title": "Review an equipment issue",
+            "title": "Add a part",
             "steps": [
-              "Go to **Equipment Management → Equipment Issues**. View the issues raised from field inspections, with the equipment, inspection item, priority and status.",
-              "Click the **View** icon under the **Actions** column to see the issue's details, including the **Observation** and the uploaded image."
+              "Open **Maintenance**, then **Parts PO**, and click **Add Part**.",
+              "Pick the **Part** and the **Category**.",
+              "Fill **Description**, **Manufacturer**, **Unit Cost** and **Stock**. All six fields are required.",
+              "Click **Add Part**."
             ],
             "images": [
               {
-                "src": "assets/guides/equipment/566.png",
-                "caption": "Go to Equipment Management → Equipment Issues. View the issues raised from…",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/567.png",
-                "caption": "Click the View icon under the Actions column to see the issue's details,…",
+                "src": "assets/product/equipment/030.jpg",
+                "caption": "The Add Part dialog",
                 "step": 2
               }
-            ]
-          },
-          {
-            "title": "Create a Work Order for an equipment issue",
-            "steps": [
-              "In **Equipment Issues**, find the issue where repair is needed.",
-              "Click the **Create Work order** hyperlink under the **Work order** column."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/equipment/568.png",
-                "caption": "Click the Create Work order hyperlink under the Work order column.",
-                "step": 2
-              }
-            ],
-            "note": "The Work Order is created in the Work Order module (configure the Work Order Types first). Closing the Work Order completes the rectification of the linked issue."
-          },
-          {
-            "title": "Rectify an equipment issue",
-            "steps": [
-              "In **Equipment Issues**, find the issue.",
-              "Click **Rectify** under the **Status** column to resolve the equipment issue."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/equipment/569.png",
-                "caption": "Click Rectify under the Status column to resolve the equipment issue.",
-                "step": 2
-              }
-            ],
-            "note": "If the issue is rectified through a Work Order, closing the Work Order completes the rectification of the linked issue."
-          },
-          {
-            "title": "Deleting, exporting, or changing the view for issues",
-            "steps": [
-              "Click the <strong>delete_outline</strong> icon on an issue's row to delete it.",
-              "Click <strong>Export</strong> to download all issue records to Excel.",
-              "Use the view toggle in the top-right to switch between table and card/grid view."
-            ]
-          }
-        ]
-      },
-      {
-        "heading": "Non Conformance Report",
-        "intro": "<p>Not every problem worth documenting is caught automatically by a failed checklist item — sometimes a <strong>field End User</strong> (a foreman, safety officer, or QC inspector) simply notices something wrong with a piece of equipment and needs a formal way to flag it, independent of any scheduled inspection. NCR gives that person the same trusted workflow used for system-raised issues, so the two problem types end up in one auditable place a <strong>Module Manager</strong> can review together.</p><p>Non Conformance Report (NCR) is the tab for formally documenting a non-conformance event — a deviation from expected standards or process that someone needs to intentionally flag, rather than one the system caught automatically through a failed trigger-point check. Where Equipment Issues are almost always system-generated, an NCR is a deliberate, manually initiated record: someone observed something wrong and chose to formally document it.</p>\n    <p>Structurally, NCRs mirror Equipment Issues closely — the same table-by-default layout, the same Assign To/Due Date pattern, the same Chat panel for documenting remediation steps, and the same Rectify action to close things out, though the columns differ (Equipment, Location, and Description here, versus Form, Stage, and Observation on Equipment Issues; NCR IDs are prefixed \"NCR No.\"). This consistency is intentional: whether a problem was caught by an automated check or flagged manually by a person, the resolution workflow should feel the same to whoever is responsible for fixing it.</p>\n    <p>The one meaningful difference between the two record types shows up in what Rectify actually does. On an Equipment Issue, Rectify re-opens the linked maintenance form for completion, because the issue interrupted an in-progress form. An NCR isn't tied to an in-progress form in the same way, so Rectify on an NCR simply closes the report out as resolved, with no equivalent form-reopening behavior.</p>",
-        "definitions": [
-          {
-            "term": "Non Conformance Report (NCR)",
-            "definition": "A manually created record (ID prefix \"NCR No.\") documenting a non-conformance event, raised via + Add on the Non Conformance Report tab — distinct from Equipment Issues, which are almost always system-raised from a failed trigger-point check. Table view by default, with columns Issue Number, Equipment, Location, Description, Raised on Date/Time, Raised by, Image, Status, Chat, Assign To, Due Date, Actions."
-          },
-          {
-            "term": "Rectify (on an NCR)",
-            "definition": "Marks the NCR as Rectified, closing the report out as resolved. Unlike Rectify on an Equipment Issue, there is no equivalent form-reopening behavior — an NCR isn't tied to an in-progress maintenance form, so closing it is simpler."
-          },
-          {
-            "term": "Rectify: Issue vs. NCR",
-            "definition": "Functionally similar in that both set the record's status to Rectified. On an Equipment Issue, Rectify additionally re-enables the associated maintenance form so it can be completed or resubmitted. On an NCR, Rectify simply closes the report, with no linked form to reopen."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Raising and closing a Non-Conformance Report",
-            "steps": [
-              "Go to <strong>Non Conformance Report</strong> and click <strong>+ Add</strong>.",
-              "Fill in the NCR details and submit.",
-              "Assign an owner via <strong>Assign To</strong> and set a <strong>Due Date</strong>.",
-              "Use <strong>Chat</strong> to document remediation steps as they happen.",
-              "Once the issue is corrected, click <strong>Rectify</strong> to close the report out."
             ]
           }
         ]
       },
       {
         "heading": "Preventive Maintenance",
-        "intro": "<p>Use **Preventive Maintenance** to schedule maintenance on equipment and accessories by **Calendar**, **Hours** or **Distance**, and to track each schedule as **UPCOMING** or **OVERDUE**. Maintenance Planners, Mechanics and Maintenance Supervisors use it: planners schedule PM, mechanics fill the maintenance form when the service is done, and supervisors skip a service or create a Work Order for repair.</p><p>Each schedule is shown as a card with its interval, due point and form status. Before scheduling, set the intervals and maintenance form for the category in **Settings → Maintenance Config**.</p>",
+        "intro": "<p><strong>Preventive Maintenance</strong> lists the maintenance schedules of your equipment and accessories. Each row shows when the last service was done, where the meter stands now and when the next service is due, by calendar, by hours or by distance.</p>",
+        "images": [
+          {
+            "src": "assets/product/equipment/031.jpg",
+            "caption": "The Preventive Maintenance list"
+          }
+        ],
         "definitions": [
           {
-            "term": "Who does this",
-            "definition": "**Maintenance Planner / Workshop In-charge** schedules PM and monitors upcoming and overdue maintenance. **Mechanic / Technician** fills the Maintenance Form. **Maintenance Supervisor** reviews maintenance with issues, skips a service where required and creates Work Orders."
+            "term": "Schedule PM",
+            "definition": "Opens a dialog to start a schedule: choose **Equipment** or **Accessory**, pick the equipment and choose the **Schedule Type**: **CALENDER**, **HOURS** or **DISTANCE**.",
+            "images": [
+              {
+                "src": "assets/product/equipment/032.jpg",
+                "caption": "The Schedule PM dialog"
+              }
+            ]
           },
           {
-            "term": "Preventive Maintenance page",
-            "definition": "From **Home**, open **Equipment Management → Maintenance → Preventive Maintenance**. Use the dropdown (**All**, **Calendar**, **Hours**, **Distance**) to filter by trigger type, **Search** by Equipment / Accessory ID, the list or grid icon (top right) to switch between list view and card view, and the **Save layout** icon to save the selected view. Click **Schedule PM** to add a schedule."
+            "term": "All dropdown",
+            "definition": "Narrows the list to schedules of one trigger: **All**, **Calendar**, **Hours** or **Distance**."
           },
           {
-            "term": "Schedule label (PM card)",
-            "definition": "The trigger and interval, for example CALENDAR (EVERY 5 DAYS), HOURS (EVERY 1 HOURS) or DISTANCE (EVERY 100 KILOMETER)."
+            "term": "Search using Equipment/ Accessory ID",
+            "definition": "Type an ID to find its schedule."
           },
           {
-            "term": "Equipment (PM card)",
-            "definition": "The equipment or accessory ID and name."
+            "term": "Calendar columns",
+            "definition": "**Last PM (Cal)**, **Current (Cal)** and **Next PM Due (Cal)**."
           },
           {
-            "term": "Status chip",
-            "definition": "**UPCOMING** when the maintenance is not yet due, **OVERDUE** when the due point has passed."
+            "term": "Hours columns",
+            "definition": "**Last PM (Hrs)**, **Current (Hrs)** and **Next PM Due (Hrs)**."
           },
           {
-            "term": "Schedule Type (PM card)",
-            "definition": "The trigger type and interval."
+            "term": "Distance columns",
+            "definition": "**Last PM (Dist)**, **Current (Dist)** and **Next PM Due (Dist)**."
           },
           {
-            "term": "Last PM",
-            "definition": "The date, hours or distance at which the last PM was done (Cal / Hrs / Dist)."
+            "term": "Status columns",
+            "definition": "**Calendar Status**, **Hours Status**, **Distance Status** and **Inspection Status** show whether each trigger is up to date."
           },
           {
-            "term": "Next PM Due",
-            "definition": "The date, hours or distance at which the next PM is due. It is calculated from the Last PM and the interval."
-          },
-          {
-            "term": "Current",
-            "definition": "The current date, hours or distance of the equipment."
-          },
-          {
-            "term": "Inspection (PM card)",
-            "definition": "The status of the maintenance form: **FORM READY** or **INPROGRESS WITH ISSUES**."
-          },
-          {
-            "term": "Calendar schedule type",
-            "definition": "Maintenance is due after a fixed period of time, for example every 5 Days or every 30 Days, counted from the last PM date."
-          },
-          {
-            "term": "Hours schedule type",
-            "definition": "Maintenance is due after a set number of running hours, for example every 250 Hours, based on the equipment's hour meter reading."
-          },
-          {
-            "term": "Distance schedule type",
-            "definition": "Maintenance is due after a set distance travelled, for example every 100 Kilometer, based on the equipment's odometer reading."
-          },
-          {
-            "term": "Card actions",
-            "definition": "**View** opens the maintenance form to fill and submit. **Schedule PM** schedules the PM for the equipment. **Skip Service** skips the current service and moves the schedule to the next due point. **Create Work Order** raises a Work Order for the equipment from the PM, for example when the maintenance form has issues; it is created in the Work Order module."
-          },
-          {
-            "term": "Where this data comes from and goes",
-            "definition": "The interval for each schedule type comes from the PM Interval Configuration of the equipment's category (**Settings → Maintenance Config**). The current hours and distance for Hours and Distance schedules come from the Telematics Device mapped to the equipment, so map the device before scheduling these types. PM due dates feed the **Maintenance Calendar**, and a Work Order raised from a PM goes to the Work Order module."
+            "term": "Other columns",
+            "definition": "**Equipment / Accessory**, **Trigger Type**, **Assigned Location** and **Actions**."
           }
         ],
         "procedures": [
           {
-            "title": "Use the Preventive Maintenance page",
-            "steps": [
-              "Navigate to **Equipment Management → Maintenance** and click the **Preventive Maintenance** sub-tab.",
-              "Select **All**, **Calendar**, **Hours** or **Distance** in the dropdown to filter the schedules by trigger type.",
-              "Type in **Search** using the Equipment / Accessory ID to find a schedule.",
-              "Click the list or grid icon at the top right to switch between the list view and the card view.",
-              "Click the **Save layout** icon to save the selected view."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/equipment/570.png",
-                "caption": "Navigate to Equipment Management → Maintenance and click the Preventive…",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/571.png",
-                "caption": "Select All, Calendar, Hours or Distance in the dropdown to filter the…",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/572.png",
-                "caption": "Type in Search using the Equipment / Accessory ID to find a schedule.",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/equipment/573.png",
-                "caption": "Click the list or grid icon at the top right to switch between the list view…",
-                "step": 4
-              },
-              {
-                "src": "assets/guides/equipment/574.png",
-                "caption": "Click the Save layout icon to save the selected view.",
-                "step": 5
-              }
-            ]
-          },
-          {
             "title": "Schedule preventive maintenance",
             "steps": [
-              "Click **Schedule PM**. The **Schedule PM** window opens.",
-              "Use the **Equipment / Accessory** toggle to choose an equipment or an accessory.",
-              "Select the **Equipment** (or **Accessory**) from the dropdown.",
-              "Select one or more **Schedule Type** values: **CALENDAR**, **HOURS** or **DISTANCE**. Click **Select All** to select all three.",
-              "Select the **Interval** for the respective Schedule Type.",
-              "Click on the schedule. A card is created for each schedule type."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/equipment/575.png",
-                "caption": "Click Schedule PM. The Schedule PM window opens.",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/576.png",
-                "caption": "Use the Equipment / Accessory toggle to choose an equipment or an accessory.",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/577.png",
-                "caption": "Select the Equipment (or Accessory) from the dropdown.",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/equipment/578.png",
-                "caption": "Select one or more Schedule Type values: CALENDAR, HOURS or DISTANCE. Click…",
-                "step": 4
-              },
-              {
-                "src": "assets/guides/equipment/579.png",
-                "caption": "Select the Interval for the respective Schedule Type.",
-                "step": 5
-              },
-              {
-                "src": "assets/guides/equipment/580.png",
-                "caption": "Click on the schedule. A card is created for each schedule type.",
-                "step": 6
-              }
-            ],
-            "note": "The current hours and distance for Hours and Distance schedule types come from the Telematics Device mapped to the equipment. Map the telematics device to the equipment before scheduling these types. The interval for each type comes from the PM Interval Configuration of the equipment's category."
-          },
-          {
-            "title": "Fill the maintenance form",
-            "steps": [
-              "Click the **View** icon on the PM card. The maintenance form linked in the PM Interval Configuration opens.",
-              "Select the response for each maintenance item and record an issue for any failed item, in the same way as a field inspection.",
-              "Fill the **Form Details**. Click **Submit**."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/equipment/581.png",
-                "caption": "Click the View icon on the PM card. The maintenance form linked in the PM…",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/582.png",
-                "caption": "Select the response for each maintenance item and record an issue for any…",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/583.png",
-                "caption": "Fill the Form Details. Click Submit.",
-                "step": 3
-              }
+              "Open **Maintenance**, then **Preventive Maintenance**, and click **Schedule PM**.",
+              "Choose **Equipment** or **Accessory** with the switch and pick the equipment in **Select Equipment**.",
+              "Pick the **Schedule Type**: **CALENDER**, **HOURS** or **DISTANCE**.",
+              "Click **Schedule**. **Cancel** closes the dialog."
             ]
-          },
-          {
-            "title": "Use the PM card actions",
-            "steps": [
-              "Click **View** to open the maintenance form for the schedule, to fill it and submit it.",
-              "Click **Schedule PM** to schedule the PM for the equipment.",
-              "Click **Skip Service** to skip the current service and move the schedule to the next due point.",
-              "Click **Create Work Order** to raise a Work Order for the equipment from the PM, for example when the maintenance form has issues."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/equipment/584.png",
-                "caption": "Click Create Work Order to raise a Work Order for the equipment from the PM,…",
-                "step": 4
-              }
-            ],
-            "note": "Selecting **Create Work Order** creates the work order in the Work Order module."
           }
         ]
       },
       {
-        "heading": "Parts PO",
-        "intro": "<p>Use **Parts PO** to keep the catalogue of spare parts used for equipment maintenance and see what is in stock. Maintenance and store teams use it when they plan repairs.</p>",
-        "definitions": [
+        "heading": "Maintenance Calendar",
+        "intro": "<p>The <strong>Maintenance Calendar</strong> shows the maintenance forms that fall on each day, so a planner can see what is due and how far each form has got.</p>",
+        "images": [
           {
-            "term": "Parts PO screen",
-            "definition": "From **Home**, open **Equipment Management → Maintenance → Parts PO**. Click **Add Part** to add a part. The list shows **Part**, **Category**, **Manufacturer**, **Unit Cost** and **Stock**."
-          },
-          {
-            "term": "Where this data goes",
-            "definition": "Parts are also handled on the **Parts** tab inside a **Work Order** (see the **Work Order** module)."
+            "src": "assets/product/equipment/033.jpg",
+            "caption": "The Maintenance Calendar"
           }
         ],
-        "procedures": []
+        "definitions": [
+          {
+            "term": "Select date",
+            "definition": "A month calendar. Use the arrows or the month name to change the month, and click a day. Today is circled."
+          },
+          {
+            "term": "Maintenance forms for a date",
+            "definition": "The panel on the right lists the maintenance forms of the selected day. It says **No Data** when there are none."
+          },
+          {
+            "term": "Colour legend",
+            "definition": "The dots at the top right give the state of a form: **Not Ready** (grey), **Ready** (blue), **In Progress With Issues** (orange) and **Completed** (green)."
+          }
+        ]
       },
       {
-        "heading": "Maintenance Calendar",
-        "intro": "<p>Use the **Maintenance Calendar** to review the maintenance forms due on each date, colour-coded by status. Maintenance Planners and Maintenance Supervisors use it to see what is scheduled, what is ready and what has issues.</p><p>The calendar displays only the Scheduled PM forms for the equipment on the selected scheduled dates, so dates appear here once PM has been scheduled in **Preventive Maintenance**.</p>",
-        "definitions": [
+        "heading": "Inspection Checklists Issues",
+        "intro": "<p><strong>Inspection Checklists Issues</strong> collects every problem found during field inspections (a failed checklist item) so it can be followed until it is rectified.</p>",
+        "images": [
           {
-            "term": "Who does this",
-            "definition": "**Maintenance Planner** and **Maintenance Supervisor** review the forms due on each date."
-          },
-          {
-            "term": "Maintenance Calendar",
-            "definition": "From **Home**, open **Equipment Management → Maintenance → Maintenance Calendar**. The **Select date** calendar on the left shows the current month; dates with a small dot have maintenance forms scheduled. The right panel shows the assigned Maintenance forms for the selected date."
-          },
-          {
-            "term": "Status legend",
-            "definition": "Colour-coded at the top right of the page: **Grey** is Not Ready, **Blue** is Ready, **Amber** (with a warning icon) is In Progress With Issues, **Green** is Completed."
-          },
-          {
-            "term": "Not Ready (grey)",
-            "definition": "The form is on the calendar but not ready to be filled yet."
-          },
-          {
-            "term": "Ready (blue)",
-            "definition": "The form is ready to be filled."
-          },
-          {
-            "term": "In Progress With Issues (amber, warning icon)",
-            "definition": "The form has failed items with issues. Review these on the Preventive Maintenance page and create a Work Order where required."
-          },
-          {
-            "term": "Completed (green)",
-            "definition": "The form is complete."
-          },
-          {
-            "term": "Where this data comes from",
-            "definition": "The dates come from PM scheduled in **Preventive Maintenance**, which uses the intervals in **Settings → Maintenance Config**."
+            "src": "assets/product/equipment/034.jpg",
+            "caption": "The Inspection Checklists Issues list"
           }
         ],
-        "procedures": [
+        "definitions": [
           {
-            "title": "Use the Maintenance Calendar",
-            "steps": [
-              "Navigate to **Equipment Management → Maintenance**. Click the **Maintenance Calendar** sub-tab. The **Select date** calendar opens on the left, showing the current month.",
-              "Click the month and year dropdown under **Select date** and select the required month, or use the left and right arrows to move one month back or forward.",
-              "Check the dates marked with a small dot. These dates have maintenance forms scheduled.",
-              "Click the required date. The date is highlighted and the right panel shows the assigned Maintenance forms for that date.",
-              "Check the colour of each form against the legend at the top right of the page to see its status.",
-              "Click a form to open it."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/equipment/585.png",
-                "caption": "Navigate to Equipment Management → Maintenance. Click the Maintenance…",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/586.png",
-                "caption": "Click the month and year dropdown under Select date and select the required…",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/587.png",
-                "caption": "Check the dates marked with a small dot. These dates have maintenance forms…",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/equipment/588.png",
-                "caption": "Click the required date. The date is highlighted and the right panel shows…",
-                "step": 4
-              },
-              {
-                "src": "assets/guides/equipment/589.png",
-                "caption": "Click a form to open it.",
-                "step": 6
-              },
-              {
-                "src": "assets/guides/equipment/590.png",
-                "caption": "Click a form to open it.",
-                "step": 6
-              }
-            ],
-            "note": "Entries marked with a warning icon are **In Progress With Issues**. Review these on the Preventive Maintenance page and create a Work Order where required."
+            "term": "0 Total Issues, 0 Open Issues, 0 Issues Rectified",
+            "definition": "Counters at the top for all issues, issues still open and issues that were rectified."
+          },
+          {
+            "term": "Search",
+            "definition": "Type to find an issue."
+          },
+          {
+            "term": "Manage Columns",
+            "definition": "Chooses the columns shown."
+          },
+          {
+            "term": "List and card icons",
+            "definition": "Switch between the table and a card view."
+          },
+          {
+            "term": "Columns",
+            "definition": "**Equipment Issues Number**, **Equipment / Accessory**, **Priority**, **Observation** (what the inspector wrote), **Raised on Date**, **Raised on Time**, **Status**, **Source**, **Form** (the checklist it came from), **Raised by**, **Rectified by**, **Rectified on Date**, **Rectified on Time**, **Image**, **Work Order** (the work order raised for it), **Assign To**, **Due Date** and **Actions**."
           }
         ]
       },
       {
         "heading": "Reports",
-        "intro": "<p>Use **Reports** to see equipment utilization, service, compliance, hauling, rental and billing figures in one place. Equipment managers and finance staff open it. Your company may see **Asset** instead of **Equipment** (**Global Data → Settings → Naming Framework**).</p>",
+        "intro": "<p><strong>Reports</strong> is a page of six report tiles. Click a tile to open the report as a table that you can search, filter and export.</p>",
+        "images": [
+          {
+            "src": "assets/product/equipment/035.jpg",
+            "caption": "The Reports page"
+          }
+        ],
         "definitions": [
           {
-            "term": "Where to find the reports",
-            "definition": "From **Home**, open **Equipment Management → Reports**. There are six reports."
-          },
-          {
             "term": "Equipment Utilization Report",
-            "definition": "A report on equipment utilization hours."
+            "definition": "Hours, days, fuel and rate totals per asset. Columns include **Equipment ID**, **Geofence**, **Allocation ID**, **Ownership**, **Status**, **Make**, **Model**, **Type**, **Business Unit**, **Category**, **Linked Equipment**, **Production Category**, **Total Hours**, **Total Days**, **Work Hours**, **Idle Hours**, **Idle %**, **Fuel Consumption**, **Gallons/Hour**, **Field Work Hours**, **Field Idle Hours**, **Field Idle %**, **Fuel**, the hour, day, weekly and monthly rates and **Total**.",
+            "images": [
+              {
+                "src": "assets/product/equipment/036.jpg",
+                "caption": "The Equipment Utilization Report"
+              }
+            ]
           },
           {
             "term": "PM Service Tracker Report",
-            "definition": "A report that tracks preventive maintenance service."
+            "definition": "Where each asset stands on preventive maintenance: **Equipment / Accessory**, **Make**, **Model**, **status**, **Assigned Location**, last, current and next-due values by calendar, hours and distance, and **Calendar Status**, **Hours Status** and **Distance Status**."
           },
           {
             "term": "Compliance Warranty Tracker",
-            "definition": "A report that tracks equipment compliance and warranty."
+            "definition": "Lists **Equipment**, **Status**, **Days to Warranty Expiry**, **Registration Expiry** and **Insurance Expiry** so you can see what is about to expire."
           },
           {
             "term": "Hauling Cost Log",
-            "definition": "A report of hauling costs. The **External Hauling** list holds **Cost**, **Price**, **Escort Cost** and **Permit Cost** for each haul."
+            "definition": "One row per haul with **Haul ID**, **Equipment**, **Equipment ID**, **Miscellaneous Description**, **From**, **To**, **Requested Date**, **Scheduled Pick Up Date**, **Assigned Driver**, **Assigned Vehicle ID**, **Assigned Location**, **Arrival Condition**, **Estimated Cost**, **Cost To Bill** and **Final Cost**."
           },
           {
             "term": "3rd Party Rental Activity & Spend Report",
-            "definition": "A report of rental activity and spend on rented-in equipment, based on the **3rd Party Rental** list."
+            "definition": "Rented equipment and what it costs: **PO Number**, **Equipment Description**, **Equipment ID**, **Type**, **Vendor**, **Assigned Project**, **Project Number**, **Length of Rental (Duration)**, **Scheduled Return Date**, the rates, **Freight Cost**, **Delivered Date**, **Off-Rent Date**, **Days on Rent**, **Total Rent Cost** and **Status**. It also has a **Sort by** control."
           },
           {
             "term": "Equipment Billing Worksheet",
-            "definition": "A worksheet for equipment billing. Billing rules are set in **Settings → Billing Rules**."
+            "definition": "What to bill for each asset: **Equipment ID**, **Production Category**, **On-Rent Date**, **Assigned Location**, **On-Rent Period (days)**, **Phase Code**, work, idle and total hours from both **Utilization** logs and **Telematics**, the rates, **Applied Rate**, **Total Bill**, **Owning BU**, **Assigned BU**, **Billing Type** and **Customer Name**."
+          },
+          {
+            "term": "Search, Export, Filters, Manage Columns",
+            "definition": "Every report has a search box, **Export**, **Filters** and **Manage Columns**, and a back arrow beside the title to return to the tiles."
           }
-        ],
-        "procedures": []
+        ]
       },
       {
-        "heading": "Equipment Setup",
-        "intro": "<p>Use **Settings → Equipment Setup** and **Settings → Accessory Setup** to decide which inspection checklists apply to each equipment and accessory category. Equipment Management Administrators do this once; only the checklists linked to a category are then offered as the **Inspection Type** when an inspector creates a field inspection for equipment or an accessory of that category.</p><p>The **Equipment Setup** tab in the module (not the Settings page above) is where a Fleet / Equipment Module Manager builds recurring maintenance packages: equipment, forms, schedule and crew in one four-step wizard.</p>",
+        "heading": "Equipment Management Forms",
+        "intro": "<p><strong>Equipment Management Forms</strong> is the first page of Equipment Management Settings. It holds the two kinds of form your team fills in the field: <strong>Inspection Checklists</strong> and <strong>Maintenance Forms</strong>. A system administrator builds each form here once, and it can then be linked to equipment categories and maintenance schedules.</p>",
+        "images": [
+          {
+            "src": "assets/product/equipment/101.jpg",
+            "caption": "The Equipment Management Forms page with its two cards"
+          }
+        ],
         "definitions": [
           {
-            "term": "Who does this",
-            "definition": "The **Equipment Management Administrator** links checklists to categories. Inspectors then pick from the linked checklists when creating a field inspection."
+            "term": "Inspection Checklists",
+            "definition": "Opens the list of inspection forms. The checkpoints you set up here are what an inspector answers in a field inspection. When none exist the page says **Inspection Forms are not configured** and offers **+ Create Form**."
           },
           {
-            "term": "Equipment Categories",
-            "definition": "The list under **Settings → Equipment Setup**. Click **Add Category** to add one, or the **Edit** icon under **Actions** to change one. The linked checklists are shown in the **Inspection Checklist** column."
+            "term": "Maintenance Forms",
+            "definition": "Opens the list of maintenance forms, the checklists a technician fills in when a service or repair is done. When none exist the page says **Maintenance Forms are not configured** and offers **+ Create Form**."
           },
           {
-            "term": "Accessory Categories",
-            "definition": "The list under **Settings → Accessory Setup**, with the same **Add Category**, **Edit** and **Inspection Checklist** column as equipment categories."
+            "term": "+ Create Form",
+            "definition": "Starts the five-step form builder for the kind of form you opened (inspection or maintenance)."
           },
           {
-            "term": "Equipment Cost Code and Default Rate Card Template",
-            "definition": "Selected in the category dialog when you add a new category, together with the **Inspection Checklist**."
+            "term": "1 Create Inspection Items",
+            "definition": "The list of checkpoints (S.No, Name, Actions). **+ Create** opens a small dialog with one field, **Inspection Item**, where you type the name of a checkpoint such as a part or condition to be checked.",
+            "images": [
+              {
+                "src": "assets/product/equipment/102.jpg",
+                "caption": "Step 1 of the form builder"
+              }
+            ]
           },
           {
-            "term": "Inspection Checklist (category dropdown)",
-            "definition": "Type in **Search** to find a checklist and select one or more; click **Select All** to select every checklist. Checklists come from **Settings → Equipment Management Forms → Inspection Checklists**."
+            "term": "2 Inspection Items Response",
+            "definition": "The answers an inspector can choose for each checkpoint. Each row has a **Response Type** (for example **Yes**), a **Raise Inspection Issue** checkbox and edit and delete icons. Tick **Raise Inspection Issue** on a response when choosing it should log a problem under Inspection Checklists Issues. **+ Create** opens **Create Response Type**, where you type the name of the answer.",
+            "images": [
+              {
+                "src": "assets/product/equipment/103.jpg",
+                "caption": "Step 2 of the form builder"
+              }
+            ]
           },
           {
-            "term": "Where this data goes",
-            "definition": "The checklists linked here feed the **Inspection Type** list in **Maintenance → Field Inspections → New Inspection** for equipment of that category. If a category has no checklist linked, no Inspection Type is available for its equipment or accessories."
+            "term": "3 Build Form",
+            "definition": "The page where the form is laid out. It starts with the company address block, then a **Form Title** (type the page title), then fields. Each field has a label, a **Required** toggle, a field type list (a new field is a **Text Box**) and three icons to add, copy or delete the field. **+ Add field** adds another one and **Save Changes** at the top saves the layout.",
+            "images": [
+              {
+                "src": "assets/product/equipment/104.jpg",
+                "caption": "Step 3 of the form builder"
+              }
+            ]
           },
           {
-            "term": "Upload Excel (categories)",
-            "definition": "Button on the Equipment Categories and Accessory Categories pages to add categories in bulk from a filled sample Excel file."
+            "term": "4 Setup Trigger Points",
+            "definition": "Decides which sections of the form are checked. It stays empty with the note **Create atleast one section in Other Sections tab** until the form has at least one extra section."
           },
           {
-            "term": "Maintenance Package",
-            "definition": "A configured bundle, created via the Create Maintenance Package wizard, that groups a set of equipment together with the maintenance forms that apply to them and the schedule on which those forms should be completed. It is the mechanism that drives both scheduled field inspections and, when configured with Check Out/Check In recurrence, the maintenance gates inside the Load Out Request flow."
+            "term": "5 Preview Form",
+            "definition": "Shows the finished form the way an inspector or technician will see it."
           },
           {
-            "term": "List Equipment (wizard step 1)",
-            "definition": "The first step of the Create Maintenance Package wizard: name the package and description, then use Add Equipment to select which items or accessories it covers."
-          },
-          {
-            "term": "Identify Forms (wizard step 2)",
-            "definition": "The second wizard step: use Add Form to choose from centrally-configured maintenance forms (built in the Maintenance Builder under the module's own Settings → Equipment Management Forms) that should be attached to this package."
-          },
-          {
-            "term": "Prepare Schedule (wizard step 3)",
-            "definition": "The third wizard step, where you set the package's Recurrence Type, Start/End dates, and Time."
-          },
-          {
-            "term": "Assign Crew (wizard step 4)",
-            "definition": "The final wizard step: select the individual users or whole crews responsible for this maintenance package. Once assigned, the resulting schedule appears on each assignee's personal calendar and becomes fillable at the scheduled time."
-          },
-          {
-            "term": "Recurrence Type",
-            "definition": "The setting, chosen in the Prepare Schedule step, that determines how a maintenance form gets triggered. Daily and Weekly recurrence trigger the form on a fixed calendar cadence at a specific date and time. Check Out and Check In recurrence instead trigger the form automatically as part of the equipment's checkout or check-in step within the Load Out Request flow, rather than on any fixed schedule — meaning the form appears exactly when that equipment is being moved, not on a calendar date."
-          },
-          {
-            "term": "Maintenance Logs vs. Utilization (Equipment Setup tabs)",
-            "definition": "Equipment Setup itself has two sub-tabs, not two separate screens. Maintenance Logs is where Create Maintenance Package lives (the 4-step wizard described above). Utilization is the parallel tab for scheduling utilization logs the same way — Create Utilization Package follows the identical 4-step pattern (List Items / Identify Forms / Prepare Schedule / Assign Crew), with its own + Add Equipments/Accessories button."
+            "term": "Changes not saved",
+            "definition": "If you click another step while the current one has unsaved edits, a prompt says **You have unsaved changes. Press Ok to proceed anyway.** Click **Cancel** to stay and save first."
           }
         ],
         "procedures": [
           {
-            "title": "Link inspection checklists to an equipment category",
+            "title": "Create an inspection form",
             "steps": [
-              "Click **Settings → Equipment Setup**. The **Equipment Categories** list opens.",
-              "Click **Add Category** to add a new category, or click the **Edit** icon under **Actions** on an existing one.",
-              "When adding a new category, select the **Equipment Cost Code** and **Default Rate Card Template** in the dialog.",
-              "In the **Inspection Checklist** dropdown, type in **Search** to find a checklist and select one or more checklists. Click **Select All** to select every checklist.",
-              "Click **Submit**. The linked checklists are shown in the **Inspection Checklist** column."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/equipment/517.png",
-                "caption": "Click Settings → Equipment Setup. The Equipment Categories list opens.",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/518.png",
-                "caption": "Click Add Category to add a new category, or click the Edit icon under…",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/519.png",
-                "caption": "Click Add Category to add a new category, or click the Edit icon under…",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/520.png",
-                "caption": "When adding a new category, select the Equipment Cost Code and Default Rate…",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/equipment/521.png",
-                "caption": "In the Inspection Checklist dropdown, type in Search to find a checklist and…",
-                "step": 4
-              },
-              {
-                "src": "assets/guides/equipment/522.png",
-                "caption": "Click Submit. The linked checklists are shown in the Inspection Checklist…",
-                "step": 5
-              },
-              {
-                "src": "assets/guides/equipment/523.png",
-                "caption": "Click Submit. The linked checklists are shown in the Inspection Checklist…",
-                "step": 5
-              }
+              "Open **Settings** in Equipment Management and click **Equipment Management Forms**.",
+              "Click the **Inspection Checklists** card, then **+ Create Form**.",
+              "In step **1 Create Inspection Items** click **+ Create**, type the checkpoint name in **Inspection Item** and click **Submit**. Repeat for every checkpoint.",
+              "In step **2 Inspection Items Response** add the answers inspectors can pick with **+ Create** and tick **Raise Inspection Issue** on answers that mean a problem.",
+              "In step **3 Build Form** type the **Form Title**, add fields with **+ Add field** and click **Save Changes**.",
+              "Check the result in step **5 Preview Form**."
             ]
           },
           {
-            "title": "Link inspection checklists to an accessory category",
+            "title": "Create a maintenance form",
             "steps": [
-              "Click **Settings → Accessory Setup**. The **Accessory Categories** list opens.",
-              "Click **Add Category**, or click the **Edit** icon on an existing category.",
-              "When adding a new category, select the **Equipment Cost Code** and **Default Rate Card Template**.",
-              "Select one or more checklists in the **Inspection Checklist** dropdown.",
-              "Click **Submit**."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/equipment/524.png",
-                "caption": "Click Settings → Accessory Setup. The Accessory Categories list opens.",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/525.png",
-                "caption": "Click Add Category, or click the Edit icon on an existing category.",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/526.png",
-                "caption": "Click Add Category, or click the Edit icon on an existing category.",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/527.png",
-                "caption": "When adding a new category, select the Equipment Cost Code and Default Rate…",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/equipment/528.png",
-                "caption": "Select one or more checklists in the Inspection Checklist dropdown.",
-                "step": 4
-              },
-              {
-                "src": "assets/guides/equipment/529.png",
-                "caption": "Click Submit.",
-                "step": 5
-              }
-            ]
-          },
-          {
-            "title": "Upload equipment or accessory categories in bulk",
-            "steps": [
-              "Click **Upload Excel** on the **Equipment Categories** or **Accessory Categories** page.",
-              "Download the sample Excel format and enter the category details as per the instructions given.",
-              "Save the file and upload the filled file."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/equipment/530.png",
-                "caption": "Click Upload Excel on the Equipment Categories or Accessory Categories page.",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/531.png",
-                "caption": "Click Upload Excel on the Equipment Categories or Accessory Categories page.",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/532.png",
-                "caption": "Download the sample Excel format and enter the category details as per the…",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/533.png",
-                "caption": "Download the sample Excel format and enter the category details as per the…",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/534.png",
-                "caption": "Save the file and upload the filled file.",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/equipment/535.png",
-                "caption": "Save the file and upload the filled file.",
-                "step": 3
-              }
-            ]
-          },
-          {
-            "title": "Setting up a recurring maintenance schedule",
-            "steps": [
-              "Go to <strong>Equipment Setup</strong> and click <strong>Create Maintenance Package</strong>.",
-              "Enter a Package Name and Description, then Submit.",
-              "In <strong>List Equipment</strong>, use Add Equipment to select the items covered by this package.",
-              "In <strong>Identify Forms</strong>, use Add Form, tick the required forms, and Submit.",
-              "In <strong>Prepare Schedule</strong>, choose the Recurrence Type and set Start/End dates and Time.",
-              "In <strong>Assign Crew</strong>, select the responsible individuals or crews and Save."
-            ]
-          },
-          {
-            "title": "Choosing between calendar-based and checkout/check-in-based recurrence",
-            "steps": [
-              "In the <strong>Prepare Schedule</strong> step, decide whether the maintenance should happen on a fixed calendar cadence or in step with equipment movement.",
-              "Choose <strong>Daily</strong> or <strong>Weekly</strong> if the form should trigger on a specific date and time regardless of whether the equipment is moving.",
-              "Choose <strong>Check Out</strong> or <strong>Check In</strong> if the form should instead trigger automatically as part of that check-out or check-in stage (earlier Load Out Request flow)."
-            ]
-          },
-          {
-            "title": "Assigning a maintenance schedule to specific people",
-            "steps": [
-              "In the <strong>Assign Crew</strong> step of the Create Maintenance Package wizard, select individual users or entire Crews responsible for the maintenance.",
-              "Once saved, the schedule appears automatically on each assignee's personal calendar and becomes fillable at the scheduled time."
+              "Open **Settings** and click **Equipment Management Forms**.",
+              "Click the **Maintenance Forms** card, then **+ Create Form**.",
+              "Work through the same five steps as for an inspection form: items, responses, build form, trigger points and preview."
             ]
           }
         ]
       },
       {
-        "heading": "Equipment Forms",
-        "intro": "<p>Use **Equipment Management Forms** to build the **Inspection Checklists** checked during a field inspection and the **Maintenance Forms** completed during preventive maintenance. Equipment Management Administrators (System Administrator or Equipment Admin) build them once in Settings; inspectors and mechanics then fill them in the field. Both are built in the checkpoint Builder using the same five-step form builder.</p><p>Linking a checklist to a category happens in **Equipment Setup** and **Accessory Setup**, and a maintenance form is chosen in **Maintenance Config**. **Adobe Acrobat Sign**, set up once in Global Data, signs Rentals lease agreements.</p>",
+        "heading": "Approval Workflow",
+        "intro": "<p><strong>Approval Workflow</strong> sets who must approve each kind of Equipment request. A workflow is a set of approval levels with users at each level. Each kind of request has its own tab, so a system administrator can give equipment requests, hauling, off rent and utilization logs different approvers.</p>",
+        "images": [
+          {
+            "src": "assets/product/equipment/105.jpg",
+            "caption": "The Approval Workflow page"
+          }
+        ],
         "definitions": [
           {
-            "term": "Who does this",
-            "definition": "The **Equipment Management Administrator** (System Administrator / Equipment Admin) creates the Inspection Checklists and Maintenance Forms. Access for each role is given through User Groups and their permissions under **Settings → Users and Permissions**."
+            "term": "Equipment Requests",
+            "definition": "The workflow for allocation requests, the requests that ask for equipment on a project. This is the tab that opens first."
           },
           {
-            "term": "Inspection Checklists (tile)",
-            "definition": "One of two tiles under **Settings → Equipment Management Forms**. Open it to reach the checkpoint Builder, where each existing checklist form is a card. A checklist holds the checkpoints checked during a field inspection."
+            "term": "Hauling Request",
+            "definition": "The workflow for requests to move equipment with Internal or External Hauling."
           },
           {
-            "term": "Maintenance Forms (tile)",
-            "definition": "The second tile under **Settings → Equipment Management Forms**. A maintenance form holds the checks completed during preventive maintenance, for example Engine oil change or Air filter replacement. Only saved maintenance forms appear in the **Maintenance Form** dropdown of **Maintenance Config → PM Interval Configuration**."
+            "term": "Off Rent / Extension Request",
+            "definition": "The workflow for requests to return rented equipment early or extend its rent."
           },
           {
-            "term": "Create Form",
-            "definition": "The button in the checkpoint Builder that opens the five-step form builder for a new checklist or maintenance form. Use the ⋮ menu on a form card to **Edit** or **Delete** it. Once an inspection form is linked to a category it cannot be deleted."
+            "term": "Utilization Logs",
+            "definition": "The workflow for approving the hours logged on equipment."
           },
           {
-            "term": "Step 1 – Create Inspection Items",
-            "definition": "The list of checkpoints in the form. Click **Create** and enter the **Name** of each item. Items are listed with their **S.No** and **Name**; drag the handle on the left to reorder, and use the **Edit** and **Delete** icons under **Actions** to rename or remove an item."
+            "term": "Create Approval WorkFlow",
+            "definition": "Opens the **Create Workflow** dialog on the current tab. The workflow appears in the list under the button; select it to see its levels on the right."
           },
           {
-            "term": "Step 2 – Inspection Items Response",
-            "definition": "The answer options for each checkpoint. **Yes** is added by default; click **Create** to add another response type, such as **No**, then set the response options for each item."
+            "term": "Instructions panel",
+            "definition": "While no workflow is selected the right side shows three steps: click **Create Approval Workflow**, create workflow levels, add users to each level."
           },
           {
-            "term": "Step 3 – Build Form",
-            "definition": "The additional fields shown under **Form Details**, such as readings, locations and attachments. Enter the **Form Title**, click **Add field**, pick the type from the **Choose type** dropdown, turn the **Required** toggle on or off, and enter the **Name** shown on the form. Use **Actions** to add, duplicate or delete a field, then click **Save Changes**."
-          },
-          {
-            "term": "Step 4 – Setup Trigger Points",
-            "definition": "The responses that raise an issue against an item. Open the **Section Dropdown** and tick **Raise Issue when the field is updated** for the response that marks an item as failed."
-          },
-          {
-            "term": "Step 5 – Preview Form",
-            "definition": "A preview of the final form, exactly as the field user will see it, before it is saved."
-          },
-          {
-            "term": "Form field types",
-            "definition": "The field types in the **Choose type** dropdown include Attachment, Check box, Date, Label, Multi select, Paragraph, Roster, Scribble (signature/print name), Single select, Table (with configurable rows/columns), Text box (the default type), Time, and Signature."
-          },
-          {
-            "term": "Where this data goes",
-            "definition": "When a field user selects a trigger response for an item, an **Issue** panel opens under that item for **Priority**, **Observation** and **Upload Image**, and the inspection status becomes **In Progress with issues**. Each issue is created in **Equipment Management → Equipment Issues**. An inspection checklist reaches the inspection form through **Settings → Equipment Setup / Accessory Setup** (the **Inspection Type** list); a maintenance form reaches Preventive Maintenance through **Maintenance Config**."
-          },
-          {
-            "term": "Equipment Management Forms (module Settings)",
-            "definition": "On earlier-version environments that use the Load Out Request tab, the card in the module's own Settings (breadcrumb \"Equipment Forms\") listing one form builder per lifecycle stage: Request, Check Out, Shipment, Ship, Load, In Transit, Delivered, Received, Lease Agreement, Maintenance Forms, and Equipment Utilization Forms & Logs — confirming Shipment/Load/In Transit/Delivered/Received (LOR Internal Jobs) and Ship (Rentals) are separately configurable stages."
-          },
-          {
-            "term": "Adobe Acrobat Sign integration",
-            "definition": "An integration letting a 3rd-party signer affix a legally binding e-signature to a Rentals (3rd-Party) Lease Agreement, as part of approving it, rather than simply clicking Approve/Reject in-app. Configured once, company-wide, at Global Data → Global Settings → Adobe Sign Settings (Client Id, Client Secret, Consent). Once configured, the Lease Agreement emailed to the 3rd party in the Rentals flow can be digitally signed through this integration as part of their approval."
-          },
-          {
-            "term": "Equipment Management vs. Equipment Management vs. Equipment Master",
-            "definition": "All three names refer to the same module. This guide calls it **Equipment Management**. Arena lets each company rename terms to match its own standard (**Global Data → Settings → Naming Framework**), so your screens may say \"Equipment\" or \"Asset\" (for example **Asset Management**, **Asset Master**, **Asset Issues**). They are the same screens; this guide uses Equipment throughout."
-          },
-          {
-            "term": "Equipment Utilization Forms & Logs",
-            "definition": "The Equipment Management Forms template controlling the fields captured when logging how equipment is being utilized over time."
+            "term": "Open Workflow Graph View",
+            "definition": "The icon at the top right of the panel. Its tooltip is **Open Workflow Graph View**; it shows the selected workflow as a diagram."
           }
         ],
         "procedures": [
           {
-            "title": "Create an inspection checklist",
+            "title": "Create an approval workflow",
             "steps": [
-              "Go to **Home → Equipment Management**.",
-              "Click **Settings** at the top right of the page.",
-              "Click **Equipment Management Forms** in the left menu. Two tiles are displayed: **Inspection Checklists** and **Maintenance Forms**.",
-              "Click the arrow on the **Inspection Checklists** tile. The checkpoint Builder opens with the existing checklist forms as cards.",
-              "To change an existing form, click the ⋮ menu on its card and choose **Edit** or **Delete**.",
-              "Click **Create Form** to create a new checklist form.",
-              "**Step 1 – Create Inspection Items:** click **Create** and enter the **Name** of the inspection item. Repeat for each item.",
-              "Use the drag handle on the left of a row to reorder the items.",
-              "Click the **Edit** icon under **Actions** to rename an item, or the **Delete** icon to remove it.",
-              "**Step 2 – Inspection Items Response:** click **Inspection Items Response**. The **Yes** response type is added by default.",
-              "Click **Create** to add a new response type, such as **No**.",
-              "Set the response options for each inspection item, for example **Yes** and **No**.",
-              "**Step 3 – Build Form:** click **Build Form** and enter the **Form Title**.",
-              "Click **Add field**, then select the field type from the **Choose type** dropdown.",
-              "Turn the **Required** toggle on or off, and enter the **Name** to be displayed on the form.",
-              "Repeat to add and configure the required fields. Use **Actions** to add, duplicate or delete a field.",
-              "Click **Save Changes**.",
-              "**Step 4 – Setup Trigger Points:** click **Setup Trigger Points**.",
-              "Open the **Section Dropdown** and tick **Raise Issue when the field is updated** for the response that marks an item as failed.",
-              "**Step 5 – Preview Form:** click **Preview Form** and check the form as the field user will see it."
+              "Open **Settings** and click **Approval Workflow**.",
+              "Choose the tab for the kind of request, for example **Hauling Request**.",
+              "Click **Create Approval WorkFlow**.",
+              "In the **Create Workflow** dialog type a name in **Create Workflow**.",
+              "Tick **Set as Default** if this workflow should be used for every new request of this kind, then click **Submit**.",
+              "Select the new workflow, add the approval levels and add the users to each level, as the instructions panel says."
             ],
             "images": [
               {
-                "src": "assets/guides/equipment/470.png",
-                "caption": "Go to Home → Equipment Management.",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/471.png",
-                "caption": "Click Settings at the top right of the page.",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/472.png",
-                "caption": "Click Equipment Management Forms in the left menu. Two tiles are displayed:…",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/equipment/473.png",
-                "caption": "Click Equipment Management Forms in the left menu. Two tiles are displayed:…",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/equipment/474.png",
-                "caption": "Click the arrow on the Inspection Checklists tile. The checkpoint Builder…",
+                "src": "assets/product/equipment/106.jpg",
+                "caption": "The Create Workflow dialog",
                 "step": 4
-              },
-              {
-                "src": "assets/guides/equipment/475.png",
-                "caption": "To change an existing form, click the ⋮ menu on its card and choose Edit or…",
-                "step": 5
-              },
-              {
-                "src": "assets/guides/equipment/476.png",
-                "caption": "Click Create Form to create a new checklist form.",
-                "step": 6
-              },
-              {
-                "src": "assets/guides/equipment/477.png",
-                "caption": "Create Inspection Items: click Create and enter the Name of the inspection…",
-                "step": 7
-              },
-              {
-                "src": "assets/guides/equipment/478.png",
-                "caption": "Create Inspection Items: click Create and enter the Name of the inspection…",
-                "step": 7
-              },
-              {
-                "src": "assets/guides/equipment/479.png",
-                "caption": "Create Inspection Items: click Create and enter the Name of the inspection…",
-                "step": 7
-              },
-              {
-                "src": "assets/guides/equipment/480.png",
-                "caption": "Use the drag handle on the left of a row to reorder the items.",
-                "step": 8
-              },
-              {
-                "src": "assets/guides/equipment/481.png",
-                "caption": "Click the Edit icon under Actions to rename an item, or the Delete icon to…",
-                "step": 9
-              },
-              {
-                "src": "assets/guides/equipment/482.png",
-                "caption": "Inspection Items Response: click Inspection Items Response. The Yes response…",
-                "step": 10
-              },
-              {
-                "src": "assets/guides/equipment/483.png",
-                "caption": "Click Create to add a new response type, such as No.",
-                "step": 11
-              },
-              {
-                "src": "assets/guides/equipment/484.png",
-                "caption": "Click Create to add a new response type, such as No.",
-                "step": 11
-              },
-              {
-                "src": "assets/guides/equipment/485.png",
-                "caption": "Set the response options for each inspection item, for example Yes and No.",
-                "step": 12
-              },
-              {
-                "src": "assets/guides/equipment/486.png",
-                "caption": "Build Form: click Build Form and enter the Form Title.",
-                "step": 13
-              },
-              {
-                "src": "assets/guides/equipment/487.png",
-                "caption": "Click Add field, then select the field type from the Choose type dropdown.",
-                "step": 14
-              },
-              {
-                "src": "assets/guides/equipment/488.png",
-                "caption": "Click Add field, then select the field type from the Choose type dropdown.",
-                "step": 14
-              },
-              {
-                "src": "assets/guides/equipment/489.png",
-                "caption": "Turn the Required toggle on or off, and enter the Name to be displayed on…",
-                "step": 15
-              },
-              {
-                "src": "assets/guides/equipment/490.png",
-                "caption": "Turn the Required toggle on or off, and enter the Name to be displayed on…",
-                "step": 15
-              },
-              {
-                "src": "assets/guides/equipment/491.png",
-                "caption": "Repeat to add and configure the required fields. Use Actions to add,…",
-                "step": 16
-              },
-              {
-                "src": "assets/guides/equipment/492.png",
-                "caption": "Click Save Changes.",
-                "step": 17
-              },
-              {
-                "src": "assets/guides/equipment/493.png",
-                "caption": "Setup Trigger Points: click Setup Trigger Points.",
-                "step": 18
-              },
-              {
-                "src": "assets/guides/equipment/494.png",
-                "caption": "Open the Section Dropdown and tick Raise Issue when the field is updated for…",
-                "step": 19
-              },
-              {
-                "src": "assets/guides/equipment/495.png",
-                "caption": "Preview Form: click Preview Form and check the form as the field user will…",
-                "step": 20
               }
-            ],
-            "note": "Once an inspection form is linked to a category, it cannot be deleted. Link the checklist to equipment and accessory categories in **Settings → Equipment Setup / Accessory Setup** so it appears as an **Inspection Type**."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Equipment Setup",
+        "intro": "<p><strong>Equipment Setup</strong> in Settings (page title <strong>Equipment Setup</strong>) holds the two lists that every piece of equipment draws on: the <strong>Equipment Categories</strong> and the <strong>Fuel Types</strong>. They must be filled in before equipment can be created in the Equipment Master.</p>",
+        "images": [
+          {
+            "src": "assets/product/equipment/107.jpg",
+            "caption": "The Equipment Setup page with the Add Category dialog"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Equipment Categories",
+            "definition": "One row per category with the columns **Type**, **Category**, **Sub Category**, **Default Rate Card Template**, **Inspection Checklist**, **Depreciation Method**, **Default Useful Life** and **Actions**. The row sets the defaults that new equipment of that category starts with."
           },
           {
-            "title": "Create a maintenance form",
-            "steps": [
-              "Click **Settings → Equipment Management Forms**, then click the arrow on the **Maintenance Forms** tile. The existing maintenance forms are displayed as cards.",
-              "Click **Create Form**. The form builder opens with the same five steps as an inspection checklist.",
-              "**Step 1 – Create Inspection Items:** click **Create** and enter the **Name** of the maintenance item, for example Engine oil change or Air filter replacement. Repeat for each item.",
-              "Drag the handle on the left of a row to reorder the items; use the **Edit** and **Delete** icons under **Actions** to rename or remove one.",
-              "**Step 2 – Inspection Items Response:** click **Inspection Items Response** (**Yes** is added by default), click **Create** to add a response such as **No**, then set the response options for each item.",
-              "**Step 3 – Build Form:** click **Build Form** and enter the **Form Title**.",
-              "Click **Add field**, select the type from **Choose type**, set the **Required** toggle and enter the **Name** to display. Repeat for each field.",
-              "Use **Actions** to add, duplicate or delete a field, then click **Save Changes**.",
-              "**Step 4 – Setup Trigger Points:** click **Setup Trigger Points**, open the **Section Dropdown** and tick **Raise Issue when the field is updated**.",
-              "**Step 5 – Preview Form:** click **Preview Form** and check the form as the mechanic will see it."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/equipment/496.png",
-                "caption": "Click Settings → Equipment Management Forms, then click the arrow on the…",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/497.png",
-                "caption": "Click Settings → Equipment Management Forms, then click the arrow on the…",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/498.png",
-                "caption": "Click Create Form. The form builder opens with the same five steps as an…",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/499.png",
-                "caption": "Create Inspection Items: click Create and enter the Name of the maintenance…",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/equipment/500.png",
-                "caption": "Create Inspection Items: click Create and enter the Name of the maintenance…",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/equipment/501.png",
-                "caption": "Create Inspection Items: click Create and enter the Name of the maintenance…",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/equipment/502.png",
-                "caption": "Drag the handle on the left of a row to reorder the items; use the Edit and…",
-                "step": 4
-              },
-              {
-                "src": "assets/guides/equipment/503.png",
-                "caption": "Drag the handle on the left of a row to reorder the items; use the Edit and…",
-                "step": 4
-              },
-              {
-                "src": "assets/guides/equipment/504.png",
-                "caption": "Inspection Items Response: click Inspection Items Response (Yes is added by…",
-                "step": 5
-              },
-              {
-                "src": "assets/guides/equipment/505.png",
-                "caption": "Inspection Items Response: click Inspection Items Response (Yes is added by…",
-                "step": 5
-              },
-              {
-                "src": "assets/guides/equipment/506.png",
-                "caption": "Inspection Items Response: click Inspection Items Response (Yes is added by…",
-                "step": 5
-              },
-              {
-                "src": "assets/guides/equipment/507.png",
-                "caption": "Build Form: click Build Form and enter the Form Title.",
-                "step": 6
-              },
-              {
-                "src": "assets/guides/equipment/508.png",
-                "caption": "Click Add field, select the type from Choose type, set the Required toggle…",
-                "step": 7
-              },
-              {
-                "src": "assets/guides/equipment/509.png",
-                "caption": "Click Add field, select the type from Choose type, set the Required toggle…",
-                "step": 7
-              },
-              {
-                "src": "assets/guides/equipment/510.png",
-                "caption": "Click Add field, select the type from Choose type, set the Required toggle…",
-                "step": 7
-              },
-              {
-                "src": "assets/guides/equipment/511.png",
-                "caption": "Click Add field, select the type from Choose type, set the Required toggle…",
-                "step": 7
-              },
-              {
-                "src": "assets/guides/equipment/512.png",
-                "caption": "Use Actions to add, duplicate or delete a field, then click Save Changes.",
-                "step": 8
-              },
-              {
-                "src": "assets/guides/equipment/513.png",
-                "caption": "Use Actions to add, duplicate or delete a field, then click Save Changes.",
-                "step": 8
-              },
-              {
-                "src": "assets/guides/equipment/514.png",
-                "caption": "Setup Trigger Points: click Setup Trigger Points, open the Section Dropdown…",
-                "step": 9
-              },
-              {
-                "src": "assets/guides/equipment/515.png",
-                "caption": "Setup Trigger Points: click Setup Trigger Points, open the Section Dropdown…",
-                "step": 9
-              },
-              {
-                "src": "assets/guides/equipment/516.png",
-                "caption": "Preview Form: click Preview Form and check the form as the mechanic will see it.",
-                "step": 10
-              }
-            ],
-            "note": "A maintenance form is selected in **Maintenance Config → PM Interval Configuration**. Only saved maintenance forms are available in the **Maintenance Form** dropdown."
+            "term": "Upload Excel",
+            "definition": "Adds many categories at once from an Excel file."
           },
           {
-            "title": "Using Adobe Sign in the Rentals (3rd Party) flow",
+            "term": "Add Category",
+            "definition": "Opens **Add Category** with five fields. **Equipment Cost Code** (required) picks the equipment type from the Equipment cost codes in Global Data. **Default Rate Card Template** (required) picks the rate card that prices this category. **Inspection Checklist** picks the checklist used for pre-dispatch and post-rent inspections. **Depreciation Method** offers **Straight Line** and **Declining Balance**. **Default Useful Life** is a number you type."
+          },
+          {
+            "term": "Fuel Types",
+            "definition": "The fuel names (**Name**) that appear as the Fuel Type choice when you create equipment."
+          },
+          {
+            "term": "Add Fuel Type",
+            "definition": "Opens a dialog with one required field, **Name**, for example a fuel such as diesel."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Add an equipment category",
             "steps": [
-              "Ensure the Adobe Acrobat Sign integration is set up for your organization at Global Data → Global Settings → Adobe Sign Settings.",
-              "In the Rentals flow, once equipment has been checked out, complete the Lease Agreement and send it via Email Agreement for Approval.",
-              "The 3rd party can then digitally sign the agreement through the Adobe Sign integration as part of their approval, rather than only clicking Approve."
+              "Open **Settings** and click **Equipment Setup**.",
+              "Click **Add Category** above the **Equipment Categories** table.",
+              "Choose the **Equipment Cost Code** and the **Default Rate Card Template**.",
+              "Optionally choose the **Inspection Checklist** and **Depreciation Method** and type the **Default Useful Life**.",
+              "Click **Submit**."
             ]
           },
           {
-            "title": "Configure the equipment lifecycle forms before go-live",
+            "title": "Add a fuel type",
             "steps": [
-              "Go to <strong>Equipment Management → Settings → Equipment Management Forms</strong>.",
-              "Open each lifecycle card in turn — <strong>Request, Check Out, Shipment, Ship, Load, In Transit, Delivered, Received, Lease Agreement, Maintenance Forms, Equipment Utilization Forms & Logs</strong> — and configure the fields/steps your organization needs at that stage.",
-              "Confirm the Lease Agreement form is set up if your organization sends equipment to 3rd parties, since that stage only applies to Rentals (3rd Party) Load Out Requests on earlier-version environments."
-            ],
-            "note": "The order shown here follows the equipment lifecycle itself (requested, then checked out, shipped, delivered, and so on). This ordering is a reasonable default based on how the stages depend on each other, though it hasn't been confirmed as the only valid sequence to configure them in."
+              "Open **Settings** and click **Equipment Setup**.",
+              "Click **Add Fuel Type** under **Fuel Types**.",
+              "Type the **Name** and click **Submit**."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Accessory Setup",
+        "intro": "<p><strong>Accessory Setup</strong> is the same kind of list as Equipment Setup, but for accessories such as attachments and tools. Each row gives one accessory category its defaults.</p>",
+        "images": [
+          {
+            "src": "assets/product/equipment/108.jpg",
+            "caption": "The Add Category dialog on Accessory Setup"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Accessory Categories",
+            "definition": "The table of accessory categories with **Type**, **Category**, **Sub Category**, **Default Rate Card Template**, **Inspection Checklist**, **Depreciation Method**, **Default Useful Life** and **Actions**."
+          },
+          {
+            "term": "Upload Excel",
+            "definition": "Adds many accessory categories at once from an Excel file."
+          },
+          {
+            "term": "Add Category",
+            "definition": "Opens **Add Category** with the same fields as Equipment Setup except that **Equipment Cost Code** lists accessory cost codes (its placeholder reads **Select Accessory**). **Default Rate Card Template** is required."
+          }
+        ]
+      },
+      {
+        "heading": "Equipment and Accessory Status",
+        "intro": "<p><strong>Equipment / Accessory Status</strong> lists the eleven statuses an equipment or accessory record can have, with the colour used for each on maps, boards and lists. A system administrator chooses which statuses are in use.</p>",
+        "images": [
+          {
+            "src": "assets/product/equipment/109.jpg",
+            "caption": "The status list"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Status",
+            "definition": "The status names in order: **Available**, **Allocated**, **In Transit**, **On Rent**, **In Maintenance**, **Out of Service**, **Off Rent**, **In Active**, **Yard Only**, **Unavailable** and **Dispose Initiated**."
+          },
+          {
+            "term": "Color",
+            "definition": "The colour swatch shown next to the status everywhere it appears."
+          },
+          {
+            "term": "Enabled",
+            "definition": "A checkbox per status. **On Rent** is ticked on this site."
+          },
+          {
+            "term": "Utility Threshold",
+            "definition": "A number per status, 0 by default. The **Off Rent** row shows it as an editable box."
           }
         ]
       },
       {
         "heading": "Maintenance Config",
-        "intro": "<p>Use **Maintenance Config** to set how often preventive maintenance is due for each equipment or accessory category, and which maintenance form is filled when it is done. Equipment Management Administrators set it once under **Settings → Maintenance Config**; **Preventive Maintenance** then uses these intervals when a planner schedules PM.</p>",
+        "intro": "<p><strong>Maintenance Config</strong> holds two lists used by maintenance: the <strong>PM Interval Configuration</strong> that tells the system how often each category needs preventive maintenance, and the <strong>Work Order Types</strong> you can choose when a repair is raised.</p>",
         "images": [
           {
-            "src": "assets/guides/equipment/536.png",
-            "caption": "PM Interval Configuration list"
+            "src": "assets/product/equipment/110.jpg",
+            "caption": "The Maintenance Config page"
           }
         ],
         "definitions": [
           {
-            "term": "Who does this",
-            "definition": "The **Equipment Management Administrator** (System Administrator / Equipment Admin) configures the PM intervals. Maintenance Planners then schedule PM from them."
-          },
-          {
             "term": "PM Interval Configuration",
-            "definition": "The list under **Settings → Maintenance Config**. Columns: **Category** (the category the interval applies to), **Interval** (for example 100 DAYS / 100 HOURS / 200 KILOMETERS), **Type** (the trigger types used: Calendar, Hours, Distance), **Hours Threshold**, **Check List** (the maintenance form linked to the interval), **Status** and **Actions**."
+            "definition": "One row per category and schedule with **Category**, **Interval**, **Type**, **Hours Threshold**, **Check List**, **Status** and **Actions**."
           },
           {
-            "term": "Status (toggle)",
-            "definition": "Turns the interval on or off. It must be enabled to add maintenance forms for the equipment; if it is disabled, the equipment cannot be added to maintenance."
-          },
-          {
-            "term": "Actions (interval row)",
-            "definition": "Click the **Edit** icon to edit, or the **Delete** icon to delete the interval."
-          },
-          {
-            "term": "Category (Add Interval)",
-            "definition": "The equipment or accessory category the interval applies to. Mandatory."
-          },
-          {
-            "term": "Trigger Type",
-            "definition": "How the maintenance becomes due: **Calendar**, **Hours** or **Distance**. Mandatory."
-          },
-          {
-            "term": "Trigger Value",
-            "definition": "The interval value, for example 2, 100 or 200. Mandatory."
-          },
-          {
-            "term": "Trigger Unit",
-            "definition": "The unit for the trigger, for example Days for Calendar. The list loads after the trigger type is selected. Mandatory."
-          },
-          {
-            "term": "Maintenance Form",
-            "definition": "The maintenance form to be filled when the maintenance is done. Mandatory. Only saved forms from **Equipment Management Forms → Maintenance Forms** appear."
-          },
-          {
-            "term": "Where this data goes",
-            "definition": "The interval for each schedule type on **Maintenance → Preventive Maintenance → Schedule PM** comes from the PM Interval Configuration of the equipment's category. The **Next PM Due** is calculated from the **Last PM** and the interval, and the due dates appear on the Maintenance Calendar."
+            "term": "Add (PM Interval)",
+            "definition": "Opens **Add Interval**. Choose the **Category** (required), then tick one or more schedule types. **Calendar Based** asks for a **Unit** (starts at Days) and an **Interval** value. **Hours Based** asks for a **Unit** (Hours), an **Interval** and an **Hours Threshold** (starts at 0). **Distance Based** asks for a **Unit** (starts at Kilometer) and an **Interval**. Finally choose the **Maintenance Form** (required) that is filled in when the service falls due.",
+            "images": [
+              {
+                "src": "assets/product/equipment/111.jpg",
+                "caption": "Add Interval with all three schedule types ticked"
+              }
+            ]
           },
           {
             "term": "Work Order Types",
-            "definition": "The same **Maintenance Config** screen has **Work Order Types**, the types of work order used for maintenance work. Configure them if Work Orders are to be raised from Preventive Maintenance."
+            "definition": "One row per type of work with **Type**, **Description**, **Default Priority**, **Status** and **Actions**."
+          },
+          {
+            "term": "Add (Work Order Type)",
+            "definition": "Opens **Work Order Type Form** with four required fields: **Type** (a name such as Excavators), **Description**, **Priority** (**Low**, **Medium**, **High** or **Critical**) and **Status**. The priority becomes the default priority of work orders of this type.",
+            "images": [
+              {
+                "src": "assets/product/equipment/112.jpg",
+                "caption": "The Work Order Type Form"
+              }
+            ]
           }
         ],
         "procedures": [
           {
-            "title": "Add a PM interval",
+            "title": "Add a preventive maintenance interval",
             "steps": [
-              "Click **Settings → Maintenance Config**. The **PM Interval Configuration** list opens.",
-              "Click **Add**. The **Add Interval** window opens.",
-              "Select the **Category**.",
-              "Under **Intervals**, select the **Trigger Type** (Calendar / Hours / Distance), enter the **Trigger Value** and select its **Trigger Unit**.",
-              "Click **Add Interval** to add another trigger to the same category, or click the **Delete** icon to remove a trigger row.",
-              "Select the **Maintenance Form**.",
-              "Click **Submit**. The interval is displayed in the list with the **Status** toggle on."
-            ],
-            "images": [
-              {
-                "src": "assets/guides/equipment/536.png",
-                "caption": "Click Settings → Maintenance Config. The PM Interval Configuration list opens.",
-                "step": 1
-              },
-              {
-                "src": "assets/guides/equipment/537.png",
-                "caption": "Click Add. The Add Interval window opens.",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/538.png",
-                "caption": "Click Add. The Add Interval window opens.",
-                "step": 2
-              },
-              {
-                "src": "assets/guides/equipment/539.png",
-                "caption": "Select the Category.",
-                "step": 3
-              },
-              {
-                "src": "assets/guides/equipment/540.png",
-                "caption": "Under Intervals, select the Trigger Type (Calendar / Hours / Distance),…",
-                "step": 4
-              },
-              {
-                "src": "assets/guides/equipment/541.png",
-                "caption": "Click Add Interval to add another trigger to the same category, or click the…",
-                "step": 5
-              },
-              {
-                "src": "assets/guides/equipment/542.png",
-                "caption": "Select the Maintenance Form.",
-                "step": 6
-              },
-              {
-                "src": "assets/guides/equipment/543.png",
-                "caption": "Click Submit. The interval is displayed in the list with the Status toggle on.",
-                "step": 7
-              },
-              {
-                "src": "assets/guides/equipment/544.png",
-                "caption": "Click Submit. The interval is displayed in the list with the Status toggle on.",
-                "step": 7
-              }
-            ],
-            "note": "The **Status** toggle must be enabled to add maintenance forms for the equipment. If disabled, the equipment cannot be added to maintenance."
-          },
-          {
-            "title": "Edit, switch off or delete a PM interval",
-            "steps": [
-              "Go to **Settings → Maintenance Config**.",
-              "Click the **Edit** icon under **Actions** to change the interval, or the **Delete** icon to delete it.",
-              "Turn the **Status** toggle off to deactivate an interval, or on to activate it."
+              "Open **Settings** and click **Maintenance Config**.",
+              "Click **Add** in **PM Interval Configuration**.",
+              "Choose the **Category**.",
+              "Tick **Calendar Based**, **Hours Based** or **Distance Based** and enter the **Unit** and **Interval** for each.",
+              "Choose the **Maintenance Form** and click **Submit**."
             ]
           }
         ]
       },
       {
-        "heading": "More Settings",
-        "intro": "<p>These **Settings** pages hold company rules for equipment billing, disposal, reminders and status. Equipment Management administrators set them once; they apply to everyone using the module. Your company may see **Asset** instead of **Equipment** (**Global Data → Settings → Naming Framework**).</p>",
-        "definitions": [
+        "heading": "Billing Rules",
+        "intro": "<p><strong>Billing Rules</strong> sets how many hours count as a billable day for equipment and holds named rules that decide billing from the length of the rental. A system administrator maintains it.</p>",
+        "images": [
           {
-            "term": "Billing Rules",
-            "definition": "Open **Equipment Management → Settings → Billing Rules**. It has **Billable Hours** and a list of billing rules."
-          },
-          {
-            "term": "Disposal Methods",
-            "definition": "Open **Equipment Management → Settings → Disposal Methods**. The methods are **Auction**, **Private Sale**, **Trade-in**, **Scrap** and **Internal Transfer**."
-          },
-          {
-            "term": "Notification Thresholds",
-            "definition": "Open **Equipment Management → Settings → Notification Thresholds**. It sets the days for **Registration Expiry**, **Warranty Expiry**, **Insurance Expiry**, **Telemetry Stale** and **Approaching Planned Return Date**, plus **Utilization Log Reminder** (days, time and emails)."
-          },
-          {
-            "term": "Equipment Due Assignment Days",
-            "definition": "Open **Equipment Management → Settings → Equipment Due Assignment Days**. **Due Period** is set in days, months or years. **Utilization Idle Percentage %** is the idle limit used on utilization logs."
-          },
-          {
-            "term": "Equipment/Accessory Status",
-            "definition": "Open **Equipment Management → Settings → Equipment Status** (or **Accessory Status**). Each status has a name, a colour, an enabled switch and a utility threshold. Statuses include **Yard Only**, **Unavailable** and **Dispose Initiated**."
-          },
-          {
-            "term": "Approval Workflow: Utilization Logs",
-            "definition": "The **Utilization Logs** tab in **Settings → Approval Workflow** sets the approval levels for submitted utilization logs."
+            "src": "assets/product/equipment/117.jpg",
+            "caption": "The Billing Rules page with no rules"
           }
         ],
-        "procedures": []
-      },
-      {
-        "heading": "Earlier Version Load Out",
-        "intro": "<p>Some environments running an earlier version of Equipment Management move equipment through a <strong>Load Out Request</strong> tab instead of the Operations board and Hauling. This short note describes it. New setups should use Requests, Allocation and Hauling above.</p>",
         "definitions": [
           {
-            "term": "Earlier Load Out Request flow",
-            "definition": "The **Load Out Request** tab has three sub-tabs: **LOR Internal Jobs**, **Rentals** and **Workflows**. Internal jobs have Load Out Requests (LOR-#) that go Request, Check Out, Shipment, Load, In Transit, Delivered, Received and Preview, and Return Requests (RR-#) for the way back. Rentals from or to a third party go Request, Check Out, Lease Agreement, Ship, Check In, Shop In and Preview."
+            "term": "Billable Hours",
+            "definition": "One number box under **Billing Rules Settings**. Its info icon explains it: the number of hours per day used to calculate billable usage for equipment allocations. **Save Changes** at the top right stores it."
           },
           {
-            "term": "Earlier approvals and forms",
-            "definition": "Approval chains for Load Out Request, Return Request and Rentals are set under the Workflows tab, each level being **All must approve** or **Anyone can approve**. The forms for each stage (Request, Check Out, Shipment, Ship, Load, In Transit, Delivered, Received and Lease Agreement) are configured under **Settings → Equipment Management Forms**. Equipment with a Check Out or Check In maintenance package needs its maintenance form completed first."
+            "term": "Billing Rules list",
+            "definition": "The rules you have created. While there are none it reads **No billing rules added yet**."
           },
           {
-            "term": "Where the Arena 2.0 flow differs",
-            "definition": "In Arena 2.0, requests are raised with **New Request** under Operations, **Self Pickup** and **Company Logistics** are chosen at the Assign stage, hauls are managed under Hauling, and the equipment statuses are Available, Allocated, In Transit, On Rent, Off Rent and In Maintenance."
+            "term": "Add",
+            "definition": "Opens **Add Billing Rule** with **Rule Name** (required), **Rule Type** (required, the only choice is **Duration Based**) and **Rule Criteria** (required). Each criteria row has a measure (**Duration**), a **Condition** (**Less Than**, **Greater Than**, **Equal**, **Between**), a unit (**Days**) and a start value. **+ Add Row** adds more rows. Tick **Default** to make the rule the default, then **Save Rule**.",
+            "images": [
+              {
+                "src": "assets/product/equipment/113.jpg",
+                "caption": "The Add Billing Rule dialog"
+              }
+            ]
           }
         ],
-        "procedures": []
-      },
-      {
-        "heading": "Troubleshooting",
-        "intro": "<p>Use this page when an Equipment Management step does not work as expected. Most problems trace back to master data, a setting, or an open inspection issue. Steps about master data, profiles, telematics, geofences, hauling and the Allocation Lifecycle follow the company's Arena 2.0 guides and are labelled as such.</p>",
-        "definitions": [],
         "procedures": [
           {
-            "title": "The equipment or accessory I need is not in the dropdown",
+            "title": "Add a billing rule",
             "steps": [
-              "Open <strong>Settings → Equipment Setup</strong> (or <strong>Accessory Setup</strong>) and add it with <strong>Add Category</strong>.",
-              "If no cost code is offered, create it first under <strong>Global Data → Cost → Equipment Code</strong>."
+              "Open **Settings** and click **Billing Rules**.",
+              "Click **Add**.",
+              "Type the **Rule Name**; keep **Rule Type** as **Duration Based**.",
+              "In **Rule Criteria** pick the **Condition**, the unit and the value, and use **+ Add Row** for more bands.",
+              "Tick **Default** if this rule should apply by default.",
+              "Click **Save Rule**."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Disposal Methods",
+        "intro": "<p><strong>Disposal Methods</strong> is the list of ways in which equipment can be disposed of. The choices appear when a disposal is started for a piece of equipment.</p>",
+        "images": [
+          {
+            "src": "assets/product/equipment/114.jpg",
+            "caption": "The Disposal Methods list"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Disposal Method list",
+            "definition": "Rows with **S.No**, **Disposal Method** and **Actions**. The site starts with **Auction**, **Private Sale**, **Trade-in**, **Scrap** and **Internal Transfer**."
+          },
+          {
+            "term": "Add Disposal Method",
+            "definition": "Opens a dialog with one required field, **Disposal Method Name**, and **Submit** adds it to the list."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Add a disposal method",
+            "steps": [
+              "Open **Settings** and click **Disposal Methods**.",
+              "Click **Add Disposal Method**.",
+              "Type the **Disposal Method Name**.",
+              "Click **Submit**."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Equipment Users and Permissions",
+        "intro": "<p><strong>Users and Permissions</strong> controls who can do what in Equipment Management. Access is given through user groups. Each group has a permission grid of screens and actions, and a list of the people in it.</p>",
+        "images": [
+          {
+            "src": "assets/product/equipment/115.jpg",
+            "caption": "The user groups page"
+          },
+          {
+            "src": "assets/product/equipment/116.jpg",
+            "caption": "The permission grid of the Equipment Management group"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Add User Group",
+            "definition": "Opens an empty group page with a **Enter Group Name** box, the permission grid and a **Users** tab. Name the group, tick permissions and click **Save Changes**."
+          },
+          {
+            "term": "Search by group name",
+            "definition": "Filters the group cards by name."
+          },
+          {
+            "term": "Group card",
+            "definition": "One card per group. The **Permissions** button opens its grid and the **Users** button opens its member list. The three-dot menu on the card holds more actions."
+          },
+          {
+            "term": "Permissions tab",
+            "definition": "A grid of every Equipment Management screen with the columns **View**, **Create**, **Edit**, **Delete**, **Admin**, **Download**, **Print**, **Assign To** and **Roll Back**. Rows are grouped as **Equipment** (Equipment Master, Accessory Master, Third Party Rental and the Excel uploads), **Hauling**, **Maintenance**, **Operations**, **Overview**, **Settings**, **Utilization**, **Reports** and **Inspection Checklists Issues**. A box is greyed out when that action does not exist for the screen. A **Master Permission** row at the top of each group sets all its rows at once. The **Search by Permission** box finds a row."
+          },
+          {
+            "term": "Users tab",
+            "definition": "The people in the group, with **S.No.**, **Profile Photo**, **Name**, **Roster ID**, **Email ID**, **Username**, **Groups** (how many groups the person is in) and a delete action. It has **Add Users**, **Search Profiles**, paging and **Manage Columns**."
+          },
+          {
+            "term": "Add Users",
+            "definition": "Opens a list of everyone in the company with a search box, **Select All** and one tick box per person. Click **Submit** to add the ticked people to the group."
+          },
+          {
+            "term": "Save Changes",
+            "definition": "Stores the group name and permission ticks. It is the button at the bottom of the Permissions tab."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Give a team access to Equipment Management",
+            "steps": [
+              "Open **Settings** and click **Users and Permissions**.",
+              "Click **Add User Group** or open an existing group with its **Permissions** button.",
+              "Type the group name and tick the **View**, **Create**, **Edit** or other boxes for each screen.",
+              "Click **Save Changes**.",
+              "Open the **Users** tab, click **Add Users**, tick the people and click **Submit**."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Equipment Due Assignment Days",
+        "intro": "<p><strong>Equipment Due Assignment Days</strong> (page title <strong>Equipment Due Assignment Days</strong>) holds two settings: how far ahead something counts as due and how much idle time is acceptable for utilization.</p>",
+        "images": [
+          {
+            "src": "assets/product/equipment/118.jpg",
+            "caption": "The Equipment Due Assignment Days page"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Due Period",
+            "definition": "Three number boxes, **Days**, **Months** and **Years**, that together set the length of the due period."
+          },
+          {
+            "term": "Utilization Idle Percentage",
+            "definition": "A required percentage box under **Utilization**. It is the share of idle time the company accepts for its equipment."
+          },
+          {
+            "term": "Save",
+            "definition": "Stores both settings."
+          }
+        ]
+      },
+      {
+        "heading": "Notification Thresholds",
+        "intro": "<p><strong>Notification Thresholds</strong> sets how many days before an event Equipment Management warns people, and schedules a daily reminder to add utilization logs.</p>",
+        "images": [
+          {
+            "src": "assets/product/equipment/119.jpg",
+            "caption": "The Notification Threshold Settings"
+          },
+          {
+            "src": "assets/product/equipment/120.jpg",
+            "caption": "The Utilization Log Reminder"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Registration Expiry (Days)",
+            "definition": "Days before a registration expires when a notification is sent."
+          },
+          {
+            "term": "Warranty Expiry (Days)",
+            "definition": "Days before a warranty expires when a notification is sent."
+          },
+          {
+            "term": "Insurance Expiry (Days)",
+            "definition": "Days before an insurance policy expires when a notification is sent."
+          },
+          {
+            "term": "Telemetry Stale (Days)",
+            "definition": "Number of days of silence from a tracker after which its data counts as stale."
+          },
+          {
+            "term": "Approaching Planned Return Date",
+            "definition": "Days before the planned return date of rented equipment when a notification is sent."
+          },
+          {
+            "term": "Save Changes",
+            "definition": "Stores the five thresholds. All start at 0."
+          },
+          {
+            "term": "Utilization Log Reminder",
+            "definition": "A daily email that reminds requesters to add utilization logs for their on-rent equipment. Tick the days under **Send reminder on** (or **Select All**), set the **Time** with hours, minutes and AM or PM, and use **+ Add** for another reminder time. **Save Reminder** stores it."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Set a daily utilization log reminder",
+            "steps": [
+              "Open **Settings** and click **Notification Thresholds**.",
+              "Scroll to **Utilization Log Reminder**.",
+              "Tick the days under **Send reminder on**.",
+              "Enter the **Time**.",
+              "Click **Save Reminder**."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Request Priority Threshold",
+        "intro": "<p><strong>Request Priority Threshold</strong> decides the priority of an allocation request from its required date. The closer the required date is to today, the higher the priority.</p>",
+        "images": [
+          {
+            "src": "assets/product/equipment/121.jpg",
+            "caption": "The Request Priority Threshold page"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "High Priority (Days)",
+            "definition": "A request whose required date is this many days from today or sooner becomes high priority. It shows 1 here."
+          },
+          {
+            "term": "Medium Priority (Days)",
+            "definition": "A request whose required date is this many days from today or sooner, but later than the high limit, becomes medium priority. It shows 3 here."
+          },
+          {
+            "term": "Save Changes",
+            "definition": "Stores both limits."
+          }
+        ]
+      },
+      {
+        "heading": "Equipment Utilization Report",
+        "intro": "<p>The <strong>Equipment Utilization Report</strong> adds up how many hours each machine worked and sat idle, how much fuel it used and what its rates come to. It is the first tile on the Reports page. Every report table has the same toolbar: a search box, <strong>Export</strong>, <strong>Filters</strong>, <strong>Manage Columns</strong>, a layers icon and a save icon.</p>",
+        "images": [
+          {
+            "src": "assets/product/equipment/125.jpg",
+            "caption": "The Reports page with its six tiles"
+          },
+          {
+            "src": "assets/product/equipment/126.jpg",
+            "caption": "The Equipment Utilization Report"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Search by Equipment ID",
+            "definition": "Finds the rows of one piece of equipment by its ID."
+          },
+          {
+            "term": "Columns",
+            "definition": "**Actions**, **Equipment ID**, **Geofence**, **Allocation ID**, **Ownership**, **Status**, **Make**, **Model**, **Type**, **Business Unit**, **Category**, **Linked Equipment**, **Production Category**, **Total Hours**, **Total Days**, **Work Hours**, **Idle Hours**, **Idle %**, **Fuel Consumption**, **Gallons/Hour**, **Field Work Hours**, **Field Idle Hours**, **Field Idle %**, **Fuel**, **Hour Rate**, **Day Rate**, **Weekly Rate**, **Monthly Rate** and **Total**. Rates and the total are in the company currency."
+          },
+          {
+            "term": "Filters",
+            "definition": "Opens a panel with **Date Range** (a **Day** or **Week** switch and a date picker that starts on today), **Equipment**, **Type**, **Assigned Project**, **Business Unit**, **Production Category**, **Ownership**, **Status**, **Idle % Threshold** (type a percentage), **Hours Threshold** (type a number of hours) and **Approval Status**. **Apply** runs the filter, **Clear All** resets it and **Save Filters** keeps the choice for next time.",
+            "images": [
+              {
+                "src": "assets/product/equipment/123.jpg",
+                "caption": "The Filters panel of the Equipment Utilization Report"
+              }
             ]
           },
           {
-            "title": "The Fuel Type or default rate card is missing",
-            "steps": [
-              "Add the Fuel Type under <strong>Settings → Equipment Setup</strong>. Fuel Type shows only for equipment, not for accessories.",
-              "Set the <strong>Default Rate Card Template</strong> against the category in Equipment Setup, and make sure the template exists under Global Data → Cost → Rate Card Template."
-            ],
-            "note": ""
-          },
-          {
-            "title": "A bulk upload did not create the records I expected",
-            "steps": [
-              "Start again from the current <strong>Sample Excel</strong>; the column layout must match.",
-              "Check that the equipment, categories, business units and locations in the file already exist."
+            "term": "Manage Columns",
+            "definition": "Opens a panel with **Column Options** (a tick box per column and **Select All**) and **Column Arrangement** (drag a column to change its position or click its X to remove it). **Reset to Default** restores the standard layout and **Apply** keeps your layout.",
+            "images": [
+              {
+                "src": "assets/product/equipment/124.jpg",
+                "caption": "The Manage Columns panel"
+              }
             ]
           },
           {
-            "title": "The map, geofence, Engine Hours, GPS Fix Time or Message Time are blank",
-            "steps": [
-              "Open the equipment's <strong>Telematics</strong> tab and check that a device is mapped. These fields fill in from the device and cannot be typed.",
-              "Use <strong>Engine Hours (Acquisition)</strong> on the Specifications panel to record hours at acquisition.",
-              "Check the last-updated time on each Live Data reading. Readings can lag by the fetch interval set for the provider."
-            ],
-            "note": ""
+            "term": "Export",
+            "definition": "Sends the table out as a file."
           },
           {
-            "title": "A panel change on the profile was not saved",
-            "steps": [
-              "Each panel saves on its own. Click <strong>Save</strong> on the panel you edited before moving to another one."
+            "term": "View Multiple Layouts",
+            "definition": "The layers icon next to **Manage Columns**. Its tooltip is **View Multiple Layouts**, and it lists the column layouts saved for this report. The save icon beside it keeps the current layout.",
+            "images": [
+              {
+                "src": "assets/product/equipment/122.jpg",
+                "caption": "The report toolbar with the layouts tooltip"
+              }
             ]
+          }
+        ]
+      },
+      {
+        "heading": "PM Service Tracker Report",
+        "intro": "<p>The <strong>PM Service Tracker Report</strong> shows, for each piece of equipment or accessory, where it stands on preventive maintenance: when it was last serviced, what its meter reads now and when the next service is due.</p>",
+        "images": [
+          {
+            "src": "assets/product/equipment/127.jpg",
+            "caption": "The PM Service Tracker Report"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Search using Equipment/ Accessory ID",
+            "definition": "Finds one piece of equipment or accessory by its ID."
           },
           {
-            "title": "No telematics provider or device appears when mapping",
-            "steps": [
-              "Check that the provider is configured under <strong>Global Data → Marketplace → Telematics</strong>, and that you clicked <strong>Attach</strong> and then <strong>Submit</strong>.",
-              "Pick the right Telematics Provider, because devices are listed per provider, and check the device is registered with it.",
-              "The equipment must already exist in the Equipment Master."
-            ],
-            "note": ""
+            "term": "Columns",
+            "definition": "**Equipment / Accessory**, **Make**, **Model**, **status**, **Assigned Location**, then three groups of three: **Last PM (Cal)**, **Current (Cal)** and **Next PM Due (Cal)** for calendar schedules, the same three for hours (**Hrs**) and the same three for distance (**Dist**). The last three columns, **Calendar Status**, **Hours Status** and **Distance Status**, say whether each schedule is on time or due."
           },
           {
-            "title": "A geofence did not save or does not appear on the Fleet Map",
-            "steps": [
-              "Add at least three coordinates before <strong>Save Geofence</strong>.",
-              "Switch the <strong>Active</strong> toggle on in the Geofencing table, and make sure the <strong>Geofences</strong> map filter is on.",
-              "City, state and country fill in only when points are picked by search or by dragging on the map."
-            ],
-            "note": ""
-          },
-          {
-            "title": "No equipment markers show on the Fleet Map",
-            "steps": [
-              "Only equipment with a mapped telematics device appear. Zoom in, because wide zoom groups them into clusters.",
-              "Click <strong>Clear</strong> and reapply the filters one at a time. Check <strong>Only Running Equipment</strong> and <strong>Not Reported in Last 72 Hours</strong>.",
-              "Click <strong>Save Filter</strong> to keep your choices between visits."
-            ],
-            "note": ""
-          },
-          {
-            "title": "No equipment appears under Available Equipment, or rates are blank",
-            "steps": [
-              "Check that a matching unit exists in the master with status <strong>Available</strong>. Allocated, On Rent, In Transit and Off Rent equipment are not offered.",
-              "Check that the Rate Card Template covers the equipment's category, then select it again."
+            "term": "Filters",
+            "definition": "**Equipment**, **Status** and **Scheduled Date Range** (start and end date). **Apply**, **Clear All** and **Save Filters** work as in the other reports.",
+            "images": [
+              {
+                "src": "assets/product/equipment/128.jpg",
+                "caption": "The Filters panel of the PM Service Tracker Report"
+              }
             ]
+          }
+        ]
+      },
+      {
+        "heading": "Compliance Warranty Tracker",
+        "intro": "<p>The <strong>Compliance Warranty Tracker</strong> lists each piece of equipment with the dates its warranty, registration and insurance run out, so the team can renew them before they lapse.</p>",
+        "images": [
+          {
+            "src": "assets/product/equipment/129.jpg",
+            "caption": "The Compliance Warranty Tracker"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Search by Equipment ID",
+            "definition": "Finds one piece of equipment by its ID."
           },
           {
-            "title": "The inspection stage was skipped, or the inspection form is empty",
-            "steps": [
-              "The stage appears only if <strong>Pre-Dispatch Inspection</strong> was switched on when confirming assignment. Move the request back and confirm the assignment again with it switched on.",
-              "Link an <strong>Inspection Checklist</strong> to the equipment under <strong>Settings → Equipment Setup / Accessory Setup</strong>."
-            ],
-            "note": ""
+            "term": "Columns",
+            "definition": "**Equipment**, **Status**, **Days to Warranty Expiry** (how many days remain), **Registration Expiry** and **Insurance Expiry**."
           },
           {
-            "title": "A request does not move past Ready for Dispatch, Off-Rent or Closed",
-            "steps": [
-              "For Ready for Dispatch, enter both the <strong>Dispatch Date</strong> and the <strong>On-Rent Date</strong>.",
-              "Check <strong>Inspection Checklist Issues</strong> for an open issue against the equipment and rectify it. This also blocks Closed and a haul pickup.",
-              "For a card held at Off-Rent with a <strong>Haul Initiated</strong> tag, take the return haul through to Completed in Hauling."
-            ],
-            "note": ""
+            "term": "Filters",
+            "definition": "**Equipment**, **Type**, **Business Unit** and **Production Category**, with **Apply**, **Clear All** and **Save Filters**."
+          }
+        ]
+      },
+      {
+        "heading": "Hauling Cost Log",
+        "intro": "<p>The <strong>Hauling Cost Log</strong> lists every equipment haul with who moved it, from where to where, and what it cost. It lets the team compare the estimated cost with the final cost and decide what to bill.</p>",
+        "images": [
+          {
+            "src": "assets/product/equipment/130.jpg",
+            "caption": "The Hauling Cost Log"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Search using Equipment ID",
+            "definition": "Finds the hauls of one piece of equipment."
           },
           {
-            "title": "The off-rent request cannot be submitted",
-            "steps": [
-              "Check that the request is in the <strong>On-Rent</strong> stage.",
-              "Check that an <strong>Off-Rent / Extension Request</strong> approval workflow is marked <strong>Set as Default</strong> under Settings → Approval Workflow."
-            ],
-            "note": ""
+            "term": "Columns",
+            "definition": "**Haul ID**, **Equipment**, **Equipment ID**, **Miscellaneous Description**, **From**, **To**, **Requested Date**, **Scheduled Pick Up Date**, **Assigned Driver**, **Assigned Vehicle ID**, **Assigned Location**, **Arrival Condition**, **Estimated Cost**, **Cost To Bill** and **Final Cost**."
           },
           {
-            "title": "The equipment status did not change, or no destination location appears",
-            "steps": [
-              "After a haul, the status follows the On-Rent Date (outbound) or the Pickup Date (return). Update the date in the allocation request.",
-              "On Inventory Self Pickup the status stays On Rent until the post-rent inspection is submitted.",
-              "The destination dropdown lists configured Inventory Locations, so add the location first."
-            ],
-            "note": ""
+            "term": "Filters",
+            "definition": "**Stage** (the haul stage), **Requested Date** range, **Assigned Driver**, **Assigned Project** and **Assigned Inventory**, with **Apply**, **Clear All** and **Save Filters**."
+          }
+        ]
+      },
+      {
+        "heading": "3rd Party Rental Activity and Spend Report",
+        "intro": "<p>The <strong>3rd Party Rental Activity &amp; Spend Report</strong> shows the equipment rented from outside vendors and what the rent costs, from purchase order to off-rent date.</p>",
+        "images": [
+          {
+            "src": "assets/product/equipment/131.jpg",
+            "caption": "The 3rd Party Rental Activity and Spend Report"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Search by PO Number or Equipment ID",
+            "definition": "Finds a rental by its purchase order number or the equipment ID."
           },
           {
-            "title": "No vehicle or driver appears, or a haul request is not visible",
-            "steps": [
-              "Check that the vehicle and driver exist under <strong>Hauling → Fleet and Schedule</strong>, are Available, and that the driver is mapped to a vehicle.",
-              "A haul exists only if <strong>Company Logistics</strong> was chosen on Assign (outbound) or when processing the off-rent (return). Check the filters on the Hauling board."
-            ],
-            "note": ""
+            "term": "Sort by",
+            "definition": "A list of columns (such as **PO Number**, **Equipment Description**, **Equipment ID** and **Type**) plus an arrow next to it that flips the direction of the sort."
+          },
+          {
+            "term": "Columns",
+            "definition": "**PO Number**, **Equipment Description**, **Equipment ID**, **Type**, **Vendor**, **Assigned Project**, **Project Number**, **Length of Rental (Duration)**, **Scheduled Return Date**, **Hourly Rate**, **Daily Rate**, **Weekly Rate**, **Monthly Rate**, **Freight Cost**, **Delivered Date**, **Off-Rent Date**, **Days on Rent**, **Total Rent Cost** and **Status**."
+          },
+          {
+            "term": "Filters",
+            "definition": "**Status**, **Vendor**, **Assigned Project**, **Type** (equipment type) and a **Date Range**, with **Apply**, **Clear All** and **Save Filters**."
+          }
+        ]
+      },
+      {
+        "heading": "Equipment Billing Worksheet",
+        "intro": "<p>The <strong>Equipment Billing Worksheet</strong> works out what to bill for each piece of equipment while it is on rent. It sets the hours from Utilization logs beside the hours reported by the tracker (Telematics) and the rate that was applied.</p>",
+        "images": [
+          {
+            "src": "assets/product/equipment/132.jpg",
+            "caption": "The Equipment Billing Worksheet"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Search Equipment ID",
+            "definition": "Finds one piece of equipment by its ID."
+          },
+          {
+            "term": "Columns",
+            "definition": "**Actions**, **Equipment ID**, **Production Category**, **On-Rent Date**, **Assigned Location**, **On-Rent Period (days)**, **Phase Code**, **Utilization Work Hours**, **Utilization Idle Hours**, **Utilization Total Hours**, **Telematics Work Hours**, **Telematics Idle Hours**, **Telematics Total Hours**, **Hourly Rate**, **Day Rate**, **Weekly Rate**, **Monthly Rate**, **Applied Rate**, **Total Bill**, **Owning BU**, **Assigned BU**, **Billing Type** and **Customer Name**."
+          },
+          {
+            "term": "Filters",
+            "definition": "**Date Range (On-Rent Date)**, **Billing Type**, **Equipment Type**, **Assigned Project**, **Assigned Inventory Location**, **Owning BU**, **Assigned BU**, **Phase Code**, **Production/Non-production** and **Approval Status**, with **Apply**, **Clear All** and **Save Filters**.",
+            "images": [
+              {
+                "src": "assets/product/equipment/133.jpg",
+                "caption": "The Filters panel of the Equipment Billing Worksheet"
+              }
+            ]
           }
         ]
       }
@@ -22698,31 +22140,52 @@ const MODULES = [
       "<strong>Settings</strong> also holds <strong>Maintenance Config</strong>, <strong>Billing Rules</strong>, <strong>Disposal Methods</strong>, <strong>Notification Thresholds</strong> and <strong>Equipment Due Assignment Days</strong>. Your company may see <strong>Asset</strong> instead of <strong>Equipment</strong> (<strong>Global Data → Settings → Naming Framework</strong>)."
     ],
     "sections": [
-      "Overview",
       "Fleet Map",
+      "Geofencing",
       "Equipment Master",
       "Equipment Profile",
-      "Master Data",
+      "Accessory Master",
+      "Inventory Locations",
       "3rd Party Rental",
+      "Master Data",
       "Telematics",
       "Requests",
+      "Allocation Lifecycle",
       "Allocation",
+      "Workflow Issues",
+      "Internal Hauling",
+      "Fleet & Schedule",
+      "External Hauling",
       "Hauling",
       "Add Utilization Log",
       "Utilization Logs",
+      "Utilization Summary",
+      "Issues",
+      "Auto Log Utilization",
       "Field Inspections",
-      "Equipment Issues",
-      "Non Conformance Report",
-      "Preventive Maintenance",
       "Parts PO",
+      "Preventive Maintenance",
       "Maintenance Calendar",
+      "Inspection Checklists Issues",
       "Reports",
+      "Equipment Management Forms",
+      "Approval Workflow",
       "Equipment Setup",
-      "Equipment Forms",
+      "Accessory Setup",
+      "Equipment and Accessory Status",
       "Maintenance Config",
-      "More Settings",
-      "Earlier Version Load Out",
-      "Troubleshooting"
+      "Billing Rules",
+      "Disposal Methods",
+      "Equipment Users and Permissions",
+      "Equipment Due Assignment Days",
+      "Notification Thresholds",
+      "Request Priority Threshold",
+      "Equipment Utilization Report",
+      "PM Service Tracker Report",
+      "Compliance Warranty Tracker",
+      "Hauling Cost Log",
+      "3rd Party Rental Activity and Spend Report",
+      "Equipment Billing Worksheet"
     ]
   },
   {
