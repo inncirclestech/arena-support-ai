@@ -23359,11 +23359,11 @@ const MODULES = [
         "definitions": [
           {
             "term": "+ Add User Group",
-            "definition": "Button at the top of the list."
+            "definition": "Opens a full page, not a dialog (address ends /role-management/group/add). A text box **Enter Group Name** with a pencil icon sits at the top. **Group Name** is required: leaving for the **Users** tab without a name shows \"Group Name is required*\" and the message \"Please save group name\". The **Users** tab does not open until the name is saved. The **Permissions** tab holds the matrix and **Save Changes**."
           },
           {
             "term": "+ Fetch Templates",
-            "definition": "Button at the top of the list."
+            "definition": "Runs the moment you click it; there is no dialog and no option to choose. It checks the 13 standard user groups and reports each one that already exists, in a warning box with an **Ok** button. The 13 groups: Super Admin, Opportunity Admin, Proposal Management Admin, Bid Management Admin, Procurement Admin, Inventory Management Admin, Time Management Admin, Work Order Admin, Expense Tracker Admin, Cost Tracking Admin, All Home Modules Admin, All Home Modules View Admin and Global Data Admin. When all exist the list stays unchanged."
           },
           {
             "term": "Search by group name",
@@ -23379,7 +23379,7 @@ const MODULES = [
           },
           {
             "term": "Permissions tab",
-            "definition": "A matrix of screens against ten columns, in this order: **View**, **Create**, **Edit**, **Delete**, **Admin View**, **Admin**, **Download**, **Print**, **Assign To** and **Roll Back**. A cell has a checkbox only where that column applies to that row."
+            "definition": "A matrix of screens against ten columns, in this order: **View**, **Create**, **Edit**, **Delete**, **Admin View**, **Admin**, **Download**, **Print**, **Assign To** and **Roll Back**. A cell has a checkbox only where that column applies to that row. The column headers have no tooltips."
           },
           {
             "term": "Search by Permission",
@@ -23399,7 +23399,7 @@ const MODULES = [
           },
           {
             "term": "Top-level sections",
-            "definition": "Global, Company, Construction Type, Home, Projects, General, Sub Contractor Management Settings, Fabrication, Enterprise Dashboard, Opportunity Management, Work Order Management, Asset Management, Bid Management, Cost Tracking, Expense Tracker, Inventory Management, Procurement, Proposal Management and Time Management. **Company** contains sub-sections such as Compliance Hub, Cost, Marketplace, People Management, Settings, UOM_PhaseCodes_CostTypes, Users And Permissions and Project User Groups."
+            "definition": "Nineteen: Global, Company, Construction Type, Home, Projects, General, Sub Contractor Management Settings, Fabrication, Enterprise Dashboard, Opportunity Management, Work Order Management, Asset Management, Bid Management, Cost Tracking, Expense Tracker, Inventory Management, Procurement, Proposal Management and Time Management. **Company** contains sub-sections such as Compliance Hub, Cost, Marketplace, People Management, Settings, UOM_PhaseCodes_CostTypes, Users And Permissions and Project User Groups."
           },
           {
             "term": "Tab notes",
@@ -23407,10 +23407,39 @@ const MODULES = [
           },
           {
             "term": "Users tab",
-            "definition": "Lists the members of the group. **+ Add Users**, a **Search Profiles** box, **Manage Columns** and a save-layout icon sit above the table. Columns: S.No., Profile Photo, Name, Roster ID, Email ID, Username, Groups and Actions. Each row has a red trash icon. A group with no members shows **No Data Available**."
+            "definition": "Lists the members of the group. **+ Add Users**, a **Search Profiles** box, **Manage Columns** and a save-layout icon sit above the table, with a pager such as \"( 1 to 6 ) of 6\". Columns: S.No., Profile Photo, Name, Roster ID, Email ID, Username, Groups and Actions. Each row has a red trash icon. A group with no members shows **No Data Available**."
+          },
+          {
+            "term": "Add Users dialog",
+            "definition": "**+ Add Users** opens **Add Users** with a **Search Profiles** box, a **Select All** checkbox and a scrolling list of users, one checkbox per row showing initials, \"employee ID - first name\" and the email. The list holds only users who are not yet in the group. Buttons **Cancel** and **Submit**."
           }
         ],
-        "procedures": []
+        "procedures": [
+          {
+            "title": "Start a new user group",
+            "steps": [
+              "Open **Users & Permissions**, then **Global Permission**, and click **+ Add User Group**.",
+              "Type the name in **Enter Group Name**.",
+              "Open the section you need in the **Permissions** matrix with its **+** expander."
+            ]
+          },
+          {
+            "title": "See which standard groups exist",
+            "steps": [
+              "Open **Global Permission**.",
+              "Click **+ Fetch Templates**. It runs at once.",
+              "Read the warning list, then click **Ok**."
+            ]
+          },
+          {
+            "title": "Open the Add Users dialog",
+            "steps": [
+              "Open **Global Permission** and click a group card's **Users** button.",
+              "Click **+ Add Users**.",
+              "Use **Search Profiles** or **Select All** to tick users."
+            ]
+          }
+        ]
       },
       {
         "heading": "Global Rosters",
@@ -24600,19 +24629,23 @@ const MODULES = [
       },
       {
         "heading": "Submittals Form",
-        "intro": "<p>The <strong>Submittals</strong> card defines the Submittal form. Open it from <strong>Forms</strong>, <strong>Construction Forms</strong>.</p>",
+        "intro": "<p>The <strong>Submittals</strong> card defines the Submittal form. Open it from <strong>Forms</strong>, <strong>Construction Forms</strong>. The builder has three steps and a status list of its own.</p>",
         "definitions": [
           {
             "term": "Template list",
             "definition": "Two templates: **Standard**, marked **Default**, and **General**, marked **(Configuration not present)**. A **Create Template** button sits above."
           },
           {
-            "term": "Header",
-            "definition": "Toggles for **Approval Workflow**, **Connected Services** (Old or New), **Status** and **Assigned To**; the **Log ID** box (value **SM**); **Status Configuration**; and **Save Changes**."
+            "term": "Header toggles",
+            "definition": "On the **Standard** template: **Approval Workflow** (Active), **Connected Services** (Active), **Connected Services Old / New** (New), **Status** (Active) and **Assigned To** (Active). The **Log ID** box holds **SM**. **Save Changes** sits beside it."
+          },
+          {
+            "term": "Status Configuration",
+            "definition": "Opens **Form Status Configuration**, a table with the columns **Form Type** (here **Submittal**) and **Status**. Three statuses: **Start** (light blue dot), **In Progress** (orange dot) and **Finish** (green dot). **Start** and **Finish** are fixed and have only a pencil icon. **In Progress** also has a red trash icon and a drag handle, so it is the one you can delete or reorder. The **Add Status** row sits between **In Progress** and **Finish**, so added statuses go between **Start** and **Finish**. An **Add Status** row adds a new status. The dialog has no **Save** button; close it with the x."
           },
           {
             "term": "Steps",
-            "definition": "Three steps: **Submittal Form**, **Trigger Points** and **Preview Form**."
+            "definition": "Three steps: **1 Submittal Form**, **2 Trigger Points** and **3 Preview Form**."
           },
           {
             "term": "Submitted To",
@@ -24632,11 +24665,19 @@ const MODULES = [
           },
           {
             "term": "Submittal Information",
-            "definition": "Table with the columns Item ID, Item Name, Intended Use and Comments."
+            "definition": "Table with the columns Item ID, Item Name, Intended Use and Comments, each a Text Box."
           },
           {
             "term": "Is all the data appropriate?",
             "definition": "Check Box with the options Yes and No."
+          },
+          {
+            "term": "2 Trigger Points",
+            "definition": "A read-only **Form Title** box (**Submittal Form**) and a collapsible **Section 1 of 1**. Every field, and every option of a choice field, has two checkboxes: **Raise Issue when the field is updated** and **Enter Notes when the field is updated**. A table column gets its own pair. All start unticked."
+          },
+          {
+            "term": "3 Preview Form",
+            "definition": "Shows the form as users will see it: the company logo and address block, **Expand All** and **Collapse All** buttons and a collapsible **Section 1**. Submittal Information appears as a table with S.No and two numbered rows. **Is all the data appropriate?** carries a red asterisk in the preview. **Status Configuration** and **Save Changes** are not shown on this step; the header toggles and **Log ID** stay."
           }
         ],
         "procedures": [
@@ -24646,6 +24687,14 @@ const MODULES = [
               "Open **Forms** and click the **Construction Forms** tab.",
               "Click the **Submittals** card.",
               "Click the **Standard** template."
+            ]
+          },
+          {
+            "title": "Open the Form Status Configuration dialog",
+            "steps": [
+              "Open the **Standard** template of the **Submittals** card.",
+              "Click **Status Configuration** beside the **Log ID** box.",
+              "Read the statuses, then close the dialog with the x."
             ]
           }
         ]
@@ -24659,8 +24708,16 @@ const MODULES = [
             "definition": "Opens first, with **Standard** marked **Default**."
           },
           {
-            "term": "Header",
-            "definition": "Toggles for **Approval Workflow**, **Connected Services** (Old or New), **Status** and **Assigned To**; the **Log ID** box (value **CO**); **Status Configuration**; and **Save Changes**."
+            "term": "Header toggles",
+            "definition": "On the **Standard** template: **Approval Workflow** (Active), **Connected Services** (Active), **Connected Services Old / New** (shown on Old), **Status** (Active) and **Assign To** (Active). The **Log ID** box holds **CO**. **Save Changes** sits beside it."
+          },
+          {
+            "term": "Status Configuration",
+            "definition": "Opens **Form Status Configuration**, a table with the columns **Form Type** (here **Change Order**) and **Status**. Three statuses: **Start** (light blue dot), **In Progress** (orange dot) and **Finish** (green dot). **Start** and **Finish** are fixed. **In Progress** has a trash icon and a drag handle, so it can be deleted or reordered. An **Add Status** row adds a new status. The dialog has no **Save** button; close it with the x."
+          },
+          {
+            "term": "Steps",
+            "definition": "Three steps: **1 Standard Fields**, **2 Trigger Points** and **3 Preview Form**."
           },
           {
             "term": "Submitted To",
@@ -24671,8 +24728,12 @@ const MODULES = [
             "definition": "Check Box with the options Change in Scope, Change in Timeline, Change in Cost and Change in Drawings."
           },
           {
-            "term": "Change Requested By and Submitted By",
-            "definition": "Two Check Box fields. A party list is shown with the options Self / Company, Client, Architect, Engineer, Construction Manager, Code Enforcement Official and Others."
+            "term": "Change Requested By",
+            "definition": "Check Box with the options Self / Company, Client, Architect and Engineer."
+          },
+          {
+            "term": "Submitted By",
+            "definition": "Check Box with the options Construction Manager, Code Enforcement Official and Others."
           },
           {
             "term": "Description of Change Order",
@@ -24684,41 +24745,77 @@ const MODULES = [
           },
           {
             "term": "Change Order Information",
-            "definition": "Table with the columns Work Division, Hours, Rate and Labor ($)."
+            "definition": "Table with the columns Work Division, Hours, Rate and Labor ($), each a Text Box."
           },
           {
             "term": "Is all the data appropriate?",
             "definition": "Check Box with the options Yes and No."
+          },
+          {
+            "term": "2 Trigger Points",
+            "definition": "A read-only **Form Title** box (**Change Order Form**) and **Section 1**. Each field, and each option of a choice field, has the checkboxes **Raise Issue when the field is updated** and **Enter Notes when the field is updated**. All start unticked."
+          },
+          {
+            "term": "3 Preview Form",
+            "definition": "Shows the form as users will see it, with **Expand All**, **Collapse All** and **Section 1**. Change Order Information shows as a table with S.No and two rows. Unlike the Submittals preview, **Is all the data appropriate?** has no red asterisk."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Open the Form Status Configuration dialog",
+            "steps": [
+              "Open the **Change Orders** card under **Construction Forms** and click the **Standard** template.",
+              "Click **Status Configuration** beside the **Log ID** box.",
+              "Read the statuses, then close the dialog with the x."
+            ]
           }
         ]
       },
       {
         "heading": "Meeting Minutes Form",
-        "intro": "<p>The <strong>Meeting Minutes</strong> card defines the Meeting Minutes (MM) form. Its list page is titled <strong>Global Meeting Minutes</strong>.</p>",
+        "intro": "<p>The <strong>Meeting Minutes</strong> card defines the Meeting Minutes (MM) form. Its list page is titled <strong>Global Meeting Minutes</strong>. The builder has four steps.</p>",
         "definitions": [
           {
             "term": "Template list",
             "definition": "**Standard**, marked **Default**, and **General**, marked **(Configuration not present)**."
           },
           {
-            "term": "Header",
-            "definition": "Toggles for **Connected Services** and **Status**; the **Log ID** box (value **MM**); **Status Configuration**; and **Save Changes**."
+            "term": "Header toggles",
+            "definition": "**Connected Services** (Active), **Connected Services Old / New** (New) and **Status** (Active). There is no **Approval Workflow** and no **Assigned To** toggle on this form. The **Log ID** box holds **MM**. **Save Changes** sits beside it."
           },
           {
-            "term": "Attendees",
-            "definition": "Text Box, in **Section Name1**."
+            "term": "Status Configuration",
+            "definition": "Opens **Form Status Configuration**, a table with the columns **Form Type** (here **Meeting Minutes**) and **Status**. Only two statuses: **Start** (light blue dot) and **Finish** (pale yellow dot), both fixed. There is no **In Progress** row, unlike Submittals and Change Orders. The **Add Status** row sits between them. An **Add Status** row adds a new status. The dialog has no **Save** button; close it with the x."
           },
           {
-            "term": "Points",
-            "definition": "Paragraph."
+            "term": "Steps",
+            "definition": "Four steps: **1 Standard Fields**, **2 Add other sections**, **3 Trigger Points** and **4 Preview Form**."
           },
           {
-            "term": "Objectives",
-            "definition": "Text Box."
+            "term": "1 Standard Fields",
+            "definition": "The header block (Address, Zip Code, City, State, PhoneNo) and the fixed fields: **Meeting Title** (text), **Location** (text), **Date** (date picker) and **Discussions**, a table with a **Rows** box and the columns Discussion Points, Actions, Responsible and Due Date."
           },
           {
-            "term": "Agenda",
-            "definition": "Text Box."
+            "term": "2 Add other sections",
+            "definition": "Holds **Section Name1** with the fields Attendees (Text Box), Points (Paragraph), Objectives (Text Box) and Agenda (Text Box)."
+          },
+          {
+            "term": "3 Trigger Points",
+            "definition": "Same checkboxes as the other forms: **Raise Issue when the field is updated** and **Enter Notes when the field is updated**, per field or option."
+          },
+          {
+            "term": "4 Preview Form",
+            "definition": "Shows the form as users will see it."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Open the Form Status Configuration dialog",
+            "steps": [
+              "Open the **Meeting Minutes** card under **Construction Forms** and click the **Standard** template.",
+              "Click **Status Configuration** beside the **Log ID** box.",
+              "Read the two statuses, then close the dialog with the x."
+            ]
           }
         ]
       },
@@ -24762,7 +24859,7 @@ const MODULES = [
       },
       {
         "heading": "Request For Information Form",
-        "intro": "<p>The <strong>Request For Information</strong> card under <strong>Construction Forms</strong> is a second, simpler form, separate from the <strong>RFI</strong> card. It has fewer settings and steps than the RFI form.</p>",
+        "intro": "<p>The <strong>Request For Information</strong> card under <strong>Construction Forms</strong> is a second, simpler form, separate from the <strong>RFI</strong> card. It has fewer settings and steps than the RFI form: five Form Settings rows against eleven.</p>",
         "definitions": [
           {
             "term": "Template list",
@@ -24774,7 +24871,31 @@ const MODULES = [
           },
           {
             "term": "Form Settings",
-            "definition": "Three settings only: **Log ID Key**, **Approval Workflow** and **Connected Services**. Both toggles show Inactive."
+            "definition": "Opens **Request For Information - Form Settings**, a page of five rows. There is no **Save** or **Submit** button on this page."
+          },
+          {
+            "term": "Log ID Key",
+            "definition": "Row text: \"Customize the Log ID field label for this form\". A text box."
+          },
+          {
+            "term": "Approval Workflow",
+            "definition": "Row text: \"Enable approval workflow for form submissions\". Shown Active."
+          },
+          {
+            "term": "Disable Form Resubmission",
+            "definition": "Row text: \"Disable form resubmission after rejection\". Shown In Active (off)."
+          },
+          {
+            "term": "Connected Services",
+            "definition": "Row text: \"Enable integration with external services\". Shown Active."
+          },
+          {
+            "term": "New Connected Services",
+            "definition": "Row text: \"Use the new version of connected services\". Shown New."
+          },
+          {
+            "term": "Difference from the RFI form",
+            "definition": "The **RFI** card adds six more rows: **Form Status** (with a **Configure** button), **Assigned To Field**, **Multiple Assignees**, **Measurements**, **RFI To Be Deleted** and **Description Mandatory**. This form shows only the five above."
           },
           {
             "term": "Subject",
@@ -24831,6 +24952,16 @@ const MODULES = [
           {
             "term": "Configurable field",
             "definition": "One Text Box."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Open Form Settings",
+            "steps": [
+              "Open **Forms**, click the **Construction Forms** tab and click the **Request For Information** card.",
+              "Click a template, for example **Standard**.",
+              "Click **Form Settings** at the top right."
+            ]
           }
         ]
       },
@@ -24920,7 +25051,7 @@ const MODULES = [
       },
       {
         "heading": "Transmittals Form",
-        "intro": "<p>The <strong>Transmittals</strong> card defines the Transmittal form.</p>",
+        "intro": "<p>The <strong>Transmittals</strong> card defines the Transmittal form. Its <strong>Form Settings</strong> page has the same five rows as the Request For Information form.</p>",
         "definitions": [
           {
             "term": "Template list",
@@ -24929,6 +25060,30 @@ const MODULES = [
           {
             "term": "Builder",
             "definition": "Two steps: **Transmittal Form** and **Preview Form**. **Form Settings** and **Save Changes** sit at the top right."
+          },
+          {
+            "term": "Form Settings",
+            "definition": "Opens **Transmittals - Form Settings**, a page of five rows. There is no **Save** or **Submit** button on this page."
+          },
+          {
+            "term": "Log ID Key",
+            "definition": "Row text: \"Customize the Log ID field label for this form\". A text box."
+          },
+          {
+            "term": "Approval Workflow",
+            "definition": "Row text: \"Enable approval workflow for form submissions\". Shown Active."
+          },
+          {
+            "term": "Disable Form Resubmission",
+            "definition": "Row text: \"Disable form resubmission after rejection\". Shown In Active (off)."
+          },
+          {
+            "term": "Connected Services",
+            "definition": "Row text: \"Enable integration with external services\". Shown Active."
+          },
+          {
+            "term": "New Connected Services",
+            "definition": "Row text: \"Use the new version of connected services\". Shown New."
           },
           {
             "term": "Subject",
@@ -24957,6 +25112,16 @@ const MODULES = [
           {
             "term": "Configurable field",
             "definition": "One Text Box."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Open Form Settings",
+            "steps": [
+              "Open **Forms**, click the **Construction Forms** tab and click the **Transmittals** card.",
+              "Click **Standard**.",
+              "Click **Form Settings** at the top right."
+            ]
           }
         ]
       },
@@ -24998,21 +25163,50 @@ const MODULES = [
       },
       {
         "heading": "Inventory Forms",
-        "intro": "<p>The <strong>Inventory Forms</strong> tab holds the builders for site material requests, material issue tickets and return tickets.</p>",
+        "intro": "<p>The <strong>Inventory Forms</strong> tab holds the builders for site material requests, material issue tickets and return tickets. Each builder shows a read-only strip of numbered standard fields and, below it, the configurable fields. None of the three has a <strong>Status Configuration</strong> button: the status values are not set on these screens, and clicking <strong>Status</strong> in the strip opens nothing.</p>",
         "definitions": [
           {
             "term": "Site Material Requests",
-            "definition": "Page header **Pickup**. It has **Connected Services** toggles, a **Ship To Text Box / Ship To Location** option, **Add field** and **Save Changes**. Standard fields: Site Material Requests Id, Status, Project Name, Requested by, Required date and Materials. Configurable fields include a Single Select (Will be picked by Project team, Can be delivered by HO), a Paragraph and a field of type Work Order."
+            "definition": "Page header **Pickup**. Top row: **Connected Services** switches (Inactive / Active, Old / New) with an info icon, and a **Ship To Text Box / Ship To Location** switch. The info icon tooltip reads \"Connected Services works for Project only\". **Save Changes** is at the right. Standard fields strip: 1 Site Material Requests Id, 2 Status, 3 Project Name, 4 Requested by, 5 Required date, 6 Materials."
+          },
+          {
+            "term": "Required to execute which work",
+            "definition": "Site Material Requests, optional Text Box."
+          },
+          {
+            "term": "Logistics",
+            "definition": "Site Material Requests, optional Single Select with the options **Will be picked by Project team** and **Can be delivered by HO**. Required, Show as badge, Show on card and Unique are all off."
+          },
+          {
+            "term": "Handling Instructions",
+            "definition": "Site Material Requests, optional Paragraph with a rich text bar (bold, italic, underline, strikethrough, link, H1, H2, lists, alignment)."
+          },
+          {
+            "term": "Work Order field",
+            "definition": "Site Material Requests also has a configurable field of type Work Order."
           },
           {
             "term": "Material Issue Tickets",
-            "definition": "Page header **Ship**. Standard fields: Material Issue Tickets Id, Status, Site Material Requests Id, Project Name, Shipped by, Shipped date, Materials Shipped, Received by and Received date. Three configurable Text Box fields."
+            "definition": "Page header **Ship**. No toggles at the top; **Save Changes** and **Add field** only. Standard fields strip: 1 Material Issue Tickets Id, 2 Status, 3 Site Material Requests Id, 4 Project Name, 5 Shipped by, 6 Shipped date, 7 Materials Shipped, 8 Received by, 9 Received date."
+          },
+          {
+            "term": "Details of Shipping Vehicle, Shipping Agent Name, Shipping Agent Contact",
+            "definition": "The three configurable fields of Material Issue Tickets. Each is a Text Box with Required, Show on card and Unique off."
           },
           {
             "term": "Return Tickets",
-            "definition": "Standard fields: Return Tickets Id, Status, Site Material Requests Id, Project Name, Shipped by, Shipped date, Materials Returned, Received by and Received date. One configurable Single Select with the options Seal opened, Partially used, Leftovers and Unused."
+            "definition": "Page header **Return**. **Save Changes** and **Add field**. Standard fields strip: 1 Return Tickets Id, 2 Status, 3 Site Material Requests Id, 4 Project Name, 5 Shipped by, 6 Shipped date, 7 Materials Returned, 8 Received by, 9 Received date."
+          },
+          {
+            "term": "Reason for returning materials",
+            "definition": "Return Tickets, optional Text Box."
+          },
+          {
+            "term": "Material Condition",
+            "definition": "Return Tickets, optional Single Select with the options **Seal opened**, **Partially used**, **Leftovers** and **Unused**. Required, Show as badge, Show on card and Unique are all off."
           }
-        ]
+        ],
+        "procedures": []
       },
       {
         "heading": "Drawing Management Forms",
@@ -25024,7 +25218,26 @@ const MODULES = [
           },
           {
             "term": "Drawing Register",
-            "definition": "Page title **Configure Drawing Register Form**. Controls: a **Project Level / Tree Version** toggle (shown on Project Level), **Status Configuration**, an **Assign To** Inactive / Active toggle (shown Inactive), **Save Changes** and **Add field**. Standard fixed fields, both required Text Box: Drawing Id and Drawing Name. Configurable Text Box fields, each with **Required** and **Show on card**: Received Date, Locations, Network, Drawing Types, Sheets, Drawing Status and Remarks."
+            "definition": "Page title **Configure Drawing Register Form**. Controls: a **Project Level / Tree Version** toggle, **Status Configuration**, an **Assign To** Inactive / Active toggle (shown Inactive), **Save Changes** and **Add field**. Standard fixed fields, both required Text Box: Drawing Id and Drawing Name. Configurable Text Box fields, each with **Required** and **Show on card**: Received Date, Locations, Network, Drawing Types, Sheets, Drawing Status and Remarks."
+          },
+          {
+            "term": "Project Level / Tree Version",
+            "definition": "Two-position switch in the Drawing Register header. It is shown on the **Tree Version** side."
+          },
+          {
+            "term": "Drawing Register Status Configuration",
+            "definition": "Opens **Form Status Configuration** for Form Type **Drawing Register**. **Start** (light blue) and **Finish** (pale yellow) are fixed. Between them sit custom pending statuses added by the company, each with a light green dot, a pencil icon, a trash icon and a drag handle, so they can be deleted and reordered. An **Add Status** row adds another. The dialog has no **Save** button; close it with the x."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Open the Drawing Register status list",
+            "steps": [
+              "Open **Forms** and click the **Drawing Management Forms** tab.",
+              "Click **Drawing Register**.",
+              "Click **Status Configuration**.",
+              "Close the dialog with the x."
+            ]
           }
         ]
       },
@@ -25257,15 +25470,63 @@ const MODULES = [
           },
           {
             "term": "Material page",
-            "definition": "Tabs **Material Code** and **Material Estimate Template**. Buttons: **Add Material**, a **Rate Card Template** dropdown, a **Search by Code/Name** box, **Add Custom Column**, **Add Category** and **Export**. Columns: S.No., Material Cost Code, Material Name, UOM, Size & Specifications, Unit Price, Type and Actions (edit and delete icons). The template tab has **Add Template**, a search box and template cards with a three-dot menu; one card is labelled **Default**."
+            "definition": "Tabs **Material Code** and **Material Estimate Template**. Buttons: **Add Material**, a **Rate Card Template** dropdown, a **Search by Code/Name** box, **Add Custom Column**, **Add Category** and **Export**. Columns: S.No., Material Cost Code, Material Name, UOM, Size & Specifications, Unit Price, Type and Actions (edit and delete icons)."
+          },
+          {
+            "term": "Add Material dialog",
+            "definition": "Fields: **Material Code** (required text), **Material Name** (required text), **Type** (optional dropdown, placeholder **Select Category**, filled from the Category page), **UOM** (required dropdown), **Size & Specifications** (optional text) and **Unit Price** (required number). Button **Submit**; close with the x."
+          },
+          {
+            "term": "UOM dropdown",
+            "definition": "In **Add Material**, **Add Equipment** and **Add Labor**: one list of 29 values that joins every UOM group, the same units as in Bid Templates (Sqm, Square Feet ( Sq. Ft ), Hectare, Job, Pair of Jobs, SUM, Rm, LF, km, metre, Ls, Kg, Lbs, each, Pair, Lot, Nos., Sample, Specimen, Month, Day, Cum, Litres, gallon, CuCm, Cubic Meter, Kg, Quintals, Tonne)."
+          },
+          {
+            "term": "Rate Card Template dropdown",
+            "definition": "Left of the search box on the Material, Equipment and Labor pages. Chooses which rate card the table shows. Each template row has a pencil icon; custom templates also have a trash icon. The last row, **+ New Rate Card Template**, adds one. The selected template is **Template 1** on the library pages."
+          },
+          {
+            "term": "Add Custom Column",
+            "definition": "Opens **Add Custom Column**: **Name** (required text, placeholder **Enter Name**) and **Type** (required dropdown: TEXT_BOX, NUMBER, SINGLE_SELECT, MULTI_SELECT, DATE, FORMULAE). Button **Add Custom Column**."
+          },
+          {
+            "term": "Category page",
+            "definition": "**Add Category** on the Material and Labor pages opens the **Category** page, with **+ Add Category Level** and **+ Add Category**. A tab per level (the existing one is **Type**) lists categories with Name, Description and Actions (pencil, trash). **+ Add Category** opens **Create Category** with **Name** and a rich-text **Description**. **+ Add Category Level** opens **Create Category Level** with **Level Name**. Both have **Submit**. On Labor, when no level exists the page says \"There is no category level added yet\" and offers **+ Add Category Level**."
+          },
+          {
+            "term": "Material Estimate Template tab",
+            "definition": "**+ Add Template** opens a dialog with **Template Name** (required), **Description** and a checkbox **Copy from existing Material Estimate Template**; buttons **Cancel** and **Submit**. The default template card is labelled **Default**. The Equipment and Labor estimate tabs work the same way, titled **Create New Template**."
           },
           {
             "term": "Equipment page",
-            "definition": "Tabs **Equipment Code**, **Equipment Estimate Template**, **Equipment Category** and **Equipment Part**. Buttons: **Add Equipment**, a **Rate Card Template** dropdown, search, **Add Custom Column** and **Export**. Columns include S.No., Equipment Cost Code, Equipment Name, Type, Category, Subcategory and UOM."
+            "definition": "Tabs **Equipment Code**, **Equipment Estimate Template**, **Equipment Category** and **Equipment Part**. Buttons on **Equipment Code**: **Add Equipment**, a **Rate Card Template** dropdown, search, **Add Custom Column** and **Export**. There is no **Add Category** button here; categories live on the **Equipment Category** tab. Columns include S.No., Equipment Cost Code, Equipment Name, Type, Category, Subcategory and UOM."
+          },
+          {
+            "term": "Add Equipment dialog",
+            "definition": "Fields: **Equipment Code** (required text), **Equipment Name** (required text), **Type** (required: Equipment or Accessory), **Category** (required dropdown, 25 values), **Subcategory** (optional dropdown, empty until a category is chosen), **UOM** (required dropdown), then **Hourly**, **Daily**, **Weekly** and **Monthly** (each a required price, default 0). Button **Submit**."
+          },
+          {
+            "term": "Equipment Category tab",
+            "definition": "Title **Equipment Category** with **+ Add Row** at the top right. Table: S.No., **Category Name** (an editable text box per row), Subcategories and Actions (a plus icon to add a subcategory, a trash icon). **Cancel** and **Submit** at the bottom."
+          },
+          {
+            "term": "Equipment Part tab",
+            "definition": "Search box, a **Category** button and **+ Add Part**. Table: S.No., Part and Actions (pencil, trash). **+ Add Part** opens **Add Part** with a required **Part** text box (placeholder \"Enter the part name\") and the button **Add Part**."
           },
           {
             "term": "Labor page",
-            "definition": "Tabs **Labor Code** and **Labor Estimate Template**. Buttons: **Add Labor**, a **Rate Card Template** dropdown, search, a period dropdown (showing **Weekly**), **Add Custom Column**, **Add Category** and **Export**. Columns include S.No., Labor Cost Code, Labor Name, Type, Conversion Factor (with an info icon) and PD."
+            "definition": "Tabs **Labor Code** and **Labor Estimate Template**. Buttons: **Add Labor**, a **Rate Card Template** dropdown, search, a period dropdown, **Add Custom Column**, **Add Category** and **Export**. Columns include S.No., Labor Cost Code, Labor Name, Type, Conversion Factor and the rate columns."
+          },
+          {
+            "term": "Period dropdown",
+            "definition": "On Labor. Values **Hourly**, **Daily**, **Weekly** and **Monthly**. The rate column group is titled after the choice, for example **Weekly Rate**."
+          },
+          {
+            "term": "Conversion Factor",
+            "definition": "Labor column with an info icon. Tooltip: \"Number of hours worked per week\"."
+          },
+          {
+            "term": "Add Labor dialog",
+            "definition": "Fields: **Labor Code** (required text), **Labor Name** (required text), **Type** (required: Direct or Indirect), **Conversion Factor** (required number, default 1), then one number input per rate column of the table, each starting at 0. Button **Submit**."
           },
           {
             "term": "Unit Rate page",
@@ -25276,7 +25537,33 @@ const MODULES = [
             "definition": "A template list with **+ Add Template**, a search box and template cards; a card can carry a **Default** label."
           }
         ],
-        "procedures": []
+        "procedures": [
+          {
+            "title": "Add a material",
+            "steps": [
+              "Open **Cost Type** and click the **Material** card.",
+              "On **Material Code** click **+ Add Material**.",
+              "Enter **Material Code**, **Material Name**, **UOM** and **Unit Price**; optionally **Type** and **Size & Specifications**."
+            ]
+          },
+          {
+            "title": "Add equipment",
+            "steps": [
+              "Open **Cost Type** and click the **Equipment** card.",
+              "On **Equipment Code** click **+ Add Equipment**.",
+              "Enter **Equipment Code** and **Equipment Name**; choose **Type**, **Category** and **UOM**.",
+              "Enter the **Hourly**, **Daily**, **Weekly** and **Monthly** prices."
+            ]
+          },
+          {
+            "title": "Add a labor role",
+            "steps": [
+              "Open **Cost Type** and click the **Labor** card.",
+              "On **Labor Code** click **+ Add Labor**.",
+              "Enter **Labor Code** and **Labor Name**; choose **Type** and set **Conversion Factor**."
+            ]
+          }
+        ]
       },
       {
         "heading": "Cost Breakdown Structure",
@@ -25307,11 +25594,44 @@ const MODULES = [
             "definition": "Shows the structure as a tree of nodes, each with a three-dot icon. Two icons at the top right switch between tree view and list view. List view shows the columns **Level** and **Created At**."
           },
           {
+            "term": "Node menu",
+            "definition": "The three-dot icon on a node opens four items: **Edit**, **Add Level**, **Add Phase Code** and **Delete** (red)."
+          },
+          {
+            "term": "Create Level dialog",
+            "definition": "**Add Level** opens **Create Level** with a required **Name** (placeholder **Enter Name**). Buttons **Cancel** and **Submit**."
+          },
+          {
+            "term": "Add Phase Code dialog",
+            "definition": "**Add Phase Code** opens a dialog with a required **Phase Codes** dropdown that has a search box. Entries read \"code : description\". It lists every phase code from the **Phase Codes** table, the same count. Some entries appear greyed out. Buttons **Cancel** and **Submit**."
+          },
+          {
             "term": "Configurable Fields tab",
             "definition": "Has an **Add Field** button. When no field exists it says **No configurable fields added yet.**"
+          },
+          {
+            "term": "Add Custom Field dialog",
+            "definition": "**Add Field** opens **Add Custom Field**: **Name** (required text) and **Type** (required dropdown, default **TEXT BOX**). Ten types: TEXT BOX, NUMBER, SINGLE SELECT, MULTI SELECT, DATE, TIME, PARAGRAPH, CHECK BOX, FORMULAE and CURRENCY. Buttons **Close** and **Create**."
           }
         ],
-        "procedures": []
+        "procedures": [
+          {
+            "title": "Add a phase code under a node",
+            "steps": [
+              "Open a template and its **Cost Breakdown Structure Template** tab.",
+              "Click the three-dot icon on a node and choose **Add Phase Code**.",
+              "Search and pick the code in **Phase Codes**."
+            ]
+          },
+          {
+            "title": "Add a custom field to a template",
+            "steps": [
+              "Open a template and click the **Configurable Fields** tab.",
+              "Click **Add Field**.",
+              "Enter a **Name** and choose a **Type**."
+            ]
+          }
+        ]
       },
       {
         "heading": "Bid Templates",
@@ -25335,14 +25655,60 @@ const MODULES = [
           },
           {
             "term": "Unit of Measurement Group (UOM)",
-            "definition": "Required dropdown with a search box. Groups: Area, Job, Length, Mass, Quantity, Specimen, Time, Volume and Weight."
+            "definition": "Required dropdown with a search box. Nine groups: Area, Job, Length, Mass, Quantity, Specimen, Time, Volume and Weight."
           },
           {
             "term": "Unit of Measurement (UOM)",
-            "definition": "Required dropdown with a search box. Its values depend on the group you chose first. Seen: Area gives Sqm, Square Feet ( Sq. Ft ) and Hectare; Length gives Rm, LF, km, metre and Ls; Mass gives Kg and Lbs; Time gives Month and Day."
+            "definition": "Required dropdown with a search box. Choose the group first; the list then shows only that group's units."
+          },
+          {
+            "term": "Area",
+            "definition": "Sqm, Square Feet ( Sq. Ft ), Hectare."
+          },
+          {
+            "term": "Job",
+            "definition": "Job, Pair of Jobs, SUM."
+          },
+          {
+            "term": "Length",
+            "definition": "Rm, LF, km, metre, Ls."
+          },
+          {
+            "term": "Mass",
+            "definition": "Kg, Lbs."
+          },
+          {
+            "term": "Quantity",
+            "definition": "each, Pair, Lot, Nos."
+          },
+          {
+            "term": "Specimen",
+            "definition": "Sample, Specimen."
+          },
+          {
+            "term": "Time",
+            "definition": "Month, Day."
+          },
+          {
+            "term": "Volume",
+            "definition": "Cum, Litres, gallon, CuCm, Cubic Meter."
+          },
+          {
+            "term": "Weight",
+            "definition": "Kg, Quintals, Tonne. Kg is also in Mass."
           }
         ],
-        "procedures": []
+        "procedures": [
+          {
+            "title": "See the units of a group",
+            "steps": [
+              "Open **Bid Templates** and click **+ Add Item**.",
+              "Open **Unit of Measurement Group (UOM)** and choose a group.",
+              "Open **Unit of Measurement (UOM)** to see that group's units.",
+              "Click **Cancel** to leave without adding."
+            ]
+          }
+        ]
       },
       {
         "heading": "Compliance Hub",
@@ -25354,7 +25720,35 @@ const MODULES = [
           },
           {
             "term": "+ Create (Directory)",
-            "definition": "Opens **Create Compliance Directory**: **Compliance Name** (required), **Compliance Description**, **Category / Type** (required dropdown), **Renewal Frequency** (dropdown: Days, Months, Years), **Renewal Period**, **Evidence Type** (required dropdown) and **Required Evidence** (required, an **Upload** button). Buttons **Cancel** and **Submit**."
+            "definition": "Opens **Create Compliance Directory**. Buttons **Cancel** and **Submit**."
+          },
+          {
+            "term": "Compliance Name",
+            "definition": "Required text, placeholder \"Enter a Name\"."
+          },
+          {
+            "term": "Compliance Description",
+            "definition": "Optional text."
+          },
+          {
+            "term": "Category / Type",
+            "definition": "Required dropdown. Its values come from **Settings**, **Category / Type**; it lists nothing until rows exist there."
+          },
+          {
+            "term": "Renewal Frequency",
+            "definition": "Optional dropdown with a search box: **Days**, **Months** or **Years**."
+          },
+          {
+            "term": "Renewal Period",
+            "definition": "Optional number input, used with Renewal Frequency."
+          },
+          {
+            "term": "Evidence Type",
+            "definition": "Required dropdown. Its values come from **Settings**, **Evidence Type**; it lists nothing until rows exist there."
+          },
+          {
+            "term": "Required Evidence",
+            "definition": "Required file upload, an **Upload** button."
           },
           {
             "term": "My Company Compliance",
@@ -25377,15 +25771,25 @@ const MODULES = [
             "definition": "**Compliance Expiry Settings**: \"Set customizable expiry threshold for upcoming compliances.\" One field, **Expiry Alert (In Days)**, with an info icon and a **Save Changes** button. The info tooltip says you can set a custom number of days as a threshold so any compliance expiring within that period is automatically flagged as nearing expiration."
           },
           {
-            "term": "Category / Type",
+            "term": "Settings - Category / Type",
             "definition": "A table with Serial Number, Category / Type and Actions, plus a **+ Add** button. This list fills the **Category / Type** dropdown of the directory dialog."
           },
           {
-            "term": "Evidence Type",
-            "definition": "A table with Serial Number, Evidence Type and Actions, plus a **+ Add** button. This list fills the **Evidence Type** dropdown of the directory dialog."
+            "term": "Settings - Evidence Type",
+            "definition": "A table with Serial Number, Evidence Type and Actions, plus a **+ Add** button. This list fills the **Evidence Type** dropdown of the directory dialog. **+ Add** opens no dialog: it inserts an editable row at the top with a text box and a red trash icon. The page has no **Save** button."
           }
         ],
-        "procedures": []
+        "procedures": [
+          {
+            "title": "Open the Create Compliance Directory dialog",
+            "steps": [
+              "Open **Compliance Hub** and stay on **Compliance Directory**.",
+              "Click **+ Create**.",
+              "Enter **Compliance Name**; choose **Category / Type** and **Evidence Type**; upload **Required Evidence**.",
+              "Optionally set **Renewal Frequency** and **Renewal Period**."
+            ]
+          }
+        ]
       },
       {
         "heading": "Measurement Templates",

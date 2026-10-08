@@ -1670,5 +1670,82 @@
   "m": "work-order",
   "s": "Work Order Types",
   "alt": []
+ },
+ {
+  "q": "what are the statuses in submittals",
+  "m": "global-data",
+  "s": "Submittals Form",
+  "alt": []
+ },
+ {
+  "q": "meeting minutes statuses start and finish",
+  "m": "global-data",
+  "s": "Meeting Minutes Form",
+  "alt": []
+ },
+ {
+  "q": "what does add status do in the form status configuration",
+  "m": "global-data",
+  "s": "Submittals Form",
+  "alt": []
+ },
+ {
+  "q": "what fields does add material need",
+  "m": "global-data",
+  "s": "Cost Type",
+  "alt": []
+ },
+ {
+  "q": "labor type values direct indirect",
+  "m": "global-data",
+  "s": "Cost Type",
+  "alt": []
+ },
+ {
+  "q": "what does fetch templates do",
+  "m": "global-data",
+  "s": "Global Permission",
+  "alt": []
+ },
+ {
+  "q": "uom values for volume",
+  "m": "global-data",
+  "s": "Bid Templates",
+  "alt": []
+ },
+ {
+  "q": "how to add a custom field in cost breakdown structure",
+  "m": "global-data",
+  "s": "Cost Breakdown Structure",
+  "alt": []
+ },
+ {
+  "q": "what is renewal frequency in compliance",
+  "m": "global-data",
+  "s": "Compliance Hub",
+  "alt": []
+ },
+ {
+  "q": "what are the form settings of transmittals",
+  "m": "global-data",
+  "s": "Transmittals Form",
+  "alt": []
+ },
+ {
+  "q": "material condition options in return tickets",
+  "m": "global-data",
+  "s": "Inventory Forms",
+  "alt": []
+ },
+ {
+  "q": "how to add users to a user group",
+  "m": "global-data",
+  "s": "Global Permission",
+  "alt": [
+   [
+    "users-and-permissions",
+    "Group Users"
+   ]
+  ]
  }
 ]
