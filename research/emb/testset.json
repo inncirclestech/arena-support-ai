@@ -209,6 +209,10 @@
    [
     "global-data",
     "Request For Information Form"
+   ],
+   [
+    "global-data",
+    "Request for Information"
    ]
   ]
  },
@@ -1540,5 +1544,131 @@
     "Phase Codes"
    ]
   ]
+ },
+ {
+  "q": "how do i add a vendor",
+  "m": "global-data",
+  "s": "Vendors",
+  "alt": []
+ },
+ {
+  "q": "how to raise a work order",
+  "m": "work-order",
+  "s": "Work Orders",
+  "alt": []
+ },
+ {
+  "q": "how to approve a timesheet",
+  "m": "time-management",
+  "s": "Timesheet Workflow",
+  "alt": [
+   [
+    "time-management",
+    "Timesheet Logs"
+   ],
+   [
+    "time-management",
+    "My Timesheet"
+   ]
+  ]
+ },
+ {
+  "q": "statuses in submittals form",
+  "m": "global-data",
+  "s": "Submittals Form",
+  "alt": [
+   [
+    "global-data",
+    "Forms"
+   ]
+  ]
+ },
+ {
+  "q": "how do i create a tender",
+  "m": "tender-management",
+  "s": "Tenders",
+  "alt": []
+ },
+ {
+  "q": "how do i add an expense type",
+  "m": "expense-tracker",
+  "s": "Expense Type",
+  "alt": []
+ },
+ {
+  "q": "how to create a purchase order directly",
+  "m": "procurement",
+  "s": "Direct Purchase Order",
+  "alt": []
+ },
+ {
+  "q": "how do i raise a haul request",
+  "m": "equipment",
+  "s": "Internal Hauling",
+  "alt": [
+   [
+    "equipment",
+    "Hauling"
+   ]
+  ]
+ },
+ {
+  "q": "how do i create a bid type",
+  "m": "tender-management",
+  "s": "Bid Type",
+  "alt": []
+ },
+ {
+  "q": "how do i add an expense form template",
+  "m": "expense-tracker",
+  "s": "Expense Form Settings",
+  "alt": []
+ },
+ {
+  "q": "how do i raise a restraint",
+  "m": "field-works",
+  "s": "Restraints",
+  "alt": []
+ },
+ {
+  "q": "how to create a material requisition",
+  "m": "procurement",
+  "s": "Requisition Form",
+  "alt": []
+ },
+ {
+  "q": "how do i create an rfq",
+  "m": "procurement",
+  "s": "RFQ",
+  "alt": []
+ },
+ {
+  "q": "how do i add users to a tender",
+  "m": "tender-management",
+  "s": "Teams",
+  "alt": []
+ },
+ {
+  "q": "how to raise an equipment request",
+  "m": "equipment",
+  "s": "Requests",
+  "alt": [
+   [
+    "equipment",
+    "Allocation Lifecycle"
+   ]
+  ]
+ },
+ {
+  "q": "how do i create an expense form",
+  "m": "expense-tracker",
+  "s": "Expense Forms",
+  "alt": []
+ },
+ {
+  "q": "how do i create a work order type",
+  "m": "work-order",
+  "s": "Work Order Types",
+  "alt": []
  }
 ]

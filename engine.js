@@ -42,7 +42,10 @@ function stem(t) {
   if (t.length > 5 && t.endsWith("ing")) return t.slice(0, -3);
   return t;
 }
-function stemSet(tokens) { return tokens.map(stem); }
+// Verbs that all mean "make a new one" in the docs ("Register a vendor", "Raise a restraint", "Create a tender").
+const CREATE_VERBS = new Set(["add", "create", "raise", "register", "make", "build", "new"]);
+function canon(t) { return CREATE_VERBS.has(t) ? "create" : /^approv(e|es|ed|ing|al|als)$/.test(t) ? "approv" : t; }
+function stemSet(tokens) { return tokens.map(t => canon(stem(t))); }
 
 function editDistance(x, y, max) {
   if (Math.abs(x.length - y.length) > max) return max + 1;
@@ -159,7 +162,8 @@ function getIndex(KB) {
   });
   const N = KB.length;
   const idf = t => Math.log(1 + N / (1 + (df[t] || 0)));
-  ix = { docs, df, vocab, idf, N };
+  const modNameSets = KB.map(e => new Set(stemSet(tokenize(e.moduleName))));
+  ix = { docs, df, vocab, idf, N, modNameSets };
   _indexCache.set(KB, ix);
   return ix;
 }
@@ -171,7 +175,7 @@ function correctTypos(KB, q) {
   return q.replace(/[A-Za-z]{4,}/g, w => {
     const lw = w.toLowerCase();
     const known = x => tokenize(x).every(t => V.has(stem(t)));
-    if (STOPWORDS.has(lw)) return w;
+    if (STOPWORDS.has(lw) || canon(stem(lw)) !== stem(lw)) return w;
     if (lw.length >= 7) {
       for (let k = 3; k <= lw.length - 3; k++) {
         const l = lw.slice(0, k), r = lw.slice(k);
@@ -261,6 +265,7 @@ function questionForm(raw) {
 function rank(KB, q, qvec, vecs, ctx) {
   const ix = getIndex(KB);
   const qs = queryStems(q);
+  const qall = stemSet(tokenize(q));
   const form = questionForm(q);
   const useSem = !!(qvec && vecs && vecs.count === KB.length);
   const dim = vecs ? vecs.dim : 384;
@@ -275,7 +280,20 @@ function rank(KB, q, qvec, vecs, ctx) {
       cos = s / vecs.scale;
     }
     let bias = 0;
-    if (form.howto) bias += e.kind === "howto" ? 0.025 : e.kind === "term" ? -0.01 : 0;
+    if (form.howto) {
+      bias += e.kind === "howto" ? 0.025 : e.kind === "term" ? -0.01 : 0;
+      // "how do I <verb> <object>": prefer the procedure whose title names the object, and the module that is named in the question.
+      if (e.kind === "howto") bias += 0.10 * lx.ttl;
+      bias += 0.05 * lx.key;
+      if (e.kind === "howto" && ix.docs[i].titleSet.size) {
+        const tset = ix.docs[i].titleSet;
+        const qw = qs.reduce((a, t) => a + ix.idf(t), 0);
+        const covers = qw ? qs.filter(t => tset.has(t)).reduce((a, t) => a + ix.idf(t), 0) / qw : 0;
+        const subset = [...tset].every(t => qall.includes(t) || GENERIC_WORDS.has(t));
+        if (subset && covers >= 0.75 && (!qall.includes("create") || tset.has("create"))) bias += 0.10;
+      }
+      if (ix.modNameSets[i].size && [...ix.modNameSets[i]].every(t => qall.includes(t))) bias += 0.08;
+    }
     if (form.define) bias += e.kind === "term" ? 0.03 : 0;
     if (form.screen) bias += e.kind === "screen" ? 0.06 : -0.01;
     // A bare noun phrase ("dpr report", "site photographs") that names a screen -> prefer that screen over a term inside another one.
@@ -327,7 +345,15 @@ function plan(KB, raw, ctx, qvec, vecs) {
   if (unknownShare >= 0.5 && lexTop === 0) return { type: "none", reason: "unknown", q, hits };
   if (r.sem && lexTop === 0 && top.score < T.answer + 0.06) return { type: "none", reason: "nolex", q, hits };
 
-  const best = top.entry;
+  let best = top.entry;
+  // A field/term line is a poor answer when the question names the screen itself and not the field: show the screen overview.
+  if (best.kind === "term") {
+    const scr = KB.find(e => e.kind === "screen" && e.moduleId === best.moduleId && e.section === best.section);
+    const sc = scr && stemSet(tokenize(scr.title));
+    const tt = new Set(stemSet(tokenize(best.title)));
+    const extra = r.qs.filter(t => !sc.includes(t));
+    if (scr && sc.length && sc.every(t => r.qs.includes(t)) && extra.every(t => !tt.has(t))) best = scr;
+  }
   let also = null;
   for (let k = 1; k < r.hits.length && k < 6; k++) {
     const h = r.hits[k];
@@ -374,6 +400,15 @@ const ArenaSemantic = (function () {
       return false;
     }
   }
+  // Resolves when loading has finished (ready / failed / stale) or after timeoutMs.
+  function settled(timeoutMs) {
+    return new Promise(res => {
+      const done = () => state !== "loading" && state !== "idle";
+      if (done()) return res(state);
+      const t = setTimeout(() => res(state), timeoutMs || 60000);
+      listeners.push(() => { if (done()) { clearTimeout(t); res(state); } });
+    });
+  }
   async function embed(q) {
     if (state !== "ready" || !pipe) return null;
     try {
@@ -381,7 +416,7 @@ const ArenaSemantic = (function () {
       return Float32Array.from(o.data);
     } catch (e) { return null; }
   }
-  return { init, embed, progress: () => progress, vecs: () => vecs, state: () => state, detail: () => detail, onChange: f => listeners.push(f) };
+  return { init, settled, embed, progress: () => progress, vecs: () => vecs, state: () => state, detail: () => detail, onChange: f => listeners.push(f) };
 })();
 
 if (typeof module !== "undefined") module.exports = { prepareQuery, isKnowledgeQuestion, isOffTopic, isLiveInfo, buildKB, kbHash, plan, rank, composeAnswer, correctTypos, tokenize, stem };
