@@ -32438,379 +32438,149 @@ const MODULES = [
     "qaItems": QA_COSTTRACKING,
     "narrative": [
       {
-        "heading": "Overview",
-        "intro": "<p>Cost Tracking is read-only and used by executives, finance and project controls to compare estimated and actual cost. The numbers come from <strong>project estimates</strong> and <strong>field cost logs</strong>, so the people who feed it are the project teams.</p><p>Open it from the <strong>Cost Tracking</strong> tile on <strong>Home</strong>. There are no settings inside the module; the settings that change its numbers are in <strong>Project Settings</strong> and <strong>Global Data</strong>.</p>",
-        "definitions": [
+        "heading": "Cost Control Dashboard",
+        "intro": "<p>The <strong>Cost Control Dashboard</strong> is the first tab of Cost Tracking (the page title is <strong>Company Reports</strong>). It shows company-wide project portfolio performance and financial health for the projects you pick.</p>",
+        "images": [
           {
-            "term": "Who does what",
-            "definition": "**Super Admin / Module Admin** maintains cost types, material, equipment and labor codes and phase codes in **Global Data > Cost**. **PM / Project Controls** creates and gets the project estimate approved in **Project Setup > Estimate** and sets **Project Settings > Cost Breakdown Structure**. **Field Users** record actual cost in **Field Works > Cost**; **Approvers** approve those logs. **Executives** read Cost Tracking."
+            "src": "assets/product/cost-tracking/001.jpg",
+            "caption": "The Cost Control Dashboard"
           },
           {
-            "term": "Where the numbers come from, in one line",
-            "definition": "Estimated cost = approved estimate lines of each project (Project Setup > Estimate). Actual cost = logs in Field Works > Cost (Transaction, Change order, Transfer, Field Logs). Cost types and codes = Global Data > Cost."
-          },
-          {
-            "term": "Project-level twin",
-            "definition": "Each project also has the same cost screens in **Data Analytics & Insights > Cost** (Cost Activity, Cost by Cost Types, Cost by Month, Payments by Month, Cost Analytics, Cost Graphs). The company **Cost by Cost Types** shows the same rows as the project one."
+            "src": "assets/product/cost-tracking/002.jpg",
+            "caption": "Charts and the Project Performance Overview table"
           }
         ],
-        "procedures": [
-          {
-            "title": "Make a project show up in Cost Tracking with real numbers",
-            "steps": [
-              "In **Global Data > Cost** make sure the cost types and the material, equipment and labor codes exist.",
-              "In **Project Setup > Estimate** open a tree version, click **Create Estimate** and fill the estimate lines.",
-              "Get the estimate approved (the estimate shows a level count such as **1/1** and **Approved**).",
-              "Open **Project Settings > Cost Breakdown Structure** and set **Level of Detail** and **Estimate Type**.",
-              "Record actual cost in **Field Works > Tree Version > Cost** (Transaction, Change order, Transfer or Field Logs).",
-              "Open **Cost Tracking** and check the project row."
-            ]
-          }
-        ]
-      },
-      {
-        "heading": "Cost Control Dashboard",
-        "intro": "<p>The <strong>Cost Control Dashboard</strong> is the company-wide health check, used by executives to see which projects are on budget. It shows five totals, a project table and charts for all projects at once.</p><p>A <strong>Projects</strong> drop-down at the top lets you pick which projects to include (all 115 are ticked by default).</p>",
         "definitions": [
           {
-            "term": "Total tiles",
-            "definition": "**Total Contract Value**, **Forecasted Value (EAC)**, **Portfolio Profit Margin**, **Margin Erosion** and **Over Budget Projects**."
+            "term": "Tabs",
+            "definition": "**Cost Control Dashboard**, **Cost by Projects** and **Cost by Cost Types** switch between the three reports."
+          },
+          {
+            "term": "Projects",
+            "definition": "A multi-select drop-down at the top left with a search box and **Select All**. Every project starts ticked. Untick projects you do not want in the report."
+          },
+          {
+            "term": "Total Contract Value",
+            "definition": "The combined contract value of the selected projects, in rupees."
+          },
+          {
+            "term": "Forecasted Value (EAC)",
+            "definition": "The combined estimate at completion, meaning the cost the selected projects are forecast to end at."
+          },
+          {
+            "term": "Portfolio Profit Margin",
+            "definition": "The profit margin across the selected projects."
+          },
+          {
+            "term": "Margin Erosion",
+            "definition": "A card with the margin erosion figure of the selected projects. The **Margin Erosion Trend** chart below follows it over time."
+          },
+          {
+            "term": "Over Budget Projects",
+            "definition": "A card with the number of selected projects flagged **Over Budget**."
+          },
+          {
+            "term": "Portfolio Breakdown Cost",
+            "definition": "A ring chart splitting cost into **Labor**, **Material**, **Equipment** and **Sub contractor**, with the percentage of each."
+          },
+          {
+            "term": "Change Order Impact",
+            "definition": "A monthly chart with two series, **Approved COs** and **Pending COs**, showing the money value of change orders."
           },
           {
             "term": "Project Performance Overview",
-            "definition": "A table with **Project Name**, **Contract Value**, **Forecast Cost (EAC)**, **Forecast Margin %**, **CPI**, **SPI** and **Status**, one row per project. **CPI** and **SPI** are the cost and schedule performance indexes."
+            "definition": "A table with one row per project: **Project Name**, **Contract Value**, **Forecast Cost (EAC)**, **Forecast Margin %**, **CPI** (cost performance index), **SPI** (schedule performance index) and a **Status** tag such as **Over Budget**."
           },
           {
-            "term": "Charts",
-            "definition": "**Portfolio Breakdown Cost**, **Change Order Impact**, **Margin Erosion Trend** and **Portfolio Earned Value**. They are drawn as charts and follow the selected projects."
-          },
-          {
-            "term": "Where this data comes from",
-            "definition": "Contract Value is the **Total** of the project's approved estimate. Only projects that have an approved estimate show a value; the others show ₹0. The **Change Order Impact** chart is named after the change orders recorded in **Field Works > Cost > Change order**."
-          },
-          {
-            "term": "Things to watch for",
-            "definition": "Rows can show the status **Over Budget** even with ₹0 values, and the **Over Budget Projects** tile can show 0. Treat these as signs that no actual or forecast cost has been recorded yet."
+            "term": "Margin Erosion Trend and Portfolio Earned Value",
+            "definition": "Two charts at the bottom of the page that follow margin erosion and earned value over time."
           }
         ],
         "procedures": [
           {
-            "title": "Read the dashboard",
+            "title": "Look at a few projects only",
             "steps": [
-              "Open **Cost Tracking**; the dashboard opens first.",
-              "Use the **Projects** drop-down to include or exclude projects.",
-              "Read the five tiles, then scan **Project Performance Overview** for projects with a low CPI or SPI.",
-              "For the estimate and actual detail, open **Cost by Projects** or **Cost by Cost Types**."
+              "Open **Cost Tracking** from **Home**.",
+              "Open the **Projects** drop-down and untick **Select All**.",
+              "Tick the projects you want.",
+              "Read the cards, charts and table."
             ]
           }
         ]
       },
       {
         "heading": "Cost by Projects",
-        "intro": "<p><strong>Cost by Projects</strong> lists the estimated and actual cost of each project in one table, used by finance to compare projects. A <strong>Table View</strong> and a <strong>Graph View</strong> button switch the display.</p><p>The header shows <strong>Total Estimate Cost</strong> and <strong>Total Actual Cost</strong> for all projects.</p>",
-        "definitions": [
+        "intro": "<p><strong>Cost by Projects</strong> shows project cost tracking with respect to cost types: for every project, what was estimated and what has actually been spent.</p>",
+        "images": [
           {
-            "term": "Columns",
-            "definition": "**Project Number**, **Project Name**, **Project Location**, **Project Contact**, then under **Estimated Costs** **Sub Total**, **Contingencies Cost** and **Estimated Cost**, then **Actual Cost** and **Total Project Cost**. There are 115 rows, one per company project."
+            "src": "assets/product/cost-tracking/003.jpg",
+            "caption": "Cost by Projects in table view"
           },
           {
-            "term": "Header totals",
-            "definition": "**Total Estimate Cost** is the sum of the **Estimated Cost** column and **Total Actual Cost** the sum of **Actual Cost**."
-          },
-          {
-            "term": "Total Project Cost",
-            "definition": "A different figure from the estimate: It is not the sum of estimate lines and does not feed the header totals."
-          },
-          {
-            "term": "Where this data comes from",
-            "definition": "Project Number, Name, Location and Contact come from the project record (Projects > Create Project). Estimated Cost is the approved estimate; Actual Cost is the logs in Field Works > Cost. Rows cannot be clicked to drill down."
+            "src": "assets/product/cost-tracking/004.jpg",
+            "caption": "Cost by Projects in graph view"
           }
         ],
-        "procedures": [
+        "definitions": [
           {
-            "title": "Compare projects",
-            "steps": [
-              "Open **Cost Tracking > Cost by Projects**.",
-              "Read **Estimated Cost** and **Actual Cost** per row, and the totals in the header.",
-              "Click **Graph View** for charts, **Table View** to return."
-            ]
+            "term": "Table and graph icons",
+            "definition": "Two icons at the top right switch between the table and a bar chart. The chart shows **Estimate Cost** and **Actual Cost** side by side for each project."
+          },
+          {
+            "term": "Total Estimate Cost and Total Actual Cost",
+            "definition": "Two totals in the box at the top right, adding up every project in the report."
+          },
+          {
+            "term": "Project columns",
+            "definition": "**Project Number**, **Project Name**, **Project Location** and **Project Contact**."
+          },
+          {
+            "term": "Estimated Costs",
+            "definition": "A column group with **Sub Total** (the estimate before contingency), **Contingencies Cost** and **Estimated Cost** (the two added together)."
+          },
+          {
+            "term": "Actual Cost and Total Project Cost",
+            "definition": "**Actual Cost** is what has been spent so far. **Total Project Cost** is the total cost of the project."
           }
         ]
       },
       {
         "heading": "Cost by Cost Types",
-        "intro": "<p><strong>Cost by Cost Types</strong> breaks estimated and actual cost into <strong>Labor</strong>, <strong>Material</strong> and <strong>Equipment</strong> for every project, used by project controls to see which cost item drives a variance. Each block lists items with their code and a total.</p><p>The header shows the same <strong>Total Estimate Cost</strong> and <strong>Total Actual Cost</strong> as Cost by Projects. A <strong>Table View</strong> and a <strong>Graph View</strong> button switch the display.</p>",
-        "definitions": [
-          {
-            "term": "Columns",
-            "definition": "**Project**, the item name (**Labor Name**, **Material Name**, **Equipment Name**), **Code**, then under **Estimated Costs** **Sub Total**, **Contingencies Cost**, **Total Costs**, and **Actual Costs**. Each block ends with **Total <type> Estimate Cost** and **Total <type> Actual Cost**."
-          },
-          {
-            "term": "Roll-up that was verified",
-            "definition": "Labor ₹82,70,946.00 + Material ₹9,98,90,891.33 + Equipment ₹9,80,00,200.00 = ₹20,61,62,037.33, which is the header Total Estimate Cost and the Cost by Projects total. Actual cost of ₹147.00 is all Material."
-          },
-          {
-            "term": "Unit Rate is not listed",
-            "definition": "The estimate also has a **Unit Rate** block (₹5,86,645.00 plus ₹3,893.75 contingency). It is not shown here, which is why this total is ₹5,90,538.75 lower than the dashboard Contract Value."
-          },
-          {
-            "term": "Where this data comes from",
-            "definition": "Item rows are the lines of the approved estimate, added up per item across phase codes. Codes such as 0211LS90 (material) and 6107.07 (labor) are the codes in **Global Data > Cost > Material / Labor**; equipment codes (A-01) are Global Data equipment. Items with the same code but different lines are merged into one row."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "See cost by cost type",
-            "steps": [
-              "Open **Cost Tracking > Cost by Cost Types**.",
-              "Find the **Labor**, **Material** or **Equipment** block and read estimated against actual.",
-              "Compare the block totals with the header totals."
-            ],
-            "note": "The same view for one project is in Data Analytics & Insights > Cost > Cost by Cost Types.",
-            "images": [
-              {
-                "src": "assets/notion/cost-estimate-cost-tracking-by-cost-types/001.jpg",
-                "caption": "Cost by Cost Types: estimated and actual costs for each cost type"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "heading": "Estimate",
-        "intro": "<p>The estimated cost on every screen is the <strong>approved estimate</strong> of each project, built by the PM in <strong>Project Setup > Estimate</strong>. If a project shows ₹0 estimate in Cost Tracking, it has no approved estimate lines.</p><p>An estimate is created per tree version, so a project can have several estimates; only those with amounts add to the totals.</p>",
-        "definitions": [
-          {
-            "term": "Estimate screens",
-            "definition": "**Project Setup > Estimate** has **Estimate**, **Resource Planning** and **Rate Card Template** sub-tabs. **Estimate** shows a card per tree version; open one and click **Create Estimate** (**Name**, **Description**, **Approval Workflow**, **Cost Breakdown Structure** and one template per cost type from Global Data). Each estimate then has tabs **Setup CBS**, **Setup Estimate**, **Schedule Cost** and **Estimate Summary**."
-          },
-          {
-            "term": "Setup Estimate",
-            "definition": "Shows the estimate with its workflow badge (for example **1/1 Approved**) and a row per level with **Material**, **Equipment**, **Labor**, **Unit Rate**, **Sub Total**, **Contingencies Value** and **Total**, plus **Estimate Total**, **Misc Cost** and **Contingey for misc**. For Arena Residential Project the Total ₹20,67,52,576.08 is the dashboard Contract Value."
-          },
-          {
-            "term": "Estimate Summary",
-            "definition": "Tabs **Material**, **Equipment**, **Labor**, **Unit Rate** and **All**. The material view lists each line with **Quantity**, **Rate/Unit**, **UOM**, **Sub Total**, **Contingencies Value** and **Net Total**; **All** groups the lines by **Phase Code**. These lines are what Cost by Cost Types adds up (for example quantity 345 at ₹76,543 = ₹2,64,07,335, the material row 0211LS90#1)."
-          },
-          {
-            "term": "Where the estimate lists come from",
-            "definition": "Cost types (Material, Equipment, Labor, Unit Rate, Sub Contractor, BOQ's, Freight Charges, Fuel & Gas) and the item codes come from **Global Data > Cost**. The template drop-downs in Create Estimate are the Global Data cost templates. The approval workflow is chosen in **Project Settings > Cost Breakdown Structure > Approval WorkFlow** (the form is Cost Estimate)."
-          },
-          {
-            "term": "Settings that change the estimate",
-            "definition": "**Project Settings > Cost Breakdown Structure** has **CBS** (how the estimate is structured, from Entity down to Work Package and Phase Code), **Approval WorkFlow**, **Level of Detail** (Phase Code or Phase Code - Cost Code) and **Estimate Type** (Lump Sum or Time & Material)."
-          },
-          {
-            "term": "Approval workflow levels",
-            "definition": "A workflow has levels (**Create Level**), each **All must approve** or **Any one can approve** with named approvers."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Create a cost estimate for a tree version",
-            "steps": [
-              "Open **Project Setup > Estimate** and click the tree version card.",
-              "Click **Create Estimate** and enter the **Name**, **Description**, **Approval Workflow** and **Cost Breakdown Structure**.",
-              "Choose a template for each cost type you need (Material, Equipment, Labor, Unit Rate and others), then **Submit**.",
-              "Open the estimate and complete **Setup CBS** and **Setup Estimate**.",
-              "Get it approved through its approval workflow; cost logs for the tree version need an approved estimate."
-            ]
-          },
-          {
-            "title": "Set up an approval workflow for cost estimates",
-            "steps": [
-              "Open **Project Settings > Cost Breakdown Structure > Approval WorkFlow**.",
-              "Click **Create Approval WorkFlow** and name it.",
-              "Click **Create Level**, choose **All must approve** or **Any one can approve**, and pick the approvers.",
-              "Repeat for further levels."
-            ],
-            "note": "The workflow is for the cost estimate. Timesheet and quantity approvals are set in Time Management."
-          }
-        ],
+        "intro": "<p><strong>Cost by Cost Types</strong> lists the estimated and actual cost line by line, grouped by cost type: <strong>Labor</strong>, <strong>Material</strong> and <strong>Equipment</strong>.</p>",
         "images": [
           {
-            "src": "assets/notion/cost-estimate-resource-planning/001.jpg",
-            "caption": "Resource Planning: marking roster members and subcontractors for the dates they are needed"
+            "src": "assets/product/cost-tracking/005.jpg",
+            "caption": "Cost by Cost Types in table view"
           },
           {
-            "src": "assets/notion/cost-estimate-map-scope-items/001.jpg",
-            "caption": "Map Scope Items: choosing the version, levels and commodities, then Submit"
-          },
-          {
-            "src": "assets/notion/cost-estimate/001.jpg",
-            "caption": "Create Estimate, to start a new cost estimate"
-          },
-          {
-            "src": "assets/notion/cost-estimates/001.jpg",
-            "caption": "Cost Estimate with the Material tab selected"
-          },
-          {
-            "src": "assets/notion/cost-estimates/004.jpg",
-            "caption": "Add Material, to add a new material from scratch"
-          },
-          {
-            "src": "assets/notion/cost-estimates/003.jpg",
-            "caption": "Get Materials from Global Data: keep existing and update, or replace all"
-          },
-          {
-            "src": "assets/notion/cost-estimate-estimate/002.jpg",
-            "caption": "The Labor tab: choose a template, then add labor or get it from Global Data"
-          },
-          {
-            "src": "assets/notion/cost-estimate-estimate/003.jpg",
-            "caption": "The Equipment tab: choose a template, then add equipment or get it from Global Data"
-          },
-          {
-            "src": "assets/notion/cost-estimate-estimate/004.jpg",
-            "caption": "The Sub Contractor tab: add a subcontractor or get them from Global Data"
-          },
-          {
-            "src": "assets/notion/cost-estimate-estimate/005.jpg",
-            "caption": "The Other Expenses tab: add expenses or get them from Global Data"
-          },
-          {
-            "src": "assets/notion/cost-estimates/002.jpg",
-            "caption": "The Settings button, which opens Productivity Settings"
-          },
-          {
-            "src": "assets/notion/cost-estimate-workflows/001.jpg",
-            "caption": "Workflow: choosing the feature, then Create Level with its type and approvers"
+            "src": "assets/product/cost-tracking/006.jpg",
+            "caption": "Graph view of the Labor cost type"
           }
-        ]
-      },
-      {
-        "heading": "Actual Costs",
-        "intro": "<p>Actual cost comes from the cost logs entered in <strong>Field Works > Tree Version > Cost</strong>, by field users and approved by the approvers. Cost Tracking totals them against the estimate lines.</p><p>The Cost tab has four cards: <strong>Transaction</strong>, <strong>Change order</strong>, <strong>Transfer</strong> and <strong>Field Logs</strong>.</p>",
+        ],
         "definitions": [
           {
-            "term": "Transaction",
-            "definition": "Records individual cost entries such as purchase orders and other expenses. Tabs **Open Logs** and **Rejected Logs**; columns **Log ID**, **Approval Status**, **Actual Cost**, **Committed Cost**. **Create** opens a form with **Phase Code**, **Cost Code**, **Actual Cost**, **Committed Cost**, **Cost Type** and a configurable section; buttons **Save As Draft** and **Submit**."
+            "term": "Table and graph icons",
+            "definition": "Switch between the tables and bar charts. The chart for each cost type compares **Total Estimate** with **Actual Cost** for each item, with a slider under it to zoom."
           },
           {
-            "term": "Where Transaction lists come from",
-            "definition": "The **Phase Code** drop-down lists only the phase codes used in the project's approved estimate (9 on the test tree: for example 52878 - Electrical, 932040 - Barbending, 1089-107 - Earthwork), not all phase codes of Global Data. For trees with no approved estimate the screen says \"No active and approved Estimate found.\""
+            "term": "Total Estimate Cost and Total Actual Cost",
+            "definition": "Two totals in the box at the top right, covering all cost types."
           },
           {
-            "term": "Change order and Transfer",
-            "definition": "**Change order** manages budget and contract adjustments (the test tree says \"No Change Orders available\"). **Transfer** moves budget between cost codes or phase codes and needs **Level of Detail** to be set first in Project Settings; otherwise it says so."
+            "term": "Cost type tables",
+            "definition": "One table each for **Labor**, **Material** and **Equipment**. Each row starts with the **Project**, then the item name (**Labor Name**, **Material Name** or **Equipment Name**) and its **Code**."
           },
           {
-            "term": "Field Logs",
-            "definition": "Tabs **Material**, **Machinery**, **Manpower** and **Sub Contractor**, each with **Create**, and a **Settings** dialog giving each a frequency. The test tree had none of these logs."
+            "term": "Estimated Costs",
+            "definition": "A column group with **Sub Total**, **Contingencies Cost** and **Total Costs** for the item."
           },
           {
-            "term": "What does not feed it",
-            "definition": "Procurement purchase orders, delivery receipts and invoices, and Work order invoices (Field Works > Invoices), do not feed Cost Tracking actuals automatically. Treat procurement and invoices as separate until entered as cost logs."
+            "term": "Actual Costs",
+            "definition": "What has been spent on the item so far."
           },
           {
-            "term": "Approved timesheets, equipment and labor",
-            "definition": "No link from Time Management or Equipment Management into these figures was found; record labor or equipment cost as cost logs in Field Works > Cost."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Record an actual cost",
-            "steps": [
-              "Open **Field Works**, choose the tree version and the **Cost** tab.",
-              "Open **Transaction** and click **Create**.",
-              "Choose the **Phase Code** (from the approved estimate), then enter **Cost Code**, **Actual Cost**, **Committed Cost** and **Cost Type**.",
-              "Click **Save As Draft** or **Submit**.",
-              "After approval the amount appears under **Actual Cost** in Cost Tracking."
-            ],
-            "note": "This screen isn't covered here yet."
-          }
-        ]
-      },
-      {
-        "heading": "Phase Codes",
-        "intro": "<p>Cost is built bottom-up: each estimate line has a phase code and a cost type, and the screens add them up along these two lines. Project controls use this to find which phase code or cost item is over plan.</p><p>Cost Tracking itself shows the cost-type roll-up; the phase-code view is in the project's own analytics.</p>",
-        "definitions": [
-          {
-            "term": "Cost types",
-            "definition": "The eight cost types are **Material**, **Equipment**, **Labor**, **Unit Rate**, **Sub Contractor**, **BOQ's**, **Freight Charges** and **Fuel & Gas** (Global Data > Cost). A phase code carries the cost types it may use. Cost by Cost Types shows the Labor, Material and Equipment blocks."
-          },
-          {
-            "term": "Phase codes",
-            "definition": "A phase code (for example 932040 - Barbending) groups estimate lines in **Estimate Summary > All** and is chosen on every Transaction log. The **Level of Detail** setting decides whether cost is tracked at **Phase Code** or **Phase Code - Cost Code**."
-          },
-          {
-            "term": "Phase code views by project",
-            "definition": "In **Data Analytics & Insights > Cost** the **Cost Analytics** tabs (**Cost Analytics Inputs**, **Cost Analytics Summary**, **Control Budget**) list phase codes with **Actual Cost**, **Committed Cost**, **Cost Variance**, **Cost Performance Index**, **Schedule Performance Index**, **Estimate At Completion (EAC)** and **Estimate To Completion (ETC)**. They were empty on the test trees."
-          },
-          {
-            "term": "Structure of the estimate",
-            "definition": "The **Cost Breakdown Structure** chosen when an estimate is created (for example Entity > Super Location > Location > Activity > Work Package > Phase Code) decides how lines are grouped before they reach the summary."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Trace a cost from phase code to company total",
-            "steps": [
-              "Open **Project Setup > Estimate > (estimate) > Estimate Summary > All** and find the phase code.",
-              "Open **Cost by Cost Types** and find the item (name and code).",
-              "Open **Cost by Projects** and compare the project's Estimated Cost with the sum of the three blocks.",
-              "Open the **Cost Control Dashboard** and compare Contract Value with the estimate Total."
-            ]
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/notion/cost-estimate-cost-by-category/001.jpg",
-            "caption": "Cost by Category: choosing the estimate categories to summarize"
-          },
-          {
-            "src": "assets/notion/cost-estimate-cost-summary/001.jpg",
-            "caption": "Cost Summary by activity: hours and costs for job to date, to go, current forecast and earned"
-          },
-          {
-            "src": "assets/notion/cost-estimate-cost-summary/002.jpg",
-            "caption": "Project Watch Triggers, shown as Pass or Fail and Yes or No"
-          },
-          {
-            "src": "assets/notion/cost-estimate-proposal-form/001.jpg",
-            "caption": "Proposal Form: a summary estimate of all cost types for each activity"
-          },
-          {
-            "src": "assets/notion/cost-estimate-summary/001.jpg",
-            "caption": "Summary: a view-only page of the costs entered on the Estimate tab"
-          },
-          {
-            "src": "assets/notion/cost-estimate-cost-tracking-by-phase-codes/001.jpg",
-            "caption": "Cost by Phase Codes: estimated and actual costs for each phase code"
-          }
-        ]
-      },
-      {
-        "heading": "Troubleshooting",
-        "intro": "<p>Use this section when a project shows ₹0 or a total does not match, for example during a monthly cost review. Each check points to the source screen to fix.</p><p>Everything below was checked by comparing figures across screens.</p>",
-        "definitions": [
-          {
-            "term": "Totals that match",
-            "definition": "Cost by Projects Estimated Cost total = Cost by Cost Types total (Labor + Material + Equipment) = header Total Estimate Cost. Dashboard Contract Value = approved estimate Total including Unit Rate and contingencies. Difference between the two = the Unit Rate block."
-          },
-          {
-            "term": "Why the estimate is zero",
-            "definition": "The project has no estimate, the estimate is not approved, or its lines have zero quantity or rate."
-          },
-          {
-            "term": "Why the actual is zero",
-            "definition": "No cost log has been recorded and approved in Field Works > Cost for that project, even if purchase orders, invoices or timesheets exist."
-          },
-          {
-            "term": "Why the Phase Code list is short",
-            "definition": "Transaction logs offer only the phase codes of the approved estimate."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Find why a project shows zero cost",
-            "steps": [
-              "Open **Cost by Projects** and find the project; note Estimated Cost and Actual Cost.",
-              "If the estimate is zero, open **Project Setup > Estimate** for the project and check an estimate exists, has amounts and is **Approved**.",
-              "If the actual is zero, open **Field Works > Cost > Transaction** (and Change order, Transfer, Field Logs) and check logs exist and are approved.",
-              "Check **Project Settings > Cost Breakdown Structure** (Level of Detail, Estimate Type, approval workflow).",
-              "Check the code exists in **Global Data > Cost** (Material, Labor, Equipment)."
-            ]
+            "term": "Totals under each table",
+            "definition": "For example **Total Labor Estimate Cost** and **Total Labor Actual Cost**, one pair for each cost type."
           }
         ]
       }
@@ -32826,14 +32596,9 @@ const MODULES = [
       "Use the links <strong>Cost Control Dashboard</strong>, <strong>Cost by Projects</strong> and <strong>Cost by Cost Types</strong> at the top to switch screens."
     ],
     "sections": [
-      "Overview",
       "Cost Control Dashboard",
       "Cost by Projects",
-      "Cost by Cost Types",
-      "Estimate",
-      "Actual Costs",
-      "Phase Codes",
-      "Troubleshooting"
+      "Cost by Cost Types"
     ]
   },
   {
@@ -35693,195 +35458,187 @@ const MODULES = [
     "qaItems": QA_TENDERMANAGEMENT,
     "narrative": [
       {
-        "heading": "Overview",
-        "intro": "<p>Tender Management is run by a <strong>Module Admin</strong> who sets up the lists and approval workflows once, and by <strong>Tender Managers / PMs</strong> who create and run each tender. Approvers sign tenders off, and vendors respond through their own view of the module.</p><p>From <strong>Home</strong>, click the <strong>Tender Management</strong> tile (\"Create Tenders, compare bids, and manage all tendering operations in one place\"). The module opens on the <strong>Tenders</strong> list.</p>",
-        "definitions": [
+        "heading": "Tenders",
+        "intro": "<p>The <strong>Tenders</strong> screen is the first tab of Tender Management. It lists every tender with its type, status and approval status. Click a tender name to open that tender.</p>",
+        "images": [
           {
-            "term": "Who does what",
-            "definition": "**Module Admin / Super Admin** builds everything in **Settings** (bid types, scope of work and agreement templates, statuses, approval workflows, bid templates, BOQ and estimate templates, pre-qualification and technical package templates, user groups) and keeps vendors in **Global Data**. **PM / Tender Manager** creates tenders and runs the cards. **Approver** (named in the workflow) approves a tender or a package. **Vendor / Bidder** answers pre-qualification and submits responses. Results show in **Analytics & Reports**."
+            "src": "assets/product/tender-management/001.jpg",
+            "caption": "The Tenders screen in list view"
           },
           {
-            "term": "Tender and Bid",
-            "definition": "The product uses **Tender** as the name of the object; some screens still say **Bid** (Bid Name, Bid Type, Bid Status, the **Bid** tab)."
-          },
-          {
-            "term": "Where Tender Management settings live",
-            "definition": "All settings are in the module itself (the **Settings** gear). They are not in Global Data, except the vendor list and the **Bid Templates** items, which are shared with **Global Data > Bid Templates**."
+            "src": "assets/product/tender-management/005.jpg",
+            "caption": "Tenders by Status graph"
           }
         ],
-        "procedures": [
-          {
-            "title": "Set up Tender Management for the first time",
-            "steps": [
-              "In **Global Data > Vendors**, make sure the vendors who may bid exist (a vendor only appears in Pre-Qualification if it is in Global Data).",
-              "Open **Tender Management > Settings** and review **Bid Type**, **Status Configuration** and **Bid Templates**.",
-              "Create the **BOQ & Estimate Template**, **Pre Qualification Template** and **Technical Package Template** you want to offer, and a **Scope of Work** and **Agreement** template if you use them.",
-              "Under **Approval Workflow** add at least one level for **Bid**, **Pre Qualification** and **Technical Package**.",
-              "Under **Users and Permissions** add user groups for the people who will work in the module.",
-              "Open the **Tenders** tab and click **Add Tender**."
-            ],
-            "note": "The Pre-Qualification and Technical Package template pickers need an approval workflow for that form type first."
-          }
-        ]
-      },
-      {
-        "heading": "Tenders",
-        "intro": "<p>The <strong>Tenders</strong> tab is the list of every tender, used by tender managers to create tenders and by approvers to review them. A new tender is sent for approval, and only an approved tender can be opened.</p><p>The list has <strong>Add Tender</strong>, search, <strong>Filters</strong>, <strong>Manage Columns</strong>, <strong>Table View</strong> and <strong>Grid View</strong>, <strong>Save Layout</strong> and <strong>Show as Graph</strong>. Status chips along the top count tenders by status.</p>",
         "definitions": [
           {
-            "term": "Tender list columns",
-            "definition": "**Tender Name**, **Tender ID**, **Description**, **Proposal Linked**, **Bid Type**, **Status**, **Approve**, **Reject**, **Approval Status** and **Actions** (edit, notes, delete). The **Tender ID** is the number shown as \"Tender <ID>\" inside the tender."
+            "term": "Top tabs",
+            "definition": "**Tender**, **Bid**, **Analytics & Reports** and **Issues** switch between the main pages of the module. **Settings** (top right) opens the module settings."
+          },
+          {
+            "term": "+ Add Tender",
+            "definition": "Opens the **Create Tender** dialog to add a tender."
+          },
+          {
+            "term": "Search by ID or Name",
+            "definition": "Type part of a tender name or its Tender ID and the list narrows to the matching tenders."
+          },
+          {
+            "term": "Filters",
+            "definition": "Opens a dialog with four drop-downs: **Tender Name**, **Tender ID**, **Status** and **Bid Type**. Pick values and click **Submit** to narrow the list. **Clear & Apply** removes the filters."
+          },
+          {
+            "term": "Manage Columns",
+            "definition": "Opens **Manage Columns**. Tick or untick columns under **Column Options** and drag the entries under **Column Arrangement** to change the order. **Reset to Default** restores the original columns and **Apply** keeps your choice.",
+            "images": [
+              {
+                "src": "assets/product/tender-management/003.jpg",
+                "caption": "The Manage Columns dialog"
+              }
+            ]
+          },
+          {
+            "term": "List and card icons",
+            "definition": "The two icons next to **Manage Columns** switch between a table (list) and one card per tender. A card shows the tender number, a status tag, the tender name, description, linked proposal, bid type and approval status. The three-dot menu on a card holds **Edit**, **Notes** and **Delete**."
           },
           {
             "term": "Status chips",
-            "definition": "Counts by status. **View All** shows every tender. Statuses come from **Settings > Status Configuration**."
+            "definition": "The coloured chips above the table (for example **2 Under Review**, **1 Awarded**) count the tenders in each status. **View All** shows more chips."
+          },
+          {
+            "term": "Show as Graph",
+            "definition": "Opens **Tenders By Status**, a bar chart with the number of tenders per status. The download icon saves the chart.",
+            "images": [
+              {
+                "src": "assets/product/tender-management/005.jpg",
+                "caption": "Tenders By Status"
+              }
+            ]
+          },
+          {
+            "term": "Tender Name and Tender ID",
+            "definition": "The name you typed when creating the tender and the number Arena gave it. Click the name to open the tender."
+          },
+          {
+            "term": "Description",
+            "definition": "The description entered for the tender."
+          },
+          {
+            "term": "Proposal Linked",
+            "definition": "The proposal selected for the tender in **Create Tender**. It is empty when none was linked."
+          },
+          {
+            "term": "Bid Type",
+            "definition": "The tender type chosen at creation. The types come from **Settings** → **Bid Type**."
+          },
+          {
+            "term": "Status",
+            "definition": "Where the tender stands, for example **Unassigned**, **Under Review**, **Reopened**, **Shortlisted**, **Awarded** or **Completed**. The status list is set in **Settings** → **Status Configuration**."
           },
           {
             "term": "Approval Status",
-            "definition": "**Approved** or **Ready for Approval**. A new tender goes through **Submit for Approval** and the **Bid** approval workflow in Settings."
+            "definition": "Shows **Approved** once the tender has passed its approval workflow and **Ready for Approval** while it waits for approvers. The levels and approvers come from **Settings** → **Approval Workflow**."
           },
           {
-            "term": "Create Tender dialog",
-            "definition": "Fields: **Tender Name***, **Description**, **Select Proposal**, **Select Bid Type*** (a drop-down) and three choices **Open Bidding**, **Selective Bidding**, **Selective Bidding - No Prequalification**. Buttons **Cancel** and **Submit for Approval**. **Edit Tender** shows the same fields with **Submit**."
-          },
-          {
-            "term": "Where this data comes from",
-            "definition": "**Select Proposal** lists the proposals of **Proposal Management**. **Select Bid Type** lists the three bid types (Build-Own-Transfer, Speciality Items, General), shared with Proposal Management. The Open / Selective choice is fixed."
-          },
-          {
-            "term": "Notes, Grid View, Show as Graph",
-            "definition": "The notes icon opens a **Note** dialog (**Cancel**, **Submit**). **Grid View** shows each tender as a card with Edit, Notes and Delete in its menu. **Show as Graph** opens **Tenders By Status** with a download icon."
+            "term": "Actions",
+            "definition": "The pencil edits the tender, the note icon (**Notes**) opens notes for the tender and the bin deletes it."
           }
         ],
         "procedures": [
           {
             "title": "Create a tender",
             "steps": [
-              "Open **Tender Management** and stay on the **Tenders** tab.",
-              "Click **Add Tender**.",
-              "Enter the **Tender Name** and a **Description**.",
-              "Optionally choose **Select Proposal** to link the tender to a proposal.",
-              "Choose a **Select Bid Type** and one of **Open Bidding**, **Selective Bidding** or **Selective Bidding - No Prequalification**.",
-              "Click **Submit for Approval**. The tender shows **Ready for Approval** until the approver approves it."
+              "Open **Tender Management** and click **+ Add Tender**.",
+              "Type the **Tender Name** (required) and an optional **Description**.",
+              "Optionally pick a **Select Proposal**.",
+              "Choose the **Select Bid Type** (required): **Build-Own-Transfer Bid Type**, **Speciality Items Bid Type** or **General Bid Type**.",
+              "Choose how bidders are invited: **Open Bidding**, **Selective Bidding** (the default) or **Selective Bidding - No Prequalification**.",
+              "Click **Submit for Approval**. Click **Cancel** to close the dialog without creating anything."
             ],
-            "note": "You can also start a tender from a proposal: its **Bid** tab opens the same Create Tender dialog with the proposal already selected."
-          },
-          {
-            "title": "Find a tender or change the view",
-            "steps": [
-              "Use the search box, or click **Filters** and enter **Tender Name**, **Tender ID**, **Status** or **Bid Type**, then **Submit** (**Clear & Apply** resets).",
-              "Click **Table View** or **Grid View** to change the layout, and **Save Layout** to keep it.",
-              "Click **Show as Graph** to see **Tenders By Status**."
+            "images": [
+              {
+                "src": "assets/product/tender-management/002.jpg",
+                "caption": "The Create Tender dialog",
+                "step": 2
+              }
             ]
           },
           {
-            "title": "Open a tender",
+            "title": "Find a tender",
             "steps": [
-              "Click the tender name in the list.",
-              "The tender page shows its four cards: **Tender Event Schedule**, **Pre-Qualification**, **Tender Details** and **Addendum**."
+              "Type the tender name or ID in **Search by ID or Name**, or click **Filters** and pick a **Status** or **Bid Type**.",
+              "Click the tender name to open it."
             ]
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/notion/proposal-management-bid/005.jpg",
-            "caption": "Filters on the Bids list"
           },
           {
-            "src": "assets/notion/proposal-management-bid/006.jpg",
-            "caption": "Manage Columns: hiding or rearranging columns"
+            "title": "Choose the columns of the table",
+            "steps": [
+              "Click **Manage Columns**.",
+              "Tick the columns you want and drag them into the order you want.",
+              "Click **Apply**."
+            ]
           }
         ]
       },
       {
-        "heading": "Tender Details",
-        "intro": "<p><strong>Tender Details > Tender Setup</strong> holds everything about the tender itself, and is used by the tender manager before bidders are invited. Its tabs are <strong>Profile</strong>, <strong>Teams</strong>, <strong>Status & Comments</strong>, <strong>Documents</strong>, <strong>Communication</strong>, <strong>Scope of Work</strong>, <strong>Technical Package</strong> and <strong>Submission Package</strong>.</p><p>Which tabs you see depends on how far the tender has progressed: a tender that has just been set up shows only Tender Setup, while a Completed tender also shows Tender Response, Negotiated Responses and Awarded Work Order.</p>",
-        "definitions": [
+        "heading": "Tender Record",
+        "intro": "<p>Clicking a tender on the <strong>Tenders</strong> screen opens its record, a page with four cards. The breadcrumb at the top shows the tender name so you can go back to the list.</p>",
+        "images": [
           {
-            "term": "Profile",
-            "definition": "Fields: **Bid Name***, **Bid Type***, **Description**, **Start Date**, **End Date**, **Due Date**, **Bid Status**, **Owner Name**, **Location**, **Bid Estimated Value** and **Bid Submitted Value** (INR), **Connected Items** (**Proposals**, **Opportunity**, **Project**), **Attachments**, configurable fields of the bid type, **Assign To**, **Save Changes**."
-          },
-          {
-            "term": "Where the Profile lists come from",
-            "definition": "**Bid Type** and **Bid Status** come from this module's **Settings** (3 bid types; 9 statuses). **Owner Name** lists the **Global Data > Owners** (3). **Location** showed the same three owner names, not the Global Data Locations. **Proposals** lists the 15 Proposal Management proposals, **Opportunity** the Opportunity Management list, **Project** all 115 company projects, and **Assign To** the roughly 1,270 system users from Global Rosters."
-          },
-          {
-            "term": "Configurable fields",
-            "definition": "Each bid type can add its own fields. A **Speciality Items Bid Type** tender shows **Speciality Item 1** to **Speciality Item 6**; a **General Bid Type** tender shows none."
-          },
-          {
-            "term": "Teams",
-            "definition": "Two tabs, **Users** and **Crews**. **Add User** opens **Add Users** (every system user, with search and **Select All**); **Add Crew** opens **Add Crews** (the 18 crews of **Global Data > Crews**, with member counts)."
-          },
-          {
-            "term": "Status & Comments",
-            "definition": "A **Comments** box with **Select Map Type** (**General**, **Negotiation**, **Clarification**), the current **Bid Status**, and **Search by People**."
-          },
-          {
-            "term": "Documents and Communication",
-            "definition": "**Documents** has **New Folder**, **Upload Documents** and four automatic folders (**Profile**, **Status & Comments**, **Mail Attachments**, **Submission**). **Communication** is a mail client (**Compose Mail**, All Emails, Inbox, Sent, Drafts, Starred, Trash). Mail goes through the account chosen for **TENDER MANAGEMENT** in **Global Data > Settings > Mail Settings**."
-          },
-          {
-            "term": "Scope of Work",
-            "definition": "**Create** opens **Create Scope of Work** with three choices: **Import from settings** (the templates from **Settings > Scope of Work**), **Scope of items** and **BOQ**. A scope is a set of **Bills** (on Tender 9: Bill 2.1, 2.2, 4, 6, 7, 8, 8.1, 9, 9.1)."
-          },
-          {
-            "term": "Choose Estimate Template and Package",
-            "definition": "Clicking a bill opens a three-step flow: **1 Choose Estimate Template and Package**, **2 BOQ Update**, **3 Preview**. Step 1 lists the 10 estimate templates of **Settings > BOQ & Estimate Template** and the packages (**S**, **M**, **ABC**). Steps 2 and 3 show the bill of quantities: **S.No**, **Item**, **Description**, a quantity column per package and the total **Quantity**."
-          },
-          {
-            "term": "Technical Package",
-            "definition": "A template picker (**Templates (2)**: **Critical Technical Aspects**, **General Technical Capabilities**) with **Expand All** / **Collapse All**. The questions (for example System Architecture, Integration, Customization) are what bidders answer and what the evaluator scores. Templates come from **Settings > Technical Package Template**."
-          },
-          {
-            "term": "Submission Package",
-            "definition": "Sub-tabs **Submission Package**, **Approval Workflow** and **Issues**. The list shows revisions (**Revision 1**, **Revision 2**, each with Created By and Created On) and each can be deleted. The empty message reads \"Qualify contractors from Pre-Qualification for submission creation.\" **Approval Workflow** has **Create Level** (Level, Description, Approvers, **All must approve** / **Any one can approve**); approvers are the system users. **Issues** shows total, approved and rejected counts."
+            "src": "assets/product/tender-management/004.jpg",
+            "caption": "The four cards of a tender"
           }
         ],
-        "procedures": [
+        "definitions": [
           {
-            "title": "Edit a tender profile",
-            "steps": [
-              "Open the tender and click **Tender Details**.",
-              "On **Profile** change the fields, including **Bid Status**, the values and **Connected Items**.",
-              "Click **Save Changes**."
-            ]
+            "term": "Tender Event Schedule",
+            "definition": "Track and manage all your tender event schedule. Opens the table of tender dates."
           },
           {
-            "title": "Add a team to a tender",
-            "steps": [
-              "Open **Tender Setup > Teams**.",
-              "On **Users** click **Add User**, tick people and submit; or open **Crews** and click **Add Crew**."
-            ]
+            "term": "Pre-Qualification",
+            "definition": "Select and send pre-qualification forms to shortlist qualified tenderers."
           },
           {
-            "title": "Build the scope of work",
-            "steps": [
-              "Open **Tender Setup > Scope of Work** and click **Create**.",
-              "Choose **Import from settings**, **Scope of items** or **BOQ** and submit.",
-              "Click a bill, pick an estimate template and the packages, then update the BOQ quantities and check the **Preview**."
-            ]
+            "term": "Tender Details",
+            "definition": "Opens **Tender Setup** with the tender profile, team, status, documents, communication, scope of work and submission package."
           },
           {
-            "title": "Choose a technical package",
-            "steps": [
-              "Open **Tender Setup > Technical Package**.",
-              "Pick a template from **Templates (2)** and use **Expand All** to read its questions."
+            "term": "Addendum",
+            "definition": "Manage changes and updates in the tender process. A tender with no addenda shows **There are no Addendums created**.",
+            "images": [
+              {
+                "src": "assets/product/tender-management/016.jpg",
+                "caption": "Addendum with nothing created"
+              }
             ]
           }
         ]
       },
       {
         "heading": "Tender Event Schedule",
-        "intro": "<p>The <strong>Tender Event Schedule</strong> card sets the dates of the tender, used by the tender manager so bidders and the system know each deadline. Open the tender and click <strong>Tender Event Schedule</strong>.</p><p>The screen lists 14 events, each with a <strong>Due Date</strong> and a <strong>Time</strong> (the clock icon opens a time picker), and <strong>Reset</strong> and <strong>Save</strong> buttons.</p>",
+        "intro": "<p><strong>Tender Event Schedule</strong> is a table of the 14 milestones of a tender. Enter a date and time for each one so everybody works to the same calendar.</p>",
+        "images": [
+          {
+            "src": "assets/product/tender-management/006.jpg",
+            "caption": "The Tender Event Schedule table"
+          }
+        ],
         "definitions": [
           {
-            "term": "The 14 events",
-            "definition": "**Pre-Q Form Issuance**, **Pre-Q Query Deadline**, **Pre-Q Submission Deadline**, **Pre-Q Evaluation starts**, **Result List Date**, **Issue of Tender Documents (Tender Call Date)**, **Pre-Bid Meeting**, **Query/Addendum Deadline**, **Bid Submission Last date (Tender Close Date)**, **Bid Opening Date**, **Negotiations details issued**, **Negotiation deadline**, **Award Notification**, **Contract Award**. The dates were blank on the tender checked."
+            "term": "S.No. and Tender Event",
+            "definition": "The fixed list of events in order: **Pre-Q Form Issuance**, **Pre-Q Query Deadline**, **Pre-Q Submission Deadline**, **Pre-Q Evaluation starts**, **Result List Date**, **Issue of Tender Documents(Tender Call Date)**, **Pre-Bid Meeting**, **Query/Addendum Deadline**, **Bid Submission Last date (Tender Close Date)**, **Bid Opening Date**, **Negotiations details issued**, **Negotiation deadline**, **Award Notification** and **Contract Award**."
           },
           {
-            "term": "What the dates control",
-            "definition": "The product text says that bidders can fill the pre-qualification form only from the **Pre-Q Form Issuance** date. The pre-qualification and the invitation e-mails also point bidders to this schedule."
+            "term": "Due Date",
+            "definition": "A date picker for each event."
+          },
+          {
+            "term": "Time",
+            "definition": "Hour, minute and AM or PM boxes for each event, with a clock button."
+          },
+          {
+            "term": "Reset and Save",
+            "definition": "**Save** (bottom right) stores the dates you entered. **Reset** clears the changes you made on the page."
           }
         ],
         "procedures": [
@@ -35889,423 +35646,810 @@ const MODULES = [
             "title": "Set the tender dates",
             "steps": [
               "Open the tender and click **Tender Event Schedule**.",
-              "Enter a date and click the clock icon to set the time for each event.",
-              "Click **Save** (or **Reset** to clear)."
+              "In each row pick a **Due Date** and enter the **Time**.",
+              "Click **Save**."
             ]
-          },
-          {
-            "title": "Track bid-related deadlines on a calendar",
-            "steps": [
-              "Create an event within the <strong>Proposal Management Calendar</strong>.",
-              "Link the event to the appropriate module — <strong>Opportunity</strong>, <strong>Proposal</strong>, or <strong>Bid Management</strong> — so the deadline is visible in the context of the related record."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/proposal-management-calendar/010.jpg",
-                "caption": "Linking an event to Opportunity, Proposal or Bid Management",
-                "step": 2
-              }
-            ],
-            "note": "This calendar belongs to Proposal Management; the Tender Management schedule above is separate."
           }
         ]
       },
       {
         "heading": "Pre-Qualification",
-        "intro": "<p>The <strong>Pre-Qualification</strong> card shortlists vendors before they receive the tender, used by the tender manager and approvers. It has four steps: <strong>1 Choose Template</strong>, <strong>2 Send to Tenderer</strong>, <strong>3 Response & Qualification</strong> and <strong>4 List of Qualified</strong>.</p><p>The qualified vendors are then the only ones who appear in the Technical Package and Financial Package. The option <strong>Selective Bidding - No Prequalification</strong> is named to skip this step.</p>",
+        "intro": "<p><strong>Pre-Qualification</strong> is a four-step page for choosing the application form that tenderers fill in before they can bid. Step 1, <strong>Choose Template</strong>, is open from the start.</p>",
+        "images": [
+          {
+            "src": "assets/product/tender-management/007.jpg",
+            "caption": "Step 1 Choose Template"
+          }
+        ],
         "definitions": [
           {
-            "term": "Step 1: Choose Template",
-            "definition": "**Templates (2)**: **Application Form** (particulars of firm, category of work applied for such as Building Works, M&E Works and Infrastructure Works) and **Application Form for Pre-Qualification** (**FINANCIAL**, **WORKING EXPERIENCE (TRACK RECORD)**, **PERSONNEL & MACHINERIES**). Both come from **Settings > Pre Qualification Template**. Once chosen the template is saved for the tender."
+            "term": "Step bar",
+            "definition": "**1 Choose Template**, **2 Send to Tenderer**, **3 Response & Qualification** and **4 List of Qualified**. The later steps stay locked until step 1 is submitted."
           },
           {
-            "term": "Step 2: Send to Tenderer",
-            "definition": "A list of vendors with **Name**, **Email**, **License**, **Phone no** and a tick box; the **Email** button stays disabled until you tick vendors. The list is **Global Data > Vendors**. The product e-mail asks the vendor to submit the pre-qualification form and to read the Tender Event Schedule."
+            "term": "Templates",
+            "definition": "The left list shows the pre-qualification templates (count in brackets). They are created in **Settings** → **Pre Qualification Template**. Click one to preview it on the right."
           },
           {
-            "term": "Step 3: Response & Qualification",
-            "definition": "The left list **Tender (3)** shows the vendors who answered (**DEF SDN BHD (eco)**, **JKL SDN BHD (eco)**, **GHI SDN BHD (eco)**). Click one to read its filled form, for example Paid-up Capital \"Between RM 500k - RM 2 mil\"."
+            "term": "Template preview",
+            "definition": "Sections you can open with the arrow, or all at once with **Expand All** and **Collapse All**. The **Application Form** has **(A - 1) PARTICULARS OF FIRM** (name, mailing address, telephone, facsimile, email, web page, contact person, mobile), **(A - 2) CATEGORY OF WORK APPLIED TO BE PRE-QUALIFIED** (tick lists of building, M&E and infrastructure works with a code for each) and **(A - 3) OTHER DETAILS** (date of submission)."
           },
           {
-            "term": "Step 4: List of Qualified",
-            "definition": "The vendors accepted: **JKL SDN BHD (eco)** and **DEF SDN BHD (eco)** (GHI was not). The same two vendors appear in **Technical Package > List of Qualified** and in the **Financial Package**."
+            "term": "Submit",
+            "definition": "Submits the chosen template for this tender (step 2 to 4 unlock afterwards)."
+          }
+        ]
+      },
+      {
+        "heading": "Tender Setup",
+        "intro": "<p><strong>Tender Setup</strong> opens from the <strong>Tender Details</strong> card. Its first tab, <strong>Profile</strong>, holds the basic facts of the tender. The other tabs are described in the sections that follow.</p>",
+        "images": [
+          {
+            "src": "assets/product/tender-management/008.jpg",
+            "caption": "The Profile tab of Tender Setup"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Tabs",
+            "definition": "**Profile**, **Teams**, **Status & Comments**, **Documents**, **Communication**, **Scope of Work** and **Submission Package**."
           },
           {
-            "term": "Settings it depends on",
-            "definition": "The template choice is blocked until **Settings > Approval Workflow > Pre Qualification** has a level, and it is allowed only before the **Pre-Q Form Issuance** date. The product also asks for confirmation before starting evaluation because it stops accepting responses."
+            "term": "Bid Name",
+            "definition": "Required. The tender name shown in the list."
+          },
+          {
+            "term": "Bid Type",
+            "definition": "Required. Choose one of the bid types defined in settings. The configurable fields at the bottom change with the type."
+          },
+          {
+            "term": "Description",
+            "definition": "Free text about the tender."
+          },
+          {
+            "term": "Start Date, End Date and Due Date",
+            "definition": "Date pickers for when the tender starts, ends and is due."
+          },
+          {
+            "term": "Bid Status",
+            "definition": "The status of the tender, for example **Awarded**. The same status appears in the **Status** column on the **Tenders** screen."
+          },
+          {
+            "term": "Owner Name and Location",
+            "definition": "Who owns the work and where the job is."
+          },
+          {
+            "term": "Bid Estimated Value and Bid Submitted Value",
+            "definition": "Two amount boxes with the currency symbol. They feed the weekly report."
+          },
+          {
+            "term": "Connected Items",
+            "definition": "Links the tender to a **Proposals**, **Opportunity** or **Project** record."
+          },
+          {
+            "term": "Attachments",
+            "definition": "**Upload** adds files to the tender."
+          },
+          {
+            "term": "Configurable Fields",
+            "definition": "Extra text boxes tied to the bid type. A **Speciality Items Bid Type** tender shows **Speciality Item 1** to **Speciality Item 6**."
+          },
+          {
+            "term": "Assign To and Save Changes",
+            "definition": "**Assign To** is a drop-down of users. **Save Changes** stores the page."
           }
         ],
         "procedures": [
           {
-            "title": "Pre-qualify vendors for a tender",
+            "title": "Edit the tender profile",
             "steps": [
-              "Open the tender and click **Pre-Qualification**.",
-              "In **1 Choose Template** pick a template and submit it.",
-              "In **2 Send to Tenderer** tick the vendors and click **Email**.",
-              "In **3 Response & Qualification** open each vendor to read its answers and qualify it.",
-              "Check **4 List of Qualified**: these vendors move on to the packages."
+              "Open the tender and click **Tender Details**.",
+              "On **Profile** change the fields you need, for example **Due Date** or **Bid Estimated Value**.",
+              "Click **Save Changes**."
             ]
           }
         ]
       },
       {
-        "heading": "Tender Response",
-        "intro": "<p><strong>Tender Details > Tender Response</strong> is where the tender manager and evaluators read what the qualified vendors submitted. It has two tabs: <strong>Technical Package</strong> and <strong>Financial Package</strong>.</p><p>Vendors submit through the <strong>Bid</strong> tab of their own login (it lists the tenders they may answer and the <strong>Bid Submission Status</strong>); the admin's Bid tab is empty.</p>",
+        "heading": "Teams",
+        "intro": "<p>The <strong>Teams</strong> tab of Tender Setup lists the users and crews working on the tender.</p>",
+        "images": [
+          {
+            "src": "assets/product/tender-management/009.jpg",
+            "caption": "The Teams tab"
+          }
+        ],
         "definitions": [
           {
-            "term": "Technical Package",
-            "definition": "Two steps: **1 Response of Technical Package** (left list **Tender (2)** of vendors; each question shows the answer, a **Weightage** and a **Score** box) and **2 List of Qualified** (**Name**, **Email**, **License**, **Phone no**)."
+            "term": "Users and Crews",
+            "definition": "Two sub-tabs. Each shows **No Users selected** or **No Crews selected** until someone is added."
           },
           {
-            "term": "Financial Package",
-            "definition": "**BOQ Templates** page lists the same bills as the Scope of Work. Click a bill to open four tabs: **Responses**, **Comparison**, **Analytics**, **Shortlist for Negotiation**. The Financial Package needs a Scope of Work first: on a tender without one the page shows an error about scope of work items."
+            "term": "Add User",
+            "definition": "Opens **Add Users**: a searchable list of people with a tick box each and **Select All**. **Submit** adds the ticked people and **Cancel** closes it.",
+            "images": [
+              {
+                "src": "assets/product/tender-management/010.jpg",
+                "caption": "The Add Users dialog"
+              }
+            ]
           },
           {
-            "term": "Responses tab",
-            "definition": "Left list of vendors with each response (JKL SDN BHD (eco) has **Response 2** and **Response 1**). For every package (**S**, **M**, **ABC**): **Item**, **Description**, **Previous Quantity**, **Current Quantity**, **Amount** (the vendor's rate) and **Cumulative Pay**. Items and quantities are the Scope of Work BOQ."
-          },
-          {
-            "term": "Where bidders come from",
-            "definition": "Vendors on these screens are those qualified in Pre-Qualification, which are **Global Data > Vendors** records (category **Eco category** for these two)."
+            "term": "Add Crew",
+            "definition": "On the **Crews** sub-tab, adds a crew to the tender."
           }
         ],
         "procedures": [
           {
-            "title": "Review a vendor's technical response",
+            "title": "Add users to a tender",
             "steps": [
-              "Open **Tender Details > Tender Response > Technical Package**.",
-              "Pick a vendor in **Tender (2)**.",
-              "Read each answer and enter a **Score** against the **Weightage**.",
-              "Open **2 List of Qualified** to see who passed."
-            ]
-          },
-          {
-            "title": "Review financial responses",
-            "steps": [
-              "Open **Tender Response > Financial Package** and click a bill.",
-              "On **Responses** pick a vendor and response to see rates per package."
+              "In **Tender Setup** open **Teams**.",
+              "Click **Add User**.",
+              "Tick the users, or tick **Select All**.",
+              "Click **Submit**."
             ]
           }
         ]
       },
       {
-        "heading": "Bid Comparison",
-        "intro": "<p>After responses come in, evaluators compare vendor prices, shortlist for negotiation and award a work order. This is done inside the <strong>Financial Package</strong>, <strong>Negotiated Responses</strong> and <strong>Awarded Work Order</strong> tabs.</p><p>The winner becomes a work order that lives inside the tender; it is not added to the Home <strong>Work Order</strong> list.</p>",
+        "heading": "Status & Comments",
+        "intro": "<p>The <strong>Status & Comments</strong> tab of Tender Setup is a chat-style log for the tender with its current status on the right.</p>",
+        "images": [
+          {
+            "src": "assets/product/tender-management/011.jpg",
+            "caption": "The Status & Comments tab"
+          }
+        ],
         "definitions": [
           {
-            "term": "Comparison",
-            "definition": "Filters **Select BOQ Items**, **Select Tenderers** and **Select Packages**, a **Download Excel** button, and for each package a table **Item**, **Description**, **Quantity** and one **Amount** column per vendor (for example Reinforced Concrete Frame, quantity 12: JKL 345, DEF 250). Each vendor shows its latest response."
+            "term": "Comments",
+            "definition": "The message history of the tender. Filter it with the date range, **Select Map Type** and **Search** boxes at the top."
           },
           {
-            "term": "Analytics",
-            "definition": "Charts of the vendors' prices by package and item, each with a download icon."
+            "term": "Type a message",
+            "definition": "Write a comment at the bottom and send it with the arrow. The cloud button attaches a file."
           },
           {
-            "term": "Shortlist for Negotiation",
-            "definition": "The vendors taken forward: **Name**, **Email**, **License**, **Phone no**. Only shortlisted vendors then appear in **Negotiated Responses**."
+            "term": "Bid Status",
+            "definition": "A drop-down on the right showing the tender status, for example **Awarded**."
           },
           {
-            "term": "Negotiated Responses",
-            "definition": "Bill cards, then a page with the shortlisted vendor (**Tender (1)**: **JKL SDN BHD (eco)**), its responses and the full price table. **Select Items to Create WO** turns on tick boxes to choose which BOQ items go into the work order."
+            "term": "Search by People",
+            "definition": "Search people, or open **All** to pick the people whose comments you want to see."
+          }
+        ]
+      },
+      {
+        "heading": "Documents",
+        "intro": "<p>The <strong>Documents</strong> tab of Tender Setup is the file store of the tender, organised in folders.</p>",
+        "images": [
+          {
+            "src": "assets/product/tender-management/012.jpg",
+            "caption": "The Documents tab"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Folders & Documents",
+            "definition": "A table with **Items**, **Last Modified**, **Added On** and **Actions** columns. Four folders exist for each tender: **Profile**, **Status & Comments**, **Mail Attachments** and **Submission**, so files uploaded on those tabs land in the matching folder."
           },
           {
-            "term": "Awarded Work Order",
-            "definition": "Bill cards, then a card for the work order with **Awarded To**, **Project Linked**, **Description** and **Created On**. Opening it shows the awarded BOQ per package (**Current Quantity**, **Amount**). The product e-mail to the winner says the vendor has been awarded the scope and asks it to confirm."
+            "term": "New Folder",
+            "definition": "Adds a folder under the one you are in."
           },
           {
-            "term": "Where the award goes",
-            "definition": "The awarded work order is shown only in the tender. The Home **Work Order** list does not contain it, and its **Project Linked** field was empty."
+            "term": "Upload Documents",
+            "definition": "Adds files to the open folder."
+          },
+          {
+            "term": "Documents",
+            "definition": "The blue link at the top is the path back to the first level."
+          }
+        ]
+      },
+      {
+        "heading": "Communication",
+        "intro": "<p>The <strong>Communication</strong> tab of Tender Setup is a mailbox for emails about this tender.</p>",
+        "images": [
+          {
+            "src": "assets/product/tender-management/013.jpg",
+            "caption": "The Communication tab"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Compose Mail",
+            "definition": "Starts a new email."
+          },
+          {
+            "term": "Search mail",
+            "definition": "Searches the emails of the tender."
+          },
+          {
+            "term": "Mail folders",
+            "definition": "**All Emails**, **Inbox**, **Sent**, **Drafts**, **Starred** and **Trash**. An empty folder shows **Oops! You don't have any mails at the moment**."
+          },
+          {
+            "term": "Gear icon",
+            "definition": "Top right of the mailbox, opens the mail settings."
+          }
+        ]
+      },
+      {
+        "heading": "Scope of Work",
+        "intro": "<p>The <strong>Scope of Work</strong> tab of Tender Setup holds the scope documents created for the tender. It shows <strong>No Data</strong> until one is created.</p>",
+        "definitions": [
+          {
+            "term": "Create",
+            "definition": "Adds a scope of work for the tender. The templates for it come from **Settings** → **Scope of Work**."
+          }
+        ]
+      },
+      {
+        "heading": "Submission Package",
+        "intro": "<p>The <strong>Submission Package</strong> tab of Tender Setup collects what qualified contractors submit. It has three sub-tabs.</p>",
+        "images": [
+          {
+            "src": "assets/product/tender-management/014.jpg",
+            "caption": "Submission Package before any contractor has qualified"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Submission Package",
+            "definition": "Shows **Qualify contractors from Pre-Qualification for submission creation.** until contractors have qualified."
+          },
+          {
+            "term": "Approval Workflow",
+            "definition": "A table of approval levels for the package with **Level**, **Level Description**, **Approvers**, **Workflow Type** and **Actions**. **Create Level** opens the **Approval Workflow** dialog.",
+            "images": [
+              {
+                "src": "assets/product/tender-management/015.jpg",
+                "caption": "The Approval Workflow dialog"
+              }
+            ]
+          },
+          {
+            "term": "Workflow Type",
+            "definition": "In the dialog choose **All must approve** (every approver must agree) or **Any one can approve** (one approval is enough)."
+          },
+          {
+            "term": "Select Approvers",
+            "definition": "A searchable list of users with tick boxes and **Select All**. Add a **Description** for the level and click **Submit**."
+          },
+          {
+            "term": "Issues",
+            "definition": "Shows the counts **0 Total Issues**, **0 Issues Approved** and **0 Issues Rejected**, plus **Filters**, a search box and list and card icons."
           }
         ],
         "procedures": [
           {
-            "title": "Compare vendor prices and award",
+            "title": "Add an approval level to the submission package",
             "steps": [
-              "Open **Tender Response > Financial Package** and click a bill, then **Comparison**.",
-              "Choose the items, tenderers and packages to compare; use **Download Excel** if needed.",
-              "Open **Shortlist for Negotiation** and shortlist the vendors.",
-              "Open **Negotiated Responses**, click the bill, compare the responses and use **Select Items to Create WO**.",
-              "Open **Awarded Work Order** to see the work order and the vendor it is awarded to."
+              "In **Tender Setup** open **Submission Package** and then **Approval Workflow**.",
+              "Click **Create Level**.",
+              "Choose **All must approve** or **Any one can approve**.",
+              "Type a **Description** and tick the approvers.",
+              "Click **Submit**."
             ]
           }
         ]
       },
       {
         "heading": "Addendum",
-        "intro": "<p>The <strong>Addendum</strong> card records changes to the tender after it is issued, used by the tender manager. Open the tender and click <strong>Addendum</strong>.</p><p>It lists named addenda with search, a pager and table / grid views.</p>",
-        "definitions": [
+        "intro": "<p><strong>Addendum</strong> is the fourth card of a tender. It lists changes issued to bidders after the tender went out. A tender without changes shows <strong>There are no Addendums created</strong>.</p>",
+        "images": [
           {
-            "term": "Addendum list",
-            "definition": "Cards with **Name** and **Description** (on Tender 9: **Pre-Qualification Responses** and **Technical Addendum**); the menu offers **Edit**. Opening one shows **Addendum Data** with the same template pickers as the tender, for example **Technical Package** (**Critical Technical Aspects**, **General Technical Capabilities**)."
-          },
-          {
-            "term": "Settings it depends on",
-            "definition": "The **Query/Addendum Deadline** in the **Tender Event Schedule**. The e-mail to bidders is titled \"Addendum Update on Tender Submission\"."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Review an addendum",
-            "steps": [
-              "Open the tender and click **Addendum**.",
-              "Click an addendum card.",
-              "Read or change the technical package template in **Addendum Data**."
-            ]
+            "src": "assets/product/tender-management/016.jpg",
+            "caption": "Addendum page of a tender without addenda"
           }
         ]
       },
       {
-        "heading": "RFQs",
-        "intro": "<p>Requests for quotation on materials and services are handled in the <strong>Procurement</strong> module, not inside the tender cards. Procurement staff use it to invite vendors to quote against a requisition.</p><p>A tender's own price comparison is the <strong>Financial Package > Comparison</strong> described above. The steps below stay here as the Procurement route.</p>",
-        "definitions": [
+        "heading": "Bid",
+        "intro": "<p>The <strong>Bid</strong> tab lists tenders that have received bids, so you can compare what bidders submitted.</p>",
+        "images": [
           {
-            "term": "RFQ (Request for Quotation)",
-            "definition": "Created in **Procurement > RFQ** from a requisition: step 1 select the requisition form, step 2 update quantities, step 3 identify vendors (**Vendor Category**, **Vendor Sub Category**, **Category Groups** from **Global Data > Vendors**)."
-          },
-          {
-            "term": "Vendor Response and comparison",
-            "definition": "Vendor quotes are recorded and compared in Procurement's Vendor Responses, by cost and lead time."
+            "src": "assets/product/tender-management/017.jpg",
+            "caption": "The Bid tab"
           }
         ],
-        "procedures": [
+        "definitions": [
           {
-            "title": "Invite vendors to quote (create an RFQ)",
-            "steps": [
-              "Go to <strong>Procurement → RFQ</strong> and click <strong>Create</strong>.",
-              "Link the new RFQ to the relevant <strong>requisitions (REQ)</strong>.",
-              "Update quantities and specifications as needed for the scope being quoted.",
-              "Select vendors from the pre-configured vendor list — vendor ratings shown next to each name can help guide your selection."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/procurement-rfq/002.jpg",
-                "caption": "Create, to start a new RFQ",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/procurement-rfq/003.jpg",
-                "caption": "Linking procurement packages to their requisitions",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/procurement-rfq/004.jpg",
-                "caption": "Updating quantities and specifications",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/procurement-rfq/005.jpg",
-                "caption": "Vendor ratings shown next to each vendor's name",
-                "step": 4
-              }
-            ]
+            "term": "Table columns",
+            "definition": "**Tender Name**, **Tender ID**, **Description**, **Proposal Linked**, **Bid Type** and **Bid Submission Status**. It shows **No Data Available** until bids exist."
           },
           {
-            "title": "Set standard instructions for vendors on an RFQ",
-            "steps": [
-              "In <strong>Procurement → RFQ</strong>, click <strong>Vendor Instructions</strong>.",
-              "Configure the default guidelines, terms, and conditions that should be sent to vendors for consistent communication across all RFQs."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/procurement-rfq/006.jpg",
-                "caption": "Vendor instructions with guidelines, terms and conditions",
-                "step": 2
-              }
-            ]
-          },
-          {
-            "title": "Track the status of an RFQ",
-            "steps": [
-              "Go to <strong>Procurement → RFQ</strong> and review the card view.",
-              "Each card shows the RFQ's current stage — such as <strong>Created</strong>, <strong>Email Sent to Vendors</strong>, or <strong>PO Approved</strong> — along with key information for assessing what action is pending."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/procurement-rfq/007.jpg",
-                "caption": "The RFQ list, to check progress and pending actions",
-                "step": 1
-              }
-            ]
-          },
-          {
-            "title": "Enter vendor quotes for comparison",
-            "steps": [
-              "Go to <strong>Procurement → Vendor Responses</strong>.",
-              "Select the relevant <strong>RFQ</strong> from the list on the left.",
-              "Enter each vendor's response, including <strong>cost</strong> and <strong>lead time</strong>."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/procurement-vendor-responses/002.jpg",
-                "caption": "Choosing the RFQ to record vendor responses for",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/procurement-vendor-responses/003.jpg",
-                "caption": "Entering a vendor's costs and lead time",
-                "step": 3
-              }
-            ]
-          },
-          {
-            "title": "Compare vendor bids to select a winner",
-            "steps": [
-              "After entering vendor responses in <strong>Procurement → Vendor Responses</strong>, open the <strong>Vendor Analysis and Selection</strong> tab.",
-              "Evaluate and compare the vendor responses based on cost, lead time, and any other relevant factors to decide on a winning vendor."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/procurement-vendor-responses/004.jpg",
-                "caption": "Comparing vendor responses by cost, lead time and other factors",
-                "step": 2
-              }
-            ]
+            "term": "Search, Filters, Manage Columns, view icons and Show as Graph",
+            "definition": "Work the same way as on the **Tenders** screen."
           }
         ]
       },
       {
         "heading": "Analytics & Reports",
-        "intro": "<p>These three tabs summarise tenders for managers: <strong>Analytics & Reports</strong>, <strong>Issues</strong> and <strong>Bid</strong>.</p><p>The charts read the tenders from the list, so a tender must exist and have a status and values to appear.</p>",
+        "intro": "<p>The <strong>Analytics & Reports</strong> tab is a menu of five reports on tender results.</p>",
+        "images": [
+          {
+            "src": "assets/product/tender-management/018.jpg",
+            "caption": "The report cards"
+          }
+        ],
         "definitions": [
           {
-            "term": "Analytics & Reports (5 cards)",
-            "definition": "**Bid Awarded Rate** (success rate by quantity and currency value, with a **Bid Types** filter), **Estimate Awarded Rate**, **Types of Bids** (quantity and amount), **Success & Estimate Over Time** (status filter) and **Weekly Report**. Charts have download and zoom icons."
+            "term": "Bid Awarded Rate",
+            "definition": "Monitor real-time success of the bids to the granular level. Opens **Bid Success Rate**."
+          },
+          {
+            "term": "Estimate Awarded Rate",
+            "definition": "View project timelines and stay in control. Opens **Estimate Success Rate**."
+          },
+          {
+            "term": "Types of Bids",
+            "definition": "Compare the success rate of bid types with quantity of bids and types of bids."
+          },
+          {
+            "term": "Success & Estimate Over Time",
+            "definition": "Compare and analyze the estimates and success of the bids over time."
           },
           {
             "term": "Weekly Report",
-            "definition": "A **Date Range** filter, download / share / print icons and a table: **Tender Name**, **Bid Type**, **Description**, **Proposal Name**, **Start Date**, **End Date**, **Bid Estimated Value**, **Bid Submitted Value**, **Owner Name**, **Job Location**, **Opportunity**, **Project**. Tenders with status **Unassigned** are not listed."
-          },
-          {
-            "term": "Issues",
-            "definition": "Workflow issues raised on tender approvals: counters (Total, Approved, Rejected), **Filters** and a table (**WFL Number**, **Level**, **Raised on Date/Time**, **Raised by**, **Comments**, **Assign To**, **Due Date**, **Chat**, **See History**). The Submission Package > Issues tab inside a tender is separate."
-          },
-          {
-            "term": "Bid tab",
-            "definition": "The vendor-facing list of tenders to answer, with **Bid Submission Status**. It is empty for the admin (\"No Data Available\")."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Check how tenders are performing",
-            "steps": [
-              "Open **Analytics & Reports**.",
-              "Click a card, for example **Bid Awarded Rate**, and filter by **Bid Types**.",
-              "Use the download icon to save a chart."
-            ]
+            "definition": "Real-time snapshot of bid advancements on a weekly basis."
           }
         ]
       },
       {
-        "heading": "Data Sources",
-        "intro": "<p>This section traces each tender list and where its results end up, for admins checking why a value is missing.</p><p>Tender Management reuses data from <strong>Global Data</strong>, <strong>Proposal Management</strong>, <strong>Opportunity Management</strong> and <strong>Projects</strong>.</p>",
-        "definitions": [
+        "heading": "Bid Success Rate",
+        "intro": "<p><strong>Bid Success Rate</strong> compares how many tenders reach each status, per bid type, with two pie charts.</p>",
+        "images": [
           {
-            "term": "Feeds in",
-            "definition": "**Vendors / bidders**: **Global Data > Vendors** (and the **Eco category** vendors for the test tenders). **Owners**: **Global Data > Owners**. **Team users and Assign To**: **Global Rosters**. **Team crews**: **Global Data > Crews**. **BOQ items**: **Global Data > Bid Templates** (= Settings > Bid Templates). **Bid types**, **statuses**: shared with **Proposal Management > Settings**."
-          },
-          {
-            "term": "Link to Proposal Management",
-            "definition": "A tender created from a proposal's **Bid** tab (or with **Select Proposal**) shows that proposal in **Proposal Linked**, and the proposal's Bid tab lists its tenders."
-          },
-          {
-            "term": "Link to Opportunity and Projects",
-            "definition": "The tender **Profile** has **Opportunity** and **Project** pick lists. The awarded work order's **Project Linked** field was empty."
-          },
-          {
-            "term": "Feeds out",
-            "definition": "Approved tenders appear in **Analytics & Reports**. The awarded work order stays inside **Tender Details > Awarded Work Order**; it does not appear in Home > Work Order."
+            "src": "assets/product/tender-management/019.jpg",
+            "caption": "Bid Success Rate"
           }
         ],
-        "procedures": [
+        "definitions": [
           {
-            "title": "Trace a missing vendor or value",
-            "steps": [
-              "If a vendor is missing in **Pre-Qualification > Send to Tenderer**, check it exists in **Global Data > Vendors**.",
-              "If a bid type or status is missing, check **Settings** (it is shared with Proposal Management).",
-              "If a proposal is missing in **Select Proposal**, check **Proposal Management**.",
-              "If a tender is missing from the Weekly Report, check its status (**Unassigned** tenders were not listed)."
-            ]
+            "term": "Success Rate (Qty of Tender)",
+            "definition": "A pie chart of the number of tenders in each status for the selected bid type."
+          },
+          {
+            "term": "Success Rate (Currency value)",
+            "definition": "A pie chart of the same split by money value. It is grey when no values are entered."
+          },
+          {
+            "term": "Bid Types",
+            "definition": "A drop-down above each chart that picks the bid type shown."
+          },
+          {
+            "term": "PDF, download and full-screen icons",
+            "definition": "Top right of each chart: save it as a PDF, download it, or enlarge it."
+          }
+        ]
+      },
+      {
+        "heading": "Estimate Success Rate",
+        "intro": "<p><strong>Estimate Success Rate</strong> is a bar chart of the number of bids per status, split by the size of the estimated value.</p>",
+        "images": [
+          {
+            "src": "assets/product/tender-management/020.jpg",
+            "caption": "Estimate Success Rate"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Bid Types",
+            "definition": "Picks the bid type charted."
+          },
+          {
+            "term": "Date range",
+            "definition": "A start and end date box that limits the chart."
+          },
+          {
+            "term": "Chart",
+            "definition": "The vertical axis is **QTY OF BIDS** and the horizontal axis is **STATUS** (for example **Awarded**, **Draft**, **Pre Qualification**, **Reopened**, **Under Review**). The legend splits each status into value bands."
+          },
+          {
+            "term": "PDF, download and full-screen icons",
+            "definition": "Save the chart as a PDF, download it, or enlarge it."
+          }
+        ]
+      },
+      {
+        "heading": "Types of Bids",
+        "intro": "<p><strong>Types of Bids</strong> shows how tenders and their values are spread across bid types.</p>",
+        "images": [
+          {
+            "src": "assets/product/tender-management/021.jpg",
+            "caption": "Types of Bids"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Types of Bids (Quantity)",
+            "definition": "A bar chart of **Quantity of Bids** for each bid type."
+          },
+          {
+            "term": "Types of Bids (Amount)",
+            "definition": "A bar chart of **Amount of Bids** for each bid type."
+          },
+          {
+            "term": "Date range",
+            "definition": "A start and end date box above each chart."
+          },
+          {
+            "term": "PDF, download and full-screen icons",
+            "definition": "Save the chart as a PDF, download it, or enlarge it."
+          }
+        ]
+      },
+      {
+        "heading": "Success Over Time",
+        "intro": "<p><strong>Success Over Time</strong> charts tender results across the days of the year. A second chart below it, <strong>Estimate Over Time</strong>, does the same for estimates.</p>",
+        "images": [
+          {
+            "src": "assets/product/tender-management/022.jpg",
+            "caption": "Success Over Time"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Status drop-down",
+            "definition": "Under each chart title, set to **In-Progress**, chooses which status group is charted."
+          },
+          {
+            "term": "Chart",
+            "definition": "The vertical axis is **Project Value Submitted** and the horizontal axis is **Days of year**. The slider under the axis zooms into a period."
+          },
+          {
+            "term": "PDF, download and full-screen icons",
+            "definition": "Save the chart as a PDF, download it, or enlarge it."
+          }
+        ]
+      },
+      {
+        "heading": "Weekly Report",
+        "intro": "<p><strong>Weekly Report</strong> is a table of tenders for a chosen week, with their values, that you can download, share or print.</p>",
+        "images": [
+          {
+            "src": "assets/product/tender-management/023.jpg",
+            "caption": "The Weekly Report"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Date Range",
+            "definition": "Choose the start and end date of the period you want."
+          },
+          {
+            "term": "Download, Share and Print",
+            "definition": "Three icons at the top right of the table."
+          },
+          {
+            "term": "Columns",
+            "definition": "**Tender Name**, **Bid Type**, **Description**, **Proposal Name**, **Start Date**, **End Date**, **Bid Estimated Value**, **Bid Submitted Value**, **Owner Name**, **Job Location**, **Opportunity** and **Project**. Scroll right to see all of them."
+          }
+        ]
+      },
+      {
+        "heading": "Issues",
+        "intro": "<p>The <strong>Issues</strong> tab lists issues raised on tender submissions, with who raised them and who must act.</p>",
+        "images": [
+          {
+            "src": "assets/product/tender-management/024.jpg",
+            "caption": "The Issues tab"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Counts",
+            "definition": "**Total Issues**, **Issues Approved** and **Issues Rejected** at the top left."
+          },
+          {
+            "term": "Filters and search",
+            "definition": "**Filters** opens a filter dialog and the search box finds an issue. The two icons switch between table and card view."
+          },
+          {
+            "term": "Table columns",
+            "definition": "**WFL Number**, **Level**, **Raised on Date**, **Raised on Time**, **Raised by**, **Image**, **Comments**, **Assign To**, **Due Date**, then **Chat** and **See History** buttons."
+          },
+          {
+            "term": "Assign To and Due Date",
+            "definition": "Pick the user who must resolve the issue and the date by which they must do it."
+          },
+          {
+            "term": "Chat and See History",
+            "definition": "**Chat** opens a conversation on the issue and **See History** shows what has happened to it."
           }
         ]
       },
       {
         "heading": "Settings",
-        "intro": "<p><strong>Settings</strong> holds the lists and templates that shape every tender, used by the Module Admin. Its menu has <strong>Bid Type</strong>, <strong>Scope of Work</strong>, <strong>Agreement</strong>, <strong>Status Configuration</strong>, <strong>Approval Workflow</strong>, <strong>Bid Templates</strong>, <strong>BOQ & Estimate Template</strong>, <strong>Pre Qualification Template</strong>, <strong>Technical Package Template</strong> and <strong>Users and Permissions</strong>.</p>",
+        "intro": "<p>The <strong>Settings</strong> button at the top right of every Tender Management page opens the module settings. A menu on the left lists the setting pages, with a search box above it.</p>",
+        "images": [
+          {
+            "src": "assets/product/tender-management/025.jpg",
+            "caption": "Settings with the Bid Type page"
+          }
+        ],
         "definitions": [
           {
-            "term": "Bid Type",
-            "definition": "Cards **Build-Own-Transfer Bid Type**, **Speciality Items Bid Type**, **General Bid Type** with Description, Created On and Created By; the **Bid Type** button adds one. These are the same three bid types as in **Proposal Management > Settings > Bid Types**, and feed **Select Bid Type**, the Profile and the analytics filters."
+            "term": "Setting pages",
+            "definition": "**Bid Type**, **Scope of Work**, **Agreement**, **Status Configuration**, **Approval Workflow**, **Bid Templates**, **BOQ & Estimate Template**, **Pre Qualification Template**, **Technical Package Template** and **Users and Permissions**."
+          }
+        ]
+      },
+      {
+        "heading": "Bid Type",
+        "intro": "<p><strong>Bid Type</strong> lists the types you can choose when creating a tender. Each type is a card.</p>",
+        "images": [
+          {
+            "src": "assets/product/tender-management/025.jpg",
+            "caption": "The Bid Type settings page"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Bid type card",
+            "definition": "Shows the name, description, **Created On** date and **Created By**. The three-dot menu holds **Edit** and **Delete**. The types in this site are **Build-Own-Transfer Bid Type**, **Speciality Items Bid Type** and **General Bid Type**."
           },
           {
-            "term": "Scope of Work and Agreement",
-            "definition": "**Create Template** offers **Create Scope of Work Template** / **Upload Scope of Work Template**, and likewise for **Agreement**. The scope templates feed **Import from settings** in a tender."
-          },
-          {
-            "term": "Status Configuration",
-            "definition": "Nine statuses: **In-Progress** (first), **Draft**, **Under Review**, **Reopened**, **Shortlisted**, **Awarded**, **Rejected**, **Pre Qualification**, **Completed** (last). **Add Status** adds one; only the middle ones can be deleted. They feed **Bid Status** and the status chips."
-          },
-          {
-            "term": "Approval Workflow",
-            "definition": "Three tabs: **Bid**, **Pre Qualification**, **Technical Package**. Each has **Create Level** and a table (**Level**, **Level Description**, **Approvers**, **Workflow Type**, **Actions**)."
-          },
-          {
-            "term": "Bid Templates",
-            "definition": "The list of BOQ items with **Add Item**, **Download Excel**, **Download Sample Excel**, **Upload Excel**. It is the same list as **Global Data > Bid Templates**."
-          },
-          {
-            "term": "BOQ & Estimate Template",
-            "definition": "Ten estimate templates (**Test**, **Item Rate**, **Ori BQ**, **M&E BQ**, **Lump Sum**, **Unit Rate**, **Guaranteed Maximum Price**, **Cost-Plus**, **Time & Material**, **Time & Material (Global)**). **Create Template** asks for a **Name** and **Description**. They are the templates offered in a tender's Scope of Work."
-          },
-          {
-            "term": "Pre Qualification Template and Technical Package Template",
-            "definition": "Two templates each (**Application Form**, **Application Form for Pre-Qualification**; **Critical Technical Aspects**, **General Technical Capabilities**), each with **Create Template**."
-          },
-          {
-            "term": "Users and Permissions",
-            "definition": "**Add User Group** opens a page with **Permissions** and **Users** tabs. The grid has **View**, **Create**, **Edit**, **Delete**, **Admin**, **Download**, **Print**, **Assign To** and **Roll Back** for Bid Management (Profile, Team, Status And Comments, Documents, Communication, Scope Of Work, Bid Criteria, Submission, Submission Approval Workflow), Bid Management Settings, Bid Response (Log Subcontractor Response, Compare Contractor Price, Agreement, Work Order), Analytics and Issues."
+            "term": "+ Bid Type",
+            "definition": "Opens **Create Bid Type**.",
+            "images": [
+              {
+                "src": "assets/product/tender-management/026.jpg",
+                "caption": "The Create Bid Type dialog"
+              }
+            ]
           }
         ],
         "procedures": [
           {
-            "title": "Define a new bid type",
+            "title": "Create a bid type",
             "steps": [
-              "Go to <strong>Proposal Management → Settings → Bid Types</strong>.",
-              "Click <strong>Bid Type</strong> to open the creation form.",
-              "Enter a <strong>Name</strong> and <strong>Description</strong>, and choose the <strong>Estimate Type</strong> that defines how bids of this type will be structured and evaluated."
+              "Open **Settings** and **Bid Type**, then click **+ Bid Type**.",
+              "Type the **Name** (required) and a **Description**.",
+              "Choose the **Estimate Type** (required) from the drop-down.",
+              "Click **Submit**, or **Cancel** to leave without saving."
             ],
             "images": [
               {
-                "src": "assets/notion/proposal-management-global-bid-types/001.jpg",
-                "caption": "Bid Type: the pop-up with Name, Description and Estimate Type",
+                "src": "assets/product/tender-management/026.jpg",
+                "caption": "The Create Bid Type dialog",
                 "step": 2
-              },
-              {
-                "src": "assets/notion/proposal-management-global-bid-types/002.jpg",
-                "caption": "Editing a bid type's name, description and estimate type",
-                "step": 3
               }
-            ],
-            "note": "The screenshots show the pop-up from Proposal Management, where bid types are shared."
-          },
-          {
-            "title": "Change the statuses a tender can have",
-            "steps": [
-              "Open **Settings > Status Configuration**.",
-              "Click **Add Status** to add one, the pencil to rename, or the bin to delete a middle status."
-            ]
-          },
-          {
-            "title": "Add an approval level",
-            "steps": [
-              "Open **Settings > Approval Workflow** and choose **Bid**, **Pre Qualification** or **Technical Package**.",
-              "Click **Create Level**, choose **All must approve** or **Any one can approve**, add a description and pick approvers."
             ]
           }
-        ],
+        ]
+      },
+      {
+        "heading": "Scope of Work Templates",
+        "intro": "<p>The <strong>Scope of Work</strong> setting page holds reusable scope documents that tenders can use on their <strong>Scope of Work</strong> tab.</p>",
         "images": [
           {
-            "src": "assets/notion/proposal-management-global-bid-types/004.jpg",
-            "caption": "Deleting a bid type, with a warning"
+            "src": "assets/product/tender-management/027.jpg",
+            "caption": "Scope of Work templates"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Create Template",
+            "definition": "A menu with **Create Scope of Work Template** and **Upload Scope of Work Template**. The first opens a dialog asking for **Template name** (required) and **Template description**.",
+            "images": [
+              {
+                "src": "assets/product/tender-management/028.jpg",
+                "caption": "The Create Template dialog"
+              }
+            ]
+          },
+          {
+            "term": "Template card",
+            "definition": "Click a card to open its editor. It lists placeholders such as the bid name and bid ID, each matched to a drop-down field of the tender (**Bid Name**, **Bid ID**). **Save** keeps the mapping and **Preview** shows the resulting document. The three-dot menu holds more actions.",
+            "images": [
+              {
+                "src": "assets/product/tender-management/029.jpg",
+                "caption": "The template editor"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Agreement",
+        "intro": "<p>The <strong>Agreement</strong> setting page holds reusable agreement documents. It works like <strong>Scope of Work</strong>: a <strong>Create Template</strong> button and one card for each template, opened to edit.</p>"
+      },
+      {
+        "heading": "Status Configuration",
+        "intro": "<p><strong>Status Configuration</strong> defines the statuses a tender can have and their colours.</p>",
+        "images": [
+          {
+            "src": "assets/product/tender-management/030.jpg",
+            "caption": "Status Configuration"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "In-Progress group",
+            "definition": "The statuses of a tender still being worked: **Draft**, **Under Review**, **Reopened**, **Shortlisted**, **Awarded**, **Rejected** and **Pre Qualification**. The pencil next to the group name edits the group."
+          },
+          {
+            "term": "Status row",
+            "definition": "Each row has a colour dot (the colour used on the **Tenders** screen), a pencil to edit and a bin to delete."
+          },
+          {
+            "term": "Add Status",
+            "definition": "Adds a new status to the **In-Progress** group."
+          },
+          {
+            "term": "Completed group",
+            "definition": "A fixed group with the colour dot of finished tenders. It can be edited but not deleted."
+          }
+        ]
+      },
+      {
+        "heading": "Approval Workflow Settings",
+        "intro": "<p>The <strong>Approval Workflow</strong> setting page defines who must approve before a tender is released, with three tabs: <strong>Bid</strong>, <strong>Pre Qualification</strong> and <strong>Technical Package</strong>.</p>",
+        "images": [
+          {
+            "src": "assets/product/tender-management/031.jpg",
+            "caption": "The Bid approval levels"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Create Level",
+            "definition": "Adds an approval level to the open tab."
+          },
+          {
+            "term": "Table",
+            "definition": "**Level**, **Level Description**, **Approvers**, **Workflow Type** (for example **Any one can approve**) and **Actions** (pencil to edit, bin to delete)."
+          },
+          {
+            "term": "Workflow tree icon",
+            "definition": "Opens **Workflow Tree View**, a diagram of the steps from **Submit for Approval** through each approver to **Approved**, with a red **Reject** arrow that sends the tender back.",
+            "images": [
+              {
+                "src": "assets/product/tender-management/032.jpg",
+                "caption": "The Workflow Tree View"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Bid Templates",
+        "intro": "<p><strong>Bid Templates</strong> is the master list of work items with their units, used when building a bill of quantities.</p>",
+        "images": [
+          {
+            "src": "assets/product/tender-management/033.jpg",
+            "caption": "The Bid Templates list"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Table",
+            "definition": "**S.No**, **Item Description**, **UOM Group** (for example **Volume**, **Area** or **Weight**) and **UOM** (for example **Cum**, **Sqm** or **Kg**), then edit and delete icons."
+          },
+          {
+            "term": "Add Item",
+            "definition": "Opens **Create Bid Template** with **Item Description**, **Unit of Measurement Group(UOM)** and **Unit of Measurement(UOM)**, all required.",
+            "images": [
+              {
+                "src": "assets/product/tender-management/034.jpg",
+                "caption": "Create Bid Template"
+              }
+            ]
+          },
+          {
+            "term": "Download Excel, Download Sample Excel and Upload Excel",
+            "definition": "Export the list, download a blank sample sheet, or load many items from a filled sheet."
+          }
+        ]
+      },
+      {
+        "heading": "BOQ & Estimate Template",
+        "intro": "<p>The <strong>BOQ & Estimate Template</strong> page lists the estimate styles a tender can use. Choose from the existing template or create a new one.</p>",
+        "images": [
+          {
+            "src": "assets/product/tender-management/035.jpg",
+            "caption": "BOQ and Estimate templates"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Template card",
+            "definition": "Name, description and **Created On** date, with a three-dot menu. The ready-made styles are **Lump Sum** (fixed total price), **Unit Rate** (set rates on measured units), **Guaranteed Maximum Price** (cost capped at a limit), **Cost-Plus** (actual cost plus a fee or percentage), **Time & Material** and **Time & Material (Global)**."
+          },
+          {
+            "term": "Create Template",
+            "definition": "Opens a dialog with **Name** (required) and a **Description** box with bold, italic, underline, strike, link, heading and list tools. **Submit** saves and **Cancel** closes."
+          }
+        ]
+      },
+      {
+        "heading": "Pre Qualification Template",
+        "intro": "<p>The <strong>Pre Qualification Template</strong> page lists the application forms that appear in the <strong>Pre-Qualification</strong> step of a tender.</p>",
+        "images": [
+          {
+            "src": "assets/product/tender-management/036.jpg",
+            "caption": "Pre-Qualification Template Configuration"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Create Template",
+            "definition": "Adds a new pre-qualification form."
+          },
+          {
+            "term": "Template card",
+            "definition": "Name, description and **Created On** date, with a three-dot menu. Two forms exist: **Application Form** and **Application Form for Pre-Qualification**."
+          }
+        ]
+      },
+      {
+        "heading": "Technical Package Template",
+        "intro": "<p>The <strong>Technical Package Template</strong> page holds question sets that bidders answer about their technical ability.</p>",
+        "images": [
+          {
+            "src": "assets/product/tender-management/037.jpg",
+            "caption": "A technical package template"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Create Template",
+            "definition": "Adds a new technical package."
+          },
+          {
+            "term": "Template card",
+            "definition": "Click a card to open it. Two exist: **Critical Technical Aspects** and **General Technical Capabilities**."
+          },
+          {
+            "term": "Template editor",
+            "definition": "Questions are grouped into sections (**Section 1 of 3**). Each question has a field type chosen in the drop-down (for example **Text Box** or **Attachment**) and switches for **Required**, **Show on card** and **Attachment Required**. The icons beside a question add, copy or delete it."
+          },
+          {
+            "term": "Assign Weightage and Submit",
+            "definition": "**Assign Weightage** gives each question a weight for scoring. **Submit** saves the template."
+          }
+        ]
+      },
+      {
+        "heading": "Users and Permissions",
+        "intro": "<p><strong>Users and Permissions</strong> manages user groups that decide who can see and do what in Tender Management. A new site shows <strong>There are no User Groups created yet!</strong>.</p>",
+        "images": [
+          {
+            "src": "assets/product/tender-management/038.jpg",
+            "caption": "A new user group with its permission grid"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Add User Group",
+            "definition": "Opens a new group. Type the **Enter Group Name** at the top. A search box above the list finds groups by name."
+          },
+          {
+            "term": "Permissions tab",
+            "definition": "A grid of features against **View**, **Create**, **Edit**, **Delete**, **Admin**, **Download**, **Print**, **Assign To** and **Roll Back**. Features are grouped: **Bid Logs** (profile, team, status and comments, documents, communication, scope of work, bid criteria, submission, submission approval workflow), **Bid Management Settings**, **Bid Response**, **Bid Analytics & Reports** and **Bid Issues**. A **Master Permission** row ticks a whole group."
+          },
+          {
+            "term": "Users tab",
+            "definition": "Lists the people in the group."
+          },
+          {
+            "term": "Save Changes",
+            "definition": "Stores the group."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Create a user group",
+            "steps": [
+              "Open **Settings** and **Users and Permissions**, then click **Add User Group**.",
+              "Type the group name.",
+              "On **Permissions** tick what the group may do for each feature.",
+              "Open **Users** and add the members.",
+              "Click **Save Changes**."
+            ]
           }
         ]
       }
@@ -36321,18 +36465,37 @@ const MODULES = [
       "Click a tender name to open its cards: <strong>Tender Event Schedule</strong>, <strong>Pre-Qualification</strong>, <strong>Tender Details</strong> and <strong>Addendum</strong>."
     ],
     "sections": [
-      "Overview",
       "Tenders",
-      "Tender Details",
+      "Tender Record",
       "Tender Event Schedule",
       "Pre-Qualification",
-      "Tender Response",
-      "Bid Comparison",
+      "Tender Setup",
+      "Teams",
+      "Status & Comments",
+      "Documents",
+      "Communication",
+      "Scope of Work",
+      "Submission Package",
       "Addendum",
-      "RFQs",
+      "Bid",
       "Analytics & Reports",
-      "Data Sources",
-      "Settings"
+      "Bid Success Rate",
+      "Estimate Success Rate",
+      "Types of Bids",
+      "Success Over Time",
+      "Weekly Report",
+      "Issues",
+      "Settings",
+      "Bid Type",
+      "Scope of Work Templates",
+      "Agreement",
+      "Status Configuration",
+      "Approval Workflow Settings",
+      "Bid Templates",
+      "BOQ & Estimate Template",
+      "Pre Qualification Template",
+      "Technical Package Template",
+      "Users and Permissions"
     ]
   },
   {
