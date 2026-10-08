@@ -25702,256 +25702,185 @@ const MODULES = [
     "qaItems": QA_CALENDAR,
     "narrative": [
       {
-        "heading": "Overview",
-        "intro": "<p>Admin Role is for the Super Admin or admin who connects Microsoft Outlook for the whole company and decides which user groups may rely on it. Everyone else only creates and views events.</p><p>Do it in <strong>Global Data → Marketplace → Microsoft Calendar</strong> (organisation-wide), and give user groups the <strong>Calendar Management</strong> permission. Individuals can also connect themselves from the avatar menu → <strong>Settings</strong>.</p>",
-        "definitions": [
+        "heading": "Global Calendar",
+        "intro": "<p>The <strong>Global Calendar</strong> shows your events on a month grid, with a small date picker and your calendar list on the left. You create events and reminders here, and the screen is built to bring in events from your Outlook calendar. Open it from <strong>Home</strong> with the <strong>Calendar</strong> tile.</p>",
+        "images": [
           {
-            "term": "Admin Consent",
-            "definition": "Consent given once by an admin in **Global Data → Marketplace → Microsoft Calendar**. The page says the consent is given on behalf of the organisation for all users. Its status chip showed **PENDING**."
+            "src": "assets/product/calendar/001.jpg",
+            "caption": "The Consent Not Granted warning that shows when the screen opens"
           },
           {
-            "term": "Calendar Management Permission",
-            "definition": "A permission in a user group at Global Data → Users & Permissions → User Group → Permissions → General → **Calendar Management**. It lets users in the group rely on the admin consent instead of connecting themselves."
-          },
-          {
-            "term": "Where this data comes from",
-            "definition": "Calendar events come from the connected Microsoft Outlook calendar and from events created in Arena. The consent setting is in **Global Data → Marketplace** (organisation) or avatar → **Settings** (personal). The **Categorize** list is covered under **Global Calendar**."
+            "src": "assets/product/calendar/002.jpg",
+            "caption": "The Global Calendar month view"
           }
         ],
-        "procedures": []
-      },
-      {
-        "heading": "Global Calendar",
-        "intro": "<p>This is the Global Calendar screen where everyone views and creates events. Top-left: <strong>Create Event</strong> and <strong>Fetch Events</strong>; top-right: <strong>Filters</strong>.</p><p>The left side has a mini month picker, the <strong>Events</strong> list for the selected day and a <strong>My Calendars</strong> list; the middle is the month grid; the right pane says <strong>Please Select Event</strong> until you click an event.</p>",
         "definitions": [
           {
-            "term": "Global Calendar screen",
-            "definition": "Home → **Calendar**. Buttons: **Create Event**, **Fetch Events** (sync icon), **Filters**. Left: mini month picker, selected date, **Events (count)** for the day (shows **No Events** when empty) and **My Calendars**. Middle: month grid Sunday to Saturday with previous/next month arrows. Right: event detail pane."
+            "term": "Consent warning",
+            "definition": "When you open the screen, or click **Create Event** or **Fetch Events**, a **Warning** says **Consent Not Granted** if calendar consent is off for your account. It tells you to give consent in **My Profile**, then **Settings**, then **Calendar consent**. **Ok** closes it."
           },
           {
-            "term": "Create Event fields",
-            "definition": "**Title**, **Date*** (dd-mm-yyyy, date picker), **Time*** (HH : MM and AM/PM), **Location**, **Categorize** (searchable drop-down), **Event Description** (text box with bold, italic, underline, strike, link, headings, lists and alignment), a calendar drop-down at the bottom (**My Calendar** by default) and **Submit**."
-          },
-          {
-            "term": "Categorize",
-            "definition": "A searchable list of where the event goes. **My Calendar** is ticked by default. **Where this comes from:** your own calendar plus the group names set up for your company; groups imported through **Communications → Import Group** also appear here."
-          },
-          {
-            "term": "Filters",
-            "definition": "Opens **Filter Categories** with a **Select Categories** drop-down, **Select All**, **Clear & Apply** and **Submit**. The category list was empty for the admin user without calendar consent."
+            "term": "+ Create Event",
+            "definition": "Opens the **Create Event** dialog (see the **Create Event** section)."
           },
           {
             "term": "Fetch Events",
-            "definition": "The sync button next to Create Event. It pulls events from the connected Outlook calendar."
+            "definition": "Synchronises the calendar with your Outlook calendar (the Home tile says events can be synchronised and mapped). It acts straight away, so use it only when you mean to."
           },
           {
-            "term": "Consent Not Granted warning",
-            "definition": "Create Event and Filters first show \"Consent Not Granted! Please provide consent. Note: Give consent in My Profile → Settings → Calendar consent.\" Click **Ok**, then connect through avatar → **Settings** → **Microsoft Calendar**."
+            "term": "Filters",
+            "definition": "Opens the **Filter Categories** dialog at the top right (see the **Filter Categories** section)."
+          },
+          {
+            "term": "Month grid",
+            "definition": "The large grid in the middle shows one month, with the month name and year at the top and arrows to go to the previous or next month. Days run Sunday to Saturday. Today is marked with an orange circle and a tinted cell. Events appear inside their day cell."
+          },
+          {
+            "term": "Date picker",
+            "definition": "The small calendar at the top left. The arrows move one month; the **month year** button next to them opens a list of years to jump to. Click a day in it, or a day in the large grid, to select that date."
+          },
+          {
+            "term": "Selected date",
+            "definition": "Under the date picker, the full date you selected, for example the weekday, month, day and year."
+          },
+          {
+            "term": "Events",
+            "definition": "A collapsible list with a counter for the selected date. It reads **No Events** when nothing is scheduled that day."
+          },
+          {
+            "term": "My Calendars",
+            "definition": "A collapsible list of the calendars whose events are shown on the grid. Each row has a tick circle in the calendar's colour."
+          },
+          {
+            "term": "Please Select Event",
+            "definition": "The right-hand side of the screen. Until you click an event in the grid it only shows this message; after that it shows that event."
           }
         ],
         "procedures": [
           {
-            "title": "Create a calendar event",
+            "title": "Look at a day",
             "steps": [
-              "Open **Home → Calendar** and click **Create Event** (if **Consent Not Granted** appears, click **Ok** and connect your calendar first).",
-              "Enter the **Title**, **Date**, **Time** and **Location**.",
-              "Pick a **Categorize** entry (for example **My Calendar**).",
-              "Write the **Event Description**, check the calendar drop-down at the bottom and click **Submit**."
-            ],
-            "note": "The Create Event form on this screen has no module picker. Events created from a module screen (Proposal Management → Calendar, Opportunity → Events) use the same form.",
-            "images": [
-              {
-                "src": "assets/notion/arena-calendar/006.jpg",
-                "caption": "The Category options, limited to the categories chosen in Configure Categories",
-                "step": 2
-              }
-            ]
-          },
-          {
-            "title": "Edit or delete a calendar event",
-            "steps": [
-              "Open the event you want to change directly from the Arena Calendar view.",
-              "Make your edits, or choose to delete the event, from within the open event."
+              "Open **Calendar** from **Home**.",
+              "Click **Ok** if the consent warning appears.",
+              "Click the day in the large grid or in the small date picker.",
+              "Read the **Events** list on the left for that day."
             ],
             "images": [
               {
-                "src": "assets/notion/arena-calendar/009.jpg",
-                "caption": "Editing or deleting an event",
-                "step": 1
-              }
-            ]
-          },
-          {
-            "title": "Filter events by category",
-            "steps": [
-              "Click **Filters** (top-right).",
-              "In **Filter Categories**, open **Select Categories** and tick the ones you want, or **Select All**.",
-              "Click **Submit**; use **Clear & Apply** to reset."
-            ]
-          },
-          {
-            "title": "Fetch events from Outlook",
-            "steps": [
-              "Click **Fetch Events** next to Create Event.",
-              "Wait for the month grid to refresh, then pick a date to see its events."
-            ],
-            "note": "This screen isn't covered here yet."
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/notion/arena-calendar/001.jpg",
-            "caption": "The Arena Calendar, which syncs with your Outlook calendar"
-          }
-        ]
-      },
-      {
-        "heading": "Calendar Events",
-        "intro": "<p>This section explains what appears on the calendar and where it comes from. It is for users who ask why an event is missing and for admins checking sync.</p><p>Events come from your connected Outlook calendar and from events created in Arena, including those made on module screens such as <strong>Proposal Management → Calendar</strong> and <strong>Opportunity → Events</strong>. A project's scheduled safety forms and project forms appear on that project's <strong>My Calendar</strong> instead.</p>",
-        "definitions": [
-          {
-            "term": "Outlook Sync",
-            "definition": "Events in a connected Outlook calendar are brought into Arena Calendar (the **Fetch Events** button and automatic sync). Requires Microsoft Calendar consent."
-          },
-          {
-            "term": "Imported Outlook Group",
-            "definition": "Groups imported with **Communications → Import Group** and mapped to a module; they also appear in Arena Calendar."
-          },
-          {
-            "term": "Module screens that create events",
-            "definition": "**Proposal Management → Calendar** (**Create Event**, **Filters**; same form), **Opportunity → Events** sub-tab (**Create Event**) and Tender bids. Each shows **Consent Not Granted** until calendar consent is given."
-          },
-          {
-            "term": "Project My Calendar",
-            "definition": "A different screen in the project menu for scheduled safety forms and project forms. See the **My Calendar** module."
-          }
-        ],
-        "procedures": [],
-        "images": [
-          {
-            "src": "assets/notion/arena-calendar/007.jpg",
-            "caption": "Import Groups: Outlook groups shown in the Arena Calendar as well"
-          }
-        ]
-      },
-      {
-        "heading": "Outlook Connection",
-        "intro": "<p>This section is for anyone connecting Outlook so that Arena Calendar can sync with it. Until consent is given, <strong>Create Event</strong> and <strong>Filters</strong> show <strong>Consent Not Granted! Please provide consent</strong>.</p><p>Use the admin route (<strong>Global Data → Marketplace → Microsoft Calendar → Sign In with Microsoft</strong>) for everyone, or the personal route (avatar menu → <strong>Settings</strong> → <strong>Microsoft Calendar</strong>). The personal page warns that the consent Mail ID must match the logged-in user's Mail ID.</p>",
-        "definitions": [
-          {
-            "term": "Admin Consent",
-            "definition": "A one-time authorization granted by an administrator in Global Data → Marketplace that connects Arena to the organization's Microsoft account and, when the organization-wide consent box is checked, extends that connection to every user without requiring them to sign in individually."
-          },
-          {
-            "term": "Calendar Consent",
-            "definition": "The personal route: avatar menu (top-right) → **Settings**, a dialog listing **OneDrive Integration**, **Microsoft Outlook Integration**, **Microsoft Calendar** and **SharePoint Integration**. **Microsoft Calendar** shows **Connect Your Microsoft Account for Calendar**, **Sign In with Microsoft** and the note \"Please make sure consent Mail ID matches with the Logged in User Mail ID\"."
-          },
-          {
-            "term": "Marketplace",
-            "definition": "The Global Data screen of integration tiles: **Microsoft OneDrive**, **Microsoft Sharepoint**, **Microsoft Outlook**, **Microsoft Users**, **Microsoft Calendar**, **Adobe Sign**, **Trimble Viewpoint**, **Google Maps**, **Inn Clock Consent**, **Zoom Info** and **Telematics**. Calendar uses the **Microsoft Calendar** tile; mail uses **Microsoft Outlook**."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Connect Arena to Outlook Calendar as an admin",
-            "steps": [
-              "Go to <strong>Global Data → Marketplace</strong>.",
-              "Click <strong>Sign in with Microsoft</strong> to begin granting Outlook consent.",
-              "Sign in with your Microsoft credentials.",
-              "On the <strong>Permissions Requested</strong> page, check the box to consent on behalf of the organization.",
-              "Confirm — this step is what allows every user in the organization to access the integration without individually consenting."
-            ],
-            "note": "Skipping the organization-wide consent checkbox means only the signed-in admin's account is connected; every other user would need to grant their own personal consent instead.",
-            "images": [
-              {
-                "src": "assets/notion/microsoft-calendar-integration/001.jpg",
-                "caption": "The Marketplace, where Outlook consent is given",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/microsoft-calendar-integration/002.jpg",
-                "caption": "Sign in with Microsoft, to give Outlook consent",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/microsoft-calendar-integration/003.jpg",
-                "caption": "The Microsoft sign-in page",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/microsoft-calendar-integration/004.jpg",
-                "caption": "The Permissions Requested page, with consent on behalf of the organization",
-                "step": 4
-              },
-              {
-                "src": "assets/notion/microsoft-calendar-integration/005.jpg",
-                "caption": "The Stay signed in choice",
-                "step": 5
-              }
-            ]
-          },
-          {
-            "title": "Revoke or change the connected Microsoft account",
-            "steps": [
-              "Go to <strong>Global Data → Marketplace</strong> and locate the Microsoft integration.",
-              "Click <strong>Revoke Consent</strong> to disconnect the currently linked account.",
-              "Click <strong>Sign in with Microsoft</strong> again and authenticate with the new account to grant fresh consent."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/microsoft-calendar-integration/006.jpg",
-                "caption": "Revoke Consent, before giving consent with a different Microsoft account",
-                "step": 2
-              }
-            ]
-          },
-          {
-            "title": "Connect your personal Outlook calendar",
-            "steps": [
-              "Click your avatar (top-right) and choose **Settings**.",
-              "Click **Microsoft Calendar** in the left list.",
-              "Click **Sign In with Microsoft** and sign in with the same email you use in Arena."
-            ],
-            "note": "Use this if your organisation has not given admin consent. The Mail ID must match your Arena login.",
-            "images": [
-              {
-                "src": "assets/notion/microsoft-calendar-integration/007.jpg",
-                "caption": "My Profile Settings, where personal calendar consent is given",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/microsoft-calendar-integration/008.jpg",
-                "caption": "Calendar Consent: Sign in with Microsoft and add your account",
-                "step": 2
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "heading": "Calendar Permission",
-        "intro": "<p>This section is for admins who find a user cannot use the calendar even though the company connected Outlook. The usual fix is the user group's Calendar Management permission rather than the Microsoft connection.</p>",
-        "definitions": [
-          {
-            "term": "Calendar Management Permission",
-            "definition": "A permission found at Global Data → Users & Permissions → User Group → Permissions → General → Calendar Management. When enabled for a user's group, it lets that user rely on the organization's admin-wide Outlook consent (granted in Global Data → Marketplace) even if they have not personally granted their own calendar consent."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Grant a user access to admin calendar consent",
-            "steps": [
-              "Go to <strong>Global Data → Users & Permissions → User Group</strong>.",
-              "Open the relevant user group and go to <strong>Permissions → General</strong>.",
-              "Enable <strong>Calendar Management</strong>.",
-              "Save the change — users in this group can now use the admin-wide Marketplace consent even without granting personal consent."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/arena-calendar/004.jpg",
-                "caption": "Calendar Management under Permissions, General",
+                "src": "assets/product/calendar/002.jpg",
+                "caption": "The month grid with the date picker and My Calendars",
                 "step": 3
               }
+            ]
+          },
+          {
+            "title": "Go to another month or year",
+            "steps": [
+              "Click the arrows beside the month name above the grid, or beside the small date picker.",
+              "To jump far, click the month and year button above the small calendar and pick a year, then a month."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Create Event",
+        "intro": "<p>The <strong>Create Event</strong> dialog opens from <strong>+ Create Event</strong> at the top left of the <strong>Global Calendar</strong>. Use it to add an event or reminder to one of your calendars.</p>",
+        "images": [
+          {
+            "src": "assets/product/calendar/004.jpg",
+            "caption": "The Create Event dialog"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Title",
+            "definition": "The name of the event, typed in the box that says **Add Event Title**."
+          },
+          {
+            "term": "Date",
+            "definition": "Required (red star). Shows the date in month-day-year form and starts on the day that was selected. Click the calendar icon to pick another day."
+          },
+          {
+            "term": "Time",
+            "definition": "Required (red star). Hour and minute boxes with an **AM** or **PM** dropdown; the clock icon on the right opens a time picker. It starts on the current time."
+          },
+          {
+            "term": "Location",
+            "definition": "Where the event takes place, in free text."
+          },
+          {
+            "term": "Categorize",
+            "definition": "A dropdown to tag the event with a category. The dropdown is empty when no category exists yet."
+          },
+          {
+            "term": "Event Description",
+            "definition": "A text editor labelled **Enter Message**. The toolbar offers bold, italic, underline, strike-through, link, two heading sizes, numbered list, bullet list and alignment."
+          },
+          {
+            "term": "Calendar dropdown",
+            "definition": "At the bottom left. It sets which calendar the event goes into: **My Calendar**, **Testing Team** or **Opportunity Team**."
+          },
+          {
+            "term": "Submit",
+            "definition": "The orange button at the bottom right creates the event. The **×** at the top right closes the dialog without creating anything."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Create an event",
+            "steps": [
+              "Open **Global Calendar** and click **+ Create Event**. Click **Ok** if the consent warning appears.",
+              "Type a **Title**.",
+              "Set the **Date** and **Time**; both are required.",
+              "Fill in **Location**, **Categorize** and **Event Description** if you need them.",
+              "Choose the calendar in the dropdown at the bottom, for example **My Calendar**.",
+              "Click **Submit**. Use **×** to close the dialog without saving."
+            ],
+            "images": [
+              {
+                "src": "assets/product/calendar/004.jpg",
+                "caption": "The Create Event dialog",
+                "step": 2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Filter Categories",
+        "intro": "<p>The <strong>Filter Categories</strong> dialog opens from <strong>Filters</strong> at the top right of the <strong>Global Calendar</strong>. It limits the month grid to events that carry the categories you pick.</p>",
+        "images": [
+          {
+            "src": "assets/product/calendar/003.jpg",
+            "caption": "The Filter Categories dialog"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Select Categories",
+            "definition": "A box where you pick one or more categories. It stays empty when no category has been created yet."
+          },
+          {
+            "term": "Select All",
+            "definition": "Tick it to include every category."
+          },
+          {
+            "term": "Clear & Apply",
+            "definition": "Clears the chosen categories and applies the change."
+          },
+          {
+            "term": "Submit",
+            "definition": "Applies the chosen categories to the grid. The **×** closes the dialog."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Show only some categories",
+            "steps": [
+              "Click **Filters** at the top right of the **Global Calendar**.",
+              "Pick categories in **Select Categories**, or tick **Select All**.",
+              "Click **Submit**.",
+              "To go back to all events, open **Filters** again and click **Clear & Apply**."
             ]
           }
         ]
@@ -25968,11 +25897,9 @@ const MODULES = [
       "If <strong>Create Event</strong> or <strong>Filters</strong> shows <strong>Consent Not Granted</strong>, connect your calendar: avatar (top-right) → <strong>Settings</strong> → <strong>Microsoft Calendar</strong> → <strong>Sign In with Microsoft</strong>, or ask an admin to grant organisation consent in <strong>Global Data → Marketplace → Microsoft Calendar</strong>."
     ],
     "sections": [
-      "Overview",
       "Global Calendar",
-      "Calendar Events",
-      "Outlook Connection",
-      "Calendar Permission"
+      "Create Event",
+      "Filter Categories"
     ]
   },
   {
@@ -25981,216 +25908,317 @@ const MODULES = [
     "qaItems": QA_COMMUNICATION,
     "narrative": [
       {
-        "heading": "Overview",
-        "intro": "<p>Admin Role is who connects Outlook for the organisation and gives users access to Communications. An admin grants Outlook consent in <strong>Global Data → Marketplace</strong> and adds the communication module permission to the user's group; a single user can instead grant their own consent from <strong>My Profile → Settings → Outlook Management Consent</strong>.</p><p>Communications and Calendar use the same Microsoft connection but have separate consent screens and permissions, so setting up one does not set up the other. Without personal consent, <strong>Import Group</strong> warns <strong>Consent Not Granted! Please provide consent</strong>.</p>",
-        "definitions": [
+        "heading": "Communications",
+        "intro": "<p>The <strong>Communications</strong> screen is the mailbox inside Arena. It lists the emails connected to your account, sorts them into folders, and lets you link an email to an Opportunity, a Tender bid or a Proposal so the conversation stays with that record. Open it from <strong>Home</strong> with the <strong>Communication</strong> tile, or with the chat icon in the top bar.</p>",
+        "images": [
           {
-            "term": "Outlook Consent (Communications)",
-            "definition": "Authorization that connects a mailbox to Arena Communications, either granted organization-wide by an admin in Global Data → Marketplace, or individually by a user in My Profile → Settings → Outlook Management Consent."
-          },
-          {
-            "term": "Admin Permission for Communication Module",
-            "definition": "A permission that, combined with admin-granted Outlook consent in Marketplace, allows a user to use Arena Communications without personally granting their own consent."
-          },
-          {
-            "term": "Where this data comes from",
-            "definition": "The mail itself comes from the connected Microsoft Outlook mailbox of the signed-in user, so each person sees their own mail. The consent comes from **Global Data → Marketplace** (organisation-wide) or **My Profile → Settings** (personal). The module chips and mapping lists come from Opportunity, Tender and Proposal Management."
+            "src": "assets/product/communication/001.jpg",
+            "caption": "The Communications screen showing All Emails"
           }
         ],
-        "procedures": []
-      },
-      {
-        "heading": "Mail",
-        "intro": "<p>This section is for anyone reading and answering project email without leaving Arena. The left side lists folders, the middle lists mail, and the right shows the open message.</p><p>Folders are <strong>All Emails</strong>, <strong>Inbox</strong>, <strong>Sent</strong>, <strong>Drafts</strong>, <strong>Starred</strong> and <strong>Trash</strong>, each with a count.</p>",
         "definitions": [
           {
-            "term": "Folders",
-            "definition": "**All Emails**, **Inbox**, **Sent**, **Drafts**, **Starred** and **Trash**, each with a count. There is no separate Saved folder; **Starred** holds mail you star."
+            "term": "Search mail",
+            "definition": "Type a word and press Enter. The list shrinks to the emails that contain it, for example in the subject. Clear the box to see the full list again."
           },
           {
-            "term": "Search mail and Filters",
-            "definition": "The **Search mail** box finds mail by text. The filter icon opens **Filters**: **From**, **To**, **Date** (start and end), a drop-down of **All**, **Mapped** or **Unmapped**, an **Includes attachments** checkbox, and **Clear** / **Apply**. Use **Unmapped** to find mail not yet tied to a record."
+            "term": "Filters icon",
+            "definition": "The funnel at the top right opens the **Filters** panel (see the **Filters** section)."
           },
           {
-            "term": "List toolbar",
-            "definition": "Above the mail list: **Select All**, a mark-as-read icon, a delete icon (moves mail to **Trash**) and **Map your Email**. Tick one or more mails first. Each row shows a star, the sender, a green module chip with the record name when mapped (for example **Proposal Management** and **6-Cost Plus -002**), the subject, date and a preview."
+            "term": "Settings icon",
+            "definition": "The gear at the top right opens **Mail Settings**, where you manage your signatures (see the **Mail Settings** section)."
           },
           {
-            "term": "Open message actions",
-            "definition": "The open message has icons for reply, reply all, star and print, and a more menu with **Reply**, **Reply All**, **Forward**, **Print** and **Delete**. Reply opens an editor with **To***, **Cc**, **BCC**, the message body and **Send** (a bin icon discards it)."
+            "term": "Module tabs",
+            "definition": "**All**, **Opportunity**, **Proposal Management**, **Work Order**, **Request for Information** and **Transmittal** sit above the folders. **All** shows every email. Each other tab shows only the emails that are linked to that kind of record; a tab with no linked emails shows an empty list."
+          },
+          {
+            "term": "All Emails",
+            "definition": "The first folder. It lists every email in your mailbox. The number beside it is the total count."
+          },
+          {
+            "term": "Inbox",
+            "definition": "Emails you received. The number beside it is how many there are."
+          },
+          {
+            "term": "Sent",
+            "definition": "Emails you sent."
           },
           {
             "term": "Drafts",
-            "definition": "Opening a draft shows **To***, **Cc**, **BCC**, the body, your signature and **Save as Draft** / **Send**. Many drafts belong to Proposal records, for example **Email Submission Package** mails created from Proposal Management."
+            "definition": "Emails you started but did not send. Each draft shows the line **System Admin ...** from your signature and a **No Subject** title when no subject was typed."
           },
           {
-            "term": "Mail Settings (signature)",
-            "definition": "The gear icon opens **Mail Settings** with a **Signature** list. **Create New** adds a signature; each has edit and delete icons and a radio button to pick the default, and **Save Changes** stores them. The default signature name (for example **System Admin**) appears on drafts and replies."
+            "term": "Starred",
+            "definition": "Emails you marked with the star. The star on a list row switches it on or off."
           },
           {
-            "term": "Where mail goes",
-            "definition": "Deleted mail goes to **Trash**. Mail you map shows a module chip in the list and is filtered by the ribbon at the top (see **Module Mapping**)."
-          },
-          {
-            "term": "Starting a brand-new email",
-            "definition": "New mail starts from replying, forwarding or opening a draft, and from modules such as Proposal Management that create mail drafts. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Reply to or forward an email",
-            "steps": [
-              "Open **Home → Communication** and click the mail in the list.",
-              "Click the reply or reply-all icon, or open the more menu and choose **Forward**.",
-              "Check **To**, add **Cc** or **BCC** if needed, write your message and click **Send**."
-            ],
-            "note": "The signature chosen in Mail Settings is added."
-          },
-          {
-            "title": "Find unmapped mail",
-            "steps": [
-              "Click the filter icon at the top.",
-              "Set the drop-down to **Unmapped** and click **Apply**.",
-              "Tick the mails and click **Map your Email** to tie them to a record."
-            ]
-          },
-          {
-            "title": "Add or change an email signature",
-            "steps": [
-              "Click the gear icon at the top right.",
-              "Under **Signature**, click **Create New**, or the edit icon on an existing signature.",
-              "Choose the default with the radio button and click **Save Changes**."
-            ]
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/notion/arena-communications/004.jpg",
-            "caption": "Trash: all deleted mail"
-          }
-        ]
-      },
-      {
-        "heading": "Module Mapping",
-        "intro": "<p>Mapping ties an email to an Opportunity, a Tender bid or a Proposal, so the mail stays with that record. Users mapping mail pick the module, then the record; the ribbon at the top then filters the mailbox by module.</p><p>Outlook groups can also be imported and mapped to a module with <strong>Import Group</strong>; groups mapped here also feed the Calendar module.</p>",
-        "definitions": [
-          {
-            "term": "Module Mapping (Communications)",
-            "definition": "Tying an email to an Arena record. Tick the mail, click **Map your Email** and a **Modules** panel opens with **Opportunities**, **Tender Management** or **Proposal**."
-          },
-          {
-            "term": "Map your Email panel fields",
-            "definition": "**Opportunities** shows **Customer Groups**, **Customers**, **Customers POC** and **Opportunities** pickers and a **Submit** button. **Tender Management** shows **Bids** and **Save**. **Proposal** shows **Proposal Type** and **Proposals** and **Save**. **Where this data comes from:** the customers, bids, proposal types and proposals you already created in the Opportunity, Tender and Proposal Management modules."
-          },
-          {
-            "term": "Communications Ribbon",
-            "definition": "The row of chips under the search box: **All**, **Opportunity**, **Proposal Management**, **Work Order**, **Request for Information** and **Transmittal**. Click a chip to show only mail mapped to that module."
+            "term": "Trash",
+            "definition": "Emails you deleted. It has an extra **Restore** button beside the delete button, to bring selected emails back."
           },
           {
             "term": "Import Group",
-            "definition": "Link in the left column. It opens a dialog with **Group** and **Module** drop-downs and **Cancel** / **Map**. Groups are Outlook groups, so the list needs Outlook consent; without it a **Consent Not Granted** warning appears and **Groups** shows 0."
+            "definition": "An orange link under the folders, used to bring an email group into Arena."
           },
           {
-            "term": "Mapped chip",
-            "definition": "A green chip on a mail row (for example **Proposal Management**) with the record name below it. It appears once the mail is mapped."
+            "term": "Groups",
+            "definition": "A collapsible list under the folders. The grey number beside it is how many email groups you have; open it with the arrow."
+          },
+          {
+            "term": "Email row",
+            "definition": "One row per email: a star, the sender, a green tag with the kind of record it is linked to (for example **Proposal Management**), a grey tag with that record's number and name, the subject in bold, the date and the first words of the message. Click a row to open the email on the right."
+          },
+          {
+            "term": "Select All and row checkboxes",
+            "definition": "Tick the box on a row to select that email, or tick **Select All** to select every email in the list. The three buttons next to it stay greyed out until at least one email is selected."
+          },
+          {
+            "term": "Mark as Read",
+            "definition": "The first button beside **Select All**. It marks the selected emails as read."
+          },
+          {
+            "term": "Delete",
+            "definition": "The bin button beside **Select All**. It deletes the selected emails; they then show in **Trash**."
+          },
+          {
+            "term": "Map your Email",
+            "definition": "Links the selected emails to a record in Arena (see the **Map your Email** section)."
           }
         ],
         "procedures": [
           {
-            "title": "Filter emails by module",
+            "title": "Find an email",
             "steps": [
-              "Open **Home → Communication**.",
-              "Click a chip in the ribbon, for example **Proposal Management**.",
-              "Click **All** to see every mail again."
+              "Open **Communications**.",
+              "Pick a folder on the left, for example **Inbox** or **Starred**.",
+              "Click a module tab such as **Proposal Management** to see only emails linked to proposals.",
+              "Type a word in **Search mail** and press Enter, or use **Filters** to narrow by sender, date or attachments.",
+              "Click the email row to read it."
             ]
           },
           {
-            "title": "Link an email to a module record",
+            "title": "Star an email",
             "steps": [
-              "Tick the mail in the list.",
-              "Click **Map your Email**.",
-              "In the **Modules** panel choose **Opportunities**, **Tender Management** or **Proposal**, pick the record, and click **Submit** or **Save**."
-            ],
-            "note": "Select the mail first; opening the panel with nothing selected shows a technical error.",
-            "images": [
-              {
-                "src": "assets/notion/arena-communications/006.jpg",
-                "caption": "Mapping a composed email to a module such as Opportunity, Proposal or Bid Management",
-                "step": 2
-              }
+              "Open **Communications**.",
+              "Click the star on the left of the email row. It now shows in **Starred**.",
+              "Click the star again to remove it."
             ]
           },
           {
-            "title": "Import Outlook groups into Communications",
+            "title": "Delete or restore emails",
             "steps": [
-              "Click **Import Group** in the left column.",
-              "Choose the **Group** and the target **Module**.",
-              "Click **Map**."
+              "Tick the checkbox of each email you want to delete.",
+              "Click the bin button next to **Select All**. The emails move to **Trash**.",
+              "To bring one back, open **Trash**, tick it and use the **Restore** button."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Filters",
+        "intro": "<p>The <strong>Filters</strong> panel slides in from the right when you click the funnel icon on the <strong>Communications</strong> screen. It narrows the email list by who wrote it, when and whether it is linked to a record.</p>",
+        "images": [
+          {
+            "src": "assets/product/communication/002.jpg",
+            "caption": "The Filters panel"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "From",
+            "definition": "Type the sender to show only emails from that sender."
+          },
+          {
+            "term": "To",
+            "definition": "Type a recipient to show only emails addressed to that person."
+          },
+          {
+            "term": "Date",
+            "definition": "Click the calendar icon and pick a start date and an end date. Only emails in that period are listed."
+          },
+          {
+            "term": "Select an option",
+            "definition": "A dropdown with **All**, **Mapped** and **Unmapped**. **Mapped** shows emails already linked to a record; **Unmapped** shows the ones that are not linked yet."
+          },
+          {
+            "term": "Includes attachments",
+            "definition": "Tick it to show only emails that carry attachments."
+          },
+          {
+            "term": "Clear",
+            "definition": "Empties the fields of the panel."
+          },
+          {
+            "term": "Apply",
+            "definition": "Filters the list with what you entered and closes the panel. The **×** at the top closes it without applying."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Show only unlinked emails with attachments",
+            "steps": [
+              "Click the funnel icon at the top right of **Communications**.",
+              "Open **Select an option** and choose **Unmapped**.",
+              "Tick **Includes attachments**.",
+              "Click **Apply**."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Mail Settings",
+        "intro": "<p><strong>Mail Settings</strong> opens from the gear icon on <strong>Communications</strong>. It holds the signature that is added to the emails you write from Arena.</p>",
+        "images": [
+          {
+            "src": "assets/product/communication/003.jpg",
+            "caption": "The Mail Settings panel with one signature"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Signature",
+            "definition": "The list of signatures you saved. Each one shows its name (for example **Signature 1**), a round selector, a pencil, a bin and a text box with its content. The selected one is the signature used on your emails."
+          },
+          {
+            "term": "Create New",
+            "definition": "Adds another signature box to the list."
+          },
+          {
+            "term": "Editor toolbar",
+            "definition": "Above the signature text: a size dropdown (**Normal**), **B** bold, **I** italic, **U** underline, a bullet list, a numbered list and an alignment button."
+          },
+          {
+            "term": "Pencil and bin",
+            "definition": "The pencil lets you edit that signature; the bin removes it."
+          },
+          {
+            "term": "Save Changes",
+            "definition": "Saves your signatures. Close the panel with **×** to leave without saving."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Change your signature",
+            "steps": [
+              "Click the gear icon at the top right of **Communications**.",
+              "Click the pencil on the signature you want to change.",
+              "Edit the text and format it with the toolbar.",
+              "Click **Save Changes**."
+            ]
+          },
+          {
+            "title": "Add a second signature",
+            "steps": [
+              "Open **Mail Settings**.",
+              "Click **+ Create New** and type the signature.",
+              "Select the round button of the signature you want to use.",
+              "Click **Save Changes**."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Map your Email",
+        "intro": "<p>Mapping links one or more emails to a record in Arena, so the email shows a green module tag and a record tag and can be found under that module's tab. Tick the emails first, then click <strong>Map your Email</strong>; the button stays greyed out until something is ticked.</p>",
+        "images": [
+          {
+            "src": "assets/product/communication/004.jpg",
+            "caption": "The mapping panel with Proposal chosen"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Mapping Confirmation",
+            "definition": "A pop-up that appears when some of the ticked emails are already mapped: it asks if you want to continue. **No** closes it without changes; **Yes** goes on to the mapping panel."
+          },
+          {
+            "term": "Modules",
+            "definition": "A dropdown with **Opportunities**, **Tender Management** and **Proposal**. The fields below change with your choice."
+          },
+          {
+            "term": "Opportunities fields",
+            "definition": "For **Opportunities** you pick a **Customer Groups**, then **Customers**, **Customers POC** and the **Opportunities** record. Each box has its own search."
+          },
+          {
+            "term": "Tender Management fields",
+            "definition": "For **Tender Management** you pick the **Bids** record."
+          },
+          {
+            "term": "Proposal fields",
+            "definition": "For **Proposal** you pick a **Proposal Type** and then the **Proposals** record."
+          },
+          {
+            "term": "Submit and Save",
+            "definition": "The orange button at the bottom of the panel (named **Submit** for Opportunities, **Save** for the other two) links the ticked emails to the chosen record. The **×** closes the panel."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Link emails to a record",
+            "steps": [
+              "Open **Communications** and tick the emails.",
+              "Click **Map your Email**. If some are already mapped, read the confirmation and click **Yes**.",
+              "Choose a module in **Modules**.",
+              "Pick the record in the boxes that appear.",
+              "Click **Submit** or **Save**. The emails now show the module tag and the record name."
             ],
-            "note": "Needs Outlook consent. Groups mapped here also become visible in Arena Calendar.",
             "images": [
               {
-                "src": "assets/notion/arena-communications/005.jpg",
-                "caption": "Import Groups: a pop-up of Outlook groups with a module drop-down",
-                "step": 2
+                "src": "assets/product/communication/004.jpg",
+                "caption": "The mapping panel",
+                "step": 3
               }
             ]
           }
         ]
       },
       {
-        "heading": "Outlook Connection",
-        "intro": "<p>This section is for the admin or user who connects a mailbox so mail syncs into Arena. Nothing syncs and nothing can be sent from Arena until Outlook consent exists.</p><p>Use organisation-wide consent in <strong>Global Data → Marketplace</strong> together with the communication module permission, or a personal consent in <strong>My Profile → Settings → Outlook Management Consent</strong> to pilot with one team first.</p>",
+        "heading": "Email view",
+        "intro": "<p>Click any row on the <strong>Communications</strong> list and the email opens on the right side of the screen, beside the list. You read it there and can reply, forward, print or delete it.</p>",
+        "images": [
+          {
+            "src": "assets/product/communication/006.jpg",
+            "caption": "An email open next to the list, with its action menu"
+          }
+        ],
         "definitions": [
           {
-            "term": "Outlook Consent (Communications)",
-            "definition": "Authorization that connects a mailbox to Arena Communications, either granted organization-wide by an admin in Global Data → Marketplace, or individually by a user in My Profile → Settings → Outlook Management Consent."
+            "term": "Header",
+            "definition": "The subject in large type, then the sender's address and the **To** line."
           },
           {
-            "term": "Admin Permission for Communication Module",
-            "definition": "A permission that, combined with admin-granted Outlook consent in Marketplace, allows a user to use Arena Communications without personally granting their own consent."
+            "term": "Message body",
+            "definition": "The text of the email with its date and time, followed by attachments as small file chips."
+          },
+          {
+            "term": "Reply icon",
+            "definition": "The arrow at the right of the header replies to the sender."
+          },
+          {
+            "term": "More menu",
+            "definition": "The three dots next to the header open a menu with **Reply**, **Reply All**, **Forward**, **Print** and **Delete**."
+          },
+          {
+            "term": "Star and print icons",
+            "definition": "Appear when you point at the header: star marks the email as **Starred**, the printer prints it."
           }
         ],
         "procedures": [
           {
-            "title": "Enable Outlook integration for Arena Communications",
+            "title": "Reply to an email",
             "steps": [
-              "As an admin, go to <strong>Global Data → Marketplace</strong> and grant Outlook consent for the organization.",
-              "Ensure the target user has the admin permission for the communication module assigned to their user group.",
-              "Alternatively, skip admin involvement entirely: have the individual user go to <strong>My Profile → Settings → Outlook Management Consent</strong> and grant their own consent directly."
-            ],
-            "note": "The individual consent path is useful for piloting Communications with a single user or team before committing to an organization-wide rollout.",
-            "images": [
-              {
-                "src": "assets/notion/arena-communications/001.jpg",
-                "caption": "Outlook consent in the Marketplace, with admin permission for the communication module",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/microsoft-outlook-integration-2/001.jpg",
-                "caption": "Microsoft Outlook in the Marketplace",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/microsoft-outlook-integration-2/004.jpg",
-                "caption": "Microsoft sign-in, then the Permissions Requested page",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/microsoft-outlook-integration-2/006.jpg",
-                "caption": "Consent granted, shown on the screen",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/arena-communications/002.jpg",
-                "caption": "Outlook Management Consent, for a user giving their own consent",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/arena-communications/003.jpg",
-                "caption": "The user consent sign-in",
-                "step": 3
-              }
+              "Click the email in the list.",
+              "Click the three dots next to the header.",
+              "Choose **Reply** to answer the sender, **Reply All** to answer everyone or **Forward** to send it on."
+            ]
+          },
+          {
+            "title": "Print an email",
+            "steps": [
+              "Click the email in the list.",
+              "Click the three dots next to the header.",
+              "Choose **Print**."
             ]
           }
         ]
@@ -26207,10 +26235,11 @@ const MODULES = [
       "If mail does not load or <strong>Import Group</strong> says <strong>Consent Not Granted</strong>, grant Outlook consent first (admin via Global Data → Marketplace, or yourself via My Profile → Settings → Outlook Management Consent)."
     ],
     "sections": [
-      "Overview",
-      "Mail",
-      "Module Mapping",
-      "Outlook Connection"
+      "Communications",
+      "Filters",
+      "Mail Settings",
+      "Map your Email",
+      "Email view"
     ]
   },
   {
