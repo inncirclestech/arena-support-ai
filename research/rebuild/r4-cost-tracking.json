@@ -1,0 +1,33 @@
+{
+  "module": "cost-tracking",
+  "ops": [
+    {
+      "heading": "Overview",
+      "defs": [
+        {"term": "Company level", "definition": "Cost Tracking is opened from Home and covers all projects together, not one project. The screens are read only: they have no create or edit button."}
+      ]
+    },
+    {
+      "heading": "Cost Control Dashboard",
+      "defs": [
+        {"term": "Status tag", "definition": "The **Status** column of **Project Performance Overview** shows a red **Over Budget** tag on a project row. A project with no cost records shows all zeros and the same tag."},
+        {"term": "Loading", "definition": "The five cards first show 0 and fill in after a few seconds."}
+      ]
+    },
+    {
+      "heading": "Cost by Projects",
+      "defs": [
+        {"term": "Tab tooltip", "definition": "Hovering the tab shows Project Cost Tracking With Respect to Cost Types. The breadcrumb reads **Company Reports > Costs by projects**."},
+        {"term": "Table and graph icons", "definition": "A menu icon and a bar-chart icon switch views; the tooltip of the bar icon is **Graph View**. The chart has two series, **Estimate Cost** and **Actual Cost**, one pair of bars per project. This tab has no filters, export or action button."}
+      ]
+    },
+    {
+      "heading": "Cost by Cost Types",
+      "defs": [
+        {"term": "Breadcrumb", "definition": "**Company Reports > Costs by cost types**. The page has the same list and graph toggle as **Cost by Projects** and no filters or action buttons."},
+        {"term": "Labor table", "definition": "Columns **Project**, **Labor Name**, **Code**, then **Sub Total**, **Contingencies Cost** and **Total Costs** under the Estimated Costs group, and **Actual Costs**. The footer shows **Total Labor Estimate Cost** and **Total Labor Actual Cost**."},
+        {"term": "Material and Equipment tables", "definition": "Same columns with **Material Name** or **Equipment Name** in place of **Labor Name**. Footers read **Total Material Estimate Cost**, **Total Material Actual Cost**, **Total Equipment Estimate Cost** and **Total Equipment Actual Cost**."}
+      ]
+    }
+  ]
+}

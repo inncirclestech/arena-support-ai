@@ -1,0 +1,130 @@
+{
+  "module": "procurement",
+  "ops": [
+    {
+      "heading": "Overview",
+      "defs": [
+        {"term": "Where approval happens", "definition": "Requisitions are approved or rejected with the buttons in their list rows and the **Approval Work Flow** row icon shows their levels. Purchase orders have **APPROVE** and **REJECT** buttons in their list rows. Invoices have **Approve** and **Reject** buttons on their cards and an **Approval Workflow Level** line inside the **Edit Invoice** dialog. Delivery receipts have no approve or reject column. The levels themselves are set under **Settings**, **Approval Workflow**."},
+        {"term": "Status lists", "definition": "A requisition has 12 statuses, a purchase order 6, a delivery receipt 2 and an invoice 3. Each list is the **Status** choice of the **Filters** dialog on that tab and is also shown as a chip in the **Status** column or on the card."}
+      ]
+    },
+    {
+      "heading": "Requisition Form",
+      "defs": [
+        {"term": "Actions", "definition": "Six row icons, named by their tooltips: **See History**, **Share**, **Approval Work Flow**, **Edit**, **Download** and **Delete**. **See History** opens the **Track** dialog, **Approval Work Flow** opens **Approval work flow data ID-REQ** with the levels and approvers, **Edit** opens the requisition form, **Download** downloads it and **Delete** removes it."},
+        {"term": "Tag", "definition": "A label on each row for the kind of request. Values seen are **Material** and **Equipment Rental**."},
+        {"term": "Assign", "definition": "A dropdown button on each row showing the user the requisition is assigned to. Click it to pick another user."},
+        {"term": "Approve and Reject", "definition": "Rows that are in an approval workflow show a green **APPROVED** button and a red **REJECT** button. Rows still at **Created** show neither."},
+        {"term": "Status chips", "definition": "The **Status** column shows one chip per row, for example **Created**, **RFQ Created** or **Approved**. The filter offers all 12 values."}
+      ],
+      "procs": [
+        {"title": "See the history of a requisition", "steps": ["Open **Home**, then **Procurement**, then **Requisition Form** and the **Create Requisition** sub-tab.", "Find the requisition row, using **Filters** if needed.", "Click the **See History** icon in the **Actions** column.", "Read the **Track** dialog: newest entry first, each with date, time, user and a coloured chip.", "Close the dialog with the x."]},
+        {"title": "See who approves a requisition", "steps": ["Open **Procurement**, **Requisition Form**, **Create Requisition**.", "Click the **Approval Work Flow** icon in the **Actions** column of the row.", "Read the dialog **Approval work flow data ID-REQ**: **Level**, **Level Description**, **Approvers** and **Workflow Type**.", "Close the dialog with the x."]}
+      ]
+    },
+    {
+      "heading": "Requisition Detail",
+      "after": "Requisition Form",
+      "intro": "<p>Click a REQ number in the <strong>Requisition Form</strong> list to open that requisition in a dialog titled <strong>Edit Requisition Form</strong> followed by its number. It shows the requisition's fields, its approval levels and its history.</p>",
+      "defs": [
+        {"term": "Requested By and Requesting Date", "definition": "Both required. **Requested By** is a dropdown of the person who raised the request and **Requesting Date** is a date. On an approved requisition both are read only."},
+        {"term": "Equipment Rental", "definition": "A toggle that marks the requisition as an equipment rental, which gives it the **Equipment Rental** tag in the list. It is disabled on an approved requisition."},
+        {"term": "Project Number and Project Name", "definition": "Required dropdown that names the project the request is for."},
+        {"term": "Items table", "definition": "Columns **Item Name**, **Type**, **Specification**, **Quantity** (required), **UOM**, **Required Date**, **Planned Return Date**, **Planned Return Time**, **Phase Code** and **Actions** (a note icon). **Type** says what kind of item the line is, for example Equipment."},
+        {"term": "Job Location", "definition": "Required text for where the work is, with **Zip Code**, **City** and **State**."},
+        {"term": "Project Manager and Assignee", "definition": "**Project Manager** is a required dropdown. **Assignee** is a dropdown for the user the requisition is assigned to."},
+        {"term": "Delivery Location", "definition": "Required dropdown for where the goods go, with **Zip Code**, **City** and **State**."},
+        {"term": "On-Site Contact", "definition": "Required dropdown for the person to contact at the site, with a required **Phone Number** that has a country code. A **Section Name1** area and **Notes** follow."},
+        {"term": "Buttons on an approved requisition", "definition": "On an **Approved** requisition only the x is active. No Save, Submit or Approve button is shown."},
+        {"term": "Approval levels", "definition": "The **Approval Work Flow** row icon opens **Approval work flow data ID-REQ** with the table **Level**, **Level Description**, **Approvers** and **Workflow Type** (for example **Any one can approve**). An approver who has approved is shown in green text."},
+        {"term": "History chips", "definition": "**See History** opens the **Track** dialog, newest first. The chips are **Created** (REQ has been created), **Submitted** (submitted to level 1), **Modified** (approval workflow has been modified), **Resubmit** (submitted to approval workflow), **Approved** (approved and digitally signed at level 1) and **Completed** (REQ has been completed)."}
+      ]
+    },
+    {
+      "heading": "Requisition Workflow Issues",
+      "defs": [
+        {"term": "Counters", "definition": "Three counters at the top: **Total Issues**, **Issues Approved** and **Issues Rejected**."}
+      ]
+    },
+    {
+      "heading": "Purchase Orders",
+      "defs": [
+        {"term": "Status values", "definition": "A purchase order has six statuses: **Created**, **Approved**, **Rejected**, **Partial Delivery Receipt Created**, **Delivery Receipt Created** and **Delivery Receipt Issue Raised**. They are the choices of **Status** in **Filters** and the chip in the **Status** column."},
+        {"term": "Approve and Reject", "definition": "Every row, including rows already **Approved**, has an **APPROVE** and a **REJECT** button. The approval levels of a purchase order are not shown in the list row."},
+        {"term": "Actions", "definition": "Two row icons: **See History** (opens the history of the PO) and delete. There is no **Approval Work Flow** icon on purchase order rows."},
+        {"term": "Item type tabs", "definition": "**Material**, **Equipment**, **Equipment Part**, **Delivery Service Equipment** and **Delivery Service Material** split the list by item type."}
+      ],
+      "procs": [
+        {"title": "See the history of a purchase order", "steps": ["Open **Home**, then **Procurement**, then **Purchase Orders**.", "Open the item type tab, for example **Material**.", "Click the **See History** icon in the **Actions** column of the PO row.", "Read the **Track** dialog. Chips seen are **Created**, **Submitted**, **Approved** and **Completed**."]}
+      ]
+    },
+    {
+      "heading": "Purchase Order Detail",
+      "after": "Purchase Orders",
+      "intro": "<p>Click a PO number in the <strong>Purchase Orders</strong> list to open the order as a printable form. Approve and Reject are not on this page; they are on the list rows.</p>",
+      "defs": [
+        {"term": "Top buttons", "definition": "**Print**, **Download** and **E-mail** act on the form. **View REQs** shows the requisitions behind the order, **Comments** opens comments and **See History** opens the **Track** dialog."},
+        {"term": "Header", "definition": "Shows the company address, phone, zip code and the **Form Created** date."},
+        {"term": "Read-only details", "definition": "**Requested By**, **Requested Date**, **REQ ID**, **Job No**, **Job Location**, **Project Manager**, **Delivery Location** and **On-Site Contact** are shown as text and cannot be edited here."},
+        {"term": "Tax Code", "definition": "Required dropdown of tax codes. The checkbox **Tax on Freight** beside it applies the tax to freight too."},
+        {"term": "Advance Amount", "definition": "A number box for the advance paid to the vendor. It also appears in the totals."},
+        {"term": "Instructions and Terms and Conditions", "definition": "**Instructions** is free text for the vendor. **Terms and Conditions** holds the standard wording from the **Terms & Conditions** button of the list."},
+        {"term": "Vendor Details", "definition": "The vendor **Name** and **Contact No** (country code, number and extension)."},
+        {"term": "Totals", "definition": "**Advance Amount**, **Total** and **Total with Freight**."},
+        {"term": "Items table", "definition": "Columns **Item**, **Specification**, **UOM**, **Quantity**, **Phase Code**, **Tax Code**, **Required Date**, **Unit Price**, **Lead Time (Days)**, **Total Cost** and a **Transfer** button on each row. A second table lists **Item Name**, **Cost** and **Specification**."},
+        {"term": "Other Information", "definition": "A section with **Notes**."},
+        {"term": "History chips", "definition": "The **Track** dialog shows **Created** (PO has been created), **Submitted** (submitted to level 1), **Approved** (approved and digitally signed at level 1) and **Completed**."}
+      ]
+    },
+    {
+      "heading": "Delivery Receipts",
+      "defs": [
+        {"term": "Status values", "definition": "A delivery receipt has two statuses: **Created** and **Issues Raised**. They are the choices of **Status** in **Filters**; a new receipt shows a blue **Created** chip."},
+        {"term": "No approval column", "definition": "The **Delivery Receipts** list has no **Approve** or **Reject** column. Problems are raised on the **Inspection Issues** sub-tab instead."}
+      ]
+    },
+    {
+      "heading": "Delivery Receipt Detail",
+      "after": "Delivery Receipts",
+      "intro": "<p>Click the pencil icon on a delivery receipt row to open <strong>Edit Delivery Receipt</strong> followed by its DR number. It records what was received and the inspection result.</p>",
+      "defs": [
+        {"term": "Received by and Date", "definition": "Both required. **Received by** is a dropdown and **Date** is the receiving date."},
+        {"term": "PO Date and PO No", "definition": "Disabled fields that show the purchase order the receipt is against."},
+        {"term": "Delivery paperwork", "definition": "Text fields **Gate Entry No**, **Delivery Challan** and **Vehicle No**, and a date field **DC Date**."},
+        {"term": "Uploads", "definition": "**Upload Images** accepts .jpeg and .png files. **Upload Attachments** accepts other files."},
+        {"term": "Items table", "definition": "Columns **Item**, **UOM**, **Ordered qty**, **Qty received till date**, **Current Received Quantity** (required), **Current Accepted Qty**, **Current Rejected Qty**, **Cumulative Qty** and **Inventory Location** (dropdown). **Expand All** and **Collapse All** open or fold the inspection area under each item."},
+        {"term": "Inspection Items", "definition": "Checks per item: **Per AML** (Yes, No, NA), **Visual Inspection**, **Check Per MTR** (Accept, Reject, NA), **ASME/ASTM Stamp**, **Grade** and **MSDS** (Yes, No, NA)."},
+        {"term": "Notes for Delivery", "definition": "Free text for notes about the delivery."},
+        {"term": "Buttons and history", "definition": "**Cancel** and the x close the form and **Submit** saves it. **See History** shows the **Track** dialog; a new receipt has one entry, **DR has been created** (chip **Created**)."}
+      ]
+    },
+    {
+      "heading": "Inspection Issues",
+      "defs": [
+        {"term": "Issue status", "definition": "An inspection issue is either open or rectified. The counters read **Total Issues**, **Open Issues** and **Issues Rectified**, and the **Rectify** column shows **RECTIFY** or **RECTIFIED**."}
+      ]
+    },
+    {
+      "heading": "Invoice",
+      "defs": [
+        {"term": "Status values", "definition": "An invoice has three statuses: **Created**, **Approved** and **Rejected**. They are the choices of **Status** in **Filters** and the chip on the card."},
+        {"term": "Invoice card", "definition": "Shows a status chip, the invoice number, **Purchase Order**, **Vendor**, **Invoice Date**, **Billing Date**, **Tax** and **Total Amount**, an assign button with the assigned user, and a three-dot menu. **Approve** (green) and **Reject** (red) buttons show on **Created** cards only."},
+        {"term": "Card menu", "definition": "The three dots hold **See History**, **Share**, **Edit**, **Delete** and **Download**. **Delete** is greyed out on an **Approved** card and available on a **Created** card."}
+      ]
+    },
+    {
+      "heading": "Invoice Detail",
+      "after": "Invoice",
+      "intro": "<p>Choose <strong>Edit</strong> in the three-dot menu of a <strong>Created</strong> invoice card to open the <strong>Edit Invoice</strong> dialog.</p>",
+      "defs": [
+        {"term": "Invoice Date", "definition": "The date of the invoice."},
+        {"term": "Add Items and Advance Amount", "definition": "Two buttons above the items table. **Advance Amount** was disabled on the invoice read."},
+        {"term": "Items table", "definition": "Columns **S. No**, **Material**, **Quantity**, **Billing From** (address), **Billing To** (dropdown **Select Address**), **Tax Amount** and **Total Amount**."},
+        {"term": "Totals", "definition": "**Invoice Subtotal**, **Tax** and **Total Amount** are all required numbers."},
+        {"term": "Attachments and Notes", "definition": "**Attachments** takes files through **Click here to upload the files**. **Notes** is free text."},
+        {"term": "Approval Workflow Level", "definition": "At the bottom of the dialog the line **Approval Workflow Level: (0/1)** is followed by **Approve** and **Reject** buttons. The first number counts the levels approved so far and the second the levels in the workflow. **Cancel** and **Submit** close or save the dialog."},
+        {"term": "History", "definition": "**See History** is in the three-dot menu of the card and shows the same **Track** dialog as requisitions and purchase orders."}
+      ]
+    }
+  ]
+}

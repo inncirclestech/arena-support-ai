@@ -1,0 +1,55 @@
+{
+  "module": "expense-tracker",
+  "ops": [
+    {
+      "heading": "Overview",
+      "defs": [
+        {"term": "Where approval happens", "definition": "On **Expense Forms**, cards of forms that are **Ready for Approval** or **In Progress** show green **Approve** and red **Reject** buttons. Inside an in-progress form the footer shows **Approval Workflow Level: (1/2)** with a **Level 2** dropdown and **Approve** and **Reject** buttons. The levels are defined under **Settings**, **Approval WorkFlow**."}
+      ]
+    },
+    {
+      "heading": "Expense Forms",
+      "defs": [
+        {"term": "Status values", "definition": "An expense form has five statuses: **Ready for Approval**, **In Progress**, **Approved**, **Rejected** and **Draft**. They are the choices of **Status** in **Filters**, a multi-select with **Select All**. The chips above the list count the forms in the first four."},
+        {"term": "Form template drop-down", "definition": "At the top left. Offers **Project Expense Tracking Form**, **Travel and Business Expense Report** and **General Expense Reimbursement Form**. Switching it did not change the list of forms on screen."},
+        {"term": "Approve and Reject", "definition": "Green **Approve** and red **Reject** buttons on cards of forms that are **Ready for Approval** or **In Progress**. Approved and rejected cards have neither."},
+        {"term": "Card menu", "definition": "The three dots on a card hold **See History** and **Delete**. A chevron at the bottom right of the card opens the form."},
+        {"term": "Filters", "definition": "**Name**, **Period** (date range), **Total Range** (a slider with two number boxes), **Status**, **Expense Form Template** and **Expense Type** (11 values: Capital Expenses, Direct Expenses, Financial Expenses, Fixed Expenses, Indirect Expenses, Miscellaneous Expenses, Non-Operating Expenses, Operating Expenses, Personal Expenses, Phase Code, Variable Expenses). Buttons **Save Filters**, **Clear Filters** and **Submit**."},
+        {"term": "History chips", "definition": "**See History** opens the dialog **Track Expense** followed by the form number. Entries, newest first, read **Form has been approved and digitally signed at level 2** (chip **Approved**), **Form has been approved and digitally signed at level 1** (chip **Approved**) and **Expense Form has been created** (chip **Created**), each with a date, time and user."}
+      ],
+      "procs": [
+        {"title": "See the history of an expense form", "steps": ["Open **Home**, then **Expense Tracker**, then **Expense Forms**.", "Click the three dots on the form card.", "Choose **See History**.", "Read the **Track Expense** dialog; close it with the x."]}
+      ]
+    },
+    {
+      "heading": "Expense Form Detail",
+      "after": "Expense Forms",
+      "intro": "<p>Click the chevron at the bottom right of a card on <strong>Expense Forms</strong> to open the form. The title is the template name followed by the form number.</p>",
+      "defs": [
+        {"term": "Header", "definition": "Company logo, company address block and the form number at the top right."},
+        {"term": "Download, Share and Print", "definition": "Buttons at the top right of the form. A pencil icon beside them is shown on an in-progress form and not on an approved one."},
+        {"term": "Name and Period", "definition": "Both required. **Name** is a dropdown of the person and **Period** is two dates."},
+        {"term": "Select Expense Type", "definition": "A dropdown with the 11 expense types. **+ Add Expense Type** adds a table for the chosen type; the red link **Delete Expense Type** removes one."},
+        {"term": "Expense table", "definition": "One table per expense type, titled with the type and its threshold, for example Capital Expenses (Threshold: 0.00). Columns **S.No**, **Date** (required), **Description**, **Attachments/Missing Receipts** (a **View** link), **Total** (required) and **Actions**. A **Total** shows under each table."},
+        {"term": "Project Expense Tracking Form sections", "definition": "The accordion **Expense** holds **Expense Summary**, **Expense Details** and **Project Budget Overview** tables and a **Notes and Comments** box."},
+        {"term": "General Expense Reimbursement Form sections", "definition": "**Section Name1** holds **Expense Details** (a table), a rich-text box that asks for a brief explanation of why the expenses were incurred and a **Payment Method** dropdown. **Employee Declaration** holds the certification text, **Employee Signature** and **Date**."},
+        {"term": "Footer", "definition": "A green **Total Expense** and the **Select Approval Workflow** dropdown (for example **Approval Workflow 1**), which is greyed on an existing form."},
+        {"term": "Approval Workflow Level", "definition": "On an in-progress form the footer adds **Approval Workflow Level: (1/2)** with a **Level 2** dropdown and the **Approve** and **Reject** buttons. The first number counts the levels signed and the second the levels in the workflow."},
+        {"term": "Approved form", "definition": "A fully approved form is read only: no pencil, no **Approve** or **Reject**, no **Save** and no **Submit**."}
+      ]
+    },
+    {
+      "heading": "Processed Forms",
+      "defs": [
+        {"term": "Approved Items buttons", "definition": "**CSV Download Filters**, **Convert to Batch**, a date range picker and **Filters** sit at the top. A checkbox is on each form and on each line."},
+        {"term": "Batch detail", "definition": "Click a batch row on **Batch Items** to open it (breadcrumb **Processed Forms > Batch Items > Batch Item**). The forms inside are listed as accordions; expanding one shows its expense type table with **Date**, **Description**, **Attachments**, **Receipt** and **Total**, and **Total Expense**. Here the **Batch Name** column is absent."}
+      ]
+    },
+    {
+      "heading": "Issues",
+      "defs": [
+        {"term": "Issue counts", "definition": "Chips **Total Issues**, **Issues Closed** and **Issues Rejected**."}
+      ]
+    }
+  ]
+}

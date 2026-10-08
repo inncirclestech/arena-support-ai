@@ -1,0 +1,46 @@
+{
+  "module": "proposal-management",
+  "ops": [
+    {
+      "heading": "Overview",
+      "defs": [
+        {"term": "Where approval happens", "definition": "The **Proposals** list has a **Workflow Level** column (for example 1/1) and **Approve** and **Reject** columns on each row. Inside a proposal the **Submission Packages** tab has **Setup Approval Workflow** and **Workflow Issue** sub-tabs. Approval levels are set under **Settings**, **Approval Workflow**."}
+      ]
+    },
+    {
+      "heading": "Proposals",
+      "defs": [
+        {"term": "Status values", "definition": "The **Status** filter lists **All Statuses**, **Cancelled**, **Completed**, **Lost**, **N/A**, **No Bid**, **Pending**, **Start**, **Successful** and **Unassigned**. The status chips above the list count the proposals in each status. Statuses are defined under **Settings**, **Status**."},
+        {"term": "Approve and Reject", "definition": "Each row has an **Approve** and a **Reject** column. The **Workflow Level** column beside them shows where the proposal is in its approval levels."}
+      ]
+    },
+    {
+      "heading": "Proposal Profile",
+      "defs": [
+        {"term": "Proposal status", "definition": "The **Status** dropdown of a proposal has eight values: **Start**, **Successful**, **Pending**, **Cancelled**, **No Bid**, **N/A**, **Completed** and **Lost**."},
+        {"term": "Required fields", "definition": "Fields marked with an asterisk include **Proposal ID**, **Proposal Name**, **Proposal Type**, **Creation Date** and **Status**."},
+        {"term": "Profile sections", "definition": "**Details**, **Project Location**, **Dates & Values**, **Section Name1** and a configurable section holding **Notes** and **Attachments**."},
+        {"term": "History button", "definition": "**History** at the top right opens the **Track** dialog. Its entries read like **Proposal 13 profile has been updated** with an **Updated** chip and the changed field lines. It is read only; close it with the x."},
+        {"term": "Assign To and Save Changes", "definition": "An **Assign To** dropdown of users sits at the page level and **Save Changes** stores the profile."}
+      ]
+    },
+    {
+      "heading": "Submittals",
+      "defs": [
+        {"term": "Letter templates", "definition": "Two sub-tabs hold the letters: **Letter** and **Budgetary Letter**. **Create** starts a new one."}
+      ]
+    },
+    {
+      "heading": "Checklists",
+      "defs": [
+        {"term": "Form types", "definition": "Three sub-tabs: **Safety**, **Legal Review** and **Quality**. **Create Form** adds a form."}
+      ]
+    },
+    {
+      "heading": "Submission Packages",
+      "defs": [
+        {"term": "Select Status", "definition": "Each package card has a **Select Status** dropdown; a submitted package shows **Submitted**."}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "module": "equipment",
+  "ops": [
+    {
+      "heading": "Equipment Master",
+      "defs": [
+        {"term": "Naming on screen", "definition": "In this account the tab is called **Asset**, its sub-tabs are **Asset Master**, **Accessory Master** and **3rd Party Rental**, and the buttons read **+ Add Asset** and **Inventory Locations**. Your company may see Asset instead of Equipment (Global Data → Settings → Naming Framework)."},
+        {"term": "Status values", "definition": "An equipment record has 11 statuses: **Available**, **Allocated**, **In Transit**, **On Rent**, **In Maintenance**, **Out of Service**, **Off Rent**, **In Active**, **Yard Only**, **Unavailable** and **Dispose Initiated**. They are the choices of **Status** in **Filters** and are configured under **Settings**, **Assets / Accessory Status**."},
+        {"term": "Filters toggles", "definition": "Besides the dropdowns, **Filters** has four toggles: **Asset with Telematics**, **Asset without Telematics**, **Only Running Assets** and **Not Reported in Last 72 Hours**. The dropdowns are multi-select with a search box and **Select All**."}
+      ]
+    },
+    {
+      "heading": "3rd Party Rental",
+      "defs": [
+        {"term": "Columns", "definition": "**Asset ID**, **Asset Type**, **Asset Description**, **Category**, **Business Unit**, **Status**, **REQ ID**, **PO ID**, **Assigned Project**, **Vendor**, **Make**, **Model**, **Accessories**, **Delivered Date**, **Length of Rent (Days)**, **Days in Rent**, **Billing Rule**, **Hourly Rate**, **Daily Rate**, **Weekly Rate**, **Monthly Rate**, **Freight Cost**, **Replacement Value**, **PO Value**, **Total Cost** and **YTD Phase Codes**."}
+      ]
+    },
+    {
+      "heading": "Allocation Lifecycle",
+      "defs": [
+        {"term": "Lifecycle stages", "definition": "The equipment request lifecycle has 11 stages, shown as board columns left to right: **Request**, **Assign**, **Inspection (Pre-Dispatch)**, **Ready for Dispatch**, **In Transit (Outbound)**, **On Rent**, **Off-Rent / Extension**, **In Transit (Return)**, **Pickup**, **Inspection (Post-Rent)** and **Closed**. Each column header shows a count."},
+        {"term": "Stage colours", "definition": "Column headers are coloured: **Request** grey, **Assign** blue, **Inspection (Pre-Dispatch)** orange, **Ready for Dispatch** pink and **In Transit** teal."},
+        {"term": "Filters", "definition": "Narrows the requests by **Business Unit**, **Assigned Project**, **Asset Type**, **Rental Type** (**Internal** or **External**) and **Planned Return Date** (a range). **Clear All**, **Apply** and **Save Filters** are at the bottom."},
+        {"term": "Request Form", "definition": "**+ New Request** opens the **Request Form** dialog. The left panel **Available Asset / Accessory** has a search box. The right side has a search box **Search for Equipments or Accessories**, then an items table with **Item**, **Type**, **Category**, **Sub Category**, **Quantity** (required), **Requested By** (required), **Required Date** (required), **Planned Return Date** (required), **Estimated Hours** and **Actions**."},
+        {"term": "Request Form header fields", "definition": "Below the table: **Business Unit** (required dropdown), **Priority** (required dropdown), **Assigned Project** (required dropdown), **Pickup Preference** (optional dropdown with **Self Pickup**, **Company Logistics**, **Third Party Haul** and **External Delivery Service**) and **Notes**. **Submit** sends the request; the x closes the dialog. The priority is worked out from the required date by the **Request Priority Threshold** setting."},
+        {"term": "Table view", "definition": "The table icon shows one stage at a time. A dropdown lists the same 11 stages (it starts at **Request**) and the columns are **Request ID**, **Asset/ Accessory Name**, **Business Unit**, **Priority**, **Assigned Project**, **Pickup Preference** and **Actions**."}
+      ]
+    },
+    {
+      "heading": "Requests",
+      "replace": [
+        {"term": "New Request form", "from": "**Pickup Preference** (Self Pickup or Company Logistics)", "to": "**Pickup Preference** (Self Pickup, Company Logistics, Third Party Haul or External Delivery Service)"}
+      ]
+    },
+    {
+      "heading": "Workflow Issues",
+      "defs": [
+        {"term": "0 Total Issues, 0 Issues Approved, 0 Issues Rejected", "definition": "Three counters at the top: **Total Issues**, **Issues Approved** and **Issues Rejected**. The sub-tab sits next to **Allocation Lifecycle** under **Operations**."}
+      ]
+    },
+    {
+      "heading": "Equipment and Accessory Status",
+      "defs": [
+        {"term": "Where statuses are configured", "definition": "**Settings**, **Assets / Accessory Status** is where the 11 equipment statuses are configured. The table columns are **Status**, **Color**, **Enabled** and **Utility Threshold**. The same 11 values appear as the **Status** filter of the **Equipment Master**."},
+        {"term": "Colours", "definition": "Examples: **Available** green, **In Transit** amber, **On Rent** blue, **In Maintenance** purple, **Out of Service** red, **Off Rent** cyan, **In Active** grey and **Yard Only** light green."}
+      ]
+    },
+    {
+      "heading": "Request Priority Threshold",
+      "defs": [
+        {"term": "High Priority (Days)", "definition": "A number box (1 here) with an info icon that says: Requests required within this many days are marked High priority."},
+        {"term": "Medium Priority (Days)", "definition": "A number box (3 here) with an info icon that says: Requests required within this many days (and above High) are marked Medium priority."},
+        {"term": "How priority is set", "definition": "The page text reads: Set the number of days from today that determines request priority when a required date is entered. Request priority is computed from the required date, not typed by the requester."}
+      ]
+    },
+    {
+      "heading": "Approval Workflow",
+      "defs": [
+        {"term": "Instructions panel", "definition": "While no workflow is selected the right side shows **Instructions**: 1. Click **Create Approval Workflow**, 2. Create workflow levels, 3. Add users to each level. The tabs are **Asset Requests**, **Hauling Request**, **Off Rent / Extension Request** and **Utilization Logs**, so each of these four can have its own approval workflow."}
+      ]
+    }
+  ]
+}

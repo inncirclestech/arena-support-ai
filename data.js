@@ -17725,6 +17725,18 @@ const MODULES = [
           {
             "term": "Inventory Locations",
             "definition": "Opens a dialog with the inventory locations assets can be placed in. See **Inventory Locations**."
+          },
+          {
+            "term": "Naming on screen",
+            "definition": "In this account the tab is called **Asset**, its sub-tabs are **Asset Master**, **Accessory Master** and **3rd Party Rental**, and the buttons read **+ Add Asset** and **Inventory Locations**. Your company may see Asset instead of Equipment (Global Data → Settings → Naming Framework)."
+          },
+          {
+            "term": "Status values",
+            "definition": "An equipment record has 11 statuses: **Available**, **Allocated**, **In Transit**, **On Rent**, **In Maintenance**, **Out of Service**, **Off Rent**, **In Active**, **Yard Only**, **Unavailable** and **Dispose Initiated**. They are the choices of **Status** in **Filters** and are configured under **Settings**, **Assets / Accessory Status**."
+          },
+          {
+            "term": "Filters toggles",
+            "definition": "Besides the dropdowns, **Filters** has four toggles: **Asset with Telematics**, **Asset without Telematics**, **Only Running Assets** and **Not Reported in Last 72 Hours**. The dropdowns are multi-select with a search box and **Select All**."
           }
         ],
         "procedures": [
@@ -18144,8 +18156,13 @@ const MODULES = [
           {
             "term": "Rental columns",
             "definition": "**REQ ID** and **PO ID** point to the request and purchase order. **Vendor** and **Assigned Project** show who supplied it and where it works. **Delivered Date**, **Length of Rent (Days)** and **Days in Rent** show the rent period. **Billing Rule** with **Hourly Rate**, **Daily Rate**, **Weekly Rate**, **Monthly Rate**, **Freight Cost**, **Replacement Value**, **PO Value** and **Total Cost YTD** show the cost terms. **Phase Codes** shows the cost codes it is charged to."
+          },
+          {
+            "term": "Columns",
+            "definition": "**Asset ID**, **Asset Type**, **Asset Description**, **Category**, **Business Unit**, **Status**, **REQ ID**, **PO ID**, **Assigned Project**, **Vendor**, **Make**, **Model**, **Accessories**, **Delivered Date**, **Length of Rent (Days)**, **Days in Rent**, **Billing Rule**, **Hourly Rate**, **Daily Rate**, **Weekly Rate**, **Monthly Rate**, **Freight Cost**, **Replacement Value**, **PO Value**, **Total Cost** and **YTD Phase Codes**."
           }
-        ]
+        ],
+        "procedures": []
       },
       {
         "heading": "Master Data",
@@ -18648,7 +18665,7 @@ const MODULES = [
           },
           {
             "term": "New Request form",
-            "definition": "Pick equipment or accessories from the left panel, then enter **Quantity**, **Requested By**, **Required Date**, **Planned Return Date**, **Estimated Hours**, **Business Unit**, **Work Location** (from projects of that business unit where you are on the project team), **Pickup Preference** (Self Pickup or Company Logistics), **Notes** and **Attachments**. You can add several line items and click **Submit for Approval**. The **Request Priority** is set automatically by comparing the Required Date with the **Request Priority Threshold** in Settings; the requester cannot set it."
+            "definition": "Pick equipment or accessories from the left panel, then enter **Quantity**, **Requested By**, **Required Date**, **Planned Return Date**, **Estimated Hours**, **Business Unit**, **Work Location** (from projects of that business unit where you are on the project team), **Pickup Preference** (Self Pickup, Company Logistics, Third Party Haul or External Delivery Service), **Notes** and **Attachments**. You can add several line items and click **Submit for Approval**. The **Request Priority** is set automatically by comparing the Required Date with the **Request Priority Threshold** in Settings; the requester cannot set it."
           },
           {
             "term": "Settings behind the lifecycle",
@@ -19027,7 +19044,7 @@ const MODULES = [
           },
           {
             "term": "Filters",
-            "definition": "Narrows the requests by **Business Unit**, **Assigned Project**, **Equipment Type**, **Rental Type** and **Planned Return Date**. **Clear All**, **Apply** and **Save Filters** are at the bottom."
+            "definition": "Narrows the requests by **Business Unit**, **Assigned Project**, **Asset Type**, **Rental Type** (**Internal** or **External**) and **Planned Return Date** (a range). **Clear All**, **Apply** and **Save Filters** are at the bottom."
           },
           {
             "term": "Board and table icons",
@@ -19038,6 +19055,26 @@ const MODULES = [
                 "caption": "The table view with the stage dropdown"
               }
             ]
+          },
+          {
+            "term": "Lifecycle stages",
+            "definition": "The equipment request lifecycle has 11 stages, shown as board columns left to right: **Request**, **Assign**, **Inspection (Pre-Dispatch)**, **Ready for Dispatch**, **In Transit (Outbound)**, **On Rent**, **Off-Rent / Extension**, **In Transit (Return)**, **Pickup**, **Inspection (Post-Rent)** and **Closed**. Each column header shows a count."
+          },
+          {
+            "term": "Stage colours",
+            "definition": "Column headers are coloured: **Request** grey, **Assign** blue, **Inspection (Pre-Dispatch)** orange, **Ready for Dispatch** pink and **In Transit** teal."
+          },
+          {
+            "term": "Request Form",
+            "definition": "**+ New Request** opens the **Request Form** dialog. The left panel **Available Asset / Accessory** has a search box. The right side has a search box **Search for Equipments or Accessories**, then an items table with **Item**, **Type**, **Category**, **Sub Category**, **Quantity** (required), **Requested By** (required), **Required Date** (required), **Planned Return Date** (required), **Estimated Hours** and **Actions**."
+          },
+          {
+            "term": "Request Form header fields",
+            "definition": "Below the table: **Business Unit** (required dropdown), **Priority** (required dropdown), **Assigned Project** (required dropdown), **Pickup Preference** (optional dropdown with **Self Pickup**, **Company Logistics**, **Third Party Haul** and **External Delivery Service**) and **Notes**. **Submit** sends the request; the x closes the dialog. The priority is worked out from the required date by the **Request Priority Threshold** setting."
+          },
+          {
+            "term": "Table view",
+            "definition": "The table icon shows one stage at a time. A dropdown lists the same 11 stages (it starts at **Request**) and the columns are **Request ID**, **Asset/ Accessory Name**, **Business Unit**, **Priority**, **Assigned Project**, **Pickup Preference** and **Actions**."
           }
         ],
         "procedures": [
@@ -20018,7 +20055,7 @@ const MODULES = [
         "definitions": [
           {
             "term": "0 Total Issues, 0 Issues Approved, 0 Issues Rejected",
-            "definition": "Three counters at the top that show how many issues exist and how many were approved or rejected."
+            "definition": "Three counters at the top: **Total Issues**, **Issues Approved** and **Issues Rejected**. The sub-tab sits next to **Allocation Lifecycle** under **Operations**."
           },
           {
             "term": "Download Excel",
@@ -20036,7 +20073,8 @@ const MODULES = [
             "term": "Columns",
             "definition": "**Request Number**, **Level**, **Raised on Date**, **Raised on Time**, **Raised by**, **Image**, **Assign To**, **Due Date**, **Comments**, **Chat** and **See History**."
           }
-        ]
+        ],
+        "procedures": []
       },
       {
         "heading": "Internal Hauling",
@@ -21462,7 +21500,7 @@ const MODULES = [
           },
           {
             "term": "Instructions panel",
-            "definition": "While no workflow is selected the right side shows three steps: click **Create Approval Workflow**, create workflow levels, add users to each level."
+            "definition": "While no workflow is selected the right side shows **Instructions**: 1. Click **Create Approval Workflow**, 2. Create workflow levels, 3. Add users to each level. The tabs are **Asset Requests**, **Hauling Request**, **Off Rent / Extension Request** and **Utilization Logs**, so each of these four can have its own approval workflow."
           },
           {
             "term": "Open Workflow Graph View",
@@ -21591,8 +21629,17 @@ const MODULES = [
           {
             "term": "Utility Threshold",
             "definition": "A number per status, 0 by default. The **Off Rent** row shows it as an editable box."
+          },
+          {
+            "term": "Where statuses are configured",
+            "definition": "**Settings**, **Assets / Accessory Status** is where the 11 equipment statuses are configured. The table columns are **Status**, **Color**, **Enabled** and **Utility Threshold**. The same 11 values appear as the **Status** filter of the **Equipment Master**."
+          },
+          {
+            "term": "Colours",
+            "definition": "Examples: **Available** green, **In Transit** amber, **On Rent** blue, **In Maintenance** purple, **Out of Service** red, **Off Rent** cyan, **In Active** grey and **Yard Only** light green."
           }
-        ]
+        ],
+        "procedures": []
       },
       {
         "heading": "Maintenance Config",
@@ -21868,17 +21915,22 @@ const MODULES = [
         "definitions": [
           {
             "term": "High Priority (Days)",
-            "definition": "A request whose required date is this many days from today or sooner becomes high priority. It shows 1 here."
+            "definition": "A number box (1 here) with an info icon that says: Requests required within this many days are marked High priority."
           },
           {
             "term": "Medium Priority (Days)",
-            "definition": "A request whose required date is this many days from today or sooner, but later than the high limit, becomes medium priority. It shows 3 here."
+            "definition": "A number box (3 here) with an info icon that says: Requests required within this many days (and above High) are marked Medium priority."
           },
           {
             "term": "Save Changes",
             "definition": "Stores both limits."
+          },
+          {
+            "term": "How priority is set",
+            "definition": "The page text reads: Set the number of days from today that determines request priority when a required date is entered. Request priority is computed from the required date, not typed by the requester."
           }
-        ]
+        ],
+        "procedures": []
       },
       {
         "heading": "Equipment Utilization Report",
@@ -33528,6 +33580,10 @@ const MODULES = [
           {
             "term": "The screens",
             "definition": "**Cost Control Dashboard** shows total contract value, forecasted value (EAC), portfolio profit margin, margin erosion, over budget projects and a project performance table with CPI and SPI. **Cost by Projects** shows, for every project, the estimated cost and the actual cost. **Cost by Cost Types** lists estimated and actual cost line by line, grouped into Labor, Material and Equipment."
+          },
+          {
+            "term": "Company level",
+            "definition": "Cost Tracking is opened from Home and covers all projects together, not one project. The screens are read only: they have no create or edit button."
           }
         ],
         "procedures": [
@@ -33598,6 +33654,14 @@ const MODULES = [
           {
             "term": "Margin Erosion Trend and Portfolio Earned Value",
             "definition": "Two charts at the bottom of the page that follow margin erosion and earned value over time."
+          },
+          {
+            "term": "Status tag",
+            "definition": "The **Status** column of **Project Performance Overview** shows a red **Over Budget** tag on a project row. A project with no cost records shows all zeros and the same tag."
+          },
+          {
+            "term": "Loading",
+            "definition": "The five cards first show 0 and fill in after a few seconds."
           }
         ],
         "procedures": [
@@ -33628,7 +33692,7 @@ const MODULES = [
         "definitions": [
           {
             "term": "Table and graph icons",
-            "definition": "Two icons at the top right switch between the table and a bar chart. The chart shows **Estimate Cost** and **Actual Cost** side by side for each project."
+            "definition": "A menu icon and a bar-chart icon switch views; the tooltip of the bar icon is **Graph View**. The chart has two series, **Estimate Cost** and **Actual Cost**, one pair of bars per project. This tab has no filters, export or action button."
           },
           {
             "term": "Total Estimate Cost and Total Actual Cost",
@@ -33645,8 +33709,13 @@ const MODULES = [
           {
             "term": "Actual Cost and Total Project Cost",
             "definition": "**Actual Cost** is what has been spent so far. **Total Project Cost** is the total cost of the project."
+          },
+          {
+            "term": "Tab tooltip",
+            "definition": "Hovering the tab shows Project Cost Tracking With Respect to Cost Types. The breadcrumb reads **Company Reports > Costs by projects**."
           }
-        ]
+        ],
+        "procedures": []
       },
       {
         "heading": "Cost by Cost Types",
@@ -33685,8 +33754,21 @@ const MODULES = [
           {
             "term": "Totals under each table",
             "definition": "For example **Total Labor Estimate Cost** and **Total Labor Actual Cost**, one pair for each cost type."
+          },
+          {
+            "term": "Breadcrumb",
+            "definition": "**Company Reports > Costs by cost types**. The page has the same list and graph toggle as **Cost by Projects** and no filters or action buttons."
+          },
+          {
+            "term": "Labor table",
+            "definition": "Columns **Project**, **Labor Name**, **Code**, then **Sub Total**, **Contingencies Cost** and **Total Costs** under the Estimated Costs group, and **Actual Costs**. The footer shows **Total Labor Estimate Cost** and **Total Labor Actual Cost**."
+          },
+          {
+            "term": "Material and Equipment tables",
+            "definition": "Same columns with **Material Name** or **Equipment Name** in place of **Labor Name**. Footers read **Total Material Estimate Cost**, **Total Material Actual Cost**, **Total Equipment Estimate Cost** and **Total Equipment Actual Cost**."
           }
-        ]
+        ],
+        "procedures": []
       }
     ],
     "name": "Cost Tracking",
@@ -33732,6 +33814,14 @@ const MODULES = [
           {
             "term": "Inside a work order",
             "definition": "The tabs across the top are **Profile**, **Items**, **Team**, **Timesheets**, **Equipment**, **Inventory**, **Procurement**, **Expense**, **Schedule**, **Communication**, **Documents**, **Drawings**, **Cost**, **Parts** and **Invoices**. **Profile** holds the basic details and owner. **Items** lists the individual jobs. **Team** lists the people and crews. **Timesheets** records hours and labor cost. **Equipment** lists equipment requests. **Inventory** holds site material requests. **Procurement** lists linked requisitions. **Expense** records costs paid. **Schedule** gives each item dates and people. **Cost** adds up parts, labor, external or vendor and other cost. **Invoices** holds vendor invoices and their approval."
+          },
+          {
+            "term": "Status values",
+            "definition": "A work order has nine statuses: **To be Assigned**, **Pending**, **In Progress**, **Waiting for Quote**, **Waiting for Parts**, **On Hold**, **Waiting for Completed**, **Completed** and **Cancelled**. They are defined under **Settings**, **Status**."
+          },
+          {
+            "term": "Where approval happens",
+            "definition": "Equipment request cards on the **Equipment** tab of a work order show **Approve** and **Reject** buttons while still in approval, with a **Workflow Level** line such as 0/1. The **Invoices** tab has **Approve** and **Reject** columns. **Workflow Issues** lists issues raised at approval levels. Approval levels are set under **Settings**, **Approval Workflow** (per work order type) and **Settings**, **Invoices**."
           }
         ],
         "procedures": [
@@ -33821,11 +33911,15 @@ const MODULES = [
           },
           {
             "term": "Actions",
-            "definition": "The history icon on a row opens the history of that work order. The bin icon deletes it."
+            "definition": "Two row icons: the history icon and the bin (delete)."
           },
           {
             "term": "Work order card",
             "definition": "In Grid and Kanban views each card shows the ID, description, **Work Order Type** and the **Assign To** dropdown. The three-dot menu on the card holds the row actions. Click the ID or card to open the work order."
+          },
+          {
+            "term": "Work Order Status values",
+            "definition": "The **Work Order Status** column, the **Work Order Status** filter and the kanban columns use the nine statuses defined in **Settings**, **Status**: **To be Assigned**, **Pending**, **In Progress**, **Waiting for Quote**, **Waiting for Parts**, **On Hold**, **Waiting for Completed**, **Completed** and **Cancelled**."
           }
         ],
         "procedures": [
@@ -33890,7 +33984,7 @@ const MODULES = [
           },
           {
             "term": "Work Order Status",
-            "definition": "Dropdown with the status of the work order, for example **To be Assigned**. The statuses come from **Settings**, **Status**."
+            "definition": "A dropdown on the **Profile** tab with eight values: **To be Assigned**, **Pending**, **In Progress**, **Waiting for Quote**, **Waiting for Parts**, **On Hold**, **Waiting for Completed** and **Completed**. **Cancelled** is not in this dropdown; the three-dot menu has **Cancel Work Order**. The statuses are defined in **Settings**, **Status**."
           },
           {
             "term": "Created Date and Created By",
@@ -33919,6 +34013,14 @@ const MODULES = [
           {
             "term": "Three-dot menu",
             "definition": "At the top right of the form. It holds **See History**, which lists the changes made to the work order, and **Cancel Work Order**."
+          },
+          {
+            "term": "Basic information fields",
+            "definition": "Under **BASIC INFORMATION**: **WO ID** (required text), **WO Description** (text), **Work Order Type** (required dropdown), **Work Order Status**, **Created Date** (required date), **Created By** (read only) and **Notes** (rich text). **Due Date** sits under **PRIORITY**."
+          },
+          {
+            "term": "Assign To and Submit",
+            "definition": "The bottom bar of the work order has an **Assign To** dropdown (a user such as the administrator) and an orange **Submit** button."
           }
         ],
         "procedures": [
@@ -33945,7 +34047,7 @@ const MODULES = [
         "definitions": [
           {
             "term": "Create Items",
-            "definition": "The button at the top of the left list. It adds a new item to this work order."
+            "definition": "The button at the top of the left list. The list shows **Item 1**, **Item 2** and so on, each with a three-dot menu."
           },
           {
             "term": "Item list",
@@ -33953,7 +34055,7 @@ const MODULES = [
           },
           {
             "term": "Item Status",
-            "definition": "The dropdown above the details. It sets the status of the whole item list, for example **To be Assigned**."
+            "definition": "A dropdown above the item details with nine values: **To be Assigned**, **Pending**, **In Progress**, **Waiting for Quote**, **Waiting for Parts**, **On Hold**, **Waiting for Completed**, **Completed** and **Cancelled**."
           },
           {
             "term": "Item Details",
@@ -33961,7 +34063,7 @@ const MODULES = [
           },
           {
             "term": "Status",
-            "definition": "The progress of this one item, for example **4- Parts On Order**."
+            "definition": "A second dropdown inside **Item Details** for the progress of one item. Its values are **1- In Progress**, **2- On Hold**, **3- Completed** and **4- Parts On Order**."
           },
           {
             "term": "Estimated Hours and Quote Amount",
@@ -34137,7 +34239,7 @@ const MODULES = [
           },
           {
             "term": "Status tags",
-            "definition": "The tag on a card shows where the request is: **REQUESTED**, **APPROVED**, **CHECK OUT**, **PARTIAL IN TRANSIT**, **PARTIAL DELIVERED**, **PARTIAL CLOSED** or **CLOSED**."
+            "definition": "The chip on a card shows where the request stands. Chips seen are **CLOSED**, **CHECK OUT** and **REQUESTED**; the full list is **REQUESTED**, **APPROVED**, **CHECK OUT**, **PARTIAL IN TRANSIT**, **PARTIAL DELIVERED**, **PARTIAL CLOSED** and **CLOSED**."
           },
           {
             "term": "Approve and Reject",
@@ -34150,6 +34252,10 @@ const MODULES = [
           {
             "term": "Share arrow and three-dot menu",
             "definition": "The arrow on a card shares it. The three-dot menu holds more actions, including **Delete**."
+          },
+          {
+            "term": "Workflow Level",
+            "definition": "A line on each card such as **Workflow Level: 1/1** or **0/1**. **Approve** and **Reject** buttons show only on cards still in approval."
           }
         ],
         "procedures": [
@@ -34499,7 +34605,7 @@ const MODULES = [
         "definitions": [
           {
             "term": "Issue counters",
-            "definition": "**Total Issues**, **Issues Approved** (green) and **Issues Rejected** (red) at the top left."
+            "definition": "Chips at the top: **Total Issues**, **Issues Approved** and **Issues Rejected**."
           },
           {
             "term": "Search by ID",
@@ -34513,7 +34619,8 @@ const MODULES = [
             "term": "Table columns",
             "definition": "**Issue Number**, **Work Order Number**, **Level**, **Raised on Date**, **Raised on Time**, **Raised by**, **Image**, **Comments**, **Assign To** and **Due Date**."
           }
-        ]
+        ],
+        "procedures": []
       },
       {
         "heading": "Reports",
@@ -34658,13 +34765,14 @@ const MODULES = [
         "definitions": [
           {
             "term": "Search By Name",
-            "definition": "A list of work order types sits on the left with a search box. Pick a type to set its approval levels. When no type exists it says no results were found."
+            "definition": "A list of work order types sits on the left with a search box named **Search By Name**. Pick a type to set its approval levels. With no workflow defined the page says **Oops! No Results Found**."
           }
-        ]
+        ],
+        "procedures": []
       },
       {
         "heading": "Status",
-        "intro": "<p>The <strong>Status</strong> settings page lists the statuses a work order can have.</p>",
+        "intro": "<p>The Status settings page (subtitle <strong>Configure Statuses for Work Orders</strong>) is where work order statuses are defined.</p>",
         "images": [
           {
             "src": "assets/product/work-order/032.jpg",
@@ -34674,7 +34782,7 @@ const MODULES = [
         "definitions": [
           {
             "term": "Add Status",
-            "definition": "Adds a status."
+            "definition": "The **+ Add Status** button at the top of the page adds a status."
           },
           {
             "term": "Status list",
@@ -34683,8 +34791,13 @@ const MODULES = [
           {
             "term": "Colour dot",
             "definition": "The coloured dot in **Actions** shows the colour of the status."
+          },
+          {
+            "term": "Where statuses are defined",
+            "definition": "**Settings**, **Status** holds the table **Status** and **Actions**. Its nine rows are the statuses used by the **Work Order Status** column, the filter, the **Profile** dropdown and the kanban view."
           }
-        ]
+        ],
+        "procedures": []
       },
       {
         "heading": "Priority",
@@ -34703,8 +34816,13 @@ const MODULES = [
           {
             "term": "Table",
             "definition": "**Priority**, **Due Hours** and **Actions**."
+          },
+          {
+            "term": "Priority table",
+            "definition": "The subtitle reads **Configure Priority levels and sequence for Work Orders**. The table has the columns **Priority**, **Due Hours** and **Actions**. The **Priority** filter on the list and **Priority** on items show the levels defined here."
           }
-        ]
+        ],
+        "procedures": []
       },
       {
         "heading": "Configuration",
@@ -34718,9 +34836,10 @@ const MODULES = [
         "definitions": [
           {
             "term": "Reopen Window (days)",
-            "definition": "The number of days after a work order becomes **Completed** or **Cancelled** during which it can still be reopened. After that many days it locks. Click **Save** to keep a new number."
+            "definition": "A number box (default 30) under **Configure work order behaviour**. Its info icon says: Number of days after a work order first becomes terminal (Completed or Cancelled) during which it can still be reopened. After this many days the work order locks and can no longer be reopened. Click **Save** to keep a new number."
           }
-        ]
+        ],
+        "procedures": []
       },
       {
         "heading": "Users and Permissions",
@@ -34841,6 +34960,10 @@ const MODULES = [
           {
             "term": "The screens",
             "definition": "**My Dashboard** totals the forms created, approved, rejected and in progress, with charts by expense type and by individual. **Expense Forms** lists every form with its status and is where you create, approve and reject forms. **Processed Forms** holds forms that finished approval and the batches made from them. **Issues** lists issues approvers raised on forms. **Settings** holds **Expense Form**, **Expense Type**, **Approval WorkFlow**, **ID Settings** and **Users and Permissions**."
+          },
+          {
+            "term": "Where approval happens",
+            "definition": "On **Expense Forms**, cards of forms that are **Ready for Approval** or **In Progress** show green **Approve** and red **Reject** buttons. Inside an in-progress form the footer shows **Approval Workflow Level: (1/2)** with a **Level 2** dropdown and **Approve** and **Reject** buttons. The levels are defined under **Settings**, **Approval WorkFlow**."
           }
         ],
         "procedures": [
@@ -34927,7 +35050,7 @@ const MODULES = [
         "definitions": [
           {
             "term": "Form template drop-down",
-            "definition": "At the top left. Picks which expense form template the list and the **Create** button use (for example the Travel and Business Expense Report). Templates are set up in **Settings → Expense Form**."
+            "definition": "At the top left. Offers **Project Expense Tracking Form**, **Travel and Business Expense Report** and **General Expense Reimbursement Form**. Switching it did not change the list of forms on screen."
           },
           {
             "term": "Create",
@@ -34943,11 +35066,11 @@ const MODULES = [
           },
           {
             "term": "Approve and Reject",
-            "definition": "Buttons shown on a card that is waiting for your approval. **Approve** moves the form to the next workflow level, or to **Approved** at the last level. **Reject** sends it back."
+            "definition": "Green **Approve** and red **Reject** buttons on cards of forms that are **Ready for Approval** or **In Progress**. Approved and rejected cards have neither."
           },
           {
             "term": "Card menu",
-            "definition": "The three dots on a card open **See History**, which lists each step of the form with date and time, and **Delete**."
+            "definition": "The three dots on a card hold **See History** and **Delete**. A chevron at the bottom right of the card opens the form."
           },
           {
             "term": "Pagination and Export",
@@ -34955,7 +35078,7 @@ const MODULES = [
           },
           {
             "term": "Filters",
-            "definition": "Opens a dialog with **Name**, **Period**, **Total Range** (a minimum and maximum amount), **Status**, **Expense Form Template** and **Expense Type**. **Submit** applies them, **Clear Filters** removes them and **Save Filters** keeps them for next time."
+            "definition": "**Name**, **Period** (date range), **Total Range** (a slider with two number boxes), **Status**, **Expense Form Template** and **Expense Type** (11 values: Capital Expenses, Direct Expenses, Financial Expenses, Fixed Expenses, Indirect Expenses, Miscellaneous Expenses, Non-Operating Expenses, Operating Expenses, Personal Expenses, Phase Code, Variable Expenses). Buttons **Save Filters**, **Clear Filters** and **Submit**."
           },
           {
             "term": "View buttons",
@@ -34964,6 +35087,14 @@ const MODULES = [
           {
             "term": "Settings",
             "definition": "The button at the top right of every tab opens Expense Tracker **Settings**."
+          },
+          {
+            "term": "Status values",
+            "definition": "An expense form has five statuses: **Ready for Approval**, **In Progress**, **Approved**, **Rejected** and **Draft**. They are the choices of **Status** in **Filters**, a multi-select with **Select All**. The chips above the list count the forms in the first four."
+          },
+          {
+            "term": "History chips",
+            "definition": "**See History** opens the dialog **Track Expense** followed by the form number. Entries, newest first, read **Form has been approved and digitally signed at level 2** (chip **Approved**), **Form has been approved and digitally signed at level 1** (chip **Approved**) and **Expense Form has been created** (chip **Created**), each with a date, time and user."
           }
         ],
         "procedures": [
@@ -35012,6 +35143,53 @@ const MODULES = [
             ]
           }
         ]
+      },
+      {
+        "heading": "Expense Form Detail",
+        "intro": "<p>Click the chevron at the bottom right of a card on <strong>Expense Forms</strong> to open the form. The title is the template name followed by the form number.</p>",
+        "definitions": [
+          {
+            "term": "Header",
+            "definition": "Company logo, company address block and the form number at the top right."
+          },
+          {
+            "term": "Download, Share and Print",
+            "definition": "Buttons at the top right of the form. A pencil icon beside them is shown on an in-progress form and not on an approved one."
+          },
+          {
+            "term": "Name and Period",
+            "definition": "Both required. **Name** is a dropdown of the person and **Period** is two dates."
+          },
+          {
+            "term": "Select Expense Type",
+            "definition": "A dropdown with the 11 expense types. **+ Add Expense Type** adds a table for the chosen type; the red link **Delete Expense Type** removes one."
+          },
+          {
+            "term": "Expense table",
+            "definition": "One table per expense type, titled with the type and its threshold, for example Capital Expenses (Threshold: 0.00). Columns **S.No**, **Date** (required), **Description**, **Attachments/Missing Receipts** (a **View** link), **Total** (required) and **Actions**. A **Total** shows under each table."
+          },
+          {
+            "term": "Project Expense Tracking Form sections",
+            "definition": "The accordion **Expense** holds **Expense Summary**, **Expense Details** and **Project Budget Overview** tables and a **Notes and Comments** box."
+          },
+          {
+            "term": "General Expense Reimbursement Form sections",
+            "definition": "**Section Name1** holds **Expense Details** (a table), a rich-text box that asks for a brief explanation of why the expenses were incurred and a **Payment Method** dropdown. **Employee Declaration** holds the certification text, **Employee Signature** and **Date**."
+          },
+          {
+            "term": "Footer",
+            "definition": "A green **Total Expense** and the **Select Approval Workflow** dropdown (for example **Approval Workflow 1**), which is greyed on an existing form."
+          },
+          {
+            "term": "Approval Workflow Level",
+            "definition": "On an in-progress form the footer adds **Approval Workflow Level: (1/2)** with a **Level 2** dropdown and the **Approve** and **Reject** buttons. The first number counts the levels signed and the second the levels in the workflow."
+          },
+          {
+            "term": "Approved form",
+            "definition": "A fully approved form is read only: no pencil, no **Approve** or **Reject**, no **Save** and no **Submit**."
+          }
+        ],
+        "procedures": []
       },
       {
         "heading": "Processed Forms",
@@ -35070,6 +35248,14 @@ const MODULES = [
           {
             "term": "List and card view",
             "definition": "The two icons next to **Manage Columns** switch the batch table between list and card view; the save icon keeps the choice."
+          },
+          {
+            "term": "Approved Items buttons",
+            "definition": "**CSV Download Filters**, **Convert to Batch**, a date range picker and **Filters** sit at the top. A checkbox is on each form and on each line."
+          },
+          {
+            "term": "Batch detail",
+            "definition": "Click a batch row on **Batch Items** to open it (breadcrumb **Processed Forms > Batch Items > Batch Item**). The forms inside are listed as accordions; expanding one shows its expense type table with **Date**, **Description**, **Attachments**, **Receipt** and **Total**, and **Total Expense**. Here the **Batch Name** column is absent."
           }
         ],
         "procedures": [
@@ -35096,7 +35282,7 @@ const MODULES = [
         "definitions": [
           {
             "term": "Issue counts",
-            "definition": "At the top left: total issues, how many are closed and how many were rejected."
+            "definition": "Chips **Total Issues**, **Issues Closed** and **Issues Rejected**."
           },
           {
             "term": "Search By Issue No.",
@@ -35388,6 +35574,7 @@ const MODULES = [
       "Overview",
       "My Dashboard",
       "Expense Forms",
+      "Expense Form Detail",
       "Processed Forms",
       "Issues",
       "Expense Form Settings",
@@ -35417,6 +35604,10 @@ const MODULES = [
           {
             "term": "The screens",
             "definition": "**My Dashboard** totals the proposals, shows how many are won or lost, and lists approvals, forms, issues and to-dos that need you. **Proposals** lists every proposal as a table, cards or a kanban board and is where you create one. **Analytics** opens eight tiles of charts and reports, including the Weekly Report. **Issues** lists proposal issues such as a rejection. **Push Datasets** lists four datasets, each with a **SYNC** button. The buttons at the top right open the **Calendar**, the **To Do List** and **Settings**. Inside a proposal the tabs are **Profile**, **Teams**, **Documents**, **Communication**, **Checklists**, **Bid**, **Submittals** and **Submission Packages**."
+          },
+          {
+            "term": "Where approval happens",
+            "definition": "The **Proposals** list has a **Workflow Level** column (for example 1/1) and **Approve** and **Reject** columns on each row. Inside a proposal the **Submission Packages** tab has **Setup Approval Workflow** and **Workflow Issue** sub-tabs. Approval levels are set under **Settings**, **Approval Workflow**."
           }
         ],
         "procedures": [
@@ -35573,6 +35764,14 @@ const MODULES = [
           {
             "term": "Calendar, To Do List and Settings",
             "definition": "The three buttons at the top right of every Proposal Management page open the **Calendar**, the **To Do List** and **Settings**."
+          },
+          {
+            "term": "Status values",
+            "definition": "The **Status** filter lists **All Statuses**, **Cancelled**, **Completed**, **Lost**, **N/A**, **No Bid**, **Pending**, **Start**, **Successful** and **Unassigned**. The status chips above the list count the proposals in each status. Statuses are defined under **Settings**, **Status**."
+          },
+          {
+            "term": "Approve and Reject",
+            "definition": "Each row has an **Approve** and a **Reject** column. The **Workflow Level** column beside them shows where the proposal is in its approval levels."
           }
         ],
         "procedures": [
@@ -35625,8 +35824,29 @@ const MODULES = [
           {
             "term": "Save Changes",
             "definition": "Saves the profile."
+          },
+          {
+            "term": "Proposal status",
+            "definition": "The **Status** dropdown of a proposal has eight values: **Start**, **Successful**, **Pending**, **Cancelled**, **No Bid**, **N/A**, **Completed** and **Lost**."
+          },
+          {
+            "term": "Required fields",
+            "definition": "Fields marked with an asterisk include **Proposal ID**, **Proposal Name**, **Proposal Type**, **Creation Date** and **Status**."
+          },
+          {
+            "term": "Profile sections",
+            "definition": "**Details**, **Project Location**, **Dates & Values**, **Section Name1** and a configurable section holding **Notes** and **Attachments**."
+          },
+          {
+            "term": "History button",
+            "definition": "**History** at the top right opens the **Track** dialog. Its entries read like **Proposal 13 profile has been updated** with an **Updated** chip and the changed field lines. It is read only; close it with the x."
+          },
+          {
+            "term": "Assign To and Save Changes",
+            "definition": "An **Assign To** dropdown of users sits at the page level and **Save Changes** stores the profile."
           }
-        ]
+        ],
+        "procedures": []
       },
       {
         "heading": "Teams",
@@ -35725,8 +35945,13 @@ const MODULES = [
           {
             "term": "Search",
             "definition": "Finds a form."
+          },
+          {
+            "term": "Form types",
+            "definition": "Three sub-tabs: **Safety**, **Legal Review** and **Quality**. **Create Form** adds a form."
           }
-        ]
+        ],
+        "procedures": []
       },
       {
         "heading": "Bid",
@@ -35777,8 +36002,13 @@ const MODULES = [
           {
             "term": "Search",
             "definition": "Finds a letter."
+          },
+          {
+            "term": "Letter templates",
+            "definition": "Two sub-tabs hold the letters: **Letter** and **Budgetary Letter**. **Create** starts a new one."
           }
-        ]
+        ],
+        "procedures": []
       },
       {
         "heading": "Submission Packages",
@@ -35817,6 +36047,10 @@ const MODULES = [
           {
             "term": "Workflow Issue",
             "definition": "Issues raised against the package workflow, with a search box and list and card icons."
+          },
+          {
+            "term": "Select Status",
+            "definition": "Each package card has a **Select Status** dropdown; a submitted package shows **Submitted**."
           }
         ],
         "procedures": [
@@ -36291,6 +36525,10 @@ const MODULES = [
           {
             "term": "The screens",
             "definition": "**Tenders** lists every tender with its bid type, status and approval status. **Bid** lists tenders that have received bids so you can compare them. **Analytics & Reports** is a menu of five reports: Bid Awarded Rate, Estimate Awarded Rate, Types of Bids, Success & Estimate Over Time and Weekly Report. **Issues** lists issues raised on tender submissions. **Settings** (top right) holds the templates, statuses, approval workflow and permissions. A tender record opens with four cards: **Tender Event Schedule**, **Pre-Qualification**, **Tender Details** and **Addendum**. **Tender Details** opens **Tender Setup** with the tabs **Profile**, **Teams**, **Status & Comments**, **Documents**, **Communication**, **Scope of Work** and **Submission Package**."
+          },
+          {
+            "term": "Where approval happens",
+            "definition": "The **Tenders** list has **Approve** and **Reject** columns on every row and an **Approval Status** column. A tender whose **Approval Status** is **Ready for Approval** does not open when clicked; a toast says **This Tender needs approval**. Approval levels are set under **Settings**, **Approval Workflow**."
           }
         ],
         "procedures": [
@@ -36393,6 +36631,26 @@ const MODULES = [
           {
             "term": "Actions",
             "definition": "The pencil edits the tender, the note icon (**Notes**) opens notes for the tender and the bin deletes it."
+          },
+          {
+            "term": "Status values",
+            "definition": "The **Status** filter has 10 values: **Awarded**, **Completed**, **Draft**, **In-Progress**, **Pre Qualification**, **Rejected**, **Reopened**, **Shortlisted**, **Under Review** and **Unassigned**. They are defined under **Settings**, **Status Configuration**."
+          },
+          {
+            "term": "Bid Type filter",
+            "definition": "The **Bid Type** filter has three values: **Build-Own-Transfer Bid Type**, **General Bid Type** and **Speciality Items Bid Type**."
+          },
+          {
+            "term": "Approval Status values",
+            "definition": "**Approved** or **Ready for Approval**. Clicking a tender that is **Ready for Approval** shows the toast **This Tender needs approval** instead of opening it; an approved tender opens its detail page."
+          },
+          {
+            "term": "Approve and Reject",
+            "definition": "Each row has its own **Approve** and **Reject** columns."
+          },
+          {
+            "term": "Row actions",
+            "definition": "The **Actions** column holds an edit icon, a sticky-note icon and a delete icon."
           }
         ],
         "procedures": [
@@ -36519,7 +36777,7 @@ const MODULES = [
           },
           {
             "term": "Templates",
-            "definition": "The left list shows the pre-qualification templates (count in brackets). They are created in **Settings** → **Pre Qualification Template**. Click one to preview it on the right."
+            "definition": "The left list shows two templates: **Application Form** and **Application Form for Pre-Qualification**. They come from **Settings**, **Pre Qualification Template**. Click one to preview it; **Expand All**, **Collapse All** and **Submit** are above or below the preview."
           },
           {
             "term": "Template preview",
@@ -36529,7 +36787,8 @@ const MODULES = [
             "term": "Submit",
             "definition": "Submits the chosen template for this tender (step 2 to 4 unlock afterwards)."
           }
-        ]
+        ],
+        "procedures": []
       },
       {
         "heading": "Tender Setup",
@@ -36551,7 +36810,7 @@ const MODULES = [
           },
           {
             "term": "Bid Type",
-            "definition": "Required. Choose one of the bid types defined in settings. The configurable fields at the bottom change with the type."
+            "definition": "Required dropdown of the bid types defined under **Settings**, **Bid Type**."
           },
           {
             "term": "Description",
@@ -36563,7 +36822,7 @@ const MODULES = [
           },
           {
             "term": "Bid Status",
-            "definition": "The status of the tender, for example **Awarded**. The same status appears in the **Status** column on the **Tenders** screen."
+            "definition": "A dropdown with nine values: **In-Progress**, **Draft**, **Under Review**, **Reopened**, **Shortlisted**, **Awarded**, **Rejected**, **Pre Qualification** and **Completed**. They come from **Settings**, **Status Configuration**. **Unassigned**, which appears in the list filter, is not one of them."
           },
           {
             "term": "Owner Name and Location",
@@ -36583,7 +36842,7 @@ const MODULES = [
           },
           {
             "term": "Configurable Fields",
-            "definition": "Extra text boxes tied to the bid type. A **Speciality Items Bid Type** tender shows **Speciality Item 1** to **Speciality Item 6**."
+            "definition": "A configurable section with **Construction Tenure**, **Owning Period** and **Transfer Value**."
           },
           {
             "term": "Assign To and Save Changes",
@@ -36813,8 +37072,13 @@ const MODULES = [
           {
             "term": "Search, Filters, Manage Columns, view icons and Show as Graph",
             "definition": "Work the same way as on the **Tenders** screen."
+          },
+          {
+            "term": "Bid Submission Status",
+            "definition": "A column with two values, **Email Sent** and **Contractor Responded**. **Filters** has **Tender Name**, **Tender ID**, **Submission Status** and **Bid Type**."
           }
-        ]
+        ],
+        "procedures": []
       },
       {
         "heading": "Analytics & Reports",
@@ -36992,7 +37256,7 @@ const MODULES = [
         "definitions": [
           {
             "term": "Counts",
-            "definition": "**Total Issues**, **Issues Approved** and **Issues Rejected** at the top left."
+            "definition": "Chips **Total Issues**, **Issues Approved** and **Issues Rejected** at the top left."
           },
           {
             "term": "Filters and search",
@@ -37010,7 +37274,8 @@ const MODULES = [
             "term": "Chat and See History",
             "definition": "**Chat** opens a conversation on the issue and **See History** shows what has happened to it."
           }
-        ]
+        ],
+        "procedures": []
       },
       {
         "heading": "Settings",
@@ -37133,8 +37398,17 @@ const MODULES = [
           {
             "term": "Completed group",
             "definition": "A fixed group with the colour dot of finished tenders. It can be edited but not deleted."
+          },
+          {
+            "term": "Tender statuses",
+            "definition": "Two groups are shown, **In-Progress** and **Completed**. Under **In-Progress** the statuses are **Draft**, **Under Review**, **Reopened**, **Shortlisted**, **Awarded**, **Rejected** and **Pre Qualification**. The **Completed** group has no sub-statuses. Each status has a colour dot, a pencil and a trash icon, and an **Add Status** button sits above."
+          },
+          {
+            "term": "Where statuses show",
+            "definition": "The statuses feed the **Status** filter on **Tenders** and the **Bid Status** dropdown on a tender's **Profile** tab."
           }
-        ]
+        ],
+        "procedures": []
       },
       {
         "heading": "Approval Workflow Settings",
@@ -37163,8 +37437,13 @@ const MODULES = [
                 "caption": "The Workflow Tree View"
               }
             ]
+          },
+          {
+            "term": "Bid tab levels",
+            "definition": "The **Bid** tab shows a table with **Level**, **Level Description**, **Approvers** and **Workflow Type**. The row seen is **Level 1** named **Level - 1**, one approver and the rule **Any one can approve**. **Create Level** adds a level."
           }
-        ]
+        ],
+        "procedures": []
       },
       {
         "heading": "Bid Templates",
@@ -37370,6 +37649,14 @@ const MODULES = [
           {
             "term": "The screens",
             "definition": "**Dashboard** shows total spend, budget variance, average lead time, quality issue rate and a vendor performance summary for the projects you pick. **Requisition Form** lists requisitions and is where you raise them. **RFQ** holds requests for quotation sent to vendors. **Vendor Responses** is where vendor prices are entered and compared and the winning vendor is chosen. **Purchase Orders** lists orders raised from RFQs, with **Direct Purchase Order** for orders raised straight from a requisition. **Delivery Receipts** records what a vendor delivered, with **Inspection Issues**. **Invoice** holds vendor invoices raised against purchase orders. **Pickup Request** handles collecting rented equipment from a site. **Purchase Order Master** shows every order with its invoiced amount and balance. **Document** is the file area and **Communication** the mailbox of the module. **Settings** holds approval workflows, forms, issue priorities, ID formats, defaults and permissions."
+          },
+          {
+            "term": "Where approval happens",
+            "definition": "Requisitions are approved or rejected with the buttons in their list rows and the **Approval Work Flow** row icon shows their levels. Purchase orders have **APPROVE** and **REJECT** buttons in their list rows. Invoices have **Approve** and **Reject** buttons on their cards and an **Approval Workflow Level** line inside the **Edit Invoice** dialog. Delivery receipts have no approve or reject column. The levels themselves are set under **Settings**, **Approval Workflow**."
+          },
+          {
+            "term": "Status lists",
+            "definition": "A requisition has 12 statuses, a purchase order 6, a delivery receipt 2 and an invoice 3. Each list is the **Status** choice of the **Filters** dialog on that tab and is also shown as a chip in the **Status** column or on the card."
           }
         ],
         "procedures": [
@@ -37518,11 +37805,11 @@ const MODULES = [
           },
           {
             "term": "Approve and Reject",
-            "definition": "A green **APPROVED** button and a red **REJECT** button appear in the row once the requisition is in its approval workflow; rows still at **Created** show neither."
+            "definition": "Rows that are in an approval workflow show a green **APPROVED** button and a red **REJECT** button. Rows still at **Created** show neither."
           },
           {
             "term": "Assign",
-            "definition": "The user the requisition is currently assigned to. Click it to pick another user."
+            "definition": "A dropdown button on each row showing the user the requisition is assigned to. Click it to pick another user."
           },
           {
             "term": "Status",
@@ -37530,11 +37817,11 @@ const MODULES = [
           },
           {
             "term": "Tag",
-            "definition": "A coloured label for the kind of request: for example **Material**, **Equipment Rental** or **Delivery Service Material**."
+            "definition": "A label on each row for the kind of request. Values seen are **Material** and **Equipment Rental**."
           },
           {
             "term": "Actions",
-            "definition": "Row icons. The clock opens the **Track** dialog, a dated log of the approval workflow (submitted, modified, cleared, resubmitted) with who did each step. The network icon opens **Approval work flow data**, a table of **Level**, **Level Description**, **Approvers** and **Workflow Type**. The pencil edits the requisition, the download arrow downloads it and the bin deletes it.",
+            "definition": "Six row icons, named by their tooltips: **See History**, **Share**, **Approval Work Flow**, **Edit**, **Download** and **Delete**. **See History** opens the **Track** dialog, **Approval Work Flow** opens **Approval work flow data ID-REQ** with the levels and approvers, **Edit** opens the requisition form, **Download** downloads it and **Delete** removes it.",
             "images": [
               {
                 "src": "assets/product/procurement/003.jpg",
@@ -37545,6 +37832,10 @@ const MODULES = [
           {
             "term": "Workflow Issues sub-tab",
             "definition": "Opens the issues raised while requisitions were being approved. See **Requisition Workflow Issues**."
+          },
+          {
+            "term": "Status chips",
+            "definition": "The **Status** column shows one chip per row, for example **Created**, **RFQ Created** or **Approved**. The filter offers all 12 values."
           }
         ],
         "procedures": [
@@ -37591,8 +37882,78 @@ const MODULES = [
               "Choose any of **Status**, **Raised On**, **Assigned To**, **Requested By**, **Item Type**, **Project** or **Log ID**.",
               "Click **Submit**. Click **Filters** again and **Clear & Apply** to go back to the full list."
             ]
+          },
+          {
+            "title": "See the history of a requisition",
+            "steps": [
+              "Open **Home**, then **Procurement**, then **Requisition Form** and the **Create Requisition** sub-tab.",
+              "Find the requisition row, using **Filters** if needed.",
+              "Click the **See History** icon in the **Actions** column.",
+              "Read the **Track** dialog: newest entry first, each with date, time, user and a coloured chip.",
+              "Close the dialog with the x."
+            ]
+          },
+          {
+            "title": "See who approves a requisition",
+            "steps": [
+              "Open **Procurement**, **Requisition Form**, **Create Requisition**.",
+              "Click the **Approval Work Flow** icon in the **Actions** column of the row.",
+              "Read the dialog **Approval work flow data ID-REQ**: **Level**, **Level Description**, **Approvers** and **Workflow Type**.",
+              "Close the dialog with the x."
+            ]
           }
         ]
+      },
+      {
+        "heading": "Requisition Detail",
+        "intro": "<p>Click a REQ number in the <strong>Requisition Form</strong> list to open that requisition in a dialog titled <strong>Edit Requisition Form</strong> followed by its number. It shows the requisition's fields, its approval levels and its history.</p>",
+        "definitions": [
+          {
+            "term": "Requested By and Requesting Date",
+            "definition": "Both required. **Requested By** is a dropdown of the person who raised the request and **Requesting Date** is a date. On an approved requisition both are read only."
+          },
+          {
+            "term": "Equipment Rental",
+            "definition": "A toggle that marks the requisition as an equipment rental, which gives it the **Equipment Rental** tag in the list. It is disabled on an approved requisition."
+          },
+          {
+            "term": "Project Number and Project Name",
+            "definition": "Required dropdown that names the project the request is for."
+          },
+          {
+            "term": "Items table",
+            "definition": "Columns **Item Name**, **Type**, **Specification**, **Quantity** (required), **UOM**, **Required Date**, **Planned Return Date**, **Planned Return Time**, **Phase Code** and **Actions** (a note icon). **Type** says what kind of item the line is, for example Equipment."
+          },
+          {
+            "term": "Job Location",
+            "definition": "Required text for where the work is, with **Zip Code**, **City** and **State**."
+          },
+          {
+            "term": "Project Manager and Assignee",
+            "definition": "**Project Manager** is a required dropdown. **Assignee** is a dropdown for the user the requisition is assigned to."
+          },
+          {
+            "term": "Delivery Location",
+            "definition": "Required dropdown for where the goods go, with **Zip Code**, **City** and **State**."
+          },
+          {
+            "term": "On-Site Contact",
+            "definition": "Required dropdown for the person to contact at the site, with a required **Phone Number** that has a country code. A **Section Name1** area and **Notes** follow."
+          },
+          {
+            "term": "Buttons on an approved requisition",
+            "definition": "On an **Approved** requisition only the x is active. No Save, Submit or Approve button is shown."
+          },
+          {
+            "term": "Approval levels",
+            "definition": "The **Approval Work Flow** row icon opens **Approval work flow data ID-REQ** with the table **Level**, **Level Description**, **Approvers** and **Workflow Type** (for example **Any one can approve**). An approver who has approved is shown in green text."
+          },
+          {
+            "term": "History chips",
+            "definition": "**See History** opens the **Track** dialog, newest first. The chips are **Created** (REQ has been created), **Submitted** (submitted to level 1), **Modified** (approval workflow has been modified), **Resubmit** (submitted to approval workflow), **Approved** (approved and digitally signed at level 1) and **Completed** (REQ has been completed)."
+          }
+        ],
+        "procedures": []
       },
       {
         "heading": "Requisition Workflow Issues",
@@ -37644,7 +38005,8 @@ const MODULES = [
             "term": "Chat and See History",
             "definition": "Chat opens a conversation on the issue; See History shows its steps."
           }
-        ]
+        ],
+        "procedures": []
       },
       {
         "heading": "RFQ",
@@ -37814,7 +38176,19 @@ const MODULES = [
           },
           {
             "term": "Actions",
-            "definition": "A clock icon opens the PO's history and a bin deletes it."
+            "definition": "Two row icons: **See History** (opens the history of the PO) and delete. There is no **Approval Work Flow** icon on purchase order rows."
+          },
+          {
+            "term": "Status values",
+            "definition": "A purchase order has six statuses: **Created**, **Approved**, **Rejected**, **Partial Delivery Receipt Created**, **Delivery Receipt Created** and **Delivery Receipt Issue Raised**. They are the choices of **Status** in **Filters** and the chip in the **Status** column."
+          },
+          {
+            "term": "Approve and Reject",
+            "definition": "Every row, including rows already **Approved**, has an **APPROVE** and a **REJECT** button. The approval levels of a purchase order are not shown in the list row."
+          },
+          {
+            "term": "Item type tabs",
+            "definition": "**Material**, **Equipment**, **Equipment Part**, **Delivery Service Equipment** and **Delivery Service Material** split the list by item type."
           }
         ],
         "procedures": [
@@ -37842,8 +38216,68 @@ const MODULES = [
               "The items table lists **Item**, **Specification**, **UOM**, **Quantity**, **Phase Code**, **Tax Code**, **Required Date**, **Unit Price**, **Lead Time (Days)** and **Total Cost**, with a **Transfer** button per line. Totals show **Total** and **Total with Freight Items**.",
               "A second table (**Item Name**, **Cost**, **Specification**) holds extra items, and **Other Information** holds **Notes**."
             ]
+          },
+          {
+            "title": "See the history of a purchase order",
+            "steps": [
+              "Open **Home**, then **Procurement**, then **Purchase Orders**.",
+              "Open the item type tab, for example **Material**.",
+              "Click the **See History** icon in the **Actions** column of the PO row.",
+              "Read the **Track** dialog. Chips seen are **Created**, **Submitted**, **Approved** and **Completed**."
+            ]
           }
         ]
+      },
+      {
+        "heading": "Purchase Order Detail",
+        "intro": "<p>Click a PO number in the <strong>Purchase Orders</strong> list to open the order as a printable form. Approve and Reject are not on this page; they are on the list rows.</p>",
+        "definitions": [
+          {
+            "term": "Top buttons",
+            "definition": "**Print**, **Download** and **E-mail** act on the form. **View REQs** shows the requisitions behind the order, **Comments** opens comments and **See History** opens the **Track** dialog."
+          },
+          {
+            "term": "Header",
+            "definition": "Shows the company address, phone, zip code and the **Form Created** date."
+          },
+          {
+            "term": "Read-only details",
+            "definition": "**Requested By**, **Requested Date**, **REQ ID**, **Job No**, **Job Location**, **Project Manager**, **Delivery Location** and **On-Site Contact** are shown as text and cannot be edited here."
+          },
+          {
+            "term": "Tax Code",
+            "definition": "Required dropdown of tax codes. The checkbox **Tax on Freight** beside it applies the tax to freight too."
+          },
+          {
+            "term": "Advance Amount",
+            "definition": "A number box. The amount is repeated in the totals."
+          },
+          {
+            "term": "Instructions and Terms and Conditions",
+            "definition": "**Instructions** is a text box. **Terms and Conditions** holds the standard wording, a text template."
+          },
+          {
+            "term": "Vendor Details",
+            "definition": "The vendor **Name** and **Contact No** (country code, number and extension)."
+          },
+          {
+            "term": "Totals",
+            "definition": "**Advance Amount**, **Total** and **Total with Freight**."
+          },
+          {
+            "term": "Items table",
+            "definition": "Columns **Item**, **Specification**, **UOM**, **Quantity**, **Phase Code**, **Tax Code**, **Required Date**, **Unit Price**, **Lead Time (Days)**, **Total Cost** and a **Transfer** button on each row. A second table lists **Item Name**, **Cost** and **Specification**."
+          },
+          {
+            "term": "Other Information",
+            "definition": "A section with **Notes**."
+          },
+          {
+            "term": "History chips",
+            "definition": "The **Track** dialog shows **Created** (PO has been created), **Submitted** (submitted to level 1), **Approved** (approved and digitally signed at level 1) and **Completed**."
+          }
+        ],
+        "procedures": []
       },
       {
         "heading": "Direct Purchase Order",
@@ -37950,6 +38384,14 @@ const MODULES = [
           {
             "term": "Inspection Issues sub-tab",
             "definition": "Lists issues raised from delivery receipt checks. See **Inspection Issues**."
+          },
+          {
+            "term": "Status values",
+            "definition": "A delivery receipt has two statuses: **Created** and **Issues Raised**. They are the choices of **Status** in **Filters**; a new receipt shows a blue **Created** chip."
+          },
+          {
+            "term": "No approval column",
+            "definition": "The **Delivery Receipts** list has no **Approve** or **Reject** column. Its two sub-tabs are **Create Delivery Receipt** and **Inspection Issues**."
           }
         ],
         "procedures": [
@@ -37973,6 +38415,45 @@ const MODULES = [
             ]
           }
         ]
+      },
+      {
+        "heading": "Delivery Receipt Detail",
+        "intro": "<p>Click the pencil icon on a delivery receipt row to open <strong>Edit Delivery Receipt</strong> followed by its DR number. It records what was received and the inspection result.</p>",
+        "definitions": [
+          {
+            "term": "Received by and Date",
+            "definition": "Both required. **Received by** is a dropdown and **Date** is the receiving date."
+          },
+          {
+            "term": "PO Date and PO No",
+            "definition": "Disabled fields that show the purchase order the receipt is against."
+          },
+          {
+            "term": "Delivery paperwork",
+            "definition": "Text fields **Gate Entry No**, **Delivery Challan** and **Vehicle No**, and a date field **DC Date**."
+          },
+          {
+            "term": "Uploads",
+            "definition": "**Upload Images** accepts .jpeg and .png files. **Upload Attachments** accepts other files."
+          },
+          {
+            "term": "Items table",
+            "definition": "Columns **Item**, **UOM**, **Ordered qty**, **Qty received till date**, **Current Received Quantity** (required), **Current Accepted Qty**, **Current Rejected Qty**, **Cumulative Qty** and **Inventory Location** (dropdown). **Expand All** and **Collapse All** open or fold the inspection area under each item."
+          },
+          {
+            "term": "Inspection Items",
+            "definition": "Checks per item: **Per AML** (Yes, No, NA), **Visual Inspection**, **Check Per MTR** (Accept, Reject, NA), **ASME/ASTM Stamp**, **Grade** and **MSDS** (Yes, No, NA)."
+          },
+          {
+            "term": "Notes for Delivery",
+            "definition": "Free text for notes about the delivery."
+          },
+          {
+            "term": "Buttons and history",
+            "definition": "**Cancel** and the x close the form and **Submit** saves it. **See History** shows the **Track** dialog; a new receipt has one entry, **DR has been created** (chip **Created**)."
+          }
+        ],
+        "procedures": []
       },
       {
         "heading": "Inspection Issues",
@@ -37999,8 +38480,13 @@ const MODULES = [
           {
             "term": "Rectify",
             "definition": "An orange **RECTIFY** button means the issue is still open; a green **RECTIFIED** button means it was resolved."
+          },
+          {
+            "term": "Issue status",
+            "definition": "An inspection issue is either open or rectified. The counters read **Total Issues**, **Open Issues** and **Issues Rectified**, and the **Rectify** column shows **RECTIFY** or **RECTIFIED**."
           }
-        ]
+        ],
+        "procedures": []
       },
       {
         "heading": "Invoice",
@@ -38032,15 +38518,19 @@ const MODULES = [
           },
           {
             "term": "Invoice card",
-            "definition": "Shows a status tag, the invoice number (for example INV 47), **Purchase Order**, **Vendor**, **Invoice Date**, **Billing Date**, **Tax**, **Total Amount**, and a button with the user it is assigned to. Cards in **Created** status have **Approve** and **Reject** buttons."
+            "definition": "Shows a status chip, the invoice number, **Purchase Order**, **Vendor**, **Invoice Date**, **Billing Date**, **Tax** and **Total Amount**, an assign button with the assigned user, and a three-dot menu. **Approve** (green) and **Reject** (red) buttons show on **Created** cards only."
           },
           {
             "term": "Card menu",
-            "definition": "The three dots hold **See History**, **Share**, **Edit**, **Delete** and **Download**."
+            "definition": "The three dots hold **See History**, **Share**, **Edit**, **Delete** and **Download**. **Delete** is greyed out on an **Approved** card and available on a **Created** card."
           },
           {
             "term": "Workflow Issues sub-tab",
             "definition": "Same layout as the other Workflow Issues pages with an **INV ID** column. See **Invoice Workflow Issues**."
+          },
+          {
+            "term": "Status values",
+            "definition": "An invoice has three statuses: **Created**, **Approved** and **Rejected**. They are the choices of **Status** in **Filters** and the chip on the card."
           }
         ],
         "procedures": [
@@ -38063,6 +38553,41 @@ const MODULES = [
             ]
           }
         ]
+      },
+      {
+        "heading": "Invoice Detail",
+        "intro": "<p>Choose <strong>Edit</strong> in the three-dot menu of a <strong>Created</strong> invoice card to open the <strong>Edit Invoice</strong> dialog.</p>",
+        "definitions": [
+          {
+            "term": "Invoice Date",
+            "definition": "The date of the invoice."
+          },
+          {
+            "term": "Add Items and Advance Amount",
+            "definition": "Two buttons above the items table. **Advance Amount** was disabled on the invoice read."
+          },
+          {
+            "term": "Items table",
+            "definition": "Columns **S. No**, **Material**, **Quantity**, **Billing From** (address), **Billing To** (dropdown **Select Address**), **Tax Amount** and **Total Amount**."
+          },
+          {
+            "term": "Totals",
+            "definition": "**Invoice Subtotal**, **Tax** and **Total Amount** are all required numbers."
+          },
+          {
+            "term": "Attachments and Notes",
+            "definition": "**Attachments** takes files through **Click here to upload the files**. **Notes** is free text."
+          },
+          {
+            "term": "Approval Workflow Level",
+            "definition": "At the bottom of the dialog the line **Approval Workflow Level: (0/1)** is followed by **Approve** and **Reject** buttons. The first number counts the levels approved so far and the second the levels in the workflow. **Cancel** and **Submit** close or save the dialog."
+          },
+          {
+            "term": "History",
+            "definition": "**See History** is in the three-dot menu of the card and shows the same **Track** dialog as requisitions and purchase orders."
+          }
+        ],
+        "procedures": []
       },
       {
         "heading": "Invoice Workflow Issues",
@@ -38548,15 +39073,19 @@ const MODULES = [
       "Overview",
       "Dashboard",
       "Requisition Form",
+      "Requisition Detail",
       "Requisition Workflow Issues",
       "RFQ",
       "Vendor Responses",
       "Purchase Orders",
+      "Purchase Order Detail",
       "Direct Purchase Order",
       "Purchase Order Workflow Issues",
       "Delivery Receipts",
+      "Delivery Receipt Detail",
       "Inspection Issues",
       "Invoice",
+      "Invoice Detail",
       "Invoice Workflow Issues",
       "Pickup Request",
       "Pickup Request Workflow Issues",
@@ -38862,6 +39391,10 @@ const MODULES = [
           {
             "term": "Export",
             "definition": "The **Export** button at the top right exports the logs; it is greyed out until a log is open."
+          },
+          {
+            "term": "Status values",
+            "definition": "The **Status** filter of **Timesheet Logs** offers **All**, **Draft**, **Completed**, **Submitted For Approval**, **Workflow In Progress** and **Rejected**. It is the list of timesheet statuses in Time Management."
           }
         ],
         "procedures": [
@@ -38871,6 +39404,52 @@ const MODULES = [
               "Open **Timesheet Logs** and choose **My Crew Timesheet Logs** or **My Timesheet Logs**.",
               "Click the filter button, set **Status** and **Date Range**, and click **Apply**.",
               "Click the log card to open it on the right."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Timesheet Approval",
+        "intro": "<p>Timesheets are approved through an approval workflow that is defined under <strong>Settings</strong>, <strong>Timesheet Workflow</strong>. The state of each timesheet log is shown by the <strong>Status</strong> filter of the <strong>Timesheet Logs</strong> tab.</p>",
+        "definitions": [
+          {
+            "term": "Where the approval chain is defined",
+            "definition": "Click **Settings** (top right of any Time Management tab), open **Timesheet Workflow** and choose the **Create Workflow** sub-tab. A workflow is a list of levels. Each level row has a **Level**, a **Level Description**, its **Approvers** (users or companies) and a **Workflow Type**, for example **Any one can approve**."
+          },
+          {
+            "term": "Who a workflow applies to",
+            "definition": "On **Settings**, **Timesheet Workflow**, the **Assign Workflow** sub-tab attaches a workflow to users or crews. Pick **Users** or **Crews** on the left, pick the workflow on the right, then **Save Changes**. **Copy Approval Workflow To** applies the same workflow to others. If no roster exists the page says to create one in **Roster**."
+          },
+          {
+            "term": "Sending a timesheet for approval",
+            "definition": "On **My Timesheet** the two buttons are **Save as Draft** and **Submit**. **Save as Draft** keeps the log as a draft; **Submit** is the button that sends it on. The **Timesheets** tab inside a work order labels this button **Submit for Approval**."
+          },
+          {
+            "term": "Timesheet statuses",
+            "definition": "A timesheet log can be **Draft**, **Completed**, **Submitted For Approval**, **Workflow In Progress** or **Rejected**. These five are the choices of the **Status** filter on **Timesheet Logs**; the list has no value called Approved."
+          },
+          {
+            "term": "Where to see a timesheet status",
+            "definition": "Open **Timesheet Logs**, choose **My Crew Timesheet Logs** or **My Timesheet Logs**, click the funnel icon beside **Total Logs**, set **Status** (default **All**) and click **Apply**. **Mode**, **Crew**, **Logged By** and **Date Range** can narrow the list further."
+          },
+          {
+            "term": "Approval screens",
+            "definition": "Time Management has seven tabs: **Dashboard**, **My Crew Timesheet**, **My Timesheet**, **Timesheet Logs**, **Issues**, **Timesheet Data Summary** and **Reconciliation**. None is named Timesheets or Approvals; the approval chain is defined in **Settings**, **Timesheet Workflow** and the log status is read on **Timesheet Logs**."
+          },
+          {
+            "term": "Timesheet issues",
+            "definition": "The **Issues** tab (page title Timesheet Issues) counts issues raised on timesheets with three chips: **Total Issues**, **Issues Approved** and **Issues Rejected**. Its columns include **TSI Number**, **Level**, **Assign To**, **Due Date**, **Chat** and **See History**."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Filter timesheet logs by status",
+            "steps": [
+              "Open **Home**, then **Time Management**, then **Timesheet Logs**.",
+              "Choose **My Crew Timesheet Logs** or **My Timesheet Logs**.",
+              "Click the funnel icon beside **Total Logs**.",
+              "Set **Status** to **Draft**, **Completed**, **Submitted For Approval**, **Workflow In Progress** or **Rejected**.",
+              "Click **Apply**."
             ]
           }
         ]
@@ -39005,7 +39584,7 @@ const MODULES = [
           },
           {
             "term": "Color Configuration",
-            "definition": "Opens the same color rules dialog as in **Timesheet Data Summary**, to paint cells by hour or amount ranges."
+            "definition": "Opens **Configure Colors** (the same rules dialog as on **Timesheet Data Summary**). The **Hours** area has **+ Add** and the text **Format cells if...**; the table columns are **Earning Code** (required), **Condition** (required), **Start Value** (required), **End Value**, **Color** and **Actions**. **Submit** saves the rules."
           }
         ],
         "procedures": [
@@ -39050,13 +39629,17 @@ const MODULES = [
           },
           {
             "term": "Assign Workflow",
-            "definition": "Pick **Users** or **Crews** on the left, then choose one of the workflows on the right (the radio button) and click **Save Changes**. **Clear** removes the choice. **Copy Approval Workflow To** applies the same workflow to other users.",
+            "definition": "A second sub-tab next to **Create Workflow**. The left panel has **Users** and **Crews** tabs with a search box and companies that expand into their users; the right panel **Assign Approval Workflow** lists the workflows to pick, with **Clear**, **Save Changes** and **Copy Approval Workflow To**. Both save buttons stay grey until a choice is made.",
             "images": [
               {
                 "src": "assets/product/time-management/022.jpg",
                 "caption": "Assign Workflow"
               }
             ]
+          },
+          {
+            "term": "Workflow Type",
+            "definition": "Each level of a timesheet workflow carries a **Workflow Type**. The existing workflows show **Any one can approve** on their levels."
           }
         ],
         "procedures": [
@@ -39238,9 +39821,22 @@ const MODULES = [
         "definitions": [
           {
             "term": "Daily, Weekly, Monthly",
-            "definition": "Three radio buttons for the locking period. Pick one and click **Save Changes**."
+            "definition": "Three radio buttons choose how often the payroll period closes. Pick one and click **Save Changes**."
+          },
+          {
+            "term": "Select the option on which payroll happens",
+            "definition": "Shown when **Monthly** is chosen. Pick **Start of The Month**, **End of The Month** or **Custom** to say when the payroll period is cut off."
+          },
+          {
+            "term": "Time",
+            "definition": "The time of day of the payroll cut-off, for example 11:59 PM."
+          },
+          {
+            "term": "Buffer Time (In Days)",
+            "definition": "A number of days. Its info icon says: Number of days after the payroll cut-off during which the previous period can still be edited."
           }
-        ]
+        ],
+        "procedures": []
       },
       {
         "heading": "Exclude Projects",
@@ -39325,6 +39921,7 @@ const MODULES = [
       "My Crew Timesheet",
       "My Timesheet",
       "Timesheet Logs",
+      "Timesheet Approval",
       "Issues",
       "Timesheet Data Summary",
       "Reconciliation",
@@ -39619,6 +40216,30 @@ const MODULES = [
                 "caption": "The request menu"
               }
             ]
+          },
+          {
+            "term": "Card menu",
+            "definition": "The three dots on a request card hold **Delete** (red) and **See History**."
+          },
+          {
+            "term": "History",
+            "definition": "**See History** opens the **Track** dialog, newest entry first. Entries read **Form has been completed** (chip **Completed**), **Form has been approved and digitally signed at level 1** (chip **Approved**, with the approver's comment), **Form has been submitted to approval workflow** (chip **Resubmit**) and **Form has been created** (chip **Created**)."
+          },
+          {
+            "term": "Opened request",
+            "definition": "Click a card to open **Site Material Request** followed by its number (breadcrumb **Inventory Management > Site Material Requests > Form**). A completed request is read only. Required fields are **Project**, **Requested By**, **Required Date** and the **Materials** table."
+          },
+          {
+            "term": "Configurable fields on the form",
+            "definition": "The section **Site Material Requests Configurable Fields** holds **Required to execute which work** (text), **Logistics** (single select: **Will be picked by Project team** or **Can be delivered by HO**) and **Handling Instructions** (paragraph)."
+          },
+          {
+            "term": "Materials table",
+            "definition": "Columns **Product**, **Description**, **Quantity**, **UOM**, **Stock**, **Remarks** and **Actions** (a delete icon). **Add Row** adds a line."
+          },
+          {
+            "term": "Approvals panel",
+            "definition": "At the bottom of an approved request the text reads **Level - 1 approved by** the approver with **Comment** and the approver's comment."
           }
         ],
         "procedures": [
@@ -39630,6 +40251,15 @@ const MODULES = [
               "Fill the configurable fields you need.",
               "In **Materials**, pick each **Product Description**, enter the **Quantity** and **Remarks**; click **Add Material** for more lines.",
               "Click **Submit for Approval**."
+            ]
+          },
+          {
+            "title": "See the history of a site material request",
+            "steps": [
+              "Open **Home**, then **Inventory Management**, then **Site Material Request**.",
+              "Click the three dots on the request card.",
+              "Choose **See History**.",
+              "Read the **Track** dialog: each entry has a date, a user and a chip such as **Created**, **Resubmit**, **Approved** or **Completed**."
             ]
           }
         ]
@@ -39671,6 +40301,34 @@ const MODULES = [
                 "caption": "An existing Material Issue Ticket"
               }
             ]
+          },
+          {
+            "term": "Status tags",
+            "definition": "A ticket card shows a blue **Shipped** tag or a green **Delivered** tag at its top left."
+          },
+          {
+            "term": "Card menu",
+            "definition": "The three dots on a ticket card hold only **Delete**."
+          },
+          {
+            "term": "Filters",
+            "definition": "**Material Issue ID**, **Project**, **Site Material ID** and **Select Range**. There is no **Status** filter on this tab."
+          },
+          {
+            "term": "Material Issue Ticket form",
+            "definition": "Click a card to open **Material Issue Ticket** followed by its number. **Site Material Request** (required) is a read-only link to the request; **Project**, **Order Date**, **Ship To**, **Requested By** and **Required Date** are copied from it. **Ship Material From** is required; **Time In** and **Time Out** are time fields."
+          },
+          {
+            "term": "Shipping fields",
+            "definition": "Section **Material Issue Tickets Configurable Fields**: **Details of Shipping**, **Vehicle**, **Shipping Agent Name** and **Shipping Agent Contact**. The **Site Material Requests Configurable Fields** are copied over from the request."
+          },
+          {
+            "term": "Materials table",
+            "definition": "Required table with **Product**, **Description**, **UOM**, **Stock**, **Ordered**, **Shipped Already** and **Ship Now**."
+          },
+          {
+            "term": "Signatures",
+            "definition": "**Shipped By (Signature)** and **Received By (Signature)** are both required. Each has a **Check here to sign** box and a required **Date**. The orange **Submit** button sits at the bottom."
           }
         ],
         "procedures": [
@@ -39724,6 +40382,29 @@ const MODULES = [
             ]
           }
         ]
+      },
+      {
+        "heading": "Ticket Statuses",
+        "intro": "<p>Inventory Management shows the status of a ticket as a coloured chip. The statuses are not edited in Settings.</p>",
+        "definitions": [
+          {
+            "term": "Where statuses show",
+            "definition": "A coloured chip at the top left of each card in the **Site Material Request** and **Material Issue Ticket** lists. On site material requests the chip seen is **Completed** (green); on material issue tickets it is **Shipped** (blue) or **Delivered** (green)."
+          },
+          {
+            "term": "Status in Settings",
+            "definition": "Under **Settings** the ticket pages are form builders. **Status** is a fixed read-only standard field of each ticket (field 2 of the standard fields strip), so there is no status list to add to or edit."
+          },
+          {
+            "term": "What moves a status",
+            "definition": "The form flow: the approval workflow, the **Shipped By** and **Received By** signatures and **Submit**. The exact transition of each status is not documented here."
+          },
+          {
+            "term": "History chips",
+            "definition": "The **Track** dialog of a site material request shows the chips **Created**, **Resubmit**, **Approved** and **Completed**."
+          }
+        ],
+        "procedures": []
       },
       {
         "heading": "Ticket Fields",
@@ -39897,6 +40578,7 @@ const MODULES = [
       "Site Material Request",
       "Material Issue Ticket",
       "Return Ticket",
+      "Ticket Statuses",
       "Ticket Fields",
       "Users And Permissions",
       "Work Flow",

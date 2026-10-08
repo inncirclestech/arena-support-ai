@@ -1,0 +1,42 @@
+{
+  "module": "inventory-management",
+  "ops": [
+    {
+      "heading": "Site Material Request",
+      "defs": [
+        {"term": "Card menu", "definition": "The three dots on a request card hold **Delete** (red) and **See History**."},
+        {"term": "History", "definition": "**See History** opens the **Track** dialog, newest entry first. Entries read **Form has been completed** (chip **Completed**), **Form has been approved and digitally signed at level 1** (chip **Approved**, with the approver's comment), **Form has been submitted to approval workflow** (chip **Resubmit**) and **Form has been created** (chip **Created**)."},
+        {"term": "Opened request", "definition": "Click a card to open **Site Material Request** followed by its number (breadcrumb **Inventory Management > Site Material Requests > Form**). A completed request is read only. Required fields are **Project**, **Requested By**, **Required Date** and the **Materials** table."},
+        {"term": "Configurable fields on the form", "definition": "The section **Site Material Requests Configurable Fields** holds **Required to execute which work** (text), **Logistics** (single select: **Will be picked by Project team** or **Can be delivered by HO**) and **Handling Instructions** (paragraph)."},
+        {"term": "Materials table", "definition": "Columns **Product**, **Description**, **Quantity**, **UOM**, **Stock**, **Remarks** and **Actions** (a delete icon). **Add Row** adds a line."},
+        {"term": "Approvals panel", "definition": "At the bottom of an approved request the text reads **Level - 1 approved by** the approver with **Comment** and the approver's comment."}
+      ],
+      "procs": [
+        {"title": "See the history of a site material request", "steps": ["Open **Home**, then **Inventory Management**, then **Site Material Request**.", "Click the three dots on the request card.", "Choose **See History**.", "Read the **Track** dialog: each entry has a date, a user and a chip such as **Created**, **Resubmit**, **Approved** or **Completed**."]}
+      ]
+    },
+    {
+      "heading": "Material Issue Ticket",
+      "defs": [
+        {"term": "Status tags", "definition": "A ticket card shows a blue **Shipped** tag or a green **Delivered** tag at its top left."},
+        {"term": "Card menu", "definition": "The three dots on a ticket card hold only **Delete**."},
+        {"term": "Filters", "definition": "**Material Issue ID**, **Project**, **Site Material ID** and **Select Range**. There is no **Status** filter on this tab."},
+        {"term": "Material Issue Ticket form", "definition": "Click a card to open **Material Issue Ticket** followed by its number. **Site Material Request** (required) is a read-only link to the request; **Project**, **Order Date**, **Ship To**, **Requested By** and **Required Date** are copied from it. **Ship Material From** is required; **Time In** and **Time Out** are time fields."},
+        {"term": "Shipping fields", "definition": "Section **Material Issue Tickets Configurable Fields**: **Details of Shipping**, **Vehicle**, **Shipping Agent Name** and **Shipping Agent Contact**. The **Site Material Requests Configurable Fields** are copied over from the request."},
+        {"term": "Materials table", "definition": "Required table with **Product**, **Description**, **UOM**, **Stock**, **Ordered**, **Shipped Already** and **Ship Now**."},
+        {"term": "Signatures", "definition": "**Shipped By (Signature)** and **Received By (Signature)** are both required. Each has a **Check here to sign** box and a required **Date**. The orange **Submit** button sits at the bottom."}
+      ]
+    },
+    {
+      "heading": "Ticket Statuses",
+      "after": "Return Ticket",
+      "intro": "<p>Inventory Management shows the status of a ticket as a coloured chip. The statuses are not edited in Settings.</p>",
+      "defs": [
+        {"term": "Where statuses show", "definition": "A coloured chip at the top left of each card in the **Site Material Request** and **Material Issue Ticket** lists. On site material requests the chip seen is **Completed** (green); on material issue tickets it is **Shipped** (blue) or **Delivered** (green)."},
+        {"term": "Status in Settings", "definition": "Under **Settings** the ticket pages are form builders. **Status** is a fixed read-only standard field of each ticket (field 2 of the standard fields strip), so there is no status list to add to or edit."},
+        {"term": "What moves a status", "definition": "The form flow: the approval workflow, the **Shipped By** and **Received By** signatures and **Submit**. The exact transition of each status is not documented here."},
+        {"term": "History chips", "definition": "The **Track** dialog of a site material request shows the chips **Created**, **Resubmit**, **Approved** and **Completed**."}
+      ]
+    }
+  ]
+}

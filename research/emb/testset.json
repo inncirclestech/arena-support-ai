@@ -1747,5 +1747,236 @@
     "Group Users"
    ]
   ]
+ },
+ {
+  "q": "what are the statuses of a purchase order",
+  "m": "procurement",
+  "s": "Purchase Orders",
+  "alt": []
+ },
+ {
+  "q": "where are work order statuses defined",
+  "m": "work-order",
+  "s": "Status",
+  "alt": [
+   [
+    "work-order",
+    "Profile"
+   ],
+   [
+    "work-order",
+    "Overview"
+   ]
+  ]
+ },
+ {
+  "q": "what are the equipment lifecycle stages",
+  "m": "equipment",
+  "s": "Allocation Lifecycle",
+  "alt": [
+   [
+    "equipment",
+    "Requests"
+   ]
+  ]
+ },
+ {
+  "q": "how do I see the history of a requisition",
+  "m": "procurement",
+  "s": "Requisition Form",
+  "alt": [
+   [
+    "procurement",
+    "Requisition Detail"
+   ]
+  ]
+ },
+ {
+  "q": "where do I approve an expense form",
+  "m": "expense-tracker",
+  "s": "Expense Forms",
+  "alt": [
+   [
+    "expense-tracker",
+    "Overview"
+   ],
+   [
+    "expense-tracker",
+    "Expense Form Detail"
+   ]
+  ]
+ },
+ {
+  "q": "what are the tender statuses",
+  "m": "tender-management",
+  "s": "Tenders",
+  "alt": [
+   [
+    "tender-management",
+    "Status Configuration"
+   ],
+   [
+    "tender-management",
+    "Tender Setup"
+   ]
+  ]
+ },
+ {
+  "q": "what does reopen window mean",
+  "m": "work-order",
+  "s": "Configuration",
+  "alt": []
+ },
+ {
+  "q": "how does timesheet approval work",
+  "m": "time-management",
+  "s": "Timesheet Approval",
+  "alt": [
+   [
+    "time-management",
+    "Timesheet Workflow"
+   ],
+   [
+    "time-management",
+    "Overview"
+   ]
+  ]
+ },
+ {
+  "q": "what are the timesheet statuses",
+  "m": "time-management",
+  "s": "Timesheet Approval",
+  "alt": [
+   [
+    "time-management",
+    "Timesheet Logs"
+   ]
+  ]
+ },
+ {
+  "q": "what is buffer time in payroll locking",
+  "m": "time-management",
+  "s": "Payroll Locking",
+  "alt": []
+ },
+ {
+  "q": "what are the requisition statuses",
+  "m": "procurement",
+  "s": "Requisition Form",
+  "alt": []
+ },
+ {
+  "q": "what statuses does a delivery receipt have",
+  "m": "procurement",
+  "s": "Delivery Receipts",
+  "alt": []
+ },
+ {
+  "q": "what fields are on a purchase order",
+  "m": "procurement",
+  "s": "Purchase Order Detail",
+  "alt": [
+   [
+    "procurement",
+    "Purchase Orders"
+   ]
+  ]
+ },
+ {
+  "q": "what are the invoice statuses in procurement",
+  "m": "procurement",
+  "s": "Invoice",
+  "alt": []
+ },
+ {
+  "q": "what are the proposal statuses",
+  "m": "proposal-management",
+  "s": "Proposals",
+  "alt": [
+   [
+    "proposal-management",
+    "Proposal Profile"
+   ],
+   [
+    "proposal-management",
+    "Status"
+   ]
+  ]
+ },
+ {
+  "q": "what pickup preference options are there for an equipment request",
+  "m": "equipment",
+  "s": "Allocation Lifecycle",
+  "alt": [
+   [
+    "equipment",
+    "Requests"
+   ]
+  ]
+ },
+ {
+  "q": "how is request priority high or medium decided",
+  "m": "equipment",
+  "s": "Request Priority Threshold",
+  "alt": [
+   [
+    "equipment",
+    "Requests"
+   ]
+  ]
+ },
+ {
+  "q": "what do shipped and delivered mean on a material issue ticket",
+  "m": "inventory-management",
+  "s": "Ticket Statuses",
+  "alt": [
+   [
+    "inventory-management",
+    "Material Issue Ticket"
+   ]
+  ]
+ },
+ {
+  "q": "what are the bid submission statuses",
+  "m": "tender-management",
+  "s": "Bid",
+  "alt": []
+ },
+ {
+  "q": "what fields are on an expense form",
+  "m": "expense-tracker",
+  "s": "Expense Form Detail",
+  "alt": [
+   [
+    "expense-tracker",
+    "Expense Forms"
+   ]
+  ]
+ },
+ {
+  "q": "where are equipment statuses configured",
+  "m": "equipment",
+  "s": "Equipment and Accessory Status",
+  "alt": [
+   [
+    "equipment",
+    "Equipment Master"
+   ]
+  ]
+ },
+ {
+  "q": "who approves a timesheet",
+  "m": "time-management",
+  "s": "Timesheet Approval",
+  "alt": [
+   [
+    "time-management",
+    "Timesheet Workflow"
+   ],
+   [
+    "time-management",
+    "Overview"
+   ]
+  ]
  }
 ]

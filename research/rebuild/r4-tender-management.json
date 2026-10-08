@@ -1,0 +1,61 @@
+{
+  "module": "tender-management",
+  "ops": [
+    {
+      "heading": "Overview",
+      "defs": [
+        {"term": "Where approval happens", "definition": "The **Tenders** list has **Approve** and **Reject** columns on every row and an **Approval Status** column. A tender whose **Approval Status** is **Ready for Approval** does not open when clicked; a toast says **This Tender needs approval**. Approval levels are set under **Settings**, **Approval Workflow**."}
+      ]
+    },
+    {
+      "heading": "Tenders",
+      "defs": [
+        {"term": "Status values", "definition": "The **Status** filter has 10 values: **Awarded**, **Completed**, **Draft**, **In-Progress**, **Pre Qualification**, **Rejected**, **Reopened**, **Shortlisted**, **Under Review** and **Unassigned**. They are defined under **Settings**, **Status Configuration**."},
+        {"term": "Bid Type filter", "definition": "The **Bid Type** filter has three values: **Build-Own-Transfer Bid Type**, **General Bid Type** and **Speciality Items Bid Type**."},
+        {"term": "Approval Status values", "definition": "**Approved** or **Ready for Approval**. Clicking a tender that is **Ready for Approval** shows the toast **This Tender needs approval** instead of opening it; an approved tender opens its detail page."},
+        {"term": "Approve and Reject", "definition": "Each row has its own **Approve** and **Reject** columns."},
+        {"term": "Row actions", "definition": "The **Actions** column holds an edit icon, a sticky-note icon and a delete icon."}
+      ]
+    },
+    {
+      "heading": "Pre-Qualification",
+      "defs": [
+        {"term": "Templates", "definition": "The left list shows two templates: **Application Form** and **Application Form for Pre-Qualification**. They come from **Settings**, **Pre Qualification Template**. Click one to preview it; **Expand All**, **Collapse All** and **Submit** are above or below the preview."},
+        {"term": "Stepper", "definition": "The four steps are **Choose Template**, **Send to Tenderer**, **Response & Qualification** and **List of Qualified**."}
+      ]
+    },
+    {
+      "heading": "Tender Setup",
+      "defs": [
+        {"term": "Bid Status", "definition": "A dropdown with nine values: **In-Progress**, **Draft**, **Under Review**, **Reopened**, **Shortlisted**, **Awarded**, **Rejected**, **Pre Qualification** and **Completed**. They come from **Settings**, **Status Configuration**. **Unassigned**, which appears in the list filter, is not one of them."},
+        {"term": "Bid Type", "definition": "Required dropdown of the bid types defined under **Settings**, **Bid Type**."},
+        {"term": "Configurable Fields", "definition": "A configurable section with **Construction Tenure**, **Owning Period** and **Transfer Value**."}
+      ]
+    },
+    {
+      "heading": "Bid",
+      "defs": [
+        {"term": "Bid Submission Status", "definition": "A column with two values, **Email Sent** and **Contractor Responded**. **Filters** has **Tender Name**, **Tender ID**, **Submission Status** and **Bid Type**."}
+      ]
+    },
+    {
+      "heading": "Status Configuration",
+      "defs": [
+        {"term": "Tender statuses", "definition": "Two groups are shown, **In-Progress** and **Completed**. Under **In-Progress** the statuses are **Draft**, **Under Review**, **Reopened**, **Shortlisted**, **Awarded**, **Rejected** and **Pre Qualification**. The **Completed** group has no sub-statuses. Each status has a colour dot, a pencil and a trash icon, and an **Add Status** button sits above."},
+        {"term": "Where statuses show", "definition": "The statuses feed the **Status** filter on **Tenders** and the **Bid Status** dropdown on a tender's **Profile** tab."}
+      ]
+    },
+    {
+      "heading": "Approval Workflow Settings",
+      "defs": [
+        {"term": "Bid tab levels", "definition": "The **Bid** tab shows a table with **Level**, **Level Description**, **Approvers** and **Workflow Type**. The row seen is **Level 1** named **Level - 1**, one approver and the rule **Any one can approve**. **Create Level** adds a level."}
+      ]
+    },
+    {
+      "heading": "Issues",
+      "defs": [
+        {"term": "Counts", "definition": "Chips **Total Issues**, **Issues Approved** and **Issues Rejected**. Columns are **WFL Number**, **Level**, **Raised on Date**, **Raised on Time**, **Raised by**, **Image**, **Comments**, **Assign To**, **Due Date**, **Chat** and **See History**."}
+      ]
+    }
+  ]
+}

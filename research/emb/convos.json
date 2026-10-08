@@ -566,7 +566,7 @@
   "name": "clarify click second option",
   "turns": [
    {
-    "say": "how to approve a timesheet",
+    "say": "how to create a timesheet",
     "clar": [
      [
       "time-management",

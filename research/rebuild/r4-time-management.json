@@ -1,0 +1,50 @@
+{
+  "module": "time-management",
+  "ops": [
+    {
+      "heading": "Timesheet Approval",
+      "after": "Timesheet Logs",
+      "intro": "<p>Timesheets are approved through an approval workflow that is defined under <strong>Settings</strong>, <strong>Timesheet Workflow</strong>. The state of each timesheet log is shown by the <strong>Status</strong> filter of the <strong>Timesheet Logs</strong> tab.</p>",
+      "defs": [
+        {"term": "Where the approval chain is defined", "definition": "Click **Settings** (top right of any Time Management tab), open **Timesheet Workflow** and choose the **Create Workflow** sub-tab. A workflow is a list of levels. Each level row has a **Level**, a **Level Description**, its **Approvers** (users or companies) and a **Workflow Type**, for example **Any one can approve**."},
+        {"term": "Who a workflow applies to", "definition": "On **Settings**, **Timesheet Workflow**, the **Assign Workflow** sub-tab attaches a workflow to users or crews. Pick **Users** or **Crews** on the left, pick the workflow on the right, then **Save Changes**. **Copy Approval Workflow To** applies the same workflow to others. If no roster exists the page says to create one in **Roster**."},
+        {"term": "Sending a timesheet for approval", "definition": "On **My Timesheet** the two buttons are **Save as Draft** and **Submit**. **Save as Draft** keeps the log as a draft; **Submit** is the button that sends it on. The **Timesheets** tab inside a work order labels this button **Submit for Approval**."},
+        {"term": "Timesheet statuses", "definition": "A timesheet log can be **Draft**, **Completed**, **Submitted For Approval**, **Workflow In Progress** or **Rejected**. These five are the choices of the **Status** filter on **Timesheet Logs**; the list has no value called Approved."},
+        {"term": "Where to see a timesheet status", "definition": "Open **Timesheet Logs**, choose **My Crew Timesheet Logs** or **My Timesheet Logs**, click the funnel icon beside **Total Logs**, set **Status** (default **All**) and click **Apply**. **Mode**, **Crew**, **Logged By** and **Date Range** can narrow the list further."},
+        {"term": "Approval screens", "definition": "Time Management has seven tabs: **Dashboard**, **My Crew Timesheet**, **My Timesheet**, **Timesheet Logs**, **Issues**, **Timesheet Data Summary** and **Reconciliation**. None is named Timesheets or Approvals; the approval chain is defined in **Settings**, **Timesheet Workflow** and the log status is read on **Timesheet Logs**."},
+        {"term": "Timesheet issues", "definition": "The **Issues** tab (page title Timesheet Issues) counts issues raised on timesheets with three chips: **Total Issues**, **Issues Approved** and **Issues Rejected**. Its columns include **TSI Number**, **Level**, **Assign To**, **Due Date**, **Chat** and **See History**."}
+      ],
+      "procs": [
+        {"title": "Filter timesheet logs by status", "steps": ["Open **Home**, then **Time Management**, then **Timesheet Logs**.", "Choose **My Crew Timesheet Logs** or **My Timesheet Logs**.", "Click the funnel icon beside **Total Logs**.", "Set **Status** to **Draft**, **Completed**, **Submitted For Approval**, **Workflow In Progress** or **Rejected**.", "Click **Apply**."]}
+      ]
+    },
+    {
+      "heading": "Timesheet Logs",
+      "defs": [
+        {"term": "Status values", "definition": "The **Status** filter of **Timesheet Logs** offers **All**, **Draft**, **Completed**, **Submitted For Approval**, **Workflow In Progress** and **Rejected**. It is the list of timesheet statuses in Time Management."}
+      ]
+    },
+    {
+      "heading": "Timesheet Workflow",
+      "defs": [
+        {"term": "Workflow Type", "definition": "Each level of a timesheet workflow carries a **Workflow Type**. The existing workflows show **Any one can approve** on their levels."},
+        {"term": "Assign Workflow", "definition": "A second sub-tab next to **Create Workflow**. The left panel has **Users** and **Crews** tabs with a search box and companies that expand into their users; the right panel **Assign Approval Workflow** lists the workflows to pick, with **Clear**, **Save Changes** and **Copy Approval Workflow To**. Both save buttons stay grey until a choice is made."}
+      ]
+    },
+    {
+      "heading": "Payroll Locking",
+      "defs": [
+        {"term": "Daily, Weekly, Monthly", "definition": "Three radio buttons choose how often the payroll period closes. Pick one and click **Save Changes**."},
+        {"term": "Select the option on which payroll happens", "definition": "Shown when **Monthly** is chosen. Pick **Start of The Month**, **End of The Month** or **Custom** to say when the payroll period is cut off."},
+        {"term": "Time", "definition": "The time of day of the payroll cut-off, for example 11:59 PM."},
+        {"term": "Buffer Time (In Days)", "definition": "A number of days. Its info icon says: Number of days after the payroll cut-off during which the previous period can still be edited."}
+      ]
+    },
+    {
+      "heading": "Reconciliation",
+      "defs": [
+        {"term": "Color Configuration", "definition": "Opens **Configure Colors** (the same rules dialog as on **Timesheet Data Summary**). The **Hours** area has **+ Add** and the text **Format cells if...**; the table columns are **Earning Code** (required), **Condition** (required), **Start Value** (required), **End Value**, **Color** and **Actions**. **Submit** saves the rules."}
+      ]
+    }
+  ]
+}

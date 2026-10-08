@@ -1,0 +1,74 @@
+{
+  "module": "work-order",
+  "ops": [
+    {
+      "heading": "Overview",
+      "defs": [
+        {"term": "Status values", "definition": "A work order has nine statuses: **To be Assigned**, **Pending**, **In Progress**, **Waiting for Quote**, **Waiting for Parts**, **On Hold**, **Waiting for Completed**, **Completed** and **Cancelled**. They are defined under **Settings**, **Status**."},
+        {"term": "Where approval happens", "definition": "Equipment request cards on the **Equipment** tab of a work order show **Approve** and **Reject** buttons while still in approval, with a **Workflow Level** line such as 0/1. The **Invoices** tab has **Approve** and **Reject** columns. **Workflow Issues** lists issues raised at approval levels. Approval levels are set under **Settings**, **Approval Workflow** (per work order type) and **Settings**, **Invoices**."}
+      ]
+    },
+    {
+      "heading": "Work Orders",
+      "defs": [
+        {"term": "Work Order Status values", "definition": "The **Work Order Status** column, the **Work Order Status** filter and the kanban columns use the nine statuses defined in **Settings**, **Status**: **To be Assigned**, **Pending**, **In Progress**, **Waiting for Quote**, **Waiting for Parts**, **On Hold**, **Waiting for Completed**, **Completed** and **Cancelled**."},
+        {"term": "Actions", "definition": "Two row icons: the history icon and the bin (delete)."}
+      ]
+    },
+    {
+      "heading": "Profile",
+      "defs": [
+        {"term": "Work Order Status", "definition": "A dropdown on the **Profile** tab with eight values: **To be Assigned**, **Pending**, **In Progress**, **Waiting for Quote**, **Waiting for Parts**, **On Hold**, **Waiting for Completed** and **Completed**. **Cancelled** is not in this dropdown; the three-dot menu has **Cancel Work Order**. The statuses are defined in **Settings**, **Status**."},
+        {"term": "Basic information fields", "definition": "Under **BASIC INFORMATION**: **WO ID** (required text), **WO Description** (text), **Work Order Type** (required dropdown), **Work Order Status**, **Created Date** (required date), **Created By** (read only) and **Notes** (rich text). **Due Date** sits under **PRIORITY**."},
+        {"term": "Assign To and Submit", "definition": "The bottom bar of the work order has an **Assign To** dropdown (a user such as the administrator) and an orange **Submit** button."}
+      ]
+    },
+    {
+      "heading": "Items",
+      "defs": [
+        {"term": "Item Status", "definition": "A dropdown above the item details with nine values: **To be Assigned**, **Pending**, **In Progress**, **Waiting for Quote**, **Waiting for Parts**, **On Hold**, **Waiting for Completed**, **Completed** and **Cancelled**."},
+        {"term": "Status", "definition": "A second dropdown inside **Item Details** for the progress of one item. Its values are **1- In Progress**, **2- On Hold**, **3- Completed** and **4- Parts On Order**."},
+        {"term": "Create Items", "definition": "The button at the top of the left list. The list shows **Item 1**, **Item 2** and so on, each with a three-dot menu."}
+      ]
+    },
+    {
+      "heading": "Equipment",
+      "defs": [
+        {"term": "Status tags", "definition": "The chip on a card shows where the request stands. Chips seen are **CLOSED**, **CHECK OUT** and **REQUESTED**; the full list is **REQUESTED**, **APPROVED**, **CHECK OUT**, **PARTIAL IN TRANSIT**, **PARTIAL DELIVERED**, **PARTIAL CLOSED** and **CLOSED**."},
+        {"term": "Workflow Level", "definition": "A line on each card such as **Workflow Level: 1/1** or **0/1**. **Approve** and **Reject** buttons show only on cards still in approval."}
+      ]
+    },
+    {
+      "heading": "Workflow Issues",
+      "defs": [
+        {"term": "Issue counters", "definition": "Chips at the top: **Total Issues**, **Issues Approved** and **Issues Rejected**."}
+      ]
+    },
+    {
+      "heading": "Status",
+      "intro": "<p>The Status settings page (subtitle <strong>Configure Statuses for Work Orders</strong>) is where work order statuses are defined.</p>",
+      "defs": [
+        {"term": "Where statuses are defined", "definition": "**Settings**, **Status** holds the table **Status** and **Actions**. Its nine rows are the statuses used by the **Work Order Status** column, the filter, the **Profile** dropdown and the kanban view."},
+        {"term": "Add Status", "definition": "The **+ Add Status** button at the top of the page adds a status."}
+      ]
+    },
+    {
+      "heading": "Priority",
+      "defs": [
+        {"term": "Priority table", "definition": "The subtitle reads **Configure Priority levels and sequence for Work Orders**. The table has the columns **Priority**, **Due Hours** and **Actions**. The **Priority** filter on the list and **Priority** on items show the levels defined here."}
+      ]
+    },
+    {
+      "heading": "Configuration",
+      "defs": [
+        {"term": "Reopen Window (days)", "definition": "A number box (default 30) under **Configure work order behaviour**. Its info icon says: Number of days after a work order first becomes terminal (Completed or Cancelled) during which it can still be reopened. After this many days the work order locks and can no longer be reopened. Click **Save** to keep a new number."}
+      ]
+    },
+    {
+      "heading": "Approval Workflow",
+      "defs": [
+        {"term": "Approval Workflow page", "definition": "Under **Settings**, **Approval Workflow** a search box **Search By Name** filters the work order types that have workflows. With none defined the page says **Oops! No Results Found**."}
+      ]
+    }
+  ]
+}

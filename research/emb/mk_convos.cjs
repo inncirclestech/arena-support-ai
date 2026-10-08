@@ -75,7 +75,7 @@ const C = [
    { say: 'what apps can I connect from the marketplace', ans: A('global-data', 'Marketplace') },
    { say: 'where do I put the credentials for geotab', ans: A('global-data', 'Marketplace') } ] },
  { name: 'clarify click second option', turns: [
-   { say: 'how to approve a timesheet', clar: A('time-management', 'Timesheet Mode', ['time-management', 'My Timesheet']) },
+   { say: 'how to create a timesheet', clar: A('time-management', 'Timesheet Mode', ['time-management', 'My Timesheet']) },
    { clickSec: ['time-management', 'My Timesheet'], ans: A('time-management', 'My Timesheet') } ] },
  { name: 'compliance hub follow-up', turns: [
    { say: 'what is the compliance directory', ans: A('global-data', 'Compliance Hub') },
