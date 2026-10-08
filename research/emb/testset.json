@@ -1,0 +1,1544 @@
+[
+ {
+  "q": "how to create a project",
+  "m": "account-basics",
+  "s": "Projects",
+  "alt": []
+ },
+ {
+  "q": "how do I assign a user to a project",
+  "m": "project-setup",
+  "s": "Roster",
+  "alt": [
+   [
+    "account-basics",
+    "Overview"
+   ],
+   [
+    "users-and-permissions",
+    "Group Users"
+   ],
+   [
+    "permissions",
+    "User Groups"
+   ],
+   [
+    "users-and-permissions",
+    "Overview"
+   ]
+  ]
+ },
+ {
+  "q": "how to register new user",
+  "m": "global-data",
+  "s": "User Accounts",
+  "alt": [
+   [
+    "account-basics",
+    "Overview"
+   ]
+  ]
+ },
+ {
+  "q": "resend password reset email to a user",
+  "any": true
+ },
+ {
+  "q": "register many users at once from excel",
+  "any": true
+ },
+ {
+  "q": "how do i raise a support ticket",
+  "m": "account-basics",
+  "s": "Support",
+  "alt": []
+ },
+ {
+  "q": "i cant see a module tile on home page",
+  "m": "account-basics",
+  "s": "Home",
+  "alt": []
+ },
+ {
+  "q": "add several projects from excel",
+  "m": "account-basics",
+  "s": "Projects",
+  "alt": []
+ },
+ {
+  "q": "change how projects are shown",
+  "m": "account-basics",
+  "s": "Projects",
+  "alt": []
+ },
+ {
+  "q": "copy a user groups permissions to other projects",
+  "m": "users-and-permissions",
+  "s": "Groups Permission",
+  "alt": [
+   [
+    "global-data",
+    "Global Permission"
+   ],
+   [
+    "users-and-permissions",
+    "Group Permissions Tab"
+   ]
+  ]
+ },
+ {
+  "q": "download list of all registered users",
+  "any": true
+ },
+ {
+  "q": "set company logo and address",
+  "m": "global-data",
+  "s": "Company Details",
+  "alt": []
+ },
+ {
+  "q": "create phasecodes in global data",
+  "m": "global-data",
+  "s": "Phase Codes",
+  "alt": []
+ },
+ {
+  "q": "how to add a vendor",
+  "m": "global-data",
+  "s": "Vendors",
+  "alt": []
+ },
+ {
+  "q": "mark a vendor as blocked",
+  "m": "global-data",
+  "s": "Vendors",
+  "alt": []
+ },
+ {
+  "q": "what is a tax group and tax class",
+  "m": "global-data",
+  "s": "Tax Configuration",
+  "alt": []
+ },
+ {
+  "q": "create a uom group",
+  "m": "global-data",
+  "s": "UOM Groups",
+  "alt": []
+ },
+ {
+  "q": "add a unit of measurement",
+  "m": "global-data",
+  "s": "UOMs",
+  "alt": []
+ },
+ {
+  "q": "how to create a crew",
+  "m": "global-data",
+  "s": "Crews",
+  "alt": [
+   [
+    "project-setup",
+    "Project Crews"
+   ]
+  ]
+ },
+ {
+  "q": "change the company currency",
+  "m": "global-data",
+  "s": "Settings",
+  "alt": [
+   [
+    "global-data",
+    "Currency"
+   ]
+  ]
+ },
+ {
+  "q": "change global date format",
+  "m": "global-data",
+  "s": "Settings",
+  "alt": [
+   [
+    "global-data",
+    "Global Date Format"
+   ]
+  ]
+ },
+ {
+  "q": "route emails through outlook instead of gmail",
+  "m": "global-data",
+  "s": "Settings",
+  "alt": [
+   [
+    "global-data",
+    "Marketplace"
+   ],
+   [
+    "global-data",
+    "Mail Settings"
+   ]
+  ]
+ },
+ {
+  "q": "connect arena to sharepoint",
+  "m": "global-data",
+  "s": "Marketplace",
+  "alt": [
+   [
+    "global-data",
+    "Marketplace"
+   ]
+  ]
+ },
+ {
+  "q": "bring data from vista trimble viewpoint",
+  "m": "global-data",
+  "s": "Marketplace",
+  "alt": []
+ },
+ {
+  "q": "create a new rfi template",
+  "m": "global-data",
+  "s": "Forms",
+  "alt": [
+   [
+    "global-data",
+    "RFI Form"
+   ],
+   [
+    "global-data",
+    "Request For Information Form"
+   ]
+  ]
+ },
+ {
+  "q": "create a quick app",
+  "m": "field-works",
+  "s": "Quick Apps",
+  "alt": [
+   [
+    "global-data",
+    "Forms"
+   ]
+  ]
+ },
+ {
+  "q": "add a subsidiary",
+  "m": "global-data",
+  "s": "Subsidiary",
+  "alt": []
+ },
+ {
+  "q": "add a business unit",
+  "m": "global-data",
+  "s": "Business Units",
+  "alt": []
+ },
+ {
+  "q": "load locations from excel",
+  "m": "global-data",
+  "s": "Locations",
+  "alt": []
+ },
+ {
+  "q": "add a single sign on provider",
+  "m": "global-data",
+  "s": "Company Details",
+  "alt": []
+ },
+ {
+  "q": "add a custom role to the global roster",
+  "m": "global-data",
+  "s": "Global Rosters",
+  "alt": []
+ },
+ {
+  "q": "reactivate a deactivated user",
+  "m": "global-data",
+  "s": "User Accounts",
+  "alt": []
+ },
+ {
+  "q": "copy setup from one construction type to another",
+  "m": "global-data",
+  "s": "Construction Types",
+  "alt": []
+ },
+ {
+  "q": "add a bid line item to cost templates",
+  "m": "global-data",
+  "s": "Bid Templates",
+  "alt": []
+ },
+ {
+  "q": "set up a cost breakdown structure template",
+  "m": "global-data",
+  "s": "Cost Breakdown Structure",
+  "alt": []
+ },
+ {
+  "q": "define a new compliance requirement",
+  "m": "global-data",
+  "s": "Compliance Hub",
+  "alt": []
+ },
+ {
+  "q": "build a quantity take off formula for progress tracking",
+  "m": "global-data",
+  "s": "Measurement Templates",
+  "alt": []
+ },
+ {
+  "q": "add a rating field to the vendor ratings form",
+  "m": "global-data",
+  "s": "Ratings Form",
+  "alt": []
+ },
+ {
+  "q": "register a subcontractor",
+  "m": "global-data",
+  "s": "Sub Contractors",
+  "alt": []
+ },
+ {
+  "q": "add a work order type",
+  "m": "global-data",
+  "s": "Work Order Settings",
+  "alt": [
+   [
+    "work-order",
+    "Work Order Types"
+   ]
+  ]
+ },
+ {
+  "q": "rename terminology used across the app",
+  "m": "global-data",
+  "s": "Settings",
+  "alt": [
+   [
+    "global-data",
+    "Naming Framework"
+   ]
+  ]
+ },
+ {
+  "q": "add my own custom customer field",
+  "m": "global-data",
+  "s": "Customer Settings",
+  "alt": []
+ },
+ {
+  "q": "what are gl codes",
+  "m": "global-data",
+  "s": "GL Codes",
+  "alt": []
+ },
+ {
+  "q": "what are repair types",
+  "m": "global-data",
+  "s": "Repair Types",
+  "alt": []
+ },
+ {
+  "q": "create an opportunity",
+  "m": "opportunity",
+  "s": "Opportunities",
+  "alt": []
+ },
+ {
+  "q": "show opportunities as a kanban board",
+  "m": "opportunity",
+  "s": "Opportunities",
+  "alt": []
+ },
+ {
+  "q": "create a proposal from an opportunity",
+  "m": "opportunity",
+  "s": "Opportunity Proposals",
+  "alt": []
+ },
+ {
+  "q": "add people to an opportunity team",
+  "m": "opportunity",
+  "s": "Teams",
+  "alt": []
+ },
+ {
+  "q": "request an expense on an opportunity",
+  "m": "opportunity",
+  "s": "Opportunity Expenses",
+  "alt": []
+ },
+ {
+  "q": "create a customer contact",
+  "m": "opportunity",
+  "s": "Contacts",
+  "alt": [
+   [
+    "global-data",
+    "Contacts"
+   ]
+  ]
+ },
+ {
+  "q": "what does the pipeline report show",
+  "m": "opportunity",
+  "s": "Pipeline Report",
+  "alt": []
+ },
+ {
+  "q": "customer win rate report",
+  "m": "opportunity",
+  "s": "Customer Win Rate Report",
+  "alt": []
+ },
+ {
+  "q": "create an opportunity on the mobile app",
+  "m": "opportunity",
+  "s": "Mobile App",
+  "alt": []
+ },
+ {
+  "q": "opportunity forecast report",
+  "m": "opportunity",
+  "s": "Forecast Report",
+  "alt": []
+ },
+ {
+  "q": "what is the compliance tracker",
+  "m": "opportunity",
+  "s": "Compliance Tracker",
+  "alt": []
+ },
+ {
+  "q": "how to configure stages and statuses of opportunities",
+  "m": "opportunity",
+  "s": "Stages and Statuses Configuration",
+  "alt": []
+ },
+ {
+  "q": "milestone templates for opportunity",
+  "m": "opportunity",
+  "s": "Milestone Templates",
+  "alt": []
+ },
+ {
+  "q": "where do i see equipment utilization",
+  "m": "equipment",
+  "s": "Utilization Summary",
+  "alt": [
+   [
+    "equipment",
+    "Equipment Utilization Report"
+   ],
+   [
+    "equipment",
+    "Utilization Logs"
+   ]
+  ]
+ },
+ {
+  "q": "add an asset to equipment master",
+  "m": "equipment",
+  "s": "Equipment Master",
+  "alt": []
+ },
+ {
+  "q": "how to add a geofence",
+  "m": "equipment",
+  "s": "Geofencing",
+  "alt": []
+ },
+ {
+  "q": "connect a telematics provider",
+  "m": "equipment",
+  "s": "Telematics",
+  "alt": []
+ },
+ {
+  "q": "map a telematics device to a machine",
+  "m": "equipment",
+  "s": "Telematics",
+  "alt": []
+ },
+ {
+  "q": "raise a haul request",
+  "m": "equipment",
+  "s": "Internal Hauling",
+  "alt": [
+   [
+    "equipment",
+    "Hauling"
+   ]
+  ]
+ },
+ {
+  "q": "log a days utilization for a machine",
+  "m": "equipment",
+  "s": "Add Utilization Log",
+  "alt": []
+ },
+ {
+  "q": "schedule preventive maintenance",
+  "m": "equipment",
+  "s": "Preventive Maintenance",
+  "alt": []
+ },
+ {
+  "q": "create an auto log rule",
+  "m": "equipment",
+  "s": "Auto Log Utilization",
+  "alt": []
+ },
+ {
+  "q": "add a fuel type",
+  "m": "equipment",
+  "s": "Equipment Setup",
+  "alt": []
+ },
+ {
+  "q": "add a billing rule for equipment",
+  "m": "equipment",
+  "s": "Billing Rules",
+  "alt": []
+ },
+ {
+  "q": "add a disposal method",
+  "m": "equipment",
+  "s": "Disposal Methods",
+  "alt": []
+ },
+ {
+  "q": "request an extension for rented equipment",
+  "m": "equipment",
+  "s": "Allocation",
+  "alt": []
+ },
+ {
+  "q": "add a vehicle and a driver",
+  "m": "equipment",
+  "s": "Fleet & Schedule",
+  "alt": [
+   [
+    "equipment",
+    "Hauling"
+   ]
+  ]
+ },
+ {
+  "q": "what is 3rd party rental",
+  "m": "equipment",
+  "s": "3rd Party Rental",
+  "alt": []
+ },
+ {
+  "q": "create an inspection form for equipment",
+  "m": "equipment",
+  "s": "Equipment Management Forms",
+  "alt": []
+ },
+ {
+  "q": "add an accessory",
+  "m": "equipment",
+  "s": "Accessory Master",
+  "alt": []
+ },
+ {
+  "q": "link an accessory to a piece of equipment",
+  "m": "equipment",
+  "s": "Equipment Profile",
+  "alt": []
+ },
+ {
+  "q": "maintenance calendar",
+  "m": "equipment",
+  "s": "Maintenance Calendar",
+  "alt": []
+ },
+ {
+  "q": "create a work in project setup",
+  "m": "project-setup",
+  "s": "Works",
+  "alt": []
+ },
+ {
+  "q": "create a work from excel",
+  "m": "project-setup",
+  "s": "Works",
+  "alt": []
+ },
+ {
+  "q": "add a milestone to the project",
+  "m": "project-setup",
+  "s": "Milestones",
+  "alt": [
+   [
+    "opportunity",
+    "Milestones"
+   ]
+  ]
+ },
+ {
+  "q": "create an estimate",
+  "m": "project-setup",
+  "s": "Estimate",
+  "alt": []
+ },
+ {
+  "q": "add a rate card template",
+  "m": "project-setup",
+  "s": "Rate Card Template",
+  "alt": []
+ },
+ {
+  "q": "create a safety form category",
+  "m": "project-setup",
+  "s": "Safety",
+  "alt": []
+ },
+ {
+  "q": "create a drawing package",
+  "m": "project-setup",
+  "s": "Drawing Packages",
+  "alt": []
+ },
+ {
+  "q": "add a drawing to the register",
+  "m": "project-setup",
+  "s": "Drawing Register",
+  "alt": []
+ },
+ {
+  "q": "create a team folder",
+  "m": "project-setup",
+  "s": "Documents",
+  "alt": []
+ },
+ {
+  "q": "add a bim model",
+  "m": "project-setup",
+  "s": "BIM",
+  "alt": []
+ },
+ {
+  "q": "upload a gis document",
+  "m": "project-setup",
+  "s": "GIS",
+  "alt": []
+ },
+ {
+  "q": "give users access to a form",
+  "m": "project-setup",
+  "s": "Forms",
+  "alt": []
+ },
+ {
+  "q": "add system users to the project roster",
+  "m": "project-setup",
+  "s": "Roster",
+  "alt": []
+ },
+ {
+  "q": "create a non system user",
+  "m": "project-setup",
+  "s": "Roster",
+  "alt": []
+ },
+ {
+  "q": "create a drawing approval workflow with levels",
+  "m": "project-setup",
+  "s": "Create Approval Workflow",
+  "alt": []
+ },
+ {
+  "q": "create a training template for drawings",
+  "m": "project-setup",
+  "s": "Drawing Training",
+  "alt": []
+ },
+ {
+  "q": "create a quality folder",
+  "m": "project-setup",
+  "s": "Quality",
+  "alt": []
+ },
+ {
+  "q": "create a safety calendar category",
+  "m": "project-setup",
+  "s": "Setup Safety Calendar",
+  "alt": []
+ },
+ {
+  "q": "what are custom columns in project setup",
+  "m": "project-setup",
+  "s": "Custom Columns",
+  "alt": []
+ },
+ {
+  "q": "what are super locations",
+  "m": "project-setup",
+  "s": "Super Locations",
+  "alt": []
+ },
+ {
+  "q": "schedule gantt chart",
+  "m": "project-setup",
+  "s": "Schedule Gantt",
+  "alt": []
+ },
+ {
+  "q": "activities sequence",
+  "m": "project-setup",
+  "s": "Activities Sequence",
+  "alt": []
+ },
+ {
+  "q": "how can i change the visual look of work logging",
+  "m": "field-works",
+  "s": "Work Log Layout Settings",
+  "alt": [
+   [
+    "project-settings",
+    "Work Logs Templates"
+   ],
+   [
+    "field-works",
+    "Work Logs"
+   ]
+  ]
+ },
+ {
+  "q": "how to change the template of work logs",
+  "m": "field-works",
+  "s": "Work Log Layout Settings",
+  "alt": [
+   [
+    "project-settings",
+    "Work Logs Templates"
+   ],
+   [
+    "field-works",
+    "Work Logs"
+   ]
+  ]
+ },
+ {
+  "q": "log work for one location",
+  "m": "field-works",
+  "s": "Work Logs",
+  "alt": []
+ },
+ {
+  "q": "approve work logs",
+  "m": "field-works",
+  "s": "Approve Work Logs",
+  "alt": []
+ },
+ {
+  "q": "log time for people productivity",
+  "m": "field-works",
+  "s": "Productivity Logs",
+  "alt": []
+ },
+ {
+  "q": "record meeting minutes",
+  "m": "field-works",
+  "s": "Meeting Minutes",
+  "alt": []
+ },
+ {
+  "q": "raise a restraint",
+  "m": "field-works",
+  "s": "Restraints",
+  "alt": []
+ },
+ {
+  "q": "raise a site material request from field works",
+  "m": "field-works",
+  "s": "Inventory Management",
+  "alt": [
+   [
+    "inventory-management",
+    "Site Material Request"
+   ]
+  ]
+ },
+ {
+  "q": "record a safety observation",
+  "m": "field-works",
+  "s": "Observations",
+  "alt": []
+ },
+ {
+  "q": "create an invoice against a work order",
+  "m": "field-works",
+  "s": "Work Order Invoice",
+  "alt": [
+   [
+    "work-order",
+    "Invoices"
+   ]
+  ]
+ },
+ {
+  "q": "find punch list items assigned to me",
+  "m": "field-works",
+  "s": "Punch Lists",
+  "alt": []
+ },
+ {
+  "q": "raise an internal request lor",
+  "m": "field-works",
+  "s": "Internal LORs",
+  "alt": []
+ },
+ {
+  "q": "find overdue daily safety issues",
+  "m": "field-works",
+  "s": "Daily Safety Issues",
+  "alt": []
+ },
+ {
+  "q": "how does a work log move through field works",
+  "m": "field-works",
+  "s": "Overview",
+  "alt": []
+ },
+ {
+  "q": "open a plant in the tree version",
+  "m": "field-works",
+  "s": "Tree Version",
+  "alt": []
+ },
+ {
+  "q": "site photographs",
+  "m": "field-works",
+  "s": "Site Photographs",
+  "alt": []
+ },
+ {
+  "q": "see progress for one plant",
+  "m": "my-desk",
+  "s": "My Desk",
+  "alt": []
+ },
+ {
+  "q": "look at a particular day in my calendar",
+  "m": "my-calendar",
+  "s": "My Calendar",
+  "alt": []
+ },
+ {
+  "q": "create a calendar event",
+  "m": "calendar",
+  "s": "Create Event",
+  "alt": []
+ },
+ {
+  "q": "change my email signature",
+  "m": "communication",
+  "s": "Mail Settings",
+  "alt": []
+ },
+ {
+  "q": "link emails to a record",
+  "m": "communication",
+  "s": "Map your Email",
+  "alt": []
+ },
+ {
+  "q": "reply to an email",
+  "m": "communication",
+  "s": "Email view",
+  "alt": []
+ },
+ {
+  "q": "star an email",
+  "m": "communication",
+  "s": "Communications",
+  "alt": []
+ },
+ {
+  "q": "find a document in the document repository",
+  "m": "document-repository",
+  "s": "Document Repository",
+  "alt": []
+ },
+ {
+  "q": "what are follow up actions",
+  "m": "follow-up-actions",
+  "s": "Follow Up Actions",
+  "alt": []
+ },
+ {
+  "q": "start a reminder",
+  "m": "project-notifications",
+  "s": "Reminders",
+  "alt": []
+ },
+ {
+  "q": "start an alert",
+  "m": "project-notifications",
+  "s": "Alerts",
+  "alt": []
+ },
+ {
+  "q": "add an event group",
+  "m": "project-notifications",
+  "s": "Event Groups",
+  "alt": [
+   [
+    "notifications",
+    "Event Groups"
+   ]
+  ]
+ },
+ {
+  "q": "customize a notification events message",
+  "m": "project-notifications",
+  "s": "Events",
+  "alt": []
+ },
+ {
+  "q": "add standard groups to the project",
+  "m": "users-and-permissions",
+  "s": "Groups Permission",
+  "alt": []
+ },
+ {
+  "q": "change what a group can do",
+  "m": "users-and-permissions",
+  "s": "Group Permissions Tab",
+  "alt": [
+   [
+    "permissions",
+    "Permissions"
+   ],
+   [
+    "expense-tracker",
+    "Users and Permissions"
+   ]
+  ]
+ },
+ {
+  "q": "check what a user can do",
+  "m": "users-and-permissions",
+  "s": "User Permission",
+  "alt": [
+   [
+    "global-data",
+    "User Permission"
+   ],
+   [
+    "users-and-permissions",
+    "Overview"
+   ]
+  ]
+ },
+ {
+  "q": "register an owner",
+  "m": "owners",
+  "s": "Owners",
+  "alt": [
+   [
+    "global-data",
+    "Owners"
+   ]
+  ]
+ },
+ {
+  "q": "work log templates in project settings",
+  "m": "project-settings",
+  "s": "Work Logs Templates",
+  "alt": []
+ },
+ {
+  "q": "google maps setting for the project",
+  "m": "project-settings",
+  "s": "googlemaps",
+  "alt": []
+ },
+ {
+  "q": "look at a few projects only in cost control dashboard",
+  "m": "cost-tracking",
+  "s": "Cost Control Dashboard",
+  "alt": []
+ },
+ {
+  "q": "cost by cost types",
+  "m": "cost-tracking",
+  "s": "Cost by Cost Types",
+  "alt": []
+ },
+ {
+  "q": "create a work order",
+  "m": "work-order",
+  "s": "Work Orders",
+  "alt": [
+   [
+    "project-setup",
+    "Workorder"
+   ],
+   [
+    "global-data",
+    "Work Orders"
+   ]
+  ]
+ },
+ {
+  "q": "enter hours for your crew on a work order",
+  "m": "work-order",
+  "s": "Timesheets",
+  "alt": []
+ },
+ {
+  "q": "request equipment for a work order",
+  "m": "work-order",
+  "s": "Equipment",
+  "alt": []
+ },
+ {
+  "q": "add an expense to a work order",
+  "m": "work-order",
+  "s": "Expense",
+  "alt": []
+ },
+ {
+  "q": "create an expense form",
+  "m": "expense-tracker",
+  "s": "Expense Forms",
+  "alt": []
+ },
+ {
+  "q": "add an expense type",
+  "m": "expense-tracker",
+  "s": "Expense Type",
+  "alt": []
+ },
+ {
+  "q": "build a custom expense form id",
+  "m": "expense-tracker",
+  "s": "ID Settings",
+  "alt": []
+ },
+ {
+  "q": "create a proposal",
+  "m": "proposal-management",
+  "s": "Proposals",
+  "alt": []
+ },
+ {
+  "q": "send a submission package for approval",
+  "m": "proposal-management",
+  "s": "Submission Packages",
+  "alt": []
+ },
+ {
+  "q": "add a to do in proposal management",
+  "m": "proposal-management",
+  "s": "To Do List",
+  "alt": []
+ },
+ {
+  "q": "create a tender",
+  "m": "tender-management",
+  "s": "Tenders",
+  "alt": []
+ },
+ {
+  "q": "set the tender dates",
+  "m": "tender-management",
+  "s": "Tender Event Schedule",
+  "alt": []
+ },
+ {
+  "q": "tender bid success rate",
+  "m": "tender-management",
+  "s": "Bid Success Rate",
+  "alt": []
+ },
+ {
+  "q": "create a material requisition",
+  "m": "procurement",
+  "s": "Requisition Form",
+  "alt": []
+ },
+ {
+  "q": "create an rfq",
+  "m": "procurement",
+  "s": "RFQ",
+  "alt": []
+ },
+ {
+  "q": "create a direct purchase order",
+  "m": "procurement",
+  "s": "Direct Purchase Order",
+  "alt": []
+ },
+ {
+  "q": "open a purchase order",
+  "m": "procurement",
+  "s": "Purchase Orders",
+  "alt": []
+ },
+ {
+  "q": "open a delivery receipt",
+  "m": "procurement",
+  "s": "Delivery Receipts",
+  "alt": []
+ },
+ {
+  "q": "log my hours for a day",
+  "m": "time-management",
+  "s": "My Timesheet",
+  "alt": []
+ },
+ {
+  "q": "upload gate logs for reconciliation",
+  "m": "time-management",
+  "s": "Reconciliation",
+  "alt": []
+ },
+ {
+  "q": "set a users timesheet mode",
+  "m": "time-management",
+  "s": "Timesheet Mode",
+  "alt": []
+ },
+ {
+  "q": "what are earnings codes",
+  "m": "time-management",
+  "s": "Earnings Codes",
+  "alt": []
+ },
+ {
+  "q": "add stock to a material in inventory",
+  "m": "inventory-management",
+  "s": "Inventory Location",
+  "alt": []
+ },
+ {
+  "q": "issue materials against a request",
+  "m": "inventory-management",
+  "s": "Material Issue Ticket",
+  "alt": []
+ },
+ {
+  "q": "return materials to a location",
+  "m": "inventory-management",
+  "s": "Return Ticket",
+  "alt": []
+ },
+ {
+  "q": "add a budget in capital management",
+  "m": "capital-management",
+  "s": "Budgets",
+  "alt": []
+ },
+ {
+  "q": "create a cip",
+  "m": "capital-management",
+  "s": "CIPs",
+  "alt": []
+ },
+ {
+  "q": "score a cip",
+  "m": "capital-management",
+  "s": "CIP Score",
+  "alt": []
+ },
+ {
+  "q": "add a unit to the organization structure level",
+  "m": "capital-management",
+  "s": "Organization Structure",
+  "alt": []
+ },
+ {
+  "q": "what can i see in standard analytics",
+  "m": "data-analytics",
+  "s": "Standard Analytics",
+  "alt": []
+ },
+ {
+  "q": "dpr report",
+  "m": "data-analytics",
+  "s": "DPR Report",
+  "alt": []
+ },
+ {
+  "q": "what can i do on the projects screen",
+  "m": "account-basics",
+  "s": "Projects",
+  "alt": []
+ },
+ {
+  "q": "what can i do on the fleet map screen",
+  "m": "equipment",
+  "s": "Fleet Map",
+  "alt": []
+ },
+ {
+  "q": "how do i create my first project and add its team as admin",
+  "m": "admin-setup-guide",
+  "s": "Set up Arena",
+  "alt": []
+ },
+ {
+  "q": "how to connect integrations as admin",
+  "m": "admin-setup-guide",
+  "s": "Set up Arena",
+  "alt": []
+ },
+ {
+  "q": "hw to creat a vendr",
+  "m": "global-data",
+  "s": "Vendors",
+  "alt": []
+ },
+ {
+  "q": "wher do i find purchse orders",
+  "m": "procurement",
+  "s": "Purchase Orders",
+  "alt": []
+ },
+ {
+  "q": "add new employe to the project roster",
+  "m": "project-setup",
+  "s": "Roster",
+  "alt": []
+ },
+ {
+  "q": "how do i make a workorder",
+  "m": "work-order",
+  "s": "Work Orders",
+  "alt": [
+   [
+    "project-setup",
+    "Workorder"
+   ],
+   [
+    "global-data",
+    "Work Orders"
+   ]
+  ]
+ },
+ {
+  "q": "how2 add geofense",
+  "m": "equipment",
+  "s": "Geofencing",
+  "alt": []
+ },
+ {
+  "q": "create phasecode",
+  "m": "global-data",
+  "s": "Phase Codes",
+  "alt": [
+   [
+    "project-setup",
+    "Phase Codes"
+   ]
+  ]
+ },
+ {
+  "q": "i want to logg my timesheet hours",
+  "m": "time-management",
+  "s": "My Timesheet",
+  "alt": []
+ },
+ {
+  "q": "how can i bring in many projects from an excel sheet",
+  "m": "account-basics",
+  "s": "Projects",
+  "alt": []
+ },
+ {
+  "q": "where can i see who all opened a document",
+  "m": "document-repository",
+  "s": "Document Repository",
+  "alt": []
+ },
+ {
+  "q": "how can i rename the levels of a work",
+  "m": "project-setup",
+  "s": "Works",
+  "alt": []
+ },
+ {
+  "q": "split project weight between works",
+  "m": "project-setup",
+  "s": "Works",
+  "alt": []
+ },
+ {
+  "q": "set minimum and maximum stock limits",
+  "m": "inventory-management",
+  "s": "Inventory Location",
+  "alt": []
+ },
+ {
+  "q": "how to set a daily utilization log reminder",
+  "m": "equipment",
+  "s": "Notification Thresholds",
+  "alt": []
+ },
+ {
+  "q": "how do i give a team access to equipment management",
+  "m": "equipment",
+  "s": "Equipment Users and Permissions",
+  "alt": []
+ },
+ {
+  "q": "add a preventive maintenance interval",
+  "m": "equipment",
+  "s": "Maintenance Config",
+  "alt": []
+ },
+ {
+  "q": "what is a rate card for vendors",
+  "m": "global-data",
+  "s": "Rate Card",
+  "alt": []
+ },
+ {
+  "q": "what is customer poc",
+  "any": true
+ },
+ {
+  "q": "what does customer poc mean",
+  "any": true
+ },
+ {
+  "q": "what is a purchase order",
+  "any": true
+ },
+ {
+  "q": "how to export all data to sap",
+  "decline": true
+ },
+ {
+  "q": "what is the weather today",
+  "decline": true
+ },
+ {
+  "q": "tell me a joke",
+  "decline": true
+ },
+ {
+  "q": "how do i use salesforce",
+  "decline": true
+ },
+ {
+  "q": "who won the cricket match yesterday",
+  "decline": true
+ },
+ {
+  "q": "hello how are you",
+  "decline": true
+ },
+ {
+  "q": "how to reset my gmail password",
+  "decline": true
+ },
+ {
+  "q": "write python code to sort a list",
+  "decline": true
+ },
+ {
+  "q": "book me a flight ticket to delhi",
+  "decline": true
+ },
+ {
+  "q": "how do i integrate quickbooks with arena",
+  "decline": true
+ },
+ {
+  "q": "what is the capital of france",
+  "any": true
+ },
+ {
+  "q": "who is the prime minister of india",
+  "any": true
+ },
+ {
+  "q": "how to cook biryani",
+  "decline": true
+ },
+ {
+  "q": "how do i update my profile",
+  "m": "account-basics",
+  "s": "My Profile",
+  "alt": []
+ },
+ {
+  "q": "how to start a chat with a colleague",
+  "m": "account-basics",
+  "s": "Messaging",
+  "alt": []
+ },
+ {
+  "q": "what is on the top bar",
+  "m": "account-basics",
+  "s": "Top Bar",
+  "alt": []
+ },
+ {
+  "q": "how do the time management screens fit together",
+  "m": "time-management",
+  "s": "Overview",
+  "alt": []
+ },
+ {
+  "q": "what are the statuses in submittals",
+  "m": "global-data",
+  "s": "Forms",
+  "alt": [
+   [
+    "global-data",
+    "Submittals Form"
+   ],
+   [
+    "project-setup",
+    "Drawing Packages"
+   ]
+  ]
+ },
+ {
+  "q": "where do I set Geotab credentials",
+  "m": "global-data",
+  "s": "Marketplace",
+  "alt": []
+ },
+ {
+  "q": "what is the expiry alert in compliance hub",
+  "m": "global-data",
+  "s": "Compliance Hub",
+  "alt": []
+ },
+ {
+  "q": "what are the permission columns",
+  "m": "global-data",
+  "s": "Global Permission",
+  "alt": [
+   [
+    "users-and-permissions",
+    "Group Permissions Tab"
+   ],
+   [
+    "global-data",
+    "User Permission"
+   ]
+  ]
+ },
+ {
+  "q": "what does the support icon do",
+  "m": "global-data",
+  "s": "Top Bar",
+  "alt": [
+   [
+    "account-basics",
+    "Support"
+   ],
+   [
+    "account-basics",
+    "Top Bar"
+   ]
+  ]
+ },
+ {
+  "q": "how do I open the submittal form builder",
+  "m": "global-data",
+  "s": "Submittals Form",
+  "alt": []
+ },
+ {
+  "q": "what is the Submitted To field in the submittal form",
+  "m": "global-data",
+  "s": "Submittals Form",
+  "alt": []
+ },
+ {
+  "q": "how do I add a new cost type",
+  "m": "global-data",
+  "s": "Cost Type",
+  "alt": []
+ },
+ {
+  "q": "what is the material page in cost types",
+  "m": "global-data",
+  "s": "Cost Type",
+  "alt": [
+   [
+    "cost-tracking",
+    "Cost by Cost Types"
+   ]
+  ]
+ },
+ {
+  "q": "what apps can I connect from the marketplace",
+  "m": "global-data",
+  "s": "Marketplace",
+  "alt": []
+ },
+ {
+  "q": "how do i connect microsoft outlook to arena",
+  "m": "global-data",
+  "s": "Marketplace",
+  "alt": [
+   [
+    "global-data",
+    "Mail Settings"
+   ]
+  ]
+ },
+ {
+  "q": "what does the headset icon in the top bar do",
+  "m": "global-data",
+  "s": "Top Bar",
+  "alt": []
+ },
+ {
+  "q": "what are trigger points in an rfi form",
+  "m": "global-data",
+  "s": "RFI Form",
+  "alt": [
+   [
+    "global-data",
+    "Request For Information Form"
+   ],
+   [
+    "global-data",
+    "Forms"
+   ]
+  ]
+ },
+ {
+  "q": "what is the compliance directory",
+  "m": "global-data",
+  "s": "Compliance Hub",
+  "alt": []
+ },
+ {
+  "q": "where do I create bid templates and upload items from excel",
+  "m": "global-data",
+  "s": "Bid Templates",
+  "alt": [
+   [
+    "tender-management",
+    "Bid Templates"
+   ]
+  ]
+ },
+ {
+  "q": "how do i add a phase code to a cost breakdown structure",
+  "m": "global-data",
+  "s": "Cost Breakdown Structure",
+  "alt": [
+   [
+    "global-data",
+    "Phase Codes"
+   ]
+  ]
+ }
+]

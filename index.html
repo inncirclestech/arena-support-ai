@@ -1127,8 +1127,8 @@
 </dialog>
 <button type="button" class="help-fab" id="help-fab" hidden><span class="help-fab-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>Need help? Ask AI</button>
 
-<script src="data.js?v=1791449694"></script>
-<script src="engine.js?v=202610071733"></script>
+<script src="data.js?v=202610081500"></script>
+<script src="engine.js?v=202610081500"></script>
 <script>
   // ---------- In-browser LLM (WebLLM) — the primary way questions get answered ----------
   // Auto-loads on page load (see aiLoadPromise below), not behind a toggle: this is what
@@ -1343,12 +1343,14 @@ Example of the style to use — if a note says "[Global Data → Users] Go to Gl
   // rendered gate/status UI can paint the current percentage immediately
   // instead of waiting for the next progress tick.
   let aiLoadProgress = { progress: 0, text: "" };
-  const aiLoadPromise = ArenaLLM.isSupported()
-    ? ArenaLLM.load((p) => {
-        if (p) aiLoadProgress = { progress: typeof p.progress === "number" ? p.progress : aiLoadProgress.progress, text: p.text || aiLoadProgress.text };
-        notifyAiStatus();
-      }).finally(notifyAiStatus)
-    : Promise.resolve(false);
+  // Documentation search loads first (it is all that documented answers need); the optional
+  // general-knowledge model then loads quietly in the background.
+  ArenaSemantic.onChange(notifyAiStatus);
+  const aiLoadPromise = ArenaSemantic.init(KB, "assets/kb/").then(() =>
+    ArenaLLM.isSupported()
+      ? ArenaLLM.load((p) => { if (p) aiLoadProgress = { progress: typeof p.progress === "number" ? p.progress : aiLoadProgress.progress, text: p.text || aiLoadProgress.text }; }).catch(() => false)
+      : false
+  ).finally(notifyAiStatus);
 
   // ---------- Chat gate: no chatting until the AI is ready (or the visitor ----------
   // explicitly opts into the basic keyword-matching fallback). Once unlocked for
@@ -2270,106 +2272,6 @@ Example of the style to use — if a note says "[Global Data → Users] Go to Gl
     return r;
   }
 
-  // ---------- Answer guards: precision over fluency ----------
-  const KB_VOCAB = new Set();
-  const KB_DF = {};   // in how many documented answers each word appears
-  KB.forEach(e => new Set(stemSet(tokenize([e.question, e.object, (e.tags || []).join(" "), e.answer].join(" ")))).forEach(t => { KB_VOCAB.add(t); KB_DF[t] = (KB_DF[t] || 0) + 1; }));
-  const GENERIC_WORDS = new Set(["use", "using", "make", "get", "give", "show", "tell", "need", "know", "work", "help", "thing", "way", "see", "find", "open", "new", "all", "doe", "mean", "meaning", "generate", "produce", "print", "send", "download", "check", "change", "setup", "start", "finish", "complete", "enter", "fill", "select", "choose", "click", "want", "like", "able", "arena", "inncircles", "today", "please", "pls"]);
-  function editDistance(x, y, max) {
-    if (Math.abs(x.length - y.length) > max) return max + 1;
-    let prev = Array.from({ length: y.length + 1 }, (_, i) => i);
-    for (let i = 1; i <= x.length; i++) {
-      const cur = [i];
-      for (let j = 1; j <= y.length; j++) cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (x[i - 1] === y[j - 1] ? 0 : 1));
-      prev = cur;
-    }
-    return prev[y.length];
-  }
-  // Fix simple typos ("purchse" -> "purchase") by snapping unknown words to a near-identical documented word.
-  function correctTypos(q) {
-    return q.replace(/[A-Za-z]{4,}/g, w => {
-      const lw = w.toLowerCase();
-      const known = x => tokenize(x).every(t => KB_VOCAB.has(stem(t)));
-      if (STOPWORDS.has(lw)) return w;
-      // Run-together words ("phasecodes", "workorder"): add the split form next to the original.
-      if (lw.length >= 7) {
-        for (let k = 3; k <= lw.length - 3; k++) {
-          const l = lw.slice(0, k), r = lw.slice(k);
-          if (l.length >= 3 && r.length >= 3 && !STOPWORDS.has(l) && !STOPWORDS.has(r) && KB_VOCAB.has(stem(l)) && KB_VOCAB.has(stem(r)) && (KB_DF[stem(l)] || 0) > 5 && (KB_DF[stem(r)] || 0) > 5) return w + " " + l + " " + r;
-        }
-      }
-      if (known(lw) || known(lw + "s")) return w;
-
-      const max = lw.length >= 10 ? 2 : 1;
-      let best = null, bestD = max + 1;
-      for (const v of KB_VOCAB) {
-        if (v.length < 4 || Math.abs(v.length - lw.length) > max) continue;
-        if (v.startsWith(lw) || lw.startsWith(v)) continue;   // a longer or shorter real word, not a typo
-        const d = editDistance(lw, v, max);
-        if (d < bestD) { bestD = d; best = v; if (d === 1) break; }
-      }
-      return best && bestD <= max ? best : w;
-    });
-  }
-  function queryGuard(q, result) {
-    // A run-together word was expanded as "phasecodes phase codes": count either the compound or its parts, not both.
-    const rawTokens = tokenize(q);
-    const drop = new Set();
-    rawTokens.forEach((t, i) => {
-      if (i + 2 < rawTokens.length && rawTokens[i + 1] + rawTokens[i + 2] === t) {
-        if ((KB_DF[stem(t)] || 0) >= 3) { drop.add(i + 1); drop.add(i + 2); } else drop.add(i);
-      }
-    });
-    const stems = stemSet(rawTokens.filter((t, i) => !drop.has(i))).filter(t => t.length > 2 && !GENERIC_WORDS.has(t));
-    const top = result.type === "answer" ? result.best
-      : result.type === "clarify" ? ((result.options || [])[0] || null)
-      : ((result.suggestions || [])[0] || null);
-    let coverage = 0;
-    if (top && stems.length) {
-      const topSet = new Set(stemSet(tokenize([top.question, top.object, (top.tags || []).join(" "), top.answer].join(" "))));
-      coverage = stems.filter(t => topSet.has(t)).length / stems.length;
-    }
-    // A rarely-documented word in the question (e.g. "SAP") that the chosen answer does not contain
-    let topText = null;
-    if (top) topText = new Set(stemSet(tokenize([top.question, top.object, (top.tags || []).join(" "), top.answer].join(" "))));
-    const missingRare = stems.some(t => (KB_DF[t] || 0) <= 6 && (!topText || !topText.has(t)));
-    // A capitalised or ALL-CAPS word the docs have never seen (another product's name, e.g. Salesforce, SAP)
-    const foreign = (q.match(/\b[A-Z][A-Za-z]{2,}\b/g) || []).slice(q.trim().match(/^[A-Z]/) ? 1 : 0)
-      .some(w => !KB_VOCAB.has(stem(w.toLowerCase())) && !STOPWORDS.has(w.toLowerCase()));
-    return { coverage, foreign, missingRare };
-  }
-  // The AI may only rephrase. Reject its wording if it names anything the source notes don't,
-  // or if it is much longer than the note (a sign it is making things up).
-  function verifyAiAnswer(text, ctx) {
-    const norm = x => String(x || "").toLowerCase().replace(/\*\*|<\/?strong>|[`"“”']/g, "").replace(/\s+/g, " ");
-    const noteText = ctx.map(c => [c.answer, c.question, c.moduleName, c.section].join(" ")).join(" ");
-    const notes = norm(noteText);
-    // 1. Every bold name / path segment in the answer must exist in the note.
-    const bold = [...text.matchAll(/\*\*([^*]+)\*\*/g)].map(m => m[1]);
-    const paths = [...text.matchAll(/([A-Z][\w&]*(?:\s[\w&]+){0,3}(?:\s*(?:→|>)\s*[A-Z][\w&]*(?:\s[\w&]+){0,3})+)/g)].map(m => m[1].split(/\s*(?:→|>)\s*/)).flat();
-    const bad = [...new Set([...bold, ...paths])].map(t => t.trim()).filter(t => t.length > 2 && !/^home$/i.test(t) && !notes.includes(norm(t)));
-    if (bad.length) return false;
-    // 2. No invented words: nearly every content word must come from the note.
-    const noteStems = new Set(stemSet(tokenize(noteText)));
-    const aiStems = stemSet(tokenize(text)).filter(t => t.length > 3 && !/^\d+$/.test(t));
-    const missing = aiStems.filter(t => !noteStems.has(t));
-    if (aiStems.length && missing.length / aiStems.length > 0.2) return false;
-    // 3. Nothing dropped: keep at least 80% of the note's screen / button names.
-    const top = ctx[0];
-    const noteBold = [...new Set([...String(top.answer).matchAll(/\*\*([^*]+)\*\*/g)].map(m => norm(m[1]).trim()).filter(t => t.length > 2))];
-    if (noteBold.length) {
-      const ai = norm(text);
-      if (noteBold.filter(t => ai.includes(t)).length / noteBold.length < 0.8) return false;
-    }
-    // 4. No repeated sentences (small models sometimes loop).
-    const sentences = text.split(/(?<=[.!?])\s+/).map(x => x.trim().toLowerCase()).filter(x => x.length > 20);
-    if (new Set(sentences).size < sentences.length) return false;
-    // 5. Not much longer than the note.
-    const words = x => String(x).split(/\s+/).length;
-    return words(text) <= words(top.answer) * 1.35 + 20;
-  }
-
-
   // Screenshots: wide web screens use the full width; phone screens stay phone-sized; small images are never stretched.
   function sizeShot(img) {
     const fig = img.closest && img.closest(".doc-shot");
@@ -2492,7 +2394,7 @@ Example of the style to use — if a note says "[Global Data → Users] Go to Gl
       input.disabled = locked;
       sendBtn.disabled = locked;
       micBtn.disabled = locked || !(window.SpeechRecognition || window.webkitSpeechRecognition);
-      input.placeholder = locked ? "Getting the AI ready…" : "e.g. How do I assign a user to a project?";
+      input.placeholder = locked ? "Loading search…" : "e.g. How do I assign a user to a project?";
       suggestWrap.classList.toggle("chat-suggest-hidden", locked);
     }
 
@@ -2501,45 +2403,21 @@ Example of the style to use — if a note says "[Global Data → Users] Go to Gl
     // the single source of truth for "can the visitor chat yet?".
     function paintGate() {
       if (!gate) return; // view was swapped away before this fired
-      const ready = ArenaLLM.isReady();
-      const loading = ArenaLLM.isLoading();
-      const supported = ArenaLLM.isSupported();
-
-      if (ready || chatUnlocked) {
-        // Ready unlocks everyone immediately; chatUnlocked (basic mode chosen)
-        // never re-locks even pre-ready.
+      const st = ArenaSemantic.state();
+      if (st === "ready" || st === "stale" || st === "failed" || chatUnlocked) {
+        // Documented answers need only the search index; failed/stale falls back to keyword search.
         gate.hidden = true;
         setLocked(false);
-        if (ready) {
-          gateText.textContent = "";
-        }
         return;
       }
-
       gate.hidden = false;
-
-      if (loading || (supported && !ArenaLLM.failReason())) {
-        // Actively downloading/initializing.
-        setLocked(true);
-        gateFallback.hidden = true;
-        gateContinueBtn.hidden = true;
-        const pct = Math.max(0, Math.min(1, aiLoadProgress.progress || 0));
-        const pctInt = Math.round(pct * 100);
-        gateProgressFill.style.width = pctInt + "%";
-        gateProgressPct.textContent = pctInt + "%";
-        gateText.textContent = "Loading AI model… " + pctInt + "%" + (aiLoadProgress.text ? " — " + aiLoadProgress.text : "");
-      } else {
-        // Not supported, or load failed outright — never leave the visitor
-        // stuck: explain why in plain language and offer the basic fallback.
-        setLocked(true);
-        gateProgressFill.style.width = "0%";
-        gateProgressPct.textContent = "";
-        gateText.textContent = "";
-        gateFallback.hidden = false;
-        gateFallback.textContent = ArenaLLM.failReason() ||
-          "The AI needs WebGPU in a recent Chrome or Edge on desktop, and this page must be opened directly (not embedded inside another site).";
-        gateContinueBtn.hidden = false;
-      }
+      setLocked(true);
+      gateFallback.hidden = true;
+      gateContinueBtn.hidden = true;
+      const pctInt = Math.round(Math.max(0, Math.min(1, ArenaSemantic.progress() || 0)) * 100);
+      gateProgressFill.style.width = pctInt + "%";
+      gateProgressPct.textContent = pctInt ? pctInt + "%" : "";
+      gateText.textContent = "Loading the documentation search (first visit only)…";
     }
 
     if (gateContinueBtn) {
@@ -2551,30 +2429,18 @@ Example of the style to use — if a note says "[Global Data → Users] Go to Gl
       });
     }
 
-    let wasReadyPainted = ArenaLLM.isReady();
+    let wasReadyPainted = false;
     function paintAiStatus() {
       if (!aiStatusBadge) return; // view was swapped away before this fired
-      const loading = ArenaLLM.isLoading();
-      const ready = ArenaLLM.isReady();
-      aiStatusBadge.classList.toggle("loading", loading);
+      const st = ArenaSemantic.state();
+      const ready = st === "ready";
+      aiStatusBadge.classList.toggle("loading", st === "loading" || st === "idle");
       aiStatusBadge.classList.toggle("ready", ready);
-      if (ready) {
-        aiStatusLabel.textContent = "AI ready — ask your first question";
-      } else if (loading) {
-        aiStatusLabel.textContent = "Loading AI model (first visit only)…";
-      } else if (!ArenaLLM.isSupported()) {
-        aiStatusLabel.textContent = "Offline mode (AI unavailable in this browser)";
-      } else {
-        aiStatusLabel.textContent = "Starting up…";
-      }
+      if (ready) aiStatusLabel.textContent = "Ready — ask your first question";
+      else if (st === "failed" || st === "stale") aiStatusLabel.textContent = "Keyword search mode (semantic search unavailable)";
+      else aiStatusLabel.textContent = "Loading documentation search (first visit only)…";
       paintGate();
-      // Focus the input the moment the model transitions into "ready" — but
-      // only that once, so we don't keep yanking focus back on later status
-      // pings while the visitor is already typing or reading.
-      if (ready && !wasReadyPainted) {
-        input.focus();
-      }
-      wasReadyPainted = ready;
+      if ((ready || st === "failed" || st === "stale") && !wasReadyPainted) { wasReadyPainted = true; input.focus(); }
     }
     paintAiStatus();
     aiStatusListeners.push(paintAiStatus);
@@ -2639,150 +2505,38 @@ Example of the style to use — if a note says "[Global Data → Users] Go to Gl
       if (el) el.remove();
     }
 
-    // The offline engine (matchQuery/retrieveTopEntries) is always the source
-    // of truth for WHAT documentation is relevant — it never gets bypassed.
-    // What changes is who turns that into a reply:
-    //  - WebLLM ready: read the actual question, and directly answer it from
-    //    the retrieved passages — no clarify-button menu, ever, on this path.
-    //    A genuinely unanswerable question still gets an honest "I don't have
-    //    documented steps for that" from the model, per its system prompt,
-    //    rather than a guess — grounding, not the button UI, is what keeps
-    //    this honest.
-    //  - WebLLM not ready/unsupported: fall back to the offline engine's own
-    //    answer/clarify/none behavior, including the clarify menu, since
-    //    without real language understanding a menu is safer than guessing.
+    // Retrieval = semantic search over the screen-by-screen documentation (engine.js plan()).
+    // Answers are the documentation text itself, shown verbatim under a "Where:" line.
+    // WebLLM (if available) is used only for the "General answer" path of non-Arena knowledge questions.
+    let sending = false;
     async function sendQuestion() {
       let q = input.value.trim();
-      if (!q) return;
-      input.value = "";
-      chatHistory.push({ role: "user", content: q });
-      paintLog();
-
-      const rawQ = q;
-      q = correctTypos(q);
-      const pre = matchQuery(KB, q, lastMatchedContext);
-      // Several close candidates, but one is clearly the exact question asked: answer it directly.
-      if (pre.type === "clarify") {
-        const qStems = new Set(stemSet(tokenize(q)));
-        const exactness = e => { const st = new Set(stemSet(tokenize(e.question))); return st.size ? [...st].filter(t => qStems.has(t)).length / st.size : 0; };
-        const ex = pre.options.map(exactness);
-        if (ex[0] >= 0.85 && ex.slice(1).every(x => x < 0.85)) { pre.type = "answer"; pre.best = pre.options[0]; pre.alternatives = []; }
-      }
-      const guard = queryGuard(q, pre);
-      // Words the documentation has never seen (e.g. another product's name) and no confident match:
-      // say so plainly instead of letting the AI improvise.
-      // Real-time topics the documentation can never answer (weather, news, scores) unless the question is about Arena integrations.
-      const liveInfo = /\b(weather|forecast|news|stock price|lottery|cricket score|football score|exchange rate)\b/i.test(rawQ) && !/\b(marketplace|integration|integrat|app|card)\b/i.test(rawQ);
-      const outOfScope = liveInfo || guard.foreign || guard.missingRare || pre.type === "none" ||
-        (pre.type === "clarify" && guard.coverage < 0.34);
-      if (outOfScope) {
-        let general = null;
-        const isKnowledgeQuestion = /^\s*(what|whats|what's|who|why|define|explain|difference|meaning)\b/i.test(rawQ) && !/\b(arena|inncircles|my account|my project)\b/i.test(rawQ);
-        if (isKnowledgeQuestion && ArenaLLM.isReady()) {
-          showThinking();
-          general = await Promise.race([ArenaLLM.general(rawQ), new Promise(r => setTimeout(() => r(null), 25000))]);
-          hideThinking();
-        }
-        chatHistory.push({ role: "assistant", content: general
-          ? "**General answer (not from the Arena documentation):** " + general + "\n\nFor Arena-specific steps, rephrase your question with the module name, or raise a ticket with Arena Support."
-          : NOT_FOUND_MESSAGE });
-        lastMatchedContext = null;
-        saveHistory(); paintSuggestions(); paintLog(); input.focus();
-        return;
-      }
-      // Weak or ambiguous match: show the options instead of a made-up synthesis.
-      const aiAllowed = pre.type === "answer" || (pre.type === "clarify" && guard.coverage >= 0.6);
-
-      if (aiAllowed && ArenaLLM.isReady()) {
-        showThinking();
-        // Keep the candidate set small (top 3, not a wide net): the offline
-        // engine's own relevance scoring already does the hard work of
-        // ranking, and a small model is much more reliable at picking the
-        // right ONE fact out of 2-3 well-ranked candidates and rephrasing it
-        // than at correctly ignoring several loosely-related ones out of a
-        // wider set — with more candidates it tends to just summarize all of
-        // them into a run-on list instead of answering the specific question.
-        // Give the AI only the single best-matching note so it cannot rephrase the wrong one.
-        const context = pre.type === "answer" ? [pre.best] : (pre.options || []).slice(0, 1);
-        let synthesized = context.length ? await ArenaLLM.answer(q, context) : null;
-        hideThinking();
-
-        if (synthesized && /don't have documented steps/i.test(synthesized)) synthesized = null;   // fall back to the documented answer or options
-        if (synthesized && !verifyAiAnswer(synthesized, context)) synthesized = null;
-        // Never lose the "where to go" context: if the documented answer has a
-        // screen path (→ or >) and the AI's wording dropped it, use the documented answer.
-        if (synthesized && !/don't have documented steps/i.test(synthesized) && context[0]
-            && /→|&gt;| > /.test(context[0].answer) && !/→|>/.test(synthesized)) {
-          synthesized = context[0].answer;
-        }
-        if (synthesized) {
-          // The model's own honest "I don't have documented steps" decline
-          // (see ArenaLLM.answer's system prompt) shouldn't be tagged with a
-          // source module — none of the retrieved candidates actually
-          // answered the question, so attributing the decline to whichever
-          // one happened to rank first would be misleading.
-          const isDecline = /don't have documented steps/i.test(synthesized);
-          const primary = context[0];
-          chatHistory.push({
-            role: "assistant",
-            content: synthesized,
-            sourceModule: isDecline ? null : primary.moduleId,
-            sourceModuleName: isDecline ? null : primary.moduleName,
-            aiSynthesized: !isDecline
-          });
-          lastMatchedContext = isDecline ? null : { moduleId: primary.moduleId, object: primary.object };
-          saveHistory();
-          paintSuggestions();
-          paintLog();
-          input.focus();
-          return;
-        }
-        // Retrieval found nothing at all, or generation failed — fall through
-        // to the offline engine below rather than leaving the user with
-        // nothing (e.g. a truly out-of-scope question the model correctly
-        // declined, or a transient WebLLM error).
-      }
-
-      const result = pre;
-
-      if (result.type === "answer") {
-        const msg = {
-          role: "assistant",
-          content: conversationalize(result.best.answer),
-          sourceModule: result.best.moduleId,
-          sourceModuleName: result.best.moduleName
-        };
-        if (result.alternatives && result.alternatives.length) {
-          msg.followups = result.alternatives.map(a => a.question);
-        }
-        chatHistory.push(msg);
-        lastMatchedContext = { moduleId: result.best.moduleId, object: result.best.object };
-      } else if (result.type === "clarify") {
-        chatHistory.push({
-          role: "assistant",
-          content: CLARIFY_INTRO,
-          clarifyOptions: result.options
-        });
-        lastMatchedContext = null;
-      } else {
-        // No confident match. If there are weak suggestions, offer them instead of
-        // a flat dead-end; otherwise point to support.
-        if (result.suggestions && result.suggestions.length) {
-          chatHistory.push({
-            role: "assistant",
-            content: "I'm not fully sure what you mean — did you mean one of these?",
-            clarifyOptions: result.suggestions
-          });
+      if (!q || sending) return;
+      sending = true;
+      try {
+        input.value = "";
+        chatHistory.push({ role: "user", content: q });
+        paintLog();
+        const rawQ = q;
+        const qvec = await ArenaSemantic.embed(correctTypos(KB, rawQ));
+        const p = plan(KB, rawQ, lastMatchedContext, qvec, ArenaSemantic.vecs());
+        if (p.type === "answer") {
+          chatHistory.push({ role: "assistant", content: composeAnswer(p.best, p.also), sourceModule: p.best.moduleId, sourceModuleName: p.best.moduleName });
+          lastMatchedContext = { moduleId: p.best.moduleId, object: p.best.object };
         } else {
-          chatHistory.push({ role: "assistant", content: NOT_FOUND_MESSAGE });
+          let general = null;
+          if (p.reason !== "live" && p.reason !== "offtopic" && isKnowledgeQuestion(rawQ) && ArenaLLM.isReady()) {
+            showThinking();
+            general = await Promise.race([ArenaLLM.general(rawQ), new Promise(r => setTimeout(() => r(null), 25000))]);
+            hideThinking();
+          }
+          chatHistory.push({ role: "assistant", content: general
+            ? "**General answer (not from the Arena documentation):** " + general + "\n\nFor Arena-specific steps, rephrase your question with the module name, or raise a ticket with Arena Support."
+            : NOT_FOUND_MESSAGE });
+          lastMatchedContext = null;
         }
-        lastMatchedContext = null;
-      }
-
-      saveHistory();
-      paintSuggestions();
-      paintLog();
-      input.focus();
+        saveHistory(); paintSuggestions(); paintLog(); input.focus();
+      } finally { sending = false; }
     }
 
     sendBtn.addEventListener("click", sendQuestion);
