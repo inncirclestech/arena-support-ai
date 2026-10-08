@@ -15839,271 +15839,74 @@ const MODULES = [
     "qaItems": QA_ADMINSETUPGUIDE,
     "narrative": [
       {
-        "heading": "Company Setup",
-        "intro": "<p>This is where every Arena setup starts: establishing the company's legal identity and its internal divisions, done once by a <strong>Super Admin</strong> before anyone else logs in. Nearly everything else — projects, vendors, generated documents — rolls up under the company profile created here.</p>",
+        "heading": "Overview",
+        "intro": "<p>Use this guide as a checklist when a company starts on Arena. Each step names the screen to open and what it feeds. The detailed fields and buttons of each screen are in the module guides named in the steps.</p>",
         "definitions": [
           {
-            "term": "Company Details",
-            "definition": "Your organization's legal/business profile (name, ID, address, contacts) shown on generated documents. Set at Global Data → Company → Company Details."
+            "term": "Who does it",
+            "definition": "The **Super Admin** (Global Admin) account sets up **Global Data** once. Project-level steps are done by someone with access to the project's **Project Setup** and **Users and Permissions**."
           },
           {
-            "term": "Business Units",
-            "definition": "A Code/Description registry of your internal divisions, used for categorization and reporting, and referenced by some ID-numbering schemes."
+            "term": "The order",
+            "definition": "1. **Global Data → Company** (company profile and subsidiaries) and **Business Units**.\n2. **Global Data → Users & Permissions** (users, rosters, groups).\n3. The master lists: **Owners**, **Locations**, **Tax Configuration**, **Vendors**, **Customer**, **Construction Types**, **UOM, Phasecode & GL Codes**, **Crews**.\n4. **Global Data → Settings** and **Marketplace**.\n5. **Projects → + Create Project**.\n6. **Project Setup** in the project.\n7. **Users and Permissions** in the project.\n8. The Settings of each module."
+          },
+          {
+            "term": "Why this order",
+            "definition": "The **Owner**, **Construction Type** and **Customer** dropdowns on **Create Project** are filled from Global Data, and **Project Setup → People** and **Phase Codes** are filled from Global Data rosters, crews and phase codes. A list you skip is empty when you need it."
           }
         ],
-        "procedures": [
-          {
-            "title": "Set up your company and business units",
-            "steps": [
-              "Go to <strong>Global Data → Company → Company Details</strong>.",
-              "Fill in Company Name, Company ID, Address, Contact Person, and Company Email/Phone.",
-              "Click <strong>Upload Company Logo</strong>, then <strong>Submit</strong>.",
-              "Go to <strong>Global Data → Company → Business Units</strong> and click <strong>Add</strong> for each division."
-            ],
-            "note": "Who does this: Super Admin. Details: see Global Data → Company & Business Units.",
-            "images": [
-              {
-                "src": "assets/notion/company-details/001.jpg",
-                "caption": "Company Details with the company name, logo, address and contacts",
-                "step": 2
-              }
-            ]
-          }
-        ]
+        "procedures": []
       },
       {
-        "heading": "Users & Permissions",
-        "intro": "<p>With the company profile in place, bring in the people who will use Arena and decide what each of them can do. Arena's permissions are entirely group-based, so you can run one Global Admin, several module-scoped admins (a Procurement Admin with no visibility into other modules, for example), or a mix of both.</p>",
+        "heading": "Set up Arena",
+        "intro": "<p>Eight stages, in the order the product needs them. Do not skip a stage's prerequisites: the lists you create early are the ones you pick from later.</p>",
         "definitions": [
           {
-            "term": "User Account",
-            "definition": "An individual Arena login, registered under Global Data → Users & Permissions → User Accounts."
+            "term": "1. Company and business units",
+            "definition": "Open **Global Data**, click the **Company** tile. On **Company Details** enter **Company Name**, **Company ID**, address, **Contact Person**, company email and phone (all required) and click **Submit**. Use the **Subsidiary** tab (**+ Create Subsidiary**) for subsidiary companies; the **Subsidiary** field on **Create Project** is one place they are used. Then open the **Business Units** tile, click **Add** and type a **Code** and **Description** for each unit. Unlocks: the company profile and the business unit list for everything that follows."
           },
           {
-            "term": "Permission Group",
-            "definition": "A named set of permissions and assigned users, scoped to as narrow or wide a set of modules as you choose."
+            "term": "2. Users and groups",
+            "definition": "Open **Global Data → Users & Permissions**. On **User Accounts → Active Users** click **Register User** and fill in the required fields (**Employee ID**, **First Name**, **Last Name**, **Username**, **Email**, **Password** and more). **Global Rosters** is the list of people who can be assigned to work, with or without a sign-in. On **Global Permission** click **Fetch Templates** for the standard admin groups (for example **Super Admin**, **Procurement Admin**) or **Add User Group** for your own, set the group's **Permissions**, then use **Users** to add people. **User Permission** shows one person's resulting access. Unlocks: the people to pick in projects and the access they get."
+          },
+          {
+            "term": "3. Master lists",
+            "definition": "Fill the lists your projects pick from:\n- **Owners**: the clients who commission projects; they fill the **Owner** dropdown on **Create Project**.\n- **Locations** and **Tax Configuration**: places and tax codes that you link to owners.\n- **Vendors**: suppliers filed under categories; they feed the vendor pickers in Procurement.\n- **Customer**: the customers list; it fills the **Customer** dropdown on **Create Project**.\n- **Construction Types**: needed before the first project, because **Construction Type** is required on **Create Project**. Each type carries its own location types, work packages, forms and activity sequence template.\n- **UOM, Phasecode & GL Codes**: **UOMs**, **Phase Codes** (feed **Project Setup → Phase Codes**), **Repair Types** and **GL Codes**.\n- **Crews**: copied into a project with **Copy Crews from Global Data**."
+          },
+          {
+            "term": "4. Settings and integrations",
+            "definition": "**Global Data → Settings** holds company-wide choices such as **Currency**, **Global Date Format**, **Mail Settings** (Gmail or Outlook per module) and **Naming Framework**; **Project Form** there fills dropdowns such as Project Type and Funding Agency on **Create Project**. **Global Data → Marketplace** connects outside systems such as **Microsoft Outlook**, **Microsoft OneDrive**, **Microsoft Sharepoint**, **Microsoft Calendar**, **Adobe Sign** and **Trimble Viewpoint**."
+          },
+          {
+            "term": "5. Create the first project",
+            "definition": "Open **Projects** and click **+ Create Project**. Fill in **Project Name**, **Project Number / ID** and **Construction Type** (required), then optional details such as **Project Location**, **Subsidiary** and **Owner Representative**, and click **Submit**. Unlocks: the project card, which opens the project."
+          },
+          {
+            "term": "6. Set up the project",
+            "definition": "Open the project, then **Project Setup**. The tabs are **Works**, **Tasks**, **People**, **Estimate**, **Schedule**, **Phase Codes**, **Quality**, **Safety**, **Drawings**, **Documents**, **Workorder**, **Forms**, **BIM** and **GIS**. Start with **Works**: create a work and click **Assign Percentage** so the works total 100%. Then add people and crews in **People**, tick codes in **Phase Codes**, and assign users, approval workflows and templates in **Forms**. Unlocks: the structure and configuration that the daily screens read."
+          },
+          {
+            "term": "7. Give people access to the project",
+            "definition": "In the project open **Users and Permissions** (the Permission Schema). **+ Fetch Templates** adds standard groups such as **Field Users**, **Operations Team** and **Quality Admins**; **+ Add User Group** makes your own. Open a group's **Permissions** and tick the actions it needs, click **Save Changes**, then open its **Users** tab and use **+ Add Users**. **User Permission** shows what one person ends up with."
+          },
+          {
+            "term": "8. Settings of each module",
+            "definition": "Each module on **Home** has its own **Settings**: for example **Time Management** (timesheet mode, earnings codes, templates, **Timesheet Workflow**), **Procurement** (**Approval Workflow**, **Default Assign To**), **Work Order** (**Work Order Types**, **Approval Workflow**), **Opportunity Management** (**Stages & Statuses Configuration**, **Project Types**) and **Expense Tracker** (**Expense Form**, **Expense Type**). Each also has its own **Users and Permissions** for the groups of that module. Project-level options such as **Look & Feel** are in the project's **Project Settings**."
           }
         ],
         "procedures": [
           {
-            "title": "Register users and set up permission groups",
+            "title": "Set up Arena end to end",
             "steps": [
-              "Go to <strong>Global Data → Users & Permissions → User Accounts → Active Users</strong> and click <strong>Register User</strong> (or bulk-import via <strong>Download Sample Excel</strong> / <strong>Upload Excel</strong>).",
-              "Go to <strong>Global Data → Users & Permissions → Global Permission</strong> and click <strong>+ Add User Group</strong> for each admin or role scope you need.",
-              "Open the group's <strong>Permissions</strong> button, check the modules and actions it should have, and click <strong>Save Changes</strong>.",
-              "Open the group's <strong>Users</strong> button and add the people who should hold that access."
-            ],
-            "note": "Who does this: Super Admin (for company-wide groups) or a Module Admin (for a group scoped to their own module). Details: see Global Data → Users & Permissions.",
-            "images": [
-              {
-                "src": "assets/notion/global-users-permissions-users/002.jpg",
-                "caption": "The Register User form",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/global-users-permissions-users/004.jpg",
-                "caption": "The downloaded Excel template for bulk registration",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/permissions/002.jpg",
-                "caption": "Add User Group, to name a new group",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/permissions/005.jpg",
-                "caption": "The Permissions button on a group",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/permissions/006.jpg",
-                "caption": "Choosing the modules and rights for the group",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/permissions/007.jpg",
-                "caption": "The Users button, to add the people who should hold the access",
-                "step": 4
-              }
+              "Open **Global Data → Company**, fill **Company Details** and click **Submit**; then add the **Business Units**.",
+              "Open **Global Data → Users & Permissions**: register users, then create or fetch groups in **Global Permission** and add the users.",
+              "Fill the master lists: **Construction Types** first, then **Owners**, **Customer**, **Vendors**, **UOM, Phasecode & GL Codes**, **Crews** and **Locations**.",
+              "Open **Global Data → Settings** and **Marketplace** and set the company-wide options and connections you need.",
+              "Open **Projects**, click **+ Create Project**, fill the three required fields and click **Submit**.",
+              "Open the project and work through **Project Setup**, starting with **Works** and **People**.",
+              "In the project, open **Users and Permissions** and give each group its permissions and users.",
+              "Open each module you will use from **Home** and complete its **Settings**."
             ]
-          }
-        ]
-      },
-      {
-        "heading": "Master Data",
-        "intro": "<p>Master data is the shared reference data every project and module draws on: how work is coded and costed, what units are used, what kind of construction is being built, who supplies materials and labor, and where tax applies. Set this up before creating projects, since projects and vendors reference it immediately.</p>",
-        "definitions": [
-          {
-            "term": "Phase Codes & GL Codes",
-            "definition": "Cost and accounting classification codes used across Estimating, Work Orders, Procurement and Cost modules. Set at Global Data → UOM, Phasecode & GL Codes."
-          },
-          {
-            "term": "UOM (Units of Measure)",
-            "definition": "The unit library (and conversion factors) used for quantities throughout Arena."
-          },
-          {
-            "term": "Construction Types",
-            "definition": "The master list of project categories every project is tagged with at creation."
-          },
-          {
-            "term": "Vendors",
-            "definition": "The directory of external material/equipment suppliers, with categorization, rate cards and a configurable rating form."
-          },
-          {
-            "term": "Crews",
-            "definition": "Company-wide labor groups (a Supervisor, a Foreman, and roster members) that projects can copy in."
-          },
-          {
-            "term": "Locations & Tax",
-            "definition": "The physical-location registry and the Tax Groups/Tax Codes structure Owners, Vendors and Work Orders reference."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Build your master data",
-            "steps": [
-              "Set up <strong>Global Data → UOM, Phasecode & GL Codes</strong> (Phase Codes, GL Codes, UOMs).",
-              "Set up <strong>Global Data → Construction Types</strong> — you need at least one before creating a project.",
-              "Set up <strong>Global Data → Tax Configuration</strong> (Tax Groups and Tax Codes) before registering Vendors or Owners.",
-              "Register <strong>Global Data → Vendors</strong>, deciding the vendor hierarchy depth in Vendors → Settings first.",
-              "Set up <strong>Global Data → Crews</strong> and <strong>Global Data → Locations</strong>."
-            ],
-            "note": "Who does this: Super Admin, often with input from finance (tax) and procurement (vendors). Details: see Global Data → UOM & Phase Codes, Construction Types, Vendors & Subcontractors, and Locations & Tax.",
-            "images": [
-              {
-                "src": "assets/notion/units-of-measurement-uoms/001.jpg",
-                "caption": "The UOMs tab under UOM, Phasecode & GL Codes",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/construction-types/001.jpg",
-                "caption": "Construction Types: Create, then the table of created types",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/tax-configuration/001.jpg",
-                "caption": "Tax Configuration: tax groups and tax codes",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/global-data-vendor-creation/003.jpg",
-                "caption": "Register Vendor",
-                "step": 4
-              },
-              {
-                "src": "assets/notion/timesheet-crew/002.jpg",
-                "caption": "Create Crew, with a crew name",
-                "step": 5
-              },
-              {
-                "src": "assets/notion/global-data-delivery-locations/002.jpg",
-                "caption": "Add Location, for setting up delivery locations",
-                "step": 5
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "heading": "Integrations",
-        "intro": "<p>Once your core company data exists, connect the outside systems your team already uses, so email, files, accounting and signatures flow through Arena instead of being duplicated by hand. Every integration lives under one screen.</p>",
-        "definitions": [
-          {
-            "term": "Marketplace",
-            "definition": "Global Data's integrations hub — Microsoft 365 (Outlook, OneDrive, SharePoint, Calendar), Trimble Viewpoint/Vista, Adobe Sign, and others."
-          },
-          {
-            "term": "Staged Tables",
-            "definition": "The landing zone for data synced from an external ERP/accounting system (e.g. Vista) before it's mapped and promoted into native Arena records."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Connect your integrations",
-            "steps": [
-              "Go to <strong>Global Data → Marketplace</strong>.",
-              "For Microsoft 365, open the Outlook/OneDrive/SharePoint/Calendar card and click <strong>Sign in with Microsoft</strong> using a company-domain email.",
-              "For Trimble Viewpoint (Vista), enter connection credentials, click <strong>Test Connection and Save</strong>, map each module's table/schema, then use <strong>Global Data → Staged Tables</strong> to map attributes and promote records.",
-              "For Adobe Sign, log in with your Adobe Sign credentials and configure the Adobe API settings."
-            ],
-            "note": "Who does this: Super Admin (org-wide consent is required for Microsoft 365). Details: see Global Data → Marketplace & Staged Tables.",
-            "images": [
-              {
-                "src": "assets/notion/arena-market-place/001.jpg",
-                "caption": "The Marketplace, for linking SharePoint, Outlook and Adobe Sign",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/microsoft-outlook-integration-2/004.jpg",
-                "caption": "Microsoft sign-in, then the Permissions Requested page",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/trimble-viewpoint-market-place/003.jpg",
-                "caption": "Connection details, then Test Connection and Save",
-                "step": 3
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "heading": "First Project",
-        "intro": "<p>With the company set up, create the first real project and staff it. A project starts as a blank record — the work you do here is what turns it into something a field team can actually use.</p>",
-        "definitions": [
-          {
-            "term": "Create Project",
-            "definition": "The dialog at Home → Projects → + Create Project. Requires Project Name, Project Number/ID and Construction Type; everything else can be filled in later."
-          },
-          {
-            "term": "Project Setup → People",
-            "definition": "Where a project's roster and crews are built — either copied in from Global Data (a one-time copy) or created fresh for the project."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Create your first project and add its team",
-            "steps": [
-              "Go to <strong>Home → Projects</strong> and click <strong>+ Create Project</strong>.",
-              "Fill in Project Name, Project Number / ID and Construction Type, then <strong>Submit</strong>.",
-              "Open the project and go to <strong>Project Setup → People → Project Crews</strong>.",
-              "Click <strong>Copy Crews from Global Data</strong> to bring in an existing company crew, or <strong>Create Crew</strong> to build one from scratch.",
-              "Use <strong>Project Indirect Staff</strong> and the <strong>System User</strong> / <strong>Non System User</strong> sub-tabs to round out the roster."
-            ],
-            "note": "Who does this: PM / Module Admin. Details: see Getting Started → Home Page (Create a new project) and Project Setup → People.",
-            "images": [
-              {
-                "src": "assets/notion/how-to-create-projects/001.jpg",
-                "caption": "The Projects list: click a project name to open it",
-                "step": 1
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "heading": "Module Settings",
-        "intro": "<p>Finally, before end users rely on a module day to day, configure that module's own <strong>Settings</strong> — usually a gear icon next to its tab bar, separate from Global Data. Each module has its own admin, its own approval rules, and its own form builders; the pattern repeats even though the exact screens differ.</p>",
-        "definitions": [
-          {
-            "term": "Module Settings (gear icon)",
-            "definition": "The admin-configuration entry point inside a Home-hub module, distinct from Global Data and from the day-to-day screens end users work in."
-          },
-          {
-            "term": "Approval Workflow",
-            "definition": "A per-document or per-record configuration (seen in Time Management, Procurement, Opportunity Management, Expense Tracker and others) defining ordered approval levels, each with named approvers and a type (e.g. \"Any one can approve\" or \"All must approve\")."
-          }
-        ],
-        "procedures": [
-          {
-            "title": "Configure a module before your team relies on it",
-            "steps": [
-              "Open the module from Home and look for its <strong>Settings</strong> gear icon.",
-              "Configure the taxonomy/pipeline screen first (Stages & Statuses, Timesheet Mode, Expense Type, etc.) — most modules won't work for end users until this exists.",
-              "Set up the module's Approval Workflow and ID Settings.",
-              "Confirm the module's own Users and Permissions group(s) last."
-            ],
-            "note": "Examples: Time Management (Approval Workflows, Timesheet Mode, Earning Codes, Timesheet Templates, Payroll Locking); Procurement (REQ/PO/Invoice/Pickup Request forms, Approval Workflow, ID Settings, Issues Priority); Opportunity (Stages & Statuses Configuration, Opportunities Form, ID Settings); Expense Tracker (Expense Type, Expense Form, Approval WorkFlow, ID Settings). See each module's own documentation for full detail."
           }
         ]
       }
@@ -16111,19 +15914,15 @@ const MODULES = [
     "name": "Admin Setup Guide",
     "alias": "Start Here for Admins",
     "icon": "shield",
-    "tagline": "Set up Arena for your company in six steps: company, users, master data, integrations, first project, module settings.",
+    "tagline": "A step-by-step setup order for a company administrator: company, users, master lists, settings, first project, project setup and access.",
     "color": "#8a3c3c",
-    "overview": "<p>This is the starting point for whoever sets up Arena for your organization. It walks a <strong>Super Admin</strong> through six steps in order: company profile & business units, users & permission groups, master data, integrations, creating the first project, and each module's own settings. Every step names the exact screen and points to the module page that covers the full detail.</p>",
+    "overview": "<p>This guide gives the order in which a company administrator sets Arena up. Company-wide lists live under <strong>Global Data</strong> and are filled first, because projects and modules read from them; then you create a project, set it up and give people access to it.</p>",
     "navigation": [
       "This is a reference guide, not a product screen — the steps happen across <strong>Global Data</strong>, <strong>Home → Projects</strong>, and each module's own <strong>Settings</strong> gear icon."
     ],
     "sections": [
-      "Company Setup",
-      "Users & Permissions",
-      "Master Data",
-      "Integrations",
-      "First Project",
-      "Module Settings"
+      "Overview",
+      "Set up Arena"
     ]
   },
   {
@@ -24073,207 +23872,634 @@ const MODULES = [
       },
       {
         "heading": "Settings",
-        "intro": "<p>Use this hub for preferences that apply to the whole company: currency, date format, mail routing, naming, statuses and form options. The Super Admin sets them. The left menu has 22 pages.</p><p><strong>Where this data goes:</strong> for example <strong>Project Form</strong> fills the Project Type, Funding Agency and Implementing Agency dropdowns on Create Project; <strong>Hindrance Category</strong> fills the Restraint Category dropdown; <strong>Sub Contractor Settings</strong> fills the CERTIFICATIONS section when registering a subcontractor; <strong>Earnings Codes</strong> become the rate columns on Cost → Labor.</p>",
+        "intro": "<p><strong>Settings</strong> is a tile on the Global Data home page. It opens <strong>Global Settings</strong>: a list of setting pages down the left side, and the page you pick opens on the right. Each page changes one company-wide behaviour, such as the date format, the currency, which fields forms carry or which mail service a module uses. Pages that carry a <strong>Save Changes</strong> button store their changes only when you click it.</p>",
+        "images": [
+          {
+            "src": "assets/product/global-data/101.jpg",
+            "caption": "Global Settings opens on Roster Settings with the page list on the left"
+          }
+        ],
         "definitions": [
           {
-            "term": "Roster Settings",
-            "definition": "Fields on roster records. **Table Standard Fields** are Employee ID, First Name, Last Name, Group No., Email ID, Address, Designation, Skills, Experience, Contact NO., Supervisors, Craft and Class. **Add Field** adds configurable fields (each with **Required**, **Show on cards** and **Choose type**; types include Text Box, Attachment, Check Box, Date, Label, Multi Select, Paragraph, Roster-lookup, Scribble, Single Select, Table, Time and Signature). They show up on the Global Rosters forms."
+            "term": "Page list",
+            "definition": "The left column lists, from top to bottom: **Roster Settings**, **Procurement Settings**, **Holidays**, **Naming Framework**, **Currency**, **Attachment Settings**, **Project Status**, **Project Form**, **Mail Settings**, **Keyboard Shortcuts**, **Adobe Sign Settings**, **Global Date Format**, **Sub Contractor Settings**, **Owner**, **Earnings Codes**, **Enterprise Dashboard**, **Hindrance Category**, **Location settings**, **Request for Information**, **Transmittals Submitted Type**, **Market Type** and **Configure Safety Observation**. Click a name to open it. The highlighted name with an arrow is the page you are on."
           },
           {
-            "term": "Owner (Settings)",
-            "definition": "The field builder for the Owner form, with sub-tabs **Form** and **Owner POC**. Standard fields: Owner ID, Owner Name, Short Name, Alias Name, Primary, Mailing and Billing Address, Email Address, Phone Number, Fax Number, URL, Tax Codes and Locations, plus **Add Field**. This decides what the Create Owner wizard asks."
+            "term": "Save Changes",
+            "definition": "Shown at the top right of pages that hold values (for example **Currency** or **Global Date Format**). Nothing on the page is stored until you click it."
           },
           {
-            "term": "Currency",
-            "definition": "The **Currency** page has one dropdown and **Save Changes**. The Create Project form has its own **Currency** field."
-          },
-          {
-            "term": "Global Date Format",
-            "definition": "A company-wide choice between MM-DD-YYYY and DD-MM-YYYY."
-          },
-          {
-            "term": "Mail Settings",
-            "definition": "A table of modules with a **Gmail** or **Outlook** choice for each: **LOR**, **PROCUREMENT**, **LEADS**, **WORK ORDER**, **PROPOSAL MANAGEMENT**, **ARENA COMMUNICATIONS**, **EXPENSE TRACKER**, **REQUEST FOR INFORMATION**, **TRANSMITTAL**, **TENDER MANAGEMENT**, **CAPITAL MANAGEMENT**, **RFI**, **SUBMITTAL**, **CHANGE ORDER**, **DELAY FORM** and **OTHER FORMS**. Connect Outlook in Marketplace first."
-          },
-          {
-            "term": "Naming Framework (Global Settings)",
-            "definition": "A table with **Activity Sequence Level**, **Default Name**, **Custom Name** and **Short Name**: 46 rows covering the terms used across modules, such as Project, Inventory Master, Pickup Ticket, Ship Ticket, Return Ticket, Load Out Request, Request, Check Out, Ship, Check In, Delivered, Received, Equipment Issues, Non Conformance Report, Procurement Package, RFQ, Vendor, Purchase Order, Material Receipt, Lead, Customer, Roster, Phase Code, Earnings Code, Estimate, Cost Code, Class, Craft, Equipment, Inquiry Number, Estimator, Tender, Project Type, Win Probability and more. Your company's renames show elsewhere: **Pickup Ticket** is called **Site Material Request**, **Ship Ticket** is **Material Issue Ticket**, **Lead** is **Opportunity**, **Equipment** is **Asset** and **Equipment Issues** is **Asset Issues**."
-          },
-          {
-            "term": "Sub Contractor Settings",
-            "definition": "Field builder for the subcontractor form. Standard fields run from Sub Contractor ID to Linked SubContractor Groups; under **Configurable Fields** a **CERTIFICATIONS** label is followed by **Attachment** fields (CIDB, Malaysian GBI, MOF licence, SPKK, ISO 9001, ISO 45001, ISO 14001, SHASSIC, Electrical Contractor License), each with a **Required** switch. They appear in **Sub Contractors → Register Sub Contractor**."
-          },
-          {
-            "term": "Enable AWP (Advanced Work Packaging)",
-            "definition": "A toggle that shows or hides the AWP menu for all users; it may be feature-gated per plan."
-          },
-          {
-            "term": "Settings menu (all pages)",
-            "definition": "The 22 pages on **Global Data → Settings**: **Roster Settings**, **Procurement Settings**, **Holidays**, **Naming Framework**, **Currency**, **Attachment Settings**, **Project Status**, **Project Form**, **Mail Settings**, **Keyboard Shortcuts**, **Adobe Sign Settings**, **Global Date Format**, **Sub Contractor Settings**, **Owner**, **Earnings Codes**, **Enterprise Dashboard**, **Hindrance Category**, **Location settings**, **Request for Information**, **Transmittals Submitted Type**, **Market Type** and **Configure Safety Observation**."
-          },
-          {
-            "term": "Procurement Settings",
-            "definition": "Has **Global Level** and **Project Level** options and **Save Changes**."
-          },
-          {
-            "term": "Holidays",
-            "definition": "**Add Holiday** and **Add Vacation** with a calendar (month and day selector) for marking company days off."
-          },
-          {
-            "term": "Attachment Settings",
-            "definition": "**Global Attachment Settings** lists the screens where a file can be attached (**Screen with Attachment**) and lets you tick **Make attachment mandatory** for each: Global Users & Permissions → Users → User Registration; People, Time & Settings → Roster → Non System → User Creation; Company → Company Logo; Forms → Project Forms → Form Creation; Quick Apps → App Creation; Vendors → Vendor Registration. **Home Page Attachment Settings** and **Project Attachment Settings** cover the other levels."
-          },
-          {
-            "term": "Project Status",
-            "definition": "**Project Status Configuration** lists the statuses a project can have: **Created**, **Approved**, **Work in progress**, **On hold**, **Completed** (each with an edit icon), and **Add Status** for your own. Project cards on **Projects** show the chip (for example Created, Work in progress)."
-          },
-          {
-            "term": "Project Form",
-            "definition": "**Project Settings** page for the Create Project form. **Table Standard Fields** are Project Name, Project Number, Construction Type, Project Location, Owner Representative, Project Manager, Currency, Lead and Customer. **Add Field** adds more. These options are exactly what the Create Project dropdowns show. Under **Configurable Fields → Groups** you can define Single Select fields, for example a **Project Type** field with values like Roads or Metro, each with a **Required** switch."
-          },
-          {
-            "term": "Keyboard Shortcuts",
-            "definition": "A table with **Shortcut** (Alt + Shift + A to Z), **Navigation** and **Is Enabled?**."
-          },
-          {
-            "term": "Adobe Sign Settings",
-            "definition": "**Client Id**, **Client Secret** (masked), **Consent** and **Save Changes**, for connecting Adobe Sign (see Integrations)."
-          },
-          {
-            "term": "Earnings Codes",
-            "definition": "A table of pay codes with **Add**, columns **Code**, **Description**, **Shortname**, **VP Code**, **Data Type** (HOURS or AMOUNT), **Payroll**, **Project**, **Split Header** and **Actions**. The short names and VP codes appear as the rate columns on **Cost → Labor**. **Time Management → Settings → Timesheet Settings** also has an Earnings Codes page. Examples of pay codes are Regular pay (ST), Over Time pay (OT), Double pay, Sick, Vacation, Holiday and Bonus."
-          },
-          {
-            "term": "Enterprise Dashboard",
-            "definition": "Chooses the dashboard view type: **Arena Dashboard**, **Power BI Dashboard**, **Enterprise Dashboard** or **Superset Dashboard**, then **Save Changes**."
-          },
-          {
-            "term": "Hindrance Category",
-            "definition": "**Create** and a table of **Categories** with edit and delete. These are the options in the **Restraint Category** field when you click **Add Restraint** in **Field Works → Progress → Restraints**. Examples: **Site & Technical Constraints**, **Seasonal/Weather Constraints**, **Resource Constraints** and **Others**."
-          },
-          {
-            "term": "Location settings",
-            "definition": "Location options for five screens: **Work Logs - Creation**, **Work Logs - Approval**, **RFI - Creation**, **RFI - Approval** and **Site Photographs**, then **Save Changes**."
-          },
-          {
-            "term": "Request for Information, Transmittals Submitted Type and Market Type",
-            "definition": "**Request for Information** has **Categories** and **Priorities** tabs, each with **Create**. **Transmittals Submitted Type** has **Create** and a list of types. **Market Type** has **Create Market Type** and **Create Sub-Market Type**."
-          },
-          {
-            "term": "Configure Safety Observation",
-            "definition": "The safety observation form: **Standard Fields** are Created By, Created At, Project Location, Supervisor, Observation, Priority and Feature Attachments; **Configurable Fields** (for example Address, Zip Code, City, State, PhoneNo) are added with **Add field**; **Save Changes**."
-          },
-          {
-            "term": "Where settings data comes from and goes",
-            "definition": "**Comes from:** the Super Admin, page by page (each page has **Save Changes**, or saves on each change). **Goes to:** Create Project (Project Form options, Currency), Field Works (Hindrance Category in Restraints), Sub Contractors (CERTIFICATIONS), Cost → Labor (Earnings Codes), every module's label text (Naming Framework), email routing (Mail Settings) and the notification lists."
+            "term": "Back arrow",
+            "definition": "The round arrow beside the breadcrumb returns to the Global Data home page."
           }
         ],
         "procedures": [
           {
-            "title": "Change the company's currency",
+            "title": "Open a setting page",
             "steps": [
-              "Go to <strong>Global Data → Settings → Currency</strong> (left nav).",
-              "Choose the desired currency from the dropdown.",
-              "Click <strong>Save Changes</strong>."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/global-settings-currency/001.jpg",
-                "caption": "Currency drop-down with Save Changes",
-                "step": 2
-              }
-            ]
-          },
-          {
-            "title": "Change the global date format",
-            "steps": [
-              "Go to <strong>Settings → Global Date Format</strong>.",
-              "Select <strong>MM-DD-YYYY</strong> or <strong>DD-MM-YYYY</strong>.",
-              "Click <strong>Save Changes</strong>."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/global-settings-global-date-format/001.jpg",
-                "caption": "Global Date Format: day-month-year or month-day-year",
-                "step": 2
-              }
-            ]
-          },
-          {
-            "title": "Route a module's emails through Outlook instead of Gmail",
-            "steps": [
-              "Go to <strong>Settings → Mail Settings</strong>.",
-              "Find the module row (e.g. Work Order) and click the <strong>Outlook</strong> radio button in that row."
-            ],
-            "note": "The change saves immediately per row. Make sure Outlook has been connected first via Marketplace.",
-            "images": [
-              {
-                "src": "assets/notion/global-settings-mail-settings/001.jpg",
-                "caption": "Mail Settings, to choose Gmail or Outlook for each module",
-                "step": 2
-              }
-            ]
-          },
-          {
-            "title": "Rename terminology used throughout the app",
-            "steps": [
-              "For Activity/Work-Package/Location-hierarchy terms scoped to one construction type, go to <strong>Global Data → Construction Type</strong> tab → <strong>Step 5 (Naming Framework)</strong>.",
-              "For Procurement/Inventory/Roster/Cost terms company-wide, go to <strong>Global Data → Settings → Naming Framework</strong>.",
-              "In either screen, edit the <strong>Custom Name</strong> (and optionally <strong>Short Name</strong>) column next to the term you want to relabel, then save."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/global-settings-naming-framework/001.jpg",
-                "caption": "Naming Framework: default names that can be renamed",
-                "step": 2
-              }
+              "Click **Global Data** in the top bar and open the **Settings** tile.",
+              "Click the page name in the left list, for example **Currency**.",
+              "Change the value and click **Save Changes**."
             ]
           }
-        ],
+        ]
+      },
+      {
+        "heading": "Roster Settings",
+        "intro": "<p><strong>Roster Settings</strong> decides which fields a roster record (a person on the Global Rosters list) carries. It is the first page of <strong>Settings</strong>.</p>",
         "images": [
           {
-            "src": "assets/notion/global-settings-owner/001.jpg",
-            "caption": "Owners settings under Global Data"
+            "src": "assets/product/global-data/101.jpg",
+            "caption": "Roster Settings with the standard and configurable fields"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Table Standard Fields",
+            "definition": "The fixed roster fields, numbered 0 to 12: **Employee ID**, **First Name**, **Last Name**, **Group No.**, **Email ID**, **Address**, **Designation**, **Skills**, **Experience**, **Contact NO.**, **Supervisors**, **Craft** and **Class**. They are always present and cannot be removed here."
           },
           {
-            "src": "assets/notion/global-settings-owner/002.jpg",
-            "caption": "Standard fields on the owner form, with Add Field for new ones"
+            "term": "Configurable Fields",
+            "definition": "Extra fields your company adds to every roster record. Each added field shows a name box (with a pencil to rename it), a text area, a **Required** toggle, a **Show on cards** toggle, a **Choose type** list (default **Text Box**), and a plus (add another field below), and a red bin (delete)."
           },
           {
-            "src": "assets/notion/global-settings-owner/005.jpg",
-            "caption": "Required toggle on an owner field"
+            "term": "Add Field",
+            "definition": "Adds a new empty configurable field row."
           },
           {
-            "src": "assets/notion/global-settings-owner/006.jpg",
-            "caption": "Show on cards toggle on an owner field"
+            "term": "Required",
+            "definition": "When on, the field must be filled when a roster record is saved."
           },
           {
-            "src": "assets/notion/global-settings-owner/007.jpg",
-            "caption": "Save Changes, to keep the new fields on the owner form"
+            "term": "Show on cards",
+            "definition": "When on, the field value also appears on the roster card."
           },
           {
-            "src": "assets/notion/global-settings-test-emails/001.jpg",
-            "caption": "Test Emails: in a test environment, email goes only to the people listed here"
+            "term": "Save Changes",
+            "definition": "Stores the configurable fields."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Add a custom roster field",
+            "steps": [
+              "Open **Global Data → Settings → Roster Settings**.",
+              "Click **Add Field**.",
+              "Click the pencil beside **Configurable Field 1** and type the field name.",
+              "Choose the field type in **Choose type**.",
+              "Switch **Required** or **Show on cards** on if needed.",
+              "Click **Save Changes**."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Procurement Settings",
+        "intro": "<p><strong>Procurement Settings</strong> holds two check boxes, <strong>Global Level</strong> and <strong>Project Level</strong>, that switch the procurement setting on for the company and for projects.</p>",
+        "images": [
+          {
+            "src": "assets/product/global-data/102.jpg",
+            "caption": "Procurement Settings with Global Level and Project Level ticked"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Global Level",
+            "definition": "Check box. Ticked on this site."
           },
           {
-            "src": "assets/notion/global-settings-test-emails/002.jpg",
-            "caption": "Add Email, to enter an address"
+            "term": "Project Level",
+            "definition": "Check box. Ticked on this site."
           },
           {
-            "src": "assets/notion/global-settings-test-emails/004.jpg",
-            "caption": "Editing an email address"
+            "term": "Save Changes",
+            "definition": "Stores the two check boxes."
+          }
+        ]
+      },
+      {
+        "heading": "Holidays",
+        "intro": "<p><strong>Holidays</strong> is the company calendar of holidays and vacations. A small month picker on the left drives a full month grid (Sunday to Saturday) on the right, where saved holidays and vacations appear on their dates.</p>",
+        "images": [
+          {
+            "src": "assets/product/global-data/104.jpg",
+            "caption": "Holidays: month picker and month grid"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Add Holiday",
+            "definition": "Opens **Add Holiday** with **Name** (required), **Description** and **Date** (required, a single day picker). **Submit** saves, **Cancel** closes.",
+            "images": [
+              {
+                "src": "assets/product/global-data/105.jpg",
+                "caption": "The Add Holiday dialog"
+              }
+            ]
           },
           {
-            "src": "assets/notion/global-settings-test-emails/005.jpg",
-            "caption": "Confirmation before an address is deleted"
+            "term": "Add Vacation",
+            "definition": "Opens **Add Vacation** with **Name** (required), **Description** and **Date** (required, a **Start date – End date** range picker) so one entry can cover several days.",
+            "images": [
+              {
+                "src": "assets/product/global-data/106.jpg",
+                "caption": "The Add Vacation dialog"
+              }
+            ]
           },
           {
-            "src": "assets/notion/global-settings-roster-settings/001.jpg",
-            "caption": "Roster Settings: standard fields and added configurable fields"
+            "term": "Select date",
+            "definition": "Month picker with previous and next arrows and a month and year selector. Picking a day moves the grid to that month. Today is circled."
           },
           {
-            "src": "assets/notion/global-settings-enable-awp/001.jpg",
-            "caption": "The Enable AWP setting"
+            "term": "Month grid",
+            "definition": "One cell per day, **SUN** to **SAT**. Holidays and vacations you add are listed in the cell of their date."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Add a holiday",
+            "steps": [
+              "Open **Global Data → Settings → Holidays**.",
+              "Click **Add Holiday**.",
+              "Type the **Name** and, if needed, a **Description**.",
+              "Choose the **Date**.",
+              "Click **Submit**."
+            ]
+          },
+          {
+            "title": "Add a vacation covering several days",
+            "steps": [
+              "Open **Holidays** and click **Add Vacation**.",
+              "Type the **Name**.",
+              "Pick the **Start date** and **End date** in the **Date** field.",
+              "Click **Submit**."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Naming Framework",
+        "intro": "<p><strong>Naming Framework</strong> lets the company rename the standard terms used across Arena, such as Project, Inventory Master, Equipment or Opportunity, so every screen uses the company's own words. The table has one row per term.</p>",
+        "images": [
+          {
+            "src": "assets/product/global-data/107.jpg",
+            "caption": "Naming Framework table of activity sequences"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Activity Sequence Level",
+            "definition": "Row label, **Activity Sequence 1** to **Activity Sequence 46**. It is only a position number."
+          },
+          {
+            "term": "Default Name",
+            "definition": "Arena's standard term for that row, for example **Pickup Ticket**, **Ship Ticket**, **Equipment Issues**, **Procurement Package** or **Lead**. Read-only."
+          },
+          {
+            "term": "Custom Name",
+            "definition": "Text box holding the name your company uses. It starts equal to the default name or to a renamed value, for example the default **Pickup Ticket** is shown as **Site Material Request** and the default **Equipment** as **Asset**. Edit the box to rename the term."
+          },
+          {
+            "term": "Short Name",
+            "definition": "Text box for the abbreviation used where space is tight, for example **LOR**, **RR**, **NCR**, **PO** or **MR**. Rows without a short name leave it empty."
+          }
+        ]
+      },
+      {
+        "heading": "Currency",
+        "intro": "<p><strong>Currency</strong> sets the currency the company works in. The page is one drop-down with <strong>Save Changes</strong>.</p>",
+        "images": [
+          {
+            "src": "assets/product/global-data/108.jpg",
+            "caption": "Currency Settings drop-down"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Currency drop-down",
+            "definition": "Pick the currency of the company. It currently shows **Indian Rupee**."
+          },
+          {
+            "term": "Save Changes",
+            "definition": "Stores the chosen currency."
+          }
+        ]
+      },
+      {
+        "heading": "Attachment Settings",
+        "intro": "<p><strong>Attachment Settings</strong> chooses which screens force the user to attach a file. Screens are grouped into three collapsible panels and each screen has a check box in the <strong>Make attachment mandatory</strong> column.</p>",
+        "images": [
+          {
+            "src": "assets/product/global-data/110.jpg",
+            "caption": "Global Attachment Settings panel with the Make attachment mandatory column"
+          },
+          {
+            "src": "assets/product/global-data/111.jpg",
+            "caption": "Project Attachment Settings panel"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Global Attachment Settings",
+            "definition": "Panel for company-level screens: user registration under **Global Users & Permissions**, non-system user creation in the **Roster**, **Company Logo**, **Form Creation** under **Project Forms**, **Quick Apps** app creation and **Vendor Registration**."
+          },
+          {
+            "term": "Home Page Attachment Settings",
+            "definition": "Panel for screens reached from the home page."
+          },
+          {
+            "term": "Project Attachment Settings",
+            "definition": "Panel for project screens. It lists, for example, **Work Log Screen** under **Work Logs**, **Upload Images** and **Approval Workflow Rejection** for **RFI**, **Submittal** and **Change Order**, **Post Create/Edit** under **Site Posts**, **Restraint Creation** under **Punch List**, **Observation Creation** under **Safety Observations**, the rejection step of **Timesheet Logs** and **Quantity Logs**, and **Owner Creation**."
+          },
+          {
+            "term": "Make attachment mandatory",
+            "definition": "Tick the box on a row to require an attachment on that screen."
+          }
+        ]
+      },
+      {
+        "heading": "Project Status",
+        "intro": "<p><strong>Project Status</strong> defines the statuses a project can have. Each status has a colour dot, which Arena uses to show the status on project lists.</p>",
+        "images": [
+          {
+            "src": "assets/product/global-data/112.jpg",
+            "caption": "Project Status Configuration"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Created",
+            "definition": "First, fixed status, shown at the top with a blue dot. Only its name and colour can be edited with the pencil."
+          },
+          {
+            "term": "Middle statuses",
+            "definition": "Currently **Approved**, **Work in progress** and **On hold**, each with a drag handle on the left, a colour dot and a pencil to rename or recolour. Drag them to change the order."
+          },
+          {
+            "term": "Add Status",
+            "definition": "Adds a new status between **Created** and **Completed**."
+          },
+          {
+            "term": "Completed",
+            "definition": "Last, fixed status, shown at the bottom with a green dot."
+          }
+        ]
+      },
+      {
+        "heading": "Project Form",
+        "intro": "<p><strong>Project Form</strong> sets which fields the project record carries. The nine standard fields are fixed; the company adds its own under <strong>Configurable Fields</strong>.</p>",
+        "images": [
+          {
+            "src": "assets/product/global-data/109.jpg",
+            "caption": "Project Settings with standard fields and the Configurable Fields tab"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Table Standard Fields",
+            "definition": "Fixed fields numbered 0 to 8: **Project Name**, **Project Number**, **Construction Type**, **Project Location**, **Owner Representative**, **Project Manager**, **Currency**, **Lead** and **Customer**."
+          },
+          {
+            "term": "Configurable Fields",
+            "definition": "Tab for extra project fields. **Add Field** adds a row."
+          },
+          {
+            "term": "Groups",
+            "definition": "Second tab next to **Configurable Fields**."
+          },
+          {
+            "term": "Save Changes",
+            "definition": "Stores the changes."
+          }
+        ]
+      },
+      {
+        "heading": "Mail Settings",
+        "intro": "<p><strong>Mail Settings</strong> sets, for each module, whether it uses <strong>Gmail</strong> or <strong>Outlook</strong> for its email. Each row has one round button under each mail service.</p>",
+        "images": [
+          {
+            "src": "assets/product/global-data/113.jpg",
+            "caption": "Mail Settings with Gmail and Outlook columns"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Module",
+            "definition": "Rows: **LOR**, **PROCUREMENT**, **OPPORTUNITIES**, **WORK ORDER**, **PROPOSAL MANAGEMENT**, **ARENA COMMUNICATIONS**, **EXPENSE TRACKER**, **REQUEST FOR INFORMATION**, **TRANSMITTAL**, **TENDER MANAGEMENT**, **CAPITAL MANAGEMENT**, **RFI**, **SUBMITTAL**, **CHANGE ORDER**, **DELAY FORM** and **OTHER FORMS**."
+          },
+          {
+            "term": "Gmail / Outlook",
+            "definition": "The filled orange button shows the mail service the module uses. Select the other one to switch the module."
+          }
+        ]
+      },
+      {
+        "heading": "Keyboard Shortcuts",
+        "intro": "<p><strong>Keyboard Shortcuts</strong> lists the 26 shortcuts Option + Shift + A to Z and lets the company link each to a screen.</p>",
+        "images": [
+          {
+            "src": "assets/product/global-data/114.jpg",
+            "caption": "Keyboard Shortcuts table"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Shortcut",
+            "definition": "The key combination, from ⌥ + ⇧ + A to ⌥ + ⇧ + Z."
+          },
+          {
+            "term": "Navigation",
+            "definition": "Drop-down that picks the screen the shortcut opens. Currently only the shortcut for **P** is set, to **PROJECTS**."
+          },
+          {
+            "term": "Is Enabled?",
+            "definition": "Check box that switches the shortcut on."
+          }
+        ]
+      },
+      {
+        "heading": "Adobe Sign Settings",
+        "intro": "<p><strong>Adobe Sign Settings</strong> connects Arena to the company's Adobe Sign account so documents can be sent for e-signature.</p>",
+        "definitions": [
+          {
+            "term": "Client Id",
+            "definition": "Required. The client ID of the Adobe Sign application."
+          },
+          {
+            "term": "Client Secret",
+            "definition": "Required. The client secret of the same application, hidden behind an eye icon."
+          },
+          {
+            "term": "Consent",
+            "definition": "Starts the Adobe permission step. Do not click it unless you are connecting the account."
+          },
+          {
+            "term": "Save Changes",
+            "definition": "Stores the Client Id and Client Secret."
+          }
+        ]
+      },
+      {
+        "heading": "Global Date Format",
+        "intro": "<p><strong>Global Date Format</strong> sets how dates are written across Arena.</p>",
+        "images": [],
+        "definitions": [
+          {
+            "term": "Select date format",
+            "definition": "Two options: **MM-DD-YYYY** (selected) and **DD-MM-YYYY**."
+          },
+          {
+            "term": "Save Changes",
+            "definition": "Stores the choice."
+          }
+        ]
+      },
+      {
+        "heading": "Sub Contractor Settings",
+        "intro": "<p><strong>Sub Contractor Settings</strong> sets the fields on a sub contractor record, the same way <strong>Roster Settings</strong> does for people.</p>",
+        "definitions": [
+          {
+            "term": "Table Standard Fields",
+            "definition": "Fixed fields numbered 1 to 15: **Sub Contractor ID**, **First Name**, **Last Name**, **User Name**, **Phone Number**, **Company Name**, **Email Address**, **Subcontractor Specialists**, **Website**, **Location**, **Experience**, **License Number**, **License Document**, **Resume** and **Linked SubContractor Groups**."
+          },
+          {
+            "term": "Configurable Fields",
+            "definition": "Extra fields. **Add Field** adds a row. A **CERTIFICATIONS** label is followed by ten attachment fields, each with a **Required** toggle, a **Choose type** list (here **Attachment**), a plus and a bin."
+          },
+          {
+            "term": "Save Changes",
+            "definition": "Stores the changes."
+          }
+        ]
+      },
+      {
+        "heading": "Owner",
+        "intro": "<p><strong>Owner</strong> sets the fields on an owner record and on an owner's contact person. It has two tabs, <strong>Form</strong> and <strong>Owner POC</strong> (point of contact).</p>",
+        "images": [
+          {
+            "src": "assets/product/global-data/117.jpg",
+            "caption": "Owner settings Form tab"
+          },
+          {
+            "src": "assets/product/global-data/118.jpg",
+            "caption": "Owner POC tab"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Form",
+            "definition": "Standard fields numbered 1 to 13: **Owner ID**, **Owner Name**, **Short Name**, **Alias Name**, **Primary Address**, **Mailing Address**, **Billing Address**, **Email Address**, **Phone Number**, **Fax Number**, **URL**, **Tax Codes** and **Locations**. **Add Field** adds your own."
+          },
+          {
+            "term": "Owner POC",
+            "definition": "Standard fields numbered 1 to 14: **Contact ID**, **Salutation**, **First Name**, **Middle Name**, **Last Name**, **Suffix**, **Primary Mail Address**, **Secondary Mail Address**, **Primary Phone Number**, **Work Phone Number**, **Primary Address**, **Secondary Address**, **Services Provided** and **Personal Website**. **Add Field** adds your own."
+          },
+          {
+            "term": "Save Changes",
+            "definition": "Stores the changes."
+          }
+        ]
+      },
+      {
+        "heading": "Earnings Codes",
+        "intro": "<p><strong>Earnings Codes</strong> lists the pay types used in timesheets and payroll, such as regular pay, over time, sick or vacation. Each code is an editable row.</p>",
+        "images": [
+          {
+            "src": "assets/product/global-data/116.jpg",
+            "caption": "Earnings Codes table"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Add",
+            "definition": "Adds a new row."
+          },
+          {
+            "term": "Code",
+            "definition": "The code number."
+          },
+          {
+            "term": "Description",
+            "definition": "Name of the pay type, for example **Regular pay**, **Over Time pay**, **Holiday** or **Bonus**."
+          },
+          {
+            "term": "Shortname",
+            "definition": "Short label such as **ST** or **OT**."
+          },
+          {
+            "term": "VP Code",
+            "definition": "Required. The code the payroll or accounting system expects for this pay type."
+          },
+          {
+            "term": "Data Type",
+            "definition": "Drop-down. **HOURS** for time-based codes or **AMOUNT** for a fixed money amount."
+          },
+          {
+            "term": "Payroll",
+            "definition": "Tick to include the code in payroll."
+          },
+          {
+            "term": "Project",
+            "definition": "Tick to make the code available on projects."
+          },
+          {
+            "term": "Split Header",
+            "definition": "Tick to mark the code as a split header."
+          },
+          {
+            "term": "Actions",
+            "definition": "A colour dot to colour the code and a bin to delete the row."
+          }
+        ]
+      },
+      {
+        "heading": "Enterprise Dashboard",
+        "intro": "<p><strong>Enterprise Dashboard</strong> picks which dashboard tool the company's dashboard opens in.</p>",
+        "images": [
+          {
+            "src": "assets/product/global-data/119.jpg",
+            "caption": "Enterprise Dashboard Settings"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Dashboard view type",
+            "definition": "Four options: **Arena Dashboard**, **Power BI Dashboard** (selected), **Enterprise Dashboard** and **Superset Dashboard**. Select one and click **Save Changes**."
+          }
+        ]
+      },
+      {
+        "heading": "Hindrance Category",
+        "intro": "<p><strong>Hindrance Category</strong> lists the categories used to classify a hindrance (a delay or obstacle).</p>",
+        "images": [
+          {
+            "src": "assets/product/global-data/115.jpg",
+            "caption": "Hindrance Category list"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Create",
+            "definition": "Adds a category."
+          },
+          {
+            "term": "Categories",
+            "definition": "One row per category, for example site and technical constraints, seasonal and weather constraints, safety constraints and resource constraints. **Others** is fixed and has no actions."
+          },
+          {
+            "term": "Actions",
+            "definition": "Pencil edits a category, red bin deletes it."
+          }
+        ]
+      },
+      {
+        "heading": "Location settings",
+        "intro": "<p><strong>Location settings</strong> has five check boxes, one per action that can record the user's location.</p>",
+        "images": [
+          {
+            "src": "assets/product/global-data/121.jpg",
+            "caption": "Location Settings check boxes"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Check boxes",
+            "definition": "**Work Logs - Creation**, **Work Logs - Approval**, **RFI - Creation**, **RFI - Approval** and **Site Photographs**. All are ticked on this site. **Save Changes** stores them."
+          }
+        ]
+      },
+      {
+        "heading": "Request for Information",
+        "intro": "<p><strong>Request for Information</strong> holds the lists an RFI uses. It has two tabs, <strong>Categories</strong> and <strong>Priorities</strong>.</p>",
+        "images": [
+          {
+            "src": "assets/product/global-data/122.jpg",
+            "caption": "Create Priority dialog on the Priorities tab"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Categories",
+            "definition": "**Create** opens **Create Category** with **Category Name**. The table shows **Category** and **Actions**."
+          },
+          {
+            "term": "Priorities",
+            "definition": "**Create** opens **Create Priority** with **Priority**, **Due Days** and **Due Hours** (both start at 0). The table shows **Priority**, **Due Days**, **Due Hours** and **Actions**."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Add an RFI priority",
+            "steps": [
+              "Open **Global Data → Settings → Request for Information** and click the **Priorities** tab.",
+              "Click **Create**.",
+              "Type the **Priority** name.",
+              "Enter **Due Days** and **Due Hours**.",
+              "Click **Submit**."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Transmittals Submitted Type",
+        "intro": "<p><strong>Transmittals Submitted Type</strong> is a list of the types a transmittal can be submitted as.</p>",
+        "definitions": [
+          {
+            "term": "Create",
+            "definition": "Opens **Create Submitted Type** with **Submitted Type Name**, then **Submit**."
+          },
+          {
+            "term": "Table",
+            "definition": "Columns **Submitted Type** and **Actions**."
+          }
+        ]
+      },
+      {
+        "heading": "Market Type",
+        "intro": "<p><strong>Market Type</strong> holds market types and the sub-market types under them, in two side-by-side panels.</p>",
+        "images": [
+          {
+            "src": "assets/product/global-data/123.jpg",
+            "caption": "Market Type panels"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Create Market Type",
+            "definition": "Opens a dialog asking for the name of the market type, then **Create**."
+          },
+          {
+            "term": "Create Sub-Market Type",
+            "definition": "Opens a dialog asking for the name of the sub-market type, then **Create**."
+          },
+          {
+            "term": "Search for Sub-Market Type",
+            "definition": "Filters the sub-market list."
+          }
+        ]
+      },
+      {
+        "heading": "Configure Safety Observation",
+        "intro": "<p><strong>Configure Safety Observation</strong> sets the fields on a safety observation record.</p>",
+        "images": [
+          {
+            "src": "assets/product/global-data/120.jpg",
+            "caption": "Configure Safety Observation"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Standard Fields",
+            "definition": "Fixed fields numbered 0 to 6: **Created By**, **Created At**, **Project Location**, **Supervisor**, **Observation**, **Priority** and **Feature Attachments**."
+          },
+          {
+            "term": "Configurable Fields",
+            "definition": "Extra fields. Each row has a field name, a **Required** toggle, **Show on card**, **CHOOSE TYPE** (default **Text Box**) and icons to add, copy or delete. **Add field** adds a row."
+          },
+          {
+            "term": "Save Changes",
+            "definition": "Stores the changes."
           }
         ]
       },
@@ -25019,6 +25245,28 @@ const MODULES = [
       "Workflow Issues",
       "Work Orders",
       "Settings",
+      "Roster Settings",
+      "Procurement Settings",
+      "Holidays",
+      "Naming Framework",
+      "Currency",
+      "Attachment Settings",
+      "Project Status",
+      "Project Form",
+      "Mail Settings",
+      "Keyboard Shortcuts",
+      "Adobe Sign Settings",
+      "Global Date Format",
+      "Sub Contractor Settings",
+      "Owner",
+      "Earnings Codes",
+      "Enterprise Dashboard",
+      "Hindrance Category",
+      "Location settings",
+      "Request for Information",
+      "Transmittals Submitted Type",
+      "Market Type",
+      "Configure Safety Observation",
       "Forms",
       "Notifications",
       "Marketplace",
