@@ -36574,336 +36574,385 @@ const MODULES = [
     "qaItems": QA_PROCUREMENT,
     "narrative": [
       {
-        "heading": "Overview",
-        "intro": "<p>Procurement is where a construction company turns an internal need into a paid, delivered purchase, and getting that pipeline right depends on decisions a Procurement Admin makes once, up front, that every project team then works within. This admin configuration lives behind Home → <strong>Procurement</strong> → the gear-icon <strong>Settings</strong>, next to the Dashboard / Requisition Form / RFQ / Vendor Responses / Purchase Orders / Delivery Receipts / Invoice / Pickup Request / Purchase Order Master tabs. The single most important one-time admin task in this module is <strong>Approval Workflow</strong>: for each document type — Requisition Form (REQ), Purchase Order (PO), Invoices, and Pickup Request — and, for Requisition Form specifically, per category (Equipment, Material, Equipment Part, Delivery Service), the Procurement Admin builds a multi-level approval chain using <strong>+ Create Level</strong>, defining each level's Level Description, Approvers (typically a Purchasing Manager or PM), and Workflow Type (for example, \"Any one can approve\"). Every PO, Requisition, Invoice, and Pickup Request an End User submits is gated behind whichever approval chain the admin has defined here, which is exactly the control a business wants before company money is committed.</p><p>Beyond approvals, the admin also configures per-document-type form templates (Requisition Form, Purchase Order Form, Delivery Receipt Form, Invoices Form, Pickup Request Form), <strong>ID Settings</strong> (choosing System Default or Custom ID formats separately for REQ, RFQ, Vendor Response, Purchase Order, Direct Purchase Order, Delivery Receipt, Invoice, and Pickup Request), Procurement Issues configuration, RFQ Settings, and a Default Assign To for new procurement records. <strong>Users and Permissions</strong> inside Settings manages the module's permission groups — in the verified environment these included \"System Admin Role 1,\" \"Procurement Team,\" and \"Admin Permissions,\" the last of which is the same group referenced from Arena's central Global Permission registry.</p><p>One related setting lives outside the module entirely and is a Super Admin / Global Admin decision: <strong>Global Data → Settings → Procurement Settings</strong> has two checkboxes, <strong>Global Level</strong> and <strong>Project Level</strong>, controlling whether Procurement operates company-wide, per-Project, or both. It's worth deciding this scope before building out Approval Workflows and ID Settings, since those are likely configured per scope.</p>",
-        "definitions": [
+        "heading": "Dashboard",
+        "intro": "<p>The <strong>Dashboard</strong> tab of Procurement is the <strong>Procurement Analytics Dashboard</strong>. It shows four totals for the projects you pick and ranks every vendor by how well their orders went.</p>",
+        "images": [
           {
-            "term": "Approval Workflow",
-            "definition": "The **Procurement → Settings → Approval Workflow** screen where multi-level approval chains are defined. It has four top tabs, **Requisition Form (REQ)**, **Purchase Order (PO)**, **Invoices** and **Pickup Request**. Under **Requisition Form (REQ)** there is a second row of tabs for the category: **Equipment Rental**, **Equipment Procured**, **Material**, **Equipment Part Rental**, **Equipment Part Purchased** and **Delivery Service**. Each tab has its own chain. **+ Create** adds a level; each level has a **Level**, **Level Description**, **Approvers** and **Workflow Type** (**All must approve** or **Any one can approve**). **Where the approvers come from:** the **Select Approver(s)** list in the Create Level dialog shows every company user, contractor accounts included, not only the project team, and has a **Select All** box. **Where it goes:** each document shows its chain in its **Approval work flow data** viewer and its Approve / Reject buttons go to the approvers you picked."
-          },
-          {
-            "term": "ID Settings (Procurement)",
-            "definition": "The Settings screen where the admin chooses System Default or Custom ID formats separately for each document type: REQ, RFQ, Vendor Response, Purchase Order, Direct Purchase Order, Delivery Receipt, Invoice, and Pickup Request."
-          },
-          {
-            "term": "Users and Permissions (Procurement)",
-            "definition": "The module-scoped permission group registry for Procurement, reached from Settings. Verified example groups include System Admin Role 1, Procurement Team, and Admin Permissions — the same shared group mechanism used across Arena's modules."
-          },
-          {
-            "term": "Global Level / Project Level (Procurement Settings)",
-            "definition": "Two checkboxes under Global Data → Settings → Procurement Settings that control whether Procurement operates at the company-wide Global Data layer, the individual Project layer, or both. This scope decision affects how Approval Workflows and ID Settings should be configured."
-          },
-          {
-            "term": "RFQ Settings / Default Assign To / Procurement Issues",
-            "definition": "Additional Settings screens for RFQ-specific configuration, the default assignee applied to new procurement records, and configuration of the procurement issue-tracking sub-feature."
+            "src": "assets/product/procurement/001.jpg",
+            "caption": "The Procurement Analytics Dashboard"
           }
         ],
-        "procedures": [
-          {
-            "title": "Set up a Procurement Approval Workflow",
-            "steps": [
-              "Go to <strong>Procurement → Settings → Approval Workflow</strong>.",
-              "Select the document type to configure — <strong>Requisition Form (REQ), Purchase Order (PO), Invoices,</strong> or <strong>Pickup Request</strong> — and, for Requisition Form, the relevant category tab (Equipment, Material, Equipment Part, Delivery Service).",
-              "Click <strong>+ Create Level</strong> and fill in the Level, Level Description, Approvers, and Workflow Type (for example, \"Any one can approve\").",
-              "Repeat to add further levels for a multi-level chain, then save."
-            ]
-          },
-          {
-            "title": "Decide the Procurement scope before configuring workflows",
-            "steps": [
-              "Go to <strong>Global Data → Settings → Procurement Settings</strong>.",
-              "Set the <strong>Global Level</strong> and/or <strong>Project Level</strong> checkboxes to decide whether Procurement operates company-wide, per-project, or both.",
-              "Then proceed to configure Approval Workflow and ID Settings inside the Procurement module's own Settings."
-            ],
-            "note": "Deciding this scope first is a reasonable default given how Approval Workflows and ID Settings appear to depend on it, though it hasn't been confirmed as strictly required in that order."
-          },
-          {
-            "title": "Configure Procurement ID formats",
-            "steps": [
-              "Go to <strong>Procurement → Settings → ID Settings</strong>.",
-              "For each document type — REQ, RFQ, Vendor Response, Purchase Order, Direct Purchase Order, Delivery Receipt, Invoice, Pickup Request — choose <strong>System Default</strong> or <strong>Custom</strong>."
-            ]
-          }
-        ]
-      },
-      {
-        "heading": "Analytics Dashboard",
-        "intro": "<p>The <strong>Dashboard</strong> tab is the landing page when anyone opens Procurement, and it exists to answer one question at a glance: is the company's purchasing running efficiently and are vendors performing well. A Procurement Admin, PM, or executive uses it to spot slow vendors, cost overruns, and quality problems without digging through individual REQs, RFQs, and POs one at a time.</p><p>It shows company-wide (or project-scoped, via the <strong>By Projects</strong> filter) KPI tiles and a per-vendor scorecard, filterable by a Start date/End date range.</p>",
         "definitions": [
           {
-            "term": "Procurement Analytics Dashboard",
-            "definition": "The Dashboard tab (first tab under Procurement) showing KPI tiles — Total Spend, Budget Variance, Avg Lead Time, Quality Issue Rate — plus a Vendor Performance Summary table, filterable by project and by date range."
+            "term": "Procurement menu",
+            "definition": "The tabs under the top bar open the Procurement screens in order: **Dashboard**, **Requisition Form**, **RFQ**, **Vendor Responses**, **Purchase Orders**, **Delivery Receipts**, **Invoice**, **Pickup Request** and **Purchase Order Master**. The **Document**, **Communication** and **Settings** buttons on the right open the module's files, mail and settings."
+          },
+          {
+            "term": "By Projects",
+            "definition": "A multi-select list of projects with a search box and **Select All**. The cards and the vendor table recalculate for the projects you tick."
+          },
+          {
+            "term": "Date range",
+            "definition": "The **Start date – End date** picker next to **By Projects** limits the figures to that period."
+          },
+          {
+            "term": "Total Spend",
+            "definition": "A rupee total for the projects chosen in **By Projects**."
+          },
+          {
+            "term": "Budget Variance",
+            "definition": "A rupee amount with a percentage under it, for the chosen projects."
+          },
+          {
+            "term": "Avg Lead Time",
+            "definition": "An average shown in days for the chosen projects."
+          },
+          {
+            "term": "Quality Issue Rate",
+            "definition": "A percentage for the chosen projects. The same measure appears per vendor in the table below."
           },
           {
             "term": "Vendor Performance Summary",
-            "definition": "A table on the Procurement Analytics Dashboard scoring each vendor the company has bought from: Total Spend, Avg Lead Time, Quality Issue Rate, On-Time Delivery, Total Orders, and a Performance Score. A color legend marks issue-rate bands: Excellent (under 2%), Good (2–4%), Needs Attention (over 4%). The Performance Score can go negative for a vendor with a poor track record."
+            "definition": "One row per vendor with **Total Spend**, **Avg Lead Time**, **Quality Issue Rate**, **On-Time Delivery**, **Total Orders** and a circled **Performance Score**. The quality-rate cell is coloured by the key above the table: green is **Excellent (<2% issues)**, amber is **Good (2-4% issues)** and red is **Needs Attention (>4% issues)**."
           }
         ],
         "procedures": [
           {
-            "title": "Check overall procurement performance and vendor scores",
+            "title": "See procurement figures for selected projects",
             "steps": [
-              "Go to <strong>Home → Procurement</strong> — it opens on the <strong>Dashboard</strong> tab.",
-              "Optionally narrow the view with the <strong>By Projects</strong> filter, or set a Start date/End date range.",
-              "Read the KPI tiles (Total Spend, Budget Variance, Avg Lead Time, Quality Issue Rate) for the overall picture.",
-              "Scroll to <strong>Vendor Performance Summary</strong> to compare vendors side by side; a vendor's issue-rate color and Performance Score flag whether it's worth continuing to use."
+              "Open **Home** and click the **Procurement** tile. The **Dashboard** tab opens.",
+              "Click **By Projects** and tick the projects you want, or tick **Select All**.",
+              "Click the date field and choose a **Start date** and an **End date** if you only want one period.",
+              "Read the four cards, then scroll the **Vendor Performance Summary** to compare vendors."
             ]
           }
         ]
       },
       {
-        "heading": "Requisitions",
-        "intro": "<p>A requisition, or REQ, is the starting point of nearly every purchase in Arena, and it exists to solve a very ordinary construction-business problem: someone on a job site needs equipment, material, a spare part, or a delivery service, and the company needs a paper trail before any vendor has been contacted or any money committed. Raising a REQ turns an informal need (\"the crew is out of rebar\") into a trackable request that can be routed to the right person, approved, and eventually converted into a Purchase Order.</p><p>Requisitions matter because they create an audit trail at the very beginning of the purchasing lifecycle. Rather than a foreman or supervisor calling a vendor directly, every material or equipment need passes through a REQ first, which means procurement staff, Project Managers, and approvers all have visibility into what is being requested, by whom, and why, before a dollar is spent. This is also the point at which requests originating from other parts of Arena — most notably rejected Load Out Requests from Inventory Management — feed back into procurement, so that equipment that couldn't be fulfilled from existing stock can be purchased instead.</p><p>Once a REQ exists, it doesn't have to sit with the End User who created it. A Purchasing Manager can assign it to a specific person to own — typically whoever is responsible for sourcing that item — and if a REQ is rejected somewhere downstream, that rejection is not a dead end; it is tracked as a workflow issue so the requester knows exactly why it failed and what to fix.</p>",
+        "heading": "Requisition Form",
+        "intro": "<p>The <strong>Requisition Form</strong> tab lists every requisition: a request from a project for equipment, material, equipment parts or a delivery service. It is where site and office users raise requests and where each request is approved, assigned and tracked until it becomes an RFQ or a direct purchase order. The tab has two sub-tabs, <strong>Create Requisition</strong> (the list) and <strong>Workflow Issues</strong>.</p>",
+        "images": [
+          {
+            "src": "assets/product/procurement/002.jpg",
+            "caption": "The Create Requisition list"
+          }
+        ],
         "definitions": [
           {
-            "term": "Requisition (REQ)",
-            "definition": "A formal internal request for equipment, material, an equipment part, or a delivery service, raised before any vendor is contacted. It is the first document in the procurement lifecycle and the source record that RFQs and Purchase Orders are built from. The on-screen tab is labeled <strong>Requisition Form</strong>."
+            "term": "+ Requisition",
+            "definition": "Opens a small **Create Requisition** menu with four choices: **Equipment**, **Material**, **Equipment Part** and **Delivery Service**. Each opens its own **Create Requisition Form** dialog."
           },
           {
-            "term": "Requisition type",
-            "definition": "The category selected when creating a REQ — Equipment, Material, Equipment Part, or Delivery Service — which determines what fields and specifications appear on the form."
+            "term": "Add Custom Column",
+            "definition": "Adds a column of your own to the list."
           },
           {
-            "term": "Requisition status",
-            "definition": "A REQ moves through Created → Approved → RFQ Created → Vendor Responded → (Direct PO Approved, or PO created via RFQ) as it's actioned. \"Email Sent to Vendor\" appears once an RFQ built from it has gone out. The Status column on the Requisition Form list always shows the REQ's current step in this chain."
+            "term": "Save Layout",
+            "definition": "Keeps the columns and their order as you arranged them."
           },
           {
-            "term": "Approval work flow data viewer",
-            "definition": "A row action (tree/hierarchy icon) on the Requisition Form list that opens a read-only \"Approval work flow data\" popup for that REQ: Level, Level Description, Approvers, and Workflow Type (e.g. \"Any one can approve\") — the same approval chain configured in Settings → Approval Workflow, showing exactly who needs to sign off (or already has)."
+            "term": "Filters",
+            "definition": "Opens a dialog with **Status**, **Raised On** (date range), **Assigned To**, **Requested By**, **Item Type**, **Project** and **Log ID**. **Submit** applies your choices and **Clear & Apply** removes them.",
+            "images": [
+              {
+                "src": "assets/product/procurement/021.jpg",
+                "caption": "The Filters dialog"
+              }
+            ]
           },
           {
-            "term": "Workflow Issues (REQ)",
-            "definition": "A sub-tab next to Create Requisition that logs problems raised against a REQ's own approval chain — separate from the REQ's Approve/Reject buttons. Columns: WFL Number, REQ ID, Level, Raised on Date/Time, Raised by, a free-text comment, Assign To, Due Date, and Chat. Header counters show Total/Approved/Rejected issue counts."
+            "term": "Status filter values",
+            "definition": "**Created**, **Undergoing Approval**, **Approved**, **Rejected**, **Partial RFQ Created**, **RFQ Created**, **Email Sent to Vendor**, **Vendor Responded**, **Partial Direct PO Created**, **Direct PO Created**, **Direct PO Approved** and **Direct PO Rejected**. These are also the values shown in the **Status** column as a requisition moves along."
           },
           {
-            "term": "LOR from REQ",
-            "definition": "A REQ creation path that lets you generate a new requisition directly from a rejected Load Out Request, so equipment that couldn't be fulfilled from existing inventory stock can instead be purchased through procurement."
+            "term": "Page counter",
+            "definition": "Shows which rows you are on, for example **1 to 20 of 111**, with arrows for the previous and next page."
           },
           {
-            "term": "Where the requisition form gets its lists",
-            "definition": "Each list on the **Create Requisition Form** dialog comes from a different place. **Requested By**: Arena users, defaulting to you. **Project Number / Project Name**: the projects you can open (the same list as the Projects page; it does not pre-select the project you are working in). **Item picker** (**Search for Materials** or **Search for Equipments or Accessories**): the company item lists, tagged **Mat**, **Eqp** (equipment) or **Acc** (accessory); picking one fills the row, and **UOM** is filled in from the item and cannot be edited. **Phase Code** (per line): a list of phase codes shown as code and description (360 of the 963 phase codes on Arena Steel Plant - Phase 1, the same 360 for Material and Equipment lines); how those 360 are chosen was not found. **Delivery Location**: the locations of the project's owner, set when the project was created; picking one fills Zip Code, City and State, which you cannot edit. If the list is empty, the dialog says to configure the owner and owner location during project creation. **Project Manager** and **On-Site Contact**: the project's people (about 40 on Arena Residential Project); empty if no owner and people were configured. **Assignee**: starts with the defaults from **Settings → Default Assign To → REQ**. **Job Location**, its Zip Code, City and State, **Notes** and **Phone Number**: typed in by you. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
+            "term": "Manage Columns",
+            "definition": "Opens a dialog with a ticked list of **Column Options** on the left and the **Column Arrangement** on the right. Untick a column to hide it and drag the handles to reorder. **Apply** saves it, **Reset to Default** restores the standard set and **Cancel** closes it.",
+            "images": [
+              {
+                "src": "assets/product/procurement/006.jpg",
+                "caption": "The Manage Columns dialog"
+              }
+            ]
           },
           {
-            "term": "Equipment Rental switch",
-            "definition": "On an **Equipment** requisition a switch at the top right marks the request as a rental. The Equipment grid has **Required Date**, **Planned Return Date** and **Planned Return Time** columns, and Settings → Approval Workflow has separate **Equipment Rental** and **Equipment Procured** tabs. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
+            "term": "Table and tile view icons",
+            "definition": "The two icons at the right of the page counter switch the list between a table and tiles. The disk icon saves the view."
           },
           {
-            "term": "Where requisition data goes",
-            "definition": "The Requisition Form list shows only the requisitions of the project you are working in (46 on Arena Residential Project, none on Arena Steel Plant - Phase 1). Once a requisition is **Approved**, it appears in the **Create RFQ** wizard (step 1) and in the **Create Direct Purchase Order** wizard (step 1); other projects' requisitions also appear in the Direct Purchase Order list, each with its Project ID / Project Name. In those wizards **Remaining Quantity** is the requested quantity minus what earlier orders already took, and **Procuring Quantity** is what you order now. Approvers see the requisition through the **Approve** and **Reject** buttons and the **Approval work flow data** viewer."
+            "term": "Requisition Form column",
+            "definition": "The requisition number, for example **REQ 160**. Click it to open that requisition."
+          },
+          {
+            "term": "Total Items",
+            "definition": "How many item lines the requisition has."
+          },
+          {
+            "term": "Project ID / Project Name",
+            "definition": "The project the request was raised for."
+          },
+          {
+            "term": "On-Site Contact and Requested by",
+            "definition": "The person to contact at the site and the person who raised the request."
+          },
+          {
+            "term": "RFQs Linked",
+            "definition": "The RFQ numbers created from this requisition. It is blank until an RFQ exists."
+          },
+          {
+            "term": "Approve and Reject",
+            "definition": "A green **APPROVED** button and a red **REJECT** button appear in the row once the requisition is in its approval workflow; rows still at **Created** show neither."
+          },
+          {
+            "term": "Assign",
+            "definition": "The user the requisition is currently assigned to. Click it to pick another user."
+          },
+          {
+            "term": "Status",
+            "definition": "Where the requisition stands, using the status values listed above."
+          },
+          {
+            "term": "Tag",
+            "definition": "A coloured label for the kind of request: for example **Material**, **Equipment Rental** or **Delivery Service Material**."
+          },
+          {
+            "term": "Actions",
+            "definition": "Row icons. The clock opens the **Track** dialog, a dated log of the approval workflow (submitted, modified, cleared, resubmitted) with who did each step. The network icon opens **Approval work flow data**, a table of **Level**, **Level Description**, **Approvers** and **Workflow Type**. The pencil edits the requisition, the download arrow downloads it and the bin deletes it.",
+            "images": [
+              {
+                "src": "assets/product/procurement/003.jpg",
+                "caption": "The Track dialog from the clock icon"
+              }
+            ]
+          },
+          {
+            "term": "Workflow Issues sub-tab",
+            "definition": "Opens the issues raised while requisitions were being approved. See **Requisition Workflow Issues**."
           }
         ],
         "procedures": [
           {
-            "title": "Create a requisition",
+            "title": "Create a material requisition",
             "steps": [
-              "Go to <strong>Procurement &gt; Requisition Form</strong>.",
-              "Click <strong>+ Requisition</strong>.",
-              "Choose the requisition type: <strong>Equipment</strong>, <strong>Material</strong>, <strong>Equipment Part</strong>, or <strong>Delivery Service</strong>.",
-              "Fill in <strong>Requested By</strong>, <strong>Requesting Date</strong>, <strong>Project Number/Project Name</strong>, and search for the items needed (Item Name, Specification, Quantity, UOM).",
-              "Fill <strong>Job Location</strong> and <strong>Delivery Location</strong> (with Zip Code/City/State for each), <strong>Project Manager</strong>, <strong>On-Site Contact</strong>, <strong>Assignee</strong>, and <strong>Phone Number</strong>.",
-              "Click <strong>Submit</strong> — the REQ appears with status <strong>Created</strong>."
+              "Open **Requisition Form** and click **+ Requisition**.",
+              "Choose **Material**. The **Create Requisition Form** dialog opens.",
+              "Check **Requested By** and **Requesting Date**, then pick the **Project Number / Project Name**.",
+              "Search for a material and click **+ Add Material**. In the table fill in **Specification**, **Quantity**, **UOM**, **Phase Code** and **Required Date** for each line.",
+              "Fill in **Job Location** and **Delivery Location** (each with **Zip Code**, **City** and **State**), **Project Manager** and **On-Site Contact** with a **Phone Number**.",
+              "Under **General** add **Notes** and, if the request belongs to one, choose a **Work Order**.",
+              "Click **Submit**. Click **Cancel** to close the form without creating anything."
             ],
-            "note": "Which extra fields and sections appear (beyond the required ones) depends on how the Module Admin built that requisition type's form in Settings → Requisition Form (REQ).",
             "images": [
               {
-                "src": "assets/notion/procurement-req/001.jpg",
-                "caption": "The Requisition Form screen",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/procurement-req/002.jpg",
-                "caption": "Choosing the requisition type: Equipment, Material, Equipment Part or Delivery Service",
+                "src": "assets/product/procurement/004.jpg",
+                "caption": "The Create Requisition Form for material",
                 "step": 3
-              },
-              {
-                "src": "assets/notion/procurement-req/003.jpg",
-                "caption": "The requisition form with item details, ready to Submit",
-                "step": 4
               }
             ]
           },
           {
-            "title": "Check a requisition's approval chain",
+            "title": "Create an equipment, equipment part or delivery service requisition",
             "steps": [
-              "Go to <strong>Procurement &gt; Requisition Form</strong>.",
-              "On the REQ's row, click the tree/hierarchy icon in Actions.",
-              "Review the Level, Level Description, Approvers, and Workflow Type shown in the popup."
-            ]
-          },
-          {
-            "title": "Assign a requisition to an owner",
-            "steps": [
-              "Open the REQ you want to delegate in <strong>Procurement &gt; REQ</strong>.",
-              "Click <strong>Assign To</strong>.",
-              "Select the user who should own sourcing this requisition."
+              "Open **Requisition Form**, click **+ Requisition** and choose **Equipment**, **Equipment Part** or **Delivery Service**.",
+              "For **Equipment** and **Equipment Part** pick the **Project Number / Project Name**, search for the item and add it. The table asks for **Quantity**, **UOM**, **Phase Code**, **Required Date**, **Planned Return Date** and **Planned Return Time**. The switch at the top right of the form marks the request as a rental.",
+              "For **Delivery Service** fill in **Job Number**, **Phase Code**, **Date Needed**, **Pick-Up Address**, **Pick Up Date**, **Ready for Pick-Up**, **Delivery Address**, **Due on Jobsite** and **Delivery Time** (**From** and **To**).",
+              "Under **Select Service type** choose **Equipments or Accessories** or **Material**, then add the items to move (name, type, service company, quantity, length, height, width and weight).",
+              "Add **Notes** and click **Submit**, or **Cancel** to leave without saving."
             ],
-            "note": "Assigning a REQ does not change who created it — it designates who is responsible for moving it forward, which is useful when a purchasing team splits work by category or vendor relationship.",
             "images": [
               {
-                "src": "assets/notion/procurement-req/004.jpg",
-                "caption": "Assign To, to give the requisition to a user",
-                "step": 2
+                "src": "assets/product/procurement/005.jpg",
+                "caption": "The Delivery Service form",
+                "step": 3
               }
             ]
           },
           {
-            "title": "Create a requisition from a rejected Load Out Request",
+            "title": "Find requisitions",
             "steps": [
-              "Go to <strong>Procurement &gt; REQ</strong>.",
-              "Click <strong>LOR from REQ</strong>.",
-              "Select the rejected Load Out Request you want to convert.",
-              "Complete and submit the resulting requisition."
-            ],
-            "note": "This is the standard path when an equipment need can't be met from current inventory — instead of the LOR staying stuck, it becomes a purchasing request.",
-            "images": [
-              {
-                "src": "assets/notion/procurement-req/005.jpg",
-                "caption": "LOR from REQ, to start a requisition from a rejected Load Out Request",
-                "step": 2
-              }
+              "Open **Requisition Form** and click **Filters**.",
+              "Choose any of **Status**, **Raised On**, **Assigned To**, **Requested By**, **Item Type**, **Project** or **Log ID**.",
+              "Click **Submit**. Click **Filters** again and **Clear & Apply** to go back to the full list."
             ]
+          }
+        ]
+      },
+      {
+        "heading": "Requisition Workflow Issues",
+        "intro": "<p>The <strong>Workflow Issues</strong> sub-tab of <strong>Requisition Form</strong> lists the issues raised at approval steps of requisitions, for example when an approver rejects one with a comment.</p>",
+        "images": [
+          {
+            "src": "assets/product/procurement/007.jpg",
+            "caption": "Workflow Issues for requisitions"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Counters",
+            "definition": "Three counters at the top: **Total Issues**, **Issues Approved** and **Issues Rejected**."
           },
           {
-            "title": "Review rejected requisitions",
-            "steps": [
-              "Go to the REQ module's <strong>Workflow Issues</strong> tab.",
-              "Review the list of rejected requisitions and the reasons attached to each.",
-              "Correct and resubmit as needed."
-            ]
+            "term": "Download Excel",
+            "definition": "Downloads the issues as an Excel file."
+          },
+          {
+            "term": "Filters",
+            "definition": "Narrows the list of issues."
+          },
+          {
+            "term": "WFL Number",
+            "definition": "The number of the workflow issue."
+          },
+          {
+            "term": "REQ ID",
+            "definition": "The requisition the issue belongs to."
+          },
+          {
+            "term": "Level",
+            "definition": "The approval level at which the issue was raised."
+          },
+          {
+            "term": "Raised on Date, Raised on Time and Raised by",
+            "definition": "When the issue was raised and by whom."
+          },
+          {
+            "term": "Image and Comments",
+            "definition": "A picture attached to the issue and the approver's comment, for example the reason for a rejection."
+          },
+          {
+            "term": "Assign To and Due Date",
+            "definition": "Choose who must resolve the issue and by when."
+          },
+          {
+            "term": "Chat and See History",
+            "definition": "Chat opens a conversation on the issue; See History shows its steps."
           }
         ]
       },
       {
         "heading": "RFQ",
-        "intro": "<p>An RFQ (Request for Quotation) is how a construction company solicits competitive pricing from vendors before committing to a purchase — the step that protects the project's budget by making sure a Purchasing Manager isn't simply taking the first price offered. Where a requisition captures what the project needs internally, an RFQ takes that need external — packaging one or more requisitions together and sending them to a shortlist of vendors so they can respond with cost and lead time. This is the step that turns \"we need this\" into \"here's what it will cost and from whom.\"</p><p>RFQs exist specifically for purchases where getting a competitive quote matters — larger or non-routine buys where comparing vendors protects the project's budget. Not every purchase needs to go through an RFQ (see Direct Purchase Orders under Purchase Orders below for the fast path a PM might use for a routine buy), but when it does, the RFQ is the vehicle that links requisitions to the vendors who will ultimately fulfill them, and its output feeds directly into Vendor Responses for comparison.</p><p>It's worth knowing where the vendors on that shortlist actually come from: Arena keeps a single, company-wide Vendor list in Global Data, and every RFQ across every project draws from that same shared pool — there is no project-local or siloed vendor list to keep in sync. A Purchasing Manager building an RFQ selects a Vendor Category, Sub Category, and Category Group, then clicks <strong>\"+ Add Vendors\"</strong> to pick from that shared list. If the vendor a project needs isn't in it yet, the RFQ's <strong>\"+ Register Vendors\"</strong> button lets the same user add it on the spot — and because it's one shared pool, that new vendor becomes available to every other project's RFQs immediately, not just the one being built. Unlike Phase Codes, there's no risk here of picking \"the wrong vendor list\" — the only decision is which category to filter by when inviting vendors to quote.</p>",
+        "intro": "<p>The <strong>RFQ</strong> tab holds requests for quotation. An RFQ takes one or more approved requisitions, sets the quantities to buy and sends the request to the vendors you choose. Each RFQ is shown as a card or as a table row.</p>",
+        "images": [
+          {
+            "src": "assets/product/procurement/008.jpg",
+            "caption": "RFQ cards"
+          },
+          {
+            "src": "assets/product/procurement/011.jpg",
+            "caption": "RFQ in table view"
+          }
+        ],
         "definitions": [
           {
-            "term": "RFQ (Request for Quotation)",
-            "definition": "A procurement document that links one or more requisitions to a set of pre-configured vendors and asks them to submit pricing and lead time for the requested items."
-          },
-          {
-            "term": "Procurement package",
-            "definition": "A grouping of requisition line items linked together within an RFQ (shown as \"Procurement Package\" = the REQ number in the RFQ item grid), used to bundle related needs before sending the RFQ to vendors."
-          },
-          {
-            "term": "RFQ status",
-            "definition": "An RFQ moves through Created → Email Sent to Vendors → Vendors Responded (or Partial Vendors Responded, if only some vendors have replied) → Vendors Selected → PO Created → PO Approved, or PO Rejected if the resulting PO is turned down. The status chip on each RFQ card always shows its current step."
+            "term": "Create RFQ",
+            "definition": "Opens the three-step **Create RFQ** dialog described below."
           },
           {
             "term": "Vendor Instructions",
-            "definition": "A reusable library of RFQ boilerplate terms (Instruction Name + Description), each scoped to specific vendors, configured once via the gear icon next to + Create RFQ. Lets a Purchasing Manager attach standard instructions (e.g. rate-quoting rules) to an RFQ instead of retyping them each time."
+            "definition": "Opens a dialog with a table of saved instructions: **Instruction Name**, **Description Preview**, **Vendors** (a list to tie the instruction to vendors), **Default** (a radio button that marks the default one) and **Actions** (edit and delete). **+ Add Instruction** adds one; **Submit** saves and **Cancel** closes.",
+            "images": [
+              {
+                "src": "assets/product/procurement/009.jpg",
+                "caption": "Vendor Instructions"
+              }
+            ]
+          },
+          {
+            "term": "Filters",
+            "definition": "Opens a dialog with **Status**, **Project**, **Vendor**, **Linked REQ** and **RFQ ID**."
+          },
+          {
+            "term": "RFQ status values",
+            "definition": "**Created**, **Email Sent to Vendors**, **Partial Vendors Responded**, **Vendors Responded**, **Partial Vendors Selected**, **Vendors Selected**, **PO Created**, **PO Approved** and **PO Rejected**."
+          },
+          {
+            "term": "Card view and Table View",
+            "definition": "The two icons beside the page counter switch between cards and a table. The table adds **Add Custom Column**, **Save Layout** and **Manage Columns**."
+          },
+          {
+            "term": "RFQ card",
+            "definition": "Shows the status tag, the RFQ number, **Total REQs**, **REQs Linked**, the **Vendors** invited and a button with the user the RFQ is assigned to."
+          },
+          {
+            "term": "Card menu",
+            "definition": "The three dots on a card open **Share**, **Download**, **See History** and **Delete**."
+          },
+          {
+            "term": "Table columns",
+            "definition": "**RFQ** (number; click it to open the RFQ for editing), **Total REQs**, **REQs Linked**, **Vendors**, **Status** and **Assign**. **Total REQs**, **REQs Linked**, **Vendors** and **Status** have their own filter icons."
           }
         ],
         "procedures": [
           {
-            "title": "Create an RFQ from a requisition",
+            "title": "Create an RFQ",
             "steps": [
-              "Go to <strong>Procurement &gt; RFQ</strong> and click <strong>+ Create RFQ</strong>.",
-              "<strong>Step 1 – Select Requisition Form:</strong> tick one or more Approved requisitions (a REQ still in Created status can't be picked yet).",
-              "<strong>Step 2 – Update Quantities:</strong> for each selected REQ's line items, review Requested Quantity and Remaining Quantity, and set the Procuring Quantity.",
-              "<strong>Step 3 – Identify Vendors:</strong> pick a Vendor Category, Vendor Sub Category, and Category Groups, then <strong>+ Add Vendors</strong> (or <strong>+ Register Vendors</strong> if the vendor isn't in the list yet). Fill Company Point of Contact (Contact Person Name and Email).",
-              "Click <strong>Save</strong>, or <strong>Save</strong> and send the email to vendors right away."
+              "Open **RFQ** and click **Create RFQ**.",
+              "In step **1 Select Requisition Form** tick the approved requisitions to include. The chosen lines appear under **Selected Items** with **S.No**, **Procurement Package** and **Type**. Click **Next**.",
+              "In step **2 Update Quantities** check each line (**Items**, **Specification**, **Requested Quantity**, **Remaining Quantity**, **Procuring Quantity**) and set the quantity to buy. Click **Next**.",
+              "In step **3 Identify Vendors** open a vendor card to see its star rating, **Preferred** tag and its count of purchase orders against RFQs, for example 10 PO / 15 RFQ. Pick the vendors and each vendor's contact.",
+              "Under **Company Point Of Contact** choose the **Contact Person Name** and check the **Contact Person E-mail**.",
+              "Click **Send email to vendors**, or **Cancel** to close without sending."
             ],
             "images": [
               {
-                "src": "assets/notion/procurement-rfq/001.jpg",
-                "caption": "The RFQ screen",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/procurement-rfq/002.jpg",
-                "caption": "Create, to start a new RFQ",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/procurement-rfq/003.jpg",
-                "caption": "Linking procurement packages to their requisitions",
+                "src": "assets/product/procurement/010.jpg",
+                "caption": "Create RFQ step 1",
                 "step": 2
               },
               {
-                "src": "assets/notion/procurement-rfq/004.jpg",
-                "caption": "Updating quantities and specifications",
+                "src": "assets/product/procurement/012.jpg",
+                "caption": "Update Quantities",
                 "step": 3
               },
               {
-                "src": "assets/notion/procurement-rfq/005.jpg",
-                "caption": "Vendor ratings shown next to each vendor's name",
+                "src": "assets/product/procurement/013.jpg",
+                "caption": "Identify Vendors",
                 "step": 4
               }
             ]
           },
           {
-            "title": "Set up reusable RFQ instructions for vendors",
+            "title": "Switch between cards and a table",
             "steps": [
-              "Go to <strong>Procurement &gt; RFQ</strong> and click the <strong>Vendor Instructions</strong> gear icon.",
-              "Click <strong>+ Add Instruction</strong>.",
-              "Name the instruction, write its description, and choose which vendors it applies to.",
-              "Click <strong>Submit</strong>."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/procurement-rfq/006.jpg",
-                "caption": "Vendor instructions with guidelines, terms and conditions",
-                "step": 3
-              }
+              "Open **RFQ**.",
+              "Click the table icon to see rows, or the grid icon to see cards.",
+              "Click the disk icon to keep your view."
             ]
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/notion/procurement-rfq/007.jpg",
-            "caption": "The RFQ list, to check progress and pending actions"
           }
         ]
       },
       {
         "heading": "Vendor Responses",
-        "intro": "<p>Once an RFQ has gone out, Vendor Responses is where the incoming quotes are captured, compared, and turned into a sourcing decision. This screen exists to make vendor comparison structured rather than something done over email or spreadsheets outside the system — every vendor's cost and lead time for a given RFQ lives in one place, side by side, so the Purchasing Manager or PM making the sourcing call has everything in front of them.</p><p>This step sits directly between RFQ and Purchase Orders in the procurement flow: it's the decision point. The outcome of Vendor Analysis and Selection determines which vendor's terms get carried forward into the Purchase Order that follows — which makes this screen the moment where the company's money actually gets committed to one vendor over another.</p>",
-        "definitions": [
+        "intro": "<p>The <strong>Vendor Responses</strong> tab is where the prices vendors quote for an RFQ are entered and compared, and where the winning vendor is chosen. It has two steps across the top: <strong>Assign Cost</strong> and <strong>Vendor Analysis &amp; Selection</strong>.</p>",
+        "images": [
           {
-            "term": "Vendor Responses",
-            "definition": "The screen where quotes from vendors invited on an RFQ are recorded, listing each vendor's submitted cost and lead time against that RFQ. On screen this tab is titled \"Quotation\" and works as a 2-step flow: Assign Cost, then Vendor Analysis & Selection."
-          },
-          {
-            "term": "Assign Cost (step 1)",
-            "definition": "The first Vendor Responses step: pick an RFQ, then for each item/vendor pair fill in Daily/Weekly/Monthly rate, Lead Time, Replacement Value, and Notes in the cost grid (columns also show REQ, Equipment, Specification, UOM, Quantity, Required Date, and Planned Return Date/Time for rental items)."
-          },
-          {
-            "term": "Vendor Analysis and Selection",
-            "definition": "The comparison step (labeled \"Select Vendor\" on screen) that follows Assign Cost, where recorded vendor quotes are evaluated side by side so a winning vendor can be selected and Submitted for the Purchase Order. A Chart View toggle switches to a Vendor Price Chart — pick an equipment item and see a bar chart comparing Daily/Weekly/Monthly rates across vendors, with a download option."
+            "src": "assets/product/procurement/014.jpg",
+            "caption": "Vendor Responses, Assign Cost step"
           }
         ],
-        "procedures": [
+        "definitions": [
           {
-            "title": "Record and compare vendor quotes",
-            "steps": [
-              "Go to <strong>Procurement &gt; Vendor Responses</strong> (\"Quotation\").",
-              "On the <strong>1 Assign Cost</strong> step, select the relevant RFQ from the list on the left.",
-              "Enter each vendor's Daily/Weekly/Monthly rate, Lead Time, Replacement Value, and any Notes as their quotes come in.",
-              "Move to <strong>2 Vendor Analysis & Selection</strong> to compare all recorded responses.",
-              "Optionally switch to <strong>Chart View</strong> to see a price bar chart per equipment item across vendors.",
-              "Pick the winning vendor and click <strong>Submit</strong>."
-            ],
+            "term": "Select RFQ",
+            "definition": "A search box and a scrolling list of RFQ cards on the left. Click a card to work on that RFQ. The card shows its status, type tag, **Total REQs**, **REQs** and **Vendors**."
+          },
+          {
+            "term": "1 Assign Cost",
+            "definition": "Shows **Assign Costs to Items** for the chosen RFQ: one table of the requisition lines with the quote for each vendor. For equipment the columns are **REQ**, **Equipment**, **Type**, **Specification**, **UOM**, **Quantity**, **Required Date**, **Planned Return Date**, **Planned Return Time**, **Vendor Name**, **Hourly**, **Daily**, **Weekly**, **Monthly**, **Lead Time**, **Replacement Value**, **Notes**, **See History** and **Comments**."
+          },
+          {
+            "term": "2 Vendor Analysis & Selection",
+            "definition": "Shows **Select Vendor** with the same lines so you can compare vendors and pick one per line. **Submit** saves your selection."
+          },
+          {
+            "term": "Table and Chart View icons",
+            "definition": "In step 2 two icons switch between the table and the **Chart View**. The chart is a **Vendor Price Chart** with a **Select Equipment** list and bars for **Daily**, **Weekly** and **Monthly** prices per vendor. A download icon saves it.",
             "images": [
               {
-                "src": "assets/notion/procurement-vendor-responses/001.jpg",
-                "caption": "Vendor Responses, for recording vendor quotes",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/procurement-vendor-responses/002.jpg",
-                "caption": "Choosing the RFQ to record responses for",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/procurement-vendor-responses/003.jpg",
-                "caption": "Entering a vendor's costs and lead time",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/procurement-vendor-responses/004.jpg",
-                "caption": "Comparing vendor responses by cost and lead time",
-                "step": 4
+                "src": "assets/product/procurement/015.jpg",
+                "caption": "Chart View"
               }
             ]
           }
@@ -36911,505 +36960,762 @@ const MODULES = [
       },
       {
         "heading": "Purchase Orders",
-        "intro": "<p>A Purchase Order (PO) is the binding commitment to buy — the document that formally authorizes a vendor to deliver goods or services at an agreed price, and the point of no return in the procurement process. In Arena, a PO can be reached two ways: generated from an RFQ after a Purchasing Manager has selected a vendor through quote comparison, or created directly from a requisition when a competitive quote process isn't necessary. Both paths exist because not every purchase carries the same stakes; routine or low-value buys don't need the overhead of a full RFQ cycle, while larger or specialized purchases benefit from vendor comparison first.</p><p>Purchase Orders are organized by procurement type — Material, Equipment, Equipment Part, or Delivery Service — because pricing structures, tax treatment, and quantities are handled differently across these categories. Once POs exist, Purchase Order Master gives a Procurement Admin or PM the consolidated view across all of them: every PO's current status, its history, and the requisition it traces back to, which is essential for anyone tracking overall project spend commitments rather than one PO at a time.</p>",
+        "intro": "<p>The <strong>Purchase Orders</strong> tab lists purchase orders (POs) raised from RFQs. It has three sub-tabs: <strong>Purchase Order</strong>, <strong>Direct Purchase Order</strong> and <strong>Workflow Issues</strong>. Under the first two, five tabs split the list by item type: <strong>Material</strong>, <strong>Equipment</strong>, <strong>Equipment Part</strong>, <strong>Delivery Service Equipment</strong> and <strong>Delivery Service Material</strong>.</p>",
+        "images": [
+          {
+            "src": "assets/product/procurement/016.jpg",
+            "caption": "The Purchase Order list for Material"
+          }
+        ],
         "definitions": [
           {
-            "term": "Purchase Order (PO)",
-            "definition": "The formal document authorizing a vendor to supply goods or services at agreed pricing, generated either from a selected RFQ vendor response or directly from a requisition."
+            "term": "Export",
+            "definition": "Exports the list."
           },
           {
-            "term": "Direct Purchase Order",
-            "definition": "A Purchase Order created straight from a requisition, skipping the RFQ and vendor-comparison steps entirely — used when competitive quoting isn't required."
+            "term": "+ Purchase Orders",
+            "definition": "Opens **Create Purchase Order**, a list of RFQ cards with a tick box on each (status, type tag, **Total REQs**, **REQs**, **Vendors**). Tick the RFQ and click **Submit** to raise its PO; **Close** leaves without creating one."
           },
           {
-            "term": "Purchase Order Master",
-            "definition": "The consolidated view of all Purchase Orders across procurement types: PO No, Status, Item Details/History/REQ Details (each a drill-down link), Total Cost, Total Invoice Cost, Balance Cost, Vendor ID, Vendor, PO Approved Date, Invoice status, and Comments."
+            "term": "Terms & Conditions",
+            "definition": "Opens **Terms And Conditions**, a text editor (bold, italic, underline, strikethrough, link, headings, lists, alignment) holding the standard wording used on purchase orders. **Submit** saves, **Cancel** closes.",
+            "images": [
+              {
+                "src": "assets/product/procurement/046.jpg",
+                "caption": "Terms And Conditions"
+              }
+            ]
           },
           {
-            "term": "Preview PO step",
-            "definition": "The stage in Purchase Order creation where you pick the Vendor and preview the company's Address/Phone/Zip Code before final submission."
+            "term": "Filters",
+            "definition": "Opens a dialog with **Status**, **Project**, **Vendor**, **Requested By**, **REQ ID** and **PO ID**. **Status** offers **Created**, **Approved**, **Rejected**, **Partial Delivery Receipt Created**, **Delivery Receipt Created** and **Delivery Receipt Issue Raised**."
           },
           {
-            "term": "Purchase Order status",
-            "definition": "A PO moves through Created → Approved → Delivery Receipt Created (or Partial Delivery Receipt Created, if only some items have been received) as deliveries come in. A Delivery Receipt inspection issue can flip it to Delivery Receipt Issue Raised."
+            "term": "Add Custom Column, Save Layout and Manage Columns",
+            "definition": "Add your own column, keep the column layout, and choose which columns show and in what order."
           },
           {
-            "term": "Terms & Conditions (Purchase Orders)",
-            "definition": "A company-wide, rich-text boilerplate block (gear icon on the Purchase Orders tab) stamped onto every generated PO, with placeholders like [Amount] and [30/60] for payment terms."
+            "term": "Table columns",
+            "definition": "**Purchase Orders** (the PO number; click it to open the PO), **Total Items**, **Total Cost**, **Job ID / Job Name**, **Vendor**, **Requested By**, **REQs** (the requisitions it came from), **Assign**, **Approve** and **Reject** buttons, **Status** and **Actions**."
           },
           {
-            "term": "Where Purchase Order data comes from and goes",
-            "definition": "**Comes from:** the **Vendor** on a Purchase Order is a vendor from **Global Data → Vendors** (Vendor ID such as VND0012 or 1229844 is the Global Data vendor number); the lines come from the requisition or RFQ you picked, and **Remaining Quantity** (requested quantity minus what earlier orders took) limits what you can still order. The list shows POs from several projects, with the project in the **Job ID / Job Name** column. **Goes to:** Delivery Receipts (the PO appears under its vendor, tagged Direct or Process Purchase Order), Invoices, and **Purchase Order Master**, where **Total Invoice Cost** and **Balance Cost** are worked out from approved invoices. Stock received through a Delivery Receipt is added to Inventory Management (its Transaction History reads \"received from <vendor> through PO ID ... confirmed by DR ID ...\"). For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
+            "term": "Actions",
+            "definition": "A clock icon opens the PO's history and a bin deletes it."
           }
         ],
         "procedures": [
           {
-            "title": "Create a Purchase Order from an RFQ",
+            "title": "Open a purchase order",
             "steps": [
-              "Go to <strong>Procurement &gt; Purchase Orders &gt; Purchase Order</strong>.",
-              "Select the procurement type tab: <strong>Material</strong>, <strong>Equipment</strong>, <strong>Equipment Part</strong>, <strong>Delivery Service Equipment</strong>, or <strong>Delivery Service Material</strong>.",
-              "Click <strong>+ Purchase Orders</strong>.",
-              "Select the RFQ marked <strong>PO Approved</strong>.",
-              "On the Create Purchase Order Form, search for and select the <strong>Vendor</strong>, review the previewed company Address/Phone/Zip Code, and enter pricing and the tax code.",
-              "Click <strong>Submit</strong>."
+              "Open **Purchase Orders** and pick the item type tab, for example **Material**.",
+              "Click the PO number in the **Purchase Orders** column.",
+              "The PO page shows the sections described below. Use **Print**, **Download** or **E-mail** to send it out, **View REQs** to see its requisitions, **Comments** and **See History** for discussion and trail."
             ],
             "images": [
               {
-                "src": "assets/notion/procurement-purchase-order/001.jpg",
-                "caption": "The Purchase Order screen",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/procurement-purchase-order/002.jpg",
-                "caption": "Create, to start a new Purchase Order",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/procurement-purchase-order/003.jpg",
-                "caption": "Choosing the RFQ to link the Purchase Order to",
-                "step": 4
-              },
-              {
-                "src": "assets/notion/procurement-purchase-order/004.jpg",
-                "caption": "Submit, to finish the Purchase Order",
-                "step": 6
-              }
-            ]
-          },
-          {
-            "title": "Create a Purchase Order without an RFQ (Direct PO)",
-            "steps": [
-              "Go to <strong>Procurement &gt; Purchase Orders &gt; Direct Purchase Order</strong>.",
-              "Select the procurement type tab.",
-              "Click <strong>Create</strong>.",
-              "Select the requisition (REQ) directly — no RFQ step is involved.",
-              "Enter pricing and lead time.",
-              "In the Preview PO step, select the vendor and tax code.",
-              "Click <strong>Submit</strong>."
-            ],
-            "note": "Use this path when a competitive quote isn't necessary and you already know the vendor and price.",
-            "images": [
-              {
-                "src": "assets/notion/procurement-direct-purchase-order/001.jpg",
-                "caption": "Direct Purchase Order: created from a requisition without an RFQ",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/procurement-direct-purchase-order/002.jpg",
-                "caption": "Choosing the requisition to link the Purchase Order to",
-                "step": 4
-              },
-              {
-                "src": "assets/notion/procurement-direct-purchase-order/003.jpg",
-                "caption": "Entering pricing and lead time",
-                "step": 5
-              },
-              {
-                "src": "assets/notion/procurement-direct-purchase-order/004.jpg",
-                "caption": "Preview PO, with the tax code chosen",
-                "step": 6
-              }
-            ]
-          },
-          {
-            "title": "View all Purchase Orders and their status",
-            "steps": [
-              "Go to <strong>Procurement &gt; Purchase Order Master</strong>.",
-              "Browse the full list of Purchase Orders. Click <strong>Click here to view</strong> under Item Details, History, or REQ Details for the drill-down you need, or check Total Cost / Total Invoice Cost / Balance Cost and Invoice status to see how much of a PO has been billed."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/procurement-purchase-order-master/001.jpg",
-                "caption": "Purchase Order Master: every Purchase Order with its status, history and linked requisitions",
+                "src": "assets/product/procurement/017.jpg",
+                "caption": "A purchase order (PO 87)",
                 "step": 2
               }
             ]
           },
           {
-            "title": "Set the standard Terms & Conditions on generated Purchase Orders",
+            "title": "Read the purchase order page",
             "steps": [
-              "Go to <strong>Procurement &gt; Purchase Orders</strong>, click <strong>Terms & Conditions</strong>.",
-              "Write or edit the boilerplate text using the rich-text toolbar (bold/italic/underline/strikethrough, link, headings, lists).",
-              "Click <strong>Submit</strong>."
+              "At the top the header shows the PO number, the company address and phone, and **Form Created** date.",
+              "**Requester Details** holds **Requested By**, **Requested Date**, **REQ ID**, **Job No**, **Job Location**, **Project Manager**, **Delivery Location**, **On-Site Contact**, **Tax Code** (with a **Tax on Freight** box), **Advance Amount**, **Instructions** and **Terms and Conditions**.",
+              "**Vendor Details** shows the vendor **Name** and **Contact No**.",
+              "The items table lists **Item**, **Specification**, **UOM**, **Quantity**, **Phase Code**, **Tax Code**, **Required Date**, **Unit Price**, **Lead Time (Days)** and **Total Cost**, with a **Transfer** button per line. Totals show **Total** and **Total with Freight Items**.",
+              "A second table (**Item Name**, **Cost**, **Specification**) holds extra items, and **Other Information** holds **Notes**."
             ]
+          }
+        ]
+      },
+      {
+        "heading": "Direct Purchase Order",
+        "intro": "<p>The <strong>Direct Purchase Order</strong> sub-tab lists purchase orders raised straight from a requisition, without an RFQ. It shows cards by default and uses the same five item-type tabs as <strong>Purchase Orders</strong>.</p>",
+        "images": [
+          {
+            "src": "assets/product/procurement/018.jpg",
+            "caption": "Direct Purchase Order cards"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "+ Direct Purchase Order",
+            "definition": "Opens the three-step **Create Direct Purchase Order** dialog."
+          },
+          {
+            "term": "Terms & Conditions, Filters and Export",
+            "definition": "Work the same as on the **Purchase Order** sub-tab."
+          },
+          {
+            "term": "PO card",
+            "definition": "Shows a status tag (for example **Approved**, **Partial Delivery Receipt Created** or **Delivery Receipt Created**), the PO number, **Total Items**, **Total Cost**, **Job ID / Job Name**, **Vendor**, **Requested By**, **REQs** and the assignee button. The three dots hold more actions."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Create a direct purchase order",
+            "steps": [
+              "Open **Purchase Orders**, then **Direct Purchase Order**, and click **+ Direct Purchase Order**.",
+              "In **1 Select Items** pick a requisition on the left (one that is **Approved** or **Vendor Responded**) and tick the lines. For each line the table shows **Item**, **Specification**, **UOM**, **Remaining Quantity** and **Requested Quantity**; type the **Procuring Quantity**. Click **Next**.",
+              "In **2 Select Vendor** choose the vendor.",
+              "In **3 Preview Purchase Order** check the order and confirm it. Click **Cancel** at any step to leave without creating a PO."
+            ],
+            "images": [
+              {
+                "src": "assets/product/procurement/019.jpg",
+                "caption": "Create Direct Purchase Order step 1",
+                "step": 2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Purchase Order Workflow Issues",
+        "intro": "<p>The <strong>Workflow Issues</strong> sub-tab of <strong>Purchase Orders</strong> lists the issues raised while purchase orders move through approval.</p>",
+        "images": [
+          {
+            "src": "assets/product/procurement/020.jpg",
+            "caption": "Workflow Issues for purchase orders"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Counters",
+            "definition": "**Total Issues**, **Issues Approved** and **Issues Rejected**."
+          },
+          {
+            "term": "Download Excel and Filters",
+            "definition": "Download the issues as Excel, or narrow the list."
+          },
+          {
+            "term": "Columns",
+            "definition": "**WFL Number**, **PO ID**, **Level**, **Raised on Date**, **Raised on Time**, **Raised by**, **Image**, **Comments**, **Assign To**, **Due Date**, **Chat** and **See History**. Use **Assign To** and **Due Date** to hand an issue to someone with a deadline."
           }
         ]
       },
       {
         "heading": "Delivery Receipts",
-        "intro": "<p>A Delivery Receipt is the record that goods or services ordered on a Purchase Order have actually arrived, and it exists to protect the business from paying for something that never showed up correctly. It closes the loop between what was ordered and what was received, capturing the receiving quantity against the original PO so any discrepancy — a short shipment, a damaged item — is visible immediately to whoever is receiving on-site, rather than surfacing later at invoicing time when it's harder to dispute.</p><p>This document matters for accountability on-site: it ties a physical delivery event to a specific vendor and PO, which becomes the basis for downstream steps like invoicing and, for equipment, pickup coordination.</p>",
-        "definitions": [
+        "intro": "<p>The <strong>Delivery Receipts</strong> tab records what a vendor actually delivered against a purchase order. It has two sub-tabs, <strong>Create Delivery Receipt</strong> (the list) and <strong>Inspection Issues</strong>.</p>",
+        "images": [
           {
-            "term": "Delivery Receipt",
-            "definition": "A record confirming that goods or services from a specific Purchase Order have been received, capturing the receiving quantity and any additional receiving information. Each PO shown when creating one is tagged Direct Purchase Order or Process Purchase Order, showing which path it came from."
-          },
-          {
-            "term": "Inspection Issues (Delivery Receipts)",
-            "definition": "A sub-tab next to Create Delivery Receipt logging quality-check failures found while inspecting a delivery: Issue Number, DR ID, Field Name (the checkpoint, e.g. \"Check Per MTR\"), Observation, Raised on Date/Time, Raised by, an optional photo, a Rectify button, Chat, Assign To, and Due Date. Header counters show Total/Open/Rectified issue counts. A Delivery Receipt with an open inspection issue shows status Delivery Receipt Issue Raised on the Purchase Order Master."
-          },
-          {
-            "term": "Where Delivery Receipt data comes from and goes",
-            "definition": "**Comes from:** the **Select Vendor** list in **+ Delivery Receipt** shows only vendors that already have a Purchase Order. Picking a vendor lists its Purchase Orders and their requisition lines. **Goes to:** the Purchase Order status (**Delivery Receipt Created**, **Partial Delivery Receipt Created**, **Delivery Receipt Issue Raised**), Inventory Management stock and its Transaction History, and the **Inspection Issues** list with the due times set in **Settings → Procurement Issues**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
+            "src": "assets/product/procurement/022.jpg",
+            "caption": "The Create Delivery Receipt list"
           }
         ],
-        "procedures": [
+        "definitions": [
           {
-            "title": "Create a Delivery Receipt for a Purchase Order",
-            "steps": [
-              "Go to <strong>Procurement &gt; Delivery Receipts</strong>, click <strong>+ Delivery Receipt</strong>.",
-              "Select the Vendor, then the associated Purchase Order (tagged Direct Purchase Order or Process Purchase Order).",
-              "Expand the PO to see its REQ line items and assign each as needed.",
-              "Fill in the receiving quantity and any additional information.",
-              "Click <strong>Submit</strong>."
-            ],
+            "term": "+ Delivery Receipt",
+            "definition": "Opens **Create Delivery Receipt**. Choose a vendor under **Select Vendor**; its purchase orders are listed with a tag (**Direct Purchase Order** or **Process Purchase Order**). Pick one, open it to see its requisition lines, then click **Submit**. **Cancel** closes without creating a receipt.",
             "images": [
               {
-                "src": "assets/notion/procurement-delivery-receipts/001.jpg",
-                "caption": "The Delivery Receipts screen",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/procurement-delivery-receipts/002.jpg",
-                "caption": "Creating a new Delivery Receipt",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/procurement-delivery-receipts/003.jpg",
-                "caption": "Choosing the Purchase Order to link the receipt to",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/procurement-delivery-receipts/004.jpg",
-                "caption": "Submit, to confirm the Delivery Receipt",
-                "step": 5
+                "src": "assets/product/procurement/023.jpg",
+                "caption": "Create Delivery Receipt"
               }
             ]
           },
           {
-            "title": "Raise and rectify a delivery inspection issue",
-            "steps": [
-              "Go to <strong>Procurement &gt; Delivery Receipts &gt; Inspection Issues</strong> to see all open and rectified issues.",
-              "An issue is normally raised while inspecting a delivered item against a checkpoint (Field Name) that fails.",
-              "Add notes via <strong>Chat</strong>, set <strong>Assign To</strong> and <strong>Due Date</strong> so it's tracked against the SLA set in Settings → Procurement Issues.",
-              "Once corrected, click <strong>Rectify</strong>."
-            ]
-          }
-        ]
-      },
-      {
-        "heading": "Invoices",
-        "intro": "<p>Invoices in Procurement is where vendor billing is matched against what was actually ordered and received — the financial checkpoint that protects a construction company from paying for more than it agreed to or received. Rather than treating an invoice as a standalone document, Arena ties it directly to the vendor's Purchase Orders, so an End User or Purchasing Manager processing payment can check the items being billed against what was authorized. This is the final financial checkpoint in the procurement lifecycle — it's where cost, tax, and payment terms are formally recorded against a purchase.</p>",
-        "definitions": [
-          {
-            "term": "Invoice (Procurement)",
-            "definition": "A billing document tied to one of a vendor's Purchase Orders, recording the invoice number, date, payment terms, billed items, subtotal, and tax amount."
+            "term": "Add Custom Column, Save Layout, Manage Columns",
+            "definition": "Add a column of your own, keep your column layout, and show, hide or reorder columns. The disk icon beside the table and tile icons keeps the view."
           },
           {
-            "term": "Where invoice numbers show up",
-            "definition": "An invoice is tied to one Purchase Order and vendor and shows the invoice and billing dates, tax and total. On **Purchase Order Master**, only **Approved** invoices count: PO 83 (total 1,39,650) had Approved invoice INV 44 for 1,27,575, so its **Total Invoice Cost** was 1,27,575 and **Balance Cost** 12,075, while PO 81 had two invoices still **Created**, so its Total Invoice Cost stayed 0.00 and its **Invoice status** read CREATED. Approve the invoice for the amount to count against the PO. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
+            "term": "Filters",
+            "definition": "Opens a dialog with **Status**, **Received By**, **Date**, **Log ID**, **Project** and **Vendor**. **Status** offers **Created** and **Issues Raised**."
+          },
+          {
+            "term": "Columns",
+            "definition": "**Delivery Receipt** (for example DR 72), **Date**, **Vendor**, **Items**, **PO** (the purchase order it is against), **REQ/RFQ**, **Received By**, **Assign** (the user it sits with), **Status** and **Actions**. Most columns have a filter icon."
+          },
+          {
+            "term": "Actions",
+            "definition": "Row icons: clock (history), share, pencil (edit), download arrow and bin (delete)."
+          },
+          {
+            "term": "Inspection Issues sub-tab",
+            "definition": "Lists issues raised from delivery receipt checks. See **Inspection Issues**."
           }
         ],
         "procedures": [
           {
-            "title": "Create an invoice for a procured item",
+            "title": "Open and read a delivery receipt",
             "steps": [
-              "Go to <strong>Procurement &gt; Invoices</strong>.",
-              "Click <strong>Create</strong>.",
-              "Choose the vendor, then expand to view their associated Purchase Orders and select the relevant one.",
-              "Enter the invoice number, date, and payment terms.",
-              "Select the items being billed.",
-              "Enter the subtotal and tax amount.",
-              "Submit the invoice."
+              "Open **Delivery Receipts** and scroll the list to the **Actions** column.",
+              "Click the pencil icon on the receipt row. **Edit Delivery Receipt** opens.",
+              "Check the header fields **Received by** and **Date**, and the read-only **PO Date** and **PO No**. Add **Gate Entry No**, **Delivery Challan**, **DC Date** and **Vehicle No** if you have them.",
+              "Use **Upload Images** (.jpeg or .png) and **Attachments** to add proof of delivery.",
+              "In the item table enter **Current Received Quantity**, **Current Accepted Qty** and **Current Rejected Qty**. **Ordered qty**, **Qty received till date** and **Cumulative Qty** are shown for reference, and **Inventory Location** shows where the stock goes.",
+              "Under **Inspection Items** answer each check, then add **Notes for Delivery**.",
+              "Click **Submit** to save or **Cancel** to close."
             ],
             "images": [
               {
-                "src": "assets/notion/procurement-invoices/001.jpg",
-                "caption": "Choosing the Purchase Order the invoice is for",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/procurement-invoices/002.jpg",
-                "caption": "Choosing the items from the Purchase Order to bill",
-                "step": 5
+                "src": "assets/product/procurement/024.jpg",
+                "caption": "Edit Delivery Receipt",
+                "step": 2
               }
             ]
           }
         ]
       },
       {
-        "heading": "Pickup Requests",
-        "intro": "<p>A Pickup Request coordinates the logistics of collecting procured items — typically equipment — from a vendor, which is a real operational task on a job site, not just paperwork. Where a Delivery Receipt confirms goods arrived to you, a Pickup Request handles the reverse or lateral logistics case: scheduling when and where an item tied to a Purchase Order will be picked up. This keeps the physical movement of procured goods trackable alongside the paperwork that authorized the purchase, so a PM or site coordinator always knows when to expect equipment to actually show up.</p>",
+        "heading": "Inspection Issues",
+        "intro": "<p>The <strong>Inspection Issues</strong> sub-tab of <strong>Delivery Receipts</strong> lists problems found during delivery checks, such as a damaged item, so someone can fix them.</p>",
+        "images": [
+          {
+            "src": "assets/product/procurement/025.jpg",
+            "caption": "Inspection Issues"
+          }
+        ],
         "definitions": [
           {
-            "term": "Pickup Request",
-            "definition": "A scheduling document tied to a vendor, and usually a rented/leased piece of equipment sourced through an REQ/RFQ, that records the pickup date, address, and status for collecting a procured item back from a job site."
+            "term": "Counters",
+            "definition": "**Total Issues**, **Open Issues** and **Issues Rectified**."
           },
           {
-            "term": "Pickup Request status",
-            "definition": "A Pickup Request moves through Created → Vendor Pickup Request Created → Picked up from Site → Closed as it's actioned, or Rejected if turned down. This is the return/pickup counterpart to the Load Out Request flow in Equipment Management, but for procurement-sourced rented items specifically."
+            "term": "Search, Export and view icons",
+            "definition": "Search the list, **Export** it, and switch between table and tile views. **Filters** narrows the list."
+          },
+          {
+            "term": "Columns",
+            "definition": "**Issue Number**, **DR ID** (the delivery receipt), **Field Name** (the inspection check that failed, for example **Check Per MTR**), **Observation** (the answer or remark recorded), **Raised on Date**, **Raised on Time**, **Raised by**, **Image** (a **View Image** link when a photo is attached), **Rectify**, **Chat**, **Assign To**, **Due Date** and **Actions**."
+          },
+          {
+            "term": "Rectify",
+            "definition": "An orange **RECTIFY** button means the issue is still open; a green **RECTIFIED** button means it was resolved."
+          }
+        ]
+      },
+      {
+        "heading": "Invoice",
+        "intro": "<p>The <strong>Invoice</strong> tab holds vendor invoices raised against purchase orders. It has two sub-tabs: <strong>Create Invoice</strong> (cards or table) and <strong>Workflow Issues</strong>.</p>",
+        "images": [
+          {
+            "src": "assets/product/procurement/026.jpg",
+            "caption": "Invoice cards"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "+ Invoice",
+            "definition": "Opens **Create Invoice**: a search box and the purchase orders grouped by vendor, each with a radio button and an assignee button. Pick the purchase order and click **Submit**. **Cancel** closes it.",
+            "images": [
+              {
+                "src": "assets/product/procurement/027.jpg",
+                "caption": "Create Invoice"
+              }
+            ]
+          },
+          {
+            "term": "Filters",
+            "definition": "Opens a dialog with **Status** (**Created**, **Approved**, **Rejected**) and **Log ID**."
+          },
+          {
+            "term": "Card and table icons",
+            "definition": "Switch between invoice cards and a table; the disk icon keeps the view."
+          },
+          {
+            "term": "Invoice card",
+            "definition": "Shows a status tag, the invoice number (for example INV 47), **Purchase Order**, **Vendor**, **Invoice Date**, **Billing Date**, **Tax**, **Total Amount**, and a button with the user it is assigned to. Cards in **Created** status have **Approve** and **Reject** buttons."
+          },
+          {
+            "term": "Card menu",
+            "definition": "The three dots hold **See History**, **Share**, **Edit**, **Delete** and **Download**."
+          },
+          {
+            "term": "Workflow Issues sub-tab",
+            "definition": "Same layout as the other Workflow Issues pages with an **INV ID** column. See **Invoice Workflow Issues**."
           }
         ],
         "procedures": [
           {
-            "title": "Create a Pickup Request for procured items",
+            "title": "Edit an invoice",
             "steps": [
-              "Go to <strong>Procurement &gt; Pickup Request</strong>.",
-              "Click <strong>+ Pickup Request</strong>.",
-              "Select the Vendor and the REQ/RFQ the item was procured through.",
-              "Fill in the Pickup Date/Time, Job ID/Job Name, and Address.",
-              "Click <strong>Submit</strong> — the request starts at status <strong>Created</strong>, then moves through Approve, Vendor Pickup Request Created, Picked up from Site, to Closed."
+              "Open **Invoice** and click the three dots on a card, then **Edit**.",
+              "Check **Invoice Date**. Click **Add Items** to add lines.",
+              "In the table set **Quantity** and choose **Billing To**. **Billing From**, **Tax Amount** and **Total Amount** are shown for each line.",
+              "Fill in **Invoice Subtotal**, **Tax** and **Total Amount** (all required), then **Attachments** and **Notes**.",
+              "The line **Approval Workflow Level** with **Approve** and **Reject** buttons approves or rejects the invoice at its current level.",
+              "Click **Submit** to save or **Cancel** to close."
             ],
             "images": [
               {
-                "src": "assets/notion/procurement-pickup-request/001.jpg",
-                "caption": "The Pickup Request screen",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/procurement-pickup-request/002.jpg",
-                "caption": "Create, to start a pickup request",
+                "src": "assets/product/procurement/028.jpg",
+                "caption": "Edit Invoice",
                 "step": 2
-              },
-              {
-                "src": "assets/notion/procurement-pickup-request/003.jpg",
-                "caption": "Choosing the vendor and Purchase Order",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/procurement-pickup-request/004.jpg",
-                "caption": "Pickup date, address and status",
-                "step": 4
-              },
-              {
-                "src": "assets/notion/procurement-pickup-request/005.jpg",
-                "caption": "Submit, to create the pickup request",
-                "step": 5
               }
             ]
           }
         ]
       },
       {
-        "heading": "Communications",
-        "intro": "<p>Procurement Communications is a dedicated mail repository scoped to the module — every email tied to a procured item is tracked here rather than scattered across a Purchasing Manager's or PM's personal inbox. This means anyone reviewing a purchase's history, or picking up a procurement thread from a colleague who's out or has moved on, has the relevant correspondence attached directly to the procurement record rather than needing to search email separately.</p><p>A separate <strong>Document</strong> icon next to Communications opens a module-wide file/folder repository (folders seen include RFQ and DIRECT REQ), for procurement paperwork that isn't tied to any one record's own attachments.</p>",
+        "heading": "Invoice Workflow Issues",
+        "intro": "<p>The <strong>Workflow Issues</strong> sub-tab of <strong>Invoice</strong> lists issues raised at invoice approval steps.</p>",
+        "images": [],
         "definitions": [
           {
-            "term": "Procurement Communications",
-            "definition": "A full email client (All Emails, Inbox, Sent, Drafts, Starred, Trash, Compose Mail) within the Procurement module that tracks emails linked to procured items, keeping vendor correspondence attached to the relevant purchasing activity."
+            "term": "Counters and Download Excel",
+            "definition": "**Total Issues**, **Issues Approved** and **Issues Rejected**, with **Download Excel** and **Filters**."
           },
           {
-            "term": "Document (Procurement)",
-            "definition": "A module-level document repository (separate icon next to Communications) for storing procurement-related files in folders — New Folder and Add File are the main actions — independent of any single REQ/RFQ/PO's own attachments."
+            "term": "Columns",
+            "definition": "**WFL Number**, **INV ID**, **Level**, **Raised on Date**, **Raised on Time**, **Raised by**, **Image**, **Comments**, **Assign To**, **Due Date**, **Chat** and **See History**."
+          }
+        ]
+      },
+      {
+        "heading": "Pickup Request",
+        "intro": "<p>The <strong>Pickup Request</strong> tab handles collecting rented equipment from a site. It has two sub-tabs: <strong>Create Pickup Request</strong> and <strong>Workflow Issues</strong>.</p>",
+        "images": [
+          {
+            "src": "assets/product/procurement/029.jpg",
+            "caption": "The Pickup Request list"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "+ Pickup Request",
+            "definition": "Opens **Create Pickup Request** with a **Select Vendor** list under **Select RFQ**. **Cancel** closes it."
+          },
+          {
+            "term": "Filters",
+            "definition": "Opens a dialog with **Status**, **Requested By**, **Date**, **Project** and **Log ID**."
+          },
+          {
+            "term": "Columns",
+            "definition": "**Pickup Request** (for example PR 14), **Vendor**, **REQ/RFQ**, **Items**, **Requested By**, **Date/Time**, **Job ID / Job Name**, **Approve**, **Reject**, **Assign**, **Status** and **Actions** (history, share, edit, download, delete)."
+          },
+          {
+            "term": "Status values",
+            "definition": "**Vendor Pickup Request Created**, **Picked up from Site**, **Closed** and **Rejected**."
+          },
+          {
+            "term": "Add Custom Column, Save Layout, Manage Columns",
+            "definition": "Add your own column, keep the layout, and choose and order the columns."
           }
         ],
         "procedures": [
           {
-            "title": "Find emails related to procured items",
+            "title": "Open a pickup request",
             "steps": [
-              "Go to <strong>Procurement &gt; Communications</strong>.",
-              "Browse the tracked emails linked to procured items, or click <strong>Compose Mail</strong> to send a new one."
+              "Open **Pickup Request** and click the pencil icon in the **Actions** column of a row.",
+              "**Edit Pickup Request** opens. Choose the **Pickup Request Status** and check **Job ID/Job Name** and **Requested By**.",
+              "Set the **Pickup Date/Time**, then fill in **Location of equipment on site**, **Day/Hours of access** and **Additional Special Instructions**.",
+              "The equipment table shows **Equipment Number**, **Equipment**, **Type** and **Specification**.",
+              "Under **On-Site Contact** enter the **Pickup Address**, **Phone**, **Location of key on site**, **City**, **State**, **Postal Code** and **Country**. Add **Notes** under **General**.",
+              "Click **Submit** to save, or close the dialog to leave it unchanged."
             ],
             "images": [
               {
-                "src": "assets/notion/procurement-communications/001.jpg",
-                "caption": "Communications: mail linked to procured items",
+                "src": "assets/product/procurement/030.jpg",
+                "caption": "Edit Pickup Request",
                 "step": 2
               }
             ]
+          }
+        ]
+      },
+      {
+        "heading": "Pickup Request Workflow Issues",
+        "intro": "<p>The <strong>Workflow Issues</strong> sub-tab of <strong>Pickup Request</strong> lists issues raised at pickup request approval steps.</p>",
+        "images": [],
+        "definitions": [
+          {
+            "term": "Counters and Download Excel",
+            "definition": "**Total Issues**, **Issues Approved** and **Issues Rejected**, with **Download Excel** and **Filters**."
           },
           {
-            "title": "Store or find a procurement document that isn't tied to one REQ/RFQ/PO",
-            "steps": [
-              "Go to <strong>Procurement</strong> and click the <strong>Document</strong> icon in the top toolbar.",
-              "Browse existing folders (e.g. RFQ, DIRECT REQ) or click <strong>New Folder</strong> to create one.",
-              "Click <strong>Add File</strong> to upload into the current folder."
+            "term": "Columns",
+            "definition": "**WFL Number**, **PR ID**, **Level**, **Raised on Date**, **Raised on Time**, **Raised by**, **Image**, **Comments**, **Assign To**, **Due Date**, **Chat** and **See History**."
+          }
+        ]
+      },
+      {
+        "heading": "Purchase Order Master",
+        "intro": "<p>The <strong>Purchase Order Master</strong> tab is one table of every purchase order with its cost, invoiced amount, balance and vendor. Use it to see how much of each order is still to be invoiced.</p>",
+        "images": [
+          {
+            "src": "assets/product/procurement/031.jpg",
+            "caption": "Purchase Order Master"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Download Excel",
+            "definition": "Downloads the table as an Excel file."
+          },
+          {
+            "term": "Filters",
+            "definition": "Opens a dialog with **Projects**, **Purchase Order Type**, **Status**, **Purchase Order Raised Date Range**, **Delivery Date Range**, **Vendor** and **PO ID**."
+          },
+          {
+            "term": "Manage Columns and page counter",
+            "definition": "Choose which columns show and in what order. The counter reads for example **1 to 30 of 86** with arrows."
+          },
+          {
+            "term": "Columns",
+            "definition": "**PO No**, **Status**, **Item Details**, **History**, **REQ Details**, **Total Cost**, **Total Invoice Cost**, **Balance Cost**, **Vendor ID**, **Vendor**, **PO Approved Date**, **Invoice status**, **Comments** and **Actions**. Most have a filter icon."
+          },
+          {
+            "term": "Item Details",
+            "definition": "Click here to view opens a dialog listing each item with **Specification**, **Due Date**, **Duration till date**, **Received till date**, **Transferred**, **Order Date**, **Delivered Date** and **Invoice Date**."
+          },
+          {
+            "term": "Comments and Actions",
+            "definition": "Each row has a **Comments** button and a bin icon for deleting the order."
+          }
+        ]
+      },
+      {
+        "heading": "Document",
+        "intro": "<p>The <strong>Document</strong> button opens a file area for the whole Procurement module: folders and files with a <strong>Last Modified</strong> date and <strong>Actions</strong>.</p>",
+        "images": [
+          {
+            "src": "assets/product/procurement/033.jpg",
+            "caption": "Procurement Documents, RFQ folder"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Folders",
+            "definition": "The top level shows two folders: **RFQ** and **DIRECT REQ**. Inside **RFQ** there is one folder per RFQ (for example RFQ-93) with its last modified date."
+          },
+          {
+            "term": "Breadcrumb",
+            "definition": "The path above the list; click an earlier name to go back up."
+          },
+          {
+            "term": "+ New Folder and + Add File",
+            "definition": "Create a folder, or upload a file into the folder you are in."
+          }
+        ]
+      },
+      {
+        "heading": "Communication",
+        "intro": "<p>The <strong>Communication</strong> button opens the module's mailbox.</p>",
+        "images": [
+          {
+            "src": "assets/product/procurement/034.jpg",
+            "caption": "Communication"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Compose Mail",
+            "definition": "Opens a new email window."
+          },
+          {
+            "term": "Search mail",
+            "definition": "Searches the mailbox."
+          },
+          {
+            "term": "Folders",
+            "definition": "**All Emails**, **Inbox**, **Sent**, **Drafts**, **Starred** and **Trash**, each with a count."
+          },
+          {
+            "term": "Gear icon",
+            "definition": "Opens **Mail Settings** on the right with a **Signature** list: **Create New** adds one, each signature has edit and delete icons and a text editor (style, bold, italic, underline, lists, alignment) and **Save Changes** keeps them.",
+            "images": [
+              {
+                "src": "assets/product/procurement/035.jpg",
+                "caption": "Mail Settings"
+              }
             ]
           }
         ]
       },
       {
         "heading": "Settings",
-        "intro": "<p>Procurement Settings is the administrative control center for the entire module, and getting it right matters to the business because it defines how disciplined the company's purchasing process actually is in practice. Rather than hard-coding what a requisition, purchase order, invoice, or pickup request looks like, Arena exposes each of these as a configurable form, plus company-wide rules for how approvals, IDs, and issue priorities behave. This is where a Procurement Admin shapes procurement to match the company's actual paperwork and sign-off process, instead of forcing every project to use one rigid template.</p><p>Because procurement documents differ meaningfully by type — a Material purchase order looks different from a Delivery Service one — most of the form builders here are split by procurement type (Material, Equipment, Equipment Part, Delivery Service), letting the admin tailor fields precisely to what each category of purchase actually needs to capture. Settings also governs cross-cutting behavior that applies no matter which document type is in play: how approval chains are built, how document IDs are generated, and how urgently an issue needs to be resolved.</p><p>Getting these settings right up front avoids a lot of friction later for the people who actually run purchasing day to day. A well-configured REQ form, for instance, captures the specifications a vendor will need at RFQ time; a properly leveled approval workflow makes sure spend actually gets the right eyes — a Purchasing Manager, a PM, a finance approver — before it becomes a commitment. Most of Procurement Settings should be revisited by the admin whenever the company's purchasing policy changes, not just at initial setup.</p>",
+        "intro": "<p>The <strong>Settings</strong> button opens the Procurement settings. A menu on the left lists the pages, described one by one below.</p>",
+        "images": [],
         "definitions": [
           {
-            "term": "Form builder",
-            "definition": "Arena's tool for constructing custom document forms out of configurable sections and field types (paragraph, single select, multi-select, tables, and more). Used throughout Procurement Settings to define the REQ, PO, Delivery Receipt, Invoice, and Pickup Request forms."
+            "term": "Approval Workflow",
+            "definition": "How many approval levels each document needs and who approves."
           },
           {
-            "term": "Approval Workflow (Procurement)",
-            "definition": "A configurable, multi-level chain of approvers applied to Requisition forms, Purchase Orders, Invoices, and Pickup Requests. Each level can require that all assigned approvers sign off (\"All must approve\") or that just one does (\"Any one can approve\")."
+            "term": "Form pages",
+            "definition": "**Requisition Form (REQ)**, **Purchase Order Form (PO)**, **Delivery Receipt Form**, **Invoices Form** and **Pickup Request Form** set the fields of each document."
           },
           {
-            "term": "ID Settings",
-            "definition": "The configuration for how procurement document IDs are generated — either a System Default auto-generated format, or a Custom format built from selected fields in a chosen order."
+            "term": "Other pages",
+            "definition": "**Procurement Issues**, **ID Settings**, **RFQ Settings**, **Default Assign To** and **Users and Permissions**."
+          }
+        ]
+      },
+      {
+        "heading": "Approval Workflow",
+        "intro": "<p>The <strong>Approval Workflow</strong> settings page defines the approval levels for requisitions, purchase orders, invoices and pickup requests, separately for each item type.</p>",
+        "images": [
+          {
+            "src": "assets/product/procurement/036.jpg",
+            "caption": "Approval Workflow settings"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Document tabs",
+            "definition": "**Requisition Form (REQ)**, **Purchase Order (PO)**, **Invoices** and **Pickup Request**."
           },
           {
-            "term": "Issues Priority",
-            "definition": "A set of priority levels (each with a Due Hours value) that can be applied to procurement issues, giving them a service-level expectation for resolution."
+            "term": "Item type tabs",
+            "definition": "Under each document: **Equipment Rental**, **Equipment Procured**, **Material**, **Equipment Part Rental**, **Equipment Part Purchased** and **Delivery Service**. Each type has its own levels."
           },
           {
-            "term": "Where settings lists come from",
-            "definition": "**Approvers** (Approval Workflow, Create Level): every company user. **Default Assign To**: eight tabs, **REQ**, **RFQ**, **Vendor Response**, **Purchase Order**, **Direct Purchase Order**, **Delivery Receipt**, **Invoice** and **Pickup Request**; **+ Add** opens an **Assign To** list with search and **Select All** showing the project's people, and the people you tick are filled into the **Assignee** field of new records of that type. **RFQ Settings → Default Point Of Contact**: every company user. **Procurement Issues**: the priorities that Delivery Receipt inspection issues can use. **ID Settings**: only changes the numbering of new documents."
+            "term": "Levels table",
+            "definition": "**Level**, **Level Description**, **Approvers**, **Workflow Type** (**All must approve** or **Any one can approve**) and **Actions** (edit, delete)."
+          },
+          {
+            "term": "Create Level",
+            "definition": "Opens **Workflow**: the **Level** number, **Workflow Type**, **Description** and **Select Approver(s)** (a list of users with **Select All**). **Submit** saves; **Cancel** closes."
           }
         ],
         "procedures": [
           {
-            "title": "Customize the requisition form",
+            "title": "Add an approval level",
             "steps": [
-              "Go to **Procurement → Settings → Requisition Form (REQ)**.",
-              "Use the form builder to add sections and choose field types (paragraph, single select, multi-select, tables, etc.) for each.",
-              "Save your changes."
-            ],
+              "Open **Settings** and choose **Approval Workflow**.",
+              "Pick the document tab, then the item type tab.",
+              "Click **Create Level**.",
+              "Choose **All must approve** or **Any one can approve**, add a **Description** and tick the approvers.",
+              "Click **Submit**."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Requisition Form (REQ)",
+        "intro": "<p>The <strong>Requisition Form (REQ)</strong> settings page designs the Create Requisition Form for each item type.</p>",
+        "images": [
+          {
+            "src": "assets/product/procurement/037.jpg",
+            "caption": "Requisition Form (REQ) settings"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Edit 'Requesting Date' in REQ",
+            "definition": "A switch at the top of the page, named for the requesting date field of the form."
+          },
+          {
+            "term": "Item type tabs",
+            "definition": "**Materials**, **Equipment Rental**, **Equipment Purchased**, **Equipment Part Rental**, **Equipment Part Purchased** and **Delivery Service**. Each has its own layout."
+          },
+          {
+            "term": "Table Standard Fields",
+            "definition": "The fixed columns of the item table, numbered. For **Materials**: **Material**, **Quantity**, **UOM**, **Phase Code** and **Required Date**."
+          },
+          {
+            "term": "Table Custom Fields",
+            "definition": "Set **Rows** and **Columns** and click **Add Column** to add your own columns to the item table. Each added column has a name, a type and a menu; each row has add and delete icons."
+          },
+          {
+            "term": "Sections and fields",
+            "definition": "Below the table the form is made of sections of fields. Each field has **Required**, **Show on card** and **CHOOSE TYPE** (for example **Text Box** or **Work Order**), with icons to add, copy and delete it. **Add field** and **Add section** extend the form. The **Notes** and **Work Order** fields on the Create Requisition Form come from here."
+          },
+          {
+            "term": "Save Changes",
+            "definition": "Saves the layout for the open item type."
+          }
+        ]
+      },
+      {
+        "heading": "Purchase Order Form (PO)",
+        "intro": "<p>The <strong>Purchase Order Form (PO)</strong> settings page works like the requisition form page but for purchase orders.</p>",
+        "images": [],
+        "definitions": [
+          {
+            "term": "Item type tabs",
+            "definition": "**Materials**, **Equipment Rental**, **Equipment Purchased**, **Equipment Part Rental**, **Equipment Part Purchased** and **Delivery Service**."
+          },
+          {
+            "term": "Table Standard Fields",
+            "definition": "For **Materials**: **Material**, **Quantity**, **UOM**, **Phase Code**, **Required Date**, **Tax Code**, **Price** and **Lead Time(Weeks)**."
+          },
+          {
+            "term": "Table Custom Fields and sections",
+            "definition": "Add columns to the item table, and add sections and fields (each with **Required**, **Show on card** and **CHOOSE TYPE**) to the rest of the form. **Save Changes** keeps them."
+          }
+        ]
+      },
+      {
+        "heading": "Delivery Receipt Form",
+        "intro": "<p>The <strong>Delivery Receipt Form</strong> settings page designs the delivery receipt and its inspection checks. It has three steps: <strong>1 Form</strong>, <strong>2 Trigger Points</strong> and <strong>3 Preview Form</strong>.</p>",
+        "images": [
+          {
+            "src": "assets/product/procurement/038.jpg",
+            "caption": "Delivery Receipt Form, Form step"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Table Standard Fields",
+            "definition": "**Item**, **Procured Quantity**, **Received Already** and **Receiving Now**."
+          },
+          {
+            "term": "1 Form",
+            "definition": "The form's sections. The default section is **Inspection Items**: checks such as **Per AML** (answers **Yes**, **No**, **NA**) and **Check Per MTR** (**Accept**, **Reject**, **NA**), each a **Check Box** or **Text Box** field with **Required** and **Show on card**."
+          },
+          {
+            "term": "2 Trigger Points",
+            "definition": "For each answer of a check box field, tick **Raise Issue when the field is updated** to create an entry in **Inspection Issues** when that answer is chosen, or **Enter Notes when the field is updated** to require a note.",
             "images": [
               {
-                "src": "assets/notion/procurement-settings-req-form/001.jpg",
-                "caption": "REQ Form settings",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/procurement-settings-req-form/002.jpg",
-                "caption": "The form builder for the requisition form",
-                "step": 2
+                "src": "assets/product/procurement/039.jpg",
+                "caption": "Trigger Points step"
               }
             ]
           },
           {
-            "title": "Configure the Purchase Order form",
-            "steps": [
-              "Go to **Procurement → Settings → Purchase Order Form (PO)**.",
-              "Select the tab for the procurement type you want to configure: <strong>Material</strong>, <strong>Equipment</strong>, <strong>Equipment Part</strong>, or <strong>Delivery Service</strong>.",
-              "Use the form builder to configure that type's fields separately from the others."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/procurement-settings-po-configuration/001.jpg",
-                "caption": "PO Configuration settings",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/procurement-settings-po-configuration/002.jpg",
-                "caption": "The form builder for each procurement type",
-                "step": 3
-              }
-            ]
+            "term": "3 Preview Form",
+            "definition": "Shows the form as users will see it."
+          }
+        ]
+      },
+      {
+        "heading": "Invoices Form",
+        "intro": "<p>The <strong>Invoices Form</strong> settings page designs the invoice form.</p>",
+        "images": [],
+        "definitions": [
+          {
+            "term": "Table Standard Fields",
+            "definition": "For **Materials**: **Material**, **Start Date**, **End Date**, **Quantity**, **Billing From**, **Billing To**, **Tax Amount** and **Total Amount**."
           },
           {
-            "title": "Configure the Delivery Receipt form",
-            "steps": [
-              "Go to **Procurement → Settings → Delivery Receipt Form**.",
-              "Use the form builder to configure the Delivery Receipt form for <strong>Material</strong>, <strong>Equipment</strong>, <strong>Equipment Part</strong>, and <strong>Delivery Service</strong>."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/procurement-settings-delivery-request/001.jpg",
-                "caption": "Delivery Request settings",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/procurement-settings-delivery-request/002.jpg",
-                "caption": "The form builder for Delivery Receipts",
-                "step": 2
-              }
-            ]
+            "term": "Custom fields",
+            "definition": "Add table columns, sections and fields the same way as on the requisition form page, per item type tab."
+          }
+        ]
+      },
+      {
+        "heading": "Pickup Request Form",
+        "intro": "<p>The <strong>Pickup Request Form</strong> settings page designs the pickup request form. It has one tab, <strong>Equipment Rental</strong>.</p>",
+        "images": [],
+        "definitions": [
+          {
+            "term": "Table Standard Fields",
+            "definition": "**Equipment Number** and **Equipment**."
           },
           {
-            "title": "Configure the Invoice form",
-            "steps": [
-              "Go to **Procurement → Settings → Invoices Form**.",
-              "Use the form builder to configure the invoice form for <strong>Equipment</strong>, <strong>Material</strong>, <strong>Equipment Part</strong>, and <strong>Delivery Service</strong>, adding multiple sections and field types as needed."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/procurement-settings-invoice/001.jpg",
-                "caption": "Invoice settings",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/procurement-settings-invoice/002.jpg",
-                "caption": "The form builder for invoices, with a tab for each procurement type",
-                "step": 2
-              }
-            ]
+            "term": "Custom fields",
+            "definition": "Add table columns, sections and fields the same way as on the other form pages."
+          }
+        ]
+      },
+      {
+        "heading": "Procurement Issues",
+        "intro": "<p>The <strong>Procurement Issues</strong> settings page sets how urgent issues on <strong>Delivery Receipt</strong> are.</p>",
+        "images": [
+          {
+            "src": "assets/product/procurement/040.jpg",
+            "caption": "Procurement Issues settings"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Priority table",
+            "definition": "**Priority** and **Due Hours**: **High** is 4 hours, **Medium** 24 hours and **Low** 48 hours. Each row has edit and delete icons."
           },
           {
-            "title": "Configure the Pickup Request form",
-            "steps": [
-              "Go to **Procurement → Settings → Pickup Request Form**.",
-              "Configure the form fields using the form builder.",
-              "Click <strong>Save changes</strong>."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/procurement-settings-pickup-request/001.jpg",
-                "caption": "Pickup Request settings",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/procurement-settings-pickup-request/002.jpg",
-                "caption": "The form builder for the pickup request, then Save changes",
-                "step": 3
-              }
-            ]
+            "term": "Add Priority",
+            "definition": "Adds another priority level with its due hours."
+          }
+        ]
+      },
+      {
+        "heading": "ID Settings",
+        "intro": "<p>The <strong>ID Settings</strong> settings page chooses how the numbers of procurement documents are built.</p>",
+        "images": [
+          {
+            "src": "assets/product/procurement/041.jpg",
+            "caption": "ID Settings"
           },
           {
-            "title": "Set up a procurement approval workflow",
-            "steps": [
-              "Go to **Procurement Settings → Approval Workflow**.",
-              "Pick the document tab: **Requisition Form (REQ)**, **Purchase Order (PO)**, **Invoices** or **Pickup Request**. For a requisition also pick the category tab (for example **Material** or **Equipment Rental**).",
-              "Click **+ Create** to add a level, choose **All must approve** or **Any one can approve**, add a description, tick the approvers and click **Submit**.",
-              "Repeat to add as many levels as your sign-off process needs."
-            ],
-            "note": "Each document type, and each requisition category, has its own chain. A category with no levels has no approval chain to follow.",
-            "images": [
-              {
-                "src": "assets/notion/procurement-settings-approval-workflow/001.jpg",
-                "caption": "Approval Workflow settings for requisitions, purchase orders, invoices and pickup requests",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/procurement-settings-approval-workflow/002.jpg",
-                "caption": "Create Level, with All must approve or Any one can approve",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/procurement-settings-approval-workflow/003.jpg",
-                "caption": "A workflow with several levels",
-                "step": 4
-              }
-            ]
+            "src": "assets/product/procurement/042.jpg",
+            "caption": "ID Settings with Custom selected"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Document tabs",
+            "definition": "**REQ**, **RFQ**, **Vendor Response**, **Purchase Order**, **Direct Purchase Order**, **Delivery Receipt**, **Invoice** and **Pickup Request**."
           },
           {
-            "title": "Configure ID formats for procurement documents",
-            "steps": [
-              "Go to <strong>Procurement &gt; ID Settings</strong>, then pick a tab: REQ, RFQ, Vendor Response, Purchase Order, Direct Purchase Order, Delivery Receipt, Invoice, or Pickup Request.",
-              "Choose <strong>System Default</strong> for an auto-generated ID, or <strong>Custom</strong>.",
-              "For Custom, check the fields to include — Date, Month, Year, Serial No./ID, Requester Initials First/Last Name, Project Number — drag them into the order you want, and pick an ID Separator (<strong>/</strong>, <strong>-</strong>, or none). The Example Format at the top updates live as you check fields.",
-              "Click <strong>Save Changes</strong>."
-            ],
-            "note": "Checking Project Number adds the project's number as an extra segment of the ID (e.g. an example format changes from \"PO ID\" to \"PO ID/PN\"). It does not restart the Serial No./ID counter per project — that counter keeps counting company-wide regardless of which fields are included.",
-            "images": [
-              {
-                "src": "assets/notion/procurement-id-settings/002.jpg",
-                "caption": "ID format options for a document type",
-                "step": 3
-              }
-            ]
+            "term": "System Default and Custom",
+            "definition": "**System Default** uses the system's standard numbering. **Custom** shows an **Example Format**, an **ID Separator** (**/**, **-** or **None**) and a list of parts to tick and drag into order: **Requester Initials First Name**, **Requester Initials Last Name**, **Date**, **Month**, **Year**, **Serial No./ID** and **Project Number**."
           },
           {
-            "title": "Set priority levels for Delivery Receipt inspection issues",
-            "steps": [
-              "Go to <strong>Procurement Settings &gt; Procurement Issues</strong>.",
-              "Click <strong>Add Priority</strong>.",
-              "Name the priority level and set its <strong>Due Hours</strong> — the SLA for rectifying an issue raised at that priority."
-            ],
-            "note": "This priority list is specifically for issues raised while inspecting a Delivery Receipt (see Delivery Receipts → Inspection Issues), not a general-purpose priority list for every procurement document. A verified environment had High (4 hours), Medium (24 hours), and Low (48 hours).",
-            "images": [
-              {
-                "src": "assets/notion/procurement-settings-issues-priority/002.jpg",
-                "caption": "Adding a priority level with its due hours",
-                "step": 2
-              }
-            ]
+            "term": "Save Changes",
+            "definition": "Applies the choice to the open tab."
+          }
+        ]
+      },
+      {
+        "heading": "RFQ Settings",
+        "intro": "<p>The <strong>RFQ Settings</strong> settings page has one setting, <strong>Default Point Of Contact</strong>. The Identify Vendors step of an RFQ also asks for a <strong>Company Point Of Contact</strong>.</p>",
+        "images": [],
+        "definitions": [
+          {
+            "term": "Default Point Of Contact",
+            "definition": "A list to choose the default contact from. **Save Changes** keeps the choice."
+          }
+        ]
+      },
+      {
+        "heading": "Default Assign To",
+        "intro": "<p>The <strong>Default Assign To</strong> settings page lists the people set as default assignees for each document type, the same people the <strong>Assign</strong> buttons on the lists start from.</p>",
+        "images": [
+          {
+            "src": "assets/product/procurement/043.jpg",
+            "caption": "Default Assign To"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Document tabs",
+            "definition": "**REQ**, **RFQ**, **Vendor Response**, **Purchase Order**, **Direct Purchase Order**, **Delivery Receipt**, **Invoice** and **Pickup Request**, each with its own people."
+          },
+          {
+            "term": "User cards",
+            "definition": "One card per person with a **VIEW** button and a three-dot menu holding **Edit** and **Delete**."
+          },
+          {
+            "term": "Add and Edit",
+            "definition": "**Add** and **Edit** open **Assign To**: a search box, **SELECT ALL** and a list of users to tick. **Submit** saves; **Cancel** closes."
+          }
+        ]
+      },
+      {
+        "heading": "Users and Permissions",
+        "intro": "<p>The <strong>Users and Permissions</strong> settings page holds the user groups that control who can do what in Procurement.</p>",
+        "images": [
+          {
+            "src": "assets/product/procurement/044.jpg",
+            "caption": "User groups"
+          },
+          {
+            "src": "assets/product/procurement/045.jpg",
+            "caption": "Group permissions"
+          }
+        ],
+        "definitions": [
+          {
+            "term": "Add User Group and search",
+            "definition": "**Add User Group** creates a group; **Search by group name** filters the cards."
+          },
+          {
+            "term": "Group card",
+            "definition": "Shows the group name, a three-dot menu, and the buttons **Permissions** and **Users**."
+          },
+          {
+            "term": "Permissions",
+            "definition": "Opens the group page with a table of Procurement and Settings pages (for example **Approval Workflow**, **Requisition Form(REQ)** and **ID Settings**). The columns are **View**, **Create**, **Edit**, **Delete**, **Admin**, **Download**, **Print**, **Assign To** and **Roll Back**; tick what the group may do and click **Save Changes**. A search box finds a page; the pencil by the name renames the group."
+          },
+          {
+            "term": "Users",
+            "definition": "The **Users** tab of the group lists its members."
           }
         ]
       }
@@ -37425,17 +37731,35 @@ const MODULES = [
       "Second-level tabs include REQ, RFQ, Vendor Responses, Purchase Order, Direct Purchase Order, Purchase Order Master, Delivery Receipts, Invoices, Pickup Request, and Communications."
     ],
     "sections": [
-      "Overview",
-      "Analytics Dashboard",
-      "Requisitions",
+      "Dashboard",
+      "Requisition Form",
+      "Requisition Workflow Issues",
       "RFQ",
       "Vendor Responses",
       "Purchase Orders",
+      "Direct Purchase Order",
+      "Purchase Order Workflow Issues",
       "Delivery Receipts",
-      "Invoices",
-      "Pickup Requests",
-      "Communications",
-      "Settings"
+      "Inspection Issues",
+      "Invoice",
+      "Invoice Workflow Issues",
+      "Pickup Request",
+      "Pickup Request Workflow Issues",
+      "Purchase Order Master",
+      "Document",
+      "Communication",
+      "Settings",
+      "Approval Workflow",
+      "Requisition Form (REQ)",
+      "Purchase Order Form (PO)",
+      "Delivery Receipt Form",
+      "Invoices Form",
+      "Pickup Request Form",
+      "Procurement Issues",
+      "ID Settings",
+      "RFQ Settings",
+      "Default Assign To",
+      "Users and Permissions"
     ]
   },
   {
