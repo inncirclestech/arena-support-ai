@@ -23332,90 +23332,85 @@ const MODULES = [
       },
       {
         "heading": "User Permission",
-        "intro": "<p><strong>User Permission</strong> shows the access of one user at a time: pick a user in the list on the left and read the details on the right.</p>",
-        "images": [
-          {
-            "src": "assets/product/global-data/053.jpg",
-            "caption": "User Permission: the three sections for the selected user"
-          }
-        ],
+        "intro": "<p><strong>User Permission</strong> is a tab of <strong>Users & Permissions</strong> in <strong>Global Data</strong>. It shows one user at a time: their details, their groups and their permission matrix.</p>",
         "definitions": [
           {
-            "term": "Users list",
-            "definition": "All users with a **Search Profiles** box. Click a user to show their details; the small arrow button folds the list away."
+            "term": "Users panel",
+            "definition": "On the left. A **Search Profiles** box and a scrolling list of users (name and email). The first user is selected by default. A yellow arrow on the panel edge collapses the panel."
           },
           {
             "term": "Basic Details",
-            "definition": "**Profile Photo**, **Name**, **Employee ID**, **Email Address**, **Username** and **No. of Groups**."
+            "definition": "Collapsible section showing Profile Photo, Name, Employee ID, Email Address, Username and No. of Groups."
           },
           {
             "term": "Groups",
-            "definition": "One tile for each group the user belongs to, with the group name."
+            "definition": "Collapsible section with one box per group the user belongs to. Each box shows the group's category chip and \"Name:\" with the group name. Clicking a box opens a dialog titled with the group name that shows that group's matrix, with a **Close** button."
           },
           {
             "term": "Permissions",
-            "definition": "The same permission table as in a group (**View**, **Create**, **Edit**, **Delete**, **Admin View**, **Admin**, **Download**, **Print**, **Assign To**, **Roll Back**), with **Search by Permission** and **Save Changes**."
+            "definition": "Collapsible section with the same matrix as a group: the columns View, Create, Edit, Delete, Admin View, Admin, Download, Print, Assign To and Roll Back, and the same section tree with expanders."
           }
-        ]
+        ],
+        "procedures": []
       },
       {
         "heading": "Global Permission",
-        "intro": "<p><strong>Global Permission</strong> holds the company's user groups. A group is a named set of permissions; every user placed in the group gets them. Each group is a card.</p>",
-        "images": [
-          {
-            "src": "assets/product/global-data/051.jpg",
-            "caption": "User group cards in Global Permission"
-          }
-        ],
+        "intro": "<p><strong>Global Permission</strong> is a tab of <strong>Users & Permissions</strong> in <strong>Global Data</strong>. It lists company-wide user groups, such as Super Admin, Project Manager and Foreman. A group holds a permission matrix and a list of users.</p>",
         "definitions": [
           {
-            "term": "Add User Group",
-            "definition": "Starts a new group. Give it a name, then set its permissions and add users."
+            "term": "+ Add User Group",
+            "definition": "Button at the top of the list."
           },
           {
-            "term": "Fetch Templates",
-            "definition": "Creates the standard admin groups (Super Admin, Opportunity Admin, Proposal Management Admin, Bid Management Admin, Procurement Admin, Inventory Management Admin, Time Management Admin, Work Order Admin, Expense Tracker Admin, Cost Tracking Admin, All Home Modules Admin, All Home Modules View Admin and Global Data Admin). Groups that already exist are skipped, and a warning lists \"User Group … already exists\" for each."
+            "term": "+ Fetch Templates",
+            "definition": "Button at the top of the list."
           },
           {
             "term": "Search by group name",
-            "definition": "Narrows the cards."
+            "definition": "Filters the group cards."
           },
           {
             "term": "Group card",
-            "definition": "Shows the group name with **Permissions** and **Users** buttons. The three-dot menu has **Edit**, **Delete** and **Copy**."
+            "definition": "Shows the group name, a three-dot menu with **Edit**, **Delete** and **Copy**, a **Permissions** button and a **Users** button. Cards show no description and no user count."
           },
           {
-            "term": "Permissions",
-            "definition": "Opens the group with its **Permissions** tab: a tree of areas (**Global**, **Company**, **Construction Type**, **Home**, **Projects**, **General**, **Sub Contractor Management Settings**, **Fabrication**, **Enterprise Dashboard**, **Opportunity Management**, **Work Order Management**, **Asset Management**, **Bid Management**, **Cost Tracking**, **Expense Tracker**, **Inventory Management**, **Procurement**, **Proposal Management**, **Time Management**), each opened with the plus sign. The columns are **View**, **Create**, **Edit**, **Delete**, **Admin View**, **Admin**, **Download**, **Print**, **Assign To** and **Roll Back**. **Search by Permission** finds a row and **Save Changes** stores the ticks. The pencil beside the group name renames it.",
-            "images": [
-              {
-                "src": "assets/product/global-data/052.jpg",
-                "caption": "The permission table of a user group"
-              }
-            ]
+            "term": "Group page",
+            "definition": "Shows the group name with a pencil icon, and two tabs: **Permissions** and **Users**."
           },
           {
-            "term": "Users",
-            "definition": "Opens the group's **Users** tab: **Add Users**, a search box, **Manage Columns** and a table of **S.No.**, **Profile Photo**, **Name**, **Roster ID**, **Email ID**, **Username**, **Groups** (how many groups the user is in) and **Actions** (delete, which removes the user from this group)."
+            "term": "Permissions tab",
+            "definition": "A matrix of screens against ten columns, in this order: **View**, **Create**, **Edit**, **Delete**, **Admin View**, **Admin**, **Download**, **Print**, **Assign To** and **Roll Back**. A cell has a checkbox only where that column applies to that row."
+          },
+          {
+            "term": "Search by Permission",
+            "definition": "Filters the matrix rows."
+          },
+          {
+            "term": "+ and - expanders",
+            "definition": "Each section has a **+** or **-** expander that opens or closes its rows."
+          },
+          {
+            "term": "Master Permission",
+            "definition": "The first row inside most sections. It has the same columns as the rows below it."
+          },
+          {
+            "term": "Save Changes",
+            "definition": "Orange button at the bottom right of the matrix."
+          },
+          {
+            "term": "Top-level sections",
+            "definition": "Global, Company, Construction Type, Home, Projects, General, Sub Contractor Management Settings, Fabrication, Enterprise Dashboard, Opportunity Management, Work Order Management, Asset Management, Bid Management, Cost Tracking, Expense Tracker, Inventory Management, Procurement, Proposal Management and Time Management. **Company** contains sub-sections such as Compliance Hub, Cost, Marketplace, People Management, Settings, UOM_PhaseCodes_CostTypes, Users And Permissions and Project User Groups."
+          },
+          {
+            "term": "Tab notes",
+            "definition": "Some rows under **Work Order Management** have no checkboxes and carry a note instead, for example that the Timesheet tab in the Work Order Contracts is enabled by activating the permissions in Timesheet. The same kind of note exists for the Equipment, Inventory and Procurement tabs, and for the Bid tab in Proposal Management, which points to Bid Management."
+          },
+          {
+            "term": "Users tab",
+            "definition": "Lists the members of the group. **+ Add Users**, a **Search Profiles** box, **Manage Columns** and a save-layout icon sit above the table. Columns: S.No., Profile Photo, Name, Roster ID, Email ID, Username, Groups and Actions. Each row has a red trash icon. A group with no members shows **No Data Available**."
           }
         ],
-        "procedures": [
-          {
-            "title": "Give a group its permissions",
-            "steps": [
-              "Open **Global Permission** and click **Permissions** on the group's card.",
-              "Open an area with the plus sign and tick the columns (**View**, **Create**, **Edit** and so on) for each row.",
-              "Click **Save Changes**."
-            ]
-          },
-          {
-            "title": "Put users in a group",
-            "steps": [
-              "Click **Users** on the group's card.",
-              "Click **Add Users** and choose the users."
-            ]
-          }
-        ]
+        "procedures": []
       },
       {
         "heading": "Global Rosters",
@@ -24505,700 +24500,966 @@ const MODULES = [
       },
       {
         "heading": "Forms",
-        "intro": "<p>Use this section to set up the form templates, document folder structures, Quick Apps and Standard Tables that projects start from. The Super Admin or a forms manager builds them once.</p><p><strong>Where this data goes:</strong> a project's <strong>Project Setup → Forms → Assign Templates</strong> picks from the templates built here (the RFI template list matched exactly), and its form list shows the same Project Forms names. Quick Apps show in Field Works, and notification events exist for forms.</p>",
+        "intro": "<p><strong>Forms</strong> in Global Data is where an administrator defines the form templates your organization uses. Each tab holds one family of forms, and each card opens the builder for one form.</p>",
         "definitions": [
           {
-            "term": "Construction Forms (tab)",
-            "definition": "Seven cards: **RFI** (Requests For Inspection), **Submittals**, **Change Orders**, **Meeting Minutes**, **Delay Form**, **Request For Information** and **Transmittals**. Other tabs: **Workorder Forms** (Workorders, Service Entry Sheet, Indent), **Procurement** (Procurement Packages, Purchase Orders, Material Receipts), **Inventory Forms** (Site Material Requests, Material Issue Tickets, Return Tickets, External Site Material Requests), **Drawing Management Forms** (Drawing Package Submittal, Drawing Register) and **Cost** (Transaction Logs, Change Orders, Transfer)."
+            "term": "Construction Forms",
+            "definition": "Seven cards: **RFI**, **Submittals**, **Change Orders**, **Meeting Minutes**, **Delay Form**, **Request For Information** and **Transmittals**."
           },
           {
-            "term": "Template (form)",
-            "definition": "A named, field-by-field layout for one form type, made with **Create Template**. For RFI the list has **Standard**, **General** (Default), **Consultants Advisory Form**, **Valigonda to Thorrur**, **RFI**, **rttest**, **Neelamangala - Tumukur RFI** and **0123**. A template opens the **RFI Form Configuration** builder with **Form Settings**, **Save Changes** and three steps: **RFI Form**, **Trigger Points**, **Preview Form**. Fields can be **Required**, **Show on card** or **Unique**; types include Text Box, Date, Label, Time, Check Box, Scribble, Map and Table. **Invoice Forms** and **Requisition Form** also have **Create Template**."
+            "term": "Work Order Forms",
+            "definition": "Three cards: **Work Orders**, **Service Entry Sheet** and **Indent**."
           },
           {
-            "term": "Document Management (templates)",
-            "definition": "Two tabs. **Structure Template** has **Create Template** and a list of folder templates (**FEL - 1**, **FEL - 2**, **FEL - 3**, **Detailed Engineering**); opening FEL - 1 shows **New Folder** and its folders (Civil, Mechanical, Structural, Architectural, Instrumentation, Process Controls) with Last Modified and Added On. **Document Template** has sub-tabs **Word**, **Excel**, **PPT** and **Text** with an **AddFile** button. **Where it goes:** in a project, **Project Setup → Documents → Import Template** opens **Global Templates**, whose list is exactly the **Structure Template** list here; importing builds the folder structure in that project."
+            "term": "Procurement",
+            "definition": "Three cards: **Procurement Packages**, **Purchase Orders** and **Material Receipts**."
           },
           {
-            "term": "Standard Tables",
-            "definition": "The **Standard Tables** tab of **Quick Apps** has **Add** and cards for reusable reference tables, such as **Drawing Status**."
+            "term": "Inventory Forms",
+            "definition": "Four cards: **Site Material Requests**, **Material Issue Tickets**, **Return Tickets** and **External Site Material Requests Conf**. The last card does not open a form."
           },
           {
-            "term": "Quick Apps",
-            "definition": "The **Quick Apps** tab has **Create** and cards for custom mini-apps: Bid or Estimate Log, Subcontractor Bid Proposal, Observation Report, Non-Conformance Report, Completion Notice, Initial Material Receiving, Storage Inspections, Stored Equipment Maintenance, Variance Request, Initial Electrical Equipment Receiving, Cable Receiving Insulation Resistance and Equipment Productivity Planner. The **Quick Apps** tile and **Document Management** are separate tiles on the Global Data home page."
+            "term": "Project Forms",
+            "definition": "A **+ Create** button on the left. When no project form type exists, the right panel says project forms are not configured and asks you to click **Create**."
           },
           {
-            "term": "Forms tabs",
-            "definition": "The **Forms** tile has nine tabs: **Construction Forms**, **Workorder Forms**, **Procurement**, **Inventory Forms**, **Project Forms**, **Drawing Management Forms**, **Cost**, **Invoice Forms** and **Requisition Form**. Each card or list opens the templates for one form type."
+            "term": "Drawing Management Forms",
+            "definition": "Two cards: **Drawing Package Submittal** (configure the forms used to submit drawing packages) and **Drawing Register** (configure the register and its fields)."
           },
           {
-            "term": "Project Forms tab",
-            "definition": "Two groups, each with its own **Create** button. **Project Forms** lists form types such as Laboratory Test Results, Field Test Results, Correspondence Details, Contractor Onboarding, Test Reports, Procurement Forms, Checklists, Estimate Quantity, Equipment Productivity Planner, Site Inspection, Quality, Permit to work, Near Miss, Observations, Non Conformance, Inspections, Material Inspection Request, NON CONFORMANCE REPORT and MATERIAL APPROVAL SHEET. **Safety Form** lists types such as Productivity Tracking, Claim Management, Safety Training tracking, Compliance Regulatory Form, Document Transmittal Form, Observation Form, Quality Incident Report, Variance Request Form, Completion Notice, Non-Conformance Report and Observation Report. Each has a ⋮ menu. **Project Setup → Forms** shows the same Project Forms names."
+            "term": "Cost",
+            "definition": "Three cards: **Transaction Logs** (track the actual transactions of the project), **Change Orders** (manage change orders of the baseline budget) and **Transfer** (move cost from one scope to another). This tab does not show the tab bar; go back to **Forms** to reach the other tabs."
           },
           {
-            "term": "Where form and template data comes from and goes",
-            "definition": "**Comes from:** **Create Template** on each form type, **Create** for Project Forms and Quick Apps, **Add** for Standard Tables. **Goes to:** **Project Setup → Forms**: the left list shows the Global Data Project Forms names; **Assign Templates** offers one template per form type (RFI, Request For Information, Transmittal, Submittals, Change Order, Meeting Minutes, Delay Forms, Invoices) for each area, from these lists; **Assign Users** and **Approval Workflow** then set who can view, create, edit and delete. Notification events for forms (Form Issues, Form Sharing, Custom Forms, RFIS and more) are under **Notifications**."
+            "term": "Invoice Forms",
+            "definition": "A **+ Create Template** button and a template list. One template, **Standard**, carries the **Default** label and has a three-dot menu."
+          },
+          {
+            "term": "Requisition Form",
+            "definition": "A **+ Create Template** button with an empty template list. The create dialog asks for a **Name** and an optional **Description**, with **Cancel** and **Submit**."
+          },
+          {
+            "term": "Template list",
+            "definition": "Opened from a card such as **Submittals**. Each template is a row; the one marked **Default** is the default template. A row marked **(Configuration not present)** has no form configuration to show. **Create Template** adds a new one. Clicking a template opens its form builder."
+          },
+          {
+            "term": "Log ID",
+            "definition": "A text box in the builder holding the prefix of the form's ID, for example **SM** for Submittals, **CO** for Change Orders and **MM** for Meeting Minutes."
+          },
+          {
+            "term": "Save Changes",
+            "definition": "The orange button at the top right of the builder."
+          },
+          {
+            "term": "Form, Trigger Points, Preview Form",
+            "definition": "The steps across the top of a builder. Their names follow the form, for example **Submittal Form**. Some forms have only two steps (the form and **Preview Form**)."
+          },
+          {
+            "term": "Required, Show on card, Unique",
+            "definition": "Three toggles on each configurable field. Some types add more, such as **Show as badge** on **Multi Select** and **Single Select**, and **Allow past date** on **Date**."
+          },
+          {
+            "term": "CHOOSE TYPE",
+            "definition": "A dropdown on each configurable field that sets its input type. The list has 28 types: Attachment, Check Box, Currency, Date, Dynamic Table Select, Equipment, Formulae, Inventory Locations, Label, Lookup, Map, Multi Select, Number, Paragraph, Phase Code, Poster, Progress Bar, Projects, Radio, Rating, Roster, Scribble, Single Select, Table, Text Box, Time, Signature and Work Order."
+          },
+          {
+            "term": "Add field and Add section",
+            "definition": "**Add field** adds a configurable field. **Add section** adds a section. Each field row also has add, copy and delete icons, and a section has copy and delete icons."
+          },
+          {
+            "term": "Status Configuration",
+            "definition": "A button in the builders of forms that have statuses (for example **Submittals**, **Change Orders**, **Meeting Minutes** and **Drawing Register**). It opens the status setup for that form."
+          },
+          {
+            "term": "Form Settings",
+            "definition": "A button in some builders (for example **RFI** and **Transmittals**) that opens a page of switches and options for the form."
+          },
+          {
+            "term": "Header toggles",
+            "definition": "Depending on the form, the builder header shows toggles such as **Chat**, **Approval Workflow**, **Connected Services**, **Status** and **Assigned To**."
           }
         ],
         "procedures": [
           {
-            "title": "Create a new RFI template",
+            "title": "Open a form template",
             "steps": [
-              "Go to <strong>Global Data → Forms</strong> → <strong>Construction Forms</strong> tab → click <strong>RFI</strong>.",
-              "Click <strong>Create Template</strong>.",
-              "Build the form layout (sections/fields) as needed and save."
-            ],
-            "note": "The new template is then offered in Project Setup → Forms → Assign Templates for RFI.",
-            "images": [
-              {
-                "src": "assets/notion/construction-forms/001.jpg",
-                "caption": "Choosing a form to set up its template",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/construction-forms/002.jpg",
-                "caption": "Standard Fields and Configurable Fields",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/construction-forms/003.jpg",
-                "caption": "Field types for a configurable field",
-                "step": 3
-              }
+              "Open **Global Data** and click **Forms**.",
+              "Click the tab for the family, for example **Construction Forms**.",
+              "Click the card, for example **Submittals**.",
+              "In the template list, click the template. Its builder opens."
             ]
           },
           {
-            "title": "Create a reusable folder structure for project documents",
+            "title": "Move between builder steps",
             "steps": [
-              "Go to <strong>Global Data → Document Management</strong> → <strong>Create Template</strong>, and name it (e.g. \"FEL-1\").",
-              "Select the template, then click <strong>New Folder</strong> repeatedly to build out the folder hierarchy (e.g. Civil, Mechanical, Structural).",
-              "Apply this template when setting up a new project's document space."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/document-management/001.jpg",
-                "caption": "Create Template for a document folder structure",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/document-management/002.jpg",
-                "caption": "Building the folder structure for a template",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/document-management/003.jpg",
-                "caption": "Adding documents to a folder",
-                "step": 2
-              }
-            ]
-          },
-          {
-            "title": "Create a Quick App",
-            "steps": [
-              "Go to <strong>Global Data → Quickapps</strong> → <strong>Quick Apps</strong> tab → <strong>Create</strong>.",
-              "Name the app and design its data-capture fields.",
-              "Save — the Quick App becomes available from the mobile/field app or relevant project screen."
-            ]
-          },
-          {
-            "title": "Create a Standard Table",
-            "steps": [
-              "Go to <strong>Quickapps</strong> → <strong>Standard Tables</strong> tab → <strong>Add</strong>.",
-              "Define the table's name and columns.",
-              "Save — the table can then be reused/referenced across projects."
+              "Open a template's builder.",
+              "Click the numbered step at the top, for example **Preview Form**, to see that step."
             ]
           }
+        ]
+      },
+      {
+        "heading": "Submittals Form",
+        "intro": "<p>The <strong>Submittals</strong> card defines the Submittal form. Open it from <strong>Forms</strong>, <strong>Construction Forms</strong>.</p>",
+        "definitions": [
+          {
+            "term": "Template list",
+            "definition": "Two templates: **Standard**, marked **Default**, and **General**, marked **(Configuration not present)**. A **Create Template** button sits above."
+          },
+          {
+            "term": "Header",
+            "definition": "Toggles for **Approval Workflow**, **Connected Services** (Old or New), **Status** and **Assigned To**; the **Log ID** box (value **SM**); **Status Configuration**; and **Save Changes**."
+          },
+          {
+            "term": "Steps",
+            "definition": "Three steps: **Submittal Form**, **Trigger Points** and **Preview Form**."
+          },
+          {
+            "term": "Submitted To",
+            "definition": "Text Box."
+          },
+          {
+            "term": "Submittal Type",
+            "definition": "Check Box with the options Drawings, Data, Request For Information, Comp. Form / Quality Record, Quality System Document and Others."
+          },
+          {
+            "term": "Description of Submittal",
+            "definition": "Paragraph."
+          },
+          {
+            "term": "Prepared By",
+            "definition": "Text Box."
+          },
+          {
+            "term": "Submittal Information",
+            "definition": "Table with the columns Item ID, Item Name, Intended Use and Comments."
+          },
+          {
+            "term": "Is all the data appropriate?",
+            "definition": "Check Box with the options Yes and No."
+          }
         ],
-        "images": [
+        "procedures": [
           {
-            "src": "assets/notion/construction-forms/004.jpg",
-            "caption": "The approval workflow toggle on RFI, Submittal and Change Order forms"
+            "title": "Open the Submittal form builder",
+            "steps": [
+              "Open **Forms** and click the **Construction Forms** tab.",
+              "Click the **Submittals** card.",
+              "Click the **Standard** template."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Change Orders Form",
+        "intro": "<p>The <strong>Change Orders</strong> card under <strong>Construction Forms</strong> defines the Change Order form. It is a different card from <strong>Change Orders</strong> on the <strong>Cost</strong> tab.</p>",
+        "definitions": [
+          {
+            "term": "Template list",
+            "definition": "Opens first, with **Standard** marked **Default**."
           },
           {
-            "src": "assets/notion/construction-forms/005.jpg",
-            "caption": "The connected services toggle on a form"
+            "term": "Header",
+            "definition": "Toggles for **Approval Workflow**, **Connected Services** (Old or New), **Status** and **Assigned To**; the **Log ID** box (value **CO**); **Status Configuration**; and **Save Changes**."
           },
           {
-            "src": "assets/notion/document-management/004.jpg",
-            "caption": "Editing a template by right-clicking it"
+            "term": "Submitted To",
+            "definition": "Text Box."
           },
           {
-            "src": "assets/notion/document-management/005.jpg",
-            "caption": "Deleting a template, with a confirmation dialog"
+            "term": "Requested For",
+            "definition": "Check Box with the options Change in Scope, Change in Timeline, Change in Cost and Change in Drawings."
           },
           {
-            "src": "assets/notion/form-builder/001.jpg",
-            "caption": "Form Builder: custom forms for use in projects"
+            "term": "Change Requested By and Submitted By",
+            "definition": "Two Check Box fields. A party list is shown with the options Self / Company, Client, Architect, Engineer, Construction Manager, Code Enforcement Official and Others."
           },
           {
-            "src": "assets/notion/form-builder/002.jpg",
-            "caption": "Create, to name a form and choose its icon"
+            "term": "Description of Change Order",
+            "definition": "Paragraph."
           },
           {
-            "src": "assets/notion/form-builder/003.jpg",
-            "caption": "The Form Builder interface for a form"
+            "term": "Prepared By",
+            "definition": "Text Box."
           },
           {
-            "src": "assets/notion/form-builder/004.jpg",
-            "caption": "The connected services toggle on a custom form"
+            "term": "Change Order Information",
+            "definition": "Table with the columns Work Division, Hours, Rate and Labor ($)."
           },
           {
-            "src": "assets/notion/setup-safety-forms/002.jpg",
-            "caption": "Response types for inspection items"
+            "term": "Is all the data appropriate?",
+            "definition": "Check Box with the options Yes and No."
+          }
+        ]
+      },
+      {
+        "heading": "Meeting Minutes Form",
+        "intro": "<p>The <strong>Meeting Minutes</strong> card defines the Meeting Minutes (MM) form. Its list page is titled <strong>Global Meeting Minutes</strong>.</p>",
+        "definitions": [
+          {
+            "term": "Template list",
+            "definition": "**Standard**, marked **Default**, and **General**, marked **(Configuration not present)**."
           },
           {
-            "src": "assets/notion/setup-safety-forms/003.jpg",
-            "caption": "Trigger points that let end users raise an issue or add notes"
+            "term": "Header",
+            "definition": "Toggles for **Connected Services** and **Status**; the **Log ID** box (value **MM**); **Status Configuration**; and **Save Changes**."
+          },
+          {
+            "term": "Attendees",
+            "definition": "Text Box, in **Section Name1**."
+          },
+          {
+            "term": "Points",
+            "definition": "Paragraph."
+          },
+          {
+            "term": "Objectives",
+            "definition": "Text Box."
+          },
+          {
+            "term": "Agenda",
+            "definition": "Text Box."
+          }
+        ]
+      },
+      {
+        "heading": "Delay Form",
+        "intro": "<p>The <strong>Delay Form</strong> card defines the form used to record delays.</p>",
+        "definitions": [
+          {
+            "term": "Template list",
+            "definition": "One template, **Standard**, marked **Default**."
+          },
+          {
+            "term": "Builder",
+            "definition": "Titled **Delay Form**, with standard and configurable fields, **Add field** and **Save Changes**."
+          },
+          {
+            "term": "Date",
+            "definition": "A Date field."
+          },
+          {
+            "term": "Single Select",
+            "definition": "A Single Select field with the options Yes and No."
+          },
+          {
+            "term": "Number fields",
+            "definition": "Three Number fields."
+          },
+          {
+            "term": "Phase Code",
+            "definition": "A dropdown field."
+          },
+          {
+            "term": "Paragraph",
+            "definition": "A Paragraph field."
+          },
+          {
+            "term": "Configurable Field 1",
+            "definition": "A Text Box."
+          }
+        ]
+      },
+      {
+        "heading": "Request For Information Form",
+        "intro": "<p>The <strong>Request For Information</strong> card under <strong>Construction Forms</strong> is a second, simpler form, separate from the <strong>RFI</strong> card. It has fewer settings and steps than the RFI form.</p>",
+        "definitions": [
+          {
+            "term": "Template list",
+            "definition": "**Standard**, marked **Default**, plus one template marked **(Configuration not present)**."
+          },
+          {
+            "term": "Steps",
+            "definition": "Two steps: **Request For Information Form** and **Preview Form**. There is no **Trigger Points** step."
+          },
+          {
+            "term": "Form Settings",
+            "definition": "Three settings only: **Log ID Key**, **Approval Workflow** and **Connected Services**. Both toggles show Inactive."
+          },
+          {
+            "term": "Subject",
+            "definition": "Text Box."
+          },
+          {
+            "term": "Question",
+            "definition": "Paragraph."
+          },
+          {
+            "term": "Suggested Solution",
+            "definition": "Paragraph, with a Hide option."
+          },
+          {
+            "term": "Attachments",
+            "definition": "Attachment."
+          },
+          {
+            "term": "Assignee",
+            "definition": "Roster."
+          },
+          {
+            "term": "Assignee (External Users)",
+            "definition": "Email."
+          },
+          {
+            "term": "Request For Information Manager",
+            "definition": "Roster."
+          },
+          {
+            "term": "CC/Distribution",
+            "definition": "Roster."
+          },
+          {
+            "term": "CC/Distribution (External Users)",
+            "definition": "Email."
+          },
+          {
+            "term": "Due Date",
+            "definition": "Date."
+          },
+          {
+            "term": "Priority",
+            "definition": "Type Priority."
+          },
+          {
+            "term": "Categories/Reasons",
+            "definition": "Type Categories."
+          },
+          {
+            "term": "Cost Impact and Schedule Impact",
+            "definition": "Two Single Select fields, each with the options Yes, No and Unknown."
+          },
+          {
+            "term": "Configurable field",
+            "definition": "One Text Box."
+          }
+        ]
+      },
+      {
+        "heading": "RFI Form",
+        "intro": "<p>The <strong>RFI</strong> card under <strong>Construction Forms</strong> opens the full RFI form. It has three builder steps and eleven Form Settings rows.</p>",
+        "definitions": [
+          {
+            "term": "Template list",
+            "definition": "Lists the RFI templates. **+ Create Template** is at the top right. Each template has a three-dot menu with **Make Default**, **Edit** and **Delete**. **Edit** opens **Update RFI Template** with a single **Name** field and **Cancel** and **Submit**, so it renames the template. **Default** marks the default template; **(Configuration not present)** marks a template with no form configuration."
+          },
+          {
+            "term": "1 RFI Form",
+            "definition": "The field step. The top block holds Address, Zip Code, City, State and PhoneNo (country code, number and an optional extension). **Standard Fields** has **Quantity** (type Number, **Required** on). Below it are about 36 configurable fields. **Form Settings** and **Save Changes** sit at the top right."
+          },
+          {
+            "term": "2 Trigger Points",
+            "definition": "A read-only **Form Title** box showing **RFI Form** and a collapsible **Section 1**. Each field, or each option of a choice field, has two checkboxes: **Raise Issue when the field is updated** and **Enter Notes when the field is updated**. Subject, Configurable Field 27 (Label) and Configurable Field 29 (Look Up) have no checkboxes. **Save Changes** and **Form Settings** stay at the top right."
+          },
+          {
+            "term": "3 Preview Form",
+            "definition": "Shows the form with the company logo and the header details, **Expand All** and **Collapse All** buttons, and collapsible **Standard Fields** and **Section 1** blocks. Standard Fields shows Length (L) x Breadth (B) x Height/Width (H/W) = Quantity, all number inputs. **Save Changes** is not shown on this step."
+          },
+          {
+            "term": "Log ID Key",
+            "definition": "Form Settings row, \"Customize the Log ID field label for this form\". A text box with the value **RFI**."
+          },
+          {
+            "term": "Approval Workflow",
+            "definition": "Form Settings row, \"Enable approval workflow for form submissions\". Shown Active."
+          },
+          {
+            "term": "Disable Form Resubmission",
+            "definition": "Form Settings row, \"Disable form resubmission after rejection\". Shown Inactive."
+          },
+          {
+            "term": "Connected Services",
+            "definition": "Form Settings row, \"Enable integration with external services\". Shown Active."
+          },
+          {
+            "term": "New Connected Services",
+            "definition": "Form Settings row, \"Use the new version of connected services\". Shown New."
+          },
+          {
+            "term": "Form Status",
+            "definition": "Form Settings row, \"Enable custom status configuration for forms\". Shown Active, with a **Configure** button. **Configure** opens **Form Status Configuration**: a table for Form Type **RFI** with the statuses **Start** and **Finish**, each with a pencil icon, and an **Add Status** row between them."
+          },
+          {
+            "term": "Assigned To Field",
+            "definition": "Form Settings row, \"Enable assignment of forms to users\". Shown Active."
+          },
+          {
+            "term": "Multiple Assignees",
+            "definition": "Form Settings row, \"Allow assigning forms to multiple users\". Shown Multiple."
+          },
+          {
+            "term": "Measurements",
+            "definition": "Form Settings row, \"Enable measurements fields (Height, Breadth, Length)\". Shown Measurement, with Quantity as the other value."
+          },
+          {
+            "term": "RFI To Be Deleted",
+            "definition": "Form Settings row, \"Drafted RFI To Be Deleted\". Shown Inactive."
+          },
+          {
+            "term": "Description Mandatory",
+            "definition": "Form Settings row, \"Make Description Mandatory\". Shown Optional."
+          }
+        ],
+        "procedures": [
+          {
+            "title": "Open the RFI form builder",
+            "steps": [
+              "Open **Forms** and click the **Construction Forms** tab.",
+              "Click the **RFI** card.",
+              "Click a template card, for example **Standard**. **RFI Form Configuration** opens."
+            ]
+          },
+          {
+            "title": "Open Form Settings",
+            "steps": [
+              "Open a template's **RFI Form Configuration**.",
+              "Click **Form Settings** at the top right.",
+              "Use the breadcrumb back arrow to return."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Transmittals Form",
+        "intro": "<p>The <strong>Transmittals</strong> card defines the Transmittal form.</p>",
+        "definitions": [
+          {
+            "term": "Template list",
+            "definition": "**Standard**, marked **Default**, plus one template marked **(Configuration not present)**."
+          },
+          {
+            "term": "Builder",
+            "definition": "Two steps: **Transmittal Form** and **Preview Form**. **Form Settings** and **Save Changes** sit at the top right."
+          },
+          {
+            "term": "Subject",
+            "definition": "Text Box."
+          },
+          {
+            "term": "To Internal Users",
+            "definition": "Roster."
+          },
+          {
+            "term": "To External Users",
+            "definition": "Email."
+          },
+          {
+            "term": "CC Internal Users",
+            "definition": "Roster."
+          },
+          {
+            "term": "CC/Distribution (External Users)",
+            "definition": "Email."
+          },
+          {
+            "term": "Submitted For",
+            "definition": "Type Submitted For."
+          },
+          {
+            "term": "Configurable field",
+            "definition": "One Text Box."
+          }
+        ]
+      },
+      {
+        "heading": "Work Order Forms",
+        "intro": "<p>The <strong>Work Order Forms</strong> tab holds three form builders: <strong>Work Orders</strong>, <strong>Service Entry Sheet</strong> and <strong>Indent</strong>.</p>",
+        "definitions": [
+          {
+            "term": "Workorders",
+            "definition": "Opens the **Workorder Form** builder directly, with no template list. It has **Add Field** and **Save Changes**. Configurable fields seen: **aa** and **Configurable Field 2**, both Text Box."
+          },
+          {
+            "term": "Service Entry Sheet",
+            "definition": "Opens a template list (**Standard** marked **Default**, plus one marked **(Configuration not present)**), then a builder with **Chat** and **Approval Workflow** toggles, a **Log ID** box, **Save Changes**, **Add field** and **Add section**. Standard fields: Project Name, Work Order Number, BOQ Line Item, Date, Remarks and Assigned To."
+          },
+          {
+            "term": "Indent",
+            "definition": "Opens a template list like Service Entry Sheet, then a builder with a **Chat** toggle, a **Log ID** box, **Save Changes**, **Add field** and **Add section**. Standard fields: Project Name, Work Order Number and BOQ Line Item."
+          }
+        ]
+      },
+      {
+        "heading": "Procurement Forms",
+        "intro": "<p>The <strong>Procurement</strong> tab holds the builders for <strong>Procurement Packages</strong>, <strong>Purchase Orders</strong> and <strong>Material Receipts</strong>.</p>",
+        "definitions": [
+          {
+            "term": "Procurement Packages",
+            "definition": "Builder opens directly. Standard fields: Entities, Super Locations, Locations and Activities. Configurable: **ConfigurableField1**, a Text Box."
+          },
+          {
+            "term": "Purchase Orders",
+            "definition": "Standard fields: Vendor Details, Point Of Contact, Purchase Order Details Table and Terms & Conditions. **Add section** is available."
+          },
+          {
+            "term": "Material Receipts",
+            "definition": "The delivery receipt form, with **Add field**, **Add section** and **Save Changes**. Standard fields: Purchase Order and Material Receipt Details Table. A configurable section **Inspection Items** holds: Per AML (Check Box: Yes, No, NA), Visual Inspection (Initial Off) (Text Box), Check Per MTR (Check Box: Accept, Reject, NA), ASME/ASTM Stamp Grade, MSDS (Check Box) and Notes for Delivery."
+          }
+        ]
+      },
+      {
+        "heading": "Inventory Forms",
+        "intro": "<p>The <strong>Inventory Forms</strong> tab holds the builders for site material requests, material issue tickets and return tickets.</p>",
+        "definitions": [
+          {
+            "term": "Site Material Requests",
+            "definition": "Page header **Pickup**. It has **Connected Services** toggles, a **Ship To Text Box / Ship To Location** option, **Add field** and **Save Changes**. Standard fields: Site Material Requests Id, Status, Project Name, Requested by, Required date and Materials. Configurable fields include a Single Select (Will be picked by Project team, Can be delivered by HO), a Paragraph and a field of type Work Order."
+          },
+          {
+            "term": "Material Issue Tickets",
+            "definition": "Page header **Ship**. Standard fields: Material Issue Tickets Id, Status, Site Material Requests Id, Project Name, Shipped by, Shipped date, Materials Shipped, Received by and Received date. Three configurable Text Box fields."
+          },
+          {
+            "term": "Return Tickets",
+            "definition": "Standard fields: Return Tickets Id, Status, Site Material Requests Id, Project Name, Shipped by, Shipped date, Materials Returned, Received by and Received date. One configurable Single Select with the options Seal opened, Partially used, Leftovers and Unused."
+          }
+        ]
+      },
+      {
+        "heading": "Drawing Management Forms",
+        "intro": "<p>The <strong>Drawing Management Forms</strong> tab holds <strong>Drawing Package Submittal</strong> and <strong>Drawing Register</strong>.</p>",
+        "definitions": [
+          {
+            "term": "Drawing Package Submittal",
+            "definition": "Page title **Drawing Package Submittal Forms**. A **Log ID** box (value **Submittal**), **Save Changes**, **Section 1 of 1** (**Section Name1**), **Add field** and **Add section**. Fields: Created By and Project, both Text Box."
+          },
+          {
+            "term": "Drawing Register",
+            "definition": "Page title **Configure Drawing Register Form**. Controls: a **Project Level / Tree Version** toggle (shown on Project Level), **Status Configuration**, an **Assign To** Inactive / Active toggle (shown Inactive), **Save Changes** and **Add field**. Standard fixed fields, both required Text Box: Drawing Id and Drawing Name. Configurable Text Box fields, each with **Required** and **Show on card**: Received Date, Locations, Network, Drawing Types, Sheets, Drawing Status and Remarks."
+          }
+        ]
+      },
+      {
+        "heading": "Cost Forms",
+        "intro": "<p>The <strong>Cost</strong> tab holds three form builders for project cost: <strong>Transaction Logs</strong>, <strong>Change Orders</strong> and <strong>Transfer</strong>.</p>",
+        "definitions": [
+          {
+            "term": "Transaction Logs",
+            "definition": "Card text: track all actual transactions of the project. The builder has **Chat** and **Approval Workflow** toggles (both Inactive), **Save Changes**, two steps (**Form**, **Preview Form**), **Section 1 of 1** with **Add field** and **Add section**. Standard numbered fields: Phase Code, Cost Code, Actual Cost and Committed Cost. One configurable field: **Cost Type**, a Text Box with **Required** off."
+          },
+          {
+            "term": "Change Orders",
+            "definition": "Card text: manage the change orders of the baseline budget of the project. Not the same as **Change Orders** under **Construction Forms**. The builder has the **Chat** and **Approval Workflow** toggles (Inactive), **Save Changes** and two steps. The **Form** step is empty except for **Add section**."
+          },
+          {
+            "term": "Transfer",
+            "definition": "Card text: transfer the cost from one scope to another scope. The builder matches cost Change Orders: the two toggles (Inactive), **Save Changes**, two steps and an empty **Form** step with **Add section**."
           }
         ]
       },
       {
         "heading": "Notifications",
-        "intro": "<p>Use this section to decide which system events send notifications, on which channels (Mail, Web, Mobile) and to which groups of people. The Super Admin sets it company-wide.</p><p><strong>Where this data goes:</strong> each project has its own <strong>Notifications</strong> screen (Event Groups, Events, Reminders, Alerts) with the same 32 event groups as the Events tab here, so what you configure here is the starting point for projects.</p>",
+        "intro": "<p><strong>Notifications</strong> in Global Data sets up which events notify people. It has two tabs: <strong>Event Groups</strong> and <strong>Events</strong>.</p>",
         "definitions": [
           {
-            "term": "Event Group",
-            "definition": "A named collection of events and the users who receive them. The **Event Groups** tab has **Add Event Groups** and **Get Standard Event Groups**, which loads the standard groups."
+            "term": "Event Groups",
+            "definition": "The default tab. It shows one card per group, for example Inventory Management, Equipment Management, Procurement, Work Order and Document Management. Buttons at the top: **+ Add Event Groups** and **Get Standard Event Groups**."
           },
           {
-            "term": "Add Event Groups",
-            "definition": "Creates a new custom event group beyond Arena's standard ones."
+            "term": "Group card",
+            "definition": "Each card has a three-dot menu (**Edit**, **Delete**), a **Notifications** button and a **Users** button."
           },
           {
-            "term": "Get Standard Event Groups",
-            "definition": "Reseeds Arena's default event groups, with a confirmation prompt before proceeding."
+            "term": "Notifications button",
+            "definition": "Opens a dialog titled with the group name and **Notifications**, subtitled \"Selected Notifications/Events that are part of the ... event group\". Columns: **Notifications**, **Mail**, **Web**, **Mobile**. Categories are collapsed rows: Bid Management, Document Management, Equipment Management, Expense Tracker, Global, Inventory Management, Opportunity Management, Procurement, Proposal Management, Timesheet Management and Work Order. Expand a category to see its events with a Mail, Web and Mobile switch each. The only button is the close **x**."
           },
           {
-            "term": "Events tab",
-            "definition": "The master list under **Global Data → Notifications → Events**, with columns **Events**, **Mail**, **Web** and **Mobile** and a **Reset to Standard** button. Open a group to see its events with mail, desktop and mobile icons (for example Timesheet: Timesheet Updated, Sent For Approval, Approved, Rejected). The groups include AWP, Change Orders, Cost Change order, Cost Transfers, Custom Forms, Data Analytics, Document Management, Drawing Management, Estimate, Form Issues, Form Sharing, Meeting Minutes, Progress, Project Safety Forms, Punch Lists, Quality Forms, Quantity Tracksheet, Quick Apps, RFIS, Request For Informations, Restraints, Safety Issues, Safety Observations, Scheduled Safety Forms, Site Posts, Submittals, Task, Timesheet, Transmittals, Tree Version, Work Order Invoice Payment and Workflow Issues."
+            "term": "Users button",
+            "definition": "Opens **Add Users to** the group, subtitled \"Selected Users that will receive notifications configured as part of the ... event group\". It has a **Select Users** list with a checkbox per user, **Select All**, **Cancel** and **Submit**."
           },
           {
-            "term": "Where notification settings come from and goes",
-            "definition": "**Comes from:** the Events tab toggles, and Event Groups you add or load here. **Goes to:** **Project → Notifications** (tabs **Event Groups**, **Events**, **Reminders**, **Alerts**), which shows the same event groups, with the same **Reset to Standard**, **Add Event Groups** and **Get Standard Event Groups** buttons. After changing events here, check the project's Notifications screen to confirm the change has carried over."
+            "term": "Events",
+            "definition": "The catalog of every event by category, with Mail, Web and Mobile switches per event. **Reset to Standard** is a red outline button. Click a category's **+** to expand it."
           },
           {
-            "term": "Events for productivity, quality, safety and drawings",
-            "definition": "The master **Events** list includes groups that cover the areas in this guide: **Progress** (18 events), **Timesheet** (4), **Quality Forms** (11), **Punch Lists** (5: PNL Raised, Assigned, Rectified, Chat New Comment, QC Verified), **Project Safety Forms** (13), **Scheduled Safety Forms** (10), **Safety Issues** (5), **Safety Observations** (7), **Restraints** (6), **Drawing Management** (20), **Workflow Issues** (3) and **Quantity Tracksheet** (4). Each event has **Mail**, **Web** and **Mobile** templates, and projects see the same events under **Project Notifications**. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
+            "term": "Event categories",
+            "definition": "13 categories: Bid Management, Document Management, Equipment Management, Expense Tracker, Fabrication, Global, Inventory Management, Opportunity Management, Procurement, Proposal Management, Sub Contractor Management, Timesheet Management and Work Order."
+          },
+          {
+            "term": "Procurement events",
+            "definition": "Assigned events for delivery receipts, direct purchase orders, invoices, pickup requests, purchase orders, RFQs and requisitions, plus **REQ Chat**, **REQ Approved**, **REQ Ready For Approval** and **REQ Rejected**."
+          },
+          {
+            "term": "Work Order events",
+            "definition": "Work Order Package Created, Form Submitted, Schedule Created, Form Approved, Form Updated, Form Ready For Approval, Issue Rejected, Issue Raised, Issue Assigned, Issue Rectified, Scope of Work Updated, Log Assigned, Profile Assigned, Expense Assigned, Drawing Assigned and Created For Issue."
+          },
+          {
+            "term": "Inventory Management events",
+            "definition": "Pick Up Ready For Approval, Pick Up Ticket Approved, Pick Up Ticket Rejected, Material Shipped, Material Returned, Minimum Stock Reached and Maximum Stock Exceeded."
+          },
+          {
+            "term": "Equipment Management events",
+            "definition": "Events for equipment entering or leaving a geofence, requests, haul requests, assignees, off-rent dates, inspection issues, utilization log reminders, registration, warranty and insurance expiring or expired, preventive maintenance approaching or overdue, stale telemetry, missing images and unmapped telematics."
+          },
+          {
+            "term": "Document Management events",
+            "definition": "Template, Folder and File events: Template Created, Updated and Deleted; Folder Created, Updated and Deleted; File Added and File Deleted."
+          },
+          {
+            "term": "Expense Tracker events",
+            "definition": "Expense Form Ready For Approval, Approved, Rejected, Deleted and Issue Assigned."
+          },
+          {
+            "term": "Global events",
+            "definition": "Forgot Password, User Registration, Project Created, Project Info Updated, Project Deleted and Compliance Directory Reminder."
+          },
+          {
+            "term": "Other categories",
+            "definition": "**Bid Management** has one event, **Bid Submission Package Response Chat**. **Fabrication**, **Opportunity Management**, **Proposal Management**, **Sub Contractor Management** and **Timesheet Management** list their own events on the **Events** tab."
           }
         ],
         "procedures": [
           {
-            "title": "Set up notification rules (e.g. email alerts for low inventory)",
+            "title": "See the events of a group",
             "steps": [
-              "Go to <strong>Global Data → Notifications</strong> → <strong>Event Groups</strong>.",
-              "Click <strong>Notifications</strong> on the relevant group (e.g. Inventory Management).",
-              "Expand the module section, find the specific event (e.g. \"Minimum Stock Reached\"), and toggle <strong>Mail</strong>, <strong>Web</strong>, and/or <strong>Mobile</strong> on."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/global-notifications/001.jpg",
-                "caption": "Event Groups shown as cards",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/global-notifications/004.jpg",
-                "caption": "The Notifications button, listing the events enabled for the group",
-                "step": 2
-              }
-            ],
-            "note": "Use Get Standard Event Groups first if the groups you expect are missing."
+              "Open **Global Data** and click **Notifications**.",
+              "On **Event Groups**, find the group card.",
+              "Click **Notifications**.",
+              "Click a category row to expand its events.",
+              "Click **x** to close."
+            ]
           },
           {
-            "title": "Create a custom notification group",
+            "title": "See the users of a group",
             "steps": [
-              "Go to <strong>Notifications</strong> → <strong>Event Groups</strong> → <strong>Add Event Groups</strong>.",
-              "Name the group, then use its <strong>Notifications</strong> button to select which events feed into it and on which channels.",
-              "Use its <strong>Users</strong> button to add the people who should receive these notifications."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/global-notifications/002.jpg",
-                "caption": "Add Event Group, with a name for the group",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/global-notifications/005.jpg",
-                "caption": "The Users button, listing the people in the group",
-                "step": 3
-              }
+              "Open **Global Data** and click **Notifications**.",
+              "On the group card, click **Users**.",
+              "Read the **Select Users** list, then click **Cancel**."
             ]
           }
         ]
       },
       {
         "heading": "Marketplace",
-        "intro": "<p>Use this section to connect Arena to outside systems (Microsoft 365, Adobe Sign, Trimble Viewpoint, Soft Tech and more) and to review data pulled in from them. The Super Admin sets it up.</p><p><strong>Where this data goes:</strong> Staged Tables hold the rows first; once mapped and created, they become records in the matching Global Data lists (Users, Crews, Phase Codes, GL Codes, Customers, Vendors, Owners) and in Projects and Work Orders. Outlook choices here feed <strong>Settings → Mail Settings</strong>.</p>",
+        "intro": "<p>The <strong>Marketplace</strong> lists the outside apps Arena can connect to. Open it from <strong>Global Data</strong>. Each card opens that app's own connection screen.</p>",
         "definitions": [
           {
-            "term": "Marketplace",
-            "definition": "The grid of integration cards at **Global Data → Marketplace**, with a search box. The cards include **Microsoft OneDrive**, **Microsoft Sharepoint**, **Microsoft Outlook**, **Microsoft Users**, **Microsoft Calendar**, **Adobe Sign**, **Trimble Viewpoint**, **Google Maps**, **Inn Clock Consent**, **Zoom Info**, **Telematics**, **Weather Station**, **Trimble Viewpoint (App Xchange)** and **IFS**."
+            "term": "Search",
+            "definition": "The box at the top left filters the cards."
           },
           {
-            "term": "Org-wide consent",
-            "definition": "The pattern most Microsoft integrations use: an admin signs in once with a company-domain email to grant consent on behalf of the whole organization."
+            "term": "App cards",
+            "definition": "There are 14 cards, each with a logo, a name and a one-line description: **Microsoft OneDrive**, **Microsoft Sharepoint**, **Microsoft Outlook**, **Microsoft Users**, **Microsoft Calendar**, **Adobe Sign**, **Trimble Viewpoint**, **Google Maps**, **Inn Clock Consent**, **Zoom Info**, **Telematics**, **Weather Station**, **Trimble Viewpoint (App Xchange)** and **IFS**. Click a card to open its screen."
           },
           {
-            "term": "Trimble Viewpoint connection",
-            "definition": "An ERP integration requiring connection credentials (Test Connection and Save), then per-module Table Name/Schema Name mapping (Save Configuration), after which each module gets a Link button tying it to a Stage and Primary Key column."
+            "term": "Microsoft OneDrive",
+            "definition": "Shows the heading **Connect Your Microsoft Account for Document Management** and a **Revoke Consent** button. When consent is already given, a green **GRANTED** label appears with the Microsoft account that granted it."
           },
           {
-            "term": "Vista (Trimble Viewpoint)",
-            "definition": "Many teams call this integration \"Vista\" after Viewpoint Vista, Trimble's construction ERP. In Arena it appears as the <strong>Trimble Viewpoint</strong> card in Marketplace (settings page \"Trimble Viewpoint Settings\") and as the <strong>View Point</strong> tab in Staged Tables. There is no separate card or tab named \"Vista\"."
+            "term": "Microsoft Sharepoint",
+            "definition": "Has two tabs. **Consent Settings** shows a note that you give consent on behalf of your organisation for all users, who are then not prompted, and a **Sign In with Microsoft** button. **Module Mapping** shows the message **No SharePoint Consent Configured** and asks you to configure consent in **Consent Settings** first; it has no buttons until then."
           },
           {
-            "term": "Staged Tables",
-            "definition": "The holding area for data pulled in from an outside system before it becomes real Arena records. It has two source tabs: <strong>View Point</strong> (Vista) and <strong>Soft Tech</strong>. The View Point tab stages 13 entities: Users, Projects, Crews, Phase Codes, Customers, Vendors, Owners, Project User Mapping, Project Crew Mapping, Work Order Crew Mapping, GL Codes, Work Orders, and Logs."
+            "term": "Microsoft Outlook",
+            "definition": "Shows **Connect Your Microsoft Account for Outlook**, the same organisation-consent note and a **Sign In with Microsoft** button."
           },
           {
-            "term": "Map Attributes",
-            "definition": "The screen where you pick which Viewpoint column feeds each Arena field (for example Employee ID, First Name, Last Name, Craft and Class for Users). Each field has an <strong>Update after sync?</strong> checkbox: when ticked, later syncs overwrite that field in Arena; when unticked, Arena keeps its own value. Projects and Phase Codes also have a <strong>Map Values</strong> column for translating Viewpoint values (such as project statuses or cost types) into Arena's own values."
+            "term": "Microsoft Users",
+            "definition": "Shows **Connect Your Microsoft Account Users**, the same organisation-consent note and a **Sign In with Microsoft** button."
           },
           {
-            "term": "Auto Sync Criteria",
-            "definition": "A per-entity schedule that pulls data from Viewpoint every 1 to 24 hours. A second option, <strong>Auto create arena records after sync?</strong>, turns the staged rows into Arena records automatically after each pull, so nobody has to click Bulk Create."
+            "term": "Microsoft Calendar",
+            "definition": "Shows **Connect Your Microsoft Account for Calendar**, the same organisation-consent note and a **Sign In with Microsoft** button. A **PENDING** label under the button means calendar consent has not been given yet."
           },
           {
-            "term": "Bulk Create Arena Records",
-            "definition": "Creates Arena records from the staged rows currently showing after your Filters are applied (not every staged row), using the Map Attributes mapping. The button stays disabled until there are staged rows and a saved mapping."
+            "term": "Adobe Sign",
+            "definition": "Titled **Adobe Sign Settings**. Fields **Client Id** and **Client Secret** (both required; the secret is hidden behind an eye icon), plus the buttons **Save Changes** and **Consent**."
           },
           {
-            "term": "Soft Tech",
-            "definition": "A second, separate staging source with no Marketplace card. It covers only <strong>Work Orders</strong> (pulled with <strong>Get Data From SoftTech</strong> and <strong>Sync</strong>) and <strong>BOQ</strong> (Excel upload and download). It has no Map Attributes, Auto Sync or Bulk Create options."
+            "term": "Trimble Viewpoint",
+            "definition": "Titled **Trimble Viewpoint Settings**. Fields **Hostname**, **Port Number**, **Username**, **Password** and **Database**, and one button, **Test Connection and Save**."
           },
           {
-            "term": "Where integration data comes from and goes",
-            "definition": "**Comes from:** the connection you set up on a Marketplace card (consent or credentials) and, for Viewpoint, the table and schema names you map. **Goes to:** (1) **Staged Tables → View Point** (13 entities: Users, Projects, Crews, Phase Codes, Customers, Vendors, Owners, Project User Mapping, Project Crew Mapping, Work Order Crew Mapping, GL Codes, Work Orders, Logs) and **Soft Tech** (Projects, Work Orders, BOQ), then through **Map Attributes** and **Bulk Create Arena Records** or **Auto Sync Criteria** into the Global Data lists of the same names. (2) **Settings → Mail Settings**, where Outlook becomes available per module. (3) **Adobe Sign Settings** and the Inn Clock import on timesheets use their cards."
+            "term": "Trimble Viewpoint (App Xchange)",
+            "definition": "Titled **App Xchange**, with three tabs: **Arena API Authentication**, **Arena OAuth Client Credentials** and **Vista Cost Type Mapping**. The first two tabs show **Revoke Credentials** and **Save Changes** at the top right; the third has neither button."
+          },
+          {
+            "term": "Arena API Authentication",
+            "definition": "One required field, **Auth Key** (hidden, with an eye icon). While it is empty the screen shows **Auth key is required**."
+          },
+          {
+            "term": "Arena OAuth Client Credentials",
+            "definition": "Two required fields: **Client Id** and **Client Secret** (hidden, with an eye icon)."
+          },
+          {
+            "term": "Vista Cost Type Mapping",
+            "definition": "A table with the columns **Cost Type** and **Vista Cost Type Code**, with one text box per row. It has 8 rows: Material, Equipment, Labor, Unit Rate, Sub Contractor, BOQ's, Freight Charges and Fuel & Gas, the same cost types as on the **Cost Type** screen."
+          },
+          {
+            "term": "Google Maps",
+            "definition": "Titled **Google Maps Settings**. One required field, **Api Key** (hidden, with an eye icon), and a **Save Changes** button."
+          },
+          {
+            "term": "Inn Clock Consent",
+            "definition": "Shows the note \"Please provide organizational consent to grant access to data from Innclock AI.\" and a **Sign In to Inn Clock AI** button. The card says it imports Clock In/Out data from Innclock AI."
+          },
+          {
+            "term": "Zoom Info",
+            "definition": "Required fields **Client Id** and **Client Secret** (hidden), the organisation-consent note and a **Sign In with Zoom Info** button. The card says it brings company and contact data into Arena."
+          },
+          {
+            "term": "Weather Station",
+            "definition": "Titled **Weather Station Integration**. Required fields **Base URL**, **API Key** and **Application Key** (the two keys are hidden), and a **Save Settings** button."
+          },
+          {
+            "term": "IFS",
+            "definition": "Titled **IFS Settings**. Required fields **Client Id** and **Client Secret** (hidden), and a **Save Changes** button."
+          },
+          {
+            "term": "Telematics",
+            "definition": "Titled **Telematics Integrations**: \"Configure and connect telematics providers for fleet and vehicle data. Click a card to set credentials.\" It has 13 provider cards: Bell (Fleetm@tic), Caterpillar (Cat VisionLink), Geotab, Teletrac Navman, Hyundai 1 (Hi MATE System 1), Hyundai 2 (Hi MATE System 2), John Deere (JDLink), Volvo (CareTrack), Komatsu (KOMTRAX), Liebherr (LiDAT), New Holland (PLM Connect), Track Unit (PLM Connect) and Samsara. A card opens a **Configure** dialog for that provider with **Cancel** and **Submit**."
+          },
+          {
+            "term": "Schedule Hours",
+            "definition": "Every provider dialog shown has this required number field (1 to 24). Its help text reads: \"Sets the fetch interval in hours (e.g., 6 = every 6 hours, 24 = every day at 00:00).\""
+          },
+          {
+            "term": "Configure Geotab",
+            "definition": "Required fields: **Database**, **Server**, **User**, **Password** (hidden) and **Schedule Hours**."
+          },
+          {
+            "term": "Configure Komatsu",
+            "definition": "Required fields: **Base URL**, **Account**, **Password** (hidden) and **Schedule Hours**."
+          },
+          {
+            "term": "Configure John Deere",
+            "definition": "Required fields: **Well Known Endpoint**, **Client ID**, **Client Secret** (hidden), **Scope** and **Schedule Hours**."
+          },
+          {
+            "term": "Configure Caterpillar",
+            "definition": "Required fields: **Token Endpoint**, **Base URL**, **User**, **Password** (hidden), **Scope** and **Schedule Hours**."
           }
         ],
-        "procedures": [
-          {
-            "title": "Connect Arena to Microsoft Outlook for email",
-            "steps": [
-              "Go to <strong>Global Data → Marketplace</strong> → <strong>Microsoft Outlook</strong>.",
-              "Click <strong>Sign in with Microsoft</strong> and grant organization-wide consent (must use a company-domain email, not personal).",
-              "Go to <strong>Settings → Mail Settings</strong> and switch the relevant modules (e.g. Work Order) to <strong>Outlook</strong>."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/microsoft-outlook-integration-2/001.jpg",
-                "caption": "Microsoft Outlook in the Marketplace",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/microsoft-outlook-integration-2/003.jpg",
-                "caption": "The window for connecting a Microsoft account",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/microsoft-outlook-integration-2/004.jpg",
-                "caption": "Microsoft sign-in, then the Permissions Requested page",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/microsoft-outlook-integration-2/006.jpg",
-                "caption": "Consent granted, shown on the screen",
-                "step": 2
-              }
-            ]
-          },
-          {
-            "title": "Bring data from Vista (Trimble Viewpoint) into Arena",
-            "steps": [
-              "Go to <strong>Global Data → Marketplace → Trimble Viewpoint</strong>. Enter the Viewpoint database details: <strong>Hostname</strong>, <strong>Port Number</strong>, <strong>Username</strong>, <strong>Password</strong> and <strong>Database</strong>. Click <strong>Test Connection and Save</strong>.",
-              "Go to <strong>Global Data → Staged Tables → View Point</strong> and pick an entity in the left nav, for example <strong>Users</strong>. If you see \"Viewpoint columns are not yet configured\", the connection in step 1 hasn't been saved yet.",
-              "Click <strong>Map Attributes</strong>. For each Arena field, choose the matching Viewpoint column, and tick <strong>Update after sync?</strong> for fields Viewpoint should keep overwriting. Click <strong>Save</strong>.",
-              "To keep data flowing automatically, open <strong>Auto Sync Criteria</strong>, set the interval (1 to 24 hours), and optionally tick <strong>Auto create arena records after sync?</strong>.",
-              "To create records now instead, use <strong>Filters</strong> to narrow the staged rows if needed, then click <strong>Bulk Create Arena Records</strong>. Only the filtered rows are created."
-            ],
-            "note": "Repeat steps 2 to 5 for each entity you want from Viewpoint (Crews, Phase Codes, GL Codes, Projects, Work Orders and so on). Mapping Users and Projects first makes the mapping entities (Project User Mapping, Project Crew Mapping) easier to line up.",
-            "images": [
-              {
-                "src": "assets/notion/trimble-viewpoint-market-place/001.jpg",
-                "caption": "The Trimble Viewpoint card in the Marketplace",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/trimble-viewpoint-market-place/002.jpg",
-                "caption": "The Open Database Connectivity setup",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/trimble-viewpoint-market-place/003.jpg",
-                "caption": "Connection details, then Test Connection and Save",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/stage-tables/001.jpg",
-                "caption": "Staged Tables: the staged attributes for each module",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/stage-tables/002.jpg",
-                "caption": "Map Attributes for the selected module",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/stage-tables/003.jpg",
-                "caption": "Choosing the stage attribute for each Arena attribute",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/stage-tables/009.jpg",
-                "caption": "Auto Sync Criteria, with an interval in hours",
-                "step": 4
-              },
-              {
-                "src": "assets/notion/stage-tables/005.jpg",
-                "caption": "Bulk Create Arena Records",
-                "step": 5
-              },
-              {
-                "src": "assets/notion/stage-tables/007.jpg",
-                "caption": "Filters for viewing and syncing data",
-                "step": 5
-              }
-            ]
-          },
-          {
-            "title": "Connect Arena to Microsoft SharePoint",
-            "steps": [
-              "Go to **Global Data → Market Place → Microsoft SharePoint**.",
-              "Select **Microsoft SharePoint** to open a window where you give consent on behalf of your organization.",
-              "Click **Sign in with Microsoft**, sign in and review the permissions requested. Use an email on your organization's domain; personal email addresses cannot be linked.",
-              "Use **Revoke Consent** to remove the connection. You can grant consent again later.",
-              "Users can also manage documents through their organization mail IDs, which are set in **My Profile**.",
-              "Click **Settings** to see the **Document Management Consent**."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/microsoft-sharepoint-integration/001.jpg",
-                "caption": "Microsoft SharePoint in the Marketplace",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/microsoft-sharepoint-integration/002.jpg",
-                "caption": "The consent window for your organization",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/microsoft-sharepoint-integration/003.jpg",
-                "caption": "Sign in with Microsoft",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/microsoft-sharepoint-integration/004.jpg",
-                "caption": "Reviewing the permissions requested and accepting",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/microsoft-sharepoint-integration/005.jpg",
-                "caption": "Revoke Consent",
-                "step": 4
-              },
-              {
-                "src": "assets/notion/microsoft-sharepoint-integration/006.jpg",
-                "caption": "Managing documents through organization mail IDs set in My Profile",
-                "step": 5
-              },
-              {
-                "src": "assets/notion/microsoft-sharepoint-integration/007.jpg",
-                "caption": "The Document Management Consent in Settings",
-                "step": 6
-              }
-            ]
-          }
-        ],
-        "images": [
-          {
-            "src": "assets/notion/trimble-viewpoint-market-place/004.jpg",
-            "caption": "Table Name and Schema Name for each module, then Save Configuration"
-          },
-          {
-            "src": "assets/notion/trimble-viewpoint-market-place/005.jpg",
-            "caption": "The Link button, enabled once the configuration is saved"
-          },
-          {
-            "src": "assets/notion/trimble-viewpoint-market-place/006.jpg",
-            "caption": "Choosing the Primary Key column"
-          },
-          {
-            "src": "assets/notion/stage-tables/004.jpg",
-            "caption": "Sync Viewpoint, to sync the staged data"
-          },
-          {
-            "src": "assets/notion/arena-market-place/001.jpg",
-            "caption": "The Marketplace, for linking SharePoint, Outlook and Adobe Sign"
-          },
-          {
-            "src": "assets/notion/microsoft-outlook-integration-2/008.jpg",
-            "caption": "My Profile Settings, where users can send email through their own organization mail"
-          },
-          {
-            "src": "assets/notion/microsoft-outlook-integration-2/009.jpg",
-            "caption": "The Outlook Management Consent in Settings"
-          },
-          {
-            "src": "assets/notion/adobe-integration/011.jpg",
-            "caption": "The Adobe Sign switch on the Lease Agreement form"
-          }
-        ]
+        "procedures": []
       },
       {
-        "heading": "Cost & Bid Templates",
-        "intro": "<p>Use this section to keep the company's cost types, the material, equipment and labor lists under them, cost breakdown structures and the bid item catalog. The Super Admin or an estimating lead maintains it.</p><p><strong>Where this data goes:</strong> the eight cost types are the <strong>Cost Types</strong> you tick on every phase code. The Material and Equipment lists are the rows on each vendor's <strong>Rate Card</strong>, and the Labor list takes its rate columns from <strong>Settings → Earnings Codes</strong>.</p>",
+        "heading": "Cost Type",
+        "intro": "<p>The <strong>Cost Type</strong> screen is the first tab of <strong>Cost</strong> in <strong>Global Data</strong>. It shows eight cards: five fixed cost libraries at the top and the company's own cost types below.</p>",
         "definitions": [
           {
-            "term": "Cost Type",
-            "definition": "The **Cost Type** tab (**Global Data → Cost**) shows one card per type with **Add Type**, a search box and a refresh icon. These are the same names offered as **Cost Types** on each phase code and in **Project Setup → Phase Codes → Settings**. The eight types are **Material**, **Equipment**, **Labor**, **Unit Rate**, **Sub Contractor**, **BOQ's**, **Freight Charges** and **Fuel & Gas**."
+            "term": "+ Add Type",
+            "definition": "Opens **Create Cost Type** with a required **Cost Type Name** and an optional **Cost Type Description** (a text editor with bold, italic, underline, strikethrough, link, H1, H2, numbered list, bullet list and alignment). The dialog button is **Create**."
           },
           {
-            "term": "Cost Breakdown Structure (CBS)",
-            "definition": "The **Cost Breakdown Structure** tab has a left menu with **Phase Codes** and **Templates**. **Phase Codes** shows the same table as **UOM, Phasecode & GL Codes → Phase Codes**. **Templates** holds the named CBS templates, one of which can be marked Default."
+            "term": "Search",
+            "definition": "Filters the cards."
           },
           {
-            "term": "Bid Templates",
-            "definition": "A catalog of bid line items. **Global Data → Bid Templates** has **Add Item**, **Download Excel**, **Download Sample Excel** and **Upload Excel**, and a table with **S.No**, **Item Description**, **UOM Group**, **UOM** and **Actions** (edit, delete). UOM Group and UOM come from the UOM lists."
+            "term": "Refresh icon",
+            "definition": "At the top right of the screen."
           },
           {
-            "term": "Cost type catalogs (what each card opens)",
-            "definition": "Click a card to open its list. **Material** opens **Material Code** (columns S.No., **Material Cost Code**, **Material Name**, **UOM**, **Size & Specifications**, **Unit Price**, **Type**, Actions; buttons **Add Material**, **Add Custom Column**, **Add Category**, **Export**; a template dropdown) and a **Material Estimate Template** tab. **Equipment** opens **Equipment Code** (**Equipment Cost Code**, **Equipment Name**, **Type**, **Category**, **Subcategory**, **UOM** and **Hourly**, **Daily**, **Weekly**, **Monthly** rates) with **Equipment Estimate Template**, **Equipment Category** and **Equipment Part** tabs. **Labor** opens **Labor Code** (**Labor Cost Code**, **Labor Name**, **Type**, conversion factors per earnings code such as ST, OT, PD) with a **Labor Estimate Template** tab and a weekly-rate dropdown. **Unit Rate** and **Sub Contractor** open template lists (**Add Template**). **BOQ's** (a custom type) opens **BOQ's Code** with **Add BOQ's**."
+            "term": "Header cards",
+            "definition": "**Material**, **Equipment**, **Labor**, **Unit Rate** and **Sub Contractor** have no description and no menu. They do not filter the cards below; each opens its own page."
           },
           {
-            "term": "Where cost data comes from and goes",
-            "definition": "**Comes from:** Add Type and the **Add Material / Add Equipment / Add Labor** buttons. **Goes to:** (1) the Cost Types options on phase codes; (2) each vendor's **Rate Card**; (3) the Labor list's rate columns, which are the **Earnings Codes** from Settings (PD, NS, ST, 17, 18, OT and so on); (4) bid forms that pull from Bid Templates. To price a new material or equipment item for a vendor, add it here first."
+            "term": "Cost type cards",
+            "definition": "**BOQ's**, **Freight Charges** and **Fuel & Gas** show a **Description** and **Created By**. Their three-dot menu has **Edit** and **Delete**."
+          },
+          {
+            "term": "Material page",
+            "definition": "Tabs **Material Code** and **Material Estimate Template**. Buttons: **Add Material**, a **Rate Card Template** dropdown, a **Search by Code/Name** box, **Add Custom Column**, **Add Category** and **Export**. Columns: S.No., Material Cost Code, Material Name, UOM, Size & Specifications, Unit Price, Type and Actions (edit and delete icons). The template tab has **Add Template**, a search box and template cards with a three-dot menu; one card is labelled **Default**."
+          },
+          {
+            "term": "Equipment page",
+            "definition": "Tabs **Equipment Code**, **Equipment Estimate Template**, **Equipment Category** and **Equipment Part**. Buttons: **Add Equipment**, a **Rate Card Template** dropdown, search, **Add Custom Column** and **Export**. Columns include S.No., Equipment Cost Code, Equipment Name, Type, Category, Subcategory and UOM."
+          },
+          {
+            "term": "Labor page",
+            "definition": "Tabs **Labor Code** and **Labor Estimate Template**. Buttons: **Add Labor**, a **Rate Card Template** dropdown, search, a period dropdown (showing **Weekly**), **Add Custom Column**, **Add Category** and **Export**. Columns include S.No., Labor Cost Code, Labor Name, Type, Conversion Factor (with an info icon) and PD."
+          },
+          {
+            "term": "Unit Rate page",
+            "definition": "A template list with **+ Add Template**, a search box and template cards; a card can carry a **Default** label."
+          },
+          {
+            "term": "Sub Contractor page",
+            "definition": "A template list with **+ Add Template**, a search box and template cards; a card can carry a **Default** label."
           }
         ],
-        "procedures": [
+        "procedures": []
+      },
+      {
+        "heading": "Cost Breakdown Structure",
+        "intro": "<p><strong>Cost Breakdown Structure</strong> is the second tab of <strong>Cost</strong> in <strong>Global Data</strong>. A list on the left switches between <strong>Phase Codes</strong> and <strong>Templates</strong>.</p>",
+        "definitions": [
           {
-            "title": "Add a custom cost category",
-            "steps": [
-              "Go to <strong>Global Data → Cost</strong> → <strong>Cost Type</strong> tab → <strong>Add Type</strong>.",
-              "Enter the name (e.g. \"Freight Charges\") and a description, then submit."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/cost-types-material/002.jpg",
-                "caption": "Add Type, to create a custom cost type",
-                "step": 1
-              }
-            ]
+            "term": "Phase Codes",
+            "definition": "The company-wide table of phase codes, 50 per page with the count shown as \"( 1 to 50 ) of\" the total. Columns: S.No., Phase Code, Phase Code Description, Phase Code Type and Cost Types. Each of those columns has a funnel filter. Cells are editable inputs, **Cost Types** is a multi-value dropdown per row (values seen: Material, Equipment, Labor), and each row has a trash icon."
           },
           {
-            "title": "Set up a Cost Breakdown Structure (CBS) template",
-            "steps": [
-              "Go to <strong>Global Data → Cost</strong> → <strong>Cost Breakdown Structure</strong> tab → <strong>Templates</strong> → <strong>Add Template</strong>.",
-              "Name it and build its structure using the available Phase Codes (managed under the Phase Codes side-list on the same screen, or under UOM/Phasecode & GL Codes).",
-              "Optionally mark it as the company's Default CBS template."
-            ]
+            "term": "+ Add",
+            "definition": "Inserts a blank editable row at the top of the Phase Codes table."
           },
           {
-            "title": "Add a bid line item",
-            "steps": [
-              "Go to <strong>Global Data → Bid Templates</strong> → <strong>Add Item</strong>.",
-              "Enter the Item Description and choose its UOM Group and UOM.",
-              "Submit."
-            ],
-            "note": "For bulk loading, use Download Sample Excel, fill it in, then Upload Excel."
+            "term": "Search and Export",
+            "definition": "A search box and an **Export** button sit above the table."
           },
           {
-            "title": "Set up Materials and Labor cost types",
-            "steps": [
-              "Go to <strong>Global Data → Cost → Cost Type</strong> and click the <strong>Material</strong> or <strong>Labor</strong> card, then open its code tab (<strong>Material Code</strong> or <strong>Labor Code</strong>).",
-              "Click **Settings** and choose how entries are grouped: Level 1 (Materials), Level 2 (Categories > Materials) or Level 3 (Categories > Sub Categories > Materials). Pick one type and keep to it. You can move one level at a time, but you cannot skip a level.",
-              "Click **Add**, enter the details and click **Submit**. Labor entries also take a **Standard Unit Price** when that setting is on. You can also bulk-load entries with **Upload Excel**.",
-              "When you move up a level, use the restore option to keep the entries you already have. They stay available under **Restore Materials** or **Restore Labors**.",
-              "To go back from Level 2 to Level 1, open **Settings**, uncheck Level 2, and confirm the delete warning by entering the level name."
-            ],
-            "images": [
-              {
-                "src": "assets/notion/cost-types-material/001.jpg",
-                "caption": "Cost Types with the Materials tab selected",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/cost-types-labor/002.jpg",
-                "caption": "Cost Types with the Labor tab selected",
-                "step": 1
-              },
-              {
-                "src": "assets/notion/cost-types-material/006.jpg",
-                "caption": "The Settings button for grouping materials",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/cost-types-material/007.jpg",
-                "caption": "The Settings dialog with the three grouping levels",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/cost-types-material/009.jpg",
-                "caption": "Level 1: materials listed with cost codes",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/cost-types-material/010.jpg",
-                "caption": "Level 2: categories on the left with their materials",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/cost-types-material/011.jpg",
-                "caption": "Level 3: categories and sub categories on the left",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/cost-types-labor/004.jpg",
-                "caption": "The Settings dialog for labor levels",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/cost-types-labor/006.jpg",
-                "caption": "Level 1: labor entries with cost codes",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/cost-types-labor/007.jpg",
-                "caption": "Level 2: labor categories on the left",
-                "step": 2
-              },
-              {
-                "src": "assets/notion/cost-types-material/005.jpg",
-                "caption": "Add, with a code number and code description",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/cost-types-material/008.jpg",
-                "caption": "Upload Excel, in Create or Update mode",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/cost-types-labor/005.jpg",
-                "caption": "Add, for a labor role or designation",
-                "step": 3
-              },
-              {
-                "src": "assets/notion/cost-types-material/012.jpg",
-                "caption": "Restore option when moving from Level 1 to Level 2",
-                "step": 4
-              },
-              {
-                "src": "assets/notion/cost-types-material/013.jpg",
-                "caption": "Restore Materials button",
-                "step": 4
-              },
-              {
-                "src": "assets/notion/cost-types-material/014.jpg",
-                "caption": "Uncheck Level 2 in Settings and confirm the delete warning",
-                "step": 5
-              }
-            ],
-            "note": "The Material and Labor screens have **Add Material** / **Add Labor**, **Add Category**, **Add Custom Column** and **Export**."
+            "term": "Templates",
+            "definition": "Cards for named CBS templates with **+ Add Template**, a search box and a three-dot menu on each card. One card can carry a **Default** label."
+          },
+          {
+            "term": "Template page",
+            "definition": "Opening a template shows the breadcrumb **Cost > Cost Breakdown Structure > (template name) > Cost Breakdown Structure Template** and two tabs."
+          },
+          {
+            "term": "Cost Breakdown Structure Template tab",
+            "definition": "Shows the structure as a tree of nodes, each with a three-dot icon. Two icons at the top right switch between tree view and list view. List view shows the columns **Level** and **Created At**."
+          },
+          {
+            "term": "Configurable Fields tab",
+            "definition": "Has an **Add Field** button. When no field exists it says **No configurable fields added yet.**"
           }
         ],
-        "images": [
+        "procedures": []
+      },
+      {
+        "heading": "Bid Templates",
+        "intro": "<p><strong>Bid Templates</strong> is the master list of bid line items, each with a description and a unit of measure. Open it from <strong>Global Data</strong>.</p>",
+        "definitions": [
           {
-            "src": "assets/notion/cost-types-material/003.jpg",
-            "caption": "Renaming or deleting a custom cost type by right-clicking its tab"
+            "term": "+ Add Item",
+            "definition": "Opens **Create Bid Template**."
           },
           {
-            "src": "assets/notion/cost-types-material/004.jpg",
-            "caption": "Add Custom Columns for a new cost type"
+            "term": "Download Excel, Download Sample Excel, Upload Excel",
+            "definition": "Three Excel buttons at the top of the list."
           },
           {
-            "src": "assets/notion/cost-types-equipment/003.jpg",
-            "caption": "Equipment cost types: the equipment table"
+            "term": "Table",
+            "definition": "Columns: S.No, Item Description, UOM Group, UOM and Actions. Each row has a pencil (edit) and a trash (delete) icon."
           },
           {
-            "src": "assets/notion/cost-types-equipment/004.jpg",
-            "caption": "Equipment Groups, for grouping equipment into types"
+            "term": "Item Description",
+            "definition": "Required text field in the create dialog."
           },
           {
-            "src": "assets/notion/cost-types-equipment/006.jpg",
-            "caption": "Add, for a new piece of equipment"
+            "term": "Unit of Measurement Group (UOM)",
+            "definition": "Required dropdown with a search box. Groups: Area, Job, Length, Mass, Quantity, Specimen, Time, Volume and Weight."
           },
           {
-            "src": "assets/notion/cost-types-sub-contractor/002.jpg",
-            "caption": "Sub Contractor cost types: the sub contractor table"
-          },
-          {
-            "src": "assets/notion/cost-types-other-expenses/002.jpg",
-            "caption": "Other Expenses: cost types for travel, lodging and similar costs"
-          },
-          {
-            "src": "assets/notion/cost-types-other-expenses/003.jpg",
-            "caption": "Add, to enter a new expense"
+            "term": "Unit of Measurement (UOM)",
+            "definition": "Required dropdown with a search box. Its values depend on the group you chose first. Seen: Area gives Sqm, Square Feet ( Sq. Ft ) and Hectare; Length gives Rm, LF, km, metre and Ls; Mass gives Kg and Lbs; Time gives Month and Day."
           }
-        ]
+        ],
+        "procedures": []
       },
       {
         "heading": "Compliance Hub",
-        "intro": "<p>Use the Compliance Hub to define the compliance items the company must hold (licences, certificates, insurance) and track the company's actual status against them. A Super Admin or compliance lead maintains it.</p><p><strong>Where this data goes:</strong> requirements defined in the <strong>Compliance Directory</strong> are tracked under <strong>My Company Compliance</strong>, and the expiry warning period is set under <strong>Settings</strong>.</p>",
+        "intro": "<p><strong>Compliance Hub</strong> in <strong>Global Data</strong> holds the company's compliance requirements and its own records against them. It opens on <strong>Compliance Directory</strong>; <strong>My Company Compliance</strong> is the second tab and <strong>Settings</strong> is a button at the top right.</p>",
         "definitions": [
           {
             "term": "Compliance Directory",
-            "definition": "Defines what is required. Buttons **Create**, **Export**, **Manage Columns** and save layout; counters **Met**, **Expired**, **Expiring Soon** and **Missing**; columns **Compliance ID**, **Compliance Name**, **Compliance Description**, **Category / Type**, **Evidence Type**, **Required Evidence**, **Renewal Frequency**, **Renewal Period**, **Sources**, **Status**, **Created By**, **Created Date**, **Inactive/Active** and **Actions**."
+            "definition": "The master list of requirements. Columns: Compliance ID, Compliance Name, Compliance Description, Category / Type, Evidence Type, Required Evidence, Renewal Frequency, Renewal Period, Sources, Status, Created By, Created Date, Inactive/Active and Actions. Chips above the table count **Met**, **Expired**, **Expiring Soon** and **Missing**."
+          },
+          {
+            "term": "+ Create (Directory)",
+            "definition": "Opens **Create Compliance Directory**: **Compliance Name** (required), **Compliance Description**, **Category / Type** (required dropdown), **Renewal Frequency** (dropdown: Days, Months, Years), **Renewal Period**, **Evidence Type** (required dropdown) and **Required Evidence** (required, an **Upload** button). Buttons **Cancel** and **Submit**."
           },
           {
             "term": "My Company Compliance",
-            "definition": "Tracks the company's actual records. Counters **Met**, **Expired**, **Expiring Soon**; columns **Compliance ID**, **Compliance Name**, **Compliance Description**, **Category / Type**, **Evidence Type**, **Sources**, **Status**, **Renewal Frequency**, **Renewal Period**, **Required Evidence**, **Issue Date**, **Expiry Date**, **Last Verified Date**, **Responsible Person**, **Evidence Upload**, **Remarks/Notes**, **Created By**, **Created Date** and **Actions**; **Create**, **Export**, **Manage Columns**."
+            "definition": "The company's own records. Columns: Compliance ID, Compliance Name, Compliance Description, Category / Type, Evidence Type, Sources, Status, Renewal Frequency, Renewal Period, Required Evidence, Issue Date, Expiry Date, Last Verified Date, Responsible Person, Evidence Upload, Remarks/Notes, Created By, Created Date and Actions. Chips count **Met**, **Expired** and **Expiring Soon**."
           },
           {
-            "term": "Status chips (Met / Expired / Expiring Soon / Missing)",
-            "definition": "Counter chips summarizing how many compliance items fall into each status."
+            "term": "+ Create (My Company Compliance)",
+            "definition": "Opens **Create Company Compliance**: **Compliance Directory** (required dropdown listing directory entries), **Responsible Person** (dropdown), **Issue Date**, **Expiry Date** and **Last Verified Date** (date pickers), **Remarks/Notes** and **Evidence Upload**. Buttons **Cancel** and **Submit**."
           },
           {
-            "term": "Compliance Settings",
-            "definition": "The **Settings** tab has a left menu with **Compliance Expiry**, **Category / Type** and **Evidence Type**. **Compliance Expiry** has **Expiry Alert (In Days)** (\"Set customizable expiry threshold for upcoming compliances\") and **Save Changes**. Category / Type and Evidence Type are the lists used in the Directory."
+            "term": "Export, Manage Columns and save-layout icon",
+            "definition": "Both tabs have an **Export** button, a **Manage Columns** button and a save-layout icon."
           },
           {
-            "term": "Where compliance data comes from and goes",
-            "definition": "**Comes from:** **Create** on the Directory (the requirement) and **Create** on My Company Compliance (the record with issue date, expiry date, responsible person and evidence). **Goes to:** the status counters (Met, Expired, Expiring Soon, Missing) on both tabs, driven by the expiry threshold in Settings."
+            "term": "Settings",
+            "definition": "Opens a left list with **Compliance Expiry**, **Category / Type** and **Evidence Type**."
+          },
+          {
+            "term": "Compliance Expiry",
+            "definition": "**Compliance Expiry Settings**: \"Set customizable expiry threshold for upcoming compliances.\" One field, **Expiry Alert (In Days)**, with an info icon and a **Save Changes** button. The info tooltip says you can set a custom number of days as a threshold so any compliance expiring within that period is automatically flagged as nearing expiration."
+          },
+          {
+            "term": "Category / Type",
+            "definition": "A table with Serial Number, Category / Type and Actions, plus a **+ Add** button. This list fills the **Category / Type** dropdown of the directory dialog."
+          },
+          {
+            "term": "Evidence Type",
+            "definition": "A table with Serial Number, Evidence Type and Actions, plus a **+ Add** button. This list fills the **Evidence Type** dropdown of the directory dialog."
           }
         ],
-        "procedures": [
-          {
-            "title": "Define a new compliance requirement",
-            "steps": [
-              "Go to <strong>Global Data → Compliance Hub</strong> → <strong>Compliance Directory</strong> → <strong>Create</strong>.",
-              "Fill in Compliance Name*, Description, Category/Type*, Renewal Frequency and Period (if periodic renewal applies), Evidence Type*, and upload the Required Evidence template/sample.",
-              "Submit — this requirement is now tracked (and can show as Missing/Expiring/Expired) under <strong>My Company Compliance</strong>."
-            ]
-          }
-        ]
+        "procedures": []
       },
       {
         "heading": "Measurement Templates",
-        "intro": "<p>Use Measurement Templates to build reusable quantity formulas (for example length × breadth × depth × number) so field teams do not calculate quantities by hand. A Super Admin sets them up.</p><p><strong>Where this data goes:</strong> a template is attached to a work package on <strong>Construction Type → Step 10 (Work Package Measurement Template Linking)</strong>, which lists each <strong>Activity</strong> and <strong>Work Package</strong> with a <strong>Template</strong> column.</p>",
+        "intro": "<p><strong>Measurement Templates</strong> lists named quantity formulas, for example length x breadth x depth x number. Open it from <strong>Global Data</strong>.</p>",
         "definitions": [
           {
-            "term": "Measurement Template",
-            "definition": "A saved formula with its fields. **Global Data → Measurement Templates** has **Add Template** and **Download Excel**, and a table with **Template ID**, **Template Name**, **Fields**, **Formula** and **Actions** (edit, delete)."
+            "term": "+ Add Template",
+            "definition": "Opens **Create Measurement Template**."
+          },
+          {
+            "term": "Download Excel",
+            "definition": "A button at the top of the list."
+          },
+          {
+            "term": "Table",
+            "definition": "Columns: Template ID, Template Name, Fields, Formula and Actions (pencil and trash icons). A saved example shows Template ID LBD with Fields \"L, B, D, Nos\" and Formula \"(L)*(B)*(D)*(Nos)\", which writes the formula with the parameter names."
+          },
+          {
+            "term": "Template ID and Template Name",
+            "definition": "Both required text fields with no placeholder."
           },
           {
             "term": "Parameters",
-            "definition": "The named variables (e.g. L, B, D, Nos) a Measurement Template's formula references, added via a + button."
+            "definition": "Required text box with the placeholder \"Enter parameter name\" and a **+** button at its right end that adds each parameter."
           },
           {
             "term": "Formula",
-            "definition": "A free-text expression referencing a template's parameters by position (e.g. [1]*[2]*[3]*[4], or the helper example [1] * [3] or [1] * [2] / [3])."
-          },
-          {
-            "term": "Where measurement template data comes from and goes",
-            "definition": "**Comes from:** **Add Template**. **Goes to:** Step 10 of the Construction Type pipeline (**Global Data → Construction Type → Work Package Measurement Template Linking**: **Upload Excel**, **Download Excel**, search, and the columns Activity, Work Package, Description, Template), which ties a template to each work package. For anything not covered here, raise a ticket with Arena Support: click the **Support** icon (headset, top-right) or email support@inncircles.com."
+            "definition": "Required text box with the placeholder \"e.g. (1) + (2) or ((1) * (2)) / (3)\", which writes the formula with numbers in brackets. The dialog has no other hint text. Buttons: **Cancel** and **Submit**."
           }
         ],
-        "procedures": [
+        "procedures": []
+      },
+      {
+        "heading": "Top Bar",
+        "intro": "<p>The top bar runs across every Arena screen. Besides the main page links it holds the dashboards, help and Support icons.</p>",
+        "definitions": [
           {
-            "title": "Build a quantity take-off formula for progress tracking",
-            "steps": [
-              "Go to <strong>Global Data → Measurement Templates</strong> → <strong>Add Template</strong>.",
-              "Enter a Template ID* and Template Name* (e.g. \"LBD\").",
-              "Under <strong>Parameters</strong>, add each variable the formula needs (e.g. L, B, D, Nos), clicking + after each.",
-              "Enter the <strong>Formula</strong> referencing the parameters (e.g. <code>(L)*(B)*(D)*(Nos)</code>).",
-              "Click <strong>Submit</strong>."
-            ],
-            "note": "Later, link this template to a Work Package via the Construction Type pipeline's Step 10 (Work Package Measurement Template Linking)."
+            "term": "Dashboard",
+            "definition": "Opens a menu with four entries: **Financial Progress Dashboard**, **Linear & Quantity Progress Dashboard**, **Daily Progress Report** and **Hindrances Closure Dashboard**. Each entry opens that dashboard."
+          },
+          {
+            "term": "Home, Projects and Global Data",
+            "definition": "Open the main pages of Arena."
+          },
+          {
+            "term": "Chat icon",
+            "definition": "A chat icon sits in the right-hand group of icons."
+          },
+          {
+            "term": "Headset icon",
+            "definition": "Opens **Support**."
+          },
+          {
+            "term": "? icon",
+            "definition": "Opens the help documentation in a new browser tab."
+          },
+          {
+            "term": "Lightbulb, download-cloud and bell icons",
+            "definition": "Icons in the right-hand group; the bell shows a red count."
+          },
+          {
+            "term": "User menu",
+            "definition": "Your name opens the account menu."
+          },
+          {
+            "term": "Support Model",
+            "definition": "First tab of **Support**. Cards: **Ticket System** (a link \"Click here to raise an issue\"), **Email**, **Contact** and **Support**."
+          },
+          {
+            "term": "Training Model",
+            "definition": "Second tab of **Support**. Three cards, each with a \"Click here to view\" link: **Documentation**, **Online Sessions** and **In Person Sessions**."
           }
-        ]
+        ],
+        "procedures": []
       }
     ],
     "name": "Global Data",
@@ -25268,11 +25529,26 @@ const MODULES = [
       "Market Type",
       "Configure Safety Observation",
       "Forms",
+      "Submittals Form",
+      "Change Orders Form",
+      "Meeting Minutes Form",
+      "Delay Form",
+      "Request For Information Form",
+      "RFI Form",
+      "Transmittals Form",
+      "Work Order Forms",
+      "Procurement Forms",
+      "Inventory Forms",
+      "Drawing Management Forms",
+      "Cost Forms",
       "Notifications",
       "Marketplace",
-      "Cost & Bid Templates",
+      "Cost Type",
+      "Cost Breakdown Structure",
+      "Bid Templates",
       "Compliance Hub",
-      "Measurement Templates"
+      "Measurement Templates",
+      "Top Bar"
     ]
   },
   {
@@ -31996,35 +32272,26 @@ const MODULES = [
       },
       {
         "heading": "User Permission",
-        "intro": "<p>The <strong>User Permission</strong> tab shows the access of one person at a time: who they are, which groups they are in and the permissions that result.</p>",
+        "intro": "<p><strong>User Permission</strong> is a tab of <strong>Users & Permissions</strong> in <strong>Global Data</strong>. It shows one user at a time: their details, their groups and their permission matrix.</p>",
         "definitions": [
           {
-            "term": "Users list",
-            "definition": "On the left, every user of the project with name and email, and a **Search Profiles** box. Click a person to load them on the right. The round arrow beside the list collapses it."
+            "term": "Users panel",
+            "definition": "On the left. A **Search Profiles** box and a scrolling list of users (name and email). The first user is selected by default. A yellow arrow on the panel edge collapses the panel."
           },
           {
             "term": "Basic Details",
-            "definition": "Click to open: **Profile Photo**, **Name**, **Employee ID**, **Email Address**, **Username** and **No. of Groups**."
+            "definition": "Collapsible section showing Profile Photo, Name, Employee ID, Email Address, Username and No. of Groups."
           },
           {
             "term": "Groups",
-            "definition": "Click to open: the names of the groups this user belongs to."
+            "definition": "Collapsible section with one box per group the user belongs to. Each box shows the group's category chip and \"Name:\" with the group name. Clicking a box opens a dialog titled with the group name that shows that group's matrix, with a **Close** button."
           },
           {
             "term": "Permissions",
-            "definition": "Click to open: the same permission table as a group (**View**, **Create**, **Edit**, **Delete**, **Admin**, **Download**, **Print**, **Assign To**, **Roll Back**) with the sections collapsed, showing what this user ends up with."
+            "definition": "Collapsible section with the same matrix as a group: the columns View, Create, Edit, Delete, Admin View, Admin, Download, Print, Assign To and Roll Back, and the same section tree with expanders."
           }
         ],
-        "procedures": [
-          {
-            "title": "Check what a user can do",
-            "steps": [
-              "Open **Users and Permissions** and click **User Permission**.",
-              "Find the person with **Search Profiles** and click them.",
-              "Open **Groups** to see their groups and **Permissions** to see their access."
-            ]
-          }
-        ]
+        "procedures": []
       }
     ],
     "name": "Users and Permissions",
