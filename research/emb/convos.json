@@ -1,0 +1,689 @@
+[
+ {
+  "name": "owner: project name -> ambiguity -> click Projects",
+  "turns": [
+   {
+    "say": "how do I change the project name?",
+    "clar": [
+     [
+      "account-basics",
+      "Projects"
+     ],
+     [
+      "project-setup",
+      "Project Details"
+     ]
+    ]
+   },
+   {
+    "clickSec": [
+     "account-basics",
+     "Projects"
+    ],
+    "ans": [
+     [
+      "account-basics",
+      "Projects"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "name": "owner: project name in the project screen",
+  "turns": [
+   {
+    "say": "how do I change the project name in the project screen?",
+    "ans": [
+     [
+      "account-basics",
+      "Projects"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "name": "clarify then typed screen name",
+  "turns": [
+   {
+    "say": "how do I change the project name?",
+    "clar": [
+     [
+      "account-basics",
+      "Projects"
+     ]
+    ]
+   },
+   {
+    "say": "in the projects screen",
+    "ans": [
+     [
+      "account-basics",
+      "Projects"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "name": "clarify then typed bare name",
+  "turns": [
+   {
+    "say": "how do I change the project name?",
+    "clar": [
+     [
+      "account-basics",
+      "Projects"
+     ]
+    ]
+   },
+   {
+    "say": "projects",
+    "ans": [
+     [
+      "account-basics",
+      "Projects"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "name": "clarify then ordinal",
+  "turns": [
+   {
+    "say": "what are earnings codes",
+    "clar": [
+     [
+      "global-data",
+      "Earnings Codes"
+     ],
+     [
+      "time-management",
+      "Earnings Codes"
+     ]
+    ]
+   },
+   {
+    "say": "the second option",
+    "ans": [
+     [
+      "global-data",
+      "Earnings Codes"
+     ],
+     [
+      "time-management",
+      "Earnings Codes"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "name": "clarify then something else then typed",
+  "turns": [
+   {
+    "say": "what are earnings codes",
+    "clar": [
+     [
+      "global-data",
+      "Earnings Codes"
+     ],
+     [
+      "time-management",
+      "Earnings Codes"
+     ]
+    ]
+   },
+   {
+    "clickElse": true,
+    "kind": "ask"
+   },
+   {
+    "say": "time management earnings codes",
+    "ans": [
+     [
+      "time-management",
+      "Earnings Codes"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "name": "vendor then pronoun follow-up",
+  "turns": [
+   {
+    "say": "how do i add a vendor",
+    "ans": [
+     [
+      "global-data",
+      "Vendors"
+     ]
+    ]
+   },
+   {
+    "say": "and how do I bring it back after deleting?",
+    "ans": [
+     [
+      "global-data",
+      "Vendors"
+     ]
+    ],
+    "still": true
+   }
+  ]
+ },
+ {
+  "name": "vendor statuses follow-up (its)",
+  "turns": [
+   {
+    "say": "how do i add a vendor",
+    "ans": [
+     [
+      "global-data",
+      "Vendors"
+     ]
+    ]
+   },
+   {
+    "say": "how do I search for them",
+    "ans": [
+     [
+      "global-data",
+      "Vendors"
+     ]
+    ],
+    "still": true
+   }
+  ]
+ },
+ {
+  "name": "vendors then same for categories",
+  "turns": [
+   {
+    "say": "how do i add a vendor",
+    "ans": [
+     [
+      "global-data",
+      "Vendors"
+     ]
+    ]
+   },
+   {
+    "say": "same for vendor groups",
+    "ans": [
+     [
+      "global-data",
+      "Vendors"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "name": "topic switch: vendor then work order",
+  "turns": [
+   {
+    "say": "how do i add a vendor",
+    "ans": [
+     [
+      "global-data",
+      "Vendors"
+     ]
+    ]
+   },
+   {
+    "say": "how do I raise a work order",
+    "ans": [
+     [
+      "work-order",
+      "Work Orders"
+     ],
+     [
+      "global-data",
+      "Work Orders"
+     ]
+    ],
+    "still": false
+   }
+  ]
+ },
+ {
+  "name": "switch via named module",
+  "turns": [
+   {
+    "say": "how do i add a vendor",
+    "ans": [
+     [
+      "global-data",
+      "Vendors"
+     ]
+    ]
+   },
+   {
+    "say": "how do i create a tender in tender management",
+    "ans": [
+     [
+      "tender-management",
+      "Tenders"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "name": "work orders follow-up columns",
+  "turns": [
+   {
+    "say": "what is on the work orders screen",
+    "ans": [
+     [
+      "work-order",
+      "Work Orders"
+     ]
+    ]
+   },
+   {
+    "say": "and how do I find one?",
+    "ans": [
+     [
+      "work-order",
+      "Work Orders"
+     ]
+    ],
+    "still": true
+   }
+  ]
+ },
+ {
+  "name": "projects then filters follow-up",
+  "turns": [
+   {
+    "say": "what can i do on the projects screen",
+    "ans": [
+     [
+      "account-basics",
+      "Projects"
+     ]
+    ]
+   },
+   {
+    "say": "what about filters?",
+    "ans": [
+     [
+      "account-basics",
+      "Projects"
+     ]
+    ],
+    "still": true
+   }
+  ]
+ },
+ {
+  "name": "projects then its views",
+  "turns": [
+   {
+    "say": "how to create a project",
+    "ans": [
+     [
+      "account-basics",
+      "Projects"
+     ]
+    ]
+   },
+   {
+    "say": "how do I change how they are shown",
+    "ans": [
+     [
+      "account-basics",
+      "Projects"
+     ]
+    ],
+    "still": true
+   }
+  ]
+ },
+ {
+  "name": "roster then excel follow-up",
+  "turns": [
+   {
+    "say": "how do I assign a user to a project",
+    "clar": [
+     [
+      "project-setup",
+      "Roster"
+     ]
+    ]
+   },
+   {
+    "clickSec": [
+     "project-setup",
+     "Roster"
+    ],
+    "ans": [
+     [
+      "project-setup",
+      "Roster"
+     ]
+    ]
+   },
+   {
+    "say": "can I upload them from excel too",
+    "ans": [
+     [
+      "project-setup",
+      "Roster"
+     ]
+    ],
+    "still": true
+   }
+  ]
+ },
+ {
+  "name": "new question after answer is not carried",
+  "turns": [
+   {
+    "say": "how do i add a vendor",
+    "ans": [
+     [
+      "global-data",
+      "Vendors"
+     ]
+    ]
+   },
+   {
+    "say": "where do I set Geotab credentials",
+    "ans": [
+     [
+      "global-data",
+      "Marketplace"
+     ]
+    ],
+    "still": false
+   }
+  ]
+ },
+ {
+  "name": "decline then normal",
+  "turns": [
+   {
+    "say": "tell me a joke",
+    "none": true
+   },
+   {
+    "say": "how do i add a vendor",
+    "ans": [
+     [
+      "global-data",
+      "Vendors"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "name": "decline does not break context",
+  "turns": [
+   {
+    "say": "how do i add a vendor",
+    "ans": [
+     [
+      "global-data",
+      "Vendors"
+     ]
+    ]
+   },
+   {
+    "say": "what is the weather today",
+    "none": true
+   }
+  ]
+ },
+ {
+  "name": "explicit reset",
+  "turns": [
+   {
+    "say": "how do i add a vendor",
+    "ans": [
+     [
+      "global-data",
+      "Vendors"
+     ]
+    ]
+   },
+   {
+    "say": "new question",
+    "kind": "reset"
+   },
+   {
+    "say": "what can i do on the projects screen",
+    "ans": [
+     [
+      "account-basics",
+      "Projects"
+     ]
+    ],
+    "still": false
+   }
+  ]
+ },
+ {
+  "name": "screen named in global data",
+  "turns": [
+   {
+    "say": "how do I create a user in global data",
+    "clar": [
+     [
+      "global-data",
+      "User Accounts"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "name": "timesheet then follow",
+  "turns": [
+   {
+    "say": "how do i log my hours for a day",
+    "ans": [
+     [
+      "time-management",
+      "My Timesheet"
+     ]
+    ]
+   },
+   {
+    "say": "and copy an earlier log?",
+    "ans": [
+     [
+      "time-management",
+      "My Timesheet"
+     ]
+    ],
+    "still": true
+   }
+  ]
+ },
+ {
+  "name": "top bar then icon follow",
+  "turns": [
+   {
+    "say": "what is on the top bar",
+    "ans": [
+     [
+      "account-basics",
+      "Top Bar"
+     ],
+     [
+      "global-data",
+      "Top Bar"
+     ]
+    ]
+   },
+   {
+    "say": "what about the headset icon",
+    "ans": [
+     [
+      "account-basics",
+      "Top Bar"
+     ],
+     [
+      "global-data",
+      "Top Bar"
+     ]
+    ],
+    "still": true
+   }
+  ]
+ },
+ {
+  "name": "marketplace then geotab",
+  "turns": [
+   {
+    "say": "what apps can I connect from the marketplace",
+    "ans": [
+     [
+      "global-data",
+      "Marketplace"
+     ]
+    ]
+   },
+   {
+    "say": "where do I put the credentials for geotab",
+    "ans": [
+     [
+      "global-data",
+      "Marketplace"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "name": "clarify click second option",
+  "turns": [
+   {
+    "say": "how to approve a timesheet",
+    "clar": [
+     [
+      "time-management",
+      "Timesheet Mode"
+     ],
+     [
+      "time-management",
+      "My Timesheet"
+     ]
+    ]
+   },
+   {
+    "clickSec": [
+     "time-management",
+     "My Timesheet"
+    ],
+    "ans": [
+     [
+      "time-management",
+      "My Timesheet"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "name": "compliance hub follow-up",
+  "turns": [
+   {
+    "say": "what is the compliance directory",
+    "ans": [
+     [
+      "global-data",
+      "Compliance Hub"
+     ]
+    ]
+   },
+   {
+    "say": "and the expiry settings?",
+    "ans": [
+     [
+      "global-data",
+      "Compliance Hub"
+     ]
+    ],
+    "still": true
+   }
+  ]
+ },
+ {
+  "name": "cost type then add",
+  "turns": [
+   {
+    "say": "what is the cost type screen",
+    "ans": [
+     [
+      "global-data",
+      "Cost Type"
+     ]
+    ]
+   },
+   {
+    "say": "how do I add one",
+    "ans": [
+     [
+      "global-data",
+      "Cost Type"
+     ]
+    ],
+    "still": true
+   }
+  ]
+ },
+ {
+  "name": "submittals form then steps",
+  "turns": [
+   {
+    "say": "how do i open the submittal form builder",
+    "ans": [
+     [
+      "global-data",
+      "Submittals Form"
+     ]
+    ]
+   },
+   {
+    "say": "what is the Submitted To field there",
+    "ans": [
+     [
+      "global-data",
+      "Submittals Form"
+     ]
+    ],
+    "still": true
+   }
+  ]
+ },
+ {
+  "name": "typed screen after vague question",
+  "turns": [
+   {
+    "say": "how do I find one",
+    "clar": null
+   },
+   {
+    "say": "work orders",
+    "ans": [
+     [
+      "work-order",
+      "Work Orders"
+     ],
+     [
+      "global-data",
+      "Work Orders"
+     ]
+    ]
+   }
+  ]
+ }
+]

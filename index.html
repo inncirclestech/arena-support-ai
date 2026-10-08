@@ -2294,10 +2294,10 @@ Example of the style to use — if a note says "[Global Data → Users] Go to Gl
   function chatMsgHtml(msg, idx) {
     const isUser = msg.role === "user";
     let body = renderAnswerHtml(msg.content);
-    if (msg.clarifyOptions && msg.clarifyOptions.length) {
-      body += `<div class="chat-clarify">` + msg.clarifyOptions.map((o, i) =>
-        `<button class="chat-clarify-btn" data-idx="${idx}" data-opt="${i}">${escapeHtml(o.question)}</button>`
-      ).join("") + `</div>`;
+    if (msg.kind === "clarify" && msg.optionLabels && msg.optionLabels.length) {
+      body += `<div class="chat-clarify">` + msg.optionLabels.map((o, k) =>
+        `<button class="chat-clarify-btn" data-idx="${idx}" data-opt="${k}">${escapeHtml(o)}</button>`
+      ).join("") + `<button class="chat-clarify-btn" data-idx="${idx}" data-opt="-1">Something else</button></div>`;
     }
     if (msg.followups && msg.followups.length) {
       body += `<div class="chat-followups"><span class="chat-followups-label">Related</span>` +
@@ -2457,11 +2457,15 @@ Example of the style to use — if a note says "[Global Data → Users] Go to Gl
         btn.addEventListener("click", () => { input.value = btn.dataset.q; sendQuestion(); });
       });
       log.querySelectorAll(".chat-clarify-btn").forEach(btn => {
-        btn.addEventListener("click", () => {
-          const msgIdx = Number(btn.dataset.idx);
-          const optIdx = Number(btn.dataset.opt);
-          const chosen = chatHistory[msgIdx].clarifyOptions[optIdx];
-          answerDirectly(chosen);
+        btn.addEventListener("click", async () => {
+          const msgIdx = Number(btn.dataset.idx), optIdx = Number(btn.dataset.opt);
+          if (sending || chatHistory.length - 1 !== msgIdx) return;   // only the latest clarification is live
+          sending = true;
+          try {
+            const m = await pickOption(KB, chatHistory, msgIdx, optIdx, t => ArenaSemantic.embed(t), ArenaSemantic.vecs());
+            chatHistory.push(m.kind === "none" ? { role: "assistant", kind: "none", content: NOT_FOUND_MESSAGE } : m);
+            saveHistory(); paintSuggestions(); paintLog();
+          } finally { sending = false; }
         });
       });
     }
@@ -2473,22 +2477,6 @@ Example of the style to use — if a note says "[Global Data → Users] Go to Gl
         btn.addEventListener("click", () => { input.value = btn.dataset.q; sendQuestion(); });
       });
     }
-
-    // Directly render a chosen answer (used when the user picks a clarify option)
-    // without pushing a new synthetic user turn.
-    function answerDirectly(entry) {
-      chatHistory.push({
-        role: "assistant",
-        content: conversationalize(entry.answer),
-        sourceModule: entry.moduleId,
-        sourceModuleName: entry.moduleName
-      });
-      lastMatchedContext = { moduleId: entry.moduleId, object: entry.object };
-      saveHistory();
-      renderChat();
-    }
-
-    const CLARIFY_INTRO = "I found a few things that could match — which one did you mean?";
 
     // Renders a lightweight "thinking" bubble while WebLLM synthesizes an answer,
     // so a ~1-3s generation doesn't look like a frozen UI.
@@ -2525,23 +2513,19 @@ Example of the style to use — if a note says "[Global Data → Users] Go to Gl
           await ArenaSemantic.settled(60000);
           chatHistory.pop();
         }
-        const qvec = await ArenaSemantic.embed(prepareQuery(KB, rawQ));
-        const p = plan(KB, rawQ, lastMatchedContext, qvec, ArenaSemantic.vecs());
-        if (p.type === "answer") {
-          chatHistory.push({ role: "assistant", content: composeAnswer(p.best, p.also), sourceModule: p.best.moduleId, sourceModuleName: p.best.moduleName });
-          lastMatchedContext = { moduleId: p.best.moduleId, object: p.best.object };
-        } else {
+        const m = await respond(KB, chatHistory, rawQ, t => ArenaSemantic.embed(t), ArenaSemantic.vecs());
+        if (m.kind === "none") {
           let general = null;
-          if (p.reason !== "live" && p.reason !== "offtopic" && isKnowledgeQuestion(rawQ) && ArenaLLM.isReady()) {
+          if (m.reason !== "live" && m.reason !== "offtopic" && isKnowledgeQuestion(rawQ) && ArenaLLM.isReady()) {
             showThinking();
-            general = await Promise.race([ArenaLLM.general(rawQ), new Promise(r => setTimeout(() => r(null), 25000))]);
+            general = await Promise.race([ArenaLLM.general(rawQ), new Promise(r => setTimeout(r, 25000, null))]);
             hideThinking();
           }
-          chatHistory.push({ role: "assistant", content: general
+          m.content = general
             ? "**General answer (not from the Arena documentation):** " + general + "\n\nFor Arena-specific steps, rephrase your question with the module name, or raise a ticket with Arena Support."
-            : NOT_FOUND_MESSAGE });
-          lastMatchedContext = null;
+            : NOT_FOUND_MESSAGE;
         }
+        chatHistory.push(m);
         saveHistory(); paintSuggestions(); paintLog(); input.focus();
       } finally { sending = false; }
     }

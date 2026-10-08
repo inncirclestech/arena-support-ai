@@ -262,7 +262,9 @@ function questionForm(raw) {
 // Rank every KB entry for a (typo-corrected) query.
 //  qvec: Float32Array(384) normalised query embedding, or null (lexical-only).
 //  vecs: { data: Int8Array, scale, dim } or null.
-function rank(KB, q, qvec, vecs, ctx) {
+function rank(KB, q, qvec, vecs, ctx, opts) {
+  opts = opts || {};
+  const restrict = opts.restrictKeys && opts.restrictKeys.length ? new Set(opts.restrictKeys) : null;
   const ix = getIndex(KB);
   const qs = queryStems(q);
   const qall = stemSet(tokenize(q));
@@ -299,6 +301,8 @@ function rank(KB, q, qvec, vecs, ctx) {
     // A bare noun phrase ("dpr report", "site photographs") that names a screen -> prefer that screen over a term inside another one.
     if (!form.howto && !form.define && !form.screen && qs.length <= 4 && e.kind === "screen" && lx.ttl >= 0.85) bias += 0.07;
     if (ctx && ctx.moduleId && e.moduleId === ctx.moduleId && qs.length <= 2) bias += 0.04;
+    if (restrict && restrict.has(skey(e))) bias += opts.force ? 2 : (opts.restrictKeys.length > 6 ? 0.12 : 0.30);
+    if (opts.boostKey && skey(e) === opts.boostKey) bias += 0.12;
     const score = useSem
       ? cos + 0.14 * lx.ttl + 0.07 * lx.key + 0.04 * lx.txt + bias
       : 0.55 * lx.ttl + 0.25 * lx.key + 0.35 * lx.txt + bias;
@@ -308,6 +312,12 @@ function rank(KB, q, qvec, vecs, ctx) {
   return { hits: out, sem: useSem, qs };
 }
 
+const CLARIFY = {
+  sem: { gap: 0.03, gapLow: 0.07 },
+  lex: { gap: 0.06, gapLow: 0.12 }
+};
+function skey(e) { return e.moduleId + "|" + e.section; }
+
 // Decision thresholds (calibrated by research/emb/run_tests.mjs).
 const THRESH = {
   sem: { answer: 0.60, alsoGap: 0.025 },
@@ -316,12 +326,14 @@ const THRESH = {
 
 // Plan the reply. Returns
 //   { type: "answer", best, also, hits }  |  { type: "none", reason, hits }
-function plan(KB, raw, ctx, qvec, vecs) {
+function plan(KB, raw, ctx, qvec, vecs, opts) {
+  opts = opts || {};
+  const graw = opts.guardRaw || raw;
   const ix = getIndex(KB);
   const q = prepareQuery(KB, raw);
-  if (isLiveInfo(raw)) return { type: "none", reason: "live", q, hits: [] };
-  if (isOffTopic(raw)) return { type: "none", reason: "offtopic", q, hits: [] };
-  const r = rank(KB, q, qvec, vecs, ctx);
+  if (isLiveInfo(graw)) return { type: "none", reason: "live", q, hits: [] };
+  if (isOffTopic(graw)) return { type: "none", reason: "offtopic", q, hits: [] };
+  const r = rank(KB, q, qvec, vecs, ctx, opts);
   const T = r.sem ? THRESH.sem : THRESH.lex;
   const top = r.hits[0];
   const hits = r.hits.slice(0, 8);
@@ -330,7 +342,7 @@ function plan(KB, raw, ctx, qvec, vecs) {
 
   // Guards against confident-looking wrong answers.
   // 1. A capitalised word the docs have never seen (another product, e.g. SAP, Salesforce).
-  const cap = (raw.match(/\b[A-Z][A-Za-z]{2,}\b/g) || []).slice(raw.trim().match(/^[A-Z]/) ? 1 : 0);
+  const cap = (graw.match(/\b[A-Z][A-Za-z]{2,}\b/g) || []).slice(graw.trim().match(/^[A-Z]/) ? 1 : 0);
   const foreign = cap.some(w => !ix.vocab.has(stem(w.toLowerCase())) && !STOPWORDS.has(w.toLowerCase()));
   // 2. Query words that never occur in the documentation at all (and are not close typos).
   const unknown = r.qs.filter(t => !ix.vocab.has(t) && t.length > 3);
@@ -338,13 +350,31 @@ function plan(KB, raw, ctx, qvec, vecs) {
   // 3. No query word at all appears in the best entry (pure semantic coincidence).
   const lexTop = Math.max(top.lex.key, top.lex.txt);
 
-  const weak = top.score < T.answer;
+  const weak = top.score < T.answer && !opts.force;
   if (weak) return { type: "none", reason: "low", q, hits, info };
-  if (foreign) return { type: "none", reason: "foreign", q, hits };
-  if (unknown.length && top.score < 0.8 && isKnowledgeQuestion(raw)) return { type: "none", reason: "unknown-word", q, hits };
-  if (unknownShare >= 0.5 && lexTop === 0) return { type: "none", reason: "unknown", q, hits };
-  if (r.sem && lexTop === 0 && top.score < T.answer + 0.06) return { type: "none", reason: "nolex", q, hits };
+  if (opts.force) { /* user chose the screen: skip the guards */ }
+  else if (foreign) return { type: "none", reason: "foreign", q, hits };
+  if (!opts.force && unknown.length && top.score < 0.8 && isKnowledgeQuestion(graw)) return { type: "none", reason: "unknown-word", q, hits };
+  if (!opts.force && unknownShare >= 0.5 && lexTop === 0) return { type: "none", reason: "unknown", q, hits };
+  if (!opts.force && r.sem && lexTop === 0 && top.score < T.answer + 0.06) return { type: "none", reason: "nolex", q, hits };
 
+  // Screen clarification: several different screens answer about equally well and the question does not say which.
+  if (!opts.force && !opts.noClarify && !(opts.restrictKeys && opts.restrictKeys.length) && !opts.boostKey) {
+    const C = r.sem ? CLARIFY.sem : CLARIFY.lex;
+    const scr0 = screenIndex(KB).find(x => x.key === skey(top.entry));
+    const qall2 = stemSet(tokenize(q));
+    // Does the question already name the screen of the best hit ("create a vendor" -> Vendors)?
+    const named = scr0 && scr0.T.size && [...scr0.T].every(t => qall2.includes(t));
+    const D = named ? C.gap : C.gapLow;
+    const seen = new Set(), opt = [];
+    for (let k = 0; k < r.hits.length && k < 60 && opt.length < 4; k++) {
+      const h = r.hits[k], key = skey(h.entry);
+      if (seen.has(key)) continue;
+      seen.add(key);
+      if (top.score - h.score <= D) opt.push(h.entry); else break;
+    }
+    if (opt.length >= 2) return { type: "clarify", options: opt, hits, q, sem: r.sem, score: top.score };
+  }
   let best = top.entry;
   // A field/term line is a poor answer when the question names the screen itself and not the field: show the screen overview.
   if (best.kind === "term") {
@@ -419,4 +449,172 @@ const ArenaSemantic = (function () {
   return { init, settled, embed, progress: () => progress, vecs: () => vecs, state: () => state, detail: () => detail, onChange: f => listeners.push(f) };
 })();
 
-if (typeof module !== "undefined") module.exports = { prepareQuery, isKnowledgeQuestion, isOffTopic, isLiveInfo, buildKB, kbHash, plan, rank, composeAnswer, correctTypos, tokenize, stem };
+
+// ---------------------------------------------------------------- conversation: screen clarification + short-term memory
+// The chat history itself is the memory: every assistant message carries {kind, key, where, userQ, ...}.
+// respond()/pickOption() are pure over (KB, history) so the browser UI and the node test runner share them.
+const SCREEN_NOISE = new Set(["screen", "page", "tab", "module", "section", "settings", "setting", "menu", "arena", "the", "my", "our"]);
+const MEMORY_MSGS = 12;                 // ~6 turns
+const ACTION_VERBS = ["create", "add", "delete", "edit", "change", "remove", "assign", "approve", "raise", "register", "upload", "download", "export", "find", "view", "copy", "set", "update", "open", "reject"];
+
+function screenIndex(KB) {
+  if (KB._screens) return KB._screens;
+  const m = new Map();
+  KB.forEach(e => {
+    const k = skey(e);
+    if (!m.has(k)) m.set(k, {
+      key: k, moduleId: e.moduleId, where: e.where, title: noMarks(e.section.replace(/<[^>]+>/g, "")),
+      T: new Set(stemSet(tokenize(e.section.replace(/<[^>]+>/g, ""))).filter(t => !SCREEN_NOISE.has(t))),
+      M: new Set(stemSet(tokenize(e.moduleName)))
+    });
+  });
+  KB._screens = [...m.values()];
+  return KB._screens;
+}
+
+// Screens (or a whole module) a phrase like "project screen" / "global data vendors" refers to. Returns {keys, tier}.
+function findScreens(KB, phrase) {
+  const P = stemSet(tokenize(phrase)).filter(t => !SCREEN_NOISE.has(t));
+  if (!P.length) return { keys: [], tier: 0 };
+  let best = 0, keys = [];
+  screenIndex(KB).forEach(sc => {
+    const U = new Set([...sc.T, ...sc.M]);
+    if (!P.every(t => U.has(t))) return;
+    const inT = P.filter(t => sc.T.has(t)).length;
+    let tier = 0;
+    if (inT === 0) tier = (P.length === sc.M.size && P.every(t => sc.M.has(t))) ? 3.4 : 1;   // names only the module (4 = exactly the module name)
+    else tier = 2 + (P.length === sc.T.size && inT === P.length ? 1 : 0) + (P.every(t => sc.T.has(t)) ? 0.5 : 0);
+    if (tier > best) { best = tier; keys = []; }
+    if (tier === best) keys.push(sc.key);
+  });
+  return { keys, tier: best };
+}
+
+// A phrase after "in/on/under ..." that names a screen or module.
+function namedScreenIn(KB, raw) {
+  const r = String(raw || "").toLowerCase().replace(/[?!.]+$/g, "");
+  const m = r.match(/\b(?:in|on|under|inside|within)\s+(?:the\s+|my\s+)?(.{2,40}?)(?:\s+(?:screen|page|tab|module|section))?$/);
+  if (!m) return null;
+  const f = findScreens(KB, m[1]);
+  return f.tier >= 1 && f.keys.length && f.keys.length <= 6 ? f : null;
+}
+
+function ordinalIndex(text, n) {
+  const t = String(text || "").toLowerCase();
+  if (t.split(/\s+/).length > 6) return -1;
+  if (/\blast\b/.test(t)) return n - 1;
+  const map = [[/\b(first|1st|top|1)\b/, 0], [/\b(second|2nd|2)\b/, 1], [/\b(third|3rd|3)\b/, 2], [/\b(fourth|4th|4)\b/, 3]];
+  for (const [re, i] of map) if (re.test(t) && i < n && /\b(option|one|first|second|third|fourth|1st|2nd|3rd|4th|1|2|3|4|top|last)\b/.test(t)) return i;
+  return -1;
+}
+
+const QUESTION_START = /^\s*(how|what|whats|what's|why|where|when|which|who|can|could|do|does|is|are|should|tell|show|create|add|delete|edit|change|set|raise|register|upload|assign)\b/i;
+
+// Pick the screen a user typed in reply to "Which screen are you on?".
+function matchTypedScreen(KB, raw, optionKeys) {
+  const words = raw.trim().split(/\s+/);
+  if (words.length > 7 || (QUESTION_START.test(raw) && words.length > 3)) return null;
+  const phrase = raw.toLowerCase().replace(/^(it'?s|its|i'?m|i am|am)?\s*(on|in|at|under|inside)?\s*(the\s+)?/, "").replace(/[?!.]+$/g, "");
+  const f = findScreens(KB, phrase);
+  if (!f.keys.length || f.tier < 2) return null;
+  const inOpt = f.keys.filter(k => optionKeys.includes(k));
+  return inOpt.length ? inOpt : f.keys;
+}
+
+function lastContext(hist) {
+  // most recent answered screen within the last ~6 turns (a "reset" message ends the memory)
+  for (let i = hist.length - 1, n = 0; i >= 0 && n < MEMORY_MSGS; i--, n++) {
+    const m = hist[i];
+    if (m.role !== "assistant") continue;
+    if (m.kind === "reset") return null;
+    if (m.kind === "answer" && m.key) return m;
+  }
+  return null;
+}
+
+// Decide how to read a new question given the conversation so far.
+function interpret(KB, raw, hist) {
+  const out = { q: raw, restrictKeys: null, boostKey: null, carried: null };
+  const named = namedScreenIn(KB, raw);
+  if (named) { out.restrictKeys = named.keys; return out; }               // names its own screen: switch context
+  const prev = lastContext(hist);
+  if (!prev) return out;
+  const t = raw.trim();
+  const words = t.split(/\s+/).filter(Boolean);
+  const same = t.match(/^(?:and\s+)?(?:the\s+)?(?:same|likewise|do the same|how about the same)\s+(?:for|with|on)\s+(.+?)[?.!]*$/i);
+  const lead = /^(and|also|then|so|ok|okay|what about|how about)\b/i.test(t);
+  const pron = /\b(it|its|this|that|those|these|them|they|their|there|here|one|ones)\b/i.test(t);
+  const bare = /^(next( step)?|why|more( details?)?|details?|continue|go on|explain|and then)\s*\??$/i.test(t);
+  const content = stemSet(tokenize(t.replace(/\b(it|its|this|that|those|these|them|they|their|there|here|ones?|and|also|then|so|ok|okay|what about|how about|one)\b/gi, " "))).filter(x => x.length > 1 && !GENERIC_WORDS.has(x));
+  const follow = same || bare || (lead && words.length <= 8) || (lead && pron && words.length <= 14) || (pron && words.length <= 9 && content.length <= 3) || (words.length <= 3 && !QUESTION_START.test(t) && content.length <= 1 && !named);
+  if (!follow) return out;
+  const prevTitle = prev.screenTitle || "";
+  if (same) {
+    const pq = String(prev.userQ || "").toLowerCase();
+    const verb = ACTION_VERBS.find(v => new RegExp("\\b" + v + "\\w*\\b").test(pq)) || "";
+    out.q = (verb ? "how do I " + verb + " " : "how do I ") + same[1];
+    out.carried = null;
+    return out;                                                       // new object: not tied to the previous screen
+  }
+  const clean = t.replace(/\b(it|its|this|that|those|these|them|they|their|there|here|ones?)\b/gi, " ").replace(/\s+/g, " ").trim();
+  out.q = (bare ? (prev.userQ || prevTitle) : clean + " " + prevTitle).trim();
+  out.boostKey = prev.key;
+  out.carried = prev;
+  return out;
+}
+
+function answerMsg(p, userQ, hint) {
+  const best = p.best;
+  let content = composeAnswer(best, p.also);
+  if (hint) content += "\n\nStill on: " + best.where;
+  return { role: "assistant", kind: "answer", content, key: skey(best), where: best.where, screenTitle: noMarks(String(best.section).replace(/<[^>]+>/g, "")), entryId: best.id, userQ, sourceModule: best.moduleId, sourceModuleName: best.moduleName };
+}
+function clarifyMsg(p, pendingQ) {
+  return { role: "assistant", kind: "clarify", content: "Which screen are you on? I found this in a few places:", pendingQ, optionIds: p.options.map(e => e.id), optionKeys: p.options.map(skey), optionLabels: p.options.map(e => e.where) };
+}
+
+// Answer `userQ` (+ retrieval query) from a chosen screen.
+async function answerFromScreen(KB, keys, q, embed, vecs, userQ) {
+  keys = Array.isArray(keys) ? keys : [keys];
+  const qv = await embed(prepareQuery(KB, q));
+  const p = plan(KB, q, null, qv, vecs, { restrictKeys: keys, force: true });
+  if (p.type !== "answer") return { role: "assistant", kind: "none", reason: p.reason, content: "" };
+  return answerMsg(p, userQ || q, false);
+}
+
+// hist includes the new user message as its last element. embed(text) -> Float32Array|null.
+async function respond(KB, hist, raw, embed, vecs) {
+  const lastA = [...hist].reverse().find(m => m.role === "assistant");
+  const prevIsPending = lastA && (lastA.kind === "clarify" || lastA.kind === "ask") && hist[hist.length - 2] === lastA;
+  if (/^\s*(new question|reset|start over|forget (that|it)|clear context)\s*[.!]*$/i.test(raw))
+    return { role: "assistant", kind: "reset", content: "Okay, starting fresh. What would you like to know?" };
+  if (prevIsPending) {
+    const keys = lastA.optionKeys || [];
+    const oi = ordinalIndex(raw, keys.length);
+    const sel = oi >= 0 ? [keys[oi]] : matchTypedScreen(KB, raw, keys);
+    if (sel && sel.length) return answerFromScreen(KB, sel, lastA.pendingQ, embed, vecs, lastA.pendingQ);
+  }
+  const it = interpret(KB, raw, hist);
+  const run = async (i2) => {
+    const qv = await embed(prepareQuery(KB, i2.q));
+    return plan(KB, i2.q, null, qv, vecs, { restrictKeys: i2.restrictKeys, boostKey: i2.boostKey, guardRaw: raw });
+  };
+  let p = await run(it);
+  let carried = !!it.carried;
+  if (carried && p.type !== "answer") {           // the carried reading failed: treat as a brand-new question
+    carried = false;
+    p = await run({ q: raw, restrictKeys: null, boostKey: null });
+  }
+  if (p.type === "answer") return answerMsg(p, it.q, carried && skey(p.best) === it.boostKey);
+  if (p.type === "clarify") return clarifyMsg(p, it.q);
+  return { role: "assistant", kind: "none", reason: p.reason, content: "" };
+}
+
+// User clicked option `i` of the clarification message at hist[msgIdx] (or "something else" with i === -1).
+async function pickOption(KB, hist, msgIdx, i, embed, vecs) {
+  const m = hist[msgIdx];
+  if (i < 0) return { role: "assistant", kind: "ask", content: "Tell me the screen name.", pendingQ: m.pendingQ, optionKeys: [], optionIds: [] };
+  return answerFromScreen(KB, m.optionKeys[i], m.pendingQ, embed, vecs, m.pendingQ);
+}
+
+if (typeof module !== "undefined") module.exports = { respond, pickOption, interpret, findScreens, skey, prepareQuery, isKnowledgeQuestion, isOffTopic, isLiveInfo, buildKB, kbHash, plan, rank, composeAnswer, correctTypos, tokenize, stem };
